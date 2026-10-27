@@ -1,0 +1,75 @@
+=== hoja Instr.de intención de respuesta
+Acción obligatoria
+Envíe la lista de artículos a los que tiene intención de responder
+Instrucciones
+Acuda a cada una de las hojas de trabajo utilizando las pestañas en la parte inferior de la ventana y rellene la información solicitada: los "datos de intención de puja" (las celdas con código cromático a continuación) son necesarias para el estado Intención de respuesta y los "datos de puja" (las celdas con código cromático a continuación) son necesarios para el estado Enviar respuesta. Cuando haya rellenado toda la información, guarde el archivo en su escritorio e impórtelo en la aplicación.
+Directrices generales y leyenda de celda
+Algunas de las celdas requieren que usted introduzca datos, algunas le dan la opción de editarlas, y algunas son de solo de lectura. Esto se indica a través de colores y bordes
+Información de cabecera y de ID de sistema: No modifique esta celda o la importación podría fallar.
+Información de ayuda. No modifique esta celda o la importación puede fallar.
+Datos de puja. Estas celdas son opcionales si está seleccionando lotes a los que tiene intención de responder, de lo contrario son necesarias. Las celdas que rellene se copian en el evento cuando importa la hoja de cálculo. La cabecera de columna para estas celdas también tiene un asterisco (*).
+Datos de intención de puja. Estas celdas son necesarias; especifique Sí o No.
+Datos opcionales
+Sin borde, datos de solo lectura
+=== hoja Instr.de enviar respuesta
+Acción obligatoria
+Envíe la respuesta a las preguntas
+Instrucciones
+Acuda a cada hoja de trabajo utilizando las pestañas en la parte inferior de la ventana y rellene la información solicitada. Una vez haya terminado, guarde el archivo en el escritorio de su sistema y cárguelo en la aplicación.
+Directrices generales y leyenda de celda
+Algunas de las celdas requieren que usted introduzca datos, algunas le dan la opción de editarlas, y algunas son de solo de lectura. Esto se indica a través de colores y bordes
+Información de cabecera y de ID de sistema: No modifique esta celda o la importación podría fallar.
+Información de ayuda. No modifique esta celda o la importación puede fallar.
+Datos de puja. Estas celdas son necesarias. La cabecera de columna para estas celdas también tiene un asterisco (*).
+Datos opcionales
+Sin borde, datos de solo lectura
+Ayuda de formato de texto: Coloque un apóstrofe (') antes, si desea dar formato a datos en una celda como texto en lugar de como un número o una fecha. Por ejemplo, si desea introducir 50000000 como texto tiene que escribir '50000000 en la celda. Otra forma de arreglarlo es cambiar el tipo de formato de la celda a "Texto" dentro de Excel y luego introducir los valores.
+=== hoja DV_sheet_
+Sí | No tenemos la pieza o material compatible
+No | No proveemos cantidades como la solicitada
+Artículo cancelado
+En la actualidad estamos a plena capacidad
+No se ha proporcionado información o la que se ha dado es insuficiente
+Otro
+=== hoja 28 Objeto del concurso de pr...
+Número | Nombre | Respuesta
+28.1 | INFORMACI&Oacute;N PARA COTIZAR | INFORMACIÓN PARA COTIZAR.zip
+=== hoja 29 Propuesta de oferta econó...
+Número | Nombre | Respuesta
+29.1 | Oferta económica.Por favor indicar el plazo de entrega en "Días" | 75 a 120 dias
+29.2 | En caso de declinar a ofertar un item debido a un "Artículo cancelado ", por favor adjuntar la ficha técnica del item de reemplazo.
+=== hoja Otro contenido
+Número | Nombre | Descripción | Intención de respuesta | Razón para no pujar | Divisa | Unidad de medida | * Precio | Cantidad | ID de Material | Descripción del material | * Plazo | Fecha de entrega solicitada | Nro Contrato | Aplica simulación SMC | Porcentaje de descuento | Estructura de costos vinculada | Respuesta
+1 | FCC105106 FIL FCC105106 FILTRO BOMBAS DE | FCC105106 FIL FCC105106 FILTRO BOMBAS DE | Sí | USD | unidad de almacenaje | 19593.35288666843 | 2 | ZZZZZ_00392708 | FIL FCC105106 FILTRO BOMBAS DE CONDENSADO HD-004 | 105/120 dias | 46056.12152777778
+2 | RDO FCC105106 RDO FIL FCC105106 FILTRO B | RDO FCC105106 RDO FIL FCC105106 FILTRO B | Sí | USD | unidad de almacenaje | 472.5 | 1 | ZZZZZ_00392719 | RDO FIL FCC105106 FILTRO BOMBAS DE CONDENSADO RI-004 | 105/120 dias | 46056.12152777778
+3 | RCP FCC105106 RCP FIL FCC105106 FILTRO B | RCP FCC105106 RCP FIL FCC105106 FILTRO B | Sí | USD | unidad de almacenaje | 172.5 | 1 | ZZZZZ_00392720 | RCP FIL FCC105106 FILTRO BOMBAS DE CONDENSADO RI-004 | 105/120 dias | 46056.12152777778
+4 | FCC901 FIL FCC901 FILTRO DE CRUDO HD-018 | FCC901 FIL FCC901 FILTRO DE CRUDO HD-018 | Sí | USD | unidad de almacenaje | 18811.552886668425 | 1 | ZZZZZ_00392721 | FIL FCC901 FILTRO DE CRUDO HD-018 | 105/120 dias | 46056.12152777778
+5 | RDO FCC901 RDO FIL FCC901 FILTRO DE CRUD | RDO FCC901 RDO FIL FCC901 FILTRO DE CRUD | Sí | USD | unidad de almacenaje | 472.5 | 1 | ZZZZZ_00392722 | RDO FIL FCC901 FILTRO DE CRUDO RI-004 | 105/120 dias | 46056.12152777778
+6 | RCP FCC901 RCP FIL FCC901 FILTRO DE CRUD | RCP FCC901 RCP FIL FCC901 FILTRO DE CRUD | Sí | USD | unidad de almacenaje | 172.5 | 1 | ZZZZZ_00392723 | RCP FIL FCC901 FILTRO DE CRUDO RI-004 | 105/120 dias | 46056.12152777778
+7 | FCC221222233 FIL FCC221222233 FILTRO BOM | FCC221222233 FIL FCC221222233 FILTRO BOM | Sí | USD | unidad de almacenaje | 22229.87472469613 | 3 | ZZZZZ_00392589 | FIL FCC221222233 FILTRO BOMBAS DE TRANSFERENCIA DE CRUDO HD-020 | 75/90 dias | 46047.12152777778
+8 | FCC411412413 FIL FCC411412413 FILTRO BOM | FCC411412413 FIL FCC411412413 FILTRO BOM | Sí | USD | unidad de almacenaje | 37646.018571463304 | 3 | ZZZZZ_00392592 | FIL FCC411412413 FILTRO BOMBAS DE DESPACHO PETRÓLEO HD-022 | 90/105 dias | 46047.12152777778
+9 | FCC351352 FIL FCC351352 FILTRO BOMBAS DE | FCC351352 FIL FCC351352 FILTRO BOMBAS DE | Sí | USD | unidad de almacenaje | 25836.52444229195 | 2 | ZZZZZ_00392595 | FIL FCC351352 FILTRO BOMBAS DE AGUA TRATADA HD-027 | 90/105 dias | 46047.12152777778
+10 | FCC963964965 FIL FCC963964965 FILTRO BOM | FCC963964965 FIL FCC963964965 FILTRO BOM | Sí | USD | unidad de almacenaje | 21688.486372390667 | 3 | ZZZZZ_00393014 | FIL FCC963964965 FILTRO BOMBAS DE AGUA DE LAVADO HD-017 | 90/105 dias | 46047.12152777778
+11 | RDO FCC963964965 RDO FIL FCC963964965 FI | RDO FCC963964965 RDO FIL FCC963964965 FI | Sí | USD | unidad de almacenaje | 472.5 | 1 | ZZZZZ_00393015 | RDO FIL FCC963964965 FILTRO BOMBAS DE AGUA DE LAVADO RI-007 | 90/105 dias | 46047.12152777778
+12 | RCP FCC963964965 RCP FIL FCC963964965 FI | RCP FCC963964965 RCP FIL FCC963964965 FI | Sí | USD | unidad de almacenaje | 172.5 | 1 | ZZZZZ_00393016 | RCP FIL FCC963964965 FILTRO BOMBAS DE AGUA DE LAVADO RI-007 | 90/105 dias | 46047.12152777778
+13 | RDO FCC221222233 RDO  FCC221222233 FILTR | RDO FCC221222233 RDO  FCC221222233 FILTR | Sí | USD | unidad de almacenaje | 472.5 | 1 | ZZZZZ_00393017 | RDO  FCC221222233 FILTRO BOMBAS DE TRANSFERENCIA DE CRUDO RI-007 | 75/90 dias | 46047.12152777778
+14 | RCP FCC221222233 RCP FCC221222233 FILTRO | RCP FCC221222233 RCP FCC221222233 FILTRO | Sí | USD | unidad de almacenaje | 172.5 | 1 | ZZZZZ_00393018 | RCP FCC221222233 FILTRO BOMBAS DE TRANSFERENCIA DE CRUDO RI-007 | 75/90 dias | 46047.12152777778
+15 | RDO FCC411412413 RDO  FCC411412413 FILTR | RDO FCC411412413 RDO  FCC411412413 FILTR | Sí | USD | unidad de almacenaje | 472.5 | 1 | ZZZZZ_00393019 | RDO  FCC411412413 FILTRO BOMBAS DE DESPACHO PETRÓLEO RI-007 | 90/105 dias | 46047.12152777778
+16 | RCP FCC411412413 RCP FCC411412413 FILTRO | RCP FCC411412413 RCP FCC411412413 FILTRO | Sí | USD | unidad de almacenaje | 172.5 | 1 | ZZZZZ_00393020 | RCP FCC411412413 FILTRO BOMBAS DE DESPACHO PETRÓLEO RI-007 | 90/105 dias | 46047.12152777778
+17 | RDO FCC351352 RDO FIL FCC351352 FILTRO B | RDO FCC351352 RDO FIL FCC351352 FILTRO B | Sí | USD | unidad de almacenaje | 472.5 | 1 | ZZZZZ_00393021 | RDO FIL FCC351352 FILTRO BOMBAS DE AGUA TRATADA RI-007 | 90/105 dias | 46047.12152777778
+18 | RCP FCC351352 RCP FCC351352 FILTRO BOMBA | RCP FCC351352 RCP FCC351352 FILTRO BOMBA | Sí | USD | unidad de almacenaje | 172.5 | 1 | ZZZZZ_00393022 | RCP FCC351352 FILTRO BOMBAS DE AGUA TRATADA RI-007 | 90/105 dias | 46047.12152777778
+19 | FCC511512 FIL FILTRO BOMBAS BOOSTER DE A | FCC511512 FIL FILTRO BOMBAS BOOSTER DE A | Sí | USD | unidad de almacenaje | 14899.430442291947 | 2 | ZZZZZ_00393023 | FIL FILTRO BOMBAS BOOSTER DE AGUA HD-031 | 75/90 dias | 46047.12152777778
+20 | RDO FCC511512 RDO  FILTRO BOMBAS BOOSTER | RDO FCC511512 RDO  FILTRO BOMBAS BOOSTER | Sí | USD | unidad de almacenaje | 472.5 | 1 | ZZZZZ_00393024 | RDO  FILTRO BOMBAS BOOSTER DE AGUA RI-007 | 75/90 dias | 46047.12152777778
+21 | RCP FCC511512 RCP FILTRO BOMBAS BOOSTER | RCP FCC511512 RCP FILTRO BOMBAS BOOSTER | Sí | USD | unidad de almacenaje | 172.5 | 1 | ZZZZZ_00393025 | RCP FILTRO BOMBAS BOOSTER DE AGUA RI-007 | 75/90 dias | 46047.12152777778
+22 | FCC767768 FIL FILTRO BOMBAS DE AGUA DE D | FCC767768 FIL FILTRO BOMBAS DE AGUA DE D | Sí | USD | unidad de almacenaje | 19076.752886668426 | 2 | ZZZZZ_00393026 | FIL FILTRO BOMBAS DE AGUA DE DESARENADO HD-033 | 105/120 dias | 46047.12152777778
+23 | RDO FCC767768 RDO  FILTRO BOMBAS DE AGUA | RDO FCC767768 RDO  FILTRO BOMBAS DE AGUA | Sí | USD | unidad de almacenaje | 472.5 | 1 | ZZZZZ_00393027 | RDO  FILTRO BOMBAS DE AGUA DE DESARENADO RI-007 | 105/120 dias | 46047.12152777778
+24 | RCP FCC767768 RCP FILTRO BOMBAS DE AGUA | RCP FCC767768 RCP FILTRO BOMBAS DE AGUA | Sí | USD | unidad de almacenaje | 172.5 | 1 | ZZZZZ_00393028 | RCP FILTRO BOMBAS DE AGUA DE DESARENADO RI-007 | 105/120 dias | 46047.12152777778
+25 | FCC027028 FIL FILTRO DE DRENAJE HD-037 | FCC027028 FIL FILTRO DE DRENAJE HD-037 | Sí | USD | unidad de almacenaje | 18596.270035946207 | 2 | ZZZZZ_00393029 | FIL FILTRO DE DRENAJE HD-037 | 75/90 dias | 46047.12152777778
+26 | RDO FCC027028 RDO  FILTRO DE DRENAJE RI- | RDO FCC027028 RDO  FILTRO DE DRENAJE RI- | Sí | USD | unidad de almacenaje | 472.5 | 1 | ZZZZZ_00393030 | RDO  FILTRO DE DRENAJE RI-007 | 75/90 dias | 46047.12152777778
+27 | RCP FCC027028 RCP FILTRO DE DRENAJE RI-0 | RCP FCC027028 RCP FILTRO DE DRENAJE RI-0 | Sí | USD | unidad de almacenaje | 172.5 | 1 | ZZZZZ_00393031 | RCP FILTRO DE DRENAJE RI-007 | 75/90 dias | 46047.12152777778
+30 | Acepto haber leído y adhiero a la Política de DDHH de YPF 
+Leer en: https://sustentabilidad.ypf.com/assets/docs/es/YPF-Politica-de-DDHH.pdf | Sí
+31 | Acepto haber leído y adhiero a la Política Anticorrupción de YPF
+Leer en: https://compliance.ypf.com/docs/politica-anticorrupcion-socios-de-negocios-.pdf | Sí
+32 | Acepto haber leído las Condiciones Generales de Compras y Contrataciones de YPF
+Leer en: https://proveedores.ypf.com/documents/proveedores/YPF-CONDICIONES-GENERALES-DE-COMPRAS-Y-CONTRATACIONES.pdf | Sí

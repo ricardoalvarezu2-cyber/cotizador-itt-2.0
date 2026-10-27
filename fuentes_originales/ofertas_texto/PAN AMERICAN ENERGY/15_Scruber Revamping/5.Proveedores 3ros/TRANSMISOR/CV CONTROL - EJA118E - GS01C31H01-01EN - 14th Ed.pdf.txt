@@ -1,0 +1,2998 @@
+--- página 1 ---
+General
+Specifications
+<<Contents>>  <<Index>>
+EJA118E
+Diaphragm Sealed
+Differential Pressure Transmitter
+Yokogawa Electric Corporation
+2-9-32, Nakacho, Musashino-shi, Tokyo, 180-8750 Japan
+Tel.: 81-422-52-5690	 Fax.: 81-422-52-2018
+GS 01C31H01-01EN
+GS 01C31H01-01EN
+©Copyright June 2012
+14th Edition Mar. 2019
+Diaphragm seals are used to prevent process medium 
+form entering directly into the pressure-sensing 
+assembly of the differential pressure transmitter, they 
+are connected to the transmitter using capillaries filled 
+with fill fluid.
+EJA118E Diaphragm Sealed Differential Pressure 
+Transmitters can be used to measure liquid, gas, 
+or steam flow, as well as liquid level, density, and 
+pressure. EJA118E outputs a 4 to 20 mA DC signal 
+corresponding to the measured differential pressure.
+Its highly accurate and stable sensor can also 
+measure the static pressure which can be shown on 
+the integral indicator or remotely monitored via BRAIN 
+or HART communications. Other key features include 
+quick response, remote set-up using communications, 
+and self-diagnostics.
+FOUNDATION Fieldbus, PROFIBUS PA and 1 to 5 V 
+DC with HART (Low Power) protocol types are also 
+available. EJA-E series models in their standard 
+configuration, with the exception of the Fieldbus, 
+PROFIBUS and Low Power types, are certified as 
+complying with SIL 2 for safety requirement.
+	STANDARD SPECIFICATIONS
+Refer to GS 01C31T02-01EN for Fieldbus 
+communication type and GS 01C31T04-01EN for 
+PROFIBUS PA communication type for the items 
+marked with “◊.”
+□ SPAN AND RANGE LIMITS
+Measurement
+Span/Range
+kPa
+inH2O
+(/D1)
+mbar
+(/D3)
+mmH2O
+(/D4)
+M
+Span
+2.5 to 100
+10 to 400
+25 to 1000
+250 to 
+10000
+Range
+-100 to 
+100
+-400 to 
+400
+-1000 to 
+1000
+-10000 to 
+10000
+H
+Span
+25 to 500
+100 to 
+2000
+250 to 
+5000
+0.25 to 5 
+kgf/cm2
+Range
+-500 to 
+500
+-2000 to 
+2000
+-5000 to 
+5000
+-5 to 5 
+kgf/cm2
+□ PERFORMANCE SPECIFICATIONS
+Zero-based calibrated span, linear output, wetted 
+parts material code SW for 3-inch flange flush type, 
+fill fluid code B, and capillary length of 5 m.
+For Fieldbus and PROFIBUS communication types, 
+use caribrated range instead of span in the following 
+specifications.
+Specification Conformance
+EJA-E series ensures specification conformance to at 
+least ±3σ.
+Reference Accuracy of Calibrated Span
+(includes terminal-based linearity, hysteresis, and 
+repeatability)
+Measurement span
+H
+Reference
+accuracy
+X ≤ span ±0.2% of Span
+X > span ±(0.15+0.01 URL/span)% of Span
+X
+100 kPa (400 inH2O)
+URL
+(upper range limit)
+500 kPa (2000 inH2O)
+Measurement span
+M
+Reference
+accuracy
+X ≤ span ±0.2% of Span
+X > span ±(0.15+0.01 URL/span)% of Span
+X
+20 kPa (80 inH2O)
+URL
+(upper range limit)
+100 kPa (400 inH2O)
+Square Root Output Accuracy
+The square root accuracy is a percent of flow span.
+Output
+Accuracy
+50% or Greater
+Same as reference accuracy
+50% to Dropout point
+Reference accuracy × 50
+Square root output (%)
+Ambient Temperature Effects per 28°C (50°F) 
+Change
+Capsule
+Effect
+M and H
+±(0.48% Span+0.06% URL)
+[Style: S2]
+
+--- página 2 ---
+2
+All Rights Reserved. Copyright © 2012, Yokogawa Electric Corporation
+<<Contents>>  <<Index>>
+GS 01C31H01-01EN
+Static Pressure Effects per 0.69 MPa (100 psi) 
+Change
+ Span Effects
+M and H capsules
+±0.02% of span
+ Effect on Zero
+M and H capsules
+±0.014% of URL
+Power Supply Effects(Output signal code D and J)
+±0.005 % per Volt (from 21.6 to 32 V DC, 350Ω)
+Response Time (Differential pressure) “◊”
+M and H capsule: 200 ms (approximate value at 
+normal temperature)
+When software damping is set to zero and including 
+dead time of 45 ms (nominal)
+Static Pressure Signal Range and Accuracy 
+(For monitoring via communication or on 
+indicator. Includes terminal-based linearity, 
+hysteresis, and repeatability)
+ Range
+Upper Range Value and Lower Range Value of the 
+statice pressure can be set in the range between 0 
+and Maximum Working Pressure (MWP*). The upper 
+range value must be greater than the lower range 
+value. Minimum setting span is 0.5 MPa (73 psi).
+ * :	
+Maximum Working Pressure (MWP) is within 
+flange rating pressure.
+ Accuracy
+Absolute Pressure
+1 MPa or higher: ±0.5% of span
+Less than 1 MPa: ±0.5%×(1 MPa/span) of span
+Gauge Pressure Reference
+Gauge pressure reference is 1013 hPa (1 atm)
+Note:	 Gauge pressure variable is based on the above 
+fixed reference and thus subject to be affected by 
+the change of atomospheric pressure.
+□ FUNCTIONAL SPECIFICATIONS
+Output “◊” 
+For 4 to 20 mA HART / BRAIN 
+(Output signal code D and J)
+Two wire 4 to 20 mA DC output with digital 
+communications, linear or square root programmable. 
+BRAIN or HART FSK protocol are superimposed on 
+the 4 to 20 mA signal.
+Output range: 3.6 mA to 21.6 mA
+Output limits conform to NAMUR NE43 can be preset 
+by option code C2 or C3.
+For 1 to 5 V HART (Output signal code Q)
+Three or four wire low power 1 to 5 V DC output with 
+HART, linear or square root programmable. HART 
+protocol are superimposed on the 1 to 5 V DC signal.
+Output range: 0.9 V to 5.4 V DC
+Failure Alarm 
+For 4 to 20 mA HART / BRAIN 
+(Output signal code D and J)
+Output status at CPU failure and hardware error;
+Up-scale: 110%, 21.6 mA DC or more (standard)
+Down-scale: −5%, 3.2 mA DC or less
+For 1 to 5 V HART (Output signal code Q)
+Analog output status at CPU failure and hardware 
+error;
+Up-scale: 110%, 5.4 V DC or more (standard) 
+Down-scale: −5%, 0.8 V DC or less
+Damping Time Constant (1st order)
+Amplifier damping time constant is adjustable from 
+0.00 to 100.00 s by software and added to response 
+time.
+Note:	 For BRAIN protocol type, when amplifier software 
+damping is set to less than 0.5 s, communication 
+may occasionally be unavailble during the 
+operation, especially while output changes 
+dynamically. The default setting of damping 
+ensures stable communication.
+Update Period “◊”
+Differential pressure: 45 ms
+Static pressure: 360 ms
+Zero Adjustment Limits
+Zero can be fully elevated or suppressed, within the 
+lower and upper range limits of the capsule.
+External Zero Adjustment
+External zero is continuously adjustable with 
+0.01% incremental resolution of span. Re-range 
+can be done locally using the digital indicator with 
+rangesetting switch.
+Integral Indicator (LCD display, optional) “◊”
+5-digit numerical display, 6-digit unit display and bar 
+graph.
+The indicator is configurable to display one or up to 
+four of the following variables periodically.;
+Measured differential pressure, differential pressure 
+in %, scaled differential pressure, measured static 
+pressure. See also “Factory Setting.”
+Local Parameter Setting  
+(Output signal code D, J and Q)
+Parameter configuration by the external zero 
+adjustment screw and push button (Integral indicator 
+code E) offers easy and quick setup for parameters of 
+Tag number, Unit, LRV, URV, Damping, Output mode 
+(linear/square root), Display out 1, and Re-range by 
+applying actual pressure (LRV/URV).
+Self Diagnostics
+CPU failure, hardware failure, configuration error, 
+process alarm for differential pressure, static 
+pressure or capsule temperature.
+User-configurable process high/low alarm for 
+differential pressure and static pressure is also 
+available.
+Signal Characterizer  
+(Output signal code D, J and Q)
+User-configurable 10-segment signal characterizer 
+for 4 to 20 mA output.
+Capillary Fill Fluid Density Compensation 
+(Output signal code D, J and Q)
+Compensation of the zero shift by the ambient 
+temperature effect on the capillary tube.
+SIL Certification
+EJA-E series transmitters except Fieldbus and 
+PROFIBUS PA and 1-5V DC with HART (Low Power) 
+communication types are certified in compliance with 
+the following standards;
+IEC 61508: 2010; Part1 to Part 7
+Functional Safety of Electrical/electronic/
+programmable electronic related systems; SIL 2 
+capability for single transmitter use, SIL 3 capability 
+for dual transmitter use.
+June 1, 2017-00
+
+--- página 3 ---
+3
+<<Contents>>  <<Index>>
+All Rights Reserved. Copyright © 2012, Yokogawa Electric Corporation
+GS 01C31H01-01EN
+□ NORMAL OPERATING CONDITION 
+(Optional features or approval codes may 
+affect limits.)
+Ambient Temperature Limits
+−40 to 60°C (−40 to 140°F)
+−30 to 60°C (−22 to 140°F) with LCD display
+(Note: The ambient temperature limits must be within the 
+fill fluid operating temperature range, see table 1.)
+Process Temperature Limits
+See table 1.
+Ambient Humidity Limits
+0 to 100% RH
+Working Pressure Limits
+See table 1.
+For atmospheric pressure or below, see figure 1-1, 
+1-2, 1-3, 1-4, and 1-5.
+Supply & Load Requirements 
+(Output signal code D and J. Optional features 
+or approval codes may affect electrical 
+requirements.)
+With 24 V DC supply, up to a 550Ω load can be
+used. See figure 2.
+Supply Voltage “◊” 
+For 4 to 20 mA HART / BRAIN 
+(Output signal code D and J)
+10.5 to 42 V DC for general use and flameproof type.
+10.5 to 32 V DC for lightning protector  
+(option code /A.)
+10.5 to 30 V DC for intrinsically safe, type n, or non-
+incendive.
+Minimum voltage limited at 16.6 V DC for digital 
+communications, BRAIN and HART
+For 1 to 5 V HART (Output signal code Q)
+Power supply :
+9 to 28 V DC for general use and flame proof type. 
+Power Consumption : 
+0.96 mA to 3 mA, 27 mW 
+Load for 4 to 20 mA HART / BRAIN 
+(Output signal code D and J)
+0 to 1290Ω for operation
+250 to 600Ω for digital communication
+Output Load for 1 to 5 V HART 
+(Output signal code Q)
+1 MΩ or greater (meter input impedance)
+Note that with three-wire connection, the cable length 
+may affect the measurement accuracy of the output 
+signal.
+Communication Requirements “◊” 
+(Approval codes may affect electrical requirements.)
+ BRAIN
+ Communication distance
+Up to 2 km (1.25 miles) when using CEV 
+polyethylene-insulated PVC-sheathed cables. 
+Communication distance varies depending on type of 
+cable used.
+ Load capacitance
+0.22 µF or less
+ Load inductance
+3.3 mH or less
+ Input impedance of communicating device
+10 kΩ or more at 2.4 kHz.
+June 1, 2017-00
+EMC Conformity Standards
+EN 61326-1 Class A, Table2
+EN 61326-2-3
+EN 61326-2-5 (for fieldbus)
+European Pressure Equipment Directive 
+2014/68/EU
+Sound Engineering Practice 
+EU RoHS Directive
+EN 50581
+Safety Requirement Standards
+EN 61010-1, C22.2 No.61010-1
+•	 Installation category: I 
+(Anticipated transient overvoltage 330 V)
+•	 Pollution degree: 2
+•	 Indoor/Outdoor use
+
+--- página 4 ---
+4
+All Rights Reserved. Copyright © 2012, Yokogawa Electric Corporation
+<<Contents>>  <<Index>>
+GS 01C31H01-01EN
+Table 1. 
+Process temperature, Ambient temperature, and Working pressure
+Code
+Process 
+temperature*1
+Ambient 
+temperature*2
+Working pressure
+Specific gravity*3
+Silicone oil 
+(general use)
+A
+–10 to 250°C *4
+(14 to 482°F)
+–10 to 60°C
+(14 to 140°F)
+2.7 kPa abs
+(0.38 psi abs)  
+to flange rating pressure
+1.07
+Silicone oil 
+(general use)
+B
+–30 to 180°C
+(–22 to 356°F)
+–15 to 60°C
+(5 to 140°F)
+0.94
+Silicone oil
+(high temperature use)
+C
+10 to 310°C
+(50 to 590°F)
+10 to 60°C
+(50 to 140°F)
+1.09
+Fluorinated oil
+(oil-prohibited use)
+D
+–20 to 120°C
+(–4 to 248°F)
+–10 to 60°C
+(14 to 140°F)
+51 kPa abs
+(7.4 psi abs)  
+to flange rating pressure
+1.90 to 1.92
+Ethylene glycol
+(low temperature use)
+E
+–50 to 100°C
+(–58 to 212°F)
+–40 to 60°C
+(–40 to 140°F)
+100 kPa abs
+(atmospheric pressure)
+to flange pressure rating
+1.09
+Silicone oil
+(high temp. and high 
+vacuum use)
+1
+–10 to 250°C *4
+(14 to 482°F)
+–10 to 60°C *5
+(14 to 140°F)
+0.013 kPa abs
+(0.0019 psi abs) 
+to flange rating pressure
+1.07
+Silicone oil
+(high temp. and high 
+vacuum use)
+2
+10 to 310°C
+(50 to 590°F)
+10 to 60°C *5
+(50 to 140°F)
+1.09
+Silicone oil
+(high vacuum use)
+4
+–10 to 100°C
+(14 to 212°F)
+–10 to 60°C *5
+(14 to 140°F)
+1.07
+*1:	
+See figure 1-1, 1-2, 1-3, 1-4, and 1-5 ‘Working Pressure and Process Temperature.’
+*2:	
+This ambient temperature is the transmitter ambient temperature.
+*3:	
+Approximate values at a temperature of 25°C (77°F)
+*4:	
+In case of wetted parts material code TW (Tantalum), process temperature limit is up to 200°C (392°F).
+*5:	
+The upper ambient temperature limit is 50°(122°F) in the following combinations.
+Process connection style code
+Process connection size code
+W (Flush type)
+2 (2-inch) or 8 (1 1/2-inch)
+E (Extension type)
+3 (3-inch)
+Note:	 The differential pressure transmitter should be installed at least 600 mm below the high pressure (HP) process connection.
+	
+However, this value (600 mm) may be affected by ambient temperature, operating pressure, fill fluid or material of the 
+wetted diaphragm.
+	
+Contact YOKOGAWA when the transmitter can not be installed at least 600 mm below the HP process connection.
+Oct. 24, 2014-00
+
+--- página 5 ---
+5
+<<Contents>>  <<Index>>
+All Rights Reserved. Copyright © 2012, Yokogawa Electric Corporation
+GS 01C31H01-01EN
+F01E.ai
+Process temperature
+for fill fluid code B
+Process temperature
+for fill fluid code A
+Process temperature
+for fill fluid code C
+Flange max.
+working 
+pressure
+Atmospheric
+pressure
+Transmitter ambient
+temperature range
+(for fill fluid code 
+A, B)
+2.7 (0.38)
+0.1(0.014)
+1 (0.14)
+10(1.4)
+100 (14.5)
+51 (7.4)
+Working 
+pressure
+kPa abs
+(psi abs)
+Temperature (°C)
+-50
+0
+50 100 150 200 250 300 350
+Figure 1-1. Working Pressure and Process 
+Temperature (Fill fluid: silicone oil for 
+general and high temperature use)
+2.7 (0.38)
+0.1(0.014)
+1 (0.14)
+10(1.4)
+100 (14.5)
+51 (7.4)
+F02E.ai
+Process temperature
+for fill fluid code E
+Process temperature
+for fill fluid code D
+Flange max.
+working 
+pressure
+Atmospheric
+pressure
+Transmitter ambient
+temperature range
+(for fill fluid code D)
+Temperature (°C)
+Working 
+pressure
+kPa abs
+(psi abs)
+-50
+0
+50 100 150 200 250 300 350
+Figure 1-2. Working Pressure and Process 
+Temperature (Fill fluid: fluorinated oil for 
+oil-prohibited use and ethylene glycol for 
+low temperature use)
+Mar. 11, 2019-00
+F14E.ai
+-50
+0
+50 100 150 200 250 300 350
+2.7(0.38)
+100(14.5)
+0.1(0.014)
+0.013(0.0019)
+0.01(0.0014)
+1(0.14)
+10(1.4)
+Temperature (°C)
+Process temperature
+for fill fluid code 1
+Flange max.
+working 
+pressure
+Atmospheric
+pressure
+Transmitter ambient
+temperature range
+(for fill fluid code 1)*1
+Working 
+pressure
+kPa abs
+(psi abs)
+Figure 1-3. Working Pressure and Process 
+Temperature (Fill fluid: silicone oil for 
+high temp. and high vacuum use)
+F15E.ai
+-50
+0
+50 100 150 200 250 300 350
+2.7(0.38)
+100(14.5)
+0.1(0.014)
+0.013(0.0019)
+0.01(0.0014)
+1(0.14)
+10(1.4)
+Temperature (°C)
+Process temperature
+for fill fluid code 2
+Flange max.
+working 
+pressure
+Atmospheric
+pressure
+Transmitter ambient
+temperature range
+(for fill fluid code 2)*1
+Working 
+pressure
+kPa abs
+(psi abs)
+Figure 1-4. Working Pressure and Process 
+Temperature (Fill fluid: silicone oil for 
+high temp. and high vacuum use)
+
+--- página 6 ---
+6
+All Rights Reserved. Copyright © 2012, Yokogawa Electric Corporation
+<<Contents>>  <<Index>>
+GS 01C31H01-01EN
+□ PHYSICAL SPECIFICATIONS
+Process connections
+See the following table.
+Table 2. 
+Flange size and rating
+Process
+connection style
+Size
+Flange
+Flush type
+3-inch
+2-inch
+11/2-inch*
+JIS 10K, 20K, 40K
+ANSI Class 150, 300, 600
+JPI Class 150, 300, 600
+DIN PN10/16, 25/40, 64
+Extended type
+4-inch
+3-inch
+JIS 10K, 20K
+ANSI Class 150, 300
+JPI Class 150, 300
+DIN PN10/16, 25/40
+Combination type
+(Extended and 
+Flush)
+High pressure 
+side: 4-inch
+Low pressure 
+side: 3-inch
+JIS 10K, 20K
+ANSI Class 150, 300
+JPI Class 150, 300
+DIN PN10/16, 25/40
+* :	
+Flushing connection rings are always attached.
+Gasket Contact Surface
+See the following table.
+Table 3. 
+Gasket contact surface
+Flange
+JIS/JPI/DIN
+ANSI
+Wetted parts material code
+SW,
+SE,
+SY
+HW,
+TW,
+UW
+SW,
+SE,
+SY
+HW,
+TW,
+UW
+Gasket contact 
+Surface
+Serration*1
+─
+─
+
+─
+Flat (No serration)
+
+
+
+
+ :	
+Applicable
+─ :	
+Not applicable
+*1:	
+ANSI B16.5
+Electrical Connections
+See “MODEL AND SUFFIX CODES.”
+Transmitter Mounting
+2-inch pipe mounting
+Wetted Parts Materials
+ Diaphragm seal
+ 
+Diaphragm and other wetted parts;
+Refer to “MODEL AND SUFFIX CODES.”
+ Flushing connection ring (optional)
+ 
+Ring and Vent / Drain plugs
+Refer to “MODEL AND SUFFIX CODES.”
+(Spiral) gasket for transmitter side  
+316SST (Hoop), PTFE Teflon (Filler)
+Non-wetted Parts Materials
+ Transmitter body section:
+ 
+Cover flange
+ASTM CF-8M
+ 
+Cover flange bolting
+B7 carbon steel, 316L SST or 660 SST
+ 
+Housing
+•	 Low copper cast aluminum alloy
+•	 Low copper cast aluminum alloy with corrosion 
+resistance properties (copper content ≤ 0.03%, 
+iron content ≤ 0.15%) (optional)
+•	 ASTM CF-8M Stainless steel (optional)
+F16E.ai
+-50
+0
+50 100 150 200 250 300 350
+2.7(0.38)
+100(14.5)
+0.1(0.014)
+0.013(0.0019)
+0.01(0.0014)
+1(0.14)
+10(1.4)
+Temperature (°C)
+Process temperature
+for fill fluid code 4
+Flange max.
+working 
+pressure
+Atmospheric
+pressure
+Transmitter ambient
+temperature range
+(for fill fluid code 4)*1
+Working 
+pressure
+kPa abs
+(psi abs)
+Figure 1-5. Working Pressure and Process 
+Temperature (Fill fluid: silicone oil for 
+high vacuum use)
+*1:	
+The upper ambient temperature limit is 
+50°(122°F) in the following combinations.
+Process connection style code
+Process connection size code
+W (Flush type)
+2 (2-inch) or 8 (1 1/2-inch)
+E (Extension type)
+3 (3-inch)
+      E-10.5
+      0.0244
+(Ω)
+Power supply voltage  E (V DC)
+600
+250
+R
+10.5
+16.6
+25.2
+42
+External
+load
+resistance
+Digital
+Communication
+range
+BRAIN and HART
+R=
+F03E.ai
+Figure 2. Relationship Between Power Supply 
+Voltage and External Load Resistance 
+(Output signal code D and J)
+Mar. 11, 2019-00
+
+--- página 7 ---
+7
+<<Contents>>  <<Index>>
+All Rights Reserved. Copyright © 2012, Yokogawa Electric Corporation
+GS 01C31H01-01EN
+ 
+Coating of housing
+[for aluminum housing]
+Polyester resin powder coating 
+Mint-green paint (Munsell 5.6BG 3.3/2.9 or its 
+equivalent)
+[for option code /P or /X2]
+Epoxy and polyurethane resin solvent coating
+ 
+Degrees of protection
+IP66/IP67, Type 4X
+ 
+Cover O-rings
+Buna-N, fluoro-rubber (optional)
+ 
+Name plate and tag
+316 SST
+ Diaphragm seal section:
+ 
+Process flange
+JIS S25C, JIS SUS304, or JIS SUS316
+ 
+Capillary tube
+JIS SUS316
+ 
+Protection tube
+JIS SUS304 PVC-sheathed
+(Max. operating temperature of PVC,100°C (212°F))
+ 
+Fill fluid
+See table 1.
+Weight
+Flush type: 16.1 kg (35.5 lbs)
+(3-inch ANSI Class150 flange, capillary length 5 m; 
+without integral indicator and mounting bracket.)
+Extended type: 21.7 kg (47.9 lbs)
+(4-inch ANSI Class150 flange, extention length 
+(X2)=100 mm, capillary length 5 m; without integral 
+indicator and mounting bracket.)
+Combination type: 18.9 kg (41.7 lbs)
+(4-inch and 3-inch ANSI Class150 flange, extention 
+length (X2) =100 mm, capillary length 5 m; without 
+integral indicator and mounting bracket.)
+Add 1.5kg (3.3lb) for Amplifier housing code 2.
+Mar. 11, 2019-00
+< Related Instruments> “◊”
+Power Distributor: Refer to GS 01B04T01-02E or 
+GS 01B04T02-02E
+BRAIN TERMINAL: Refer to GS 01C00A11-00E
+< Reference >
+•	
+ ; Registered trademark of Yokogawa 
+Electric Corporation.
+•	 FieldMate; Registered trademark of Yokogawa 
+Electric Corporation.
+•	 Teflon; Trademark of E.I. DuPont de Nemours & 
+Co.
+•	 Hastelloy; Trademark of Haynes International Inc.
+•	 HART®: Registered trademark of FieldComm 
+Group.
+•	 FOUNDATION Fieldbus; Tradmark of FieldComm 
+Group.
+•	 PROFIBUS; Registered trademark of Profibus 
+Nutzerorganisation e.v., Karlsruhe, Germany.
+Other company names and product names used in 
+this material are registered trademarks or trademarks 
+of their respective owners.
+ MODEL AND SUFFIX CODES
+ Instruction
+The model and suffix codes for EJA118E consist of two parts; a transmitter body section (I) and a diaphragm seal 
+section (II). This specification sheet introduces these two parts separately. The transmitter body section is shown in 
+one table, and the diaphragm seal section specifications are listed according to the process connection style.
+First select the model and suffix codes of transmitter body section and then continue on one of the diaphragm seal 
+section.
+F04E.ai
+I Transmitter body section
+II Diaphragm seal section
+See Page 8
+Flush type
+ Flange size: 3-inch, 2-inch • • • See Page 9
+ Flange size: 1 1/2-inch 
+• • • See Page 11
+Extended type 
+• • • See Page 12
+ Combination type 
+• • • See Page 14
+EJA118E
+
+--- página 8 ---
+8
+All Rights Reserved. Copyright © 2012, Yokogawa Electric Corporation
+<<Contents>>  <<Index>>
+GS 01C31H01-01EN
+I. Transmitter body section
+EJA118E
+F05E.ai
+Model 
+Suffix Codes
+Description
+EJA118E
+ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+Diaphragm sealed differential pressure transmitter
+Output signal
+-D . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+-J . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+-F . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+-G . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+-Q . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4 to 20 mA DC with digital communication (BRAIN protocol)
+4 to 20 mA DC with digital communication (HART 5/HART 7 protocol)*1
+Digital communication (FOUNDATION Fieldbus protocol, refer to 
+GS 01C31T02-01EN)
+Digital communication (PROFIBUS PA protocol, refer to 
+GS 01C31T04-01EN)
+Low Power, 1 to 5 V DC with digital communication (HART 7 protocol)*7
+Measurement
+span (capsule)
+M . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+H . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+2.5 to 100 kPa (10 to 400 inH2O)
+25 to 500 kPa (100 to 2000 inH2O)
+─
+S . . . . . . . . . . . . . . . . . . . . . . . . .
+Always S
+─
+C . . . . . . . . . . . . . . . . . . . . . .
+Always C
+Coverflange bolts and nuts 
+material
+J . . . . . . . . . . . . . . . . . . . 
+G . . . . . . . . . . . . . . . . . . . 
+C . . . . . . . . . . . . . . . . . . . 
+B7 carbon steel
+316L SST
+660 SST
+Installation
+-9 . . . . . . . . . . . . . . . . .
+Horizontal piping type and left side high pressure
+Amplifier housing
+1 . . . . . . . . . . . . . . 
+3 . . . . . . . . . . . . . . 
+2 . . . . . . . . . . . . . . 
+Cast aluminum alloy
+Cast aluminum alloy with corrosion resistance properties*2
+ASTM CF-8M stainless steel*3
+Electrical connection
+►
+0 . . . . . . . . . . . 
+2 . . . . . . . . . . . 
+4 . . . . . . . . . . . 
+5 . . . . . . . . . . . 
+7 . . . . . . . . . . . 
+9 . . . . . . . . . . . 
+A . . . . . . . . . . . 
+C . . . . . . . . . . . 
+D . . . . . . . . . . . 
+G 1/2 female, one electrical connection without blind plugs
+1/2 NPT female, two electrical connections without blind plugs
+M20 female, two electrical connections without blind plugs
+G 1/2 female, two electrical connections with a blind plug *4
+1/2 NPT female, two electrical connections with a blind plug *4
+M20 female, two electrical connections with a blind plug *4
+G1/2 female, two electrical connections and a 316 SST blind plug
+1/2 NPT female, two electrical connections and a 316 SST blind plug
+M20 female, two electrical connections and a 316 SST blind plug
+Integral indicator
+►
+D . . . . . . . . 
+E . . . . . . . . 
+N . . . . . . . . 
+Digital indicator*5
+Digital indicator with the range setting switch (push button)*6
+None
+Mounting bracket	
+►
+B . . . . . .
+J . . . . . .
+N . . . . . .
+304 SST 2-inch pipe mounting, flat type (for horizontal piping)
+316 SST 2-inch pipe mounting, flat type (for horizontal piping)
+None
+Diaphragm seal section
+  Continued on diaphragm seal section (II)
+The “►” marks indicate the most typical selection for each specification.
+*1:	
+HART 5 or HART 7 is selectable. Specify upon ordering.
+*2:	
+Not applicable for electrical connection code 0, 5, 7, 9 and A.
+*3:	
+Not applicable for electrical connection code 0, 5, 7 and 9.
+*4:	
+Material of a blind plug; aluminum alloy for code 5 and 9, and SUS304 for code 7.
+*5:	
+Not applicable for output signal code G.
+*6:	
+Not applicable for output signal code F.
+*7:	
+As CE marking is still pending, not applicable for those countries which require CE marking.
+June 1, 2017-00
+
+--- página 9 ---
+9
+<<Contents>>  <<Index>>
+All Rights Reserved. Copyright © 2012, Yokogawa Electric Corporation
+GS 01C31H01-01EN
+II. Diaphragm seal section (Flush type)
+ Process connection size: 3-inch (80mm) / 2-inch (50mm)
+EJA118E
+W
+3
+2
+F06E.ai
+Model
+Suffix codes
+Description
+EJA118E
+ . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Transmitter body section (I)
+Process connection style
+-W . . . . . . . . . . . . . . . . . . . . . . . . 
+Flush type
+Flange rating
+J1 . . . . . . . . . . . . . . . . . . . . . .
+J2 . . . . . . . . . . . . . . . . . . . . . .
+J4 . . . . . . . . . . . . . . . . . . . . . .
+A1 . . . . . . . . . . . . . . . . . . . . . .
+A2 . . . . . . . . . . . . . . . . . . . . . .
+A4 . . . . . . . . . . . . . . . . . . . . . .
+D2 . . . . . . . . . . . . . . . . . . . . . .
+D4 . . . . . . . . . . . . . . . . . . . . . .
+D5 . . . . . . . . . . . . . . . . . . . . . .
+P1 . . . . . . . . . . . . . . . . . . . . . .
+P2 . . . . . . . . . . . . . . . . . . . . . .
+P4 . . . . . . . . . . . . . . . . . . . . . .
+JIS 10K
+JIS 20K
+JIS 40K
+ANSI class 150
+ANSI class 300
+ANSI class 600
+DIN PN10/16
+DIN PN25/40
+DIN PN64
+JPI class 150
+JPI class 300
+JPI class 600
+Process connection size
+(Process flange size)
+3 . . . . . . . . . . . . . . . . . . . . .
+2 . . . . . . . . . . . . . . . . . . . . .
+3-inch (80 mm)
+2-inch (50 mm)
+Flange material
+►
+A . . . . . . . . . . . . . . . . . . .
+B . . . . . . . . . . . . . . . . . . .
+C . . . . . . . . . . . . . . . . . . .
+JIS S25C
+304 SST *11
+316 SST *11
+Gasket contact surface*1
+1 . . . . . . . . . . . . . . . . .
+2 . . . . . . . . . . . . . . . . .
+Serration (for ANSI flange with wetted parts material SW only)
+Flat (no serration)
+Wetted parts material*10
+SW . . . . . . . . . . . . . .
+HW . . . . . . . . . . . . .
+TW . . . . . . . . . . . . . .
+UW . . . . . . . . . . . . .
+[Diaphragm]	
+[Others]
+316L SST	
+316L SST
+Hastelloy C-276*9#	 Hastelloy C-276*9#
+Tantalum *7	
+Tantalum *7
+Titanium	
+Titanium	 (for 3-inch process flange only)
+Flushing connection ring*2
+►0 . . . . . . . . . . . . .
+1 . . . . . . . . . . . . .
+2 . . . . . . . . . . . . .
+[Ring]	
+[Vent/Drain plugs]	
+[Material]
+None	
+—	
+—
+Straight type	
+R 1/4 connections	
+316 SST #
+Straight type	
+1/4 NPT connections	
+316 SST #
+Extension
+0 . . . . . . . . . . .
+None
+Fill fluid*5
+►
+-A . . . . . . . . .
+-B . . . . . . . . .
+-C . . . . . . . . .
+-D . . . . . . . . .
+-E . . . . . . . . .
+-1 . . . . . . . . .
+-2 . . . . . . . . .
+-4 . . . . . . . . .
+	
+[Process	
+[Ambient
+	
+temperature]	
+temperature]
+For general use (silicone oil)*3
+	
+–10 to 250°C	
+–10 to 60°C
+For general use (silicone oil)
+	
+–30 to 180°C	
+–15 to 60°C
+For high temperature use (silicone oil)*4 *7
+	
+10 to 310°C	
+10 to 60°C
+For oil-prohibited use (fluorinated oil)*5
+	
+–20 to 120°C	
+–10 to 60°C
+For low temperature use (ethylene glycol)
+	
+–50 to 100°C	
+–40 to 60°C
+High temp. and high vacuum use (Silicone oil)*3*12
+	
+–10 to 250°C	
+–10 to 60°C(50°C)*13
+High temp. and high vacuum use (Silicone oil) *4*7*12
+	
+10 to 310°C	
+10 to 60°C(50°C)*13
+High vacuum use (Silicone oil) *12
+	
+–10 to 100°C	
+–10 to 60°C(50°C)*13
+Capillary connection
+A . . . . . . .
+Side of diaphragm seal unit
+─
+2 . . . . .
+Always 2
+Capillary length*6
+1 . . .
+2 . . .
+3 . . .
+4 . . .
+5 . . .
+1 m	
+6 . . . . . . . . .  6 m
+2 m	
+7 . . . . . . . . .  7 m
+3 m	
+8 . . . . . . . . .  8 m
+4 m	
+9 . . . . . . . . .  9 m
+5 m	
+A . . . . . . . . .  10 m
+Option codes
+/  Optional specification
+The “►” marks indicate the most typical selection for each specification.
+Example: EJA118E-DMSCG-912EN-WA13B1SW00-BA25/
+Oct. 24, 2014-00
+
+--- página 10 ---
+10
+All Rights Reserved. Copyright © 2012, Yokogawa Electric Corporation
+<<Contents>>  <<Index>>
+GS 01C31H01-01EN
+*1:	
+See table 3 ‘Gasket contact surface’ on page 6.
+*2:	
+When specified flushing connection ring code 1 or 2, exclusive gaskets are provided for transmitter side.
+*3:	
+In case of wetted parts material code TW (Tantalum), the process temperature limit is –10 to 200°C.
+*4:	
+Wetted parts material code TW (Tantalum) cannot be applied.
+*5:	
+Even in case where fill fluid code D (fluorinated oil) is selected, if degrease cleansing treatment or both degrease cleansing 
+and dehydrating treatment for the wetted parts is required, specify option code K1 or K5.
+*6:	
+In case of wetted parts material code HW (Hastelloy C) and TW (Tantalum) for 2-inch process flange, specify capillary 
+length from 1 to 5m.
+*7:	
+Not applicable for flashing connection ring code 1 and 2.
+*8:	
+Not applicable for gasket contact surface code 1.
+*9:	
+Hastelloy C-276 or N10276.
+*10: 
+	Users must consider the characteristics of selected wetted parts material and the influence of process fluids. The use of 
+inappropriate materials can result in the leakage of corrosive process fluids and cause injury to personnel and/or damage 
+to plant facilities. It is also possible that the diaphragm itself can be damaged and that material from the broken diaphragm 
+and the fill fluid can contaminate the user’s process fluids.
+	
+	 Be very careful with highly corrosive process fluids such as hydrochloric acid, sulfuric acid, hydrogen sulfide, sodium 
+hypochlorite, and hightemperature steam (150°C [302°F] or above). Contact Yokogawa for detailed information of the 
+wetted parts material.
+*11:	
+Forged version of the material may be used.
+*12:	
+Not applicable for wetted parts material code UW.
+*13: 	 The upper ambient temperature limit is 50°(122°F) when specifying process connection size code 2 (2-inch).
+The ‘#’marks indicate the construction materials conform to NACE material recommendations per MR0175/ISO 15156. 
+Please refer to the latest standards for details. Selected materials also conform to NACE MR0103.
+Oct. 24, 2014-00
+
+--- página 11 ---
+11
+<<Contents>>  <<Index>>
+All Rights Reserved. Copyright © 2012, Yokogawa Electric Corporation
+GS 01C31H01-01EN
+Oct. 24, 2014-00
+II. Diaphragm seal section (Flush type)
+ Process connection size: 1 1/2-inch (40 mm)
+F07E.ai
+EJA118E
+W
+8
+Model
+Suffix codes
+Description
+EJA118E
+ . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Transmitter body section (I)
+Process connection style
+-W . . . . . . . . . . . . . . . . . . . . . . . . 
+Flush type
+Flange rating
+J1 . . . . . . . . . . . . . . . . . . . . . .
+J2 . . . . . . . . . . . . . . . . . . . . . .
+J4 . . . . . . . . . . . . . . . . . . . . . .
+A1 . . . . . . . . . . . . . . . . . . . . . .
+A2 . . . . . . . . . . . . . . . . . . . . . .
+A4 . . . . . . . . . . . . . . . . . . . . . .
+P1 . . . . . . . . . . . . . . . . . . . . . .
+P2 . . . . . . . . . . . . . . . . . . . . . .
+P4 . . . . . . . . . . . . . . . . . . . . . .
+JIS 10K
+JIS 20K
+JIS 40K
+ANSI class 150
+ANSI class 300
+ANSI class 600
+JPI class 150
+JPI class 300
+JPI class 600
+Process connection size
+(Process flange size)
+8 . . . . . . . . . . . . . . . . . . . . .
+1 1/2-inch (40 mm)
+Flange material
+►
+A . . . . . . . . . . . . . . . . . . .
+B . . . . . . . . . . . . . . . . . . .
+C . . . . . . . . . . . . . . . . . . .
+JIS S25C
+304 SST *6
+316 SST *6
+Gasket contact surface*1
+1 . . . . . . . . . . . . . . . . .
+2 . . . . . . . . . . . . . . . . .
+Serration (for ANSI flange only)
+Flat (no serration)
+Wetted parts material*5
+SW . . . . . . . . . . . . . .
+[Diaphragm]	
+[Others]
+316L SST	
+316L SST
+Flushing connection ring*2
+3 . . . . . . . . . . . . .
+4 . . . . . . . . . . . . .
+[Ring]	
+[Vent/Drain plugs]	
+[Material]
+Reducer type	
+R 1/4 connections*4	
+316 SST #
+Reducer type	
+1/4 NPT connections	
+316 SST #
+Extension
+0 . . . . . . . . . . .
+None
+Fill fluid
+►
+-A . . . . . . . . .
+-B . . . . . . . . .
+-D . . . . . . . . .
+-E . . . . . . . . .
+-1 . . . . . . . . .
+-4 . . . . . . . . .
+	
+[Process	
+[Ambient
+	
+temperature]	
+temperature]
+For general use (silicone oil)	
+–10 to 250°C	
+–10 to 60°C
+For general use (silicone oil)	
+–30 to 180°C	
+–15 to 60°C
+For oil-prohibited use (fluorinated oil)*3
+	
+–20 to 120°C	
+–10 to 60°C
+For low temperature use (ethylene glycol)
+	
+–50 to 100°C	
+–40 to 60°C
+High temp. and high vacuum use (Silicone oil)
+	
+–10 to 250°C	
+–10 to 50°C
+High vacuum use (Silicone oil)	 –10 to 100°C	
+–10 to 50°C
+Capillary connection
+A . . . . . . .
+Side of diaphragm seal unit
+─
+2 . . . . .
+Always 2
+Capillary length
+1 . . .
+2 . . .
+3 . . .
+4 . . .
+5 . . .
+1 m	
+6 . . . . . . . . .  6 m
+2 m	
+7 . . . . . . . . .  7 m
+3 m	
+8 . . . . . . . . .  8 m
+4 m	
+9 . . . . . . . . .  9 m
+5 m	
+A . . . . . . . . .  10 m
+Option codes
+/  Optional specification
+The “►” marks indicate the most typical selection for each specification.
+Example: EJA118E-DMSCG-912EN-WA18B1SW40-BA25/
+*1:	
+See table 3 ‘Gasket contact surface’ on page 6.
+*2:	
+When specified flushing connection ring code 3 or 4, exclusive gaskets are provided for transmitter side.
+*3:	
+Even in case where fill fluid code D (fluorinated oil) is selected, if degrease cleansing treatment or both degrease cleansing 
+and dehydrating treatment for the wetted parts is required, specify option code K1 or K5.
+*4:	
+Not applicable for gasket contact surface code 1.
+*5: 
+	Users must consider the characteristics of selected wetted parts material and the influence of process fluids. The use of 
+inappropriate materials can result in the leakage of corrosive process fluids and cause injury to personnel and/or damage 
+to plant facilities. It is also possible that the diaphragm itself can be damaged and that material from the broken diaphragm 
+and the fill fluid can contaminate the user’s process fluids.
+	
+Be very careful with highly corrosive process fluids such as hydrochloric acid, sulfuric acid, hydrogen sulfide, sodium 
+hypochlorite, and hightemperature steam (150°C [302°F] or above). Contact Yokogawa for detailed information of the 
+wetted parts material.
+*6:	
+Forged version of the material may be used.
+
+--- página 12 ---
+12
+All Rights Reserved. Copyright © 2012, Yokogawa Electric Corporation
+<<Contents>>  <<Index>>
+GS 01C31H01-01EN
+Oct. 24, 2014-00
+II. Diaphragm seal section (Extended type)
+ Process connection size: 4-inch (100 mm) / 3-inch (80 mm)
+F08E.ai
+EJA118E
+E
+4
+3
+Model
+Suffix codes
+Description
+EJA118E
+ . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Transmitter body section (I)
+Process connection style
+-E . . . . . . . . . . . . . . . . . . . . . . . . . 
+Extended type
+Flange rating
+J1 . . . . . . . . . . . . . . . . . . . . . .
+J2 . . . . . . . . . . . . . . . . . . . . . .
+A1 . . . . . . . . . . . . . . . . . . . . . .
+A2 . . . . . . . . . . . . . . . . . . . . . .
+P1 . . . . . . . . . . . . . . . . . . . . . .
+P2 . . . . . . . . . . . . . . . . . . . . . .
+D2 . . . . . . . . . . . . . . . . . . . . . .
+D4 . . . . . . . . . . . . . . . . . . . . . .
+JIS 10K
+JIS 20K
+ANSI class 150
+ANSI class 300
+JPI class 150
+JPI class 300
+DIN PN10/16
+DIN PN25/40
+Process connection size
+(Process flange size)
+4 . . . . . . . . . . . . . . . . . . . . .
+3 . . . . . . . . . . . . . . . . . . . . .
+4-inch (100 mm)
+3-inch (80 mm)
+Flange material
+►
+A . . . . . . . . . . . . . . . . . . .
+B . . . . . . . . . . . . . . . . . . .
+C . . . . . . . . . . . . . . . . . . .
+JIS S25C
+304 SST *5
+316 SST *5
+Gasket contact surface*1
+1 . . . . . . . . . . . . . . . . .
+2 . . . . . . . . . . . . . . . . .
+Serration (for ANSI flange only)
+Flat (no serration)
+Wetted parts material*4
+SE . . . . . . . . . . . . . .
+[Diaphragm]	
+[Pipe]	
+[Others]
+316L SST	
+316 SST	
+316 SST
+Flushing connection ring
+0 . . . . . . . . . . . . .
+None
+Extension
+2 . . . . . . . . . . .
+4 . . . . . . . . . . .
+6 . . . . . . . . . . .
+Length (X2) = 50 mm
+Length (X2) = 100 mm
+Length (X2) = 150 mm
+Fill fluid
+►
+-A . . . . . . . . .
+-B . . . . . . . . .
+-C . . . . . . . . .
+-D . . . . . . . . .
+-E . . . . . . . . .
+-1 . . . . . . . . .
+-2 . . . . . . . . .
+-4 . . . . . . . . .
+	
+[Process	
+[Ambient
+	
+temperature]	
+temperature]
+For general use (silicone oil)
+	
+–10 to 250°C	
+–10 to 60°C
+For general use (silicone oil)
+	
+–30 to 180°C	
+–15 to 60°C
+For high temperature use (silicone oil)
+	
+10 to 310°C	
+10 to 60°C
+For oil-prohibited use (fluorinated oil)*2
+	
+–20 to 120°C	
+–10 to 60°C
+For low temperature use (ethylene glycol)
+	
+–50 to 100°C	
+–40 to 60°C
+High temp. and high vacuum use (Silicone oil)
+	
+–10 to 250°C	
+–10 to 60°C(50°C)*6
+High temp. and high vacuum use (Silicone oil) 
+	
+10 to 310°C	
+10 to 60°C(50°C)*6
+High vacuum use (Silicone oil) 
+	
+–10 to 100°C	
+–10 to 60°C(50°C)*6
+Capillary connection
+B . . . . . . .
+Back of diaphragm seal unit
+─
+2 . . . . .
+Always 2
+Capillary length*3
+1 . . .
+2 . . .
+3 . . .
+4 . . .
+5 . . .
+1 m	
+6 . . . . . . . . .  6 m
+2 m	
+7 . . . . . . . . .  7 m
+3 m	
+8 . . . . . . . . .  8 m
+4 m	
+9 . . . . . . . . .  9 m
+5 m	
+A . . . . . . . . .  10 m
+Option codes
+/  Optional specification
+The “►” marks indicate the most typical selection for each specification.
+Example: EJA118E-DMSCG-912EN-EA14B1SE02-BB25/
+*1:	
+See table 3 ‘Gasket contact surface’ on page 6.
+*2:	
+Even in case where fill fluid code D (fluorinated oil) is selected, if degrease cleansing treatment or both degrease cleansing 
+and dehydrating treatment for the wetted parts is required, specify option code K1 or K5.
+*3:	
+The specified capillary length includes the extension length (X2) and the flange thickness (t).
+
+--- página 13 ---
+13
+<<Contents>>  <<Index>>
+All Rights Reserved. Copyright © 2012, Yokogawa Electric Corporation
+GS 01C31H01-01EN
+*4: 
+	Users must consider the characteristics of selected wetted parts material and the influence of process fluids. The use of 
+inappropriate materials can result in the leakage of corrosive process fluids and cause injury to personnel and/or damage 
+to plant facilities. It is also possible that the diaphragm itself can be damaged and that material from the broken diaphragm 
+and the fill fluid can contaminate the user’s process fluids.
+	
+Be very careful with highly corrosive process fluids such as hydrochloric acid, sulfuric acid, hydrogen sulfide, sodium 
+hypochlorite, and hightemperature steam (150°C [302°F] or above). Contact Yokogawa for detailed information of the 
+wetted parts material.
+*5:	
+Forged version of the material may be used.
+*6: 	
+The upper ambient temperature limit is 50°(122°F) when specifying process connection size code 3 (3-inch).
+Oct. 24, 2014-00
+
+--- página 14 ---
+14
+All Rights Reserved. Copyright © 2012, Yokogawa Electric Corporation
+<<Contents>>  <<Index>>
+GS 01C31H01-01EN
+Oct. 24, 2014-00
+II. Diaphragm seal section (Combination type)
+ Process connection size: High pressure side; 4-inch (100 mm) • • • Extended type 
+ 
+Low pressue side; 3-inch (80 mm) • • • Flush type
+F09E.ai
+EJA118E
+Y
+W
+Model
+Suffix codes
+Description
+EJA118E
+ . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Transmitter body section (I)
+Process connection style
+-Y . . . . . . . . . . . . . . . . . . . . . . . . . 
+Combination type (Extended and Flush)
+Flange rating
+J1 . . . . . . . . . . . . . . . . . . . . . .
+J2 . . . . . . . . . . . . . . . . . . . . . .
+A1 . . . . . . . . . . . . . . . . . . . . . .
+A2 . . . . . . . . . . . . . . . . . . . . . .
+P1 . . . . . . . . . . . . . . . . . . . . . .
+P2 . . . . . . . . . . . . . . . . . . . . . .
+D2 . . . . . . . . . . . . . . . . . . . . . .
+D4 . . . . . . . . . . . . . . . . . . . . . .
+JIS 10K
+JIS 20K
+ANSI class 150
+ANSI class 300
+JPI class 150
+JPI class 300
+DIN PN10/16
+DIN PN25/40
+Process connection size
+(Process flange size)
+W . . . . . . . . . . . . . . . . . . . . .
+High pressure side 4-inch (100 mm)
+Low pressure side 3-inch (80 mm)
+Flange material
+►
+A . . . . . . . . . . . . . . . . . . .
+B . . . . . . . . . . . . . . . . . . .
+C . . . . . . . . . . . . . . . . . . .
+JIS S25C
+304 SST *5
+316 SST *5
+Gasket contact surface*1
+1 . . . . . . . . . . . . . . . . .
+2 . . . . . . . . . . . . . . . . .
+Serration (for ANSI flange only)
+Flat (no serration)
+Wetted parts material*4
+SY . . . . . . . . . . . . . .
+	
+[Diaphragm]	
+[Pipe]	
+[Others]
+High pressure side:	 316L SST	
+316 SST	
+316 SST
+Low pressure side:	 316L SST	
+—	
+316L SST
+Flushing connection ring
+0 . . . . . . . . . . . . .
+None
+Extension
+1 . . . . . . . . . . .
+3 . . . . . . . . . . .
+5 . . . . . . . . . . .
+Length (X2) = 50 mm
+Length (X2) = 100 mm
+Length (X2) = 150 mm
+Fill fluid
+►
+-A . . . . . . . . .
+-B . . . . . . . . .
+-C . . . . . . . . .
+-D . . . . . . . . .
+-E . . . . . . . . .
+-1 . . . . . . . . .
+-2 . . . . . . . . .
+-4 . . . . . . . . .
+	
+[Process	
+[Ambient
+	
+temperature]	
+temperature]
+For general use (silicone oil)	
+–10 to 250°C	
+–10 to 60°C
+For general use (silicone oil)	
+–30 to 180°C	
+–15 to 60°C
+For high temperature use (silicone oil)
+	
+10 to 310°C	
+10 to 60°C
+For oil-prohibited use (fluorinated oil)*2
+	
+–20 to 120°C	
+–10 to 60°C
+For low temperature use (ethylene glycol)
+	
+–50 to 100°C	
+–40 to 60°C
+High temp. and high vacuum use (Silicone oil)
+	
+–10 to 250°C	
+–10 to 60°C
+High temp. and high vacuum use (Silicone oil)
+	
+10 to 310°C	
+10 to 60°C
+High vacuum use (Silicone oil)	 –10 to 100°C	
+–10 to 60°C
+Capillary connection
+C . . . . . . .
+High pressure side: Back of diaphragm seal unit
+Low pressure side: Side of diaphragm seal unit
+─
+2 . . . . .
+Always 2
+Capillary length*3
+1 . . .
+2 . . .
+3 . . .
+4 . . .
+5 . . .
+1 m	
+6 . . . . . . . . .  6 m
+2 m	
+7 . . . . . . . . .  7 m
+3 m	
+8 . . . . . . . . .  8 m
+4 m	
+9 . . . . . . . . .  9 m
+5 m	
+A . . . . . . . . .  10 m
+Option codes
+/  Optional specification
+The “►” marks indicate the most typical selection for each specification.
+Example: EJA118E-DMSCG-912EN-YA1WB1SY01-BC25/
+*1:	
+See table 3 ‘Gasket contact surface’ on page 6.
+*2:	
+Even in case where fill fluid code D (fluorinated oil) is selected, if degrease cleansing treatment or both degrease cleansing 
+and dehydrating treatment for the wetted parts is required, specify option code K1 or K5.
+*3:	
+The specified capillary length of high pressure side (extended side) includes the extension length (X2) and the flange 
+thickness (t).
+
+--- página 15 ---
+15
+<<Contents>>  <<Index>>
+All Rights Reserved. Copyright © 2012, Yokogawa Electric Corporation
+GS 01C31H01-01EN
+Oct. 24, 2014-00
+*4: 
+	Users must consider the characteristics of selected wetted parts material and the influence of process fluids. The use of 
+inappropriate materials can result in the leakage of corrosive process fluids and cause injury to personnel and/or damage 
+to plant facilities. It is also possible that the diaphragm itself can be damaged and that material from the broken diaphragm 
+and the fill fluid can contaminate the user’s process fluids.
+	
+Be very careful with highly corrosive process fluids such as hydrochloric acid, sulfuric acid, hydrogen sulfide, sodium 
+hypochlorite, and hightemperature steam (150°C [302°F] or above). Contact Yokogawa for detailed information of the 
+wetted parts material.
+*5:	
+Forged version of the material may be used.
+
+--- página 16 ---
+16
+All Rights Reserved. Copyright © 2012, Yokogawa Electric Corporation
+<<Contents>>  <<Index>>
+GS 01C31H01-01EN
+June 1, 2017-00
+ OPTIONAL SPECIFICATIONS (For Explosion Protected type) “◊”
+For other agency approvals and marine approvals, please refer to GS 01C25A20-01EN.
+Item
+Description
+Code
+Factory Mutual
+(FM)
+FM Explosionproof Approval *1
+Applicable Standard: FM3600, FM3615, FM3810, ANSI/NEMA 250
+Explosionproof for Class I, Division 1, Groups B, C and D, Dust-ignitionproof for Class II/III, Division 1,
+Groups E, F and G, in Hazardous locations, indoors and outdoors (Enclosure: Type 4X)
+“FACTORY SEALED, CONDUIT SEAL NOT REQUIRED.”
+Temperature class: T6, Amb. Temp.: –40 to 60°C (–40 to 140°F)
+FF1
+FM Intrinsically safe Approval *1*3
+Applicable Standard: FM3600, FM3610, FM3611, FM3810
+Intrinsically Safe for Class I, Division 1, Groups A, B, C & D, Class II, Division 1,
+Groups E, F & G and Class III, Division 1, Class I, Zone 0, in Hazardous Locations, AEx ia IIC
+Nonincendive for Class I, Division 2, Groups A, B, C & D, Class II, Division. 2,
+Groups F & G, Class I, Zone 2, Group IIC, in Hazardous Locations
+Enclosure: Type 4X, Temp. Class: T4, Amb. Temp.: –60 to 60°C (–75 to 140°F)
+Intrinsically Safe Apparatus Parameters
+[Groups A, B, C, D, E, F and G] Vmax=30 V, Imax=200 mA, Pmax=1 W, Ci=6 nF, Li=0 µH
+[Groups C, D, E, F and G] Vmax=30 V, Imax=225 mA, Pmax=1 W, Ci=6 nF, Li=0 µH
+FS1
+Combined FF1 and FS1 *1*3
+FU1
+ATEX
+ATEX Flameproof Approval *1*3
+Applicable Standard: EN 60079-0:2012+A11:2013, EN 60079-1:2007 (“2014” from August 1, 2017),  
+EN 60079-31:2014
+Certificate: KEMA 07ATEX0109 X
+II 2G, 2D Ex d IIC T6...T4 Gb (“Ex db IIC T6...T4 Gb” from August 1, 2017), Ex tb IIIC T85°C Db
+Degree of protection: IP66/IP67
+Amb. Temp. (Tamb) for gas-proof:
+T4; –50 to 75°C (–58 to 167°F), T5; –50 to 80°C (–58 to 176°F), T6; –50 to 75°C (–58 to 167°F)
+Process Temp. for gas-proof (Tp):
+T4; –50 to 120°C (–58 to 248°F), T5; –50 to 100°C (–58 to 212°F), T6; –50 to 85°C (–58 to 185°F)
+Max. surface Temp. for dust-proof: T85°C (Tamb: –30 to 75°C, Tp: –30 to 85°C) *2
+KF22
+ATEX Intrinsically safe Approval *1*3
+Applicable Standard: EN 60079-0:2012+A11:2013, EN 60079-11:2012
+Certificate: DEKRA 11ATEX0228 X
+II 1G, 2D Ex ia IIC T4 Ga, Ex ia IIIC T85°C T100°C T120°C Db
+Degree of protection: IP66/IP67
+Amb. Temp. (Tamb) for EPL Ga: –50 to 60°C (–58 to 140°F)
+Maximum Process Temp. (Tp) for EPL Ga:120°C
+Electrical data: Ui=30 V, Ii=200 mA, Pi=0.9 W, Ci=27.6 nF, Li=0 μH
+Amb. Temp. for EPL Db: –30 to 60°C *2
+Max. surface Temp. for EPL Db: T85°C (Tp: 80°C), T100°C (Tp: 100°C), T120°C (Tp: 120°C)
+KS21
+Combined KF22, KS21 and ATEX Intrinsically safe Ex ic *1*3
+[ATEX Intrinsically safe Ex ic] 
+Applicable Standard: EN 60079-0:2012+A11:2013, EN 60079-11:2012
+II 3G Ex ic IIC T4 Gc, Amb. Temp.: –30 to 60°C (–22 to 140°F) *2
+Ui=30 V, Ci=27.6 nF, Li=0 μH
+KU22
+
+--- página 17 ---
+17
+<<Contents>>  <<Index>>
+All Rights Reserved. Copyright © 2012, Yokogawa Electric Corporation
+GS 01C31H01-01EN
+June 1, 2017-00
+Item
+Description
+Code
+Canadian
+Standards
+Association
+(CSA)
+CSA Explosionproof Approval *1
+Certificate: 2014354
+Applicable Standard: C22.2 No.0, C22.2 No.0.4, C22.2 No.0.5, C22.2 No.25, C22.2 No.30,
+C22.2 No.94, C22.2 No.60079-0, C22.2 No.60079-1, C22.2 No.61010-1, C22.2 No.61010-2-030
+Explosion-proof for Class I, Groups B, C and D.
+Dustignition-proof for Class II/III, Groups E, F and G.
+When installed in Division 2, “SEAL NOT REQUIRED” Enclosure: Type 4X,  
+Temp. Code: T6...T4
+Ex d IIC T6...T4 Enclosure: IP66/IP67
+Max.Process Temp.: T4;120°C(248°F), T5;100°C(212°F), T6; 85°C(185°F)
+Amb.Temp.: –50 to 75°C(–58 to 167°F) for T4, –50 to 80°C(–58 to 176°F) for T5,  
+–50 to 75°C(–58 to 167°F) for T6 *2
+Process Sealing Certification
+Dual Seal Certified by CSA to the requirement of ANSI/ISA 12.27.01
+No additional sealing required
+Primary seal failure annunciation: at the zero adjustment screw
+CF1
+CSA Intrinsically safe Approval *1*3
+Certificate: 1606623
+[For CSA C22.2]
+Applicable Standard: C22.2 No.0, C22.2 No.0.4, C22.2 No.25, C22.2 No.94, C22.2 No.157,  
+C22.2 No.213, C22.2 No.61010-1, C22.2 No.60079-0, C22.2 No.61010-2-030
+Intrinsically Safe for Class I, Division 1, Groups A, B, C & D, Class II, Division 1, Groups E, F & G,
+Class III, Division 1, Nonincendive for Class I, Division 2, Groups A, B, C & D, Class II, Division 2,
+Groups F & G, Class III, Division 1
+Enclosure: Type 4X, Temp. Code: T4 Amb. Temp.: –50 to 60°C(–58 to 140°F) *2
+Electrical Parameters: [Intrinsically Safe] Vmax=30V, Imax=200mA, Pmax=0.9W, Ci=10nF, Li=0 μH
+[Nonincendive] Vmax=30V, Ci=10nF, Li=0 μH
+[For CSA E60079]
+Applicable Standard: CAN/CSA E60079-11, CAN/CSA E60079-15, IEC 60529:2001
+Ex ia IIC T4, Ex nL IIC T4 Enclosure: IP66/IP67
+Amb. Temp.: –50 to 60°C(–58 to 140°F) *2, Max. Process Temp.: 120°C(248°F)
+Electrical Parameters:	[Ex ia] Ui=30V, Ii=200mA, Pi=0.9W, Ci=10nF, Li=0 μH
+	
+[Ex nL] Ui=30V, Ci=10nF, Li=0 μH
+Process Sealing Certification
+Dual Seal Certified by CSA to the requirement of ANSI/ISA 12.27.01
+No additional sealing required
+Primary seal failure annunciation: at the zero adjustment screw
+CS1
+Combined CF1 and CS1 *1*3
+CU1
+IECEx
+IECEx Flameproof Approval *1
+Applicable Standard: IEC 60079-0:2011, IEC60079-1:2007-4
+Certificate: IECEx CSA 07.0008
+Flameproof for Zone 1, Ex d IIC T6...T4 Gb Enclosure: IP66/IP67
+Max.Process Temp.: T4;120°C(248°F), T5;100°C(212°F), T6; 85°C(185°F)
+Amb.Temp.: –50 to 75°C(–58 to 167°F) for T4, –50 to 80°C(–58 to 176°F) for T5,
+–50 to 75°C(–58 to 167°F) for T6
+SF2
+IECEx Intrinsically safe and Flameproof Approval *1*3
+Intrinsically safe Ex ia
+Certificate: IECEx DEK 11.0081X 
+Applicable Standard: IEC 60079-0:2011, IEC 60079-11:2011
+Ex ia IIC T4 Ga Enclosure: IP66/IP67
+Amb. Temp.: –50 to 60 °C(–58 to 140 °F), Max. Process Temp.: 120 °C(248 °F)
+Electrical Parameters: Ui=30 V, Ii=200 mA, Pi=0.9 W, Ci=27.6 nF, Li=0 μH
+Intrinsically safe Ex ic
+Certificate: IECEx DEK 13.0061X  
+Applicable Standard: IEC 60079-0:2011, IEC 60079-11:2011
+Ex ic IIC T4 Gc  IP code: IP66
+Amb. Temp.: –30 to 60°C(–22 to 140°F) *2, Max. Process Temp.: 120°C(248°F)
+Electrical Parameters: Ui=30V,Ci=27.6 nF, Li=0 μH
+Flameproof
+Certificate: IECEx CSA 07.0008
+Applicable Standard: IEC 60079-0:2011, IEC60079-1:2007-4
+Flameproof for Zone 1, Ex d IIC T6...T4 Gb  Enclosure: IP66/IP67
+Max.Process Temp.: T4;120°C(248°F), T5;100°C(212°F), T6; 85°C(185°F)
+Amb.Temp.: –50 to 75°C(–58 to 167°F) for T4, –50 to 80°C(–58 to 176°F) for T5,
+–50 to 75°C(–58 to 167°F) for T6
+SU21
+*1:	
+Applicable for Electrical connection code 2, 4, 7, 9, C and D.
+*2:	
+Lower limit of ambient temperature is –15°C (5°F) when /HE is specified.
+*3:	
+Not applicable for output signal code Q.
+
+--- página 18 ---
+18
+All Rights Reserved. Copyright © 2012, Yokogawa Electric Corporation
+<<Contents>>  <<Index>>
+GS 01C31H01-01EN
+Mar. 11, 2019-00
+ OPTIONAL SPECIFICATIONS
+Item
+Description
+Code
+Painting
+Color change
+Amplifier cover only *1
+P
+Amplifier cover and terminal cover, Munsell 7.5 R4/14
+PR
+Coating change
+Anti-corrosion coating *2
+X2
+316 SST exterior parts
+316 SST zero-adjustment screw and setscrews *3
+HC
+Fluoro-rubber O-ring
+All O-rings of amplifier housing. Lower limit of ambient temperature: –15°C (5°F)
+HE
+Lightning protector
+Transmitter power supply voltage: 10.5 to 32 V DC (10.5 to 30 V DC for intrinsically safe type.)
+Allowable current: Max. 6000 A (1×40 µs), Repeating 1000 A (1×40 µs) 100 times
+Applicable Standards: IEC 61000-4-4, IEC 61000-4-5
+A
+Oil-prohibited use
+Degrease cleansing treatment
+K1
+Oil-prohibited use with 
+dehydrating treatment
+Degrease cleansing and dehydrating treatment
+K5
+Calibration units *4*16
+P calibration (psi unit)
+(See Table for Span and Range Limits.)
+D1
+bar calibration (bar unit)
+D3
+M calibration (kgf/cm2 unit)
+D4
+Teflon film *5*6
+Diaphragm protection from sticky process fluid by FEP Teflon film attached with fluorinated oil.
+Operation range: 20 to 150°C, 0 to 2 MPa (Not applicable for vacuum service).
+TF1
+Operating temperature 
+correction *7
+Adjusting range: 80°C to Maximum temperature of specified fill fluid
+R
+Capillary without PVC sheaths
+When ambient temperature exceeds 100°C, or use of PVC is prohibited
+V
+Output limits and failure 
+operation *8
+Failure alarm down-scale: Output status at CPU failure and hardware error is −5%, 3.2mA DC 
+or less for 4 to 20 mA output type, and −5%, 0.8V DC or less for 1 to 5 V output type.
+C1
+NAMUR NE43 Compliant 
+Output signal limits:  
+3.8 mA to 20.5 mA *17
+Failure alarm down-scale: Output status at CPU
+failure and hardware error is −5%, 3.2 mA DC or less.
+C2
+Failure alarm up-scale: Output status at CPU
+failure and hardware error is 110%, 21.6 mA or more.
+C3
+Gold-plated diaphragm *9
+Inside of isolating diaphragms (fill fluid side) are gold plated, effective for hydrogen 
+permeation.
+A1
+Wired tag plate
+316 SST tag plate wired onto transmitter (Tag No.: Maximum. 16 characters.)
+N4
+Data configuration at factory*10
+Data configuration for HART communication type
+Software damping, Descriptor, 
+Message
+CA
+Data configuration for BRAIN communication type
+Software damping
+CB
+Material certificate
+Process flange, Block
+For Flush type
+M2W
+Process flange, Block, Ring *11
+M5W
+Process flange, Block, Pipe, Base
+For Extended type
+M2E
+High Pressure side: Process flange, Block, Pipe, base
+Low Pressure side: Process flange, Block
+For Combination type
+M2Y
+Pressure test/
+Leak test certificate *12*13
+[Flange rating]	
+[Test pressure]
+JIS 10K	
+2 MPa (290 psi)
+Nitrogen (N2) Gas *15
+Retention time: one minute
+T51
+JIS 20K	
+5 MPa (720 psi)
+T54
+JIS 40K *2	
+10 MPa (1450 psi)
+T57
+ANSI/JPI Class 150	
+3 MPa (430 psi)
+T52
+ANSI/JPI Class 300 *5	
+8 MPa (1160 psi)
+T56
+ANSI/JPI Class 300 *14	
+7 MPa (1000 psi)
+T55
+ANSI/JPI Class 600 *5	
+16 MPa (2300 psi)
+T58
+*1:	
+Not applicable for amplifier housing code 2 and 3.
+*2:	
+Not applicable with color change option. Not applicable for amplifier housing code 2.
+*3:	
+316 or 316L SST. The specification is included in amplifier code 2.
+*4:	
+The unit of MWP (Max. working pressure) on the name plate of a housing is the same unit as specified by option code D1, 
+D3, and D4.
+*5:	
+Applicable for flush type (process connection style code W.)
+*6:	
+Applicable for flushing connection ring code 0.
+*7:	
+Specify the process operating temperature for zero correction. Example: Zero correction by process temperature 90°C.
+*8:	
+Applicable for output signal code D and J. The hardware error indicates faulty amplifier or capsule.
+*9:	
+Applicable for wetted parts material code SW, SE, SY, and HW.
+*10:	
+Also see ‘Ordering Information.’
+*11:	
+Applicable for flushing connection ring code 1, 2, 3, and 4.
+*12:	
+The unit on the certificate is always MPa regardless of selection of option code D1, D3, or D4.
+*13:	
+A flushing connection ring will not be applied when conducting the pressure test or leak test.
+*14:	
+Applicable for extended type and Combination type (process connection style code E and Y.)
+*15:	
+Pure nitrogen gas is used for oil-prohibited use (option code K1 and K5.)
+*16: 	 Not applicable for Fill fluid code 1, 2, or 4.
+*17: 	 The 1 to 5 V voltage output corresponding to 4 to 20 mA current output is applied to output signal code Q which is non-
+compliant to NAMUR NE43.
+
+--- página 19 ---
+19
+<<Contents>>  <<Index>>
+All Rights Reserved. Copyright © 2012, Yokogawa Electric Corporation
+GS 01C31H01-01EN
+Mar. 11, 2019-00
+ DIMENSIONS
+Unit: mm (approx.inch)
+< Transmitter body section >
+F10E.ai
+Integral indicator
+(optional)
+Conduit connection
+Zero adjustment
+Mounting bracket
+(flat-type, optional)
+Ground terminal
+Low pressure side
+High pressure side
+54
+(2.13)
+6
+(0.24)
+Electrical connection
+for code 5 and 9.
+315(12.40)
+175(6.89)
+137(5.39)
+95(3.74)*1
+47
+(1.85)
+124(4.88)
+83(3.27)
+89(3.50)
+ø70
+(2.76)
+129(5.08)
+39
+(1.54)
+ø78(3.07)
+12
+(0.47)
+110(4.33)
+External indicator
+conduit connection
+(optional)
+2-inch pipe
+(O.D. 60.5 mm)
+Terminal side
+*1: 
+When electrical connection code 7 or C is selected, a blind plug is protruded upto 8 mm from the conduit connection.
+F13E.ai
+SUPPLY 
+CHECK
++
+–
++
+–
+ 
+Power supply and output terminals
+External indicator (ammeter) terminals*1*2
+*1: When using an external indicator or check meter, the internal 
+ 
+resistance must be 10 Ω or less.  
+*2: Not available for FOUNDATION Fieldbus and PROFIBUS PA 
+ 
+communication types. 
+●  Terminal Configuration 
+Ground terminal
+1
+Terminal 
+1
+2
+2
+3
+SUPPLY 
+VOUT
++
+–
++
+–
+ 
+Power supply terminals
+●  Terminal Wiring for 1 to 5 V output
+Ground terminal
+1
+2
+2
+3
+2
+Terminal 
+3
+Terminal 
+1 to 5 V DC with HART communication 
+terminals
+●  Terminal Wiring for 4 to 20 mA output, 
+FOUNDATION Fieldbus and PROFIBUS PA 
+communication types
+Three or four wire connection. For four wire connection, both supply 
+and signal lines use SUPPLY - terminal.
+
+--- página 20 ---
+20
+All Rights Reserved. Copyright © 2012, Yokogawa Electric Corporation
+<<Contents>>  <<Index>>
+GS 01C31H01-01EN
+April 10, 2018-00
+< Diaphragm seal section >
+Unit: mm (approx.inch)
+• With ring (Flushing connection ring code 1, 2, 3, and 4)
+● Extended type
+*5: When option code K1 or K5 is selected, add 11 mm 
+(0.28 inch.)
+*6: The specified capillary length includes the extension 
+length (X2) and the flange thickness (t).
+*1: When wetted parts material code UW (titanium),  
+value is 34 (1.34)
+*2: Indicates inside diameter of gasket contact surface
+*3: In case where process flange material is JIS S25C, 
+value of f is 0.
+• No ring (Flushing connection ring code 0)
+● Flush type
+F11E.ai
+X2
+50 (1.97)
+100 (3.94)
+150 (5.91)
+Extension code
+2
+4
+6
+●  Extension length (X2)
+t
+øg
+øC
+25*1
+(0.98)
+Capillary
+length
+øD
+f*3
+n-øh
+ød*2
+øD
+øC
+112*5
+øg
+(4.41)
+Diaphragm seal
+Flushing*4
+connection ring
+Vent/Drain plug
+n-øh
+f*3
+t
+ød*2
+j*1
+k
+Capillary
+length
+n-øh
+f*3
+(ø1.18)
+Capillary
+length*6
+14(0.55)
+øA
+øg
+øC
+øD
+X2
+t
+ø30
+120(4.72)
+ød
+*4: Flushing connection ring
+For flange size
+3 or 2 inch
+Spiral
+gasket
+Spiral
+gasket
+ø44
+For flange size
+1 1/2  inch
+Straight type
+Reducer type
+
+--- página 21 ---
+21
+<<Contents>>  <<Index>>
+All Rights Reserved. Copyright © 2012, Yokogawa Electric Corporation
+GS 01C31H01-01EN
+April 10, 2018-00
+Unit: mm (approx.inch)
+● Combination type
+*1: Indicates inside diameter of gasket contact surface.
+*2: In case where process flange material is JIS S25C, value of f is 0.
+*3: The specified capillary length includes the extension length (X2) and the flange thickness (t).
+F12E.ai
+X2
+50(1.97)
+100(3.94)
+150(5.91)
+Extension code
+1
+3
+5
+●  Extension length (X2)
+n-øh
+(ø1.18)
+(4.72)
+øA
+øg
+øC
+øD
+120
+ø30
+14(0.55)
+t
+Capillary
+length*3
+High pressure side
+Low pressure side
+t
+øg
+øC
+25
+(0.98)
+Capillary
+length
+øD
+f*2
+n-øh
+ød*1
+f*2
+X2
+Process flange size: 4 inch (100 mm)
+Code
+Flange rating
+øD
+øC
+øg
+ød
+t
+f*3
+Bolt holes
+j
+k
+øA
+No.(n)
+Dia.(øh)
+J1
+JIS 10K
+210 
+(8.27)
+175 
+(6.89)
+155 
+(6.10)
+—
+18 (0.71)
+0
+8
+19 (0.75)
+—
+—
+96±0.5 
+(3.78±0.02)
+J2
+JIS 20K
+225 
+(8.86)
+185 
+(7.28)
+155 
+(6.10)
+—
+24 (0.94)
+0
+8
+23 (0.91)
+—
+—
+96±0.5 
+(3.78±0.02)
+A1
+ANSI class 150
+228.6 
+(9.00)
+190.5 
+(7.50)
+155 
+(6.10)
+—
+23.9 
+(0.94)
+1.6 
+(0.06)
+8
+19.1 
+(0.75)
+—
+—
+96±0.5 
+(3.78±0.02)
+A2
+ANSI class 300
+254 
+(10.00)
+200.2 
+(7.88)
+155 
+(6.10)
+—
+31.8 
+(1.25)
+1.6 
+(0.06)
+8
+22.4 
+(0.88)
+—
+—
+96±0.5 
+(3.78±0.02)
+P1
+JPI class 150
+229 
+(9.02)
+190.5 
+(7.50)
+155 
+(6.10)
+—
+24 (0.94)
+1.6 
+(0.06)
+8
+19 (0.75)
+—
+—
+96±0.5 
+(3.78±0.02)
+P2
+JPI class 300
+254 
+(10.0)
+200.2 
+(7.88)
+155 
+(6.10)
+—
+32 (1.26)
+1.6 
+(0.06)
+8
+22 (0.87)
+—
+—
+96±0.5 
+(3.78±0.02)
+D2
+DIN PN10/16
+220 
+(8.66)
+180 
+(7.09)
+155 
+(6.10)
+—
+20 (0.79)
+0
+8
+18 (0.71)
+—
+—
+96±0.5 
+(3.78±0.02)
+D4
+DIN PN25/40
+235 
+(9.25)
+190 
+(7.48)
+155 
+(6.10)
+—
+24 (0.94)
+0
+8
+22 (0.87)
+—
+—
+96±0.5 
+(3.78±0.02)
+
+--- página 22 ---
+22
+All Rights Reserved. Copyright © 2012, Yokogawa Electric Corporation
+<<Contents>>  <<Index>>
+GS 01C31H01-01EN
+April 10, 2018-00
+Unit: mm (approx.inch)
+Process flange size: 3 inch (80 mm)
+Code
+Flange rating
+øD
+øC
+øg
+ød*2
+t
+f*3
+Bolt holes
+j*1
+k
+øA
+No.(n)
+Dia.(øh)
+J1
+JIS 10K
+185 
+(7.28)
+150 
+(5.91)
+130 
+(5.12)
+90 (3.54) 18 (0.71)
+0
+8
+19 (0.75) 25 (0.98) 27 (1.06)
+71±0.5 
+(2.8±0.02)
+J2
+JIS 20K
+200 
+(7.87)
+160 
+(6.30)
+130 
+(5.12)
+90 (3.54) 22 (0.87)
+0
+8
+23 (0.91) 25 (0.98) 27 (1.06)
+71±0.5 
+(2.8±0.02)
+J4
+JIS 40K
+210 
+(8.27)
+170 
+(6.69)
+130 
+(5.12)
+90 (3.54) 32 (1.26)
+0
+8
+23 (0.91) 25 (0.98) 27 (1.06)
+—
+A1
+ANSI class 150
+190.5 
+(7.50)
+152.4 
+(6.00)
+130 
+(5.12)
+90 (3.54)
+23.9 
+(0.94)
+1.6 
+(0.06)
+4
+19.1 
+(0.75)
+25 (0.98) 27 (1.06)
+71±0.5 
+(2.8±0.02)
+A2
+ANSI class 300
+209.6 
+(8.25)
+168.1 
+(6.62)
+130 
+(5.12)
+90 (3.54)
+28.5 
+(1.12)
+1.6 
+(0.06)
+8
+22.4 
+(0.88)
+25 (0.98) 27 (1.06)
+71±0.5 
+(2.8±0.02)
+A4
+ANSI class 600
+209.6 
+(8.25)
+168.1 
+(6.62)
+130 
+(5.12)
+90 (3.54)
+38.2 
+(1.50)
+6.4 
+(0.25)
+8
+22.4 
+(0.88)
+25 (0.98) 27 (1.06)
+—
+P1
+JPI class 150
+190 
+(7.48)
+152.4 
+(6.00)
+130 
+(5.12)
+90 (3.54) 24 (0.94)
+1.6 
+(0.06)
+4
+19 (0.75) 25 (0.98) 27 (1.06)
+71±0.5 
+(2.8±0.02)
+P2
+JPI class 300
+210 
+(8.27)
+168.1 
+(6.61)
+130 
+(5.12)
+90 (3.54)
+28.5 
+(1.12)
+1.6 
+(0.06)
+8
+22 (0.87) 25 (0.98) 27 (1.06)
+71±0.5 
+(2.8±0.02)
+P4
+JPI class 600
+210 
+(8.27)
+168.1 
+(6.61)
+130 
+(5.12)
+90 (3.54)
+38.4 
+(1.51)
+6.4 
+(0.25)
+8
+22 (0.87) 25 (0.98) 27 (1.06)
+—
+D2
+DIN PN10/16
+200 
+(7.87)
+160 
+(6.30)
+130 
+(5.12)
+90 (3.54) 20 (0.79)
+0
+8
+18 (0.71) 25 (0.98) 27 (1.06)
+71±0.5 
+(2.8±0.02)
+D4
+DIN PN25/40
+200 
+(7.87)
+160 
+(6.30)
+130 
+(5.12)
+90 (3.54) 24 (0.94)
+0
+8
+18 (0.71) 25 (0.98) 27 (1.06)
+71±0.5 
+(2.8±0.02)
+D5
+DIN PN64
+215 
+(8.46)
+170 
+(6.69)
+130 
+(5.12)
+90 (3.54) 28 (1.10)
+0
+8
+22 (0.87) 25 (0.98) 27 (1.06)
+—
+Process flange size: 2 inch (50 mm)
+Code
+Flange rating
+øD
+øC
+øg
+ød*2
+t
+f*3
+Bolt holes
+j
+k
+No.(n)
+Dia.(øh)
+J1
+JIS 10K
+155 (6.10)
+120 (4.72)
+100 (3.94)
+61 (2.40)
+16 (0.63)
+0
+4
+19 (0.75)
+25 (0.98) 27 (1.06)
+J2
+JIS 20K
+155 (6.10)
+120 (4.72)
+100 (3.94)
+61 (2.40)
+18 (0.71)
+0
+8
+19 (0.75)
+25 (0.98) 27 (1.06)
+J4
+JIS 40K
+165 (6.50)
+130 (5.12)
+100 (3.94)
+61 (2.40)
+26 (1.02)
+0
+8
+19 (0.75)
+25 (0.98) 27 (1.06)
+A1
+ANSI class 150 152.4 (6.00) 120.7 (4.75)
+100 (3.94)
+61 (2.40) 19.1 (0.75) 1.6 (0.06)
+4
+19.1 (0.75) 25 (0.98) 27 (1.06)
+A2
+ANSI class 300 165.1 (6.50) 127.0 (5.00)
+100 (3.94)
+61 (2.40) 22.4 (0.88) 1.6 (0.06)
+8
+19.1 (0.75) 25 (0.98) 27 (1.06)
+A4
+ANSI class 600 165.1 (6.50) 127.0 (5.00)
+100 (3.94)
+61 (2.40) 31.8 (1.25) 6.4 (0.25)
+8
+19.1 (0.75) 25 (0.98) 27 (1.06)
+P1
+JPI class 150
+152 (5.98)
+120.6 (4.75)
+100 (3.94)
+61 (2.40) 19.5 (0.77) 1.6 (0.06)
+4
+19 (0.75)
+25 (0.98) 27 (1.06)
+P2
+JPI class 300
+165 (6.50)
+127.0 (5.00)
+100 (3.94)
+61 (2.40) 22.4 (0.88) 1.6 (0.06)
+8
+19 (0.75)
+25 (0.98) 27 (1.06)
+P4
+JPI class 600
+165 (6.50)
+127.0 (5.00)
+100 (3.94)
+61 (2.40) 31.9 (1.26) 6.4 (0.25)
+8
+19 (0.75)
+25 (0.98) 27 (1.06)
+D2
+DIN PN10/16
+165 (6.50)
+125 (4.92)
+100 (3.94)
+61 (2.40)
+18 (0.71)
+0
+4
+18 (0.71)
+25 (0.98) 27 (1.06)
+D4
+DIN PN25/40
+165 (6.50)
+125 (4.92)
+100 (3.94)
+61 (2.40)
+20 (0.79)
+0
+4
+18 (0.71)
+25 (0.98) 27 (1.06)
+D5
+DIN PN64
+180 (7.09)
+135 (5.31)
+100 (3.94)
+61 (2.40)
+26 (1.02)
+0
+4
+22 (0.87)
+25 (0.98) 27 (1.06)
+Process flange size: 1 1/2 inch (40 mm)
+Code
+Flange rating
+øD
+øC
+øg
+ød*2
+t
+f*3
+Bolt holes
+j
+k
+No.(n)
+Dia.(øh)
+J1
+JIS 10K
+140 (5.51)
+105 (4.13)
+86 (3.39)
+44 (1.73)
+16 (0.63)
+0
+4
+19 (0.75)
+27 (1.06) 30 (1.18)
+J2
+JIS 20K
+140 (5.51)
+105 (4.13)
+86 (3.39)
+44 (1.73)
+18 (0.71)
+0
+4
+19 (0.75)
+27 (1.06) 30 (1.18)
+J4
+JIS 40K
+160 (6.30)
+120 (4.72)
+86 (3.39)
+44 (1.73)
+24 (0.94)
+0
+4
+23 (0.91)
+27 (1.06) 30 (1.18)
+A1
+ANSI class 150
+127 (5.00)
+98.6 (3.88)
+86 (3.39)
+44 (1.73) 17.5 (0.69) 1.6 (0.06)
+4
+15.9 (0.63) 27 (1.06) 30 (1.18)
+A2
+ANSI class 300 155.4 (6.12) 114.3 (4.50)
+86 (3.39)
+44 (1.73) 20.6 (0.81) 1.6 (0.06)
+4
+22.4 (0.88) 27 (1.06) 30 (1.18)
+A4
+ANSI class 600 155.4 (6.12) 114.3 (4.50)
+86 (3.39)
+44 (1.73) 28.8 (1.13) 6.4 (0.25)
+4
+22.4 (0.88) 27 (1.06) 30 (1.18)
+P1
+JPI class 150
+127 (5.00)
+98.6 (3.88)
+86 (3.39)
+44 (1.73) 17.6 (0.69) 1.6 (0.06)
+4
+16 (0.63)
+27 (1.06) 30 (1.18)
+P2
+JPI class 300
+155 (6.10)
+114.3 (4.50)
+86 (3.39)
+44 (1.73) 20.6 (0.81) 1.6 (0.06)
+4
+22 (0.87)
+27 (1.06) 30 (1.18)
+P4
+JPI class 600
+155 (6.10)
+114.3 (4.50)
+86 (3.39)
+44 (1.73) 28.9 (1.14) 6.4 (0.25)
+4
+22 (0.87)
+27 (1.06) 30 (1.18)
+*1:	
+When wetted parts material code UW (titanium) is selected, value is 34 (1.34).
+*2:	
+Indicates inside diameter of gasket contact surface.
+*3:	
+In case where process flange material is JIS S25C, value of f is 0.
+
+--- página 23 ---
+23
+All Rights Reserved. Copyright © 2012, Yokogawa Electric Corporation
+<<Contents>>  <<Index>>
+GS 01C31H01-01EN
+Subject to change without notice.
+April 10, 2018-00
+< Ordering Information > 
+Specify the following when ordering
+1.	 Model, suffix codes, and option codes
+2.	 Calibration range and units:
+1)	Calibration range can be specified with range 
+value specifications up to 5 digits (excluding any 
+decimal point) for low or high range limits within 
+the range of -32000 to 32000. When reverse 
+range is designated, specify LRV as greater 
+than URV. When square root output mode is 
+specified, LRV must be “0(zero)”.
+2)	Specify only one unit from the table, ‘Factory 
+setting.’
+3.	 Select linear or square root for output mode and 
+display mode.
+Note:	 If not specified, the instrument is shipped set for 
+linear mode.
+4.	 Display scale and units (for transmitters equipped 
+with the integral indicator only)
+	
+Specify either 0 to 100 % or ‘Range and Unit’ for 
+engineering units scale:
+	
+Scale range can be specified with range limit 
+specifications up to 5 digits (excluding any decimal 
+point) for low or high range limits within the range 
+of -32000 to 32000. Unit display consists of 6-digit, 
+therefore, if the specified scaling unit excluding ‘/’ is 
+longer than 6-characters , the first 6 characters will 
+be displayed on the unit display.
+5.	 HART PROTOCOL 
+	
+When output signal code is “J”, specify the HART 
+protocol revision “5” or “7”.
+6.	 TAG NO (if required)
+	
+Specified characters (up to 16 characters for 
+BRAIN, 22 characters for HART, or 16 characters 
+for /N4 tag) are engraved on the stainless steel tag 
+plate fixed on the housing.
+7.	 SOFTWARE TAG (for HART only. if required)
+	
+Specified characters (up to 32 characters) are set 
+as “Tag” (the first 8 characters) and “Long tag”*1 
+(32 characters) in the amplifier memory. Use 
+alphanumeric capital letters.
+	
+When the “SOFTWARE TAG” is not specified, 
+specified “TAG NO” is set as “Tag” (the first 8 
+characters) and “Long tag”*1 (22 characters) in the 
+amplifier memory.
+*1: applicable only when HART 7 is selected.
+8.	 Other factory configurations (if required) 
+Specifying option code CA or CB will allow further 
+configuration at factory. Following are configurable 
+items and setting range.
+	
+[/CA : For HART communication type]
+1)	Descriptor (up to 16 characters)
+2)	Message (up to 30 characters)
+3)	Software damping (0.00 to 100.00 s)
+	
+[/CB : For BRAIN communication type]
+1)	Software damping (0.00 to 100.00 s)
+9.	 Process fluid temperature for zero compensation  
+(When /R is specified.)
+< Factory Setting > 
+Tag number
+As specified in order
+Software 
+damping *1 
+‘2.00 s’ or as specified in order 
+Output mode
+‘Linear’ unless otherwise specified in order
+Calibration range 
+lower range value
+As specified in order
+Calibration range 
+upper range 
+value
+As specified in order
+Calibration range 
+units
+Selected from mmH2O, mmH2O(68°F), 
+mmAq*2, mmWG*2, mmHg, Pa, hPa*2, 
+kPa, MPa, mbar, bar, gf/cm2, 
+kgf/cm2, inH2O, inH2O(68°F), inHg, ftH2O, 
+ftH2O(68°F) or psi. (Only one unit can be 
+specified.)
+Display setting
+Designated differential pressure value 
+specified in order. (% or user scaled 
+value.) Display mode ‘Linear’ or ‘Square 
+root’ is also as specified in order.
+Static pressure 
+display range
+‘0 to 25 MPa’ for M and H capsule, 
+absolute value. Measuring low pressure 
+side.
+*1:	
+To specify these items at factory, /CA or /CB 
+option is required.
+*2:	
+Not available for HART protocol type.
+< Material Cross Reference >
+ASTM
+JIS
+316
+SUS316
+F316
+SUSF316
+316L
+SUS316L
+F316L
+SUSF316L
+304
+SUS304
+F304
+SUSF304
+660
+SUH660
+B7
+SNB7
+CF-8M
+SCS14A
+<Information on EU WEEE Directive>
+EU WEEE (Waste Electrical and Electronic Equipment) 
+Directive is only valid in the EU.
+This instrument is intended to be sold and used only 
+as a part of equipment which is excluded from WEEE 
+Directive, such as large-scale stationary industrial 
+tools, a large-scale fixed installation and so on, and, 
+therefore, subjected to the exclusion from the scope 
+of the WEEE Directive. The instrument should be 
+disposed of in accordance with local and national 
+legislation/regulations.

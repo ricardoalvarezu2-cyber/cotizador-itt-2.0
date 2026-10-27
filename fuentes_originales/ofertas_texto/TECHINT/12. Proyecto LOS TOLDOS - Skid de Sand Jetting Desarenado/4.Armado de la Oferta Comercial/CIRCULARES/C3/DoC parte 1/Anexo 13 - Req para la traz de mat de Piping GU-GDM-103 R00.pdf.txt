@@ -1,0 +1,208 @@
+--- página 1 ---
+ 
+Preparó 
+Aprobó 
+Copia Informativa 
+ 1 de 4 
+Agustina Raad Agugliaro 
+Pablo Ceci 
+Este documento es propiedad intelectual de Techint Ingeniería y Construcción. 
+Prohibida su reproducción. 
+ 
+ 
+Requisitos para la trazabilidad de 
+materiales de Piping 
+Código 
+GU-GDM-103 R00 
+Emisión 
+11.05.2020 
+Revisión 
+11.05.2020 
+1. Objeto 
+Definir los requisitos relativos a la trazabilidad de los materiales de Piping, a cumplir por los Proveedores en la 
+entrega de los mismos. 
+2. Alcance 
+Todas las provisiones de material Bulk de Piping cuya compra sea gestionada por Techint Ingeniería y Construcción 
+o a través de Exiros para Techint Ingeniería y Construcción.  
+3. Desarrollo 
+3.1. General 
+Este documento describe la identificación e información requerida con la entrega del material de Piping, tales 
+como: cañerías, accesorios, válvulas y bridas, por parte de Gestión de Materiales. 
+Este documento es complementario a GU-ENG-P61 Marking of Piping Materials.  
+3.2. Listado de Coladas 
+Adicionalmente a la marcación física de la colada del material y a la entrega de los Certificados de Calidad, el 
+Proveedor deberá confeccionar el formulario “FR-GU-GDM-103-01 Listado Detallado de Coladas”. Este debe ser 
+enviado en formato electrónico (tipo .xlsx, etc.) junto con los Certificados de Calidad, como parte de la provisión. 
+De no recibirse se considera la provisión incompleta, impidiendo la liberación de los materiales. 
+ 
+3.2.1 Confección del Formulario 
+El formulario lista las posiciones a entregar por Orden de Compra junto con la indicación de la cantidad (piezas o 
+metros) a entregar de cada colada y sus números de Certificados de Calidad. Contempla:  
+ 
+ 
+ID de Proyecto SAP: identificación del proyecto de SAP TECHINT según indicado en la orden de compra (1) 
+ 
+Número de proveedor SAP: número identificación del proveedor de SAP TECHINT según indicado en la 
+orden de compra (2) 
+ 
+Nombre de proveedor SAP: denominación del proveedor de SAP TECHINT según indicado en la orden de 
+compra. (3) 
+ 
+Número de orden de compra SAP, según indicado en la orden. (4) 
+ 
+Número de Revisión de la Orden de Compra (5) 
+ 
+Posición de orden de compra SAP, según indicado en la orden. (6) 
+ 
+Código de Material SAP: identificación del material de SAP TECHINT, según indicado en la orden de 
+compra. (7) 
+ 
+Texto breve de Material SAP: descripción corta del material según indicado en la orden de compra. (8) 
+
+--- página 2 ---
+ 
+ 
+Código 
+Copia Informativa 
+2 de 4 
+GU-GDM-103 
+Este documento es propiedad intelectual de Techint Ingeniería y Construcción. 
+Prohibida su reproducción. 
+ 
+ 
+ 
+Requisitos para la trazabilidad de materiales de Piping
+ 
+UMB: unidad de medida según indicada en la orden de compra. (9) 
+ 
+Cantidad OC: cantidad de material total según indicado en la orden de compra. (10) 
+ 
+Cantidad entregada: cantidad de material entregada correspondiente a la colada, según se indica en el 
+Certificado de Calidad. (11) 
+ 
+Número de certificado de calidad, entregado por el Proveedor correspondiente al ítem entregado. (12) 
+ 
+Número de colada, según se indica en el Certificado de Calidad. (13) 
+ 
+3.2.1.1. Carga de información por parte de TECHINT 
+Los campos recién enunciados del punto (1) al (10) serán precargados por TECHINT: 
+ 
+ 
+ 
+En el caso que la gestión se trate de una compra puntual, el comprador será quien efectúe la precarga de dicha 
+información y enviará el archivo editable al proveedor junto con la emisión de la/s orden/es de compra/s. Mientras 
+que en las compras efectuadas por pedido de entrega contra contrato marco, estas tareas serán realizadas por el 
+Administrador de Materiales de proyecto, junto con la emisión del pedido de entrega.  
+ 
+3.2.1.2. Carga de información por parte del Proveedor 
+Los campos enunciados en los puntos (11), (12) y (13) serán completados por el Proveedor: 
+ 
+ 
+Deberá incluir sólo las posiciones del lote a entregar.  
+ 
+La cantidad indicada en el campo (11) “Cantidad Entregada” no es acumulativa con entregas anteriores, es 
+decir, solo se tiene que indicar la cantidad del lote a entregar. 
+ 
+El campo (13) “Número de Colada” debe incluir sólo un valor de colada. De entregarse más de una colada 
+por posición, deberá indicarse en otro registro (línea) a continuación. Es decir, se deberá insertar una 
+línea nueva copiando la línea correspondiente y modificando los datos de los puntos (11),(12) y (13), 
+indicando la cantidad entregada correspondiente a cada colada en (11).  
+
+--- página 3 ---
+ 
+ 
+Código 
+Copia Informativa 
+3 de 4 
+GU-GDM-103 
+Este documento es propiedad intelectual de Techint Ingeniería y Construcción. 
+Prohibida su reproducción. 
+ 
+ 
+ 
+Requisitos para la trazabilidad de materiales de Piping
+ 
+ 
+ 
+3.2. 
+Identificación de Cañerías 
+ 
+Los caños deben entregarse con la marcación del tipo stencil demarcado por el fabricante o distribuidor. Además, 
+deberán contar para su entrega con etiquetas que contengan la siguiente información: 
+ 
+Código SAP 
+ 
+Diámetro 
+ 
+Espesor 
+ 
+Material 
+ 
+Colada 
+ 
+Longitud real 
+ 
+Orden de compra 
+ 
+La identificación mediante etiquetas debe ser de color claro (blanco recomendado) con sus inscripciones en color 
+negro y medidas no inferiores a 100x50mm. Deben contar con código QR. El material de las etiquetas QR debe ser 
+resistente a los rayos UV e intemperie.  
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- página 4 ---
+ 
+ 
+Código 
+Copia Informativa 
+4 de 4 
+GU-GDM-103 
+Este documento es propiedad intelectual de Techint Ingeniería y Construcción. 
+Prohibida su reproducción. 
+ 
+ 
+ 
+Requisitos para la trazabilidad de materiales de Piping
+Cada caño debe contener 3 etiquetas: una en cada extremo a aproximadamente 15mm de los bordes y una en la 
+mitad de su longitud. La etiqueta consecutiva debe colocarse en la superficie diametralmente opuesta a la anterior.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Registro de Cambios 
+Revisión 
+Observaciones 
+00 
+Documento original. 
+ 
+ 
+ 
+ 

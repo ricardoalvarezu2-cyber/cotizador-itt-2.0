@@ -1,0 +1,3745 @@
+--- página 1 ---
+General
+Specifications
+<<Contents>>  <<Index>>
+EJX910A
+Multivariable Transmitter
+Yokogawa Electric Corporation
+2-9-32, Nakacho, Musashino-shi, Tokyo, 180-8750 Japan
+Tel.: 81-422-52-5690	 Fax.: 81-422-52-2018
+GS 01C25R01-01EN
+GS 01C25R01-01EN
+©Copyright Mar. 2005
+39th Edition Dec. 2023
+The high performance EJX910A multivariable 
+transmitter features multi-sensing technology with a 
+single-crystal silicon resonant sensor that outputs the 
+measured differential pressure, static pressure and 
+process temperature, which covers multiple protocols: 
+HART, FOUNDATION fieldbus and RS485 Modbus.
+Additionally the HART protocol and FOUNDATION 
+fieldbus protocol types are suitable to measure 
+dynamically calculated and fully compensated mass 
+flow for liquid, gas, or steam. 4 to 20 mA DC signal 
+output is available in HART protocol type.
+A multi-sensing version is also available for users 
+who do not require flow calculation functions. FDT/
+DTM* standard conforming software is available for 
+transmitter configuration. FSA120 FlowNavigator is 
+used for flow configuration of the HART protocol and 
+FOUNDATION fieldbus protocol types.
+*: 	 FDT (Field Device Tool):  Defines the system environment 
+in which the DTM runs.
+	
+DTM (Device Type Manager):  The application which 
+defines the graphical user interface (GUI) specific to the 
+device.
+Key features:
+[HART protocol type]
+• Saturated Steam Mode for HART Protocol Revision 7 
+and Device Revision 12 or later 
+	 External temperature can be calculated and output 
+from static pressure by using the built-in steam table 
+(IAPWS-IF97) without external temperature input.
+• 1.0% mass flow rate accuracy over 1:10 flow range
+ (In case of uncalibrated differential producer (Orifice))
+• HART7: Orifice, Nozzle, Venturi, Multiport Averaging 
+Pitot and Cone meters primary devices are supported
+• HART5: Orifice, Nozzle and Venturi primary devices 
+are supported
+• Advanced diagnostic function (option)
+• Simultaneous dual output of 4 to 20mA and pulse 
+signals.
+• HART protocol revision selectable from 5 (HART 5) 
+or 7 (HART 7)
+• Long tag supporting up to 32 characters (HART 7)
+• Enhanced burst mode and event notification(HART 7)
+• SIL2 for safety requirement
+Note: HART 5 stands for HART protocol revision 5
+ 
+HART 7 stands for HART protocol revision 7
+[FOUNDATION Fieldbus protocol type]
+• 1.0% mass flow rate accuracy over 1:10 flow range
+ (In case of uncalibrated differential producer (Orifice))
+• Orifice, Nozzle and Venturi primary devices are 
+supported
+• Advanced diagnostic function (option)
+• Various function blocks available; 5 AIs, AR, IT, SC, 
+and IS as standard. PID as an optional feature.
+• Cyclically displays up to 10 variables
+• Software download function (option)
+[Modbus protocol type]
+• RS485 Modbus protocol type provides easy multi-
+sensing data transmission to the flow computers.
+• The process data status is provided for each 
+measured differential pressure, static pressure and 
+process temperature. It is easy to implement process 
+data diagnosis.
+• Cyclically displays up to 16 variables including RTU 
+management data.
+• Up to 32 transmitters can be connected by multi-drop 
+communication.
+• 32 characters long tag and squawk are supported for 
+easy identification of transmitters.
+[Style: S2]
+
+--- página 2 ---
+2
+All Rights Reserved. Copyright © 2005, Yokogawa Electric Corporation
+<<Contents>>  <<Index>>
+GS 01C25R01-01EN
+	STANDARD SPECIFICATIONS
+□ SPAN AND RANGE LIMITS
+Differential Pressure (DP)
+Measurement
+Span/Range
+kPa
+inH2O
+(/D1)
+mbar
+(/D3)
+mmH2O
+(/D4)
+L
+Span
+0.1 to 10
+0.4 to 40
+1 to 100
+10 to 1000
+Range
+-10 to 10
+-40 to 40
+-100 to 
+100
+-1000 to 
+1000
+M
+Span
+0.5 to 100
+2 to 400
+5 to 1000
+50 to 
+10000
+Range
+-100 to 
+100
+-400 to 
+400
+-1000 to 
+1000
+-10000 to 
+10000
+H
+Span
+2.5 to 500 10 to 2000 25 to 5000
+0.025 to 5 
+kgf/cm2
+Range
+-500 to 
+500
+-2000 to 
+2000
+-5000 to 
+5000
+-5 to 5  
+kgf/cm2
+Static Pressure (SP)
+Absolute Pressure
+Measurement
+Span/Range
+MPa abs
+psia
+(/D1)
+bar abs
+(/D3)
+kgf/cm2 abs 
+(/D4)
+L
+Span
+1 to 16
+145 to 
+2300
+10 to 160
+10 to 160
+Range
+0 to 16
+0 to 2300
+0 to 160
+0 to 160
+M
+H
+Span
+1 to 25
+145 to 
+3600
+10 to 250
+10 to 250
+Range
+0 to 25
+0 to 3600
+0 to 250
+0 to 250
+Gauge Pressure (Sealed gauge)
+Measurement
+Span/Range
+MPa
+psi
+(/D1)
+bar
+(/D3)
+kgf/cm2 
+(/D4)
+L
+Span
+1 to 16
+145 to 
+2300
+10 to 160
+10 to 160
+Range
+-0.1 to 16
+-14.5 to 
+2300
+-1 to 160
+-1 to 160
+M
+H
+Span
+1 to 25
+145 to 
+3600
+10 to 250
+10 to 250
+Range
+-0.1 to 25
+-14.5 to 
+3600
+-1 to 250
+-1 to 250
+* 
+When the saturated steam mode (ET Fixed = 
+Saturated Steam) is set, static pressure range is 70 
+kPa abs ~ 22.064 MPa abs (In case of capsule L 
+range, upper limit is 16 MPa abs.)
+External Temperature (ET) (Pt100 ohm)
+Measurement External
+Temperature Span/Range
+°C
+°F
+K
+L
+M
+H
+Span
+10 to 1050 18 to 1890 10 to 1050
+Range
+-200 to 
+850
+-328 to 
+1562
+73 to 1123
+Fixed Temperature
+-273 to 
+1927
+-459 to 
+3500
+0 to 2200
+* 
+When the saturated steam mode (ET Fixed = 
+Saturated Steam) is set, external temperature value 
+limit is 90 ~ 374°C.
+□ PERFORMANCE SPECIFICATIONS
+Zero-based calibrated span output, and silicone oil, 
+unless otherwise mentioned.
+For FOUNDATION Fieldbus and Modbus protocol types, 
+use calibrated range instead of span in the following 
+specifications.
+Specification Conformance
+EJX series ensures specification conformance to at 
+least ±3σ.
+Mass Flow (For Measurement Function Code B of 
+HART and FOUNDATION Fieldbus protocol types)
+ Mass Flow Reference Accuracy
+±1.0% of Mass Flow Rate over 10:1 flow range 
+(100:1 DP range) for liquids and gases.
+ Totalized Mass Flow Reference Accuracy
+1.0% of Total Mass Flow.
+Note: Assume 100:1 DP range for liquids and gases.
+Conditions for mass flow accuracy
+(1) Auto compensation mode.
+(2) M and H capsule
+(3) Uncalibrated differential producer (Orifice) installed 
+based on the following standards. *1
+(4) Uncertainties for discharge coefficient, primary 
+device bore, pipe diameter, and gas expansion 
+factor defined on following standards. *1
+(5) Density uncertainty less than 0.1%.
+*1:  
+Standards: ISO5167-1 1991, ISO5167-2 2003, 
+ASME, MFC-3M 1989, AGA No.3 1992
+Differential Pressure (DP)
+ Reference Accuracy of Calibrated Span 
+(Includes terminal-based linearity, hysteresis, 
+and repeatability)
+Measurement span
+H
+Reference
+accuracy
+X ≤ span ±0.04% of Span
+X > span ±(0.005+0.0049 URL/span)% of Span
+X
+70 kPa (280 inH2O)
+URL
+(upper range limit)
+500 kPa (2000 inH2O)
+Measurement span
+M
+Reference
+accuracy
+X ≤ span ±0.04% of Span
+X > span ±(0.005+0.0035 URL/span)% of Span
+X
+10 kPa (40 inH2O)
+URL
+(upper range limit)
+100 kPa (400 inH2O)
+Measurement span
+L
+Reference
+accuracy
+X ≤ span ±0.04% of Span
+X > span ±(0.015+0.005 URL/span)% of Span
+X
+2 kPa (8 inH2O)
+URL
+(upper range limit)
+10 kPa (40 inH2O)
+Oct. 31, 2022-00
+
+--- página 3 ---
+3
+<<Contents>>  <<Index>>
+All Rights Reserved. Copyright © 2005, Yokogawa Electric Corporation
+GS 01C25R01-01EN
+ Ambient Temperature Effects per 28°C (50°F) 
+Change
+Capsule
+Effect
+H
+M
+L
+±(0.04% Span + 0.0125% URL)
+±(0.04% Span + 0.009% URL)
+±(0.055% Span + 0.09% URL)
+ Static Pressure Effects per 6.9 MPa (1000 psi) 
+Change
+ Span Effects
+L, M and H capsules
+±0.075% of span
+ Effect on Zero
+Capsule
+Effect
+H
+M
+L
+±0.028% URL
+±0.02% URL
+±0.05% URL
+ Overpressure Effects
+Overpressure condition: up to maximum working 
+pressure
+M and H capsules
+±0.03% of URL
+ Stability (All normal operating condition, 
+including overpressure effects)
+M and H capsules
+±0.1% of URL per 15 years
+Static Pressure (SP)
+ Reference Accuracy of Calibrated Span for 
+Absolute pressure
+ (Includes terminal-based linearity, hysteresis, 
+and repeatability)
+Capsule
+Reference accuracy
+L, M, H
+±0.1% of span
+Note: Gauge pressure reference is 1013.25 hPa (1 
+atm) The gauge pressure variable is based on the 
+above reference accuracy and can be affected by 
+changes in the atmospheric pressure.
+ Ambient Temperature Effects per 28°C (50°F) 
+Change
+Capsule
+Effect
+M, H
+L
+±0.08% Span ± 0.018% URL
+±0.08% Span ± 0.028% URL
+External temperature (ET)
+ Accuracy (Includes terminal-based linearity, 
+hysteresis, and repeatability)
+Capsule
+Accuracy
+L, M, H
+±0.5°C (±0.9°F)
+* 
+Specification for External temperature is the 
+transmitter portion only. 
+	
+Sensor errors caused by the RTD are not included.
+ 
+The transmitter is compatible with any Pt100 RTD 
+conforming to IEC 751.
+	
+Input/output signal is non-isolated.
+** When the saturated steam mode (ET Fixed = 
+Saturated Steam) is set, external temperature is 
+calculated from static pressure by using the built-in 
+steam table. The calculation accuracy is ±0.5°C
+ Ambient Temperature Effects per 28°C (50°F ) 
+Change
+Capsule
+Effect
+L, M, H
+±0.5°C (±0.9°F)
+Power Supply Effects (HART protocol type)
+±0.005 % per Volt (from 21.6 to 32 V DC, 350Ω)
+Vibration Effects
+Signal
+Effect
+Differential Pressure
+±0.1% of URL
+Static Pressure 
+±0.1% of URL
+External Temperature 
+±0.5°C (±0.9°F)
+Amplifier housing code 1:
+When tested per the requirements of IEC60770-1 
+field or pipeline with high vibration level (10-60 Hz, 
+0.21 mm displacement/60-2000 Hz 3 g)
+Amplifier housing code 2:
+When tested per the requirements of IEC60770-1 
+field with general application or pipeline with low 
+vibration level (10-60 Hz 0.15mm displacement /60-
+500 Hz 2g)
+Mounting Position Effects
+Rotation in diaphragm plane has no effect.
+Tilting up to 90 degree will cause zero shift up to 0.4 
+kPa (1.6 inH2O) which can be corrected by the zero 
+adjustment.
+Response Time
+Signal
+Capsule
+HART
+Fieldbus*1
+Modbus
+Differential 
+Pressure
+L
+230 ms
+300 ms
+230 ms
+M, H
+200 ms
+300 ms
+200 ms
+Static Pressure
+L, M, H
+200 ms
+300 ms
+200 ms
+When amplifier damping is set to zero and including 
+dead time.
+*1: 
+Output from transducer block.
+Oct. 31, 2022-00
+
+--- página 4 ---
+4
+All Rights Reserved. Copyright © 2005, Yokogawa Electric Corporation
+<<Contents>>  <<Index>>
+GS 01C25R01-01EN
+ FUNCTIONAL SPECIFICATIONS
+Output specifications for HART Protocol Type 
+Output 
+Dual output (Both analog and pulse/contact outputs 
+can be obtained simultaneously. See “Wiring 
+Example for Analog Output and Status/Pulse 
+Output”).
+HART Protocol Revision
+HART protocol revision can be selected from 5 or 7 
+when ordering.
+The protocol revision can be changed by user 
+configuration.
+The HART protocol revision at the time of shipment 
+is shown by the last number at the serial number 
+column of the name plate.
+Analog Output
+Two wire 4 to 20 mA DC output, user-selectable 
+for Differential Pressure, Static Pressure, External 
+Temperature or Flow Rate signal.
+Output range: 3.8 mA to 21.6 mA.
+Digital HART FSK protocol are superimposed on the 
+4 to 20 mA signal.
+Failure Alarm 
+Analog output status at CPU failure and hardware
+error;
+Up-scale: 110%, 21.6 mA DC or more (standard)
+Down-scale: −2.5%, 3.6 mA DC or less
+Analog output status at process abnormality (Option 
+code /DG6);
+The result of process abnormality detected by the 
+advanced diagnostic function can be reflected to 
+an analog alert status. The following three setting 
+modes are available.
+Mode
+Burnout
+Fall back
+Off
+Standard
+110%, 
+21.6mA or more
+Holds to a 
+specified value 
+within the 
+output range 
+from 3.8mA to 
+21.6mA
+Normal output 
+Option 
+Code
+/C1
+-1.25%,  
+3.8mA or less
+/C2
+-1.25%,  
+3.8mA or less
+/C3
+103.1%, 
+20.5mA or more
+Pulse/Contact Output
+Pulse or status output is selected by parameter 
+setting.
+Transistor contact output (sink type).
+Contact rating: 10.5 to 30 V DC, 120 mA DC max.
+Low level: 0 to 2 V DC. (See figure below for high 
+and low levels (pulse output).)
+High level
+Low level
+0 to 2 V
+0V
+F01E.ai
+Pulse Output
+Scaled pulse or frequency pulse output is selectable 
+by parameter setting.
+• Scaled Pulse Output Function
+Pulse is output by the unit of the scaled flow rate.
+Scaled pulse can be totalized.
+• Frequency Output Function
+Number of pulses output per second at 100% of 
+output.
+Pulse frequency: Max. 10 kHz
+Duty cycles: Approx. 50% (1:2 to 2:1)
+Contact Output Function
+High or low alarm
+Status signal output mode can be reversed (ON/
+OFF).
+Signal Output
+Output
+Flow 
+rate*1
+Differential 
+pressure
+Static 
+pressure
+External 
+temperature
+Total 
+flow*1
+4-20mA
+*3
+*2
+
+
+Pulse 
+output
+
+
+High/Low 
+alarm
+
+
+
+
+*1: 
+When Measurement function code B is specified.
+*2: 
+Square root output is not available. Low cut linear 
+mode is not supported.
+*3:	
+Reversed output is not available.
+Output specifications for FOUNDATION Fieldbus 
+Protocol Type
+	 Output
+Digital communication signal based on the 
+FOUNDATION fieldbus specification.
+ Functional Specifications
+Functional specifications for Fieldbus communication 
+conform to the standard specification (H1) of 
+FOUNDATION fieldbus.
+ Function Block
+Block 
+name
+Number Execution 
+time
+Note
+AI
+5
+30 ms
+For flow, differential pressure, 
+static pressure, external 
+temperature and capsule or 
+amplifier temperature.
+SC
+1
+30 ms
+An output of Signal 
+characterizer block is a 
+nonlinear function of the 
+respective input. The function 
+is determined by a table.
+IT
+1
+30 ms
+Integrator block intergrates 
+a variable as a function of 
+the time of accumulates the 
+counts.
+IS
+1
+30 ms
+Input Selector block provides 
+selection of up to eight inputs 
+and generate an output 
+based on the configured 
+action.
+AR
+1
+30 ms
+Arithmetic block allows simple 
+use of popular measurement 
+math functions.
+PID
+1
+45 ms
+Applicable when /LC1 option 
+is specified.
+ LM Function
+LM function is supported.
+Oct. 31, 2022-00
+
+--- página 5 ---
+5
+<<Contents>>  <<Index>>
+All Rights Reserved. Copyright © 2005, Yokogawa Electric Corporation
+GS 01C25R01-01EN
+Output specifications for Modbus Protocol Type
+Item
+Description
+Communication 
+protocol
+2-wire half duplex RS-485 Modbus
+Flow control
+None
+Baud rate
+1200, 4800, 9600*, 19200
+Start bit
+1 bit (Fixed)
+Stop bit
+1 bit*, 2 bits
+Parity bit
+Odd, Even, None*
+Transfer mode
+RTU (Remote Terminal Unit)
+Data length: 8 bits
+LSB (Least significant bit sent first)
+Slave address
+1* to 247
+Support function 1: Read Coils
+2: Read Discrete Inputs
+3: Read Holding Registers
+4: Read Input Register
+5: Write Single Coil
+8: Diagnostic  (00: Return Query Data)
+16: Write Multiple registers
+43: Read device Identification
+Bus termination
+Standard RS-485 bus termination
+ON (bus end), OFF* (not bus end)
+*:  
+Factory default setting
+Advanced Diagnostics (option for HART and 
+FOUNDATION Fieldbus protocol types)
+• Impulse line blockage detection
+The impulse line condition can be calculated and 
+detected by extracting the fluctuation component 
+from the differential pressure and static pressure 
+signals. Also EJX910A detects the impulse line 
+abnormality particularly which side of impulse line is 
+plugged.
+• Heat trace monitoring
+The change of the flange temperature calculated 
+by using the two temperature sensors built in the 
+EJX910A enables to detect the heat trace breakage 
+or the abnormal temperature due to the failure.
+Oct. 31, 2022-00
+Saturated Steam Mode for HART Protocol Revision 
+7 and Device Revision 12 or later
+When the saturated steam mode (ET Fixed = 
+Saturated Steam) is set, external temperature is 
+calculated from static pressure by using the built-in 
+steam table (IAPWS-IF97) and its value limit is 90 
+to 374°C. The static pressure range corresponding 
+to the external temperature value limit is 70 kPa to 
+22.064 MPa. Errors caused by disconnection of RTD 
+sensor do not occur in the mode.
+Note: Setting of the ET fixed mode affects the external 
+temperature range (ET LRV/URV) that can 
+be set (saturated steam mode: 100 to 349°C, 
+others: -210 to 860°C). Set the properly external 
+temperature range when the mode is saturated 
+steam.
+Note: External temperature configuration and value is 
+limited when calculating flow value of saturated 
+steam (Following IAPWS-IF97).
+1. Output external temperature measured by 
+RTD sensor:
+ 
+Configuration: ET Fixed = No
+	
+External temperature value limit: 0 to 374°C 
+(Under saturated steam state)
+2. Output external temperature calculated from 
+the static pressure by using the built-in steam 
+table:
+ 
+Configuration: ET Fixed = Saturated Steam
+	
+External temperature value limit: 90 to 374°C
+Damping Time Constant (1st order)
+Amplifier damping time constant is adjustable from 
+0.00 to 100.00 seconds and added to response time, 
+applicable independently for “DP, SP, ET, and flow” 
+for HART, FOUNDATION fieldbus and “DP, SP, and ET” 
+for Modbus.
+When the saturated steam mode (ET Fixed = 
+Saturated Steam) is set, the damping setting of 
+the external temperature is disabled, and its time 
+constant value is treated as zero.
+Update Period
+Signal
+HART
+Fieldbus
+Modbus
+Flow rate
+100 ms
+200 ms
+─
+Differential pressure
+100 ms
+200 ms
+100 ms
+Static pressure
+100 ms
+200 ms
+100 ms
+External temperature
+400 ms
+800 ms
+400 ms
+Total flow
+1000 ms
+─*
+─
+*: 
+Output from IT function block.
+Zero Adjustment Limits
+Zero can be fully elevated or suppressed, within 
+the lower and upper range limits of the capsule, 
+applicable for DP, SP, and ET independently.
+External Zero Adjustment
+External zero for DP is continuously adjustable with 
+0.01% incremental resolution of span.
+When the saturated steam mode (ET Fixed = 
+Saturated Steam) is set, zero-point adjustment of the 
+external temperature is disabled, and its trim value 
+(ET LTD) is treated as zero.
+
+--- página 6 ---
+6
+All Rights Reserved. Copyright © 2005, Yokogawa Electric Corporation
+<<Contents>>  <<Index>>
+GS 01C25R01-01EN
+Integral Indicator (LCD)
+5-digit (Flow, DP, SP, and ET) or 6-digit (Total flow) 
+numerical display, 6-digit unit display and bar graph.
+The indicator is configurable to display one or up to 
+four variables periodically.
+For FOUNDATION Fieldbus, the indicator is 
+configurable to display up to 10 function block output 
+values.
+For Modbus, the indicator is configurable to display 
+up to 16 output values including RTU output.
+Burst Pressure Limits
+69 MPa (10000 psi)
+Self Diagnostics
+CPU failure, hardware failure, configuration error, 
+process alarm for differential pressure, static 
+pressure and external temperature.
+SIL Certification
+EJX series transmitters except FOUNDATION Fieldbus 
+and Modbus protocol types are certified by TÜV in 
+compliance with the following standards;
+IEC 61508: 2010; Part1 to Part 7
+Functional Safety of electrical/electronic/
+programmable electronic safety-related systems; SIL 
+2 capability for single transmitter use, SIL 3 capability 
+for dual transmitter use.
+Functions Applicable for HART Protocol Revision 7
+• Long tag supporting up to 32 characters
+Long tag secures a better asset management with 
+abundant digits in its software.
+• Enhanced burst mode and event notification
+Advanced burst mode includes the variety of 
+transmission setting by specifying burst variables, 
+update period, and message trigger mode, and 
+event notification function gives you alert signal 
+based on the status change in preset values and 
+self-diagnosis.
+• Squawk
+Identifying the transmitter by displaying the 
+particular pattern on LCD
+• Multidrop communication
+Up to 63 transmitters can be connected. An analog 
+signal output available for one device in a loop.
+Functions Applicable for Modbus Protocol
+• Process data diagnosis
+The process data status is provided for each 
+measured differential pressure, static pressure and 
+process temperature. Also device status parameter 
+is available for detail diagnosis. 
+• Long tag supporting up to 32 characters 
+Long tag secures a better asset management with 
+abundant digits.
+• Squawk
+Identifying the transmitter by displaying the 
+particular pattern on LCD.
+• Multi-drop communication
+Up to 32 transmitters can be connected.
+Oct. 31, 2022-00
+ 
+Mass Flow Calculation
+(For Measurement function code B of HART and 
+FOUNDATION Fieldbus protocol types)
+□ Auto Compensation Mode (FSA120 
+FlowNavigator is required for 
+configuration)
+Configuration of the fluid physical properties and 
+primary element for the EJX900 series can be 
+performed using a dialog window of FSA120.
+All flow factors for mass flow calculation are 
+dynamically compensated to an optimum value.
+In Auto mode, mass flow can be measured with high 
+accuracy.
+The flow factors that are automatically compensated 
+are discharge coefficient, diameter of primary device, 
+upstream internal pipe diameter, gas expansion 
+factor, density, and viscosity.
+Supported primary devices are different by output 
+signal type. 
+HART 7 protocol type: Orifice, Nozzle, Venturi, 
+Multiport Averaging Pitot and Cone meters
+HART 5 and FOUNDATION Fieldbus protocol types: 
+Orifice, Nozzle, Venturi
+FlowNavigator: FSA120 Flow Configuration 
+Software (refer to GS 01C25R51-01EN). The 
+software package is used to perform mass flow 
+configuration for the EJX910A. These software 
+can also read and write the general parameters of 
+HART communications or FOUNDATION Fieldbus 
+communication. Configuration of the fluid physical 
+properties and the primary element of the EJX900 
+series can be done by means of a dialog menu.
+User Flow Parameters (flow settings information 
+input by FSA120 FlowNavigator) are stored to the 
+transmitter when the device revision is 12 or later.
+
+--- página 7 ---
+7
+<<Contents>>  <<Index>>
+All Rights Reserved. Copyright © 2005, Yokogawa Electric Corporation
+GS 01C25R01-01EN
+□ Basic Flow Calculation Mode
+Flow operation and density compensation are 
+performed conventionally, with the flow factors being 
+input manually.
+The operational expression is switched by the fluid 
+type and the unit setting.
+Density compensation by phase:
+Gas: Compensation as ideal gas by temperature 
+and pressure.
+Liquid: Compensation by temperature.
+Flow unit categories: See Table 1.
+Table 1. 
+Flow Operational Expression
+T01E.ai
+Flow unit Category
+Qm, Qv or Qv_norm 
+*1
+ 
+= Kfactor
+Flow equation
+Fluid 
+type
+Mass Flow
+Normal·Standard
+Volume Flow
+Liquid
+Normal·Standard
+Volume Flow
+Volume Flow
+Mass Flow
+Qm or Qv_norm 
+*1
+ 
+= Kfactor
+Qv = Kfactor 
+*1
+Volume Flow
+Gas
+*1: 
+: User setting parameter
+× ∆P×Tb/T×SP/SPb
+× ∆P×(1+Temp K1×(T–Tb))
+× ∆P×T/Tb×SPb/SP
+Table 2. 
+Symbol
+Symbol
+Description
+Qm
+Mass Flow
+Qv
+Volume Flow
+Qv_norm
+Normal·Standard Volume Flow
+Kfactor
+Basic flow Calculation factor
+∆P
+Differential Pressure (Transmitter Setting unit)
+Tb
+Reference temperature unit: K
+T
+Temperature unit: K
+SPb
+Reference static pressure unit: kPa abs
+SP
+Static Pressure unit: kPa abs
+Temp K1
+The density rate of change per temperature 
+1degC of a density base value (value which 
+set 100% to 1)
+For Volume Flow: Set 0
+Oct. 31, 2022-00
+ 
+NORMAL OPERATING CONDITION
+(Optional features or approval codes may affect 
+limits.)
+Ambient Temperature Limits
+–40 to 85°C (–40 to 185°F)
+–30 to 80°C (–22 to 176°F) with LCD display
+Process Temperature Limits
+–40 to 120°C (–40 to 248°F)
+Ambient Humidity Limits
+0 to 100% RH
+Working Pressure Limits (Silicone oil)
+Maximum Pressure Limits
+L Capsule
+16 MPa (2300 psi)
+M and H Capsule
+25 MPa (3600 psi)
+Minimum Pressure Limit
+See figure below.
+Atmospheric
+pressure
+-40
+(-40)
+0
+(32)
+40
+(104)
+80
+(176)
+120
+(248)
+1(0.14)
+2.7(0.38)
+10(1.4)
+(psi abs)
+100(14.5)
+Process temperature °C (°F)
+Working
+pressure
+kPa abs
+Applicable range
+F02E.ai
+Figure 1. Working Pressure and Process Temperature
+Supply & Load Requirements (for HART protocol 
+type)
+(Optional features or safety approvals may affect 
+electrical requirements.)
+With 24 V DC supply, up to a 570Ω load can be
+used. See figure below.
+      E-10.5
+      0.0244
+(Ω)
+Power supply voltage  E (V DC)
+600
+250
+R
+10.5
+16.6
+25.2
+42
+External
+load
+resistance
+Digital
+Communication
+range
+(HART)
+R=
+F03E.ai
+Figure 2. Relationship Between Power Supply 
+Voltage and External Load Resistance
+
+--- página 8 ---
+8
+All Rights Reserved. Copyright © 2005, Yokogawa Electric Corporation
+<<Contents>>  <<Index>>
+GS 01C25R01-01EN
+Supply Voltage 
+[for HART]
+10.5 to 42 V DC for general use and flameproof type.
+10.5 to 32 V DC for lightning protector (Option code 
+/ A).
+10.5 to 30 V DC for intrinsically safe, type n or 
+nonincendive.
+Minimum voltage limited at 16.6 V DC for HART 
+communication.
+[for FOUNDATION fieldbus]
+9 to 32 V DC for general use, flameproof type, Type n 
+or nonincendive.
+[for Modbus]
+9 to 30 V DC 250 mW for general use and flameproof 
+type, quiescent supply current 10 mA typical
+Load (for HART protocol type)
+0 to 1335Ω for operation
+250 to 600Ω for digital communication
+FOUNDATION Fieldbus
+Communication Requirements
+Supply Voltage: 9 to 32 V DC
+Current draw :
+Steady state 15 mA (max)
+Software download state 24 mA (max)
+EMC Conformity Standards
+EN61326-1 Class A, Table2
+EN61326-2-3
+EN61326-2-5 (for fieldbus)
+European Pressure Equipment Directive 
+2014/68/EU
+Sound Engineering Practice (for all capsules)
+With option code /PE3 (for M and H capsules)
+Category III, Module H, Type of Equipment : Pressure 
+Accessory-Vessel, type of Fluid: Liquid and Gas, 
+Group of fluid: 1and 2
+EU RoHS Directive
+EN IEC 63000
+Safety Requirement Standards
+EN61010-1, EN IEC 61010-2-030
+C22.2 No.61010-1, C22.2 No.61010-2-030
+• Installation category: I 
+(Anticipated transient overvoltage 330V)
+• Pollution degree: 2
+• Indoor/Outdoor use
+ PHYSICAL SPECIFICATIONS
+Wetted Parts Materials
+ Diaphragm, cover flange, process connector, 
+capsule gasket, and vent/drain plug
+See “MODEL AND SUFFIX CODES.”
+ Process connector gasket
+PTFE Teflon
+Fluorinated rubber for option code N2 and N3
+Non-wetted Parts Materials
+ Bolts
+B7 carbon steel, 316L SST or 660 SST
+ Housing 
+• Low copper cast aluminum alloy
+• ASTM CF-8M Stainless steel (optional)
+ Coating of housing
+[for aluminum housing]
+Polyester resin powder coating 
+Mint-green paint (Munsell 5.6BG 3.3/2.9 or its 
+equivalent)
+[for option code /P□ or /X2]
+Epoxy and polyurethane resin solvent coating
+ Degrees of protection
+IP66/IP67, Type 4X
+ Cover O-rings
+Buna-N, fluoro-rubber (optional)
+ Name plate and tag
+316 SST
+ Fill fluid
+Silicone oil, fluorinated oil (optional)
+	 Cable for RTD
+External Temperature Input Code -1, -2, -3, -4
+Oil-proof and a heat-resistant cable with a shield
+Outside diameter: 8.5 mm (0.335 inch),
+Voltage rating: 300V
+Temperature rating: –40 to 105°C (–40 to 221°F)
+Frame resistance: UL (CSA) VW-1
+Adaptation standard: UL (CSA) AWM STYLE 2517
+External Temperature Input Code -B,-C,-D
+A heat-resistant FEP cable with a shield
+Outside diameter: 4.3mm (0.168 inch)
+Voltage rating: 300V
+Temperature rating: –80 to 200°C (–112 to 392°F)
+Flame resistance: NEC Article 800-CMP
+Adaptation standard: NEC Article 725-PLTC
+Note for using an extension cable: 
+When extending a temperature cable with using 
+an extension cable and a junction box, total cable 
+length including the original external temperature 
+cable must be less than 25 m. Use PE or XLPE 
+insulated cable for extension.
+ Cable gland:
+Nickel plating brass
+Weight
+2.8 kg (6.2 lb) without integral indicator, mounting 
+bracket, process connector and RTD cable.
+Add 1.5 kg (3.3 lb) for Amplifier housing code 2.
+Connections
+See “MODEL AND SUFFIX CODES.”
+Process connection of cover flange: IEC61518
+Sep. 1, 2023-00
+
+--- página 9 ---
+9
+<<Contents>>  <<Index>>
+All Rights Reserved. Copyright © 2005, Yokogawa Electric Corporation
+GS 01C25R01-01EN
+ MODEL AND SUFFIX CODES
+Model 
+Suffix Codes
+Description
+EJX910A
+ . . . . . . . . . . . . . . . . . . . . . . . . . . 
+Multivariable transmitter
+Output 
+signal
+-E . . . . . . . . . . . . . . . . . . . . . . . . .
+-J . . . . . . . . . . . . . . . . . . . . . . . . .
+-F . . . . . . . . . . . . . . . . . . . . . . . . .
+-M . . . . . . . . . . . . . . . . . . . . . . . .
+4 to 20 mA DC with digital communication (HART protocol)*8
+4 to 20 mA DC with digital communication (HART 5/HART 7 protocol)*9
+Digital communication (FOUNDATION fieldbus protocol)
+Digital communication (RS485 Modbus protocol)
+When Output signal code -M is selected, option code A must also be selected.
+Measurement
+span (capsule)
+L . . . . . . . . . . . . . . . . . . . . . . .
+M . . . . . . . . . . . . . . . . . . . . . . .
+H . . . . . . . . . . . . . . . . . . . . . . .
+0.1 to 10 kPa (0.4 to 40 inH2O)
+0.5 to 100 kPa (2 to 400 inH2O)
+2.5 to 500 kPa (10 to 2000 inH2O)
+Wetted parts
+material *1
+S . . . . . . . . . . . . . . . . . . . . .
+See Table 5.
+Process 
+connections
+►
+0 . . . . . . . . . . . . . . . . . . .
+1 . . . . . . . . . . . . . . . . . . .
+2 . . . . . . . . . . . . . . . . . . .
+3 . . . . . . . . . . . . . . . . . . .
+4 . . . . . . . . . . . . . . . . . . .
+5 . . . . . . . . . . . . . . . . . . .
+without process connector (Rc1/4 female on the cover flanges)
+with Rc1/4 female process connector
+with Rc1/2 female process connector
+with 1/4 NPT female process connector
+with 1/2 NPT female process connector
+without process connector (1/4 NPT female on the cover flanges)
+Bolts and nuts material
+J . . . . . . . . . . . . . . . . .
+G . . . . . . . . . . . . . . . . .
+C . . . . . . . . . . . . . . . . .
+B7 carbon steel
+316L SST
+660 SST
+Installation
+►
+-7 . . . . . . . . . . . . . . .
+-8 . . . . . . . . . . . . . . .
+-9 . . . . . . . . . . . . . . .
+-B . . . . . . . . . . . . . . .
+Vertical piping, left side high pressure, and process connection downside
+Horizontal piping and right side high pressure
+Horizontal piping and left side high pressure
+Bottom Process Connection, left side high pressure
+Amplifier housing
+1 . . . . . . . . . . . . .
+2 . . . . . . . . . . . . .
+Cast aluminum alloy
+ASTM CF-8M stainless steel
+Electrical connection
+F . . . . . . . . . . .
+2 . . . . . . . . . . .
+4 . . . . . . . . . . .
+5 . . . . . . . . . . .
+7 . . . . . . . . . . .
+9 . . . . . . . . . . .
+A . . . . . . . . . . .
+C . . . . . . . . . . .
+D . . . . . . . . . . .
+G 1/2 female, two electrical connections (One connection for RTD)
+1/2NPT female, two electrical connections (One connection for RTD)
+M20 female, two electrical connections (One connection for RTD)
+G 1/2 female, two electrical connections and blind plug *2*6*7
+1/2NPT female, two electrical connections and a blind plug *2*6*7
+M20 female, two electrical connections and a blind plug *2*6*7
+G 1/2 female, two electrical connections and a 316 SST blind plug *2
+1/2 NPT female, two electrical connections and a 316 SST blind plug *2
+M20 female, two electrical connections and a 316 SST blind plug *2
+Integral indicator
+►
+D . . . . . . . . .
+N . . . . . . . . .
+Digital indicator
+None
+Mounting bracket
+►
+B . . . . . . .
+D . . . . . . .
+J . . . . . . .
+K . . . . . . .
+M . . . . . . .
+P . . . . . . .
+N . . . . . . .
+304 SST 2-inch pipe mounting, flat type (for horizontal piping)
+304 SST 2-inch pipe mounting, L type (for vertical piping)
+316 SST 2-inch pipe mounting, flat type (for horizontal piping)
+316 SST 2-inch pipe mounting, L type (for vertical piping)
+316 SST 2-inch pipe mounting (for bottom process connection type)
+316 SST 2-inch pipe mounting, position adjustable L type (for vertical piping) *13
+None
+External temperature input
+-0 . . . . .
+-1 . . . . .
+-2 . . . . .
+-3 . . . . .
+-4 . . . . .
+-B . . . . .
+-C . . . . .
+-D . . . . .
+Fixed temperature (without cable) *5*11
+RTD input with 0.5 m (1.64 ft) of shielded cable and two cable glands*3 *7 *10
+RTD input with 4 m (13.1 ft) of shielded cable and two cable glands*3 *7 *10
+RTD input with 7.5 m (24.6 ft) of shielded cable and two cable glands*3 *7 *10
+RTD input with 25 m (81 ft) of shielded cable and two cable glands*3 *7 *10
+RTD input with 4 m (13.1 ft) of shielded cable without cable gland *3 *4
+RTD input with 7.5 m (24.6 ft) of shielded cable without cable gland *3 *4
+RTD input with 25 m (81 ft) of shielded cable without cable gland *3 *4
+Measurement function
+►
+A . . .
+B . . .
+Multi Sensing (DP, P and T) *12
+Mass Flow Measurement (Flow, DP, P and T) (Applicable for Output signal codes -E, 
+-J, and -F).
+Option codes
+/  Optional specification
+The “►” marks indicate the most typical selection for each specification.
+*1: 
+ Users must consider the characteristics of selected wetted parts material and the influence of process fluids. The use of 
+inappropriate materials can result in the leakage of corrosive process fluids and cause injury to personnel and/or damage 
+to plant facilities. It is also possible that the diaphragm itself can be damaged and that material from the broken diaphragm 
+and the fill fluid can contaminate the user’s process fluids.
+ 
+Be very careful with highly corrosive process fluids such as hydrochloric acid, sulfuric acid, hydrogen sulfide, sodium 
+hypochlorite, and high-temperature steam (150°C [302°F] or above). Contact Yokogawa for detailed information of the 
+wetted parts material.
+*2: 
+For External temperature input code 0 (Fixed temperature) .
+*3:	
+Recommended External Temperature Input Cable is as shown in Table 4.  RTD is not provided.
+*4: 
+Specify when using conduit for RTD connection.
+*5: 
+Preset external temperature value is used for density compensation.
+Jan. 31, 2023-00
+
+--- página 10 ---
+10
+All Rights Reserved. Copyright © 2005, Yokogawa Electric Corporation
+<<Contents>>  <<Index>>
+GS 01C25R01-01EN
+*6: 
+Material of a blind plug is aluminum alloy or 304 SST.
+*7: 
+Not applicable for Amplifier housing code 2.
+*8: 
+Output signal code E: HART 5.
+*9: 
+Output signal code J: HART 5 or HART 7 selectable. Specify HART 5 or HART 7 when ordering. (Output signal code J is 
+recommended for HART communication.)
+*10: 
+Refer to table 6 whether the cable glands are attached or not.
+*11: 
+If you use the saturated steam mode (external temperature is calculated from static pressure), set ET fixed parameter to 
+Saturated Steam after shipping.
+*12: 
+No flow calculation function. When using the flow calculation function, specify code B.
+*13: 
+For position adjustable bracket, refer to SD 01C25B14-01EN.
+ 
+Selection guide for HART 5 and HART 7
+Select HART 5 or HART 7 as follow. 
+Output signal 
+code
+Specified item when ordering 
+"HART protocol revision" 
+HART protocol 
+revision
+Selection guide
+Note
+Requirement for HART 7 
+function
+Other conditions
+-E
+Not Available
+HART 5
+NO
+Not available to switch 
+to HART 7 protocol after 
+delivery.
+*
+-J
+Specify '5' 
+Available to switch to HART 
+7 protocol after delivery by 
+user-configuration.
+**
+Specify '7' 
+HART 7
+YES
+In this case, be sure to confirm 
+that HART configuration tool 
+supports HART 7 by Table 3.
+Available to switch to HART 
+5 protocol after delivery by 
+user-configuration.
+*: 
+This code will be unified to the new code “-J”. Therefore the code “-J” is recommended for HART communication type.
+**:  
+In case of selecting HART 7 without conforming to Table 3, communication will not be available.
+ 
+HART protocol revision and communication
+Protocol revision supported by HART configuration tool must be the same or higher than that of the EJX 
+multivariable transmitter. 
+Table 3. 
+HART protocol revision and communication
+Protocol revision supported
+by HART configuration tool
+HART 5
+HART 7
+Protocol revision of EJX 
+multivariable transmitter
+HART 5
+Communication
+Available
+Communication
+Available
+HART 7
+Communication
+Not Available
+Communication
+Available
+ 
+Applicable External Temperature Cable
+Table 4.
+External Temperature Input Code
+-1, -2, -3, -4
+-B, -C, -D
+General Application
+
+
+Factory Mutual (FM)
+Explosionproof Approval
+
+Intrinsically Safe Approval Nonincendive
+
+ATEX
+Flameproof Approval
+
+Intrinsically Safe Approval
+
+Canadian Standards Association (CSA)
+Explosionproof Approval
+
+IECEx Scheme
+Flameproof Approval
+
+
+ 
+Wetted Parts Materials
+Table 5.
+Wetted parts 
+material code
+Cover flange and 
+process connector
+Capsule
+Capsule 
+gasket
+Vent/Drain plug
+S #
+ASTM CF-8M *1*3
+Hastelloy C-276 *2 (Diaphragm)
+F316L SST, 316L SST (Others)
+Teflon-coated 
+316L SST
+316 SST
+*1: 
+Cast version of 316 SST. Equivalent to SCS14A.
+*2: 
+Hastelloy C-276 or ASTM N10276.
+*3: 
+Intergranular corrosion test passed according to ASTM A262 Practice E.
+The ‘#’marks indicate the construction materials conform to NACE material recommendations per MR0175/ISO 15156. 
+Please refer to the latest standards for details. Selected materials also conform to NACE MR0103.
+Jan. 31, 2023-00
+
+--- página 11 ---
+11
+<<Contents>>  <<Index>>
+All Rights Reserved. Copyright © 2005, Yokogawa Electric Corporation
+GS 01C25R01-01EN
+ Attached Cable glands for EJX910A and EJX930A 
+Table 6.
+Flameproof approval
+Intrinsically safe approval
+General 
+Application
+FM
+CSA
+ATEX
+IECEx 
+Scheme
+NEPSI
+KOSHA
+INMETRO 
+EAC
+FM
+ATEX
+NEPSI
+KOSHA
+INMETRO
+EAC
+External 
+Temperature 
+Input
+-0
+No
+No
+No
+No
+No
+No
+N/A
+No
+-1, -2, -3, -4
+N/A
+Yes
+Yes
+No
+N/A
+Yes
+Yes
+-B, -C, -D
+No
+N/A
+No
+No
+No
+N/A
+No
+Yes: Attached  No: Not attached  N/A: Not applicable
+ OPTIONAL SPECIFICATIONS (For Explosion Protected) 
+Please select appropriate equipment in accordance with the laws and regulations of the relevant country/region, when 
+it is used in a location where explosive atmospheres may be present.
+Item
+Description
+Code
+Factory Mutual
+(FM)
+FM Explosionproof Approval *4
+Applicable Standard: FM3600:2018, FM3615:2018, FM3810:2018, NEMA 250:2003,  
+ANSI/UL 61010-1:2012, ANSI/UL 61010-2-30:2012
+Explosionproof for Class I, Division 1, Groups B, C and D, Dust-ignitionproof for Class II/III, Division 1,
+Groups E, F and G, in Hazardous locations, indoors and outdoors (Enclosure: Type 4X)
+“FACTORY SEALED, CONDUIT SEAL NOT REQUIRED.”
+Temperature class: T6, Amb. Temp.: –40 to 60°C (–40 to 140°F)
+FF1
+FM Intrinsically Safe and Nonincendive Approval *1 *3 *4
+Applicable Standard: FM 3600:2011, FM 3610:2010, FM 3611:2004, FM 3810:2005,  
+ANSI/ISA-60079-0-2009, ANSI/ISA-60079-11-2009, ANSI/ISA-60079-27-2006,  
+ANSI/ISA-61010-1-2004, NEMA 250:1991
+Intrinsically Safe for Class I,II, & III, Division 1, Groups A,B,C,D,F & G, Entity, FISCO.
+Class I, Zone 0, AEx ia IIC,
+Enclosure: Type 4X, Temp. Class: T4, Amb. Temp.: –40 to 60°C (–40 to 140°F).
+Intrinsically Apparatus Parameters:
+[FISCO (IIC)] Ui=17.5 V, Ii=380 mA, Pi=5.32 W, Ci=3.52 nF, Li=0 μH
+[FISCO (IIB)] Ui=17.5 V, Ii=460 mA, Pi=5.32 W, Ci=3.52 nF, Li=0 μH
+[Entity] Ui=24 V, Ii=250 mA, Pi=1.2 W, Ci=3.52 nF, Li=0 μH
+Sensor Circuit: Uo=6.51 V, Io=4 mA, Po=6 mW, Co=34 μF, Lo=500 mH
+Nonincendive for Class I, Division 2, Groups A, B, C and D, NIFW, FNICO
+Class I, Zone 2, Group IIC, NIFW, FNICO
+Class II, Division 2, Groups F&G, and Class III, Division 1
+Enclosure: Type 4X, Temp. Class: T4, Amb. Temp.: –40 to 60°C (–40 to 140°F)
+Nonincendive Apparatus Parameters: Vmax.=32 V, Ci=1.76 nF, Li=0 μH
+FS15
+ATEX
+ATEX Flameproof Approval *4
+Applicable Standard: EN IEC 60079-0, EN 60079-1, EN 60079-31
+Certificate: KEMA 07ATEX0109 X
+II 2 G Ex db IIC T6...T4 Gb, II 2 D Ex tb IIIC T85°C Db
+Degree of protection: IP66/IP67
+Amb. Temp. (Tamb) for gas-proof :
+T4; –50 to 75°C (–58 to 167°F), T5; –50 to 80°C (–58 to 176°F), T6; –50 to 75°C (–58 to 167°F) 
+Process Temp. for gas-proof (Tp):
+T4; –50 to 120°C (–58 to 248°F), T5; –50 to 100°C (–58 to 212°F), T6; –50 to 85°C (–58 to 185°F)
+Max. surface Temp. for dust-proof: T85°C (Tamb: –30 to 75°C, Tp: –30 to 85°C) *5
+KF22
+ATEX Intrinsically Safe Approval *1 *3 *4
+Applicable Standards: EN IEC 60079-0, EN 60079-11
+Certificate: KEMA 06ATEX0278X
+II 1 G  Ex ia IIC/IIB T4 Ga, II 2 D Ex ia IIIC T85°C T100°C T120°C Db
+Type of protection: IP66/IP67
+Amb. Temp. for EPL Ga: –40 to 60°C (–40 to 140°F) 
+Amb. Temp. for EPL Db: –30 to 60°C *5
+Max. Process Temp. (Tp): 120°C (248°F)
+Max. Surface Temp. for EPL Db. T85°C (Tp:80°C), T100°C (Tp:100°C), T120°C (Tp:120°C)
+Ambient Humidity: 0 to 100% (No condensation)
+Electrical data:
+Supply/Output circuit (terminals + and –)
+[FISCO (IIC)] Ui=17.5 V, Ii=380 mA, Pi=5.32 W, Ci=3.52 nF, Li=0 μH
+[FISCO (IIB)] Ui=17.5 V, Ii=460 mA, Pi=5.32 W, Ci=3.52 nF, Li=0 μH
+[Entity] Ui=24 V, Ii=250 mA, Pi=1.2 W, Ci=3.52 nF, Li=0 μH
+External Temperature Input circuit (connector)
+Uo=7.63 V, Io=3.85 mA, Po=0.008 W, Co=4.8 μF, Lo=100 mH
+KS26
+July 1, 2021-00
+
+--- página 12 ---
+12
+All Rights Reserved. Copyright © 2005, Yokogawa Electric Corporation
+<<Contents>>  <<Index>>
+GS 01C25R01-01EN
+Item
+Description
+Code
+Canadian
+Standards
+Association
+(CSA)
+CSA Explosionproof Approval *4
+Certificate: 2014354
+Applicable Standard: C22.2 No.0, C22.2 No.0.4, C22.2 No.0.5, C22.2 No.25, C22.2 No.30,
+C22.2 No.94, C22.2 No.60079-0, C22.2 No.60079-1, C22.2 No.61010-1, C22.2 No.61010-2-030
+Explosion-proof for Class I, Groups B, C and D.
+Dustignition-proof for Class II/III, Groups E, F and G.
+When installed in Division 2, “SEAL NOT REQUIRED” Enclosure: Type 4X, 
+Temp. Code: T6...T4
+Ex d IIC T6...T4 Enclosure: IP66 and IP67
+Max.Process Temp.: T4;120°C (248°F), T5;100°C (212 °F), T6; 85°C (185°F)
+Amb.Temp.: –50 to 75°C (–58 to 167°F) for T4, –50 to 80°C (–58 to 176°F) for T5,
+–50 to 75°C (–58 to 167°F) for T6 *5
+Process Sealing Certification
+Dual Seal Certified by CSA to the requirement of ANSI/ISA 12.27.01
+No additional sealing required
+Primary seal failure annunciation: at the zero adjustment screw
+CF1
+IECEx
+Scheme
+IECEx Flameproof Approval *4
+Applicable Standard: IEC 60079-0, IEC 60079-1, IEC 60079-31
+Certificate: IECEx DEK 14.0046X
+Enclosure: IP66/IP67
+Ex db IIC T6...T4 Gb, Ex tb IIIC T85°C Db
+Amb. Temp. (Tamb) for gas-proof :
+T4; –50 to 75°C (–58 to 167°F), T5; –50 to 80°C (–58 to 176°F), T6; –50 to 75°C (–58 to 167°F)
+Process Temp. for gas-proof (Tp):
+T4; –50 to 120°C (–58 to 248°F), T5; –50 to 100°C (–58 to 212°F),
+T6; –50 to 85°C (–58 to 185°F)
+Max. surface Temp. for dust-proof: T85°C (Tamb: –30 to 75°C, Tp: –30 to 85°C) *5
+SF22
+Contact Yokogawa representative for the codes indicated as ‘—’
+*1:  
+Not Applicable for Output signal codes -E and -J.
+*2:  
+Not Applicable for Output signal code -F.
+*3: 
+Not Applicable for Output signal code -M.
+*4:  
+Applicable for Electrical connection codes 2, 4, 7, 9, C, and D.
+*5:  
+Lower limit of ambient temperature is –15°C (5°F) when option code HE is specified.
+Dec. 29, 2023-00
+
+--- página 13 ---
+13
+<<Contents>>  <<Index>>
+All Rights Reserved. Copyright © 2005, Yokogawa Electric Corporation
+GS 01C25R01-01EN
+ OPTIONAL SPECIFICATIONS
+Item
+Description
+Code
+Painting
+Color change
+Amplifier cover only
+P
+Amplifier cover and terminal cover, Munsell 7.5 R4/14
+PR
+Coating change
+Anti-corrosion coating*1
+X2
+316 SST exterior parts
+316 SST zero-adjustment screw and setscrews*15
+HC
+Fluoro-rubber O-ring
+All O-rings of amplifier housing. Lower limit of ambient temperature: –15°C (5°F)
+HE
+Lightning protector
+HART protocol type:
+Transmitter power supply voltage: 10.5 to 32 V DC
+Allowable current: Max. 6000 A (1×40 μs), Repeating 1000 A (1×40 μs) 100 times
+Applicable Standards: IEC 61000-4-4, IEC 61000-4-5
+FOUNDATION fieldbus protocol type:
+Allowable current: Max. 6000 A (1×40 μs), Repeating 1000 A (1×40 μs) 100 times
+Applicable Standards: IEC 61000-4-4, IEC 61000-4-5
+Modbus protocol type:
+Applicable Standards: IEC 61000-4-5
+This option (option code A) must be selected when Modbus protocol type (Output signal 
+code -M) is selected.
+A
+Oil-prohibited use*2
+Degrease cleansing treatment
+K1
+Degrease cleansing treatment and fluorinated oilfilled capsule.
+Operating temperature −20 to 80°C (−4 to 176°F)
+K2
+Degrease cleansing treatment
+With certificates
+K41
+Degrease cleansing treatment and fluorinated oilfilled 
+capsule.
+Operating temperature −20 to 80°C (−4 to 176°F)
+K42
+Oil-prohibited use with
+dehydrating treatment*2
+Degrease cleansing and dehydrating treatment
+K5
+Degrease cleansing and dehydrating treatment with fluorinated oilfilled capsule.
+Operating temperature −20 to 80°C (−4 to 176°F)
+K6
+Degrease cleansing and dehydrating treatment
+With certificates
+K45
+Degrease cleansing and dehydrating treatment with 
+fluorinated oilfilled capsule.
+Operating temperature −20 to 80°C (−4 to 176°F)
+K46
+Capsule fill fluid
+Fluorinated oil filled in capsule
+Operating temperature −20 to 80°C (−4 to 176°F)
+K3
+Calibration units*3
+P calibration (psi unit)
+(See Table for Span and Range Limits.)
+D1
+bar calibration (bar unit)
+D3
+M calibration (kgf/cm2 unit)
+D4
+Plug option*22
+Long vent *4  Total length: 119 mm (standard: 34 mm); Total length when combining with 
+option code K1,K2, K5, and K6: 130 mm. Material: 316 SST 
+U1
+Without vent and drain plugs
+UN
+Gold-plated *2
+Surface of isolating diaphragms are gold plated, effective for hydrogen permeation.
+Overpressure effects for M and H capsules: ±0.06% of URL
+A1
+Output limits and failure 
+operation*5
+(for HART protocol type)
+Failure alarm down-scale: Output status at CPU failure and hardware error is −2.5%, 3.6 mA 
+DC or less.
+C1
+NAMUR NE43 Compliant 
+Output signal limits:  
+3.8 mA to 20.5 mA
+Failure alarm down-scale: Output status at CPU failure and 
+hardware error is −2.5%, 3.6 mA DC or less.
+C2
+Failure alarm up-scale: Output status at CPU failure and 
+hardware error is 110%, 21.6 mA or more.
+C3
+Body option*6
+H
+L
+Terminal
+Side
+F04E.ai
+Right side high pressure, without drain and vent plugs
+N1
+N1 and Process connection, based on IEC61518 with female thread on both sides of cover 
+flange, with blind kidney flanges on back.
+N2
+N2, and Material certificate for cover flange, diaphragm, capsule body, and blind kidney flange
+N3
+Wired tag plate
+316 SST tag plate wired onto transmitter (Tag No.: Maximum. 16 characters.)
+N4
+Data configuration at factory*7
+Data configuration for HART communication type
+Software damping, Descriptor, 
+Message
+CA
+Data configuration for Fieldbus communication type
+Software damping
+CC
+Data configuration for Modbus communication type
+Software damping, Descriptor, 
+Message
+CE
+PID function *13
+(For FOUNDATION Fieldbus protocol type)
+PID control function
+LC1
+Jan. 31, 2023-00
+
+--- página 14 ---
+14
+All Rights Reserved. Copyright © 2005, Yokogawa Electric Corporation
+<<Contents>>  <<Index>>
+GS 01C25R01-01EN
+Item
+Description
+Code
+Software downloading
+function *13
+(For FOUNDATION Fieldbus protocol type)
+Based on FOUNDATION Fieldbus Specification(FF-883) Download class: Class1
+EE
+Advanced diagnostics
+(For HART or FOUNDATION 
+Fieldbus protocol type)
+Multi-sensing process monitoring
+• Impulse line blockage detection *16
+• Heat trace monitoring
+HART protocol type
+DG6
+FOUNDATION Fieldbus protocol type *17
+DG1
+European Pressure 
+Equipment Directive*14
+PED 2014/68/EU
+Category III, Module H, type of equipment: Pressure accessory-vessel,
+Tupe of fluid: Liquid and Gas, Group of fluid: 1 and 2
+Lower limit of ambient and process temperature: −29°C
+PE3
+Material certificate*8
+Cover flange *9
+M01
+Cover flange, Process connector *10
+M11
+Cover flange, Diaphragm, Capsule body*9*22
+MA1
+Cover flange, Process connector, Diaphragm, Capsule body *10*22
+MC1
+Cover flange, Bolt and Nut for cover flange, Diaphragm, Capsule body, Vent and Drain plug,  
+Vent screw, Capsule gasket*9*20*21
+MG1
+Cover flange, Process connector, Bolt and nut for cover flange, Bolt for process connector, 
+Diaphragm, Capsule body, Vent and Drain plug, Vent screw, Capsule gasket*10*20*21
+MH1
+Pressure test/
+Leak test certificate*11
+Test Pressure: 16 MPa(2300 psi)*18
+Nitrogen(N2) Gas*12
+Retention time: one minute
+T12
+Test Pressure: 25 MPa(3600 psi)*19
+T13
+Calibration certificate
+Text, Traceability
+L4
+Text, Traceability, Primary standards list
+L5
+Text, Traceability, Primary standards list, Calibration equipment list
+L6
+Text, Traceability, Primary standards list, Calibration equipment list, Calibration equipment 
+certificate
+L9
+Bug screen*23
+With bug screen to the process connection port of the low side cover flange 
+BS
+Additional blind plug*24
+Additional blind plug is attached to the conduit connection on both sides for storing transmitter
+PP
+*1:	
+Not applicable with color or coating change option.
+*2: 
+Applicable for Wetted parts material code S.
+*3: 
+The unit of MWP (Max. working pressure) on the name plate of a housing is the same unit as specified by option codes D1, 
+D3, and D4.
+*4: 
+Applicable for vertical impulse piping type (Installation code 7) and Wetted parts material code S.
+*5: 
+Applicable for Output signal codes -E and -J. The hardware error indicates faulty amplifier or capsule.
+*6: 
+Applicable for Wetted parts material code S; Process connection codes 3, 4, and 5; Installation code 9; and Mounting 
+bracket code N. Process connection faces on the other side of zero adjustment screw.
+*7: 
+Also see ‘Ordering Information’.
+*8: 
+Material traceability certification, per EN 10204 3.1B.
+*9: 
+Applicable for Process connections codes 0 and 5.
+*10: 
+Applicable for Process connections codes 1, 2, 3, and 4.
+*11: 
+The unit on the certificate is always Pa unit regardless of selection of option code D1, D3 or D4.
+*12: 
+Dry nitrogen gas is used for oil-prohibited use (option codes K1, K2, K5, K6, K41, K42, K45, and K46).
+*13: 
+Applicable for Output signal code -F.
+*14: 
+Applicable for Measurement span codes M and H. If compliance with category III is needed, specify this code.
+*15: 
+316 or 316L SST. The specification is included in Amplifier code 2.
+*16: 
+The change of pressure fluctuation is monitored and then detects the impulse line blockage. Refer to TI 01C25A31-01E for 
+detailed technical information required for using this function.
+*17: 
+This option code must be specified with option code EE.
+*18: 
+Applicable for Capsule code L.
+*19: 
+Applicable for Capsule codes M and H.
+*20: 
+Not applicable with plug option code UN. 
+*21:	
+Not applicable with option code N1, N2 and N3. 
+*22: 
+Applicable for option code UN and N1.
+*23: 
+Applicable for process connection 0, 1, 2, 3, 4, 5, C, D, Q, R.
+*24: 
+Not applicable for electrical connection codes 0, 2, and 4.
+Jan. 31, 2023-00
+
+--- página 15 ---
+15
+<<Contents>>  <<Index>>
+All Rights Reserved. Copyright © 2005, Yokogawa Electric Corporation
+GS 01C25R01-01EN
+	DIMENSIONS
+Unit: mm (approx.inch)
+95(3.74)*4
+242(9.53)
+175(6.89)
+129(5.08)
+97
+(3.82)
+223(8.78)
+52
+(2.05)
+97(3.82)
+41
+(1.61)
+67(2.64)
+ (for RTD)
+Conduit connection
+Integral indicator
+ (optional)
+Zero adjustment
+Ground terminal
+(optional)
+Mounting bracket
+(L-type,optional)
+Process connector*6
+Conduit connection*7
+110(4.33)
+ø78(3.07)
+ø70(2.76)
+39
+(1.54)
+12
+(0.47)
+138(5.43)*2
+54
+(2.13)
+2-inch pipe
+(O.D. 60.5 mm)
+Vent/Drain*5
+plugs
+175(6.89)
+145(5.71)
+124(4.88)
+47
+(1.85)
+95(3.74)*4
+89(3.50)
+115(4.53)
+41
+(1.61)
+110(4.33)
+12
+(0.47)
+39
+(1.54)
+ø70
+(2.76)
+129(5.08)
+ø78(3.07)
+130(5.12)*3
+67
+(2.64)
+Drain plug*5
+2-inch pipe
+(O.D. 60.5 mm)
+Vent plug*5
+Zero
+adjustment
+Ground terminal
+Drain plug*5
+Vent plug*5
+Mounting bracket
+(Flat-type,optional)
+Conduit
+connection*7
+ (for RTD)
+Conduit connection
+Integral indicator
+ (optional)
+(optional)
+Process
+connector*6
+54(2.13)
+●  Horizontal Impulse Piping Type (Installation code 9)
+●  Vertical Impulse Piping Type (Installation code 7)
+High
+pressure 
+side
+Low
+pressure 
+side
+Low
+pressure 
+side
+High
+pressure 
+side
+*1: When Installation code 8 is selected, high and low pressure side on above figure are reversed.  
+ 
+(i.e.  High pressure side is on the right side.)
+*2: When Option code K1, K2, K5, K6, K41, K42, K45, or K46 is selected, add 15 mm(0.59 inch) to the value
+ 
+in the figure.
+*3: When Option code K1, K2, K5, K6, K41, K42, K45, or K46 is selected, add 30 mm(1.18 inch) to the value
+ 
+in the figure.
+*4: When electrical connection code 7 or C is selected, a blind plug is protruded upto 8 mm(0.31 inch)
+ 
+from the conduit connection.
+*5: When option code /UN is specified, Vent/drain holes and plugs are not applicable.
+*6: When option code BS is selected, a bug screen is attached in the process connection port on the cover
+ 
+flange of low pressure side. No process connector for low pressure side is attached in that case.
+*7: When option code PP is selected, a blind plug is attached to the conduit connection on both sides.
+Electrical connection code 2
+External temp. input code 1, 2, 3, and 4 
+Electrical connection code 4
+External temp. input code 1, 2, 3, and 4 
+Electrical connection code 9
+External temp. input code 0
+Electrical connection code 2 and 4
+External temp. input code B, C, and D 
+Electrical connection code 2
+External temp. input code 1, 2, 3, and 4 
+Electrical connection code 9
+External temp. input code 0
+Electrical connection code 4
+External temp. input code 1, 2, 3, and 4 
+Electrical connection code 2 and 4
+External temp. input code B, C, and D 
+6
+(0.24)
+105(4.13)
+58(2.28)
+54
+(2.13)
+69(2.72)
+116(4.57)
+48
+(1.89)
+54
+(2.13)
+6
+(0.24)
+105(4.13)
+58(2.28)
+48
+(1.89)
+Cable Gland
+Cable Gland
+Cable Gland
+69(2.72)
+116(4.57)
+Cable Gland
+F05E.ai
+41.3
+(1.63)
+Jan. 31, 2023-00
+
+--- página 16 ---
+16
+All Rights Reserved. Copyright © 2005, Yokogawa Electric Corporation
+<<Contents>>  <<Index>>
+GS 01C25R01-01EN
+Unit: mm (approx.inch)
+● Bottom Process Connection (Installation code B)
+12 
+(0.47)
+39
+(1.54)
+129 (5.08)
+Zero
+adjustment
+Ground terminal
+ø78(3.07)
+ø70
+(2.76)
+130
+(5.12)
+54
+ (2.13)
+188(7.40)
+109 (4.29)
+Low
+pressure 
+side
+High
+pressure 
+side
+Process connector*4
+(optional)
+Conduit
+connection*5
+Mounting bracket*1
+(optional)
+95(3.74)
+159(6.26)
+73
+(2.87)
+Conduit connection
+(for RTD)
+2-inch pipe 
+(O.D. 60.5 mm)
+Integral indicator
+(optional)
+110 (4.33)
+Vent plug*3
+60
+(2.36)
+41.3
+(1.63)
+Electrical connection code 2
+External temp. input code 1, 2, 3, and 4 
+Electrical connection code 9
+External temp. input code 0
+Electrical connection code 4
+External temp. input code 1, 2, 3, and 4 
+Electrical connection code 2 and 4
+External temp. input code B, C, and D 
+54
+(2.13)
+6
+(0.24)
+48
+(1.89)
+69(2.72)
+116(4.57)
+Cable Gland
+105(4.13)
+58(2.28)
+Cable Gland
+F06E.ai
+*1: 
+A transmitter with SST housing is not applicable for mounting to horizontal 2-inch pipe.
+*2: 
+When electrical connection code 7 or C is selected, a blind plug is protruded up to 8 mm(0.31 inch) from the conduit connection.
+*3: 
+When option code UN is specified, Vent holes and plugs are not applicable.
+*4:	
+When option code BS is selected, a bug screen is attached in the process connection port on the cover flange of low pressure side.  
+No process connector for low pressure side is attached in that case.
+*5: 
+When option code PP is selected, a blind plug is attached to the conduit connection on both sides.
+F07E.ai
+A
+B
+SUPPLY 
+CHECK
+PULSE 
++–
+Power supply and output terminals
+External indicator (ammeter) terminals *1*2
+Pulse or status contact output terminals *2
+*1:  When using an external indicator or check meter, the internal 
+      resistance must be 10Ω or less.
+*2:  Not available for FOUNDATION Fieldbus communication type. 
++–
++–
+●  Terminal Wiring 
+ (HART and FOUNDATION Fieldbus protocol types) 
+RTD cable connection
+Ground terminal
+1
+2
+2
+3
+2
+4
+SUPPLY 
+MODBUS
++–
+Power supply terminals
+Modbus communication (RS-485) terminals
+●  Terminal Wiring 
+ (Modbus protocol type) 
+Ground terminal
+1
+2
+4
+3
+●  Terminal Configuration
+1
+Terminal 
+2
+Terminal 
+3
+Terminal 
+4
+Terminal 
+Jan. 31, 2023-00
+
+--- página 17 ---
+17
+<<Contents>>  <<Index>>
+All Rights Reserved. Copyright © 2005, Yokogawa Electric Corporation
+GS 01C25R01-01EN
+● Wiring Example for Analog Output and Status/Pulse Output (for HART Protocol type)
+250Ω
+R 
++
+–
+B
+PULSE
+SUPPLY
+EJX910A Electrical Terminal
+Recorder or 
+other instrument 
+This supply voltage requires 
+a power sourse with a 
+maximum output current of 
+no less than E/R+25mA.
+Electric counter
+E(16.4 to 30V DC)
+Counting input
+Common
++
+B
+EJX910A Electrical Terminal
+250Ω
+24V DC
+PULSE
+SUPPLY
++
+–
+Distributor
+–
++
+–
+B
+PULSE
+SUPPLY
+R
+E
+EJX910A Electrical Terminal
+Use the Three-wire shielded cable.
+Use the Three-wire shielded cable.
+Electric counter
+*1
+*1
+*1
+*1
+*2
+*2
+*2
+*2
+*1:   To avoid the influence of external noise, use an electric counter which fits to the pulse frequency.
+*2:   Resistor is not necessary in case of an electric counter which can receive contact pulse signal directly.
+*3:   When using analog and pulse output simultaneously, the HART communication may be influenced by noise comparing analog output only. 
+ 
+Take countermeasure for noise shown above, e.g. use shield cable etc.
+Shielded Cable
+Shielded Cable
+PULSE
+SUPPLY +
+–
+B
+Mognetic 
+valve
+AC power supply
+External Power supply 
+30V DC, 120mA max
+(Contact Rating)
+EJX910A Electrical Terminal
+E
+250Ω
+R
++
+–
+B
+PULSE
+SUPPLY
+Counting input
+Common
+For the shielded cables in this 
+example of  flowmeter installation, 
+use two-wire separately shielded 
+cables.
+This supply voltage requires a power 
+sourse with a maximum output current 
+of no less than E/R+25mA.
+Recorder or 
+other instrument 
+Electric counter
+E(16.4 to 30V DC)
+Shielded Cable
+The supply voltage requires output 
+impedance no more than 1/1000 of R 
+(load resistance).
+EJX910A Electrical Terminal
+250Ω
+R
+E(10.5 to 30V DC) 
+Counting input
+Common
+24V DC
+PULSE
+SUPPLY
+For the shielded cables in this example of 
+flowmeter installation, use two-wire separately 
+shielded cables.
+This supply voltage requires a power sourse 
+with a maximum output current of no less than 
+E/R.
+Distributor (or communication medium : ex. EP card)
+(or communication medium : ex. EP card)
+Electric counter
++
+–
+B
+Shielded Cable
+EJX910A Electrical Terminal
+When analog and pulse output are used, the length of communication line is subjected to wiring conditions. Refer to 
+example 1 to 3. 
+Relay
+*1:  Either B or +
+*1
+*1:  Either B or +
+*1
+*1:  Either B or +
+*1:  Either B or +
+*1:  Either B or +
+*1:  Either B or +
+*1
+*1
+*1
+*1
+Analog Output
+Pulse Output
+Status Output
+Simultaneous 
+Analog
+-Pulse Output *3
+Description
+Connection
+F08E.ai
+0.1
+ C ( µF ) × f ( kHz ) 
+≤ R (kΩ) ≤
+120
+E (V)
+The load resistance of pulse output should be used to 1kΩ, 2W.
+If no translation of the pulse output possible by the cable length or the frequency of the pluse output,
+the load resistance should be selected by calculation as shown  below.
+Example of CEV cable capacitance
+    0.1µF/km
+Where
+E = Supply voltage (V)
+ f = Frequency of pulse output (kHz)
+R = Value of load resistance (kΩ)
+C = Cable capacitance (µF) 
+P = Power ratio of the load resistance 
+       (mW)
+P (mW) =
+R (kΩ)
+E
+2 (V)
+Example 3
+In this case, No communi
+-cation is possible (when 
+shielded cable is not used).
+The range of load 
+resistance R for 
+the pulse output.
+Example 1
+In this case, Communica
+-tion is possible(up to a
+distance of 2km when a
+CEV cable is used).
+Example 2
+In this case,  Communica
+-tion is possible (up to a
+distance of 200m when a 
+CEV cable is used) and R 
+= 1kΩ).
+In this case, 
+Communication is 
+possible (up to a distance 
+of 2km when a CEV cable 
+is used.)
+In this case, 
+No communication is 
+possible.
+In this case, 
+No communication is 
+possible.
+Feb. 28, 2014-00
+
+--- página 18 ---
+18
+All Rights Reserved. Copyright © 2005, Yokogawa Electric Corporation
+<<Contents>>  <<Index>>
+GS 01C25R01-01EN
+< Ordering Information for HART protocol type >
+Specify the following when ordering.
+1. Model, suffix codes, and option codes
+2.	 Calibration range and units
+1) Calibration range can be specified with range value specifications up to 5 digits (excluding any decimal point) 
+for low or high range limits within the range of –32000 to 32000.
+ 
+When reverse range is designated, specify Lower Range Value (LRV) as greater than Upper Range Value 
+(URV).
+2) Specify unit from the tables “Calibration Units for HART protocol type”
+3. Static pressure is selected from gauge pressure or absolute pressure.
+4. TAG NO (if required)
+ 
+Specified characters (up to 22 characters, or 16 characters when /N4 is specified) are engraved on the stainless 
+steel tag plate fixed on the terminal box.
+5. SOFTWARE TAG (if required)
+ 
+Specified characters*1 are set as “Tag” (the first 8 characters) and “Long tag”*2 (32 characters) in the amplifier 
+memory.
+ 
+When the “SOFTWARE TAG” is not specified, specified “TAG NO” is set as “Tag” (the first 8 characters) and “Long 
+tag”*2 (22 characters) in the amplifier memory.
+*1: 
+Output signal code “E” (HART 5): up to 8 characters are specified 
+ 
+Output signal code “J” (HART 5/HART 7): up to 32 characters are specified
+*2: 
+Applicable only for HART 7
+6. Other factory configurations (if required) 
+ 
+Specifying option code CA will allow further configuration at factory.
+ 
+Following are configurable items and setting range.
+1) Descriptor (up to 16 characters)
+2) Message (up to 30 characters)
+3) Software damping in second (0.00 to 100.00)
+7. When the output signal code is “J”, specify the HART protocol revision “5” or “7”.
+Table 11. Factory Setting for HART protocol type
+Parameter
+Default value
+Description
+Tag number
+─
+As specified in order
+Flow unit
+kg/h
+Valid when Measurement Function Code B is specified.
+Standard flow configuration
+Fluid: N2
+Primary element type: ISO5167-1 1991 Orifice Corner Taps
+Upstream internal pipe diameter = 0.0527 m (Carbon Steel)
+Diameter of primary device = 0.03162 m (SUS304)
+Operating Pressure range = 0.1 to 1 MPa abs
+Operating Temperature range = 0 to 50°C
+Flow LRV
+0
+Flow URV
+1000
+Flow Damping *1
+0.00 s
+DP unit
+kPa
+Selectable from Table 13. Pressure Unit
+DP LRV
+0
+As specified in order
+DP URV
+Max.span
+DP Damping *1
+2.00 s
+As specified in order
+SP A/G Selection
+Absolute
+As specified in order
+SP unit
+MPa
+Selectable from Table 14. Static Pressure Unit
+SP LRV
+0
+As specified in order
+SP URV
+16
+SP Damping *1
+1.00 s
+As specified in order
+ET unit
+°C
+Selectable from Table 15. Temperature Unit
+ET LRV
+–200
+As specified in order
+ET URV
+850
+ET Damping *1
+1.00 s
+As specified in order
+Fixed Temperature
+20°C (68°F)
+When External Temperature Input Code 0 is specified.
+Output signal
+DP
+When Measurement Function Code A is specified.
+Flow
+When Measurement Function Code B is specified.
+Display setting
+DP and unit
+When Measurement Function Code A is specified.
+Flow and unit
+When Measurement Function Code B is specified.
+*1: 
+To specify these items at factory, option code CA is required.
+Mar. 11, 2019-00
+
+--- página 19 ---
+19
+<<Contents>>  <<Index>>
+All Rights Reserved. Copyright © 2005, Yokogawa Electric Corporation
+GS 01C25R01-01EN
+Calibration Units fot HART protocol type
+Table 12-1. Mass Flow Unit
+Unit
+LCD
+Communication
+grams per second
+g/s
+←
+grams per minute
+g/m
+g/min
+grams per hour
+g/h
+←
+kilograms per second
+kg/s
+←
+kilograms per minute
+kg/m
+kg/min
+kilograms per hour
+kg/h
+←
+kilograms per day
+kg/d
+←
+metric tons per minute
+t/m
+t/min
+metric tons per hour
+t/h
+←
+metric tons per day
+t/d
+←
+pounds per second
+lb/s
+←
+pounds per minute
+lb/m
+lb/min
+pounds per hour
+lb/h
+←
+pounds per day
+lb/d
+←
+short tons per minute
+STon/m
+STon/min
+short tons per hour
+STon/h
+←
+short tons per day
+STon/d
+←
+long tons per hour
+LTon/h
+←
+long tons per day
+LTon/d
+←
+Table 12-2. Normal•Standard Volume Flow Unit
+Unit
+LCD
+Communication
+normal cubic meter per hour
+Nm3/h
+←
+normal liter per hour
+NL/h
+←
+standard cubic feet per minute
+SCFM
+←
+standard liter per hour
+SL/h
+←
+standard liter per minute
+SL/m
+SL/min
+standard liter per second
+SL/s
+←
+normal cubic meter per day
+Nm3/d
+←
+standard cubic feet per day
+SCFD
+←
+standard cubic feet per hour
+SCFH
+←
+standard cubic feet per second
+SCFS
+←
+standard cubic meter per day
+Sm3/d
+←
+standard cubic meter per hour
+Sm3/h
+←
+thousand standard cubic feet 
+per day
+MSCFD
+←
+million standard cubic feet per 
+day
+MMSCFD
+←
+Table 12-3. Volume Flow Unit
+Unit
+LCD
+Communication
+cubic feet per minute
+CFM
+←
+gallons per minute
+GPM
+←
+liters per minute
+L/m
+L/min
+imperial gallons per minute
+IGal/m
+Impgal/min
+cubic meter per hour
+M3/h
+←
+gallons per second
+gal/s
+←
+million gallons per day
+Mgal/d
+←
+liters per second
+L/s
+←
+million liters per day
+ML/d
+←
+cubic feet per second
+CFS
+←
+cubic feet per day
+ft3/d
+←
+cubic meters per second
+M3/s
+←
+cubic meters per day
+M3/d
+←
+imperial gallons per hour
+IGal/h
+Impgal/h
+imperial gallons per day
+IGal/d
+Impgal/d
+cubic feet per hour
+CFH
+←
+cubic meters per minute
+m3/m
+m3/min
+barrels per second
+bbl/s
+←
+barrels per minute
+bbl/m
+bbl/min
+barrels per hour
+bbl/h
+←
+barrels per day
+bbl/d
+←
+gallons per hour
+gal/h
+←
+imperial gallons per second
+IGal/s
+Impgal/s
+liters per hour
+L/h
+←
+gallons per day
+gal/d
+←
+Sep. 30, 2013-00
+
+--- página 20 ---
+20
+All Rights Reserved. Copyright © 2005, Yokogawa Electric Corporation
+<<Contents>>  <<Index>>
+GS 01C25R01-01EN
+Table 13. Pressure Unit
+Unit
+LCD
+Communication
+mmH2O@4C
+mmH2O
+←
+mmH2O@68F
+mmH2O
+←
+mmHg
+mmHg
+←
+Torr
+Torr
+←
+MPa
+MPa
+←
+kPa
+kPa
+←
+Pa
+Pa
+←
+mbar
+mbar
+←
+bar
+bar
+←
+gf/cm2
+gf/cm2
+←
+kgf/cm2
+kgf/cm2
+←
+inH2O@4C
+inH2O
+←
+inH2O@68F
+inH2O
+←
+inHg
+inHg
+←
+ftH2O@4C
+ftH2O
+←
+psi
+psi
+←
+atm
+atm
+←
+ftH2O@68F
+ftH2O
+←
+hPa
+hPa
+←
+Table 14. Static Pressure Unit
+Unit
+LCD/
+Communication
+When abs is selected
+LCD
+Communication
+mmH2O@4C
+mmH2O
+mmH2OA
+mmH2O
+mmH2O@68F mmH2O
+mmH2OA
+mmH2O
+mmHg@0C
+mmHg
+mmHgA
+mmHg
+Torr
+Torr
+TorrA
+Torr
+MPa
+MPa
+MPaA
+MPa
+kPa
+kPa
+kPaA
+kPa
+Pa
+Pa
+PaA
+Pa
+mbar
+mbar
+mbarA
+mbar
+bar
+bar
+barA
+bar
+gf/cm2
+gf/cm2
+g/cm2A
+g/cm2
+kgf/cm2
+kgf/cm2
+kg/cm2A
+kg/cm2
+inH2O@4C
+inH2O
+inH2OA
+inH2O
+inH2O@68F
+inH2O
+inH2OA
+inH2O
+inHg@0C
+inHg
+inHgA
+inHg
+ftH2O@4C
+ftH2O
+ftH2OA
+ftH2O
+psi
+psi
+psiA
+psi
+atm
+atm
+atmA
+atm
+ftH2O@68F
+ftH2O
+ftH2OA
+ftH2O
+hPa
+hPa
+hPaA
+hPa
+Table 15. Temperature Unit
+Unit
+LCD/Communication
+°C
+deg C
+°F
+deg F
+K
+K
+Table 16. Total Flow Unit
+Unit
+LCD/Communication
+grams
+g
+kilograms
+kg
+metric tons
+t
+pounds
+lb
+short tons
+STon
+long tons
+LTon
+ounce
+oz
+gallons
+gal
+liters
+L
+imperial gallons
+Impgal
+cubic meters
+m3
+barrels
+bbl
+cubic yards
+yd3
+cubic feet
+ft3
+cubic inches
+in3
+normal cubic meter
+Nm3
+normal liter
+NL
+standard cubic feet
+SCF
+Oct. 31, 2022-00
+
+--- página 21 ---
+21
+<<Contents>>  <<Index>>
+All Rights Reserved. Copyright © 2005, Yokogawa Electric Corporation
+GS 01C25R01-01EN
+< Ordering Information for FOUNDATION Fieldbus protocol type >
+Specify the following when ordering.
+1. Model, suffix codes, and option codes
+2. Calibration range and units for Differential pressure, Static pressure and external temperature
+1) Calibration range can be specified with range value specifications up to 5 digits (excluding any decimal point) 
+for low or high range limits within the range of –32000 to 32000. When reverse range is designated, specify 
+Lower Range Value (LRV) as greater than Upper Range Value (URV).
+2) Specify unit. See Table 17 for settable unit at factory.
+3. Static pressure is selected from gauge pressure or absolute pressure.
+4. Tag Number (if required)
+ 
+Specify software tag (PD_TAG) up to 32 characters to be written on the amplifier memory and Tag number up to 
+22 characters (or 16 characters when /N4 is specified) to be engraved on the tag plate separately.
+5. Output mode (AI1 L_TYPE) ;
+ 
+Select one from ‘Direct’, ‘indirect Linear’ or ‘indirect SQRT’ for output mode of AI1(Differential pressure).
+6. Output scale and unit (AI1 OUT_SCALE);
+ 
+This setting is used for Indicator and output of AI1 block for Differential pressure. The scale range can be specified 
+with range limit specifications up to 5 digit (excluding any decimal point) for low and high range limits within the 
+range of –32000 to 32000. When AI1 L_TYPE is Direct, these setting does not affect the output of AI1 block.
+7. Specify Node address in hexadecimal.
+8. Select ‘BASIC’ or ‘LINK MASTER’ for Operation Functional Class.
+9. Other factory configurations (if required) 
+ 
+Specifying option code CC will allow further configuration at factory.
+ 
+Following is configurable item and setting range:
+ 
+Software damping in second (0.00 to 100.00)
+Table 17. Factory Setting for FOUNDATION Fieldbus protocol type
+Parameter
+Default value
+Description
+Tag number
+─
+As specified in order
+Software Tag (PD_TAG)
+FT1001
+As specified in order
+Flow unit (XD_SCALE of AI4)
+kg/h
+Valid when Measurement Function Code B is specified.
+Standard flow configuration
+Fluid: N2
+Primary element type: ISO5167-1 1991 Orifice Corner Taps
+Upstream internal pipe diameter = 0.0527 m (Carbon Steel)
+Diameter of primary device = 0.03162 m (SUS304)
+Operating Pressure range = 0.1 to 1 MPa abs
+Operating Temperature range = 0 to 50°C
+Flow LRV (XD_SCALE of AI4)
+0
+Flow URV (XD_SCALE of AI4)
+1000
+Flow Damping *1
+0.00 s
+DP unit (XD_SCALE of AI1)
+kPa
+Selectable from kPa, MPa, Pa, hPa, mbar, bar, gf/cm2, kgf/cm2, 
+mmH2O, mmH2O(68°F), inH2O, inH2O(68°F), ftH2O, 
+ftH2O(68°F), mmAq, mmWG, mmHg or psi.
+DP LRV (XD_SCALE of AI1)
+0
+As specified in order
+DP URV (XD_SCALE of AI1)
+Max.span
+DP Damping *1
+2.00 s
+As specified in order
+SP A/G selection
+Absolute
+Absolute or gauge, as specified in order
+SP unit (XD_SCALE of AI2)
+MPa
+See Description for ‘DP unit (XD_SCALE of AI1).’
+SP LRV (XD_SCALE of AI2)
+0
+As specified in order
+SP URV (XD_SCALE of AI2)
+16
+SP Damping *1
+1.00 s
+As specified in order
+ET unit (XD_SCALE of AI3)
+°C
+Selectable from °C,°F or K
+ET LRV (XD_SCALE of AI3)
+–200
+As specified in order
+ET URV (XD_SCALE of AI3)
+850
+ET Damping *1
+1.00 s
+As specified in order
+Fixed Temperature
+20°C (68°F)
+When External Temperature Input Code 0 is specified.
+Output signal
+DP, SP, ET
+When Measurement Function Code A is specified.
+Flow, DP, SP, ET
+When Measurement Function Code B is specified.
+Display setting
+DP and unit
+When Measurement Function Code A is specified.
+Flow and unit
+When Measurement Function Code B is specified.
+Node Address
+‘0xF5’
+As specified in order
+Operation Functional Class
+‘BASIC’
+As specified in order
+*1: 
+To specify these items at factory, option code CC is required.
+Oct. 31, 2022-00
+
+--- página 22 ---
+22
+All Rights Reserved. Copyright © 2005, Yokogawa Electric Corporation
+<<Contents>>  <<Index>>
+GS 01C25R01-01EN
+Calibration Units for FOUNDATION Fieldbus protocol 
+type
+Table 18. Temperature Unit
+INDEX
+UNIT
+LCD
+1000
+K
+Kelvin
+1001
+°C
+deg C
+1002
+°F
+deg F
+Table 19-1.  Pressure unit (1)
+INDEX
+UNIT
+LCD
+1130
+Pa
+Pa
+1131
+GPa
+GPa
+1132
+MPa
+MPa
+1133
+kPa
+kPa
+1134
+mPa
+mPa
+1135
+μPa
+uPa
+1136
+hPa
+hPa
+1137
+bar
+bar
+1138
+mbar
+mbar
+1139
+torr
+torr
+1140
+atm
+atm
+1141
+psi
+psi
+1142
+psia
+psia
+1143
+psig
+psig
+1144
+g/cm2
+g/cm2
+1145
+kg/cm2
+kg/cm2
+1146
+inH2O
+inH2O
+1147
+inH2O(4°C)
+inH2O
+1148
+inH2O(68°F)
+inH2O
+1149
+mmH2O
+mmH2O
+1150
+mmH2O(4°C)
+mmH2O
+1151
+mmH2O(68°F)
+mmH2O
+1152
+ftH2O
+ftH2O
+1153
+ftH2O(4°C)
+ftH2O
+1154
+ftH2O(68°F)
+ftH2O
+1155
+inHg
+inHg
+1156
+inHg(0°C)
+inHg
+1157
+mmHg
+mmHg
+1158
+mmHg(0°C)
+mmHg
+Table 19-2.  Pressure unit (2)
+INDEX
+UNIT
+LCD
+1541
+Paa
+Paa
+1542
+Pag
+Pag
+1543
+GPaa
+GPaa
+1544
+GPag
+GPag
+1545
+MPaa
+MPaa
+1546
+MPag
+MPag
+1547
+kPaa
+kPaa
+1548
+kPag
+kPag
+1549
+mPaa
+mPaa
+1550
+mPag
+mPag
+1551
+μPaa
+uPaa
+1552
+μPag
+uPag
+1553
+hPaa
+hPaa
+1554
+hPag
+hPag
+1555
+g/cm2a
+g/cm2a
+1556
+g/cm2g
+g/cm2g
+1557
+kg/cm2a
+kg/cm2a
+1558
+kg/cm2g
+kg/cm2g
+1559
+inH2Oa
+inH2Oa
+1560
+inH2Og
+inH2Og
+1561
+inH2Oa(4°C)
+inH2Oa
+1562
+inH2Og(4°C)
+inH2Og
+1563
+inH2Oa(68°F)
+inH2Oa
+1564
+inH2Og(68°F)
+inH2Og
+1565
+mmH2Oa
+mmH2Oa
+1566
+mmH2Og
+mmH2Og
+1567
+mmH2Oa(4°C)
+mmH2Oa
+1568
+mmH2Og(4°C)
+mmH2Og
+1569
+mmH2Oa(68°F)
+mmH2Oa
+1570
+mmH2Og(68°F)
+mmH2Og
+1571
+ftH2Oa
+ftH2Oa
+1572
+ftH2Og
+ftH2Og
+1573
+ftH2Oa(4°C)
+ftH2Oa
+1574
+ftH2Og(4°C)
+ftH2Og
+1575
+ftH2Oa(68°F)
+ftH2Oa
+1576
+ftH2Og(68°F)
+ftH2Og
+1577
+inHga
+inHga
+1578
+inHgg
+inHgg
+1579
+inHga(0°C)
+inHga
+1580
+inHgg(0°C)
+inHgg
+1581
+mmHga
+mmHga
+1582
+mmHgg
+mmHgg
+1583
+mmHga(0°C)
+mmHga
+1584
+mmHgg(0°C)
+mmHgg
+1590
+Barg
+Barg
+1591
+mBarg
+mBarg
+1597
+Bara
+Bara
+Sep. 30, 2013-00
+
+--- página 23 ---
+23
+<<Contents>>  <<Index>>
+All Rights Reserved. Copyright © 2005, Yokogawa Electric Corporation
+GS 01C25R01-01EN
+Sep. 30, 2013-00
+Table 20-1. Mass Flow Unit
+INDEX
+UNIT
+LCD
+1318
+g/s
+g/s
+1319
+g/min
+g/m
+1320
+g/h
+g/h
+1322
+kg/s
+kg/s
+1323
+kg/min
+kg/m
+1324
+kg/h
+kg/h
+1325
+kg/d
+kg/d
+1327
+t/min
+t/m
+1328
+t/h
+t/h
+1329
+t/d
+t/d
+1330
+lb/s
+lb/s
+1331
+lb/min
+lb/m
+1332
+lb/h
+lb/h
+1333
+lb/d
+lb/d
+1335
+STon/min
+STon/m
+1336
+STon/h
+STon/h
+1337
+STon/d
+STon/d
+1340
+LTon/h
+LTon/h
+1341
+LTon/d
+LTon/d
+Table 20-2. Normal•Standard Volume Flow Unit
+INDEX
+UNIT
+LCD
+1360
+SCFM
+SCFM
+1361
+SCFH
+SCFH
+1524
+Nm3/h
+Nm3/h
+1525
+Nm3/d
+Nm3/d
+1529
+Sm3h
+Sm3/h
+1530
+Sm3/d
+Sm3/d
+1534
+NL/h
+NL/h
+1537
+SL/s
+SL/s
+1538
+SL/h
+SL/h
+1539
+SL/m
+SL/m
+1598
+MSCFD
+MSCFD
+1599
+MMSCFD
+MMSCFD
+65520
+SCFS
+SCFS
+65521
+SCFD
+SCFD
+Table 20-3. Volume Flow Unit
+INDEX
+UNIT
+LCD
+1347
+m3/s
+m3/s
+1348
+m3/min
+m3/m
+1349
+m3/h
+m3/h
+1350
+m3/d
+m3/d
+1351
+L/s
+L/s
+1352
+L/min
+L/m
+1353
+L/h
+L/h
+1355
+ML/d
+ML/d
+1356
+CFS
+CFS
+1357
+CFM
+CFM
+1358
+CFH
+CFH
+1359
+ft3/d
+ft3/d
+1362
+gal/s
+gal/s
+1363
+GPM
+GPM
+1364
+gal/h
+gal/h
+1365
+gal/d
+gal/d
+1366
+Mgal/d
+Mgal/d
+1367
+ImpGal/s
+IGal/s
+1368
+ImpGal/min
+IGal/m
+1369
+ImpGal/h
+IGal/h
+1370
+ImpGal/d
+IGal/d
+1371
+bbl/s
+bbl/s
+1372
+bbl/min
+bbl/m
+1373
+bbl/h
+bbl/h
+1374
+bbl/d
+bbl/d
+
+--- página 24 ---
+24
+All Rights Reserved. Copyright © 2005, Yokogawa Electric Corporation
+<<Contents>>  <<Index>>
+GS 01C25R01-01EN
+< Ordering Information for Modbus protocol type >
+Specify the following when ordering.
+1. Model, suffix codes, and option codes
+2.	 Calibration range and units
+1) Calibration range can be specified with range value specifications up to 5 digits (excluding any decimal point) 
+for low or high range limits within the range of –32000 to 32000.
+ 
+When reverse range is designated, specify Lower Range Value (LRV) as greater than Upper Range Value 
+(URV).
+2) Specify unit from the tables “Calibration Units for Modbus protocol type”
+3. Static pressure is selected from gauge pressure or absolute pressure.
+4. TAG NO (if required)
+ 
+Specified characters (up to 22 characters, or 16 characters when /N4 is specified) are engraved on the stainless 
+steel tag plate fixed on the terminal box.
+5. SOFTWARE TAG (if required)
+ 
+Specified characters (up to 32 characters) are set as “Tag” (the first 8 characters) and “Long tag” (32 characters) in 
+the amplifier memory.
+ 
+When the “SOFTWARE TAG” is not specified, specified “TAG NO” is set as “Tag” (the first 8 characters) and “Long 
+tag” (22 characters) in the amplifier memory.
+6. Other factory configurations (if required) 
+ 
+Specifying option code CE will allow further configuration at factory.
+ 
+Following are configurable items and setting range.
+1) Descriptor (up to 16 characters)
+2) Message (up to 30 characters)
+3) Software damping in second (0.00 to 100.00)
+Table 21. Factory Setting for Modbus protocol type
+Parameter
+Default value
+Description
+Tag number
+─
+As specified in order
+DP unit
+kPa
+Selectable from Table 22. Pressure Unit
+DP LRV
+0
+As specified in order
+DP URV
+Max.span
+DP Damping *1
+2.00 s
+As specified in order
+SP A/G Selection
+Absolute
+As specified in order
+SP unit
+MPa
+Selectable from Table 23. Static Pressure Unit
+SP LRV
+0
+As specified in order
+SP URV
+16
+SP Damping *1
+1.00 s
+As specified in order
+ET unit
+°C
+Selectable from Table 24. Temperature Unit
+ET LRV
+–200
+As specified in order
+ET URV
+850
+ET Damping *1
+1.00 s
+As specified in order
+Fixed Temperature
+20°C (68°F)
+When External Temperature Input Code 0 is specified.
+Display setting
+DP and unit
+*1: 
+To specify these items at factory, option code CE is required.
+Mar. 11, 2019-00
+
+--- página 25 ---
+25
+All Rights Reserved. Copyright © 2005, Yokogawa Electric Corporation
+<<Contents>>  <<Index>>
+GS 01C25R01-01EN
+Subject to change without notice.
+Calibration Units for Modbus protocol type
+Table 22. Pressure Unit
+Unit
+LCD
+Communication
+mmH2O@4C
+mmH2O
+←
+mmH2O@68F
+mmH2O
+←
+mmHg
+mmHg
+←
+Torr
+Torr
+←
+MPa
+MPa
+←
+kPa
+kPa
+←
+Pa
+Pa
+←
+mbar
+mbar
+←
+bar
+bar
+←
+gf/cm2
+gf/cm2
+←
+kgf/cm2
+kgf/cm2
+←
+inH2O@4C
+inH2O
+←
+inH2O@68F
+inH2O
+←
+inHg
+inHg
+←
+ftH2O@4C
+ftH2O
+←
+psi
+psi
+←
+atm
+atm
+←
+ftH2O@68F
+ftH2O
+←
+hPa
+hPa
+←
+Table 23. Static Pressure Unit
+Unit
+LCD/
+Communication
+When abs is selected
+LCD
+Communication
+mmH2O@4C
+mmH2O
+mmH2OA
+mmH2O
+mmH2O@68F mmH2O
+mmH2OA
+mmH2O
+mmHg@0C
+mmHg
+mmHgA
+mmHg
+Torr
+Torr
+TorrA
+Torr
+MPa
+MPa
+MPaA
+MPa
+kPa
+kPa
+kPaA
+kPa
+Pa
+Pa
+PaA
+Pa
+mbar
+mbar
+mbarA
+mbar
+bar
+bar
+barA
+bar
+gf/cm2
+gf/cm2
+g/cm2A
+g/cm2
+kgf/cm2
+kgf/cm2
+kg/cm2A
+kg/cm2
+inH2O@4C
+inH2O
+inH2OA
+inH2O
+inH2O@68F
+inH2O
+inH2OA
+inH2O
+inHg@0C
+inHg
+inHgA
+inHg
+ftH2O@4C
+ftH2O
+ftH2OA
+ftH2O
+psi
+psi
+psiA
+psi
+atm
+atm
+atmA
+atm
+ftH2O@68F
+ftH2O
+ftH2OA
+ftH2O
+hPa
+hPa
+hPaA
+hPa
+Table 24. Temperature Unit
+Unit
+LCD/Communication
+°C
+deg C
+°F
+deg F
+K
+K
+< Material Cross Reference >
+ASTM
+JIS
+316
+SUS316
+F316
+SUSF316
+316L
+SUS316L
+F316L
+SUSF316L
+304
+SUS304
+F304
+SUSF304
+660
+SUH660
+B7
+SNB7
+CF-8M
+SCS14A
+< Related Instruments>
+FSA120 Flow Configuration Software 
+(FlowNavigator): Refer to GS 01C25R51-01EN
+Power Distributor: Refer to GS 01B04T01-02E or 
+GS 01B04T02-02E
+< Trademarks >
+1.	
+, FieldMate and FlowNavigator are 
+registered trademarks of Yokogawa Electric 
+Corporation.
+2. Teflon; Trademark of E.I. DuPont de Nemours & 
+Co.
+3. Hastelloy; Trademark of Haynes International Inc.
+4. HART: Registered trademark of the FieldComm 
+Group.
+5. AGA; Trademark of American Gas Association.
+6.	FOUNDATION Fieldbus; Trademark of the 
+FieldComm Group.
+7. Modbus is a registered trademark of AEG 
+Schneider.
+Other company/organization and/or product names 
+are registered trade marks of their respective holders.
+< Information on EU WEEE Directive >
+EU WEEE (Waste Electrical and Electronic Equipment) 
+Directive is only valid in the EU.
+This instrument is intended to be sold and used only 
+as a part of equipment which is excluded from WEEE 
+Directive, such as large-scale stationary industrial 
+tools, a large-scale fixed installation and so on, and, 
+therefore, subjected to the exclusion from the scope 
+of the WEEE Directive. The instrument should be 
+disposed of in accordance with local and national 
+legislation/regulations.
+Oct. 31, 2022-00

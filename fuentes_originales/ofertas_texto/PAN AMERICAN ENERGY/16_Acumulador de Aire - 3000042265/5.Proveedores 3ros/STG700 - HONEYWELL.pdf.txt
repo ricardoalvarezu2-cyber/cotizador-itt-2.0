@@ -1,0 +1,2775 @@
+--- página 1 ---
+ 
+ 
+ 
+SmartLine 
+Technical Information 
+STG700 SmartLine Gauge Pressure 
+Specification 34-ST-03-102, Jan 2021 
+ 
+ 
+ 
+ 
+Introduction 
+Part of the SmartLine® family of products, the STG700 and 
+STG70L are suitable for monitoring, control and data 
+acquisition featuring piezoresistive sensor technology 
+combining pressure sensing with on chip temperature 
+compensation capabilities providing high accuracy, stability 
+and performance over a wide range of application pressures 
+and temperatures. The SmartLine family is also fully tested 
+and compliant with Experion®  PKS providing the highest level 
+of compatibility assurance and integration capabilities. 
+SmartLine easily meets the most demanding application 
+needs for pressure measurement applications. 
+Best in Class Features:  
+ 
+Accuracies up to 0.055% of span standard & 0.04% of 
+span optional 
+ 
+Stability up to 0.02% of URL per year for 10 years 
+ 
+Automatic temperature compensation 
+ 
+Rangeability up to 100:1 
+ 
+Response times as fast as 100ms  
+ 
+Alphanumeric display capabilities  
+ 
+External zero, span, & configuration capability 
+ 
+Polarity insensitive electrical connections 
+ 
+Comprehensive on-board diagnostic capabilities 
+ 
+Integral Dual Seal design for safety based on            
+ANSI/NFPA 70-202 and ANSI/ISA 12.27.0 
+ 
+Full compliance to SIL 2/3 requirements as a standard.  
+ 
+Modular design characteristics 
+ 
+Available additional with 4-year warranty 
+ 
+Span & Range Limits: 
+Model 
+URL      
+psi (bar) 
+LRL 
+psi (bar) 
+Min Span 
+STG730/STG73L 
+50 (3.5) 
+-14.7 (-1.0) 
+0.5 (0.035) 
+STG740/STG74L 
+500 (35) 
+-14.7 (-1.0) 
+5 (.35) 
+STG770/STG77L 
+3000 (210) 
+-14.7 (-1.0) 
+30 (2.1) 
+STG78L 
+6000 (420) 
+-14.7 (-1.0) 
+60 (4.2) 
+STG79L 
+10000  
+-14.7 (-1.0) 
+100 (6.9) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 1 – STG700 Gauge Pressure Transmitters 
+feature 
+        field-proven piezoresistive sensor 
+technology 
+ 
+Communications/Output Options: 
+ 
+Honeywell Digitally Enhanced (DE) 
+ 
+HART ® (version 7.0) 
+ 
+FOUNDATION™ Fieldbus 
+All transmitters are available with the above listed 
+communications protocols.    
+
+--- página 2 ---
+2  
+STG700 Smart Pressure Transmitter
+ 
+ 
+ 
+ 
+Description 
+The SmartLine family pressure transmitters are designed 
+around a high performance piezo-resistive sensor. This one 
+sensor actually integrates multiple sensors linking process 
+pressure measurement with on-board static pressure (DP 
+Models) and temperature compensation measurements. 
+This level of performance allows the ST 700 to replace most 
+competitive transmitters available today. 
+Indication/Display Option 
+The ST 700 modular design accommodates a basic 
+alphanumeric LCD display. 
+Basic Alphanumeric LCD Display Features 
+o Modular (may be added or removed in the field) 
+o 0, 90,180, & 270 degree position adjustments 
+o Configurable (HART only) and standard (Pa, KPa, MPa, 
+KGcm2, Torr, ATM, inH2O, mH2O, bar, mbar, inH2O, 
+inHG, FTH2O, mmH2O, mm HG, & psi) measurement units 
+o 2 Lines 16 Characters (4.13H x 1.83W mm) 
+o Square root output indication (√) 
+Simple LCD Display Features  
+o 
+Modular (may be added or removed in the field) 
+o 
+Supports HART protocol variant 
+o 
+0, 90,180, & 270 degree position adjustments 
+o 
+Configurable (HART only) and standard (Pa, KPa, 
+MPa, KGcm2, Torr, ATM, inH2O, mH2O, bar, mbar, 
+inH2O, inHG, FTH2O, mmH2O, mm HG, & psi) 
+measurement units. 
+o 
+Supports Flow engineering units 
+o 
+2 Lines 6 digits PV (9.95H x 4.20W mm) 8 Characters 
+o 
+Square root output indication (√) and Write protect 
+Indication 
+o 
+Built in Basic Device Configuration through Internal 
+Buttons – Range/Engineering Unit/Loop Test /Loop 
+Calibration/Zero /Span Setting 
+Diagnostics 
+SmartLine transmitters all offer digitally accessible 
+diagnostics which aid in providing advanced warning of 
+possible failure events minimizing unplanned shutdowns, 
+providing lower overall operational costs 
+System Integration 
+o SmartLine communications protocols all meet the most 
+current published standards for HART/DE/Fieldbus. 
+o Integration with Honeywell’s Experion PKS offers the 
+following unique advantages. 
+o Tamper reporting 
+o FDM Plant Area Views with Health summaries 
+o All ST 700 units are Experion tested to provide the 
+highest level of compatibility assurance 
+Configuration Tools 
+External Three Button Configuration Option 
+Suitable for all electrical and environmental requirements, 
+SmartLine offers the ability to configure the transmitter and 
+display via three externally accessible buttons when a 
+display option is selected. Zero/span capabilities are also 
+optionally available via these buttons with or without 
+selection of the display option. 
+Internal Two Button Configuration Option 
+The Simple display has two buttons that can be used for 
+Basic configuration such as re ranging, PV Engineering unit 
+setting, Zero/Span settings and Loop testing and calibration 
+functions. 
+Hand Held Configuration 
+SmartLine transmitters feature two-way communication and 
+configuration capability between the operator and the 
+transmitter. All Honeywell transmitters are designed and 
+tested for compliance with the offered communication 
+protocols and are designed to operate with any Standards 
+compliant handheld configuration device. 
+Personal Computer Configuration 
+Honeywell’s SCT 3000 Configuration Toolkit provides an 
+easy way to configure Digitally Enhanced (DE) instruments 
+using a personal computer as the configuration interface.  
+Field Device Manager (FDM) Software and FDM Express 
+are also available for managing HART & Fieldbus device 
+configurations. 
+Modular Design 
+To help contain maintenance & inventory costs, all ST 700 
+transmitters are modular in design supporting the user’s 
+ability to replace meter bodies, add indicators or change 
+electronic modules without affecting overall performance or 
+approval body certifications. Each meter body is uniquely 
+characterized to provide in-tolerance performance over a wide 
+range of application variations in temperature and pressure 
+and due to the Honeywell advanced interface, electronic 
+modules may be swapped with any electronics module 
+without losing in-tolerance performance characteristics. 
+Modular Features 
+o 
+Meter body replacement 
+o 
+Exchange/replace electronics/comms modules* 
+o 
+Add or remove integral indicator* 
+o 
+Add or remove lightning protection (terminal connection)* 
+* Field replaceable in all electrical environments (including 
+IS) except flameproof without violating agency approvals. 
+With no performance effects, Honeywell’s unique 
+modularity results in lower inventory needs and lower 
+overall operating costs. 
+ 
+
+--- página 3 ---
+STG700 Smart Pressure Transmitter 
+3 
+ 
+ 
+ 
+ 
+ 
+ 
+Reference Accuracy: (conformance to +/-3 Sigma)  
+ 
+Table 1 
+ 
+Model 
+URL 
+LRL 
+Min Span 
+Maximum 
+Turndown 
+Ratio 
+Stability (% 
+URL/Year for 
+10 years) 
+Reference 
+Accuracy1,2 
+(% Span) 
+Standard/ 
+option 
+    Standard Accuracy 
+STG730 
+50 psi (3.5 bar) 
+-14.7 psi (-1.0 bar) 
+0.5 psi (.035 bar) 
+100:1 
+0.02 
+0.055 / 
+0.040 
+STG73L 
+50 psi (3.5 bar) 
+-14.7 psi (-1.0 bar) 
+0.5 psi (.035 bar) 
+STG740 
+500 psi (35 bar) 
+-14.7 psi (-1.0 bar) 
+5 psi (.35 bar) 
+STG74L 
+500 psi (35 bar) 
+-14.7 psi (-1.0 bar) 
+5 psi (.35 bar) 
+0.015 
+STG770 
+3000 psi (210 bar) 
+-14.7 psi (-1.0 bar) 
+30 psi (2.1 bar) 
+0.02 
+STG77L 
+3000 psi (210 bar) 
+-14.7 psi (-1.0 bar) 
+30 psi (2.1 bar) 
+STG78L 
+6000 psi (420 bar) 
+-14.7 psi (-1.0 bar) 
+60 psi (4.2 bar) 
+STG79L 
+10000 psi (690 bar) -14.7 psi (-1.0 bar) 
+100 (6.9 bar) 
+Zero and span may be set anywhere within the listed (URL/LRL) range limits 
+ 
+ 
+Accuracy, Span and Temperature Effect: (Conformance to +/-3 Sigma) 
+ 
+Table 2 
+ 
+ 
+ 
+Accuracy1,2 
+(% of Span) 
+Combined Zero & Span 
+temperature Effect  
+(% Span / 28oC (50oF)) 
+ 
+Model 
+URL 
+Reference 
+Turndown   
+A 
+B 
+C  
+(see URL units) 
+D 
+E 
+Standard Accuracy 
+STG730 
+50 psi (3.5 bar) 
+25:1 
+0.005 
+0.050 
+2 (0.14) 
+0.060 
+0.005 
+STG73L 
+50 psi (3.5 bar) 
+12.5:1 
+4 (60.28) 
+0.050 
+ 
+0.010 
+STG740 
+500 psi (35 bar) 
+35:1 
+14.5 (1.0) 
+0.007 
+STG74L 
+500 psi (35 bar) 
+35:1 
+14.5 (1.0) 
+0.010 
+STG770 
+3000 psi (210 bar) 
+10:1 
+300 (21) 
+0.010 
+STG77L 
+3000 psi (210 bar) 
+8.5:1 
+350 (24.7) 
+0.015 
+STG78L 
+6000 psi (420 bar) 
+12:1 
+500 (35) 
+0.050 
+STG79L 
+10000 psi (690 bar) 
+10:1 
+0.025 
+0.040 
+1000 (69) 
+0.150 
+0.100 
+High Accuracy 
+Option 
+STG730 
+50 psi (3.5 bar) 
+25:1 
+0.005 
+0.035 
+2 (0.14) 
+0.060 
+0.005 
+STG73L 
+50 psi (3.5 bar) 
+12.5:1 
+4 (60.28) 
+0.010 
+STG740 
+500 psi (35 bar) 
+35:1 
+14.5 (1.0) 
+0.050 
+0.007 
+STG74L 
+500 psi (35 bar) 
+35:1 
+14.5 (1.0) 
+0.010 
+STG770 
+3000 psi (210 bar) 
+10:1 
+300 (21) 
+0.010 
+STG77L 
+3000 psi (210 bar) 
+8.5:1 
+350 (24.7) 
+0.015 
+STG78L 
+6000 psi (420 bar) 
+12:1 
+500 (35) 
+0.050 
+ 
+ 
+ 
+Turn Down Effect 
+Temp Effect 
+ 
+ 
+ 
+±[ 𝐴+ 𝐵 ]    𝑖𝑓 𝑆𝑝𝑎𝑛≥𝐶 
+± [ 𝐴+ 𝐵 ( 𝐶
+𝑆𝑝𝑎𝑛)]    𝑖𝑓 𝑆𝑝𝑎𝑛< 𝐶 
+± [ 𝐷+ 𝐸 ( 𝑈𝑅𝐿
+𝑆𝑝𝑎𝑛)] 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Performance Specifications 
+
+--- página 4 ---
+4  
+STG700 Smart Pressure Transmitter
+ 
+ 
+ 
+ 
+ 
+Total Performance (% of Span): 
+ 
+        Total Performance Calculation:   = +/- √ (Accuracy)2 + (Temperature Effect)2 
+        Total Performance Examples (for comparison): standard accuracy 5:1 Turndown, +/-50 oF (28oC) shift 
+                       STG730 @ 100 psi: 0.101% of span                   STG73L @ 100 psi: 0.123% of span 
+            STG740 @ 100 psi: 0.101% of span                   STG74L @ 100 psi: 0.114% of span 
+                       STG770 @ 600 psi: 0.074% of span                   STG77L @ 600 psi: 0.137% of span 
+                       STG78L @ 1200 psi: 0.305% of span                 STG79L @ 2000 psi: 0.653% of span 
+ 
+Typical Calibration Frequency:  
+Calibration verification is recommended every two (2) years 
+Notes: 
+1. Terminal Based Accuracy - Includes combined effects of linearity, hysteresis, and repeatability. Analog output adds 0 .005% of span. 
+2. For zero based spans and reference conditions of:  25 oC (77oF) for LRV > = 0 psia, 10 to 55% RH, and 316 Stainless Steel barrier 
+diaphragm.  
+ 
+ 
+Operating Conditions – All Models 
+Parameter 
+Reference 
+Condition 
+Rated Condition 
+Operative Limits 
+Transportation and 
+Storage 
+ 
+C 
+F 
+C 
+F 
+C 
+F 
+C 
+F 
+Ambient Temperature1 
+25±1 
+77±2 
+-40 to 85 
+-40 to 185 
+-40 to 85 
+-40 to 185 -55 to 120 -67 to 248 
+Meter Body Temperature2 
+25±1 
+77±2 
+-40 to 110 
+-40 to 230 
+-40 to 125 
+-40 to 257 -55 to 120 -67 to 248 
+Humidity 
+%RH 
+10 to 55 
+0 to 100 
+0 to 100 
+0 to 100 
+Vac. Region – Min. Pressure 
+ 
+mmHg absolute 
+ 
+inH2O absolute 
+ 
+Atmospheric 
+Atmospheric 
+ 
+25 
+13 
+ 
+2 (short term ) 3 
+1 (short term ) 3 
+ 
+Supply Voltage  
+Load Resistance 
+10.8 to 42.4 Vdc at terminals 
+ 0 to 1,440 ohms (as shown in Figure 2) 
+Maximum Allowable 
+Working Pressure 
+(MAWP)4, 5 
+(ST700 products are rated to Maximum 
+Allowable Working Pressure.  MAWP 
+depends on Approval Agency and 
+transmitter materials of construction.) 
+STG730:  50 psi (3.5 bar)                  STG73L:  50 psi (3.5 bar) 
+STG740:  500 psi (35 bar)                 STG74L:  500 psi (35 bar) 
+STG770:  3000 psi (210 bar )            STG77L:  3000 psi (210 bar) 
+                                                           STG78L:  6000 psi (420 bar) 
+                                                           STG79L: 10000 psi (690 bar) 
+ 
+1 LCD Display operating temperature -20C to +70C  Storage temperature -30C to 80C. 
+2 Silicone 704 minimum temperature rating is 0oC (32oF).  CTFE minimum temperature rating is -30C (-22F). 
+NEOBEE® M-20 minimum temperature rating is -15oC (5oF). NEOBEE is a registered trademark of Stepan Company. 
+3 Short term equals 2 hours at 70C (158F). 
+4 Units can withstand overpressure of 1.5 x MAWP without damage. 
+5 Consult the factory for MAWP of ST 700 transmitters with CRN approval. 
+ 
+
+--- página 5 ---
+STG700 Smart Pressure Transmitter 
+5 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 2 - Supply voltage and loop resistance chart & calculations 
+ 
+ 
+Performance Under Rated Conditions – All Models 
+Parameter 
+Description 
+Analog Output  
+Digital Communications: 
+Two-wire, 4 to 20 mA (HART & DE Transmitters only)  
+ Honeywell DE, HART 7 protocol or FOUNDATION Fieldbus ITK 6.0.1 compliant 
+All transmitters, irrespective of protocol have polarity insensitive connection. 
+HART & DE Output Failure 
+Modes 
+(NAMUR for DE Units requires 
+selecting display and 
+configuration buttons or factory 
+configuration) 
+                                         Honeywell Standard:                            NAMUR NE 43 
+Compliance: 
+Normal Limits:                   3.8 – 20.8 mA                                                     3.8 – 20.5 
+mA 
+Failure Mode:                ≤ 3.6 mA and  ≥ 21.0 mA                                ≤ 3.6 mA and ≥ 
+21.0 mA 
+Supply Voltage Effect 
+0.005% span per volt.  
+Transmitter Turn on Time          
+(includes power up & test 
+algorithms) 
+ 
+HART or DE: 2.5 sec 
+Foundation Fieldbus: Host dependant 
+Response Time                    
+(delay + time constant)       
+    DE/HART Protocol                      FOUNDATION Fieldbus 
+            100ms                                     150ms (Host Dependant) 
+Damping Time Constant 
+HART: Adjustable from 0 to 32 seconds in 0.1 increments.   Default Value: 0.5 
+seconds 
+DE: Discrete values 0, 0.16, 0.32, 0.48, 1, 2, 4, 8, 16, 32 seconds.  Default Value: 
+0.48 seconds 
+Vibration Effect: 
+ 
+Less than +/- 0.1% of URL w/o damping 
+Per IEC60770-1 field or pipeline, high vibration level (10-2000Hz: 0.21 
+displacement/3g max acceleration) 
+Electromagnetic Compatibility  
+IEC 61326-3-1 
+Lightning Protection Option 
+   
+Leakage Current: 10uA max @ 42.4VDC 93C    
+Impulse rating: 
+                8/20uS            5000A (>10 strikes)         10000A (1 strike min.) 
+                10/1000uS      200A (> 300 strikes) 
+ 
+ 
+
+--- página 6 ---
+6  
+STG700 Smart Pressure Transmitter
+ 
+ 
+ 
+ 
+Materials Specifications (see model selection guide for availability/restrictions with various models) 
+Parameter 
+Description 
+Barrier Diaphragms Material 
+ 
+ 
+STG700: 316L SS, Hastelloy® C-2762, Monel® 400 3, Tantalum 
+STG70L: 316L SS, Hastelloy C-276 
+Process Head Material 
+ 
+STG700: Carbon Steel (Zinc Plated)5, 316 SS4, Hastelloy® C-2766, Monel® 400 7 
+STG70L: 316L SS, Hastelloy® C-2766 
+Vent/Drain Valves & Plugs 1 
+STG700:316 SS4, Hastelloy C-2762, Monel 400  7 
+STG70L: N/A 
+Head Gaskets 
+STG700: Glass-filled PTFE standard. Viton® and graphite are optional.  STG70L: N/A 
+Meter Body Bolting 
+STG700: Carbon Steel (Zinc plated) standard. Options include 316 SS, NACE A286 
+SS bolts and nuts or NACE A286 SS bolts and 304 SS nuts   STG70L: N/A 
+Mounting Bracket 
+Carbon Steel (Zinc-plated) or 304 Stainless Steel or  316 Stainless Steel. See Figure 3 
+and Figure 5 
+Fill Fluid 
+Silicone, CTFE, NEOBEE M-20, Silicone 704.   
+Electronic Housing 
+Pure Polyester Powder Coated Low Copper (<0.4%)-Aluminum. Meets NEMA 4X, 
+IP66, IP67 and NEMA 7 (explosion proof).  All stainless steel housing is optional. 
+Process Connections 
+STG700: ½ -inch NPT(female), DIN 19213 (standard) 
+STG70L: ½ -inch NPT(female), ½ -inch NPT male, 9/16 Aminco, DIN19213 (except 
+STG79L),  
+G½ -B Male Thread 
+Wiring  
+Accepts up to 16 AWG (1.5 mm diameter).  
+Dimensions 
+See Figure 4 and Figure 6 
+Net Weight 
+STG700: 8.3 pounds (3.8 Kg).  STG70L: 3.6 pounds (1.6 Kg) with Aluminum Housing 
+1  Vent/Drains are sealed with Teflon®  
+ 
+2  Hastelloy® C-276 or UNS N10276 
+3  Monel® 400 or UNS N04400                                            4  Supplied as 316 SS or as Grade CF8M,  the casting equivalent of 316 SS. 
+   5  Carbon Steel heads are zinc-plated and not recommended for water service due to hydrogen migration.  For that service, use 316 stainless steel wetted  
+     Process Heads. 
+6  Hastelloy® C-276 or UNS N10276.  Supplied as indicated or as Grade CW12MW, the casting equivalent of Hastelloy® C-276 
+   7  Monel® 400 or UNS N04400.  Supplied as indicated or as Grade M30C, the casting equivalent of Monel® 400 
+ 
+ 
+ 
+
+--- página 7 ---
+STG700 Smart Pressure Transmitter 
+7 
+ 
+ 
+ 
+ 
+Communications Protocols & Diagnostics
+HART Protocol 
+Version: 
+HART 7 
+Power Supply 
+Voltage: 10.8 to 42.4Vdc at terminals 
+Load: Maximum 1440 ohms See figure 2  
+Minimum Load: 0 ohms. (For handheld communications a 
+minimum load of 250 ohms is required) 
+Foundation Fieldbus (FF) 
+Power Supply Requirements 
+Voltage: 9.0 to 32.0Vdc at terminals 
+Steady State Current: 17.6mAdc 
+Software Download Current: 27.4mAdc 
+Available Function Blocks 
+Block Type 
+Qty 
+Execution Time 
+Resource  
+1 
+n/a 
+Transducer  
+1 
+n/a 
+Diagnostic 
+1 
+n/a 
+Analog Input 
+1* 
+30 ms 
+PID w/Autotune 
+1 
+45 ms 
+Integrator 
+1 
+30 ms 
+Signal Char (SC) 
+1 
+30 ms 
+LCD Display 
+1 
+n/a 
+Flow Block 
+1 
+30 ms 
+Input Selector 
+1 
+30 ms 
+Arithmetic 
+1 
+30 ms 
+* AI block may have two (2) additional instantiations. 
+All available function blocks adhere to FOUNDATION 
+Fieldbus standards.  PID blocks support ideal & robust PID 
+algorithms with full implementation of Auto-tuning. 
+Link Active Scheduler 
+Transmitters can perform as a backup Link Active 
+Scheduler and take over when the host is disconnected.  
+Acting as a LAS, the device ensures scheduled data 
+transfers typically used for the regular, cyclic transfer of 
+control loop data between devices on the Fieldbus. 
+Number of Devices/Segment 
+Entity IS model: 6 devices/segment 
+Schedule Entries 
+18 maximum schedule entries 
+Number of VCR’s: 24 max 
+Compliance Testing: Tested according to ITK 6.0.1 
+ 
+ 
+Software Download 
+Utilizes Class-3 of the Common Software Download 
+procedure as per FF-883 which allows the field devices of any 
+manufacturer to receive software upgrades from any host. 
+Honeywell Digitally Enhanced (DE) 
+DE is a Honeywell proprietary protocol which provides 
+digital communications between Honeywell DE enabled 
+field devices and Hosts. 
+Power Supply 
+Voltage: 10.8 to 42.4Vdc at terminals 
+Load: Maximum 1440 ohms See figure 2  
+Standard Diagnostics 
+ST 700 top level diagnostics are reported as either critical 
+or non-critical and readable via the DD/DTM tools or 
+integral display as shown 
+Critical Diagnostics 
+HART DD/DTM 
+Tools 
+Basic Display 
+Simple 
+Display 
+Electronic Module 
+DAC Failure 
+Electronics module fault Fault Comm El 
+Meter Body NVM 
+Corrupt 
+Meter Body fault 
+Fault  Mtrbody 
+Config. Data Corrupt Electronics module fault Fault Comm El 
+Electronic Module 
+Diag Failure 
+Electronics module fault Fault Comm El 
+Meter Body Critical 
+Failure 
+Meter Body fault 
+Fault  Mtrbody 
+Sensor Comms 
+Timeout 
+Meter Body Comm fault Fault Mbd Com  
+Non-Critical Diagnostics 
+HART DD/DTM Tools 
+Display Failure 
+Electronic Module  Comm Failure 
+Meter Body Excess Correct 
+Sensor Over Temperature 
+Fixed Current Mode 
+PV Out of Range 
+No Factory Calibration 
+No DAC Compensation 
+LRV Set Error – Zero Config. Button 
+URV Set Error – Zero Config. Button 
+AO Out of Range 
+Loop Current Noise 
+Meter Body Unreliable Comm 
+Tamper Alarm, 
+No DAC Calibration 
+Sensor Supply Voltage Low 
+
+--- página 8 ---
+8  
+          STG700 Smart Pressure Transmitter 
+ 
+ 
+ 
+Hazardous Areal Certifications: 
+MSG 
+CODE 
+AGENCY 
+TYPE OF PROTECTION 
+COMM. 
+OPTION 
+ELECTRICAL  
+PARAMETERS 
+AMBIENT TEMP 
+(Ta) 
+A 
+FM 
+ApprovalsTM 
+USA 
+Explosionproof:   
+Class I, Division 1, Groups A, B, C, D; 
+Dust Ignition Proof:  
+Class II, III, Division 1, Groups E, F, G; 
+T6..T5 
+Class l, Zone 0/1, AEx db IIC T6..T5 Ga/Gb 
+Class ll, Zone 21, AEx tb IIIC T95o Db 
+All 
+Note 1 
+T5: -50 ºC to 85ºC 
+T6: -50 ºC to 65ºC 
+Intrinsically Safe:  
+Class I, II, III, Division 1, Groups A, B, C, D, 
+E, F, G: T4 
+Class l, Zone 0, AEx ia IIC T4 Ga 
+FISCO Field Device (Only for FF Option) 
+Ex ia IIC T4 Ga; Ex ic IIC T4 Gc 
+4-20 mA /  
+DE/ HART 
+Note 2a 
+-50 ºC to 70ºC 
+Foundation 
+Fieldbus 
+Note 2b 
+-50 ºC to 70ºC 
+ 
+Nonincendive:  
+Class I, Division 2, Groups A, B, C, D 
+locations, T4 
+Class l, Zone 2, AEx nA IIC T4 Gc 
+4-20 mA /  
+DE/ HART/ 
+Foundation 
+Fieldbus 
+Note 1 
+-50 ºC to 85ºC 
+Enclosure:   Type 4X/ IP66/ IP67 
+All 
+All 
+- 
+STANDARDS:  FM Class 3600:2011; FM Class 3610: 2010; FM Class 3611: 2004; FM Class 
+3615: 2006; FM Class 3616: 2011; FM Class 3810: 2005; ANSI/ISA 60079-0: 2013; ANSI/UL 
+60079-1: 2015; ANSI/UL 60079-11: 2014; ANSI/ISA 60079-15: 2012; ANSI/UL 60079-26: 2017; 
+ANSI/UL 60079-31: 2015; ANSI/NEMA 250: 2003; ANSI/ IEC 60529: 2004 
+B 
+Canadian 
+Standards 
+Association 
+(CSA) 
+USA and 
+Canada 
+Explosion Proof:   
+Class I, Division 1, Groups A, B, C, D;  
+Class II, Division 1, Groups E, F, G; 
+Class III, Division 1, T6..T5 
+Class I Zone 1 AEx db IIC T6..T5 Ga/Gb 
+Ex db IIC T6..T5 Ga/Gb 
+Zone 22 AEx tb IIIC T95o Db 
+Ex tb IIIC T95o Db 
+All 
+Note 1 
+T5: -50oC TO 85oC 
+T6: -50oC TO 65oC 
+Intrinsically Safe:  
+Class I, II, III, Division 1, Groups A, B, C, D; 
+Class II, Division 1, Groups E, F, G;  
+Class III, Division 1, T4 
+Class I Zone 0, AEx ia IIC T4 Ga 
+Class I Zone 2, AEx ic IIC T4 Gc 
+Ex ia IIC T4 Ga 
+Ex ic IIC T4 Gc 
+FISCO Field Device (Only for FF Option) 
+Ex ia IIC T4 Ga;  
+Ex ic IIC T4 Gc 
+4-20 mA /  
+DE/ HART 
+Note 2 
+-50oC TO 70oC 
+Foundation 
+Fieldbus 
+Note 2 
+-50oC TO 70oC 
+ 
+Nonincendive:  
+Class I, Division 2, Groups A, B, C, D;  
+Class II, Division 2, Groups F, G;  
+Class III, Division 2, T4 
+Class I Zone 2 AEx nA IIC T4 Gc 
+Ex nA IIC T4 Gc  
+4-20 mA /  
+DE/ HART/ 
+Foundation 
+Fieldbus 
+Note 1 
+-50oC to 85oC 
+Enclosure:   Type 4X/ IP66/ IP67 
+All 
+All 
+- 
+
+--- página 9 ---
+STG700 Smart Pressure Transmitter 
+9 
+ 
+ 
+MSG 
+CODE 
+AGENCY 
+TYPE OF PROTECTION 
+COMM. 
+OPTION 
+ELECTRICAL  
+PARAMETERS 
+AMBIENT TEMP 
+(Ta) 
+STANDARDS: CSA C22.2 No. 0-10; CSA C22.2 No. 94-M91; CSA C22.2 No. 25-1966; CSA C22.2 
+No. 30-M1986; CSA C22.2 No. 142-M1987; CSA C22.2 No. 157-92; CSA C22.2 No. 213-M1987; 
+CSA-C22.2 No. 60529:05; CSA-C22.2 No. 60079-0:11; CSA-C22.2 No. 60079-1:11; CSA-C22.2 
+No. 60079-11:11; CSA-C22.2 No. 60079-15:12; CSA-C22.2 No. 60079-31:12; ISA 12.12.01-
+2010; ISA 60079-0: 2009; ISA 60079-11: 2011; ISA 60079-15: 2009; ISA 60079-26: 2008; ISA-
+60079-27:2007 (12.02.04)-2006 (R2011); UL 913 Ed. 6; UL 916:1998; ANSI/ISA-12.27.01-2011 
+C 
+ATEX 
+Flameproof: SIRA 12ATEX2233X 
+II 1/2 G Ex db IIC T6..T5 Ga/Gb 
+II 2 D Ex tb IIIC T95oC…T120oC Db 
+All 
+Note 1 
+T5: -50oC TO 85oC 
+T6: -50oC TO 65oC 
+Intrinsically Safe: SIRA 12ATEX2233X 
+II 1 G Ex ia IIC T4 Ga 
+FISCO Field Device (Only for FF Option) 
+II 1 G Ex ia IIC T4 Ga 
+4-20 mA / DE/ 
+HART 
+Note 2 
+-50oC TO 70oC 
+Foundation 
+Fieldbus  
+Note 2 
+-50oC TO 70oC  
+Zone 2, Increase Safety: SIRA 
+12ATEX4234X 
+II 3 G Ex ec IIC T4 Gc 
+4-20 mA / DE/ 
+HART/  
+Note 1 
+-50oC TO 85oC 
+Zone 2, Intrinsically Safe: SIRA 
+12ATEX4234X 
+II 3 G Ex ic IIC T4 Gc 
+FISCO Field Device (Only for FF Option) 
+II 3 G Ex ic IIC T4 Gc 
+4-20 mA / DE/ 
+HART/ 
+Foundation 
+Fieldbus 
+Note 2 
+-50oC TO 85oC 
+Enclosure:   IP66/ IP67 
+All 
+All 
+- 
+STANDARDS: EN 60079-0: 2012/A11: 2013; EN 60079-1: 2014; EN 60079-7: 2015; EN 60079-
+11: 2012; EN 60079-26: 2015; EN 60079-31: 2009 
+D 
+IECEx 
+World 
+Flameproof: IECEx SIR 12.0100X 
+Ex db IIC T6..T5 Ga/Gb 
+Ex tb IIIC T95oC…T120oC Db 
+All 
+Note 1 
+T5: -50oC TO 85oC 
+T6: -50oC TO 65oC 
+Intrinsically Safe: IECEx SIR 12.0100X 
+Ex ia IIC T4 Ga 
+FISCO Field Device (Only for FF Option) 
+Ex ia IIC T4 Ga; Ex ic IIC T4 Gc 
+4-20 mA / DE/ 
+HART 
+Note 2 
+-50oC TO 70oC 
+Foundation 
+Fieldbus  
+Note 2 
+-50oC TO 70oC  
+Zone 2, Increase Safety: IECEx SIR 
+12.0100X 
+Ex ec IIC T4 Gc 
+4-20 mA / DE/ 
+HART/ 
+Foundation 
+Fieldbus 
+Note 1 
+-50oC TO 85oC 
+Zone 2, Intrinsically Safe: IECEx SIR 
+12.0100X 
+Ex ic IIC T4 Gc 
+FISCO Field Device (Only for FF Option) 
+Ex ic IIC T4 Gc 
+4-20 mA / DE/ 
+HART/ 
+Foundation 
+Fieldbus 
+Note 2 
+-50oC TO 85oC 
+Enclosure:   IP66/ IP67 
+All 
+All 
+- 
+STANDARDS: IEC 60079-0: 2011; IEC 60079-1: 2014; IEC 60079-7: 2017; IEC 60079-11: 2011; 
+IEC 60079-26: 2014; IEC 60079-31: 2013 
+ 
+ 
+
+--- página 10 ---
+10  
+          STG700 Smart Pressure Transmitter 
+ 
+ 
+ 
+E 
+SAEx 
+South Africa 
+Flameproof : 
+Ex d IIC T6…T5 Ga/Gb  
+Ex tb IIIC T95oC…T120oC Db 
+All 
+Note 1 
+T5: -50oC TO 85oC 
+T6: -50oC TO 65oC 
+Intrinsically Safe: 
+Ex ia IIC Ga T4 
+FISCO Field Device (Only for FF Option) 
+Ex ia IIC T4 Ga; Ex ic IIC T4 Gc 
+4-20 mA / DE/ 
+HART 
+Note 2 
+-50oC TO 70oC 
+Foundation 
+Fieldbus  
+Note 2 
+-50oC TO 70oC  
+Zone 2, Increase Safety:  
+II 3 G Ex ec IIC T4 Gc 
+4-20 mA / DE/ 
+HART/ 
+Foundation 
+Fieldbus 
+Note 1 
+-50oC TO 85oC 
+Zone 2, Intrinsically Safe:  
+Ex ic IIC T4 Gc 
+FISCO Field Device (Only for FF Option) 
+Ex ic IIC T4 Gc 
+4-20 mA / DE/ 
+HART/ 
+Foundation 
+Fieldbus 
+Note 2 
+-50oC TO 85oC 
+Enclosure:   IP66/ IP67 
+All 
+All 
+- 
+F 
+INMETRO 
+Brazil 
+ 
+Flameproof:   
+Ex db IIC T6..T5 Ga/Gb 
+Ex tb IIIC T95oC…T120oC Db 
+All 
+Note 1 
+T5: -50oC TO 85oC 
+T6: -50oC TO 65oC 
+Intrinsically Safe:  
+Ex ia IIC T4 Ga 
+  
+FISCO Field Device (Only for FF Option) 
+Ex ia IIC T4 Ga; Ex ic IIC T4 Gc 
+4-20 mA / DE/ 
+HART 
+Note 2a 
+-50oC TO 70oC 
+Foundation 
+Fieldbus  
+Note 2b 
+-50oC TO 70oC  
+Zone 2, Increase Safety:  
+II 3 G Ex ec IIC T4 Gc 
+4-20 mA / DE/ 
+HART/ 
+Foundation 
+Fieldbus 
+Note 1 
+-50oC TO 85oC 
+Zone 2, Intrinsically Safe:  
+Ex ic IIC T4 Gc 
+FISCO Field Device (Only for FF Option) 
+Ex ic IIC T4 Gc 
+4-20 mA / DE/ 
+HART/ 
+Foundation 
+Fieldbus 
+Note 2 
+-50oC TO 85oC 
+Enclosure :   IP 66/67 
+All 
+All 
+- 
+G 
+NEPSI 
+CHINA 
+Flameproof:   
+Ex db IIC T6..T5 Ga/Gb 
+Ex tb IIIC T 95oC Db 
+All 
+Note 1 
+T5: -50oC TO 85oC 
+T6: -50oC TO 65oC 
+Intrinsically Safe:  
+Ex ia IIC T4 Ga 
+ FISCO Field Device (Only for FF Option) 
+Ex ia IIC T4 Ga; Ex ic IIC T4 Gc 
+4-20 mA / DE/ 
+HART 
+Note 2 
+-50oC TO 70oC 
+Foundation 
+Fieldbus  
+Note 2 
+-50oC TO 70oC  
+Zone 2, Increase Safety:  
+II 3 G Ex ec IIC T4 Gc 
+4-20 mA / DE/ 
+HART/ 
+Foundation 
+Fieldbus 
+Note 1 
+-50oC TO 85oC 
+Zone 2, Intrinsically Safe:  
+Ex ic IIC T4 Gc 
+FISCO Field Device (Only for FF Option) 
+Ex ic IIC T4 Gc 
+4-20 mA / DE/ 
+HART/ 
+Foundation 
+Fieldbus 
+Note 2 
+-50oC TO 85oC 
+Enclosure :   IP 66/67 
+All 
+All 
+- 
+ 
+
+--- página 11 ---
+STG700 Smart Pressure Transmitter 
+11 
+ 
+ 
+H 
+KOSHA 
+Korea 
+Flameproof : 
+Ex d IIC T4, T5, T6  
+Ex tD A21 IP66/IP67 T95oC…T120 oC 
+All 
+Note 1 
+T4: -50oC TO 85oC 
+T5: -50oC TO 85oC 
+T6: -50oC TO 65oC 
+Intrinsically Safe:  
+Ex ia IIC T4 
+4-20 mA /  
+DE/ HART 
+Note 2 
+Ta= -50 ºC to 70ºC 
+Foundation 
+Fieldbus  
+Note 2 
+Ta= -50 ºC to 70ºC 
+ 
+Enclosure:   IP66/ IP67 
+All 
+All 
+- 
+I 
+EAC 
+Russia, Belarus 
+and  
+Kazakhstan  
+ 
+Flameproof:   
+Ga/Gb Ex d IIC T6..T5  
+Ex tb IIIC Db T 85oC 
+All 
+Note 1 
+T5: -50oC TO 85oC 
+T6: -50oC TO 65oC 
+Intrinsically Safe:  
+ Ga Ex ia IIC T4 X 
+FISCO Field Device  
+(Only for FF Option) 
+Ga Ex ia IIC T4 X 
+4-20 mA /  
+DE/ HART 
+Note 2 
+-50oC TO 70oC 
+Foundation 
+Fieldbus  
+Note 2 
+-50oC TO 70oC  
+Zone 2, Non Sparking:  
+2 Ex nA IIC T4 Gc X 
+4-20 mA /  
+DE/ HART/ 
+Foundation 
+Fieldbus 
+Note 1 
+-50oC TO 85oC 
+Zone 2, Intrinsically Safe:  
+ Ga Ex ic IIC T4 X 
+FISCO Field Device  
+(Only for FF Option) 
+2 Ex ic IIC T4 Gc X 
+4-20 mA /  
+DE/ HART/ 
+Foundation 
+Fieldbus 
+Note 2 
+-50oC TO 85oC 
+Enclosure :   IP 66/67 
+All 
+All 
+ 
+J 
+CCoE 
+INDIA 
+Flameproof:  
+Ex d IIC T6..T5 Ga/Gb 
+All 
+Note 1 
+T5: -50oC TO 85oC 
+T6: -50oC TO 65oC 
+Intrinsically Safe:  
+Ex ia IIC T4 Ga 
+FISCO Field Device (Only for FF Option) 
+Ex ia IIC T4 Ga; Ex ic IIC T4 Gc 
+4-20 mA / DE/ 
+HART 
+Note 2 
+-50oC TO 70oC 
+Foundation 
+Fieldbus  
+Note 2 
+-50oC TO 70oC  
+Non Sparking 
+Ex nA IIC T4 Gc 
+4-20 mA / DE/ 
+HART/ 
+Foundation 
+Fieldbus 
+Note 1 
+-50oC TO 85oC 
+Enclosure:   IP66/ IP67 
+All 
+All 
+- 
+K 
+UATR 
+UKRAINE 
+Flameproof:  
+II 1/2 G Ex db IIC T6..T5 Ga/Gb 
+II 2 D Ex tb IIIC T95oC…T120oC Db 
+All 
+Note 1 
+T5: -50oC TO 85oC 
+T6: -50oC TO 65oC 
+Intrinsically Safe:  
+II 1 G Ex ia IIC T4 Ga 
+FISCO Field Device (Only for FF Option) 
+II 1 G Ex ia IIC T4 Ga 
+4-20 mA / DE/ 
+HART 
+Note 2 
+-50oC TO 70oC 
+Foundation 
+Fieldbus  
+Note 2 
+-50oC TO 70oC  
+Enclosure:   IP66/ IP67 
+All 
+All 
+- 
+ 
+ 
+ 
+ 
+
+--- página 12 ---
+12  
+          STG700 Smart Pressure Transmitter 
+ 
+ 
+ 
+Notes: 
+1. Operating Parameters:  
+Voltage= 11 to 42 V DC 
+= 10 to 30 V (FF) 
+Current=  4-20 mA Normal  
+               = 30 mA (FF) 
+2. Intrinsically Safe Entity Parameters 
+a.  Analog/ DE/ HART Entity Values: 
+Vmax= Ui  = 30V 
+Imax= Ii=  105mA 
+Ci = 4.2nF 
+Li =984 uH 
+Pi =0.9W 
+ Transmitter with Terminal Block Revision E or Later 
+ 
+ 
+Vmax= Ui  = 30V 
+Imax= Ii=  225mA 
+Ci = 4.2nF 
+Li = 0 
+Pi =0.9W 
+Note :  Transmitter with Terminal Block Revision E or later  
+The revision is on the label that is on the module.  There will be two lines of text on the label: 
+ 
+First is the Module Part #:  50049839-001 or 50049839-002 
+ 
+Second line has the supplier information, along with the REVISION:   
+XXXXXXX-EXXXX, THE “X” is production related, THE POSITION of the “E” IS THE REVISION. 
+b.  Foundation Fieldbus-  Entity Values 
+Vmax= Ui  = 30V 
+Imax= Ii=  180mA 
+Ci = 0nF 
+Li = 984 uH 
+Pi =1W 
+Transmitter with Terminal Block Revision F or Later 
+Vmax= Ui  = 30V 
+Imax= Ii=  225mA 
+Ci =0nF 
+Li = 0 
+Pi =1 W 
+FISCO Field Device 
+Vmax= Ui  = 17.5V 
+ 
+Imax= Ii=  380 mA 
+ 
+Ci = 0nF 
+ 
+Li = 0 
+ 
+Pi =5.32 W 
+Note :  Transmitter with Terminal Block Revision F or later  
+The revision is on the label that is on the module.  There will be two lines of text on the label: 
+ 
+First is the Module Part #:  50049839-003 or 50049839-004 
+ 
+Second line has the supplier information, along with the REVISION:   
+XXXXXXX-EXXXX, THE “X” is production related, THE POSITION of the “E” IS THE REVISION. 
+ 
+Approval Certifications:  
+Marine Certificates  
+This certificate defines the certifications covered for the ST 800 Pressure Transmitter family of 
+products, including the SMV 800 Smart Multivariable Transmitter.  It represents the compilation 
+of the five certificates Honeywell currently has covering the certification of these products into 
+marine applications. 
+For SmartLine Pressure Transmitter and SMV800 Smart Multivarible Transmitter 
+American Bureau of Shipping (ABS) - 2009 Steel Vessel Rules 1-1-4/3.7, 4-6-2/5.15, 4-8-3/13 
+& 13.5, 4-8-4/27.5.1, 4-9-7/13. Certificate number: 04-HS417416-PDA 
+Bureau Veritas (BV) - Product Code: 389:1H. Certificate number: 12660/B0 BV 
+Det Norske Veritas (DNV) - Location Classes: Temperature D, Humidity B, Vibration A, EMC B, 
+Enclosure C.  For salt spray exposure; enclosure of 316 SST or 2-part epoxy protection with 316 
+SST bolts to be applied. Certificate number: A-11476 
+Korean Register of Shipping (KR) - Certificate number: LOX17743-AE001 
+Lloyd's Register (LR) - Certificate number: 02/60001(E1) & (E2) 
+SIL 2/3 Certification 
+IEC 61508 SIL 2 for non-redundant use and SIL 3 for redundant use according to EXIDA and 
+TÜV Nord Sys Tec GmbH & Co. KG under the following standards: IEC61508-1: 2010; IEC 
+61508-2: 2010; IEC61508-3: 2010. 
+Other Certification Options 
+Materials 
+o 
+NACE MRO175, MRO103, ISO15156 
+
+--- página 13 ---
+STG700 Smart Pressure Transmitter 
+13 
+ 
+ 
+Mounting & Dimensional Drawings) 
+ 
+Reference Dimensions: millimeters
+ inches
+  
+ 
+Mounting Configurations: (Dual head design) 
+ 
+ 
+ 
+ 
+ 
+Figure 3 – Mounting options: (Dual head design) 
+ 
+ 
+ 
+ 
+Figure 4 – Typical dimensions of STG740 & STG770 for reference 
+ 
+ 
+ 
+
+--- página 14 ---
+14  
+          STG700 Smart Pressure Transmitter 
+ 
+ 
+ 
+Reference Dimensions: millimeters
+ inches
+  
+ 
+Mounting Configurations (Inline Designs) 
+ 
+ 
+Figure 5 – Mounting Options (Inline Design) 
+ 
+Figure 6 – Typical dimensions of STG74L, STG77L, STG78L, & STG79L for reference 
+ 
+
+--- página 15 ---
+STG700 Smart Pressure Transmitter 
+15 
+ 
+ 
+Model Selection Guides are subject to change and are inserted into the specifications as guidance only.   
+Prior to specifying or ordering a model check for the latest revision Model Selection Guides which are published at: 
+www.honeywellprocess.com/en-US/pages/default.aspx 
+Model Selection Guide   
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Model STG700
+Gauge Pressure Transmitters
+Model Selection Guide
+34-ST-16-102  Issue 24
+KEY NUMBER
+URL/Max Span
+LRL
+Min Span
+Units
+Selection
+50 (3.5)
+-14.7 (-1.0)
+0.5 (.035)
+psi (bar)
+STG730
+500 (35)
+-14.7 (-1.0)
+5 (.35)
+psi (bar)
+STG740
+3000 (210)
+-14.7 (-1.0)
+30 (2.1)
+psi (bar)
+STG770
+50 (3.5)
+-14.7 (-1.0)
+0.5 (.035)
+psi (bar)
+STG73L
+500 (35)
+-14.7 (-1.0)
+5 (.35)
+psi (bar)
+STG74L
+3000 (210)
+-14.7 (-1.0)
+30(2.1)
+psi (bar)
+STG77L
+6000 (420)
+-14.7 (-1.0)
+60 (4.2)
+psi (bar)
+STG78L
+10000 (690)
+-14.7 (-1.0)
+100 (6.9)
+psi (bar)
+STG79L
+TABLE I
+316L SS
+A _ _ _ _ _
+*
+*
+Hastelloy®  C - 276
+B _ _ _ _ _
+*
+*
+Monel 400® 
+C _ _ _ _ _
+*
+*
+Tantalum
+D _ _ _ _ _
+a
+a
+316L SS
+E _ _ _ _ _
+*
+*
+*
+*
+*
+Hastelloy  C - 276
+F _ _ _ _ _
+*
+*
+*
+*
+*
+Monel 400
+G _ _ _ _ _
+*
+*
+Tantalum
+H _ _ _ _ _
+a
+a
+Hastelloy  C - 276
+J _ _ _ _ _
+*
+*
+*
+*
+*
+Tantalum
+K _ _ _ _ _
+a
+a
+Monel 400
+L _ _ _ _ _
+a
+a
+Silicone Oil 200
+_ 1_ _ _ _
+*
+*
+*
+*
+*
+Fluorinated Oil CTFE
+_ 2 _ _ _ _
+*
+*
+*
+*
+*
+Silicone Oil 704
+_ 3 _ _ _ _
+*
+*
+*
+*
+*
+NEOBEE® M-20
+_ 4 _ _ _ _
+*
+*
+*
+*
+*
+Same as Process Head
+_ _ A _ _ _
+*
+*
+*
+Same as Process Head 1a
+_ _ G _ _ _
+*
+*
+*
+*
+*
+Same as Process Head
+_ _ H _ _ _
+*
+*
+*
+Same as Process Head
+_ _ D _ _ _
+*
+*
+*
+*
+G 1/2 B Threaded Fitting
+Same as Process Head
+_ _ B _ _ _
+*
+*
+*
+M20 (male)
+Same as Process Head
+_ _ N _ _ _
+*
+*
+*
+None
+_ _ _ 0 _ _
+*
+*
+*
+Carbon Steel
+_ _ _ C _ _
+*
+*
+316 SS
+_ _ _ S _ _
+*
+*
+Grade 660 (NACE A286) with NACE 304 SS Nuts
+_ _ _ N _ _
+*
+*
+Grade 660 (NACE A286) Bolts & Nuts
+_ _ _ K _ _
+p
+p
+Monel K500
+_ _ _ M _ _
+p
+p
+Super Duplex
+_ _ _ D _ _
+p
+p
+B7M
+_ _ _ B _ _
+*
+*
+Head Type
+Vent Type
+Location
+Vent Material
+None
+None
+None
+None
+_ _ _ _ 0 _
+*
+*
+*
+Single Ended
+None
+None
+None
+_ _ _ _ 1 _
+*
+*
+Single Ended
+Standard Vent
+Side
+Matches Head Material1
+_ _ _ _ 2 _
+*
+*
+Single Ended
+Center Vent
+Side
+Stainless Steel Only
+_ _ _ _ 3 _
+t
+t
+Dual Ended
+Standard Vent
+End
+Matches Head Material1
+_ _ _ _ 4 _
+*
+*
+Dual Ended
+Center Vent
+End
+Stainless Steel only
+_ _ _ _ 5 _
+t
+t
+Dual Ended
+Std Vent/Plug
+Side/End
+Matches Head Material1
+_ _ _ _ 6 _
+*
+*
+None
+_ _ _ _ _ 0
+*
+*
+*
+Teflon® or PTFE  (Glass Filled)
+_ _ _ _ _ A
+*
+*
+Viton®
+_ _ _ _ _ B
+*
+*
+Graphite
+_ _ _ _ _ C
+*
+*
+1a STG730,740,770 supplied via 1/2" flange adapter same material as process head except carbon steel shall use 316 SS
+1b Reference head available w ith Dual Head Gage models only.  In-Line Gage models are supplied w ith Process Head only.
+c. Process 
+Connection
+e. Vent/Drain 
+Type/Location
+f. Gasket 
+Materials
+1 Except Carbon Steel Heads shall use 316SS Vent/Drain & Plugs and or 1/2" adapters         
+Availability
+Gauge
+Dual Head
+Gauge
+In-Line
+METER BODY SELECTIONS
+a.  Process 
+     Head &
+     Diaphragm 
+     Materials
+Process Head/Reference Head Material1b
+Barrier Diaphragm Material
+d. Bolt/Nuts 
+Materials
+Plated Carbon Steel /                          
+Plated Carbon Steel
+316 Stainless Steel /                                
+316 Stainless Steel 
+Hastelloy  C - 276  /                                  
+316 Stainless Steel
+Monel 400 /                                                 
+316 Stainless Steel
+b. Fill Fluid
+Size/Type
+Material 
+9/16" Aminco
+1/2" NPT (female)
+1/2" NPT (male)
+DIN 19213 (1/4" female NPT)
+Instructions: Make selections from all Tables using column below the proper arrow.  Asterisk indicates availability. Letter (a) 
+refers to restrictions highlighted in the restrictions table. Tables delimited w ith dashes.
+
+--- página 16 ---
+16  
+          STG700 Smart Pressure Transmitter 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+STG79L
+STG77L, STG78L
+STG73L, STG74L
+STG770
+ STG730, STG740
+TABLE II   
+Meter Body & Connection Orientation
+Standard
+High Side Left, Low Side Right2 / Std Head Orientation
+1
+*
+*
+*
+*
+*
+Reversed
+Low Side Left, High Side Right2 / Std Head Orientation
+2
+*
+*
+90/Standard
+High Side Left, Low Side Right2 / 900 Head Rotation
+3
+h
+h
+TABLE III
+0
+*
+*
+*
+*
+*
+A
+*
+*
+*
+*
+*
+B
+*
+*
+*
+*
+p
+C
+*
+*
+*
+*
+*
+D
+*
+*
+*
+*
+*
+E
+*
+*
+*
+*
+*
+F
+*
+*
+*
+*
+*
+NEPSI Explosion proof, Intrinsically Safe & Non-incendive
+G
+*
+*
+*
+*
+*
+KOSHA Explosion proof, Intrinsically Safe & Non-incendive
+H
+*
+*
+*
+*
+*
+I
+*
+*
+*
+*
+*
+1
+*
+*
+*
+*
+*
+J
+*
+*
+*
+*
+*
+K
+*
+*
+*
+*
+*
+TABLE IV
+Connection
+Lightning Protection
+1/2 NPT
+None
+A _ _
+*
+*
+*
+*
+*
+M20
+None
+B _ _
+*
+*
+*
+*
+*
+1/2 NPT
+Yes
+C _ _
+*
+*
+*
+*
+*
+M20
+Yes
+D _ _
+*
+*
+*
+*
+*
+1/2 NPT
+None
+E _ _
+*
+*
+*
+*
+*
+M20
+None
+F _ _
+*
+*
+*
+*
+*
+1/2 NPT
+Yes
+G _ _
+*
+*
+*
+*
+*
+M20 
+Yes
+H _ _
+*
+*
+*
+*
+*
+_ H _
+*
+*
+*
+*
+*
+_ D _
+*
+*
+*
+*
+*
+_ F _
+*
+*
+*
+*
+*
+Indicator
+Languages
+None
+None
+_ _ 0
+*
+*
+*
+*
+*
+None
+None
+_ _ A
+f
+f
+f
+f
+f
+Basic
+EN
+_ _ B
+*
+*
+*
+*
+*
+Basic
+EN
+_ _ C
+*
+*
+*
+*
+*
+Standard (w/internal 
+Zero, Span & Conf 
+Buttons)
+English
+_ _ D
+u
+u
+u
+u
+u
+TABLE V
+1 _ _
+*
+*
+*
+*
+*
+Write Protect
+Fail Mode
+Disabled
+High> 21.0mAdc Honeywell Std   (3.8 - 20.8 mAdc)
+_ 1 _
+f
+f
+f
+f
+f
+Disabled
+Low<  3.6mAdc
+Honeywell Std   (3.8 - 20.8 mAdc)
+_ 2 _
+f
+f
+f
+f
+f
+Enabled
+High> 21.0mAdc Honeywell Std   (3.8 - 20.8 mAdc)
+_ 3 _
+f
+f
+f
+f
+f
+Enabled
+Low<  3.6mAdc
+Honeywell Std   (3.8 - 20.8 mAdc)
+_ 4 _
+f
+f
+f
+f
+f
+Enabled
+N/A
+N/A
+Fieldbus
+_ 5 _
+g g g g g
+Disabled
+N/A
+N/A
+Fieldbus
+_ 6 _
+g g g g g
+Factory Standard
+_ _ S
+*
+*
+*
+*
+*
+Custom Configuration (Unit Data Required from customer)
+_ _ C
+*
+*
+*
+*
+*
+2 Left side/Right side as view ed from the customer connection perspective
+3  NAMUR Output Limits are configurable by customer
+c. Customer 
+Interface 
+Selections
+General Configuration
+c. General 
+Configuration
+CONFIGURATION SELECTIONS
+a. Application 
+Software
+Diagnostics
+Standard Diagnostics
+HART Protocol
+4-20mA dc
+DE Protocol
+none
+Foundation Fieldbus
+TRANSMITTER ELECTRONICS SELECTIONS
+b. Output Limit, 
+Failsafe & Write 
+Protect Settings
+High & Low Output Limits 3
+None
+Yes
+None
+316 Stainless Steel (Grade CF8M)
+b. Output/ 
+Protocol
+Analog Output
+Digital Protocol
+4-20mA dc
+Ext Zero, Span & Config Buttons
+None
+Yes (Zero/Span Only)
+a. Electronic 
+Housing 
+Material & 
+Connection Type
+Material
+Polyester Powder Coated Aluminum
+Polyester Powder Coated Aluminum
+Polyester Powder Coated Aluminum
+Polyester Powder Coated Aluminum
+316 Stainless Steel (Grade CF8M)
+316 Stainless Steel (Grade CF8M)
+316 Stainless Steel (Grade CF8M)
+ Head/Connect   
+Orientation
+No Approvals Required
+<FM> Explosion proof, Intrinsically Safe, Non-incendive, & Dustproof
+CSA Explosion proof, Intrinsically Safe, Non-incendive, & Dustproof
+ATEX Explosion proof, Intrinsically Safe & Non-incendive
+IECEx Explosion proof, Intrinsically Safe & Non-incendive
+SAEx  Explosion proof, Intrinsically Safe & Non-incendive
+INMETRO Explosion proof, Intrinsically Safe & Non-incendive
+ATEX/IECEx Explosion proof, Intrinsically Safe & Non-incendive
+Approvals
+CCoE  Explosion proof, Intrinsically Safe & Non-incendive
+UATR Flameproof, Intrinsically Safe & Dustproof
+EAC Customs Union (Russia,Belarus,Kazakhstan)Ex Approval Flame proof, Intrinsically Safe
+AGENCY APPROVALS
+
+--- página 17 ---
+STG700 Smart Pressure Transmitter 
+17 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+STG79L
+STG77L, STG78L
+STG73L, STG74L
+STG770
+TABLE VI
+ STG730, STG740
+Accuracy
+Calibration Qty
+Standard
+Factory Standard
+Single Calibration
+ A 
+*
+*
+*
+*
+*
+Standard
+Custom (Unit Data Required)
+Single Calibration
+B
+*
+*
+*
+*
+*
+High Accuracy
+Factory Standard
+Single Calibration
+E
+s s
+s
+s
+s
+High Accuracy
+Custom (Unit Data Required)
+Single Calibration
+F
+s s
+s
+s
+s
+TABLE VII
+None
+None
+0 _ _ _
+*
+*
+*
+*
+*
+Angle Bracket
+Carbon Steel
+1 _ _ _
+*
+*
+*
+*
+*
+Angle Bracket
+304 SS
+2 _ _ _
+*
+*
+*
+*
+*
+Angle Bracket
+316 SS
+3 _ _ _
+*
+*
+*
+*
+*
+Marine Approved  Bracket
+Carbon Steel
+8 _ _ _
+*
+*
+Marine Approved  Bracket (In-Line)
+Carbon Steel
+9 _ _ _
+*
+*
+*
+Marine Approved  Bracket
+304 SS
+4 _ _ _
+*
+*
+Marine Approved  Bracket (In-Line)
+304 SS
+A _ _ _
+*
+*
+*
+Flat Bracket
+Carbon Steel
+5 _ _ _
+*
+*
+*
+*
+*
+6 _ _ _
+*
+*
+*
+*
+*
+Flat Bracket
+316 SS
+7 _ _ _
+*
+*
+*
+*
+*
+No customer tag
+_ 0 _ _
+*
+*
+*
+*
+*
+One Wired Stainless Steel Tag (Up to 4 lines 26 char/line)
+_ 1 _ _
+*
+*
+*
+*
+*
+Two Wired Stainless Steel Tag (Up to 4 lines 26 char/line)
+_ 2 _ _
+*
+*
+*
+*
+*
+No Conduit Plugs or Adapters Required
+_ _ A0
+*
+*
+*
+*
+*
+_ _ A2
+n
+n
+n
+n
+n
+_ _ A6
+n
+n
+n
+n
+n
+_ _ A7
+m m m m m
+_ _ A8
+n
+n
+n
+n
+n
+_ _ A9
+m m m m m
+TABLE VIII
+No additional options
+00
+*
+*
+*
+*
+*
+NACE MR0175; MR0103; ISO15156 (FC33338) Process wetted parts only
+FG
+*
+*
+*
+*
+*
+NACE MR0175; MR0103; ISO15156 (FC33339) Process wetted and non-wetted parts
+F7
+c
+c
+c
+c
+c
+Marine (DNV, ABS, BV, KR, LR)
+MT
+d
+d
+d
+d
+d
+EN10204 Type 3.1 Material Traceability (FC33341)
+FX
+*
+*
+*
+*
+*
+Certificate of Conformance (F3391)
+F3
+*
+*
+*
+*
+*
+Calibration Test Report & Certificate of Conformance (F3399)
+F1
+*
+*
+*
+*
+*
+Certificate of Origin (F0195)
+F5
+*
+*
+*
+*
+*
+FMEDA (SIL 2/3) Certification (FC33337)
+FE
+j
+j
+j
+j
+j
+Over-Pressure Leak Test Certificate (1.5X MAWP) (F3392)
+TP
+*
+*
+*
+*
+*
+Cert Clean for O2 or CL2 service per ASTM G93
+OX
+e
+e
+e
+e
+e
+PMI Certification1
+PM
+*
+*
+*
+*
+*
+Extended Warranty Additional 1 year
+01
+*
+*
+*
+*
+*
+Extended Warranty Additional 2 years
+02
+*
+*
+*
+*
+*
+Extended Warranty Additional 3 years
+03
+*
+*
+*
+*
+*
+04
+*
+*
+*
+*
+*
+TABLE IX
+Manufacturing Specials
+Factory
+Factory Identification
+0 0 0 0
+*
+*
+*
+*
+*
+c. Unassembled 
+Conduit
+     Plugs &
+    Adapters
+OTHER Certifications & Options:  (String in sequence comma delimited (XX, XX, XX,….)
+Certifications & 
+Warranty
+b
+b
+Extended Warranty Additional 4 years
+b
+1/2 NPT Male to 3/4 NPT Female 316 SS Certified Conduit Adapter 
+1/2 NPT 316 SS Certified Conduit Plug 
+M20 316 SS Certified Conduit Plug
+Minifast® 4 pin (1/2 NPT) (not suitable for X-Proof applications)
+Minifast® 4 pin (M20) (not suitable for X-Proof applications)
+CALIBRATION & ACCURACY SELECTIONS
+Calibrated Range
+a. Accuracy and 
+Calibration
+ACCESSORY SELECTIONS
+a. Mounting 
+    Bracket
+Bracket Type
+Material
+Flat Bracket
+304 SS
+b. Customer
+     Tag
+Customer Tag Type
+Unassembled Conduit Plugs & Adapters
+
+--- página 18 ---
+18  
+          STG700 Smart Pressure Transmitter 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+RESTRICTIONS
+Table
+Table
+a
+VIII
+c
+Id
+I a
+d
+IV a
+VIIa
+e
+Ib
+f
+IV b
+g
+IVb
+Ie
+VIIa
+j
+IV b
+Vb
+m
+IV a
+n
+IV a
+p
+III
+s
+I a
+t
+Ia
+u
+IVb
+b
+FIELD INSTALLABLE ACCESSORY KITS
+Terminal Strip w/Lightning Protection Kit for HART or DE Modules
+Terminal Strip w/Lightning Protection Kit for FFB Module
+Terminal Strip w/o Lightning Protection for HART or DE Modules
+Terminal Strip w/o Lightening Protection FFB Module
+HART Electronics Module
+HART Electronics Module w/connection for external configuration buttons
+DE Electronics Module
+DE Electronics Module w/connection for external configuration buttons
+FFB Electronics Module w/connection for external configuration buttons
+PRODUCT MANUALS
+Part Number
+All product documentation is available at www.honeywellprocess.com.
+Restriction 
+Letter
+Available Only with
+Not Available with
+Selection(s)
+Selection(s)
+FG, F7
+_ _ _ 0,N,K,D,B _ _ _
+D,H,K,L _ _ _ _ _
+C,D,G,H _ _
+1,2,3,5,6,7 _ _ _
+_ 2 _ _ _ _ 
+_ F_  
+_ H,D _ 
+h
+_ _ _ _ 4, 5, 6 _ _
+1,2,3,4,5,6,7,8 _ _ _
+_ H _
+_ 1,2,6_
+B,D,F,H _ _
+B- No CRN number available
+J, K, L _ _ _ _ _
+_ H_
+Select Only one option from this group
+1The PM option is available on all Smartline Pressure Transmitter process wetted parts such as process heads, flanges, bushings and vent plugs 
+except plated carbon steel process heads and flanges.  PM option information is also available on diaphragms except STG and STA in-line 
+construction pressure transmitters.  
+A, E _ _ _ _ _
+Description
+Kit Number
+Integrally Mounted Basic Indicator Kit (Compatible with all Electronic Modules)
+50049911-501
+50075472-532
+50075472-534
+50075472-531
+50075472-533
+50049849-501
+sT 700 Smart Transmitter Safety Manual - English
+34-ST-25-37
+ST700 Smart Transmitter Foundation Fieldbus Manual - English
+34-ST-25-48
+ST 700 Smart Transmitter Function Block Manual - English
+34-ST-25-49
+50049849-502
+50049849-503
+50049849-504
+FFB Electronics Module Kit
+50049849-509
+50049849-510
+Standard Display Module
+50126003-501
+Description
+ST 700 Smart Transmitter User Manual - English
+34-ST-25-44
+ST 700 Smart Transmitter HART/DE Communications Manual - English
+34-ST-25-47
+A,C,E,G _ _
+
+--- página 19 ---
+ 
+For more information 
+To learn more about SmartLine Pressure 
+Transmitters visit www.honeywellprocess.com 
+Or contact your Honeywell Account Manager 
+ 
+ 
+ 
+Process Solutions 
+Honeywell 
+ 
+1250 W Sam Houston Pkwy S 
+Houston, TX 77042 
+ 
+ 
+Honeywell Control Systems Ltd 
+Honeywell House, Skimped Hill Lane  
+Bracknell, England, RG12 1EB 
+ 
+ 
+ 
+ 
+ 
+34-ST-03-102 
+Jan 2021 
+2021 Honeywell International Inc. 
+Shanghai City Centre, 100 Jungi Road 
+Shanghai, China 20061 
+ 
+ 
+www.honeywellprocess.com 
+ 
+Sales and Service 
+For application assistance, current specifications, ordering, pricing, and name of the nearest Authorized Distributor, 
+contact one of the offices below.  
+ 
+ASIA PACIFIC 
+Honeywell Process Solutions, 
+Phone: + 800 12026455 or  
++44 (0) 1202645583 
+(TAC) hfs-tac-
+support@honeywell.com 
+ 
+Australia 
+Honeywell Limited 
+Phone: +(61) 7-3846 1255 
+FAX: +(61) 7-3840 6481 
+Toll Free 1300-36-39-36 
+Toll Free Fax: 
+1300-36-04-70 
+ 
+China – PRC - Shanghai 
+Honeywell China Inc. 
+Phone: (86-21) 5257-4568 
+Fax: (86-21) 6237-2826 
+ 
+Singapore 
+Honeywell Pte Ltd. 
+Phone: +(65) 6580 3278 
+Fax: +(65) 6445-3033 
+ 
+South Korea 
+Honeywell Korea Co Ltd 
+Phone: +(822) 799 6114 
+Fax: +(822) 792 9015 
+ 
+EMEA 
+Honeywell Process Solutions, 
+Phone: + 800 12026455 or  
++44 (0) 1202645583 
+ 
+ 
+Email: (Sales)  
+FP-Sales-Apps@Honeywell.com  
+or  
+(TAC)  
+hfs-tac-support@honeywell.com 
+ 
+ 
+Web 
+Knowledge Base search 
+engine http://bit.ly/2N5Vldi 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+AMERICAS 
+Honeywell Process Solutions, 
+Phone: (TAC) (800) 423-9883  
+or (215) 641-3610 
+(Sales) 1-800-343-0228 
+ 
+Email: (Sales)   
+FP-Sales-Apps@Honeywell.com 
+ or  
+(TAC)   
+hfs-tac-support@honeywell.com 
+ 
+ 
+Web 
+Knowledge Base search 
+engine http://bit.ly/2N5Vldi 
+ 
+ 
+ 
+ 
+ 
+Specifications are subject to change without notice. 

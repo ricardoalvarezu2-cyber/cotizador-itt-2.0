@@ -1,0 +1,610 @@
+=== hoja Portada
+Formulario
+LISTA DE DOCUMENTOS
+FPI-IG-002 - Rev. 1 (17/06/2021 - AESA Público)
+1           HISTORIAL DE REVISIONES
+Revisión Nº | Fecha | Descripción | Realizó | Revisó | Aprobó
+0 | 2019-07-31 00:00:00 | Primera emisión | D. Curcio | F. Vicini | M. Bernáth
+1 | 2021-06-17 00:00:00 | Se agrega columna Multidiciplinario a tipo de revisión | R. Garcia | D. Curcio | R. Garcia
+=== hoja LISTADO DOCUMENTOS
+PROYECTO: | DOC. AESA
+DESGASIFICADOR | DOC. PROVEEDOR
+TÍTULO: | FECHA: | 2022-09-06 00:00:00 | REVISIÓN
+LISTA DE DOCUMENTOS | PÁGINA | 1 de 1 | A
+PROVEEDOR: | ITT S.A. | CODIGO PROVEEDOR | 0000
+ORDEN DE COMPRA: | 4000133176 | (Bloque ZZZZ )
+REQUISICIÓN DE ING.: | AdlA-USPALA01-VCD18023-M-RI-031020
+N° TAG: | SB-258
+CODIFICACIÓN
+AESA | CODIFICACIÓN 
+PROVEEDOR | CODIFICACIÓN  
+CLIENTE | AREA / SECTOR | ESPECIALIDAD | DESCRIPCION DEL DOCUMENTO | TIPO DE DOCUMENTO | Tipo de Revisión | CARÁCTER DE EMISIÓN | FECHA PREVISTA             REV. A | FECHA PREVISTA            REV. 0 | FECHA  PREVISTA           REV. CAF
+ITT22-0010-0374-1-P001 | Cronograma de Fabricación | PG-Plan de Ejecución de Ingeniería
+ITT22-0010-0374-1-P002 | Matriz de comunicación
+ITT22-0010-0374-1-C001 | Listado de Documentos | LD-Lista de Documentos
+ITT22-0010-0374-1-M001 | Hoja de Datos | HD-Hoja de Datos
+ITT22-0010-0374-1-M002 | Arreglo General | PL-Plano
+ITT22-0010-0374-1-M003 | Plano Detalle | PL-Plano
+ITT22-0010-0374-1-M004 | Placa de Identificación - Plano | PL-Plano
+ITT22-0010-0374-1-M005 | Planilla de Soldadura | PL-Plano
+ITT22-0010-0374-1-M006 | Welding Map | PL-Plano
+ITT22-0010-0374-1-C002 | Plan de Inspección y Ensayo (Fabricación) | PE-Plan de Inspección y Ensayo
+ITT22-0010-0374-1-C003 | Especificación de Procedimientos de Soldadura | WP-Procedimiento de Soldadura
+ITT22-0010-0374-1-C004 | Registros de Calificación de Procedimientos de Soldadura | WP-Procedimiento de Soldadura
+ITT22-0010-0374-1-C005 | Calificación de Soldadores | WP-Procedimiento de Soldadura
+ITT22-0010-0374-1-C006 | Procedimiento de Radiografía Industrial | PR-Procedimientos
+ITT22-0010-0374-1-C007 | Procedimiento de Líquidos Penetrantes | PR-Procedimientos
+ITT22-0010-0374-1-C008 | Procedimiento de Prueba Hidrostática | PR-Procedimientos
+ITT22-0010-0374-1-C009 | Procedimiento de Preparación de Superficie y Aplicación de Pintura | PR-Procedimientos
+ITT22-0010-0374-1-C010 | Procedimiento de Prueba Neumatica | PR-Procedimientos
+ITT22-0010-0374-1-C011 | Procedimiento de Embalaje e Izaje | PR-Procedimientos
+ITT22-0010-0374-1-C012 | Data Book | DB-Data Book
+ITT22-0010-0374-1-M007 | Memoria de cálculo mecanica | MC-Memoria de Cálculo
+ITT22-0010-0374-1-C013 | Manual de operación y mantenimiento | MO-Manual de Operaciones
+ITT22-0010-0374-1-C014 | Certificado de materiales | CE-Certificación
+=== hoja DB
+_C0 | _C1 | _C2
+_C1S | _C2S
+Especialidad | Tipo_de_Documento | Esp | Tip | TR | Matriz | Especialidad | Tipo_de_Documento | TR | Especialidad | Tipo_de_Documento | EspecialidadTipo_de_Documento | TR
+CA | Calidad | AA | AA-Análisis de Consistencia de Ingeniería | CA | AT | 1 | No | Calidad | AT-Análisis Técnico | 1 | Calidad | AT-Análisis Técnico | CalidadAT-Análisis Técnico | 1
+CI | Civil | AC | AC-Acta | CA | AT | 2 | No | Calidad | AT-Análisis Técnico | 2 | Calidad | CE-Certificación | CalidadAT-Análisis Técnico | 2
+CO | Coordinación | AS | AS-Acuerdo de Servicio | CA | CE | 1 | Calidad | CE-Certificación | 1 | Calidad | DB-Data Book | CalidadCE-Certificación | 1
+EL | Electricidad | AT | AT-Análisis Técnico | CA | CE | 2 | Calidad | CE-Certificación | 2 | Calidad | IN-Informes | CalidadCE-Certificación | 2
+EM | Mecánica | BD | BD-Bases y Criterios de Diseño | CA | DB | 1 | Calidad | DB-Data Book | 1 | Calidad | LD-Lista de Documentos | CalidadDB-Data Book | 1
+ES | Estructuras | BM | BM-Balance Materia y Energia | CA | DB | 2 | Calidad | DB-Data Book | 2 | Calidad | LM-Lista de Materiales | CalidadDB-Data Book | 2
+IN | Instrumentación y Control | CA | CA- Cambio de Alcance | CA | DB | 3 | Calidad | DB-Data Book | 3 | Calidad | LP-Lista Particular | CalidadDB-Data Book | 3
+PI | Cañerías | CE | CE-Certificación | CA | IN | 1 | Calidad | IN-Informes | 1 | Calidad | MO-Manual de Operaciones | CalidadIN-Informes | 1
+PR | Proceso | CO | CO-Computo / Planilla de Cotización | CA | IN | 2 | Calidad | IN-Informes | 2 | Calidad | OD-Otros Documentos | CalidadIN-Informes | 2
+SD | Seguridad en el Diseño | CU | CU-Documentación Contractual | CA | LD | 1 | No | Calidad | LD-Lista de Documentos | 1 | Calidad | PC-Plan de Calidad | CalidadLD-Lista de Documentos | 1
+DB | DB-Data Book | CA | LD | 2 | No | Calidad | LD-Lista de Documentos | 2 | Calidad | PE-Plan de Inspección y Ensayo | CalidadLD-Lista de Documentos | 2
+DC | DC-Diagrama de Conexionado | CA | LM | 1 | Calidad | LM-Lista de Materiales | 1 | Calidad | PG-Plan de Ejecución de Ingeniería | CalidadLM-Lista de Materiales | 1
+DD | DD-Datos de Diseño | CA | LM | 2 | Calidad | LM-Lista de Materiales | 2 | Calidad | PR-Procedimientos | CalidadLM-Lista de Materiales | 2
+DF | DF-Diagrama de Flujo | CA | LM | 3 | Calidad | LM-Lista de Materiales | 3 | Calidad | WP-Procedimiento de Soldadura | CalidadLM-Lista de Materiales | 3
+DH | DH-Doblado de Hierros | CA | LP | 1 | Calidad | LP-Lista Particular | 1 | Civil | AA-Análisis de Consistencia de Ingeniería | CalidadLP-Lista Particular | 1
+DL | DL-Diagrama de Lazos | CA | LP | 2 | Calidad | LP-Lista Particular | 2 | Civil | AT-Análisis Técnico | CalidadLP-Lista Particular | 2
+EE | EE-Esquema Eléctrico | CA | LP | 3 | Calidad | LP-Lista Particular | 3 | Civil | BD-Bases y Criterios de Diseño | CalidadLP-Lista Particular | 3
+EF | EF-Esquemas Funcionales | CA | LP | 4 | Calidad | LP-Lista Particular | 4 | Civil | CO-Computo / Planilla de Cotización | CalidadLP-Lista Particular | 4
+ES | ES-Estudio Especial | CA | MO | 1 | Calidad | MO-Manual de Operaciones | 1 | Civil | DD-Datos de Diseño | CalidadMO-Manual de Operaciones | 1
+ET | ET-Especificación Técnica | CA | MO | 2 | Calidad | MO-Manual de Operaciones | 2 | Civil | DH-Doblado de Hierros | CalidadMO-Manual de Operaciones | 2
+HD | HD-Hoja de Datos | CA | MO | 3 | Calidad | MO-Manual de Operaciones | 3 | Civil | ES-Estudio Especial | CalidadMO-Manual de Operaciones | 3
+IN | IN-Informes | CA | MO | 4 | Calidad | MO-Manual de Operaciones | 4 | Civil | ET-Especificación Técnica | CalidadMO-Manual de Operaciones | 4
+IS | IS-Isometricos | CA | OD | 1 | No | Calidad | OD-Otros Documentos | 1 | Civil | IN-Informes | CalidadOD-Otros Documentos | 1
+IT | IT-Instructivo | CA | OD | 2 | No | Calidad | OD-Otros Documentos | 2 | Civil | LM-Lista de Materiales | CalidadOD-Otros Documentos | 2
+LC | LC-Listado de Cables | CA | PC | 1 | Calidad | PC-Plan de Calidad | 1 | Civil | LP-Lista Particular | CalidadPC-Plan de Calidad | 1
+LD | LD-Lista de Documentos | CA | PC | 2 | Calidad | PC-Plan de Calidad | 2 | Civil | LY-Lay Out | CalidadPC-Plan de Calidad | 2
+LF | LF-Lista de Pendientes | CA | PE | 1 | Calidad | PE-Plan de Inspección y Ensayo | 1 | Civil | MC-Memoria de Cálculo | CalidadPE-Plan de Inspección y Ensayo | 1
+LI | LI-Lista de Instrumentos | CA | PE | 2 | Calidad | PE-Plan de Inspección y Ensayo | 2 | Civil | MD-Memoria Descriptiva | CalidadPE-Plan de Inspección y Ensayo | 2
+LL | LL-Lista de Lineas | CA | PG | 1 | Calidad | PG-Plan de Ejecución de Ingeniería | 1 | Civil | MQ-Maqueta | CalidadPG-Plan de Ejecución de Ingeniería | 1
+LM | LM-Lista de Materiales | CA | PG | 2 | Calidad | PG-Plan de Ejecución de Ingeniería | 2 | Civil | PL-Plano | CalidadPG-Plan de Ejecución de Ingeniería | 2
+LP | LP-Lista Particular | CA | PR | 1 | Calidad | PR-Procedimientos | 1 | Civil | PR-Procedimientos | CalidadPR-Procedimientos | 1
+LQ | LQ-Lista de Equipos | CA | PR | 2 | Calidad | PR-Procedimientos | 2 | Civil | RI-Requerimiento | CalidadPR-Procedimientos | 2
+LR | LR-Listado de Repuestos | CA | PR | 3 | Calidad | PR-Procedimientos | 3 | Civil | RL-Relevamiento | CalidadPR-Procedimientos | 3
+LS | LS-Lista de Señales | CA | PR | 4 | Calidad | PR-Procedimientos | 4 | Civil | SP-Simulación | CalidadPR-Procedimientos | 4
+LY | LY-Lay Out | CA | PR | 5 | Calidad | PR-Procedimientos | 5 | Civil | TM-Tipico de Montaje | CalidadPR-Procedimientos | 5
+MC | MC-Memoria de Cálculo | CA | WP | 1 | Calidad | WP-Procedimiento de Soldadura | 1 | Civil | LF-Lista de Pendientes | CalidadWP-Procedimiento de Soldadura | 1
+MD | MD-Memoria Descriptiva | CA | WP | 2 | Calidad | WP-Procedimiento de Soldadura | 2 | Coordinación | AA-Análisis de Consistencia de Ingeniería | CalidadWP-Procedimiento de Soldadura | 2
+ME | ME-Cartas | CI | AA | 1 | No | Civil | AA-Análisis de Consistencia de Ingeniería | 1 | Coordinación | AC-Acta | CivilAA-Análisis de Consistencia de Ingeniería | 1
+MO | MO-Manual de Operaciones | CI | AA | 2 | No | Civil | AA-Análisis de Consistencia de Ingeniería | 2 | Coordinación | AS-Acuerdo de Servicio | CivilAA-Análisis de Consistencia de Ingeniería | 2
+MQ | MQ-Maqueta | CI | AT | 1 | No | Civil | AT-Análisis Técnico | 1 | Coordinación | BD-Bases y Criterios de Diseño | CivilAT-Análisis Técnico | 1
+MR | MR-Minuta de Reunion | CI | AT | 2 | No | Civil | AT-Análisis Técnico | 2 | Coordinación | CA- Cambio de Alcance | CivilAT-Análisis Técnico | 2
+MZ | MZ-Matriz Causa-Efecto | CI | BD | 1 | No | Civil | BD-Bases y Criterios de Diseño | 1 | Coordinación | CE-Certificación | CivilBD-Bases y Criterios de Diseño | 1
+NT | NT-Nota Técnica | CI | BD | 2 | No | Civil | BD-Bases y Criterios de Diseño | 2 | Coordinación | CO-Computo / Planilla de Cotización | CivilBD-Bases y Criterios de Diseño | 2
+OD | OD-Otros Documentos | CI | CO | 1 | No | Civil | CO-Computo / Planilla de Cotización | 1 | Coordinación | CU-Documentación Contractual | CivilCO-Computo / Planilla de Cotización | 1
+PC | PC-Plan de Calidad | CI | CO | 2 | No | Civil | CO-Computo / Planilla de Cotización | 2 | Coordinación | DD-Datos de Diseño | CivilCO-Computo / Planilla de Cotización | 2
+PE | PE-Plan de Inspección y Ensayo | CI | DD | 1 | No | Civil | DD-Datos de Diseño | 1 | Coordinación | IN-Informes | CivilDD-Datos de Diseño | 1
+PG | PG-Plan de Ejecución de Ingeniería | CI | DD | 2 | No | Civil | DD-Datos de Diseño | 2 | Coordinación | IT-Instructivo | CivilDD-Datos de Diseño | 2
+PI | PI-Diagrama P&ID | CI | DH | 1 | No | Civil | DH-Doblado de Hierros | 1 | Coordinación | LD-Lista de Documentos | CivilDH-Doblado de Hierros | 1
+PL | PL-Plano | CI | DH | 2 | No | Civil | DH-Doblado de Hierros | 2 | Coordinación | LF-Lista de Pendientes | CivilDH-Doblado de Hierros | 2
+PO | PO-Pliego | CI | ES | 1 | No | Civil | ES-Estudio Especial | 1 | Coordinación | ME-Cartas | CivilES-Estudio Especial | 1
+PR | PR-Procedimientos | CI | ES | 2 | No | Civil | ES-Estudio Especial | 2 | Coordinación | MR-Minuta de Reunion | CivilES-Estudio Especial | 2
+RI | RI-Requerimiento | CI | ET | 1 | No | Civil | ET-Especificación Técnica | 1 | Coordinación | NT-Nota Técnica | CivilET-Especificación Técnica | 1
+RL | RL-Relevamiento | CI | ET | 2 | No | Civil | ET-Especificación Técnica | 2 | Coordinación | PG-Plan de Ejecución de Ingeniería | CivilET-Especificación Técnica | 2
+SP | SP-Simulación | CI | IN | 1 | No | Civil | IN-Informes | 1 | Coordinación | PO-Pliego | CivilIN-Informes | 1
+TE | TE-Plantilla | CI | IN | 2 | No | Civil | IN-Informes | 2 | Coordinación | TE-Plantilla | CivilIN-Informes | 2
+TM | TM-Tipico de Montaje | CI | LM | 1 | No | Civil | LM-Lista de Materiales | 1 | Coordinación | TR-Transmittal | CivilLM-Lista de Materiales | 1
+TR | TR-Transmittal | CI | LM | 2 | No | Civil | LM-Lista de Materiales | 2 | Electricidad | AA-Análisis de Consistencia de Ingeniería | CivilLM-Lista de Materiales | 2
+WP | WP-Procedimiento de Soldadura | CI | LP | 1 | No | Civil | LP-Lista Particular | 1 | Electricidad | AT-Análisis Técnico | CivilLP-Lista Particular | 1
+CI | LP | 2 | No | Civil | LP-Lista Particular | 2 | Electricidad | BD-Bases y Criterios de Diseño | CivilLP-Lista Particular | 2
+CI | LY | 1 | No | Civil | LY-Lay Out | 1 | Electricidad | CO-Computo / Planilla de Cotización | CivilLY-Lay Out | 1
+CI | LY | 2 | No | Civil | LY-Lay Out | 2 | Electricidad | DC-Diagrama de Conexionado | CivilLY-Lay Out | 2
+CI | MC | 1 | Civil | MC-Memoria de Cálculo | 1 | Electricidad | DD-Datos de Diseño | CivilMC-Memoria de Cálculo | 1
+CI | MC | 2 | Civil | MC-Memoria de Cálculo | 2 | Electricidad | DF-Diagrama de Flujo | CivilMC-Memoria de Cálculo | 2
+CI | MC | 3 | Civil | MC-Memoria de Cálculo | 3 | Electricidad | EE-Esquema Eléctrico | CivilMC-Memoria de Cálculo | 3
+CI | MC | 4 | Civil | MC-Memoria de Cálculo | 4 | Electricidad | EF-Esquemas Funcionales | CivilMC-Memoria de Cálculo | 4
+CI | MD | 1 | No | Civil | MD-Memoria Descriptiva | 1 | Electricidad | ES-Estudio Especial | CivilMD-Memoria Descriptiva | 1
+CI | MD | 2 | No | Civil | MD-Memoria Descriptiva | 2 | Electricidad | ET-Especificación Técnica | CivilMD-Memoria Descriptiva | 2
+CI | MQ | 1 | No | Civil | MQ-Maqueta | 1 | Electricidad | HD-Hoja de Datos | CivilMQ-Maqueta | 1
+CI | MQ | 2 | No | Civil | MQ-Maqueta | 2 | Electricidad | IN-Informes | CivilMQ-Maqueta | 2
+CI | PL | 1 | Civil | PL-Plano | 1 | Electricidad | LC-Listado de Cables | CivilPL-Plano | 1
+CI | PL | 2 | Civil | PL-Plano | 2 | Electricidad | LM-Lista de Materiales | CivilPL-Plano | 2
+CI | PL | 3 | Civil | PL-Plano | 3 | Electricidad | LP-Lista Particular | CivilPL-Plano | 3
+CI | PL | 4 | Civil | PL-Plano | 4 | Electricidad | LQ-Lista de Equipos | CivilPL-Plano | 4
+CI | PR | 1 | No | Civil | PR-Procedimientos | 1 | Electricidad | LR-Listado de Repuestos | CivilPR-Procedimientos | 1
+CI | PR | 2 | No | Civil | PR-Procedimientos | 2 | Electricidad | LY-Lay Out | CivilPR-Procedimientos | 2
+CI | RI | 1 | No | Civil | RI-Requerimiento | 1 | Electricidad | MC-Memoria de Cálculo | CivilRI-Requerimiento | 1
+CI | RI | 2 | No | Civil | RI-Requerimiento | 2 | Electricidad | MD-Memoria Descriptiva | CivilRI-Requerimiento | 2
+CI | RL | 1 | No | Civil | RL-Relevamiento | 1 | Electricidad | MO-Manual de Operaciones | CivilRL-Relevamiento | 1
+CI | RL | 2 | No | Civil | RL-Relevamiento | 2 | Electricidad | MQ-Maqueta | CivilRL-Relevamiento | 2
+CI | SP | 1 | No | Civil | SP-Simulación | 1 | Electricidad | OD-Otros Documentos | CivilSP-Simulación | 1
+CI | SP | 2 | No | Civil | SP-Simulación | 2 | Electricidad | PL-Plano | CivilSP-Simulación | 2
+CI | TM | 1 | No | Civil | TM-Tipico de Montaje | 1 | Electricidad | PR-Procedimientos | CivilTM-Tipico de Montaje | 1
+CI | TM | 2 | No | Civil | TM-Tipico de Montaje | 2 | Electricidad | RI-Requerimiento | CivilTM-Tipico de Montaje | 2
+CI | LF | 1 | No | Civil | LF-Lista de Pendientes | 1 | Electricidad | RL-Relevamiento | CivilLF-Lista de Pendientes | 1
+CI | LF | 2 | No | Civil | LF-Lista de Pendientes | 2 | Electricidad | SP-Simulación | CivilLF-Lista de Pendientes | 2
+CO | AA | 1 | No | Coordinación | AA-Análisis de Consistencia de Ingeniería | 1 | Electricidad | TM-Tipico de Montaje | CoordinaciónAA-Análisis de Consistencia de Ingeniería | 1
+CO | AA | 2 | No | Coordinación | AA-Análisis de Consistencia de Ingeniería | 2 | Electricidad | LF-Lista de Pendientes | CoordinaciónAA-Análisis de Consistencia de Ingeniería | 2
+CO | AC | 1 | No | Coordinación | AC-Acta | 1 | Mecánica | AA-Análisis de Consistencia de Ingeniería | CoordinaciónAC-Acta | 1
+CO | AC | 2 | No | Coordinación | AC-Acta | 2 | Mecánica | AT-Análisis Técnico | CoordinaciónAC-Acta | 2
+CO | AS | 1 | No | Coordinación | AS-Acuerdo de Servicio | 1 | Mecánica | BD-Bases y Criterios de Diseño | CoordinaciónAS-Acuerdo de Servicio | 1
+CO | AS | 2 | No | Coordinación | AS-Acuerdo de Servicio | 2 | Mecánica | CO-Computo / Planilla de Cotización | CoordinaciónAS-Acuerdo de Servicio | 2
+CO | BD | 1 | No | Coordinación | BD-Bases y Criterios de Diseño | 1 | Mecánica | DD-Datos de Diseño | CoordinaciónBD-Bases y Criterios de Diseño | 1
+CO | BD | 2 | No | Coordinación | BD-Bases y Criterios de Diseño | 2 | Mecánica | ES-Estudio Especial | CoordinaciónBD-Bases y Criterios de Diseño | 2
+CO | CA | 1 | No | Coordinación | CA- Cambio de Alcance | 1 | Mecánica | ET-Especificación Técnica | CoordinaciónCA- Cambio de Alcance | 1
+CO | CA | 2 | No | Coordinación | CA- Cambio de Alcance | 2 | Mecánica | HD-Hoja de Datos | CoordinaciónCA- Cambio de Alcance | 2
+CO | CE | 1 | No | Coordinación | CE-Certificación | 1 | Mecánica | IN-Informes | CoordinaciónCE-Certificación | 1
+CO | CE | 2 | No | Coordinación | CE-Certificación | 2 | Mecánica | LD-Lista de Documentos | CoordinaciónCE-Certificación | 2
+CO | CO | 1 | No | Coordinación | CO-Computo / Planilla de Cotización | 1 | Mecánica | LM-Lista de Materiales | CoordinaciónCO-Computo / Planilla de Cotización | 1
+CO | CO | 2 | No | Coordinación | CO-Computo / Planilla de Cotización | 2 | Mecánica | LP-Lista Particular | CoordinaciónCO-Computo / Planilla de Cotización | 2
+CO | CU | 1 | No | Coordinación | CU-Documentación Contractual | 1 | Mecánica | LQ-Lista de Equipos | CoordinaciónCU-Documentación Contractual | 1
+CO | CU | 2 | No | Coordinación | CU-Documentación Contractual | 2 | Mecánica | LR-Listado de Repuestos | CoordinaciónCU-Documentación Contractual | 2
+CO | DD | 1 | No | Coordinación | DD-Datos de Diseño | 1 | Mecánica | MC-Memoria de Cálculo | CoordinaciónDD-Datos de Diseño | 1
+CO | DD | 2 | No | Coordinación | DD-Datos de Diseño | 2 | Mecánica | MD-Memoria Descriptiva | CoordinaciónDD-Datos de Diseño | 2
+CO | IN | 1 | No | Coordinación | IN-Informes | 1 | Mecánica | MO-Manual de Operaciones | CoordinaciónIN-Informes | 1
+CO | IN | 2 | No | Coordinación | IN-Informes | 2 | Mecánica | MQ-Maqueta | CoordinaciónIN-Informes | 2
+CO | IT | 1 | No | Coordinación | IT-Instructivo | 1 | Mecánica | OD-Otros Documentos | CoordinaciónIT-Instructivo | 1
+CO | IT | 2 | No | Coordinación | IT-Instructivo | 2 | Mecánica | PL-Plano | CoordinaciónIT-Instructivo | 2
+CO | LD | 1 | No | Coordinación | LD-Lista de Documentos | 1 | Mecánica | PR-Procedimientos | CoordinaciónLD-Lista de Documentos | 1
+CO | LD | 2 | No | Coordinación | LD-Lista de Documentos | 2 | Mecánica | RI-Requerimiento | CoordinaciónLD-Lista de Documentos | 2
+CO | LF | 1 | No | Coordinación | LF-Lista de Pendientes | 1 | Mecánica | RL-Relevamiento | CoordinaciónLF-Lista de Pendientes | 1
+CO | LF | 2 | No | Coordinación | LF-Lista de Pendientes | 2 | Mecánica | SP-Simulación | CoordinaciónLF-Lista de Pendientes | 2
+CO | ME | 1 | No | Coordinación | ME-Cartas | 1 | Mecánica | TM-Tipico de Montaje | CoordinaciónME-Cartas | 1
+CO | ME | 2 | No | Coordinación | ME-Cartas | 2 | Mecánica | LF-Lista de Pendientes | CoordinaciónME-Cartas | 2
+CO | MR | 1 | No | Coordinación | MR-Minuta de Reunion | 1 | Estructuras | AA-Análisis de Consistencia de Ingeniería | CoordinaciónMR-Minuta de Reunion | 1
+CO | MR | 2 | No | Coordinación | MR-Minuta de Reunion | 2 | Estructuras | AT-Análisis Técnico | CoordinaciónMR-Minuta de Reunion | 2
+CO | NT | 1 | No | Coordinación | NT-Nota Técnica | 1 | Estructuras | BD-Bases y Criterios de Diseño | CoordinaciónNT-Nota Técnica | 1
+CO | NT | 2 | No | Coordinación | NT-Nota Técnica | 2 | Estructuras | CO-Computo / Planilla de Cotización | CoordinaciónNT-Nota Técnica | 2
+CO | PG | 1 | No | Coordinación | PG-Plan de Ejecución de Ingeniería | 1 | Estructuras | DD-Datos de Diseño | CoordinaciónPG-Plan de Ejecución de Ingeniería | 1
+CO | PG | 2 | No | Coordinación | PG-Plan de Ejecución de Ingeniería | 2 | Estructuras | ES-Estudio Especial | CoordinaciónPG-Plan de Ejecución de Ingeniería | 2
+CO | PO | 1 | No | Coordinación | PO-Pliego | 1 | Estructuras | ET-Especificación Técnica | CoordinaciónPO-Pliego | 1
+CO | PO | 2 | No | Coordinación | PO-Pliego | 2 | Estructuras | HD-Hoja de Datos | CoordinaciónPO-Pliego | 2
+CO | TE | 1 | No | Coordinación | TE-Plantilla | 1 | Estructuras | IN-Informes | CoordinaciónTE-Plantilla | 1
+CO | TE | 2 | No | Coordinación | TE-Plantilla | 2 | Estructuras | LM-Lista de Materiales | CoordinaciónTE-Plantilla | 2
+CO | TR | 1 | No | Coordinación | TR-Transmittal | 1 | Estructuras | LP-Lista Particular | CoordinaciónTR-Transmittal | 1
+CO | TR | 2 | No | Coordinación | TR-Transmittal | 2 | Estructuras | MC-Memoria de Cálculo | CoordinaciónTR-Transmittal | 2
+EL | AA | 1 | No | Electricidad | AA-Análisis de Consistencia de Ingeniería | 1 | Estructuras | MD-Memoria Descriptiva | ElectricidadAA-Análisis de Consistencia de Ingeniería | 1
+EL | AA | 2 | No | Electricidad | AA-Análisis de Consistencia de Ingeniería | 2 | Estructuras | MQ-Maqueta | ElectricidadAA-Análisis de Consistencia de Ingeniería | 2
+EL | AT | 1 | No | Electricidad | AT-Análisis Técnico | 1 | Estructuras | PL-Plano | ElectricidadAT-Análisis Técnico | 1
+EL | AT | 2 | No | Electricidad | AT-Análisis Técnico | 2 | Estructuras | PR-Procedimientos | ElectricidadAT-Análisis Técnico | 2
+EL | BD | 1 | No | Electricidad | BD-Bases y Criterios de Diseño | 1 | Estructuras | RI-Requerimiento | ElectricidadBD-Bases y Criterios de Diseño | 1
+EL | BD | 2 | No | Electricidad | BD-Bases y Criterios de Diseño | 2 | Estructuras | RL-Relevamiento | ElectricidadBD-Bases y Criterios de Diseño | 2
+EL | CO | 1 | No | Electricidad | CO-Computo / Planilla de Cotización | 1 | Estructuras | SP-Simulación | ElectricidadCO-Computo / Planilla de Cotización | 1
+EL | CO | 2 | No | Electricidad | CO-Computo / Planilla de Cotización | 2 | Estructuras | TM-Tipico de Montaje | ElectricidadCO-Computo / Planilla de Cotización | 2
+EL | DC | 1 | Electricidad | DC-Diagrama de Conexionado | 1 | Estructuras | LF-Lista de Pendientes | ElectricidadDC-Diagrama de Conexionado | 1
+EL | DC | 2 | Electricidad | DC-Diagrama de Conexionado | 2 | Instrumentación y Control | AA-Análisis de Consistencia de Ingeniería | ElectricidadDC-Diagrama de Conexionado | 2
+EL | DC | 3 | Electricidad | DC-Diagrama de Conexionado | 3 | Instrumentación y Control | AT-Análisis Técnico | ElectricidadDC-Diagrama de Conexionado | 3
+EL | DC | 4 | Electricidad | DC-Diagrama de Conexionado | 4 | Instrumentación y Control | BD-Bases y Criterios de Diseño | ElectricidadDC-Diagrama de Conexionado | 4
+EL | DD | 1 | No | Electricidad | DD-Datos de Diseño | 1 | Instrumentación y Control | CO-Computo / Planilla de Cotización | ElectricidadDD-Datos de Diseño | 1
+EL | DD | 2 | No | Electricidad | DD-Datos de Diseño | 2 | Instrumentación y Control | DC-Diagrama de Conexionado | ElectricidadDD-Datos de Diseño | 2
+EL | DF | 1 | No | Electricidad | DF-Diagrama de Flujo | 1 | Instrumentación y Control | DD-Datos de Diseño | ElectricidadDF-Diagrama de Flujo | 1
+EL | DF | 2 | No | Electricidad | DF-Diagrama de Flujo | 2 | Instrumentación y Control | DF-Diagrama de Flujo | ElectricidadDF-Diagrama de Flujo | 2
+EL | EE | 1 | Electricidad | EE-Esquema Eléctrico | 1 | Instrumentación y Control | DL-Diagrama de Lazos | ElectricidadEE-Esquema Eléctrico | 1
+EL | EE | 2 | Electricidad | EE-Esquema Eléctrico | 2 | Instrumentación y Control | ES-Estudio Especial | ElectricidadEE-Esquema Eléctrico | 2
+EL | EE | 3 | Electricidad | EE-Esquema Eléctrico | 3 | Instrumentación y Control | ET-Especificación Técnica | ElectricidadEE-Esquema Eléctrico | 3
+EL | EF | 1 | No | Electricidad | EF-Esquemas Funcionales | 1 | Instrumentación y Control | HD-Hoja de Datos | ElectricidadEF-Esquemas Funcionales | 1
+EL | EF | 2 | No | Electricidad | EF-Esquemas Funcionales | 2 | Instrumentación y Control | IN-Informes | ElectricidadEF-Esquemas Funcionales | 2
+EL | ES | 1 | No | Electricidad | ES-Estudio Especial | 1 | Instrumentación y Control | LC-Listado de Cables | ElectricidadES-Estudio Especial | 1
+EL | ES | 2 | No | Electricidad | ES-Estudio Especial | 2 | Instrumentación y Control | LI-Lista de Instrumentos | ElectricidadES-Estudio Especial | 2
+EL | ET | 1 | No | Electricidad | ET-Especificación Técnica | 1 | Instrumentación y Control | LM-Lista de Materiales | ElectricidadET-Especificación Técnica | 1
+EL | ET | 2 | No | Electricidad | ET-Especificación Técnica | 2 | Instrumentación y Control | LP-Lista Particular | ElectricidadET-Especificación Técnica | 2
+EL | HD | 1 | Electricidad | HD-Hoja de Datos | 1 | Instrumentación y Control | LS-Lista de Señales | ElectricidadHD-Hoja de Datos | 1
+EL | HD | 2 | Electricidad | HD-Hoja de Datos | 2 | Instrumentación y Control | LY-Lay Out | ElectricidadHD-Hoja de Datos | 2
+EL | HD | 3 | Electricidad | HD-Hoja de Datos | 3 | Instrumentación y Control | MC-Memoria de Cálculo | ElectricidadHD-Hoja de Datos | 3
+EL | HD | 4 | Electricidad | HD-Hoja de Datos | 4 | Instrumentación y Control | MD-Memoria Descriptiva | ElectricidadHD-Hoja de Datos | 4
+EL | IN | 1 | No | Electricidad | IN-Informes | 1 | Instrumentación y Control | MO-Manual de Operaciones | ElectricidadIN-Informes | 1
+EL | IN | 2 | No | Electricidad | IN-Informes | 2 | Instrumentación y Control | MQ-Maqueta | ElectricidadIN-Informes | 2
+EL | LC | 1 | Electricidad | LC-Listado de Cables | 1 | Instrumentación y Control | PE-Plan de Inspección y Ensayo | ElectricidadLC-Listado de Cables | 1
+EL | LC | 2 | Electricidad | LC-Listado de Cables | 2 | Instrumentación y Control | PL-Plano | ElectricidadLC-Listado de Cables | 2
+EL | LC | 3 | Electricidad | LC-Listado de Cables | 3 | Instrumentación y Control | PR-Procedimientos | ElectricidadLC-Listado de Cables | 3
+EL | LM | 1 | No | Electricidad | LM-Lista de Materiales | 1 | Instrumentación y Control | RI-Requerimiento | ElectricidadLM-Lista de Materiales | 1
+EL | LM | 2 | No | Electricidad | LM-Lista de Materiales | 2 | Instrumentación y Control | RL-Relevamiento | ElectricidadLM-Lista de Materiales | 2
+EL | LP | 1 | Electricidad | LP-Lista Particular | 1 | Instrumentación y Control | TM-Tipico de Montaje | ElectricidadLP-Lista Particular | 1
+EL | LP | 2 | Electricidad | LP-Lista Particular | 2 | Instrumentación y Control | LF-Lista de Pendientes | ElectricidadLP-Lista Particular | 2
+EL | LP | 3 | Electricidad | LP-Lista Particular | 3 | Cañerías | AA-Análisis de Consistencia de Ingeniería | ElectricidadLP-Lista Particular | 3
+EL | LQ | 1 | No | Electricidad | LQ-Lista de Equipos | 1 | Cañerías | AT-Análisis Técnico | ElectricidadLQ-Lista de Equipos | 1
+EL | LQ | 2 | No | Electricidad | LQ-Lista de Equipos | 2 | Cañerías | BD-Bases y Criterios de Diseño | ElectricidadLQ-Lista de Equipos | 2
+EL | LR | 1 | No | Electricidad | LR-Listado de Repuestos | 1 | Cañerías | CO-Computo / Planilla de Cotización | ElectricidadLR-Listado de Repuestos | 1
+EL | LR | 2 | No | Electricidad | LR-Listado de Repuestos | 2 | Cañerías | DD-Datos de Diseño | ElectricidadLR-Listado de Repuestos | 2
+EL | LY | 1 | No | Electricidad | LY-Lay Out | 1 | Cañerías | ES-Estudio Especial | ElectricidadLY-Lay Out | 1
+EL | LY | 2 | No | Electricidad | LY-Lay Out | 2 | Cañerías | ET-Especificación Técnica | ElectricidadLY-Lay Out | 2
+EL | MC | 1 | Electricidad | MC-Memoria de Cálculo | 1 | Cañerías | HD-Hoja de Datos | ElectricidadMC-Memoria de Cálculo | 1
+EL | MC | 2 | Electricidad | MC-Memoria de Cálculo | 2 | Cañerías | IN-Informes | ElectricidadMC-Memoria de Cálculo | 2
+EL | MC | 3 | Electricidad | MC-Memoria de Cálculo | 3 | Cañerías | IS-Isometricos | ElectricidadMC-Memoria de Cálculo | 3
+EL | MD | 1 | Electricidad | MD-Memoria Descriptiva | 1 | Cañerías | LL-Lista de Lineas | ElectricidadMD-Memoria Descriptiva | 1
+EL | MD | 2 | Electricidad | MD-Memoria Descriptiva | 2 | Cañerías | LM-Lista de Materiales | ElectricidadMD-Memoria Descriptiva | 2
+EL | MO | 1 | No | Electricidad | MO-Manual de Operaciones | 1 | Cañerías | LP-Lista Particular | ElectricidadMO-Manual de Operaciones | 1
+EL | MO | 2 | No | Electricidad | MO-Manual de Operaciones | 2 | Cañerías | LR-Listado de Repuestos | ElectricidadMO-Manual de Operaciones | 2
+EL | MQ | 1 | No | Electricidad | MQ-Maqueta | 1 | Cañerías | LY-Lay Out | ElectricidadMQ-Maqueta | 1
+EL | MQ | 2 | No | Electricidad | MQ-Maqueta | 2 | Cañerías | MC-Memoria de Cálculo | ElectricidadMQ-Maqueta | 2
+EL | OD | 1 | Electricidad | OD-Otros Documentos | 1 | Cañerías | MD-Memoria Descriptiva | ElectricidadOD-Otros Documentos | 1
+EL | OD | 2 | Electricidad | OD-Otros Documentos | 2 | Cañerías | MQ-Maqueta | ElectricidadOD-Otros Documentos | 2
+EL | OD | 3 | Electricidad | OD-Otros Documentos | 3 | Cañerías | PL-Plano | ElectricidadOD-Otros Documentos | 3
+EL | PL | 1 | Electricidad | PL-Plano | 1 | Cañerías | PR-Procedimientos | ElectricidadPL-Plano | 1
+EL | PL | 2 | Electricidad | PL-Plano | 2 | Cañerías | RI-Requerimiento | ElectricidadPL-Plano | 2
+EL | PL | 3 | Electricidad | PL-Plano | 3 | Cañerías | RL-Relevamiento | ElectricidadPL-Plano | 3
+EL | PL | 4 | Electricidad | PL-Plano | 4 | Cañerías | SP-Simulación | ElectricidadPL-Plano | 4
+EL | PR | 1 | No | Electricidad | PR-Procedimientos | 1 | Cañerías | TM-Tipico de Montaje | ElectricidadPR-Procedimientos | 1
+EL | PR | 2 | No | Electricidad | PR-Procedimientos | 2 | Cañerías | LF-Lista de Pendientes | ElectricidadPR-Procedimientos | 2
+EL | RI | 1 | No | Electricidad | RI-Requerimiento | 1 | Proceso | AA-Análisis de Consistencia de Ingeniería | ElectricidadRI-Requerimiento | 1
+EL | RI | 2 | No | Electricidad | RI-Requerimiento | 2 | Proceso | AT-Análisis Técnico | ElectricidadRI-Requerimiento | 2
+EL | RL | 1 | No | Electricidad | RL-Relevamiento | 1 | Proceso | BD-Bases y Criterios de Diseño | ElectricidadRL-Relevamiento | 1
+EL | RL | 2 | No | Electricidad | RL-Relevamiento | 2 | Proceso | BM-Balance Materia y Energia | ElectricidadRL-Relevamiento | 2
+EL | SP | 1 | No | Electricidad | SP-Simulación | 1 | Proceso | DD-Datos de Diseño | ElectricidadSP-Simulación | 1
+EL | SP | 2 | No | Electricidad | SP-Simulación | 2 | Proceso | DF-Diagrama de Flujo | ElectricidadSP-Simulación | 2
+EL | TM | 1 | No | Electricidad | TM-Tipico de Montaje | 1 | Proceso | ES-Estudio Especial | ElectricidadTM-Tipico de Montaje | 1
+EL | TM | 2 | No | Electricidad | TM-Tipico de Montaje | 2 | Proceso | ET-Especificación Técnica | ElectricidadTM-Tipico de Montaje | 2
+EL | LF | 1 | No | Electricidad | LF-Lista de Pendientes | 1 | Proceso | HD-Hoja de Datos | ElectricidadLF-Lista de Pendientes | 1
+EL | LF | 2 | No | Electricidad | LF-Lista de Pendientes | 2 | Proceso | IN-Informes | ElectricidadLF-Lista de Pendientes | 2
+EM | AA | 1 | No | Mecánica | AA-Análisis de Consistencia de Ingeniería | 1 | Proceso | LL-Lista de Lineas | MecánicaAA-Análisis de Consistencia de Ingeniería | 1
+EM | AA | 2 | No | Mecánica | AA-Análisis de Consistencia de Ingeniería | 2 | Proceso | LM-Lista de Materiales | MecánicaAA-Análisis de Consistencia de Ingeniería | 2
+EM | AT | 1 | No | Mecánica | AT-Análisis Técnico | 1 | Proceso | LP-Lista Particular | MecánicaAT-Análisis Técnico | 1
+EM | AT | 2 | No | Mecánica | AT-Análisis Técnico | 2 | Proceso | LQ-Lista de Equipos | MecánicaAT-Análisis Técnico | 2
+EM | BD | 1 | No | Mecánica | BD-Bases y Criterios de Diseño | 1 | Proceso | MC-Memoria de Cálculo | MecánicaBD-Bases y Criterios de Diseño | 1
+EM | BD | 2 | No | Mecánica | BD-Bases y Criterios de Diseño | 2 | Proceso | MD-Memoria Descriptiva | MecánicaBD-Bases y Criterios de Diseño | 2
+EM | CO | 1 | No | Mecánica | CO-Computo / Planilla de Cotización | 1 | Proceso | MO-Manual de Operaciones | MecánicaCO-Computo / Planilla de Cotización | 1
+EM | CO | 2 | No | Mecánica | CO-Computo / Planilla de Cotización | 2 | Proceso | MZ-Matriz Causa-Efecto | MecánicaCO-Computo / Planilla de Cotización | 2
+EM | DD | 1 | No | Mecánica | DD-Datos de Diseño | 1 | Proceso | OD-Otros Documentos | MecánicaDD-Datos de Diseño | 1
+EM | DD | 2 | No | Mecánica | DD-Datos de Diseño | 2 | Proceso | PI-Diagrama P&ID | MecánicaDD-Datos de Diseño | 2
+EM | ES | 1 | No | Mecánica | ES-Estudio Especial | 1 | Proceso | PL-Plano | MecánicaES-Estudio Especial | 1
+EM | ES | 2 | No | Mecánica | ES-Estudio Especial | 2 | Proceso | PR-Procedimientos | MecánicaES-Estudio Especial | 2
+EM | ET | 1 | No | Mecánica | ET-Especificación Técnica | 1 | Proceso | RI-Requerimiento | MecánicaET-Especificación Técnica | 1
+EM | ET | 2 | No | Mecánica | ET-Especificación Técnica | 2 | Proceso | RL-Relevamiento | MecánicaET-Especificación Técnica | 2
+EM | HD | 1 | Mecánica | HD-Hoja de Datos | 1 | Proceso | CA- Cambio de Alcance | MecánicaHD-Hoja de Datos | 1
+EM | HD | 2 | Mecánica | HD-Hoja de Datos | 2 | Proceso | IT-Instructivo | MecánicaHD-Hoja de Datos | 2
+EM | HD | 3 | Mecánica | HD-Hoja de Datos | 3 | Proceso | TE-Plantilla | MecánicaHD-Hoja de Datos | 3
+EM | HD | 4 | Mecánica | HD-Hoja de Datos | 4 | Proceso | MR-Minuta de Reunion | MecánicaHD-Hoja de Datos | 4
+EM | HD | 5 | Mecánica | HD-Hoja de Datos | 5 | Proceso | NT-Nota Técnica | MecánicaHD-Hoja de Datos | 5
+EM | HD | 6 | Mecánica | HD-Hoja de Datos | 6 | Proceso | LF-Lista de Pendientes | MecánicaHD-Hoja de Datos | 6
+EM | HD | 7 | Mecánica | HD-Hoja de Datos | 7 | Seguridad en el Diseño | AA-Análisis de Consistencia de Ingeniería | MecánicaHD-Hoja de Datos | 7
+EM | IN | 1 | Mecánica | IN-Informes | 1 | Seguridad en el Diseño | AT-Análisis Técnico | MecánicaIN-Informes | 1
+EM | IN | 2 | Mecánica | IN-Informes | 2 | Seguridad en el Diseño | BD-Bases y Criterios de Diseño | MecánicaIN-Informes | 2
+EM | IN | 3 | Mecánica | IN-Informes | 3 | Seguridad en el Diseño | CA- Cambio de Alcance | MecánicaIN-Informes | 3
+EM | LD | 1 | Mecánica | LD-Lista de Documentos | 1 | Seguridad en el Diseño | CO-Computo / Planilla de Cotización | MecánicaLD-Lista de Documentos | 1
+EM | LD | 2 | Mecánica | LD-Lista de Documentos | 2 | Seguridad en el Diseño | ES-Estudio Especial | MecánicaLD-Lista de Documentos | 2
+EM | LD | 3 | Mecánica | LD-Lista de Documentos | 3 | Seguridad en el Diseño | ET-Especificación Técnica | MecánicaLD-Lista de Documentos | 3
+EM | LD | 4 | Mecánica | LD-Lista de Documentos | 4 | Seguridad en el Diseño | HD-Hoja de Datos | MecánicaLD-Lista de Documentos | 4
+EM | LM | 1 | Mecánica | LM-Lista de Materiales | 1 | Seguridad en el Diseño | IN-Informes | MecánicaLM-Lista de Materiales | 1
+EM | LM | 2 | Mecánica | LM-Lista de Materiales | 2 | Seguridad en el Diseño | IT-Instructivo | MecánicaLM-Lista de Materiales | 2
+EM | LM | 3 | Mecánica | LM-Lista de Materiales | 3 | Seguridad en el Diseño | LF-Lista de Pendientes | MecánicaLM-Lista de Materiales | 3
+EM | LP | 1 | Mecánica | LP-Lista Particular | 1 | Seguridad en el Diseño | LL-Lista de Lineas | MecánicaLP-Lista Particular | 1
+EM | LP | 2 | Mecánica | LP-Lista Particular | 2 | Seguridad en el Diseño | LP-Lista Particular | MecánicaLP-Lista Particular | 2
+EM | LP | 3 | Mecánica | LP-Lista Particular | 3 | Seguridad en el Diseño | MC-Memoria de Cálculo | MecánicaLP-Lista Particular | 3
+EM | LQ | 1 | No | Mecánica | LQ-Lista de Equipos | 1 | Seguridad en el Diseño | MD-Memoria Descriptiva | MecánicaLQ-Lista de Equipos | 1
+EM | LQ | 2 | No | Mecánica | LQ-Lista de Equipos | 2 | Seguridad en el Diseño | MR-Minuta de Reunion | MecánicaLQ-Lista de Equipos | 2
+EM | LR | 1 | Mecánica | LR-Listado de Repuestos | 1 | Seguridad en el Diseño | NT-Nota Técnica | MecánicaLR-Listado de Repuestos | 1
+EM | LR | 2 | Mecánica | LR-Listado de Repuestos | 2 | Seguridad en el Diseño | PI-Diagrama P&ID | MecánicaLR-Listado de Repuestos | 2
+EM | LR | 3 | Mecánica | LR-Listado de Repuestos | 3 | Seguridad en el Diseño | PL-Plano | MecánicaLR-Listado de Repuestos | 3
+EM | LR | 4 | Mecánica | LR-Listado de Repuestos | 4 | Seguridad en el Diseño | PR-Procedimientos | MecánicaLR-Listado de Repuestos | 4
+EM | MC | 1 | Mecánica | MC-Memoria de Cálculo | 1 | Seguridad en el Diseño | RI-Requerimiento | MecánicaMC-Memoria de Cálculo | 1
+EM | MC | 2 | Mecánica | MC-Memoria de Cálculo | 2 | Seguridad en el Diseño | RL-Relevamiento | MecánicaMC-Memoria de Cálculo | 2
+EM | MC | 3 | Mecánica | MC-Memoria de Cálculo | 3 | Seguridad en el Diseño | TE-Plantilla | MecánicaMC-Memoria de Cálculo | 3
+EM | MC | 4 | Mecánica | MC-Memoria de Cálculo | 4 | MecánicaMC-Memoria de Cálculo | 4
+EM | MD | 1 | No | Mecánica | MD-Memoria Descriptiva | 1 | MecánicaMD-Memoria Descriptiva | 1
+EM | MD | 2 | No | Mecánica | MD-Memoria Descriptiva | 2 | MecánicaMD-Memoria Descriptiva | 2
+EM | MO | 1 | No | Mecánica | MO-Manual de Operaciones | 1 | MecánicaMO-Manual de Operaciones | 1
+EM | MO | 2 | No | Mecánica | MO-Manual de Operaciones | 2 | MecánicaMO-Manual de Operaciones | 2
+EM | MQ | 1 | No | Mecánica | MQ-Maqueta | 1 | MecánicaMQ-Maqueta | 1
+EM | MQ | 2 | No | Mecánica | MQ-Maqueta | 2 | MecánicaMQ-Maqueta | 2
+EM | OD | 1 | Mecánica | OD-Otros Documentos | 1 | MecánicaOD-Otros Documentos | 1
+EM | OD | 2 | Mecánica | OD-Otros Documentos | 2 | MecánicaOD-Otros Documentos | 2
+EM | OD | 3 | Mecánica | OD-Otros Documentos | 3 | MecánicaOD-Otros Documentos | 3
+EM | OD | 4 | Mecánica | OD-Otros Documentos | 4 | MecánicaOD-Otros Documentos | 4
+EM | OD | 5 | Mecánica | OD-Otros Documentos | 5 | MecánicaOD-Otros Documentos | 5
+EM | PL | 1 | Mecánica | PL-Plano | 1 | MecánicaPL-Plano | 1
+EM | PL | 2 | Mecánica | PL-Plano | 2 | MecánicaPL-Plano | 2
+EM | PL | 3 | Mecánica | PL-Plano | 3 | MecánicaPL-Plano | 3
+EM | PL | 4 | Mecánica | PL-Plano | 4 | MecánicaPL-Plano | 4
+EM | PL | 5 | Mecánica | PL-Plano | 5 | MecánicaPL-Plano | 5
+EM | PL | 6 | Mecánica | PL-Plano | 6 | MecánicaPL-Plano | 6
+EM | PL | 7 | Mecánica | PL-Plano | 7 | MecánicaPL-Plano | 7
+EM | PL | 8 | Mecánica | PL-Plano | 8 | MecánicaPL-Plano | 8
+EM | PL | 9 | Mecánica | PL-Plano | 9 | MecánicaPL-Plano | 9
+EM | PL | 10 | Mecánica | PL-Plano | 10 | MecánicaPL-Plano | 10
+EM | PL | 11 | Mecánica | PL-Plano | 11 | MecánicaPL-Plano | 11
+EM | PL | 12 | Mecánica | PL-Plano | 12 | MecánicaPL-Plano | 12
+EM | PL | 13 | Mecánica | PL-Plano | 13 | MecánicaPL-Plano | 13
+EM | PL | 14 | Mecánica | PL-Plano | 14 | MecánicaPL-Plano | 14
+EM | PL | 15 | Mecánica | PL-Plano | 15 | MecánicaPL-Plano | 15
+EM | PL | 16 | Mecánica | PL-Plano | 16 | MecánicaPL-Plano | 16
+EM | PL | 17 | Mecánica | PL-Plano | 17 | MecánicaPL-Plano | 17
+EM | PL | 18 | Mecánica | PL-Plano | 18 | MecánicaPL-Plano | 18
+EM | PR | 1 | No | Mecánica | PR-Procedimientos | 1 | MecánicaPR-Procedimientos | 1
+EM | PR | 2 | No | Mecánica | PR-Procedimientos | 2 | MecánicaPR-Procedimientos | 2
+EM | RI | 1 | No | Mecánica | RI-Requerimiento | 1 | MecánicaRI-Requerimiento | 1
+EM | RI | 2 | No | Mecánica | RI-Requerimiento | 2 | MecánicaRI-Requerimiento | 2
+EM | RL | 1 | No | Mecánica | RL-Relevamiento | 1 | MecánicaRL-Relevamiento | 1
+EM | RL | 2 | No | Mecánica | RL-Relevamiento | 2 | MecánicaRL-Relevamiento | 2
+EM | SP | 1 | No | Mecánica | SP-Simulación | 1 | MecánicaSP-Simulación | 1
+EM | SP | 2 | No | Mecánica | SP-Simulación | 2 | MecánicaSP-Simulación | 2
+EM | TM | 1 | No | Mecánica | TM-Tipico de Montaje | 1 | MecánicaTM-Tipico de Montaje | 1
+EM | TM | 2 | No | Mecánica | TM-Tipico de Montaje | 2 | MecánicaTM-Tipico de Montaje | 2
+EM | LF | 1 | No | Mecánica | LF-Lista de Pendientes | 1 | MecánicaLF-Lista de Pendientes | 1
+EM | LF | 2 | No | Mecánica | LF-Lista de Pendientes | 2 | MecánicaLF-Lista de Pendientes | 2
+ES | AA | 1 | No | Estructuras | AA-Análisis de Consistencia de Ingeniería | 1 | EstructurasAA-Análisis de Consistencia de Ingeniería | 1
+ES | AA | 2 | No | Estructuras | AA-Análisis de Consistencia de Ingeniería | 2 | EstructurasAA-Análisis de Consistencia de Ingeniería | 2
+ES | AT | 1 | No | Estructuras | AT-Análisis Técnico | 1 | EstructurasAT-Análisis Técnico | 1
+ES | AT | 2 | No | Estructuras | AT-Análisis Técnico | 2 | EstructurasAT-Análisis Técnico | 2
+ES | BD | 1 | No | Estructuras | BD-Bases y Criterios de Diseño | 1 | EstructurasBD-Bases y Criterios de Diseño | 1
+ES | BD | 2 | No | Estructuras | BD-Bases y Criterios de Diseño | 2 | EstructurasBD-Bases y Criterios de Diseño | 2
+ES | CO | 1 | No | Estructuras | CO-Computo / Planilla de Cotización | 1 | EstructurasCO-Computo / Planilla de Cotización | 1
+ES | CO | 2 | No | Estructuras | CO-Computo / Planilla de Cotización | 2 | EstructurasCO-Computo / Planilla de Cotización | 2
+ES | DD | 1 | No | Estructuras | DD-Datos de Diseño | 1 | EstructurasDD-Datos de Diseño | 1
+ES | DD | 2 | No | Estructuras | DD-Datos de Diseño | 2 | EstructurasDD-Datos de Diseño | 2
+ES | ES | 1 | No | Estructuras | ES-Estudio Especial | 1 | EstructurasES-Estudio Especial | 1
+ES | ES | 2 | No | Estructuras | ES-Estudio Especial | 2 | EstructurasES-Estudio Especial | 2
+ES | ET | 1 | No | Estructuras | ET-Especificación Técnica | 1 | EstructurasET-Especificación Técnica | 1
+ES | ET | 2 | No | Estructuras | ET-Especificación Técnica | 2 | EstructurasET-Especificación Técnica | 2
+ES | HD | 1 | No | Estructuras | HD-Hoja de Datos | 1 | EstructurasHD-Hoja de Datos | 1
+ES | HD | 2 | No | Estructuras | HD-Hoja de Datos | 2 | EstructurasHD-Hoja de Datos | 2
+ES | IN | 1 | No | Estructuras | IN-Informes | 1 | EstructurasIN-Informes | 1
+ES | IN | 2 | No | Estructuras | IN-Informes | 2 | EstructurasIN-Informes | 2
+ES | LM | 1 | No | Estructuras | LM-Lista de Materiales | 1 | EstructurasLM-Lista de Materiales | 1
+ES | LM | 2 | No | Estructuras | LM-Lista de Materiales | 2 | EstructurasLM-Lista de Materiales | 2
+ES | LP | 1 | No | Estructuras | LP-Lista Particular | 1 | EstructurasLP-Lista Particular | 1
+ES | LP | 2 | No | Estructuras | LP-Lista Particular | 2 | EstructurasLP-Lista Particular | 2
+ES | MC | 1 | No | Estructuras | MC-Memoria de Cálculo | 1 | EstructurasMC-Memoria de Cálculo | 1
+ES | MC | 2 | No | Estructuras | MC-Memoria de Cálculo | 2 | EstructurasMC-Memoria de Cálculo | 2
+ES | MD | 1 | No | Estructuras | MD-Memoria Descriptiva | 1 | EstructurasMD-Memoria Descriptiva | 1
+ES | MD | 2 | No | Estructuras | MD-Memoria Descriptiva | 2 | EstructurasMD-Memoria Descriptiva | 2
+ES | MQ | 1 | No | Estructuras | MQ-Maqueta | 1 | EstructurasMQ-Maqueta | 1
+ES | MQ | 2 | No | Estructuras | MQ-Maqueta | 2 | EstructurasMQ-Maqueta | 2
+ES | PL | 1 | No | Estructuras | PL-Plano | 1 | EstructurasPL-Plano | 1
+ES | PL | 2 | No | Estructuras | PL-Plano | 2 | EstructurasPL-Plano | 2
+ES | PR | 1 | No | Estructuras | PR-Procedimientos | 1 | EstructurasPR-Procedimientos | 1
+ES | PR | 2 | No | Estructuras | PR-Procedimientos | 2 | EstructurasPR-Procedimientos | 2
+ES | RI | 1 | No | Estructuras | RI-Requerimiento | 1 | EstructurasRI-Requerimiento | 1
+ES | RI | 2 | No | Estructuras | RI-Requerimiento | 2 | EstructurasRI-Requerimiento | 2
+ES | RL | 1 | No | Estructuras | RL-Relevamiento | 1 | EstructurasRL-Relevamiento | 1
+ES | RL | 2 | No | Estructuras | RL-Relevamiento | 2 | EstructurasRL-Relevamiento | 2
+ES | SP | 1 | No | Estructuras | SP-Simulación | 1 | EstructurasSP-Simulación | 1
+ES | SP | 2 | No | Estructuras | SP-Simulación | 2 | EstructurasSP-Simulación | 2
+ES | TM | 1 | No | Estructuras | TM-Tipico de Montaje | 1 | EstructurasTM-Tipico de Montaje | 1
+ES | TM | 2 | No | Estructuras | TM-Tipico de Montaje | 2 | EstructurasTM-Tipico de Montaje | 2
+ES | LF | 1 | No | Estructuras | LF-Lista de Pendientes | 1 | EstructurasLF-Lista de Pendientes | 1
+ES | LF | 2 | No | Estructuras | LF-Lista de Pendientes | 2 | EstructurasLF-Lista de Pendientes | 2
+IN | AA | 1 | No | Instrumentación y Control | AA-Análisis de Consistencia de Ingeniería | 1 | Instrumentación y ControlAA-Análisis de Consistencia de Ingeniería | 1
+IN | AA | 2 | No | Instrumentación y Control | AA-Análisis de Consistencia de Ingeniería | 2 | Instrumentación y ControlAA-Análisis de Consistencia de Ingeniería | 2
+IN | AT | 1 | No | Instrumentación y Control | AT-Análisis Técnico | 1 | Instrumentación y ControlAT-Análisis Técnico | 1
+IN | AT | 2 | No | Instrumentación y Control | AT-Análisis Técnico | 2 | Instrumentación y ControlAT-Análisis Técnico | 2
+IN | BD | 1 | No | Instrumentación y Control | BD-Bases y Criterios de Diseño | 1 | Instrumentación y ControlBD-Bases y Criterios de Diseño | 1
+IN | BD | 2 | No | Instrumentación y Control | BD-Bases y Criterios de Diseño | 2 | Instrumentación y ControlBD-Bases y Criterios de Diseño | 2
+IN | CO | 1 | No | Instrumentación y Control | CO-Computo / Planilla de Cotización | 1 | Instrumentación y ControlCO-Computo / Planilla de Cotización | 1
+IN | CO | 2 | No | Instrumentación y Control | CO-Computo / Planilla de Cotización | 2 | Instrumentación y ControlCO-Computo / Planilla de Cotización | 2
+IN | DC | 1 | Instrumentación y Control | DC-Diagrama de Conexionado | 1 | Instrumentación y ControlDC-Diagrama de Conexionado | 1
+IN | DC | 2 | Instrumentación y Control | DC-Diagrama de Conexionado | 2 | Instrumentación y ControlDC-Diagrama de Conexionado | 2
+IN | DC | 3 | Instrumentación y Control | DC-Diagrama de Conexionado | 3 | Instrumentación y ControlDC-Diagrama de Conexionado | 3
+IN | DD | 1 | No | Instrumentación y Control | DD-Datos de Diseño | 1 | Instrumentación y ControlDD-Datos de Diseño | 1
+IN | DD | 2 | No | Instrumentación y Control | DD-Datos de Diseño | 2 | Instrumentación y ControlDD-Datos de Diseño | 2
+IN | DF | 1 | No | Instrumentación y Control | DF-Diagrama de Flujo | 1 | Instrumentación y ControlDF-Diagrama de Flujo | 1
+IN | DF | 2 | No | Instrumentación y Control | DF-Diagrama de Flujo | 2 | Instrumentación y ControlDF-Diagrama de Flujo | 2
+IN | DL | 1 | Instrumentación y Control | DL-Diagrama de Lazos | 1 | Instrumentación y ControlDL-Diagrama de Lazos | 1
+IN | DL | 2 | Instrumentación y Control | DL-Diagrama de Lazos | 2 | Instrumentación y ControlDL-Diagrama de Lazos | 2
+IN | ES | 1 | No | Instrumentación y Control | ES-Estudio Especial | 1 | Instrumentación y ControlES-Estudio Especial | 1
+IN | ES | 2 | No | Instrumentación y Control | ES-Estudio Especial | 2 | Instrumentación y ControlES-Estudio Especial | 2
+IN | ET | 1 | Instrumentación y Control | ET-Especificación Técnica | 1 | Instrumentación y ControlET-Especificación Técnica | 1
+IN | ET | 2 | Instrumentación y Control | ET-Especificación Técnica | 2 | Instrumentación y ControlET-Especificación Técnica | 2
+IN | ET | 3 | Instrumentación y Control | ET-Especificación Técnica | 3 | Instrumentación y ControlET-Especificación Técnica | 3
+IN | HD | 1 | Instrumentación y Control | HD-Hoja de Datos | 1 | Instrumentación y ControlHD-Hoja de Datos | 1
+IN | HD | 2 | Instrumentación y Control | HD-Hoja de Datos | 2 | Instrumentación y ControlHD-Hoja de Datos | 2
+IN | HD | 3 | Instrumentación y Control | HD-Hoja de Datos | 3 | Instrumentación y ControlHD-Hoja de Datos | 3
+IN | HD | 4 | Instrumentación y Control | HD-Hoja de Datos | 4 | Instrumentación y ControlHD-Hoja de Datos | 4
+IN | HD | 5 | Instrumentación y Control | HD-Hoja de Datos | 5 | Instrumentación y ControlHD-Hoja de Datos | 5
+IN | IN | 1 | No | Instrumentación y Control | IN-Informes | 1 | Instrumentación y ControlIN-Informes | 1
+IN | IN | 2 | No | Instrumentación y Control | IN-Informes | 2 | Instrumentación y ControlIN-Informes | 2
+IN | LC | 1 | Instrumentación y Control | LC-Listado de Cables | 1 | Instrumentación y ControlLC-Listado de Cables | 1
+IN | LC | 2 | Instrumentación y Control | LC-Listado de Cables | 2 | Instrumentación y ControlLC-Listado de Cables | 2
+IN | LI | 1 | Instrumentación y Control | LI-Lista de Instrumentos | 1 | Instrumentación y ControlLI-Lista de Instrumentos | 1
+IN | LI | 2 | Instrumentación y Control | LI-Lista de Instrumentos | 2 | Instrumentación y ControlLI-Lista de Instrumentos | 2
+IN | LI | 3 | Instrumentación y Control | LI-Lista de Instrumentos | 3 | Instrumentación y ControlLI-Lista de Instrumentos | 3
+IN | LM | 1 | No | Instrumentación y Control | LM-Lista de Materiales | 1 | Instrumentación y ControlLM-Lista de Materiales | 1
+IN | LM | 2 | No | Instrumentación y Control | LM-Lista de Materiales | 2 | Instrumentación y ControlLM-Lista de Materiales | 2
+IN | LP | 1 | No | Instrumentación y Control | LP-Lista Particular | 1 | Instrumentación y ControlLP-Lista Particular | 1
+IN | LP | 2 | No | Instrumentación y Control | LP-Lista Particular | 2 | Instrumentación y ControlLP-Lista Particular | 2
+IN | LS | 1 | Instrumentación y Control | LS-Lista de Señales | 1 | Instrumentación y ControlLS-Lista de Señales | 1
+IN | LS | 2 | Instrumentación y Control | LS-Lista de Señales | 2 | Instrumentación y ControlLS-Lista de Señales | 2
+IN | LS | 3 | Instrumentación y Control | LS-Lista de Señales | 3 | Instrumentación y ControlLS-Lista de Señales | 3
+IN | LY | 1 | No | Instrumentación y Control | LY-Lay Out | 1 | Instrumentación y ControlLY-Lay Out | 1
+IN | LY | 2 | No | Instrumentación y Control | LY-Lay Out | 2 | Instrumentación y ControlLY-Lay Out | 2
+IN | MC | 1 | Instrumentación y Control | MC-Memoria de Cálculo | 1 | Instrumentación y ControlMC-Memoria de Cálculo | 1
+IN | MC | 2 | Instrumentación y Control | MC-Memoria de Cálculo | 2 | Instrumentación y ControlMC-Memoria de Cálculo | 2
+IN | MD | 1 | Instrumentación y Control | MD-Memoria Descriptiva | 1 | Instrumentación y ControlMD-Memoria Descriptiva | 1
+IN | MD | 2 | Instrumentación y Control | MD-Memoria Descriptiva | 2 | Instrumentación y ControlMD-Memoria Descriptiva | 2
+IN | MD | 3 | Instrumentación y Control | MD-Memoria Descriptiva | 3 | Instrumentación y ControlMD-Memoria Descriptiva | 3
+IN | MO | 1 | Instrumentación y Control | MO-Manual de Operaciones | 1 | Instrumentación y ControlMO-Manual de Operaciones | 1
+IN | MO | 2 | Instrumentación y Control | MO-Manual de Operaciones | 2 | Instrumentación y ControlMO-Manual de Operaciones | 2
+IN | MQ | 1 | No | Instrumentación y Control | MQ-Maqueta | 1 | Instrumentación y ControlMQ-Maqueta | 1
+IN | MQ | 2 | No | Instrumentación y Control | MQ-Maqueta | 2 | Instrumentación y ControlMQ-Maqueta | 2
+IN | PE | 1 | No | Instrumentación y Control | PE-Plan de Inspección y Ensayo | 1 | Instrumentación y ControlPE-Plan de Inspección y Ensayo | 1
+IN | PE | 2 | No | Instrumentación y Control | PE-Plan de Inspección y Ensayo | 2 | Instrumentación y ControlPE-Plan de Inspección y Ensayo | 2
+IN | PL | 1 | Instrumentación y Control | PL-Plano | 1 | Instrumentación y ControlPL-Plano | 1
+IN | PL | 2 | Instrumentación y Control | PL-Plano | 2 | Instrumentación y ControlPL-Plano | 2
+IN | PL | 3 | Instrumentación y Control | PL-Plano | 3 | Instrumentación y ControlPL-Plano | 3
+IN | PL | 4 | Instrumentación y Control | PL-Plano | 4 | Instrumentación y ControlPL-Plano | 4
+IN | PL | 5 | Instrumentación y Control | PL-Plano | 5 | Instrumentación y ControlPL-Plano | 5
+IN | PR | 1 | No | Instrumentación y Control | PR-Procedimientos | 1 | Instrumentación y ControlPR-Procedimientos | 1
+IN | PR | 2 | No | Instrumentación y Control | PR-Procedimientos | 2 | Instrumentación y ControlPR-Procedimientos | 2
+IN | RI | 1 | No | Instrumentación y Control | RI-Requerimiento | 1 | Instrumentación y ControlRI-Requerimiento | 1
+IN | RI | 2 | No | Instrumentación y Control | RI-Requerimiento | 2 | Instrumentación y ControlRI-Requerimiento | 2
+IN | RL | 1 | No | Instrumentación y Control | RL-Relevamiento | 1 | Instrumentación y ControlRL-Relevamiento | 1
+IN | RL | 2 | No | Instrumentación y Control | RL-Relevamiento | 2 | Instrumentación y ControlRL-Relevamiento | 2
+IN | TM | 1 | No | Instrumentación y Control | TM-Tipico de Montaje | 1 | Instrumentación y ControlTM-Tipico de Montaje | 1
+IN | TM | 2 | No | Instrumentación y Control | TM-Tipico de Montaje | 2 | Instrumentación y ControlTM-Tipico de Montaje | 2
+IN | LF | 1 | No | Instrumentación y Control | LF-Lista de Pendientes | 1 | Instrumentación y ControlLF-Lista de Pendientes | 1
+IN | LF | 2 | No | Instrumentación y Control | LF-Lista de Pendientes | 2 | Instrumentación y ControlLF-Lista de Pendientes | 2
+PI | AA | 1 | No | Cañerías | AA-Análisis de Consistencia de Ingeniería | 1 | CañeríasAA-Análisis de Consistencia de Ingeniería | 1
+PI | AA | 2 | No | Cañerías | AA-Análisis de Consistencia de Ingeniería | 2 | CañeríasAA-Análisis de Consistencia de Ingeniería | 2
+PI | AT | 1 | No | Cañerías | AT-Análisis Técnico | 1 | CañeríasAT-Análisis Técnico | 1
+PI | AT | 2 | No | Cañerías | AT-Análisis Técnico | 2 | CañeríasAT-Análisis Técnico | 2
+PI | BD | 1 | No | Cañerías | BD-Bases y Criterios de Diseño | 1 | CañeríasBD-Bases y Criterios de Diseño | 1
+PI | BD | 2 | No | Cañerías | BD-Bases y Criterios de Diseño | 2 | CañeríasBD-Bases y Criterios de Diseño | 2
+PI | CO | 1 | No | Cañerías | CO-Computo / Planilla de Cotización | 1 | CañeríasCO-Computo / Planilla de Cotización | 1
+PI | CO | 2 | No | Cañerías | CO-Computo / Planilla de Cotización | 2 | CañeríasCO-Computo / Planilla de Cotización | 2
+PI | DD | 1 | No | Cañerías | DD-Datos de Diseño | 1 | CañeríasDD-Datos de Diseño | 1
+PI | DD | 2 | No | Cañerías | DD-Datos de Diseño | 2 | CañeríasDD-Datos de Diseño | 2
+PI | ES | 1 | No | Cañerías | ES-Estudio Especial | 1 | CañeríasES-Estudio Especial | 1
+PI | ES | 2 | No | Cañerías | ES-Estudio Especial | 2 | CañeríasES-Estudio Especial | 2
+PI | ET | 1 | No | Cañerías | ET-Especificación Técnica | 1 | CañeríasET-Especificación Técnica | 1
+PI | ET | 2 | No | Cañerías | ET-Especificación Técnica | 2 | CañeríasET-Especificación Técnica | 2
+PI | HD | 1 | No | Cañerías | HD-Hoja de Datos | 1 | CañeríasHD-Hoja de Datos | 1
+PI | HD | 2 | No | Cañerías | HD-Hoja de Datos | 2 | CañeríasHD-Hoja de Datos | 2
+PI | IN | 1 | No | Cañerías | IN-Informes | 1 | CañeríasIN-Informes | 1
+PI | IN | 2 | No | Cañerías | IN-Informes | 2 | CañeríasIN-Informes | 2
+PI | IS | 1 | Cañerías | IS-Isometricos | 1 | CañeríasIS-Isometricos | 1
+PI | IS | 2 | Cañerías | IS-Isometricos | 2 | CañeríasIS-Isometricos | 2
+PI | IS | 3 | Cañerías | IS-Isometricos | 3 | CañeríasIS-Isometricos | 3
+PI | LL | 1 | No | Cañerías | LL-Lista de Lineas | 1 | CañeríasLL-Lista de Lineas | 1
+PI | LL | 2 | No | Cañerías | LL-Lista de Lineas | 2 | CañeríasLL-Lista de Lineas | 2
+PI | LM | 1 | Cañerías | LM-Lista de Materiales | 1 | CañeríasLM-Lista de Materiales | 1
+PI | LM | 2 | Cañerías | LM-Lista de Materiales | 2 | CañeríasLM-Lista de Materiales | 2
+PI | LM | 3 | Cañerías | LM-Lista de Materiales | 3 | CañeríasLM-Lista de Materiales | 3
+PI | LP | 1 | Cañerías | LP-Lista Particular | 1 | CañeríasLP-Lista Particular | 1
+PI | LP | 2 | Cañerías | LP-Lista Particular | 2 | CañeríasLP-Lista Particular | 2
+PI | LP | 3 | Cañerías | LP-Lista Particular | 3 | CañeríasLP-Lista Particular | 3
+PI | LR | 1 | No | Cañerías | LR-Listado de Repuestos | 1 | CañeríasLR-Listado de Repuestos | 1
+PI | LR | 2 | No | Cañerías | LR-Listado de Repuestos | 2 | CañeríasLR-Listado de Repuestos | 2
+PI | LY | 1 | No | Cañerías | LY-Lay Out | 1 | CañeríasLY-Lay Out | 1
+PI | LY | 2 | No | Cañerías | LY-Lay Out | 2 | CañeríasLY-Lay Out | 2
+PI | MC | 1 | No | Cañerías | MC-Memoria de Cálculo | 1 | CañeríasMC-Memoria de Cálculo | 1
+PI | MC | 2 | No | Cañerías | MC-Memoria de Cálculo | 2 | CañeríasMC-Memoria de Cálculo | 2
+PI | MD | 1 | No | Cañerías | MD-Memoria Descriptiva | 1 | CañeríasMD-Memoria Descriptiva | 1
+PI | MD | 2 | No | Cañerías | MD-Memoria Descriptiva | 2 | CañeríasMD-Memoria Descriptiva | 2
+PI | MQ | 1 | Cañerías | MQ-Maqueta | 1 | CañeríasMQ-Maqueta | 1
+PI | MQ | 2 | Cañerías | MQ-Maqueta | 2 | CañeríasMQ-Maqueta | 2
+PI | MQ | 3 | Cañerías | MQ-Maqueta | 3 | CañeríasMQ-Maqueta | 3
+PI | PL | 1 | Cañerías | PL-Plano | 1 | CañeríasPL-Plano | 1
+PI | PL | 2 | Cañerías | PL-Plano | 2 | CañeríasPL-Plano | 2
+PI | PL | 3 | Cañerías | PL-Plano | 3 | CañeríasPL-Plano | 3
+PI | PR | 1 | No | Cañerías | PR-Procedimientos | 1 | CañeríasPR-Procedimientos | 1
+PI | PR | 2 | No | Cañerías | PR-Procedimientos | 2 | CañeríasPR-Procedimientos | 2
+PI | RI | 1 | No | Cañerías | RI-Requerimiento | 1 | CañeríasRI-Requerimiento | 1
+PI | RI | 2 | No | Cañerías | RI-Requerimiento | 2 | CañeríasRI-Requerimiento | 2
+PI | RL | 1 | No | Cañerías | RL-Relevamiento | 1 | CañeríasRL-Relevamiento | 1
+PI | RL | 2 | No | Cañerías | RL-Relevamiento | 2 | CañeríasRL-Relevamiento | 2
+PI | SP | 1 | No | Cañerías | SP-Simulación | 1 | CañeríasSP-Simulación | 1
+PI | SP | 2 | No | Cañerías | SP-Simulación | 2 | CañeríasSP-Simulación | 2
+PI | TM | 1 | No | Cañerías | TM-Tipico de Montaje | 1 | CañeríasTM-Tipico de Montaje | 1
+PI | TM | 2 | No | Cañerías | TM-Tipico de Montaje | 2 | CañeríasTM-Tipico de Montaje | 2
+PI | LF | 1 | No | Cañerías | LF-Lista de Pendientes | 1 | CañeríasLF-Lista de Pendientes | 1
+PI | LF | 2 | No | Cañerías | LF-Lista de Pendientes | 2 | CañeríasLF-Lista de Pendientes | 2
+PR | AA | 1 | No | Proceso | AA-Análisis de Consistencia de Ingeniería | 1 | ProcesoAA-Análisis de Consistencia de Ingeniería | 1
+PR | AA | 2 | No | Proceso | AA-Análisis de Consistencia de Ingeniería | 2 | ProcesoAA-Análisis de Consistencia de Ingeniería | 2
+PR | AT | 1 | No | Proceso | AT-Análisis Técnico | 1 | ProcesoAT-Análisis Técnico | 1
+PR | AT | 2 | No | Proceso | AT-Análisis Técnico | 2 | ProcesoAT-Análisis Técnico | 2
+PR | BD | 1 | No | Proceso | BD-Bases y Criterios de Diseño | 1 | ProcesoBD-Bases y Criterios de Diseño | 1
+PR | BD | 2 | No | Proceso | BD-Bases y Criterios de Diseño | 2 | ProcesoBD-Bases y Criterios de Diseño | 2
+PR | BM | 1 | No | Proceso | BM-Balance Materia y Energia | 1 | ProcesoBM-Balance Materia y Energia | 1
+PR | BM | 2 | No | Proceso | BM-Balance Materia y Energia | 2 | ProcesoBM-Balance Materia y Energia | 2
+PR | DD | 1 | No | Proceso | DD-Datos de Diseño | 1 | ProcesoDD-Datos de Diseño | 1
+PR | DD | 2 | No | Proceso | DD-Datos de Diseño | 2 | ProcesoDD-Datos de Diseño | 2
+PR | DF | 1 | No | Proceso | DF-Diagrama de Flujo | 1 | ProcesoDF-Diagrama de Flujo | 1
+PR | DF | 2 | No | Proceso | DF-Diagrama de Flujo | 2 | ProcesoDF-Diagrama de Flujo | 2
+PR | ES | 1 | No | Proceso | ES-Estudio Especial | 1 | ProcesoES-Estudio Especial | 1
+PR | ES | 2 | No | Proceso | ES-Estudio Especial | 2 | ProcesoES-Estudio Especial | 2
+PR | ET | 1 | No | Proceso | ET-Especificación Técnica | 1 | ProcesoET-Especificación Técnica | 1
+PR | ET | 2 | No | Proceso | ET-Especificación Técnica | 2 | ProcesoET-Especificación Técnica | 2
+PR | HD | 1 | Proceso | HD-Hoja de Datos | 1 | ProcesoHD-Hoja de Datos | 1
+PR | HD | 2 | Proceso | HD-Hoja de Datos | 2 | ProcesoHD-Hoja de Datos | 2
+PR | HD | 3 | Proceso | HD-Hoja de Datos | 3 | ProcesoHD-Hoja de Datos | 3
+PR | HD | 4 | Proceso | HD-Hoja de Datos | 4 | ProcesoHD-Hoja de Datos | 4
+PR | IN | 1 | No | Proceso | IN-Informes | 1 | ProcesoIN-Informes | 1
+PR | IN | 2 | No | Proceso | IN-Informes | 2 | ProcesoIN-Informes | 2
+PR | LL | 1 | No | Proceso | LL-Lista de Lineas | 1 | ProcesoLL-Lista de Lineas | 1
+PR | LL | 2 | No | Proceso | LL-Lista de Lineas | 2 | ProcesoLL-Lista de Lineas | 2
+PR | LM | 1 | No | Proceso | LM-Lista de Materiales | 1 | ProcesoLM-Lista de Materiales | 1
+PR | LM | 2 | No | Proceso | LM-Lista de Materiales | 2 | ProcesoLM-Lista de Materiales | 2
+PR | LP | 1 | No | Proceso | LP-Lista Particular | 1 | ProcesoLP-Lista Particular | 1
+PR | LP | 2 | No | Proceso | LP-Lista Particular | 2 | ProcesoLP-Lista Particular | 2
+PR | LQ | 1 | No | Proceso | LQ-Lista de Equipos | 1 | ProcesoLQ-Lista de Equipos | 1
+PR | LQ | 2 | No | Proceso | LQ-Lista de Equipos | 2 | ProcesoLQ-Lista de Equipos | 2
+PR | MC | 1 | Proceso | MC-Memoria de Cálculo | 1 | ProcesoMC-Memoria de Cálculo | 1
+PR | MC | 2 | Proceso | MC-Memoria de Cálculo | 2 | ProcesoMC-Memoria de Cálculo | 2
+PR | MC | 3 | Proceso | MC-Memoria de Cálculo | 3 | ProcesoMC-Memoria de Cálculo | 3
+PR | MD | 1 | No | Proceso | MD-Memoria Descriptiva | 1 | ProcesoMD-Memoria Descriptiva | 1
+PR | MD | 2 | No | Proceso | MD-Memoria Descriptiva | 2 | ProcesoMD-Memoria Descriptiva | 2
+PR | MO | 1 | No | Proceso | MO-Manual de Operaciones | 1 | ProcesoMO-Manual de Operaciones | 1
+PR | MO | 2 | No | Proceso | MO-Manual de Operaciones | 2 | ProcesoMO-Manual de Operaciones | 2
+PR | MZ | 1 | Proceso | MZ-Matriz Causa-Efecto | 1 | ProcesoMZ-Matriz Causa-Efecto | 1
+PR | MZ | 2 | Proceso | MZ-Matriz Causa-Efecto | 2 | ProcesoMZ-Matriz Causa-Efecto | 2
+PR | MZ | 3 | Proceso | MZ-Matriz Causa-Efecto | 3 | ProcesoMZ-Matriz Causa-Efecto | 3
+PR | OD | 1 | Proceso | OD-Otros Documentos | 1 | ProcesoOD-Otros Documentos | 1
+PR | OD | 2 | Proceso | OD-Otros Documentos | 2 | ProcesoOD-Otros Documentos | 2
+PR | OD | 3 | Proceso | OD-Otros Documentos | 3 | ProcesoOD-Otros Documentos | 3
+PR | OD | 4 | Proceso | OD-Otros Documentos | 4 | ProcesoOD-Otros Documentos | 4
+PR | PI | 1 | Proceso | PI-Diagrama P&ID | 1 | ProcesoPI-Diagrama P&ID | 1
+PR | PI | 2 | Proceso | PI-Diagrama P&ID | 2 | ProcesoPI-Diagrama P&ID | 2
+PR | PI | 3 | Proceso | PI-Diagrama P&ID | 3 | ProcesoPI-Diagrama P&ID | 3
+PR | PL | 1 | No | Proceso | PL-Plano | 1 | ProcesoPL-Plano | 1
+PR | PL | 2 | No | Proceso | PL-Plano | 2 | ProcesoPL-Plano | 2
+PR | PR | 1 | No | Proceso | PR-Procedimientos | 1 | ProcesoPR-Procedimientos | 1
+PR | PR | 2 | No | Proceso | PR-Procedimientos | 2 | ProcesoPR-Procedimientos | 2
+PR | RI | 1 | No | Proceso | RI-Requerimiento | 1 | ProcesoRI-Requerimiento | 1
+PR | RI | 2 | No | Proceso | RI-Requerimiento | 2 | ProcesoRI-Requerimiento | 2
+PR | RL | 1 | No | Proceso | RL-Relevamiento | 1 | ProcesoRL-Relevamiento | 1
+PR | RL | 2 | No | Proceso | RL-Relevamiento | 2 | ProcesoRL-Relevamiento | 2
+PR | CA | 1 | No | Proceso | CA- Cambio de Alcance | 1 | ProcesoCA- Cambio de Alcance | 1
+PR | CA | 2 | No | Proceso | CA- Cambio de Alcance | 2 | ProcesoCA- Cambio de Alcance | 2
+PR | IT | 1 | No | Proceso | IT-Instructivo | 1 | ProcesoIT-Instructivo | 1
+PR | IT | 2 | No | Proceso | IT-Instructivo | 2 | ProcesoIT-Instructivo | 2
+PR | TE | 1 | No | Proceso | TE-Plantilla | 1 | ProcesoTE-Plantilla | 1
+PR | TE | 2 | No | Proceso | TE-Plantilla | 2 | ProcesoTE-Plantilla | 2
+PR | MR | 1 | No | Proceso | MR-Minuta de Reunion | 1 | ProcesoMR-Minuta de Reunion | 1
+PR | MR | 2 | No | Proceso | MR-Minuta de Reunion | 2 | ProcesoMR-Minuta de Reunion | 2
+PR | NT | 1 | No | Proceso | NT-Nota Técnica | 1 | ProcesoNT-Nota Técnica | 1
+PR | NT | 2 | No | Proceso | NT-Nota Técnica | 2 | ProcesoNT-Nota Técnica | 2
+PR | LF | 1 | No | Proceso | LF-Lista de Pendientes | 1 | ProcesoLF-Lista de Pendientes | 1
+PR | LF | 2 | No | Proceso | LF-Lista de Pendientes | 2 | ProcesoLF-Lista de Pendientes | 2
+SD | AA | 1 | No | Seguridad en el Diseño | AA-Análisis de Consistencia de Ingeniería | 1 | Seguridad en el DiseñoAA-Análisis de Consistencia de Ingeniería | 1
+SD | AA | 2 | No | Seguridad en el Diseño | AA-Análisis de Consistencia de Ingeniería | 2 | Seguridad en el DiseñoAA-Análisis de Consistencia de Ingeniería | 2
+SD | AT | 1 | No | Seguridad en el Diseño | AT-Análisis Técnico | 1 | Seguridad en el DiseñoAT-Análisis Técnico | 1
+SD | AT | 2 | No | Seguridad en el Diseño | AT-Análisis Técnico | 2 | Seguridad en el DiseñoAT-Análisis Técnico | 2
+SD | BD | 1 | No | Seguridad en el Diseño | BD-Bases y Criterios de Diseño | 1 | Seguridad en el DiseñoBD-Bases y Criterios de Diseño | 1
+SD | BD | 2 | No | Seguridad en el Diseño | BD-Bases y Criterios de Diseño | 2 | Seguridad en el DiseñoBD-Bases y Criterios de Diseño | 2
+SD | CA | 1 | No | Seguridad en el Diseño | CA- Cambio de Alcance | 1 | Seguridad en el DiseñoCA- Cambio de Alcance | 1
+SD | CA | 2 | No | Seguridad en el Diseño | CA- Cambio de Alcance | 2 | Seguridad en el DiseñoCA- Cambio de Alcance | 2
+SD | CO | 1 | No | Seguridad en el Diseño | CO-Computo / Planilla de Cotización | 1 | Seguridad en el DiseñoCO-Computo / Planilla de Cotización | 1
+SD | CO | 2 | No | Seguridad en el Diseño | CO-Computo / Planilla de Cotización | 2 | Seguridad en el DiseñoCO-Computo / Planilla de Cotización | 2
+SD | ES | 1 | No | Seguridad en el Diseño | ES-Estudio Especial | 1 | Seguridad en el DiseñoES-Estudio Especial | 1
+SD | ES | 2 | No | Seguridad en el Diseño | ES-Estudio Especial | 2 | Seguridad en el DiseñoES-Estudio Especial | 2
+SD | ET | 1 | No | Seguridad en el Diseño | ET-Especificación Técnica | 1 | Seguridad en el DiseñoET-Especificación Técnica | 1
+SD | ET | 2 | No | Seguridad en el Diseño | ET-Especificación Técnica | 2 | Seguridad en el DiseñoET-Especificación Técnica | 2
+SD | HD | 1 | No | Seguridad en el Diseño | HD-Hoja de Datos | 1 | Seguridad en el DiseñoHD-Hoja de Datos | 1
+SD | HD | 2 | No | Seguridad en el Diseño | HD-Hoja de Datos | 2 | Seguridad en el DiseñoHD-Hoja de Datos | 2
+SD | IN | 1 | No | Seguridad en el Diseño | IN-Informes | 1 | Seguridad en el DiseñoIN-Informes | 1
+SD | IN | 2 | No | Seguridad en el Diseño | IN-Informes | 2 | Seguridad en el DiseñoIN-Informes | 2
+SD | IT | 1 | No | Seguridad en el Diseño | IT-Instructivo | 1 | Seguridad en el DiseñoIT-Instructivo | 1
+SD | IT | 2 | No | Seguridad en el Diseño | IT-Instructivo | 2 | Seguridad en el DiseñoIT-Instructivo | 2
+SD | LF | 1 | No | Seguridad en el Diseño | LF-Lista de Pendientes | 1 | Seguridad en el DiseñoLF-Lista de Pendientes | 1
+SD | LF | 2 | No | Seguridad en el Diseño | LF-Lista de Pendientes | 2 | Seguridad en el DiseñoLF-Lista de Pendientes | 2
+SD | LL | 1 | No | Seguridad en el Diseño | LL-Lista de Lineas | 1 | Seguridad en el DiseñoLL-Lista de Lineas | 1
+SD | LL | 2 | No | Seguridad en el Diseño | LL-Lista de Lineas | 2 | Seguridad en el DiseñoLL-Lista de Lineas | 2
+SD | LP | 1 | No | Seguridad en el Diseño | LP-Lista Particular | 1 | Seguridad en el DiseñoLP-Lista Particular | 1
+SD | LP | 2 | No | Seguridad en el Diseño | LP-Lista Particular | 2 | Seguridad en el DiseñoLP-Lista Particular | 2
+SD | MC | 1 | No | Seguridad en el Diseño | MC-Memoria de Cálculo | 1 | Seguridad en el DiseñoMC-Memoria de Cálculo | 1
+SD | MC | 2 | No | Seguridad en el Diseño | MC-Memoria de Cálculo | 2 | Seguridad en el DiseñoMC-Memoria de Cálculo | 2
+SD | MD | 1 | No | Seguridad en el Diseño | MD-Memoria Descriptiva | 1 | Seguridad en el DiseñoMD-Memoria Descriptiva | 1
+SD | MD | 2 | No | Seguridad en el Diseño | MD-Memoria Descriptiva | 2 | Seguridad en el DiseñoMD-Memoria Descriptiva | 2
+SD | MR | 1 | No | Seguridad en el Diseño | MR-Minuta de Reunion | 1 | Seguridad en el DiseñoMR-Minuta de Reunion | 1
+SD | MR | 2 | No | Seguridad en el Diseño | MR-Minuta de Reunion | 2 | Seguridad en el DiseñoMR-Minuta de Reunion | 2
+SD | NT | 1 | No | Seguridad en el Diseño | NT-Nota Técnica | 1 | Seguridad en el DiseñoNT-Nota Técnica | 1
+SD | NT | 2 | No | Seguridad en el Diseño | NT-Nota Técnica | 2 | Seguridad en el DiseñoNT-Nota Técnica | 2
+SD | PI | 1 | No | Seguridad en el Diseño | PI-Diagrama P&ID | 1 | Seguridad en el DiseñoPI-Diagrama P&ID | 1
+SD | PI | 2 | No | Seguridad en el Diseño | PI-Diagrama P&ID | 2 | Seguridad en el DiseñoPI-Diagrama P&ID | 2
+SD | PL | 1 | No | Seguridad en el Diseño | PL-Plano | 1 | Seguridad en el DiseñoPL-Plano | 1
+SD | PL | 2 | No | Seguridad en el Diseño | PL-Plano | 2 | Seguridad en el DiseñoPL-Plano | 2
+SD | PR | 1 | No | Seguridad en el Diseño | PR-Procedimientos | 1 | Seguridad en el DiseñoPR-Procedimientos | 1
+SD | PR | 2 | No | Seguridad en el Diseño | PR-Procedimientos | 2 | Seguridad en el DiseñoPR-Procedimientos | 2
+SD | RI | 1 | No | Seguridad en el Diseño | RI-Requerimiento | 1 | Seguridad en el DiseñoRI-Requerimiento | 1
+SD | RI | 2 | No | Seguridad en el Diseño | RI-Requerimiento | 2 | Seguridad en el DiseñoRI-Requerimiento | 2
+SD | RL | 1 | No | Seguridad en el Diseño | RL-Relevamiento | 1 | Seguridad en el DiseñoRL-Relevamiento | 1
+SD | RL | 2 | No | Seguridad en el Diseño | RL-Relevamiento | 2 | Seguridad en el DiseñoRL-Relevamiento | 2
+SD | TE | 1 | No | Seguridad en el Diseño | TE-Plantilla | 1 | Seguridad en el DiseñoTE-Plantilla | 1
+SD | TE | 2 | No | Seguridad en el Diseño | TE-Plantilla | 2 | Seguridad en el DiseñoTE-Plantilla | 2

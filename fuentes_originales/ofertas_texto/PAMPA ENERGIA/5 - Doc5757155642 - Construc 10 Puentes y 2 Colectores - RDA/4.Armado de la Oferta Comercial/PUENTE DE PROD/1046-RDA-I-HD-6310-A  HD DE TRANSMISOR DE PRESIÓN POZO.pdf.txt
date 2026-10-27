@@ -1,0 +1,367 @@
+--- página 1 ---
+A
+REV.
+PROYECTO :
+TITULO :
+DOCUMENTO Nº
+1
+0
+4
+6
+R D A
+I
+H D
+6
+3
+1
+0
+A4
+PARA APROBACIÒN
+GRM
+13/05/25
+FG
+13/05/25
+Prefabricados de pozos RDA
+Pampa Energía S.A.
+HOJA DE DATOS TRANSMISORES DE PRESIÓN
+DESCRIPCION
+PROY.
+FECHA
+APR.
+FECHA
+CALCULO :
+-
+-
+AUTORIZO :
+G.R.M.
+13/5/2025
+1 de 4
+PROYECTO :
+-
+-
+EJECUTO :
+G.R.M.
+13/5/2025
+ESCALA :
+SIN ESCALA
+REVISION :
+REEMPLAZA A :
+-
+<A>
+REALIZADO EN :
+-
+
+--- página 2 ---
+Notas Generales:
+1.-
+2.- 
+3.-
+3, 4
+PIT-0121D
+1046-RDA-R-PI-6000
+A
+Cada transmisor de presión deberá ser provisto con una placa de identificación de acero inoxidable con el
+tag del instrumento impreso y fijada al mismo con alambre de acero inoxidable.
+Los materiales indicados en las hojas de datos determinan la calidad mínima requerida. El proveedor deberá cotizar 
+los mismos o mejores confirmando, además, su aptitud para las condiciones de proceso indicadas.
+El proveedor incluirá la siguiente documentación en castellano: Hoja de datos completa; materiales,
+cumplimiento con normativas aplicables; catálogos técnicos; instrucciones de instalación y puesta en servicio.
+4.- Los efectos de la temperatura y repetitibilidad deberán ser considerados dentro de la precisión total del instrumento.
+3, 4
+PIT-0121C
+1046-RDA-R-PI-6000
+A
+PROYECTO:
+Prefabricados de pozos RDA
+3, 4
+PIT-0121B
+1046-RDA-R-PI-6000
+A
+Página
+TAG
+P&ID
+Revisión
+3, 4
+PIT-0121A
+1046-RDA-R-PI-6000
+A
+CLIENTE:
+PAMPA ENERGIA
+1046-RDA-I-HD-6310
+Página:
+2
+HOJA DE DATOS TRANSMISORES DE PRESIÓN
+De:
+4
+
+--- página 3 ---
+SHEET      3
+OF    4
+SPEC. NO.
+REV
+No
+By
+Date
+Revision
+A
+-
+GRM
+CONTRACT
+DATE
+13/05/25
+REQ.           PO.
+BY
+CHK´D
+APPR.
+GRM
+GRM
+FG
+1
+Tag No.        
+(VER HOJA 4)
+Service
+Line.
+(VER HOJA 4)
+PID. 
+1046-RDA-R-PI-6000
+2
+Function
+Record
+Indicate
+Control
+Blind
+Trans.
+Other
+3
+Case
+MFR STD
+Nom. Size
+Color:   MFRSTD
+Other
+4
+Mounting
+Flush
+Surface
+Yoke
+Other:
+EN LINEA
+5
+Enclosure Class
+General Purpose
+Weather proof
+   Explosion proof
+Class
+Zona 2 
+For Use In Intrin. Safe System
+Other
+6
+Power Supply
+117V 60Hz
+    Other ac
+--
+dc
+24
+Volts
+7
+Chart
+Strip
+  Roll
+          Fold 
+ Circular
+       Time Marks
+Range
+Number
+8
+Chart Drive
+Speed
+Power
+LOOP POWERED
+9
+Scales
+Type
+Range 1
+2
+3
+4
+10 Transmitter
+4-20mA
+10-50mA
+21-103 kPa (3-15 psig)
+Other
+HART
+Output
+For Receiver See Spec Sheet
+11 Control Modes
+P=Prop (Gain)
+I=Integral (Auto-Reset)
+D=Derivative (Rate)
+Sub:  s=slow    F=Fast
+P       PI       PD       PID       If       Df       Is       Ds
+Other
+12 Action
+On Meas. Increate Output:
+Increases
+Deceases
+13 Auto-Man Switch
+None
+MFR STD
+     Other
+14 Set Point Adj.
+Manual
+External
+Remote
+     Other
+15 Manual Reg.
+None
+MFR STD
+     Other
+16 Output
+4-20mA
+10-50mA
+21-103 kPa (3-15 psig)
+Other
+17 Service
+Gage Press.     Vacuum
+    Absolute
+     Compound
+18 Element type
+Diaphragm
+     Helix
+    Bourdon
+     Bellows
+  Other
+19 Material
+316 SS
+Ber. Copper
+    Other
+20 Range
+Fixed
+Adj. Range
+(Nota 4)
+Set at
+Overrange protection to
+(Nota 4)
+21 Process Data
+Press:
+Normal 15-25 kg/cm2g
+Max
+51 kg/cm2g
+Element Range: (Nota 4)
+22 Process Conn.
+¼ in. NPT
+  ½ in. NPT
+    Other
+Location:
+Bottom
+Back
+Other
+23 Alarm Switches
+Quantity
+Form
+Rating
+24 Function
+Press
+Deviation
+   Contacts To 
+on Inc Press.
+25 Options
+Filt-Reg.
+Sup Gage
+ Output Gage
+Charts
+Diaph Seal
+    Type
+Diaph
+Bot Bowl
+Conn
+Capillary:  Length
+Mtl.
+Other
+26
+MFR & Model No.
+Notes:
+(1) Debe ser provisto Manifold 3 vías/ válvula Integral de bloqueo y purga 1/2" R-NPT- M-H AISI 316.
+(2) Marcas recomendadas: Rosemount /ABB / Yokogawa.
+(3) El transmisor será provisto con certificado de calibración.
+(4) A confirmar por proveedor.
+ELEMENT
+0-50 kg/cm2g
+OPTIONS
+(Nota 2)
+CONTROLLER
+ 
+ 
+PRESIÓN SALIDA DE POZO
+GENERAL
+XMTR
+PRESSURE INSTRUMENTS
+I-HD-6310
+13/05/25
+A
+1046-RDA
+
+--- página 4 ---
+SHEET      4
+OF    4
+SPEC. NO.
+REV
+No
+By
+Date
+Revision
+A
+-
+GRM
+CONTRACT
+DATE
+13/05/25
+REQ.           PO.
+BY
+CHK´D
+APPR.
+GRM
+GRM
+FG
+Rev
+Tag No.
+A
+PIT-0121A
+A
+PIT-0121B
+A
+PIT-0121C
+A
+PIT-0121D
+Notas Generales:
+(1) Debe ser provisto Manifold 3 vías/ válvula Integral de bloqueo y purga 1/2" R-NPT- M-H AISI 316.
+(2) Marcas recomendadas: Rosemount /ABB / Yokogawa.
+(3) El transmisor será provisto con certificado de calibración.
+(4) Se especifica cantidad necesaria para 1 (un) PAD. Cantidad de PADS: 6 (seis).
+(5) A confirmar por proveedor.
+PRESSURE INSTRUMENTS
+I-HD-6310
+13/05/25
+A
+1046-RDA
+Adj. Range
+Set Range
+(Nota 5)
+0-51 kg/cm2g
+Presión salida de pozo 3"-HL-B01300-0001-B
+(1), (2), (3), (4)
+ 
+ 
+(Nota 5)
+0-51 kg/cm2g
+Presión salida de pozo 3"-HL-B01300-0004-B
+(Nota 5)
+0-51 kg/cm2g
+(Nota 5)
+0-51 kg/cm2g
+Presión salida de pozo 3"-HL-B01300-0002-B
+Presión salida de pozo 3"-HL-B01300-0003-B
+Notes
+Service
+(1), (2), (3), (4)
+(1), (2), (3), (4)
+(1), (2), (3), (4)

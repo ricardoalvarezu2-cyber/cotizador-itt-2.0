@@ -1,0 +1,455 @@
+--- página 1 ---
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+A 
+EMISION PARA APROBACION 
+ECTech 
+22/07/2026 
+MM 
+22/07/2026
+REV. 
+DESCRIPCIÓN 
+PROY 
+FECHA 
+APR 
+FECHA 
+PROYECTO: 
+ 
+EYP Construcción de PADs y Flowlines -RDA 
+YACIMIENTO RINCÓN DE ARANDA 
+CLIENTE:
+ 
+Pampa Energía S.A. 
+TITULO: 
+ 
+MEMORIA DE CALCULO  
+ 
+ 
+PUENTE DE PRODUCCIÓN POZO RdA-2040 
+DOCUMENTO N°
+1 0 4 6 - R D A - P - M C - 6 4 3
+0
+1 de 14 
+A4
+PRO Y E CT O : 
+ECTech 
+22/07/2026 
+E J EC UT O : 
+ECTech 
+22/07/2026 
+CAL C UL O : 
+ECTech 
+22/07/2026 
+A U T O R I Z O : 
+EC 
+22/07/2026 
+ 
+ 
+ 
+ESTE DOCUMENTO 
+CONTIENE INFORMACIÓN DE 
+PROPIEDAD DE LA EMPRESA 
+Y SUS AFILIADOS, SU 
+REPRODUCCIÓN TOTAL O 
+PARCIAL SIN NUESTRA 
+APROBACIÓN ESCRITA ESTÁ 
+PROHIBIDA. 
+ESCALA: 
+SIN ESCALA 
+REVISION 
+REEMPLAZA A: 
+- 
+A 
+REALIZADO EN: 
+- 
+- 
+ 
+
+--- página 2 ---
+EYP Construcción de PADs y Flowlines -RDA 
+YACIMIENTO RINCÓN DE ARANDA 
+Documento N° 
+1046-RDA-P-MC-6430 
+MEMORIA DE CALCULO  
+PUENTE DE PRODUCCIÓN POZO RdA-2040 
+Fecha: 
+22/07/2026 
+Página 
+2 de 14 
+Revisión
+A 
+ 
+ 
+1. 
+Objetivo. .................................................................................................................................................... 3 
+2. 
+Alcance. ..................................................................................................................................................... 3 
+3. 
+Normas aplicables. ..................................................................................................................................... 3 
+4. 
+Documentos de referencia ......................................................................................................................... 3 
+5. 
+Condiciones de Diseño ............................................................................................................................... 3 
+6. 
+Reporte de Calculo Inspect Compress – Puente de Producción .................................................................. 4 
+ 
+ 
+
+--- página 3 ---
+EYP Construcción de PADs y Flowlines -RDA 
+YACIMIENTO RINCÓN DE ARANDA 
+Documento N° 
+1046-RDA-P-MC-6430 
+MEMORIA DE CALCULO  
+PUENTE DE PRODUCCIÓN POZO RdA-2040 
+Fecha: 
+22/07/2026 
+Página 
+3 de 14 
+Revisión
+A 
+ 
+ 
+1. 
+OBJETIVO. 
+En este documento se lleva cabo la verificación estructural mecánica del cuerpo de la 
+trampa del puente de producción Ø3” #300 de acuerdo con el código ASME B31.3 
+Edición 2016. 
+2. 
+ALCANCE. 
+Se presenta la verificación bajo código ASME B31.3 Edición 2016 del puente de 
+producción previamente mencionado, se utiliza, a tal efecto, el software de cálculo 
+Codeware Inspect 
+3. 
+NORMAS APLICABLES. 
+Se procede con la verificación mecánica y estructural del equipo por medio del 
+software Codeware Inspect de acuerdo con: 
+ 
+ASME B31.3 Ed. 2016. 
+4. 
+DOCUMENTOS DE REFERENCIA 
+ 1046-RDA-P-LY-6430 – Plano Conjunto General 
+ 1046-RDA-P-ET-101-  Piping Class RdA 
+5. 
+CONDICIONES DE DISEÑO 
+Presión de diseño: 51 [barg] 
+Temperatura de diseño: 38 [ºC] 
+Corrosión: 1,6 [mm] 
+ 
+
+--- página 4 ---
+Futura S.A.
+Juana Manso 1870 Piso 6 Oficina 602
+CABA - Argentina
+INSPECT Pipe Run Calculations
+Item:  Puente de Produccion Pozo RdA-2040
+Designer:  ECTech Ingenieria
+
+--- página 5 ---
+Table of Contents
+Deficiencies Summary................................................................................................................................................1/9
+3'' Sch, 40.....................................................................................................................................................................2/9
+2'' Sch. 80.....................................................................................................................................................................4/9
+1'' Sch. 80.....................................................................................................................................................................6/9
+3/4'' Sch. 80..................................................................................................................................................................8/9
+i
+
+--- página 6 ---
+Deficiencies Summary
+No deficiencies found.
+1/9
+
+--- página 7 ---
+3'' Sch, 40
+ASME B31.3, 2016 Edition
+Component
+ASME B31.3 Pipe
+Material
+A106 B Pipes and Tubes K03006
+Pipe NPS and
+Schedule
+NPS 3 Sch 40 (Std) DN 80
+Impact
+Tested
+Normalized
+Fine Grain
+Practice
+PWHT
+No
+No
+No
+No
+Design
+Pressure (bar)
+Design
+Temperature (°C)
+Internal
+51
+38
+Dimensions
+Outer Diameter
+88,9 mm
+Pipe Nominal
+Thickness
+5,49 mm
+Pipe Minimum
+Thickness1
+4,8 mm
+Corrosion
+Inner
+1,6 mm
+Outer
+0 mm
+1Pipe minimum thickness = nominal thickness times pipe tolerance factor of 0,875.
+Results Summary
+Governing condition
+Internal pressure
+Design thickness due to internal pressure (t)
+3,5 mm
+Maximum allowable working pressure (MAWP)
+86,98 bar
+Maximum allowable pressure (MAP)
+132,39 bar
+Design thickness, (at 38 °C) ASME B31.3
+t
+= P*D / [2*(S*E*W + P*Y)] + Corrosion
+= 51*88,9 / [2*(1.378,95*0,85*1,00 + 51*0,40)] + 1,6
+= 3,5 mm
+Maximum allowable working pressure, (at 38 °C) ASME B31.3
+P
+= 2*S*E*W*t / (D - 2*Y*t) - Ps
+= 2*1.378,95*0,85*1,00*(5,49*0,875 - 1,6) / (88,9 - 2*0,40*(5,49*0,875 - 1,6)) - 0
+= 86,98 bar
+Maximum allowable pressure, (at 21,11 °C) ASME B31.3
+P
+= 2*S*E*W*t / (D - 2*Y*t)
+= 2*1.378,95*0,85*1,00*(5,49*0,875) / (88,9 - 2*0,40*(5,49*0,875))
+2/9
+
+--- página 8 ---
+= 132,39 bar
+3/9
+
+--- página 9 ---
+2'' Sch. 80
+ASME B31.3, 2016 Edition
+Component
+ASME B31.3 Pipe
+Material
+A106 B Pipes and Tubes K03006
+Pipe NPS and
+Schedule
+NPS 2 Sch 80 (XS) DN 50
+Impact
+Tested
+Normalized
+Fine Grain
+Practice
+PWHT
+No
+No
+No
+No
+Design
+Pressure (bar)
+Design
+Temperature (°C)
+Internal
+51
+38
+Dimensions
+Outer Diameter
+60,32 mm
+Pipe Nominal
+Thickness
+5,54 mm
+Pipe Minimum
+Thickness1
+4,85 mm
+Corrosion
+Inner
+1,6 mm
+Outer
+0 mm
+1Pipe minimum thickness = nominal thickness times pipe tolerance factor of 0,875.
+Results Summary
+Governing condition
+Internal pressure
+Design thickness due to internal pressure (t)
+2,89 mm
+Maximum allowable working pressure (MAWP)
+131,88 bar
+Maximum allowable pressure (MAP)
+201,33 bar
+Design thickness, (at 38 °C) ASME B31.3
+t
+= P*D / [2*(S*E*W + P*Y)] + Corrosion
+= 51*60,32 / [2*(1.378,95*0,85*1,00 + 51*0,40)] + 1,6
+= 2,89 mm
+Maximum allowable working pressure, (at 38 °C) ASME B31.3
+P
+= 2*S*E*W*t / (D - 2*Y*t) - Ps
+= 2*1.378,95*0,85*1,00*(5,54*0,875 - 1,6) / (60,32 - 2*0,40*(5,54*0,875 - 1,6)) - 0
+= 131,88 bar
+Maximum allowable pressure, (at 21,11 °C) ASME B31.3
+P
+= 2*S*E*W*t / (D - 2*Y*t)
+= 2*1.378,95*0,85*1,00*(5,54*0,875) / (60,32 - 2*0,40*(5,54*0,875))
+4/9
+
+--- página 10 ---
+= 201,33 bar
+5/9
+
+--- página 11 ---
+1'' Sch. 80
+ASME B31.3, 2016 Edition
+Component
+ASME B31.3 Pipe
+Material
+A106 B Pipes and Tubes K03006
+Pipe NPS and
+Schedule
+NPS 1 Sch 80 (XS) DN 25
+Impact
+Tested
+Normalized
+Fine Grain
+Practice
+PWHT
+No
+No
+No
+No
+Design
+Pressure (bar)
+Design
+Temperature (°C)
+Internal
+51
+38
+Dimensions
+Outer Diameter
+33,4 mm
+Pipe Nominal
+Thickness
+4,55 mm
+Pipe Minimum
+Thickness1
+3,98 mm
+Corrosion
+Inner
+1,6 mm
+Outer
+0 mm
+1Pipe minimum thickness = nominal thickness times pipe tolerance factor of 0,875.
+Results Summary
+Governing condition
+Internal pressure
+Design thickness due to internal pressure (t)
+2,32 mm
+Maximum allowable working pressure (MAWP)
+177,22 bar
+Maximum allowable pressure (MAP)
+308,88 bar
+Design thickness, (at 38 °C) ASME B31.3
+t
+= P*D / [2*(S*E*W + P*Y)] + Corrosion
+= 51*33,4 / [2*(1.378,95*0,85*1,00 + 51*0,40)] + 1,6
+= 2,32 mm
+Maximum allowable working pressure, (at 38 °C) ASME B31.3
+P
+= 2*S*E*W*t / (D - 2*Y*t) - Ps
+= 2*1.378,95*0,85*1,00*(4,55*0,875 - 1,6) / (33,4 - 2*0,40*(4,55*0,875 - 1,6)) - 0
+= 177,22 bar
+Maximum allowable pressure, (at 21,11 °C) ASME B31.3
+P
+= 2*S*E*W*t / (D - 2*Y*t)
+= 2*1.378,95*0,85*1,00*(4,55*0,875) / (33,4 - 2*0,40*(4,55*0,875))
+6/9
+
+--- página 12 ---
+= 308,88 bar
+7/9
+
+--- página 13 ---
+3/4'' Sch. 80
+ASME B31.3, 2016 Edition
+Component
+ASME B31.3 Pipe
+Material
+A106 B Pipes and Tubes K03006
+Pipe NPS and
+Schedule
+NPS 0,75 Sch 80 (XS) DN 20
+Impact
+Tested
+Normalized
+Fine Grain
+Practice
+PWHT
+No
+No
+No
+No
+Design
+Pressure (bar)
+Design
+Temperature (°C)
+Internal
+51
+38
+Dimensions
+Outer Diameter
+26,67 mm
+Pipe Nominal
+Thickness
+3,91 mm
+Pipe Minimum
+Thickness1
+3,42 mm
+Corrosion
+Inner
+1,6 mm
+Outer
+0 mm
+1Pipe minimum thickness = nominal thickness times pipe tolerance factor of 0,875.
+Results Summary
+Governing condition
+Internal pressure
+Design thickness due to internal pressure (t)
+2,17 mm
+Maximum allowable working pressure (MAWP)
+169,31 bar
+Maximum allowable pressure (MAP)
+335,11 bar
+Design thickness, (at 38 °C) ASME B31.3
+t
+= P*D / [2*(S*E*W + P*Y)] + Corrosion
+= 51*26,67 / [2*(1.378,95*0,85*1,00 + 51*0,40)] + 1,6
+= 2,17 mm
+Maximum allowable working pressure, (at 38 °C) ASME B31.3
+P
+= 2*S*E*W*t / (D - 2*Y*t) - Ps
+= 2*1.378,95*0,85*1,00*(3,91*0,875 - 1,6) / (26,67 - 2*0,40*(3,91*0,875 - 1,6)) - 0
+= 169,31 bar
+Maximum allowable pressure, (at 21,11 °C) ASME B31.3
+P
+= 2*S*E*W*t / (D - 2*Y*t)
+= 2*1.378,95*0,85*1,00*(3,91*0,875) / (26,67 - 2*0,40*(3,91*0,875))
+8/9
+
+--- página 14 ---
+= 335,11 bar
+9/9

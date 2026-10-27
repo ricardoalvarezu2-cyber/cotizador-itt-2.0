@@ -1,0 +1,3795 @@
+--- página 1 ---
+Reference Manual
+00809-0200-4802, Rev BB
+April 2024
+Rosemount
+™ 3051S Wireless Series
+Pressure, Level, and Flow Solutions with IEC 62951
+(WirelessHART®) Protocol
+
+--- página 2 ---
+2
+
+--- página 3 ---
+Contents
+Chapter 1 
+Introduction...............................................................................................................................5
+1.1 Models covered............................................................................................................................5
+1.2 Service support............................................................................................................................5
+1.3 Product Recycling/Disposal........................................................................................................6
+Chapter 2 
+Configuration............................................................................................................................ 7
+2.1 Overview.......................................................................................................................................7
+2.2 Safety Messages.......................................................................................................................... 7
+2.3 System readiness.........................................................................................................................7
+2.4 Required benchtop configuration.............................................................................................9
+2.5 Device network configuration................................................................................................. 10
+2.6 Review configuration data....................................................................................................... 11
+2.7 Check output..............................................................................................................................12
+2.8 Basic setup................................................................................................................................. 13
+2.9 LCD display.................................................................................................................................16
+2.10 Detailed setup..........................................................................................................................17
+2.11 Diagnostics and service..........................................................................................................23
+2.12 Advanced functions for HART
+® Protocol.............................................................................. 24
+Chapter 3 
+Installation...............................................................................................................................27
+3.1 Overview.....................................................................................................................................27
+3.2 Considerations...........................................................................................................................27
+3.3 Installation procedures............................................................................................................ 30
+3.4 Rosemount 304, 305 and 306 integral manifolds................................................................. 42
+Chapter 4 
+Commissioning........................................................................................................................49
+4.1 Network status.......................................................................................................................... 49
+4.2 Verifying operation................................................................................................................... 49
+Chapter 5 
+Operation and Maintenance..................................................................................................53
+5.1 Overview.....................................................................................................................................53
+5.2 Calibration..................................................................................................................................53
+5.3 LCD screen messages............................................................................................................... 57
+Chapter 6 
+Troubleshooting ..................................................................................................................... 67
+6.1 Overview.....................................................................................................................................67
+6.2 Wireless device status information.........................................................................................67
+6.3 Wireless troubleshooting......................................................................................................... 70
+6.4 Wireless network troubleshooting..........................................................................................71
+6.5 Disassembly procedures.......................................................................................................... 72
+6.6 Reassembly procedures........................................................................................................... 75
+Appendix A 
+Specifications and Reference Data....................................................................................... 77
+A.1 Specifications.............................................................................................................................77
+Appendix B 
+Product Certifications.............................................................................................................79
+Reference Manual
+Contents
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+3
+
+--- página 4 ---
+B.1 Product certifications................................................................................................................79
+Appendix C 
+High Gain Remote Antenna Option...................................................................................... 81
+C.1 Functional specifications..........................................................................................................81
+C.2 Installation considerations...................................................................................................... 82
+C.3 Transient/lightning considerations.........................................................................................82
+C.4 Dimensional drawings..............................................................................................................83
+C.5 Installation steps.......................................................................................................................83
+Appendix D 
+Field Communicator Menu Trees and Fast Keys................................................................. 87
+D.1 Communication device menu trees....................................................................................... 87
+Contents
+Reference Manual
+April 2024
+00809-0200-4802
+4
+Emerson.com/Rosemount
+
+--- página 5 ---
+1 
+Introduction
+1.1 
+Models covered
+The following tables describe the Rosemount 3051S Wireless pressure transmitters
+covered in this manual.
+Table 1-1: 3051S Wireless Coplanar™ Pressure Transmitter
+Performance class
+Measurement type
+Differential
+Gauge
+Absolute
+Classic
+X
+X
+X
+Ultra
+X
+X
+X
+Ultra for flow
+X
+–
+–
+Table 1-2: 3051S Wireless In-Line Pressure Transmitter
+Performance class
+Measurement type
+Differential
+Gauge
+Absolute
+Classic
+–
+X
+X
+Ultra
+–
+X
+X
+Table 1-3: 3051S Wireless Liquid Level Pressure Transmitter
+Performance class
+Measurement type
+Differential
+Gauge
+Absolute
+Classic
+X
+X
+X
+Ultra
+X
+X
+X
+1.2 
+Service support
+To expedite the return process, contact Emerson.
+Emerson will:
+•
+assist you with obtaining any needed information or materials
+•
+ask for product model and serial numbers
+•
+provide a Return Material Authorization (RMA) number
+•
+ask for the process material to which the product was last exposed
+ CAUTION
+Individuals who handle products exposed to a hazardous substance can avoid injury if they
+are informed of and understand the hazard. If the product being returned was exposed to
+a hazardous substance as defined by OSHA, a copy of the required Material Safety Data
+Sheet (MSDS) for each hazardous substance identified must be included with the returned
+goods.
+Reference Manual
+Introduction
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+5
+
+--- página 6 ---
+NOTICE
+Shipping considerations for wireless products (lithium batteries):
+The unit was shipped without the power module installed. Prior to re-shipment, ensure
+that the power module has been removed.
+Primary lithium batteries (charged or discharged) are regulated in transportation by the
+U.S. Department of Transportation, and are also covered by IATA (International Air
+Transport Association), ICAO (International Civil Aviation Organization), and ARD (European
+Ground Transportation of Dangerous Goods). It is the responsibility of the shipper to
+ensure compliance with these or any other local requirements. Before shipping, consult
+current regulations and requirements.
+The Power Module contains two “C” size primary lithium/thionyl chloride batteries. Each
+Power Module contains approximately 2.5 grams of lithium, for a total of 5 grams in
+each module. Under normal conditions, the Power Module materials are self-contained
+and are not reactive while the batteries and the module integrity are maintained. Ensure
+prevention of thermal, electrical or mechanical damage. Protect contacts to prevent
+premature discharge. Power Module hazards remain when cells are discharged.
+Store Power Module in a clean and dry area. Temperatures ≤86 °F (30 °C) provide
+maximum battery life.
+Emerson representatives will explain the additional information and procedures necessary
+to return goods exposed to hazardous substances.
+1.3 
+Product Recycling/Disposal
+When finished with equipment and packaging, recycle where possible. Dispose of
+remaining items in accordance with all applicable legislation/regulations.
+Introduction
+Reference Manual
+April 2024
+00809-0200-4802
+6
+Emerson.com/Rosemount
+
+--- página 7 ---
+2 
+Configuration
+2.1 
+Overview
+This section contains configuration and verification information to perform prior to
+installation.
+Communication Device and AMS instructions are given to perform configuration functions.
+For convenience, Communication Device fast key sequences are labeled “Fast Keys” for
+each software function below the appropriate headings.
+Example software function
+Fast Keys
+1, 2, 3, etc.
+Safety
+Procedures and instructions in this section may require special precautions to ensure the
+safety of the personnel performing the operations. Information that raises potential safety
+issues is indicated by a warning symbol (
+). Refer to Safety messages before performing
+an operation preceded by this symbol.
+2.2 
+Safety Messages
+Procedures and instructions in this section may require special precautions to ensure the
+safety of the personnel performing the operations. Information that raises potential safety
+issues is indicated by a warning symbol (
+). Refer to the following safety messages before
+performing an operation preceded by this symbol.
+ WARNING
+Explosions could result in death or serious injury.
+Before connecting a 375 Field Communicator in an explosive atmosphere, ensure the
+instruments are installed in accordance with intrinsically safe or nonincendive field wiring
+practices.
+Electrical shock could cause death or serious injury.
+Avoid contact with the leads and terminals. High voltage that may be present on leads can
+cause electrical shock.
+This device complies with Part 15 of the Federal Communication Commission (FCC) Rules.
+Operation is subject to the following conditions: This device may not cause harmful
+interference. This device must accept any interference received, including interference that
+may cause undesired operation. This device must be installed to ensure a minimum
+antenna separation distance of 8-in. (20 cm) from all persons.
+2.3 
+System readiness
+•
+If using HART® based control or asset management systems, confirm the HART
+capability of such systems prior to commissioning and installation. Not all systems are
+capable of communicating with HART Revision 7 devices.
+Reference Manual
+Configuration
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+7
+
+--- página 8 ---
+2.3.1 
+Confirm correct Device Descriptor
+To ensure proper communications, verify the latest Device Descriptor (DD/DTM) is loaded
+on your systems.
+Procedure
+1. Locate the latest DD at www.emerson.com/global.
+a) Navigate to the Emerson Software & Drivers webpage.
+b) Select the Device Drivers button.
+c) Select DD - Device Descriptor from the Choose a Software Type dropdown
+menu.
+d) Select Wireless HART from the Choose a Communication Protocol dropdown
+menu.
+e) Select Rosemount from the Choose a Brand dropdown menu.
+Search results load.
+f) Select radial button in front of 3051 Pressure Transmitter.
+Search results are filtered to display 3051 Pressure Transmitter Device
+Descriptors.
+2. Select desired Device Descriptor.
+Note
+Within Table 2-1, use the HART® Universal Revision and Device Revision numbers to
+find the correct Device Descriptor.
+Table 2-1: Rosemount 3051S Wireless Device Revisions and files
+ 
+Identify device
+Find device descriptor
+Review
+instruction
+s
+Review
+functionali
+ty
+Software
+release
+date
+NAMUR
+Software
+Revision(1)
+HART
+Software
+Revision(2)
+HART
+Universal
+Revision
+Device
+Revision(3)
+Document
+number
+and
+revision
+Changes
+to
+software
+April 2013
+3.1.0
+3
+7
+3
+00809-0200
+-4802 Rev
+BA
+Added
+Scaled
+Variable
+June 2010
+2.0.0
+2
+7
+2
+00809-0200
+-4802 Rev
+AA
+N/A 
+(1) NAMUR Software Revision is located on the hardware tag of the device.
+(2) HART Software Revision can be read using a HART capable configuration tool.
+(3) Device Descriptor (DD) file names use Device and DD Revision; for example,
+10_01. HART Protocol is designed to enable legacy DD revisions to continue
+to communicate with new HART devices. To access new functionality, the new
+DD must be downloaded. Emerson recommends downloading new DD files to
+ensure full functionality.
+Configuration
+Reference Manual
+April 2024
+00809-0200-4802
+8
+Emerson.com/Rosemount
+
+--- página 9 ---
+2.4 
+Required benchtop configuration
+Note
+3051S Wireless Transmitters must be configured before installation.
+Benchtop configuration requires a 375 Communication Device, AMS, or any IEC 62591
+(WirelessHART®) Communicator. Connect the Communication Device leads to the terminals
+labeled COMM on the terminal block. See Figure 2-1.
+Benchtop configuration consists of testing the transmitter and verifying transmitter
+configuration data. Configuring the transmitter on the bench before installation using a
+375 Communication Device, AMS, or any IEC 62591 (WirelessHART) Communicator ensures
+that all network settings are working correctly.
+When using a Communication Device, any configuration changes made must be sent to the
+transmitter by using the Send key (F2). AMS configuration changes are implemented when
+the Apply button is clicked.
+AMS Wireless Configurator
+AMS can connect to devices either directly, using a HART modem, or wirelessly via the
+Smart Wireless Gateway. When configuring the device, double-click the device icon or
+right-click and select Configure.
+2.4.1 
+Connection diagrams
+NOTICE
+For HART® communication, a Rosemount 3051S WirelessHART® Device Descriptor is
+required. See Confirm correct Device Descriptor.
+Figure 2-1: Communication Device Connection
+COMM
+P/N 00753-9200-0010
+COMM
+P/N 00753-9200-0010
+Bench hook-up
+Procedure
+1. Connect the bench equipment as shown in Figure 2-1.
+2. Turn on the Communication Device by pressing the ON/OFF key or log into AMS.
+Reference Manual
+Configuration
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+9
+
+--- página 10 ---
+The Communication Device or AMS will search for a HART®-compatible device and
+indicate when the connection is made.
+Need help?
+If the Communication Device or AMS fail to connect, it indicates that no device was
+found. If this occurs, refer to Device not joining the network.
+Field hook-up
+Procedure
+The Communication Device or AMS may be connected at COMM on the transmitter terminal
+block.Figure 2-1 illustrates the wiring for a field hook-up with a Communication Device or
+AMS.
+2.5 
+Device network configuration
+2.5.1 
+Join device to network
+Fast Keys
+2, 1, 3
+In order to communicate with the Smart Wireless Gateway, and ultimately the host system,
+the transmitter must be configured to communicate over the wireless network. This step is
+the wireless equivalent of connecting wires from a transmitter to the host system.
+Procedure
+1. From the Home screen, select 2: Configure.
+2. Select 1: Guided Setup.
+3. Select 3: Join Device to Network.
+Using a communication device or AMS, enter the Network ID and Join Key so that
+they match the Network ID and Join Key of the Smart Wireless Gateway and other
+devices in the network. If the Network ID and Join Key are not identical to those
+set in the Smart Wireless Gateway, the transmitter will not communicate with the
+network. To obtain the Network ID and Join Key from the Smart Wireless Gateway,
+go to Setup → Network → Settings page on the web server.
+2.5.2 
+Configure update rate
+Fast Keys
+2, 1, 4
+The update rate is the frequency at which a new measurement is taken and transmitted
+over the wireless network. The default update rate is 1 minute.
+Modify the update rate at:
+•
+commissioning
+•
+any time via AMS Wireless Configurator
+The Update Rate is user-selectable from 1 second to 60 minutes.
+Procedure
+1. From the Home screen, select 2: Configure.
+2. Select 1: Guided Setup.
+Configuration
+Reference Manual
+April 2024
+00809-0200-4802
+10
+Emerson.com/Rosemount
+
+--- página 11 ---
+3. Select 4: Configure Update Rate.
+4. Wait for device configuration to finish.
+5. Remove the power module.
+6. Replace the housing cover.
+Note
+When tightening the housing cover, verify metal contacts metal.
+2.5.3 
+Remove power module
+NOTICE
+When handling the power module, use caution. If the power module is dropped onto a
+hard surface, it may be damaged. When cells are discharged, battery hazards remain.
+After the sensor and network have been configured, remove the power module and
+replace the housing cover. When the device is ready to be commissioned, insert the power
+module.
+This transmitter uses the black power module. Order model number 701PBKKF or spare
+part number 00753-9200-0001.
+2.6 
+Review configuration data
+The following is a list of factory default configurations that can be viewed by using the
+communication device or AMS. To review the transmitter configuration information, use
+the following procedures.
+Note
+Information and procedures in this section that make use of communication device fast
+key sequences and AMS assume that the transmitter and communication equipment are
+connected, powered, and operating correctly.
+2.6.1 
+Review pressure information
+Fast Keys
+2, 2, 2
+To view pressure information:
+Procedure
+1. From the Home screen, select 2: Configure.
+2. Select 2: Manual Setup.
+3. Select 2: Pressure.
+4. Select from the corresponding number to view each field:
+1
+Pressure
+2
+Pressure Status
+3
+Units
+4
+Damping
+Reference Manual
+Configuration
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+11
+
+--- página 12 ---
+5
+Sensor Limits
+2.6.2 
+Review device and sensor information
+Fast Keys
+2, 2, 9
+To view device information:
+Procedure
+1. From the Home screen, select 2: Configure.
+2. Select 2: Manual Setup.
+3. Select 9: Device Information.
+4. Select from the corresponding number to view each field:
+1
+Identification
+2
+Revisions
+3
+Radio
+4
+Sensor information
+5
+Flange information
+6
+Remote seal information
+2.6.3 
+Review radio information
+Fast Keys
+2, 2, 9, 3
+To view radio information:
+Procedure
+1. From the Home screen, select 2: Configure.
+2. Select 2: Manual Setup.
+3. Select 9: Device Information.
+4. Select 3: Radio.
+5. Select from the corresponding number to view each field:
+1
+Manufacturer
+2
+Device Type
+3
+Device Revision
+4
+Software Revision
+5
+Hardware Revision
+2.7 
+Check output
+Before performing other transmitter operations, ensure that the transmitter is operating
+properly by checking the operating parameters.
+Configuration
+Reference Manual
+April 2024
+00809-0200-4802
+12
+Emerson.com/Rosemount
+
+--- página 13 ---
+2.7.1 
+View operating parameters
+Fast Keys
+3, 2
+The pressure output value in both engineering units and percent of range will reflect the
+applied pressure even when the applied pressure is outside of the configured range as
+long as the applied pressure is between the upper and lower range limit of the transmitter.
+For example, if a Range 2 3051S_T [Lower Range Limit (LRL) = 0 psi, Upper Range
+Limit (URL) = 150 psi] is ranged from 0 to 100 psi, an applied pressure of 150 psi will
+return:
+•
+a % of range output of 150%
+•
+an engineering output of 150 psi
+To view the Operating Parameters menu:
+Procedure
+1. From the Home screen, select 3: Service Tools.
+2. Select 2: Variables.
+The Operating Parameters menu displays the following information pertaining to
+the device:
+•
+Percent of Range
+•
+Pressure
+•
+Pressure Status
+•
+Sensor Temperature
+•
+Sensor Temperature Status
+•
+Electronics Temperature
+•
+Electronics Temperature Status
+•
+Supply Voltage
+•
+Supply Voltage Status
+•
+Last Update Time
+2.8 
+Basic setup
+2.8.1 
+Set process variable unit
+Fast Keys
+2, 2, 2, 3
+The PV Unit command sets the process variable units to allow you to monitor your
+process using the appropriate units of measure.
+To select a unit of measure for the PV:
+Procedure
+1. From the Home screen, select 2: Configure.
+2. Select 2: Manual Setup.
+3. Select 2: Pressure.
+Reference Manual
+Configuration
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+13
+
+--- página 14 ---
+4. Select 3: Unit to select from the following engineering units:
+•
+inH2O at 4 °C
+•
+inH2O at 60 °F
+•
+inH2O at 68 °F
+•
+ftH2O at 4 °C
+•
+ftH2O at 60 °F
+•
+ftH2O at 68 °F
+•
+mmH2O at 4 °C
+•
+mmH2O at 68 °F
+•
+cmH2O at 4 °C
+•
+mH2O at 4 °C
+•
+inHg at 0 °C
+•
+mmHg at 0 °C
+•
+cmHg at 0 °C
+•
+mHg at 0 °C
+•
+mmHg
+•
+Psi
+•
+Atm
+•
+Torr
+•
+Pascals
+•
+hectoPascals
+•
+Kilopascals
+•
+Mpa
+•
+Bar
+•
+Mbar
+•
+g/cm2
+•
+kg/cm2
+•
+kg/m2
+2.8.2 
+Set transfer function
+Fast Keys
+2, 2, 4, 2
+The Rosemount 3051S Wireless has two transfer function settings: Linear and Square
+Root.
+Activate the Square Root option to make output proportional to flow. As input
+approaches zero, the 3051S Wireless automatically switches to Linear to ensure a more
+smooth, stable output near zero (see Figure 2-2).
+From 0 to 0.6 percent of the ranged pressure input, the slope of the curve is unit y (y =
+x). This allows accurate calibration near zero. Greater slopes would cause large changes
+in output (for small changes at input). From 0.6 percent to 0.8 percent, curve slope equals
+42 (y = 42x) to achieve continuous transition from linear to square root at the transition
+point.
+To select the output transfer function:
+Procedure
+1. From the Home screen, select 2: Configure.
+2. Select 2: Manual Setup.
+3. Select 4: Percent of Range.
+4. Select 2: Transfer Function.
+5. Select either Linear or Square Root.
+Configuration
+Reference Manual
+April 2024
+00809-0200-4802
+14
+Emerson.com/Rosemount
+
+--- página 15 ---
+Figure 2-2: Square Root output transition point
+A. Full scale flow (%)
+B. Square Root curve
+C. Transition point
+D. Slope = 42
+E. Slope = 1
+F. Square Root curve
+G. Transition point
+H. Linear section
+2.8.3 
+Set Damping
+Fast Keys
+2, 2, 2, 4
+The Damping command introduces a delay in processing which increases the response
+time of the transmitter, smoothing variations in output readings caused by rapid input
+changes. In the Rosemount 3051S Wireless Pressure Transmitter, damping only takes
+effect when the device is placed in High Power Refresh mode and during calibration. In
+Normal Power mode, the effective damping is 0.
+NOTICE
+When the device is in High Power Refresh mode, battery power will be depleted
+rapidly.
+Determine the appropriate damp setting based on the necessary response time, signal
+stability, and other requirements of the loop dynamics of your system. The damping value
+of your device is user selectable from 0 to 60 seconds.
+To determine the current damping value:
+Procedure
+1. From the Home screen, select 2: Configure.
+Reference Manual
+Configuration
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+15
+
+--- página 16 ---
+2. Select 2: Manual Setup.
+3. Select 2: Pressure.
+4. Select 4: Damping.
+2.8.4 
+View Write Protect settings
+Fast Keys
+2, 2, 7, 1
+The Rosemount 3051S Wireless has a software write protect security feature.
+The view write protect security settings:
+Procedure
+1. From the Home screen, select 2: Configure.
+2. Select 2: Manual Setup.
+3. Select 9: Device Information.
+4. Select 1: Write Protect.
+2.9 
+LCD display
+2.9.1 
+Configure LCD display
+Fast Keys
+2, 1, 5
+The LCD display indicates output and abbreviated diagnostic messages.
+Note
+Use Rosemount Wireless LCD Part Number: 00753-9004-0002.
+The LCD display features a four-line display and a bar graph.
+Line
+Number of alphanumeric
+characters
+Displays
+1
+5
+Output description
+2
+7
+Actual value
+3
+6
+Engineering units
+4
+5 (when needed)
+"Error" indicates when
+transmitter is in alarm
+The LCD display also displays diagnostic messages. The bar graph represents the network
+connectivity status.
+See LCD screen messages for more information on LCD messages.
+To configure LCD display options,:
+Procedure
+1. From the Home screen, select 2: Configure.
+2. Select 1: Guided Setup.
+3. Select 5: Configure Device Display.
+Configuration
+Reference Manual
+April 2024
+00809-0200-4802
+16
+Emerson.com/Rosemount
+
+--- página 17 ---
+2.10 
+Detailed setup
+2.10.1 
+Configure process alerts
+Fast Keys
+2, 1, 6
+Alerts allow the user to configure the transmitter to output a HART® message when the
+configured data point is exceeded. A process alert will be transmitted continuously if the
+set points are exceeded and the alert mode is ON.
+A process alert displays on a:
+•
+communication device
+•
+AMS status screen
+•
+in the error section of the LCD display
+The process alert resets when the value returns within range.
+Note
+HI alert value must be higher than the LO alert value. Both alert values must be within the
+pressure or temperature sensor limits.
+Figure 2-3: Rising Alert
+A. Deadband
+B. Units of Measurement
+C. Alert "OFF"
+D. Alert "ON"
+E. Alert Set Point
+F. Assigned Value
+Reference Manual
+Configuration
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+17
+
+--- página 18 ---
+Figure 2-4: Falling Alert
+A. Deadband
+B. Units of Measurement
+C. Alert "OFF"
+D. Alert "ON"
+E. Alert Set Point
+F. Assigned Value
+To configure the process alerts:
+Procedure
+1. From the Home screen, select 2: Configure.
+2. Select 1: Guided Setup.
+3. Select 6: Configure Process Alerts.
+4. Follow the on-screen instructions to complete configure of process alerts.
+2.10.2 
+Select sensor temperature unit
+Fast Keys
+2, 2, 8, 3
+The Sensor Temperature Unit command selects between Celsius and Fahrenheit units for
+the sensor temperature. The sensor temperature output is accessible via HART® only.
+To select the sensor temperature unit:
+Procedure
+1. From the Home screen, select 2: Configure.
+2. Select 2: Manual Setup.
+3. Select 8: Device Temperatures.
+4. Select 3: Sensor Temperature.
+2.10.3 
+Configure scaled variable
+Fast Keys
+2, 2, 3
+The scaled variable configuration allows the user to create a relationship/conversion
+between the pressure units and user-defined/custom units. There are two use cases for
+scaled variable:
+•
+Allow custom units to be displayed on the transmitter's LCD display.
+•
+Allow custom units to drive the transmitter's 4-20 mA output.
+Configuration
+Reference Manual
+April 2024
+00809-0200-4802
+18
+Emerson.com/Rosemount
+
+--- página 19 ---
+To use custom units to drive the 4-20 mA output, scaled variable must be re-mapped as the
+primary variable. Refer to Table 2-2.
+The scaled variable configuration defines the following:
+Scaled variable
+units
+Custom units to be displayed.
+Scaled data options
+Defines the transfer function for the application.
+•
+Linear
+•
+Square root
+Pressure value
+position 1
+Lower known value point (possible 4 mA point) with consideration of
+linear offset.
+Scaled variable
+value position 1
+Custom unit equivalent to the lower known value point (The lower
+known value point may or may not be the 4 mA point.)
+Pressure value
+position 2
+Upper known value point (possible 20 mA point)
+Scaled variable
+value position 2
+Custom unit equivalent to the upper known value point (possible 20
+mA point)
+Linear offset
+The value required to zero out pressures effecting the desired
+pressure reading.
+Low flow cutoff
+Point at which output is driven to zero to prevent problems caused
+by process noise.
+Note
+To have a stable output and avoid problems due to process noise
+at a low flow or no flow condition, use the low flow cutoff function.
+Enter a low flow cutoff value that is practical for the flow element in
+the application.
+Note
+If scaled variable is mapped as the primary variable and square root mode is selected,
+ensure transfer function is set to Linear. Refer to Set transfer function.
+Communication Device v3.3
+To configure the scaled variable with a communication device:
+Procedure
+1. From the HOME screen, follow the fast key sequence “Scaled Variable Configuration.”
+2. Select OK after the control loop is set to Manual.
+3. Enter the scaled variable units.
+Units can be up to five characters long and include A — Z, 0 — 9, -, /,%, and *.
+Default unit is DEFLT.The first character is always an asterisk (*), which identifies the
+units displayed are scaled variable units.
+a)
+b)
+4. Select scaled data options:
+a) Select Linear if the relationship between PV and scaled variable units are
+linear. Linear prompts for two data points.
+Reference Manual
+Configuration
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+19
+
+--- página 20 ---
+b) Select Square Root if the relationship between PV and scaled variable is
+square root (flow applications). Square Root will prompt for one data point.
+5. Enter pressure value position 1. Pressure values must be within the range of the
+transmitter.
+a) Linear function: Enter the lower known value point considering any linear
+offset.
+b) Square Root function: Select OK to acknowledge pressure value is set to zero.
+6. Enter scaled variable position 1.
+a) Linear function: Enter the lower known value point which must be seven
+digits or less.
+b) Square Root function: Select OK to acknowledge scaled variable value is set to
+zero.
+7. Enter pressure value position 2. Pressure values must be within the range of the
+transmitter.
+a) Enter the upper known value point.
+8. Enter scaled variable position 2.
+a) Linear function: Enter custom unit equivalent to the upper known value point.
+Note
+For both functions, value entered must be seven digits or less.
+b) Square Root function: Enter custom unit equivalent to the value in Step 7.
+Skip to Step 10.
+9. Linear function: Enter linear offset value in scaled variable (custom) units. Skip to
+Step 11.
+10. Square Root function: Enter Low Flow cutoff mode. If:
+•
+If not wanting a low flow cutoff value, select OFF.
+•
+If wanting a low flow cutoff value, select ON and enter this value in scaled
+variable (custom) units on the next screen.
+11. To acknowledge that the loop can be returned to automatic control, select OK.
+AMS v7.0
+Procedure
+1. Right click on the device.
+2. Select Device Configuration.
+3. Select SV Config.
+4. Set the control loop to Manual.
+5. Select Next.
+6. Enter desired scaled variable units in Enter SV units box and select Next.
+7. Select scaled data options: Linear or Square Root and select Next. If square root is
+selected, skip to Step 13.
+8. Enter pressure value position 1 and select Next.
+9. Enter scaled variable position 1 and select Next.
+Configuration
+Reference Manual
+April 2024
+00809-0200-4802
+20
+Emerson.com/Rosemount
+
+--- página 21 ---
+10. Enter pressure value position 2 and select Next.
+11. Enter scaled variable position 2 and select Next.
+12. Enter linear offset and select Next. Skip to Step 19.
+13. Select Next to acknowledge that Pressure value for position 1 is set to zero.
+14. Select Next to acknowledged that Square root value for position 1 is set to zero.
+15. Enter pressure value for position 2 and select Next.
+16. Enter square root value for position 2 and select Next.
+17. Enter low flow cutoff mode: Off or On. If Off is selected, skip to Step 19.
+18. Enter low flow cutoff value in scaled variable (custom) units and select Next.
+19. Select Next to acknowledge that the loop can be returned to automatic control.
+20. Select Finish to acknowledge the method is complete.
+DP Level example
+Figure 2-5: Example tank
+A. 20 mA
+B. 230 in. (5482 mm)
+C. 0.94 sg
+D. 200 in. (5080 mm)
+E. 4 mA
+F. 12 in. (305 mm)
+In this example:
+•
+A differential transmitter is used in a level application where the span is 188
+inH2O (200 in. * 0.94 sg).
+•
+Once installed on an empty tank and taps vented, the process variable reading is
+-209.4 inH2O.
+•
+The process variable reading is the head pressure created by fill fluid in the
+capillary.
+Based on Figure 2-5, the scaled variable configuration would be as follows:
+Scaled Variable units
+inches
+Scaled data options
+linear
+Pressure value position 1
+0 inH2O (0 mbar)
+Scaled variable position 1
+12 in. (305 mm)
+Pressure value position 2
+188 inH2O (0.47 bar)
+Reference Manual
+Configuration
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+21
+
+--- página 22 ---
+Scaled Variable position 2
+212 in. (5385 mm)
+Linear offset
+-209.4 inH2O (-0.52 bar)
+Differential pressure flow example
+To have a stable output and avoid problems due to process noise at a low flow or no flow
+condition, Emerson recommends using the low flow cutoff function. A low flow cutoff value
+that is practical for the flow element in the application should be entered.
+In this example:
+•
+A differential transmitter is used in conjunction with an orifice plate in a flow application
+where the differential pressure at full scale flow is 125 inH2O.
+•
+The flow rate at full scale flow is 20,000 gallons of water per hour.
+•
+The low flow cutoff value is 1,000 gallons of water per hour.
+Based on this information, the scaled variable configuration would be as follows:
+Scaled variable units
+gal/h
+Scaled data options
+square root
+Pressure value position 2
+125 inH2O (311 mbar)
+Scaled variable position 2
+20,000 gal/h (75,708 lt/hr)
+Low flow cutoff
+1000 gal/h (ON)
+Note
+Pressure value position 1 and Scaled variable position 1 are always set to zero for a flow
+application. No configuration of these values is required.
+2.10.4 
+Remapping device variables
+The remapping function allows configuring of the following transmitter variables:
+•
+Primary Variable (PV)
+Note
+The variable assigned to the primary variable drives the output. This value can be
+selected as Pressure or Scaled Variable.
+•
+Secondary Variable (SV)
+•
+Tertiary Variable (TV)
+•
+Quaternary Variable (QV)
+Two configurations are available:
+•
+Classic Mapping
+•
+Scaled Variable Mapping
+To see what value is mapped to each variable, see Table 2-2. All variables can be remapped
+with a communication device or AMS Device Manager.
+Table 2-2: Variable mapping
+ Variable
+Classic Mapping
+Scaled Variable Mapping
+PV
+Pressure
+Scaled variable
+Configuration
+Reference Manual
+April 2024
+00809-0200-4802
+22
+Emerson.com/Rosemount
+
+--- página 23 ---
+Table 2-2: Variable mapping (continued)
+ Variable
+Classic Mapping
+Scaled Variable Mapping
+SV
+Sensortemperature
+Pressure
+TV
+Electronicstemperature
+Sensor temperature
+QV
+Supply voltage
+Supply voltage
+Remapping using a communication device
+Procedure
+From the Home screen, enter the fast key sequence.
+Fast Keys:
+guided setup
+2, 1, 7
+Fast Keys:
+manual setup
+2, 2, 3, 5
+Remapping using AMS Device Manager
+Right-click the device and select Configure.
+Procedure
+1. Select Manual Setup and click on the HART tab.
+2. Assign device variables (primary, secondary, tertiary, and quaternary) under
+Variable Mapping.
+3. Click Send.
+4. Carefully read the warning and click Yes if it is safe to apply the changes.
+2.11 
+Diagnostics and service
+Diagnostics and service functions listed below are primarily for use after field installation.
+The Transmitter Test feature is designed to verify that the transmitter is operating
+properly, and can be performed either on the bench or in the field.
+2.11.1 
+Perform a master reset
+Fast Keys
+3, 5, 4
+The master reset function will reset the device electronics.
+To perform a master reset:
+Procedure
+1. From the Home screen, select 3: Service Tools.
+2. Select 5: Routine Maintenance.
+3. Select 4: Other.
+2.11.2 
+View join status
+Fast Keys
+3, 4, 1
+Reference Manual
+Configuration
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+23
+
+--- página 24 ---
+To view the join status of the device:
+Procedure
+1. From the Home screen, select 3: Service Tools.
+2. Select 4: Communications.
+3. Select 1: Join Status.
+Wireless devices join the secure network through a four step process:
+a. Network Found
+b. Network Security Clearance Granted
+c. Network Bandwidth Allocated
+d. Network Join Complete
+2.11.3 
+View number of available neighbors
+Fast Keys
+3, 4, 3
+In a self-organizing network, the more neighbors a device has, the more robust the
+network will be.
+To view the number of available neighbors for the wireless device:
+Procedure
+1. From the Home screen, select 3: Service Tools.
+2. Select 4: Routine Maintenance.
+3. Select 3: Number of Available Neighbors.
+2.12 
+Advanced functions for HART® Protocol
+2.12.1 
+Saving, recalling, and cloning configuration data
+Fast Keys
+left arrow, 1, 2
+Use the cloning feature of the communication device or the AMS User Configuration
+feature to configure several Rosemount 3051S Wireless Pressure Transmitters similarly.
+Cloning involves:
+1. Configuring a transmitter.
+2. Saving the configuration data.
+3. Sending a copy of the data to a separate transmitter.
+Several possible procedures exist when saving, recalling, and cloning configuration data.
+For complete instructions, refer to the communication device manual or AMS Books Online.
+Clone configuration data using a communication device
+Procedure
+1. Completely configure the first transmitter.
+2. Save the configuration data:
+Configuration
+Reference Manual
+April 2024
+00809-0200-4802
+24
+Emerson.com/Rosemount
+
+--- página 25 ---
+a) Select F2 SAVE from the communication device HOME/ONLINE screen.
+b) Ensure the location to which the data will be saved is set to Module.
+To set the save location to Module, select 1: Location.
+c) Select 2: Name to name the configuration data.
+The default is the transmitter tag number.
+d) Ensure the data type is set to STANDARD.
+To set the data type to STANDARD, select 3: Data Type.
+e) Select F2 SAVE.
+3. Connect and power the receiving transmitter and communication device.
+4. Select the back arrow from the HOME/ONLINE screen.
+The communication device menu appears.
+5. Select 1: Offline, 2: Saved Configuration, 1: Module Contents to reach the MODULE
+CONTENTS menu.
+6. Use the DOWN ARROW to scroll through the list of configurations in the
+memory module, and use the RIGHT ARROW to select and retrieve the required
+configuration.
+7. Select 1: Edit.
+8. Select 1: Mark All.
+9. Select F2 SAVE.
+10. Use the DOWN ARROW to scroll through the list of configurations in the memory
+module, and use the RIGHT ARROW to select the configuration again.
+11. Select 3: Send to download the configuration to the transmitter.
+12. Select OK after the control loop is set to manual.
+13. After the configuration has been sent, choose OK.
+When finished, the communication device informs you of the status. Repeat Step 3
+through Step 13 to configure another transmitter.
+Note
+The transmitter receiving cloned data must have the same software version (or
+later) as the original transmitter.
+Create a reusable copy using AMS
+Procedure
+1. Completely configure the first transmitter.
+2. Select View → User Configuration View from the menu bar (or click the toolbar
+button).
+3. In the User Configuration window, right-click and select New from the context
+menu.
+4. In the New window, select a device from the list of templates shown, and click OK.
+The template is copied into the User Configurations window with the tag name
+highlighted.
+5. Rename the copied template as appropriate and select Enter.
+Reference Manual
+Configuration
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+25
+
+--- página 26 ---
+Note
+A device icon can also be copied by dragging and dropping a device template or any
+other device icon from AMS Explorer or Device Connection View into the User
+Configurations window.
+The Compare Configurations window appears, showing the current values of the
+copied device on one side and mostly blank fields on the User Configuration side.
+6. Transfer values from the current configuration to the user configuration as
+appropriate or enter values by typing them into the available fields.
+7. Select Apply to apply the values or OK to apply the values and close the window.
+Apply a user configuration using AMS
+Any amount of user configurations can be created for the application. They can also be
+saved, and applied to connected devices or to devices in the Device List or Plant Database.
+To apply a user configuration:
+Procedure
+1. Select the desired user configuration in the User Configurations window.
+2. Drag the icon onto a like device in AMS Explorer or Device Connection View.
+The Compare Configurations window opens, showing the parameters of the target
+device on one side and the parameters of the user configuration on the other.
+3. Transfer parameters from the user configuration to the target device as desired.
+Select OK to apply the configuration and close the window.
+Configuration
+Reference Manual
+April 2024
+00809-0200-4802
+26
+Emerson.com/Rosemount
+
+--- página 27 ---
+3 
+Installation
+3.1 
+Overview
+The information in this section covers installation considerations. A Quick Installation
+Guide is shipped with every transmitter to describe basic installation and startup
+procedures. Dimensional drawings for each Rosemount 3051S Wireless variation and
+mounting configuration are included in the Product Data Sheet.
+communication device and AMS instructions are given to perform configuration functions.
+For convenience, communication device fast key sequences are labeled “Fast Keys” for each
+software function below the appropriate headings.
+3.2 
+Considerations
+3.2.1 
+General considerations
+Measurement performance depends upon proper installation of the transmitter and
+impulse piping. Mount the transmitter close to the process and use a minimum of piping to
+achieve best performance.
+Consider the need for:
+•
+easy access
+•
+personnel safety
+•
+practical field calibration
+•
+suitable transmitter environment
+Install the transmitter to minimize vibration, shock, and temperature fluctuation.
+3.2.2 
+Wireless considerations
+Power up sequence
+The power module should not be installed on any wireless device until the Smart
+Wireless Gateway is installed and functioning properly. This transmitter uses the
+Black Power Module. Please order model number 701PBKKF or spare part number
+00753-9200-0001. Wireless devices should also be powered up in order of proximity
+from the Smart Wireless Gateway beginning with the closest. This will result in a simpler
+and faster network installation. Enable High Speed Operation on the Gateway to ensure
+that new devices join the network faster. For more information, see the Emerson Wireless
+1410 Gateway Manual.
+Antenna position
+To allow clear communication to other devices, position the antenna:
+•
+vertically, either straight up or straight down
+•
+approximately 3 ft (1 m) from any large structure or building
+Reference Manual
+Installation
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+27
+
+--- página 28 ---
+Figure 3-1: Antenna position
+Note
+Replace temporary orange plugs with included conduit plugs using approved thread
+sealant.
+Figure 3-2: Conduit plug location
+A. Conduit plug
+Communication device connections
+In order for the communication device to interface with the Rosemount 3051S, the power
+module must be connected.
+Installation
+Reference Manual
+April 2024
+00809-0200-4802
+28
+Emerson.com/Rosemount
+
+--- página 29 ---
+Figure 3-3: 375 communication device connections
+COMM
+P/N 00753-9200-0010
+COMM
+P/N 00753-9200-0010
+3.2.3 
+Mechanical considerations
+Note
+For steam service or for applications with process temperatures greater than the limits
+of the transmitter, do not blow down impulse piping through the transmitter. Before
+resuming measurement, flush lines with the blocking valves closed and refill lines with
+water.
+Note
+When the transmitter is mounted on its side, position the Coplanar™ flange to ensure
+proper venting or draining. Mount the flange as shown in Figure 3-7, keeping drain/vent
+connections on the bottom for gas service and on the top for liquid service.
+3.2.4 
+Environmental considerations
+Access requirements and cover installation on Mounting the transmitter can help optimize
+transmitter performance. Mount the transmitter to minimize ambient temperature
+changes, vibration, mechanical shock, and to avoid external contact with corrosive
+materials. To view temperature operting limits and other specifications, refer to Locating
+additional information.
+Reference Manual
+Installation
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+29
+
+--- página 30 ---
+Figure 3-4: Installation flowchart
+3.3 
+Installation procedures
+Process flange orientation
+Mount the process flanges with sufficient clearance for process connections.
+Installation
+Reference Manual
+April 2024
+00809-0200-4802
+30
+Emerson.com/Rosemount
+
+--- página 31 ---
+ CAUTION
+Contact hazard
+Position the drain/vent valves to direct the process fluid away from potential human
+contact when the vents are used.
+Evaluate the need for a testing or calibration input.
+Housing rotation
+See Rotate housing.
+Power module side of electronics housing
+Mount the transmitter so the power module side is accessible. Clearance of 2.75 in.
+(70 mm) is required for cover removal.
+Circuit side of electronics housing
+The necessary clearance to be provided for:
+•
+Units without an LCD display: 0.75 in. (19 mm)
+•
+Units with a meter installed: 3.0 in. (7.62 mm)
+Cover installation
+Always ensure a proper seal by installing the electronics housing cover(s) so that metal
+contacts metal. Use Rosemount O-rings.
+Conduit plugs
+Replace temporary orange plugs with included conduit plugs (found in the box) using
+approved thread sealant. For material compatibility considerations, see Corrosion and Its
+Effects.
+Figure 3-5: Conduit plug locations
+A. Conduit plug
+Reference Manual
+Installation
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+31
+
+--- página 32 ---
+3.3.1 
+Mounting the transmitter
+Mounting brackets
+Facilitate mounting transmitter to a two-inch pipe, or to a panel. The B4 Bracket (stainless
+steel) option is standard for use with the Coplanar™ and In-Line flanges. Refer to Locating
+additional information to locate dimensional drawings and mounting configurations for
+the B4 option.
+Options B1–B3 and B7–B9 are sturdy, epoxy/polyester-painted brackets designed for use
+with the traditional flange. The B1–B3 brackets have carbon steel bolts, while the B7–B9
+brackets have stainless steel bolts. The BA and BC brackets and bolts are stainless steel.
+The B1/B7/BA and B3/B9/BC style brackets support 2-inch pipe-mount installations, and the
+B2/B8 style brackets support panel mounting.
+Note
+Most transmitters are calibrated in the horizontal position. Mounting the transmitter in any
+other position will shift the zero point to the equivalent amount of liquid head caused by
+the varied mounting position. To reset zero point, refer to Sensor trim.
+Position the antenna such that it is vertical, typically straight up (antenna may be pointed
+down as well).
+Flange bolts
+The Rosemount 3051S Wireless Pressure Transmitter can be shipped with a Coplanar™
+flange or a Traditional flange installed with four 1.75-inch flange bolts.
+Stainless steel bolts supplied by Emerson are coated with a lubricant to ease installation.
+Carbon steel bolts do not require lubrication. No additional lubricant should be applied
+when installing either type of bolt. Bolts supplied by Emerson are identified by their head
+markings:
+Figure 3-6: Bolt head markings
+A. Carbon Steel (CS)
+B. Stainless Steel (SST)(1)
+C. Alloy K-500
+Installing bolts
+Only use bolts supplied with the Rosemount 3051S or sold by Emerson as spare parts.
+When installing the transmitter to one of the optional mounting brackets, torque the bolts
+to 125 in-lb. (14.1 N-m).
+To install bolts:
+(1) The last digit in the F593_ head marking may be any letter between A and M.
+Installation
+Reference Manual
+April 2024
+00809-0200-4802
+32
+Emerson.com/Rosemount
+
+--- página 33 ---
+Procedure
+1. Finger-tighten the bolts.
+2. Torque the bolts to the initial torque value using a crossing pattern.
+3. Torque the bolts to the final torque value using the same crossing pattern.
+Torque values for the flange and manifold adapter bolts are as follows:
+Table 3-1: Bolt installation torque values
+Bolt material
+Initial torque value
+Final torque value
+CS-ASTM-A445 Standard
+300 in.-lb (34 N-m)
+650 in.-lb (73 N-m)
+316 SST—Option L4
+150 in.-lb (17 N-m)
+300 in.-lb (34 N-m)
+ASTM-A-193-B7M—Option L5
+300 in.-lb (34 N-m)
+650 in.-lb (73 N-m)
+Alloy K-500—Option L6
+300 in.-lb (34 N-m)
+650 in.-lb (73 N-m)
+ASTM-A-453-660—Option L7
+150 in.-lb (17 N-m)
+300 in.-lb (34 N-m)
+ASTM-A-193-B8M—Option L8
+150 in.-lb (17 N-m)
+300 in.-lb (34 N-m)
+Differential transmitter
+Gauge/Absolute transmitter
+A. Drain/Vent
+B. Plug
+Note
+Dimensions are in inches (millimeters).
+Reference Manual
+Installation
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+33
+
+--- página 34 ---
+Transmitter with flange bolts
+Transmitter with flange adapters and flange/
+adapter bolts
+Note
+Dimensions are in inches (millimeters).
+Table 3-2: Differential pressure
+Description
+Quantity
+Size
+Flange bolts
+4
+1.75 in. (44 mm)
+Adapter bolts
+4
+1.50 in. (38 mm)(1)
+Flange/adapter bolts
+4
+2.88 in. (73 mm)
+(1) DIN-compliant traditional flange requires 1.75 in. (44 mm) length adapter bolts.
+Table 3-3: Gage/absolute pressure
+Description
+Quantity(1)
+Size
+Flange bolts
+4
+1.75 in. (44 mm)
+Adapter bolts
+2
+1.50 in. (38 mm)(1)
+Installation
+Reference Manual
+April 2024
+00809-0200-4802
+34
+Emerson.com/Rosemount
+
+--- página 35 ---
+Table 3-3: Gage/absolute pressure (continued)
+Description
+Quantity(1)
+Size
+Flange/adapter bolts
+2
+2.88 in. (73 mm)
+(1) 3051S In-line transmitters are direct mount and do not require bolts for process
+connection.
+Impulse piping
+The piping between the process and the transmitter must accurately transfer the pressure
+to obtain accurate measurements.
+There are five possible sources of error:
+•
+leaks
+•
+friction loss (particularly if purging is used)
+•
+trapped gas in a liquid line
+•
+liquid in a gas line
+•
+density variations between the legs
+The best location for the transmitter in relation to the process pipe depends on the process
+itself.
+The following guidelines help determine best transmitter location and placement of
+impulse piping:
+•
+For:
+— liquid service, slope the impulse piping at least 1 inch per foot (8 cm per m) upward
+from the transmitter toward the process connection
+— gas service, slope the impulse piping at least 1 inch per foot (8 cm per m) downward
+from the transmitter toward the process connection
+•
+Avoid:
+— high points in liquid lines
+— low points in gas lines
+•
+Keep impulse piping as short as possible.
+•
+Ensure both impulse legs are the same temperature.
+•
+To avoid friction effects and blockage, use impulse piping large enough.
+•
+Vent all gas from liquid piping legs.
+•
+When using a sealing fluid, fill both piping legs to the same level.
+•
+When purging:
+1. Locate the purge connection close to the process taps.
+2. Purge through equal lengths of the same size pipe.
+Note
+Avoid purging through the transmitter.
+•
+Keep corrosive or hot (above 250 °F [121 °C]) process material out of direct contact with
+the SuperModule and flanges.
+•
+Prevent sediment deposits in the impulse piping.
+Reference Manual
+Installation
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+35
+
+--- página 36 ---
+•
+Keep the liquid head balanced on both legs of the impulse piping.
+•
+Avoid conditions that might allow process fluid to freeze within the process flange.
+Mounting requirements
+Refer to Figure 3-7 for examples of the following mounting configurations:
+Liquid flow measurement
+•
+Place taps to the side of the line to prevent sediment deposits on the process isolators.
+•
+Mount the transmitter beside or below the taps so gases vent into the process line.
+•
+Mount drain/vent valve upward to allow gases to vent.
+•
+Position the antenna such that it is vertical.
+Gas flow measurement
+•
+Place taps in the top or side of the line.
+•
+Mount the transmitter beside or above the taps to drain liquid into the process line.
+•
+Position the antenna such that it is vertical.
+Steam flow measurement
+•
+Place taps to the side of the line.
+•
+Mount the transmitter below the taps to ensure that impulse piping will remain filled
+with condensate.
+•
+Fill impulse lines with water to prevent steam from contacting the transmitter directly
+and to ensure accurate measurement start-up.
+•
+Position the antenna such that it is vertical.
+Note
+For steam or other elevated temperature services, it is important that temperatures at the
+Coplanar™ process flanges must not exceed 250 °F (121 °C) for transmitters with silicone fill,
+or 185 °F (85 °C) for inert fill. For vacuum service, these temperature limits are reduced to
+220 °F (104 °C) for silicone fill and 160 °F (71 °C) for inert fill.
+Installation
+Reference Manual
+April 2024
+00809-0200-4802
+36
+Emerson.com/Rosemount
+
+--- página 37 ---
+Figure 3-7: Installation Examples
+Liquid service
+Gas service
+Steam service
+A. Flow direction
+3.3.2 
+Install flange adapters
+Rosemount 3051S Wireless Pressure Transmitter flange process connection size is ¼–18
+NPT. Flange adapters with ½–14 NPT connections are available as the D2 option. See the
+Rosemount 3051S Series of Instrumentation Product Data Sheet for additional information
+about product options.
+Use your plant-approved lubricant or sealant when making the process connections. The
+process connections on the transmitter flange are on 2⅛ in. (54 mm) centers to allow direct
+mounting to a three-valve or five-valve manifold. Rotate one or both of the flange adapters
+to attain connection centers of 2 in. (51 mm), 2⅛ in. (54 mm), or 2¼ in. (57 mm).
+To avoid leakage, install and tighten all four flange bolts before applying pressure. When
+properly installed, the flange bolts will protrude through the top of the SuperModule
+housing. Do not attempt to loosen or remove the flange bolts while the transmitter is in
+service.
+To install adapters to a Coplanar™ flange:
+Procedure
+1. Remove the flange bolts.
+2. Leaving the flange in place, move the adapters into position with the O-ring
+installed.
+3. Clamp the adapters and the Coplanar flange to the transmitter module using the
+longer of the bolts supplied.
+4. Tighten the bolts. Refer to Flange bolts for torque specifications.
+Reference Manual
+Installation
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+37
+
+--- página 38 ---
+ WARNING
+Avoid process leaks
+Failure to install proper flange adapter o-rings may cause process leaks, which can
+result in death or serious injury. The two flange adapters are distinguished by
+unique o-ring grooves. Only use the o-ring that is designed for its specific flange
+adapter.
+Note
+If the flange adapter is removed, replace the PTFE O-rings.
+Whenever you remove flanges or adapters, visually inspect the PTFE O-rings.
+Replace them if there are any signs of damage, such as nicks or cuts. If you replace
+the O-rings, re-torque the flange bolts after installation to compensate for cold flow.
+Refer to Reassemble the process flange.
+3.3.3 
+Rotate housing
+The housing can be rotated to improve field access to wiring or to better view the optional
+LCD display.
+Installation
+Reference Manual
+April 2024
+00809-0200-4802
+38
+Emerson.com/Rosemount
+
+--- página 39 ---
+Figure 3-8: Housings
+Plantweb™ housing
+Junction box housing
+ 
+A. Housing rotation set screw
+Procedure
+1. Loosen the housing rotation set screw.
+2. Turn the housing a maximum of 180 degrees to the left or right of its original (as
+shipped) position.
+NOTICE
+Avoid product damage
+Do not rotate the housing more than 180 degrees without first performing a
+disassembly procedure (see Removing the feature assembly and the SuperModule
+from the housing). Overrotation may sever the electrical connection between the
+sensor module and the feature board.
+3. Retighten the housing rotation set screw.
+In addition to housing rotation, the optional LCD display can be rotated in 90-degree
+increments by squeezing the two tabs, pulling out, rotating and snapping back into
+place.
+Note
+If LCD pins are inadvertently removed from the interface board, carefully re-insert
+the pins before snapping the LCD display back into place.
+3.3.4 
+Grounding
+Transmitter case
+Note
+Always ground the transmitter case in accordance with national and local electrical codes.
+The most effective transmitter case grounding method is a direct connection to earth
+ground with minimal impedance. The External Ground Assembly can be ordered:
+•
+with the transmitter (Option Code D4)
+Reference Manual
+Installation
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+39
+
+--- página 40 ---
+•
+as a spare part (03151-9060-0001)
+3.3.5 
+High gain remote antenna (optional)
+For detailed installation and product information on the high gain remote antenna (option
+WN), refer to Remote mount antenna in the Rosemount 3051S Series of Instrumentation
+Product Data Sheet.
+3.3.6 
+Install power module
+Figure 3-9: Wireless power module installation
+To make connections:
+Note
+Rosemount 3051S Wireless Pressure Transmitter uses the black power module. Order
+model number 701PBKKF or spare part number 00753-9200-0001.
+Procedure
+1. Remove the housing cover on the power module compartment side.
+The power module supplies all power to the transmitter.
+ WARNING
+Avoid explosion.
+When the circuit is live, do not remove the housing cover in explosive atmospheres.
+2. To avoid moisture accumulation in the terminal side, plug and seal both conduit
+connections on the transmitter housing.
+3. Connect the power module.
+4. Replace the power module cover.
+5. Secure power module cover by tightening to safety specification (metal to metal).
+3.3.7 
+Install the LCD display
+Transmitters ordered with the LCD display will be shipped with the display installed.
+Note
+Only use Rosemount Wireless LCD Part Number: 00753-9004-0002.
+Installation
+Reference Manual
+April 2024
+00809-0200-4802
+40
+Emerson.com/Rosemount
+
+--- página 41 ---
+Note
+An LCD from a wired device will not function in a wireless device.
+Note
+If LCD pins are inadvertently removed from the interface board, carefully reinsert the pins
+before snapping the LCD display back into place.
+In addition to housing rotation, the optional LCD display can be rotated in 90-degree
+increments by:
+1. Squeeze the two tabs.
+2. Pull out the display.
+3. Rotate the display 90-degrees into position.
+4. Return the display to transmitter.
+5. Secure the display into the transmitter
+Use the following procedure and Figure 3-10 to install the LCD display:
+Procedure
+1. Remove the back cover and power module.
+2. Remove the transmitter cover opposite the field terminal side.
+ WARNING
+Avoid explosions.
+When the circuit is live, do not remove the instrument covers in explosive
+environments.
+3. Engage the four-pin connector into the LCD display and snap into place.
+Note the following LCD temperature limits:
+•
+Operating:–40 to +175 °F (–40 to +80 °C)
+•
+Storage:–40 to +185 °F (–40 to +85 °C)
+Reference Manual
+Installation
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+41
+
+--- página 42 ---
+Figure 3-10: Optional LCD Display
+A. LCD display
+B. Meter
+3.4 
+Rosemount 304, 305 and 306 integral manifolds
+The Rosemount 306 Integral Manifold is used with in-line transmitters to provide block-
+and-bleed valve capabilities of up to 10000 psi (690 bar).
+The Rosemount 305 Integral Manifold is available in two designs: traditional and
+Coplanar™. The traditional 305 Integral Manifold can be mounted to most primary elements
+with mounting adapters in the market today.
+The Rosemount 304 Integral Manifold comes in two basic styles: traditional (flange x flange
+and flange x pipe) and wafer. The 304 traditional manifold comes in 2, 3, and 5-valve
+configurations. The 304 wafer manifold comes in 3 and 5 valve configurations.
+Figure 3-11: Integral Manifold Designs
+Conventional
+Coplanar
+Traditional
+In-line
+3.4.1 
+Install 304 Conventional Manifold
+Installation
+Reference Manual
+April 2024
+00809-0200-4802
+42
+Emerson.com/Rosemount
+
+--- página 43 ---
+Procedure
+1. Align the conventional manifold with the transmitter flange. Use the four manifold
+bolts for alignment.
+2. Finger tighten the bolts; then tighten the bolts incrementally in a cross pattern to
+the final torque value.
+When fully tightened, the bolts extend through the top of the sensor module
+housing.
+3. Leak-check assembly to maximum pressure range of transmitter.
+3.4.2 
+Install 305 Integral Manifold
+Procedure
+1. Inspect the PTFE sensor module O-rings.
+You may reuse undamaged O-rings. If the O-rings are damaged (if they have nicks
+or cuts, for example), replace with O-rings designed for Rosemount transmitters.
+NOTICE
+If replacing the O-rings, take care not to scratch or deface the O-ring grooves or the
+surface of the isolating diaphragm while you remove the damaged O-rings.
+2. Install the integral manifold on the sensor module. Use the four 2.25-inch (57 mm)
+manifold bolts for alignment.
+3. If you have replaced the PTFE sensor module O-rings, re-tighten the flange bolts
+after installation to compensate for cold flow of the O-rings.
+3.4.3 
+Install Rosemount 306 Integral Manifold
+The 306 Manifold is for use only with in-line pressure transmitters, such as the 3051T and
+2051T.
+Assemble the 306 Manifold to the in-line transmitters with a thread sealant.
+3.4.4 
+Manifold operation
+ CAUTION
+Avoid process leaks which may cause death or serious injury.
+Improper installation or operation of manifolds may result in process leaks. Always
+perform a zero trim on the transmitter/manifold assembly after installation to eliminate
+any shift due to mounting effects. See Operation and Maintenance and Sensor trim
+overview.
+Three and five-valve configurations
+In normal operation:
+1. The two block valves between the process and instrument ports will be open.
+2. The equalizing valve will be closed.
+Reference Manual
+Installation
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+43
+
+--- página 44 ---
+A. High
+B. Low
+C. Drain/vent valve
+D. Isolate (open)
+E. Equalize (closed)
+F. Process
+1. To zero the 3051S, close the block valve to the low pressure (downstream) side of
+the transmitter first.
+A. High
+B. Low
+C. Drain/vent valve
+D. Equalize (closed)
+E. Isolate (open)
+F. Isolate (closed)
+G. Process
+2. Open the center (equalize) valve to equalize the pressure on both sides of the
+transmitter. The manifold valves are now in the proper configuration for zeroing the
+transmitter.
+Installation
+Reference Manual
+April 2024
+00809-0200-4802
+44
+Emerson.com/Rosemount
+
+--- página 45 ---
+A. High
+B. Low
+C. Drain/vent valve
+D. Equalize (open)
+E. Isolate (open)
+F. Isolate (closed)
+G. Process
+3. After zeroing the transmitter, close the equalizing valve.
+A. High
+B. Low
+C. Drain/vent valve
+D. Equalize (closed)
+E. Isolate (open)
+F. Isolate (closed)
+G. Process
+4. Open the block valve on the low pressure side of the transmitter to return the
+transmitter to service.
+Reference Manual
+Installation
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+45
+
+--- página 46 ---
+A. High
+B. Low
+C. Drain/vent valve
+D. Isolate (open)
+E. Equalize (closed)
+F. Process
+Five-valve natural gas configurations
+In normal operation:
+1. The two block valves between the process and instrument ports will be open.
+2. The equalizing valves will be closed.
+A. High
+B. Low
+C. Test (plugged)
+D. Equalize (closed)
+E. Isolate (open)
+F. Process
+G. Drain vent
+1. To zero the 3051S, first close the block valve on the low pressure (downstream) side
+of the transmitter.
+NOTICE
+Do not overpressure the transmitter. Do not open the low side equalize valve before
+the high side equalize valve.
+Installation
+Reference Manual
+April 2024
+00809-0200-4802
+46
+Emerson.com/Rosemount
+
+--- página 47 ---
+A. High
+B. Low
+C. Test (plugged)
+D. Equalize (closed)
+E. Isolate (open)
+F. Isolate (closed)
+G. Process
+H. Drain vent
+2. Open the equalize valve on the high pressure (upstream) side of the transmitter.
+A. High
+B. Low
+C. Test (plugged)
+D. Equalize (open)
+E. Equalize (closed)
+F. Isolate (open)
+G. Isolate (closed)
+H. Process
+I. Drain vent (closed)
+3. Open the equalize valve on the low pressure (downstream) side of the transmitter.
+The manifold is now in the proper configuration for zeroing the transmitter.
+Reference Manual
+Installation
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+47
+
+--- página 48 ---
+A. High
+B. Low
+C. Test (plugged)
+D. Equalize (open)
+E. Isolate (open)
+F. Isolate (closed)
+G. Process
+H. Drain vent (closed)
+4. After zeroing the transmitter, close the equalize valve on the low pressure
+(downstream) side of the transmitter.
+5. Close the equalize valve on the high pressure (upstream) side.
+6. Finally, to return the transmitter to service, open the low side isolation valve.
+Installation
+Reference Manual
+April 2024
+00809-0200-4802
+48
+Emerson.com/Rosemount
+
+--- página 49 ---
+4 
+Commissioning
+4.1 
+Network status
+If the Rosemount 3051S Wireless was configured with the Network ID and Join Key and
+sufficient time for network polling has passed, the transmitter should be connected to the
+network. To verify connectivity, open the Smart Wireless Gateway’s integral web interface
+and navigate to the Explorer page.
+This page will display the transmitter’s HART tag, Primary Variable (PV), Secondary
+Variable (SV), Tertiary Variable (TV), Quaternary Variable (QV), and Update Rate. A green
+status indicator means that the device is working properly. A red indicator means that
+there is a problem with either the device or its communication path. For more detail on a
+specific device, click on the tag name.
+4.2 
+Verifying operation
+Operation can be verified in three locations:
+•
+at the device via the local display
+•
+using the 375 communication device
+•
+at the Smart Wireless Gateway’s integrated web interface
+Local display
+The LCD will display the output values based on the configured wireless update rate. Press
+the Diagnostic button to display the Tag, Device ID, Network ID, Network Join Status, and
+Device Status screens.
+For Device Status screens, see LCD screen messages.
+Reference Manual
+Commissioning
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+49
+
+--- página 50 ---
+Figure 4-1: Diagnostic screen sequence
+Tag
+Device ID
+Network ID
+Network Join
+Status
+Device Status
+A b c d e
+                
+f g h
+i d  -  1 2
+               
+3 4 5 6 7 8
+n e t w k
+        13 0 5
+      I D
+ 
+n e t w k
+                
+O K
+ 
+S u p l y
+        7. 2 1
+v o l t s
+Figure 4-2: Network join status screens
+Searching for Network
+Joining Network
+Connected with Limited
+Bandwidth
+Connected
+N E T w K
+                
+S R C H N G
+n e t w k
+                
+N E G O T
+n e t w k
+L I M - O P
+n e t w k
+                
+O K
+Communication device
+To verify device operation using a HART® Communication Device, a Rosemount 3051S
+Wireless DD is required. For connecting with a 375 Communication Device, refer to Figure
+2-1.
+Function
+Key sequence
+Menu items
+Communications
+3, 3
+•
+Join Status
+•
+Wireless Mode
+•
+Join Mode
+•
+Number of Available
+Neighbors
+•
+Number of Advertisements
+Heard
+•
+Number of Join Attempts
+Smart Wireless Gateway
+To verify device operation using the Smart Wireless Gateway’s integrated web interface,
+navigate to the Explorer page. This page will show whether the device has joined the
+network and if it is communicating properly.
+Commissioning
+Reference Manual
+April 2024
+00809-0200-4802
+50
+Emerson.com/Rosemount
+
+--- página 51 ---
+A green status indicator means that the device is working properly. A red indicator means
+that there is a problem with either the device or its communication path. For more detail
+on a specific device, click on the HART tag.
+Troubleshooting
+The most common cause of incorrect operation is incorrect configuration of the Network
+ID and Join Key. The Network ID and Join Key in the device must match that of the Smart
+Wireless Gateway. The Network ID and Join Key may be obtained from the Smart Wireless
+Gateway on the Setup → Network → Settings page of the web interface.
+Reference Manual
+Commissioning
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+51
+
+--- página 52 ---
+Commissioning
+Reference Manual
+April 2024
+00809-0200-4802
+52
+Emerson.com/Rosemount
+
+--- página 53 ---
+5 
+Operation and Maintenance
+5.1 
+Overview
+This section contains information on commissioning and operating 3051S Wireless
+Pressure Transmitters.
+Communication device and AMS instructions are given to perform configuration functions.
+For convenience, communication device fast key sequences are labeled “Fast Keys” for each
+software function below the appropriate headings.
+5.2 
+Calibration
+Calibrating a Rosemount 3051S Wireless transmitter may include the following procedures:
+•
+Sensor Trim: Adjusts the position of the factory sensor characterization curve to
+optimize performance over a specified pressure range, or to adjust for mounting
+effects.
+The 3051S SuperModule uses a microprocessor that contains information about the
+sensor’s specific characteristics in response to pressure and temperature inputs. A smart
+transmitter compensates for these sensor variations. The process of generating the sensor
+performance profile is called factory sensor characterization.
+Sensor trimming requires an accurate pressure input and adds additional compensation
+that adjusts the position of the factory sensor characterization curve to optimize
+performance over a specific pressure range.
+Note
+Sensor trimming adjusts the position of the factory sensor characterization curve. It is
+possible to degrade performance of the transmitter if the trim is done improperly or with
+inaccurate equipment.
+Table 5-1: Recommended Calibration Tasks
+Transmitter
+Bench Calibration Tasks
+Field Calibration Tasks
+3051S 2CD
+3051S 2CG
+3051S 2L
+ 
+1. Set output configuration
+parameters:
+a. Set the % range points.
+b. Set the output units.
+c. Set the output type.
+2. Optional: Perform a sensor
+trim. (Accurate pressure
+source required)
+1. Reconfigure parameters if
+necessary.
+2. Zero trim the transmitter
+to compensate for
+mounting effects or static
+pressure effects.
+Reference Manual
+Operation and Maintenance
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+53
+
+--- página 54 ---
+Table 5-1: Recommended Calibration Tasks (continued)
+Transmitter
+Bench Calibration Tasks
+Field Calibration Tasks
+3051S 2CA
+3051S 2TA
+3051S 2TG
+1. Set output configuration
+parameters:
+a. Set the range points.
+b. Set the output units.
+c. Set the output type.
+2. Optional: Perform a sensor
+trim if equipment available
+(accurate absolute
+pressure source required),
+otherwise perform the low
+trim value section of the
+sensor trim procedure.
+1. Reconfigure parameters if
+necessary.
+2. Perform low trim value
+section of the sensor trim
+procedure to correct for
+mounting position effects.
+Note
+A 375 communication device or AMS is required for all sensor and output trim procedures.
+Rosemount 3051S2TG Range 5 transmitters use an absolute sensor that requires an
+accurate absolute pressure source to perform the optional sensor trim.
+5.2.1 
+Sensor trim overview
+Trim the sensor using either sensor or zero trim functions. Trim functions vary in
+complexity and are application-dependent. Both trim functions alter the transmitter’s
+interpretation of the input signal.
+Zero trim is a single-point offset adjustment. It is useful for compensating for mounting
+position effects and is most effective when performed with the transmitter installed in its
+final mounting position. Since this correction maintains the slope of the characterization
+curve, it should not be used in place of a sensor trim over the full sensor range.
+When performing a zero trim, ensure that the equalizing valve is open and all wet legs are
+filled to the correct levels.
+Note
+Do not perform a zero trim on 3051S Wireless absolute pressure transmitters. Zero trim
+is zero based, and absolute pressure transmitters reference absolute zero. To correct
+mounting position effects on a 3051S Wireless absolute pressure transmitter, perform
+a low trim within the sensor trim function. The low trim function provides an offset
+correction similar to the zero trim function, but it does not require zero-based input.
+Sensor trim is a two-point sensor calibration where two end-point pressures are applied,
+and all output is linearized between them. Always adjust the low trim value first to establish
+the correct offset. Adjustment of the high trim value provides a slope correction to the
+characterization curve based on the low trim value. The trim values allow you to optimize
+performance over your specified measuring range at the calibration temperature.
+During a trim operation, the 3051S Wireless is placed in high power refresh mode, which
+provides frequent pressure measurement updates and allows the configured damping to
+take effect. This behavior allows for more accurate calibration of the device. When the
+device is in high power refresh mode, the battery power supply will be depleted more
+rapidly.
+Operation and Maintenance
+Reference Manual
+April 2024
+00809-0200-4802
+54
+Emerson.com/Rosemount
+
+--- página 55 ---
+5.2.2 
+Zero trim
+Fast Keys
+2, 1, 2
+Note
+The transmitter must be within three percent of true zero (zero-based) in order to calibrate
+with zero trim function.
+After properly venting the transmitter, calibrate the transmitter with the zero trim function:
+Procedure
+1. From the Home screen, select 2: Configure.
+2. Select 1: Guided Setup.
+3. Select 2: Zero Trim and follow the on-screen instruction to complete the zero trim
+adjustment.
+5.2.3 
+Sensor trim
+Fast Keys
+3, 5, 1
+Note
+Use a pressure input source that is at least three times more accurate than the transmitter,
+and allow the input pressure to stabilize for ten seconds before entering any values.
+To calibrate the transmitter using the sensor trim function:
+Procedure
+1. Assemble and power the entire calibration system including the Rosemount 3051S,
+communication device/AMS, power supply, pressure input source, and readout
+device.
+2. From the Home screen, select 3: Service Tools.
+3. Select 5: Routine Maintenance.
+4. Select 1: Sensor Calibration.
+5. Select Lower Sensor Trim. The lower sensor trim value should be the sensor trim
+point that is closest to zero.
+6. Follow the on-screen instructions to complete the adjustment of the lower value.
+7. Repeat the procedure for the upper value. Select 5: Upper Sensor Trim and follow
+the on-screen instructions to complete the adjustment of the upper value.
+Note
+Select pressure input values so that lower and upper values are equal to or outside
+the Lower and Upper Operating points. Do not attempt to obtain reverse output
+by reversing the high and low points. The transmitter allows approximately five
+percent deviation.
+5.2.4 
+Line pressure effect (Range 2 and Range 3)
+The following specifications show the static pressure effect for the Rosemount 3051S
+Range 2 and Range 3 pressure transmitters used in differential pressure applications
+where line pressure exceeds 2000 psi (138 bar).
+Reference Manual
+Operation and Maintenance
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+55
+
+--- página 56 ---
+Zero effect
+Ultra and
+Ultra for Flow:
+± 0.05% of the upper range limit plus an additional ± 0.1% of upper range
+limit error for each 1000 psi (69 bar) of line pressure above 2000 psi (138
+bar).
+Classic:
+± 0.1% of the upper range limit plus an additional ± 0.1% of upper range
+limit error for each 1000 psi (69 bar) of line pressure above 2000 psi (138
+bar).
+Example: Line pressure is 3000 psi (207 bar) for Ultra performance transmitter. Zero effect
+error calculation:
+± {0.05 + 0.1 x [3 kpsi - 2 kpsi]} = ± 0.15% of the upper range limit
+Span Effect
+Refer to Line pressure effect.
+5.2.5 
+Compensating for line pressure (Range 4 and Range 5)
+The Rosemount 3051S Wireless Range 4 and 5 pressure transmitters require a special
+calibration procedure when used in differential pressure applications. The purpose of
+this procedure is to optimize transmitter performance by reducing the effect of static
+line pressure in these applications. The Rosemount 3051S Wireless differential pressure
+transmitters (Ranges 0, 1, 2, and 3) do not require this procedure because optimization
+occurs in the sensor.
+Applying high static pressure to the 3051S Wireless Range 4 and Range 5 pressure
+transmitters causes a systematic shift in the output. This shift is linear with static pressure;
+correct it by performing the Sensor trim procedure.
+The following specifications show the static pressure effect for the 3051S Wireless Range 4
+and Range 5 transmitters used in differential pressure applications:
+Zero effect
+± 0.1% of the upper range limit per 1000 psi (69 bar) for line pressures from 0 to 2000 psi (0
+to 138 bar)
+For line pressures above 2000 psi (138 bar), the zero effect error is ± 0.2% of the upper
+range limit plus an additional ± 0.2% of upper range limit error for each 1000 psi (69 bar) of
+line pressure above 2000 psi (138 bar).
+Example: Line pressure is 3000 psi (3 kpsi). Zero effect error calculation:
+± {0.2 + 0.2 x [3 kpsi - 2 kpsi]} = ± 0.4% of the upper range limit
+Span effect
+Correctable to ±0.2% of reading per 1000 psi (69 bar) for line pressures from 0 to 3626 psi
+(0 to 250 bar)
+The systematic span shift caused by the application of static line pressure is -1.00% of
+reading per 1000 psi (69 bar) for Range 4 transmitters, and -1.25% of reading per 1000 psi
+(69 bar) for Range 5 transmitters.
+Use the following example to compute corrected input values.
+Example
+A transmitter with model number 3051S_CD4 will be used in a differential pressure
+application where the static line pressure is 1200 psi (83 bar). The transmitter output is
+ranged with 4 mA at 500 inH2O (1,2 bar) and 20 mA at 1500 inH2O (3,7 bar).
+Operation and Maintenance
+Reference Manual
+April 2024
+00809-0200-4802
+56
+Emerson.com/Rosemount
+
+--- página 57 ---
+To correct for systematic error caused by high static line pressure, first use the following
+formulas to determine corrected values for the low trim and high trim.
+LT = LRV + S x (LRV) x P
+Where:
+LT =
+Corrected Low Trim Value
+LRV =
+Lower Range Value
+S =
+–(Span shift per specification)
+P =
+Static Line Pressure
+HT = URV + S x (URV) x P
+Where:
+HT =
+Corrected High Trim Value
+URV =
+Upper Range Value
+S =
+–(Span shift per specification)
+P =
+Static Line Pressure
+ In this example:
+URV =
+1500 inH2O (3.74 bar)
+LRV =
+500 inH2O (1.25 bar)
+P =
+1200 psi (82.74 bar)
+S =
+± 0.01/1000
+To calculate the
+low trim (LT) value:
+LT =
+500 + (0.01/1000)(500)(1200)
+LT =
+506 inH2O (1.26 bar)
+To calculate the
+high trim (HT)
+value:
+HT =
+1500 + (0.01/1000)(1500)(1200)
+HT =
+1518 inH2O (3.78 bar)
+Complete a Rosemount 3051S Wireless sensor trim and enter the corrected values for Low
+Trim (LT) and High Trim (HT), refer to Sensor trim.
+Enter the corrected input values for low trim and high trim through the communication
+device keypad after you apply the nominal value of pressure as the transmitter input.
+Note
+After sensor trimming Rosemount 3051S Wireless Range 4 and 5 transmitters for high
+differential pressure applications, verify that the Lower and Upper Operating points are at
+nominal values using the communication device.
+5.3 
+LCD screen messages
+5.3.1 
+Startup screen sequence
+The following screens will display when the Power Module is first connected to the
+Rosemount 3051S Wireless.
+Reference Manual
+Operation and Maintenance
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+57
+
+--- página 58 ---
+X X X X X
+X X X X x x x
+x x x x x x
+ 
+All Segments On: used to visually determine if there are
+any bad segments on the LCD
+ 3 0 5 1 S
+                
+W I r e l s
+Device Identification: used to determine Device Type.
+A b c d e
+                
+f g h
+Device Information - Tag: user entered tag which is eight
+characters long - will not display if all characters are blank
+P R E S S
+      5 8. 0
+    P S I
+PV Screen: process pressure
+S N S R
+      2 5. 0 0
+d e g   c
+SV Screen: sensor temperature value
+Operation and Maintenance
+Reference Manual
+April 2024
+00809-0200-4802
+58
+Emerson.com/Rosemount
+
+--- página 59 ---
+  D E V
+      2 5. 2 5
+d e g   c
+TV Screen: device temperature value
+S u p l y
+        7. 2 1
+v o l t s
+QV Screen: voltage reading at the power supply terminals
+P R C N T
+        7. 2 1
+R A N G E
+Percent Range Screen: percent range reading
+a l e r t
+               
+p r e s n t
+Alert Screen: at least one alert is present - this screen will
+not display if no alerts are present
+5.3.2 
+Diagnostic Button Screen Sequence
+The following five screens will display when the device is operating properly and the
+Diagnostic Button has been pressed.
+A b c d e
+                
+f g h
+ 
+Device Information - Tag: user entered tag which is eight
+characters long - will not display if all characters are blank
+Reference Manual
+Operation and Maintenance
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+59
+
+--- página 60 ---
+i d  -  1 2
+               
+3 4 5 6 7 8
+Device Identification: used to determine Device ID
+n e t w k
+        13 0 5
+      I D
+Diagnostic Button Screen 3: assuming the device has the
+correct join key, this ID tells the user what network the
+device can connect with
+n e t w k
+                
+O K
+Diagnostic Button Screen 4: the device has joined a
+network and has been fully configured and has multiple
+parents
+S u p l y
+        7. 2 1
+v o l t s
+Diagnostic Button Screen 5: voltage reading at the power
+supply terminals
+5.3.3 
+Network diagnostic status screens
+These screens display the network status of the device. Only one will be shown during the
+startup sequence or diagnostic sequence.
+n e t w k
+                
+u n k n w n
+ 
+Diagnostic Button Screen 4.1: the device is attempting to
+start the radio
+Operation and Maintenance
+Reference Manual
+April 2024
+00809-0200-4802
+60
+Emerson.com/Rosemount
+
+--- página 61 ---
+n e t w k
+                
+I N I T
+Diagnostic Button Screen 4.2: the device has just restarted
+n e t w k
+                
+i d l e
+Diagnostic Button Screen 4.3: the device is starting to join
+the process
+n e t w k
+                
+D I S C N T
+Diagnostic Button Screen 4.4: the device is in a
+disconnected state and requires a “Force Join” command to
+join the network
+N E T w K
+                
+S R C H N G
+Diagnostic Button Screen 4.5: the device is searching for
+the Network
+n e t w k
+                
+N E G O T
+Diagnostic Button Screen 4.6: the device is attempting to
+join a network
+Reference Manual
+Operation and Maintenance
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+61
+
+--- página 62 ---
+n e t w k
+                
+  c o n e c t
+Diagnostic Button Screen 4.7: the device is connected to
+the Network, but is in a “Quarantined” state
+n e t w k
+L I M - O P
+Diagnostic Button Screen 4.8: the device is joined and
+operational, but is running with limited bandwidth for
+sending periodic data
+n e t w k
+                
+O K
+Diagnostic Button Screen 4.9: the device has joined a
+network and has been fully configured and has multiple
+parents
+5.3.4 
+Device diagnostic screens
+The following screens will show the device diagnostics depending on the state of the
+device.
+   D E V
+                
+f A i l u r
+ 
+Device Information - Status: there is a critical error which
+may prevent the device from operating correctly. Check
+additional status screens for more information.
+P R E S S
+      5 8. 0
+    P S I
+PV Screen: process pressure value
+Operation and Maintenance
+Reference Manual
+April 2024
+00809-0200-4802
+62
+Emerson.com/Rosemount
+
+--- página 63 ---
+S N S R
+      2 5. 0 0
+d e g   c
+SV Screen: sensor temperature value
+  D E V
+      2 5. 2 5
+d e g   c
+TV Screen: device temperature value
+S u p l y
+        7. 2 1
+v o l t s
+QV Screen: voltage reading at the power supply terminals
+P R C N T
+        7. 2 1
+R A N G E
+Percent Range Screen: percent range reading
+a l e r t
+               
+p r e s n t
+Alert Screen: at least one alert is present - this screen will
+not display if no alerts are present
+Reference Manual
+Operation and Maintenance
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+63
+
+--- página 64 ---
+A b c d e
+                
+f g h
+Diagnostic Button Screen 1 - Tag: user entered tag which
+is eight characters long - will not display if all characters are
+blank
+i d  -  1 2
+               
+3 4 5 6 7 8
+Diagnostic Button Screen 2: the device’s identifier that
+is used to make up the HART long address - the Smart
+Wireless Gateway may use this to help identify devices if no
+unique user tag is available
+s u p l y
+                
+f a i l u r
+Diagnostic Button Screen 7.1: the terminal voltage has
+dropped below level of operating limit. Replace the Power
+Module (Part Number: 00753-9220-0001)
+s u p l y
+                
+  l o w
+Diagnostic Button Screen 7.2: the terminal voltage is
+below the recommended operating range - if this is a
+battery operated device, the Power Module should be
+replaced - for line powered devices, the supply voltage
+should be increased
+r a d i o
+                
+  f a i l u r
+Diagnostic Button Screen 8: the device may not be able
+to communicate with the radio or the radio has an internal
+error. In this state, the device may still be operational and
+publishing HART data
+Operation and Maintenance
+Reference Manual
+April 2024
+00809-0200-4802
+64
+Emerson.com/Rosemount
+
+--- página 65 ---
+c o n f g
+                
+f a i l u r
+Diagnostic Button Screen 9.1: configuration of the
+transmitter is invalid such that critical operation of the
+device may be affected - check the extended configuration
+status to identify which configuration item(s) need to be
+corrected
+c o n f g
+                
+  w a r n
+Diagnostic Button Screen 9.2: configuration of the
+transmitter is invalid such that non-critical operation of the
+device may be affected - check the extended configuration
+status to identify which configuration item(s) need to be
+corrected
+s n s r
+                
+f a i l u r
+Diagnostic Button Screen 10.1: a sensor attached to the
+transmitter has failed, and valid readings from that sensor
+are no longer possible - check the sensor and sensor wiring
+connections - check additional status for more detailed
+information of the failure source
+s n s r
+                
+  w a r n
+Diagnostic Button Screen 10.2: a sensor attached to the
+transmitter is degraded, readings from that sensor may
+not be within accuracy specifications - check the process,
+and sensor wiring connections - check additional status for
+more detailed information of the warning source
+Note
+Use the Rosemount Wireless LCD Part Number: 00753-9004-0002.
+Reference Manual
+Operation and Maintenance
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+65
+
+--- página 66 ---
+Operation and Maintenance
+Reference Manual
+April 2024
+00809-0200-4802
+66
+Emerson.com/Rosemount
+
+--- página 67 ---
+6 
+Troubleshooting
+6.1 
+Overview
+Table 2 provides summarized maintenance and troubleshooting suggestions for the most
+common operating problems.
+If you suspect malfunction despite the absence of any diagnostic messages on the
+communication device display, follow the procedures described here to verify that
+transmitter hardware and process connections are in good working order. Always deal
+with the most likely checkpoints first.
+6.2 
+Wireless device status information
+6.2.1 
+Button stuck
+Cause
+A button on the Electronics Board is detected as stuck in the active position.
+Recommended actions
+1. Inspect the buttons for obstructions. Clear any obstructions found during
+inspection.
+2. Reset the device.
+3. If the condtion persists, replace the electronics.
+6.2.2 
+Configuration error
+Cause
+The device detected a configuration error based on a change to the device.
+Recommended actions
+1. Click on Details for more information.
+2. Correct the parameter that has a configuration error.
+3. Reset the device.
+4. If the condtion persists, replace the electronics.
+6.2.3 
+Database memory warning
+Cause
+The device failed to write to the database memory. Any data written during this time may
+have been lost.
+Recommended actions
+1. Reset the device.
+2. Reconfirm all configuration items in the device.
+3. If logging dynamic data not needed, this advisory can be safely ignored.
+Reference Manual
+Troubleshooting
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+67
+
+--- página 68 ---
+4. If the condtion persists, replace the electronics.
+6.2.4 
+Electronics failure
+An electronics error that could impact the device measurement reading has occurred.
+Recommended actions
+1. Reset the device.
+2. Reconfirm all configuration items in the device.
+3. If the condition persists, replace the electronics.
+6.2.5 
+Electronics temperature has exceeded limits
+The electronics temperature has exceeded the transmitter's maximum range.
+Recommended actions
+1. Verify the environmental temperature is within the transmitter’s range.
+2. Remote mount the transmitter away from process and environmental
+conditions.
+3. Reset the device.
+4. If the condtion persists, replace the electronics.
+6.2.6 
+Electronics warning
+The device detected an electronic error that does not currently impact the device
+measurement reading.
+Recommended actions
+1. Reset the device.
+2. Reconfirm all configuration items in the device.
+3. If the condtion persists, replace the electronics.
+6.2.7 
+HI alert
+Cause
+The primary variable surpassed user-defined limit.
+Recommended actions
+1. Verify the process variable is within user-specified limits.
+2. Reconfirm the user-defined alert limit.
+3. If not needed, disable this alert.
+6.2.8 
+HI HI alert
+Cause
+The primary variable surpassed the user-defined limit.
+Recommended actions
+1. Verify the process variable is within user-specified limits.
+Troubleshooting 
+Reference Manual
+April 2024
+00809-0200-4802
+68
+Emerson.com/Rosemount
+
+--- página 69 ---
+2. Reconfirm the user-defined alert limit.
+3. If not needed, disable this alert.
+6.2.9 
+LO alert
+Cause
+The primary variable surpassed the user-defined limit.
+Recommended actions
+1. Verify the process variable is within user-specified limits.
+2. Reconfirm the user-defined alert limit.
+3. If not needed, disable this alert.
+6.2.10 
+LO LO alert
+Cause
+The primary variable surpassed the user-defined limit.
+Recommended actions
+1. Verify the process variable is within user-specified limits.
+2. Reconfirm the user-defined alert limit.
+3. If not needed, disable this alert.
+6.2.11 
+Pressure has exceeded limits
+The sensor exceeded the maximum measurement range.
+Recommended actions
+1. Check process for possible saturation condition.
+2. Verify the appropriate sensor was chosen for the application.
+3. Reconfirm sensor configuration.
+4. Reset the device.
+5. Replace the sensor.
+6.2.12 
+Radio failure
+The wireless radio has detected a failure or stopped communicating.
+Recommended actions
+1. Reset the device.
+2. If the condtion persists, replace the electronics.
+6.2.13 
+Simulation Active
+The device is in Simulation mode and may not be reporting actual information.
+Recommended actions
+1. Verify that simulation is no longer required.
+Reference Manual
+Troubleshooting
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+69
+
+--- página 70 ---
+2. Disable Simulation mode in Service Tools.
+3. Reset the device.
+6.2.14 
+Supply voltage failure
+The supply voltage is too low for the device to function properly.
+Recommended actions
+Replace the Power Module.
+6.2.15 
+Supply voltage low
+Cause
+Thw supply voltage is low and may soon affect broadcast updates.
+Recommended actions
+Replace the power module.
+6.3 
+Wireless troubleshooting
+6.3.1 
+Digital pressure variable reading is erratic
+Recommended actions
+1. Check application for faulty equipment in pressure line.
+2. Verify transmitter is not reacting directly to equipment turning On/Off.
+6.3.2 
+Digital pressure variable reading is low or high
+Recommended actions
+1. Check impulse piping for blockage or low fill in wet leg.
+2. Verify transmitter is calibrated properly.
+3. Check test equipment (verify accuracy).
+4. Verify pressure calculations for application.
+6.3.3 
+LCD display is not functioning
+Recommended actions
+1. Reseat the LCD according to Install the LCD display.
+2. Verify the LCD display is a wireless LCD meter. An LCD from a wired device will
+not function in a wireless device. Rosemount part number: 00753-9004-0002
+3. Verify the LCD display mode is not disabled.
+Troubleshooting 
+Reference Manual
+April 2024
+00809-0200-4802
+70
+Emerson.com/Rosemount
+
+--- página 71 ---
+6.3.4 
+Transmitter will not respond to changes in applied
+pressure
+Recommended actions
+1. Check impulse piping or manifold for blockage.
+2. Verify applied pressure is between 4 and 20 mA points.
+3. Verify the output is not in Alarm condition.
+4. Verify transmitter is not in Loop Test mode.
+5. Verify transmitter is not in Multidrop mode.
+6. Check test equipment.
+6.4 
+Wireless network troubleshooting
+6.4.1 
+Device not joining the network
+Recommended actions
+1. Verify the network ID and join key.
+2. Wait 30 minutes.
+3. Enable High Speed Operation on Smart Wireless Gateway.
+4. Inspect the Power Module.
+5. Verify the device is within range of at least one other device.
+6. Verify the network is in active network advertise.
+7. Power Cycle the device to try again.
+8. Verify the device is configured to join. Send the Force Join command to the
+device.
+9. See troubleshooting section of Smart Wireless Gateway for more information.
+6.4.2 
+Limited bandwidth error
+Recommended actions
+1. Reduce the Update Rate on transmitter.
+2. Increase communication paths by adding more wireless points.
+3. Verify the device has been online for at least one hour.
+4. Verify the device is not routing through a "limited" routing node.
+5. Create a new network with an additional Smart Wireless Gateway.
+6.4.3 
+Short battery life
+Recommended actions
+1. Verify Power Always On mode is off.
+2. Verify the device is not installed in extreme temperatures.
+3. Verify the device is not a network pinch point.
+4. Check for excessive network rejoins due to poor connectivity.
+Reference Manual
+Troubleshooting
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+71
+
+--- página 72 ---
+6.5 
+Disassembly procedures
+6.5.1 
+Remove from service
+Be aware of the following:
+•
+Follow all plant safety rules and procedures.
+•
+Isolate and vent the process from the transmitter before removing the transmitter from
+service.
+•
+Detach the process flange by removing the four flange bolts and two alignment screws
+that secure it.
+•
+Do not scratch, puncture, or depress the isolating diaphragms.
+•
+Clean isolating diaphragms with a soft rag and a mild cleaning solution, and rinse with
+clear water.
+•
+Whenever you remove the process flange or flange adapters, visually inspect the PTFE
+o-rings. Replace the o-rings if they show any signs of damage, such as nicks or cuts. If
+they are not damaged, reuse them.
+The Rosemount 3051S Wireless transmitter is attached to the process connection by four
+bolts and two cap screws. Remove the bolts and separate the transmitter from the process
+connection. Leave the process connection in place and ready for re-installation.
+The Rosemount 3051S Wireless In-line transmitter is attached to the process by a
+single hex nut process connection. Loosen the hex nut to separate the transmitter from
+the process.
+6.5.2 
+Remove terminal block
+Wireless Plantweb™ housing
+1. Remove the power module.
+2. Loosen the two small screws.
+3. Pull out the entire terminal block.
+Figure 6-1: Wireless Plantweb terminals
+Troubleshooting 
+Reference Manual
+April 2024
+00809-0200-4802
+72
+Emerson.com/Rosemount
+
+--- página 73 ---
+6.5.3 
+Removing the feature assembly and the SuperModule
+from the housing
+The Wireless Feature Board is located in the electronics compartment.
+To remove the assembly:
+Procedure
+1. Remove the housing cover opposite the field terminal side.
+2. Remove the LCD display, if applicable, by holding in the two clips and pulling
+outward.
+3. Loosen the two small screws located on the assembly.
+4. Replace the LCD display.
+This will help in removing the assembly.
+5. Pull out the assembly to expose and locate the SuperModule connector and antenna
+connector.
+6. Grasp antenna connector by the base and pull upwards to disconnect.
+7. Grasp the SuperModule connector, squeeze the clips and pull upwards (avoid
+pulling wires).
+NOTICE
+To prevent damage to the SuperModule cable, disconnect it from the Plantweb™
+assembly before you remove the SuperModule from the housing.
+Reference Manual
+Troubleshooting
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+73
+
+--- página 74 ---
+Figure 6-2: SuperModule connector view
+Wireless Plantweb housing
+ 
+ 
+8. Loosen the housing rotation set screw with a 3/32-inch hex wrench, then rotate back
+one full turn.
+Figure 6-3: Housing rotation set screw
+A. Housing rotation set screw (3/32-inch allen)
+9. Unscrew the housing from the SuperModule.
+Troubleshooting 
+Reference Manual
+April 2024
+00809-0200-4802
+74
+Emerson.com/Rosemount
+
+--- página 75 ---
+6.6 
+Reassembly procedures
+Note
+The V-Seal must be installed at the bottom of the housing.
+6.6.1 
+Attach the SuperModule to the wireless housing
+Procedure
+1. Apply a light coat of low temperature silicon grease to the SuperModule connector.
+2. Insert the SuperModule connector into the top of the SuperModule.
+3. Reconnect the antenna wiring.
+4. Gently slide the assembly into the housing, ensuring the Plantweb™ housing pins
+properly engage the assembly receptacles.
+5. Tighten the captive mounting screws.
+6. Attach the Plantweb housing cover.
+7. Tighten Plantweb housing cover ensuring metal contacts metal.
+6.6.2 
+Install the Terminal Block
+Procedure
+1. Gently slide the terminal block into the housing, ensuring the Plantweb™ housing
+pins properly engage the terminal block receptacles.
+2. Tighten the captive screws on the terminal block.
+3. Attach the Wireless Plantweb housing cover.
+4. Tighten the Wireless Plantweb housing cover ensuring metal contacts metal.
+6.6.3 
+Reassemble the process flange
+Procedure
+1. Inspect the PTFE SuperModule o-rings. If the o-rings are not damaged, reuse them.
+Replace o-rings that show any signs of damage, such as nicks, cuts, or general wear.
+NOTICE
+If you are replacing the o-rings, be careful not to scratch the o-ring grooves or the
+surface of the isolating diaphragm when removing the damaged o-rings.
+2. Install the process flange on the SuperModule. To hold the process flange in place,
+install the two alignment screws to finger tight (screws are not pressure retaining).
+NOTICE
+Do not overtighten; this will affect module-to-flange alignment.
+3. Install the appropriate flange bolts.
+a) If the installation requires a ¼–18 NPT mounting, use four 1.75-in. flange
+bolts. Go to Step 3.f.
+Reference Manual
+Troubleshooting
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+75
+
+--- página 76 ---
+b) If the installation requires a ½–14 NPT mounting, use four 2.88-in. process
+flange/adapter bolts. For gage pressure configurations, use two 2.88-in. bolts
+and two 1.75-in. bolts. Go to Step 3.d.
+c) If the installation uses a manifold (differential pressure applications only), use
+appropriate bolts. Go to Step 3.e.
+d) Hold the flange adapters and adapter o-rings in place while finger-tightening
+the bolts. Go to Step 3.g.
+e) Align the process flange with the manifold.
+f) Finger tighten the bolts.
+g) Tighten the bolts to the initial torque value using a crossed pattern. See Table
+6-1 for appropriate torque values.
+h) Tighten the bolts to the final torque value using a crossed pattern. See Table
+6-1 for appropriate torque values. When fully tightened, the bolts extend
+through the top of the module housing.
+i) If the installation uses a manifold, then install flange adapters on the
+process end of the manifold using the 1.75-in. flange bolts supplied with the
+transmitter.
+Table 6-1: Bolt Installation Torque Values
+Bolt material
+Initial torque value
+Final torque value
+CS-ASTM-A445 Standard
+300 in-lb. (34 N-m)
+650 in-lb. (73 N-m)
+316 SST—Option L4
+150 in-lb. (17 N-m)
+300 in-lb. (34 N-m)
+ASTM-A-193-B7M—Option L5
+300 in-lb. (34 N-m)
+650 in-lb. (73 N-m)
+Alloy K-500—Option L6
+300 in-lb. (34 N-m)
+650 in-lb. (73 N-m)
+ASTM-A-453-660—Option L7
+150 in-lb. (17 N-m)
+300 in-lb. (34 N-m)
+ASTM-A-193-B8M—Option L8
+150 in-lb. (17 N-m)
+300 in-lb. (34 N-m)
+4. If you replaced the PTFE SuperModule o-rings, re-torque the flange bolts after
+installation to compensate for cold flow.
+5. Install the drain/vent valve.
+a) Apply sealing tape to the threads on the seat. Starting at the base of the
+valve with the threaded end pointing toward the installer, apply two clockwise
+turns of sealing tape.
+b) Take care to place the opening on the valve so that process fluid will drain
+toward the ground and away from human contact when the valve is opened.
+c) Tighten the drain/vent valve to 250 in-lb. (28.25 N-m).
+Note
+After replacing o-rings on Range 1 transmitters and reinstalling the process flange,
+expose the transmitter to a temperature of 185 °F (85 °C) for two hours. Then
+retighten the flange bolts in a cross pattern, and again expose the transmitter to a
+temperature of 185 °F (85 °C) for two hours before calibration.
+Troubleshooting 
+Reference Manual
+April 2024
+00809-0200-4802
+76
+Emerson.com/Rosemount
+
+--- página 77 ---
+A 
+Specifications and Reference Data
+A.1 
+Specifications
+A.1.1 
+Locating additional information
+Procedure
+1. Navigate to Rosemount 3051S Wireless MultiVariable™ Transmitter product page.
+2. Locate and click Documents & Drawings immediately below the Product Description
+section.
+3. To view needed information, refer to the following:
+Information type
+How to retrieve
+Declaration of Conformity (DOC)
+a. Click Certificates & Approvals.
+b. Select the appropriate Product Data
+Sheet.
+Dimensional drawings
+Ordering information
+Specifications
+a. Click Data Sheets & Bulletins.
+b. Select the appropriate Product Data
+Sheet.
+Installation drawings
+a. Click Drawings & Schematics.
+b. Select the appropriate document.
+Product certifications
+a. Click Manuals & Guides.
+b. Select the appropriate Quick Start
+Guide.
+Reference Manual
+Specifications and Reference Data
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+77
+
+--- página 78 ---
+Specifications and Reference Data
+Reference Manual
+April 2024
+00809-0200-4802
+78
+Emerson.com/Rosemount
+
+--- página 79 ---
+B 
+Product Certifications
+B.1 
+Product certifications
+See Rosemount 3051 Pressure Transmitter and 3051CF Series Flow Meter Quick Start Guide
+for current product certifications.
+Reference Manual
+Product Certifications
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+79
+
+--- página 80 ---
+Product Certifications
+Reference Manual
+April 2024
+00809-0200-4802
+80
+Emerson.com/Rosemount
+
+--- página 81 ---
+C 
+High Gain Remote Antenna Option
+C.1 
+Functional specifications
+Output
+WirelessHART® 2.4 GHz DSSS (Direct Sequence Spread Spectrum)
+Radio Frequency Power Output from Antenna:
+•
+High Gain Remote (WN option) antenna: Maximum of 40 mW (16 dBm) EIRP (Equivalent
+Isotropically Radiated Power)
+Communications range
+2/3 mile (3,300 feet) (1.0 km) with LOS
+Coaxial length
+25 feet (7.6 meters) with Type N Connections
+Coaxial material
+•
+Heavy duty, low loss LMR400 cable
+•
+Minimum coaxial bend diameter: 1.0 ft (0.3 meter)
+Antenna
+•
+Remote mount Omni directional Antenna
+•
+Fiberglass & Aluminum construction
+•
+8 Db Gain
+•
+Meets MIL-STD-810G (Method 510.5, Procedure I and II)
+Physical specifications
+Weight : 1.0 lb (0.4 kg)
+RF lightning arrestor
+In-line lightning arrestor
+Electrical Connection: Lightning arrestor MUST be grounded per local electrical codes and
+regulations.
+Mounting Bracket
+•
+Horizontal or vertical mast accommodation
+•
+Supported mast diameter: 1.0-2.5 inch (2.5-6.4 cm)
+•
+Aluminum bracket
+•
+Nickel/Zinc plated mounting U-bolts
+Ratings
+NEMA 4X, and IP66/67
+Vibration
+3g Max vibration
+Reference Manual
+High Gain Remote Antenna Option
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+81
+
+--- página 82 ---
+C.2 
+Installation considerations
+Antenna mounting
+Mount antenna vertically (±5°)
+Antenna height
+Mount antenna 14 feet (4.3 meters) above infrastructure with clear line of sight.
+Coaxial Cable
+Ensure that coaxial cable is securely affixed to the mast to avoid excessive cable
+movement.
+Coaxial drip loop
+Ensure a drip loop is installed not closer than 1 foot (0.3 meters) from the transmitter. To
+ensure condensation or rainwater will flow away from the coaxial connections, affix the
+drip loop to the lower portion of the mast.
+Figure C-1: Coaxial drip loop
+A. Coaxial drip loop
+Moisture protection
+Utilize the coaxial sealant that is included in the high gain remote mounting kit package.
+Follow included instructions for application on the coaxial connection.
+C.3 
+Transient/lightning considerations
+Gateway transient protection
+When installing, consider including transient/lightning protection (not provided) on
+interface connections (Ethernet, Modbus, and Coaxial connections) to other equipment.
+High Gain Remote Antenna Option
+Reference Manual
+April 2024
+00809-0200-4802
+82
+Emerson.com/Rosemount
+
+--- página 83 ---
+RF lightning arrestor ground connection
+Ensure grounding connection is made on the RF lightning arrestor ground connection
+point.
+C.4 
+Dimensional drawings
+Figure C-2: Device connection & RF lightning arrestor
+A. Mounting arrestor
+B. Mounting bracket
+C. Antenna
+•
+WJ1 antenna: 15 in. (381 mm)
+•
+WN1 antenna: 19.4 in. (490 mm)
+D. Remote mounting bracket dimensions
+E. Minimum drip loop: 12 in. (305 mm) diameter
+Note
+Dimensions in inches [millimeters].
+C.5 
+Installation steps
+Procedure
+1. Mount the transmitter according to mounting procedures described in the Quick
+Installation Guide and Product Manual.
+2. Connect the Radio Frequency (RF) lightning protector to the device and tighten.
+Reference Manual
+High Gain Remote Antenna Option
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+83
+
+--- página 84 ---
+Figure C-3: RF Lighting Protector
+A. RF lightning protector
+3. Connect antenna to mounting bracket and tighten nut carefully.
+4. Unwind coaxial cable and connect the cable to both the antenna and the lightning
+protector connected to the transmitter. Leaving one loop minimum for a drip loop.
+Ensure the drip loop is lower than the device allowing water to flow away from the
+device.
+High Gain Remote Antenna Option
+Reference Manual
+April 2024
+00809-0200-4802
+84
+Emerson.com/Rosemount
+
+--- página 85 ---
+5. Apply the coaxial sealant around each of the coaxial connections and at the
+lightning arrestor making sure the RF connections are completely sealed.
+6. Attach u-bolts to mounting bracket in correct orientation ensuring that antenna will
+be positioned in a vertical position.
+Reference Manual
+High Gain Remote Antenna Option
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+85
+
+--- página 86 ---
+Table C-1: 
+7. Tighten u-bolts to mast and ensure that antenna is pointed in a vertical direction.
+High Gain Remote Antenna Option
+Reference Manual
+April 2024
+00809-0200-4802
+86
+Emerson.com/Rosemount
+
+--- página 87 ---
+D 
+Field Communicator Menu Trees and
+Fast Keys
+D.1 
+Communication device menu trees
+Figure D-1: Rosemount 3051S Wireless Communication Device menu tree: Overview
+Home
+1 Overview
+2 Configure
+3 Service Tools
+Overview
+1 Device Status
+2 Comm Status
+3 Pressure
+4 Pressure Status
+5 Update Rate
+6 Join Device to Network
+7 Device Information
+1 Model Number 1
+2 Model Number 2
+3 Model Number 3
+Flange Info
+1 Process Connection
+2 Connection Material
+3 O-ring Material
+4 Drain/Vent Material
+Comm Status
+1 Join Status
+2 Join Mode
+3 Available Neighbors
+4 Advertisements 
+5 Join Attempts
+Remote Seal Info
+1 Num of Remote Seals
+2 RS Seal Type
+3 RS Fill Fluid
+4 RS Diaphragm Material
+Device Status
+1 Active Alerts
+Active Alerts
+1 Good - only if no alerts
+2. Failed - Fix Now
+3 Advisory
+4 Maintenance - fix soon
+If no Active Alerts present, 
+display text will be “No Active 
+Alerts”
+Sensor Information
+1 Serial Number
+2 Measurement Type
+3 Configuration
+4 Sensor Range
+5 Upper Limit
+6 Lower Limit
+7 Isolator material
+8 Fill Fluid
+Identification
+1 Tag
+2 Long Tag 
+3 Model
+4 Transmitter S.N.
+5 Date
+6 Description
+7 Message
+8 Device ID
+9 Model Numbers
+Security
+1 Write Protect Status
+2 Lock Status 
+Device Information
+1 Identification
+2 Revisions 
+3 Radio
+4 Sensor Information
+5 Flange Info 
+6 Remote Seal Info
+7 Security
+Radio
+1 MAC Address
+2 Manufacturer
+3 Device Type
+4 Device Revision
+5 Software Revision
+6 Hardware Revision
+7 Transmit Power Level
+8 Minimum Update Rate
+Revision 
+1 Universal Revision
+2 Field Device
+3 Device Description
+4 Software
+5 Hardware
+Reference Manual
+Field Communicator Menu Trees and Fast Keys
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+87
+
+--- página 88 ---
+Figure D-2: Rosemount 3051S Wireless Communication Device menu tree: Configure
+Field Communicator Menu Trees and Fast Keys
+Reference Manual
+April 2024
+00809-0200-4802
+88
+Emerson.com/Rosemount
+
+--- página 89 ---
+Figure D-3: Rosemount 3051S Wireless Communication Device menu tree: Manual
+Setup
+Home
+1 Overview
+2 Configure
+3 Service Tools
+Configure
+1 Guided Setup
+2 Manual Setup
+3 Alert Setup
+Device Display
+1 Display Option
+2 Display Mode
+Display Mode
+1 Periodic
+2 On Demand
+3 Disabled
+Display Option
+1 Pressure
+2 Scaled Variable
+3 Percent of Range
+4 Sensor Temperature
+5 Supply Voltage
+Note: These parameters are 
+On/Off toggles
+HART
+1 Variable Mapping
+2 Measurement and Status Log
+3 Configure Data History
+Security
+1 Security Switch Status
+2 HART Lock
+Scaled Variable Setup
+1 Scaled Variable
+2 Unit of Measure
+3 Transfer Function
+4 Linear or Square Root Options
+5 Configure Scaled Variable
+Percent Range
+1 Percent Range
+2 Transfer Function
+3 Upper Range Value
+4 Lower Range Value
+5 Sensor Limits
+6 Range using applied values
+Sensor Limits
+1 Upper Limit
+2 Lower Limit
+3 Minimum Span
+Wireless Setup
+1 Network ID
+2 Join Device to Network
+3 Broadcast Info
+Broadcast Info
+1 Configure Update Rate
+2 Message 1
+3 Message 2
+Sensor Temperature
+1 Sensor Temperature
+2 Status
+3 Units
+4 Max Sensor Limit
+5 Min Sensor Limit
+HART Lock
+1 Lock Status
+2 Lock/Unlock
+Pressure Setup
+1 Display Value
+2 Pressure Status
+3 Units
+4 Damping
+5 Sensor Limits
+Variable Mapping
+1 Variable reporting
+2 Primary Variable
+3 Second Variable
+4 Third Variable
+5 Fourth Variable
+Set Range Points
+1 PV Value
+2 PV Upper Range Value
+3 PV Lower Range Value
+Sensor Limits
+1 Upper
+2 Lower
+3 Minimum Span
+Manual Setup
+1 Wireless
+2 Pressure
+3 Scaled Variable
+4 Percent Range
+5 Device Display
+6 HART
+7 Security
+8 Sensor Temperature
+9 Device Information
+10 Power
+1 Model Number 1
+2 Model Number 2
+3 Model Number 3
+Flange Info
+1 Process Connection
+2 Connection Material
+3 O-ring Material
+4 Drain/Vent Material
+Remote Seal Info
+1 Num of Remote Seals
+2 RS Seal Type
+3 RS Fill Fluid
+4 RS Diaphragm Material
+Sensor Module Info
+1 Serial Number
+2 Measurement Type
+3 Configuration
+4 Sensor Range
+5 Upper Limit
+6 Lower Limit
+7 Isolator material
+8 Fill Fluid
+Identification
+1 Tag
+2 Long Tag 
+3 Model
+4 Transmitter S.N.
+5 Date
+6 Description
+7 Message
+8 Device ID
+9 Model Numbers
+Device Information
+1 Identification
+2 Revisions 
+3 Radio
+4 Sensor Module Info
+5 Flange Info 
+6 Remote Seal Info
+Radio
+1 MAC Address
+2 Manufacturer
+3 Device Type
+4 Device Revision
+5 Software Revision
+6 Hardware Revision
+7 Transmit Power Level
+8 Minimum Update Rate
+Revision 
+1 Universal Revision
+2 Field Device
+3 Device Description
+4 Software
+5 Hardware
+Reference Manual
+Field Communicator Menu Trees and Fast Keys
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+89
+
+--- página 90 ---
+Figure D-4: Rosemount 3051S Wireless Communication Device menu tree: Manual
+Setup
+Home
+1 Overview
+2 Configure
+3 Service Tools
+Trends
+1 Pressure
+2 Scaled Variable
+3 Sensor Temperature
+4 Data History
+ 
+Maintenance
+1 Pressure Calibration
+2 Restore Default Settings
+3 Located Device
+4 Device Reset
+5 Routine Maintenance
+Pressure Calibration
+1 Upper Sensor Trim
+2 Lower Sensor Trim
+3 Zero Sensor Trim
+4 Damping
+5 Transfer Function
+6 Last Calibration Points
+7 Sensor Limits
+Sensor Limits
+1 Upper 
+2 Lower 
+3 Minimum Span
+Last Calibration Points
+1 Upper
+2 Lower
+Routine Maintenance
+1 Measurement History
+2 Install Power Module
+Data History
+1 View Data History Table
+2 Device Variable
+3 Sample Interval
+4 Refresh
+Communications
+1 Join Status
+2 Join Mode
+3 Available Neighbors
+4 Advertisements Heard
+5 Join Attempts
+Simulate
+1 Pressure 
+2 Sensor Temperature
+3 Supply Voltage
+Alerts
+1 Active Alerts
+2 History
+Variables
+1 Variable Summary
+2 Pressure
+3 Scaled Variable
+4 Sensor Temperature
+5 Supply Voltage
+6 Percent Range
+7 Last Update Time
+Service Tools
+1 Alerts
+2 Variables
+3 Trends
+4 Communications
+5 Maintenance
+6 Simulate
+Active Alerts
+1 Refresh Alerts
+2 Active Alert Name #1
+3 Active Alert Image #1
+4 Active Alert Name #2
+5 Active Alert Image #2
+6 Etc.
+If no Active Alerts present, 
+display text will be “No Active 
+Alerts”
+History
+1 Clear Alert history
+2 Previous Alert
+If no Active Alerts present, 
+display text will be “No Active 
+Alerts”
+Active Alert Name
+1 Alert Description
+2 Recommended Actions
+Variable Summary
+1 Pressure Value
+2 Status
+3 Scaled Variable
+4 Status
+5 Temperature Value
+6 Status
+Pressure
+1 Pressure
+2 Pressure Status
+3 Gauge
+Scaled Variable
+1 Scaled Variable
+2 Status
+3 Gauge
+Sensor Temperature
+1 Sensor Temperature
+2 Status
+3 Gauge
+Supply Voltage
+1 Supply Voltage
+2 Status
+3 Gauge
+Percent Range
+1 Percent Range
+2 Status
+3 Gauge
+Field Communicator Menu Trees and Fast Keys
+Reference Manual
+April 2024
+00809-0200-4802
+90
+Emerson.com/Rosemount
+
+--- página 91 ---
+Reference Manual
+00809-0200-4802
+April 2024
+Emerson.com/Rosemount
+91
+
+--- página 92 ---
+00809-0200-4802
+Rev. BB
+2024
+For more information: Emerson.com/global
+©2024 Emerson. All rights reserved.
+Emerson Terms and Conditions of Sale are available
+upon request. The Emerson logo is a trademark and
+service mark of Emerson Electric Co. Rosemount is a
+mark of one of the Emerson family of companies. All
+other marks are the property of their respective owners.

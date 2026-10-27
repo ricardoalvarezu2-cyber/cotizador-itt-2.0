@@ -1,0 +1,1249 @@
+--- página 1 ---
+For Additional Product Information:
+If QR code is not affixed
+here, product documents can
+be located by entering your
+product's S/N into the search
+tool (magnifier icon) at the
+top of the webpage found at
+www.emerson.com
+Quick Start Guide
+MS-00825-0700-4021, Rev AA
+April 2026
+Rosemount
+™ 3144P Temperature
+Transmitter
+with Rosemount X-well
+™ Technology
+
+--- página 2 ---
+1 About this guide
+This guide provides basic guidelines for installing the Rosemount 3144P Transmitter. It
+does not provide instructions for detailed configuration, diagnostics, maintenance, service,
+troubleshooting, explosion-proof, flameproof, or intrinsically safe (IS) installations. Refer to the
+Rosemount 3144P Transmitter Reference Manual for more instructions. The manual and this guide
+are also available electronically on Emerson.com.
+ WARNING
+Explosions
+Explosions could result in death or serious injury.
+Installation of device in an explosive environment must be in accordance with appropriate
+local, national, and international standards, codes, and practices.
+Review the Product Certifications section of this document for any restrictions associated with
+a safe installation.
+ WARNING
+Conduit/cable entries
+The conduit/cable entries in the transmitter housing use a ½–14 NPT thread form.
+When installing in a hazardous location, use only appropriately listed or Ex-certified plugs,
+glands, or adapters in cable/conduit entries.
+ WARNING
+Electrical shock
+Electrical shock can result in death or serious injury.
+Avoid contact with the leads and terminals. High voltage that may be present on leads could
+cause electrical shock.
+ WARNING
+Enclosures
+Enclosure covers must be fully engaged to meet explosion-proof requirements.
+
+--- página 3 ---
+ WARNING
+Physical access
+Unauthorized personnel may potentially cause significant damage to and/or misconfiguration of
+end users’ equipment. This could be intentional or unintentional and needs to be protected
+against.
+Physical security is an important part of any security program and fundamental in protecting your
+system. Restrict physical access by unauthorized personnel to protect end users’ assets. This is
+true for all systems used within the facility.
+2 In the box
+A Quick Start Guide (not shown) is supplied as part of the standard package contents.
+Figure 2-1: In the Box, Standard Range Configuration
+A
+B
+C
+or
+A.
+Rosemount 3144P Temperature Transmitter with X–well™ Technology, standard range sensor,
+and Universal (shown) or Small pipe mount
+B.
+Banding (Universal pipe mount) or U–bolt (Small pipe mount)
+C.
+Corrosion protection inlay (if applicable)
+3 System readiness
+3.1 
+Confirm HART® revision capability
+If using HART-based control or asset management systems, confirm the HART capability of those
+systems prior to transmitter installation. Not all systems are capable of communicating with HART
+Revision 7 Protocol. Configure the transmitter for either HART Revision 5 or 7.
+4 Verify configuration
+When ordered with C1 custom software configuration option code, Emerson pre-configures
+Rosemount X-well™ Technology's software for specific pipe characteristics at the factory. If ordered
+
+--- página 4 ---
+without C1 option code or when installing on a pipe that is different from specified, you must
+reconfigure the device, or it will not perform as specified.
+The Rosemount 3144P Temperature Transmitter communicates using a Field Communicator
+(communication requires a loop resistance between 250 and 1100 ohms) or AMS Device Manager.
+NOTICE
+Do not operate when power is below 12 Vdc at the transmitter terminal.
+Refer to the Rosemount 3144P Temperature Transmitter Reference Manual and AMS Trex™ Device
+Communicator User Manual.
+4.1 
+Update the Field Communicator software
+To fully communicate with the Rosemount 3144P Temperature Transmitter, the latest Field
+Communicator Field Device Revision Dev v5 or v7, device descriptor (DD) v1 or greater is required.
+Transmitters equipped with Rosemount X-well™ Technology require DD revision 3144P Dev. 7 Rev.
+1 or greater to view this functionality.
+The DDs for new communicators are available at Emerson.com/global. Emerson Service Centers
+provide downloads for existing communicators.
+The DDs are as follows:
+•
+Device in HART® 5 mode: Device v5 DDv1
+•
+Device in HART 7 mode: Device v7 DDv1
+To determine if a device upgrade is needed:
+Figure 4-1: Connecting a Field Communicator to a Bench Loop
+A.
+Power/signal terminals
+B.
+250 Ω ≤ RL ≤ 1100 Ω
+C.
+Power supply
+Procedure
+1.
+Connect the sensor.
+Refer to the wiring diagram located on the inside of the transmitter housing cover.
+2.
+Connect the bench power supply to the power terminals (+ or -).
+3.
+Connect a Field Communicator to either:
+•
+The loop across a loop resistor
+•
+The power/signal terminals on the transmitter
+The following message appears if the communicator has a previous version of the Device
+Descriptors (DDs):
+
+--- página 5 ---
+NOTICE
+Upgrade the communicator software to access new XMTR functions. Continue with old
+description.
+NOTICE
+If the latest version is not available, the communicator will communicate properly, but when the
+transmitter is configured some new capabilities may not be visible.
+To prevent this from happening, upgrade to the latest DD or answer NO to the question and
+default to the generic transmitter functionality.
+Note
+If this message does not appear, then the latest DD is installed.
+4.2 
+Switch HART® revision mode
+If the HART Protocol configuration tool is not capable of communicating with HART Revision 7,
+the transmitter loads a generic menu with limited capability. The following procedure switches the
+HART Revision mode from the generic menu.
+Procedure
+Select Manual Setup → Device Information → Identification → Message.
+•
+To change to HART Revision 5, enter HART5 in the Message field.
+•
+To change to HART Revision 7, enter HART7 in the Message field.
+Function
+HART 5 Fast Keys
+HART 7 Fast Keys
+2-wire offset sensor 1
+2, 2, 1, 5
+2, 2, 1, 6
+2-wire offset sensor 2
+2, 2, 2, 5
+2, 2, 2, 6
+Alarm values
+2, 2, 5, 6
+2, 2, 5, 6
+Analog calibration
+3, 4, 5
+3, 4, 5
+Analog output
+2, 2, 5
+2, 2, 5
+Average temperature setup
+2, 2, 3, 3
+2, 2, 3, 3
+Burst mode
+N/A
+2, 2, 8, 4
+Comm status
+N/A
+1, 2
+Configure additional messages
+N/A
+2, 2, 8, 7
+Configure Hot Backup™
+2, 2, 4, 1, 3
+2, 2, 4, 1, 3
+Date
+2, 2, 7, 1, 2
+2, 2, 7, 1, 3
+Descriptor
+2, 2, 7, 1, 3
+2, 2, 7, 1, 4
+Device information
+2, 2, 7, 1
+2, 2, 7, 1
+Differential temperature setup
+2, 2, 3, 1
+2, 2, 3, 1
+Filter 50/60 Hz
+2, 2, 7, 5, 1
+2, 2, 7, 5, 1
+Find device
+N/A
+3, 4, 6, 2
+First good temperature setup
+2, 2, 3, 2
+2, 2, 3, 2
+Hardware revision
+1, 8, 2, 3
+1, 11, 2, 3
+HART lock
+N/A
+2, 2, 9, 2
+Intermittent sensor detect
+2, 2, 7, 5, 2
+2, 2, 7, 5, 2
+
+--- página 6 ---
+Function
+HART 5 Fast Keys
+HART 7 Fast Keys
+Lock status
+N/A
+1, 11, 3, 7
+Long tag
+N/A
+2, 2, 7, 2
+Loop test
+3, 5, 1
+3, 5, 1
+LRV (lower range value)
+2, 2, 5, 5, 3
+2, 2, 5, 5, 3
+Message
+2, 2, 7, 1, 4
+2, 2, 7, 1, 5
+Min/max tracking
+2, 1, 7, 2
+2, 1, 7, 2
+Open sensor holdoff
+2, 2, 7, 4
+2, 2, 7, 4
+Percent range
+2, 2, 5, 4
+2, 2, 5, 4
+Rosemount X-well configuration
+N/A
+2, 2, 1, 11
+Sensor 1 configuration
+2, 2, 1
+2, 2, 1
+Sensor 1 serial number
+2, 2, 1, 7
+2, 2, 1, 8
+Sensor 1 setup
+2, 2, 1
+2, 2, 2
+Sensor 1 status
+N/A
+2, 2, 1, 2
+Sensor 1 type
+2, 2, 1, 2
+2, 2, 1, 3
+Sensor 1 unit
+2, 2, 1, 4
+2, 2, 1, 5
+Sensor 2 configuration
+2, 2, 2
+2, 2, 2
+Sensor 2 serial number
+2, 2, 2, 7
+2, 2, 2, 8
+Sensor 2 setup
+2, 2, 2
+2, 2, 2
+Sensor 2 status
+N/A
+2, 2, 2, 2
+Sensor 2 type
+2, 2, 2, 2
+2, 2, 2, 3
+Sensor 2 unit
+2, 2, 2, 4
+2, 2, 2, 5
+Sensor drift alert
+2, 2, 4, 2
+2, 2, 4, 2
+Simulate device variables
+N/A
+3, 5, 2
+Software revision
+1, 8, 2, 4
+1, 11, 2, 4
+Tag
+2, 2, 7, 1, 1
+2, 2, 7, 1, 1
+Terminal temperature units
+2, 2, 7, 3
+2, 2, 7, 3
+Thermocouple diagnostic
+2, 1, 7, 1
+2, 1, 7, 2
+URV (upper range value)
+2, 2, 7, 3
+2, 2, 7, 3
+Variable mapping
+2, 2, 8, 5
+2, 2, 8, 5
+5 Set the switches
+The Rosemount 3144P Temperature Transmitter comes with hardware switches to configure
+alarms and lock the device.
+ WARNING
+Enclosure covers must be fully engaged to meet explosion-proof requirements.
+
+--- página 7 ---
+5.1 
+Set the switches with an LCD display
+Procedure
+1.
+Set the loop to Manual (if applicable) and disconnect the power.
+2.
+Remove the electronics housing cover.
+3.
+Unscrew the LCD display screws.
+4.
+Gently slide the meter straight off.
+5.
+Set the alarm and security switches to the desired position.
+6.
+Cautiously slide the LCD display to its original position.
+7.
+To secure the LCD display, replace and tighten the LCD display screws.
+8.
+Reattach housing cover.
+9.
+Apply power and set the loop to Automatic control.
+5.2 
+Set the switches without an LCD display
+Procedure
+1.
+Set the loop to Manual (if applicable) and disconnect the power.
+2.
+Remove the electronics housing cover.
+3.
+Set the alarm and security switches to the desired position.
+4.
+Reattach housing cover.
+5.
+Apply power and set the loop to Automatic control.
+6 Installation
+6.1 
+Technology considerations
+Rosemount X-well™ Technology is for temperature monitoring applications and is not intended for
+critical control or custody transfer.
+X-well Technology will only work as specified with factory-supplied and assembled pipe mount
+sensors via the Rosemount 3144P Temperature Transmitter or Rosemount 214XW Temperature
+Sensor. It will not work as specified with other sensors.
+NOTICE
+Installing and using the incorrect sensor will result in inaccurate process temperature
+calculations.
+It is important to adhere to the following requirements and installation steps to ensure Xwell
+Technology works as specified.
+6.2 
+Installation considerations
+Follow pipe mount sensor installation best practices as well as the specific Rosemount X-well
+Technology requirements noted below:
+•
+Ensure that the pipe surface is clean of debris.
+•
+Install the assembly away from dynamic external temperature sources, such as a boiler or
+heat tracing.
+•
+Mount the sensor on the outside section of the pipe where the process medium is in contact
+with the inside of the pipe wall. Avoid mounting sensor over vapor space.
+•
+Mount the pipe mount in a secure position to ensure there is no rotational movement after
+installation.
+•
+Ensure the pipe mount sensor makes direct contact with the pipe surface.
+
+--- página 8 ---
+Note
+Moisture buildup between the sensor and the pipe surface can cause inaccurate process
+temperature calculations.
+6.2.1 
+Horizontal orientation
+NOTICE
+Emerson recommends mounting the pipe mount sensor on the upper half of the pipe.
+Only consider bottom mounting when there is partial pipe flow in order to maintain accurate
+measurement.
+Figure 6-1: Horizontal Orientation
+A.
+Full pipe flow
+B.
+Partial pipe flow
+C.
+Recommended zone
+6.2.2 
+Vertical orientation
+The pipe clamp sensor can be installed in any position around the circumference of the pipe.
+
+--- página 9 ---
+Figure 6-2: Vertical Orientation
+6.2.3 
+Standard range/direct mount configuration
+For Rosemount X-well Technology to properly function with the standard range sensor, it is
+necessary to directly mount the transmitter on a pipe mount sensor.
+Direct mount configurations are limited to process temperatures between –58 °F to +572 °F (–
+50 °C to +300 °C).
+Figure 6-3 displays a transmitter/pipe mount assembly that is in a direct mount configuration.
+Figure 6-3: Pipe Mount Assembly in Direct Mount Configuration
+A.
+Banding
+B.
+Pipe
+C.
+Buckle and screw
+Insulation at least ½ in. (13 mm) thick (with R-value of > 0.42 m2 x K/W) is required over the
+sensor mount assembly and the sensor extension to prevent heat loss and ensure accurate
+measurement. When using the standard range sensor, insulation should cover the entire sensor
+extension, up to the transmitter head. Apply a minimum of 6 in. (152 mm) of insulation on each
+side of the pipe mount sensor. Take care to minimize air gaps between insulation and pipe.
+
+--- página 10 ---
+Figure 6-4: Insulation Requirements for Direct Mount/Standard Range Configuration
+NOTICE
+Over-insulation
+Do not apply insulation over the transmitter head, as this may result in longer response times and
+may damage the transmitter electronics.
+6.3 
+Installation instructions
+Follow the installation instructions based on the type of mounting hardware (Universal or Small
+Pipe Mount) specified with your Rosemount X-well device.
+
+--- página 11 ---
+6.3.1 
+Install Universal Pipe Mount
+Prerequisites
+Tools required for installation:
+•
+Hand-crank banding tensioner
+•
+4 mm Allen wrench
+•
+1 1/16 in. or 27 mm open-end wrench
+Universal Pipe Mount installation video
+ CAUTION
+Emerson recommends wearing safety glasses and gloves during this process.
+Figure 6-5: Universal Pipe Mount Component Overview
+A.
+Union
+B.
+Threaded stem
+C.
+Tension nut
+D.
+Tensioner plate
+E.
+Removable tension rods
+F.
+Springs
+G.
+Mount foot
+H.
+Banding and buckle
+Procedure
+1.
+Place mount and banding on pipe.
+Loosen collar to remove mount assembly from transmitter and sensor.
+Place the mount foot onto the pipe surface; then run the banding around the pipe and
+through the inside of the tensioner plate, making sure that the screw side of the buckle
+is facing inward, as shown.
+
+--- página 12 ---
+2.
+Install banding loosely.
+Bend the banding down around the rods of the tensioner plate. The end of the band
+with the buckle attached should be bent at a length that allows the buckle to sit near
+the bottom side of the pipe, opposite to the mount assembly. Acceptable location for the
+buckle is anywhere on the lower half of the pipe, opposite to the mount. The buckle must
+not fall within the distance between the tensioner plate and the pipe.
+A.
+Slack length
+B.
+Ideal buckle location
+Due to limited surface area of small pipes, it can be challenging to judge the amount of
+banding slack length required to land the buckle on bottom side of pipe. For these small
+pipes, refer to the following tables for suggested slack length from buckle to bend over
+rod based on line size.
+Table 6-1: Slack Length (English)
+Pipe size
+Length to first bend (A)
+2 in.
+4.7 in.
+2.5 in.
+5.5 in.
+3 in.
+6.2 in.
+4 in.
+7.5 in.
+5 in.
+9 in.
+6 in.
+10.6 in.
+8 in.
+13.6 in.
+10 in.
+16.7 in.
+Table 6-2: Slack Length (Metric)
+Pipe size
+Length to first bend (A)
+DN50
+120 mm
+
+--- página 13 ---
+Table 6-2: Slack Length (Metric) (continued)
+Pipe size
+Length to first bend (A)
+DN65
+140 mm
+DN80
+157 mm
+DN100
+192 mm
+DN125
+228 mm
+DN150
+254 mm
+DN200
+346 mm
+DN250
+424 mm
+3.
+Temporarily secure banding.
+Wrap the free end of the band around the pipe and through the buckle. Fold back loose
+end at least 90° to temporarily secure the band in place. Then pull the banding snug and
+bend it so that it is perpendicular to the pipe.
+4.
+Prepare banding for tensioning.
+Place banding within tensioner tool. Place nose of tensioner tool against the buckle, and
+slide banding into tool.
+Note
+The position of the mount assembly may be moved after the banding has been
+tensioned, the mount does not need to be in the final position during this step. Emerson
+recommends that the mount be positioned to allow for the most ergonomic use of the
+tensioner tool for this step.
+5.
+Tension banding and mount.
+Turn the crank on the tensioner tool to tighten the banding.
+This will slowly compress the tensioner plate and spring.
+Tighten the banding until the tension nut can be moved freely.
+
+--- página 14 ---
+6.
+Lock banding and tighten buckle.
+Using a 4 mm Allen wrench, tighten the set screw on the buckle to lock the banding in
+place.
+7.
+Remove tension tool.
+Once the banding is secured, reduce tension on the tensioner tool by spinning the crank
+counter-clockwise and remove the tool. Then bend the loose end of the banding over top
+of the buckle.
+Note
+Emerson recommends leaving enough length of banding to allow for re-tensioning of the
+banding if ever necessary. If you choose to trim any excess banding, be sure to remove
+any sharp edges or burrs.
+8.
+Final positioning.
+With the banding tensioned, the mount assembly may now be moved to its desired
+location.
+Using a 1 1/16 in. or a 27 mm open ended wrench, turn the tension nut clockwise on the
+threaded stem until it contacts the tensioner plate.
+Continue to tighten the tension nut to compress the springs until the banding loses
+tension and the mount may be freely moved around the pipe.
+9.
+Finalize installation location and tension.
+
+--- página 15 ---
+Once the Universal Pipe Mount is in its desired position, loosen the tension nut to
+decompress the spring to return tension to the banding. When loosening, return the
+tension nut to the top of the threaded stem.
+A.
+Tension plate to bottom of union stem
+If properly installed, the distance from bottom of union stem head to top of tension plate
+should be set at 0.47 in. (±0.01 in.) or 11.9 mm (±0.25 mm).
+6.3.2 
+Uninstall and Reinstall Universal Pipe Mount
+Procedure
+1.
+Using a 1 1/16 in. or 27 mm open-end wrench, turn the tension nut clockwise on the
+threaded stem until it contacts the tensioner plate. Continue to tighten the tension nut to
+compress the springs until the banding loses tension and you can freely move the clamp
+around the pipe.
+2.
+Using a pair of pliers, pull off each e-clip, and slide out each tension rod from the
+tensioner plate to remove the banding loop from the assembly. Reattach the tension
+rods and e–clips to the tensioner plate.
+3.
+If reinstalling on the same pipe, reverse these steps to reassemble the universal pipe
+mount and form a banding loop. If reinstalling on a new pipe, proceed to Step 4.
+4.
+If reinstalling on a new pipe, ensure top of tension nut is in line with bottom of black
+indicator mark before reinstallation. If it is not, put mount foot assembly in vice and
+adjust tension nut to correct height using a 1 1/16 in. or 27 mm open–end wrench. If
+tension nut is at the correct height, proceed to standard installation instructions.
+6.3.3 
+Install Small Pipe Mount
+Figure 6-6: Small Pipe Mount
+
+--- página 16 ---
+Figure 6-7: Small Pipe Mount Component Overview
+A.
+U-bolt
+B.
+Nut
+C.
+Spacer (shown) or washer
+D.
+Mount foot
+E.
+Pipe
+Procedure
+1.
+Place the mount foot assembly on the pipe with the slots running perpendicular to the
+pipe.
+2.
+Insert U-bolt around the pipe and through the slots.
+Emerson ships all Small Pipe Mounts with two short washers and two tall spacers. For
+installation on line sizes ½ in. (DN15) to 1 in. (DN25), use only the spacers. For line sizes 1
+¼ in. (DN32) to 1 ½ in. (DN40), use only the washers.
+3.
+Place first washer/spacer through threads of U-bolt to sit on top of foot mount assembly;
+then loosely tighten nut onto the same U-bolt thread.
+4.
+Repeat Step 3 for the other side of U-bolt.
+5.
+Incrementally tighten the nuts in an alternating manner until assembly sits squarely
+against the pipe.
+6.
+Install transmitter and sensor assembly into foot mount assembly. During sensor
+installation, stabilize the Small Pipe Mount by placing 1 ⅛ in. (29 mm) wrench on the
+flats of the foot mount. Ensure sensor passes through hole of mount foot and has direct
+contact between the sensor tip and pipe.
+7 Wire and apply power
+7.1 
+Verify Rosemount X-well™ sensor wiring
+Emerson ships X-well assemblies from the factory prewired. Verify the sensor wiring matches the
+expected configuration.
+For installations using the Rosemount 3144P Transmitter without X-well Technology, refer to the
+Rosemount 3144P Temperature Transmitter Quick Start Guide.
+
+--- página 17 ---
+Figure 7-1: Standard Range Sensor Wiring (TR1)
+7.2 
+Power the transmitter
+A.
+Sensor terminals (1 to 5)
+B.
+Power terminals
+C.
+Ground
+Procedure
+1.
+Remove the terminal block cover.
+2.
+Tighten the terminal screws.
+3.
+Reattach and tighten the cover.
+ WARNING
+Enclosure
+Enclosure covers must be fully engaged to meet explosion-proof requirements.
+4.
+Apply power.
+7.3 
+Load limitations
+The power required across the transmitter power terminals is 12 to 42 Vdc.
+NOTICE
+Power terminals are not rated to 42.4 Vdc.
+NOTICE
+To prevent the possibility of damaging the transmitter, when changing the configuration
+parameters do not allow terminal voltage to drop below 12.0 Vdc.
+
+--- página 18 ---
+Figure 7-2: Load Limitation
+Maximum load = 40.8 x (supply voltage - 12.0) without transient protection (optional).
+A.
+HART® and analog operating range
+B.
+Analog only operating range
+7.4 
+Ground the transmitter
+7.4.1 
+X-well standard range TR1 sensor input
+Each process installation has different requirements for grounding. Use the grounding options
+recommended by the facility for the specific sensor type or begin with grounding option 1 (the
+most common).
+Ground the transmitter: option 1
+Emerson recommends this option for ungrounded transmitter housing.
+Procedure
+1.
+Connect signal wiring shield to the sensor wiring shield.
+2.
+Ensure that the two shields are:
+a.
+Tied together
+b.
+Electrically isolated from the transmitter housing
+3.
+Ground shield at the power supply end only.
+4.
+Ensure that the sensor wiring shield is electrically isolated from the surrounding
+grounded fixtures.
+Ground the transmitter: option 2
+Emerson recommends this method for grounded transmitter housing.
+Procedure
+1.
+Connect sensor wiring shield to the transmitter housing.
+NOTICE
+Perform this step only if the housing is grounded.
+2.
+Ensure that the sensor is electrically isolated from surrounding fixtures that may be
+grounded.
+3.
+Ground signal wiring shield at the power supply end.
+Ground the transmitter: option 3
+Procedure
+1.
+If possible, ground sensor wiring shield at the sensor.
+2.
+Ensure the sensor wiring and signal wiring shields are electrically isolated from the
+transmitter housing and other grounded fixtures.
+3.
+Ground signal wiring shield at the power supply end.
+
+--- página 19 ---
+8 Perform a loop test
+The loop test verifies transmitter output, loop integrity, and operation of any recorders or similar
+devices installed in the loop.
+The following procedures are for the device dashboard - device revisions 5 and 7, DD v1.
+8.1 
+Initiate a loop test
+Procedure
+1.
+To ensure the power to the transmitter goes through the meter at some point in the
+loop, connect an external ampere meter in series with the transmitter loop.
+2.
+From the Home screen, select 3 Service Tools → 5 Simulate → 1 Perform Loop Test.
+The communicator displays the loop test menu.
+3.
+Select a discrete milliampere level for the transmitter to output.
+a)
+At Choose Analog Output, select 1 4 mA or 2 20 mA. If you want to enter a
+different value, select 4 Other to manually input a value between 4 and 20
+milliamperes.
+b)
+Select Enter to show the fixed output.
+c)
+Select OK.
+4.
+In the test loop, check that the transmitter's actual mA output and the HART® mA reading
+are the same value.
+NOTICE
+If the readings do not match, either the transmitter requires an output trim or the
+current meter is malfunctioning.
+After completing the test, the display returns to the loop test screen where another
+output value can be selected.
+5.
+To end the loop test, select 5 End and Enter.
+8.2 
+Initiate simulation alarm
+Procedure
+1.
+From the Home screen, select 3 Service Tools → 5 Simulate → 1 Perform Loop Test → 3
+Simulate Alarm.
+The transmitter outputs the alarm current level based on the configured alarm
+parameter and switch settings.
+2.
+Select 5 End to return the transmitter to normal conditions.
+9 Rosemount 3144P Temperature Transmitter product
+certifications
+Rev 2.25
+9.1 
+European Directive information – CE
+A copy of the EU Declaration of Conformity can be found at the end of the Quick Start Guide. The
+most recent revision of the EU Declaration of Conformity can be found at Emerson.com/global.
+9.2 
+North America
+The US National Electrical Code® (NEC) and the Canadian Electrical Code (CEC) permit the use
+of Division marked equipment in Zones and Zone marked equipment in Divisions. The markings
+must be suitable for the area classification, gas, and temperature class. This information is clearly
+defined in the respective codes.
+
+--- página 20 ---
+9.3 
+Ordinary location certification
+As standard, the transmitter has been examined and tested to determine that the design
+meets the basic electrical, mechanical, and fire protection requirements by a nationally
+recognized test laboratory (NRTL), as accredited by the Federal Occupational Safety and Health
+Administration (OSHA).
+9.4 
+North America
+9.4.1 
+E5 USA Explosion–proof
+Certificate:
+FM16US0202X
+Markings:
+XP Class I, Division 1, Groups ABCD; T5(–50 °C ≤ Ta ≤ +85 °C)
+Type 4X when installed per Rosemount drawing 03144-0320
+Specific Conditions of Use (X):
+1.
+Non-standard paint options may cause risk from electrostatic discharge. Avoid
+installations that could cause electrostatic build-up on painted surfaces, and only clean
+the painted surfaces with a damp cloth. If paint is ordered through a special option code,
+contact the manufacturer for more information.
+9.4.2 
+I5 USA Intrinsically Safe and Nonincendive
+Certificate:
+FM16US0202X
+Markings:
+IS Class I, Div 1, Groups ABCD; T4A(–60 °C ≤ Ta ≤ + 60°C)
+Class I, Zone 0, AEx ia IIC; T4(–60 °C ≤ Ta ≤ +60 °C)
+Type 4X when installed per Rosemount drawing 03144-0321
+NI Class I, Division 2, Groups ABCD;
+T5(–60 °C ≤ Ta ≤ +85 °C), T6(–60 °C ≤ Ta ≤ +60 °C)
+Type 4X when installed per Rosemount drawing 03144-0321
+Specific Condition of Use (X):
+1.
+Non-standard paint options may cause risk from electrostatic discharge. Avoid
+installations that could cause electrostatic build-up on painted surfaces, and only clean
+the painted surfaces with a damp cloth. If paint is ordered through a special option code,
+contact the manufacturer for more information.
+9.4.3 
+K5 Explosion–proof and Intrinsically Safe
+Certificate:
+FM16US0202X
+Markings:
+XP See markings under E5 USA Explosion–proof
+IS See markings under I5 USA Intrinsically Safe and Nonincendive
+NI See markings under I5 USA Intrinsically Safe and Nonincendive
+9.4.4 
+I6 Canada Intrinsically Safe and Nonincendive
+Certificate:
+CSA22CA1242650X
+Markings:
+IS Class I, Division 1, Groups ABCD; T4(–60 °C ≤ Ta ≤ +60 °C)
+Ex ia IIC T4 Ga; T4(–60 °C ≤ Ta ≤ +60 °C)
+Type 4X when installed per Rosemount drawing 03144-5076
+NI Class I, Division 2, Group ABCD; T5(–60 °C ≤ Ta ≤ +85 °C)
+Type 4X when installed per Rosemount drawing 03144-5076
+IS Conditions of Acceptability (X):
+1.
+When fitted with the transient terminal options, the apparatus is not capable of
+withstanding the 500V electrical strength test as defined in Clause 6.3.13 of IEC
+60079-11:2011. This must be taken into account during installation.
+
+--- página 21 ---
+2.
+The enclosure may be made from aluminum alloy with a protective polyurethane paint
+finish; however, care should be taken to protect it from impact or abrasion when located
+in Zone 0.
+NI Conditions of Acceptability (X):
+1.
+The Sensor Terminals 1 to 5 field wiring method shall be suitable for Class I, Division 2
+according to the CEC and NFPA 70.
+9.4.5 
+K6 Canada Explosion–proof and Intrinsically Safe
+Certificate:
+CSA22CA1242650X
+Markings:
+XP Class I, Division 1, Groups ABCD; T5(–50 °C ≤ Ta ≤ +85 °C)
+Type 4X; Seal not required
+IS See markings under I6 Canada Intrinsically Safe and Nonincendive
+NI See markings under I6 Canada Intrinsically Safe and Nonincendive
+9.5 
+Europe
+9.5.1 
+E1 ATEX Flameproof
+Certificate
+DEKRA 19ATEX0076X
+Markings
+ II 2 G Ex db IIC T6…T1 Gb
+T6...T1 (see Table 9-1)
+Special Conditions of Use (X):
+1.
+Flameproof joints are not intended to be repaired.
+2.
+Non-standard paint options may cause risk from electrostatic discharge. Avoid
+installations that could cause electrostatic build-up on painted surfaces and only clean
+the painted surfaces with a damp cloth. If paint is ordered through a special option code,
+contact the manufacturer for more information.
+9.5.2 
+I1 ATEX Intrinsically Safe
+Certificate:
+BAS01ATEX1431X
+Markings:
+ II 1 G Ex ia IIC T5/T6 Ga
+T5(–60 °C ≤ Ta ≤ +75 °C); T6(–60 °C ≤ Ta ≤ +50 °C)
+See Table 9-2 for parameters
+Specific Conditions of Use (X):
+1.
+When fitted with the transient terminal options, the equipment is not capable of passing
+the 500 V insulation test. This must be taken into account during installation.
+2.
+The enclosure may be made from aluminum alloy with a protective polyurethane paint
+finish; however, care should be taken to protect it from impact or abrasion when located
+in Zone 0.
+9.5.3 
+K1 ATEX Explosion–proof and Intrinsically Safe
+Certificate:
+DEKRA 19ATEX0076X (XP)
+BAS01ATEX1431X (IS)
+Markings:
+XP See markings under E1 ATEX Flameproof
+IS See markings under I1 ATEX Intrinsically Safe
+9.6 
+International
+9.6.1 
+E7 IECEx Flameproof
+Certificate
+IECEx DEK 19.0041X
+
+--- página 22 ---
+Markings
+Ex db IIC T6…T1 Gb
+T6...T1 (see Table 9-1)
+Special Conditions of Use (X):
+1.
+Flameproof joints are not intended to be repaired.
+2.
+Non-standard paint options may cause risk from electrostatic discharge. Avoid
+installations that could cause electrostatic build-up on painted surfaces and only clean
+the painted surfaces with a damp cloth. If paint is ordered through a special option code,
+contact the manufacturer for more information.
+9.6.2 
+I7 IECEx Intrinsically Safe
+Certificate:
+IECEx BAS 07.0002X
+Markings:
+Ex ia IIC T5/T6 Ga
+T5(–60 °C ≤ Ta ≤ +75 °C); T6(–60 °C ≤ Ta ≤ +50 °C)
+See Table 9-2 for entity parameters
+Specific Conditions of Use (X):
+1.
+When fitted with the transient terminal options, the apparatus is not capable of
+withstanding the 500V electrical strength test as defined in Clause 6.3.13 of IEC
+60079-11:2011. This must be taken into account during installation.
+2.
+The enclosure may be made from aluminum alloy with a protective polyurethane paint
+finish; however, care should be taken to protect it from impact or abrasion when located
+in Zone 0.
+9.6.3 
+K7 IECEx Explosionproof and Intrinsically Safe
+Certificate:
+IECEx DEK 19.0041X (XP)
+IECEx BAS 07.0002X (IS)
+Markings:
+XP See markings under E7 IECEx Flameproof
+IS See markings under I7 IECEx Intrinsically Safe
+9.7 
+Tables
+Table 9-1: Temperature Class
+Process temperature range
+at sensor conection(1) (°C)
+Ambient temperature range
+(°C)
+Temperature class/
+Maximum surface
+temperature “T”
+–60 to +70 °C
+–60 to +70 °C
+T6
+–60 to +80 °C
+–60 to +80 °C
+T5...T1
+(1)
+Sensor connection is where the sensor threads into the transmitter.
+Table 9-2: Specifications
+Parameters
+HART®
+Voltage Ui
+30 V
+Current Ii
+300 mA
+Power Pi
+1 W
+Capacitance Ci
+5 nF
+Inductance Li
+0 mH
+
+--- página 23 ---
+9.8 
+Declarations of conformity
+9.8.1 
+Temperature Transmitter DoC
+
+--- página 24 ---
+
+--- página 25 ---
+9.8.2 
+Optional RFID tag DoC
+
+--- página 26 ---
+9.9 
+China RoHS
+10 Rosemount X-well
+™ hardware (214XW) product certifications
+10.1 
+European Directive information
+A copy of the EU Declaration of Conformity can be found at the end of the Quick Start Guide. The
+most recent revision of the EU Declaration of Conformity can be found at Emerson.com/global.
+10.2 
+Ordinary location certification
+As standard, the transmitter has been examined and tested to determine that the design
+meets the basic electrical, mechanical, and fire protection requirements by a nationally
+recognized test laboratory (NRTL), as accredited by the Federal Occupational Safety and Health
+Administration (OSHA).
+10.3 
+North America
+The US National Electrical Code® (NEC) and the Canadian Electrical Code (CEC) permit the use
+of Division marked equipment in Zones and Zone marked equipment in Divisions. The markings
+must be suitable for the area classification, gas, and temperature class. This information is clearly
+defined in the respective codes.
+
+--- página 27 ---
+10.4 
+North America
+10.4.1  E5 USA Explosion-proof
+Certificate
+CSA15CA70044744X
+Markings
+XP CL I, DIV 1, GP B, C, and D
+T6 (–50 °C ≤ Ta ≤ +80 °C), T5 (–50 °C ≤ Ta ≤ +95 °C)
+XP CL I, Zone 1, AEx db IIC T6…T1 Gb
+T6…T1 (See Table 10-3)
+Type 4x; Seal not required; install per Rosemount 00214-1030
+Vmax 35 Vdc, 750 mWmax
+Special Conditions of Use (X):
+1.
+Flameproof joints are not intended to be repaired.
+2.
+Non-standard paint options may cause risk from electrostatic discharge. Avoid
+installations that could cause electrostatic build-up on painted surfaces and only clean
+the painted surfaces with a damp cloth. If paint is ordered through a special option code,
+contact the manufacturer for more information.
+3.
+When provided on their own, adapter style sensors must be assembled to a suitable Ex
+db enclosure with a free internal volume no greater than 33.6 in.3 (550 cm3).
+4.
+See instructions for relation between process temperature, ambient temperature, and
+temperature class/maximum surface temperature “T”.
+10.4.2  I5 USA Intrinsic Safety
+Certificate
+CSA15CA70044744X
+Markings
+IS CL I, DIV 1, GP A, B, C, and D
+CL 1, Zone 0, AEx ia IIC T5/T6 Ga
+Type 4x: Install per 00214-1020.
+See Table 10-1 and Table 10-2 for entity parameters.
+NI CL I, DIV 2, GP A, B, C, and D
+T6 (-50 °C ≤ Ta ≤ +80 °C); T5 (-50 °C ≤ Ta ≤ +95 °C)
+Type 4x; Install per Rosemount 00214-1030.
+Vmax 35 Vdc, 750 mWmax
+Conditions of Acceptability:
+1.
+The equipment must be installed in an enclosure which affords it a degree of ingress
+protection of at least IP20.
+10.4.3  E6 Canada Explosion-proof
+Certificate
+CSA15CA70044744X
+Markings
+XP CL I, DIV 1, GP B, C, and D
+T6 (-50 °C ≤ Ta ≤ +80 °C), T5 (-50 °C ≤ Ta ≤ +95 °C)
+XP Ex db IIC T6…T1 Gb
+T6…T1 (See Table 10-3)
+Type 4x; Seal not required; install per Rosemount 00214-1030
+Vmax 35 Vdc, 750 mWmax
+Special Conditions of Use (X):
+1.
+Flameproof joints are not intended to be repaired.
+2.
+Non-standard paint options may cause risk from electrostatic discharge. Avoid
+installations that could cause electrostatic build-up on painted surfaces and only clean
+the painted surfaces with a damp cloth. If paint is ordered through a special option code,
+contact the manufacturer for more information.
+
+--- página 28 ---
+3.
+When provided on their own, adapter style sensors must be assembled to a suitable Ex
+db enclosure with a free internal volume no greater than 33.6 in.3 (550 cm3).
+4.
+See instructions for relation between process temperature, ambient temperature, and
+temperature class/maximum surface temperature “T”.
+10.4.4  I6 Canada Intrinsic Safety
+Certificate
+CSA15CA70044744X
+Markings
+IS CL I, DIV 1, GP A, B, C, and D
+Ex ia IIC T5/T6 Ga
+When installed per Rosemount 00214-1020
+See Table 10-1 and Table 10-2 for entity parameters.
+NI CL I, DIV 2, GP A, B, C, and D
+T6 (-50 °C ≤ Ta ≤ +80 °C); T5 (-50 °C ≤ Ta ≤ +95 °C)
+Type 4x; Install per Rosemount 00214-1030.
+Vmax 35 Vdc, 750 mWmax
+Conditions of Acceptability:
+1.
+The equipment must be installed in an enclosure which affords it a degree of ingress
+protection of at least IP20.
+10.5 
+Europe
+10.5.1  E1 ATEX Flameproof
+Certificate
+DEKRA 19ATEX0076X
+Markings
+ II 2 G Ex db IIC T6…T1 Gb
+T6...T1 (see Table 9-1)
+Special Conditions of Use (X):
+1.
+Flameproof joints are not intended to be repaired.
+2.
+Non-standard paint options may cause risk from electrostatic discharge. Avoid
+installations that could cause electrostatic build-up on painted surfaces and only clean
+the painted surfaces with a damp cloth. If paint is ordered through a special option code,
+contact the manufacturer for more information.
+10.5.2  I1 ATEX Intrinsic Safety
+Certificate
+Baseefa 16ATEX0101X
+Markings
+ II 1 G Ex ia IIC T5/T6 Ga
+See Table 10-1 and Table 10-2 for entity parameters.
+Specific Conditions of Use (X):
+1.
+The equipment must be installed in an enclosure which affords it a degree of ingress
+protection of at least IP20.
+2.
+The equipment has Tamb with special range mentioned in product description.
+10.6 
+International
+10.6.1  E7 IECEx Flameproof
+Certificate
+IECEx DEK 19.0041X
+Markings
+Ex db IIC T6…T1 Gb
+T6...T1 (see Table 9-1)
+Special Conditions of Use (X):
+1.
+Flameproof joints are not intended to be repaired.
+2.
+Non-standard paint options may cause risk from electrostatic discharge. Avoid
+installations that could cause electrostatic build-up on painted surfaces and only clean
+
+--- página 29 ---
+the painted surfaces with a damp cloth. If paint is ordered through a special option code,
+contact the manufacturer for more information.
+10.6.2  I7 IECEx Intrinsic Safety
+Certificate
+IECEx BAS 16.0077X
+Markings
+Ex ia IIC T5/T6 Ga
+See Table 10-1 and Table 10-2 for entity parameters.
+Specifics Condition of Use (X):
+1.
+The equipment must be installed in an enclosure which affords it a degree of ingress
+protection of at least IP20.
+Table 10-1: Specifications
+Ui
+60 V
+Ii
+100 mA
+Pi
+See Table 10-2.
+Ci
+75 pF
+Li
+600 nH
+Uo
+100 mV (thermocouple [T/C])
+Io
+50 mW (T/C)
+Po
+25 mW (T/C)
+Table 10-2: Temperature Ranges
+Thermocouples; Pi = 500 mW
+T6 (–60 °C ≤ Ta ≤ +70 °C)
+RTDs; Pi = 192 mW
+T6 (–60 °C ≤ Ta ≤ +70 °C)
+RTDs; Pi = 290 mW
+T6 (–60 °C ≤ Ta ≤ +60 °C)
+T5 (–60 °C ≤ Ta ≤ +70 °C)
+Table 10-3: Temperature Class
+Process temperature range
+(°C)
+Ambient temperature range
+(°C)
+Temperature class
+–60 °C to +80 °C
+–60 °C to +80 °C
+T6
+–60 °C to +95 °C
+–60 °C to +80 °C
+T5
+–60 °C to +130 °C
+–60 °C to +80 °C
+T4
+–60 °C to +195 °C
+–60 °C to +80 °C
+T3
+–60 °C to +290 °C
+–60 °C to +80 °C
+T2
+–60 °C to +440 °C
+–60 °C to +80 °C
+T1
+10.7 
+Additional codes
+K5
+Combination of E5 and I5
+K6
+Combination of E6 and I6
+K1
+Combination of E1 and I1
+K7
+Combination of E7 and I7
+
+--- página 30 ---
+10.8 
+Declaration of Conformity
+
+--- página 31 ---
+
+--- página 32 ---
+10.9 
+China RoHS
+
+--- página 33 ---
+
+--- página 34 ---
+
+--- página 35 ---
+
+--- página 36 ---
+*MS-00825-0700-4021*
+Quick Start Guide
+MS-00825-0700-4021, Rev. AA
+April 2026
+For more information: Emerson.com/global
+©2026 Emerson. All rights reserved.
+Emerson Terms and Conditions of
+Sale are available upon request. The
+Emerson logo is a trademark and
+service mark of Emerson Electric Co.
+Rosemount is a mark of one of the
+Emerson family of companies. All
+other marks are the property of their
+respective owners.

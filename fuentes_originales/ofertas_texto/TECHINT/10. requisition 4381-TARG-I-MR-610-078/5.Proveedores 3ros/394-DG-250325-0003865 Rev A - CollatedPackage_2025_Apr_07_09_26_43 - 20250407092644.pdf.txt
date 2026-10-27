@@ -1,0 +1,1271 @@
+--- página 1 ---
+Sliding Stem Valve Specification
+Customer: 
+Induquip
+Contact: 
+Contact: Diego Ghener
+Customer Reference: 
+Sales Office Reference: 25-191
+Lead Time: 
+Item: 1
+Rev: 
+Qty: 1
+Quote: 394-DG-250325-0003865 / TECPETROL LOS 
+TOLDOS
+Rev: A
+Tags: 
+Date Last Modified: 04/07/2025
+Description: NPS 16 HPT Special Packaging 585C Size 130 DVC6200 Factory Mtgs DVC7K/DVC6200/DVC2000 Process Level 3
+Service Description: 
+ 
+|
+Service:
+| 
+Positioner Type:
+DVC6200,HART Communicating-HC
+Size and Type:
+NPS 16 HPT
+Input Signal:
+4 to 20 mA dc 
+Body Style:
+Globe 
+Access:
+67CFR Filter/Regulator
+Design Temp:
+43 deg C
+Gauges:
+0-60 psig/0-4 bar 
+Design Press:
+100.42 kg/cm2g
+Action:
+Increasing Input Moves Piston Down 
+End Connect/In/Out:
+16 CL1500/RTJ Flg/RTJ Flg
+Certification:
+FM,Explosion Proof/Intrinsic 
+Safe/Nonincendive
+Material:
+WCC Steel
+Controller Type:
+| 
+Ports:
+1 
+Action:
+| 
+Flow Direction:
+Down 
+Measure Element:
+| 
+Trim Number:
+260 
+Range:
+| 
+Cage Matl:
+17-4 SST H1075 
+Output:
+| 
+Retainer Matl:
+| 
+Mounting:
+| 
+Bushing Matl:
+| 
+Airset:
+| 
+Seat Ring Matl:
+17-4 SST H1075 
+Mounting:
+| 
+VALVE PLUG
+| 
+Transducer:
+| 
+Material:
+S41000 SST/S41600 SST 
+Input Signal:
+| 
+Guiding:
+Cage 
+Output Signal:
+| 
+Balance:
+Balanced 
+Action:
+| 
+Shutoff Class:
+ANSI CL IV 
+Mounting:
+| 
+Port Size:
+12 1/2 Inch
+Airset:
+| 
+Characteristic:
+Equal Percent
+Certifications:
+| 
+Stem Material:
+S20910 SST 
+Line In:
+16 in, SCH 80 
+Stem Size:
+1 1/4 Inch 
+Line Out:
+16 in, SCH 80 
+Bonnet Style:
+Plain 
+Insulation:
+None
+Boss Size:
+5H 
+Service Cond:
+| 
+Packing:
+Single PTFE 
+Process Fluid:
+NATURAL GAS (0.60 SG) 
+Access:
+No
+Critical Pressure:
+| 
+Bolt, Bonnet:
+SA-193-B7 Studs/2H Nuts NCF2 
+Shutoff Drop:
+100.42 kg/cm2
+PackFlg/Bltg:
+SST Pkg Flg, SST Studs & Nuts 
+| 
+| 
+Actuator:
+Piston 
+| 
+| 
+Type/Size:
+585C/130
+| 
+| 
+Travel:
+7 Inch
+| 
+| 
+Bench Set:
+| 
+| 
+| 
+Push Down To:
+PDTC 
+| 
+| 
+Supply:
+Air 
+| 
+| 
+To Actuator:
+35 psig 
+| 
+| 
+Fails Valve:
+Close 
+| 
+| 
+Handwheel:
+None
+Max Rated Cv:
+2144.0
+|
+ 
+Variable Name
+Unit
+Minimum
+Normal
+Maximum
+ 
+ 
+Volumetric Flow Rate Gas (Qg)
+Sm3/d
+1480000.000
+3600000.000
+4710000.000
+ 
+ 
+Inlet Pressure (P1)
+kg/cm2g
+99.64000
+99.73000
+100.42000
+ 
+ 
+Pressure Change (dP)
+kg/cm2
+2.00000
+2.00000
+0.70000
+ 
+ 
+Inlet Temperature (T1)
+deg C
+43.0000
+43.0000
+43.0000
+ 
+ 
+M / Gg
+M
+24.590
+24.420
+24.420
+ 
+ 
+Specific heats ratio (gamma)
+1.200
+1.210
+1.210
+ 
+ 
+Dynamic Viscosity (Mu)
+cP
+0.010
+0.010
+0.010
+ 
+ 
+Sizing Coefficient (Cv)
+174.271
+422.446
+925.336
+ 
+ 
+% Open
+22
+47
+66
+ 
+ 
+Valve LpA(LpAeValve1m)
+dB(A)
+65
+68
+54
+ 
+ 
+ 
+ 
+ 
+ 
+|
+NOTES:
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- página 2 ---
+Valve/Regulator Sizing Calculation
+Customer: 
+Induquip
+Contact: 
+Contact: Diego Ghener
+Customer Reference: 
+Sales Office Reference: 25-191
+Lead Time: 
+Item: 1
+Rev: 
+Qty: 1
+Quote: 394-DG-250325-0003865/TECPETROL LOS 
+TOLDOS
+Rev: A
+Tags: 
+Date Last Modified: 04/07/2025
+Description: NPS 16 HPT Special Packaging 585C Size 130 DVC6200 Factory Mtgs DVC7K/DVC6200/DVC2000 Process Level 3
+Service Description: 
+Sizing Type: Gas
+Flow is Turbulent
+Solving for: Cv
+Noise is IECAerodynamic
+Flow is Volumetric
+Variable Name
+Units
+Minimum
+Normal
+Maximum
+SERVICE & SIZING
+Gas
+NATURAL GAS (0.60 
+SG)
+NATURAL GAS (0.60 
+SG)
+NATURAL GAS 
+(0.60 SG)
+Inlet Pressure (P1)
+kg/cm2g
+99.64000
+99.73000
+100.42000
+Pressure Change (dP)
+kg/cm2
+2.00000
+2.00000
+0.70000
+Inlet Temperature (T1)
+deg C
+43.0000
+43.0000
+43.0000
+Volumetric Flow Rate Gas (Qg)
+Sm3/d
+1480000.000
+3600000.000
+4710000.000
+Pressure drop ratio factor (Xt)
+0.816
+0.771
+0.698
+Pressure Recovery Factor (Fl)
+0.781
+0.781
+0.781
+Valve style modifier (Fd)
+0.402
+0.283
+0.224
+Atmospheric Pressure
+psi
+14.69
+14.69
+14.69
+Dynamic Viscosity (Mu)
+cP
+0.010
+0.010
+0.010
+Specific heats ratio (gamma)
+1.200
+1.210
+1.210
+Molecular Weight/Specific Gravity
+M
+24.590
+24.420
+24.420
+Inlet Compressibility Factor (Z1)
+0.980
+0.980
+0.980
+ 
+Pipe Size Up
+in
+16
+16
+16
+Pipe Schedule Up
+80
+80
+80
+Pipe Size Down
+in
+16
+16
+16
+Pipe Schedule Down
+80
+80
+80
+Nominal Valve Diameter (dv)
+in
+16.000
+16.000
+16.000
+Aerodynamic Distance (Rn)
+m
+1.000
+1.000
+1.000
+ 
+Sizing Coefficient (Cv)
+174.271
+422.446
+925.336
+% Open
+22
+47
+66
+dP Choked
+kg/cm2
+70.45658
+67.14474
+61.17728
+dP/P1 Valve
+0.020
+0.020
+0.007
+Fp
+1.00
+1.00
+1.00
+ 
+NOISE CALCULATION
+Valve/Trim
+Globe/Angle
+Globe/Angle
+Globe/Angle
+Valve Lpa (LpAe1m)
+dB(A)
+65
+68
+54
+Valve Lpa (LpAeRn)
+dB(A)
+65
+68
+54
+ 
+VELOCITY OUTPUTS
+Valve Outlet Area(Ao)
+in2
+132.730
+132.730
+132.730
+M1 Pipe
+Mach
+0.005
+0.012
+0.016
+Mo Valve
+Mach
+0.006
+0.015
+0.020
+M2 Pipe
+Mach
+0.005
+0.013
+0.016
+V1 Pipe
+m/s
+1.8184
+4.4193
+5.7425
+Vo Valve
+m/s
+2.2946
+5.5764
+7.1517
+V2 Pipe
+m/s
+1.8932
+4.6008
+5.9004
+C1 Pipe
+m/s
+358.2625
+361.0022
+361.0022
+Co Valve
+m/s
+358.2625
+361.0022
+361.0022
+C2 Pipe
+m/s
+358.2625
+361.0022
+361.0022
+Item Notes:
+
+--- página 3 ---
+Actuator Sizing Calculation
+Customer: 
+Induquip
+Contact: 
+Contact: Diego Ghener
+Customer Reference: 
+Sales Office Reference: 25-191
+Lead Time: 
+Item: 1
+Rev: 
+Qty: 1
+Quote: 394-DG-250325-0003865 / TECPETROL LOS 
+TOLDOS
+Rev: A
+Tags: 
+Date Last Modified: 04/07/2025
+Description: NPS 16 HPT Special Packaging 585C Size 130 DVC6200 Factory Mtgs DVC7K/DVC6200/DVC2000 Process Level 3
+Service Description: 
+Variable Name
+Values
+Units
+Pas Available
+60
+psig 
+Valve Body Size
+16.0
+in 
+Port Diameter
+12.50
+in 
+Unbalanced Area
+0.47
+in2 
+Valve Travel
+7.00
+in 
+Valve Stem Size
+1.25
+in 
+Valve Friction
+120.00
+lbf 
+Additional Friction
+1214.06
+lbf 
+Seat load force
+80.00
+lbf/in 
+P1 Max
+1428.31
+psig 
+P2 Min
+0.00
+psig 
+Unbalance Force @ Open
+0.00
+lbf 
+Fluid Negative Gradient
+0
+in 
+dP Flowing
+28.45
+psi 
+Type 377 Trip Valve
+No
+Volume Tank
+No
+ 
+HandWheel
+No
+Works
+Yes
+Actuator Size
+130
+PS Required
+35.00
+psig 
+Actuator Thrust
+7309.50
+lbf 
+Valve Thrust
+5146.96
+lbf 
+Valve Stem Load
+7830.02
+lbf 
+
+--- página 4 ---
+Flow Coefficient Graph
+Customer: 
+Induquip
+Contact: 
+Contact: Diego Ghener
+Customer Reference: 
+Sales Office Reference: 25-191
+Lead Time: 
+Item: 1
+Rev: 
+Qty: 1
+Quote: 394-DG-250325-0003865 / TECPETROL LOS TOLDOS Rev: A
+Tags: 
+Date Last Modified: 04/07/2025
+Description: NPS 16 HPT Special Packaging 585C Size 130 DVC6200 Factory Mtgs DVC7K/DVC6200/DVC2000 Process Level 3
+Service Description: 
+Product: HPT        Valve Size=NPS 16        Travel=7 Inch        Rating=CL1500        Seat Type=Metal        Trim Style/Characteristic=Equal 
+Percent        Port Diameter=12 1/2 Inch
+
+--- página 5 ---
+Rotary Valve Specification
+Customer: 
+Induquip
+Contact: 
+Contact: Diego Ghener
+Customer Reference: 
+Sales Office Reference: 25-191
+Lead Time: 
+Item: 1
+Rev: 
+Qty: 1
+Quote: 394-DG-250325-0003865 / TECPETROL LOS 
+TOLDOS
+Rev: A
+Tags: 
+Date Last Modified: 04/07/2025
+Description: NPS 8 V280 Special Packaging 1061 Size 100 DVC6200 377 Factory Mtgs DVC7K/DVC6200/DVC2000 Process Level 3
+Service Description: 
+ 
+|
+Service:
+| 
+Positioner Type:
+DVC6200,HART Communicating-HC
+Size and Type:
+NPS 8 V280
+Input Signal:
+4 to 20 mA dc 
+Body Style:
+Ball Flanged 
+Access:
+67DFR Filter/Regulator
+Design Temp:
+43 deg C
+Gauges:
+0-160 psig/0-11 bar 
+Design Press:
+100.42 kg/cm2g
+Action:
+Increasing Input Moves Piston Up 
+End Connect/In/Out:
+CL900 RF Flg RF Flg
+Certification:
+FM,Explosion Proof/Intrinsic 
+Safe/Nonincendive
+Material:
+LF2 Steel 
+Controller Type:
+| 
+Flow Direction:
+Forward 
+Action:
+| 
+Trim Number:
+| 
+Measure Element:
+| 
+Retainer Matl:
+| 
+Range:
+| 
+Bushing/Bearing Matl: N04400 Nickel Alloy/PTFE 
+Output:
+| 
+Seal/Liner Matl:
+POM
+Mounting:
+| 
+Disk/Ball Matl:
+Carbon Steel w/ ENC 
+Airset:
+| 
+Shutoff Class:
+ANSI CL IV 
+Mounting:
+| 
+Port Size:
+Full 
+Transducer:
+| 
+Characteristic:
+Modified Equal Percent 
+Input Signal:
+| 
+Stem Material:
+S17400 SST H1150 DBL 
+Output Signal:
+| 
+Stem Size:
+2 1/2 Inch
+Action:
+| 
+Bonnet Style:
+None 
+Mounting:
+| 
+Packing:
+PTFE 
+Airset:
+| 
+PackFlg/Bltg:
+SA-193-B7M Studs/2HM Nuts NACE 
+Certifications:
+| 
+Actuator:
+Piston 
+Line In:
+16 in, SCH 80 
+Type/Size:
+1061/100
+Line Out:
+16 in, SCH 80 
+Travel:
+90 Deg 
+Insulation:
+None
+Bench Set:
+| 
+Service Cond:
+| 
+Push Down To:
+Push Down To Open 
+Process Fluid:
+NATURAL GAS (0.60 SG) 
+Supply:
+Air 
+Critical Pressure:
+| 
+To Actuator:
+105 psig 
+Shutoff Drop:
+100.42 kg/cm2
+Fails Valve:
+| 
+| 
+| 
+Mounting:
+Right Hand,Pos 1
+| 
+| 
+Handwheel:
+None
+Max Rated Cv:
+10100.0
+|
+ 
+Variable Name
+Unit
+Minimum
+Normal
+Maximum
+ 
+ 
+Volumetric Flow Rate Gas (Qg)
+Sm3/d
+1480000.000
+3600000.000
+4710000.000
+ 
+ 
+Inlet Pressure (P1)
+kg/cm2g
+99.64000
+99.73000
+100.42000
+ 
+ 
+Pressure Change (dP)
+kg/cm2
+2.00000
+2.00000
+0.70000
+ 
+ 
+Inlet Temperature (T1)
+deg C
+43.0000
+43.0000
+43.0000
+ 
+ 
+M / Gg
+M
+24.590
+24.420
+24.420
+ 
+ 
+Specific heats ratio (gamma)
+1.200
+1.210
+1.210
+ 
+ 
+Dynamic Viscosity (Mu)
+cP
+0.010
+0.010
+0.010
+ 
+ 
+Sizing Coefficient (Cv)
+175.074
+430.135
+1015.229
+ 
+ 
+Deg. Open
+24
+42
+61
+ 
+ 
+Valve LpA(LpAeValve1m)
+dB(A)
+64
+63
+< 50
+ 
+ 
+ 
+ 
+ 
+ 
+|
+NOTES:
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- página 6 ---
+Valve/Regulator Sizing Calculation
+Customer: 
+Induquip
+Contact: 
+Contact: Diego Ghener
+Customer Reference: 
+Sales Office Reference: 25-191
+Lead Time: 
+Item: 1
+Rev: 
+Qty: 1
+Quote: 394-DG-250325-0003865/TECPETROL LOS 
+TOLDOS
+Rev: A
+Tags: 
+Date Last Modified: 04/07/2025
+Description: NPS 8 V280 Special Packaging 1061 Size 100 DVC6200 377 Factory Mtgs DVC7K/DVC6200/DVC2000 Process Level 3
+Service Description: 
+Sizing Type: Gas
+Flow is Turbulent
+Solving for: Cv
+Noise is IECAerodynamic
+Flow is Volumetric
+Variable Name
+Units
+Minimum
+Normal
+Maximum
+SERVICE & SIZING
+Gas
+NATURAL GAS (0.60 
+SG)
+NATURAL GAS (0.60 
+SG)
+NATURAL GAS 
+(0.60 SG)
+Inlet Pressure (P1)
+kg/cm2g
+99.64000
+99.73000
+100.42000
+Pressure Change (dP)
+kg/cm2
+2.00000
+2.00000
+0.70000
+Inlet Temperature (T1)
+deg C
+43.0000
+43.0000
+43.0000
+Volumetric Flow Rate Gas (Qg)
+Sm3/d
+1480000.000
+3600000.000
+4710000.000
+Pressure drop ratio factor (Xt)
+0.698
+0.746
+0.490
+Pressure Recovery Factor (Fl)
+0.888
+0.897
+0.795
+Valve style modifier (Fd)
+0.703
+0.893
+0.971
+Atmospheric Pressure
+psi
+14.69
+14.69
+14.69
+Dynamic Viscosity (Mu)
+cP
+0.010
+0.010
+0.010
+Specific heats ratio (gamma)
+1.200
+1.210
+1.210
+Molecular Weight/Specific Gravity
+M
+24.590
+24.420
+24.420
+Inlet Compressibility Factor (Z1)
+0.980
+0.980
+0.980
+ 
+Pipe Size Up
+in
+16
+16
+16
+Pipe Schedule Up
+80
+80
+80
+Pipe Size Down
+in
+16
+16
+16
+Pipe Schedule Down
+80
+80
+80
+Nominal Valve Diameter (dv)
+in
+8.000
+8.000
+8.000
+Aerodynamic Distance (Rn)
+m
+1.000
+1.000
+1.000
+ 
+Sizing Coefficient (Cv)
+175.074
+430.135
+1015.229
+Deg. Open
+24
+42
+61
+dP Choked
+kg/cm2
+60.23195
+64.81841
+45.22868
+dP/P1 Valve
+0.020
+0.020
+0.007
+Fp
+1.00
+0.98
+0.91
+ 
+NOISE CALCULATION
+Valve/Trim
+Full Bore Ball-no 
+Attenuation
+Full Bore Ball-no 
+Attenuation
+Full Bore Ball-no 
+Attenuation
+Valve Lpa (LpAe1m)
+dB(A)
+64
+63
+< 50
+Valve Lpa (LpAeRn)
+dB(A)
+64
+63
+< 50
+ 
+VELOCITY OUTPUTS
+Valve Outlet Area(Ao)
+in2
+50.266
+50.266
+50.266
+M1 Pipe
+Mach
+0.005
+0.012
+0.016
+Mo Valve
+Mach
+0.017
+0.041
+0.052
+M2 Pipe
+Mach
+0.005
+0.013
+0.016
+V1 Pipe
+m/s
+1.8184
+4.4193
+5.7425
+Vo Valve
+m/s
+6.0590
+14.7247
+18.8843
+V2 Pipe
+m/s
+1.8932
+4.6008
+5.9004
+C1 Pipe
+m/s
+358.2625
+361.0022
+361.0022
+Co Valve
+m/s
+358.2625
+361.0022
+361.0022
+C2 Pipe
+m/s
+358.2625
+361.0022
+361.0022
+Item Notes:
+
+--- página 7 ---
+Actuator Sizing Calculation
+Customer: 
+Induquip
+Contact: 
+Contact: Diego Ghener
+Customer Reference: 
+Sales Office Reference: 25-191
+Lead Time: 
+Item: 1
+Rev: 
+Qty: 1
+Quote: 394-DG-250325-0003865 / TECPETROL LOS 
+TOLDOS
+Rev: A
+Tags: 
+Date Last Modified: 04/07/2025
+Description: NPS 8 V280 Special Packaging 1061 Size 100 DVC6200 377 Factory Mtgs DVC7K/DVC6200/DVC2000 Process Level 3
+Service Description: 
+Variable Name
+Values
+Units
+Shaft Size
+2.500
+in 
+Push Down to:
+Open
+Max Rotation
+90 deg
+Supply Pressure
+7.0307
+kg/cm2g 
+Operating Range
+105 psig
+Gas or Liquid?
+Gas
+Delta-P-Shutoff
+1428.31
+psi 
+TQP1
+1428.31
+psig 
+Type 377 Trip Valve
+Yes
+Volume Tank
+Yes
+ 
+Required Torque calculation
+TB
+18077.24
+lbf.in 
+A Factor
+10.50
+B Factor
+3080.00
+TD 10 deg
+5483.39
+lbf.in 
+dP Eff. 10 deg
+288.60
+psi 
+C Factor 10 deg
+19.00
+K Factor 10 deg
+0.20
+TD 20 deg
+9696.95
+lbf.in 
+dP Eff. 20 deg
+404.04
+psi 
+C Factor 20 deg
+24.00
+K Factor 20 deg
+0.28
+TD 30 deg
+12756.10
+lbf.in 
+dP Eff. 30 deg
+490.62
+psi 
+C Factor 30 deg
+26.00
+K Factor 30 deg
+0.34
+TD 40 deg
+14718.58
+lbf.in 
+dP Eff. 40 deg
+490.62
+psi 
+C Factor 40 deg
+30.00
+K Factor 40 deg
+0.34
+TD 50 deg
+19480.47
+lbf.in 
+dP Eff. 50 deg
+432.90
+psi 
+C Factor 50 deg
+45.00
+K Factor 50 deg
+0.30
+TD 60 deg
+24891.72
+lbf.in 
+dP Eff. 60 deg
+331.89
+psi 
+C Factor 60 deg
+75.00
+K Factor 60 deg
+0.23
+TD 70 deg
+50533.79
+lbf.in 
+dP Eff. 70 deg
+245.31
+psi 
+C Factor 70 deg
+206.00
+K Factor 70 deg
+0.17
+TD 80 deg
+48311.58
+lbf.in 
+dP Eff. 80 deg
+129.87
+psi 
+C Factor 80 deg
+372.00
+K Factor 80 deg
+0.09
+TD 90 deg
+32207.72
+lbf.in 
+dP Eff. 90 deg
+86.58
+psi 
+C Factor 90 deg
+372.00
+K Factor 90 deg
+0.06
+Available Actuator Torque outputs
+Works
+Yes
+Actuator Size
+100
+PS Required
+100.00
+psig 
+Safety Margin Tn at Req. SP
+7.84
+% 
+Safety Margin Tn At SP Used
+7.84
+% 
+Available Breakout Torque(TB)
+45000.00
+lbf.in 
+TD 10 deg
+52100.00
+lbf.in 
+TD 20 deg
+57600.00
+lbf.in 
+TD 30 deg
+61600.00
+lbf.in 
+TD 40 deg
+63000.00
+lbf.in 
+
+--- página 8 ---
+TD 45 deg
+63000.00
+lbf.in 
+TD 50 deg
+63000.00
+lbf.in 
+TD 60 deg
+61600.00
+lbf.in 
+TD 70 deg
+57600.00
+lbf.in 
+TD 75 deg
+54850.00
+lbf.in 
+TD 80 deg
+52100.00
+lbf.in 
+TD 90 deg
+45000.00
+lbf.in 
+Req. Man Op torque
+50533.79
+lbf.in 
+Supply Pressure Used
+100.00
+psig 
+
+--- página 9 ---
+Flow Coefficient Graph
+Customer: 
+Induquip
+Contact: 
+Contact: Diego Ghener
+Customer Reference: 
+Sales Office Reference: 25-191
+Lead Time: 
+Item: 1
+Rev: 
+Qty: 1
+Quote: 394-DG-250325-0003865 / TECPETROL LOS TOLDOS Rev: A
+Tags: 
+Date Last Modified: 04/07/2025
+Description: NPS 8 V280 Special Packaging 1061 Size 100 DVC6200 377 Factory Mtgs DVC7K/DVC6200/DVC2000 Process Level 3
+Service Description: 
+Caution: Operation Not Recommended below Minimum CV value of  86.7
+Product: V280        Valve Size=NPS 8        Valve Type=V280        Attenuator=Unattenuated        Attenuator Dome=None        Flow=Forward

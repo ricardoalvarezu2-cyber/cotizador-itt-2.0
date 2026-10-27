@@ -1,0 +1,402 @@
+--- página 1 ---
+Coriolis
+Flow Calculation Summary
+Quote Number
+26327956/1
+Sizing Reference ID
+F060625356170
+Date
+2025-06-06
+Company
+INDUQUIP INGENIERIA SRL
+Project Name
+-
+Service
+-
+Sensor Model
+F300S
+Sensor Model No:
+F300S425EZAVSZZZZUF
+Sizing Name
+FT-22
+Transmitter Model Name
+1600
+Transmitter Model No.
+1600I12ABVAAZZZAA
+Transmitter Tag(s)
+-
+Wetted Material
+316L
+Fluid
+CRUDO
+Fluid State
+LIQUID
+K(Flow Consistency Index)
+-
+n(Flow Behavior)
+-
+Mass Flow Accuracy at Operating Flow (+/- % of Rate) 0.2000
+Pressure Drop @ Op Flow
+0.1884
+KG/CM2-G
+Velocity at Operating Flow
+4.5519
+M/SEC
+Min
+Operating*
+Max
+Design
+Units
+Flow Rates
+-
+1000.0000
+1500.0000
+-
+M3/DAY
+Pressure Min|Oper|Max|Design
+7.0000
+10.0000
+13.0000
+-
+KG/CM2-G
+Process Fluid Temperature
+-
+25.0000
+-
+-
+C
+Ambient Temperature
+5.0000
+15.0000
+40.0000
+-
+C
+Density
+-
+1300.0000
+-
+-
+KG/M3
+Viscosity
+-
+5.0000
+-
+-
+CP
+Gas Only
+Base Reference Temperature
+-
+-
+Base Reference Pressure
+-
+-
+Base Reference Density
+-
+-
+Process Connection
+4-inch CL150 ASME B16.5 F316/F316L Weld neck flange Raised face
+Process Connection Pressure Rating
+19.3344
+KG/CM2-G
+@Temperature
+25.0
+Flow Rates
+M3/DAY
+Mass Flow Accuracy (+/- % of rate)
+Pressure Drop
+KG/CM2-G
+Velocity*
+M/SEC
+Re
+1500.0000
+0.2
+0.4037
+6.8278
+71423.6588
+1350.0039
+0.2
+0.3313
+6.1450
+64281.4770
+1200.0077
+0.2
+0.2656
+5.4623
+57139.2953
+1050.0116
+0.2
+0.2065
+4.7795
+49997.1136
+1000.0000
+0.2
+0.1884
+4.5519
+47615.7725
+900.0155
+0.2
+0.1545
+4.0967
+42854.9319
+750.0193
+0.2
+0.1095
+3.4140
+35712.7501
+600.0232
+0.2
+0.0718
+2.7312
+28570.5684
+450.0271
+0.2
+0.0417
+2.0485
+21428.3867
+300.0309
+0.2
+0.0195
+1.3657
+14286.2050
+150.0348
+0.2
+0.0056
+0.6829
+7144.0233
+30.0379
+0.552
+0.0004
+0.1367
+1430.2779
+MICRO MOTION F-SERIES CORIOLIS METER, 3 INCH (DN80), 316L STAINLESS STEEL
+*All pressure drop and velocity results are based on the process conditions (except flow rate) that are entered in the Operating column. Estimated pressure drop values represent ANSI B16.5
+CL150 flanges in matching nominal line size. Actual pressure drop may vary depending on actual operating conditions and selected process connection.
+
+--- página 2 ---
+Date
+2025-06-06
+Coriolis Flow Meter
+Configuration Data Sheet
+Quote Number
+26327956/1
+Reference:
+WSC Configurator Quote
+Company
+INDUQUIP INGENIERIA SRL
+Manufacturer
+Micro Motion, Inc
+Service
+1
+Sensor Tag(s)
+-
+2
+Transmitter Tag(s)
+-
+3
+Fluid State | Fluid Name
+LIQUID
+CRUDO
+4
+Flow Min|Oper|Max|Design
+-
+1000.0000
+1500.0000
+-
+M3/DAY
+5
+Pressure Min|Oper|Max|Design
+7.0000
+10.0000
+13.0000
+-
+KG/CM2-G
+6
+Temperature Min|Oper|Max|Design
+-
+25.0000
+-
+-
+C
+7
+Specific Gravity/ Molecular Weight
+-
+-
+8
+Viscosity (Operating)/Density (Operating)
+5.0000
+CP
+1300.0000 KG/M3
+9
+Reference Density
+-
+-
+Sensor
+10
+Product No|Proposal Line No.|Qty
+F300S425EZAVSZZZZUF
+1
+1
+11
+ETO#:|ETO Description
+-
+-
+12
+Process Connections
+4-inch CL150 ASME B16.5 F316/F316L Weld neck flange Raised face
+13
+Approval
+ATEX - Equipment Category 3 (Zone 2) / PED compliant
+14
+Wetted Parts
+316L
+15
+Mass Flow Accuracy (+/- % of rate)
+0.2000
+16
+Pressure Drop @ Op Flow
+0.1884
+KG/CM2
+17
+Calibration Type|Rate|Units
+Standard
+None
+kg/min
+18
+Custom Calibration Points(% of selected Full Scale)
+-
+19
+Warning
+-
+20
+Sensor Notes
+-
+Transmitter
+21
+Product No|Proposal Line No.|Qty
+1600I12ABVAAZZZAA
+1.2
+1
+22
+ETO#:|ETO Description
+-
+-
+23
+Input Power
+18 to 100 VDC and 85 to 240 VAC; self switching
+24
+Approval
+ATEX : II 3G, Ex ec, Zone 2 and II 3D Ex tc Zone 22
+25
+Transmitter Flow Units: Mass | Vol
+grams/sec
+m3/day
+26
+Transmitter Units: Density | Temp | Pressure
+kg/m3
+C
+lb/in2
+27
+Special Units Text|Totalizer Text
+-
+-
+28
+Special Volume Unit
+-
+-
+29
+Base Vol Units: Flow | Time | Conv
+-
+-
+-
+29.5
+Base Mass Units: Flow | Time | Conv
+-
+-
+-
+30
+Output 1
+Type
+Variable 1
+Analog 1
+Mass_Flow_Rate
+31
+Scaling
+LRV
+URV
+Units
+4-20mA
+-
+-
+grams/sec
+32
+Output 2
+Type
+Variable 2
+Frequency 2
+Mass_Flow_Rate
+33
+Scaling
+LRV
+URV
+Units
+Frequency = Flow
+-
+-
+grams/sec
+34
+Output 3
+Type
+Variable 3
+-
+-
+35
+Scaling
+LRV
+URV
+Units
+-
+-
+-
+-
+36
+Output 4
+Type
+Variable 4
+-
+-
+37
+Scaling
+LRV
+URV
+Units
+-
+-
+-
+-
+38
+Output 5
+Type
+-
+39
+Transmitter Notes
+-
+Diagnostics
+40
+Fault Action Channel A| Channel B
+Downscale
+Upscale
+41
+Fault Action Channel C| Channel D
+-
+-
+42
+Slug High Limit| Slug Low Limit
+5
+0
+43
+Flow Damping| Units
+-
+sec
+44
+Flow Direction
+-

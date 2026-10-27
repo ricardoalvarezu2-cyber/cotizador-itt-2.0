@@ -1,0 +1,137 @@
+=== hoja Cotización
+Sol.pedido | Pos. | Material | Texto breve | Qty | UM | Descripción completa | Cat | AR | Yacimiento | Precio Unitario
+USD | Precio Total USD
+1200425832 | 10 | 29200027 | TUBO DE FUEGO V-103 KVAERNER | 2 | UN | TUBO DE FUEGO  DIMENSION: 30" CAÑO CON COSTURA  Clase 150 ASTM A-53 G, espesor 12,7mm | 2920 | AR80 | CNQ-7A AREA | 53980 | 107960
+1200425754 | 20 | 29200186 | TUBO D/FUEGO P/TK-465 ER-01 | 1 | UN | TUBO DE FUEGO  DIMENSION: 24" CAÑO CON COSTURA  Clase 150 ASTM A-53 Gr , CAÑO CON COSTURA ,espesor 12,7mm | 2920 | AR83 | GAIII | 37870 | 37870
+Total ofertado en dolares estadounidenses | 145830
+Los precios cotizados no incluyen IVA
+Ver nuestro presupuesto N 158 adjunto
+=== hoja Fórmula de ajuste
+2) SEGUNDA SECCIÓN: "FORMULA DE AJUSTE"
+Indicar Moneda de la Oferta: | USD | USD
+ARS
+P1 = | P0 x {CF% + CV% x [(MO% x MO1/MO0 + GG% x GG1/GG0 + GO% x GO1/GO0) x ID0/ID1]}
+P0: | Precio base
+P1: | Precio ajustado
+EL DISPARADOR PARA AJUSTE DE TARIFAS: | +/- 5%
+NOTA: Las tarifas se actulizarán cuando la fórmula anterior supere dicho porcentaje.
+3) TERCERA SECCIÓN: "ESTRUCTURA DE AJUSTE DE TARIFAS "
+Donde:
+1) La tarifa estará compuesta por una parte fija y otra variable (Favor de completar el porcentajes [%] fijo y variable).
+ESTRUCTURA | DESCRIPCIÓN | INCIDENCIA
+[%]
+CF | Costo Fijo | Porcentaje de la tarifa que se mantendrá fija durante el acuerdo. | -
+CV | Costo Variable | Porcentaje de la tarifa que se verá alcanzado por la formula de ajuste. | 1
+1
+DEBE DAR 100%
+2) La porción variable evolucionará en función de los siguientes indices (Favor de completar el factor de incidencia de cada índice propuesto).
+ÍNDICES DE APLICACIÓN | COMPONENTE DEL COSTO | DESCRIPCIÓN | VALOR BASE | FACTOR DE INCIDENCIA
+[%]
+(ver ref en sig. hoja) | (a) | Fa
+(a) | Fb
+(a) | Fc
+(a) | Fd
+(a) | Fe
+(a) | Ff
+(a) | Fg
+Fa + Fb + Fc + Fd + Fe + Ff + Fg = | 0
+(a) Se considerará los valores correspondientes al mes de presentación de la oferta | DEBE DAR 100%
+NOTAS:
+(1) Fórmula de Ajuste:
+Disparador del Ajuste: Las tarifas serán actualizadas siempre y cuando el resultado de aplicar la fórmula de ajuste sea +/- “X”%.
+
+Las nuevas tarifas aprobadas por PLUSPETROL entrarán en vigencia desde la fecha que PLUSPETROL especifique en la notificación formal al Contratista, ya sea mediante la firma de una adenda al Contrato/Acuerdo o mediante el nuevo envío de este Acuerdo Marco revisionado. 
+
+Asimismo, PLUSPETROL estará autorizado a aplicar una reducción en las tarifas en caso que la fórmula de ajuste de como resultado una baja de tarifas.
+
+La fórmula se correrá mensualmente con los valores de índices publicados los días 10 de cada mes, o día hábil siguiente. En el caso de publicación de valores posteriores a la fecha de corte indicada precedentemente, los mismos serán considerados en la siguiente actualización de tarifas. Por tal motivo, no quedará habilitada la solicitud por parte del Contratista de retroactivos por las eventuales diferencias de los índices considerados para la Actualización de tarifas.  
+
+En caso de producirse una variación que supere el Disparador de Ajuste, se actualizarán las tarifas automáticamente previa solicitud por parte del Contratista.
+(2) Pagos Extraordinarios de Mano de Obra: | NO APLICA A LA PROVISIÓN DE MATERIALES
+En caso que resultare un pago extraordinario, (o un pago que no pueda ser reflejado en el valor de la cuadrilla) surgido de una resolución/acta o acuerdo homologado por la Autoridad de Competente correspondiente, el costo, será abonado por la COMPAÑÍA en forma adicional al resto de las tarifas, sin que ello implique modificación del tarifario vigente, siempre y cuando el CONTRATISTA acreditare:
+1-El aumento extraordinario mediante prueba suficiente;
+2-Comprobante de pago del extra-costo;
+Para determinar el monto a reconocer, se calculará en base a la cantidad de días en que estuvo el servicio operativo en el mes (Cant. Dias Operat. Mes. ), de la siguiente forma:
+Monto a Abonar = (Cant. Dias Operat. Mes. )x (Monto del Pago extraordinario) / (20 días operativos mensuales)
+Una vez cumplido los requisitos anteriormente mencionados, y previa aprobación por parte de la COMPAÑÍA, se procederá al pago de la suma reconocida. En el caso que dicho pago extraordinario, por disposición de Autoridad Competente pasara a formar parte de la remuneración habitual, el monto que se hubiera reconocido en tal concepto se tomará a cuenta de las sumas que correspondieran de conformidad con lo previsto en el párrafo anterior, a la vez que pasará a formar parte del cálculo del valor de la cuadrilla del mes que corresponda.
+=== hoja íNDICES DE APLICACIÓN
+Mes | Dólar BNA Billete Venta
+(ultimo día habil mes anterior) | Dólar BNA Divisa Venta
+(ultimo día habil mes anterior) | IPP Gral.
+INDEC | IPP 29 - Maquinarias y equipos
+INDEC | IPIM Gral.
+INDEC | IPIM Importados
+INDEC | QUIMICOS - IPIM 24 NACIONAL | IPIM 2694 - Cemento y Cal | IPIM 27 - Productos metálicos básicos | IPIM 28 - Productos metálicos excepto maq y equipos. | IPIM 31 -  Máquinas y aparatos eléctricos | IPIB - Productos refinados de Petroleo | IPC GBA
+(var %) | IPC Compuesto | IPC NACIONAL Nivel General - INDEC (var % mes anterior) | CVS
+Indec
+General (sector privado) | CVS
+Indec
+General (total registrado) | Mano de Obra Petroleros
+Base | Mano de Obra Petroleros
+Jerarquicos | Mano de Obra Camioneros | UOCRA | UOM (Valor horario, categoría INGRESANTE) | Mano de Obra Comercio - FAECYS | Mano de obra FATUN - Personal univeritario no docente | Mano de obra Vigiladores - UPSRA | Mano de obra entidades Civiles - UTEDYC | Mano de obra UECARA
+(Zona Centro, 1°Cat, Analista técnico) | Mano de obra SOM (Sindicato de Obreros de Maestranza) | Gas Oil
+Grado 2
+ACA 25-Mayo
+La Pampa
+Precio Final (Con imp) | Gas Oil
+Grado 2
+ACA Neuquen
+Neuquén
+Precio Final
+(Con imp) | Gas Oil
+Grado 2
+YPF Petrooeste
+ISLAS MALVINAS E ILLIA (Nqn)
+Precio Final
+(Con imp) | Gas Oil
+Grado 2
+NORGAS SA - Tartagal
+Salta
+Precio Final (Con imp) | Gas Oil
+Grado 2
+ACA - Tartagal
+Salta
+Precio Final (Con imp) | Gas Oil
+Grado 2
+Bahía Blanca - YPF PETROESTE DE E.ESTIVILL Y CIA
+Precio Final (Con imp) | GAS-OIL Grado 2 - EESS ACA - YPF - Añelo Neuquén | Gas Oil
+Grado 3
+ACA 25-Mayo
+La Pampa
+Precio Final (Con imp) | Gas Oil
+Grado 3
+ACA Neuquen
+Neuquén
+Precio Final
+(Con imp) | Gas Oil
+Grado 3
+YPF Petrooeste
+ISLAS MALVINAS E ILLIA (Nqn)
+Precio Final
+(Con imp) | Gas Oil
+Grado 3
+ACA - TARTAGAL
+(Salta)
+Precio Final
+(Con imp) | Gas Oil
+Grado 3
+ACA - CABA
+YPF - (FRANCISCO BEIRO 3561)
+Precio Final
+(Con imp) | Nafta (Súper) - Rosario, Santa Fe - Opessa ACA Oroño | FADEEAC (Total) | CEDOL
+con transporte | CEDOL
+sin transporte | CAC
+Costo
+Construcción
+Nueva Base=100 Dic.2014 | CAC
+Materiales
+Nueva Base=100 Dic.2014 | CAC
+Mano de Obra
+Nueva Base=100 Dic.2014 | Pipe Logix | PPI
+O&GMPPi /O&GMPPo      
+Oil & gas field machinery & equipment mfg - PCU333132333132 | WPU 11 - Machinery & Equipment | WPU 06 | WPU 1191 -Machinery & Equipment | PCU 331210331210 | PCU 335---335
+Electrical equipment  and appliance mfg | PCU331110331110  - Acero - Iron & Steel Mills | WPU 101 - Metals and metal products-Iron and steel | Industrial supplies & materials, durable | PROPANO | TO  - Precio de Toyota Hilux, Versión 4X2 CD DX 2.4 TDI 6MT (L16) 0 KM - ACARA
+OCT '19: Se cambia al modelo 4x2 CD SR 2.4 TDI 6MT (150cv) (L19)
+Sept '20: se cambia a modelo 4x2 CD SR 2.4 TDI 6MT (150cv) (L20) | Toyota, modelo Hilux, Versión 4X4 CS DX 2.4 TDI 6MT (150cv) (L16) 0 KM. | Mercedez-Benz Sprinter 515 CDI Combi 4325 19+1 (USD)
+ENE '20: Se cambia al mismo modelo pero 516 | TO  - Precio de TOYOTA Hilux 4x2 CS DX 2.4 TDI 6MT (150cv) (L19) - ACARA
+Sep'20: se cambia al modelo 4x4 CS DX 2.4 TDI 6MT (150cv) (L20) | Mano de Obra Camioneros (anterior/evitar uso)

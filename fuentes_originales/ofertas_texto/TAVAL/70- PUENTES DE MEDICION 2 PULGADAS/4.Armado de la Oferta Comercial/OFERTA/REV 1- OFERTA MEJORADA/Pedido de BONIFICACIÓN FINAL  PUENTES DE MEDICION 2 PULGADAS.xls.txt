@@ -1,0 +1,64 @@
+=== hoja Instr.de intención de respuesta
+Acción obligatoria
+Envíe la lista de artículos a los que tiene intención de responder
+Instrucciones
+Acuda a cada una de las hojas de trabajo utilizando las pestañas en la parte inferior de la ventana y rellene la información solicitada: los "datos de intención de puja" (las celdas con código cromático a continuación) son necesarias para el estado Intención de respuesta y los "datos de puja" (las celdas con código cromático a continuación) son necesarios para el estado Enviar respuesta. Cuando haya rellenado toda la información, guarde el archivo en su escritorio e impórtelo en la aplicación.
+Directrices generales y leyenda de celda
+Algunas de las celdas requieren que usted introduzca datos, algunas le dan la opción de editarlas, y algunas son de solo de lectura. Esto se indica a través de colores y bordes
+Información de cabecera y de ID de sistema: No modifique esta celda o la importación podría fallar.
+Información de ayuda. No modifique esta celda o la importación puede fallar.
+Datos de puja. Estas celdas son opcionales si está seleccionando lotes a los que tiene intención de responder, de lo contrario son necesarias. Las celdas que rellene se copian en el evento cuando importa la hoja de cálculo. La cabecera de columna para estas celdas también tiene un asterisco (*).
+Datos de intención de puja. Estas celdas son necesarias; especifique Sí o No.
+Datos opcionales
+Sin borde, datos de solo lectura
+=== hoja Instr.de enviar respuesta
+Acción obligatoria
+Envíe la respuesta a las preguntas
+Instrucciones
+Acuda a cada hoja de trabajo utilizando las pestañas en la parte inferior de la ventana y rellene la información solicitada. Una vez haya terminado, guarde el archivo en el escritorio de su sistema y cárguelo en la aplicación.
+Directrices generales y leyenda de celda
+Algunas de las celdas requieren que usted introduzca datos, algunas le dan la opción de editarlas, y algunas son de solo de lectura. Esto se indica a través de colores y bordes
+Información de cabecera y de ID de sistema: No modifique esta celda o la importación podría fallar.
+Información de ayuda. No modifique esta celda o la importación puede fallar.
+Datos de puja. Estas celdas son necesarias. La cabecera de columna para estas celdas también tiene un asterisco (*).
+Datos opcionales
+Sin borde, datos de solo lectura
+Ayuda de formato de texto: Coloque un apóstrofe (') antes, si desea dar formato a datos en una celda como texto en lugar de como un número o una fecha. Por ejemplo, si desea introducir 50000000 como texto tiene que escribir '50000000 en la celda. Otra forma de arreglarlo es cambiar el tipo de formato de la celda a "Texto" dentro de Excel y luego introducir los valores.
+=== hoja DV_sheet_
+DDP - Entrega DESTINO FINAL | Sí | No tenemos la pieza o material compatible
+CIP - Entrega LOGINTER CABA | No | No proveemos cantidades como la solicitada
+CMZ - Entrega TTE. MENDOZA | Artículo cancelado
+CNQ - Entrega TTE. NEUQUÉN | En la actualidad estamos a plena capacidad
+CIF - Costes, seguro y flete | No se ha proporcionado información o la que se ha dado es insuficiente
+EXW - Ex-fábrica | Otro
+FOB - Franco a bordo
+CFR - Costes y flete
+FCA - Franco transportista
+FOT - No liquida Fletes
+CPT - Porte pagado
+No Aplica
+=== hoja 18 Propuesta de oferta econó...
+Número | Nombre | Respuesta
+18.1 | Incoterms
+18.2 | Oferta económica. Por favor indicar el plazo de entrega en "Días"
+18.3 | En caso de declinar a ofertar un item debido a un "Artículo cancelado ", por favor adjuntar la ficha técnica del item de reemplazo.
+=== hoja Otro contenido
+Número | Nombre | Descripción | Intención de respuesta | Razón para no pujar | Divisa | Unidad de medida | * Precio | Cantidad | ID de Material | Descripción del material | * Plazo | Fecha de entrega solicitada | Nro Contrato | Respuesta
+1 | PUENTE MED. 2" RF 600 152,4MM 50,8MM IS* | PUENTE MED. 2" RF 600 152,4MM 50,8MM IS* | Sí | USD | unidad de almacenaje | 97460.67348200001 | 2 | 000000001000653143 | PUENTE DE MEDICION.DIAMETRO NOMINAL: 2".EXTREMOS: BRIDA ASME B16.5 RF S600.LONGITUD AGUAS-ARRIBA: 152,4MM.LONGITUD AGUAS-ABAJO: 50,8MM.CODIGO DE DISEÑO: ISO 5167 - 5.SERVICIO: CORROSIVO MEDIO.HOJA DE DATOS: YPF-GASLIFTPTE-VCD24299-I-HD-003005-D0.VER ADJUNTO.. | 75.0 | 46433.12152777778
+2 | PUENTE MED. 2" RF 600 152,4MM 50,8MM IS* | PUENTE MED. 2" RF 600 152,4MM 50,8MM IS* | Sí | USD | unidad de almacenaje | 97460.67348200001 | 2 | 000000001000653143 | PUENTE DE MEDICION.DIAMETRO NOMINAL: 2".EXTREMOS: BRIDA ASME B16.5 RF S600.LONGITUD AGUAS-ARRIBA: 152,4MM.LONGITUD AGUAS-ABAJO: 50,8MM.CODIGO DE DISEÑO: ISO 5167 - 5.SERVICIO: CORROSIVO MEDIO.HOJA DE DATOS: YPF-GASLIFTPTE-VCD24299-I-HD-003005-D0.VER ADJUNTO.. | 75.0 | 46433.12152777778
+3 | PUENTE MED. 2" RF 600 152,4MM 50,8MM IS* | PUENTE MED. 2" RF 600 152,4MM 50,8MM IS* | Sí | USD | unidad de almacenaje | 97460.67348200001 | 1 | 000000001000653143 | PUENTE DE MEDICION.DIAMETRO NOMINAL: 2".EXTREMOS: BRIDA ASME B16.5 RF S600.LONGITUD AGUAS-ARRIBA: 152,4MM.LONGITUD AGUAS-ABAJO: 50,8MM.CODIGO DE DISEÑO: ISO 5167 - 5.SERVICIO: CORROSIVO MEDIO.HOJA DE DATOS: YPF-GASLIFTPTE-VCD24299-I-HD-003005-D0.VER ADJUNTO.. | 120.0 | 46447.12152777778
+4 | PUENTE MED. 2" RF 600 152,4MM 50,8MM IS* | PUENTE MED. 2" RF 600 152,4MM 50,8MM IS* | Sí | USD | unidad de almacenaje | 97460.67348200001 | 1 | 000000001000653143 | PUENTE DE MEDICION.DIAMETRO NOMINAL: 2".EXTREMOS: BRIDA ASME B16.5 RF S600.LONGITUD AGUAS-ARRIBA: 152,4MM.LONGITUD AGUAS-ABAJO: 50,8MM.CODIGO DE DISEÑO: ISO 5167 - 5.SERVICIO: CORROSIVO MEDIO.HOJA DE DATOS: YPF-GASLIFTPTE-VCD24299-I-HD-003005-D0.VER ADJUNTO.. | 120.0 | 46447.12152777778
+5 | PUENTE MED. 2" RF 600 152,4MM 50,8MM IS* | PUENTE MED. 2" RF 600 152,4MM 50,8MM IS* | Sí | USD | unidad de almacenaje | 97460.67348200001 | 1 | 000000001000653143 | PUENTE DE MEDICION.DIAMETRO NOMINAL: 2".EXTREMOS: BRIDA ASME B16.5 RF S600.LONGITUD AGUAS-ARRIBA: 152,4MM.LONGITUD AGUAS-ABAJO: 50,8MM.CODIGO DE DISEÑO: ISO 5167 - 5.SERVICIO: CORROSIVO MEDIO.HOJA DE DATOS: YPF-GASLIFTPTE-VCD24299-I-HD-003005-D0.VER ADJUNTO.. | 150.0 | 46447.12152777778
+6 | PUENTE MED. 2" RF 600 152,4MM 50,8MM IS* | PUENTE MED. 2" RF 600 152,4MM 50,8MM IS* | Sí | USD | unidad de almacenaje | 97460.67348200001 | 2 | 000000001000653143 | PUENTE DE MEDICION.DIAMETRO NOMINAL: 2".EXTREMOS: BRIDA ASME B16.5 RF S600.LONGITUD AGUAS-ARRIBA: 152,4MM.LONGITUD AGUAS-ABAJO: 50,8MM.CODIGO DE DISEÑO: ISO 5167 - 5.SERVICIO: CORROSIVO MEDIO.HOJA DE DATOS: YPF-GASLIFTPTE-VCD24299-I-HD-003005-D0.VER ADJUNTO.. | 150.0 | 46244.163194444445
+7 | PUENTE MED. 2" RF 600 152,4MM 50,8MM IS* | PUENTE MED. 2" RF 600 152,4MM 50,8MM IS* | Sí | USD | unidad de almacenaje | 97460.67348200001 | 2 | 000000001000653143 | PUENTE DE MEDICION.DIAMETRO NOMINAL: 2".EXTREMOS: BRIDA ASME B16.5 RF S600.LONGITUD AGUAS-ARRIBA: 152,4MM.LONGITUD AGUAS-ABAJO: 50,8MM.CODIGO DE DISEÑO: ISO 5167 - 5.SERVICIO: CORROSIVO MEDIO.HOJA DE DATOS: YPF-GASLIFTPTE-VCD24299-I-HD-003005-D0.VER ADJUNTO.. | 180.0 | 46244.163194444445
+8 | PUENTE MED. 2" RF 600 152,4MM 50,8MM IS* | PUENTE MED. 2" RF 600 152,4MM 50,8MM IS* | Sí | USD | unidad de almacenaje | 97460.67348200001 | 3 | 000000001000653143 | PUENTE DE MEDICION.DIAMETRO NOMINAL: 2".EXTREMOS: BRIDA ASME B16.5 RF S600.LONGITUD AGUAS-ARRIBA: 152,4MM.LONGITUD AGUAS-ABAJO: 50,8MM.CODIGO DE DISEÑO: ISO 5167 - 5.SERVICIO: CORROSIVO MEDIO.HOJA DE DATOS: YPF-GASLIFTPTE-VCD24299-I-HD-003005-D0.VER ADJUNTO.. | 100.0 | 46244.163194444445
+9 | PUENTE MED. 2" RF 600 152,4MM 50,8MM IS* | PUENTE MED. 2" RF 600 152,4MM 50,8MM IS* | Sí | USD | unidad de almacenaje | 97460.67348200001 | 3 | 000000001000653143 | PUENTE DE MEDICION.DIAMETRO NOMINAL: 2".EXTREMOS: BRIDA ASME B16.5 RF S600.LONGITUD AGUAS-ARRIBA: 152,4MM.LONGITUD AGUAS-ABAJO: 50,8MM.CODIGO DE DISEÑO: ISO 5167 - 5.SERVICIO: CORROSIVO MEDIO.HOJA DE DATOS: YPF-GASLIFTPTE-VCD24299-I-HD-003005-D0.VER ADJUNTO.. | 100.0 | 46244.163194444445
+10 | PUENTE MED. 2" RF 600 152,4MM 50,8MM IS* | PUENTE MED. 2" RF 600 152,4MM 50,8MM IS* | Sí | USD | unidad de almacenaje | 97460.67348200001 | 3 | 000000001000653143 | PUENTE DE MEDICION.DIAMETRO NOMINAL: 2".EXTREMOS: BRIDA ASME B16.5 RF S600.LONGITUD AGUAS-ARRIBA: 152,4MM.LONGITUD AGUAS-ABAJO: 50,8MM.CODIGO DE DISEÑO: ISO 5167 - 5.SERVICIO: CORROSIVO MEDIO.HOJA DE DATOS: YPF-GASLIFTPTE-VCD24299-I-HD-003005-D0.VER ADJUNTO.. | 120.0 | 46244.163194444445
+11 | PUENTE MED. 2" RF 600 152,4MM 50,8MM IS* | PUENTE MED. 2" RF 600 152,4MM 50,8MM IS* | Sí | USD | unidad de almacenaje | 97460.67348200001 | 2 | 000000001000653143 | PUENTE DE MEDICION.DIAMETRO NOMINAL: 2".EXTREMOS: BRIDA ASME B16.5 RF S600.LONGITUD AGUAS-ARRIBA: 152,4MM.LONGITUD AGUAS-ABAJO: 50,8MM.CODIGO DE DISEÑO: ISO 5167 - 5.SERVICIO: CORROSIVO MEDIO.HOJA DE DATOS: YPF-GASLIFTPTE-VCD24299-I-HD-003005-D0.VER ADJUNTO.. | 120.0 | 46266.163194444445
+12 | PUENTE MED. 2" RF 600 152,4MM 50,8MM IS* | PUENTE MED. 2" RF 600 152,4MM 50,8MM IS* | Sí | USD | unidad de almacenaje | 97460.67348200001 | 2 | 000000001000653143 | PUENTE DE MEDICION.DIAMETRO NOMINAL: 2".EXTREMOS: BRIDA ASME B16.5 RF S600.LONGITUD AGUAS-ARRIBA: 152,4MM.LONGITUD AGUAS-ABAJO: 50,8MM.CODIGO DE DISEÑO: ISO 5167 - 5.SERVICIO: CORROSIVO MEDIO.HOJA DE DATOS: YPF-GASLIFTPTE-VCD24299-I-HD-003005-D0.VER ADJUNTO.. | 120.0 | 46296.163194444445
+15 | Condiciones Particulares de Compras y Contratos y Anexos | Reemplazar con un archivo cargado desde escritorio.txt
+16 | Pliego Técnico | Reemplazar con un archivo cargado desde escritorio.txt
+19 | Acepto haber leído y adhiero a la Política de DDHH de YPF Leer en: https://sustentabilidad.ypf.com/assets/docs/es/YPF-Politica-de-DDHH.pdf | Sí
+20 | Acepto haber leído y adhiero a la Política Anticorrupción de YPF Leer en: https://compliance.ypf.com/docs/politica-anticorrupcion-socios-de-negocios-.pdf | Sí
+21 | Acepto haber leído las Condiciones Generales de Compras y Contrataciones de YPF Leer en: https://proveedores.ypf.com/documents/proveedores/YPF-CONDICIONES-GENERALES-DE-COMPRAS-Y-CONTRATACIONES.pdf | Sí
+22 | Planilla de BONIFICACION FINAL.xlsx | Planilla de BONIFICACION FINAL.xlsx

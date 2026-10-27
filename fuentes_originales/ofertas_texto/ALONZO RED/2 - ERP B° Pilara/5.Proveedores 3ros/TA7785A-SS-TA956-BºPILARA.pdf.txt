@@ -1,0 +1,558 @@
+--- página 1 ---
+V.2020.01
+Appr. By
+HM
+FT
+9.27
+250.00
+t
+273.00
+mm
+mm
+ID
+ID
+123
+NPS 10'' t= 9.27 mm Sch 40
+100.00
+Notes:
+mm
+mm
+15.0
+C
+0.620
+1.01325
+bar
+1.310
+kg/kmol
+Natural gas
+bar
+SISTEMA DE REGULACIÓN NORMATIVA NATURGY
+MONITOR FTC CON BLOQUEO INCORPORADO REARME MANUAL- MODELO TA956FC+SSV
+mm
+T1
+PIPING ASSEMBLY
+PS
+1.01325
+254.46
+Qmin
+5,000.00
+Sm3/h
+17.0
+M
+mm
+t
+6.02
+Inlet piping size
+62
+NPS 4'' t= 6.02 mm Sch 40
+102.26
+OD
+114.30
+Rev.
+0
+3
+2
+1
+Fluid
+NPS1
+ND
+Pa
+γ
+d
+ND
+NPS2
+Prep. by
+1.500
+bar
+6,500.00
+5,000.00
+Sm3/h
+7.000
+bar
+1.500
+bar
+15.000
+bar g
+1.500
+bar g
+6,500.00
+Sm3/h
+P1min
+Qnorm
+Monitor Inlet pressure
+P1max
+25.000
+bar
+P1norm
+ITT SA
+15.000
+bar
+0
+16/06/2026
+PILOTED GAS PRESSURE REGULATOR
+MONITOR + REGULATOR
+SEPARATE UNITS SIZING SHEET
+Document Number:
+TA956FC+SSV y TA956DFO (EN LINEA)
+4
+Job:
+P1: 25/7-1.5 BARG - Q: 8000 SMCH
+Item / TAG:
+Date
+Rev.
+Page
+1
+1 y 2
+of
+P.O. Number:
+BºPILARA
+TA7785A
+Client:
+Project:
+CONECTORES INOXIDABLE Ø3/8" - PINTURA NEGRO NATURGY
+OD
+Atmospheric pressure outside of pipe
+Density relative to air
+mm
+Inlet temperature
+Molecular weight
+Ratio of specific heats (cp/cv)
+Fluid type
+mm
+Outlet piping size
+Reference pressure
+Regulator Outlet pressure
+P2max
+1.500
+bar
+P2norm
+P2min
+INPUT SHEET
+ACTIVO CON SILENCIADOR INCORPORADO MODELO TA956DFO
+1.500
+bar g
+7.000
+bar g
+Flow rate
+Qmax
+8,000.00
+Sm3/h
+25.000
+bar g
+PROCESS CONDITIONS
+1.500
+bar g
+Sm3/h
+8,000.00
+Sm3/h
+
+--- página 2 ---
+V.2020.01
+Internal Silencer
+SLC-1-100
+LpAe1m
+90
+OK
+Mo
+Regulator outlet Mach
+Cg
+External Silencer
+NO
+0
+-15
+D1
+80
+mm
+0.9
+-15
+28
+C1
+Size
+80
+Regulator outlet Gas Speed
+Flow regime 
+CgΔPm
+592.65
+        
+A weighted sound pressure level at 1 m from pipe wall
+Cgnorm
+789.04
+        
+0.418
+Fr
+IV
+Check Minimum DeltaP
+Check Minimum P2
+Check Maximum P2
+Regulator seat Mach
+0.337
+71.4
+dB(A)
+NOISE CALCULATION IEC-60534-8-3
+Flow conditions: Q=8000 Sm3/h P1=25 bar & P2=1.5 bar
+Internal Silencer
+NO
+1
+0
+External Silencer
+NO
+Required Cg @ Q=8000 Sm3/h P1=6.541 bar & P2=1.5 bar
+O
+bar g
+Monitor Out Gas Speed @ Qmax
+P1max
+Flow to
+28.0
+           
+593
+789
+bar g
+0.134
+        
+P1min
+58.6
+           
+MONITOR SIZING AND SELECTION
+28
+956
+956_FC+SSV-80
+Equipment Model
+FC+SSV
+Size
+80
+C1
+80
+mm
+D1
+Cg
+4,230
+Equipment Type
+P1min
+0.459
+        
+P1: 25/7-1.5 BARG - Q: 8000 SMCH
+Item / TAG:
+1 y 2
+Document Number:
+BºPILARA
+P.O. Number:
+TA956FC+SSV y TA956DFO (EN LINEA)
+Client:
+ITT SA
+Job:
+TA7785A
+P1max
+Monitor Outlet Pressure
+Monitor Delta P @ Qmax
+P2'max
+24.866
+        
+bar g
+PILOTED GAS PRESSURE REGULATOR
+MONITOR + REGULATOR
+SEPARATE UNITS SIZING SHEET
+Rev.
+Date
+Page
+0
+16/06/2026
+2
+of
+4
+P1norm
+m/s
+0
+0
+Flow Conditioner
+Linear (STD)
+1
+bar g
+80
+Project:
+Rev.
+Prep. by
+Appr. By
+0
+HM
+FT
+Notes:
+2
+1
+3
+MONTAJE SEGUN DISEÑO "956-000-4547-1"
+mm
+17.1
+           
+m/s
+P2'norm
+14.780
+        
+bar g
+P1norm
+0.220
+        
+D2
+Equipment Type
+956
+956_DFO-80
+Equipment Model
+DFO
+P2'min
+6.541
+          
+bar g
+Critical
+PRESSURE REGULATOR SIZING AND SELECTION EN-334
+Fr
+m/s
+3,443
+Flow Regime
+Cgreq
+2030.3
+Flow Conditioner
+Linear (STD)
+1
+Regulator outlet Mach
+D2
+80
+mm
+t
+58.98
+          
+Flow to
+O
+%
+Required Cg @ Q=6500 Sm3/h P1=15 bar & P2=1.5 bar
+Required Cg @ Q=8000 Sm3/h P1=25 bar & P2=1.5 bar
+Valve Opening @ Q=8000 Sm3/h P1=6.541 bar & P2=1.5 bar
+Flow regime 
+0.85
+OK
+0.005
+OK
+LpAe1m
+68.1
+MoReg
+0.418
+Regulator outlet Gas Speed
+143.7
+m/s
+Mo
+0.337
+dB(A)
+voReg
+176.8
+m/s
+Regulator seat Mach
+Flow conditions: Q=6500 Sm3/h P1=15 bar & P2=1.5 bar
+Fr
+IV
+MoReg
+A weighted sound pressure level at 1 m from pipe wall
+voReg
+
+--- página 3 ---
+V.2020.01
+PILOTED GAS PRESSURE REGULATOR
+MONITOR + REGULATOR
+SEPARATE UNITS SIZING SHEET
+Rev.
+Date
+Page
+0
+16/06/2026
+3
+of
+4
+Project:
+P1: 25/7-1.5 BARG - Q: 8000 SMCH
+Item / TAG:
+1 y 2
+Document Number:
+BºPILARA
+P.O. Number:
+TA956FC+SSV y TA956DFO (EN LINEA)
+Client:
+ITT SA
+Job:
+TA7785A
+FREQUENCY DISTRIBUTION OF NOISE
+1
+0
+HM
+FT
+3
+Notes:
+2
+Rev.
+Prep. by
+Appr. By
+0.00
+20.00
+40.00
+60.00
+80.00
+100.00
+120.00
+140.00
+10
+100
+1000
+10000
+100000
+SPL [dB]
+Frequency [Hz]
+SOUND PRESSURE LEVEL INSIDE OF PIPE 
+@ DELTA‐P MAX & Q MAX
+0.00
+10.00
+20.00
+30.00
+40.00
+50.00
+60.00
+70.00
+20
+200
+2000
+20000
+SPL [dB]
+Frequency [Hz]
+SOUND PRESSURE LEVEL 1m OUTSIDE OF PIPE 
+@ DELTA‐P MAX & Q MAX
+
+--- página 4 ---
+V.2020.01
+PILOTED GAS PRESSURE REGULATOR
+MONITOR + REGULATOR
+SEPARATE UNITS SIZING SHEET
+Rev.
+Date
+Page
+0
+16/06/2026
+4
+of
+4
+Project:
+P1: 25/7-1.5 BARG - Q: 8000 SMCH
+Item / TAG:
+1 y 2
+MULTIPOINT WORKING CONDITIONS VERIFICATION
+INPUT DATA
+Document Number:
+BºPILARA
+P.O. Number:
+TA956FC+SSV y TA956DFO (EN LINEA)
+Client:
+ITT SA
+Job:
+TA7785A
+CASE
+FLOW RATE
+INLET PRESSURE
+REGULATED PRESSURE
+Sm3/h
+Sm3/h
+bar
+bar
+bar
+bar
+1.500
+2
+8,000.00
+8,000.00
+7.000
+7.000
+1.500
+1.500
+1
+8,000.00
+8,000.00
+25.000
+25.000
+1.500
+4
+3
+OUTPUT DATA
+CASE Monitor DeltaP (bar)
+Cg Required
+Opening %
+Outlet Velocity (m/s)
+5
+2
+0.459
+2,030.29
+58.98
+175.91
+1
+0.134
+592.65
+17.22
+175.91
+4
+3
+2
+Notes:
+5
+Rev.
+Prep. by
+Appr. By
+1
+0
+JB
+FT
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+1
+2
+3
+4
+5
+Monitor DP (bar)
+Case
+Monitor DP
+0.00
+500.00
+1,000.00
+1,500.00
+2,000.00
+2,500.00
+1
+2
+3
+4
+5
+Cg Required
+Case
+Cg Required
+0.00
+50.00
+100.00
+150.00
+200.00
+1
+2
+3
+4
+5
+Outlet Velocity (m/s)
+Case
+Outlet Velocity
+0.00
+20.00
+40.00
+60.00
+80.00
+1
+2
+3
+4
+5
+Opening (%)
+Case
+Opening %

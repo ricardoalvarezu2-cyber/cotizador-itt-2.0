@@ -1,0 +1,1191 @@
+=== hoja Pie de Venta rev 3 (2)
+ITEM | CANT. | DESCRIPCION | USD UNIDAD | USD SUBTOTAL | Plazo de entrega (días) | 2026-08-15 00:00:00 | 150 | 2027-01-12 00:00:00 | Parámetro | Valor | Cumple | Observación | Posible solución
+1 | EQUIPOS Y MATERIALES | DESCUENTO GLOBAL 4% | % DESCUENTOS | CODIGOS | Código de diseño | ASME B31.8 | Sí | Es el código indicado por Tecpetrol. | Ninguna
+1.1 | 1 | Trampas lanzadora de 16” Serie-600 (CLASE: A6C):
+Sobre un skid, con todas las facilidades y accesos necesarios para la operación y mantenimiento. Válvulas, cañerías, instrumentos, cableado, etc. indicados en el P&ID ACO-FP-PMG3-R-PI-701 y los documentos listados en el punto 10. | 116914.18547000001 | 116914.18547000001 | 150 | 115091.88 | 0.015586692604274366 | ITT26-1373-501-L20164RF | 119887.36547 | Material línea | API 5L X56 | Sí | Confirmado por cliente. | Ninguna
+1.2 | 1 | Trampas receptora de 16” Serie-600 (CLASE: A6C):
+Sobre un skid, con todas las facilidades y accesos necesarios para la operación y mantenimiento. Válvulas, cañerías, instrumentos, cableado, etc. indicados en el P&ID ACO-FP-PMG3-R-PI-701 y los documentos listados en el punto 10. | 130764.00064 | 130764.00064 | 150 | 125533.44 | 0.040000004698540814 | ITT26-1373-501-R20164RF | 130764.00064 | Factor de diseño | 0,50 | Sí | Confirmado por cliente. | Ninguna
+1.3 | 1 | Trampas lanzadora de 12” Serie-900 (CLASE: A9CM): Sobre un skid, con todas las facilidades y accesos necesarios para la operación y mantenimiento. Válvulas, cañerías, instrumentos, cableado, etc. indicados en el P&ID ACO-FP-TR2-R-PI-XXX y los documentos listados en el punto 10. | 84663.16668000002 | 84663.16668000002 | 150 | 84130.9 | 0.0062868742201886985 | ITT26-1373-501-L16126RF | 87636.34668 | Presión de diseño | 110 kg/cm²(g) | Sí | Aclaración del cliente. | Ninguna
+1.4 | 1 | Trampas receptora de 12” Serie-900 (CLASE: A9CM): Sobre un skid, con todas las facilidades y accesos necesarios para la operación y mantenimiento. Válvulas, cañerías, instrumentos, cableado, etc. indicados en el P&ID ACO-FP-TR2-R-PI-XXX y los documentos listados en el punto 10. | 105812.91930000001 | 105812.91930000001 | 150 | 104434.66 | 0.01302543497635078 | ITT26-1373-501-R16126RF | 108786.0993 | Temperatura diseño | 65 °C | Sí | Hoja de datos. | Ninguna
+1.5 | 1 | Trampas lanzadora de 8” Serie-900 (CLASE: A9C):
+Sobre un skid, con todas las facilidades y accesos necesarios para la operación y mantenimiento. Válvulas, cañerías, instrumentos, cableado, etc. indicados en el P&ID ACO-FP-PTG5-R-PI-133 y los documentos listados en el punto 10. | 75960.90686999999 | 75960.90686999999 | 150 | 75776.73 | 0.0024246270560618344 | ITT26-1373-501-L10086RJ | 78934.08687 | Corrosion Allowance | 3,2 mm | Sí | Requisito de especificación. | Considerar en cálculo final
+1.6 | 1 | Trampas receptora de 8” Serie-900 (CLASE: A9C):
+Sobre un skid, con todas las facilidades y accesos necesarios para la operación y mantenimiento. Válvulas, cañerías, instrumentos, cableado, etc. indicados en el P&ID ACO-FP-PMG3-R-PI-702 y los documentos listados en el punto 10. | 85893.02833999999 | 85893.02833999999 | 150 | 85311.56 | 0.006769680278337575 | ITT26-1373-501-R10086RJ | 88866.20834 | Barrel menor | 8" | Sí | Requerimiento de hoja de datos. | Ninguna
+2 | REPUESTOS Y HERRAMIENTAS | Barrel mayor | 10" | Sí | Requerimiento de hoja de datos. | Ninguna
+2.1 | GLOBAL (uno por cada TRAMPA) | Set de repuestos recomendados para pre-comisionado, comisionado y puesta en marcha, con precios desglosados para la trampa lanzadora | Incluido en la provision | -- | -- | -- | ID mínimo requerido | 201 mm | Sí | Condición excluyente. | Ninguna
+2.2 | GLOBAL (uno por cada TRAMPA) | Set de repuestos recomendados para pre-comisionado, comisionado y puesta en marcha, con precios desglosados para la trampa Receptora | Incluido en la provision | -- | -- | -- | NPS 8 Sch 80 sin mecanizar | ID=193,7 mm | No | No alcanza los 201 mm. | Mecanizado interno
+2.3 | GLOBAL (uno por cada TRAMPA) | Set de repuestos recomendados para dos años de operación con precios desglosados para la trampa lanzadora S900 – S600 | Incluido en la provision | -- | -- | -- | NPS 8 Sch 80 mecanizado | ID=201 mm | Sí | Cumple geométricamente. | Validar cálculo mecánico
+2.4 | GLOBAL (uno por cada TRAMPA) | Set de repuestos recomendados para dos años de operación con precios desglosados para la trampa receptora S900 – S600 | Incluido en la provision | -- | -- | -- | Espesor final mecanizado | 9,05 mm | En revisión | Cumple diámetro interno, pero debe verificarse contra presión y CA. | Memoria B31.8
+4 | DOCUMENTACIÓN | CA incluida en espesor final | No demostrado | No | Con 9,05 mm finales puede no quedar margen suficiente para CA=3,2 mm. | Aumentar OD del barrel
+4.1 | GLOBAL | DOCUMENTOS TECNICOS | -- | -- | -- | -- | Barrel rolado A516 Gr.70 | Potencialmente Sí | Sí | Permite ajustar OD e ID libremente. | Solución recomendada
+4.2 | GLOBAL | DATA BOOK | -- | -- | -- | -- | Barrel fabricado con OD mayor | Sí | Sí | Permite cumplir ID + presión + CA simultáneamente.
+TOTAL (SIN IVA) | 600008.2073 | 590279.1699999999
+3 | SERVICIOS | USD UNIDAD | USD SUBTOTAL | Cumple seguro
+3.1 | 1 | Asistencia técnica para el montaje. Tarifa diaria. | 2362.5 | 2362.5 | Material API 5L X56.
+3.2 | 3 | Asistencia técnica en sitio para pre-comisionado, comisionado y puesta en marcha. Tarifa diaria. Minimo 3 dias habiles. | 2362.5 | 7087.5 | Diseño ASME B31.8.
+F = 0,50.
+P diseño = 110 kg/cm²(g).
+ID ≥ 201 mm usando Sch 80 mecanizado.
+Demostrar que el espesor remanente de 9,05 mm cumple simultáneamente con:
+presión de diseño,
+tolerancias de fabricación,
+corrosion allowance de 3,2 mm.
+Barrel mayor: | NPS 10
+API 5L X56 | Espesor 15,9 mm (5/8") | SCH 80
+CA = 3,2 mm
+Diseño ASME B31.8
+P diseño = 110 kg/cm²(g)
+Linea | ITEM | CANT | USD
+1 | TRAMPA LANZADORA 16" (p/GSD) | 1.00 | 119887.37
+2 | TRAMPA RECEPTORA 16" (p/GSD) | 1.00 | 130764.00064
+3 | TRAMPA LANZADORA 12" (p/GSD) | 1.00 | 87636.35
+4 | TRAMPA RECEPTORA 12" (p/GSD) | 1.00 | 108786.1
+5 | TRAMPA LANZADORA 8" (p/GSD) | 1.00 | 78934.09
+6 | TRAMPA LANZADORA 8" (p/GSD) | 1.00 | 88866.21
+TOTAL | 614874.1206399999
+Bonificacion | 0.039999976929261494 | 590279.1699999999
+=== hoja Pie de Venta rev 3
+ITEM | CANT. | DESCRIPCION | USD UNIDAD | USD SUBTOTAL | Plazo de entrega (días) | 2026-08-15 00:00:00 | 150 | 2027-01-12 00:00:00 | Parámetro | Valor | Cumple | Observación | Posible solución
+1 | EQUIPOS Y MATERIALES | Código de diseño | ASME B31.8 | Sí | Es el código indicado por Tecpetrol. | Ninguna
+1.1 | 1 | Trampas lanzadora de 16” Serie-600 (CLASE: A6C):
+Sobre un skid, con todas las facilidades y accesos necesarios para la operación y mantenimiento. Válvulas, cañerías, instrumentos, cableado, etc. indicados en el P&ID ACO-FP-PMG3-R-PI-701 y los documentos listados en el punto 10. | 116914.18547000001 | 116914.18547000001 | 150 | 119887.36547 | Material línea | API 5L X56 | Sí | Confirmado por cliente. | Ninguna
+1.2 | 1 | Trampas receptora de 16” Serie-600 (CLASE: A6C):
+Sobre un skid, con todas las facilidades y accesos necesarios para la operación y mantenimiento. Válvulas, cañerías, instrumentos, cableado, etc. indicados en el P&ID ACO-FP-PMG3-R-PI-701 y los documentos listados en el punto 10. | 130764.00064 | 130764.00064 | 150 | 130764.00064 | Factor de diseño | 0,50 | Sí | Confirmado por cliente. | Ninguna
+1.3 | 1 | Trampas lanzadora de 12” Serie-900 (CLASE: A9CM): Sobre un skid, con todas las facilidades y accesos necesarios para la operación y mantenimiento. Válvulas, cañerías, instrumentos, cableado, etc. indicados en el P&ID ACO-FP-TR2-R-PI-XXX y los documentos listados en el punto 10. | 84663.16668000002 | 84663.16668000002 | 150 | 87636.34668 | Presión de diseño | 110 kg/cm²(g) | Sí | Aclaración del cliente. | Ninguna
+1.4 | 1 | Trampas receptora de 12” Serie-900 (CLASE: A9CM): Sobre un skid, con todas las facilidades y accesos necesarios para la operación y mantenimiento. Válvulas, cañerías, instrumentos, cableado, etc. indicados en el P&ID ACO-FP-TR2-R-PI-XXX y los documentos listados en el punto 10. | 105812.91930000001 | 105812.91930000001 | 150 | 108786.0993 | Temperatura diseño | 65 °C | Sí | Hoja de datos. | Ninguna
+1.5 | 1 | Trampas lanzadora de 8” Serie-900 (CLASE: A9C):
+Sobre un skid, con todas las facilidades y accesos necesarios para la operación y mantenimiento. Válvulas, cañerías, instrumentos, cableado, etc. indicados en el P&ID ACO-FP-PTG5-R-PI-133 y los documentos listados en el punto 10. | 75960.90686999999 | 75960.90686999999 | 150 | 78934.08687 | Corrosion Allowance | 3,2 mm | Sí | Requisito de especificación. | Considerar en cálculo final
+1.6 | 1 | Trampas receptora de 8” Serie-900 (CLASE: A9C):
+Sobre un skid, con todas las facilidades y accesos necesarios para la operación y mantenimiento. Válvulas, cañerías, instrumentos, cableado, etc. indicados en el P&ID ACO-FP-PMG3-R-PI-702 y los documentos listados en el punto 10. | 85893.02833999999 | 85893.02833999999 | 150 | 88866.20834 | Barrel menor | 8" | Sí | Requerimiento de hoja de datos. | Ninguna
+2 | REPUESTOS Y HERRAMIENTAS | Barrel mayor | 10" | Sí | Requerimiento de hoja de datos. | Ninguna
+2.1 | GLOBAL (uno por cada TRAMPA) | Set de repuestos recomendados para pre-comisionado, comisionado y puesta en marcha, con precios desglosados para la trampa lanzadora | Incluido en la provision | -- | -- | ID mínimo requerido | 201 mm | Sí | Condición excluyente. | Ninguna
+2.2 | GLOBAL (uno por cada TRAMPA) | Set de repuestos recomendados para pre-comisionado, comisionado y puesta en marcha, con precios desglosados para la trampa Receptora | Incluido en la provision | -- | -- | NPS 8 Sch 80 sin mecanizar | ID=193,7 mm | No | No alcanza los 201 mm. | Mecanizado interno
+2.3 | GLOBAL (uno por cada TRAMPA) | Set de repuestos recomendados para dos años de operación con precios desglosados para la trampa lanzadora S900 – S600 | Incluido en la provision | -- | -- | NPS 8 Sch 80 mecanizado | ID=201 mm | Sí | Cumple geométricamente. | Validar cálculo mecánico
+2.4 | GLOBAL (uno por cada TRAMPA) | Set de repuestos recomendados para dos años de operación con precios desglosados para la trampa receptora S900 – S600 | Incluido en la provision | -- | -- | Espesor final mecanizado | 9,05 mm | En revisión | Cumple diámetro interno, pero debe verificarse contra presión y CA. | Memoria B31.8
+4 | DOCUMENTACIÓN | CA incluida en espesor final | No demostrado | No | Con 9,05 mm finales puede no quedar margen suficiente para CA=3,2 mm. | Aumentar OD del barrel
+4.1 | GLOBAL | DOCUMENTOS TECNICOS | -- | -- | -- | Barrel rolado A516 Gr.70 | Potencialmente Sí | Sí | Permite ajustar OD e ID libremente. | Solución recomendada
+4.2 | GLOBAL | DATA BOOK | -- | -- | -- | Barrel fabricado con OD mayor | Sí | Sí | Permite cumplir ID + presión + CA simultáneamente.
+TOTAL (SIN IVA) | 600008.2073 | 614874.1073 | 1
+598173.5573 | 16700.550000000047 | 0.027160925792329337
+3 | SERVICIOS | USD UNIDAD | USD SUBTOTAL | Cumple seguro
+3.1 | 1 | Asistencia técnica para el montaje. Tarifa diaria. | 2362.5 | 2362.5 | Material API 5L X56.
+3.2 | 3 | Asistencia técnica en sitio para pre-comisionado, comisionado y puesta en marcha. Tarifa diaria. Minimo 3 dias habiles. | 2362.5 | 7087.5 | Diseño ASME B31.8.
+F = 0,50.
+Concepto | Importes | Porcentajes | P diseño = 110 kg/cm²(g).
+Cotizacion Base | 614874.1073 | 1 | ID ≥ 201 mm usando Sch 80 mecanizado.
+Modificaciones a favor | 16700.550000000047 | 0.027160925792329337
+TOTAL | 598173.5573 | Demostrar que el espesor remanente de 9,05 mm cumple simultáneamente con:
+Bonificacion | 5981.735573 | 0.01
+TOTAL | 592191.821727 | presión de diseño,
+tolerancias de fabricación,
+corrosion allowance de 3,2 mm.
+24594.964292
+7894.414291999954 | 0.012839074207670663 | Barrel mayor: | NPS 10
+API 5L X56 | Espesor 15,9 mm (5/8") | SCH 80
+CA = 3,2 mm
+Diseño ASME B31.8
+P diseño = 110 kg/cm²(g)
+ITEM | CANTIDAD | DESCRIPCION | USD UNIDAD | USD SUBTOTAL | Plazo de entrega (días)
+1 | EQUIPOS Y MATERIALES | 5
+1 | 1 | POLIZA DE CAUCION X ANT. | 0 | 0 | 150
+2 | 1 | POLIZA POR FIEL CUMPLIMIENTO | 0 | 0 | 120
+1 | 1 | POLIZA DE CAUCION X ANT. | 0 | 0 | 150
+2 | 1 | POLIZA POR FIEL CUMPLIMIENTO | 0 | 0 | 120
+-- | -- | --
+TOTAL (SIN IVA) | 0
+Linea | ITEM | CANT | USD
+1 | TRAMPA LANZADORA 16" (p/GSD) | 1.00 | 119887.37
+2 | TRAMPA RECEPTORA 16" (p/GSD) | 1.00 | 130764.00064
+3 | TRAMPA LANZADORA 12" (p/GSD) | 1.00 | 87636.35
+4 | TRAMPA RECEPTORA 12" (p/GSD) | 1.00 | 108786.1
+5 | TRAMPA LANZADORA 8" (p/GSD) | 1.00 | 78934.09
+6 | TRAMPA LANZADORA 8" (p/GSD) | 1.00 | 88866.21
+TOTAL | 614874.1206399999
+=== hoja Dimensiones de trampas
+REV. 2- ACO-CNV-GENTIP-M-PL-001_Rev.2 - TIPICOS DE TRAMPA | REV. 2- ACO-CNV-GENTIP-M-PL-001_Rev.2 - TIPICOS DE TRAMPA | REV. 2- ACO-CNV-GENTIP-M-PL-001_Rev.2 - TIPICOS DE TRAMPA
+DIMENSIONES DE TRAMPA LANZADORA | DIMENSIONES DE TRAMPA RECEPTORA | BARREL MENOR
+DIAMETRO DE DUCTO | ILI MAX CONSIDERADA | A | E | C | LARGO TOTAL | DIAMETRO DE DUCTO | ILI MAX CONSIDERADA | A | E | C | LARGO TOTAL | BARREL MENOR | BARREL MAYOR | DIEMETRO KICKER LINE 2 (N2) | DIAMTRO DRENAJE (D2 Y D1) | TCR | USD | Linea | ITEM | CANT | UM | P UNIT | P. TOTAL
+4 | 2750 | 1100 | 152 | 3250 | 4502 | 4 | 2750 | 2860 | 152 | 4800 | 7812 | 4 | 6 | 2 | 2 | 6" | 1 | TRAMPA LANZADORA 16" (p/GSD) | 1 | Servicio | x20 | 119887.36547000002 | 119887.36547000002
+6 | 2750 | 1100 | 178 | 3250 | 4528 | 6 | 2750 | 2920 | 178 | 4800 | 7898 | 6 | 8 | 4 | 2 | 8" | 2 | TRAMPA RECEPTORA 16" (p/GSD) | 1 | Servicio | x20 | 130764.00064 | 130764.00064
+8 | 2750 | 1100 | 203 | 3250 | 4553 | Ok | 8 | 2750 | 2970 | 203 | 4800 | 7973 | Ok | 8 | 10 | 6 | 2 | 10" | 9642 | 3 | TRAMPA LANZADORA 12" (p/GSD) | 1 | Servicio | x16 | 87636.34668000002 | 87636.34668000002
+10 | 2750 | 1100 | 356 | 3250 | 4706 | 10 | 2750 | 3020 | 356 | 4800 | 8176 | 10 | 12 | 6 | 4 | 12" | 4 | TRAMPA RECEPTORA 12" (p/GSD) | 1 | Servicio | x16 | 108786.0993 | 108786.0993
+12 | 2750 | 1100 | 356 | 3250 | 4706 | Ok | 12 | 2750 | 3070 | 356 | 4800 | 8226 | Ok | 12 | 16 | 8 | 4 | 16" | 10804.7 | 5 | TRAMPA LANZADORA 8" (p/GSD) | 1 | Servicio | x10 | 78934.08687 | 78934.08687
+16 | 2750 | 1100 | 508 | 3250 | 4858 | Ok | 16 | 2750 | 3160 | 508 | 4800 | 8468 | Ok | 16 | 20 | 12 | 4 | 20" | 10723.5 | 6 | TRAMPA LANZADORA 8" (p/GSD) | 1 | Servicio | x10 | 88866.20833999998 | 88866.20833999998
+20 | 2750 | 1100 | 508 | 3250 | 4858 | 20 | 2750 | 3260 | 508 | 4800 | 8568 | 20 | 24 | HOLD | 4 | 24"
+24 | 2750 | 1100 | 610 | 3250 | 4960 | 24 | 2750 | 3360 | 610 | 4800 | 8770 | 24 | 30 | HOLD | 4 | 30"
+REV. 0 | REV. 0 | REV. 0
+DIMENSIONES DE TRAMPA LANZADORA | DIMENSIONES DE TRAMPA RECEPTORA
+DIAMETRO DE DUCTO | ILI MAX CONSIDERADA | A | E | C | LARGO TOTAL | DIAMETRO DE DUCTO | ILI MAX CONSIDERADA | A | E | C | LARGO TOTAL | BARREL MENOR | BARREL MAYOR | DIEMETRO KICKER LINE 2 (N2) | DIAMTRO DRENAJE (D2 Y D1) | TCR | USD
+4 | 2600 | 1100 | 140 | 3600 | 4840 | 4 | 2600 | 2714 | 140 | 4550 | 7404 | 4 | 8 | 2 | 2 | 8"
+6 | 2600 | 1100 | 152 | 3600 | 4852 | 6 | 2600 | 2768 | 152 | 4550 | 7470 | 6 | 10 | 3 | 2 | 10"
+8 | 4157 | 1100 | 178 | 5157 | 6435 | Ok | 8 | 4157 | 4376 | 178 | 7275 | 11829 | Ok | 8 | 12 | 6 | 2 | 12" | 10804.7
+10 | 2646 | 1100 | 203 | 3646 | 4949 | 10 | 2646 | 2919 | 203 | 4631 | 7753 | 10 | 16 | 6 | 4 | 16"
+12 | 2300 | 1100 | 356 | 3300 | 4756 | Ok | 12 | 2300 | 2623 | 356 | 4025 | 7004 | Ok | 12 | 16 | 6 | 4 | 16" | 10724
+16 | 2744 | 1100 | 508 | 3744 | 5352 | Ok | 16 | 2744 | 3150 | 508 | 4802 | 8460 | Ok | 16 | 20 | 12 | 4 | 20" | 15033
+20 | 2744 | 1100 | 508 | 3744 | 5352 | 20 | 2744 | 3252 | 508 | 4802 | 8562 | 20 | 24 | HOLD | 4 | 24"
+24 | 2600 | 1100 | 610 | 3600 | 5310 | 24 | 2600 | 3210 | 610 | 4550 | 8370 | 24 | 30 | HOLD | 4 | 30"
+WCB | 5
+CF8M | 18
+Presión de diseño: 118 kg/cm²(g) ≈ 11,57 MPa. [ACO-FP-TR3...GSD EXP 8 | Word]
+Barrel menor: 8". [ACO-FP-TR3...GSD EXP 8 | Word]
+Barrel mayor: 12". [ACO-FP-TR3...GSD EXP 8 | Word]
+Corrosion Allowance: 3,2 mm
+Barrel menor 8"
+Espesor resistente calculado ≈ 12 a 13 mm
+CA 3,2 mm
+Espesor mínimo requerido ≈ 16 mm
+Barrel mayor 12"
+Espesor resistente calculado ≈ 18 a 19 mm
+CA 3,2 mm
+Espesor mínimo requerido ≈ 22 mm
+Recomendación práctica: 22,2 mm (7/8") o 25,4 mm (1").
+Lo que yo especificaría para licitación/fabricación
+Barrel menor 8" API 5L X56: 19,05 mm
+Barrel mayor 12" API 5L X56: 25,4 mm
+Ese par de espesores suele dejar margen razonable para:
+presión de diseño 118 kg/cm²,
+CA 3,2 mm,
+tolerancias de laminación,
+refuerzos de boquillas,
+revisión de terceros.
+Si el requisito de paso es verdaderamente 201 mm:
+El espesor máximo admisible geométricamente en el barrel menor de 8" es ≈ 9 mm.
+Un espesor comercial lógico sería 8,18 mm (SCH40).
+Ahora bien, con una presión de diseño de 118 kg/cm², un barrel de 8" y 8 mm de espesor no verifica ASME VIII.
+Espesor disponible por geometría: ≈ 9 mm.
+Espesor requerido con F = 0,50: ≈ 13 mm (sin CA).
+Espesor requerido con F = 0,50 + CA: ≈ 16 mm.
+=== hoja CONDICIONES DE DISEÑO
+ITEM 1.1 Y 1.2
+CONDICIONES DE DISEÑO TRAMPAS LANZADORAS Y RECEPTORAS DE 16"
+Código de diseño | ASME 31.8 / CLASE DE CAÑERIA A6C
+Eficiencia de Junta | 1 | #
+Radiografiado | 100 | %
+Espesor de Corrosión. | 3.2 mm | mm
+Presión de diseño | 100 | kg/cm2
+Presión de Prueba Hidráulica | Según codigo | kg/cm2
+Temperatura de diseño | -11 a 65º | ºC
+Tratamiento térmico | De acuerdo con ASME VIII - Div. 1. Ultima Edición.
+Revestimiento de cañerías | En todo de acuerdo con la especificación de pintura de Tecpetrol
+Item 2
+CONDICIONES DE DISEÑO TRAMPAS LANZADORAS Y RECEPTORAS DE 12"
+Código de diseño | ASME 31.8/ CLASE DE CAÑERIA A9CM
+Eficiencia de Junta | 1 | #
+Radiografiado | 100 | %
+Espesor de Corrosión. | 3.2 mm | mm
+Presión de diseño | 145 | kg/cm2
+Presión de Prueba Hidráulica | Según codigo | kg/cm2
+Temperatura de diseño | -11 a 65º | ºC
+Tratamiento térmico | De acuerdo con ASME VIII - Div. 1. Ultima Edición.
+Revestimiento de cañerías | En todo de acuerdo con la especificación de pintura de Tecpetrol
+Item 3
+CONDICIONES DE DISEÑO TRAMPAS LANZADORAS Y RECEPTORAS DE 8"
+Código de diseño | ASME 31.8 / CLASE DE CAÑERIA A9C
+Eficiencia de Junta | 1 | #
+Radiografiado | 100 | %
+Espesor de Corrosión. | 3.2 mm | mm
+Presión de diseño | 110 | kg/cm2
+Presión de Prueba Hidráulica | Según codigo | kg/cm2
+Temperatura de diseño | -11 a 65º | ºC
+Tratamiento térmico | De acuerdo con ASME VIII - Div. 1. Ultima Edición.
+Revestimiento de cañerías | En todo de acuerdo con la especificación de pintura de Tecpetrol
+Descripción | Fecha de Necesidad | 2026-08-15 00:00:00 | 150
+Trampas L/R 8" | 2027-02-01 00:00:00 | 2027-01-12 00:00:00 | 20
+Trampas L/R 16" | 2027-02-01 00:00:00 | 2027-01-12 00:00:00 | 20
+Trampas L/R 12" | 2027-03-01 00:00:00 | 2027-01-12 00:00:00 | 48
+Linea | ITEM | CANT | UM
+1 | TRAMPA LANZADORA 16" (p/GSD) | 1.00 | Servicio
+2 | TRAMPA RECEPTORA 16" (p/GSD) | 1.00 | Servicio
+3 | TRAMPA LANZADORA 12" (p/GSD) | 1.00 | Servicio
+4 | TRAMPA RECEPTORA 12" (p/GSD) | 1.00 | Servicio
+5 | TRAMPA LANZADORA 8" (p/GSD) | 1.00 | Servicio
+6 | TRAMPA LANZADORA 8" (p/GSD) | 1.00 | Servicio
+=== hoja Resumen
+CLIENTE | YPF
+PEDIDO DE PRECIOS | Trampas Lanzadoras y Receptoras
+REFERENCIA | Gasoducto Exp
+PRESUPUESTO | solicitado por email a Ricardo Alvarez
+ÍTEM | 6 trampas en total
+NOMBRE | Cliente final YPF
+CANTIDAD | 6 trampas en total
+FECHA RECEPCION PED COTIZACION | 2026-07-03 00:00:00
+FECHA DE VENCIMIENTO DE COTIZACION | 2026-07-10 00:00:00
+PLANO / ER | Lote de planos (ver carpeta 1)
+Material principal: | Según especificación técnica del cliente
+END | 100 Rx+LP
+Detalle | Cantidad | Costo Unitario | Factor de Rentabilidad | Precio de Venta Unitario desagregado | Precio de Venta unitario | Margen de ganancia | Precio de venta total
+Unidad | U$S | U$S | U$S | % | 611318.6559
+Trampas lanzadora de 16” Serie-600 (CLASE: A6C):
+Sobre un skid, con todas las facilidades y accesos necesarios para la operación y mantenimiento. Válvulas, cañerías, instrumentos, cableado, etc. indicados en el P&ID ACO-FP-PMG3-R-PI-701 y los documentos listados en el punto 10. | 1 | 116914.18547000001 | 116914.18547000001
+Trampas receptora de 16” Serie-600 (CLASE: A6C):
+Sobre un skid, con todas las facilidades y accesos necesarios para la operación y mantenimiento. Válvulas, cañerías, instrumentos, cableado, etc. indicados en el P&ID ACO-FP-PMG3-R-PI-701 y los documentos listados en el punto 10. | 1 | 130764.00064 | 130764.00064
+Trampas lanzadora de 12” Serie-900 (CLASE: A9CM): Sobre un skid, con todas las facilidades y accesos necesarios para la operación y mantenimiento. Válvulas, cañerías, instrumentos, cableado, etc. indicados en el P&ID ACO-FP-TR2-R-PI-XXX y los documentos listados en el punto 10. | 1 | 84663.16668000002 | 84663.16668000002
+Trampas receptora de 12” Serie-900 (CLASE: A9CM): Sobre un skid, con todas las facilidades y accesos necesarios para la operación y mantenimiento. Válvulas, cañerías, instrumentos, cableado, etc. indicados en el P&ID ACO-FP-TR2-R-PI-XXX y los documentos listados en el punto 10. | 1 | 105812.91930000001 | 105812.91930000001
+Trampas lanzadora de 8” Serie-900 (CLASE: A9C):
+Sobre un skid, con todas las facilidades y accesos necesarios para la operación y mantenimiento. Válvulas, cañerías, instrumentos, cableado, etc. indicados en el P&ID ACO-FP-PTG5-R-PI-133 y los documentos listados en el punto 10. | 1 | 75960.90686999999 | 75960.90686999999
+Trampas receptora de 8” Serie-900 (CLASE: A9C):
+Sobre un skid, con todas las facilidades y accesos necesarios para la operación y mantenimiento. Válvulas, cañerías, instrumentos, cableado, etc. indicados en el P&ID ACO-FP-PMG3-R-PI-702 y los documentos listados en el punto 10. | 1 | 85893.02833999999 | 85893.02833999999
+Total | 6 | 0 | 0 | 600008.2073
+Total | 600008.2073
+Nota: Se consideró seguro de caución por 2 trimestres.
+Plazo de entrega :   120/150 días. Sujeto a recepción de TCR Sypris.
+Entrega en depósito ITT, Quilmes Oeste, AMBA.
+=== hoja Lanz 20x16
+CLIENTE | Tecpetrol
+PEDIDO DE PRECIOS | Tramás lanzadoras y receptoras
+REFERENCIA | Facilidades desarrollo Centro Oeste
+PRESUPUESTO | solicitado por R Alvarez
+ÍTEM | 1
+NOMBRE | Trampa lanzadora 20" x 16"
+CANTIDAD | 1
+FECHA RECEPCION PED COTIZACION | 2026-06-26 00:00:00
+FECHA DE VENCIMIENTO DE COTIZACION | 2026-07-15 00:00:00
+PLANO / ER | ACO-CNV-GENTIP-M-PL-001 (típico Trampa Lanzadora y Receptora)
+Detalle | Cantidad | Costo Unitario | Factor de Rentabilidad | Precio de Venta Unitario | Precio de Venta unitario | Margen de ganancia | Precio de venta total
+Unidad | U$S | U$S | U$S | %
+Materiales, MO y SVC | 1 | 74322.245 | 1.35 | 100335.03075 | 0.25925925925925936
+Válvulas Taval | 1 | 13649.119999999999 | 1 | 13649.119999999999 | 0
+Repuestos PEM y 2 años | 1 | 373.8 | 1.35 | 504.63000000000005 | 0.2592592592592593
+Transporte | 1 | 1200 | 1.35 | 1620 | 0.25925925925925924
+X 3 MESES -Seguro de caución | 3 | 268.46824000000004 | 3 | 805.4047200000001 | 0.6666666666666666
+Total | 89813.63324 | 116914.18547000001 | 116914.18547000001
+Total U$D | 116914.18547000001
+Plazo de entrega :
+Entrega: EXW, ITT SA, Av. 12 de Octubre 4004, Quilmes Oeste, AMBA.
+MATERIA PRIMA Y MATERIALES
+Recipiente | NO
+Piping | SI
+Skid | SI
+Plataforma / escaleras | NO
+Válvulas manuales | SI
+Instrumental | SI
+Instalación eléctrica | NO
+Aislación | NO
+Tracing eléctrico | NO
+Mano de obra de 3ros | SI
+Mano de obra ITT | SI | Movimientos internos, PH, armado final
+Horas de Calidad e Ingeniería | SI
+Granallado y pintura | SI
+Ensayos no destructivos | SI
+Embalaje | NO
+Transporte a destino final | NO
+Seguro de Caución | SI
+Material principal: | Tubo S/C ASTM A106 GrB, Accesorios ASTM A234-wpb, bridas ASTM A105, valvulas esféricas TAVAL.
+END | 100% Rx, y donde no se pueda Rx se harán LP
+Piping | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD | Posición
+BRIDA WELDING NECK 10 900 RF WPHY F52 SchXS | 5 | u | 1800 | 9000 | Francovigh estimado | 60 días
+BRIDA WELDING NECK 16" 900 RF WPHY F65 Sch60 | 1 | u | 2366.12 | 2366.12 | Francovigh | 60 días
+BRIDA WELDING NECK 2 900 RF A105 Sch160 | Sch160 | 17 | u | 65.2 | 1108.4 | Francovigh | 60 días
+BRIDA WELDING NECK 1½ 900 RF A105 Sch160 | Sch160 | 1 | u | 40.57 | 40.57 | Francovigh | 60 días
+BRIDA WELDING NECK 2" 150 RF A105 SchSTD | SchSTD | 1 | u | 14.32 | 14.32 | Renard
+CAÑO S/C 20" API 5L Gr x65, esp 5/8" | CAÑO S/C 20" API 5L Gr x65 | 3.8 | m | 1500 | 5700 | E Montes estimadobase 16" | debería contemplar 1 tira de 12 mtrs?
+CAÑO S/C 10" A106 Gr b, XS | CAÑO S/C 10" A106 Gr b | 4.5 | m | 173.87 | 782.415 | debería contemplar 1 tira de 12 mtrs?
+CAÑO S/C 16" API 5L Gr x65, esp 5/8" | CAÑO S/C 16" API 5L Gr x65 | 1.1 | m | 1120 | 1232 | E Montes | debería contemplar 1 tira de 12 mtrs? | 1100 | 3800
+CAÑO S/C 2" A106 Gr b, sch160 | CAÑO S/C 2" A106 Gr b | 7 | m | 24.67 | 172.69 | 16 | 2750 | 1100 | 508 | 3250 | 4858
+CAÑO S/C 2" A106 Gr b, sch std | CAÑO S/C 2" A106 Gr b | 2 | m | 12.1 | 24.2 | 20 | 2750 | 1100 | 508 | 3250 | 4858
+CAÑO S/C 1½" A106 Gr b, sch160 | CAÑO S/C 1½" A106 Gr b | 0.1 | m | 19.3 | 1.9300000000000002
+CODO RADIO 90º 2 BW A 234 WPB sch 160 | Sch160 | 3 | u | 76.95 | 230.85000000000002 | Cintolo
+CODO RADIO LARGO 90º 10 BW SCH XS A 234 WPB | SchXS | 1 | u | 440.46 | 440.46 | Renard
+REDUCCION EXCENTRICA 20X16 BW SCH 40 WPHY F65 | Sch40 | 1 | u | 3777 | 3777 | Cintolo
+TAPA CIERRE RAPIDO MOD SYPRIS TOOLS | 20" #900, ASTM A105 | 1 | u | 15281.6 | 15281.6
+TEE 2" BW WPB SCH160 | Sch160 | 3 | u | 143.93 | 431.79 | Cintolo
+WELDOLET 2" X 20 A105 | 3 | u | 7 | 21 | Estimado base Duralitte
+WELDOLET 2" X 16 A105 | 1 | u | 7 | 7 | Estimado base Duralitte
+WELDOLET 1½" X 20 A105 | 1 | u | 7 | 7 | Estimado base Duralitte
+WELDOLET 2" X 10 A105 | 1 | u | 7 | 7 | Estimado base Duralitte
+JUNTA RF 2" | 1 | u | 8 | 8 | Estimado base MS juntas | REPUESTOS | 124.60000000000001
+JUNTA RF 10" | 1 | u | 12 | 12 | Estimado base MS juntas
+JUNTA RF 16" | 1 | u | 18 | 18 | Estimado base MS juntas
+ESPARRAGOS CON 2 TUERCAS ZINC. 7/8 X 145MM | 68 | u | 8 | 544 | Estimado Base Ind Delgado
+ESPARRAGOS CON 2 TUERCAS ZINC. 1 3/8 X 235 MM | 48 | u | 13 | 624 | Estimado Base Ind Delgado
+ESPARRAGOS CON 2 TUERCAS ZINC. | 1 X 140 MM | 4 | u | 10 | 40 | Estimado Base Ind Delgado
+HIERRO ANGULO | 1½ X 1½X1/4 | 5.25 | k | 1.4 | 8.399999999999999 | Se considera una tira de 6 m
+ABRAZADERA U-BOLT | 20" | 2 | u | 45 | 90 | Estimado base Roces (U Bolt Arg)
+ABRAZADERA U-BOLT | 16" | 1 | u | 25 | 25 | Estimado base Roces (U Bolt Arg)
+ABRAZADERA U-BOLT | 2" | 3 | u | 4 | 12 | Estimado base Roces (U Bolt Arg)
+42027.744999999995
+Skid | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+UPN 160 | 470 | kgrs | 1.5 | 705
+MALLA METALICA | Malla tipo SHULMAN ROMBOIDAL 50X30. | 8.5 | m2 | 25 | 250 | Se considera 10 m2, precio wapp de AG Inter
+955 | Se considera 20% de desperdicio
+Válvulas Manuales | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+TAPON LUBRICADO INV. 2 900 RF WCB INT 4140 PAL. | 1 | u | 920 | 920 | 920
+VALV ESF G 10" S900 RF WCB INT 316 ASTO RPTFE CAJA | 1 | u | 8224 | 8224
+VALV ESF G 2" S900 RF WCB INT 316 ASTO RPTFE PAL | 4 | u | 926 | 3704
+VALV ESF G 1½ S900 RF WCB INT 316 ASTO RPTFE PAL | 1 | u | 740.8 | 740.8
+VALV ESF ½" 5000 WOG NPT A105 ASTO DELRIN PAL | 1 | u | 60.32 | 60.32
+13649.119999999999
+Instrumental | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+MANOMETRO CON GLIC Ø100 CONEX NPT 0-400 | 1 | u | 120 | 120
+VAL TSV ENT 1 1/2 Y SAL DE 2" WCB CON ORIFICIO TPO D | Válvula de seguridad x alivio #900 | 1 | Unid | 1800 | 1800 | Doma
+DETECTOR DE SCRAPER MODELO: 57-4200-00 | 1 | Unid | 4209.5 | 4209.5
+Válvula de bloqueo y purga | 1 | u | 150 | 150
+6279.5
+Mano de obra de 3ros | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+Edgardo Ledesma | Piping | 1 | u | 13500 | 13500
+Edgardo Ledesma | Skid | 500 | k | 2.8 | 1400
+14900
+Mano de obra de ITT | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+Mov internos, PH, montaje y acond para despacho | 120 | hs | 13 | 1560 | 120 | Valores tomados de cotización anterior para Tecpetrol (ganada)
+1560
+Horas de Calidad e Ingeniería | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+Horas de Calidad | 120 | hs | 15 | 1800 | Cantidades
+Horas de Ingeniería | 100 | hs | 15 | 1500
+3300
+Granallado y pintura | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+Piping | 21 | m2 | 50 | 1260 | Incluye el material. O Spray 20%
+Skid | 14 | m2 | 50 | 910 | Incluye el material. O spray 30%
+2170
+Ensayos NO Destructivos | SI
+Descripción | Descripción ampliada | Cantidad | USD/un | Subt USD
+Servicios Rx y LP | 1 | u | 3130 | 3130 | Factor de seguridad 25%
+3130
+REPUESTOS | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+PRECOM- COM- PEM | 2 | u | 124.60000000000001 | 249.20000000000002
+2 AÑOS DE OPERACIÓN | 1 | u | 124.60000000000001 | 124.60000000000001
+373.8
+SERVICIO DE ASISTENCIA EN CAMPO | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+ASISTENCIA EN CAMPO | 1 | u | 1750 | 1750
+1750
+1.35 | 2362.5
+TRANSPORTE | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+TRANSPORTE A LOS TOLDOS II | 1 | u | 1200 | 1200
+1200
+Cálculo de ENOD
+DN de Cañería (pulgadas) | Cantidad de soldaduras | Plac Ch | Plac Gde | Cant Plac Ch | Cant Plac Gde | Subtotal USD Pplacas
+20 | 2 | 6 | 12 | 96
+16 | 2 | 4 | 8 | 64
+10 | 7 | 3 | 21 | 168
+2 | 26 | 2 | 52 | 338
+2 | 2 | 2 | 4 | 26
+56 | 41 | 692 | Placas
+97 | 1224 | SVC Rx
+2 SVC Rx | 588 | SVC LP
+2504
+Tarifa | USD
+Rx | 408
+LP | 294
+Plac Ch | 6.5
+Plac Gde | 8
+=== hoja Rec 20x16
+CLIENTE | Tecpetrol
+PEDIDO DE PRECIOS | Tramás lanzadoras y receptoras
+REFERENCIA | Facilidades desarrollo Centro Oeste
+PRESUPUESTO | solicitado por R Alvarez
+ÍTEM | 1
+NOMBRE | Trampa lanzadora 20" x 16"
+CANTIDAD | 1
+FECHA RECEPCION PED COTIZACION | 2026-06-26 00:00:00
+FECHA DE VENCIMIENTO DE COTIZACION | 2026-07-15 00:00:00
+PLANO / ER | ACO-CNV-GENTIP-M-PL-001 (típico Trampa Lanzadora y Receptora)
+Detalle | Cantidad | Costo Unitario | Factor de Rentabilidad | Precio de Venta Unitario | Precio de Venta unitario | Margen de ganancia | Precio de venta total
+Unidad | U$S | U$S | U$S | %
+Materiales, MO y SVC | 1 | 80948.272 | 1.35 | 109280.1672 | 0.25925925925925924
+Válvulas Taval | 1 | 18387.28 | 1 | 18387.28 | 0
+Repuestos PEM y 2 años | 1 | 573.9000000000001 | 1.35 | 774.7650000000002 | 0.25925925925925936
+Transporte | 1 | 1200 | 1.35 | 1620 | 0.25925925925925924
+Seguro de caución | 1 | 233.92948 | 3 | 701.78844 | 0.6666666666666666
+Total | 101343.38148 | 130764.00064 | 130764.00064
+Total U$D | 130764.00064
+Plazo de entrega :
+Entrega: EXW, ITT SA, Av. 12 de Octubre 4004, Quilmes Oeste, AMBA.
+MATERIA PRIMA Y MATERIALES
+Recipiente | NO
+Piping | SI
+Skid | SI
+Plataforma / escaleras | NO
+Válvulas manuales | SI
+Instrumental | SI
+Instalación eléctrica | NO
+Aislación | NO
+Tracing eléctrico | NO
+Mano de obra de 3ros | SI
+Mano de obra ITT | SI | Movimientos internos, PH, armado final
+Horas de Calidad e Ingeniería | SI
+Granallado y pintura | SI
+Ensayos no destructivos | SI
+Embalaje | NO
+Transporte a destino final | NO
+Seguro de Caución | SI
+Material principal: | TCR Sypris, Tubo S/C ASTM A106 GrB, Accesorios ASTM A234-wpb, bridas ASTM A105, valvulas esféricas TAVAL.
+END | 100% Rx, y donde no se pueda Rx se harán LP
+Piping | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD | Posición
+BRIDA WELDING NECK 12" 900 RF WPHY F52 SchXS | 5 | u | 1285.77 | 6428.85 | Francovigh | 60 días
+BRIDA WELDING NECK 16" 900 RF WPHY F65 Sch60 | 1 | u | 2366.12 | 2366.12 | Francovigh | 60 días
+BRIDA WELDING NECK 4" 900 RF A105 Sch120 | 8 | u | 126.06 | 1008.48 | Francovigh
+BRIDA WELDING NECK 2 900 RF A105 Sch160 | 8 | u | 65.2 | 521.6 | Francovigh
+BRIDA WELDING NECK 1½ 900 RF A105 Sch160 | 1 | u | 40.57 | 40.57 | Francovigh
+CAÑO S/C 20" API 5L Gr x65, esp 5/8" | 4.8 | m | 1500 | 7200 | E Montes estimadobase 16" | debería contemplar 1 tira de 12 mtrs?
+CAÑO S/C 16" API 5L Gr x65, esp 5/8" | 3.2 | m | 1120 | 3584 | E Montes | debería contemplar 1 tira de 12 mtrs?
+CAÑO S/C 12" A106 Gr b, XS | 5.9 | m | 217.23 | 1281.657 | Renard | debería considerar una tira de 12,8 mtrs?
+CAÑO S/C 4" A106 Gr b, sch120 | 8.5 | m | 60.37 | 513.145 | Renard
+CAÑO S/C 2" A106 Gr b, sch160 | 3 | m | 24.67 | 74.01 | Renard
+CAÑO S/C 2" A106 Gr b, std | 2 | m | 12.1 | 24.2 | Renard
+CAÑO S/C 1½" A106 Gr b, sch160 | 0.1 | m | 19.3 | 1.9300000000000002 | Renard
+CODO RADIO C 90º 2 BW A 234 WPB, sch120 | 4 | u | 68.5 | 274 | Cintolo estimado
+CODO RADIO C 90º 2 BW A 234 WPB, sch160 | 4 | u | 76.95 | 307.8 | Cintolo
+CODO RADIO LARGO 90º 12 BW SCH XS WPHY 52 | 1 | u | 1400 | 1400 | Cintolo estimado
+CODO RADIO C 90º 2 BW A 234 WPB, sch40 | 1 | u | 9.96 | 9.96 | Renard
+NIPLE ½ NPT/BW A106 SCH 160 L:100 | 1 | u | 10 | 10
+REDUCCION EXCENTRICA 20X16 BW SCH 40 WPB | 1 | u | 2860.33 | 2860.33 | Cintolo | 30 días
+TAPA CIERRE RAPIDO MOD SYPRIS TOOLS/o similar 20" #900 | 1 | u | 15281.6 | 15281.6
+TEE REDUCCION 4X2 BW WPB SCH 160 | 2 | u | 546.54 | 1093.08 | Cintolo
+TEE 4" BW WPB SCH120 | 2 | u | 329.77 | 659.54 | Cintolo
+WELDOLET ½" X 20 A105 | 1 | u | 7 | 7
+ESPARRAGOS CON 2 TUERCAS ZINC. 7/8 X 145MM | 48 | u | 8 | 384 | REPUESTOS | 191.3
+ESPARRAGOS CON 2 TUERCAS ZINC. 1 1/8 X 170 MM | 48 | u | 12 | 576
+ESPARRAGOS CON 2 TUERCAS ZINC. 1 3/8 X 255 MM | 60 | u | 13 | 780
+JUNTA RF 2" | 6 | u | 8 | 48
+JUNTA RF 12" | 3 | u | 15 | 45
+JUNTA RF 4" | 8 | u | 10 | 80
+WELDOLET 1½" X 20 A105 SCH160 | 1 | u | 7 | 7
+WELDOLET 2" X 10 A105 SCH160 | 1 | u | 7 | 7
+WELDOLET 2" X 20 A105 SCH160 | 1 | u | 7 | 7
+WELDOLET 4" X 16 A105 SCH120 | 1 | u | 7 | 7
+WELDOLET 4" X 20 A105 SCH120 | 1 | u | 7 | 7
+Abrazaderas Ubolt pesadas 20" | 2 | u | 40 | 80
+Abrazaderas Ubolt pesadas 16" | 1 | u | 25 | 25
+Abrazaderas Ubolt pesadas 4" | 4 | u | 10 | 40
+ESPARRAGOS CON 2 TUERCAS ZINC. 1 X 140 MM | 4 | u | 10 | 40
+HIERRO ANGULO 1½ X 1½X1/4 | 7 | k | 1.4 | 29.4 | se considera una tira de 6 m
+47110.272000000004
+Skid | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+UPN 160 | 590 | kgrs | 1.5 | 885
+MALLA METALICA | Malla tipo SHULMAN ROMBOIDAL 50X30. | 14 | m2 | 25 | 350 | Se considera 10 m2, precio wapp de AG Inter
+1235 | Se considera 20% de desperdicio
+Válvulas Manuales | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+VALV ESF G 12" S900 RF WCB INT 316 ASTO RPTFE CAJA | 1 | u | 11934 | 11934
+VALV ESF G 4" S900 RF WCB INT 316 ASTO RPTFE PAL | 2 | u | 1900.08 | 3800.16
+VALV ESF G 2" S900 RF WCB INT 316 ASTO RPTFE PAL | 2 | u | 926 | 1852
+VALV ESF G 1½ S900 RF WCB INT 316 ASTO RPTFE PAL | 1 | u | 740.8 | 740.8
+VALV ESF ½" 5000 WOG NPT A105 ASTO DELRIN PAL | 1 | u | 60.32 | 60.32
+TAPON LUBRICADO INV. 2 900 RF WCB INT 4140 PAL. | 1 | u | 920 | 920 | 920
+18387.28
+Instrumental | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+MANOMETRO CON GLIC Ø100 CONEX NPT 0-400 | 1 | un | 140 | 140
+VAL TSV ENT 1 1/2 Y SAL DE 2" WCB CON ORIFICIO TPO D | Válvula de seguridad x alivio #900 | 1 | Unid | 1800 | 1800 | Doma
+DETECTOR DE SCRAPER MODELO: 57-4200-00 | 1 | Unid | 4209.5 | 4209.5 | 4209.5
+Válvula de bloqueo y purga | 1 | un | 150 | 150
+6299.5
+Mano de obra de 3ros | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+Edgardo Ledesma | Piping | 1 | un | 13500 | 13500
+Edgardo Ledesma | Skid | 600 | un | 2.8 | 1680
+15180
+Mano de obra de ITT | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD | 130
+Mov internos, PH, montaje y acond para despacho | 130 | hs | 13 | 1690
+1690
+Horas de Calidad e Ingeniería | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+Horas de Calidad | 120 | hs | 15 | 1800
+Horas de Ingeniería | 100 | hs | 15 | 1500
+3300
+Granallado y pintura | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD | Incluye el material. O Spray 20%
+Piping | 25 | m2 | 50 | 1500 | Incluye el material. O spray 30%
+Skid | 18 | m2 | 50 | 1170
+2670
+Ensayos NO Destructivos | SI
+Descripción | Descripción ampliada | Cantidad | USD/un | Subt USD | Factor de seguridad 25%
+Servicios Rx y LP | 1 | un | 3463.5 | 3463.5
+3463.5
+REPUESTOS | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+PRECOM- COM- PEM | 2 | u | 191.3 | 382.6
+2 AÑOS DE OPERACIÓN | 1 | u | 191.3 | 191.3
+573.9000000000001
+SERVICIO DE ASISTENCIA EN CAMPO | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+ASISTENCIA EN CAMPO | 1 | u | 1750 | 1750
+1750
+TRANSPORTE | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+TRANSPORTE A LOS TOLDOS II | 1 | u | 1200 | 1200
+1200
+Cálculo de ENOD | Subtotal USD Pplacas
+DN de Cañería (pulgadas) | Cantidad de soldaduras | Plac Ch | Plac Gde | Cant Plac Ch | Cant Plac Gde | 96
+20 | 2 | 6 | 12 | 64
+16 | 2 | 4 | 8 | 224
+12 | 7 | 4 | 28 | 331.5
+4 | 17 | 3 | 51 | 208
+2 | 16 | 2 | 32 | 26
+2 | 2 | 2 | 4
+1/2 | 2
+11/2 | 2 | Placas
+949.5
+3 SVC Rx | 1632 | SVC Rx | 4 SVC
+882 | SVC LP | 3 SVC
+3463.5
+Tarifa | USD
+Rx | 408
+LP | 294
+Plac Ch | 6.5
+Plac Gde | 8
+=== hoja Lanz 16x12
+CLIENTE | Tecpetrol
+PEDIDO DE PRECIOS | Tramás lanzadoras y receptoras
+REFERENCIA | Facilidades desarrollo Centro Oeste
+PRESUPUESTO | solicitado por R Alvarez
+ÍTEM | 1
+NOMBRE | Trampa lanzadora 16" x 12"
+CANTIDAD | 1
+FECHA RECEPCION PED COTIZACION | 2026-06-26 00:00:00
+FECHA DE VENCIMIENTO DE COTIZACION | 2026-07-15 00:00:00
+PLANO / ER | ACO-CNV-GENTIP-M-PL-001 (típico Trampa Lanzadora y Receptora)
+Detalle | Cantidad | Costo Unitario | Factor de Rentabilidad | Precio de Venta Unitario | Precio de Venta unitario | Margen de ganancia | Precio de venta total
+Unidad | U$S | U$S | U$S | %
+Materiales, MO y SVC | 1 | 54412.332 | 1.35 | 73456.64820000001 | 0.25925925925925936
+Válvulas Taval | 1 | 8791.08 | 1 | 8791.08 | 0
+Repuestos PEM y 2 años | 1 | 124.60000000000001 | 1.35 | 168.21000000000004 | 0.25925925925925936
+Transporte | 1 | 1200 | 1.35 | 1620 | 0.25925925925925924
+Seguro de caución | 1 | 209.07616000000002 | 3 | 627.22848 | 0.6666666666666666
+Total | 64737.08816 | 84663.16668000002 | 84663.16668000002
+Total U$D | 84663.16668000002
+Plazo de entrega :
+Entrega: EXW, ITT SA, Av. 12 de Octubre 4004, Quilmes Oeste, AMBA.
+MATERIA PRIMA Y MATERIALES
+Recipiente | NO
+Piping | SI
+Skid | SI
+Plataforma / escaleras | NO
+Válvulas manuales | SI
+Instrumental | SI
+Instalación eléctrica | NO
+Aislación | NO
+Tracing eléctrico | NO
+Mano de obra de 3ros | SI
+Mano de obra ITT | SI | Movimientos internos, PH, armado final
+Horas de Calidad e Ingeniería | SI
+Granallado y pintura | SI
+Ensayos no destructivos | SI
+Embalaje | NO
+Transporte a destino final | NO
+Seguro de Caución | SI
+Material principal: | TCR Sypris, Tubo S/C ASTM A106 GrB, Accesorios ASTM A234-wpb, bridas ASTM A105, valvulas esféricas TAVAL.
+END | 100% Rx, y donde no se pueda Rx se harán LP
+Piping | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD | Posición
+BRIDA WELDING NECK 6 900 RF ASTM A105 SchXS | 5 | u | 271.7 | 1358.5 | Francovigh
+BRIDA WELDING NECK 12" 900 RF WPHY F52 Sch60 | 1 | u | 1285.77 | 1285.77 | Francovigh | 60 días
+BRIDA WELDING NECK 2 900 RF A105 Sch160 | 17 | u | 65.2 | 1108.4 | Francovigh | 60 días
+BRIDA WELDING NECK 1½ 900 RF A105 Sch160 | 1 | u | 40.57 | 40.57 | Francovigh | 60 días
+BRIDA WELDING NECK 2" 150 RF A105 SchSTD | 1 | u | 14.32 | 14.32 | Renard
+CAÑO S/C 12" API 5L Gr x52, esp 5/8" | 3.8 | m | 690 | 2622 | E Montes | debería contemplar 1 tira de 12 mtrs?
+CAÑO S/C 6" A106 Gr b, sch XS | 4.5 | m | 90.7 | 408.15000000000003 | Renard | Debería considerar 1 tira de 12,8 m?
+CAÑO S/C 16" API 5L Gr x65, , esp 5/8" | 1.1 | m | 1120 | 1232 | E Montes | debería contemplar 1 tira de 12 mtrs?
+CAÑO S/C 2" A106 Gr b, sch160 | 7 | m | 24.67 | 172.69 | Renard | Debería considerar 1 tira de 12,8 m?
+CAÑO S/C 2" A106 Gr b, sch std | 2 | m | 12.1 | 24.2 | Renard | Debería considerar 1 tira de 12,8 m?
+CAÑO S/C 1½" A106 Gr b, sch160 | 0.1 | m | 24.67 | 2.4670000000000005 | Estimado
+CODO RADIO 90º 2 BW A 234 WPB, sch160 | 3 | u | 76.95 | 230.85000000000002 | Cintolo
+CODO RADIO LARGO 90º 6 BW SCH XS A 234 WPB | 1 | u | 129.1 | 129.1
+REDUCCION EXCENTRICA 16X12 BW SCH 40 WPHY F52 | 1 | u | 3172.7 | 3172.7 | Cintolo | 30 días
+TAPA CIERRE RAPIDO MOD SYPRIS TOOLS 16", ASTM A105 | 1 | u | 10923 | 10923
+TEE 2" BW WPB SCH160 | 3 | u | 143.93 | 431.79 | Cintolo
+WELDOLET 2" X 20 A105 | 3 | u | 7 | 21
+WELDOLET 2" X 16 A105 | 1 | u | 7 | 7
+WELDOLET 1½" X 20 A105 | 1 | u | 7 | 7
+WELDOLET 2" X 10 A105 | 1 | u | 7 | 7
+Junta RF hierro maleable 2" | 1 | u | 8 | 8 | REPUESTOS | 124.60000000000001
+Junta RF hierro maleable 10" | 1 | u | 12 | 12
+Junta RF hierro maleable 16" | 1 | u | 18 | 18
+ESPARRAGOS CON 2 TUERCAS ZINC. 7/8 X 145MM | 68 | u | 8 | 544
+ESPARRAGOS CON 2 TUERCAS ZINC. 1 3/8 X 235 MM | 48 | u | 13 | 624
+ESPARRAGOS CON 2 TUERCAS ZINC. 1 X 140 MM | 4 | u | 10 | 40
+Hierro ángulo 1½ X 1½X1/4 | 5.25 | k | 1.4 | 7.35
+Abrazaderas U Bolt PESADAS 16" | 2 | u | 25 | 50
+Abrazaderas U Bolt PESADAS 12" | 1 | u | 18 | 18
+Abrazaderas U Bolt PESADAS 2" | 3 | u | 4 | 12
+24531.857
+Skid | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+UPN 160 | 470 | kgrs | 1.5 | 705
+MALLA METALICA | Malla tipo SHULMAN ROMBOIDAL 50X30. | 8.5 | m2 | 25 | 212.5 | Se considera 10 m2, precio wapp de AG Inter
+1101 | Se considera 20% de desperdicio
+Válvulas Manuales | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+VALV ESF G 6" S900 RF WCB INT 316 ASTO RPTFE CAJA | 1 | u | 3365.96 | 3365.96
+VALV ESF G 2" S900 RF WCB INT 316 ASTO RPTFE PAL | 4 | u | 926 | 3704
+VALV ESF G 1½ S900 RF WCB INT 316 ASTO RPTFE PAL | 1 | u | 740.8 | 740.8
+VALV ESF ½" 5000 WOG NPT A105 ASTO DELRIN PAL | 1 | u | 60.32 | 60.32
+TAPON LUBRICADO INV. 2 900 RF WCB INT 4140 PAL. | 1 | u | 920 | 920 | 920
+8791.08
+Instrumental | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+MANOMETRO CON GLIC Ø100 CONEX NPT 0-400 | 1 | un | 140 | 140
+VAL TSV ENT 1 1/2 Y SAL DE 2" WCB CON ORIFICIO TPO D | Válvula de seguridad x alivio #900 | 1 | Unid | 1800 | 1800 | Doma
+DETECTOR DE SCRAPER MODELO: 57-4200-00 | 1 | Unid | 4209.5 | 4209.5
+Válvula de bloqueo y purga | 1 | un | 150 | 150
+6299.5
+Mano de obra de 3ros | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+Edgardo Ledesma | Piping | 1 | un | 11500 | 11500
+Edgardo Ledesma | Skid | 470 | k | 2.8 | 1316
+12816
+Mano de obra de ITT | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD | 110
+Mov internos, PH, montaje y acond para despacho | 110 | hs | 13 | 1430
+1430
+Horas de Calidad e Ingeniería | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+Horas de Calidad | 120 | hs | 15 | 1800
+Horas de Ingeniería | 100 | hs | 15 | 1500
+3300
+Granallado y pintura | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD | Incluye el material. O Spray 20%
+Piping | 18 | m2 | 50 | 1080 | Incluye el material. O spray 30%
+Skid | 14 | m2 | 50 | 910
+1990
+Ensayos NO Destructivos | SI
+Descripción | Descripción ampliada | Cantidad | USD/un | Subt USD | 85% de la trampa 20x16
+Servicios Rx y LP | 1 | un | 2943.975 | 2943.975
+2943.975
+REPUESTOS | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+PRECOM- COM- PEM | 2 | u | 124.60000000000001 | 249.20000000000002
+2 AÑOS DE OPERACIÓN | 1 | u | 124.60000000000001 | 124.60000000000001
+373.8
+SERVICIO DE ASISTENCIA EN CAMPO | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+ASISTENCIA EN CAMPO | 1 | u | 1750 | 1750
+1750
+TRANSPORTE | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+TRANSPORTE A LOS TOLDOS II | 1 | u | 1200 | 1200
+1200
+=== hoja Rec 16x12
+CLIENTE | Tecpetrol
+PEDIDO DE PRECIOS | Tramás lanzadoras y receptoras
+REFERENCIA | Facilidades desarrollo Centro Oeste
+PRESUPUESTO | solicitado por R Alvarez
+ÍTEM | 1
+NOMBRE | Trampa receptora 16" x 12"
+CANTIDAD | 1
+FECHA RECEPCION PED COTIZACION | 2026-06-26 00:00:00
+FECHA DE VENCIMIENTO DE COTIZACION | 2026-07-15 00:00:00
+PLANO / ER | ACO-CNV-GENTIP-M-PL-001 (típico Trampa Lanzadora y Receptora)
+Detalle | Cantidad | Costo Unitario | Factor de Rentabilidad | Precio de Venta Unitario | Precio de Venta unitario | Margen de ganancia | Precio de venta total
+Unidad | U$S | U$S | U$S | %
+Materiales, MO y SVC | 1 | 61955.494 | 1.35 | 83639.91690000001 | 0.25925925925925936
+Válvulas Taval | 1 | 19307.28 | 1 | 19307.28 | 0
+Repuestos PEM y 2 años | 1 | 545.4000000000001 | 1.35 | 736.2900000000002 | 0.2592592592592593
+Transporte | 1 | 1200 | 1.35 | 1620 | 0.25925925925925924
+Seguro de caución | 1 | 169.8108 | 3 | 509.43240000000003 | 0.6666666666666667
+Total | 83177.9848 | 105812.91930000001 | 105812.91930000001
+Total U$D | 105812.91930000001
+Plazo de entrega :
+Entrega: EXW, ITT SA, Av. 12 de Octubre 4004, Quilmes Oeste, AMBA.
+MATERIA PRIMA Y MATERIALES
+Recipiente | NO
+Piping | SI
+Skid | SI
+Plataforma / escaleras | NO
+Válvulas manuales | SI
+Instrumental | SI
+Instalación eléctrica | NO
+Aislación | NO
+Tracing eléctrico | NO
+Mano de obra de 3ros | SI
+Mano de obra ITT | SI | Movimientos internos, PH, armado final
+Horas de Calidad e Ingeniería | SI
+Granallado y pintura | SI
+Ensayos no destructivos | SI
+Embalaje | NO
+Transporte a destino final | NO
+Seguro de Caución | SI
+Material principal: | Tubo S/C ASTM A106 GrB, Accesorios ASTM A234-wpb, bridas ASTM A105, valvulas esféricas TAVAL.
+END | 100% Rx, y donde no se pueda Rx se harán LP
+Piping | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+BRIDA WELDING NECK 6" 900 RF A105 Sch120 | 5 | u | 271.72 | 1358.6000000000001 | Francovigh
+BRIDA WELDING NECK 12" 900 RF WPHY F65 Sch60 | 1 | u | 1285.77 | 1285.77 | Francovigh | 60 días
+BRIDA WELDING NECK 4" 900 RF A105 Sch120 | 8 | u | 126.06 | 1008.48 | Francovigh | 60 días
+BRIDA WELDING NECK 2 900 RF A105 Sch160 | 8 | u | 65.2 | 521.6 | Francovigh
+BRIDA WELDING NECK 1½ 900 RF A105 Sch160 | 1 | u | 40.57 | 40.57 | Francovigh | 60 días
+CAÑO S/C 12" API 5L Gr x52, esp 5/8" | 4.8 | m | 690 | 3312 | E Montes | debería contemplar 1 tira de 12 mtrs?
+CAÑO S/C 16" API 5L Gr x65, esp 5/8" | 3.2 | m | 1120 | 3584 | E Montes | debería contemplar 1 tira de 12 mtrs?
+CAÑO S/C 12" A106 Gr b, sch XS | 5.9 | m | 217.23 | 1281.657 | Renard | debería contemplar 1 tira de 12 mtrs?
+CAÑO S/C 4" A106 Gr b, sch120 | 8.5 | m | 60.37 | 513.145 | Renard | debería contemplar 1 tira de 12 mtrs?
+CAÑO S/C 2" A106 Gr b, sch160 | 3 | m | 24.67 | 74.01 | Renard
+CAÑO S/C 2" A106 Gr b, sch std | 2 | m | 12.1 | 24.2 | Renard
+CAÑO S/C 1½" A106 Gr b, sch160 | 0.1 | u | 24.67 | 2.4670000000000005 | Estimado
+CODO RADIO C 90º 2 BW A 234 WPB, sch120 | 4 | u | 68.5 | 274 | Cintolo estimado
+CODO RADIO C 90º 2 BW A 234 WPB, sch160 | 4 | u | 76.95 | 307.8 | Cintolo
+CODO RADIO LARGO 90º 6 BW SCH XS WPB | 1 | u | 129.1 | 129.1
+CODO RADIO C 90º 2 BW A 234 WPB, sch160 | 1 | u | 76.95 | 76.95
+NIPLE ½ NPT/BW A106 SCH 160 L:100 | 1 | u | 10 | 10
+REDUCCION EXCENTRICA 16X12 BW SCH 40 WPHY F52 | 1 | u | 3172.7 | 3172.7 | Cintolo
+TAPA CIERRE RAPIDO MOD SYPRIS TOOLS/o similar | 1 | u | 10923 | 10923 | Sypris
+TEE REDUCCION 4X2 BW WPB SCH 160 | 2 | u | 546.54 | 1093.08 | Cintolo
+TEE 4" BW WPB SCH120 | 2 | u | 329.77 | 659.54 | Cintolo
+WELDOLET ½" X 20 A105 | 1 | u | 7 | 7
+ESPARRAGOS CON 2 TUERCAS ZINC. 7/8 X 145MM | 48 | u | 8 | 384 | REPUESTOS | 181.8
+ESPARRAGOS CON 2 TUERCAS ZINC. 1 1/8 X 170 MM | 48 | u | 11 | 528
+ESPARRAGOS CON 2 TUERCAS ZINC. 1 3/8 X 255 MM | 60 | u | 13 | 780
+Junta RF Hierro maleable 2" | 6 | u | 8 | 48
+Junta RF Hierro maleable 8" | 3 | u | 10 | 30
+Junta RF Hierro maleable 4" | 8 | u | 6 | 48
+WELDOLET 1½" X 20 A105 SCH160 | 1 | u | 7 | 7
+WELDOLET 2" X 10 A105 SCH160 | 1 | u | 7 | 7
+WELDOLET 2" X 20 A105 SCH160 | 1 | u | 7 | 7
+WELDOLET 4" X 16 A105 SCH120 | 1 | u | 7 | 7
+WELDOLET 4" X 20 A105 SCH120 | 1 | u | 7 | 7
+ABRAZADERA U-BOLT pesada 16" | 2 | u | 25 | 50
+ABRAZADERA U-BOLT pesada 12" | 1 | u | 18 | 18
+ABRAZADERA U-BOLT  pesada 4" | 4 | u | 10 | 40
+ESPARRAGOS CON 2 TUERCAS ZINC. 1 X 140 MM | 4 | u | 10 | 40
+HIERRO ANGULO 1½ X 1½X1/4 | 5.25 | k | 1.4 | 7.35
+31668.019
+Skid | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+UPN 160 | 590 | kgrs | 1.5 | 885
+MALLA METALICA | Malla tipo SHULMAN ROMBOIDAL 50X30. | 14 | m2 | 25 | 250 | Se considera 10 m2, precio wapp de AG Inter
+1062 | Se considera 20% de desperdicio
+Válvulas Manuales | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+VALV ESF G 12" S900 RF WCB INT 316 ASTO RPTFE CAJA | 1 | u | 11934 | 11934
+VALV ESF G 4" S900 RF WCB INT 316 ASTO RPTFE PAL | 2 | u | 1900.08 | 3800.16
+VALV ESF G 2" S900 RF WCB INT 316 ASTO RPTFE PAL | 2 | u | 926 | 1852
+VALV ESF G 1½ S900 RF WCB INT 316 ASTO RPTFE PAL | 1 | u | 740.8 | 740.8
+VALV ESF ½" 5000 WOG NPT A105 ASTO DELRIN PAL | 1 | u | 60.32 | 60.32
+TAPON LUBRICADO INV. 2 900 RF WCB INT 4140 PAL. | 1 | u | 920 | 920 | 920
+19307.28
+Instrumental | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+MANOMETRO CON GLIC Ø100 CONEX NPT 0-400 | 1 | un | 120 | 120
+VAL TSV ENT 1 1/2 Y SAL DE 2" WCB CON ORIFICIO TPO D | Válvula de seguridad x alivio #900 | 1 | Unid | 1800 | 1800 | Doma
+DETECTOR DE SCRAPER MODELO: 57-4200-00 | 1 | Unid | 4209.5 | 4209.5
+Válvula de bloqueo y purga | 1 | un | 150 | 150
+6279.5
+Mano de obra de 3ros | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+Edgardo Ledesma | Piping | 1 | un | 11500 | 11500
+Edgardo Ledesma | Skid | 590 | un | 2.8 | 1652
+13152
+Mano de obra de ITT | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD | 120
+Mov internos, PH, montaje y acond para despacho | 120 | hs | 13 | 1560
+1560
+Horas de Calidad e Ingeniería | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+Horas de Calidad | 120 | hs | 15 | 1800
+Horas de Ingeniería | 100 | hs | 15 | 1500
+3300
+Granallado y pintura | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD | Incluye el material. O Spray 20%
+Piping | 18 | m2 | 50 | 1080 | Incluye el material. O spray 30%
+Skid | 14 | m2 | 50 | 910
+1990
+Ensayos NO Destructivos | SI
+Descripción | Descripción ampliada | Cantidad | USD/un | Subt USD | 85% de la trampa 20x16
+Servicios Rx y LP | 1 | un | 2943.975 | 2943.975
+2943.975
+REPUESTOS | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+PRECOM- COM- PEM | 2 | u | 181.8 | 363.6
+2 AÑOS DE OPERACIÓN | 1 | u | 181.8 | 181.8
+545.4000000000001
+SERVICIO DE ASISTENCIA EN CAMPO | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+ASISTENCIA EN CAMPO | 1 | u | 1750 | 1750
+1750
+TRANSPORTE | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+TRANSPORTE A LOS TOLDOS II | 1 | u | 1200 | 1200
+1200
+=== hoja Lanz 12x8
+CLIENTE | Tecpetrol
+PEDIDO DE PRECIOS | Tramás lanzadoras y receptoras
+REFERENCIA | Facilidades desarrollo Centro Oeste
+PRESUPUESTO | solicitado por R Alvarez
+ÍTEM | 1
+NOMBRE | Trampa lanzadora 12" x 8"
+CANTIDAD | 1
+FECHA RECEPCION PED COTIZACION | 2026-06-26 00:00:00
+FECHA DE VENCIMIENTO DE COTIZACION | 2026-07-15 00:00:00
+PLANO / ER | ACO-CNV-GENTIP-M-PL-001 (típico Trampa Lanzadora y Receptora)
+Detalle | Cantidad | Costo Unitario | Factor de Rentabilidad | Precio de Venta Unitario | Precio de Venta unitario | Margen de ganancia | Precio de venta total
+Unidad | U$S | U$S | U$S | %
+Materiales, MO y SVC | 1 | 47768.167 | 1.35 | 64487.02545000001 | 0.25925925925925936
+Válvulas Taval | 1 | 8791.08 | 1 | 8791.08 | 0
+Repuestos PEM y 2 años | 1 | 372.3 | 1.35 | 502.6050000000001 | 0.25925925925925936
+Transporte | 1 | 1200 | 1.35 | 1620 | 0.25925925925925924
+Seguro de caución | 1 | 186.73214000000002 | 3 | 560.19642 | 0.6666666666666666
+Total | 58318.279140000006 | 75960.90686999999 | 75960.90686999999
+Total U$D | 75960.90686999999
+Plazo de entrega :
+Entrega: EXW, ITT SA, Av. 12 de Octubre 4004, Quilmes Oeste, AMBA.
+MATERIA PRIMA Y MATERIALES
+Recipiente | NO
+Piping | SI
+Skid | SI
+Plataforma / escaleras | NO
+Válvulas manuales | SI
+Instrumental | SI
+Instalación eléctrica | NO
+Aislación | NO
+Tracing eléctrico | NO
+Mano de obra de 3ros | SI
+Mano de obra ITT | SI | Movimientos internos, PH, armado final
+Horas de Calidad e Ingeniería | SI
+Granallado y pintura | SI
+Ensayos no destructivos | SI
+Embalaje | NO
+Transporte a destino final | NO
+Seguro de Caución | SI
+Material principal: | Tubo S/C ASTM A106 GrB, Accesorios ASTM A234-wpb, bridas ASTM A105, valvulas esféricas TAVAL.
+END | 100% Rx, y donde no se pueda Rx se harán LP
+Piping | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD | Posición
+BRIDA WELDING NECK 4 900 RF ASTM A105 SchXS | 5 | u | 126.06 | 630.3 | Francovigh
+BRIDA WELDING NECK 8" 900 RF WPHY F52 Sch60 | 1 | u | 461.92 | 461.92 | Francovigh | 60 días
+BRIDA WELDING NECK 2 900 RF A105 Sch160 | 17 | u | 65.2 | 1108.4 | Francovigh | 60 días
+BRIDA WELDING NECK 1½ 900 RF A105 Sch160 | 1 | u | 40.57 | 40.57 | Francovigh | 60 días
+BRIDA WELDING NECK 2" 150 RF A105 SchSTD | 1 | u | 14.32 | 14.32 | Renard
+CAÑO S/C 12" API 5L Gr x52 | 3.8 | m | 690 | 2622 | E Montes | debería contemplar 1 tira de 12 mtrs?
+CAÑO S/C 6" A106 Gr b, XS | 4.5 | m | 90.7 | 408.15000000000003 | Renard | Debería considerar 1 tira de 12,8 m?
+CAÑO S/C 8" API 5L Gr x52 | 1.1 | m | 147 | E Montes | debería contemplar 1 tira de 12 mtrs?
+CAÑO S/C 2" A106 Gr b, sch160 | 7 | m | 24.67 | 172.69 | Renard | Debería considerar 1 tira de 12,8 m?
+CAÑO S/C 2" A106 Gr b, sch STD | 2 | m | 12.1 | 24.2 | Renard | Debería considerar 1 tira de 12,8 m?
+CAÑO S/C 1½" A106 Gr b | 0.1 | m | 24.67 | 2.4670000000000005
+CODO RADIO 90º 2 BW A 234 WPB, sch160 | 3 | u | 76.95 | 230.85000000000002 | Cintolo
+CODO RADIO LARGO 90º  4" BW SCH XS A 234 WPB | 1 | u | 41.41 | 41.41
+REDUCCION EXCENTRICA 12X8 BW SCH 40 WPHY F52 | 1 | u | 1549 | 1549 | Cintolo | 30 días
+TAPA CIERRE RAPIDO MOD SYPRIS TOOLS | 1 | u | 11001 | 11001 | 9642 | 1359
+TEE 2" BW WPB SCH160 | 3 | u | 143.93 | 431.79 | Cintolo
+WELDOLET 2" X 20 A105 | 3 | u | 7 | 21 | Estimado base Duralitte
+WELDOLET 2" X 16 A105 | 1 | u | 7 | 7 | Estimado base Duralitte
+WELDOLET 1½" X 20 A105 | 1 | u | 7 | 7 | Estimado base Duralitte
+WELDOLET 2" X 10 A105 | 1 | u | 7 | 7 | Estimado base Duralitte
+JUNTA RF 2" hierro maleable | 1 | u | 8 | 8 | Estimado MS Juntas | REPUESTOS | 124.10000000000001
+JUNTA RF 8" hierro maleable | 1 | u | 10 | 10 | Estimado MS Juntas
+JUNTA RF 12" hierro maleable | 1 | u | 15 | 15 | Estimado MS Juntas
+ESPARRAGOS CON 2 TUERCAS ZINC. 7/8 X 145MM | 68 | u | 8 | 544
+ESPARRAGOS CON 2 TUERCAS ZINC. 1 3/8 X 235 MM | 48 | u | 13 | 624
+ESPARRAGOS CON 2 TUERCAS ZINC. 1  X 140 MM | 4 | u | 10 | 40
+HIERRO ANGULO 1½ X 1½X1/4 | 5.25 | k | 1.4 | 8.399999999999999
+ABRAZADERA U-BOLT pesada 12" | 2 | u | 18 | 36 | Estimado
+ABRAZADERA U-BOLT pesada 8" | 1 | u | 13 | 13 | Estimado
+ABRAZADERA U-BOLT pesada 2" | 3 | u | 4 | 12 | Estimado
+20091.467
+Skid | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+UPN 160 | 470 | kgrs | 1.5 | 705
+MALLA METALICA | Malla tipo SHULMAN ROMBOIDAL 50X30. | 8.5 | m2 | 25 | 250 | Se considera 10 m2, precio wapp de AG Inter
+1146 | Se considera 20% de desperdicio
+Válvulas Manuales | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+VALV ESF G 6" S900 RF WCB INT 316 ASTO RPTFE CAJA | 1 | u | 3365.96 | 3365.96
+VALV ESF G 2" S900 RF WCB INT 316 ASTO RPTFE PAL | 4 | u | 926 | 3704
+VALV ESF G 1½ S900 RF WCB INT 316 ASTO RPTFE PAL | 1 | u | 740.8 | 740.8
+VALV ESF ½" 5000 WOG NPT A105 ASTO DELRIN PAL | 1 | u | 60.32 | 60.32
+TAPON LUBRICADO INV. 2 900 RF WCB INT 4140 PAL. | 1 | u | 920 | 920 | 920
+8791.08
+Instrumental | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+MANOMETRO CON GLIC Ø100 CONEX NPT 0-400 | 1 | un | 120 | 120
+VAL TSV ENT 1 1/2 Y SAL DE 2" WCB CON ORIFICIO TPO D | Válvula de seguridad x alivio #900 | 1 | Unid | 1800 | 1800 | Doma
+DETECTOR DE SCRAPER MODELO: 57-4200-00 | 1 | Unid | 4209.5 | 4209.5
+Válvula de bloqueo y purga | 1 | un | 150 | 150
+6279.5
+Mano de obra de 3ros | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+Edgardo Ledesma | Piping | 1 | un | 10300 | 10300
+Edgardo Ledesma | Skid | 470 | k | 2.8 | 1316
+11616
+Mano de obra de ITT | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD | 90
+Mov internos, PH, montaje y acond para despacho | 90 | hs | 13 | 1170
+1170
+Horas de Calidad e Ingeniería | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+Horas de Calidad | 120 | hs | 15 | 1800
+Horas de Ingeniería | 100 | hs | 15 | 1500
+3300
+Granallado y pintura | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD | Incluye el material. O Spray 20%
+Piping | 21 | m2 | 50 | 1260 | Incluye el material. O spray 30%
+Skid | 14 | m2 | 50 | 910
+2170
+Ensayos NO Destructivos | SI
+Descripción | Descripción ampliada | Cantidad | USD/un | Subt USD | 80% de la tampa de 16x12
+Servicios Rx y LP | 1 | un | 1995.2 | 1995.2
+1995.2
+REPUESTOS | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+PRECOM- COM- PEM | 2 | u | 124.10000000000001 | 248.20000000000002
+2 AÑOS DE OPERACIÓN | 1 | u | 124.10000000000001 | 124.10000000000001
+372.3
+SERVICIO DE ASISTENCIA EN CAMPO | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+ASISTENCIA EN CAMPO | 1 | u | 1750 | 1750
+1750
+TRANSPORTE | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+TRANSPORTE A LOS TOLDOS II | 1 | u | 1200 | 1200
+1200
+=== hoja Rec 12x8
+CLIENTE | Tecpetrol
+PEDIDO DE PRECIOS | Tramás lanzadoras y receptoras
+REFERENCIA | Facilidades desarrollo Centro Oeste
+PRESUPUESTO | solicitado por R Alvarez
+ÍTEM | 1
+NOMBRE | Trampa receptora 12" x 8"
+CANTIDAD | 1
+FECHA RECEPCION PED COTIZACION | 2026-06-26 00:00:00
+FECHA DE VENCIMIENTO DE COTIZACION | 2026-07-15 00:00:00
+PLANO / ER | ACO-CNV-GENTIP-M-PL-001 (típico Trampa Lanzadora y Receptora)
+Detalle | Cantidad | Costo Unitario | Factor de Rentabilidad | Precio de Venta Unitario | Precio de Venta unitario | Margen de ganancia | Precio de venta total
+Unidad | U$S | U$S | U$S | %
+Materiales, MO y SVC | 1 | 53548.742 | 1.35 | 72290.8017 | 0.25925925925925924
+Válvulas Taval | 1 | 10739.239999999998 | 1 | 10739.239999999998 | 0
+Repuestos PEM y 2 años | 1 | 552.6 | 1.35 | 746.0100000000001 | 0.25925925925925936
+Transporte | 1 | 1200 | 1.35 | 1620 | 0.25925925925925924
+Seguro de caución | 1 | 165.65888 | 3 | 496.97664000000003 | 0.6666666666666666
+Total | 66206.24088 | 85893.02833999999 | 85893.02833999999
+Total U$D | 85893.02833999999
+Plazo de entrega :
+Entrega: EXW, ITT SA, Av. 12 de Octubre 4004, Quilmes Oeste, AMBA.
+MATERIA PRIMA Y MATERIALES
+Recipiente | NO
+Piping | SI
+Skid | SI
+Plataforma / escaleras | NO
+Válvulas manuales | SI
+Instrumental | SI
+Instalación eléctrica | NO
+Aislación | NO
+Tracing eléctrico | NO
+Mano de obra de 3ros | SI
+Mano de obra ITT | SI | Movimientos internos, PH, armado final
+Horas de Calidad e Ingeniería | SI
+Granallado y pintura | SI
+Ensayos no destructivos | SI
+Embalaje | NO
+Transporte a destino final | NO
+Seguro de Caución | SI
+Material principal: | Tubo S/C ASTM A106 GrB, Accesorios ASTM A234-wpb, bridas ASTM A105, valvulas esféricas TAVAL.
+END | 100% Rx, y donde no se pueda Rx se harán LP
+Piping | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+BRIDA WELDING NECK 4" 900 RF A105 Sch120 | 5 | u | 126.06 | 630.3 | Francovigh | 60 días
+BRIDA WELDING NECK 8" 900 RF WPHY F65 Sch60 | 1 | u | 461.92 | 461.92 | Francovigh | 60 días
+BRIDA WELDING NECK 4" 900 RF A105 Sch120 | 8 | u | 126.06 | 1008.48 | Francovigh | 60 días
+BRIDA WELDING NECK 2 900 RF A105 Sch160 | 8 | u | 65.2 | 521.6 | Francovigh | 60 días
+BRIDA WELDING NECK 1½ 900 RF A105 Sch160 | 1 | u | 40.57 | 40.57 | Francovigh | 60 días
+CAÑO S/C 12" API 5L Gr x52, esp 5/8" | 4.8 | m | 690 | 3312 | E Montes | debería contemplar 1 tira de 12 mtrs?
+CAÑO S/C 8" API 5L Gr x52, , esp 5/8" | 3.2 | m | 147 | 470.40000000000003 | E Montes | debería contemplar 1 tira de 12 mtrs?
+CAÑO S/C 8" API 5L Gr x52, esp XS | 5.9 | m | 147 | 867.3000000000001 | E Montes | debería contemplar 1 tira de 12 mtrs?
+CAÑO S/C 4" A106 Gr b, sch120 | 8.5 | m | 60.37 | 513.145 | Renard | Debería considerar 1 tira de 12,8 m?
+CAÑO S/C 2" A106 Gr b, sch160 | 3 | m | 24.67 | 74.01
+CAÑO S/C 2" A106 Gr b, esp std | 2 | m | 12.1 | 24.2
+CAÑO S/C 1½" A106 Gr b, sch160 | 0.1 | m | 24.67 | 2.4670000000000005
+CODO RADIO C 90º 2 BW A 234 WPB, sch120 | 4 | u | 68.5 | 274 | Cintolo estimado
+CODO RADIO C 90º 2 BW A 234 WPB, sch160 | 4 | u | 76.95 | 307.8 | Cintolo
+CODO RADIO LARGO 90º 6 BW SCH XS WPB | 1 | u | 129.1 | 129.1
+CODO RADIO C 90º 2 BW A 234 WPB, sch40 | 1 | u | 12.78 | 12.78
+NIPLE ½ NPT/BW A106 SCH 160 L:100 | 1 | u | 10 | 10 | Estimado
+REDUCCION EXCENTRICA 20X16 BW SCH 40 WPB | 1 | u | 1900 | 1900 | Cintolo estimado
+TAPA CIERRE RAPIDO MOD SYPRIS TOOLS/o similar 12" | 1 | u | 11001 | 11001 | Sypris
+TEE REDUCCION 4X2 BW WPB SCH 160 | 2 | u | 546.54 | 1093.08 | Cintolo
+TEE 4" BW WPB SCH120 | 2 | u | 329.77 | 659.54 | Cintolo
+WELDOLET ½" X 20 A105 | 1 | u | 7 | 7
+ESPARRAGOS CON 2 TUERCAS ZINC. 7/8 X 145MM | 48 | u | 8 | 384 | REPUESTOS | 184.20000000000002
+ESPARRAGOS CON 2 TUERCAS ZINC. 1 1/8 X 170 MM | 48 | u | 11 | 528
+ESPARRAGOS CON 2 TUERCAS ZINC. 1 3/8 X 255 MM | 60 | u | 13 | 780
+JUNTA RF hierro maleable 2" | 6 | u | 8 | 48
+JUNTA RF hierro maleable 6" | 3 | u | 10 | 30
+JUNTA RF hierro maleable 4" | 8 | u | 9 | 72
+WELDOLET 1½" X 20 A105 SCH160 | 1 | u | 7 | 7
+WELDOLET 2" X 10 A105 SCH160 | 1 | u | 7 | 7
+WELDOLET 2" X 20 A105 SCH160 | 1 | u | 7 | 7
+WELDOLET 4" X 16 A105 SCH120 | 1 | u | 7 | 7
+WELDOLET 4" X 20 A105 SCH120 | 1 | u | 7 | 7
+ABRAZADERA U-BOLT pesada 12" | 2 | u | 18 | 36
+ABRAZADERA U-BOLT pesada 8" | 1 | u | 13 | 13
+ABRAZADERA U-BOLT pesada 2" | 4 | u | 4 | 16
+Espárrago completo 1 X 140 MM | 4 | u | 10 | 40
+Hierro ánguulo 1½ X 1½X1/4 | 5.25 | k | 1.4 | 7.35
+25310.042
+Skid | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+UPN 160 | 590 | kgrs | 1.5 | 885
+MALLA METALICA | Malla tipo SHULMAN ROMBOIDAL 50X30. | 14 | m2 | 25 | 250 | Se considera 10 m2, precio wapp de AG Inter
+1062 | Se considera 20% de desperdicio
+Válvulas Manuales | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+VALV ESF G 6" S900 RF WCB INT 316 ASTO RPTFE CAJA | 1 | u | 3365.96 | 3365.96
+VALV ESF G 4" S900 RF WCB INT 316 ASTO RPTFE PAL | 2 | u | 1900.08 | 3800.16
+VALV ESF G 2" S900 RF WCB INT 316 ASTO RPTFE PAL | 2 | u | 926 | 1852
+VALV ESF G 1½ S900 RF WCB INT 316 ASTO RPTFE PAL | 1 | u | 740.8 | 740.8
+VALV ESF ½" 5000 WOG NPT A105 ASTO DELRIN PAL | 1 | u | 60.32 | 60.32
+TAPON LUBRICADO INV. 2 900 RF WCB INT 4140 PAL. | 1 | u | 920 | 920 | 920
+10739.239999999998
+Instrumental | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+MANOMETRO CON GLIC Ø100 CONEX NPT 0-400 | 1 | un | 120 | 120
+VAL TSV ENT 1 1/2 Y SAL DE 2" WCB CON ORIFICIO TPO D | Válvula de seguridad x alivio #900 | 1 | Unid | 1800 | 1800 | Doma
+DETECTOR DE SCRAPER MODELO: 57-4200-00 | 1 | Unid | 4209.5 | 4209.5
+Válvula de bloqueo y purga | 1 | un | 150 | 150
+6279.5
+Mano de obra de 3ros | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+Edgardo Ledesma | Piping | 1 | un | 10300 | 10300
+Edgardo Ledesma | Skid | 590 | k | 2.8 | 1652
+11952
+Mano de obra de ITT | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD | 100
+Mov internos, PH, montaje y acond para despacho | 100 | hs | 13 | 1300
+1300
+Horas de Calidad e Ingeniería | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+Horas de Calidad | 120 | hs | 15 | 1800
+Horas de Ingeniería | 100 | hs | 15 | 1500
+3300
+Granallado y pintura | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD | Incluye el material. O Spray 20%
+Piping | 18 | m2 | 50 | 1080 | Incluye el material. O spray 30%
+Skid | 14 | m2 | 50 | 910
+1990
+Ensayos NO Destructivos | SI
+Descripción | Descripción ampliada | Cantidad | USD/un | Subt USD | 80% de la tampa de 16x12
+Servicios Rx y LP | 1 | un | 2355.2000000000003 | 2355.2000000000003
+2355.2000000000003
+REPUESTOS | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+PRECOM- COM- PEM | 2 | u | 184.20000000000002 | 368.40000000000003
+2 AÑOS DE OPERACIÓN | 1 | u | 184.20000000000002 | 184.20000000000002
+552.6
+SERVICIO DE ASISTENCIA EN CAMPO | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+ASISTENCIA EN CAMPO | 1 | u | 1750 | 1750
+1750
+TRANSPORTE | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+TRANSPORTE A LOS TOLDOS II | 1 | u | 1200 | 1200
+1200
+=== hoja para cotizar
+Descripción | unidad | Cantidad
+BRIDA WELDING NECK 4" 900 RF A105 Sch120 | unid | 5
+BRIDA WELDING NECK 8" 900 RF WPHY F65 Sch60 | unid | 1
+BRIDA WELDING NECK 4" 900 RF A105 Sch120 | unid | 8
+BRIDA WELDING NECK 2 900 RF A105 Sch160 | unid | 8
+BRIDA WELDING NECK 1½ 900 RF A105 Sch160 | unid | 1
+BRIDA WELDING NECK 4 900 RF ASTM A105 SchXS | unid | 5
+BRIDA WELDING NECK 8" 900 RF WPHY F52 Sch60 | unid | 1
+BRIDA WELDING NECK 2 900 RF A105 Sch160 | unid | 17
+BRIDA WELDING NECK 1½ 900 RF A105 Sch160 | unid | 1
+BRIDA WELDING NECK 6" 900 RF A105 Sch120 | unid | 5
+BRIDA WELDING NECK 12" 900 RF WPHY F65 Sch60 | unid | 1
+BRIDA WELDING NECK 4" 900 RF A105 Sch120 | unid | 8
+BRIDA WELDING NECK 2 900 RF A105 Sch160 | unid | 8
+BRIDA WELDING NECK 1½ 900 RF A105 Sch160 | unid | 1
+BRIDA WELDING NECK 6 900 RF ASTM A105 SchXS | unid | 5
+BRIDA WELDING NECK 12" 900 RF WPHY F52 Sch60 | unid | 1
+BRIDA WELDING NECK 2 900 RF A105 Sch160 | unid | 17
+BRIDA WELDING NECK 1½ 900 RF A105 Sch160 | unid | 1
+BRIDA WELDING NECK 12" 900 RF WPHY F52 SchXS | unid | 5
+BRIDA WELDING NECK 16" 900 RF WPHY F65 Sch60 | unid | 1
+BRIDA WELDING NECK 4" 900 RF A105 Sch120 | unid | 8
+BRIDA WELDING NECK 2 900 RF A105 Sch160 | unid | 8
+BRIDA WELDING NECK 1½ 900 RF A105 Sch160 | unid | 1
+BRIDA WELDING NECK 10 900 RF WPHY F52 SchXS | unid | 5
+BRIDA WELDING NECK 16" 900 RF WPHY F65 Sch60 | unid | 1
+BRIDA WELDING NECK 2 900 RF A105 Sch160 | unid | 17
+BRIDA WELDING NECK 1½ 900 RF A105 Sch160 | unid | 1
+Descripción | unidad | Cantidad
+CODO RADIO C 90º 2 BW A 234 WPB, sch120 | unid | 4
+CODO RADIO C 90º 2 BW A 234 WPB, sch160 | unid | 4
+TEE 4" BW WPB SCH120 | unid | 2
+CODO RADIO 90º 2 BW A 234 WPB | unid | 3
+REDUCCION EXCENTRICA 12X8 BW SCH 40 WPHY F52 | unid | 1
+TEE 2" BW WPB SCH160 | unid | 3
+CODO RADIO C 90º 2 BW A 234 WPB, sch120 | unid | 4
+CODO RADIO C 90º 2 BW A 234 WPB, sch160 | unid | 4
+REDUCCION EXCENTRICA 16X12 BW SCH 40 WPHY F52 | unid | 1
+REDUCCION EXCENTRICA 16X12 BW SCH 40 WPHY F52 | unid | 1
+TEE 2" BW WPB SCH160 | unid | 3
+CODO RADIO C 90º 2 BW A 234 WPB, sch120 | unid | 4
+CODO RADIO C 90º 2 BW A 234 WPB, sch160 | unid | 4
+CODO RADIO LARGO 90º 12 BW SCH XS WPHY 52 | unid | 1
+TEE REDUCCION 4X2 BW WPB SCH 160 | unid | 2
+TEE 4" BW WPB SCH120 | unid | 2
+CODO RADIO 90º 2 BW A 234 WPB sch 160 | unid | 3
+REDUCCION EXCENTRICA 20X16 BW SCH 40 WPHY F65 | unid | 1
+Lanz 20x16
+TAPON LUBRICADO INV. 2 900 RF WCB INT 4140 PAL. | 1
+VALV ESF G 10" S900 RF WCB INT 316 ASTO RPTFE CAJA | 1
+VALV ESF G 2" S900 RF WCB INT 316 ASTO RPTFE PAL | 4
+VALV ESF G 1½ S900 RF WCB INT 316 ASTO RPTFE PAL | 1
+VALV ESF ½" 5000 WOG NPT A105 ASTO DELRIN PAL | 1
+recep 20x16
+VALV ESF G 12" S900 RF WCB INT 316 ASTO RPTFE CAJA | 1
+VALV ESF G 4" S900 RF WCB INT 316 ASTO RPTFE PAL | 2
+VALV ESF G 2" S900 RF WCB INT 316 ASTO RPTFE PAL | 2
+VALV ESF G 1½ S900 RF WCB INT 316 ASTO RPTFE PAL | 1
+VALV ESF ½" 5000 WOG NPT A105 ASTO DELRIN PAL | 1
+TAPON LUBRICADO INV. 2 900 RF WCB INT 4140 PAL. | 1
+Lanz 16x12
+VALV ESF G 6" S900 RF WCB INT 316 ASTO RPTFE CAJA | 1
+VALV ESF G 2" S900 RF WCB INT 316 ASTO RPTFE PAL | 4
+VALV ESF G 1½ S900 RF WCB INT 316 ASTO RPTFE PAL | 1
+VALV ESF ½" 5000 WOG NPT A105 ASTO DELRIN PAL | 1
+TAPON LUBRICADO INV. 2 900 RF WCB INT 4140 PAL. | 1
+Recep 16x12
+VALV ESF G 12" S900 RF WCB INT 316 ASTO RPTFE CAJA | 1
+VALV ESF G 4" S900 RF WCB INT 316 ASTO RPTFE PAL | 2
+VALV ESF G 2" S900 RF WCB INT 316 ASTO RPTFE PAL | 2
+VALV ESF G 1½ S900 RF WCB INT 316 ASTO RPTFE PAL | 1
+VALV ESF ½" 5000 WOG NPT A105 ASTO DELRIN PAL | 1
+TAPON LUBRICADO INV. 2 900 RF WCB INT 4140 PAL. | 1
+Lanz 12x8
+VALV ESF G 6" S900 RF WCB INT 316 ASTO RPTFE CAJA | 1
+VALV ESF G 2" S900 RF WCB INT 316 ASTO RPTFE PAL | 4
+VALV ESF G 1½ S900 RF WCB INT 316 ASTO RPTFE PAL | 1
+VALV ESF ½" 5000 WOG NPT A105 ASTO DELRIN PAL | 1
+TAPON LUBRICADO INV. 2 900 RF WCB INT 4140 PAL. | 1
+Recep 12x8
+VALV ESF G 6" S900 RF WCB INT 316 ASTO RPTFE CAJA | 1
+VALV ESF G 4" S900 RF WCB INT 316 ASTO RPTFE PAL | 2
+VALV ESF G 2" S900 RF WCB INT 316 ASTO RPTFE PAL | 2
+VALV ESF G 1½ S900 RF WCB INT 316 ASTO RPTFE PAL | 1
+VALV ESF ½" 5000 WOG NPT A105 ASTO DELRIN PAL | 1
+TAPON LUBRICADO INV. 2 900 RF WCB INT 4140 PAL. | 1
+Descripción | unidad | Cantidad
+CAÑO S/C 20" API 5L Gr x65, esp 5/8" | m | 12
+CAÑO S/C 20" API 5L Gr x65, esp 5/8" | m | 12
+CAÑO S/C 16" API 5L Gr x65, esp 5/8" | m | 12
+CAÑO S/C 12" API 5L Gr x52, esp 5/8" | m | 12
+CAÑO S/C 16" API 5L Gr x65, , esp 5/8" | m | 12
+CAÑO S/C 12" API 5L Gr x52, esp 5/8" | m | 12
+CAÑO S/C 8" API 5L Gr x52, , esp 5/8" | m | 12
+Linea | ITEM | CANT | UM
+1 | TRAMPA LANZADORA 16" (p/GSD) | 1.00 | Servicio
+2 | TRAMPA RECEPTORA 16" (p/GSD) | 1.00 | Servicio
+3 | TRAMPA LANZADORA 12" (p/GSD) | 1.00 | Servicio
+4 | TRAMPA RECEPTORA 12" (p/GSD) | 1.00 | Servicio
+5 | TRAMPA LANZADORA 8" (p/GSD) | 1.00 | Servicio
+6 | TRAMPA LANZADORA 8" (p/GSD) | 1.00 | Servicio
+|
+Linea | ITEM | CANT | UM
+1 | TRAMPA LANZADORA 16" (p/GSD) | 1.00 | MO
+2 | TRAMPA RECEPTORA 16" (p/GSD) | 1.00 | Servicio
+3 | TRAMPA LANZADORA 12" (p/GSD) | 1.00 | Servicio
+4 | TRAMPA RECEPTORA 12" (p/GSD) | 1.00 | Servicio
+5 | TRAMPA LANZADORA 8" (p/GSD) | 1.00 | Servicio
+6 | TRAMPA LANZADORA 8" (p/GSD) | 1.00 | Servicio

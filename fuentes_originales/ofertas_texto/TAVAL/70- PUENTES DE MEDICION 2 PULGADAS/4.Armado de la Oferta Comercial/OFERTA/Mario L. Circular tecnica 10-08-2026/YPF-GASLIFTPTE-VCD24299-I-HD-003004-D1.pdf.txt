@@ -1,0 +1,2406 @@
+--- página 1 ---
+ Proyecto: 
+ Fase: 
+1
+de
+18
+D0
+RVM
+GZG
+GMA
+EMISION FINAL
+12/9/2025
+APROBÓ
+DA
+17/7/2025
+EMISIÓN PARA APROBACIÓN
+GMA
+GZG
+RVM
+REVISIÓN
+FECHA
+DESCRIPCIÓN
+PREPARÓ
+REVISÓ
+Hoja De Datos Instrumentos - Paquetizado Puente De 
+Inyección Y Regulación - Locación (Tipo 1)
+RVM
+D1
+9/12/2025
+EMISION FINAL - EMISIÓN PARA LIBRO FINAL
+GC
+GZG
+Página:
+IB STD GAS LIFT
+Código YPF:
+YPF-GASLIFTPTE-VCD24299-I-HD-003004
+Código Contratista
+4221-30-3010-IG-IN-HD-001
+Fecha de emisión: 
+9/12/2025
+DEFINICIÓN
+
+--- página 2 ---
+ Proyecto: 
+ Fase: 
+2
+de
+18
+7
+TRANSMISORES DE TEMPERATURA
+TAG
+P&ID
+SERVICIO
+LINEA / EQUIPO
+HOJA
+TE-XXXA
+YPF-GASLIFTLOC1-VCD24299-R-PI-003012-
+H2
+Temperatura Inyeccion de gas a pozo
+2"-SG-XXXX-CA31-BB
+2"-SG-XXXX-CA31-BB
+8
+TERMOELEMENTO
+TAG
+P&ID
+SERVICIO
+LINEA / EQUIPO
+HOJA
+TRANSMISORES DE PRESIÓN
+PIT-XXXA
+YPF-GASLIFTLOC1-VCD24299-R-PI-003012-
+H2
+Presion Inyección de gas a pozo
+2"-SG-XXXX-CA31-BB
+6
+TAG
+P&ID
+SERVICIO
+LINEA / EQUIPO
+HOJA
+9
+TE-XXXC
+YPF-GASLIFTLOC1-VCD24299-R-PI-003012-
+H2
+Temperatura Inyeccion de gas a pozo
+TIT-XXXC
+YPF-GASLIFTLOC1-VCD24299-R-PI-003012-
+H2
+Temperatura Inyeccion de gas a pozo
+2"-SG-XXXX-CA31-BB
+PI-XXXD
+YPF-GASLIFTLOC1-VCD24299-R-PI-003012-
+H2
+Presion Inyección de gas a pozo
+2"-SG-XXXX-CA31-BB
+5
+ÍNDICE
+MANÓMETROS
+TAG
+P&ID
+SERVICIO
+LINEA / EQUIPO
+HOJA
+Código YPF:
+IB STD GAS LIFT
+YPF-GASLIFTPTE-VCD24299-I-HD-003004
+Código Contratista
+4221-30-3010-IG-IN-HD-001
+Fecha de emisión: 
+9/12/2025
+DEFINICIÓN
+Página:
+
+--- página 3 ---
+ Proyecto: 
+ Fase: 
+3
+de
+18
+FQIT-XXXA
+YPF-GASLIFTLOC1-VCD24299-R-PI-003012-
+H2
+Caudal Inyeccion de gas a pozo
+2"-SG-XXXX-CA31-BB
+10
+SERVICIO
+LINEA / EQUIPO
+HOJA
+FV-XXXB 
+(ACTIUADOR 
+ELECTRICO)
+YPF-GASLIFTLOC1-VCD24299-R-PI-003012-
+H2
+-
+2"-SG-XXXX-CA31-BB
+18
+YPF-GASLIFTLOC1-VCD24299-R-PI-003012-
+H2
+Regulación Caudal Inyeccion de gas a pozo
+2"-SG-XXXX-CA31-BB
+FV-XXXB
+14 a 17
+ACTUADOR
+TAG
+P&ID
+ÍNDICE
+Código YPF:
+IB STD GAS LIFT
+YPF-GASLIFTPTE-VCD24299-I-HD-003004
+Código Contratista
+4221-30-3010-IG-IN-HD-001
+Fecha de emisión: 
+9/12/2025
+DEFINICIÓN
+Página:
+CAUDALIMETRO / ELEMENTO PRIMARIO TIPO V-CONE
+TAG
+P&ID
+SERVICIO
+LINEA / EQUIPO
+HOJA
+TAG
+P&ID
+SERVICIO
+LINEA / EQUIPO
+FE-XXXA
+YPF-GASLIFTLOC1-VCD24299-R-PI-003012-
+H2
+Caudal Inyeccion de gas a pozo
+2"-SG-XXXX-CA31-BB
+VALVULAS DE CONTROL
+HOJA
+ 11 a 13
+
+--- página 4 ---
+ Proyecto: 
+ Fase: 
+4
+de
+18
+DOCUMENTOS DE REFERENCIA
+10762-ES-21030700-110A
+J0100 Ingeniería de Instrumentación
+11083-ES-21030700-110A
+J0300 Medida de Presion (Parte General)
+11084-ES-21030700-110A
+J0301 Manometros y Manometros Diferenciales
+10864-ES-21030700-110A
+BASES DE DISEÑO
+DIAGRAMA DE CAÑERÍAS E INSTRUMENTOS - PAQUETIZADO LOCACION (TIPO 
+1)
+Código YPF:
+IB STD GAS LIFT
+YPF-GASLIFTPTE-VCD24299-I-HD-003004
+Código Contratista
+4221-30-3010-IG-IN-HD-001
+Fecha de emisión: 
+9/12/2025
+DEFINICIÓN
+Página:
+ÍNDICE
+ESPECIFICACIONES DE DISEÑO DE YPF
+J0500 Medida de Temperatura (Parte General)
+11085-ES-21030700-110A
+J0304 Transmisores de Presion
+CÓDIGO DE NORMATIVA
+TÍTULO DE NORMATIVA
+10865-ES-21030700-110A
+J0501 Termovainas Termoelementos y Termometros de Dial
+10867-ES-21030700-110A
+J0600 Valvulas de Control Regulatorio
+CODIGO DE DOCUMENTO
+TITULO DE DOCUMENTO
+YPF-GASLIFTGRAL-VCD24299-G-BD-003001
+10898-ES-21030700-110A
+L0200 Clases de Cañerías para Plantas
+YPF-GASLIFTLOC1-VCD24299-R-PI-003012
+
+--- página 5 ---
+NO
+NO
+NO
+NO
+X
+1.-
+2.-
+3.-
+4.-
+5.-
+6.-
+Nº: HD-J-0301
+Hoja 5 de 18
+HOJA DE DATOS MANÓMETRO
+El manómetro deberá ser suministrado con una válvula integral de bloqueo y purga, conexión a proceso 1/2" NPT-M. El material del cuerpo será de AISI
+316, y el de la empaquetadura PTFE.
+El manómetro se suministrará con una placa de acero inoxidable grabada con el tag del instrumento.
+Las escalas serán de aluminio, con fondo blanco y caracteres impresos en negro cubriendo 270º.
+El diseño del mecanismo de transmisión del manómetro será compacto, con todas sus partes metálicas (AISI 316 mínimo) y endurecidas para evitar su
+desgaste. Deben garantizar 1000000 de ciclos (variaciones en la medición de presión).
+A verificar/definir por el proveedor.
+El manómetro tendrán tabique de separación entre el elemento sensible y el dial (“solid front”), llevará la marca “S” dentro de un círculo seguida de la
+leyenda “EN-837”, el visor será de vidrio laminado o material que rompa sin astillarse y el fondo será proyectable.
+ANEXO
+ESP
+Nº DE PLANO
+REV
+J
+YPF-GASLIFTPTE-VCD24299-I-HD-003004
+D1
+PROYECTO
+VCD 24299
+REV
+CONTRATISTA
+DA
+EMISIÓN PARA APROBACIÓN
+17/7/2025
+GMA
+RVM
+AESA
+D0
+EMISION FINAL
+12/09/25
+GMA
+RVM
+APROBADO
+UNIDAD DE NEGOCIO
+UPSTREAM NOC
+FICHERO PLANO
+D1
+EMISION FINAL - EMISIÓN PARA LIBRO FINAL
+09/12/25
+GMA
+RVM
+REALIZADO
+DESCRIPCION
+FECHA
+REAL.
+APR.
+VºBº CLIENTE
+NOTAS GENERALES
+MODELO SELLOS
+NA
+FABRICANTE
+ASHCROFT o WEISZ o similar de igual calidad
+---
+SUMINISTRADOR
+NA
+DATOS DEL PRODUCTO
+DATOS DE COMPRA
+MODELO MANOM.
+Por Fabricante
+REQUISICION
+NA
+- - -
+NORMA EEx
+- - -
+L / D CAPILAR (ES)
+- - -
+ARO DE MONTAJE
+NO
+FLUIDO RELLENO
+- - -
+UPSTREAM
+ALETAS REFRIGER.
+NO
+MTL Lado mojado
+- - -
+CONEX. ELECTRICA
+- - -
+HOJA DE DATOS
+DIAMETRO CAJA
+100 mm
+SOLID FRONT
+SI (6)
+CIERRE CAJA
+Aro de Cierre Tipo Bayoneta
+FLUIDO DE RELLENO
+No
+ACCESORIOS Y DATOS DE COMPRA
+MTL Lado seco
+- - -
+CLASIFIC. DE AREA
+- - -
+LIMITADOR PRESION
+NO
+TIPO CAPILAR (ES)
+ACCESORIOS DE MONTAJE
+SELLOS SEPARADORES
+CONTACTOS DE ALARMA
+AMORTIGUADOR DE 
+PULSACIONES
+NO
+TIPO DE SELLOS
+- - -
+TIPO CONTACTOS
+- - -
+CONEX. PROCESO
+- - -
+CANTIDAD
+- - -
+MTL VISOR
+Cristal de seguridad, doble, laminado e inastillable
+DISCO SEGURIDAD
+SI
+TIPO SENSOR
+Tubo en Helice
+PRECISION
+Clase 1
+MTL SENSOR
+AISI 316 (4)
+PROT. AMB.
+IP 65
+CONEX. PROCESO
+1/2" NPT-M (INFERIOR)
+P. ABSOLUTA
+PRESION-VACIO
+ESCALA DE MEDIDA
+0 - 100 kg/cm2g
+MTL CAJA
+AISI 304
+SOBREPRESION
+130%
+TEMPERATURA
+3,6-37,3
+°C
+Rev. 00
+SOBREPRESION (1)
+---
+kg/cm²g
+MANOMETRO (CONVENCIONAL O DIFERENCIAL)
+File: HD-J0301-01.xlsx
+JULIO 2016
+DENSIDAD
+96-110
+kg/m³
+PULSACIONES
+-
+VISCOSIDAD
+0,015
+cP
+OTROS DATOS SOBRE EL 
+FLUIDO
+TIPO DE MEDIDA
+P. RELATIVA
+P. DIFERENCIAL
+CARACTERISTICAS
+CON SUCIEDAD
+CORROSIVO
+PRESION ESTATICA
+---
+70
+---
+Kg/cm²g
+SOLIDIFICABLE
+TOXICO / LETAL
+PRESION DIFERENCIAL
+---
+---
+---
+---
+DIAGRAMA
+YPF-GASLIFTLOC1-VCD24299-R-PI-003012-H2
+NOR
+MAX
+UNIDADES
+HOJA DE DATOS MANÓMETROS
+Apr:   
+DATOS GENERALES
+TAG
+PI-XXXD
+SERVICIO
+Presion Inyección de gas a pozo
+DATOS DE PROCESO
+Rea: 
+FLUIDO Y FASE
+Hidrocarburo
+Gas/Liquido
+MIN
+Rev. 
+LINEA / EQUIPO
+2"-SG-XXXX-CA31-BB
+
+--- página 6 ---
+NO
+NO
+NO
+NO
+X
+1.-
+2.-
+3.-
+Nº: HD-J-0304
+Hoja 6 de 18
+UNIDAD DE NEGOCIO
+UPSTREAM NOC
+HOJA DE DATOS DE TRANSMISOR DE PRESION
+A verificar/definir por el proveedor.
+Debe ser provisto con manifold de bloqueo y purga #3000 1/2" R-NPT- M-H AISI 316 tipo ABAC.
+El transmisor deberá ser entregado calibrado, con certificación correspondiente y chapa de acero inoxidable con TAG de identificación.
+ESP
+Nº DE PLANO
+REV
+I
+YPF-GASLIFTPTE-VCD24299-I-HD-003004
+D1
+PROYECTO
+VCD 24299
+ANEXO
+REV
+DESCRIPCION
+FECHA
+REAL.
+APR.
+VºBº CLIENTE
+CONTRATISTA
+DA
+EMISIÓN PARA APROBACIÓN
+17/7/2025
+GMA
+RVM
+AESA
+D0
+EMISION FINAL
+12/09/25
+GMA
+RVM
+APROBADO
+FICHERO PLANO
+D1
+EMISION FINAL - EMISIÓN PARA LIBRO FINAL
+09/12/25
+GMA
+RVM
+REALIZADO
+NOTAS GENERALES
+MODELO INDICADOR
+---
+FABRICANTE
+Rosemount, Yokogawa o similar igual calidad
+MODELO SELLOS
+SUMINISTRADOR
+NA
+MODELO XMISOR
+Por Fabricante
+REQUISICION
+NA
+L / D CAPILARES
+N/A
+FLUIDO RELLENO
+N/A
+MTL. Lado seco
+N/A
+TIPO  CAPILARES
+N/A
+DATOS DEL PRODUCTO
+DATOS DE COMPRA
+ACCESORIOS Y DATOS DE COMPRA
+INDICADOR REMOTO
+SELLOS SEPARADORES
+NOTAS / ACCESORIOS
+TIPO INDICADOR
+N/A
+TIPO DE SELLOS
+N/A
+ - ACCESORIOS PARA MONTAJE SOBRE CAÑO DE
+2''
+HOJA DE DATOS
+Aluminio
+CONEX. ELECTRICA
+N/A
+CONEX. PROCESO
+N/A
+2'.
+ESCALA INDICACION
+N/A
+MTL. Lado mojado
+N/A
+A. MONTAJE
+N/A
+CONEX. PROCESO AP
+1/2" NPT-H
+PROT. EEx
+EEx-d
+CONEX. PROCESO BP
+---
+NORMA EEx
+IEC 60079
+CONFIG. MONTAJE 
+Manifold (2)
+PROT. AMB.
+IP 65
+PROTOCOLO DIGITAL
+HART
+P DISEÑO
+96,6 kg/cm2g RANGO CALIBRADO
+0-80
+MTL Tornillería
+AISI 316 
+T DISEÑO
+87,1 °C
+SEÑAL DE SALIDA
+4-20 mA
+kg/cm²g
+MTL Bridas ovales
+---
+PRECISION
+± 0.1%
+RANGO MINIMO
+(1)
+MTL Envolvente
+MTL Juntas
+PTFE
+A. MONTAJE
+Caño 2"
+RANGO MAXIMO
+(1)
+MTL Partes mojadas
+AISI 316 
+V. PURGA
+---
+LIMPIEZA ESPECIAL
+NO
+TIPO SENSOR
+PIEZORRESISTIVO
+TEST HIDROSTATICO
+SI
+TIPO DE MEDIDA
+P. RELATIVA
+P. DIFERENCIAL
+CONEX. ELECTRICA
+1/2" NPT-H
+P. ABSOLUTA
+PRESION-VACIO
+SIL (s/ IEC 61508)
+N/A
+TEMPERATURA
+4-38,5
+º C
+Rev. 00
+SOBREPRESIÓN
+---
+Kg/cm2g
+TRANSMISOR DE PRESION (ABSOLUTA / RELATIVA / DIFERENCIAL)
+File: HD-J0304-01.xlsx
+JULIO 2016
+DENSIDAD
+96-110
+kg/m³
+PULSACIONES
+NO
+VISCOSIDAD
+0,015
+cP
+OTROS DATOS SOBRE 
+EL FLUIDO
+TIPO ELECTRONICA
+Inteligente, configurable, 2 hilos
+INDICADOR INTEGRAL
+SI
+Rea: 
+FLUIDO Y FASE
+Hidrocarburo
+Gas/Liquido
+MIN
+NOR
+MAX
+UNIDADES
+---
+75,83
+Kg/cm2g
+SOLIDIFICABLE
+TOXICO / LETAL
+PRESIÓN DIFERENCIAL
+--
+--
+--
+kg/cm²g
+HOJA DE DATOS TRANSMISOR DE PRESIÓN
+DIAGRAMA
+YPF-GASLIFTLOC1-VCD24299-R-PI-003012-H2
+CLASIFIC. DE AREA
+Zona 2 Gr.IIA T3
+Apr:   
+DATOS GENERALES
+TAG
+PIT-XXXA
+SERVICIO
+Presion Inyección de gas a pozo
+Rev. 
+LINEA / EQUIPO
+2"-SG-XXXX-CA31-BB
+CARACTERÍSTICAS
+CON SUCIEDAD
+CORROSIVO
+PRESIÓN ESTÁTICA
+70,66
+DATOS DE PROCESO
+
+--- página 7 ---
+NO
+NO
+NO
+NO
+-
+X
+-
+-
+X
+-
+-
+-
+(3) A verificar o definir por el proveedor del instrumento.
+(4) Se deberá ampliar línea de 2" a 3" para la instalación del termoelemento a 90°.
+Nº: HD-J-0501
+Hoja 7 de 18
+UNIDAD DE NEGOCIO
+UPSTREAM NOC
+HOJA DE DATOS SENSOR DE TEMPERATURA Y TERMOVAINA
+Hidrocarburo
+Gas/Liquido
+ANEXO
+ESP
+YPF-GASLIFTPTE-VCD24299-I-HD-
+003004
+REV
+I
+D1
+PROYECTO
+VCD 24299
+REV
+DESCRIPCION
+FECHA
+REAL.
+APR.
+VºBº CLIENTE
+CONTRATISTA
+DA
+EMISIÓN PARA APROBACIÓN
+17/7/2025
+GMA
+RVM
+AESA
+D0
+EMISION FINAL
+12/09/25
+GMA
+RVM
+APROBADO
+NOTAS GENERALES
+(1) La certificación aportada debe ser válida para el conjunto de la sonda ensamblada, no sólo para el cabezal.
+(2) Cada instrumento se suministrará con una placa de acero inoxidable grabada con el tag del instrumento y fijada al cuello del mismo mediante cable de
+inoxidable. La placa será adecuada para al menos 16 caracteres de 5 mm de altura como mínimo, grabados también de modo indeleble.
+REALIZADO
+FICHERO PLANO
+D1
+EMISION FINAL - EMISIÓN PARA LIBRO FINAL
+09/12/25
+GMA
+RVM
+MODELO INDICADOR
+NA
+SUMINISTRADOR
+NA
+DATOS DEL PRODUCTO
+DATOS DE COMPRA
+MODELO SONDA
+Por fabricante
+REQUISICION
+NA
+--
+TUERCA UNION
+Union doble serie #3000 T diseño
+--
+MODELO CONVERT.
+NA
+FABRICANTE
+Rosemount, Yokogawa o similar igual calidad
+UPSTREAM
+CABEZAL Y UNION AL TERMOPOZO
+CONVERTIDOR DE CABEZA
+PROTECCION EEx SONDA
+MTL CABEZAL
+Aluminio fundido
+TIPO ELECTRONICA
+--
+CONJUNTO SONDA(1)
+CONEX. A NIPLE
+1/2'' NPT-M
+PROTOCOLO DIGITAL
+--
+NORMA EEx
+EEx-d
+CONEX. ELECTRICA
+1/2'' NPT-H
+SEÑAL DE SALIDA
+--
+INDICADOR REMOTO
+NA
+NIPLES ROSCADOS
+2 x 1/2'' SCH.80 X 75mm INDICADOR REMOTO
+1/2'' NPT-H / Bloques o bornes de ceramica
+EEx-d
+PROT. AMB.
+IP 65
+PROT. AMB.
+--
+CONVERTIDOR
+NA
+ACCESORIOS Y DATOS DE COMPRA
+HOJA DE DATOS
+TIPO DE SENSOR
+RTD Pt-100
+MTL FUNDA
+AISI 304 (3)
+SIMPLE / DOBLE
+Simple
+MTL AISLAMIENTO
+Oxido de magnesio (3)
+CLASE DE PRECISION
+CLASE B
+CONEX. TERMOPOZO
+1/2" NPT-M
+NORMA REFERENCIA
+IEC 60751
+MUELLE EMPUJE
+SI
+JUNTA CALIENTE
+No aplica
+DIAMETRO FUNDA
+6 mm (3)
+GALGA / Nº DE HILOS
+4 hilos
+CONEX. ELECTRICA
+File: HDJ050101.xlsx
+TIPO DE CONEXIÓN
+Bridado Tipo H
+Roscado Tipo R
+CONEX. INTERNA
+COTAS A / B
+-
+TALADRO INTERNO
+7mm
+PLANO REFERENCIA
+TI-J0501-01
+TAPON Y CADENA
+AISI 316
+1/2" NPT-H
+Soldado Tipo S
+Roscado Tipo G
+MTL TERMOPOZO
+AISI 316
+DIMENSIONES
+MODELO YPF
+H0
+MTL BRIDA
+AISI 316
+SENSOR DE TEMPERATURA
+ABRIL 2016
+PRESION ESTATICA
+70,66-75,83
+kg/cm2g
+TERMOPOZO  (3)
+Rev. 00
+TIPO DE MONTAJE
+EN LINEA (CODO)
+EN LINEA (A 90º)
+TIPO EJECUCION
+Barra Taladrada
+EN LINEA (A 45º)
+EN RECIPIENTE
+CONEX. PROCESO
+1-1/2" #600
+CRIOGENICO
+CORROSIVO
+4
+16,4
+38,5
+EROSIVO
+TOXICO / LETAL
+OTROS DATOS SOBRE 
+EL FLUIDO
+HOJA DE DATOS SENSOR DE TEMPERATURA Y TERMOVAINA
+Apr:   
+DATOS GENERALES
+TAG
+TE-XXXA
+SERVICIO
+Temperatura Inyeccion de gas a pozo
+Rev. 
+LINEA / EQUIPO
+2"-SG-XXXX-CA31-BB
+DATOS DE PROCESO
+Rea: 
+FLUIDO Y ESTADO
+TEMPERATURA (ºC)
+MINIMA
+NORMAL
+MAXIMA
+CARACTERISTICAS
+DIAGRAMA
+YPF-GASLIFTLOC1-VCD24299-R-PI-003012-H2
+CLASIFIC.  DE AREA
+ZONA 2 Gr IIA T3
+
+--- página 8 ---
+NO
+NO
+NO
+NO
+-
+X
+-
+-
+X
+-
+-
+-
+(3) A verificar o definir por el proveedor del instrumento.
+(4) Se deberá ampliar línea de 2" a 3" para la instalación del termoelemento a 90°.
+Nº: HD-J-0501
+Hoja 8 de 18
+UNIDAD DE NEGOCIO
+UPSTREAM NOC
+HOJA DE DATOS SENSOR DE TEMPERATURA Y TERMOVAINA
+HOJA DE DATOS SENSOR DE TEMPERATURA Y TERMOVAINA
+ANEXO
+ESP
+YPF-GASLIFTPTE-VCD24299-I-HD-
+003004
+REV
+I
+D1
+PROYECTO
+VCD 24299
+REV
+DESCRIPCION
+FECHA
+REAL.
+APR.
+VºBº CLIENTE
+CONTRATISTA
+DA
+EMISIÓN PARA APROBACIÓN
+17/7/2025
+GMA
+RVM
+AESA
+D0
+EMISION FINAL
+12/09/25
+GMA
+RVM
+APROBADO
+NOTAS GENERALES
+(1) La certificación aportada debe ser válida para el conjunto de la sonda ensamblada, no sólo para el cabezal.
+(2) Cada instrumento se suministrará con una placa de acero inoxidable grabada con el tag del instrumento y fijada al cuello del mismo mediante cable de
+inoxidable. La placa será adecuada para al menos 16 caracteres de 5 mm de altura como mínimo, grabados también de modo indeleble.
+REALIZADO
+FICHERO PLANO
+D1
+EMISION FINAL - EMISIÓN PARA LIBRO FINAL
+09/12/25
+GMA
+RVM
+MODELO INDICADOR
+NA
+SUMINISTRADOR
+NA
+DATOS DEL PRODUCTO
+DATOS DE COMPRA
+MODELO SONDA
+Por fabricante
+REQUISICION
+NA
+--
+TUERCA UNION
+Union doble serie #3000 T diseño
+--
+MODELO CONVERT.
+NA
+FABRICANTE
+Rosemount, Yokogawa o similar igual calidad
+UPSTREAM
+CABEZAL Y UNION AL TERMOPOZO
+CONVERTIDOR DE CABEZA
+PROTECCION EEx SONDA
+MTL CABEZAL
+Aluminio fundido
+TIPO ELECTRONICA
+--
+CONJUNTO SONDA(1)
+CONEX. A NIPLE
+1/2'' NPT-M
+PROTOCOLO DIGITAL
+--
+NORMA EEx
+EEx-d
+CONEX. ELECTRICA
+1/2'' NPT-H
+SEÑAL DE SALIDA
+--
+INDICADOR REMOTO
+NA
+NIPLES ROSCADOS
+2 x 1/2'' SCH.80 X 75mm INDICADOR REMOTO
+1/2'' NPT-H / Bloques o bornes de ceramica
+EEx-d
+PROT. AMB.
+IP 65
+PROT. AMB.
+--
+CONVERTIDOR
+NA
+ACCESORIOS Y DATOS DE COMPRA
+HOJA DE DATOS
+TIPO DE SENSOR
+RTD Pt-100
+MTL FUNDA
+AISI 304 (3)
+SIMPLE / DOBLE
+Simple
+MTL AISLAMIENTO
+Oxido de magnesio (3)
+CLASE DE PRECISION
+CLASE B
+CONEX. TERMOPOZO
+1/2" NPT-M
+NORMA REFERENCIA
+IEC 60751
+MUELLE EMPUJE
+SI
+JUNTA CALIENTE
+No aplica
+DIAMETRO FUNDA
+6 mm (3)
+GALGA / Nº DE HILOS
+4 hilos
+CONEX. ELECTRICA
+File: HDJ050101.xlsx
+TIPO DE CONEXIÓN
+Bridado Tipo H
+Roscado Tipo R
+CONEX. INTERNA
+COTAS A / B
+-
+TALADRO INTERNO
+7mm
+PLANO REFERENCIA
+TI-J0501-01
+TAPON Y CADENA
+AISI 316
+1/2" NPT-H
+Soldado Tipo S
+Roscado Tipo G
+MTL TERMOPOZO
+AISI 316
+DIMENSIONES
+MODELO YPF
+H0
+MTL BRIDA
+AISI 316
+SENSOR DE TEMPERATURA
+ABRIL 2016
+PRESION ESTATICA
+70
+kg/cm2g
+TERMOPOZO  (3)
+Rev. 00
+TIPO DE MONTAJE
+EN LINEA (CODO)
+EN LINEA (A 90º)
+TIPO EJECUCION
+Barra Taladrada
+EN LINEA (A 45º)
+EN RECIPIENTE
+CONEX. PROCESO
+1-1/2" #600
+MAXIMA
+CARACTERISTICAS
+CRIOGENICO
+CORROSIVO
+3,6
+15,89
+37,3
+EROSIVO
+TOXICO / LETAL
+OTROS DATOS SOBRE 
+EL FLUIDO
+DIAGRAMA
+YPF-GASLIFTLOC1-VCD24299-R-PI-003012-H2
+CLASIFIC.  DE AREA
+ZONA 2 Gr IIA T3
+Apr:   
+DATOS GENERALES
+TAG
+TE-XXXC
+SERVICIO
+Temperatura Inyeccion de gas a pozo
+Rev. 
+LINEA / EQUIPO
+2"-SG-XXXX-CA31-BB
+DATOS DE PROCESO
+Rea: 
+FLUIDO Y ESTADO
+Hidrocarburo
+Gas/Liquido
+TEMPERATURA (ºC)
+MINIMA
+NORMAL
+
+--- página 9 ---
+X
+X
+X
+(1) Por configuración convencional se entiende la que usa una única entrada para su conversión a 4-20 mA
+(2) Grado de protección ambiental, clasificación eléctrica y organismo certificador iguales a los de transmisor.
+(3) Deberá suministrarse una placa de acero inoxidable con el TAG del instrumento, con caracteres estampados (indelebles) de 5mm de altura (mín.),
+ fijada al cuello del mismo mediante alambre (inox).
+Nº: HD-J-0500
+Hoja 9 de 18
+REV
+I
+YPF-GASLIFTPTE-VCD24299-I-HD-003005
+D1
+HOJA DE DATOS DE TRANSMISORES DE TEMPERATURA
+PROYECTO
+VCD 24299
+HOJA DE DATOS TRANSMISOR DE TEMPERATURA
+UNIDAD DE NEGOCIO
+UPSTREAM NOC
+ANEXO
+ESP
+Nº DE PLANO
+REV
+DESCRIPCION
+FECHA
+REAL.
+APR.
+VºBº CLIENTE
+CONTRATISTA
+DA
+EMISIÓN PARA APROBACIÓN
+17/7/2025
+GMA
+RVM
+AESA
+D0
+EMISION FINAL
+12/09/25
+GMA
+RVM
+APROBADO
+FICHERO PLANO
+D1
+EMISION FINAL - EMISIÓN PARA LIBRO FINAL
+09/12/25
+GC
+RVM
+NOTAS GENERALES
+REALIZADO
+MODELO INDICADOR
+NA
+FABRICANTE
+Rosemount, Yokogawa o similar igual calidad
+PROVEEDOR
+NA
+DATOS DEL PRODUCTO
+DATOS DE COMPRA
+MODELO XMISOR
+Por Fabricante
+REQUISICION
+NA
+ACCESORIOS Y DATOS DE COMPRA
+UPSTREAM
+INDICADOR REMOTO (2)
+NOTAS / ACCESORIOS
+TIPO INDICADOR
+- - -
+-MÓDULO DE ALIMENTACIÓN
+Nº DE ENTRADAS
+1
+CONFIGURACION (1)
+CONVENCIONAL
+Tª PROMEDIO
+HOT BACK UP
+HOJA DE DATOS
+CONEX. ELECTRICA
+- - -
+ESCALA INDICACION
+- - -
+A. MONTAJE
+- - -
+Tª DIFERENCIAL
+PRECISION
+0.3% del span calibrado
+PROT. AMB.
+IP 65
+A. MONTAJE
+SI, Caño 2"
+PROT. EEx
+EExd
+NORMA EEx
+TIPO ELECTRONICA
+Inteligente, Configurable
+RANGO CALIBRADO
+0 - 60
+MTL ENVOLVENTE
+Aluminio con bajo contenido de Cobre
+INDICADOR INTEGRAL
+SI
+60079
+Rev. 0
+TIPO DE EJECUCION
+Para campo, montaje independiente
+T diseño
+87,1 °C
+Para campo, montaje en cabezal sonda
+SIL (s/ IEC 61508)
+Por Proyecto
+File: HDJ050501.xls
+Para campo, montaje integral a sonda
+RANGO MINIMO
+Por Fabricante
+ºC
+Para armario, montaje sobre rail
+RANGO MAXIMO
+Por Fabricante
+CONEX. A SONDA
+1/2" NPT H
+SEÑAL DE SALIDA
+4-20 m A
+CONEX. ELECTRICA
+1/2" NPT H (4)
+PROTOCOLO DIGITAL
+HART
+Rea:
+TIPO SENSOR
+T/C Tipo K
+Pt-100 @ 2 hilos
+TEMPERATURA (ºC)
+MINIMA
+NORMAL
+MAXIMA
+T/C Tipo J
+Pt-100 @ 3 hilos
+3,6
+15,89
+37,3
+T/C Tipo T
+Pt-100 @ 4 hilos
+OTROS DATOS SOBRE 
+LA MEDIDA
+DATOS DE LA SONDA DE TEMPERATURA ASOCIADA
+ABRIL 2016
+Otro tipo  T/C
+Otro tipo RTD
+TRANSMISOR / CONVERTIDOR
+DIAGRAMA
+YPF-GASLIFTLOC1-VCD24299-R-PI-003013-H2
+CLASIFIC. DE AREA
+Zona 2 Gr.IIA T3
+Apr: 
+DATOS GENERALES
+TAG
+TIT-XXXC
+SERVICIO
+Temperatura Inyeccion de gas a pozo
+Rev.
+LINEA / EQUIPO
+2"-SG-XXXX-CA31-BB
+
+--- página 10 ---
+NO
+NO
+NO
+NO
+ de caudal.
+(5) Gas con condesado. El proveedor deberá considerar la fracción de vapor molar indicado en las condiciones de procesos del fluido a fin de ajustar
+UNIDAD DE NEGOCIO
+UPSTREAM NOC
+REV
+J
+D1
+HOJA DE DATOS COMPUTADOR DE CAUDAL
+Página 10 de 18
+PROYECTO
+VCD 24299
+TRANSMISOR DE CAUDAL - TOTALIZADOR
+ANEXO
+ESP
+YPF-GASLIFTPTE-VCD24299-I-HD-
+003004
+REV
+DESCRIPCION
+FECHA
+REAL.
+APR.
+VºBº CLIENTE
+CONTRATISTA
+DA
+EMISIÓN PARA APROBACIÓN
+17/7/2025
+GMA
+RVM
+AESA
+D0
+EMISION FINAL
+12/09/25
+GMA
+RVM
+APROBADO
+D1
+EMISION FINAL - EMISIÓN PARA LIBRO FINAL
+09/12/25
+GMA
+RVM
+REALIZADO
+FICHERO PLANO
+NOTAS GENERALES
+(1) Grado de protección ambiental, protección EEx y organismo certificador iguales a los del transmisor
+(2) Manifold integral en AISI 316.
+(3) El transmisor deberá ser entregado calibrado, con certificación correspondiente y chapa de acero inoxidable con TAG de identificación.
+(4) El proveedor deberá garantizar que el transmisor tenga la opción de cálculo de raiz cuadrada y salida de caudal compensada en unidades
+la exactitud del instrumento.
+MODELO INDICADOR
+FABRICANTE
+ABB, Emerson o similar igual calidad
+MODELO SELLOS
+SUMINISTRADOR
+DATOS DEL PRODUCTO
+DATOS DE COMPRA
+MODELO XMISOR
+REQUISICION
+L /  D CAPILARES
+-
+FLUIDO RELLENO
+-
+-
+TIPO CAPILARES
+-
+CONEX. ELECTRICA
+-
+CONEX. PROCESO
+-
+TIPO INDICADOR
+-
+TIPO DE SELLOS
+-
+CONEX. ELECTRICA
+4x3/4" NPT-H
+NORMA EEx
+IEC60079
+PROTOCOLO DIGITAL
+HART
+- Para especificación de la termovaina y sensor de 
+temperatura ver página 7.
+- Se requiere que el multivariable tenga la función 
+de caudal totalizado.
+ESCALA INDICACION
+-
+MTL Lado mojado
+-
+A. MONTAJE
+ACCESORIOS Y DATOS DE COMPRA
+INDICADOR REMOTO (2)
+SELLOS SEPARADORES
+NOTAS / ACCESORIOS
+-
+MTL Lado seco
+SALIDA: PD / CAUDAL
+CAUDAL/PRESIÓN/TEMPERATURA 
+CONEX. PROCESO
+1/2" NPT-H
+PROT. EEx
+Ex-d
+SEÑAL DE SALIDA
+AI / 4-20mA
+MTL Tornillería
+AISI 316
+T DISEÑO
+  100°C  (*)
+RANGO CALIBRADO
+CONFIG. MONTAJE
+Manifold de 5 vias (2)
+PROT. AMB.
+IP 65
+Sm3/d
+MTL Envolvente
+ALUMINIO
+P DISEÑO
+104 kg/cm2g (*) RANGO MINIMO
+0 - 45000
+MTL Bridas ovales
+AISI 316L
+PRECISION
+0,1%
+RANGO MAXIMO
+Por Proveedor
+MTL Juntas
+PTFE
+A. MONTAJE
+CAÑO 2"
+LIMPIEZA ESPECIAL
+NO
+TEST HIDROSTATICO
+SI
+SIL (s/ IEC 61508)
+N/A
+TIPO SENSOR
+Celda Presión Diferencial
+INDICADOR INTEGRAL
+INCLUIDO EN ELECTRONICA
+Por Proveedor
+70,66-75,83
+kg/cm2
+TEMPERATURA
+4-38,5
+°C
+TRANSMISOR
+TIPO ELECTRONICA 
+Inteligente 2 hilos
+DENSIDAD / PM
+96-110 / 24,1
+kg/m3 / g/mol
+OTROS DATOS SOBRE 
+EL FLUIDO
+Cp/Cv=1,4
+Fracción de vapor molar: 0,74
+VISCOSIDAD
+0,015
+cP
+PRESION ESTATICA
+MTL Partes mojadas
+AISI 316L
+V. PURGA
+No
+CORROSIVO
+CAUDAL NORMAL
+25.000
+EROSIVO
+TOXICO / LETAL
+CAUDAL MINIMO
+10.000
+DATOS DE PROCESO
+FLUIDO Y FASE
+GAS LIFT (5)
+GASEOSA
+CAUDAL MAXIMO
+40.000
+Sm3/d
+CARACTERISTICAS
+CON SUCIEDAD
+DIAGRAMA
+YPF-GASLIFTLOC1-VCD24299-R-PI-003012-H2
+CLASIFIC. DE AREA
+Zona 2 Gr.IIA T3
+DATOS GENERALES
+TAG
+FQIT-XXXA
+SERVICIO
+Caudal Inyeccion de gas a pozo
+LINEA / EQUIPO
+2"-SG-XXXX-CA31-BB
+
+--- página 11 ---
+NO
+NO
+NO
+NO
+(5) La presión máxima del material es de 99,3 bar (101,25kg/cm2) según ASME B16.5
+Hoja 11 de 18
+I
+D1
+PROYECTO
+VCD 24299
+HOJA DE DATOS V-CONE
+UNIDAD DE NEGOCIO
+UPSTREAM NOC
+ANEXO
+ESP
+YPF-GASLIFTPTE-VCD24299-I-HD-
+003004
+REV
+REV
+DESCRIPCION
+FECHA
+REAL.
+APR.
+VºBº CLIENTE
+CONTRATISTA
+DA
+EMISIÓN PARA APROBACIÓN
+17/7/2025
+GMA
+RVM
+AESA
+D0
+EMISION FINAL
+12/09/25
+GMA
+RVM
+APROBADO
+FICHERO PLANO
+D1
+EMISION FINAL - EMISIÓN PARA LIBRO FINAL
+09/12/25
+GC
+RVM
+(2) Cada toma de presión se suministrará con un tapón roscado según ASME B16.11, del mismo material de la brida de instalación.
+(3) El proveedor deberá entregar los Certificados de Materiales, Calibración y Tests.
+(4) El proveedor deberá confirmar los tramos rectos requeridos.
+REALIZADO
+HOJA DE CALCULO
+(1)
+NOTAS GENERALES
+(1) A completar / verificar por el proveedor.
+PLANO ELEMENTO
+(1)
+FABRICANTE
+INTRA AUTOMATION o similar igual calidad
+MODELO
+(1)
+SUMINISTRADOR
+(1)
+MATERIAL DE LA JUNTA
+Tornillería y juntas a proveer por cañerías
+ACCCESORIOS
+Tornillería y juntas a proveer por cañerías
+DATOS DEL PRODUCTO
+DATOS DE COMPRA
+TIPO DE BRIDA
+RF
+CARA DE LA BRIDA
+Acero Inoxidable (1)
+MATERIAL DE BRIDA
+AC. INOX. AISI 316 / GRAFITO e = 4,5 mm C./ ANILLO EXT. AC. CARB. ZINCADO(5)
+TOMAS DE PRESIÓN LONGITUD
+2"
+TAMAÑO DE BRIDAS
+#600
+CLASE DE BRIDA
+ANSI B16.5
+SCHEDULE CUERPO
+(1)
+BETA
+1/2" NPT
+TOMAS DE PRESIÓN TAMAÑO Y TIPO
+STD
+MTL CUERPO/CONO
+Acero Inoxidable/Acero Inoxidable (1)
+DIÁMETRO EXTERNO
+(1)
+DIÁMETRO CONO
+43,617 mm (1)
+dP A CAUDAL MAX.
+100 mbar (1)
+dP A CAUDAL MIN.
+6,2445 mbar (1)
+dP PERMANENTE
+71,244 mbar (1)
+°C
+V-CONE
+TIPO
+V-Cone en Carrete
+ORIENTACION LINEA
+Horizontal
+VISCOSIDAD
+0,015
+cP
+OTROS DATOS SOBRE 
+EL FLUIDO
+96,6 kg/cm2g
+Fracción de vapor molar: 0,74
+PRESION ESTATICA
+70,66-75,83
+kg/cm2 g
+TEMPERATURA
+4-38,5
+CARACTERISTICAS
+CON SUCIEDAD
+CORROSIVO
+K = Cp/Cv
+1,8-2,18
+EROSIVO
+TOXICO / LETAL
+CAUDAL MAXIMO
+40.000
+Sm3/d
+DENSIDAD / SG
+96-110 / 24,1
+kg/m3 / g/mol CAUDAL NORMAL
+25.000
+DENSIDAD @ C.BASE
+-
+kg/m3
+CAUDAL MINIMO
+10.000
+DATOS DE PROCESO
+FLUIDO Y FASE
+Hidrocarburo
+Gas/Liquido
+COMPRESIBILIDAD
+0,64-0,7
+DATOS GENERALES
+TAG
+FE-XXXA
+SERVICIO
+Caudal Inyeccion de gas a pozo
+LINEA / EQUIPO
+2"-SG-XXXX-CA31-BB
+DIAGRAMA
+YPF-GASLIFTLOC1-VCD24299-R-PI-003012-H2
+
+--- página 12 ---
+FE-XXXA
+de
+YPF-GASLIFTPTE-VCD24299-I-HD-003004
+D1
+Hoja
+12
+18
+VC24299
+ MEMORIA DE CÁLCULO                          
+CAUDALÍMETRO V-CONE
+UNIDAD DE NEGOCIO
+UPSTREAM NOC
+ANEXO
+ESP
+Nº DE PLANO
+REV
+J
+REV
+DESCRIPCION
+FECHA
+REAL.
+APR.
+PROYECTO
+AESA
+DA
+EMISIÓN PARA APROBACIÓN
+17/7/2025
+GMA
+RVM
+D0
+EMISION FINAL
+12/9/2025
+GMA
+RVM
+CONTRATISTA
+D1
+ON FINAL - EMISIÓN PARA LIBRO
+09/12/25
+GC
+RVM
+ARCHIVO PLANO
+
+--- página 13 ---
+FE-XXXA
+de
+YPF-GASLIFTPTE-VCD24299-I-HD-003004
+D1
+Hoja
+13
+18
+VC24299
+ MEMORIA DE CÁLCULO                          
+CAUDALÍMETRO V-CONE
+UNIDAD DE NEGOCIO
+UPSTREAM NOC
+ANEXO
+ESP
+Nº DE PLANO
+REV
+J
+REV
+DESCRIPCION
+FECHA
+REAL.
+APR.
+PROYECTO
+AESA
+DA
+EMISIÓN PARA APROBACIÓN
+17/7/2025
+GMA
+RVM
+D0
+EMISION FINAL
+12/9/2025
+GMA
+RVM
+CONTRATISTA
+D1
+ON FINAL - EMISIÓN PARA LIBRO
+09/12/25
+GC
+RVM
+ARCHIVO PLANO
+
+--- página 14 ---
+1
+P c :
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+MAX:
+13
+53
+14
+54
+Fabricante & Modelo
+15
+55
+Tamaño
+Área Efectiva
+16
+Tipo
+56
+On / Off
+Regulatorio
+17
+Tamaño
+57
+Acción del resorte Abrir/Cerrar
+18
+Max Pres / Temp
+58
+Máx presión admisible
+19
+Fabricante & Modelo
+Fisher/ EZ o Similar
+59
+ Min presión requerida
+20
+Mtl Cuerpo/Bonete
+60
+Presión disponible Aire:
+21
+Mtl Lining/ ID
+61
+Mín
+Máx
+22
+62
+Rango calibrado
+/
+23
+63
+Orientación del Actuador
+---
+24
+Acabado de la brida
+64
+Volante Manual
+25
+Mtl brida
+65
+26
+Dirección de Flujo
+66
+27
+Tipo de bonete
+67
+Señal entrada
+28
+68
+Tipo
+29
+Mtl empaquetadura
+69
+Fabricante & Modelo
+30
+Tipo empaquetadura
+70
+Directo/Inverso
+31
+71
+Manómetros
+Bypass
+32
+Tipo
+72
+Cam Characteristic
+33
+Tamaño
+1"
+Carrera
+73
+34
+Característica
+74
+Tipo
+Cantidad
+35
+Desbalanceada
+75
+Fabricante & Modelo
+36
+Selección C V
+F L
+X T
+76
+Contactos / Rating
+37
+MTL Obturador/disco
+77
+Puntos de actuación
+38
+Mtl asiento
+78
+Tags
+39
+Mtl Jaula/ Guía 
+79
+Fabricante & Modelo
+40
+Mtl vástago
+80
+Set Presión
+41
+81
+Filtro
+42
+82
+43
+Clasificación de Area
+83
+Prueba Hidrostática
+Si
+44
+84
+ANSI / FCI Clase de Fugas
+45
+85
+Materiales
+46
+86
+Protección Eex-d
+Si
+47
+Solenoide
+87
+Otros
+48
+Vías/Posiciones
+88
+49
+Reset
+89
+50
+Voltaje
+90
+51
+Consumo
+91
+52
+Conexión Eléctrica/Neumática
+92
+Notas:
+Nº: HD-J0600-01
+DE
+TAG:
+FV-XXXB
+Servicio: Regulación Caudal Inyeccion de Gas Lift a pozo
+(5)
+CONDICIONES DE PROCESO
+Unidades
+Máximo Gas/Liq
+Normal Gas
+Normal Gas/Liq
+Min Gas/Liq
+Shut-Off
+Fluido:
+Hidrocarburo (Gas + Líq)
+40000
+3,2466
+25000
+---
+25000
+2,029
+10000
+0,8116
+PID:
+YPF-GASLIFTLOC1-VCD24299-R-
+PI-003012-H2
+-
+Presión de entrada
+kg/cm2g
+73,9
+Caudal
+Sm³/d (gas)
+m3/h (líq)
+6,10
+-
+Presión de salida
+kg/cm2g
+70,1
+70,1
+70,1
+70,1
+-
+Temperatura
+°C
+38,50
+13,10
+13,10
+-
+71,1
+71,1
+71,1
+96,6
+Viscosidad/ (Cp/Cv)
+cP / -
+0,015 / -
+0,015 / 2,18 (4)
+0,015 / -
+0,015 / -
+-
+Densidad / PM
+- / g/mol
+414,53 / 24,1
+-/24,1
+414,53 / 24,1
+414,53 / 24,1
+4,171
+-
+Presión de vapor P V :
+Kg/cm²a
+71,01
+-
+71,01
+71,01
+72
+50
+76
+52
+-
+C V calculado
+9,007
+3,909
+10,55
+-
+Ruido admisible/ calculado
+dBA
+N/A
+N/A
+N/A
+N/A
+-
+% apertura
+Temperatura ambiente
+°C
+MIN:
+-10
+40
+LÍNEA
+Diámetro
+Ent
+2" -  sch 80
+ACTUADOR
+Tipo
+Eléctrico (3)
+& Schedule
+Sal
+2" -  sch 80
+(3)
+Línea
+Sin Aislamiento / 2"-SG-XXXX-CA31-BB
+(3)
+(3)
+No
+Sal
+2"
+WN RF
+Si
+2"
+Clase ANSI 
+# 600
+96,6 kg/cm2g / 87,1 ºC
+---
+---
+ASTM A 216 WCB
+NA
+---
+---
+AISI-316 (2)
+AIRE/GAS
+---
+AISI-316 (2)
+125 - 250 RMS
+---
+ASTM A 216 WCB/WCC
+Posición de Falla
+Flujo tiende a cerrar
+Estándar
+POSICIONADOR
+---
+Lub & Válv. aislación
+NA
+Lub
+NA 
+---
+PTFE
+---
+Anillos en V
+---
+---
+---
+---
+3/4"
+Igual Porcentaje
+SWITCHES
+CUERPO/BONETE
+Globo
+---
+---
+Balanceada/ desbalanceada
+---
+15,9
+0,92
+0,905
+---
+AISI-316/ Stellite N°6 (2)
+---
+AISI-316/ Stellite N°6 (2)
+---
+Conexión a línea
+Ent
+2"
+WN RF
+---
+---
+---
+---
+---
+Manómetro
+---
+SPECIALS / ACCESORIES
+Zona 2  GrIIA T3
+CERTIFICADOS
+Protección electrica del conjunto
+EEx-d
+Si, Clase IV (s/ANSI FCI 70,02)
+Protección ambiental
+IP 65
+Si
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+INTERNOS
+Reducido
+1.-
+La válvulas  tendrá una placa metálica  fijada mecánicamente en origen, donde aparecerán los siguientes datos grabados en modo indeleble: Fabricante, TAG , N° de serie, tamaño nominal y 
+rating del cuerpo y conexiones a proceso, material, tipo de cuerpo, internos y empaquetadura, Modelo de internos instalados, Cv y acción del fluido (abre /cierra).
+P Crítica // Temp. Crítica // Factor Z // Temp. de descarga: 
+113 Kg/cm2g // 21°C // 0,7 // 37 °C @Caudal Máx Gas/Liq
+93 Kg/cm2g // -15°C // 0,7 // 12,7 °C @Caudal Normal Gas
+113 Kg/cm2g // 21°C // 0,7 // 12,7 °C @Caudal Normal Gas/Liq
+113 Kg/cm2g // 21°C // 0,7 // 5,5 °C @Caudal Min Gas Liquido
+D1
+2.-
+A verificar/definir por proveedor.
+3.-
+Para detalle del actuador ver página 15.
+4.-
+ARCHIVO PLANO
+SION FINAL - EMISIÓN PARA LIBRO F 9/12/2025
+GZG
+RVM
+5.-
+Para detalle de Presión Crítica y Temperatura Crítica para cada caso ver los campos del 89 al 92.
+ Valor de cp/cv corregido para gas real usando el promedio entre entrada y salida del coeficiente isentrópico a efectos de cálculo. El valor de cp/cv = 1,4 ( Caso Normal Gas).
+Ultima Posición
+YPF-GASLIFTPTE-VCD24299-I-HD-003004
+D1
+J
+REV
+DESCRIPCION
+FECHA
+REAL.
+APR.
+PROYECTO
+D0
+EMISIÓN PARA APROBACIÓN
+18/8/2025
+GMA
+RVM
+CONTRATISTA
+AESA
+DA
+EMISIÓN PARA APROBACIÓN
+31/7/2025
+GMA
+RVM
+Hoja de Datos Válvula de Control Regulatorio
+Hoja
+14
+18
+VCD24299
+ HOJA DE DATOS
+VALVULAS DE CONTROL
+UNIDAD DE NEGOCIO
+UPSTREAM NOC
+ANEXO
+ESP
+Nº DE PLANO
+REV
+
+--- página 15 ---
+FV-XXXB 
+Cálculo 1 . Fluido Bifásico
+de
+YPF-GASLIFTPTE-VCD24299-I-HD-003004
+D1
+Hoja
+15
+18
+VC24299
+ MEMORIA DE CÁLCULO                          
+VALVULAS DE CONTROL
+UNIDAD DE NEGOCIO
+UPSTREAM NOC
+ANEXO
+ESP
+Nº DE PLANO
+REV
+J
+REV
+DESCRIPCION
+FECHA
+REAL.
+APR.
+PROYECTO
+AESA
+DA
+EMISIÓN PARA APROBACIÓN
+17/7/2025
+GMA
+RVM
+D0
+EMISION FINAL
+12/9/2025
+GMA
+RVM
+CONTRATISTA
+D1
+ON FINAL - EMISIÓN PARA LIBRO
+09/12/25
+GC
+RVM
+ARCHIVO PLANO
+
+--- página 16 ---
+FV-XXXB
+Cálculo 2. Fluido Gas
+de
+YPF-GASLIFTPTE-VCD24299-I-HD-003004
+D1
+Hoja
+16
+18
+VC24299
+ MEMORIA DE CÁLCULO                          
+VALVULAS DE CONTROL
+UNIDAD DE NEGOCIO
+UPSTREAM NOC
+ANEXO
+ESP
+Nº DE PLANO
+REV
+J
+REV
+DESCRIPCION
+FECHA
+REAL.
+APR.
+PROYECTO
+AESA
+DA
+EMISIÓN PARA APROBACIÓN
+17/7/2025
+GMA
+RVM
+D0
+EMISION FINAL
+12/9/2025
+GMA
+RVM
+CONTRATISTA
+D1
+ON FINAL - EMISIÓN PARA LIBRO
+09/12/25
+GC
+RVM
+ARCHIVO PLANO
+
+--- página 17 ---
+FV-XXXB
+GRÁFICA 1. CÁLCULO FLUIDO BIFÁSICO
+GRÁFICA 2. CÁLCULO FLUIDO GAS
+Consideraciones/Conclusiones
+1. Se consideró realizar el cálculo de la válvula cuando circula fluido bifásico (Gráfica 1) y solo gas (Gráfica 2) por separado. 
+2. Valor de cp/cv=1,4 corregido para gas real usando el promedio entre entrada y salida del coeficiente isentrópico a efectos 
+de cálculo, el mismo aplica solo para la condición NORMAL GAS del Cálculo 2. Fluido Gas (pág. 16).
+3.  Se requiere que los internos de la válvula sean endurecidos con Stellite N° 6 para condiciones de fluido bifásico.
+4. Válvula opera correctamente entre 52-76%, si se considera fluido bifásico. En caso de instalarse el separador de líquido SB-410
+(equipo opcional) la válvula estará operando solo con gas con un 50% de apertura.
+de
+YPF-GASLIFTPTE-VCD24299-I-HD-003004
+D1
+Hoja
+17
+18
+VC24299
+ MEMORIA DE CÁLCULO                           
+VALVULAS DE CONTROL
+UNIDAD DE NEGOCIO
+UPSTREAM NOC
+ANEXO
+ESP
+Nº DE PLANO
+REV
+J
+REV
+DESCRIPCION
+FECHA
+REAL.
+APR.
+PROYECTO
+AESA
+DA
+EMISIÓN PARA APROBACIÓN
+17/7/2025
+GMA
+RVM
+D0
+EMISION FINAL
+12/9/2025
+GMA
+RVM
+CONTRATISTA
+D1
+ON FINAL - EMISIÓN PARA LIBRO 
+09/12/25
+GC
+RVM
+ARCHIVO PLANO
+
+--- página 18 ---
+X
+X
+X
+X
+X
+X
+X
+X
+X
+Modbus
+Doc .:
+HOJA DE DATOS ACTUADOR MOTORIZADO
+Página 18 de 18
+ACTUADOR MOTORIZADO
+ANEXO
+ESP
+REV
+J
+YPF-GASLIFTPTE-VCD24299-I-HD-003004
+D1
+PROYECTO
+VCD 24299
+HOJA DE DATOS
+UNIDAD DE NEGOCIO
+UPSTREAM NOC
+REV
+DESCRIPCION
+FECHA
+REAL.
+APR.
+VºBº CLIENTE
+CONTRATISTA
+DA
+EMISIÓN PARA APROBACIÓN
+17/7/2025
+GMA
+RVM
+AESA
+D0
+EMISION FINAL
+12/09/25
+GMA
+RVM
+APROBADO
+FICHERO PLANO
+D1
+EMISION FINAL - EMISIÓN PARA LIBRO FINAL
+09/12/25
+GC
+RVM
+NOTAS GENERALES
+(1) El actuador se suministrará montado y probado sobre la válvula FV-XXXB, ver página 14.
+(2) El proveedor del actuador debderá garantizar el par/empuje y clase de cierre según Shut-Off.
+(3) El actuador debe ser provisto con placa característica en 316L donde figure el tag, fabricante, modelo, nº de serie, etc.
+(4) Protección contra ingreso de humedad, sobretorques, térmica por termostatos, inversión instantánea. 
+(5) Indicar características del reductor / multiplicador sólo cuando sea externo al propio actuador motorizado.
+(6) El proveedor incluirá la siguiente documentación en castellano: Hoja de datos completa de la válvula (incluidos accesorios, configuración del posicionador y firma de 
+la válvula), Planos dimensionales detallados tanto externos como internos, Certificados de materiales según DIN 50.049 / EN 10204 clase 3.1.b y de inspección, 
+Certificados de cumplimiento con normativas aplicables, Certificados de modo EEx de los accesorios eléctricos y electrónicos (cuando aplique), Esquemas de 
+conexionado eléctrico y neumático, Catálogos técnicos y manual de instalación y operación. Además de la documentación indicada, se deben proveer el software, 
+cables y todo lo necesario para su intervención y mantenimiento (salvo que YPF ya lo posea en la instalación de destino).
+(*) A definir por el proveedor. Se deberá dar el dato definitivo como parte del documento Hoja de Datos, junto con la provisión.
+REALIZADO
+MODELO REDUCTOR
+FABRICANTE
+MODELO VALVULA
+PROVEEDOR
+DATOS DEL PRODUCTO
+DATOS DE COMPRA
+MODELO ACTUADOR
+REQUISICION
+BUS DE MANDO
+PROTECCION FUEGO
+REDUCTOR / MULTIPLICADOR
+K-Mass
+(Ver Nota 5)
+Profibus
+Cajón ignífugo
+Manta térmica
+V. Cerrada
+Instalación s/ válvula (taller propio)
+Detener
+V. en local
+Envío a planta del conjunto montado
+Mover (4-20 mA)
+V. disparada
+Trabajos de configuración en planta
+ACCESORIOS Y DATOS DE COMPRA
+ORDENES E INDICACIONES CABLEADAS
+ALCANCE DEL SUMINISTRO
+NOTAS / ACCESORIOS
+DIRECCION DE INGENIERIA YPF - CONTROL AVANZADO E INSTRUMENTACION
+Abrir
+V. Abierta
+Actuador y accesorios de montaje
+- El actuador deberá ser provisto con accesorios para falla en 
+última posición.(*)
+-Consumo min 38mA / max 4A
+Cerrar
+(*)
+(*)
+(*)
+BOTONERA INTEGRAL
+SI
+PAR O EMPUJE MAX.
+(*)
+ELECTRONICA
+INTELIGENTE Y CONFIGURABLE
+HOJA DE DATOS
+TIPO DE MOTOR
+MOTOR CORRIENTE CONTINUA (CC)
+CONEX. FUERZA
+(*)
+ALIMENTACION
+24 VDC
+CONEX. SEÑAL
+(*)
+PROTEC. AMBIENTAL
+IP68
+Inom / Istart / Potencia
+REDUCTOR / MULTIP.
+(*)
+PROTECCION EEx
+EExd
+BRIDA DE MONTAJE
+-
+NORMA EEx
+IEC 60.079-10
+Rev. 0
+TIEMPO DE CARRERA
+(*)
+PLANO VALVULA
+-
+ACTUADOR MOTORIZADO
+File: HD(EP)-J-0304.01-00.xls
+TIPO DE SERVICIO
+Todo / Nada
+Regulación
+ARRANCADOR
+SI (*)
+Nº ACTUACIONES
+Menos 60 / hora
+Más 1200 / hora
+PROTECCIONES
+(5)
+MOVIM.  VASTAGO
+Lineal + empuje
+Rotativo
+VOLANTE MANUAL
+SI
+COJINETE EMPUJE
+SI (*)
+JUL - 08
+RATING 
+TAMAÑO
+CL600 
+2"
+PASO
+ P op
+T op
+73,9
+kg/cm²g
+ºC
+RECORRIDO
+dP max
+dP diseño
+96,6
+kg/cm²g
+94,6
+kg/cm²g
+ANGULO GIRO
+TIPO DE VALVULA
+GLOBO 
+PAR / EMPUJE cierre
+(3)(*)
+Lbf
+DISEÑO FIRE SAFE
+-
+VASTAGO
+DIAMETRO
+1/2 '' (*)
+(*)
+38,5
+3/4'' (*)
+90° (*)
+DIAGRAMA
+YPF-GASLIFTLOC1-VCD24299-R-PI-003012
+CLASIFIC. DE AREA
+Zona 2 Gr.IIA T3
+Apr:  J.M.C.
+DATOS GENERALES
+TAG
+FV-XXXB (Actuador eléctrico)
+SERVICIO
+-
+Rev. A.J.R. / R.F.G.
+LINEA / EQUIPO
+2"-SG-XXXX-CA31-BB
+DATOS DE PROCESO Y DE LA VALVULA (1)
+Rea: C.A.A.
+FLUIDO Y FASE
+Hidrocarburo
+Gas/Liquido
+PAR / EMPUJE apert.
+(3)(*)
+Lbf
