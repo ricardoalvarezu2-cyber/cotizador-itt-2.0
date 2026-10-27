@@ -37,20 +37,14 @@
   "fecha_referencia": "2026-10-27"
  },
  "plazo": {
-  "dias": 60,
-  "texto": "desde OC · EXW Quilmes Oeste",
+  "dias": 75,
+  "texto": "desde OC · a confirmar con el plazo de las esféricas metal-metal",
   "tareas": [
    [
-    "Esféricas 2\" (Indave)",
+    "Esféricas 2\" y 1/2\" (plazo Indave asiento PTFE; metal-metal sin dato)",
     0,
     60,
     "crit"
-   ],
-   [
-    "Esféricas 1/2\" (Indave)",
-    0,
-    15,
-    ""
    ],
    [
     "Extensibles y uniones (Adita)",
@@ -59,37 +53,37 @@
     ""
    ],
    [
-    "Retenciones (Ing. en Fluidos, stock)",
+    "Retenciones (Ing. en Fluidos)",
     0,
-    5,
+    30,
     ""
    ],
    [
-    "Junta monolítica (Duralitte, stock)",
+    "Junta monolítica (Duralitte)",
     0,
-    5,
+    20,
     ""
    ],
    [
-    "Accesorios Renard y caño",
+    "Accesorios, caño y niples",
     0,
-    10,
+    15,
     ""
    ],
    [
-    "Armado, soldadura, PH y pintura",
-    45,
-    57,
+    "Armado, soldadura, PH y pintura (con todo el material)",
+    60,
+    72,
     "tal"
    ],
    [
     "Dossier y despacho",
-    57,
-    60,
+    72,
+    75,
     "tal"
    ]
   ],
-  "nota": "El camino crítico son las esféricas 2\" (Indave, 60 días). Si Taval las tiene en stock, el plazo baja a 45 días, como en la OE 332-24. Las retenciones de Ingeniería en Fluidos estaban en stock en jun-2026. El armado es de 3 días (J. Quesada) y Ledesma no informó plazo."
+  "nota": "El taller arranca cuando llega el material más largo: las esféricas (60 días en Indave para asiento PTFE; para asiento metálico y cuerpo enterizo no hay plazo cotizado). Plazo = 60 + 12 de taller + 3 de dossier = 75 días. Si Taval tiene las esféricas en stock, baja a ~30 días. La fecha de necesidad del 09/11/2026 no se puede cumplir."
  },
  "flete": {
   "etiqueta": "Flete a Comodoro",
@@ -97,6 +91,7 @@
   "criterio_html": "Los antecedentes con CAPEX (OE 150-22 y OE 332-24) se ofrecieron con entrega en planta ITT. Si CAPEX pide entrega en Pampa del Castillo, conviene cotizar el flete como ítem aparte, actualizado al tipo de cambio del día. El presupuesto del transportista tiene más de 4 meses: hay que volver a pedirlo."
  },
  "historial_html": [
+  "<b>Revisión independiente (27/10):</b> encontró 3 problemas críticos. 1) El plazo real es 75 días, no 60: el taller no puede arrancar antes de que lleguen las esféricas. 2) Las esféricas no tienen cotización metal-metal enteriza: el +30% era un supuesto. 3) La retención cotizada es trim 8, no AISI 316. También encontró el manómetro NPT-H mal transcripto, la extensible sin sello metal-metal, la junta BW/NPT, el buje BSPT, el revestimiento de las juntas sin costear y cotizaciones vencidas. Los precios sin respaldo pasaron a \"estimado\" (~33% del costo). <b>No pasa a \"revisado\"</b> hasta que Compras traiga los precios.",
   "<b>Armado:</b> en el borrador usé Ledesma USD 1.800 (sep-2025, cuadro CBM con corte de caño). Lo más reciente para un puente equivalente es Ledesma <b>USD 400</b> en la PRES 24879 (Tecpetrol, abr-2026). Las dos opciones quedan para elegir en la fila de armado.",
   "<b>Bloqueo y purga:</b> el precio de USD 197,71 era de un modelo de 3/4\" y 6000 psi (Pluspetrol). Lo reemplacé por ABAC 1/2\" AISI 316 a <b>USD 137</b> (PRES 24879).",
   "<b>Junta monolítica:</b> pasa de USD 280 (feb-2026) a <b>315</b>, el precio más reciente de Duralitte (may-2026).",
@@ -139,20 +134,20 @@
    "Unión doble a golpe extensible con <b>sello metal-metal</b>.",
    "Válvulas esféricas de <b>cuerpo enterizo</b>, sin bulones de unión.",
    "Pintura esmalte sintético <span class=\"cedro\"></span>color cedro. Válvulas en el color original del proveedor.",
-   "Alternativa: revestir el niple N°14 con cinta Canusa Wax Tape HT 3000 6\"×9\" (proveedor Workene)."
+   "Alternativa: revestir el niple N°14 con cinta Canusa Wax Tape HT 3000 6\"×9\" (proveedor Morken)."
   ]
  },
  "nota_mo_html": "No se incluyen soportes ni estructura porque no figuran en la lista de materiales del plano. No se pidió radiografía. Soldaduras de taller: 4 a tope (niple 12–junta 13, junta–caño 14, caño–codo 15, codo–reducción 16) y 2 cuplas 1/2\" (pos 23) sobre niples. Los extremos BW de los niples 22 y 25 y la punta 2½\" de la reducción 16 quedan biselados para soldar en campo.",
  "desvios": [
   {
    "tag": "Pos 2, 5",
-   "titulo": "Esféricas con asiento metálico y cuerpo enterizo",
-   "texto": "El precio de referencia (Indave, asiento blando) lleva un recargo estimado del 30%. Hay que confirmar con Taval o Indave el modelo enterizo sin bulones y el precio real."
+   "titulo": "Esféricas con asiento metálico y cuerpo enterizo: SIN cotización",
+   "texto": "El precio es un estimado (Indave IRA2F forjada con asiento PTFE + 30% supuesto). No cumple la especificación. Hace falta cotizar el modelo enterizo metal-metal, o declarar el desvío."
   },
   {
    "tag": "Pos 7",
-   "titulo": "Retención 2\" serie 600 de clapeta, A216 WCB con trim AISI 316",
-   "texto": "La base es Ingeniería en Fluidos S600 (cumple). Si se usa Danco WOG3000 (más barata), hay que declararlo: según Javier Elejondo (jun-2026), \"la WOG3000 cumple holgadamente\" y el resto del puente es serie 2000."
+   "titulo": "Retención 2\" S600: el trim cotizado no es AISI 316",
+   "texto": "Ingeniería en Fluidos cotizó trim 8 (13Cr) sin resorte. El plano pide clapeta, asientos renovables y resorte AISI 316. Hace falta cotizar con trim 316 o declarar el desvío. La opción Danco WOG3000 también sería un desvío."
   },
   {
    "tag": "Pos 1, 8, 10, 11, 17, 18, 23",
@@ -162,12 +157,12 @@
   {
    "tag": "Pos 14",
    "titulo": "Caño revestido",
-   "texto": "El pedido dice polipropileno. El precio de referencia es tricapa de polietileno (Provemet). Hay que consultar si CAPEX acepta PE o la alternativa del plano con cinta Canusa Wax Tape, que provee Workene (sin precio en la base)."
+   "texto": "El pedido dice polipropileno. El precio de referencia es tricapa de polietileno (Provemet). Hay que consultar si CAPEX acepta PE o la alternativa del plano con cinta Canusa Wax Tape, que provee Morken (sin precio en la base)."
   },
   {
    "tag": "Pos 21",
-   "titulo": "Unión extensible \"Duralite\"",
-   "texto": "El precio es de Adita, con sello metal-metal. Si CAPEX exige esa marca, hay que pedir precio a Duralitte."
+   "titulo": "Unión extensible metal-metal \"Duralite\"",
+   "texto": "El precio de Adita es M-H S3000 sin mención de sello metal-metal y está vencido. El dibujo muestra la unión enroscada sobre la tee (necesita extremo macho) y la tabla dice NPT-H: consultar al cliente."
   },
   {
    "tag": "Pos 19",
@@ -176,13 +171,13 @@
   },
   {
    "tag": "Pos 20",
-   "titulo": "Manómetro 0–40 bar con conexión 1/2\" NPT-M",
-   "texto": "El de stock ITT (2,5\", conexión 1/4\") no cumple la conexión del plano. La base es comprar uno de 4\" con 1/2\". Usar el de stock con buje sería un desvío."
+   "titulo": "Manómetro 0–40 bar con conexión 1/2\" NPT-H (según plano)",
+   "texto": "El plano pide NPT-H y el bloqueo y purga (pos 19) es NPT-M: hay que confirmar el par con el cliente. El de stock (1/4\") no sirve."
   },
   {
    "tag": "Pos 13",
    "titulo": "Junta monolítica BW en los dos extremos",
-   "texto": "El precio de Duralitte es de una junta BW/NPT. Hay que confirmarlo para BW/BW."
+   "texto": "El precio de Duralitte es de una junta BW/NPT. Hay que cotizar BW/BW sch 80, o declarar el desvío."
   },
   {
    "tag": "Pos 16",
@@ -192,7 +187,7 @@
   {
    "tag": "Pos 23",
    "titulo": "Cupla 1/2\" A234 WPB 80/2000 NPT/BW",
-   "texto": "Va soldada sobre los niples. El precio es de una cupla forjada A105 NPT. Las 2 soldaduras están sumadas en mano de obra."
+   "texto": "Va soldada sobre los niples. El precio es de una cupla forjada A105 NPT/NPT (la media cupla Renard 7041 se ajusta mejor). Las 2 soldaduras están sumadas en mano de obra."
   },
   {
    "tag": "Entrega",
@@ -201,8 +196,18 @@
   },
   {
    "tag": "Fecha",
-   "titulo": "Plazo de 60 días desde la OC",
-   "texto": "La fecha de necesidad del 09/11/2026 no se puede cumplir."
+   "titulo": "Plazo de 75 días desde la OC y oferta fuera de término",
+   "texto": "La fecha de necesidad del 09/11/2026 no se puede cumplir y la respuesta se presenta después del 22/10/2026. Hay que decirlo en la oferta."
+  },
+  {
+   "tag": "Pos 10",
+   "titulo": "Buje 2\"×1/2\": el precio de referencia es BSPT",
+   "texto": "El código Renard 6592 es BSPT. El plano pide NPT. Cotizar NPT."
+  },
+  {
+   "tag": "Pos 3, 4, 9, 12, 22, 24, 25",
+   "titulo": "Niples: API 5L según plano",
+   "texto": "El precio de referencia (PRES 24879) es de niples A53/A106 B. Ofrecer API 5L o declarar A106 B."
   }
  ],
  "antecedentes": [
@@ -267,11 +272,8 @@
   {
    "titulo": "Proveedores",
    "items": [
-    "Taval o Indave: esféricas 1/2\" y 2\" con asiento metálico y cuerpo enterizo, precio y plazo.",
-    "Ingeniería en Fluidos o Danco: retención 2\" S600, confirmar precio y stock.",
-    "Ledesma o Quesada: armado de este puente con el plano, para elegir entre USD 380, 400 y 1.800.",
-    "Adita o Duralitte: extensibles metal-metal, actualizar el precio de abril.",
-    "Provemet: caño 2\" sch80 revestido en PP o PE, y si vende por metro."
+    "Compras: pedir cotización con la especificación del plano (lista en compras/). Prioridad: esféricas metal-metal enterizas (precio y plazo), retención S600 trim 316 con resorte, extensible metal-metal, junta BW/BW, bloqueo y purga VI 550-M, niples API 5L, armado (Ledesma o Quesada con el plano), manga termocontraíble.",
+    "Reconfirmar las cotizaciones vencidas (Indave, Adita, Duralitte, Ingeniería en Fluidos) antes de emitir la oferta: la oferta da 15 días de validez a precio firme."
    ]
   },
   {
@@ -282,13 +284,17 @@
     "EXW o entregado en Pampa del Castillo.",
     "Caño revestido en PP o cinta Canusa.",
     "Si exige marcas de válvulas.",
-    "Formato del registro de PH y si pide certificados de materiales."
+    "Formato del registro de PH y si pide certificados de materiales.",
+    "Confirmar que el plano 23001-PDC-YAC-PC-P-001 rev 1 es el documento 17009-PDC-YAC-PC-P-001 rev 1 que cita el pedido.",
+    "Extremos de la pos 21 (tabla NPT-H, dibujo macho) y conexión del manómetro pos 20 (NPT-H) contra el bloqueo y purga pos 19 (NPT-M).",
+    "Extremo BW del niple 25 derecho: queda entre tee y unión roscadas, no tiene dónde soldarse.",
+    "Confirmar que la PSV, la válvula de contrapresión y el BOP del típico no van incluidos."
    ]
   }
  ],
  "pie": "Fuentes: base de conocimiento del repositorio cotizador-itt (carpeta Z:\\VENTAS\\OFERTAS Y LICITACIONES, tanda 1, lista Renard 26/12/2025, stock valorizado nov-2024, costo de planta oct-2024). Precios en USD sin IVA.",
  "planilla_notas": [
-  "Plazo: 60 días desde OC (crítico: esféricas 2\" Indave 60 días; con stock Taval, 45 días). Fecha de necesidad 09/11/2026: no se puede cumplir.",
+  "Plazo: 75 días desde OC (esféricas 60 días + 12 de taller + 3 de dossier; a confirmar con el plazo de las esféricas metal-metal). Fecha de necesidad 09/11/2026: no se puede cumplir.",
   "Condiciones (como OE 332-24): USD facturado en pesos al TC BNA vendedor · contado contra entrega · entrega en planta ITT · validez 15 días.",
   "Modelo de costo: PRES 24879 rev A (TAVAL/55, Tecpetrol, 22/04/2026), puente convencional de bombeo mecánico. Factor 1,35 sobre todo el puente (incluida la MO de Ledesma); 1,40 solo para MO vendida sola."
  ],
@@ -321,9 +327,9 @@
    "unidad": "un",
    "fuentes": [
     {
-     "tipo": "cot",
+     "tipo": "est",
      "precio": 59.15,
-     "proveedor": "Indave 45,50 + 30% asiento metálico (estimado)",
+     "proveedor": "ESTIMADO: Indave IRA2F 1/2\" WOG2000 forjada, asiento PTFE (USD 45,50) + 30% supuesto por asiento metálico y cuerpo enterizo. Sin cotización con la especificación del plano",
      "origen": "APSA/15 · Capsa Capex puentes AIB",
      "fecha": "2026-06-10"
     },
@@ -346,9 +352,9 @@
    "unidad": "un",
    "fuentes": [
     {
-     "tipo": "ant",
+     "tipo": "est",
      "precio": 20,
-     "proveedor": "Valor usado en PRES 24879 (antecedente puentes Taval/CGC S2000)",
+     "proveedor": "ESTIMADO: valor de la planilla PRES 24879 (\"antecedentes puentes Taval/CGC S2000\"), material A53/A106 B; sin cotización",
      "origen": "TAVAL/55 · PRES 24879",
      "fecha": "2026-04-22"
     }
@@ -364,9 +370,9 @@
    "unidad": "un",
    "fuentes": [
     {
-     "tipo": "ant",
+     "tipo": "est",
      "precio": 20,
-     "proveedor": "Valor usado en PRES 24879",
+     "proveedor": "ESTIMADO: valor de la planilla PRES 24879 (\"antecedentes puentes Taval/CGC S2000\"), material A53/A106 B; sin cotización",
      "origen": "TAVAL/55 · PRES 24879",
      "fecha": "2026-04-22"
     }
@@ -382,9 +388,9 @@
    "unidad": "un",
    "fuentes": [
     {
-     "tipo": "cot",
+     "tipo": "est",
      "precio": 195.65,
-     "proveedor": "Indave 150,50 WOG3000 + 30% asiento metálico (estimado)",
+     "proveedor": "ESTIMADO: Indave IRA2F 2\" WOG3000 forjada, asiento PTFE (USD 150,50) + 30% supuesto por asiento metálico y cuerpo enterizo. Sin cotización con la especificación del plano",
      "origen": "APSA/15 · Capsa Capex puentes AIB",
      "fecha": "2026-06-10"
     },
@@ -432,9 +438,9 @@
    "unidad": "un",
    "fuentes": [
     {
-     "tipo": "cot",
+     "tipo": "est",
      "precio": 533,
-     "proveedor": "Ingeniería en Fluidos (S600, stock)",
+     "proveedor": "Ingeniería en Fluidos ppto 110626: S600 A216 WCB, internos TRIM 8 (13Cr, NO AISI 316), sin resorte cotizado. Falta precio con trim 316 y resorte",
      "origen": "APSA/15 · Capsa Capex puentes AIB",
      "fecha": "2026-06-11"
     },
@@ -482,9 +488,9 @@
    "unidad": "un",
    "fuentes": [
     {
-     "tipo": "ant",
+     "tipo": "est",
      "precio": 20,
-     "proveedor": "Valor usado en PRES 24879",
+     "proveedor": "ESTIMADO: valor de la planilla PRES 24879 (\"antecedentes puentes Taval/CGC S2000\"), material A53/A106 B; sin cotización",
      "origen": "TAVAL/55 · PRES 24879",
      "fecha": "2026-04-22"
     }
@@ -495,14 +501,14 @@
    "pos": "10",
    "grupo": "material",
    "descripcion": "Buje reducción 2\" × 1/2\" NPT",
-   "especificacion": "S3000 A105",
+   "especificacion": "S3000 A105, rosca NPT (el código Renard de referencia es BSPT)",
    "cantidad": 2,
    "unidad": "un",
    "fuentes": [
     {
      "tipo": "lista",
      "precio": 11.51,
-     "proveedor": "Renard · cód. 6592",
+     "proveedor": "Renard · cód. 6592 (es BSPT; el plano pide NPT: cotizar NPT)",
      "origen": "Lista de precios ITT",
      "fecha": "2025-12-26"
     }
@@ -536,9 +542,9 @@
    "unidad": "un",
    "fuentes": [
     {
-     "tipo": "ant",
+     "tipo": "est",
      "precio": 20,
-     "proveedor": "Valor usado en PRES 24879",
+     "proveedor": "ESTIMADO: valor de la planilla PRES 24879 (\"antecedentes puentes Taval/CGC S2000\"), material A53/A106 B; sin cotización",
      "origen": "TAVAL/55 · PRES 24879",
      "fecha": "2026-04-22"
     }
@@ -554,9 +560,9 @@
    "unidad": "un",
    "fuentes": [
     {
-     "tipo": "cot",
+     "tipo": "est",
      "precio": 315,
-     "proveedor": "Duralitte cot. P_16838",
+     "proveedor": "Duralitte P_16838: junta 2\" BW/NPT 2000 (el plano pide BW/BW sch 80). Falta cotizar BW/BW",
      "origen": "APSA/12 · Puente A° C° para YPF",
      "fecha": "2026-05-13"
     },
@@ -607,6 +613,24 @@
      "tipo": "est",
      "precio": 0,
      "proveedor": "Sin cargo si se compra por metro o hay sobrante en stock",
+     "origen": "—",
+     "fecha": "2026-10-27"
+    }
+   ]
+  },
+  {
+   "id": "M14C",
+   "pos": "14c",
+   "grupo": "material",
+   "descripcion": "Manga termocontraíble para reponer el revestimiento en las 2 juntas soldadas del caño 14 (13–14 y 14–15)",
+   "especificacion": "No figura en el plano; hace falta para no dejar las soldaduras sin revestir",
+   "cantidad": 2,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 35,
+     "proveedor": "ESTIMADO sin referencia: pedir precio a Compras",
      "origen": "—",
      "fecha": "2026-10-27"
     }
@@ -694,9 +718,9 @@
    "unidad": "un",
    "fuentes": [
     {
-     "tipo": "cot",
+     "tipo": "ant",
      "precio": 137,
-     "proveedor": "ABAC 1/2\" M-H AISI 316",
+     "proveedor": "Línea \"Válvula bloqueo y purga (ABAC) 1/2\\\" NPT M-H AISI 316 | 137\" de la planilla de costo PRES 24879; no hay cotización de ABAC del VI 550-M",
      "origen": "TAVAL/55 · PRES 24879",
      "fecha": "2026-04-22"
     },
@@ -713,8 +737,8 @@
    "id": "M20",
    "pos": "20",
    "grupo": "material",
-   "descripcion": "Manómetro 0–40 bar, conexión 1/2\" NPT-M",
-   "especificacion": "Comprar: 4\" con glicerina. El de stock 0–40 bar tiene conexión 1/4\"",
+   "descripcion": "Manómetro 0–40 bar, conexión 1/2\" NPT-H (según plano)",
+   "especificacion": "El plano indica NPT-H; el bloqueo y purga (pos 19) es NPT-M. Confirmar el par con el cliente. El de stock (1/4\") no sirve",
    "cantidad": 2,
    "unidad": "un",
    "fuentes": [
@@ -744,9 +768,9 @@
    "unidad": "un",
    "fuentes": [
     {
-     "tipo": "cot",
+     "tipo": "est",
      "precio": 249,
-     "proveedor": "Adita (IMB Oil) cot. S01988",
+     "proveedor": "Adita S01988: U. extensible M-H 2\" NPT S3000, sin mención de sello metal-metal; cotización vencida el 13/04/2026",
      "origen": "APSA/15 · Capsa Capex puentes AIB",
      "fecha": "2026-04-06"
     },
@@ -769,9 +793,9 @@
    "unidad": "un",
    "fuentes": [
     {
-     "tipo": "ant",
+     "tipo": "est",
      "precio": 20,
-     "proveedor": "Valor usado en PRES 24879 (niple 350 mm)",
+     "proveedor": "ESTIMADO: valor de la planilla PRES 24879 (\"antecedentes puentes Taval/CGC S2000\"), material A53/A106 B; sin cotización",
      "origen": "TAVAL/55 · PRES 24879",
      "fecha": "2026-04-22"
     }
@@ -805,9 +829,9 @@
    "unidad": "un",
    "fuentes": [
     {
-     "tipo": "ant",
+     "tipo": "est",
      "precio": 20,
-     "proveedor": "Valor usado en PRES 24879",
+     "proveedor": "ESTIMADO: valor de la planilla PRES 24879 (\"antecedentes puentes Taval/CGC S2000\"), material A53/A106 B; sin cotización",
      "origen": "TAVAL/55 · PRES 24879",
      "fecha": "2026-04-22"
     }
@@ -823,9 +847,9 @@
    "unidad": "un",
    "fuentes": [
     {
-     "tipo": "ant",
+     "tipo": "est",
      "precio": 40,
-     "proveedor": "Valor usado en PRES 24879 (niple 1.000 mm)",
+     "proveedor": "ESTIMADO: valor de la planilla PRES 24879 (\"antecedentes puentes Taval/CGC S2000\"), material A53/A106 B; sin cotización",
      "origen": "TAVAL/55 · PRES 24879",
      "fecha": "2026-04-22"
     }
@@ -841,9 +865,9 @@
    "unidad": "gl",
    "fuentes": [
     {
-     "tipo": "cot",
+     "tipo": "ant",
      "precio": 400,
-     "proveedor": "Ledesma: \"mano de obra armando\" puente convencional",
+     "proveedor": "Línea \"Mano de obra armando | LEDESMA | 400\" de la planilla de costo PRES 24879 (no hay presupuesto de Ledesma con este plano)",
      "origen": "TAVAL/55 · PRES 24879",
      "fecha": "2026-04-22"
     },
@@ -918,7 +942,7 @@
    "pos": "PH",
    "grupo": "servicio",
    "descripcion": "Prueba hidráulica 15 kg/cm² con registro",
-   "especificacion": "6 hh de planta + carta registradora",
+   "especificacion": "6 hh de planta + carta registradora. Requiere tapas provisorias en los extremos BW abiertos (pos 16, 22, 25)",
    "cantidad": 1,
    "unidad": "gl",
    "fuentes": [
@@ -988,14 +1012,14 @@
   "notas": {
    "1": "Serie 2000 según plano; se acepta serie 3000.",
    "2": "Requisito del cliente: cuerpo ENTERIZO, sin bulones de unión. Paso nominal, esfera flotante, vástago, esfera y asientos METÁLICOS AISI 316. Indicar marca y modelo.",
-   "3": "Niple roscado NPT-M. Puede fabricarse en ITT desde caño 1/2\" sch 80: indicar si conviene.",
+   "3": "Niple roscado NPT-M. Puede fabricarse en ITT desde caño 1/2\" sch 80: indicar si conviene. Material API 5L.",
    "4": "Niple roscado NPT-M ambos extremos.",
    "5": "Requisito del cliente: cuerpo ENTERIZO, sin bulones de unión. Paso nominal, esfera flotante, vástago, esfera y asientos METÁLICOS AISI 316. Indicar marca y modelo.",
    "6": "Unión doble a golpe (rápida) serie 2000, A105, NPT-H.",
-   "7": "Retención a clapeta serie 600: cuerpo A216 WCB; clapeta, asientos renovables y resorte AISI 316. Confirmar material de asiento (una cotización anterior era AISI 410). Indicar marca, modelo y si hay stock.",
+   "7": "Retención a clapeta serie 600: cuerpo A216 WCB; clapeta, asientos renovables y resorte AISI 316. La cotización anterior de Ingeniería en Fluidos era TRIM 8 (13Cr) sin resorte: NO sirve, pedir trim 316 con resorte 316. Indicar marca, modelo y si hay stock.",
    "8": "Serie 2000 según plano; se acepta serie 3000.",
    "9": "Niple roscado NPT-M ambos extremos.",
-   "10": "Serie 2000 según plano; se acepta serie 3000.",
+   "10": "Rosca NPT (no BSPT). Serie 2000 según plano; se acepta serie 3000.",
    "11": "Serie 2000 según plano; se acepta serie 3000.",
    "12": "Un extremo NPT y el otro biselado para soldar (BW).",
    "13": "Extremos BW en los DOS lados (BW/BW), sch 80, cuerpo A234 WPB. Indicar presión de prueba y certificado.",
@@ -1005,12 +1029,13 @@
    "17": "Serie 2000 según plano; se acepta serie 3000.",
    "18": "Serie 2000 según plano; se acepta serie 3000.",
    "19": "Modelo exigido por plano: ABAC VI 550-M (bloqueo y purga 1/2\" NPT-M, AISI 316, 3000 psi). Si se ofrece otro modelo, indicarlo.",
-   "20": "Rango 0–40 bar, conexión INFERIOR 1/2\" NPT-M (el de stock ITT tiene 1/4\": no sirve). Dial 4\" con glicerina.",
+   "20": "Rango 0–40 bar, conexión 1/2\" NPT-H según plano (a confirmar con el cliente, porque el bloqueo y purga es NPT-M). El de stock ITT (1/4\") no sirve. Dial 4\" con glicerina.",
    "21": "Sello METAL-METAL (requisito del cliente). Plano: marca Duralite. Cotizar Duralite y una alternativa equivalente (ej. Adita).",
    "22": "Un extremo NPT y el otro biselado para soldar (BW).",
    "23": "Cupla 1/2\" serie 80/2000, A234 WPB, un extremo NPT y el otro para soldar sobre caño.",
    "24": "Niple roscado NPT ambos extremos.",
-   "25": "Un extremo NPT y el otro biselado para soldar (BW). Largo 1.000 mm."
+   "25": "Un extremo NPT y el otro biselado para soldar (BW). Largo 1.000 mm.",
+   "14c": "Manga termocontraíble para caño 2\" revestido (reponer el revestimiento en 2 juntas soldadas por puente)."
   },
   "cantidad_compra": {
    "14": "1 tira de ~12 m (se usan 3,8 m)"
@@ -1060,7 +1085,8 @@
    "13": "Duralitte / Dinatécnica / Flex Seal / MS Juntas",
    "14": "Provemet",
    "19": "ABAC",
-   "20": "Weisz Instrumentos / proveedor habitual de instrumentos"
+   "20": "Weisz Instrumentos / proveedor habitual de instrumentos",
+   "14c": "Provemet / proveedor de revestimientos"
   }
  }
 }

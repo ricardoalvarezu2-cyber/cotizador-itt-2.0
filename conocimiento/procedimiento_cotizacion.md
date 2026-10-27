@@ -23,6 +23,8 @@ Vigente desde el 27/10/2026. Se escribió a partir de los errores de la COT26-10
 **P4. Cada precio, con fuente y misma especificación.** Cada precio lleva proveedor, carpeta o documento de origen, fecha y **la especificación de lo que se cotizó**. Se compara con el plano campo por campo: Ø, serie, material de cuerpo y de trim, extremos o conexión, modelo. Si algo no coincide, o se ajusta el precio (y se dice cuánto y por qué) o se declara como desvío.
 - **Un precio de memoria o de un resumen no vale.** Hay que abrir el documento original (planilla, PDF, captura).
 - Un valor "aproximado", verbal o por WhatsApp es **estimado**: nunca es precio de base.
+- `cot` solo cuando hay documento del proveedor con esa especificación. Un valor de una planilla interna de ITT es `ant`. Un recargo supuesto (por ejemplo "+30% por asiento metálico") es `est`.
+- Hay que leer la especificación completa del documento del proveedor: modelo, código de trim (TRIM 8 = 13Cr, no 316), material de asientos, extremos (M-H, BW/NPT, BSPT vs. NPT).
 - Se prefiere el precio más reciente **con la misma especificación**. Si es de más de 6 meses o el proveedor da una validez corta, se marca para actualizar.
 
 **P4 bis. Ajuste por inflación.** Cada precio se actualiza desde su fecha hasta hoy con `conocimiento/costos/indices_ajuste.csv` (se arma con `herramientas/indices_inflacion.py`; se agregan los meses nuevos cuando se publican el IPC y el dólar). Materiales en dólares: CPI de EE.UU. MO, talleres y servicios locales: IPC del INDEC ÷ dólar BNA. **No usar una tasa anual fija:** en algunos años el costo local en dólares sube y en otros baja, según cuánto suba el dólar frente a la inflación. La planilla y el informe muestran el subtotal a la fecha del precio, el factor y el subtotal ajustado.
@@ -58,6 +60,8 @@ Vigente desde el 27/10/2026. Se escribió a partir de los errores de la COT26-10
 - [ ] Los factores son los de ITT (1,35 / 1,35). La dirección confirma el factor final.
 - [ ] El informe y el Excel dan el mismo total.
 - [ ] El precio está contrastado con 2 antecedentes y las diferencias explicadas.
-- [ ] El plazo está calculado por el material más largo.
+- [ ] El plazo está calculado por el material más largo: **llegada del último material + taller + dossier, sin superponer**. Si no llega a la fecha del cliente o la oferta va fuera de término, la oferta lo dice.
+- [ ] Ninguna cotización de proveedor está vencida al emitir la oferta, o está reconfirmada.
+- [ ] La oferta no afirma "según pedido" ni "cumple" en ítems sin cotización con la especificación del plano.
 - [ ] Desvíos, exclusiones, condiciones y consultas al cliente están escritos.
 - [ ] Hubo revisión independiente.

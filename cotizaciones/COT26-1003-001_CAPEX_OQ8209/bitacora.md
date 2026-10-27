@@ -2,7 +2,7 @@
 
 Registro de cómo se armó esta cotización, en orden, con las decisiones y los errores. Es el **caso modelo** del cotizador: la [guía](../../conocimiento/guia_cotizacion.md) y el [procedimiento](../../conocimiento/procedimiento_cotizacion.md) salieron de acá.
 
-**Estado al 27/10/2026:** borrador, sin revisar. Precio USD 7.540,63 por puente (15.081,26 por 2, sin IVA), 60 días desde la OC, EXW Quilmes. **No enviado.**
+**Estado al 27/10/2026:** borrador. La revisión independiente se hizo y encontró 3 críticos, así que **no pasa a "revisado"** hasta tener los precios de Compras. Precio provisorio USD 7.639,86 por puente (15.279,72 por 2, sin IVA), con el 63% del costo estimado. 75 días desde la OC, EXW Quilmes. **No enviado.**
 
 ## Datos del pedido
 
@@ -30,7 +30,10 @@ Registro de cómo se armó esta cotización, en orden, con las decisiones y los 
 | 18:44 | Pedido de Matías: registrar lo que pasó y corregir el procedimiento | `procedimiento_cotizacion.md`, `errores_y_lecciones.md`, `verificar_computo.py` | `57fb167` |
 | 19:03 | Oferta técnica y económica con el formato de ITT | Plantilla: oferta 138 a Flargent (mar-2026); estructura de la técnica según la PRES 24879. Redondeo del unitario en la planilla (14.603,26) | `1762587` |
 | 19:38 | Ajuste por inflación | Índice mensual: CPI de EE.UU. para materiales; IPC INDEC ÷ dólar BNA para MO y servicios → **7.540,63** | `f041d94` |
-| ~20:00 | Consolidación para poder repetir el proceso | `cotizacion.json` como única fuente; `armar_cotizacion.py`; plantillas; guía | este commit |
+| ~20:00 | Consolidación para poder repetir el proceso | `cotizacion.json` como única fuente; `armar_cotizacion.py`; plantillas; guía | `5028c4b` |
+| ~20:20 | Lista de materiales y servicios para Compras (Matías no compra) | `compras/COT26-1003-001_pedido_materiales_compras.xlsx` | `2190b80` |
+| ~20:30 | **Revisión independiente** (agente que no armó el cómputo; verificó 8 precios contra el original) | 3 críticos: plazo real 75 días, esféricas sin cotización metal-metal (+30% inventado), retención trim 8 y no 316. Mayores: manómetro NPT-H, extensible sin metal-metal, junta BW/NPT, buje BSPT, revestimiento de juntas sin costear, estimados reales ~33%, cotizaciones vencidas, diferencia sin explicar con antecedentes | — |
+| ~20:45 | Correcciones de la revisión | Precios sin respaldo pasan a estimado; plazo 75 días; manga termocontraíble (14c); desvíos y oferta corregidos (fuera de término, [a confirmar]); NPT-H; Morken; plantilla de oferta limpia → **7.639,86** | este commit |
 
 ## Decisiones y criterios
 
@@ -58,9 +61,15 @@ Están en [`errores_y_lecciones.md`](../../conocimiento/errores_y_lecciones.md):
 | Informe v1 | 7.275 / 7.287 | MO 400, bloqueo y purga 137 (7.275 era un error de cuenta) |
 | Factores 1,35 / 1,35 | 7.256 | MO de terceros como servicio |
 | Revisión contra el plano | 7.302 | + 2 soldaduras de cupla |
-| **Con ajuste por inflación** | **7.540,63** | Precios llevados a oct-2026 |
+| Con ajuste por inflación | 7.540,63 | Precios llevados a oct-2026 |
+| **Después de la revisión independiente** | **7.639,86** | + manga termocontraíble en juntas; 63% del costo estimado hasta que Compras responda |
+
+**Comparación con antecedentes (P8), pendiente de cerrar.** El precio está 23% arriba de la OE 332-24 (6.200, 2024, otro puente: bomba electrosumergible) y bastante más arriba que APSA/15 sin el BOP (~5.100). Por puente, este equipo lleva rubros que esos antecedentes no tenían o que tenían más baratos: 2 retenciones S600 (~1.080), 2 extensibles metal-metal (~510), junta monolítica (~320), 2 bloqueos y purgas de acero inoxidable (~280), 2 manómetros (~180), caño revestido con manga (~225) y el ajuste por inflación (+3%). Con los precios reales de Compras hay que rehacer la comparación rubro por rubro. Si sigue más de 15% arriba, la dirección decide si se ajusta el factor.
 
 ## Pendiente para pasar a "revisado" y "aprobado"
+
+Los pendientes actualizados después de la revisión independiente están en `cotizacion.json` → `pendientes` (y en el informe). Lo de abajo es la lista original.
+
 
 1. Revisión independiente del cómputo contra el plano (P9.2).
 2. Confirmar con proveedores:

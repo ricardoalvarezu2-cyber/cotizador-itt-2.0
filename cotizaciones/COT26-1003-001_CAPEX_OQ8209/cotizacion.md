@@ -11,7 +11,7 @@ Control automático (`verificar_computo.py`, 27/10/2026): 0 errores y 27 avisos.
 | Documento | 17009-PDC-YAC-PC-P-001 rev 1. El plano que vino es el 23001-PDC-YAC-PC-P-001 rev 1, "para construcción", del 12/06/2024 |
 | Entrega pedida | Depósito Pampa del Castillo, RN 26 km 42 (Comodoro Rivadavia) |
 | Fecha de la orden / límite de respuesta / necesidad | 19/10/2026 / **22/10/2026 (vencida)** / 09/11/2026 |
-| Requisitos | PH a 15 kg/cm² verificando las uniones, con registro adjunto. Unión doble a golpe extensible con sello metal-metal. Esféricas de cuerpo enterizo, sin bulones de unión. Pintura: esmalte sintético color cedro; las válvulas van en el color original del proveedor. Alternativa: revestir el niple N°14 con cinta Canusa Wax Tape HT 3000 6"x9" (proveedor Workene) |
+| Requisitos | PH a 15 kg/cm² verificando las uniones, con registro adjunto. Unión doble a golpe extensible con sello metal-metal. Esféricas de cuerpo enterizo, sin bulones de unión. Pintura: esmalte sintético color cedro; las válvulas van en el color original del proveedor. Alternativa: revestir el niple N°14 con cinta Canusa Wax Tape HT 3000 6"x9" (proveedor Morken) |
 
 Originales en `pedido/`.
 
