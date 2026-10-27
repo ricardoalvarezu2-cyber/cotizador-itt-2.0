@@ -35,6 +35,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from indice_proyectos import frac, norm, diametros, pulgadas, series  # noqa: E402
+from numeros import fecha_iso, leer_numero  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
 COMPRA_VIGENTE = "2022-01-01"
@@ -64,7 +65,7 @@ FAMILIAS = {
             ["tipo", "diametro", "serie", "material", "medida", "extremos"]),
     "OTR": ("Otros e insumos", ["tipo"], []),
 }
-COMUNES = ["codigo", "familia", "descripcion", "unidad", "ultimo_precio_usd", "iva", "fecha_ultimo_precio", "tipo_precio",
+COMUNES = ["codigo", "familia", "descripcion", "unidad", "ultimo_precio_usd", "iva", "alerta", "fecha_ultimo_precio", "tipo_precio",
            "proveedor", "ruta_origen", "archivo_origen", "ruta_repo", "precio_ajustado_hoy_usd", "precios_en_historial",
            "precio_min_usd", "precio_max_usd", "primera_fecha", "confianza_clasificacion"]
 PRIORIDAD = {"cotización": 4, "compra": 4, "planilla interna": 3, "lista": 2, "stock (precio maestro)": 1}
@@ -108,7 +109,7 @@ def familia_texto(t):
     if re.search(r"rosca con tuerca|union doble|union americana", t):
         return "AFO"
     if re.search(r"cartucho|elemento filtrante|caja porta ?orificio|bomba dosificadora|tapa de cierre rapido|\bllave\b|argon|\bco2\b|\bled\b"
-                 r"|u-?bolt|abrazadera|\bte (en caja|de |x \d)|manzanilla|yerba|\bcafe\b|azucar", t):
+                 r"|u-?bolt|abrazadera|manguera|\bte (en caja|de |x \d)|manzanilla|yerba|\bcafe\b|azucar", t):
         return "OTR"
     if re.search(r"manometr|transmisor|trasmisor|termometr|termovaina|caudalimetr|coriolis|presostato|sensor|indicador de nivel|visor de nivel|v-cone", t):
         return "INS"
@@ -124,7 +125,7 @@ def familia_texto(t):
         return "PER"
     if re.search(r"\bcano\b|\bcanos\b|tubo s/?c|tubo c/?c|\btubo\b|\bpipe\b", t):
         return "CAN"
-    acc = re.search(r"\bcodo|\btee\b|\bte\b|reduccion|casquete|\bcupla|\btapon|\bbuje|union doble|entrerrosca|\btapa\b|olet\b|\bcurva", t)
+    acc = re.search(r"\bcodo|\btees?\b|\bte\b|reduccion|casquete|\bcupla|\btapon|\bbuje|union doble|entrerrosca|\btapa\b|olet\b|\bcurva", t)
     if acc:
         if re.search(r"\b(2000|3000|6000|9000)\b|\bnpt\b|\bsw\b|socket", t) and not re.search(r"\bbw\b|a ?234|wpb", t):
             return "AFO"  # forjados roscados o SW (A105), aunque digan "radio corto"
@@ -158,7 +159,7 @@ def modelo_de(t):
 
 def material_de(t):
     for rx, nombre in [(r"a ?860|wphy", "A860 WPHY"), (r"a ?403|wp ?304|wp ?316", "A403 (inox)"), (r"a ?350|lf2", "A350 LF2"),
-                       (r"a ?333", "A333"), (r"a ?694|f ?65", "A694 F65"), (r"a ?194 ?(gr\.?|grado)? ?8ma?\b", "A194 8M"), (r"a ?194 ?(gr\.?|grado)? ?2h\b", "A194 2H"), (r"a ?194", "A194"),
+                       (r"a ?333", "A333"), (r"a ?694 ?(?:gr\.? ?)?f ?(\d{2})", "A694 F{}"), (r"a ?694", "A694"), (r"\bf ?65\b", "A694 F65"), (r"a ?194 ?(gr\.?|grado)? ?8ma?\b", "A194 8M"), (r"a ?194 ?(gr\.?|grado)? ?2h\b", "A194 2H"), (r"a ?194", "A194"),
                        (r"a ?193 ?(gr\.?|grado)? ?b ?8m", "A193 B8M"), (r"a ?193 ?(gr\.?|grado)? ?b ?7m", "A193 B7M"), (r"a ?320 ?(gr\.?)? ?l7", "A320 L7"),
                        (r"klingerit", "Klingerit"), (r"g-?10\b", "G10"),
                        (r"a ?216 ?(gr\.? ?)?wcb|\bwcb\b", "A216 WCB"), (r"a ?351|cf8m", "A351 CF8M"), (r"a ?182 ?f ?316|f316", "A182 F316"), (r"aisi ?316l?|\b316l?\b", "AISI 316"), (r"aisi ?304|\b304\b", "AISI 304"),
@@ -166,8 +167,9 @@ def material_de(t):
                        (r"a ?105", "A105"), (r"a ?234 ?(gr\.? ?)?wpb|\bwpb\b", "A234 WPB"), (r"a ?106", "A106 B"),
                        (r"api ?5l", "API 5L"), (r"a ?53", "A53"), (r"a ?516", "A516-70"), (r"a ?36\b", "A36"),
                        (r"f-?24\b", "F-24"), (r"a ?193", "A193 B7"), (r"galvaniz", "Galvanizado"), (r"bronce", "Bronce")]:
-        if re.search(rx, t):
-            return nombre
+        m = re.search(rx, t)
+        if m:
+            return nombre.format(*m.groups()) if "{}" in nombre else nombre
     if "inox" in t:
         return "Inoxidable"
     if "carbono" in t:
@@ -175,10 +177,41 @@ def material_de(t):
     return ""
 
 
-def extremos_de(t):
+def extremos_de(t, fam=""):
+    t = re.sub(r"\d+ ?d(?:ias)?\.? ?ff\b|\bff ?\d+ ?d", " ", t)  # "60 días FF" = fecha de factura, no cara plana
     ext = [e for e, rx in (("NPT", r"\bnpt"), ("BSPT", r"bspt"), ("SW", r"\bsw\b|socket"), ("BW", r"\bbw\b|biselad|a tope"),
                            ("RTJ", r"\brtj\b|\brj\b|ring joint"), ("RF", r"\brf\b"), ("FF", r"\bff\b"), ("Bridado", r"bridad")) if re.search(rx, t)]
+    if fam == "JUN":
+        ext = [e for e in ext if e != "SW"]  # en una junta, SW = spiral wound
     return "/".join(ext)
+
+
+# ASME B36.10: diámetro exterior (mm) de cada NPS y espesores (mm) por schedule
+OD_NPS = {21.3: 0.5, 26.7: 0.75, 33.4: 1, 42.2: 1.25, 48.3: 1.5, 60.3: 2, 73.0: 2.5, 88.9: 3, 101.6: 3.5, 114.3: 4, 141.3: 5,
+          168.3: 6, 219.1: 8, 273.0: 10, 323.8: 12, 323.9: 12, 355.6: 14, 406.4: 16, 457.0: 18, 457.2: 18, 508.0: 20, 609.6: 24, 610.0: 24}
+ESPESORES = {  # NPS: {schedule: espesor}
+    0.5: {"40": 2.77, "80": 3.73, "160": 4.78}, 0.75: {"40": 2.87, "80": 3.91, "160": 5.56}, 1: {"40": 3.38, "80": 4.55, "160": 6.35},
+    1.25: {"40": 3.56, "80": 4.85, "160": 6.35}, 1.5: {"40": 3.68, "80": 5.08, "160": 7.14}, 2: {"40": 3.91, "80": 5.54, "160": 8.74},
+    2.5: {"40": 5.16, "80": 7.01, "160": 9.53}, 3: {"40": 5.49, "80": 7.62, "160": 11.13}, 4: {"40": 6.02, "80": 8.56, "120": 11.13, "160": 13.49},
+    6: {"40": 7.11, "80": 10.97, "120": 14.27, "160": 18.26}, 8: {"20": 6.35, "30": 7.04, "40": 8.18, "60": 10.31, "80": 12.70, "160": 23.01},
+    10: {"20": 6.35, "30": 7.80, "40": 9.27, "XS": 12.70, "80": 15.09, "160": 28.58}, 12: {"20": 6.35, "30": 8.38, "STD": 9.53, "40": 10.31, "XS": 12.70, "80": 17.48},
+    14: {"10": 6.35, "20": 7.92, "STD": 9.53, "40": 11.13, "XS": 12.70, "80": 19.05}, 16: {"10": 6.35, "20": 7.92, "STD": 9.53, "XS": 12.70, "40": 12.70, "80": 21.44},
+    18: {"10": 6.35, "20": 7.92, "STD": 9.53, "30": 11.13, "XS": 12.70, "40": 14.27}, 20: {"10": 6.35, "20": 9.53, "30": 12.70, "40": 15.09, "80": 26.19},
+    24: {"10": 6.35, "20": 9.53, "30": 14.27, "40": 17.48, "80": 30.96}}
+NPS_VALIDOS = {0.125, 0.25, 0.375, 0.5, 0.75, 1, 1.25, 1.5, 2, 2.5, 3, 3.5, 4, 5, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30,
+               32, 34, 36, 40, 42, 48, 54, 56, 60}
+
+
+def nps_de_od(od):
+    return next((n for o, n in OD_NPS.items() if abs(o - od) <= 0.3), None)
+
+
+def schedule_de_espesor(nps, esp):
+    """Schedule del espesor en mm, si coincide con la tabla (±0,1 mm). XS/STD de 10" en adelante quedan como XS/STD."""
+    for sch, e in ESPESORES.get(nps, {}).items():
+        if abs(e - esp) <= 0.1:
+            return sch
+    return ""
 
 
 def schedule_de(t, diam=None):
@@ -208,9 +241,10 @@ def atributos(t, fam, proveedor=""):
                  or (fam in ("VAL", "JUN") and re.search(T + r"\s+(150|300|600|900|1500|2500)\b", t)))
         sin_comillas = re.search(r"\bnps ?(\d{1,2}(?: \d/\d)?|\d/\d)\b", t) or (fam in ("VAL", "AFO", "NIP", "JUN") and re.search(T + r"\s?(?:npt|bspt)\b", t))
         ord_ds = pulgadas(t) or ([frac(stock.group(1))] if stock else []) or ([frac(sin_comillas.group(1))] if sin_comillas else []) or ds
+        ord_ds = [x for x in ord_ds if x in NPS_VALIDOS] if fam != "INS" else ord_ds  # "45,5"" no existe
         if ord_ds:
             d["diametro"] = f"{ord_ds[0]:g}\""
-            if len(ord_ds) > 1 and fam in ("AFO", "ABW") and re.search(r"reduc|buje|x", t):
+            if len(ord_ds) > 1 and fam in ("AFO", "ABW") and re.search(r"reduc|buje", t):
                 d["diametro2"] = f"{ord_ds[1]:g}\""
     sr = series(t)
     if sr:
@@ -219,7 +253,7 @@ def atributos(t, fam, proveedor=""):
         d["serie"] = stock.group(2)
     d["schedule"] = schedule_de(t, float(d["diametro"][:-1]) if d.get("diametro", "").endswith('"') else None)
     d["material"] = material_de(t)
-    d["extremos"] = extremos_de(t)
+    d["extremos"] = extremos_de(t, fam)
     if not d.get("diametro") and fam in ("JUN", "VAL", "BRI", "AFO", "ABW", "NIP"):
         m = re.search(r"(?:junta \w+|esparrago|tuerca\w*(?: pesada)?|bulon|arandela|esferica(?: paso total)?|retencion|esclusa|brida \w+|codo|tee|niple)\s+(\d{1,2} \d/\d|\d/\d|\d{1,2})\b", t)
         if m:
@@ -233,7 +267,7 @@ def atributos(t, fam, proveedor=""):
         d["paso"] = "total" if re.search(r"paso total|full bore|\bfb\b", t) else ("reducido" if re.search(r"paso (reducido|nominal)|reduced", t) else "")
         d["norma"] = primero(r"(api ?6d|api ?602|api ?594|api ?6a|api ?608|b16\.34)", t).upper()
     elif fam == "AFO":
-        d["tipo"] = primero(r"(codo 90|codo 45|codo|tee|te|media cupla|cupla para soldar|cupla|tapon|buje|union doble a golpe extensible|union doble extensible|union extensible|union doble a golpe|union doble rapida|union doble|rosca con tuerca|entrerrosca|tapa|thredolet|threadolet|sockolet)", t)
+        d["tipo"] = primero(r"(codo 90|codo 45|codo|tees?|te|media cupla|cupla para soldar|cupla|tapon|buje|union doble a golpe extensible|union doble extensible|union extensible|union doble a golpe|union doble rapida|union doble|rosca con tuerca|entrerrosca|tapa|thredolet|threadolet|sockolet)", t)
     elif fam == "ABW":
         d["tipo"] = primero(r"(codo radio largo 90|codo radio largo 45|codo radio corto 90|codo 90|codo 45|curva 45|curva|tee|te|reduccion concentrica|reduccion excentrica|reduccion|casquete|cap)", t)
         d["norma"] = primero(r"(b16\.9|b16\.28)", t).upper()
@@ -246,12 +280,15 @@ def atributos(t, fam, proveedor=""):
     elif fam == "CAN":
         d["espesor_mm"] = (primero(r"sch\.? ?\w+ ?\((\d+[.,]\d+)\s?(?:mm)?\)", t) or primero(r"x\s?(\d+(?:[.,]\d+)?)\s?mm", t)
                            or primero(r"(?:esp\.?|espesor|e=)\s?(\d+(?:[.,]\d+)?)", t) or primero(r"\bx\s?(\d+,\d+)", t)).replace(",", ".")
-        d["costura"] = "sin costura" if re.search(r"s/?c\b|sin costura|seamless", t) else ("con costura" if re.search(r"c/?c\b|con costura|erw", t) else "")
+        d["costura"] = "sin costura" if re.search(r"s/ ?c(ostura)?\b|sin costura|seamless", t) else ("con costura" if re.search(r"c/ ?c(ostura)?\b|con costura|erw", t) else "")
         d["revestimiento"] = primero(r"(tricapa\s?\w*|polipropileno|polietileno|galvanizado|epoxi)", t)
         if not d.get("diametro"):
             od = primero(r"(\d{2,3}[.,]\d)\s?x", t)
             if od:
-                d["diametro"] = f"OD {od} mm"
+                nps = nps_de_od(float(od.replace(",", ".")))
+                d["diametro"] = f"{nps:g}\"" if nps else f"OD {od} mm"
+        if d.get("espesor_mm") and not d.get("schedule") and d.get("diametro", "").endswith('"'):
+            d["schedule"] = schedule_de_espesor(float(d["diametro"][:-1]), float(d["espesor_mm"]))
     elif fam == "NIP":
         d["largo_mm"] = primero(r"(\d{2,4})\s?mm", t) or primero(r"x\s?(\d{2,4})\b", t)
     elif fam == "INS":
@@ -272,7 +309,7 @@ def atributos(t, fam, proveedor=""):
     return normalizar({k: v for k, v in d.items() if v})
 
 
-SINONIMOS = {"welding neck": "wn", "blind": "ciega", "bl": "ciega", "slip on": "so", "slipon": "so", "lap joint": "lj",
+SINONIMOS = {"tees": "tee", "welding neck": "wn", "blind": "ciega", "bl": "ciega", "slip on": "so", "slipon": "so", "lap joint": "lj",
              "codo radio largo 45": "codo 45", "curva 45": "codo 45", "codo radio largo 90": "codo 90", "te": "tee",
              "union doble extensible": "union doble a golpe extensible", "union extensible": "union doble a golpe extensible",
              "union doble rapida": "union doble a golpe", "thredolet": "threadolet"}
@@ -337,19 +374,8 @@ def en_mes(tabla, fecha, i):
 
 
 def numero(x):
-    """Número escrito en cualquier formato: 4,413.92 · 4.413,92 · 28.500 · 12,5 · 1250."""
-    x = x.strip(".,")
-    if "," in x and "." in x:
-        dec = "," if x.rfind(",") > x.rfind(".") else "."
-        x = x.replace("." if dec == "," else ",", "").replace(dec, ".")
-    elif x.count(",") > 1 or x.count(".") > 1 or re.fullmatch(r"[1-9]\d{0,2}[.,]\d{3}", x):
-        x = x.replace(",", "").replace(".", "")  # separador de miles
-    else:
-        x = x.replace(",", ".")
-    try:
-        return float(x)
-    except ValueError:
-        return None
+    """Lector único: herramientas/numeros.py."""
+    return leer_numero(x)[0]
 
 
 CON_IVA = r"c/ ?iva|con iva|iva incluido|incluye iva|iva inc\w*|precio final"
@@ -407,6 +433,49 @@ def archivo_de(carpeta, proveedor):
     return ""
 
 
+SERVICIO = (r"mano de obra|\bm\.?o\.? |rolado|cilindrado|\barmado\b|fabricacion|servicio|montaje|granallad|transporte|flete"
+            r"|ensayo|radiograf|inspeccion|mecanizad|soldadura de|pintura de")
+PRECIO_EN_TRAMO = r"\(\s?\$?\s?\d[\d.,]*\s?\)|\d[\d.,]*\s?(?:usd|u\$s)\b|(?:usd|u\$s)\s?\d"
+
+
+def tramo(original):
+    """Solo el pedazo del renglón que corresponde al precio "c/u" (auditoría: "tapón 2" (6,66) y 2 tees 2" #6000
+    (126,36 c/u)" se clasificaba como tapón). Va desde el último tramo que tenía otro precio hasta el final del c/u."""
+    low = original.lower()
+    m = re.search(r"(?<![\d.,])\d[\d.,]*\s?(?:usd|u\$s|\$)?\s?c/u", low)
+    if not m:
+        return original
+    fin = low.find(")", m.end())
+    fin = fin + 1 if 0 <= fin - m.end() <= 3 else m.end()
+    ini = 0
+    for sep in re.finditer(r", | y |; ", low[:m.start()]):
+        if re.search(PRECIO_EN_TRAMO, low[ini:sep.start()]):
+            ini = sep.end()
+    cabeza = original[:original.find(":") + 1] if 0 < original.find(":") < ini else ""
+    return (cabeza + " " + original[ini:fin]).strip()
+
+
+def desambiguar(valor, texto, total):
+    """"26,338 c/u" puede ser 26,34 o 26.338. Se elige el que da una cantidad entera con el total del renglón
+    (2 × 26.338 = 52.676). Si no se puede decidir, queda como ambiguo y con alerta."""
+    cant = re.match(r"\D{0,25}?(\d{1,4}) ", texto)
+    cant = int(cant.group(1)) if cant else None
+    for c in (valor, valor * 1000):
+        if total:
+            n = total / c
+            if abs(n - round(n)) < 0.01 * n and 1 <= round(n) <= 10000 and (cant is None or round(n) == cant):
+                return c, False
+    return valor, True
+
+
+def unidad_de_texto(t):
+    if re.search(r"c/ ?2 tuercas|con 2 tuercas|con dos tuercas|\bjuegos?\b|\bjgo", t):
+        return "juego"
+    if re.search(r"(?:usd|u\$s)?\s?\d[\d.,]*\s?(?:usd|u\$s)?\s?(?:/|por) ?(?:m|mt|metro)\b", t):
+        return "m"
+    return "un"
+
+
 def leer_fuentes():
     regs = []
 
@@ -426,6 +495,10 @@ def leer_fuentes():
                 "fuentes_originales/renar_lista_2025-12.xlsx", f"código {r['codigo']}", "conocimiento/precios/lista_renar_2025-12.csv", r["unidad"])
     for r in csv.DictReader(open(PRECIOS / "stock_2024-11.csv", encoding="utf-8")):
         uc, fc = num(r["precio_ultima_compra"]), (r["fecha_ultima_compra"] or "")[:10]
+        hoja = re.search(r"(\d{3,4}) ?x ?(\d{3,4})", r["descripcion"])
+        if unidad_norm(r["unidad"]) == "m2" and hoja and re.search(r"chapa", r["descripcion"], re.I):
+            # el stock dice "Mts²" pero el precio es de la hoja entera (USD/kg igual al de las chapas hermanas; auditoría 27/10/2026)
+            r = {**r, "unidad": f"hoja {hoja.group(1)}x{hoja.group(2)}"}
         # una compra anterior a 2022 no representa el precio actual (hay compras de 2009): se usa el precio maestro de nov-2024
         if uc and fc and (fc >= COMPRA_VIGENTE or not num(r["precio_maestro_usd"])):
             add(r["descripcion"], uc, r["moneda"] or "USD", fc, "compra", f"Stock ITT · última compra (cód. {r['codigo']})",
@@ -436,21 +509,27 @@ def leer_fuentes():
                 "fuentes_originales/stock_valorizado_2024-11.xlsx", f"código {r['codigo']}", "conocimiento/precios/stock_2024-11.csv", r["unidad"],
                 extra=f"última compra {fc} a USD {uc:,.2f}, anterior a 2022: no se usa" if uc and fc else "", pista=r["grupo"])
     for r in csv.DictReader(open(PRECIOS / "precios_componentes.csv", encoding="utf-8")):
-        if num(r["precio_usd"]):
+        if num(r["precio"]):
             desc = " ".join(x for x in [r["descripcion"], r["dimension"], r["tipo"], r["schedule"] and f"SCH {r['schedule']}", r["serie"],
                                         r["material"], r["norma"]] if x)
-            add(desc, num(r["precio_usd"]), "USD", (r["fecha"] or "2025-08-01")[:10], "cotización", r["proveedor"],
+            add(desc, num(r["precio"]), r["moneda"], r["fecha"][:10], "cotización", r["proveedor"],
                 "fuentes_originales/cotizacion_elementos_equipos_2026-03.xlsx", f"rubro {r['rubro']}" + (f" · cotización {r['cotizacion_proveedor']}" if r["cotizacion_proveedor"] not in ("", "-") else ""),
                 "conocimiento/precios/precios_componentes.csv", r["unidad"], pista=r["rubro"])
     for anio in ("2026", "2025"):
         for r in csv.DictReader(open(PRECIOS / f"proveedores_{anio}.csv", encoding="utf-8")):
             det = norm(r["detalle"])
             cu = list(re.finditer(r"(?<![\d.,])(\d[\d.,]*)\s?(?:usd|u\$s|\$)?\s?c/u", det))
-            if len(cu) != 1 or re.search(r";| \+ (?!iva)", det):
-                continue  # presupuesto global o varios ítems: no da un precio unitario confiable ("+ IVA" no cuenta)
+            if len(cu) != 1 or re.search(SERVICIO, det):
+                continue  # varios precios unitarios, ninguno, o es un servicio (va al catálogo de MO y servicios)
+            valor, ambiguo = leer_numero(cu[0].group(1))
+            if ambiguo:
+                valor, ambiguo = desambiguar(valor, r["detalle"], num(r["precio"]))
             car = r["carpeta_cotizacion"]
-            add(r["detalle"], numero(cu[0].group(1)), r["moneda"], r["fecha"][:10], "cotización", r["proveedor"], Z + car.replace("/", "\\"),
-                archivo_de(car, r["proveedor"]), f"fuentes_originales/ofertas_texto/{car}" if car else "", "un", iva=iva_de(det, cu[0].end()))
+            add(tramo(r["detalle"]), valor, r["moneda"], fecha_iso(r["fecha"]), "cotización", r["proveedor"], Z + car.replace("/", "\\"),
+                archivo_de(car, r["proveedor"]), f"fuentes_originales/ofertas_texto/{car}" if car else "", unidad_de_texto(det),
+                extra="; ".join(x for x in [f"número ambiguo '{cu[0].group(1)}' leído como {valor:g}: verificar" if ambiguo else "",
+                                            f"renglón completo: {r['detalle'][:180]}" if len(r["detalle"]) > len(tramo(r["detalle"])) + 5 else ""] if x),
+                iva=iva_de(det, cu[0].end()))
     for f in sorted((RAIZ / "cotizaciones").glob("COT*/cotizacion.json")):
         c = json.load(open(f, encoding="utf-8"))
         for it in c["items"]:
@@ -495,14 +574,45 @@ def main():
                      "nota": "; ".join(x for x in [nota, "ajuste parcial: fecha anterior a jul-2024" if viejo else "", r["extra"]] if x),
                      "confianza_clasificacion": "alta" if k and len(at) >= 4 else ("media" if k else "baja")})
     grupos = defaultdict(list)
-    for i, h in enumerate(hist):
-        grupos[h["clave"] or f"SOLO-{i}"].append(h)
+    for h in hist:
+        grupos[h["clave"] or "SOLO|" + "|".join([h["familia"], norm(h["descripcion"])[:150], h["proveedor"], h["ruta_repo"], h["archivo_origen"]])].append(h)
+    # códigos estables (control C10): un material conserva su código aunque se regenere el catálogo
+    reg_ruta = PRECIOS / "catalogo_codigos.csv"
+    registro = {r["clave"]: r["codigo"] for r in csv.DictReader(open(reg_ruta, encoding="utf-8"))} if reg_ruta.exists() else {}
+    ultimo = max([int(c.split("-")[1]) for c in registro.values()] or [0])
+    for k in sorted(grupos, key=lambda k: (grupos[k][0]["familia"], k)):
+        if k not in registro:
+            ultimo += 1
+            registro[k] = f"{grupos[k][0]['familia']}-{ultimo:05d}"
+    with open(reg_ruta, "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["codigo", "clave"])
+        for k, c in sorted(registro.items(), key=lambda kv: kv[1]):
+            w.writerow([c, k])
+    # mediana por familia, tipo, Ø y unidad para detectar pesos tomados como dólares (control C3)
+    pares = defaultdict(list)
+    for h in hist:
+        pares[(h["familia"], h["atributos"].get("tipo", ""), h["atributos"].get("diametro", ""), h["unidad"])].append(h["precio_usd"])
     filas = []
-    for n, (k, hs) in enumerate(sorted(grupos.items(), key=lambda kv: (kv[1][0]["familia"], kv[0])), 1):
+    for k, hs in sorted(grupos.items(), key=lambda kv: registro[kv[0]]):
         hs.sort(key=lambda h: (h["fecha"], PRIORIDAD.get(h["tipo_precio"], 0)), reverse=True)
         u = hs[0]
         precios = [h["precio_usd"] for h in hs]
-        fila = {"codigo": f"{u['familia']}-{n:05d}", "familia": FAMILIAS[u["familia"]][0], "descripcion": u["descripcion"][:200],
+        alertas = []
+        if max(precios) > 3 * min(precios):
+            alertas.append(f"historial con precios muy distintos ({min(precios):,.2f} a {max(precios):,.2f}): revisar")
+        par = sorted(pares[(u["familia"], u["atributos"].get("tipo", ""), u["atributos"].get("diametro", ""), u["unidad"])])
+        if len(par) >= 3 and u["atributos"].get("tipo"):
+            med = par[len(par) // 2]
+            if u["precio_usd"] > 50 * med:
+                alertas.append(f"{u['precio_usd'] / med:,.0f} veces la mediana de piezas parecidas: ¿pesos tomados como dólares?")
+            elif u["precio_usd"] < med / 50:
+                alertas.append(f"1/{med / u['precio_usd']:,.0f} de la mediana de piezas parecidas: ¿precio mal leído?")
+        if not u["fecha"]:
+            alertas.append("sin fecha válida en el origen")
+        if "ambiguo" in u["nota"]:
+            alertas.append("número ambiguo en el origen")
+        fila = {"codigo": registro[k], "alerta": "; ".join(alertas), "familia": FAMILIAS[u["familia"]][0], "descripcion": u["descripcion"][:200],
                 "unidad": u["unidad"], "ultimo_precio_usd": u["precio_usd"], "iva": u["iva"], "fecha_ultimo_precio": u["fecha"], "tipo_precio": u["tipo_precio"],
                 "proveedor": u["proveedor"], "ruta_origen": u["ruta_origen"], "archivo_origen": u["archivo_origen"], "ruta_repo": u["ruta_repo"],
                 "precio_ajustado_hoy_usd": u["precio_ajustado_hoy_usd"], "precios_en_historial": len(hs), "precio_min_usd": min(precios),
@@ -554,7 +664,7 @@ def escribir_excel(filas):
         ws.auto_filter.ref = ws.dimensions
     base = ["codigo", "descripcion", "unidad", "ultimo_precio_usd", "iva", "fecha_ultimo_precio", "tipo_precio", "proveedor",
             "precio_ajustado_hoy_usd", "precios_en_historial", "precio_min_usd", "precio_max_usd", "ruta_origen", "archivo_origen", "ruta_repo",
-            "confianza_clasificacion"]
+            "confianza_clasificacion", "alerta"]
     hoja("Todos", ["familia"] + base, [[fl["familia"]] + [fl[c] for c in base] for fl in filas])
     for k, (nombre, cols, _) in FAMILIAS.items():
         fs = [fl for fl in filas if fl["_fam"] == k]

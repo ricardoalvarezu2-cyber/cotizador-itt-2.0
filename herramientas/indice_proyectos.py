@@ -44,7 +44,7 @@ tipo incluye incluido incluida item items unidad unidades cotizacion cotizar ofe
 cliente proyecto equipo equipos provision fabricacion construccion suministro segun detalle rev revision doc nro numero""".split())
 
 
-FRACCIONES = {"½": " 1/2", "¼": " 1/4", "¾": " 3/4", "⅛": " 1/8", "⅜": " 3/8", "⅝": " 5/8", "⅞": " 7/8", "\u2044": "/", "ø": " diam ", "Ø": " diam ", "⌀": " diam "}
+FRACCIONES = {"½": " 1/2", "¼": " 1/4", "¾": " 3/4", "⅛": " 1/8", "⅜": " 3/8", "⅝": " 5/8", "⅞": " 7/8", "\u2044": "/", "ø": " diam ", "Ø": " diam ", "⌀": " diam ", "°": " grados ", "º": " grados "}  # "codo 45° 1/2"" no es 45,5"
 
 
 def norm(t):

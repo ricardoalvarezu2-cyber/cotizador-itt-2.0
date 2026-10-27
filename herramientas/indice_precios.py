@@ -38,7 +38,7 @@ def main():
     for r in leer("precios_componentes.csv"):
         detalle = " ".join(x for x in (r["descripcion"], r["detalle"], r["dimension"], r["tipo"], r["schedule"],
                                         r["serie"], r["material"], r["norma"]) if x and x != "-")
-        filas.append([r["fecha"], "base_componentes_2025", r["proveedor"], r["rubro"], detalle, r["precio_usd"], "USD",
+        filas.append([r["fecha"], "base_componentes_2025", r["proveedor"], r["rubro"], detalle, r["precio"], r["moneda"],
                       r["unidad"], r["plazo_entrega"], r["observacion"]])
     for r in leer("lista_renar_2025-12.csv"):
         filas.append(["2025-12-26", "lista_renard", "Renard", r["categoria"], r["producto"], r["precio_usd"], "USD",

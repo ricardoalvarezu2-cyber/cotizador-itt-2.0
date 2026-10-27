@@ -55,3 +55,23 @@ Al revisar el catálogo antes de agregar la marca aparecieron errores de lectura
 | 26 | Compras del stock de 2009 mostradas como "último precio" | Se tomaba siempre la última compra | Compras anteriores a 2022 no se usan; precios en 0 se descartan |
 
 **Lección:** un catálogo armado por reglas también se revisa: listar los grupos que juntan precios muy distintos (más de 2,5 veces) y mirar cada familia antes de usarlo.
+
+### Auditoría independiente del catálogo (27/10/2026)
+
+Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-27_catalogo_materiales.md`). **Ningún precio mal leído por formato** (×10, ×100, ×1000), pero sí:
+
+| # | Error | Corrección |
+|---|---|---|
+| 27 | U-bolts en **pesos** cargados como USD 16.114 y 36.907 (eran USD 11 y 26) | Columna `moneda` en la base de componentes; alerta si un precio es 50 veces la mediana de piezas parecidas |
+| 28 | Renglones de proveedores con varios ítems: el precio de una tee quedaba como tapón; el de un anillo BX153, como junta 3" #600 | Se toma solo el tramo del renglón que corresponde al "c/u" |
+| 29 | "Codo 45° 1/2"" leído como Ø 45,5" (27 accesorios); casquete "36" x 3/8"" con 3/8" como segundo Ø | "°" se lee como grados; Ø solo de la lista de NPS; segundo Ø solo en reducciones y bujes |
+| 30 | A694 F60 leído como F65; "60 días FF" (fecha de factura) leído como cara plana; SW de junta espiralada leído como socket weld | Grado capturado; FF de pago ignorado; SW no es extremo en juntas |
+| 31 | 88 caños Renard sin "sin costura" y 107 con Ø "OD 48,3 mm" que no se cruzaban con los de pulgadas | "s/costura"; tabla ASME B36.10 de OD → NPS y espesor → schedule |
+| 32 | 7 precios de Cintolo de 2026 con fecha por defecto 2025-08-01; fechas como "16/19/2025" o "02/07/025" | Lector único de fechas; nunca una fecha por defecto |
+| 33 | Mano de obra (Ledesma, GP, Sandri) cargada como material | Los servicios no entran al catálogo de materiales |
+| 34 | Chapas del stock en "USD/m²" que eran USD por hoja de 9 m² | Unidad "hoja" |
+| 35 | "26,338 c/u" puede ser 26,34 o 26.338 | Si es ambiguo, se decide con el total del renglón (2 × 26.338 = 52.676); si no se puede, queda con alerta |
+| 36 | Los códigos del catálogo cambiaban en cada regeneración | Registro fijo `precios/catalogo_codigos.csv` |
+| 37 | Tipo de cambio de 2026 interpolado, 0,5–3,5% distinto del citado en los documentos | Anclas reales en `indices_inflacion.py`; la CAPEX pasa de 7.639,86 a 7.620,86 |
+
+**Controles nuevos:** un solo lector de números y fechas (`herramientas/numeros.py`); columna `alerta` en el catálogo; test de regresión `herramientas/test_catalogo.py`, que hay que correr después de tocar el catálogo.

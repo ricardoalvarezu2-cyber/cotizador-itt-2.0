@@ -32,7 +32,11 @@ TC = [
     ((2024, 10), 1011.5, "BNA 31/10/2024 (dolarhistorico.com)"),
     ((2025, 10), 1475.0, "BNA 31/10/2025 (dolarhistorico.com)"),
     ((2025, 12), 1480.0, "BNA 30/12/2025 (mdzol.com)"),
-    ((2026, 3), 1480.0 * 0.964, "Derivado: -3,6% nominal en el 1er trimestre 2026 (Sistémica / iProfesional)"),
+    ((2026, 2), 1395.0, "BNA 13/02/2026, citado en cotizaciones de proveedores (auditoría del catálogo 27/10/2026)"),
+    ((2026, 5), 1411.0, "BNA 27/05/2026, citado en cotizaciones de proveedores (auditoría 27/10/2026)"),
+    ((2026, 6), 1441.5, "BNA 18/06/2026, citado en cotizaciones de proveedores (auditoría 27/10/2026)"),
+    ((2026, 7), 1488.5, "BNA 06/07/2026, citado en cotizaciones de proveedores (auditoría 27/10/2026)"),
+    ((2026, 8), 1492.0, "BNA 14/08/2026, citado en cotizaciones de proveedores (auditoría 27/10/2026)"),
     ((2026, 10), 1550.0, "BNA 23/10/2026 (dolarhistorico.com)"),
 ]
 # CPI EE.UU. (BLS), base oct-2024 = 100

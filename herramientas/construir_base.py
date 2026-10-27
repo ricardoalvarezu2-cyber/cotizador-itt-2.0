@@ -13,6 +13,9 @@ from datetime import datetime
 from pathlib import Path
 
 import openpyxl
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from numeros import fecha_iso, numero as _numero  # noqa: E402
 import xlrd
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -63,24 +66,8 @@ def sin_acentos(s: str) -> str:
 
 
 def numero(v):
-    """Convierte números escritos como '1.096.71', '34,68' o '1,234.5' a float."""
-    if isinstance(v, (int, float)):
-        return float(v)
-    s = texto(v).replace("U$S", "").replace("USD", "").replace("$", "").strip()
-    if not s or not re.search(r"\d", s):
-        return None
-    s = re.sub(r"[^\d.,-]", "", s)
-    if re.fullmatch(r"-?[1-9]\d{0,2}[.,]\d{3}", s):
-        s = re.sub(r"[.,]", "", s)  # '4.550 + IVA' son 4550, no 4,55
-    elif s.count(",") == 1 and s.count(".") == 0:
-        s = s.replace(",", ".")
-    elif s.count(".") > 1 or (s.count(",") and s.count(".")):
-        ultimo = max(s.rfind("."), s.rfind(","))
-        s = re.sub(r"[.,]", "", s[:ultimo]) + "." + s[ultimo + 1:]
-    try:
-        return float(s)
-    except ValueError:
-        return None
+    """Lector único de números: herramientas/numeros.py (4,413.92 · 4.413,92 · 28.500 · 1.096.71 · 0,904)."""
+    return _numero(v)
 
 
 def fecha(v) -> str:
@@ -248,6 +235,7 @@ def precios_elementos():
                     break
         if "precio_usd" not in cols:
             continue
+        enc_precio = sin_acentos(texto(ws.cell(enc, cols["precio_usd"]).value).upper())
         ultima = ""
         for r in range(enc + 1, ws.max_row + 1):
             d = texto(ws.cell(r, desc[0]).value)
@@ -258,6 +246,18 @@ def precios_elementos():
             detalle = texto(ws.cell(r, desc[1]).value) if len(desc) > 1 else ""
             valor = {k: ws.cell(r, c).value for k, c in cols.items()}
             item, dim = ultima, texto(valor.get("dimension"))
+            # moneda: "$16.114,07 + IVA" en una hoja cuyo encabezado dice solo "COSTO" son pesos (auditoría 27/10/2026)
+            crudo = texto(ws.cell(r, cols["precio_usd"]).value)
+            en_usd = re.search(r"U\$|USD|U\$S|DOLAR", crudo.upper()) or re.search(r"U\$|USD|DOLAR", enc_precio)
+            moneda = "USD" if en_usd or not re.search(r"\$", crudo) else "ARS"
+            # fecha: la de su columna; si no es válida, la primera dd/mm/aa de la fila (columnas corridas); nunca por defecto
+            # "Cintolo cot 11/02/26" en la columna proveedor manda: es la fecha de la cotización
+            f_iso = fecha_iso(valor.get("proveedor")) or fecha_iso(valor.get("fecha"))
+            if not f_iso:
+                f_iso = next((fecha_iso(c.value) for c in ws[r] if fecha_iso(c.value)), "")
+            obs = texto(valor.get("observacion"))
+            if not f_iso and texto(valor.get("fecha")):
+                obs = "; ".join(x for x in [obs, f"fecha ilegible en el origen: '{texto(valor.get('fecha'))}'"] if x)
             if detalle:
                 # Hojas con dos columnas DESCRIPCION (bombas, caja porta orificio, anillo de purga, válvulas): la primera
                 # y la dimensión son un modelo copiado de otra hoja; lo cotizado es la segunda.
@@ -265,14 +265,14 @@ def precios_elementos():
             filas.append([
                 ws.title.strip(), item, detalle, dim, texto(valor.get("tipo")),
                 texto(valor.get("schedule")), texto(valor.get("serie")), texto(valor.get("material")),
-                texto(valor.get("norma")), texto(valor.get("unidad")), round(precio, 2),
-                texto(valor.get("proveedor")), fecha(valor.get("fecha")), texto(valor.get("plazo_entrega")),
+                texto(valor.get("norma")), texto(valor.get("unidad")), round(precio, 4), moneda,
+                texto(valor.get("proveedor")), f_iso, texto(valor.get("plazo_entrega")),
                 texto(valor.get("en_stock")), texto(valor.get("cotizacion_proveedor")),
-                texto(valor.get("oferta_valida")), texto(valor.get("observacion")),
+                texto(valor.get("oferta_valida")), obs,
             ])
     escribir("precios/precios_componentes.csv",
              ["rubro", "descripcion", "detalle", "dimension", "tipo", "schedule", "serie", "material", "norma",
-              "unidad", "precio_usd", "proveedor", "fecha", "plazo_entrega", "en_stock", "cotizacion_proveedor",
+              "unidad", "precio", "moneda", "proveedor", "fecha", "plazo_entrega", "en_stock", "cotizacion_proveedor",
               "oferta_valida", "observacion"], filas)
 
 
