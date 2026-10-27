@@ -2,7 +2,7 @@
 
 Registro de cómo se armó esta cotización, en orden, con las decisiones y los errores. Es el **caso modelo** del cotizador: la [guía](../../conocimiento/guia_cotizacion.md) y el [procedimiento](../../conocimiento/procedimiento_cotizacion.md) salieron de acá.
 
-**Estado al 27/10/2026:** borrador. La revisión independiente se hizo y encontró 3 críticos, así que **no pasa a "revisado"** hasta tener los precios de Compras. Precio provisorio USD 7.620,86 por puente (15.241,72 por 2, sin IVA), con el 63% del costo estimado. 75 días desde la OC, EXW Quilmes. **No enviado.**
+**Estado al 27/10/2026:** borrador. La revisión independiente se hizo y encontró 3 críticos, así que **no pasa a "revisado"** hasta tener los precios de Compras. Precio provisorio USD 7.620,59 por puente (15.241,18 por 2, sin IVA), con el 63% del costo estimado. 75 días desde la OC, EXW Quilmes. **No enviado.**
 
 ## Datos del pedido
 
@@ -35,6 +35,7 @@ Registro de cómo se armó esta cotización, en orden, con las decisiones y los 
 | ~20:30 | **Revisión independiente** (agente que no armó el cómputo; verificó 8 precios contra el original) | 3 críticos: plazo real 75 días, esféricas sin cotización metal-metal (+30% inventado), retención trim 8 y no 316. Mayores: manómetro NPT-H, extensible sin metal-metal, junta BW/NPT, buje BSPT, revestimiento de juntas sin costear, estimados reales ~33%, cotizaciones vencidas, diferencia sin explicar con antecedentes | — |
 | ~20:45 | Correcciones de la revisión | Precios sin respaldo pasan a estimado; plazo 75 días; manga termocontraíble (14c); desvíos y oferta corregidos (fuera de término, [a confirmar]); NPT-H; Morken; plantilla de oferta limpia → **7.639,86** | este commit |
 | 27/10 noche | Auditoría del catálogo de materiales: TC BNA reales de 2026 en `indices_ajuste.csv` | El índice de costo local de abr-2026 sube de 106,6 a 109,5: menos ajuste para el armado y la pintura → **7.620,86** | ver git log |
+| 27/10 noche | Tabla de dólar mensual 2024–2026 y decisión: promedio mensual BNA billete vendedor | `indices_ajuste.csv` con promedios reales desde ene-2024 → **7.620,59** | ver git log |
 
 ## Decisiones y criterios
 
@@ -64,7 +65,8 @@ Están en [`errores_y_lecciones.md`](../../conocimiento/errores_y_lecciones.md):
 | Revisión contra el plano | 7.302 | + 2 soldaduras de cupla |
 | Con ajuste por inflación | 7.540,63 | Precios llevados a oct-2026 |
 | Después de la revisión independiente | 7.639,86 | + manga termocontraíble en juntas; 63% del costo estimado hasta que Compras responda |
-| **Tipo de cambio real 2026 (auditoría del catálogo)** | **7.620,86** | Los TC BNA de feb a ago-2026 citados en documentos (1.395 a 1.492) reemplazan a los interpolados: el ajuste por inflación de la MO de abr-2026 baja (−19 por puente) |
+| Tipo de cambio de la auditoría (error: eran del dólar divisa/mayorista) | 7.620,86 | Se mezclaron dos cotizaciones del dólar en la tabla de inflación |
+| **Dólar = promedio mensual BNA billete vendedor (decisión de Matías)** | **7.620,59** | Promedios reales de cada mes en lugar de valores interpolados: el índice de costo local de abr-2026 sube, y el ajuste del armado y la pintura baja |
 
 **Comparación con antecedentes (P8), pendiente de cerrar.** El precio está 23% arriba de la OE 332-24 (6.200, 2024, otro puente: bomba electrosumergible) y bastante más arriba que APSA/15 sin el BOP (~5.100). Por puente, este equipo lleva rubros que esos antecedentes no tenían o que tenían más baratos: 2 retenciones S600 (~1.080), 2 extensibles metal-metal (~510), junta monolítica (~320), 2 bloqueos y purgas de acero inoxidable (~280), 2 manómetros (~180), caño revestido con manga (~225) y el ajuste por inflación (+3%). Con los precios reales de Compras hay que rehacer la comparación rubro por rubro. Si sigue más de 15% arriba, la dirección decide si se ajusta el factor.
 

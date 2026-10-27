@@ -18,30 +18,39 @@ RAIZ = Path(__file__).resolve().parent.parent
 SALIDA = RAIZ / "conocimiento" / "costos" / "indices_ajuste.csv"
 
 # IPC Argentina (INDEC), base oct-2024 = 100. (mes, valor, fuente)
+_JUL24 = 100 / (1.042 * 1.035 * 1.027)
 IPC = [
-    ((2024, 7), 100 / (1.042 * 1.035 * 1.027), "INDEC: ago-24 4,2%, sep-24 3,5%, oct-24 2,7% mensual"),
+    ((2024, 1), _JUL24 / 1.040 / 1.046 / 1.042 / 1.088 / 1.110 / 1.132, "INDEC mensual 2024: feb 13,2%, mar 11,0%, abr 8,8%, may 4,2%, jun 4,6%, jul 4,0%"),
+    ((2024, 2), _JUL24 / 1.040 / 1.046 / 1.042 / 1.088 / 1.110, "INDEC mensual 2024"),
+    ((2024, 3), _JUL24 / 1.040 / 1.046 / 1.042 / 1.088, "INDEC mensual 2024"),
+    ((2024, 4), _JUL24 / 1.040 / 1.046 / 1.042, "INDEC mensual 2024"),
+    ((2024, 5), _JUL24 / 1.040 / 1.046, "INDEC mensual 2024"),
+    ((2024, 6), _JUL24 / 1.040, "INDEC mensual 2024"),
+    ((2024, 7), _JUL24, "INDEC: ago-24 4,2%, sep-24 3,5%, oct-24 2,7% mensual"),
     ((2024, 10), 100.0, "Base"),
     ((2025, 10), 131.3, "INDEC: 31,3% interanual a oct-2025 (12/11/2025)"),
     ((2025, 12), 171.2 / 1.236, "Derivado: acumulado ene-sep 2026 23,6% (INDEC 13/10/2026)"),
     ((2026, 9), 131.3 / 1.023 * 1.334, "INDEC: 33,4% interanual a sep-2026; oct-25 2,3% mensual"),
     ((2026, 10), 131.3 / 1.023 * 1.334 * 1.019, "ESTIMADO: oct-2026 igual a sep-2026 (1,9%), sin dato publicado"),
 ]
-# Dólar BNA vendedor, fin de mes o último dato del mes
-TC = [
-    ((2024, 7), 965.0, "APROXIMADO: BNA vendedor fin de jul-2024"),
-    ((2024, 10), 1011.5, "BNA 31/10/2024 (dolarhistorico.com)"),
-    ((2025, 10), 1475.0, "BNA 31/10/2025 (dolarhistorico.com)"),
-    ((2025, 12), 1480.0, "BNA 30/12/2025 (mdzol.com)"),
-    ((2026, 2), 1395.0, "BNA 13/02/2026, citado en cotizaciones de proveedores (auditoría del catálogo 27/10/2026)"),
-    ((2026, 5), 1411.0, "BNA 27/05/2026, citado en cotizaciones de proveedores (auditoría 27/10/2026)"),
-    ((2026, 6), 1441.5, "BNA 18/06/2026, citado en cotizaciones de proveedores (auditoría 27/10/2026)"),
-    ((2026, 7), 1488.5, "BNA 06/07/2026, citado en cotizaciones de proveedores (auditoría 27/10/2026)"),
-    ((2026, 8), 1492.0, "BNA 14/08/2026, citado en cotizaciones de proveedores (auditoría 27/10/2026)"),
-    ((2026, 10), 1550.0, "BNA 23/10/2026 (dolarhistorico.com)"),
-]
+# Dólar: PROMEDIO MENSUAL del oficial BNA billete, precio de venta (decisión de Matías, 27/10/2026), de
+# conocimiento/costos/dolar_mensual.csv (datos diarios; se actualiza con herramientas/dolar_mensual.py).
+# Es lo que usan los documentos (BNA vendedor) y, para precios en pesos llevados a hoy, el dólar del pasado se cancela.
+DOLAR_MENSUAL = RAIZ / "conocimiento" / "costos" / "dolar_mensual.csv"
+
+
+def tc_mensual():
+    import csv as _csv
+    return [((int(r["mes"][:4]), int(r["mes"][5:7])), float(r["oficial_promedio"]),
+             f"promedio BNA billete vendedor ({r['dias_con_dato']} días, último {r['ultimo_dato']})")
+            for r in _csv.DictReader(open(DOLAR_MENSUAL, encoding="utf-8")) if r["oficial_promedio"]]
+
+
 # CPI EE.UU. (BLS), base oct-2024 = 100
+_JUL24C = 100 / 1.003 / 1.002 / 1.002
 CPI = [
-    ((2024, 7), 100 / 1.003 / 1.002 / 1.002, "BLS: ~0,2%-0,3% mensual ago-oct 2024"),
+    ((2024, 1), _JUL24C / 1.002 / 0.999 / 1.000 / 1.003 / 1.004 / 1.004, "BLS mensual 2024: feb 0,4%, mar 0,4%, abr 0,3%, may 0,0%, jun -0,1%, jul 0,2%"),
+    ((2024, 7), _JUL24C, "BLS: ~0,2%-0,3% mensual ago-oct 2024"),
     ((2024, 10), 100.0, "Base"),
     ((2025, 9), 100 * 1.03 ** (11 / 12), "BLS: ~3,0% interanual a sep-2025"),
     ((2026, 9), 100 * 1.03 ** (11 / 12) * 1.037, "BLS: 3,7% interanual a sep-2026 (14/10/2026)"),
@@ -78,8 +87,8 @@ def serie(anclas, inicio, fin):
 
 
 def main():
-    ini, fin = (2024, 7), (2026, 10)
-    ipc, tc, cpi = serie(IPC, ini, fin), serie(TC, ini, fin), serie(CPI, ini, fin)
+    ini, fin = (2024, 1), (2026, 10)
+    ipc, tc, cpi = serie(IPC, ini, fin), serie(tc_mensual(), ini, fin), serie(CPI, ini, fin)
     base_local = ipc[(2024, 10)][0] / tc[(2024, 10)][0]
     with open(SALIDA, "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)

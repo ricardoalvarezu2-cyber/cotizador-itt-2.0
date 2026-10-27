@@ -75,3 +75,4 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 | 37 | Tipo de cambio de 2026 interpolado, 0,5–3,5% distinto del citado en los documentos | Anclas reales en `indices_inflacion.py`; la CAPEX pasa de 7.639,86 a 7.620,86 |
 
 **Controles nuevos:** un solo lector de números y fechas (`herramientas/numeros.py`); columna `alerta` en el catálogo; test de regresión `herramientas/test_catalogo.py`, que hay que correr después de tocar el catálogo.
+| 38 | Al cargar los tipos de cambio de 2026 de la auditoría se mezcló el dólar **divisa/mayorista** (1.395, 1.411…) con una serie de **BNA billete**; la CAPEX bajó a 7.620,86 por eso | Una sola serie: promedio mensual BNA billete vendedor (`dolar_mensual.csv`), decisión de Matías. Antes de cargar un dato en una serie, verificar que sea la misma cotización |

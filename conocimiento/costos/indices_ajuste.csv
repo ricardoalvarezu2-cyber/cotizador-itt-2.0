@@ -1,29 +1,35 @@
 mes,ipc_argentina,dolar_bna,indice_local_usd,cpi_eeuu,origen_ipc,origen_dolar,origen_cpi
-2024-07-01,90.286,965.0,94.637,99.303,"dato: INDEC: ago-24 4,2%, sep-24 3,5%, oct-24 2,7% mensual",dato: APROXIMADO: BNA vendedor fin de jul-2024,"dato: BLS: ~0,2%-0,3% mensual ago-oct 2024"
-2024-08-01,93.415,980.26,96.392,99.535,interpolado,interpolado,interpolado
-2024-09-01,96.651,995.76,98.179,99.767,interpolado,interpolado,interpolado
-2024-10-01,100.0,1011.5,100.0,100.0,dato: Base,dato: BNA 31/10/2024 (dolarhistorico.com),dato: Base
-2024-11-01,102.295,1043.8,99.13,100.247,interpolado,interpolado,interpolado
-2024-12-01,104.643,1077.14,98.267,100.494,interpolado,interpolado,interpolado
-2025-01-01,107.045,1111.53,97.411,100.742,interpolado,interpolado,interpolado
-2025-02-01,109.502,1147.03,96.563,100.99,interpolado,interpolado,interpolado
-2025-03-01,112.015,1183.66,95.723,101.239,interpolado,interpolado,interpolado
-2025-04-01,114.586,1221.46,94.89,101.489,interpolado,interpolado,interpolado
-2025-05-01,117.216,1260.47,94.064,101.739,interpolado,interpolado,interpolado
-2025-06-01,119.907,1300.72,93.245,101.99,interpolado,interpolado,interpolado
-2025-07-01,122.659,1342.26,92.433,102.242,interpolado,interpolado,interpolado
-2025-08-01,125.474,1385.12,91.629,102.494,interpolado,interpolado,interpolado
-2025-09-01,128.354,1429.35,90.831,102.747,interpolado,interpolado,"dato: BLS: ~3,0% interanual a sep-2025"
-2025-10-01,131.3,1475.0,90.041,103.058,"dato: INDEC: 31,3% interanual a oct-2025 (12/11/2025)",dato: BNA 31/10/2025 (dolarhistorico.com),interpolado
-2025-11-01,134.857,1477.5,92.324,103.371,interpolado,interpolado,interpolado
-2025-12-01,138.511,1480.0,94.665,103.684,"dato: Derivado: acumulado ene-sep 2026 23,6% (INDEC 13/10/2026)",dato: BNA 30/12/2025 (mdzol.com),interpolado
-2026-01-01,141.812,1436.87,99.83,103.998,interpolado,interpolado,interpolado
-2026-02-01,145.192,1395.0,105.277,104.314,interpolado,"dato: BNA 13/02/2026, citado en cotizaciones de proveedores (auditoría del catálogo 27/10/2026)",interpolado
-2026-03-01,148.652,1400.31,107.377,104.63,interpolado,interpolado,interpolado
-2026-04-01,152.195,1405.65,109.519,104.947,interpolado,interpolado,interpolado
-2026-05-01,155.822,1411.0,111.704,105.266,interpolado,"dato: BNA 27/05/2026, citado en cotizaciones de proveedores (auditoría 27/10/2026)",interpolado
-2026-06-01,159.536,1441.5,111.946,105.585,interpolado,"dato: BNA 18/06/2026, citado en cotizaciones de proveedores (auditoría 27/10/2026)",interpolado
-2026-07-01,163.338,1488.5,110.995,105.905,interpolado,"dato: BNA 06/07/2026, citado en cotizaciones de proveedores (auditoría 27/10/2026)",interpolado
-2026-08-01,167.231,1492.0,113.374,106.226,interpolado,"dato: BNA 14/08/2026, citado en cotizaciones de proveedores (auditoría 27/10/2026)",interpolado
-2026-09-01,171.216,1520.72,113.883,106.548,"dato: INDEC: 33,4% interanual a sep-2026; oct-25 2,3% mensual",interpolado,"dato: BLS: 3,7% interanual a sep-2026 (14/10/2026)"
-2026-10-01,174.469,1550.0,113.855,106.871,"dato: ESTIMADO: oct-2026 igual a sep-2026 (1,9%), sin dato publicado",dato: BNA 23/10/2026 (dolarhistorico.com),"dato: ESTIMADO: oct-2026 al ritmo de 3,7% anual"
+2024-01-01,58.263,837.4,69.64,98.121,"dato: INDEC mensual 2024: feb 13,2%, mar 11,0%, abr 8,8%, may 4,2%, jun 4,6%, jul 4,0%","dato: promedio BNA billete vendedor (31 días, último 2024-01-31)","dato: BLS mensual 2024: feb 0,4%, mar 0,4%, abr 0,3%, may 0,0%, jun -0,1%, jul 0,2%"
+2024-02-01,65.953,853.02,77.389,98.317,dato: INDEC mensual 2024,"dato: promedio BNA billete vendedor (29 días, último 2024-02-29)",interpolado
+2024-03-01,73.208,869.55,84.268,98.514,dato: INDEC mensual 2024,"dato: promedio BNA billete vendedor (31 días, último 2024-03-31)",interpolado
+2024-04-01,79.651,887.07,89.873,98.71,dato: INDEC mensual 2024,"dato: promedio BNA billete vendedor (30 días, último 2024-04-30)",interpolado
+2024-05-01,82.996,904.79,91.814,98.908,dato: INDEC mensual 2024,"dato: promedio BNA billete vendedor (31 días, último 2024-05-31)",interpolado
+2024-06-01,86.814,922.38,94.206,99.105,dato: INDEC mensual 2024,"dato: promedio BNA billete vendedor (30 días, último 2024-06-30)",interpolado
+2024-07-01,90.286,941.73,95.961,99.303,"dato: INDEC: ago-24 4,2%, sep-24 3,5%, oct-24 2,7% mensual","dato: promedio BNA billete vendedor (31 días, último 2024-07-31)","dato: BLS: ~0,2%-0,3% mensual ago-oct 2024"
+2024-08-01,93.415,961.21,97.274,99.535,interpolado,"dato: promedio BNA billete vendedor (31 días, último 2024-08-31)",interpolado
+2024-09-01,96.651,981.27,98.587,99.767,interpolado,"dato: promedio BNA billete vendedor (30 días, último 2024-09-30)",interpolado
+2024-10-01,100.0,1000.92,100.0,100.0,dato: Base,"dato: promedio BNA billete vendedor (31 días, último 2024-10-31)",dato: Base
+2024-11-01,102.295,1020.92,100.291,100.247,interpolado,"dato: promedio BNA billete vendedor (30 días, último 2024-11-30)",interpolado
+2024-12-01,104.643,1041.55,100.561,100.494,interpolado,"dato: promedio BNA billete vendedor (31 días, último 2024-12-31)",interpolado
+2025-01-01,107.045,1062.48,100.843,100.742,interpolado,"dato: promedio BNA billete vendedor (31 días, último 2025-01-31)",interpolado
+2025-02-01,109.502,1077.76,101.695,100.99,interpolado,"dato: promedio BNA billete vendedor (28 días, último 2025-02-28)",interpolado
+2025-03-01,112.015,1088.38,103.014,101.239,interpolado,"dato: promedio BNA billete vendedor (31 días, último 2025-03-31)",interpolado
+2025-04-01,114.586,1140.9,100.527,101.489,interpolado,"dato: promedio BNA billete vendedor (30 días, último 2025-04-30)",interpolado
+2025-05-01,117.216,1166.29,100.596,101.739,interpolado,"dato: promedio BNA billete vendedor (31 días, último 2025-05-31)",interpolado
+2025-06-01,119.907,1196.17,100.334,101.99,interpolado,"dato: promedio BNA billete vendedor (30 días, último 2025-06-30)",interpolado
+2025-07-01,122.659,1284.03,95.614,102.242,interpolado,"dato: promedio BNA billete vendedor (31 días, último 2025-07-31)",interpolado
+2025-08-01,125.474,1340.65,93.678,102.494,interpolado,"dato: promedio BNA billete vendedor (31 días, último 2025-08-31)",interpolado
+2025-09-01,128.354,1420.5,90.441,102.747,interpolado,"dato: promedio BNA billete vendedor (30 días, último 2025-09-30)","dato: BLS: ~3,0% interanual a sep-2025"
+2025-10-01,131.3,1463.39,89.806,103.058,"dato: INDEC: 31,3% interanual a oct-2025 (12/11/2025)","dato: promedio BNA billete vendedor (31 días, último 2025-10-31)",interpolado
+2025-11-01,134.857,1453.67,92.856,103.371,interpolado,"dato: promedio BNA billete vendedor (30 días, último 2025-11-30)",interpolado
+2025-12-01,138.511,1471.13,94.24,103.684,"dato: Derivado: acumulado ene-sep 2026 23,6% (INDEC 13/10/2026)","dato: promedio BNA billete vendedor (31 días, último 2025-12-31)",interpolado
+2026-01-01,141.812,1472.74,96.38,103.998,interpolado,"dato: promedio BNA billete vendedor (31 días, último 2026-01-31)",interpolado
+2026-02-01,145.192,1426.96,101.843,104.314,interpolado,"dato: promedio BNA billete vendedor (28 días, último 2026-02-28)",interpolado
+2026-03-01,148.652,1416.29,105.056,104.63,interpolado,"dato: promedio BNA billete vendedor (31 días, último 2026-03-31)",interpolado
+2026-04-01,152.195,1406.17,108.333,104.947,interpolado,"dato: promedio BNA billete vendedor (30 días, último 2026-04-30)",interpolado
+2026-05-01,155.822,1420.16,109.823,105.266,interpolado,"dato: promedio BNA billete vendedor (31 días, último 2026-05-31)",interpolado
+2026-06-01,159.536,1469.63,108.655,105.585,interpolado,"dato: promedio BNA billete vendedor (30 días, último 2026-06-30)",interpolado
+2026-07-01,163.338,1508.71,108.363,105.905,interpolado,"dato: promedio BNA billete vendedor (31 días, último 2026-07-31)",interpolado
+2026-08-01,167.231,1520.16,110.11,106.226,interpolado,"dato: promedio BNA billete vendedor (31 días, último 2026-08-31)",interpolado
+2026-09-01,171.216,1535.0,111.644,106.548,"dato: INDEC: 33,4% interanual a sep-2026; oct-25 2,3% mensual","dato: promedio BNA billete vendedor (30 días, último 2026-09-30)","dato: BLS: 3,7% interanual a sep-2026 (14/10/2026)"
+2026-10-01,174.469,1540.74,113.342,106.871,"dato: ESTIMADO: oct-2026 igual a sep-2026 (1,9%), sin dato publicado","dato: promedio BNA billete vendedor (27 días, último 2026-10-27)","dato: ESTIMADO: oct-2026 al ritmo de 3,7% anual"

@@ -80,7 +80,7 @@ Todos los archivos de ITT revisados para armar esta base, en orden cronológico 
 |---|---|---|---|
 | 13/10/2026 | IPC 12 meses a sep-2026: 33,4%; acumulado ene–sep 2026: 23,6% | INDEC (vía medios: Canal 26, El Economista, Dólar Hoy) | `costos/indices_ajuste.csv` |
 | 12/11/2025 | IPC 12 meses a oct-2025: 31,3% | INDEC (vía A24, Calcular Sueldo) | ídem |
-| 2024–2026 | Dólar BNA vendedor: 1.011,50 (31/10/2024), 1.475 (31/10/2025), 1.480 (30/12/2025), 1.550 (23/10/2026) | dolarhistorico.com, mdzol.com | ídem |
+| 2024–2026 | Dólar BNA vendedor: promedio mensual de datos diarios (`costos/dolar_mensual.csv`, api.argentinadatos.com). Reemplaza a los valores puntuales 1.011,50 (31/10/2024), 1.475 (31/10/2025), 1.480 (30/12/2025), 1.550 (23/10/2026) | ver "Dólar mensual" | ídem |
 | 14/10/2026 | CPI EE.UU. 12 meses a sep-2026: 3,7% | BLS (vía Trading Economics) | ídem |
 
 Los meses intermedios se interpolan. Octubre 2026 es estimado. Hay que actualizar la tabla cuando salgan los datos nuevos (`herramientas/indices_inflacion.py`).
@@ -89,7 +89,7 @@ Los meses intermedios se interpolan. Octubre 2026 es estimado. Hay que actualiza
 
 `costos/dolar_mensual.csv` y `.xlsx`: por mes desde ene-2024, pico (con fecha), mínimo, promedio y cierre del dólar oficial BNA billete vendedor, mayorista, MEP y blue, y la brecha blue/oficial. Datos diarios de api.argentinadatos.com, guardados en `fuentes_originales/indices/dolar_diario.csv`. Se rearma con `python herramientas/dolar_mensual.py`. Hasta el 14/04/2025 hubo cepo (brecha de 9% a 53%); desde mayo-2025 la brecha es menor al 2%.
 
-**Pendiente de decisión:** qué dólar se usa para pasar pesos a dólares en meses con cepo (blue u oficial) y si el índice de MO usa el mismo. Las anclas de 2026 que se cargaron en `indices_inflacion.py` desde la auditoría (1.395, 1.411, 1.441,5, 1.488,5, 1.492) son del dólar divisa/mayorista citado por proveedores, no del BNA billete del resto de la serie: hay que reemplazarlas cuando se decida el criterio.
+**Decisión de Matías (27/10/2026): para pasar pesos a dólares se usa el promedio mensual del dólar oficial BNA billete, precio de venta.** Si el documento dice su tipo de cambio, se usa ese. Fundamento: en todos los textos de cotizaciones, pliegos y OC no hay ninguna mención a MEP, blue ni CCL; cuando se aclara, es siempre BNA vendedor (divisa o billete). Para precios en pesos llevados a hoy con `indice_local_usd`, el dólar del pasado se cancela en la cuenta. `indices_ajuste.csv` toma ese promedio para todos los meses desde ene-2024 (reemplaza a las anclas interpoladas y a las del dólar divisa que se habían cargado por error). Riesgo que queda: datos que alguien pasó a dólares durante el cepo sin decir con qué tipo de cambio (costo hora de planta oct-2024, compras del stock 2022–2024).
 
 ## Faltantes conocidos
 

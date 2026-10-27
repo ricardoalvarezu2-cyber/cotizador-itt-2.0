@@ -571,7 +571,7 @@ def main():
         k = clave(fam, at, r["unidad"])
         hist.append({**r, "familia": fam, "atributos": at, "clave": k, "precio_usd": round(precio, 4),
                      "precio_ajustado_hoy_usd": round(precio * ref_cpi / cpi, 4),
-                     "nota": "; ".join(x for x in [nota, "ajuste parcial: fecha anterior a jul-2024" if viejo else "", r["extra"]] if x),
+                     "nota": "; ".join(x for x in [nota, "ajuste parcial: fecha anterior a ene-2024" if viejo else "", r["extra"]] if x),
                      "confianza_clasificacion": "alta" if k and len(at) >= 4 else ("media" if k else "baja")})
     grupos = defaultdict(list)
     for h in hist:
