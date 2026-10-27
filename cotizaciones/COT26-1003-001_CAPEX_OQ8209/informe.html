@@ -155,6 +155,7 @@ ol.lista,ul.lista{margin:0;padding-left:20px;display:flex;flex-direction:column;
     <li><b>Bloqueo y purga:</b> el precio de USD 197,71 era de un modelo de 3/4" y 6000 psi (Pluspetrol). Lo reemplacé por ABAC 1/2" AISI 316 a <b>USD 137</b> (PRES 24879).</li>
     <li><b>Junta monolítica:</b> pasa de USD 280 (feb-2026) a <b>315</b>, el precio más reciente de Duralitte (may-2026).</li>
     <li><b>Retención Danco:</b> el precio está en un WhatsApp de jun-2026: <b>unos USD 240, sin confirmar</b>, para WOG3000 (no S600). Queda como alternativa, no como precio de base.</li>
+    <li><b>Factores:</b> ahora son dos: materiales, y mano de obra y servicios. Los dos van en 1,35 como en la PRES 24879, donde la MO de Ledesma dentro del puente entró a 1,35. El 1,40 quedaba para MO vendida sola.</li>
     <li><b>Accesorios forjados:</b> ahora salen de la lista Renard (dic-2025), con su código. En el borrador estaban estimados.</li>
   </ul>
 </div>
@@ -189,8 +190,8 @@ ol.lista,ul.lista{margin:0;padding-left:20px;display:flex;flex-direction:column;
   <div class="sec-head"><h2>Parámetros</h2><span class="eyebrow">editables · se recalcula todo</span></div>
   <div class="params">
     <div class="param"><label for="pN">Cantidad de puentes</label><input type="number" id="pN" min="1" step="1"><small>Pedido: 2</small></div>
-    <div class="param"><label for="pFM">Factor materiales y servicios</label><input type="number" id="pFM" step="0.01"><small>ITT 1,35 · ganadas 2026: 1,28–1,35</small></div>
-    <div class="param"><label for="pFMO">Factor mano de obra</label><input type="number" id="pFMO" step="0.01"><small>1,40 como en la PRES 24879</small></div>
+    <div class="param"><label for="pFM">Factor de materiales</label><input type="number" id="pFM" step="0.01"><small>Materiales y contingencia. ITT 1,35 · ganadas 2026: 1,28–1,35</small></div>
+    <div class="param"><label for="pFMO">Factor de mano de obra y servicios</label><input type="number" id="pFMO" step="0.01"><small>Armado, soldadura, PH, pintura, calidad. 1,35 como en la PRES 24879; 1,40 si es MO sola</small></div>
     <div class="param"><label for="pCont">Contingencia materiales %</label><input type="number" id="pCont" step="1"><small>Cubre niples y precios estimados</small></div>
     <div class="param"><label for="pTrans">Flete a Comodoro</label><select id="pTrans"><option value="0">No incluido (EXW)</option><option value="1">Incluido en la oferta</option></select><small>Ver sección Transporte</small></div>
     <div class="param"><label for="pTC">Tipo de cambio ARS/USD</label><input type="number" id="pTC" step="1"><small>Supuesto. Cargar el BNA vendedor del día</small></div>
@@ -281,7 +282,7 @@ ol.lista,ul.lista{margin:0;padding-left:20px;display:flex;flex-direction:column;
   <div class="tbl"><table style="min-width:760px">
     <thead><tr><th>Carpeta / oferta</th><th>Fecha</th><th>Qué es</th><th class="n">Precio c/u</th><th>Qué se tomó</th></tr></thead>
     <tbody>
-      <tr><td><b>TAVAL/55</b> · PRES 24879 rev A (Tecpetrol)</td><td class="mono">22/04/2026</td><td>Puente de producción convencional para bombeo mecánico, planilla de costo completa</td><td class="n">costo 6.015</td><td><b>Modelo de la estructura de costo:</b> armado Ledesma 400, pintura 100, niples, bloqueo y purga ABAC 137, factores 1,35 y 1,40</td></tr>
+      <tr><td><b>TAVAL/55</b> · PRES 24879 rev A (Tecpetrol)</td><td class="mono">22/04/2026</td><td>Puente de producción convencional para bombeo mecánico, planilla de costo completa</td><td class="n">costo 6.015</td><td><b>Modelo de la estructura de costo:</b> armado Ledesma 400, pintura 100, niples, bloqueo y purga ABAC 137. Factor 1,35 sobre todo el puente, incluida la MO de Ledesma (el 1,40 se aplicó solo a la MO vendida aparte)</td></tr>
       <tr><td><b>APSA/15</b> · Capsa Capex, puentes AIB (OR 33661)</td><td class="mono">10–11/06/2026</td><td>7 puentes de producción con AIB para el mismo cliente. Ofertado USD 47.102,49, sin resultado</td><td class="n">≈ 6.729</td><td>Esféricas Indave, retención Ingeniería en Fluidos, uniones Adita, Danco, flete a Comodoro</td></tr>
       <tr><td><b>APSA/8</b> · OE 332-24 (Carlos Perea)</td><td class="mono">05/11/2024</td><td>5 puentes armados para bomba electrosumergible serie 1500 (doc. …-P-002 rev B)</td><td class="n">6.200</td><td>Condiciones: contado contra entrega, 45/60 días, entrega en planta ITT, validez 30 días</td></tr>
       <tr><td><b>APSA/3</b> · OE 150-22, planilla "Puente Producción 1500"</td><td class="mono">25/08/2022</td><td>5 puentes de producción serie 1500, costo 3.957 con factor 1,5</td><td class="n">5.935</td><td>Control de alcance: lleva soportes UPN, pintura 450 y MO 550</td></tr>
@@ -332,7 +333,7 @@ ol.lista,ul.lista{margin:0;padding-left:20px;display:flex;flex-direction:column;
 
 <script>
 (function(){
-const ORIG_PARAMS={N:2,FM:1.35,FMO:1.40,CONT:5,TRANS:0,TC:1450,TR_ARS:3500000,TR_EMB:40,TR_F:1.0};
+const ORIG_PARAMS={N:2,FM:1.35,FMO:1.35,CONT:5,TRANS:0,TC:1450,TR_ARS:3500000,TR_EMB:40,TR_F:1.0};
 // tipo: cot | lista | stock | ant | est
 function S(tipo,precio,who,from,fecha){return {tipo,precio,who,from,fecha}}
 const MAT=[
@@ -373,8 +374,8 @@ const SERV=[
 const TIPO={cot:['Cotización','c-cot'],lista:['Lista','c-lista'],stock:['Stock','c-stock'],ant:['Antecedente','c-ant'],est:['Estimado','c-est'],man:['Ajuste manual','c-man']};
 const KEY='cot26-1003-001:v1';
 let st=load();
-function fresh(){const r={p:{...ORIG_PARAMS},rows:{}};[...MAT,...SERV].forEach(x=>{r.rows[x.id]={cant:x.cant,precio:x.src[0].precio,si:0,man:null}});return r}
-function load(){try{const s=JSON.parse(localStorage.getItem(KEY));if(s&&s.rows&&s.p){const f=fresh();return {p:{...f.p,...s.p},rows:{...f.rows,...s.rows}}}}catch(e){}return fresh()}
+function fresh(){const r={v2:true,p:{...ORIG_PARAMS},rows:{}};[...MAT,...SERV].forEach(x=>{r.rows[x.id]={cant:x.cant,precio:x.src[0].precio,si:0,man:null}});return r}
+function load(){try{const s=JSON.parse(localStorage.getItem(KEY));if(s&&s.rows&&s.p){const f=fresh();const p={...f.p,...s.p};if(!s.v2)p.FMO=ORIG_PARAMS.FMO;return {v2:true,p,rows:{...f.rows,...s.rows}}}}catch(e){}return fresh()}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}}
 const fmt=(v,d=2)=>Number(v).toLocaleString('es-AR',{minimumFractionDigits:d,maximumFractionDigits:d});
 const usd=v=>'USD '+fmt(v,0);
@@ -406,7 +407,7 @@ function calc(){
   const cont=mat*p.CONT/100;
   let mo=0,serv=0;SERV.forEach(x=>{const v=st.rows[x.id].cant*st.rows[x.id].precio;if(x.grp==='mo')mo+=v;else serv+=v});
   const costo=mat+cont+mo+serv;
-  const precio=(mat+cont+serv)*p.FM+mo*p.FMO;
+  const precio=(mat+cont)*p.FM+(mo+serv)*p.FMO;
   const trCosto=p.TR_ARS/p.TC+p.TR_EMB;
   const trPrecio=trCosto*p.TR_F;
   const total=precio*p.N+(p.TRANS?trPrecio:0);
@@ -420,7 +421,7 @@ function renderNums(){
   $('tCosto').textContent=usd(c.costo);$('tCostoS').textContent=`materiales ${fmt(c.mat+c.cont,0)} · MO y servicios ${fmt(c.mo+c.serv,0)}`;
   $('tPrecio').textContent=usd(c.precio);$('tPrecioS').textContent=`factor efectivo ${fmt(c.precio/c.costo)} · margen ${fmt((1-c.costo/c.precio)*100,1)}%`;
   $('tTotal').textContent=usd(c.total);$('tTotalS').textContent=`${p.N} puentes${p.TRANS?' + flete':''} · más IVA 21%`;
-  const rows=[['Materiales',c.mat,p.FM],[`Contingencia ${fmt(p.CONT,0)}%`,c.cont,p.FM],['Procesos e insumos (PH, pintura, calidad, sellador)',c.serv,p.FM],['Mano de obra (armado y soldadura)',c.mo,p.FMO]];
+  const rows=[['Materiales',c.mat,p.FM],[`Contingencia ${fmt(p.CONT,0)}%`,c.cont,p.FM],['Mano de obra (armado y soldadura)',c.mo,p.FMO],['Servicios e insumos (PH, pintura, calidad, sellador)',c.serv,p.FMO]];
   document.querySelector('#tRes tbody').innerHTML=rows.map(r=>`<tr><td>${r[0]}</td><td class="n">${fmt(r[1])}</td><td class="n">${fmt(r[2])}</td><td class="n">${fmt(r[1]*r[2])}</td><td class="n">${fmt(r[1]*r[2]*p.N)}</td></tr>`).join('')+
    (p.TRANS?`<tr><td>Flete a Comodoro + embalaje (por envío)</td><td class="n">—</td><td class="n">${fmt(p.TR_F)}</td><td class="n">—</td><td class="n">${fmt(c.trPrecio)}</td></tr>`:'');
   document.querySelector('#tRes tfoot').innerHTML=`<tr><td>Total sin IVA</td><td class="n">${fmt(c.costo)}</td><td class="n">${fmt(c.precio/c.costo)}</td><td class="n">${fmt(c.precio)}</td><td class="n">${fmt(c.total)}</td></tr><tr><td class="small muted" colspan="5" style="font-weight:400">IVA 21%: USD ${fmt(c.total*0.21)} · Total con IVA: USD ${fmt(c.total*1.21)}</td></tr>`;
