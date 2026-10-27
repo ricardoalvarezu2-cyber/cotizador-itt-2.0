@@ -1,6 +1,7 @@
 # COT26-1003-001 Rev 0 — CAPEX S.A. — PDC OQ 8209 / OR 53081
 
-Estado: **borrador, sin enviar** (27/10/2026). Preparó: Matías Russo, con el cotizador.
+Estado: **borrador, sin revisar** (27/10/2026). Falta para pasar a "revisado": revisión independiente (P9.2) y confirmar los precios a actualizar.
+Control automático (`verificar_computo.py`, 27/10/2026): 0 errores y 27 avisos. Los avisos son soldaduras a confirmar entre taller y campo, modelos exigidos (ABAC, Duralite), 4 precios estimados (7% del costo directo) y precios de Renard y Provemet con más de 6 meses. Preparó: Matías Russo, con el cotizador.
 
 ## Pedido
 | Dato | Valor |

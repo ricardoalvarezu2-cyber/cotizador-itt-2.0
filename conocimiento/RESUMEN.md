@@ -52,6 +52,9 @@ Cómo se calcula cada rubro (pulgadas equivalentes, placas, superficie, kg): [`r
 
 ## Antes de enviar una oferta, revisar
 
+**Seguir [`procedimiento_cotizacion.md`](procedimiento_cotizacion.md) completo (P1–P10), con su lista de control, y correr `herramientas/verificar_computo.py`.** Los errores ya cometidos están en [`errores_y_lecciones.md`](errores_y_lecciones.md). Además:
+
+
 1. Que el plazo ofrecido cubra el ítem de material más largo.
 2. Que el factor efectivo, después de bonificaciones, no quede por debajo de ~1,28 sin decisión de la dirección.
 3. Comparar el precio con cotizaciones parecidas de `comercial/cotizaciones_2026.csv` y `comercial/ventas_2022-2023.csv`.

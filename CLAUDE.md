@@ -17,6 +17,17 @@
   - ID: `1FeaoYuehghEkgomXvcQqvjecoriK_4Wr`. Descarga directa (si el archivo está compartido con "cualquier persona con el enlace"): `curl -L -o t1.rar "https://drive.usercontent.google.com/download?id=1FeaoYuehghEkgomXvcQqvjecoriK_4Wr&export=download&confirm=t"` y extraer con `unrar-free -x`.
   - El texto extraído ya está en `fuentes_originales/ofertas_texto/`; el RAR hace falta solo para releer un original (escaneos, adjuntos).
 
+## Procedimiento de cotización (obligatorio)
+- Toda cotización sigue `conocimiento/procedimiento_cotizacion.md` (pasos P1–P10). Se escribió después de los errores de la COT26-1003-001, que están registrados en `conocimiento/errores_y_lecciones.md`. **Un error que llega al cliente puede ser catastrófico.**
+- **Nunca enviar nada al cliente.** Estados: borrador → revisado → aprobado (Matías o la dirección) → enviado. Mientras no esté revisada, todo número se muestra como "borrador, sin revisar".
+- El cómputo copia la tabla del plano renglón por renglón, con la misma cantidad y unidad. Las compras extra van en filas aparte (`14b`).
+- Las soldaduras se derivan de la columna de extremos (BW, SW, NPT/BW), junta por junta, separando taller y campo.
+- Cada precio se verifica en el documento original (nunca de memoria ni de un resumen), con proveedor, origen, fecha y la misma especificación que el plano. Un valor "aproximado", verbal o por WhatsApp es estimado.
+- La MO de terceros se toma de un trabajo con el mismo alcance. Factores: materiales 1,35 y MO y servicios 1,35; el 1,40 solo para MO vendida sola.
+- Los totales salen de la planilla o del informe con fórmulas, nunca de cuentas hechas en el chat. Excel e informe tienen que dar igual.
+- Antes de pasar a "revisado": `python herramientas/verificar_computo.py cotizaciones/<carpeta>` sin errores, más una revisión independiente (otro agente o persona) del cómputo contra el plano.
+- Todo error detectado se anota en `conocimiento/errores_y_lecciones.md`.
+
 ## Reglas de cálculo y comerciales
 - Moneda USD, sin IVA, entrega EXW planta Quilmes Oeste. El factor de venta lo define la dirección; la herramienta propone 1,35 y muestra escenarios.
 - El cálculo de costo y plazo es determinístico (reglas y tarifas de la base); la IA lee documentos y arma el cómputo.

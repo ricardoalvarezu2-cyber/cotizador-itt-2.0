@@ -8,6 +8,8 @@ Todo lo que se necesita para cotizar, en un solo lugar y con una sola versión v
 
 | Archivo | Contenido |
 |---|---|
+| [`procedimiento_cotizacion.md`](procedimiento_cotizacion.md) | **Procedimiento obligatorio** (P1–P10), estados de una cotización y lista de control |
+| [`errores_y_lecciones.md`](errores_y_lecciones.md) | Errores detectados en cotizaciones, su causa y la regla que se agregó |
 | [`RESUMEN.md`](RESUMEN.md) | Parámetros clave y lista de control antes de enviar una oferta |
 | [`reglas_de_calculo.md`](reglas_de_calculo.md) | Cómo se calcula cada rubro (soldadura, END, pintura, estructura, bulonería, venta) y errores conocidos de las planillas viejas |
 | [`plazos.md`](plazos.md) | Plazos por familia, atrasos, plazos de materiales, duración de las tareas de taller y regla para cotizar el plazo |

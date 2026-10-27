@@ -27,6 +27,7 @@ Herramienta de cotización asistida por IA para ITT S.A.: lee pedidos de cliente
 | `herramientas/consolidar_fichas.py` | Une las fichas en tablas de la base de conocimiento |
 | `herramientas/indice_precios.py` | Arma el índice único de precios |
 | `herramientas/leer_dwg.py` | Lee un plano DWG/DXF: textos por capa e imágenes por zona |
+| `herramientas/verificar_computo.py` | Control obligatorio de una cotización: cómputo contra la tabla del plano (posiciones, cantidades, extremos y soldaduras, fuentes y antigüedad de precios, estimados) |
 | `herramientas/verificar.py` | Comprueba que las herramientas de lectura estén instaladas |
 
 Librerías de lectura: PyMuPDF (PDF y OCR), Docling (pliegos y tablas; descarga modelos de huggingface.co), ezdxf y ezdwg (CAD), openpyxl y xlrd (Excel), python-docx y extract-msg (Word y mails).
