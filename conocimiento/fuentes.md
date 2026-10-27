@@ -55,6 +55,7 @@ Todos los archivos de ITT revisados para armar esta base, en orden cronológico 
 | 2023-05 | vta_remitoporcliente.xls | Sistema | ✅ | Base de `comercial/ventas_2022-2023.csv` |
 | 2023-05 | vta_remitoporcliente_i.xls | Sistema | 🗑️ | Mismo contenido, con fechas como texto |
 | 2023-07 | **HD Instructivo de codificacion.xlsx** | S. Giron / C. Sorrentino | ✅ | Base de `codificacion/*` y `comercial/clientes.csv` |
+| 2026-08 | **Seguimiento de presupuestos/Proyecto/facturación Rev1.xlsx** | C. Alfonso / J. Elejondo | ✅ | Base de `plazos.md`, `comercial/plazos_*.csv` y `comercial/cotizaciones_2024-2026.csv`. También tiene facturación y cobranza, clientes activos y potenciales de Taval, cronogramas y faltantes de materiales por OP. Tiene datos de contacto de personas: no se copian |
 
 ## Técnicos de ingeniería (para futuros módulos)
 
@@ -71,8 +72,8 @@ Todos los archivos de ITT revisados para armar esta base, en orden cronológico 
 
 ## Faltantes conocidos
 
-1. **Plazos:** no hay datos de tiempos de entrega de proveedores ni de duración de fabricación.
+1. **Plazos:** cubierto en parte con el seguimiento de proyectos (ver `plazos.md`). Faltan plazos de proveedores actualizados por rubro.
 2. **Costo real de proyectos terminados** para comparar con lo cotizado.
-3. **Registro de cotizaciones de 2022 a hoy** (el último es de mayo 2022).
+3. **Resultado de las cotizaciones 2024–2026:** 232 de 284 figuran como "Enviado" sin resultado.
 4. **Lista Taval sin #REF!**.
 5. **Reporte de compras** (PDF de 453 páginas) sin procesar: es el historial de precios de compra.

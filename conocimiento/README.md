@@ -1,6 +1,6 @@
 # Base de conocimiento de cotización — ITT S.A.
 
-Todo lo que se necesita para cotizar, en un solo lugar y con una sola versión vigente. La base se armó el 27/10/2026 a partir de 33 archivos de ITT de 2020 a 2026; el detalle de cada uno está en [`fuentes.md`](fuentes.md).
+Todo lo que se necesita para cotizar, en un solo lugar y con una sola versión vigente. La base se armó el 27/10/2026 a partir de 34 archivos de ITT de 2020 a 2026; el detalle de cada uno está en [`fuentes.md`](fuentes.md).
 
 ## Estructura
 
@@ -19,6 +19,10 @@ Todo lo que se necesita para cotizar, en un solo lugar y con una sola versión v
 | `comercial/clientes.csv` | Maestro de clientes con código oficial de 4 dígitos | Código de cotización |
 | `comercial/registro_cotizaciones_2020-2022.csv` | 200 cotizaciones con familia, precio y resultado (ganada o perdida y por qué) | Histórico y referencia de precios |
 | `comercial/ventas_2022-2023.csv` | Remitos de venta con precio unitario por equipo | Control de rango de precios |
+| [`plazos.md`](plazos.md) | Plazos de referencia por familia, atrasos, plazos de materiales, duración de tareas de taller y regla para cotizar el plazo | El motor de plazo |
+| `comercial/plazos_proyectos.csv` | 57 ítems 2022–2026: fecha de OC, entrega comprometida y real, atraso | El motor de plazo |
+| `comercial/plazos_historicos_2019-2024.csv` | 191 proyectos con código ITT, plazo pedido en la OC y entregas reales | El motor de plazo |
+| `comercial/cotizaciones_2024-2026.csv` | 284 cotizaciones con monto, estado, probabilidad y factor de venta (sin datos de contacto) | Histórico y seguimiento |
 
 ## Reglas de uso
 
@@ -40,6 +44,7 @@ Calificación → Desarrollo → Cotización → Negociación │ Ejecución →
 
 ## Registro de cotizaciones: códigos
 
-- **Número histórico:** `0-NNNAA` (ej. `0-07420`). **Formato nuevo propuesto:** `COT-[SIGLA]-[AÑO]-[NNN] Rev X`, vinculado al código oficial del cliente.
+- **Número histórico de presupuesto:** `0-NNNAA` (ej. `0-07420`). **Formato nuevo propuesto:** `COT-[SIGLA]-[AÑO]-[NNN] Rev X`, vinculado al código oficial del cliente.
+- **Código de proyecto existente** (cuando llega la OC): `ITT[AA]-[código cliente]-[NV]`. Por ejemplo, `ITT22-0336-0320` = año 2022, cliente 0336 (Pan American Energy), nota de venta 320. Además, cada proyecto tiene una **OP** (orden de producción, ej. 1155) y una **NV** (nota de venta).
 - **Familia de producto:** `codificacion/familias_producto.csv` (V válvulas, C calentadores, CA cañería, CO colector, F filtro, M manifold, SK skid, SEP separador, T tanque…).
 - **Resultado:** `1` ganada · `0.5` activa · `L1` perdida por precio · `L2` perdida por técnica · `L3` perdida por plazo · `L4` perdida por otros motivos · `C` cancelada.

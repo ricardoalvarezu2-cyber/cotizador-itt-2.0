@@ -73,6 +73,7 @@ margen sobre venta        = (precio − costo) / precio
 | Transporte | 1,00 | A costo |
 
 - Un factor de 1,35 da un margen de 25,9% sobre la venta, y uno de 1,33 da 24,8%.
+- En el seguimiento de cotizaciones 2024–2026 el factor (`Fx`) va de 1,2 a 1,8, con 1,4–1,5 lo más habitual.
 - IVA: 21%. Se agrega aparte, porque los precios se cotizan sin IVA.
 - Moneda: USD. Entrega estándar: EXW en la planta de ITT (Av. 12 de Octubre 4004, Quilmes Oeste).
 

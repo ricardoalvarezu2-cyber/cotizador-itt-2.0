@@ -26,6 +26,18 @@ F_STOCK = "stock_valorizado_2024-11.xlsx"
 F_CODIFICADOR = "codificador_taval_2023-07.xlsx"
 F_REGISTRO = "registro_presupuestos_2022-05.xlsx"
 F_REMITOS = "remitos_valorizados_2022-2023.xls"
+F_SEGUIMIENTO = "seguimiento_presupuestos_proyectos_2026-08.xlsx"
+
+# Familia de producto (códigos de codificacion/familias_producto.csv) según palabras de la descripción
+FAMILIAS = [("CALENT", "C"), ("SEPARADOR", "SEP"), ("SCRUB", "SC"), ("FILTRO", "F"), ("MANIFOLD", "M"),
+            ("COLECTOR", "CO"), ("ACOMETIDA", "CO"), ("PUENTE", "P"), ("TRAMO", "P"), ("SATELITE", "P"),
+            ("SKID", "SK"), ("TANQUE", "T"), ("ACUMULADOR", "T"), ("TRAMPA", "TS"), ("DESGA", "DES"),
+            ("VALVULA", "V"), ("MAZO", "OT"), ("MOJON", "OT")]
+
+
+def familia(descripcion: str) -> str:
+    d = sin_acentos(descripcion.upper())
+    return next((cod for clave, cod in FAMILIAS if clave in d), "OT")
 
 
 # ---------------------------------------------------------------- utilidades
@@ -350,9 +362,105 @@ def ventas_equipos():
               "precio_unitario_usd", "importe_usd"], filas)
 
 
+def plazos_proyectos():
+    """Plazo comprometido vs. real por proyecto. Fecha de OC: hoja de proyectos o, si falta, histórico de
+    ventas (por OP). Entrega real: lista de entregados del Resumen o fecha programada ya cumplida."""
+    wb = openpyxl.load_workbook(ORIGEN / F_SEGUIMIENTO, data_only=True)
+    dia = lambda v: v.date() if isinstance(v, datetime) else None
+    historico = {}
+    ws = wb["Historico de ventas"]
+    for r in range(4, ws.max_row + 1):
+        op = texto(ws.cell(r, 11).value)
+        if op.isdigit() and op not in historico:
+            historico[op] = (dia(ws.cell(r, 13).value), texto(ws.cell(r, 8).value))
+    entregas = {}
+    ws = wb["Resumen"]
+    for r in range(11, 60):
+        m = re.match(r"\s*(\d{4})", texto(ws.cell(r, 2).value))
+        f = dia(ws.cell(r, 3).value)
+        if m and f:
+            entregas.setdefault(m.group(1), []).append(f)
+    filas, vistos = [], set()
+    ws = wb["Proyectos en general x fecha "]
+    for r in range(5, ws.max_row + 1):
+        op, desc = texto(ws.cell(r, 2).value), texto(ws.cell(r, 14).value)
+        if not op.isdigit() or not desc or (op, desc) in vistos:
+            continue
+        vistos.add((op, desc))
+        oc_hist, proyecto = historico.get(op, (None, ""))
+        oc = dia(ws.cell(r, 4).value) or oc_hist
+        comprometida = dia(ws.cell(r, 15).value)
+        programada = ws.cell(r, 16).value
+        estado = "anulado" if "ANULAD" in texto(programada).upper() else ""
+        real = min(entregas[op]) if op in entregas else (dia(programada) if isinstance(programada, datetime) else None)
+        nota = ""
+        if real and comprometida and (comprometida - real).days > 300:  # "entregado" casi un año antes: error de carga
+            nota, real = "fecha real con año mal cargado en la fuente; se descarta", None
+        if real and not estado:
+            estado = "entregado"
+        dias = lambda a, b: (b - a).days if a and b else ""
+        filas.append([op, proyecto, texto(ws.cell(r, 7).value), desc, familia(desc), numero(ws.cell(r, 8).value),
+                      numero(ws.cell(r, 9).value), oc.isoformat() if oc else "",
+                      comprometida.isoformat() if comprometida else "", real.isoformat() if real else "",
+                      dias(oc, comprometida), dias(oc, real), dias(comprometida, real), estado, nota])
+    escribir("comercial/plazos_proyectos.csv",
+             ["op", "proyecto", "cliente", "descripcion", "familia", "cantidad", "monto_oc_usd", "fecha_oc",
+              "entrega_comprometida", "entrega_real", "plazo_comprometido_dias", "plazo_real_dias",
+              "atraso_dias", "estado", "nota"], filas)
+
+
+def plazos_historicos():
+    """Histórico de ventas 2019-2024: plazo pedido en la OC y entregas reales por proyecto."""
+    ws = openpyxl.load_workbook(ORIGEN / F_SEGUIMIENTO, data_only=True)["Historico de ventas"]
+    dia = lambda v: v.date() if isinstance(v, datetime) else None
+    proyectos, actual = [], None
+    for r in range(4, ws.max_row + 1):
+        if texto(ws.cell(r, 9).value):
+            actual = {"proyecto": texto(ws.cell(r, 8).value), "cliente": texto(ws.cell(r, 2).value),
+                      "desc": texto(ws.cell(r, 9).value), "op": texto(ws.cell(r, 11).value),
+                      "cant": numero(ws.cell(r, 12).value), "oc": dia(ws.cell(r, 13).value),
+                      "entrega_oc": dia(ws.cell(r, 16).value), "reales": []}
+            proyectos.append(actual)
+        if actual and dia(ws.cell(r, 20).value):
+            actual["reales"].append(dia(ws.cell(r, 20).value))
+    filas = []
+    for p in proyectos:
+        if not (p["oc"] or p["entrega_oc"]):
+            continue
+        ultima = max(p["reales"]) if p["reales"] else None
+        dias = lambda a, b: (b - a).days if a and b and (b - a).days >= 0 else ""
+        filas.append([p["proyecto"], p["op"], p["cliente"], p["desc"], familia(p["desc"]), p["cant"],
+                      p["oc"].isoformat() if p["oc"] else "", p["entrega_oc"].isoformat() if p["entrega_oc"] else "",
+                      ultima.isoformat() if ultima else "", dias(p["oc"], p["entrega_oc"]), dias(p["oc"], ultima)])
+    escribir("comercial/plazos_historicos_2019-2024.csv",
+             ["proyecto", "op", "cliente", "descripcion", "familia", "cantidad", "fecha_oc", "entrega_segun_oc",
+              "ultima_entrega_real", "plazo_pedido_dias", "plazo_real_dias"], filas)
+
+
+def cotizaciones_recientes():
+    """Seguimiento de cotizaciones 2024-2026 (sin datos de contacto)."""
+    ws = openpyxl.load_workbook(ORIGEN / F_SEGUIMIENTO, data_only=True)["Cotizaciones ITTSA"]
+    filas = []
+    for r in range(5, ws.max_row + 1):
+        cliente, ref = texto(ws.cell(r, 1).value), texto(ws.cell(r, 4).value)
+        if not cliente or cliente.upper().startswith("SUB TOTAL") or not (ref or ws.cell(r, 7).value):
+            continue
+        estado = texto(ws.cell(r, 9).value).lower()
+        resultado = ("ganada" if estado.startswith("ganad") else "perdida" if estado in ("perdido", "lnc")
+                     else "a_enviar" if estado == "a enviar" else "enviada_sin_resultado" if estado == "enviado"
+                     else "")
+        filas.append([fecha(ws.cell(r, 5).value), cliente, texto(ws.cell(r, 2).value), texto(ws.cell(r, 3).value),
+                      ref, familia(ref), numero(ws.cell(r, 7).value), texto(ws.cell(r, 8).value),
+                      texto(ws.cell(r, 9).value), resultado, texto(ws.cell(r, 10).value),
+                      numero(ws.cell(r, 12).value), numero(ws.cell(r, 13).value)])
+    escribir("comercial/cotizaciones_2024-2026.csv",
+             ["fecha_presentacion", "cliente", "ref_interna", "isis", "referencia_cliente", "familia", "monto",
+              "moneda", "estado", "resultado", "comentarios", "probabilidad_pct", "factor_venta"], filas)
+
+
 if __name__ == "__main__":
     print(f"Fuentes: {ORIGEN}")
     for paso in (factores_soldadura, perfiles, codificacion, precios_elementos, lista_renar, stock,
-                 registro_cotizaciones, ventas_equipos):
+                 registro_cotizaciones, ventas_equipos, plazos_proyectos, plazos_historicos, cotizaciones_recientes):
         print(paso.__name__)
         paso()
