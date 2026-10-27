@@ -11,21 +11,22 @@ M09,9,"Niple 2"" 100 mm",2,un,20,40,antecedente,Valor de PRES 24879,TAVAL/55,202
 M10,10,"Buje 2""x1/2"" NPT S3000",2,un,11.51,23.02,lista,Renard cód. 6592,Lista de precios ITT,2025-12-26
 M11,11,"Codo 45° 2"" NPT S3000",1,un,50.83,50.83,lista,Renard cód. 5113,Lista de precios ITT,2025-12-26
 M12,12,"Niple 2"" 200 NPT/BW",1,un,20,20,antecedente,Valor de PRES 24879,TAVAL/55,2026-04-22
-M13,13,"Junta monolítica 2"" BW",1,un,315,315,cotización,Duralitte P_16838,APSA/12,2026-05-13
-M14,14,"Caño 2"" sch80 revestido (media tira de 12 m)",6,m,24.79,148.74,cotización,Provemet tricapa PE (pedido PP),Base de componentes ITT,2025-09-24
+M13,13,"Junta monolítica 2"" sch80 WPB BW/BW",1,un,315,315,cotización,Duralitte P_16838,APSA/12,2026-05-13
+M14,14,"Caño 2"" sch80 API 5L revestido 1900 mm BW",1.9,m,24.79,47.10,cotización,Provemet tricapa PE (pedido PP),Base de componentes ITT,2025-09-24
+M14B,14b,Sobrante de caño revestido (tira de 12 m para 2 puentes),4.1,m,24.79,101.64,cotización,Provemet tricapa PE (pedido PP),Base de componentes ITT,2025-09-24
 M15,15,"Codo 45° 2"" XS BW",1,un,8.73,8.73,lista,Renard cód. 3758,Lista de precios ITT,2025-12-26
-M16,16,"Reducción conc. 2½""x2"" XS BW",1,un,16.51,16.51,lista,Renard cód. 3639,Lista de precios ITT,2025-12-26
+M16,16,"Reducción conc. 2½""x2"" 80x40 BW (precio XS×XS)",1,un,16.51,16.51,lista,Renard cód. 3639,Lista de precios ITT,2025-12-26
 M17,17,"Tapón 2"" NPT S3000",3,un,8.45,25.35,lista,Renard cód. 5984,Lista de precios ITT,2025-12-26
 M18,18,"Tee 1/2"" NPT S3000",1,un,8.69,8.69,lista,Renard cód. 6043,Lista de precios ITT,2025-12-26
 M19,19,"Bloqueo y purga 1/2"" AISI316 ABAC",2,un,137,274,cotización,ABAC (PRES 24879),TAVAL/55,2026-04-22
-M20,20,Manómetro 0-40 bar,2,un,83.40,166.80,stock,Stock ITT MN406303N0040GL,Stock valorizado,2024-11
+M20,20,"Manómetro 0-40 bar conexión 1/2"" NPT-M (4"" glicerina)",2,un,83.40,166.80,estimado,"Ref. stock ITT 4"" 1/2"" 0-100 bar MN310005N0100GL; cotizar 0-40 bar",Stock valorizado,2024-11
 M21,21,"Unión extensible 2"" metal-metal",2,un,249,498,cotización,Adita S01988,APSA/15,2026-04-06
 M22,22,"Niple 2"" 320 mm",1,un,20,20,antecedente,Valor de PRES 24879,TAVAL/55,2026-04-22
-M23,23,"Cupla 1/2"" NPT S3000",2,un,2.71,5.42,lista,Renard cód. 5292,Lista de precios ITT,2025-12-26
+M23,23,"Cupla 1/2"" 80/2000 NPT/BW soldada sobre niple (precio A105 NPT)",2,un,2.71,5.42,lista,Renard cód. 5292,Lista de precios ITT,2025-12-26
 M24,24,"Niple 2"" 150 mm",1,un,20,20,antecedente,Valor de PRES 24879,TAVAL/55,2026-04-22
 M25,25,"Niple 2"" 1000 mm",2,un,40,80,antecedente,Valor de PRES 24879,TAVAL/55,2026-04-22
 S01,MO,Armado roscado (Ledesma),1,gl,400,400,cotización,Ledesma (alt. Quesada 380; Ledesma 1800 sep-2025),TAVAL/55,2026-04-22
-S02,MO,Soldaduras BW 4 juntas 2 pulg sch80,11.36,pulg,19.73,224.13,cotización,Costo propio de planta,Costo MO ITT,2024-10
+S02,MO,"Soldaduras: 4 BW 2"" sch80 + 2 cuplas 1/2""",13.09,pulg,19.73,258.27,cotización,Costo propio de planta,Costo MO ITT,2024-10
 S03,INS,Sellador de roscas,1,gl,15,15,estimado,Estimado,-,2026-10-27
 S04,PH,PH 15 kg/cm2 con registro,1,gl,100,100,estimado,6 hh x 13 USD/hh + registro,Planilla base,2024
 S05,PIN,Granallado y pintura cedro,1,gl,100,100,antecedente,Valor de PRES 24879,TAVAL/55,2026-04-22

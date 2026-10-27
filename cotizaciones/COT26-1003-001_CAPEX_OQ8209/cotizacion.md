@@ -21,19 +21,30 @@ El detalle interactivo, con el origen de cada precio, valores editables y export
 |---|---|
 | Materiales | 4.224 |
 | Contingencia 5% | 211 |
-| Mano de obra (armado Ledesma 400 + soldaduras 224) | 624 |
+| Mano de obra (armado Ledesma 400 + soldaduras 258) | 658 |
 | Servicios e insumos (PH, pintura, calidad, sellador) | 315 |
-| **Costo** | **5.374** |
-| **Precio** (factor de materiales 1,35; factor de MO y servicios 1,35) | **7.256** |
-| Total por 2 puentes | 14.511 + IVA |
+| **Costo** | **5.409** |
+| **Precio** (factor de materiales 1,35; factor de MO y servicios 1,35) | **7.302** |
+| Total por 2 puentes | 14.603 + IVA |
 
 Modelo de costo: PRES 24879 rev A (TAVAL/55, Tecpetrol, 22/04/2026), puente de producción convencional para bombeo mecánico. Ahí la MO de Ledesma dentro del puente lleva 1,35; el 1,40 se usó solo para MO vendida aparte.
 
 **Correcciones al borrador anterior:** el armado de Ledesma pasa de 1.800 (sep-2025) a 400 (abr-2026). El bloqueo y purga de 197,71 (modelo de 3/4" y 6000 psi) pasa a 137. La junta monolítica sube de 280 a 315. Los accesorios ahora salen de la lista Renard.
 
 **Sensibilidad:**
-- Con la retención de Danco a 240 (sin confirmar), el precio baja a unos 6.425.
-- Con el armado de Ledesma a 1.800, sube a unos 9.146.
+- Con la retención de Danco a 240 (sin confirmar), el precio baja a unos 6.471.
+- Con el armado de Ledesma a 1.800, sube a unos 9.192.
+
+**Revisión contra la tabla del plano (27/10/2026).** Las 25 posiciones y sus cantidades coinciden. Cambios:
+- El caño 14 queda en 1,9 m por puente, y el sobrante de la tira de 12 m (4,1 m por puente) pasa a una fila aparte (14b).
+- El manómetro 20 tiene que tener conexión 1/2" NPT-M. El de stock es 1/4", así que se compra uno de 4".
+- Se suman las 2 soldaduras de las cuplas 23 sobre niple: 13,09 pulg-eq en total.
+
+A confirmar:
+- junta 13 BW/BW;
+- reducción 16 80×40;
+- trim AISI 316 y resorte de la retención 7;
+- extremos BW de los niples 22 y 25, que quedarían para soldar en campo.
 
 ## Comparables
 | Antecedente | Precio c/u |
