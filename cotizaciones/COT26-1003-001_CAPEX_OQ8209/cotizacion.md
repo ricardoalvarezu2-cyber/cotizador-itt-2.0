@@ -14,41 +14,40 @@ Estado: **borrador, sin enviar** (27/10/2026). Preparó: Matías Russo, con el c
 
 Originales en `pedido/`.
 
-## Costo por puente (USD, sin IVA, EXW Quilmes)
-| Rubro | Base | Optimizado | Criterio |
-|---|---|---|---|
-| Materiales (`computo.csv`) | 3.812 | 3.186 | En el optimizado, retención Danco a ~220 en lugar de 533 (a confirmar) |
-| Contingencia de materiales 5% | 191 | 159 | El 37% del material es estimado |
-| Armado roscado (Ledesma) | 1.800 | 1.800 | Cuadro de puente CBM roscado, sep-2025 |
-| 4 soldaduras BW (11,4 pulg-eq × 19,7) | 224 | 224 | Costo propio de planta |
-| PH 15 kg/cm² con registro | 100 | 100 | |
-| Pintura | 110 | 110 | |
-| Ingeniería, calidad y dossier | 100 | 100 | |
-| **Costo** | **6.337** | **5.679** | |
+## Costo y precio (Rev 0, recalculado el 27/10/2026)
+El detalle interactivo, con el origen de cada precio, valores editables y exportación a CSV, está en `informe.html` (artifact https://claude.ai/artifact/Bi6jpUG36k1nQVmGJWTA7C). El cómputo ítem por ítem está en `computo.csv`.
 
-## Precio por puente
-| Factor | Base | Optimizado |
-|---|---|---|
-| 1,28 | 8.111 | 7.269 |
-| **1,35** | **8.555** | **7.667** |
-| 1,45 | 9.189 | 8.235 |
+| Rubro por puente | USD |
+|---|---|
+| Materiales | 4.224 |
+| Contingencia 5% | 211 |
+| Mano de obra (armado Ledesma 400 + soldaduras 224) | 624 |
+| Procesos e insumos (PH, pintura, calidad, sellador) | 315 |
+| **Costo** | **5.374** |
+| **Precio** (1,35 sobre materiales y servicios, 1,40 sobre MO) | **7.275** |
+| Total por 2 puentes | 14.551 + IVA |
 
-**Propuesta: USD 7.700 c/u (USD 15.400 los 2)** si se confirma la retención barata y el precio de las esféricas con asiento metálico. Si no se confirman, USD 8.550 c/u.
+Modelo de costo: PRES 24879 rev A (TAVAL/55, Tecpetrol, 22/04/2026), puente de producción convencional para bombeo mecánico.
+
+**Correcciones al borrador anterior:** el armado de Ledesma pasa de 1.800 (sep-2025) a 400 (abr-2026). El bloqueo y purga de 197,71 (modelo de 3/4" y 6000 psi) pasa a 137. La junta monolítica sube de 280 a 315. Los accesorios ahora salen de la lista Renard.
+
+**Sensibilidad:**
+- Con la retención de Danco a 240 (sin confirmar), el precio baja a unos 6.445.
+- Con el armado de Ledesma a 1.800, sube a unos 9.235.
 
 ## Comparables
-| Antecedente | Precio c/u | Comentario |
-|---|---|---|
-| OE 332-24 (nov-2024, APSA/CAPEX) | 6.200 | Puente de bomba electrosumergible serie 1500 (doc …-P-002). Es otro equipo, con menos válvulas |
-| APSA/15 OR 33661 (jun-2026, CAPEX) | ~6.729 | Puente de producción con AIB, incluye BOP compacto (1.195). Sin resultado |
-| OE 408-25 (oct-2025, Taval/CAPSA) | 2.307 | Solo mano de obra (Ledesma 1.800 × 1,28) |
-| Danco, APSA/9 (feb-2026) | 3.665 costo | Puente de producción AIB llave en mano, 45 días. Alternativa: tercerizar todo en Danco |
+| Antecedente | Precio c/u |
+|---|---|
+| OE 332-24 (APSA/8, 05/11/2024): puente para bomba electrosumergible serie 1500 | 6.200 |
+| APSA/15 OR 33661 (jun-2026): puente de producción con AIB, incluye BOP 1.195 | ~6.729 |
+| OE 150-22 (APSA/3, 25/08/2022): puente de producción 1500, costo 3.957 × 1,5 | 5.935 |
+| Danco (APSA/9, feb-2026): puente AIB llave en mano | 3.665 de costo |
 
-Este puente cuesta más que los antecedentes por las 2 retenciones serie 600, las 2 extensibles metal-metal, los 2 bloqueo y purga AISI316, la junta monolítica y las esféricas con asiento metálico (unos USD 2.500 en esos ítems).
+## Transporte
+La base es EXW. Referencia: Sprinter de BAI a CRD por ARS 3.500.000 (1.200 kg, jun-2026, `antecedentes/flete_BAI-CRD_whatsapp_2026-06.png`). Se ofrece como ítem aparte.
 
 ## Plazo
-**60 días desde la OC.** Las esféricas 2" tardan 60 días en Indave (con asiento metálico, a confirmar), las extensibles de Adita 30–45 días y el taller 2–3 semanas. Si Taval tiene las esféricas en stock, se llega a 45 días. La fecha de necesidad del 09/11 no se puede cumplir.
+**60 días desde la OC.** Las esféricas 2" de Indave tardan 60 días. Si Taval las tiene en stock, baja a 45. La fecha de necesidad del 09/11 no se puede cumplir.
 
 ## Antes de enviar
-1. Confirmar precio y plazo de la retención 2" S600 (Danco o Ingeniería en Fluidos) y de las esféricas con asiento metálico (Taval o Indave).
-2. Preguntar a CAPEX: si acepta la oferta fuera de término; si la compra es directa o vía Almacenes Petroleros; revestimiento PP o cinta Canusa; EXW o entregado en Pampa del Castillo (el flete BAI–CRD lo cotizó ETFA en jun-2026); si exige marcas de válvulas.
-3. Condiciones (como OE 332-24): USD, sin IVA, contado contra entrega, validez 15 días por la validez corta de los proveedores.
+Ver la sección "Pendientes" en `informe.html`.
