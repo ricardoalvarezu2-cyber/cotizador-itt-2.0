@@ -1,0 +1,94 @@
+{
+ "carpeta": "TAVAL/52 - CAPEX - Degasser 126437319",
+ "cliente": "Taval",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": "Sin oferta emitida en la carpeta; solo cotizaciones de proveedores.",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-04-15",
+ "referencia_cliente": "CAPEX Degasser 126437319; plano 25-017-AM550-R-HD-001; ARMK PC1543 (difusor)",
+ "familia": "SEP",
+ "descripcion_corta": "Desgasificador (degasser) con difusor de ingreso, virolas de 6.35 mm y casquetes, fabricación para Taval",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": [
+   "MO Quesada: no incluye arenado y pintura, END ni prueba hidráulica con certificado, ni materiales"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Juan Carlos Quesada (mano de obra)",
+   "que": "MO para construcción de desgasificador: USD 5,700 por pulgada incluidas las patas; incluye consumibles, maquinaria y soldadores calificados ASME IX",
+   "precio": 5700,
+   "moneda": "USD",
+   "plazo_entrega": "25 días según llegada de materia prima, en su taller",
+   "fecha": "2026-04-14"
+  },
+  {
+   "proveedor": "Ledesma (mano de obra)",
+   "que": "MO armado de desgasificador (precio en adjunto, no extraído)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-14"
+  },
+  {
+   "proveedor": "ARMK",
+   "que": "Difusor de ingreso, PC1543 (precio en adjunto, no extraído)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-07"
+  },
+  {
+   "proveedor": "Sandri",
+   "que": "Virolas de 6.35 mm cilindradas (precio en adjunto)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-03-16"
+  },
+  {
+   "proveedor": "Stocco Hnos",
+   "que": "Casquetes SE 48 (lista de precios en adjunto)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-03-31"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "La mano de obra de Quesada se cotiza por pulgada de diámetro (USD 5,700 con patas), lo que escala con el diámetro del equipo; no incluye arenado y pintura, END ni PH.",
+  "Los materiales se compraron en partes: virolas calandradas (Sandri), casquetes (Stocco) y difusor de ARMK; hay que sumar la ingeniería del difusor.",
+  "El cliente es una empresa vinculada (Taval): proyecto CAPEX interno con precios de proveedores competitivos."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/Cotizacion MO Juan Carlos Quesada JQ-018-2026.pdf",
+  "otros": "5.Proveedores 3ros/*.msg (cuerpos vacíos, solo adjuntos)"
+ },
+ "problemas": [
+  "Sin oferta, planilla de costos ni orden de compra",
+  "Los correos de ARMK, Ledesma, Sandri y Stocco no tienen texto útil; los precios están en adjuntos no extraídos",
+  "Diámetro del equipo desconocido, no se puede estimar el costo de MO de Quesada",
+  "Taval figura como cliente por la carpeta; no se confirma si es cliente final"
+ ]
+}

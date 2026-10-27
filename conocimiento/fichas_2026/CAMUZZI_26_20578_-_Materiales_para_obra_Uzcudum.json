@@ -1,0 +1,103 @@
+{
+ "carpeta": "CAMUZZI/26. 20578 - Materiales para obra Uzcudum",
+ "cliente": "Camuzzi Gas Pampeana / Camuzzi Gas del Sur",
+ "cliente_final": null,
+ "numero_oferta": "23842 rev.B",
+ "revisiones": "Rev A (2025-10-28, comercial+técnica) y Rev B (2025-11-04, solo oferta técnica aclarando que el alcance se adecua al plano típico Camuzzi). Oferta emitida con membrete TAVAL S.A. (empresa vinculada); la OC va a nombre de Innovación Técnica Total S.A.",
+ "fecha_oferta": "2025-10-28",
+ "fecha_ultima_modificacion": "2026-01-08",
+ "referencia_cliente": "Concurso de precios Nro 20578 - Materiales Obra Uzcudum (portal de compras Camuzzi)",
+ "familia": "F",
+ "descripcion_corta": "Filtro FM2 cuerpo serie 600 simple módulo para gas natural (+ 2 esferas STD B600 y válvula reguladora 627 no cotizada), obra Uzcudum",
+ "items": [
+  {
+   "descripcion": "Válvula reguladora Tipo 627 con bloqueo (NPS 1\" serie 600) - NO COTIZADA (\"lamentamos no cotizar\")",
+   "cantidad": 1,
+   "unidad": "UN",
+   "precio_unitario": null,
+   "precio_total": null,
+   "moneda": "USD",
+   "datos_tecnicos": "Cuerpo ASTM A216 WCB, 1\" RF serie 600, Pmax 60 bar, Pset 13,5 bar, Pbloqueo 15 bar, Qmax 250 m3/h"
+  },
+  {
+   "descripcion": "Filtro FM2 cuerpo serie 600, simple módulo, tapa de cierre rápido, manómetro diferencial, elemento filtrante malla reforzada (plano SCE-RE-112-0004, esp. SCE-RE-512-0004)",
+   "cantidad": 1,
+   "unidad": "UN",
+   "precio_unitario": 5807.05,
+   "precio_total": 5807.05,
+   "moneda": "USD",
+   "datos_tecnicos": "Conexión bridada 2\" serie 600, malla 5 micrones, tapa rápida 4\" S/600 (cuerpo SA-36 Sch XS según consulta a proveedor); plazo 60 días"
+  },
+  {
+   "descripcion": "Esfera STD B600 P reducida APF 2\" (esp. SCE-IN-501-0008, ensayos SCE-RE-308-0001)",
+   "cantidad": 2,
+   "unidad": "UN",
+   "precio_unitario": 1014.2,
+   "precio_total": 2028.4,
+   "moneda": "USD",
+   "datos_tecnicos": "2\" serie 600; plazo 15 días"
+  }
+ ],
+ "monto_total_ofertado": 7835.45,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": 785,
+  "otros": null
+ },
+ "plazo_ofrecido": "Filtro 60 días (45/60 en oferta técnica rev.B); esferas 15 días",
+ "plazo_dias": 60,
+ "condiciones": {
+  "pago": "30 días fecha factura",
+  "validez": "30 días corridos",
+  "entrega": "EXW planta, retiro sobre transporte provisto por el cliente (el pliego pedía flete hasta Transporte Cruz del Sur, Mercado Central)",
+  "moneda_y_ajuste": "USD facturado en ARS al TC BNA fecha de factura; NC/ND si variación > 3%",
+  "notas_y_exclusiones": [
+   "Sin IVA (IVA 21% = USD 1.645,45 en la planilla)",
+   "TAVAL/ITT no acepta multas por mora en material importado ni responde por licencias no automáticas",
+   "Válvula reguladora 627 no cotizada"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Megatap SRL",
+   "que": "Tapa de cierre rápido MTV 4\" S/600, 102 kg/cm2, ASTM A105N, O-ring Buna N90, con 2 O-rings de repuesto (modelo estándar con cáncamo, sin pescante)",
+   "precio": 785,
+   "moneda": "USD",
+   "plazo_entrega": "30/45 días desde anticipo 30% (cotización); 15 días de vigencia",
+   "fecha": "2025-11-21"
+  }
+ ],
+ "resultado": "ganada (hay OC)",
+ "orden_compra": {
+  "numero": "4500160742",
+  "fecha": "2025-11-12",
+  "monto": 5807.05
+ },
+ "aprendizajes": [
+  "La OC adjudicó solo el filtro FM2 (USD 5.807,05); las 2 esferas y la válvula no fueron adjudicadas, por lo que el monto ganado es ~74% de lo ofertado.",
+  "El costo de tercero conocido para la tapa de cierre rápido 4\" S/600 es USD 785 (Megatap, plazo 30/45 días, anticipo 30%): conviene pedir esa cotización al inicio porque condiciona el plazo del filtro.",
+  "Camuzzi exige plano tipo SCE-RE-112-0004 y especificaciones SCE; la rev.B solo aclaró alcance, no cambió precio.",
+  "El cliente no dio datos de proceso, solo parámetros de diseño; se usó cuerpo SA-36 Sch XS.",
+  "Se puede evitar el pescante en tapas verticales hasta 8\" (cáncamo) si el cliente lo valida con catálogo."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "precio": "CAMUZZI/26. 20578 - Materiales para obra Uzcudum/4.Armado de la Oferta Comercial/PRES 23842- OFERTA COMERCIAL OBRA AZCUDUM.pdf",
+  "items": "CAMUZZI/26. 20578 - Materiales para obra Uzcudum/4.Armado de la Oferta Comercial/Planilla de cotizaci n Concurso N 20578.xlsx",
+  "orden_compra": "CAMUZZI/26. 20578 - Materiales para obra Uzcudum/8.Orden de Compra/4500160742-ITT.PDF",
+  "nota_venta": "CAMUZZI/26. 20578 - Materiales para obra Uzcudum/8.Orden de Compra/NV 472.pdf",
+  "proveedor": "CAMUZZI/26. 20578 - Materiales para obra Uzcudum/5.Proveedores 3ros/PRESUPUESTO ITT 25288 Megatap.pdf",
+  "revision_B": "CAMUZZI/26. 20578 - Materiales para obra Uzcudum/4.Armado de la Oferta Comercial/PRES 23842 rev.B- OFERTA TECNICA OBRA AZCUDUM.pdf",
+  "fecha_oc": "CAMUZZI/26. 20578 - Materiales para obra Uzcudum/8.Orden de Compra/RE 20578 - Materiales para obra Uzcudum.msg (mail 2025-11-14; OC fechada 12/11/2025)"
+ },
+ "problemas": [
+  "No hay planilla de costos ni factor de rentabilidad",
+  "Fecha de OC: PDF dice 12/11/2025, mail de envío 14/11/2025 y NV 17/11/2025",
+  "Rev.B no tiene versión comercial; se asume mismo precio",
+  "Subtotal de NV 472 muestra 7.026,53 (posible con otros ítems/impuestos), no coincide con el ítem 5.807,05"
+ ]
+}

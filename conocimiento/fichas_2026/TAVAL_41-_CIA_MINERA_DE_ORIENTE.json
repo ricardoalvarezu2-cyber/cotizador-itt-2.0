@@ -1,0 +1,64 @@
+{
+ "carpeta": "TAVAL/41- CIA MINERA DE ORIENTE",
+ "cliente": "A & A FLUIDS CONTROL SRL",
+ "cliente_final": "Cía Minera de Oriente (según nombre de carpeta)",
+ "numero_oferta": "Presupuesto 24459 (Taval, BUDGET)",
+ "revisiones": "Sin revisiones",
+ "fecha_oferta": "2026-02-11",
+ "fecha_ultima_modificacion": "2026-02-11",
+ "referencia_cliente": "BUDGET - Manifold pozo de agua",
+ "familia": "M manifold",
+ "descripcion_corta": "Manifold 4\", caudal 30 m3/h, presión 5 bar (pozo de agua)",
+ "items": [
+  {
+   "descripcion": "Manifold 4\". Caudal 30 m3/h. Presión 5 bar",
+   "cantidad": 1,
+   "unidad": "Unid",
+   "precio_unitario": 4776.0,
+   "precio_total": 4776.0,
+   "moneda": "USD",
+   "datos_tecnicos": "DN80 y DN40, ANSI 150, tubería A106 Gr.B Sch40, bridas WN, bastidor UPN 80, manómetro 0-10 bar; válvulas, caudalímetro y electrónica fuera de alcance por falta de información"
+  }
+ ],
+ "monto_total_ofertado": 4776.0,
+ "moneda": "USD",
+ "costo_total": 3508.54,
+ "factor_venta": 1.361,
+ "desglose_costo": {
+  "materiales": 1606.5,
+  "mano_obra": 1232.3,
+  "terceros": 660.2,
+  "otros": 9.53
+ },
+ "plazo_ofrecido": "30 días (25/30 días en planilla)",
+ "plazo_dias": 30,
+ "condiciones": {
+  "pago": "30 días F.R.F.",
+  "validez": "30 días",
+  "entrega": null,
+  "moneda_y_ajuste": "USD, dólar BNA día anterior al pago; sin IVA",
+  "notas_y_exclusiones": [
+   "Oferta budget",
+   "Plazos no incluyen inspección",
+   "Válvulas de corte, alivio, caudalímetro, tablero, radio y antena en cero (fuera de alcance)"
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Factores: MO skid 1.5, materiales varios 1.2, servicio END 1.5; factor global ~1.36.",
+  "Muchos componentes quedaron en 0 por falta de información: el precio es solo estructura+cañería, riesgo de subcotizar si se agregan instrumentos.",
+  "Seguro 0.2% (9.5 USD) incorporado."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto": "4.Armado de la Oferta Comercial/presupuesto 24459.pdf",
+  "costo y factor": "4.Armado de la Oferta Comercial/LM costos Manifold Pozo_Agua.xlsx"
+ },
+ "problemas": [
+  "Cliente comercial es A&A Fluids Control; 'Cía Minera de Oriente' solo en el nombre de carpeta",
+  "Planilla dice 4\" pero BOM es DN80/DN40",
+  "Sin OC"
+ ]
+}

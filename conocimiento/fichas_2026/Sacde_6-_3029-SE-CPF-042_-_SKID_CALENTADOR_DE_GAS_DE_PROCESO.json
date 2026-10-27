@@ -1,0 +1,189 @@
+{
+ "carpeta": "Sacde/6- 3029-SE-CPF-042 - SKID CALENTADOR DE GAS DE PROCESO",
+ "cliente": "SACDE",
+ "cliente_final": "Pampa Energía (CPF Rincón de Aranda, Neuquén)",
+ "numero_oferta": "0-392 25 Rev 2",
+ "revisiones": "Original horizontal 14/08/2025 (OE 392-25); Rev1 vertical 26/09/2025; Rev2 vertical 09/10/2025 (vigente). Adicional posterior: presupuesto ITT 115 por cambio de ingeniería básica.",
+ "fecha_oferta": "2025-10-09",
+ "fecha_ultima_modificacion": "2026-03-02",
+ "referencia_cliente": "3029-SE-CPF-042 / Calentador de gas de proceso HE-0601 (SK-0601) CPF Rincón de Aranda; Adjudicación 3029SE-SE-CPF-029; OC Pampa Midstream 4500735821",
+ "familia": "C calentador",
+ "descripcion_corta": "Skid calentador eléctrico de gas de proceso (indirecto, inmersión 136 kW según proveedor; OP 1218 lo nombra 90 kW) con plataforma, escalera, repuestos, asistencia técnica y capacitación",
+ "items": [
+  {
+   "descripcion": "Skid Calentador de Gas de Proceso (SK-0601), tipo vertical (Rev2)",
+   "cantidad": 1,
+   "unidad": "unid",
+   "precio_unitario": 246683.0,
+   "precio_total": 246683.0,
+   "moneda": "USD",
+   "datos_tecnicos": "Calentador eléctrico de inmersión 136 kW + tablero de control de temperatura (cot. proveedor); piping 900#, envolvente 16 in; caudal de proceso hasta 507.000 Sm3/d"
+  },
+  {
+   "descripcion": "Escaleras y plataformas",
+   "cantidad": 5,
+   "unidad": "unid",
+   "precio_unitario": 477.0,
+   "precio_total": 2385.0,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "Transporte a CPF-RDA (no incluye descarga)",
+   "cantidad": 1,
+   "unidad": "gl",
+   "precio_unitario": 8300.0,
+   "precio_total": 8300.0,
+   "moneda": "USD",
+   "datos_tecnicos": "2 módulos 6,0x2,5x2,5 m (4 t) y 3,6x2,5x2,5 m (3 t)"
+  },
+  {
+   "descripcion": "Repuestos comisionado y PEM",
+   "cantidad": 1,
+   "unidad": "gl",
+   "precio_unitario": 875.76,
+   "precio_total": 875.76,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "Repuestos 2 años de operación",
+   "cantidad": 1,
+   "unidad": "gl",
+   "precio_unitario": 875.76,
+   "precio_total": 875.76,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "Asistencia técnica precomisionado y PEM (2 días con viáticos)",
+   "cantidad": 1,
+   "unidad": "gl",
+   "precio_unitario": 4970.0,
+   "precio_total": 4970.0,
+   "moneda": "USD",
+   "datos_tecnicos": "Día adicional PEM USD 2.085"
+  },
+  {
+   "descripcion": "Capacitación en sitio por día",
+   "cantidad": 1,
+   "unidad": "día",
+   "precio_unitario": 2485.0,
+   "precio_total": 2485.0,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  }
+ ],
+ "monto_total_ofertado": 265698.0,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "90 días desde recepción de la OC y aprobación de la ingeniería (Rev2); versión horizontal 100/110 días",
+ "plazo_dias": 90,
+ "condiciones": {
+  "pago": "30% contra OC mat. principales; 20% hold point PH; 20% hold point pintura; 25% liberación despacho; 5% data book (30 días fecha factura). OC final: 30 días fecha recepción factura, con anticipos",
+  "validez": "30 días corridos",
+  "entrega": "Sobre camión en planta del cliente CPF-RDA (oferta); EXW planta ITT Quilmes (carta de adjudicación)",
+  "moneda_y_ajuste": "USD facturado en ARS a TC BNA vendedor; NC/ND si variación >3%. Adjudicación: precios fijos, firmes e inamovibles, sin IVA",
+  "notas_y_exclusiones": [
+   "Sin multas por mora en material importado (BCRA)",
+   "No responsable por demoras de licencias no automáticas",
+   "Posible bonificación por adjudicación total",
+   "Transporte no incluye descarga ni seguro de carga"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Electra Tech (cot. 27805)",
+   "que": "Calentador de inmersión 136 kW (27.905) + tablero de alimentación y control (28.300); total neto 56.205",
+   "precio": 56205,
+   "moneda": "USD",
+   "plazo_entrega": "60 días corridos; pago anticipo 30%",
+   "fecha": "2025-08-05"
+  },
+  {
+   "proveedor": "Ledesma (Presupuesto 20070)",
+   "que": "MO skid calentador eléctrico envolvente 16 in, cañerías ~315 in, montaje",
+   "precio": 9700,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2025-08-11"
+  },
+  {
+   "proveedor": "Ledesma (Presupuesto 20071)",
+   "que": "Skid, plataforma, escalera, soportería (por kg)",
+   "precio": 2.0,
+   "moneda": "USD/kg",
+   "plazo_entrega": null,
+   "fecha": "2025-08-11"
+  },
+  {
+   "proveedor": "Aislaciones Quilmes (492)",
+   "que": "Aislación térmica + tracing equipo terminado",
+   "precio": 5500,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2025-08-13"
+  },
+  {
+   "proveedor": "Transportista Neuquén (semirremolques)",
+   "que": "Traslado Quilmes a Rincón de Aranda, por semirremolque; estadía 850.000 ARS/24h",
+   "precio": 3330000,
+   "moneda": "ARS",
+   "plazo_entrega": "2/3 días de transporte",
+   "fecha": "2025-08-13"
+  },
+  {
+   "proveedor": "J. Quesada (JQ-010-2026)",
+   "que": "MO plataforma-escalera 1287,3 kg a USD 4,10/kg (sin arenado/pintura/END)",
+   "precio": 5278,
+   "moneda": "USD",
+   "plazo_entrega": "30 días",
+   "fecha": "2026-02-25"
+  },
+  {
+   "proveedor": "Ledesma (229)",
+   "que": "Cañerías colector de drenaje prefabricado ~200 in, 5 isométricos (sin consumibles, PH, montaje)",
+   "precio": 3200,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-02-04"
+  }
+ ],
+ "resultado": "ganada (hay OC)",
+ "orden_compra": {
+  "numero": "4500735821 (Pampa Midstream; adjudicación Sacde 22/10/2025)",
+  "fecha": "2025-11-05",
+  "monto": 249295.0
+ },
+ "aprendizajes": [
+  "Se adjudicó a USD 249.295 contra USD 265.698 ofertados (-6,2%); el skid bajó de 246.683 a 241.596 (incluye plataforma/escalera) y asistencia técnica y capacitación se pactaron a USD 1.500/día: prever margen de negociación de ~6%.",
+  "El calentador eléctrico (Electra Tech USD 56.205) tuvo sobrecosto de ~USD 16k vs. lo presupuestado y válvulas esféricas cotizadas de marca propia no estaban en el vendor list del cliente (USD 4.150 de diferencia): verificar vendor list y marcas aceptadas antes de cotizar.",
+  "Hubo adicional de USD 20.886 (presupuesto 115) por cambios de P&ID no incluidos en ingeniería básica, con márgenes 1,3 mano de obra y 1,2/1,3 materiales; más adicional de USD 8.000 y reprogramación de plazo a 30/03/2026 por cambio de caudal de diseño (482.600 a 507.000 Sm3/d). Dejar cláusula de cambios de ingeniería.",
+  "Plazo contractual 100/120 días con entrega EXW el 19/02/2026, pero la oferta fue 90 días; riesgo de multas Pampa 2%/semana (máx. 10%) por mora.",
+  "Estructura/plataforma, aislación, cañerías y transporte se tercerizan; cotizar por kg (2,00 a 4,10 USD/kg MO) y por pulgada."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "4.Armado de la Oferta Comercial/OE 392- 25 Rev2 Vertical.pdf",
+  "orden_compra": "8.Orden de Compra/4500735821.pdf; 8.Orden de Compra/Carta de adjudicación Skid Calentador de Gas de Proceso.pdf",
+  "adicional": "4.Armado de la Oferta Comercial/ADICIONAL/presupuesto_itt 115 (adicional oc 4500735821).pdf",
+  "plazo": "4.Armado de la Oferta Comercial/OE 392- 25 Rev2 Vertical.pdf",
+  "proveedores": "5.Proveedores 3ros/*",
+  "sobrecostos": "4.Armado de la Oferta Comercial/ADICIONAL/adicionales para Sacde 22 01 2026.xlsx",
+  "reprogramacion": "8.Orden de Compra/Re programacion plazo de entrega RE_ Confirmación de caudal máximo y mínimo de gas a calentador eléctrico_.msg"
+ },
+ "problemas": [
+  "No hay planilla de costos/factor de venta de la oferta base; costo_total y factor null",
+  "Potencia del calentador contradictoria (136 kW en cot. proveedor, 90 kW en OP 1218)",
+  "OC incluye valores propios distintos de oferta (ej. capacitación 1.050 en OC vs 1.500 en carta; ítems con anticipo)",
+  "Fecha de entrega 19/02/2026 reprogramada a 30/03/2026 (adicional USD 8.000 no incluido en monto OC)",
+  "Mod. del 02/03/2026 de archivos de proveedores posteriores a la OC (cotizaciones de estructura y drenaje)"
+ ]
+}

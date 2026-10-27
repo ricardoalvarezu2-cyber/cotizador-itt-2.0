@@ -1,0 +1,97 @@
+{
+ "carpeta": "A&A FLUIDS CONTROL SRL/Manifolds pozo de agua",
+ "cliente": "A&A FLUIDS CONTROL SRL",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-02-06",
+ "referencia_cliente": "Manifold para pozo de agua (carpeta solo con cotizaciones de proveedores para caudalímetro)",
+ "familia": "M",
+ "descripcion_corta": "Manifold de pozo de agua; solo consta la cotización de un caudalímetro en línea 4\" #150 (30 m3/h, agua, 5 bar) a proveedores",
+ "items": [
+  {
+   "descripcion": "Caudalímetro en línea electromagnético o ultrasónico, agua, 4\" #150, 30 m3/h, 5 bar, con indicación instantánea y totalizador",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": null,
+   "precio_total": null,
+   "moneda": "USD",
+   "datos_tecnicos": "4\" #150, 30 m3/h, 5 bar, alimentación 12/24 VDC (posible panel solar), 4-20 mA HART; opcional VHF/wireless (fuera de alcance según ingeniería ITT)"
+  }
+ ],
+ "monto_total_ofertado": null,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": [
+   "Interfaz de transmisión VHF queda fuera del alcance de ITT",
+   "Electromagnético solo aplica si el agua es conductiva (no desmineralizada)"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Meditecna (KROHNE OPTIFLUX 4050 electromagnético 4\")",
+   "que": "Caudalímetro electromagnético 4\"",
+   "precio": 3290,
+   "moneda": "USD",
+   "plazo_entrega": "Inmediato (stock)",
+   "fecha": "2026-02-03"
+  },
+  {
+   "proveedor": "Meditecna (KROHNE OPTISONIC 3400 ultrasónico)",
+   "que": "Ultrasónico 2\" 5490 / 3\" 6480 / 4\" 6920",
+   "precio": 6920,
+   "moneda": "USD",
+   "plazo_entrega": "50/60 días",
+   "fecha": "2026-02-03"
+  },
+  {
+   "proveedor": "ABB",
+   "que": "Caudalímetro FEP 631, 3 opciones (con/sin detector de tubería llena, con transporte aéreo); precio en PDF adjunto no legible",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-02-06"
+  },
+  {
+   "proveedor": "Balder Caudalímetros",
+   "que": "EMAG-TUF electromagnético / ultrasónico, cotización en adjunto .doc no disponible",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-02-03"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Ingeniería de ITT eligió el electromagnético KROHNE OPTIFLUX 4050 4\" (USD 3290 stock) por precio y adecuación; el ultrasónico 4\" quedaba sobredimensionado",
+  "Verificar conductividad del agua antes de usar electromagnético",
+  "Pedir cotización de caudalímetros a 3-4 marcas el mismo día; la respuesta con stock define el plazo",
+  "Adicionales (VHF, panel solar) se dejan fuera de alcance"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "A&A FLUIDS CONTROL SRL/Manifolds pozo de agua/5.Proveedores 3ros/Oferta Caudalímetro Kohne de Meditecna.msg",
+  "decision": "A&A FLUIDS CONTROL SRL/Manifolds pozo de agua/5.Proveedores 3ros/Ok Fabian Magnano sobre Oferta Caudalímetro Kohne de Meditecna.msg"
+ },
+ "problemas": [
+  "No hay oferta comercial a cliente ni precios de venta",
+  "Precios de ABB y Balder están en adjuntos que no se extrajeron",
+  "Cliente tomado del nombre de carpeta"
+ ]
+}

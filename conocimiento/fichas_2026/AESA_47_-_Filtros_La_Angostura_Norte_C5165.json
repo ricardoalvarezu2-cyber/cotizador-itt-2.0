@@ -1,0 +1,74 @@
+{
+ "carpeta": "AESA/47 - Filtros La Angostura Norte C5165",
+ "cliente": "AESA",
+ "cliente_final": "Planta La Angostura Norte (PC LAN, C5165)",
+ "numero_oferta": "Presupuesto 0010-000000000142",
+ "revisiones": null,
+ "fecha_oferta": "2026-03-25",
+ "fecha_ultima_modificacion": "2026-03-25",
+ "referencia_cliente": "23292956 - Filtros de gas PC LAN C5165 (docs VCD25176 HD-003019 / RI-003017)",
+ "familia": "F",
+ "descripcion_corta": "2 filtros de gas para La Angostura Norte (lote de 2 unidades), cotizados a AESA",
+ "items": [
+  {
+   "descripcion": "Filtros de gas - PC LAN C5165",
+   "cantidad": 2,
+   "unidad": "Unid",
+   "precio_unitario": 5963.65,
+   "precio_total": 11927.3,
+   "moneda": "USD",
+   "datos_tecnicos": "Según documentación recibida (hoja de datos HD-003019 y RI-003017); elementos filtrantes de microfibra de vidrio 25 micrones, 42 mm diám. ext. x 86 mm"
+  }
+ ],
+ "monto_total_ofertado": 11927.35,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "75 días (Ent (Días))",
+ "plazo_dias": 75,
+ "condiciones": {
+  "pago": null,
+  "validez": "Cotización válida para un lote de 2 unidades",
+  "entrega": null,
+  "moneda_y_ajuste": "USD; total con IVA 14.432,09",
+  "notas_y_exclusiones": [
+   "Garantía 1 año desde instalación o 18 meses desde embarque",
+   "Pruebas API 598 ed. 2009",
+   "Sujeto a revisión de contratos antes de aceptación"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "GORA S.A.",
+   "que": "Elementos filtrantes cartucho microfibra de vidrio doble malla, 25 micras, total USD 192 (venta mínima 2 por recipiente; cantidad exacta no clara)",
+   "precio": 192.0,
+   "moneda": "USD",
+   "plazo_entrega": "30 días",
+   "fecha": "2026-03-23"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Los elementos filtrantes (Gora, USD 192) pesan menos del 2% del precio: el grueso es el recipiente/fabricación",
+  "Venta mínima de fabricación de Gora: 2 cartuchos por recipiente",
+  "Precio unitario ~5.964 USD por filtro con plazo 75 días"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "7.Propuesta Comercial (envío al Cliente)/142.pdf",
+  "proveedores": "5.Proveedores 3ros/Cotización Gora - Elementos filtrantes OF-X-0001-00027549 ITT-AESA-LANOR.pdf"
+ },
+ "problemas": [
+  "Sin planilla de costos ni OC: costo y factor desconocidos",
+  "Subtotal 11.927,35 vs 2x5.963,65=11.927,30 (más líneas de 0,01)",
+  "Cantidad y plazo de entrega de Gora ambiguos por extracción del PDF (30 días y 192 unid. inferidos)",
+  "Cliente aparece como Evangelista S.A. en el formulario (AESA)"
+ ]
+}

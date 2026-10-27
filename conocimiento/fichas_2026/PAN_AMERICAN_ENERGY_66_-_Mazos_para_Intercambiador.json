@@ -1,0 +1,94 @@
+{
+ "carpeta": "PAN AMERICAN ENERGY/66 - Mazos para Intercambiador",
+ "cliente": "Pan American Energy",
+ "cliente_final": null,
+ "numero_oferta": "139 (presupuesto ITT); oferta cliente SAP 4100116890",
+ "revisiones": "Una sola versión enviada; proveedor Galvanotecnia con consulta inicial (2026-03-13, presupuesto de venta 2452) y propuesta técnica rev.0 (2026-03-19/20)",
+ "fecha_oferta": "2026-03-25",
+ "fecha_ultima_modificacion": "2026-03-25",
+ "referencia_cliente": "Oferta 4100116890 'Intercambiador calor' (repuesto mazo de tubos, TEG rico-pobre VHC-E-460, área Cerro Dragón)",
+ "familia": "OT",
+ "descripcion_corta": "Mazo de tubos 15,87x1,65 mm para intercambiador de calor (repuesto)",
+ "items": [
+  {
+   "descripcion": "Mazo de tubos 15,87x1,65 mm para intercambiador",
+   "cantidad": 1,
+   "unidad": "UN",
+   "precio_unitario": 19056.52,
+   "precio_total": 19056.52,
+   "moneda": "USD",
+   "datos_tecnicos": "Tubos SA-179 5/8\" x 1,65 mm; intercambiador casco y tubos haz flotante BEM/BEU, 80 tubos, casco SA-516 Gr70, ~325 kg por equipo (propuesta GDO para VHC-E-460 A/B)"
+  }
+ ],
+ "monto_total_ofertado": 19056.52,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "125 días (columna Ent (Días) del presupuesto)",
+ "plazo_dias": 125,
+ "condiciones": {
+  "pago": "30% anticipo contra OC; 70% contra liberación para despacho",
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": "USD",
+  "notas_y_exclusiones": [
+   "Precio sin IVA (IVA 21% USD 4.001,87; total 23.058,39)",
+   "Garantía 1 año desde instalación o 18 meses desde embarque",
+   "Revisión de contratos antes de aceptar OC",
+   "Pruebas según API 598"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Galvanotecnia del Oeste S.A.",
+   "que": "Fabricación de intercambiadores VHC-E-460 A/B / mazo de tubos (propuesta técnica 12-16 semanas, EXW Mendoza, pago 30/70, validez 30 días)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": "12 a 16 semanas desde OC y plano aprobado",
+   "fecha": "2026-03-20"
+  },
+  {
+   "proveedor": "Provemet",
+   "que": "Tubos 5/8\" 1,65 mm A-179",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-03-16"
+  },
+  {
+   "proveedor": "Traficaño",
+   "que": "Tubos 5/8\" 1,65 mm A-179",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-03-18"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Se cotizó en paralelo tubos A-179 (Provemet, Traficaño) y fabricación completa del haz (Galvanotecnia del Oeste, Mendoza): comparar ambas vías.",
+  "Plazo de proveedor de fabricación 12-16 semanas encaja con los 125 días ofrecidos.",
+  "Condición habitual PAE: 30% anticipo y 70% al despacho, USD, sin IVA."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "precio": "PAN AMERICAN ENERGY/66 - Mazos para Intercambiador/7.Propuesta Comercial (envío al Cliente)/139.pdf",
+  "oferta_cliente": "PAN AMERICAN ENERGY/66 - Mazos para Intercambiador/7.Propuesta Comercial (envío al Cliente)/Oferta (10).pdf",
+  "plazo_proveedor": "PAN AMERICAN ENERGY/66 - Mazos para Intercambiador/5.Proveedores 3ros/Cotización Galvanotecnia - PT_GDO_VHC-E-460_AB_ITT.pdf",
+  "proveedores_tubos": "PAN AMERICAN ENERGY/66 - Mazos para Intercambiador/5.Proveedores 3ros/Provemet Cotización tubos 5_8_; 1.65 mm; A-179.msg"
+ },
+ "problemas": [
+  "Precios de proveedores no legibles (PDF adjuntos de los .msg no incluidos)",
+  "Sin planilla de costos ni factor",
+  "Fecha de entrega en oferta cliente: 27.03.2026",
+  "Propuesta GDO es por 2 intercambiadores completos, no solo mazo; precio sujeto a etapa comercial",
+  "Sin validez ni lugar de entrega en la propuesta"
+ ]
+}

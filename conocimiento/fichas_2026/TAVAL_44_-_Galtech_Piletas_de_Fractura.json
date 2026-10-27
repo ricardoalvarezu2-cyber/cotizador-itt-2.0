@@ -1,0 +1,66 @@
+{
+ "carpeta": "TAVAL/44 - Galtech Piletas de Fractura",
+ "cliente": "Galtech (inferido del nombre de carpeta; cotiza TAVAL)",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-02-10",
+ "referencia_cliente": null,
+ "familia": "T",
+ "descripcion_corta": "Solicitud de cotización a proveedor de 2 piletas de fractura de 80 m3 (frac tank 500 Bbl con semirremolque) para lodos de producción",
+ "items": [
+  {
+   "descripcion": "Pileta de fractura 80 m3 (frac tank 500 Bbl) con semirremolque",
+   "cantidad": 2,
+   "unidad": "Unid",
+   "precio_unitario": null,
+   "precio_total": null,
+   "moneda": "USD",
+   "datos_tecnicos": "Presión atmosférica, entrada 2\" bridada, drenajes 2\" o 3\", manhole, conexiones 2\" para indicador de nivel e interruptores de nivel bajo/alto; sin planos"
+  }
+ ],
+ "monto_total_ofertado": null,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [
+  {
+   "proveedor": "Tanques Milei",
+   "que": "2 piletas de fractura 80 m3 recto con centralina (precio solo en PDF adjunto, no extraído)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-02-10"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Pedido a proveedor sin planos: uso para recepción de agua y lodos industriales, presión atmosférica",
+  "Se pidió ofrecer más de una configuración"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/Milei - Cotización de piletas de fractura con semi.msg"
+ },
+ "problemas": [
+  "Carpeta solo con un mail de proveedor; precio en adjunto no disponible",
+  "No hay oferta a cliente, costos ni OC"
+ ]
+}

@@ -1,0 +1,55 @@
+{
+ "cliente": "SECIN",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "referencia_cliente": "OT-4746 Plataforma separadores - fabricación",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "carpeta": "SECIN/12 - OT-4746 -Plataforma Separadores -Fabricación",
+ "fecha_ultima_modificacion": "2026-03-23",
+ "familia": "OT otro",
+ "descripcion_corta": "Plataforma para separadores; solo una referencia de precio de piso rejilla galvanizada (Avila)",
+ "proveedores": [
+  {
+   "proveedor": "Avila",
+   "que": "Piso de rejilla galvanizada, sectores circulares (referencia de precio; adjunto A01-2578 no extraído)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-03-23"
+  }
+ ],
+ "aprendizajes": [
+  "La plataforma requiere piso de rejilla galvanizada en sectores circulares; se pidió referencia de precio a proveedor de rejillas."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedor": "5.Proveedores 3ros/Avila - Cotización piso rejilla galv - Sectores circulares - Referencia de precio.msg"
+ },
+ "problemas": [
+  "Único archivo es un mail sin precio; fecha del mail 2026-03-03 vs modificación 2026-03-23",
+  "Sin oferta ni costos"
+ ]
+}

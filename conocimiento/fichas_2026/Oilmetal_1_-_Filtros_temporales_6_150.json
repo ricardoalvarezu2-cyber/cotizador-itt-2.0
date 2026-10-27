@@ -1,0 +1,56 @@
+{
+ "carpeta": "Oilmetal/1 - Filtros temporales 6 #150",
+ "cliente": "Oilmetal",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-03-26",
+ "referencia_cliente": "Filtros temporales 6\" #150 (según nombre de carpeta)",
+ "familia": "F filtro",
+ "descripcion_corta": "Filtros temporales 6\" #150; solo hay un mail de AG Internacional sobre malla Mesh 45 sin contenido legible",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [
+  {
+   "proveedor": "AG Internacional",
+   "que": "Cotización de malla Mesh 45 (precio solo en adjuntos/cuerpo no disponible)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-03-26"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Para filtros temporales 6\" #150 se consultó malla Mesh 45 a un proveedor externo",
+  "Carpeta sin datos de precio: no usar como referencia"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/AG Internacional - Cotización Mesh 45.msg"
+ },
+ "problemas": [
+  "El mail no tiene cuerpo extraído; no hay precios, cantidades ni oferta",
+  "Cliente y descripción inferidos del nombre de carpeta"
+ ]
+}

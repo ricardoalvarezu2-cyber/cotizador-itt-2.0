@@ -1,0 +1,73 @@
+{
+ "carpeta": "FLARGENT/03 - O1404 - antorcha doble 20 12",
+ "cliente": "Flargent",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": "Rev A (2026-04-22); la oferta económica refiere a la Oferta Técnica N° 148. 'O1404' figura en el nombre de carpeta",
+ "fecha_oferta": "2026-04-22",
+ "fecha_ultima_modificacion": "2026-04-22",
+ "referencia_cliente": "Antorcha doble L901-L902",
+ "familia": "OT",
+ "descripcion_corta": "Antorcha (flare) doble TAG L901-L902",
+ "items": [
+  {
+   "descripcion": "Antorcha L901-L902",
+   "cantidad": 1,
+   "unidad": "UN",
+   "precio_unitario": 182288.68,
+   "precio_total": 182288.68,
+   "moneda": "USD",
+   "datos_tecnicos": "Ver Oferta Técnica N° 148 (no incluida)"
+  }
+ ],
+ "monto_total_ofertado": 182288.68,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "75 días corridos a partir de la aprobación de la OC",
+ "plazo_dias": 75,
+ "condiciones": {
+  "pago": "30% anticipo contra OC aprobada; 70% contra liberación para despacho",
+  "validez": "30 días corridos",
+  "entrega": "Sobre camión en planta ITT, Quilmes Oeste",
+  "moneda_y_ajuste": "USD facturado en ARS al TC BNA fecha de factura; NC/ND si variación > 3%",
+  "notas_y_exclusiones": [
+   "Sin IVA",
+   "Póliza de seguro se cotiza con la OC",
+   "Sin multas por mora en material importado",
+   "No responsable por licencias no automáticas"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "E. Ledesma (mano de obra, persona/empresa unipersonal)",
+   "que": "Mano de obra para fabricación de la antorcha doble",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-20"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Precio de venta USD 182k con plazo 75 días corridos; fabricación con mano de obra tercerizada (cotización 2026-04-20, dos días antes de la oferta).",
+  "Condición estándar 30% anticipo / 70% despacho, EXW planta Quilmes, seguro aparte."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "precio": "FLARGENT/03 - O1404 - antorcha doble 20 12/7.Propuesta Comercial (envío al Cliente)/OFERTA ECONOMICA - Antorcha Doble L901 y L902.docx",
+  "proveedor": "FLARGENT/03 - O1404 - antorcha doble 20 12/5.Proveedores 3ros/E Ledesma cotización de MO para la fabricación de Antorcha doble.msg"
+ },
+ "problemas": [
+  "Sin costos, factor, ni oferta técnica N° 148",
+  "Precio de mano de obra del tercero no legible",
+  "Número de oferta económica no consta"
+ ]
+}

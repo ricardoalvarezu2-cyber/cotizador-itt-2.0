@@ -1,0 +1,163 @@
+{
+ "carpeta": "TECPETROL/7. Trampas",
+ "cliente": "Tecpetrol",
+ "cliente_final": null,
+ "numero_oferta": "0-375-25 Rev 3",
+ "revisiones": "Original 13/06/2025 (opción 1 TCR Sypris USD 255,897.06 / opción 2 TCR METAP USD 217,540.26), Rev 1 23/07/2025 (USD 266,532.18), Rev 2 30/07/2025 (USD 262,068.18), Rev 3 01/08/2025 (USD 254,635.18, vigente). Oferta adicional 0-411-25 del 04/11/2025.",
+ "fecha_oferta": "2025-08-01",
+ "fecha_ultima_modificacion": "2026-01-23",
+ "referencia_cliente": "PR 45561 - Proyecto Gathering Sur del Río - Trampas, Evento 10471 (bloque Sur del Río FA00144); Nota de Pedido 4520002639 / PO Coupa 40724",
+ "familia": "TS",
+ "descripcion_corta": "Trampa lanzadora y trampa receptora de scraper 16\"x20\" serie 900 con TCR Sypris tool-less, sobre skid, con detector de pasaje y flete a Fortín de Piedra (Neuquén)",
+ "items": [
+  {
+   "descripcion": "Trampa lanzadora 16\" Serie-900, TCR Sypris tool-less, sobre skid con válvulas, cañerías e instrumentos según P&ID ACO-FP-TR3-R-PI-001; incluye repuestos Pre-COM/COM/PEM y 2 años",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 114195.15,
+   "precio_total": 114195.15,
+   "moneda": "USD",
+   "datos_tecnicos": "Trampa 16x20\" serie 900 (RJ), cañería API 5L X65 20\"/16\", válvulas esféricas WCB 900# RTJ, TCR Sypris; skid"
+  },
+  {
+   "descripcion": "Trampa receptora 16\" Serie-900, TCR Sypris tool-less, sobre skid, mismos alcances y repuestos",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 123195.88,
+   "precio_total": 123195.88,
+   "moneda": "USD",
+   "datos_tecnicos": "Trampa 16x20\" serie 900, TCR Sypris, skid"
+  },
+  {
+   "descripcion": "Detector de pasaje de scraper no intrusivo CD52 Bandit, display digital, caja antiexplosiva, bidireccional, memoria 120 detecciones",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 9636.0,
+   "precio_total": 9636.0,
+   "moneda": "USD",
+   "datos_tecnicos": "Modelo CD52Bandit P/N 81-05-0025-00-0-000"
+  },
+  {
+   "descripcion": "Flete a destino Fortín de Piedra, Neuquén (2 semirremolques)",
+   "cantidad": 2,
+   "unidad": "un",
+   "precio_unitario": 3804.08,
+   "precio_total": 7608.15,
+   "moneda": "USD",
+   "datos_tecnicos": "Cada trampa aprox. 8.5 x 2 x 2 m, 6.2 t"
+  }
+ ],
+ "monto_total_ofertado": 254635.18,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "180 días de recibida la orden de compra e ingeniería aprobada",
+ "plazo_dias": 180,
+ "condiciones": {
+  "pago": "Por hitos: 30% contra compra de materiales (OC), 15% contra PH, 15% contra ensayo de pintura, 15% contra data book, 25% contra entrega; todo a 30 días fecha factura (la OC fija T030)",
+  "validez": "30 días corridos",
+  "entrega": "En planta del cliente, Fortín de Piedra, Neuquén (flete incluido en Rev 3; la oferta original era en planta ITT Quilmes)",
+  "moneda_y_ajuste": "USD facturado en ARS al TC BNA fecha de factura; cancelación al TC BNA vendedor día anterior al pago; NC/ND si la variación supera 3%. La OC incluye Anexo III de ajuste de precios (fórmula de índices)",
+  "notas_y_exclusiones": [
+   "No se aceptan multas por mora en entregas si hay material importado (normativa BCRA)",
+   "ITT no responsable por demoras por licencias no automáticas",
+   "La OC aplica penalidad 2% por semana desde 30 días de atraso, tope 10%",
+   "Garantía 1 año desde puesta en servicio, máx. 18 meses desde entrega",
+   "Precio sin IVA (IVA 21% se suma: total Rev 3 USD 308,108.57)"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Ledesma (mano de obra)",
+   "que": "MO trampa lanzadora (corte, biselado, soldadura, spools, cuna); no incluye montaje, desmontaje ni PH",
+   "precio": 8500,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2025-10-16"
+  },
+  {
+   "proveedor": "Ledesma (mano de obra)",
+   "que": "MO trampa receptora (mismo alcance)",
+   "precio": 10800,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2025-10-16"
+  },
+  {
+   "proveedor": "Ledesma (mano de obra)",
+   "que": "Estructura skid para trampas, por kg",
+   "precio": 2.0,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2025-10-16"
+  },
+  {
+   "proveedor": "Ledesma (mano de obra)",
+   "que": "Presupuesto previo 18/08/2025: MO trampa lanzadora (SCH 40) USD 6,400 y skid de soportería USD 2.00/kg",
+   "precio": 6400,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2025-08-18"
+  },
+  {
+   "proveedor": "SUAN S.R.L. (transporte)",
+   "que": "Traslado de cada semirremolque Quilmes a Fortín de Piedra (2 unidades); estadía ARS 850,000 por 24 h; no incluye seguro de carga",
+   "precio": 3200000,
+   "moneda": "ARS",
+   "plazo_entrega": "2 a 3 días de viaje",
+   "fecha": "2025-07-31"
+  },
+  {
+   "proveedor": "FTS (representante Sypris)",
+   "que": "Tapa de cierre rápido TCR Sypris nacionalizada (alternativa); precio no legible en el texto",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2025-06-12"
+  },
+  {
+   "proveedor": "Flousa, Megatap (TCR); Flousa, Pipetrol (indicador de scraper); Taval (PPTO 20879)",
+   "que": "Cotizaciones de materiales para planilla de costos; montos solo en adjuntos no extraídos",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2025-06-04"
+  }
+ ],
+ "resultado": "ganada (hay OC)",
+ "orden_compra": {
+  "numero": "4520002639 (rev /03)",
+  "fecha": "2025-08-07",
+  "monto": 247502.07
+ },
+ "aprendizajes": [
+  "Tecpetrol adjudicó a precio menor que la Rev 3: la OC /03 suma USD 247,502.07 (lanzadora 119,062.03, receptora 128,440.04) frente a USD 254,635.18 ofertados; en la OC el detector y el flete no figuran como líneas aparte (revisar si se absorbieron). La OC /01 fue 249,405.21 y subió a /02 249,792.61 y bajó a /03.",
+  "La oferta bajó en 4 revisiones de 266.5k a 254.6k y se abrió originalmente con opción TCR METAP (más barata, 217.5k) vs Sypris tool-less; el cliente terminó con TCR Sypris.",
+  "Tras la OC el cliente pidió un adicional (OE 411-25, USD 193.70 solo MO por trampa para niple 1/2\" sch160 y sockolet soldados; opción 2 con instrumentos USD 565.93). Tecpetrol eligió opción 1 en ambas trampas: conviene prever tomas de manómetro desde la cotización.",
+  "Condiciones duras del cliente: penalidad 2%/semana, ajuste de precios Anexo III, seguro de carga de USD 250,000 (prima aprox. USD 105 por 30 días según transportista, no incluida), inspecciones de Tecpetrol/TUV.",
+  "Mano de obra de armado se terceriza (Ledesma USD 8,500 a 10,800 por trampa más skid a USD 2/kg); el ITT hace PH y pintura."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "4.Armado de la Oferta Comercial/OE 375-25 Rev 3.pdf",
+  "revisiones": "4.Armado de la Oferta Comercial/OE 375-25 Rev 1.pdf, Rev 2, Rev 3 y OE 375-25.pdf",
+  "orden_compra": "8.Orden de Compra/4520002639 actualizada 23-01-26.pdf",
+  "adicional": "4.Armado de la Oferta Comercial/OE 411-25.pdf",
+  "proveedores_ledesma": "5.Proveedores 3ros/Re cotizacion de Ledesma/Presupuesto ITT N° 200105/200106/200107 (.pdf)",
+  "transporte": "5.Proveedores 3ros/Cotizacion transporte a Neuquen semirremolques  31-07-2025.pdf",
+  "condiciones": "4.Armado de la Oferta Comercial/OE 375-25 Rev 3.pdf",
+  "ajuste_precios": "8.Orden de Compra/CGC-ANEXO_III-Ajuste_de_Precios.pdf"
+ },
+ "problemas": [
+  "No se encontró planilla de costos utilizable: TRAMPAS unificado para compras.xlsx tiene #REF! y costos en 0, por eso costo_total y factor_venta son null",
+  "Los precios unitarios de la OC no coinciden con la Rev 3 y no se halló una revisión posterior (Rev 4) en la carpeta",
+  "Montos de Flousa/Megatap/Pipetrol/Taval/Sypris están en adjuntos no extraídos",
+  "El flete de la Rev 3 se lee como 2 x 3,804.08 = 7,608.15 en el texto del PDF, con extracción desordenada"
+ ]
+}

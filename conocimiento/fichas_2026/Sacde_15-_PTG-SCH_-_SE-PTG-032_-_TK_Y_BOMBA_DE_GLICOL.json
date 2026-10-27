@@ -1,0 +1,70 @@
+{
+ "carpeta": "Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL",
+ "cliente": "SACDE",
+ "cliente_final": null,
+ "numero_oferta": "Presupuesto ITT 000000000124 (formulario_presupuesto_itt 124)",
+ "revisiones": "Hay hoja RESUMEN (opción 1: tanque+instrumentos+bomba, 96.924 USD con IVA, plazo 90 d) y RESUMEN (OP2: solo tanque sin cañería/válvulas/instrumentos, plazo 75 d) que coincide con el formulario 124. Además archivo 'SKIDs SK SACDE 1002 Rev1' (otro alcance).",
+ "fecha_oferta": "2026-02-20",
+ "fecha_ultima_modificacion": "2026-02-20",
+ "referencia_cliente": "Licitación 3029-SE-SPF-025 / SE-PTG-032 (TK Glicol, Rincón de Aranda)",
+ "familia": "T",
+ "descripcion_corta": "Tanque de glicol atmosférico con escalera y plataforma (opción sin cañería, válvulas ni instrumentos), SACDE",
+ "items": [
+  {
+   "descripcion": "Tanque de Glicol - Escalera y plataforma",
+   "cantidad": 1,
+   "unidad": "Unid",
+   "precio_unitario": 42371.0,
+   "precio_total": 42371.0,
+   "moneda": "USD",
+   "datos_tecnicos": "Chapa SA-36 rolada (envolvente 5/16\", piso 3/8\"), entrada de hombre, patas, guardapié, escalera y guardahombre, rejilla galvanizada; control de nivel 2800 mm y bomba de glicol excluidos en OP2"
+  }
+ ],
+ "monto_total_ofertado": 42371.0,
+ "moneda": "USD",
+ "costo_total": 33079.7,
+ "factor_venta": 1.28,
+ "desglose_costo": {
+  "materiales": 6316.18,
+  "mano_obra": 26763.52,
+  "terceros": null,
+  "otros": 2072.15
+ },
+ "plazo_ofrecido": "75 días (columna Ent (Días) del presupuesto)",
+ "plazo_dias": 75,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": "USD sin IVA",
+  "notas_y_exclusiones": [
+   "Opción OP2: sin cañería, válvulas ni instrumentos",
+   "Garantía 1 año desde instalación o 18 meses desde embarque",
+   "Pruebas según API 598"
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Mano de obra ITT pesa ~58% del costo (factor 1.3 sobre MO, 1.2 sobre materiales) en tanques de este tipo",
+  "Se cotizó una opción 1 completa (tanque+instrumentos+bomba glicol 11.500 USD costo, ~73.272 USD sin IVA) y una opción 2 reducida; el cliente recibió la reducida",
+  "Escalera/plataforma se costea aparte (2.072 USD costo, factor 1.2) y el formulario la agrupa en la misma línea",
+  "Plazo 75 d en opción reducida vs 90 d en completa"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "4.Armado de la Oferta Comercial/formulario_presupuesto_itt 124.pdf",
+  "costo_total": "4.Armado de la Oferta Comercial/LM-TANQUE GLICOL.xlsx (hoja RESUMEN (OP2))",
+  "factor_venta": "4.Armado de la Oferta Comercial/LM-TANQUE GLICOL.xlsx",
+  "plazo": "4.Armado de la Oferta Comercial/formulario_presupuesto_itt 124.pdf",
+  "datos_tecnicos": "4.Armado de la Oferta Comercial/LM-TANQUE GLICOL.xlsx (hoja Tabla)"
+ },
+ "problemas": [
+  "No hay carpeta 6/7 ni OC: el formulario 124 está en la carpeta 4, se asume enviado",
+  "Precio 42.371 corresponde al subtotal TK Glicol; la planilla suma escalera/plataforma aparte (44.858,57), el formulario la nombra incluida: ambiguo",
+  "Factor 1.28 es calculado (42371.99/33079.70); costo_total excluye escalera/plataforma",
+  "SKIDs SK SACDE 1002 Rev1.xlsx cotiza skids 2104/2105/2111 (234.956 USD sin IVA, factores 1.4 MO/1.42 mat., plazo 75) que parece ser otro proyecto; no se incluyó",
+  "Sin proveedores 3ros en la carpeta"
+ ]
+}

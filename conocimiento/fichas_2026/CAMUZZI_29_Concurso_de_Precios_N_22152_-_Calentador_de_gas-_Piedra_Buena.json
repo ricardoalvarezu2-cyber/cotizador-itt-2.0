@@ -1,0 +1,84 @@
+{
+ "carpeta": "CAMUZZI/29. Concurso de Precios N° 22152 - “Calentador de gas- Piedra Buena",
+ "cliente": "Camuzzi Gas del Sur",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-02-12",
+ "referencia_cliente": "Concurso de Precios N° 22152 - Calentador de gas - Piedra Buena",
+ "familia": "C",
+ "descripcion_corta": "Calentadores de gas (Piedra Buena) para Camuzzi; solo hay cotizaciones de proveedores (quemadores, manifolds, casquetes, ánodos, indicadores de nivel)",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [
+  {
+   "proveedor": "EQA SAIC",
+   "que": "3 quemadores 250.000 BTU/H (4.052 c/u), 1 quemador 500.000 BTU/H (4.219), 4 manifolds 3/4\" S3000 con accesorios (10.950 c/u), 10% dto; subtotal sin IVA 54.157,50; interruptor neumático de nivel Murphy USD 900 -10% aparte",
+   "precio": 54157.5,
+   "moneda": "USD",
+   "plazo_entrega": "30/40 días hábiles; pago 40% anticipo y saldo contra entrega; flete a cargo del cliente; vto. oferta 15/02/2026",
+   "fecha": "2026-02-06"
+  },
+  {
+   "proveedor": "Cintolo Hnos. Metalúrgica",
+   "que": "Casquetes semielípticos ASME B16.9 A234-WPB: 2x20\" Sch20, 1x10\" Sch80, 3x6\" Sch80, 4x6\" Sch40 (precio en PDF adjunto no disponible)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-02-11"
+  },
+  {
+   "proveedor": "Protfund",
+   "que": "Ánodos de magnesio: 19 mm con reducción 1-1/2\" a 3/4\" USD 19 c/u (entrega inmediata); 500 mm x 30 mm con alma sobre tapón 1-1/2\" USD 38 c/u (7 días); más IVA",
+   "precio": 38.0,
+   "moneda": "USD",
+   "plazo_entrega": "inmediata / 7 días",
+   "fecha": "2026-02-11"
+  },
+  {
+   "proveedor": "Riva Hnos",
+   "que": "Indicador de nivel Reflex 500 mm 70 bar USD 685 y tubular VT2P 600 mm USD 365 (cotizó 1 unidad de cada uno; se pidieron 2 tubulares), más IVA, pago contado",
+   "precio": 1050.0,
+   "moneda": "USD",
+   "plazo_entrega": "45-60 días; validez 4 semanas",
+   "fecha": "2026-02-12"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Para estos calentadores EQA provee quemador + manifold de regulación completo (el costo del manifold, 10.950 USD c/u, supera al del quemador)",
+  "Se pidieron 4 calentadores: 3 de 250.000 BTU/H y 1 de 500.000 BTU/H",
+  "Vaina de válvula termostática de latón (desvío aceptado en calentadores previos de la misma distribuidora)",
+  "Plazos de proveedores largos (indicadores 45-60 d, EQA 30-40 d hábiles) condicionan el plazo ofrecido"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/EQA - PPTO 47932-ITT.pdf; Cintolo, Protfund y Riva (.msg)"
+ },
+ "problemas": [
+  "No hay oferta ITT, planilla de costos ni OC en la carpeta: precio ofertado, factor y plazo desconocidos",
+  "Precio de Cintolo en PDF adjunto no disponible",
+  "Riva cotizó 1 tubular aunque se pidieron 2; cantidad de ánodos no confirmada",
+  "Subtotal EQA calculado sobre cantidades dadas en el PDF (10.940,40+3.797,10+39.420)"
+ ]
+}

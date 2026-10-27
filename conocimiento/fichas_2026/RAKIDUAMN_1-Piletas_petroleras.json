@@ -1,0 +1,164 @@
+{
+ "carpeta": "RAKIDUAMN/1-Piletas petroleras",
+ "cliente": "RAKIDUAMN S.R.L.",
+ "cliente_final": null,
+ "numero_oferta": "Presupuesto ITT 000000000120",
+ "revisiones": "Una sola versión encontrada",
+ "fecha_oferta": "2026-02-11",
+ "fecha_ultima_modificacion": "2026-02-11",
+ "referencia_cliente": "Ref. cliente 'RKN piletas'; plano RKN-PL-100-M-PL-001 Rev 9 (según proveedor Cormet)",
+ "familia": "T",
+ "descripcion_corta": "15 piletas petroleras de 70.000 L (11,5 x 2,5 x 2,5 m) montadas sobre patín, entregas escalonadas de 60 a 210 días",
+ "items": [
+  {
+   "descripcion": "Pileta de 70.000 Lts montada sobre patín - entrega a 60 días",
+   "cantidad": 2,
+   "unidad": "un",
+   "precio_unitario": 71110,
+   "precio_total": 142220,
+   "moneda": "USD",
+   "datos_tecnicos": "Pileta 70 m3 sobre patín; chapa 1/4\" F-22 con nervaduras V; techo semilla de melón; 2 bocas de limpieza; brida 4\" (según memoria técnica del proveedor Milei)"
+  },
+  {
+   "descripcion": "Pileta de 70.000 Lts - entrega a 90 días",
+   "cantidad": 2,
+   "unidad": "un",
+   "precio_unitario": 71110,
+   "precio_total": 142220,
+   "moneda": "USD",
+   "datos_tecnicos": "idem"
+  },
+  {
+   "descripcion": "Pileta de 70.000 Lts - entrega a 120 días",
+   "cantidad": 3,
+   "unidad": "un",
+   "precio_unitario": 71110,
+   "precio_total": 213330,
+   "moneda": "USD",
+   "datos_tecnicos": "idem"
+  },
+  {
+   "descripcion": "Pileta de 70.000 Lts - entrega a 150 días",
+   "cantidad": 3,
+   "unidad": "un",
+   "precio_unitario": 71110,
+   "precio_total": 213330,
+   "moneda": "USD",
+   "datos_tecnicos": "idem"
+  },
+  {
+   "descripcion": "Pileta de 70.000 Lts - entrega a 180 días",
+   "cantidad": 3,
+   "unidad": "un",
+   "precio_unitario": 71110,
+   "precio_total": 213330,
+   "moneda": "USD",
+   "datos_tecnicos": "idem"
+  },
+  {
+   "descripcion": "Pileta de 70.000 Lts - entrega a 210 días",
+   "cantidad": 2,
+   "unidad": "un",
+   "precio_unitario": 71110,
+   "precio_total": 142220,
+   "moneda": "USD",
+   "datos_tecnicos": "idem"
+  }
+ ],
+ "monto_total_ofertado": 1066650,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "Entregas en tandas: 60, 90, 120, 150, 180 y 210 días (2+2+3+3+3+2 unidades)",
+ "plazo_dias": 210,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": "Dólares; total sin IVA (IVA 0 en el formulario)",
+  "notas_y_exclusiones": [
+   "Garantía 1 año desde instalación o 18 meses desde embarque",
+   "Pruebas según API 598 (texto estándar del formulario)",
+   "Sujeto a revisión de contratos antes de aceptar la compra"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Tecnomobile SRL (Tanques Milei)",
+   "que": "Pileta 70 m3 sobre patín, nueva; 5% de bonificación por 10 unidades; anticipo 30% (10 un.) / 65% (1 un.)",
+   "precio": 47600,
+   "moneda": "USD + IVA por unidad",
+   "plazo_entrega": "Para 10 piletas: 2 el 15/2, 2 el 3/3, 3 el 15/3, 3 el 30/3 (cotización de dic-2024); nueva cotización 6/2/2026 en PDF no legible",
+   "fecha": "2024-12-10"
+  },
+  {
+   "proveedor": "Tankor Industria",
+   "que": "Pileta petrolera chapa 1/4\" 70.000 L, 10 unidades",
+   "precio": 52150,
+   "moneda": "USD por unidad (+IVA 10,5%)",
+   "plazo_entrega": "5 unidades cada 25 días; 10 en 50/60 días",
+   "fecha": "2024-12-19"
+  },
+  {
+   "proveedor": "Cormet Metalmecánica (para TAVAL)",
+   "que": "4 piletas de almacenamiento según plano RKN-PL-100-M-PL-001 Rev 9: materiales USD 55.392 + MO USD 24.464; pintura epoxi+poliuretano, líquidos penetrantes 100%",
+   "precio": 79856,
+   "moneda": "USD + IVA por unidad",
+   "plazo_entrega": "45 días",
+   "fecha": "2026-02-09"
+  },
+  {
+   "proveedor": "IMB OIL (Adita)",
+   "que": "Uniones a golpe Fig 206 (cotización S01604)",
+   "precio": 1465.3,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-02-05"
+  },
+  {
+   "proveedor": "A.G. Internacional",
+   "que": "Metal desplegado romboidal SAE 1010 1000x2000 mm mod. 450-30-40",
+   "precio": 15.6,
+   "moneda": "USD por m2 + IVA",
+   "plazo_entrega": "5 días; validez 7 días; contado",
+   "fecha": "2026-02-05"
+  },
+  {
+   "proveedor": "Pefow Equipamientos",
+   "que": "1 arrestallamas 4\" #150 para venteo (precio en PDF no legible)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-02-05"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "ITT revendió piletas fabricadas por terceros: a USD 71.110 contra costo de proveedor 47.600 (Milei, ~45.220 con 5% de bonificación) a 52.150 (Tankor), o sea 1,4 a 1,6x sobre costo de proveedor; la alternativa Cormet, ajustada al plano del cliente, costaba 79.856 (por encima del precio de venta, no es comparable si el plano exige más)",
+  "El proveedor Milei limita cuántas unidades entrega antes de la fecha límite (30/03/2026); se pidió cantidad máxima: el cronograma de entrega de 15 unidades en 210 días dependió de la capacidad de terceros",
+  "Los accesorios (arrestallamas, uniones a golpe, metal desplegado) se cotizaron aparte",
+  "Hay planilla de precios de acero (chapa A36 ~USD 1,3/kg con 10% de recortes) para hacer fabricación propia como alternativa"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "4.Armado de la Oferta Comercial/formulario_presupuesto_itt 120.pdf",
+  "plazo": "4.Armado de la Oferta Comercial/formulario_presupuesto_itt 120.pdf",
+  "proveedores": "5.Proveedores 3ros/*",
+  "datos_tecnicos": "5.Proveedores 3ros/Cotizacion Milei Memoria tecnica Pileta para deposito 70 m3 10-12-24.pdf"
+ },
+ "problemas": [
+  "No hay planilla de costos ni factor",
+  "Cantidad cotizada (15) difiere de la consulta a Milei (11)",
+  "Cotizaciones de Milei y Tankor son de dic-2024 (anteriores a la oferta, vigencia vencida); la actualizada de Milei (6/2/2026) está en un PDF adjunto no leído",
+  "Condiciones de pago y validez no figuran en el formulario ITT",
+  "Cormet cotiza 4 piletas a TAVAL: relación TAVAL-RAKIDUAMN no clara",
+  "Moneda de Tankor inferida (el PDF mezcla 'Tarifa pública (USD)' con importes en $)"
+ ]
+}

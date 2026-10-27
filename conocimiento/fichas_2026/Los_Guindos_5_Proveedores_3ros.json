@@ -1,0 +1,82 @@
+{
+ "cliente": null,
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "referencia_cliente": null,
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "carpeta": "Los Guindos/5.Proveedores 3ros",
+ "fecha_ultima_modificacion": "2026-03-26",
+ "familia": "OT otro",
+ "descripcion_corta": "Solo cotizaciones de proveedores (chapa A-516, casquetes, virolas, codo y tee 12\" sch80); sin oferta ni armado",
+ "proveedores": [
+  {
+   "proveedor": "Chapaferro",
+   "que": "Chapa A-516 Gr70 normalizada: 765 kg 1/4\" 2500x6000 a ARS 2420/kg y 2250 kg 3/8\" 2500x12000 a ARS 2332/kg (cotización de referencia)",
+   "precio": 7098300,
+   "moneda": "ARS",
+   "plazo_entrega": null,
+   "fecha": "2026-03-23"
+  },
+  {
+   "proveedor": "Cintolo",
+   "que": "Casquetes SE 26\" esp. 25.4 mm (precio no legible)",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-03-25"
+  },
+  {
+   "proveedor": "Cintolo",
+   "que": "Codo y tee 12\" sch80 (precio no legible)",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-03-26"
+  },
+  {
+   "proveedor": "Sandri",
+   "que": "2 virolas 26\" x 2500 mm esp. 1\" (rolado; precio no legible)",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-03-25"
+  }
+ ],
+ "aprendizajes": [
+  "Se estima un recipiente 26\" con virolas de 1\" de espesor y casquetes SE 25.4 mm, con cañería 12\" sch80.",
+  "Precio de chapa A-516 normalizada ~ARS 2.3-2.4k/kg (marzo 2026, sin IVA).",
+  "Carpeta preliminar: solo relevamiento de proveedores."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "chapa": "Cot de referencia Chapaferro ASTM A-516 Gr70.pdf",
+  "casquetes/codo/virolas": "mails .msg de la carpeta"
+ },
+ "problemas": [
+  "Sin cliente, oferta, ni precios finales",
+  "Mails .msg sin cuerpo legible; precio total de chapa es 7.098.300 ARS sin IVA (total con impuestos 8.865.776,70)"
+ ]
+}

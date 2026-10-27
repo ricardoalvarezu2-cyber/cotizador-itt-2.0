@@ -1,0 +1,145 @@
+{
+ "carpeta": "PAN AMERICAN ENERGY/63-Mazos LICITACIÓN 3000060034",
+ "cliente": "PAN AMERICAN ENERGY",
+ "cliente_final": null,
+ "numero_oferta": "0-389 25 Rev1 (OE 389-25)",
+ "revisiones": "3 versiones: original 01/08/2025 (Lic 3000060034, dirigida a TAVAL, USD 35.993,60, 45/60 d, pago 30 dff); 'Actualizado' 12/09/2025 (Lic 3000060254, mismos importes); Rev1 26/11/2025 (USD 42.008,00, 90/120 d, 15% anticipo). Rev1 es la vigente y la adjudicada.",
+ "fecha_oferta": "2025-11-26",
+ "fecha_ultima_modificacion": "2026-03-11",
+ "referencia_cliente": "Licitación 3000060254 (ex 3000060034) - Construcción de mazos de tubos; Pedido PAE 4100273768; ET PAE GSJ-CD-E1000-UE-107 (E-225) y UE-108 (E-226). TAVAL aparece como intermediario en las ofertas iniciales.",
+ "familia": "OT",
+ "descripcion_corta": "Fabricación de 2 mazos de tubos en U (intercambiadores de casco y tubo E-225 y E-226) en AISI 316L, con placa porta tubos, internos, END, ingeniería y databook",
+ "items": [
+  {
+   "descripcion": "Mazo de tubos TAG E-225 (plano GSJ-CD-E1000-UE-107): corte, soldadura, consumibles, END, ingeniería y databook",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 13929.47,
+   "precio_total": 13929.47,
+   "moneda": "USD",
+   "datos_tecnicos": "Placa porta tubos SA-240 Tp316L; tubos SA-213/269 Tp316L en U OD 25,4 x 2,11 mm; internos SA-240 Tp316L; diám. interno casco 578 mm; long. a tangente 2280 mm; prueba hidráulica. Mazo de 63 tubos U según pedido de curvado."
+  },
+  {
+   "descripcion": "Mazo de tubos TAG E-226 (plano GSJ-CD-E1000-UE-108): corte, soldadura, consumibles, END, ingeniería y databook",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 28078.52,
+   "precio_total": 28078.52,
+   "moneda": "USD",
+   "datos_tecnicos": "Mismos materiales; long. a tangente 1873 mm; prueba hidráulica; mazo de 24 tubos U según pedido de curvado (la oferta de curvado menciona 24 U en E-226 y 62-63 en E-225)."
+  }
+ ],
+ "monto_total_ofertado": 42008.0,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "90/120 días de recibida la orden de compra (Rev1); original 45/60 días",
+ "plazo_dias": 120,
+ "condiciones": {
+  "pago": "Rev1: 15% anticipo a 30 dff, saldo contra entrega a 30 dff. OC PAE: anticipo 15% (USD 5.399,10) contra póliza de caución; resto 30 días de recepción de factura",
+  "validez": "30 días corridos",
+  "entrega": "En planta ITT Quilmes (oferta); FCA sobre transporte del cliente, Cerro Dragón (OC)",
+  "moneda_y_ajuste": "USD facturado en pesos a TC BNA fecha de factura; pago a BNA vendedor día anterior; NC/ND si variación > 3%",
+  "notas_y_exclusiones": [
+   "Sin multas por mora en entregas si hay material importado (condición resolutoria por normas BCRA)",
+   "ITT no responde por atrasos por licencias no automáticas",
+   "ITT sugiere que material importado (chapas, instrumentos, válvulas) lo provea el cliente en comodato o deducible de facturas",
+   "Precios sin IVA (IVA 21% se suma)",
+   "OC PAE: penalidad 1% del monto por semana de demora"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Ledesma (mano de obra, Presupuesto 20037)",
+   "que": "Armado de placas, montaje y soldadura de tubos inox. mazo E-225 (sin curvado, bruñidora ni P.H.)",
+   "precio": 5500,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2025-07-31"
+  },
+  {
+   "proveedor": "Ledesma (mano de obra, Presupuesto 20038)",
+   "que": "Idem para mazo E-226",
+   "precio": 3800,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2025-07-31"
+  },
+  {
+   "proveedor": "Aceros Angeletti",
+   "que": "Forjado de disco AISI 316L Ø665x130 mm, 410 kg (mano de obra de forja, materia prima Ø508x250)",
+   "precio": 4,
+   "moneda": "USD por kg (+IVA) (~USD 1.640 el disco)",
+   "plazo_entrega": "30 días, pago contra entrega",
+   "fecha": "2025-11-19"
+  },
+  {
+   "proveedor": "Jorvical Aceros",
+   "que": "Barra redonda ASTM A-276 AISI 316L: Ø450x90 y Ø508 (mayor diámetro disponible) a USD 8,50/kg + corte USD 95-110",
+   "precio": 8.5,
+   "moneda": "USD por kg (+IVA)",
+   "plazo_entrega": "3 días, e-cheq 30 días",
+   "fecha": "2025-11-18"
+  },
+  {
+   "proveedor": "Curvasol (cotización 000298)",
+   "que": "Curvado de tubo 25,4 x 2,11 (precio en PDF adjunto, no legible en el texto)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2025-07-25"
+  },
+  {
+   "proveedor": "Curvatubos Zeziola",
+   "que": "Mano de obra de curvado 180° de tubos 25,4x2,11 AISI (precio en PDF adjunto no legible). No puede hacer radio 25 mm (curva Ø50,8)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2025-07-28"
+  },
+  {
+   "proveedor": "Quesada (JQ-032-2025)",
+   "que": "Mandrilado y armado de 2 mazos en U: Mazo 1 (24 tubos) 80 h, Mazo 2 (62 tubos) 110 h a USD 35/h; sin pintura",
+   "precio": 6650,
+   "moneda": "USD",
+   "plazo_entrega": "5 días desde cobro del anticipo (20%)",
+   "fecha": "2025-12-11"
+  }
+ ],
+ "resultado": "ganada (hay OC)",
+ "orden_compra": {
+  "numero": "4100273768",
+  "fecha": "2025-11-05 (pedido original); versión revisada con modificaciones acordadas recibida 2025-12-02",
+  "monto": 42007.99
+ },
+ "aprendizajes": [
+  "La oferta se mantuvo abierta meses (ago-nov 2025): venció la validez de 30 días y hubo que reactualizar; el aumento de 35.994 a 42.008 USD (+16,7%) vino de la placa porta tubos en 316L forjada y del plazo (vacaciones de proveedores); conviene pedir precios de forja/barra inox al cotizar y poner validez corta en materiales inox",
+  "Tubos en U inox 25,4x2,11 se curvan por terceros (Curvasol/Zeziola) con radios mínimos limitados (no radio 25 mm); validar radios con el cliente antes de cotizar",
+  "Mano de obra de armado/mandrilado se terceriza a USD 3.800-6.650 por mazo, no incluye curvado, bruñido ni prueba hidráulica; costear esos ítems aparte",
+  "El cliente (PAE) exige póliza de caución para el anticipo del 15% y aplica 1% por semana de demora; el plazo corre desde la liberación de la OC (2/12/2025), no desde la OC original",
+  "El contrato discrepó con el plazo (cliente esperaba 60 días; ITT ofertó 90/120): aclarar lead time por escrito en la oferta"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "4.Armado de la Oferta Comercial/OE 389- 25 Rev1.pdf",
+  "plazo": "4.Armado de la Oferta Comercial/OE 389- 25 Rev1.pdf",
+  "orden_compra": "8.Orden de Compra/PEDIDO 4100273768 - MAZO TUBOS REV.pdf",
+  "proveedores": "5.Proveedores 3ros/*",
+  "revisiones": "4.Armado de la Oferta Comercial/OE 389- 25.docx; OE 389- 25 Actualizado Lic 3000060254.pdf",
+  "datos_tecnicos": "8.Orden de Compra/PEDIDO 4100273768 - MAZO TUBOS REV.pdf"
+ },
+ "problemas": [
+  "No hay planilla de costos ni factor: costo_total y factor_venta null",
+  "Precios de Curvasol y Zeziola están en PDFs adjuntos no incluidos en el texto",
+  "Rev1 es de fecha 26/11/2025 pero la OC original (5/11/2025) ya citaba OE389-25Rev1; el PDF 'REV' del pedido no muestra fecha distinta de 05.11.2025 en cabecera",
+  "Diferencia de USD 0,01 entre oferta (42.008,00) y OC (42.007,99)",
+  "Cantidad de tubos del mazo E-225 inconsistente en el pedido de curvado (63) vs Quesada (62)",
+  "Texto de la oferta dice 'Empresa: TAVAL' en versiones iniciales y 'PAN AMERICAN ENERGY' en Rev1"
+ ]
+}

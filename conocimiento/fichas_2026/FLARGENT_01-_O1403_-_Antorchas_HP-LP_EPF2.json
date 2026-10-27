@@ -1,0 +1,88 @@
+{
+ "carpeta": "FLARGENT/01- O1403 - Antorchas HP-LP– EPF2",
+ "cliente": "Flargent",
+ "cliente_final": null,
+ "numero_oferta": "Oferta Económica Antorcha 52 Rev A (relacionada con Oferta Técnica N° 131); obra O1403, tag LBE-3052",
+ "revisiones": "Rev A del 04/03/2026. La planilla es 'Rev2' e incluye una variante con mano de obra de tercero.",
+ "fecha_oferta": "2026-03-04",
+ "fecha_ultima_modificacion": "2026-04-13",
+ "referencia_cliente": "O1403 - Antorchas HP-LP EPF2 (plano 1403-M-GA-100, antorcha 52\")",
+ "familia": "OT",
+ "descripcion_corta": "Antorcha 52\" HP-LP EPF2 en acero al carbono A36, tres tramos, 36.4 m de ducto, aprox. 24.5 t, con plataformas, escaleras y cañerías interiores 20\"/14\"",
+ "items": [
+  {
+   "descripcion": "Antorcha HP-LP EPF2 (TAG LBE-3052)",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 296444.9,
+   "precio_total": 296444.9,
+   "moneda": "USD",
+   "datos_tecnicos": "Ducto 52\" (diám. ext. 1320.8 mm), 3 tramos (12.25+12.25+11.9 m), A36 trazable, espesores 15.8/12.7/6.4 mm, caños interiores 20\" y 14\" sch10 (riser gas HP y LP), cañerías FG/FF 1\" sch80, conduits, plataformas 2130 kg, escaleras 1540 kg, peso aprox. 24,500 kg; END LP y Rx en costuras 14\" y 20\""
+  }
+ ],
+ "monto_total_ofertado": 296444.9,
+ "moneda": "USD",
+ "costo_total": 221386.83,
+ "factor_venta": 1.34,
+ "desglose_costo": {
+  "materiales": 113537.54,
+  "mano_obra": 107690,
+  "terceros": null,
+  "otros": 159.29
+ },
+ "plazo_ofrecido": "180/210 días corridos desde la aprobación de la Orden de Compra",
+ "plazo_dias": 210,
+ "condiciones": {
+  "pago": "30% anticipo contra OC con caución de fiel cumplimiento 10%; 20% avance de compra (casquetes y bridas); 20% aprobación de PH; 30% liberación para despacho",
+  "validez": "30 días corridos",
+  "entrega": "Sobre camión en planta ITT, Quilmes Oeste",
+  "moneda_y_ajuste": "USD facturado en ARS al TC BNA fecha de factura; cancelación al TC BNA vendedor día anterior al pago; NC/ND si variación mayor a 3%",
+  "notas_y_exclusiones": [
+   "Sin multas por mora si hay material importado (BCRA)",
+   "Póliza de seguro se cotiza con la OC",
+   "Se sugiere que material importado (chapas, instrumentos, válvulas) lo provea el cliente",
+   "Incluye seguro de caución 1% sobre base (USD 159.29 de costo)",
+   "Sin IVA"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Ledesma (mano de obra)",
+   "que": "MO de armado de antorcha 52\" (3 tramos, caños 20\" y 14\", trunnions, escaleras, plataformas, soportería; 24,500 kg); no incluye montaje de sopladores, PH, END, pintura, calificación de soldador",
+   "precio": 81000,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-03-02"
+  },
+  {
+   "proveedor": "Avila",
+   "que": "Piso electroforjado (rejillas), precio solo en PDF adjunto; la planilla usa estimado propio de USD 18,110 para plataformas",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-03-03"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "La oferta salió con factor 1.34 sobre un costo de USD 221,387 (materiales y servicios USD 113.5k, MO ITT USD 107.7k, caución USD 159); el precio ofertado es la planilla menos la caución facturada aparte.",
+  "Hay una variante con MO tercerizada en Ledesma (factor 1.2 en materiales, 1.3 en MO) por USD 268,962 que se descartó a favor de la versión con MO propia.",
+  "Mano de obra ITT es la mitad del costo: armado 5,250 h-h a USD 13 más plataformas a USD 5/kg; Ledesma cobró USD 81,000 sin PH, END ni pintura.",
+  "Precios del material marcados 'estimado, pedir cotización' (bridas 20\" y 14\", plataformas por falta de cotización Avila) generan riesgo de desvío; granallado y pintura USD 14,200."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "7.Propuesta Comercial (envío al Cliente)/OFERTA ECONOMICA - ANTORCHA 52.docx",
+  "costo_y_factor": "4.Armado de la Oferta Comercial/Copia de Cotización - 1403-M-LM-900-0 - ANTORCHA LBE-3052 Rev2inclye oferta MO 3ro.xlsx",
+  "datos_tecnicos": "5.Proveedores 3ros/E Ledesma Presupuesto ITT N° 200249 02-03-26 Antorcha.docx",
+  "proveedores": "5.Proveedores 3ros/E Ledesma Presupuesto ITT N° 200249 02-03-26 Antorcha.docx"
+ },
+ "problemas": [
+  "No hay orden de compra ni indicio de resultado",
+  "El desglose materiales/MO se interpretó de la hoja Resumen: 113,537.54 + 107,690 + 159.29 = 221,386.83",
+  "Precio ofertado 296,444.90 es la planilla 296,658.35 menos la caución 213.45; no hay otra diferencia",
+  "El presupuesto de Ledesma figura en USD 81,000 pero la variante con MO tercero usa USD 102,090, probablemente incluyendo otros servicios; no reconciliable",
+  "Plazo 180/210: se informó 210 como plazo_dias"
+ ]
+}

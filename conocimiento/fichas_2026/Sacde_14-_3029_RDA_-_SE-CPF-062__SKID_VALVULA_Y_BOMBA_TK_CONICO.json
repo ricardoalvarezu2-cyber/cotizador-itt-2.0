@@ -1,0 +1,112 @@
+{
+ "carpeta": "Sacde/14- 3029 RDA - SE-CPF-062_ SKID VALVULA Y BOMBA TK CONICO",
+ "cliente": "SACDE",
+ "cliente_final": "Pampa Energía (CPF Rincón de Aranda)",
+ "numero_oferta": "PRES 117 Rev A (presupuesto ITT 117)",
+ "revisiones": "Rev A emisión original 10/02/2026; formulario ITT 117 del 09/02/2026",
+ "fecha_oferta": "2026-02-10",
+ "fecha_ultima_modificacion": "2026-02-10",
+ "referencia_cliente": "SE-CPF-062 / RFP 1046-RDA-P-RM-1007 (skid SK-2400 en Anexo II) - Proyecto 3029",
+ "familia": "SK skid",
+ "descripcion_corta": "Fabricación y mano de obra de 2 skids cuadro de válvulas y bombas para TK cónico (SK-1859 y SK-1860); piping, bombas, filtros e instrumentos provistos por el cliente",
+ "items": [
+  {
+   "descripcion": "SK-1859 Skid cuadro válvulas y bombas TK cónico (fabricación y MO TK 1828)",
+   "cantidad": 1,
+   "unidad": "unid",
+   "precio_unitario": 63525.74,
+   "precio_total": 63525.74,
+   "moneda": "USD",
+   "datos_tecnicos": "Bastidor ~1.120 kg, percha de izaje ~746 kg, aislación 6-2 in, tracing 4 circuitos, JB, cables; soldaduras con RX 2-6 in Sch 40"
+  },
+  {
+   "descripcion": "SK-1860 Skid cuadro válvulas y bombas TK cónico (fabricación y MO TK 1836/1839)",
+   "cantidad": 1,
+   "unidad": "unid",
+   "precio_unitario": 47704.77,
+   "precio_total": 47704.77,
+   "moneda": "USD",
+   "datos_tecnicos": "Similar al anterior con menos soldaduras de 6 in; pintura zinc silicato/epoxi/poliuretano"
+  }
+ ],
+ "monto_total_ofertado": 111230.51,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": 54923.96,
+  "mano_obra": 57205.22,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "90 días en ítems; 60 días aprobada la ingeniería (condiciones)",
+ "plazo_dias": 90,
+ "condiciones": {
+  "pago": "Acuerdo marco: 30% anticipo contra ingeniería, 20% compra materiales, 20% prueba hidráulica, 30% liberación despacho; caución anticipo 100%, fiel cumplimiento 10%, fondo de reparo 10% por 12 meses",
+  "validez": "30 días corridos",
+  "entrega": "Planta ITT, 12 de Octubre 4004, Quilmes",
+  "moneda_y_ajuste": "USD facturado en ARS a TC BNA; NC/ND si variación >3%",
+  "notas_y_exclusiones": [
+   "Bombas, filtro FM, piping, instrumentos, válvulas, juntas y espárragos provistos por SACDE",
+   "Alcance ITT: ingeniería, bastidor, soportería, pintura, aislación, tracing, canalización, cajas y cables",
+   "Garantía 18 meses de entrega o 12 de puesta en marcha",
+   "Seguro se cotiza con la OC; sin multas por mora si hay material importado"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Setams",
+   "que": "Cables comando 2x1,31 mm2 (240 m), potencia armados 4x25 y 4x50 mm2 (60 m c/u); marca aceptada Marlew/Prysmian/IMSA/Ferrolo",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-01-30"
+  },
+  {
+   "proveedor": "Aislaciones Quilmes (X-615)",
+   "que": "Aislación y tracing de cañerías (LM usa 120 USD/m y 950 USD/circuito)",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-01-29"
+  },
+  {
+   "proveedor": "Emprel",
+   "que": "Cajas antideflagrantes",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-01-29"
+  },
+  {
+   "proveedor": "Elect Panamericana",
+   "que": "Cables comando y potencia",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-01-28"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "La lista de materiales cuesta ~USD 27,7k/27,2k por skid (aislación USD 120/m, tracing USD 950/circuito, canalización global USD 7.500 'a riesgo'), y la mano de obra ~34k/23k incl. RX y pintura: es un trabajo de fabricación sin provisión de materiales principales.",
+  "Soldadura valorizada por pulgada (USD 16/pulgada equivalente) con RX 100% y placas por separado; validado con presupuestos de Ledesma.",
+  "Cliente impuso marcas de cables (Prysmian, Marlew, IMSA, Ferrolo): consultar vendor list antes de cotizar armados.",
+  "Las bombas, filtros, piping e instrumentos son provisión del cliente: aclarar en la oferta límites de skid, juntas y espárragos."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "monto_total_ofertado": "4.Armado de la Oferta Comercial/formulario_presupuesto_itt 117.pdf",
+  "plazo_ofrecido": "4.Armado de la Oferta Comercial/PRES 117A- OFERTA ECONOMICA SKID VALVULA Y BOMBA TK CONICO.pdf",
+  "desglose_costo": "4.Armado de la Oferta Comercial/LM Sacde TK Cónico Rev 0.xlsx",
+  "condiciones": "4.Armado de la Oferta Comercial/PRES 117A- OFERTA ECONOMICA SKID VALVULA Y BOMBA TK CONICO.pdf"
+ },
+ "problemas": [
+  "Inconsistencia de nombres: formulario 117 dice TK 1828 y TK 1836, oferta SK-1859/1860 y TK 1839",
+  "Costo LM (~USD 112.129) es casi igual al precio ofertado (111.230): no hay factor de venta evidente, la LM podría ser parcial; factor null",
+  "Plazo contradictorio 90 días (ítems) vs 60 días tras ingeniería",
+  "Anexo I planilla de cotización .xls sin contenido extraído; precios de proveedores solo en adjuntos PDF no extraídos",
+  "Sin orden de compra en la carpeta"
+ ]
+}

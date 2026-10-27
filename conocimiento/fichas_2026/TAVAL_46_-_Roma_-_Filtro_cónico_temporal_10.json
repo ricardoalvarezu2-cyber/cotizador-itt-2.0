@@ -1,0 +1,71 @@
+{
+ "carpeta": "TAVAL/46 - Roma - Filtro cónico temporal 10",
+ "cliente": "Roma (inferido del nombre de carpeta; cotiza TAVAL)",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-02-25",
+ "referencia_cliente": null,
+ "familia": "F",
+ "descripcion_corta": "Filtro cónico temporal de 10\"; solo hay 3 órdenes de compra a proveedores (escaneadas, sin texto)",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [
+  {
+   "proveedor": "AG Internacional",
+   "que": "Mesh para filtros (OC 15127)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-02-25"
+  },
+  {
+   "proveedor": "Shulman",
+   "que": "Chapa inox perforada (OC 15131)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-02-25"
+  },
+  {
+   "proveedor": "COLO",
+   "que": "Rolado de conos (OC 15149)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-02-25"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Un filtro cónico temporal se fabrica con malla (mesh), chapa inox perforada y conos rolados por terceros"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/OC 15127, 15131, 15149 (PDF escaneados)"
+ },
+ "problemas": [
+  "PDF escaneados sin texto extraído (OCR vacío); no hay precios",
+  "Compras a proveedores sugieren que el trabajo se ejecutó, pero no hay oferta ni OC de cliente"
+ ]
+}

@@ -72,7 +72,7 @@ Todos los archivos de ITT revisados para armar esta base, en orden cronológico 
 
 ## Carpeta de ofertas y licitaciones (Z:\VENTAS\OFERTAS Y LICITACIONES)
 
-15.601 archivos (27 GB) en 533 carpetas de cotización de 75 clientes, 2017–2026. Se trajo la **tanda 1**: oferta comercial, proveedores, propuesta comercial enviada y OC (2.281 archivos, 1,9 GB, 307 carpetas), con la fecha original de cada archivo. Se analizaron en detalle **49 cotizaciones de 2026** (las más recientes): ver `fichas_2026/`, `comercial/cotizaciones_2026*.csv`, `precios/proveedores_2026.csv` y `aprendizajes_2026.md`. Quedan sin analizar 45 carpetas de 2026 y las de 2021–2025. La documentación del cliente (22 GB) no se trajo.
+15.601 archivos (27 GB) en 533 carpetas de cotización de 75 clientes, 2017–2026. Se trajo la **tanda 1**: oferta comercial, proveedores, propuesta comercial enviada y OC (2.281 archivos, 1,9 GB, 307 carpetas), con la fecha original de cada archivo. Se analizaron en detalle **las 93 cotizaciones de 2026**: ver `fichas_2026/`, `comercial/cotizaciones_2026*.csv`, `precios/proveedores_2026.csv` y `aprendizajes_2026.md`. Quedan sin analizar las de 2021–2025 (213 carpetas). La documentación del cliente (22 GB) no se trajo.
 
 ## Faltantes conocidos
 

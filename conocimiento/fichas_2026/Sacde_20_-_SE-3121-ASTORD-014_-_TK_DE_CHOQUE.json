@@ -1,0 +1,116 @@
+{
+ "carpeta": "Sacde/20 - SE-3121-ASTORD-014 - TK DE CHOQUE",
+ "cliente": "SACDE",
+ "cliente_final": "TGS (Ampliación Capacidad de Transporte Gasoducto Perito Moreno)",
+ "numero_oferta": "PRES 130 rev. A",
+ "revisiones": "Rev. A emisión original 03/03/2026",
+ "fecha_oferta": "2026-03-03",
+ "fecha_ultima_modificacion": "2026-03-04",
+ "referencia_cliente": "SE-3121-ASTORD-014 - plano típico TGS I-GIO-TIP-TM-G-013; espec. TGS-ING-009 Rev.2 y TGS-ING-019 Rev.5",
+ "familia": "OT otro",
+ "descripcion_corta": "Tanque de choque horizontal 36\" x 5000 mm, ASTM A-516 Gr.70",
+ "items": [
+  {
+   "descripcion": "Tanque de choque montaje horizontal 36\" x 5000",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 27753.97,
+   "precio_total": 27753.97,
+   "moneda": "USD",
+   "datos_tecnicos": "ASTM A-516 Gr.70 esp. 3/8\", 2 virolas 36\"x2500, 2 casquetes SE, conexiones 2\" y 6\", sombrerete venteo 10\", ASME VIII Div.1, Rx + LP, ~1918 kg"
+  }
+ ],
+ "monto_total_ofertado": 27753.97,
+ "moneda": "USD",
+ "costo_total": 22624.65,
+ "factor_venta": 1.227,
+ "desglose_costo": {
+  "materiales": 6104.65,
+  "mano_obra": 13800,
+  "terceros": null,
+  "otros": 2720
+ },
+ "plazo_ofrecido": "60/70 días aprobada la ingeniería",
+ "plazo_dias": 70,
+ "condiciones": {
+  "pago": "30% anticipo contra OC; 70% contra liberación para despacho",
+  "validez": "30 días corridos",
+  "entrega": "En planta ITT, Quilmes Oeste (Av. 12 de Octubre 4004)",
+  "moneda_y_ajuste": "USD facturado en ARS al TC BNA fecha de factura; TC BNA vendedor día anterior al pago, NC/ND si variación > 3%; sin IVA",
+  "notas_y_exclusiones": [
+   "Póliza de seguro se cotiza con la OC",
+   "ITT no acepta multas por mora en caso de material importado",
+   "Licencias no automáticas fuera de responsabilidad",
+   "Garantía 18 meses desde entrega o 12 desde puesta en marcha"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Chapaferro",
+   "que": "Chapa 3/8 A-516 Gr70 2500x6000 mm (1 un, para virolas)",
+   "precio": 2618000,
+   "moneda": "ARS",
+   "plazo_entrega": "48/72 hs",
+   "fecha": "2026-02-25"
+  },
+  {
+   "proveedor": "Quesada (JQ-012-2026)",
+   "que": "Mano de obra construcción tanque de choque 36\" (1802 kg), sin arenado/pintura/END ni materiales; incluye PH",
+   "precio": 10700,
+   "moneda": "USD",
+   "plazo_entrega": "45 días según materia prima",
+   "fecha": "2026-02-27"
+  },
+  {
+   "proveedor": "Ledesma",
+   "que": "Mano de obra y consumibles de fabricación completa del tanque (sin pintura, END ni elementos PH)",
+   "precio": 11800,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-02-27"
+  },
+  {
+   "proveedor": "Cintolo",
+   "que": "Casquetes SE 36\" x 3/8\" (precio en planilla USD 531.44 c/u)",
+   "precio": 531.44,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-02-24"
+  },
+  {
+   "proveedor": "Sandri",
+   "que": "Rolado de virolas 36\" x 2500 x 3/8\" (precio no legible; en planilla 3.2 USD/kg)",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-02-24"
+  },
+  {
+   "proveedor": "GH (Metalúrgica)",
+   "que": "Rolado de virolas 36\" x 2500 x 3/8\" (precio no legible)",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-02-25"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Precio = (materiales x1.15 + MO ITT x1.18) + 5% colchón de negociación: 26432 -> 27754 USD (~11.8 USD/kg final).",
+  "Se pidieron tres cotizaciones de rolado de virolas y dos de mano de obra tercerizada (Quesada 10.7k y Ledesma 11.8k) para comparar contra MO propia de 13.8k.",
+  "Chapa se compra en bruto (1 chapa 2500x6000 3/8\" ~ ARS 2.6M); se cuenta una tira de caño de 6 m por no haber stock.",
+  "Tipico TGS: exige Rx y LP, procedimientos TGS-ING-009 y pintura TGS-ING-019."
+ ],
+ "confianza": "alta",
+ "fuentes": {
+  "monto y plazo": "4.Armado de la Oferta Comercial/PRES 130A- OFERTA ECONOMICA TK DE CHOQUE.pdf",
+  "costo y factor": "4.Armado de la Oferta Comercial/LM - SACDE - TK Choque.xlsx",
+  "proveedores": "5.Proveedores 3ros/ (Cotizacion JQ-012-2026.pdf, Ledesma ...docx, Chapaferrro ...pdf, .msg)"
+ },
+ "problemas": [
+  "Mails .msg de Cintolo, Sandri y GH sin precio legible en el texto extraído",
+  "Costo de la planilla incluye MO ITT 13800 pero la MO tercerizada es más barata",
+  "Sin OC"
+ ]
+}

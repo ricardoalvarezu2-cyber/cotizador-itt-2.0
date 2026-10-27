@@ -1,0 +1,65 @@
+{
+ "carpeta": "PAN AMERICAN ENERGY/65 - Filtros Canasto 12",
+ "cliente": "Pan American Energy",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-03-06",
+ "referencia_cliente": null,
+ "familia": "F",
+ "descripcion_corta": "Filtros canasto de 12\": solo se hallaron consultas de casquetes 12\" sch 40 y cajón de madera",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [
+  {
+   "proveedor": "Cintolo",
+   "que": "Casquetes SE 12\" sch 40 (precio en adjunto, no extraído)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-03-04"
+  },
+  {
+   "proveedor": "Maderera Guernica",
+   "que": "Cajón de madera para embalaje (cotización en adjunto .doc, no extraída)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-03-06"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Se consultan casquetes semielípticos de 12\" sch 40 a Cintolo.",
+  "Se cotizó un cajón de madera, es decir, el equipo se despacha embalado.",
+  "Carpeta sin información de precios: no sirve como referencia numérica."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/Cintolo cotización Cas SE 12sch 40.msg y 5.Proveedores 3ros/cotizacion cajon Maderera Guernica.msg"
+ },
+ "problemas": [
+  "Los dos correos solo contienen asunto y adjuntos, sin precios",
+  "No hay oferta, planilla, ni datos técnicos del filtro, ni N° de referencia del cliente"
+ ]
+}

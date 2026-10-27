@@ -1,0 +1,152 @@
+{
+ "carpeta": "Sacde/17- (2970) SCH-PTG-034 - BOMBAS (NO LLI)",
+ "cliente": "Sacde",
+ "cliente_final": "Pampa Energia (Planta de tratamiento de gas PTG2, Sierra Chata)",
+ "numero_oferta": "Presupuesto ITT 000000000126 (nro. interno 1377)",
+ "revisiones": "Oferta del proveedor Rev1 (18/02/2026, plazos de entrega) y versiones de 03/03/2026 en HD y planilla LM Precios; presupuesto ITT 126 del 23/02/2026 es el unico visto y no se confirma si se reemitio en marzo",
+ "fecha_oferta": "2026-02-23",
+ "fecha_ultima_modificacion": "2026-03-03",
+ "referencia_cliente": "SCH-PTG-034 - Bombas (NO LLI), Sierra Chata",
+ "familia": "OT",
+ "descripcion_corta": "Suministro de 14 bombas (7 servicios x2): centrifugas Goulds y de cavidad progresiva Bornemann, reventa de ITT Bornemann-Goulds con factor 1.25",
+ "items": [
+  {
+   "descripcion": "P-1102/03 Bombas de KOD (2 unidades, entrega 160 dias)",
+   "cantidad": 2,
+   "unidad": "Unid",
+   "precio_unitario": 79249.99,
+   "precio_total": 158499.98,
+   "moneda": "USD",
+   "datos_tecnicos": "Centrifuga Goulds 3700i 1x2-9E 14i, S-6, 11 kW 3000 rpm, 30 m3/h 73 m (segun oferta proveedor; la planilla LM no discrimina tipo)"
+  },
+  {
+   "descripcion": "P-1814/15 BB Reproceso (2 unidades, entrega 180 dias)",
+   "cantidad": 2,
+   "unidad": "Unid",
+   "precio_unitario": 32343.75,
+   "precio_total": 64687.5,
+   "moneda": "USD",
+   "datos_tecnicos": "Bomba PCP Bornemann EH 2.1024 (segun modelo de P-1812/13 y P-1814/15), motor+reductor"
+  },
+  {
+   "descripcion": "P-1810/11 BB Trasvase de solidos (2 unidades, entrega 180 dias)",
+   "cantidad": 2,
+   "unidad": "Unid",
+   "precio_unitario": 28125.0,
+   "precio_total": 56250.0,
+   "moneda": "USD",
+   "datos_tecnicos": "PCP Bornemann EH 600, 8.8 m3/h, 3 bar dif., 283 rpm, Duplex SS, motor 3 kW Ex, bridas 3in #150, sello API 682, valvula alivio"
+  },
+  {
+   "descripcion": "P-2108/09 BB Transferencia (2 unidades, entrega 160 dias)",
+   "cantidad": 2,
+   "unidad": "Unid",
+   "precio_unitario": 29549.33,
+   "precio_total": 59098.66,
+   "moneda": "USD",
+   "datos_tecnicos": "Centrifuga Goulds 3196 1.5x3-8 STi, CD4MCuN, 5.5 kW 3000 rpm, 30.2 m3/h 34 m"
+  },
+  {
+   "descripcion": "P-1808/09 BB Sand-Jet (2 unidades, entrega 160 dias)",
+   "cantidad": 2,
+   "unidad": "Unid",
+   "precio_unitario": 36995.19,
+   "precio_total": 73990.38,
+   "moneda": "USD",
+   "datos_tecnicos": "Centrifuga Goulds 3196 2x3-10 MTi, CD4MCuN, 30 kW 3000 rpm, 66 m3/h 80 m"
+  },
+  {
+   "descripcion": "P-2009A/B BB Descargadero (2 unidades, entrega 160 dias)",
+   "cantidad": 2,
+   "unidad": "Unid",
+   "precio_unitario": 29158.7,
+   "precio_total": 58317.4,
+   "moneda": "USD",
+   "datos_tecnicos": "Centrifuga Goulds 3196 1.5x3-13 MTi, acero al carbono impulsor 316SS, 5.5 kW 1500 rpm, 44 m3/h 20 m"
+  },
+  {
+   "descripcion": "P-1812/13 BB Trasvase de efluentes (2 unidades, entrega 180 dias)",
+   "cantidad": 2,
+   "unidad": "Unid",
+   "precio_unitario": 32343.75,
+   "precio_total": 64687.5,
+   "moneda": "USD",
+   "datos_tecnicos": "PCP Bornemann EH 2.1024, 6.5 m3/h, 9.1 bar dif., 255 rpm, Duplex SS, motor 4 kW Ex, bridas 3in #150, agua clarificada"
+  }
+ ],
+ "monto_total_ofertado": 535531.42,
+ "moneda": "USD",
+ "costo_total": 214212.56,
+ "factor_venta": 1.25,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": 214212.56,
+  "otros": null
+ },
+ "plazo_ofrecido": "160 dias (KOD, transferencia, sand-jet, descargadero) y 180 dias (reproceso, trasvase solidos, trasvase efluentes); lugar de entrega Planta ITT Bornemann, Munro (AMBA)",
+ "plazo_dias": 180,
+ "condiciones": {
+  "pago": "Presupuesto ITT sin condicion explicita; proveedor ofrece 30 dias fecha factura (hitos a definir) en oferta PCP y 20/30/30/20 por hitos en oferta centrifugas",
+  "validez": "30 dias (oferta del proveedor); presupuesto ITT sin dato",
+  "entrega": "Planta ITT Bornemann, Munro (en deposito/transporte del cliente en CABA/GBA segun proveedor)",
+  "moneda_y_ajuste": "USD, sin IVA; IVA 21% = 112461.60, total con IVA 647993.02",
+  "notas_y_exclusiones": [
+   "Excluye percha de izaje",
+   "Repuestos de puesta en marcha y 2 anios, asistencia y capacitacion en sitio pedidos por separado (PU); no se evidencia que ITT los haya cotizado",
+   "Garantia 12 meses desde puesta en marcha o 18 desde despacho",
+   "Penalidades aceptables: 0.133%/dia, tope 5% de lo no embarcado",
+   "Cambios de alcance posteriores sujetos a change order; maximo 2 ciclos de revision de planos"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "ITT Bornemann-Goulds Pumps S.R.L.",
+   "que": "Bombas centrifugas Goulds (7 items, 14 unidades segun oferta base RR26-02-12 01) y bombas PCP Bornemann; costo total por planilla LM",
+   "precio": 214212.56,
+   "moneda": "USD",
+   "plazo_entrega": "160-180 dias desde OC (oferta centrifugas: 180 dias / 22 semanas)",
+   "fecha": "2026-02-18"
+  },
+  {
+   "proveedor": "KSB Argentina",
+   "que": "No cotizo: ya habia ofrecido directo al cliente final (Pampa)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-02-11"
+  },
+  {
+   "proveedor": "Flowserve",
+   "que": "No cotizo: ya habia ofrecido directo a Sacde",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-02-13"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Cotizacion de reventa pura de bombas: costo = precio del fabricante (ITT Bornemann-Goulds) por factor 1.25 (margen 20% sobre venta) en todos los items",
+  "Dos de los proveedores sondeados (KSB, Flowserve) ya habian ofrecido directo al cliente o cliente final; hay riesgo de competir con el propio proveedor, conviene consultar antes",
+  "Plazos de 22-26 semanas desde OC dominan la oferta; el proveedor pidio forma de pago por hitos que ITT debe trasladar al cliente",
+  "El presupuesto enviado no detalla tipo de bomba ni datos tecnicos, que quedan en las ofertas tecnicas adjuntas"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "4.Armado de la Oferta Comercial/presupuesto_itt 126.pdf",
+  "costo_total_y_factor": "4.Armado de la Oferta Comercial/LM Precios Bornemann.xlsx",
+  "plazos": "4.Armado de la Oferta Comercial/LM Precios Bornemann.xlsx",
+  "datos_tecnicos": "4.Armado de la Oferta Comercial/HD/ITT- Oferta Tecnica Bombas Centrifugas Sierra Chata (Bombas NO LLI) CON PLAZO.pdf",
+  "proveedores": "5.Proveedores 3ros/KSB - NO cotización - Bombas Sierra Chata - x haber ofrecido directo a Pampa.msg",
+  "condiciones": "5.Proveedores 3ros/ITT Bornemann - Oferta Bombas PCP - Sacde Sierra Chata (Bombas NO LLI).pdf"
+ },
+ "problemas": [
+  "No hay carpeta de oferta enviada (6/7) ni orden de compra; la oferta se toma del presupuesto ITT 126 en carpeta 4",
+  "El texto de la planilla de costos no discrimina centrifuga vs PCP por item; P-1102/03 'Bombas de KOD' costo USD 63400 c/u parece incluir mas que la bomba 3700i base",
+  "Falta carpeta 1 con la documentacion del cliente",
+  "La oferta base del proveedor tiene precios no legibles en el texto (tabla perdida) y puede incluir items extra (P-2008, P-2205/06/07, P-1806/07) que no figuran en el presupuesto",
+  "Los items 1814/15 y 1812/13 tienen mismo costo, 25875, consistente con la misma bomba EH 2.1024"
+ ]
+}

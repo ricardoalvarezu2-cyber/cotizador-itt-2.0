@@ -1,0 +1,68 @@
+{
+ "carpeta": "TAVAL/56 - Spark Energy Skid Metanol OC 0001-00009221",
+ "cliente": "TAVAL",
+ "cliente_final": "Spark Energy",
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-04-27",
+ "referencia_cliente": "OC 0001-00009221 (Skid de inyección de metanol)",
+ "familia": "SK",
+ "descripcion_corta": "Skid de inyección de metanol para Spark Energy; solo mails de proveedores sin precios legibles",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [
+  {
+   "proveedor": "Mirbla",
+   "que": "Equipamiento para skid de inyección de metanol (cotización ITT24.0426.pdf adjunta, no disponible)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-24"
+  },
+  {
+   "proveedor": "Formingplast",
+   "que": "Contenedor 1000 litros (Eco maxi) (precio en adjuntos no disponibles)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-27"
+  }
+ ],
+ "resultado": "ganada (hay OC)",
+ "orden_compra": {
+  "numero": "0001-00009221",
+  "fecha": null,
+  "monto": null
+ },
+ "aprendizajes": [
+  "El nombre de la carpeta indica OC 0001-00009221, por lo que el skid se adjudicó",
+  "Equipamiento principal: tanque/contenedor de 1000 L más equipamiento de inyección (bombas) de proveedores locales"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/Mirbla cotización - Equipamiento para Skid de Inyección de Metanol.msg; Cotización Formingplast .msg"
+ },
+ "problemas": [
+  "Solo hay dos mails con adjuntos sin texto: no hay precios, oferta ni OC en el corpus",
+  "Resultado ganada inferido solo del nombre de carpeta"
+ ]
+}

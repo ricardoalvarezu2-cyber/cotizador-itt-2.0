@@ -1,0 +1,66 @@
+{
+ "carpeta": "TAVAL/50 - Petroequip",
+ "cliente": "TAVAL",
+ "cliente_final": "Petroequip (según nombre de carpeta)",
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-03-11",
+ "referencia_cliente": null,
+ "familia": "V",
+ "descripcion_corta": "Solicitud de cotización de visores de flujo 6\" #150 a Tecnival (Comatti); solo consta el mail con presupuesto adjunto no extraído",
+ "items": [
+  {
+   "descripcion": "Visores de flujo 6\" #150",
+   "cantidad": null,
+   "unidad": "u",
+   "precio_unitario": null,
+   "precio_total": null,
+   "moneda": null,
+   "datos_tecnicos": "6\" #150"
+  }
+ ],
+ "monto_total_ofertado": null,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [
+  {
+   "proveedor": "Tecnival S.A. (Comatti)",
+   "que": "Visores de flujo 6\" #150, presupuesto en PDF adjunto no disponible",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-03-11"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Los visores de flujo 6\" #150 se compran a terceros (Tecnival/Comatti); el precio está solo en el PDF adjunto",
+  "Carpeta sin información de oferta: sirve únicamente como registro de proveedor"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "TAVAL/50 - Petroequip/5.Proveedores 3ros/Tecnival - cotización de visores de flujo 6_ #150.msg"
+ },
+ "problemas": [
+  "Carpeta con un único mail; sin precios, cantidades ni oferta",
+  "Cliente y cliente final inferidos del nombre de carpeta"
+ ]
+}

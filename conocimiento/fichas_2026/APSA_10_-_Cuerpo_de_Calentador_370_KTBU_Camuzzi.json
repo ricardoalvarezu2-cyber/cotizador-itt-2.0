@@ -1,0 +1,69 @@
+{
+ "carpeta": "APSA/10 - Cuerpo de Calentador 370 KTBU Camuzzi",
+ "cliente": "APSA",
+ "cliente_final": "Camuzzi",
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-04-22",
+ "referencia_cliente": "Cuerpo de calentador 370 KTBU (Camuzzi)",
+ "familia": "C calentador",
+ "descripcion_corta": "Cuerpo de calentador 370 KTBU (cuerpo, recuperador, brida, tapa); carpeta solo con cotización de mano de obra de terceros",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": 3234.0,
+  "terceros": 3234.0,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": [
+   "No hay oferta de ITT en la carpeta"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Taller de construcción (presupuesto JQ-019-2026, Quilmes)",
+   "que": "Mano de obra de construcción del cuerpo del calentador 370 KTBU (cuerpo, recuperador, brida, tapa): 770 kg a USD 4,20/kg; soldadores ASME IX; sin arenado, pintura, END ni prueba hidráulica; materiales, virolas punteadas, tapas y aros mecanizados provistos por el cliente; anticipo 20% y resto contra entrega; validez 30 días; USD pasado a pesos al dólar divisa del día anterior a la OC; entrega en su establecimiento",
+   "precio": 3234.0,
+   "moneda": "USD",
+   "plazo_entrega": "20 días dependiendo de la materia prima",
+   "fecha": "2026-04-22"
+  },
+  {
+   "proveedor": "E. Ledesma",
+   "que": "Cotización de mano de obra cuerpo de calentador 370 (mail y aclaración de alcance sin contenido extraíble)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-22"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Mano de obra tercerizada de calentador 370 KTBU: USD 4,20/kg sobre 770 kg (referencia USD 3.234)",
+  "El tercero no incluye arenado/pintura, END ni prueba hidráulica: cotizar aparte",
+  "Material y piezas mecanizadas deben proveerse al taller; sumar su costo"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/Cotizacion JQ-019-2026.pdf"
+ },
+ "problemas": [
+  "No hay oferta, costos ni OC; cliente/cliente final inferidos del nombre de carpeta",
+  "El PDF dice 'Desgasificador' en el objeto aunque el título es calentador 370 KTBU",
+  "Mail y docx de Ledesma sin texto",
+  "Mano de obra 3234 USD es costo de tercero, no precio de venta"
+ ]
+}

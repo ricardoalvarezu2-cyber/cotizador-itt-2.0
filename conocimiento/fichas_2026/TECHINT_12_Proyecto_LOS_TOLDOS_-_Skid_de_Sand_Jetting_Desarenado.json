@@ -1,0 +1,130 @@
+{
+ "carpeta": "TECHINT/12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado",
+ "cliente": "TECHINT (Techint E&C)",
+ "cliente_final": "TECPETROL (Los Toldos II Este, Neuquén)",
+ "numero_oferta": "PRES 106 rev B (rev A 26-11-2025)",
+ "revisiones": "Oferta económica/técnica 106A (26/11/2025, USD 227.823) y 106B (23/12/2025, USD 286.132); luego circulares 2 a 5 post apertura (enero 2026) con ajustes de alcance (clases de cañería, heat tracing, instrumentación/JB). Hay además una carpeta 'OFERTA REV C' que corresponde a OTRA oferta (PRES 107B Skid Manifold Pad S-600 para Tecpetrol, USD 1.962.835 opción A / 1.746.325 opción B, 35 skids, 150 días, 07/01/2026), mezclada en esta carpeta.",
+ "fecha_oferta": "2025-12-23",
+ "fecha_ultima_modificacion": "2026-01-13",
+ "referencia_cliente": "Licitación 5239969 - Proyecto LOS TOLDOS, requisición 4381-TARG-G-MR-000-003 Skid de Sand Jetting Desarenado",
+ "familia": "SK",
+ "descripcion_corta": "2 skids de drenaje y desarenado (Drain and Desanding Valve Skid) con piping ASME B31.3 serie 150/300, tracing eléctrico, cajas de conexión e instrumentación de válvulas",
+ "items": [
+  {
+   "descripcion": "Drain and Desanding Valve Skid PTC-SK-XX1 A",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 138115.1,
+   "precio_total": 138115.1,
+   "moneda": "USD",
+   "datos_tecnicos": "ASME B31.3, serie 150/300, acero al carbono (caños A106 Gr B, bridas A105, accesorios A234 WPB), válvulas esféricas paso total; módulo de hasta 12 m; 3 JB Ex e (2x80 y 1x20 bornes); tracing eléctrico; aislación"
+  },
+  {
+   "descripcion": "Drain and Desanding Valve Skid PTC-SK-XX1 B",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 138115.1,
+   "precio_total": 138115.1,
+   "moneda": "USD",
+   "datos_tecnicos": "idem skid A"
+  },
+  {
+   "descripcion": "Repuestos recomendados precomisionamiento y puesta en marcha (set)",
+   "cantidad": 1,
+   "unidad": "set",
+   "precio_unitario": 1446.9,
+   "precio_total": 1446.9,
+   "moneda": "USD",
+   "datos_tecnicos": "válvulas esféricas y retención"
+  },
+  {
+   "descripcion": "Repuestos recomendados 2 años (set)",
+   "cantidad": 1,
+   "unidad": "set",
+   "precio_unitario": 354.9,
+   "precio_total": 354.9,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "Tarifa diaria técnico (capacitación / asistencia instalación / puesta en marcha)",
+   "cantidad": null,
+   "unidad": "día",
+   "precio_unitario": 2700,
+   "precio_total": null,
+   "moneda": "USD",
+   "datos_tecnicos": "3 tarifas iguales, por día y por técnico"
+  }
+ ],
+ "monto_total_ofertado": 286132.0,
+ "moneda": "USD",
+ "costo_total": 194245.47,
+ "factor_venta": 1.42,
+ "desglose_costo": {
+  "materiales": 122934.02,
+  "mano_obra": 68311.45,
+  "terceros": 3000.0,
+  "otros": null
+ },
+ "plazo_ofrecido": "135 días",
+ "plazo_dias": 135,
+ "condiciones": {
+  "pago": "30% anticipo contra aprobación de ingeniería (caución 100% + fiel cumplimiento 10%), 20% contra OC de materiales principales, 20% contra aprobación de prueba hidráulica, 30% contra liberación a despacho (fondo de reparo 10%, 12 meses)",
+  "validez": "45 días corridos (rev A: 30 días)",
+  "entrega": "EXW planta ITT, Quilmes Oeste",
+  "moneda_y_ajuste": "USD facturado en ARS a TC BNA fecha de factura; cancelación a TC BNA vendedor día anterior al pago; NC/ND si variación >3%",
+  "notas_y_exclusiones": [
+   "ITT no acepta multas por mora cuando hay material importado (normativa BCRA)",
+   "Sin responsabilidad por atrasos por licencias no automáticas",
+   "Se sugiere que el material importado (chapas, instrumentos, válvulas) lo provea el cliente",
+   "Válvulas críticas/actuadas las provee Techint (ITT solo monta si se pide; costo 15.600 USD no incluido en precio)",
+   "Precio sin IVA; seguro 1% incluido (274,22 USD por skid)",
+   "Techint exige garantías bancarias (anticipo y 10% performance), aceptar CGC sin desvíos y balances auditados 3 años"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "SEHC (taller, Simonenco)",
+   "que": "Construcción de 2 skids (spooles, armado, soportes, PH, RX 100%, arenado y pintura, data book); materiales a cargo de Taval/ITT",
+   "precio": 94666,
+   "moneda": "USD",
+   "plazo_entrega": "120 días desde recepción de materiales",
+   "fecha": "2025-11-28"
+  },
+  {
+   "proveedor": "Freezstop (fichas técnicas)",
+   "que": "Anticongelante FSR/FSE referenciado en circular 2 (sin precio)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-01-06"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Rev A a rev B subió el precio de USD 227.823 a 286.132 (+26%) al incorporar tracing, JB Ex e, conduit, cables armados y cambio de clases de cañería exigidos en circulares; los alcances de instrumentación/tracing se cotizan aparte con costo propio (~USD 30k por skid).",
+  "Factores por línea: MO/lanzadora 1,6; materiales 1,4; adicionales 1,3; válvulas Taval 1,2; inspección en origen 1,2; factor global ≈1,42 (margen ~30%).",
+  "Techint no acepta desvíos en condiciones generales y pide garantías bancarias de anticipo y performance 10%; costear ese financiamiento.",
+  "Hubo cierre contractual post apertura (circulares 2-5, entrega de documentos 6-8/01/2026), señal de preadjudicación, pero no hay OC en la carpeta.",
+  "El mismo cliente final pidió en paralelo skids manifold S-600 (107B); evitar mezclar costos."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "4.Armado de la Oferta Comercial/OFERTA REV B/OFERTA ECONOMICA 106B- Skid Sand Inyeccion Desarenador.pdf",
+  "costo_total y factor": "4.Armado de la Oferta Comercial/OFERTA REV B/LM costo Desarenador Rev1.xlsx",
+  "plazo": "4.Armado de la Oferta Comercial/OFERTA REV B/OFERTA ECONOMICA 106B- Skid Sand Inyeccion Desarenador.pdf",
+  "pago": "4.Armado de la Oferta Comercial/OFERTA REV B/OFERTA ECONOMICA 106B- Skid Sand Inyeccion Desarenador.pdf",
+  "proveedores": "5.Proveedores 3ros/Taller- Simonenco/2025.11.28.01 taval  skid desaereador.doc",
+  "datos_tecnicos": "4.Armado de la Oferta Comercial/OFERTA REV B/OFERTA TECNICA 106B- Skid Sand Inyeccion Desarenador.pdf",
+  "revision A": "4.Armado de la Oferta Comercial/OFERTA REV A/OFERTA ECONOMICA 106A- Skid Sand Inyeccion Desarenador.pdf",
+  "circulares": "4.Armado de la Oferta Comercial/CIRCULARES/C3/RV Licitacion 5239969 - Circular 3 post apertura.msg"
+ },
+ "problemas": [
+  "No hay carpeta de propuesta enviada (6/7) ni orden de compra; la 'oferta enviada' se infiere de OFERTA REV B (23/12/2025) y la carpeta no confirma si se envió una rev posterior tras las circulares",
+  "Costo por ítem con celdas #REF! en la planilla; costo total reconstruido de la tabla de ventas (2 x 97.122,74)",
+  "La planilla pone MO interna (34.156/skid) mientras el taller SEHC cotizó USD 47.333/skid con materiales a cargo de ITT: relación no aclarada",
+  "Carpeta incluye oferta 107B (manifold pad S-600) ajena a este skid",
+  "Heat tracing quedó pendiente de precio de proveedor (circular 2)"
+ ]
+}

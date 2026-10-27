@@ -1,0 +1,100 @@
+{
+ "carpeta": "TAVAL/53- SOLTEX- TRAMPAS PELAMBRES (CHILE)",
+ "cliente": "TAVAL",
+ "cliente_final": "SOLTEX / Minera Pelambres (Chile)",
+ "numero_oferta": null,
+ "revisiones": "Sin oferta ITT en la carpeta (solo proveedores)",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-04-20",
+ "referencia_cliente": "Trampas scraper (lanzadoras/receptoras) para Pelambres; planos SRT024-027 y SRA021-025; equipos 4150-ZP-4000, 4150-ZP-4001-01, 4260-ZP-4000/4001, 4420-ZP-4000 a 4003",
+ "familia": "TS",
+ "descripcion_corta": "Trampas de scraper para Pelambres (Chile): cañerías 2\" a 40\" API 5L X65/Gr.B con revestimiento interior PU o FBE, tapas de cierre rápido",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [
+  {
+   "proveedor": "Evelyn Montes (cañerías, planilla xlsx)",
+   "que": "Cañería por metro: 30\" DSAW SCH20 X65 rev. PU USD 235/m; 32\" USD 250/m; 36\" USD 282/m; 40\" SCH XS USD 315/m; 36\" ERW e=19,05 Gr.B rev. FBE USD 420/m; 32\" ERW SCH20 FBE USD 250/m; 36\" SMLS e=19,05 X65 FBE USD 421/m; 32\" SMLS SCH30 USD 311/m; 16\" STD USD 93/m; 10\" STD USD 61/m, XS USD 82/m; 3\" USD 11,3/m; 2\" SCH80 USD 5,5/m",
+   "precio": null,
+   "moneda": "USD por metro",
+   "plazo_entrega": null,
+   "fecha": "2026-04-17"
+  },
+  {
+   "proveedor": "Megatap",
+   "que": "Tapas de cierre rápido (PRESUPUESTO ITT 27108, precio en PDF)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-14"
+  },
+  {
+   "proveedor": "Inbelt",
+   "que": "Revestimiento interior PU (budget 45181A, PolyShift 80A-M)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-14"
+  },
+  {
+   "proveedor": "Francovigh",
+   "que": "Materiales para trampas (CO00092629)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-15"
+  },
+  {
+   "proveedor": "Zoxy",
+   "que": "Revestimiento interior FBE (ZAP-10) en trampas (cot 'LANZADORA - ABRIL26')",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-15"
+  },
+  {
+   "proveedor": "Cintolo",
+   "que": "Cotización 32918-INNOVACION (alcance no visible en el texto)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-17"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Revestimiento interior se cotiza por terceros en dos tecnologías: PU (Inbelt) para líneas de X65 de gran diámetro y FBE (Zoxy) para el resto; pedir ambos budgets",
+  "Cañerías de gran diámetro (30-40\") se compran por metro a USD 235-421; el proveedor aplica un múltiplo (15, 7, 10 o 5) a cada precio por metro que no se aclara: probablemente metros mínimos de compra, verificar",
+  "Tapas de cierre rápido (Megatap) y revestimientos son los ítems críticos aparte del acero",
+  "Cliente intermediario (TAVAL) con cliente final en Chile: considerar exportación/ flete y plazos"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/Cot Evelyn montes Cañerías Trampas Sol (1).xlsx; resto de los .msg",
+  "cliente_final": "nombre de la carpeta"
+ },
+ "problemas": [
+  "Solo hay cotizaciones de proveedores; no hay oferta ITT, costos, plazos ni resultado",
+  "Los .msg tienen solo cabeceras; precios en PDFs adjuntos no incluidos",
+  "La columna 'x15/x7/x10/x5' del xlsx no está rotulada, el total por línea es precio x ese número"
+ ]
+}

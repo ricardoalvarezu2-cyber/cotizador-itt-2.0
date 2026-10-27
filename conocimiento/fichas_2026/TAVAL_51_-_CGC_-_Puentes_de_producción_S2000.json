@@ -1,0 +1,90 @@
+{
+ "carpeta": "TAVAL/51 - CGC - Puentes de producción S2000",
+ "cliente": "TAVAL (grupo ITT)",
+ "cliente_final": "Compañía General de Combustibles (CGC)",
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-04-09",
+ "referencia_cliente": "Puentes de producción/inyección S2000 CGC",
+ "familia": "P puente/tramo de medición",
+ "descripcion_corta": "Puentes de producción roscados S2000 para CGC con juntas monolíticas y esclusas (solo cotizaciones de proveedores)",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [
+  {
+   "proveedor": "J. Quesada (JQ-016-2026)",
+   "que": "Armado y sellado de puente roscado, por unidad",
+   "precio": 380,
+   "moneda": "USD",
+   "plazo_entrega": "3 días desde cobro anticipo 20%; validez 30 días",
+   "fecha": "2026-04-07"
+  },
+  {
+   "proveedor": "E. Ledesma",
+   "que": "Armado de puentes de producción (presupuesto 200254)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-07"
+  },
+  {
+   "proveedor": "Valbol",
+   "que": "Esclusas",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-07"
+  },
+  {
+   "proveedor": "Dinatecnica / Flex Seal / MS Juntas / Xiamen",
+   "que": "Juntas monolíticas",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-09"
+  },
+  {
+   "proveedor": "IMB Oil",
+   "que": "Cotización S01988",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-06"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Armado y sellado de un puente roscado cuesta USD 380/unidad (Quesada), sin el producto de sellado que provee el cliente.",
+  "Para estos puentes se consultaron 4 proveedores de juntas monolíticas (incluido importación) y esclusas: comparar varias fuentes.",
+  "La carpeta solo contiene proveedores; falta oferta enviada y planilla de costos."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/Cotizacion JQuesada armado de puentes roscados-016-2026(sellado).pdf"
+ },
+ "problemas": [
+  "Sin oferta, cantidades ni costo total",
+  "Precios de los demás proveedores solo en adjuntos no extraídos",
+  "Cliente (TAVAL) es del grupo; cliente final CGC inferido del nombre de carpeta"
+ ]
+}

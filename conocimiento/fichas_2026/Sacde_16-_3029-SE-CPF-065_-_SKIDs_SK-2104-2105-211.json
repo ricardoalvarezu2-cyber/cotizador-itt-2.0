@@ -1,0 +1,108 @@
+{
+ "carpeta": "Sacde/16- 3029-SE-CPF-065 - SKIDs SK-2104-2105-211",
+ "cliente": "SACDE",
+ "cliente_final": null,
+ "numero_oferta": "PRES 121 rev. A (presupuesto 000000000121)",
+ "revisiones": "Rev. A emisión original 19/02/2026",
+ "fecha_oferta": "2026-02-19",
+ "fecha_ultima_modificacion": "2026-02-20",
+ "referencia_cliente": "3029-SE-CPF-065 - SKIDs SK-2104, SK-2105, SK-2111",
+ "familia": "SK skid",
+ "descripcion_corta": "Provisión de 3 skids (para UFLO 2107, UFLO 2108 y bomba P-111) con ingeniería, fabricación, pintura y data book; percha de izaje opcional",
+ "items": [
+  {
+   "descripcion": "SK-2104 Skid para UFLO 2107",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 88895.95,
+   "precio_total": 88895.95,
+   "moneda": "USD",
+   "datos_tecnicos": "Serie #600; diseño ASME B31.4/31.8/31.5; pintura zinc silicato, epoxi y poliuretano (esquema Pampa E)"
+  },
+  {
+   "descripcion": "SK-2105 Skid para UFLO 2108",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 88292.33,
+   "precio_total": 88292.33,
+   "moneda": "USD",
+   "datos_tecnicos": "Serie #600; ASME B31.4/31.8/31.5"
+  },
+  {
+   "descripcion": "SK-2111 Skid para bomba P-111",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 54720.14,
+   "precio_total": 54720.14,
+   "moneda": "USD",
+   "datos_tecnicos": "Serie #600; ASME B31.4/31.8/31.5"
+  },
+  {
+   "descripcion": "Percha de izaje (opcional)",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 3048.0,
+   "precio_total": 3048.0,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  }
+ ],
+ "monto_total_ofertado": 234956.42,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "75 días aprobada la ingeniería",
+ "plazo_dias": 75,
+ "condiciones": {
+  "pago": "Acuerdo marco: 30% anticipo contra OC (caución 100% del anticipo y fiel cumplimiento 10%); 20% contra OC de materiales principales; 20% contra aprobación de prueba hidráulica; 30% contra liberación para despacho (póliza fondo de reparo 10%, 12 meses)",
+  "validez": "30 días corridos",
+  "entrega": "En planta ITT, Quilmes Oeste (12 de Octubre 4004)",
+  "moneda_y_ajuste": "USD, facturado en ARS a TC BNA fecha de factura; saldo al TC BNA vendedor día anterior al pago; NC/ND si variación mayor a 3%",
+  "notas_y_exclusiones": [
+   "Incluye END, PH, aislación y traceado, montaje eléctrico y mecánico, ingeniería, data book, embalaje terrestre",
+   "Excluye prueba FAT, transporte, instrumentos y canalizaciones fuera del skid",
+   "Seguro se cotiza con la OC",
+   "ITT no acepta multas por mora si hay material importado; sugiere que el cliente provea material importado (chapas, instrumentos, válvulas)",
+   "Garantía 18 meses desde entrega o 12 meses desde puesta en marcha",
+   "Total incluye la percha opcional"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Distribuidores eléctricos (EMPREL)",
+   "que": "Junction box, cables y materiales de canalización (sin precio)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": null
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Skid con instrumentación ronda USD 55 a 89 mil por unidad (serie #600); precio y tag por skid separado",
+  "Se ofrece la percha de izaje como opcional pero sumada en el total",
+  "Condiciones de pago de acuerdo marco de Sacde exigen cauciones (anticipo y fiel cumplimiento) con costo financiero",
+  "Plazo de 75 días se cuenta desde ingeniería aprobada, no desde OC"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "numero_oferta": "4.Armado de la Oferta Comercial/PRES 121A- OFERTA ECONOMICA CPF-065 - SKIDs SK-2104-2105-2111.pdf",
+  "items": "4.Armado de la Oferta Comercial/formulario_presupuesto_itt 121.pdf",
+  "monto_total_ofertado": "4.Armado de la Oferta Comercial/formulario_presupuesto_itt 121.pdf",
+  "condiciones": "4.Armado de la Oferta Comercial/PRES 121A- OFERTA ECONOMICA CPF-065 - SKIDs SK-2104-2105-2111.pdf",
+  "plazo_ofrecido": "4.Armado de la Oferta Comercial/PRES 121A- OFERTA ECONOMICA CPF-065 - SKIDs SK-2104-2105-2111.pdf"
+ },
+ "problemas": [
+  "Total 234.956,42 en formulario vs 234.956,43 en oferta económica (redondeo)",
+  "No hay planilla de costos ni OC",
+  "Los PDFs de oferta mencionan 'Taval: Ing. ...' como representante, posible resto de plantilla",
+  "Dimensiones/datos técnicos de los skids solo en esquemas referenciales (imágenes)"
+ ]
+}

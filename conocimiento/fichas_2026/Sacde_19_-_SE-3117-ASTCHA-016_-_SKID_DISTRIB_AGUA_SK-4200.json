@@ -1,0 +1,114 @@
+{
+ "carpeta": "Sacde/19 - SE-3117-ASTCHA-016 - SKID DISTRIB AGUA SK-4200",
+ "cliente": "Sacde",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": "Sin oferta ITT en la carpeta (solo proveedores)",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-03-17",
+ "referencia_cliente": "SE-3117-ASTCHA-016 - Skid de distribución de agua SK-4200 (ET TE-B10-104765-ET-M-1007)",
+ "familia": "SK",
+ "descripcion_corta": "Skid de distribución de agua SK-4200 con bombas centrífugas EB-4201A/B y EB-4202A/B/C, bomba clorificadora EB-4501 y shelter",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [
+  {
+   "proveedor": "Flowserve",
+   "que": "Bombas centrífugas EB-4201A/B, EB-4202A, EB-4202B/C (Q202602-701835)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-03-03"
+  },
+  {
+   "proveedor": "M. Schmitt",
+   "que": "Bombas centrífugas (modelo 197 ST 1x1½-8, oferta 26024 E, sello mecánico Key-PS, acoplamiento Fundal)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-03-03"
+  },
+  {
+   "proveedor": "Ruhrpumpen",
+   "que": "Bombas centrífugas Goulds (propuesta comercial 2816961)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-03-04"
+  },
+  {
+   "proveedor": "Bornemann / Goulds (Xylem-ITT, oferta RR26-03-02 02)",
+   "que": "Bombas centrífugas Goulds, oferta comercial y técnica",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-03-06"
+  },
+  {
+   "proveedor": "Dosivac",
+   "que": "Bomba clorificadora EB-4501",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-02-26"
+  },
+  {
+   "proveedor": "GAISA",
+   "que": "Bomba Milton Roy clorificadora EB-4501 (C264520-AD)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-02-27"
+  },
+  {
+   "proveedor": "Arquimet",
+   "que": "Shelter (presupuesto 2026-0603-SHARQ-0764 Rev. 01)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-03-06"
+  },
+  {
+   "proveedor": "Datawaves",
+   "que": "Shelter skid de distribución de agua: respondió que NO cotiza",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-02-27"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "En skids de agua los equipos rotantes (5 bombas centrífugas y 1 dosificadora) se cotizan con 4-5 proveedores en paralelo para comparar",
+  "El shelter se terceriza (Arquimet cotizó; Datawaves declinó)",
+  "Las bombas se piden por tags (EB-4201A/B, 4202A/B/C, 4501): mantener el tag en cada cotización de proveedor"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/*.msg"
+ },
+ "problemas": [
+  "Solo cabeceras de mails; precios y plazos están en PDFs adjuntos no incluidos",
+  "No hay oferta ITT, costos ni resultado",
+  "La respuesta 'Bornemann y Goulds' tiene remitente itt.com (Xylem), no ITT S.A.: no confundir"
+ ]
+}

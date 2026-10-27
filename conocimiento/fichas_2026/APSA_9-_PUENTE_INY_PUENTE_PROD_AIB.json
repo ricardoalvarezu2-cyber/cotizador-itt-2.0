@@ -1,0 +1,146 @@
+{
+ "carpeta": "APSA/9- PUENTE INY + PUENTE PROD AIB",
+ "cliente": "APSA (Almacenes Petroleros, vía Taval)",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": "No hay oferta enviada al cliente en la carpeta; solo cotizaciones de proveedores (Danco emitió cotización y una ampliación de detalle).",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-02-13",
+ "referencia_cliente": "Pedido del 28/01/2026: PUENTE INY.2.3/8\"2000 P/ARMAR PL.0186/94 x20 y PUENTE PROD AIB C/RECIRC.PROD.NORMAL x3",
+ "familia": "P",
+ "descripcion_corta": "20 puentes de inyección de agua 2 3/8\" y 3 puentes de producción AIB con recirculación, roscados serie 2000/3000, para pozos petroleros",
+ "items": [
+  {
+   "descripcion": "Puente de inyección 2 3/8\" 2000, acero al carbono, armado, probado y pintado (precio de proveedor Danco)",
+   "cantidad": 20,
+   "unidad": "un",
+   "precio_unitario": 5220,
+   "precio_total": 104400,
+   "moneda": "USD",
+   "datos_tecnicos": "Acero al carbono, roscado NPT/API-LP, serie 2000; precio de COSTO del proveedor, no precio de venta"
+  },
+  {
+   "descripcion": "Puente de producción AIB con recirculación, acero al carbono, armado, probado y pintado (precio de proveedor Danco)",
+   "cantidad": 3,
+   "unidad": "un",
+   "precio_unitario": 3665,
+   "precio_total": 10995,
+   "moneda": "USD",
+   "datos_tecnicos": "Acero al carbono, serie 2000; precio de COSTO del proveedor, no precio de venta"
+  }
+ ],
+ "monto_total_ofertado": null,
+ "moneda": "USD",
+ "costo_total": 115395,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": 115395,
+  "otros": null
+ },
+ "plazo_ofrecido": "Danco: 45 días; Duralitte niples especiales: 45/60 días; ABAC: 15 días",
+ "plazo_dias": 45,
+ "condiciones": {
+  "pago": "Danco: 30% anticipado y resto e-cheq a 30 días contra entrega",
+  "validez": null,
+  "entrega": "Planta ITT (Danco, Taval); planta Duralitte en Olivos para niples",
+  "moneda_y_ajuste": "USD sin IVA en cotizaciones de proveedores",
+  "notas_y_exclusiones": [
+   "El cliente pidió oferta detallada: planos de referencia, marcas de componentes principales, pruebas (END y PH) y esquema de pintura",
+   "Taval exige tres niveles de autorización (técnica, económica, gerencia) antes de pasar al comercial, especialmente sobre USD 50k"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Danco",
+   "que": "Puente de inyección completo, armado, probado y pintado",
+   "precio": 5220,
+   "moneda": "USD",
+   "plazo_entrega": "45 días",
+   "fecha": "2026-02-05"
+  },
+  {
+   "proveedor": "Danco",
+   "que": "Puente de producción completo",
+   "precio": 3665,
+   "moneda": "USD",
+   "plazo_entrega": "45 días",
+   "fecha": "2026-02-05"
+  },
+  {
+   "proveedor": "Danco",
+   "que": "Válvulas de ambos puentes (esféricas S-2000 1/2\" a 2-7/8\" API-LP, USD 45 a 271; retención 2\" USD 220), entrega en planta ITT",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-02-10"
+  },
+  {
+   "proveedor": "ABAC",
+   "que": "Válvula aguja 90 grados USD 126.80, válvula bloqueo y purga 3/4\" USD 197.71, tapón purgador USD 22.54 (precios unitarios + IVA; bonificación 20% por cantidad); filtro Y 2\" sin precio visible",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": "15 días",
+   "fecha": "2026-02-06"
+  },
+  {
+   "proveedor": "Duralitte",
+   "que": "Niples especiales: 2\" NPTM x 1/2\" USD 26.04; 2 7/8\" API-LP x 3/4\" Sch 80 USD 120.00; 2\" x 1 1/2\" USD 26.04; junta monolítica corregida a USD 280 + IVA",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": "45/60 días (niples especiales)",
+   "fecha": "2026-02-12"
+  },
+  {
+   "proveedor": "IMB OIL (Adita)",
+   "que": "Uniones doble rápida a golpe (cotización S01572)",
+   "precio": 1226.27,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-02-03"
+  },
+  {
+   "proveedor": "MS Juntas",
+   "que": "Junta monolítica (cotización 046652, precio solo en PDF adjunto)",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-02-13"
+  },
+  {
+   "proveedor": "Taval",
+   "que": "Planilla de válvulas de los puentes (precios en Puentes.xlsx adjunto); roscado de niples",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-02-10"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Producto fuera de la especialidad de ITT: se pidió oferta a Motomecánica (no cotizó) y a Danco; la oferta se armó sobre Danco como tercerizado llave en mano.",
+  "Costo de puentes completos Danco: USD 115,395 por 20 + 3 unidades; se estudió la alternativa de armar en ITT comprando componentes sueltos (ABAC, Duralitte, Danco, Taval).",
+  "Política: las válvulas se ofrecen siempre Taval salvo excepción de vendor list; Taval tiene precio preferencial pero en un puente anterior de CAPEX fue de los oferentes más caros.",
+  "Para Danco hay que exigir detalle de alcance (pruebas, pintura, marcas) porque el cliente lo pide; los pedidos son urgentes y los plazos de proveedor son 45 días."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "items": "5.Proveedores 3ros/Cotizacion de puentes completos - Danco.msg",
+  "cantidades": "5.Proveedores 3ros/ITT - Solicitud de cotización para DANCO      PUENTES INY + PUENTES PROD AIB.msg",
+  "niples": "5.Proveedores 3ros/Cotización completa materiales - Duralitte.msg",
+  "abac": "5.Proveedores 3ros/ABAC - Cotización materiales para puentes de inyección y producción.msg",
+  "valvulas": "5.Proveedores 3ros/Cotizacion de válvulas - Danco.msg",
+  "adita": "5.Proveedores 3ros/Adita de IMB OIL srl Cotización ITT SA (Ref S01572) uniones a golpe.msg",
+  "autorizaciones": "5.Proveedores 3ros/Taval - oferta APSA - Puentes de Inyección y Producción.msg"
+ },
+ "problemas": [
+  "Sin oferta comercial ni planilla de costos: precio y factor desconocidos",
+  "El precio de Danco se interpreta por puente completo; la unidad no está explícita",
+  "Familia P es la más cercana, pero son puentes de pozo roscados, no de medición",
+  "Posición 23 duplicada en la lista de válvulas de Danco (USD 195 y USD 130)",
+  "Precios de Taval, MS Juntas y parte de ABAC en adjuntos no extraídos",
+  "El cliente figura como Almacenes Petroleros (APSA) y el pedido llegó vía Taval, que oferta como intermediaria"
+ ]
+}

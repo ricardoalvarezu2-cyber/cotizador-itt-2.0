@@ -1,0 +1,141 @@
+{
+ "carpeta": "NAKONSUR/1- PRESUPUESTO VALVULA REGULADORA - CALENTADOR INDIRECTO DE GAS",
+ "cliente": "NAKON SUR S.A.",
+ "cliente_final": "Camuzzi",
+ "numero_oferta": "Presupuesto ITT 125",
+ "revisiones": "Sin revisiones visibles",
+ "fecha_oferta": "2026-02-20",
+ "fecha_ultima_modificacion": "2026-02-21",
+ "referencia_cliente": null,
+ "familia": "C calentador",
+ "descripcion_corta": "Calentador indirecto de gas 500.000 BTU/h tipo Camuzzi (válvula reguladora)",
+ "items": [
+  {
+   "descripcion": "Calentador indirecto 500.000 BTU/h (Camuzzi)",
+   "cantidad": 1,
+   "unidad": "unid",
+   "precio_unitario": 60931.52,
+   "precio_total": 60931.52,
+   "moneda": "USD",
+   "datos_tecnicos": "500.000 BTU/h; tapa de cierre rápido 10 in #600 y 6 in #600; casquetes semielípticos ASME B16.9 A234-WPB (20 in Sch20, 10 in Sch80, 6 in Sch80/Sch40); ánodos de magnesio; indicadores de nivel reflex (70 bar) y tubular"
+  }
+ ],
+ "monto_total_ofertado": 60931.52,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "180 días",
+ "plazo_dias": 180,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": "USD",
+  "notas_y_exclusiones": [
+   "Garantía 1 año desde instalación o 18 meses desde embarque",
+   "Pruebas según API 598 ed. 2009"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Protfund",
+   "que": "Ánodo 19 mm con reducción 1-1/2 a 3/4",
+   "precio": 19,
+   "moneda": "USD",
+   "plazo_entrega": "inmediata",
+   "fecha": "2026-02-11"
+  },
+  {
+   "proveedor": "Protfund",
+   "que": "Ánodo magnesio 500 mm sobre tapón roscado 1-1/2",
+   "precio": 38,
+   "moneda": "USD",
+   "plazo_entrega": "7 días",
+   "fecha": "2026-02-11"
+  },
+  {
+   "proveedor": "Riva Hnos",
+   "que": "Indicador de nivel reflex",
+   "precio": 685,
+   "moneda": "USD",
+   "plazo_entrega": "45-60 días, contado, validez 4 semanas",
+   "fecha": "2026-02-12"
+  },
+  {
+   "proveedor": "Riva Hnos",
+   "que": "Indicador de nivel tubular",
+   "precio": 365,
+   "moneda": "USD",
+   "plazo_entrega": "45-60 días",
+   "fecha": "2026-02-12"
+  },
+  {
+   "proveedor": "EQA",
+   "que": "Quemadores 250.000 BTU/h (x3) y 500.000 BTU/h (x1)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-02-06"
+  },
+  {
+   "proveedor": "Megatap",
+   "que": "Tapas cierre rápido 10 in y 6 in #600",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-02-10"
+  },
+  {
+   "proveedor": "Futura",
+   "que": "Tapas cierre rápido (FCD07 vertical / FCD20 ring lock)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-02-10"
+  },
+  {
+   "proveedor": "Cintolo",
+   "que": "Casquetes semielípticos",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-02-11"
+  },
+  {
+   "proveedor": "Gora",
+   "que": "Elementos filtrantes y caja de chicanas",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-02-12"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Precio de venta USD 60.931 para un calentador indirecto de 500.000 BTU/h con partes de proveedores múltiples; sirve de referencia para equipos tipo Camuzzi.",
+  "Para la compra se cotizaron en paralelo 3 quemadores de 250.000 y 1 de 500.000 BTU/h: este pedido forma parte de una familia (calentadores Camuzzi) con otras potencias.",
+  "Tapas de cierre rápido, casquetes y quemadores son los ítems críticos de plazo; el plazo ofrecido de 180 días cubre indicadores con 45-60 días.",
+  "El presupuesto es de una línea global, sin condiciones de pago ni validez: conviene detallar alcance."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "4.Armado de la Oferta Comercial/formulario_presupuesto_itt 125.pdf",
+  "plazo_ofrecido": "4.Armado de la Oferta Comercial/formulario_presupuesto_itt 125.pdf",
+  "proveedores": "5.Proveedores 3ros/*.msg"
+ },
+ "problemas": [
+  "No hay planilla de costos ni factor",
+  "Precios de la mayoría de proveedores solo en adjuntos PDF no extraídos",
+  "Se pidieron 2 indicadores VT2P pero Riva cotizó 1 reflex + 1 tubular",
+  "Título de carpeta habla de válvula reguladora pero el presupuesto es solo el calentador",
+  "Cantidad de unidades en la oferta (1) vs 4 quemadores pedidos a EQA",
+  "Sin resultado"
+ ]
+}

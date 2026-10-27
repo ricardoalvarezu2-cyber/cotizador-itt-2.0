@@ -1,0 +1,87 @@
+{
+ "carpeta": "TAVAL/48- A&A Fluid control- Manifold",
+ "cliente": "TAVAL (a pedido de A&A Fluids Control SRL)",
+ "cliente_final": "Alpha Lithium (proyecto El Tolillar, Salta)",
+ "numero_oferta": null,
+ "revisiones": "Sin oferta emitida en la carpeta; solo documentos de pedido (MR rev.0 emitidas para licitación 03/02/2026)",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-02-26",
+ "referencia_cliente": "MR FA00032-ARGL-TOL-PL1111-MR-002 (manifold ensayo pozos salmuera) y MR FA00033-ARGL-TOL-PL1111-MR-001 (manifolds piloto de reinyección); cierre de eventos en plataforma 06/03/2026",
+ "familia": "M manifold",
+ "descripcion_corta": "Pedido de cotización de 3 manifolds 6\" (1 móvil galvanizado para ensayo de pozos de salmuera; 2 en acero inoxidable para pozo productor e inyector) con caudalímetro, válvulas e instrumentación, para Alpha Lithium vía A&A Fluids Control / Taval",
+ "items": [
+  {
+   "descripcion": "Manifold 6\" móvil para ensayo de pozos de salmuera a alto caudal (FA00032)",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": null,
+   "precio_total": null,
+   "moneda": null,
+   "datos_tecnicos": "Acero galvanizado; soportería de altura regulable; caudalímetro (electromagnético/ultrasónico) con totalización; manómetro local; válvula de corte con doble bloqueo; retención; válvula de aire; extremo libre con acople rápido a manga plana"
+  },
+  {
+   "descripcion": "Manifold 6\" pozo productor WBALT-15 (FA00033 ítem 1.2)",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": null,
+   "precio_total": null,
+   "moneda": null,
+   "datos_tecnicos": "Acero inoxidable; caudalímetro con transmisión remota; manómetro local; transmisor de presión; corte con doble bloqueo; retención; válvula de alivio; extremo libre con ducto 8\" tipo PEXGOL; soportería regulable"
+  },
+  {
+   "descripcion": "Manifold 6\" pozo inyector IBALT-1 (FA00033 ítem 1.3)",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": null,
+   "precio_total": null,
+   "moneda": null,
+   "datos_tecnicos": "Acero inoxidable; manómetro local; transmisor de presión; válvula de corte; válvula reguladora de presión de reinyección; extremo libre con ducto 8\" PEXGOL; soportería regulable"
+  }
+ ],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": "Según Condiciones Generales de Compra de Alpha Lithium Argent (Rev.1, art. 17); no se cotizó",
+  "validez": null,
+  "entrega": "Montaje en sitio, Salta (a ~363 km de la ciudad de Salta)",
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": [
+   "Se exige estructura de precios análoga a la lista de suministro, lista de excepciones y desvíos y lista de sub-proveedores; si falta información la propuesta puede ser descartada",
+   "Facturar a nombre de A&A Fluids Control SRL",
+   "Sin repuestos, opcionales ni servicios; documentación: manuales, data book, ITP, certificados",
+   "Incluye ingeniería de detalle, garantías de performance y FAT/SAT según MR"
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "La carpeta solo contiene el pedido (MR + condiciones generales del cliente); no hay oferta, costos ni proveedores, por lo que no sirve para referencia de precios",
+  "Los pedidos de Alpha Lithium exigen declaración de excepciones/desvíos y lista de sub-proveedores: si faltan se asume aceptación total de la MR",
+  "Diseño del manifold (longitud/altura) se define con la propuesta del proveedor: conviene cotizar con alternativas de caudalímetro e instrumentación explícitas",
+  "Intermediario A&A Fluids Control pide cotizar a su nombre y plazo estimado desde confirmación; cierre de evento 06/03/2026"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "cliente": "4.Armado de la Oferta Comercial/Pedidos de cotización (ALPHALT).msg",
+  "referencia_cliente": "4.Armado de la Oferta Comercial/EV 12023 -CPC_MANIFOLD.pdf; EV 12025 -FA00033-ARGL-TOL-PL1111-MR-001_0.pdf",
+  "items": "4.Armado de la Oferta Comercial/EV 12023 -CPC_MANIFOLD.pdf; EV 12025 -FA00033-ARGL-TOL-PL1111-MR-001_0.pdf",
+  "condiciones": "4.Armado de la Oferta Comercial/CGC_-_Materiales_y_Equipos_ARG_-_ALSA.pdf"
+ },
+ "problemas": [
+  "No hay oferta de ITT ni planillas de costo ni cotizaciones de proveedores en la carpeta",
+  "Resultado desconocido",
+  "La carpeta no incluye REFERENCIAS.zip mencionado en el mail",
+  "Tabla de pozos con caudales (3.2.1) no extraída en el texto"
+ ]
+}

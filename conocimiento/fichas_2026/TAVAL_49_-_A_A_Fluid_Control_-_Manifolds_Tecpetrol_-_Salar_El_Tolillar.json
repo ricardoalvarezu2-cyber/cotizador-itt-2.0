@@ -1,0 +1,106 @@
+{
+ "carpeta": "TAVAL/49 - A&A Fluid Control - Manifolds Tecpetrol - Salar El Tolillar",
+ "cliente": "A & A FLUIDS CONTROL SRL (cotizado a través de TAVAL SA)",
+ "cliente_final": "Alpha Lithium (proyecto Tecpetrol, Salar El Tolillar según carpeta y planilla)",
+ "numero_oferta": "PRES 24610 rev A",
+ "revisiones": "Rev A (emisión original); planilla de costos 'Rev3'",
+ "fecha_oferta": "2026-03-10",
+ "fecha_ultima_modificacion": "2026-03-11",
+ "referencia_cliente": "Manifold para piloto de reinyección, docs FA00032 y FA00033; TAGs WBALT-15 e IBALT-1",
+ "familia": "M",
+ "descripcion_corta": "2 manifolds 6\" inoxidables para pozo productor (WBALT-15) y pozo inyector (IBALT-1) con instrumentos y válvulas",
+ "items": [
+  {
+   "descripcion": "Manifold 6\" inoxidable WBALT-15 (pozo productor)",
+   "cantidad": 1,
+   "unidad": "Unid",
+   "precio_unitario": 30227.57,
+   "precio_total": 30227.57,
+   "moneda": "USD",
+   "datos_tecnicos": "6\" #150, AISI 304L, caudalímetro electromagnético Krohne, transmisor Vega, manómetro, válvulas de corte/retención, válvula de alivio Doma, END 100%"
+  },
+  {
+   "descripcion": "Manifold 6\" inoxidable IBALT-1 (pozo inyector)",
+   "cantidad": 1,
+   "unidad": "Unid",
+   "precio_unitario": 46576.2,
+   "precio_total": 46576.2,
+   "moneda": "USD",
+   "datos_tecnicos": "6\" #150, AISI 304L, válvula reguladora full inox Doma, transmisor de presión, manómetro, soportería de altura regulable, END 100%"
+  }
+ ],
+ "monto_total_ofertado": 76803.77,
+ "moneda": "USD",
+ "costo_total": 57009.78,
+ "factor_venta": 1.347,
+ "desglose_costo": {
+  "materiales": 52288.26,
+  "mano_obra": 4266.0,
+  "terceros": 455.52,
+  "otros": null
+ },
+ "plazo_ofrecido": "90 días aprobada la ingeniería",
+ "plazo_dias": 90,
+ "condiciones": {
+  "pago": "30% anticipo contra OC; 70% contra liberación para despacho (presupuesto: 30 días F.R.F.)",
+  "validez": "30 días corridos",
+  "entrega": "En planta ITT, Quilmes Oeste",
+  "moneda_y_ajuste": "USD facturado en ARS al TC BNA; cancelación al BNA vendedor del día anterior al pago; NC/ND si variación > 3%",
+  "notas_y_exclusiones": [
+   "Sin IVA",
+   "Válvulas esféricas 6\" sin caja reductora",
+   "Seguro se cotiza con la OC",
+   "Sin multas por mora en importados (condición BCRA)",
+   "Material importado preferentemente provisto por el cliente",
+   "Garantía 18 meses desde entrega o 12 desde puesta en marcha",
+   "Los plazos no incluyen inspección de materiales"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Taval (Comex)",
+   "que": "Válvulas esféricas 6\" (precio de planilla 3500 USD c/u, Esferomatic; 227.76 válvulas Taval roscadas 1\")",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": "60/70 días válvulas 6\"",
+   "fecha": "2026-03-09"
+  },
+  {
+   "proveedor": "Meditecna (Krohne)",
+   "que": "Caudalímetro electromagnético Optiflux 4000 6\" 150RF (planilla: 4200 USD)",
+   "precio": 4200.0,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-03-05"
+  },
+  {
+   "proveedor": "Meditecna (Vega)",
+   "que": "Transmisor de presión Vega BAR 83 (planilla: 1100 USD)",
+   "precio": 1100.0,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-03-06"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Factor 1.35 uniforme sobre materiales y MO, 1.0 sobre válvulas Taval: margen ~26% sobre venta",
+  "El manifold inyector es 54% más caro por la válvula reguladora 6\" full inox (~19.5 kUSD estimada por oferta telefónica Doma)",
+  "Plazo 90 días depende de válvulas 6\" (60/70 días); ingeniería y 100% END incluidos",
+  "Mano de obra ITT solo ~2.0-2.2 kUSD por manifold: el costo es casi todo material/instrumentos"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "TAVAL/49 - A&A Fluid Control - Manifolds Tecpetrol - Salar El Tolillar/4.Armado de la Oferta Comercial/PRES 24610- OFERTA COMERCIAL MANIFOLDs PILOTO DE REINYECCIÓN.pdf",
+  "costo_y_factor": "TAVAL/49 - A&A Fluid Control - Manifolds Tecpetrol - Salar El Tolillar/4.Armado de la Oferta Comercial/Alpha Manifolds Ensayo y Reinyección Rev3.xlsx",
+  "datos_tecnicos": "4.Armado de la Oferta Comercial/PRES 24610- OFERTA TECNICA MANIFOLDs PILOTO DE REINYECCIÓN.pdf",
+  "proveedores": "5.Proveedores 3ros/*.msg (cuerpos vacíos)"
+ },
+ "problemas": [
+  "No hay carpeta de OC: resultado desconocido",
+  "Mails de proveedores sin precios en el texto; precios tomados de la planilla de costos",
+  "La planilla incluye un tercer manifold galvanizado FA0032 (29,297.92 USD) no ofertado en PRES 24610; el costo/total del resumen (78,770.99 / 106,101.69) lo incluye",
+  "Planilla también menciona puentes de ensayo, pero la oferta solo cubre los 2 manifolds"
+ ]
+}

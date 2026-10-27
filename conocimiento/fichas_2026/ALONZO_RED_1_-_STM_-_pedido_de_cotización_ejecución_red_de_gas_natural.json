@@ -1,0 +1,56 @@
+{
+ "carpeta": "ALONZO RED/1 - STM - pedido de cotización ejecución red de gas natural",
+ "cliente": "ALONZO RED",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": "Sin oferta ITT en la carpeta",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-03-12",
+ "referencia_cliente": "STM - pedido de cotización para ejecución de red de gas natural",
+ "familia": "CA",
+ "descripcion_corta": "Ejecución de red de gas natural con reguladoras (cotización urgente de reguladoras a Tormene)",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [
+  {
+   "proveedor": "Tormene Americana",
+   "que": "Reguladoras (oferta TA7682A, regulador TA956-PR 1000 SMCH, ítems 1 y 2)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-03-12"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Solo se cotizaron reguladoras a un proveedor; el resto de la red (cañería, mano de obra) no tiene respaldo en la carpeta",
+  "Pedido marcado urgente"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/Tormene - Cotización Reguladoras.msg"
+ },
+ "problemas": [
+  "Único archivo: cabecera de mail; precio, plazo y alcance en PDFs no incluidos",
+  "Sin oferta, costos ni resultado"
+ ]
+}

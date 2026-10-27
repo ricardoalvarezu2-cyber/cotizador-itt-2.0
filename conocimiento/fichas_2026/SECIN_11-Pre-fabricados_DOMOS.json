@@ -1,0 +1,86 @@
+{
+ "carpeta": "SECIN/11-Pre-fabricados DOMOS",
+ "cliente": "SECIN S.A.",
+ "cliente_final": null,
+ "numero_oferta": "Presupuesto 116 rev.01",
+ "revisiones": "116 (30/01/2026): Soldadura y END, 180,024.03 USD; rev01 (fecha archivo 05/02/2026): Fabricación de domos con END a cargo del cliente, 117,536.04 USD (ambas fechadas 30/01/2026 en el texto)",
+ "fecha_oferta": "2026-01-30",
+ "fecha_ultima_modificacion": "2026-03-03",
+ "referencia_cliente": "Domos prefabricados / slug catcher plano FA00014-ACO-LT2E-GEN-M-PL-005-SM16",
+ "familia": "OT",
+ "descripcion_corta": "Fabricación de 8 domos (calderería) con materiales y cáncamos provistos por el cliente",
+ "items": [
+  {
+   "descripcion": "Fabricación de domos según información enviada a la fecha",
+   "cantidad": 8,
+   "unidad": "Unid",
+   "precio_unitario": 14692.0,
+   "precio_total": 117536.0,
+   "moneda": "USD",
+   "datos_tecnicos": "Cliente entrega materiales totales incluidos cáncamos; sin dimensiones en la oferta"
+  }
+ ],
+ "monto_total_ofertado": 117536.04,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": 70300.0,
+  "otros": null
+ },
+ "plazo_ofrecido": "20 días (columna Ent. días); plazo y condición de pago 'a convenir'",
+ "plazo_dias": 20,
+ "condiciones": {
+  "pago": "A convenir",
+  "validez": null,
+  "entrega": "El cliente retira de planta ITT",
+  "moneda_y_ajuste": "USD",
+  "notas_y_exclusiones": [
+   "Sin IVA (21%: 24,682.57 sobre 117,536.04)",
+   "Cliente entrega todos los materiales incluidos cáncamos",
+   "END en planta ITT por cuenta del cliente",
+   "Garantía 1 año desde instalación o 18 meses desde embarque",
+   "Prueba API 598"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "J. C. Quesada (presupuesto JQ-013-2026)",
+   "que": "Mano de obra de calderería de 8 domos (consumibles, herramental, soldadores ASME IX); sin arenado/pintura, END ni prueba hidráulica",
+   "precio": 70300.0,
+   "moneda": "USD",
+   "plazo_entrega": "a convenir",
+   "fecha": "2026-03-02"
+  },
+  {
+   "proveedor": "Ingeniería Figueroa SRL",
+   "que": "Cotización de domos (adjuntos sin texto)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-02-27"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "La oferta original (soldadura y END, 180 kUSD) bajó a 117.5 kUSD en rev01 al sacar los END (a cargo del cliente)",
+  "Mano de obra tercerizada en Quesada: 70.3 kUSD por 8 domos, pago 20% anticipo, validez 30 días, dólar BNA al emitir la OC",
+  "Cliente aporta todo el material: precio es solo mano de obra/servicio",
+  "Aclarar arenado, pintura y prueba hidráulica, excluidos por el proveedor"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "SECIN/11-Pre-fabricados DOMOS/7.Propuesta Comercial (envío al Cliente)/116 rev01.pdf",
+  "revisiones": "SECIN/11-Pre-fabricados DOMOS/7.Propuesta Comercial (envío al Cliente)/116.pdf",
+  "proveedores": "SECIN/11-Pre-fabricados DOMOS/5.Proveedores 3ros/Cotizacion JQ-0013-2026 Slug Catcher SECIN.pdf"
+ },
+ "problemas": [
+  "Los presupuestos del proveedor (02/03) son posteriores a la oferta (30/01-05/02): costo y factor no calculables",
+  "Quesada habla de 'Slug Catcher/zona de separación gas-líquido' y el cliente de domos: posible mismo alcance, no confirmado",
+  "Sin OC ni planilla de costo",
+  "Mail Figueroa sin cuerpo ni precio"
+ ]
+}

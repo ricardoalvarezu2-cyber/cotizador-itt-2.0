@@ -1,0 +1,113 @@
+{
+ "carpeta": "CAMUZZI/28. N° 21694 - Equipos de procesos",
+ "cliente": "Camuzzi",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": "Solo cotizaciones de proveedores (EQA amplió alcance 04-06/02/2026: 3 de 250.000 y 1 de 500.000 BTU/h)",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-02-13",
+ "referencia_cliente": "N° 21694 - Equipos de procesos (según nombre de carpeta)",
+ "familia": "C calentador",
+ "descripcion_corta": "Equipos de proceso para Camuzzi (calentadores y filtros): carpeta solo con cotizaciones de proveedores de quemadores, manifolds de gas, tapas de cierre rápido, casquetes, ánodos, indicadores de nivel y elementos filtrantes",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": "Proveedores cotizan en USD, facturan en pesos a BNA vendedor día anterior",
+  "notas_y_exclusiones": [
+   "No hay oferta de ITT en la carpeta"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "EQA SAIC",
+   "que": "3 quemadores 250.000 BTU/h (USD 4.052 lista c/u) + 1 quemador 500.000 BTU/h (USD 4.219 lista) + 4 manifolds de gas 3/4\" S-3000 (USD 10.950 lista c/u); todo con 10% desc. Subtotal USD 54.157,50 sin IVA; interruptor neumático de nivel Murphy opcional USD 900 -10% + imp. no incluido; pago 40% anticipo y saldo contra entrega; flete a cargo cliente",
+   "precio": 54157.5,
+   "moneda": "USD",
+   "plazo_entrega": "30/40 días hábiles",
+   "fecha": "2026-02-06"
+  },
+  {
+   "proveedor": "GORA S.A.",
+   "que": "3 elementos filtrantes celulosa 5 micras (160,70 c/u), 3 elementos separadores fibra de vidrio cód. 46600 (113,83 c/u), 1 caja de chicanas AISI 316 250x250x150 (615); cantidades mínimas de compra; contado contra entrega; validez al 26/02/2026",
+   "precio": 1438.59,
+   "moneda": "USD",
+   "plazo_entrega": "35 días",
+   "fecha": "2026-02-11"
+  },
+  {
+   "proveedor": "Protfund",
+   "que": "Ánodo magnesio 19 mm con reducción 1-1/2\" a 3/4\" y ánodo 500 mm x 30 mm con alma sobre tapón roscado 1-1/2\"",
+   "precio": 38.0,
+   "moneda": "USD",
+   "plazo_entrega": "inmediata (19 USD) / 7 días (38 USD); precios unitarios 19 y 38 + IVA",
+   "fecha": "2026-02-11"
+  },
+  {
+   "proveedor": "Riva Hnos",
+   "que": "Indicador de nivel Reflex (USD 685) y tubular (USD 365), 1 u c/u; contado; validez 4 semanas",
+   "precio": 1050.0,
+   "moneda": "USD",
+   "plazo_entrega": "45-60 días",
+   "fecha": "2026-02-12"
+  },
+  {
+   "proveedor": "Cintolo Hnos",
+   "que": "Casquetes semielípticos ASME B16.9 A234-WPB: 2x20\" Sch20, 1x10\" Sch80, 3x6\" Sch80, 4x6\" Sch40 (precio en PDF adjunto 32384, no disponible)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-02-11"
+  },
+  {
+   "proveedor": "Futura",
+   "que": "Tapas de cierre rápido 10\" #600 horizontal (FCD20 ring lock) y 6\" #600 vertical (FCD07); presupuesto S00478 adjunto (sin texto); también se pidió cotizar 455 bridas W neck API 6A 6BX 2-9/16\" 10000 psi A694 F60",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-02-10"
+  },
+  {
+   "proveedor": "Megatap",
+   "que": "Tapas de cierre rápido 10\" #600 y 6\" #600, presupuesto 27040 (adjunto sin texto)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-02-10"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Para calentadores de Camuzzi el quemador típico es de 93 2\"/3\" con arrestallamas laberíntico y encendido multichispa estanco; la vaina de la válvula termostática se cotiza en latón (desvío aceptado en equipos anteriores)",
+  "Manifold de gas S-3000 3/4\" de EQA ronda USD 9.855 c/u con 10% desc.; incluye reguladora 625, válvula de seguridad EQA38 y termostática Danfoss; el caudalímetro no lo provee EQA",
+  "Se piden tapas de cierre rápido a dos proveedores (Futura, Megatap) para comparar",
+  "Proveedores piden pago anticipado (EQA 40%) y contado; plazos de 30 a 60 días: validar contra plazo de ITT",
+  "Riva cotizó 1 tubular aunque ITT pidió 2 VT2P de 600 mm: verificar cantidad"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/EQA - PPTO 47932-ITT.pdf; GORA - PPTO 27131 - ITT.pdf; Protfund - Cotización de ánodos.msg; Riva Hnos - Cotización de indicadores de nivel.msg; Cintolo - Cotización casquetes semielípticos.msg; Futura - Cotización de tapas de cierre rápido.msg; Megatap - Cotización de tapas de cierre rápido.msg",
+  "referencia_cliente": "nombre de carpeta"
+ },
+ "problemas": [
+  "No hay oferta enviada, planilla de costos ni OC: monto, factor, plazo y resultado desconocidos",
+  "Faltan precios de Cintolo, Futura y Megatap (solo en PDF adjunto no incluido)",
+  "Cliente final y especificaciones de calentadores/filtros no figuran en la carpeta",
+  "EQA: vencimiento de oferta 15/02/2026",
+  "Precio Riva es suma de dos unitarios (1 de cada), no coincide con cantidades pedidas"
+ ]
+}

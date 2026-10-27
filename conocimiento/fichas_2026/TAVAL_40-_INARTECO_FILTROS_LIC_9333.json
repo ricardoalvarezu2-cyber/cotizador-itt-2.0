@@ -1,0 +1,144 @@
+{
+ "carpeta": "TAVAL/40- INARTECO FILTROS LIC 9333",
+ "cliente": "INARTECO S.A. (cotizado a través de TAVAL SA)",
+ "cliente_final": null,
+ "numero_oferta": "Presupuesto 24287",
+ "revisiones": "Cost sheet 'LM costo Filtros rev.1'; no hay otras revisiones de la oferta en la carpeta",
+ "fecha_oferta": "2026-01-15",
+ "fecha_ultima_modificacion": "2026-03-03",
+ "referencia_cliente": "Licitación 9333 (planos ENERFEG GR9333); OC Inarteco 18955; NV ITT 486 / OC TAVAL 36985",
+ "familia": "F",
+ "descripcion_corta": "5 filtros FM (FM8-S600 x2, FM2-S300 x2, FM3-S150 x1), lados derecho/izquierdo, con data book, END, PH y pintura",
+ "items": [
+  {
+   "descripcion": "Filtro FM8 - S600 lado derecho/izquierdo",
+   "cantidad": 2,
+   "unidad": "Unid",
+   "precio_unitario": 17936.2,
+   "precio_total": 35872.4,
+   "moneda": "USD",
+   "datos_tecnicos": "Línea 16\" SCH80 (esp. 21.4) con derivación 8\" SCH80, serie 600, tapa cierre rápido FV 16 600, elemento filtrante G4, acero al carbono A53 GrB / A234 WPB / A105"
+  },
+  {
+   "descripcion": "Filtro FM2 - S300 lado derecho/izquierdo",
+   "cantidad": 2,
+   "unidad": "Unid",
+   "precio_unitario": 5980.05,
+   "precio_total": 11960.1,
+   "moneda": "USD",
+   "datos_tecnicos": "Línea 4\" SCH40 con derivación 2\" SCH80, serie 300, elemento filtrante G0.5"
+  },
+  {
+   "descripcion": "Filtro FM3 - S150",
+   "cantidad": 1,
+   "unidad": "Unid",
+   "precio_unitario": 7464.97,
+   "precio_total": 7464.97,
+   "moneda": "USD",
+   "datos_tecnicos": "Línea 6\" SCH40 con derivación 3\" SCH40, serie 150, elemento filtrante G1.5"
+  }
+ ],
+ "monto_total_ofertado": 55297.47,
+ "moneda": "USD",
+ "costo_total": 43292.6,
+ "factor_venta": 1.28,
+ "desglose_costo": {
+  "materiales": 26859.6,
+  "mano_obra": 16433.04,
+  "terceros": null,
+  "otros": 111.18
+ },
+ "plazo_ofrecido": "75 días (Ent. días en presupuesto); OC Inarteco fija entrega 28/03/2026",
+ "plazo_dias": 75,
+ "condiciones": {
+  "pago": "30 días F.R.F.",
+  "validez": "30 días desde la oferta económica",
+  "entrega": "Retiran en planta ITT (NV 486); lugar entrega OC Inarteco: Avellaneda",
+  "moneda_y_ajuste": "USD; facturas canceladas al dólar BNA del día anterior al pago efectivo",
+  "notas_y_exclusiones": [
+   "Precios sin IVA",
+   "Plazos salvo venta, no incluyen tiempos de inspección de materiales",
+   "Incluidos como ítems sin precio: mano de obra, data book, WM, END, consumibles, PH, pintura, materiales"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Futura Hnos S.R.L.",
+   "que": "2 tapas de cierre rápido TCR 16 serie 600 A105N (FV 16 600)",
+   "precio": 8432.0,
+   "moneda": "USD",
+   "plazo_entrega": "90 días",
+   "fecha": "2026-01-07"
+  },
+  {
+   "proveedor": "Cintolo Hnos. Metalúrgica",
+   "que": "Refuerzos tipo poncho, casquetes y codos de acero para soldar A234 WPB (15 ítems, total 3889.41 USD sin IVA)",
+   "precio": 3889.41,
+   "moneda": "USD",
+   "plazo_entrega": "En stock / 20 días / 30-35 días",
+   "fecha": "2026-02-11"
+  },
+  {
+   "proveedor": "Finder Arg S.A.",
+   "que": "Mano de obra de los 5 filtros (FM8 3900 c/u, FM3 2250, FM2 2100 c/u), incluye consumibles",
+   "precio": 14250.0,
+   "moneda": "USD",
+   "plazo_entrega": "a convenir",
+   "fecha": "2026-03-02"
+  },
+  {
+   "proveedor": "Ledesma (taller)",
+   "que": "Mano de obra de los 5 filtros (FM8 2100 c/u), sin consumibles, PH, END ni pintura",
+   "precio": 6750.0,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-02-09"
+  },
+  {
+   "proveedor": "MCD Montajes Industriales",
+   "que": "Mano de obra, piping, soldadura, armado y PH de 5 equipos (cámaras reguladoras)",
+   "precio": 27000000,
+   "moneda": "ARS",
+   "plazo_entrega": "13 días hábiles (390 h)",
+   "fecha": "2026-02-12"
+  },
+  {
+   "proveedor": "J. C. Quesada",
+   "que": "Mano de obra de lote de 5 filtros incl. consumibles y PH (valor tomado de la comparativa; PDF escaneado)",
+   "precio": 8319.0,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": null
+  }
+ ],
+ "resultado": "ganada (hay OC)",
+ "orden_compra": {
+  "numero": "18955 (Inarteco a TAVAL); NV ITT 486 / OC 36985 (TAVAL a ITT)",
+  "fecha": "2026-02-04",
+  "monto": 55103.12
+ },
+ "aprendizajes": [
+  "Factores por rubro en la planilla: MO 1.4, materiales 1.2, válvulas Taval 1.0, repuestos 1.2; cotizar 5 filtros FM por ~55 kUSD (FM8 ~17.9k, FM3 ~7.5k, FM2 ~6k c/u)",
+  "La mano de obra se tercerizó: la comparativa de 4 talleres fue de 6.75k (Ledesma, sin consumibles/PH, +1.64k a valorizar) a 19.4k USD (MCD) por lote; conviene comparar alcances antes de elegir",
+  "Costo dominante en FM8: tapa cierre rápido (8.4k USD) y caño/casquetes de gran espesor; Futura 90 días de plazo, condiciona entrega",
+  "Varios precios de la planilla eran estimados (refuerzos poncho, manómetros diferenciales 500 USD) a la espera de cotización",
+  "La OC adjudicada (55,103.12) quedó levemente por debajo de la oferta (55,297.47): FM2 y FM3 con precio algo distinto"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "4.Armado de la Oferta Comercial/presupuesto 24287.pdf",
+  "fecha_oferta": "4.Armado de la Oferta Comercial/presupuesto 24287.pdf",
+  "costo_total": "4.Armado de la Oferta Comercial/LM costo Filtros rev.1.xlsx (hoja RESUMEN)",
+  "orden_compra": "8.Orden de Compra/18955 OC TAVAL.pdf",
+  "nota_venta_itt": "8.Orden de Compra/NV ITT 486.pdf",
+  "proveedores": "5.Proveedores 3ros/ (Futura, Cintolo, Finder, Ledesma, MCD, Comparativa MO)",
+  "datos_tecnicos": "4.Armado de la Oferta Comercial/LM costo Filtros rev.1.xlsx"
+ },
+ "problemas": [
+  "La planilla RESUMEN muestra 'Total' de costo 31,381.21 que no coincide con la suma de subtotales por equipo x cantidad (~43,292.6); se usó la suma calculada; factor 1.28 derivado (la planilla indica 1.25)",
+  "Precios unitarios de FM2/FM3 difieren entre presupuesto (5980.05 / 7464.97) y OC (5920.20 / 7390.32)",
+  "NV ITT 486 (16,433.04 USD, fabricación piping, entregas 16/04 y 30/06/2026) es la orden interna Taval a ITT; coincide con el costo MO de la planilla",
+  "Cliente final no confirmado (un mail a proveedor menciona el estándar Camuzzi)",
+  "Plazo exacto de Quesada y su presupuesto no legibles (escaneado)"
+ ]
+}

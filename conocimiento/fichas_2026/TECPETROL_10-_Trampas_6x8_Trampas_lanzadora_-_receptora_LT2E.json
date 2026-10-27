@@ -1,0 +1,98 @@
+{
+ "carpeta": "TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E",
+ "cliente": "TECPETROL S.A.",
+ "cliente_final": null,
+ "numero_oferta": "PRES 24083 rev. A (presupuesto ITT 110 / Taval 24083)",
+ "revisiones": "Rev. A; propuesta técnica-económica budget fechada 11/11/2025 y presupuestos emitidos 10/12/2025",
+ "fecha_oferta": "2025-12-10",
+ "fecha_ultima_modificacion": "2026-01-05",
+ "referencia_cliente": "Trampas de scraper budget (LT2E) - 'lic 110 trampas tecpetrol budget'",
+ "familia": "TS trampa scraper",
+ "descripcion_corta": "4 trampas de scraper (lanzadora y receptora, 6x4 y 8x6, #300) - oferta budget",
+ "items": [
+  {
+   "descripcion": "Trampa de scraper lanzadora 6x4 #300",
+   "cantidad": 1,
+   "unidad": "Unid",
+   "precio_unitario": 65340.37,
+   "precio_total": 65340.37,
+   "moneda": "USD",
+   "datos_tecnicos": "ASME B31.3 (opc. VIII Div.1), eficiencia junta 1, RX 100%, sobreespesor corrosión 1.6 mm, P diseño 52 kg/cm2, PH 78 kg/cm2, T -29/38 C, tapa cierre rápido, ASTM A106 B / A234 WPB / A105, pintura zinc silicato+epoxi+poliuretano"
+  },
+  {
+   "descripcion": "Trampa de scraper lanzadora 8x6 #300",
+   "cantidad": 1,
+   "unidad": "Unid",
+   "precio_unitario": 75668.3,
+   "precio_total": 75668.3,
+   "moneda": "USD",
+   "datos_tecnicos": "idem"
+  },
+  {
+   "descripcion": "Trampa de scraper receptora 6x4 #300",
+   "cantidad": 1,
+   "unidad": "Unid",
+   "precio_unitario": 64140.37,
+   "precio_total": 64140.37,
+   "moneda": "USD",
+   "datos_tecnicos": "idem"
+  },
+  {
+   "descripcion": "Trampa de scraper receptora 8x6 #300",
+   "cantidad": 1,
+   "unidad": "Unid",
+   "precio_unitario": 74981.56,
+   "precio_total": 74981.56,
+   "moneda": "USD",
+   "datos_tecnicos": "idem"
+  }
+ ],
+ "monto_total_ofertado": 280130.6,
+ "moneda": "USD",
+ "costo_total": 210191.32,
+ "factor_venta": 1.333,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "120 días (Taval); 150 días en el presupuesto ITT 110",
+ "plazo_dias": 120,
+ "condiciones": {
+  "pago": "30 días F.R.F.",
+  "validez": "30 días desde la oferta económica",
+  "entrega": null,
+  "moneda_y_ajuste": "USD, facturas canceladas al dólar BNA del día anterior al pago; precios sin IVA",
+  "notas_y_exclusiones": [
+   "Incluye tapa de cierre rápido con o-rings de repuesto, válvulas, detector de scraper, PSV, placa orificio, manómetros",
+   "Sin estampa ASME ni U-Stamp",
+   "Excluye instrumentación no declarada, canalizaciones fuera de skid, cañería enterrada, juntas de transición/monolíticas, aislación, anclajes, percha de izaje",
+   "Plazos no incluyen tiempo de inspección de materiales",
+   "Garantía 18 meses desde entrega o 12 desde puesta en marcha",
+   "Oferta budget (no firme)"
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Estructura de costo: mano de obra con factor 1.5, materiales 1.2, válvulas Taval factor 1.0, mecanizado y bruñido a factor 1; factor global resultante ~1.33.",
+  "Costo unitario por trampa: 8x6 ~55.8-56.5 kUSD, 6x4 ~48.5-49.5 kUSD; precio receptora ~1 kUSD menor que lanzadora.",
+  "Repuestos de puesta en marcha / 2 años figuran en la planilla pero con cantidad 0 (no cotizados en el precio).",
+  "La oferta es budget: el presupuesto ITT muestra plazo 150 días vs 120 en el de Taval; unificar criterio."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "items y precios": "4.Armado de la Oferta Comercial/formulario_presupuesto 24083.pdf",
+  "condiciones y datos técnicos": "4.Armado de la Oferta Comercial/PRES 24083- OFERTA TECNICA-ECONOMICA TRAMPAS DE SCRAPPER.pdf",
+  "costo y factor": "4.Armado de la Oferta Comercial/Estructura de costo- Trampas 6x8 y 6x4.xlsx",
+  "plazo 150 d": "4.Armado de la Oferta Comercial/lic 110 trampas tecpetrol budget.pdf"
+ },
+ "problemas": [
+  "Costo total y factor calculados por mí sumando subtotales de costo por trampa (49461.7+48461.7+56484.4+55783.5); la planilla tiene errores (#REF!, #DIV/0!)",
+  "Sin desglose confiable materiales/MO",
+  "Fecha del documento 11/11/2025 vs presupuestos 10/12/2025",
+  "Sin OC: resultado desconocido"
+ ]
+}

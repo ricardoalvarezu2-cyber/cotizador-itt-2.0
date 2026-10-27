@@ -1,0 +1,123 @@
+{
+ "carpeta": "TAVAL/43- YPF- CM PUENTES DE PRODUCCION",
+ "cliente": "TAVAL SA",
+ "cliente_final": "YPF SA",
+ "numero_oferta": "PRES 24492 rev. B (oferta económica rev. A)",
+ "revisiones": "Oferta económica rev. A (19/02/2026); oferta técnica rev. A 19/02 y rev. B 25/02/2026 (aclaraciones). Sin cambio de precio visible.",
+ "fecha_oferta": "2026-02-19",
+ "fecha_ultima_modificacion": "2026-02-25",
+ "referencia_cliente": "Concurso Doc5549968149 - CM (contrato marco) Puentes de Producción NOC; espec. técnicas 1000603069 y 1000624740",
+ "familia": "P",
+ "descripcion_corta": "Contrato marco de 455 puentes de producción superficiales para pozos (442 de 3\" y 13 de 4\", #600 con brida API 6BX 10000 psi) para YPF NOC",
+ "items": [
+  {
+   "descripcion": "PUENT.SUPERF.PROD.NOC YPF PL.VCD16011PP* (puente 3\")",
+   "cantidad": 442,
+   "unidad": "u",
+   "precio_unitario": 8842.33,
+   "precio_total": 3908308.85,
+   "moneda": "USD",
+   "datos_tecnicos": "Cañería 3\"/4\" Sch 80 A-106 Gr B, bridas WNRF 2\" y 3\" #600 A-105, brida WN API 6A 6BX 2 9/16\" 10000 psi, válvulas esféricas/aguja/bloqueo y purga, drip ring 2\", ASME VIII Div.1 / B31.3, RT1, T -10/65 C, pintura sistema 201"
+  },
+  {
+   "descripcion": "PUENT.SUPERF.PROD.YPF PL.VCD23022PPL020* (puente 4\")",
+   "cantidad": 13,
+   "unidad": "u",
+   "precio_unitario": 14288.41,
+   "precio_total": 185749.3,
+   "moneda": "USD",
+   "datos_tecnicos": "Variante 4\" #600 Sch 80 con tees reductoras 4x2 y 4x3, válvula de retención 4\", junta dieléctrica 4\", mismas bridas API 6BX 10000 psi"
+  }
+ ],
+ "monto_total_ofertado": 4094058.16,
+ "moneda": "USD",
+ "costo_total": 3567120,
+ "factor_venta": 1.148,
+ "desglose_costo": {
+  "materiales": 1740204,
+  "mano_obra": 892074,
+  "terceros": 834761,
+  "otros": 100100
+ },
+ "plazo_ofrecido": "Entregas parciales 60/90/120/150/180/210/240/270 días desde OC (según Anexo L: 45 d + 30 d por lote); planilla interna: 100 días OC para entregas parciales",
+ "plazo_dias": 270,
+ "condiciones": {
+  "pago": "Opción A: contra entrega FF 30 días. Opción B: hitos (10% ingeniería para construcción, 10% aprobación, 40% acopio, 5% terminación mecánica, 5% FAT, 30% entrega)",
+  "validez": "30 días corridos",
+  "entrega": "Planta TAVAL/ITT Quilmes en la oferta; desvío K-2: entrega en LOGINTER (AMBA); planilla interna contempla Añelo NQN como opción (flete USD 2500/semi vs USD 500 LOGINTER)",
+  "moneda_y_ajuste": "USD facturado en ARS a TC BNA fecha de factura; cancelación a TC BNA vendedor día anterior al pago; NC/ND si variación >3%",
+  "notas_y_exclusiones": [
+   "Sin multas por mora para material de origen importado (condición BCRA)",
+   "Licencias No Automáticas: sin responsabilidad por demoras",
+   "Póliza de seguro se cotiza con la OC",
+   "Se sugiere que material importado crítico lo provea el cliente",
+   "Seguro de caución 1% sobre base 10% considerado en planilla",
+   "Desvío técnico aceptado por YPF: válvulas 1/2\" y 3/4\" NPT #2000 SAH2N con paso total (stock)"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Francovigh S.A.",
+   "que": "Brida WN API 6A 6BX 2 9/16\" 10000 psi (455 u)",
+   "precio": 279.0,
+   "moneda": "USD",
+   "plazo_entrega": "Parciales desde 75 días (310 lista, 10% bonificación; total 126.945)",
+   "fecha": "2026-02-13"
+  },
+  {
+   "proveedor": "Juntas MS",
+   "que": "Juntas anillo RTJ BX153 (6,01 c/u), kit aislante 3\" #600 (167,31) y 4\" (193,76), espárragos 316L",
+   "precio": 6.01,
+   "moneda": "USD",
+   "plazo_entrega": "30 días",
+   "fecha": "2026-02-13"
+  },
+  {
+   "proveedor": "Xiamen Landee Industries",
+   "que": "Bridas ciegas, WN API 6BX, WNRF 2\"/3\"/4\" #600, coplas, sockolets, tees, manómetros (FOB Tianjin)",
+   "precio": 83955.69,
+   "moneda": "USD",
+   "plazo_entrega": "35 días tras anticipo; pago T/T 50% anticipo; validez 5 días",
+   "fecha": "2026-02-14"
+  },
+  {
+   "proveedor": "Duralitte",
+   "que": "Referencia de precios de niples, válvulas y accesorios para puentes de producción/inyección (APSA)",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-02-13"
+  },
+  {
+   "proveedor": "Complemet/Provemet y EMI",
+   "que": "No cotizaron bridas API",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-02-19"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Factores por rubro: materiales x1,2, mano de obra ITT x1,3, válvulas sin recargo (ya con -35%/-20% de lista), viaje x1,1; factor global resultante ~1,15 por volumen alto",
+  "Precio unitario puente 3\" ~USD 8.842 (costo ~7.704); 4\" ~USD 14.288 (costo ~12.457); válvulas de TAVAL en stock son ~20% del precio",
+  "Brida API 6BX 10000 psi es el ítem crítico (USD 279 Francovigh vs ~USD 101 importada de China con coeficiente de nacionalización); solo Francovigh cotizó local",
+  "Para grandes volúmenes cotizar entrega parcializada y excluir multas por importados; considerar flete 18 puentes (3\") / 13 (4\") por semi"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "TAVAL/43- YPF- CM PUENTES DE PRODUCCION/4.Armado de la Oferta Comercial/PRES 24492- OFERTA ECONOMICA CM Puentes de Producción NOC.pdf",
+  "costo_total_y_factor": "TAVAL/43- YPF- CM PUENTES DE PRODUCCION/4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx",
+  "plazo": "TAVAL/43- YPF- CM PUENTES DE PRODUCCION/4.Armado de la Oferta Comercial/Anexo L - Plazos de Provision (TAVAL).xlsx",
+  "desvios": "TAVAL/43- YPF- CM PUENTES DE PRODUCCION/4.Armado de la Oferta Comercial/Anexo K-1 - Lista de Desvios Técnicos (TAVAL).xlsx",
+  "proveedores": "TAVAL/43- YPF- CM PUENTES DE PRODUCCION/5.Proveedores 3ros/"
+ },
+ "problemas": [
+  "Cliente directo es TAVAL (empresa vinculada); cliente final YPF",
+  "No hay orden de compra en la carpeta: resultado desconocido",
+  "Costo y factor calculados por mí desde la hoja RESUMEN (la planilla suma mal el 'Total' de costo); factor aproximado",
+  "Costos de proveedores usan 455 u (cotizaciones) vs 442+13 de la oferta; plazo ambiguo entre 100 días y 60-270",
+  "El PDF económico tiene texto basura de plantilla"
+ ]
+}

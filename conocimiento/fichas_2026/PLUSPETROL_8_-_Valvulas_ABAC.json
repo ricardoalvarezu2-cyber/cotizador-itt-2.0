@@ -1,0 +1,93 @@
+{
+ "carpeta": "PLUSPETROL/8 - Valvulas ABAC",
+ "cliente": "PLUSPETROL",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-02-06",
+ "referencia_cliente": "Válvulas (cotización de proveedor ABAC, ref. 1401)",
+ "familia": "V",
+ "descripcion_corta": "Cotización de válvulas de aguja/bloqueo y purga ABAC para puentes de inyección y producción; sin oferta a cliente en la carpeta",
+ "items": [
+  {
+   "descripcion": "Válvula aguja bloqueo recta 1/2\" NPTM x NPTH, 10000 psi, AISI 316, empaque grafoil, ABAC VA150M IG-HS",
+   "cantidad": 8,
+   "unidad": "u",
+   "precio_unitario": 136.9,
+   "precio_total": 1095.2,
+   "moneda": "USD",
+   "datos_tecnicos": "Costo de proveedor + IVA; AISI 316, 689 bar"
+  }
+ ],
+ "monto_total_ofertado": null,
+ "moneda": "USD",
+ "costo_total": 1095.2,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": 1095.2,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": "Precios USD + IVA",
+  "notas_y_exclusiones": [
+   "Bonificación 20% por cantidad en el pedido para puentes"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "ABAC",
+   "que": "Válvula aguja VA150M IG-HS 1/2\" 10000 psi",
+   "precio": 136.9,
+   "moneda": "USD",
+   "plazo_entrega": "15 días",
+   "fecha": "2026-02-06"
+  },
+  {
+   "proveedor": "ABAC",
+   "que": "Aguja acodada VA150M A-IT 1/2\" 6000 psi",
+   "precio": 126.8,
+   "moneda": "USD",
+   "plazo_entrega": "15 días",
+   "fecha": "2026-02-06"
+  },
+  {
+   "proveedor": "ABAC",
+   "que": "Bloqueo y purga integral VI575M-IT 3/4\"x1/2\" 6000 psi",
+   "precio": 197.71,
+   "moneda": "USD",
+   "plazo_entrega": "15 días",
+   "fecha": "2026-02-06"
+  },
+  {
+   "proveedor": "ABAC",
+   "que": "Tapón purgador c/manivela TPM50-I 1/2\" 10000 psi",
+   "precio": 22.54,
+   "moneda": "USD",
+   "plazo_entrega": "15 días",
+   "fecha": "2026-02-06"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "ABAC entrega en 15 días con 20% de bonificación por cantidad (40+ unidades)",
+  "Referencia de precios 2026: aguja 1/2\" 10000 psi USD 136,90; bloqueo y purga 3/4\" USD 197,71",
+  "Los mismos ítems ABAC se usaron en los puentes de producción de TAVAL/YPF (válvula de bloqueo y purga 1/2\" 'pedir afuera')"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "PLUSPETROL/8 - Valvulas ABAC/5.Proveedores 3ros/RE ITT SA - Solicitud de cotización Abac 1401.msg"
+ },
+ "problemas": [
+  "Solo hay mail de proveedor; no hay oferta ni cliente confirmado (cliente tomado del nombre de carpeta)",
+  "Se desconoce si 1.401 es referencia ITT o de ABAC; el asunto menciona puentes de inyección y producción"
+ ]
+}
