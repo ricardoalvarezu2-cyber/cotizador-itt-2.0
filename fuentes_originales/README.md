@@ -27,7 +27,7 @@ Copias de las planillas y documentos de ITT a partir de los cuales se genera la 
 | Archivo / carpeta | Contenido |
 |---|---|
 | `indices/inventario_ofertas_2026-10.csv` | Listado completo de los 15.601 archivos de la carpeta (ruta, tamaño, fecha) al 27/10/2026 |
-| `ofertas_texto/` | **Texto extraído** de los 2.281 documentos de la tanda 1 (oferta comercial, proveedores, propuesta enviada y OC), con la misma estructura de carpetas. Los documentos originales (1,9 GB) quedan en `Z:\` |
+| `ofertas_texto/` | **Texto extraído** de los 2.281 documentos de la tanda 1 (oferta comercial, proveedores, propuesta enviada y OC), con la misma estructura de carpetas. Los documentos originales (1,9 GB) quedan en `Z:\` y en el RAR de Drive: https://drive.google.com/file/d/1FeaoYuehghEkgomXvcQqvjecoriK_4Wr/view?usp=drive_link |
 | `indices/ofertas_texto_indice.csv` | Índice del texto extraído: tipo, tamaño, páginas, posibles escaneos y errores |
 | `indices/cotizaciones_2026.json` | Carpetas de 2026 con la fecha original de cada archivo |
 | `indices/asignacion_tanda*.json` | Cómo se repartieron las carpetas de 2026 entre agentes |

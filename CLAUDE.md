@@ -11,6 +11,12 @@
 - Una sola versión vigente de cada dato, con fecha y fuente. Ante dos versiones, vale la más reciente y se anota la decisión en `conocimiento/fuentes.md`.
 - No hay a quién consultar las planillas viejas (Javier Elejondo ya no está en la empresa): ante dudas, tomar el criterio con más sentido técnico y dejarlo documentado.
 
+## Ubicación de los originales
+- Carpeta de cotizaciones de ITT: `Z:\VENTAS\OFERTAS Y LICITACIONES` (15.601 archivos, 27 GB; solo en la red de ITT).
+- **Tanda 1** (oferta comercial, proveedores, propuesta enviada y OC; 2.281 archivos, RAR de 1,67 GB) en Google Drive: https://drive.google.com/file/d/1FeaoYuehghEkgomXvcQqvjecoriK_4Wr/view?usp=drive_link
+  - ID: `1FeaoYuehghEkgomXvcQqvjecoriK_4Wr`. Descarga directa (si el archivo está compartido con "cualquier persona con el enlace"): `curl -L -o t1.rar "https://drive.usercontent.google.com/download?id=1FeaoYuehghEkgomXvcQqvjecoriK_4Wr&export=download&confirm=t"` y extraer con `unrar-free -x`.
+  - El texto extraído ya está en `fuentes_originales/ofertas_texto/`; el RAR hace falta solo para releer un original (escaneos, adjuntos).
+
 ## Reglas de cálculo y comerciales
 - Moneda USD, sin IVA, entrega EXW planta Quilmes Oeste. El factor de venta lo define la dirección; la herramienta propone 1,35 y muestra escenarios.
 - El cálculo de costo y plazo es determinístico (reglas y tarifas de la base); la IA lee documentos y arma el cómputo.
