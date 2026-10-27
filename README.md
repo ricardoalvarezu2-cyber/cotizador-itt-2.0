@@ -27,6 +27,7 @@ Herramienta de cotización asistida por IA para ITT S.A.: lee pedidos de cliente
 | `herramientas/consolidar_fichas.py` | Une las fichas en tablas de la base de conocimiento |
 | `herramientas/indice_precios.py` | Arma el índice único de precios |
 | `herramientas/leer_dwg.py` | Lee un plano DWG/DXF: textos por capa e imágenes por zona |
+| `herramientas/generar_oferta.py` | Genera la oferta técnica y la económica (Word y PDF) con el formato de ITT, desde `oferta.json` de la cotización y los precios de su planilla. Lleva la marca "BORRADOR – NO ENVIAR" hasta que la cotización esté aprobada |
 | `herramientas/verificar_computo.py` | Control obligatorio de una cotización: cómputo contra la tabla del plano (posiciones, cantidades, extremos y soldaduras, fuentes y antigüedad de precios, estimados) |
 | `herramientas/verificar.py` | Comprueba que las herramientas de lectura estén instaladas |
 

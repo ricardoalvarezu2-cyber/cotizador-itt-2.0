@@ -40,6 +40,8 @@ Vigente desde el 27/10/2026. Se escribió a partir de los errores de la COT26-10
 2. Revisión independiente: alguien que no armó el cómputo (otro agente o una persona) compara la lista de materiales del plano con el cómputo y el informe, y busca cantidades, especificaciones, extremos, soldaduras y precios sin fuente. Lo que encuentre se corrige o se justifica.
 3. Recién ahí la cotización pasa a `revisado`.
 
+**P9 bis. Oferta al cliente.** La oferta técnica y la económica se generan con `python herramientas/generar_oferta.py cotizaciones/<carpeta>`. Usa la plantilla de ITT (`plantillas/oferta_itt_2026.docx`), los textos de `oferta.json` y los precios de la planilla (unitario redondeado × cantidad = total). Los datos pendientes van entre [corchetes] y salen resaltados en amarillo. La marca "BORRADOR – SIN REVISAR – NO ENVIAR" se quita solo cuando `oferta.json` tiene `"estado": "aprobado"`.
+
 **P10. Registrar.** Guardar todo en `cotizaciones/<código>/`: el pedido, la lista del plano, el cómputo, el informe y la planilla. Cada error que se detecte, aunque sea a tiempo, se anota en [`errores_y_lecciones.md`](errores_y_lecciones.md), y si hace falta se ajusta este procedimiento.
 
 ## Lista de control antes de pedir aprobación
