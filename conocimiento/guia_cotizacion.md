@@ -68,6 +68,9 @@ python herramientas/buscar_material.py "valvula retencion 2\" serie 600 cuerpo A
 - De cada uno da el último precio de costo, la fecha, el proveedor y la ruta de origen (carpeta de Z: o planilla, y el archivo).
 - Un similar se carga en `cotizacion.json` con `"coincide": "similar"` y su diferencia.
 - El catálogo (`conocimiento/precios/catalogo_materiales.xlsx`) tiene una hoja por familia de material.
+- **Marca (válvulas e instrumentos):** cada marca es un renglón aparte, con su precio. La marca no cuenta para igual/similar: con `--marca Danco` salen primero los iguales de esa marca y después los "IGUAL (otra marca)", para elegir. Si el cliente o el pliego piden una marca, cotizar otra es un desvío (`coincide: similar`, diferencia "marca").
+- Los precios se comparan siempre en la misma unidad (un, m, tira de 6 m, m2, kg): un precio por metro nunca se junta con uno por unidad.
+- Las compras del stock anteriores a 2022 no se usan (hay compras de 2009): en su lugar va el precio maestro de nov-2024.
 
 Después, completar con las fuentes de abajo:
 

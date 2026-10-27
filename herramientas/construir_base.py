@@ -70,7 +70,9 @@ def numero(v):
     if not s or not re.search(r"\d", s):
         return None
     s = re.sub(r"[^\d.,-]", "", s)
-    if s.count(",") == 1 and s.count(".") == 0:
+    if re.fullmatch(r"-?[1-9]\d{0,2}[.,]\d{3}", s):
+        s = re.sub(r"[.,]", "", s)  # '4.550 + IVA' son 4550, no 4,55
+    elif s.count(",") == 1 and s.count(".") == 0:
         s = s.replace(",", ".")
     elif s.count(".") > 1 or (s.count(",") and s.count(".")):
         ultimo = max(s.rfind("."), s.rfind(","))
@@ -255,8 +257,13 @@ def precios_elementos():
                 continue
             detalle = texto(ws.cell(r, desc[1]).value) if len(desc) > 1 else ""
             valor = {k: ws.cell(r, c).value for k, c in cols.items()}
+            item, dim = ultima, texto(valor.get("dimension"))
+            if detalle:
+                # Hojas con dos columnas DESCRIPCION (bombas, caja porta orificio, anillo de purga, válvulas): la primera
+                # y la dimensión son un modelo copiado de otra hoja; lo cotizado es la segunda.
+                item, detalle, dim = detalle, f"col. A de la hoja (no es lo cotizado): {ultima} {dim}".strip(), ""
             filas.append([
-                ws.title.strip(), ultima, detalle, texto(valor.get("dimension")), texto(valor.get("tipo")),
+                ws.title.strip(), item, detalle, dim, texto(valor.get("tipo")),
                 texto(valor.get("schedule")), texto(valor.get("serie")), texto(valor.get("material")),
                 texto(valor.get("norma")), texto(valor.get("unidad")), round(precio, 2),
                 texto(valor.get("proveedor")), fecha(valor.get("fecha")), texto(valor.get("plazo_entrega")),

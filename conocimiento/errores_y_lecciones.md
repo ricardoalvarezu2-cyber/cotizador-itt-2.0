@@ -39,3 +39,19 @@ Un agente que no había armado el cómputo comparó el plano y el pedido contra 
 
 **Lección:** la autorrevisión no alcanza. La revisión independiente encontró 3 problemas críticos en una cotización que ya se había revisado contra el plano. Hay que hacerla siempre, y antes de mostrar un número como definitivo.
 
+
+### Revisión del catálogo de materiales (27/10/2026)
+
+Al revisar el catálogo antes de agregar la marca aparecieron errores de lectura de las fuentes. Ninguno llegó a una cotización, pero cualquiera podía dar un precio equivocado.
+
+| # | Error | Causa | Corrección |
+|---|---|---|---|
+| 20 | "½", "¾" y "¼" se leían como 12, 34 y 14 | La normalización a ASCII borraba la barra de fracción | `norm()` pasa las fracciones a "1/2" antes de normalizar; "Ø" pasa a "diam" |
+| 21 | 2,5" o 2.5" se leía como 5"; "13,09 pulg-eq" como un diámetro | El patrón no aceptaba decimales ni excluía las pulgadas equivalentes | Diámetros con decimales, "1-1/2", límites 1/8" a 60" y sin "pulg-eq" |
+| 22 | Válvulas y accesorios del stock ("ESF PT 4 300 RF", "4#150RF", "TEE ½ 3000 NPT") quedaban sin serie | La serie solo se leía con "#" delante | Se lee el formato del stock |
+| 23 | "4,413.92 c/u" se leía 413,92 y "4.550 + IVA" se leía 4,55 | Separadores de miles | Lectura de números en ambos formatos |
+| 24 | En 4 hojas de la base de componentes se tomaba como material una descripción copiada de otra hoja (una caja porta orificio quedó como "válvula de retención 3" USD 5.850") | Hojas con dos columnas DESCRIPCION | Se toma la segunda y se corrigió `precios_componentes.csv` |
+| 25 | Precios por metro mezclados con precios por unidad; XS juntado con Sch 80 en 10" y 12"; B7 con B8M; 2H con 8M; bridas ciegas con ciegas perforadas; codos forjados 3000 con codos BW | Clave incompleta | La unidad entra en la clave; XS = 80 solo hasta 8"; grado de bulonería; tipos nuevos |
+| 26 | Compras del stock de 2009 mostradas como "último precio" | Se tomaba siempre la última compra | Compras anteriores a 2022 no se usan; precios en 0 se descartan |
+
+**Lección:** un catálogo armado por reglas también se revisa: listar los grupos que juntan precios muy distintos (más de 2,5 veces) y mirar cada familia antes de usarlo.

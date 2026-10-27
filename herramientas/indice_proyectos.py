@@ -44,8 +44,14 @@ tipo incluye incluido incluida item items unidad unidades cotizacion cotizar ofe
 cliente proyecto equipo equipos provision fabricacion construccion suministro segun detalle rev revision doc nro numero""".split())
 
 
+FRACCIONES = {"½": " 1/2", "¼": " 1/4", "¾": " 3/4", "⅛": " 1/8", "⅜": " 3/8", "⅝": " 5/8", "⅞": " 7/8", "\u2044": "/", "ø": " diam ", "Ø": " diam ", "⌀": " diam "}
+
+
 def norm(t):
-    t = unicodedata.normalize("NFKD", str(t or "")).encode("ascii", "ignore").decode().lower()
+    t = str(t or "")
+    for a, b in FRACCIONES.items():  # antes de NFKD: si no, "½" queda "12"
+        t = t.replace(a, b)
+    t = unicodedata.normalize("NFKD", t).encode("ascii", "ignore").decode().lower()
     return re.sub(r"\s+", " ", t)
 
 
@@ -68,16 +74,25 @@ def frac(s):
     return tot
 
 
-def diametros(t):
-    out = set()
-    for m in re.finditer(r'(?<![\d/])(\d{1,2}(?: \d/\d)?|\d/\d)\s?(?:"|”|\'\'|pulg|in\b|pulgadas)', t):
+PULGADAS = r'(?<![\d/.,])(\d{1,2}[.,]\d{1,2}|\d{1,2}(?:[ -]\d{1,2}/\d{1,2})?|\d{1,2}/\d{1,2})\s?(?:"|”|\'\'|pulgadas|pulg(?![\w-]*eq)|in\b)'
+
+
+def pulgadas(t):
+    """Diámetros en pulgadas en el orden en que aparecen: 2", 1 1/2", 1-1/2", 3/4", 2.5" o 2,5"."""
+    out = []
+    for m in re.finditer(PULGADAS, t):
         try:
-            v = frac(m.group(1))
-            if 0.25 <= v <= 60:
-                out.add(v)
+            v = frac(m.group(1).replace("-", " ").replace(",", "."))
         except (ValueError, ZeroDivisionError):
-            pass
-    for m in re.finditer(r"(?:o|ø|diam\.?|diametro)\s?(\d{1,2})(?![\d.,])", t):
+            continue
+        if 0.125 <= v <= 60 and v not in out:
+            out.append(v)
+    return out
+
+
+def diametros(t):
+    out = set(pulgadas(t))
+    for m in re.finditer(r"(?:\bo(?=\d)|\bdiam\.?|\bdiametro)\s?(\d{1,2})(?![\d.,/])", t):
         v = float(m.group(1))
         if 1 <= v <= 60:
             out.add(v)
@@ -87,7 +102,7 @@ def diametros(t):
 def series(t):
     out = set()
     pat = r"(150|300|600|900|1500|2000|2500|3000|5000|6000|10000)"
-    for rx in (r"#\s?" + pat + r"\b", r"\b" + pat + r"\s?#", r"\b(?:cl|clase|class|serie|s|ansi|wog)[\s.\-]?" + pat + r"\b",
+    for rx in (r"#\s?" + pat + r"(?!\d)", r"\b" + pat + r"\s?#", r"\b(?:cl|clase|class|serie|s|ansi|wog)[\s.\-]?" + pat + r"(?!\d)",
                r"\b" + pat + r"\s?(?:lbs?|psi)\b"):
         out.update(re.findall(rx, t))
     return sorted(out, key=int)
