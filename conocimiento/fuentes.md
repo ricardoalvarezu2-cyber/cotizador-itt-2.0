@@ -74,6 +74,17 @@ Todos los archivos de ITT revisados para armar esta base, en orden cronológico 
 
 15.601 archivos (27 GB) en 533 carpetas de cotización de 75 clientes, 2017–2026. Se trajo la **tanda 1**: oferta comercial, proveedores, propuesta comercial enviada y OC (2.281 archivos, 1,9 GB, 307 carpetas), con la fecha original de cada archivo. Se analizaron en detalle **las 93 cotizaciones de 2026**: ver `fichas_2026/`, `comercial/cotizaciones_2026*.csv`, `precios/proveedores_2026.csv` y `aprendizajes_2026.md`. Quedan sin analizar las de 2021–2025 (213 carpetas). La documentación del cliente (22 GB) no se trajo.
 
+## Índices de inflación (para ajustar precios a hoy)
+
+| Fecha | Dato | Fuente | Uso |
+|---|---|---|---|
+| 13/10/2026 | IPC 12 meses a sep-2026: 33,4%; acumulado ene–sep 2026: 23,6% | INDEC (vía medios: Canal 26, El Economista, Dólar Hoy) | `costos/indices_ajuste.csv` |
+| 12/11/2025 | IPC 12 meses a oct-2025: 31,3% | INDEC (vía A24, Calcular Sueldo) | ídem |
+| 2024–2026 | Dólar BNA vendedor: 1.011,50 (31/10/2024), 1.475 (31/10/2025), 1.480 (30/12/2025), 1.550 (23/10/2026) | dolarhistorico.com, mdzol.com | ídem |
+| 14/10/2026 | CPI EE.UU. 12 meses a sep-2026: 3,7% | BLS (vía Trading Economics) | ídem |
+
+Los meses intermedios se interpolan. Octubre 2026 es estimado. Hay que actualizar la tabla cuando salgan los datos nuevos (`herramientas/indices_inflacion.py`).
+
 ## Faltantes conocidos
 
 1. **Plazos:** cubierto en parte con el seguimiento de proyectos (ver `plazos.md`). Faltan plazos de proveedores actualizados por rubro.

@@ -25,8 +25,9 @@ El detalle interactivo, con el origen de cada precio, valores editables y export
 | Mano de obra (armado Ledesma 400 + soldaduras 258) | 658 |
 | Servicios e insumos (PH, pintura, calidad, sellador) | 315 |
 | **Costo** | **5.409** |
-| **Precio** (factor de materiales 1,35; factor de MO y servicios 1,35) | **7.302** |
-| Total por 2 puentes | 14.603 + IVA |
+| Precio sin ajuste por inflación (factor 1,35 / 1,35) | 7.302 |
+| **Precio con ajuste por inflación (vigente, ver abajo)** | **7.540,63** |
+| Total por 2 puentes | 15.081,26 + IVA (con ajuste) |
 
 Modelo de costo: PRES 24879 rev A (TAVAL/55, Tecpetrol, 22/04/2026), puente de producción convencional para bombeo mecánico. Ahí la MO de Ledesma dentro del puente lleva 1,35; el 1,40 se usó solo para MO vendida aparte.
 
@@ -46,6 +47,19 @@ A confirmar:
 - reducción 16 80×40;
 - trim AISI 316 y resorte de la retención 7;
 - extremos BW de los niples 22 y 25, que quedarían para soldar en campo.
+
+## Ajuste por inflación (27/10/2026)
+Cada precio se lleva desde su fecha hasta oct-2026 con un índice mensual (`conocimiento/costos/indices_ajuste.csv`):
+- **Materiales:** CPI de EE.UU. (3,7% en 12 meses).
+- **Mano de obra y servicios:** IPC del INDEC dividido por el dólar BNA (+26,4% en 12 meses).
+
+| | Sin ajuste | Con ajuste |
+|---|---|---|
+| Costo por puente | 5.408,61 | 5.585,65 (+3,3%) |
+| **Precio por puente (factor 1,35)** | 7.301,63 | **7.540,63** |
+| Total por 2 puentes sin IVA | 14.603,26 | **15.081,26** |
+
+Los ajustes más grandes: la soldadura con costo de planta de oct-2024 (×1,139), la PH con tarifa 2024 (×1,203) y el armado y la pintura de abr-2026 (×1,068). Los materiales suben entre 1% y 4%; el manómetro con referencia de stock de nov-2024, 6,6%.
 
 ## Comparables
 | Antecedente | Precio c/u |

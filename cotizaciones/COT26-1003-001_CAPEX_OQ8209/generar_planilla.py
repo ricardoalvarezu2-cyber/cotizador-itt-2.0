@@ -3,6 +3,7 @@ from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.worksheet.datavalidation import DataValidation
 import os
+from datetime import date
 D=os.path.dirname(os.path.abspath(__file__))+'/'
 rows=list(csv.DictReader(open(D+'computo.csv',encoding='utf-8')))
 mat=[r for r in rows if r['id'].startswith('M')]; srv=[r for r in rows if r['id'].startswith('S')]
@@ -29,13 +30,29 @@ P=[('Cantidad de puentes',2,'0'),('Factor de materiales (materiales y contingenc
 for i,(n,v,f) in enumerate(P,5):
     ws.cell(i,1,n); c=ws.cell(i,2,v); c.fill=INP; c.number_format=f
 # names: B5..B13
+# --- Ajuste por inflación (columnas G:H) con la tabla de índices de la base
+IDX=list(csv.DictReader(open(D+'../../conocimiento/costos/indices_ajuste.csv',encoding='utf-8')))
+NI=len(IDX)+1
+RNG=f'Índices!$A$2:$E${NI}'
+ws['G5']='AJUSTE POR INFLACIÓN (desde la fecha de cada precio hasta hoy)'; ws['G5'].font=Font(bold=True)
+for r,(n,v,f) in enumerate([('Aplicar ajuste (1 = sí, 0 = no)',1,'0'),('Fecha de hoy (referencia)',date(2026,10,27),'dd/mm/yyyy')],6):
+    ws.cell(r,7,n); x=ws.cell(r,8,v); x.fill=INP; x.number_format=f
+ws['G8']='Variación 12 meses — materiales (CPI EE.UU.)'; ws['H8']=f'=VLOOKUP(H7,{RNG},5,1)/VLOOKUP(EDATE(H7,-12),{RNG},5,1)-1'
+ws['G9']='Variación 12 meses — MO y servicios (costo local en USD)'; ws['H9']=f'=VLOOKUP(H7,{RNG},4,1)/VLOOKUP(EDATE(H7,-12),{RNG},4,1)-1'
+ws['H8'].number_format=ws['H9'].number_format='0.0%'
+for i,t in enumerate(['Factor de cada fila = índice del mes de hoy / índice del mes del precio (hoja Índices).',
+  'Materiales: CPI de EE.UU. (los precios ya están en dólares).',
+  'MO y servicios: costo local en dólares = IPC INDEC / dólar BNA vendedor. Si el dólar sube menos que la inflación, el costo en USD sube.',
+  'Fuentes y meses interpolados o estimados: hoja Índices (conocimiento/costos/indices_ajuste.csv).'],10):
+    ws.cell(i,7,t).font=Font(italic=True,color='5D6B75',size=9)
+ws.column_dimensions['G'].width=58; ws.column_dimensions['H'].width=13
 ws['A16']='RESUMEN'; ws['A16'].font=Font(bold=True)
 for j,t in enumerate(['Rubro','Costo / puente','Factor','Precio / puente','Total'],1):
     c=ws.cell(17,j,t); c.font=H; c.fill=HF
-R=[('Materiales',"=SUM(Materiales!G2:G27)",'=$B$6'),
+R=[('Materiales (con ajuste por inflación)',"=SUM(Materiales!P2:P27)",'=$B$6'),
    ('Contingencia',"=B18*$B$8",'=$B$6'),
-   ('Mano de obra (armado y soldadura)',"=SUMIF('MO y servicios'!B2:B7,\"MO\",'MO y servicios'!G2:G7)",'=$B$7'),
-   ('Servicios e insumos (PH, pintura, calidad, sellador)',"=SUMIF('MO y servicios'!B2:B7,\"Servicio\",'MO y servicios'!G2:G7)",'=$B$7')]
+   ('Mano de obra (armado y soldadura)',"=SUMIF('MO y servicios'!B2:B7,\"MO\",'MO y servicios'!P2:P7)",'=$B$7'),
+   ('Servicios e insumos (PH, pintura, calidad, sellador)',"=SUMIF('MO y servicios'!B2:B7,\"Servicio\",'MO y servicios'!P2:P7)",'=$B$7')]
 for i,(n,f,fa) in enumerate(R,18):
     ws.cell(i,1,n); ws.cell(i,2,f).number_format=USD; ws.cell(i,3,fa).number_format='0.00'
     ws.cell(i,4,f'=B{i}*C{i}').number_format=USD; ws.cell(i,5,f'=D{i}*$B$5').number_format=USD
@@ -54,30 +71,42 @@ ws['A27']='PRECIO UNITARIO DE VENTA (redondeado, va a la oferta)'; ws['D27']='=R
 ws['A28']='TOTAL DE LA OFERTA SIN IVA (unitario redondeado × cantidad + flete)'; ws['E28']='=D27*B5+E22'
 for c in ('A27','D27','A28','E28'): ws[c].font=Font(bold=True,color='1D5F86')
 ws['D27'].number_format=USD; ws['E28'].number_format=USD
-ws['A30']='Plazo: 60 días desde OC (crítico: esféricas 2" Indave 60 días; con stock Taval, 45 días). Fecha de necesidad 09/11/2026: no se puede cumplir.'
-ws['A31']='Condiciones (como OE 332-24): USD facturado en pesos al TC BNA vendedor · contado contra entrega · entrega en planta ITT · validez 15 días.'
-ws['A32']='Modelo de costo: PRES 24879 rev A (TAVAL/55, Tecpetrol, 22/04/2026), puente convencional de bombeo mecánico. Factor 1,35 sobre todo el puente (incluida la MO de Ledesma); 1,40 solo para MO vendida sola.'
+ws['A29']='Costo / puente SIN ajuste por inflación'; ws['B29']="=SUM(Materiales!G2:G27)*(1+B8)+SUM('MO y servicios'!G2:G7)"
+ws['A30']='Ajuste por inflación incluido en el costo / puente'; ws['B30']='=B23-B29'; ws['C30']='=B30/B29'
+ws['B29'].number_format=USD; ws['B30'].number_format=USD; ws['C30'].number_format='+0.0%'
+ws['A32']='Plazo: 60 días desde OC (crítico: esféricas 2" Indave 60 días; con stock Taval, 45 días). Fecha de necesidad 09/11/2026: no se puede cumplir.'
+ws['A33']='Condiciones (como OE 332-24): USD facturado en pesos al TC BNA vendedor · contado contra entrega · entrega en planta ITT · validez 15 días.'
+ws['A34']='Modelo de costo: PRES 24879 rev A (TAVAL/55, Tecpetrol, 22/04/2026), puente convencional de bombeo mecánico. Factor 1,35 sobre todo el puente (incluida la MO de Ledesma); 1,40 solo para MO vendida sola.'
 ws.column_dimensions['A'].width=52
 for c in 'BCDE': ws.column_dimensions[c].width=16
 
 # --- detalle
+def fecha(t):
+    p=[int(x) for x in t.split('-')]
+    return date(p[0],p[1] if len(p)>1 else 7,p[2] if len(p)>2 else 1)  # solo año: mitad de año; solo mes: día 1
 def detalle(name,data,isS):
     w=wb.create_sheet(name)
-    cols=['Pos','Grupo' if isS else 'ID','Descripción','Cant. / puente','Unidad','USD unit.','Subtotal USD','Tipo de origen','Proveedor o criterio','Carpeta de origen','Fecha del precio','ID']
-    head(w,1,cols,[6,10,44,10,8,11,13,13,48,26,13,6])
+    cols=['Pos','Grupo' if isS else 'ID','Descripción','Cant. / puente','Unidad','USD unit. (a la fecha del precio)','Subtotal USD (sin ajuste)','Tipo de origen','Proveedor o criterio','Carpeta de origen','Fecha del precio','ID','Meses hasta hoy','Factor inflación ('+('costo local USD' if isS else 'CPI EE.UU.')+')','USD unit. ajustado','Subtotal USD ajustado']
+    head(w,1,cols,[6,10,44,10,8,13,13,13,48,26,12,6,9,10,12,13])
+    col=4 if isS else 5
     for i,r in enumerate(data,2):
         g=('MO' if r['id'] in grp else 'Servicio') if isS else r['id']
-        vals=[r['pos'],g,r['descripcion'],float(r['cant_por_puente']),r['unidad'],float(r['precio_unit_usd']),f'=D{i}*F{i}',r['tipo_origen'],r['proveedor_o_criterio'],r['carpeta_origen'],r['fecha_precio'],r['id']]
+        vals=[r['pos'],g,r['descripcion'],float(r['cant_por_puente']),r['unidad'],float(r['precio_unit_usd']),f'=D{i}*F{i}',r['tipo_origen'],r['proveedor_o_criterio'],r['carpeta_origen'],fecha(r['fecha_precio']),r['id'],
+              f'=MAX(0,(Cotización!$H$7-K{i})/30.4375)',f'=IF(Cotización!$H$6=1,VLOOKUP(Cotización!$H$7,{RNG},{col},1)/VLOOKUP(K{i},{RNG},{col},1),1)',f'=F{i}*N{i}',f'=D{i}*O{i}']
         for j,v in enumerate(vals,1):
             c=w.cell(i,j,v); c.border=B
             if j in(4,6): c.fill=INP
-            if j in(6,7): c.number_format=USD
+            if j in(6,7,15,16): c.number_format=USD
+            if j==11: c.number_format='dd/mm/yyyy'
+            if j==13: c.number_format='0.0'
+            if j==14: c.number_format='0.000'
         w.cell(i,8).fill=PatternFill('solid',fgColor=TF.get(r['tipo_origen'],'FFFFFF'))
     n=len(data)+2
     w.cell(n,3,'Subtotal por puente').font=Font(bold=True)
     c=w.cell(n,7,f'=SUM(G2:G{n-1})'); c.font=Font(bold=True); c.number_format=USD
-    for j in range(1,13): w.cell(n,j).fill=TOT
-    w.auto_filter.ref=f'A1:L{n-1}'
+    c=w.cell(n,16,f'=SUM(P2:P{n-1})'); c.font=Font(bold=True); c.number_format=USD
+    for j in range(1,17): w.cell(n,j).fill=TOT
+    w.auto_filter.ref=f'A1:P{n-1}'
     return w
 detalle('Materiales',mat,False)
 w=detalle('MO y servicios',srv,True)
@@ -91,6 +120,20 @@ for k,t in enumerate(['Alternativas: Pos 7 retención Danco ~USD 240 WOG3000, si
  'Pos 13: Duralitte USD 280 (APSA/9, feb-2026). Pos 21: extensible S3000 USD 220 (OE 150-22, 2022).',
  'Pos 14: 1,9 m por puente; 14b es el sobrante de la tira de 12 m. Precio de caño tricapa PE; el pedido es PP o cinta Canusa (Workene, sin precio). Pos 20: con el manómetro de stock (1/4") + buje sería desvío.']):
     m.cell(base+k,3,t).font=Font(italic=True,color='5D6B75')
+
+# --- índices
+x=wb.create_sheet('Índices')
+head(x,1,['Mes','IPC Argentina (oct-24=100)','Dólar BNA vendedor','Costo local en USD (IPC/dólar, oct-24=100)','CPI EE.UU. (oct-24=100)','Origen IPC','Origen dólar','Origen CPI'],[11,13,12,16,12,40,40,40])
+for i,r in enumerate(IDX,2):
+    y,m,_=map(int,r['mes'].split('-'))
+    for j,v in enumerate([date(y,m,1),float(r['ipc_argentina']),float(r['dolar_bna']),float(r['indice_local_usd']),float(r['cpi_eeuu']),r['origen_ipc'],r['origen_dolar'],r['origen_cpi']],1):
+        c=x.cell(i,j,v); c.border=B
+        if j==1: c.number_format='mm/yyyy'
+        if j in(2,4,5): c.number_format='0.00'
+        if j==3: c.number_format='#,##0.00'
+        if j>=6 and str(v).startswith('dato'): c.font=Font(color='2C7A4B')
+        if j>=6 and 'ESTIMADO' in str(v) or 'APROXIMADO' in str(v): c.font=Font(color='A3392F')
+x.cell(NI+2,1,'Generado con herramientas/indices_inflacion.py. Verde: dato publicado. Rojo: estimado o aproximado. El resto, interpolado entre datos.').font=Font(italic=True,color='5D6B75')
 
 # --- desvíos
 d=wb.create_sheet('Desvíos'); head(d,1,['Pos','Pedido','Ofrecido / criterio'],[16,50,70])

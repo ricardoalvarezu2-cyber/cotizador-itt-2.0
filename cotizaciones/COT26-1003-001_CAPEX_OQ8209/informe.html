@@ -156,6 +156,7 @@ ol.lista,ul.lista{margin:0;padding-left:20px;display:flex;flex-direction:column;
     <li><b>Junta monolítica:</b> pasa de USD 280 (feb-2026) a <b>315</b>, el precio más reciente de Duralitte (may-2026).</li>
     <li><b>Retención Danco:</b> el precio está en un WhatsApp de jun-2026: <b>unos USD 240, sin confirmar</b>, para WOG3000 (no S600). Queda como alternativa, no como precio de base.</li>
     <li><b>Factores:</b> ahora son dos: materiales, y mano de obra y servicios. Los dos van en 1,35 como en la PRES 24879, donde la MO de Ledesma dentro del puente entró a 1,35. El 1,40 quedaba para MO vendida sola.</li>
+    <li><b>Ajuste por inflación (27/10):</b> cada precio se actualiza desde su fecha hasta hoy. Los materiales siguen el CPI de EE.UU. y la mano de obra y los servicios, el IPC del INDEC dividido por el dólar BNA. Suma +3,3% al costo.</li>
     <li><b>Revisión contra el plano (27/10):</b> el caño 14 pasa a 1,9 m más el sobrante de la tira en una fila aparte. El manómetro tiene que tener conexión 1/2" (el de stock es 1/4"). Se suman las 2 soldaduras de las cuplas 23. Se completaron extremos y materiales de cada posición.</li>
     <li><b>Accesorios forjados:</b> ahora salen de la lista Renard (dic-2025), con su código. En el borrador estaban estimados.</li>
   </ul>
@@ -194,6 +195,7 @@ ol.lista,ul.lista{margin:0;padding-left:20px;display:flex;flex-direction:column;
     <div class="param"><label for="pFM">Factor de materiales</label><input type="number" id="pFM" step="0.01"><small>Materiales y contingencia. ITT 1,35 · ganadas 2026: 1,28–1,35</small></div>
     <div class="param"><label for="pFMO">Factor de mano de obra y servicios</label><input type="number" id="pFMO" step="0.01"><small>Armado, soldadura, PH, pintura, calidad. 1,35 como en la PRES 24879; 1,40 si es MO sola</small></div>
     <div class="param"><label for="pCont">Contingencia materiales %</label><input type="number" id="pCont" step="1"><small>Cubre niples y precios estimados</small></div>
+    <div class="param"><label for="pAj">Ajuste por inflación</label><select id="pAj"><option value="1">Aplicado hasta hoy (oct-2026)</option><option value="0">Sin ajuste</option></select><small>Materiales: CPI EE.UU. · MO y servicios: IPC INDEC ÷ dólar BNA</small></div>
     <div class="param"><label for="pTrans">Flete a Comodoro</label><select id="pTrans"><option value="0">No incluido (EXW)</option><option value="1">Incluido en la oferta</option></select><small>Ver sección Transporte</small></div>
     <div class="param"><label for="pTC">Tipo de cambio ARS/USD</label><input type="number" id="pTC" step="1"><small>Supuesto. Cargar el BNA vendedor del día</small></div>
   </div>
@@ -210,21 +212,33 @@ ol.lista,ul.lista{margin:0;padding-left:20px;display:flex;flex-direction:column;
     <span><span class="chip c-est">Estimado</span> sin fuente</span>
   </div>
   <div class="tbl"><table class="mat-tbl" id="tMat">
-    <thead><tr><th>Pos</th><th>Descripción</th><th class="n">Cant.</th><th class="n">USD unit.</th><th class="n">Subtotal</th><th>Tipo</th><th>Origen del precio</th></tr></thead>
+    <thead><tr><th>Pos</th><th>Descripción</th><th class="n">Cant.</th><th class="n">USD unit.</th><th class="n">Subtotal a la fecha del precio</th><th class="n">Ajuste inflación</th><th class="n">Subtotal ajustado a hoy</th><th>Tipo</th><th>Origen del precio</th></tr></thead>
     <tbody></tbody>
-    <tfoot><tr><td></td><td colspan="3">Subtotal materiales por puente</td><td class="n" id="fMat"></td><td colspan="2"></td></tr>
-    <tr><td></td><td colspan="3" id="fContL">Contingencia</td><td class="n" id="fCont"></td><td colspan="2" class="small muted">sobre materiales</td></tr></tfoot>
+    <tfoot><tr><td></td><td colspan="3">Subtotal materiales por puente</td><td class="n" id="fMat0"></td><td></td><td class="n" id="fMat"></td><td colspan="2"></td></tr>
+    <tr><td></td><td colspan="3" id="fContL">Contingencia</td><td></td><td></td><td class="n" id="fCont"></td><td colspan="2" class="small muted">sobre materiales ajustados</td></tr></tfoot>
   </table></div>
 </section>
 
 <section>
   <div class="sec-head"><h2>Mano de obra, procesos e insumos por puente</h2><span class="eyebrow">armado · soldadura · PH · pintura</span></div>
   <div class="tbl"><table class="mat-tbl" id="tServ">
-    <thead><tr><th>Ítem</th><th>Descripción</th><th class="n">Cant.</th><th class="n">USD unit.</th><th class="n">Subtotal</th><th>Tipo</th><th>Origen y criterio</th></tr></thead>
+    <thead><tr><th>Ítem</th><th>Descripción</th><th class="n">Cant.</th><th class="n">USD unit.</th><th class="n">Subtotal a la fecha del precio</th><th class="n">Ajuste inflación</th><th class="n">Subtotal ajustado a hoy</th><th>Tipo</th><th>Origen y criterio</th></tr></thead>
     <tbody></tbody>
-    <tfoot><tr><td></td><td colspan="3">Subtotal mano de obra y servicios</td><td class="n" id="fServ"></td><td colspan="2"></td></tr></tfoot>
+    <tfoot><tr><td></td><td colspan="3">Subtotal mano de obra y servicios</td><td class="n" id="fServ0"></td><td></td><td class="n" id="fServ"></td><td colspan="2"></td></tr></tfoot>
   </table></div>
   <p class="small muted">No se incluyen soportes ni estructura porque no figuran en la lista de materiales del plano. No se pidió radiografía. Soldaduras de taller: 4 a tope (niple 12–junta 13, junta–caño 14, caño–codo 15, codo–reducción 16) y 2 cuplas 1/2" (pos 23) sobre niples. Los extremos BW de los niples 22 y 25 y la punta 2½" de la reducción 16 quedan biselados para soldar en campo.</p>
+</section>
+
+<section>
+  <div class="sec-head"><h2>Ajuste por inflación</h2><span class="eyebrow">desde la fecha de cada precio hasta oct-2026</span></div>
+  <div class="bloque small">
+    <p>Cada precio se lleva a hoy con un índice mensual, según el mes de su fecha: <b>factor = índice de oct-2026 / índice del mes del precio</b>. Los precios estimados o editados hoy no se ajustan. Los índices están en <span class="mono">conocimiento/costos/indices_ajuste.csv</span> (hoja Índices de la planilla).</p>
+    <ul class="lista">
+      <li><b>Materiales:</b> CPI de EE.UU., porque los precios ya están en dólares. Últimos 12 meses: 3,7% (BLS, sep-2026).</li>
+      <li><b>Mano de obra y servicios:</b> costo local medido en dólares = IPC del INDEC ÷ dólar BNA vendedor. En los últimos 12 meses el IPC subió 33,4% y el dólar 5,1% ($1.475 → $1.550), así que el costo local en dólares subió <b>26,4%</b>. Entre oct-2024 y oct-2025 había bajado 10%, porque el dólar subió más que la inflación. Por eso se usa un índice mensual y no una tasa fija.</li>
+      <li>Hay meses interpolados entre datos publicados. Octubre 2026 está estimado con la inflación de septiembre (1,9%) porque el INDEC todavía no lo publicó.</li>
+    </ul>
+  </div>
 </section>
 
 <section>
@@ -337,7 +351,12 @@ ol.lista,ul.lista{margin:0;padding-left:20px;display:flex;flex-direction:column;
 
 <script>
 (function(){
-const ORIG_PARAMS={N:2,FM:1.35,FMO:1.35,CONT:5,TRANS:0,TC:1450,TR_ARS:3500000,TR_EMB:40,TR_F:1.0};
+// Índices mensuales (conocimiento/costos/indices_ajuste.csv): [mes, costo local en USD (IPC/dólar BNA), CPI EE.UU.]
+const IDX=[["2024-07", 94.637, 99.303], ["2024-08", 96.392, 99.535], ["2024-09", 98.179, 99.767], ["2024-10", 100.0, 100.0], ["2024-11", 99.13, 100.247], ["2024-12", 98.267, 100.494], ["2025-01", 97.411, 100.742], ["2025-02", 96.563, 100.99], ["2025-03", 95.723, 101.239], ["2025-04", 94.89, 101.489], ["2025-05", 94.064, 101.739], ["2025-06", 93.245, 101.99], ["2025-07", 92.433, 102.242], ["2025-08", 91.629, 102.494], ["2025-09", 90.831, 102.747], ["2025-10", 90.041, 103.058], ["2025-11", 92.324, 103.371], ["2025-12", 94.665, 103.684], ["2026-01", 98.113, 103.998], ["2026-02", 101.686, 104.314], ["2026-03", 105.39, 104.63], ["2026-04", 106.632, 104.947], ["2026-05", 107.888, 105.266], ["2026-06", 109.159, 105.585], ["2026-07", 110.445, 105.905], ["2026-08", 111.747, 106.226], ["2026-09", 113.063, 106.548], ["2026-10", 113.855, 106.871]];
+const FREF='2026-10';
+function fac(x){if(!st.p.AJ)return 1;const s=srcOf(x);let m=(s.fecha||'').slice(0,7);if(m<IDX[0][0])m=IDX[0][0];if(m>FREF)m=FREF;
+  const col=SERV.includes(x)?1:2;const at=k=>{let v=IDX[0];for(const r of IDX){if(r[0]<=k)v=r}return v[col]};return at(FREF)/at(m)}
+const ORIG_PARAMS={N:2,FM:1.35,FMO:1.35,CONT:5,AJ:1,TRANS:0,TC:1450,TR_ARS:3500000,TR_EMB:40,TR_F:1.0};
 // tipo: cot | lista | stock | ant | est
 function S(tipo,precio,who,from,fecha){return {tipo,precio,who,from,fecha}}
 const MAT=[
@@ -372,7 +391,7 @@ const SERV=[
  {id:'S01',pos:'MO',grp:'mo',d:'Armado roscado del puente (tercero)',sp:'MO, herramientas, consumibles, ART',cant:1,un:'gl',src:[S('cot',400,'Ledesma: "mano de obra armando" puente convencional','TAVAL/55 · PRES 24879','2026-04-22'),S('cot',380,'J. Quesada JQ-016-2026: armado y sellado (sellador lo pone ITT), 3 días','TAVAL/51 · CGC puentes S2000','2026-04-07'),S('cot',1800,'Ledesma ppto 20099: cuadro CBM con corte de caño. ITT pone materiales y roscas','TAVAL/26 · CAPSA OQ32673 puente AIB','2025-09-24'),S('ant',550,'Mano de obra en planilla OE 150-22','APSA/3 · OE 150-22','2022-08-25')]},
  {id:'S02',pos:'MO',grp:'mo',d:'Soldaduras: 4 a tope 2" sch80 + 2 cuplas 1/2"',sp:'4 × 2" × 1,417 = 11,34 (juntas 12–13, 13–14, 14–15, 15–16) + 2 cuplas × 0,5" × 1,75 = 1,75 → 13,09 pulg-diám-eq',cant:13.09,un:'pulg',src:[S('cot',19.73,'Costo propio de planta: soldador 61,16 USD/hh a 3,1 pulg/h','Costo MO de ITT oct-2024','2024-10-31'),S('cot',16.31,'Ledesma por pulgada-diámetro (más IVA)','Costo MO de ITT oct-2024','2024-09-30')]},
  {id:'S03',pos:'INS',grp:'serv',d:'Sellador de roscas',sp:'Solo si arma Quesada o lo pide el taller',cant:1,un:'gl',src:[S('est',15,'Estimado','—','2026-10-27')]},
- {id:'S04',pos:'PH',grp:'serv',d:'Prueba hidráulica 15 kg/cm² con registro',sp:'6 hh de planta + carta registradora',cant:1,un:'gl',src:[S('est',100,'Estimado: 6 hh × 13 USD/hh (tarifa de planta 2024) + registro','Planilla base de cotizaciones','2024-01-01')]},
+ {id:'S04',pos:'PH',grp:'serv',d:'Prueba hidráulica 15 kg/cm² con registro',sp:'6 hh de planta + carta registradora',cant:1,un:'gl',src:[S('est',100,'Estimado: 6 hh × 13 USD/hh (tarifa de planta 2024) + registro','Planilla base de cotizaciones','2024-07-01')]},
  {id:'S05',pos:'PIN',grp:'serv',d:'Granallado y pintura esmalte sintético color cedro',sp:'Válvulas sin pintar (color de proveedor)',cant:1,un:'gl',src:[S('ant',100,'Valor usado en PRES 24879 (incluye consumibles)','TAVAL/55 · PRES 24879','2026-04-22'),S('ant',450,'Pintura en planilla OE 150-22','APSA/3 · OE 150-22','2022-08-25')]},
  {id:'S06',pos:'CAL',grp:'serv',d:'Ingeniería, calidad y dossier',sp:'Registro de PH, certificados de materiales, inspección final',cant:1,un:'gl',src:[S('est',100,'Estimado','—','2026-10-27')]}
 ];
@@ -399,6 +418,8 @@ function rowHTML(x){
   <td class="inp q"><input type="number" step="any" min="0" id="q_${x.id}" data-id="${x.id}" data-k="cant" value="${r.cant}" class="${qEd?'edit':''}" aria-label="Cantidad ${esc(x.pos)}"><div class="sp" style="text-align:right">${x.un}</div></td>
   <td class="inp"><input type="number" step="any" min="0" id="p_${x.id}" data-id="${x.id}" data-k="precio" value="${r.precio}" class="${pEd?'edit':''}" aria-label="Precio ${esc(x.pos)}"></td>
   <td class="n" id="s_${x.id}">${fmt(r.cant*r.precio)}</td>
+  <td class="n" id="f_${x.id}">×${fmt(fac(x),3)}</td>
+  <td class="n" id="a_${x.id}">${fmt(r.cant*r.precio*fac(x))}</td>
   <td><span class="chip ${t[1]}">${t[0]}</span></td>
   <td class="src"><div class="who">${esc(s.who)}</div><div class="from">${esc(s.from)} · ${dmy(s.fecha)}</div>${manNote}${alt}</td></tr>`
 }
@@ -408,34 +429,38 @@ function renderTables(){
 }
 function calc(){
   const p=st.p;
-  const mat=MAT.reduce((a,x)=>a+st.rows[x.id].cant*st.rows[x.id].precio,0);
+  const mat0=MAT.reduce((a,x)=>a+st.rows[x.id].cant*st.rows[x.id].precio,0);
+  const mat=MAT.reduce((a,x)=>a+st.rows[x.id].cant*st.rows[x.id].precio*fac(x),0);
+  const serv0=SERV.reduce((a,x)=>a+st.rows[x.id].cant*st.rows[x.id].precio,0);
   const cont=mat*p.CONT/100;
-  let mo=0,serv=0;SERV.forEach(x=>{const v=st.rows[x.id].cant*st.rows[x.id].precio;if(x.grp==='mo')mo+=v;else serv+=v});
+  let mo=0,serv=0;SERV.forEach(x=>{const v=st.rows[x.id].cant*st.rows[x.id].precio*fac(x);if(x.grp==='mo')mo+=v;else serv+=v});
   const costo=mat+cont+mo+serv;
-  const precio=(mat+cont)*p.FM+(mo+serv)*p.FMO;
+  const precio=Math.round(((mat+cont)*p.FM+(mo+serv)*p.FMO)*100)/100;  // unitario redondeado, como en la planilla
+  const costo0=mat0*(1+p.CONT/100)+serv0;
   const trCosto=p.TR_ARS/p.TC+p.TR_EMB;
   const trPrecio=trCosto*p.TR_F;
   const total=precio*p.N+(p.TRANS?trPrecio:0);
-  return {mat,cont,mo,serv,costo,precio,trCosto,trPrecio,total}
+  return {mat,mat0,serv0,cont,mo,serv,costo,costo0,precio,trCosto,trPrecio,total}
 }
 function renderNums(){
   const c=calc(),p=st.p;
-  MAT.concat(SERV).forEach(x=>{const r=st.rows[x.id];const e=$('s_'+x.id);if(e)e.textContent=fmt(r.cant*r.precio)});
+  MAT.concat(SERV).forEach(x=>{const r=st.rows[x.id];const e=$('s_'+x.id);if(e){e.textContent=fmt(r.cant*r.precio);$('f_'+x.id).textContent='×'+fmt(fac(x),3);$('a_'+x.id).textContent=fmt(r.cant*r.precio*fac(x))}});
+  $('fMat0').textContent=fmt(c.mat0);$('fServ0').textContent=fmt(c.serv0);
   $('fMat').textContent=fmt(c.mat);$('fContL').textContent=`Contingencia ${fmt(p.CONT,0)}%`;$('fCont').textContent=fmt(c.cont);
   $('fServ').textContent=fmt(c.mo+c.serv);
   $('tCosto').textContent=usd(c.costo);$('tCostoS').textContent=`materiales ${fmt(c.mat+c.cont,0)} · MO y servicios ${fmt(c.mo+c.serv,0)}`;
   $('tPrecio').textContent=usd(c.precio);$('tPrecioS').textContent=`factor efectivo ${fmt(c.precio/c.costo)} · margen ${fmt((1-c.costo/c.precio)*100,1)}%`;
   $('tTotal').textContent=usd(c.total);$('tTotalS').textContent=`${p.N} puentes${p.TRANS?' + flete':''} · más IVA 21%`;
-  const rows=[['Materiales',c.mat,p.FM],[`Contingencia ${fmt(p.CONT,0)}%`,c.cont,p.FM],['Mano de obra (armado y soldadura)',c.mo,p.FMO],['Servicios e insumos (PH, pintura, calidad, sellador)',c.serv,p.FMO]];
+  const rows=[[p.AJ?'Materiales (ajustados por inflación)':'Materiales',c.mat,p.FM],[`Contingencia ${fmt(p.CONT,0)}%`,c.cont,p.FM],['Mano de obra (armado y soldadura)',c.mo,p.FMO],['Servicios e insumos (PH, pintura, calidad, sellador)',c.serv,p.FMO]];
   document.querySelector('#tRes tbody').innerHTML=rows.map(r=>`<tr><td>${r[0]}</td><td class="n">${fmt(r[1])}</td><td class="n">${fmt(r[2])}</td><td class="n">${fmt(r[1]*r[2])}</td><td class="n">${fmt(r[1]*r[2]*p.N)}</td></tr>`).join('')+
    (p.TRANS?`<tr><td>Flete a Comodoro + embalaje (por envío)</td><td class="n">—</td><td class="n">${fmt(p.TR_F)}</td><td class="n">—</td><td class="n">${fmt(c.trPrecio)}</td></tr>`:'');
-  document.querySelector('#tRes tfoot').innerHTML=`<tr><td>Total sin IVA</td><td class="n">${fmt(c.costo)}</td><td class="n">${fmt(c.precio/c.costo)}</td><td class="n">${fmt(c.precio)}</td><td class="n">${fmt(c.total)}</td></tr><tr><td class="small muted" colspan="5" style="font-weight:400">IVA 21%: USD ${fmt(c.total*0.21)} · Total con IVA: USD ${fmt(c.total*1.21)}</td></tr>`;
+  document.querySelector('#tRes tfoot').innerHTML=`<tr><td>Total sin IVA</td><td class="n">${fmt(c.costo)}</td><td class="n">${fmt(c.precio/c.costo)}</td><td class="n">${fmt(c.precio)}</td><td class="n">${fmt(c.total)}</td></tr><tr><td class="small muted" colspan="5" style="font-weight:400">${p.AJ?`Costo sin ajuste por inflación: USD ${fmt(c.costo0)} · ajuste incluido: USD ${fmt(c.costo-c.costo0)} (+${fmt((c.costo/c.costo0-1)*100,1)}%) · `:'Sin ajuste por inflación · '}IVA 21%: USD ${fmt(c.total*0.21)} · Total con IVA: USD ${fmt(c.total*1.21)}</td></tr>`;
   $('trTxt').innerHTML=`Flete ${fmt(p.TR_ARS,0)} ARS ÷ ${fmt(p.TC,0)} = <b class="mono">USD ${fmt(p.TR_ARS/p.TC)}</b> + embalaje ${fmt(p.TR_EMB)} = <b class="mono">USD ${fmt(c.trCosto)}</b> por envío. ${p.TRANS?'Está incluido en el total.':'No está incluido en el total (EXW).'}`;
 }
 function bindParams(){
-  const map={pN:'N',pFM:'FM',pFMO:'FMO',pCont:'CONT',pTrans:'TRANS',pTC:'TC',trArs:'TR_ARS',trEmb:'TR_EMB',trF:'TR_F'};
+  const map={pN:'N',pFM:'FM',pFMO:'FMO',pCont:'CONT',pAj:'AJ',pTrans:'TRANS',pTC:'TC',trArs:'TR_ARS',trEmb:'TR_EMB',trF:'TR_F'};
   Object.entries(map).forEach(([id,k])=>{const e=$(id);e.value=st.p[k];e.classList.toggle('edit',st.p[k]!==ORIG_PARAMS[k]&&e.tagName==='INPUT');
-    e.oninput=()=>{const v=parseFloat(e.value);if(!isNaN(v)){st.p[k]=v;e.classList.toggle('edit',v!==ORIG_PARAMS[k]&&e.tagName==='INPUT');save();renderNums()}}});
+    e.oninput=()=>{const v=parseFloat(e.value);if(!isNaN(v)){st.p[k]=v;e.classList.toggle('edit',v!==ORIG_PARAMS[k]&&e.tagName==='INPUT');save();if(k==='AJ')renderTables();renderNums()}}});
 }
 function find(id){return MAT.concat(SERV).find(x=>x.id===id)}
 document.addEventListener('input',ev=>{const t=ev.target;if(!t.dataset||!t.dataset.k)return;const x=find(t.dataset.id),r=st.rows[t.dataset.id];const v=parseFloat(t.value);if(isNaN(v))return;
@@ -450,12 +475,12 @@ document.addEventListener('change',ev=>{const t=ev.target;if(t.dataset&&t.datase
  $('gantt').innerHTML=tasks.map(t=>`<div class="g-row"><span>${t[0]}</span><div class="g-track"><div class="g-bar ${t[3]}" style="left:${t[1]/M*100}%;width:${(t[2]-t[1])/M*100}%" title="días ${t[1]}–${t[2]}"></div></div></div>`).join('')+`<div class="g-axis"><span></span><div class="ticks"><span>0</span><span>15</span><span>30</span><span>45</span><span>60</span></div></div>`})();
 
 // CSV
-const COLS=['id','seccion','pos','descripcion','especificacion','cantidad_por_puente','unidad','precio_unit_usd','subtotal_usd','tipo_origen','proveedor_o_criterio','carpeta_origen','fecha_precio'];
+const COLS=['id','seccion','pos','descripcion','especificacion','cantidad_por_puente','unidad','precio_unit_usd','subtotal_usd','tipo_origen','proveedor_o_criterio','carpeta_origen','fecha_precio','factor_inflacion','subtotal_ajustado_usd'];
 function csvCell(v){v=v==null?'':String(v);return /[;"\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v}
 const dec=n=>String(Math.round(n*10000)/10000).replace('.',',');
 function buildCSV(sep){const lines=[COLS.join(sep)];
   [['Materiales',MAT],['MO y servicios',SERV]].forEach(([sec,arr])=>arr.forEach(x=>{const r=st.rows[x.id],s=srcOf(x);
-    lines.push([x.id,sec,x.pos,x.d,x.sp,dec(r.cant),x.un,dec(r.precio),dec(r.cant*r.precio),(r.man?TIPO.man:TIPO[s.tipo])[0],s.who,s.from,s.fecha].map(v=>sep===';'?csvCell(v):String(v).replace(/\t|\n/g,' ')).join(sep))}));
+    lines.push([x.id,sec,x.pos,x.d,x.sp,dec(r.cant),x.un,dec(r.precio),dec(r.cant*r.precio),(r.man?TIPO.man:TIPO[s.tipo])[0],s.who,s.from,s.fecha,dec(fac(x)),dec(r.cant*r.precio*fac(x))].map(v=>sep===';'?csvCell(v):String(v).replace(/\t|\n/g,' ')).join(sep))}));
   return lines.join('\r\n')}
 const msg=t=>{$('msg').textContent=t};
 let dl=null;(async()=>{try{dl=await(window.claude&&window.claude.use?window.claude.use('downloads'):null)}catch(e){dl=null}})();

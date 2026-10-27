@@ -20,6 +20,7 @@ Todo lo que se necesita para cotizar, en un solo lugar y con una sola versión v
 | Archivo | Contenido |
 |---|---|
 | [`costos/tarifas.csv`](costos/tarifas.csv) | MO, END, pintura y acero en USD, con tipo (costo propio, tercero o usado al cotizar), fecha, fuente y vigencia. **Se mantiene a mano** |
+| `costos/indices_ajuste.csv` | Índices mensuales para ajustar precios por inflación: costo local en USD (IPC INDEC ÷ dólar BNA) y CPI de EE.UU., con fuente de cada dato. Se arma con `herramientas/indices_inflacion.py` |
 | `costos/costo_hora_planta.csv` | Costo de mano de obra propia por centro de costo (oct-2024): personas, sueldos, indirectos y costo hora |
 | `costos/sueldos_2024-10.csv` | Sueldos y cargas sociales por centro de costo (oct-2024), base del costo hora |
 | `precios/indice_precios.csv` | **Índice único de 2.680 precios**, del más reciente al más viejo: cotizaciones de proveedores 2026, base de componentes 2025, lista Renard dic-2025 y stock 2024 |
