@@ -18,6 +18,7 @@ Salida:
 Controles (procedimiento P7 y P9): recalcula el precio en Python y lo compara con la planilla recalculada
 con LibreOffice; corre verificar_computo.py. Si algo no coincide, termina con error.
 """
+import base64
 import csv
 import hashlib
 import html
@@ -87,11 +88,12 @@ def escribir_computo(cfg, carpeta):
     with open(carpeta / "computo.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["id", "pos", "descripcion", "cant_por_puente", "unidad", "precio_unit_usd", "subtotal_usd",
-                    "tipo_origen", "proveedor_o_criterio", "carpeta_origen", "fecha_precio"])
+                    "tipo_origen", "proveedor_o_criterio", "carpeta_origen", "fecha_precio", "coincidencia", "diferencia"])
         for it in cfg["items"]:
             s = it["fuentes"][0]
             w.writerow([it["id"], it["pos"], it["descripcion"], f"{it['cantidad']:g}", it["unidad"], f"{s['precio']:g}",
-                        f"{it['cantidad'] * s['precio']:.2f}", TIPOS[s["tipo"]], s["proveedor"], s["origen"], s["fecha"]])
+                        f"{it['cantidad'] * s['precio']:.2f}", TIPOS[s["tipo"]], s["proveedor"], s["origen"], s["fecha"],
+                        s.get("coincide", ""), s.get("diferencia", "")])
 
 
 # ---------------------------------------------------------------- planilla
@@ -178,8 +180,9 @@ def escribir_planilla(cfg, carpeta, idx_rows):
         head(w, ["Pos", "Grupo" if es_srv else "ID", "Descripción", f"Cant. / {eq['singular']}", "Unidad",
                  "USD unit. (a la fecha del precio)", "Subtotal USD (sin ajuste)", "Tipo de origen", "Proveedor o criterio",
                  "Carpeta de origen", "Fecha del precio", "ID", "Meses hasta hoy",
-                 "Factor inflación (" + ("costo local USD" if es_srv else "CPI EE.UU.") + ")", "USD unit. ajustado", "Subtotal USD ajustado"],
-             [6, 10, 44, 10, 8, 13, 13, 13, 48, 26, 12, 6, 9, 10, 12, 13])
+                 "Factor inflación (" + ("costo local USD" if es_srv else "CPI EE.UU.") + ")", "USD unit. ajustado", "Subtotal USD ajustado",
+                 "Coincidencia con el plano", "Diferencia con lo pedido"],
+             [6, 10, 44, 10, 8, 13, 13, 13, 48, 26, 12, 6, 9, 10, 12, 13, 13, 50])
         col = 4 if es_srv else 5
         for i, it in enumerate(items, 2):
             s = it["fuentes"][0]
@@ -187,7 +190,8 @@ def escribir_planilla(cfg, carpeta, idx_rows):
             vals = [it["pos"], g, it["descripcion"], it["cantidad"], it["unidad"], s["precio"], f"=D{i}*F{i}", TIPOS[s["tipo"]],
                     s["proveedor"], s["origen"], fecha(s["fecha"]), it["id"], f"=MAX(0,(Cotización!$H$7-K{i})/30.4375)",
                     f"=IF(Cotización!$H$6=1,VLOOKUP(Cotización!$H$7,{RNG},{col},1)/VLOOKUP(MAX(K{i},Índices!$A$2),{RNG},{col},1),1)",
-                    f"=F{i}*N{i}", f"=D{i}*O{i}"]
+                    f"=F{i}*N{i}", f"=D{i}*O{i}", {"igual": "Igual", "similar": "Similar", "sin_ref": "Sin referencia"}.get(s.get("coincide"), ""),
+                    s.get("diferencia", "")]
             for j, v in enumerate(vals, 1):
                 c = w.cell(i, j, v); c.border = B
                 if j in (4, 6):
@@ -196,13 +200,15 @@ def escribir_planilla(cfg, carpeta, idx_rows):
                     c.number_format = USD
                 c.number_format = {11: "dd/mm/yyyy", 13: "0.0", 14: "0.000"}.get(j, c.number_format)
             w.cell(i, 8).fill = PatternFill("solid", fgColor=TF[s["tipo"]])
+            w.cell(i, 17).fill = PatternFill("solid", fgColor={"igual": "DDF1E4", "similar": "FBEFD6", "sin_ref": "F8E1DE"}.get(s.get("coincide"), "FFFFFF"))
+            w.cell(i, 18).alignment = Alignment(wrap_text=True, vertical="top")
         n = len(items) + 2
         w.cell(n, 3, f"Subtotal por {eq['singular']}").font = Font(bold=True)
         for col_, letra in ((7, "G"), (16, "P")):
             c = w.cell(n, col_, f"=SUM({letra}2:{letra}{n - 1})"); c.font = Font(bold=True); c.number_format = USD
-        for j in range(1, 17):
+        for j in range(1, 19):
             w.cell(n, j).fill = TOT
-        w.auto_filter.ref = f"A1:P{n - 1}"
+        w.auto_filter.ref = f"A1:R{n - 1}"
         k = n + 2
         for it in items:
             for a in it["fuentes"][1:]:
@@ -251,7 +257,7 @@ def leer_planilla(ruta):
 
 
 # ---------------------------------------------------------------- informe
-def escribir_informe(cfg, carpeta, idx):
+def escribir_informe(cfg, carpeta, idx, adjuntos):
     p, eq, e = cfg["parametros"], cfg["equipo"], html.escape
     fref = p["fecha_referencia"][:7]
     y, m = map(int, fref.split("-"))
@@ -264,7 +270,8 @@ def escribir_informe(cfg, carpeta, idx):
 
     def js(it):
         o = {"id": it["id"], "pos": it["pos"], "d": it["descripcion"], "sp": it["especificacion"], "cant": it["cantidad"], "un": it["unidad"],
-             "src": [{"tipo": s["tipo"], "precio": s["precio"], "who": s["proveedor"], "from": s["origen"], "fecha": s["fecha"]} for s in it["fuentes"]]}
+             "src": [{"tipo": s["tipo"], "precio": s["precio"], "who": s["proveedor"], "from": s["origen"], "fecha": s["fecha"],
+                     "co": s.get("coincide", ""), "dif": s.get("diferencia", "")} for s in it["fuentes"]]}
         if it["grupo"] != "material":
             o["grp"] = "mo" if it["grupo"] == "mo" else "serv"
         return o
@@ -312,7 +319,8 @@ def escribir_informe(cfg, carpeta, idx):
            "FLETE_CRITERIO": cfg["flete"]["criterio_html"], "N_POS": str(len({i["pos"] for i in cfg["items"] if i["grupo"] == "material" and i["pos"].isdigit()})),
            "NOTA_MO": cfg.get("nota_mo_html", ""), "DESVIOS": desv, "ANTECEDENTES": ante, "PENDIENTES": pend, "PIE": cfg.get("pie", ""),
            "IDX_JSON": json.dumps([list(r) for r in idx]), "PARAMS_JSON": json.dumps(params), "MAT_JSON": json.dumps(mat, ensure_ascii=False),
-           "SERV_JSON": json.dumps(srv, ensure_ascii=False), "KEY": f"{cfg['codigo'].lower()}:{huella}", "CODIGO": cfg["codigo"]}
+           "SERV_JSON": json.dumps(srv, ensure_ascii=False), "XLSX_PRES": f"{cfg['codigo']}_{cfg['archivo_planilla']}.xlsx",
+           "XLSX_COMPRAS": f"{cfg['codigo']}_pedido_materiales_compras.xlsx", "XLSX_JSON": json.dumps(adjuntos), "KEY": f"{cfg['codigo'].lower()}:{huella}", "CODIGO": cfg["codigo"]}
     t = PLANTILLA_INFORME.read_text(encoding="utf-8")
     for k, v in rep.items():
         t = t.replace("{{" + k + "}}", v)
@@ -326,23 +334,29 @@ def escribir_informe(cfg, carpeta, idx):
 def main(carpeta):
     carpeta = Path(carpeta)
     cfg = json.load(open(carpeta / "cotizacion.json", encoding="utf-8"))
+    faltan = [it["id"] for it in cfg["items"] if it["fuentes"][0].get("coincide") not in ("igual", "similar", "sin_ref")
+              or (it["fuentes"][0].get("coincide") == "similar" and not it["fuentes"][0].get("diferencia"))]
+    if faltan:
+        sys.exit(f"ERROR: falta indicar si el precio de base es de una pieza igual o similar a la del plano (y en qué difiere): {faltan}")
     idx_rows = list(csv.DictReader(open(INDICES, encoding="utf-8")))
     idx = leer_indices()
     escribir_computo(cfg, carpeta)
     ruta = escribir_planilla(cfg, carpeta, idx_rows)
-    escribir_informe(cfg, carpeta, idx)
+    sys.path.insert(0, str(RAIZ / "herramientas"))
+    adjuntos = {ruta.name: base64.b64encode(ruta.read_bytes()).decode()}
+    if cfg.get("compras"):
+        import lista_compras
+        rc = lista_compras.main(carpeta)
+        adjuntos[rc.name] = base64.b64encode(rc.read_bytes()).decode()
+    escribir_informe(cfg, carpeta, idx, adjuntos)  # el informe lleva los dos Excel embebidos para descargarlos
     py, xl = calcular(cfg, idx), leer_planilla(ruta)
     print(f"Python : costo {py['costo']:,.2f} · precio unitario {py['precio_unitario']:,.2f} · total {py['total']:,.2f}")
     print(f"Planilla: costo {xl['costo']:,.2f} · precio unitario {xl['precio_unitario']:,.2f} · total {xl['total']:,.2f}")
     if any(abs(py[k] - xl[k]) > 0.011 for k in py):
         sys.exit("ERROR: el cálculo en Python y la planilla no coinciden. Revisar antes de seguir.")
-    sys.path.insert(0, str(RAIZ / "herramientas"))
     import verificar_computo
     if verificar_computo.main(carpeta) != 0:
         sys.exit("ERROR: verificar_computo.py encontró errores.")
-    if cfg.get("compras"):
-        import lista_compras
-        lista_compras.main(carpeta)
     if (carpeta / "oferta.json").exists():
         import generar_oferta
         generar_oferta.main(carpeta)

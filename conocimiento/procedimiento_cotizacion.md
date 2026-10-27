@@ -23,6 +23,7 @@ Vigente desde el 27/10/2026. Se escribió a partir de los errores de la COT26-10
 **P4. Cada precio, con fuente y misma especificación.** Cada precio lleva proveedor, carpeta o documento de origen, fecha y **la especificación de lo que se cotizó**. Se compara con el plano campo por campo: Ø, serie, material de cuerpo y de trim, extremos o conexión, modelo. Si algo no coincide, o se ajusta el precio (y se dice cuánto y por qué) o se declara como desvío.
 - **Un precio de memoria o de un resumen no vale.** Hay que abrir el documento original (planilla, PDF, captura).
 - Un valor "aproximado", verbal o por WhatsApp es **estimado**: nunca es precio de base.
+- Cada precio de base se marca `igual`, `similar` (con la diferencia) o `sin_ref`. Con piezas similares se arma el **presupuesto preliminar**. El **definitivo** necesita cotización de Compras con la especificación del plano para todo lo que pese en el precio o en lo que se le promete al cliente.
 - `cot` solo cuando hay documento del proveedor con esa especificación. Un valor de una planilla interna de ITT es `ant`. Un recargo supuesto (por ejemplo "+30% por asiento metálico") es `est`.
 - Hay que leer la especificación completa del documento del proveedor: modelo, código de trim (TRIM 8 = 13Cr, no 316), material de asientos, extremos (M-H, BW/NPT, BSPT vs. NPT).
 - Se prefiere el precio más reciente **con la misma especificación**. Si es de más de 6 meses o el proveedor da una validez corta, se marca para actualizar.

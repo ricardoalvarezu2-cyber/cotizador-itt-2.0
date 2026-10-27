@@ -11,11 +11,12 @@ Seguí **en orden** `conocimiento/guia_cotizacion.md` (pasos 1–9), respetando 
 
 1. **Carpeta:** copiar `cotizaciones/_plantilla/` a `cotizaciones/COT[AA]-[CCCC]-[NNN]_<CLIENTE>_<PEDIDO>/`. El código del cliente está en `conocimiento/comercial/clientes.csv`. Guardar los originales en `pedido/` y anotar la cotización en `cotizaciones/README.md`.
 2. **Plano → `pedido/lista_materiales_plano.csv`:** la tabla completa, renglón por renglón, con todas las columnas. Mirar el dibujo para ver qué extremos BW se sueldan en taller y cuáles en campo.
-3. **Antecedentes y precios:** buscar primero una **planilla de costo de una oferta equivalente** en `fuentes_originales/ofertas_texto/` y usarla como modelo. Para cada precio, **abrir el documento original**, comparar la especificación con el plano campo por campo y anotar proveedor, carpeta y fecha. Un dato verbal o por WhatsApp va como `est`.
+3. **Antecedentes y precios:** buscar primero una **planilla de costo de una oferta equivalente** en `fuentes_originales/ofertas_texto/` y usarla como modelo. Para cada precio, **abrir el documento original**, comparar la especificación con el plano campo por campo y anotar proveedor, carpeta y fecha. Un dato verbal o por WhatsApp va como `est`. Cada fuente de base se marca `coincide`: `igual`, `similar` (con `diferencia`) o `sin_ref`.
 4. **`cotizacion.json`:** un ítem por posición del plano, con la misma cantidad y unidad; las compras extra en filas `14b`. Cargar todas las fuentes de cada ítem (la primera es la de base). Las soldaduras van junta por junta. Factores 1,35 / 1,35, contingencia 5%, `AJ: 1`, `fecha_referencia` = hoy.
 5. **Armar:** `python herramientas/armar_cotizacion.py cotizaciones/<carpeta>`. Tiene que terminar sin error: Python y planilla iguales, `verificar_computo.py` sin errores.
 6. **Revisar los avisos** uno por uno y contrastar con 2 antecedentes. Si la diferencia es mayor al 15%, explicarla antes de mostrar el número.
 7. **Revisión independiente:** lanzar un subagente que **no** armó el cómputo para comparar plano contra cómputo, informe y planilla. Corregir o justificar lo que encuentre.
+7 bis. **Preliminar → Compras → definitivo:** el preliminar (con piezas similares) se presenta con la lista para Compras. Matías no compra. Cuando llegan las respuestas se cargan como fuente de base `cot` / `igual` y se vuelve a armar.
 8. **Presentar a Matías:** siempre como "borrador, sin revisar" hasta que esté revisado. Publicar `informe.html` con la herramienta Artifact y mandar la planilla y las ofertas con SendUserFile.
 9. **Registrar:** actualizar `bitacora.md`, `cotizaciones/README.md` y `errores_y_lecciones.md` si hubo errores. Después, commit y push.
 

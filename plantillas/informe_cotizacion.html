@@ -86,6 +86,11 @@ tfoot td{font-weight:600;background:var(--soft);border-top:1.5px solid var(--lin
 .mat-tbl{min-width:1020px}
 select.alt{font-size:12px;padding:3px 5px;margin-top:4px;background:var(--panel)}
 
+.coi{font-size:12px;margin-top:3px;padding:2px 6px;border-radius:3px;display:inline-block}
+.coi.ok{background:var(--ok-soft);color:var(--ok)}
+.coi.sim{background:var(--warn-soft);color:var(--warn)}
+.coi.sr{background:var(--bad-soft);color:var(--bad)}
+.descargas{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 .chip{display:inline-block;font:600 10.5px/1 var(--f-mono);letter-spacing:.05em;text-transform:uppercase;padding:4px 6px;border-radius:3px;white-space:nowrap}
 .c-cot{background:var(--ok-soft);color:var(--ok)}
 .c-lista{background:var(--accent-soft);color:var(--accent)}
@@ -139,6 +144,12 @@ ol.lista,ul.lista{margin:0;padding-left:20px;display:flex;flex-direction:column;
   <div class="prim"><span class="eyebrow">Precio por {{EQ}}</span><span class="v" id="tPrecio">—</span><span class="s" id="tPrecioS"></span></div>
   <div><span class="eyebrow">Total oferta</span><span class="v" id="tTotal">—</span><span class="s" id="tTotalS"></span></div>
   <div><span class="eyebrow">Plazo</span><span class="v">{{PLAZO_DIAS}} días</span><span class="s">{{PLAZO_TEXTO}}</span></div>
+</div>
+
+<div class="descargas">
+  <button class="prim" id="bXlsPres">Descargar presupuesto (Excel)</button>
+  <button class="prim" id="bXlsComp">Descargar lista de materiales para Compras (Excel)</button>
+  <span class="small muted" id="msgDl">Versión oficial generada desde la cotización. Los ajustes que hagas en esta página no se incluyen (para eso, el CSV de abajo).</span>
 </div>
 
 {{HISTORIAL}}
@@ -288,6 +299,9 @@ const $=id=>document.getElementById(id);
 function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
 function dmy(f){const m=/^(\d{4})-(\d{2})-(\d{2})/.exec(f||'');return m?`${m[3]}/${m[2]}/${m[1]}`:(f||'—')}
 function srcOf(x){const r=st.rows[x.id];if(r.man)return r.man;return x.src[r.si]||x.src[0]}
+function coinc(s){if(s.co==='igual')return '<div class="coi ok">Igual a lo pedido</div>';
+  if(s.co==='similar')return `<div class="coi sim"><b>Similar, no igual:</b> ${esc(s.dif)}</div>`;
+  if(s.co==='sin_ref')return `<div class="coi sr"><b>Sin referencia:</b> ${esc(s.dif||'precio supuesto')}</div>`;return ''}
 function rowHTML(x){
   const r=st.rows[x.id],s=srcOf(x),t=r.man?TIPO.man:TIPO[s.tipo];
   const o=x.src[0];
@@ -302,7 +316,7 @@ function rowHTML(x){
   <td class="n" id="f_${x.id}">×${fmt(fac(x),3)}</td>
   <td class="n" id="a_${x.id}">${fmt(r.cant*r.precio*fac(x))}</td>
   <td><span class="chip ${t[1]}">${t[0]}</span></td>
-  <td class="src"><div class="who">${esc(s.who)}</div><div class="from">${esc(s.from)} · ${dmy(s.fecha)}</div>${manNote}${alt}</td></tr>`
+  <td class="src"><div class="who">${esc(s.who)}</div><div class="from">${esc(s.from)} · ${dmy(s.fecha)}</div>${r.man?'':coinc(s)}${manNote}${alt}</td></tr>`
 }
 function renderTables(){
   document.querySelector('#tMat tbody').innerHTML=MAT.map(rowHTML).join('');
@@ -368,6 +382,15 @@ let dl=null;(async()=>{try{dl=await(window.claude&&window.claude.use?window.clau
 $('bExp').onclick=async()=>{const data='\ufeff'+buildCSV(';');const fn='{{CODIGO}}_materiales_insumos.csv';
   if(dl){try{await dl.save({filename:fn,data});msg('CSV descargado: '+fn);return}catch(e){if(e&&e.code==='declined'){msg('Descarga cancelada.');return}}}
   const ta=$('csvOut');ta.value=buildCSV(';');ta.hidden=false;ta.select();msg('La descarga no está disponible en esta vista. Copiá el texto de abajo y guardalo como .csv.')};
+const XLSX={{XLSX_JSON}};  // planillas generadas por armar_cotizacion.py, embebidas en base64
+async function bajarXlsx(ruta,btn){const m=$('msgDl');
+  if(!dl){m.textContent='La descarga no está disponible en esta vista. El archivo está en la carpeta de la cotización del repositorio: '+ruta;return}
+  try{btn.disabled=true;const bin=atob(XLSX[ruta]);const u=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)u[i]=bin.charCodeAt(i);
+    await dl.save({filename:ruta,data:u});m.textContent='Descargado: '+ruta}
+  catch(e){m.textContent=(e&&e.code==='declined')?'Descarga cancelada.':'No se pudo descargar '+ruta+'. Está en la carpeta de la cotización del repositorio.'}
+  finally{btn.disabled=false}}
+$('bXlsPres').onclick=()=>bajarXlsx('{{XLSX_PRES}}',$('bXlsPres'));
+$('bXlsComp').onclick=()=>bajarXlsx('{{XLSX_COMPRAS}}',$('bXlsComp'));
 $('bCopy').onclick=async()=>{const t=buildCSV('\t');try{await navigator.clipboard.writeText(t);msg('Lista copiada. Pegala en Excel.')}catch(e){const ta=$('csvOut');ta.value=t;ta.hidden=false;ta.select();msg('No se pudo copiar automáticamente: el texto quedó seleccionado abajo.')}};
 function parseCSV(txt){txt=txt.replace(/^\ufeff/,'');const first=txt.split(/\r?\n/)[0];const sep=first.includes('\t')?'\t':(first.split(';').length>=first.split(',').length?';':',');
   const rows=[];let row=[],cur='',q=false;for(let i=0;i<txt.length;i++){const c=txt[i];

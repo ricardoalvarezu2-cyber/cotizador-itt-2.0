@@ -45,6 +45,7 @@ Cada ítem:
 - `id`: `M01…` para materiales y `S01…` para MO y servicios. No se cambia después: identifica la fila al exportar e importar el CSV desde el informe.
 - `pos`: la posición del plano; `14b` para compras extra; `MO`, `PH`, `PIN`, `CAL`, `INS` para MO y servicios.
 - `grupo`: `material`, `mo` o `servicio`.
+- `coincide` (obligatorio en la fuente de base): `igual`, `similar` o `sin_ref`; y `diferencia`: en qué difiere del plano (obligatorio si es `similar`).
 - `fuentes`: **la primera es la de base**. `tipo`: `cot`, `lista`, `stock`, `ant` o `est`. `fecha`: la del precio (AAAA-MM-DD, AAAA-MM o AAAA), que se usa para el ajuste por inflación.
 
 El `cotizacion.json` de esta carpeta es un ejemplo mínimo que funciona. Para probarlo, copiar la carpeta a otro lugar, sacar `oferta.json` y correr `python herramientas/armar_cotizacion.py <copia>`; no se corre sobre la plantilla. `oferta.json` tiene los textos de la oferta a CAPEX como ejemplo: hay que reemplazarlos. El caso completo es `cotizaciones/COT26-1003-001_CAPEX_OQ8209/`.

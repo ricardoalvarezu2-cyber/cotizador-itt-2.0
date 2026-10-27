@@ -4,17 +4,26 @@ Cómo se cotiza un pedido nuevo con el cotizador, de principio a fin. Las reglas
 
 ## Resumen
 
+El proceso tiene dos etapas. El **presupuesto preliminar** se arma con antecedentes y piezas similares, marcando qué es igual y qué es similar. El **presupuesto definitivo** se arma con los precios que trae Compras. Recién el definitivo se revisa, se aprueba y pasa a oferta.
+
 ```
-Pedido del cliente (mail, PDF, DWG)
-  │ 1. Abrir la carpeta de la cotización          cotizaciones/COTAA-CCCC-NNN_<CLIENTE>_<PEDIDO>/
-  │ 2. Transcribir la tabla del plano             pedido/lista_materiales_plano.csv
-  │ 3. Buscar antecedentes y precios              conocimiento/ + fuentes_originales/ofertas_texto/
-  │ 4. Cargar los ítems con sus fuentes           cotizacion.json
-  │ 5. Armar todo                                 python herramientas/armar_cotizacion.py <carpeta>
-  │ 6. Revisar avisos y comparables               salida del comando + informe.html
-  │ 7. Revisión independiente                     otro agente o persona
-  │ 8. Aprobación (Matías / dirección)            "estado": "aprobado" + volver a armar
-  ▼ 9. Enviar y registrar el resultado            cotizaciones/README.md
+ 1. Recibir planos e información licitatoria            pedido/ (pliego técnico y comercial, planos, mails)
+ 2. Lista de materiales del plano + especificación      pedido/lista_materiales_plano.csv (la revisa otro)
+ 3. Buscar antecedentes: precios de piezas iguales      cotizacion.json → fuentes, cada una marcada
+    o similares (aclarando en qué difieren)             "igual" / "similar" + diferencia / "sin_ref"
+ 4. Ajuste por inflación hasta hoy                      automático (conocimiento/costos/indices_ajuste.csv)
+ 5. Lo que no es material: soldaduras (de los extremos), cotizacion.json → grupo "mo" / "servicio";
+    armado, PH, END, pintura, revestimientos, insumos,  flete y embalaje en "parametros"
+    ingeniería y calidad, embalaje, transporte
+ 6. Plazo: llegada del material más largo + taller      cotizacion.json → plazo
+ 7. PRESUPUESTO PRELIMINAR                              python herramientas/armar_cotizacion.py <carpeta>
+    → informe.html con botones "Descargar presupuesto (Excel)" y "Descargar lista para Compras (Excel)"
+ 8. Compras pide precio a los proveedores               compras/<codigo>_pedido_materiales_compras.xlsx
+ 9. Cargar las respuestas (pasan a "igual", tipo cot)   cotizacion.json → volver a armar
+10. PRESUPUESTO DEFINITIVO + comparación con antecedentes (P8)
+11. Revisión independiente (P9)                         otro agente o persona → "revisado"
+12. Factor y aprobación (dirección / Matías)            "aprobado" → ofertas sin marca de borrador
+13. Enviar (lo hace Matías) y registrar el resultado    cotizaciones/README.md, bitacora.md
 ```
 
 ## 1. Abrir la carpeta
@@ -50,6 +59,13 @@ Por orden de prioridad:
 | Soldadura | `tecnico/factores_soldadura.csv` (pulg-eq = DN × factor de espesor) y `tecnico/factores_accesorios.csv` (cupla/olet ×1,75) |
 | Plazos | `conocimiento/plazos.md` |
 | Errores que ya pasaron | [`errores_y_lecciones.md`](errores_y_lecciones.md) |
+
+**Igual o similar.** Cada precio de base lleva `coincide`:
+- `igual`: misma pieza que el plano (Ø, serie, material, trim, extremos, modelo).
+- `similar`: otra pieza parecida. En `diferencia` va en qué difiere (por ejemplo "trim 8 en lugar de AISI 316" o "BW/NPT en lugar de BW/BW").
+- `sin_ref`: un supuesto sin pieza de referencia.
+
+El informe lo muestra en cada fila, la planilla en una columna y el control lo lista como aviso. **Si falta, `armar_cotizacion.py` no arma.** Un precio de una pieza similar sirve para el preliminar, pero no para afirmar en la oferta que se cumple la especificación.
 
 **Reglas que más se olvidan:**
 - Abrir el documento original de cada precio. **Nunca usar un precio de memoria ni de un resumen.**
