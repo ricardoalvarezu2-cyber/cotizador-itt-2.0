@@ -22,6 +22,8 @@ Reglas:
 - Último precio = el de fecha más reciente entre los de COSTO (cotización, compra, planilla interna, lista, stock).
   Los estimados no entran. Los precios en pesos se pasan a USD con el dólar BNA del mes (indices_ajuste.csv).
 - Precio ajustado a hoy con el CPI de EE.UU. (mismo criterio que las cotizaciones).
+- Siempre SIN IVA: un precio con IVA se divide por la alícuota (21% o 10,5%); si la fuente no dice nada, se toma sin IVA.
+  La columna "iva" dice qué se hizo con cada precio.
 """
 import csv
 import json
@@ -62,7 +64,7 @@ FAMILIAS = {
             ["tipo", "diametro", "serie", "material", "medida", "extremos"]),
     "OTR": ("Otros e insumos", ["tipo"], []),
 }
-COMUNES = ["codigo", "familia", "descripcion", "unidad", "ultimo_precio_usd", "fecha_ultimo_precio", "tipo_precio",
+COMUNES = ["codigo", "familia", "descripcion", "unidad", "ultimo_precio_usd", "iva", "fecha_ultimo_precio", "tipo_precio",
            "proveedor", "ruta_origen", "archivo_origen", "ruta_repo", "precio_ajustado_hoy_usd", "precios_en_historial",
            "precio_min_usd", "precio_max_usd", "primera_fecha", "confianza_clasificacion"]
 PRIORIDAD = {"cotización": 4, "compra": 4, "planilla interna": 3, "lista": 2, "stock (precio maestro)": 1}
@@ -350,6 +352,26 @@ def numero(x):
         return None
 
 
+CON_IVA = r"c/ ?iva|con iva|iva incluido|incluye iva|iva inc\w*|precio final"
+SIN_IVA = r"sin iva|s/ ?iva|\+ ?iva|mas iva|neto de iva|no incluye iva|iva aparte|iva no incluido"
+
+
+def iva_de(texto, fin=None):
+    """Regla de Ventas (27/10/2026): el catálogo guarda siempre el precio SIN IVA. Si el precio es con IVA se divide por
+    la alícuota que corresponda (21% o 10,5%); si no dice nada, se toma como sin IVA.
+    `fin` = posición donde termina el número en el texto: se mira primero lo que viene inmediatamente después."""
+    t = norm(texto)
+    cerca = t[fin:fin + 30] if fin is not None else ""
+    alicuota = 1.105 if re.search(r"10[.,]5 ?%", t) else 1.21
+    if re.search(SIN_IVA, cerca):
+        return "sin IVA (lo dice)", 1.0
+    if re.search(CON_IVA, cerca) or (re.search(CON_IVA, t) and not re.search(SIN_IVA, t)):
+        return f"con IVA: dividido por {alicuota:.3f}".replace(".", ","), alicuota
+    if re.search(SIN_IVA, t):
+        return "sin IVA (lo dice)", 1.0
+    return "no dice: se toma sin IVA", 1.0
+
+
 def num(v):
     try:
         return float(str(v).replace(",", ".")) if str(v).strip() not in ("", "-") else None
@@ -388,10 +410,13 @@ def archivo_de(carpeta, proveedor):
 def leer_fuentes():
     regs = []
 
-    def add(desc, precio, moneda, fecha, tipo_precio, proveedor, ruta_origen, archivo, ruta_repo, unidad, extra="", pista=""):
+    def add(desc, precio, moneda, fecha, tipo_precio, proveedor, ruta_origen, archivo, ruta_repo, unidad, extra="", pista="", iva=None):
         if not precio or precio < 0.05:
             return  # precio cero o simbólico (hay compras del stock en 0,00): no es un precio
-        regs.append(dict(descripcion=desc.strip(), precio=precio, moneda=moneda or "USD", fecha=fecha, tipo_precio=tipo_precio,
+        iva, div = iva or iva_de(desc)
+        if div != 1:
+            extra = "; ".join(x for x in [extra, f"precio original con IVA {precio:,.2f}"] if x)
+        regs.append(dict(descripcion=desc.strip(), precio=precio / div, iva=iva, moneda=moneda or "USD", fecha=fecha, tipo_precio=tipo_precio,
                          proveedor=proveedor, ruta_origen=ruta_origen, archivo_origen=archivo, ruta_repo=ruta_repo,
                          unidad=unidad_norm(unidad), extra=extra, pista=pista))
 
@@ -420,12 +445,12 @@ def leer_fuentes():
     for anio in ("2026", "2025"):
         for r in csv.DictReader(open(PRECIOS / f"proveedores_{anio}.csv", encoding="utf-8")):
             det = norm(r["detalle"])
-            cu = re.findall(r"(?<![\d.,])(\d[\d.,]*)\s?(?:usd|u\$s|\$)?\s?c/u", det)
-            if len(cu) != 1 or re.search(r";| \+ ", det):
-                continue  # presupuesto global o varios ítems: no da un precio unitario confiable
+            cu = list(re.finditer(r"(?<![\d.,])(\d[\d.,]*)\s?(?:usd|u\$s|\$)?\s?c/u", det))
+            if len(cu) != 1 or re.search(r";| \+ (?!iva)", det):
+                continue  # presupuesto global o varios ítems: no da un precio unitario confiable ("+ IVA" no cuenta)
             car = r["carpeta_cotizacion"]
-            add(r["detalle"], numero(cu[0]), r["moneda"], r["fecha"][:10], "cotización", r["proveedor"], Z + car.replace("/", "\\"),
-                archivo_de(car, r["proveedor"]), f"fuentes_originales/ofertas_texto/{car}" if car else "", "un")
+            add(r["detalle"], numero(cu[0].group(1)), r["moneda"], r["fecha"][:10], "cotización", r["proveedor"], Z + car.replace("/", "\\"),
+                archivo_de(car, r["proveedor"]), f"fuentes_originales/ofertas_texto/{car}" if car else "", "un", iva=iva_de(det, cu[0].end()))
     for f in sorted((RAIZ / "cotizaciones").glob("COT*/cotizacion.json")):
         c = json.load(open(f, encoding="utf-8"))
         for it in c["items"]:
@@ -478,7 +503,7 @@ def main():
         u = hs[0]
         precios = [h["precio_usd"] for h in hs]
         fila = {"codigo": f"{u['familia']}-{n:05d}", "familia": FAMILIAS[u["familia"]][0], "descripcion": u["descripcion"][:200],
-                "unidad": u["unidad"], "ultimo_precio_usd": u["precio_usd"], "fecha_ultimo_precio": u["fecha"], "tipo_precio": u["tipo_precio"],
+                "unidad": u["unidad"], "ultimo_precio_usd": u["precio_usd"], "iva": u["iva"], "fecha_ultimo_precio": u["fecha"], "tipo_precio": u["tipo_precio"],
                 "proveedor": u["proveedor"], "ruta_origen": u["ruta_origen"], "archivo_origen": u["archivo_origen"], "ruta_repo": u["ruta_repo"],
                 "precio_ajustado_hoy_usd": u["precio_ajustado_hoy_usd"], "precios_en_historial": len(hs), "precio_min_usd": min(precios),
                 "precio_max_usd": max(precios), "primera_fecha": hs[-1]["fecha"], "confianza_clasificacion": u["confianza_clasificacion"],
@@ -489,10 +514,10 @@ def main():
     # CSV de historial y de catálogo
     with open(PRECIOS / "catalogo_materiales_historial.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
-        w.writerow(["codigo", "familia", "clave", "fecha", "precio_usd", "precio_ajustado_hoy_usd", "tipo_precio", "proveedor", "descripcion",
+        w.writerow(["codigo", "familia", "clave", "fecha", "precio_usd", "iva", "precio_ajustado_hoy_usd", "tipo_precio", "proveedor", "descripcion",
                     "unidad", "ruta_origen", "archivo_origen", "ruta_repo", "atributos", "nota"])
         for h in sorted(hist, key=lambda h: (h["codigo"], h["fecha"]), reverse=False):
-            w.writerow([h["codigo"], h["familia"], h["clave"] or "", h["fecha"], h["precio_usd"], h["precio_ajustado_hoy_usd"], h["tipo_precio"],
+            w.writerow([h["codigo"], h["familia"], h["clave"] or "", h["fecha"], h["precio_usd"], h["iva"], h["precio_ajustado_hoy_usd"], h["tipo_precio"],
                         h["proveedor"], h["descripcion"], h["unidad"], h["ruta_origen"], h["archivo_origen"], h["ruta_repo"],
                         json.dumps(h["atributos"], ensure_ascii=False), h["nota"]])
     todos_at = sorted({c for v in FAMILIAS.values() for c in v[1]})
@@ -527,7 +552,7 @@ def escribir_excel(filas):
                 ws.cell(i, j, v)
         ws.freeze_panes = "C2"
         ws.auto_filter.ref = ws.dimensions
-    base = ["codigo", "descripcion", "unidad", "ultimo_precio_usd", "fecha_ultimo_precio", "tipo_precio", "proveedor",
+    base = ["codigo", "descripcion", "unidad", "ultimo_precio_usd", "iva", "fecha_ultimo_precio", "tipo_precio", "proveedor",
             "precio_ajustado_hoy_usd", "precios_en_historial", "precio_min_usd", "precio_max_usd", "ruta_origen", "archivo_origen", "ruta_repo",
             "confianza_clasificacion"]
     hoja("Todos", ["familia"] + base, [[fl["familia"]] + [fl[c] for c in base] for fl in filas])
