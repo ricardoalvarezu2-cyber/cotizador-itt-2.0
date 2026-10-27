@@ -1,0 +1,137 @@
+{
+ "carpeta": "AESA/46- Cesta 23061151 -filtros",
+ "cliente": "AESA",
+ "cliente_final": null,
+ "numero_oferta": "0-407 25 rev.1",
+ "revisiones": "Rev.0 06/10/2025 USD 175,112.11 (repuestos incluidos en cada filtro); rev.1 30/10/2025 USD 175,948.86 (repuestos recomendados COM/PEM desglosados como ítems 1.1, 2.1, 3.1). Vigente: rev.1",
+ "fecha_oferta": "2025-10-30",
+ "fecha_ultima_modificacion": "2025-10-30",
+ "referencia_cliente": "Filtros cesta 23061151 (SCI)",
+ "familia": "F",
+ "descripcion_corta": "Filtros canasto para SCI (FCC-0800, FCC-0801/3, FCC-0802) con elementos filtrantes de repuesto y traslado a planta del cliente",
+ "items": [
+  {
+   "descripcion": "FCC-0800 Filtro canasto para SCI (materiales, soldadura, consumibles, ingeniería, repuestos recomendados)",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 40918.48,
+   "precio_total": 40918.48,
+   "moneda": "USD",
+   "datos_tecnicos": "Canasto mesh 4"
+  },
+  {
+   "descripcion": "1.1 Repuesto recomendado COM/PEM: elemento filtrante (canasto mesh 4) FCC-0800",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 182.71,
+   "precio_total": 182.71,
+   "moneda": "USD",
+   "datos_tecnicos": "Mesh 4"
+  },
+  {
+   "descripcion": "FCC-0801/3 Filtro para SCI - Puesto control",
+   "cantidad": 2,
+   "unidad": "u",
+   "precio_unitario": 47006.89,
+   "precio_total": 94013.78,
+   "moneda": "USD",
+   "datos_tecnicos": "Canasto mesh 4"
+  },
+  {
+   "descripcion": "2.1 Repuesto recomendado COM/PEM: elemento filtrante (canasto mesh 4) FCC-0801/3",
+   "cantidad": 2,
+   "unidad": "u",
+   "precio_unitario": 235.66,
+   "precio_total": 471.32,
+   "moneda": "USD",
+   "datos_tecnicos": "Mesh 4"
+  },
+  {
+   "descripcion": "FCC-0802 Filtro para SCI - Puesto control",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 37247.14,
+   "precio_total": 37247.14,
+   "moneda": "USD",
+   "datos_tecnicos": "Canasto mesh 4"
+  },
+  {
+   "descripcion": "3.1 Repuesto recomendado COM/PEM: elemento filtrante (canasto mesh 4) FCC-0802",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 182.71,
+   "precio_total": 182.71,
+   "moneda": "USD",
+   "datos_tecnicos": "Mesh 4"
+  },
+  {
+   "descripcion": "Servicio de traslado a planta del cliente",
+   "cantidad": 1,
+   "unidad": "global",
+   "precio_unitario": 2932.72,
+   "precio_total": 2932.72,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  }
+ ],
+ "monto_total_ofertado": 175948.86,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "Entregas parciales: 60 días de recibida la orden de compra e ingeniería aprobada.",
+ "plazo_dias": 60,
+ "condiciones": {
+  "pago": "30 días fecha de factura",
+  "validez": "30 días corridos",
+  "entrega": "Planta ITT, Quilmes Oeste (el traslado a planta del cliente se cotiza como servicio)",
+  "moneda_y_ajuste": "USD facturado en pesos al TC BNA de la fecha de factura; cancelación al TC BNA vendedor del día anterior al pago; NC/ND si la variación supera 3%.",
+  "notas_y_exclusiones": [
+   "IVA aparte: USD 36,949.26 (total con IVA 212,898.12)",
+   "Cláusulas BCRA: sin multas por mora si hay material importado; licencias no automáticas sin responsabilidad de ITT; se sugiere que el cliente provea material importado (comodato o deducible)."
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Daiana Vanesa Estanga",
+   "empresa": "AESA",
+   "rol": "cliente",
+   "cargo": null,
+   "email": "daiana.v.estanga@aesa.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Enviado por (comercial)",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54-11-6001-5205"
+  }
+ ],
+ "aprendizajes": [
+  "Los filtros se ofertaron con precio unitario todo incluido (materiales, soldadura, consumibles, ingeniería, repuestos); los elementos filtrantes de repuesto COM/PEM salen aparte a USD 182.71-235.66 c/u.",
+  "Rango por filtro: USD 37.2 mil a 47.0 mil según tag (FCC-0802 el más barato, FCC-0801/3 el más caro).",
+  "El traslado a planta del cliente se cotizó como servicio aparte (USD 2,932.72) mientras la entrega base es EXW Quilmes."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto": "AESA/46- Cesta 23061151 -filtros/4.Armado de la Oferta Comercial/OE 407-25 Rev 1.pdf",
+  "revisiones": "OE 407-25.pdf"
+ },
+ "problemas": [
+  "No hay planilla de costo ni factor, ni cotizaciones de proveedores",
+  "No hay datos técnicos de los filtros (diámetro, rating, material) en el texto",
+  "El .pdf de rev.0 tiene fecha de archivo 29/10 pero el documento dice 06/10/2025",
+  "Pie del documento dice 22/10/2024 (plantilla)",
+  "No hay OC ni resultado"
+ ]
+}

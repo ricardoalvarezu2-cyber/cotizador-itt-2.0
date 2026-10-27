@@ -1,0 +1,129 @@
+{
+ "carpeta": "Sacde/3. 3029-CPF-022 -FILTROS TIPO CANASTO - RDA",
+ "cliente": "SACDE",
+ "cliente_final": null,
+ "numero_oferta": "Propuesta 2991 rev.0 (Anexo I - Planilla de Cotización Rev_0)",
+ "revisiones": "Rev.0 única",
+ "fecha_oferta": "2025-05-16",
+ "fecha_ultima_modificacion": "2025-05-16",
+ "referencia_cliente": "Subcontrato 3029-CPF-022 Filtros tipo canasto; Planta de Tratamiento CPF - RdA; Material Requisition 368-25",
+ "familia": "F",
+ "descripcion_corta": "Planilla de cotización de filtros tipo canasto para planta CPF RdA (bombas de admisión, agua producida, clarificado, booster de crudo, etc.), con opcionales de repuestos, asistencia y capacitación",
+ "items": [
+  {
+   "descripcion": "Total base scope (ítems principales): filtros tipo canasto de los distintos servicios (admisión de bombas, agua producida, clarificado, desarenado, booster de crudo, fluido neutralizado, agua tratada y cargadero, agua de servicio, etc.)",
+   "cantidad": 1,
+   "unidad": "global",
+   "precio_unitario": 686278.16,
+   "precio_total": 686278.16,
+   "moneda": "USD",
+   "datos_tecnicos": "Precios unitarios por ítem entre USD 19,125.93 y 170,793.71; plazos de 22 a 30 semanas; no se pudo reconstruir la asignación precio-tag"
+  },
+  {
+   "descripcion": "Repuestos PreCOM/COM/PEM (nota 1)",
+   "cantidad": 1,
+   "unidad": "lote",
+   "precio_unitario": 226.55,
+   "precio_total": 226.55,
+   "moneda": "USD",
+   "datos_tecnicos": "Opcional"
+  },
+  {
+   "descripcion": "Repuestos 2 años (nota 1)",
+   "cantidad": 1,
+   "unidad": "lote",
+   "precio_unitario": 15240.0,
+   "precio_total": 15240.0,
+   "moneda": "USD",
+   "datos_tecnicos": "Opcional"
+  },
+  {
+   "descripcion": "Percha de izaje",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 17400.0,
+   "precio_total": 17400.0,
+   "moneda": "USD",
+   "datos_tecnicos": "Opcional"
+  },
+  {
+   "descripcion": "Opcional asistencia COM/PEM (nota 2)",
+   "cantidad": 1,
+   "unidad": "global",
+   "precio_unitario": 3000.0,
+   "precio_total": 3000.0,
+   "moneda": "USD",
+   "datos_tecnicos": "Opcional"
+  },
+  {
+   "descripcion": "Opcional capacitación por día",
+   "cantidad": 1,
+   "unidad": "día",
+   "precio_unitario": 2250.0,
+   "precio_total": 2250.0,
+   "moneda": "USD",
+   "datos_tecnicos": "Opcional"
+  }
+ ],
+ "monto_total_ofertado": 686278.16,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "22 a 30 semanas según ítem (planilla)",
+ "plazo_dias": 210,
+ "condiciones": {
+  "pago": null,
+  "validez": "30 días",
+  "entrega": "EXW, nuestra planta en Quilmes O., sobre camión",
+  "moneda_y_ajuste": "USD",
+  "notas_y_exclusiones": [
+   "Opciones cotizadas por separado: total USD 38,116.55 (no incluido en el total base)",
+   "Ítem 12 incluye cantidad de juntas y espárragos para todos los tags",
+   "Ítem 13 (días de asistencia) a definir con obra según cronograma de montaje",
+   "Capacitación en sitio u online (online: consultar costo)",
+   "Consultar bonificación por adjudicación total"
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Walter Gabriel Gonzalez",
+   "empresa": "SACDE",
+   "rol": "cliente",
+   "cargo": "Comprador (Procurement)",
+   "email": "wgonzalez@sacde.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Enviado por (comercial)",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54-11-6001-5205"
+  }
+ ],
+ "aprendizajes": [
+  "Licitación grande de 30+ filtros canasto con planilla del cliente de formato fijo (no modificar plantilla; comentarios en Notas).",
+  "Totales: base USD 686,278.16 y opciones USD 38,116.55; los repuestos 2 años (USD 15,240) y la percha de izaje (USD 17,400) van como opcionales.",
+  "Plazos largos de 22 a 30 semanas EXW Quilmes."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "monto": "Sacde/3. 3029-CPF-022 -FILTROS TIPO CANASTO - RDA/4.Armado de la Oferta Comercial/Anexo I - Planilla de Cotización Rev_0.pdf"
+ },
+ "problemas": [
+  "El texto del PDF es una planilla desordenada: no se puede asignar cada precio unitario a su tag con certeza",
+  "El monto base 686,278.16 se toma como TOTAL (BASE SCOPE) por ser el mayor y coincidir con la etiqueta; las opciones suman 38,116.55 (verificado: 226.55+15,240+17,400+3,000+2,250)",
+  "Hay dos números de propuesta (2991 y 368-25 es el Material Requisition)",
+  "Carpeta 4 sin propuesta técnica ni costos; sin OC ni resultado"
+ ]
+}

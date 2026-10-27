@@ -1,0 +1,100 @@
+{
+ "carpeta": "ENDRESS HAUSER/18. Skid Isoil -alquittran",
+ "cliente": "Endress + Hauser Argentina",
+ "cliente_final": "Isoil (alquitrán / benzol)",
+ "numero_oferta": "0-358 25 Rev 1",
+ "revisiones": "Rev 0 del 03/04/2025 (skid completo alquitrán 12.992,21 + benzol 13.826,55 = 26.818,76 USD, con válvulas p/manómetro, perfilería, conexionado eléctrico y montaje) y Rev 1 del 07/05/2025 (solo cañería: 13.252,75 USD). La Rev 1 es la vigente.",
+ "fecha_oferta": "2025-05-07",
+ "fecha_ultima_modificacion": "2025-05-07",
+ "referencia_cliente": "Skid de carga (Isoil) - sin N° de RFQ",
+ "familia": "SK",
+ "descripcion_corta": "Fabricación de cañería y estructura de dos skids de carga (alquitrán y benzol), sin instrumentación",
+ "items": [
+  {
+   "descripcion": "Fabricación de cañería - Alquitrán (materiales: caños, bridas, niples, consumibles, cajas APE con borneras, cables; corte/biselado, soldadura cañería y estructura, ensayos RX/TP/PH, tratamiento superficial, montaje, data book)",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 6691.88,
+   "precio_total": 6691.88,
+   "moneda": "USD",
+   "datos_tecnicos": "No incluye instrumentación (monitor PAT, RTD, transmisor presión diferencial, batch controller), filtros canasto, válvulas, ingeniería de detalle"
+  },
+  {
+   "descripcion": "Fabricación de cañería - Benzol (mismo alcance)",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 6560.87,
+   "precio_total": 6560.87,
+   "moneda": "USD",
+   "datos_tecnicos": "Idem"
+  }
+ ],
+ "monto_total_ofertado": 13252.75,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "45/60 días de recibida la orden de compra; sujeto a la entrega de instrumentación",
+ "plazo_dias": 60,
+ "condiciones": {
+  "pago": "30 días fecha de factura",
+  "validez": "30 días corridos",
+  "entrega": "Planta ITT, Quilmes",
+  "moneda_y_ajuste": "USD facturado en pesos al TC BNA; NC/ND si variación >3%",
+  "notas_y_exclusiones": [
+   "Valor 13.252,75 USD sin IVA (IVA 2.783,08; total 16.035,83)",
+   "No incluye instrumentación, filtros canasto, válvulas, batch controller ni ingeniería",
+   "Cláusula BCRA: ITT no acepta multas por mora si hay material importado; licencias no automáticas sin responsabilidad de ITT; material importado a proveer por el cliente en comodato o deducible de facturas"
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Loreine Ospino (Calderón)",
+   "empresa": "Endress + Hauser Argentina",
+   "rol": "cliente",
+   "cargo": "destinataria",
+   "email": "loreine.calderon@endress.com",
+   "telefono": "+54 9 341 322-8782"
+  },
+  {
+   "nombre": "Ricardo López",
+   "empresa": "Endress + Hauser Argentina",
+   "rol": "cliente",
+   "cargo": "destinatario",
+   "email": null,
+   "telefono": null
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "emisor",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54-11-6001-5205"
+  }
+ ],
+ "aprendizajes": [
+  "E+H subcontrata a ITT solo la parte mecánica (cañería y estructura) y provee instrumentación, válvulas y filtros.",
+  "El cliente redujo el alcance de la Rev 0 a la Rev 1: de skid completo (26.819 USD) a solo cañería (13.253 USD); la Rev 1 quitó materiales de válvulas p/manómetro, perfilería y conexionado eléctrico.",
+  "Plazo condicionado a la llegada de la instrumentación del cliente."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto": "ENDRESS HAUSER/18. Skid Isoil -alquittran/4.Armado de la Oferta Comercial/OE 358- 25 Rev 1.pdf",
+  "rev0": "ENDRESS HAUSER/18. Skid Isoil -alquittran/4.Armado de la Oferta Comercial/OE 358- 25.pdf",
+  "plazo": "ENDRESS HAUSER/18. Skid Isoil -alquittran/4.Armado de la Oferta Comercial/OE 358- 25 Rev 1.pdf"
+ },
+ "problemas": [
+  "Sin costos, factor ni proveedores en la carpeta.",
+  "Sin orden de compra: resultado desconocido.",
+  "Total Rev 0 calculado por suma de ítems (el renglón Valor no se leyó)."
+ ]
+}

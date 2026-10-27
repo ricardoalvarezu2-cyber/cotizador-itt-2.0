@@ -1,0 +1,165 @@
+{
+ "carpeta": "YPF/13.YPF_TAVAL - Licitación 08-0740 Filtros Coalescentes -paquetizado- Portal Ariba Doc4104428891",
+ "cliente": "TAVAL (Hector Aguilera)",
+ "cliente_final": "YPF",
+ "numero_oferta": "0-270 23 (filtros) y 0-271 23 (prefabricados de pozo/puentes)",
+ "revisiones": "Sin revisiones visibles; la OE 270 trae fecha 14/09/23 en cabecera y 'Quilmes 14/07/2023' en el pie (inconsistencia). Existen docx y pdf de cada oferta.",
+ "fecha_oferta": "2023-09-14",
+ "fecha_ultima_modificacion": "2023-09-14",
+ "referencia_cliente": "Licitacion 08-0740 Filtros Coalescentes (paquetizado) - Portal Ariba Doc4104428891",
+ "familia": "F",
+ "descripcion_corta": "12 filtros coalescedores de acero al carbono (3 modelos x 4 equipos) para YPF via Taval, con oferta separada por 3 prefabricados/puentes (OE 271).",
+ "items": [
+  {
+   "descripcion": "Filtros Coalescedores SF 101-102-103-104",
+   "cantidad": 4,
+   "unidad": "equipo",
+   "precio_unitario": 563200,
+   "precio_total": 2252800,
+   "moneda": "USD",
+   "datos_tecnicos": "Cuerpo cano s/costura 8\" SA-106 Gr.B Sch160; casquete semielíptico 2:1 SA-234 WPB 219,1 mm esp. 23,01 mm; conexiones bridadas 4\",2\",1\" Sch120/160"
+  },
+  {
+   "descripcion": "Filtros Coalescedores SF 201-202-203-204",
+   "cantidad": 4,
+   "unidad": "equipo",
+   "precio_unitario": 667200,
+   "precio_total": 2668800,
+   "moneda": "USD",
+   "datos_tecnicos": "Cuerpo 16\" SA-106 Gr.B Sch80; casquete 2:1 SA-234 WPB 406,4 mm esp. 21,44 mm; conexiones bridadas 8\",4\",2\",1\" Sch80/120/160"
+  },
+  {
+   "descripcion": "Filtros Coalescedores SF 841-842-843-844",
+   "cantidad": 4,
+   "unidad": "equipo",
+   "precio_unitario": 684500,
+   "precio_total": 2738000,
+   "moneda": "USD",
+   "datos_tecnicos": "Cuerpo 20\" SA-106 Gr.B Sch80; casquete 2:1 SA-234 WPB 508 mm esp. 26,19 mm; conexiones bridadas 10\",4\",2\",1\",1/2\" Sch80/160"
+  },
+  {
+   "descripcion": "OE 271-23 item 1: Prefabricado pozo productor con bombeo mecanico (AIB) HGOR s/ PP05-P-003",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 33400,
+   "precio_total": 33400,
+   "moneda": "USD",
+   "datos_tecnicos": "Segun informacion tecnica del cliente"
+  },
+  {
+   "descripcion": "OE 271-23 item 2: Puente auxiliar para dosificacion de quimicos s/ PP07-P-003-A",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 38700,
+   "precio_total": 38700,
+   "moneda": "USD",
+   "datos_tecnicos": "Segun informacion tecnica del cliente"
+  },
+  {
+   "descripcion": "OE 271-23 item 3: Prefabricado puente de produccion s/ PP07-P-005-A",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 33900,
+   "precio_total": 33900,
+   "moneda": "USD",
+   "datos_tecnicos": "Segun informacion tecnica del cliente"
+  }
+ ],
+ "monto_total_ofertado": 7659600,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "OE 270: a convenir segun disponibilidad de materiales; estimado 180/210 dias por item (4 equipos iguales). OE 271: 90/120 dias de recibida la OC",
+ "plazo_dias": 210,
+ "condiciones": {
+  "pago": "OE 270: 20% con la OC, 20% certificacion de ingenieria, 20% acopio parcial de materiales, 40% contra entrega a 30 dias fecha factura. OE 271: 100% contra entrega a 30 dias FF",
+  "validez": "30 dias corridos",
+  "entrega": "Planta ITTSA Quilmes",
+  "moneda_y_ajuste": "USD, facturado en pesos al TC BNA vendedor del dia anterior al pago; NC/ND si la variacion supera 3%",
+  "notas_y_exclusiones": [
+   "OE 270: subtotal USD 7.659.600 + IVA 1.608.516 = 9.268.116. OE 271: subtotal USD 106.000 + IVA 22.260 = 128.260 (monto de la OE 271 no incluido en monto_total_ofertado)",
+   "Clausula BCRA: ITTSA no acepta multas por mora si hay material importado; se sugiere que el cliente provea el material importado (chapas, instrumentos, valvulas) en comodato o deducible de facturas",
+   "Licencias No Automaticas: ITTSA no responde por atrasos"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "ITT S.A. - compras (cotizacion interna SAD20162, Lautaro Valenzuela)",
+   "que": "9 posiciones de bridas WN S600 RF A105 (1\" a 16\"): 84 de 1\" Sch160, 96 de 2\" Sch80, 12 de 2\" Sch160, 16 de 4\" Sch40, 16 de 8\" Sch80, 4 de 8\" Sch160, 16 de 10\" Sch80, 8 de 10\" Sch160, 4 de 16\" Sch80",
+   "precio": 62546.73,
+   "moneda": "USD",
+   "plazo_entrega": "150/180 dias; validez 7 dias; pago 30 dias FF",
+   "fecha": "2023-08-10"
+  },
+  {
+   "proveedor": "Francovigh S.A.",
+   "que": "12 posiciones de bridas WN 600 RF A105 (84 de 1\" Sch160 a 4 de 20\" Sch120), cotizacion 0001-00076119",
+   "precio": 75794.8,
+   "moneda": "USD",
+   "plazo_entrega": "En stock (16\") a 210 dias segun posicion; validez 10 dias; pago contado/transferencia",
+   "fecha": "2023-08-10"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Hector Aguilera",
+   "empresa": "TAVAL",
+   "rol": "cliente",
+   "cargo": null,
+   "email": "haguilera@taval.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Lucas Bustamante",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": null,
+   "email": "lbustamante@ittsa.com.ar",
+   "telefono": "+54-11-69340333"
+  },
+  {
+   "nombre": "Lautaro Valenzuela",
+   "empresa": "ITT S.A. (compras)",
+   "rol": "ITT",
+   "cargo": null,
+   "email": "compras@ittsa.com.ar",
+   "telefono": "(011) 5352-0000"
+  },
+  {
+   "nombre": "Ariel Giribaldi",
+   "empresa": "Francovigh S.A.",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": "agiribaldi@francovigh.com.ar",
+   "telefono": "(54-11) 4659-0061/62/63 Ramos Mejia; (54-341) 462-1000 Rosario"
+  }
+ ],
+ "aprendizajes": [
+  "Las bridas WN son el rubro critico de material: Francovigh (USD 75.795, 12 posiciones) y la cotizacion interna SAD20162 (USD 62.547, solo 9 posiciones, sin 4\"/8\"/10\" Sch120 ni 20\") no son comparables posicion a posicion; el precio de la oferta de USD 7,66 M no se puede reconstruir con los costos disponibles en la carpeta.",
+  "Para paquetes de 4 equipos iguales por item se ofrecio pago con anticipo (20/20/20/40) y plazo estimado 180/210 dias, sujeto a disponibilidad de materiales; el plazo real depende del acopio de bridas (hasta 210 dias en Francovigh).",
+  "Las condiciones de la OE 270 mencionan a 'AESA' (copia de otra oferta): revisar el texto de condiciones antes de reutilizarlo.",
+  "Los prefabricados de pozo/puentes (OE 271) se ofertaron aparte, a unos USD 33-39 mil cada uno con plazo 90/120 dias."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "items_y_monto": "7.Propuesta Comercial (envío al Cliente)/OE 270- 23 ITT SA.pdf",
+  "oe271": "7.Propuesta Comercial (envío al Cliente)/OE 271- 23 ITT SA.pdf",
+  "proveedor_itt": "5.Proveedores 3ros/SAD20162 - ITT SA.pdf",
+  "proveedor_francovigh": "5.Proveedores 3ros/cotizacion_76119.pdf"
+ },
+ "problemas": [
+  "No hay planilla de costos ni factor de venta en la carpeta",
+  "No hay OC; resultado desconocido",
+  "Fecha inconsistente: cabecera 14/09/23 vs pie 14/07/2023",
+  "Las cotizaciones de bridas no cubren exactamente las mismas posiciones (SAD20162 tiene 9, Francovigh 12)",
+  "No se verifico la suma de las cotizaciones de bridas (se informa el total del documento)"
+ ]
+}

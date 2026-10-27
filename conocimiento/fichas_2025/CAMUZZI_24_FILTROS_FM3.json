@@ -1,0 +1,88 @@
+{
+ "carpeta": "CAMUZZI/24. FILTROS FM3",
+ "cliente": "Camuzzi Gas del Sur S.A. / Camuzzi Gas Pampeana S.A.",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": "Planilla de cotizacion 17/02/2025 (10 un. a 6.294,81) y 'Vuelta 2' 19-20/02/2025 (1 un. a 5.980). El archivo 'OE 3xx- 25.docx' es una oferta de otro pedido (Pluspetrol, valvula de bloqueo ABAC USD 595,04) y no corresponde a esta carpeta.",
+ "fecha_oferta": "2025-02-19",
+ "fecha_ultima_modificacion": "2025-04-29",
+ "referencia_cliente": "Concurso de precios N17711 - Adquisicion de Filtro FM3; codigo Camuzzi 1004-201-0178",
+ "familia": "F",
+ "descripcion_corta": "Filtro FM3 para gas natural, cuerpo de doble modulo serie 600, 3\", tapa bridada, segun especificacion Camuzzi (SCE-RE-102-0016).",
+ "items": [
+  {
+   "descripcion": "FILTRO FM3 CUERPO D. MODULO SERIE 600 - filtro para gas natural, modelo FM3, serie 600, 3\", doble modulo con tapa bridada",
+   "cantidad": 1,
+   "unidad": "UN",
+   "precio_unitario": 5980,
+   "precio_total": 5980,
+   "moneda": "USD",
+   "datos_tecnicos": "3\", serie 600, doble modulo, tapa bridada, segun especificacion Camuzzi Gas Pampeana/Sur"
+  }
+ ],
+ "monto_total_ofertado": 5980,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "60/75 dias",
+ "plazo_dias": 75,
+ "condiciones": {
+  "pago": "30 dias fecha de factura (30 dias fecha recepcion factura segun OC)",
+  "validez": "30 dias",
+  "entrega": "Flete a cargo del proveedor hasta Transporte Cruz del Sur, Mercado Central nave D3, E. Echeverria (Pcia. Bs As); destino final Cañadon Seco",
+  "moneda_y_ajuste": "USD; facturacion al dolar BNA divisa vendedor del dia de facturacion",
+  "notas_y_exclusiones": [
+   "Cantidades estimadas, no compromiso de compra; las ordenes de entrega se emiten segun demanda",
+   "Debe entregar certificados de calidad; el remito debe indicar OC, destino, peso, bultos y valor declarado",
+   "IVA 21%: 1.255,80 -> total 7.235,80"
+  ]
+ },
+ "proveedores": [],
+ "resultado": "ganada (hay OC)",
+ "orden_compra": {
+  "numero": "4500149762",
+  "fecha": "2025-02-20",
+  "monto": 5980
+ },
+ "contactos": [
+  {
+   "nombre": "Camuzzi Gas del Sur S.A. (compras)",
+   "empresa": "Camuzzi Gas del Sur S.A.",
+   "rol": "cliente",
+   "cargo": null,
+   "email": null,
+   "telefono": "5776-7000 (Av. Alicia Moreau de Justo 240 3 piso, CABA)"
+  },
+  {
+   "nombre": "L. Vegas",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": null,
+   "email": "lvegas@ittsa.com.ar",
+   "telefono": null
+  }
+ ],
+ "aprendizajes": [
+  "Se presento primero 6.294,81 USD/u por 10 unidades (total 62.948,10) y en la segunda vuelta se bajo a 5.980 USD/u (-5%); ese precio gano.",
+  "La OC es solo por 1 unidad aunque el concurso estimaba 10: el pedido es de cantidades estimadas con ordenes de entrega periodicas; conviene cotizar precio unitario firme.",
+  "Plazo 60/75 dias, pago a 30 dias, flete a cargo de ITT hasta el transporte en Tapiales/E. Echeverria: incluirlo en el costo."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_precio_oc": "8.Orden de Compra/4500149762.pdf",
+  "vuelta2": "4.Armado de la Oferta Comercial/Planilla de Cotizacion - Vuelta 2.xlsx",
+  "vuelta1": "4.Armado de la Oferta Comercial/Planilla de Cotizacion.xlsx"
+ },
+ "problemas": [
+  "No hay costos ni proveedores ni factor",
+  "Cantidad de la OC (1) distinta de la de la primera planilla (10); la planilla Vuelta 2 es ambigua en la columna de cantidad",
+  "OE 3xx- 25.docx pertenece a otro cliente (Pluspetrol)",
+  "Registro de consultas vacio"
+ ]
+}

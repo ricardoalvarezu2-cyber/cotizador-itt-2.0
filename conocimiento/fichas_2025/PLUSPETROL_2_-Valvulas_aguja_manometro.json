@@ -1,0 +1,151 @@
+{
+ "carpeta": "PLUSPETROL/2 -Valvulas aguja+ manometro",
+ "cliente": "Pluspetrol",
+ "cliente_final": null,
+ "numero_oferta": "0-349 25 (la página de condiciones dice 0-348 25)",
+ "revisiones": "Sin revisiones; un solo documento (docx y pdf)",
+ "fecha_oferta": "2025-02-14",
+ "fecha_ultima_modificacion": "2025-02-14",
+ "referencia_cliente": "Solicitud de cotización 1401 Pluspetrol; SOLPED 1200542594 pos. 10; REF 1200542594 (vía portal)",
+ "familia": "V",
+ "descripcion_corta": "Conjunto válvula aguja ABAC VHP 9H S IT 30000 PSI + manómetro CENI 74 con baño de glicerina (1 unidad)",
+ "items": [
+  {
+   "descripcion": "Válvula de bloqueo aguja 1/2\", conexiones roscadas 9/16 AU H, ABAC VHP 9H S IT (doble salida), + manómetro CENI mod. 74 con baño de glicerina",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 595.04,
+   "precio_total": 595.04,
+   "moneda": "USD",
+   "datos_tecnicos": "30000 PSI, acero inoxidable, empaque PTFE+PEEK; manómetro CENI 74 Ø100 mm, 0-15000 psi, clase 1%, conexión 9/16-18UNF H. El pedido original (MMA 55582-1) pedía 1 conjunto 15000 psi, conexión 9/16 HM9 tipo 2, manómetro Ø4.1/2 AISI 316 en glicerina"
+  }
+ ],
+ "monto_total_ofertado": 595.04,
+ "moneda": "USD",
+ "costo_total": 449.24,
+ "factor_venta": 1.3245,
+ "desglose_costo": {
+  "materiales": 449.24,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "30 dias de recibida la orden de compra",
+ "plazo_dias": 30,
+ "condiciones": {
+  "pago": "100% 45 días fecha de factura",
+  "validez": "30 días corridos",
+  "entrega": "Lugar de entrega en blanco en el documento",
+  "moneda_y_ajuste": "USD sin IVA; facturado en ARS al TC BNA fecha de factura",
+  "notas_y_exclusiones": [
+   "Precios en USD facturados en pesos al TC BNA de la fecha de factura; NC/ND si la variación supera 3%",
+   "Sin multas por mora si hay material importado (condición BCRA); sin responsabilidad por licencias no automáticas",
+   "ITT sugiere que el material importado (chapas, instrumentos, válvulas) sea provisto por el cliente en comodato o deducible de facturas"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "ABAC (vía compras ITT)",
+   "que": "Válvula aguja ABAC VHP 9H S IT doble salida, 9/16 AU H, 30000 psi",
+   "precio": 367.72,
+   "moneda": "USD (+IVA)",
+   "plazo_entrega": "30 días",
+   "fecha": "2025-02-12"
+  },
+  {
+   "proveedor": "ABAC (vía compras ITT)",
+   "que": "Alternativa: ABAC VHP 9H IT recta",
+   "precio": 305.28,
+   "moneda": "USD (+IVA)",
+   "plazo_entrega": "30 días",
+   "fecha": "2025-02-12"
+  },
+  {
+   "proveedor": "ABAC (vía compras ITT)",
+   "que": "Alternativa: ABAC VHP 9H A IT acodada",
+   "precio": 335.53,
+   "moneda": "USD (+IVA)",
+   "plazo_entrega": "30 días",
+   "fecha": "2025-02-12"
+  },
+  {
+   "proveedor": "JMH SRL",
+   "que": "Manómetro CENI 74 Ø100 0-15000 psi (92,00 lista, 15% desc. = 78,20) + baño de glicerina (3,90, 15% desc. = 3,32); total 81,52 sin IVA",
+   "precio": 81.52,
+   "moneda": "USD",
+   "plazo_entrega": "1 día hábil (retira cliente por fábrica); pago inmediato",
+   "fecha": "2025-02-13"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Suministros Pluspetrol (compras menores)",
+   "empresa": "Pluspetrol",
+   "rol": "cliente",
+   "cargo": null,
+   "email": "comprasmenores@pluspetrol.net / rpacomprasmenores@pluspetrol.net",
+   "telefono": null
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Coordinador de proyectos",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54 9 11 6001-5205 / (+54 11) 5352-0000"
+  },
+  {
+   "nombre": "Lautaro Valenzuela",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Compras y Contrataciones",
+   "email": "lvalenzuela@ittsa.com.ar",
+   "telefono": "(+54 11) 5352-0000 / +54 9 11 2307-8952"
+  },
+  {
+   "nombre": "Rebeca Urdaneta",
+   "empresa": "JMH SRL (Sarandí)",
+   "rol": "proveedor",
+   "cargo": "Vendedora",
+   "email": null,
+   "telefono": null
+  },
+  {
+   "nombre": "Pablo Aguerre",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": null,
+   "email": "paguerre@ittsa.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Guillermo Vicens",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": null,
+   "email": "gvicens@ittsa.com.ar",
+   "telefono": null
+  }
+ ],
+ "aprendizajes": [
+  "El cliente no respondió la consulta sobre tipo de conexión (2 o 3 vías); ITT cotizó la variante doble salida (la más cara de ABAC, 367,72) sin confirmación: riesgo de que no coincida con lo pedido.",
+  "Factor de venta aproximado 1,32 sobre costo de proveedores (595,04 / 449,24); es un cálculo derivado, no figura en planilla.",
+  "El portal de Pluspetrol exige cargar el precio en formulario, no en PDF; plazos de proveedor deben confirmarse antes (la primera cotización de manómetro llegó sin plazo).",
+  "Pedido de 1 unidad en urgencia: el plazo de 30 días salió del plazo de ABAC; el manómetro se retira en fábrica de JMH."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto": "4.Armado de la Oferta Comercial/OE 349- 25.pdf",
+  "plazo": "4.Armado de la Oferta Comercial/OE 349- 25.pdf",
+  "costo": "5.Proveedores 3ros/RE_ SOLICITUD DE COTIZACIÓN 1401 PLUSPETROL.msg y S14776.pdf",
+  "contactos": "5.Proveedores 3ros/RE_ SOLICITUD DE COTIZACIÓN 1401 PLUSPETROL.msg"
+ },
+ "problemas": [
+  "Número de oferta inconsistente (0-349 en encabezado, 0-348 en condiciones)",
+  "Fecha de firma en pie de página dice 22/10/2024 (plantilla no actualizada)",
+  "Costo y factor derivados por mí: se asumió que el conjunto cotizado usa la válvula doble salida (367,72) + manómetro y baño (81,52)",
+  "No hay propuesta enviada ni OC en la carpeta; falta ficha ABAC (PDF escaneado sin texto)"
+ ]
+}

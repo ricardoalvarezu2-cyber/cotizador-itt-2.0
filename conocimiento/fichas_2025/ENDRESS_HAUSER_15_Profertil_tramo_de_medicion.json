@@ -1,0 +1,95 @@
+{
+ "carpeta": "ENDRESS HAUSER/15 .Profertil, tramo de medicion",
+ "cliente": "Endress + Hauser Argentina",
+ "cliente_final": "Profertil (según nombre de carpeta)",
+ "numero_oferta": "0-346 25",
+ "revisiones": "Dos versiones del mismo N°: PDF (mtime 2025-01-24) con item 40,773.97 y Valor 33,581.61; DOCX (mtime 2025-02-21, posterior) con 14,000.00. Ambas con fecha impresa 24/01/2025. Se toma la más reciente (DOCX).",
+ "fecha_oferta": "2025-01-24",
+ "fecha_ultima_modificacion": "2025-02-21",
+ "referencia_cliente": "Tramo de medicion Profertil; doc. 4087-TARG-I-MR-450-001",
+ "familia": "P",
+ "descripcion_corta": "Fabricación de puente de medición fiscal Profertil (sin instrumentación ni ingeniería de detalle)",
+ "items": [
+  {
+   "descripcion": "Fabricación de PUENTE DE MEDICIÓN FISCAL según doc. 4087-TARG-I-MR-450-001. Incluye materiales (caños, bridas, niples, reducciones, consumibles, válvulas p/manómetro), corte/biselado, soldadura de cañería y estructura, ensayos (RX, tintas, PH), tratamiento superficial, montaje, conexionado eléctrico + material (cajas Exd, cables, prensacables, conduit), data book. No incluye instrumentación (caudalímetro, acondicionador de flujo, multivariable, RTD+TW, manómetro/termómetro) ni ingeniería de detalle y de construcción.",
+   "cantidad": 1,
+   "unidad": "gl",
+   "precio_unitario": 14000.0,
+   "precio_total": 14000.0,
+   "moneda": "USD",
+   "datos_tecnicos": "No consta diámetro/serie en la oferta; remite al doc. 4087-TARG-I-MR-450-001"
+  }
+ ],
+ "monto_total_ofertado": 14000.0,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "60/75 dias de recibida la OC. Plazo sujeto a la entrega de instrumentacion.",
+ "plazo_dias": 75,
+ "condiciones": {
+  "pago": "30 dias fecha factura",
+  "validez": "30 días corridos",
+  "entrega": "Planta ITTSA, Quilmes (EXW)",
+  "moneda_y_ajuste": "USD, sin IVA (IVA 21% aparte); facturado en ARS al TC BNA",
+  "notas_y_exclusiones": [
+   "Facturación en pesos al TC BNA de la fecha de factura; NC/ND si la variación supera 3%",
+   "Cláusula BCRA: ITTSA no acepta multas por mora cuando hay material importado",
+   "Licencias No Automáticas: ITTSA no responsable de atrasos",
+   "ITTSA sugiere que el material importado (chapas, instrumentos, válvulas) lo provea el cliente en comodato o deducible de facturas",
+   "Excluye instrumentación e ingeniería de detalle/construcción"
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Loreine Ospino (Calderon)",
+   "empresa": "Endress + Hauser Argentina",
+   "rol": "cliente",
+   "cargo": null,
+   "email": "loreine.calderon@endress.com",
+   "telefono": "+54 9 341 322-8782"
+  },
+  {
+   "nombre": "Ricardo Lopez",
+   "empresa": "Endress + Hauser Argentina",
+   "rol": "cliente",
+   "cargo": null,
+   "email": null,
+   "telefono": null
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "Innovación Técnica Total S.A (ITT)",
+   "rol": "ITT",
+   "cargo": "Vendedor / enviado por",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54-11-6001-5205"
+  }
+ ],
+ "aprendizajes": [
+  "Mismo alcance con dos precios muy distintos (40,774 vs 14,000 USD): el DOCX posterior bajó el precio a ~34%; verificar si el alcance cambió o fue una corrección/negociación antes de usar como referencia.",
+  "Alcance 'llave en mano' de puente fiscal: materiales, soldadura, END, pintura, montaje, conexionado eléctrico y data book, SIN instrumentos ni ingeniería de detalle.",
+  "Plazo 60/75 días condicionado a la llegada de la instrumentación del cliente (E+H)."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "monto_total_ofertado": "4.Armado de la Oferta Comercial/OE 346- 25.docx",
+  "version_anterior": "4.Armado de la Oferta Comercial/OE 346- 25.pdf",
+  "plazo": "4.Armado de la Oferta Comercial/OE 346- 25.docx",
+  "contactos": "4.Armado de la Oferta Comercial/OE 346- 25.docx"
+ },
+ "problemas": [
+  "Contradicción entre PDF (item 40,773.97; Valor 33,581.61; Total con IVA 40,633.75 - internamente inconsistente: 33,581.61 x1.21 = 40,633.75 pero el item dice 40,773.97) y DOCX (14,000.00; IVA 2,940; total 16,940)",
+  "Sin costo, factor, propuesta enviada confirmada ni OC",
+  "Firma impresa con fecha 22/10/2024 (plantilla)",
+  "Carpeta solo contiene la oferta (sin técnica, costos ni proveedores)"
+ ]
+}

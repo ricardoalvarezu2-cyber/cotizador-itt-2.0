@@ -1,0 +1,139 @@
+{
+ "carpeta": "TAVAL/20- BTU Buget Skid de gas",
+ "cliente": "TAVAL",
+ "cliente_final": "Mega (según mail de Guillermo Vicens: 'cotización Budget de un skid con unos filtros de fuel gas para Mega')",
+ "numero_oferta": null,
+ "revisiones": "ABB emitió oferta OPP-25-8084239 el 26/09/2025 y una versión corregida el 29/09/2025 (archivo 'Rev OPP-25-8084239.pdf' mencionado pero no presente; el PDF disponible es el del 26/09)",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2025-09-30",
+ "referencia_cliente": "Cotización budget de skid de fuel gas con filtros (P&ID adjunto al mail); carpeta 'BTU Budget Skid de gas'",
+ "familia": "SK",
+ "descripcion_corta": "Budget de skid de gas (filtros de fuel gas); la carpeta solo contiene presupuestos de instrumentos (ABB) y válvula de control (DOMA)",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": "ABB: 30 DFF sujeto a límite de crédito; DOMA: 30 DFF cheque, previo despacho",
+  "validez": "ABB: hasta 26/10/2025; DOMA: hasta 29/10/2025",
+  "entrega": "ABB: depósito ABB CABA o transporte en Capital/GBA; DOMA: transporte en Capital Federal",
+  "moneda_y_ajuste": "USD sin IVA (precios de proveedores)",
+  "notas_y_exclusiones": [
+   "Valores de ABB son budget (techo de referencia)",
+   "ABB no cotiza switches (PSXL-004, LSH-001, límite de posición MOV-191)"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "ABB S.A.U.",
+   "que": "Transmisor de presión PGS300 (PT/PI 014), 1/2\" NPT, HART, ATEX Ex d, 316L",
+   "precio": 753.39,
+   "moneda": "USD",
+   "plazo_entrega": "65 días corridos",
+   "fecha": "2025-09-26"
+  },
+  {
+   "proveedor": "ABB S.A.U.",
+   "que": "Sensor de temperatura TSP331 con vaina y TTH200 HART (TT/TI 003)",
+   "precio": 1202.9,
+   "moneda": "USD",
+   "plazo_entrega": "85 días corridos",
+   "fecha": "2025-09-26"
+  },
+  {
+   "proveedor": "ABB S.A.U.",
+   "que": "Visor de nivel magnético KM26S plástico PVC (LIC 103 / LIC 104 / LG 101): 13.256,62 c/u x 2 = 26.513,24",
+   "precio": 26513.24,
+   "moneda": "USD",
+   "plazo_entrega": "90 días corridos",
+   "fecha": "2025-09-26"
+  },
+  {
+   "proveedor": "ABB S.A.U.",
+   "que": "Posicionador TZIDC-200 x 7 (1.903,42 c/u = 13.323,94); corregido el 29/09: solo 1 unidad, para MOV 191 (PCV522, PSV504, PSV521, PSV503, PSV105A/B, PSV103 no llevan)",
+   "precio": 1903.42,
+   "moneda": "USD",
+   "plazo_entrega": "60 días corridos",
+   "fecha": "2025-09-29"
+  },
+  {
+   "proveedor": "Estudio Técnico DOMA S.A.",
+   "que": "Válvula de control DOMA ED 3\" 150# RF (CPO ED313ABC714), Cv 135, cuerpo para LIC 103 y 104; cotizada referencialmente, 1 unidad",
+   "precio": 2060.0,
+   "moneda": "USD",
+   "plazo_entrega": "60 días de recibida la OC",
+   "fecha": "2025-09-29"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Augusto Ghiorzi Herrera",
+   "empresa": "ABB S.A.U.",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": "augusto.ghiorzi-herrera@ar.abb.com",
+   "telefono": "+54 9 11 6026-5189"
+  },
+  {
+   "nombre": "Matias Scarfo",
+   "empresa": "ABB",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": "matias.scarfo@ar.abb.com",
+   "telefono": null
+  },
+  {
+   "nombre": "Micaias Rivarola",
+   "empresa": "Estudio Técnico DOMA S.A.",
+   "rol": "proveedor",
+   "cargo": "Vendedor (cod. 89)",
+   "email": "info@etdoma.com.ar",
+   "telefono": "+54 11 4205-2007"
+  },
+  {
+   "nombre": "Guillermo R. Vicens",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Gte. Ingeniería",
+   "email": "gvicens@ittsa.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Pablo Aguerre",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": null,
+   "email": "paguerre@ittsa.com.ar",
+   "telefono": null
+  }
+ ],
+ "aprendizajes": [
+  "Budget de skid armado en 1-2 días (pedido el 25/09, a presentar el lunes) a partir de precios de instrumentos de proveedores; los montos de ABB son un techo.",
+  "Subtotal de instrumentación ABB corregida = 753,39 + 1.202,90 + 26.513,24 + 1.903,42 = 30.372,95 USD, más válvula DOMA 2.060 (1 un.); pero faltan switches (PSXL-004, LSH-001, MOV-191), que ABB no cotiza.",
+  "Plazos de instrumentos importados largos (60 a 90 días corridos), condicionan el plazo total del skid.",
+  "ABB se equivocó una vez al cotizar posicionadores para todas las válvulas: confirmar alcance por TAG."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores_ABB": "5.Proveedores 3ros/OPP-25-8084239-ABB SA..pdf y FW_ Portafolio ABB Instrumentos.msg",
+  "proveedor_DOMA": "5.Proveedores 3ros/P-05413 DOMA.pdf",
+  "cliente_final": "5.Proveedores 3ros/FW_ Portafolio ABB Instrumentos.msg"
+ },
+ "problemas": [
+  "No hay oferta comercial/budget enviado a Taval, ni costos ITT, ni factor, ni plazo: la carpeta solo tiene cotizaciones de proveedores",
+  "Asignación TAG-precio de ABB: el PDF lista los códigos de TAG después de cada ítem; se interpretó que cada 'CODIGOS' corresponde al ítem que lo precede",
+  "Rev OPP-25-8084239.pdf (corregido) no está; la corrección sale del texto del mail",
+  "Cantidad de válvulas de control DOMA: cotizada 1 unidad aunque aplica a LIC 103 y 104 (posiblemente 2)"
+ ]
+}

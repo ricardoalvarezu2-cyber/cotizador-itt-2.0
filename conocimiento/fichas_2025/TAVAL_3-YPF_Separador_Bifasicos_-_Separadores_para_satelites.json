@@ -1,0 +1,111 @@
+{
+ "carpeta": "TAVAL/3-YPF Separador Bifasicos - Separadores para satelites",
+ "cliente": "YPF - AESA (según planilla de costos)",
+ "cliente_final": "YPF",
+ "numero_oferta": null,
+ "revisiones": "Planilla 'precios compras V1'; los dos mails 'Cotizacion YPF - AESA - Sep Bifasico Ø 2591' (Rv1) están vacíos (0 tokens).",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2025-03-27",
+ "referencia_cliente": "Licitación Separador Bifásico (satélites), REF 2591 / Sep Bif 2591",
+ "familia": "SEP",
+ "descripcion_corta": "2 separadores bifásicos Ø ext 2591 mm x 7540 mm, A516 Gr 70, 47 kg/cm2 a 80 °C, esp. 2\" (servicio corrosivo con arena), más skids 1A/1B",
+ "items": [
+  {
+   "descripcion": "Separador bifásico Ø2591 x 7540 mm t/t, SA-516 Gr 70, esp. circunferencial 2\" (50,85 mm), corrosión 1,6 mm, servicio con arena, aislación y tracing en conexiones, pintura int/ext, protección catódica, separador de nieblas",
+   "cantidad": 2,
+   "unidad": "un",
+   "precio_unitario": null,
+   "precio_total": null,
+   "moneda": "USD",
+   "datos_tecnicos": "P diseño 47 kg/cm2, T 80 °C, Ø ext 2591 mm, largo t/t 7540 mm, esp. 2\", conexiones A 20\" S300 sch120, B/C 12\" sch80, D 4\", L1/L2 3\" S600, M 24\" sch160"
+  }
+ ],
+ "monto_total_ofertado": null,
+ "moneda": "USD",
+ "costo_total": 134862.32,
+ "factor_venta": 1.7,
+ "desglose_costo": {
+  "materiales": 134862.32,
+  "mano_obra": 73400,
+  "terceros": 54960.51,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": "MO Ledesma: pagadero a 5 días fecha de factura, validez 10 días; Taval: 30 días FRF, validez 30 días",
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": "Proveedores en USD (TC BNA del día anterior al pago), sin IVA",
+  "notas_y_exclusiones": [
+   "MO Ledesma incluye armado de virolas esp. 2\", empalme de 3 virolas, casquetes, internos (bafle 670 mm, placa perforada, deflector, caja de vanes, rompe vórtice, 2 cunas 3500x300) y cañerías con bridas; soldaduras con arco sumergido; ITT aporta biselados X 30/70, consumibles, END y PH",
+   "Ledesma recomienda re-cilindrado posterior a la soldadura"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Taval S.A.",
+   "que": "Presupuesto 22451: esférica 12\" 300 RF (11.497,85), esférica 10\" 300 RF (7.623,66), globo 10\" 300 RF (14.043,80), todas WCB trim 316; entrega 10 días",
+   "precio": 33165.31,
+   "moneda": "USD",
+   "plazo_entrega": "10 días (salvo venta)",
+   "fecha": "2025-03-05"
+  },
+  {
+   "proveedor": "Taval S.A.",
+   "que": "Presupuesto 22480 (servicio arena, 8 ítems: cuña 12\" 5.605,60; retención 12\" 4.799,20; globo 8\" 3.200,40; retención 8\" 2.408,00; cuña 8\" 2.749,60; esférica 4\" 1.999,20; esférica 3/4\" 232,40; esférica 2\" 800,80)",
+   "precio": 21795.2,
+   "moneda": "USD",
+   "plazo_entrega": "130 días (salvo venta)",
+   "fecha": "2025-03-10"
+  },
+  {
+   "proveedor": "Ledesma (taller de MO)",
+   "que": "Mano de obra de armado y soldadura del separador bifásico (Presupuesto 200102)",
+   "precio": 73400,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2025-03-17"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Lautaro Valenzuela",
+   "empresa": "Taval S.A.",
+   "rol": "proveedor",
+   "cargo": "Vendedor (contacto en presupuestos)",
+   "email": null,
+   "telefono": "+54 11 5236-6600"
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Coordinador de proyectos / Representante Técnico Comercial",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54 11 5352-0000 / +54 9 11 6001-5205"
+  }
+ ],
+ "aprendizajes": [
+  "Costo de materiales de chapa, bridas y caños para 2 separadores Ø2591 x 7540 esp. 2\": USD 134.862 (planilla de costos), con utilidad prevista de 1,7 (celda TOTAL general); MO Ledesma USD 73.400 (alcance del taller detallado); válvulas Taval USD 54.960 en dos presupuestos.",
+  "Válvulas para servicio con arena (internos especiales) tienen plazo de 130 días frente a 10 días de las válvulas estándar de stock.",
+  "No hay oferta enviada ni resultado: el precio de venta no consta."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "costo_total": "5.Proveedores 3ros/YPF - Sep Bifasico - 2591 - 21.2 - precios compras V1.xlsx (hoja LM TANQ, COSTO NACIONAL)",
+  "factor_venta": "5.Proveedores 3ros/YPF - Sep Bifasico - 2591 - 21.2 - precios compras V1.xlsx (fila TOTAL general = 1,7)",
+  "mano_obra": "5.Proveedores 3ros/Presupuesto ITT Bifasico YPF - Ledesma.docx",
+  "valvulas": "5.Proveedores 3ros/Presupuesto 22451 - valvulas.pdf; Presupuesto 22480 - Valvulas paso de arena.pdf"
+ },
+ "problemas": [
+  "Planilla con muchos #REF!: utilidad y precio cotizado no calculados; el 1,7 es un parámetro, no confirmado como factor aplicado",
+  "Los costos de la planilla son 'COSTO NACIONAL' para cantidad 2; no está claro si la MO 73.400 de Ledesma es por 1 o 2 equipos",
+  "No se sabe si los 134.862 incluyen o no las válvulas Taval",
+  "Dos mails .eml de cotización están vacíos y 'costo rolado MO.pdf' es un escaneo sin texto",
+  "Sin oferta, monto ofertado ni OC",
+  "Contacto Taval Lautaro Valenzuela figura como contacto en los presupuestos, pero el rol exacto no está indicado"
+ ]
+}

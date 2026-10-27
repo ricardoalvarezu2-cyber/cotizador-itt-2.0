@@ -1,0 +1,91 @@
+{
+ "carpeta": "SECIN/5. Estructuras",
+ "cliente": "Secin",
+ "cliente_final": "Domo Fingers (referencia 'Plataformas y estructuras Domo Fingers')",
+ "numero_oferta": "0-347 25",
+ "revisiones": "Sin revisiones",
+ "fecha_oferta": "2025-02-11",
+ "fecha_ultima_modificacion": "2025-02-11",
+ "referencia_cliente": "Planos D4696-C-PL-001 / 002 / 003",
+ "familia": "OT",
+ "descripcion_corta": "Fabricación de estructuras y plataformas metálicas según planos D4696 (mano de obra y materiales por separado)",
+ "items": [
+  {
+   "descripcion": "Fabricación de estructuras y plataformas según planos; incluye soldadura, consumibles, END (RX, tintas penetrantes), tratamiento superficial (granallado/pintura)",
+   "cantidad": 1,
+   "unidad": "gl",
+   "precio_unitario": 50037.35,
+   "precio_total": 50037.35,
+   "moneda": "USD",
+   "datos_tecnicos": "Planos D4696-C-PL-001/002/003"
+  },
+  {
+   "descripcion": "Materiales para fabricación: perfiles HEB 300 / UPN 160, chapas 1/2, 3/8, 5/8, 5/16\", perfil L 1/4\", piso enrejillado, bulonería, caño 1 1/4\" sch40",
+   "cantidad": 1,
+   "unidad": "gl",
+   "precio_unitario": 73403.45,
+   "precio_total": 73403.45,
+   "moneda": "USD",
+   "datos_tecnicos": "Sin pesos (kg) en la oferta"
+  }
+ ],
+ "monto_total_ofertado": 123440.8,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "60/75 dias",
+ "plazo_dias": 75,
+ "condiciones": {
+  "pago": "30 días fecha factura",
+  "validez": "30 días corridos",
+  "entrega": "Planta ITT, Quilmes",
+  "moneda_y_ajuste": "USD sin IVA; facturado en ARS al TC BNA fecha de factura",
+  "notas_y_exclusiones": [
+   "Precios en USD facturados en pesos al TC BNA de la fecha de factura; NC/ND si la variación supera 3%",
+   "Sin multas por mora si hay material importado (condición BCRA); sin responsabilidad por licencias no automáticas",
+   "ITT sugiere que el material importado (chapas, instrumentos, válvulas) sea provisto por el cliente en comodato o deducible de facturas"
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Nestor Barrios",
+   "empresa": "Secin",
+   "rol": "cliente",
+   "cargo": null,
+   "email": "nbarrios@secin.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Coordinador de proyectos",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54 9 11 6001-5205 / (+54 11) 5352-0000"
+  }
+ ],
+ "aprendizajes": [
+  "Estructura vendida con MO 41% / materiales 59% del precio (50.037 / 73.403 USD): materiales pesan más que la MO en estructuras con perfilería HEB y enrejillado.",
+  "La oferta no indica kg totales; para comparar precios futuros conviene calcular USD/kg a partir de los planos.",
+  "Plazo 60/75 días estándar para estructuras de este tamaño."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto": "4.Armado de la Oferta Comercial/OE 347- 25.pdf",
+  "plazo": "4.Armado de la Oferta Comercial/OE 347- 25.pdf"
+ },
+ "problemas": [
+  "Solo la oferta; sin planilla de costos, sin proveedores ni OC",
+  "Pie con fecha 27/12/2024 (plantilla previa a la fecha de oferta)",
+  "No consta si se envió la oferta ni su resultado"
+ ]
+}

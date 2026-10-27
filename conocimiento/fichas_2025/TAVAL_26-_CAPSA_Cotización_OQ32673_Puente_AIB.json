@@ -1,0 +1,104 @@
+{
+ "carpeta": "TAVAL/26- CAPSA Cotización OQ32673 Puente AIB",
+ "cliente": "TAVAL",
+ "cliente_final": "CAPSA (según nombre de carpeta, OQ32673)",
+ "numero_oferta": "0-408-25",
+ "revisiones": "Sin revisiones; existe OE 408-25 en .docx y .pdf (mismo contenido).",
+ "fecha_oferta": "2025-10-16",
+ "fecha_ultima_modificacion": "2025-10-16",
+ "referencia_cliente": "PUENTE ARMADO PROD C/AIB (Cotización OQ32673)",
+ "familia": "S",
+ "descripcion_corta": "Mano de obra de fabricación de 7 puentes de producción (corte, biselado, roscado, armado, tratamiento superficial); materiales no incluidos en la oferta.",
+ "items": [
+  {
+   "descripcion": "Mano de obra para fabricación de Puente de producción. Incluye corte, biselado, roscado, armado, tratamiento superficial.",
+   "cantidad": 7,
+   "unidad": "un",
+   "precio_unitario": 2307.34,
+   "precio_total": 16151.4,
+   "moneda": "USD",
+   "datos_tecnicos": "Puente con roscas NPT (CBM roscado según presupuesto de tercero); sin diámetros ni rating en la oferta."
+  }
+ ],
+ "monto_total_ofertado": 16151.4,
+ "moneda": "USD",
+ "costo_total": 12600.0,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": 12600.0,
+  "otros": null
+ },
+ "plazo_ofrecido": "25/30 dias de recibida la orden de compra, materiales e ingeniería aprobada.",
+ "plazo_dias": 30,
+ "condiciones": {
+  "pago": "30 ddf",
+  "validez": "30 días corridos",
+  "entrega": "Planta ITTSA, Quilmes",
+  "moneda_y_ajuste": "Precios en USD, facturados en pesos al TC BNA de fecha de factura; cancelación al TC BNA vendedor del día anterior al pago, con NC/ND si la variación supera 3%.",
+  "notas_y_exclusiones": [
+   "Oferta de mano de obra solamente (materiales no figuran).",
+   "IVA informado aparte: USD 3,391.79 (total con IVA 19,543.19).",
+   "Material de origen importado: ITTSA no acepta multas por mora en las entregas (condición resolutoria BCRA).",
+   "Si el producto cae bajo Licencias No Automáticas, ITTSA no responde por atrasos.",
+   "ITTSA sugiere que el material importado (chapas, instrumentos, válvulas) lo provea el cliente en comodato o deducible de facturas futuras."
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Edgardo Ledesma (taller de terceros)",
+   "que": "Mano de obra, herramientas, corte de caño para roscar, armado de cuadro, SVO, ART por cuadro (Puente CBM parte roscada); ITT aporta materiales y roscas en extremos",
+   "precio": 1800.0,
+   "moneda": "USD (más IVA, por cuadro)",
+   "plazo_entrega": "no indicado",
+   "fecha": "2025-09-24"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Ricardo Agra",
+   "empresa": "TAVAL",
+   "rol": "cliente",
+   "cargo": null,
+   "email": "ragra@taval.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Coordinador de proyectos",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54-11-6001-5205"
+  },
+  {
+   "nombre": "Edgardo Ledesma",
+   "empresa": "Ledesma (tercero)",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": "edgardoledesma68@hotmail.com",
+   "telefono": "1166341630"
+  }
+ ],
+ "aprendizajes": [
+  "Mano de obra de terceros: 1.800 USD por cuadro vs 2.307,34 vendido por ITT, o sea relación 1,28 (inferida: no hay planilla de costo en la carpeta; el costo de 12.600 es 7 x 1.800).",
+  "El tercero recomienda hacer las roscas NPT con torno; ITT puso los materiales y las roscas en extremos, que el presupuesto de Ledesma no cubre (posible costo no incluido en la relación 1,28).",
+  "Oferta MO-sola: pago 30 ddf y plazo corto 25/30 días con materiales e ingeniería aprobados."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto": "4.Armado de la Oferta Comercial/OE 408-25.pdf",
+  "costo_tercero": "5.Proveedores 3ros/Presupuesto ITT N° 20099 Puente CBM roscado 24-09-25.doc",
+  "contacto_ledesma": "5.Proveedores 3ros/Presupuesto Puente CBM roscado.msg",
+  "plazo_pago": "4.Armado de la Oferta Comercial/OE 408-25.pdf"
+ },
+ "problemas": [
+  "No hay planilla de costo ni factor; costo_total es solo el presupuesto del tercero (7 x USD 1.800) y es inferido que el presupuesto de Ledesma corresponde a los 7 puentes.",
+  "No hay orden de compra ni dato de resultado.",
+  "El pie de la oferta dice fecha 22/10/2024 (plantilla no actualizada), distinta de la fecha de la oferta 16/10/2025.",
+  "No figuran diámetros, rating ni cantidad de roscas del puente."
+ ]
+}

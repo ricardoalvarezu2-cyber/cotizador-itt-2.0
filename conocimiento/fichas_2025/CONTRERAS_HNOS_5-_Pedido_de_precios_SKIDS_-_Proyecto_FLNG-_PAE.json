@@ -1,0 +1,157 @@
+{
+ "proveedores": [],
+ "orden_compra": null,
+ "carpeta": "CONTRERAS HNOS/5- Pedido de precios SKIDS - Proyecto FLNG- PAE",
+ "cliente": "Contreras Hnos",
+ "cliente_final": "PAE (Pan American Energy) - Proyecto FLNG / gasoducto",
+ "numero_oferta": "PRES 23929A (oferta económica budget TCR GASOD FNLG; oferta técnica PRES251112A)",
+ "revisiones": "Rev A (única en la carpeta)",
+ "fecha_oferta": "2025-11-13",
+ "fecha_ultima_modificacion": "2025-11-13",
+ "referencia_cliente": "Pedido de precios SKIDS - Proyecto FLNG - PAE (Row 1A, 1B, 2A, 2B, 3)",
+ "familia": "TS",
+ "descripcion_corta": "Budget de 10 skids de trampas scraper fijas 36\"x40\" 600# (lanzadoras y receptoras) con tapa de cierre rápido Futura (Opción A)",
+ "items": [
+  {
+   "descripcion": "Skid trampa lanzadora fija #90000 (KM 0)",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": null,
+   "precio_total": null,
+   "moneda": "USD",
+   "datos_tecnicos": "36\"x40\" 600#"
+  },
+  {
+   "descripcion": "Skid trampa receptora fija #85100 (KM 93)",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": null,
+   "precio_total": null,
+   "moneda": "USD",
+   "datos_tecnicos": "36\"x40\" 600#"
+  },
+  {
+   "descripcion": "Skid trampa lanzadora fija #87100 (KM 93)",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": null,
+   "precio_total": null,
+   "moneda": "USD",
+   "datos_tecnicos": "36\"x40\" 600#"
+  },
+  {
+   "descripcion": "Skid trampa receptora fija #90500 (KM 187)",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": null,
+   "precio_total": null,
+   "moneda": "USD",
+   "datos_tecnicos": "36\"x40\" 600#"
+  },
+  {
+   "descripcion": "Skid trampa lanzadora fija #90100 (KM 187)",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": null,
+   "precio_total": null,
+   "moneda": "USD",
+   "datos_tecnicos": "36\"x40\" 600#"
+  },
+  {
+   "descripcion": "Skid trampa receptora fija #90600 (KM 287)",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": null,
+   "precio_total": null,
+   "moneda": "USD",
+   "datos_tecnicos": "36\"x40\" 600#"
+  },
+  {
+   "descripcion": "Skid trampa lanzadora fija #90200 (KM 287)",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": null,
+   "precio_total": null,
+   "moneda": "USD",
+   "datos_tecnicos": "36\"x40\" 600#"
+  },
+  {
+   "descripcion": "Skid trampa receptora fija #90700 (KM 387)",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": null,
+   "precio_total": null,
+   "moneda": "USD",
+   "datos_tecnicos": "36\"x40\" 600#"
+  },
+  {
+   "descripcion": "Skid trampa lanzadora fija #90400 (KM 387)",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": null,
+   "precio_total": null,
+   "moneda": "USD",
+   "datos_tecnicos": "36\"x40\" 600#"
+  },
+  {
+   "descripcion": "Skid trampa receptora fija #90801 (KM 472.5)",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": null,
+   "precio_total": null,
+   "moneda": "USD",
+   "datos_tecnicos": "36\"x40\" 600#"
+  }
+ ],
+ "monto_total_ofertado": null,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "180 días por ítem (tabla del punto 2)",
+ "plazo_dias": 180,
+ "condiciones": {
+  "pago": "30 días fecha factura",
+  "validez": "30 días corridos",
+  "entrega": "EXW, retiro en planta Taval/ITT, Quilmes Oeste",
+  "moneda_y_ajuste": "Precios en USD facturados en pesos al TC BNA (NC/ND si variación > 3%)",
+  "notas_y_exclusiones": [
+   "Oferta emitida a nombre de TAVAL S.A. (mismas notas BCRA/licencias que ITT)",
+   "Opción A: tapa de cierre rápido Futura (otras opciones no aparecen en el texto)",
+   "Sin multas por mora si hay material importado (condición BCRA)",
+   "Licencias No Automáticas: ITTSA no responsable de atrasos",
+   "Material importado preferentemente provisto por el cliente (comodato o deducible de facturas)"
+  ]
+ },
+ "resultado": "sin resultado",
+ "contactos": [
+  {
+   "nombre": "Ricardo Alvarez",
+   "empresa": "Taval S.A.",
+   "rol": "ITT",
+   "cargo": "Ing., Representante Comercial",
+   "email": "ralvarez@taval.com.ar",
+   "telefono": "(+54 11) 5236 6600 (234) / +54 9 11 2282 8036"
+  }
+ ],
+ "aprendizajes": [
+  "Budget para 10 skids de trampas 36\"x40\" 600#: 5 lanzadoras y 5 receptoras a lo largo de un gasoducto (KM 0 a 472,5)",
+  "Plazo uniforme de 180 días para todos los skids",
+  "La oferta sale por Taval (grupo) con planta ITT; el texto extraído no trae los precios (probablemente tabla de precios en imagen o columna no extraída)"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "items": "4.Armado de la Oferta Comercial/PRES 23929A- OFERTA ECONOMICA BUDGET TCR GASOD FNLG.docx",
+  "contacto": "idem"
+ },
+ "problemas": [
+  "El texto extraído no incluye precios unitarios ni total; monto null",
+  "El texto habla de 'tabla del punto 2' y de otras opciones (Opción A) no visibles",
+  "Sin costos ni OC; el nombre de cliente final PAE sale del nombre de carpeta"
+ ]
+}

@@ -1,0 +1,87 @@
+{
+ "carpeta": "ENDRESS HAUSER/20. Construcción Mecánica del Descargadero-Techint-Tecpetrol",
+ "cliente": "Endress+Hauser (Endress)",
+ "cliente_final": "Techint / Tecpetrol",
+ "numero_oferta": "0-374 25 Rev-1",
+ "revisiones": "Rev 0: 2 skids Cargadero/Descargadero A (USD 29.059,30) y B (USD 20.716,24), total USD 49.775,54, sin cajas de conexionado, componentes eléctricos ni FAT. Rev 1: un solo Skid Descargadero USD 31.772,68 que incluye cajas de conexionado, componentes eléctricos y FAT. Ambas con fecha 12/06/2025.",
+ "fecha_oferta": "2025-06-12",
+ "fecha_ultima_modificacion": "2025-06-12",
+ "referencia_cliente": "Construcción mecánica Descargadero (Techint - Tecpetrol)",
+ "familia": "SK",
+ "descripcion_corta": "Fabricación de skid descargadero (piping, ensayos, pintura, FAT, dossier), sin válvulas ni instrumentación",
+ "items": [
+  {
+   "descripcion": "Fabricación de Skid Descargadero. Incluye materiales, piping y accesorios, corte y biselado, cajas de conexionado, componentes eléctricos, END (tintas 100%, ultrasonido y RX 30%), tratamiento superficial, FAT, dossier. No incluye válvulas ni instrumentación",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 31772.68,
+   "precio_total": 31772.68,
+   "moneda": "USD",
+   "datos_tecnicos": "Sin diámetros ni clases en la oferta; END: tintas 100% soldaduras, UT y RX 30%"
+  }
+ ],
+ "monto_total_ofertado": 31772.68,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "60 días desde la recepción de la OC sujeto al acopio de los materiales",
+ "plazo_dias": 60,
+ "condiciones": {
+  "pago": "30 ddf (días fecha de factura)",
+  "validez": "30 días corridos",
+  "entrega": "Planta ITTSA, Quilmes",
+  "moneda_y_ajuste": "Precios en USD (la Rev 1 no repite la cláusula de ajuste de TC en el texto extraído)",
+  "notas_y_exclusiones": [
+   "No incluye válvulas ni instrumentación",
+   "Cláusulas BCRA: sin multas por mora si hay material importado",
+   "Licencias No Automáticas: ITTSA no responsable de atrasos",
+   "ITTSA sugiere que el cliente provea material/equipos importados (chapas, instrumentos, válvulas) en comodato o deducible de futuras facturas"
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Ricardo Lopez",
+   "empresa": "Endress",
+   "rol": "cliente",
+   "cargo": null,
+   "email": "ricardo.lopez@endress.com",
+   "telefono": null
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Coordinador de proyectos",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54-11-5352-0000 / +54 9 11 6001-5205"
+  }
+ ],
+ "aprendizajes": [
+  "Estructura de la oferta: skid con piping y ensayos pero sin válvulas ni instrumentación; la Rev 1 sumó cajas de conexionado, componentes eléctricos y FAT y unificó en un solo skid",
+  "Con alcance reducido a un skid el precio es USD 31.772,68 contra USD 49.775,54 de los dos skids de la Rev 0 (A: 29.059,30; B: 20.716,24)",
+  "END exigidos: tintas 100%, ultrasonido y RX 30% de las soldaduras",
+  "Plazo de 60 días condicionado al acopio de materiales"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "4.Armado de la Oferta Comercial/OE 374- 25 Rev-1.pdf",
+  "plazo": "4.Armado de la Oferta Comercial/OE 374- 25 Rev-1.pdf",
+  "revisiones": "4.Armado de la Oferta Comercial/OE 374- 25.pdf"
+ },
+ "problemas": [
+  "Sin proveedores, sin costos, sin factor ni OC",
+  "Rev 0 y Rev 1 tienen la misma fecha (12/06/2025) y no se sabe cuál se envió; se tomó Rev 1",
+  "La Rev 1 pasó de dos skids a uno sin explicar el cambio de alcance",
+  "En el PDF Rev 0 el encabezado de las páginas 3-4 dice 'N° 0-373 25' (error de plantilla)",
+  "IVA Rev 0: total cotizado 60.228,41 coherente con 49.775,54 + 10.452,86"
+ ]
+}

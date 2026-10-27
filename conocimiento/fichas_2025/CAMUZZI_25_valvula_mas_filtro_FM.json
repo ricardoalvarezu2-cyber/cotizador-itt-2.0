@@ -1,0 +1,208 @@
+{
+ "carpeta": "CAMUZZI/25. valvula mas filtro FM",
+ "cliente": "Camuzzi Gas Pampeana / Camuzzi Gas del Sur S.A.",
+ "cliente_final": null,
+ "numero_oferta": "0-390 25 Rev 1",
+ "revisiones": "Original (04/08/2025) y Rev 1 (18/08/2025) con los mismos precios; la Rev 1 corrige el error de tipeo en bridas del FM (S-150 -> S-600) según mail del 12/08/2025. El PDF de la Rev 1 lleva fecha impresa 04/08/2025 y pie 22/10/2024 (plantilla).",
+ "fecha_oferta": "2025-08-04",
+ "fecha_ultima_modificacion": "2025-12-30",
+ "referencia_cliente": "Concurso de Precios N° 19568 'Válvula de retención y Filtro FM' (portal de compras Camuzzi); OC 4500157448; NV ITT 467",
+ "familia": "F",
+ "descripcion_corta": "Filtro FM-10 simple módulo S-600 con pollera y DPI + válvula de retención a clapeta 10\" S-600",
+ "items": [
+  {
+   "descripcion": "Válvula de retención horizontal a clapeta Ø10\", bridada RF, S-600, según SCE-IN-501-0007-0 ET y protección anticorrosiva SCE-PC-511-0003 (cód. Camuzzi 1002-204-0328)",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 4716.55,
+   "precio_total": 4716.55,
+   "moneda": "USD",
+   "datos_tecnicos": "10\" S600 RF, cuerpo acero al carbono, montaje inox, bonete abulonado, pasaje libre"
+  },
+  {
+   "descripcion": "Filtro FM-10 simple módulo S-600, con pollera de apoyo y manómetro de presión diferencial (DPI); incluye manifold y manómetro de presión estática y dos válvulas esféricas de purga (bloqueo + sacrificio) (cód. 1004-201-0185)",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 30401.74,
+   "precio_total": 30401.74,
+   "moneda": "USD",
+   "datos_tecnicos": "Pd = 82 kg/cm2, S-600, espesor de cuerpo 20,62 mm; según SCE-RE-512-0004 ET, SCE-RE-112-0004-2 PL, SCE-PC-511-0003"
+  }
+ ],
+ "monto_total_ofertado": 35118.29,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": 2700,
+  "terceros": 5185.05,
+  "otros": null
+ },
+ "plazo_ofrecido": "135 días de recibida la orden de compra",
+ "plazo_dias": 135,
+ "condiciones": {
+  "pago": "100% a 30 días fecha de factura (transferencia)",
+  "validez": "30 días corridos",
+  "entrega": "Transporte del cliente en CABA (pliego: flete a cargo del proveedor hasta Transporte Cruz del Sur, Mercado Central nave D3, E. Echeverría)",
+  "moneda_y_ajuste": "Precios en USD, facturados en pesos al TC BNA de la fecha de factura; se cancela al TC BNA vendedor del día anterior al pago; NC/ND si variación > 3%",
+  "notas_y_exclusiones": [
+   "Nota BCRA: sin multas por mora si hay material importado",
+   "Licencias No Automáticas: ITT no responsable de atrasos",
+   "Material importado (chapas, instrumentos, válvulas) preferentemente provisto por el cliente en comodato o deducible de facturas",
+   "Total con IVA 21% informado: USD 42.493,13 (IVA 7.374,84)"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Taval S.A.",
+   "que": "Válvula retención 10\" 600 RF ASTM A216 WCB trim 8 s/palanca (cód. R012504R01008S) - compra a China",
+   "precio": 5185.05,
+   "moneda": "USD",
+   "plazo_entrega": "120 días",
+   "fecha": "2025-07-29"
+  },
+  {
+   "proveedor": "Edgardo Ledesma (taller, mano de obra)",
+   "que": "Armado, trazado, soldadura, internos y pollera del filtro FM simple módulo S600, esp. cuerpo 20,62 mm (Presupuesto 20039; MO, herramientas, SVO, ART)",
+   "precio": 2700,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2025-07-31"
+  }
+ ],
+ "resultado": "ganada (hay OC)",
+ "orden_compra": {
+  "numero": "4500157448",
+  "fecha": "2025-08-26",
+  "monto": 4716.55
+ },
+ "contactos": [
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Coordinador de proyectos / Representante Técnico Comercial",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54 11 5352-0000 / +54 9 11 6001-5205"
+  },
+  {
+   "nombre": "Emiliano Toscano",
+   "empresa": "Camuzzi Gas del Sur S.A.",
+   "rol": "cliente",
+   "cargo": "Gcia. Abastecimiento, Obras y Almacenes",
+   "email": "emiliano.toscano@camuzzigas.com.ar",
+   "telefono": "+54 11 2393-5823"
+  },
+  {
+   "nombre": "Compras Camuzzi",
+   "empresa": "Camuzzi Gas Pampeana / del Sur",
+   "rol": "cliente",
+   "cargo": "Gerencia de Abastecimiento, Obras y Servicios",
+   "email": "compras@camuzzigas.com.ar",
+   "telefono": "+54 11 5776-7000"
+  },
+  {
+   "nombre": "Camila Gonzalez",
+   "empresa": "Taval S.A.",
+   "rol": "proveedor",
+   "cargo": "Representante Técnico Comercial",
+   "email": "cgonzalez@taval.com.ar",
+   "telefono": "+54 9 11 3988 6457 (int. 242) / +54 9 11 5920 4848"
+  },
+  {
+   "nombre": "Brian Raminger",
+   "empresa": "Taval S.A.",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": "braminger@taval.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Oscar Fuentes Sanchez",
+   "empresa": "Taval S.A.",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": "ofuentes@taval.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Lucas Leonardo Valdez",
+   "empresa": "Taval S.A.",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": "LValdez@taval.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Carina Bisagno",
+   "empresa": "Taval S.A.",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": "cbisagno@taval.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Claudio Lagar",
+   "empresa": "Taval S.A.",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": "clagar@taval.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Edgardo Ledesma",
+   "empresa": "Ledesma (taller de MO)",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": "edgardoledesma68@hotmail.com",
+   "telefono": "1166341630"
+  },
+  {
+   "nombre": "Guillermo Vicens",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": null,
+   "email": "gvicens@ittsa.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Bernardo Visconti",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": null,
+   "email": "bvisconti@ittsa.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Pablo Aguerre",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Compras (recibe pedido de OC a Taval)",
+   "email": "paguerre@ittsa.com.ar",
+   "telefono": null
+  }
+ ],
+ "aprendizajes": [
+  "La OC 4500157448 (USD 4.716,55) cubre SOLO la válvula de retención 10\"; el filtro FM (USD 30.401,74) no figura en la OC ni hay otra en la carpeta: se adjudicó parcialmente o el filtro se perdió/queda pendiente. No tomar 35.118,29 como monto ganado.",
+  "La válvula se vendió a USD 4.716,55 contra costo Taval 5.185,05 con bonificación del 10% pedida por ITT (~4.666,55): margen casi nulo (factor ~1,01), pese a que ITT ofertó. Para válvulas de reventa de Taval conviene tomar factor mayor o cotizar directamente como Taval (sugerencia de Taval).",
+  "Filtro FM-10 S600: la MO de taller tercerizada (Ledesma) fue USD 2.700 (armado, soldadura, internos, pollera, cuerpo 20,62 mm); materiales del filtro (cuerpo, bridas, internos, instrumentos) no están documentados en la carpeta, así que el costo del filtro no se puede reconstruir.",
+  "Plazo ofertado 135 días porque la válvula es de importación (China, Taval 120 días); el cliente envió la OC con error (Ø12\" en vez de Ø10\" y sin plazo) y se reemitió el 28/08/2025. Aviso de despacho de la válvula estimado 15/01/2026."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "4.Armado de la Oferta Comercial/OE 390- 25 Rev 1.pdf (coincide con Planilla de cotizaci n Concurso N 19568 REV 1.xlsx)",
+  "plazo_ofrecido": "4.Armado de la Oferta Comercial/OE 390- 25 Rev 1.pdf",
+  "orden_compra": "8.Orden de Compra/4500157448.PDF",
+  "proveedores": "5.Proveedores 3ros/Taval Presupuesto 23334.pdf; 5.Proveedores 3ros/Presupuesto ITT N° 20039 31-07-25.docx",
+  "bonificacion_taval": "5.Proveedores 3ros/Presupuesto Taval RV_ ... NV 467.msg",
+  "despacho": "4.Armado de la Oferta Comercial/Aviso al cliente entrega 15-01 ... .msg"
+ },
+ "problemas": [
+  "No hay planilla de costos ni factor en la carpeta; el factor ~1,01 de la válvula es cálculo propio (4.716,55 / (5.185,05*0,9))",
+  "Falta confirmar si el filtro FM fue adjudicado (OC solo menciona la válvula)",
+  "Fecha impresa del PDF de oferta (04/08/2025 en la Rev 1) y pie 22/10/2024 son residuos de plantilla",
+  "Edgardo Ledesma: presupuesto 20039 es el del filtro; 20037 y 20038 (adjuntos del mail) no están en la carpeta",
+  "El monto de la OC se leyó del PDF; la fecha 26/08/2025 es la del pedido, reemitido el 28/08/2025 con corrección"
+ ]
+}

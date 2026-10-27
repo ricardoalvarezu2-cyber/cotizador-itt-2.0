@@ -1,0 +1,50 @@
+{
+ "proveedores": [],
+ "orden_compra": null,
+ "carpeta": "TAVAL/39- YPF- SEPARADOR GENERAL",
+ "cliente": "YPF (vía Taval)",
+ "cliente_final": "YPF",
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2025-10-03",
+ "referencia_cliente": "Licitación YPF - Separador general (Anexo A / Anexo 3 Listado de subproveedores sugeridos)",
+ "familia": "SEP",
+ "descripcion_corta": "Solo documentación del cliente: Anexo 3 con listados de subproveedores sugeridos por YPF (instrumentación, electricidad, NOC); no hay oferta ni costos",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "resultado": "sin resultado",
+ "contactos": [],
+ "aprendizajes": [
+  "YPF exige proveedores de listas aprobadas (vendor lists NOC / Instrumentación / Electricidad por regional): verificar marca antes de cotizar",
+  "Vendor list NOC (23/09/2025) lista para accesorios A105, A234, bridas y caños: por ejemplo bridas Francovigh, Futura, Sumpetrol; accesorios Cintolo, Sidemet; caños Siderca, Provemet, Klockmetal, Sidemet",
+  "Para caudalímetros de gas YPF lista Daniel (Emerson), Krohne (Meditecna), Instromet, Sensia, E+H, entre otros"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "vendor_lists": "01- DOCUMENTOS/TAVAL/ANEXO A/03.ANEXO 3_Subproveedores/Proveedores NOC_230929.xlsx"
+ },
+ "problemas": [
+  "La carpeta solo contiene el Anexo 3 de subproveedores; sin oferta, costos, plazos ni OC",
+  "Fechas internas de los xlsx variadas (2025-06-19 a 2025-09-28)",
+  "No se leyeron completas las planillas (solo el comienzo), pero son listas genéricas de proveedores"
+ ]
+}

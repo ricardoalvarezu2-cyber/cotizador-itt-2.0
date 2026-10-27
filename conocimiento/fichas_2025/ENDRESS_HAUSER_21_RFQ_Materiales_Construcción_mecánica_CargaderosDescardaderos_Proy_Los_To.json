@@ -1,0 +1,83 @@
+{
+ "carpeta": "ENDRESS HAUSER/21. RFQ Materiales+Construcción mecánica CargaderosDescardaderos Proy. Los Toldos Techint-Tecpetrol",
+ "cliente": "Endress (Endress + Hauser)",
+ "cliente_final": "Techint / Tecpetrol (Proyecto Los Toldos)",
+ "numero_oferta": "0-380 25",
+ "revisiones": "Una sola versión (PDF y DOCX del 07/07/2025)",
+ "fecha_oferta": "2025-07-07",
+ "fecha_ultima_modificacion": "2025-07-07",
+ "referencia_cliente": "RFQ Materiales + construcción mecánica Cargaderos/Descargaderos, Proyecto Los Toldos",
+ "familia": "SK",
+ "descripcion_corta": "Fabricación de 2 skids cargadero/descargadero (materiales de piping, ensayos, FAT, dossier), sin válvulas ni instrumentación",
+ "items": [
+  {
+   "descripcion": "Skid Cargadero/Descargadero: materiales, piping y accesorios, corte/biselado, cajas de conexionado, componentes eléctricos, END (tintas 100%, UT, RX 30%), tratamiento superficial, FAT, dossier",
+   "cantidad": 2,
+   "unidad": "un",
+   "precio_unitario": 38592.55,
+   "precio_total": 77185.11,
+   "moneda": "USD",
+   "datos_tecnicos": "No incluye válvulas ni instrumentación"
+  }
+ ],
+ "monto_total_ofertado": 77185.11,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "60 días desde la recepción de la OC sujeto al acopio de los materiales",
+ "plazo_dias": 60,
+ "condiciones": {
+  "pago": "30 ddf",
+  "validez": "30 días corridos",
+  "entrega": "Planta ITT, Quilmes",
+  "moneda_y_ajuste": "USD facturado en pesos al TC BNA; NC/ND si variación >3%",
+  "notas_y_exclusiones": [
+   "Valor 77.185,11 USD sin IVA (IVA 16.208,87; total 93.393,98)",
+   "No incluye válvulas ni instrumentación",
+   "Cláusula BCRA: ITT no acepta multas por mora si hay material importado; licencias no automáticas sin responsabilidad de ITT; material importado a proveer por el cliente en comodato o deducible de facturas"
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Ricardo López",
+   "empresa": "Endress",
+   "rol": "cliente",
+   "cargo": "destinatario",
+   "email": "ricardo.lopez@endress.com",
+   "telefono": null
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "emisor",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54-11-6001-5205"
+  }
+ ],
+ "aprendizajes": [
+  "Skid de carga/descarga ~38,6 kUSD c/u incluyendo materiales de piping, sin válvulas ni instrumentación.",
+  "Ensayos exigidos: tintas 100% de soldaduras, UT y RX 30%, más FAT y dossier.",
+  "Plazo de 60 días atado al acopio de materiales (importados)."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto": "ENDRESS HAUSER/21. RFQ Materiales+Construcción mecánica CargaderosDescardaderos Proy. Los Toldos Techint-Tecpetrol/4.Armado de la Oferta Comercial/OE 380-25.pdf",
+  "plazo": "ENDRESS HAUSER/21. RFQ Materiales+Construcción mecánica CargaderosDescardaderos Proy. Los Toldos Techint-Tecpetrol/4.Armado de la Oferta Comercial/OE 380-25.pdf",
+  "condiciones": "ENDRESS HAUSER/21. RFQ Materiales+Construcción mecánica CargaderosDescardaderos Proy. Los Toldos Techint-Tecpetrol/4.Armado de la Oferta Comercial/OE 380-25.pdf"
+ },
+ "problemas": [
+  "Sin costos, factor ni proveedores en la carpeta.",
+  "Sin orden de compra: resultado desconocido.",
+  "Falta la documentación técnica del RFQ (no hay carpeta 1.)."
+ ]
+}

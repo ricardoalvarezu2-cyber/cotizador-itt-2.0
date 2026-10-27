@@ -1,0 +1,94 @@
+{
+ "carpeta": "TAVAL/4-YPF- FILTROS PTC LAS - Doc5131773884 (2 un)",
+ "cliente": "TAVAL",
+ "cliente_final": "YPF (PTC LAS)",
+ "numero_oferta": "0-364 25 (OE 364-25)",
+ "revisiones": "Sin revisiones",
+ "fecha_oferta": "2025-05-09",
+ "fecha_ultima_modificacion": "2025-05-09",
+ "referencia_cliente": "Filtros estáticos 1810 - YPF Doc5131773884 (FIL FCC937 y FIL FCC936)",
+ "familia": "F",
+ "descripcion_corta": "Mano de obra de fabricación de 2 filtros (cartucho FCC937 y bolsa FCC936, agua fresca HD-065/HD-064)",
+ "items": [
+  {
+   "descripcion": "Mano de obra para FIL FCC937 filtro cartucho agua fresca HD-065. Incluye corte y biselado, soldadura de piping y accesorios, consumibles, ingeniería, END, tratamiento superficial, data book",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 31617.37,
+   "precio_total": 31617.37,
+   "moneda": "USD",
+   "datos_tecnicos": "Sin datos dimensionales"
+  },
+  {
+   "descripcion": "Mano de obra para FIL FCC936 filtro bolsa agua fresca HD-064. Mismo alcance",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 23056.28,
+   "precio_total": 23056.28,
+   "moneda": "USD",
+   "datos_tecnicos": "Sin datos dimensionales"
+  }
+ ],
+ "monto_total_ofertado": 54673.66,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "75/90 días desde la recepción de la OC y aprobación de la ingeniería (entregas parciales)",
+ "plazo_dias": 90,
+ "condiciones": {
+  "pago": "30 días fecha de factura",
+  "validez": "30 días corridos",
+  "entrega": "Nuestra planta, Quilmes Oeste",
+  "moneda_y_ajuste": "Precios en USD (cláusula de TC no visible en el texto)",
+  "notas_y_exclusiones": [
+   "Solo mano de obra: los materiales (el cuerpo/recipiente, etc.) no están en el precio y no se detalla quién los provee",
+   "Cláusulas BCRA: sin multas por mora si hay material importado",
+   "Licencias No Automáticas: ITTSA no responsable de atrasos",
+   "ITTSA sugiere que el cliente provea material/equipos importados (chapas, instrumentos, válvulas) en comodato o deducible de futuras facturas"
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Pablo Rangoño",
+   "empresa": "Taval",
+   "rol": "cliente",
+   "cargo": null,
+   "email": "prangoño@tavalsa.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Coordinador de proyectos",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54-11-5352-0000 / +54 9 11 6001-5205"
+  }
+ ],
+ "aprendizajes": [
+  "Oferta a Taval de solo mano de obra por filtro (USD 23.056 a 31.617 por unidad), con ingeniería, END, tratamiento superficial y data book incluidos",
+  "Es un trabajo con material provisto por el cliente (Taval/YPF); aclarar siempre quién suministra el equipo base",
+  "El filtro de cartucho cuesta ~37% más en mano de obra que el de bolsa (31.617 vs 23.056)",
+  "Plazo 75/90 días condicionado a ingeniería aprobada"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "4.Armado de la Oferta Comercial/OE 364- 25.pdf",
+  "plazo": "4.Armado de la Oferta Comercial/OE 364- 25.pdf"
+ },
+ "problemas": [
+  "Solo hay la oferta; sin costos, factor, proveedores ni OC",
+  "Referencia en la carpeta dice '2 un'; el mail 'prangoño@tavalsa.com.ar' tiene ñ (posible error de tipeo)",
+  "Suma de renglones 54.673,65 vs Valor declarado 54.673,66",
+  "Fecha de pie de página 22/10/2024 es resto de plantilla"
+ ]
+}

@@ -1,0 +1,149 @@
+{
+ "carpeta": "YPF/22. FILTROS PTC LAS - Doc5131773884 (2 un)",
+ "cliente": "YPF SA",
+ "cliente_final": null,
+ "numero_oferta": "0-363 25",
+ "revisiones": "Una sola OE 363-25 (PDF y DOCX del 09/05/2025). En la carpeta hay además un borrador 'OE xxxx.docx' (25/03/2025, ref C5092 / Doc 5074438419, filtros canasto Ø18/Ø24, 2.734.240 USD) que parece de otro pedido y no se usó.",
+ "fecha_oferta": "2025-05-09",
+ "fecha_ultima_modificacion": "2025-05-09",
+ "referencia_cliente": "Doc 5131773884 (cesta 22780112, portal YPF) - Filtros estáticos 1810 PTC LAS",
+ "familia": "F",
+ "descripcion_corta": "Fabricación de 2 filtros (bolsa y cartucho, agua fresca) FCC936 y FCC937, con RDO/RCP y plataforma opcional",
+ "items": [
+  {
+   "descripcion": "Fabricación FCC936 filtro bolsa agua fresca HD-064 (corte/biselado, soldadura piping, consumibles ingeniería, END, tratamiento superficial, data book)",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 49363.41,
+   "precio_total": 49363.41,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "RDO FCC936 filtro bolsa agua fresca RI-025",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 4210.5,
+   "precio_total": 4210.5,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "RCP FCC936 filtro bolsa agua fresca RI-025",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 22.5,
+   "precio_total": 22.5,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "Opcional plataforma y escalera FCC936",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 2827.96,
+   "precio_total": 2827.96,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "Fabricación FIL FCC937 filtro cartucho agua fresca HD-065 (mismo alcance)",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 69095.6,
+   "precio_total": 69095.6,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "RDO FCC937 filtro cartucho agua fresca RI-025",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 5538.0,
+   "precio_total": 5538.0,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "RCP FCC937 filtro cartucho agua fresca RI-025",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 375.0,
+   "precio_total": 375.0,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "Opcional plataforma y escalera FCC937",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 2839.96,
+   "precio_total": 2839.96,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  }
+ ],
+ "monto_total_ofertado": 134272.94,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "75/90 días desde la recepción de la OC y aprobación de la ingeniería (entregas parciales)",
+ "plazo_dias": 90,
+ "condiciones": {
+  "pago": "30 días fecha de factura",
+  "validez": "30 días corridos",
+  "entrega": "Planta ITT, Quilmes Oeste",
+  "moneda_y_ajuste": "USD facturado en pesos al TC BNA fecha de factura; NC/ND si variación >3%",
+  "notas_y_exclusiones": [
+   "Total 134.272,94 USD sin IVA (IVA 28.197,32; total 162.470,26) incluye plataformas y escaleras opcionales; el detalle sin plataformas suma 128.605,01 USD (coincide con Planilla Cotizacion.xls, base del portal YPF)",
+   "Cláusula BCRA: ITT no acepta multas por mora si hay material importado; licencias no automáticas sin responsabilidad de ITT; material importado a proveer por el cliente en comodato o deducible de facturas"
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "María Eugenia Cima",
+   "empresa": "YPF SA",
+   "rol": "cliente",
+   "cargo": "destinatario",
+   "email": "PORTAL",
+   "telefono": null
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "emisor de la oferta",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54-11-6001-5205"
+  }
+ ],
+ "aprendizajes": [
+  "YPF cotiza por portal con planilla (cesta/posición) y precios unitarios; se desglosa el filtro, el RDO/RCP (documentación) y las plataformas como opcionales.",
+  "Los RDO/RCP son documentos de ingeniería de bajo valor (22,50 a 5.538 USD) cotizados como ítems aparte.",
+  "El filtro cartucho (69.096) cuesta ~40% más que el de bolsa (49.363) con el mismo alcance de fabricación.",
+  "La oferta no incluye materiales de filtrado internos ni instrumentación explícitamente (no se detalla): confirmar alcance al repetir."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto": "YPF/22. FILTROS PTC LAS - Doc5131773884 (2 un)/4.Armado de la Oferta Comercial/OE 363- 25.pdf",
+  "items": "YPF/22. FILTROS PTC LAS - Doc5131773884 (2 un)/4.Armado de la Oferta Comercial/OE 363- 25.pdf",
+  "plazo": "YPF/22. FILTROS PTC LAS - Doc5131773884 (2 un)/4.Armado de la Oferta Comercial/OE 363- 25.pdf",
+  "condiciones": "YPF/22. FILTROS PTC LAS - Doc5131773884 (2 un)/4.Armado de la Oferta Comercial/OE 363- 25.pdf",
+  "sin_plataformas": "YPF/22. FILTROS PTC LAS - Doc5131773884 (2 un)/4.Armado de la Oferta Comercial/Planilla Cotizacion.xls"
+ },
+ "problemas": [
+  "Sin costos ni factor en la carpeta (no hay planillas de costo ni proveedores).",
+  "Sin orden de compra: resultado desconocido.",
+  "Pie de la oferta con fecha 22/10/2024 (plantilla no actualizada).",
+  "'OE xxxx.docx' de otro pedido (Doc 5074438419) mezclado en la carpeta; no se usó."
+ ]
+}

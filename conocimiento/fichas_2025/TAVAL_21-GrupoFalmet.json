@@ -1,0 +1,95 @@
+{
+ "carpeta": "TAVAL/21-GrupoFalmet",
+ "cliente": "Grupo Falmet",
+ "cliente_final": null,
+ "numero_oferta": "0-408 25 Rev 1 (Rev 0: oferta técnica Taval N° 23754 / OE 408-25)",
+ "revisiones": "2 versiones: Rev 0 del 09/10/2025 (emitida por Taval, 25.598,39 USD, filtros 8\" y 16\") y Rev 1 del 31/10/2025 (emitida por ITT, 21.621,92 USD, filtros 4\" y 12\"). Se tomó Rev 1.",
+ "fecha_oferta": "2025-10-31",
+ "fecha_ultima_modificacion": "2025-10-31",
+ "referencia_cliente": "Cotización de filtros canastos; códigos internos UT32-F-601 A/B y UT32-F-602 A/B",
+ "familia": "F",
+ "descripcion_corta": "2 filtros canasto de hidrocarburos 4\" y 2 filtros canasto de agua recuperada 12\", acero al carbono, canasto SS316L",
+ "items": [
+  {
+   "descripcion": "Fabricación filtro hidrocarburos Ø4\" UT32-F-601 A/B, canasto SS316L, micronaje 6,0 mm, incluye materiales, soldadura, ensayos (RX, LP, PH), montaje, memoria de cálculo PVElite ASME VIII Div.1, planos, hoja de datos, data book",
+   "cantidad": 2,
+   "unidad": "un",
+   "precio_unitario": 3820.28,
+   "precio_total": 7640.56,
+   "moneda": "USD",
+   "datos_tecnicos": "10 a 70 °C operación; diseño -10 a 80 °C; 10 m3/h; 2 kg/cm2; cuerpo acero al carbono; no incluye pintura, tracing ni aislación"
+  },
+  {
+   "descripcion": "Fabricación filtro agua recuperada Ø12\" UT32-F-602 A/B, canasto SS316L, micronaje 2,0 mm, mismo alcance",
+   "cantidad": 2,
+   "unidad": "un",
+   "precio_unitario": 6990.68,
+   "precio_total": 13981.35,
+   "moneda": "USD",
+   "datos_tecnicos": "10 a 70 °C; 61 m3/h; 2 kg/cm2; cuerpo acero al carbono; no incluye pintura, tracing ni aislación"
+  }
+ ],
+ "monto_total_ofertado": 21621.92,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "60/75 días de recibida la orden de compra e ingeniería aprobada",
+ "plazo_dias": 75,
+ "condiciones": {
+  "pago": "30 días fecha factura",
+  "validez": "30 días corridos",
+  "entrega": "Planta ITT, Quilmes",
+  "moneda_y_ajuste": "USD sin IVA; facturado en ARS al TC BNA fecha de factura",
+  "notas_y_exclusiones": [
+   "No incluye pintura ni tracing y aislación (adicional si se requiere)",
+   "Precios en USD facturados en pesos al TC BNA de la fecha de factura; NC/ND si la variación supera 3%",
+   "Sin multas por mora si hay material importado (condición BCRA); sin responsabilidad por licencias no automáticas",
+   "ITT sugiere que el material importado (chapas, instrumentos, válvulas) sea provisto por el cliente en comodato o deducible de facturas"
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Gustavo Contreras",
+   "empresa": "Grupo Falmet",
+   "rol": "cliente",
+   "cargo": null,
+   "email": "gcontreras@grupofalmet.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "Taval S.A. / ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Coordinador de proyectos",
+   "email": "calfonso@ittsa.com.ar (Rev 0 con calfonso@taval.com.ar)",
+   "telefono": "+54 11 6001-5205"
+  }
+ ],
+ "aprendizajes": [
+  "Rev 1 bajó el alcance y el precio (21.622 vs 25.598 USD): diámetros 8\"/16\" pasaron a 4\"/12\", presión de 18,6 a 2 kg/cm2, sin pintura epoxy ni tratamiento superficial. Precio de un filtro depende fuertemente de diámetro y presión de diseño.",
+  "Referencia de precio por unidad (Rev 1): filtro canasto 4\" a 2 kg/cm2 = 3.820 USD; 12\" a 2 kg/cm2 = 6.991 USD.",
+  "Incluye ingeniería (memoria PVElite, planos, HD, data book), ensayos y montaje, pero excluye pintura y aislación: aclararlo siempre.",
+  "La carpeta es de Taval; Rev 0 la emitió Taval y Rev 1 se emitió desde ITT directo al cliente final."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto": "4.Armado de la Oferta Comercial/OE 408-25 Rev1.pdf",
+  "plazo": "4.Armado de la Oferta Comercial/OE 408-25 Rev1.pdf",
+  "rev0": "4.Armado de la Oferta Comercial/OE 408-25.pdf y .docx"
+ },
+ "problemas": [
+  "Sin planilla de costos ni proveedores: costo y factor desconocidos",
+  "Pie de página con fecha 22/10/2024 (plantilla)",
+  "Rev 0 muestra 25.598,39 solo en el docx; el PDF de Rev 0 está truncado (sin total)",
+  "No hay OC ni propuesta enviada en la carpeta"
+ ]
+}

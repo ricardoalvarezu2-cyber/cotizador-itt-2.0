@@ -1,0 +1,243 @@
+{
+ "carpeta": "TAVAL/7-CAPEX- SEPARADOR BIFASICO",
+ "cliente": "TAVAL (oferta enviada a Capex, grupo Capsa)",
+ "cliente_final": "Capex (Aguada del Cajón, según hoja de datos Fisher)",
+ "numero_oferta": "0-377-25",
+ "revisiones": "Una oferta en PDF (OE 377-25). Dos versiones del Excel de licitación Lic_EBP0000673: la (1) con USD 411,712.93 y la 'final' con USD 309,700.65.",
+ "fecha_oferta": "2025-06-25",
+ "fecha_ultima_modificacion": "2025-06-27",
+ "referencia_cliente": "Lic_EBP0000673 / Separador bifásico OQ23 390 (V-048 CAP); OC-21930",
+ "familia": "SEP",
+ "descripcion_corta": "Fabricación de separador bifásico Capex (materiales, piping, componentes eléctricos, END, FAT, dossier), con instrumentación comprada a terceros.",
+ "items": [
+  {
+   "descripcion": "Fabricación de separador bifásico: materiales, piping y accesorios, corte y biselado, cajas de conexionado, componentes eléctricos, END (tintas 100%, UT y RX 30%), tratamiento superficial, FAT, dossier. No incluye traslado a planta del cliente.",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 309700.65,
+   "precio_total": 309700.65,
+   "moneda": "USD",
+   "datos_tecnicos": "Separador bifásico; el Excel menciona envolvente de Ø1600 mm (la alternativa de stock es de Ø1800 mm). Caudal 1500 m3/día, densidad 824.5 kg/m3, presión de diseño 19 kg/cm2g, 7-13 kg/cm2g de trabajo, clase I zona 2 IIA T3."
+  }
+ ],
+ "monto_total_ofertado": 309700.65,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "200 días desde la recepción de la OC sujeto al acopio de los materiales. Alternativa con 140 días.",
+ "plazo_dias": 200,
+ "condiciones": {
+  "pago": "30 ddf (el portal del cliente indica 140 en Cond.Pago)",
+  "validez": "30 días corridos",
+  "entrega": "Planta ITTSA, Quilmes (no incluye traslado a planta del cliente)",
+  "moneda_y_ajuste": "Precios en USD, facturados en pesos al TC BNA de fecha de factura; cancelación al TC BNA vendedor del día anterior al pago, con NC/ND si la variación supera 3%.",
+  "notas_y_exclusiones": [
+   "No incluye traslado a planta del cliente.",
+   "Alternativa técnica: envolvente y casquetes de stock de Ø1800 mm (200 mm más que lo requerido) con mejora de precio y 60 días menos de plazo (en la primera versión del Excel).",
+   "Se usa el caudalímetro Coriolis de stock de ITT (Induquip confirma compatibilidad el 25/06/2025: sensor de 3\" con bridas de 4\" 150#).",
+   "Material de origen importado: ITTSA no acepta multas por mora en las entregas (condición resolutoria BCRA).",
+   "Si el producto cae bajo Licencias No Automáticas, ITTSA no responde por atrasos.",
+   "ITTSA sugiere que el material importado (chapas, instrumentos, válvulas) lo provea el cliente en comodato o deducible de facturas futuras."
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Induquip Ingeniería (Emerson)",
+   "que": "2 válvulas de seguridad Crosby 4L6JLTJOS-E35J, PSV-12A/B (USD 4,413.92 c/u)",
+   "precio": 8827.84,
+   "moneda": "USD",
+   "plazo_entrega": "14-16 semanas",
+   "fecha": "2025-06-13"
+  },
+  {
+   "proveedor": "Induquip Ingeniería (Emerson)",
+   "que": "2 válvulas de control Fisher NPS 3 ET, DVC6200, LV-18A/B (USD 16,833.75 c/u)",
+   "precio": 33667.5,
+   "moneda": "USD",
+   "plazo_entrega": "14 semanas",
+   "fecha": "2025-06-13"
+  },
+  {
+   "proveedor": "Induquip Ingeniería (Emerson)",
+   "que": "Instrumentación (transmisores y sensores Rosemount, ej. PIT-16 USD 1,488.61 y TT/TE-13 USD 342.25)",
+   "precio": 27980.64,
+   "moneda": "USD",
+   "plazo_entrega": "14-16 semanas",
+   "fecha": null
+  },
+  {
+   "proveedor": "CV Control",
+   "que": "2 válvulas de control globo 3\" 150# Optimux OpGL, LV-18A/B (PE47948-R0), USD 26,338 c/u",
+   "precio": 52676.0,
+   "moneda": "USD",
+   "plazo_entrega": "90 días",
+   "fecha": "2025-06-11"
+  },
+  {
+   "proveedor": "CV Control",
+   "que": "Caudalímetro Coriolis Yokogawa RCUS39S, 4\" 150# (PE47953-R0)",
+   "precio": 26287.0,
+   "moneda": "EUR",
+   "plazo_entrega": "90-110 días",
+   "fecha": "2025-06-11"
+  },
+  {
+   "proveedor": "TAVAL S.A.",
+   "que": "Caudalímetro Coriolis Krohne OPTIMASS 6000 3\" 150# con MFC 400 (cotización 090294)",
+   "precio": 19000.0,
+   "moneda": "USD",
+   "plazo_entrega": "90 días",
+   "fecha": "2025-06-12"
+  },
+  {
+   "proveedor": "ESCO (Soluciones Integrales en Automatización y Control)",
+   "que": "Caudalímetro Coriolis Rheonik RHM60/RHE42 4\" 150# (oferta 18343 rev.0)",
+   "precio": 34118.0,
+   "moneda": "EUR",
+   "plazo_entrega": "90-120 días",
+   "fecha": "2025-06-12"
+  },
+  {
+   "proveedor": "TAVAL S.A.",
+   "que": "Lista de válvulas manuales (oferta técnico-económica en Excel adjunto, no extraído)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2025-06-11"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Diego Schlebusch",
+   "empresa": "Capex (grupo Capsa)",
+   "rol": "cliente",
+   "cargo": null,
+   "email": "diego.schlebusch@grupocapsa.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Coordinador de proyectos",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54-11-6001-5205"
+  },
+  {
+   "nombre": "Lautaro Valenzuela",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Compras y Contrataciones",
+   "email": "lvalenzuela@ittsa.com.ar",
+   "telefono": "(+54 11) 5352-0000 / (+54 9 11) 2307-8952"
+  },
+  {
+   "nombre": "Guillermo Vicens",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Gte. Ingeniería",
+   "email": "gvicens@ittsa.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Bernardo Visconti",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": null,
+   "email": "bvisconti@ittsa.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Pablo Aguerre",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": null,
+   "email": "paguerre@ittsa.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Valentín Milone",
+   "empresa": "Induquip Ingeniería S.R.L. (representante Emerson)",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": "valentinmilone@induquip.com.ar",
+   "telefono": "+54 9 221 566-9262"
+  },
+  {
+   "nombre": "Diego Ghener",
+   "empresa": "Induquip Ingeniería S.R.L.",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": "diegoghener@induquip.com.ar",
+   "telefono": "(0221) 425-9749"
+  },
+  {
+   "nombre": "Hector Javier Aguilera",
+   "empresa": "Taval S.A.",
+   "rol": "proveedor",
+   "cargo": "Representante Técnico de Ventas",
+   "email": "haguilera@taval.com.ar",
+   "telefono": "(+54 11) 5236 6600 / (+54 9 11) 2383 6034"
+  },
+  {
+   "nombre": "Sergio Ortega",
+   "empresa": "ESCO",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": "sortega@escoarg.com.ar",
+   "telefono": "(54.11) 2120-4500"
+  },
+  {
+   "nombre": "María Victoria Martelo",
+   "empresa": "CV Control",
+   "rol": "proveedor",
+   "cargo": "Ing., Div. Instrumentación y Control",
+   "email": null,
+   "telefono": null
+  },
+  {
+   "nombre": "Alberto Lamponi",
+   "empresa": "CV Control",
+   "rol": "proveedor",
+   "cargo": "Ing., Div. Válvulas y Accesorios",
+   "email": null,
+   "telefono": null
+  }
+ ],
+ "aprendizajes": [
+  "Se pidieron cotizaciones en paralelo para instrumentos críticos (Coriolis, válvulas de control, PSV) con 2 días de margen antes de la fecha de presentación; los plazos de importados (90-120 días) fijan el plazo total.",
+  "ITT ahorró un Coriolis usando el equipo de stock (compatibilidad confirmada por Induquip el 25/06/2025); revisar stock antes de cotizar instrumentos.",
+  "Se cotizaron en paralelo cuatro Coriolis (USD 19.000 Krohne, EUR 26.287 Yokogawa, EUR 34.118 Rheonik, Emerson) y dos válvulas de control (Fisher USD 33.667,50 contra Optimux USD 52.676): conviene comparar marcas.",
+  "Se ofreció alternativa de envolvente y casquetes de stock (Ø1800) con menos plazo y precio.",
+  "Hay dos versiones del precio en el Excel de licitación (411.712,93 contra 309.700,65): la versión final coincide con la oferta 0-377-25."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_plazo_alcance": "4.Armado de la Oferta Comercial/OE 377- 25.pdf",
+  "excel_final": "4.Armado de la Oferta Comercial/final/Lic_EBP0000673.xlsx",
+  "excel_version_1": "4.Armado de la Oferta Comercial/Lic_EBP0000673 (1).xlsx",
+  "psv": "5.Proveedores 3ros/25-406-TAVAL-PSV.pdf",
+  "valvulas_control_induquip": "5.Proveedores 3ros/25-406-TAVAL-VLS.pdf",
+  "instrumentos": "5.Proveedores 3ros/25-406-TAVAL-RSMT.pdf",
+  "cv_control": "5.Proveedores 3ros/PE47948.pdf y PRESUPUESTO.pdf",
+  "krohne": "5.Proveedores 3ros/NC 90294 - TAVAL ARG.pdf",
+  "esco": "5.Proveedores 3ros/OE_TAVAL 18343.pdf",
+  "coriolis_stock": "5.Proveedores 3ros/RE_ Caudalimetro másico coriolis COMPATIBILIDAD CON EL DE STOCK.msg"
+ },
+ "problemas": [
+  "No hay planilla de costos ni factor: costo_total y desglose son null (los proveedores suman más de USD 100k en instrumentos, pero no se sabe cuáles se usaron).",
+  "La versión (1) del Excel tenía 411,712.93 y la 'final' 309,700.65; no está claro cuál fue al cliente final (Taval) frente a lo enviado por ITT a Capex.",
+  "El precio de las válvulas manuales de Taval está en un Excel adjunto que no se extrajo; falta la oferta de Induquip del Coriolis Emerson.",
+  "Fecha de la cotización de Induquip de instrumentación (RSMT) no aparece en el texto.",
+  "No hay OC en la carpeta; la fecha de entrega del Excel (10/01/2025) parece de la licitación original.",
+  "Dimensiones del separador (Ø1600 mm) solo aparecen por inferencia de la nota de alternativa (Ø1800 = +200 mm)."
+ ]
+}

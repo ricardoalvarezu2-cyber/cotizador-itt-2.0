@@ -1,0 +1,130 @@
+{
+ "carpeta": "YPF/21.YPF Filtros Ø24 - Ø18",
+ "cliente": "YPF SA",
+ "cliente_final": null,
+ "numero_oferta": "0-356 25 Rev 2",
+ "revisiones": "Original 25/03/2025 (2,734,240 USD, 8 filtros Ø18/Ø24 con repuestos a precio de filtro por error de planilla); Rev 1 10/04/2025 (773,880; 4 Ø18 + 4 Ø24); Rev 2 14/04/2025 (691,373.33; solo 4 Ø24 FCC012-15, plazo 120/135). Se toma Rev 2.",
+ "fecha_oferta": "2025-04-14",
+ "fecha_ultima_modificacion": "2025-05-15",
+ "referencia_cliente": "REF C5092 / Doc 5074438419",
+ "familia": "F",
+ "descripcion_corta": "4 filtros canasto Ø24 (FCC012/13/14/15) con tapa de apertura rápida y repuestos (Rev 2); versiones anteriores incluían 4 Ø18 (FCC004-007)",
+ "items": [
+  {
+   "descripcion": "Fabricación de filtro canasto FCC012/13/14/15 según doc.",
+   "cantidad": 4,
+   "unidad": "un",
+   "precio_unitario": 164554.33,
+   "precio_total": 658217.32,
+   "moneda": "USD",
+   "datos_tecnicos": "Ø24, tapa apertura rápida; Ø18 en Rev 0/1 (sin serie/presión en texto)"
+  },
+  {
+   "descripcion": "Repuestos recomendados COM (RCO)",
+   "cantidad": 4,
+   "unidad": "un",
+   "precio_unitario": 207,
+   "precio_total": 828,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "Repuesto para PEM (RPM)",
+   "cantidad": 4,
+   "unidad": "un",
+   "precio_unitario": 2625,
+   "precio_total": 10500,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "Repuestos para 2 años de uso (RDO)",
+   "cantidad": 4,
+   "unidad": "un",
+   "precio_unitario": 5457,
+   "precio_total": 21828,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  }
+ ],
+ "monto_total_ofertado": 691373.33,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "120/135 dias desde la recepcion de la OC, sujeta a la aprobacion de la ingenieria.",
+ "plazo_dias": 135,
+ "condiciones": {
+  "pago": "100% 45 días fecha de factura",
+  "validez": "30 días corridos",
+  "entrega": "Canning - Ezeiza (YPF)",
+  "moneda_y_ajuste": "USD, sin IVA (IVA 145,188.40; total 836,561.73); facturado en ARS al TC BNA",
+  "notas_y_exclusiones": [
+   "Facturación en pesos al TC BNA de la fecha de factura; NC/ND si la variación supera 3%",
+   "Cláusula BCRA: ITTSA no acepta multas por mora cuando hay material importado",
+   "Licencias No Automáticas: ITTSA no responsable de atrasos",
+   "ITTSA sugiere que el material importado (chapas, instrumentos, válvulas) lo provea el cliente en comodato o deducible de facturas",
+   "Rev 2: 'Consultar bonificación por adjudicación total'"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Shanghai Bozhong Metal Group Co., Ltd (vía Taval S.A.)",
+   "que": "Materiales para filtros Ø24/Ø18: bridas SA105 WNRF 150# 24'' sch40 (2) y 18'' sch80 (2), chapa SA516 Gr70 e16, caños 20# (OD610/1219/457/914)",
+   "precio": 7236.07,
+   "moneda": "USD",
+   "plazo_entrega": "5-7 días, EXW; pago 30% anticipo / 70% antes de embarque; válida hasta 2025-03-31; 6,016.51 kg",
+   "fecha": "2025-03-25"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Jorge Alejandro Vazquez",
+   "empresa": "YPF SA",
+   "rol": "cliente",
+   "cargo": null,
+   "email": "PORTAL",
+   "telefono": null
+  },
+  {
+   "nombre": "Denny Cheng",
+   "empresa": "Shanghai Bozhong Metal Group Co., Ltd",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": null,
+   "telefono": "86-21-67897611 (fax 86-21-67897500)"
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "Innovación Técnica Total S.A (ITT)",
+   "rol": "ITT",
+   "cargo": "Vendedor / enviado por",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54-11-6001-5205"
+  }
+ ],
+ "aprendizajes": [
+  "La oferta cayó de 2.73M (Rev 0, con errores) a 773k (Rev 1) y 691k (Rev 2, solo Ø24): precio por filtro Ø24 ~164.5k USD en Rev 2 vs 103.8k en Rev 1; el alcance/precio cambió y debe revisarse el criterio.",
+  "Cotización china de materiales para un filtro Ø24 y un Ø18 por solo ~7.2k USD (kg de acero ~0.88-0.98 USD) es una referencia de costo de materia prima (bridas 24'' 514, 18'' 334 USD).",
+  "Plazo extendido de 60/75 a 120/135 días en Rev 2, sujeto a aprobación de ingeniería; pago 100% a 45 días."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "4.Armado de la Oferta Comercial/OE 356- 25 REV 2.pdf",
+  "revisiones": "4.Armado de la Oferta Comercial/OE 356- 25.docx; OE 356- 25 REV 1.docx",
+  "proveedor": "5.Proveedores 3ros/Bozhong Quotation (003).pdf"
+ },
+ "problemas": [
+  "Rev 0 repite 89,240/103,960 en renglones de repuestos (error evidente); Rev 1: suma de líneas 773,280 vs Valor declarado 773,880",
+  "Rev 2: la columna 'P. total' repite el unitario; el total se verifica como 4 x unitarios (691,373.32)",
+  "Sin costos, factor ni OC; Rev 2 no detalla por qué desaparecen los Ø18",
+  "Fecha de Rev 2 en archivo (2025-05-14/15) posterior a la fecha impresa (14/04/2025)"
+ ]
+}

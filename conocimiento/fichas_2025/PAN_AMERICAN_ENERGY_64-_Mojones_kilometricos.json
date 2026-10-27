@@ -1,0 +1,121 @@
+{
+ "carpeta": "PAN AMERICAN ENERGY/64- Mojones kilometricos",
+ "cliente": "Pan American Energy",
+ "cliente_final": "Consorcio Lindero Atravesado y UT Aguada de Castro - Aguada Pichana Oeste (PAE/YPF), Neuquén",
+ "numero_oferta": "OE 403-25 (la OC cita Oferta 0-403 25)",
+ "revisiones": "Una sola versión (docx y pdf)",
+ "fecha_oferta": "2025-09-22",
+ "fecha_ultima_modificacion": "2025-12-18",
+ "referencia_cliente": "Licitación 3000060391",
+ "familia": "OT",
+ "descripcion_corta": "Mojones kilométricos para protección catódica, caño 4\" con soporte y caja estanca de aluminio (2 modelos)",
+ "items": [
+  {
+   "descripcion": "Mojón kilométrico CS-CMP 2.5 con caja CBP-2 (cód. 460800000013)",
+   "cantidad": 15,
+   "unidad": "un",
+   "precio_unitario": 662.43,
+   "precio_total": 9936.5,
+   "moneda": "USD",
+   "datos_tecnicos": "Caño acero con costura 4\" esp. 4,75 mm L 2200 mm, tapas soldadas biseladas; soporte caja 2 1/2\" L 1400 mm; caja aluminio fundido 200x282x145 mm; conector HUB 2 1/2\" NPT; riel DIN NS-11; monoborne latón niquelado NH-6; pintura termoconvertible amarillo medio; incluye corte, soldadura, consumibles, END, ingeniería y databook"
+  },
+  {
+   "descripcion": "Mojón kilométrico CS-CMP 1.5 con caja CBP-1 (cód. 460808050500)",
+   "cantidad": 3,
+   "unidad": "un",
+   "precio_unitario": 581.27,
+   "precio_total": 1743.8,
+   "moneda": "USD",
+   "datos_tecnicos": "Igual, soporte de caja 1 1/2\" L 1400 mm; caja aluminio fundido 158x210x108 mm; conector HUB 1 1/2\" NPT"
+  }
+ ],
+ "monto_total_ofertado": 11680.3,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "Entregas parciales 45/60 días de recibida la OC",
+ "plazo_dias": 60,
+ "condiciones": {
+  "pago": "30 días fecha de factura",
+  "validez": "30 días corridos",
+  "entrega": "Planta ITT Quilmes Oeste (la OC pide FCA sobre transporte del cliente)",
+  "moneda_y_ajuste": "USD facturado en ARS al TC BNA; NC/ND si variación >3%; precios sin IVA (IVA 21% USD 2.452,86; total USD 14.133,16)",
+  "notas_y_exclusiones": [
+   "Sin multas por mora para material importado (BCRA)",
+   "Licencias no automáticas sin responsabilidad de ITT",
+   "Material importado provisto por el cliente en comodato o deducible de facturas"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Payra",
+   "que": "Cajas de conexión CBP-1 y CBP-2 (marca Payra), también soportes; sin precio en los documentos",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": "recepción 22/11/2025 (OC compras 15123)",
+   "fecha": null
+  }
+ ],
+ "resultado": "ganada (hay OC)",
+ "orden_compra": {
+  "numero": "4100271688 y 4100271689",
+  "fecha": "2025-09-25",
+  "monto": 13436.46
+ },
+ "contactos": [
+  {
+   "nombre": "Luciano Emanuel Luna",
+   "empresa": "Pan American Energy",
+   "rol": "cliente",
+   "cargo": "Comprador",
+   "email": "LELuna@pan-energy.com",
+   "telefono": "+54-11-6001-5205"
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "Innovación Técnica Total S.A.",
+   "rol": "ITT",
+   "cargo": null,
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Recepciones Neuquén",
+   "empresa": "Pan American Energy",
+   "rol": "cliente",
+   "cargo": "Recepción de material",
+   "email": "RecepcionesNQN@pan-energy.com",
+   "telefono": "0299 4895000 int 35520"
+  }
+ ],
+ "aprendizajes": [
+  "La OC pagó USD 761,52 y 671,22 por unidad, unos 15% más que lo ofertado (662,43 y 581,27); conviene verificar si hubo ajuste posterior",
+  "Entrega FCA sobre transporte del cliente; lugar de entrega Andreani, Benavídez",
+  "Atrasos reales: proveedores sin fechas precisas, planos con faltantes de información y falta de coordinación de transporte; entrega al cliente prevista 12/12 contra 45/60 días ofrecidos",
+  "Materiales principales: caño 1 1/2\", 2 1/2\" y 4\" Sch10, cajas Payra, conectores NPT, monobornes, pintura; partes de stock (riel DIN)"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "4.Armado de la Oferta Comercial/OE 403- 25.docx.txt",
+  "items": "4.Armado de la Oferta Comercial/OE 403- 25.docx.txt",
+  "plazo": "4.Armado de la Oferta Comercial/OE 403- 25.docx.txt",
+  "condiciones": "4.Armado de la Oferta Comercial/OE 403- 25.docx.txt",
+  "orden_compra": "8.Orden de Compra/OC N° 4100271688.pdf y OC N° 4100271689.pdf",
+  "contactos": "4.Armado de la Oferta Comercial/OE 403- 25.docx.txt",
+  "proveedores_y_atrasos": "8.Orden de Compra/SOLICITUD CON FECHAS TOTAL OP 1212 1213.xlsx"
+ },
+ "problemas": [
+  "No hay planilla de costo ni factor",
+  "Precios de OC difieren de la oferta (+15%) sin explicación en la carpeta",
+  "Total de oferta 11.680,30 declarado; 15 x 662,43 = 9.936,45 y 3 x 581,27 = 1.743,81 (redondeo)",
+  "OC1 (4100271688): 11 u a 761,52 = 8.376,72; OC2 (4100271689): 4 u a 761,52 + 3 u a 671,22 = 5.059,74; total 13.436,46",
+  "Oferta dice EXW Quilmes, la OC FCA transporte del cliente",
+  "Precio de la Payra y demás proveedores no figura"
+ ]
+}

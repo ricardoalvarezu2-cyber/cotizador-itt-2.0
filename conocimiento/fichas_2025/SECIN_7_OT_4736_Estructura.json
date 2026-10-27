@@ -1,0 +1,111 @@
+{
+ "proveedores": [],
+ "orden_compra": null,
+ "carpeta": "SECIN/7. OT 4736 Estructura",
+ "cliente": "Secin",
+ "cliente_final": null,
+ "numero_oferta": "0-384 25",
+ "revisiones": "Sin revisiones (docx y pdf)",
+ "fecha_oferta": "2025-07-18",
+ "fecha_ultima_modificacion": "2025-07-18",
+ "referencia_cliente": "Estructura OT 4736; planos HDT-12-M1-MOD-CI-DR-001-r0 y HDT-12-M2-MOD-CI-DR-001-rA",
+ "familia": "OT",
+ "descripcion_corta": "Fabricación de estructuras Nivel 2 y Nivel 3 (soldadura, consumibles, END tintas penetrantes), con tratamiento superficial opcional",
+ "items": [
+  {
+   "descripcion": "Fabricación de estructuras Nivel 2 (soldadura, consumibles, END tintas penetrantes)",
+   "cantidad": 1,
+   "unidad": "gl",
+   "precio_unitario": 24793.41,
+   "precio_total": 24793.41,
+   "moneda": "USD",
+   "datos_tecnicos": "Planos HDT-12-M1/M2-MOD-CI-DR-001"
+  },
+  {
+   "descripcion": "Opcional: tratamiento superficial (granallado/pintura) Nivel 2",
+   "cantidad": 1,
+   "unidad": "gl",
+   "precio_unitario": 11308.83,
+   "precio_total": 11308.83,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "Fabricación de estructuras Nivel 3 (soldadura, consumibles, END tintas penetrantes)",
+   "cantidad": 1,
+   "unidad": "gl",
+   "precio_unitario": 25546.26,
+   "precio_total": 25546.26,
+   "moneda": "USD",
+   "datos_tecnicos": "Planos HDT-12-M1/M2-MOD-CI-DR-001"
+  },
+  {
+   "descripcion": "Opcional: tratamiento superficial (granallado/pintura) Nivel 3",
+   "cantidad": 1,
+   "unidad": "gl",
+   "precio_unitario": 11920.97,
+   "precio_total": 11920.97,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  }
+ ],
+ "monto_total_ofertado": 50339.66,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "Opción 1: 25/30 días de recibida la OC; Opción 2: ídem + 15 días aprox.",
+ "plazo_dias": 30,
+ "condiciones": {
+  "pago": "30 días fecha factura",
+  "validez": "30 días corridos",
+  "entrega": "Planta ITTSA, Quilmes",
+  "moneda_y_ajuste": "Precios en USD facturados en pesos al TC BNA (NC/ND si variación > 3%)",
+  "notas_y_exclusiones": [
+   "Monto base USD 50.339,66 sin tratamiento superficial; con granallado/pintura USD 73.569,46 (sin IVA); con IVA 60.910,99 y 89.019,05",
+   "Solo mano de obra de estructura: sin materiales (se asume provistos por el cliente, a confirmar)",
+   "Sin multas por mora si hay material importado (condición BCRA)",
+   "Licencias No Automáticas: ITTSA no responsable de atrasos",
+   "Material importado preferentemente provisto por el cliente (comodato o deducible de facturas)"
+  ]
+ },
+ "resultado": "sin resultado",
+ "contactos": [
+  {
+   "nombre": "Nestor Barrios",
+   "empresa": "Secin",
+   "rol": "cliente",
+   "cargo": null,
+   "email": "nbarrios@secin.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Comercial (envía la oferta)",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54-11-6001-5205"
+  }
+ ],
+ "aprendizajes": [
+  "Tratamiento superficial se cotiza como opcional: ~46% adicional sobre la fabricación (11,3k sobre 24,8k en Nivel 2)",
+  "Estructuras Nivel 2 y Nivel 3 de precio parecido (~25k c/u) y plazo corto (25/30 días)",
+  "Secin pide ofertas de estructuras por OT; ver OT 4735 como comparación"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto": "4.Armado de la Oferta Comercial/OE 384- 25.pdf",
+  "items": "4.Armado de la Oferta Comercial/OE 384- 25.docx"
+ },
+ "problemas": [
+  "El encabezado del PDF rotula 73.569,46 como 'sin pintura' y 50.339,66 como 'con pintura', pero los ítems indican lo contrario (50.339,66 = ítems 1+2 sin opcionales); se tomó la lectura por ítems",
+  "Sin costos, factor ni OC",
+  "No se aclara si el material lo provee el cliente"
+ ]
+}

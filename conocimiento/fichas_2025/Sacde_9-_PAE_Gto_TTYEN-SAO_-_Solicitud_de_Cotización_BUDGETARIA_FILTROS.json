@@ -1,0 +1,78 @@
+{
+ "carpeta": "Sacde/9- PAE Gto TTYEN-SAO - Solicitud de Cotización BUDGETARIA FILTROS",
+ "cliente": "Sacde",
+ "cliente_final": "Pan American Energy (PAE) - según nombre de carpeta (gasoducto TTYEN-SAO)",
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2025-11-03",
+ "referencia_cliente": "PAE Gto TTYEN-SAO - Solicitud de Cotización BUDGETARIA FILTROS",
+ "familia": "F",
+ "descripcion_corta": "Cotización budgetaria de filtros; solo hay presupuesto de proveedor por 109 cartuchos filtrantes MBGA para gas natural",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": 8502.0,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": [
+   "Presupuesto Filtron: pago por transferencia anticipada, entrega zona sur, validez 10 días"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Filtron SRL",
+   "que": "109 cartuchos para gas natural MBGA.1031 O 140x108x915 mm (cód. LMBGA1032), polipropileno, retención 0,5/1/5/10 micrones, 78 c/u, total 8.502 sin IVA (10.287,42 con IVA 21%)",
+   "precio": 8502.0,
+   "moneda": "USD",
+   "plazo_entrega": "Fabricación 5 días hábiles; entrega zona sur; validez 10 días; pago anticipado",
+   "fecha": "2025-11-03"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Julián Bielenia",
+   "empresa": "Filtron SRL",
+   "rol": "proveedor",
+   "cargo": "Asesor técnico comercial",
+   "email": "julián@filtronsrl.com.ar",
+   "telefono": "1120262346"
+  },
+  {
+   "nombre": "Matias Banega",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": null,
+   "email": "mbanega@ittsa.com.ar",
+   "telefono": "112604-1952"
+  }
+ ],
+ "aprendizajes": [
+  "Cartucho coalescente MBGA 1031 140x108x915 mm AC cuesta 78 c/u (nov-2025, Filtron); fabricación 5 días hábiles.",
+  "Filtron exige pago anticipado y vigencia 10 días.",
+  "No hay pliego ni oferta en la carpeta: sirve solo como referencia de precio de cartuchos."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/Presupuesto_7016 FILTRON.pdf; 5.Proveedores 3ros/MBGA 1031 Filtron.pdf"
+ },
+ "problemas": [
+  "Moneda del presupuesto Filtron no explícita: el encabezado dice 'Total $' pero indica 'Tipo de cambio considerado: Dólar Banco Nación Billete Vendedor'; se asumió USD (78 por cartucho), si fueran pesos serían centavos de dólar",
+  "Faltan pedido, cantidades de equipos, oferta y resultado",
+  "La ficha MBGA 1031 es catálogo (sin precio); el cartucho cotizado es 'MBGA.1032 (AC)'"
+ ]
+}

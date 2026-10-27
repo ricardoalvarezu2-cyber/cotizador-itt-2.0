@@ -1,0 +1,408 @@
+{
+ "carpeta": "TECHINT/10. requisition 4381-TARG-I-MR-610-078",
+ "cliente": "Techint",
+ "cliente_final": "Tecpetrol (proyecto Los Toldos II Este, ID Facilities LT2E; los mails también mencionan Pluspetrol)",
+ "numero_oferta": null,
+ "revisiones": "Price list Rev 1 'Alternativa' (planilla del cliente completada por ITT); no hay propuesta enviada formal ni otras revisiones en la carpeta",
+ "fecha_oferta": "2025-06-18",
+ "fecha_ultima_modificacion": "2025-06-18",
+ "referencia_cliente": "Requisición de material 4381-TARG-I-MR-610-078 (spec 4381-TARG-I-SP-610-078; P&ID ACO-LT2E-PMG1-R-PI-002)",
+ "familia": "SK",
+ "descripcion_corta": "Paquete PMG1: skids de medición de gas, regulación de gas y medición de líquido (custody transfer), shelters, flow computer, cromatógrafo, repuestos y servicios",
+ "items": [
+  {
+   "descripcion": "PMG1-SK-602 Skid de medición de gas (custody transfer) con instrumentación según P&ID",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 315689.5,
+   "precio_total": 335216.03,
+   "moneda": "USD",
+   "datos_tecnicos": "Medidor USM 8\" ANSI 900 RTJ, RTU, transmisores multivariable; P&ID ACO-LT2E-PMG1-R-PI-002"
+  },
+  {
+   "descripcion": "PMG1-SH-003 Shelter para cromatógrafo (calidad de gas)",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 384048.58,
+   "precio_total": 384048.58,
+   "moneda": "USD",
+   "datos_tecnicos": "Shelter EMED, ET 4381-TARG-I-SP-610-379; incluye cromatógrafo Emerson 770XA"
+  },
+  {
+   "descripcion": "PMG1-SK-603 Skid de regulación de presión de gas",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 735563.5631796557,
+   "precio_total": 757941.84,
+   "moneda": "USD",
+   "datos_tecnicos": "Incluye válvulas de control (Fisher NPS 16 HPT #900/#1500 RTJ u otra)"
+  },
+  {
+   "descripcion": "PMG1-SK-604 Skid de medición de líquido (custody transfer)",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 408147.54,
+   "precio_total": 359291.32,
+   "moneda": "USD",
+   "datos_tecnicos": "Medidor Coriolis Micro Motion CMF350P 4\" CL900"
+  },
+  {
+   "descripcion": "PMG1-RTU-0001 Flow computer",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 65026.68,
+   "precio_total": 65026.68,
+   "moneda": "USD",
+   "datos_tecnicos": "ET 4381-TARG-I-SP-610-258"
+  },
+  {
+   "descripcion": "PMG1-SH-002 Shelter para flow computer",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 98315.88,
+   "precio_total": 98315.88,
+   "moneda": "USD",
+   "datos_tecnicos": "Shelter EMED; ET 4381-TARG-I-SP-610-379"
+  },
+  {
+   "descripcion": "PMG1-RCB-001 Cargador rectificador + baterías (48 h autonomía)",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 12000,
+   "precio_total": 12000,
+   "moneda": "USD",
+   "datos_tecnicos": "ET 4381-TARG-I-SP-610-379"
+  },
+  {
+   "descripcion": "Repuestos de pre-comisionado/puesta en marcha",
+   "cantidad": 1,
+   "unidad": "set",
+   "precio_unitario": 15000,
+   "precio_total": 15000,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "Repuestos recomendados 2 años de operación",
+   "cantidad": 1,
+   "unidad": "set",
+   "precio_unitario": 37500,
+   "precio_total": 37500,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "Herramientas especiales",
+   "cantidad": 1,
+   "unidad": "set",
+   "precio_unitario": 22500,
+   "precio_total": 22500,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "Servicio SAT (Site Acceptance Test)",
+   "cantidad": 1,
+   "unidad": "global",
+   "precio_unitario": 10400,
+   "precio_total": 11200,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "Capacitación operación y mantenimiento",
+   "cantidad": 1,
+   "unidad": "día",
+   "precio_unitario": 5200,
+   "precio_total": 5600,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "Asistencia técnica montaje e instalación",
+   "cantidad": 1,
+   "unidad": "día",
+   "precio_unitario": 26000,
+   "precio_total": 28000,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "Asistencia técnica pre-comisionado, comisionado y arranque",
+   "cantidad": 1,
+   "unidad": "día",
+   "precio_unitario": 52000,
+   "precio_total": 56000,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  }
+ ],
+ "monto_total_ofertado": 2086840.33,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "44 semanas (EXW nuestra planta)",
+ "plazo_dias": 308,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": "EXW planta ITT",
+  "moneda_y_ajuste": "USD",
+  "notas_y_exclusiones": [
+   "Monto = ítems 1.1 a 1.7 (2.011.840,33) + repuestos y herramientas 2.1/2.2/2.4 (75.000); excluye servicios a tarifa diaria (SAT 11.200, capacitación 5.600, asistencia montaje 28.000, asistencia comisionado 56.000 = 100.800) y FAT sin precio (N/A)",
+   "Embalaje de exportación (preservación 6 meses), documentación y databook sin precio",
+   "Inspecciones y ensayos incluidos en el precio final según requisición"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Induquip Ingeniería (Rosemount/Emerson)",
+   "que": "RTU Control Wave Micro 16 slots (25-339-RSDG-RTU)",
+   "precio": 54188.9,
+   "moneda": "USD",
+   "plazo_entrega": "20 semanas",
+   "fecha": "2025-04-09"
+  },
+  {
+   "proveedor": "Induquip Ingeniería (Rosemount/Emerson)",
+   "que": "Transmisores multivariable 4088 + manifolds Rosemount 305 (25-339-RSDG-RSMT)",
+   "precio": 32254.31,
+   "moneda": "USD",
+   "plazo_entrega": "14 a 16 semanas",
+   "fecha": "2025-04-09"
+  },
+  {
+   "proveedor": "Induquip Ingeniería (Emerson)",
+   "que": "Válvula de control Fisher HP NPS 16 #900 RTJ (opción)",
+   "precio": 357143.22,
+   "moneda": "USD",
+   "plazo_entrega": "24-28 semanas a confirmar",
+   "fecha": "2025-04-09"
+  },
+  {
+   "proveedor": "Induquip Ingeniería (Emerson)",
+   "que": "Válvula de control Fisher V280 NPS 8 #900 RTJ (alternativa)",
+   "precio": 125272.77,
+   "moneda": "USD",
+   "plazo_entrega": "24-28 semanas a confirmar",
+   "fecha": "2025-04-09"
+  },
+  {
+   "proveedor": "Induquip Ingeniería (Emerson)",
+   "que": "Medidor Coriolis Micro Motion CMF350P 4\" CL900 + transmisor 2700",
+   "precio": 45130.54,
+   "moneda": "USD",
+   "plazo_entrega": "14 semanas",
+   "fecha": "2025-04-09"
+  },
+  {
+   "proveedor": "Induquip Ingeniería (Emerson)",
+   "que": "Medidor ultrasónico 8\" ANSI 900 RTJ PMG1-FIT-0692",
+   "precio": 86183.53,
+   "moneda": "USD",
+   "plazo_entrega": "20-22 semanas",
+   "fecha": "2025-04-09"
+  },
+  {
+   "proveedor": "Emerson Argentina",
+   "que": "Cromatógrafo 770XA C9+ (Oferta C-250315 Rev.00)",
+   "precio": 100233.52,
+   "moneda": "USD",
+   "plazo_entrega": "43 a 44 semanas",
+   "fecha": "2025-03-27"
+  },
+  {
+   "proveedor": "Gas Control (YZ Systems)",
+   "que": "Muestreador Dynapak 2010ZX 16.310 + 2 cilindros Durasite 13.656 (cot. 2025-059)",
+   "precio": 29966.0,
+   "moneda": "USD",
+   "plazo_entrega": "70 a 90 días desde OC",
+   "fecha": "2025-04-08"
+  },
+  {
+   "proveedor": "CV Control (Yokogawa)",
+   "que": "2 transmisores multivariable EJX910A Modbus (3.698 c/u) + 2 manifolds 5 vías (766 c/u)",
+   "precio": 8928.0,
+   "moneda": "USD",
+   "plazo_entrega": "90-110 días desde OC",
+   "fecha": "2025-04-11"
+  },
+  {
+   "proveedor": "Di Metallo",
+   "que": "Shelter 2530x2670x1930 mm en chapa (cot. 18-608)",
+   "precio": 15591.0,
+   "moneda": "USD",
+   "plazo_entrega": "a convenir",
+   "fecha": "2025-04-10"
+  },
+  {
+   "proveedor": "Energit",
+   "que": "Cargador HC-CAM 24V100A 11.125 + baterías 3.445 (+IVA 21%) / alternativa MEFF 7.295 + 3.445",
+   "precio": 14570.0,
+   "moneda": "USD",
+   "plazo_entrega": "60/70 días (120 sin baterías); alt. 30/45 días",
+   "fecha": "2025-04-22"
+  },
+  {
+   "proveedor": "Taval (grupo, Sheet/Xls 251128)",
+   "que": "Válvula de control globo DN400x250 900Lb GYL41611 c/ actuador neumático",
+   "precio": 42270.0,
+   "moneda": "USD",
+   "plazo_entrega": "12 semanas",
+   "fecha": null
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Lautaro Valenzuela",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Compras y Contrataciones",
+   "email": "lvalenzuela@ittsa.com.ar",
+   "telefono": "+54 11 5352-0000 / +54 9 11 2307-8952"
+  },
+  {
+   "nombre": "Pablo E. Aguerre",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Jefe de Compras y Contrataciones",
+   "email": "paguerre@ittsa.com.ar",
+   "telefono": "+54 11 5352-0000 / +54 9 11 2848-1554"
+  },
+  {
+   "nombre": "Matias Ezequiel Banega",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Ingeniería",
+   "email": "mbanega@ittsa.com.ar",
+   "telefono": "+54 11 5352 0000 int. 311"
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": null,
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Guillermo Vicens",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": null,
+   "email": "gvicens@ittsa.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Christian Sorrentino",
+   "empresa": "Taval",
+   "rol": "ITT",
+   "cargo": null,
+   "email": "csorrentino@taval.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Oscar Fuentes Sanchez",
+   "empresa": "Taval",
+   "rol": "ITT",
+   "cargo": null,
+   "email": "ofuentes@taval.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Raúl Santos",
+   "empresa": "Induquip Ingeniería SRL",
+   "rol": "proveedor",
+   "cargo": "Ejecutivo de cuenta",
+   "email": "raulsantos@induquip.com.ar",
+   "telefono": "(0221) 425-9749"
+  },
+  {
+   "nombre": "Juan J. Di Santo",
+   "empresa": "Emerson",
+   "rol": "proveedor",
+   "cargo": "Account Leader",
+   "email": null,
+   "telefono": null
+  },
+  {
+   "nombre": "Cristina Monzon",
+   "empresa": "Comex",
+   "rol": "proveedor",
+   "cargo": "válvulas de control (mencionada en mail)",
+   "email": null,
+   "telefono": null
+  },
+  {
+   "nombre": "Bernardo Bher",
+   "empresa": "CV Control",
+   "rol": "proveedor",
+   "cargo": "alternativa transmisor multivariable (mencionado en mail)",
+   "email": null,
+   "telefono": null
+  },
+  {
+   "nombre": "María Victoria Martelo",
+   "empresa": "CV Control",
+   "rol": "proveedor",
+   "cargo": "Div. Instrumentación y Control",
+   "email": "almacen@cvcontrol.com.ar (almacenes)",
+   "telefono": null
+  },
+  {
+   "nombre": "Vanesa Bellezze",
+   "empresa": "Energit Electrónica de Potencia S.A.",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": "vanesa@energitsa.com.ar",
+   "telefono": "+54 11 4855 1627 int. 111 / +54 9 11 2325-5099"
+  },
+  {
+   "nombre": "Gas Control",
+   "empresa": "Gas Control",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": "info@gascontrol.com.ar",
+   "telefono": "+54 11 6082 0752"
+  },
+  {
+   "nombre": "Di Metallo",
+   "empresa": "Di Metallo",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": null,
+   "telefono": "5291-6291 / 6292"
+  }
+ ],
+ "aprendizajes": [
+  "Paquete de más de 2 M USD dominado por compras a terceros (válvulas de control Fisher 125-357 k, USM 86 k, Coriolis 45 k, cromatógrafo 100 k, shelters): el plazo de 44 semanas lo marca el cromatógrafo Emerson (43-44 sem).",
+  "Se cotizaron alternativas de proveedor (transmisores Rosemount vs Yokogawa EJX910A, válvula Fisher NPS16 vs V280 NPS8, válvula Taval/china DN400) para ajustar precio; validar que cumplan la especificación del cliente.",
+  "Las validez de las ofertas de proveedores es corta (7 a 30 días) y varias están en USD sujetas a tipo de cambio BNA e importación (SIMI): reconfirmar antes de adjudicar.",
+  "Servicios en campo (SAT, capacitación, asistencia) se ofertan como tarifa diaria separada del monto principal.",
+  "Los precios totales de la planilla difieren de los unitarios en los skids (1.1, 1.3, 1.4), probablemente por ajustes/alternativa; el criterio no está documentado."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "items_y_precios": "4.Armado de la Oferta Comercial/Price list  MR 4381-TARG-I-MR-610-078 - Rev 1-Alternativa-6954516.xlsx",
+  "plazo": "4.Armado de la Oferta Comercial/Price list  MR 4381-TARG-I-MR-610-078 - Rev 1-Alternativa-6954516.xlsx",
+  "proveedores": "5.Proveedores 3ros/ (25-339-RSDG-*.pdf, Cotizacion 250315.pdf, Cotizacion Provisión Muestreador Dynapak 2010ZX con cilindros 08-04-25.pdf, PE47592-R0.pdf, 250422-0*-VBG*.docx, C18-608 ITT - Shelter*.pdf, TAVAL(251128).xls)",
+  "contactos": "5.Proveedores 3ros/RE_ Techint - Proyecto Skids - Req 4381.msg; RV_ Energit SA .msg; RV_ Solicitud de Ppto_ Banco de Baterías.msg"
+ },
+ "problemas": [
+  "No hay propuesta enviada (7.) ni orden de compra: el resultado no se puede determinar",
+  "No hay planilla de costo ni factor de venta en la carpeta",
+  "Precio unitario y total no coinciden en los ítems 1.1, 1.3 y 1.4 de la planilla",
+  "El monto elegido excluye servicios a tarifa diaria (100.800 USD); si se suman el total sería 2.187.640,33",
+  "Cliente final: Tecpetrol según cotizaciones de proveedores (Los Toldos); un mail menciona Techint/Pluspetrol",
+  "Los precios de proveedores en USD de Energit y otros pueden incluir/excluir IVA (Energit +21%); el total del proveedor Energit informado es sin IVA",
+  "Proveedor Taval sin fecha clara (el nombre del archivo indica 251128, fecha de la hoja 45759 = 2025-04-14)"
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "carpeta": "Sacde/1.Tanque conico",
+ "cliente": "Sacde",
+ "cliente_final": null,
+ "numero_oferta": "345-25",
+ "revisiones": "Una sola versión (PDF y DOCX del 20/01/2025)",
+ "fecha_oferta": "2025-01-20",
+ "fecha_ultima_modificacion": "2025-01-20",
+ "referencia_cliente": "Documento 1046RDAMHD137 (tanque TK-1828)",
+ "familia": "T",
+ "descripcion_corta": "Fabricación de tanque cónico TK-1828 con materiales, instrumentos del alcance, END, pintura y aislación",
+ "items": [
+  {
+   "descripcion": "Fabricación de TANQUE CÓNICO (TK-1828) según documento 1046RDAMHD137: materiales, instrumentos dentro del alcance, fabricación, END, pintura y aislación, data book",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 400885.56,
+   "precio_total": 400885.56,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  }
+ ],
+ "monto_total_ofertado": 400885.56,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "150/180 días de recibida la orden de compra",
+ "plazo_dias": 180,
+ "condiciones": {
+  "pago": "100% 30 días fecha de factura",
+  "validez": "30 días corridos",
+  "entrega": "Planta ITT, Quilmes",
+  "moneda_y_ajuste": "USD facturado en pesos al TC BNA; NC/ND si variación >3%",
+  "notas_y_exclusiones": [
+   "Sub total 400.885,56 USD (IVA 84.185,97; total 485.071,52)"
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Martín Funes",
+   "empresa": "Sacde",
+   "rol": "cliente",
+   "cargo": "destinatario",
+   "email": "mfunes@sacde.com.ar",
+   "telefono": "+541154417529"
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "emisor",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54-11-6001-5205"
+  }
+ ],
+ "aprendizajes": [
+  "Tanque cónico llave en mano (materiales, instrumentos, pintura y aislación) a ~400 kUSD con 150/180 días.",
+  "La oferta no indica dimensiones ni capacidad; hay que ver el documento 1046RDAMHD137 del cliente."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto": "Sacde/1.Tanque conico/4.Armado de la Oferta Comercial/OE 345-25.pdf",
+  "plazo": "Sacde/1.Tanque conico/4.Armado de la Oferta Comercial/OE 345-25.pdf",
+  "condiciones": "Sacde/1.Tanque conico/4.Armado de la Oferta Comercial/OE 345-25.pdf"
+ },
+ "problemas": [
+  "Solo se conserva la oferta: sin costos, factor, proveedores ni datos técnicos.",
+  "Sin orden de compra: resultado desconocido."
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "carpeta": "TAVAL/12- Filtros temporales",
+ "cliente": "TAVAL",
+ "cliente_final": null,
+ "numero_oferta": "0-387 25 (OE 387-25)",
+ "revisiones": "Sin revisiones; solo hay el .docx (no hay PDF)",
+ "fecha_oferta": "2025-07-28",
+ "fecha_ultima_modificacion": "2025-07-28",
+ "referencia_cliente": "Filtros temporales (sin N° de documento del cliente)",
+ "familia": "F",
+ "descripcion_corta": "10 filtros temporales de 10 pulgadas, fabricación con materiales, soldadura, consumibles e ingeniería",
+ "items": [
+  {
+   "descripcion": "Fabricación filtros temporales 10\". Incluye materiales, soldadura, consumibles e ingeniería",
+   "cantidad": 10,
+   "unidad": "un",
+   "precio_unitario": 3752.68,
+   "precio_total": 37526.77,
+   "moneda": "USD",
+   "datos_tecnicos": "Tamaño 10\"; sin más datos"
+  }
+ ],
+ "monto_total_ofertado": 37526.77,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "30/45 días de recibida la orden de compra (entregas parciales)",
+ "plazo_dias": 45,
+ "condiciones": {
+  "pago": "30 días fecha de factura",
+  "validez": "30 días corridos",
+  "entrega": "Nuestra planta, Quilmes Oeste",
+  "moneda_y_ajuste": "Precios en USD (cláusula de TC no visible en el texto)",
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Juan Alvarez",
+   "empresa": "TAVAL",
+   "rol": "cliente",
+   "cargo": null,
+   "email": "jalvarez@taval.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Coordinador de proyectos",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54-11-5352-0000 / +54 9 11 6001-5205"
+  }
+ ],
+ "aprendizajes": [
+  "Precio de referencia: filtro temporal de 10\" a USD 3.752,68 c/u con materiales, soldadura, consumibles e ingeniería (lote de 10)",
+  "Plazo corto 30/45 días, razonable por ser equipo simple",
+  "La oferta no detalla ensayos, pintura ni data book: confirmar el alcance si se repite"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "4.Armado de la Oferta Comercial/OE 387- 25.docx",
+  "plazo": "4.Armado de la Oferta Comercial/OE 387- 25.docx"
+ },
+ "problemas": [
+  "Solo hay el .docx, sin PDF enviado; sin costos, factor ni OC",
+  "10 x 3.752,68 = 37.526,80 vs total declarado 37.526,77",
+  "No se sabe si el 10\" es diámetro nominal ni la clase/material; 'temporales' sin especificación técnica",
+  "Fecha de pie de página 22/10/2024 es resto de plantilla"
+ ]
+}

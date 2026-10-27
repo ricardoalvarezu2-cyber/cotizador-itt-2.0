@@ -1,0 +1,178 @@
+{
+ "carpeta": "Sacde/2.KOD de Pluma de Venteo( Bomba + tanque)",
+ "cliente": "Sacde",
+ "cliente_final": "Pampa Energía (KOD 2455, pluma de venteo; según nombre del archivo de ingeniería)",
+ "numero_oferta": null,
+ "revisiones": "Una oferta (PDF y DOCX del 11/03/2025), emitida en papel de Taval S.A. por Juan Álvarez",
+ "fecha_oferta": "2025-03-11",
+ "fecha_ultima_modificacion": "2025-03-11",
+ "referencia_cliente": "KNOCK OUT DRUMS + BOMBAS - SACDE CL JG (correo de Sebastián R. del 11/02/2025)",
+ "familia": "SEP",
+ "descripcion_corta": "Knock Out Drums de pluma de venteo con 2 bombas de líquido, ingeniería completa, más opcionales (percha de izaje, repuestos, asistencia y capacitación)",
+ "items": [
+  {
+   "descripcion": "Fabricación de Knock Drums: diseño e ingeniería, documentación, materiales, consumibles, fabricación, END, pintura, inspección y ensayos, preparación para transporte, 2 bombas de líquido pluma de venteo",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 484822.62,
+   "precio_total": 484822.62,
+   "moneda": "USD",
+   "datos_tecnicos": "Sin PLC ni enclavamiento SCADA; líneas a borde de skid a borneras en junction box"
+  },
+  {
+   "descripcion": "Percha de izaje",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 12000,
+   "precio_total": 12000,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "Repuestos para comisionado y puesta en marcha",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 4000,
+   "precio_total": 4000,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "Repuestos para 2 años de operación",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 8000,
+   "precio_total": 8000,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "Asistencia en sitio (comisionado y puesta en marcha)",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 50000,
+   "precio_total": 50000,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "Capacitación en sitio por día",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 5000,
+   "precio_total": 5000,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  }
+ ],
+ "monto_total_ofertado": 563822.62,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "Sin completar (guiones) días de recibida la OC",
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": "100% 30 días fecha de factura",
+  "validez": "30 días corridos",
+  "entrega": "Retira cliente: depósito ITT S.A., Quilmes (sin transporte)",
+  "moneda_y_ajuste": "USD facturado en pesos al TC BNA; NC/ND si variación >3%",
+  "notas_y_exclusiones": [
+   "Sub total 563.822,62 USD, IVA no incluido",
+   "No incluye transporte; no contempla PLC ni enclavamiento SCADA"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Estudio/consultora de ingeniería (NEO, firma de Rolando Caviedes; oferta 684-ITT-KOD 2455 Pampa Sacde dirigida a Guillermo Vicens, ITT)",
+   "que": "Ingeniería de detalle KOD 2455 (plazo 75 días corridos; validez 15 días)",
+   "precio": 25500000,
+   "moneda": "ARS",
+   "plazo_entrega": "75 días corridos",
+   "fecha": "2025-02-20"
+  },
+  {
+   "proveedor": "Compras ITT (Lautaro Valenzuela) a pedido de Taval (Christian Sorrentino)",
+   "que": "Aislación de recipiente y 10 m de cañería de 4\": total materiales y MO",
+   "precio": 5950,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2025-03-07"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Sebastián Robotti",
+   "empresa": "Sacde",
+   "rol": "cliente",
+   "cargo": "destinatario",
+   "email": "srobotti@sacde.com.ar",
+   "telefono": "+541154417529"
+  },
+  {
+   "nombre": "Juan Álvarez",
+   "empresa": "Taval S.A.",
+   "rol": "ITT",
+   "cargo": "emisor de la oferta",
+   "email": "jalvarez@taval.com.ar",
+   "telefono": "(+54 11) 5236 6600"
+  },
+  {
+   "nombre": "Christian Sorrentino",
+   "empresa": "Taval S.A.",
+   "rol": "ITT",
+   "cargo": "Ingeniería y Proyectos",
+   "email": "csorrentino@taval.com.ar",
+   "telefono": "(+54 11) 5236 6600"
+  },
+  {
+   "nombre": "Lautaro Valenzuela",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Compras y Contrataciones",
+   "email": "lvalenzuela@ittsa.com.ar",
+   "telefono": "(+54 11) 5352-0000 / (+54 9 11) 2307-8952"
+  },
+  {
+   "nombre": "Guillermo Vicens",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": null,
+   "email": "gvicens@ittsa.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Rolando Caviedes",
+   "empresa": "firma de ingeniería (oferta 684)",
+   "rol": "proveedor",
+   "cargo": "firmante",
+   "email": null,
+   "telefono": null
+  }
+ ],
+ "aprendizajes": [
+  "Oferta armada con Taval (grupo) y fabricación en ITT; la cotización va con membrete Taval y entrega retira cliente en planta ITT.",
+  "Se incluyeron opcionales: percha de izaje 12.000, repuestos 4.000 + 8.000, asistencia en sitio 50.000 y capacitación 5.000 por día.",
+  "Ingeniería de detalle subcontratada en pesos (AR$ 25,5 M + IVA, 75 días) con ajuste por índice; riesgo cambiario si se vende en USD.",
+  "Aislación cotizada internamente por Compras: USD 5.950 + IVA para recipiente y 10 m de cañería 4\"."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto": "Sacde/2.KOD de Pluma de Venteo( Bomba + tanque)/Oferta Comercial/Oferta Comercial KNOCK OUT DRUMS + BOMBAS - SACDE CL JG.pdf",
+  "ingenieria": "Sacde/2.KOD de Pluma de Venteo( Bomba + tanque)/5.Proveedores 3ros/684-ITT-KOD 2455 Pampa Sacde.pdf",
+  "aislacion": "Sacde/2.KOD de Pluma de Venteo( Bomba + tanque)/5.Proveedores 3ros/RE Solicitud de cotización - Aislacion.msg"
+ },
+ "problemas": [
+  "Plazo de entrega sin completar en la oferta.",
+  "Sin N° de oferta, costos ni factor; sin orden de compra.",
+  "El cliente final 'Pampa' se deduce del nombre del archivo de ingeniería.",
+  "Catálogos Taval son escaneos sin texto."
+ ]
+}

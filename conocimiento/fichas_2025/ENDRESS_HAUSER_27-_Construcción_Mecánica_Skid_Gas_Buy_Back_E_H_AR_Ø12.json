@@ -1,0 +1,106 @@
+{
+ "proveedores": [],
+ "orden_compra": null,
+ "carpeta": "ENDRESS HAUSER/27- Construcción Mecánica Skid Gas Buy Back  E+H AR Ø12",
+ "cliente": "Endress+Hauser Argentina S.A.",
+ "cliente_final": "Gas Buy Back / E+H AR",
+ "numero_oferta": "PRES 23906 rev B (Taval)",
+ "revisiones": "Rev A 10/11/2025 (oferta base, presupuesto 23906: total USD 32.210,09 sin IVA con 1 skid Ø3, 1 skid Ø12 y 2 válvulas); Rev B 03/12/2025 (modifica largo del carretel, elimina bridas, suma aislación y conexionado para JB; 1 Ø3 + 2 Ø12 + 2 válvulas)",
+ "fecha_oferta": "2025-12-03",
+ "fecha_ultima_modificacion": "2025-12-03",
+ "referencia_cliente": "Construcción Mecánica Skid Gas Buy Back / E+H AR (skid puente de medición Ø3\" y Ø12\" ANSI 900 RTJ)",
+ "familia": "SK",
+ "descripcion_corta": "Skids de medición Ø3\" y Ø12\" S900 RTJ (piping A106 Gr.B, soportes, ingeniería, pruebas API 598) y 2 válvulas esféricas 2\" S900 RTJ WCB",
+ "items": [
+  {
+   "descripcion": "Skid de medición Endress Ø3",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 13700.0,
+   "precio_total": 13700.0,
+   "moneda": "USD",
+   "datos_tecnicos": "Ø3\" S900 RTJ; A106 Gr.B, bridas A105, espárragos B7/2H"
+  },
+  {
+   "descripcion": "Skid de medición Endress Ø12",
+   "cantidad": 2,
+   "unidad": "u",
+   "precio_unitario": 19984.12,
+   "precio_total": 39968.24,
+   "moneda": "USD",
+   "datos_tecnicos": "Ø12\" S900 RTJ; planilla de costo: caño 12\" sch 30, bridas WN 12\" 600, perfil IPN 120, estructura UPN"
+  },
+  {
+   "descripcion": "Válvulas esféricas 2\" S900 RTJ WCB",
+   "cantidad": 2,
+   "unidad": "u",
+   "precio_unitario": 1157.65,
+   "precio_total": 2315.3,
+   "moneda": "USD",
+   "datos_tecnicos": "2\" S900 RTJ WCB (rev A: 752,47 c/u en el presupuesto; ver problemas)"
+  }
+ ],
+ "monto_total_ofertado": 55983.54,
+ "moneda": "USD",
+ "costo_total": 16030.97,
+ "factor_venta": 1.25,
+ "desglose_costo": {
+  "materiales": 8561.43,
+  "mano_obra": 2821.5,
+  "terceros": 4648.04,
+  "otros": null
+ },
+ "plazo_ofrecido": "60 días skids; 5 días válvulas",
+ "plazo_dias": 60,
+ "condiciones": {
+  "pago": "30 días fecha factura (rev A: 30 días F.R.F.)",
+  "validez": "30 días corridos desde la oferta económica",
+  "entrega": "Planta Taval/ITT; EXW según oferta Taval",
+  "moneda_y_ajuste": "USD, dólar BNA del día anterior al pago efectivo",
+  "notas_y_exclusiones": [
+   "Excluye instrumentos de presión/temperatura, caudalímetros/multivariables, válvulas esféricas fuera de alcance, obra civil y montaje, puesta en marcha, transporte, tratamiento térmico, U-Stamp, bulones de anclaje, percha de izaje",
+   "Incluye ingeniería, placas, pruebas API 598, pintura estándar, embalaje terrestre, planos y certificados de calidad",
+   "Plazos 'salvo venta' y sin tiempos de inspección de materiales",
+   "Importes sin IVA"
+  ]
+ },
+ "resultado": "sin resultado",
+ "contactos": [
+  {
+   "nombre": "Loreine Maria Calderon Ospino",
+   "empresa": "Endress+Hauser",
+   "rol": "cliente",
+   "cargo": null,
+   "email": null,
+   "telefono": null
+  },
+  {
+   "nombre": "Ricardo Alvarez",
+   "empresa": "Taval S.A.",
+   "rol": "ITT",
+   "cargo": "Ing., Representante Comercial",
+   "email": "ralvarez@taval.com.ar",
+   "telefono": "(+54 11) 5236 6600 (234)"
+  }
+ ],
+ "aprendizajes": [
+  "Costeo del skid Ø12: materiales 8.561,43 con factor 1,2 y mano de obra 7.469,54 (HH 2.821,5 + soldadura/RX/granallado/estructura 4.648,04) con factor 1,3; venta 19.984,12 (factor global ~1,247, margen ~19,8%)",
+  "MO interna: ingeniería 15 USD/h (30 h), calidad 15 USD/h (45 h), montaje 13 USD/h (130,5 h); soldadura por pulgada-diámetro (16,2 USD/pulgada) y RX por placa; plazo de 60 días",
+  "Materiales del skid Ø12: caño 12\" sch 30 (2.800,89), 6 bridas WN 12\" 600 (3.180), perfiles IPN 120 y UPN 80, espárragos, cajas Ex e",
+  "En la rev B se sacaron bridas y se agregó aislación y conexionado a JB; cantidad Ø12 subió a 2"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto": "4.Armado de la Oferta Comercial/PRES 23906B- OFERTA TECNICA COMERCIAL SKID DE MEDICION.pdf",
+  "costo_factor": "4.Armado de la Oferta Comercial/LM costo skid de medicion Endress Ø12.xlsx (hoja RESUMEN)",
+  "rev_A": "4.Armado de la Oferta Comercial/PRESUPUESTO 23906.pdf"
+ },
+ "problemas": [
+  "El costo/factor corresponde solo al skid Ø12 (1 unidad); no hay costo del Ø3",
+  "Rev A cotizó Ø3 a 10.721,03 y rev B a 13.700,00",
+  "La válvula figura a 1.504,94 (total línea) en rev A y 1.157,65 unitario en rev B; la columna de rev A es ambigua",
+  "El factor de 1,25 es el global calculado (MO 1,3 y materiales 1,2); la planilla muestra IVA 21% aparte",
+  "Sin OC; resultado desconocido",
+  "Desglose: 'terceros' toma 4.648,04 (soldadura, RX, granallado y estructura según tarifas por pulgada/placa), supuesto no confirmado"
+ ]
+}

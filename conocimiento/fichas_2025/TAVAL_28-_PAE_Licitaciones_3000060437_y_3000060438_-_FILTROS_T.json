@@ -1,0 +1,94 @@
+{
+ "carpeta": "TAVAL/28- PAE Licitaciones #3000060437 y #3000060438 - FILTROS T",
+ "cliente": "TAVAL",
+ "cliente_final": "PAE (Pan American Energy)",
+ "numero_oferta": "0-410-25 (nombre del archivo OE 410-25)",
+ "revisiones": "Una sola versión (.docx), con precios en blanco.",
+ "fecha_oferta": "2025-10-09",
+ "fecha_ultima_modificacion": "2025-11-03",
+ "referencia_cliente": "Licitaciones PAE #3000060437 y #3000060438 (Filtro T-APO Lic 30000060437); especificación PAE BB28-U-004",
+ "familia": "F",
+ "descripcion_corta": "5 filtros tipo T de agua dulce en acero al carbono WCB, bridados 150# RF, malla 316 de 10 mesh: 4 de 20\" y 1 de 3\".",
+ "items": [
+  {
+   "descripcion": "Fabricación filtro tipo T, fluido agua dulce, ASTM A-216 WCB, DN 20\", serie 150, bridado RF, malla AISI 316 10 mesh, tapa pivotante, peso 20 kg. COD 390600002704. Incluye materiales, corte y biselado, soldadura, ensayos (RX, tintas, PH), tratamiento superficial, montaje, data book.",
+   "cantidad": 4,
+   "unidad": "un",
+   "precio_unitario": null,
+   "precio_total": null,
+   "moneda": "USD",
+   "datos_tecnicos": "20\" 150# RF, WCB, malla SS316 10 mesh, espec. PAE BB28-U-004."
+  },
+  {
+   "descripcion": "Fabricación filtro tipo T, agua dulce, WCB, DN 3\", bridado RF, malla AISI 316 10 mesh. COD 390600002705. Incluye lo anterior más memoria de cálculo PVElite (ASME VIII Div. 1, 2023), planos de conjunto y detalle, hoja de datos final, data book.",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": null,
+   "precio_total": null,
+   "moneda": "USD",
+   "datos_tecnicos": "3\" RF (serie no indicada), WCB, malla SS316 10 mesh."
+  }
+ ],
+ "monto_total_ofertado": null,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "45/60 días de recibida la orden de compra e ingeniería aprobada.",
+ "plazo_dias": 60,
+ "condiciones": {
+  "pago": "30 días fecha factura",
+  "validez": "30 días corridos",
+  "entrega": "Planta ITTSA, Quilmes",
+  "moneda_y_ajuste": "Precios en USD, facturados en pesos al TC BNA de fecha de factura; cancelación al TC BNA vendedor del día anterior al pago, con NC/ND si la variación supera 3%.",
+  "notas_y_exclusiones": [
+   "Los precios figuran como 0 / en blanco en el archivo guardado.",
+   "Material de origen importado: ITTSA no acepta multas por mora en las entregas (condición resolutoria BCRA).",
+   "Si el producto cae bajo Licencias No Automáticas, ITTSA no responde por atrasos.",
+   "ITTSA sugiere que el material importado (chapas, instrumentos, válvulas) lo provea el cliente en comodato o deducible de facturas futuras."
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Ricardo Alvarez",
+   "empresa": "Taval - PAE",
+   "rol": "cliente",
+   "cargo": null,
+   "email": "ralvarez@taval.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Coordinador de proyectos",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54-11-6001-5205"
+  }
+ ],
+ "aprendizajes": [
+  "Alcance fabricación con materiales incluidos más RX, tintas, prueba hidráulica, tratamiento superficial, montaje y data book; el filtro de 3\" suma ingeniería (memoria PVElite, planos, hoja de datos).",
+  "Plazo corto de 45/60 días para filtros tipo T bridados, que indica materiales de línea disponibles.",
+  "Hay dos licitaciones PAE (#...437 y #...438) pero el archivo solo cubre la oferta de la 437."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "items": "4.Armado de la Oferta Comercial/OE 410-25.docx",
+  "plazo_pago": "4.Armado de la Oferta Comercial/OE 410-25.docx"
+ },
+ "problemas": [
+  "Precios unitarios y totales en blanco/0: no hay monto ofertado.",
+  "No hay planilla de costos, proveedores ni OC.",
+  "Pie con fecha 22/10/2024 (plantilla).",
+  "La carpeta nombra dos licitaciones, pero la oferta menciona solo la 30000060437.",
+  "Fecha de la oferta 09/10/2025 contra última modificación del archivo 03/11/2025: puede haber sido editado luego."
+ ]
+}

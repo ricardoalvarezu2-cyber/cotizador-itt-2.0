@@ -1,0 +1,102 @@
+{
+ "carpeta": "TAVAL/14-Tecpetrol S.A. Sourcing Event PR #44907 #10804",
+ "cliente": "Tecpetrol S.A. (a través del presupuesto Taval)",
+ "cliente_final": null,
+ "numero_oferta": "0-394 25 (ITT); Taval Presupuesto 000000023442",
+ "revisiones": "Sin revisiones; dos documentos con distinto monto (ITT DOCX 63,944.85 vs Taval PDF 60,378.30), mismo día 15/08/2025.",
+ "fecha_oferta": "2025-08-15",
+ "fecha_ultima_modificacion": "2025-08-15",
+ "referencia_cliente": "Tecpetrol Sourcing Event PR #44907 #10804; típico SDE-SD-GEN-P-TM-001",
+ "familia": "OT",
+ "descripcion_corta": "6 puentes de bombeo mecánico no convencional según típico Tecpetrol (válvulas Taval + fabricación)",
+ "items": [
+  {
+   "descripcion": "Fabricación de puente de bombeo mecánico no convencional según típico SDE-SD-GEN-P-TM-001. Incluye materiales según detalle, soldadura, consumibles, ingeniería, data book.",
+   "cantidad": 6,
+   "unidad": "un",
+   "precio_unitario": 10063.05,
+   "precio_total": 63944.85,
+   "moneda": "USD",
+   "datos_tecnicos": "Típico SDE-SD-GEN-P-TM-001. En el PDF Taval: 6 un x 10,063.05 = 60,378.30"
+  }
+ ],
+ "monto_total_ofertado": 63944.85,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "Plazo de entregas parciales: 45/60 dias de recibida la orden de compra (Taval PDF: 45 días)",
+ "plazo_dias": 60,
+ "condiciones": {
+  "pago": "30 días fecha de factura",
+  "validez": "30 días corridos",
+  "entrega": "Nuestra planta, Quilmes Oeste",
+  "moneda_y_ajuste": "USD, sin IVA (IVA 13,428.42; total 77,373.26); facturado en ARS al TC BNA día anterior a pago",
+  "notas_y_exclusiones": [
+   "Facturación en pesos al TC BNA de la fecha de factura; NC/ND si la variación supera 3%",
+   "Cláusula BCRA: ITTSA no acepta multas por mora cuando hay material importado",
+   "Licencias No Automáticas: ITTSA no responsable de atrasos",
+   "ITTSA sugiere que el material importado (chapas, instrumentos, válvulas) lo provea el cliente en comodato o deducible de facturas",
+   "Taval: plazos no incluyen tiempos de inspección de materiales"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Taval S.A. (grupo)",
+   "que": "Presupuesto 23442: puente de bombeo mecánico no convencional, 6 un",
+   "precio": 60378.3,
+   "moneda": "USD",
+   "plazo_entrega": "45 días",
+   "fecha": "2025-08-15"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Celeste Muñoz",
+   "empresa": "Tecpetrol",
+   "rol": "cliente",
+   "cargo": null,
+   "email": "CELESTE.MUNOZ@TECPETROL.COM",
+   "telefono": null
+  },
+  {
+   "nombre": "Tecpetrol S.A. (datos fiscales Taval)",
+   "empresa": "Tecpetrol S.A.",
+   "rol": "cliente",
+   "cargo": null,
+   "email": null,
+   "telefono": "5236-6600 (rotativas, es Taval); Pilcomayo 87, Don Bosco"
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "Innovación Técnica Total S.A (ITT)",
+   "rol": "ITT",
+   "cargo": "Vendedor / enviado por",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54-11-6001-5205"
+  }
+ ],
+ "aprendizajes": [
+  "Producto de Taval vendido a Tecpetrol con vendedor ITT (Carlos Alfonso): el presupuesto Taval da 10,063.05 por unidad, y la oferta ITT 0-394 muestra el mismo unitario pero total 63,944.85.",
+  "Precio por puente ~10.1-10.7k USD con entrega parcial 45/60 días.",
+  "Participación vía evento de sourcing de Tecpetrol (portal)."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "4.Armado de la Oferta Comercial/OE 394- 25.docx",
+  "taval": "4.Armado de la Oferta Comercial/Oferta Taval 23442.pdf",
+  "contactos": "4.Armado de la Oferta Comercial/OE 394- 25.docx"
+ },
+ "problemas": [
+  "Inconsistencia: 6 x 10,063.05 = 60,378.30 (Taval y unitario del DOCX) pero el total del DOCX es 63,944.85 (+5.9%, unitario implícito 10,657.48)",
+  "Sin costo, factor ni OC; la clasificación familia es dudosa (puente de bombeo, no de medición)",
+  "Desglose de materiales '(*)' según detalle no está en los textos"
+ ]
+}

@@ -1,0 +1,101 @@
+{
+ "proveedores": [],
+ "orden_compra": null,
+ "carpeta": "SECIN/6. OT 4735 Estructura",
+ "cliente": "Secin",
+ "cliente_final": null,
+ "numero_oferta": "0-382 25",
+ "revisiones": "Sin revisiones (docx, pdf y pdf alternativo con igual contenido)",
+ "fecha_oferta": "2025-07-16",
+ "fecha_ultima_modificacion": "2025-07-16",
+ "referencia_cliente": "Estructura OT 4735; planos 1046-RDA-C-PL-10850_A y 1046-RDA-C-PL-10858_0",
+ "familia": "OT",
+ "descripcion_corta": "Fabricación de estructuras (Opción 1 con materiales y Opción 2 solo mano de obra) con granallado/pintura; pintura opcional",
+ "items": [
+  {
+   "descripcion": "Opción 1: fabricación de estructuras con materiales (perfilería y chapas), soldadura, consumibles, END tintas penetrantes y tratamiento superficial",
+   "cantidad": 1,
+   "unidad": "gl",
+   "precio_unitario": 29572.96,
+   "precio_total": 29572.96,
+   "moneda": "USD",
+   "datos_tecnicos": "Planos 1046-RDA-C-PL-10850_A y 10858_0"
+  },
+  {
+   "descripcion": "Opción 2: fabricación de estructuras sin materiales (soldadura, consumibles, END, tratamiento superficial)",
+   "cantidad": 1,
+   "unidad": "gl",
+   "precio_unitario": 14601.32,
+   "precio_total": 14601.32,
+   "moneda": "USD",
+   "datos_tecnicos": "Mismos planos"
+  },
+  {
+   "descripcion": "Opcional: pintura",
+   "cantidad": 1,
+   "unidad": "gl",
+   "precio_unitario": 854.03,
+   "precio_total": 854.03,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  }
+ ],
+ "monto_total_ofertado": 30426.98,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "Opción 1: 30 días de recibida la OC; Opción 2: 25 días de recibida la OC",
+ "plazo_dias": 30,
+ "condiciones": {
+  "pago": "30 días fecha factura",
+  "validez": "30 días corridos",
+  "entrega": "Planta ITTSA, Quilmes",
+  "moneda_y_ajuste": "Precios en USD facturados en pesos al TC BNA (NC/ND si variación > 3%)",
+  "notas_y_exclusiones": [
+   "Opción 1 USD 30.426,98 (29.572,96 + 854,03 de pintura opcional) y Opción 2 USD 15.455,35 (14.601,32 + 854,03); con IVA 36.816,65 y 18.700,97",
+   "Diferencia entre opciones: material provisto por ITT (Opción 1) o por el cliente (Opción 2)",
+   "Sin multas por mora si hay material importado (condición BCRA)",
+   "Licencias No Automáticas: ITTSA no responsable de atrasos",
+   "Material importado preferentemente provisto por el cliente (comodato o deducible de facturas)"
+  ]
+ },
+ "resultado": "sin resultado",
+ "contactos": [
+  {
+   "nombre": "Nestor Barrios",
+   "empresa": "Secin",
+   "rol": "cliente",
+   "cargo": null,
+   "email": "nbarrios@secin.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Comercial (envía la oferta)",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54-11-6001-5205"
+  }
+ ],
+ "aprendizajes": [
+  "Se ofrecen dos opciones: con materiales (~29,6k) y solo mano de obra (~14,6k); el material pesa ~50% del precio",
+  "Los precios de OT 4735 cotizan una estructura menor que la OT 4736 (planos distintos); misma redacción de alcance con END por tintas penetrantes",
+  "Plazos cortos: 25 a 30 días desde la OC"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto": "4.Armado de la Oferta Comercial/OE 382- 25.pdf",
+  "items": "4.Armado de la Oferta Comercial/OE 382- 25.docx"
+ },
+ "problemas": [
+  "Los ítems 1 y 2 ya dicen incluir tratamiento superficial y además hay ítem 3 'Opcional, pintura'; el total de cada opción incluye los 854,03 de pintura, contradicción de alcance",
+  "Sin costos, factor ni OC"
+ ]
+}

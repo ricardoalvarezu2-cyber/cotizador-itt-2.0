@@ -1,0 +1,85 @@
+{
+ "proveedores": [],
+ "orden_compra": null,
+ "carpeta": "ENDRESS HAUSER/13. PAMPA , tramo de medicion",
+ "cliente": "Endress + Hauser Argentina",
+ "cliente_final": "Pampa (según referencia 'Tramo de medicion Pampa')",
+ "numero_oferta": "0-344 25 rev.0",
+ "revisiones": "Solo rev.0 (docx y pdf idénticos)",
+ "fecha_oferta": "2025-01-20",
+ "fecha_ultima_modificacion": "2025-01-20",
+ "referencia_cliente": "Doc. 046-RDA-I-HD-143 - Tramo de medición UFM Pampa",
+ "familia": "P",
+ "descripcion_corta": "Fabricación de tramo de medición UFM (cañería + estructura, montaje y conexionado eléctrico); sin instrumentación ni válvulas",
+ "items": [
+  {
+   "descripcion": "Fabricación de Tramo Medición UFM según doc. 046-RDA-I-HD-143 (materiales de cañería y estructura, corte/biselado, bruñido previo a instrumento, soldadura, ensayos RX/TP/PH, tratamiento superficial, montaje, conexionado eléctrico con materiales, documentos técnicos, data book)",
+   "cantidad": 1,
+   "unidad": "gl",
+   "precio_unitario": 29743.94,
+   "precio_total": 29743.94,
+   "moneda": "USD",
+   "datos_tecnicos": "UFM (medidor ultrasónico); diámetro/serie no figuran en la oferta"
+  }
+ ],
+ "monto_total_ofertado": 29743.94,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "60/75 días de recibida la OC (sujeto a la recepción de la instrumentación)",
+ "plazo_dias": 75,
+ "condiciones": {
+  "pago": "30 días fecha factura",
+  "validez": "30 días corridos",
+  "entrega": "Planta ITTSA, Quilmes",
+  "moneda_y_ajuste": "Precios en USD facturados en pesos al TC BNA (NC/ND si variación > 3%)",
+  "notas_y_exclusiones": [
+   "No incluye instrumentación/válvulas ni enderezador de flujo",
+   "IVA aparte: USD 6.246,23; total con IVA USD 35.990,17",
+   "Sin multas por mora si hay material importado (condición BCRA)",
+   "Licencias No Automáticas: ITTSA no responsable de atrasos",
+   "Material importado preferentemente provisto por el cliente (comodato o deducible de facturas)"
+  ]
+ },
+ "resultado": "sin resultado",
+ "contactos": [
+  {
+   "nombre": "Ricardo Lopez",
+   "empresa": "Endress + Hauser Argentina",
+   "rol": "cliente",
+   "cargo": null,
+   "email": "ricardo.lopez@endress.com",
+   "telefono": "+54 9 341 322-8782"
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Comercial (envía la oferta)",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54-11-6001-5205"
+  }
+ ],
+ "aprendizajes": [
+  "Tramo de medición UFM de mano de obra + materiales de cañería/estructura a ~USD 29,7k; instrumentación y válvulas las provee el cliente",
+  "El plazo depende de la llegada de la instrumentación del cliente (60/75 días)",
+  "La planilla de costo no está en la carpeta: no se puede derivar el factor"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto": "4.Armado de la Oferta Comercial/OE 344- 25.pdf",
+  "plazo": "4.Armado de la Oferta Comercial/OE 344- 25.pdf",
+  "contactos": "4.Armado de la Oferta Comercial/OE 344- 25.pdf"
+ },
+ "problemas": [
+  "Solo hay oferta enviada; sin costos, proveedores ni OC",
+  "Firma con fecha 22/10/2024 (arrastre de plantilla), fecha de oferta 20/01/2025",
+  "Resultado desconocido"
+ ]
+}

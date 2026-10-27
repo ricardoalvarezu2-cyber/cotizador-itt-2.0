@@ -1,0 +1,83 @@
+{
+ "carpeta": "TAVAL/10-Calentador PECOM",
+ "cliente": "TAVAL",
+ "cliente_final": "PECOM (según nombre de carpeta)",
+ "numero_oferta": "0-388 25",
+ "revisiones": "Sin revisiones",
+ "fecha_oferta": "2025-07-28",
+ "fecha_ultima_modificacion": "2025-07-28",
+ "referencia_cliente": "Calentador indirecto, plano B-PTAB0026-VCD22187-R-PI-030001-D2",
+ "familia": "C",
+ "descripcion_corta": "Fabricación de calentador indirecto según plano, con END, tratamiento superficial, ingeniería y databook; entrega en planta del cliente",
+ "items": [
+  {
+   "descripcion": "Fabricación de calentador indirecto según plano B-PTAB0026-VCD22187-R-PI-030001-D2 (corte, soldadura, consumibles, END, tratamiento superficial, ingeniería y databook)",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 129050.23,
+   "precio_total": 129050.23,
+   "moneda": "USD",
+   "datos_tecnicos": "Calentador indirecto; sin datos de potencia/dimensiones en el texto"
+  }
+ ],
+ "monto_total_ofertado": 129050.23,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "160/175 días de recibida la orden de compra (entregas parciales)",
+ "plazo_dias": 175,
+ "condiciones": {
+  "pago": "30 días fecha de factura",
+  "validez": "30 días corridos",
+  "entrega": "Planta del cliente",
+  "moneda_y_ajuste": "USD facturado en pesos al TC BNA de la fecha de factura; cancelación al TC BNA vendedor del día anterior al pago; NC/ND si la variación supera 3%.",
+  "notas_y_exclusiones": [
+   "El alcance enumera corte, soldadura, consumibles, END, tratamiento superficial, ingeniería y databook; no menciona materiales (¿se proveen por TAVAL?)",
+   "IVA aparte: USD 27,100.55 (total 156,150.78)",
+   "Cláusulas BCRA: sin multas por mora si hay material importado; licencias no automáticas sin responsabilidad de ITT; se sugiere que el cliente provea material importado (comodato o deducible)."
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Juan Alvarez",
+   "empresa": "TAVAL",
+   "rol": "cliente",
+   "cargo": null,
+   "email": "jalvarez@taval.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Enviado por (comercial)",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54-11-6001-5205"
+  }
+ ],
+ "aprendizajes": [
+  "Calentador indirecto cotizado a TAVAL (grupo) por USD 129 mil, ingeniería y databook incluidos; plazo largo 160/175 días.",
+  "El texto no aclara si el precio incluye materiales: verificar antes de usarlo como referencia de precio de equipo completo.",
+  "Entrega en planta del cliente (no EXW), a diferencia de lo habitual."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto": "TAVAL/10-Calentador PECOM/4.Armado de la Oferta Comercial/OE 388- 25.pdf"
+ },
+ "problemas": [
+  "Sin planilla de costo ni factor",
+  "Cliente final PECOM solo inferido del nombre de carpeta",
+  "Sin potencia, dimensiones ni presión del calentador",
+  "Sin OC ni resultado",
+  "Pie 22/10/2024 (plantilla)"
+ ]
+}

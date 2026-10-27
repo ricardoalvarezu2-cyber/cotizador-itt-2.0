@@ -1,0 +1,100 @@
+{
+ "carpeta": "TAVAL/17- Filtros temporales Ø8 # 300",
+ "cliente": "TAVAL",
+ "cliente_final": null,
+ "numero_oferta": "0-392-25 (por numeración OE 392- 25)",
+ "revisiones": "Una sola versión (docx)",
+ "fecha_oferta": "2025-08-13",
+ "fecha_ultima_modificacion": "2025-08-13",
+ "referencia_cliente": "Filtros temporales Ø8\" #300",
+ "familia": "F filtro",
+ "descripcion_corta": "Filtro temporal Ø8\" #300 con repuestos recomendados y espaciador alternativo",
+ "items": [
+  {
+   "descripcion": "Fabricación de filtro temporal Ø8\" #300; incluye materiales, consumibles, data book",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 1258.15,
+   "precio_total": 1258.15,
+   "moneda": "USD",
+   "datos_tecnicos": "Ø8\" clase 300"
+  },
+  {
+   "descripcion": "Repuestos recomendados: espárragos con 2 tuercas zinc 7/8\" L 6 1/2\" y L 5 1/2\"; junta espiralada e=4,5 mm con anillo exterior AC zinc Ø8\"",
+   "cantidad": 1,
+   "unidad": "gl",
+   "precio_unitario": 144.0,
+   "precio_total": 144.0,
+   "moneda": "USD",
+   "datos_tecnicos": "Espárragos 7/8\""
+  },
+  {
+   "descripcion": "Alternativa: espaciador Ø8\" #300 para colocación de filtro; incluye materiales, END, tratamiento superficial, juntas y espárragos",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 2304.65,
+   "precio_total": 2304.65,
+   "moneda": "USD",
+   "datos_tecnicos": "Ø8\" #300"
+  }
+ ],
+ "monto_total_ofertado": 3706.8,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "Plazo de entregas parciales: 30/45 dias de recibida la orden de compra",
+ "plazo_dias": 45,
+ "condiciones": {
+  "pago": "30 días fecha de factura",
+  "validez": "30 días corridos",
+  "entrega": "Planta ITTSA, Quilmes (no consta en el texto extraído)",
+  "moneda_y_ajuste": "Precios en USD, facturados en pesos al TC BNA de la fecha de factura; pago al TC BNA vendedor del día anterior al pago; NC/ND si la variación supera 3%",
+  "notas_y_exclusiones": [
+   "Valor sin IVA 3.706,80 (incluye la alternativa); IVA 778,43; total 4.485,23",
+   "Condición BCRA: ITTSA no acepta multas por mora cuando hay material importado",
+   "Licencias No Automáticas: ITTSA no responde por atrasos",
+   "Se sugiere que el cliente provea material importado (chapas, instrumentos, válvulas) en comodato o deducible de facturas"
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Adrian Fedele",
+   "empresa": "TAVAL",
+   "rol": "cliente",
+   "cargo": null,
+   "email": "afedele@taval.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT",
+   "rol": "ITT",
+   "cargo": "Coordinador de proyectos",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54-11-6001-5205"
+  }
+ ],
+ "aprendizajes": [
+  "Filtro temporal de 8\" #300 a USD 1.258 sin END ni tratamiento superficial; el espaciador alternativo con END y pintura cuesta USD 2.305, casi el doble.",
+  "Repuestos recomendados (espárragos y junta) se ofrecen aparte por USD 144.",
+  "El total incluye la alternativa, aunque sea opcional: aclarar al comparar."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "todo": "4.Armado de la Oferta Comercial/OE 392- 25.docx"
+ },
+ "problemas": [
+  "Solo hay docx; número de oferta inferido del nombre del archivo",
+  "Sin costos, factor, proveedores ni resultado",
+  "El monto total suma el ítem alternativo"
+ ]
+}

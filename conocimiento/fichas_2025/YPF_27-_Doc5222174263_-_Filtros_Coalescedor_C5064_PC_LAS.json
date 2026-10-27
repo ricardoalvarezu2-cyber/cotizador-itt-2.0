@@ -1,0 +1,157 @@
+{
+ "carpeta": "YPF/27- Doc5222174263 - Filtros Coalescedor C5064 PC LAS",
+ "cliente": "YPF SA (con aprobacion interna de Taval)",
+ "cliente_final": null,
+ "numero_oferta": "0-381 25 Rev 2",
+ "revisiones": "Rev 0 (08/07/2025): USD 675.532,00; Rev 1 (18/08/2025): USD 668.427,89; Rev 2 (cabecera 18/08/2025; archivos 19-21/09/2025): USD 671.547,89 con opcional PEM. Hubo segunda ronda con autorizacion de Taval el 15/08/2025.",
+ "fecha_oferta": "2025-08-18",
+ "fecha_ultima_modificacion": "2025-09-21",
+ "referencia_cliente": "Doc5222174263 - Filtros Coalescedor C5064 PC LAS (FC301, FC302)",
+ "familia": "F",
+ "descripcion_corta": "2 filtros coalescedores C5064 PC LAS (FC301, FC302) llave en mano: materiales, soldadura, ingenieria, END, tratamiento superficial, aislacion y data book.",
+ "items": [
+  {
+   "descripcion": "Filtro Coalescedor C5064 PC LAS FC301 (materiales, corte y biselado, soldadura, consumibles, ingenieria, END, tratamiento superficial, aislacion, data book)",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 322081.64,
+   "precio_total": 322081.64,
+   "moneda": "USD",
+   "datos_tecnicos": "Segun Doc5222174263"
+  },
+  {
+   "descripcion": "RDO FC301 filtro coalescedor",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 10718.1,
+   "precio_total": 10718.1,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "RCP FC301 filtro coalescedor",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 3559.2,
+   "precio_total": 3559.2,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "Filtro Coalescedor C5064 PC LAS FC302 (mismo alcance)",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 322081.64,
+   "precio_total": 322081.64,
+   "moneda": "USD",
+   "datos_tecnicos": "Segun Doc5222174263"
+  },
+  {
+   "descripcion": "RDO FC302 filtro coalescedor",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 10718.1,
+   "precio_total": 10718.1,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "RCP FC302 filtro coalescedor",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 3559.2,
+   "precio_total": 3559.2,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "Opcional: asistencia para PEM (una persona por equipo, minimo 3 dias, sin traslados)",
+   "cantidad": 1,
+   "unidad": "gl",
+   "precio_unitario": 4000,
+   "precio_total": 4000,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  }
+ ],
+ "monto_total_ofertado": 671547.89,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "175 dias de recibida la orden de compra e ingenieria aprobada (entregas parciales)",
+ "plazo_dias": 175,
+ "condiciones": {
+  "pago": "Rev 2: 20% de anticipo a 30 dff, resto 30 dff (Rev 0: 30 dias fecha de factura)",
+  "validez": "30 dias corridos",
+  "entrega": "Planta ITT, Quilmes Oeste",
+  "moneda_y_ajuste": "USD, facturado en pesos al TC BNA vendedor del dia anterior al pago; NC/ND si la variacion supera 3%",
+  "notas_y_exclusiones": [
+   "IVA 141.025,06 -> total 812.572,94",
+   "Valvulas con factor x2 segun Taval",
+   "Clausula BCRA: ITTSA no acepta multas por mora si hay material importado; se sugiere que el cliente provea el material importado (chapas, instrumentos, valvulas) en comodato o deducible de facturas"
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Fernando G. Aguilera",
+   "empresa": "YPF SA",
+   "rol": "cliente",
+   "cargo": null,
+   "email": "fernando.g.aguilera@ypf.com",
+   "telefono": null
+  },
+  {
+   "nombre": "Oscar Fuentes Sanchez",
+   "empresa": "Taval",
+   "rol": "cliente",
+   "cargo": "Jefe de Control de Gestion",
+   "email": "ofuentes@taval.com.ar",
+   "telefono": "+54-9-11-3988-6421 (int. 210); Pilcomayo 87, Don Bosco"
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Coordinador de proyectos",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54-11-5352-0000 / +54-9-11-6001-5205"
+  },
+  {
+   "nombre": "Bernardo Visconti",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Gerente",
+   "email": "bvisconti@ittsa.com.ar",
+   "telefono": "+54-11-5352-0000 int. 328"
+  }
+ ],
+ "aprendizajes": [
+  "Para filtros coalescedores llave en mano el precio por equipo fue ~USD 322 mil mas ~14 mil en las lineas RDO/RCP (significado no aclarado en los documentos); se bajo de 675.532 a 668.427,89 (Rev 1) tras sumar horas de ingenieria y calidad, bajar factor de valvulas y transporte.",
+  "Taval (Control de Gestion) revisa y autoriza el numero final; en las valvulas aplica factor x2, con posibilidad de bajarlo a x1,8 (descuento de USD 7.000).",
+  "La primera rev de Julio bajo de 653.858,78 a 649.900 + transporte, pero el calculo con las horas de ingenieria y calidad dio otra mejora: verificar siempre que la planilla incluya HH de ingenieria y calidad.",
+  "Plazo 175 dias desde OC e ingenieria aprobada, con pago 20% anticipo."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto": "4.Armado de la Oferta Comercial/OE 381- 25 Rev 2.pdf",
+  "rev1": "4.Armado de la Oferta Comercial/OE 381- 25 Rev 1.pdf",
+  "rev0": "4.Armado de la Oferta Comercial/OE 381- 25.pdf",
+  "negociacion": "4.Armado de la Oferta Comercial/RE_ 27- Doc5222174263 - Filtros Coalescedor C5064 PC LAS - Segunda ronda_ 15_08 15hs .msg"
+ },
+ "problemas": [
+  "Rev 2: items suman 672.717,88 (sin opcional) o 676.717,88 (con opcional), pero el total informado es 671.547,89: no cuadra",
+  "Rev 2 tiene fecha de cabecera 18/08/2025 igual a Rev 1 pero archivos de septiembre",
+  "Las lineas RDO/RCP cambian de 9.908,10/3.199,20 (Rev 0-1) a 10.718,10/3.559,20 (Rev 2) y el precio principal de 321.106,67 a 322.081,64",
+  "Autorizacion de Taval es un escaneo sin texto legible",
+  "No hay planilla de costos ni factor global; sin OC; resultado desconocido"
+ ]
+}

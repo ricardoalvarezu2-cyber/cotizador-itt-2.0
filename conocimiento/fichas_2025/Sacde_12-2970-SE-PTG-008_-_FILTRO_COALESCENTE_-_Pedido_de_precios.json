@@ -1,0 +1,97 @@
+{
+ "carpeta": "Sacde/12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios",
+ "cliente": "SACDE",
+ "cliente_final": null,
+ "numero_oferta": "PRES 108 (oferta económica y técnica, Rev. A; el texto cita también PRES 106A y 108B)",
+ "revisiones": "Rev. A del 18-12-2025 (emisión original); anexo de desvíos Rev. 0. Las planillas de costo traen 2 variantes (#600 y #900).",
+ "fecha_oferta": "2025-12-18",
+ "fecha_ultima_modificacion": "2025-12-19",
+ "referencia_cliente": "Pedido de precios 12-2970-SE-PTG-008; RM 1029-SCH-M-RM-107-rA (Filtros SK-0301/02 y SK-0304/05); Planta de Tratamiento CPF, proyecto 2991 (RFP/RdA)",
+ "familia": "F",
+ "descripcion_corta": "2 filtros coalescedores SK-0301/02 y 2 filtros de descarga de compresores SK-0304/05, ASME VIII Div.1, diseño 100,5 kg/cm2, bridas #600/#900",
+ "items": [
+  {
+   "descripcion": "Filtro Coalescedor SK-0301/02",
+   "cantidad": 2,
+   "unidad": "un",
+   "precio_unitario": 450082.43,
+   "precio_total": 900164.85,
+   "moneda": "USD",
+   "datos_tecnicos": "ASME VIII Div.1; caudal 3300 MMSCMD; radiografiado TR1; sobreespesor corrosión 3,2 mm; P diseño 100,5 kg/cm2; PH 150,75 kg/cm2; T -15/60 C; entrada gas 16\" WN RF 600# (según OT); pintura zinc silicato, epoxi, poliuretano"
+  },
+  {
+   "descripcion": "Filtro de Descarga de Compresores SK-0304/05",
+   "cantidad": 2,
+   "unidad": "un",
+   "precio_unitario": 394694.08,
+   "precio_total": 789388.15,
+   "moneda": "USD",
+   "datos_tecnicos": "Mismas condiciones de diseño generales; ver oferta técnica"
+  }
+ ],
+ "monto_total_ofertado": 1689553.0,
+ "moneda": "USD",
+ "costo_total": 1347436.14,
+ "factor_venta": 1.25,
+ "desglose_costo": {
+  "materiales": 952366.6,
+  "mano_obra": 391720.56,
+  "terceros": null,
+  "otros": 3348.98
+ },
+ "plazo_ofrecido": "160/190 días (tabla de la oferta económica); las planillas de costo indicaban 210 días",
+ "plazo_dias": 190,
+ "condiciones": {
+  "pago": "Por hitos: 30% anticipo contra aprobación de ingeniería (caución 100% anticipo + fiel cumplimiento 10%); 20% avance de compra (OC de materiales principales); 20% aprobación de prueba hidráulica; 30% liberación para despacho (póliza fondo de reparo 10%, 12 meses)",
+  "validez": "30 días corridos",
+  "entrega": "EXW planta Taval/ITT Quilmes Oeste",
+  "moneda_y_ajuste": "USD facturado en ARS al TC BNA de la fecha de factura; NC/ND si variación >3%",
+  "notas_y_exclusiones": [
+   "Transporte a destino no incluido, se cotiza por separado",
+   "Repuestos de precomisionado, comisionado y 2 años de operación no incluidos, se cotizan por separado",
+   "Sin instrumentación fuera del P&ID, cañerías enterradas, interconexiones, juntas de transición, bulones de anclaje, percha de izaje",
+   "Sin multas por mora para material importado (BCRA); licencias no automáticas",
+   "Garantía 18 meses de entrega o 12 de puesta en marcha"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Taval (válvulas, grupo)",
+   "que": "Válvulas del filtro, valor interno de costo (factor 1,0)",
+   "precio": 29908,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": null
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [],
+ "aprendizajes": [
+  "Factor por rubro en la planilla: materiales varios 1,2; válvulas Taval 1,0; mano de obra 1,4 (#600) y 1,5 (#900); seguro 1,2. Factor global efectivo cercano a 1,25",
+  "Un filtro #900 sale unos 15% más caro que el #600 por válvulas y chapas más pesadas",
+  "Tapa de apertura rápida 36\" con pescante fue cotizada como oferta futura (USD 24.289, 120 días) y quedó fuera del costo",
+  "Se excluyen transporte y repuestos para evitar sobreprecio; se cotizan aparte",
+  "Pago por hitos con anticipo 30% exige pólizas de caución y fondo de reparo"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "4.Armado de la Oferta Comercial/PRES 108- OFERTA ECONOMICA.docx.txt",
+  "items": "4.Armado de la Oferta Comercial/PRES 108- OFERTA ECONOMICA.docx.txt",
+  "plazo": "4.Armado de la Oferta Comercial/PRES 108- OFERTA ECONOMICA.docx.txt",
+  "condiciones": "4.Armado de la Oferta Comercial/PRES 108- OFERTA ECONOMICA.docx.txt",
+  "costos_y_factor": "4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx y ... FC 303 y 304 #900 - PC0-C.xlsx (hoja RESUMEN)",
+  "exclusiones": "4.Armado de la Oferta Comercial/Anexo II - Excepciones y Desviaciones Rev_0.xlsx",
+  "datos_tecnicos": "4.Armado de la Oferta Comercial/PRES 108- OFERTA TECNICA.docx"
+ },
+ "problemas": [
+  "No hay propuesta enviada ni OC en la carpeta: resultado desconocido",
+  "Precio unitario del ítem 1 (450.082,43) coincide con la planilla #900, pero el del ítem 2 (394.694,08) no coincide con la planilla #600 (389.171,80); probable revisión posterior sin planilla",
+  "Costo y factor son derivados de las dos planillas (suma de subtotales de costo), no figuran en la oferta; hay celdas #REF!",
+  "Numeración inconsistente (PRES 106A, 108A, 108B); la planilla #900 se aplica al coalescedor y la #600 al filtro de descarga solo por inferencia de montos",
+  "Rótulos de planilla indican FC 301/302 y 303/304 mientras la oferta usa SK-0301/02 y SK-0304/05; la planilla menciona YPF por arrastre de otra cotización",
+  "Plazo 160/190 en la oferta vs 210 días en planillas",
+  "Faltan contactos del cliente",
+  "Total calculado de ítems 1.689.553,00 coincide con el total declarado"
+ ]
+}

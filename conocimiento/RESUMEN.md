@@ -8,6 +8,7 @@ Los parámetros clave en una página. El detalle y la fuente de cada número est
 |---|---|---|
 | Factor sobre materiales, MO y servicios | **1,35** (MO a veces 1,40; instrumentos 1,35–1,50) | Planillas de costo 2026 |
 | Factor sobre válvulas Taval, caución y transporte | **1,00** (a costo) | Planillas de costo |
+| Factores en planillas de costo 2025 | 1,25 – 1,41 (6 casos con dato); en algunas, materiales a 1,2 y MO a 1,3 | `comercial/cotizaciones_2025.csv` |
 | Factor efectivo de las ofertas **ganadas** en 2026 | **1,28 – 1,35** (mediana de todas las ofertas: 1,34) | `comercial/cotizaciones_2026.csv` |
 | Ofertas grandes y competitivas | 1,15 – 1,25 | Ídem |
 | Bonificación al negociar | 1,5 – 7% | `aprendizajes_2026.md` |

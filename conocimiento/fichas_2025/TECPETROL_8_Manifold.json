@@ -1,0 +1,171 @@
+{
+ "carpeta": "TECPETROL/8. Manifold",
+ "cliente": "TECPETROL",
+ "cliente_final": null,
+ "numero_oferta": "0-398-25 (el pie de página del PDF dice 0-375-25)",
+ "revisiones": "Una sola versión",
+ "fecha_oferta": "2025-09-03",
+ "fecha_ultima_modificacion": "2025-09-03",
+ "referencia_cliente": "Manifold simplificado tipo 600 / manifold simplificado vertical tipo 600 (2 equipos)",
+ "familia": "M manifold",
+ "descripcion_corta": "2 manifolds simplificados tipo 600 (#600) skidados, dos alternativas de alcance",
+ "items": [
+  {
+   "descripcion": "Opción 1: fabricación + ensamblaje de equipo completo skidado; ITT provee válvulas, materiales de piping y estructuras",
+   "cantidad": 2,
+   "unidad": "un",
+   "precio_unitario": 57166.2,
+   "precio_total": 114332.39,
+   "moneda": "USD",
+   "datos_tecnicos": "Manifold simplificado tipo 600 / vertical tipo 600; colector 8\" + colector 4\" + tee de derivación 4\", cuplas 3/4, skid y soportería (según mail de fabricación)"
+  },
+  {
+   "descripcion": "Opción 2: fabricación + ensamblaje de prefabricados de piping y bastidor del skid; válvulas por Tecpetrol; ITT provee bridas, accesorios de piping y perfilería",
+   "cantidad": 2,
+   "unidad": "un",
+   "precio_unitario": 30791.65,
+   "precio_total": 61583.29,
+   "moneda": "USD",
+   "datos_tecnicos": "Sin válvulas"
+  }
+ ],
+ "monto_total_ofertado": 114332.39,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": 10200,
+  "otros": null
+ },
+ "plazo_ofrecido": "120 días de recibida la orden de compra e ingeniería aprobada. Con válvulas.",
+ "plazo_dias": 120,
+ "condiciones": {
+  "pago": "100% contra la entrega de los materiales, pagadero a 30 días de fecha de factura",
+  "validez": "30 días corridos",
+  "entrega": "Planta ITTSA, Quilmes",
+  "moneda_y_ajuste": "Precios en USD, facturados en pesos al TC BNA de la fecha de factura; pago al TC BNA vendedor del día anterior al pago; NC/ND si la variación supera 3%",
+  "notas_y_exclusiones": [
+   "Monto ofertado = opción 1 (completa, USD 114.332,39 + IVA 24.009,80 = 138.342,20); opción 2 USD 61.583,29 + IVA 12.932,49 = 74.515,79",
+   "Condición BCRA: ITTSA no acepta multas por mora cuando hay material importado",
+   "Licencias No Automáticas: ITTSA no responde por atrasos",
+   "Se sugiere que el cliente provea material importado (chapas, instrumentos, válvulas) en comodato o deducible de facturas"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "TAVAL",
+   "que": "Válvulas: 2 esféricas 4\" #600 A105 reduced bore trunnion API 6D a USD 596 (1.192); 41 esféricas 8\" #600 full bore a USD 2.193 (89.913); plazo 90 días. Las cantidades de la respuesta (2 y 41) no coinciden con el pedido (9 de 4\" y 1 de 8\"). Esférica 1/2\" NPT WOG3000 x2 y tapón 4\" #600 x4: sin precio (precio de lista / NO)",
+   "precio": 91105.0,
+   "moneda": "USD",
+   "plazo_entrega": "90 días",
+   "fecha": "2025-08-29"
+  },
+  {
+   "proveedor": "Edgardo Ledesma (fabricación)",
+   "que": "Fabricación y soldadura de colector 8\" + colector 4\" + tee derivación 4\", cuplas 3/4, skid y soportería; por unidad USD 5.100 + IVA",
+   "precio": 5100,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2025-09-01"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Martina Lamelza",
+   "empresa": "TECPETROL",
+   "rol": "cliente",
+   "cargo": null,
+   "email": "martina.lamelza@proveedores.tecpetrol.com",
+   "telefono": null
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT",
+   "rol": "ITT",
+   "cargo": "Coordinador de proyectos",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "(+54 11) 5352-0000 / (+54 9 11) 6001-5205"
+  },
+  {
+   "nombre": "Pablo Rangoño",
+   "empresa": "TAVAL",
+   "rol": "proveedor",
+   "cargo": "Ingeniería y Proyectos",
+   "email": "pablor@taval.com.ar",
+   "telefono": "(+54 11) 5236 6600 int. 234"
+  },
+  {
+   "nombre": "Camila Gonzalez",
+   "empresa": "TAVAL",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": "cgonzalez@taval.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Adrian Fedele",
+   "empresa": "TAVAL",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": "afedele@taval.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Edgardo Ledesma",
+   "empresa": "Ledesma (fabricación externa)",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": "edgardoledesma68@hotmail.com",
+   "telefono": "1166341630"
+  },
+  {
+   "nombre": "Guillermo Vicens",
+   "empresa": "ITT",
+   "rol": "ITT",
+   "cargo": "Ingeniería",
+   "email": "gvicens@ittsa.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Alejandro Gómez",
+   "empresa": "ITT",
+   "rol": "ITT",
+   "cargo": "Responsable QA/QC",
+   "email": "agomez@ittsa.com.ar",
+   "telefono": "(+54 11) 5352 0000 int. 317"
+  },
+  {
+   "nombre": "Bernardo Visconti",
+   "empresa": "ITT",
+   "rol": "ITT",
+   "cargo": null,
+   "email": "bvisconti@ittsa.com.ar",
+   "telefono": null
+  }
+ ],
+ "aprendizajes": [
+  "Se cotizó en dos alcances: equipo completo (USD 57.166/u) y solo prefabricado + bastidor sin válvulas (USD 30.792/u); la diferencia (~26.400/u) es el peso de válvulas y materiales de piping.",
+  "Horas internas estimadas: ingeniería 40 HH por equipo, calidad 90-120 hs por los dos; fabricación y soldadura tercerizada a Ledesma a USD 5.100/u + IVA.",
+  "Válvulas se piden a Taval (API 6D, 90 días) y condicionan el plazo de 120 días; la respuesta de Taval trae cantidades distintas a las pedidas: verificar antes de usar esos precios.",
+  "Oferta armada en un día (pedido 29/08, oferta 03/09) con estimaciones de áreas internas por mail."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "4.Armado de la Oferta Comercial/OE 398-25.pdf",
+  "proveedores": "5.Proveedores 3ros/RE_ TAVAL _Pedido de precios para ITT __TECPETROL __ MANIFOLD__.msg",
+  "horas": "5.Proveedores 3ros/RE_ Horas de ingeniería.msg y RE_ Horas de calidad.msg",
+  "fabricacion": "5.Proveedores 3ros/RE_ Ledesma_Horas de ingeniería.msg"
+ },
+ "problemas": [
+  "No hay planilla de costo ni factor",
+  "Cantidades de la respuesta de Taval (2x4\" y 41x8\") no coinciden con lo pedido (9x4\" y 1x8\")",
+  "Pie de página del PDF dice N° 0-375-25 vs 0-398-25 del encabezado",
+  "Sin resultado en la carpeta",
+  "Total de válvulas de Taval 91.105 supera el precio de oferta unitario x2 de la opción 2, pero la opción 1 (114.332) apenas lo cubre: el dato probablemente es erróneo (cantidades)",
+  "terceros en desglose = Ledesma 5.100 x 2"
+ ]
+}

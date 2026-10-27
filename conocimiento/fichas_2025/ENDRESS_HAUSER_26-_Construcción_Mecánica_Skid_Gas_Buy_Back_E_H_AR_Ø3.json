@@ -1,0 +1,104 @@
+{
+ "carpeta": "ENDRESS HAUSER/26- Construcción Mecánica Skid Gas Buy Back  E+H AR Ø3",
+ "cliente": "Endress+Hauser Argentina S.A.",
+ "cliente_final": "Tecpetrol (según planilla de MO)",
+ "numero_oferta": "Taval PRES 23906 Rev B",
+ "revisiones": "Rev A 10/11/2025 (Ø3 10,721.03 + Ø12 x1 19,984.12 + válvula; 32,210.09 sin IVA); Rev B 03/12/2025 (Ø3 13,700; 2 Ø12; 2 válvulas; 55,983.54). Planilla de costo ITT 'Rev 1' 2025-12-02.",
+ "fecha_oferta": "2025-12-03",
+ "fecha_ultima_modificacion": "2025-12-03",
+ "referencia_cliente": "Construcción Mecánica Skid Gas Buy Back / E+H AR",
+ "familia": "SK",
+ "descripcion_corta": "Skids de medición ANSI 900 RTJ: 1 de Ø3 y 2 de Ø12 más 2 válvulas esféricas 2'' S900 (oferta emitida por Taval)",
+ "items": [
+  {
+   "descripcion": "Skid de medición Endress Ø3 (S900 RTJ)",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 13700.0,
+   "precio_total": 13700.0,
+   "moneda": "USD",
+   "datos_tecnicos": "Ø3'' sch80, ANSI 900 RTJ, A106 Gr.B, A105, A234 WPB; incluye aislación y conexionado para JB; sin instrumentos"
+  },
+  {
+   "descripcion": "Skid de medición Endress Ø12 (S900 RTJ)",
+   "cantidad": 2,
+   "unidad": "un",
+   "precio_unitario": 19984.12,
+   "precio_total": 39968.24,
+   "moneda": "USD",
+   "datos_tecnicos": "Ø12'' ANSI 900 RTJ"
+  },
+  {
+   "descripcion": "Válvulas esféricas 2'' S900 RTJ WCB",
+   "cantidad": 2,
+   "unidad": "un",
+   "precio_unitario": 1157.65,
+   "precio_total": 2315.3,
+   "moneda": "USD",
+   "datos_tecnicos": "2'' S900 RTJ WCB; plazo 5 días"
+  }
+ ],
+ "monto_total_ofertado": 55983.54,
+ "moneda": "USD",
+ "costo_total": 9745.36,
+ "factor_venta": 1.41,
+ "desglose_costo": {
+  "materiales": 3747.48,
+  "mano_obra": 5997.89,
+  "terceros": 0,
+  "otros": null
+ },
+ "plazo_ofrecido": "60 días (skids); 5 días (válvulas)",
+ "plazo_dias": 60,
+ "condiciones": {
+  "pago": "30 días F.R.F.",
+  "validez": "30 días desde la oferta económica",
+  "entrega": "Planta Taval/ITT (no indicado; montaje y transporte excluidos)",
+  "moneda_y_ajuste": "USD sin IVA; facturas canceladas al dólar BNA del día anterior al pago",
+  "notas_y_exclusiones": [
+   "Excluye instrumentos de presión/temperatura, caudalímetros, multivariables, válvulas fuera de alcance",
+   "Excluye obra civil y montaje, asistencia puesta en marcha, transporte, tratamiento térmico, U-Stamp, anclajes, percha de izaje",
+   "Ingeniería, placas, pruebas API 598, pintura estándar, embalaje terrestre y certificados incluidos"
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Loreine Maria Calderon Ospino",
+   "empresa": "Endress+Hauser Argentina S.A.",
+   "rol": "cliente",
+   "cargo": null,
+   "email": null,
+   "telefono": "+54 11 4763 4428 (Boulogne, Thames 55)"
+  },
+  {
+   "nombre": "Ricardo Alvarez",
+   "empresa": "Taval S.A.",
+   "rol": "ITT",
+   "cargo": "Representante Comercial",
+   "email": "ralvarez@taval.com.ar",
+   "telefono": "(+54 11) 5236 6600 int. 234"
+  }
+ ],
+ "aprendizajes": [
+  "Costeo del skid Ø3: materiales 3,747 + MO 5,998 (ingeniería 450, calidad 675, montaje 121.5 HH x13 = 1,579.5, soldadura+RX+pintura 3,293) = costo 9,745 USD; precio de planilla 12,294 (MO x1.3, materiales x1.2) y oferta final 13,700 (factor efectivo 1.41).",
+  "Costo de MO por pulgada-diámetro soldada 16.2 USD/pulg, RX 1,684 (placas), granallado/pintura aparte.",
+  "Plazo base 60 días; válvulas 5 días (stock Taval)."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "4.Armado de la Oferta Comercial/PRES 23906B- OFERTA TECNICA COMERCIAL SKID DE MEDICION.pdf",
+  "costos_factor": "4.Armado de la Oferta Comercial/LM costo skid de medicion Endress Ø3 Rev 1.xlsx",
+  "rev_A": "4.Armado de la Oferta Comercial/PRESUPUESTO 23906.pdf"
+ },
+ "problemas": [
+  "Costo y factor corresponden solo al skid Ø3; Ø12 y válvulas sin costeo en la carpeta",
+  "Planilla RESUMEN: precio 12,294.23 (+IVA 14,876.01) pero la oferta pone 13,700 (referencia 'USD 13700'); factor 1.41 calculado como 13,700/9,745.36",
+  "Rev A: Ø3 10,721.03 en la planilla Taval vs 13,700 en Rev B (modificaciones de alcance: aislación y JB)",
+  "Valvula en Rev A: qty 2 con unitario 1,504.94 mostrado confusamente (total 752.47?); Rev B: 1,157.65 c/u",
+  "Oferta emitida por Taval (Ricardo Alvarez), no por ITT",
+  "Sin OC"
+ ]
+}

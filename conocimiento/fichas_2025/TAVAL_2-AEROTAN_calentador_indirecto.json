@@ -1,0 +1,145 @@
+{
+ "carpeta": "TAVAL/2-AEROTAN calentador indirecto",
+ "cliente": "TAVAL (para AEROTAN)",
+ "cliente_final": "AEROTAN",
+ "numero_oferta": "0-348 25",
+ "revisiones": "Una sola versión (docx y pdf iguales)",
+ "fecha_oferta": "2025-02-11",
+ "fecha_ultima_modificacion": "2025-02-11",
+ "referencia_cliente": "Calentador indirecto (budget) - 2500 m3/d",
+ "familia": "C calentador",
+ "descripcion_corta": "Calentador indirecto de petróleo 2500 m3/d, 1.650.000 kcal/h, doble quemador: MO + materiales",
+ "items": [
+  {
+   "descripcion": "Mano de obra de fabricación (corte, biselado, soldadura, consumibles, ingeniería, data book, END, tratamiento superficial)",
+   "cantidad": 1,
+   "unidad": "gl",
+   "precio_unitario": 81115.99,
+   "precio_total": 81115.99,
+   "moneda": "USD",
+   "datos_tecnicos": "1.650.000 kcal/h; 1,5/80 kg/cm2g; 130 °C; SL-02 Ø12\" L610 mm; cuerpo 9 m x 2,5 m; serpentín 3\" x 2 mazos de 16 tubos de 8 m; tubo de fuego 20\" x 2 x 8,5 m + carretel"
+  },
+  {
+   "descripcion": "Materiales para la fabricación (ferrosos, chapas, perfiles, bulonería, caños y accesorios, aislación y traceado)",
+   "cantidad": 1,
+   "unidad": "gl",
+   "precio_unitario": 307111.91,
+   "precio_total": 307111.91,
+   "moneda": "USD",
+   "datos_tecnicos": "Según HD adjunta; no incluye quemadores/tablero salvo que estén dentro de materiales (no aclarado)"
+  }
+ ],
+ "monto_total_ofertado": 388227.9,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "180/210 dias desde aprobacion de ingenieria",
+ "plazo_dias": 180,
+ "condiciones": {
+  "pago": "30 días fecha factura",
+  "validez": "30 días corridos",
+  "entrega": "Planta ITTSA, Quilmes",
+  "moneda_y_ajuste": "Precios en USD, facturados en pesos al TC BNA de la fecha de factura; pago al TC BNA vendedor del día anterior al pago; NC/ND si la variación supera 3%",
+  "notas_y_exclusiones": [
+   "Valor sin IVA 388.227,90; IVA 81.527,86; total 469.755,76",
+   "Condición BCRA: ITTSA no acepta multas por mora cuando hay material importado",
+   "Licencias No Automáticas: ITTSA no responde por atrasos",
+   "Se sugiere que el cliente provea material importado (chapas, instrumentos, válvulas) en comodato o deducible de facturas"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Etchegoyen y Cía SRL",
+   "que": "2 quemadores Pettro 1150 STD-PF (1.300.000 kcal/h, c/arrestallamas) a USD 12.096,40 c/u (-20%) = 19.354,24; tablero de control y seguridad IP65 Honeywell SLATE para 2 quemadores USD 146.985 (-20%) = 117.588,00; total sin IVA 136.942,24",
+   "precio": 136942.24,
+   "moneda": "USD",
+   "plazo_entrega": "60/90 días",
+   "fecha": "2025-01-30"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Juan Alvarez",
+   "empresa": "TAVAL",
+   "rol": "cliente",
+   "cargo": null,
+   "email": "ventas@taval.com",
+   "telefono": null
+  },
+  {
+   "nombre": "Adrian Fedele",
+   "empresa": "TAVAL",
+   "rol": "cliente",
+   "cargo": null,
+   "email": "afedele@taval.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT",
+   "rol": "ITT",
+   "cargo": "Coordinador de proyectos",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54-11-6001-5205 / (+54 11) 5352-0000"
+  },
+  {
+   "nombre": "Matias Ezequiel Banega",
+   "empresa": "ITT",
+   "rol": "ITT",
+   "cargo": "Ingeniería",
+   "email": "mbanega@ittsa.com.ar",
+   "telefono": "(+54 11) 5352 0000 int. 311"
+  },
+  {
+   "nombre": "Vicente Alberto D'Afflitto",
+   "empresa": "Etchegoyen y Cía SRL",
+   "rol": "proveedor",
+   "cargo": "Comercial",
+   "email": "vicente@etchegoyenycia.com.ar",
+   "telefono": "(54.11) 6520-1891 / 4911-7985"
+  },
+  {
+   "nombre": "Martín Etchegoyen",
+   "empresa": "Etchegoyen y Cía SRL",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": "martin@etchegoyenycia.com.ar",
+   "telefono": "(54.11) 4911-7985"
+  },
+  {
+   "nombre": "Cristian Diaz",
+   "empresa": "Etchegoyen y Cía SRL",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": "cdiaz@etchegoyenycia.com.ar",
+   "telefono": null
+  }
+ ],
+ "aprendizajes": [
+  "Oferta a TAVAL como budget: MO 20,9% y materiales 79,1% del total; no hay planilla de costo ni factor en la carpeta.",
+  "El equipo es híbrido neumático/eléctrico, doble quemador con tubo de fuego de 20\"; quemadores y tablero BMS (Etchegoyen, USD 136.942 sin IVA, 60/90 días, pago 20% anticipo) se piden aparte a proveedor y pesan ~35% de los materiales ofertados si estuvieran incluidos.",
+  "El proveedor pide aclarar alcance (quemadores, tablero BMS, tren de combustión); el presupuesto recibido no incluye tren de combustión.",
+  "Plazo 180/210 días se cuenta desde aprobación de ingeniería, no desde OC."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "4.Armado de la Oferta Comercial/OE 348- 25.pdf",
+  "plazo": "4.Armado de la Oferta Comercial/OE 348- 25.docx",
+  "proveedores": "5.Proveedores 3ros/Presupuesto - SQ919-ITT tablero+2 Pettros.pdf",
+  "contactos": "5.Proveedores 3ros/RE_ Cotizacion Budget - TAVAL - Calentador de petroleo 2500 m3_d.msg"
+ },
+ "problemas": [
+  "No hay costo ni factor de venta",
+  "No se sabe si los quemadores/tablero de Etchegoyen están dentro de los materiales ofertados",
+  "Sin información de resultado (budget)",
+  "Fecha de carpeta y de oferta coinciden, el presupuesto del proveedor es del 30/01/2025 con vencimiento 14/02/2025"
+ ]
+}

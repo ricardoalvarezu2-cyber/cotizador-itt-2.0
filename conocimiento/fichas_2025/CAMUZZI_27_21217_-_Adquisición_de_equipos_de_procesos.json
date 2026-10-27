@@ -1,0 +1,161 @@
+{
+ "carpeta": "CAMUZZI/27. #21217 - Adquisición de equipos de procesos",
+ "cliente": "Camuzzi Gas (concurso / licitación 21217)",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": "No hay oferta de ITT en la carpeta (solo 5.Proveedores 3ros)",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2025-12-19",
+ "referencia_cliente": "Concurso Camuzzi #21217 Adquisición de equipos de procesos",
+ "familia": "F",
+ "descripcion_corta": "Concurso Camuzzi: cartuchos filtrantes, vane pack y tapas de cierre rápido; solo hay cotizaciones de proveedores (Gora, Megatap)",
+ "items": [
+  {
+   "descripcion": "Elemento filtrante papel celulósico plisado, 5 micrones, D 400 x H 800 mm, apto FM-10 (cód. Gora 49142). Se pidieron 4 cartuchos FM 10\" S300; Gora cotiza 3 como mínimo de fabricación",
+   "cantidad": 3,
+   "unidad": "un",
+   "precio_unitario": 498,
+   "precio_total": 1494,
+   "moneda": "USD",
+   "datos_tecnicos": "5 micrones; D 400 mm; H 800 mm; plazo 30 días"
+  },
+  {
+   "descripcion": "Elemento filtrante separador de polvo y líquido para gas natural, fibra de vidrio (cód. Gora 46600); para separador horizontal 140 x 914 mm",
+   "cantidad": 15,
+   "unidad": "un",
+   "precio_unitario": 90,
+   "precio_total": 1350,
+   "moneda": "USD",
+   "datos_tecnicos": "Plazo 30 días"
+  },
+  {
+   "descripcion": "Vane pack modelo VNSB-540X850X203-SB bajo plano Camuzzi (caja de chicanas para el SPL)",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 3395,
+   "precio_total": 3395,
+   "moneda": "USD",
+   "datos_tecnicos": "540 x 850 x 203; plazo 45 días"
+  },
+  {
+   "descripcion": "Tapa de cierre rápido vertical MTV 20\" S/300, 49 bar, espesor 15,09 mm, A105N, oring Buna N90, ASME VIII Div 1, con 2 orings de repuesto (Megatap)",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 19950,
+   "precio_total": 19950,
+   "moneda": "USD",
+   "datos_tecnicos": "Plazo 75/105 días (120 por parada de forja en enero)"
+  },
+  {
+   "descripcion": "Tapa de cierre rápido horizontal MTHF 32\" S/600, 70 bar, espesor 25,4 mm, A105N (Megatap)",
+   "cantidad": 2,
+   "unidad": "un",
+   "precio_unitario": 6180,
+   "precio_total": 12360,
+   "moneda": "USD",
+   "datos_tecnicos": "Plazo 60/90 días. Ojo: el mail pedía 2 verticales de 20\" y 1 de 32\" (cantidades invertidas respecto del presupuesto)"
+  }
+ ],
+ "monto_total_ofertado": null,
+ "moneda": "USD",
+ "costo_total": 38549.0,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": 38549.0,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": "Gora: 40% anticipado, saldo contra entrega. Megatap: 30% anticipo con OC, saldo contado contra entrega",
+  "validez": "Gora hasta 03/01/2026; Megatap sin dato legible",
+  "entrega": "EXW proveedores (Gora Quilmes, Megatap su planta; Megatap sin flete)",
+  "moneda_y_ajuste": [
+   "Gora no asume responsabilidad por la selección ni entrega memoria de proceso; cotizó solo lo solicitado",
+   "Información recibida sin plano del FM-10"
+  ],
+  "notas_y_exclusiones": "Gora: USD sin IVA, TC BNA; Megatap: USD sin IVA, TC BNA, ND si variación >=5%"
+ },
+ "proveedores": [
+  {
+   "proveedor": "GORA S.A.",
+   "que": "Cotización OF-X-0001-00026624: elementos filtrantes (3 x 498 + 15 x 90) y vane pack (3.395)",
+   "precio": 6239.0,
+   "moneda": "USD",
+   "plazo_entrega": "30 días (cartuchos) / 45 días (vane pack), desde OC y anticipo",
+   "fecha": "2025-12-19"
+  },
+  {
+   "proveedor": "MEGATAP S.R.L.",
+   "que": "Presupuesto 2025-313: 1 tapa vertical 20\" S300 (19.950) + 2 tapas horizontales 32\" S600 (6.180 c/u)",
+   "precio": 32310.0,
+   "moneda": "USD",
+   "plazo_entrega": "Item 1: 75/105 días; item 2: 60/90 días (120 si se pide ahora por parada de forja de Francovigh)",
+   "fecha": "2025-12-19"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Fabian Magnago",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Responsable de Ingeniería",
+   "email": "fmagnago@ittsa.com.ar",
+   "telefono": "+54 9 11 3988 6440 (327)"
+  },
+  {
+   "nombre": "Humberto Sanchez",
+   "empresa": "GORA S.A.",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": "humberto.sanchez@gora.com.ar",
+   "telefono": "+54 11 7090-4672; Primera Junta 777, Quilmes"
+  },
+  {
+   "nombre": "Gustavo Ongarelli",
+   "empresa": "GORA S.A.",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": "gustavo.ongarelli@gora.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Walter Vignoni",
+   "empresa": "GORA S.A.",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": "walter.vignoni@gora.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Luis Novillo",
+   "empresa": "Megatap S.R.L.",
+   "rol": "proveedor",
+   "cargo": "Socio Gerente",
+   "email": "luisnovillo@megatap.com.ar",
+   "telefono": "+54 9 11 5342 4563; Pedro de Luján 2919, CABA; info@megatap.com.ar"
+  }
+ ],
+ "aprendizajes": [
+  "Camuzzi pide equipos 'típicos' por código/plano; Gora cotiza solo lo especificado y no se hace cargo de la selección: conviene mandar las solicitudes originales o data sheets",
+  "Las tapas de cierre rápido (Megatap) son el grueso del costo de terceros: USD 32.310 de USD 38.549 en total, con plazos largos por la parada de forja de Francovigh (diciembre-enero)",
+  "Gora exige 40% de anticipo y Megatap 30% con OC; el plazo corre desde el anticipo",
+  "Se pidió presupuesto de cantidades que difieren de lo cotizado (4 cartuchos pedidos vs 3 mínimo de fabricación; 2 verticales 20\" + 1 de 32\" en el mail vs 1 vertical 20\" + 2 horizontales 32\" en el presupuesto): revisar contra el pliego"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/GORA OF-X-0001-00026624 ITT-CAMUZZI.pdf; 5.Proveedores 3ros/PRESUPUESTO ITT 25313.pdf",
+  "contactos": "5.Proveedores 3ros/RV_ Concurso Camuzzi Filtros.msg; 5.Proveedores 3ros/RV_ Concurso Cammuzzi MEGATAP OFERTA 25313.msg"
+ },
+ "problemas": [
+  "No hay oferta de ITT, ni documentos del cliente, ni OC: monto ofertado null; costo_total es la suma de las dos cotizaciones de proveedores (6.239 + 32.310 = 38.549), no un costo ITT consolidado",
+  "Discrepancia de cantidades y tipo de tapas entre el mail a Megatap (2 verticales 20\" + 1 de 32\" S600) y el presupuesto (1 vertical 20\" + 2 horizontales 32\")",
+  "Gora cotiza 3 cartuchos FM (mínimo de fabricación) y se pidieron 4",
+  "Referencia '#21217' tomada del nombre de la carpeta",
+  "Fecha de oferta ITT desconocida; fecha del último archivo 2025-12-19"
+ ]
+}

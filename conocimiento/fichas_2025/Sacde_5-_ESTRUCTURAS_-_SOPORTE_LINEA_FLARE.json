@@ -1,0 +1,121 @@
+{
+ "carpeta": "Sacde/5- ESTRUCTURAS - SOPORTE LINEA FLARE",
+ "cliente": "SACDE",
+ "cliente_final": "Pampa Energía (Obra 3029 Central Processing Facility, Rincón de Aranda, Neuquén)",
+ "numero_oferta": "0-386 25 Rev 1",
+ "revisiones": "Rev 0 (21/07/2025) y Rev 1 (22/07/2025, archivo); ambas con fecha 21/07/2025 impresa. Rev 1 sube todos los ítems un 10% sobre Rev 0. Se tomó Rev 1.",
+ "fecha_oferta": "2025-07-21",
+ "fecha_ultima_modificacion": "2025-07-22",
+ "referencia_cliente": "3029-CPF-RDA - SE-CPF-040 - Soportes línea de flare, pedido de precios; plano 1046-RDA-S-PL-1001-rA",
+ "familia": "OT",
+ "descripcion_corta": "Fabricación de 30 soportes de línea de flare (SOP.1 x7, SOP.2 x6, SOP.3 x6, SOP.4 x4, SOP.5 x7) con materiales y transporte a obrador Rincón de Aranda",
+ "items": [
+  {
+   "descripcion": "Mano de obra para fabricación de estructuras según plano 1046-RDA-S-PL-1001-rA; corte, soldadura, consumibles, END, tratamiento superficial (granallado/pintura incluye materiales)",
+   "cantidad": 1,
+   "unidad": "gl",
+   "precio_unitario": 73459.18,
+   "precio_total": 73459.18,
+   "moneda": "USD",
+   "datos_tecnicos": "Rev 0: 66.781,07"
+  },
+  {
+   "descripcion": "Materiales: perfilería, chapas, bulonería; incluye documentación de calidad",
+   "cantidad": 1,
+   "unidad": "gl",
+   "precio_unitario": 32486.22,
+   "precio_total": 32486.22,
+   "moneda": "USD",
+   "datos_tecnicos": "Rev 0: 29.532,92"
+  },
+  {
+   "descripcion": "Transporte a destino: Obrador Rincón de Aranda",
+   "cantidad": 1,
+   "unidad": "gl",
+   "precio_unitario": 9762.03,
+   "precio_total": 9762.03,
+   "moneda": "USD",
+   "datos_tecnicos": "Rev 0: 8.874,58"
+  }
+ ],
+ "monto_total_ofertado": 115707.43,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "45 desde la recepción de la orden de compra",
+ "plazo_dias": 45,
+ "condiciones": {
+  "pago": "30 días fecha factura",
+  "validez": "30 días corridos",
+  "entrega": "Planta del cliente, Obrador Rincón de Aranda (transporte incluido en la oferta)",
+  "moneda_y_ajuste": "USD sin IVA; facturado en ARS al TC BNA fecha de factura",
+  "notas_y_exclusiones": [
+   "Consultar bonificación por adjudicación total",
+   "Pliego del cliente: garantía 12 meses desde recepción provisoria o 18 meses desde entrega y puesta en marcha; precio incluye pruebas y ensayos",
+   "Precios en USD facturados en pesos al TC BNA de la fecha de factura; NC/ND si la variación supera 3%",
+   "Sin multas por mora si hay material importado (condición BCRA); sin responsabilidad por licencias no automáticas",
+   "ITT sugiere que el material importado (chapas, instrumentos, válvulas) sea provisto por el cliente en comodato o deducible de facturas"
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "David Abarca",
+   "empresa": "SACDE (Suministros)",
+   "rol": "cliente",
+   "cargo": "Suministros",
+   "email": "dabarca@sacde.com.ar",
+   "telefono": "+54 9 11 2887-5374"
+  },
+  {
+   "nombre": "Gerencia de Suministros SACDE",
+   "empresa": "SACDE",
+   "rol": "cliente",
+   "cargo": null,
+   "email": "gsum@sacde.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Coordinador de proyectos",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54 9 11 6001-5205 / (+54 11) 5352-0000"
+  },
+  {
+   "nombre": "Bernardo Visconti",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": null,
+   "email": "bvisconti@ittsa.com.ar",
+   "telefono": null
+  }
+ ],
+ "aprendizajes": [
+  "SACDE pidió precio por soporte (SOP.1 a SOP.5) y kg por ítem; ITT respondió con tres importes globales (MO, materiales, transporte) y luego envió el cuadro con una columna extra separando MO y materiales.",
+  "Rev 1 aumentó 10% todos los renglones el mismo día que se presentó (21-22/07/2025); el cliente pidió mejor precio y bonificación por adjudicación total.",
+  "Estructura menor: MO 63%, materiales 28%, transporte 8% del precio de Rev 1; transporte a Neuquén cotizado aparte.",
+  "Licitación con cierre 18/07 15 hs y prórroga hasta 21/07 15 hs; conviene pedir prórroga con anticipación."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto": "4.Armado de la Oferta Comercial/OE 386- 25 Rev 1.pdf",
+  "rev0": "4.Armado de la Oferta Comercial/OE 386- 25.pdf",
+  "pliego": "4.Armado de la Oferta Comercial/RE_ 3029-CPF-RDA - SE-CPF-040 - SOPORTES LINEA DE FLARE - Pedido de precios __ OE386-25__.msg"
+ },
+ "problemas": [
+  "En Rev 0 el encabezado dice Valor 115.707,43 pero los ítems suman 105.188,57 (el encabezado ya tenía el valor de Rev 1)",
+  "Sin costos ni factor; sin kg de acero ni precios por soporte",
+  "El mail del 21/07 menciona un cuadro de valores unitarios que no está en la carpeta",
+  "No consta adjudicación"
+ ]
+}

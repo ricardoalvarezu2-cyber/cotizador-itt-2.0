@@ -1,0 +1,83 @@
+{
+ "carpeta": "TAVAL/15-Filtro 10 Pampeano",
+ "cliente": "TAVAL",
+ "cliente_final": "posiblemente Pampeano / proyecto PEM (por nombre de carpeta y texto de la oferta)",
+ "numero_oferta": "OE 391-25 (el número impreso no aparece en el texto extraído; se infiere del nombre de archivo)",
+ "revisiones": "Sin revisiones",
+ "fecha_oferta": "2025-08-08",
+ "fecha_ultima_modificacion": "2025-08-20",
+ "referencia_cliente": "FILTROS FM10; hoja de datos 1046-RDA-M-HD-8001_A",
+ "familia": "F",
+ "descripcion_corta": "Fabricación de filtros de 10\" según hoja de datos 1046-RDA-M-HD-8001_A, con repuestos para PEM y 2 años de operación",
+ "items": [
+  {
+   "descripcion": "Fabricación de filtros 10\" según HD 1046-RDA-M-HD-8001_A; incluye materiales según detalle, soldadura, consumibles, ingeniería, data book; además repuestos para PEM y los necesarios para 2 años de operación",
+   "cantidad": 1,
+   "unidad": "gl",
+   "precio_unitario": 42917.83,
+   "precio_total": 42917.83,
+   "moneda": "USD",
+   "datos_tecnicos": "Diámetro 10\"; número de filtros no indicado en el texto; detalle de materiales (*) no figura"
+  }
+ ],
+ "monto_total_ofertado": 42917.83,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "Entregas parciales 30/45 días de recibida la orden de compra",
+ "plazo_dias": 45,
+ "condiciones": {
+  "pago": "30 días fecha de factura",
+  "validez": "30 días corridos",
+  "entrega": "Planta ITT, Quilmes Oeste",
+  "moneda_y_ajuste": "USD sin IVA; facturado en ARS al TC BNA fecha de factura",
+  "notas_y_exclusiones": [
+   "Precios en USD facturados en pesos al TC BNA de la fecha de factura; NC/ND si la variación supera 3%",
+   "Sin multas por mora si hay material importado (condición BCRA); sin responsabilidad por licencias no automáticas",
+   "ITT sugiere que el material importado (chapas, instrumentos, válvulas) sea provisto por el cliente en comodato o deducible de facturas"
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Adrian Fedele",
+   "empresa": "TAVAL",
+   "rol": "cliente",
+   "cargo": null,
+   "email": "afedele@taval.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Coordinador de proyectos",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54 9 11 6001-5205 / (+54 11) 5352-0000"
+  }
+ ],
+ "aprendizajes": [
+  "Precio global que incluye ingeniería, data book y repuestos para 2 años: no comparable con precio de filtro solo.",
+  "Carpeta con una única oferta; las entregas son parciales (30/45 días).",
+  "Aclarar cantidad de filtros y el detalle de materiales (*) al reutilizar el precio."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "monto": "4.Armado de la Oferta Comercial/OE 391- 25.docx",
+  "plazo": "4.Armado de la Oferta Comercial/OE 391- 25.docx"
+ },
+ "problemas": [
+  "Solo existe el .docx (sin PDF); falta el N° de oferta impreso, el detalle de materiales (*) y la cantidad de filtros",
+  "Fecha de oferta 08/08/2025 (campo Referencia), modificación del archivo 20/08/2025",
+  "No hay costos, proveedores ni OC",
+  "Cliente final (Pampeano) inferido solo por el nombre de la carpeta"
+ ]
+}

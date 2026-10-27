@@ -1,0 +1,98 @@
+{
+ "carpeta": "ENDRESS HAUSER/19. Requisition 4381-TARG-I-MR-610-078",
+ "cliente": "Endress (Ricardo Lopez)",
+ "cliente_final": "Proyecto Los Toldos (final no identificado en los documentos)",
+ "numero_oferta": "0-362 25",
+ "revisiones": "Sin revisiones (docx y pdf)",
+ "fecha_oferta": "2025-04-23",
+ "fecha_ultima_modificacion": "2025-04-23",
+ "referencia_cliente": "MR 4381-TARG-I-MR-610-078 - Gas and oil metering and gas pressure regulation (Los Toldos)",
+ "familia": "SK",
+ "descripcion_corta": "Fabricacion de 3 skids (gas, regulacion y medicion de liquido) para planta Los Toldos.",
+ "items": [
+  {
+   "descripcion": "Fabricacion de Skid PMG1-SK-602 - Skid de gas",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 79188.79,
+   "precio_total": 79188.79,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "Fabricacion de Skid PMG1-SK-603 - Skid de regulacion",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 69453.13,
+   "precio_total": 69453.13,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "Fabricacion de Skid PMG1-SK-604 - Skid de medicion de liquido",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 53631.82,
+   "precio_total": 53631.82,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  }
+ ],
+ "monto_total_ofertado": 202273.74,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "60/75 dias desde la recepcion de la OC sujeto al acopio de los materiales",
+ "plazo_dias": 75,
+ "condiciones": {
+  "pago": "30 ddf",
+  "validez": "30 dias corridos",
+  "entrega": "Planta ITTSA, Quilmes",
+  "moneda_y_ajuste": "USD, facturado en pesos al TC BNA vendedor del dia anterior al pago; NC/ND si la variacion supera 3%",
+  "notas_y_exclusiones": [
+   "IVA 42.477,49 -> total 244.751,22",
+   "Clausula BCRA: ITTSA no acepta multas por mora si hay material importado; se sugiere que el cliente provea el material importado (chapas, instrumentos, valvulas) en comodato o deducible de facturas"
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Ricardo Lopez",
+   "empresa": "Endress",
+   "rol": "cliente",
+   "cargo": null,
+   "email": null,
+   "telefono": null
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Coordinador de proyectos",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54-11-5352-0000 / +54-9-11-6001-5205"
+  }
+ ],
+ "aprendizajes": [
+  "Tres skids de medicion/regulacion de gas y liquido ofertados a USD 53,6-79,2 mil cada uno, con 60/75 dias sujeto al acopio de materiales.",
+  "La carpeta solo tiene la oferta: no hay requisicion, planilla de costos ni proveedores, por lo que no sirve para derivar un factor ni costos."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "todo": "4.Armado de la Oferta Comercial/OE 362- 25.pdf"
+ },
+ "problemas": [
+  "Sin datos tecnicos (diametros, rating, materiales) de los skids",
+  "Sin costos, factor ni proveedores",
+  "Sin OC; resultado desconocido",
+  "Cliente final no identificado; pie dice 'Quilmes, 22/10/2024' (plantilla)"
+ ]
+}

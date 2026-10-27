@@ -1,0 +1,86 @@
+{
+ "carpeta": "ENDRESS HAUSER/14. PAE, tramo de medicion, solo MO",
+ "cliente": "Endress+Hauser Argentina",
+ "cliente_final": null,
+ "numero_oferta": "0-343 25 rev.2",
+ "revisiones": "3 revisiones: rev.0 20/01/2025 USD 28,360.06 (plazo 35/45 d); rev.1 21/01/2025 USD 33,581.61 (plazo 45/60 d); rev.2 21/02/2025 USD 30,890.00 (45/60 d, suma UPN240/IPN240/UPN100, documentos de materiales y opcional 3 meses de almacenamiento). Vigente: rev.2",
+ "fecha_oferta": "2025-02-21",
+ "fecha_ultima_modificacion": "2025-02-21",
+ "referencia_cliente": "Tramo de medición PAE; doc. GSM-AO-I-ETC-10005-0000",
+ "familia": "P",
+ "descripcion_corta": "Fabricación (solo mano de obra) de puente de medición fiscal PAE: corte, soldadura, END, tratamiento superficial, montaje y conexionado eléctrico, sin materiales ni instrumentación",
+ "items": [
+  {
+   "descripcion": "Fabricación de puente de medición fiscal según doc. GSM-AO-I-ETC-10005-0000 (solo MO; incluye corte/biselado, soldadura de cañería y estructura UPN240/IPN240/UPN100, ensayos RX/tintas/PH, tratamiento superficial, montaje, conexionado eléctrico, documentos técnicos de insumos)",
+   "cantidad": 1,
+   "unidad": "global",
+   "precio_unitario": 30890.0,
+   "precio_total": 30890.0,
+   "moneda": "USD",
+   "datos_tecnicos": "Perfilería UPN240, IPN240, UPN100; cajas Ex d; no incluye materiales de cañería, databook, instrumentación/válvulas"
+  }
+ ],
+ "monto_total_ofertado": 30890.0,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "45/60 días de recibida la OC. Plazo sujeto a la entrega de instrumentación.",
+ "plazo_dias": 60,
+ "condiciones": {
+  "pago": "30 días fecha factura",
+  "validez": "30 días corridos",
+  "entrega": "Planta ITT Quilmes",
+  "moneda_y_ajuste": "USD facturado en pesos al TC BNA de la fecha de factura; cancelación al TC BNA vendedor del día anterior al pago; NC/ND si la variación supera 3%.",
+  "notas_y_exclusiones": [
+   "No incluye materiales para fabricación de cañería",
+   "No incluye databook",
+   "No incluye instrumentación/válvulas",
+   "Opcional: tres meses de almacenamiento del equipo (rev.2)",
+   "IVA aparte: USD 6,486.90 (total con IVA 37,376.90)",
+   "Cláusulas BCRA: sin multas por mora si hay material importado; licencias no automáticas sin responsabilidad de ITT; se sugiere que el cliente provea material importado (comodato o deducible)."
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Ricardo Lopez",
+   "empresa": "Endress+Hauser Argentina",
+   "rol": "cliente",
+   "cargo": null,
+   "email": "ricardo.lopez@endress.com",
+   "telefono": "+54 9 341 322-8782"
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Enviado por (comercial)",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54-11-6001-5205"
+  }
+ ],
+ "aprendizajes": [
+  "Trabajo de solo mano de obra: el cliente aporta cañería, estructura e instrumentación; ITT cobra fabricación, END, tratamiento y montaje eléctrico.",
+  "El precio subió de 28,360 (rev.0) a 30,890 (rev.2) al ampliar alcance (perfilería, documentos, almacenamiento opcional); referencia para MO de puentes de medición fiscales.",
+  "Plazo 45/60 días condicionado a que llegue la instrumentación del cliente."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto": "ENDRESS HAUSER/14. PAE, tramo de medicion, solo MO/4.Armado de la Oferta Comercial/OE 343- 25 Rev2.pdf",
+  "revisiones": "OE 343- 25.pdf, OE 343- 25 Rev1.pdf (4.Armado de la Oferta Comercial)"
+ },
+ "problemas": [
+  "No hay planilla de costo ni factor",
+  "No hay OC ni dato de resultado",
+  "El pie del documento dice 'Quilmes, 22/10/2024' (plantilla sin actualizar); se usa la fecha de la cabecera",
+  "Solo hay carpeta 4; no se sabe si el documento fue enviado tal cual"
+ ]
+}

@@ -1,0 +1,95 @@
+{
+ "carpeta": "TAVAL/34- Hard Solution",
+ "cliente": "Hard Solution (inferido del nombre de carpeta; no figura en los documentos)",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2025-11-20",
+ "referencia_cliente": "Separador vertical (casquetes Ø36\") y válvula de seguridad pilotada 4x6\"",
+ "familia": "SEP",
+ "descripcion_corta": "Insumos cotizados por proveedores para un separador vertical: válvula de seguridad pilotada DOMA 4\"x6\" y 2 casquetes semielípticos 2:1 Ø36\"",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": 9006.7,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": [
+   "Casquetes: ITT pidió espesor 4,7 mm SA-516 Gr 70; el proveedor ofrece 1/4\" (6,35 mm) como lo más fino, con norma ASME VIII D1"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Estudio Técnico Doma S.A. (DOMA)",
+   "que": "Válvula de seguridad y alivio pilotada DAP 87 S (cód. VSDAP87S1113V), A216 WCB, entrada 4\" 150# RF, salida 6\" 150# RF, asiento/obturador AISI 316, orificio M (3,60 pulg2), piloto DOMA con filtro",
+   "precio": 7350,
+   "moneda": "USD",
+   "plazo_entrega": "100 días de recibida la OC (salvo venta); pago 30 días fecha de factura; vigencia al 20/12/2025; + IVA 21%",
+   "fecha": "2025-11-20"
+  },
+  {
+   "proveedor": "Cintolo",
+   "que": "2 casquetes semielípticos Ø36\" esp. 1/4\" ASME VIII D1, A516 Gr 70 (art. 12723), USD 828,35 c/u",
+   "precio": 1656.7,
+   "moneda": "USD",
+   "plazo_entrega": "En stock, salvo venta; validez 7 días; + IVA 21% + IIBB; TC dólar vendedor BNA divisa",
+   "fecha": "2025-11-20"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Candelaria Lertora",
+   "empresa": "Estudio Técnico Doma S.A.",
+   "rol": "proveedor",
+   "cargo": "Vendedora",
+   "email": "info@etdoma.com.ar",
+   "telefono": "+54 11 4205-2007"
+  },
+  {
+   "nombre": "Julieta Pacheco",
+   "empresa": "Cintolo",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": "jpacheco@cintolo.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Coordinador de proyectos / Representante Técnico Comercial",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54 11 5352-0000 / +54 9 11 6001-5205"
+  }
+ ],
+ "aprendizajes": [
+  "Casquete 2:1 Ø36\" en A516 Gr 70: el espesor mínimo comercial en stock es 1/4\" (USD 828,35 c/u, nov-2025); para ASME VIII D1 piden casquetes ASME o B16.9 A234 WPB.",
+  "Válvula de seguridad pilotada DOMA 4x6\" 150# orificio M: USD 7.350, 100 días.",
+  "La carpeta solo tiene cotizaciones de proveedores: no hay oferta ni resultado."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/P-05684 Seguridad pilotada de 3x4.pdf; 5.Proveedores 3ros/RE_ Pedido de cotización casquete para separador vertical_ .msg"
+ },
+ "problemas": [
+  "Falta oferta, cliente confirmado y monto vendido",
+  "El archivo se llama 'Seguridad pilotada de 3x4' pero el presupuesto es de entrada 4\" x salida 6\"",
+  "Mail de Doma: cantidad total de la fila 'Importe' 7.350 sin IVA; con IVA 21% e IIBB 9.003,75",
+  "Espesor pedido (4,7 mm) distinto del ofrecido (1/4\")"
+ ]
+}

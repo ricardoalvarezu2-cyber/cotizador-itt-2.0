@@ -30,10 +30,11 @@ def leer(nombre):
 
 def main():
     filas = []
-    for r in leer("proveedores_2026.csv"):
-        if r["precio"]:
-            filas.append([r["fecha"], "cotizacion_proveedor_2026", r["proveedor"], "", r["detalle"], r["precio"],
-                          r["moneda"], "", r["plazo_entrega"], r["carpeta_cotizacion"]])
+    for anio in ("2026", "2025"):
+        for r in leer(f"proveedores_{anio}.csv"):
+            if r["precio"]:
+                filas.append([r["fecha"], f"cotizacion_proveedor_{anio}", r["proveedor"], "", r["detalle"], r["precio"],
+                              r["moneda"], "", r["plazo_entrega"], r["carpeta_cotizacion"]])
     for r in leer("precios_componentes.csv"):
         detalle = " ".join(x for x in (r["descripcion"], r["detalle"], r["dimension"], r["tipo"], r["schedule"],
                                         r["serie"], r["material"], r["norma"]) if x and x != "-")

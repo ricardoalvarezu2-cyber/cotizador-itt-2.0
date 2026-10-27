@@ -1,0 +1,92 @@
+{
+ "carpeta": "SECIN/9. Estructuras SK-0301",
+ "cliente": "Secin",
+ "cliente_final": null,
+ "numero_oferta": "0-420-25",
+ "revisiones": "Sin revisiones; hay un PDF duplicado (OE 420-25_.pdf)",
+ "fecha_oferta": "2025-11-21",
+ "fecha_ultima_modificacion": "2025-11-21",
+ "referencia_cliente": "Skid/Plataformas SK-0301, estructura coalescente; docs 1045RDA-S-PL-10501 y -10502",
+ "familia": "S",
+ "descripcion_corta": "Mano de obra de fabricación de dos estructuras (plataformas) del skid SK-0301 según planos 10501 y 10502, sin materiales ni tratamiento superficial",
+ "items": [
+  {
+   "descripcion": "Mano de obra fabricación de estructura según doc 1045RDA-S-PL-10501 (corte y biselado, soldadura e insumos, supervisor de calidad)",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 12373.5,
+   "precio_total": 12373.5,
+   "moneda": "USD",
+   "datos_tecnicos": "Estructura coalescente"
+  },
+  {
+   "descripcion": "Mano de obra fabricación de estructura según doc 1045RDA-S-PL-10502 (corte y biselado, soldadura e insumos, supervisor de calidad)",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 15687.45,
+   "precio_total": 15687.45,
+   "moneda": "USD",
+   "datos_tecnicos": "Estructura coalescente"
+  }
+ ],
+ "monto_total_ofertado": 28060.95,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "30 días de recibida la orden de compra, sujeta a recepción de materiales.",
+ "plazo_dias": 30,
+ "condiciones": {
+  "pago": "30 días fecha de factura",
+  "validez": "30 días corridos",
+  "entrega": "Planta ITT, Quilmes",
+  "moneda_y_ajuste": "USD facturado en pesos al TC BNA de la fecha de factura; cancelación al TC BNA vendedor del día anterior al pago; NC/ND si la variación supera 3%.",
+  "notas_y_exclusiones": [
+   "No incluye materiales",
+   "No incluye tratamiento superficial",
+   "END a cargo del cliente, a realizar en el taller de ITT",
+   "IVA aparte: USD 5,892.80 (total 33,953.75)",
+   "Cláusulas BCRA: sin multas por mora si hay material importado; licencias no automáticas sin responsabilidad de ITT; se sugiere que el cliente provea material importado (comodato o deducible)."
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Nestor Barrios",
+   "empresa": "Secin",
+   "rol": "cliente",
+   "cargo": null,
+   "email": "nbarrios@secin.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Enviado por (comercial)",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54-11-6001-5205"
+  }
+ ],
+ "aprendizajes": [
+  "Oferta de solo MO de estructuras: USD 12.4 mil y 15.7 mil por estructura, con supervisor de calidad incluido pero sin END ni pintura.",
+  "El cliente suministra los materiales y el plazo de 30 días depende de su recepción.",
+  "Sirve de referencia de precio de MO de estructuras metálicas para skids."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto": "SECIN/9. Estructuras SK-0301/4.Armado de la Oferta Comercial/OE 420-25.pdf"
+ },
+ "problemas": [
+  "Sin planilla de costo, factor, peso/horas de las estructuras",
+  "Sin OC ni resultado",
+  "Pie dice 22/10/2024 (plantilla)"
+ ]
+}

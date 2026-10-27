@@ -1,0 +1,101 @@
+{
+ "carpeta": "TAVAL/18- YPF Puente de inyeccion",
+ "cliente": "TAVAL (Ricardo Alvarez)",
+ "cliente_final": "YPF (segun nombre de carpeta)",
+ "numero_oferta": "0-404-25",
+ "revisiones": "Dos PDF: el original describe 'Corte, biselado, roscado, armando'; el segundo (OE 404-25_.pdf) agrega 'tratamiento superficial'. Mismo precio.",
+ "fecha_oferta": "2025-09-26",
+ "fecha_ultima_modificacion": "2025-10-01",
+ "referencia_cliente": "MO Puente de prod. CBM (puente de produccion CBM roscado)",
+ "familia": "S",
+ "descripcion_corta": "Venta de mano de obra para fabricar 1 puente de produccion CBM roscado (corte, biselado, roscado, tratamiento superficial, armado); materiales provistos por el cliente.",
+ "items": [
+  {
+   "descripcion": "Mano de obra para fabricacion de puente de produccion (corte, biselado, roscado, tratamiento superficial y armado)",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 2284.2,
+   "precio_total": 2284.2,
+   "moneda": "USD",
+   "datos_tecnicos": "Puente CBM con parte roscada (NPT)"
+  }
+ ],
+ "monto_total_ofertado": 2284.2,
+ "moneda": "USD",
+ "costo_total": 1800,
+ "factor_venta": 1.269,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": 1800,
+  "otros": null
+ },
+ "plazo_ofrecido": "25/30 dias de recibida la orden de compra, materiales e ingenieria aprobada",
+ "plazo_dias": 30,
+ "condiciones": {
+  "pago": "30 ddf",
+  "validez": "30 dias corridos",
+  "entrega": "Planta ITTSA, Quilmes",
+  "moneda_y_ajuste": "USD, facturado en pesos al TC BNA vendedor del dia anterior al pago; NC/ND si la variacion supera 3%",
+  "notas_y_exclusiones": [
+   "Solo mano de obra; no incluye materiales ni roscas en extremos de caño que hace ITT segun presupuesto Ledesma",
+   "IVA 479,68 -> total 2.763,88",
+   "Clausula BCRA: ITTSA no acepta multas por mora si hay material importado; se sugiere que el cliente provea el material importado (chapas, instrumentos, valvulas) en comodato o deducible de facturas"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Ledesma (Edgardo Ledesma) - Presupuesto 0001-0000020099",
+   "que": "Mano de obra, herramientas, corte de caño para roscar, armado de cuadro, SVO, ART por cada cuadro; ITT pone materiales y roscas en extremos (recomienda hacer las NPT con torno)",
+   "precio": 1800,
+   "moneda": "USD",
+   "plazo_entrega": "Validez 15 dias; pago 5 dias FF",
+   "fecha": "2025-09-24"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Ricardo Alvarez",
+   "empresa": "TAVAL",
+   "rol": "cliente",
+   "cargo": null,
+   "email": null,
+   "telefono": null
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Coordinador de proyectos",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54-11-5352-0000 / +54-9-11-6001-5205"
+  },
+  {
+   "nombre": "Edgardo Ledesma",
+   "empresa": "Ledesma (taller de terceros, mano de obra)",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": "edgardoledesma68@hotmail.com",
+   "telefono": "1166341630"
+  }
+ ],
+ "aprendizajes": [
+  "La MO de un cuadro/puente CBM roscado se subcontrato a Ledesma a USD 1.800 por cuadro (Ledesma pone MO, herramientas, SVO, ART; ITT pone materiales y las roscas en extremos).",
+  "El precio de venta de la MO (2.284,20) equivale a factor 1,269 sobre el costo Ledesma 1.800 (derivado, no figura en planilla); es menor al 1,35/1,40 habitual: verificar si el costo incluye otros conceptos.",
+  "Ledesma recomienda roscar NPT en torno: considerar ese costo aparte."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_precio": "4.Armado de la Oferta Comercial/OE 404-25.pdf",
+  "revision_tratamiento_superficial": "4.Armado de la Oferta Comercial/OE 404-25_.pdf",
+  "costo_proveedor": "5.Proveedores 3ros/Presupuesto ITT N° 20099 Puente CBM roscado 24-09-25.doc"
+ },
+ "problemas": [
+  "No hay planilla de costos: el factor 1,269 es derivado de precio/costo Ledesma",
+  "Sin OC; resultado desconocido",
+  "Pie de la oferta dice 'Quilmes, 22/10/2024' (plantilla)",
+  "Carpeta guarda la oferta en 4.Armado y no en 7.Propuesta"
+ ]
+}

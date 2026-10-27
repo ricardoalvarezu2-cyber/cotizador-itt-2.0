@@ -1,0 +1,97 @@
+{
+ "carpeta": "TAVAL/16-Calentador Mexico",
+ "cliente": "TAVAL",
+ "cliente_final": "Proyecto Mexico (segun nombre de carpeta; el presupuesto de Ledesma lo nombra 'Albanesi' y 'N° AR 1013-EKD-M-DWQ-26590')",
+ "numero_oferta": null,
+ "revisiones": "Sin oferta emitida en la carpeta (solo cotizaciones de mano de obra de proveedor)",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2025-08-12",
+ "referencia_cliente": "Calentador indirecto 276 kW N° AR 1013-EKD-M-DWQ-26590",
+ "familia": "C",
+ "descripcion_corta": "Calentador indirecto de 276 kW (cuerpo Ø1740 x 4400 mm, serpentina 6\" Sch80, tubo de fuego 12\") para Mexico; solo se conservan los presupuestos de mano de obra de Ledesma.",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": 18300,
+  "terceros": 18300,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": "Ledesma: 5 dias FF",
+  "validez": "Ledesma: 10 dias",
+  "entrega": null,
+  "moneda_y_ajuste": "Ledesma: USD al dolar divisa vendedor BNA del dia anterior a la facturacion",
+  "notas_y_exclusiones": [
+   "Ledesma pone MO, herramientas, ART, SVO; ITT pone cortes, cancamos, chapas para serpentina y tubo de fuego, cuna soporte, rolado de chapas, perforado de bridas y contrabridas, prueba hidraulica (PH)",
+   "Recipientes y equipos sin precios de materiales en la carpeta"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Ledesma (Edgardo Ledesma) - Presupuesto 0001-0000020060",
+   "que": "MO del calentador: cuerpo (virolas Ø1740 x 4400, angulos, tapas medialuna, conexiones, recuperador de vapor, plataforma, escalera), serpentina (9 codos 6\" Sch80, 2 bridas 6\" Sch80, bastidor), tubo de fuego (cano 12\" Sch30, codos 18 y 90 grados, chimenea 12\"), tren de combustion (montaje de quemador, manometros, soporteria)",
+   "precio": 18300,
+   "moneda": "USD",
+   "plazo_entrega": "Validez 10 dias; pago 5 dias FF",
+   "fecha": "2025-08-08"
+  },
+  {
+   "proveedor": "Ledesma (Edgardo Ledesma) - Presupuesto 0001-0000020061",
+   "que": "Skid, plataforma, escalera y soporteria del calentador: MO por kg",
+   "precio": 2.0,
+   "moneda": "USD por kg (+IVA)",
+   "plazo_entrega": "Validez 10 dias; pago 5 dias FF",
+   "fecha": "2025-08-08"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Edgardo Ledesma",
+   "empresa": "Ledesma (taller de terceros, mano de obra)",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": "edgardoledesma68@hotmail.com",
+   "telefono": "1166341630"
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Coordinador de proyectos",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54-11-5352-0000 / +54-9-11-6001-5205"
+  },
+  {
+   "nombre": "Bernardo Visconti",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Gerente",
+   "email": "bvisconti@ittsa.com.ar",
+   "telefono": "+54-11-5352-0000 int. 328"
+  }
+ ],
+ "aprendizajes": [
+  "MO de calentador indirecto 276 kW por terceros: USD 18.300 (cuerpo, serpentina, tubo de fuego y tren de combustion) mas USD 2,00/kg para skid, plataforma, escalera y soporteria.",
+  "El taller Ledesma no incluye materiales; ITT debe sumar cortes, chapas, rolado, perforado de bridas, PH y todos los materiales (serpentina 6\" Sch80, tubo de fuego 12\" Sch30).",
+  "Para cotizar MO propia, pedir el peso del skid para aplicar el precio por kg."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "mo_calentador": "5.Proveedores 3ros/Presupuesto ITT CALENTADOR N° 20060 Albanesi 08-25.doc",
+  "mo_skid_kg": "5.Proveedores 3ros/Presupuesto ITT N° 20061 Calentador Indirecto 276 KW.doc",
+  "pedido": "5.Proveedores 3ros/RE_ pedido de cotizacion de caletador.msg"
+ },
+ "problemas": [
+  "No hay oferta al cliente, ni costos de materiales, ni factor",
+  "El pedido de Carlos Alfonso a Ledesma es del 08/08/2025; el cliente final Mexico solo surge del nombre de carpeta",
+  "'mano_obra' y 'terceros' = 18.300 es solo el presupuesto del cuerpo (el skid se cobra por kg, sin peso informado)"
+ ]
+}
