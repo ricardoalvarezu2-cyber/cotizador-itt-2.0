@@ -1,0 +1,49 @@
+rubro,concepto,unidad,valor_usd,tipo,fecha,fuente,vigente,nota
+soldadura,Mano de obra soldadura piping,USD/pulg-diam-eq,19.73,costo_propio,2024-10,costo_mo_planta_2024-10,si,61.16 USD/hh por soldador / 3.1 pulg por hora
+soldadura,Mano de obra soldadura piping,USD/pulg-diam-eq,28,usado_en_cotizacion,2024-09,costos_mo_master_2024-09,si,Valor del modelo MO Master (skid medición E+H)
+soldadura,Mano de obra soldadura piping,USD/pulg-diam-eq,32,usado_en_cotizacion,2024-02,Costos_MO_Master_II-SEP_TRIFASICO,no,Separador trifásico AESA; mismo valor en Costos_MO dic-2023
+soldadura,Mano de obra soldadura piping (tercero Ledesma),USD/pulg-diam-eq,16.31,tercero,2024-09,costo_mo_planta_2024-10,si,Más IVA. Presupuesto sep-2024
+soldadura,Mano de obra soldadura piping (tercero Ledesma),USD/pulg-diam-eq,6.00,tercero,2024-04,costo_mo_planta_2024-10,no,Más IVA
+soldadura,Mano de obra soldadura piping (tercero Ledesma),USD/pulg-diam-eq,4.60,tercero,2024-02,costo_mo_planta_2024-10,no,Más IVA
+soldadura,Precio de venta MO spools acero al carbono (TGS Joule Thomson),USD/pulg-diam-eq,17.2-28.8,precio_venta,2022-03,Anexo 1 4562,no,1985-3321 ARS con TC 115.5; varía por diámetro
+soldadura,Precio de venta MO spools inoxidable 316L (TGS Joule Thomson),USD/pulg-diam-eq,24.5-40.3,precio_venta,2022-03,Anexo 1 4562,no,2830-4650 ARS con TC 115.5
+estructura,Mano de obra estructura soldada,USD/kg,5.10,costo_propio,2024-10,costo_mo_planta_2024-10,si,61.16 USD/hh / 12 kg/h deposición (MIG tubular)
+estructura,Mano de obra estructura soldada,USD/kg,10,usado_en_cotizacion,2024-09,costos_mo_master_2024-09,si,
+estructura,Mano de obra estructura soldada,USD/kg,7.40,usado_en_cotizacion,2024-02,Costos_MO_Master_II-SEP_TRIFASICO,no,
+estructura,Mano de obra estructura (tercero Ledesma),USD/kg,1.90,tercero,2024-09,costo_mo_planta_2024-10,si,Más IVA
+estructura,Mano de obra estructura (tercero Ledesma),USD/kg,3.60,tercero,2024-04,costo_mo_planta_2024-10,no,Más IVA
+estructura,Mano de obra estructura (tercero Ledesma),USD/kg,2.75,tercero,2024-02,costo_mo_planta_2024-10,no,Más IVA
+armado,Hora hombre armado (tercero Ledesma),USD/hh,7.00,tercero,2024-02,costo_mo_planta_2024-10,si,Más IVA
+hora_hombre,Soldador (costo empresa por operario),USD/hh,61.16,costo_propio,2024-10,costo_mo_planta_2024-10,si,Incluye prorrateo de indirectos y consumibles
+hora_hombre,Ingeniería (costo empresa por persona),USD/hh,15.40,costo_propio,2024-10,costo_mo_planta_2024-10,si,
+hora_hombre,Granallado y pintura (costo empresa por operario),USD/hh,15.02,costo_propio,2024-10,costo_mo_planta_2024-10,si,
+hora_hombre,Ingeniería,USD/hh,15,usado_en_cotizacion,2024,planilla_base_cotizaciones,no,
+hora_hombre,Calidad,USD/hh,15,usado_en_cotizacion,2024,planilla_base_cotizaciones,no,
+hora_hombre,Planta (movimientos internos y prueba hidráulica),USD/hh,13,usado_en_cotizacion,2024,planilla_base_cotizaciones,no,
+pintura,Mano de obra pintura,USD/m2,7.51,costo_propio,2024-10,costo_mo_planta_2024-10,si,15.02 USD/hh / 2 m2 por hora; sin materiales
+pintura,Granallado/arenado + esquema de pintura (tercero VARPAT),USD/m2,35.28,tercero,2024-05,costo_mo_planta_2024-10,si,31750 ARS
+pintura,Suministro de pintura,USD/m2,19,tercero,2024-05,costo_mo_planta_2024-10,si,
+pintura,Granallado,USD/m2,30,usado_en_cotizacion,2024-09,costos_mo_master_2024-09,si,
+pintura,Pintura,USD/m2,90,usado_en_cotizacion,2024-09,costos_mo_master_2024-09,si,Valor alto frente a VARPAT: revisar
+pintura,Granallado y pintura con materiales,USD/m2,50,usado_en_cotizacion,2024,planilla_base_cotizaciones,no,
+end,Servicio de radiografía (Antonelli),USD/servicio,490,tercero,2025-11,antonelli_end_2025-11,si,Sin IVA. TC 1482
+end,Servicio de ultrasonido (Antonelli),USD/servicio,490,tercero,2025-11,antonelli_end_2025-11,si,
+end,Servicio de partículas magnetizables (Antonelli),USD/servicio,490,tercero,2025-11,antonelli_end_2025-11,si,
+end,Servicio de líquidos penetrantes (Antonelli),USD/servicio,490,tercero,2025-11,antonelli_end_2025-11,si,
+end,Adicional sábado (RX/PM/LP),USD/servicio,245,tercero,2025-11,antonelli_end_2025-11,si,
+end,Adicional domingo y feriado (RX/PM/LP),USD/servicio,368,tercero,2025-11,antonelli_end_2025-11,si,Ultrasonido fin de semana: 490
+end,Placa radiográfica chica 9 x 21.5 cm,USD/placa,15,tercero,2025-11,antonelli_end_2025-11,si,
+end,Placa radiográfica grande 9 x 43 cm,USD/placa,20,tercero,2025-11,antonelli_end_2025-11,si,
+end,Procedimiento escrito nivel 3 (ISO 9712),USD/unidad,250,tercero,2025-11,antonelli_end_2025-11,si,
+end,Medición de dureza (inspector nivel 2),USD/servicio,325,tercero,2025-11,antonelli_end_2025-11,si,
+end,Servicio de radiografía (por cada 40 placas),USD/servicio,400,usado_en_cotizacion,2024-09,costos_mo_master_2024-09,no,Reemplazado por Antonelli 2025-11
+end,Placa radiográfica chica,USD/placa,17,usado_en_cotizacion,2024-09,costos_mo_master_2024-09,no,Reemplazado por Antonelli 2025-11
+end,Placa radiográfica grande,USD/placa,24,usado_en_cotizacion,2024-09,costos_mo_master_2024-09,no,Reemplazado por Antonelli 2025-11
+end,Servicio de radiografía,USD/servicio,408,tercero,2024,planilla_base_cotizaciones,no,Reemplazado por Antonelli 2025-11
+end,Servicio de líquidos penetrantes,USD/servicio,294,tercero,2024,planilla_base_cotizaciones,no,Reemplazado por Antonelli 2025-11
+end,Placa radiográfica,USD/placa,6.5,tercero,2024,planilla_base_cotizaciones,no,Reemplazado por Antonelli 2025-11
+material,Chapa negra A36 (1/2 1/4 3/16),USD/kg,1.16,precio_compra,2026-02,precios_varios_acero_2026-02,si,Con 10% de recortes: 1.27. Redondeo usado: 1.30
+material,Chapa semilla de melón 1/8,USD/kg,1.23,precio_compra,2026-02,precios_varios_acero_2026-02,si,Con 10% de recortes: 1.35
+material,Hierro ángulo,USD/kg,1.32-1.72,precio_compra,2026-02,precios_varios_acero_2026-02,si,Con 10% de recortes: 1.45-1.90
+material,Planchuela,USD/kg,1.48-1.70,precio_compra,2026-02,precios_varios_acero_2026-02,si,Con 10% de recortes: 1.63-1.87
+material,Caño estructural 3x1/8,USD/kg,1.40,precio_compra,2026-02,precios_varios_acero_2026-02,si,Con 10% de recortes: 1.54

@@ -9,6 +9,10 @@ Herramienta de cotización asistida por IA para ITT S.A.: lee pedidos de cliente
 - **Motor de costo y plazo:** cálculo determinístico (planilla), sin IA.
 - **Herramienta comercial:** factores de rentabilidad, caución, transporte, márgenes.
 
+## Base de conocimiento
+
+En [`conocimiento/`](conocimiento/README.md): reglas de cálculo, tarifas, factores de soldadura, perfiles, codificación Taval/ITT, precios, clientes e histórico comercial. Se regenera desde las fuentes originales con `python herramientas/construir_base.py` (las fuentes van en `fuentes_originales/`, que no se sube al repositorio).
+
 ## Herramientas de lectura
 
 | Herramienta | Uso |
