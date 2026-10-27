@@ -974,5 +974,93 @@
     }
    ]
   }
- ]
+ ],
+ "compras": {
+  "fecha_respuesta": "2026-10-30",
+  "material_en_planta_dias": 45,
+  "lugar_entrega": "Planta ITT S.A., Av. 12 de Octubre 4004, Quilmes Oeste, Bs. As.",
+  "requisitos_generales": [
+   "Cotizar en USD sin IVA, con plazo de entrega y validez de la oferta.",
+   "Certificados de material (colada / 3.1) de válvulas, accesorios, caños y bridas: se entregan al cliente con la documentación del equipo.",
+   "Si el artículo ofrecido no es exactamente el pedido (serie, material, extremos, modelo), indicarlo: puede ser un desvío a declarar al cliente.",
+   "Las cantidades son para 2 puentes (cantidad por puente × 2)."
+  ],
+  "notas": {
+   "1": "Serie 2000 según plano; se acepta serie 3000.",
+   "2": "Requisito del cliente: cuerpo ENTERIZO, sin bulones de unión. Paso nominal, esfera flotante, vástago, esfera y asientos METÁLICOS AISI 316. Indicar marca y modelo.",
+   "3": "Niple roscado NPT-M. Puede fabricarse en ITT desde caño 1/2\" sch 80: indicar si conviene.",
+   "4": "Niple roscado NPT-M ambos extremos.",
+   "5": "Requisito del cliente: cuerpo ENTERIZO, sin bulones de unión. Paso nominal, esfera flotante, vástago, esfera y asientos METÁLICOS AISI 316. Indicar marca y modelo.",
+   "6": "Unión doble a golpe (rápida) serie 2000, A105, NPT-H.",
+   "7": "Retención a clapeta serie 600: cuerpo A216 WCB; clapeta, asientos renovables y resorte AISI 316. Confirmar material de asiento (una cotización anterior era AISI 410). Indicar marca, modelo y si hay stock.",
+   "8": "Serie 2000 según plano; se acepta serie 3000.",
+   "9": "Niple roscado NPT-M ambos extremos.",
+   "10": "Serie 2000 según plano; se acepta serie 3000.",
+   "11": "Serie 2000 según plano; se acepta serie 3000.",
+   "12": "Un extremo NPT y el otro biselado para soldar (BW).",
+   "13": "Extremos BW en los DOS lados (BW/BW), sch 80, cuerpo A234 WPB. Indicar presión de prueba y certificado.",
+   "14": "Se necesitan 2 × 1.900 mm = 3,8 m. Cotizar la tira completa (~12 m) y, si venden fraccionado, el precio por metro. Revestimiento POLIPROPILENO (tricapa) según plano; cotizar también polietileno como alternativa.",
+   "15": "Codo 45° radio largo, sch 80, A234 WPB, BW.",
+   "16": "Reducción 2½\" sch 80 × 2\" sch 40 (80×40), A234 WPB, BW. Si no hay, cotizar 2½\" × 2\" XS × XS e indicarlo.",
+   "17": "Serie 2000 según plano; se acepta serie 3000.",
+   "18": "Serie 2000 según plano; se acepta serie 3000.",
+   "19": "Modelo exigido por plano: ABAC VI 550-M (bloqueo y purga 1/2\" NPT-M, AISI 316, 3000 psi). Si se ofrece otro modelo, indicarlo.",
+   "20": "Rango 0–40 bar, conexión INFERIOR 1/2\" NPT-M (el de stock ITT tiene 1/4\": no sirve). Dial 4\" con glicerina.",
+   "21": "Sello METAL-METAL (requisito del cliente). Plano: marca Duralite. Cotizar Duralite y una alternativa equivalente (ej. Adita).",
+   "22": "Un extremo NPT y el otro biselado para soldar (BW).",
+   "23": "Cupla 1/2\" serie 80/2000, A234 WPB, un extremo NPT y el otro para soldar sobre caño.",
+   "24": "Niple roscado NPT ambos extremos.",
+   "25": "Un extremo NPT y el otro biselado para soldar (BW). Largo 1.000 mm."
+  },
+  "cantidad_compra": {
+   "14": "1 tira de ~12 m (se usan 3,8 m)"
+  },
+  "servicios": [
+   {
+    "servicio": "Armado roscado y sellado de 2 puentes según plano (MO, herramientas, consumibles)",
+    "proveedores": "E. Ledesma / J. Quesada",
+    "referencia": "Ledesma USD 400 c/u (PRES 24879, abr-2026); Quesada USD 380 c/u (JQ-016-2026, abr-2026); Ledesma USD 1.800 cuadro CBM con corte de caño (sep-2025)",
+    "nota": "Mandar el plano. Pedir que aclaren si incluye corte y roscado de niples."
+   },
+   {
+    "servicio": "Granallado y pintura esmalte sintético color cedro (válvulas sin pintar)",
+    "proveedores": "Proveedor habitual de pintura",
+    "referencia": "USD 100 por puente (PRES 24879, abr-2026)",
+    "nota": ""
+   },
+   {
+    "servicio": "Flete Quilmes → Depósito Pampa del Castillo, RN 26 km 42 (Comodoro Rivadavia). Solo si el cliente lo pide",
+    "proveedores": "Fernando Transporte / ETFA Logística",
+    "referencia": "ARS 3.500.000 por Sprinter con 1.200 kg (jun-2026)",
+    "nota": "2 puentes; estimar peso y medidas con el armado."
+   }
+  ],
+  "proveedores": {
+   "1": "Renard",
+   "8": "Renard",
+   "10": "Renard",
+   "11": "Renard",
+   "15": "Renard",
+   "16": "Renard",
+   "17": "Renard",
+   "18": "Renard",
+   "23": "Renard",
+   "3": "Renard (caño 1/2\" sch 80 roscado) / fabricación en ITT",
+   "4": "Renard (caño 2\" sch 80 roscado) / fabricación en ITT",
+   "9": "Renard (caño 2\" sch 80 roscado) / fabricación en ITT",
+   "12": "Renard (caño 2\" sch 80 roscado) / fabricación en ITT",
+   "22": "Renard (caño 2\" sch 80 roscado) / fabricación en ITT",
+   "24": "Renard (caño 2\" sch 80 roscado) / fabricación en ITT",
+   "25": "Renard (caño 2\" sch 80 roscado) / fabricación en ITT",
+   "2": "Taval / Indave",
+   "5": "Taval / Indave",
+   "6": "Adita (IMB Oil) / Duralitte",
+   "21": "Duralitte / Adita (IMB Oil)",
+   "7": "Ingeniería en Fluidos / Danco",
+   "13": "Duralitte / Dinatécnica / Flex Seal / MS Juntas",
+   "14": "Provemet",
+   "19": "ABAC",
+   "20": "Weisz Instrumentos / proveedor habitual de instrumentos"
+  }
+ }
 }

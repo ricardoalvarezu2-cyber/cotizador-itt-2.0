@@ -12,6 +12,7 @@ Salida:
   computo.csv            cómputo con la fuente de base de cada ítem (lo usa verificar_computo.py)
   <codigo>_<...>.xlsx    planilla con fórmulas: parámetros, ajuste por inflación, detalle, índices, desvíos, antecedentes
   informe.html           informe interactivo (plantillas/informe_cotizacion.html)
+  compras/               lista de materiales y servicios para Compras (si cotizacion.json tiene "compras")
   oferta/                ofertas técnica y económica en Word y PDF (si hay oferta.json)
 
 Controles (procedimiento P7 y P9): recalcula el precio en Python y lo compara con la planilla recalculada
@@ -339,6 +340,9 @@ def main(carpeta):
     import verificar_computo
     if verificar_computo.main(carpeta) != 0:
         sys.exit("ERROR: verificar_computo.py encontró errores.")
+    if cfg.get("compras"):
+        import lista_compras
+        lista_compras.main(carpeta)
     if (carpeta / "oferta.json").exists():
         import generar_oferta
         generar_oferta.main(carpeta)

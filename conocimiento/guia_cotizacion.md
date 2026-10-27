@@ -30,6 +30,10 @@ Pedido del cliente (mail, PDF, DWG)
 - Leer también las **notas del plano** (pintura, revestimientos, alternativas) y el **dibujo**, para ver qué extremos se sueldan en taller y cuáles quedan para campo.
 - Anotar los requisitos del pedido: ensayos, registros, marcas exigidas, fechas y lugar de entrega.
 
+## 2 bis. Pedir precios a Compras
+
+**Matías no compra: los precios nuevos los pide Compras.** En la sección `compras` de `cotizacion.json` se cargan los requisitos por posición (lo que el proveedor tiene que respetar), los proveedores sugeridos y los servicios (armado, pintura, flete). `armar_cotizacion.py` genera `compras/<codigo>_pedido_materiales_compras.xlsx`, con la especificación del plano, la cantidad total, el último precio de referencia (uso interno) y columnas amarillas para cargar las respuestas. Esas respuestas se cargan en `cotizacion.json` como fuente de base (`tipo: cot`, con proveedor, número de cotización y fecha), y se vuelve a armar.
+
 ## 3. Buscar antecedentes y precios (P4, P5, P8)
 
 Por orden de prioridad:

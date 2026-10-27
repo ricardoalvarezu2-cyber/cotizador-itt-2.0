@@ -28,6 +28,7 @@ Copiar esta carpeta a `cotizaciones/COT[AA]-[CCCC]-[NNN]_<CLIENTE>_<PEDIDO>/` y 
 | `desvios` | `tag` (posiciones), `titulo`, `texto` |
 | `antecedentes` | Ofertas usadas: carpeta, fecha, qué es, precio, qué se tomó |
 | `pendientes` | Bloques de confirmaciones pendientes (proveedores, cliente) |
+| `compras` | Para la lista que va a Compras (`compras/*.xlsx`): `fecha_respuesta`, `material_en_planta_dias`, `lugar_entrega`, `requisitos_generales`, `notas` y `proveedores` por posición del plano, `cantidad_compra` (si se compra distinto de cantidad × equipos, p. ej. tira de caño) y `servicios` (armado, pintura, flete) |
 | `pie`, `planilla_notas` | Pie del informe y notas de la hoja Cotización |
 | `items` | Ver abajo |
 
