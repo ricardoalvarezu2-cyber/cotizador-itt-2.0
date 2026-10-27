@@ -24,16 +24,16 @@ El detalle interactivo, con el origen de cada precio, valores editables y export
 | Mano de obra (armado Ledesma 400 + soldaduras 224) | 624 |
 | Procesos e insumos (PH, pintura, calidad, sellador) | 315 |
 | **Costo** | **5.374** |
-| **Precio** (1,35 sobre materiales y servicios, 1,40 sobre MO) | **7.275** |
-| Total por 2 puentes | 14.551 + IVA |
+| **Precio** (1,35 sobre materiales y servicios, 1,40 sobre MO) | **7.287** |
+| Total por 2 puentes | 14.574 + IVA |
 
 Modelo de costo: PRES 24879 rev A (TAVAL/55, Tecpetrol, 22/04/2026), puente de producción convencional para bombeo mecánico.
 
 **Correcciones al borrador anterior:** el armado de Ledesma pasa de 1.800 (sep-2025) a 400 (abr-2026). El bloqueo y purga de 197,71 (modelo de 3/4" y 6000 psi) pasa a 137. La junta monolítica sube de 280 a 315. Los accesorios ahora salen de la lista Renard.
 
 **Sensibilidad:**
-- Con la retención de Danco a 240 (sin confirmar), el precio baja a unos 6.445.
-- Con el armado de Ledesma a 1.800, sube a unos 9.235.
+- Con la retención de Danco a 240 (sin confirmar), el precio baja a unos 6.456.
+- Con el armado de Ledesma a 1.800, sube a unos 9.247.
 
 ## Comparables
 | Antecedente | Precio c/u |
