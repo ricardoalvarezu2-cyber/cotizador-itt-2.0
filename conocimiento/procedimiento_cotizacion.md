@@ -1,5 +1,7 @@
 # Procedimiento de cotización (obligatorio)
 
+Las reglas. El paso a paso con archivos y comandos está en [`guia_cotizacion.md`](guia_cotizacion.md).
+
 Vigente desde el 27/10/2026. Se escribió a partir de los errores de la COT26-1003-001 (ver [`errores_y_lecciones.md`](errores_y_lecciones.md)). **Ningún número sale hacia el cliente, ni se le presenta a Matías como precio, sin haber pasado por estos pasos.** Si un paso no se puede cumplir, se dice explícitamente qué quedó sin verificar.
 
 ## Estados de una cotización
@@ -33,16 +35,16 @@ Vigente desde el 27/10/2026. Se escribió a partir de los errores de la COT26-10
 - Si se toma un criterio de una cotización anterior, hay que verificarlo en **su planilla original**, no en el resumen de la ficha.
 - El factor final lo decide la dirección.
 
-**P7. Los números salen de la herramienta, no del chat.** Todo total que se informe sale de la planilla o del informe con fórmulas. Antes de informar, hay que recalcular el Excel (LibreOffice) y comprobar que coincide con el informe. No se escriben en un mensaje cuentas hechas a mano.
+**P7. Los números salen de la herramienta, no del chat.** Todo total que se informe sale de `herramientas/armar_cotizacion.py`, que arma la planilla y el informe desde `cotizacion.json`, recalcula el precio en Python y lo compara con la planilla recalculada con LibreOffice. Si no coinciden, frena. No se escriben en un mensaje cuentas hechas a mano.
 
 **P8. Contrastar con antecedentes.** Comparar con al menos dos cotizaciones parecidas (mismo cliente o mismo tipo de equipo) de `comercial/`. Si la diferencia es mayor al 15%, explicarla rubro por rubro **antes** de presentar el número.
 
 **P9. Control automático y revisión independiente.**
-1. Correr `python herramientas/verificar_computo.py <carpeta de la cotización>`. Tiene que terminar sin errores. Los avisos se revisan uno por uno.
+1. Correr `python herramientas/armar_cotizacion.py <carpeta>` (incluye `verificar_computo.py`). Tiene que terminar sin errores. Los avisos se revisan uno por uno.
 2. Revisión independiente: alguien que no armó el cómputo (otro agente o una persona) compara la lista de materiales del plano con el cómputo y el informe, y busca cantidades, especificaciones, extremos, soldaduras y precios sin fuente. Lo que encuentre se corrige o se justifica.
 3. Recién ahí la cotización pasa a `revisado`.
 
-**P9 bis. Oferta al cliente.** La oferta técnica y la económica se generan con `python herramientas/generar_oferta.py cotizaciones/<carpeta>`. Usa la plantilla de ITT (`plantillas/oferta_itt_2026.docx`), los textos de `oferta.json` y los precios de la planilla (unitario redondeado × cantidad = total). Los datos pendientes van entre [corchetes] y salen resaltados en amarillo. La marca "BORRADOR – SIN REVISAR – NO ENVIAR" se quita solo cuando `oferta.json` tiene `"estado": "aprobado"`.
+**P9 bis. Oferta al cliente.** La oferta técnica y la económica se generan con `armar_cotizacion.py` (o solo `python herramientas/generar_oferta.py cotizaciones/<carpeta>`). Usa la plantilla de ITT (`plantillas/oferta_itt_2026.docx`), los textos de `oferta.json` y los precios de la planilla (unitario redondeado × cantidad = total). Los datos pendientes van entre [corchetes] y salen resaltados en amarillo. La marca "BORRADOR – SIN REVISAR – NO ENVIAR" se quita solo cuando `oferta.json` tiene `"estado": "aprobado"`.
 
 **P10. Registrar.** Guardar todo en `cotizaciones/<código>/`: el pedido, la lista del plano, el cómputo, el informe y la planilla. Cada error que se detecte, aunque sea a tiempo, se anota en [`errores_y_lecciones.md`](errores_y_lecciones.md), y si hace falta se ajusta este procedimiento.
 

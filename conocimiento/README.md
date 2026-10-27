@@ -8,6 +8,7 @@ Todo lo que se necesita para cotizar, en un solo lugar y con una sola versión v
 
 | Archivo | Contenido |
 |---|---|
+| [`guia_cotizacion.md`](guia_cotizacion.md) | **Paso a paso para cotizar un pedido**, con archivos y comandos. Caso modelo: `cotizaciones/COT26-1003-001_CAPEX_OQ8209/bitacora.md` |
 | [`procedimiento_cotizacion.md`](procedimiento_cotizacion.md) | **Procedimiento obligatorio** (P1–P10), estados de una cotización y lista de control |
 | [`errores_y_lecciones.md`](errores_y_lecciones.md) | Errores detectados en cotizaciones, su causa y la regla que se agregó |
 | [`RESUMEN.md`](RESUMEN.md) | Parámetros clave y lista de control antes de enviar una oferta |

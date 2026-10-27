@@ -18,6 +18,7 @@
   - El texto extraído ya está en `fuentes_originales/ofertas_texto/`; el RAR hace falta solo para releer un original (escaneos, adjuntos).
 
 ## Procedimiento de cotización (obligatorio)
+- **Para cotizar, usar el skill `cotizar` (`.claude/skills/cotizar/SKILL.md`) y la guía `conocimiento/guia_cotizacion.md`.** Cada cotización es una carpeta en `cotizaciones/` (modelo: `cotizaciones/_plantilla/`; caso completo: `COT26-1003-001_CAPEX_OQ8209/` con su `bitacora.md`). La única fuente de datos es `cotizacion.json`. Todo lo demás (cómputo, planilla, informe, ofertas) lo genera `python herramientas/armar_cotizacion.py cotizaciones/<carpeta>`. Registro de cotizaciones: `cotizaciones/README.md`.
 - Toda cotización sigue `conocimiento/procedimiento_cotizacion.md` (pasos P1–P10). Se escribió después de los errores de la COT26-1003-001, que están registrados en `conocimiento/errores_y_lecciones.md`. **Un error que llega al cliente puede ser catastrófico.**
 - **Nunca enviar nada al cliente.** Estados: borrador → revisado → aprobado (Matías o la dirección) → enviado. Mientras no esté revisada, todo número se muestra como "borrador, sin revisar".
 - El cómputo copia la tabla del plano renglón por renglón, con la misma cantidad y unidad. Las compras extra van en filas aparte (`14b`).
