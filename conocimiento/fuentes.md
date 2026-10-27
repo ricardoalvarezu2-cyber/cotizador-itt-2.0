@@ -85,6 +85,12 @@ Todos los archivos de ITT revisados para armar esta base, en orden cronológico 
 
 Los meses intermedios se interpolan. Octubre 2026 es estimado. Hay que actualizar la tabla cuando salgan los datos nuevos (`herramientas/indices_inflacion.py`).
 
+## Dólar mensual (27/10/2026)
+
+`costos/dolar_mensual.csv` y `.xlsx`: por mes desde ene-2024, pico (con fecha), mínimo, promedio y cierre del dólar oficial BNA billete vendedor, mayorista, MEP y blue, y la brecha blue/oficial. Datos diarios de api.argentinadatos.com, guardados en `fuentes_originales/indices/dolar_diario.csv`. Se rearma con `python herramientas/dolar_mensual.py`. Hasta el 14/04/2025 hubo cepo (brecha de 9% a 53%); desde mayo-2025 la brecha es menor al 2%.
+
+**Pendiente de decisión:** qué dólar se usa para pasar pesos a dólares en meses con cepo (blue u oficial) y si el índice de MO usa el mismo. Las anclas de 2026 que se cargaron en `indices_inflacion.py` desde la auditoría (1.395, 1.411, 1.441,5, 1.488,5, 1.492) son del dólar divisa/mayorista citado por proveedores, no del BNA billete del resto de la serie: hay que reemplazarlas cuando se decida el criterio.
+
 ## Faltantes conocidos
 
 1. **Plazos:** cubierto en parte con el seguimiento de proyectos (ver `plazos.md`). Faltan plazos de proveedores actualizados por rubro.
