@@ -45,6 +45,21 @@ El proceso tiene dos etapas. El **presupuesto preliminar** se arma con anteceden
 
 ## 3. Buscar antecedentes y precios (P4, P5, P8)
 
+**Primero, el buscador de antecedentes.** Busca solo entre proyectos de la misma familia y ordena por parecido técnico. A igual parecido, gana el más nuevo.
+
+```bash
+python herramientas/buscar_antecedentes.py --familias      # códigos de familia
+python herramientas/buscar_antecedentes.py --familia CO --texto "colector de campo produccion 6 ingresos" \
+       --diametro 6 --serie 300 --material carbono --union bridado --cliente PAMPA
+```
+
+- Revisar los **3 a 5 primeros**, en orden.
+- Primero, los que dicen **PLANILLA DE COSTO**: traen el desglose completo y son el mejor modelo.
+- Cada resultado dice por qué se parece y qué carpeta abrir.
+- El índice (`conocimiento/comercial/indice_proyectos.csv`) cubre las cotizaciones de 2025–2026 y las armadas con el cotizador. Se actualiza solo con `armar_cotizacion.py`, o a mano con `python herramientas/indice_proyectos.py`.
+
+Después, completar con las fuentes de abajo:
+
 Por orden de prioridad:
 
 | Qué | Dónde |

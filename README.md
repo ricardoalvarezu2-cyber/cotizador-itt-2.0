@@ -43,6 +43,8 @@ Correspondencia con la estructura prevista:
 | `herramientas/indice_precios.py` | Arma el índice único de precios |
 | `herramientas/leer_dwg.py` | Lee un plano DWG/DXF: textos por capa e imágenes por zona |
 | `herramientas/armar_cotizacion.py` | **Arma una cotización completa** desde `cotizacion.json`: cómputo, planilla con fórmulas, informe interactivo y ofertas. Compara el cálculo en Python con la planilla y corre los controles |
+| `herramientas/buscar_antecedentes.py` | **Busca los proyectos más parecidos** a un pedido nuevo (misma familia, diámetro, serie, material, cliente), priorizando los más nuevos y los que tienen planilla de costo |
+| `herramientas/indice_proyectos.py` | Arma el índice de proyectos 2025–2026 (`conocimiento/comercial/indice_proyectos.csv`) |
 | `herramientas/indices_inflacion.py` | Arma la tabla mensual de índices para el ajuste por inflación (`conocimiento/costos/indices_ajuste.csv`) |
 | `herramientas/generar_oferta.py` | Genera la oferta técnica y la económica (Word y PDF) con el formato de ITT, desde `oferta.json` de la cotización y los precios de su planilla. Lleva la marca "BORRADOR – NO ENVIAR" hasta que la cotización esté aprobada |
 | `herramientas/verificar_computo.py` | Control obligatorio de una cotización: cómputo contra la tabla del plano (posiciones, cantidades, extremos y soldaduras, fuentes y antigüedad de precios, estimados) |

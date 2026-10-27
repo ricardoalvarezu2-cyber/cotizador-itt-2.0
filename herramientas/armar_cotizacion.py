@@ -360,6 +360,8 @@ def main(carpeta):
     if (carpeta / "oferta.json").exists():
         import generar_oferta
         generar_oferta.main(carpeta)
+    import indice_proyectos
+    indice_proyectos.main()  # la cotización queda en el índice de antecedentes
     print(f"\nListo: {carpeta}/computo.csv, {ruta.name}, informe.html" + (", oferta/" if (carpeta / "oferta.json").exists() else ""))
     print(f"Estado: {cfg['estado']}. Recordar: revisión independiente y aprobación antes de enviar (procedimiento P9).")
 
