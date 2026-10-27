@@ -1,0 +1,123 @@
+{
+ "carpeta": "APSA/12 - Puente A° C° para YPF",
+ "cliente": "APSA",
+ "cliente_final": "YPF",
+ "numero_oferta": null,
+ "revisiones": "Solo cotizaciones de proveedores; no hay oferta de ITT",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-05-14",
+ "referencia_cliente": "Puente de producción/inyección de agua de formación en acero al carbono para YPF",
+ "familia": "P",
+ "descripcion_corta": "Puente de acero al carbono para YPF (inyección de agua de formación): solo se conservan cotizaciones de proveedores de accesorios y mangueras.",
+ "items": [
+  {
+   "descripcion": "Junta monolítica 2\" BW/NPT 2000 (mapeo inferido)",
+   "cantidad": 2,
+   "unidad": "un",
+   "precio_unitario": 315.0,
+   "precio_total": 630.0,
+   "moneda": "USD",
+   "datos_tecnicos": "2\" BW/NPT 2000"
+  },
+  {
+   "descripcion": "Niple reducción 2 7/8\" EU x 3/4\" NPT SCH80 (mapeo inferido)",
+   "cantidad": 6,
+   "unidad": "un",
+   "precio_unitario": 87.75,
+   "precio_total": 526.5,
+   "moneda": "USD",
+   "datos_tecnicos": "2 7/8\" EUE x 3/4\" NPT Sch80"
+  },
+  {
+   "descripcion": "Rosca con tuerca 2 7/8\" EUE S3000 A105 (mapeo inferido)",
+   "cantidad": 2,
+   "unidad": "un",
+   "precio_unitario": 190.45,
+   "precio_total": 380.9,
+   "moneda": "USD",
+   "datos_tecnicos": "2 7/8\" EUE S3000 A105"
+  },
+  {
+   "descripcion": "Niple reducción 2\" x 1 1/2\" NPT Sch80 A106B (mapeo inferido)",
+   "cantidad": 4,
+   "unidad": "un",
+   "precio_unitario": 15.15,
+   "precio_total": 60.6,
+   "moneda": "USD",
+   "datos_tecnicos": "A106 Gr.B Sch80"
+  }
+ ],
+ "monto_total_ofertado": null,
+ "moneda": "USD",
+ "costo_total": 1598.0,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": 1598.0,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [
+  {
+   "proveedor": "Duralitte S.A.",
+   "que": "Cot P_16838: junta monolítica 2\", niples reducción, rosca con tuerca 2 7/8\" EUE, cruz 2 7/8\" EUE x 2\" NPT; subtotal USD 1.598,00 + IVA; pago 30 días; validez 15 días; retiro en planta; cobro en ARS al TC BNA vendedor",
+   "precio": 1598.0,
+   "moneda": "USD",
+   "plazo_entrega": "stock",
+   "fecha": "2026-05-13"
+  },
+  {
+   "proveedor": "Duralitte S.A.",
+   "que": "Cot válvulas esféricas nro. 278 (documento sin texto extraído)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-05-14"
+  },
+  {
+   "proveedor": "Dinatecnica S.A.",
+   "que": "2 mangueras armadas 2\" ø int x 1200 mm, 345 bar, terminales NPT macho 2\" acero carbono cincado (USD 628 c/u + IVA)",
+   "precio": 1256.0,
+   "moneda": "USD",
+   "plazo_entrega": "7 días hábiles estimado",
+   "fecha": "2026-05-12"
+  },
+  {
+   "proveedor": "Dinatecnica S.A.",
+   "que": "10 mangueras SAE 100 R13 1\" x 2400 mm, terminales NPT carbono (USD 232 c/u + IVA), contado (cotización previa, posible otro alcance)",
+   "precio": 2320.0,
+   "moneda": "USD",
+   "plazo_entrega": "1 semana desde confirmación",
+   "fecha": "2026-04-24"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "En puentes de inyección de agua de formación el cliente pidió manguera de alta presión 2000 WOG/140 bar con terminales de acero al carbono (el proveedor sugería inoxidable)",
+  "Consultar fluido, presión constante/pulsante, servicio y norma antes de cotizar mangueras",
+  "Duralitte tiene los accesorios en stock; Dinatecnica entrega en 1 semana, útil en pedidos urgentes",
+  "Los accesorios de rosca EUE 2 7/8\" (tubing) se usan en estos puentes y se cotizan por unidad en USD"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "items_duralitte": "5.Proveedores 3ros/Cot Duralitte P_16838 (ITT).pdf",
+  "manguera": "5.Proveedores 3ros/Dinatecnica - Cotización - Manguera para puente de producción Urgente_ Javier Elejondo - Outlook.pdf"
+ },
+ "problemas": [
+  "No hay oferta comercial ni costo de ITT: monto ofertado y factor desconocidos",
+  "El PDF de Duralitte perdió la correspondencia fila/descripción; mapeo inferido por orden y por el subtotal 1.598,00 (sobra una cantidad '4,00' y la cruz 2 7/8\" no tiene línea clara)",
+  "Cot Duralitte válvulas esféricas 278.docx sin texto",
+  "El hilo de Dinatecnica mezcla pedidos (juntas monolíticas CGC, mangueras 1\" y 2\"); no es seguro que todo corresponda a este puente",
+  "costo_total es solo accesorios Duralitte, no el costo del puente"
+ ]
+}

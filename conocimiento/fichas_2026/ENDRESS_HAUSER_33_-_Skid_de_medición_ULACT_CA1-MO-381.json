@@ -1,0 +1,90 @@
+{
+ "carpeta": "ENDRESS HAUSER/33 - Skid de medición ULACT CA1-MO-381",
+ "cliente": "ENDRESS HAUSER",
+ "cliente_final": "PANAMERICAN ENERGY (según presupuesto Ledesma 'UNIDAD LAC PANAMERICAN ENERGY')",
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-06-05",
+ "referencia_cliente": "CA1-MO-381 - Unidad LACT",
+ "familia": "SK",
+ "descripcion_corta": "Skid de medición LACT: solo hay cotizaciones de terceros (bridas, armado/soldadura de spools y skid, calentador eléctrico 50 kW); no hay oferta de ITT.",
+ "items": [
+  {
+   "descripcion": "Calentador eléctrico 50 kW (cotizado por proveedor, componente del skid)",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": null,
+   "precio_total": null,
+   "moneda": "USD",
+   "datos_tecnicos": "Cuerpo 12\" #300, conexiones 3\" #300 RF, 50 kW 380 V, diseño 45,1 kg/cm2 @ -10/110 C, caudal 3200 kg/h, zona 2 IIB T3"
+  }
+ ],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": [
+   "Condiciones de ITT al cliente no disponibles; las condiciones indicadas son de proveedores (ver 'proveedores')."
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Tubos Renard",
+   "que": "Bridas WN/BL y cuplas (9 ítems; ej. WN 8\" S600 x26, WN 6\" x19, WN 10\" x2, WN 2\" x21). Pago 30 d FF, validez 7 días, entrega 10/15 días o stock",
+   "precio": 11603.49,
+   "moneda": "USD",
+   "plazo_entrega": "stock (7 días) / 10-15 días desde OC",
+   "fecha": "2026-06-04"
+  },
+  {
+   "proveedor": "Ledesma (taller)",
+   "que": "Armado y soldadura de spools 980\" SCH 80 y skid + soportes 1.300 kg (M.O., consumibles, gases, calificación); no incluye PH, pintura ni montaje. Pago 5 d FF, validez 10 días",
+   "precio": 19600,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-06-02"
+  },
+  {
+   "proveedor": "Tapigar",
+   "que": "Calentador eléctrico 50 kW 12\"#300 con control PLC, FAT, ingeniería y data book; puesta en marcha 2 días USD 1.950 aparte. Anticipo 40%, validez 30 días, garantía 18 m",
+   "precio": 81600,
+   "moneda": "USD",
+   "plazo_entrega": "110/120 días desde aviso de compra",
+   "fecha": "2026-06-03"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Costo de terceros visible: bridas ~USD 11,6 mil + M.O. taller ~USD 19,6 mil (980 pulgadas-diámetro y 1.300 kg de estructura, ~USD 20/pulgada) + calentador eléctrico ~USD 81,6 mil; el calentador pesa más que todo el resto.",
+  "La M.O. de Ledesma excluye PH, pintura y montaje: sumarlos aparte; excedentes de pulgadas o kg se cobran como adicional.",
+  "Plazo crítico: calentador 110/120 días; las bridas Renard son de stock o 10-15 días.",
+  "Proveedores cotizan en USD con ajuste a BNA divisa del día anterior; validez corta (7-10 días) salvo calentador (30)."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores_Renard": "5.Proveedores 3ros/Cot Renard JCM08212 - ITT SA - REF  LACT.pdf",
+  "proveedores_Ledesma": "5.Proveedores 3ros/E Ledesma Presupuesto ITT N° 200276 UNIDAD LAC PANAMERICAN ENERGY 02-06-2026.docx",
+  "proveedores_Tapigar": "5.Proveedores 3ros/6581-ITTT-Calentador electrico 50Kw Oferta Comercial.pdf"
+ },
+ "problemas": [
+  "No hay propuesta ITT, planilla de costos ni OC: monto ofertado, factor y resultado desconocidos.",
+  "Tapigar: precio unitario del ítem USD 81.600 pero 'PRECIO TOTAL' USD 80.600 (contradictorio); se tomó 81.600; puesta en marcha USD 1.950 aparte.",
+  "Renard: versión 2 de la cotización; total también expresado en ARS 16.691.620,36 a TC 1.438,50.",
+  "Cliente final inferido del nombre del presupuesto de Ledesma."
+ ]
+}

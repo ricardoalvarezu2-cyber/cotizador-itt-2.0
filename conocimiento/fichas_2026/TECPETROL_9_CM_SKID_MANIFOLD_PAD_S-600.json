@@ -1,0 +1,184 @@
+{
+ "carpeta": "TECPETROL/9. CM SKID MANIFOLD PAD S-600",
+ "cliente": "Tecpetrol S.A.",
+ "cliente_final": null,
+ "numero_oferta": "PRES 107 rev. D (26/01/2026); negociada y ajustada el 13/02/2026 con 1,5% de bonificación",
+ "revisiones": "Rev A 12-12-2025, B 07-01-2026, C 13-01/26-01-2026 (ajuste por piping class), D 26-01-2026 (última emitida). Hoja de costos con rev. 0 a 3 (rev. 3 del 12-03-2026 con 1,5% de bonificación y pólizas). Hubo varias revisiones; se usó la más reciente.",
+ "fecha_oferta": "2026-01-26",
+ "fecha_ultima_modificacion": "2026-08-22",
+ "referencia_cliente": "PR 51456 - Contrato marco para provisión de SKID MANIFOLD PAD S-600 - Evento 11506/11733; Nota de Pedido Abierta 4650000923/01 (PO Coupa 47348)",
+ "familia": "M manifold",
+ "descripcion_corta": "Contrato marco 3 años: 35 skids manifold PAD S-600 (28 clase A6BM + 7 clase A6CM), cañería A106 serie 600 sobre bastidor UPN 140, con válvulas esféricas y de retención 4\" S600, 100% RX, pintura, databook",
+ "items": [
+  {
+   "descripcion": "Skid Manifold PAD S-600 clase A6BM (código Tecpetrol 14021215)",
+   "cantidad": 28,
+   "unidad": "u",
+   "precio_unitario": 49932.65,
+   "precio_total": 1398114.2,
+   "moneda": "USD",
+   "datos_tecnicos": "Cañería A106 Gr.B serie 600 Sch.80 (colector 8\", ramales 4\", tomas 1/2\"); bastidor UPN 140; 100% radiografiado; presión de diseño 101 kg/cm2, prueba hidráulica 152 kg/cm2; temp. -29/100 C; recubrimiento zinc silicato, epoxi y poliuretano; aprox. 2200x1350x2300 mm, 2800 kg; válvulas esféricas PT 4\" S600 RF y retención 4\" S600 RF (Taval). Precio final tras 1,5% de bonificación (precio oferta rev D: 50693.05)"
+  },
+  {
+   "descripcion": "Skid Manifold PAD S-600 clase A6CM (código Tecpetrol 14021223)",
+   "cantidad": 7,
+   "unidad": "u",
+   "precio_unitario": 53343.52,
+   "precio_total": 373404.64,
+   "moneda": "USD",
+   "datos_tecnicos": "Idem A6BM con otro material de caños y bridas (A-105/A-106/A-234, drip rings A-516 4\" S600). Precio final tras 1,5% de bonificación (precio oferta rev D: 54155.85)"
+  },
+  {
+   "descripcion": "Documentos técnicos y data book",
+   "cantidad": 1,
+   "unidad": "global",
+   "precio_unitario": null,
+   "precio_total": null,
+   "moneda": "USD",
+   "datos_tecnicos": "Incluidos sin precio separado"
+  }
+ ],
+ "monto_total_ofertado": 1771518.84,
+ "moneda": "USD",
+ "costo_total": 1328353.8,
+ "factor_venta": 1.354,
+ "desglose_costo": {
+  "materiales": 887550.72,
+  "mano_obra": 440803.08,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "Rev D: entrega parcial a partir de 70/90 días con aprobación de ingeniería, total estimado 150 días (renglones 130/150 y 135/150). Nota de Pedido: 150 días desde emisión de solicitud de entrega.",
+ "plazo_dias": 150,
+ "condiciones": {
+  "pago": "Oferta rev D: contra entrega con cheque a 30 días, o hitos (30% anticipo, 20% avance de compras, 20% prueba hidráulica, 30% despacho). Acordado 13/02/2026: por lote 30% de anticipo (con póliza de caución) y 70% contra entrega, devolución del anticipo por nota de crédito; condición T030 en la Nota de Pedido.",
+  "validez": "30 días corridos",
+  "entrega": "En yacimiento Los Toldos II Este (LT2E) o Puesto Parada, Neuquén (descarga por cuenta del cliente)",
+  "moneda_y_ajuste": "USD facturado en pesos al TC BNA de la fecha de factura; pago al TC BNA vendedor del día anterior al pago, con NC/ND si la variación supera 3%.",
+  "notas_y_exclusiones": [
+   "Sin IVA",
+   "ITT asume el costo de las pólizas (caución por anticipo y fiel cumplimiento) dentro del precio",
+   "Bonificación del 1,5% sobre el total para cerrar el contrato",
+   "Sin multas por mora si hay material importado (condición BCRA); licencias no automáticas fuera de responsabilidad",
+   "Póliza de seguro se cotiza con la OC",
+   "Nota de Pedido del cliente: penalidad 1% por día de atraso, tope 10%; garantía 12 meses; las cantidades son estimadas y sin compromiso de compra",
+   "Válvulas Taval no estaban dentro de los desvíos de la oferta técnica; el cliente las aceptó por mail el 12/03/2026 pidiendo capacitación y plan de inspección"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Cormet Metalmecánica S.A.",
+   "que": "Fabricación e ingeniería de detalle de cuadros de válvulas sobre skid (35 u), sin pintura ni materiales",
+   "precio": 8700,
+   "moneda": "USD",
+   "plazo_entrega": "14 días (según comparativa)",
+   "fecha": "2026-01-29"
+  },
+  {
+   "proveedor": "ARSOL",
+   "que": "Fabricación e ingeniería de detalle de cuadros de válvulas, 100% END (35 u), sin pintura ni materiales",
+   "precio": 10874,
+   "moneda": "USD",
+   "plazo_entrega": "7+90 días (según comparativa)",
+   "fecha": "2025-12-26"
+  },
+  {
+   "proveedor": "Ingeniería Figueroa",
+   "que": "Fabricación de cañerías y estructura por skid, con PH, END y pintura (cotización Rev A)",
+   "precio": 9200,
+   "moneda": "USD",
+   "plazo_entrega": "90 días",
+   "fecha": "2025-12-11"
+  },
+  {
+   "proveedor": "GP",
+   "que": "Mano de obra de construcción de 35 skids, con bastidor, a USD 18.600 c/u (total 651.000)",
+   "precio": 18600,
+   "moneda": "USD",
+   "plazo_entrega": "A convenir",
+   "fecha": "2025-12-29"
+  },
+  {
+   "proveedor": "Manchinelli Montajes",
+   "que": "Mano de obra de 35 skids (ARS 14.500.000 total) más END USD 3.670 y pintura USD 3.150 por skid",
+   "precio": 21320,
+   "moneda": "USD",
+   "plazo_entrega": "A coordinar",
+   "fecha": "2025-12-22"
+  },
+  {
+   "proveedor": "SEHC (Simonenco e Hijos)",
+   "que": "Construcción de skid, piping y carreteles, con PH, RX, arenado y pintura, materiales a cargo de ITT",
+   "precio": 15130,
+   "moneda": "USD",
+   "plazo_entrega": "60/90 días desde recepción de material",
+   "fecha": "2026-01-06"
+  },
+  {
+   "proveedor": "J. C. Quesada",
+   "que": "Mano de obra de construcción por manifold, sin END, PH ni pintura, materiales del cliente",
+   "precio": 2000,
+   "moneda": "USD",
+   "plazo_entrega": "18 días",
+   "fecha": "2026-02-12"
+  },
+  {
+   "proveedor": "E. Ledesma",
+   "que": "Mano de obra manifold (USD 3.590 por unidad, 224 pulgadas) o USD 2,50 por kg; sin PH, montaje ni pintura",
+   "precio": 3590,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-02-18"
+  },
+  {
+   "proveedor": "Grupo Provemet / Complemet",
+   "que": "Bridas ciegas serie 600 A105 (adicional, 3 piezas)",
+   "precio": 296.32,
+   "moneda": "USD",
+   "plazo_entrega": "En stock / 30-06-2026",
+   "fecha": "2026-05-05"
+  },
+  {
+   "proveedor": "Taval S.A. (válvulas)",
+   "que": "Presupuesto 25335: válvula retención 4\" 600 RF USD 690, esférica PT 4\" 600 RF USD 2.469,45, esférica 1/2\" NPT USD 97,80 por unidad",
+   "precio": 2469.45,
+   "moneda": "USD",
+   "plazo_entrega": "120 días",
+   "fecha": "2026-07-27"
+  }
+ ],
+ "resultado": "ganada (hay OC)",
+ "orden_compra": {
+  "numero": "Nota de Pedido Abierta 4650000923/01 (adjudicada 06/03/2026); consumos: OC 4710150145, 4710150893, 4710156575, 4710158416, 4710161038, 4710167173",
+  "fecha": "2026-03-06",
+  "monto": 1771518.84
+ },
+ "aprendizajes": [
+  "Contrato marco por 35 skids a precio unitario fijo en USD durante 3 años, sin compromiso de cantidad; la oferta incluyó 1,5% de bonificación y las pólizas de caución y fiel cumplimiento (aprox. USD 2.900 en total, un costo menor frente a un contrato de USD 1,77 M).",
+  "Margen sobre costo de aprox. 25% (factor de venta 1,354 antes de la bonificación y 1,334 después), con RX de aprox. USD 11.600 por skid como mayor rubro de mano de obra; las válvulas esféricas 4\" S600 son más de la mitad del costo de materiales (aprox. USD 13.170 por skid).",
+  "Se hizo una comparativa de 9 talleres para fabricar el skid, con precios que van de USD 2.000 a 21.320 según el alcance; hay que normalizar alcance (PH, END, pintura, planos, materiales) antes de comparar.",
+  "Riesgo comercial: el cliente exigió pago contra entrega con anticipo devuelto por NC, penalidad de 1% diario (tope 10%) y aceptación formal de las válvulas Taval como desvío no declarado en la oferta técnica.",
+  "Pedidos efectivos hasta agosto 2026: 6 pedidos por 12 A6BM y 2 A6CM (USD 705.878,84 en total), unos 40% del monto previsto del contrato; el cliente fue liberando lotes de 2 a 5 equipos con plazo de 150 días."
+ ],
+ "confianza": "alta",
+ "fuentes": {
+  "monto_total_ofertado": "8.Orden de Compra/Tecpetrol AM 4650000923.pdf; 4.Armado de la Oferta Comercial/REV E/ESTRUCTURA DE COSTOS- LM de Manifold S600 CM - PC0-C REV.3 OS.xlsx",
+  "items": "4.Armado de la Oferta Comercial/REV E/RE PR 51456 Contrato marco para provisión de SKID MANIFOLD PAD S-600 - Evento nro. 1150611733 - Evaluación comercial.msg",
+  "costo_total": "4.Armado de la Oferta Comercial/REV E/ESTRUCTURA DE COSTOS- LM de Manifold S600 CM - PC0-C REV.3 OS.xlsx",
+  "factor_venta": "4.Armado de la Oferta Comercial/REV E/ESTRUCTURA DE COSTOS- LM de Manifold S600 CM - PC0-C REV.3 OS.xlsx (calculado: 1798496/1328354)",
+  "condiciones": "4.Armado de la Oferta Comercial/REV D/PRES 107D- OFERTA ECONOMICA SKID MANIFOLD PAD.pdf",
+  "plazo": "8.Orden de Compra/Tecpetrol AM 4650000923.pdf",
+  "orden_compra": "8.Orden de Compra/FW Adjudicación Nota de Pedido Abierta NP 4650000923.msg",
+  "proveedores": "5.Proveedores 3ros/(carpetas de cada proveedor); 4.Armado de la Oferta Comercial/Comparativa Fabricación Manifold.xlsx",
+  "datos_tecnicos": "4.Armado de la Oferta Comercial/REV D/PRES 107D- OFERTA TECNICA SKID MANIFOLD PAD.pdf",
+  "pedidos": "8.Orden de Compra/OC 4710150145- 1er PEDIDO.pdf y siguientes"
+ },
+ "problemas": [
+  "La oferta rev D en PDF aparece rotulada 'Revisión C' en el cuerpo, mientras el archivo y la técnica dicen D; la técnica rev B figura con fecha 07-07-2026, probable error por 07-01-2026.",
+  "La carpeta no tiene una subcarpeta con la propuesta enviada; se tomó la oferta económica rev D de la carpeta 4 y el mail de negociación del 13/02/2026.",
+  "El código del A6CM en la oferta es 14021215 pero en la Nota de Pedido es 14021223.",
+  "Los rubros de soldadura, pintura y montaje de la hoja de costos aparecen sin importe en el texto extraído; el desglose materiales/mano de obra puede estar incompleto. Terceros no se pudo separar.",
+  "El costo corresponde a la hoja rev 3; el factor de venta se calculó dividiendo el precio sin bonificación por el costo total.",
+  "El monto adjudicado (USD 1.771.518,84) es 'previsto' y las cantidades son estimadas; lo facturado efectivamente es lo de los pedidos (USD 705.878,84 hasta el 6to pedido)."
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "carpeta": "ALONZO RED/2 - ERP B° Pilara",
+ "cliente": "Alonzo Red",
+ "cliente_final": "Naturgy (según referencia del proveedor, pintura negro Naturgy)",
+ "numero_oferta": null,
+ "revisiones": "No hay",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-06-18",
+ "referencia_cliente": "ERP B° Pilara; ITT job TA7785A; plano 956-000-4547-1",
+ "familia": "OT",
+ "descripcion_corta": "Estación reguladora de presión de gas (monitor TA956-FC+SSV + activo TA956-DFO DN80 #300, 25/7 bar a 1,5 bar, 8000 Sm3/h) con montaje; solo constan cotizaciones de proveedores",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": [
+   "Datos de proceso: P1 25/7 barg, P2 1,5 barg, Qmax 8000 Sm3/h, Qmin 5000, gas natural, entrada NPS 4 Sch40, tubería NPS 10 Sch 40",
+   "Hoja de dimensionamiento Rev.0 del 16/06/2026"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Tormene Americana",
+   "que": "2 reguladores pilotados: monitor TA956-FC+SSV DN3\" #300 con bloqueo OPSO rearme manual (2 x 9.545 = 19.090 según pos. 1 y 2 de oferta) y activo TA956-DFO silenciado (2 x 6.073 = 12.146); conexionado inox 3/8, pintura negro Naturgy",
+   "precio": 31236.0,
+   "moneda": "USD",
+   "plazo_entrega": "45/60 días de orden y anticipo",
+   "fecha": "2026-06-16"
+  },
+  {
+   "proveedor": "Edgardo Ledesma (mano de obra)",
+   "que": "Cotización de MO para ERP Barrio Pilara; archivo .docx sin texto extraído",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-06-18"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Los reguladores se compran a Tormene Americana (USD 31.236 s/IVA, pago 40% anticipo, garantía 12 meses, validez 30 días, entrega en Versalles CABA); falta sumar cañería, montaje y MO",
+  "El diseño 956-000-4547-1 define el manifold de impulsos (1/2\" NPT, 6 puertos 1/4\") y la tubería inox 10 OD x 1 mm: parte del alcance de armado",
+  "La mano de obra se terceriza (Ledesma); su monto no pudo leerse y debe revisarse en el original"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedor_reguladores": "5.Proveedores 3ros/OFERTA TA7785A-ITT-REG TA956-NATURGY.pdf",
+  "dimensionamiento": "5.Proveedores 3ros/TA7785A-SS-TA956-BºPILARA.pdf",
+  "diseno": "5.Proveedores 3ros/956-000-4547-1.pdf"
+ },
+ "problemas": [
+  "No hay propuesta de ITT ni planillas de costo: monto ofertado y factor desconocidos",
+  "Cot Ledesma .docx sin texto (0 tokens)",
+  "Oferta Tormene: la descripción de posiciones es ambigua (pos.1 monitor 9.545 x2, pos.2 activo 6.073 x2) aunque la suma 31.236 es clara",
+  "Cliente final inferido"
+ ]
+}

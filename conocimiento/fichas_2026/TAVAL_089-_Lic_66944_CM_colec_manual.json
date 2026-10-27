@@ -1,0 +1,50 @@
+{
+ "carpeta": "TAVAL/089- Lic 66944 CM colec.manual",
+ "cliente": "TAVAL",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-09-07",
+ "referencia_cliente": "Licitación 66944 (colector manual)",
+ "familia": "CO",
+ "descripcion_corta": "Colector manual - licitación 66944. La carpeta solo contiene el Anexo 3 de subproveedores del cliente (listas de proveedores sugeridos); no hay oferta ni costos.",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "La carpeta solo tiene documentación del cliente (Anexo 3: vendor lists de Electricidad, Instrumentación y NOC); no sirve para estimar precios.",
+  "El Anexo 3A exige detallar taller/proveedor si se terceriza y su inclusión forma parte de la adjudicación.",
+  "La vendor list NOC incluye proveedores de accesorios A105 y A234 (ej. Duralitte, Cintolo, Sidemet, Sumpetrol) como fuentes homologadas."
+ ],
+ "confianza": "alta",
+ "fuentes": {
+  "referencia_cliente": "carpeta",
+  "anexo": "OFERTA/PASA SUBIR/03.ANEXO 3_Subproveedores/01.ANEXO 3A Listado de Subproveedores.docx"
+ },
+ "problemas": [
+  "Sin propuesta comercial, costos, proveedores ni OC: todos los datos económicos son null.",
+  "Los archivos de 01/REV 1/... y OFERTA/PASA SUBIR/... son duplicados.",
+  "Cliente final y tipo exacto del colector no surgen de los textos."
+ ]
+}

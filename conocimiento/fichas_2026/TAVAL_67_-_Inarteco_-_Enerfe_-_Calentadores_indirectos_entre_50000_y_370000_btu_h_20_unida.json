@@ -1,0 +1,109 @@
+{
+ "carpeta": "TAVAL/67 - Inarteco - Enerfe - Calentadores indirectos entre 50000 y 370000 btu h, 20 unidades",
+ "cliente": "TAVAL (vía Inarteco)",
+ "cliente_final": "Enerfe",
+ "numero_oferta": null,
+ "revisiones": "No aplica (sólo cotizaciones de proveedores)",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-06-26",
+ "referencia_cliente": "Calentadores indirectos 50.000 a 370.000 BTU/h, 20 unidades",
+ "familia": "C",
+ "descripcion_corta": "20 calentadores indirectos de 50.000 a 370.000 BTU/h; sólo hay cotizaciones de proveedores de componentes",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [
+  {
+   "proveedor": "EQA S.A.I.C.",
+   "que": "Presupuesto 050430: 20 quemadores (6x50k, 3x75-90k, 8x150k, 2x250k, 1x370k BTU/h) y 20 manifolds 3/4\" S2000 con regulación, válvula EQA38, termostática Danfoss; subtotal con 10% descuento 299.623,50; flete a cargo cliente; anticipo acreditado; vto. oferta 04/07/2026",
+   "precio": 299623.5,
+   "moneda": "USD",
+   "plazo_entrega": "30/45 días hábiles",
+   "fecha": "2026-06-24"
+  },
+  {
+   "proveedor": "EQA S.A.I.C. (línea)",
+   "que": "Quemador p/calentador 1\" - 50.000 BTU/h (ECALC25C)",
+   "precio": 20903.4,
+   "moneda": "USD",
+   "plazo_entrega": "30/45 días hábiles",
+   "fecha": "2026-06-24"
+  },
+  {
+   "proveedor": "EQA S.A.I.C. (línea)",
+   "que": "Quemador p/calentador 1-1/4\" - 75.000-90.000 BTU/h (ECALC32C)",
+   "precio": 10783.8,
+   "moneda": "USD",
+   "plazo_entrega": "30/45 días hábiles",
+   "fecha": "2026-06-24"
+  },
+  {
+   "proveedor": "EQA S.A.I.C. (línea)",
+   "que": "Quemador p/calentador 1-1/2\" - 150.000 BTU/h (ECALC38C)",
+   "precio": 29145.6,
+   "moneda": "USD",
+   "plazo_entrega": "30/45 días hábiles",
+   "fecha": "2026-06-24"
+  },
+  {
+   "proveedor": "EQA S.A.I.C. (línea)",
+   "que": "Quemador p/calentador 2\" - 250.000 BTU/h (ECALC51C)",
+   "precio": 7293.6,
+   "moneda": "USD",
+   "plazo_entrega": "30/45 días hábiles",
+   "fecha": "2026-06-24"
+  },
+  {
+   "proveedor": "EQA S.A.I.C. (línea)",
+   "que": "Quemador p/calentador 3\" - 370.000 BTU/h (ECALC76C)",
+   "precio": 3797.1,
+   "moneda": "USD",
+   "plazo_entrega": "30/45 días hábiles",
+   "fecha": "2026-06-24"
+  },
+  {
+   "proveedor": "EQA S.A.I.C. (línea)",
+   "que": "Manifold 3/4\" con accesorios S2000 NPT, SCH80",
+   "precio": 227700.0,
+   "moneda": "USD",
+   "plazo_entrega": "30/45 días hábiles",
+   "fecha": "2026-06-24"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Los quemadores y manifolds de EQA son el grueso del costo: 20 manifolds a USD 11.385 netos c/u (lista 12.650 menos 10%) = 76% del subtotal",
+  "Quemador por rango: USD 3.871-4.219 lista (3.484-3.797 neto) casi no varía con la potencia, el manifold domina el precio",
+  "Presión, orificio y conexión de quemadores 'a definir según ingeniería de detalle': riesgo de variación de alcance",
+  "Faltan precios de recipiente/serpentín: costear aparte (cotizaciones de Ledesma y Riva escaneadas sin texto)",
+  "Hay opcional de interruptor de nivel neumático a USD 820 + imp. por unidad"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/Cot EQA 50430-ITT.pdf"
+ },
+ "problemas": [
+  "Carpeta sin oferta ITT, sin costos ni OC: monto ofertado nulo",
+  "Cotizaciones de E. Ledesma (MP calentadores indirectos) y Riva hnos son PDF escaneados sin texto, no se pudieron leer",
+  "Cuenta cerrada: precio de EQA con 10% de descuento ya aplicado en importes",
+  "Items vacíos porque no hay oferta ITT; las líneas de EQA se listan como proveedores"
+ ]
+}

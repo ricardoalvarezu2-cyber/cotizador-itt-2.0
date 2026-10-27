@@ -1,0 +1,163 @@
+{
+ "carpeta": "TAVAL/55- Tecpetrol Puentes de Producción PPar Valvula y Puente PR 54942",
+ "cliente": "TAVAL S.A. (intermediario comercial; ITT fabrica y provee)",
+ "cliente_final": "Tecpetrol S.A.",
+ "numero_oferta": "PRES 24879 rev. A",
+ "revisiones": "Una sola emisión (Rev. A, emisión original 22-04-2026). La planilla de costos es 'versión 3'.",
+ "fecha_oferta": "2026-04-22",
+ "fecha_ultima_modificacion": "2026-04-22",
+ "referencia_cliente": "Válvula y Puente PR 54942 - Event #12275 (Puentes de Producción PPar, Tecpetrol)",
+ "familia": "P",
+ "descripcion_corta": "2 puentes de producción para bombeo mecánico NOC (oil) más 1 válvula de contrapresión 2\" 2000 psi y mano de obra de fabricación con materiales provistos por Tecpetrol",
+ "items": [
+  {
+   "descripcion": "Válvula contrapresión 2\" 2000 PSI BPR (marca Pecom, VRP200)",
+   "cantidad": 1,
+   "unidad": "Unid",
+   "precio_unitario": 1644.3,
+   "precio_total": 1644.3,
+   "moneda": "USD",
+   "datos_tecnicos": "2\" NPT, regulación 30-870 psi, presión máx. operación 2000 psi (se ofrece 2000 psi como desvío); plazo 20 días"
+  },
+  {
+   "descripcion": "Puente de producción bombeo mecánico NOC oil (S-3000)",
+   "cantidad": 2,
+   "unidad": "Unid",
+   "precio_unitario": 15096.14,
+   "precio_total": 30192.28,
+   "moneda": "USD",
+   "datos_tecnicos": "Cañería 2\" Sch 160 (A106 B/A53 B), bridas A105 RTJ 2-1/16\" 10000 psi, brida WN 4\" #1500 con reducción 4x2 Sch 120x160 A234 WPB, válvulas de retención y esclusa 2\" cl.1500 tipo clapeta, válvulas esféricas 2\" 2500#, uniones/tees #6000, manifolds de bloqueo y purga para PIT/PSH, ensayo END: PH + Rx en cupla de reducción; plazo 110 días"
+  },
+  {
+   "descripcion": "Mano de obra de fabricación (sin materiales; materiales provistos por Tecpetrol)",
+   "cantidad": 2,
+   "unidad": "Unid",
+   "precio_unitario": 1760.0,
+   "precio_total": 3520.0,
+   "moneda": "USD",
+   "datos_tecnicos": "Plazo 15 días"
+  }
+ ],
+ "monto_total_ofertado": 35356.58,
+ "moneda": "USD",
+ "costo_total": 26218.52,
+ "factor_venta": 1.35,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": 2514.0,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "Válvula 20 días; puente 110 días; MO de fabricación 15 días (sin inspección de materiales, salvo venta)",
+ "plazo_dias": 110,
+ "condiciones": {
+  "pago": "Contra entrega, cheque a 30 días (30 días F.R.F.)",
+  "validez": "30 días corridos",
+  "entrega": "En fábrica Quilmes Oeste, Bs. As. (depósito ITT)",
+  "moneda_y_ajuste": "USD sin IVA; facturado en ARS al TC BNA fecha de factura; cancelación al BNA vendedor del día anterior al pago, con NC/ND si la variación supera 3%",
+  "notas_y_exclusiones": [
+   "Sin multas por mora en material de origen importado (normativa BCRA)",
+   "Licencias no automáticas: sin responsabilidad por demoras",
+   "Se sugiere que el cliente provea material importado",
+   "Póliza de seguro se cotiza aparte / con la OC",
+   "Excluye: instrumentación no declarada, canalizaciones fuera de skid, cañerías enterradas, juntas de transición, aislación, U-Stamp, bulones de anclaje, percha de izaje, rejilla o pasarela",
+   "Garantía 18 meses desde entrega o 12 desde puesta en marcha",
+   "Incluye ingeniería, data-book, tratamiento térmico, pintura (zinc silicato, epoxi, poliuretano), embalaje terrestre",
+   "Desvíos: válvula BPR Pecom hasta 2000 psi; retención de clapeta en lugar de pistón; porta orificio como bridas + placa"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Establecimientos Gascon S.A.",
+   "que": "Juego de 2 bridas porta placa orificio 2-1/16\" RTJ 5000 psi (990) + placa orificio paleta AISI 316 (410)",
+   "precio": 1400.0,
+   "moneda": "USD",
+   "plazo_entrega": "20 días",
+   "fecha": "2026-04-21"
+  },
+  {
+   "proveedor": "Ingeniería en Fluidos S.R.L.",
+   "que": "Válvulas retención y esclusa 2\" cl.800 (279 y 296 c/u), retención y esclusa 2\" cl.1500 clapeta (1150 c/u), aguja 1/2\" (37)",
+   "precio": 5787.0,
+   "moneda": "USD",
+   "plazo_entrega": "inmediata salvo venta",
+   "fecha": "2026-04-21"
+  },
+  {
+   "proveedor": "Simat S.R.L.",
+   "que": "Tapón hexagonal 2\" NPT (6.66) y 2 tees 2\" #6000 (126.36 c/u)",
+   "precio": 259.38,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-04-21"
+  },
+  {
+   "proveedor": "Pecom Servicios Energía",
+   "que": "Boletín técnico válvula reguladora VRP200 2\" 2000 psi (sin precio; costo interno 1218 USD)",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-04-08"
+  },
+  {
+   "proveedor": "Francovigh",
+   "que": "Bridas A105 (WN RTJ, instrumentación doble, adaptadoras); precio según planilla 105 a 654 USD por pieza",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": "75/90 días",
+   "fecha": "2026-04-21"
+  },
+  {
+   "proveedor": "Cintolo",
+   "que": "Reducción concéntrica BW 4x2 Sch 120x160 A234 WPB; planilla 293.25 USD",
+   "precio": 293.25,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-04-21"
+  },
+  {
+   "proveedor": "MS Juntas",
+   "que": "Juntas ring joint (BX-152, R24, R39) y kit dieléctrico; planilla 5 a 30 USD por pieza",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-04-21"
+  },
+  {
+   "proveedor": "Duralitte",
+   "que": "Threadolets 2\"x1/2\" (5 USD c/u en planilla)",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-04-21"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Se cotiza sobre costo con factor de rentabilidad: 1.35 sobre materiales y servicios y 1.4 sobre mano de obra (margen aprox. 25%); válvulas propias Taval a factor 1.",
+  "El costo del puente NOC (11243 USD) lo dominan las bridas API 6A 10000 psi, válvulas cl.1500 (4 x 1150 USD) y uniones #6000. Las bridas Francovigh tardan 75/90 días, lo que fija el plazo de 110 días.",
+  "Se ofrecen desvíos a la requisición: válvula BPR Pecom hasta 2000 psi, retención de clapeta en vez de pistón y bridas porta placa en lugar de caja portaorificio. Conviene declararlos siempre.",
+  "Los niples y accesorios chicos se estiman con antecedentes de puentes Taval/CGC (20 a 40 USD). Los espárragos se estiman (10 USD).",
+  "La oferta incluye un puente convencional en la planilla (6015 USD de costo) que no se ofertó. La mano de obra se ofrece separada cuando el cliente provee los materiales."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "numero_oferta": "7.Propuesta Comercial (envío al Cliente)/PRES 24879- OFERTA ECONOMICA VALVULA Y PUENTE DE PROD.pdf",
+  "monto_total_ofertado": "7.Propuesta Comercial (envío al Cliente)/presupuesto 24879.pdf",
+  "items": "7.Propuesta Comercial (envío al Cliente)/PRES 24879- OFERTA ECONOMICA VALVULA Y PUENTE DE PROD.pdf",
+  "condiciones": "7.Propuesta Comercial (envío al Cliente)/PRES 24879- OFERTA ECONOMICA VALVULA Y PUENTE DE PROD.pdf",
+  "datos_tecnicos": "7.Propuesta Comercial (envío al Cliente)/Puente de producción Tec Conv y NOC versión 3.xlsx",
+  "costo_total_y_factor": "7.Propuesta Comercial (envío al Cliente)/Puente de producción Tec Conv y NOC versión 3.xlsx",
+  "alcance_exclusiones": "7.Propuesta Comercial (envío al Cliente)/PRES 24879- OFERTA TECNICA VALVULA Y PUENTE DE PROD.pdf",
+  "proveedores": "5.Proveedores 3ros/ (Est Gascon PC - 7036R0 ITT.pdf, Ing en Fluidos Ppto 210426 ITT S.A..pdf, Simat PPTO 55533 ITT.pdf, Pecom VRP200_Valvula_Reguladora_de_Presion.pdf)"
+ },
+ "problemas": [
+  "No hay carpeta 8 (orden de compra) ni carpeta 4: no se puede confirmar el resultado.",
+  "costo_total (26218.52) es un cálculo propio: 1218 válvula + 2 x 11243.26 puente NOC + 2 x 1257 MO. La planilla no lo da sumado.",
+  "Los mails de Francovigh, Cintolo, MS Juntas, Duralitte y Alvarez no tienen cuerpo ni adjuntos legibles: precios de esos proveedores solo salen de la planilla de costos.",
+  "La planilla muestra costo de MO 1257 y precio 1759.8 (factor 1.4), pero la hoja NOC cita MO armando 400 + soldadura 192 + END 565 = 1157, más pintura 100: la diferencia no está explicada.",
+  "Precio unitario del puente 15096.137 en planilla y 15096.14 en la oferta (redondeo).",
+  "Total de la cotización de Ing en Fluidos calculado como suma de cantidad x precio unitario (5787 USD); el PDF no trae total."
+ ]
+}

@@ -1,0 +1,200 @@
+{
+ "carpeta": "PAMPA ENERGIA/7- Licitacion contrato Marco Skid PAD Rincon de Aranda",
+ "cliente": "PAMPA ENERGIA",
+ "cliente_final": null,
+ "numero_oferta": "PRES 169 rev. A",
+ "revisiones": "Solo emision original rev. A (14-08-2026); el Excel de costos fue modificado despues (2026-09-29) pero no hay rev. B del PDF",
+ "fecha_oferta": "2026-08-14",
+ "fecha_ultima_modificacion": "2026-09-29",
+ "referencia_cliente": "Doc 5806149694 - Licitacion contrato Marco Skid PAD Rincon de Aranda (pedido recibido 2026-07-29, vencimiento cotizacion 2026-08-08)",
+ "familia": "SK",
+ "descripcion_corta": "Contrato marco: 108 puentes de produccion 3\" #300, 18 skids colectores para PAD de 6 pozos, 5 cuadros de derivacion a 2 troncales 6\" #300 y 5 a 3 troncales 6\" #300, mas ingenieria de detalle; Rincon de Aranda (Neuquen)",
+ "items": [
+  {
+   "descripcion": "Puente produccion 3\" 300# BDP-RDA",
+   "cantidad": 108,
+   "unidad": "un",
+   "precio_unitario": 11185.27,
+   "precio_total": 1208009.25,
+   "moneda": "USD",
+   "datos_tecnicos": "Piping 3\" #300 ASTM A106 B / A234 WPB / bridas A105, 100% RX; ASME B31.3; presion proceso 52 kg/cm2, PH 78 kg/cm2; -29/38 C; instrumentos ABB (PIT 266GST, TE TSP121, TIT TTH300); valvulas esfericas Taval; pintura esquema Pampa RAL 7039"
+  },
+  {
+   "descripcion": "Skid Colector para PAD de 6 pozos (colector de campo 6\"/3\", 6 ingresos, con valvula motorizada 3 vias 3\" #300, PIT/TIT/TW, manometros, canalizacion electrica)",
+   "cantidad": 18,
+   "unidad": "un",
+   "precio_unitario": 88267.59,
+   "precio_total": 1588816.56,
+   "moneda": "USD",
+   "datos_tecnicos": "Cañerias 2\", 3\", 6\" #300 ASTM A106 B; valvula 3 vias WCB con actuador electrico (Valvtronic/Valbol); ASME B31.3"
+  },
+  {
+   "descripcion": "Skid Cuadro de derivacion a 2 troncales 6\"#300",
+   "cantidad": 5,
+   "unidad": "un",
+   "precio_unitario": 27400.31,
+   "precio_total": 137001.55,
+   "moneda": "USD",
+   "datos_tecnicos": "6\" #300, A106 B; plazo 80 dias"
+  },
+  {
+   "descripcion": "Skid Cuadro de derivacion a 3 troncales 6\"#300",
+   "cantidad": 5,
+   "unidad": "un",
+   "precio_unitario": 36592.62,
+   "precio_total": 182963.12,
+   "moneda": "USD",
+   "datos_tecnicos": "6\" #300, A106 B; plazo 80 dias"
+  },
+  {
+   "descripcion": "Ingenieria de detalle",
+   "cantidad": 4,
+   "unidad": "un",
+   "precio_unitario": 607.5,
+   "precio_total": 2430.0,
+   "moneda": "USD",
+   "datos_tecnicos": "30 dias (el Excel de pie economico indica cant. 1 x 2430; el PDF 4 x 607.50)"
+  },
+  {
+   "descripcion": "Transporte a Rincon de Aranda (opcion B, fuera del total)",
+   "cantidad": 2,
+   "unidad": "viaje",
+   "precio_unitario": 2880.0,
+   "precio_total": 5760.0,
+   "moneda": "USD",
+   "datos_tecnicos": "No incluido en el total; el Excel estima USD 3000 por camion completo"
+  }
+ ],
+ "monto_total_ofertado": 3119220.48,
+ "moneda": "USD",
+ "costo_total": 2446619.26,
+ "factor_venta": 1.35,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "70 dias 1ra entrega (20 puentes / 2-4 colectores), luego cada 30/45 dias; cuadros de derivacion 80 dias; ingenieria 30 dias; sujeto a aprobacion de ingenieria basica (el Excel indica 90/110 dias sujeto a instrumentos, 75/90 sin ellos)",
+ "plazo_dias": 70,
+ "condiciones": {
+  "pago": "Opcion A: contra entregas, cheque 30 dias FF. Opcion B: hitos 30% anticipo contra ingenieria de detalle (caucion 100% anticipo + fiel cumplimiento 10%) y 70% contra liberacion para despacho (poliza fondo de reparo 10%, 12 meses), con 3% bonificacion por compra total",
+  "validez": "30 dias corridos",
+  "entrega": "Opcion A EXW planta ITT Quilmes Oeste; Opcion B en Rincon de Aranda (transporte USD 2.880 por viaje aparte)",
+  "moneda_y_ajuste": "USD, facturado en ARS al TC BNA vendedor; NC/ND si variacion > 3%",
+  "notas_y_exclusiones": [
+   "Sin multas por mora en entregas con material importado (restriccion BCRA / licencias no automaticas)",
+   "Se sugiere que material importado (chapas, instrumentos, valvulas) lo provea el cliente",
+   "Excluye: instrumentacion no declarada, cañerias bajo tierra e interconexiones entre skids, juntas de transicion/monoliticas, aislacion, bulones de anclaje y plantillas, calculo de anclajes",
+   "Garantia 18 meses desde entrega o 12 desde puesta en marcha",
+   "Descuento por cantidad 3% incluido (acordado internamente)"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Edgardo Ledesma (mano de obra armado/soldadura)",
+   "que": "Colector de campo + skid, MO y consumibles (no incluye PH, END, pintura)",
+   "precio": 8350,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-06-20"
+  },
+  {
+   "proveedor": "Edgardo Ledesma",
+   "que": "Puente (revamping BDC) por isometrico, MO",
+   "precio": 1300,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-06-20"
+  },
+  {
+   "proveedor": "Edgardo Ledesma",
+   "que": "Cuadro derivacion 3 troncales, armado de spool y soldadura",
+   "precio": 5700,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-08-04"
+  },
+  {
+   "proveedor": "Edgardo Ledesma",
+   "que": "Cuadro derivacion 2 troncales 6\" 300#, armado y soldadura",
+   "precio": 4700,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-08-04"
+  },
+  {
+   "proveedor": "Induquip (Emerson/Rosemount)",
+   "que": "Instrumentacion PIT/TE/TW etc. (items 10 u. de transmisor 3051S2TG USD 2.848,53 c/u, RTD 214C USD 807,56 c/u)",
+   "precio": 63185.9,
+   "moneda": "USD",
+   "plazo_entrega": "12 semanas",
+   "fecha": "2026-07-01"
+  },
+  {
+   "proveedor": "Valvtronic",
+   "que": "Valvula esferica 3 vias T-Port 3\" #300 con actuador, 12 un a USD 3.586,58",
+   "precio": 43038.96,
+   "moneda": "USD",
+   "plazo_entrega": "18-20 semanas",
+   "fecha": "2026-07-02"
+  },
+  {
+   "proveedor": "Valbol (Valvulas Worcester)",
+   "que": "Valvula esferica 3 vias 3\" #300 con actuador electrico NUTORK, 6 un a USD 4.378",
+   "precio": 26268.0,
+   "moneda": "USD",
+   "plazo_entrega": "90 dias",
+   "fecha": "2026-06-30"
+  },
+  {
+   "proveedor": "Francovigh",
+   "que": "5 bridas WN 10000 RJ 2-9/16\" x 3\" SCH40 6BX A694 F60 (USD 312 c/u)",
+   "precio": 1560.0,
+   "moneda": "USD",
+   "plazo_entrega": "75 dias",
+   "fecha": "2026-06-19"
+  },
+  {
+   "proveedor": "MS Juntas",
+   "que": "Juntas RTJ BX153 y esparragos 316L (cot. 48.445; los importes del texto estan truncados)",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-06-18"
+  },
+  {
+   "proveedor": "Bripetrol",
+   "que": "Cotizacion escaneada, ilegible",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-06-18"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Contrato marco por volumen: factor 1.35 sobre materiales/MO/instrumentos/transporte, valvulas Taval y seguro de caucion a factor 1.0, y 3% de descuento por cantidad ya incluido (margen efectivo global ~21,6% sobre venta: 3.119k vs costo 2.447k)",
+  "Costos unitarios clave: puente 3\" #300 costo USD 8.926 (venta 11.185); colector 6 pozos costo USD 68.091 (venta 88.268); instrumentos ABB/Rosemount son ~26% del costo del puente y marcan el plazo critico",
+  "MO de terceros (Ledesma) cotizada por unidad, sin PH, END ni pintura: se cargan aparte (pintura USD 50/m2, END por % de costuras)",
+  "Valvulas 3 vias actuadas son item de largo plazo (12-20 semanas) y alto costo (USD 3.6-4.4k c/u); el plazo ofrecido de 70 dias depende de instrumentos",
+  "Transporte a obra y seguro de caucion se costean aparte; la oferta formal es EXW con transporte opcional (USD 2.880 por viaje)"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "precios_items": "4.Armado de la Oferta Comercial/PRES 169A- OFERTA ECONOMICA Colector y Pte. de Produccion.pdf",
+  "plazos_y_condiciones": "4.Armado de la Oferta Comercial/PRES 169A- OFERTA ECONOMICA Colector y Pte. de Produccion.pdf",
+  "datos_tecnicos": "4.Armado de la Oferta Comercial/PRES 169A- OFERTA TECNICA AM Colector y Pte. de Produccion.pdf",
+  "costos_y_factor": "4.Armado de la Oferta Comercial/Cot Skid Manifolds Colectores RDA Contrato Marco (2da RDA).xlsx",
+  "proveedores": "5.Proveedores 3ros/(cotizaciones listadas)",
+  "fecha_oferta": "4.Armado de la Oferta Comercial/PRES 169A- OFERTA ECONOMICA Colector y Pte. de Produccion.pdf"
+ },
+ "problemas": [
+  "No hay carpeta 8.Orden de Compra: no se sabe si se gano; el Excel (modificado 2026-09-29) tiene OC internas a proveedores (N 15465-15475) que sugieren compras iniciadas, pero no se confirma adjudicacion",
+  "costo_total calculado por mi sumando cantidad x costo unitario de la hoja Resumen (incluye transporte y seguro de caucion que el PDF excluye/opcional); el Excel mismo tiene dos conjuntos de totales (pie economico vs hojas por item) con diferencias menores",
+  "Numeracion de items del PDF salta del 2 al 4; ingenieria 4 u en PDF vs 1 u en Excel",
+  "Cotizacion Bripetrol escaneada ilegible; MS Juntas con importes truncados; plazo Valvtronic/Induquip desde fecha de cotizacion de proveedor; hay dos revisiones Valvtronic (-00 y -01), se tomo la ultima",
+  "Montos de Induquip incluye instrumentos para posiblemente todo el contrato (10 u. por item) y no se concilio con el costo de instrumentos de la planilla"
+ ]
+}

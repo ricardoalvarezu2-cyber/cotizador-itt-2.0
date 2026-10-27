@@ -1,0 +1,83 @@
+{
+ "carpeta": "TAVAL/64 - Capsa - Puente producción caja porta orificio serie 2000",
+ "cliente": "TAVAL",
+ "cliente_final": "Capsa",
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-05-22",
+ "referencia_cliente": "Puente de producción con caja porta orificio serie 2000",
+ "familia": "P",
+ "descripcion_corta": "Puente de producción 2\" NPT serie 2000 con caja porta orificio, válvula reguladora de presión VRP200 y accesorios roscados. Solo cotizaciones de terceros.",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": "Adita: pago inmediato por transferencia; Duralitte: 30 días",
+  "validez": "Adita: 7 días (vence 13/04/2026); Duralitte: 15 días",
+  "entrega": "Duralitte retiro en planta",
+  "moneda_y_ajuste": "USD ajustable a BNA al pago (Adita ajusta si dif >2,5%; Duralitte +/-3%); precios sin IVA",
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [
+  {
+   "proveedor": "ADITA (IMB Oil SRL)",
+   "que": "15 uniones dobles rápidas 2\" NPT S-2000 (USD 74,75 c/u) y 5 uniones extensibles M-H 2\" NPT S-3000 (USD 249 c/u)",
+   "precio": 2366.25,
+   "moneda": "USD",
+   "plazo_entrega": "uniones dobles 11/04/2026 estimado; extensibles 30/45 días (21/05/2026)",
+   "fecha": "2026-04-06"
+  },
+  {
+   "proveedor": "Duralitte S.A.",
+   "que": "Junta monolítica 2\" BW/NPT 2000, niples reducción 2 7/8\" EU x 3/4\" NPT Sch80 y 2\"x1 1/2\" Sch80, rosca con tuerca 2 7/8\" EUE S3000, cruz 2 7/8\" EUE x 2\" NPT S3000 A105",
+   "precio": 1598.0,
+   "moneda": "USD",
+   "plazo_entrega": "stock",
+   "fecha": "2026-05-13"
+  },
+  {
+   "proveedor": "Pecom Servicios Energía",
+   "que": "Válvula reguladora de presión VRP200 2\" NPT (30-870 psi, 2000 psi max); solo boletín técnico, sin precio",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-08"
+  },
+  {
+   "proveedor": "Danko/Danco",
+   "que": "Caja porta orificio 2\" NPT (H); solo especificación técnica, sin precio legible",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-05-19"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Los materiales de un puente serie 2000 2\" se compran a varios terceros (uniones, juntas monolíticas, niples, válvula reguladora, caja porta orificio); cotizar todo en USD con ajuste de tipo de cambio.",
+  "Duralitte tiene los accesorios en stock; Adita demora 30/45 días en uniones extensibles S-3000.",
+  "Duralitte: subtotal USD 1598 confirmado (630+526,50+380,90+60,60)."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/Adita Cotización - S01988.pdf; Duralitte P_16838 (ITT).pdf"
+ },
+ "problemas": [
+  "Sin propuesta, costos ni OC: monto, factor y plazo nulos.",
+  "Duralitte: el PDF perdió la asociación línea-precio; solo cuatro líneas tienen importe (el reparto cantidad/producto es inferido).",
+  "Cot Esclusa 2 Proilde.docx y Cot Taval Retencion 2 npt.docx sin texto extraído (posibles cotizaciones de esclusa y retención 2\" NPT); Danko pdf escaneado.",
+  "Adita está fechada 06/04/2026, anterior al resto."
+ ]
+}

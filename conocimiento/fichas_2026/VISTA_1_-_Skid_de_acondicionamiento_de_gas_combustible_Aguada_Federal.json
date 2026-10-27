@@ -1,0 +1,143 @@
+{
+ "carpeta": "VISTA/1 - Skid de acondicionamiento de gas combustible, Aguada Federal",
+ "cliente": "VISTA ENERGY",
+ "cliente_final": null,
+ "numero_oferta": "Oferta técnica N° 149 (oferta económica 'PRES', rev. A)",
+ "revisiones": "Sólo rev. A (emisión original 28-04-2026)",
+ "fecha_oferta": "2026-04-28",
+ "fecha_ultima_modificacion": "2026-04-28",
+ "referencia_cliente": "CPP-26-004 SKID GAS AF",
+ "familia": "SK",
+ "descripcion_corta": "Skid de acondicionamiento de gas combustible, Aguada Federal (1 unidad)",
+ "items": [
+  {
+   "descripcion": "CPP-26-004 SKID GAS AF - skid de acondicionamiento de gas combustible",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 315592.0,
+   "precio_total": 315592.0,
+   "moneda": "USD",
+   "datos_tecnicos": "No detallado en la oferta económica; proveedores indican tubos 5/8\" A-179 e=1,65 mm, válvula ESDV 1\" clase 900 con actuador, portaplaca, casetas/rejillas galvanizadas, instrumental"
+  }
+ ],
+ "monto_total_ofertado": 315592.0,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "180 días corridos a partir de la aprobación de la Orden de Compra",
+ "plazo_dias": 180,
+ "condiciones": {
+  "pago": "30% anticipo contra OC (caución 100% anticipo + fiel cumplimiento 10%); 20% contra OC de materiales principales (casquetes y bridas); 20% contra aprobación prueba hidrostática; 30% contra liberación para despacho (devolución póliza fiel cumplimiento y póliza fondo de reparo 10%, 12 meses)",
+  "validez": "30 días corridos",
+  "entrega": "Sobre camión en planta ITT, Quilmes Oeste (EXW)",
+  "moneda_y_ajuste": "USD, facturado en ARS al TC BNA fecha de factura; cancelación al TC BNA vendedor día anterior al pago; NC/ND si variación >3%",
+  "notas_y_exclusiones": [
+   "Condición BCRA: sin multas por mora si hay material importado",
+   "Póliza de seguro se cotiza con la OC",
+   "Licencias No Automáticas: ITT no responsable de atrasos",
+   "ITT sugiere que material importado (chapas, instrumentos, válvulas) sea provisto por el cliente"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Avila (grating electrosoldado)",
+   "que": "3 rejillas galvanizadas (1320x984, 1968x1150, 1968x1250 mm)",
+   "precio": 1130,
+   "moneda": "USD",
+   "plazo_entrega": "20 días",
+   "fecha": "2026-03-23"
+  },
+  {
+   "proveedor": "Esferomatic",
+   "que": "Válvula esférica ESDV-931 1\" clase 900 RF con actuador neumático Airtorque, solenoide Asco, caja de límites (ref. Tecpetrol PE-91285)",
+   "precio": 2099,
+   "moneda": "USD",
+   "plazo_entrega": "90 días desde OC",
+   "fecha": "2026-03-17"
+  },
+  {
+   "proveedor": "Gora",
+   "que": "Separador Flexichevron 316, demister 304 y 3 elementos coalescentes 0,3 micrones (ref. Tecpetrol)",
+   "precio": 2796,
+   "moneda": "USD",
+   "plazo_entrega": "30 días",
+   "fecha": "2026-03-09"
+  },
+  {
+   "proveedor": "CIAR",
+   "que": "Oferta técnico-comercial COT-1885 rev. A (ingeniería/skid), cotización adjunta en .msg, contenido no extraído",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-08"
+  },
+  {
+   "proveedor": "Cintolo",
+   "que": "Cotización 'Cas SE 24 std', cotización adjunta en .msg, contenido no extraído",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-08"
+  },
+  {
+   "proveedor": "Est. Gascon",
+   "que": "Portaplaca completo, cotización adjunta en .msg, contenido no extraído",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-08"
+  },
+  {
+   "proveedor": "Indiquip",
+   "que": "Instrumental para skid de gas, cotización adjunta en .msg, contenido no extraído",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-10"
+  },
+  {
+   "proveedor": "Provemet",
+   "que": "Tubos 5/8\" 1,65 mm A-179, cotización adjunta en .msg, contenido no extraído",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-13"
+  },
+  {
+   "proveedor": "Edgardo Ledesma (mano de obra)",
+   "que": "Mano de obra de armado de skid, cotización adjunta en .msg, contenido no extraído",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-15"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Skid de gas combustible a USD 315.592 con 180 días; hito de pago incluye cauciones, fiel cumplimiento y fondo de reparo 10%: costear las pólizas",
+  "Se pidieron cotizaciones a muchos terceros (tubos, instrumental, portaplaca, rejillas, MO de armado): el costo del skid depende mucho de compras y MO tercerizada",
+  "Algunas cotizaciones de proveedores (Esferomatic, Gora) parecen reutilizadas de otro proyecto (Tecpetrol PE-91285), cuidar que correspondan al alcance",
+  "Anticipo del 30% y 20% contra OC de casquetes y bridas indican material principal de largo plazo"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "4.Armado de la Oferta Comercial/OFERTA ECONOMICA ITT.pdf",
+  "plazo_ofrecido": "4.Armado de la Oferta Comercial/OFERTA ECONOMICA ITT.pdf",
+  "condiciones": "4.Armado de la Oferta Comercial/OFERTA ECONOMICA ITT.pdf",
+  "proveedores": "5.Proveedores 3ros/*"
+ },
+ "problemas": [
+  "No hay planilla de costos: costo y factor desconocidos",
+  "Oferta económica está en carpeta 4 (no hay carpeta 7 de envío): no consta que se haya enviado",
+  "Seis cotizaciones de proveedores son .msg sin texto de los adjuntos, sin precios",
+  "Oferta N° 'PRES' sin número; se tomó la oferta técnica N° 149",
+  "Sin carpeta de OC, resultado desconocido"
+ ]
+}

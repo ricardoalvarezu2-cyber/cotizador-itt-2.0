@@ -1,0 +1,100 @@
+{
+ "carpeta": "PAMPA ENERGIA/6- Licitación contrato marco Skid de Produccion Sierra Chata",
+ "cliente": "PAMPA ENERGIA",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": "Cotización Francovigh REV. 1; no hay oferta de ITT en la carpeta",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-08-12",
+ "referencia_cliente": "Licitación contrato marco Skid de Producción Sierra Chata",
+ "familia": "SK",
+ "descripcion_corta": "Skids de producción Sierra Chata (módulo 1 skid válvulas HIPPS, módulo 2 flowlines, módulo 3 colector 6 bocas SCH 120); solo hay cotizaciones de proveedores.",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [
+  {
+   "proveedor": "E. Ledesma (mano de obra, Presupuesto 200311)",
+   "que": "Módulo 1 skid válvulas HIPPS: skid y soportes, caño 6\" y 4\" SCH 120 único tramo, armado y soldadura; sin montaje, PH, pintura ni END",
+   "precio": 3400,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-08-11"
+  },
+  {
+   "proveedor": "E. Ledesma (mano de obra, Presupuesto 200310)",
+   "que": "Módulo 2 flowlines: skid y soportes, armado de spool, soldaduras; sin montaje, PH, pintura ni END (precio c/u)",
+   "precio": 9800,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-08-11"
+  },
+  {
+   "proveedor": "E. Ledesma (mano de obra, Presupuesto 200309)",
+   "que": "Módulo 3 colector 6 bocas SCH 120: skid y soportes, armado de spool, soldaduras; sin montaje, PH, pintura ni END (precio c/u)",
+   "precio": 23250,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-08-11"
+  },
+  {
+   "proveedor": "Francovigh S.A. (cot. 0001-00094633 rev.1)",
+   "que": "Bridas A105N clase 900 RF (WN/SW/BL, 1\" a 12\") y 1 WN 2500 RJ 3\"; 13 renglones; 5% de bonificación si se adjudica el total (precios válidos por adjudicación mayor a USD 30.000)",
+   "precio": 45493.79,
+   "moneda": "USD",
+   "plazo_entrega": "en stock a 75 días según ítem",
+   "fecha": "2026-08-07"
+  },
+  {
+   "proveedor": "FTS (Sypris Tube Turns, cot. FTS 260812)",
+   "que": "3 tapas tool-less 16\" CL900 horizontales (USD 10.524 c/u) más repuestos: lip seals (USD 1.197) y O-rings (USD 36); estimación presupuestaria",
+   "precio": 32805,
+   "moneda": "USD",
+   "plazo_entrega": "70 días sujeto a material; EXW Louisville; empieza con aprobación de planos y anticipo",
+   "fecha": "2026-08-10"
+  },
+  {
+   "proveedor": "Cintolo Hnos. (cot. 33938)",
+   "que": "Accesorios de cañería A234 WPB SCH 120 para soldar (codos RL, tes, reducciones, casquetes; 4\" a 24\"); p. ej. TE normal 12\" 6.002,21, TE red. 12x6 6.788,55, red. exc. 16x12 4.792,29 por pieza; ofrece alternativa en un renglón",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": "en stock a 40 días según ítem",
+   "fecha": "2026-08-07"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Se cotizó por módulos: 1 HIPPS, 2 flowlines, 3 colector 6 bocas; la mano de obra de armado se terceriza a precio fijo por módulo, sin montaje, PH, pintura ni END (sumar aparte).",
+  "Bridas A105 900# nacionales (Francovigh): 5% de bonificación si se adjudica todo y mínimo USD 30.000; pedir el lote completo.",
+  "Tapas tool-less 16\" CL900 importadas (Sypris/FTS): 70 días más aprobación de planos, EXW USA, 50% anticipo, validez 10 días; sumar flete, aranceles y U-Stamp (USD 500 la primera, 150 cada adicional).",
+  "Validez de proveedores muy corta (7 a 15 días) frente a un contrato marco: riesgo de actualización."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/ (Cot Francovigh CO00094633.pdf, COT FTS 260812.pdf, Cot Cintolo 33938.pdf y tres presupuestos E Ledesma .docx)"
+ },
+ "problemas": [
+  "No hay oferta comercial ni costos de ITT; solo proveedores.",
+  "Cot Taval Ricardo A.pdf y Cot estimada PSV de R Alvarez.pdf son escaneos sin texto (PSV no leídas); el .msg de PSV no trae contenido.",
+  "Cintolo con OCR deficiente: moneda no indicada y total no legible; no se sumó.",
+  "Total FTS calculado: 31.572 + 1.197 + 36 = 32.805."
+ ]
+}

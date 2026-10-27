@@ -1,0 +1,131 @@
+{
+ "carpeta": "Sacde/13- 3029-SE-CPF-061_ SKID CUADRO VALVULAS BOMBAS BOOSTER   2321-2322",
+ "cliente": "SACDE (Sociedad Argentina de Construcción y Desarrollo Estratégico S.A.)",
+ "cliente_final": "Pampa Energía S.A. (CPF Rincón de Aranda, Neuquén)",
+ "numero_oferta": "PRES 114 rev.C (rev.A 27-01-2026, rev.B 02-02-2026, rev.C 06-03-2026)",
+ "revisiones": "3 revisiones de la oferta económica (A original, B corrección, C revisión de alcance con hoja 22 según P&ID); planilla de costos rev.2 y rev.3; Anexo I planilla rev.0/1/2. Adjudicado a un precio menor (negociado) que la rev.C.",
+ "fecha_oferta": "2026-03-06",
+ "fecha_ultima_modificacion": "2026-08-26",
+ "referencia_cliente": "RDA 3029-SE-CPF-061 - Skid cuadro de válvulas bombas booster 2321-2322; RM 1046-RDA-P-RM-1012 Rev.A; Carta de adjudicación 13-03-2026; Aviso de compra Pampa 4500753308",
+ "familia": "SK",
+ "descripcion_corta": "2 skids cuadro de válvulas de bombas booster (SK-2321 / SK-2322, tren 1 y 2) para CPF Rincón de Aranda; ITT hace diseño, estructura, fabricación, pruebas; el piping lo provee el cliente.",
+ "items": [
+  {
+   "descripcion": "SK-2321 Skid cuadro válvulas bombas booster tren 1 (oferta rev.C)",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 146863.7,
+   "precio_total": 146863.7,
+   "moneda": "USD",
+   "datos_tecnicos": "Cañerías 10\" Sch30, 8\" Sch30, 6\"/4\"/3\" Sch40, 2\" Sch80, 3/4\", 1/2\"; ~1250 pulgadas-diámetro de costura (por los 2 skids); bastidor UPN160 (~36 m), bandeja antiderrame 3x1,5 m; percha de izaje"
+  },
+  {
+   "descripcion": "SK-2322 Skid cuadro válvulas bombas booster tren 2 (oferta rev.C)",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 146863.7,
+   "precio_total": 146863.7,
+   "moneda": "USD",
+   "datos_tecnicos": "Idéntico al SK-2321"
+  },
+  {
+   "descripcion": "Adjudicado: SK-2321 y SK-2322 (precio final carta de adjudicación / OC)",
+   "cantidad": 2,
+   "unidad": "un",
+   "precio_unitario": 143926.43,
+   "precio_total": 287852.86,
+   "moneda": "USD",
+   "datos_tecnicos": "Alcance: diseño, memorias de cálculo de estructura, ingeniería de detalle, perfilería, fabricación, pruebas, embalaje, data book. Piping (caños, accesorios, bridas, espárragos) provisión SACDE"
+  },
+  {
+   "descripcion": "Adicional (ppto ITT 153, 02-06-2026): distanciadores/rigidizadores 6\" skid de bombas booster",
+   "cantidad": 1,
+   "unidad": "gl",
+   "precio_unitario": 44598.96,
+   "precio_total": 44598.96,
+   "moneda": "USD",
+   "datos_tecnicos": "72 unidades de distanciadores/rigidizadores; plazo 20 días; sin IVA (con IVA 53.964,74)"
+  }
+ ],
+ "monto_total_ofertado": 293727.39,
+ "moneda": "USD",
+ "costo_total": 176027.06,
+ "factor_venta": 1.3,
+ "desglose_costo": {
+  "materiales": 24186,
+  "mano_obra": 30151.1,
+  "terceros": 121689.96,
+  "otros": null
+ },
+ "plazo_ofrecido": "60 días aprobada la ingeniería (carta de adjudicación: entrega 29/5/2026; OC fecha de entrega 28.05.2026)",
+ "plazo_dias": 60,
+ "condiciones": {
+  "pago": "Oferta: 30% anticipo contra OC y 70% contra liberación para despacho. OC Pampa: 30 días fecha base recepción factura (anticipo USD 43.177,93 por skid)",
+  "validez": "30 días corridos",
+  "entrega": "Planta ITT, Quilmes Oeste (oferta); entrega en Ruta Prov. 7 Km 138 según OC",
+  "moneda_y_ajuste": "USD facturado en ARS al TC BNA vendedor; NC/ND si variación >3%",
+  "notas_y_exclusiones": [
+   "Póliza de seguro se cotiza con la OC",
+   "ITT no acepta multas por mora si hay material importado (BCRA)",
+   "Licencias no automáticas: ITT no responsable de atrasos",
+   "Material importado preferentemente provisto por el cliente",
+   "OC de Pampa: multa por demora 2%/semana hasta 10%; garantía 12 meses operación / 18 desde entrega",
+   "Planilla de costos: exclusiones materiales de piping, FAT, transporte, instrumentos; alineación de bombas se cotiza aparte (HH)"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "E. Ledesma (taller tercerizado MO)",
+   "que": "Mano de obra de armado/soldadura de skids de bombas booster (oferta inicial USD 51.130 + adicionales USD 9.714,98 = USD 60.844,98 según planilla)",
+   "precio": 60844.98,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": null
+  },
+  {
+   "proveedor": "E. Ledesma (taller tercerizado MO)",
+   "que": "Ppto ITT 200256: fabricación de 3 skids + soportería, ~1250 pulgadas de cañería, sin pintura ni PH",
+   "precio": 27200,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-04-07"
+  },
+  {
+   "proveedor": "E. Ledesma (taller tercerizado MO)",
+   "que": "Ppto ITT 200282: 56 carreteles de bombas booster (armado y soldadura)",
+   "precio": 5960,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-06-09"
+  }
+ ],
+ "resultado": "ganada (hay OC)",
+ "orden_compra": {
+  "numero": "4500753308 (Pampa Midstream, vía carta de adjudicación SACDE 13-03-2026)",
+  "fecha": "2026-04-07",
+  "monto": 287852.86
+ },
+ "aprendizajes": [
+  "La oferta rev.C (USD 293.727,39) se adjudicó a USD 287.852,86: ~2% menos; el precio por skid (100.748,50 + anticipo 43.177,93) sale de la hoja Pie de Venta de la planilla de costos",
+  "El cliente provee todo el piping; ITT cotiza ingeniería, estructura (bastidor, bandeja, percha), MO de soldadura con RX, pintura, END, aislación y trazado de transmisores, junction boxes",
+  "La mano de obra tercerizada (Ledesma) pesa ~70% del costo; se pide precio por skid cerrado o por pulgada, y el cálculo estructural varía entre USD 400 y 2.000",
+  "Se aplicó factor 1,3 a MO y 1,2 a materiales (rev.2) y 1,3 en rev.3; adicionales con Fi 1,35",
+  "Los adicionales posteriores (rigidizadores USD 44,6k; carreteles) se cotizaron aparte tras la OC"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "4.Armado de la Oferta Comercial/REV C/PRES 114C- OFERTA ECONOMICA SKID CUADRO VALVULAS BOMBAS BOOSTER.pdf",
+  "orden_compra": "8.Orden de Compra/4500753308 Pampa.pdf",
+  "monto_adjudicado": "8.Orden de Compra/Carta de intencion/Carta de adjudicación SKID CUADRO DE VALVULAS BOMB BOOSTER 2321-2322.pdf",
+  "costo_y_factor": "4.Armado de la Oferta Comercial/LM COSTOS SACDE 1401 3029-SE-CFP-061  2321-2322_ rev.3.xlsx",
+  "adicional": "8.Orden de Compra/ADICIONALES/presupuesto_itt 153- distanciadores (rigidizadores).pdf",
+  "proveedores": "5.Proveedores 3ros/Presupuesto ITT N° 200256 cañería de Bombas Booster 07-04-2026.docx; 5.Proveedores 3ros/Presupuesto ITT N° 200282  Presupuesto por la fabricación de Carreteles de Bombas Booster 09-06-2026.docx"
+ },
+ "problemas": [
+  "Costo total y factor inferidos de la planilla rev.3: subtotal 88.013,53 USD (x2 skids = 176.027,06) con venta calculada 228.835 vs. precio adjudicado 287.852,86; no concilia (factor efectivo ~1,64 sobre ese costo)",
+  "La planilla trata el costo de Ledesma (60.844,98) como unitario x2 aunque la hoja 'Oferta LEDEZMA' parece ser total de los 2 skids: el costo real podría ser menor (~115k)",
+  "Rev.A tenía total USD 68.219,64 (solo MO) en planilla vs oferta rev.B/C mayor",
+  "Los presupuestos Ledesma 200256/200282 son de abril/junio (posteriores a la OC) y corresponden a 3 skids: no son parte del costo original",
+  "Desglose de costo aproximado (MO ITT 15.075,55x2, materiales 12.093x2, terceros Ledesma 60.844,98x2)"
+ ]
+}

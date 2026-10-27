@@ -1,0 +1,50 @@
+{
+ "carpeta": "TAVAL/75- Evento de Adhesion a Subasta 26-001 - SKIDS",
+ "cliente": "TAVAL",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-06-25",
+ "referencia_cliente": "Evento de Adhesión a Subasta 26-001 - SKIDS (Anexo 3 Subproveedores, Doc5767043420)",
+ "familia": "SK",
+ "descripcion_corta": "Subasta de skids: la carpeta solo contiene el Anexo 3 del cliente (listados de subproveedores sugeridos); no hay oferta ITT, costos ni proveedores.",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "La licitación exige declarar en el Anexo 3A el taller/subproveedor si se terceriza parte del suministro; el % de ejecución del subproveedor no puede superar la provisión principal.",
+  "El Anexo 3 forma parte de la adjudicación: los subproveedores declarados quedan comprometidos.",
+  "Se aportan vendor lists (Electricidad, Instrumentación, NOC) con proveedores homologados por rubro (ej. accesorios A105/A234, instrumentos de caudal); usar solo marcas de esas listas."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "descripcion": "1.Documentación de la licitación/Doc5767043420/ANEXO A 1 de 2/03.ANEXO 3_Subproveedores/01.ANEXO 3A Listado de Subproveedores.docx",
+  "referencia_cliente": "1.Documentación de la licitación/Doc5767043420/ANEXO A 1 de 2/03.ANEXO 3_Subproveedores/00.ANEXO 3 - Carátula.doc",
+  "vendor_lists": "1.Documentación de la licitación/Doc5767043420/ANEXO A 1 de 2/03.ANEXO 3_Subproveedores/Proveedores NOC_230929.xlsx"
+ },
+ "problemas": [
+  "No hay propuesta, planilla de costos, cotizaciones de proveedores ni OC: precio, plazo, condiciones y resultado desconocidos.",
+  "No consta cliente final; el nombre de carpeta indica Taval como cliente/origen del evento."
+ ]
+}

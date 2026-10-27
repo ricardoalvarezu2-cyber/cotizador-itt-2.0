@@ -1,0 +1,97 @@
+{
+ "carpeta": "APSA/16 - Virolas y tapas calentadores",
+ "cliente": "APSA",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": "No hay",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-08-18",
+ "referencia_cliente": null,
+ "familia": "C",
+ "descripcion_corta": "Virolas, bridas y tapas para calentadores: solo hay oferta de mano de obra de rolado/armado de Sandri",
+ "items": [
+  {
+   "descripcion": "Virola D ext 1390 mm, L 4490 mm (2480+2010), e 1/4\", A-36 (MO corte, biselado, cilindrado, armado, punteado)",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 3760000.0,
+   "precio_total": 3760000.0,
+   "moneda": "ARS",
+   "datos_tecnicos": "costo de proveedor"
+  },
+  {
+   "descripcion": "Virola D ext 1390 mm, L 990 mm, e 3/8\", A-36",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 1950000.0,
+   "precio_total": 1950000.0,
+   "moneda": "ARS",
+   "datos_tecnicos": "costo de proveedor"
+  },
+  {
+   "descripcion": "Brida D ext 1540 / int 1390 mm, planchuela 3\" x 3/8\", A-36",
+   "cantidad": 4,
+   "unidad": "u",
+   "precio_unitario": 950000.0,
+   "precio_total": 3800000.0,
+   "moneda": "ARS",
+   "datos_tecnicos": "costo de proveedor"
+  },
+  {
+   "descripcion": "Tapa D 1540 mm, e 3/8\", A-36",
+   "cantidad": 4,
+   "unidad": "u",
+   "precio_unitario": 800000.0,
+   "precio_total": 3200000.0,
+   "moneda": "ARS",
+   "datos_tecnicos": "costo de proveedor"
+  }
+ ],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": 12710000.0,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": 12710000.0,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": "Proveedor: ARS + IVA",
+  "notas_y_exclusiones": [
+   "Oferta de Sandri solo por mano de obra; el material lo provee ITT (plazo 20 días de recibidos los materiales)"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Juan y Victor Sandri S.A.",
+   "que": "MO de rolado, biselado y armado de 2 virolas, 4 bridas y 4 tapas (total 12.710.000 ARS + IVA)",
+   "precio": 12710000.0,
+   "moneda": "ARS",
+   "plazo_entrega": "20 días de recibidos los materiales, en su taller sobre transporte de ITT",
+   "fecha": "2026-08-14"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Rolado y armado se terceriza por pieza, en ARS; pago por transferencia acreditada y validez de solo 10 días: cotizar rápido y con ajuste",
+  "El costo de material (chapa A-36) y flete no está incluido y debe sumarse",
+  "Plazo de 20 días arranca al recibir materiales: sumar compra de chapa"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedor": "5.Proveedores 3ros/Rolados Sandri oferta del 14 08 2026.docx"
+ },
+ "problemas": [
+  "No hay propuesta de ITT, precio ofertado ni factor",
+  "Total proveedor calculado por suma de ítems (no figura en el texto)",
+  "Cantidades de bridas y tapas (4 c/u) pueden corresponder a 2 calentadores; no confirmado"
+ ]
+}

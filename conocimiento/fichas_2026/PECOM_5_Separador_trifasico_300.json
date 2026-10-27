@@ -1,0 +1,71 @@
+{
+ "carpeta": "PECOM/5 Separador trifasico #300",
+ "cliente": "PECOM ENERGIA S.A.",
+ "cliente_final": null,
+ "numero_oferta": "0137-000000000151",
+ "revisiones": "Una sola versión",
+ "fecha_oferta": "2026-05-06",
+ "fecha_ultima_modificacion": "2026-05-06",
+ "referencia_cliente": "Presupuesto budget (referencia de cliente no legible)",
+ "familia": "SEP",
+ "descripcion_corta": "Dos separadores trifásicos a precio budget: ST-103 #150 y ST-300 #300.",
+ "items": [
+  {
+   "descripcion": "Separador trifásico TAG ST-103; #150 BUDGET",
+   "cantidad": 1,
+   "unidad": "Unid",
+   "precio_unitario": 388455.75,
+   "precio_total": 388455.75,
+   "moneda": "USD",
+   "datos_tecnicos": "Clase 150"
+  },
+  {
+   "descripcion": "Separador trifásico TAG ST-300; #300 BUDGET",
+   "cantidad": 1,
+   "unidad": "Unid",
+   "precio_unitario": 423108.85,
+   "precio_total": 423108.85,
+   "moneda": "USD",
+   "datos_tecnicos": "Clase 300"
+  }
+ ],
+ "monto_total_ofertado": 811564.6,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "180 días de entrega (por ítem)",
+ "plazo_dias": 180,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": "Dólares; total con IVA USD 981.993,17 (IVA 170.428,57)",
+  "notas_y_exclusiones": [
+   "Presupuesto budget; la compra se evalúa por Revisión de Contratos antes de aceptarse",
+   "Garantía 1 año desde instalación o 18 meses desde embarque",
+   "Pruebas de funcionalidad según API 598 ed. 2009"
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Precio budget: separador trifásico #150 USD 388k y #300 USD 423k por unidad, entrega 180 días; diferencia de clase unos 9%.",
+  "Oferta solo presupuestaria, sin dimensiones ni presiones.",
+  "Total sin IVA = suma de los dos ítems (811.564,60)."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "todo": "7.Propuesta Comercial (envío al Cliente)/presupuesto 151 budget pecom.pdf"
+ },
+ "problemas": [
+  "Sin datos técnicos, costos internos, factor ni OC.",
+  "Pago y validez no figuran."
+ ]
+}

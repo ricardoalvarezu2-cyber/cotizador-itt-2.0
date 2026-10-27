@@ -1,0 +1,98 @@
+{
+ "carpeta": "APSA/15 - Capsa Capex, Puentes armados producción c AIB",
+ "cliente": "APSA",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": "Sin propuesta ITT en la carpeta",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-06-11",
+ "referencia_cliente": "Capsa Capex - puentes armados de produccion con AIB",
+ "familia": "P",
+ "descripcion_corta": "Puentes armados de produccion (con AIB) para CAPEX; solo hay cotizaciones de proveedores de valvulas, uniones, logistica y BOP compacto",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [
+  {
+   "proveedor": "Indave",
+   "que": "42 valvulas esfericas 2\" WOG3000 NPT (USD 150,50) + 7 de 1/2\" WOG2000 (USD 45,50)",
+   "precio": 6639.5,
+   "moneda": "USD",
+   "plazo_entrega": "60 dias (2\") y 15 dias (1/2\")",
+   "fecha": "2026-06-10"
+  },
+  {
+   "proveedor": "Adita (IMB Oil)",
+   "que": "15 uniones dobles rapidas 2\" NPT (USD 74,75) + 5 uniones extensibles 2\" (USD 249)",
+   "precio": 2366.25,
+   "moneda": "USD",
+   "plazo_entrega": "11/04/2026 y 21/05/2026 (30/45 dias)",
+   "fecha": "2026-04-06"
+  },
+  {
+   "proveedor": "Ingenieria en Fluidos",
+   "que": "14 valvulas de retencion a clapeta 2\" serie 600 NPT WCB (USD 533 c/u)",
+   "precio": 7462.0,
+   "moneda": "USD",
+   "plazo_entrega": "stock, inmediata",
+   "fecha": "2026-06-11"
+  },
+  {
+   "proveedor": "Tulsa (Almacenes Petroleros)",
+   "que": "7 Compact-T BOP mod. SBTBOP 1-1/2 x 2 (USD 1.195 c/u)",
+   "precio": 8365.0,
+   "moneda": "USD",
+   "plazo_entrega": "10 dias; validez hasta 25/06/2026",
+   "fecha": "2026-06-10"
+  },
+  {
+   "proveedor": "Danco",
+   "que": "Valvulas de retencion (docx sin texto extraido)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-06-11"
+  },
+  {
+   "proveedor": "ETFA Logistica",
+   "que": "Flete BAI-CRD (docx sin texto extraido)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-06-10"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Los puentes llevan valvulas esfericas 2\" WOG3000 NPT, retenciones 2\" S600, uniones dobles 2\" y BOP compacto 1-1/2x2; cantidades guia 42/14/20/7",
+  "Hay destino Comodoro Rivadavia (flete BAI-CRD, cliente Almacenes Petroleros para Tulsa)",
+  "Precios de proveedores tienen validez corta (10-15 dias)"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/(6 cotizaciones)"
+ },
+ "problemas": [
+  "No hay oferta ITT, costos ni OC: todos los datos comerciales son nulos",
+  "Danco y ETFA son docx sin contenido extraido",
+  "Cotizacion de Adita es de abril 2026 (anterior al resto)"
+ ]
+}

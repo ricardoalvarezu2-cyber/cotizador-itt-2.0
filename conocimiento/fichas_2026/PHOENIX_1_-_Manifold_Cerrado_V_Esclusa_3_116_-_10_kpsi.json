@@ -1,0 +1,127 @@
+{
+ "carpeta": "PHOENIX/1 - Manifold Cerrado V Esclusa 3 116 - 10 kpsi",
+ "cliente": "PHOENIX",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": "Taval cotizo valvula dos veces (rev 1 con precio menor)",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-05-07",
+ "referencia_cliente": "Manifold cerrado con valvula esclusa 3-1/16\" 10 kpsi",
+ "familia": "M",
+ "descripcion_corta": "1 manifold (puente) cerrado con valvula esclusa API 6A 3-1/16\" 10.000 psi; solo cotizaciones de proveedores",
+ "items": [
+  {
+   "descripcion": "Manifold cerrado valvula esclusa 3-1/16\" 10 kpsi",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": null,
+   "precio_total": null,
+   "moneda": null,
+   "datos_tecnicos": "Valvula esclusa API 6A 3-1/16\" 10K 4130 -18/121 C PSL3 DES.1 VOL; cubo 3-1/16\" 10K con salida a 45 grados, brida adaptadora 3-1/16\" 10K x 3\" fig.1502, caja portaorificio 3\" fig.1502 (adjuntos de Adita)"
+  }
+ ],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": "Ledesma 10 dias",
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": [
+   "MO de Ledesma no incluye PH ni pintura"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Taval",
+   "que": "Valvula esclusa API 6A 3-1/16\" 10K (stock), rev. 1",
+   "precio": 2968.13,
+   "moneda": "USD",
+   "plazo_entrega": "stock",
+   "fecha": "2026-05-06"
+  },
+  {
+   "proveedor": "Taval",
+   "que": "Misma valvula, cotizacion inicial",
+   "precio": 3957.5,
+   "moneda": "USD",
+   "plazo_entrega": "stock",
+   "fecha": "2026-04-28"
+  },
+  {
+   "proveedor": "Edgardo Ledesma",
+   "que": "Mano de obra de armado de 1 manifold cerrado",
+   "precio": 480,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-05-06"
+  },
+  {
+   "proveedor": "Adita (IMB Oil)",
+   "que": "Cotizacion S02255: cubo, brida adaptadora, caja portaorificio (solo adjunto, sin precio legible)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-05-06"
+  },
+  {
+   "proveedor": "Bripetrol",
+   "que": "Cotizacion CZ000100015432 (adjunto, sin texto)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-05-05"
+  },
+  {
+   "proveedor": "Danco",
+   "que": "Cabezales de inyeccion (cuerpo vacio)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-28"
+  },
+  {
+   "proveedor": "Dinatecnica",
+   "que": "Manguera para puente de produccion, urgente (cuerpo vacio)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-24"
+  },
+  {
+   "proveedor": "MMA (Motomec)",
+   "que": "Solicitud de cotizacion de materiales (adjunto 1031236.pdf, sin texto)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-05-05"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Para un manifold cerrado 10K, la valvula esclusa es el item principal: Taval cotizo USD 2.968 tras negociar (de 3.957)",
+  "MO de armado es chica (USD 480) y no incluye prueba hidraulica ni pintura",
+  "Se pidieron cotizaciones a 6+ proveedores para materiales 10K API 6A y manguera urgente"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "valvula": "5.Proveedores 3ros/TAVAL  cotización de válvulas Rev1.pdf (leido por imagen, texto extraido ilegible)",
+  "mano_obra": "5.Proveedores 3ros/E Ledesma cotización armado de puente cerrado 10.000 psi.pdf (leido por imagen)"
+ },
+ "problemas": [
+  "No hay oferta ITT, costos ni OC",
+  "La mayoria de los .msg solo traen cabecera, sin precios; PDFs de Taval y Ledesma con fuentes ilegibles en texto (leidos por imagen)",
+  "Precio Taval inicial figura 2026-04-28 en el cuerpo del mail (el PDF sin Rev esta fechado 2026-05-05)"
+ ]
+}

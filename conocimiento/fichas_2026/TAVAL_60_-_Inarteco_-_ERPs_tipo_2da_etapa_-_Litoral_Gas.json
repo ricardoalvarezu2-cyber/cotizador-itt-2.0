@@ -1,0 +1,59 @@
+{
+ "carpeta": "TAVAL/60 - Inarteco - ERPs tipo 2da etapa - Litoral Gas",
+ "cliente": "TAVAL (vía Inarteco)",
+ "cliente_final": "Litoral Gas",
+ "numero_oferta": null,
+ "revisiones": "No aplica (sólo cotización de proveedor)",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-05-19",
+ "referencia_cliente": "ERPs tipo 2da etapa Litoral Gas",
+ "familia": "M",
+ "descripcion_corta": "Estaciones reguladoras de presión (ERP) 2da etapa; sólo hay cotización de tapas de cierre rápido",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [
+  {
+   "proveedor": "Megatap SRL",
+   "que": "Presupuesto 2026-143: 2 tapas de cierre rápido horizontal MTV 6\" S/150 (1.085 c/u), 1 de 8\" S/150 (1.630), 1 de 12\" S/150 (2.480), ASTM A105N, oring Buna N70, ASME VIII Div 1, con 2 orings de repuesto; total 6.280 USD sin IVA; anticipo 30% con OC; sin flete; TC BNA, ND si variación >=5%; material nacional",
+   "precio": 6280,
+   "moneda": "USD",
+   "plazo_entrega": "60 días desde anticipo y certificación de datos de diseño",
+   "fecha": "2026-05-19"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Tapas de cierre rápido MTV: 6\" USD 1.085, 8\" USD 1.630, 12\" USD 2.480 (Sch a definir, ASTM A105N)",
+  "Plazo 60 días corre desde anticipo y aprobación de datos de diseño: sumar tiempo de ingeniería",
+  "Precio sin flete, entrega en planta del proveedor"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/Megatap PRESUPUESTO ITT SA 27143.pdf"
+ },
+ "problemas": [
+  "Sin oferta ITT, costos ni OC",
+  "Texto del PDF desordenado: la asignación de precios a ítems (6\"x2, 8\", 12\") se infirió del orden y del total 6.280",
+  "Hay plazos de '15 días' ambiguos (vigencia/validez) sin etiqueta clara",
+  "Cantidad de ERP no indicada"
+ ]
+}

@@ -1,0 +1,88 @@
+{
+ "carpeta": "TAVAL/78- LIC66577 SKID CONC. L. CAMP",
+ "cliente": "TAVAL",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-08-19",
+ "referencia_cliente": "Licitación 66577",
+ "familia": "SK",
+ "descripcion_corta": "Skid concentrador (manifold concentrador módulo de entrada 4\"x10\" + salida 4\" a 12\"), L. Camp. Solo cotizaciones de terceros y planilla de válvulas.",
+ "items": [
+  {
+   "descripcion": "Válvulas (planilla de costo): RET 10\" #300 (4500), ESF 1/2\" S2000 (69), ESF 3/4\" S2000 (75), GLOBO 1/2\" S800 (67,5), GLOBO 3/4\" S800 (78), ESF 10\" #300 (7115)",
+   "cantidad": null,
+   "unidad": null,
+   "precio_unitario": null,
+   "precio_total": null,
+   "moneda": "USD",
+   "datos_tecnicos": "Hay una columna con factor 0,52 aplicada al unitario (ej. 4500 -> 2340); falta el ítem 3"
+  }
+ ],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": "Ledesma: facturación por avance, 5 días F.F.; MS Juntas: echeq 15 días / 60 días F.F.",
+  "validez": "Ledesma 15 días; MS Juntas 15 días (vence 29/08/26)",
+  "entrega": "MS Juntas: su planta",
+  "moneda_y_ajuste": "USD; Ledesma al dólar divisa BNA del día anterior a facturar; MS Juntas ajusta si BNA varía +/-3%; precios sin IVA",
+  "notas_y_exclusiones": [
+   "Ledesma no incluye montaje, PH, pintura ni END"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Ledesma (mano de obra, presupuesto ITT 200317)",
+   "que": "Armado de skid, soportes y spools de manifold concentrador entrada 4\"x10\" + salida 4\" a 12\": soldadura, calificación, procedimientos; excluye montaje, PH, pintura y END",
+   "precio": 28000,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-08-17"
+  },
+  {
+   "proveedor": "MS Juntas",
+   "que": "44 espárragos/juntas ESP SW AC 316LFG Ø10\" #300 (7,14 c/u), 4 de Ø12\" #300 (9,31 c/u) y 4 kits aislación doble Ø10\" #300 (94,39 c/u)",
+   "precio": 728.96,
+   "moneda": "USD",
+   "plazo_entrega": "7 días",
+   "fecha": "2026-08-14"
+  },
+  {
+   "proveedor": "Cintolo",
+   "que": "Cotización de referencia (PDFs escaneados sin texto)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-08-14"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Mano de obra de armado del manifold concentrador cotizada por Ledesma en USD 28.000 c/u (cantidad no indicada); excluye PH, pintura y END, que hay que sumar aparte.",
+  "Válvulas grandes #300 pesan mucho en el costo (retención 10\" USD 4500, esfera 10\" USD 7115 de lista) y la planilla aplica un factor 0,52.",
+  "MS Juntas: subtotal 728,96 USD sin IVA (en el PDF, el valor \"importe\" por línea parece ser por unidad/cantidad inconsistente)."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/Presupuesto ITT N° 200317 ...docx; 5.Proveedores 3ros/MS Juntas COTIZACION_N§_049323.pdf",
+  "valvulas": "4.Armado de la Oferta Comercial/Valvulas/Valvulas.xlsx"
+ },
+ "problemas": [
+  "Sin propuesta comercial, factor de venta, plazo ni OC.",
+  "Cotizaciones Cintolo escaneadas sin texto.",
+  "En MS Juntas los importes por línea (314,16; 37,24; 377,56) no coinciden con cantidad x unitario; se tomó el sub-total 728,96.",
+  "Significado exacto del 0,52 en Valvulas.xlsx inferido."
+ ]
+}

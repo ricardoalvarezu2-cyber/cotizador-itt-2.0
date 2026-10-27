@@ -1,0 +1,66 @@
+{
+ "carpeta": "PHOENIX/2 - Separador canalización vapores regeneradora TEG",
+ "cliente": "PHOENIX",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-06-09",
+ "referencia_cliente": "Separador canalización vapores regeneradora TEG",
+ "familia": "SEP",
+ "descripcion_corta": "Separador de vapores (regeneradora TEG), 'HD separador SCH 40 AC': solo hay presupuesto del taller Ledesma por fabricación.",
+ "items": [
+  {
+   "descripcion": "HD separador SCH 40 AC: armado y soldadura, conexiones, deflector (cotización de taller)",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 1050,
+   "precio_total": 1050,
+   "moneda": "USD",
+   "datos_tecnicos": "Sch 40 acero al carbono; sin diámetro/presión indicados"
+  }
+ ],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [
+  {
+   "proveedor": "Ledesma (taller)",
+   "que": "Armado y soldadura, conexiones, deflector, consumibles, gases, calificación soldadores; no incluye PH, pintura ni montaje. Pago 5 días FF, validez 10 días, USD a BNA divisa día anterior a facturación; más IVA",
+   "precio": 1050,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-06-08"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Mano de obra de armado/soldadura de un separador chico Sch 40 AC: USD 1.050 (Ledesma); excluye materiales, PH, pintura y montaje.",
+  "Materiales (caños, bridas, deflector) y pruebas hidráulicas deben cotizarse aparte."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/Ledesma Presupuesto ITT N° 200279 HD SEPARADOR SCH 40” AC 08-06-2026.docx"
+ },
+ "problemas": [
+  "Solo un presupuesto de proveedor: no hay oferta ITT, costo total, factor, plazo ni resultado.",
+  "Sin dimensiones ni presión de diseño."
+ ]
+}

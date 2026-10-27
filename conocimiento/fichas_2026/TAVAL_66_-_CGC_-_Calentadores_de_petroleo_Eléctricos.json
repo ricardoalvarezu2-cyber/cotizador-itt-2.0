@@ -1,0 +1,78 @@
+{
+ "carpeta": "TAVAL/66 - CGC - Calentadores de petroleo. Eléctricos",
+ "cliente": "Cia Gral de Combustibles (CGC)",
+ "cliente_final": null,
+ "numero_oferta": "156",
+ "revisiones": "No hay evidencia de revisiones",
+ "fecha_oferta": "2026-06-09",
+ "fecha_ultima_modificacion": "2026-06-09",
+ "referencia_cliente": "Doc2213425909 Calentador de petróleo (Ref.Cliente en presupuesto: 1084, poco claro)",
+ "familia": "C",
+ "descripcion_corta": "Calentador eléctrico para petróleo 50 kW, Ent/Sal 10/30 C, skid, zona clasificada",
+ "items": [
+  {
+   "descripcion": "Calentador eléctrico para petróleo 50 kW. Ent/Sal: 10°C/30°C",
+   "cantidad": 1,
+   "unidad": "Unid",
+   "precio_unitario": 112792.0,
+   "precio_total": 112792.0,
+   "moneda": "USD",
+   "datos_tecnicos": "Cuerpo cañería 12\" SCH 80 sin costura, mazo extraíble 50 kW 12\"#300, 380 Vca, conexiones 3\"#300 RF, presión diseño 45,1 kg/cm2 @ -10/110°C, caudal 3200 kg/h, 36 resistencias inox 11 mm <1,5 W/cm2, gabinetes Exd Zona 2, PLC Rockwell Micro 850, skid autoportante, RT 100% (según oferta del proveedor)"
+  }
+ ],
+ "monto_total_ofertado": 112792.0,
+ "moneda": "USD",
+ "costo_total": 83550.0,
+ "factor_venta": 1.35,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": 83550.0,
+  "otros": null
+ },
+ "plazo_ofrecido": "120 días a partir de la confirmación de recepción de Orden de compra",
+ "plazo_dias": 120,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": "En depósito de ITT, 12 de Octubre 4004, Quilmes Oeste (AMBA)",
+  "moneda_y_ajuste": "USD, sin IVA (IVA 21% = 23.686,32; total 136.478,32)",
+  "notas_y_exclusiones": [
+   "No incluye transformador",
+   "Material principal: chapa de acero al carbono F22",
+   "PH y 100% radiografiado en uniones soldadas, resto líquidos penetrantes",
+   "Garantía 1 año desde instalación o 18 meses desde embarque",
+   "Pruebas de funcionalidad API 598 ed. 2009"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Tapigar",
+   "que": "Calentador eléctrico 50 kW completo (USD 81.600) + 2 días asistencia puesta en marcha (USD 1.950)",
+   "precio": 83550.0,
+   "moneda": "USD",
+   "plazo_entrega": "110/120 días desde aviso de compra",
+   "fecha": "2026-06-03"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Equipo fabricado íntegramente por tercero (Tapigar) y revendido con factor 1,35 sobre su costo",
+  "El precio de ITT (112.792) equivale a 1,35 x (81.600 + 1.950) = 112.792,5: la puesta en marcha parece incluida en el precio",
+  "Tapigar incluye FAT, SAT cotizado, data book, ingeniería y radiografía 100%; ITT excluye transformador",
+  "Plazo de ITT (120 d) igual al tope de Tapigar (110/120 d): sin colchón; Tapigar pide 40% anticipo y validez 30 días"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "precio_y_plazo": "7.Propuesta Comercial (envío al Cliente)/156.pdf",
+  "proveedor": "5.Proveedores 3ros/Tapigar 6581-ITTT-Calentador electrico 50Kw Oferta Comercial.pdf",
+  "fecha_oferta": "7.Propuesta Comercial (envío al Cliente)/156.pdf"
+ },
+ "problemas": [
+  "Factor 1,35 e inclusión de la puesta en marcha son inferidos por cálculo, no figuran explícitos (no hay planilla de costos)",
+  "Oferta Tapigar inconsistente: precio total USD 80.600 vs ítem 81.600",
+  "Condiciones de pago y validez de ITT no figuran en el texto extraído",
+  "No hay orden de compra en la carpeta"
+ ]
+}

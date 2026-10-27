@@ -1,0 +1,105 @@
+{
+ "carpeta": "APSA/11 - Puente Ac Inox Capex, BVO OQ24737",
+ "cliente": "APSA (Capsa, según asunto de correo)",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-04-30",
+ "referencia_cliente": "BVO OQ24737",
+ "familia": "P",
+ "descripcion_corta": "Puente de producción en acero inoxidable (Capex APSA/Capsa, BVO OQ24737): solo correos de proveedores sin contenido ni precios extraíbles",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [
+  {
+   "proveedor": "Edgardo Ledesma",
+   "que": "Armado de puentes AISI (docx sin texto extraíble)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-30"
+  },
+  {
+   "proveedor": "Danco",
+   "que": "Cabezales de inyección 2-7/8 x 1 x 1/2 (oferta y aclaración técnica)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-29"
+  },
+  {
+   "proveedor": "Dinatécnica",
+   "que": "Manguera para puente de producción",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-24"
+  },
+  {
+   "proveedor": "Duralitte",
+   "que": "Materiales para puentes de producción, todo en acero inoxidable (cot. P_16766)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-29"
+  },
+  {
+   "proveedor": "MS Juntas",
+   "que": "Juntas BX154 (cot. 047745)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-28"
+  },
+  {
+   "proveedor": "Taval",
+   "que": "Componentes para puente típico todo en acero inoxidable",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-29"
+  },
+  {
+   "proveedor": "Poberaj",
+   "que": "Manguera para puente de producción",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-28"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Puente de producción inox requiere cotizar por separado: armado/soldadura (Ledesma), componentes inox (Taval, Duralitte), mangueras, cabezales de inyección y juntas BX",
+  "Se pidieron cotizaciones urgentes de manguera a dos proveedores (Dinatécnica, Poberaj) para comparar"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "APSA/11 - Puente Ac Inox Capex, BVO OQ24737/5.Proveedores 3ros/(7 archivos de proveedores)"
+ },
+ "problemas": [
+  "Los .msg solo aportan asunto/fecha; precios, plazos y cuerpo están en adjuntos (PDF/xlsx) no disponibles",
+  "Sin oferta ITT, monto, factor ni resultado",
+  "Cliente inferido del nombre de carpeta y asuntos"
+ ]
+}

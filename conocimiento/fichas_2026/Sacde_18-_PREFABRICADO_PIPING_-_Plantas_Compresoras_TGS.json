@@ -1,0 +1,121 @@
+{
+ "carpeta": "Sacde/18- PREFABRICADO PIPING - Plantas Compresoras TGS",
+ "cliente": "SACDE",
+ "cliente_final": "TGS (Transportadora de Gas del Sur) - Ampliación capacidad de transporte, plantas compresoras",
+ "numero_oferta": "PRES 147 rev A",
+ "revisiones": "Rev A emisión original 20-04-2026; la planilla de cálculo se llama 'Rev4 Direccion' (4 revisiones internas); en carpeta 4 hay un 'PRESUPUESTO 147A' (oferta técnica, sin precios)",
+ "fecha_oferta": "2026-04-20",
+ "fecha_ultima_modificacion": "2026-05-06",
+ "referencia_cliente": "Requisición Prefabricado de Piping 3013-D-RM-00101 Rev D; Proyecto Ampliación Capacidad de Transporte",
+ "familia": "CA",
+ "descripcion_corta": "Prefabricado de piping (spools) con END, pintura y data book para 5 plantas compresoras TGS, acuerdo marco, cotizado por pulgada diametral",
+ "items": [
+  {
+   "descripcion": "PC Chacharramendi (La Pampa) - servicio de fabricación de piping",
+   "cantidad": 1,
+   "unidad": "Unid",
+   "precio_unitario": 706955.78,
+   "precio_total": 706955.78,
+   "moneda": "USD",
+   "datos_tecnicos": "21533 pulg diametrales aprox.; costo 660706.34"
+  },
+  {
+   "descripcion": "PC Doblas (La Pampa) - servicio de fabricación de piping",
+   "cantidad": 1,
+   "unidad": "Unid",
+   "precio_unitario": 745367.7,
+   "precio_total": 745367.7,
+   "moneda": "USD",
+   "datos_tecnicos": "22919 pulg diametrales aprox.; costo 696605.33"
+  },
+  {
+   "descripcion": "PC Salliqueló (Bs As) - servicio de fabricación de piping",
+   "cantidad": 1,
+   "unidad": "Unid",
+   "precio_unitario": 63359.72,
+   "precio_total": 63359.72,
+   "moneda": "USD",
+   "datos_tecnicos": "sch no aclarados, se considera todo sch 40 o menor; costo 59214.70"
+  },
+  {
+   "descripcion": "PC Saturno (Bs As) - servicio de fabricación de piping",
+   "cantidad": 1,
+   "unidad": "Unid",
+   "precio_unitario": 204672.84,
+   "precio_total": 204672.84,
+   "moneda": "USD",
+   "datos_tecnicos": "sch 40 o menor; ~7618 pulg; costo 191283.03"
+  },
+  {
+   "descripcion": "PC Ordoqui (Bs As) - servicio de fabricación de piping",
+   "cantidad": 1,
+   "unidad": "Unid",
+   "precio_unitario": 489240.52,
+   "precio_total": 489240.52,
+   "moneda": "USD",
+   "datos_tecnicos": "sch 40 o menor; ~16588 pulg; costo 457234.13"
+  },
+  {
+   "descripcion": "Revestimiento exterior TGS (tratamiento superficial con esquema de pintura)",
+   "cantidad": null,
+   "unidad": "m2",
+   "precio_unitario": 40.0,
+   "precio_total": null,
+   "moneda": "USD",
+   "datos_tecnicos": "USD 40/m2; cantidad no definida (precio unitario de acuerdo marco)"
+  }
+ ],
+ "monto_total_ofertado": 2209596.57,
+ "moneda": "USD",
+ "costo_total": 1827050,
+ "factor_venta": 1.2094,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "120 días (columna Ent. del presupuesto itt 147); capacidad productiva hasta 4200 pulgadas/mes",
+ "plazo_dias": 120,
+ "condiciones": {
+  "pago": "Anticipo 30% contra OC; 70% certificaciones mensuales por avance de obra",
+  "validez": "30 días corridos",
+  "entrega": "En taller ITT, Quilmes Oeste (sobre camión, liberado por inspección SACDE)",
+  "moneda_y_ajuste": "USD facturado en ARS al TC BNA fecha de factura; cancelación a TC BNA vendedor día anterior al pago; NC/ND si variación >3%",
+  "notas_y_exclusiones": [
+   "PH solo para spools bridados; otros se cotizan aparte",
+   "Tratamientos térmicos cotizados por separado",
+   "Pintura sin mano final",
+   "Seguro se cotiza con la OC",
+   "Sin multas por mora si hay material importado; licencias no automáticas sin responsabilidad de ITT",
+   "Material importado preferentemente provisto por el cliente",
+   "Materiales base provistos por cliente (ITT presta mano de obra, END, consumibles, pintura)",
+   "IVA no incluido (total con IVA 2673660.24)",
+   "Garantía 18 meses desde entrega o 12 desde puesta en marcha"
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Cotización por pulgada diametral (USD soldadura + END x factor rechazo 5% x factor rentabilidad 1.13), con mayor peso en 4 y 6 pulgadas; USD 22-45/pulg según diámetro",
+  "Líneas menores a 4\" se estiman como 26% adicional sobre líneas mayores (15% en plantas ya construidas), según estadística TGS",
+  "Precio con 7% de descuento de negociación previsto: margen 1.13 sin descuento, 1.209 con; piso teórico de costo para 35% de ganancia = 1.64 M USD",
+  "Se ofrece solo fabricación (materiales provistos por cliente), END 100% con RX y tintas",
+  "Capacidad de taller 4200 pulg/mes condiciona el cronograma de 5 plantas"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "Sacde/18- PREFABRICADO PIPING - Plantas Compresoras TGS/7.Propuesta Comercial (envío al Cliente)/PRESUPUESTO 147- PREFABRICADO PIPING - Plantas Compresoras TGS.pdf",
+  "costo_total y factor_venta": "Sacde/18- PREFABRICADO PIPING - Plantas Compresoras TGS/7.Propuesta Comercial (envío al Cliente)/Sacde - Cotización piping x pulgada+END y mtr2 Rev4 Direccion.xlsx (hoja Resumen)",
+  "plazo_ofrecido": "Sacde/18- PREFABRICADO PIPING - Plantas Compresoras TGS/7.Propuesta Comercial (envío al Cliente)/presupuesto itt 147.pdf",
+  "condiciones": "Sacde/18- PREFABRICADO PIPING - Plantas Compresoras TGS/7.Propuesta Comercial (envío al Cliente)/PRESUPUESTO 147- PREFABRICADO PIPING - Plantas Compresoras TGS.pdf",
+  "alcance": "Sacde/18- PREFABRICADO PIPING - Plantas Compresoras TGS/4.Armado de la Oferta Comercial/PRESUPUESTO 147A- OFERTA TECNICA PREFABRICADO PIPING- PC TGS.pdf"
+ },
+ "problemas": [
+  "Costo 1827050 es el valor de la columna 'Costo' del resumen (precio = costo x 1.13 = 2065043 sin descuento); el factor 1.209 se calculó como precio ofertado / ese valor",
+  "Cantidad de m2 de revestimiento no informada",
+  "Sin OC en carpeta",
+  "Presupuesto con descuento 7% incorporado en precio ofertado"
+ ]
+}

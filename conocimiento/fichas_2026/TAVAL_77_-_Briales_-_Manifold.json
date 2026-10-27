@@ -1,0 +1,60 @@
+{
+ "carpeta": "TAVAL/77 - Briales - Manifold",
+ "cliente": "TAVAL",
+ "cliente_final": "Briales (según nombre de carpeta)",
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-07-31",
+ "referencia_cliente": "Manifold Briales",
+ "familia": "M",
+ "descripcion_corta": "Manifold (prefabricados de cañería Ø4\"). Solo cotización de terceros para revestimiento epoxi interior/exterior; sin oferta ni costos.",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": "5 días de fecha de factura con cheque diferido a 15 días (proveedor)",
+  "validez": "30 días corridos (proveedor)",
+  "entrega": null,
+  "moneda_y_ajuste": "USD, tipo de cambio BNA divisa vendedor a fecha de facturación; sin IVA",
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [
+  {
+   "proveedor": "Amanci (presup. 147-26)",
+   "que": "Granallado y revestimiento epoxi Revesta 400 en prefabricados Ø4\": interior (2x150 µm) y exterior (2x100 µm), en taller Avellaneda",
+   "precio": 675.29,
+   "moneda": "USD",
+   "plazo_entrega": "se estima plazo de ejecución de 7 (unidad cortada en el texto)",
+   "fecha": "2026-02-19"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Revestimiento Ø4\": mano de obra 298,15 interior + 193,91 exterior; pinturas 124,73 + 58,50 (USD); total 492,05 MO + 183,24 pinturas = 675,29 USD, sin aclarar si por prefabricado, por m o por lote.",
+  "Se cotiza aparte el revestimiento interior/exterior con epoxi Revesta 400 (apto agua potable) y se entregan certificados y ensayos de espesor, porosidad y adherencia.",
+  "Pintar en taller de terceros: sumar logística a Avellaneda."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/PRESUP.AMANCI 147-26 - 31-07 -ITT SA Revestimiento Interior y Exterior de Prefabricados de 4 pulg.pdf",
+  "pintura": "5.Proveedores 3ros/r400.pdf"
+ },
+ "problemas": [
+  "No hay propuesta, costos ni OC: monto, factor y plazo nulos.",
+  "Fecha del presupuesto Amanci: texto dice 19-02-2026, nombre de archivo dice 31-07 (coincide con modificación del archivo).",
+  "Unidad de los precios Amanci no está clara; plazo de ejecución truncado (\"7\").",
+  "R400 INAL.pdf es escaneo sin texto; r400.pdf es hoja técnica de pintura."
+ ]
+}

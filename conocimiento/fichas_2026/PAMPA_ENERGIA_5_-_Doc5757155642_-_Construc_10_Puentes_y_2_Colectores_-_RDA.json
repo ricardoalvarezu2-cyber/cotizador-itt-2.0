@@ -1,0 +1,168 @@
+{
+ "carpeta": "PAMPA ENERGIA/5 - Doc5757155642 - Construc 10 Puentes y 2 Colectores - RDA",
+ "cliente": "PAMPA ENERGIA (OC emitida por PAMPA MIDSTREAM; adicional emitido por PAMPA RIGI)",
+ "cliente_final": "Pampa Energia - Rincon de Aranda (RDA), PADs 13/14/15, Neuquen",
+ "numero_oferta": "PRES 163 rev C (Presupuesto ITT 000000000163; oferta tecnica PRES 163 rev B)",
+ "revisiones": "Rev A 03-07-2026 emision original (USD 365,754.90); Rev B 13-07-2026 mejorada en plazos; Rev C 16-07-2026 mejorada (USD 326,521.59). Planilla de costos Rev2 y Rev3 (octubre) corresponden al adicional posterior a la OC.",
+ "fecha_oferta": "2026-07-16",
+ "fecha_ultima_modificacion": "2026-10-09",
+ "referencia_cliente": "Doc 5757155642 - Construccion de 10 Puentes y 2 Colectores PADs 14 y 15 (pedido de precios recibido 2026-06-26, vencimiento 2026-07-01); OC 4500766711",
+ "familia": "P",
+ "descripcion_corta": "2 colectores de campo 6\"/3\" de 6 ingresos con valvulas 3 vias motorizadas y 10 puentes de produccion 3\" 300# con instrumentacion, para Rincon de Aranda.",
+ "items": [
+  {
+   "descripcion": "Colector campo 6\"/3\" 6 ingresos RDA (item 3.4)",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 101826.8,
+   "precio_total": 101826.8,
+   "moneda": "USD",
+   "datos_tecnicos": "6 ingresos 3\" 300#, colector general 6\" #300, colector de control 3\" #300, 6 valvulas esfericas de 3 vias API 6D 3\" cl.300 WCB con actuador electrico on-off 220VAC (Valvtronic/Worcester), 2 manometros 0-50 kg/cm2, transmisor de presion, piping A106 B, bridas A105, ASME B31.3, RX 100%, presion de proceso 52 kg/cm2, PH 78 kg/cm2, -29/38C, pintura esquema Pampa RAL 7039. Plazo 70 dias"
+  },
+  {
+   "descripcion": "Colector campo 6\"/3\" 6 ingresos RDA (item 3.5)",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 101826.8,
+   "precio_total": 101826.8,
+   "moneda": "USD",
+   "datos_tecnicos": "Idem item 3.4. (El PDF de la oferta economica rev C rotula 3.4/3.5 como 'Puente' por error; presupuesto 163, NV 496 y OC los muestran como colectores.)"
+  },
+  {
+   "descripcion": "Puente produccion 3\" 300# BDP-RDA (item 3.6)",
+   "cantidad": 5,
+   "unidad": "un",
+   "precio_unitario": 12286.8,
+   "precio_total": 61434.0,
+   "moneda": "USD",
+   "datos_tecnicos": "3\" cl.300, 3 valvulas esfericas API 6D trunnion WCB, A106 B, instrumentacion PIT/TIT/TW/PI (ABB en oferta; Rosemount 3051S2TG en OC), pintura Pampa. Plazo 60 dias"
+  },
+  {
+   "descripcion": "Puente produccion 3\" 300# BDP-RDA (item 3.7)",
+   "cantidad": 5,
+   "unidad": "un",
+   "precio_unitario": 12286.8,
+   "precio_total": 61434.0,
+   "moneda": "USD",
+   "datos_tecnicos": "Idem item 3.6"
+  },
+  {
+   "descripcion": "Transporte a Rincon de Aranda (opcion B de lugar de entrega, fuera del total)",
+   "cantidad": 2,
+   "unidad": "viaje",
+   "precio_unitario": 2880.0,
+   "precio_total": 5760.0,
+   "moneda": "USD",
+   "datos_tecnicos": "2 viajes, costo USD 2400 con factor 1.2"
+  }
+ ],
+ "monto_total_ofertado": 326521.59,
+ "moneda": "USD",
+ "costo_total": 249786.85,
+ "factor_venta": 1.307,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "70 dias (colectores) / 60 dias (puentes), sujeto a aprobacion de ingenieria basica; la OC fija 60-70 dias desde OC",
+ "plazo_dias": 70,
+ "condiciones": {
+  "pago": "Opcion A: contra entregas con cheque 30 dias FF. Opcion B: hitos 30% anticipo contra aprobacion de ingenieria de detalle (caucion 100% anticipo + fiel cumplimiento 10%) y 70% a liberacion para despacho (poliza fondo de reparo 10%, 12 meses), con 3% bonificacion por compra total. OC final: saldo 30 dias fecha de factura.",
+  "validez": "30 dias corridos",
+  "entrega": "Opcion A EXW planta ITT Quilmes Oeste; Opcion B en Rincon de Aranda (transporte USD 2,880 x2 aparte). OC: entrega en fabrica.",
+  "moneda_y_ajuste": "USD facturado en ARS al TC BNA vendedor dia anterior al pago; NC/ND si variacion > 3%. OC: precios fijos, sin reajuste.",
+  "notas_y_exclusiones": [
+   "Sin multas por mora en material importado (condicion BCRA)",
+   "Licencias no automaticas: sin responsabilidad por atrasos",
+   "Sugiere que material importado (chapas, instrumentos, valvulas) lo provea el cliente",
+   "Excluye: cañerias bajo tierra, interconexiones entre equipos/skid, juntas de transicion/monoliticas, aislacion, bulones de anclaje/plantillas/calculo de anclajes, instrumentacion no declarada",
+   "Garantia 18 meses desde entrega o 12 desde puesta en marcha",
+   "Incluye data-book, planos, soldadura calificada, RX, PH, embalaje terrestre"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Valbol (Valvulas Worcester)",
+   "que": "6 valvulas esfericas 3 vias 3\" #300 con actuador electrico NUTORK NTQ-240",
+   "precio": 26268.0,
+   "moneda": "USD",
+   "plazo_entrega": "90 dias",
+   "fecha": null
+  },
+  {
+   "proveedor": "Valvtronic",
+   "que": "12 valvulas 3 vias TMBV FB RF 3\" T-Port con actuador Bray S70 (3586.58 c/u) + flete aereo 9050",
+   "precio": 52088.96,
+   "moneda": "USD",
+   "plazo_entrega": "18-20 semanas (70-80 dias con flete aereo)",
+   "fecha": "2026-07-02"
+  },
+  {
+   "proveedor": "Induquip (rep. Emerson/Rosemount)",
+   "que": "Instrumentacion para 10 puentes: PIT 3051S2TG, TE, TW, TIT 3144P",
+   "precio": 63185.9,
+   "moneda": "USD",
+   "plazo_entrega": "12 semanas",
+   "fecha": "2026-06-29"
+  },
+  {
+   "proveedor": "ABB",
+   "que": "10 TTF300-N + 10 TSP341-N + 10 PGS300 (oferta presupuestaria no vinculante: 7674.90 + 14382.80 + 9017.12; alternativa TSP341-N con transmisor 16879.90)",
+   "precio": 31074.82,
+   "moneda": "USD",
+   "plazo_entrega": "55 dias corridos",
+   "fecha": "2026-07-15"
+  },
+  {
+   "proveedor": "Francovigh",
+   "que": "5 bridas WN 10000 RJ 2 9/16\" x 3\" SCH 40 6BX ASTM A694 F60 (312 c/u)",
+   "precio": 1560.0,
+   "moneda": "USD",
+   "plazo_entrega": "75 dias",
+   "fecha": "2026-06-19"
+  },
+  {
+   "proveedor": "Juntas MS",
+   "que": "juntas RTJ BX153 y espirales 316L/grafito 2\" y 3\" (importes con formato ilegible)",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": "90 dias (RTJ); resto stock",
+   "fecha": "2026-06-18"
+  }
+ ],
+ "resultado": "ganada (hay OC)",
+ "orden_compra": {
+  "numero": "4500766711 (adicional 4500773444 por USD 11,169.00, 17-09-2026)",
+  "fecha": "2026-07-23",
+  "monto": 326521.6
+ },
+ "aprendizajes": [
+  "Factor global real ~1.31: MO/materiales/servicios x1.35, instrumentos x1.35 (ABB) o x1.5 (Rosemount), valvulas Taval y seguro de caucion a factor 1; transporte x1.2. Los costos de transporte y seguro estan dentro del costo pero el total de oferta excluye el transporte opcional.",
+  "El cliente adjudico al precio rev C sin descuento (USD 326,521.60) tras mejorar plazos (rev B) y precio (rev C: de 365,754.90 a 326,521.59); la OC fijo precios fijos, sin ajuste, 60-70 dias y multas de 2% semanal hasta 10%.",
+  "Cambio de instrumentacion ABB a Rosemount (OC) altero el costo y genero adicionales: OC 4500773444 USD 11,169 por modificacion de puentes y presupuestos 174 (USD 117,465 colector sin valvulas 3 vias + skid de puentes) y 175 (USD 27,000 horas extra), con MO de fin de semana/feriados a costo USD 19,556 x1.4.",
+  "Las valvulas 3 vias motorizadas (USD ~4,378 c/u Valbol) pesan fuerte en el colector y tienen largo plazo (18-20 semanas, 90 dias); el plazo del colector de 150 dias interno se ofrecio recortado a 70.",
+  "Revisar rotulos en la oferta economica (items 3.4/3.5 dicen 'Puente') para evitar ambiguedad."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "precio_oferta": "4.Armado de la Oferta Comercial/PRES 163C- OFERTA ECONOMICA Colector y Pte. de Produccion.pdf",
+  "fecha_oferta": "4.Armado de la Oferta Comercial/PRES 163C- OFERTA ECONOMICA Colector y Pte. de Produccion.pdf",
+  "datos_tecnicos": "4.Armado de la Oferta Comercial/PRES 106B- OFERTA TECNICA Colector y Pte. de Produccion.pdf",
+  "costo_y_factor": "4.Armado de la Oferta Comercial/Cot Skid Manifolds Colectores RDA Rev2.xlsx",
+  "adicional": "4.Armado de la Oferta Comercial/ADICIONAL/ADICIONAL DE OC Colectores.xlsx",
+  "orden_compra": "8.Orden de Compra/4500766711.pdf",
+  "oc_adicional": "8.Orden de Compra/OC 4500773444 (Adicional por puentes de produccion).pdf",
+  "proveedores": "5.Proveedores 3ros/ (Valbol, Valvtronic, Induquip, Francovigh, MS Juntas) y 4.Armado de la Oferta Comercial/OPP-26-8791972.pdf (ABB)"
+ },
+ "problemas": [
+  "Desglose materiales/MO/terceros no disponible por separado en el texto consultado (solo costo agregado)",
+  "Costo 249,786.85 es de la planilla Rev2/Resumen de octubre; incluye transporte y seguro, el total ofertado no incluye transporte",
+  "Precios de Juntas MS ilegibles",
+  "Fecha de cotizacion de Valbol no figura",
+  "Presupuesto 163 rev A (365,754.90) difiere de rev C (326,521.59)",
+  "Presupuestos ITT 200283/200284 (USD 8,350 por colector y 1,300 por iso, Ledesma) estan en proveedores pero parecen ofertas de mano de obra de ITT; no se incluyeron",
+  "No se leyeron planos, memorias de calculo ni documentacion del cliente (1.)"
+ ]
+}

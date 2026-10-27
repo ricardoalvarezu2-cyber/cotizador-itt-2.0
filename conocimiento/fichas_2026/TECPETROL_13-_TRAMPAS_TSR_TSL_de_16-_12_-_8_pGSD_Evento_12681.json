@@ -1,0 +1,183 @@
+{
+ "carpeta": "TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681",
+ "cliente": "Tecpetrol S.A.",
+ "cliente_final": null,
+ "numero_oferta": "PRES 186 rev. B",
+ "revisiones": "Rev A 20-07-2026 emisión original; Rev B 13-08-2026 bonificación 4% por adjudicación total. Planilla de costos en REV 1 (rev 3 de Pie de Venta); hubo REV 0 con hojas de datos por diámetro.",
+ "fecha_oferta": "2026-07-20",
+ "fecha_ultima_modificacion": "2026-09-30",
+ "referencia_cliente": "Evento 12681 - Trampas lanzadoras y receptoras de 16\", 12\" y 8\" p/GSD Exportación (Fortín de Piedra); pliego FACILIDADES DESARROLLO GSD EXPORTACIÓN FA00221",
+ "familia": "TS",
+ "descripcion_corta": "6 trampas de scraper (3 lanzadoras + 3 receptoras) 16\" S600, 12\" S900, 8\" S900 sobre skid, con asistencia técnica",
+ "items": [
+  {
+   "descripcion": "Trampa lanzadora 16\" Serie-600 (A6C) sobre skid, con válvulas, cañerías, instrumentos",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 119887.37,
+   "precio_total": 119887.37,
+   "moneda": "USD",
+   "datos_tecnicos": "16\", ASME B31.8, API 5L X56, 110 kg/cm2, 65 C, CA 3,2 mm, barrel 20x16"
+  },
+  {
+   "descripcion": "Trampa receptora 16\" Serie-600 (A6C) sobre skid",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 130764.0,
+   "precio_total": 130764.0,
+   "moneda": "USD",
+   "datos_tecnicos": "idem 16\" S600"
+  },
+  {
+   "descripcion": "Trampa lanzadora 12\" Serie-900 (A9CM) sobre skid",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 87636.35,
+   "precio_total": 87636.35,
+   "moneda": "USD",
+   "datos_tecnicos": "12\" S900"
+  },
+  {
+   "descripcion": "Trampa receptora 12\" Serie-900 (A9CM) sobre skid",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 108786.1,
+   "precio_total": 108786.1,
+   "moneda": "USD",
+   "datos_tecnicos": "12\" S900"
+  },
+  {
+   "descripcion": "Trampa lanzadora 8\" Serie-900 (A9C) sobre skid",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 78934.09,
+   "precio_total": 78934.09,
+   "moneda": "USD",
+   "datos_tecnicos": "8\" S900, barrel mayor 10\""
+  },
+  {
+   "descripcion": "Trampa receptora 8\" Serie-900 (A9C) sobre skid",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 88866.21,
+   "precio_total": 88866.21,
+   "moneda": "USD",
+   "datos_tecnicos": "8\" S900, barrel mayor 10\""
+  },
+  {
+   "descripcion": "Asistencia técnica para montaje (tarifa diaria)",
+   "cantidad": 1,
+   "unidad": "día",
+   "precio_unitario": 2362.5,
+   "precio_total": 2362.5,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  },
+  {
+   "descripcion": "Asistencia técnica pre-comisionado, comisionado y puesta en marcha (mín. 3 días)",
+   "cantidad": 3,
+   "unidad": "día",
+   "precio_unitario": 2362.5,
+   "precio_total": 7087.5,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  }
+ ],
+ "monto_total_ofertado": 599729.15,
+ "moneda": "USD",
+ "costo_total": 463596.6,
+ "factor_venta": 1.326,
+ "desglose_costo": {
+  "materiales": 372955.25,
+  "mano_obra": null,
+  "terceros": 79665.08,
+  "otros": 10976.28
+ },
+ "plazo_ofrecido": "150 días desde la recepción de la OC y aprobación de la ingeniería básica para construcción",
+ "plazo_dias": 150,
+ "condiciones": {
+  "pago": "Opción A: contra entrega FF a 30 días. Opción B: hitos 30% anticipo (contra ingeniería de detalle, caución 100% + fiel cumplimiento 10%), 20% compra materiales principales, 20% prueba hidráulica, 30% liberación a despacho (fondo de reparo 10%, 12 meses), con descuento por adjudicación total. OC final: T030 (30 días).",
+  "validez": "60 días corridos",
+  "entrega": "En yacimiento Fortín de Piedra (oferta); la planilla de costo asume entrega en depósito ITT Quilmes Oeste (EXW)",
+  "moneda_y_ajuste": "USD facturado en ARS al TC BNA fecha de factura; cancelación al TC BNA vendedor día anterior al pago; NC/ND si variación >3%",
+  "notas_y_exclusiones": [
+   "Bonificación 4% (USD 24.594,96) sobre USD 614.874,11 por adjudicación total, total equipos USD 590.279,15",
+   "Servicios de asistencia técnica por separado: USD 9.450",
+   "Repuestos de precomisionado y 2 años incluidos en la provisión",
+   "Sin multas por mora si hay material importado; licencias no automáticas fuera de responsabilidad de ITT",
+   "Garantía 18 meses desde entrega o 12 desde puesta en marcha",
+   "Penalidad OC: 1% por semana, tope 10%"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Innovación Técnica Total / Sypris Tube Turns (vía FTS cotiz. FTS 260708C)",
+   "que": "Tapas de cierre rápido tool-less CL900 20\" x2 (USD 14.786 c/u), 16\" x2 (10.524 c/u), 12\" x2 (10.608 c/u) más lip seals y O-rings; total estimado equipos y repuestos",
+   "precio": 74484.0,
+   "moneda": "USD",
+   "plazo_entrega": "70 días desde aprobación de planos y anticipo; EXW Louisville",
+   "fecha": "2026-07-10"
+  },
+  {
+   "proveedor": "Francovigh S.A.",
+   "que": "Bridas WN 900 RF varias",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": "Inmediata a 60 días",
+   "fecha": "2026-07-15"
+  },
+  {
+   "proveedor": "Cintolo Hnos. Metalúrgica",
+   "que": "Accesorios de cañería para soldar (codos, tes, reducciones)",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": "ver cotización 33.725",
+   "fecha": "2026-07-15"
+  },
+  {
+   "proveedor": "Taval (válvulas, R. Alvarez)",
+   "que": "Válvulas esféricas S900 (monto en planilla: USD 79.665,08 para las 6 trampas)",
+   "precio": 79665.08,
+   "moneda": "USD",
+   "plazo_entrega": "no extraído (PDF sin texto)",
+   "fecha": "2026-07-15"
+  },
+  {
+   "proveedor": "Edgardo Ledesma",
+   "que": "Piping y skid (USD 13.500 piping por trampa + USD 2,8/kg skid, según planilla)",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": "no extraído",
+   "fecha": "2026-07-15"
+  }
+ ],
+ "resultado": "ganada (hay OC)",
+ "orden_compra": {
+  "numero": "4520003317/01 (PO Coupa 53406); NV ITT 501",
+  "fecha": "2026-09-02",
+  "monto": 599729.17
+ },
+ "aprendizajes": [
+  "Margen uniforme: factor 1,35 sobre materiales/MO/servicios, 1,0 sobre válvulas Taval (traspaso) y 3 sobre seguro de caución; factor global efectivo ~1,33 antes de bonificación y ~1,29 sobre OC.",
+  "Las tapas de cierre rápido Sypris (importadas, EXW EEUU, 70 días + 6 semanas de margen) condicionan el plazo; se cotizaron USD 10-15 mil por tapa y llevaron cláusula de no multa por demora.",
+  "El cliente adjudicó el total con bonificación del 4%: conviene dejar ese margen de negociación; precios OC = oferta Rev B.",
+  "Incluir póliza de caución (anticipo y fiel cumplimiento), transporte USD 1.200 por trampa y repuestos de 2 años en el costo; el cliente aplica penalidad 1%/semana tope 10%.",
+  "Hubo discusión técnica de barrel menor 8\" NPS 8 Sch 80 sin mecanizar (ID 193,7 mm < 201 mm requerido): resolver con mecanizado o barrel rolado."
+ ],
+ "confianza": "alta",
+ "fuentes": {
+  "monto_total_ofertado": "8.Orden de Compra/PRES 186B- OFERTA ECONOMICA TRAMPAS DE SCRAPER.pdf.txt",
+  "precios_items": "8.Orden de Compra/PRES 186B- OFERTA ECONOMICA TRAMPAS DE SCRAPER.pdf",
+  "plazo_condiciones": "8.Orden de Compra/PRES 186B- OFERTA ECONOMICA TRAMPAS DE SCRAPER.pdf",
+  "orden_compra": "8.Orden de Compra/4520003317.pdf",
+  "costos_factor": "4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx",
+  "proveedores": "5.Proveedores 3ros/COT FTS 260708C - ITT.pdf"
+ },
+ "problemas": [
+  "Cotizaciones de Taval, Ledesma y Evelyn Montes sin texto extraíble; datos tomados de la planilla de costos",
+  "Hoja Resumen de la planilla tiene cliente 'YPF' (plantilla reutilizada) y menciona plazo 120/150 días",
+  "Costo total y factor calculados por suma de las 6 hojas de trampa (sin IVA); factor_venta = precio lista 614.874/costo",
+  "Totales de Francovigh y Cintolo no extraídos",
+  "Pequeña diferencia 599.729,15 (oferta) vs 599.729,17 (OC); la NV 501 interna dice entrega 08/02/2027 vs OC 25/01/2027"
+ ]
+}

@@ -1,0 +1,119 @@
+{
+ "carpeta": "PAMPA ENERGIA/4 - Doc 5745722125 Compra Puentes de producción 3 S300 PAD 13",
+ "cliente": "Pampa Energía",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": "Sin propuesta de ITT en la carpeta. Solo existe 5.Proveedores 3ros. La cotización de Induquip (instrumentos Rosemount) tuvo 3 versiones: original 19-jun-26 (USD 63.965,12), rev 1 wireless 24-jun-26 (USD 51.353,65) y rev 2 29-jun-26 (USD 63.185,90, la última).",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-07-01",
+ "referencia_cliente": "Doc 5745722125 - Compra Puentes de producción 3 S300 PAD 13",
+ "familia": "P puente/tramo de medición",
+ "descripcion_corta": "Compra de 3 puentes de producción (S300, PAD 13) para Pampa Energía. Solo hay cotizaciones de proveedores: instrumentos Rosemount, bridas, juntas RTJ y espárragos.",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": [
+   "No hay propuesta comercial ni planilla de costos de ITT en la carpeta."
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Induquip Ingeniería (representante de Emerson; OC a nombre de Emerson Argentina SA)",
+   "que": "Instrumentación Rosemount para skid de conexión, rev 2: 10 transmisores de presión 3051S (USD 2.848,53 c/u), 10 sensores RTD 214C (807,56 c/u), 10 vainas 114C (470,46 c/u), 10 transmisores de temperatura 3144P (2.192,04 c/u). Total USD 63.185,90 sin IVA.",
+   "precio": 63185.9,
+   "moneda": "USD",
+   "plazo_entrega": "12 semanas (estimado, sujeto a insumos y nacionalización). Entrega en depósito ITT en Capital/GBA. Validez 30 días. Pago 30 días ff. Ajuste por tipo de cambio si supera 5% o ARS 3.000.",
+   "fecha": "2026-06-29",
+   "fuente": "5.Proveedores 3ros/Cot Induquip Ultima revisión 26-504-rev 2-RSDGVM.pdf"
+  },
+  {
+   "proveedor": "Induquip Ingeniería (alternativa wireless, rev 1)",
+   "que": "Opción con transmisores inalámbricos: 5 presión 3051S WirelessHART (5.229,86 c/u), 5 sensores RTD (968,93), 5 transmisores de temperatura 648 wireless (3.516,01), 10 módulos de alimentación 701P (277,97). Total USD 51.353,65.",
+   "precio": 51353.65,
+   "moneda": "USD",
+   "plazo_entrega": "12 semanas",
+   "fecha": "2026-06-24",
+   "fuente": "5.Proveedores 3ros/Cot Induquip Inst Rosemount Wireless/26-504-REV 1-RSDGVM.pdf"
+  },
+  {
+   "proveedor": "Induquip Ingeniería (versión original)",
+   "que": "Instrumentación Rosemount cableada, 10 de presión (FM explosion-proof), 10 RTD y 10 de temperatura. Total USD 63.965,12.",
+   "precio": 63965.12,
+   "moneda": "USD",
+   "plazo_entrega": "12 semanas",
+   "fecha": "2026-06-19",
+   "fuente": "5.Proveedores 3ros/Cot Induquip Inst Rosemount/26-504-RSDGVM-.pdf"
+  },
+  {
+   "proveedor": "Francovigh S.A.",
+   "que": "5 bridas WN 10000 RJ 2 9/16\" x 3\" SCH 40 6BX, ASTM A694 F60, API 6A. USD 312 c/u.",
+   "precio": 1560.0,
+   "moneda": "USD",
+   "plazo_entrega": "75 días; validez 7 días; pago 30% anticipo, saldo 30 días",
+   "fecha": "2026-06-19",
+   "fuente": "5.Proveedores 3ros/Cot Francovigh O00093778.pdf"
+  },
+  {
+   "proveedor": "Juntas MS",
+   "que": "4 juntas RTJ BX153 (USD 6,60 c/u), 8 espárragos Ø2\" 3/4/600 316L (2,30 c/u), 14 espárragos Ø3\" 3/4/600 316L (3,98 c/u). Subtotal USD 100,52 sin IVA.",
+   "precio": 100.52,
+   "moneda": "USD",
+   "plazo_entrega": "Ítem 1 (RTJ): 90 días; espárragos en stock. Validez 15 días (hasta 03/07/26). Pago ECHEQ 15 días / 60 días FF. Ajuste si el dólar BNA varía más de 3%.",
+   "fecha": "2026-06-18",
+   "fuente": "5.Proveedores 3ros/COTIZACION MS Juntas _N§_048445.pdf"
+  },
+  {
+   "proveedor": "Bripetrol",
+   "que": "Cotización escaneada sin texto extraíble",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-06-18",
+   "fuente": "5.Proveedores 3ros/COTIZACION Bripetrol.pdf"
+  },
+  {
+   "proveedor": "E. Ledesma",
+   "que": "Cotización de puentes de producción PAMPA, escaneada sin texto extraíble",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-06-19",
+   "fuente": "5.Proveedores 3ros/Cot E Ledesma puentes prod PAMPA.pdf"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "La instrumentación Rosemount (Induquip) pesa mucho en el costo: USD 63.186 para 10 juegos de presión, RTD, vaina y transmisor de temperatura. Conviene fijar temprano la cantidad y los certificados (ATEX, IECEx, FM) porque movieron el precio entre revisiones.",
+  "La opción wireless (rev 1) costó unos USD 11.800 menos que la cableada. La cableada original y la rev 2 son casi iguales (63.965 contra 63.186).",
+  "Los proveedores usan monedas y ajustes distintos: Induquip y Juntas MS ajustan por tipo de cambio BNA (5% y 3%), Francovigh pide 30% de anticipo. El plazo más largo es 12 semanas para instrumentos y 75 a 90 días para bridas y juntas RTJ.",
+  "Las cotizaciones tienen validez corta (7 a 30 días): Francovigh 7, Juntas MS 15, Induquip 30. Hay que cerrar las compras rápido o pedir revalidación.",
+  "Material auxiliar de bajo costo pero con riesgo de plazo: juntas RTJ BX153 (90 días) y bridas WN 10000 RJ de Francovigh (75 días)."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/",
+  "fecha_ultima_modificacion": "cotizaciones_2026.json (Induquip rev 2, 2026-07-01)"
+ },
+ "problemas": [
+  "La carpeta solo tiene 5.Proveedores 3ros: faltan propuesta enviada, planillas de costo, factor y orden de compra. Monto, factor, plazo y resultado quedan en null o sin resultado.",
+  "Los PDFs de Bripetrol y E. Ledesma están escaneados y sin texto; el .docx de Ledesma está vacío, así que no se pudieron extraer sus precios.",
+  "En Juntas MS los importes aparecen truncados (26,40; 18,40; 55,72); se interpretaron como USD 26,400 / 18,400 / 55,720 con precio unitario de 3 decimales. Subtotal 100,52 USD parece bajo para bridas/juntas, así que la escala puede estar mal.",
+  "Los textos de Rosemount (doc-rosemount-*) son hojas de datos técnicas y no se leyeron en detalle. No se sabe si los instrumentos corresponden a las 3 unidades de puente."
+ ]
+}

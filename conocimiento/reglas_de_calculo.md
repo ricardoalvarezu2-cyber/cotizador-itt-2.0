@@ -74,6 +74,7 @@ margen sobre venta        = (precio − costo) / precio
 
 - Un factor de 1,35 da un margen de 25,9% sobre la venta, y uno de 1,33 da 24,8%.
 - En el seguimiento de cotizaciones 2024–2026 el factor (`Fx`) va de 1,2 a 1,8, con 1,4–1,5 lo más habitual.
+- En las cotizaciones de 2026 con planilla de costo, el factor nominal es casi siempre **1,35** sobre materiales y MO (MO a veces 1,4; instrumentos 1,35–1,5; válvulas Taval y caución 1,0). Las bonificaciones lo bajan a un efectivo de 1,30–1,33. **Las 4 cotizaciones ganadas de 2026 que tienen costo cerraron con factor efectivo de 1,30 a 1,35.** Factores más bajos (1,21 en piping para Sacde) aparecen en ofertas grandes y competitivas.
 - IVA: 21%. Se agrega aparte, porque los precios se cotizan sin IVA.
 - Moneda: USD. Entrega estándar: EXW en la planta de ITT (Av. 12 de Octubre 4004, Quilmes Oeste).
 

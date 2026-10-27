@@ -1,0 +1,70 @@
+{
+ "carpeta": "TAVAL/74- YPF G-65918-RV-FILTRO CANASTO CILP",
+ "cliente": "TAVAL",
+ "cliente_final": "YPF",
+ "numero_oferta": null,
+ "revisiones": "No hay",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-07-24",
+ "referencia_cliente": "YPF G-65918-RV",
+ "familia": "F",
+ "descripcion_corta": "Filtro horizontal canasto 20\" SCH 40: solo cotización de mano de obra de armado",
+ "items": [
+  {
+   "descripcion": "Filtro horizontal 20\" SCH 40 - armado y soldadura (MO)",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 3400.0,
+   "precio_total": 3400.0,
+   "moneda": "USD",
+   "datos_tecnicos": "20\" SCH 40; cuna metálica PNU 120; conexiones; pescante 2\"; costo de proveedor, cantidad no confirmada"
+  }
+ ],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": 3400.0,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": "Proveedor: USD + IVA, pago al dólar divisa BNA del día anterior a la factura, facturación por avance de obra",
+  "notas_y_exclusiones": [
+   "Ledesma no incluye PH, rodamiento para pescante, torneado ni pintura"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Edgardo Ledesma",
+   "que": "Armado y soldadura filtro horizontal 20\" SCH 40 (cuna, conexiones, pescante 2\", calificación soldadores, herramientas, consumibles, EPP) - presupuesto 200299",
+   "precio": 3400.0,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-07-23"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "La MO de armado del filtro 20\" se terceriza a USD 3.400 c/u + IVA, pagadera a 5 días, validez 15 días",
+  "Hay que cotizar aparte PH, rodamiento del pescante, torneado y pintura",
+  "El pago se ajusta al dólar divisa BNA: cubrirse en el precio al cliente"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedor": "5.Proveedores 3ros/Edgardo Ledesma Presupuesto ITT N° 200299  YPF FILTRO HORIZONTAL  20” SCH 40  23-07-2026.docx"
+ },
+ "problemas": [
+  "No hay propuesta de ITT, materiales, precio ni plazo",
+  "Cantidad no indicada (precio C/U)",
+  "Cliente final YPF inferido del nombre de carpeta"
+ ]
+}

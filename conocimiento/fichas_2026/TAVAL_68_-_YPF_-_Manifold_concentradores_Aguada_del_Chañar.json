@@ -1,0 +1,81 @@
+{
+ "carpeta": "TAVAL/68 - YPF - Manifold concentradores Aguada del Chañar",
+ "cliente": "YPF (vía TAVAL)",
+ "cliente_final": "YPF - Aguada del Chañar",
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-07-10",
+ "referencia_cliente": null,
+ "familia": "M",
+ "descripcion_corta": "Manifold concentrador para Aguada del Chañar (YPF): solo cotizaciones de proveedores escaneadas sin texto",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [
+  {
+   "proveedor": "Cintolo",
+   "que": "PDF escaneado sin texto",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-07-06"
+  },
+  {
+   "proveedor": "Industrias Delgado",
+   "que": "PDF escaneado sin texto",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-07-08"
+  },
+  {
+   "proveedor": "MS Juntas",
+   "que": "PDF escaneado sin texto",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-07-06"
+  },
+  {
+   "proveedor": "Edgardo Ledesma",
+   "que": "Cotización recibida por WhatsApp para la obra Manifold Concentrador Aguada Chañar (documento sin precios en texto)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-07-10"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Los cotizantes habituales para un manifold son un proveedor de cañería/materiales (Cintolo), fabricación (Delgado), juntas (MS Juntas) y armado/MO (Ledesma)",
+  "Las cotizaciones de proveedores están en la carpeta 4 de armado, sin planilla de costos ni oferta enviada"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "TAVAL/68 - YPF - Manifold concentradores Aguada del Chañar/4.Armado de la Oferta Comercial/Cot Cintolo 06072026.pdf; Cot Ind Delgado 08072026.pdf; Cot MS Juntas 06072026.pdf; 5.Proveedores 3ros/Cotización Edgardo Ledesma 10072026.docx"
+ },
+ "problemas": [
+  "Sin datos numéricos extraíbles: PDFs escaneados y docx con solo encabezado",
+  "Sin oferta ITT, monto, factor, plazo ni resultado",
+  "Nombres 'Cintolo' y 'Ind Delgado' tomados de los nombres de archivo"
+ ]
+}

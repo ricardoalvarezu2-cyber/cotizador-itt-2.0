@@ -1,0 +1,50 @@
+{
+ "carpeta": "TAVAL/092- Lic 69343 skid concentradores VCD26217",
+ "cliente": "TAVAL (según carpeta)",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": "No hay oferta de ITT en la carpeta",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-10-26",
+ "referencia_cliente": "Lic 69343 - skid concentradores - VCD26217 (Doc5930375128, Anexo A / Anexo 3 Subproveedores)",
+ "familia": "SK",
+ "descripcion_corta": "Licitación de skid concentradores; la carpeta solo contiene el Anexo 3 del cliente (listados de subproveedores sugeridos), sin oferta ni costos de ITT.",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "El cliente exige declarar subproveedores (Anexo 3A): si se terceriza parte del suministro hay que detallar taller/proveedor, el % del subproveedor no puede superar la provisión principal y el anexo forma parte de la adjudicación.",
+  "Hay vendor lists por rubro (Instrumentación, Electricidad, NOC): usar solo empresas aprobadas.",
+  "Rubro 2301 del vendor list NOC (accesorios A105 y A234 en acero al carbono) lista varios fabricantes aprobados (p. ej. Cintolo, Sidemet, Sumpetrol, Forja Atlas).",
+  "Instrumentación: caudalímetros etc. con marcas aprobadas (Rosemount, Endress+Hauser, Krohne, etc.); verificar marca antes de cotizar."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "subproveedores": "1.Documentación/Doc5930375128/ANEXO A/ANEXO A/03.ANEXO 3_Subproveedores/01.ANEXO 3A Listado de Subproveedores.docx",
+  "vendor_lists": "1.Documentación/Doc5930375128/ANEXO A/ANEXO A/03.ANEXO 3_Subproveedores/Proveedores NOC_230929.xlsx"
+ },
+ "problemas": [
+  "Solo hay documentación del cliente (anexo de subproveedores); sin alcance técnico, precios, oferta ni OC.",
+  "Cliente exacto y cliente final no surgen de los textos; 'TAVAL' viene del nombre de carpeta."
+ ]
+}

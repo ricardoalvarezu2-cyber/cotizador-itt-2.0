@@ -22,6 +22,11 @@ Todo lo que se necesita para cotizar, en un solo lugar y con una sola versión v
 | [`plazos.md`](plazos.md) | Plazos de referencia por familia, atrasos, plazos de materiales, duración de tareas de taller y regla para cotizar el plazo | El motor de plazo |
 | `comercial/plazos_proyectos.csv` | 57 ítems 2022–2026: fecha de OC, entrega comprometida y real, atraso | El motor de plazo |
 | `comercial/plazos_historicos_2019-2024.csv` | 191 proyectos con código ITT, plazo pedido en la OC y entregas reales | El motor de plazo |
+| `comercial/cotizaciones_2026.csv` | 49 cotizaciones de 2026 analizadas en detalle: oferta, monto, costo, factor, plazo, condiciones, resultado | Comparables y calibración |
+| `comercial/cotizaciones_2026_items.csv` | 84 ítems ofertados con precio y datos técnicos | Comparables |
+| `precios/proveedores_2026.csv` | 211 cotizaciones de 107 proveedores (2026) con precio y plazo | Materiales, terceros y plazo |
+| [`aprendizajes_2026.md`](aprendizajes_2026.md) | 180 observaciones por familia (riesgos, criterios, qué cotizar aparte) | Lista de control al cotizar |
+| `fichas_2026/` | Ficha completa de cada cotización analizada | Consulta |
 | `comercial/cotizaciones_2024-2026.csv` | 284 cotizaciones con monto, estado, probabilidad y factor de venta (sin datos de contacto) | Histórico y seguimiento |
 
 ## Reglas de uso

@@ -1,0 +1,115 @@
+{
+ "carpeta": "TECPETROL/12 - Skid manifold PAD S-900",
+ "cliente": "TECPETROL",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-05-28",
+ "referencia_cliente": "Manifold de PAD S-900 (Ledesma/Taval hacen referencia a vistas y MR de 'Manifold PAD S-600')",
+ "familia": "M",
+ "descripcion_corta": "Skid manifold de PAD S-900: solo cotizaciones de materiales de terceros (bridas WN RJ #900, juntas RTJ, espárragos); sin oferta de ITT.",
+ "items": [
+  {
+   "descripcion": "Bridas WN Sch80 RJ serie 900 A105 (10\" x2, 6\" x26, 4\" x4)",
+   "cantidad": 32,
+   "unidad": "un",
+   "precio_unitario": null,
+   "precio_total": 5832.26,
+   "moneda": "USD",
+   "datos_tecnicos": "ASTM A105 ANSI B16.5, Sch 80, RJ #900 (cotización de proveedor)"
+  },
+  {
+   "descripcion": "Juntas RTJ R45 octogonal 6\" #900",
+   "cantidad": 24,
+   "unidad": "un",
+   "precio_unitario": 12.87,
+   "precio_total": 308.88,
+   "moneda": "USD",
+   "datos_tecnicos": "RTJ R45 D octogonal, 6\" 3/6/900"
+  },
+  {
+   "descripcion": "Espárragos roscados A193 B7 1 1/8\" x 7\" con 2 tuercas A194 2H, zincado amarillo",
+   "cantidad": 160,
+   "unidad": "un",
+   "precio_unitario": 7.82,
+   "precio_total": 1251.2,
+   "moneda": "USD",
+   "datos_tecnicos": "ASTM A193 B7 / A194 2H, zincado ASTM F1941"
+  }
+ ],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [
+  {
+   "proveedor": "Grupo Provemet",
+   "que": "Bridas WN RJ #900 Sch80: 10\"x2 (USD 482 c/u), 6\"x26 (174,93), 4\"x4 (80,02). Pago contado, validez 15 días, ajuste por TC +/-2%",
+   "precio": 5832.26,
+   "moneda": "USD",
+   "plazo_entrega": "stock excepto 26 bridas 6\" disponibles 20/07/2026",
+   "fecha": "2026-05-28"
+  },
+  {
+   "proveedor": "MS Juntas",
+   "que": "24 juntas RTJ R45 6\" #900, USD 12,87 c/u. 60 días FF / echeq 15 d, validez 15 días",
+   "precio": 308.88,
+   "moneda": "USD",
+   "plazo_entrega": "1 día",
+   "fecha": "2026-05-27"
+  },
+  {
+   "proveedor": "Ind Delgado",
+   "que": "160 espárragos A193 B7 1 1/8\"x7\" con 2 tuercas, USD 7,82 c/u. Echeq 15 d FF, validez 20 días",
+   "precio": 1251.2,
+   "moneda": "USD",
+   "plazo_entrega": "10 días desde OC",
+   "fecha": "2026-05-28"
+  },
+  {
+   "proveedor": "Taval",
+   "que": "Cotización de manifold de PAD (BGT) por mail; cuerpo del mensaje sin texto, solo adjuntos (vistas y MR de manifold PAD S-600)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-05-27"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Material de terceros cotizado aparte ronda USD 7,4 mil (bridas 5,8 + espárragos 1,25 + juntas 0,31) sin IVA; el equipo principal (cañería, válvulas, estructura) no figura en la carpeta.",
+  "Bridas 6\" #900 RJ x26 no están en stock (disponibles 20/07/2026): riesgo de plazo.",
+  "Proveedores facturan por separado accesorios (Complemet) y caños (Provemet): emitir OC separadas.",
+  "Cotizaciones en USD con cláusula de reajuste por TC BNA (+/-2% o 3%)."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "bridas": "5.Proveedores 3ros/Grupo_Provemet_Cotizacion_0000271043_INNOVACION_TECNICA_TOTAL_SA.pdf",
+  "juntas": "5.Proveedores 3ros/COTIZACION MS Juntas_N§_048156.pdf",
+  "esparragos": "5.Proveedores 3ros/Ind Delgado COT_0202600000696.pdf",
+  "taval": "5.Proveedores 3ros/Taval cotización bgt manifold de PAD.msg"
+ },
+ "problemas": [
+  "No hay oferta ITT, costos ni OC: monto, factor, plazo y resultado desconocidos.",
+  "Taval: sin precio legible (solo adjuntos en el mail).",
+  "Referencias a PAD S-600 en adjuntos Taval vs S-900 en la carpeta.",
+  "Items del cliente no disponibles; cantidades de bridas/juntas/espárragos son las de los proveedores."
+ ]
+}

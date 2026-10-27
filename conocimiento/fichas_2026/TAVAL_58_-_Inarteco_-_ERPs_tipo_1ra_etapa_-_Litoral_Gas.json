@@ -1,0 +1,82 @@
+{
+ "carpeta": "TAVAL/58 - Inarteco - ERPs tipo 1ra etapa - Litoral Gas",
+ "cliente": "TAVAL (según carpeta) / Inarteco",
+ "cliente_final": "Litoral Gas",
+ "numero_oferta": null,
+ "revisiones": "No hay oferta de ITT en la carpeta",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-05-07",
+ "referencia_cliente": "ERPs tipo 1ra etapa (ERP Tipo 1, 2 y 3 planta de regulación); plano PIPING ERP TIPO A1, A2, A3",
+ "familia": "S",
+ "descripcion_corta": "Estaciones reguladoras de presión (ERP) típicas; solo se cotizó mano de obra de armado y soldadura con varios talleres.",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [
+  {
+   "proveedor": "Taller de mano de obra, presupuesto JQ-020-2026 (nombre de empresa no figura)",
+   "que": "Mano de obra para dos equipos (ERP tipo A1, A2, A3): USD 12,00 por pulgada soldada o USD 4,50 por kg de skid; incluye consumibles, herramental y calificación ASME IX; excluye arenado, pintura, END, prueba hidráulica y materiales. Anticipo 20%, validez 30 días, entrega en taller del proveedor",
+   "precio": 12.0,
+   "moneda": "USD",
+   "plazo_entrega": "a determinar según llegada de materia prima",
+   "fecha": "2026-05-06"
+  },
+  {
+   "proveedor": "E. Ledesma (presupuestos 200260/200261/200262, ERP Tipo 1, 2 y 3)",
+   "que": "Mano de obra ERP típicas; el detalle está solo en adjuntos del mail, no incluidos",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-05-03"
+  },
+  {
+   "proveedor": "Cormet",
+   "que": "Mano de obra ERP Inarteco Litoral Gas; PDF con texto ilegible",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-05-06"
+  },
+  {
+   "proveedor": "Solmet",
+   "que": "Mano de obra ERP Inarteco Litoral Gas; PDF con texto ilegible",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-05-06"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Para ERP típicas se pidió mano de obra a cuatro talleres; se compara por pulgada soldada (USD 12) o por kg de skid (USD 4,50).",
+  "Los talleres excluyen arenado, pintura, END, prueba hidráulica y materiales: presupuestarlos aparte.",
+  "Precios en USD convertidos al dólar divisa del día anterior a la OC o facturación."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/Cotizacion JQ-020-2026.pdf; E Ledesma - Cotización Mano de obra para ERP Típicas.msg; PDFs Cormet y Solmet"
+ },
+ "problemas": [
+  "Sin oferta, costos ni OC.",
+  "PDFs de Cormet y Solmet con texto corrupto: precios no recuperables.",
+  "Adjuntos docx de Ledesma no están en la carpeta."
+ ]
+}

@@ -1,0 +1,103 @@
+{
+ "carpeta": "TAVAL/72- Lic 64675 - SKID CONCENTRADOR - UTE NARAMBUE",
+ "cliente": "TAVAL S.A.",
+ "cliente_final": "UTE Narambue (proyecto YPF Red de Gathering STD 2.0, VCD211223)",
+ "numero_oferta": null,
+ "revisiones": "No hay propuesta ITT en la carpeta; solo cotizaciones de proveedores",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-07-08",
+ "referencia_cliente": "Lic 64675 - Skid Concentrador SCC-010",
+ "familia": "SK",
+ "descripcion_corta": "Skid manifold concentrador SCC-010 (entrada 3x8\" + salida 1x12\", clase C22, #300), 1 unidad, con bastidor 2770x1330x1100 mm (~570 kg)",
+ "items": [
+  {
+   "descripcion": "Manifold concentrador SCC-010, modulo entrada 3x8\" + salida 1x12\"",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": null,
+   "precio_total": null,
+   "moneda": null,
+   "datos_tecnicos": "Clase C22, ASME B31.4, presion diseño 44,7 kg/cm2, 200 C; bridas 300# RF, A106 Gr.B SCH XS (12\") y SCH 60 (8\"); 3 valvulas retencion 8\" y 3 esfericas 8\" 300#; bastidor UPN 240/200 ~569 kg; ~20 m2 pintura; 12\" x7, 8\" x21 costuras"
+  }
+ ],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": [
+   "Galvanotecnia del Oeste solo provee MO, consumibles de soldadura y arena; los materiales los provee el cliente (TAVAL)"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Complemet / Provemet",
+   "que": "Bridas WN y ciegas 300# (12\", 8\", 1-1/2\"), 2+18 WN y 2+6 ciegas, 3 SW",
+   "precio": 3562.7,
+   "moneda": "USD",
+   "plazo_entrega": "stock y 10/08/2026; pago contado; validez 15 dias",
+   "fecha": "2026-07-06"
+  },
+  {
+   "proveedor": "MS Juntas",
+   "que": "Esparragos 316LFG 12\" x2 y 8\" x15 y kit aislacion doble 8\" x3 (cot. 48.729)",
+   "precio": 257.86,
+   "moneda": "USD",
+   "plazo_entrega": "10 dias",
+   "fecha": "2026-07-06"
+  },
+  {
+   "proveedor": "Taval (planilla de valvulas)",
+   "que": "6 posiciones de valvulas: retencion 8\" x3, esferica 8\" x3, esfericas y globo chicas",
+   "precio": 10051.85,
+   "moneda": "USD",
+   "plazo_entrega": "stock",
+   "fecha": "2026-07-06"
+  },
+  {
+   "proveedor": "Galvanotecnia del Oeste",
+   "que": "Fabricacion del skid (solo MO, consumibles y arenado), rev. 0 propuesta tecnica; sin precio en el texto",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": "35 dias habiles desde pedido y recepcion de materiales; FCA Lujan de Cuyo; pago 30/50/20",
+   "fecha": "2026-07-07"
+  },
+  {
+   "proveedor": "Edgardo Ledesma",
+   "que": "Cotizacion por WhatsApp (solo titulo, sin contenido)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-07-06"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Para skids concentradores de este tipo el material (bridas, valvulas, juntas) suma aprox USD 14k + caños/accesorios no cotizados en la carpeta",
+  "Galvanotecnia (Mendoza) ofrece fabricacion con materiales a cargo del cliente, entrega FCA Lujan de Cuyo: considerar flete a obra",
+  "Las valvulas Taval se calculan con lista y descuentos en cascada (35% / 15% / 23%)"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/COTIZACION_N§_048729.pdf; 5.Proveedores 3ros/Cot Complemet para Narambue 07072026.pdf; 5.Proveedores 3ros/Valvulas Taval.xlsx; 5.Proveedores 3ros/Galvanotecnia del Oeste ... Rev0 (1).pdf",
+  "datos_tecnicos": "5.Proveedores 3ros/Galvanotecnia ... Rev0 (1).pdf; 5.Proveedores 3ros/Valvulas Taval.xlsx (hoja Listado de Materiales)"
+ },
+ "problemas": [
+  "No hay propuesta ITT ni planilla de costos: monto, factor y plazo ofrecidos desconocidos",
+  "Cotizacion Galvanotecnia sin precio en el texto",
+  "Propuesta tecnica de Galvanotecnia esta dirigida a TAVAL, por lo que ITT podria actuar como intermediario/cotizador de Taval"
+ ]
+}

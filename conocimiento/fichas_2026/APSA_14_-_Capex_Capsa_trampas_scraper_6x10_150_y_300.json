@@ -1,0 +1,72 @@
+{
+ "carpeta": "APSA/14 - Capex Capsa , trampas scraper 6x10 #150 y #300",
+ "cliente": "APSA",
+ "cliente_final": "Capex Capsa (PTO 704, según mail de Futura)",
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-05-26",
+ "referencia_cliente": "Trampas scraper 6\"x10\" ANSI 150 y 300",
+ "familia": "TS",
+ "descripcion_corta": "Trampas scraper (lanzadora y receptora) 6\"x10\" #150 y #300. Solo mails de proveedores con adjuntos sin contenido.",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [
+  {
+   "proveedor": "Futura",
+   "que": "Tapas de cierre rápido (Ring Lock) para trampas 6\"x10\" #300 y #150, cotización S00704",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-05-20"
+  },
+  {
+   "proveedor": "Cintolo",
+   "que": "Tees barred para trampas scraper (plano 2521 rev5)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-05-26"
+  },
+  {
+   "proveedor": "Ledesma (mano de obra)",
+   "que": "Presupuestos ITT 200268 a 200271: trampa lanzadora y receptora #300, lanzadora y receptora #150",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-05-25"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Cada trampa (lanzadora/receptora, #150/#300) se cotiza por separado: cuatro presupuestos de mano de obra a Ledesma.",
+  "Componentes de terceros: tapas de cierre rápido (Futura) y tees barred (Cintolo)."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/*.msg"
+ },
+ "problemas": [
+  "Solo encabezados de mails; los PDF/DOCX adjuntos no están extraídos, sin precios ni plazos.",
+  "Sin propuesta, costos, factor ni OC."
+ ]
+}

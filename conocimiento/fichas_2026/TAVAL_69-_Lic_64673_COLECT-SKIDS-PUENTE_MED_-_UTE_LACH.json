@@ -1,0 +1,204 @@
+{
+ "carpeta": "TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH",
+ "cliente": "Taval (UTE LACH)",
+ "cliente_final": "YPF (UTE LACH)",
+ "numero_oferta": null,
+ "revisiones": "No hay propuesta enviada en la carpeta; solo cotizaciones de proveedores (Valvtronic SDV011/012 emitida 27/07, posterior al resto).",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-07-27",
+ "referencia_cliente": "Licitación 64673 - Colector de campo, skids y puente de medición - UTE LACH (YPF)",
+ "familia": "SK",
+ "descripcion_corta": "Colector de campo HC+agua 300#, skids (regulación y medición SCC 113 A/B, SDV, PSV) y puente de medición para YPF UTE LACH; carpeta solo con cotizaciones de proveedores.",
+ "items": [
+  {
+   "descripcion": "Colector de campo HC + agua 300# 4 pzas (cant. 1)",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": null,
+   "precio_total": null,
+   "moneda": null,
+   "datos_tecnicos": "Clase 300; accesorios 12\" SCH80 y 6\"x4\" XS A234 WPB (Cintolo)"
+  },
+  {
+   "descripcion": "Skid de regulación y medición SCC 113 A y B",
+   "cantidad": 2,
+   "unidad": "un",
+   "precio_unitario": null,
+   "precio_total": null,
+   "moneda": null,
+   "datos_tecnicos": "Medidor Coriolis 4\" #600, flow computer, PV-1801B NPS4, PV-012 NPS3, PSV-011A/B 1.1/2x3 #300"
+  },
+  {
+   "descripcion": "Skid SDV N°2 (válvulas de corte SDV)",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": null,
+   "precio_total": null,
+   "moneda": null,
+   "datos_tecnicos": "SDV 6\" #600 (SDV-1803), 16\" #300 (SDV-011), 3\" #300 (SDV-012) esféricas trunnion con actuador neumático simple efecto"
+  }
+ ],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": "Proveedores cotizan en USD (ABB, Induquip, Doma, Weisz, Valvtronic, Cintolo, Ledesma, CV Control instrumentos) a TC BNA vendedor día previo al pago; CV Control Coriolis en EUR.",
+  "notas_y_exclusiones": [
+   "Ledesma excluye montaje, PH, END y pintura; validez 15 días",
+   "Cintolo: IVA y percepción IIBB aparte, pago cheque 30 días FF"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "ABB Argentina",
+   "que": "Instrumentación skid medición (cotiz. OPP-26-8794766 / QT-26-02478305): Coriolis FCB450 DN150 59.539,72; Coriolis FCB450 DN100 35.558,31; computador de flujo XFC6200EX 7.345,97; 3 transmisores PGS300 a 864,20 c/u; 3 manifolds M26 a 136,30; transmisor dif. PDS300 1.154,10; 1 manifold M26 348,80. Suma de ítems (incluye ambos Coriolis) = 106.948,40",
+   "precio": 106948.4,
+   "moneda": "USD",
+   "plazo_entrega": "70 a 122 días corridos según ítem (Coriolis 122)",
+   "fecha": "2026-07-16",
+   "archivo": "5.Proveedores 3ros/Cot ABB OPP-26-8794766-1.pdf"
+  },
+  {
+   "proveedor": "CV Control (Yokogawa)",
+   "que": "Caudalímetro Coriolis FIT-1800A 4\" #600 Yokogawa RCUG1FS",
+   "precio": 35242.0,
+   "moneda": "EUR",
+   "plazo_entrega": "130-140 días desde OC",
+   "fecha": "2026-07-16",
+   "archivo": "5.Proveedores 3ros/Cotización - S51913 CV Control Yokogawa coriolis.pdf"
+  },
+  {
+   "proveedor": "CV Control (Yokogawa)",
+   "que": "3 transmisores presión EJA530E (2.802) + 3 válvulas bloqueo/purga (450) + 1 transmisor dif. EJA110E (1.482) + manifold 5 vías (150)",
+   "precio": 4884.0,
+   "moneda": "USD",
+   "plazo_entrega": "90-100 días ítems 1-2; saldo 140 días desde OC",
+   "fecha": "2026-07-16",
+   "archivo": "5.Proveedores 3ros/Cotización - S51913 CV Control Yokogawa.pdf"
+  },
+  {
+   "proveedor": "Induquip (Emerson/Fisher)",
+   "que": "Válvulas de control Fisher PV-1801B NPS4 ET (19.206,20) y PV-012 NPS3 EZ (14.912,30) con DVC6200",
+   "precio": 34118.5,
+   "moneda": "USD",
+   "plazo_entrega": "20 semanas",
+   "fecha": "2026-07-17",
+   "archivo": "5.Proveedores 3ros/Induquip 26-509-RSDGVM-VLS   FISHER.pdf"
+  },
+  {
+   "proveedor": "Induquip (Emerson)",
+   "que": "Instrumentos Rosemount: PIT-011 con sello remoto, TE-011 RTD, TIT-011 transmisor temp., TW-011 termovaina (ref. 'YPF-Entrada a ST-001')",
+   "precio": 5562.12,
+   "moneda": "USD",
+   "plazo_entrega": "12 semanas",
+   "fecha": "2026-07-17",
+   "archivo": "5.Proveedores 3ros/Oferta Induquip 26-333-RSDGVM-USM.pdf"
+  },
+  {
+   "proveedor": "Estudio Técnico Doma",
+   "que": "Válvula de control DOMA 667 EZ 3\" 300# PV-012 (8.206) + 2 PSV DOMA SDO 124 BS 151 PSV-011A/B (1.380 c/u)",
+   "precio": 10966.0,
+   "moneda": "USD",
+   "plazo_entrega": "PSV 60 días desde OC",
+   "fecha": "2026-07-16",
+   "archivo": "5.Proveedores 3ros/Oferta Doma P-06823.pdf"
+  },
+  {
+   "proveedor": "Weisz Instrumentos",
+   "que": "Manómetros, termómetros, termovainas, sellos a diafragma, bloqueo/purga (PI-004/005/012, TI-004/005/011, TW-011)",
+   "precio": 10604.04,
+   "moneda": "USD",
+   "plazo_entrega": "65/80 días fecha aceptación OC",
+   "fecha": "2026-07-16",
+   "archivo": "5.Proveedores 3ros/Oferta Weisz de ventas_30.0.10.027.203.pdf"
+  },
+  {
+   "proveedor": "Valvtronic",
+   "que": "SDV-1803: válvula esférica trunnion FlowTek 6\" #600 + actuador Bray S98 (2 conjuntos a 9.422,47 según total)",
+   "precio": 18844.94,
+   "moneda": "USD",
+   "plazo_entrega": "3-5 semanas",
+   "fecha": "2026-07-16",
+   "archivo": "5.Proveedores 3ros/Valvtronic SDV 1803        QQ-3285381-00 (2).pdf"
+  },
+  {
+   "proveedor": "Valvtronic",
+   "que": "SDV-011: esférica 16\" #300 + actuador (50.707,15) y SDV-012: 3\" #300 + actuador (5.265,16)",
+   "precio": 55972.31,
+   "moneda": "USD",
+   "plazo_entrega": "18-20 semanas",
+   "fecha": "2026-07-27",
+   "archivo": "5.Proveedores 3ros/Valvtronic SDV011 y SDV012 QQ-3288820-00.pdf"
+  },
+  {
+   "proveedor": "Cintolo Hnos.",
+   "que": "Accesorios soldar A234 WPB: 4 red. con. 6x4 XS, 1 red. con. 12x6 SCH80, 2 tee red. 6x4, 2 tee 6\", 1 tee 12\" SCH80",
+   "precio": 4267.65,
+   "moneda": "USD",
+   "plazo_entrega": "En stock salvo venta",
+   "fecha": "2026-07-16",
+   "archivo": "5.Proveedores 3ros/Cot Cíntolo 33764.pdf"
+  },
+  {
+   "proveedor": "Ledesma",
+   "que": "Mano de obra prefabricado spool y soldadura 2 skids SCC 113 A y B, sin montaje/PH/END/pintura (pto 200295)",
+   "precio": 17200,
+   "moneda": "USD",
+   "plazo_entrega": "a definir (no consta)",
+   "fecha": "2026-07-19",
+   "archivo": "5.Proveedores 3ros/E Ledesma Presupuesto ITT N° 200295 YPF LACH Regulación y Medición 19-07-2026.docx"
+  },
+  {
+   "proveedor": "Ledesma",
+   "que": "MO colector de campo HC + agua 300# 4 pzas (pto 200296)",
+   "precio": 31600,
+   "moneda": "USD",
+   "plazo_entrega": "a definir (no consta)",
+   "fecha": "2026-07-19",
+   "archivo": "5.Proveedores 3ros/E Ledesma Presupuesto ITT N° 200296 YPF UTE LACH COLECTOR DE CAMPO HC + AGUA 300 4 PZ (CANT. 1)  19-07-2026.docx"
+  },
+  {
+   "proveedor": "Ledesma",
+   "que": "MO skid SDV N°2: montaje plataforma/escalera, prefabricado spool y soldadura (pto 200297)",
+   "precio": 12000,
+   "moneda": "USD",
+   "plazo_entrega": "a definir (no consta)",
+   "fecha": "2026-07-19",
+   "archivo": "5.Proveedores 3ros/E Ledesma Presupuesto ITT N° 200297 SKID SDV N° 2 (cant. 1) 19-07-2026.docx"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Carpeta con cobertura parcial: solo hay costos de terceros (suma aprox. USD 190.000 en USD más EUR 35.242), sin propuesta enviada ni planilla de costo ni factor.",
+  "Instrumentación y válvulas dominan el costo: Coriolis (ABB 4\" DN100 USD 35.558; Yokogawa vía CV Control EUR 35.242; ABB DN150 USD 59.540), válvulas control Fisher USD 34.119 vs Doma USD 8.206 la PV-012 (Doma muy más barata) y SDV 16\" #300 USD 50.707.",
+  "Plazos largos de importación: Coriolis 122-140 días, válvulas Fisher 20 semanas, SDV 16\" 18-20 semanas; condicionan el plazo ofertable.",
+  "Mano de obra de fabricación tercerizada a Ledesma (USD 17.200 skids SCC113, 31.600 colector, 12.000 skid SDV) sin montaje, PH, END ni pintura: cotizar esos aparte.",
+  "Hay ofertas alternativas/duplicadas por tag (PV-012 en Doma e Induquip; Coriolis de ABB y Yokogawa) que hay que descartar para no duplicar costo."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/* (ver campo archivo en cada proveedor)",
+  "fecha_ultima_modificacion": "cotizaciones_2026.json"
+ },
+ "problemas": [
+  "No hay propuesta comercial enviada, costos internos ni OC: monto, factor, plazo y resultado desconocidos",
+  "Cot Cíntolo Tees Sk Colector Campo, Cot Francovigh BL 16 y Cot Taval, Ricardo son PDFs escaneados sin texto (precios no leídos)",
+  "Cotización ABB incluye dos Coriolis (DN150 y DN100) y no se sabe cuál se usó; la suma 106.948,40 incluye ambos",
+  "Valvtronic SDV 1803 total 18.844,94 implica 2 unidades a 9.422,47 pero el detalle muestra cant. 1",
+  "Induquip PIT-011 etc. referenciada a 'Entrada a ST-001', posible otro proyecto",
+  "Msg de Doma solo con asuntos; cotización adicional P-06834 no está en la carpeta"
+ ]
+}

@@ -1,0 +1,226 @@
+{
+ "carpeta": "TECPETROL/11- SKID GAS COMBUSTIBLE PAD #900 CABLEADO. PR-54033",
+ "cliente": "TECPETROL S.A.",
+ "cliente_final": null,
+ "numero_oferta": "PRES 141 rev. A",
+ "revisiones": "Oferta economica Rev. A (emision original, 25/03/2026). No hay revisiones posteriores del documento; luego de la consulta tecnica del cliente (06/04/2026) se calcularon adicionales (transporte y repuestos) en una planilla del 15/05/2026, sin evidencia de reemision formal en la carpeta.",
+ "fecha_oferta": "2026-03-25",
+ "fecha_ultima_modificacion": "2026-05-15",
+ "referencia_cliente": "Evento Coupa nro. 12054 / PR-54033 - Skid gas combustible PAD #900 cableado (proyecto PE-91285-ACO-FP-PTIP-I-LC-003); respuesta cargada en Coupa el 27/03/2026",
+ "familia": "SK skid",
+ "descripcion_corta": "2 skids de gas combustible cableados para PAD #900 (incluye trazado electrico y FAT), acuerdo marco Tecpetrol",
+ "items": [
+  {
+   "descripcion": "Skid gas combustible (cableado, con trazado electrico y FAT)",
+   "cantidad": 2,
+   "unidad": "pieza",
+   "precio_unitario": 218900.52,
+   "precio_total": 437801.04,
+   "moneda": "USD",
+   "datos_tecnicos": "Sin datos tecnicos en los textos (oferta tecnica ITT 141 referida pero no incluida en la carpeta). Lleva separador/scrubber con demister y filtro coalescente, reguladoras de gas, ESDV e instrumentos segun cotizaciones de proveedores."
+  },
+  {
+   "descripcion": "Transporte de equipos a sitio (adicional pedido por el cliente)",
+   "cantidad": 2,
+   "unidad": "u",
+   "precio_unitario": 1225,
+   "precio_total": 2450,
+   "moneda": "USD",
+   "datos_tecnicos": "A costo, sin factor de rentabilidad (planilla adicionales). No figura en la oferta enviada."
+  },
+  {
+   "descripcion": "Repuestos para puesta en marcha y 2 anios de operacion (adicional)",
+   "cantidad": 2,
+   "unidad": "u",
+   "precio_unitario": 3957,
+   "precio_total": 7914,
+   "moneda": "USD",
+   "datos_tecnicos": "1 juego de partes blandas por TAG de valvula reguladora; 5% de juntas y esparragos con tuercas (min. 1 u c/u); 2 elementos filtrantes (1 puesta en marcha + 1 para 2 anios). Costo 2.638 + imp., venta 3.957 + imp. (por unidad de skid segun planilla)."
+  }
+ ],
+ "monto_total_ofertado": 437801.04,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "180 dias aprobada la ingenieria",
+ "plazo_dias": 180,
+ "condiciones": {
+  "pago": "Hitos: 30% anticipo contra OC aprobada (caucion 100% del anticipo + fiel cumplimiento 10%); 20% avance de compra contra emision de OC de materiales principales (instrumentos, valvulas); 20% contra aprobacion de prueba hidraulica; 30% contra liberacion para despacho (devolucion poliza fiel cumplimiento, entrega poliza fondo de reparo 10% por 12 meses).",
+  "validez": "30 dias corridos",
+  "entrega": "En planta ITT, Av. 12 de Octubre 4004, Quilmes Oeste, Bs. As. (transporte a sitio excluido en la oferta original)",
+  "moneda_y_ajuste": "USD, facturado en ARS al TC BNA fecha de factura; cancelacion al TC BNA vendedor del dia anterior al pago; NC/ND si la variacion supera 3%.",
+  "notas_y_exclusiones": [
+   "Sin multas por mora en entregas si hay material importado (condicion BCRA), incluso importado via terceros",
+   "Poliza de seguro se cotiza con la OC",
+   "ITT no responde por atrasos por Licencias No Automaticas",
+   "ITT sugiere que el cliente provea material importado (chapas, instrumentos, valvulas)",
+   "Transporte a sitio y repuestos no estaban incluidos en la oferta original; el cliente los consulto el 06/04/2026",
+   "Respuesta interna: trazado electrico y FAT estan contemplados en la cotizacion"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Gora S.A.",
+   "que": "Separador Flexichevron AISI 316 diam. 483 mm esp. 203 mm (1 u, 1.271); demister AISI 304 diam. 489 mm esp. 150 mm (1 u, 538); elemento filtrante coalescente 0,3 micrones 114x610 mm (3 u, 329 c/u, 987 total). Total 2.796. Pago contado contra entrega; validez al 24/03/2026",
+   "precio": 2796,
+   "moneda": "USD",
+   "plazo_entrega": "30 (dias, segun columna de plazo de la cotizacion)",
+   "fecha": "2026-03-09"
+  },
+  {
+   "proveedor": "Cintolo Hnos. Metalurgica",
+   "que": "Casquetes ASME B16.9 A234-WPB: 2x 20\" std (146,65 c/u), 1x 10\" sch80 (200,64), 3x 6\" extra pesado (39,25), 4x 6\" std (25,76). Cotizacion 32.384",
+   "precio": 714.73,
+   "moneda": "USD",
+   "plazo_entrega": "En stock",
+   "fecha": "2026-02-11"
+  },
+  {
+   "proveedor": "Cintolo Hnos. Metalurgica",
+   "que": "Casquete 12\" (consultas por mail, sin precio legible en el texto)",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-02-11"
+  },
+  {
+   "proveedor": "Cintolo Hnos. Metalurgica",
+   "que": "Casquete SE 12\" sch 40 (mail, sin precio legible)",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-03-03"
+  },
+  {
+   "proveedor": "Provemet (Complemet)",
+   "que": "Accesorios para skid PE 91285 (mail sin cuerpo legible)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-03-16"
+  },
+  {
+   "proveedor": "Esferomatic",
+   "que": "ESDV (valvulas de cierre de emergencia) (mail sin cuerpo legible)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-03-17"
+  },
+  {
+   "proveedor": "ABB",
+   "que": "Instrumentos (mail sin cuerpo legible)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-03-17"
+  },
+  {
+   "proveedor": "Dallas Deca",
+   "que": "Instrumentos, cotizacion 30136 ITT en adjunto PDF no presente en el corpus",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-03-13"
+  },
+  {
+   "proveedor": "EQA",
+   "que": "Instrumentos (mail sin cuerpo legible)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-03-18"
+  },
+  {
+   "proveedor": "Farinola",
+   "que": "Instrumentos (mail sin cuerpo legible)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-03-13"
+  },
+  {
+   "proveedor": "Riva Hnos",
+   "que": "Instrumentos (mail sin cuerpo legible)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-03-12"
+  },
+  {
+   "proveedor": "Schneider",
+   "que": "Instrumentos (mail sin cuerpo legible)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-03-19"
+  },
+  {
+   "proveedor": "Tecmasa",
+   "que": "Switch Murphy (instrumento) (mail sin cuerpo legible)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-03-12"
+  },
+  {
+   "proveedor": "Weisz",
+   "que": "Instrumentos (mail sin cuerpo legible)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-03-12"
+  },
+  {
+   "proveedor": "Wika",
+   "que": "Instrumentos (mail sin cuerpo legible)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-03-12"
+  },
+  {
+   "proveedor": "Emi",
+   "que": "Cotizacion por WhatsApp (docx vacio, probablemente imagen)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-03-19"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "El cliente pidio aclarar transporte a sitio, repuestos de puesta en marcha/2 anios, trazado electrico y FAT; conviene incluirlos o excluirlos explicitamente en la oferta original de skids similares de Tecpetrol.",
+  "Transporte se agrega a costo (sin factor, USD 1.225 por skid); repuestos con factor aprox. 1,5 (costo 2.638 -> venta 3.957 por skid) y quedan alrededor de 2,4% sobre el precio base.",
+  "Oferta en USD con pago por hitos 30/20/20/30 y garantias (caucion del anticipo, fiel cumplimiento 10%, fondo de reparo 10% por 12 meses): considerar el costo financiero y de polizas.",
+  "Gran parte del costo es de terceros (instrumentos de ~10 proveedores, ESDV, internos de separador/filtros): cotizar instrumentos con anticipacion; los plazos de importados condicionan los 180 dias y ITT excluye multas por mora en material importado.",
+  "Precio por skid de referencia USD 218.900 (2 unidades) con 180 dias desde ingenieria aprobada."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "numero_oferta": "4.Armado de la Oferta Comercial/OFERTA ECONOMICA  ITT 141 TECPETROL.pdf",
+  "fecha_oferta": "4.Armado de la Oferta Comercial/OFERTA ECONOMICA  ITT 141 TECPETROL.pdf",
+  "items_precio": "4.Armado de la Oferta Comercial/OFERTA ECONOMICA  ITT 141 TECPETROL.pdf; 4.Armado de la Oferta Comercial/Comprobante de carga SKID GAS COMBUSTIBLE PAD #900 CABLEADO. PR-54033 - Evento nro. 12054.pdf",
+  "adicionales": "4.Armado de la Oferta Comercial/TECPETROL- ADICIONALES TRANSPORTE Y REPUESTOS.xlsx; 4.Armado de la Oferta Comercial/RE Consulta Técnica  SKID GAS COMBUSTIBLE PAD #900 CABLEADO. PR-54033 - Innovacion Tecnica Total SA.msg",
+  "condiciones": "4.Armado de la Oferta Comercial/OFERTA ECONOMICA  ITT 141 TECPETROL.pdf",
+  "plazo": "4.Armado de la Oferta Comercial/OFERTA ECONOMICA  ITT 141 TECPETROL.pdf",
+  "proveedores": "5.Proveedores 3ros/Gora    OF-X-0001-00027396 ITTSA-TECPETROL-S-001  F-001 -.pdf; 5.Proveedores 3ros/Cintolo casquete 20.pdf",
+  "resultado": "8.Orden de Compra/Tecpetrol 4650000923 CMA.pdf (corresponde a otro proyecto: skid manifold S-600)"
+ },
+ "problemas": [
+  "No hay planilla de costos/factor en la carpeta: costo_total, factor_venta y desglose son null.",
+  "No existe carpeta 6/7 de propuesta enviada; la oferta se tomo de 4.Armado de la Oferta Comercial (pdf con membrete en blanco, parece plantilla/borrador) y del comprobante Coupa.",
+  "Discrepancia de precio unitario: pdf y Coupa 218.900,52 (total 437.801,04) vs docx/xlsx 218.900,02 (437.800,04); se uso 218.900,52.",
+  "La carpeta 8.Orden de Compra contiene OC marco 4650000923, pedidos 4710150145/4710150893 y notas de venta 478/484 de SKID MANIFOLD PAD S-600 (otro proyecto, USD 1.771.518,84 en marco); no se encontro OC del skid de gas combustible, por eso resultado = sin resultado (podria ser archivo mal ubicado).",
+  "Cotizaciones de proveedores en .msg sin cuerpo ni precios legibles (solo cabecera); solo Gora y Cintolo (casquetes 20) tienen precios; Cintolo y Gora son parciales del skid.",
+  "Plazo de Gora en la cotizacion es ambiguo (columna con valor 30).",
+  "El precio total con adicionales (448.164,04) no esta confirmado como enviado; el monto ofertado se informa sin adicionales."
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "carpeta": "APSA/13 - Cot CAPSA OQ33581, Colectores",
+ "cliente": "APSA",
+ "cliente_final": "CAPSA (OQ 33581)",
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-05-21",
+ "referencia_cliente": "CAPSA OQ33581 - colectores de inyección de acero inoxidable",
+ "familia": "CO",
+ "descripcion_corta": "Colectores de inyección de acero inoxidable con válvulas duo check y caudalímetro magnético; solo hay correos de proveedores sin contenido ni precios extraídos.",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [
+  {
+   "proveedor": "E. Ledesma",
+   "que": "Fabricación de colectores de inyección de acero inoxidable (precio en adjunto no disponible)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-05-14"
+  },
+  {
+   "proveedor": "Fittinox",
+   "que": "Materiales de acero inoxidable para colectores (adjunto 34216.pdf no extraído)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-05-20"
+  },
+  {
+   "proveedor": "Metalúrgica Ferraro",
+   "que": "Válvulas de retención duo check (2 correos)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-05-21"
+  },
+  {
+   "proveedor": "Meditecna",
+   "que": "Medidor magnético Optiflux 4000 (ficha adjunta) para CAPEX",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-05-21"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Colectores de inyección inox: se consultaron 4 proveedores (fabricación, materiales inox, válvulas duo check, caudalímetro magnético)",
+  "Los correos no traen precios en texto; hay que consultar los PDF adjuntos en la carpeta original"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/Cotización E Ledesma Colectores de inyección de acero inoxidable.msg; 5.Proveedores 3ros/Cotización Fittinox materiales de acero inoxidable para colectores.msg; 5.Proveedores 3ros/Cotización Met Ferraro- Válvulas de retención duo check.msg; 5.Proveedores 3ros/COTIZACION MEDITECNA MAGNETICO CAPEX.msg"
+ },
+ "problemas": [
+  "Solo correos (.msg) sin cuerpo ni adjuntos extraídos: sin precios, plazos ni cantidades",
+  "No hay oferta de ITT, costos ni OC",
+  "Descripción del medidor inferida del nombre del adjunto"
+ ]
+}

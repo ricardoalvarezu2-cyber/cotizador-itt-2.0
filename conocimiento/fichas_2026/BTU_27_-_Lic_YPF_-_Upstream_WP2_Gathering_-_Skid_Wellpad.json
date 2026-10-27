@@ -1,0 +1,101 @@
+{
+ "carpeta": "BTU/27 - Lic YPF - Upstream WP2 Gathering - Skid Wellpad",
+ "cliente": "BTU S.A.",
+ "cliente_final": "YPF",
+ "numero_oferta": "Presupuesto LC 24926 (según PDF)",
+ "revisiones": null,
+ "fecha_oferta": "2026-04-30",
+ "fecha_ultima_modificacion": "2026-04-30",
+ "referencia_cliente": "Licitación YPF Upstream WP2 Gathering - Skid Wellpad; presupuesto LC 000000024926 / lc 24052",
+ "familia": "SK",
+ "descripcion_corta": "Skid wellpad WP2 Gathering: presupuesto de fabricación de skids (80 Unid en 3 renglones) dirigido a BTU; ítems sin detalle técnico.",
+ "items": [
+  {
+   "descripcion": "Fabricación Skid-XXXX",
+   "cantidad": 38,
+   "unidad": "Unid",
+   "precio_unitario": 85996.79,
+   "precio_total": 3267878.02,
+   "moneda": "USD",
+   "datos_tecnicos": "Entrega 150 días (kg/ref. 38.000 en columna de peso)"
+  },
+  {
+   "descripcion": "Fabricación Skid I",
+   "cantidad": 38,
+   "unidad": "Unid",
+   "precio_unitario": 46755.51,
+   "precio_total": 1776709.38,
+   "moneda": "USD",
+   "datos_tecnicos": "Entrega 150 días"
+  },
+  {
+   "descripcion": "Fabricación Skid II",
+   "cantidad": 16,
+   "unidad": "Unid",
+   "precio_unitario": 94647.41,
+   "precio_total": 1514358.56,
+   "moneda": "USD",
+   "datos_tecnicos": "Entrega 150 días"
+  }
+ ],
+ "monto_total_ofertado": null,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "Entrega 150 (días)",
+ "plazo_dias": 150,
+ "condiciones": {
+  "pago": "30 días FF c/valor",
+  "validez": "30 días desde la oferta económica",
+  "entrega": null,
+  "moneda_y_ajuste": "USD; facturas canceladas al dólar BNA del día anterior al pago efectivo; precios sin IVA",
+  "notas_y_exclusiones": [
+   "Plazos salvo venta y sin tiempos de inspección de materiales",
+   "Sujeto a revisión de contratos antes de aceptación final"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Cintolo Hnos",
+   "que": "Cotización por mail (2 mensajes); sin texto ni precio legible, solo adjuntos de imagen",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-24"
+  },
+  {
+   "proveedor": "Grupo Provemet",
+   "que": "Cotización de bridas (PDF 0000267097 adjunto al mail, no incluido en el corpus)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-23"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "El presupuesto del PDF figura emitido por Taval ('Código Taval', Don Bosco) a BTU, con total USD 6.558.945,96 sin IVA (7.936.324,61 con IVA 21%); sirve como referencia de precio por skid (USD 46,8 mil a 94,6 mil por unidad).",
+  "Volumen grande (80 skids, entrega 150 días): condiciona capacidad de taller y compras de bridas.",
+  "Bridas presupuestadas con Provemet y Cintolo en abril 2026 para esta licitación."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "items": "4.Armado de la Oferta Comercial/pres 24926- lc 24052 equipos variosbtu.pdf",
+  "plazo": "4.Armado de la Oferta Comercial/pres 24926- lc 24052 equipos variosbtu.pdf",
+  "pago": "4.Armado de la Oferta Comercial/pres 24926- lc 24052 equipos variosbtu.pdf",
+  "proveedores": "5.Proveedores 3ros/Provemet cotización.msg"
+ },
+ "problemas": [
+  "No queda claro si el presupuesto 24926 es oferta de ITT o de Taval a BTU (encabezado con 'Código Taval'); por eso monto_total_ofertado queda null. Total del PDF: subtotal USD 6.558.945,96 (suma verificada de ítems), IVA 1.377.378,65, total 7.936.324,61.",
+  "Ítem 1 sin descripción ('SKID-XXXX'); columna 38.000/16.000 de peso ambigua.",
+  "No hay costos, factor ni OC.",
+  "Mails de proveedores sin precios en el texto."
+ ]
+}

@@ -1,0 +1,86 @@
+{
+ "carpeta": "FLARGENT/02 - Calentador Indirecto EAP-3541 EPF2",
+ "cliente": "FLARGENT S.A.",
+ "cliente_final": "Medanito (el pedido de cotización proviene de su Gerencia de Compras)",
+ "numero_oferta": "Oferta Técnica/Presupuesto N° 138 (oferta económica rev. A)",
+ "revisiones": "Oferta económica rev. A del 18-03-2026; no hay otras revisiones. El presupuesto interno 138 (17-03) difiere del monto de la oferta enviada.",
+ "fecha_oferta": "2026-03-18",
+ "fecha_ultima_modificacion": "2026-03-18",
+ "referencia_cliente": "O1405 - PDP Calentador de crudo EAP-3541 EPF2 (pedido de cotización; plano 1405-P-GA-0 Conjunto general cañerías reemplaza a 1286-P-PC-001-0)",
+ "familia": "C",
+ "descripcion_corta": "Calentador indirecto EAP-3541 (conjunto general cañerías) para EPF2, construcción completa",
+ "items": [
+  {
+   "descripcion": "CONJUNTO GENERAL CAÑERÍAS – CALENTADOR INDIRECTO EAP-3541",
+   "cantidad": 1,
+   "unidad": "Unid",
+   "precio_unitario": 75342.63,
+   "precio_total": 75342.63,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  }
+ ],
+ "monto_total_ofertado": 75342.63,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "90/120 días corridos a partir de la aprobación de la Orden de Compra",
+ "plazo_dias": 120,
+ "condiciones": {
+  "pago": "30% anticipo contra OC aprobada (caución fiel cumplimiento 10%); 20% avance de compra contra OC de materiales principales (casquetes y bridas); 20% contra aprobación de prueba hidrostática; 30% contra liberación para despacho (devolución de póliza)",
+  "validez": "30 días corridos",
+  "entrega": "Sobre camión en planta ITT, Quilmes Oeste (EXW)",
+  "moneda_y_ajuste": "USD facturado en ARS al TC BNA de fecha de factura; cancelación al TC BNA vendedor del día anterior al pago; NC/ND si la variación supera 3%",
+  "notas_y_exclusiones": [
+   "Póliza de seguro se cotiza con la OC",
+   "Material importado: ITT no acepta multas por mora en entregas",
+   "ITT no responsable de atrasos por Licencias No Automáticas",
+   "Se sugiere que material importado (chapas, instrumentos, válvulas) sea provisto por el cliente",
+   "Garantía 1 año desde instalación o 18 meses desde embarque; pruebas según API 598 ed. 2009"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Sandri (cilindrado)",
+   "que": "Rolado y punteado de virolas",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-03-16"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Cotización urgente: cliente adelantó la fecha de presentación y hubo que obtener autorización interna para entregar con menos antelación que el estándar",
+  "El rolado y punteado de virolas se terciariza (cilindrado Sandri); el detalle de precio no está en el texto disponible",
+  "El hito de pago incluye anticipo 30% con caución de fiel cumplimiento 10%, y pago ligado a compra de casquetes y bridas, lo que indica materiales principales comprados al inicio",
+  "Precio ofertado (USD 75,342.63) levemente superior al presupuesto interno 138 (USD 75,217.41 sin IVA): conviene unificar valores",
+  "Se recomienda que el cliente provea material importado por riesgo de licencias y ausencia de multas por mora"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "FLARGENT/02 - Calentador Indirecto EAP-3541 EPF2/7.Propuesta Comercial (envío al Cliente)/Calentador indirecto - OFERTA ECONOMICA de ITT SA - Cliente.docx",
+  "plazo_ofrecido": "FLARGENT/02 - Calentador Indirecto EAP-3541 EPF2/7.Propuesta Comercial (envío al Cliente)/Calentador indirecto - OFERTA ECONOMICA de ITT SA - Cliente.docx",
+  "condiciones": "FLARGENT/02 - Calentador Indirecto EAP-3541 EPF2/7.Propuesta Comercial (envío al Cliente)/Calentador indirecto - OFERTA ECONOMICA de ITT SA - Cliente.docx",
+  "fecha_oferta": "FLARGENT/02 - Calentador Indirecto EAP-3541 EPF2/7.Propuesta Comercial (envío al Cliente)/Calentador indirecto - OFERTA ECONOMICA de ITT SA - Cliente.docx",
+  "cliente": "FLARGENT/02 - Calentador Indirecto EAP-3541 EPF2/4.Armado de la Oferta Comercial/Presupuesto_ITT 138.pdf",
+  "numero_oferta": "FLARGENT/02 - Calentador Indirecto EAP-3541 EPF2/4.Armado de la Oferta Comercial/Presupuesto_ITT 138.pdf",
+  "referencia_cliente": "FLARGENT/02 - Calentador Indirecto EAP-3541 EPF2/4.Armado de la Oferta Comercial/Re_ Cotización Flargent - O1405 - PDP CALENTADOR DE CRUDO EAP-3541 EPF2 - solicitado para miércoles 18_03_26.msg",
+  "cliente_final": "FLARGENT/02 - Calentador Indirecto EAP-3541 EPF2/4.Armado de la Oferta Comercial/Re_ Cotización Flargent - O1405 - PDP CALENTADOR DE CRUDO EAP-3541 EPF2 - solicitado para miércoles 18_03_26.msg",
+  "proveedores": "FLARGENT/02 - Calentador Indirecto EAP-3541 EPF2/5.Proveedores 3ros/Sandri cotización - Rolado y punteado de virolas.msg"
+ },
+ "problemas": [
+  "Monto de la oferta enviada (75,342.63) difiere del presupuesto interno 138 (75,217.41 sin IVA; 91,013.07 con IVA); el presupuesto indica 120 días de entrega",
+  "No hay planillas de costo ni factor de rentabilidad",
+  "Texto del mensaje de Sandri vacío (el precio estaría en adjunto ITT SA 1.docx no extraído)",
+  "No hay datos técnicos del equipo (potencia, presión, dimensiones)",
+  "No hay orden de compra ni info de resultado"
+ ]
+}

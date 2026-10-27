@@ -1,0 +1,130 @@
+{
+ "carpeta": "PAN AMERICAN ENERGY/59. licitacion #3000057493 - Construccion mazo",
+ "cliente": "Pan American Energy (PAE)",
+ "cliente_final": null,
+ "numero_oferta": "OE 321-24",
+ "revisiones": "Sin revisiones visibles; la oferta existe como .docx (armado) y .pdf (envio) con igual contenido",
+ "fecha_oferta": "2024-08-19",
+ "fecha_ultima_modificacion": "2026-01-19",
+ "referencia_cliente": "Licitacion 3000057493 - Construccion Mazo (plano 3119-M-RP-096, modulo regeneracion MEG E-101, PTGZ II)",
+ "familia": "OT",
+ "descripcion_corta": "Mazo de conexion (haz de tubos y placa base) para modulo de regeneracion de MEG E-101, Planta de Tratamiento de Gas Zorro II",
+ "items": [
+  {
+   "descripcion": "Mazo de conexion compuesto por estructura de haz de tubos y placa base. Aplicacion: modulo de regeneracion de MEG E-101 PTGZ II",
+   "cantidad": 1,
+   "unidad": "UN",
+   "precio_unitario": 14850.0,
+   "precio_total": 14850.0,
+   "moneda": "USD",
+   "datos_tecnicos": "Segun plano 3119-M-RP-096. Por los pedidos de materiales: tubo sin costura 3/4 pulg BWG16 ASTM A179 esp. 1,65 mm, 54 piezas de 7,6 m con curvas a 180 grados; barra redonda 3/8 pulg x 3285 mm (8 u); chapas y planchuelas A36/F24 (placa 1-1/2 pulg x diam 475 mm, chapas 1/4 pulg 228x380, planchuelas 1/2 y 3/8 pulg x 3265 mm)"
+  }
+ ],
+ "monto_total_ofertado": 14850.0,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "45/60 dias de recibida la orden de compra",
+ "plazo_dias": 60,
+ "condiciones": {
+  "pago": "100% contra la entrega de los materiales, pagadero a 30 dias de fecha de factura",
+  "validez": "150 dias corridos hasta la entrega",
+  "entrega": "Planta ITTSA, Quilmes (Buenos Aires)",
+  "moneda_y_ajuste": "Precios en USD, facturados en pesos al TC BNA de fecha de factura; cancelacion al TC BNA vendedor del dia anterior al pago; NC/ND si la variacion supera 3%. Subtotal USD 14.850 + IVA USD 3.118,50 = USD 17.968,50",
+  "notas_y_exclusiones": [
+   "Sin multas por mora en entregas si hay material importado (normativa BCRA)",
+   "ITTSA no responsable por atrasos por licencias no automaticas",
+   "Material importado (chapas, instrumentos, valvulas) preferentemente provisto por el cliente, en comodato o deducible de futuras facturas"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "LIDERCORT",
+   "que": "Cortes de chapa/planchuela A36 con material (no tienen F24): disco 1-1/2 pulg x diam 475 mm USD 197 c/u; chapa 1/4 pulg 228x380 USD 15 c/u; planchuela 1/2x38x3265 USD 42 c/u; planchuela 3/8x25x3265 USD 22 c/u; mas IVA",
+   "precio": 197,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2024-08-12"
+  },
+  {
+   "proveedor": "PROCHAP",
+   "que": "Cortes de chapa A36 con material: disco 1-1/2 pulg x diam 475 mm USD 185 c/u; chapa 1/4 pulg 228x380 USD 11 c/u; planchuelas sin precio en texto; envio $10.000 + IVA",
+   "precio": 185,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2024-08-12"
+  },
+  {
+   "proveedor": "MANCUL",
+   "que": "Tubo s/costura 19,05x1,65 ASTM A179 USD 7,17/m + IVA (54 piezas de 7600 mm); macizo diam 9,53 SAE 1010 USD 2,82/kg + IVA (8 x 3285 mm); pago anticipado/40% anticipo, dolar divisa",
+   "precio": 7.17,
+   "moneda": "USD",
+   "plazo_entrega": "35/40 dias",
+   "fecha": "2024-08-13"
+  },
+  {
+   "proveedor": "CURVATUBOS ZEZIOLA",
+   "que": "Mano de obra de curvas a 180 grados en cano 3/4 A179 BWG16 (7 a 7,515 m): USD 30 por curva + IVA, sin material; no pueden hacer el radio mas chico pedido; TC BNA billete vendedor",
+   "precio": 30,
+   "moneda": "USD",
+   "plazo_entrega": "15 a 20 dias desde ingreso del material al taller",
+   "fecha": "2024-08-13"
+  },
+  {
+   "proveedor": "CURVASOL",
+   "que": "Cotizacion de curvado en tubo 19 x 2,11 mm (precio solo en adjunto docx, no extraido)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2024-08-13"
+  },
+  {
+   "proveedor": "PROVEMET",
+   "que": "Cotizacion 206778 de cano (precio solo en PDF adjunto, no extraido); no comercializan barra redonda; tolerancia -0+6 piezas",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2024-08-14"
+  },
+  {
+   "proveedor": "SIDEMET CANOS",
+   "que": "Presupuesto 1808 de cano y barras (precio solo en PDF adjunto, no extraido)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2024-08-14"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "La oferta se armo con cotizaciones de insumos al 12-14/08/2024 y se envio el 19/08/2024: ciclo de 1 semana; compras pidio costos 'lo antes posible' a 7 proveedores en paralelo (cano/barra, chapa/planchuela, curvado).",
+  "Costos de referencia (USD, 2024): tubo A179 3/4 pulg BWG16 USD 7,17/m (54 x 7,6 m = 410 m, aprox. USD 2.940 de tubo); curvado 180 grados USD 30 por curva; disco de chapa 1-1/2 pulg diam 475 mm USD 185-197 c/u.",
+  "Proveedores locales ofrecen A36 y no F24 (el pedido pedia F24); verificar calidad exigida. Zeziola no puede el radio de curvado minimo del plano: riesgo tecnico a validar con el cliente o buscar otro curvador (Curvasol).",
+  "El proveedor de tubo exige anticipo (40% o contado anticipado) y moneda divisa; la oferta a PAE cobra a 30 dias de factura, lo que genera necesidad de financiamiento.",
+  "Los pedidos posteriores de PAE de mazos de tubos (OC 4100273768) fueron en acero inoxidable 316L con precios muy superiores (USD 13.900 a 28.100 por mazo): este mazo de acero al carbono es de baja complejidad."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "numero_oferta": "7.Propuesta Comercial (envío al Cliente)/OE 321-24.pdf",
+  "monto_total_ofertado": "7.Propuesta Comercial (envío al Cliente)/OE 321-24.pdf",
+  "fecha_oferta": "7.Propuesta Comercial (envío al Cliente)/OE 321-24.pdf",
+  "plazo_ofrecido": "7.Propuesta Comercial (envío al Cliente)/OE 321-24.pdf",
+  "condiciones": "7.Propuesta Comercial (envío al Cliente)/OE 321-24.pdf",
+  "proveedores": "5.Proveedores 3ros/cotizaciones de proveedores/*.msg",
+  "orden_compra": "8.Orden de Compra/PEDIDO 4100273768 - MAZO TUBOS REV.pdf (no corresponde a esta oferta)"
+ },
+ "problemas": [
+  "La OC 4100273768 (05/11/2025, USD 42.007,99, 2 mazos de tubos 316L TAG E-225/E-226) referencia 'Oferta Nro 4100112958 (LIC. 3000060254)', otra licitacion y otro equipo; no corresponde a la licitacion 3000057493 / OE 321-24, por lo que no se la toma como adjudicacion. Posible carpeta de otra cotizacion mezclada; no hay evidencia de que OE 321-24 se haya ganado.",
+  "No hay planilla de costos ni factor de rentabilidad: el .docx de la carpeta 4 es la misma oferta economica; costo_total y factor_venta quedan en null.",
+  "El PDF de la oferta muestra el total del item como '148.50,00' (error tipografico); subtotal y total coinciden con USD 14.850.",
+  "Precios de Curvasol, Provemet y Sidemet estan en adjuntos (docx/pdf) no incluidos en el texto extraido; Prochap no muestra precio de planchuelas.",
+  "La oferta no detalla el material del mazo (carbono vs inoxidable) ni dimensiones; los datos tecnicos se infieren de los pedidos a proveedores."
+ ]
+}

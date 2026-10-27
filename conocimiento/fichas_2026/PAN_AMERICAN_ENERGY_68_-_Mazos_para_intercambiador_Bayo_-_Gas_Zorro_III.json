@@ -1,0 +1,93 @@
+{
+ "carpeta": "PAN AMERICAN ENERGY/68 - Mazos para intercambiador (Bayo - Gas Zorro III",
+ "cliente": "Pan American Energy, S.L. Sucursal Argentina",
+ "cliente_final": "Pan American Energy (Planta de Tratamiento Zorro III, equipo H-101); equipo E-101 según proveedor corresponde a AMOCO Argentina Oil Company (obra TECNA 3044)",
+ "numero_oferta": "168",
+ "revisiones": "Sin revisiones visibles",
+ "fecha_oferta": "2026-08-13",
+ "fecha_ultima_modificacion": "2026-08-13",
+ "referencia_cliente": "Planos TECNA 3044-M-RP-004 Rev.0 (E-101) y 3119-M-RP-094 Rev.0 (H-101 regenerador de glicol)",
+ "familia": "OT",
+ "descripcion_corta": "Fabricación de 2 mazos de tubos (haz tubular) para intercambiadores de regeneración de glicol E-101 y H-101 según planos TECNA.",
+ "items": [
+  {
+   "descripcion": "Mazo de tubos E-101 intercambiador glicol-glicol, plano 3044-M-RP-004",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 10657.0,
+   "precio_total": 10657.0,
+   "moneda": "USD",
+   "datos_tecnicos": "16 tubos U SA-179 5/8\" BWG16, 5500-5638 mm; placa tubular ø275x38; bridas 8\" 150# SORF y 1\" SWRF; ~117 kg"
+  },
+  {
+   "descripcion": "Mazo de tubos H-101 regenerador de glicol (mazo hot-oil), plano 3119-M-RP-094",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 28823.0,
+   "precio_total": 28823.0,
+   "moneda": "USD",
+   "datos_tecnicos": "96 tubos SA-179 5/8\" BWG16, 5676-6118 mm; placa tubular ø475x38; casquete 2:1 ø16\" e=3/8\"; bridas 2x4\" 150# WNRF Sch80 y 16\" 150# SORF; ~626 kg; ASME VIII Div.1"
+  }
+ ],
+ "monto_total_ofertado": 39480.0,
+ "moneda": "USD",
+ "costo_total": 22320.6,
+ "factor_venta": 1.77,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": 22320.6,
+  "otros": null
+ },
+ "plazo_ofrecido": "120 días",
+ "plazo_dias": 120,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": "Dólares, sin IVA (IVA 21% USD 8.290,80; total USD 47.770,80)",
+  "notas_y_exclusiones": [
+   "Garantía 1 año desde instalación o 18 meses desde embarque",
+   "Pruebas según API 598 ed. 2009",
+   "El presupuesto de ITT no trae pago/validez/entrega expresos"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "GDO (Galvanotecnia del Oeste S.A.) / GDO Comercial",
+   "que": "Fabricación de mazos de tubos y cabezales de ambos equipos (3044: mazo 2.998,06 + cabezal 2.106,64; 3119: mazo 10.923,46 + cabezal 6.292,44), ASME VIII Div.1, con materiales; excluye shell, montaje, pintura, flete",
+   "precio": 22320.6,
+   "moneda": "ARS (declarada en el ppto; valores coherentes con USD)",
+   "plazo_entrega": null,
+   "fecha": "2026-08-07"
+  },
+  {
+   "proveedor": "Termofluidos S.R.L.",
+   "que": "Haz tubular completo H-101 (USD 25.500) y E-101 (USD 17.250) + IVA; pago 50/50; transporte no incluido; validez 15 días",
+   "precio": 42750.0,
+   "moneda": "USD",
+   "plazo_entrega": "12 semanas desde OC, anticipo y documentación aprobada",
+   "fecha": "2026-08-12"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Se pidieron dos cotizaciones de fabricación: Termofluidos (haz completo, USD 42.750) y GDO (mazo+cabezal, ~22,3k); el precio ofertado USD 39.480 parece basado en GDO",
+  "Precio de H-101 (28.823) ~2,7x el de E-101 (10.657) por 6x más tubos y mayor peso (626 vs 117 kg)",
+  "GDO excluye shell/carcasa, montaje, pintura y flete; cotizar aparte si se piden",
+  "Mazos de repuesto requieren planos del fabricante original (TECNA) y certificados 3.1"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "7.Propuesta Comercial (envío al Cliente)/168.pdf",
+  "proveedores": "5.Proveedores 3ros/GDO Presupuesto de Venta N° 2660.pdf; 5.Proveedores 3ros/Termofluidos oferta 204716.pdf",
+  "datos_tecnicos": "5.Proveedores 3ros/GDO Propuesta_Tecnica_Mazos_y_Cabezales_ASME_VIII.pdf"
+ },
+ "problemas": [
+  "Presupuesto GDO 2660 a nombre de 'ITT ARGENTINA SRL', moneda 'Pesos Argentinos', importes parecen USD pero no se confirma",
+  "Factor 1,77 y costo calculados por mí suponiendo GDO en USD; no hay planilla de costos",
+  "Termofluidos USD 42.750 supera el precio de venta (39.480): consistente con haber usado GDO",
+  "No hay orden de compra ni pago/validez en la 168"
+ ]
+}

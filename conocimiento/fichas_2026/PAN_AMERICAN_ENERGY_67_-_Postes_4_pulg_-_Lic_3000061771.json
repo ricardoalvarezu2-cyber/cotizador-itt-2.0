@@ -1,0 +1,66 @@
+{
+ "carpeta": "PAN AMERICAN ENERGY/67 - Postes 4 pulg - Lic 3000061771",
+ "cliente": "PAN AMERICAN ENERGY",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": "No hay oferta de ITT en la carpeta",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-07-31",
+ "referencia_cliente": "Lic 3000061771 - postes 4 pulg (poste para cámara termográfica civil)",
+ "familia": "OT",
+ "descripcion_corta": "Poste de 4\" para cámara termográfica; solo hay cotización de mano de obra y de galvanizado.",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [
+  {
+   "proveedor": "E. Ledesma (presupuesto 200302)",
+   "que": "Mano de obra: armado y soldaduras, calificación de soldadores, herramientas, consumibles, EPP; sin montaje ni pintura; USD 220 c/u + IVA, facturación por avance, pago a 5 días, validez 15 días",
+   "precio": 220,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-07-30"
+  },
+  {
+   "proveedor": "Galva Auraria (según nombre de archivo)",
+   "que": "Galvanizado; PDF escaneado sin texto",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-06-17"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Mano de obra de armado y soldadura de un poste de 4\" a USD 220 c/u (sin material, montaje ni pintura).",
+  "Sumar aparte material, galvanizado y montaje.",
+  "Precio en USD al dólar divisa BNA del día anterior a la facturación."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/E Ledesma Ppto ITT N° 200302 Pan American POSTE PARA CÁMARA TERMOGRÁFICA CIVIL   23-07-2026.docx"
+ },
+ "problemas": [
+  "Sin oferta, costos ni OC.",
+  "Cotización de galvanizado es un escaneo sin texto.",
+  "Fecha del presupuesto (30-07) difiere de la del nombre de archivo (23-07)."
+ ]
+}

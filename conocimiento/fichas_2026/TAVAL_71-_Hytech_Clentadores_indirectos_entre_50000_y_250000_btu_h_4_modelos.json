@@ -1,0 +1,123 @@
+{
+ "carpeta": "TAVAL/71- Hytech Clentadores indirectos entre 50000 y 250000 btu h, 4 modelos",
+ "cliente": "Hytech (según nombre de carpeta; vía TAVAL)",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-06-26",
+ "referencia_cliente": null,
+ "familia": "C",
+ "descripcion_corta": "Calentadores indirectos de 50.000 a 250.000 BTU/h (4 modelos, cliente Hytech): solo hay cotizaciones de proveedores (quemadores y manifolds de gas EQA); no hay oferta ITT",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": "Anticipo acreditado (EQA)",
+  "validez": "EQA: hasta 2026-07-04",
+  "entrega": "Flete a cargo del cliente (EQA)",
+  "moneda_y_ajuste": "EQA: USD convertibles a ARS al BNA vendedor día anterior al pago",
+  "notas_y_exclusiones": [
+   "Presión de trabajo, orificio y mano de conexión de quemadores a definir según ingeniería de detalle",
+   "Caudalímetro no provisto en manifold",
+   "Dato 'precio de venta unitarios USD 820 + imp' figura en el texto de EQA sin contexto claro"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "EQA S.A.I.C.",
+   "que": "Quemador p/calentador 50.000 BTU/h (ECALC25C), 6 un",
+   "precio": 3871.0,
+   "moneda": "USD",
+   "plazo_entrega": "30/45 días hábiles",
+   "fecha": "2026-06-24",
+   "datos": "precio unitario lista; 10% desc. => 3483.90 c/u; total 20903.40"
+  },
+  {
+   "proveedor": "EQA S.A.I.C.",
+   "que": "Quemador 75.000-90.000 BTU/h (ECALC32C), 3 un",
+   "precio": 3994.0,
+   "moneda": "USD",
+   "plazo_entrega": "30/45 días hábiles",
+   "fecha": "2026-06-24"
+  },
+  {
+   "proveedor": "EQA S.A.I.C.",
+   "que": "Quemador 150.000 BTU/h (ECALC38C), 8 un",
+   "precio": 4048.0,
+   "moneda": "USD",
+   "plazo_entrega": "30/45 días hábiles",
+   "fecha": "2026-06-24"
+  },
+  {
+   "proveedor": "EQA S.A.I.C.",
+   "que": "Quemador 250.000 BTU/h (ECALC51C), 2 un",
+   "precio": 4052.0,
+   "moneda": "USD",
+   "plazo_entrega": "30/45 días hábiles",
+   "fecha": "2026-06-24"
+  },
+  {
+   "proveedor": "EQA S.A.I.C.",
+   "que": "Quemador 370.000 BTU/h (ECALC76C), 1 un",
+   "precio": 4219.0,
+   "moneda": "USD",
+   "plazo_entrega": "30/45 días hábiles",
+   "fecha": "2026-06-24"
+  },
+  {
+   "proveedor": "EQA S.A.I.C.",
+   "que": "Manifold 3/4\" con accesorios S-2000 (CALMA0919), 20 un, SCH80, NPT, válvula seguridad EQA38, termostática Danfoss, reguladoras; sin caudalímetro",
+   "precio": 12650.0,
+   "moneda": "USD",
+   "plazo_entrega": "30/45 días hábiles",
+   "fecha": "2026-06-24"
+  },
+  {
+   "proveedor": "Edgardo Ledesma (MP)",
+   "que": "Calentadores indirectos 50 a 370 KBTU/h (PDF escaneado, sin texto)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-06-26"
+  },
+  {
+   "proveedor": "Riva Hnos",
+   "que": "Cotización típica (PDF escaneado, sin texto)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-06-26"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Quemadores EQA para calentador indirecto cuestan USD ~3.9-4.2 mil c/u sin gran diferencia entre 50 y 370 kBTU/h",
+  "El manifold de gas de regulación (USD 12.650 lista, 20 un) pesa más que el quemador y es el ítem dominante del costo de proveedores (EQA subtotal 299.623,50 s/IVA)",
+  "EQA otorga 10% de descuento sobre lista en esta cotización; plazo 30/45 días hábiles, pago anticipado",
+  "Dos cotizaciones (Ledesma, Riva) están escaneadas: conviene revisarlas a mano para costo de armado del calentador"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores EQA": "TAVAL/71- Hytech Clentadores indirectos entre 50000 y 250000 btu h, 4 modelos/5.Proveedores 3ros/Cot EQA 50430-ITT.pdf",
+  "Ledesma": "TAVAL/71- Hytech Clentadores indirectos entre 50000 y 250000 btu h, 4 modelos/5.Proveedores 3ros/Cot E Ledesma MP Calent Indirectos desde 50 hasta 370 KBTU H.pdf",
+  "Riva": "TAVAL/71- Hytech Clentadores indirectos entre 50000 y 250000 btu h, 4 modelos/5.Proveedores 3ros/Cot Riva hnos típica.pdf"
+ },
+ "problemas": [
+  "Carpeta solo con cotizaciones de proveedores: sin oferta ITT, monto, factor ni resultado",
+  "Cotizaciones Ledesma y Riva escaneadas sin texto",
+  "Moneda de EQA asumida USD por el pie de página 'PRECIOS EN U$S'",
+  "Cantidades (6/3/8/2/1 quemadores, 20 manifolds) sugieren lote de 20 calentadores; no confirmado"
+ ]
+}

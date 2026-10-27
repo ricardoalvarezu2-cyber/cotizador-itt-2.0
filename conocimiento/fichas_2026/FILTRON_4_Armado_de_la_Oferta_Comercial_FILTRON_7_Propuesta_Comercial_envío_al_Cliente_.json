@@ -1,0 +1,70 @@
+{
+ "carpeta": "FILTRON/4.Armado de la Oferta Comercial (+ FILTRON/7.Propuesta Comercial (envío al Cliente))",
+ "cliente": "FILTRON SRL",
+ "cliente_final": null,
+ "numero_oferta": "159 rev. A",
+ "revisiones": "Sólo rev. A (emisión 17-06-2026)",
+ "fecha_oferta": "2026-06-17",
+ "fecha_ultima_modificacion": "2026-06-17",
+ "referencia_cliente": "Filtro canasto 12\" #150 (sin N° de pedido)",
+ "familia": "F",
+ "descripcion_corta": "Filtro canasto 12\" #150, 1 unidad",
+ "items": [
+  {
+   "descripcion": "Filtro canasto 12\" #150 (código ITT26-0339-486 FCT)",
+   "cantidad": 1,
+   "unidad": "Unid",
+   "precio_unitario": 3853.58,
+   "precio_total": 3853.58,
+   "moneda": "USD",
+   "datos_tecnicos": "12\" clase 150; prueba API 598 ed. 2009"
+  }
+ ],
+ "monto_total_ofertado": 3853.58,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "30 días corridos a partir de la aprobación de la Orden de Compra",
+ "plazo_dias": 30,
+ "condiciones": {
+  "pago": "30% anticipo contra OC aprobada; 70% contra liberación para despacho",
+  "validez": "30 días corridos",
+  "entrega": "Sobre camión en planta ITT, Quilmes Oeste (EXW)",
+  "moneda_y_ajuste": "USD, facturado en ARS al TC BNA fecha de factura; cancelación al TC BNA vendedor día anterior al pago; NC/ND si variación >3%",
+  "notas_y_exclusiones": [
+   "Condición BCRA: sin multas por mora si hay material importado",
+   "Póliza de seguro se cotiza con la OC",
+   "Licencias No Automáticas: ITT no responsable de atrasos",
+   "ITT sugiere que material importado (chapas, instrumentos, válvulas) sea provisto por el cliente",
+   "Garantía 1 año desde instalación o 18 meses desde embarque",
+   "Presupuesto con IVA: total 4662.83 USD (IVA 809.25)"
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Filtro canasto 12\" #150 simple vendido a USD 3.853,58 con 30 días de plazo: referencia para filtros chicos de stock/fabricación rápida",
+  "Oferta mínima sin planilla de costos en la carpeta: no se puede inferir factor de rentabilidad",
+  "Pago 30/70 sin garantías/pólizas para cliente no petrolero"
+ ],
+ "confianza": "alta",
+ "fuentes": {
+  "monto_total_ofertado": "7.Propuesta Comercial (envío al Cliente)/OE - FILTRO CANASTO 12.pdf",
+  "numero_oferta": "4.Armado de la Oferta Comercial/Presupuesto_ITT 159.pdf",
+  "condiciones": "7.Propuesta Comercial (envío al Cliente)/OE - FILTRO CANASTO 12.pdf",
+  "items": "4.Armado de la Oferta Comercial/Presupuesto_ITT 159.pdf"
+ },
+ "problemas": [
+  "No hay planilla de costos ni factor",
+  "No hay carpeta de proveedores ni orden de compra",
+  "Entradas FILTRON/4 y FILTRON/7 unificadas en una ficha",
+  "La cotización es de un solo ítem; PDF enviado con texto de plantilla basura ('dsadSDA') sin impacto"
+ ]
+}

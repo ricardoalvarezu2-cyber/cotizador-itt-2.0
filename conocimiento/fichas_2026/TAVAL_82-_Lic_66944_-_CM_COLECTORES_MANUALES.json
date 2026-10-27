@@ -1,0 +1,53 @@
+{
+ "carpeta": "TAVAL/82- Lic 66944 - CM COLECTORES MANUALES",
+ "cliente": "TAVAL (licitación 66944; operador probable YPF, no confirmado)",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": "No hay",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-09-07",
+ "referencia_cliente": "Lic 66944",
+ "familia": "CO",
+ "descripcion_corta": "Colectores manuales (CM) - la carpeta solo contiene el Anexo 3 de subproveedores (listados genéricos del cliente); sin oferta, precios ni costos",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": [
+   "Anexo 3A (listado de subproveedores) vacío: solo encabezado Proveedor/Alcance",
+   "Anexo 3 menciona listados de proveedores sugeridos: Electricidad, Instrumentación, NOC (vendor lists del cliente)"
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "La licitación exige Anexo 3 de subproveedores; se adjuntan los vendor lists del cliente (electricidad, instrumentación, NOC) y se completa el Anexo 3A con taller/proveedor si se terceriza",
+  "Regla del Anexo 3A: el % de ejecución del subproveedor no puede superar la provisión principal del oferente",
+  "Carpeta incompleta: faltan propuestas técnica y comercial, costos y pliego; no sirve como referencia de precio"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "anexo3": "3. Ofertas/PASA SUBIR/03.ANEXO 3_Subproveedores/00.ANEXO 3 - Carátula.doc",
+  "subproveedores": "3. Ofertas/PASA SUBIR/03.ANEXO 3_Subproveedores/01.ANEXO 3A Listado de Subproveedores.docx"
+ },
+ "problemas": [
+  "No hay precio, items, plazo ni condiciones",
+  "Cliente final y operador no figuran en los archivos",
+  "Fecha 2026-09-07 es de modificación de archivos, no de la oferta"
+ ]
+}

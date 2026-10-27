@@ -1,0 +1,82 @@
+{
+ "carpeta": "Sacde/21 - RFQ 3158 - TGS - BOP Almacenamiento – FILTROS CANASTO",
+ "cliente": "Sacde",
+ "cliente_final": "TGS",
+ "numero_oferta": null,
+ "revisiones": "Sin propuesta ITT en la carpeta",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-04-28",
+ "referencia_cliente": "RFQ 3158 - TGS - BOP Almacenamiento - filtros canasto",
+ "familia": "F",
+ "descripcion_corta": "Filtros canasto FM 2\" serie 300 (con PSV e instrumentacion de presion diferencial) para BOP Almacenamiento de TGS",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": null,
+  "moneda_y_ajuste": null,
+  "notas_y_exclusiones": []
+ },
+ "proveedores": [
+  {
+   "proveedor": "Edgardo Ledesma",
+   "que": "MO filtro FM 2 S 300 lado derecho (no incluye consumibles, PH, END, pintura)",
+   "precio": 800,
+   "moneda": "USD",
+   "plazo_entrega": "validez 10 dias, pago 5 dias FF",
+   "fecha": "2026-02-09"
+  },
+  {
+   "proveedor": "ABB",
+   "que": "Oferta presupuestaria PD300 para filtros coalescentes (adjunto xlsx, sin precio legible)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-28"
+  },
+  {
+   "proveedor": "CV Control",
+   "que": "Transmisores de presion diferencial Yokogawa con display (adjuntos PDF)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-28"
+  },
+  {
+   "proveedor": "Farinola e hijos",
+   "que": "PSV para filtro canasto (mail sin precio legible)",
+   "precio": null,
+   "moneda": null,
+   "plazo_entrega": null,
+   "fecha": "2026-04-28"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Los filtros canasto llevan PSV y transmisor de presion diferencial local (Yokogawa/ABB) como compras de terceros",
+  "MO de armado de filtro FM 2\" #300 ~USD 800 (Ledesma), sin PH/END/pintura"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "mano_obra": "5.Proveedores 3ros/E Ledesma - Presupuesto ITT Filtro FM 2 S 300.docx",
+  "otros": "5.Proveedores 3ros/*.msg (solo cabeceras)"
+ },
+ "problemas": [
+  "Sin oferta ITT, costos ni OC",
+  "Los .msg solo tienen cabecera y nombres de adjuntos, sin precios",
+  "El presupuesto de Ledesma esta fechado 9-feb-2026 pero el archivo es de 2026-04-28"
+ ]
+}

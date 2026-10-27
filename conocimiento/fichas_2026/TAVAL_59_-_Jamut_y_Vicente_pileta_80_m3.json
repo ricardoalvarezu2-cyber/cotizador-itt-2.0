@@ -1,0 +1,61 @@
+{
+ "carpeta": "TAVAL/59 - Jamut y Vicente, pileta 80 m3",
+ "cliente": "Jamut y Vicente (según nombre de carpeta; vía TAVAL)",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-05-08",
+ "referencia_cliente": null,
+ "familia": "T",
+ "descripcion_corta": "Pileta petrolera rectangular de 80 m3 sobre patín; solo hay cotización de proveedor (Tanques Milei / Tecnomobile)",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": null,
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": null,
+ "plazo_dias": null,
+ "condiciones": {
+  "pago": "Proveedor: anticipo 65% con echeq a 15/30/60/90 días y saldo a 30 y 60 días",
+  "validez": null,
+  "entrega": "Planta del proveedor, Pergamino",
+  "moneda_y_ajuste": "USD + IVA, facturado en ARS al BNA billete vendedor día hábil anterior",
+  "notas_y_exclusiones": [
+   "Prueba de estanqueidad neumática 0,2 kg/cm2",
+   "Norma citada ASME 650"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Tecnomobile SRL (Tanques Milei)",
+   "que": "1 pileta 80.000 L rectangular nueva, 12,3x2,5x2,6 m, chapa 1/4\" F-22, patín W250, 2 bocas limpieza, escaleras, techo semilla de melón, bridas 4\", arenado y pintura epoxi interior",
+   "precio": 44370,
+   "moneda": "USD",
+   "plazo_entrega": "60 días",
+   "fecha": "2026-05-07"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Costo de proveedor de pileta 80 m3 de este tipo: USD 44.370 + IVA, 60 días de plazo",
+  "Incluye arenado, pintura exterior poliuretánica e interior epoxi; flete no incluido (retira en Pergamino)",
+  "Memoria técnica mezcla 70.000 y 80.000 L en el listado de accesorios: verificar alcance"
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "TAVAL/59 - Jamut y Vicente, pileta 80 m3/5.Proveedores 3ros/Cot Milei deposito 80 m3 7-5-26.pdf"
+ },
+ "problemas": [
+  "Solo cotización de proveedor: sin oferta ITT, monto ofertado, factor ni resultado",
+  "Cliente inferido del nombre de carpeta",
+  "Memoria técnica inconsistente (accesorios de tanque de 70.000 L)"
+ ]
+}
