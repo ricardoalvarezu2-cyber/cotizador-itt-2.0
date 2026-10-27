@@ -1,0 +1,9 @@
+# Lectura de documentos
+docling        # PDF -> texto y tablas (pliegos, especificaciones)
+pymupdf        # PDF -> imágenes y texto exacto (planos vectoriales)
+# Planos CAD
+ezdxf          # lectura de DXF (tablas, textos, rótulo) y render a PDF/PNG
+ezdwg          # lectura directa de DWG (R14-R2018) sin conversor externo
+matplotlib     # backend de dibujo para ezdxf
+# Planillas
+openpyxl       # lectura/escritura de Excel
