@@ -27,6 +27,7 @@ F_CODIFICADOR = "codificador_taval_2023-07.xlsx"
 F_REGISTRO = "registro_presupuestos_2022-05.xlsx"
 F_REMITOS = "remitos_valorizados_2022-2023.xls"
 F_SEGUIMIENTO = "seguimiento_presupuestos_proyectos_2026-08.xlsx"
+F_COSTO_PLANTA = "costo_mo_planta_2024-10.xlsx"
 
 # Familia de producto (códigos de codificacion/familias_producto.csv) según palabras de la descripción
 FAMILIAS = [("CALENT", "C"), ("SEPARADOR", "SEP"), ("SCRUB", "SC"), ("FILTRO", "F"), ("MANIFOLD", "M"),
@@ -409,6 +410,30 @@ def plazos_proyectos():
               "atraso_dias", "estado", "nota"], filas)
 
 
+def costo_planta():
+    """Costo de mano de obra propia por centro de costo (oct-2024): sueldos, prorrateo de improductivos,
+    indirectos y costo hora. Base: 200 horas por mes."""
+    wb = openpyxl.load_workbook(ORIGEN / F_COSTO_PLANTA, data_only=True)
+    ws = wb["Reparto"]
+    filas = []
+    for r in range(3, 12):
+        centro = texto(ws.cell(r, 1).value)
+        if not centro:
+            continue
+        valores = [numero(ws.cell(r, c).value) for c in (2, 4, 6, 7, 8, 11, 13)]
+        filas.append([centro] + [round(v, 2) if v is not None else "" for v in valores])
+    escribir("costos/costo_hora_planta.csv",
+             ["centro_costo", "personas", "sueldos_mes_usd", "costo_con_prorrateo_usd", "indirectos_usd",
+              "costo_mo_mes_usd", "costo_hora_centro_usd", "costo_hora_persona_usd"], filas)
+    sueldos = []
+    for row in wb["Sueldos"].iter_rows(min_row=2, values_only=True):
+        if row[0] and row[4]:
+            sueldos.append([texto(row[0]), fecha(row[1]), texto(row[4]), texto(row[8]), numero(row[5]),
+                            round(numero(row[6]) or 0, 2), numero(row[11])])
+    escribir("costos/sueldos_2024-10.csv",
+             ["empresa", "fecha", "cuenta", "centro_costo", "importe_ars", "importe_usd", "tipo_cambio"], sueldos)
+
+
 def plazos_historicos():
     """Histórico de ventas 2019-2024: plazo pedido en la OC y entregas reales por proyecto."""
     ws = openpyxl.load_workbook(ORIGEN / F_SEGUIMIENTO, data_only=True)["Historico de ventas"]
@@ -438,7 +463,7 @@ def plazos_historicos():
 
 
 def cotizaciones_recientes():
-    """Seguimiento de cotizaciones 2024-2026 (sin datos de contacto)."""
+    """Seguimiento de cotizaciones 2024-2026."""
     ws = openpyxl.load_workbook(ORIGEN / F_SEGUIMIENTO, data_only=True)["Cotizaciones ITTSA"]
     filas = []
     for r in range(5, ws.max_row + 1):
@@ -452,15 +477,15 @@ def cotizaciones_recientes():
         filas.append([fecha(ws.cell(r, 5).value), cliente, texto(ws.cell(r, 2).value), texto(ws.cell(r, 3).value),
                       ref, familia(ref), numero(ws.cell(r, 7).value), texto(ws.cell(r, 8).value),
                       texto(ws.cell(r, 9).value), resultado, texto(ws.cell(r, 10).value),
-                      numero(ws.cell(r, 12).value), numero(ws.cell(r, 13).value)])
+                      texto(ws.cell(r, 11).value), numero(ws.cell(r, 12).value), numero(ws.cell(r, 13).value)])
     escribir("comercial/cotizaciones_2024-2026.csv",
              ["fecha_presentacion", "cliente", "ref_interna", "isis", "referencia_cliente", "familia", "monto",
-              "moneda", "estado", "resultado", "comentarios", "probabilidad_pct", "factor_venta"], filas)
+              "moneda", "estado", "resultado", "comentarios", "contacto", "probabilidad_pct", "factor_venta"], filas)
 
 
 if __name__ == "__main__":
     print(f"Fuentes: {ORIGEN}")
     for paso in (factores_soldadura, perfiles, codificacion, precios_elementos, lista_renar, stock,
-                 registro_cotizaciones, ventas_equipos, plazos_proyectos, plazos_historicos, cotizaciones_recientes):
+                 registro_cotizaciones, ventas_equipos, plazos_proyectos, plazos_historicos, cotizaciones_recientes, costo_planta):
         print(paso.__name__)
         paso()

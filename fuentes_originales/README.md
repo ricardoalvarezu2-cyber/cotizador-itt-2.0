@@ -8,7 +8,7 @@ Copias de las planillas y documentos de ITT a partir de los cuales se genera la 
 |---|---|
 | `factores_soldadura_rev02-2026.xlsx` | Factores de Soldadura p MO – rev 02.2026 |
 | `costos_mo_master_2024-09.xlsx` | Costos MO Master |
-| `costo_mo_planta_2024-10.xlsx` | Costo MO de ITT Octubre 24, **sin la hoja de sueldos** (datos personales) |
+| `costo_mo_planta_2024-10.xlsx` | Costo MO de ITT Octubre 24 (incluye la hoja de sueldos por centro de costo) |
 | `planilla_costo_master_2024-11.xlsx` | Planilla de Costo Master |
 | `cotizacion_elementos_equipos_2026-03.xlsx` | Cotización elementos de equipos (base de precios por componente) |
 | `renar_lista_2025-12.xlsx` | Lista de precios Renard |
@@ -32,4 +32,4 @@ Copias de las planillas y documentos de ITT a partir de los cuales se genera la 
 | `indices/cotizaciones_2026.json` | Carpetas de 2026 con la fecha original de cada archivo |
 | `indices/asignacion_tanda*.json` | Cómo se repartieron las carpetas de 2026 entre agentes |
 
-Los textos y planillas incluyen datos de contacto comerciales de clientes y proveedores tal como figuran en los documentos originales. El repositorio debe seguir siendo **privado**.
+Se guarda toda la información tal como está en los documentos originales, incluidos contactos y sueldos. El repositorio es **privado** y tiene que seguir siéndolo.

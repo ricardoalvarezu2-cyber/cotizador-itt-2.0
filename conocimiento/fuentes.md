@@ -30,7 +30,7 @@ Todos los archivos de ITT revisados para armar esta base, en orden cronológico 
 | 2024-02 | Costos_MO_Master_II-SEP_TRIFASICO-19-4-24.xlsx | L. Bustamante | 📚 | Caso: separador trifásico AESA (32 USD/pulg, 7,4 USD/kg) |
 | 2024-09 | **Costos_MO_Master.xlsx** | L. Bustamante | ✅ | Modelo de estimación de MO (28 USD/pulg, 10 USD/kg). Tiene errores, ver reglas §7 |
 | 2024-11 | **PLANILLA DE COSTO -Master.xlsx** | C. Alfonso | ✅ | Planilla de costo y venta (factor 1,33, IVA, hitos de pago) |
-| 2024-12 | **Costo MO de ITT Octubre.24.xlsx** | O. Fuentes / C. Alfonso | ✅ | Costo real de planta por hora y por pulgada, más benchmarking de terceros. ⚠️ Incluye una hoja de sueldos con datos personales: no se copia a esta base |
+| 2024-12 | **Costo MO de ITT Octubre.24.xlsx** | O. Fuentes / C. Alfonso | ✅ | Costo real de planta por hora y por pulgada, más benchmarking de terceros. Incluye la hoja de sueldos por centro de costo (base del costo hora); el reparto queda en `costos/costo_hora_planta.csv` |
 | 2024 | Planilla base para cotizaciones.xlsx | — | ❌ | Tarifas de END desactualizadas. Errores de fórmula, ver reglas §7 |
 
 ## Precios
@@ -55,7 +55,7 @@ Todos los archivos de ITT revisados para armar esta base, en orden cronológico 
 | 2023-05 | vta_remitoporcliente.xls | Sistema | ✅ | Base de `comercial/ventas_2022-2023.csv` |
 | 2023-05 | vta_remitoporcliente_i.xls | Sistema | 🗑️ | Mismo contenido, con fechas como texto |
 | 2023-07 | **HD Instructivo de codificacion.xlsx** | S. Giron / C. Sorrentino | ✅ | Base de `codificacion/*` y `comercial/clientes.csv` |
-| 2026-08 | **Seguimiento de presupuestos/Proyecto/facturación Rev1.xlsx** | C. Alfonso / J. Elejondo | ✅ | Base de `plazos.md`, `comercial/plazos_*.csv` y `comercial/cotizaciones_2024-2026.csv`. También tiene facturación y cobranza, clientes activos y potenciales de Taval, cronogramas y faltantes de materiales por OP. Tiene datos de contacto de personas: no se copian |
+| 2026-08 | **Seguimiento de presupuestos/Proyecto/facturación Rev1.xlsx** | C. Alfonso / J. Elejondo | ✅ | Base de `plazos.md`, `comercial/plazos_*.csv` y `comercial/cotizaciones_2024-2026.csv`. También tiene facturación y cobranza, clientes activos y potenciales de Taval, cronogramas y faltantes de materiales por OP. Los contactos de cada cotización quedan en `comercial/cotizaciones_2024-2026.csv` |
 
 ## Técnicos de ingeniería (para futuros módulos)
 

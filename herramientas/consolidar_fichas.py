@@ -3,7 +3,7 @@
 Uso: python herramientas/consolidar_fichas.py CARPETA_FICHAS SUFIJO   (ej.: ... fichas 2026)
 
 Genera:
-  conocimiento/fichas_<SUFIJO>/*.json                    fichas completas (sin emails)
+  conocimiento/fichas_<SUFIJO>/*.json                    fichas completas
   conocimiento/comercial/cotizaciones_<SUFIJO>.csv        una fila por cotización
   conocimiento/comercial/cotizaciones_<SUFIJO>_items.csv  ítems ofertados
   conocimiento/precios/proveedores_<SUFIJO>.csv           cotizaciones de proveedores
@@ -18,20 +18,10 @@ from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
 DESTINO = RAIZ / "conocimiento"
-EMAIL = re.compile(r"[\w.+-]+@[\w-]+\.[\w.]+")
 FAMILIAS = {"C": "Calentadores", "SEP": "Separadores", "F": "Filtros", "SK": "Skids", "M": "Manifolds",
             "CO": "Colectores", "P": "Puentes y tramos de medición", "CA": "Cañería / piping", "T": "Tanques",
             "TS": "Trampas scraper", "V": "Válvulas", "S": "Servicios / mano de obra", "OT": "Otros"}
 
-
-def limpiar(valor):
-    if isinstance(valor, str):
-        return EMAIL.sub("[email]", valor)
-    if isinstance(valor, list):
-        return [limpiar(v) for v in valor]
-    if isinstance(valor, dict):
-        return {k: limpiar(v) for k, v in valor.items()}
-    return valor
 
 
 def codigo_familia(texto) -> str:
@@ -54,7 +44,7 @@ def main():
     for archivo in sorted(origen.glob("*.json")):
         if archivo.name.startswith("asignacion"):
             continue
-        fichas.append(limpiar(json.loads(archivo.read_text(encoding="utf-8"))))
+        fichas.append(json.loads(archivo.read_text(encoding="utf-8")))
     carpeta_fichas = DESTINO / f"fichas_{sufijo}"
     carpeta_fichas.mkdir(parents=True, exist_ok=True)
     cot, items, prov = [], [], []

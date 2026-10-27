@@ -18,6 +18,8 @@ Todo lo que se necesita para cotizar, en un solo lugar y con una sola versión v
 | Archivo | Contenido |
 |---|---|
 | [`costos/tarifas.csv`](costos/tarifas.csv) | MO, END, pintura y acero en USD, con tipo (costo propio, tercero o usado al cotizar), fecha, fuente y vigencia. **Se mantiene a mano** |
+| `costos/costo_hora_planta.csv` | Costo de mano de obra propia por centro de costo (oct-2024): personas, sueldos, indirectos y costo hora |
+| `costos/sueldos_2024-10.csv` | Sueldos y cargas sociales por centro de costo (oct-2024), base del costo hora |
 | `precios/indice_precios.csv` | **Índice único de 2.680 precios**, del más reciente al más viejo: cotizaciones de proveedores 2026, base de componentes 2025, lista Renard dic-2025 y stock 2024 |
 | `precios/proveedores_2026.csv` | 359 cotizaciones de 220 proveedores en 2026, con precio y plazo |
 | `precios/precios_componentes.csv` | Base de precios por componente (25 rubros), 2025 |
@@ -74,4 +76,4 @@ Calificación → Desarrollo → Cotización → Negociación │ Ejecución →
 | Rehacer el índice de precios | `python herramientas/indice_precios.py` |
 | Cambiar una tarifa | Editar `costos/tarifas.csv` a mano, con fecha y fuente, y marcar la anterior como `vigente = no` |
 
-**Reglas:** una sola versión vigente de cada dato · todo valor con fecha y fuente · el factor lo define la dirección · **sin datos personales** (sueldos, emails y teléfonos de personas no se cargan).
+**Reglas:** una sola versión vigente de cada dato · todo valor con fecha y fuente · el factor lo define la dirección · **no se omite información**: el repositorio es privado y se guardan también contactos y sueldos, porque sirven para costear.

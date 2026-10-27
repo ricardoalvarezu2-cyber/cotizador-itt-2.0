@@ -16,7 +16,7 @@ Si un archivo es muy largo (planillas enormes), leé el principio y buscá con g
 Si hay varias revisiones, quedate con la más reciente (por fecha o "rev") y anotá que hubo revisiones.
 
 ## Reglas
-- NO incluyas datos de contacto de personas (emails, teléfonos, nombres de contactos). Nombres de empresas sí.
+- Incluí los contactos que aparezcan (cliente y proveedores: nombre, empresa, cargo, email, teléfono) en el campo "contactos". El repositorio es privado: no omitas información.
 - No inventes: si un dato no está, poné null. Indicá la confianza de lo que extraés.
 - Montos sin IVA cuando se pueda distinguir; indicá la moneda (USD o ARS).
 - Cada dato con el archivo de donde salió (ruta relativa a la carpeta).
@@ -38,6 +38,7 @@ Escribí UN archivo JSON (UTF-8) en la ruta que te indiquen, con esta estructura
   "condiciones": {"pago":"...","validez":"...","entrega":"EXW/...","moneda_y_ajuste":"...","notas_y_exclusiones":["..."]},
   "proveedores": [{"proveedor":"empresa","que":"...","precio":n,"moneda":"...","plazo_entrega":"...","fecha":"AAAA-MM-DD"}],
   "resultado": "ganada (hay OC) | perdida | sin resultado", "orden_compra": {"numero":"...","fecha":"...","monto":n}|null,
+  "contactos": [{"nombre":"...","empresa":"...","rol":"cliente|proveedor|ITT","cargo":"...","email":"...","telefono":"..."}],
   "aprendizajes": ["2 a 5 observaciones útiles para cotizar futuros pedidos parecidos (riesgos, criterios de precio, qué se cotizó aparte, etc.)"],
   "confianza": "alta|media|baja", "fuentes": {"campo":"archivo"}, "problemas": ["datos faltantes o contradictorios"]
 }
