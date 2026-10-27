@@ -43,6 +43,8 @@ Correspondencia con la estructura prevista:
 | `herramientas/indice_precios.py` | Arma el índice único de precios |
 | `herramientas/leer_dwg.py` | Lee un plano DWG/DXF: textos por capa e imágenes por zona |
 | `herramientas/armar_cotizacion.py` | **Arma una cotización completa** desde `cotizacion.json`: cómputo, planilla con fórmulas, informe interactivo y ofertas. Compara el cálculo en Python con la planilla y corre los controles |
+| `herramientas/buscar_material.py` | **Busca un material en el catálogo**: primero los precios de piezas iguales, después las similares con sus diferencias, con último precio, fecha y ruta de origen |
+| `herramientas/catalogo_materiales.py` | Arma el catálogo de materiales (`conocimiento/precios/catalogo_materiales.*`): una lista por familia de material con sus características, último precio de costo, fecha y ruta |
 | `herramientas/buscar_antecedentes.py` | **Busca los proyectos más parecidos** a un pedido nuevo (misma familia, diámetro, serie, material, cliente), priorizando los más nuevos y los que tienen planilla de costo |
 | `herramientas/indice_proyectos.py` | Arma el índice de proyectos 2025–2026 (`conocimiento/comercial/indice_proyectos.csv`) |
 | `herramientas/indices_inflacion.py` | Arma la tabla mensual de índices para el ajuste por inflación (`conocimiento/costos/indices_ajuste.csv`) |

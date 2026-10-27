@@ -25,6 +25,8 @@ Todo lo que se necesita para cotizar, en un solo lugar y con una sola versión v
 | `costos/indices_ajuste.csv` | Índices mensuales para ajustar precios por inflación: costo local en USD (IPC INDEC ÷ dólar BNA) y CPI de EE.UU., con fuente de cada dato. Se arma con `herramientas/indices_inflacion.py` |
 | `costos/costo_hora_planta.csv` | Costo de mano de obra propia por centro de costo (oct-2024): personas, sueldos, indirectos y costo hora |
 | `costos/sueldos_2024-10.csv` | Sueldos y cargas sociales por centro de costo (oct-2024), base del costo hora |
+| `precios/catalogo_materiales.xlsx` (y `.csv`) | **Catálogo de materiales**: 2.341 materiales en 10 familias (válvulas, accesorios forjados, accesorios BW, bridas, caños, niples, perfiles, instrumentos, juntas y bulonería, otros), cada una con sus columnas. Último precio de costo, fecha, proveedor, ruta de origen y precio ajustado a hoy. Se consulta con `herramientas/buscar_material.py` |
+| `precios/catalogo_materiales_historial.csv` | Todos los precios de cada material, con fecha y origen |
 | `precios/indice_precios.csv` | **Índice único de 2.746 precios**, del más reciente al más viejo: cotizaciones de proveedores 2026 y 2025, base de componentes 2025, lista Renard dic-2025 y stock 2024 |
 | `precios/proveedores_2026.csv` | 359 cotizaciones de 220 proveedores en 2026, con precio y plazo |
 | `precios/proveedores_2025.csv` | 72 cotizaciones de proveedores en 2025, con precio y plazo |

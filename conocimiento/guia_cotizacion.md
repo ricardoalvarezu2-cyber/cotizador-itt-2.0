@@ -58,6 +58,17 @@ python herramientas/buscar_antecedentes.py --familia CO --texto "colector de cam
 - Cada resultado dice por qué se parece y qué carpeta abrir.
 - El índice (`conocimiento/comercial/indice_proyectos.csv`) cubre las cotizaciones de 2025–2026 y las armadas con el cotizador. Se actualiza solo con `armar_cotizacion.py`, o a mano con `python herramientas/indice_proyectos.py`.
 
+**Para los materiales que no estén en los antecedentes, el catálogo de materiales:**
+
+```bash
+python herramientas/buscar_material.py "valvula retencion 2\" serie 600 cuerpo A216 WCB trim 316 NPT"
+```
+
+- Muestra primero los precios de una pieza **IGUAL** y después las **SIMILARES**, diciendo en qué difieren.
+- De cada uno da el último precio de costo, la fecha, el proveedor y la ruta de origen (carpeta de Z: o planilla, y el archivo).
+- Un similar se carga en `cotizacion.json` con `"coincide": "similar"` y su diferencia.
+- El catálogo (`conocimiento/precios/catalogo_materiales.xlsx`) tiene una hoja por familia de material.
+
 Después, completar con las fuentes de abajo:
 
 Por orden de prioridad:
