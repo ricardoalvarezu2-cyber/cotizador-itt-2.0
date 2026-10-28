@@ -10,6 +10,7 @@ Fuentes (etapa 1, sin IA):
   conocimiento/precios/proveedores_2025/2026.csv   cotizaciones de proveedores (solo las que traen precio unitario)
   cotizaciones/*/cotizacion.json                   fuentes de precio cargadas en cotizaciones (no los estimados)
   cotizaciones_web/*/cotizacion.json               las de la página incorporadas a la base (ver cotizaciones_base.py)
+  conocimiento/precios/listas_vendedor.csv          listas que carga Ventas (herramientas/listas_vendedor.py)
 
 Salidas:
   conocimiento/precios/catalogo_materiales_historial.csv   un renglón por precio, con su clave de material
@@ -642,6 +643,14 @@ def leer_fuentes():
                 "cotización", "Precios de acero (J. Elejondo)", r["fuente"], "", "conocimiento/precios/acero_por_kg.csv", "kg",
                 extra=f"pesos con IVA ÷ 1,21 ÷ TC del documento {r['tc_documento']}; +10% por recortes: {float(r['usd_kg_con_recortes']):.2f}; no incluye corte, plegado ni rolado",
                 iva=("con IVA en el documento: ya dividido por 1,21", 1.0))
+    # listas que carga Ventas (fuentes_originales/listas_vendedor/<fecha de carga>/, herramientas/listas_vendedor.py)
+    ruta_lv = PRECIOS / "listas_vendedor.csv"
+    if ruta_lv.exists():
+        for r in csv.DictReader(open(ruta_lv, encoding="utf-8")):
+            prov = f"{r['proveedor']} (cód. {r['codigo']})" if r["codigo"] else r["proveedor"]
+            add(r["descripcion"], num(r["precio"]), r["moneda"], r["fecha"], r["tipo_precio"], prov, r["archivo_origen"],
+                f"código {r['codigo']}" if r["codigo"] else "", "conocimiento/precios/listas_vendedor.csv", r["unidad"],
+                extra=f"{r['nota']}; documento del {r['fecha']}", iva=iva_de(r["iva"]))
     # listas y cotizaciones nuevas que llegan por los pedidos de la página (web/LEEME.md, "Pedidos desde la página")
     ruta_ln = PRECIOS / "listas_nuevas.csv"
     if ruta_ln.exists():
