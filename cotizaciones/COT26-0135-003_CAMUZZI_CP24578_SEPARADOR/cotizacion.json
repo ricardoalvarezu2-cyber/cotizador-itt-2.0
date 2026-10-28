@@ -252,12 +252,13 @@
    "unidad": "un",
    "fuentes": [
     {
-     "tipo": "est",
-     "precio": 1347.0,
-     "proveedor": "Estimado: 415 kg × 1,80 USD/kg (chapa Sacde/12) + 600 de corte y mecanizado",
-     "origen": "cotizaciones/COT26-0135-003_CAMUZZI_CP24578_SEPARADOR/bitacora.md",
-     "fecha": "2026-10-28",
-     "coincide": "sin_ref"
+     "tipo": "ant",
+     "precio": 747.0,
+     "proveedor": "415 kg × 1,80 USD/kg (chapa SA-516-70, planilla Sacde/12)",
+     "origen": "fuentes_originales/ofertas_texto/Sacde/12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios/4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx.txt",
+     "fecha": "2025-12-18",
+     "coincide": "similar",
+     "diferencia": "solo la chapa: el corte y el mecanizado de los agujeros, a cotizar"
     }
    ]
   },
@@ -271,13 +272,13 @@
    "unidad": "un",
    "fuentes": [
     {
-     "tipo": "est",
-     "precio": 400,
-     "proveedor": "Estimado: elemento coalescente 0,3 µm 140 × 914 (Gora cotizó 90 el de separador de polvo cód. 46600; Sacde/12 pagó 854 por elementos más grandes)",
-     "origen": "cotizaciones/COT26-0135-003_CAMUZZI_CP24578_SEPARADOR/bitacora.md",
-     "fecha": "2026-10-28",
-     "coincide": "sin_ref",
-     "diferencia": "pedir cotización a Gora / Pall con el caudal por elemento a 25 bar"
+     "tipo": "ant",
+     "precio": 854,
+     "proveedor": "Planilla Sacde/12 FC-301/302: elemento filtrante coalescedor (16 u a 854)",
+     "origen": "fuentes_originales/ofertas_texto/Sacde/12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios/4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx.txt",
+     "fecha": "2025-12-18",
+     "coincide": "similar",
+     "diferencia": "elemento de otro tamaño (no informado); pedir el 0,3 µm 140 × 914 a Gora / Pall"
     }
    ]
   },
@@ -348,12 +349,13 @@
    "unidad": "un",
    "fuentes": [
     {
-     "tipo": "est",
-     "precio": 250,
-     "proveedor": "Estimado: brida ciega 6\" #600 A105 (WN 6\" #600 226 + 10%)",
-     "origen": "cotizaciones/COT26-0135-003_CAMUZZI_CP24578_SEPARADOR/bitacora.md",
-     "fecha": "2026-10-28",
-     "coincide": "sin_ref"
+     "tipo": "cot",
+     "precio": 248.75,
+     "proveedor": "Renard: brida WN 6\" #600 sch 80 a 226,14 (BRI-01320) + 10% (ciega más pesada)",
+     "origen": "conocimiento/precios/catalogo_materiales.csv",
+     "fecha": "2025-07-11",
+     "coincide": "similar",
+     "diferencia": "precio de la WN de la misma medida y serie"
     }
    ]
   },
@@ -483,12 +485,12 @@
    "fuentes": [
     {
      "tipo": "est",
-     "precio": 4000,
-     "proveedor": "Estimado: purga automática #600 por cámara (sin precio en la base)",
-     "origen": "cotizaciones/COT26-0135-003_CAMUZZI_CP24578_SEPARADOR/bitacora.md",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
      "fecha": "2026-10-28",
      "coincide": "sin_ref",
-     "diferencia": "pedir cotización"
+     "diferencia": "purga automática #600: no hay precio ni pieza parecida"
     }
    ]
   },
@@ -503,12 +505,12 @@
    "fuentes": [
     {
      "tipo": "est",
-     "precio": 1800,
-     "proveedor": "Estimado: switch de nivel Ex-d para 70 bar (sin precio en la base)",
-     "origen": "cotizaciones/COT26-0135-003_CAMUZZI_CP24578_SEPARADOR/bitacora.md",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
      "fecha": "2026-10-28",
      "coincide": "sin_ref",
-     "diferencia": "pedir cotización"
+     "diferencia": "switch de nivel Ex-d para 70 bar: no hay precio ni pieza parecida"
     }
    ]
   },
@@ -541,12 +543,13 @@
    "unidad": "un",
    "fuentes": [
     {
-     "tipo": "est",
-     "precio": 1200,
-     "proveedor": "Estimado: Weisz diferencial 0-2 bar 500 (TAVAL/40, 01-2026) + contacto seco y aguja de arrastre",
-     "origen": "cotizaciones/COT26-0135-003_CAMUZZI_CP24578_SEPARADOR/bitacora.md",
-     "fecha": "2026-10-28",
-     "coincide": "sin_ref"
+     "tipo": "ant",
+     "precio": 500,
+     "proveedor": "Weisz: manómetro diferencial 0-2 bar (planilla TAVAL/40)",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/4.Armado de la Oferta Comercial/LM costo Filtros rev.1.xlsx.txt",
+     "fecha": "2026-01-15",
+     "coincide": "similar",
+     "diferencia": "sin aguja de arrastre ni contacto seco: pedir cotización"
     }
    ]
   },
@@ -581,11 +584,12 @@
    "fuentes": [
     {
      "tipo": "est",
-     "precio": 1200,
-     "proveedor": "Estimado: internos según el diseño (CAMUZZI/30 incluía caja de chicanas Gora 3.395 para un separador de polvo)",
-     "origen": "cotizaciones/COT26-0135-003_CAMUZZI_CP24578_SEPARADOR/bitacora.md",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
      "fecha": "2026-10-28",
-     "coincide": "sin_ref"
+     "coincide": "sin_ref",
+     "diferencia": "internos del separador: dependen del diseño; no hay pieza parecida"
     }
    ]
   },
@@ -599,12 +603,13 @@
    "unidad": "gl",
    "fuentes": [
     {
-     "tipo": "est",
-     "precio": 400,
-     "proveedor": "Estimado: 1 junta 6\" + 6 de 2\" + 7 de 1\" #600 con espárragos",
-     "origen": "cotizaciones/COT26-0135-003_CAMUZZI_CP24578_SEPARADOR/bitacora.md",
-     "fecha": "2026-10-28",
-     "coincide": "sin_ref"
+     "tipo": "ant",
+     "precio": 350,
+     "proveedor": "Juntas MS Juntas (cot. 48.445/48.729: 2,30 a 5,82) y espárragos de planillas 2026 (2,50 a 10): 1 junta 6\" + 6 de 2\" + 7 de 1\" #600 con 12, 48 y 28 espárragos",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/72- Lic 64675 - SKID CONCENTRADOR - UTE NARAMBUE/5.Proveedores 3ros/COTIZACION_N§_048729.pdf.txt",
+     "fecha": "2026-07-06",
+     "coincide": "similar",
+     "diferencia": "precios de piezas parecidas por renglón"
     }
    ]
   },
@@ -706,12 +711,13 @@
    "unidad": "gl",
    "fuentes": [
     {
-     "tipo": "est",
-     "precio": 4000,
-     "proveedor": "Estimado: ≈ 60 placas grandes y 20 chicas + 2 servicios (DB NDT 08-2026: placa grande 8, servicio 408; Antonelli más caro)",
-     "origen": "cotizaciones/COT26-0135-003_CAMUZZI_CP24578_SEPARADOR/bitacora.md",
-     "fecha": "2026-10-28",
-     "coincide": "sin_ref"
+     "tipo": "ant",
+     "precio": 1426.0,
+     "proveedor": "Tarifas DB NDT (tarifas.csv): 60 placas grandes × 8 + 20 chicas × 6,50 + 2 servicios × 408",
+     "origen": "conocimiento/costos/tarifas.csv",
+     "fecha": "2026-08-31",
+     "coincide": "similar",
+     "diferencia": "placas estimadas por metro de costura; confirmar con el mapa de soldaduras"
     }
    ]
   },
@@ -721,16 +727,17 @@
    "grupo": "servicio",
    "descripcion": "Prueba hidráulica (1,5 × presión de diseño) con registro",
    "especificacion": "",
-   "cantidad": 1,
-   "unidad": "gl",
+   "cantidad": 16,
+   "unidad": "h",
    "fuentes": [
     {
-     "tipo": "est",
-     "precio": 900,
-     "proveedor": "Estimado: recipiente de ≈ 5 m³: llenado, prueba y secado",
-     "origen": "cotizaciones/COT26-0135-003_CAMUZZI_CP24578_SEPARADOR/bitacora.md",
-     "fecha": "2026-10-28",
-     "coincide": "sin_ref"
+     "tipo": "ant",
+     "precio": 13,
+     "proveedor": "Prueba hidráulica por hora de planta (END-00215, MO ITT)",
+     "origen": "conocimiento/precios/catalogo_servicios.csv",
+     "fecha": "2026-03-10",
+     "coincide": "similar",
+     "diferencia": "16 h para un recipiente de ≈ 5 m³ (llenado, 6 h de prueba, vaciado y secado)"
     }
    ]
   },

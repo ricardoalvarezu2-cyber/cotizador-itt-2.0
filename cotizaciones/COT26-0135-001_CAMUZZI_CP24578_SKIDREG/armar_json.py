@@ -22,6 +22,11 @@ def poner(pos, fuentes, **extra):
     items[pos].update(extra)
 
 
+def SIN(motivo):
+    """Sin referencia ni pieza parecida: no se adivina (P4 ter, decisión de Matías 28-10-2026)."""
+    return [{"tipo": "est", "precio": 0, "proveedor": "SIN PRECIO: pedir cotización", "origen": "—", "fecha": "2026-10-28", "coincide": "sin_ref", "diferencia": motivo}]
+
+
 poner("1", [fuente("cot", 9545.0, "Tormene Americana · oferta TA7785A pos. 1 (TA956-FC+SSV monitor)", TORMENE, "2026-06-16", "similar",
                    "DN3\" #300 (pedido #150), con bloqueo OPSO e indicador de posición; condiciones P1 25/7 bar, P2 1,5 bar, Q 8.000 Sm3/h (acá 15-10 / 4 bar, 6.000 Sm3/h). Pedir cotización para #150 y estas condiciones")])
 poner("2", [fuente("cot", 6073.0, "Tormene Americana · oferta TA7785A pos. 2 (TA956-DFO activo silenciado)", TORMENE, "2026-06-16", "similar",
@@ -30,9 +35,9 @@ poner("2", [fuente("cot", 6073.0, "Tormene Americana · oferta TA7785A pos. 2 (T
 items["3"]["taval"] = items["4"]["taval"] = True
 poner("9", items["9"]["fuentes"], descripcion="Te normal 6\" STD A-234 WPB BW (el plano dice A-105: se cotiza WPB, desvío a declarar)")
 poner("10", [fuente("lista", 283.84, "Renard (cód. 3533) · ABW-00423", "fuentes_originales/renar_lista_2025-12.xlsx", "2025-12-26", "igual")])
-poner("15", [fuente("est", 250.0, "Estimado: sin precio de ABAC en la base (válvula de bloqueo ABAC VHP con manómetro 595, Pluspetrol 02-2025)", "cotizaciones/COT26-0135-001_CAMUZZI_CP24578_SKIDREG/bitacora.md", "2026-10-28", "sin_ref", "pedir cotización a ABAC")])
-poner("16", [fuente("est", 180.0, "Estimado: válvula de alivio roscada 1/2\" de capacidad reducida (sin precio en la base)", "cotizaciones/COT26-0135-001_CAMUZZI_CP24578_SKIDREG/bitacora.md", "2026-10-28", "sin_ref", "pedir cotización (tipo S-71)")])
-poner("18", [fuente("est", 120.0, "Estimado: termovaina 3/4\" NPT AISI 316 (la base solo tiene termovainas bridadas 1½\"-2\" del stock 2024)", "cotizaciones/COT26-0135-001_CAMUZZI_CP24578_SKIDREG/bitacora.md", "2026-10-28", "sin_ref", "pedir cotización")])
+poner("15", [fuente("ant", 170.0, "Manifold ABAC de 3 vías M1-C-T AISI 304/316 (OTR-02980, planilla TAVAL/40)", "fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/4.Armado de la Oferta Comercial/LM costo Filtros rev.1.xlsx.txt", "2026-01-15", "similar", "manifold de 3 vías; pedir cotización de la toma multiport a ABAC")])
+poner("16", SIN("válvula de alivio roscada 1/2\" tipo S-71: no hay precio ni pieza parecida (solo PSV de 1 1/2\" x 2\")"))
+poner("18", SIN("termovaina 3/4\" NPT AISI 316: la base solo tiene termovainas bridadas 1 1/2\"-2\" (otra pieza)"))
 poner("20", [fuente("cot", round(330 * 17.4 / 13.4 * 1.10, 2), "Grupo Provemet cot. 236623: UPN 120 a USD 17,40/m (13,40 kg/m) = 1,30 USD/kg +10% recortes, × 330 kg estimados (medidos del plano: 3.700 × 1.630 mm, perimetral, 4 travesaños, soportes y cáncamos)",
                    "fuentes_originales/listas_vendedor/2026-10-28/provemet_cotizacion_236623_perfiles_2025-07-01.pdf", "2025-07-01", "similar", "kilos estimados del plano; confirmar con el típico SCE-RE-110-0006")],
      especificacion="Skid 3.700 × 1.630 mm, UPN 120 perimetral y travesaños, soportes de cañería, 4 cáncamos y oreja de PAT (330 kg estimados)")
@@ -40,7 +45,7 @@ poner("19", [fuente("ant", 230.0, "Bloqueo y purga ABAC 80 (VAL-03162, planilla 
                     "manómetro según SCE-PR-506-1000 (AISI 316, certificado de calibración): confirmar (revisión independiente: faltaba el manómetro)")])
 poner("A", [fuente("ant", 856.63, "ABB · Transmisor de presión (INS-02708, planilla TAVAL/72)", "fuentes_originales/ofertas_texto/TAVAL/72- Lic 64675 - SKID CONCENTRADOR - UTE NARAMBUE", "2026-08-14", "similar", "rango a definir 0-25 bar; sin válvula de bloqueo y purga (va en pos 19)")])
 poner("B", [fuente("ant", 1448.33, "ABB · Transmisor de temperatura (INS-02714, planilla TAVAL/72)", "fuentes_originales/ofertas_texto/TAVAL/72- Lic 64675 - SKID CONCENTRADOR - UTE NARAMBUE", "2026-08-14", "similar", "con sensor; rango 0-100 °C a confirmar")])
-poner("C", [fuente("est", 350.0, "Estimado: fin de carrera / switch de posición 24 V para la válvula monitora", "cotizaciones/COT26-0135-001_CAMUZZI_CP24578_SKIDREG/bitacora.md", "2026-10-28", "sin_ref", "confirmar si viene con la reguladora (Tormene ofrece indicador de posición)")])
+poner("C", SIN("switch de posición de la monitora: confirmar si viene con la reguladora (Tormene ofrece indicador de posición)"))
 # compra extra de caño: media tira (6 m), no 12 m: con 1-2 m usados una tira de 12 m deja más del 80% de sobrante; consultar recortes a Compras
 for p, usado in (("21", 1.8), ("22", 2.0), ("23", 2.25), ("24", 1.0)):
     b = items[p + "b"]
@@ -74,7 +79,7 @@ for it in auto["items"]:
 lista.append({"id": "S05", "pos": "EST", "grupo": "mo", "descripcion": "Fabricación del skid y soportes (330 kg estimados)", "especificacion": "kg × tarifa por kg de estructura de skid",
               "cantidad": 330, "unidad": "kg", "fuentes": [fuente("ant", 3.0, "Fabricación de estructura de skid por kg (tercero Ledesma): tarifas.csv", "YPF/28 Lic 69343 planilla PC0 (850 kg × 3 = 2.550)", "2026-10-10", "similar", "kilos estimados")]})
 lista.append({"id": "S06", "pos": "PF", "grupo": "servicio", "descripcion": "Prueba de fugas con nitrógeno a 5,5 bar con el equipo terminado (especificación §5.4.3)", "especificacion": "N2 + horas de planta",
-              "cantidad": 1, "unidad": "gl", "fuentes": [fuente("est", 250.0, "Estimado: tubos de N2 y 8 h de planta (revisión independiente: la prueba no tenía renglón propio)", "cotizaciones/COT26-0135-001_CAMUZZI_CP24578_SKIDREG/bitacora.md", "2026-10-28", "sin_ref", "")]})
+              "cantidad": 1, "unidad": "gl", "fuentes": SIN("prueba de fugas con N2 a 5,5 bar: no hay tarifa ni antecedente")})
 for it in lista:  # pintura: sumar el skid (≈ 25 m de UPN 120 ≈ 10,7 m²), que precotizar no cuenta cuando el skid va por unidad
     if it["pos"] == "PIN":
         it["cantidad"] = round(it["cantidad"] + 10.7, 3)

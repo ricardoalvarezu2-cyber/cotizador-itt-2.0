@@ -607,13 +607,13 @@
    "especificacion": "Plano: 1/2\" · 3000 · AISI 316 · NPT · ABAC",
    "fuentes": [
     {
-     "tipo": "est",
-     "precio": 250.0,
-     "proveedor": "Estimado: sin precio de ABAC en la base (válvula de bloqueo ABAC VHP con manómetro 595, Pluspetrol 02-2025)",
-     "origen": "cotizaciones/COT26-0135-001_CAMUZZI_CP24578_SKIDREG/bitacora.md",
-     "fecha": "2026-10-28",
-     "coincide": "sin_ref",
-     "diferencia": "pedir cotización a ABAC"
+     "tipo": "ant",
+     "precio": 170.0,
+     "proveedor": "Manifold ABAC de 3 vías M1-C-T AISI 304/316 (OTR-02980, planilla TAVAL/40)",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/4.Armado de la Oferta Comercial/LM costo Filtros rev.1.xlsx.txt",
+     "fecha": "2026-01-15",
+     "coincide": "similar",
+     "diferencia": "manifold de 3 vías; pedir cotización de la toma multiport a ABAC"
     }
    ]
   },
@@ -628,12 +628,12 @@
    "fuentes": [
     {
      "tipo": "est",
-     "precio": 180.0,
-     "proveedor": "Estimado: válvula de alivio roscada 1/2\" de capacidad reducida (sin precio en la base)",
-     "origen": "cotizaciones/COT26-0135-001_CAMUZZI_CP24578_SKIDREG/bitacora.md",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
      "fecha": "2026-10-28",
      "coincide": "sin_ref",
-     "diferencia": "pedir cotización (tipo S-71)"
+     "diferencia": "válvula de alivio roscada 1/2\" tipo S-71: no hay precio ni pieza parecida (solo PSV de 1 1/2\" x 2\")"
     }
    ]
   },
@@ -668,12 +668,12 @@
    "fuentes": [
     {
      "tipo": "est",
-     "precio": 120.0,
-     "proveedor": "Estimado: termovaina 3/4\" NPT AISI 316 (la base solo tiene termovainas bridadas 1½\"-2\" del stock 2024)",
-     "origen": "cotizaciones/COT26-0135-001_CAMUZZI_CP24578_SKIDREG/bitacora.md",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
      "fecha": "2026-10-28",
      "coincide": "sin_ref",
-     "diferencia": "pedir cotización"
+     "diferencia": "termovaina 3/4\" NPT AISI 316: la base solo tiene termovainas bridadas 1 1/2\"-2\" (otra pieza)"
     }
    ]
   },
@@ -928,12 +928,12 @@
    "fuentes": [
     {
      "tipo": "est",
-     "precio": 350.0,
-     "proveedor": "Estimado: fin de carrera / switch de posición 24 V para la válvula monitora",
-     "origen": "cotizaciones/COT26-0135-001_CAMUZZI_CP24578_SKIDREG/bitacora.md",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
      "fecha": "2026-10-28",
      "coincide": "sin_ref",
-     "diferencia": "confirmar si viene con la reguladora (Tormene ofrece indicador de posición)"
+     "diferencia": "switch de posición de la monitora: confirmar si viene con la reguladora (Tormene ofrece indicador de posición)"
     }
    ]
   },
@@ -1094,11 +1094,12 @@
    "fuentes": [
     {
      "tipo": "est",
-     "precio": 250.0,
-     "proveedor": "Estimado: tubos de N2 y 8 h de planta (revisión independiente: la prueba no tenía renglón propio)",
-     "origen": "cotizaciones/COT26-0135-001_CAMUZZI_CP24578_SKIDREG/bitacora.md",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
      "fecha": "2026-10-28",
-     "coincide": "sin_ref"
+     "coincide": "sin_ref",
+     "diferencia": "prueba de fugas con N2 a 5,5 bar: no hay tarifa ni antecedente"
     }
    ]
   }

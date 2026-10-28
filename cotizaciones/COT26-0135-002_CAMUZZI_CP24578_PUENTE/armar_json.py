@@ -26,6 +26,11 @@ def poner(pos, fuentes, **extra):
     items[pos].update(extra)
 
 
+def SIN(motivo):
+    """Sin referencia ni pieza parecida: no se adivina (P4 ter, decisión de Matías 28-10-2026)."""
+    return [{"tipo": "est", "precio": 0, "proveedor": "SIN PRECIO: pedir cotización", "origen": "—", "fecha": "2026-10-28", "coincide": "sin_ref", "diferencia": motivo}]
+
+
 poner("1", [fuente("est", 9000.0, "Estimado: filtro FM-6 #150 simple módulo fabricado por ITT (venta del FM-6 #300 en CAMUZZI/23 13.543 ÷ 1,35 = 10.032 de costo; el #150 lleva menos espesor y bridas más livianas)",
                    "fuentes_originales/ofertas_texto/CAMUZZI/23.Filtro FM y skid salto de regulacion de presion/4.Armado de la Oferta Comercial/Concurso 17584 Vuelta 2.xlsx.txt", "2025-03-06", "similar",
                    "costo armado del filtro completo (materiales, tapa, elemento, MO, RX, PH); control: FM3 S150 de TAVAL/40 costó 5.575 y el FM8 S600 14.375 (01-2026)"),
@@ -35,7 +40,7 @@ poner("3", [fuente("lista", 740.0, "Taval (Lista 30 × 0.52) · VAL-04474 (BF615
 items["4"]["taval"] = True
 poner("7", items["7"]["fuentes"], descripcion="Te normal 6\" STD A-234 WPB BW (el plano dice A-105: desvío a declarar)")
 poner("8", items["8"]["fuentes"], descripcion="Te normal 4\" STD A-234 WPB BW (el plano dice A-105: desvío a declarar)")
-poner("11", [fuente("est", 120.0, "Estimado: termovaina 3/4\" NPT AISI 316 (la base solo tiene termovainas bridadas del stock 2024)", BIT, "2026-10-28", "sin_ref", "pedir cotización")])
+poner("11", SIN("termovaina 3/4\" NPT AISI 316: la base solo tiene termovainas bridadas 1 1/2\"-2\" (otra pieza)"))
 poner("13", [fuente("cot", round(200 * 17.4 / 13.4 * 1.10, 2), "Grupo Provemet cot. 236623: UPN 120 a USD 17,40/m (1,30 USD/kg +10% recortes) × 200 kg estimados (3.530 × 800 mm, soportes y orejas)",
                     "fuentes_originales/listas_vendedor/2026-10-28/provemet_cotizacion_236623_perfiles_2025-07-01.pdf", "2025-07-01", "similar", "kilos estimados del plano")],
      especificacion="Skid 3.530 × 800 mm, soportes de cañería (4) y oreja de PAT (200 kg estimados)")
@@ -66,7 +71,7 @@ for it in auto["items"]:
 lista.append({"id": "S05", "pos": "EST", "grupo": "mo", "descripcion": "Fabricación del skid y soportes (200 kg estimados)", "especificacion": "kg × tarifa por kg de estructura de skid", "cantidad": 200, "unidad": "kg",
               "fuentes": [fuente("ant", 3.0, "Fabricación de estructura de skid por kg (tercero Ledesma): tarifas.csv", "YPF/28 Lic 69343 planilla PC0 (850 kg × 3 = 2.550)", "2026-10-10", "similar", "kilos estimados")]})
 lista.append({"id": "S06", "pos": "PF", "grupo": "servicio", "descripcion": "Prueba de fugas con nitrógeno a 5,5 bar con el equipo terminado (especificación §5.4.3)", "especificacion": "N2 + horas de planta",
-              "cantidad": 1, "unidad": "gl", "fuentes": [fuente("est", 250.0, "Estimado: tubos de N2 y 8 h de planta (revisión independiente: la prueba no tenía renglón propio)", "cotizaciones/COT26-0135-002_CAMUZZI_CP24578_PUENTE/bitacora.md", "2026-10-28", "sin_ref", "")]})
+              "cantidad": 1, "unidad": "gl", "fuentes": SIN("prueba de fugas con N2 a 5,5 bar: no hay tarifa ni antecedente")})
 base["items"] = [items.get(i["pos"], i) if i["grupo"] == "material" else i for i in lista]
 base["parametros"].update({"TRANS": 1, "TC": 1541.43, "TR_ARS": 700000, "TR_EMB": 150, "TR_F": 1.0})
 base["plazo"] = {"dias": 105, "texto": "desde OC · entregado en Transporte Cruz del Sur (Tapiales)",

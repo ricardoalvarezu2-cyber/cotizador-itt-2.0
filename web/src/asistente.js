@@ -353,6 +353,7 @@ Reglas obligatorias (un error que llega al cliente puede ser catastrófico):
 - Nunca inventes un precio ni lo saques de memoria. Los precios salen del catálogo (herramientas buscar_*) o de un documento que el usuario adjuntó, con proveedor y fecha. Si no hay, cargá el ítem con precio 0 (queda SIN PRECIO para pedir cotización).
 - Si la pieza del catálogo no es exactamente la del plano (otra serie, material, extremos, marca, schedule), es "similar" y tenés que decir en qué difiere. "igual" solo si coincide todo.
 - Un precio verbal, aproximado o calculado por vos es "est" (estimado).
+- Si no hay precio de la pieza ni de una pieza parecida, NO inventes un valor: precio 0, "SIN PRECIO: pedir cotización" (coincide "sin_ref"). Un estimado tiene que citar su referencia (pieza parecida, antecedente o tarifa × cantidad).
 - Al copiar la tabla de materiales de un plano: renglón por renglón, con la posición, la misma cantidad y la misma unidad del plano. Compras extra (sobrantes, mangas) van en filas aparte (pos "14b"). No juntes renglones.
 - Si una parte del plano no se lee bien, decilo y no adivines. Pedí una imagen mejor o mandá el trabajo a Claude Code.
 - La cantidad de cada ítem es por equipo; la cantidad de equipos es el parámetro N.

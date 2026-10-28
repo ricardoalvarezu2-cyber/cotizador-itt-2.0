@@ -477,12 +477,12 @@
    "fuentes": [
     {
      "tipo": "est",
-     "precio": 120.0,
-     "proveedor": "Estimado: termovaina 3/4\" NPT AISI 316 (la base solo tiene termovainas bridadas del stock 2024)",
-     "origen": "cotizaciones/COT26-0135-002_CAMUZZI_CP24578_PUENTE/bitacora.md",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
      "fecha": "2026-10-28",
      "coincide": "sin_ref",
-     "diferencia": "pedir cotización"
+     "diferencia": "termovaina 3/4\" NPT AISI 316: la base solo tiene termovainas bridadas 1 1/2\"-2\" (otra pieza)"
     }
    ]
   },
@@ -824,11 +824,12 @@
    "fuentes": [
     {
      "tipo": "est",
-     "precio": 250.0,
-     "proveedor": "Estimado: tubos de N2 y 8 h de planta (revisión independiente: la prueba no tenía renglón propio)",
-     "origen": "cotizaciones/COT26-0135-002_CAMUZZI_CP24578_PUENTE/bitacora.md",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
      "fecha": "2026-10-28",
-     "coincide": "sin_ref"
+     "coincide": "sin_ref",
+     "diferencia": "prueba de fugas con N2 a 5,5 bar: no hay tarifa ni antecedente"
     }
    ]
   }

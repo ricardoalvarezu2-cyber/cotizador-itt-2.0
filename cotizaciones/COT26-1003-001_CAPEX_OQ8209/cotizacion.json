@@ -99,7 +99,8 @@
   "<b>Factores:</b> ahora son dos: materiales, y mano de obra y servicios. Los dos van en 1,35 como en la PRES 24879, donde la MO de Ledesma dentro del puente entró a 1,35. El 1,40 quedaba para MO vendida sola.",
   "<b>Ajuste por inflación (27/10):</b> cada precio se actualiza desde su fecha hasta hoy. Los materiales siguen el CPI de EE.UU. y la mano de obra y los servicios, el IPC del INDEC dividido por el dólar BNA. Suma +3,3% al costo.",
   "<b>Revisión contra el plano (27/10):</b> el caño 14 pasa a 1,9 m más el sobrante de la tira en una fila aparte. El manómetro tiene que tener conexión 1/2\" (el de stock es 1/4\"). Se suman las 2 soldaduras de las cuplas 23. Se completaron extremos y materiales de cada posición.",
-  "<b>Accesorios forjados:</b> ahora salen de la lista Renard (dic-2025), con su código. En el borrador estaban estimados."
+  "<b>Accesorios forjados:</b> ahora salen de la lista Renard (dic-2025), con su código. En el borrador estaban estimados.",
+  "<b>28-10-2026:</b> manga termocontraíble (35), sellador (15) e ingeniería/dossier (100) estaban supuestos sin referencia: pasan a SIN PRECIO, pedir cotización (regla P4 ter de Matías)."
  ],
  "pedido": {
   "eyebrow": "OR 53081 · emitida 19-10-2026",
@@ -659,12 +660,12 @@
    "fuentes": [
     {
      "tipo": "est",
-     "precio": 35,
-     "proveedor": "ESTIMADO sin referencia: pedir precio a Compras",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-10-27",
+     "fecha": "2026-10-28",
      "coincide": "sin_ref",
-     "diferencia": "Precio supuesto sin artículo de referencia"
+     "diferencia": "manga termocontraíble: no hay precio ni pieza parecida"
     }
    ]
   },
@@ -988,12 +989,12 @@
    "fuentes": [
     {
      "tipo": "est",
-     "precio": 15,
-     "proveedor": "Estimado",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-10-27",
+     "fecha": "2026-10-28",
      "coincide": "sin_ref",
-     "diferencia": "Supuesto sin referencia"
+     "diferencia": "sellador de roscas: no hay precio ni pieza parecida"
     }
    ]
   },
@@ -1055,12 +1056,12 @@
    "fuentes": [
     {
      "tipo": "est",
-     "precio": 100,
-     "proveedor": "Estimado",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-10-27",
+     "fecha": "2026-10-28",
      "coincide": "sin_ref",
-     "diferencia": "Supuesto sin referencia"
+     "diferencia": "ingeniería, calidad y dossier: no hay antecedente con el mismo alcance; cargar horas × tarifa cuando se definan"
     }
    ]
   }

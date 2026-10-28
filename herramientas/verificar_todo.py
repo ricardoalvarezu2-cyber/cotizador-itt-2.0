@@ -19,7 +19,7 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent.parent
 H = RAIZ / "herramientas"
 CAPEX = "cotizaciones/COT26-1003-001_CAPEX_OQ8209"
-CONTROL = {"precio_unitario": "7,620.59"}  # 28/10/2026: dólar promedio BNA, valores del cepo estimados, sin renglones de IVA
+CONTROL = {"precio_unitario": "7,366.12"}  # 28/10/2026: dólar promedio BNA, cepo estimado, sin IVA; sin los 3 valores supuestos sin referencia (P4 ter)
 fallas = []
 
 
