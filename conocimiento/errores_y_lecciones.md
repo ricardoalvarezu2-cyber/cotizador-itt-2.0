@@ -126,3 +126,12 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 | 79 | Pintura × 3 fijo (corta con válvulas grandes, triplicaba caño recto) | m² por pieza con largo equivalente (brida 1,5 D, codo 2,4 D, tee 3 D, válvula 6 D) |
 | 80 | No había modo prefabricado: materiales del cliente cotizados, 0 juntas en caño recto, factor de espesor por pulg-eq, pintura dentro, horas de skid | `provee`/"provisto por el cliente" → precio 0; juntas de empalme entre barras; `parametros.modo = "prefabricado"`: pulgada diametral base sch 40, tarifa de prefabricado de terceros, +5% de rechazos, pintura aparte, sin horas ni PH |
 | 81 | Lista 30 de Taval y cotizaciones de TAVAL/72 y /78 fuera del catálogo; historial con otra pieza (niple 2" en un código de 1/2") | Lista 30 × 0,52 en el catálogo (720 precios, `precios/taval_lista30.csv`); Complemet 275397 y MS 48.729 / 49.323 renglón por renglón; al volver al historial se exige el mismo Ø, serie y schedule |
+
+### Camuzzi CP 24578 (COT26-0135-001/002/003) · revisión independiente del 28-10-2026
+
+| # | Error | Corrección |
+|---|---|---|
+| 82 | Separador coalescente: el diámetro salió del área de los elementos (34 × paso² + "huelgo") y no entraban en Ø44"; el caudal por elemento se tomó de otro coalescedor sin saber el elemento | Dimensionar con el arreglo real (anillos completos de un paso triangular) y con el caudal por elemento del fabricante; presión de diseño explícita |
+| 83 | Precio de un elemento de separador de polvo (Gora 90) usado para un coalescente de 0,3 µm | No usar como similar un elemento de otra función: estimado con aviso hasta cotizar |
+| 84 | `precotizar` no encontró la te de reducción "8\"x6\"" (había IGUAL en Renard) y eligió una esférica galvanizada de 3.500 en lugar de la Taval de lista (740) | Revisar a mano los SIMILAR de válvulas; pendiente en la herramienta: el material galvanizado/inoxidable "no pedido" no tiene que ganar a uno sin esa diferencia |
+| 85 | Bloqueo y purga "con manómetro" cotizado sin el manómetro; prueba de fugas pedida sin renglón | Leer la descripción completa del plano; cada ensayo del pliego con su renglón |

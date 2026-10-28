@@ -11,4 +11,10 @@
    - Pos 11: termovaina estimada 120. Pos 13: skid 200 kg + fabricación por kg. Pos A: transmisor de temperatura ABB 1.448.
    - Ingeniería 20 h y calidad 40 h por criterio: el antecedente que eligió `estimar_horas` (puentes en serie de 442 unidades) da 7,5 y 3,5 h, que no alcanzan para un equipo único con aprobación de Camuzzi.
    - Media tira de 6" (6 m) y juntas/espárragos internos (6 de 4", 4 de 6").
-4. Precio: **29.428** (borrador). Los antecedentes que compara la herramienta (puentes con V-Cone e instrumentos, 97.000–101.000) no son del mismo alcance: no llevan filtro FM y sí caudalímetros.
+4. Precio: **29.641** (borrador). Los antecedentes que compara la herramienta (puentes con V-Cone e instrumentos, 97.000–101.000) no son del mismo alcance: no llevan filtro FM y sí caudalímetros.
+
+## Revisión independiente (28-10-2026, agente que no armó el cómputo)
+Transcripción del plano y cantidades: bien. Precios Tormene y Taval verificados contra los originales. Corregido:
+- Juntas internas de 6": 3 (no 4) y 24 espárragos. Prueba de fugas con N2: renglón propio (250 estimado).
+- **Sigue abierto:** el filtro FM-6 (9.000 estimado) es el 44% del costo y sale de una venta de 2025 de un FM-6 #300: costearlo por componentes con el plano tipo SCE-RE-112-0004 o pedir cotización.
+- Flete: si se adjudican los ítems 2 y 3 juntos, va un solo viaje (hoy cada uno suma su flete).

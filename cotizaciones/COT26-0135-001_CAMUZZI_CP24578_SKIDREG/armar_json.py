@@ -36,11 +36,13 @@ poner("18", [fuente("est", 120.0, "Estimado: termovaina 3/4\" NPT AISI 316 (la b
 poner("20", [fuente("cot", round(330 * 17.4 / 13.4 * 1.10, 2), "Grupo Provemet cot. 236623: UPN 120 a USD 17,40/m (13,40 kg/m) = 1,30 USD/kg +10% recortes, × 330 kg estimados (medidos del plano: 3.700 × 1.630 mm, perimetral, 4 travesaños, soportes y cáncamos)",
                    "fuentes_originales/listas_vendedor/2026-10-28/provemet_cotizacion_236623_perfiles_2025-07-01.pdf", "2025-07-01", "similar", "kilos estimados del plano; confirmar con el típico SCE-RE-110-0006")],
      especificacion="Skid 3.700 × 1.630 mm, UPN 120 perimetral y travesaños, soportes de cañería, 4 cáncamos y oreja de PAT (330 kg estimados)")
+poner("19", [fuente("ant", 230.0, "Bloqueo y purga ABAC 80 (VAL-03162, planilla TAVAL/55) + manómetro Ø100 glicerina 150 (INS-02671, Weisz o similar, TAVAL/43)", "fuentes_originales/ofertas_texto/TAVAL/43- YPF- CM PUENTES DE PRODUCCION", "2026-04-22", "similar",
+                    "manómetro según SCE-PR-506-1000 (AISI 316, certificado de calibración): confirmar (revisión independiente: faltaba el manómetro)")])
 poner("A", [fuente("ant", 856.63, "ABB · Transmisor de presión (INS-02708, planilla TAVAL/72)", "fuentes_originales/ofertas_texto/TAVAL/72- Lic 64675 - SKID CONCENTRADOR - UTE NARAMBUE", "2026-08-14", "similar", "rango a definir 0-25 bar; sin válvula de bloqueo y purga (va en pos 19)")])
 poner("B", [fuente("ant", 1448.33, "ABB · Transmisor de temperatura (INS-02714, planilla TAVAL/72)", "fuentes_originales/ofertas_texto/TAVAL/72- Lic 64675 - SKID CONCENTRADOR - UTE NARAMBUE", "2026-08-14", "similar", "con sensor; rango 0-100 °C a confirmar")])
 poner("C", [fuente("est", 350.0, "Estimado: fin de carrera / switch de posición 24 V para la válvula monitora", "cotizaciones/COT26-0135-001_CAMUZZI_CP24578_SKIDREG/bitacora.md", "2026-10-28", "sin_ref", "confirmar si viene con la reguladora (Tormene ofrece indicador de posición)")])
 # compra extra de caño: media tira (6 m), no 12 m: con 1-2 m usados una tira de 12 m deja más del 80% de sobrante; consultar recortes a Compras
-for p, usado in (("21", 1.8), ("22", 2.0), ("23", 2.1), ("24", 1.0)):
+for p, usado in (("21", 1.8), ("22", 2.0), ("23", 2.25), ("24", 1.0)):
     b = items[p + "b"]
     b["cantidad"] = round(6 - usado, 3)
     b["descripcion"] = f"Completar media tira de 6 m de la pos {p} (compra mínima; sobrante a stock)"
@@ -71,6 +73,12 @@ for it in auto["items"]:
             break
 lista.append({"id": "S05", "pos": "EST", "grupo": "mo", "descripcion": "Fabricación del skid y soportes (330 kg estimados)", "especificacion": "kg × tarifa por kg de estructura de skid",
               "cantidad": 330, "unidad": "kg", "fuentes": [fuente("ant", 3.0, "Fabricación de estructura de skid por kg (tercero Ledesma): tarifas.csv", "YPF/28 Lic 69343 planilla PC0 (850 kg × 3 = 2.550)", "2026-10-10", "similar", "kilos estimados")]})
+lista.append({"id": "S06", "pos": "PF", "grupo": "servicio", "descripcion": "Prueba de fugas con nitrógeno a 5,5 bar con el equipo terminado (especificación §5.4.3)", "especificacion": "N2 + horas de planta",
+              "cantidad": 1, "unidad": "gl", "fuentes": [fuente("est", 250.0, "Estimado: tubos de N2 y 8 h de planta (revisión independiente: la prueba no tenía renglón propio)", "cotizaciones/COT26-0135-001_CAMUZZI_CP24578_SKIDREG/bitacora.md", "2026-10-28", "sin_ref", "")]})
+for it in lista:  # pintura: sumar el skid (≈ 25 m de UPN 120 ≈ 10,7 m²), que precotizar no cuenta cuando el skid va por unidad
+    if it["pos"] == "PIN":
+        it["cantidad"] = round(it["cantidad"] + 10.7, 3)
+        it["especificacion"] += " + skid ≈ 10,7 m² (25 m de UPN 120)"
 base["items"] = [items.get(i["pos"], i) if i["grupo"] == "material" and i["pos"] in items else i for i in lista]
 PED = "cotizaciones/COT26-0135-001_CAMUZZI_CP24578_SKIDREG/pedido/"
 base["parametros"].update({"TRANS": 1, "TC": 1541.43, "TR_ARS": 700000, "TR_EMB": 150, "TR_F": 1.0})

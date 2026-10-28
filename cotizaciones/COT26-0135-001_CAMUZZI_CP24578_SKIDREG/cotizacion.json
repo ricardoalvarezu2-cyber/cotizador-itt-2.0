@@ -688,12 +688,12 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 80.0,
-     "proveedor": "Abac · VAL-03162",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\55- Tecpetrol Puentes de Producción PPar Valvula y Puente PR 54942 · 7.Propuesta Comercial (envío al Cliente)/Puente de producción Tec Conv y NOC versión 3.xlsx",
+     "precio": 230.0,
+     "proveedor": "Bloqueo y purga ABAC 80 (VAL-03162, planilla TAVAL/55) + manómetro Ø100 glicerina 150 (INS-02671, Weisz o similar, TAVAL/43)",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/43- YPF- CM PUENTES DE PRODUCCION",
      "fecha": "2026-04-22",
      "coincide": "similar",
-     "diferencia": "serie: sin dato (pedido 3000)"
+     "diferencia": "manómetro según SCE-PR-506-1000 (AISI 316, certificado de calibración): confirmar (revisión independiente: faltaba el manómetro)"
     }
    ]
   },
@@ -802,7 +802,7 @@
    "pos": "23",
    "grupo": "material",
    "descripcion": "Caño (cantidad no indicada en el plano: medida del dibujo) 6\"",
-   "cantidad": 2.1,
+   "cantidad": 2.25,
    "unidad": "m",
    "especificacion": "Plano: 6\" · 80 · ASTM A-53 Gr. B · BW",
    "fuentes": [
@@ -822,9 +822,9 @@
    "pos": "23b",
    "grupo": "material",
    "descripcion": "Completar media tira de 6 m de la pos 23 (compra mínima; sobrante a stock)",
-   "cantidad": 3.9,
+   "cantidad": 3.75,
    "unidad": "m",
-   "especificacion": "1 tramo de 6 m para 2.1 m (con tira de 12 m el sobrante superaba 80%)",
+   "especificacion": "1 tramo de 6 m para 2.25 m (con tira de 12 m el sobrante superaba 80%)",
    "fuentes": [
     {
      "tipo": "ant",
@@ -961,8 +961,8 @@
    "pos": "PIN",
    "grupo": "servicio",
    "descripcion": "Granallado y pintura (m² calculados)",
-   "especificacion": "9.87 m² exteriores: caños y niples 3.4 + bridas, accesorios y válvulas (largo equivalente) 6.4 + envolvente 0.1",
-   "cantidad": 9.873,
+   "especificacion": "9.95 m² exteriores: caños y niples 3.4 + bridas, accesorios y válvulas (largo equivalente) 6.4 + envolvente 0.1 + skid ≈ 10,7 m² (25 m de UPN 120)",
+   "cantidad": 20.652,
    "unidad": "m2",
    "fuentes": [
     {
@@ -1080,6 +1080,25 @@
      "fecha": "2026-10-10",
      "coincide": "similar",
      "diferencia": "kilos estimados"
+    }
+   ]
+  },
+  {
+   "id": "S06",
+   "pos": "PF",
+   "grupo": "servicio",
+   "descripcion": "Prueba de fugas con nitrógeno a 5,5 bar con el equipo terminado (especificación §5.4.3)",
+   "especificacion": "N2 + horas de planta",
+   "cantidad": 1,
+   "unidad": "gl",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 250.0,
+     "proveedor": "Estimado: tubos de N2 y 8 h de planta (revisión independiente: la prueba no tenía renglón propio)",
+     "origen": "cotizaciones/COT26-0135-001_CAMUZZI_CP24578_SKIDREG/bitacora.md",
+     "fecha": "2026-10-28",
+     "coincide": "sin_ref"
     }
    ]
   }

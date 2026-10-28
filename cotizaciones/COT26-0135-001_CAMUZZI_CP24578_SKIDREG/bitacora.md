@@ -20,7 +20,15 @@
 3. MO: soldadura propia 195,5 pulg-eq × 16, RX 100% DB NDT, pintura, horas del antecedente de skid (Sacde/15). Alternativa de tercero: Ledesma 200295 (TAVAL/69, 2 skids de regulación y medición YPF, 17.200 → 8.600 por skid).
 
 ## Control contra antecedentes (P8)
-- **CAMUZZI/23** (OC 4500150421, 03-2025): skid de regulación/medición SCE-RE-315-0047 vendido a **24.454**. Este sale **76.648**: la diferencia es casi toda las reguladoras (31.236 de costo, ×1,35 = 42.169 de venta). Hay que confirmar qué reguladoras llevaba el de 2025 y pedir cotización #150 para estas condiciones antes de presentar: con reguladoras de ~4.000 c/u (como la de Sacde/15) el precio bajaría a ~45.000.
+- **CAMUZZI/23** (OC 4500150421, 03-2025): skid de regulación/medición SCE-RE-315-0047 vendido a **24.454**. Este sale **78.580**: la diferencia es casi toda las reguladoras (31.236 de costo, ×1,35 = 42.169 de venta). Hay que confirmar qué reguladoras llevaba el de 2025 y pedir cotización #150 para estas condiciones antes de presentar: con reguladoras de ~4.000 c/u (como la de Sacde/15) el precio bajaría a ~45.000.
 
 ## Pendientes
 Ver `cotizacion.json` → pendientes. Lo crítico: precio de reguladoras y monitoras #150, si los sensores A/B/C los provee Camuzzi, y los largos de caño.
+
+## Revisión independiente (28-10-2026, agente que no armó el cómputo)
+Transcripción del plano y cantidades: bien. Precios Tormene y Taval verificados contra los originales. Corregido:
+- Pos 19: faltaba el manómetro (solo estaba el bloqueo y purga): 80 + 150.
+- Pos 23: 6" sch 80 2,25 m (2 × 1.000 + 250 de bajada).
+- Pintura: se suma el skid (≈ 10,7 m²). Prueba de fugas con N2: renglón propio (250 estimado).
+- Quedaron archivos de plantilla en `oferta/`: borrados.
+- **Sigue abierto (crítico):** la monitora Tormene cotizada trae bloqueo OPSO y es #300 (el plano no pide OPSO y es #150), y el switch de posición (pos C) puede estar incluido en la reguladora. Pedir cotización #150 sin OPSO. Explicar contra CAMUZZI/23 (24.454) antes de presentar.

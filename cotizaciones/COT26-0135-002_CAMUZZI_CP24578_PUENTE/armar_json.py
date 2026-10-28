@@ -52,9 +52,9 @@ ext = [("5b", "Junta espiralada 4\" #150 AISI 316/grafito con anillo ext. zincad
         fuente("ant", 15.0, "Planilla Techint/12 (JUN-02778)", "fuentes_originales/ofertas_texto/TECHINT/12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado", "2025-12-23", "igual")),
        ("5c", "Espárrago 5/8\" × 3 1/2\" A193 B7 con 2 tuercas 2H zincado (8 por junta de 4\")", 48,
         fuente("ant", 2.6, "Planilla Sacde/15 (JUN-04177: 5/8 x 90 B7M bicromatizado)", "fuentes_originales/ofertas_texto/Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL", "2026-02-20", "similar", "B7M bicromatizado; confirmar tuercas")),
-       ("6b", "Junta espiralada 6\" #150 AISI 316/grafito (filtro y válvula 6\")", 4,
+       ("6b", "Junta espiralada 6\" #150 AISI 316/grafito (entrada del filtro, filtro–válvula 3 y salida de la válvula 3)", 3,
         fuente("cot", 5.82, "MS Juntas cot. 48.729 (8\" #300)", "fuentes_originales/ofertas_texto/TAVAL/72- Lic 64675 - SKID CONCENTRADOR - UTE NARAMBUE/5.Proveedores 3ros/COTIZACION_N§_048729.pdf.txt", "2026-07-06", "similar", "8\" #300 (pedido 6\" #150)")),
-       ("6c", "Espárrago 3/4\" × 4\" A193 B7 con 2 tuercas 2H zincado (8 por junta de 6\")", 32,
+       ("6c", "Espárrago 3/4\" × 4\" A193 B7 con 2 tuercas 2H zincado (8 por junta de 6\")", 24,
         fuente("ant", 10.0, "Planilla Techint/12 (JUN-02733: 3/4\" L 120 mm con 2 tuercas)", "fuentes_originales/ofertas_texto/TECHINT/12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado", "2025-12-23", "similar", "L 120 mm"))]
 lista = []
 for it in auto["items"]:
@@ -65,6 +65,8 @@ for it in auto["items"]:
                           "cantidad": q, "unidad": "un", "fuentes": [f]})
 lista.append({"id": "S05", "pos": "EST", "grupo": "mo", "descripcion": "Fabricación del skid y soportes (200 kg estimados)", "especificacion": "kg × tarifa por kg de estructura de skid", "cantidad": 200, "unidad": "kg",
               "fuentes": [fuente("ant", 3.0, "Fabricación de estructura de skid por kg (tercero Ledesma): tarifas.csv", "YPF/28 Lic 69343 planilla PC0 (850 kg × 3 = 2.550)", "2026-10-10", "similar", "kilos estimados")]})
+lista.append({"id": "S06", "pos": "PF", "grupo": "servicio", "descripcion": "Prueba de fugas con nitrógeno a 5,5 bar con el equipo terminado (especificación §5.4.3)", "especificacion": "N2 + horas de planta",
+              "cantidad": 1, "unidad": "gl", "fuentes": [fuente("est", 250.0, "Estimado: tubos de N2 y 8 h de planta (revisión independiente: la prueba no tenía renglón propio)", "cotizaciones/COT26-0135-002_CAMUZZI_CP24578_PUENTE/bitacora.md", "2026-10-28", "sin_ref", "")]})
 base["items"] = [items.get(i["pos"], i) if i["grupo"] == "material" else i for i in lista]
 base["parametros"].update({"TRANS": 1, "TC": 1541.43, "TR_ARS": 700000, "TR_EMB": 150, "TR_F": 1.0})
 base["plazo"] = {"dias": 105, "texto": "desde OC · entregado en Transporte Cruz del Sur (Tapiales)",

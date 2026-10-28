@@ -19,3 +19,12 @@ Tapa de cierre rápido 44" #600 (Megatap 28" escalada: ~29.500) · chapa SA-516 
 
 ## Pendientes
 Especificación del separador (Camuzzi), memoria de cálculo y dimensionamiento con Gora/Pall, cotización de la tapa 44" vertical, purgas automáticas, switches Ex-d, manómetro diferencial con contacto, y fabricación (Ledesma) con el diseño.
+
+## Revisión independiente (28-10-2026, agente que no armó el cómputo)
+Transcripción del plano y cantidades: bien. Precios Tormene y Taval verificados contra los originales. Corregido:
+- **Error mío de dimensionamiento:** 34 elementos a 180 mm de paso no entraban en Ø44" (calculé el área sin descontar el borde). Con el arreglo triangular real, el anillo completo es 1 + 6 + 12 + 18 = **37 elementos** con centros hasta 0,54 m de radio → DI 1,28 m, **Ø53"**.
+- Presión de diseño 77 bar (70 + 10%): espesor 36,7 + 3,2 = 39,9 mm → **1 5/8"** (cuerpo 4.387 kg); fondo 1 3/4".
+- Elemento: los 90 de Gora eran de un elemento de separador de polvo, no coalescente: pasa a 400 estimado (Sacde/12 pagó 854).
+- Purgas automáticas, switches, manómetro diferencial, internos, RX, PH, pintura, skid y MO de Ledesma: estimados subidos (eran bajos para 70 bar y el tamaño nuevo).
+- Precio: **204.970 c/u** (preliminar). Los 108 m³/h por elemento de Sacde/12 no son del mismo elemento: **pedir a Gora o Pall el caudal por elemento de 0,3 µm a 25 bar**. Si admite el doble, alcanza con ~19 elementos en Ø40" y el precio baja mucho.
+- **Crítico para presentar:** el concurso exige con la oferta la memoria de cálculo y el esquema con dimensiones; hoy no existen.

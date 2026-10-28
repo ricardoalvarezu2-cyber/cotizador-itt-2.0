@@ -352,9 +352,9 @@
    "id": "M6B",
    "pos": "6b",
    "grupo": "material",
-   "descripcion": "Junta espiralada 6\" #150 AISI 316/grafito (filtro y válvula 6\")",
+   "descripcion": "Junta espiralada 6\" #150 AISI 316/grafito (entrada del filtro, filtro–válvula 3 y salida de la válvula 3)",
    "especificacion": "Nota del plano: juntas y espárragos según diámetro de brida (SCE-IN-301-0001/2)",
-   "cantidad": 4,
+   "cantidad": 3,
    "unidad": "un",
    "fuentes": [
     {
@@ -374,7 +374,7 @@
    "grupo": "material",
    "descripcion": "Espárrago 3/4\" × 4\" A193 B7 con 2 tuercas 2H zincado (8 por junta de 6\")",
    "especificacion": "Nota del plano: juntas y espárragos según diámetro de brida (SCE-IN-301-0001/2)",
-   "cantidad": 32,
+   "cantidad": 24,
    "unidad": "un",
    "fuentes": [
     {
@@ -810,6 +810,25 @@
      "fecha": "2026-10-10",
      "coincide": "similar",
      "diferencia": "kilos estimados"
+    }
+   ]
+  },
+  {
+   "id": "S06",
+   "pos": "PF",
+   "grupo": "servicio",
+   "descripcion": "Prueba de fugas con nitrógeno a 5,5 bar con el equipo terminado (especificación §5.4.3)",
+   "especificacion": "N2 + horas de planta",
+   "cantidad": 1,
+   "unidad": "gl",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 250.0,
+     "proveedor": "Estimado: tubos de N2 y 8 h de planta (revisión independiente: la prueba no tenía renglón propio)",
+     "origen": "cotizaciones/COT26-0135-002_CAMUZZI_CP24578_PUENTE/bitacora.md",
+     "fecha": "2026-10-28",
+     "coincide": "sin_ref"
     }
    ]
   }

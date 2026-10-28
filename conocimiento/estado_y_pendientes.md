@@ -83,6 +83,11 @@
 
 Hecho (28/10/2026): `precotizar.py` (materiales, soldaduras, pintura, PH, RX) · `plazo.py` (acopio + taller sin superponer, margen 15–20%, plazo real de la familia) · `comparar_antecedentes.py` (P8 contra los 5 más parecidos) · control de carga en `verificar_computo.py` (fecha válida, "con IVA", sin precio) · `verificar_todo.py` y `actualizar_base.py`. Descartado: lectura automática de planos y pliegos, y formato fijo para las respuestas de Compras.
 
+**Camuzzi CP 24578** (28-10-2026; COT26-0135-001/002/003 en borrador y cargadas en la página)
+1. Reguladoras y monitoras 3" #150 sin OPSO (hoy Tormene #300 con OPSO de referencia) y explicar contra CAMUZZI/23 (24.454 en 2025).
+2. Filtro FM-6 #150: costearlo por componentes o cotizarlo.
+3. Separador: pedir a Camuzzi la especificación; caudal por elemento de 0,3 µm a Gora/Pall; memoria de cálculo y esquema (se entregan con la oferta).
+
 **Controles de la precotización** (28-10-2026, segunda tanda corregida: ver `auditorias/2026-10-28_controles_4_agentes.md`)
 1. Cargar horas de antecedentes que faltan (TECPETROL/7 trampas; filtros chicos; tanques grandes) en `costos/horas_por_equipo.csv`.
 2. Instrumentos: sumar accesorios de la hoja de datos (RTD y vaina del TT, manifolds, bloqueo y purga).

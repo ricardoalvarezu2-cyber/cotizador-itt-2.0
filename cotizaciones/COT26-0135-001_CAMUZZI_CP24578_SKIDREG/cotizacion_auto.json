@@ -31,10 +31,10 @@
   "FMO": 1.35,
   "CONT": 5,
   "AJ": 1,
-  "TRANS": 0,
-  "TC": 1550,
-  "TR_ARS": 0,
-  "TR_EMB": 0,
+  "TRANS": 1,
+  "TC": 1541.43,
+  "TR_ARS": 700000,
+  "TR_EMB": 150,
   "TR_F": 1.0,
   "fecha_referencia": "2026-10-28",
   "rx_pct": 100,
@@ -42,99 +42,156 @@
   "FTV": 1.0
  },
  "plazo": {
-  "dias": 60,
-  "texto": "desde OC · EXW Quilmes Oeste",
+  "dias": 120,
+  "texto": "desde OC · entregado en Transporte Cruz del Sur (Tapiales)",
   "tareas": [
    [
-    "Material crítico [proveedor]",
+    "Ingeniería: planos, procedimientos y calificaciones para aprobación de Camuzzi",
+    0,
+    20,
+    ""
+   ],
+   [
+    "Reguladoras y monitoras Tormene (45/60 días de OC y anticipo)",
     0,
     60,
     "crit"
    ],
    [
-    "Taller: armado, PH y pintura",
-    45,
-    57,
+    "Esféricas Taval, bridas, accesorios y caño",
+    0,
+    30,
+    ""
+   ],
+   [
+    "Prefabricado, soldadura, RX 100% y PH (sin válvulas)",
+    30,
+    60,
     "tal"
    ],
    [
-    "Dossier y despacho",
-    57,
+    "Montaje de reguladoras, conexionado de pilotos, pintura y prueba de fugas",
     60,
+    80,
+    "tal"
+   ],
+   [
+    "Inspección Camuzzi, data book y despacho",
+    80,
+    95,
     "tal"
    ]
   ],
-  "nota": "[Qué fija el plazo y cómo se acorta]"
+  "nota": "Fija el plazo la entrega de las reguladoras (Tormene: 45/60 días). La inspección de Camuzzi tiene que avisarse con 5 días hábiles."
  },
  "flete": {
-  "etiqueta": "Flete a [destino]",
-  "referencia_html": "[Cotización de flete de referencia, con fecha y fuente]",
-  "criterio_html": "[Si se ofrece EXW o entregado]"
+  "etiqueta": "Flete a Transporte Cruz del Sur (Tapiales)",
+  "referencia_html": "<b>Estimado:</b> un camión con hidrogrúa Quilmes → Mercado Central nave D3 (≈ 30 km), ARS 700.000 + USD 150 de embalaje. No hay cotización de flete local en la base: pedir a Compras.",
+  "criterio_html": "La planilla del concurso dice \"Flete a cargo del proveedor hasta Transporte Cruz del Sur, Mercado Central nave D3\": el flete va incluido en el precio."
  },
  "historial_html": [],
  "pedido": {
-  "eyebrow": "[Nº de pedido] · emitido [fecha]",
+  "eyebrow": "Concurso de precios N° 24578 · Cláusulas particulares del 01-10-2026 · especificación del 19-10-2026",
   "datos_html": [
    [
     "Cliente",
-    "[nombre] (código ITT [CCCC])"
+    "Camuzzi Gas Pampeana S.A. / Camuzzi Gas del Sur S.A. (código ITT 0135)"
    ],
    [
     "Ítem",
-    "[ítem] · [descripción] · <b>[cantidad] un</b>"
+    "2 · Skid de regulación / medición · <b>1 un</b>"
    ],
    [
-    "Documento",
-    "[documento y plano]"
+    "Documentos",
+    "Plano SCE-RE-315-0048 rev 0 · Especificación SCE-RE-515-0032 (ERP Parque Industrial Tres Arroyos)"
+   ],
+   [
+    "Condiciones de proceso",
+    "Pe 15-10 bar · Pr 4 bar · Qmáx 6.000 Sm3/h · Qmín 1.000 Sm3/h"
    ],
    [
     "Entrega pedida",
-    "[lugar]"
+    "Transporte Cruz del Sur, Mercado Central nave D3, Tapiales (flete a cargo del proveedor)"
    ],
    [
-    "Fechas",
-    "Límite de respuesta [fecha] · necesidad [fecha]"
+    "Condiciones",
+    "Pago 30 días f.p.f. por transferencia, dólar BNA divisa vendedor del día de factura · validez 30 días · multas automáticas por demora"
    ]
   ],
   "requisitos_html": [
-   "[requisito técnico del pedido]"
+   "RX 100% de las soldaduras a tope (filetes y media V con tintas penetrantes)",
+   "PH de los prefabricados sin válvulas: 1,5 × presión máxima de la serie, 6 h (NAG-124); secado y prueba de fugas con aire o N2 a 5,5 bar",
+   "Protección anticorrosiva SCE-PC-511-0003",
+   "Esféricas según SCE-IN-501-0008 y ensayo SCE-RE-308-0001, con certificados firmados",
+   "Marcas del listado SCE-IN-501-0015",
+   "Documentación para aprobación (planos, mapa de soldaduras, procedimientos, calificaciones) y data book",
+   "Inspección de Camuzzi en etapas (aviso 5 días hábiles)",
+   "DDJJ de ética firmada con la oferta"
   ]
  },
- "nota_mo_html": "[Qué incluye y excluye la MO; soldaduras de taller junta por junta; extremos para soldar en campo]",
+ "nota_mo_html": "Soldadura propia por pulgada (16 USD/pulg-eq): juntas contadas de la columna de extremos (bridas WN, tees, reducciones y casquetes; los caños no tienen largo en el plano y se midieron del dibujo). Montaje, ingeniería y calidad estimados del antecedente de skid más parecido. Incluye RX 100% (DB NDT 08-2026), PH, pintura, conexionado de pilotos y fabricación del skid (330 kg estimados). Las juntas y espárragos van según la nota del plano (solo uniones internas; las de conexión a la planta no).",
  "desvios": [
   {
-   "tag": "Pos X",
-   "titulo": "[qué se ofrece distinto]",
-   "texto": "[detalle]"
+   "tag": "Pos 9",
+   "titulo": "Te normal 6\" en A-234 WPB",
+   "texto": "El plano dice ASTM A-105 (forjado) para una te STD a tope: se cotiza A-234 WPB. Confirmar o pedir te forjada."
+  },
+  {
+   "tag": "Pos 14",
+   "titulo": "Cupla en A-105",
+   "texto": "El plano dice A-106 (caño) para una cupla: se cotiza A-105 forjada."
+  },
+  {
+   "tag": "Pos 1-2",
+   "titulo": "Reguladoras de referencia en #300",
+   "texto": "El precio es de Tormene TA956 #300 (ERP Pilará, 06-2026). Pedir cotización #150 a marcas del listado SCE-IN-501-0015."
   }
  ],
  "antecedentes": [
   {
-   "carpeta_html": "<b>[CLIENTE/NN]</b> · [oferta]",
-   "fecha": "dd/mm/aaaa",
-   "que": "[qué es]",
-   "precio": "[c/u]",
-   "tomado_html": "[qué se tomó]"
+   "carpeta_html": "<b>CAMUZZI/23</b> · Concurso 17584, ítem 5 (OC 4500150421)",
+   "fecha": "06-03-2025",
+   "que": "Skid de regulación / medición SCE-RE-315-0047 (ERP Ascensión), ganado",
+   "precio": "venta 24.454",
+   "tomado_html": "Alcance y control del orden de magnitud (no hay planilla de costo)"
+  },
+  {
+   "carpeta_html": "<b>ALONZO RED/2</b> · ERP B° Pilará (Naturgy)",
+   "fecha": "16-06-2026",
+   "que": "Reguladoras Tormene TA956 3\" monitor + activo",
+   "precio": "9.545 / 6.073",
+   "tomado_html": "Precio de las pos 1 y 2"
+  },
+  {
+   "carpeta_html": "<b>TAVAL/69</b> · YPF UTE LACH",
+   "fecha": "19-07-2026",
+   "que": "2 skids de regulación y medición SCC 113 A/B, MO Ledesma 200295",
+   "precio": "17.200 (2 skids)",
+   "tomado_html": "Control de la MO de fabricación (alternativa de tercero ≈ 8.600 por skid)"
   }
  ],
  "pendientes": [
   {
    "titulo": "Proveedores",
    "items": [
-    "[confirmación pendiente]"
+    "Reguladoras y monitoras 3\" #150 para Pe 15-10 / Pr 4 bar, 6.000 Sm3/h, con switch de posición (Tormene, Fiorentini u otra del listado SCE-IN-501-0015)",
+    "Toma multiport ABAC, alivio S-71, termovainas, transmisores (marca del listado)",
+    "Flete local a Tapiales"
    ]
   },
   {
-   "titulo": "Cliente",
+   "titulo": "Camuzzi",
    "items": [
-    "[consulta]"
+    "Confirmar si los sensores A, B y C los provee Camuzzi (\"sensores a instalar\")",
+    "Largo de los caños (el plano no da cantidades)",
+    "Típico SCE-RE-110-0006 (skid) y listado SCE-IN-501-0015 (se descargan de la web de Camuzzi)"
    ]
   }
  ],
- "pie": "Fuentes: base de conocimiento del repositorio cotizador-itt. Precios en USD sin IVA.",
+ "pie": "Fuentes: base de conocimiento del repositorio cotizador-itt. Precios en USD sin IVA. Borrador sin revisar.",
  "planilla_notas": [
-  "Plazo: [días] desde OC ([material crítico]).",
-  "Condiciones: [pago, entrega, validez]."
+  "Plazo: 120 días desde OC (reguladoras 60 días + taller + inspección + margen por aprobaciones); se puede acortar si las reguladoras están en stock.",
+  "Condiciones del concurso: pago 30 días f.p.f., USD al BNA divisa vendedor del día de factura, validez 30 días, entregado en Transporte Cruz del Sur (Tapiales)."
  ],
  "items": [
   {
@@ -618,7 +675,7 @@
    "pos": "23",
    "grupo": "material",
    "descripcion": "Caño (cantidad no indicada en el plano: medida del dibujo) 6\"",
-   "cantidad": 2.1,
+   "cantidad": 2.25,
    "unidad": "m",
    "especificacion": "Plano: 6\" · 80 · ASTM A-53 Gr. B · BW",
    "fuentes": [
@@ -638,9 +695,9 @@
    "pos": "23b",
    "grupo": "material",
    "descripcion": "Completar barra de 12 m de la pos 23 (compra mínima; sobrante, no va en el equipo)",
-   "cantidad": 9.9,
+   "cantidad": 9.75,
    "unidad": "m",
-   "especificacion": "1 barra(s) de 12 m para 2.1 m en 1 equipo(s); por equipo 9.9 m",
+   "especificacion": "1 barra(s) de 12 m para 2.25 m en 1 equipo(s); por equipo 9.75 m",
    "fuentes": [
     {
      "tipo": "ant",
@@ -777,8 +834,8 @@
    "pos": "PIN",
    "grupo": "servicio",
    "descripcion": "Granallado y pintura (m² calculados)",
-   "especificacion": "9.87 m² exteriores: caños y niples 3.4 + bridas, accesorios y válvulas (largo equivalente) 6.4 + envolvente 0.1",
-   "cantidad": 9.873,
+   "especificacion": "9.95 m² exteriores: caños y niples 3.4 + bridas, accesorios y válvulas (largo equivalente) 6.4 + envolvente 0.1",
+   "cantidad": 9.952,
    "unidad": "m2",
    "fuentes": [
     {
@@ -881,28 +938,44 @@
   }
  ],
  "compras": {
-  "fecha_respuesta": "AAAA-MM-DD",
-  "material_en_planta_dias": 45,
+  "fecha_respuesta": "2026-11-04",
+  "material_en_planta_dias": 60,
   "lugar_entrega": "Planta ITT S.A., Av. 12 de Octubre 4004, Quilmes Oeste, Bs. As.",
   "requisitos_generales": [
    "Cotizar en USD sin IVA, con plazo de entrega y validez de la oferta.",
-   "Certificados de material (colada / 3.1).",
-   "Indicar cualquier diferencia con lo pedido (serie, material, extremos, modelo)."
+   "Certificados de material 3.1; válvulas esféricas con certificados de fabricación y prueba según SCE-IN-501-0008 / SCE-RE-308-0001.",
+   "Marcas del listado SCE-IN-501-0015 de Camuzzi.",
+   "Indicar cualquier diferencia con lo pedido."
   ],
   "notas": {
-   "1": "[requisito para el proveedor]"
+   "1": "Monitora pilotada NC, obturador guiado, 3\" #150 RF, Pe 15-10 bar, Pr 4 bar, Q 6.000 Sm3/h, con switch de posición",
+   "2": "Reguladora pilotada a diafragma NA, 3\" #150 RF, mismas condiciones"
   },
   "proveedores": {
-   "1": "Renard"
+   "1": "Tormene Americana",
+   "2": "Tormene Americana",
+   "3": "Taval",
+   "4": "Taval",
+   "5": "Renard / Provemet",
+   "15": "ABAC"
   },
   "cantidad_compra": {
-   "2": "1 tira de ~12 m"
+   "21": "media tira de 6 m",
+   "22": "media tira de 6 m",
+   "23": "media tira de 6 m",
+   "24": "media tira de 6 m"
   },
   "servicios": [
    {
-    "servicio": "[Armado según plano]",
-    "proveedores": "[taller]",
-    "referencia": "[último precio, fecha]",
+    "servicio": "Radiografía 100% y tintas penetrantes",
+    "proveedores": "DB NDT / Antonelli",
+    "referencia": "DB NDT 08-2026",
+    "nota": ""
+   },
+   {
+    "servicio": "Flete a Tapiales con hidrogrúa",
+    "proveedores": "a definir",
+    "referencia": "sin referencia",
     "nota": ""
    }
   ]

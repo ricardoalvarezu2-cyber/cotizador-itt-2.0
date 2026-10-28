@@ -1,7 +1,7 @@
 # Precotización automática — COT26-0135-001
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 16,421.40 por equipo · soldadura y servicios calculados USD 10,721.45 · 18 similares (2, 3, 4, 9, 14, 17, 18, 19, 21, 21b, 22, 22b, 23, 23b, 24, 24b, A, B) · 6 sin precio (1, 10, 15, 16, 20, C).
+**Resumen:** materiales USD 16,421.40 por equipo · soldadura y servicios calculados USD 10,725.40 · 18 similares (2, 3, 4, 9, 14, 17, 18, 19, 21, 21b, 22, 22b, 23, 23b, 24, 24b, A, B) · 6 sin precio (1, 10, 15, 16, 20, C).
 
 
 ## 1. Materiales
@@ -37,7 +37,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | C | Switch indicador de válvula monitora abierta  | **SIN PRECIO** | — | — | pedir cotización |
 | 21b | Completar barra de 12 m (pos 21) | compra extra | USD 18.99/m × 10.2 m | | Se usan 1.8 m en 1 equipo(s) y se compran 12 m. Borrar si hay sobrante en stock |
 | 22b | Completar barra de 12 m (pos 22) | compra extra | USD 50.60/m × 10 m | | Se usan 2 m en 1 equipo(s) y se compran 12 m. Borrar si hay sobrante en stock |
-| 23b | Completar barra de 12 m (pos 23) | compra extra | USD 90.70/m × 9.9 m | | Se usan 2.1 m en 1 equipo(s) y se compran 12 m. Borrar si hay sobrante en stock |
+| 23b | Completar barra de 12 m (pos 23) | compra extra | USD 90.70/m × 9.75 m | | Se usan 2.25 m en 1 equipo(s) y se compran 12 m. Borrar si hay sobrante en stock |
 | 24b | Completar barra de 12 m (pos 24) | compra extra | USD 72.64/m × 11 m | | Se usan 1 m en 1 equipo(s) y se compran 12 m. Borrar si hay sobrante en stock |
 
 ## 2. Soldaduras (de la columna de extremos)
@@ -58,8 +58,8 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 
 ## 3. Servicios calculados
 
-- **Pintura:** 9.87 m² (caños y niples 3.4 + bridas, accesorios y válvulas (largo equivalente) 6.4 + envolvente 0.1) × USD 50.00/m² (Granallado y pintura piping (incluye materiales), criterio ITT, 2026-10-10) = USD 493.65.
-- **Prueba hidráulica:** 6 h × USD 13.00/h (Prueba hidráulica - manifold FA0032 1.2, 2026-03-10) = USD 78.00 · volumen interior de caños y niples 113.5 l.
+- **Pintura:** 9.95 m² (caños y niples 3.4 + bridas, accesorios y válvulas (largo equivalente) 6.4 + envolvente 0.1) × USD 50.00/m² (Granallado y pintura piping (incluye materiales), criterio ITT, 2026-10-10) = USD 497.62.
+- **Prueba hidráulica:** 6 h × USD 13.00/h (Prueba hidráulica - manifold FA0032 1.2, 2026-03-10) = USD 78.00 · volumen interior de caños y niples 116.0 l.
 - **Radiografía 100% y tintas:** 135 placas chicas + 0 grandes + 4.00 servicio(s) de RX + 1.00 de LP por equipo = USD 2,803.50 (Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))).
   Con las tarifas de Antonelli (11-2025) serían USD 4,475.00: confirmar el proveedor de END con el cliente o la zona.
 
