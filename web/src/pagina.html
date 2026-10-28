@@ -116,17 +116,39 @@ tr.total td{background:var(--soft);font-weight:600}
 .firma-img{max-height:64px;max-width:200px;background:#fff;border:1px solid var(--line);border-radius:3px;padding:4px}
 .toast{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:10px 14px;border-radius:4px;z-index:30;font-size:13.5px;max-width:min(420px,calc(100vw - 32px))}
 .err{color:var(--bad);font-size:12.5px}
+nav a[data-cnt]:not([data-cnt=""])::after{content:attr(data-cnt);font:600 10.5px/1 var(--f-mono);background:var(--accent);color:var(--accent-ink);border-radius:8px;padding:2px 5px;margin-left:5px;vertical-align:1px}
+/* chat con Claude: panel lateral; en pantallas anchas corre el contenido, en el celular ocupa toda la pantalla */
+.btn-chat[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chat{position:fixed;top:0;right:0;bottom:0;width:min(440px,100vw);background:var(--panel);border-left:1px solid var(--line);z-index:15;display:flex;flex-direction:column;box-shadow:-8px 0 30px rgb(0 0 0 / .12);padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);padding-right:env(safe-area-inset-right,0px)}
+.chat[hidden]{display:none}
+@media (min-width:1180px){body.con-chat .barra .in,body.con-chat .main{margin-right:440px;margin-left:max(0px,calc((100vw - 440px - 1240px)/2))}}
+.ch-cab{display:flex;flex-direction:column;gap:8px;padding:10px 12px;border-bottom:1px solid var(--line)}
+.ch-cab b{font:750 17px var(--f-disp);font-stretch:85%}
+.ch-cab .small{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media (min-width:1180px){body.con-chat .toast{right:calc(456px + env(safe-area-inset-right,0px))}}
+.ch-msgs{flex:1;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:10px}
+.msg{padding:9px 11px;border-radius:6px;font-size:14px;line-height:1.5;max-width:94%;overflow-wrap:anywhere}
+.msg.u{align-self:flex-end;background:var(--accent-soft);color:var(--ink)}
+.msg.a{align-self:flex-start;background:var(--soft)}
+.msg.a ul{margin:4px 0;padding-left:18px}
+.msg.pensando{color:var(--muted);font-style:italic}
+.msg.prop{border:1px solid var(--accent);background:var(--panel);display:flex;flex-direction:column;gap:6px;width:94%}
+.traza{font:500 11.5px/1.35 var(--f-mono);color:var(--muted);padding-left:4px;border-left:2px solid var(--line)}
+.ch-pie{border-top:1px solid var(--line);padding:10px 12px;display:flex;flex-direction:column;gap:8px}
+.ch-pie textarea{min-height:64px}
 @media (prefers-reduced-motion:no-preference){button,nav a{transition:background .12s,border-color .12s}}
 </style>
 <div class="barra"><div class="in">
   <div class="marca"><i></i>Cotizador ITT</div>
-  <nav aria-label="Secciones"><a href="#inicio" id="nav-inicio">Cotizaciones</a><a href="#firmantes" id="nav-firmantes">Firmantes</a></nav>
+  <nav aria-label="Secciones"><a href="#inicio" id="nav-inicio">Cotizaciones</a><a href="#pedidos" id="nav-pedidos">Pedidos</a><a href="#firmantes" id="nav-firmantes">Firmantes</a></nav>
   <span class="datos-al" id="datos-al">cargando datos…</span>
+  <button class="btn-chat" id="btn-chat" aria-pressed="false" hidden>Claude</button>
 </div></div>
 <main class="main" id="app">
   <section><div class="sec-head"><h1>Cotizaciones</h1><span class="eyebrow">ITT S.A. · USD sin IVA</span></div>
   <div class="vacio">Cargando catálogos, índices y cotizaciones guardadas…</div></section>
 </main>
+<aside class="chat" id="chat" aria-label="Chat con Claude" hidden></aside>
 <div id="capa" hidden></div>
 <div class="toast" id="toast" hidden></div>
 <script src="https://cdn.jsdelivr.net/npm/xlsx-js-style@1.2.0/dist/xlsx.bundle.js"></script>

@@ -39,6 +39,9 @@
 - Antes de pasar a "revisado": `python herramientas/verificar_computo.py cotizaciones/<carpeta>` sin errores, más una revisión independiente (otro agente o persona) del cómputo contra el plano.
 - Todo error detectado se anota en `conocimiento/errores_y_lecciones.md`.
 
+## Página web
+- Página del cotizador: https://claude.ai/artifact/HfbiaNvhAFkQjYwLe2kaBQ (fuente en `web/`, instructivo en `web/LEEME.md`, incluida la sección "Pedidos desde la página").
+
 ## Reglas de cálculo y comerciales
 - Moneda USD, sin IVA, entrega EXW planta Quilmes Oeste. El factor de venta lo define la dirección; la herramienta propone 1,35 y muestra escenarios.
 - El cálculo de costo y plazo es determinístico (reglas y tarifas de la base); la IA lee documentos y arma el cómputo. Lo que varía entre cotizaciones (planos, pliegos, cotizaciones de proveedores en cualquier formato) lo lee la IA; desde los formatos internos (`lista_materiales_plano.csv`, `cotizacion.json`) todo es automático y se revisa.

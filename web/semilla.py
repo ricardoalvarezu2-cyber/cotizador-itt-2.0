@@ -2,7 +2,10 @@
 cotizaciones/, con los datos del plano (diámetro, serie, material, extremos) en cada renglón de material para la
 tabla de la oferta técnica. Claude la carga con ArtifactData (batch de "set").
 
-Uso: python web/semilla.py cotizaciones/COT26-1003-001_CAPEX_OQ8209 [id]
+Uso: python web/semilla.py cotizaciones/<carpeta> [id] [--salida <carpeta>]
+  Sin --salida: deja web/semilla.json (firmante + cotización + resumen) para la carga inicial.
+  Con --salida: deja un JSON por documento (cotizaciones__<id>.json y resumenes__<id>.json) para subir con ArtifactData
+  (batch de "set" con file_path); es lo que usa Claude Code al terminar un pedido de la página (web/LEEME.md).
 """
 import csv
 import json
@@ -14,7 +17,7 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent.parent
 
 
-def main(carpeta, ident="capex-oq8209"):
+def main(carpeta, ident="capex-oq8209", salida=None):
     c = Path(carpeta)
     cot = json.load(open(c / "cotizacion.json", encoding="utf-8"))
     of = json.load(open(c / "oferta.json", encoding="utf-8"))
@@ -37,10 +40,25 @@ const r=M.calcular(c,d.indices);console.log(JSON.stringify({{u:r.precio_unitario
         {"op": "set", "path": f"resumenes/{ident}", "data": {"codigo": cot["codigo"], "titulo": cot["titulo"], "cliente": cot["cliente"]["nombre"],
                                                            "estado": cot["estado"], "unitario": calc["u"], "total": calc["t"], "actualizado": ahora}},
     ]
-    salida = RAIZ / "web" / "semilla.json"
-    salida.write_text(json.dumps(ops, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"{salida.relative_to(RAIZ)}: {len(ops)} documentos · unitario USD {calc['u']} · {len(json.dumps(ops[1]['data'])) / 1024:.0f} KiB la cotización")
+    if salida:
+        ops[1]["data"]["editor"] = "claude-code"  # la página avisa que la actualizó Claude Code
+        Path(salida).mkdir(parents=True, exist_ok=True)
+        for o in ops[1:]:
+            f = Path(salida) / (o["path"].replace("/", "__") + ".json")
+            f.write_text(json.dumps(o["data"], ensure_ascii=False), encoding="utf-8")
+            print(f"{o['path']} → {f}")
+        print(f"unitario USD {calc['u']} · total USD {calc['t']}")
+        return
+    archivo = RAIZ / "web" / "semilla.json"
+    archivo.write_text(json.dumps(ops, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"{archivo.relative_to(RAIZ)}: {len(ops)} documentos · unitario USD {calc['u']} · {len(json.dumps(ops[1]['data'])) / 1024:.0f} KiB la cotización")
 
 
 if __name__ == "__main__":
-    main(*sys.argv[1:])
+    a = sys.argv[1:]
+    sal = None
+    if "--salida" in a:
+        i = a.index("--salida")
+        sal = a[i + 1]
+        del a[i:i + 2]
+    main(*a, salida=sal)

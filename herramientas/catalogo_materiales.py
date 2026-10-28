@@ -146,7 +146,7 @@ def familia_texto(t):
         return "INS"
     if re.search(r"junta|espiralad|ring joint|\bbx-?\d|\br\d{2}\b|esparrago|bulon|tuerca|kit dielectr|arandela", t):
         return "JUN"
-    if re.search(r"\bbrida", t):
+    if re.search(r"\bbridas?\b", t):
         return "BRI"
     if re.search(r"\bniple", t):
         return "NIP"
@@ -563,6 +563,13 @@ def leer_fuentes():
                 extra="; ".join(x for x in [f"número ambiguo '{cu[0].group(1)}' leído como {valor:g}: verificar" if ambiguo else "",
                                             f"renglón completo: {r['detalle'][:180]}" if len(r["detalle"]) > len(tramo(r["detalle"])) + 5 else ""] if x),
                 iva=iva_de(det, cu[0].end()))
+    # listas y cotizaciones nuevas que llegan por los pedidos de la página (web/LEEME.md, "Pedidos desde la página")
+    ruta_ln = PRECIOS / "listas_nuevas.csv"
+    if ruta_ln.exists():
+        for r in csv.DictReader(open(ruta_ln, encoding="utf-8")):
+            add(r["descripcion"], num(r["precio"]), r["moneda"], fecha_iso(r["fecha"]), r["tipo_precio"] or "cotización", r["proveedor"],
+                r["archivo_origen"], r["pedido"] and f"pedido de la página {r['pedido']}", r["ruta_repo"], r["unidad"], extra=r["nota"],
+                iva=iva_de(r["iva"]) if r["iva"] else None)
     # etapa 2: costos de materiales de las planillas de costo 2025–2026 (herramientas/unir_planillas_costo.py)
     ruta_pl = PRECIOS / "planillas_costo_items.csv"
     if ruta_pl.exists():

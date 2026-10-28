@@ -1,6 +1,7 @@
 // Cotizador ITT — página. Usa Motor (cálculo), Busqueda (catálogos y controles) y Documentos (descargas).
 // Guardado: colección "cotizaciones" (cotización completa: cot = cotizacion.json, oferta = oferta.json), "resumenes" (lista liviana),
-// "cotizaciones/<id>/versiones" (historial), "firmantes" y "config/indices" (dólar e índices que actualiza la tarea semanal).
+// "cotizaciones/<id>/versiones" (historial), "firmantes", "config/indices" (dólar e índices que actualiza la tarea semanal) y "pedidos"
+// (archivos y trabajos para Claude Code; ver asistente.js). window.ITT expone el estado y las funciones que usa el chat (asistente.js).
 (async function () {
   const $ = s => document.querySelector(s);
   const E = Documentos.esc, usd = Documentos.usd, num = Documentos.num;
@@ -55,7 +56,7 @@
     if (!S.db) { marcarGuardado("sin conexión con la base: los cambios no se guardan"); return; }
     if (S.guardando) { S.timer = setTimeout(guardar, 800); return; }
     S.guardando = true; S.pendiente = false;
-    const doc = clon(S.doc); doc.guardado = new Date().toISOString();
+    const doc = clon(S.doc); doc.guardado = new Date().toISOString(); delete doc.editor; S.miGuardado = doc.guardado;
     try {
       await S.db.doc("cotizaciones/" + S.id).set(doc);
       await S.db.doc("resumenes/" + S.id).set(resumenDe(doc));
@@ -79,7 +80,7 @@
   function ruta() {
     const h = location.hash.slice(1);
     if (h.startsWith("c-")) abrir(h.slice(2));
-    else { S.vista = h === "firmantes" ? "firmantes" : "inicio"; S.id = null; S.doc = null; render(); }
+    else { S.vista = ["firmantes", "pedidos"].includes(h) ? h : "inicio"; S.id = null; S.doc = null; S.desuscribir?.(); render(); }
   }
   window.addEventListener("hashchange", ruta);
   async function abrir(id) {
@@ -92,9 +93,33 @@
     if (!d.exists) { app.innerHTML = `<div class="aviso bad">No existe esa cotización. <a href="#inicio">Volver a la lista</a></div>`; return; }
     S.doc = clon(d.data());
     S.doc.cot.items = S.doc.cot.items || [];
+    S.miGuardado = S.doc.guardado;
+    escucharCambios(id);
     render();
   }
+  // Si Claude Code (u otra persona) guarda esta cotización mientras está abierta, se muestra lo nuevo
+  function escucharCambios(id) {
+    S.desuscribir?.();
+    S.desuscribir = S.db.doc("cotizaciones/" + id).onSnapshot(sn => {
+      if (S.id !== id || !sn.exists) return;
+      const d = sn.data();
+      if (!d.guardado || d.guardado === S.miGuardado) return;
+      if (S.pendiente) { toast("Otra persona o Claude Code cambió esta cotización: se guardan tus cambios encima. Revisá las versiones si hace falta."); return; }
+      S.doc = clon(d); S.doc.cot.items ??= []; S.miGuardado = d.guardado; render();
+      toast(d.editor === "claude-code" ? "Claude Code actualizó esta cotización" : "La cotización se actualizó con cambios de otra persona");
+    }, () => {});
+  }
   function nuevoId() { return "c" + Date.now().toString(36); }
+  async function crearCotizacion({ titulo = "", cliente = "", codigo = "COT26-CCCC-NNN" } = {}) {
+    const id = nuevoId(), base = clon(S.datos.plantilla_cotizacion), of = clon(S.datos.plantilla_oferta);
+    Object.assign(base, { codigo, revision: "Rev 0", estado: "borrador", fecha: hoy(), titulo, items: [], cliente: { nombre: cliente, codigo_itt: "", comprador: "" }, firmante_id: S.firmantes[0]?.id || "" });
+    base.parametros.fecha_referencia = hoy(); base.plazo = { dias: 60, texto: "desde OC", tareas: [], nota: "" };
+    of.estado = "borrador"; of.oferta = { numero: "PRES [a asignar]", revision: "A", fecha: hoy().split("-").reverse().join("/"), descripcion_revision: "Emisión original" };
+    of.cliente = { nombre: cliente, contacto: "", referencia: "", proyecto: "" };
+    await S.db.doc("cotizaciones/" + id).set({ cot: base, oferta: of, creado: new Date().toISOString() });
+    await S.db.doc("resumenes/" + id).set({ codigo, titulo, cliente, estado: "borrador", unitario: 0, total: 0, actualizado: new Date().toISOString() });
+    return id;
+  }
 
   // ------------------------------------------------------------------ utilidades de datos
   const leerRuta = (o, p) => p.split(".").reduce((a, k) => (a == null ? a : a[k]), o);
@@ -105,8 +130,9 @@
 
   // ------------------------------------------------------------------ render
   function render() {
-    for (const [id, v] of [["nav-inicio", "inicio"], ["nav-firmantes", "firmantes"]]) $("#" + id).toggleAttribute("aria-current", S.vista === v), S.vista === v && $("#" + id).setAttribute("aria-current", "page");
+    for (const [id, v] of [["nav-inicio", "inicio"], ["nav-pedidos", "pedidos"], ["nav-firmantes", "firmantes"]]) $("#" + id).toggleAttribute("aria-current", S.vista === v), S.vista === v && $("#" + id).setAttribute("aria-current", "page");
     if (S.vista === "firmantes") return renderFirmantes();
+    if (S.vista === "pedidos") return typeof Asistente !== "undefined" ? Asistente.renderPedidos(app) : (app.innerHTML = "");
     if (S.vista === "cot" && S.doc) return renderCot();
     if (S.vista === "inicio") return renderInicio();
   }
@@ -487,16 +513,7 @@
     switch (a) {
       case "tab": S.tab = b.dataset.v; render(); break;
       case "estado": cot.estado = b.dataset.v; S.doc.oferta.estado = b.dataset.v; S.ultVersion = 0; guardarPronto(); render(); break;
-      case "nueva": {
-        const id = nuevoId(), base = clon(S.datos.plantilla_cotizacion), of = clon(S.datos.plantilla_oferta);
-        Object.assign(base, { codigo: "COT26-CCCC-NNN", revision: "Rev 0", estado: "borrador", fecha: hoy(), titulo: "", items: [], cliente: { nombre: "", codigo_itt: "", comprador: "" }, firmante_id: S.firmantes[0]?.id || "" });
-        base.parametros.fecha_referencia = hoy(); base.plazo = { dias: 60, texto: "desde OC", tareas: [], nota: "" };
-        of.estado = "borrador"; of.oferta = { numero: "PRES [a asignar]", revision: "A", fecha: hoy().split("-").reverse().join("/"), descripcion_revision: "Emisión original" };
-        of.cliente = { nombre: "", contacto: "", referencia: "", proyecto: "" };
-        await S.db.doc("cotizaciones/" + id).set({ cot: base, oferta: of, creado: new Date().toISOString() });
-        await S.db.doc("resumenes/" + id).set({ codigo: base.codigo, titulo: "", cliente: "", estado: "borrador", unitario: 0, total: 0, actualizado: new Date().toISOString() });
-        S.tab = "datos"; location.hash = "c-" + id; break;
-      }
+      case "nueva": { const id = await crearCotizacion(); S.tab = "datos"; location.hash = "c-" + id; break; }
       case "duplicar": {
         const d = await S.db.doc("cotizaciones/" + b.dataset.id).get(); if (!d.exists) return;
         const doc = clon(d.data()), id = nuevoId();
@@ -653,5 +670,7 @@
     finally { b.disabled = false; }
   }
 
+  window.ITT = { S, $, E, num, toast, clon, hoy, render, refrescar, guardarPronto, calc, siguienteId, nuevoId, crearCotizacion, abrir, accion, editorItem };
+  window.dispatchEvent(new Event("itt-listo"));
   ruta();
 })();

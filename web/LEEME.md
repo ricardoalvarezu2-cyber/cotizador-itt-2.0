@@ -1,7 +1,7 @@
 # Página del cotizador (Artifact en Claude)
 
 - **Dirección:** https://claude.ai/artifact/HfbiaNvhAFkQjYwLe2kaBQ (privada: solo la ve Matías y a quien él la comparta desde el menú Compartir).
-- Publicada el 28/10/2026. Capacidades: `db` (base de cotizaciones), `downloads` (descargas), `assets` (imágenes de firma y plano).
+- Publicada el 28/10/2026. Capacidades: `db` (base de cotizaciones), `downloads` (descargas), `assets` (archivos: firma, plano, pedidos), `sample` con imágenes (chat con Claude, con la cuenta de quien lo usa) y `mcp` con el conector **Claude Code Remote** (`send_message`, para mandar pedidos a la sesión fija).
 - Sin usuarios ni registro de resultados (decisión de Matías). Los firmantes se cargan en la pestaña Firmantes; la imagen de la firma solo va en las ofertas aprobadas.
 
 ## Qué hay en esta carpeta
@@ -11,6 +11,7 @@
 | `src/busqueda.js` | Buscador de materiales y servicios (igual / similar), calculadora de soldaduras y avisos de control. Prueba: `node web/probar_busqueda.js`. |
 | `src/documentos.js` | Planilla de presupuesto (con fórmulas), lista para Compras, informe PDF, ofertas técnica y económica (Word con la plantilla ITT y PDF). |
 | `src/app.js`, `src/pagina.html` | Interfaz. Estética de los informes de ITT. |
+| `src/asistente.js` | Chat con Claude (herramientas: buscar, agregar, cargar, modificar y quitar ítems, ver avisos, nueva cotización, proponer pedido; lee imágenes y PDF como imágenes; deshacer) y sección **Pedidos** (subir archivos y mandarlos a Claude Code). |
 | `construir_datos.py` → `datos.json` | Catálogos, índices, tarifas, tablas técnicas, clientes y plantillas de oferta para la página. |
 | `armar_pagina.py` → `cotizador.html` | Junta todo en una sola página para publicar. |
 | `semilla.py` → `semilla.json` | Carga una cotización de `cotizaciones/` en la base de la página. |
@@ -23,6 +24,9 @@
 - `resumenes/<id>`: lo que muestra la lista (código, título, cliente, estado, unitario, total).
 - `firmantes/<id>`: nombre, cargo, teléfono, celular, email, `firma_asset` y `firma_url`.
 - `config/indices`: `{generado, indices, dolar}`. Si es más nuevo que `datos.json`, la página lo usa.
+- `config/claude_code`: `{session_id}` de la sesión que recibe los pedidos (si no existe, la página usa la sesión fija de abajo).
+- `pedidos/<id>`: `{tipo, texto, cotizacion_id, archivos: [{id, url, nombre, tipo, original?}], estado, nota, respuesta, resultado_cotizacion_id, creado, enviado, historial: [{fecha, estado, nota}]}`. Tipos: `cotizacion_nueva`, `actualizar_cotizacion`, `lista_precios`, `otro`. Estados: `pendiente` → `enviado` → `en_proceso` → `listo` / `con_dudas` (o `error` si no se sabe si el envío llegó).
+- Si Claude Code guarda una cotización con `"editor": "claude-code"`, la página abierta la recarga sola y avisa.
 - La página guarda sola 1,2 segundos después de cada cambio.
 
 ## Tarea semanal (lunes a la mañana)
@@ -32,7 +36,21 @@ Tarea programada `trig_01FE1sHFbntc3vsLmKVYvvcD` (lunes 7:37, hora Argentina). D
 2. `python web/indices_para_pagina.py <scratch>/indices.json` y subirlo con ArtifactData: `set`, collection `config`, doc_id `indices`, `file_path` (si ya existe, leerlo antes para pasar `if_version`).
 3. Respaldo: ArtifactData `list` de `cotizaciones` con `out_dir` y `python web/respaldo_base.py <out_dir>/cotizaciones`.
 4. Si cambiaron los catálogos: `python web/construir_datos.py && python web/armar_pagina.py` y republicar la página (Artifact, `url` de arriba, `files: {"datos.json": "web/datos.json"}`; leerla antes con `action: read`).
-5. Commit y push a `main`.
+5. Pedidos `pendiente` de la colección `pedidos`: procesarlos como dice "Pedidos desde la página".
+6. Commit y push a `main`.
+
+## Pedidos desde la página
+Llegan a la sesión fija como un mensaje "Pedido <id> desde la página del cotizador…" (botón "Mandar a Claude Code" o el chat), o quedan `pendiente` y se procesan el lunes. Procesar uno por vez:
+1. ArtifactData `get` de `pedidos/<id>` (url de la página, arriba). `update` con `if_version`: `estado: "en_proceso"`, `nota`, y una entrada más en `historial`.
+2. Bajar cada archivo con Artifact `action: "read"`, `url` de la página y `path` = `archivos[].id`. Guardar la copia en `fuentes_originales/pedidos_web/<id>/<nombre>` (todo queda en el repositorio). Excel y Word llegan convertidos a Markdown (`original` = nombre del archivo original); en el Excel convertido el punto es decimal.
+3. Según el `tipo`:
+   - `cotizacion_nueva`: skill `cotizar` completo (carpeta nueva en `cotizaciones/`, P1–P10, `precotizar.py`, `armar_cotizacion.py`, `verificar_computo.py`). Después `python web/semilla.py cotizaciones/<carpeta> <id_pagina> --salida <scratch>` (id_pagina: `c` + código en minúsculas, ej. `c26-1003-001`) y ArtifactData `batch` de `set` con esos dos archivos (si ya existen, leerlos y pasar `if_version`).
+   - `actualizar_cotizacion`: si está en el repositorio (`cotizaciones/<carpeta>` con el mismo código), trabajar ahí y volver a cargarla con `semilla.py --salida`; si no, bajar `cotizaciones/<cotizacion_id>` con ArtifactData, corregir el JSON con las mismas reglas, poner `"editor": "claude-code"` y `"guardado"` = ahora, y `set` con `if_version` (y `resumenes/<id>` con los totales de `web/src/motor.js`). En `respuesta`, decir qué se cambió.
+   - `lista_precios`: materiales a `conocimiento/precios/listas_nuevas.csv` (`fecha,proveedor,descripcion,precio,moneda,unidad,iva,tipo_precio,archivo_origen,ruta_repo,pedido,nota`; precio y moneda tal como dice el documento; `iva` con lo que dice el documento: el catálogo divide si es con IVA; `tipo_precio` lista o cotización; `ruta_repo` = la copia en `fuentes_originales/pedidos_web/`). MO y servicios a `conocimiento/precios/servicios_extraidos.csv` con su formato. Después `python herramientas/actualizar_base.py` (TODO OK), `python web/construir_datos.py && python web/armar_pagina.py` y republicar la página (Artifact `read` primero, después publish con la misma `url` y `files: {"datos.json": "web/datos.json"}`).
+   - `otro`: lo que pida, con las mismas reglas.
+4. Cerrar el pedido: `update` con `estado: "listo"` o `"con_dudas"`, `respuesta` (2 a 4 líneas: qué se hizo, qué revisar, dudas), `resultado_cotizacion_id` si corresponde, y el `historial`.
+5. `verificar_todo.py` (TODO OK), commit y push. Errores nuevos a `conocimiento/errores_y_lecciones.md`.
+- Reglas: nunca enviar nada al cliente; todo queda en borrador; si algo no se lee bien, `con_dudas` y explicarlo. Un precio sin documento no se carga.
 
 ## Cambios en la página
 Editar `src/`, correr `python web/armar_pagina.py`, probar (ver `probar_*.js`) y republicar el mismo `web/cotizador.html`.
