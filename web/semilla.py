@@ -28,6 +28,18 @@ def main(carpeta, ident="capex-oq8209", salida=None):
             it["plano"] = {k: r[k] for k in ("descripcion", "diametro", "serie_sch", "material", "extremos", "modelo_fabricante") if r.get(k)}
             if "modelo_fabricante" in it["plano"]:
                 it["plano"]["modelo"] = it["plano"].pop("modelo_fabricante")
+    # transcripción literal del documento y kilos por unidad, para el Excel de Compras de la página (igual que lista_compras.py)
+    sys.path.insert(0, str(RAIZ / "herramientas"))
+    import lista_compras
+    if (c / "pedido" / "transcripcion.json").exists():
+        cot["transcripcion"] = json.load(open(c / "pedido" / "transcripcion.json", encoding="utf-8"))
+    kg = {}
+    for it in cot["items"]:
+        if it["grupo"] == "material" and str(it.get("pos")) not in kg:
+            k, _ = lista_compras.kg_por_unidad(plano.get(str(it.get("pos")), {"descripcion": it["descripcion"]}), it)
+            if k is not None:
+                kg[str(it["pos"])] = round(k, 3)
+    cot["kg_compras"] = kg
     cot["firmante_id"] = "matias-russo"
     of.pop("firma", None)  # la firma sale del firmante elegido
     ahora = datetime.now().isoformat(timespec="seconds")

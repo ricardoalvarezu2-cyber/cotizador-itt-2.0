@@ -20,7 +20,7 @@
 | `respaldo_base.py` | Copia las cotizaciones de la base de la página a `cotizaciones_web/` (respaldo en GitHub). |
 
 ## Base de datos de la página
-- `cotizaciones/<id>`: `{cot, oferta, creado, guardado}`. `cot` tiene el formato de `cotizacion.json` más `firmante_id` y, en cada material, `plano` (diámetro, serie, material, extremos del plano). `oferta` tiene el formato de `oferta.json`.
+- `cotizaciones/<id>`: `{cot, oferta, creado, guardado}`. `cot.transcripcion` (si existe `pedido/transcripcion.json`) es la lista tal cual el documento de origen y `cot.kg_compras` los kg por unidad de cada posición: los usa el Excel para Compras (los pone `semilla.py`). `cot` tiene el formato de `cotizacion.json` más `firmante_id` y, en cada material, `plano` (diámetro, serie, material, extremos del plano). `oferta` tiene el formato de `oferta.json`.
 - `cotizaciones/<id>/versiones/<marca>`: copia cada 10 minutos de trabajo y en cada cambio de estado (se guardan las últimas 20).
 - `resumenes/<id>`: lo que muestra la lista (código, título, cliente, estado, unitario, total).
 - `firmantes/<id>`: nombre, cargo, teléfono, celular, email, `firma_asset` y `firma_url`.

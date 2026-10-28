@@ -156,28 +156,73 @@ const Documentos = (() => {
   }
 
   // ------------------------------------------------------------------ Excel para Compras
+  // Igual que herramientas/lista_compras.py (pedido de Matías, 28-10-2026): la lista TAL CUAL el documento de origen
+  // (cot.transcripcion: tablas con sus columnas y su texto), a la derecha la cantidad a comprar calculada (m, kg o un),
+  // los kg aproximados y de dónde sale la cantidad; después Proveedor, Precio, Plazo y Anotaciones para Compras.
+  // Lo que se compra y no está en el documento va aparte; los precios de referencia, en otra hoja (uso interno).
   function compras(cot) {
     const X = XLSX, wb = X.utils.book_new(), N = Number(cot.parametros.N) || 1;
-    const H = { font: { bold: true, color: { rgb: "FFFFFF" } }, fill: { fgColor: { rgb: "1D5F86" } }, alignment: { wrapText: true, vertical: "center" } };
-    const AM = { font: { bold: true }, fill: { fgColor: { rgb: "FFE699" } }, alignment: { wrapText: true, vertical: "center" } };
-    const hojaDe = (items, titulo, conPlano) => {
-      const cols = ["Pos", "Descripción", "Especificación del plano", `Cantidad por ${cot.equipo?.singular || "equipo"}`, `Cantidad a comprar (× ${N})`, "Unidad",
-        "Precio de referencia interno USD (sin IVA)", "Fuente de la referencia", "Notas",
-        "Proveedor", "Precio unitario", "Moneda", "¿Incluye IVA?", "Plazo de entrega", "Validez de la oferta", "Observaciones del comprador"];
-      const filas = items.map(it => {
-        const s = it.fuentes[0];
-        return [it.pos, it.descripcion, it.especificacion || "", Number(it.cantidad), it.cantidad_compra ?? Number(it.cantidad) * N, it.unidad, Number(s.precio) || "",
-          `${TIPOS[s.tipo] || ""} · ${s.proveedor} · ${fecha(s.fecha)}`, s.coincide === "similar" ? "Referencia de una pieza similar: " + (s.diferencia || "") : "", "", "", "", "", "", "", ""];
-      });
-      const ws = X.utils.aoa_to_sheet([[titulo], [], cols, ...filas]);
-      cols.forEach((c, i) => { const a = X.utils.encode_cell({ r: 2, c: i }); ws[a].s = i >= 9 ? AM : H; });
-      ws.A1.s = { font: { bold: true, sz: 13 } };
-      ws["!cols"] = [6, 40, 46, 10, 12, 8, 14, 46, 36, 22, 12, 9, 10, 14, 14, 30].map(w => ({ wch: w }));
-      for (let r = 3; r < 3 + filas.length; r++) for (let c = 9; c < 16; c++) { const a = X.utils.encode_cell({ r, c }); ws[a] = ws[a] || { t: "s", v: "" }; ws[a].s = { fill: { fgColor: { rgb: "FFF7D6" } } }; }
-      return ws;
-    };
-    X.utils.book_append_sheet(wb, hojaDe(cot.items.filter(i => i.grupo === "material"), `${cot.codigo} · ${cot.titulo || ""} · Pedido de cotización a Compras (precios sin IVA)`), "Materiales");
-    X.utils.book_append_sheet(wb, hojaDe(cot.items.filter(i => i.grupo !== "material"), `${cot.codigo} · Servicios a cotizar`), "Servicios");
+    const est = (rgb, bold, color) => ({ font: { bold: !!bold, color: { rgb: color || "000000" } }, fill: { fgColor: { rgb } }, alignment: { wrapText: true, vertical: "top" } });
+    const AZ = est("1D5F86", true, "FFFFFF"), GR = est("5D6B75", true, "FFFFFF"), OC = est("B7791F", true, "FFFFFF"), CG = est("EEF3F6"), CA = est("FBEFD6");
+    const mats = cot.items.filter(i => i.grupo === "material");
+    const esTira = it => /^(completar|sobrante)/i.test(String(it.descripcion || "").trim());
+    const kgU = cot.kg_compras || {};
+    const eqTxt = N === 1 ? (cot.equipo?.singular || "equipo") : (cot.equipo?.plural || "equipos");
+    const tr = cot.transcripcion || { fuente: "Cotización de la página (no hay transcripción literal del documento)", tablas: [{
+      titulo: "LISTA DE MATERIALES", columnas: ["Pos", "Descripción", "Ø", "Serie / SCH", "Material", "Marca / modelo", "Cant.", "Unidad"],
+      filas: mats.filter(i => !esTira(i) && !/[a-z]$/i.test(String(i.pos))).map(i => { const p = i.plano || {};
+        return [i.pos, p.descripcion || i.descripcion, p.diametro || "", p.serie_sch || "", p.material || "", p.modelo || "", i.cantidad, i.unidad]; }) }] };
+    const enDoc = new Set(tr.tablas.flatMap(t => t.filas.map(f => String(f[0]).trim())));
+    const filas = [[`PEDIDO DE COTIZACIÓN DE MATERIALES · ${cot.codigo}`], [`${cot.titulo || ""} · ${N} ${eqTxt}`], ["Origen de la lista", tr.fuente]];
+    const estilos = {};
+    const marca = (r, c, s) => { estilos[X.utils.encode_cell({ r, c })] = s; };
+    let kgTot = 0;
+    for (const t of tr.tablas) {
+      filas.push([], [t.titulo]);
+      const cab = [...t.columnas, "Cant. a comprar", "Unidad", "Kg aprox.", "Origen de la cantidad", "Proveedor", "Precio unit. USD", "Plazo", "Anotaciones"];
+      const rc = filas.length; filas.push(cab);
+      cab.forEach((_, c) => marca(rc, c, c < t.columnas.length ? AZ : c < t.columnas.length + 4 ? GR : OC));
+      for (const f of t.filas) {
+        const pos = String(f[0]).trim(), its = mats.filter(i => String(i.pos).trim() === pos);
+        const extras = mats.filter(i => esTira(i) && new RegExp("^" + pos.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "[b-z]$").test(String(i.pos).trim()));
+        let calc = ["—", "", "", "no se cotiza"];
+        if (its.length) {
+          const q = its.reduce((a, i) => a + Number(i.cantidad), 0) * N, qe = extras.reduce((a, i) => a + Number(i.cantidad), 0) * N, u = its[0].unidad;
+          const k = kgU[pos] != null ? Math.round(kgU[pos] * (q + qe) * 10) / 10 : "—";
+          if (typeof k === "number") kgTot += k;
+          const desc = its[0].plano?.descripcion || "";
+          calc = [Math.round((q + qe) * 1000) / 1000, u, k, qe ? `${q} ${u} para ${N} ${eqTxt} + ${qe} ${u} para completar la tira`
+            : /medida del dibujo|no indica/i.test(desc) ? "el documento no da cantidad: medida del dibujo (±20%)" : N === 1 ? "documento" : `documento × ${N}`];
+        }
+        const r = filas.length; filas.push([...f, ...calc, "", "", "", ""]);
+        for (let c = t.columnas.length; c < t.columnas.length + 8; c++) marca(r, c, c < t.columnas.length + 4 ? CG : CA);
+      }
+    }
+    if (tr.nota) filas.push(["", "Nota del documento: " + tr.nota]);
+    const adic = mats.filter(i => !enDoc.has(String(i.pos).trim()) && !esTira(i));
+    if (adic.length) {
+      filas.push([], ["ADICIONALES (no figuran en el documento; los agrega ITT)"]);
+      const cab = ["Pos", "Descripción", "Especificación", "Cant. a comprar", "Unidad", "Kg aprox.", "Por qué", "Proveedor", "Precio unit. USD", "Plazo", "Anotaciones"];
+      const rc = filas.length; filas.push(cab); cab.forEach((_, c) => marca(rc, c, c < 7 ? GR : OC));
+      for (const i of adic) { const r = filas.length; filas.push([i.pos, i.descripcion, i.especificacion || "", Number(i.cantidad) * N, i.unidad, "—", "compra mínima o nota del documento", "", "", "", ""]);
+        for (let c = 7; c < 11; c++) marca(r, c, CA); }
+    }
+    filas.push([], [`Peso aproximado de lo que tiene tabla: ${Math.round(kgTot)} kg`],
+      ["Columnas azules: tal cual el documento. Grises: cálculo de ITT. Amarillas: para que Compras complete (proveedor, precio sin IVA, plazo y anotaciones)."]);
+    const ws = X.utils.aoa_to_sheet(filas);
+    for (const [a, s] of Object.entries(estilos)) { ws[a] = ws[a] || { t: "s", v: "" }; ws[a].s = s; }
+    ws.A1.s = { font: { bold: true, sz: 14, color: { rgb: "1D5F86" } } };
+    ws["!cols"] = [6, 46, 9, 8, 8, 8, 20, 11, 8, 10, 30, 22, 13, 12, 45].map(w => ({ wch: w }));
+    X.utils.book_append_sheet(wb, ws, "Materiales");
+    const serv = cot.items.filter(i => i.grupo !== "material");
+    const sv = X.utils.aoa_to_sheet([["Servicio", "Aclaraciones", "Proveedor", "Precio unit. USD", "Plazo", "Anotaciones"], ...serv.map(i => [i.descripcion, i.especificacion || "", "", "", "", ""])]);
+    sv["!cols"] = [50, 45, 22, 13, 12, 45].map(w => ({ wch: w }));
+    X.utils.book_append_sheet(wb, sv, "Servicios");
+    const ref = X.utils.aoa_to_sheet([["Pos", "Descripción", "Proveedor de referencia", "Último precio USD", "Fecha", "Tipo", "Coincide", "Diferencia"],
+      ...cot.items.map(i => { const s = i.fuentes[0]; return [i.pos, i.descripcion, s.proveedor, Number(s.precio) || "SIN PRECIO", fecha(s.fecha), TIPOS[s.tipo] || s.tipo, COINC[s.coincide] || s.coincide || "", s.diferencia || ""]; }),
+      [], ["Uso interno: no mandar al proveedor."]]);
+    ref["!cols"] = [7, 45, 40, 13, 11, 12, 12, 50].map(w => ({ wch: w }));
+    X.utils.book_append_sheet(wb, ref, "Referencias internas");
     return new Blob([X.write(wb, { type: "array", bookType: "xlsx" })], { type: "application/octet-stream" });
   }
 
