@@ -6,6 +6,9 @@ Uso: python herramientas/verificar_todo.py
 2. Armado determinístico: dos corridas de cada catálogo dan el mismo CSV.
 3. La cotización de control (CAPEX) se vuelve a armar: Python y planilla iguales, verificar_computo sin errores y
    el precio unitario igual al registrado en CONTROL (si cambia a propósito, actualizar CONTROL y anotar por qué).
+4. Deja el repositorio como lo encontró: si solo se regeneraron archivos derivados (Excel, Word, PDF, HTML) que estaban
+   sin cambios y no cambió ningún dato (CSV, JSON, MD), se restauran. Así el control no deja "cambios" de fechas internas
+   que traban el git pull de la sesión de la tarea semanal (lección 43).
 """
 import hashlib
 import re
@@ -34,6 +37,14 @@ def md5(p):
     return hashlib.md5((RAIZ / p).read_bytes()).hexdigest()
 
 
+def modificados():
+    r = subprocess.run(["git", "diff", "--name-only", "-z", "HEAD"], cwd=RAIZ, capture_output=True, text=True)
+    return set(x for x in r.stdout.split("\0") if x) if r.returncode == 0 else None  # -z: nombres con espacios y acentos
+
+
+DERIVADOS = (".xlsx", ".docx", ".pdf", ".html")
+antes = modificados()
+
 for t in ("test_catalogo.py", "test_catalogo_servicios.py", "test_precotizar.py"):
     correr(t, [str(H / t)])
 for script, salida in (("catalogo_materiales.py", "conocimiento/precios/catalogo_materiales.csv"),
@@ -49,5 +60,13 @@ m = re.search(r"Planilla: .*precio unitario ([\d,.]+)", out)
 if not m or m.group(1) != CONTROL["precio_unitario"]:
     fallas.append("precio de control de la CAPEX")
     print(f"FALLA precio de control: dio {m.group(1) if m else '—'}, se esperaba {CONTROL['precio_unitario']}")
+despues = modificados()
+if antes is not None and despues is not None:
+    nuevos = sorted(despues - antes)
+    if nuevos and all(f.endswith(DERIVADOS) for f in nuevos):
+        subprocess.run(["git", "checkout", "--"] + nuevos, cwd=RAIZ, check=False)
+        print(f"Restaurados {len(nuevos)} archivos derivados que solo cambiaron por regenerarse (sin cambios de datos)")
+    elif nuevos:
+        print(f"Cambiaron datos: quedan {len(nuevos)} archivos modificados para revisar y subir")
 print("\nTODO OK" if not fallas else f"\nFALLAN {len(fallas)}: {', '.join(fallas)}")
 sys.exit(1 if fallas else 0)
