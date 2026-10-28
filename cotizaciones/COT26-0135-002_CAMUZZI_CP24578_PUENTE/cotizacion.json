@@ -1,0 +1,846 @@
+{
+ "codigo": "COT26-0135-002",
+ "revision": "Rev 0",
+ "estado": "borrador",
+ "fecha": "2026-10-28",
+ "preparo": "Matías Russo",
+ "cliente": {
+  "nombre": "CAMUZZI GAS PAMPEANA S.A. / CAMUZZI GAS DEL SUR S.A.",
+  "codigo_itt": "0135",
+  "comprador": "Gerencia de Abastecimiento Obras y Almacenes (Juan Filas)"
+ },
+ "titulo": "Camuzzi · Concurso de precios N° 24578 ítem 3 — 1 skid puente de medición (ERP Parque Industrial Tres Arroyos)",
+ "titulo_pagina": "Cotización Camuzzi CP 24578 · Puente de medición",
+ "archivo_planilla": "CAMUZZI_CP24578_PUENTE_MEDICION",
+ "subtitulo_planilla": "1 skid puente de medición · plano SCE-ME-315-039 · USD sin IVA",
+ "meta": [
+  "Concurso de precios N° 24578 · ítem 3",
+  "Plano SCE-ME-315-039 · Especificación SCE-ME-515-0030",
+  "Comprador: Camuzzi (portal de compras)",
+  "Preparó: Matías Russo · 28-10-2026"
+ ],
+ "equipo": {
+  "singular": "skid",
+  "plural": "skids",
+  "tipo": "puente",
+  "diametro_pulg": 4
+ },
+ "parametros": {
+  "N": 1,
+  "FM": 1.35,
+  "FMO": 1.35,
+  "CONT": 5,
+  "AJ": 1,
+  "TRANS": 1,
+  "TC": 1541.43,
+  "TR_ARS": 700000,
+  "TR_EMB": 150,
+  "TR_F": 1.0,
+  "fecha_referencia": "2026-10-28",
+  "rx_pct": 100,
+  "ph_horas": 6,
+  "FTV": 1.0
+ },
+ "plazo": {
+  "dias": 105,
+  "texto": "desde OC · entregado en Transporte Cruz del Sur (Tapiales)",
+  "tareas": [
+   [
+    "Ingeniería y documentación para aprobación de Camuzzi",
+    0,
+    20,
+    ""
+   ],
+   [
+    "Filtro FM-6: tapa, elemento y materiales",
+    0,
+    45,
+    "crit"
+   ],
+   [
+    "Esféricas Taval, bridas, accesorios y caño",
+    0,
+    30,
+    ""
+   ],
+   [
+    "Fabricación del filtro y prefabricado del puente, RX 100% y PH",
+    45,
+    70,
+    "tal"
+   ],
+   [
+    "Montaje, pintura y prueba de fugas",
+    70,
+    80,
+    "tal"
+   ],
+   [
+    "Inspección Camuzzi, data book y despacho",
+    80,
+    90,
+    "tal"
+   ]
+  ],
+  "nota": "Fija el plazo el filtro FM-6 (tapa de cierre rápido y elemento). La turbina la provee Camuzzi: se entrega con carretel provisorio."
+ },
+ "flete": {
+  "etiqueta": "Flete a Transporte Cruz del Sur (Tapiales)",
+  "referencia_html": "<b>Estimado:</b> un camión con hidrogrúa Quilmes → Mercado Central nave D3 (≈ 30 km), ARS 700.000 + USD 150 de embalaje. Si se despacha junto con el ítem 2, un solo flete.",
+  "criterio_html": "La planilla del concurso pone el flete a cargo del proveedor hasta Transporte Cruz del Sur."
+ },
+ "historial_html": [],
+ "pedido": {
+  "eyebrow": "Concurso de precios N° 24578 · Cláusulas particulares del 01-10-2026 · especificación del 19-10-2026",
+  "datos_html": [
+   [
+    "Cliente",
+    "Camuzzi Gas Pampeana S.A. / Camuzzi Gas del Sur S.A. (código ITT 0135)"
+   ],
+   [
+    "Ítem",
+    "3 · Skid puente de medición · <b>1 un</b>"
+   ],
+   [
+    "Documentos",
+    "Plano SCE-ME-315-039 · Especificación SCE-ME-515-0030 (ERP Parque Industrial Tres Arroyos)"
+   ],
+   [
+    "Condiciones de proceso",
+    "Pe 15-10 bar · Qmáx 6.000 Sm3/h"
+   ],
+   [
+    "Entrega pedida",
+    "Transporte Cruz del Sur, Mercado Central nave D3, Tapiales (flete a cargo del proveedor)"
+   ],
+   [
+    "Condiciones",
+    "Pago 30 días f.p.f., dólar BNA divisa del día de factura · validez 30 días"
+   ]
+  ],
+  "requisitos_html": [
+   "Turbina de medición provista por Camuzzi: ITT provee un carretel con sus dimensiones",
+   "Filtro FM según SCE-RE-112-0004 y SCE-RE-512-0004",
+   "RX 100%, PH (NAG-124), prueba de fugas a 5,5 bar",
+   "Protección anticorrosiva SCE-PC-511-0003",
+   "Esféricas según SCE-IN-501-0008 / SCE-RE-308-0001",
+   "Documentación para aprobación y data book; inspección de Camuzzi"
+  ]
+ },
+ "nota_mo_html": "Soldadura propia por pulgada (16 USD/pulg-eq) contada de la columna de extremos; caños medidos del dibujo. El filtro FM-6 va como un ítem completo (fabricado por ITT, con su MO). Ingeniería 20 h y calidad 40 h por criterio (el antecedente de puentes en serie no sirve para un equipo único con aprobación de Camuzzi). Incluye RX 100%, PH, pintura y skid (200 kg estimados).",
+ "desvios": [
+  {
+   "tag": "Pos 7-8",
+   "titulo": "Tes en A-234 WPB",
+   "texto": "El plano dice A-105 para tes STD a tope: se cotiza A-234 WPB."
+  },
+  {
+   "tag": "Pos 2",
+   "titulo": "Carretel provisorio",
+   "texto": "Largo según la turbina que provee Camuzzi (300 mm en el plano): confirmar marca y modelo."
+  }
+ ],
+ "antecedentes": [
+  {
+   "carpeta_html": "<b>CAMUZZI/23</b> · Concurso 17584",
+   "fecha": "06-03-2025",
+   "que": "Filtro FM-6 #300 simple módulo (venta)",
+   "precio": "13.543",
+   "tomado_html": "Costo estimado del filtro FM-6"
+  },
+  {
+   "carpeta_html": "<b>TAVAL/40</b> · Inarteco Lic 9333",
+   "fecha": "15-01-2026",
+   "que": "Filtros FM3 S150 / FM8 S600 con planilla de costo",
+   "precio": "costo 5.575 / 14.375",
+   "tomado_html": "Control del costo del filtro"
+  }
+ ],
+ "pendientes": [
+  {
+   "titulo": "Proveedores",
+   "items": [
+    "Tapa y elemento del filtro FM-6 #150 (cotizar el filtro completo)",
+    "Termovainas y transmisor de temperatura (marca del listado)",
+    "Flete local a Tapiales"
+   ]
+  },
+  {
+   "titulo": "Camuzzi",
+   "items": [
+    "Marca y modelo de la turbina (largo del carretel)",
+    "Si el sensor A lo provee Camuzzi",
+    "Largos de caño (el plano no da cantidades)"
+   ]
+  }
+ ],
+ "pie": "Fuentes: base de conocimiento del repositorio cotizador-itt. Precios en USD sin IVA. Borrador sin revisar.",
+ "planilla_notas": [
+  "Plazo: 105 días desde OC (filtro FM-6 45 días + taller + inspección + margen por aprobaciones).",
+  "Condiciones del concurso: pago 30 días f.p.f., USD al BNA divisa vendedor del día de factura, validez 30 días, entregado en Transporte Cruz del Sur (Tapiales)."
+ ],
+ "items": [
+  {
+   "id": "M01",
+   "pos": "1",
+   "grupo": "material",
+   "descripcion": "Filtro FM-06 #150 simple módulo s/ SCE-RE-112-0004 y SCE-RE- 6\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 6\" · 150 / STD · S/ Esp. CAMUZZI · RF · S/ Esp. CAMUZZI",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 9000.0,
+     "proveedor": "Estimado: filtro FM-6 #150 simple módulo fabricado por ITT (venta del FM-6 #300 en CAMUZZI/23 13.543 ÷ 1,35 = 10.032 de costo; el #150 lleva menos espesor y bridas más livianas)",
+     "origen": "fuentes_originales/ofertas_texto/CAMUZZI/23.Filtro FM y skid salto de regulacion de presion/4.Armado de la Oferta Comercial/Concurso 17584 Vuelta 2.xlsx.txt",
+     "fecha": "2025-03-06",
+     "coincide": "similar",
+     "diferencia": "costo armado del filtro completo (materiales, tapa, elemento, MO, RX, PH); control: FM3 S150 de TAVAL/40 costó 5.575 y el FM8 S600 14.375 (01-2026)"
+    },
+    {
+     "tipo": "ant",
+     "precio": 5574.88,
+     "proveedor": "Planilla TAVAL/40: costo del filtro FM3 S150 (materiales 1.639 + MO 3.855 + repuestos y seguro)",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/4.Armado de la Oferta Comercial/LM costo Filtros rev.1.xlsx.txt",
+     "fecha": "2026-01-15",
+     "coincide": "similar",
+     "diferencia": "FM3 (menor)"
+    }
+   ]
+  },
+  {
+   "id": "M02",
+   "pos": "2",
+   "grupo": "material",
+   "descripcion": "Carretel de ajuste / provisorio de turbina (largo según turb 4\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 4\" · 150 · ASTM A-105 / A-53 Gr. B · BW/BW · S/ Esp. CAMUZZI",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 90.0,
+     "proveedor": "Estimado: 2 bridas WN 4\" #150 (Renard 35,65 c/u) + 0,3 m de caño 4\" sch 40 (Renard 26,95/m)",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "largo definitivo según la turbina que provee Camuzzi"
+    }
+   ]
+  },
+  {
+   "id": "M03",
+   "pos": "3",
+   "grupo": "material",
+   "descripcion": "Válvula esférica bridada paso total antifuego (APF) 6\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 6\" · 150 / STD · S/ Esp. CAMUZZI (SCE-IN-501-0008) · RF",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 740.0,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04474 (BF61501R0104VP)",
+     "origen": "fuentes_originales/taval_lista30_2025-09.xlsx",
+     "fecha": "2025-09-01",
+     "coincide": "similar",
+     "diferencia": "antifuego API 6D según SCE-IN-501-0008 a confirmar con Taval"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M04",
+   "pos": "4",
+   "grupo": "material",
+   "descripcion": "Válvula esférica bridada paso total antifuego (APF) 4\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 4\" · 150 / STD · S/ Esp. CAMUZZI (SCE-IN-501-0008) · RF",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 300.0,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04465",
+     "origen": "taval_lista30_2025-09.xlsx · código BF61001R0104VP, hoja PT Flotante",
+     "fecha": "2025-09-01",
+     "coincide": "similar",
+     "diferencia": "material: A216 WCB (no pedido); extremos: RF (pedido RF/Bridado)"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M05",
+   "pos": "5",
+   "grupo": "material",
+   "descripcion": "Brida WN RF 4\"",
+   "cantidad": 7.0,
+   "unidad": "un",
+   "especificacion": "Plano: 4\" · 150 x STD · ASTM A-105 · RF/BW",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 35.65,
+     "proveedor": "Renard (cód. 11295) · BRI-01295",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 11295",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M5B",
+   "pos": "5b",
+   "grupo": "material",
+   "descripcion": "Junta espiralada 4\" #150 AISI 316/grafito con anillo ext. zincado (válvulas y carretel)",
+   "especificacion": "Nota del plano: juntas y espárragos según diámetro de brida (SCE-IN-301-0001/2)",
+   "cantidad": 6,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 15.0,
+     "proveedor": "Planilla Techint/12 (JUN-02778)",
+     "origen": "fuentes_originales/ofertas_texto/TECHINT/12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado",
+     "fecha": "2025-12-23",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M5C",
+   "pos": "5c",
+   "grupo": "material",
+   "descripcion": "Espárrago 5/8\" × 3 1/2\" A193 B7 con 2 tuercas 2H zincado (8 por junta de 4\")",
+   "especificacion": "Nota del plano: juntas y espárragos según diámetro de brida (SCE-IN-301-0001/2)",
+   "cantidad": 48,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 2.6,
+     "proveedor": "Planilla Sacde/15 (JUN-04177: 5/8 x 90 B7M bicromatizado)",
+     "origen": "fuentes_originales/ofertas_texto/Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL",
+     "fecha": "2026-02-20",
+     "coincide": "similar",
+     "diferencia": "B7M bicromatizado; confirmar tuercas"
+    }
+   ]
+  },
+  {
+   "id": "M06",
+   "pos": "6",
+   "grupo": "material",
+   "descripcion": "Brida WN RF 6\"",
+   "cantidad": 3.0,
+   "unidad": "un",
+   "especificacion": "Plano: 6\" · 150 x STD · ASTM A-105 · RF/BW",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 58.91,
+     "proveedor": "Renard (cód. 11297) · BRI-01313",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 11297",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M6B",
+   "pos": "6b",
+   "grupo": "material",
+   "descripcion": "Junta espiralada 6\" #150 AISI 316/grafito (filtro y válvula 6\")",
+   "especificacion": "Nota del plano: juntas y espárragos según diámetro de brida (SCE-IN-301-0001/2)",
+   "cantidad": 4,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 5.82,
+     "proveedor": "MS Juntas cot. 48.729 (8\" #300)",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/72- Lic 64675 - SKID CONCENTRADOR - UTE NARAMBUE/5.Proveedores 3ros/COTIZACION_N§_048729.pdf.txt",
+     "fecha": "2026-07-06",
+     "coincide": "similar",
+     "diferencia": "8\" #300 (pedido 6\" #150)"
+    }
+   ]
+  },
+  {
+   "id": "M6C",
+   "pos": "6c",
+   "grupo": "material",
+   "descripcion": "Espárrago 3/4\" × 4\" A193 B7 con 2 tuercas 2H zincado (8 por junta de 6\")",
+   "especificacion": "Nota del plano: juntas y espárragos según diámetro de brida (SCE-IN-301-0001/2)",
+   "cantidad": 32,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 10.0,
+     "proveedor": "Planilla Techint/12 (JUN-02733: 3/4\" L 120 mm con 2 tuercas)",
+     "origen": "fuentes_originales/ofertas_texto/TECHINT/12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado",
+     "fecha": "2025-12-23",
+     "coincide": "similar",
+     "diferencia": "L 120 mm"
+    }
+   ]
+  },
+  {
+   "id": "M07",
+   "pos": "7",
+   "grupo": "material",
+   "descripcion": "Te normal 6\" STD A-234 WPB BW (el plano dice A-105: desvío a declarar)",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 6\" · STD · ASTM A-105 (plano; se cotiza A-234 WPB BW) · BW",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 104.61,
+     "proveedor": "Renard (cód. 3468) · ABW-00418",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3468",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "material: A234 WPB (pedido A105)"
+    }
+   ]
+  },
+  {
+   "id": "M08",
+   "pos": "8",
+   "grupo": "material",
+   "descripcion": "Te normal 4\" STD A-234 WPB BW (el plano dice A-105: desvío a declarar)",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 4\" · STD · ASTM A-105 (plano; se cotiza A-234 WPB BW) · BW",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 50.63,
+     "proveedor": "Renard (cód. 3466) · ABW-00406",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3466",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "material: A234 WPB (pedido A105)"
+    }
+   ]
+  },
+  {
+   "id": "M09",
+   "pos": "9",
+   "grupo": "material",
+   "descripcion": "Reducción concéntrica 6\"x4\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 6\"x4\" · STD · ASTM A-234 Gr. WPB · BW",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 49.6,
+     "proveedor": "Renard (cód. 3065) · ABW-00236",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3065",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M10",
+   "pos": "10",
+   "grupo": "material",
+   "descripcion": "Codo 90° radio largo 4\"",
+   "cantidad": 3.0,
+   "unidad": "un",
+   "especificacion": "Plano: 4\" · STD · ASTM A-234 Gr. WPB · BW",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 26.2,
+     "proveedor": "Renard (cód. 3400) · ABW-00111",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3400",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M11",
+   "pos": "11",
+   "grupo": "material",
+   "descripcion": "Termovaina de acero inoxidable 3/4\" NPT 3/4\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" · 3000 · AISI 316 · NPT",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 120.0,
+     "proveedor": "Estimado: termovaina 3/4\" NPT AISI 316 (la base solo tiene termovainas bridadas del stock 2024)",
+     "origen": "cotizaciones/COT26-0135-002_CAMUZZI_CP24578_PUENTE/bitacora.md",
+     "fecha": "2026-10-28",
+     "coincide": "sin_ref",
+     "diferencia": "pedir cotización"
+    }
+   ]
+  },
+  {
+   "id": "M12",
+   "pos": "12",
+   "grupo": "material",
+   "descripcion": "Cupla de acero 1/2\" con válvula esférica paso total S3000 y  1/2\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1/2\" · 3000 · ASTM A-105 · SW/NPT",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 36.06,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04869",
+     "origen": "taval_lista30_2025-09.xlsx · código , hoja PT Flot-NPT FORJADAS",
+     "fecha": "2025-09-01",
+     "coincide": "similar",
+     "diferencia": "extremos: NPT (pedido NPT/SW)"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M13",
+   "pos": "13",
+   "grupo": "material",
+   "descripcion": "Skid y soportes s/ SCE-RE-110-0006 (3530 x 800 mm; 200 kg es",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Skid 3.530 × 800 mm, soportes de cañería (4) y oreja de PAT (200 kg estimados)",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 285.67,
+     "proveedor": "Grupo Provemet cot. 236623: UPN 120 a USD 17,40/m (1,30 USD/kg +10% recortes) × 200 kg estimados (3.530 × 800 mm, soportes y orejas)",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-28/provemet_cotizacion_236623_perfiles_2025-07-01.pdf",
+     "fecha": "2025-07-01",
+     "coincide": "similar",
+     "diferencia": "kilos estimados del plano"
+    }
+   ]
+  },
+  {
+   "id": "M14",
+   "pos": "14",
+   "grupo": "material",
+   "descripcion": "Caño (cantidad no indicada en el plano: medida del dibujo; b 4\"",
+   "cantidad": 8.0,
+   "unidad": "m",
+   "especificacion": "Plano: 4\" · 40 · ASTM A-53 Gr. B · BW",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 26.95,
+     "proveedor": "Renard (cód. 1008) · CAN-01496",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1008",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "costura: con costura (no pedido)"
+    }
+   ]
+  },
+  {
+   "id": "M14B",
+   "pos": "14b",
+   "grupo": "material",
+   "descripcion": "Completar barra de 12 m de la pos 14 (compra mínima; sobrante, no va en el equipo)",
+   "cantidad": 4.0,
+   "unidad": "m",
+   "especificacion": "1 barra(s) de 12 m para 8 m en 1 equipo(s); por equipo 4 m",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 26.95,
+     "proveedor": "Renard (cód. 1008) · CAN-01496",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1008",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "costura: con costura (no pedido)"
+    }
+   ]
+  },
+  {
+   "id": "M15",
+   "pos": "15",
+   "grupo": "material",
+   "descripcion": "Caño (cantidad no indicada en el plano: medida del dibujo) 6\"",
+   "cantidad": 1.0,
+   "unidad": "m",
+   "especificacion": "Plano: 6\" · 40 · ASTM A-53 Gr. B · BW",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 50.6,
+     "proveedor": "Renard (cód. 1056) · CAN-01511",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1056",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "costura: con costura (no pedido)"
+    }
+   ]
+  },
+  {
+   "id": "M15B",
+   "pos": "15b",
+   "grupo": "material",
+   "descripcion": "Completar media tira de 6 m de la pos 15 (sobrante a stock)",
+   "cantidad": 5,
+   "unidad": "m",
+   "especificacion": "1 tramo de 6 m para 1 m (con 12 m el sobrante era 92%)",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 50.6,
+     "proveedor": "Renard (cód. 1056) · CAN-01511",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1056",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "costura: con costura (no pedido)"
+    }
+   ]
+  },
+  {
+   "id": "M16",
+   "pos": "16",
+   "grupo": "material",
+   "descripcion": "Cupla de acero para soldar 1/2\" NPT con válvula esférica 1/2 1/2\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1/2\" · 3000 · ASTM A-105 (plano: A-106) · SW/NPT",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 65.2,
+     "proveedor": "válvulas Taval (el resumen las agrupa como \"Valvulas Taval\", factor 1, · VAL-03526",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\9. CM SKID MANIFOLD PAD S-600 · fuentes_originales/ofertas_texto/TECPETROL/9. CM SKID MANIFOLD PAD S-600/ESTRUCTURA DE COSTOS- LM de Manifold S600 CM - PC0-C",
+     "fecha": "2026-01-26",
+     "coincide": "similar",
+     "diferencia": "extremos: NPT (pedido NPT/SW)"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M17",
+   "pos": "A",
+   "grupo": "material",
+   "descripcion": "Sensor de temperatura para correctora de caudal 0-100 °C 4-2 3/4\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" · 150 ·  · NPT",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 1448.33,
+     "proveedor": "ABB · Transmisor de temperatura (INS-02714, planilla TAVAL/72)",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/72- Lic 64675 - SKID CONCENTRADOR - UTE NARAMBUE",
+     "fecha": "2026-08-14",
+     "coincide": "similar",
+     "diferencia": "con sensor; para correctora de caudal"
+    }
+   ]
+  },
+  {
+   "id": "S01",
+   "pos": "MO",
+   "grupo": "mo",
+   "descripcion": "Soldaduras: 21 a tope + SW y olets (calculado)",
+   "especificacion": "pos 14, 15: caño por metro; sus juntas se cuentan en los extremos BW de accesorios y bridas (una junta cada uno); pos 2: 3 extremo(s) BW de taller (2 por unidad × 1 × 1.5 por el caño) × 4\" × 1.0000; pos 5: 10.5 extremo(s) BW de taller (1 por unidad × 7 × 1.5 por el caño) × 4\" × 1.0000; pos 6: 4.5 extremo(s) BW de taller (1 por unidad × 3 × 1.5 por el caño) × 6\" × 1.0000; pos 7: 4.5 extremo(s) BW d",
+   "cantidad": 98.625,
+   "unidad": "pulg",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 16.0,
+     "proveedor": "Mano de obra soldadura piping (criterio de las planillas de costo 2026): Precio por pulgada que usan las planillas de ITT de 2025-2026 (16 a 16,5; 19 en #900 en Sacde 12). Controles CTRL-M01/P01/T01, ",
+     "origen": "planillas 2026 (TAVAL/43 puentes YPF 19-02-2026; TAVAL/40 Inarteco; Sacde 12 a 15; Tecpetrol 9: 16,5)",
+     "fecha": "2026-02-28",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "S02",
+   "pos": "PIN",
+   "grupo": "servicio",
+   "descripcion": "Granallado y pintura (m² calculados)",
+   "especificacion": "6.21 m² exteriores: caños y niples 3.4 + bridas, accesorios y válvulas (largo equivalente) 2.8",
+   "cantidad": 6.212,
+   "unidad": "m2",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 50.0,
+     "proveedor": "criterio ITT · PIN-00569",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN\\4.Armado de la Oferta Comercial",
+     "fecha": "2026-10-10",
+     "coincide": "similar",
+     "diferencia": "m² calculados (caños, accesorios por regla, envolvente y estructura); esquema de pintura a confirmar con el pliego"
+    }
+   ]
+  },
+  {
+   "id": "S03",
+   "pos": "PH",
+   "grupo": "servicio",
+   "descripcion": "Prueba hidráulica (horas de planta)",
+   "especificacion": "6 h · volumen interior 84.3 l",
+   "cantidad": 6.0,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 13.0,
+     "proveedor": "MO ITT · END-00215",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\49 - A&A Fluid Control - Manifolds Tecpetrol - Salar El Tolillar\\4.Armado de la Oferta Comercial",
+     "fecha": "2026-03-10",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "S04",
+   "pos": "RX",
+   "grupo": "servicio",
+   "descripcion": "Radiografía 100% de las juntas a tope y tintas penetrantes en SW y olets",
+   "especificacion": "71 placas chicas, 0 grandes, 2.00 servicio(s) de RX y 1.00 de LP por equipo (servicios repartidos en 1 equipos)",
+   "cantidad": 1,
+   "unidad": "gl",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1571.5,
+     "proveedor": "Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))",
+     "origen": "PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT)",
+     "fecha": "2026-08-31",
+     "coincide": "igual"
+    },
+    {
+     "tipo": "cot",
+     "precio": 2535.0,
+     "proveedor": "NDT Antonelli (tarifas 11-2025), mismas placas y servicios",
+     "origen": "fuentes_originales/antonelli_end_2025-11.pdf",
+     "fecha": "2025-11-03",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "S12H",
+   "pos": "HH",
+   "grupo": "mo",
+   "descripcion": "Horas de ingeniería (estimadas del antecedente)",
+   "especificacion": "20 h · criterio: único equipo con documentación para aprobación de Camuzzi (planos, mapa de soldaduras, procedimientos); se comparte con el ítem 2 (el antecedente de puentes en serie daba ESTIMADO del antecedente TAVAL/43- YPF- CM PUENTES DE PRODUC…)",
+   "cantidad": 20,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 15.0,
+     "proveedor": "Horas propias ITT (tarifa del antecedente)",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · TAVAL/43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt · hoja 3\" Sold+END+Ing+Calid+Mje ",
+     "fecha": "2026-02-19",
+     "coincide": "similar",
+     "diferencia": "ESTIMADO del antecedente TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 4in #600 (serie de 13 unidades) (4, 13 u, 2026-02-19)"
+    }
+   ]
+  },
+  {
+   "id": "S13C",
+   "pos": "CAL",
+   "grupo": "mo",
+   "descripcion": "Horas de calidad y dossier (estimadas del antecedente)",
+   "especificacion": "40 h · criterio: inspecciones de Camuzzi por etapa, data book y certificados (el antecedente de puentes en serie daba ESTIMADO del antecedente TAVAL/43- YPF- CM PUENTES DE PRODUC…)",
+   "cantidad": 40,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 15.0,
+     "proveedor": "Horas propias ITT (tarifa del antecedente)",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · TAVAL/43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt · hoja 3\" Sold+END+Ing+Calid+Mje ",
+     "fecha": "2026-02-19",
+     "coincide": "similar",
+     "diferencia": "ESTIMADO del antecedente TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 4in #600 (serie de 13 unidades) (4, 13 u, 2026-02-19)"
+    }
+   ]
+  },
+  {
+   "id": "S13A",
+   "pos": "ARM",
+   "grupo": "mo",
+   "descripcion": "Horas de montaje en planta (armado, movimientos) (estimadas del antecedente)",
+   "especificacion": "65.1 h por skid · mediana de 30 h × 1.062, 126 h × 0.78 (horas por unidad × tamaño)",
+   "cantidad": 65.1,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 13.0,
+     "proveedor": "Horas propias ITT (tarifa del antecedente)",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · TAVAL/43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt · hoja 3\" Sold+END+Ing+Calid+Mje ",
+     "fecha": "2026-02-19",
+     "coincide": "similar",
+     "diferencia": "ESTIMADO del antecedente TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 4in #600 (serie de 13 unidades) (4, 13 u, 2026-02-19)"
+    }
+   ]
+  },
+  {
+   "id": "S05",
+   "pos": "EST",
+   "grupo": "mo",
+   "descripcion": "Fabricación del skid y soportes (200 kg estimados)",
+   "especificacion": "kg × tarifa por kg de estructura de skid",
+   "cantidad": 200,
+   "unidad": "kg",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 3.0,
+     "proveedor": "Fabricación de estructura de skid por kg (tercero Ledesma): tarifas.csv",
+     "origen": "YPF/28 Lic 69343 planilla PC0 (850 kg × 3 = 2.550)",
+     "fecha": "2026-10-10",
+     "coincide": "similar",
+     "diferencia": "kilos estimados"
+    }
+   ]
+  }
+ ],
+ "compras": {
+  "fecha_respuesta": "2026-11-04",
+  "material_en_planta_dias": 45,
+  "lugar_entrega": "Planta ITT S.A., Av. 12 de Octubre 4004, Quilmes Oeste, Bs. As.",
+  "requisitos_generales": [
+   "Cotizar en USD sin IVA, con plazo de entrega y validez de la oferta.",
+   "Certificados 3.1; esféricas con certificados según SCE-IN-501-0008 / SCE-RE-308-0001.",
+   "Marcas del listado SCE-IN-501-0015."
+  ],
+  "notas": {
+   "1": "Tapa de cierre rápido y elemento filtrante para FM-6 #150 (plano tipo SCE-RE-112-0004)"
+  },
+  "proveedores": {
+   "3": "Taval",
+   "4": "Taval",
+   "5": "Renard / Provemet"
+  },
+  "cantidad_compra": {
+   "15": "media tira de 6 m"
+  },
+  "servicios": [
+   {
+    "servicio": "Radiografía 100% y tintas penetrantes",
+    "proveedores": "DB NDT / Antonelli",
+    "referencia": "DB NDT 08-2026",
+    "nota": ""
+   }
+  ]
+ }
+}
