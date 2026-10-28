@@ -76,3 +76,5 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 
 **Controles nuevos:** un solo lector de números y fechas (`herramientas/numeros.py`); columna `alerta` en el catálogo; test de regresión `herramientas/test_catalogo.py`, que hay que correr después de tocar el catálogo.
 | 38 | Al cargar los tipos de cambio de 2026 de la auditoría se mezcló el dólar **divisa/mayorista** (1.395, 1.411…) con una serie de **BNA billete**; la CAPEX bajó a 7.620,86 por eso | Una sola serie: promedio mensual BNA billete vendedor (`dolar_mensual.csv`), decisión de Matías. Antes de cargar un dato en una serie, verificar que sea la misma cotización |
+| 39 | "131.131" de una planilla Excel se leía como USD 131.131 (es 131,13): tres válvulas esféricas 2" quedaron 226 veces por encima de la mediana | En textos sacados de Excel el número está en formato de máquina: se lee con punto decimal. La alerta de "50 veces la mediana" lo detectó |
+| 40 | "11/4" (1 1/4") se leía como 11/4 = 2,75": en `factores_soldadura.csv` y `esparragos_por_brida.csv` no existía el 1 1/4" | `construir_base.pulgadas`: entero pegado a una fracción propia ("11/4", "23/4") |

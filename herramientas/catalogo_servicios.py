@@ -125,14 +125,21 @@ def numero_ambiguo(r):
 
 # ---------------------------------------------------------------- carga
 def leer_extraccion():
-    ruta = PRECIOS / "servicios_extraidos.csv"
     tabla = tabla_ajuste()
     ref = tabla[max(tabla)][1]
     regs = []
-    for i, r in enumerate(csv.DictReader(open(ruta, encoding="utf-8")), 2):
+    # etapa 1 (cotizaciones de proveedores y tarifas) + etapa 2 (planillas de costo, armado por unir_planillas_costo.py)
+    entradas = [(PRECIOS / "servicios_extraidos.csv", "")]
+    if (PRECIOS / "servicios_desde_planillas.csv").exists():
+        entradas.append((PRECIOS / "servicios_desde_planillas.csv", "P"))
+    filas_in = [(f"{pre}{i}", r) for ruta, pre in entradas for i, r in enumerate(csv.DictReader(open(ruta, encoding="utf-8")), 2)]
+    for i, r in filas_in:
         if not r["precio"].strip():
             continue
-        precio, ambiguo = leer_numero(r["precio"])
+        if str(i).startswith("P"):  # planillas de costo: texto de Excel, el punto es decimal ("131.131" = 131,13)
+            precio, ambiguo = float(r["precio"]), False
+        else:
+            precio, ambiguo = leer_numero(r["precio"])
         if precio is None or precio <= 0:
             continue
         r = {**r, "precio": precio}

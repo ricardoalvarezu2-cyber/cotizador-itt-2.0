@@ -201,7 +201,8 @@ for r in ext:
         malas += 1
         fallas.append(f"original inexistente: {k}")
 igual("citas verificadas", malas, 0)
-igual("cada precio de la extracción llega al historial", len(hist), len([r for r in ext if r["precio"].strip()]))
+ext_pl = leer(PRECIOS / "servicios_desde_planillas.csv") if (PRECIOS / "servicios_desde_planillas.csv").exists() else []
+igual("cada precio de la extracción llega al historial", len(hist), len([r for r in ext + ext_pl if r["precio"].strip()]))
 
 if fallas:
     print(f"FALLAN {len(fallas)}:")

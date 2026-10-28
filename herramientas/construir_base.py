@@ -81,7 +81,8 @@ def pulgadas(v):
     if isinstance(v, (int, float)):
         return float(v)
     s = texto(v).replace('"', "")
-    m = re.fullmatch(r"(\d+)\s+(\d+)/(\d+)", s) or re.fullmatch(r"(\d)(1)/(2)", s)
+    # "11/4" en las planillas es 1 1/4 (no 11/4 = 2,75); "23/4" es 2 3/4: entero pegado a una fracción propia
+    m = re.fullmatch(r"(\d+)\s+(\d+)/(\d+)", s) or (lambda x: x if x and int(x.group(2)) < int(x.group(3)) else None)(re.fullmatch(r"(\d)(\d)/(\d)", s))
     if m:
         return int(m.group(1)) + int(m.group(2)) / int(m.group(3))
     m = re.fullmatch(r"(\d+)/(\d+)", s)

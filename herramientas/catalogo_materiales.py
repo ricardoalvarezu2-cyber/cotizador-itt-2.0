@@ -535,6 +535,20 @@ def leer_fuentes():
                 extra="; ".join(x for x in [f"número ambiguo '{cu[0].group(1)}' leído como {valor:g}: verificar" if ambiguo else "",
                                             f"renglón completo: {r['detalle'][:180]}" if len(r["detalle"]) > len(tramo(r["detalle"])) + 5 else ""] if x),
                 iva=iva_de(det, cu[0].end()))
+    # etapa 2: costos de materiales de las planillas de costo 2025–2026 (herramientas/unir_planillas_costo.py)
+    ruta_pl = PRECIOS / "planillas_costo_items.csv"
+    if ruta_pl.exists():
+        for r in csv.DictReader(open(ruta_pl, encoding="utf-8")):
+            if r["usable_catalogo"] != "si" or r["tipo"] != "material":
+                continue
+            u = norm(r["unidad"])
+            unidad = "m" if "costo por m" in u else ("kg" if u.startswith("kg") else r["unidad"])
+            car = r["carpeta_proyecto"]
+            # costo_unitario viene del texto de un Excel: formato de máquina, el punto es decimal ("131.131" = 131,13)
+            add(r["descripcion"], float(r["costo_unitario"]), r["moneda"], fecha_iso(r["fecha_planilla"]), "planilla interna",
+                (r["proveedor_o_criterio"] or "planilla de costo ITT")[:80], Z + car.replace("/", "\\"), f"{r['carpeta']}/{Path(r['archivo']).name}"[:200],
+                f"fuentes_originales/ofertas_texto/{car}", unidad, extra=f"planilla de costo {r['proyecto']} ({r['ubicacion']})"[:200],
+                pista=r["rubro"], iva=iva_de(r["iva_origen"]) if r["iva_origen"] else None)
     for f in sorted((RAIZ / "cotizaciones").glob("COT*/cotizacion.json")):
         c = json.load(open(f, encoding="utf-8"))
         for it in c["items"]:

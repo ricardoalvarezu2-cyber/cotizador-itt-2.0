@@ -56,3 +56,10 @@ Unidad: **kg** en `peso_kg`. `dn_pulg` y `dn2_pulg` en decimal (0.5, 0.75, 1.25,
 - BW: 40 valores al azar releídos en las páginas descargadas de nuevo: 40 de 40 coinciden con la tabla. Control de coherencia lb/kg: ninguna diferencia (la fuente da ambas columnas).
 - Forjados: más de 50 valores comparados a ojo contra la imagen de las páginas del catálogo (codo 90 NPT 3000, tee SW 3000, cupla SW 3000, tapón redondo, buje embutido, codo 45 SW 9000, media cupla NPT 6000, etc.): todos coinciden.
 - Pendiente: revisión independiente por Matías o por otro agente antes de usar en una cotización.
+
+
+## Revisión independiente (28/10/2026)
+
+Informe: `conocimiento/auditorias/2026-10-28_pesos_bridas_accesorios.md`. Transcripción fiel en los 2.107 renglones; la unidad de Bonney Forge es libra (verificado por volumen). Se corrigieron en las tablas los errores que venían de las fuentes (E1–E8, anotados en la columna `nota` como "CORREGIDO auditoría"), se eliminaron 3 renglones de Smith-Cooper con tipeos (vale Bonney), y se marcaron con "no usar" las bridas que no existen en B16.5 (SO #900/#1500, SW grandes, 22") y con "no sirve" los bujes (tienen un solo DN). E9: el DN "2.75" de `factores_soldadura.csv` y `esparragos_por_brida.csv` era 1 1/4" mal leído ("11/4"); corregido en `construir_base.pulgadas`.
+
+**Márgenes para estimar kg (mostrar siempre como estimado):** bridas 2"–24" ±15% (WN #900 de 14"–24" es cota superior, +30–40%; el cuello WN depende del schedule, ±10% más); BW codos ±10%, tees, reducciones y casquetes ±15%; forjados B16.11 ±25%.

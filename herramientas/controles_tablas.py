@@ -69,7 +69,8 @@ def peso_item(it, at, fam, canos, bridas, acc):
         return kg, m2, f"caño {dn:g}\" sch {sch} por metro (ASME B36.10, calculado)"
     if fam == "BRI" and dn and at.get("serie"):
         tipo = {"wn": "WN", "so": "SO", "ciega": "ciega", "sw": "SW", "roscada": "roscada", "lj": "LJ"}.get(at.get("tipo", ""), "")
-        fila = next((r for r in bridas if r["tipo"] == tipo and pulg(r["dn_pulg"]) == dn and r["serie"] == at["serie"]), None)
+        fila = next((r for r in bridas if r["tipo"] == tipo and pulg(r["dn_pulg"]) == dn and r["serie"] == at["serie"]
+                     and "no usar" not in r["nota"]), None)
         if fila:
             return float(fila["peso_kg"]), None, f"brida {tipo} {dn:g}\" #{at['serie']} (B16.5, borrador)"
     if fam in ("ABW", "AFO") and dn:
@@ -87,7 +88,7 @@ def peso_item(it, at, fam, canos, bridas, acc):
             clase = at.get("serie", "") or "3000"
             ext = "SW" if "SW" in at.get("extremos", "") else "NPT"
         d2 = pulg(at.get("diametro2", "")) if at.get("diametro2") else None
-        cand = [r for r in acc if r["tipo"] == tipo and pulg(r["dn_pulg"]) == dn and r["extremos"] == ext
+        cand = [r for r in acc if r["tipo"] == tipo and pulg(r["dn_pulg"]) == dn and r["extremos"] == ext and "no sirve" not in r["nota"]
                 and (r["schedule_o_clase"] == clase or (tipo.startswith(("tapon", "buje")) and r["schedule_o_clase"] == "3000/6000"))
                 and (d2 is None or pulg(r["dn2_pulg"]) == d2)]
         if cand:

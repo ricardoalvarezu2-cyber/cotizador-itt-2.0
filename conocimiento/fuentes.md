@@ -95,6 +95,10 @@ Los meses intermedios se interpolan. Octubre 2026 es estimado. Hay que actualiza
 
 Los valores con fecha anterior al 14/04/2025 cuyo documento no dice con qué tipo de cambio se pasaron a dólares se descartan como precio y vale el último valor confiable. Prueba: el stock valorizado pasa las compras en pesos a dólares con el TC del día del informe (la compra del 13/06/2023 del espárrago 5/8 x 3 1/4 figura a USD 2,37 en la hoja de sep-2024 y a 2,25 en la de nov-2024). En el catálogo de materiales esto deja 1.020 de 2.310 materiales "sin precio confiable" (casi todo el stock, incluidas 53 de 58 válvulas): conservan el valor descartado como referencia y la alerta "pedir cotización". Excepción documentada: costo de planta oct-2024 (TC 997–998,5 explícito en la hoja "Sueldos").
 
+## Planillas de costo 2025–2026 (etapa 2, 28/10/2026)
+
+Extraídas con IA por 3 subagentes (`herramientas/etapa2_planillas_instrucciones.md`) y unidas con `herramientas/unir_planillas_costo.py`. Criterios: los números de esos textos vienen de Excel y el punto es decimal ("131.131" = USD 131,13, no 131.131); entran a los catálogos solo los renglones con costo > 0, que no son subtotales, ni estimados, ni de lectura con confianza baja. Ninguna planilla declara el tipo de cambio (salvo 10 renglones de horas extra de Pampa), así que las de antes del 14/04/2025 quedan descartadas por la regla del cepo. Muestra de 12 renglones verificada contra los originales (12/12).
+
 ## Faltantes conocidos
 
 1. **Plazos:** cubierto en parte con el seguimiento de proyectos (ver `plazos.md`). Faltan plazos de proveedores actualizados por rubro.
