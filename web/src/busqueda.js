@@ -11,6 +11,13 @@ const Busqueda = (() => {
     return s.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/\s+/g, " ").trim();
   }
 
+  // Palabras de búsqueda: un número se busca como número entero ("4" no encuentra "3/4" ni "1/4"; "150" no encuentra "1500")
+  function coincide(texto) {
+    const tokens = norm(texto).split(" ").filter(Boolean).map(t => /^\d+([.,]\d+)?$/.test(t)
+      ? new RegExp(`(?<![\\d/.,])${t.replace(/[.,]/, "[.,]")}(?![\\d/.,])`) : t);
+    return tokens.length ? s => tokens.every(t => typeof t === "string" ? s.includes(t) : t.test(s)) : null;
+  }
+
   function campos(datos, fam) {
     return (datos.familias[fam].clave.length ? datos.familias[fam].clave : ["tipo"]).filter(c => c !== "marca" && c !== "modelo");
   }
@@ -42,7 +49,7 @@ const Busqueda = (() => {
 
   function materiales(datos, f, limite = 60) {
     const fam = f.fam;
-    const tokens = norm(f.texto).split(" ").filter(Boolean);
+    const ok = coincide(f.texto);
     const cs = fam ? campos(datos, fam) : [];
     const op = fam ? opcionales(fam, f) : new Set();
     const elegidos = cs.filter(c => f[c]);
@@ -50,10 +57,7 @@ const Busqueda = (() => {
     const res = [];
     for (const r of datos.materiales) {
       if (fam && r.f !== fam) continue;
-      if (tokens.length) {
-        const txt = norm(r.d + " " + Object.values(r.a).join(" ") + " " + r.pr);
-        if (!tokens.every(t => txt.includes(t))) continue;
-      }
+      if (ok && !ok(norm(r.d + " " + Object.values(r.a).join(" ") + " " + r.pr))) continue;
       if (f.marca && norm(r.a.marca) !== norm(f.marca) && f.soloMarca) continue;
       if (!clasifica) {
         if (elegidos.some(c => r.a[c] && norm(r.a[c]) !== norm(f[c]))) continue;
@@ -83,9 +87,8 @@ const Busqueda = (() => {
   }
 
   function servicios(datos, f, limite = 60) {
-    const tokens = norm(f.texto).split(" ").filter(Boolean);
-    const res = datos.servicios.filter(r => (!f.hoja || r.h === f.hoja) &&
-      (!tokens.length || tokens.every(t => norm(r.s + " " + r.d + " " + r.pr + " " + r.eq + " " + r.h).includes(t))));
+    const ok = coincide(f.texto);
+    const res = datos.servicios.filter(r => (!f.hoja || r.h === f.hoja) && (!ok || ok(norm(r.s + " " + r.d + " " + r.pr + " " + r.eq + " " + r.h))));
     res.sort((a, b) => (b.p ? 1 : 0) - (a.p ? 1 : 0) || (b.t ? 1 : 0) - (a.t ? 1 : 0) || String(b.fe).localeCompare(String(a.fe)));
     return { res: res.slice(0, limite), total: res.length };
   }
@@ -157,6 +160,6 @@ const Busqueda = (() => {
     }
     return out;
   }
-  return { norm, campos, opcionales, valores, materiales, servicios, itemDeMaterial, itemDeServicio, soldadura, tarifa, avisos, TIPO_FUENTE, CON_TIPO };
+  return { norm, coincide, campos, opcionales, valores, materiales, servicios, itemDeMaterial, itemDeServicio, soldadura, tarifa, avisos, TIPO_FUENTE, CON_TIPO };
 })();
 if (typeof module !== "undefined") module.exports = Busqueda;

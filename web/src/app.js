@@ -10,7 +10,7 @@
   const TABS = [["datos", "Datos"], ["materiales", "Materiales"], ["servicios", "MO y servicios"], ["plazo", "Plazo"], ["oferta", "Oferta"], ["resumen", "Resumen y descargas"]];
   const S = {
     datos: null, db: null, dl: null, assets: null, lista: [], firmantes: [], id: null, doc: null, tab: "resumen",
-    fm: { fam: "VAL" }, fs: { hoja: "" }, sold: [{ dn: "2", sch: "80", bw: "", sw: "", olet: "", tipoOlet: "cupla" }],
+    fm: { fam: "" }, fs: { hoja: "" }, selM: new Map(), selS: new Map(), sold: [{ dn: "2", sch: "80", bw: "", sw: "", olet: "", tipoOlet: "cupla" }],
     ultVersion: 0, timer: null, guardando: false, pendiente: false, vista: "inicio"
   };
   const hoy = () => new Date().toISOString().slice(0, 10);
@@ -285,6 +285,24 @@
       <tr class="total"><td></td><td>Subtotal por ${E(S.doc.cot.equipo?.singular || "equipo")} (con ajuste por inflación)</td><td colspan="5"></td><td class="n" data-subtot="${grupoMat ? "material" : "srv"}"></td><td></td></tr></tbody></table></div>`;
   }
 
+  // ------------------------------------------------------------------ selección múltiple en los buscadores
+  function barraSel(k) {
+    const n = (k === "m" ? S.selM : S.selS).size;
+    return `<div class="fila barra-sel" id="sel-${k}" ${n ? "" : "hidden"}><b id="sel-${k}-n">${n} seleccionado(s)</b>
+      <button class="prim chico" data-a="agregar-sel" data-k="${k}">Agregar seleccionados</button><button class="chico" data-a="limpiar-sel" data-k="${k}">Quitar selección</button>
+      <span class="small muted">La selección se mantiene aunque cambies la búsqueda.</span></div>`;
+  }
+  function pintarBarraSel(k) {
+    const n = (k === "m" ? S.selM : S.selS).size, el = $("#sel-" + k); if (!el) return;
+    el.hidden = !n; $("#sel-" + k + "-n").textContent = `${n} seleccionado(s)`;
+  }
+  function agregarMaterialDe(x, q) {
+    const cot = S.doc.cot, it = Busqueda.itemDeMaterial(x.r, x, q, siguienteId("M"));
+    it.plano = { diametro: x.r.a.diametro || "", serie_sch: x.r.a.serie ? "#" + x.r.a.serie : x.r.a.schedule ? "sch " + x.r.a.schedule : "", material: x.r.a.material || "", extremos: x.r.a.extremos || "", modelo: [x.r.a.marca, x.r.a.modelo].filter(Boolean).join(" ") };
+    it.pos = String(cot.items.filter(i => i.grupo === "material").length + 1);
+    cot.items.push(it); return it;
+  }
+
   // ------------------------------------------------------------------ pestaña Materiales
   function tabMateriales() {
     const f = S.fm, fams = S.datos.familias;
@@ -293,28 +311,30 @@
       if (!vs.length) return "";
       return `<label><span>${etq}</span><select id="fm-${campo}" data-fm="${campo}"><option value="">— cualquiera —</option>${vs.map(([v, n]) => `<option value="${E(v)}" ${f[campo] === v ? "selected" : ""}>${E(v)} (${n})</option>`).join("")}</select></label>`;
     };
-    const cs = Busqueda.campos(S.datos, f.fam);
+    const cs = f.fam ? Busqueda.campos(S.datos, f.fam) : [];
     const etq = { tipo: "Tipo", diametro: "Ø", diametro2: "Ø 2", serie: "Serie", schedule: "Schedule", material: "Material", trim: "Trim / asiento", extremos: "Extremos", cara: "Cara", medida: "Medida", largo_mm: "Largo mm", espesor_mm: "Espesor mm", costura: "Costura", revestimiento: "Revestimiento", rango: "Rango", conexion: "Conexión", designacion: "Designación" };
     return `<section><div class="sec-head"><h2>Materiales de la cotización</h2><button data-a="manual" data-g="material">Cargar a mano</button></div>${tablaItems(true)}</section>
       <section class="panel"><div class="sec-head"><h3>Buscar en el catálogo de materiales</h3><span class="eyebrow">igual primero · después similares con sus diferencias</span></div>
+        <label class="bus-gral"><span>Buscar en todo el catálogo (descripción, medidas, material, marca o proveedor)</span><input id="fm-texto" data-fm="texto" type="search" value="${E(f.texto || "")}" placeholder="ej. esférica 2 600 · brida ciega 4 150 · renard · 316L"></label>
         <div class="buscador">
-          <label><span>Familia</span><select id="fm-fam" data-fm="fam">${Object.entries(fams).map(([k, v]) => `<option value="${k}" ${f.fam === k ? "selected" : ""}>${E(v.n)}</option>`).join("")}</select></label>
-          ${[...new Set(["tipo", ...cs, ...(["VAL", "INS"].includes(f.fam) ? ["marca"] : [])])].map(c => sel(c, etq[c] || c)).join("")}
-          <label><span>Texto libre</span><input id="fm-texto" data-fm="texto" value="${E(f.texto || "")}" placeholder="ej. renard, wafer, 316L"></label>
+          <label><span>Familia</span><select id="fm-fam" data-fm="fam"><option value="" ${f.fam ? "" : "selected"}>Todas las familias</option>${Object.entries(fams).map(([k, v]) => `<option value="${k}" ${f.fam === k ? "selected" : ""}>${E(v.n)}</option>`).join("")}</select></label>
+          ${f.fam ? [...new Set(["tipo", ...cs, ...(["VAL", "INS"].includes(f.fam) ? ["marca"] : [])])].map(c => sel(c, etq[c] || c)).join("") : ""}
         </div>
         <div class="fila"><button class="chico" data-a="limpiar-fm">Limpiar filtros</button><span class="small muted" id="fm-info"></span></div>
-        <div class="lista-res" id="res-mat"></div></section>`;
+        ${barraSel("m")}<div class="lista-res" id="res-mat"></div></section>`;
   }
   function pintarResultadosMat() {
     const box = $("#res-mat"); if (!box) return;
+    if (!S.fm.fam && !(S.fm.texto || "").trim()) { $("#fm-info").textContent = ""; box.innerHTML = `<div class="vacio">Escribí arriba para buscar en los ${S.datos.materiales.length.toLocaleString("es-AR")} materiales, o elegí una familia para filtrar por características.</div>`; S.ultMat = []; return; }
     const r = Busqueda.materiales(S.datos, S.fm);
-    $("#fm-info").textContent = `${r.total} resultado(s)` + (r.clasifica ? "" : Busqueda.CON_TIPO.includes(S.fm.fam) ? " · elegí el tipo de pieza para ver iguales y similares" : " · elegí características para comparar") + (r.faltan.length && r.clasifica ? ` · para distinguir igual de similar falta: ${r.faltan.join(", ")}` : "");
+    $("#fm-info").textContent = `${r.total} resultado(s)${r.total > r.res.length ? ` (se muestran ${r.res.length}: agregá palabras para achicar)` : ""}` + (!S.fm.fam ? " · elegí una familia para ver iguales y similares" : r.clasifica ? "" : Busqueda.CON_TIPO.includes(S.fm.fam) ? " · elegí el tipo de pieza para ver iguales y similares" : " · elegí características para comparar") + (r.faltan.length && r.clasifica ? ` · para distinguir igual de similar falta: ${r.faltan.join(", ")}` : "");
     box.innerHTML = r.res.length ? r.res.map((x, i) => {
       const m = x.r, est = x.estado === "igual" ? `<span class="pill ok">igual</span>` : x.estado === "similar" ? `<span class="pill warn">similar</span>` : `<span class="pill info">catálogo</span>`;
-      return `<div class="resultado">${est}<div><div class="d">${E(m.d)}</div><div class="small muted">${E(m.c)} · ${E([m.a.marca, m.a.modelo].filter(Boolean).join(" ") || "")}</div></div>
+      const ch = S.selM.has(m.c);
+      return `<div class="resultado ${ch ? "sel" : ""}"><label class="tilde"><input type="checkbox" data-selm="${i}" ${ch ? "checked" : ""} ${m.p ? "" : "disabled"} aria-label="Seleccionar">${est}</label><div><div class="d">${E(m.d)}</div><div class="small muted">${E(m.c)} · ${E(S.datos.familias[m.f]?.n || "")}${[m.a.marca, m.a.modelo].filter(Boolean).length ? " · " + E([m.a.marca, m.a.modelo].filter(Boolean).join(" ")) : ""}${m.nuevo ? " · nuevo en la página" : ""}</div></div>
         <div class="precio">${m.p ? "USD " + num(m.p) + " / " + E(m.u || "un") : '<span class="err">sin precio confiable</span>'}<div class="small muted">${E(m.fe || "")} · ${E(m.tp)}</div></div>
         <div class="det">${x.difs.length ? "Difiere en: " + E(x.difs.join("; ")) + " · " : ""}${m.al ? "<b>Alerta:</b> " + E(m.al) + " · " : ""}${E(m.pr)} · Origen: ${E(m.o)}${m.n > 1 ? ` · ${m.n} precios en el historial (${num(m.mn)} a ${num(m.mx)})` : ""}</div>
-        <div class="acc"><input id="qm-${i}" type="number" step="any" class="num" value="1" aria-label="Cantidad"><button class="chico prim" data-a="agregar-mat" data-i="${i}">Agregar</button></div></div>`;
+        <div class="acc"><input id="qm-${i}" type="number" step="any" class="num" value="${ch ? S.selM.get(m.c).q : 1}" aria-label="Cantidad"><button class="chico prim" data-a="agregar-mat" data-i="${i}">Agregar</button></div></div>`;
     }).join("") : `<div class="vacio">No hay materiales con esos filtros. Probá quitar alguno o cargalo a mano.</div>`;
     S.ultMat = r.res;
   }
@@ -351,19 +371,19 @@
           <label class="ancho"><span>Tarifa de pintura (USD/m², sin IVA)</span><select id="pin-t">${pins.map(s => `<option value="${E(s.c)}">${num(s.t)} · ${E(s.s.slice(0, 60))} · ${E(s.pr.slice(0, 30))} · ${E(s.fe)}</option>`).join("")}</select></label></div>
         <div class="fila"><button data-a="pin-agregar">Agregar pintura</button><button class="chico" data-a="pin-calc">Calcular m² de los caños cargados</button></div></section></div>
       <section class="panel"><div class="sec-head"><h3>Buscar en el catálogo de mano de obra y servicios</h3><span class="eyebrow">un global solo sirve si el alcance es el mismo</span></div>
-        <div class="buscador"><label><span>Rubro</span><select id="fs-hoja" data-fs="hoja"><option value="">— todos —</option>${hojas.map(h => `<option ${S.fs.hoja === h ? "selected" : ""}>${E(h)}</option>`).join("")}</select></label>
-          <label style="grid-column:span 2"><span>Texto</span><input id="fs-texto" data-fs="texto" value="${E(S.fs.texto || "")}" placeholder="ej. soldadura pulgada, granallado, ledesma"></label></div>
-        <span class="small muted" id="fs-info"></span><div class="lista-res" id="res-srv"></div></section>`;
+        <label class="bus-gral"><span>Buscar en todo el catálogo de MO y servicios</span><input id="fs-texto" data-fs="texto" type="search" value="${E(S.fs.texto || "")}" placeholder="ej. soldadura pulgada · granallado · ledesma · montaje"></label>
+        <div class="buscador"><label><span>Rubro</span><select id="fs-hoja" data-fs="hoja"><option value="">Todos los rubros</option>${hojas.map(h => `<option ${S.fs.hoja === h ? "selected" : ""}>${E(h)}</option>`).join("")}</select></label></div>
+        <span class="small muted" id="fs-info"></span>${barraSel("s")}<div class="lista-res" id="res-srv"></div></section>`;
   }
   function pintarResultadosSrv() {
     const box = $("#res-srv"); if (!box) return;
     const r = Busqueda.servicios(S.datos, S.fs);
     $("#fs-info").textContent = `${r.total} resultado(s)`;
-    box.innerHTML = r.res.length ? r.res.map((s, i) => `<div class="resultado"><span class="pill ${s.t ? "ok" : "info"}">${s.t ? "tarifa" : "global"}</span>
+    box.innerHTML = r.res.length ? r.res.map((s, i) => `<div class="resultado ${S.selS.has(s.c) ? "sel" : ""}"><label class="tilde"><input type="checkbox" data-sels="${i}" ${S.selS.has(s.c) ? "checked" : ""} ${s.p ? "" : "disabled"} aria-label="Seleccionar"><span class="pill ${s.t ? "ok" : "info"}">${s.t ? "tarifa" : "global"}</span></label>
       <div><div class="d">${E(s.s)}</div><div class="small muted">${E(s.h)} · ${E(s.c)}${s.eq ? " · " + E(s.eq) : ""}</div></div>
       <div class="precio">${s.p ? (s.t ? "USD " + num(s.t) + " " + E(s.ut.replace("USD", "")) : "USD " + num(s.p)) : '<span class="err">sin precio confiable</span>'}<div class="small muted">${E(s.fe || "")}</div></div>
       <div class="det">${s.inc ? "Incluye: " + E(s.inc) + " · " : ""}${s.ninc ? "No incluye: " + E(s.ninc) + " · " : ""}${s.al ? "<b>Alerta:</b> " + E(s.al) + " · " : ""}${E(s.pr)} · Origen: ${E(s.o)}</div>
-      <div class="acc"><input id="qs-${i}" type="number" step="any" class="num" value="1" aria-label="Cantidad"><button class="chico prim" data-a="agregar-srv" data-i="${i}" ${s.p ? "" : "disabled"}>Agregar</button></div></div>`).join("")
+      <div class="acc"><input id="qs-${i}" type="number" step="any" class="num" value="${S.selS.has(s.c) ? S.selS.get(s.c).q : 1}" aria-label="Cantidad"><button class="chico prim" data-a="agregar-srv" data-i="${i}" ${s.p ? "" : "disabled"}>Agregar</button></div></div>`).join("")
       : `<div class="vacio">No hay servicios con ese texto.</div>`;
     S.ultSrv = r.res;
   }
@@ -514,9 +534,16 @@
       refrescar(); guardarPronto();
     } else if (el.dataset.fm !== undefined) {
       const k = el.dataset.fm; S.fm[k] = el.value;
-      if (k === "fam") S.fm = { fam: el.value };
+      if (k === "fam") S.fm = { fam: el.value, texto: S.fm.texto };
       if (k === "texto") { clearTimeout(S.tBus); S.tBus = setTimeout(pintarResultadosMat, 200); }
       else { $("#tab").innerHTML = tabMateriales(); pintarResultadosMat(); }
+    } else if (el.dataset.selm !== undefined || el.dataset.sels !== undefined) {
+      const m = el.dataset.selm !== undefined, i = +(m ? el.dataset.selm : el.dataset.sels), x = m ? S.ultMat[i] : S.ultSrv[i], cod = m ? x.r.c : x.c, sel = m ? S.selM : S.selS;
+      if (el.checked) sel.set(cod, { x, q: Number($((m ? "#qm-" : "#qs-") + i).value) || 1 }); else sel.delete(cod);
+      el.closest(".resultado").classList.toggle("sel", el.checked); pintarBarraSel(m ? "m" : "s");
+    } else if (/^q[ms]-\d+$/.test(el.id)) {
+      const m = el.id[1] === "m", i = +el.id.slice(3), x = m ? S.ultMat[i] : S.ultSrv[i], sel = m ? S.selM : S.selS, cod = m ? x?.r.c : x?.c;
+      if (sel.has(cod)) sel.get(cod).q = Number(el.value) || 1;
     } else if (el.dataset.fs !== undefined) {
       S.fs[el.dataset.fs] = el.value; clearTimeout(S.tBus); S.tBus = setTimeout(pintarResultadosSrv, 200);
     } else if (el.dataset.sold !== undefined) {
@@ -588,15 +615,20 @@
         capa.hidden = true; capa.innerHTML = ""; guardarPronto(); render(); break;
       }
       case "agregar-mat": {
-        const x = S.ultMat[+b.dataset.i], q = Number($("#qm-" + b.dataset.i).value) || 1;
-        const it = Busqueda.itemDeMaterial(x.r, x, q, siguienteId("M"));
-        it.plano = { diametro: x.r.a.diametro || "", serie_sch: x.r.a.serie ? "#" + x.r.a.serie : x.r.a.schedule ? "sch " + x.r.a.schedule : "", material: x.r.a.material || "", extremos: x.r.a.extremos || "", modelo: [x.r.a.marca, x.r.a.modelo].filter(Boolean).join(" ") };
-        it.pos = String(cot.items.filter(i => i.grupo === "material").length + 1);
-        cot.items.push(it); guardarPronto(); render(); toast(`Agregado: ${it.descripcion.slice(0, 50)}`); break;
+        const x = S.ultMat[+b.dataset.i], it = agregarMaterialDe(x, Number($("#qm-" + b.dataset.i).value) || 1);
+        S.selM.delete(x.r.c); guardarPronto(); render(); toast(`Agregado: ${it.descripcion.slice(0, 50)}`); break;
       }
+      case "agregar-sel": {
+        const sel = b.dataset.k === "m" ? S.selM : S.selS, n = sel.size;
+        for (const { x, q } of sel.values()) {
+          if (b.dataset.k === "m") agregarMaterialDe(x, q); else cot.items.push(Busqueda.itemDeServicio(x, q, siguienteId("S")));
+        }
+        sel.clear(); guardarPronto(); render(); toast(`Agregados ${n} ítem(s) a la cotización`); break;
+      }
+      case "limpiar-sel": (b.dataset.k === "m" ? S.selM : S.selS).clear(); render(); break;
       case "agregar-srv": {
         const r = S.ultSrv[+b.dataset.i], q = Number($("#qs-" + b.dataset.i).value) || 1;
-        cot.items.push(Busqueda.itemDeServicio(r, q, siguienteId("S"))); guardarPronto(); render(); toast(`Agregado: ${r.s.slice(0, 50)}`); break;
+        cot.items.push(Busqueda.itemDeServicio(r, q, siguienteId("S"))); S.selS.delete(r.c); guardarPronto(); render(); toast(`Agregado: ${r.s.slice(0, 50)}`); break;
       }
       case "limpiar-fm": S.fm = { fam: S.fm.fam }; render(); break;
       case "sold-fila": S.sold.push({ dn: "2", sch: "40", bw: "", sw: "", olet: "", tipoOlet: "cupla" }); render(); break;
