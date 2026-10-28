@@ -136,3 +136,9 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 | 84 | `precotizar` no encontró la te de reducción "8\"x6\"" (había IGUAL en Renard) y eligió una esférica galvanizada de 3.500 en lugar de la Taval de lista (740) | Revisar a mano los SIMILAR de válvulas; pendiente en la herramienta: el material galvanizado/inoxidable "no pedido" no tiene que ganar a uno sin esa diferencia |
 | 85 | Bloqueo y purga "con manómetro" cotizado sin el manómetro; prueba de fugas pedida sin renglón | Leer la descripción completa del plano; cada ensayo del pliego con su renglón |
 | 86 | Precios "estimados" sin ninguna referencia (toma multiport, alivio S-71, termovaina, switch, prueba de fugas; en la CAPEX: manga, sellador e ingeniería) | Regla P4 ter de Matías: sin referencia ni pieza parecida, 0 y pedir cotización. `verificar_computo.py` da error; el chat de la página tiene la misma regla |
+
+## Espesores de 28" y 30" mal cargados en la tabla de factores de soldadura (28-10-2026)
+- **Error:** la planilla de ITT `factores_soldadura_rev02-2026.xlsx` tenía 28" STD 8,74 / XS 11,91 / "Sch 40" 6,35 y 30" STD 10,31 / XS 14,27 / Sch 30 17,48 mm. ASME B36.10M da 28" STD 9,53 / XS 12,70 (sin Sch 40) y 30" STD 9,53 / XS 12,70 / Sch 30 15,88. Afectaba kg/m, m² y el factor de soldadura de esos diámetros.
+- **Cómo se detectó:** control de `canos_peso_superficie.csv` contra Wermac y Project Materials (388 valores, 373 iguales; los otros 9 desvíos eran de las fuentes).
+- **Corrección:** `construir_base.CORRIGE_B3610` corrige al leer la planilla; se regeneraron `factores_soldadura.csv` y `canos_peso_superficie.csv`.
+- **Lección:** una tabla interna vieja también se controla contra la norma antes de usarla.

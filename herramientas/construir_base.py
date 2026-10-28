@@ -93,6 +93,9 @@ def pulgadas(v):
 
 # ---------------------------------------------------------------- técnico
 
+CORRIGE_B3610 = {(28, 8.74): 9.53, (28, 11.91): 12.7, (30, 10.31): 9.53, (30, 14.27): 12.7, (30, 17.48): 15.88}
+
+
 def factores_soldadura():
     """Regla única: factor = espesor / espesor STD del mismo DN (mínimo 1). Hasta 10" coincide con la
     tabla de ITT; desde 12" la tabla original mezclaba criterios y se conserva en factor_original_itt."""
@@ -108,6 +111,11 @@ def factores_soldadura():
         od, espesor = numero(ws.cell(r, 4).value), numero(ws.cell(r, 7).value)
         if dn == 0.375 and espesor in (4.78, 7.47):  # filas de 1/2" cargadas como 3/8" en el escaneo original
             dn, od = 0.5, 21.3
+        # Espesores mal cargados en la planilla de ITT para 28" y 30": se toman los de ASME B36.10M (controlado contra Wermac y
+        # Project Materials, 28-10-2026; ver tecnico/piping_pesos_complemento_LEEME.md). 28" no tiene Sch 40 en la norma.
+        if (dn, sch, espesor) == (28, "40", 6.35):
+            continue
+        espesor = CORRIGE_B3610.get((dn, espesor), espesor)
         filas.append([dn, od, sch if sch != "-" else "", clase if clase not in ("-", "0") else "", espesor,
                       round(numero(ws.cell(r, 8).value) or 0, 4), round(numero(ws.cell(r, 10).value) or 0, 1),
                       numero(ws.cell(r, 11).value) or 0, numero(ws.cell(r, 12).value) or 0])
