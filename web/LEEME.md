@@ -26,6 +26,8 @@
 - La página guarda sola 1,2 segundos después de cada cambio.
 
 ## Tarea semanal (lunes a la mañana)
+Tarea programada `trig_01FE1sHFbntc3vsLmKVYvvcD` (lunes 7:37, hora Argentina). Despierta la sesión fija "Cotizador ITT – tarea semanal" (`session_01Y6ZcPeLckws2e9s2DF8RJ3`), que tiene el repositorio adjunto. Una tarea que abre sesiones nuevas no sirve: esas sesiones no tienen acceso al repositorio (probado el 28/10/2026). Si la sesión fija se archiva, hay que crear otra con el repositorio y apuntar la tarea a ella.
+
 1. `python herramientas/actualizar_base.py` (dólar BNA, índices, catálogos). Si falta el IPC o el CPI de un mes nuevo, buscar el dato oficial (INDEC / BLS), sumarlo en `herramientas/indices_inflacion.py` con su fuente y volver a correr. Tiene que terminar en "TODO OK".
 2. `python web/indices_para_pagina.py <scratch>/indices.json` y subirlo con ArtifactData: `set`, collection `config`, doc_id `indices`, `file_path` (si ya existe, leerlo antes para pasar `if_version`).
 3. Respaldo: ArtifactData `list` de `cotizaciones` con `out_dir` y `python web/respaldo_base.py <out_dir>/cotizaciones`.

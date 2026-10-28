@@ -65,7 +65,7 @@ Hecho (28/10/2026): `precotizar.py` (materiales, soldaduras, pintura, PH, RX) ·
 
 **Página web** (28/10/2026)
 1. Que Matías la pruebe y complete sus datos de firmante (teléfono, celular, email e imagen de la firma).
-2. Revisar el resultado de la primera tarea semanal (corrida de prueba el 28/10/2026; la primera programada es el lunes 2/11).
+2. Revisar el resultado de la primera tarea semanal, el lunes 2/11. La sesión fija ya se verificó el 28/10/2026: repositorio, push, base de la página y TODO OK.
 
 **Al terminar el proyecto** (decisión de Matías)
 1. Confirmar con Compras los precios sospechosos de la auditoría (columna `alerta`).
