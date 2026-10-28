@@ -99,4 +99,4 @@ Los pendientes actualizados después de la revisión independiente están en `co
 python herramientas/armar_cotizacion.py cotizaciones/COT26-1003-001_CAPEX_OQ8209
 ```
 
-Lo único que se edita es `cotizacion.json` (y `oferta.json` para los textos de la oferta). El informe web se republica con la herramienta Artifact desde `informe.html` (https://claude.ai/artifact/Bi6jpUG36k1nQVmGJWTA7C).
+Lo único que se edita es `cotizacion.json` (y `oferta.json` para los textos de la oferta). El informe se genera en `informe.html` (ya no se publica como página aparte; la cotización se ve en el Cotizador).

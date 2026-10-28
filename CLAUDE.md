@@ -6,7 +6,7 @@
 - La base de conocimiento está en `conocimiento/` y empieza por **`conocimiento/estado_y_pendientes.md`** (estado, decisiones y pendientes: leerlo al empezar cada chat y actualizarlo al terminar) y `conocimiento/RESUMEN.md`. Las fuentes están en `fuentes_originales/`.
 
 ## Objetivo
-- **Construir el cotizador automático.** Las cotizaciones que se hacen ahora (CAPEX) son casos de prueba para armar el proceso; los pendientes del proyecto son los del cotizador, no los de cada presupuesto.
+- **Construir el cotizador automático.** Las cotizaciones que se hacen ahora (CAPEX, Camuzzi, YPF, etc.) son casos de prueba para armar el proceso, todas con el mismo peso; ninguna es prioritaria ni tiene página propia. Los pendientes del proyecto son los del cotizador, no los de cada presupuesto (Matías, 28/10/2026).
 
 ## Reglas de datos
 - **El repositorio es privado. No omitir ni filtrar información por privacidad.** Se guardan completos los contactos de clientes y proveedores, los sueldos, los costos internos y los precios, porque sirven para costear (por ejemplo, la mano de obra). Pedido explícito del usuario el 27/10/2026.

@@ -16,7 +16,7 @@ Control automático (`verificar_computo.py`, 27/10/2026): 0 errores y 27 avisos.
 Originales en `pedido/`.
 
 ## Costo y precio (Rev 0, recalculado el 27/10/2026)
-El detalle interactivo, con el origen de cada precio, valores editables y exportación a CSV, está en `informe.html` (artifact https://claude.ai/artifact/Bi6jpUG36k1nQVmGJWTA7C). El cómputo ítem por ítem está en `computo.csv`.
+El detalle interactivo, con el origen de cada precio, valores editables y exportación a CSV, está en `informe.html`. El cómputo ítem por ítem está en `computo.csv`.
 
 | Rubro por puente | USD |
 |---|---|
