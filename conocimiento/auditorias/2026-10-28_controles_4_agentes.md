@@ -40,3 +40,21 @@ Menores: barra fija de 6 m (los caños de 3"+ vienen en 12 m) y compra extra par
 | CTRL-CA01 | Prefabricado de piping (Sacde 18) | +451% (sin pintura) | −0,2% |
 
 Errores que siguen o son nuevos: series y diámetros de válvulas (Taval #900 con #300; retención 12" con una wafer 3"; esférica con una retención mal rotulada; la tolerancia 2,6 de serie es alta), `sch_de("XS")` vacío y "WNRF" sin leer, tapas y piezas de la familia "Otros" sin comparar diámetro ni serie, precios de stock viejo como igual, MO de terceros del catálogo (Ledesma trampa) no se usa, horas todavía de otros equipos, instrumentos sin accesorios de la hoja de datos, tuercas cobradas dos veces, `--excluir` no filtra `tarifas.csv`, fecha imposible "2026-02-31" en soldadura, barra fija de 6 m, espesor 5/8" leído como 5 mm, proveedores de TAVAL/72 y 78 y lista 30 de Taval fuera del catálogo, y **no hay modo prefabricado** (materiales del cliente, juntas por barra, tarifa por pulgada sin factor, pintura aparte, sin horas de montaje).
+
+## Correcciones de la segunda tanda (28-10-2026)
+
+Lecciones 67–81 de `errores_y_lecciones.md`. Medido con `python herramientas/correr_controles.py` (detalle en `cotizaciones/controles_resultado.md`):
+
+| Caso | Antes | Después | Comentario |
+|---|---:|---:|---|
+| F01 filtro FM2 4" | −37% | −43% | Ya no toma horas de trampas ni de coalescedores 36": quedan en 0 con aviso (no hay filtro chico en la base) |
+| T01 tanque de choque 36" | +8% | −35% | Igual: el +8% era compensación de horas de un tanque de glicol 12"; ahora 0 con aviso. Falta la fabricación de tercero (era del propio proyecto) |
+| C01 colector | +12% | +9% | |
+| P01 puente 2" | −42% (+5% sin SIN PRECIO) | −43% (+3%) | |
+| M01 manifold | −20% | −23% | Diferencias de revisiones de la planilla real (REV A contra D/E) |
+| TS01 trampa 16x12 #900 | −19% | **+4%** | Válvulas Taval #900, tapa #900, MO de tercero |
+| P02 puente 3" | +15% | **+3%** | |
+| SK01 skid 708 | −29% | **−14%** | Retención 12" con Lista 30; queda la RX (DB NDT del propio proyecto) y montaje |
+| CA01 prefabricado | +879% | **+3%** | Modo prefabricado |
+
+Pendiente de esta tanda: horas de antecedentes para filtros chicos y tanques grandes (cargar TECPETROL/7 y otros en `horas_por_equipo.csv`), accesorios de instrumentos de la hoja de datos (TT integral con RTD y vaina, manifolds), RX por jornada (placas por servicio) y caución, repuestos y transporte (hoy solo aviso).

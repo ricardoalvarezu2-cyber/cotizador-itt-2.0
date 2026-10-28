@@ -207,12 +207,13 @@
    "especificacion": "Plano: 2\" · 900 / sch 160 · ASTM A-105 · RF/BW",
    "fuentes": [
     {
-     "tipo": "stock",
-     "precio": 215.8,
-     "proveedor": "Stock ITT (cód. ACS0506R57050K) · BRI-01262",
-     "origen": "fuentes_originales/stock_valorizado_2024-11.xlsx · código ACS0506R57050K",
-     "fecha": "2024-11-01",
-     "coincide": "igual"
+     "tipo": "ant",
+     "precio": 121.0,
+     "proveedor": "no dice (planilla de compras; cotización FTS 250558 en carpeta) · BRI-02449",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\7. Trampas · 5.Proveedores 3ros/Compras ITT/TRAMPAS unificado para compras.xlsx.txt",
+     "fecha": "2025-08-01",
+     "coincide": "similar",
+     "diferencia": "cara: sin dato (pedido RF); se prefirió un precio reciente a stock (precio maestro) del 2024-11-01 (BRI-01262, USD 215.80)"
     }
    ]
   },
@@ -226,12 +227,13 @@
    "especificacion": "Plano: 1 1/2\" · 900 / sch 160 · ASTM A-105 · RF/BW",
    "fuentes": [
     {
-     "tipo": "stock",
-     "precio": 163.2,
-     "proveedor": "Stock ITT · última compra (cód. ACS0406R57050K) · BRI-01216",
-     "origen": "fuentes_originales/stock_valorizado_2024-11.xlsx · código ACS0406R57050K",
-     "fecha": "2022-11-15",
-     "coincide": "igual"
+     "tipo": "ant",
+     "precio": 75.0,
+     "proveedor": "no dice (planilla de compras; cotización FTS 250558 en carpeta) · BRI-02441",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\7. Trampas · 5.Proveedores 3ros/Compras ITT/TRAMPAS unificado para compras.xlsx.txt",
+     "fecha": "2025-08-01",
+     "coincide": "similar",
+     "diferencia": "cara: sin dato (pedido RF); se prefirió un precio reciente a compra del 2022-11-15 (BRI-01216, USD 163.20)"
     }
    ]
   },
@@ -251,7 +253,7 @@
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1202",
      "fecha": "2025-12-26",
      "coincide": "similar",
-     "diferencia": "espesor_mm: 14.27 (pedido 5); material: A106 B (pedido API 5L)"
+     "diferencia": "espesor_mm: 14.27 (pedido 15.88); material: A106 B (pedido API 5L)"
     }
    ]
   },
@@ -259,10 +261,10 @@
    "id": "M06B",
    "pos": "6b",
    "grupo": "material",
-   "descripcion": "Completar barra de 6 m de la pos 6 (compra mínima; sobrante, no va en el equipo)",
-   "cantidad": 1.2,
+   "descripcion": "Completar barra de 12 m de la pos 6 (compra mínima; sobrante, no va en el equipo)",
+   "cantidad": 7.2,
    "unidad": "m",
-   "especificacion": "1 barra(s) de 6 m para 4.8 m en 1 equipo(s); por equipo 1.2 m",
+   "especificacion": "1 barra(s) de 12 m para 4.8 m en 1 equipo(s); por equipo 7.2 m",
    "fuentes": [
     {
      "tipo": "lista",
@@ -271,7 +273,7 @@
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1202",
      "fecha": "2025-12-26",
      "coincide": "similar",
-     "diferencia": "espesor_mm: 14.27 (pedido 5); material: A106 B (pedido API 5L)"
+     "diferencia": "espesor_mm: 14.27 (pedido 15.88); material: A106 B (pedido API 5L)"
     }
    ]
   },
@@ -291,7 +293,7 @@
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\7. Trampas · 5.Proveedores 3ros/Compras ITT/TRAMPAS unificado para compras.xlsx.txt",
      "fecha": "2025-08-01",
      "coincide": "similar",
-     "diferencia": "espesor_mm: sin dato (pedido 5)"
+     "diferencia": "espesor_mm: sin dato (pedido 15.88)"
     }
    ]
   },
@@ -299,10 +301,10 @@
    "id": "M07B",
    "pos": "7b",
    "grupo": "material",
-   "descripcion": "Completar barra de 6 m de la pos 7 (compra mínima; sobrante, no va en el equipo)",
-   "cantidad": 2.8,
+   "descripcion": "Completar barra de 12 m de la pos 7 (compra mínima; sobrante, no va en el equipo)",
+   "cantidad": 8.8,
    "unidad": "m",
-   "especificacion": "1 barra(s) de 6 m para 3.2 m en 1 equipo(s); por equipo 2.8 m",
+   "especificacion": "1 barra(s) de 12 m para 3.2 m en 1 equipo(s); por equipo 8.8 m",
    "fuentes": [
     {
      "tipo": "ant",
@@ -311,7 +313,7 @@
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\7. Trampas · 5.Proveedores 3ros/Compras ITT/TRAMPAS unificado para compras.xlsx.txt",
      "fecha": "2025-08-01",
      "coincide": "similar",
-     "diferencia": "espesor_mm: sin dato (pedido 5)"
+     "diferencia": "espesor_mm: sin dato (pedido 15.88)"
     }
    ]
   },
@@ -325,13 +327,12 @@
    "especificacion": "Plano: 12\" · XS · ASTM A-106 Gr B · BW",
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 242.81,
-     "proveedor": "Renard (cód. 1202) · CAN-01436",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1202",
-     "fecha": "2025-12-26",
-     "coincide": "similar",
-     "diferencia": "espesor_mm: 14.27 (no pedido)"
+     "tipo": "ant",
+     "precio": 297.75,
+     "proveedor": "Renard/ Provemet/ Klockmetal · CAN-01435",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
+     "coincide": "igual"
     }
    ]
   },
@@ -339,19 +340,18 @@
    "id": "M08B",
    "pos": "8b",
    "grupo": "material",
-   "descripcion": "Completar barra de 6 m de la pos 8 (compra mínima; sobrante, no va en el equipo)",
-   "cantidad": 0.1,
+   "descripcion": "Completar barra de 12 m de la pos 8 (compra mínima; sobrante, no va en el equipo)",
+   "cantidad": 6.1,
    "unidad": "m",
-   "especificacion": "1 barra(s) de 6 m para 5.9 m en 1 equipo(s); por equipo 0.1 m",
+   "especificacion": "1 barra(s) de 12 m para 5.9 m en 1 equipo(s); por equipo 6.1 m",
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 242.81,
-     "proveedor": "Renard (cód. 1202) · CAN-01436",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1202",
-     "fecha": "2025-12-26",
-     "coincide": "similar",
-     "diferencia": "espesor_mm: 14.27 (no pedido)"
+     "tipo": "ant",
+     "precio": 297.75,
+     "proveedor": "Renard/ Provemet/ Klockmetal · CAN-01435",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
+     "coincide": "igual"
     }
    ]
   },
@@ -378,10 +378,10 @@
    "id": "M09B",
    "pos": "9b",
    "grupo": "material",
-   "descripcion": "Completar barra de 6 m de la pos 9 (compra mínima; sobrante, no va en el equipo)",
+   "descripcion": "Completar barra de 12 m de la pos 9 (compra mínima; sobrante, no va en el equipo)",
    "cantidad": 3.5,
    "unidad": "m",
-   "especificacion": "2 barra(s) de 6 m para 8.5 m en 1 equipo(s); por equipo 3.5 m",
+   "especificacion": "1 barra(s) de 12 m para 8.5 m en 1 equipo(s); por equipo 3.5 m",
    "fuentes": [
     {
      "tipo": "lista",
@@ -489,25 +489,6 @@
    ]
   },
   {
-   "id": "M12B",
-   "pos": "12b",
-   "grupo": "material",
-   "descripcion": "Completar barra de 6 m de la pos 12 (compra mínima; sobrante, no va en el equipo)",
-   "cantidad": 5.9,
-   "unidad": "m",
-   "especificacion": "1 barra(s) de 6 m para 0.1 m en 1 equipo(s); por equipo 5.9 m",
-   "fuentes": [
-    {
-     "tipo": "lista",
-     "precio": 19.3,
-     "proveedor": "Renard (cód. 1139) · CAN-01405",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1139",
-     "fecha": "2025-12-26",
-     "coincide": "igual"
-    }
-   ]
-  },
-  {
    "id": "M13",
    "pos": "13",
    "grupo": "material",
@@ -557,12 +538,11 @@
    "fuentes": [
     {
      "tipo": "lista",
-     "precio": 60.44,
-     "proveedor": "Renard (cód. 3402) · ABW-00116",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3402",
+     "precio": 129.1,
+     "proveedor": "Renard (cód. 3777) · ABW-00117",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3777",
      "fecha": "2025-12-26",
-     "coincide": "similar",
-     "diferencia": "schedule: 40 (no pedido)"
+     "coincide": "igual"
     }
    ]
   },
@@ -616,12 +596,12 @@
    "fuentes": [
     {
      "tipo": "lista",
-     "precio": 199.18,
+     "precio": 403.112,
      "proveedor": "Renard (cód. 3188) · ABW-00266",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3188",
      "fecha": "2025-12-26",
      "coincide": "similar",
-     "diferencia": "diametro: 10\" (pedido 16\"); diametro2: 4\" (pedido 12\"); material: A234 WPB (pedido A860 WPHY)"
+     "diferencia": "diametro: 10\" (pedido 16\"); diametro2: 4\" (pedido 12\"); material: A234 WPB (pedido A860 WPHY); precio escalado por diámetro (16\" ÷ 10\")^1,5 = × 2.02"
     }
    ]
   },
@@ -635,13 +615,12 @@
    "especificacion": "Plano: 16\" · 900 ·  · BW · SYPRIS TOOLS o similar",
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 8432.0,
-     "proveedor": "marca/proveedor: FUTURA (Cotizacion de futura  S00356) · OTR-03020",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\40- INARTECO FILTROS LIC 9333 · fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/LM costo Filtros rev.1.xlsx.txt",
-     "fecha": "2026-01-15",
-     "coincide": "similar",
-     "diferencia": "unidad distinta: catálogo por uni, plano por un"
+     "tipo": "cot",
+     "precio": 10524.0,
+     "proveedor": "FTS (Sypris Tube Turns, cot. FTS 260812) · OTR-01818",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\PAMPA ENERGIA\\6- Licitación contrato marco Skid de Produccion Sierra Chata · 5.Proveedores 3ros/COT FTS 260812.pdf",
+     "fecha": "2026-08-10",
+     "coincide": "igual"
     }
    ]
   },
@@ -656,12 +635,12 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 111.28,
+     "precio": 175.37,
      "proveedor": "Lista Renar · ABW-00400",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt",
      "fecha": "2026-02-19",
      "coincide": "similar",
-     "diferencia": "schedule: 80 (pedido 160)"
+     "diferencia": "schedule: 80 (pedido 160); escalado por espesor (sch 160 13.49 mm ÷ sch 80 8.56 mm = × 1.58)"
     }
    ]
   },
@@ -714,13 +693,13 @@
    "especificacion": "Plano: 7/8\" ·  · ASTM A-193 B7 / A-194 2H · ",
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 5.0,
-     "proveedor": "marca/proveedor: BULES S.R.L. · JUN-02839",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\40- INARTECO FILTROS LIC 9333 · fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/LM costo Filtros rev.1.xlsx.txt",
-     "fecha": "2026-01-15",
+     "tipo": "cot",
+     "precio": 3.17,
+     "proveedor": "PROVEMET · JUN-04186",
+     "origen": "fuentes_originales/cotizacion_elementos_equipos_2026-03.xlsx · rubro ESPARRAGOS-TUERCAS · cotización 242356",
+     "fecha": "2025-08-27",
      "coincide": "similar",
-     "diferencia": "medida: 3/4 x 10 (pedido 7/8 x 14); unidad distinta: catálogo por uni, plano por un"
+     "diferencia": "unidad distinta: catálogo por juego, plano por un"
     }
    ]
   },
@@ -735,12 +714,12 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 5.0,
-     "proveedor": "marca/proveedor: BULES S.R.L. · JUN-02839",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\40- INARTECO FILTROS LIC 9333 · fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/LM costo Filtros rev.1.xlsx.txt",
-     "fecha": "2026-01-15",
+     "precio": 9.59,
+     "proveedor": "sin proveedor en planilla · JUN-04194",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
      "coincide": "similar",
-     "diferencia": "medida: 3/4 x 10 (pedido 1 1/8 x 17); unidad distinta: catálogo por uni, plano por un"
+     "diferencia": "serie: 300 (no pedido); medida: 1 1/8 x 7 3/8 (pedido 1 1/8 x 6 3/4)"
     }
    ]
   },
@@ -755,12 +734,12 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 5.0,
-     "proveedor": "marca/proveedor: BULES S.R.L. · JUN-02839",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\40- INARTECO FILTROS LIC 9333 · fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/LM costo Filtros rev.1.xlsx.txt",
-     "fecha": "2026-01-15",
+     "precio": 30.0,
+     "proveedor": "no dice (planilla de compras; cotización FTS 250558 en carpeta) · JUN-04202",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\7. Trampas · 5.Proveedores 3ros/Compras ITT/TRAMPAS unificado para compras.xlsx.txt",
+     "fecha": "2025-08-01",
      "coincide": "similar",
-     "diferencia": "medida: 3/4 x 10 (pedido 1 3/8 x 25); unidad distinta: catálogo por uni, plano por un"
+     "diferencia": "material: sin dato (pedido A194 2H)"
     }
    ]
   },
@@ -794,13 +773,13 @@
    "especificacion": "Plano: 8\" · 900 ·  · ",
    "fuentes": [
     {
-     "tipo": "cot",
-     "precio": 12.87,
-     "proveedor": "MS Juntas · JUN-01722",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\12 - Skid manifold PAD S-900",
-     "fecha": "2026-05-27",
+     "tipo": "ant",
+     "precio": 220.0,
+     "proveedor": "Bripetrol · JUN-04208",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\9. CM SKID MANIFOLD PAD S-600 · fuentes_originales/ofertas_texto/TECPETROL/9. CM SKID MANIFOLD PAD S-600/Adicional Manifold Tecpe 2026-05-05.xlsx.txt",
+     "fecha": "2026-05-05",
      "coincide": "similar",
-     "diferencia": "diametro: 6\" (pedido 8\"); extremos: RTJ (pedido RF)"
+     "diferencia": "serie: 600 (pedido 900); unidad distinta: catálogo por uni, plano por un"
     }
    ]
   },
@@ -814,13 +793,13 @@
    "especificacion": "Plano: 4\" · 900 ·  · ",
    "fuentes": [
     {
-     "tipo": "cot",
-     "precio": 12.87,
-     "proveedor": "MS Juntas · JUN-01722",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\12 - Skid manifold PAD S-900",
-     "fecha": "2026-05-27",
+     "tipo": "ant",
+     "precio": 72.5,
+     "proveedor": "Bripetrol · JUN-04207",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\9. CM SKID MANIFOLD PAD S-600 · fuentes_originales/ofertas_texto/TECPETROL/9. CM SKID MANIFOLD PAD S-600/Adicional Manifold Tecpe 2026-05-05.xlsx.txt",
+     "fecha": "2026-05-05",
      "coincide": "similar",
-     "diferencia": "diametro: 6\" (pedido 4\"); extremos: RTJ (pedido RF)"
+     "diferencia": "serie: 600 (pedido 900); unidad distinta: catálogo por uni, plano por un"
     }
    ]
   },
@@ -894,13 +873,13 @@
    "especificacion": "Plano: 4\" x 16\" · 120 · ASTM A-105 · BW",
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 43.0,
-     "proveedor": "sin proveedor en planilla · AFO-03349",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios · 4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 303 y 304 #900 - PC0-C.xlsx",
-     "fecha": "2025-12-18",
-     "coincide": "similar",
-     "diferencia": "diametro: sin dato (pedido 4\"); schedule: sin dato (pedido 120); material: A234 WPB (pedido A105)"
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-28",
+     "coincide": "sin_ref",
+     "diferencia": "El más parecido es de otro diámetro (1.5\") (AFO-03342 WELDOLET | 1½ | ASTM A105 | BW | WELDOLET 1½\" X 20, USD 85.00): no sirve como precio"
     }
    ]
   },
@@ -914,13 +893,13 @@
    "especificacion": "Plano: 4\" x 20\" · 120 · ASTM A-105 · BW",
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 43.0,
-     "proveedor": "sin proveedor en planilla · AFO-03349",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios · 4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 303 y 304 #900 - PC0-C.xlsx",
-     "fecha": "2025-12-18",
-     "coincide": "similar",
-     "diferencia": "diametro: sin dato (pedido 4\"); schedule: sin dato (pedido 120); material: A234 WPB (pedido A105)"
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-28",
+     "coincide": "sin_ref",
+     "diferencia": "El más parecido es de otro diámetro (1.5\") (AFO-03342 WELDOLET | 1½ | ASTM A105 | BW | WELDOLET 1½\" X 20, USD 85.00): no sirve como precio"
     }
    ]
   },
@@ -935,11 +914,12 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 20.0,
-     "proveedor": "no dice · OTR-02898",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\10- Trampas 6x8 Trampas lanzadora - receptora LT2E · 4.Armado de la Oferta Comercial/Estructura de costo- Trampas 6x8 y 6x4.xlsx.txt",
-     "fecha": "2025-12-10",
-     "coincide": "igual"
+     "precio": 46.0,
+     "proveedor": "no dice (planilla de compras; cotización FTS 250558 en carpeta) · OTR-02905",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\7. Trampas · 5.Proveedores 3ros/Compras ITT/TRAMPAS unificado para compras.xlsx.txt",
+     "fecha": "2025-08-01",
+     "coincide": "similar",
+     "diferencia": ""
     }
    ]
   },
@@ -953,12 +933,13 @@
    "especificacion": "Plano: 12\" ·  ·  · ",
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 20.0,
-     "proveedor": "no dice · OTR-02898",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\10- Trampas 6x8 Trampas lanzadora - receptora LT2E · 4.Armado de la Oferta Comercial/Estructura de costo- Trampas 6x8 y 6x4.xlsx.txt",
-     "fecha": "2025-12-10",
-     "coincide": "igual"
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-28",
+     "coincide": "sin_ref",
+     "diferencia": "El más parecido es de otro diámetro (2\") (OTR-02900 ABRAZADERA U-BOLT STANDART | 2\" | ACERO AL CARBONO, USD 15.00): no sirve como precio"
     }
    ]
   },
@@ -973,11 +954,12 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 20.0,
-     "proveedor": "no dice · OTR-02898",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\10- Trampas 6x8 Trampas lanzadora - receptora LT2E · 4.Armado de la Oferta Comercial/Estructura de costo- Trampas 6x8 y 6x4.xlsx.txt",
-     "fecha": "2025-12-10",
-     "coincide": "igual"
+     "precio": 35.0,
+     "proveedor": "sin proveedor en planilla · OTR-02903",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECHINT\\12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado · 4.Armado de la Oferta Comercial/OFERTA REV A/LM costo Desarenador rev ventas REV. 1.xlsx",
+     "fecha": "2025-12-23",
+     "coincide": "similar",
+     "diferencia": ""
     }
    ]
   },
@@ -993,11 +975,11 @@
     {
      "tipo": "ant",
      "precio": 10.0,
-     "proveedor": "Bules o Versailles · JUN-03361",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt",
-     "fecha": "2026-02-19",
+     "proveedor": "no dice (planilla de compras; cotización FTS 250558 en carpeta) · JUN-04193",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\7. Trampas · 5.Proveedores 3ros/Compras ITT/TRAMPAS unificado para compras.xlsx.txt",
+     "fecha": "2025-08-01",
      "coincide": "similar",
-     "diferencia": "diametro: 0.625\" (pedido 1\"); medida: 5/8 x 11 (pedido 1 x 14)"
+     "diferencia": "material: sin dato (pedido A194 2H)"
     }
    ]
   },
@@ -1072,13 +1054,13 @@
    "taval": true,
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 4834.0,
-     "proveedor": "ALT 2 -- VALV WAFER Ø12\" S-600 RF WCB INC X750 -- USD 2406 · VAL-03171",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios · 4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx",
-     "fecha": "2025-12-18",
+     "tipo": "lista",
+     "precio": 10740.6,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04439",
+     "origen": "taval_lista30_2025-09.xlsx · código BG13006R0104NP, hoja PR Guiada",
+     "fecha": "2025-09-01",
      "coincide": "similar",
-     "diferencia": "serie: 600 (pedido 900); material: sin dato (pedido A216 WCB); trim: sin dato (pedido ptfe)"
+     "diferencia": "trim: sin dato (pedido ptfe); paso: reducido (no pedido)"
     }
    ]
   },
@@ -1093,13 +1075,13 @@
    "taval": true,
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 1646.3,
-     "proveedor": "válvulas Taval (el resumen las agrupa como \"Valvulas Taval\", factor 1, · VAL-03559",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\9. CM SKID MANIFOLD PAD S-600 · fuentes_originales/ofertas_texto/TECPETROL/9. CM SKID MANIFOLD PAD S-600/ESTRUCTURA DE COSTOS- LM de Manifold S600 CM - PC0-C",
-     "fecha": "2026-01-26",
+     "tipo": "lista",
+     "precio": 1710.0,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04469",
+     "origen": "taval_lista30_2025-09.xlsx · código BG11006R0104NP, hoja PR Guiada",
+     "fecha": "2025-09-01",
      "coincide": "similar",
-     "diferencia": "serie: 600 (pedido 900); trim: sin dato (pedido ptfe); paso: total (no pedido)"
+     "diferencia": "trim: sin dato (pedido ptfe); paso: reducido (no pedido)"
     }
    ]
   },
@@ -1114,13 +1096,13 @@
    "taval": true,
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 400.4,
-     "proveedor": "Taval R Alvarez · VAL-03549",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\70- PUENTES DE MEDICION 2 PULGADAS · 4.Armado de la Oferta Comercial/OFERTA/REV 0/Puente Iny y Reg 2pulg serie600   SAP 1000653143 rev. 1.xlsx",
-     "fecha": "2026-06-25",
+     "tipo": "lista",
+     "precio": 832.0,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04448",
+     "origen": "taval_lista30_2025-09.xlsx · código BG10506R0104NP, hoja PR Guiada",
+     "fecha": "2025-09-01",
      "coincide": "similar",
-     "diferencia": "serie: 600 (pedido 900); trim: sin dato (pedido ptfe); extremos: sin dato (pedido RF)"
+     "diferencia": "trim: sin dato (pedido ptfe); paso: reducido (no pedido)"
     }
    ]
   },
@@ -1136,12 +1118,12 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 400.4,
-     "proveedor": "Taval R Alvarez · VAL-03549",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\70- PUENTES DE MEDICION 2 PULGADAS · 4.Armado de la Oferta Comercial/OFERTA/REV 0/Puente Iny y Reg 2pulg serie600   SAP 1000653143 rev. 1.xlsx",
-     "fecha": "2026-06-25",
+     "precio": 775.0,
+     "proveedor": "no dice (planilla de compras; cotización FTS 250558 en carpeta) · VAL-03536",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\7. Trampas · 5.Proveedores 3ros/Compras ITT/TRAMPAS unificado para compras.xlsx.txt",
+     "fecha": "2025-08-01",
      "coincide": "similar",
-     "diferencia": "diametro: 2\" (pedido 1.5\"); serie: 600 (pedido 900); trim: sin dato (pedido ptfe); extremos: sin dato (pedido RF)"
+     "diferencia": "extremos: RTJ (pedido RF)"
     }
    ]
   },
@@ -1217,13 +1199,13 @@
    "especificacion": "Plano: 1 1/2\" x 2\" · 900 · ASTM A-216 WCB · RF · DOMA",
    "fuentes": [
     {
-     "tipo": "cot",
-     "precio": 4413.92,
-     "proveedor": "Induquip Ingeniería (Emerson) · VAL-02252",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\7-CAPEX- SEPARADOR BIFASICO",
-     "fecha": "2025-06-13",
-     "coincide": "similar",
-     "diferencia": "diametro: sin dato (pedido 1.5\"); serie: sin dato (pedido 900); material: sin dato (pedido A216 WCB); extremos: sin dato (pedido RF)"
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-28",
+     "coincide": "sin_ref",
+     "diferencia": "El más parecido es sin diámetro conocido (VAL-02252 2 válvulas de seguridad Crosby 4L6JLTJOS-E35J, PSV, USD 4,413.92): no sirve como precio"
     }
    ]
   },
@@ -1237,13 +1219,13 @@
    "especificacion": "Plano:  ·  ·  ·  · 57-4200-00",
    "fuentes": [
     {
-     "tipo": "est",
-     "precio": 0,
-     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
-     "origen": "—",
-     "fecha": "2026-10-28",
-     "coincide": "sin_ref",
-     "diferencia": "No hay pieza de esa familia y tipo con precio"
+     "tipo": "ant",
+     "precio": 1650.0,
+     "proveedor": "TDW (marca) · OTR-02969",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\10- Trampas 6x8 Trampas lanzadora - receptora LT2E · 4.Armado de la Oferta Comercial/Estructura de costo- Trampas 6x8 y 6x4.xlsx.txt",
+     "fecha": "2025-12-10",
+     "coincide": "similar",
+     "diferencia": "diametro: 2\" (no pedido); serie: 300 (no pedido)"
     }
    ]
   },
@@ -1271,18 +1253,28 @@
    "id": "S01",
    "pos": "MO",
    "grupo": "mo",
-   "descripcion": "Soldaduras: 43 a tope + SW y olets (calculado)",
-   "especificacion": "pos 6, 7, 8, 9, 10, 11, 12: caño por metro; sus juntas se cuentan en los extremos BW de accesorios y bridas (una junta cada uno); pos 1: 5 extremo(s) BW de taller (1 por unidad × 5) × 6\" × 2.0070; pos 2: 1.5 extremo(s) BW de taller (1 por unidad × 1 × 1.5 por el caño) × 12\" × 1.4989; pos 3: 12 extremo(s) BW de taller (1 por unidad × 8 × 1.5 por el caño) × 4\" × 1.8488; pos 4: 12 extremo(s) BW de ta",
-   "cantidad": 328.58,
-   "unidad": "pulg",
+   "descripcion": "Fabricación (soldadura y armado) por tercero, mismo tipo de equipo",
+   "especificacion": "Trampa receptora Tecpetrol Fortín de Piedra: corte, biselado, soldadura, prefabricado de spool, cuna (Ledesma, presupuesto 200106) · alternativa propia: 315.83 pulg-eq × USD 16",
+   "cantidad": 1,
+   "unidad": "gl",
    "fuentes": [
     {
+     "tipo": "cot",
+     "precio": 10800.0,
+     "proveedor": "Edgardo Ledesma (taller) · FAB-00066",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\7. Trampas",
+     "fecha": "2025-10-16",
+     "coincide": "similar",
+     "diferencia": "trabajo del mismo tipo (Trampa receptora Tecpetrol Fortín de Piedra); confirmar alcance y tamaño con el tercero"
+    },
+    {
      "tipo": "ant",
-     "precio": 16.0,
-     "proveedor": "Mano de obra soldadura piping (criterio de las planillas de costo 2026): Precio por pulgada que usan las planillas de ITT de 2025-2026 (16 a 16,5; 19 en #900 en Sacde 12). Controles CTRL-M01/P01/T01, ",
+     "precio": 5053.26,
+     "proveedor": "Soldadura propia 315.83 pulg-eq × 16 (Mano de obra soldadura piping (criterio de las planillas de costo 2026))",
      "origen": "planillas 2026 (TAVAL/43 puentes YPF 19-02-2026; TAVAL/40 Inarteco; Sacde 12 a 15; Tecpetrol 9: 16,5)",
-     "fecha": "2026-02-31",
-     "coincide": "igual"
+     "fecha": "2026-02-28",
+     "coincide": "similar",
+     "diferencia": "alternativa propia"
     }
    ]
   },
@@ -1291,16 +1283,16 @@
    "pos": "PIN",
    "grupo": "servicio",
    "descripcion": "Granallado y pintura (m² calculados)",
-   "especificacion": "47.93 m² exteriores: caños y niples × 3 por bridas, accesorios y válvulas 30.1 + estructura 17.9",
-   "cantidad": 47.933,
+   "especificacion": "32.00 m² exteriores: caños y niples 10.0 + bridas, accesorios y válvulas (largo equivalente) 4.1 + estructura 17.9",
+   "cantidad": 31.996,
    "unidad": "m2",
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 50.0,
-     "proveedor": "criterio ITT · PIN-00569",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN\\4.Armado de la Oferta Comercial",
-     "fecha": "2026-10-10",
+     "precio": 40.0,
+     "proveedor": "ITT · PIN-00497",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\20 - SE-3121-ASTORD-014 - TK DE CHOQUE\\4.Armado de la Oferta Comercial",
+     "fecha": "2026-03-03",
      "coincide": "similar",
      "diferencia": "m² calculados (caños, accesorios por regla, envolvente y estructura); esquema de pintura a confirmar con el pliego"
     }
@@ -1317,12 +1309,31 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 3.0,
-     "proveedor": "Fabricación de estructura de skid por kg (tercero Ledesma): Dato al margen de la MO de Ledesma; en Tecpetrol 9 (01-2026) el bastidor UPN 140 se costeó a 4 USD/kg",
-     "origen": "YPF/28 Lic 69343 planilla PC0, hoja 1000623708 (850 kg × 3 = 2.550)",
-     "fecha": "2026-10-15",
+     "precio": 1.9,
+     "proveedor": "Mano de obra estructura (tercero Ledesma): Más IVA",
+     "origen": "costo_mo_planta_2024-10",
+     "fecha": "2024-09-30",
      "coincide": "similar",
      "diferencia": "kg de la tabla del plano; tarifa de un trabajo de estructura de skid"
+    }
+   ]
+  },
+  {
+   "id": "S03",
+   "pos": "PH",
+   "grupo": "servicio",
+   "descripcion": "Prueba hidráulica (horas de planta)",
+   "especificacion": "18 h · volumen interior 478.2 l",
+   "cantidad": 18.0,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 13.0,
+     "proveedor": "MO ITT · END-00215",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\49 - A&A Fluid Control - Manifolds Tecpetrol - Salar El Tolillar\\4.Armado de la Oferta Comercial",
+     "fecha": "2026-03-10",
+     "coincide": "igual"
     }
    ]
   },
@@ -1331,21 +1342,21 @@
    "pos": "RX",
    "grupo": "servicio",
    "descripcion": "Radiografía 100% de las juntas a tope y tintas penetrantes en SW y olets",
-   "especificacion": "93 placas chicas, 9 grandes, 3.00 servicio(s) de RX y 1.00 de LP por equipo (servicios repartidos en 1 equipos)",
+   "especificacion": "93 placas chicas, 7 grandes, 3.00 servicio(s) de RX y 1.00 de LP por equipo (servicios repartidos en 1 equipos)",
    "cantidad": 1,
    "unidad": "gl",
    "fuentes": [
     {
      "tipo": "cot",
-     "precio": 2194.5,
+     "precio": 2178.5,
      "proveedor": "Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))",
      "origen": "PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT)",
-     "fecha": "2026-08-14",
+     "fecha": "2026-08-31",
      "coincide": "igual"
     },
     {
      "tipo": "cot",
-     "precio": 3535.0,
+     "precio": 3495.0,
      "proveedor": "NDT Antonelli (tarifas 11-2025), mismas placas y servicios",
      "origen": "fuentes_originales/antonelli_end_2025-11.pdf",
      "fecha": "2025-11-03",
@@ -1358,8 +1369,8 @@
    "pos": "HH",
    "grupo": "mo",
    "descripcion": "Horas de ingeniería (estimadas del antecedente)",
-   "especificacion": "216 h por trampa · mediana de 520.1, 216.0, 62.8 h por unidad (repartidas en la serie y por tamaño)",
-   "cantidad": 216.0,
+   "especificacion": "503 h por trampa · mediana de 503.0 h por unidad (repartidas en la serie)",
+   "cantidad": 503.0,
    "unidad": "h",
    "fuentes": [
     {
@@ -1378,33 +1389,13 @@
    "pos": "CAL",
    "grupo": "mo",
    "descripcion": "Horas de calidad y dossier (estimadas del antecedente)",
-   "especificacion": "155.1 h por trampa · mediana de 155.1, 216.0, 113.1 h por unidad (repartidas en la serie y por tamaño)",
-   "cantidad": 155.1,
+   "especificacion": "150 h por trampa · mediana de 150.0 h por unidad (repartidas en la serie)",
+   "cantidad": 150.0,
    "unidad": "h",
    "fuentes": [
     {
      "tipo": "est",
      "precio": 15.0,
-     "proveedor": "Horas propias ITT (tarifa del antecedente)",
-     "origen": "conocimiento/costos/horas_por_equipo.csv · TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E · 4.Armado de la Oferta Comercial/Estructura de costo- Trampas 6x8 y 6x4.xlsx.txt · hoja Soldadura + HH_",
-     "fecha": "2025-12-10",
-     "coincide": "similar",
-     "diferencia": "ESTIMADO del antecedente TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E · Trampa receptora 8x6 #300 (RS-123/125) (8 / 6 (barrel 24 x 20 en tabla soldadura), 2 u, 2025-12-10)"
-    }
-   ]
-  },
-  {
-   "id": "S13A",
-   "pos": "ARM",
-   "grupo": "mo",
-   "descripcion": "Horas de montaje en planta (armado, movimientos, prueba hidráulica) (estimadas del antecedente)",
-   "especificacion": "479 h por trampa · mediana de 756 h × 1.034, 554.4 h × 0.864, 234 h × 1.257 (horas por unidad × tamaño)",
-   "cantidad": 479.0,
-   "unidad": "h",
-   "fuentes": [
-    {
-     "tipo": "est",
-     "precio": 13.0,
      "proveedor": "Horas propias ITT (tarifa del antecedente)",
      "origen": "conocimiento/costos/horas_por_equipo.csv · TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E · 4.Armado de la Oferta Comercial/Estructura de costo- Trampas 6x8 y 6x4.xlsx.txt · hoja Soldadura + HH_",
      "fecha": "2025-12-10",

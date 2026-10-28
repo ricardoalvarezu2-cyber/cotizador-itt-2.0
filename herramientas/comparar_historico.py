@@ -51,7 +51,8 @@ def main(carpeta, archivo="cotizacion_auto.json"):
     for p, i in items.items():
         if p[-1:] in "bcd" and p[:-1] in items:
             extras.setdefault(p[:-1], []).append(i)
-    lin = [f"# Caso de control {cot['codigo']}: precotización automática contra el costo real", "",
+    nombre = "precotización automática" if archivo == "cotizacion_auto.json" else f"cotización de `{archivo}`"
+    lin = [f"# Caso de control {cot['codigo']}: {nombre} contra el costo real", "",
            f"Generado por `herramientas/comparar_historico.py` con `{archivo}`. Costos por {cot.get('equipo', {}).get('singular', 'equipo')}, "
            "sin IVA y sin ajuste por inflación. Diferencia = cotizador ÷ real − 1.", "",
            "## Materiales (por posición del plano)", "",
@@ -70,7 +71,10 @@ def main(carpeta, archivo="cotizacion_auto.json"):
         tot_h += th
         tot_c += tc
         d = pct(tc, th)
-        if not s["precio"]:
+        if not s["precio"] and it.get("provee"):
+            lectura = "provisto por el cliente" if it["provee"] == "cliente" else "incluido en otra posición"
+            cuenta["bien" if not th else "lejos"] += 1
+        elif not s["precio"]:
             lectura = "SIN PRECIO en el catálogo"
             cuenta["sin precio"] += 1
         elif d is not None and abs(d) <= 15:

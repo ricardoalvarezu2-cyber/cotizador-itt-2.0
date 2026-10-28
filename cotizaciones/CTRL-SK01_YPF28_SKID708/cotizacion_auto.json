@@ -160,10 +160,10 @@
    "id": "M01B",
    "pos": "1b",
    "grupo": "material",
-   "descripcion": "Completar barra de 6 m de la pos 1 (compra mínima; sobrante, no va en el equipo)",
-   "cantidad": 0.7,
+   "descripcion": "Completar barra de 12 m de la pos 1 (compra mínima; sobrante, no va en el equipo)",
+   "cantidad": 1.7,
    "unidad": "m",
-   "especificacion": "3 barra(s) de 6 m para 13.8 m en 6 equipo(s); por equipo 0.7 m",
+   "especificacion": "2 barra(s) de 12 m para 13.8 m en 6 equipo(s); por equipo 1.7 m",
    "fuentes": [
     {
      "tipo": "ant",
@@ -186,12 +186,12 @@
    "fuentes": [
     {
      "tipo": "lista",
-     "precio": 133.36,
-     "proveedor": "Renard (cód. 1071) · CAN-01434",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1071",
+     "precio": 248.98,
+     "proveedor": "Renard (cód. 1212) · CAN-01449",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1212",
      "fecha": "2025-12-26",
      "coincide": "similar",
-     "diferencia": "diametro: 12\" (pedido 16\"); material: A53 (pedido API 5L)"
+     "diferencia": "material: A106 B (pedido API 5L); costura: sin costura (pedido con costura)"
     }
    ]
   },
@@ -199,19 +199,19 @@
    "id": "M02B",
    "pos": "2b",
    "grupo": "material",
-   "descripcion": "Completar barra de 6 m de la pos 2 (compra mínima; sobrante, no va en el equipo)",
+   "descripcion": "Completar barra de 12 m de la pos 2 (compra mínima; sobrante, no va en el equipo)",
    "cantidad": 0.3,
    "unidad": "m",
-   "especificacion": "2 barra(s) de 6 m para 10.2 m en 6 equipo(s); por equipo 0.3 m",
+   "especificacion": "1 barra(s) de 12 m para 10.2 m en 6 equipo(s); por equipo 0.3 m",
    "fuentes": [
     {
      "tipo": "lista",
-     "precio": 133.36,
-     "proveedor": "Renard (cód. 1071) · CAN-01434",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1071",
+     "precio": 248.98,
+     "proveedor": "Renard (cód. 1212) · CAN-01449",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1212",
      "fecha": "2025-12-26",
      "coincide": "similar",
-     "diferencia": "diametro: 12\" (pedido 16\"); material: A53 (pedido API 5L)"
+     "diferencia": "material: A106 B (pedido API 5L); costura: sin costura (pedido con costura)"
     }
    ]
   },
@@ -226,12 +226,11 @@
    "fuentes": [
     {
      "tipo": "lista",
-     "precio": 962.15,
-     "proveedor": "Renard (cód. 3471) · ABW-00356",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3471",
-     "fecha": "2025-12-26",
-     "coincide": "similar",
-     "diferencia": "schedule: STD (no pedido)"
+     "precio": 1797.966,
+     "proveedor": "Cintolo Hnos. (cód. 7128) · ABW-03406",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-28/cintolo_lista_29-1_2025-02-17.xlsx · código 7128",
+     "fecha": "2025-02-17",
+     "coincide": "igual"
     }
    ]
   },
@@ -250,7 +249,8 @@
      "proveedor": "Renard (cód. 3547) · ABW-00358",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3547",
      "fecha": "2025-12-26",
-     "coincide": "igual"
+     "coincide": "similar",
+     "diferencia": "se prefirió un precio reciente a stock (precio maestro) del 2024-11-01 (BRI-01262, USD 215.80)"
     }
    ]
   },
@@ -270,7 +270,7 @@
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 11984",
      "fecha": "2025-12-26",
      "coincide": "similar",
-     "diferencia": "schedule: 40 (pedido XS)"
+     "diferencia": "schedule: 40 (pedido XS); se prefirió un precio reciente a compra del 2022-11-15 (BRI-01216, USD 163.20)"
     }
    ]
   },
@@ -285,12 +285,12 @@
    "fuentes": [
     {
      "tipo": "lista",
-     "precio": 257.8,
-     "proveedor": "Renard (cód. 11983) · BRI-01224",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 11983",
+     "precio": 634.0109,
+     "proveedor": "Renard (cód. 11985) · BRI-01234",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 11985",
      "fecha": "2025-12-26",
      "coincide": "similar",
-     "diferencia": "diametro: 10\" (pedido 16\"); schedule: 40 (no pedido)"
+     "diferencia": "diametro: 14\" (pedido 16\"); schedule: 40 (no pedido); precio escalado por diámetro (16\" ÷ 14\")^1,5 = × 1.22"
     }
    ]
   },
@@ -324,12 +324,12 @@
    "fuentes": [
     {
      "tipo": "lista",
-     "precio": 426.44,
-     "proveedor": "Renard (cód. 8260) · BRI-01022",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 8260",
+     "precio": 691.1651,
+     "proveedor": "Renard (cód. 8261) · BRI-01024",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 8261",
      "fecha": "2025-12-26",
      "coincide": "similar",
-     "diferencia": "diametro: 12\" (pedido 16\")"
+     "diferencia": "diametro: 14\" (pedido 16\"); precio escalado por diámetro (16\" ÷ 14\")^1,5 = × 1.22"
     }
    ]
   },
@@ -362,13 +362,13 @@
    "especificacion": "Plano: 1 1/4\" ·  · A193 B7 / A194 2H · ",
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 10.0,
-     "proveedor": "Bules o Versailles · JUN-03364",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt",
-     "fecha": "2026-02-19",
+     "tipo": "cot",
+     "precio": 7.33,
+     "proveedor": "DELGADO · JUN-01679",
+     "origen": "fuentes_originales/cotizacion_elementos_equipos_2026-03.xlsx · rubro ESPARRAGOS-TUERCAS · cotización 1338",
+     "fecha": "2025-09-04",
      "coincide": "similar",
-     "diferencia": "diametro: 0.875\" (pedido 1.25\"); serie: sin dato (pedido 300); medida: 7/8 x 23 (pedido 25 x 20)"
+     "diferencia": "serie: sin dato (pedido 300); material: A193 B7 (pedido A194 2H); medida: 1 1/4 x 9 (pedido 1 1/4 x 8 1/8)"
     }
    ]
   },
@@ -383,12 +383,12 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 5.0,
-     "proveedor": "marca/proveedor: BULES S.R.L. · JUN-02839",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\40- INARTECO FILTROS LIC 9333 · fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/LM costo Filtros rev.1.xlsx.txt",
-     "fecha": "2026-01-15",
+     "precio": 12.0,
+     "proveedor": "planilla de costo ITT · JUN-04198",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx",
+     "fecha": "2026-06-26",
      "coincide": "similar",
-     "diferencia": "serie: sin dato (pedido 300); medida: 3/4 x 10 (no pedido); unidad distinta: catálogo por uni, plano por un"
+     "diferencia": "serie: sin dato (pedido 300); material: sin dato (pedido A194 2H); medida: 1 1/8 x 6 3/4 (pedido 1 1/8 x 7 3/8)"
     }
    ]
   },
@@ -442,13 +442,13 @@
    "especificacion": "Plano: 16\" · 300 ·  · RF",
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 15.0,
-     "proveedor": "sin proveedor en planilla · JUN-02765",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios · 4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx",
-     "fecha": "2025-12-18",
+     "tipo": "est",
+     "precio": 20.864,
+     "proveedor": "Stock ITT (cód. ACS4001X6MFM0) · JUN-01694",
+     "origen": "fuentes_originales/stock_valorizado_2024-11.xlsx · código ACS4001X6MFM0",
+     "fecha": "2024-11-01",
      "coincide": "similar",
-     "diferencia": "diametro: 12\" (pedido 16\"); serie: 600 (pedido 300); extremos: sin dato (pedido RF)"
+     "diferencia": "serie: 150 (pedido 300); material: AISI 316 (no pedido); extremos: sin dato (pedido RF)"
     }
    ]
   },
@@ -501,12 +501,12 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 20.0,
+     "precio": 36.7423,
      "proveedor": "Antecedentes puentes Taval/CGC s2000 · NIP-01780",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\55- Tecpetrol Puentes de Producción PPar Valvula y Puente PR 54942 · 7.Propuesta Comercial (envío al Cliente)/Puente de producción Tec Conv y NOC versión 3.xlsx",
      "fecha": "2026-04-22",
      "coincide": "similar",
-     "diferencia": "diametro: 0.5\" (pedido 0.75\")"
+     "diferencia": "diametro: 0.5\" (pedido 0.75\"); precio escalado por diámetro (0.75\" ÷ 0.5\")^1,5 = × 1.84"
     }
    ]
   },
@@ -599,13 +599,13 @@
    "especificacion": "Plano: 12\"x3/4\" · 3000 · ASTM A105 · BW/SW",
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 10.0,
-     "proveedor": "sin proveedor en planilla · AFO-03330",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECHINT\\12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado · 4.Armado de la Oferta Comercial/OFERTA REV C/ESTRUCTURA DE COSTOS- LM de Manifold S600 CM - PC0-C R",
-     "fecha": "2025-12-23",
+     "tipo": "est",
+     "precio": 15.5902,
+     "proveedor": "no dice · AFO-02394",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\3-YPF Separador Bifasicos - Separadores para satelites · 5.Proveedores 3ros/YPF - Sep Bifasico - 2591 - 21.2 - precios compras V1.xlsx.txt",
+     "fecha": "2025-03-27",
      "coincide": "similar",
-     "diferencia": "diametro: 0.5\" (pedido 12\"); extremos: sin dato (pedido SW/BW)"
+     "diferencia": "diametro: 0.75\" (pedido 12\"); material: sin dato (pedido A105); extremos: sin dato (pedido SW/BW)"
     }
    ]
   },
@@ -619,13 +619,13 @@
    "especificacion": "Plano: 16\"x3/4\" · 3000 · ASTM A105 · BW/SW",
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 10.0,
-     "proveedor": "sin proveedor en planilla · AFO-03330",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECHINT\\12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado · 4.Armado de la Oferta Comercial/OFERTA REV C/ESTRUCTURA DE COSTOS- LM de Manifold S600 CM - PC0-C R",
-     "fecha": "2025-12-23",
+     "tipo": "est",
+     "precio": 15.5902,
+     "proveedor": "no dice · AFO-02394",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\3-YPF Separador Bifasicos - Separadores para satelites · 5.Proveedores 3ros/YPF - Sep Bifasico - 2591 - 21.2 - precios compras V1.xlsx.txt",
+     "fecha": "2025-03-27",
      "coincide": "similar",
-     "diferencia": "diametro: 0.5\" (pedido 16\"); extremos: sin dato (pedido SW/BW)"
+     "diferencia": "diametro: 0.75\" (pedido 16\"); material: sin dato (pedido A105); extremos: sin dato (pedido SW/BW)"
     }
    ]
   },
@@ -660,13 +660,12 @@
    "taval": true,
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 65.2,
-     "proveedor": "válvulas Taval (el resumen las agrupa como \"Valvulas Taval\", factor 1, · VAL-03526",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\9. CM SKID MANIFOLD PAD S-600 · fuentes_originales/ofertas_texto/TECPETROL/9. CM SKID MANIFOLD PAD S-600/ESTRUCTURA DE COSTOS- LM de Manifold S600 CM - PC0-C",
-     "fecha": "2026-01-26",
-     "coincide": "similar",
-     "diferencia": "serie: 3000 (pedido 2000)"
+     "tipo": "lista",
+     "precio": 36.06,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04865",
+     "origen": "taval_lista30_2025-09.xlsx · código , hoja PT Flot-NPT FORJADAS",
+     "fecha": "2025-09-01",
+     "coincide": "igual"
     }
    ]
   },
@@ -681,13 +680,12 @@
    "taval": true,
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 42.042,
-     "proveedor": "Taval · VAL-03530",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\PAMPA ENERGIA\\7- Licitacion contrato Marco Skid PAD Rincon de Aranda · 4.Armado de la Oferta Comercial/Cot Skid Manifolds Colectores RDA Contrato Marco (2da RDA).xlsx.",
-     "fecha": "2026-08-14",
-     "coincide": "similar",
-     "diferencia": "serie: 3000 (pedido 2000); paso: reducido (no pedido)"
+     "tipo": "lista",
+     "precio": 38.8,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04874",
+     "origen": "taval_lista30_2025-09.xlsx · código , hoja PT Flot-NPT FORJADAS",
+     "fecha": "2025-09-01",
+     "coincide": "igual"
     }
    ]
   },
@@ -702,13 +700,12 @@
    "taval": true,
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 114.0,
-     "proveedor": "sin proveedor en planilla (columna PROVEEDOR vacía) · VAL-03284",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · 4.Armado de la Oferta Comercial/LM-TANQUE GLICOL.xlsx",
-     "fecha": "2026-02-20",
-     "coincide": "similar",
-     "diferencia": "diametro: sin dato (pedido 12\"); serie: 150 (pedido 300)"
+     "tipo": "lista",
+     "precio": 1425.0,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-03580",
+     "origen": "taval_lista30_2025-09.xlsx · código RW13003R01020B, hoja Waffer",
+     "fecha": "2025-09-01",
+     "coincide": "igual"
     }
    ]
   },
@@ -723,13 +720,13 @@
    "taval": true,
    "fuentes": [
     {
-     "tipo": "est",
-     "precio": 0,
-     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
-     "origen": "—",
-     "fecha": "2026-10-28",
-     "coincide": "sin_ref",
-     "diferencia": "El más parecido es de otro diámetro (1\") (VAL-03176 TAVAL | VALVULA GLOBO | Ø 1 - Globo | RF | 600#, USD 80.00): no sirve como precio"
+     "tipo": "lista",
+     "precio": 35.1,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04848",
+     "origen": "taval_lista30_2025-09.xlsx · código , hoja API 602",
+     "fecha": "2025-09-01",
+     "coincide": "similar",
+     "diferencia": "serie: sin dato (pedido 800); extremos: NPT/SW (pedido NPT)"
     }
    ]
   },
@@ -744,13 +741,13 @@
    "taval": true,
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 80.0,
-     "proveedor": "sin proveedor en planilla · VAL-03176",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios · 4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx",
-     "fecha": "2025-12-18",
+     "tipo": "lista",
+     "precio": 40.5,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04849",
+     "origen": "taval_lista30_2025-09.xlsx · código , hoja API 602",
+     "fecha": "2025-09-01",
      "coincide": "similar",
-     "diferencia": "diametro: 1\" (pedido 0.75\"); serie: 600 (no pedido); material: sin dato (pedido A105); extremos: RF (pedido NPT)"
+     "diferencia": "serie: sin dato (pedido 800); extremos: NPT/SW (pedido NPT)"
     }
    ]
   },
@@ -765,13 +762,13 @@
    "taval": true,
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 4834.0,
-     "proveedor": "ALT 2 -- VALV WAFER Ø12\" S-600 RF WCB INC X750 -- USD 2406 · VAL-03171",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios · 4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx",
-     "fecha": "2025-12-18",
+     "tipo": "lista",
+     "precio": 5750.0,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04436",
+     "origen": "taval_lista30_2025-09.xlsx · código BG63003R0104RR, hoja PT Guiada",
+     "fecha": "2025-09-01",
      "coincide": "similar",
-     "diferencia": "serie: 600 (pedido 300); material: sin dato (pedido Acero al carbono)"
+     "diferencia": "material: A216 WCB (pedido Acero al carbono)"
     }
    ]
   },
@@ -800,8 +797,8 @@
    "pos": "MO",
    "grupo": "mo",
    "descripcion": "Soldaduras: 28.5 a tope + SW y olets (calculado)",
-   "especificacion": "pos 1, 2: caño por metro; sus juntas se cuentan en los extremos BW de accesorios y bridas (una junta cada uno); pos 3: 13.5 extremo(s) BW de taller (3 por unidad × 3 × 1.5 por el caño) × 12\" × 1.0830; pos 4: 13.5 extremo(s) BW de taller (3 por unidad × 3 × 1.5 por el caño) × 14.6667\" × 1.0000; pos 5: 27 extremo(s) BW de taller (1 por unidad × 18 × 1.5 por el caño) × 12\" × 1.0830; pos 6: 3 extremo(",
-   "cantidad": 426.685,
+   "especificacion": "pos 1, 2: caño por metro; sus juntas se cuentan en los extremos BW de accesorios y bridas (una junta cada uno); pos 3: 13.5 extremo(s) BW de taller (3 por unidad × 3 × 1.5 por el caño) × 12\" × 1.3340; pos 4: 13.5 extremo(s) BW de taller (3 por unidad × 3 × 1.5 por el caño) × 16.0027\" × 1.0000; pos 5: 27 extremo(s) BW de taller (1 por unidad × 18 × 1.5 por el caño) × 12\" × 1.0830; pos 6: 3 extremo(",
+   "cantidad": 456.034,
    "unidad": "pulg",
    "fuentes": [
     {
@@ -809,7 +806,7 @@
      "precio": 16.0,
      "proveedor": "Mano de obra soldadura piping (criterio de las planillas de costo 2026): Precio por pulgada que usan las planillas de ITT de 2025-2026 (16 a 16,5; 19 en #900 en Sacde 12). Controles CTRL-M01/P01/T01, ",
      "origen": "planillas 2026 (TAVAL/43 puentes YPF 19-02-2026; TAVAL/40 Inarteco; Sacde 12 a 15; Tecpetrol 9: 16,5)",
-     "fecha": "2026-02-31",
+     "fecha": "2026-02-28",
      "coincide": "igual"
     }
    ]
@@ -819,8 +816,8 @@
    "pos": "PIN",
    "grupo": "servicio",
    "descripcion": "Granallado y pintura (m² calculados)",
-   "especificacion": "39.29 m² exteriores: caños y niples × 3 por bridas, accesorios y válvulas 13.8 + estructura 25.5",
-   "cantidad": 39.29,
+   "especificacion": "66.12 m² exteriores: caños y niples 4.6 + bridas, accesorios y válvulas (largo equivalente) 36.0 + estructura 25.5",
+   "cantidad": 66.121,
    "unidad": "m2",
    "fuentes": [
     {
@@ -845,10 +842,10 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 3.0,
-     "proveedor": "Fabricación de estructura de skid por kg (tercero Ledesma): Dato al margen de la MO de Ledesma; en Tecpetrol 9 (01-2026) el bastidor UPN 140 se costeó a 4 USD/kg",
-     "origen": "YPF/28 Lic 69343 planilla PC0, hoja 1000623708 (850 kg × 3 = 2.550)",
-     "fecha": "2026-10-15",
+     "precio": 1.9,
+     "proveedor": "Mano de obra estructura (tercero Ledesma): Más IVA",
+     "origen": "costo_mo_planta_2024-10",
+     "fecha": "2024-09-30",
      "coincide": "similar",
      "diferencia": "kg de la tabla del plano; tarifa de un trabajo de estructura de skid"
     }
@@ -868,7 +865,7 @@
      "precio": 2753.0,
      "proveedor": "Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))",
      "origen": "PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT)",
-     "fecha": "2026-08-14",
+     "fecha": "2026-08-31",
      "coincide": "igual"
     },
     {
@@ -886,18 +883,18 @@
    "pos": "HH",
    "grupo": "mo",
    "descripcion": "Horas de ingeniería (estimadas del antecedente)",
-   "especificacion": "32.97 h por skid · mediana de 33.0, 3.7, 36.2 h por unidad (repartidas en la serie y por tamaño)",
-   "cantidad": 32.97,
+   "especificacion": "5 h por skid · mediana de 4.5, 5.0, 93.3 h por unidad (repartidas en la serie)",
+   "cantidad": 5.0,
    "unidad": "h",
    "fuentes": [
     {
      "tipo": "est",
      "precio": 15.0,
      "proveedor": "Horas propias ITT (tarifa del antecedente)",
-     "origen": "conocimiento/costos/horas_por_equipo.csv · Sacde/14- 3029 RDA - SE-CPF-062_ SKID VALVULA Y BOMBA TK CONICO · 4.Armado de la Oferta Comercial/LM Sacde TK Cónico Rev 0.xlsx.txt · hoja Montaje HH",
-     "fecha": "2026-02-10",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · 4.Armado de la Oferta Comercial/SKIDs SK SACDE 1002 Rev1.xlsx.txt · hoja SK-2105 / Mano de Obra de ITT",
+     "fecha": "2026-02-20",
      "coincide": "similar",
-     "diferencia": "ESTIMADO del antecedente Sacde/14- 3029 RDA - SE-CPF-062_ SKID VALVULA Y BOMBA TK CONICO · Skid valvula y bomba para TK-1839 (TK conico) (4 (sch 40; tambien 3,2), 1 u, 2026-02-10)"
+     "diferencia": "ESTIMADO del antecedente Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para UFLO 2108 (SK-2105) (8, 1 u, 2026-02-20)"
     }
    ]
   },
@@ -906,18 +903,18 @@
    "pos": "CAL",
    "grupo": "mo",
    "descripcion": "Horas de calidad y dossier (estimadas del antecedente)",
-   "especificacion": "14.84 h por skid · mediana de 14.8, 12.4, 21.8 h por unidad (repartidas en la serie y por tamaño)",
-   "cantidad": 14.84,
+   "especificacion": "15 h por skid · mediana de 15.0, 7.5, 40.0 h por unidad (repartidas en la serie)",
+   "cantidad": 15.0,
    "unidad": "h",
    "fuentes": [
     {
      "tipo": "est",
      "precio": 15.0,
      "proveedor": "Horas propias ITT (tarifa del antecedente)",
-     "origen": "conocimiento/costos/horas_por_equipo.csv · Sacde/14- 3029 RDA - SE-CPF-062_ SKID VALVULA Y BOMBA TK CONICO · 4.Armado de la Oferta Comercial/LM Sacde TK Cónico Rev 0.xlsx.txt · hoja Montaje HH",
-     "fecha": "2026-02-10",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · 4.Armado de la Oferta Comercial/SKIDs SK SACDE 1002 Rev1.xlsx.txt · hoja SK-2105 / Mano de Obra de ITT",
+     "fecha": "2026-02-20",
      "coincide": "similar",
-     "diferencia": "ESTIMADO del antecedente Sacde/14- 3029 RDA - SE-CPF-062_ SKID VALVULA Y BOMBA TK CONICO · Skid valvula y bomba para TK-1839 (TK conico) (4 (sch 40; tambien 3,2), 1 u, 2026-02-10)"
+     "diferencia": "ESTIMADO del antecedente Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para UFLO 2108 (SK-2105) (8, 1 u, 2026-02-20)"
     }
    ]
   },
@@ -926,18 +923,18 @@
    "pos": "ARM",
    "grupo": "mo",
    "descripcion": "Horas de montaje en planta (armado, movimientos, prueba hidráulica) (estimadas del antecedente)",
-   "especificacion": "368 h por skid · mediana de 535.5 h × 0.989, 216 h × 0.826, 507.6 h × 0.725 (horas por unidad × tamaño)",
-   "cantidad": 368.0,
+   "especificacion": "326.2 h por skid · mediana de 216 h × 0.854, 130.5 h × 2.5, 225 h × 2.5 (horas por unidad × tamaño)",
+   "cantidad": 326.2,
    "unidad": "h",
    "fuentes": [
     {
      "tipo": "est",
      "precio": 13.0,
      "proveedor": "Horas propias ITT (tarifa del antecedente)",
-     "origen": "conocimiento/costos/horas_por_equipo.csv · Sacde/14- 3029 RDA - SE-CPF-062_ SKID VALVULA Y BOMBA TK CONICO · 4.Armado de la Oferta Comercial/LM Sacde TK Cónico Rev 0.xlsx.txt · hoja Montaje HH",
-     "fecha": "2026-02-10",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · 4.Armado de la Oferta Comercial/SKIDs SK SACDE 1002 Rev1.xlsx.txt · hoja SK-2105 / Mano de Obra de ITT",
+     "fecha": "2026-02-20",
      "coincide": "similar",
-     "diferencia": "ESTIMADO del antecedente Sacde/14- 3029 RDA - SE-CPF-062_ SKID VALVULA Y BOMBA TK CONICO · Skid valvula y bomba para TK-1839 (TK conico) (4 (sch 40; tambien 3,2), 1 u, 2026-02-10)"
+     "diferencia": "ESTIMADO del antecedente Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para UFLO 2108 (SK-2105) (8, 1 u, 2026-02-20)"
     }
    ]
   }

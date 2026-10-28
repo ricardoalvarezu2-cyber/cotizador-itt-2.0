@@ -39,7 +39,7 @@ Todos los archivos de ITT revisados para armar esta base, en orden cronológico 
 |---|---|---|---|---|
 | 2024-08 | reporte de compras.pdf (453 páginas) | Sistema | 📚 | Órdenes de compra por artículo de dic-2021 a ago-2024, mayormente en pesos. **Pendiente de procesar** |
 | 2024-11 | STOCK VALORIZADO ITT.xlsx | O. Fuentes | ✅ | Base de `precios/stock_2024-11.csv`. La hoja oculta "borrador19.09" es una versión previa. 601 artículos sin fecha de compra. **Criterio (27/10/2026):** en el catálogo, una última compra anterior a 2022 (hay de 2009) no representa el precio actual: se usa el precio maestro de nov-2024 y se deja anotada la compra vieja. Los precios en 0,00 se descartan. Las chapas con unidad "Mts²" y medida 1500x6000 tienen el precio de la hoja entera (USD/kg igual al de las hermanas): se cargan como "hoja" |
-| 2025-09 | Lista TAVAL 30 vigencia 01-09-2025 - ventas.xlsx | Taval | ✅ | Coeficiente 1,25 y USD/kg. Columnas de precio con #REF!: **pendiente de obtener una versión sana** |
+| 2025-09 | Lista TAVAL 30 vigencia 01-09-2025 - ventas.xlsx | Taval | ✅ | Coeficiente 1,25 y USD/kg. Precios de lista leídos el 28-10-2026 (ver "Precios de la Lista 30 de Taval") |
 | 2025-11 | 1788-JCA-1125 - ITT SA.pdf (Antonelli) | Antonelli | ✅ | Tarifas de END, en `costos/tarifas.csv` |
 | 2025-12 | RENAR ListaPrecios_ittSA_20251226.xlsx | Renard | ✅ | Base de `precios/lista_renar_2025-12.csv` |
 | 2026-02 | Precios varios materiales de acero, chapa, angulo, etc.xlsx | J. Elejondo | ✅ | Chapa, perfiles y caño estructural en USD/kg. Detalle por medida en `precios/acero_por_kg.csv` (`herramientas/acero_por_kg.py`, fecha 10-02-2026 = última modificación del archivo; pesos con IVA ÷ 1,21 ÷ TC del documento 1.447,5); resumen en `costos/tarifas.csv`. Entra al catálogo de materiales (unidad kg) y `precotizar.py` lo usa para piezas de acero al carbono por kg (+10% recortes) |
@@ -111,12 +111,20 @@ Extraídas con IA por 3 subagentes (`herramientas/etapa2_planillas_instrucciones
 
 Fuente: `fuentes_originales/taval_lista30_2025-09.xlsx` (Lista 30 de Taval, columna "Kg"), descifrada con `codificador_taval_2023-07.xlsx`. Tabla: `conocimiento/tecnico/valvulas_peso.csv` (`herramientas/pesos_valvulas.py`). Criterios en `tecnico/pesos_LEEME.md`.
 
+## Precios de la Lista 30 de Taval (28-10-2026)
+
+`herramientas/pesos_valvulas.py` lee también el precio de lista de cada código (el número que, dividido por los kg, da el "u$s x kg" vecino; así no depende de las columnas con #REF!) → `conocimiento/precios/taval_lista30.csv` (720 precios). **Costo de ITT = lista × 0,52**, el factor que aplican las planillas TAVAL/72 ("Valvulas Taval.xlsx": −35%, −15% y −9,4% ≈ 0,50) y TAVAL/78 ("Valvulas.xlsx": "USD 0,52"), 07/08-2026. Si Taval cambia el descuento, se cambia `FACTOR_TAVAL` y se regenera. Comprobado: retención 10" #300 trim 5 = 4.500 de lista (TAVAL/78) y esférica PT guiada 10" #300 = 7.115 (TAVAL/78).
+
+## Listas cargadas por Ventas (28-10-2026)
+
+`fuentes_originales/listas_vendedor/<fecha de carga>/` (con README) y `herramientas/listas_vendedor.py` → `conocimiento/precios/listas_vendedor.csv`. Cada precio conserva la **fecha del documento**; la fecha de carga es la carpeta. Primera carga (Matías, 28-10-2026): Renard 27-05-2025, Cintolo lista 29.1 (vigencia 17-02-2025) y Provemet perfiles cot. 236623 (01-07-2025). Como son de 2025, la lista Renard 12-2025 sigue siendo la más reciente.
+
 ## Faltantes conocidos
 
 1. **Plazos:** cubierto en parte con el seguimiento de proyectos (ver `plazos.md`). Faltan plazos de proveedores actualizados por rubro.
 2. **Costo real de proyectos terminados** para comparar con lo cotizado.
 3. **Resultado de las cotizaciones 2024–2026:** 232 de 284 figuran como "Enviado" sin resultado.
-4. **Lista Taval sin #REF!**.
+4. ~~Lista Taval sin #REF!~~ Resuelto para los precios (28-10-2026): se leen por el cociente con u$s/kg.
 5. **Reporte de compras** (PDF de 453 páginas) sin procesar: es el historial de precios de compra.
 
 ## Horas de ingeniería, calidad y montaje por equipo (28-10-2026)

@@ -106,3 +106,23 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 | 65 | `--excluir` borraba la pieza entera; precios atípicos sin alerta | Se usa el precio más reciente no excluido del historial; si el último se aparta 40% de la mediana, va la mediana |
 | 66 | `comparar_historico` ponía el montaje bajo "prueba hidráulica" y pisaba su salida con `--json` | Rubro por código primero y palabras enteras; salida propia por archivo |
 
+
+### Segunda tanda de controles (TS01, P02, SK01, CA01) · corregido el 28-10-2026
+
+| # | Error | Corrección |
+|---|---|---|
+| 67 | Válvulas de otra serie como similar (Taval #900 con #300) y la marca ganándole a la serie | Válvulas: serie distinta = SIN PRECIO con referencia; en el resto, hasta 2,1 veces. En `buscar_material` las diferencias de Ø, serie, schedule y medida pesan antes que la marca |
+| 68 | Candidato sin diámetro tomado como similar (retención 12" con una wafer 3" no leída) | Válvulas, bridas, accesorios, caños y niples: sin Ø no sirve si el plano lo da. Lectura de Ø en columnas sueltas ("\| 3 \| 150#") y en "CODO 90 10 BW" |
+| 69 | Retención rotulada "VALVULA ESFERICA … Ret" (planillas Sacde) cargada como esférica | "Ret", "retención", "check" o "wafer" mandan sobre esférica/esclusa/globo |
+| 70 | Similares de otro Ø o schedule usados sin escalar; brida 16" con una de 10" | Desde 8", Ø hasta 1,25 veces; precio × (Ø pedido ÷ Ø similar)^1,5 (olets: por la salida); caños y accesorios × espesor pedido ÷ espesor del similar (no en bridas) |
+| 71 | `sch_de("XS")` vacío; "WNRF", "P.T.", "ESP SWI", "BX 153", "scrapper", "1 7/8"", "7/8 x 145 mm", "1.25x207", "L=", "esp. 5/8"" mal leídos | Lectores corregidos con casos de regresión en `test_precotizar.py` |
+| 72 | Familia "Otros" (tapas, U-bolts, detectores) sin comparar Ø ni serie; tipo = 3 primeras palabras | Tipos por palabra clave (tapa de cierre rápido, u-bolt, detector de scraper, elemento filtrante) y comparación de Ø y serie |
+| 73 | Precio de stock o compra de 2022–2024 como IGUAL contra una cotización 2025–2026 que solo cambia la cara | Si el stock/compra tiene más de 18 meses y hay una cotización reciente que solo difiere en cara/extremos, va la reciente (como similar) |
+| 74 | Tuercas cobradas dos veces (el espárrago elegido ya traía 2 tuercas) | Si el precio elegido del espárrago dice "c/2 tuercas" o "juego", las tuercas del plano van en 0 con aviso |
+| 75 | `--excluir` no filtraba `tarifas.csv` ni los buscadores; tarifas posteriores a la fecha de referencia; fecha imposible "2026-02-31" | `tarifa()` excluye por fuente y prefiere tarifas hasta 2 meses después de la fecha de referencia; `--excluir` repetible en los tres buscadores; último día real del mes |
+| 76 | Barra fija de 6 m, una barra por tramo y barra entera para 0,1 m | Tramos del mismo caño agrupados; 12 m desde 3"; menos de 0,5 m sale de recortes |
+| 77 | Horas de otro tipo de equipo o tamaño (puente con skids, trampa con tanques, filtro 4" con coalescedor 36"); ingeniería y calidad escaladas por tamaño | Solo antecedentes del mismo tipo y Ø hasta 2,5 veces; si no hay, afines solo entre armados de cañería; si tampoco, **no se suman horas** y se avisa. Ingeniería y calidad no se escalan. Subtipos (concentrador, bomba, medición, receptora…) |
+| 78 | MO de terceros con el mismo alcance no usada (Ledesma trampa 10.800); soldadura y montaje propios sumados | Si el catálogo tiene la fabricación por tercero del mismo tipo (con Ø o subtipo iguales), va como fuente principal y la soldadura propia como alternativa; sin montaje propio |
+| 79 | Pintura × 3 fijo (corta con válvulas grandes, triplicaba caño recto) | m² por pieza con largo equivalente (brida 1,5 D, codo 2,4 D, tee 3 D, válvula 6 D) |
+| 80 | No había modo prefabricado: materiales del cliente cotizados, 0 juntas en caño recto, factor de espesor por pulg-eq, pintura dentro, horas de skid | `provee`/"provisto por el cliente" → precio 0; juntas de empalme entre barras; `parametros.modo = "prefabricado"`: pulgada diametral base sch 40, tarifa de prefabricado de terceros, +5% de rechazos, pintura aparte, sin horas ni PH |
+| 81 | Lista 30 de Taval y cotizaciones de TAVAL/72 y /78 fuera del catálogo; historial con otra pieza (niple 2" en un código de 1/2") | Lista 30 × 0,52 en el catálogo (720 precios, `precios/taval_lista30.csv`); Complemet 275397 y MS 48.729 / 49.323 renglón por renglón; al volver al historial se exige el mismo Ø, serie y schedule |

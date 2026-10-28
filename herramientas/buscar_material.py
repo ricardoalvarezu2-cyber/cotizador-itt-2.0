@@ -27,6 +27,7 @@ from indice_proyectos import norm  # noqa: E402
 
 NOMBRE_A_COD = {v[0]: k for k, v in FAMILIAS.items()}
 CON_TIPO = ("VAL", "AFO", "ABW", "BRI", "JUN", "INS")
+CRITICOS = {"diametro", "diametro2", "serie", "schedule", "medida", "espesor_mm"}
 
 
 _FILAS = None
@@ -79,8 +80,11 @@ def buscar(texto, familia=None, marca_pedida=""):
         oblig = [c for c in campos if c not in opcionales]
         igual = not difs and all(at.get(c) for c in oblig)
         misma_marca = bool(marca) and norm(r.get("marca", "")) == norm(marca)
-        res.append((igual, misma_marca, -len(difs), bool(r["ultimo_precio_usd"]), coinc, r["fecha_ultimo_precio"], difs, r))
-    res.sort(key=lambda x: x[:6], reverse=True)  # a igual parecido, primero el que tiene precio confiable
+        # la marca no le gana al tamaño: una Taval #300 no va antes que una #900 de otra marca (CTRL-TS01)
+        crit = sum(1 for d in difs if d.split(":")[0] in CRITICOS and "(no pedido)" not in d)
+        res.append((igual, -crit, misma_marca, -len(difs), bool(r["ultimo_precio_usd"]), coinc, r["fecha_ultimo_precio"], difs, r))
+    res.sort(key=lambda x: x[:7], reverse=True)  # a igual parecido, primero el que tiene precio confiable
+    res = [(x[0], x[2], *x[3:]) for x in res]
     return fam, at, marca, faltan, res
 
 
@@ -90,8 +94,11 @@ def main():
     ap.add_argument("--familia", choices=list(FAMILIAS))
     ap.add_argument("--top", type=int, default=8)
     ap.add_argument("--marca", default="", help="marca pedida (válvulas e instrumentos): sale primero, el resto como 'otra marca'")
+    ap.add_argument("--excluir", action="append", default=[], help="no mostrar precios cuyo origen contenga este texto (repetible)")
     q = ap.parse_args()
     fam, at, marca, faltan, res = buscar(q.texto, q.familia, q.marca)
+    if q.excluir:  # casos de control: el propio proyecto no puede ser su referencia
+        res = [x for x in res if not any(e.lower() in (x[7]["ruta_origen"] + " " + x[7]["archivo_origen"] + " " + x[7]["ruta_repo"]).lower() for e in q.excluir)]
     print(f"Familia: {FAMILIAS[fam][0]} · características leídas: " + ", ".join(f"{k}={v}" for k, v in at.items() if k != "marca")
           + (f" · marca pedida: {marca}" if marca else ""))
     if faltan:

@@ -97,7 +97,7 @@ def main():
     ap.add_argument("--union", choices=["roscado", "bridado"])
     ap.add_argument("--cliente")
     ap.add_argument("--top", type=int, default=8)
-    ap.add_argument("--excluir", default="", help="texto del id a excluir (ej. la propia cotización)")
+    ap.add_argument("--excluir", action="append", default=[], help="texto del id a excluir (ej. la propia cotización); repetible")
     ap.add_argument("--hoy", default=date.today().isoformat())
     ap.add_argument("--familias", action="store_true", help="listar familias")
     q = ap.parse_args()
@@ -115,7 +115,7 @@ def main():
     hoy = date.fromisoformat(q.hoy)
     res = []
     for p in filas:
-        if q.excluir and q.excluir.lower() in p["id"].lower():
+        if any(x.lower() in (p["id"] + " " + p.get("origen", "") + " " + p.get("ruta", "")).lower() for x in q.excluir):
             continue
         r = puntuar(p, q, idf, hoy)
         if r:

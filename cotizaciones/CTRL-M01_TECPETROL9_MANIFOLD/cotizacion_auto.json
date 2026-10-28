@@ -147,13 +147,12 @@
    "especificacion": "Plano: 4\" · 600 x 80 · ASTM A-105 · RF/BW",
    "fuentes": [
     {
-     "tipo": "cot",
-     "precio": 104.04,
-     "proveedor": "PROVEMET · BRI-01304",
-     "origen": "fuentes_originales/cotizacion_elementos_equipos_2026-03.xlsx · rubro BRIDAS · cotización 242356",
-     "fecha": "2025-08-27",
-     "coincide": "similar",
-     "diferencia": "el último precio (55.77) se aparta más de 40% de la mediana de sus últimos precios: se usa la mediana 104.04"
+     "tipo": "ant",
+     "precio": 120.0,
+     "proveedor": "Lista Renar · BRI-01305",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt",
+     "fecha": "2026-02-19",
+     "coincide": "igual"
     }
    ]
   },
@@ -199,10 +198,10 @@
    "id": "M03B",
    "pos": "3b",
    "grupo": "material",
-   "descripcion": "Completar barra de 6 m de la pos 3 (compra mínima; sobrante, no va en el equipo)",
-   "cantidad": 0.071,
+   "descripcion": "Completar barra de 12 m de la pos 3 (compra mínima; sobrante, no va en el equipo)",
+   "cantidad": 0.286,
    "unidad": "m",
-   "especificacion": "19 barra(s) de 6 m para 112 m en 28 equipo(s); por equipo 0.071 m",
+   "especificacion": "10 barra(s) de 12 m para 112 m en 28 equipo(s); por equipo 0.286 m",
    "fuentes": [
     {
      "tipo": "ant",
@@ -237,10 +236,10 @@
    "id": "M04B",
    "pos": "4b",
    "grupo": "material",
-   "descripcion": "Completar barra de 6 m de la pos 4 (compra mínima; sobrante, no va en el equipo)",
+   "descripcion": "Completar barra de 12 m de la pos 4 (compra mínima; sobrante, no va en el equipo)",
    "cantidad": 0.143,
    "unidad": "m",
-   "especificacion": "10 barra(s) de 6 m para 56 m en 28 equipo(s); por equipo 0.143 m",
+   "especificacion": "5 barra(s) de 12 m para 56 m en 28 equipo(s); por equipo 0.143 m",
    "fuentes": [
     {
      "tipo": "lista",
@@ -283,12 +282,12 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 10.0,
-     "proveedor": "Bules o Versailles · JUN-03364",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt",
-     "fecha": "2026-02-19",
+     "precio": 8.0,
+     "proveedor": "REPUESTOS · JUN-04190",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx",
+     "fecha": "2026-06-26",
      "coincide": "similar",
-     "diferencia": "material: A194 2H (no pedido); medida: 7/8 x 23 (pedido 7/8 x 10)"
+     "diferencia": "medida: 7/8 x 5 3/4 (pedido 7/8 x 3 7/8)"
     }
    ]
   },
@@ -304,11 +303,11 @@
     {
      "tipo": "ant",
      "precio": 8.0,
-     "proveedor": "REPUESTOS · JUN-02827",
+     "proveedor": "REPUESTOS · JUN-04190",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx",
      "fecha": "2026-06-26",
      "coincide": "similar",
-     "diferencia": "diametro: sin dato (pedido 0.875\")"
+     "diferencia": "medida: 7/8 x 5 3/4 (pedido 7/8 x 5 1/2)"
     }
    ]
   },
@@ -361,12 +360,12 @@
    "fuentes": [
     {
      "tipo": "est",
-     "precio": 15.5902,
+     "precio": 8.4862,
      "proveedor": "no dice · AFO-02394",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\3-YPF Separador Bifasicos - Separadores para satelites · 5.Proveedores 3ros/YPF - Sep Bifasico - 2591 - 21.2 - precios compras V1.xlsx.txt",
      "fecha": "2025-03-27",
      "coincide": "similar",
-     "diferencia": "diametro: 0.75\" (pedido 0.5\"); material: sin dato (pedido A105); extremos: sin dato (pedido SW/BW)"
+     "diferencia": "diametro: 0.75\" (pedido 0.5\"); material: sin dato (pedido A105); extremos: sin dato (pedido SW/BW); precio escalado por diámetro (0.5\" ÷ 0.75\")^1,5 = × 0.54"
     }
    ]
   },
@@ -460,13 +459,13 @@
    "taval": true,
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 42.042,
-     "proveedor": "Taval · VAL-03530",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\PAMPA ENERGIA\\7- Licitacion contrato Marco Skid PAD Rincon de Aranda · 4.Armado de la Oferta Comercial/Cot Skid Manifolds Colectores RDA Contrato Marco (2da RDA).xlsx.",
-     "fecha": "2026-08-14",
+     "tipo": "lista",
+     "precio": 36.06,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04869",
+     "origen": "taval_lista30_2025-09.xlsx · código , hoja PT Flot-NPT FORJADAS",
+     "fecha": "2025-09-01",
      "coincide": "similar",
-     "diferencia": "diametro: 0.75\" (pedido 0.5\"); paso: reducido (no pedido)"
+     "diferencia": "paso: total (no pedido)"
     }
    ]
   },
@@ -481,13 +480,12 @@
    "taval": true,
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 1256.008,
-     "proveedor": "Válvulas TAVAL (cotización -35% -20% sobre lista) · VAL-03191",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt",
-     "fecha": "2026-02-19",
-     "coincide": "similar",
-     "diferencia": "material: sin dato (pedido A216 WCB); paso: reducido (pedido total); esférica de paso reducido: se estima la de paso total × 1,30"
+     "tipo": "lista",
+     "precio": 1050.0,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-03559",
+     "origen": "taval_lista30_2025-09.xlsx · código BG61004R0104NP, hoja PT Guiada",
+     "fecha": "2025-09-01",
+     "coincide": "igual"
     }
    ]
   },
@@ -525,7 +523,7 @@
      "precio": 16.0,
      "proveedor": "Mano de obra soldadura piping (criterio de las planillas de costo 2026): Precio por pulgada que usan las planillas de ITT de 2025-2026 (16 a 16,5; 19 en #900 en Sacde 12). Controles CTRL-M01/P01/T01, ",
      "origen": "planillas 2026 (TAVAL/43 puentes YPF 19-02-2026; TAVAL/40 Inarteco; Sacde 12 a 15; Tecpetrol 9: 16,5)",
-     "fecha": "2026-02-31",
+     "fecha": "2026-02-28",
      "coincide": "igual"
     }
    ]
@@ -535,16 +533,16 @@
    "pos": "PIN",
    "grupo": "servicio",
    "descripcion": "Granallado y pintura (m² calculados)",
-   "especificacion": "21.08 m² exteriores: caños y niples × 3 por bridas, accesorios y válvulas 8.6 + estructura 12.5",
-   "cantidad": 21.08,
+   "especificacion": "23.46 m² exteriores: caños y niples 2.9 + bridas, accesorios y válvulas (largo equivalente) 8.1 + estructura 12.5",
+   "cantidad": 23.464,
    "unidad": "m2",
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 50.0,
-     "proveedor": "criterio ITT · PIN-00569",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN\\4.Armado de la Oferta Comercial",
-     "fecha": "2026-10-10",
+     "precio": 7.5121,
+     "proveedor": "ITT (costo propio de planta) · PIN-00134",
+     "origen": "fuentes_originales/costo_mo_planta_2024-10.xlsx",
+     "fecha": "2024-10-31",
      "coincide": "similar",
      "diferencia": "m² calculados (caños, accesorios por regla, envolvente y estructura); esquema de pintura a confirmar con el pliego"
     }
@@ -561,10 +559,10 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 3.0,
-     "proveedor": "Fabricación de estructura de skid por kg (tercero Ledesma): Dato al margen de la MO de Ledesma; en Tecpetrol 9 (01-2026) el bastidor UPN 140 se costeó a 4 USD/kg",
-     "origen": "YPF/28 Lic 69343 planilla PC0, hoja 1000623708 (850 kg × 3 = 2.550)",
-     "fecha": "2026-10-15",
+     "precio": 1.9,
+     "proveedor": "Mano de obra estructura (tercero Ledesma): Más IVA",
+     "origen": "costo_mo_planta_2024-10",
+     "fecha": "2024-09-30",
      "coincide": "similar",
      "diferencia": "kg de la tabla del plano; tarifa de un trabajo de estructura de skid"
     }
@@ -581,10 +579,10 @@
    "fuentes": [
     {
      "tipo": "cot",
-     "precio": 2825.71,
-     "proveedor": "Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))",
-     "origen": "PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT)",
-     "fecha": "2026-08-14",
+     "precio": 4612.5,
+     "proveedor": "Servicio de radiografía (Antonelli) (2025-11; antonelli_end_2025-11)",
+     "origen": "antonelli_end_2025-11",
+     "fecha": "2025-11-30",
      "coincide": "igual"
     },
     {
@@ -602,8 +600,8 @@
    "pos": "HH",
    "grupo": "mo",
    "descripcion": "Horas de ingeniería (estimadas del antecedente)",
-   "especificacion": "6.38 h por manifold · mediana de 1.1, 6.4, 8.8 h por unidad (repartidas en la serie y por tamaño)",
-   "cantidad": 6.38,
+   "especificacion": "6.29 h por manifold · mediana de 1.0, 7.1, 6.3 h por unidad (repartidas en la serie)",
+   "cantidad": 6.29,
    "unidad": "h",
    "fuentes": [
     {
@@ -622,8 +620,8 @@
    "pos": "CAL",
    "grupo": "mo",
    "descripcion": "Horas de calidad y dossier (estimadas del antecedente)",
-   "especificacion": "2.87 h por manifold · mediana de 2.8, 2.9, 8.8 h por unidad (repartidas en la serie y por tamaño)",
-   "cantidad": 2.87,
+   "especificacion": "2.5 h por manifold · mediana de 2.5, 3.2, 2.2 h por unidad (repartidas en la serie)",
+   "cantidad": 2.5,
    "unidad": "h",
    "fuentes": [
     {
@@ -642,8 +640,8 @@
    "pos": "ARM",
    "grupo": "mo",
    "descripcion": "Horas de montaje en planta (armado, movimientos, prueba hidráulica) (estimadas del antecedente)",
-   "especificacion": "184.6 h por manifold · mediana de 135 h × 1.105, 535.5 h × 0.893, 126 h × 1.465 (horas por unidad × tamaño)",
-   "cantidad": 184.6,
+   "especificacion": "149.2 h por manifold · mediana de 135 h × 1.105, 535.5 h × 0.893, 30 h × 1.994 (horas por unidad × tamaño)",
+   "cantidad": 149.2,
    "unidad": "h",
    "fuentes": [
     {

@@ -21,6 +21,7 @@ La IA o una persona solo revisa lo que el informe marca: similares, sin precio, 
 Para usarla: revisar precotizacion.md y copiar cotizacion_auto.json a cotizacion.json (o pasar los ítems a mano).
 """
 import argparse
+import calendar
 import csv
 import json
 import math
@@ -39,9 +40,9 @@ RAIZ = Path(__file__).resolve().parent.parent
 TEC = RAIZ / "conocimiento" / "tecnico"
 TIPO = {"lista": "lista", "compra": "stock", "stock (precio maestro)": "stock", "cotización": "cot", "planilla interna": "ant",
         "estimado (cepo)": "est"}
-SERIES = {"150", "300", "600", "900", "1500", "2500", "2000", "3000", "6000", "9000"}
+SERIES = {"150", "300", "600", "800", "900", "1500", "2500", "2000", "3000", "6000", "9000"}
 SCHEDULES = {"5", "10", "20", "30", "40", "60", "80", "100", "120", "140", "160", "STD", "XS", "XXS"}
-OLETS = r"cupla|sockolet|threadolet|weldolet|elbowlet|latrolet|\bolet"
+OLETS = r"cupla|sockolet|threadolet|thredolet|weldolet|elbowlet|latrolet|nipolet|\bolet"
 
 
 def leer(p):
@@ -56,15 +57,17 @@ def dn_de(txt):
         return None
 
 
+def partes_sch(v):
+    """Partes de una columna serie/schedule: "#300 x sch 80", "STD x XS", "XS", "300/40" (no parte "XS" en la X; CTRL-SK01)."""
+    return [p.strip("#").replace("SCH", "") for p in re.split(r"\s+X\s+|[/ ]|(?<=\d)X(?=\d)", str(v).upper()) if p.strip("#")]
+
+
 def sch_de(v):
-    for p in re.split(r"[xX/ ]", str(v).upper()):
-        if p in SCHEDULES:
-            return p
-    return ""
+    return next((p for p in partes_sch(v) if p in SCHEDULES), "")
 
 
 def serie_de(v):
-    return next((p for p in re.split(r"[x/ ]", str(v)) if p in SERIES), "")
+    return next((p for p in partes_sch(v) if p in SERIES), "")
 
 
 def largo_m(desc):
@@ -87,6 +90,7 @@ def texto_busqueda(r):
 
 
 AJUSTE_DIRECTAS = 0.75
+FECHA_REF = ""  # parametros.fecha_referencia de la cotización: no se usan tarifas posteriores (casos de control)
 EXCLUIR = []  # textos de la ruta de origen a no usar (casos de control: el propio proyecto no puede ser su referencia)
 
 
@@ -120,7 +124,9 @@ def sin_excluidos(res):
         if not excluido(c):
             out.append(x)
             continue
-        otros = sorted((h for h in HISTORIAL.get(c["codigo"], []) if not excluido(h) and h["precio_usd"]), key=lambda h: h["fecha"])
+        # la fila del historial tiene que ser la misma pieza (CTRL-SK01: NIP-01780, niple 1/2", tenía un niple 2" en el historial)
+        misma = lambda h: all(json.loads(h["atributos"] or "{}").get(k, c.get(k, "")) == c.get(k, "") for k in ("diametro", "serie", "schedule") if c.get(k))
+        otros = sorted((h for h in HISTORIAL.get(c["codigo"], []) if not excluido(h) and h["precio_usd"] and misma(h)), key=lambda h: h["fecha"])
         if otros:
             h = otros[-1]
             c2 = {**c, "ultimo_precio_usd": h["precio_usd"], "fecha_ultimo_precio": h["fecha"], "tipo_precio": h["tipo_precio"], "proveedor": h["proveedor"],
@@ -165,21 +171,83 @@ def kg_de(r):
     return None, ""
 
 
-BARRA_M = 6.0  # largo de compra mínima de caño (barra); ver caso de control CTRL-F01
-
-
-def rechazo(x, r):
-    """Motivo por el que un similar no sirve como precio, o None. Diámetro hasta 1,6 veces contra alguno de los del plano
-    (12"x3/4" → 12 o 3/4); serie hasta 2,6 veces (#3000 roscada no se cotiza con #300 bridada, CTRL-P01)."""
+def rechazo(x, r, fam=""):
+    """Motivo por el que un similar no sirve como precio, o None.
+    - Diámetro: hasta 1,6 veces contra alguno de los del plano (12"x3/4" → 12 o 3/4); desde 8", hasta 1,25 veces (el costo
+      crece con Ø²; CTRL-SK01: brida 16" con una de 10"). Un candidato SIN diámetro no sirve si el plano lo da (CTRL-SK01:
+      retención 12" con una wafer 3" no leída).
+    - Serie: en válvulas tiene que ser la misma (CTRL-TS01: Taval #900 con #300); en el resto, hasta 2,1 veces (#300 con
+      #600 sí; #900 con #300 o #3000 con #300 no; CTRL-P01).
+    - Válvulas: extremos roscados contra bridados, o acero al carbono contra inoxidable, no son similares (CTRL-SK01, P02)."""
     difs = x[6]
-    md = next((re.match(r'diametro: ([\d.]+)"', d) for d in difs if re.match(r'diametro: [\d.]+"', d)), None)
     pedidos = [dn_de(v) for v in re.split(r"\s*x\s*", str(r["diametro"]).lower()) if dn_de(v)]
-    if md and pedidos and min(max(float(md.group(1)), d) / max(min(float(md.group(1)), d), 1e-9) for d in pedidos) > 1.6:
-        return f"de otro diámetro ({md.group(1)}\")"
+    if pedidos and any(re.match(r"diametro: sin dato", d) for d in difs) and fam in ("VAL", "BRI", "ABW", "AFO", "CAN", "NIP"):
+        return "sin diámetro conocido"
+    md = next((re.match(r'diametro: ([\d.]+)"', d) for d in difs if re.match(r'diametro: [\d.]+"', d)), None)
+    if md and pedidos:
+        dc = float(md.group(1))
+        rel = min(max(dc, d) / max(min(dc, d), 1e-9) for d in pedidos)
+        if rel > 1.6 or (max(dc, *pedidos) >= 8 and rel > 1.25):
+            return f"de otro diámetro ({md.group(1)}\")"
     ms = next((re.match(r"serie: (\d+) \(pedido (\d+)\)", d) for d in difs if re.match(r"serie: \d+ \(pedido \d+\)", d)), None)
-    if ms and max(int(ms.group(1)), int(ms.group(2))) / max(min(int(ms.group(1)), int(ms.group(2))), 1) > 2.6:
-        return f"de otra serie ({ms.group(1)} contra {ms.group(2)})"
+    if ms:
+        a, b = int(ms.group(1)), int(ms.group(2))
+        if fam == "VAL" or max(a, b) / max(min(a, b), 1) > 2.1:
+            return f"de otra serie ({a} contra {b})"
+    if fam == "VAL":
+        me = next((re.match(r"extremos: (.*) \(pedido (.*)\)", d) for d in difs if re.match(r"extremos: .* \(pedido .*\)", d)), None)
+        rosca = lambda e: bool(re.search(r"npt|bsp|sw|rosc", e.lower()))
+        if me and rosca(me.group(1)) != rosca(me.group(2)):
+            return f"de otros extremos ({me.group(1)} contra {me.group(2)})"
+        mm = next((re.match(r"material: (.*) \(pedido (.*)\)", d) for d in difs if re.match(r"material: .* \(pedido .*\)", d)), None)
+        inox = lambda m: bool(re.search(r"inox|aisi|316|304|cf8|galv", m.lower()))
+        if mm and inox(mm.group(1)) != inox(mm.group(2)):
+            return f"de otro material ({mm.group(1)} contra {mm.group(2)})"
     return None
+
+
+def ajuste_similar(x, r, fam):
+    """(factor, nota) para llevar el precio de un similar al tamaño pedido: por diámetro (Ø pedido ÷ Ø similar)^1,5 y,
+    en caños, accesorios y bridas, por espesor de pared (schedule pedido ÷ schedule del similar; CTRL-SK01: tee 12" XS con
+    una STD, CTRL-TS01: tee sch 160 con una sch 80). Antes se usaban sin escalar."""
+    from catalogo_materiales import ESPESORES
+    f, notas = 1.0, []
+    pedidos = [dn_de(v) for v in re.split(r"\s*x\s*", str(r["diametro"]).lower()) if dn_de(v)]
+    md = next((re.match(r'diametro: ([\d.]+)"', d) for d in x[6] if re.match(r'diametro: [\d.]+" \(pedido', d)), None)
+    if md and pedidos and fam not in ("JUN", "INS"):
+        # olets: la pieza es la salida (12"x3/4" → 3/4"); el resto, el diámetro principal
+        dc, dp = float(md.group(1)), (min(pedidos) if re.search(OLETS, norm(r["descripcion"])) else pedidos[0])
+        k = (dp / dc) ** 1.5
+        f *= k
+        notas.append(f"precio escalado por diámetro ({dp:g}\" ÷ {dc:g}\")^1,5 = × {k:.2f}")
+    ms = next((re.match(r"schedule: (\w+) \(pedido (\w+)\)", d) for d in x[6] if re.match(r"schedule: \w+ \(pedido \w+\)", d)), None)
+    if ms and pedidos and fam in ("ABW", "CAN", "NIP"):  # en bridas el schedule es solo el bisel del cuello: no cambia el precio
+        tabla = ESPESORES.get(pedidos[0], {})
+        alias = lambda s: s if s in tabla else {"STD": "40", "XS": "80", "40": "STD", "80": "XS"}.get(s, s)
+        ec, ep = tabla.get(alias(ms.group(1).upper())), tabla.get(alias(ms.group(2).upper()))
+        if ec and ep and abs(ep / ec - 1) > 0.05:
+            f *= ep / ec
+            notas.append(f"escalado por espesor (sch {ms.group(2)} {ep:g} mm ÷ sch {ms.group(1)} {ec:g} mm = × {ep / ec:.2f})")
+    return f, "; ".join(notas)
+
+
+BARRA_CHICA, BARRA_GRANDE = 6.0, 12.0  # caños de menos de 3" en barras de 6 m; de 3" en adelante, de 12 m (Renard 10,5–12,5 m)
+
+
+def barra_m(diametro):
+    d = dn_de(diametro) or 0
+    return BARRA_GRANDE if d >= 3 else BARRA_CHICA
+
+
+def provee_cliente(r):
+    """Material que provee el cliente: columna `provee` = cliente, o el texto lo dice (CTRL-CA01, prefabricado de Sacde)."""
+    if norm(r.get("provee", "")).startswith("cliente"):
+        return True
+    t = norm(f"{r.get('modelo_fabricante', '')} {r['descripcion']}")
+    return bool(re.search(r"provist[oa]s? por (?:el )?cliente|suministr\w* (?:por|del) (?:el )?cliente|material(?:es)? del cliente|\bsum\.? por (?:el )?cliente", t))
+
+
+VIEJOS, ELEGIDO = {}, {}  # pos → nota de precio viejo reemplazado; id → descripción del catálogo elegida
 
 
 def material(r, n):
@@ -197,12 +265,28 @@ def material(r, n):
     orden = [x for x in real if x[0]] + [x for x in real if not x[0]] + [x for x in est if x[0]] + [x for x in est if not x[0]]
     # se descartan los similares de otro diámetro o de otra clase de serie y se prueba el siguiente (CTRL-M01: una
     # esférica 4" PR sirve de referencia para una 4" PT; una 2" PT no)
-    validos = [x for x in orden if x[0] or not rechazo(x, r)]
+    validos = [x for x in orden if x[0] or not rechazo(x, r, fam)]
     rechazado = orden[0] if orden and not validos else None
     elegido = validos[0] if validos else None
+    # un precio de stock o compra viejo (más de 18 meses antes de la fecha de referencia) no le gana a una cotización
+    # reciente que solo difiere en la cara o los extremos (CTRL-TS01: bridas #900 del stock 2022–2024 contra Provemet 2025)
+    if elegido and elegido[7]["tipo_precio"] in ("compra", "stock (precio maestro)"):
+        ref = FECHA_REF or date.today().isoformat()
+        limite = f"{int(ref[:4]) - 1}-{int(ref[5:7]) - 6:02d}" if int(ref[5:7]) > 6 else f"{int(ref[:4]) - 2}-{int(ref[5:7]) + 6:02d}"
+        if elegido[7]["fecha_ultimo_precio"][:7] < limite:
+            nuevo = next((x for x in validos if x[7]["fecha_ultimo_precio"][:7] >= limite and x[7]["tipo_precio"] not in ("compra", "stock (precio maestro)", "estimado (cepo)")
+                          and all(d.split(":")[0] in ("cara", "extremos", "norma", "marca") for d in x[6])), None)
+            if nuevo:
+                VIEJOS[r["pos"]] = f"se prefirió un precio reciente a {elegido[7]['tipo_precio']} del {elegido[7]['fecha_ultimo_precio']} ({elegido[7]['codigo']}, USD {float(elegido[7]['ultimo_precio_usd']):,.2f})"
+                elegido = nuevo
     item = {"id": f"M{n:02d}", "pos": r["pos"], "grupo": "material",
             "descripcion": f"{r['descripcion'][:60]} {r['diametro']}".strip(), "cantidad": cant, "unidad": unidad,
             "especificacion": f"Plano: {r['diametro']} · {r['serie_sch']} · {r['material']} · {r['extremos']}" + (f" · {r['modelo_fabricante']}" if r.get("modelo_fabricante") else "")}
+    if provee_cliente(r):
+        item["provee"] = "cliente"
+        item["fuentes"] = [{"tipo": "cot", "precio": 0, "proveedor": "PROVISTO POR EL CLIENTE (no se cotiza)", "origen": "tabla del plano / pliego",
+                            "fecha": FECHA_REF or date.today().isoformat(), "coincide": "igual"}]
+        return item, f"| {r['pos']} | {item['descripcion'][:45]} | PROVISTO POR EL CLIENTE | 0 | — | cuenta para soldadura, pintura y PH; no se compra |"
     # válvula Taval (empresa del grupo): va con el factor de válvulas Taval de la cotización (parametros.FTV, por defecto 1)
     if fam == "VAL" and "taval" in norm(r.get("modelo_fabricante", "")):
         item["taval"] = True  # el plano pide Taval; si no, se marca solo cuando el precio elegido es de Taval (al final)
@@ -233,8 +317,8 @@ def material(r, n):
         c = rechazado[7]
         item["fuentes"] = [{"tipo": "est", "precio": 0, "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización", "origen": "—",
                             "fecha": date.today().isoformat(), "coincide": "sin_ref",
-                            "diferencia": f"El más parecido es {rechazo(rechazado, r)} ({c['codigo']} {c['descripcion'][:50]}, USD {float(c['ultimo_precio_usd']):,.2f}): no sirve como precio"}]
-        return item, f"| {r['pos']} | {item['descripcion'][:45]} | **SIN PRECIO** | — | — | el más parecido es {rechazo(rechazado, r)} ({c['codigo']}, USD {float(c['ultimo_precio_usd']):,.2f}): pedir cotización |"
+                            "diferencia": f"El más parecido es {rechazo(rechazado, r, fam)} ({c['codigo']} {c['descripcion'][:50]}, USD {float(c['ultimo_precio_usd']):,.2f}): no sirve como precio"}]
+        return item, f"| {r['pos']} | {item['descripcion'][:45]} | **SIN PRECIO** | — | — | el más parecido es {rechazo(rechazado, r, fam)} ({c['codigo']}, USD {float(c['ultimo_precio_usd']):,.2f}): pedir cotización |"
     if not elegido:
         item["fuentes"] = [{"tipo": "est", "precio": 0, "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización", "origen": "—",
                             "fecha": date.today().isoformat(), "coincide": "sin_ref", "diferencia": "No hay pieza de esa familia y tipo con precio"}]
@@ -250,6 +334,11 @@ def material(r, n):
         if abs(precio / med - 1) > 0.40:
             nota_u = f"el último precio ({precio:,.2f}) se aparta más de 40% de la mediana de sus últimos precios: se usa la mediana {med:,.2f}"
             precio = med
+    if not igual:
+        k, nota_k = ajuste_similar(elegido, r, fam)
+        if k != 1:
+            precio *= k
+            nota_u = "; ".join(x for x in [nota_u, nota_k] if x)
     if any(re.match(r"paso: reducido \(pedido total\)", d) for d in difs):
         precio *= 1.30
         nota_u = "; ".join(x for x in [nota_u, "esférica de paso reducido: se estima la de paso total × 1,30"] if x)
@@ -259,7 +348,10 @@ def material(r, n):
         precio, nota_u = precio / float(m.group(1)), f"precio de tira de {m.group(1)} m pasado a metro"
     elif uc and up and uc != up:
         nota_u = "; ".join(x for x in [nota_u, f"unidad distinta: catálogo por {uc}, plano por {up}"] if x)
-    coincide = "igual" if igual and "unidad distinta" not in nota_u and "mediana" not in nota_u else "similar"
+    if r["pos"] in VIEJOS:
+        nota_u = "; ".join(x for x in [nota_u, VIEJOS[r["pos"]]] if x)
+    coincide = "igual" if igual and "unidad distinta" not in nota_u and "mediana" not in nota_u and r["pos"] not in VIEJOS else "similar"
+    ELEGIDO[item["id"]] = c["descripcion"]
     dif = "; ".join(difs + ([nota_u] if nota_u else []))
     tipo = TIPO.get(c["tipo_precio"], "ant")
     item["fuentes"] = [{"tipo": tipo, "precio": round(precio, 4), "proveedor": f"{c['proveedor'][:70]} · {c['codigo']}",
@@ -300,7 +392,6 @@ def factor_espesor(dn, sch, tabla, esp=None):
 
 
 PERFILES = None
-FACTOR_ACCESORIOS = 3.0  # m² del piping completo (bridas, accesorios, válvulas) ≈ 3 × m² de caños y niples (CTRL-M01/P01/C01: 1,0 a 6,2)
 M2_POR_KG_ESTRUCTURA = 0.030  # 30 m²/t: perfiles livianos (UPN 140 = 32,5 m²/t) y chapas de apoyo
 INTERNOS = r"bafle|deflector|separador de niebla|interno|elemento filtrante|placa apoyo|viruta|refuerzo"
 
@@ -314,12 +405,23 @@ def perfil(r):
     return PERFILES.get(f"{m.group(1)}{m.group(2)}") if m else None
 
 
+# m² de pintura de cada pieza = largo equivalente de caño de su diámetro, en diámetros (D): brida 1,5 D, codo 90 2,4 D,
+# codo 45 1,2 D, tee 3 D, reducción 1,5 D, válvula 6 D, casquete 1 D. Reemplaza el × 3 fijo sobre los caños, que se
+# quedaba corto con válvulas grandes (CTRL-SK01: 13,8 m² contra ~31) y triplicaba el caño recto (CTRL-CA01: 4.939 contra 1.688)
+LARGO_EQ_D = [(r"valvula|\bvalv\b", 6.0), (r"\btee\b|\bte\b", 3.0), (r"codo 45|curva 45", 1.2), (r"\bcodo|\bcurva", 2.4),
+              (r"reduc", 1.5), (r"brida", 1.5), (r"casquete|\bcap\b|tapa", 1.0)]
+
+
+def od_m(dn):
+    from catalogo_materiales import OD_NPS
+    od = next((o for o, n in OD_NPS.items() if abs(n - dn) < 1e-6), None)
+    return (od / 1000) if od else dn * 0.0254
+
+
 def superficie_pintura(filas, m2_canos):
-    """m² exteriores a pintar: caños y niples (tabla) × FACTOR_ACCESORIOS si hay bridas o accesorios; envolvente de
-    virolas (π·D·L) y casquetes (≈1,09·D²); estructura por kg o por metro de perfil. Antes solo se contaban los caños
-    (CTRL-T01, C01, P01, M01: −73% a −94%)."""
-    hay_acc = any(re.search(r"brida|tee|codo|reduc|valvula|cupla", norm(r["descripcion"])) for r in filas)
-    piping = m2_canos * (FACTOR_ACCESORIOS if hay_acc else 1)
+    """m² exteriores a pintar: caños y niples (tabla) + cada brida, accesorio y válvula por su largo equivalente (LARGO_EQ_D);
+    envolvente de virolas (π·D·L) y casquetes (≈1,09·D²); estructura por kg o por metro de perfil."""
+    piezas = 0.0
     env = est = 0.0
     for r in filas:
         d, q, u = norm(r["descripcion"]), float(r["cantidad"] or 0), norm(r["unidad"])
@@ -334,11 +436,17 @@ def superficie_pintura(filas, m2_canos):
             est += perfil(r)[1] * q
         elif u == "kg" and re.search(r"perfil|upn|ipn|heb|bastidor|estructura|pata|cuna|soporte|skid|chapa|cancamo|angulo|planchuela", d):
             est += q * M2_POR_KG_ESTRUCTURA
-    return [("caños y niples" + (f" × {FACTOR_ACCESORIOS:g} por bridas, accesorios y válvulas" if hay_acc else ""), piping),
-            ("envolvente", env), ("estructura", est)]
+        elif not u.startswith("m") and not re.search(r"\bcano\b|\bniple|\btubo\b|" + OLETS, d):
+            k = next((v for rx, v in LARGO_EQ_D if re.search(rx, d)), None)
+            dn = dn_de(r["diametro"])
+            if k and dn:
+                piezas += q * k * od_m(dn) * math.pi * od_m(dn)  # largo equivalente (k·D) × π·D
+    return [("caños y niples", m2_canos), ("bridas, accesorios y válvulas (largo equivalente)", piezas), ("envolvente", env), ("estructura", est)]
 
 
-def soldaduras(filas):
+def soldaduras(filas, diametral=False):
+    """Pulgadas equivalentes de soldadura. diametral=True (prefabricado de volumen): pulgada diametral con base sch 40 = 1;
+    el espesor solo ajusta por el cociente contra el sch 40 de ese diámetro (CTRL-CA01: así cotizan ITT y los terceros)."""
     tabla = leer(TEC / "factores_soldadura.csv")
     fac_acc = {norm(r["accesorio"]): float(r["factor"]) for r in leer(TEC / "factores_accesorios.csv")}
     bw_eq, juntas_olet, juntas_sw, detalle, placas = 0.0, 0.0, 0.0, [], [0.0, 0.0]
@@ -355,6 +463,19 @@ def soldaduras(filas):
     mult = 2 * AJUSTE_DIRECTAS if por_metro else 1
     if por_metro:
         detalle.append(f"pos {', '.join(r['pos'] for r in por_metro)}: caño por metro; sus juntas se cuentan en los extremos BW de accesorios y bridas (una junta cada uno)")
+    for r in por_metro:
+        # juntas de empalme entre barras: un caño recto largo lleva una junta cada barra (CTRL-CA01: 190 m de 12" daban 0)
+        dn, q = dn_de(r["diametro"]), float(r["cantidad"] or 0)
+        emp = max(0, math.ceil(q / barra_m(r["diametro"]) - 1e-9) - 1)
+        if emp and dn:
+            f, pch, pgr = factor_espesor(dn, sch_de(r["serie_sch"]), tabla, espesor_mm(r))
+            if diametral:
+                f = f / (factor_espesor(dn, "40", tabla)[0] or 1)
+            bw_eq += 2 * emp * dn * f
+            extremos_bw += 2 * emp
+            placas[0] += emp * pch
+            placas[1] += emp * pgr
+            detalle.append(f"pos {r['pos']}: {emp} junta(s) de empalme entre barras de {barra_m(r['diametro']):g} m ({q:g} m) × {dn:g}\" × {f:.4f}")
     for r in filas:
         if r in por_metro:
             continue
@@ -362,7 +483,7 @@ def soldaduras(filas):
         toks = [t.strip() for t in re.split(r"[/]", ext) if t.strip()]
         d = norm(r["descripcion"])
         if len(toks) == 1:
-            n_ext = 3 if re.search(r"\btee\b|\bte\b", d) else (1 if re.search(r"casquete|\bcap\b|brida|" + OLETS, d) else 2)
+            n_ext = 3 if re.search(r"\btee\b|\bte\b", d) else (1 if re.search(r"casquete|\bcap\b|brida|\btapa\b|cierre rapido|" + OLETS, d) else 2)
             toks = toks * n_ext
         n_bw, n_sw = toks.count("BW"), toks.count("SW")
         if not (n_bw or n_sw):
@@ -370,6 +491,8 @@ def soldaduras(filas):
         q = float(r["cantidad"] or 0)
         dn, sch = dn_de(r["diametro"]), sch_de(r["serie_sch"])
         f, pch, pgr = factor_espesor(dn, sch, tabla, espesor_mm(r))
+        if diametral:
+            f = f / (factor_espesor(dn, "40", tabla)[0] or 1)
         if re.search(OLETS, d):
             fa = 2.5 if "weldolet" in d else fac_acc.get("sockolets", 1.75)
             ds = [dn_de(x) for x in re.split(r"\s*x\s*", r["diametro"].lower()) if dn_de(x)]
@@ -416,10 +539,28 @@ def soldaduras(filas):
     return {"juntas_bw": juntas_bw, "pulg_eq": round(total, 3), "detalle": detalle, "avisos": avisos, "placas": placas, "juntas_sw_olet": n_sw_olet}
 
 
+def mes_mas(f, n):
+    a, m = int(f[:4]), int(f[5:7]) + n
+    return f"{a + (m - 1) // 12}-{(m - 1) % 12 + 1:02d}"
+
+
+def fin_de_mes(f):
+    """AAAA-MM → último día real del mes (antes se pegaba "-31" y salía "2026-02-31"; CTRL-P02)."""
+    if len(f) != 7:
+        return f
+    a, m = int(f[:4]), int(f[5:7])
+    return f"{f}-{calendar.monthrange(a, m)[1]:02d}"
+
+
 def tarifa(rubro, texto, tipos=("costo_propio",)):
-    """La tarifa vigente más reciente del rubro (tipos en orden de preferencia)."""
+    """La tarifa vigente más reciente del rubro (tipos en orden de preferencia), sin las del proyecto excluido (CTRL-P02,
+    SK01: la tarifa DB NDT y la de estructura salían del mismo proyecto que se controlaba) ni posteriores a la fecha de
+    referencia de la cotización (CTRL-CA01)."""
     filas = [r for r in leer(RAIZ / "conocimiento" / "costos" / "tarifas.csv")
-             if r["rubro"] == rubro and texto in norm(r["concepto"]) and r["tipo"] in tipos and r["vigente"] == "si"]
+             if r["rubro"] == rubro and texto in norm(r["concepto"]) and r["tipo"] in tipos and r["vigente"] == "si"
+             and not any(x.lower() in (r.get("fuente", "") + " " + r.get("nota", "")).lower() for x in EXCLUIR)]
+    previas = [r for r in filas if not FECHA_REF or r["fecha"][:7] <= mes_mas(FECHA_REF, 2)]  # hasta 2 meses después
+    filas = previas or filas  # si no hay ninguna anterior a la fecha de referencia, la más vieja disponible
     if not filas:
         return None, None
     r = max(filas, key=lambda r: (-tipos.index(r["tipo"]), r["fecha"]))
@@ -431,9 +572,39 @@ def servicio_catalogo(hoja, unidad, palabras):
     for r in leer(RAIZ / "conocimiento" / "precios" / "catalogo_servicios.csv"):
         if r["hoja"].startswith(hoja) and r["ultimo_precio_usd"] and "ESTIMADO" not in r["alerta"] and not excluido(r) and \
                 (unidad is None or r["unidad_tarifa"] == unidad) and all(p in norm(r["servicio"] + " " + r["descripcion"]) for p in palabras):
-            if mejor is None or r["fecha_ultimo_precio"] > mejor["fecha_ultimo_precio"]:
-                mejor = r
+            previo = lambda x: not FECHA_REF or x["fecha_ultimo_precio"][:10] <= FECHA_REF
+            if mejor is None or (previo(r), r["fecha_ultimo_precio"]) > (previo(mejor), mejor["fecha_ultimo_precio"]):
+                mejor = r  # la más reciente anterior a la fecha de referencia; si no hay, la más reciente
     return mejor
+
+
+TERCERO_TIPOS = {"trampa": r"trampa", "tanque": r"tanque", "filtro": r"filtro", "separador": r"separador"}
+
+
+def mo_tercero(tipo, d_eq, texto):
+    """Mano de obra de fabricación de un tercero con el mismo tipo de equipo (catálogo de servicios, global por unidad), o
+    None. Diámetro hasta 1,6 veces si el renglón lo dice; desempata el subtipo (receptora/lanzadora) y la fecha. CTRL-TS01:
+    la trampa la fabricaba Ledesma (FAB-00066, 10.800) y la app sumaba soldadura y montaje propios."""
+    import estimar_horas
+    rx = TERCERO_TIPOS.get(tipo)
+    if not rx:
+        return None
+    sub = estimar_horas.subtipo_de(texto)
+    mejor = None
+    for r in leer(RAIZ / "conocimiento" / "precios" / "catalogo_servicios.csv"):
+        txt = norm(r["servicio"] + " " + r["descripcion"] + " " + r["equipo_referencia"])
+        if not (r["hoja"].startswith("Fabric") and "tercero" in norm(r["servicio"]) and re.search(r"fabricacion (?:completa )?de(?:l)? " + rx, norm(r["servicio"]))
+                and r["unidad"] == "global" and r["ultimo_precio_usd"] and not excluido(r) and "montaje dimensional" not in norm(r["servicio"])):
+            continue
+        ds = [float(frac(x)) for x in re.findall(r"(\d+)(?:\"|in\b| ?pulg)", r["descripcion"] + " " + r["equipo_referencia"]) if frac(x)]
+        if ds and d_eq and max(max(ds), d_eq) / min(max(ds), d_eq) > 1.6:
+            continue
+        if not ds and not (sub and estimar_horas.subtipo_de(txt) == sub):
+            continue  # sin tamaño ni subtipo no se sabe si es el mismo alcance (CTRL-F01: filtro FM S600 para un FM2 S300)
+        clave = (bool(sub) and estimar_horas.subtipo_de(txt) == sub, r["fecha_ultimo_precio"])
+        if mejor is None or clave > mejor[0]:
+            mejor = (clave, r)
+    return mejor[1] if mejor else None
 
 
 def main(carpeta, comparar=False):
@@ -443,37 +614,93 @@ def main(carpeta, comparar=False):
         sys.exit(f"No está {carpeta}/pedido/lista_materiales_plano.csv")
     base_ruta = carpeta / "cotizacion.json" if (carpeta / "cotizacion.json").exists() else RAIZ / "cotizaciones" / "_plantilla" / "cotizacion.json"
     base = json.load(open(base_ruta, encoding="utf-8"))
-    hoy = base.get("parametros", {}).get("fecha_referencia", "")
+    global FECHA_REF
+    hoy = FECHA_REF = base.get("parametros", {}).get("fecha_referencia", "") or ""
     items, informe = [], [f"# Precotización automática — {base.get('codigo', carpeta.name)}", "",
                           "Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**", "",
                           "## 1. Materiales", "", "| Pos | Ítem | Resultado | Precio | Fecha y tipo | Diferencias / faltantes |", "|---|---|---|---|---|---|"]
     N = float(base.get("parametros", {}).get("N", 1) or 1)
+    par = base.get("parametros", {}) or {}
+    eq0 = base.get("equipo", {}) or {}
+    import estimar_horas
+    texto_eq = f"{eq0.get('singular', '')} {base.get('titulo', '')}"
+    tipo_eq = eq0.get("tipo") or estimar_horas.tipo_de(texto_eq)
+    # prefabricado de piping (spools por pulgada, MO vendida sola): pulgada diametral, tarifa de prefabricado de terceros,
+    # sin horas de ingeniería ni montaje y pintura aparte por m² (CTRL-CA01)
+    prefab = par.get("modo") == "prefabricado" or tipo_eq == "prefabricado"
+    pintura_aparte = bool(par.get("pintura_aparte", prefab))
+    canos_m = {}
     for n, r in enumerate(filas, 1):
         it, fila = material(r, n)
         items.append(it)
         informe.append(fila)
-        # el caño se compra por barra entera (6 m): lo que sobra va en una fila aparte de compra extra (como la 14b de la CAPEX)
-        s = it["fuentes"][0]
-        if it["unidad"] == "m" and s["precio"] and re.search(r"\bcano\b|\bcanos\b|\btubo\b", norm(it["descripcion"])) and 0 < it["cantidad"] * N < BARRA_M * math.ceil(it["cantidad"] * N / BARRA_M):
-            barras = math.ceil(it["cantidad"] * N / BARRA_M)
-            extra = round((barras * BARRA_M - it["cantidad"] * N) / N, 3)
-            items.append({**json.loads(json.dumps(it)), "id": it["id"] + "B", "pos": f"{it['pos']}b", "cantidad": extra,
-                          "descripcion": f"Completar barra de {BARRA_M:g} m de la pos {it['pos']} (compra mínima; sobrante, no va en el equipo)",
-                          "especificacion": f"{barras} barra(s) de {BARRA_M:g} m para {it['cantidad'] * N:g} m en {N:g} equipo(s); por equipo {extra:g} m"})
-            informe.append(f"| {it['pos']}b | Completar barra de {BARRA_M:g} m (compra mínima) | compra extra | USD {s['precio']:,.2f}/m × {extra:g} m | | "
-                           f"Se usan {it['cantidad'] * N:g} m en {N:g} equipo(s) y se compran {barras * BARRA_M:g} m. Borrar si hay sobrante en stock |")
+        if it["unidad"] == "m" and it["fuentes"][0]["precio"] and re.search(r"\bcano\b|\bcanos\b|\btubo\b", norm(it["descripcion"])):
+            canos_m.setdefault((dn_de(r["diametro"]), norm(r["serie_sch"]), norm(r["material"]), it["fuentes"][0]["proveedor"]), []).append((it, r))
+    # tuercas: si el espárrago elegido ya trae tuercas ("c/2 tuercas", "juego"), las tuercas del plano van en 0 (CTRL-P02)
+    con_tuercas = [i for i in items if re.search(r"esparrago|bulon", norm(i["descripcion"])) and re.search(r"c/ ?\d? ?tuercas?|con \d? ?tuercas?|\bjuego\b|\bjgo\b|\+ ?\d? ?tuercas?", norm(ELEGIDO.get(i["id"], "")))]
+    if con_tuercas:
+        for i in items:
+            if re.match(r"tuercas?\b", norm(i["descripcion"])) and i["fuentes"][0]["precio"]:
+                i["fuentes"] = [{"tipo": "cot", "precio": 0, "proveedor": "Incluidas en el precio del espárrago", "origen": "—", "fecha": FECHA_REF or date.today().isoformat(),
+                                 "coincide": "igual", "diferencia": f"el precio de la pos {', '.join(x['pos'] for x in con_tuercas)} ya trae las tuercas"}]
+                i["provee"] = "incluido"
+                informe.append(f"| {i['pos']} | {i['descripcion'][:45]} | INCLUIDAS EN EL ESPÁRRAGO | 0 | — | el precio elegido para los espárragos ({', '.join(x['pos'] for x in con_tuercas)}) trae tuercas: confirmar |")
+    # el caño se compra por barra entera: los tramos del mismo caño se juntan (CTRL-P02: 8 tramos de 3" compraban 8 barras)
+    # y lo que sobra va en una fila aparte de compra extra (como la 14b de la CAPEX). Barras de 12 m desde 3" (CTRL-TS01,
+    # SK01, CA01). Menos de 0,5 m en total sale de recortes del stock (CTRL-TS01: 5,9 m de 1½" sch 160 para usar 0,1 m).
+    for (d, _, _, _), grupo in canos_m.items():
+        it, r = grupo[-1]
+        B = barra_m(r["diametro"])
+        total = sum(g[0]["cantidad"] for g in grupo) * N
+        pos = ", ".join(g[0]["pos"] for g in grupo)
+        if total < 0.5:
+            informe.append(f"| {it['pos']}b | Caño de la pos {pos}: {total:g} m en total | sin compra extra | | | menos de 0,5 m: sale de recortes del stock (confirmar) |")
+            continue
+        barras = math.ceil(total / B - 1e-9)
+        extra = round((barras * B - total) / N, 3)
+        if extra <= 0:
+            continue
+        s0 = it["fuentes"][0]
+        items.insert(items.index(it) + 1, {**json.loads(json.dumps(it)), "id": it["id"] + "B", "pos": f"{it['pos']}b", "cantidad": extra,
+                                           "descripcion": f"Completar barra de {B:g} m de la pos {pos} (compra mínima; sobrante, no va en el equipo)",
+                                           "especificacion": f"{barras} barra(s) de {B:g} m para {total:g} m en {N:g} equipo(s); por equipo {extra:g} m"})
+        informe.append(f"| {it['pos']}b | Completar barra de {B:g} m (pos {pos}) | compra extra | USD {s0['precio']:,.2f}/m × {extra:g} m | | "
+                       f"Se usan {total:g} m en {N:g} equipo(s) y se compran {barras * B:g} m. Borrar si hay sobrante en stock |")
     # 2. soldaduras
-    s = soldaduras(filas)
+    s = soldaduras(filas, diametral=prefab)
     tar, fila_t = tarifa("soldadura", "soldadura piping", ("usado_en_cotizacion", "costo_propio"))
+    if prefab:
+        sp = servicio_catalogo("Soldadura", "USD/pulg-eq", ["tercero", "pulgada"])
+        if sp:
+            tar = float(sp["tarifa_unitaria_usd"] or sp["ultimo_precio_usd"])
+            fila_t = {"concepto": f"prefabricado por pulgada diametral (tercero) {sp['codigo']}", "nota": f"{sp['proveedor'][:60]}: {sp['descripcion'][:80]}",
+                      "fuente": sp["ruta_origen"][:200], "fecha": sp["fecha_ultimo_precio"]}
+        rech = float(par.get("rechazo_pct", 5) or 0)
+        if rech:
+            s["pulg_eq"] = round(s["pulg_eq"] * (1 + rech / 100), 3)
+            s["detalle"].append(f"+{rech:g}% por rechazos y reparaciones con RX 100% (parametros.rechazo_pct)")
     informe += ["", "## 2. Soldaduras (de la columna de extremos)", "",
                 f"**{s['juntas_bw']:g} juntas a tope de taller + juntas SW y olets = {s['pulg_eq']:.2f} pulgadas equivalentes**"
                 + (f" × USD {tar:.2f} ({fila_t['concepto']}, {fila_t['fecha']}) = USD {s['pulg_eq'] * tar:,.2f}" if tar else ""), ""]
     informe += [f"- {d}" for d in s["detalle"]] + [f"- ⚠ {a}" for a in s["avisos"]]
-    if s["pulg_eq"] and tar:
+    terc = None if prefab else mo_tercero(tipo_eq, eq0.get("diametro_pulg"), texto_eq)
+    if terc and s["pulg_eq"] and tar:
+        propia = round(s["pulg_eq"] * tar, 2)
+        informe.append(f"- **MO de fabricación de un tercero con el mismo tipo de equipo:** {terc['codigo']} {terc['proveedor'][:40]}, USD {float(terc['ultimo_precio_usd']):,.2f} "
+                       f"({terc['fecha_ultimo_precio']}; {terc['descripcion'][:90]}). Se propone en lugar de la soldadura propia (USD {propia:,.2f}, segunda fuente) "
+                       f"y sin el montaje propio del antecedente. No incluye: {terc['no_incluye'] or 's/d'}.")
+        items.append({"id": "S01", "pos": "MO", "grupo": "mo", "descripcion": "Fabricación (soldadura y armado) por tercero, mismo tipo de equipo",
+                      "especificacion": f"{terc['descripcion'][:200]} · alternativa propia: {s['pulg_eq']:.2f} pulg-eq × USD {tar:g}", "cantidad": 1, "unidad": "gl",
+                      "fuentes": [{"tipo": "cot", "precio": float(terc["ultimo_precio_usd"]), "proveedor": f"{terc['proveedor'][:60]} · {terc['codigo']}",
+                                   "origen": terc["ruta_origen"][:200], "fecha": terc["fecha_ultimo_precio"], "coincide": "similar",
+                                   "diferencia": f"trabajo del mismo tipo ({terc['equipo_referencia'][:60]}); confirmar alcance y tamaño con el tercero"},
+                                  {"tipo": "ant", "precio": propia, "proveedor": f"Soldadura propia {s['pulg_eq']:.2f} pulg-eq × {tar:g} ({fila_t['concepto']})"[:200],
+                                   "origen": fila_t["fuente"], "fecha": fin_de_mes(fila_t["fecha"]), "coincide": "similar", "diferencia": "alternativa propia"}]})
+    elif s["pulg_eq"] and tar:
         items.append({"id": "S01", "pos": "MO", "grupo": "mo", "descripcion": f"Soldaduras: {s['juntas_bw']:g} a tope + SW y olets (calculado)",
                       "especificacion": "; ".join(s["detalle"])[:400], "cantidad": s["pulg_eq"], "unidad": "pulg",
                       "fuentes": [{"tipo": "ant", "precio": tar, "proveedor": f"{fila_t['concepto']}: {fila_t['nota']}"[:200], "origen": fila_t["fuente"],
-                                   "fecha": fila_t["fecha"] if len(fila_t["fecha"]) > 7 else fila_t["fecha"] + "-31", "coincide": "igual" if not s["avisos"] else "similar",
+                                   "fecha": fin_de_mes(fila_t["fecha"]), "coincide": "igual" if not s["avisos"] else "similar",
                                    **({"diferencia": " · ".join(s["avisos"])} if s["avisos"] else {})}]})
     # 3. servicios calculados
     canos = leer(TEC / "canos_peso_superficie.csv")
@@ -492,7 +719,11 @@ def main(carpeta, comparar=False):
     m2p = superficie_pintura(filas, m2)
     m2t = sum(v for _, v in m2p)
     pin = servicio_catalogo("Pintura", "USD/m2", ["granallado", "pintura"])
-    if pin and m2t:
+    if pin and m2t and pintura_aparte:
+        t = float(pin["tarifa_unitaria_usd"])
+        informe.append(f"- **Pintura aparte (no va en el total):** {m2t:.2f} m² × USD {t:.2f}/m² ({pin['servicio'][:50]}, {pin['fecha_ultimo_precio']}) = USD {m2t * t:,.2f}. "
+                       "Cotizarla como ítem aparte por m² (`parametros.pintura_aparte`).")
+    elif pin and m2t:
         t = float(pin["tarifa_unitaria_usd"])
         det = " + ".join(f"{n} {v:.1f}" for n, v in m2p if v)
         informe.append(f"- **Pintura:** {m2t:.2f} m² ({det}) × USD {t:.2f}/m² ({pin['servicio'][:50]}, {pin['proveedor'][:30]}, {pin['fecha_ultimo_precio']}) = USD {m2t * t:,.2f}.")
@@ -516,14 +747,16 @@ def main(carpeta, comparar=False):
         items.append({"id": "S05", "pos": "EST", "grupo": "mo", "descripcion": "Fabricación de la estructura (bastidor, patas, cunas y soportes)",
                       "especificacion": f"{kg_est:,.0f} kg por equipo × tarifa por kg", "cantidad": round(kg_est, 1), "unidad": "kg",
                       "fuentes": [{"tipo": "ant", "precio": t_est, "proveedor": f"{f_est['concepto']}: {f_est['nota']}"[:200], "origen": f_est["fuente"],
-                                   "fecha": f_est["fecha"] + ("-15" if len(f_est["fecha"]) == 7 else ""), "coincide": "similar",
+                                   "fecha": fin_de_mes(f_est["fecha"]), "coincide": "similar",
                                    "diferencia": "kg de la tabla del plano; tarifa de un trabajo de estructura de skid"}]})
     # prueba hidráulica: las planillas 2025–2026 la cobran por hora de planta; horas = parametros.ph_horas (supuesto 6 h)
     ph = servicio_catalogo("Ensayos", "USD/hora", ["hidr"])
     horas = float(base.get("parametros", {}).get("ph_horas", 0) or 0)
     supuesto = not horas
     horas = horas or 6
-    if ph:
+    if ph and prefab:
+        informe.append("- **Prueba hidráulica:** en el prefabricado va dentro de la pulgada (no se suma aparte).")
+    elif ph:
         t = float(ph["tarifa_unitaria_usd"] or ph["ultimo_precio_usd"])
         informe.append(f"- **Prueba hidráulica:** {horas:g} h × USD {t:.2f}/h ({ph['servicio'][:40]}, {ph['fecha_ultimo_precio']}) = USD {horas * t:,.2f}"
                        + (" · ⚠ horas supuestas: cargar `parametros.ph_horas`" if supuesto else "") + f" · volumen interior de caños y niples {litros:.1f} l.")
@@ -555,7 +788,7 @@ def main(carpeta, comparar=False):
                       "especificacion": f"{pch} placas chicas, {pgr} grandes, {servs:.2f} servicio(s) de RX y {n_lp:.2f} de LP por equipo (servicios repartidos en {N:g} equipos)",
                       "cantidad": 1, "unidad": "gl",
                       "fuentes": [{"tipo": "cot", "precio": round(costo, 2), "proveedor": prov[:200], "origen": f_sv["fuente"] if f_sv else "conocimiento/costos/tarifas.csv",
-                                   "fecha": (f_sv["fecha"] + "-14") if f_sv and len(f_sv["fecha"]) == 7 else (f_sv["fecha"] if f_sv else date.today().isoformat()), "coincide": "igual"}]
+                                   "fecha": fin_de_mes(f_sv["fecha"]) if f_sv else date.today().isoformat(), "coincide": "igual"}]
                       + ([{"tipo": "cot", "precio": round(alt, 2), "proveedor": "NDT Antonelli (tarifas 11-2025), mismas placas y servicios", "origen": "fuentes_originales/antonelli_end_2025-11.pdf",
                            "fecha": "2025-11-03", "coincide": "igual"}] if alt and f_asv else [])})
         if alt:
@@ -563,14 +796,22 @@ def main(carpeta, comparar=False):
     else:
         informe.append("- **Radiografía:** no se calculó (`parametros.rx_pct` = 0). Si el pliego la pide, cargar el porcentaje y volver a correr.")
     # horas de ingeniería, calidad y montaje: del antecedente más parecido (estimar_horas.py)
-    import estimar_horas
-    eq = base.get("equipo", {}) or {}
-    tipo_eq = eq.get("tipo") or estimar_horas.tipo_de(f"{eq.get('singular', '')} {base.get('titulo', '')}")
+    eq = eq0
     d_eq = eq.get("diametro_pulg") or max([dn_de(r["diametro"]) or 0 for r in filas] or [0]) or None
     mat_u = sum(i["cantidad"] * i["fuentes"][0]["precio"] for i in items if i["grupo"] == "material")
-    hh = estimar_horas.estimar(tipo_eq, d_eq, N, mat_u or None, EXCLUIR, s["pulg_eq"] or None)
+    hh = None if prefab else estimar_horas.estimar(tipo_eq, d_eq, N, mat_u or None, EXCLUIR, s["pulg_eq"] or None, texto_eq)
     informe += ["", f"### Horas de ingeniería, calidad y montaje (estimadas: {tipo_eq}, {d_eq or '?'}\", {N:g} u, materiales USD {mat_u:,.0f} por unidad)", ""]
+    if prefab:
+        informe.append("- Prefabricado: sin horas de ingeniería (los isométricos los da el cliente) ni de montaje; calidad, data book, movimientos y PH van "
+                       "dentro de la pulgada. Si el pliego pide ingeniería o dossier aparte, cargarlos a mano.")
+    elif hh and hh["nivel"] == "otro":
+        informe.append(f"- ⚠ **No hay antecedente del mismo tipo ({tipo_eq}) ni de uno afín: no se suman horas.** Cargarlas a mano con el detalle de actividades. "
+                       "Candidatos (de otro tipo, no usar sin revisar): " + " | ".join(hh["candidatos"]))
+        hh = None
     if hh:
+        if terc:
+            hh["mont"] = None
+            informe.append("- Montaje propio: no se suma porque la fabricación la hace el tercero; la prueba hidráulica va aparte (fila PH).")
         for k, pos, n in (("ing", "HH", "Ingeniería"), ("cal", "CAL", "Calidad y dossier"), ("mont", "ARM", "Montaje en planta (armado, movimientos" + (", prueba hidráulica" if hh["incluye_ph"] else "") + ")")):
             x = hh[k]
             if not x or not x["horas_u"]:
@@ -584,8 +825,8 @@ def main(carpeta, comparar=False):
                                        "fecha": x["fila"]["fecha"], "coincide": "similar",
                                        "diferencia": f"ESTIMADO del antecedente {x['antecedente']}"[:300]}]})
         if not hh["mismo_tipo"]:
-            informe.append("- ⚠ No hay antecedente del mismo tipo y tamaño: se usó el más parecido de otro tipo. Revisar las horas.")
-        if hh["incluye_ph"] and any(i["pos"] == "PH" for i in items):
+            informe.append("- ⚠ No hay antecedente del mismo tipo: se usaron equipos afines del mismo grupo. Revisar las horas.")
+        if hh["incluye_ph"] and hh["mont"] and any(i["pos"] == "PH" for i in items):
             items[:] = [i for i in items if i["pos"] != "PH"]
             informe.append("- La prueba hidráulica va dentro del montaje del antecedente: se sacó la fila PH para no cobrarla dos veces.")
         informe.append("- Candidatos: " + " | ".join(hh["candidatos"]))
@@ -596,10 +837,12 @@ def main(carpeta, comparar=False):
                 "- ⚠ **Horas de ingeniería, calidad y montaje:** son estimadas del antecedente más parecido (punto 3): confirmarlas con el detalle de actividades del equipo.",
                 "- Armado y montaje (mano de obra de armado roscado o de terceros con el mismo alcance: `buscar_servicio.py`).",
                 "- Ingeniería, calidad y dossier · embalaje · flete (kilos en `controles_tablas.md` al armar) · insumos.",
-                "- Plazo (camino crítico con `comercial/plazos_proveedores.csv`)."]
+                "- Plazo (camino crítico con `comercial/plazos_proveedores.csv`).",
+                "- ⚠ **Repuestos** (puesta en marcha y 2 años, si el pliego los pide), **transporte a destino** y **póliza de caución** "
+                "(YPF y la mayoría de las licitaciones la piden): no se calculan; en CTRL-TS01 sumaron USD 1.915 por equipo y en CTRL-SK01 la caución USD 459."]
     total_mat = sum(i["cantidad"] * i["fuentes"][0]["precio"] for i in items if i["grupo"] == "material")
     total_srv = sum(i["cantidad"] * i["fuentes"][0]["precio"] for i in items if i["grupo"] != "material")
-    sin = [i["pos"] for i in items if i["fuentes"][0]["precio"] == 0]
+    sin = [i["pos"] for i in items if i["fuentes"][0]["precio"] == 0 and not i.get("provee")]
     sim = [i["pos"] for i in items if i["grupo"] == "material" and i["fuentes"][0]["coincide"] == "similar"]
     informe[3:3] = [f"**Resumen:** materiales USD {total_mat:,.2f} por equipo · soldadura y servicios calculados USD {total_srv:,.2f} · "
                     f"{len(sim)} similares ({', '.join(sim) or '—'}) · {len(sin)} sin precio ({', '.join(sin) or '—'}).", ""]

@@ -64,6 +64,10 @@
 | 28/10/2026 | Integrar un chat con Claude en la página y un "Mandar a Claude Code" (desde el chat o con un botón) que procese planos, P&ID, pliegos y listas de precios sobre el repositorio y deje el resultado en borrador | Matías (idea), plan por etapas abajo | — |
 | 28/10/2026 | **Control total del chat de la página**: crea, abre, duplica y modifica cotizaciones (datos, ítems, plazo, oferta), usa las calculadoras, carga artículos y MO nuevos (con documento, proveedor y fecha; ARS al BNA del mes; IVA descontado) en `catalogo_nuevo` y descarga. Excepciones: no aprueba ni marca enviada; borrar y pasar a revisado los confirma el usuario con un botón; sin documento no carga precios | Matías ("control total") | `web/src/asistente.js`, `web/LEEME.md` |
 | 28/10/2026 | **Fechas a la vista siempre DD-MM-AAAA**; adentro AAAA-MM-DD. Aplicado en la página (también los campos de fecha se escriben DD-MM-AAAA), informe, planilla, lista para Compras, ofertas, avisos del catálogo y comparación con antecedentes | Matías | `numeros.a_vista`, `Documentos.fecha` |
+| 28-10-2026 | Listas que pasa Ventas: se guardan en `fuentes_originales/listas_vendedor/<fecha de carga>/` como cargadas por el vendedor; cada precio conserva la fecha del documento | Matías | `herramientas/listas_vendedor.py`, `fuentes.md` |
+| 28-10-2026 | Válvulas Taval: costo = Lista 30 × 0,52 (factor de las planillas TAVAL/72 y /78) | Criterio de las planillas (documentado) | `pesos_valvulas.py`, `precios/taval_lista30.csv` |
+| 28-10-2026 | Sin antecedente de horas del mismo tipo y tamaño, la precotización **no suma horas** y avisa (antes tomaba otro tipo de equipo) | Criterio técnico (controles) | `estimar_horas.py` |
+| 28-10-2026 | Prefabricado de piping: `parametros.modo = "prefabricado"` (pulgada diametral base sch 40, tarifa de terceros, +5% rechazos, pintura aparte, sin horas); materiales del cliente con la columna `provee` = cliente | Criterio técnico (CTRL-CA01) | `precotizar.py`, `guia_cotizacion.md` |
 | 28/10/2026 | No hay más información de precios que la ya entregada: el último precio se sigue eligiendo por fecha (no hay otras compras para preferir sobre la lista de Renard) | Matías | — |
 
 ## 3. Pendientes del proyecto
@@ -78,6 +82,11 @@
 **Qué hace la IA y qué es automático (decisión de Matías, 28/10/2026).** Lo que varía entre cotizaciones, clientes y proveedores lo sigue leyendo la IA: planos, pliegos, especificaciones y las cotizaciones que mande Compras (en el formato que vengan; no se usa un formato fijo de respuesta). Lo automático empieza cuando esos datos ya están en los formatos internos (`lista_materiales_plano.csv` y `cotizacion.json`): búsqueda en el catálogo, soldaduras, m², plazo, comparación con antecedentes, sumas y controles. El programa propone y marca; siempre revisa una persona o la IA.
 
 Hecho (28/10/2026): `precotizar.py` (materiales, soldaduras, pintura, PH, RX) · `plazo.py` (acopio + taller sin superponer, margen 15–20%, plazo real de la familia) · `comparar_antecedentes.py` (P8 contra los 5 más parecidos) · control de carga en `verificar_computo.py` (fecha válida, "con IVA", sin precio) · `verificar_todo.py` y `actualizar_base.py`. Descartado: lectura automática de planos y pliegos, y formato fijo para las respuestas de Compras.
+
+**Controles de la precotización** (28-10-2026, segunda tanda corregida: ver `auditorias/2026-10-28_controles_4_agentes.md`)
+1. Cargar horas de antecedentes que faltan (TECPETROL/7 trampas; filtros chicos; tanques grandes) en `costos/horas_por_equipo.csv`.
+2. Instrumentos: sumar accesorios de la hoja de datos (RTD y vaina del TT, manifolds, bloqueo y purga).
+3. RX por jornada (placas por servicio) y propuesta de caución, repuestos y transporte (hoy solo aviso).
 
 **Página web: plan por etapas** (propuesto el 28/10/2026; cada etapa se usa antes de pasar a la siguiente)
 1. **Probar la página como está:** Matías arma 2 o 3 cotizaciones reales y completa su firmante (teléfono, celular, email, imagen de la firma). Revisar la primera tarea semanal (lunes 2/11).

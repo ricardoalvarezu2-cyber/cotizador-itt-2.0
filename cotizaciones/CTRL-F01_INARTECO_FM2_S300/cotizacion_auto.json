@@ -257,10 +257,10 @@
    "id": "M05B",
    "pos": "5b",
    "grupo": "material",
-   "descripcion": "Completar barra de 6 m de la pos 5 (compra mínima; sobrante, no va en el equipo)",
-   "cantidad": 2.6,
+   "descripcion": "Completar barra de 12 m de la pos 5 (compra mínima; sobrante, no va en el equipo)",
+   "cantidad": 5.6,
    "unidad": "m",
-   "especificacion": "1 barra(s) de 6 m para 0.8 m en 2 equipo(s); por equipo 2.6 m",
+   "especificacion": "1 barra(s) de 12 m para 0.8 m en 2 equipo(s); por equipo 5.6 m",
    "fuentes": [
     {
      "tipo": "lista",
@@ -361,13 +361,13 @@
    "especificacion": "Plano:  ·  ·  ·  · GORA",
    "fuentes": [
     {
-     "tipo": "est",
-     "precio": 0,
-     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
-     "origen": "—",
-     "fecha": "2026-10-28",
-     "coincide": "sin_ref",
-     "diferencia": "No hay pieza de esa familia y tipo con precio"
+     "tipo": "cot",
+     "precio": 329.0,
+     "proveedor": "Gora S.A. · OTR-02164",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\11- SKID GAS COMBUSTIBLE PAD #900 CABLEADO. PR-54033 · 5.Proveedores 3ros/Gora    OF-X-0001-00027396 ITTSA-TECPETROL-S-001  F-001 -.pdf",
+     "fecha": "2026-03-09",
+     "coincide": "similar",
+     "diferencia": ""
     }
    ]
   },
@@ -387,7 +387,7 @@
      "origen": "—",
      "fecha": "2026-10-28",
      "coincide": "sin_ref",
-     "diferencia": "No hay pieza de esa familia y tipo con precio"
+     "diferencia": "El más parecido es sin diámetro conocido (OTR-02164 Separador Flexichevron AISI 316 diam. 483 mm esp. , USD 329.00): no sirve como precio"
     }
    ]
   },
@@ -401,13 +401,13 @@
    "especificacion": "Plano: 3/8\" ·  · SAE 62 · ",
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 0.5,
-     "proveedor": "sin proveedor en planilla (columna PROVEEDOR vacía) · JUN-02854",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · 4.Armado de la Oferta Comercial/LM-TANQUE GLICOL.xlsx",
-     "fecha": "2026-02-20",
-     "coincide": "similar",
-     "diferencia": "diametro: sin dato (pedido 0.375\"); material: sin dato (pedido Bronce)"
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-28",
+     "coincide": "sin_ref",
+     "diferencia": "El más parecido es de otro diámetro (0.625\") (JUN-04220 TUERCA | 5/8\" | SA-194 2H | BICROMATIZADO, USD 0.50): no sirve como precio"
     }
    ]
   },
@@ -422,12 +422,12 @@
    "fuentes": [
     {
      "tipo": "est",
-     "precio": 0.1732,
-     "proveedor": "no dice · JUN-02811",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\3-YPF Separador Bifasicos - Separadores para satelites · 5.Proveedores 3ros/YPF - Sep Bifasico - 2591 - 21.2 - precios compras V1.xlsx.txt",
-     "fecha": "2025-03-27",
-     "coincide": "similar",
-     "diferencia": "diametro: sin dato (pedido 0.375\")"
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-28",
+     "coincide": "sin_ref",
+     "diferencia": "El más parecido es de otro diámetro (0.875\") (JUN-01602 ARANDELA | Ø 7/8\" | - | - | SA-36, USD 0.17): no sirve como precio"
     }
    ]
   },
@@ -443,10 +443,11 @@
     {
      "tipo": "ant",
      "precio": 10.0,
-     "proveedor": "Bules o Versailles · JUN-03363",
+     "proveedor": "Bules o Versailles · JUN-04181",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt",
      "fecha": "2026-02-19",
-     "coincide": "igual"
+     "coincide": "similar",
+     "diferencia": "medida: 3/4 x 4 7/8 (pedido 3/4 x 4 3/4)"
     }
    ]
   },
@@ -501,12 +502,12 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 72.5,
-     "proveedor": "Bripetrol · JUN-02796",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\9. CM SKID MANIFOLD PAD S-600 · fuentes_originales/ofertas_texto/TECPETROL/9. CM SKID MANIFOLD PAD S-600/Adicional Manifold Tecpe 2026-05-05.xlsx.txt",
-     "fecha": "2026-05-05",
+     "precio": 10.0,
+     "proveedor": "planilla de costo ITT · JUN-02797",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx",
+     "fecha": "2026-06-26",
      "coincide": "similar",
-     "diferencia": "serie: 600 (pedido 300); unidad distinta: catálogo por uni, plano por un"
+     "diferencia": "serie: sin dato (pedido 300); extremos: RF (no pedido)"
     }
    ]
   },
@@ -600,13 +601,13 @@
    "especificacion": "Plano: 1/4\" ·  · AISI 304 ·  · ABAC",
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 0.5,
-     "proveedor": "sin proveedor en planilla (columna PROVEEDOR vacía) · JUN-02854",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · 4.Armado de la Oferta Comercial/LM-TANQUE GLICOL.xlsx",
-     "fecha": "2026-02-20",
-     "coincide": "similar",
-     "diferencia": "diametro: sin dato (pedido 0.25\"); material: sin dato (pedido AISI 304)"
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-28",
+     "coincide": "sin_ref",
+     "diferencia": "El más parecido es de otro diámetro (0.625\") (JUN-04220 TUERCA | 5/8\" | SA-194 2H | BICROMATIZADO, USD 0.50): no sirve como precio"
     }
    ]
   },
@@ -641,15 +642,14 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 36.0,
-     "proveedor": "Taval · VAL-03435",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
-     "fecha": "2026-10-10",
+     "precio": 33.81,
+     "proveedor": "sin proveedor en planilla (columna PROVEEDOR vacía) · VAL-04223",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · 4.Armado de la Oferta Comercial/LM-TANQUE GLICOL.xlsx",
+     "fecha": "2026-02-20",
      "coincide": "similar",
-     "diferencia": "material: sin dato (pedido A105); extremos: NPT (pedido NPT/SW)"
+     "diferencia": "extremos: NPT (pedido NPT/SW); paso: reducido (no pedido)"
     }
-   ],
-   "taval": true
+   ]
   },
   {
    "id": "M25",
@@ -722,10 +722,10 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 16.0,
-     "proveedor": "Mano de obra soldadura piping (criterio de las planillas de costo 2026): Precio por pulgada que usan las planillas de ITT de 2025-2026 (16 a 16,5; 19 en #900 en Sacde 12). Controles CTRL-M01/P01/T01, ",
-     "origen": "planillas 2026 (TAVAL/43 puentes YPF 19-02-2026; TAVAL/40 Inarteco; Sacde 12 a 15; Tecpetrol 9: 16,5)",
-     "fecha": "2026-02-31",
+     "precio": 28.0,
+     "proveedor": "Mano de obra soldadura piping: Valor del modelo MO Master (skid medición E+H)",
+     "origen": "costos_mo_master_2024-09",
+     "fecha": "2024-09-30",
      "coincide": "igual"
     }
    ]
@@ -735,16 +735,16 @@
    "pos": "PIN",
    "grupo": "servicio",
    "descripcion": "Granallado y pintura (m² calculados)",
-   "especificacion": "0.70 m² exteriores: caños y niples × 3 por bridas, accesorios y válvulas 0.6 + envolvente 0.0 + estructura 0.1",
-   "cantidad": 0.703,
+   "especificacion": "0.50 m² exteriores: caños y niples 0.2 + bridas, accesorios y válvulas (largo equivalente) 0.2 + envolvente 0.0 + estructura 0.1",
+   "cantidad": 0.495,
    "unidad": "m2",
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 50.0,
-     "proveedor": "criterio ITT · PIN-00569",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN\\4.Armado de la Oferta Comercial",
-     "fecha": "2026-10-10",
+     "precio": 7.5121,
+     "proveedor": "ITT (costo propio de planta) · PIN-00134",
+     "origen": "fuentes_originales/costo_mo_planta_2024-10.xlsx",
+     "fecha": "2024-10-31",
      "coincide": "similar",
      "diferencia": "m² calculados (caños, accesorios por regla, envolvente y estructura); esquema de pintura a confirmar con el pliego"
     }
@@ -761,12 +761,32 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 3.0,
-     "proveedor": "Fabricación de estructura de skid por kg (tercero Ledesma): Dato al margen de la MO de Ledesma; en Tecpetrol 9 (01-2026) el bastidor UPN 140 se costeó a 4 USD/kg",
-     "origen": "YPF/28 Lic 69343 planilla PC0, hoja 1000623708 (850 kg × 3 = 2.550)",
-     "fecha": "2026-10-15",
+     "precio": 1.9,
+     "proveedor": "Mano de obra estructura (tercero Ledesma): Más IVA",
+     "origen": "costo_mo_planta_2024-10",
+     "fecha": "2024-09-30",
      "coincide": "similar",
      "diferencia": "kg de la tabla del plano; tarifa de un trabajo de estructura de skid"
+    }
+   ]
+  },
+  {
+   "id": "S03",
+   "pos": "PH",
+   "grupo": "servicio",
+   "descripcion": "Prueba hidráulica (horas de planta)",
+   "especificacion": "6 h · volumen interior 3.9 l",
+   "cantidad": 6,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 13.0,
+     "proveedor": "valor HH 13 · END-00218",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\AESA\\44-Doc5319481557 - AESA - SRV FABRICACION EQUIPOS - F5064\\4.Armado de la Oferta Comercial\\Superado",
+     "fecha": "2025-09-05",
+     "coincide": "similar",
+     "diferencia": "horas supuestas (6 h): confirmar"
     }
    ]
   },
@@ -781,10 +801,10 @@
    "fuentes": [
     {
      "tipo": "cot",
-     "precio": 396.5,
-     "proveedor": "Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))",
-     "origen": "PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT)",
-     "fecha": "2026-08-14",
+     "precio": 595.0,
+     "proveedor": "Servicio de radiografía (Antonelli) (2025-11; antonelli_end_2025-11)",
+     "origen": "antonelli_end_2025-11",
+     "fecha": "2025-11-30",
      "coincide": "igual"
     },
     {
@@ -794,66 +814,6 @@
      "origen": "fuentes_originales/antonelli_end_2025-11.pdf",
      "fecha": "2025-11-03",
      "coincide": "igual"
-    }
-   ]
-  },
-  {
-   "id": "S12H",
-   "pos": "HH",
-   "grupo": "mo",
-   "descripcion": "Horas de ingeniería (estimadas del antecedente)",
-   "especificacion": "15.5 h por filtro · mediana de 4.8, 15.5, 64.4 h por unidad (repartidas en la serie y por tamaño)",
-   "cantidad": 15.5,
-   "unidad": "h",
-   "fuentes": [
-    {
-     "tipo": "est",
-     "precio": 15.0,
-     "proveedor": "Horas propias ITT (tarifa del antecedente)",
-     "origen": "conocimiento/costos/horas_por_equipo.csv · TAVAL/41- CIA MINERA DE ORIENTE · 4.Armado de la Oferta Comercial/LM costos Manifold Pozo_Agua.xlsx.txt · hoja Costura + HH",
-     "fecha": "2026-02-11",
-     "coincide": "similar",
-     "diferencia": "ESTIMADO del antecedente TAVAL/41- CIA MINERA DE ORIENTE · Manifold pozo de agua DN80 ANSI 150 (reduccion 3in a DN40) c (3, 1 u, 2026-02-11)"
-    }
-   ]
-  },
-  {
-   "id": "S13C",
-   "pos": "CAL",
-   "grupo": "mo",
-   "descripcion": "Horas de calidad y dossier (estimadas del antecedente)",
-   "especificacion": "18.6 h por filtro · mediana de 9.7, 18.6, 19.2 h por unidad (repartidas en la serie y por tamaño)",
-   "cantidad": 18.6,
-   "unidad": "h",
-   "fuentes": [
-    {
-     "tipo": "est",
-     "precio": 15.0,
-     "proveedor": "Horas propias ITT (tarifa del antecedente)",
-     "origen": "conocimiento/costos/horas_por_equipo.csv · TAVAL/41- CIA MINERA DE ORIENTE · 4.Armado de la Oferta Comercial/LM costos Manifold Pozo_Agua.xlsx.txt · hoja Costura + HH",
-     "fecha": "2026-02-11",
-     "coincide": "similar",
-     "diferencia": "ESTIMADO del antecedente TAVAL/41- CIA MINERA DE ORIENTE · Manifold pozo de agua DN80 ANSI 150 (reduccion 3in a DN40) c (3, 1 u, 2026-02-11)"
-    }
-   ]
-  },
-  {
-   "id": "S13A",
-   "pos": "ARM",
-   "grupo": "mo",
-   "descripcion": "Horas de montaje en planta (armado, movimientos, prueba hidráulica) (estimadas del antecedente)",
-   "especificacion": "70.9 h por filtro · mediana de 120 h × 0.31, 756 h × 0.256, 234 h × 0.303 (horas por unidad × tamaño)",
-   "cantidad": 70.9,
-   "unidad": "h",
-   "fuentes": [
-    {
-     "tipo": "est",
-     "precio": 13.0,
-     "proveedor": "Horas propias ITT (tarifa del antecedente)",
-     "origen": "conocimiento/costos/horas_por_equipo.csv · TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 8.Orden de Compra/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx.txt · hoja Lanz 20x16",
-     "fecha": "2026-07-20",
-     "coincide": "similar",
-     "diferencia": "ESTIMADO del antecedente TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · Trampa lanzadora 20x16 (Serie 600 A6C) (20 / 16, 1 u, 2026-07-20)"
     }
    ]
   }

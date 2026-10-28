@@ -67,7 +67,7 @@ def ficha(r, i, puntaje):
     print(f"   En el repo: {r['ruta_repo']}")
 
 
-def buscar(texto, hoja="", top=8):
+def buscar(texto, hoja="", top=8, excluir=()):
     """Devuelve [(puntaje, fila)] ordenado; usado también por los tests."""
     q = tokens(texto)
     filas = list(csv.DictReader(open(PRECIOS / "catalogo_servicios.csv", encoding="utf-8")))
@@ -76,6 +76,8 @@ def buscar(texto, hoja="", top=8):
         filas = [r for r in filas if h in norm(r["hoja"])]
     res = []
     for r in filas:
+        if any(x.lower() in (r["ruta_origen"] + " " + r["archivo_origen"] + " " + r["ruta_repo"]).lower() for x in excluir):
+            continue  # casos de control: el propio proyecto no puede ser su referencia
         campos = tokens(r["servicio"] + " " + r["descripcion"] + " " + r["equipo_referencia"] + " " + r["hoja"] + " " + r["proveedor"])
         titulo = set(tokens(r["servicio"] + " " + r["unidad_tarifa"]))
         s = 0.0
@@ -97,8 +99,9 @@ def main():
     ap.add_argument("texto")
     ap.add_argument("--hoja", default="", help="rubro (pedazo del nombre)")
     ap.add_argument("--top", type=int, default=8)
+    ap.add_argument("--excluir", action="append", default=[], help="no mostrar servicios cuyo origen contenga este texto (repetible)")
     q = ap.parse_args()
-    res = buscar(q.texto, q.hoja, q.top)
+    res = buscar(q.texto, q.hoja, q.top, q.excluir)
     if not res:
         print("No hay servicios parecidos en el catálogo. Pedir cotización al proveedor.")
         return

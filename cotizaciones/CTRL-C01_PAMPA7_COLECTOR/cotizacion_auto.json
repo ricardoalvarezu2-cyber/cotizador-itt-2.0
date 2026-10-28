@@ -274,10 +274,10 @@
    "id": "M07B",
    "pos": "7b",
    "grupo": "material",
-   "descripcion": "Completar barra de 6 m de la pos 7 (compra mínima; sobrante, no va en el equipo)",
+   "descripcion": "Completar barra de 12 m de la pos 7 (compra mínima; sobrante, no va en el equipo)",
    "cantidad": 0.267,
    "unidad": "m",
-   "especificacion": "20 barra(s) de 6 m para 115.2 m en 18 equipo(s); por equipo 0.267 m",
+   "especificacion": "10 barra(s) de 12 m para 115.2 m en 18 equipo(s); por equipo 0.267 m",
    "fuentes": [
     {
      "tipo": "lista",
@@ -312,10 +312,10 @@
    "id": "M08B",
    "pos": "8b",
    "grupo": "material",
-   "descripcion": "Completar barra de 6 m de la pos 8 (compra mínima; sobrante, no va en el equipo)",
+   "descripcion": "Completar barra de 12 m de la pos 8 (compra mínima; sobrante, no va en el equipo)",
    "cantidad": 0.267,
    "unidad": "m",
-   "especificacion": "20 barra(s) de 6 m para 115.2 m en 18 equipo(s); por equipo 0.267 m",
+   "especificacion": "10 barra(s) de 12 m para 115.2 m en 18 equipo(s); por equipo 0.267 m",
    "fuentes": [
     {
      "tipo": "lista",
@@ -358,12 +358,12 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 6.0,
+     "precio": 9.2376,
      "proveedor": "sin proveedor en planilla · NIP-01782",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
      "fecha": "2026-10-10",
      "coincide": "similar",
-     "diferencia": "diametro: 0.75\" (pedido 1\"); largo_mm: 100 (pedido 150)"
+     "diferencia": "diametro: 0.75\" (pedido 1\"); largo_mm: 100 (pedido 150); precio escalado por diámetro (1\" ÷ 0.75\")^1,5 = × 1.54"
     }
    ]
   },
@@ -459,11 +459,11 @@
     {
      "tipo": "ant",
      "precio": 10.0,
-     "proveedor": "Bules o Versailles · JUN-03363",
+     "proveedor": "Bules o Versailles · JUN-04181",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt",
      "fecha": "2026-02-19",
      "coincide": "similar",
-     "diferencia": "medida: 3/4 x 12 (pedido 3/4 x 6)"
+     "diferencia": "medida: 3/4 x 4 7/8 (pedido 3/4 x 6)"
     }
    ]
   },
@@ -479,11 +479,11 @@
     {
      "tipo": "ant",
      "precio": 10.0,
-     "proveedor": "Bules o Versailles · JUN-03363",
+     "proveedor": "Bules o Versailles · JUN-04181",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt",
      "fecha": "2026-02-19",
      "coincide": "similar",
-     "diferencia": "medida: 3/4 x 12 (pedido 3/4 x 5)"
+     "diferencia": "medida: 3/4 x 4 7/8 (pedido 3/4 x 5)"
     }
    ]
   },
@@ -498,12 +498,12 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 5.0,
-     "proveedor": "marca/proveedor: BULES S.R.L. · JUN-02839",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\40- INARTECO FILTROS LIC 9333 · fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/LM costo Filtros rev.1.xlsx.txt",
-     "fecha": "2026-01-15",
+     "precio": 10.0,
+     "proveedor": "Bules o Versailles · JUN-04173",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt",
+     "fecha": "2026-02-19",
      "coincide": "similar",
-     "diferencia": "medida: 3/4 x 10 (pedido 5/8 x 4); unidad distinta: catálogo por uni, plano por un"
+     "diferencia": "medida: 5/8 x 4 3/8 (pedido 5/8 x 4)"
     }
    ]
   },
@@ -518,12 +518,12 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 5.0,
-     "proveedor": "marca/proveedor: BULES S.R.L. · JUN-02839",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\40- INARTECO FILTROS LIC 9333 · fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/LM costo Filtros rev.1.xlsx.txt",
-     "fecha": "2026-01-15",
+     "precio": 2.6,
+     "proveedor": "sin proveedor en planilla (columna PROVEEDOR vacía) · JUN-04177",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · 4.Armado de la Oferta Comercial/LM-TANQUE GLICOL.xlsx",
+     "fecha": "2026-02-20",
      "coincide": "similar",
-     "diferencia": "medida: 3/4 x 10 (pedido 5/8 x 3); unidad distinta: catálogo por uni, plano por un"
+     "diferencia": "material: sin dato (pedido A194 2H)"
     }
    ]
   },
@@ -615,12 +615,12 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 10.0,
+     "precio": 18.3712,
      "proveedor": "sin proveedor en planilla · AFO-03330",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECHINT\\12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado · 4.Armado de la Oferta Comercial/OFERTA REV C/ESTRUCTURA DE COSTOS- LM de Manifold S600 CM - PC0-C R",
      "fecha": "2025-12-23",
      "coincide": "similar",
-     "diferencia": "diametro: 0.5\" (pedido 0.75\"); extremos: sin dato (pedido SW/BW)"
+     "diferencia": "diametro: 0.5\" (pedido 0.75\"); extremos: sin dato (pedido SW/BW); precio escalado por diámetro (0.75\" ÷ 0.5\")^1,5 = × 1.84"
     }
    ]
   },
@@ -635,12 +635,12 @@
    "fuentes": [
     {
      "tipo": "est",
-     "precio": 15.5902,
+     "precio": 24.0027,
      "proveedor": "no dice · AFO-02394",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\3-YPF Separador Bifasicos - Separadores para satelites · 5.Proveedores 3ros/YPF - Sep Bifasico - 2591 - 21.2 - precios compras V1.xlsx.txt",
      "fecha": "2025-03-27",
      "coincide": "similar",
-     "diferencia": "diametro: 0.75\" (pedido 1\"); material: sin dato (pedido A105); extremos: sin dato (pedido SW/BW)"
+     "diferencia": "diametro: 0.75\" (pedido 1\"); material: sin dato (pedido A105); extremos: sin dato (pedido SW/BW); precio escalado por diámetro (1\" ÷ 0.75\")^1,5 = × 1.54"
     }
    ]
   },
@@ -655,11 +655,12 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 3.5,
+     "precio": 2.3,
      "proveedor": "Renard · AFO-00850",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\PAMPA ENERGIA\\5 - Doc5757155642 - Construc 10 Puentes y 2 Colectores - RDA · 4.Armado de la Oferta Comercial/Cot Skid Manifolds Colectores RDA Rev2.xlsx",
      "fecha": "2026-06-26",
-     "coincide": "igual"
+     "coincide": "similar",
+     "diferencia": "el último precio (3.50) se aparta más de 40% de la mediana de sus últimos precios: se usa la mediana 2.30"
     }
    ]
   },
@@ -716,12 +717,12 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 162.0,
-     "proveedor": "sin proveedor en planilla · VAL-03169",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios · 4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx",
-     "fecha": "2025-12-18",
+     "precio": 67.5,
+     "proveedor": "Desvio · VAL-03220",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\PAMPA ENERGIA\\5 - Doc5757155642 - Construc 10 Puentes y 2 Colectores - RDA · 4.Armado de la Oferta Comercial/Cot Skid Manifolds Colectores RDA Rev2.xlsx",
+     "fecha": "2026-06-26",
      "coincide": "similar",
-     "diferencia": "serie: 600 (pedido 300); material: sin dato (pedido A105); paso: total (pedido reducido)"
+     "diferencia": "material: sin dato (pedido A105); extremos: sin dato (pedido RF); paso: total (pedido reducido)"
     }
    ]
   },
@@ -736,13 +737,12 @@
    "taval": true,
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 131.131,
-     "proveedor": "Taval · VAL-03547",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\PAMPA ENERGIA\\5 - Doc5757155642 - Construc 10 Puentes y 2 Colectores - RDA · 4.Armado de la Oferta Comercial/Cot Skid Manifolds Colectores RDA Rev2.xlsx",
-     "fecha": "2026-06-26",
-     "coincide": "similar",
-     "diferencia": "extremos: sin dato (pedido RF); paso: total (pedido reducido)"
+     "tipo": "lista",
+     "precio": 130.0,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04444",
+     "origen": "taval_lista30_2025-09.xlsx · código BF10503R0104RP, hoja PR Flotante",
+     "fecha": "2025-09-01",
+     "coincide": "igual"
     }
    ]
   },
@@ -757,13 +757,12 @@
    "taval": true,
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 420.16,
-     "proveedor": "Válvulas TAVAL (cotización -35% -20% sobre lista) · VAL-03588",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt",
-     "fecha": "2026-02-19",
-     "coincide": "similar",
-     "diferencia": "serie: 600 (pedido 300)"
+     "tipo": "lista",
+     "precio": 167.5,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04757",
+     "origen": "taval_lista30_2025-09.xlsx · código RW10803R01020B, hoja Waffer",
+     "fecha": "2025-09-01",
+     "coincide": "igual"
     }
    ]
   },
@@ -881,7 +880,7 @@
      "precio": 16.0,
      "proveedor": "Mano de obra soldadura piping (criterio de las planillas de costo 2026): Precio por pulgada que usan las planillas de ITT de 2025-2026 (16 a 16,5; 19 en #900 en Sacde 12). Controles CTRL-M01/P01/T01, ",
      "origen": "planillas 2026 (TAVAL/43 puentes YPF 19-02-2026; TAVAL/40 Inarteco; Sacde 12 a 15; Tecpetrol 9: 16,5)",
-     "fecha": "2026-02-31",
+     "fecha": "2026-02-28",
      "coincide": "igual"
     }
    ]
@@ -891,16 +890,16 @@
    "pos": "PIN",
    "grupo": "servicio",
    "descripcion": "Granallado y pintura (m² calculados)",
-   "especificacion": "40.20 m² exteriores: caños y niples × 3 por bridas, accesorios y válvulas 16.2 + estructura 24.0",
-   "cantidad": 40.203,
+   "especificacion": "36.58 m² exteriores: caños y niples 5.4 + bridas, accesorios y válvulas (largo equivalente) 7.2 + estructura 24.0",
+   "cantidad": 36.58,
    "unidad": "m2",
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 50.0,
-     "proveedor": "criterio ITT · PIN-00569",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN\\4.Armado de la Oferta Comercial",
-     "fecha": "2026-10-10",
+     "precio": 40.0,
+     "proveedor": "ITT · PIN-00497",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\20 - SE-3121-ASTORD-014 - TK DE CHOQUE\\4.Armado de la Oferta Comercial",
+     "fecha": "2026-03-03",
      "coincide": "similar",
      "diferencia": "m² calculados (caños, accesorios por regla, envolvente y estructura); esquema de pintura a confirmar con el pliego"
     }
@@ -920,7 +919,7 @@
      "precio": 3.0,
      "proveedor": "Fabricación de estructura de skid por kg (tercero Ledesma): Dato al margen de la MO de Ledesma; en Tecpetrol 9 (01-2026) el bastidor UPN 140 se costeó a 4 USD/kg",
      "origen": "YPF/28 Lic 69343 planilla PC0, hoja 1000623708 (850 kg × 3 = 2.550)",
-     "fecha": "2026-10-15",
+     "fecha": "2026-10-31",
      "coincide": "similar",
      "diferencia": "kg de la tabla del plano; tarifa de un trabajo de estructura de skid"
     }
@@ -940,7 +939,7 @@
      "precio": 4497.5,
      "proveedor": "Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))",
      "origen": "PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT)",
-     "fecha": "2026-08-14",
+     "fecha": "2026-08-31",
      "coincide": "igual"
     },
     {
@@ -958,8 +957,8 @@
    "pos": "HH",
    "grupo": "mo",
    "descripcion": "Horas de ingeniería (estimadas del antecedente)",
-   "especificacion": "1.66 h por colector · mediana de 1.2, 1.7, 9.9 h por unidad (repartidas en la serie y por tamaño)",
-   "cantidad": 1.66,
+   "especificacion": "0.82 h por colector · mediana de 1.1, 0.5 h por unidad (repartidas en la serie)",
+   "cantidad": 0.82,
    "unidad": "h",
    "fuentes": [
     {
@@ -978,8 +977,8 @@
    "pos": "CAL",
    "grupo": "mo",
    "descripcion": "Horas de calidad y dossier (estimadas del antecedente)",
-   "especificacion": "4.46 h por colector · mediana de 24.9, 4.3, 4.5 h por unidad (repartidas en la serie y por tamaño)",
-   "cantidad": 4.46,
+   "especificacion": "12.5 h por colector · mediana de 24.0, 1.0 h por unidad (repartidas en la serie)",
+   "cantidad": 12.5,
    "unidad": "h",
    "fuentes": [
     {
@@ -998,7 +997,7 @@
    "pos": "ARM",
    "grupo": "mo",
    "descripcion": "Horas de montaje en planta (armado, movimientos, prueba hidráulica) (estimadas del antecedente)",
-   "especificacion": "266.2 h por colector · mediana de 256.5 h × 1.038, 135 h × 1.104, 535.5 h × 0.893 (horas por unidad × tamaño)",
+   "especificacion": "266.2 h por colector · mediana de 256.5 h × 1.038 (horas por unidad × tamaño)",
    "cantidad": 266.2,
    "unidad": "h",
    "fuentes": [

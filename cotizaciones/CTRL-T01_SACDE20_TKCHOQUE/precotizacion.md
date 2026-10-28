@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-T01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 8,617.81 por equipo · soldadura y servicios calculados USD 15,783.81 · 11 similares (1, 3, 5, 12, 13, 14, 15, 17, 18, 19, 20) · 2 sin precio (10, 11).
+**Resumen:** materiales USD 8,862.11 por equipo · soldadura y servicios calculados USD 5,877.88 · 11 similares (1, 3, 5, 12, 13, 14, 15, 17, 18, 19, 20) · 2 sin precio (10, 11).
 
 
 ## 1. Materiales
@@ -17,18 +17,19 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 7 | Brida slip on RF 6" | IGUAL | 38.19 / un | 2025-12-26 · lista | — |
 | 8 | Caño sin costura 6" | IGUAL | 60.51 / m | 2025-12-26 · lista | — |
 | 9 | Caño sin costura 2" | IGUAL | 16.62 / m | 2025-12-26 · lista | — |
-| 9b | Completar barra de 6 m (compra mínima) | compra extra | USD 16.62/m × 5.75 m | | Se usan 0.25 m en 1 equipo(s) y se compran 6 m. Borrar si hay sobrante en stock |
 | 10 | Sombrerete de venteo longitud 300 mm 10" | **SIN PRECIO** | — | — | pedir cotización |
 | 11 | Placa de identificación | **SIN PRECIO** | — | — | pedir cotización |
 | 12 | Deflectores 900 x 200 mm espesor 6.35 mm (9 u | SIMILAR (acero por kg) | USD 1.25/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/4", la más cercana a 6.35 mm) +10% por recortes; no incluye corte, plegado ni rolado |
-| 13 | Espárrago con 2 tuercas 3/4 x 130 mm 3/4" | SIMILAR | 10.00 / un | 2026-02-19 · planilla interna | medida: 3/4 x 12 (pedido 3/4 x 13) |
+| 13 | Espárrago con 2 tuercas 3/4 x 130 mm 3/4" | SIMILAR | 7.10 / un | 2024-11-01 · stock (precio maestro) | material: sin dato (pedido A194 2H) |
 | 14 | Cáncamo de izaje con chapa de respaldo (2 un) | SIMILAR (acero por kg) | USD 1.27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2") +10% por recortes; no incluye corte, plegado ni rolado |
 | 15 | Separador de niebla (con viruta) 6" | SIMILAR (acero por kg) | USD 1.27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2") +10% por recortes; no incluye corte, plegado ni rolado |
-| 16 | Brida welding neck RF 2" | IGUAL | 28.42 / un | 2025-07-11 · cotización | — |
+| 16 | Brida welding neck RF 2" | IGUAL | 28.42 / un | 2026-02-19 · planilla interna | — |
 | 17 | Refuerzo de conexión Ø355 mm esp. 3/8 | SIMILAR (acero por kg) | USD 1.27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2", la más cercana a 355 mm) +10% por recortes; no incluye corte, plegado ni rolado (A-516: se toma el precio de chapa A-36 de la lista; el A-516 suele costar más) |
 | 18 | Media cupla 2" | SIMILAR | 9.19 / un | 2025-12-26 · lista | serie: 3000 (pedido 6000); extremos: BSPT (pedido NPT/SW) |
 | 19 | Junta plana 6" | SIMILAR (estimado cepo) ⚠ | 5.76 / un | 2024-11-01 · estimado (cepo) | material: AISI 316 (no pedido) |
 | 20 | Cunas de apoyo (2 un de 20 kg) | SIMILAR (acero por kg) | USD 1.27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2") +10% por recortes; no incluye corte, plegado ni rolado |
+| 8b | Completar barra de 12 m (pos 8) | compra extra | USD 60.51/m × 6 m | | Se usan 6 m en 1 equipo(s) y se compran 12 m. Borrar si hay sobrante en stock |
+| 9b | Caño de la pos 9: 0.25 m en total | sin compra extra | | | menos de 0,5 m: sale de recortes del stock (confirmar) |
 
 ## 2. Soldaduras (de la columna de extremos)
 
@@ -47,20 +48,15 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 
 ## 3. Servicios calculados
 
-- **Pintura:** 32.32 m² (caños y niples × 3 por bridas, accesorios y válvulas 9.7 + envolvente 16.2 + estructura 6.5) × USD 50.00/m² (Granallado y pintura piping (incluye materiales), criterio ITT, 2026-10-10) = USD 1,616.24.
-- **Fabricación de la estructura:** 216 kg × USD 3/kg (Fabricación de estructura de skid por kg (tercero Ledesma), 2026-10) = USD 648.00.
-- **Prueba hidráulica:** 36 h × USD 13.00/h (Prueba hidráulica - manifold FA0032 1.2, 2026-03-10) = USD 468.00 · volumen interior de caños y niples 112.4 l.
-- **Radiografía 100% y tintas:** 10 placas chicas + 21 grandes + 1.00 servicio(s) de RX + 1.00 de LP por equipo = USD 935.00 (Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))).
+- **Pintura:** 26.21 m² (caños y niples 3.2 + bridas, accesorios y válvulas (largo equivalente) 0.3 + envolvente 16.2 + estructura 6.5) × USD 7.51/m² (Pintura MO propia (por m2), ITT (costo propio de planta), 2024-10-31) = USD 196.92.
+- **Fabricación de la estructura:** 216 kg × USD 1.9/kg (Mano de obra estructura (tercero Ledesma), 2024-09) = USD 410.40.
+- **Prueba hidráulica:** 36 h × USD 13.00/h (Prueba hidráulica Desgacificador Alivios, 2025-09-05) = USD 468.00 · volumen interior de caños y niples 112.4 l.
+- **Radiografía 100% y tintas:** 10 placas chicas + 21 grandes + 1.00 servicio(s) de RX + 1.00 de LP por equipo = USD 1,550.00 (Servicio de radiografía (Antonelli) (2025-11; antonelli_end_2025-11)).
   Con las tarifas de Antonelli (11-2025) serían USD 1,550.00: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: tanque, 36", 1 u, materiales USD 8,618 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: tanque, 36", 1 u, materiales USD 8,862 por unidad)
 
-- **Ingeniería:** 170 h × USD 15/h = USD 2,550.00 · mediana de 101.3, 170.0, 420.5 h por unidad (repartidas en la serie y por tamaño) · antecedente: TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · Trampa lanzadora 20x16 (Serie 600 A6C) (20 / 16, 1 u, 2026-07-20) · rango del mismo tipo 250–250 h
-- **Calidad y dossier:** 125.4 h × USD 15/h = USD 1,881.00 · mediana de 121.6, 170.0, 125.4 h por unidad (repartidas en la serie y por tamaño) · antecedente: TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · Trampa lanzadora 20x16 (Serie 600 A6C) (20 / 16, 1 u, 2026-07-20) · rango del mismo tipo 250–250 h
-- **Montaje en planta (armado, movimientos, prueba hidráulica):** 377 h × USD 13/h = USD 4,901.00 · mediana de 120 h × 1.013, 554.4 h × 0.68, 756 h × 0.836 (horas por unidad × tamaño) · antecedente: TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · Trampa lanzadora 20x16 (Serie 600 A6C) (20 / 16, 1 u, 2026-07-20) · rango del mismo tipo 554.4–554.4 h
-- ⚠ No hay antecedente del mismo tipo y tamaño: se usó el más parecido de otro tipo. Revisar las horas.
-- La prueba hidráulica va dentro del montaje del antecedente: se sacó la fila PH para no cobrarla dos veces.
-- Candidatos: TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · Trampa lanzadora 20x16 (Serie 600 A6C) (20 / 16, 1 u, 2026-07-20) | Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Tanque de glicol (envolvente 12in sch30, SE-SPF-025) - opcio (12, 1 u, 2026-02-20) | TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E · Trampa lanzadora 8x6 #300 (LS-122/124) (8 / 6 (barrel 24 x 20 en tabla soldadura), 2 u, 2025-12-10)
+- ⚠ **No hay antecedente del mismo tipo (tanque) ni de uno afín: no se suman horas.** Cargarlas a mano con el detalle de actividades. Candidatos (de otro tipo, no usar sin revisar): TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · Trampa lanzadora 20x16 (Serie 600 A6C) (20 / 16, 1 u, 2026-07-20) | Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Tanque de glicol (envolvente 12in sch30, SE-SPF-025) - opcio (12, 1 u, 2026-02-20) | TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E · Trampa lanzadora 8x6 #300 (LS-122/124) (8 / 6 (barrel 24 x 20 en tabla soldadura), 2 u, 2025-12-10)
 
 ## 4. A completar (no se puede calcular)
 
@@ -69,3 +65,4 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - Armado y montaje (mano de obra de armado roscado o de terceros con el mismo alcance: `buscar_servicio.py`).
 - Ingeniería, calidad y dossier · embalaje · flete (kilos en `controles_tablas.md` al armar) · insumos.
 - Plazo (camino crítico con `comercial/plazos_proveedores.csv`).
+- ⚠ **Repuestos** (puesta en marcha y 2 años, si el pliego los pide), **transporte a destino** y **póliza de caución** (YPF y la mayoría de las licitaciones la piden): no se calculan; en CTRL-TS01 sumaron USD 1.915 por equipo y en CTRL-SK01 la caución USD 459.

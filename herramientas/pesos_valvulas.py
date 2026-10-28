@@ -7,6 +7,10 @@ con las tablas del codificador de Taval (fuentes_originales/codificador_taval_20
 diámetro (3), serie (1), extremos (1), material (2) y el resto (junta/trim/mando).
 Las hojas sin código (esféricas forjadas NPT y API 602) son tablas por diámetro: el peso va en la columna "Kg" de cada
 grupo y la serie es el título de la columna siguiente.
+También guarda el PRECIO de lista (columna "L30" o "Lista u$s") de cada código en conocimiento/precios/taval_lista30.csv,
+con el precio neto = lista × FACTOR_TAVAL (0,52: el que aplican las planillas TAVAL/72 y TAVAL/78 de 2026). El precio es
+el número que, dividido por los kg, da el "u$s x kg" de la columna vecina (así se lee igual en todas las hojas, aunque cambie
+el orden de las columnas).
 Controles: cada peso tiene que crecer con el diámetro dentro del mismo tipo, serie y hoja; lo que no cumple sale marcado.
 """
 import csv
@@ -20,6 +24,8 @@ RAIZ = Path(__file__).resolve().parent.parent
 LISTA = RAIZ / "fuentes_originales" / "taval_lista30_2025-09.xlsx"
 CODIF = RAIZ / "fuentes_originales" / "codificador_taval_2023-07.xlsx"
 SALIDA = RAIZ / "conocimiento" / "tecnico" / "valvulas_peso.csv"
+PRECIOS_L30 = RAIZ / "conocimiento" / "precios" / "taval_lista30.csv"
+FACTOR_TAVAL = 0.52  # lista 30 × 0,52 = costo de ITT (TAVAL/72 "Valvulas Taval.xlsx" y TAVAL/78 "Valvulas.xlsx", 07/08-2026)
 # Tipo según la hoja de la lista (manda sobre el código: hay códigos de otro modelo dentro de una hoja; se anota en tipo_codificador)
 TIPO_HOJA = {"Esclusas": "ESCLUSA", "Globo": "GLOBO", "Retencion": "RETENCION A CLAPETA", "PT Flotante": "ESFERICA PT FLOTANTE",
              "PT Guiada": "ESFERICA PT GUIADA", "PR Flotante": "ESFERICA PR FLOTANTE", "PR Guiada": "ESFERICA PR GUIADA",
@@ -94,13 +100,26 @@ def main():
                         break
                 if kg is None:
                     continue
+                num = lambda c: c.value if isinstance(c.value, (int, float)) and not isinstance(c.value, bool) else None
+                precio = None
+                jk = next(k for k in range(i + 1, min(i + 4, len(fila))) if fila[k].coordinate == celda)
+                for a in range(jk + 1, min(jk + 7, len(fila) - 1)):  # precio y "u$s x kg" después del peso
+                    pa, pb = num(fila[a]), num(fila[a + 1])
+                    if pa and pb and pa > 20 and abs(pa / kg - pb) <= 0.02 * pb:
+                        precio = pa
+                        break
+                if precio is None and jk >= 2:  # Waffer: precio, kg y u$s x kg
+                    pa, pb = num(fila[jk - 1]), num(fila[jk + 1]) if jk + 1 < len(fila) else None
+                    if pa and pb and pa > 20 and abs(pa / kg - pb) <= 0.02 * pb:
+                        precio = pa
                 t, d, s, e, m = v[:3], v[3:6], v[6], v[7], v[8:10]
                 dn_codigo = diam.get(d, "")
                 cerca = [x for x in dn_col if i - 1 <= x - 1 <= i + 3]  # título del grupo de columnas del código
                 dn_titulo = dn_col[min(cerca, key=lambda x: abs(x - 1 - i))] if cerca else None
                 nuevas.append({"_titulo": dn_titulo, "_codigo": dn_codigo,"tipo": TIPO_HOJA.get(ws.title, ws.title.upper()), "tipo_codificador": tipos.get(t, ""), "codigo_tipo": t, "dn_pulg": dn_codigo, "serie": serie.get(s, s),
                               "extremos": extremos.get(e, e), "material": material.get(m, m), "trim": trim if trim is not None else "",
-                              "kg": round(float(kg), 3), "codigo_taval": v, "hoja": ws.title, "celda": celda, "nota": ""})
+                              "kg": round(float(kg), 3), "codigo_taval": v, "hoja": ws.title, "celda": celda, "nota": "",
+                              "_precio": round(float(precio), 2) if precio else None})
         filas.extend(nuevas)  # la última fila de la hoja
     # Código y columna en desacuerdo: manda la medida cuyo peso se confirma en otra parte de la lista (mismo tipo, serie,
     # material y extremos); si no se puede confirmar, la regla de la fila (un código solo contra la columna: vale la columna).
@@ -157,9 +176,28 @@ def main():
                     else:
                         mat = grupo
                         tipo = "ESFERICA PT FLOTANTE " + ("FUNDIDA" if mat.upper() in ("WCB", "CF8M") else "FORJADA") + " NPT (API 608)"
+                    pr, uk = (fila[c.column].value if c.column < len(fila) else None), (fila[c.column + 1].value if c.column + 1 < len(fila) else None)
+                    precio = pr if isinstance(pr, (int, float)) and isinstance(uk, (int, float)) and pr > 20 and abs(pr / kg - uk) <= 0.02 * uk else None
                     filas.append({"tipo": tipo, "tipo_codificador": "", "codigo_tipo": "", "dn_pulg": float(dn), "serie": ser,
                                   "extremos": "NPT" if hoja != "API 602" else "SW/NPT", "material": mat, "trim": "", "kg": round(float(kg), 3),
-                                  "codigo_taval": "", "hoja": hoja, "celda": fila[c.column - 1].coordinate, "nota": ""})
+                                  "codigo_taval": "", "hoja": hoja, "celda": fila[c.column - 1].coordinate, "nota": "", "_precio": precio})
+    # precios de lista (una fila por código)
+    con_precio, vistos = [], set()
+    for f in filas:
+        clave_p = f["codigo_taval"] or f"{f['hoja']}|{f['tipo']}|{f['dn_pulg']}|{f['serie']}|{f['material']}"
+        if f.get("_precio") and clave_p not in vistos and f["dn_pulg"] != "":
+            vistos.add(clave_p)
+            con_precio.append({"codigo_taval": f["codigo_taval"], "tipo": f["tipo"], "dn_pulg": f["dn_pulg"], "serie": f["serie"], "extremos": f["extremos"],
+                               "material": f["material"], "trim": f["trim"], "kg": f["kg"], "precio_lista30_usd": f["_precio"],
+                               "factor": FACTOR_TAVAL, "precio_neto_usd": round(f["_precio"] * FACTOR_TAVAL, 2), "hoja": f["hoja"], "nota": f["nota"]})
+    for f in filas:
+        f.pop("_precio", None)
+    with open(PRECIOS_L30, "w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=list(con_precio[0].keys()) + ["fecha", "fuente"])
+        w.writeheader()
+        for f in sorted(con_precio, key=lambda f: (f["tipo"], str(f["serie"]), f["dn_pulg"], str(f["trim"]))):
+            w.writerow({**f, "fecha": "2025-09-01", "fuente": "Taval Lista 30 (09-2025), fuentes_originales/taval_lista30_2025-09.xlsx"})
+    print(f"{PRECIOS_L30.relative_to(RAIZ)}: {len(con_precio)} precios de lista (neto = lista × {FACTOR_TAVAL:g})")
     # control: el peso crece con el diámetro (mismo tipo, serie, hoja y material)
     grupos = {}
     for f in filas:

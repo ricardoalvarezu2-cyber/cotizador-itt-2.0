@@ -96,7 +96,7 @@ FAMILIAS = {
             ["tipo", "rango", "conexion", "marca"]),
     "JUN": ("Juntas, bulonería y aislación", ["tipo", "diametro", "serie", "material", "medida", "extremos"],
             ["tipo", "diametro", "serie", "material", "medida", "extremos"]),
-    "OTR": ("Otros e insumos", ["tipo"], []),
+    "OTR": ("Otros e insumos", ["tipo", "diametro", "serie"], ["tipo", "diametro", "serie"]),
 }
 COMUNES = ["codigo", "familia", "descripcion", "unidad", "ultimo_precio_usd", "iva", "alerta", "referencia_descartada_usd", "fecha_referencia_descartada", "fecha_ultimo_precio", "tipo_precio",
            "proveedor", "ruta_origen", "archivo_origen", "ruta_repo", "precio_ajustado_hoy_usd", "precios_en_historial",
@@ -113,7 +113,13 @@ ABREV = [(r"\besf\b", "valvula esferica"), (r"\bpt\b", "paso total"), (r"\bred c
          (r"\bred exc\b", "reduccion excentrica"), (r"\btrans presion\b", "transmisor de presion"), (r"\btrasmisor", "transmisor"), (r"\bret\b", "valvula retencion"),
          (r"\bescl\b", "valvula esclusa"), (r"\bbloq\.? y (pga|purga)\b", "bloqueo y purga"), (r"\bvalv byp\b|\bbyp\b", "valvula bloqueo y purga"),
          (r"\bept\b", "valvula esferica paso total"), (r"\bvalv reg\b", "valvula reguladora"), (r"a/fuego|a/fgo|\ba/f\b|\baf\b", "antifuego"),
-         (r"\bgda\b", "guiada"), (r"\ba-(?=\d{2,3}\b)", "a"), (r"\bunion doble golpe\b", "union doble a golpe")]
+         (r"\bgda\b", "guiada"), (r"\ba-(?=\d{2,3}\b)", "a"), (r"\bunion doble golpe\b", "union doble a golpe"),
+         (r"\besp\.? swi?\b", "junta espiralada"), (r"scrapper", "scraper"), (r"\bp\.t\.", "paso total"), (r"\bp\.r\.", "paso reducido"),
+         (r"\bwnrf\b", "wn rf"), (r"\bsorf\b", "so rf"), (r"\bswrf\b", "sw rf"), (r"\bblrf\b", "bl rf"), (r"\bwnrtj\b", "wn rtj")]
+# Otros: el tipo es la pieza (antes eran las tres primeras palabras y "tapa de cierre rápido #900" no se comparaba por Ø ni
+# serie; CTRL-TS01)
+OTR_TIPOS = [("tapa de cierre rapido", r"cierre rapido|\bqoc\b|quick open|tool-?less|futura"), ("u-bolt", r"u-?bolt|bulon u\b|abrazadera u\b"),
+             ("detector de scraper", r"detector|pig[- ]?sig|signaler|indicador de paso"), ("elemento filtrante", r"elemento filtrante|cartucho")]
 
 
 def expandir(t):
@@ -152,7 +158,7 @@ def familia_texto(t):
         return "OTR"
     if re.search(r"manometr|transmisor|trasmisor|termometr|termovaina|caudalimetr|coriolis|presostato|sensor|indicador de nivel|visor de nivel|v-cone|computador de (?:flujo|caudal)|flow computer", t):
         return "INS"
-    if re.search(r"junta|espiralad|ring joint|\bbx-?\d|\br\d{2}\b|esparrago|bulon|tuerca|kit dielectr|arandela", t):
+    if re.search(r"junta|espiralad|ring joint|\bbx ?-?\d|\br\d{2}\b|esparrago|bulon|tuerca|kit dielectr|arandela|anillo (?:octogonal|oval|rtj)|\brtj\b.*anillo", t):
         return "JUN"
     if re.search(r"\bbridas?\b", t):
         return "BRI"
@@ -266,6 +272,30 @@ def schedule_de(t, diam=None):
     return s.upper()
 
 
+def pulg_txt(v):
+    """1.875 → "1 7/8" (al 1/8 más cercano)."""
+    e, r = int(v), round((v - int(v)) * 8) / 8
+    if r == 1:
+        e, r = e + 1, 0
+    f = {0.125: "1/8", 0.25: "1/4", 0.375: "3/8", 0.5: "1/2", 0.625: "5/8", 0.75: "3/4", 0.875: "7/8"}.get(r, "")
+    return f"{e} {f}".strip() if e else (f or "0")
+
+
+def medida_esparrago(t):
+    """"Ø x largo" en pulgadas: "7/8 x 6", "7/8 x 145 mm" (→ 7/8 x 5 3/4), "1.25x207" (→ 1 1/4 x 8 1/8), "5/8 L=3 1/2".
+    Antes "7/8 x 145 mm" se leía "7/8 x 14" (CTRL-M01, TS01, SK01)."""
+    N = r"(\d+ \d/\d|\d/\d|\d+(?:[.,]\d+)?)"
+    m = re.search(r"(?<![\d/.,])" + N + r"\"?\s?(?:x|l ?=)\s?" + N + r"\s?(mm|\")?", t)
+    if not m:
+        return ""
+    a, b = (frac(x.replace(",", ".")) for x in m.groups()[:2])
+    if a is None or b is None or a > 4:
+        return ""
+    if m.group(3) == "mm" or b > 30:
+        b = b / 25.4
+    return f"{pulg_txt(a)} x {pulg_txt(b)}"
+
+
 def atributos(t, fam, proveedor=""):
     d = {}
     ds = diametros(t)
@@ -282,27 +312,38 @@ def atributos(t, fam, proveedor=""):
                  or (fam in ("VAL", "JUN") and re.search(T + r"\s+(150|300|600|900|1500|2500)\b", t)))
         sin_comillas = re.search(r"\bnps ?(\d{1,2}(?: \d/\d)?|\d/\d)\b", t) or (fam in ("VAL", "AFO", "NIP", "JUN") and re.search(T + r"\s?(?:npt|bspt)\b", t))
         ord_ds = pulgadas(t) or ([frac(stock.group(1))] if stock else []) or ([frac(sin_comillas.group(1))] if sin_comillas else []) or ds
-        ord_ds = [x for x in ord_ds if x in NPS_VALIDOS] if fam != "INS" else ord_ds  # "45,5"" no existe
+        ord_ds = [x for x in ord_ds if x in NPS_VALIDOS] if fam not in ("INS", "JUN") else ord_ds  # "45,5"" no existe (bulonería: 1 7/8" sí)
         if ord_ds:
             d["diametro"] = f"{ord_ds[0]:g}\""
             if len(ord_ds) > 1 and fam in ("AFO", "ABW") and re.search(r"reduc|buje", t):
                 d["diametro2"] = f"{ord_ds[1]:g}\""
     sr = series(t)
+    suelta = re.search(r"(?:\b(?:npt|sw|rf|rtj|bw|wog|lb)\s+|\|\s*)(150|300|600|800|900|1500|2000|2500|3000|6000)\b(?!\s?(?:mm|kg|°))", t) \
+        if fam in ("VAL", "BRI", "AFO") else None  # "NPT 800", "| 300 |": serie sin # (CTRL-SK01, P02)
     if sr:
         d["serie"] = sr[0]
     elif fam != "PER" and stock:
         d["serie"] = stock.group(2)
+    elif suelta:
+        d["serie"] = suelta.group(1)
     d["schedule"] = schedule_de(t, float(d["diametro"][:-1]) if d.get("diametro", "").endswith('"') else None)
+    sin_diam = not d.get("diametro")
     d["material"] = material_de(t)
     d["extremos"] = extremos_de(t, fam)
     if not d.get("diametro") and fam in ("JUN", "VAL", "BRI", "AFO", "ABW", "NIP"):
-        m = re.search(r"(?:junta \w+|esparrago|tuerca\w*(?: pesada)?|bulon|arandela|esferica(?: paso total)?|retencion|esclusa|brida \w+|codo|tee|niple)\s+(\d{1,2} \d/\d|\d/\d|\d{1,2})\b", t)
+        m = (re.search(r"(?:junta \w+|esparrago|tuerca\w*(?: pesada)?|bulon|arandela|esferica(?: paso total)?|retencion|esclusa|wafer|globo|brida \w+|codo(?: radio \w+)?(?: (?:90|45)(?: grados|o)?)?|tee|niple)[\s|]+(?!(?:90|45)\b)(\d{1,2} \d/\d|\d/\d|\d{1,2})\b(?!\s?(?:mm|kg|°|o\b))", t)
+             or re.search(r"(?<![\d/.,#])(?<!sch )(?<!sch)(\d{1,2})\s*(?:\||\s)\s*(?:150|300|600|900|1500|2500)\s?#", t)
+             or (fam in ("ABW", "BRI") and re.search(r"(?<![\d/.,#])(?<!sch )(?<!sch)(?<!x )(\d{1,2})\s+(?:bw|rf|rtj)\b", t)))
         if m:
             v = frac(m.group(1))
             if 0.125 <= v <= 60:
                 d["diametro"] = f"{v:g}\""
+                if sin_diam:  # XS/STD dependen del diámetro (XS de 10" no es sch 80)
+                    d["schedule"] = schedule_de(t, v)
     if fam == "VAL":
         d["tipo"] = primero(r"(bloqueo y purga|esferica|retencion|esclusa|aguja|globo|mariposa|seguridad|alivio|control|contrapresion|reguladora|tapon|solenoide|sdv|3 vias|tres vias|purga|c/actuador)", t)
+        if d["tipo"] in ("esferica", "esclusa", "globo") and re.search(r"retencion|\bcheck\b|\bwafer\b", t) and not re.search(r"mariposa", t):
+            d["tipo"] = "retencion"  # "VALVULA ESFERICA | Ø 12 - Ret" de las planillas Sacde es una retención (CTRL-SK01, VAL-03171)
         if d["tipo"] in ("esferica", "globo", "mariposa", "esclusa", "3 vias", "tres vias") and re.search(r"actuad|motoriz|electroactu|neumatic|c/actuador|con actuador|limitadora de caudal", t):
             d["tipo"] += " actuada"  # una válvula con actuador no se cotiza con una manual (CTRL-P01: globo de control a USD 80)
         d["trim"] = primero(r"(trim ?\d+|asientos? (?:metalic\w*|ptfe|teflon|blando\w*)|ptfe|metal[- ]metal)", t) or \
@@ -322,7 +363,8 @@ def atributos(t, fam, proveedor=""):
         d["cara"] = primero(r"\b(rtj|rf|ff)\b", t).upper()
         d["norma"] = primero(r"(b16\.5|b16\.47|api ?6a)", t).upper()
     elif fam == "CAN":
-        d["espesor_mm"] = (primero(r"sch\.? ?\w+ ?\((\d+[.,]\d+)\s?(?:mm)?\)", t) or primero(r"x\s?(\d+(?:[.,]\d+)?)\s?mm", t)
+        fr = primero(r"(?:esp\.?|espesor|e=)\s?(\d+ \d+/\d+|\d+/\d+)\s?(?:\"|pulg|plg)?", t)  # "esp. 5/8"" = 15,88 mm, no 5 (CTRL-TS01)
+        d["espesor_mm"] = (f"{frac(fr) * 25.4:.2f}" if fr else "") or (primero(r"sch\.? ?\w+ ?\((\d+[.,]\d+)\s?(?:mm)?\)", t) or primero(r"x\s?(\d+(?:[.,]\d+)?)\s?mm", t)
                            or primero(r"(?:esp\.?|espesor|e=)\s?(\d+(?:[.,]\d+)?)", t) or primero(r"\bx\s?(\d+,\d+)", t)).replace(",", ".")
         d["costura"] = "sin costura" if re.search(r"s/ ?c(ostura)?\b|sin costura|seamless", t) else ("con costura" if re.search(r"c/ ?c(ostura)?\b|con costura|erw", t) else "")
         d["revestimiento"] = primero(r"(tricapa\s?\w*|polipropileno|polietileno|galvanizado|epoxi)", t)
@@ -340,13 +382,16 @@ def atributos(t, fam, proveedor=""):
         d["rango"] = primero(r"(\d+\s?[-–a]\s?\d+\s?(?:bar|psi|kg/cm2|kg|°c|c\b))", t)
         d["conexion"] = primero(r"conex\w*\s?(\d/\d|\d)\"?", t)
     elif fam == "JUN":
-        d["tipo"] = primero(r"(junta monolitica|junta espiralada|espiralada|ring joint|kit dielectrico|kit junta aislamiento|kit de aislacion|junta dielectrica|junta plana|junta|esparrago|bulon|tuerca|arandela)", t)
+        d["tipo"] = "ring joint" if re.search(r"anillo (?:octogonal|oval|rtj)|\bbx ?-?\d", t) else primero(r"(junta monolitica|junta espiralada|espiralada|ring joint|kit dielectrico|kit junta aislamiento|kit de aislacion|junta dielectrica|junta plana|junta|esparrago|bulon|tuerca|arandela)", t)
         if d["tipo"] in ("kit junta aislamiento", "kit de aislacion"):
             d["tipo"] = "kit dielectrico"
-        m = re.search(r"(?<![\d/])(\d{1,2}(?: \d/\d)?|\d/\d)\"?\s?x\s?(\d{1,2}(?: \d/\d)?)\"?", t) if d["tipo"] in ("esparrago", "bulon") else None
-        d["medida"] = f"{m.group(1)} x {m.group(2)}" if m else ""
+        d["medida"] = medida_esparrago(t) if d["tipo"] in ("esparrago", "bulon") else ""
+        if d["medida"]:  # el Ø del espárrago es el primero de la medida ("1.25x207" → 1 1/4", no 1")
+            d["diametro"] = f"{frac(d['medida'].split(' x ')[0]):g}\""
+        if d["tipo"] == "ring joint":
+            d["medida"] = primero(r"\b((?:bx|rx|r) ?-?\d{2,3})\b", t).replace(" ", "").replace("-", "").upper()
     else:
-        d["tipo"] = " ".join(t.split()[:3])
+        d["tipo"] = next((n for n, rx in OTR_TIPOS if re.search(rx, t)), " ".join(t.split()[:3]))
     if fam in ("VAL", "INS"):
         d["marca"] = marca_de(t, proveedor)
         d["modelo"] = modelo_de(t)
@@ -383,8 +428,8 @@ def unidad_norm(u):
 
 def clave(fam, at, unidad="un"):
     campos = FAMILIAS[fam][2]
-    if not campos:
-        return None
+    if not campos or fam == "OTR":
+        return None  # "Otros": cada renglón es su propia pieza (no se juntan precios)
     oblig = {"VAL": ["tipo", "diametro", "serie"], "AFO": ["tipo", "diametro"], "ABW": ["tipo", "diametro"], "BRI": ["diametro", "serie"],
              "CAN": ["diametro"], "NIP": ["diametro", "largo_mm"], "PER": ["tipo", "designacion"], "INS": ["tipo", "rango"], "JUN": ["tipo", "diametro"]}[fam]
     if fam in ("VAL", "AFO", "ABW", "BRI", "CAN", "NIP") and not at.get("material"):
@@ -651,6 +696,23 @@ def leer_fuentes():
             add(r["descripcion"], num(r["precio"]), r["moneda"], r["fecha"], r["tipo_precio"], prov, r["archivo_origen"],
                 f"código {r['codigo']}" if r["codigo"] else "", "conocimiento/precios/listas_vendedor.csv", r["unidad"],
                 extra=f"{r['nota']}; documento del {r['fecha']}", iva=iva_de(r["iva"]))
+    # Lista 30 de Taval (herramientas/pesos_valvulas.py): precio neto = lista × 0,52, el factor de las planillas TAVAL/72 y
+    # TAVAL/78 (CTRL-P02 y SK01: la lista no estaba en el catálogo y se usaban planillas con otro descuento)
+    ruta_tv = PRECIOS / "taval_lista30.csv"
+    if ruta_tv.exists():
+        NOMBRE_TV = {"ESCLUSA": "valvula esclusa", "GLOBO": "valvula globo", "RETENCION A CLAPETA": "valvula retencion a clapeta",
+                     "RETENCION WAFER DUAL PLATE": "valvula retencion wafer dual plate", "ESFERICA PT GUIADA": "valvula esferica paso total guiada",
+                     "ESFERICA PR GUIADA": "valvula esferica paso reducido guiada", "ESFERICA PT FLOTANTE": "valvula esferica paso total flotante",
+                     "ESFERICA PR FLOTANTE": "valvula esferica paso reducido flotante", "FILTRO Y": "filtro Y",
+                     "ESCLUSA API 602": "valvula esclusa API 602", "GLOBO API 602": "valvula globo API 602",
+                     "ESFERICA PT FLOTANTE FORJADA NPT (API 608)": "valvula esferica paso total API 608", "ESFERICA PT FLOTANTE FUNDIDA NPT (API 608)": "valvula esferica paso total API 608"}
+        for r in csv.DictReader(open(ruta_tv, encoding="utf-8")):
+            d = float(r["dn_pulg"])
+            desc = (f"{NOMBRE_TV.get(r['tipo'], r['tipo'].lower())} {d:g}\" #{r['serie']} {r['extremos']} {r['material']}"
+                    + (f" trim {r['trim']}" if r["trim"] else "") + f" Taval {r['codigo_taval']}" + (" A105 forjada" if "FORJADA" in r["tipo"] or "API 602" in r["tipo"] else ""))
+            add(desc, num(r["precio_neto_usd"]), "USD", r["fecha"], "lista", f"Taval (Lista 30 × {r['factor']})", "taval_lista30_2025-09.xlsx",
+                f"código {r['codigo_taval']}, hoja {r['hoja']}", "fuentes_originales/taval_lista30_2025-09.xlsx", "un",
+                extra=f"lista USD {r['precio_lista30_usd']} × {r['factor']}; {r['kg']} kg", iva=None)
     # listas y cotizaciones nuevas que llegan por los pedidos de la página (web/LEEME.md, "Pedidos desde la página")
     ruta_ln = PRECIOS / "listas_nuevas.csv"
     if ruta_ln.exists():

@@ -34,7 +34,7 @@ def totales(carpeta):
     cot = json.load(open(carpeta / "cotizacion_auto.json", encoding="utf-8"))
     am = sum(i["cantidad"] * i["fuentes"][0]["precio"] for i in cot["items"] if i["grupo"] == "material")
     a_s = sum(i["cantidad"] * i["fuentes"][0]["precio"] for i in cot["items"] if i["grupo"] != "material")
-    sinp = {str(i["pos"]) for i in cot["items"] if not i["fuentes"][0]["precio"]}
+    sinp = {str(i["pos"]) for i in cot["items"] if not i["fuentes"][0]["precio"] and not i.get("provee")}
     real_sin = sum(float(h["total_usd"]) for h in hist if h["pos"] in sinp)  # lo que la app deja SIN PRECIO (a cotizar)
     return rm, rs, am, a_s, len(sinp), real_sin
 

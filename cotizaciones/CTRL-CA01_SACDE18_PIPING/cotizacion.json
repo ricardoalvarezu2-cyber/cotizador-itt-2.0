@@ -22,7 +22,7 @@
  "equipo": {
   "singular": "conjunto de spools",
   "plural": "conjuntos de spools",
-  "tipo": "manifold",
+  "tipo": "prefabricado",
   "diametro_pulg": 36
  },
  "parametros": {
@@ -39,7 +39,8 @@
   "fecha_referencia": "2026-04-20",
   "rx_pct": 100,
   "ph_horas": 18,
-  "FTV": 1.0
+  "FTV": 1.0,
+  "modo": "prefabricado"
  },
  "plazo": {
   "dias": 60,
