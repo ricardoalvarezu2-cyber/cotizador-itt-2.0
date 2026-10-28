@@ -91,10 +91,16 @@ tr.total td{background:var(--soft);font-weight:600}
 .totales .prim .v{color:var(--accent)}
 @media (max-width:760px){.totales{grid-template-columns:repeat(2,minmax(0,1fr))}.totales>div:nth-child(2){border-right:0}.totales>div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
 /* pestañas */
-.tabs{display:flex;gap:2px;border-bottom:2px solid var(--line);overflow-x:auto}
-.tabs button{border:0;border-bottom:3px solid transparent;border-radius:0;background:none;color:var(--muted);padding:9px 12px;margin-bottom:-2px}
-.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
-.tabs .cnt{font:500 11px var(--f-mono);color:var(--muted);margin-left:4px}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;padding:6px;background:var(--soft);border:1px solid var(--line);border-radius:8px;margin:6px 0 4px}
+@media (max-width:640px){.tabs button{font-size:14px;padding:8px 10px;flex:1 1 auto;justify-content:center}}
+.tabs button{font:600 15px var(--f-body);border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--ink);padding:10px 16px;display:flex;align-items:center;gap:7px}
+.tabs button:hover{border-color:var(--accent);color:var(--accent)}
+.tabs button[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);box-shadow:0 1px 3px rgba(0,0,0,.18)}
+.tabs .paso{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font:700 12px var(--f-body)}
+.tabs button[aria-selected="true"] .paso{background:var(--accent-ink);color:var(--accent)}
+.tabs .cnt{font:600 11.5px var(--f-mono);background:var(--soft);color:var(--muted);border-radius:10px;padding:1px 7px}
+.tabs button[aria-selected="true"] .cnt{background:rgba(255,255,255,.22);color:var(--accent-ink)}
+.tabs .cnt.alerta{background:#f8e1de;color:#a3392f}
 /* buscador */
 .buscador{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px}
 .resultado{display:grid;grid-template-columns:auto 1fr auto;gap:4px 12px;padding:10px 12px;border-bottom:1px solid var(--line);align-items:start}
@@ -1212,7 +1218,7 @@ if (typeof module !== "undefined") module.exports = Documentos;
         <span class="guardado" id="guardado">${S.pendiente ? "cambios sin guardar…" : "guardado"}</span></div></div></header>
       ${cot.estado === "borrador" ? `<div class="aviso"><b>Borrador, sin revisar.</b><span class="small">Los números se muestran como borrador hasta pasar a "revisado". La herramienta nunca envía nada al cliente.</span></div>` : ""}
       <div class="totales" id="totales">${totalesHtml(c, eq)}</div>
-      <div class="tabs" role="tablist">${TABS.map(([k, t]) => `<button role="tab" aria-selected="${S.tab === k}" data-a="tab" data-v="${k}">${t}${k === "materiales" ? `<span class="cnt">${n("material")}</span>` : k === "servicios" ? `<span class="cnt">${n("mo")}</span>` : k === "resumen" && avs.length ? `<span class="cnt">${avs.length} avisos</span>` : ""}</button>`).join("")}</div>
+      <div class="tabs" role="tablist">${TABS.map(([k, t], i) => `<button role="tab" aria-selected="${S.tab === k}" data-a="tab" data-v="${k}"><span class="paso">${i + 1}</span>${t}${k === "materiales" ? `<span class="cnt">${n("material")}</span>` : k === "servicios" ? `<span class="cnt">${n("mo")}</span>` : k === "resumen" && avs.length ? `<span class="cnt alerta">${avs.length} avisos</span>` : ""}</button>`).join("")}</div>
       <div id="tab">${{ datos: tabDatos, materiales: tabMateriales, servicios: tabServicios, plazo: tabPlazo, oferta: tabOferta, resumen: tabResumen }[S.tab]()}</div>`;
     if (S.tab === "materiales") pintarResultadosMat();
     if (S.tab === "servicios") pintarResultadosSrv();

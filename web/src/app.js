@@ -259,7 +259,7 @@
         <span class="guardado" id="guardado">${S.pendiente ? "cambios sin guardar…" : "guardado"}</span></div></div></header>
       ${cot.estado === "borrador" ? `<div class="aviso"><b>Borrador, sin revisar.</b><span class="small">Los números se muestran como borrador hasta pasar a "revisado". La herramienta nunca envía nada al cliente.</span></div>` : ""}
       <div class="totales" id="totales">${totalesHtml(c, eq)}</div>
-      <div class="tabs" role="tablist">${TABS.map(([k, t]) => `<button role="tab" aria-selected="${S.tab === k}" data-a="tab" data-v="${k}">${t}${k === "materiales" ? `<span class="cnt">${n("material")}</span>` : k === "servicios" ? `<span class="cnt">${n("mo")}</span>` : k === "resumen" && avs.length ? `<span class="cnt">${avs.length} avisos</span>` : ""}</button>`).join("")}</div>
+      <div class="tabs" role="tablist">${TABS.map(([k, t], i) => `<button role="tab" aria-selected="${S.tab === k}" data-a="tab" data-v="${k}"><span class="paso">${i + 1}</span>${t}${k === "materiales" ? `<span class="cnt">${n("material")}</span>` : k === "servicios" ? `<span class="cnt">${n("mo")}</span>` : k === "resumen" && avs.length ? `<span class="cnt alerta">${avs.length} avisos</span>` : ""}</button>`).join("")}</div>
       <div id="tab">${{ datos: tabDatos, materiales: tabMateriales, servicios: tabServicios, plazo: tabPlazo, oferta: tabOferta, resumen: tabResumen }[S.tab]()}</div>`;
     if (S.tab === "materiales") pintarResultadosMat();
     if (S.tab === "servicios") pintarResultadosSrv();
