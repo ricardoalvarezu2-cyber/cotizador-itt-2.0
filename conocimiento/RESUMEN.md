@@ -1,6 +1,6 @@
 # Resumen para cotizar — ITT S.A.
 
-Los parámetros clave en una página. El detalle y la fuente de cada número están en los archivos enlazados. Actualizado al 27/10/2026.
+Los parámetros clave en una página. El detalle y la fuente de cada número están en los archivos enlazados. Actualizado al 28/10/2026. Estado del proyecto y pendientes: [`estado_y_pendientes.md`](estado_y_pendientes.md).
 
 ## Precio de venta
 
@@ -12,8 +12,9 @@ Los parámetros clave en una página. El detalle y la fuente de cada número est
 | Factor efectivo de las ofertas **ganadas** en 2026 | **1,28 – 1,35** (mediana de todas las ofertas: 1,34) | `comercial/cotizaciones_2026.csv` |
 | Ofertas grandes y competitivas | 1,15 – 1,25 | Ídem |
 | Bonificación al negociar | 1,5 – 7% | `aprendizajes_2026.md` |
-| IVA | 21%, aparte | — |
+| IVA | 21%, aparte. **Todo costo y precio se trabaja sin IVA** (con IVA se divide por la alícuota; si no dice, sin IVA) | Decisión de Matías 27/10/2026 |
 | Moneda y entrega | USD, facturado en pesos al TC BNA · EXW planta Quilmes Oeste | Ofertas 2026 |
+| Pesos a dólares | **Promedio mensual del dólar oficial BNA venta** (`costos/dolar_mensual.csv`), salvo que el documento diga su tipo de cambio | Decisión de Matías 27/10/2026 |
 
 El factor lo define la dirección en cada cotización. La herramienta propone 1,35 y muestra escenarios.
 
@@ -27,7 +28,8 @@ El factor lo define la dirección en cada cotización. La herramienta propone 1,
 | Radiografía (Antonelli nov-2025) | 490 USD/servicio cada 40 placas · placa chica 15 USD · grande 20 USD | Ídem |
 | Granallado + pintura (tercero) | ~35 USD/m² + 19 USD/m² de suministro | Ídem |
 | Chapa A36 | ~1,16 USD/kg (+10% de recortes) | Ídem |
-| Precios de materiales y componentes | 2.680 precios con fecha y fuente | `precios/indice_precios.csv` |
+| Precios de materiales | **Catálogo de 2.310 materiales** sin IVA, con último precio, fecha, ruta de origen y alertas: `python herramientas/buscar_material.py "<descripción>" [--marca X]` | `precios/catalogo_materiales.xlsx` |
+| Pesos y superficies | Caños kg/m y m²/m; bridas y accesorios kg/pieza (borrador) | `tecnico/` |
 
 Cómo se calcula cada rubro (pulgadas equivalentes, placas, superficie, kg): [`reglas_de_calculo.md`](reglas_de_calculo.md).
 
@@ -41,6 +43,8 @@ Cómo se calcula cada rubro (pulgadas equivalentes, placas, superficie, kg): [`r
 | Skids | ~110 días | ~160 días |
 | Calentadores | ~120 días | ~430 días en 2022–23 |
 | Separadores, trampas y tanques | 140–150 días | ~370 días en 2022–23 |
+
+Plazos de entrega por proveedor y rubro (válvulas esféricas ~90 días, control ~94, PSV ~100, instrumentos ~85–90, tapas de cierre rápido ~75): `comercial/plazos_proveedores_resumen.md` (borrador).
 
 **Lo que define el plazo es el material, no el taller.** Con el material en planta, un equipo mediano lleva 6–10 semanas de taller. Los ítems críticos son las bridas API 6A (75–90 días), las tapas de cierre rápido (90–110 días), las válvulas de control y de seguridad (2–3+ meses), la instrumentación (12–14 semanas) y todo lo importado. Ver [`plazos.md`](plazos.md).
 

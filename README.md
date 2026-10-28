@@ -6,10 +6,17 @@ Herramienta de cotización asistida por IA para ITT S.A.: lee pedidos de cliente
 
 | Parte | Estado |
 |---|---|
-| Base de conocimiento ([`conocimiento/`](conocimiento/README.md)) | ✅ Reglas de cálculo, tarifas, plazos, precios, codificación, historial comercial y 93 cotizaciones de 2026 analizadas |
+| Base de conocimiento ([`conocimiento/`](conocimiento/README.md)) | ✅ Reglas de cálculo, tarifas, plazos, precios, codificación, historial comercial y 159 cotizaciones 2025–2026 analizadas |
 | Lectura de documentos (PDF, DWG/DXF, Excel, Word, mails) | ✅ Herramientas instaladas y probadas |
 | Proceso de cotización completo: carpeta por cotización, `cotizacion.json`, motor de costo con ajuste por inflación, planilla, informe interactivo, oferta técnica y económica con formato ITT y controles automáticos | ✅ Probado con la COT26-1003-001 (CAPEX OQ8209). Guía: [`conocimiento/guia_cotizacion.md`](conocimiento/guia_cotizacion.md) |
 | Registro de cotizaciones y resultados | ✅ [`cotizaciones/README.md`](cotizaciones/README.md) |
+| Índice de proyectos y buscador de antecedentes 2025–2026 | ✅ `herramientas/buscar_antecedentes.py` |
+| Catálogo de materiales (sin IVA, por familia, con marca, alertas y auditoría independiente) | ✅ `herramientas/buscar_material.py` |
+| Dólar mensual 2024–2026 e índices de inflación | ✅ `conocimiento/costos/` |
+| Tablas de pesos, marcas aprobadas por cliente y plazos de proveedores | 🟡 Borrador ([`estado_y_pendientes.md`](conocimiento/estado_y_pendientes.md)) |
+| Catálogo de mano de obra y servicios | ⏳ En curso (`herramientas/catalogo_servicios_instrucciones.md`) |
+
+**Al empezar un chat nuevo: leer [`conocimiento/estado_y_pendientes.md`](conocimiento/estado_y_pendientes.md).**
 | Agentes de extracción automática de planos (lectura de la tabla del plano y del P&ID) | ⏳ Próximo paso. Hoy la tabla se transcribe con ayuda de Claude |
 
 ## Cómo se cotiza

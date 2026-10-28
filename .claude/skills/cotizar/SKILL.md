@@ -5,7 +5,7 @@ description: Cotizar un pedido de cliente de ITT (puentes, skids, manifolds, col
 
 # Cotizar un pedido de ITT
 
-Seguí **en orden** `conocimiento/guia_cotizacion.md` (pasos 1–9), respetando las reglas de `conocimiento/procedimiento_cotizacion.md` (P1–P10). Antes de empezar, leé `conocimiento/errores_y_lecciones.md`: ahí están los errores que ya se cometieron. El caso modelo es `cotizaciones/COT26-1003-001_CAPEX_OQ8209/` (leé su `bitacora.md` y su `cotizacion.json`).
+Leé primero `conocimiento/estado_y_pendientes.md`. Seguí **en orden** `conocimiento/guia_cotizacion.md`, respetando las reglas de `conocimiento/procedimiento_cotizacion.md` (P1–P10). Antes de empezar, leé `conocimiento/errores_y_lecciones.md`: ahí están los errores que ya se cometieron. El caso modelo es `cotizaciones/COT26-1003-001_CAPEX_OQ8209/` (leé su `bitacora.md` y su `cotizacion.json`).
 
 ## Flujo
 
@@ -19,6 +19,11 @@ Seguí **en orden** `conocimiento/guia_cotizacion.md` (pasos 1–9), respetando 
 7 bis. **Preliminar → Compras → definitivo:** el preliminar (con piezas similares) se presenta con la lista para Compras. Matías no compra. Cuando llegan las respuestas se cargan como fuente de base `cot` / `igual` y se vuelve a armar.
 8. **Presentar a Matías:** siempre como "borrador, sin revisar" hasta que esté revisado. Publicar `informe.html` con la herramienta Artifact y mandar la planilla y las ofertas con SendUserFile.
 9. **Registrar:** actualizar `bitacora.md`, `cotizaciones/README.md` y `errores_y_lecciones.md` si hubo errores. Después, commit y push.
+
+## Datos que se usan siempre igual
+- Precios **sin IVA**; pesos a dólares con el **promedio mensual del oficial BNA venta** (`conocimiento/costos/dolar_mensual.csv`), salvo que el documento diga su tipo de cambio.
+- Materiales: `buscar_material.py` (columna `alerta`: revisar antes de usar). Marcas del cliente: `comercial/marcas_aprobadas.csv`. Plazos de proveedores: `comercial/plazos_proveedores.csv` (para el camino crítico, el máximo del rubro si es "stock salvo venta"). Kg y m²: `tecnico/canos_peso_superficie.csv`, `bridas_peso.csv`, `accesorios_peso.csv` (estos dos, borrador). MO y servicios: `precios/catalogo_servicios.*` cuando exista (si no, `costos/tarifas.csv` y antecedentes con el mismo alcance).
+- Al terminar, actualizar `conocimiento/estado_y_pendientes.md`.
 
 ## Nunca
 

@@ -3,12 +3,15 @@
 ## Contexto
 - Herramienta de cotización para ITT S.A. (Quilmes, Argentina), fabricante de equipos para oil & gas: calentadores, separadores, filtros, skids, manifolds, colectores, puentes de medición, cañerías, tanques y trampas. Empresa del grupo Taval (válvulas).
 - Usuario: Matías Russo, de ventas de ITT. Idioma: **español rioplatense**.
-- La base de conocimiento está en `conocimiento/` y empieza por `conocimiento/RESUMEN.md`. Las fuentes están en `fuentes_originales/`.
+- La base de conocimiento está en `conocimiento/` y empieza por **`conocimiento/estado_y_pendientes.md`** (estado, decisiones y pendientes: leerlo al empezar cada chat y actualizarlo al terminar) y `conocimiento/RESUMEN.md`. Las fuentes están en `fuentes_originales/`.
 
 ## Reglas de datos
 - **El repositorio es privado. No omitir ni filtrar información por privacidad.** Se guardan completos los contactos de clientes y proveedores, los sueldos, los costos internos y los precios, porque sirven para costear (por ejemplo, la mano de obra). Pedido explícito del usuario el 27/10/2026.
 - La prioridad es que el cotizador **no falle por falta o pérdida de información**: todo lo que se procese se guarda en el repositorio. El entorno de trabajo es temporal y lo que no se sube a GitHub se pierde.
 - Una sola versión vigente de cada dato, con fecha y fuente. Ante dos versiones, vale la más reciente y se anota la decisión en `conocimiento/fuentes.md`.
+- **Todo costo y precio se trabaja SIN IVA.** Con IVA se divide por la alícuota (21% o 10,5%); si no dice, se toma sin IVA (decisión de Matías, 27/10/2026).
+- **Pesos a dólares: promedio mensual del dólar oficial BNA venta** (`conocimiento/costos/dolar_mensual.csv`), salvo que el documento diga su tipo de cambio (decisión de Matías, 27/10/2026). Nunca mezclar cotizaciones del dólar (oficial, divisa, MEP, blue) en una misma serie.
+- Números y fechas de documentos se leen siempre con `herramientas/numeros.py` (4.500 / 4,500 / 4500; nunca una fecha por defecto). Después de tocar el catálogo de materiales, correr `python herramientas/test_catalogo.py`.
 - No hay a quién consultar las planillas viejas (Javier Elejondo ya no está en la empresa): ante dudas, tomar el criterio con más sentido técnico y dejarlo documentado.
 
 ## Ubicación de los originales
