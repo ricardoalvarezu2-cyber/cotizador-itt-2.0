@@ -39,6 +39,11 @@ from numeros import fecha_iso, leer_numero  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
 COMPRA_VIGENTE = "2022-01-01"
+# Fin del cepo cambiario. Decisión de Matías (28/10/2026): los valores anteriores cuyo documento no dice con qué tipo de
+# cambio se pasaron a dólares se DESCARTAN como precio (quedan en el historial como referencia) y vale el último valor
+# confiable. Prueba de por qué: el stock pasa sus compras en pesos a dólares con el TC del día del informe (la misma compra
+# del 13/06/2023 figura a USD 2,37 en sep-2024 y a 2,25 en nov-2024).
+FIN_CEPO = "2025-04-14"
 PRECIOS = RAIZ / "conocimiento" / "precios"
 TEXTOS = RAIZ / "fuentes_originales" / "ofertas_texto"
 Z = "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\"
@@ -65,7 +70,7 @@ FAMILIAS = {
             ["tipo", "diametro", "serie", "material", "medida", "extremos"]),
     "OTR": ("Otros e insumos", ["tipo"], []),
 }
-COMUNES = ["codigo", "familia", "descripcion", "unidad", "ultimo_precio_usd", "iva", "alerta", "fecha_ultimo_precio", "tipo_precio",
+COMUNES = ["codigo", "familia", "descripcion", "unidad", "ultimo_precio_usd", "iva", "alerta", "referencia_descartada_usd", "fecha_referencia_descartada", "fecha_ultimo_precio", "tipo_precio",
            "proveedor", "ruta_origen", "archivo_origen", "ruta_repo", "precio_ajustado_hoy_usd", "precios_en_historial",
            "precio_min_usd", "precio_max_usd", "primera_fecha", "confianza_clasificacion"]
 PRIORIDAD = {"cotización": 4, "compra": 4, "planilla interna": 3, "lista": 2, "stock (precio maestro)": 1}
@@ -596,9 +601,14 @@ def main():
     filas = []
     for k, hs in sorted(grupos.items(), key=lambda kv: registro[kv[0]]):
         hs.sort(key=lambda h: (h["fecha"], PRIORIDAD.get(h["tipo_precio"], 0)), reverse=True)
-        u = hs[0]
-        precios = [h["precio_usd"] for h in hs]
-        alertas = []
+        for h in hs:
+            h["confiable"] = not (h["fecha"] and h["fecha"] < FIN_CEPO and "tc_explicito" not in h["nota"])
+            if not h["confiable"]:
+                h["nota"] = "; ".join(x for x in ["descartado: período con cepo, dólar sin aclarar", h["nota"]] if x)
+        buenos = [h for h in hs if h["confiable"]]
+        u = buenos[0] if buenos else hs[0]
+        precios = [h["precio_usd"] for h in (buenos or hs)]
+        alertas = [] if buenos else [f"sin precio confiable (solo valores del período con cepo; referencia descartada USD {hs[0]['precio_usd']:,.2f} del {hs[0]['fecha']}): pedir cotización"]
         if max(precios) > 3 * min(precios):
             alertas.append(f"historial con precios muy distintos ({min(precios):,.2f} a {max(precios):,.2f}): revisar")
         par = sorted(pares[(u["familia"], u["atributos"].get("tipo", ""), u["atributos"].get("diametro", ""), u["unidad"])])
@@ -613,9 +623,11 @@ def main():
         if "ambiguo" in u["nota"]:
             alertas.append("número ambiguo en el origen")
         fila = {"codigo": registro[k], "alerta": "; ".join(alertas), "familia": FAMILIAS[u["familia"]][0], "descripcion": u["descripcion"][:200],
-                "unidad": u["unidad"], "ultimo_precio_usd": u["precio_usd"], "iva": u["iva"], "fecha_ultimo_precio": u["fecha"], "tipo_precio": u["tipo_precio"],
+                "unidad": u["unidad"], "ultimo_precio_usd": u["precio_usd"] if buenos else "", "iva": u["iva"],
+                "fecha_ultimo_precio": u["fecha"] if buenos else "", "tipo_precio": u["tipo_precio"],
+                "referencia_descartada_usd": "" if buenos else u["precio_usd"], "fecha_referencia_descartada": "" if buenos else u["fecha"],
                 "proveedor": u["proveedor"], "ruta_origen": u["ruta_origen"], "archivo_origen": u["archivo_origen"], "ruta_repo": u["ruta_repo"],
-                "precio_ajustado_hoy_usd": u["precio_ajustado_hoy_usd"], "precios_en_historial": len(hs), "precio_min_usd": min(precios),
+                "precio_ajustado_hoy_usd": u["precio_ajustado_hoy_usd"] if buenos else "", "precios_en_historial": len(hs), "precio_min_usd": min(precios),
                 "precio_max_usd": max(precios), "primera_fecha": hs[-1]["fecha"], "confianza_clasificacion": u["confianza_clasificacion"],
                 "_fam": u["familia"], "_at": u["atributos"], "_nota": u["nota"]}
         for h in hs:
@@ -664,7 +676,7 @@ def escribir_excel(filas):
         ws.auto_filter.ref = ws.dimensions
     base = ["codigo", "descripcion", "unidad", "ultimo_precio_usd", "iva", "fecha_ultimo_precio", "tipo_precio", "proveedor",
             "precio_ajustado_hoy_usd", "precios_en_historial", "precio_min_usd", "precio_max_usd", "ruta_origen", "archivo_origen", "ruta_repo",
-            "confianza_clasificacion", "alerta"]
+            "confianza_clasificacion", "alerta", "referencia_descartada_usd", "fecha_referencia_descartada"]
     hoja("Todos", ["familia"] + base, [[fl["familia"]] + [fl[c] for c in base] for fl in filas])
     for k, (nombre, cols, _) in FAMILIAS.items():
         fs = [fl for fl in filas if fl["_fam"] == k]

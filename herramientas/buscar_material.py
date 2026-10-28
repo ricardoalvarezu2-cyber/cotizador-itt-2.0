@@ -76,14 +76,14 @@ def main():
         oblig = [c for c in campos if c not in opcionales]
         igual = not difs and all(at.get(c) for c in oblig)
         misma_marca = bool(marca) and norm(r.get("marca", "")) == norm(marca)
-        res.append((igual, misma_marca, -len(difs), coinc, r["fecha_ultimo_precio"], difs, r))
-    res.sort(key=lambda x: x[:5], reverse=True)
+        res.append((igual, misma_marca, -len(difs), bool(r["ultimo_precio_usd"]), coinc, r["fecha_ultimo_precio"], difs, r))
+    res.sort(key=lambda x: x[:6], reverse=True)  # a igual parecido, primero el que tiene precio confiable
     if not res:
         print("No hay precios de esa familia y tipo en el catálogo. Pedir cotización a Compras.")
         return
     if marca and fam in ("VAL", "INS") and not any(x[1] for x in res):
         print(f"No hay precios de la marca {marca} para esta pieza: se listan otras marcas.")
-    for i, (igual, misma, _, coinc, _, difs, r) in enumerate(res[:q.top], 1):
+    for i, (igual, misma, _, _, coinc, _, difs, r) in enumerate(res[:q.top], 1):
         estado = "IGUAL" if igual else "SIMILAR"
         if marca and fam in ("VAL", "INS") and not misma:
             estado += " (otra marca)"
@@ -91,9 +91,15 @@ def main():
         if fam in ("VAL", "INS"):
             mm = f" · marca: {r.get('marca') or 'sin identificar'}" + (f" · modelo {r['modelo']}" if r.get("modelo") else "")
         print(f"\n{i}. {estado} · {r['codigo']}{mm} · {r['descripcion'][:110]}")
-        print(f"   Último precio: USD {float(r['ultimo_precio_usd']):,.2f} / {r['unidad'] or 'unidad s/d'} · {r['fecha_ultimo_precio']} · {r['tipo_precio']} · {r['proveedor']}")
-        print(f"   Ajustado a hoy: USD {float(r['precio_ajustado_hoy_usd']):,.2f} · {r['precios_en_historial']} precio(s) en el historial"
-              + (f" (entre {float(r['precio_min_usd']):,.2f} y {float(r['precio_max_usd']):,.2f})" if int(r["precios_en_historial"]) > 1 else ""))
+        if not r["ultimo_precio_usd"]:
+            print(f"   SIN PRECIO CONFIABLE: solo hay valores del período con cepo (referencia descartada USD "
+                  f"{float(r['referencia_descartada_usd']):,.2f} del {r['fecha_referencia_descartada']}, {r['proveedor']}). Pedir cotización.")
+        else:
+            print(f"   Último precio: USD {float(r['ultimo_precio_usd']):,.2f} / {r['unidad'] or 'unidad s/d'} · {r['fecha_ultimo_precio']} · {r['tipo_precio']} · {r['proveedor']}")
+            print(f"   Ajustado a hoy: USD {float(r['precio_ajustado_hoy_usd']):,.2f} · {r['precios_en_historial']} precio(s) en el historial"
+                  + (f" (entre {float(r['precio_min_usd']):,.2f} y {float(r['precio_max_usd']):,.2f})" if int(r["precios_en_historial"]) > 1 else ""))
+        if r.get("alerta") and r["ultimo_precio_usd"]:
+            print(f"   ALERTA: {r['alerta']}")
         if difs:
             print(f"   Difiere en: {'; '.join(difs)}")
         print(f"   Origen: {r['ruta_origen']}" + (f" · {r['archivo_origen']}" if r["archivo_origen"] else ""))

@@ -91,6 +91,10 @@ Los meses intermedios se interpolan. Octubre 2026 es estimado. Hay que actualiza
 
 **Decisión de Matías (27/10/2026): para pasar pesos a dólares se usa el promedio mensual del dólar oficial BNA billete, precio de venta.** Si el documento dice su tipo de cambio, se usa ese. Fundamento: en todos los textos de cotizaciones, pliegos y OC no hay ninguna mención a MEP, blue ni CCL; cuando se aclara, es siempre BNA vendedor (divisa o billete). Para precios en pesos llevados a hoy con `indice_local_usd`, el dólar del pasado se cancela en la cuenta. `indices_ajuste.csv` toma ese promedio para todos los meses desde ene-2024 (reemplaza a las anclas interpoladas y a las del dólar divisa que se habían cargado por error). Riesgo que queda: datos que alguien pasó a dólares durante el cepo sin decir con qué tipo de cambio (costo hora de planta oct-2024, compras del stock 2022–2024).
 
+## Período con cepo (decisión del 28/10/2026)
+
+Los valores con fecha anterior al 14/04/2025 cuyo documento no dice con qué tipo de cambio se pasaron a dólares se descartan como precio y vale el último valor confiable. Prueba: el stock valorizado pasa las compras en pesos a dólares con el TC del día del informe (la compra del 13/06/2023 del espárrago 5/8 x 3 1/4 figura a USD 2,37 en la hoja de sep-2024 y a 2,25 en la de nov-2024). En el catálogo de materiales esto deja 1.020 de 2.310 materiales "sin precio confiable" (casi todo el stock, incluidas 53 de 58 válvulas): conservan el valor descartado como referencia y la alerta "pedir cotización". Excepción documentada: costo de planta oct-2024 (TC 997–998,5 explícito en la hoja "Sueldos").
+
 ## Faltantes conocidos
 
 1. **Plazos:** cubierto en parte con el seguimiento de proyectos (ver `plazos.md`). Faltan plazos de proveedores actualizados por rubro.

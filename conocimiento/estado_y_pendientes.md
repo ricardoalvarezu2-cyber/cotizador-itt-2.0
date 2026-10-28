@@ -40,27 +40,26 @@
 | 27/10/2026 | **Dólar para convertir: promedio mensual del oficial BNA, venta**; si el documento dice su tipo de cambio, ese | Matías | `fuentes.md`, `dolar_mensual.csv` |
 | 28/10/2026 | 2025 y 2026 con dólar oficial (desde el 14/04/2025 la brecha es menor al 2%) | Propuesta aceptada en la conversación | — |
 | 27/10/2026 | Compras del stock anteriores a 2022 no se usan (precio maestro nov-2024) | Criterio técnico (documentado) | `fuentes.md` |
+| 28/10/2026 | **Valores anteriores al 14/04/2025 (cepo) sin tipo de cambio explícito: se descartan** y vale el último valor confiable. Si no hay ninguno, el material queda "sin precio confiable: pedir cotización", con el valor descartado como referencia | Matías | `catalogo_materiales.py` (FIN_CEPO), `verificar_computo.py` |
+| 28/10/2026 | No hay más información de precios que la ya entregada: el último precio se sigue eligiendo por fecha (no hay otras compras para preferir sobre la lista de Renard) | Matías | — |
 
 ## 3. Pendientes del proyecto
 
 **Decide Matías**
-1. Alerta con dólar blue para valores en USD de ene-2024 a abr-2025 sin tipo de cambio visible.
-2. Compra o cotización reciente antes que la lista de Renard.
-3. Sacar o dejar los renglones de IVA de referencia en la planilla.
-4. Escalas salariales UOM (dato de ITT).
-5. Tasa de interés que usa ITT (costo financiero del plazo de pago).
-6. Etapas 2 de los catálogos (servicios: planillas de costo; materiales: planillas y reporte de compras 2021–2024).
-7. Instalar la herramienta en la PC de Matías.
+1. Renglones "IVA 21%" y "total con IVA" de referencia en la planilla de la cotización: ¿se dejan? (hoy se dejan).
 
-**Hace Claude**
-1. Catálogo de MO y servicios etapa 1 (si no está en `precios/catalogo_servicios.*`, relanzar con `herramientas/catalogo_servicios_instrucciones.md`).
-2. Revisión independiente de los pesos de bridas y accesorios.
-3. Vendor lists de PAE (A7XN-RC-85-SP-0027_R1), Pampa y Pluspetrol (AARC-100-ET-X-001): buscar en el RAR de la Tanda 1.
-4. Integrar en `armar_cotizacion.py` las tablas nuevas: plazos (camino crítico), pesos (kg y m²), marcas (control del pliego).
+**Hace Claude** (aprobado el 28/10/2026: "el resto, dale para adelante")
+1. Catálogo de MO y servicios etapa 1 (en curso; si no está en `precios/catalogo_servicios.*`, relanzar con `herramientas/catalogo_servicios_instrucciones.md`).
+2. Etapa 2 de los catálogos: costos renglón por renglón de las planillas de costo 2025–2026 (materiales, MO y servicios).
+3. Revisión independiente de los pesos de bridas y accesorios.
+4. Vendor lists de PAE (A7XN-RC-85-SP-0027_R1), Pampa y Pluspetrol (AARC-100-ET-X-001): buscar en el RAR de la Tanda 1.
+5. Integrar en `armar_cotizacion.py` las tablas nuevas: plazos (camino crítico), pesos (kg y m²), marcas (control del pliego).
 
-**Datos a pedir a Compras o proveedores**
-1. Plazos de pintura y END (no hay ningún dato).
-2. Confirmar los precios sospechosos de la auditoría (columna `alerta` del catálogo).
+**Al terminar el proyecto** (decisión de Matías)
+1. Confirmar con Compras los precios sospechosos de la auditoría (columna `alerta`).
+2. Instalar la herramienta en la PC de Matías, recién cuando esté completa y funcionando al 100%.
+
+**Descartado por ahora** (decisión de Matías, 28/10/2026): escalas UOM, tasa de interés / costo financiero, plazos de pintura y END, reporte de compras 2021–2024 en pesos (además cae en el período con cepo).
 
 ## 5. Cómo seguir en un chat nuevo
 
