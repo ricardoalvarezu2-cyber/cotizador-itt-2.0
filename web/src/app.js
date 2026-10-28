@@ -120,6 +120,60 @@
     await S.db.doc("resumenes/" + id).set({ codigo, titulo, cliente, estado: "borrador", unitario: 0, total: 0, actualizado: new Date().toISOString() });
     return id;
   }
+  async function duplicarCotizacion(origen) {
+    const d = await S.db.doc("cotizaciones/" + origen).get(); if (!d.exists) return null;
+    const doc = clon(d.data()), id = nuevoId();
+    doc.cot.estado = "borrador"; doc.oferta.estado = "borrador"; doc.cot.codigo += " (copia)"; doc.cot.fecha = hoy(); doc.creado = new Date().toISOString(); delete doc.editor;
+    await S.db.doc("cotizaciones/" + id).set(doc); await S.db.doc("resumenes/" + id).set(resumenDe(doc));
+    return id;
+  }
+  async function borrarCotizacion(id) { await S.db.doc("resumenes/" + id).delete(); await S.db.doc("cotizaciones/" + id).delete(); }
+
+  // ------------------------------------------------------------------ calculadoras (las usan los botones y el chat)
+  const tarifaPH = () => S.datos.servicios.filter(x => x.ut === "USD/hora" && /hidr/i.test(x.s) && x.p && !/ESTIMADO/.test(x.al)).sort((a, b) => String(b.fe).localeCompare(String(a.fe)))[0];
+  const tarifasPintura = () => S.datos.servicios.filter(s => s.ut === "USD/m2" && s.p && !/ESTIMADO/.test(s.al)).sort((a, b) => String(b.fe).localeCompare(String(a.fe)));
+  function agregarSoldaduras(filas) {
+    const sol = Busqueda.soldadura(S.datos, filas), t = Busqueda.tarifa(S.datos, "soldadura", "soldadura piping");
+    if (!sol.pulg || !t) throw new Error("No hay juntas o falta la tarifa de soldadura");
+    const it = { id: siguienteId("S"), pos: "MO", grupo: "mo", descripcion: "Soldaduras (calculadas por diámetro y schedule)", especificacion: sol.detalle.join("; "), cantidad: sol.pulg, unidad: "pulg",
+      fuentes: [{ tipo: "ant", precio: +t.valor, proveedor: "Costo propio de planta: " + t.nota, origen: t.fuente, fecha: t.fecha.length > 7 ? t.fecha : t.fecha + "-31", coincide: "igual" }] };
+    S.doc.cot.items.push(it); return { it, sol };
+  }
+  function agregarRx(filas, pct) {
+    const sol = Busqueda.soldadura(S.datos, filas);
+    const ch = Math.ceil(sol.placas_chicas * pct / 100), gr = Math.ceil(sol.placas_grandes * pct / 100), sv = Math.max(1, Math.ceil((ch + gr) / 40));
+    if (!ch && !gr) throw new Error("No hay placas: cargá juntas a tope (BW)");
+    const tc = Busqueda.tarifa(S.datos, "end", "placa radiografica chica", ["tercero"]), tg = Busqueda.tarifa(S.datos, "end", "placa radiografica grande", ["tercero"]), ts = Busqueda.tarifa(S.datos, "end", "servicio de radiografia (antonelli)", ["tercero"]);
+    const costo = ch * (+tc?.valor || 0) + gr * (+tg?.valor || 0) + sv * (+ts?.valor || 0);
+    const it = { id: siguienteId("S"), pos: "RX", grupo: "servicio", descripcion: `Radiografía ${pct}% de las juntas a tope`, especificacion: `${ch} placas chicas, ${gr} grandes, ${sv} servicio(s)`, cantidad: 1, unidad: "gl",
+      fuentes: [{ tipo: "cot", precio: Math.round(costo * 100) / 100, proveedor: "NDT Antonelli (tarifas nov-2025)", origen: "fuentes_originales/antonelli_end_2025-11.pdf", fecha: "2025-11-03", coincide: "igual" }] };
+    S.doc.cot.items.push(it); return { it };
+  }
+  function m2Canos() {
+    let m2 = 0;
+    for (const it of S.doc.cot.items.filter(i => i.grupo === "material")) {
+      const d = Busqueda.norm(it.descripcion + " " + (it.especificacion || ""));
+      if (!/\bcano\b|\bniple|\btubo\b/.test(d)) continue;
+      const dn = parseFloat(String(it.plano?.diametro || "").replace(/"/g, "").replace(" 1/2", ".5")) || null, sch = (String(it.plano?.serie_sch || "").match(/\d+|STD|XS/i) || ["40"])[0].toUpperCase();
+      const fila = S.datos.canos.find(c => dn && Math.abs(c.dn - dn) < 1e-6 && (c.sch === sch || c.cl === sch));
+      const largo = it.unidad === "m" ? 1 : (parseFloat((d.match(/(\d[\d.]*)\s?mm/) || [])[1]?.replace(".", "")) || 0) / 1000;
+      if (fila && largo) m2 += fila.m2 * largo * it.cantidad;
+    }
+    return m2;
+  }
+  function agregarPintura(m2, codigo) {
+    const s = S.datos.servicios.find(x => x.c === codigo) || tarifasPintura()[0];
+    if (!m2 || !s) throw new Error("Faltan los m² o no hay tarifa de pintura");
+    const it = { id: siguienteId("S"), pos: "PIN", grupo: "servicio", descripcion: "Granallado y pintura", especificacion: `${m2} m² · ${s.s}`, cantidad: m2, unidad: "m2",
+      fuentes: [{ tipo: "ant", precio: s.t, proveedor: `${s.pr.slice(0, 60)} · ${s.c}`, origen: s.o, fecha: s.fe, coincide: "similar", diferencia: "Esquema de pintura a confirmar con el pliego" }] };
+    S.doc.cot.items.push(it); return { it, tarifa: s };
+  }
+  function agregarPH(h) {
+    const s = tarifaPH(); if (!s) throw new Error("No hay tarifa de prueba hidráulica");
+    const it = { id: siguienteId("S"), pos: "PH", grupo: "servicio", descripcion: "Prueba hidráulica (horas de planta)", especificacion: `${h} h`, cantidad: h, unidad: "h",
+      fuentes: [{ tipo: "ant", precio: s.t, proveedor: `${s.pr.slice(0, 60)} · ${s.c}`, origen: s.o, fecha: s.fe, coincide: "igual" }] };
+    S.doc.cot.items.push(it); return { it };
+  }
 
   // ------------------------------------------------------------------ utilidades de datos
   const leerRuta = (o, p) => p.split(".").reduce((a, k) => (a == null ? a : a[k]), o);
@@ -268,8 +322,7 @@
   // ------------------------------------------------------------------ pestaña MO y servicios
   function tabServicios() {
     const hojas = [...new Set(S.datos.servicios.map(s => s.h))];
-    const ph = S.datos.servicios.filter(s => s.ut === "USD/hora" && /hidr/i.test(s.s) && s.p && !/ESTIMADO/.test(s.al)).sort((a, b) => String(b.fe).localeCompare(String(a.fe)))[0];
-    const pins = S.datos.servicios.filter(s => s.ut === "USD/m2" && s.p && !/ESTIMADO/.test(s.al)).sort((a, b) => String(b.fe).localeCompare(String(a.fe)));
+    const ph = tarifaPH(), pins = tarifasPintura();
     const sol = Busqueda.soldadura(S.datos, S.sold), t = Busqueda.tarifa(S.datos, "soldadura", "soldadura piping");
     const dns = [...new Set(S.datos.soldadura.map(r => r.dn))].sort((a, b) => a - b);
     const schs = ["10", "20", "30", "40", "STD", "60", "80", "XS", "100", "120", "140", "160", "XXS"];
@@ -514,16 +567,10 @@
       case "tab": S.tab = b.dataset.v; render(); break;
       case "estado": cot.estado = b.dataset.v; S.doc.oferta.estado = b.dataset.v; S.ultVersion = 0; guardarPronto(); render(); break;
       case "nueva": { const id = await crearCotizacion(); S.tab = "datos"; location.hash = "c-" + id; break; }
-      case "duplicar": {
-        const d = await S.db.doc("cotizaciones/" + b.dataset.id).get(); if (!d.exists) return;
-        const doc = clon(d.data()), id = nuevoId();
-        doc.cot.estado = "borrador"; doc.oferta.estado = "borrador"; doc.cot.codigo += " (copia)"; doc.cot.fecha = hoy(); doc.creado = new Date().toISOString();
-        await S.db.doc("cotizaciones/" + id).set(doc); await S.db.doc("resumenes/" + id).set(resumenDe(doc));
-        toast("Cotización duplicada"); location.hash = "c-" + id; break;
-      }
+      case "duplicar": { const id = await duplicarCotizacion(b.dataset.id); if (!id) return; toast("Cotización duplicada"); location.hash = "c-" + id; break; }
       case "borrar":
         if (b.dataset.ok !== "1") { b.dataset.ok = "1"; b.textContent = "¿Seguro? Borrar"; setTimeout(() => { b.dataset.ok = ""; b.textContent = "Borrar"; }, 4000); return; }
-        await S.db.doc("resumenes/" + b.dataset.id).delete(); await S.db.doc("cotizaciones/" + b.dataset.id).delete(); toast("Cotización borrada"); break;
+        await borrarCotizacion(b.dataset.id); toast("Cotización borrada"); break;
       case "quitar": cot.items = cot.items.filter(i => i.id !== b.dataset.id); guardarPronto(); render(); break;
       case "editar": editorItem(cot.items.find(i => i.id === b.dataset.id)); break;
       case "manual": editorItem(null, b.dataset.g); break;
@@ -550,47 +597,19 @@
       case "limpiar-fm": S.fm = { fam: S.fm.fam }; render(); break;
       case "sold-fila": S.sold.push({ dn: "2", sch: "40", bw: "", sw: "", olet: "", tipoOlet: "cupla" }); render(); break;
       case "sold-quitar": S.sold.splice(+b.dataset.i, 1); if (!S.sold.length) S.sold.push({ dn: "2", sch: "40" }); render(); break;
-      case "sold-agregar": {
-        const sol = Busqueda.soldadura(S.datos, S.sold), t = Busqueda.tarifa(S.datos, "soldadura", "soldadura piping");
-        cot.items.push({ id: siguienteId("S"), pos: "MO", grupo: "mo", descripcion: "Soldaduras (calculadas por diámetro y schedule)", especificacion: sol.detalle.join("; "), cantidad: sol.pulg, unidad: "pulg",
-          fuentes: [{ tipo: "ant", precio: +t.valor, proveedor: "Costo propio de planta: " + t.nota, origen: t.fuente, fecha: t.fecha.length > 7 ? t.fecha : t.fecha + "-31", coincide: "igual" }] });
-        guardarPronto(); render(); toast("Soldaduras agregadas"); break;
-      }
+      case "sold-agregar": agregarSoldaduras(S.sold); guardarPronto(); render(); toast("Soldaduras agregadas"); break;
       case "rx-agregar": {
-        const sol = Busqueda.soldadura(S.datos, S.sold), pct = (S.rxPct ?? Number($("#rx-pct").value)) || 0;
+        const pct = (S.rxPct ?? Number($("#rx-pct").value)) || 0;
         if (!pct) { toast("Cargá el porcentaje de juntas a radiografiar"); return; }
-        const ch = Math.ceil(sol.placas_chicas * pct / 100), gr = Math.ceil(sol.placas_grandes * pct / 100), sv = Math.max(1, Math.ceil((ch + gr) / 40));
-        const tc = Busqueda.tarifa(S.datos, "end", "placa radiografica chica", ["tercero"]), tg = Busqueda.tarifa(S.datos, "end", "placa radiografica grande", ["tercero"]), ts = Busqueda.tarifa(S.datos, "end", "servicio de radiografia (antonelli)", ["tercero"]);
-        const costo = ch * (+tc?.valor || 0) + gr * (+tg?.valor || 0) + sv * (+ts?.valor || 0);
-        cot.items.push({ id: siguienteId("S"), pos: "RX", grupo: "servicio", descripcion: `Radiografía ${pct}% de las juntas a tope`, especificacion: `${ch} placas chicas, ${gr} grandes, ${sv} servicio(s)`, cantidad: 1, unidad: "gl",
-          fuentes: [{ tipo: "cot", precio: Math.round(costo * 100) / 100, proveedor: "NDT Antonelli (tarifas nov-2025)", origen: "fuentes_originales/antonelli_end_2025-11.pdf", fecha: "2025-11-03", coincide: "igual" }] });
-        guardarPronto(); render(); toast("Radiografía agregada"); break;
+        agregarRx(S.sold, pct); guardarPronto(); render(); toast("Radiografía agregada"); break;
       }
-      case "pin-calc": {
-        let m2 = 0;
-        for (const it of cot.items.filter(i => i.grupo === "material")) {
-          const d = Busqueda.norm(it.descripcion + " " + (it.especificacion || ""));
-          if (!/\bcano\b|\bniple|\btubo\b/.test(d)) continue;
-          const dn = parseFloat(String(it.plano?.diametro || "").replace(/"/g, "").replace(" 1/2", ".5")) || null, sch = (String(it.plano?.serie_sch || "").match(/\d+|STD|XS/i) || ["40"])[0].toUpperCase();
-          const fila = S.datos.canos.find(c => dn && Math.abs(c.dn - dn) < 1e-6 && (c.sch === sch || c.cl === sch));
-          const largo = it.unidad === "m" ? 1 : (parseFloat((d.match(/(\d[\d.]*)\s?mm/) || [])[1]?.replace(".", "")) || 0) / 1000;
-          if (fila && largo) m2 += fila.m2 * largo * it.cantidad;
-        }
-        S.pinM2 = m2.toFixed(2); render(); toast(m2 ? `${num(m2)} m² de caños y niples (sin accesorios ni válvulas)` : "No hay caños con Ø, schedule y largo para calcular"); break;
-      }
+      case "pin-calc": { const m2 = m2Canos(); S.pinM2 = m2.toFixed(2); render(); toast(m2 ? `${num(m2)} m² de caños y niples (sin accesorios ni válvulas)` : "No hay caños con Ø, schedule y largo para calcular"); break; }
       case "pin-agregar": {
-        const m2 = Number($("#pin-m2").value), s = S.datos.servicios.find(x => x.c === $("#pin-t").value);
-        if (!m2 || !s) { toast("Cargá los m² y elegí la tarifa"); return; }
-        cot.items.push({ id: siguienteId("S"), pos: "PIN", grupo: "servicio", descripcion: "Granallado y pintura", especificacion: `${m2} m² · ${s.s}`, cantidad: m2, unidad: "m2",
-          fuentes: [{ tipo: "ant", precio: s.t, proveedor: `${s.pr.slice(0, 60)} · ${s.c}`, origen: s.o, fecha: s.fe, coincide: "similar", diferencia: "Esquema de pintura a confirmar con el pliego" }] });
-        guardarPronto(); render(); toast("Pintura agregada"); break;
+        const m2 = Number($("#pin-m2").value);
+        if (!m2 || !$("#pin-t").value) { toast("Cargá los m² y elegí la tarifa"); return; }
+        agregarPintura(m2, $("#pin-t").value); guardarPronto(); render(); toast("Pintura agregada"); break;
       }
-      case "ph-agregar": {
-        const h = Number($("#ph-h").value) || 6, s = S.datos.servicios.filter(x => x.ut === "USD/hora" && /hidr/i.test(x.s) && x.p && !/ESTIMADO/.test(x.al)).sort((a, b) => String(b.fe).localeCompare(String(a.fe)))[0];
-        cot.items.push({ id: siguienteId("S"), pos: "PH", grupo: "servicio", descripcion: "Prueba hidráulica (horas de planta)", especificacion: `${h} h`, cantidad: h, unidad: "h",
-          fuentes: [{ tipo: "ant", precio: s.t, proveedor: `${s.pr.slice(0, 60)} · ${s.c}`, origen: s.o, fecha: s.fe, coincide: "igual" }] });
-        guardarPronto(); render(); toast("Prueba hidráulica agregada"); break;
-      }
+      case "ph-agregar": agregarPH(Number($("#ph-h").value) || 6); guardarPronto(); render(); toast("Prueba hidráulica agregada"); break;
       case "tarea-nueva": cot.plazo.tareas.push(["Nueva tarea", 0, 30, ""]); guardarPronto(); render(); break;
       case "tarea-quitar": cot.plazo.tareas.splice(+b.dataset.i, 1); guardarPronto(); render(); break;
       case "firmante-nuevo": editorFirmante(); break;
@@ -649,7 +668,7 @@
   }
   const estadoDesc = t => { const el = $("#desc-estado"); if (el) el.textContent = t; };
   async function descargarTodo(b) {
-    b.disabled = true;
+    if (b) b.disabled = true;
     try {
       const ctx = await contexto(), zip = new JSZip(), carpeta = zip.folder(base());
       for (const [k, n] of ARCHIVOS) { estadoDesc(`Generando ${n}…`); carpeta.file(n, await generar(k, ctx)); }
@@ -657,20 +676,21 @@
       const blob = await zip.generateAsync({ type: "blob" });
       await S.dl.save({ filename: base() + ".zip", data: blob });
       estadoDesc("Listo: " + base() + ".zip");
-    } catch (e) { estadoDesc(e.code === "declined" ? "Descarga cancelada." : "No se pudo descargar: " + (e.message || e.code)); }
-    finally { b.disabled = false; }
+    } catch (e) { estadoDesc(e.code === "declined" ? "Descarga cancelada." : "No se pudo descargar: " + (e.message || e.code)); if (!b) throw e; }
+    finally { if (b) b.disabled = false; }
   }
   async function descargarUno(b, k) {
-    b.disabled = true;
+    if (b) b.disabled = true;
     try {
       const n = ARCHIVOS.find(x => x[0] === k)[1]; estadoDesc(`Generando ${n}…`);
       const blob = await generar(k, await contexto());
       await S.dl.save({ filename: `${base()} - ${n}`, data: blob }); estadoDesc("Listo: " + n);
-    } catch (e) { estadoDesc(e.code === "declined" ? "Descarga cancelada." : "No se pudo descargar: " + (e.message || e.code)); }
-    finally { b.disabled = false; }
+    } catch (e) { estadoDesc(e.code === "declined" ? "Descarga cancelada." : "No se pudo descargar: " + (e.message || e.code)); if (!b) throw e; }
+    finally { if (b) b.disabled = false; }
   }
 
-  window.ITT = { S, $, E, num, toast, clon, hoy, render, refrescar, guardarPronto, calc, siguienteId, nuevoId, crearCotizacion, abrir, accion, editorItem };
+  window.ITT = { S, $, E, num, toast, clon, hoy, render, refrescar, guardarPronto, calc, siguienteId, nuevoId, crearCotizacion, duplicarCotizacion, borrarCotizacion, abrir, accion, editorItem,
+    agregarSoldaduras, agregarRx, m2Canos, agregarPintura, agregarPH, tarifasPintura, tarifaPH, descargarTodo, descargarUno, ARCHIVOS, resumenDe };
   window.dispatchEvent(new Event("itt-listo"));
   ruta();
 })();

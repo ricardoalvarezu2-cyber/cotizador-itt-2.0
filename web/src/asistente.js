@@ -36,8 +36,21 @@ const Asistente = (() => {
         if (S.vista === "pedidos") renderPedidos(document.getElementById("app"));
       }, () => {});
     }
+    if (S.db) S.db.collection("catalogo_nuevo").onSnapshot(sn => { P.nuevos = sn.docs.map(d => ({ id: d.id, ...d.data() })); mezclarNuevos(); if (S.vista === "pedidos") renderPedidos(document.getElementById("app")); }, () => {});
     armarChat();
   });
+
+  // Artículos y servicios nuevos cargados en la página (colección catalogo_nuevo): se suman al buscador al instante y
+  // la tarea de los lunes los pasa al catálogo del repositorio (después quedan marcados "incorporado" y no se repiten).
+  function mezclarNuevos() {
+    const D = I.S.datos;
+    D.materiales = D.materiales.filter(m => !m.nuevo); D.servicios = D.servicios.filter(s => !s.nuevo);
+    for (const n of P.nuevos || []) {
+      if (n.incorporado) continue;
+      if (n.clase === "material") D.materiales.unshift({ ...n.registro, c: n.id, nuevo: true });
+      else D.servicios.unshift({ ...n.registro, c: n.id, nuevo: true });
+    }
+  }
 
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const ahora = () => new Date().toISOString();
@@ -154,7 +167,18 @@ const Asistente = (() => {
           <td class="small">${esc(p.respuesta || "")}${p.resultado_cotizacion_id ? `<div><a href="#c-${esc(p.resultado_cotizacion_id)}">Abrir la cotización</a></div>` : ""}</td>
           <td><div class="fila fin">${["pendiente", "error"].includes(p.estado) && mcp ? `<button class="chico" data-p="reenviar" data-id="${esc(p.id)}">${p.estado === "error" ? "Reenviar" : "Mandar ahora"}</button>` : ""}
             <button class="chico peligro" data-p="borrar" data-id="${esc(p.id)}">Borrar</button></div></td></tr>`).join("")}
-      </tbody></table></div>` : `<div class="vacio">Todavía no hay pedidos.</div>`}</section>`;
+      </tbody></table></div>` : `<div class="vacio">Todavía no hay pedidos.</div>`}
+      ${nuevosHtml()}</section>`;
+  }
+
+  function nuevosHtml() {
+    const ns = (P.nuevos || []).filter(n => !n.incorporado).sort((a, b) => String(b.creado).localeCompare(String(a.creado)));
+    if (!ns.length) return "";
+    return `<section><div class="sec-head"><h2>Artículos y servicios nuevos</h2><span class="eyebrow">ya están en el buscador · el lunes pasan al catálogo del repositorio</span></div>
+      <div class="tbl"><table><thead><tr><th>Código</th><th>Descripción</th><th class="n">USD sin IVA</th><th>Proveedor y fecha</th><th>Documento</th><th></th></tr></thead><tbody>
+      ${ns.map(n => { const r = n.registro || {}; return `<tr><td class="mono small">${esc(n.id)}</td><td><div class="d">${esc(r.d || r.s)}</div><div class="sp">${esc(n.clase === "material" ? (I.S.datos.familias[r.f]?.n || r.f) : r.h)} · ${esc(r.u || r.ut || "")}${r.al ? " · " + esc(r.al) : ""}</div></td>
+        <td class="n">${esc((r.t || r.p)?.toLocaleString("es-AR", { maximumFractionDigits: 4 }))}</td><td class="small">${esc(r.pr)}<br><span class="muted">${esc(r.fe)}</span></td><td class="small">${esc(n.original?.documento || "")}</td>
+        <td><button class="chico peligro" data-p="nuevo-borrar" data-id="${esc(n.id)}">Borrar</button></td></tr>`; }).join("")}</tbody></table></div></section>`;
   }
 
   document.addEventListener("input", ev => {
@@ -198,7 +222,15 @@ const Asistente = (() => {
           agregarBurbuja("a", b.dataset.p === "prop-mandar" ? `Listo: el pedido ${id} se mandó a Claude Code. Seguilo en **Pedidos**.` : `Listo: el pedido ${id} quedó pendiente en **Pedidos**.`);
           break;
         }
+        case "nuevo-borrar":
+          if (b.dataset.ok !== "1") { b.dataset.ok = "1"; b.textContent = "¿Seguro?"; setTimeout(() => { b.dataset.ok = ""; b.textContent = "Borrar"; }, 4000); return; }
+          await S.db.doc("catalogo_nuevo/" + b.dataset.id).delete(); I.toast("Borrado del catálogo nuevo"); break;
         case "prop-cancelar": chat.propuesta = null; document.getElementById("ch-prop")?.remove(); break;
+        case "conf-ok": case "conf-no": {
+          const f = confirmaciones.get(b.dataset.id); confirmaciones.delete(b.dataset.id); document.getElementById(b.dataset.id)?.remove();
+          if (b.dataset.p === "conf-ok" && f) agregarBurbuja("a", await f()); else agregarTraza("Cancelado.");
+          break;
+        }
       }
     } catch (e) { I.toast(e.message || String(e.code || e)); if (b.dataset.p.startsWith("prop")) agregarBurbuja("a", "No se pudo: " + (e.message || e.code)); }
   });
@@ -243,7 +275,7 @@ const Asistente = (() => {
     if (d) d.hidden = !chat.deshacer.some(x => x.id === S.id);
   }
   function bienvenida() {
-    agregarBurbuja("a", "Hola. Puedo buscar en los catálogos, cargar y corregir ítems de la cotización abierta, leer un plano (imagen o PDF) y proponer la lista de materiales, o explicarte los avisos.\n\nPara trabajos largos (un pliego completo, una lista de precios para el catálogo, una cotización entera con ofertas) te propongo mandarlo a **Claude Code**.");
+    agregarBurbuja("a", "Hola. Puedo crear, abrir, duplicar y modificar cotizaciones (datos, ítems, plazo y oferta), usar las calculadoras, cargar artículos y mano de obra nuevos con su documento, leer un plano (imagen o PDF), explicarte los avisos y descargar los archivos. Aprobar y enviar quedan para vos.\n\nPara trabajos largos (un pliego completo, una lista de precios para el catálogo, una cotización entera con ofertas) te propongo mandarlo a **Claude Code**.");
     if (!limites?.tools) agregarBurbuja("a", "En esta vista no puedo cambiar la cotización: solo responder.");
   }
   function md(t) {
@@ -310,6 +342,7 @@ const Asistente = (() => {
   function reglas() {
     const fams = Object.entries(I.S.datos.familias).map(([k, v]) => `${k}=${v.n}`).join(", ");
     return `Sos el asistente del Cotizador ITT, una página para cotizar equipos de ITT S.A. (Quilmes, Argentina; fabricante de calentadores, separadores, filtros, skids, manifolds, colectores, puentes de medición, cañerías, tanques y trampas para oil & gas). Hablás con alguien de Ventas de ITT en español rioplatense. Respuestas cortas.
+Tenés control sobre la página: crear, abrir, duplicar y modificar cotizaciones (datos, ítems, plazo, oferta), usar las calculadoras, cargar artículos y servicios nuevos en el catálogo y descargar archivos.
 
 Reglas obligatorias (un error que llega al cliente puede ser catastrófico):
 - Todo en USD y SIN IVA. Si una fuente dice "con IVA", dividí por 1,21 (o 1,105 si es 10,5%).
@@ -319,7 +352,9 @@ Reglas obligatorias (un error que llega al cliente puede ser catastrófico):
 - Al copiar la tabla de materiales de un plano: renglón por renglón, con la posición, la misma cantidad y la misma unidad del plano. Compras extra (sobrantes, mangas) van en filas aparte (pos "14b"). No juntes renglones.
 - Si una parte del plano no se lee bien, decilo y no adivines. Pedí una imagen mejor o mandá el trabajo a Claude Code.
 - La cantidad de cada ítem es por equipo; la cantidad de equipos es el parámetro N.
-- Las soldaduras, la pintura, la prueba hidráulica y la radiografía se calculan con las calculadoras de la pestaña "MO y servicios": sugerí usarlas en vez de inventar horas.
+- Las soldaduras, la radiografía, la pintura y la prueba hidráulica se calculan con la herramienta calculadora (las mismas fórmulas de la página), nunca con horas inventadas. Las juntas salen de la columna de extremos del plano (BW se cuentan por junta).
+- Un artículo o servicio nuevo se carga con nuevo_en_catalogo solo si hay un documento con precio, proveedor y fecha.
+- No podés aprobar ni marcar enviada una cotización; borrar y pasar a revisado los confirma el usuario con un botón.
 - Nunca se envía nada al cliente. Todo queda en borrador para que lo revise una persona.
 - Para trabajos largos o que necesitan el repositorio (leer un pliego entero, incorporar una lista de precios al catálogo, armar una cotización completa con plazo y ofertas, buscar antecedentes de proyectos) usá proponer_pedido_claude_code: el usuario lo confirma con un botón.
 - Antes de cambiar varios ítems, decí en una línea qué vas a hacer y hacelo. Al final, resumí qué cambiaste.
@@ -364,8 +399,16 @@ ${filas.join("\n") || "(ninguno)"}`.slice(0, 60000);
           const r = Busqueda.servicios(S.datos, { texto: String(texto || ""), hoja: rubro ? String(rubro) : "" }, 12);
           return { total: r.total, resultados: r.res.map(x => ({ codigo: x.c, rubro: x.h, servicio: x.s, tarifa: x.t, unidad_tarifa: x.ut, precio_global: x.p, fecha: x.fe, proveedor: s(x.pr, 60), incluye: s(x.inc, 150), equipo_referencia: s(x.eq, 80), alerta: s(x.al, 100) })) };
         } },
-      { name: "ver_avisos", description: "Devuelve los avisos de control de la cotización abierta (para corregir y para revisar).",
-        execute: () => { cot(); return Busqueda.avisos(S.doc.cot).slice(0, 60); } },
+      { name: "ver_detalle", description: "Devuelve una parte de la cotización abierta: datos (cliente y parámetros), oferta (todos los textos de la oferta), plazo (días y tareas), avisos (controles para corregir y revisar), calculadoras (tarifas de pintura disponibles y m² de caños calculados).",
+        inputSchema: { type: "object", properties: { parte: { type: "string", enum: ["datos", "oferta", "plazo", "avisos", "calculadoras"] } }, required: ["parte"] },
+        execute: ({ parte }) => {
+          const c = cot();
+          if (parte === "oferta") return S.doc.oferta;
+          if (parte === "plazo") return c.plazo || {};
+          if (parte === "avisos") return Busqueda.avisos(c).slice(0, 80);
+          if (parte === "calculadoras") return { m2_canos: Math.round(I.m2Canos() * 100) / 100, tarifas_pintura: I.tarifasPintura().slice(0, 12).map(s => ({ codigo: s.c, tarifa_usd_m2: s.t, servicio: s.s, proveedor: s.pr.slice(0, 40), fecha: s.fe })), prueba_hidraulica_usd_h: I.tarifaPH()?.t };
+          return { codigo: c.codigo, revision: c.revision, titulo: c.titulo, cliente: c.cliente, equipo: c.equipo, firmante_id: c.firmante_id, firmantes: S.firmantes.map(f => ({ id: f.id, nombre: f.nombre })), parametros: c.parametros, estado: c.estado };
+        } },
       { name: "agregar_material", description: "Agrega a la cotización abierta un material del catálogo por su codigo, con su precio, proveedor y fecha. cantidad = por equipo. coincide: igual o similar (si es similar, diferencia es obligatoria). plano: los datos del renglón del plano.",
         inputSchema: { type: "object", properties: { codigo: { type: "string" }, cantidad: { type: "number" }, pos: { type: "string" }, coincide: { type: "string", enum: ["igual", "similar"] }, diferencia: { type: "string" },
           plano: { type: "object", properties: { diametro: { type: "string" }, serie_sch: { type: "string" }, material: { type: "string" }, extremos: { type: "string" }, modelo: { type: "string" } } } }, required: ["codigo", "cantidad", "coincide"] },
@@ -431,13 +474,117 @@ ${filas.join("\n") || "(ninguno)"}`.slice(0, 60000);
           const c = cot(), it = c.items.find(i => i.id === String(id)); if (!it) throw new Error("No existe el ítem " + id);
           marcar(); c.items = c.items.filter(i => i !== it); cambio(`Quitó ${it.id}: ${it.descripcion.slice(0, 60)}`); return "ok";
         } },
-      { name: "nueva_cotizacion", description: "Crea una cotización nueva vacía en borrador y la abre. Usala solo si el usuario quiere empezar una cotización y no hay ninguna abierta.",
-        inputSchema: { type: "object", properties: { titulo: { type: "string" }, cliente: { type: "string" } }, required: ["titulo"] },
-        execute: async ({ titulo, cliente }) => {
-          const id = await I.crearCotizacion({ titulo: s(titulo, 120), cliente: s(cliente, 80) });
-          S.tab = "materiales"; location.hash = "c-" + id;
-          for (let i = 0; i < 50 && !(S.id === id && S.doc); i++) await new Promise(r => setTimeout(r, 100));
-          agregarTraza(`Creó la cotización "${s(titulo, 60)}"`); pintarContexto(); return { id, abierta: S.id === id && !!S.doc };
+      { name: "modificar_datos", description: "Cambia los datos y parámetros de la cotización abierta. Campos posibles: titulo, codigo, revision, cliente, codigo_itt, comprador, equipo_singular, equipo_plural, firmante_id, N (cantidad de equipos), FM (factor materiales), FMO (factor MO y servicios), CONT (contingencia %), fecha_referencia (AAAA-MM-DD), AJ (1 aplica ajuste por inflación, 0 no), TRANS (1 flete incluido), TC, TR_ARS, TR_EMB, TR_F. El factor de venta lo define la dirección: si lo cambiás, avisalo.",
+        inputSchema: { type: "object", properties: { campos: { type: "object" } }, required: ["campos"] },
+        execute: ({ campos }) => {
+          const c = cot(); if (!campos || typeof campos !== "object") throw new Error("Pasá los campos a cambiar.");
+          const RUTAS = { titulo: "titulo", codigo: "codigo", revision: "revision", cliente: "cliente.nombre", codigo_itt: "cliente.codigo_itt", comprador: "cliente.comprador", equipo_singular: "equipo.singular", equipo_plural: "equipo.plural", firmante_id: "firmante_id" };
+          const NUM = ["N", "FM", "FMO", "CONT", "AJ", "TRANS", "TC", "TR_ARS", "TR_EMB", "TR_F"], hechos = [];
+          marcar();
+          for (const [k, v] of Object.entries(campos)) {
+            if (RUTAS[k]) { const ks = RUTAS[k].split("."); let o = c; ks.slice(0, -1).forEach(x => (o = o[x] ??= {})); o[ks.at(-1)] = s(v, 200); }
+            else if (NUM.includes(k)) { const n = Number(v); if (!isFinite(n) || n < 0) throw new Error(`${k} tiene que ser un número`); c.parametros[k] = n; }
+            else if (k === "fecha_referencia") { if (!fechaOk(String(v))) throw new Error("fecha_referencia inválida"); c.parametros.fecha_referencia = String(v); }
+            else throw new Error("Campo desconocido: " + k);
+            hechos.push(k);
+          }
+          if (campos.cliente) S.doc.oferta.cliente = { ...(S.doc.oferta.cliente || {}), nombre: s(campos.cliente, 200) };
+          cambio(`Cambió datos: ${hechos.join(", ")}`); const r = I.calc(); return { precio_unitario: r.precio_unitario, total: r.total };
+        } },
+      { name: "modificar_plazo", description: "Cambia el plazo de la cotización abierta: dias (ofrecidos), texto (desde cuándo, ej. 'desde OC'), nota, y/o tareas (reemplaza la lista: cada una [nombre, dia_inicio, dia_fin, tipo] con tipo '' material, 'crit' material crítico o 'tal' taller/despacho).",
+        inputSchema: { type: "object", properties: { dias: { type: "number" }, texto: { type: "string" }, nota: { type: "string" }, tareas: { type: "array", items: { type: "array" } } } },
+        execute: (a) => {
+          const c = cot(); marcar(); const pl = c.plazo ??= { dias: 60, texto: "desde OC", tareas: [], nota: "" };
+          if (a.dias !== undefined) pl.dias = Number(a.dias) || 0;
+          if (a.texto !== undefined) pl.texto = s(a.texto, 120);
+          if (a.nota !== undefined) pl.nota = s(a.nota, 800);
+          if (Array.isArray(a.tareas)) pl.tareas = a.tareas.map(x => [s(x[0], 120), Number(x[1]) || 0, Number(x[2]) || 0, ["", "crit", "tal"].includes(x[3]) ? x[3] : ""]);
+          cambio("Cambió el plazo"); return pl;
+        } },
+      { name: "modificar_oferta", description: "Cambia textos de la oferta de la cotización abierta. campos: {ruta: valor} con rutas como oferta.numero, oferta.revision, oferta.fecha, cliente.contacto, cliente.referencia, cliente.proyecto, item.descripcion, item.codigo, item.plazo_dias, item.observacion, objeto, nota_flete, embalaje, caracteristicas, garantia, archivo_base, condiciones.<NOMBRE>, y listas (valor = arreglo de textos): documentos_cliente, aclaraciones_y_desvios.items, exclusiones.items, alcance_general.items. Lo que esté entre [corchetes] sale resaltado para completar.",
+        inputSchema: { type: "object", properties: { campos: { type: "object" } }, required: ["campos"] },
+        execute: ({ campos }) => {
+          cot(); if (!campos || typeof campos !== "object") throw new Error("Pasá los campos.");
+          marcar(); const of = S.doc.oferta, hechos = [];
+          for (const [ruta, v] of Object.entries(campos)) {
+            if (/^estado$|^firma/.test(ruta) || ruta.split(".").length > 3) throw new Error("No se puede cambiar " + ruta);
+            const ks = ruta.split("."); let o = of; ks.slice(0, -1).forEach(x => (o = o[x] ??= {}));
+            o[ks.at(-1)] = Array.isArray(v) ? v.map(x => s(x, 600)) : s(v, 3000); hechos.push(ruta);
+          }
+          cambio(`Cambió la oferta: ${hechos.join(", ")}`); return "ok";
+        } },
+      { name: "calculadora", description: "Usa las calculadoras de la página y agrega el resultado a la cotización abierta. tipo: soldaduras (filas: [{dn, sch, bw, sw, olet, tipoOlet: cupla|weldolet}] por diámetro: juntas a tope, juntas socket y cuplas/olets), radiografia (filas como soldaduras + rx_pct), pintura (m2; si falta, usa los m² de caños cargados; codigo_tarifa opcional de ver_detalle calculadoras), prueba_hidraulica (horas).",
+        inputSchema: { type: "object", properties: { tipo: { type: "string", enum: ["soldaduras", "radiografia", "pintura", "prueba_hidraulica"] }, filas: { type: "array", items: { type: "object" } }, rx_pct: { type: "number" }, m2: { type: "number" }, codigo_tarifa: { type: "string" }, horas: { type: "number" } }, required: ["tipo"] },
+        execute: (a) => {
+          cot(); const filas = (a.filas || []).map(f => ({ dn: String(f.dn ?? ""), sch: String(f.sch ?? "40"), bw: String(f.bw ?? ""), sw: String(f.sw ?? ""), olet: String(f.olet ?? ""), tipoOlet: f.tipoOlet === "weldolet" ? "weldolet" : "cupla" }));
+          marcar(); let r;
+          if (a.tipo === "soldaduras") { r = I.agregarSoldaduras(filas); cambio(`Soldaduras: ${r.sol.pulg} pulgadas equivalentes`); return { id: r.it.id, pulgadas: r.sol.pulg, usd: Math.round(r.sol.pulg * r.it.fuentes[0].precio * 100) / 100, detalle: r.sol.detalle }; }
+          if (a.tipo === "radiografia") { const pct = Number(a.rx_pct) || 0; if (!pct) throw new Error("Falta rx_pct"); r = I.agregarRx(filas, pct); cambio(`Radiografía ${pct}%`); return { id: r.it.id, usd: r.it.fuentes[0].precio, detalle: r.it.especificacion }; }
+          if (a.tipo === "pintura") { const m2 = Number(a.m2) || Math.round(I.m2Canos() * 100) / 100; r = I.agregarPintura(m2, a.codigo_tarifa ? String(a.codigo_tarifa) : ""); cambio(`Pintura ${m2} m²`); return { id: r.it.id, m2, tarifa: r.tarifa.t, aviso: Number(a.m2) ? "" : "m² solo de caños y niples: sumá accesorios y válvulas si corresponde" }; }
+          if (a.tipo === "prueba_hidraulica") { r = I.agregarPH(Number(a.horas) || 6); cambio("Prueba hidráulica"); return { id: r.it.id }; }
+          throw new Error("Tipo desconocido");
+        } },
+      { name: "nuevo_en_catalogo", description: "Carga un artículo (clase material) o una mano de obra o servicio (clase servicio) NUEVO en el catálogo, desde un documento (cotización, lista, factura). Obligatorio: descripcion, unidad, precio, moneda (USD o ARS: los pesos se pasan a dólares con el BNA promedio del mes), iva ('sin IVA', 'con IVA 21%' o 'con IVA 10,5%', según el documento), proveedor, fecha del documento, documento (nombre o referencia). Material: familia (VAL, BRI, CAN, ...) y atributos opcionales (tipo, diametro, serie, schedule, material, extremos, marca, modelo). Servicio: rubro, y si es tarifa unitaria, es_tarifa=true con la unidad (ej. USD/hora, USD/m2); si es global, equipo_referencia, incluye y no_incluye. Aparece en el buscador al instante y el lunes pasa al catálogo del repositorio.",
+        inputSchema: { type: "object", properties: { clase: { type: "string", enum: ["material", "servicio"] }, familia: { type: "string" }, rubro: { type: "string" }, descripcion: { type: "string" }, unidad: { type: "string" }, precio: { type: "number" }, moneda: { type: "string", enum: ["USD", "ARS"] },
+          iva: { type: "string" }, proveedor: { type: "string" }, fecha: { type: "string" }, documento: { type: "string" }, tipo_precio: { type: "string", enum: ["cotización", "lista", "compra"] }, atributos: { type: "object" },
+          es_tarifa: { type: "boolean" }, equipo_referencia: { type: "string" }, incluye: { type: "string" }, no_incluye: { type: "string" } }, required: ["clase", "descripcion", "unidad", "precio", "moneda", "iva", "proveedor", "fecha", "documento"] },
+        execute: async (a) => {
+          if (!S.db) throw new Error("Sin conexión con la base.");
+          const precio0 = Number(a.precio); if (!(precio0 > 0)) throw new Error("Precio inválido.");
+          if (!fechaOk(String(a.fecha))) throw new Error("Fecha inválida (AAAA-MM-DD, no futura).");
+          if (!a.proveedor || !a.documento) throw new Error("Falta el proveedor o el documento de respaldo.");
+          const iva = Busqueda.norm(a.iva), div = /con iva/.test(iva) ? (/10[.,]5/.test(iva) ? 1.105 : 1.21) : 1;
+          let usd = precio0 / div, tc = null;
+          if (a.moneda === "ARS") {
+            const mes = String(a.fecha).slice(0, 7), fila = [...S.datos.indices].reverse().find(r => r.mes <= mes);
+            if (!fila?.dolar) throw new Error("No hay dólar BNA para ese mes."); tc = fila.dolar; usd = usd / tc;
+          }
+          usd = Math.round(usd * 10000) / 10000;
+          const fecha = String(a.fecha), cepo = fecha < "2025-04-14" ? "precio del período con cepo: verificar" : "";
+          const nota = [div !== 1 ? `con IVA en el documento: dividido por ${div}` : "", tc ? `ARS ${precio0} ÷ BNA ${tc} (${fecha.slice(0, 7)})` : "", cepo].filter(Boolean).join("; ");
+          const id = (a.clase === "material" ? "N-MAT-" : "N-SRV-") + Date.now().toString(36).toUpperCase();
+          let registro;
+          if (a.clase === "material") {
+            const fam = S.datos.familias[String(a.familia || "").toUpperCase()] ? String(a.familia).toUpperCase() : "OTR";
+            registro = { f: fam, d: s(a.descripcion, 200), u: s(a.unidad, 20), p: usd, pa: usd, fe: fecha, tp: a.tipo_precio || "cotización", pr: s(a.proveedor, 120), o: "Cargado en la página · " + s(a.documento, 200),
+              al: nota, iva: div !== 1 ? "con IVA: dividido" : "sin IVA", n: 1, mn: usd, mx: usd, a: a.atributos && typeof a.atributos === "object" ? Object.fromEntries(Object.entries(a.atributos).map(([k, v]) => [k, s(v, 60)])) : {} };
+          } else {
+            const tar = !!a.es_tarifa;
+            registro = { h: s(a.rubro || "Otros servicios", 60), s: s(a.descripcion, 120), d: s(a.descripcion, 300), u: s(a.unidad, 30), p: usd, pa: usd, t: tar ? usd : null, ut: tar ? s(a.unidad, 30) : "", ta: tar ? usd : null,
+              fe: fecha, pr: s(a.proveedor, 120), o: "Cargado en la página · " + s(a.documento, 200), inc: s(a.incluye, 200), ninc: s(a.no_incluye, 200), eq: s(a.equipo_referencia, 120), al: nota, iva: div !== 1 ? "con IVA: dividido" : "sin IVA" };
+          }
+          await S.db.doc("catalogo_nuevo/" + id).set({ clase: a.clase, registro, original: { precio: precio0, moneda: a.moneda, iva: s(a.iva, 40), documento: s(a.documento, 200) }, creado: ahora(), por: "chat" });
+          agregarTraza(`Cargó en el catálogo ${id}: ${s(a.descripcion, 60)} · USD ${usd} sin IVA`);
+          return { codigo: id, precio_usd_sin_iva: usd, nota };
+        } },
+      { name: "gestionar_cotizacion", description: "abrir (id), nueva (titulo, cliente: crea una vacía en borrador y la abre), duplicar (id; sin id, la abierta), proponer_borrar (id: muestra un botón para que el usuario confirme), proponer_revisado (la abierta: muestra un botón; solo si no hay avisos para corregir), volver_a_borrador (la abierta). No se puede aprobar ni marcar enviada: eso lo hace una persona.",
+        inputSchema: { type: "object", properties: { accion: { type: "string", enum: ["abrir", "nueva", "duplicar", "proponer_borrar", "proponer_revisado", "volver_a_borrador"] }, id: { type: "string" }, titulo: { type: "string" }, cliente: { type: "string" } }, required: ["accion"] },
+        execute: async (a) => {
+          const esperar = async id => { for (let i = 0; i < 50 && !(S.id === id && S.doc); i++) await new Promise(r => setTimeout(r, 100)); pintarContexto(); return S.id === id && !!S.doc; };
+          const existe = id => S.lista.find(r => r.id === id);
+          switch (a.accion) {
+            case "abrir": if (!existe(String(a.id))) throw new Error("No existe la cotización " + a.id); location.hash = "c-" + a.id; return { abierta: await esperar(String(a.id)) };
+            case "nueva": { const id = await I.crearCotizacion({ titulo: s(a.titulo, 120), cliente: s(a.cliente, 80) }); S.tab = "materiales"; location.hash = "c-" + id; agregarTraza(`Creó la cotización "${s(a.titulo, 60)}"`); return { id, abierta: await esperar(id) }; }
+            case "duplicar": { const o = a.id ? String(a.id) : S.id; if (!o) throw new Error("¿Cuál duplico?"); const id = await I.duplicarCotizacion(o); if (!id) throw new Error("No existe " + o); location.hash = "c-" + id; agregarTraza("Duplicó la cotización"); return { id, abierta: await esperar(id) }; }
+            case "proponer_borrar": { const r = existe(String(a.id)); if (!r) throw new Error("No existe " + a.id);
+              confirmar(`Borrar la cotización ${r.codigo}`, r.titulo || "", "Borrar", "peligro", async () => { await I.borrarCotizacion(r.id); if (S.id === r.id) location.hash = "inicio"; return `Cotización ${r.codigo} borrada.`; });
+              return "Botón mostrado: el usuario tiene que confirmar."; }
+            case "proponer_revisado": { const c = cot(), malos = Busqueda.avisos(c).filter(x => x.nivel === "bad");
+              if (malos.length) throw new Error(`No puede pasar a revisado: hay ${malos.length} avisos para corregir.`);
+              confirmar(`Pasar ${c.codigo} a "revisado"`, "Confirmá solo si una persona revisó el cómputo contra el plano (procedimiento P10).", "Pasar a revisado", "prim", async () => { c.estado = "revisado"; S.doc.oferta.estado = "revisado"; S.ultVersion = 0; I.guardarPronto(); I.render(); return "Pasada a revisado."; });
+              return "Botón mostrado: el usuario tiene que confirmar."; }
+            case "volver_a_borrador": { const c = cot(); marcar(); c.estado = "borrador"; S.doc.oferta.estado = "borrador"; S.ultVersion = 0; cambio("Volvió a borrador"); return "ok"; }
+          }
+          throw new Error("Acción desconocida");
+        } },
+      { name: "descargar", description: "Descarga archivos de la cotización abierta (el usuario confirma cada descarga): todo (zip) o uno de: presupuesto, compras, informe, tec_docx, tec_pdf, eco_docx, eco_pdf, json.",
+        inputSchema: { type: "object", properties: { archivo: { type: "string", enum: ["todo", "presupuesto", "compras", "informe", "tec_docx", "tec_pdf", "eco_docx", "eco_pdf", "json"] } }, required: ["archivo"] },
+        execute: async ({ archivo }) => {
+          cot(); if (!S.dl) throw new Error("Las descargas no están disponibles en esta vista.");
+          agregarTraza(`Prepara la descarga: ${archivo}`);
+          try { if (archivo === "todo") await I.descargarTodo(null); else await I.descargarUno(null, String(archivo)); }
+          catch (e) { if (e.code === "declined") return "El usuario canceló la descarga."; throw e; }
+          return "Descarga ofrecida al usuario.";
         } },
       { name: "proponer_pedido_claude_code", description: "Propone mandar un trabajo a Claude Code (trabaja sobre el repositorio de ITT con el procedimiento completo y deja el resultado en la página). Muestra un botón para que el usuario confirme; los archivos adjuntos en esta conversación van con el pedido. tipo: cotizacion_nueva, actualizar_cotizacion, lista_precios u otro.",
         inputSchema: { type: "object", properties: { tipo: { type: "string", enum: Object.keys(TIPOS_PEDIDO) }, texto: { type: "string", description: "el pedido completo y claro para Claude Code" } }, required: ["tipo", "texto"] },
@@ -446,6 +593,14 @@ ${filas.join("\n") || "(ninguno)"}`.slice(0, 60000);
           mostrarPropuesta(); return "Propuesta mostrada. El usuario tiene que confirmarla con el botón; no la des por enviada.";
         } },
     ];
+  }
+  const confirmaciones = new Map();
+  function confirmar(titulo, texto, boton, clase, accion) {
+    const id = "cf" + Date.now().toString(36), box = document.getElementById("ch-msgs"), el = document.createElement("div");
+    confirmaciones.set(id, accion);
+    el.className = "msg a prop"; el.id = id;
+    el.innerHTML = `<b>${esc(titulo)}</b>${texto ? `<div class="small">${esc(texto)}</div>` : ""}<div class="fila"><button class="chico ${clase}" data-p="conf-ok" data-id="${id}">${esc(boton)}</button><button class="chico" data-p="conf-no" data-id="${id}">Cancelar</button></div>`;
+    box.append(el); box.scrollTop = box.scrollHeight;
   }
   function mostrarPropuesta() {
     const pr = chat.propuesta, box = document.getElementById("ch-msgs");
