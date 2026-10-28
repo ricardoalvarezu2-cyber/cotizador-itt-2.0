@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-F01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 670.85 por equipo · soldadura y servicios calculados USD 464.53 · 19 similares (4, 4b, 5, 5b, 6, 7, 12, 13, 15, 16, 17, 18, 20, 21, 22, 24, 25, 26, 27) · 4 sin precio (10, 11, 19, 23).
+**Resumen:** materiales USD 670.85 por equipo · soldadura y servicios calculados USD 1,057.03 · 19 similares (4, 4b, 5, 5b, 6, 7, 12, 13, 15, 16, 17, 18, 20, 21, 22, 24, 25, 26, 27) · 4 sin precio (10, 11, 19, 23).
 
 
 ## 1. Materiales
@@ -58,11 +58,19 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Prueba hidráulica:** 6 h × USD 13.00/h (Prueba hidráulica - manifold FA0032 1.2, 2026-03-10) = USD 78.00 · ⚠ horas supuestas: cargar `parametros.ph_horas` · volumen interior de caños y niples 3.9 l.
 - **Radiografía:** no se calculó (`parametros.rx_pct` = 0). Si el pliego la pide, cargar el porcentaje y volver a correr.
 
+### Horas de ingeniería, calidad y montaje (estimadas: filtro, 4.0", 2 u, materiales USD 671 por unidad)
+
+- **Ingeniería:** 4.5 h × USD 15/h = USD 67.50 · 9 h × 1 u ÷ 2 u · antecedente: TAVAL/41- CIA MINERA DE ORIENTE · Manifold pozo de agua DN80 ANSI 150 (reduccion 3in a DN40) c (3, 1 u, 2026-02-11) · rango del mismo tipo 250–250 h
+- **Calidad y dossier:** 9 h × USD 15/h = USD 135.00 · 18 h × 1 u ÷ 2 u · antecedente: TAVAL/41- CIA MINERA DE ORIENTE · Manifold pozo de agua DN80 ANSI 150 (reduccion 3in a DN40) c (3, 1 u, 2026-02-11) · rango del mismo tipo 250–250 h
+- **Montaje en planta (armado, movimientos):** 30 h × USD 13/h = USD 390.00 · horas por unidad del antecedente · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 4in #600 (serie de 13 unidades) (4, 13 u, 2026-02-19) · rango del mismo tipo 1719–1719 h
+- ⚠ No hay antecedente del mismo tipo y tamaño: se usó el más parecido de otro tipo. Revisar las horas.
+- Candidatos: TAVAL/41- CIA MINERA DE ORIENTE · Manifold pozo de agua DN80 ANSI 150 (reduccion 3in a DN40) c (3, 1 u, 2026-02-11) | TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 4in #600 (serie de 13 unidades) (4, 13 u, 2026-02-19) | ENDRESS HAUSER/26- Construcción Mecánica Skid Gas Buy Back  E+H AR Ø3/4.Armado de la Oferta Comercial · Skid de medicion gas Ø3in S900 (tramo de medicion) Rev 1 (3, 1 u, 2025-12-03)
+
 ## 4. A completar (no se puede calcular)
 
 **Lo que más mueve el número:** en el caso de control CTRL-F01 (filtro FM2 #300) la radiografía y tinta penetrante fueron el 40% del costo y las horas de ingeniería, calidad y montaje el 16%. No presentar un precio sin completarlas.
 - ⚠ **Radiografía en 0%:** confirmar con el pliego (en CTRL-F01 fue 100% + tinta penetrante, USD 1.804 por filtro).
-- ⚠ **Horas de ingeniería, calidad y montaje:** cargarlas (en CTRL-F01: 9 h de ingeniería + 9 h de calidad + 45 h de montaje × USD 13–15 = USD 720 por filtro). Si la prueba hidráulica va dentro del montaje, no sumarla dos veces.
+- ⚠ **Horas de ingeniería, calidad y montaje:** son estimadas del antecedente más parecido (punto 3): confirmarlas con el detalle de actividades del equipo.
 - Armado y montaje (mano de obra de armado roscado o de terceros con el mismo alcance: `buscar_servicio.py`).
 - Ingeniería, calidad y dossier · embalaje · flete (kilos en `controles_tablas.md` al armar) · insumos.
 - Plazo (camino crítico con `comercial/plazos_proveedores.csv`).

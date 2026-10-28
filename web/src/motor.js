@@ -17,7 +17,14 @@ const Motor = (() => {
     return Math.round((x + Number.EPSILON) * k) / k;
   }
 
+  // Índices de la cotización: los congelados (al pasar a revisado) o los vigentes de la base
+  function indicesDe(cfg, idx) {
+    const cg = cfg.indices_congelados;
+    return cg && cg.filas && cg.filas.length ? cg.filas : idx;
+  }
+
   function calcular(cfg, idx) {
+    idx = indicesDe(cfg, idx);
     const p = cfg.parametros, fref = p.fecha_referencia.slice(0, 7);
     const sub = { material: 0, mo: 0, servicio: 0 }, sub0 = { material: 0, mo: 0, servicio: 0 };
     const filas = cfg.items.map(it => {
@@ -42,6 +49,6 @@ const Motor = (() => {
       return { F, unitario: c.precio_unitario, total: c.total, margen: 1 - c.costo / c.precio_unitario };
     });
   }
-  return { factorAjuste, calcular, escenarios, redondear };
+  return { factorAjuste, calcular, escenarios, redondear, indicesDe };
 })();
 if (typeof module !== "undefined") module.exports = Motor;

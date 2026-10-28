@@ -118,3 +118,6 @@ Fuente: `fuentes_originales/taval_lista30_2025-09.xlsx` (Lista 30 de Taval, colu
 3. **Resultado de las cotizaciones 2024–2026:** 232 de 284 figuran como "Enviado" sin resultado.
 4. **Lista Taval sin #REF!**.
 5. **Reporte de compras** (PDF de 453 páginas) sin procesar: es el historial de precios de compra.
+
+## Horas de ingeniería, calidad y montaje por equipo (28-10-2026)
+`costos/horas_por_equipo.csv`: leído con IA (un agente sonnet) de las hojas "Soldadura + HH", "Costura + HH" y "Montaje HH" de 18 planillas 2025–2026 en `fuentes_originales/ofertas_texto/`, con la cita de cada celda en la columna `cita`. Se toma la revisión más nueva de cada proyecto; Los Toldos REV A, Tecpetrol 10 hoja "Soldadura + HH " (sin guion bajo) y Tanque de glicol Opción 2 quedan con `vigente = no`. Taval 43 da las horas en USD y se pasaron a horas con la tarifa (15 y 13 USD/h). Criterios y dudas en `costos/horas_por_equipo_LEEME.md`. Fecha de cada fila: la del índice de proyectos.

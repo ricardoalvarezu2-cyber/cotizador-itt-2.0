@@ -29,7 +29,7 @@ def main(carpeta, precio_unitario=None, costo=None, reparto=None):
     c = json.load(open(carpeta / "cotizacion.json", encoding="utf-8"))
     if precio_unitario is None:
         import armar_cotizacion as ac
-        r = ac.calcular(c, ac.leer_indices())
+        r = ac.calcular(c, ac.leer_indices(c))
         precio_unitario, costo = r["precio_unitario"], r["costo"]
     if reparto is None:
         sub = Counter()

@@ -85,3 +85,6 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 | 45 | En un caso de control, el catálogo ya tenía los precios del mismo proyecto: la prueba se "copiaba" a sí misma | `precotizar.py --excluir <proyecto>` |
 | 46 | La precotización dejaba la radiografía en 0% y las horas de ingeniería, calidad y montaje en blanco: en un filtro chico son el 56% del costo | Avisos en rojo en la precotización; no presentar un precio sin completarlas |
 | 47 | El caño se presupuestaba por los metros usados; en la realidad se compra la barra entera de 6 m | `precotizar.py` agrega la fila de compra extra (Nb) para completar la barra |
+| 48 | El precio de una cotización cambiaba solo cuando la base sumaba un mes de índices (el control de la CAPEX iba a fallar el 02-11 al completarse el dólar de octubre) | Al pasar a revisado se congelan los índices en la cotización (`indices_congelados`); al volver a borrador se descongelan |
+| 49 | La oferta económica con flete incluido sumaba el flete al total sin mostrarlo en ninguna fila (USD 2.453,79 sin explicar) | Fila "Flete y embalaje hasta destino" en la oferta (Python y página); `generar_oferta.py` verifica unitario × cantidad + flete = total |
+| 50 | La plantilla de oferta traía los datos de la CAPEX: una cotización nueva podía salir con otro cliente | Plantilla neutra con [corchetes] |

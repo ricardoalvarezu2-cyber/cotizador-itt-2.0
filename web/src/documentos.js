@@ -19,6 +19,20 @@ const Documentos = (() => {
     return s;
   }
   const fechaHora = v => { if (!v) return ""; const d = new Date(v); return isNaN(d) ? fecha(v) : `${fecha(d)} ${dos(d.getHours())}:${dos(d.getMinutes())}`; };
+  // Número escrito por el usuario en formato argentino: "1,4" = 1,4 · "3.500.000" = 3500000 · "1.234,5" = 1234,5 · "0.35" = 0,35;
+  // también entiende "3,500,000.5" (formato inglés). null si no es un número (el campo se marca en rojo y no se guarda).
+  function numeroDe(t) {
+    let s = String(t ?? "").trim().replace(/\s/g, "").replace(/^(usd|u\$s|\$)/i, "");
+    if (!s) return null;
+    if (/^-?\d{1,3}(\.\d{3})+(,\d+)?$/.test(s)) s = s.replace(/\./g, "").replace(",", ".");
+    else if (/^-?\d+,\d+$/.test(s)) s = s.replace(",", ".");
+    else if (/^-?\d{1,3}(,\d{3})+(\.\d+)?$/.test(s)) s = s.replace(/,/g, "");
+    else if (!/^-?\d*\.?\d+$/.test(s)) return null;
+    const n = Number(s);
+    return isFinite(n) ? n : null;
+  }
+  // Número para mostrar dentro de un campo editable: coma decimal, sin separador de miles
+  const NI = v => (v === "" || v == null || isNaN(Number(v))) ? "" : Number(v).toLocaleString("es-AR", { maximumFractionDigits: 6, useGrouping: false });
   // DD-MM-AAAA (o DD/MM/AAAA) escrita por el usuario → AAAA-MM-DD; "" si no es una fecha válida
   function isoDe(t) {
     const m = String(t || "").trim().match(/^(\d{1,2})[-/.](\d{1,2})[-/.](\d{4})$/); if (!m) return "";
@@ -30,6 +44,7 @@ const Documentos = (() => {
 
   // ------------------------------------------------------------------ Excel del presupuesto
   function planilla(cot, idx) {
+    idx = Motor.indicesDe(cot, idx);
     const X = XLSX;
     const wb = X.utils.book_new();
     const H = { font: { bold: true, color: { rgb: "FFFFFF" } }, fill: { fgColor: { rgb: "1D5F86" } }, alignment: { wrapText: true, vertical: "center" } };
@@ -273,7 +288,8 @@ const Documentos = (() => {
     if (tipo === "economica") {
       x += titulo("OBJETO") + texto(obj) + titulo("PRECIO DE LA PROVISIÓN");
       x += tabla(["ITEM", "CÓDIGO", "DESCRIPCIÓN", "CANTIDAD", "USD UNIDAD", "USD SUBTOTAL", "Plazo de entrega (días)"],
-        [[it.item, it.codigo, it.descripcion, String(N), usd(calc.precio_unitario), usd(calc.precio_unitario * N), it.plazo_dias]],
+        [[it.item, it.codigo, it.descripcion, String(N), usd(calc.precio_unitario), usd(calc.precio_unitario * N), it.plazo_dias],
+         ...(calc.flete ? [["", "", of.descripcion_flete || "Flete y embalaje hasta destino", "1", usd(calc.flete), usd(calc.flete), ""]] : [])],
         [1.3, 3.1, 5.0, 2.1, 2.4, 2.6, 1.9], ["TOTAL (SIN IVA)", usd(calc.total)], 9, [1, 1, 0, 1, 1, 1, 1]);
       if (!cot.parametros.TRANS && of.nota_flete) x += texto(of.nota_flete);
       for (const [tit, txt] of Object.entries(of.condiciones || {})) { x += titulo(tit); for (const l of [].concat(txt)) x += texto(l, { sangria: 1.25 }); }
@@ -396,6 +412,7 @@ const Documentos = (() => {
     if (tipo === "economica") {
       cuerpo += tit("PRECIO DE LA PROVISIÓN") + `<table><thead><tr><th>ITEM</th><th>CÓDIGO</th><th>DESCRIPCIÓN</th><th class="n">CANT.</th><th class="n">USD UNIDAD</th><th class="n">USD SUBTOTAL</th><th>Plazo (días)</th></tr></thead>
         <tbody><tr><td>${esc(it.item)}</td><td>${esc(it.codigo)}</td><td>${esc(it.descripcion)}</td><td class="n">${N}</td><td class="n">${usd(calc.precio_unitario)}</td><td class="n">${usd(calc.precio_unitario * N)}</td><td>${esc(it.plazo_dias)}</td></tr>
+        ${calc.flete ? `<tr><td></td><td></td><td>${esc(of.descripcion_flete || "Flete y embalaje hasta destino")}</td><td class="n">1</td><td class="n">${usd(calc.flete)}</td><td class="n">${usd(calc.flete)}</td><td></td></tr>` : ""}
         <tr><td colspan="5"><b>TOTAL (SIN IVA)</b></td><td class="n"><b>${usd(calc.total)}</b></td><td></td></tr></tbody></table>`;
       if (!cot.parametros.TRANS && of.nota_flete) cuerpo += `<p>${esc(of.nota_flete)}</p>`;
       for (const [t, v] of Object.entries(of.condiciones || {})) cuerpo += tit(t) + [].concat(v).map(l => `<p>${esc(l)}</p>`).join("");
@@ -417,6 +434,6 @@ const Documentos = (() => {
         ${firmante?.telefono ? `<span>☎ ${esc(firmante.telefono)}</span>` : ""}${firmante?.celular ? `<span>📱 ${esc(firmante.celular)}</span>` : ""}${firmante?.email ? `<span>${esc(firmante.email)}</span>` : ""}</div></div>`;
   }
 
-  return { fecha, fechaHora, isoDe, planilla, compras, informeHtml, pdfDeHtml, ofertaDocx, ofertaHtml, usd, num, esc, TIPOS, COINC };
+  return { fecha, fechaHora, isoDe, numeroDe, NI, planilla, compras, informeHtml, pdfDeHtml, ofertaDocx, ofertaHtml, usd, num, esc, TIPOS, COINC };
 })();
 if (typeof module !== "undefined") module.exports = Documentos;

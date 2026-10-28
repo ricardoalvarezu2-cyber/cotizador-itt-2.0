@@ -5,6 +5,7 @@
 (async function () {
   const $ = s => document.querySelector(s);
   const E = Documentos.esc, usd = Documentos.usd, num = Documentos.num, F = Documentos.fecha, FH = Documentos.fechaHora;
+  const NUM = v => Documentos.numeroDe(v), NI = Documentos.NI; // números en formato argentino (lectura y campo editable)
   const app = $("#app"), capa = $("#capa");
   const ESTADOS = ["borrador", "revisado", "aprobado", "enviado"];
   const TABS = [["datos", "Datos"], ["materiales", "Materiales"], ["servicios", "MO y servicios"], ["plazo", "Plazo"], ["oferta", "Oferta"], ["resumen", "Resumen y descargas"]];
@@ -138,7 +139,8 @@
       toast(d.editor === "claude-code" ? "Claude Code actualizó esta cotización" : "La cotización se actualizó con cambios de otra persona");
     }, () => {});
   }
-  function nuevoId() { return "c" + Date.now().toString(36); }
+  let secuenciaId = 0;
+  function nuevoId() { return "c" + Date.now().toString(36) + (++secuenciaId).toString(36) + Math.random().toString(36).slice(2, 5); }
   async function crearCotizacion({ titulo = "", cliente = "", codigo = "COT26-CCCC-NNN" } = {}) {
     const id = nuevoId(), base = clon(S.datos.plantilla_cotizacion), of = clon(S.datos.plantilla_oferta);
     Object.assign(base, { codigo, revision: "Rev 0", estado: "borrador", fecha: hoy(), titulo, items: [], cliente: { nombre: cliente, codigo_itt: "", comprador: "" }, firmante_id: S.firmantes[0]?.id || "" });
@@ -152,9 +154,17 @@
   async function duplicarCotizacion(origen) {
     const d = await S.db.doc("cotizaciones/" + origen).get(); if (!d.exists) return null;
     const doc = clon(d.data()), id = nuevoId();
-    doc.cot.estado = "borrador"; doc.oferta.estado = "borrador"; doc.cot.codigo += " (copia)"; doc.cot.fecha = hoy(); doc.creado = new Date().toISOString(); delete doc.editor;
+    doc.cot.estado = "borrador"; doc.oferta.estado = "borrador"; doc.cot.codigo += " (copia)"; doc.cot.fecha = hoy(); doc.creado = new Date().toISOString(); delete doc.editor; delete doc.cot.aprobacion; delete doc.cot.indices_congelados;
     await S.db.doc("cotizaciones/" + id).set(doc); await S.db.doc("resumenes/" + id).set(resumenDe(doc));
     return id;
+  }
+  // Cambio de estado (lo usan el diálogo y el chat). Al revisar se congelan los índices: el precio ya no cambia solo
+  // cuando la base suma un mes nuevo. Al volver a borrador se descongelan y se borra la aprobación.
+  function cambiarEstado(d) {
+    const cot = S.doc.cot;
+    if (d === "borrador") { delete cot.aprobacion; delete cot.indices_congelados; }
+    else if (!cot.indices_congelados) cot.indices_congelados = { fecha: hoy(), filas: clon(S.datos.indices) };
+    cot.estado = d; S.doc.oferta.estado = d; S.ultVersion = 0;
   }
   async function borrarCotizacion(id) { await S.db.doc("resumenes/" + id).delete(); await S.db.doc("cotizaciones/" + id).delete(); }
 
@@ -274,7 +284,7 @@
   const campo = (etq, ruta, tipo = "text", extra = "") => {
     const v = leerRuta(S.doc, ruta) ?? "";
     if (tipo === "date") return `<label><span>${etq}</span><input id="f-${ruta.replace(/\./g, "-")}" type="text" inputmode="numeric" placeholder="DD-MM-AAAA" data-b="${ruta}" data-t="fecha" value="${E(F(v))}" ${extra}></label>`;
-    return `<label><span>${etq}</span><input id="f-${ruta.replace(/\./g, "-")}" type="${tipo}" ${tipo === "number" ? 'step="any"' : ""} data-b="${ruta}" data-t="${tipo}" value="${E(v)}" ${extra}></label>`;
+    return `<label><span>${etq}</span><input id="f-${ruta.replace(/\./g, "-")}" type="text" ${tipo === "number" ? 'inputmode="decimal" class="num"' : ""} data-b="${ruta}" data-t="${tipo}" value="${E(tipo === "number" ? NI(v) : v)}" ${extra}></label>`;
   };
   function tabDatos() {
     const cot = S.doc.cot;
@@ -326,8 +336,8 @@
       ${items.map(it => { const s = it.fuentes[0]; return `<tr>
         <td class="ed" style="width:60px"><input id="p-${E(it.id)}" data-it="${E(it.id)}" data-c="pos" value="${E(it.pos)}" style="width:52px"></td>
         <td><div class="d">${E(it.descripcion)}</div><div class="sp">${E(it.especificacion || "")}</div></td>
-        <td class="ed"><input id="q-${E(it.id)}" type="number" step="any" class="num" data-it="${E(it.id)}" data-c="cantidad" value="${it.cantidad}"></td><td>${E(it.unidad)}</td>
-        <td class="ed"><input id="u-${E(it.id)}" type="number" step="any" class="num" data-it="${E(it.id)}" data-c="precio" value="${s.precio}"></td>
+        <td class="ed"><input id="q-${E(it.id)}" type="text" inputmode="decimal" class="num" data-it="${E(it.id)}" data-c="cantidad" value="${NI(it.cantidad)}"></td><td>${E(it.unidad)}</td>
+        <td class="ed"><input id="u-${E(it.id)}" type="text" inputmode="decimal" class="num" data-it="${E(it.id)}" data-c="precio" value="${NI(s.precio)}"></td>
         <td class="small"><span class="pill ${s.tipo === "est" ? "bad" : s.tipo === "cot" ? "ok" : "info"}">${E(Documentos.TIPOS[s.tipo] || s.tipo)}</span><br>${E(s.proveedor)}<br><span class="muted">${E(F(s.fecha))}</span></td>
         <td><span class="pill ${cl(s)}">${E(Documentos.COINC[s.coincide] || "—")}</span>${s.diferencia ? `<div class="sp">${E(s.diferencia.slice(0, 140))}</div>` : ""}</td>
         <td>${celdaAvisos(it)}</td>
@@ -388,7 +398,7 @@
       return `<div class="resultado ${ch ? "sel" : ""}"><label class="tilde">${S.doc ? `<input type="checkbox" data-selm="${i}" ${ch ? "checked" : ""} ${m.p ? "" : "disabled"} aria-label="Seleccionar">` : ""}${est}</label><div><div class="d">${E(m.d)}</div><div class="small muted">${E(m.c)} · ${E(S.datos.familias[m.f]?.n || "")}${[m.a.marca, m.a.modelo].filter(Boolean).length ? " · " + E([m.a.marca, m.a.modelo].filter(Boolean).join(" ")) : ""}${m.nuevo ? " · nuevo en la página" : ""}</div></div>
         <div class="precio">${m.p ? "USD " + num(m.p) + " / " + E(m.u || "un") : '<span class="err">sin precio confiable</span>'}<div class="small muted">${E(F(m.fe))} · ${E(m.tp)}</div></div>
         <div class="det">${x.difs.length ? "Difiere en: " + E(x.difs.join("; ")) + " · " : ""}${m.al ? "<b>Alerta:</b> " + E(m.al) + " · " : ""}${E(m.pr)} · Origen: ${E(m.o)}${m.n > 1 ? ` · ${m.n} precios en el historial (${num(m.mn)} a ${num(m.mx)})` : ""}</div>
-        ${S.doc ? `<div class="acc"><input id="qm-${i}" type="number" step="any" class="num" value="${ch ? S.selM.get(m.c).q : 1}" aria-label="Cantidad"><button class="chico prim" data-a="agregar-mat" data-i="${i}">Agregar</button></div>` : ""}</div>`;
+        ${S.doc ? `<div class="acc"><input id="qm-${i}" type="text" inputmode="decimal" class="num" value="${NI(ch ? S.selM.get(m.c).q : 1)}" aria-label="Cantidad"><button class="chico prim" data-a="agregar-mat" data-i="${i}">Agregar</button></div>` : ""}</div>`;
     }).join("") : `<div class="vacio">No hay materiales con esos filtros. Probá quitar alguno o cargalo a mano.</div>`;
     S.ultMat = r.res;
   }
@@ -413,7 +423,7 @@
         <div class="tbl"><table><thead><tr><th>Ø</th><th>Sch</th><th class="n">Juntas BW</th><th class="n">Juntas SW</th><th class="n">Cuplas / olets</th><th>Tipo olet</th><th></th></tr></thead><tbody>
         ${S.sold.map((r, i) => `<tr><td><select id="sd-${i}" data-sold="${i}" data-c="dn">${dns.map(d => `<option ${String(d) === String(r.dn) ? "selected" : ""}>${d}</option>`).join("")}</select></td>
           <td><select id="ss-${i}" data-sold="${i}" data-c="sch">${schs.map(s => `<option ${s === r.sch ? "selected" : ""}>${s}</option>`).join("")}</select></td>
-          ${["bw", "sw", "olet"].map(k => `<td class="ed"><input id="s${k}-${i}" type="number" step="1" min="0" class="num" data-sold="${i}" data-c="${k}" value="${E(r[k])}"></td>`).join("")}
+          ${["bw", "sw", "olet"].map(k => `<td class="ed"><input id="s${k}-${i}" type="text" inputmode="decimal" class="num" data-sold="${i}" data-c="${k}" value="${E(r[k])}"></td>`).join("")}
           <td><select id="so-${i}" data-sold="${i}" data-c="tipoOlet"><option value="cupla" ${r.tipoOlet !== "weldolet" ? "selected" : ""}>cupla/sockolet (1,75)</option><option value="weldolet" ${r.tipoOlet === "weldolet" ? "selected" : ""}>weldolet (2,5)</option></select></td>
           <td><button class="chico" data-a="sold-quitar" data-i="${i}" aria-label="Quitar fila">×</button></td></tr>`).join("")}</tbody></table></div>
         <div class="fila"><button class="chico" data-a="sold-fila">Agregar diámetro</button></div>
@@ -422,14 +432,14 @@
       <div class="grid2">
       <section class="panel"><h3>2. Ensayos</h3><p class="small muted">Controles de calidad, antes de pintar.</p>
         <h3>Radiografía</h3><p class="small" id="rx-info">Usa las juntas a tope de Soldaduras: ${sol.placas_chicas} placas chicas y ${sol.placas_grandes} grandes al 100%.</p>
-        <div class="fila"><label style="flex-direction:row;align-items:center;gap:6px"><span>Juntas a radiografiar (%)</span><input id="rx-pct" type="number" min="0" max="100" step="5" class="num" value="${S.rxPct ?? 0}" style="width:70px"></label>
+        <div class="fila"><label style="flex-direction:row;align-items:center;gap:6px"><span>Juntas a radiografiar (%)</span><input id="rx-pct" type="text" inputmode="decimal" class="num" value="${NI(S.rxPct ?? 0)}" style="width:70px"></label>
           <button data-a="rx-agregar" ${sol.placas_chicas + sol.placas_grandes ? "" : "disabled"}>Agregar radiografía</button></div>
         <h3>Prueba hidráulica</h3>
-        <div class="campos"><label><span>Horas de prueba</span><input id="ph-h" type="number" step="any" class="num" value="${S.phH ?? 6}"></label>
+        <div class="campos"><label><span>Horas de prueba</span><input id="ph-h" type="text" inputmode="decimal" class="num" value="${NI(S.phH ?? 6)}"></label>
           <label><span>Tarifa</span><input id="ph-t" readonly value="${ph ? "USD " + num(ph.t) + "/h · " + E(F(ph.fe)) : "sin dato"}"></label></div>
         <div class="fila"><button data-a="ph-agregar" ${ph ? "" : "disabled"}>Agregar prueba hidráulica</button></div></section>
       <section class="panel"><h3>3. Pintura</h3><p class="small muted">Tratamiento de superficie de un tercero, al final.</p>
-        <div class="campos"><label><span>Superficie a pintar (m²)</span><input id="pin-m2" type="number" step="any" class="num" value="${S.pinM2 ?? ""}"></label>
+        <div class="campos"><label><span>Superficie a pintar (m²)</span><input id="pin-m2" type="text" inputmode="decimal" class="num" value="${NI(S.pinM2 ?? "")}"></label>
           <label class="ancho"><span>Tarifa de pintura (USD/m², sin IVA)</span><select id="pin-t">${pins.map(s => `<option value="${E(s.c)}">${num(s.t)} · ${E(s.s.slice(0, 60))} · ${E(s.pr.slice(0, 30))} · ${E(F(s.fe))}</option>`).join("")}</select></label></div>
         <div class="fila"><button data-a="pin-agregar">Agregar pintura</button><button class="chico" data-a="pin-calc">Calcular m² de los caños cargados</button></div></section></div>
       ${buscadorSrv()}`;
@@ -449,7 +459,7 @@
       <div><div class="d">${E(s.s)}</div><div class="small muted">${E(s.h)} · ${E(s.c)}${s.eq ? " · " + E(s.eq) : ""}</div></div>
       <div class="precio">${s.p ? (s.t ? "USD " + num(s.t) + " " + E(s.ut.replace("USD", "")) : "USD " + num(s.p)) : '<span class="err">sin precio confiable</span>'}<div class="small muted">${E(F(s.fe))}</div></div>
       <div class="det">${s.inc ? "Incluye: " + E(s.inc) + " · " : ""}${s.ninc ? "No incluye: " + E(s.ninc) + " · " : ""}${s.al ? "<b>Alerta:</b> " + E(s.al) + " · " : ""}${E(s.pr)} · Origen: ${E(s.o)}</div>
-      ${S.doc ? `<div class="acc"><input id="qs-${i}" type="number" step="any" class="num" value="${S.selS.has(s.c) ? S.selS.get(s.c).q : 1}" aria-label="Cantidad"><button class="chico prim" data-a="agregar-srv" data-i="${i}" ${s.p ? "" : "disabled"}>Agregar</button></div>` : ""}</div>`).join("")
+      ${S.doc ? `<div class="acc"><input id="qs-${i}" type="text" inputmode="decimal" class="num" value="${NI(S.selS.has(s.c) ? S.selS.get(s.c).q : 1)}" aria-label="Cantidad"><button class="chico prim" data-a="agregar-srv" data-i="${i}" ${s.p ? "" : "disabled"}>Agregar</button></div>` : ""}</div>`).join("")
       : `<div class="vacio">No hay servicios con ese texto.</div>`;
     S.ultSrv = r.res;
   }
@@ -473,8 +483,8 @@
         <p class="small muted">Los plazos típicos de cada rubro están en el catálogo de plazos de proveedores (válvulas esféricas ~90 d, control ~94, PSV ~100, instrumentos ~85–90). Cargá el plazo que cotizó cada proveedor.</p></section></div>
       <section><div class="sec-head"><h3>Tareas</h3><button class="chico" data-a="tarea-nueva">Agregar tarea</button></div>
         ${pl.tareas.length ? `<div class="tbl"><table><thead><tr><th>Tarea</th><th class="n">Día inicio</th><th class="n">Día fin</th><th>Tipo</th><th></th></tr></thead><tbody>
-        ${pl.tareas.map((t, i) => `<tr><td><input id="tn-${i}" data-ta="${i}" data-c="0" value="${E(t[0])}"></td><td class="ed"><input id="ti-${i}" type="number" class="num" data-ta="${i}" data-c="1" value="${t[1]}"></td>
-          <td class="ed"><input id="tf-${i}" type="number" class="num" data-ta="${i}" data-c="2" value="${t[2]}"></td>
+        ${pl.tareas.map((t, i) => `<tr><td><input id="tn-${i}" data-ta="${i}" data-c="0" value="${E(t[0])}"></td><td class="ed"><input id="ti-${i}" type="text" inputmode="decimal" class="num" data-ta="${i}" data-c="1" value="${NI(t[1])}"></td>
+          <td class="ed"><input id="tf-${i}" type="text" inputmode="decimal" class="num" data-ta="${i}" data-c="2" value="${NI(t[2])}"></td>
           <td><select id="tt-${i}" data-ta="${i}" data-c="3"><option value="" ${t[3] === "" ? "selected" : ""}>material</option><option value="crit" ${t[3] === "crit" ? "selected" : ""}>material crítico</option><option value="tal" ${t[3] === "tal" ? "selected" : ""}>taller / despacho</option></select></td>
           <td><button class="chico peligro" data-a="tarea-quitar" data-i="${i}">Quitar</button></td></tr>`).join("")}</tbody></table></div>` : `<div class="vacio">Sin tareas. Agregá una por cada material de plazo largo y las etapas de taller.</div>`}</section>`;
   }
@@ -575,7 +585,7 @@
     const s = it.fuentes[0];
     const inp = (k, etq, v, tipo = "text") => tipo === "date"
       ? `<label><span>${etq}</span><input id="ei-${k}" data-ei="${k}" data-fecha type="text" inputmode="numeric" placeholder="DD-MM-AAAA" value="${E(F(v))}"></label>`
-      : `<label><span>${etq}</span><input id="ei-${k}" data-ei="${k}" type="${tipo}" ${tipo === "number" ? 'step="any"' : ""} value="${E(v ?? "")}"></label>`;
+      : `<label><span>${etq}</span><input id="ei-${k}" data-ei="${k}" type="text" ${tipo === "number" ? 'inputmode="decimal" class="num" data-num' : ""} value="${E(tipo === "number" ? NI(v) : (v ?? ""))}"></label>`;
     capa.hidden = false;
     capa.innerHTML = `<div class="capa"><section class="panel" role="dialog" aria-label="Ítem"><h2>${nuevo ? "Cargar ítem a mano" : "Editar ítem"}</h2>
       <div class="campos">${inp("pos", "Posición del plano", it.pos)}<label><span>Grupo</span><select id="ei-grupo" data-ei="grupo">${[["material", "Material"], ["mo", "Mano de obra"], ["servicio", "Servicio"]].map(([v, n]) => `<option value="${v}" ${it.grupo === v ? "selected" : ""}>${n}</option>`).join("")}</select></label>
@@ -594,14 +604,43 @@
       <p class="err" id="ei-err"></p><div class="fila fin"><button data-a="cerrar">Cancelar</button><button class="prim" data-a="item-guardar">Guardar</button></div></section></div>`;
   }
 
+  // ------------------------------------------------------------------ cambio de estado (con controles; la herramienta nunca envía nada)
+  function dialogoEstado(d) {
+    const cot = S.doc.cot, malos = Busqueda.avisos(cot).filter(a => a.nivel === "bad"), act = cot.estado;
+    let error = "", texto = "", extra = "";
+    if (d === act) return;
+    if (d === "revisado") {
+      if (malos.length) error = `Hay ${malos.length} aviso(s) para corregir. Corregilos antes de pasar a revisado (ver Resumen y descargas).`;
+      texto = "Confirmá que una persona revisó el cómputo contra el plano (procedimiento P10) y que los avisos para revisar están explicados.";
+    } else if (d === "aprobado") {
+      if (act !== "revisado") error = "Primero tiene que estar revisada.";
+      else if (malos.length) error = `Hay ${malos.length} aviso(s) para corregir.`;
+      texto = "Al aprobar, la oferta sale sin la leyenda de borrador y con la firma, y la cotización queda bloqueada para cambios.";
+      extra = `<label><span>¿Quién aprueba? (Matías o la dirección)</span><input id="ap-por" autocomplete="off"></label>`;
+    } else if (d === "enviado") {
+      if (act !== "aprobado") error = "Solo se marca enviada una cotización aprobada.";
+      texto = "La herramienta no envía nada. Marcala como enviada solo si ya la mandaste vos al cliente.";
+    } else if (d === "borrador") {
+      texto = act === "revisado" ? "Vuelve a borrador para seguir cambiándola." : "Vuelve a borrador: se desbloquea, se borra la aprobación y la oferta vuelve a salir con la leyenda de borrador.";
+    }
+    capa.hidden = false;
+    capa.innerHTML = `<div class="capa"><section class="panel" role="dialog" aria-label="Cambiar estado"><h2>Pasar a "${E(d)}"</h2>
+      ${error ? `<div class="aviso bad">${E(error)}</div>` : `<p>${E(texto)}</p>${extra}`}
+      <p class="err" id="est-err"></p><div class="fila fin"><button data-a="cerrar">${error ? "Volver" : "Cancelar"}</button>
+      ${error ? "" : `<button class="prim" data-a="estado-ok" data-v="${E(d)}">Pasar a ${E(d)}</button>`}</div></section></div>`;
+    $("#ap-por")?.focus();
+  }
+
   // ------------------------------------------------------------------ eventos
   app.addEventListener("input", ev => {
     const el = ev.target;
+    if (bloqueada() && (el.dataset.b || el.dataset.bl || el.dataset.it || el.dataset.ta !== undefined)) {
+      toast(`La cotización está ${S.doc.cot.estado}: para cambiarla, volvé a borrador.`); render(); return;
+    }
     if (el.dataset.b && S.doc) {
       let v = el.value;
       if (el.dataset.t === "fecha") { v = Documentos.isoDe(v); el.classList.toggle("mal", !v); if (!v) return; }
-      if (el.dataset.t === "number") v = v === "" ? 0 : Number(v);
-      if (el.dataset.b === "cot.parametros.CONT" || el.dataset.b === "cot.parametros.N") v = Number(v);
+      if (el.dataset.t === "number") { v = v.trim() === "" ? 0 : NUM(v); el.classList.toggle("mal", v == null); if (v == null) return; }
       ponerRuta(S.doc, el.dataset.b, v);
       if (el.dataset.b === "cot.estado") S.doc.oferta.estado = v;
       refrescar(); guardarPronto();
@@ -610,8 +649,10 @@
       ponerRuta(S.doc, el.dataset.bl, el.value.split("\n").map(x => x.trim()).filter(Boolean)); guardarPronto();
     } else if (el.dataset.it && S.doc) {
       const it = S.doc.cot.items.find(i => i.id === el.dataset.it);
-      if (el.dataset.c === "precio") it.fuentes[0].precio = Number(el.value) || 0;
-      else if (el.dataset.c === "cantidad") it.cantidad = Number(el.value) || 0;
+      if (el.dataset.c === "precio" || el.dataset.c === "cantidad") {
+        const v = el.value.trim() === "" ? 0 : NUM(el.value); el.classList.toggle("mal", v == null || v < 0); if (v == null || v < 0) return;
+        if (el.dataset.c === "precio") it.fuentes[0].precio = v; else it.cantidad = v;
+      }
       else it[el.dataset.c] = el.value;
       refrescar(); guardarPronto();
     } else if (el.dataset.fm !== undefined) {
@@ -623,15 +664,15 @@
       S.vistaItems[el.dataset.vi][el.dataset.c] = el.value; render();
     } else if (el.dataset.selm !== undefined || el.dataset.sels !== undefined) {
       const m = el.dataset.selm !== undefined, i = +(m ? el.dataset.selm : el.dataset.sels), x = m ? S.ultMat[i] : S.ultSrv[i], cod = m ? x.r.c : x.c, sel = m ? S.selM : S.selS;
-      if (el.checked) sel.set(cod, { x, q: Number($((m ? "#qm-" : "#qs-") + i).value) || 1 }); else sel.delete(cod);
+      if (el.checked) sel.set(cod, { x, q: NUM($((m ? "#qm-" : "#qs-") + i).value) || 1 }); else sel.delete(cod);
       el.closest(".resultado").classList.toggle("sel", el.checked); pintarBarraSel(m ? "m" : "s");
     } else if (/^q[ms]-\d+$/.test(el.id)) {
       const m = el.id[1] === "m", i = +el.id.slice(3), x = m ? S.ultMat[i] : S.ultSrv[i], sel = m ? S.selM : S.selS, cod = m ? x?.r.c : x?.c;
-      if (sel.has(cod)) sel.get(cod).q = Number(el.value) || 1;
+      if (sel.has(cod)) sel.get(cod).q = NUM(el.value) || 1;
     } else if (el.dataset.fs !== undefined) {
       S.fs[el.dataset.fs] = el.value; clearTimeout(S.tBus); S.tBus = setTimeout(pintarResultadosSrv, 200);
     } else if (el.dataset.sold !== undefined) {
-      S.sold[+el.dataset.sold][el.dataset.c] = el.value;
+      S.sold[+el.dataset.sold][el.dataset.c] = ["bw", "sw", "olet"].includes(el.dataset.c) ? String(NUM(el.value) ?? "") : el.value;
       const sol = Busqueda.soldadura(S.datos, S.sold), t = Busqueda.tarifa(S.datos, "soldadura", "soldadura piping");
       $("#sold-res").innerHTML = `<b>${num(sol.pulg, 2)} pulgadas equivalentes</b> × USD ${t ? num(t.valor) : "—"} = <b>USD ${num(sol.pulg * (t ? +t.valor : 0))}</b>`;
       $("#rx-info").textContent = `Usa las juntas a tope de Soldaduras: ${sol.placas_chicas} placas chicas y ${sol.placas_grandes} grandes al 100%.`;
@@ -639,8 +680,8 @@
       document.querySelector('[data-a="rx-agregar"]').disabled = !(sol.placas_chicas + sol.placas_grandes);
     } else if (el.dataset.ta !== undefined) {
       const t = S.doc.cot.plazo.tareas[+el.dataset.ta], c = +el.dataset.c;
-      t[c] = c === 1 || c === 2 ? Number(el.value) || 0 : el.value; guardarPronto();
-    } else if (el.id === "rx-pct") S.rxPct = Number(el.value) || 0;
+      t[c] = c === 1 || c === 2 ? NUM(el.value) || 0 : el.value; guardarPronto();
+    } else if (el.id === "rx-pct") S.rxPct = NUM(el.value) || 0;
     else if (el.id === "pin-m2") S.pinM2 = el.value;
     else if (el.id === "ph-h") S.phH = el.value;
   });
@@ -659,7 +700,8 @@
     if (el.dataset.ff) S.editF[el.dataset.ff] = el.value;
     if (el.dataset.ei) {
       const k = el.dataset.ei, it = S.editI.it, s = it.fuentes[0];
-      let v = el.type === "number" ? Number(el.value) || 0 : el.value;
+      let v = el.value;
+      if (el.dataset.num !== undefined) { v = NUM(el.value); el.classList.toggle("mal", v == null && el.value.trim() !== ""); v = v ?? 0; }
       if (el.dataset.fecha !== undefined) { v = Documentos.isoDe(el.value); el.classList.toggle("mal", !v); }
       if (k.startsWith("f.")) s[k.slice(2)] = v; else if (k.startsWith("plano.")) it.plano[k.slice(6)] = v; else it[k] = v;
       if (k === "grupo") editorItem(it, it.grupo);
@@ -677,8 +719,13 @@
     try { await accion(a, b); } catch (e) { toast("Error: " + (e.message || e.code || e)); console.error(e); }
   });
 
+  // Acciones que cambian la cotización: no se permiten si está aprobada o enviada (hay que volver a borrador)
+  const CAMBIAN = new Set(["quitar", "editar", "manual", "item-guardar", "agregar-mat", "agregar-srv", "agregar-sel", "sold-agregar", "rx-agregar", "pin-agregar",
+    "ph-agregar", "tarea-nueva", "tarea-quitar", "restaurar", "deshacer", "rehacer"]);
+  const bloqueada = () => S.doc && ["aprobado", "enviado"].includes(S.doc.cot.estado);
   async function accion(a, b) {
     const cot = S.doc?.cot;
+    if (CAMBIAN.has(a) && bloqueada()) { toast(`La cotización está ${cot.estado}: para cambiarla, volvé a borrador.`); return; }
     switch (a) {
       case "tab": S.tab = b.dataset.v; render(); break;
       case "deshacer": deshacer(); break;
@@ -686,7 +733,17 @@
       case "vista": await vistaPrevia(b.dataset.v); break;
       case "uno-k": await descargarUno(b, b.dataset.k); break;
       case "rehacer": rehacer(); break;
-      case "estado": cot.estado = b.dataset.v; S.doc.oferta.estado = b.dataset.v; S.ultVersion = 0; guardarPronto(); render(); break;
+      case "estado": dialogoEstado(b.dataset.v); break;
+      case "estado-ok": {
+        const d = b.dataset.v;
+        if (d === "aprobado") {
+          const por = ($("#ap-por")?.value || "").trim();
+          if (!por) { $("#est-err").textContent = "Escribí quién aprueba."; return; }
+          cot.aprobacion = { por, fecha: hoy() };
+        }
+        cambiarEstado(d); capa.hidden = true; capa.innerHTML = ""; guardarPronto(); render();
+        toast(`Estado: ${d}`); break;
+      }
       case "nueva": { const id = await crearCotizacion(); S.tab = "datos"; location.hash = "c-" + id; break; }
       case "duplicar": { const id = await duplicarCotizacion(b.dataset.id); if (!id) return; toast("Cotización duplicada"); location.hash = "c-" + id; break; }
       case "borrar":
@@ -705,7 +762,7 @@
         capa.hidden = true; capa.innerHTML = ""; guardarPronto(); render(); break;
       }
       case "agregar-mat": {
-        const x = S.ultMat[+b.dataset.i], it = agregarMaterialDe(x, Number($("#qm-" + b.dataset.i).value) || 1);
+        const x = S.ultMat[+b.dataset.i], it = agregarMaterialDe(x, NUM($("#qm-" + b.dataset.i).value) || 1);
         S.selM.delete(x.r.c); guardarPronto(); render(); toast(`Agregado: ${it.descripcion.slice(0, 50)}`); break;
       }
       case "agregar-sel": {
@@ -717,7 +774,7 @@
       }
       case "limpiar-sel": (b.dataset.k === "m" ? S.selM : S.selS).clear(); render(); break;
       case "agregar-srv": {
-        const r = S.ultSrv[+b.dataset.i], q = Number($("#qs-" + b.dataset.i).value) || 1;
+        const r = S.ultSrv[+b.dataset.i], q = NUM($("#qs-" + b.dataset.i).value) || 1;
         cot.items.push(Busqueda.itemDeServicio(r, q, siguienteId("S"))); S.selS.delete(r.c); guardarPronto(); render(); toast(`Agregado: ${r.s.slice(0, 50)}`); break;
       }
       case "limpiar-fm": S.fm = { fam: S.fm.fam }; render(); break;
@@ -725,17 +782,17 @@
       case "sold-quitar": S.sold.splice(+b.dataset.i, 1); if (!S.sold.length) S.sold.push({ dn: "2", sch: "40" }); render(); break;
       case "sold-agregar": agregarSoldaduras(S.sold); guardarPronto(); render(); toast("Soldaduras agregadas"); break;
       case "rx-agregar": {
-        const pct = (S.rxPct ?? Number($("#rx-pct").value)) || 0;
+        const pct = (S.rxPct ?? NUM($("#rx-pct").value)) || 0;
         if (!pct) { toast("Cargá el porcentaje de juntas a radiografiar"); return; }
         agregarRx(S.sold, pct); guardarPronto(); render(); toast("Radiografía agregada"); break;
       }
       case "pin-calc": { const m2 = m2Canos(); S.pinM2 = m2.toFixed(2); render(); toast(m2 ? `${num(m2)} m² de caños y niples (sin accesorios ni válvulas)` : "No hay caños con Ø, schedule y largo para calcular"); break; }
       case "pin-agregar": {
-        const m2 = Number($("#pin-m2").value);
+        const m2 = NUM($("#pin-m2").value);
         if (!m2 || !$("#pin-t").value) { toast("Cargá los m² y elegí la tarifa"); return; }
         agregarPintura(m2, $("#pin-t").value); guardarPronto(); render(); toast("Pintura agregada"); break;
       }
-      case "ph-agregar": agregarPH(Number($("#ph-h").value) || 6); guardarPronto(); render(); toast("Prueba hidráulica agregada"); break;
+      case "ph-agregar": agregarPH(NUM($("#ph-h").value) || 6); guardarPronto(); render(); toast("Prueba hidráulica agregada"); break;
       case "tarea-nueva": cot.plazo.tareas.push(["Nueva tarea", 0, 30, ""]); guardarPronto(); render(); break;
       case "tarea-quitar": cot.plazo.tareas.splice(+b.dataset.i, 1); guardarPronto(); render(); break;
       case "firmante-nuevo": editorFirmante(); break;
@@ -824,7 +881,7 @@
     finally { if (b) b.disabled = false; }
   }
 
-  window.ITT = { S, $, E, num, toast, clon, hoy, render, refrescar, guardarPronto, calc, siguienteId, nuevoId, crearCotizacion, duplicarCotizacion, borrarCotizacion, abrir, accion, editorItem,
+  window.ITT = { S, $, E, num, toast, clon, hoy, render, refrescar, guardarPronto, calc, siguienteId, nuevoId, crearCotizacion, duplicarCotizacion, borrarCotizacion, abrir, accion, cambiarEstado, editorItem,
     agregarSoldaduras, agregarRx, m2Canos, agregarPintura, agregarPH, tarifasPintura, tarifaPH, descargarTodo, descargarUno, ARCHIVOS, resumenDe };
   window.dispatchEvent(new Event("itt-listo"));
   ruta();

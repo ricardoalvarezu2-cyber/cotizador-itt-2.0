@@ -48,9 +48,9 @@ def leer_precios(carpeta):
                        check=True, capture_output=True)
         ws = load_workbook(Path(tmp) / xlsx.name, data_only=True)["Cotización"]
         precios = {"cantidad": ws["B5"].value, "precio_unitario": ws["D27"].value,
-                   "total": ws["E28"].value, "flete_incluido": ws["B9"].value == 1}
-    if abs(precios["precio_unitario"] * precios["cantidad"] - precios["total"]) > 0.001 and not precios["flete_incluido"]:
-        sys.exit(f"La planilla no cierra: unitario × cantidad ≠ total ({precios})")
+                   "total": ws["E28"].value, "flete_incluido": ws["B9"].value == 1, "flete": ws["E22"].value or 0}
+    if abs(precios["precio_unitario"] * precios["cantidad"] + precios["flete"] - precios["total"]) > 0.001:
+        sys.exit(f"La planilla no cierra: unitario × cantidad + flete ≠ total ({precios})")
     return precios
 
 
@@ -269,7 +269,9 @@ def armar(carpeta, tipo, cfg, precios):
         it = cfg["item"]
         c.tabla(["ITEM", "CÓDIGO", "DESCRIPCIÓN", "CANTIDAD", "USD UNIDAD", "USD SUBTOTAL", "Plazo de entrega (días)"],
                 [[it["item"], it["codigo"], it["descripcion"], f"{precios['cantidad']:g}", usd(precios["precio_unitario"]),
-                  usd(precios["precio_unitario"] * precios["cantidad"]), it["plazo_dias"]]],
+                  usd(precios["precio_unitario"] * precios["cantidad"]), it["plazo_dias"]]]
+                + ([["", "", cfg.get("descripcion_flete", "Flete y embalaje hasta destino"), "1", usd(precios["flete"]), usd(precios["flete"]), ""]]
+                   if precios["flete"] else []),
                 [1.3, 3.1, 5.0, 2.1, 2.4, 2.6, 1.9], total=("TOTAL (SIN IVA)", usd(precios["total"])),
                 alinear=[1, 1, 0, 1, 1, 1, 1])
         if not precios["flete_incluido"]:

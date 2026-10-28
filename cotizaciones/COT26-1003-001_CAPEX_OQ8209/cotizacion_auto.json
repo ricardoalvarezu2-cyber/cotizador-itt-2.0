@@ -874,6 +874,66 @@
      "diferencia": "horas supuestas (6 h): confirmar"
     }
    ]
+  },
+  {
+   "id": "S12H",
+   "pos": "HH",
+   "grupo": "mo",
+   "descripcion": "Horas de ingeniería (estimadas del antecedente)",
+   "especificacion": "9 h por puente · 9 h por unidad (serie de 442)",
+   "cantidad": 9.0,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 15.0,
+     "proveedor": "Horas propias ITT (tarifa del antecedente)",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · TAVAL/43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt · hoja 3\" Sold+END+Ing+Calid+Mje ",
+     "fecha": "2026-02-19",
+     "coincide": "similar",
+     "diferencia": "ESTIMADO del antecedente TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19)"
+    }
+   ]
+  },
+  {
+   "id": "S13C",
+   "pos": "CAL",
+   "grupo": "mo",
+   "descripcion": "Horas de calidad y dossier (estimadas del antecedente)",
+   "especificacion": "1 h por puente · 1 h por unidad (serie de 442)",
+   "cantidad": 1.0,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 15.0,
+     "proveedor": "Horas propias ITT (tarifa del antecedente)",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · TAVAL/43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt · hoja 3\" Sold+END+Ing+Calid+Mje ",
+     "fecha": "2026-02-19",
+     "coincide": "similar",
+     "diferencia": "ESTIMADO del antecedente TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19)"
+    }
+   ]
+  },
+  {
+   "id": "S13A",
+   "pos": "ARM",
+   "grupo": "mo",
+   "descripcion": "Horas de montaje en planta (armado, movimientos) (estimadas del antecedente)",
+   "especificacion": "27 h por puente · horas por unidad del antecedente",
+   "cantidad": 27.0,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 13.0,
+     "proveedor": "Horas propias ITT (tarifa del antecedente)",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · TAVAL/43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt · hoja 3\" Sold+END+Ing+Calid+Mje ",
+     "fecha": "2026-02-19",
+     "coincide": "similar",
+     "diferencia": "ESTIMADO del antecedente TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19)"
+    }
+   ]
   }
  ],
  "compras": {

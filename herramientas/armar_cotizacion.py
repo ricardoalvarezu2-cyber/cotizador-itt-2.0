@@ -50,9 +50,19 @@ def sin_html(t):
     return html.unescape(re.sub(r"<[^>]+>", "", str(t)))
 
 
-def leer_indices():
-    return [(r["mes"][:7], float(r["indice_local_usd"]), float(r["cpi_eeuu"]))
-            for r in csv.DictReader(open(INDICES, encoding="utf-8"))]
+def filas_indices(cfg=None):
+    """Filas de la tabla de índices. Si la cotización tiene "indices_congelados" (se congelan al pasar a revisado, para que
+    el precio no cambie solo cuando se publica un mes nuevo), se usan esos; si no, la tabla vigente de la base."""
+    cg = (cfg or {}).get("indices_congelados")
+    if cg:
+        return [{"mes": r["mes"][:7] + "-01", "ipc_argentina": r["ipc"], "dolar_bna": r["dolar"], "indice_local_usd": r["local"],
+                 "cpi_eeuu": r["cpi"], "origen_ipc": r.get("oi", ""), "origen_dolar": r.get("od", ""), "origen_cpi": r.get("oc", "")}
+                for r in cg["filas"]]
+    return list(csv.DictReader(open(INDICES, encoding="utf-8")))
+
+
+def leer_indices(cfg=None):
+    return [(r["mes"][:7], float(r["indice_local_usd"]), float(r["cpi_eeuu"])) for r in filas_indices(cfg)]
 
 
 def fecha(t):
@@ -240,7 +250,8 @@ def escribir_planilla(cfg, carpeta, idx_rows):
                 c.font = Font(color="2C7A4B")
             if j >= 6 and ("ESTIMADO" in str(v) or "APROXIMADO" in str(v)):
                 c.font = Font(color="A3392F")
-    x.cell(ni + 2, 1, "Generado con herramientas/indices_inflacion.py. Verde: dato publicado. Rojo: estimado o aproximado. El resto, interpolado.").font = GRIS
+    x.cell(ni + 2, 1, "Generado con herramientas/indices_inflacion.py. Verde: dato publicado. Rojo: estimado o aproximado. El resto, interpolado."
+           + (f" Índices congelados el {a_vista(cfg['indices_congelados']['fecha'])}." if cfg.get("indices_congelados") else "")).font = GRIS
     # desvíos y antecedentes
     d = wb.create_sheet("Desvíos"); head(d, ["Pos", "Desvío", "Detalle"], [16, 50, 80])
     for i, dv in enumerate(cfg.get("desvios", []), 2):
@@ -344,8 +355,8 @@ def main(carpeta):
               or (it["fuentes"][0].get("coincide") == "similar" and not it["fuentes"][0].get("diferencia"))]
     if faltan:
         sys.exit(f"ERROR: falta indicar si el precio de base es de una pieza igual o similar a la del plano (y en qué difiere): {faltan}")
-    idx_rows = list(csv.DictReader(open(INDICES, encoding="utf-8")))
-    idx = leer_indices()
+    idx_rows = filas_indices(cfg)
+    idx = leer_indices(cfg)
     escribir_computo(cfg, carpeta)
     ruta = escribir_planilla(cfg, carpeta, idx_rows)
     sys.path.insert(0, str(RAIZ / "herramientas"))

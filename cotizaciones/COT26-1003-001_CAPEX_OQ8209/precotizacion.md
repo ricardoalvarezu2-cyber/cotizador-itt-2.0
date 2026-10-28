@@ -1,7 +1,7 @@
 # Precotización automática — COT26-1003-001
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 3,234.74 por equipo · soldadura y servicios calculados USD 407.81 · 21 similares (1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 14, 14b, 17, 18, 19, 20, 22, 23, 24, 25) · 2 sin precio (13, 21).
+**Resumen:** materiales USD 3,234.74 por equipo · soldadura y servicios calculados USD 908.81 · 21 similares (1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 14, 14b, 17, 18, 19, 20, 22, 23, 24, 25) · 2 sin precio (13, 21).
 
 
 ## 1. Materiales
@@ -54,11 +54,18 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Prueba hidráulica:** 6 h × USD 13.00/h (Prueba hidráulica - manifold FA0032 1.2, 2026-03-10) = USD 78.00 · ⚠ horas supuestas: cargar `parametros.ph_horas` · volumen interior de caños y niples 13.0 l.
 - **Radiografía:** no se calculó (`parametros.rx_pct` = 0). Si el pliego la pide, cargar el porcentaje y volver a correr.
 
+### Horas de ingeniería, calidad y montaje (estimadas: puente, 2.5", 2 u, materiales USD 3,235 por unidad)
+
+- **Ingeniería:** 9 h × USD 15/h = USD 135.00 · 9 h por unidad (serie de 442) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19) · rango del mismo tipo 6–9 h
+- **Calidad y dossier:** 1 h × USD 15/h = USD 15.00 · 1 h por unidad (serie de 442) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19) · rango del mismo tipo 1–6 h
+- **Montaje en planta (armado, movimientos):** 27 h × USD 13/h = USD 351.00 · horas por unidad del antecedente · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19) · rango del mismo tipo 27–126 h
+- Candidatos: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19) | TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 4in #600 (serie de 13 unidades) (4, 13 u, 2026-02-19) | TAVAL/70- PUENTES DE MEDICION 2 PULGADAS · Puente de inyeccion y regulacion 2in #600 (SK-2104 / SK-2105 (2 (colector 3), 24 u, 2026-10-27)
+
 ## 4. A completar (no se puede calcular)
 
 **Lo que más mueve el número:** en el caso de control CTRL-F01 (filtro FM2 #300) la radiografía y tinta penetrante fueron el 40% del costo y las horas de ingeniería, calidad y montaje el 16%. No presentar un precio sin completarlas.
 - ⚠ **Radiografía en 0%:** confirmar con el pliego (en CTRL-F01 fue 100% + tinta penetrante, USD 1.804 por filtro).
-- ⚠ **Horas de ingeniería, calidad y montaje:** cargarlas (en CTRL-F01: 9 h de ingeniería + 9 h de calidad + 45 h de montaje × USD 13–15 = USD 720 por filtro). Si la prueba hidráulica va dentro del montaje, no sumarla dos veces.
+- ⚠ **Horas de ingeniería, calidad y montaje:** son estimadas del antecedente más parecido (punto 3): confirmarlas con el detalle de actividades del equipo.
 - Armado y montaje (mano de obra de armado roscado o de terceros con el mismo alcance: `buscar_servicio.py`).
 - Ingeniería, calidad y dossier · embalaje · flete (kilos en `controles_tablas.md` al armar) · insumos.
 - Plazo (camino crítico con `comercial/plazos_proveedores.csv`).

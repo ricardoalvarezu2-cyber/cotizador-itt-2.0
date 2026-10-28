@@ -52,6 +52,9 @@ const Asistente = (() => {
     }
   }
 
+  // id único aunque se pidan varios en el mismo milisegundo (contador + azar)
+  let secuencia = 0;
+  const idUnico = pref => pref + Date.now().toString(36) + (++secuencia).toString(36) + Math.random().toString(36).slice(2, 6);
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const ahora = () => new Date().toISOString();
   const fechaCorta = iso => Documentos.fechaHora(iso); // DD-MM-AAAA HH:MM
@@ -104,7 +107,7 @@ const Asistente = (() => {
     if (!texto.trim() && !files.length) throw new Error("Escribí qué necesitás o subí un archivo.");
     if (tipo === "actualizar_cotizacion" && !cot) throw new Error("Elegí la cotización a completar o corregir.");
     const archivos = await subir(files, aviso);
-    const id = "p" + Date.now().toString(36);
+    const id = idUnico("p");
     const doc = { tipo, texto: texto.trim(), cotizacion_id: cot || "", archivos, estado: "pendiente", creado: ahora(), historial: [{ fecha: ahora(), estado: "pendiente", nota: "creado en la página" }] };
     await S.db.doc("pedidos/" + id).set(doc);
     if (mandar) await mandarPedido(id, doc, aviso);
@@ -543,7 +546,7 @@ ${filas.join("\n") || "(ninguno)"}`.slice(0, 60000);
           usd = Math.round(usd * 10000) / 10000;
           const fecha = String(a.fecha), cepo = fecha < "2025-04-14" ? "precio del período con cepo: verificar" : "";
           const nota = [div !== 1 ? `con IVA en el documento: dividido por ${div}` : "", tc ? `ARS ${precio0} ÷ BNA ${tc} (${fecha.slice(0, 7)})` : "", cepo].filter(Boolean).join("; ");
-          const id = (a.clase === "material" ? "N-MAT-" : "N-SRV-") + Date.now().toString(36).toUpperCase();
+          const id = idUnico(a.clase === "material" ? "N-MAT-" : "N-SRV-").toUpperCase();
           let registro;
           if (a.clase === "material") {
             const fam = S.datos.familias[String(a.familia || "").toUpperCase()] ? String(a.familia).toUpperCase() : "OTR";
@@ -572,9 +575,9 @@ ${filas.join("\n") || "(ninguno)"}`.slice(0, 60000);
               return "Botón mostrado: el usuario tiene que confirmar."; }
             case "proponer_revisado": { const c = cot(), malos = Busqueda.avisos(c).filter(x => x.nivel === "bad");
               if (malos.length) throw new Error(`No puede pasar a revisado: hay ${malos.length} avisos para corregir.`);
-              confirmar(`Pasar ${c.codigo} a "revisado"`, "Confirmá solo si una persona revisó el cómputo contra el plano (procedimiento P10).", "Pasar a revisado", "prim", async () => { c.estado = "revisado"; S.doc.oferta.estado = "revisado"; S.ultVersion = 0; I.guardarPronto(); I.render(); return "Pasada a revisado."; });
+              confirmar(`Pasar ${c.codigo} a "revisado"`, "Confirmá solo si una persona revisó el cómputo contra el plano (procedimiento P10).", "Pasar a revisado", "prim", async () => { I.cambiarEstado("revisado"); I.guardarPronto(); I.render(); return "Pasada a revisado."; });
               return "Botón mostrado: el usuario tiene que confirmar."; }
-            case "volver_a_borrador": { const c = cot(); marcar(); c.estado = "borrador"; S.doc.oferta.estado = "borrador"; S.ultVersion = 0; cambio("Volvió a borrador"); return "ok"; }
+            case "volver_a_borrador": { const c = cot(); marcar(); I.cambiarEstado("borrador"); cambio("Volvió a borrador"); return "ok"; }
           }
           throw new Error("Acción desconocida");
         } },
@@ -597,7 +600,7 @@ ${filas.join("\n") || "(ninguno)"}`.slice(0, 60000);
   }
   const confirmaciones = new Map();
   function confirmar(titulo, texto, boton, clase, accion) {
-    const id = "cf" + Date.now().toString(36), box = document.getElementById("ch-msgs"), el = document.createElement("div");
+    const id = idUnico("cf"), box = document.getElementById("ch-msgs"), el = document.createElement("div");
     confirmaciones.set(id, accion);
     el.className = "msg a prop"; el.id = id;
     el.innerHTML = `<b>${esc(titulo)}</b>${texto ? `<div class="small">${esc(texto)}</div>` : ""}<div class="fila"><button class="chico ${clase}" data-p="conf-ok" data-id="${id}">${esc(boton)}</button><button class="chico" data-p="conf-no" data-id="${id}">Cancelar</button></div>`;

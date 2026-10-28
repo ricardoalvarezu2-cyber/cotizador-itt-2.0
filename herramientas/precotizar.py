@@ -328,12 +328,38 @@ def main(carpeta, comparar=False):
                                    "fecha": "2025-11-03", "coincide": "igual"}]})
     else:
         informe.append("- **Radiografía:** no se calculó (`parametros.rx_pct` = 0). Si el pliego la pide, cargar el porcentaje y volver a correr.")
+    # horas de ingeniería, calidad y montaje: del antecedente más parecido (estimar_horas.py)
+    import estimar_horas
+    eq = base.get("equipo", {}) or {}
+    tipo_eq = eq.get("tipo") or estimar_horas.tipo_de(f"{eq.get('singular', '')} {base.get('titulo', '')}")
+    d_eq = eq.get("diametro_pulg") or max([dn_de(r["diametro"]) or 0 for r in filas] or [0]) or None
+    mat_u = sum(i["cantidad"] * i["fuentes"][0]["precio"] for i in items if i["grupo"] == "material")
+    hh = estimar_horas.estimar(tipo_eq, d_eq, N, mat_u or None, EXCLUIR)
+    informe += ["", f"### Horas de ingeniería, calidad y montaje (estimadas: {tipo_eq}, {d_eq or '?'}\", {N:g} u, materiales USD {mat_u:,.0f} por unidad)", ""]
+    if hh:
+        for k, pos, n in (("ing", "HH", "Ingeniería"), ("cal", "CAL", "Calidad y dossier"), ("mont", "ARM", "Montaje en planta (armado, movimientos" + (", prueba hidráulica" if hh["incluye_ph"] else "") + ")")):
+            x = hh[k]
+            if not x or not x["horas_u"]:
+                continue
+            informe.append(f"- **{n}:** {x['horas_u']:g} h × USD {x['usd_h']:g}/h = USD {x['horas_u'] * x['usd_h']:,.2f} · {x['criterio']} · antecedente: {x['antecedente']}"
+                           + (f" · rango del mismo tipo {hh['rango'][k][0]:g}–{hh['rango'][k][1]:g} h" if hh["rango"][k] else ""))
+            items.append({"id": f"S1{len(pos)}{pos[0]}", "pos": pos, "grupo": "mo", "descripcion": f"Horas de {n.lower()} (estimadas del antecedente)",
+                          "especificacion": f"{x['horas_u']:g} h por {eq.get('singular', 'equipo')} · {x['criterio']}", "cantidad": x["horas_u"], "unidad": "h",
+                          "fuentes": [{"tipo": "est", "precio": x["usd_h"], "proveedor": "Horas propias ITT (tarifa del antecedente)",
+                                       "origen": f"conocimiento/costos/horas_por_equipo.csv · {x['fila']['proyecto']} · {x['fila']['archivo']} · hoja {x['fila']['hoja']}"[:250],
+                                       "fecha": x["fila"]["fecha"], "coincide": "similar",
+                                       "diferencia": f"ESTIMADO del antecedente {x['antecedente']}"[:300]}]})
+        if not hh["mismo_tipo"]:
+            informe.append("- ⚠ No hay antecedente del mismo tipo y tamaño: se usó el más parecido de otro tipo. Revisar las horas.")
+        if hh["incluye_ph"] and any(i["pos"] == "PH" for i in items):
+            items[:] = [i for i in items if i["pos"] != "PH"]
+            informe.append("- La prueba hidráulica va dentro del montaje del antecedente: se sacó la fila PH para no cobrarla dos veces.")
+        informe.append("- Candidatos: " + " | ".join(hh["candidatos"]))
     informe += ["", "## 4. A completar (no se puede calcular)", "",
                 "**Lo que más mueve el número:** en el caso de control CTRL-F01 (filtro FM2 #300) la radiografía y tinta penetrante fueron "
                 "el 40% del costo y las horas de ingeniería, calidad y montaje el 16%. No presentar un precio sin completarlas.",
                 *(["- ⚠ **Radiografía en 0%:** confirmar con el pliego (en CTRL-F01 fue 100% + tinta penetrante, USD 1.804 por filtro)."] if not rx else []),
-                "- ⚠ **Horas de ingeniería, calidad y montaje:** cargarlas (en CTRL-F01: 9 h de ingeniería + 9 h de calidad + 45 h de montaje × USD 13–15 = USD 720 por filtro). "
-                "Si la prueba hidráulica va dentro del montaje, no sumarla dos veces.",
+                "- ⚠ **Horas de ingeniería, calidad y montaje:** son estimadas del antecedente más parecido (punto 3): confirmarlas con el detalle de actividades del equipo.",
                 "- Armado y montaje (mano de obra de armado roscado o de terceros con el mismo alcance: `buscar_servicio.py`).",
                 "- Ingeniería, calidad y dossier · embalaje · flete (kilos en `controles_tablas.md` al armar) · insumos.",
                 "- Plazo (camino crítico con `comercial/plazos_proveedores.csv`)."]
@@ -353,7 +379,7 @@ def main(carpeta, comparar=False):
                 informe.append(f"| {i['pos']} | {a:,.2f} | {b:,.2f} | {a - b:+,.2f} |")
         tm = sum(m["cantidad"] * m["fuentes"][0]["precio"] for m in man.values() if m["grupo"] == "material")
         informe.append(f"| **Materiales** | **{total_mat:,.2f}** | **{tm:,.2f}** | **{total_mat - tm:+,.2f}** |")
-    auto = {**base, "items": items, "estado": "borrador",
+    auto = {**{k: v for k, v in base.items() if k not in ("indices_congelados", "aprobacion")}, "items": items, "estado": "borrador",
             "nota_precotizacion": "Generado por precotizar.py: revisar precotizacion.md antes de usarlo como cotizacion.json"}
     json.dump(auto, open(carpeta / "cotizacion_auto.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     (carpeta / "precotizacion.md").write_text("\n".join(informe) + "\n", encoding="utf-8")
