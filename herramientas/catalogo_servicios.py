@@ -72,6 +72,8 @@ def fecha_valida(f, hoy=None):
     if not f:
         return ""
     hoy = hoy or date.today()
+    if re.fullmatch(r"\d{4}", f):  # solo el año (planillas viejas): sirve para el corte del cepo, no para ajustar
+        return f if 2000 <= int(f) <= hoy.year else ""
     m = re.fullmatch(r"(\d{4})-(\d{2})", f)
     if m:
         a, me = int(m.group(1)), int(m.group(2))
@@ -80,7 +82,9 @@ def fecha_valida(f, hoy=None):
 
 
 def clave_fecha(f):
-    """Para ordenar: un mes sin día se ordena a mitad de mes (solo orden; no se muestra)."""
+    """Para ordenar: un mes sin día se ordena a mitad de mes y un año solo a mitad de año (solo orden; no se muestra ni se usa para ajustar)."""
+    if re.fullmatch(r"\d{4}", f or ""):
+        return f + "-07-01"
     return f + "-15" if re.fullmatch(r"\d{4}-\d{2}", f or "") else (f or "")
 
 
@@ -115,7 +119,7 @@ def numero_ambiguo(r):
     for tok in re.findall(r"\d[\d.,]*\d|\d", r["texto_original"]):
         v, amb = leer_numero(tok)
         if amb and v is not None and abs(v * 1000 - precio) < 0.5:
-            return f"número ambiguo en el origen ('{tok}' leído como {precio:,.0f}): verificar"
+            return f"número ambiguo en el origen ('{tok}' leído como {precio:g}, no como {v:g}): verificar"
     return ""
 
 
@@ -143,7 +147,9 @@ def leer_extraccion():
         usd = None
         if moneda.startswith("ARS") or moneda == "$":
             if fecha:
-                tc, viejo = en_mes(tabla, fecha, 0)
+                tc, viejo = en_mes(tabla, fecha, 0) if not re.fullmatch(r"\d{4}", fecha) else (None, None)
+                if tc is None:
+                    raise ValueError("pesos con fecha de solo año: no se puede convertir")
                 usd = precio_sin / tc
                 notas.append(f"convertido de ARS a USD con dólar BNA {tc:,.2f}" + (" (fecha anterior a la tabla)" if viejo else ""))
         else:
@@ -172,7 +178,10 @@ def leer_extraccion():
             alertas.append("confianza baja en la lectura del origen")
         aj = None
         factor = None
-        if usd is not None and fecha:
+        solo_anio = bool(re.fullmatch(r"\d{4}", fecha))
+        if solo_anio:
+            notas.append("fecha solo con año: sin ajuste a hoy")
+        if usd is not None and fecha and not solo_anio:
             idx, viejo = en_mes(tabla, fecha, 1)
             factor = ref / idx
             aj = usd * factor
