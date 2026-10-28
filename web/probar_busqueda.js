@@ -1,0 +1,22 @@
+// Prueba de la búsqueda y la calculadora de soldaduras. Uso: node web/probar_busqueda.js
+const fs = require("fs");
+global.Motor = require("./src/motor.js");
+const B = require("./src/busqueda.js");
+const datos = JSON.parse(fs.readFileSync(__dirname + "/datos.json", "utf8"));
+let ok = true;
+const chk = (n, c) => { if (!c) { ok = false; console.log("FALLA", n); } };
+let r = B.materiales(datos, { fam: "VAL", tipo: "retencion", diametro: '2"', serie: "600", material: "A216 WCB", extremos: "NPT" });
+chk("retención 2\" 600 WCB NPT: primero igual a 533", r.res[0] && r.res[0].estado === "igual" && r.res[0].r.p === 533);
+r = B.materiales(datos, { fam: "ABW", tipo: "codo 45", diametro: '2"', schedule: "80", material: "A234 WPB" });
+chk("codo 45 2\" sch80 WPB igual", r.res[0] && r.res[0].estado === "igual");
+r = B.materiales(datos, { fam: "VAL", texto: "esferica" });
+chk("sin tipo elegido: lista sin clasificar", !r.clasifica && r.total > 0);
+const s = B.soldadura(datos, [{ dn: 2, sch: "80", bw: 4 }, { dn: 0.5, sch: "80", olet: 2 }]);
+chk("soldadura CAPEX 4 × 2\" sch80 + 2 cuplas 1/2\" = 13,09", Math.abs(s.pulg - 13.09) < 0.01);
+const sv = B.servicios(datos, { texto: "soldadura pulgada" });
+chk("servicios: soldadura por pulgada", sv.total > 0);
+const capex = JSON.parse(fs.readFileSync(__dirname + "/../cotizaciones/COT26-1003-001_CAPEX_OQ8209/cotizacion.json", "utf8"));
+const av = B.avisos(capex);
+chk("avisos CAPEX: hay estimados y similares", av.some(a => a.txt.includes("ESTIMADO")) && av.some(a => a.txt.includes("SIMILAR")));
+console.log(ok ? `Búsqueda OK · soldadura CAPEX ${s.pulg} pulg · ${av.length} avisos en la CAPEX` : "Búsqueda con fallas");
+process.exit(ok ? 0 : 1);

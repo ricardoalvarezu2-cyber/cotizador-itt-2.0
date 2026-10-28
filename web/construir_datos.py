@@ -1,0 +1,129 @@
+"""Prepara web/datos.json: todo lo que necesita la página del cotizador (catálogos, índices, tarifas, tablas técnicas,
+clientes, plantillas de oferta). Se corre después de actualizar la base y antes de publicar la página.
+
+Uso: python web/construir_datos.py
+
+No incluye sueldos ni costos internos de planta: solo precios y tarifas para cotizar (la página puede compartirse).
+Las plantillas de oferta salen de plantillas/oferta_itt_2026.docx con el mismo recorte que herramientas/generar_oferta.py:
+se deja la introducción, una marca {{CUERPO}} y el cierre (notas y firma en la económica; firma en la técnica). La página
+completa los textos e inserta el cuerpo en la marca.
+"""
+import base64
+import copy
+import csv
+import io
+import json
+import sys
+from datetime import date
+from pathlib import Path
+
+import docx
+from docx.oxml import OxmlElement
+from docx.oxml.ns import qn
+
+RAIZ = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(RAIZ / "herramientas"))
+from catalogo_materiales import FAMILIAS  # noqa: E402
+
+C = RAIZ / "conocimiento"
+I_TABLA_REV, I_RECUADRO, I_FIN_INTRO, I_NOTAS, I_FIRMA = 4, 8, 29, 88, 102
+
+
+def leer(p):
+    return list(csv.DictReader(open(p, encoding="utf-8")))
+
+
+def f(v):
+    try:
+        return round(float(v), 4)
+    except (TypeError, ValueError):
+        return None
+
+
+def plantilla(tipo):
+    d = docx.Document(str(RAIZ / "plantillas" / "oferta_itt_2026.docx"))
+    body = d.element.body
+    el = list(body)
+    hasta = I_NOTAS if tipo == "economica" else I_FIRMA
+    ancla = el[hasta]
+    for e in el[I_FIN_INTRO + 1:hasta]:
+        body.remove(e)
+    p = OxmlElement("w:p")
+    r = OxmlElement("w:r")
+    t = OxmlElement("w:t")
+    t.text = "{{CUERPO}}"
+    r.append(t)
+    p.append(r)
+    ancla.addprevious(p)
+    b = io.BytesIO()
+    d.save(b)
+    return base64.b64encode(b.getvalue()).decode()
+
+
+def logo():
+    """Logo del encabezado de la plantilla (image3), achicado para el informe y el PDF de las ofertas."""
+    import zipfile
+    from PIL import Image
+    z = zipfile.ZipFile(RAIZ / "plantillas" / "oferta_itt_2026.docx")
+    im = Image.open(io.BytesIO(z.read("word/media/image3.jpeg"))).convert("RGB")
+    im.thumbnail((640, 200))
+    b = io.BytesIO()
+    im.save(b, "JPEG", quality=85)
+    return "data:image/jpeg;base64," + base64.b64encode(b.getvalue()).decode()
+
+
+def modelo_titulo():
+    d = docx.Document(str(RAIZ / "plantillas" / "oferta_itt_2026.docx"))
+    from lxml import etree
+    return etree.tostring(copy.deepcopy(list(d.element.body)[57])).decode()
+
+
+def main():
+    mats = []
+    for r in leer(C / "precios" / "catalogo_materiales.csv"):
+        fam = next((k for k, v in FAMILIAS.items() if v[0] == r["familia"]), "OTR")
+        at = {k: r[k] for k in ("tipo", "diametro", "diametro2", "serie", "schedule", "material", "trim", "extremos", "marca", "modelo",
+                               "cara", "medida", "largo_mm", "espesor_mm", "costura", "revestimiento", "rango", "conexion", "designacion") if r.get(k)}
+        mats.append({"c": r["codigo"], "f": fam, "d": r["descripcion"], "u": r["unidad"], "p": f(r["ultimo_precio_usd"]), "pa": f(r["precio_ajustado_hoy_usd"]),
+                     "fe": r["fecha_ultimo_precio"], "tp": r["tipo_precio"], "pr": r["proveedor"],
+                     "o": (r["ruta_origen"] + (" · " + r["archivo_origen"] if r["archivo_origen"] else ""))[:240],
+                     "al": r["alerta"], "iva": r["iva"], "rd": f(r["referencia_descartada_usd"]), "rf": r["fecha_referencia_descartada"],
+                     "n": int(r["precios_en_historial"] or 1), "mn": f(r["precio_min_usd"]), "mx": f(r["precio_max_usd"]), "a": at})
+    srv = []
+    for r in leer(C / "precios" / "catalogo_servicios.csv"):
+        if r["hoja"] == "MO propia" and "sueldo" in (r["servicio"] + r["descripcion"]).lower():
+            continue  # los sueldos no van a la página
+        srv.append({"c": r["codigo"], "h": r["hoja"], "s": r["servicio"], "d": r["descripcion"][:300], "u": r["unidad"],
+                    "p": f(r["ultimo_precio_usd"]), "pa": f(r["precio_ajustado_hoy_usd"]), "t": f(r["tarifa_unitaria_usd"]), "ut": r["unidad_tarifa"],
+                    "ta": f(r["tarifa_ajustada_hoy_usd"]), "fe": r["fecha_ultimo_precio"], "pr": r["proveedor"],
+                    "o": (r["ruta_origen"] + (" · " + r["archivo_origen"] if r["archivo_origen"] else ""))[:240], "inc": r["incluye"][:200],
+                    "ninc": r["no_incluye"][:200], "eq": r["equipo_referencia"][:120], "al": r["alerta"], "iva": r["iva"]})
+    idx = [{"mes": r["mes"][:7], "ipc": f(r["ipc_argentina"]), "dolar": f(r["dolar_bna"]), "local": f(r["indice_local_usd"]), "cpi": f(r["cpi_eeuu"]),
+            "oi": r["origen_ipc"], "od": r["origen_dolar"], "oc": r["origen_cpi"]} for r in leer(C / "costos" / "indices_ajuste.csv")]
+    dol = leer(C / "costos" / "dolar_mensual.csv")
+    tar = [{"rubro": r["rubro"], "concepto": r["concepto"], "unidad": r["unidad"], "valor": r["valor_usd"], "tipo": r["tipo"], "fecha": r["fecha"],
+            "fuente": r["fuente"], "nota": r["nota"]} for r in leer(C / "costos" / "tarifas.csv")
+           if r["vigente"] == "si" and r["rubro"] in ("soldadura", "end", "pintura", "hora_hombre")]
+    fs = [{"dn": f(r["dn_pulg"]), "od": f(r["diam_ext_mm"]), "sch": r["schedule"], "cl": r["clase"], "e": f(r["espesor_mm"]), "fe": f(r["factor_espesor"]),
+           "pch": f(r["placas_rx_chicas"]), "pgr": f(r["placas_rx_grandes"])} for r in leer(C / "tecnico" / "factores_soldadura.csv")]
+    canos = [{"dn": f(r["dn_pulg"]), "sch": r["schedule"], "cl": r["clase"], "kg": f(r["kg_m_carbono"]), "m2": f(r["m2_m_exterior"]), "l": f(r["litros_m_interior"])}
+             for r in leer(C / "tecnico" / "canos_peso_superficie.csv")]
+    acc = [{"a": r["accesorio"], "f": f(r["factor"])} for r in leer(C / "tecnico" / "factores_accesorios.csv")]
+    clientes = [{"c": r["codigo"], "n": r["razon_social"]} for r in leer(C / "comercial" / "clientes.csv") if r["estado"].lower().startswith("activ")]
+    fam = {k: {"n": v[0], "cols": v[1], "clave": v[2]} for k, v in FAMILIAS.items()}
+    datos = {
+        "generado": date.today().isoformat(),
+        "materiales": mats, "servicios": srv, "indices": idx, "dolar": dol[-12:], "tarifas": tar, "soldadura": fs, "canos": canos,
+        "accesorios": acc, "clientes": clientes, "familias": fam,
+        "plantilla_cotizacion": json.load(open(RAIZ / "cotizaciones" / "_plantilla" / "cotizacion.json", encoding="utf-8")),
+        "plantilla_oferta": json.load(open(RAIZ / "cotizaciones" / "_plantilla" / "oferta.json", encoding="utf-8")),
+        "logo": logo(),
+        "docx_tecnica": plantilla("tecnica"), "docx_economica": plantilla("economica"), "docx_titulo": modelo_titulo(),
+    }
+    salida = RAIZ / "web" / "datos.json"
+    salida.write_text(json.dumps(datos, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    print(f"{salida.relative_to(RAIZ)}: {salida.stat().st_size / 1e6:.2f} MB · {len(mats)} materiales · {len(srv)} servicios · {len(idx)} meses de índices")
+
+
+if __name__ == "__main__":
+    main()
