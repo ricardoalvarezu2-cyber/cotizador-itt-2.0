@@ -91,9 +91,17 @@ Los meses intermedios se interpolan. Octubre 2026 es estimado. Hay que actualiza
 
 **Decisión de Matías (27/10/2026): para pasar pesos a dólares se usa el promedio mensual del dólar oficial BNA billete, precio de venta.** Si el documento dice su tipo de cambio, se usa ese. Fundamento: en todos los textos de cotizaciones, pliegos y OC no hay ninguna mención a MEP, blue ni CCL; cuando se aclara, es siempre BNA vendedor (divisa o billete). Para precios en pesos llevados a hoy con `indice_local_usd`, el dólar del pasado se cancela en la cuenta. `indices_ajuste.csv` toma ese promedio para todos los meses desde ene-2024 (reemplaza a las anclas interpoladas y a las del dólar divisa que se habían cargado por error). Riesgo que queda: datos que alguien pasó a dólares durante el cepo sin decir con qué tipo de cambio (costo hora de planta oct-2024, compras del stock 2022–2024).
 
-## Período con cepo (decisión del 28/10/2026)
+## Período con cepo (decisiones del 28/10/2026)
 
-Los valores con fecha anterior al 14/04/2025 cuyo documento no dice con qué tipo de cambio se pasaron a dólares se descartan como precio y vale el último valor confiable. Prueba: el stock valorizado pasa las compras en pesos a dólares con el TC del día del informe (la compra del 13/06/2023 del espárrago 5/8 x 3 1/4 figura a USD 2,37 en la hoja de sep-2024 y a 2,25 en la de nov-2024). En el catálogo de materiales esto deja 1.020 de 2.310 materiales "sin precio confiable" (casi todo el stock, incluidas 53 de 58 válvulas): conservan el valor descartado como referencia y la alerta "pedir cotización". Excepción documentada: costo de planta oct-2024 (TC 997–998,5 explícito en la hoja "Sueldos").
+Los valores en USD con fecha anterior al 14/04/2025 cuyo documento no dice con qué tipo de cambio se pasaron a dólares no son precio firme. Prueba: el stock valorizado pasa las compras en pesos a dólares con el TC del día del informe (la compra del 13/06/2023 del espárrago 5/8 x 3 1/4 figura a USD 2,37 en la hoja de sep-2024 y a 2,25 en la de nov-2024).
+
+Primero se decidió descartarlos (quedaban 1.137 materiales sin precio). Después Matías pidió **llevarlos al valor más verosímil**, como **ESTIMADO**:
+- **Precio maestro del stock (nov-2024): × 0,64.** Llevado a hoy salía 1,56 veces el costo real 2025–2026 del mismo material (mediana de 14 materiales comparables con planillas de costo y cotizaciones; rango 1,43–2,02). La sola brecha del blue de nov-2024 (× 0,90) no explicaba la diferencia. Contra la lista Renard daba 1,86 (58 materiales), pero la lista está por debajo de los costos reales.
+- **Otros valores en USD del cepo (planillas, cotizaciones, servicios): × oficial ÷ blue del mes** (promedios de `costos/dolar_mensual.csv`). Verificación: las planillas de costo de mar/abr-2025 daban 1,10 veces las de 2025–2026, igual que la brecha de esos meses.
+- **Compras del stock: siguen descartadas** (el TC usado no es el de la compra y no hay IPC de 2022–2023 en la tabla).
+- Si existe un valor confiable más nuevo del mismo material o servicio, manda ese. Excepción documentada: costo de planta oct-2024 (TC 997–998,5 explícito en la hoja "Sueldos"), que se usa tal cual.
+
+Resultado: catálogo de materiales con 1.005 precios ESTIMADOS del cepo y 132 sin precio; servicios con 5 sin precio.
 
 ## Planillas de costo 2025–2026 (etapa 2, 28/10/2026)
 

@@ -67,6 +67,12 @@ igual("té en caja no es accesorio", at("TE EN CAJA x 100 UNIDADES")[0], "OTR")
 igual("codo forjado 3000 es AFO", at("CODO RADIO CORTO 90° 2 3000 SW ASTM A105")[0], "AFO")
 igual("unidad 6mts", unidad_norm("6mts"), "tira de 6 m")
 
+# valores del cepo llevados a su valor verosímil (decisión 28/10/2026)
+from catalogo_materiales import factor_cepo  # noqa: E402
+igual("cepo: precio maestro del stock × 0,64", factor_cepo("2024-11-01", "stock (precio maestro)")[0], 0.64)
+igual("cepo: compra del stock sigue descartada", factor_cepo("2023-06-13", "compra")[0], None)
+igual("cepo: otros × oficial/blue del mes", round(factor_cepo("2024-05-20", "cotización")[0], 3), round(904.79 / 1125.48, 3))
+
 if fallas:
     print(f"FALLAN {len(fallas)}:")
     for f in fallas:

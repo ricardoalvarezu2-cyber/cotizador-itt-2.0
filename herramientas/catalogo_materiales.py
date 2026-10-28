@@ -44,6 +44,32 @@ COMPRA_VIGENTE = "2022-01-01"
 # confiable. Prueba de por qué: el stock pasa sus compras en pesos a dólares con el TC del día del informe (la misma compra
 # del 13/06/2023 figura a USD 2,37 en sep-2024 y a 2,25 en nov-2024).
 FIN_CEPO = "2025-04-14"
+# Decisión de Matías (28/10/2026): en vez de dejar sin precio, los valores del cepo se llevan al valor más verosímil y
+# quedan como ESTIMADO (pedir cotización para el definitivo):
+#  - precio maestro del stock (nov-2024): × 0,64. Calibrado: llevado a hoy, salía 1,56 veces el costo real 2025–2026 del
+#    mismo material (mediana de 14 materiales, rango 1,43–2,02). Solo la brecha del blue (× 0,90) no alcanzaba.
+#  - otros valores en USD (planillas, cotizaciones): × oficial ÷ blue del mes (promedios de dolar_mensual.csv). Verificado:
+#    las planillas de mar/abr-2025 daban 1,10 veces las de 2025–2026, igual que la brecha de esos meses.
+#  - compras del stock: siguen descartadas (el sistema las pasó a USD con el TC de nov-2024, no el de la compra).
+FACTOR_MAESTRO_STOCK = 0.64
+
+
+def _brecha():
+    ruta = RAIZ / "conocimiento" / "costos" / "dolar_mensual.csv"
+    return {r["mes"]: float(r["oficial_promedio"]) / float(r["blue_promedio"])
+            for r in csv.DictReader(open(ruta, encoding="utf-8")) if r["oficial_promedio"] and r["blue_promedio"]}
+
+
+def factor_cepo(fecha, tipo_precio=""):
+    """(factor, explicación) para llevar un valor en USD del cepo a su valor verosímil, o (None, motivo)."""
+    if tipo_precio == "compra":
+        return None, "compra del stock: el TC usado no es el de la compra"
+    if tipo_precio.startswith("stock"):
+        return FACTOR_MAESTRO_STOCK, "precio maestro del stock × 0,64 (calibrado con costos reales 2025–2026)"
+    b = _brecha().get((fecha or "")[:7])
+    if b is None:
+        return None, "sin dólar blue para ese mes"
+    return b, f"llevado a dólar blue: × {b:.3f} (oficial ÷ blue de {fecha[:7]})"
 PRECIOS = RAIZ / "conocimiento" / "precios"
 TEXTOS = RAIZ / "fuentes_originales" / "ofertas_texto"
 Z = "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\"
@@ -620,9 +646,20 @@ def main():
             if not h["confiable"]:
                 h["nota"] = "; ".join(x for x in ["descartado: período con cepo, dólar sin aclarar", h["nota"]] if x)
         buenos = [h for h in hs if h["confiable"]]
+        alertas = []
+        if not buenos:
+            for h in hs:  # valor verosímil para los del cepo (ESTIMADO)
+                f, txt = factor_cepo(h["fecha"], h["tipo_precio"])
+                if f:
+                    e = {**h, "precio_usd": round(h["precio_usd"] * f, 4), "precio_ajustado_hoy_usd": round(h["precio_ajustado_hoy_usd"] * f, 4),
+                         "tipo_precio": "estimado (cepo)", "nota": f"ESTIMADO: {txt}; valor original USD {h['precio_usd']:,.2f}; " + h["nota"]}
+                    buenos.append(e)
+            if buenos:
+                alertas.append(f"ESTIMADO: valor del período con cepo llevado a su valor verosímil ({buenos[0]['nota'].split(';')[0][11:]}); pedir cotización para el definitivo")
         u = buenos[0] if buenos else hs[0]
         precios = [h["precio_usd"] for h in (buenos or hs)]
-        alertas = [] if buenos else [f"sin precio confiable (solo valores del período con cepo; referencia descartada USD {hs[0]['precio_usd']:,.2f} del {hs[0]['fecha']}): pedir cotización"]
+        if not buenos:
+            alertas.append(f"sin precio confiable (solo valores del período con cepo; referencia descartada USD {hs[0]['precio_usd']:,.2f} del {hs[0]['fecha']}): pedir cotización")
         if max(precios) > 3 * min(precios):
             alertas.append(f"historial con precios muy distintos ({min(precios):,.2f} a {max(precios):,.2f}): revisar")
         par = sorted(pares[(u["familia"], u["atributos"].get("tipo", ""), u["atributos"].get("diametro", ""), u["unidad"])])

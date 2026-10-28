@@ -32,7 +32,7 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from catalogo_materiales import en_mes, iva_de, unidad_norm  # noqa: E402
+from catalogo_materiales import factor_cepo, en_mes, iva_de, unidad_norm  # noqa: E402
 from indice_proyectos import norm  # noqa: E402
 from numeros import fecha_iso, leer_numero  # noqa: E402
 
@@ -245,10 +245,19 @@ def main():
         valor = (lambda h: h["tarifa"]) if unit else (lambda h: h["usd"])
         valor_aj = (lambda h: h["tarifa_aj"]) if unit else (lambda h: h["usd_aj"])
         confiables = [h for h in hs if h["usd"] is not None and not h["descartado"]]
+        alertas = []
+        if not confiables:  # valor verosímil para los del cepo (decisión de Matías, 28/10/2026): × oficial ÷ blue del mes
+            for h in hs:
+                f, txt = factor_cepo(h["fecha"]) if h["descartado"] and h["usd"] is not None else (None, "")
+                if f:
+                    confiables.append({**h, "usd": h["usd"] * f, "usd_aj": h["usd_aj"] * f if h["usd_aj"] is not None else None,
+                                       "tarifa": h["tarifa"] * f if h["tarifa"] is not None else None,
+                                       "tarifa_aj": h["tarifa_aj"] * f if h["tarifa_aj"] is not None else None,
+                                       "descartado": False, "notas": h["notas"] + [f"ESTIMADO: {txt}; valor original USD {h['usd']:,.2f}"],
+                                       "alertas": h["alertas"] + [f"ESTIMADO: valor del período con cepo {txt}; pedir cotización"]})
         fechados = [h for h in confiables if h["fecha"]]
         usable = (fechados or confiables)
         ultimo_h = usable[0] if usable else None
-        alertas = []
         if ultimo_h:
             u = ultimo_h
             vals = [valor(h) for h in confiables if valor(h)]
