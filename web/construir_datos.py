@@ -78,6 +78,15 @@ def modelo_titulo():
     return etree.tostring(copy.deepcopy(list(d.element.body)[57])).decode()
 
 
+def indices():
+    return [{"mes": r["mes"][:7], "ipc": f(r["ipc_argentina"]), "dolar": f(r["dolar_bna"]), "local": f(r["indice_local_usd"]), "cpi": f(r["cpi_eeuu"]),
+             "oi": r["origen_ipc"], "od": r["origen_dolar"], "oc": r["origen_cpi"]} for r in leer(C / "costos" / "indices_ajuste.csv")]
+
+
+def dolar():
+    return leer(C / "costos" / "dolar_mensual.csv")[-12:]
+
+
 def main():
     mats = []
     for r in leer(C / "precios" / "catalogo_materiales.csv"):
@@ -98,9 +107,8 @@ def main():
                     "ta": f(r["tarifa_ajustada_hoy_usd"]), "fe": r["fecha_ultimo_precio"], "pr": r["proveedor"],
                     "o": (r["ruta_origen"] + (" · " + r["archivo_origen"] if r["archivo_origen"] else ""))[:240], "inc": r["incluye"][:200],
                     "ninc": r["no_incluye"][:200], "eq": r["equipo_referencia"][:120], "al": r["alerta"], "iva": r["iva"]})
-    idx = [{"mes": r["mes"][:7], "ipc": f(r["ipc_argentina"]), "dolar": f(r["dolar_bna"]), "local": f(r["indice_local_usd"]), "cpi": f(r["cpi_eeuu"]),
-            "oi": r["origen_ipc"], "od": r["origen_dolar"], "oc": r["origen_cpi"]} for r in leer(C / "costos" / "indices_ajuste.csv")]
-    dol = leer(C / "costos" / "dolar_mensual.csv")
+    idx = indices()
+    dol = dolar()
     tar = [{"rubro": r["rubro"], "concepto": r["concepto"], "unidad": r["unidad"], "valor": r["valor_usd"], "tipo": r["tipo"], "fecha": r["fecha"],
             "fuente": r["fuente"], "nota": r["nota"]} for r in leer(C / "costos" / "tarifas.csv")
            if r["vigente"] == "si" and r["rubro"] in ("soldadura", "end", "pintura", "hora_hombre")]
@@ -113,7 +121,7 @@ def main():
     fam = {k: {"n": v[0], "cols": v[1], "clave": v[2]} for k, v in FAMILIAS.items()}
     datos = {
         "generado": date.today().isoformat(),
-        "materiales": mats, "servicios": srv, "indices": idx, "dolar": dol[-12:], "tarifas": tar, "soldadura": fs, "canos": canos,
+        "materiales": mats, "servicios": srv, "indices": idx, "dolar": dol, "tarifas": tar, "soldadura": fs, "canos": canos,
         "accesorios": acc, "clientes": clientes, "familias": fam,
         "plantilla_cotizacion": json.load(open(RAIZ / "cotizaciones" / "_plantilla" / "cotizacion.json", encoding="utf-8")),
         "plantilla_oferta": json.load(open(RAIZ / "cotizaciones" / "_plantilla" / "oferta.json", encoding="utf-8")),
