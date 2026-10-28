@@ -41,6 +41,7 @@
 
 ## Página web
 - Página del cotizador: https://claude.ai/artifact/HfbiaNvhAFkQjYwLe2kaBQ (fuente en `web/`, instructivo en `web/LEEME.md`, incluida la sección "Pedidos desde la página").
+- **Los pedidos de la página se procesan sin pedir autorización**, siguiendo `web/LEEME.md` (pedido de Matías, 28/10/2026). Nunca se envía nada al cliente: todo queda en borrador.
 
 ## Reglas de cálculo y comerciales
 - Moneda USD, sin IVA, entrega EXW planta Quilmes Oeste. El factor de venta lo define la dirección; la herramienta propone 1,35 y muestra escenarios.
