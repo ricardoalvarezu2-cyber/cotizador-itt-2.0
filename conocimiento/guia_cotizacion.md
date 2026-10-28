@@ -60,6 +60,17 @@ python herramientas/buscar_antecedentes.py --familia CO --texto "colector de cam
 - Cada resultado dice por qué se parece y qué carpeta abrir.
 - El índice (`conocimiento/comercial/indice_proyectos.csv`) cubre las cotizaciones de 2025–2026 y las armadas con el cotizador. Se actualiza solo con `armar_cotizacion.py`, o a mano con `python herramientas/indice_proyectos.py`.
 
+**Precotización automática (sin IA), primero:**
+
+```bash
+python herramientas/precotizar.py cotizaciones/<carpeta> [--comparar]
+```
+
+- Lee `pedido/lista_materiales_plano.csv` y arma `cotizacion_auto.json` + `precotizacion.md`: cada renglón buscado en el catálogo (igual con precio real > similar con precio real > estimado del cepo), soldaduras calculadas de la columna de extremos, pintura (m² × tarifa), prueba hidráulica (horas × tarifa) y radiografía si `parametros.rx_pct` > 0.
+- En la tabla del plano, la columna **`extremos_campo`** (por unidad) dice cuántos extremos BW quedan abiertos para campo o para la línea del cliente. Sin ella se suponen todos de taller y se avisa.
+- Parámetros: `ph_horas` (horas de prueba hidráulica; sin dato se suponen 6 y se avisa) y `rx_pct` (porcentaje de juntas radiografiadas).
+- Después, revisar en `precotizacion.md` solo lo marcado (SIMILAR, SIN PRECIO, estimados, ⚠), completar lo que no se calcula (armado, ingeniería, embalaje, flete, insumos) y copiar a `cotizacion.json`. Probado con la CAPEX: 16 de 25 renglones iguales a la cotización hecha a mano y la soldadura 13,37 contra 13,09 pulgadas (`herramientas/test_precotizar.py`).
+
 **Para los materiales que no estén en los antecedentes, el catálogo de materiales:**
 
 ```bash

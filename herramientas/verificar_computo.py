@@ -89,6 +89,8 @@ def main(carpeta):
             errores.append(f"{r['id']}: precio sin fuente o sin fecha")
         if r.get("coincidencia") == "similar":
             avisos.append(f"{r['id']}: precio de una pieza SIMILAR, no igual: {r.get('diferencia', '')}")
+        if precio == 0:
+            avisos.append(f"{r['id']}: SIN PRECIO ({r['descripcion'][:45]}): pedir cotización antes de presentar")
         if r.get("tipo_origen", "").strip().lower() == "estimado":
             estimado += cant * precio
             avisos.append(f"{r['id']}: precio ESTIMADO ({r['descripcion'][:45]}) USD {cant * precio:,.2f}")

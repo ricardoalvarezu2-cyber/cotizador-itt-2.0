@@ -111,7 +111,7 @@ ABREV = [(r"\besf\b", "valvula esferica"), (r"\bpt\b", "paso total"), (r"\bred c
          (r"\bred exc\b", "reduccion excentrica"), (r"\btrans presion\b", "transmisor de presion"), (r"\btrasmisor", "transmisor"), (r"\bret\b", "valvula retencion"),
          (r"\bescl\b", "valvula esclusa"), (r"\bbloq\.? y (pga|purga)\b", "bloqueo y purga"), (r"\bvalv byp\b|\bbyp\b", "valvula bloqueo y purga"),
          (r"\bept\b", "valvula esferica paso total"), (r"\bvalv reg\b", "valvula reguladora"), (r"a/fuego|a/fgo|\ba/f\b|\baf\b", "antifuego"),
-         (r"\bgda\b", "guiada")]
+         (r"\bgda\b", "guiada"), (r"\ba-(?=\d{2,3}\b)", "a"), (r"\bunion doble golpe\b", "union doble a golpe")]
 
 
 def expandir(t):
@@ -158,6 +158,8 @@ def familia_texto(t):
         return "CAN"
     acc = re.search(r"\bcodo|\btees?\b|\bte\b|reduccion|casquete|\bcupla|\btapon|\bbuje|union doble|entrerrosca|\btapa\b|olet\b|\bcurva", t)
     if acc:
+        if re.search(r"\bcupla|olet\b", t):
+            return "AFO"  # cuplas y olets son forjados aunque tengan un extremo BW (van soldados sobre el caño)
         if re.search(r"\b(2000|3000|6000|9000)\b|\bnpt\b|\bsw\b|socket", t) and not re.search(r"\bbw\b|a ?234|wpb", t):
             return "AFO"  # forjados roscados o SW (A105), aunque digan "radio corto"
         if re.search(r"\bbw\b|\bsch\b|\bxs\b|\bstd\b|a ?234|wpb|radio (largo|corto)|casquete|\bcurva", t):
@@ -193,7 +195,7 @@ def material_de(t):
                        (r"a ?333", "A333"), (r"a ?694 ?(?:gr\.? ?)?f ?(\d{2})", "A694 F{}"), (r"a ?694", "A694"), (r"\bf ?65\b", "A694 F65"), (r"a ?194 ?(gr\.?|grado)? ?8ma?\b", "A194 8M"), (r"a ?194 ?(gr\.?|grado)? ?2h\b", "A194 2H"), (r"a ?194", "A194"),
                        (r"a ?193 ?(gr\.?|grado)? ?b ?8m", "A193 B8M"), (r"a ?193 ?(gr\.?|grado)? ?b ?7m", "A193 B7M"), (r"a ?320 ?(gr\.?)? ?l7", "A320 L7"),
                        (r"klingerit", "Klingerit"), (r"g-?10\b", "G10"),
-                       (r"a ?216 ?(gr\.? ?)?wcb|\bwcb\b", "A216 WCB"), (r"a ?351|cf8m", "A351 CF8M"), (r"a ?182 ?f ?316|f316", "A182 F316"), (r"aisi ?316l?|\b316l?\b", "AISI 316"), (r"aisi ?304|\b304\b", "AISI 304"),
+                       (r"a ?216 ?(gr\.? ?)?wcb|\bwcb\b", "A216 WCB"), (r"\ba ?216\b", "A216 WCB"), (r"a ?351|cf8m", "A351 CF8M"), (r"a ?182 ?f ?316|f316", "A182 F316"), (r"aisi ?316l?|\b316l?\b", "AISI 316"), (r"aisi ?304|\b304\b", "AISI 304"),
                        (r"duplex", "Dúplex"), (r"a ?312", "A312"), (r"a ?216 ?(gr\.? ?)?wcb|\bwcb\b", "A216 WCB"),
                        (r"a ?105", "A105"), (r"a ?234 ?(gr\.? ?)?wpb|\bwpb\b", "A234 WPB"), (r"a ?106", "A106 B"),
                        (r"api ?5l", "API 5L"), (r"a ?53", "A53"), (r"a ?516", "A516-70"), (r"a ?36\b", "A36"),

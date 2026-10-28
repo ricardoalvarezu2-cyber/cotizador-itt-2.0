@@ -13,6 +13,7 @@
 | Índice de proyectos 2025–2026 y buscador de antecedentes | Vigente (158 proyectos) | `comercial/indice_proyectos.csv`, `herramientas/buscar_antecedentes.py` |
 | Catálogo de materiales con marca, unidad, IVA y alertas | Vigente: 3.319 materiales (1.005 con precio ESTIMADO del cepo; 132 sin precio) | `precios/catalogo_materiales.*`, `herramientas/catalogo_materiales.py`, `buscar_material.py`, `test_catalogo.py` |
 | Lector único de números y fechas | Vigente | `herramientas/numeros.py` |
+| **Precotización automática sin IA** (materiales del catálogo, soldaduras de los extremos, pintura, PH, RX) | Vigente desde 28/10/2026; caso de control CAPEX | `herramientas/precotizar.py`, `test_precotizar.py` |
 | Dólar mensual 2024–2026 (oficial, mayorista, MEP, blue) | Vigente | `costos/dolar_mensual.csv/.xlsx`, `herramientas/dolar_mensual.py` |
 | Índices de inflación (costo local en USD y CPI EE.UU.) desde ene-2024 | Vigente | `costos/indices_ajuste.csv`, `herramientas/indices_inflacion.py` |
 | Peso y superficie de caños (ASME B36.10) | Vigente (calculado) | `tecnico/canos_peso_superficie.csv`, `herramientas/tablas_pesos.py` |
@@ -52,6 +53,13 @@
 3. ~~Revisión independiente de los pesos~~ **Hecho (28/10/2026):** `auditorias/2026-10-28_pesos_bridas_accesorios.md`; errores corregidos.
 4. ~~Vendor lists en el RAR de la Tanda 1~~ **No están** (revisado el 28/10/2026: la Tanda 1 solo trae las listas de YPF, ya cargadas; de PAE, Pampa y Pluspetrol solo hay referencias). Quedan en la carpeta completa `Z:\VENTAS\OFERTAS Y LICITACIONES` (1.Documentación de la licitación) o hay que pedirlas al cliente cuando se cotice para ellos.
 5. ~~Integrar las tablas nuevas~~ **Hecho (28/10/2026):** `armar_cotizacion.py` corre `controles_tablas.py` y deja `controles_tablas.md` en cada cotización (kilos y m², plazo típico por rubro con aviso si supera el ofrecido, marcas del cliente). Falta: pesos de válvulas, uniones dobles y bujes reductores (no hay tabla).
+
+**Herramientas sin IA (plan del 28/10/2026)** — hechas 1–3: precotización, soldaduras, servicios calculados. Siguen:
+4. Plazo automático (camino crítico con plazos de proveedores y duración de taller).
+5. Cargar las respuestas de Compras desde el Excel a `cotizacion.json`.
+6. Comparación automática con antecedentes (P8).
+7. Lectura de tablas de planos CAD (PDF vectorial, DXF) y búsqueda de requisitos en el pliego sin IA.
+8. `actualizar_base.py` y `verificar_todo.py` (un comando para rearmar y probar todo).
 
 **Al terminar el proyecto** (decisión de Matías)
 1. Confirmar con Compras los precios sospechosos de la auditoría (columna `alerta`).

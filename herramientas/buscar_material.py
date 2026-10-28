@@ -26,22 +26,24 @@ from catalogo_materiales import FAMILIAS, MARCAS, PRECIOS, atributos, expandir, 
 from indice_proyectos import norm  # noqa: E402
 
 NOMBRE_A_COD = {v[0]: k for k, v in FAMILIAS.items()}
+CON_TIPO = ("VAL", "AFO", "ABW", "BRI", "JUN", "INS")
 
 
-def main():
-    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("texto")
-    ap.add_argument("--familia", choices=list(FAMILIAS))
-    ap.add_argument("--top", type=int, default=8)
-    ap.add_argument("--marca", default="", help="marca pedida (válvulas e instrumentos): sale primero, el resto como 'otra marca'")
-    q = ap.parse_args()
-    t = expandir(norm(q.texto))
-    fam = q.familia or familia_de(t)
+_FILAS = None
+
+
+def buscar(texto, familia=None, marca_pedida=""):
+    """Búsqueda en el catálogo (la usan este comando y precotizar.py).
+    Devuelve (familia, atributos leídos, marca, faltan, resultados). Cada resultado: (igual, misma_marca, -n_difs,
+    tiene_precio, coincidencias, fecha, difs, renglón del catálogo), ordenados del mejor al peor."""
+    global _FILAS
+    if _FILAS is None:
+        _FILAS = list(csv.DictReader(open(PRECIOS / "catalogo_materiales.csv", encoding="utf-8")))
+    t = expandir(norm(texto))
+    fam = familia or familia_de(t)
     at = atributos(t, fam)
-    marca = MARCAS.get(norm(q.marca), q.marca.strip()) if q.marca else at.get("marca", "")
+    marca = MARCAS.get(norm(marca_pedida), marca_pedida.strip()) if marca_pedida else at.get("marca", "")
     campos = [c for c in (FAMILIAS[fam][2] or ["tipo"]) if c not in ("marca", "modelo")]
-    print(f"Familia: {FAMILIAS[fam][0]} · características leídas: " + ", ".join(f"{k}={v}" for k, v in at.items() if k != "marca")
-          + (f" · marca pedida: {marca}" if marca else ""))
     opcionales = {"diametro2", "trim", "schedule", "cara", "medida", "extremos"}
     if fam == "CAN":  # alcanza con schedule o espesor
         opcionales |= {"revestimiento"} | ({"espesor_mm"} if at.get("schedule") else {"schedule"} if at.get("espesor_mm") else set())
@@ -50,10 +52,7 @@ def main():
         if at.get("tipo") in ("esparrago", "bulon"):
             opcionales.discard("medida")
     faltan = [c for c in campos if not at.get(c) and c not in opcionales]
-    if faltan:
-        print(f"Faltan en la búsqueda: {', '.join(faltan)}. Agregalas para distinguir igual de similar.")
-    filas = [r for r in csv.DictReader(open(PRECIOS / "catalogo_materiales.csv", encoding="utf-8"))
-             if NOMBRE_A_COD.get(r["familia"]) == fam]
+    filas = [r for r in _FILAS if NOMBRE_A_COD.get(r["familia"]) == fam]
     res = []
     for r in filas:
         coinc, difs = 0, []
@@ -71,6 +70,8 @@ def main():
                 difs.append(f"{c}: {r[c]} (no pedido)")
         if at.get("tipo") and r.get("tipo") and norm(at["tipo"]) != norm(r["tipo"]):
             continue  # otro tipo de pieza: no es ni similar
+        if fam in CON_TIPO and bool(at.get("tipo")) != bool(r.get("tipo")):
+            continue  # sin tipo de un lado no se sabe qué pieza es: no se compara (ej. junta monolítica vs junta sin tipo)
         if coinc == 0:
             continue
         oblig = [c for c in campos if c not in opcionales]
@@ -78,6 +79,21 @@ def main():
         misma_marca = bool(marca) and norm(r.get("marca", "")) == norm(marca)
         res.append((igual, misma_marca, -len(difs), bool(r["ultimo_precio_usd"]), coinc, r["fecha_ultimo_precio"], difs, r))
     res.sort(key=lambda x: x[:6], reverse=True)  # a igual parecido, primero el que tiene precio confiable
+    return fam, at, marca, faltan, res
+
+
+def main():
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("texto")
+    ap.add_argument("--familia", choices=list(FAMILIAS))
+    ap.add_argument("--top", type=int, default=8)
+    ap.add_argument("--marca", default="", help="marca pedida (válvulas e instrumentos): sale primero, el resto como 'otra marca'")
+    q = ap.parse_args()
+    fam, at, marca, faltan, res = buscar(q.texto, q.familia, q.marca)
+    print(f"Familia: {FAMILIAS[fam][0]} · características leídas: " + ", ".join(f"{k}={v}" for k, v in at.items() if k != "marca")
+          + (f" · marca pedida: {marca}" if marca else ""))
+    if faltan:
+        print(f"Faltan en la búsqueda: {', '.join(faltan)}. Agregalas para distinguir igual de similar.")
     if not res:
         print("No hay precios de esa familia y tipo en el catálogo. Pedir cotización a Compras.")
         return
