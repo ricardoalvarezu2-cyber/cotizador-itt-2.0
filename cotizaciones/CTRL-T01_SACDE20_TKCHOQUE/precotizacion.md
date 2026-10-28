@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-T01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 2,562.40 por equipo · soldadura y servicios calculados USD 27,985.21 · 5 similares (3, 13, 14, 15, 18) · 8 sin precio (1, 5, 10, 11, 12, 17, 19, 20).
+**Resumen:** materiales USD 2,562.40 por equipo · soldadura y servicios calculados USD 15,135.81 · 5 similares (3, 13, 14, 15, 18) · 8 sin precio (1, 5, 10, 11, 12, 17, 19, 20).
 
 
 ## 1. Materiales
@@ -32,31 +32,34 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 
 ## 2. Soldaduras (de la columna de extremos)
 
-**11 juntas a tope de taller + juntas SW y olets = 476.12 pulgadas equivalentes** × USD 19.73 (costo propio de planta 2024-10) = USD 9,393.81
+**6.25 juntas a tope de taller + juntas SW y olets = 203.28 pulgadas equivalentes** × USD 16.00 (Mano de obra soldadura piping (criterio de las planillas de costo 2026), 2026-02) = USD 3,252.56
 
 - pos 8, 9: caño por metro; sus juntas se cuentan en los extremos BW de accesorios y bridas (una junta cada uno)
-- pos 1: 8 extremo(s) BW de taller (2 por unidad × 2 × 2 por el caño) × 36" × 1.9990
-- pos 2: 4 extremo(s) BW de taller (1 por unidad × 2 × 2 por el caño) × 36" × 1.9990
-- pos 4: 4 extremo(s) BW de taller (2 por unidad × 1 × 2 por el caño) × 2" × 1.0000
+- pos 1: costura longitudinal de 2 virola(s) de 2500 mm = 62.7 pulg-eq × 1.0000
+- pos 1: 4 extremo(s) BW de taller (2 por unidad × 2) × 36" × 1.0000
+- pos 2: 2 extremo(s) BW de taller (1 por unidad × 2) × 36" × 1.0000
+- pos 4: 3 extremo(s) BW de taller (2 por unidad × 1 × 1.5 por el caño) × 2" × 1.0000
 - pos 6: 1 junta(s) SW × 2" × 1.0000
 - pos 7: 2 junta(s) SW × 6" × 1.0000
-- pos 10: 4 extremo(s) BW de taller (2 por unidad × 1 × 2 por el caño) × 10" × 1.0000
-- pos 16: 2 extremo(s) BW de taller (1 por unidad × 1 × 2 por el caño) × 2" × 1.4169
+- pos 10: 2 extremo(s) BW de taller (2 por unidad × 1) × 10" × 1.0000
+- pos 16: 1.5 extremo(s) BW de taller (1 por unidad × 1 × 1.5 por el caño) × 2" × 1.4169
 - pos 18: 1 junta(s) de Media cupla sobre caño × 2" × 1.75 = 3.50
 
 ## 3. Servicios calculados
 
-- **Pintura:** 3.22 m² de caños y niples × USD 50.00/m² (Granallado y pintura piping (incluye materiales), criterio ITT, 2026-10-10) = USD 160.98. No incluye accesorios ni válvulas: sumarlos si se pintan.
+- **Pintura:** 32.32 m² (caños y niples × 3 por bridas, accesorios y válvulas 9.7 + envolvente 16.2 + estructura 6.5) × USD 50.00/m² (Granallado y pintura piping (incluye materiales), criterio ITT, 2026-10-10) = USD 1,616.24.
 - **Prueba hidráulica:** 36 h × USD 13.00/h (Prueba hidráulica - manifold FA0032 1.2, 2026-03-10) = USD 468.00 · volumen interior de caños y niples 112.4 l.
-- **Radiografía 100%:** 16 placas chicas + 42 grandes + 2 servicio(s) = USD 2,060.00 (Antonelli 2025-11).
+- **Radiografía 100% y tintas:** 10 placas chicas + 21 grandes + 1.00 servicio(s) de RX + 1.00 de LP por equipo = USD 935.00 (Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))).
+  Con las tarifas de Antonelli (11-2025) serían USD 1,550.00: confirmar el proveedor de END con el cliente o la zona.
 
 ### Horas de ingeniería, calidad y montaje (estimadas: tanque, 36", 1 u, materiales USD 2,562 por unidad)
 
-- **Ingeniería:** 250 h × USD 15/h = USD 3,750.00 · 250 h × 1 u ÷ 1 u · antecedente: Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Tanque de glicol (envolvente 12in sch30, SE-SPF-025) - opcio (12, 1 u, 2026-02-20) · rango del mismo tipo 250–250 h
-- **Calidad y dossier:** 250 h × USD 15/h = USD 3,750.00 · 250 h × 1 u ÷ 1 u · antecedente: Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Tanque de glicol (envolvente 12in sch30, SE-SPF-025) - opcio (12, 1 u, 2026-02-20) · rango del mismo tipo 250–250 h
-- **Montaje en planta (armado, movimientos, prueba hidráulica):** 554.4 h × USD 16/h = USD 8,870.40 · horas por unidad del antecedente · antecedente: Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Tanque de glicol (envolvente 12in sch30, SE-SPF-025) - opcio (12, 1 u, 2026-02-20) · rango del mismo tipo 554.4–554.4 h
+- **Ingeniería:** 170 h × USD 15/h = USD 2,550.00 · mediana de 101.3, 170.0, 420.5 h por unidad (repartidas en la serie y por tamaño) · antecedente: TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · Trampa lanzadora 20x16 (Serie 600 A6C) (20 / 16, 1 u, 2026-07-20) · rango del mismo tipo 250–250 h
+- **Calidad y dossier:** 125.4 h × USD 15/h = USD 1,881.00 · mediana de 121.6, 170.0, 125.4 h por unidad (repartidas en la serie y por tamaño) · antecedente: TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · Trampa lanzadora 20x16 (Serie 600 A6C) (20 / 16, 1 u, 2026-07-20) · rango del mismo tipo 250–250 h
+- **Montaje en planta (armado, movimientos, prueba hidráulica):** 377 h × USD 13/h = USD 4,901.00 · mediana de 120 h × 1.013, 554.4 h × 0.68, 756 h × 0.836 (horas por unidad × tamaño) · antecedente: TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · Trampa lanzadora 20x16 (Serie 600 A6C) (20 / 16, 1 u, 2026-07-20) · rango del mismo tipo 554.4–554.4 h
+- ⚠ No hay antecedente del mismo tipo y tamaño: se usó el más parecido de otro tipo. Revisar las horas.
 - La prueba hidráulica va dentro del montaje del antecedente: se sacó la fila PH para no cobrarla dos veces.
-- Candidatos: Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Tanque de glicol (envolvente 12in sch30, SE-SPF-025) - opcio (12, 1 u, 2026-02-20) | TAVAL/40- INARTECO FILTROS LIC 9333 · Filtro FM8 600 (S600, cuerpo 16in, toberas 8in) (16 (cuerpo) / 8, 2 u, 2026-01-15) | ENDRESS HAUSER/27- Construcción Mecánica Skid Gas Buy Back  E+H AR Ø12/4.Armado de la Oferta Comercial · Skid de medicion gas Ø12in S600 (tramo de medicion) (12, 1 u, 2025-12-03)
+- Candidatos: TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · Trampa lanzadora 20x16 (Serie 600 A6C) (20 / 16, 1 u, 2026-07-20) | Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Tanque de glicol (envolvente 12in sch30, SE-SPF-025) - opcio (12, 1 u, 2026-02-20) | TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E · Trampa lanzadora 8x6 #300 (LS-122/124) (8 / 6 (barrel 24 x 20 en tabla soldadura), 2 u, 2025-12-10)
 
 ## 4. A completar (no se puede calcular)
 

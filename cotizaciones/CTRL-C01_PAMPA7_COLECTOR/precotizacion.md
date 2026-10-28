@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-C01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 43,991.12 por equipo · soldadura y servicios calculados USD 22,188.91 · 21 similares (9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 21, 25, 26, 27, 28, 29, 31, 32, 33, 34, 35) · 6 sin precio (6, 12, 22, 23, 24, 30).
+**Resumen:** materiales USD 51,729.20 por equipo · soldadura y servicios calculados USD 15,619.30 · 20 similares (9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 21, 25, 26, 27, 29, 31, 32, 33, 34, 35) · 7 sin precio (6, 12, 22, 23, 24, 28, 30).
 
 
 ## 1. Materiales
@@ -36,44 +36,45 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 24 | Sockolet 1" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (12" AFO-03408, USD 14.00): pedir cotización |
 | 25 | Tapón hexagonal 3/4" | SIMILAR | 2.30 / un | 2026-10-10 · planilla interna | serie: sin dato (pedido 3000) |
 | 26 | Válvula de bloqueo y purga 1/2" | SIMILAR | 137.00 / un | 2026-04-22 · planilla interna | — · faltan: serie |
-| 27 | Válvula esférica 3/4" | SIMILAR | 29.53 / un | 2026-07-29 · planilla interna | material: sin dato (pedido A105) |
-| 28 | Válvula esférica paso reducido 1" | SIMILAR | 120.00 / un | 2026-07-29 · planilla interna | material: sin dato (pedido A105) |
-| 29 | Válvula esférica paso reducido 2" | SIMILAR | 131.13 / un | 2026-07-29 · planilla interna | material: sin dato (pedido A216 WCB) |
+| 27 | Válvula esférica 3/4" | SIMILAR | 65.20 / un | 2026-01-26 · planilla interna | diametro: 0.5" (pedido 0.75") |
+| 28 | Válvula esférica paso reducido 1" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (12" VAL-03437, USD 5,750.00): pedir cotización |
+| 29 | Válvula esférica paso reducido 2" | SIMILAR | 170.30 / un | 2025-12-10 · planilla interna | material: sin dato (pedido A216 WCB) |
 | 30 | Válvula de retención tipo wafer 3" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (12" VAL-03433, USD 3,162.00): pedir cotización |
-| 31 | Válvula esférica tres vías motorizada con act | SIMILAR | 3,406.00 / un | 2026-07-29 · planilla interna | material: sin dato (pedido A216 WCB); extremos: sin dato (pedido RF) |
+| 31 | Válvula esférica tres vías motorizada con act | SIMILAR | 4,340.75 / un | 2026-06-26 · planilla interna | material: sin dato (pedido A216 WCB); extremos: sin dato (pedido RF) |
 | 32 | Manómetro 1/2" | SIMILAR | 120.00 / un | 2026-06-26 · planilla interna | — · faltan: rango, conexion |
-| 33 | Transmisor de presión 1/2" | SIMILAR | 856.63 / un | 2026-07-29 · planilla interna | — · faltan: rango, conexion |
+| 33 | Transmisor de presión 1/2" | SIMILAR | 2,848.53 / un | 2026-06-26 · planilla interna | — · faltan: rango, conexion |
 | 34 | Bastidor del skid (perfiles y chapas: corto 3 | SIMILAR (acero por kg) | USD 1.27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2") +10% por recortes; no incluye corte, plegado ni rolado |
 | 35 | Tablero y materiales eléctricos (canalización | SIMILAR | 12,000.00 / gl | 2026-06-26 · planilla interna | unidad distinta: catálogo por un, plano por gl |
 
 ## 2. Soldaduras (de la columna de extremos)
 
-**104 juntas a tope de taller + juntas SW y olets = 449.94 pulgadas equivalentes** × USD 19.73 (costo propio de planta 2024-10) = USD 8,877.22
+**76.5 juntas a tope de taller + juntas SW y olets = 347.45 pulgadas equivalentes** × USD 16.00 (Mano de obra soldadura piping (criterio de las planillas de costo 2026), 2026-02) = USD 5,559.25
 
 - pos 7, 8: caño por metro; sus juntas se cuentan en los extremos BW de accesorios y bridas (una junta cada uno)
-- pos 1: 8 extremo(s) BW de taller (1 por unidad × 4 × 2 por el caño) × 6" × 1.0000
-- pos 2: 80 extremo(s) BW de taller (1 por unidad × 40 × 2 por el caño) × 3" × 1.0000
-- pos 3: 12 extremo(s) BW de taller (1 por unidad × 6 × 2 por el caño) × 2" × 1.4169
+- pos 1: 6 extremo(s) BW de taller (1 por unidad × 4 × 1.5 por el caño) × 6" × 1.0000
+- pos 2: 60 extremo(s) BW de taller (1 por unidad × 40 × 1.5 por el caño) × 3" × 1.0000
+- pos 3: 6 extremo(s) BW de taller (1 por unidad × 6) × 2" × 1.4169
 - pos 4: 4 junta(s) SW × 1" × 1.3462
-- pos 19: 36 extremo(s) BW de taller (3 por unidad × 6 × 2 por el caño) × 3.7206" × 1.0000
-- pos 20: 36 extremo(s) BW de taller (3 por unidad × 6 × 2 por el caño) × 3" × 1.3880
-- pos 21: 36 extremo(s) BW de taller (3 por unidad × 6 × 2 por el caño) × 5" × 1.0000
+- pos 19: 27 extremo(s) BW de taller (3 por unidad × 6 × 1.5 por el caño) × 3.7206" × 1.0000
+- pos 20: 27 extremo(s) BW de taller (3 por unidad × 6 × 1.5 por el caño) × 3" × 1.3880
+- pos 21: 27 extremo(s) BW de taller (3 por unidad × 6 × 1.5 por el caño) × 5" × 1.0000
 - pos 23: 34 junta(s) de Sockolet sobre caño × 0.75" × 1.75 = 44.62
 - pos 24: 4 junta(s) de Sockolet sobre caño × 1" × 1.75 = 7.00
 
 ## 3. Servicios calculados
 
-- **Pintura:** 5.40 m² de caños y niples × USD 50.00/m² (Granallado y pintura piping (incluye materiales), criterio ITT, 2026-10-10) = USD 270.04. No incluye accesorios ni válvulas: sumarlos si se pintan.
+- **Pintura:** 40.20 m² (caños y niples × 3 por bridas, accesorios y válvulas 16.2 + estructura 24.0) × USD 50.00/m² (Granallado y pintura piping (incluye materiales), criterio ITT, 2026-10-10) = USD 2,010.13.
 - **Prueba hidráulica:** 8 h × USD 13.00/h (Prueba hidráulica - manifold FA0032 1.2, 2026-03-10) = USD 104.00 · volumen interior de caños y niples 150.4 l.
-- **Radiografía 100%:** 328 placas chicas + 0 grandes + 9 servicio(s) = USD 9,330.00 (Antonelli 2025-11).
+- **Radiografía 100% y tintas:** 243 placas chicas + 0 grandes + 6.11 servicio(s) de RX + 1.44 de LP por equipo = USD 4,497.50 (Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))).
+  Con las tarifas de Antonelli (11-2025) serían USD 7,347.22: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: manifold, 6", 18 u, materiales USD 43,991 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: manifold, 6", 18 u, materiales USD 51,729 por unidad)
 
-- **Ingeniería:** 1.14286 h × USD 15/h = USD 17.14 · 1.14286 h por unidad (serie de 7) · antecedente: TECPETROL/9. CM SKID MANIFOLD PAD S-600 · Skid Manifold PAD S600 clase A6CM (sch 80) (4 (colector 8), 7 u, 2026-01-26) · rango del mismo tipo 1.14286–9 h
-- **Calidad y dossier:** 24 h × USD 15/h = USD 360.00 · 24 h por unidad (serie de 7) · antecedente: TECPETROL/9. CM SKID MANIFOLD PAD S-600 · Skid Manifold PAD S600 clase A6CM (sch 80) (4 (colector 8), 7 u, 2026-01-26) · rango del mismo tipo 18–24 h
-- **Montaje en planta (armado, movimientos, prueba hidráulica):** 256.5 h × USD 13/h = USD 3,334.50 · horas por unidad del antecedente · antecedente: TECPETROL/9. CM SKID MANIFOLD PAD S-600 · Skid Manifold PAD S600 clase A6CM (sch 80) (4 (colector 8), 7 u, 2026-01-26) · rango del mismo tipo 256.5–256.5 h
+- **Ingeniería:** 1.66 h × USD 15/h = USD 24.90 · mediana de 1.2, 1.7, 9.9 h por unidad (repartidas en la serie y por tamaño) · antecedente: TECPETROL/9. CM SKID MANIFOLD PAD S-600 · Skid Manifold PAD S600 clase A6BM (sch 40) (4 (colector 8), 28 u, 2026-01-26) · rango del mismo tipo 1.14286–9 h
+- **Calidad y dossier:** 4.46 h × USD 15/h = USD 66.90 · mediana de 24.9, 4.3, 4.5 h por unidad (repartidas en la serie y por tamaño) · antecedente: TECPETROL/9. CM SKID MANIFOLD PAD S-600 · Skid Manifold PAD S600 clase A6BM (sch 40) (4 (colector 8), 28 u, 2026-01-26) · rango del mismo tipo 18–24 h
+- **Montaje en planta (armado, movimientos, prueba hidráulica):** 266.2 h × USD 13/h = USD 3,460.60 · mediana de 256.5 h × 1.038, 135 h × 1.104, 535.5 h × 0.893 (horas por unidad × tamaño) · antecedente: TECPETROL/9. CM SKID MANIFOLD PAD S-600 · Skid Manifold PAD S600 clase A6BM (sch 40) (4 (colector 8), 28 u, 2026-01-26) · rango del mismo tipo 256.5–256.5 h
 - La prueba hidráulica va dentro del montaje del antecedente: se sacó la fila PH para no cobrarla dos veces.
-- Candidatos: TECPETROL/9. CM SKID MANIFOLD PAD S-600 · Skid Manifold PAD S600 clase A6CM (sch 80) (4 (colector 8), 7 u, 2026-01-26) | TECPETROL/9. CM SKID MANIFOLD PAD S-600 · Skid Manifold PAD S600 clase A6BM (sch 40) (4 (colector 8), 28 u, 2026-01-26) | Sacde/14- 3029 RDA - SE-CPF-062_ SKID VALVULA Y BOMBA TK CONICO · Skid valvula y bomba para TK-1828 (TK conico) (6 (sch 40; tambien 4,3,2), 1 u, 2026-02-10)
+- Candidatos: TECPETROL/9. CM SKID MANIFOLD PAD S-600 · Skid Manifold PAD S600 clase A6BM (sch 40) (4 (colector 8), 28 u, 2026-01-26) | Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para bomba P-111 (SK-2111) (6, 1 u, 2026-02-20) | Sacde/14- 3029 RDA - SE-CPF-062_ SKID VALVULA Y BOMBA TK CONICO · Skid valvula y bomba para TK-1839 (TK conico) (4 (sch 40; tambien 3,2), 1 u, 2026-02-10)
 
 ## 4. A completar (no se puede calcular)
 

@@ -32,32 +32,31 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 24 | Sockolet 1" 3000 A105 | 2 × 7.00 = 14.00 | 2 un × 0.00 = 0.00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-28 | SIN PRECIO en el catálogo |
 | 25 | Tapón hexagonal 3/4" NPT A105 | 17 × 2.50 = 42.50 | 17 un × 2.30 = 39.10 | -8% | ant · sin proveedor en planilla · AFO-02373 · 2026-10-10 | dentro de ±15% |
 | 26 | Válvula bloqueo y purga 1/2" AISI 316 | 15 × 180.00 = 2,700.00 | 15 un × 137.00 = 2,055.00 | -24% | ant · Abac · VAL-03198 · 2026-04-22 | más barato (similar) |
-| 27 | Válvula esférica 3/4" #3000 A105 (Taval stock | 4 × 42.04 = 168.17 | 4 un × 29.53 = 118.12 | -30% | ant · Taval · VAL-03188 · 2026-07-29 | más barato (similar) · real: Válvulas Taval, factor 1 |
-| 28 | Válvula esférica 1" #300 PR BF60253R0144RP | 2 × 67.50 = 135.00 | 2 un × 120.00 = 240.00 | +78% | ant · Taval · VAL-03181 · 2026-07-29 | más caro (similar) · real: Válvulas Taval, factor 1 |
-| 29 | Válvula esférica 2" #300 PR BG10503R0104RP | 6 × 131.13 = 786.79 | 6 un × 131.13 = 786.79 | +0% | ant · Taval · VAL-03184 · 2026-07-29 | dentro de ±15% · real: Válvulas Taval, factor 1 |
+| 27 | Válvula esférica 3/4" #3000 A105 (Taval stock | 4 × 42.04 = 168.17 | 4 un × 65.20 = 260.80 | +55% | ant · válvulas Taval (el resumen las agrupa co · 2026-01-26 | más caro (similar) · real: Válvulas Taval, factor 1 |
+| 28 | Válvula esférica 1" #300 PR BF60253R0144RP | 2 × 67.50 = 135.00 | 2 un × 0.00 = 0.00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-28 | SIN PRECIO en el catálogo · real: Válvulas Taval, factor 1 |
+| 29 | Válvula esférica 2" #300 PR BG10503R0104RP | 6 × 131.13 = 786.79 | 6 un × 170.30 = 1,021.80 | +30% | ant · Válvulas Taval (s/listado de Valv.) · VA · 2025-12-10 | más caro (similar) · real: Válvulas Taval, factor 1 |
 | 30 | Válvula retención wafer 3" #300 | 6 × 200.00 = 1,200.00 | 6 un × 0.00 = 0.00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-28 | SIN PRECIO en el catálogo · real: Válvulas Taval, factor 1 |
-| 31 | Válvula esférica 3" #300 3 vías motorizada | 6 × 3,406.00 = 20,436.00 | 6 un × 3,406.00 = 20,436.00 | +0% | ant · Valvtronic/ Valvol · VAL-03228 · 2026-07-29 | dentro de ±15% · real: las cotizaciones del proyecto dan 3.586,58 (Valvtronic) y 4.378 (Valbol); la OC real fue 4.215,21 |
+| 31 | Válvula esférica 3" #300 3 vías motorizada | 6 × 3,406.00 = 20,436.00 | 6 un × 4,340.75 = 26,044.48 | +27% | ant · Valvtronic · VAL-03230 · 2026-06-26 | más caro (similar) · real: las cotizaciones del proyecto dan 3.586,58 (Valvtronic) y 4.378 (Valbol); la OC real fue 4.215,21 |
 | 32 | Manómetro | 2 × 120.00 = 240.00 | 2 un × 120.00 = 240.00 | +0% | ant · Weisz o similar · INS-02701 · 2026-06-26 | dentro de ±15% |
-| 33 | Transmisor de presión | 1 × 856.63 = 856.63 | 1 un × 856.63 = 856.63 | +0% | ant · ABB · INS-02707 · 2026-07-29 | dentro de ±15% |
+| 33 | Transmisor de presión | 1 × 856.63 = 856.63 | 1 un × 2,848.53 = 2,848.53 | +233% | ant · Induquip · INS-02709 · 2026-06-26 | más caro (similar) |
 | 34 | Bastidor skid (300 + 500 kg con 20% de desper | 960 × 1.50 = 1,440.00 | 800 kg × 1.27 = 1,019.52 | -29% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | más barato (similar) · real: 800 kg × 1,2 de desperdicio × USD 1,5/kg |
 | 35 | Tablero y materiales eléctricos | 1 × 12,000.00 = 12,000.00 | 1 gl × 12,000.00 = 12,000.00 | +0% | ant · planilla de costo ITT · OTR-03018 · 2026-06-26 | dentro de ±15% |
 
-**Materiales: real USD 47,654.86 · cotizador USD 43,991.12 (-8%).** 13 dentro de ±15%, 16 fuera, 6 sin precio.
+**Materiales: real USD 47,654.86 · cotizador USD 51,729.20 (+9%).** 10 dentro de ±15%, 18 fuera, 7 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
 | Rubro | Real | Cotizador | Dif. |
 |---|---|---|---|
-| soldadura | 8,350.00 | 8,877.22 | +6% |
-| radiografía y END | 4,594.50 | 9,330.00 | +103% |
-| granallado y pintura | 4,410.00 | 270.05 | -94% |
-| prueba hidráulica | 0.00 | 3,334.50 | — |
-| ingeniería, calidad y montaje | 1,227.00 | 377.14 | -69% |
+| soldadura | 8,350.00 | 5,559.25 | -33% |
+| radiografía y END | 4,594.50 | 4,497.50 | -2% |
+| granallado y pintura | 4,410.00 | 2,010.15 | -54% |
+| ingeniería, calidad y montaje | 1,227.00 | 3,552.40 | +190% |
 | otros | 253.66 | 0.00 | -100% |
 
-**MO y servicios: real USD 18,835.16 · cotizador USD 22,188.91 (+18%).**
+**MO y servicios: real USD 18,835.16 · cotizador USD 15,619.30 (-17%).**
 
 ## Total por colector
 
-Real USD 66,490.02 · cotizador USD 66,180.03 (-0%) antes de completar lo que el cotizador marca para revisar.
+Real USD 66,490.02 · cotizador USD 67,348.50 (+1%) antes de completar lo que el cotizador marca para revisar.
 

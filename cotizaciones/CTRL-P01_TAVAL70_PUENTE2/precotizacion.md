@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-P01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 27,163.96 por equipo · soldadura y servicios calculados USD 12,419.44 · 14 similares (1, 2, 4, 6, 7, 9, 11, 12, 13, 16, 17, 19, 20, 22) · 7 sin precio (8, 10, 14, 15, 18, 23, 24).
+**Resumen:** materiales USD 27,163.96 por equipo · soldadura y servicios calculados USD 10,527.72 · 14 similares (1, 2, 4, 6, 7, 9, 11, 12, 13, 16, 17, 19, 20, 22) · 7 sin precio (8, 10, 14, 15, 18, 23, 24).
 
 
 ## 1. Materiales
@@ -35,29 +35,32 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 
 ## 2. Soldaduras (de la columna de extremos)
 
-**86 juntas a tope de taller + juntas SW y olets = 304.98 pulgadas equivalentes** × USD 19.73 (costo propio de planta 2024-10) = USD 6,017.29
+**64.5 juntas a tope de taller + juntas SW y olets = 242.44 pulgadas equivalentes** × USD 16.00 (Mano de obra soldadura piping (criterio de las planillas de costo 2026), 2026-02) = USD 3,879.07
 
 - pos 2, 13: caño por metro; sus juntas se cuentan en los extremos BW de accesorios y bridas (una junta cada uno)
-- pos 1: 4 extremo(s) BW de taller (1 por unidad × 2 × 2 por el caño) × 3" × 1.3880
-- pos 3: 12 extremo(s) BW de taller (3 por unidad × 2 × 2 por el caño) × 3.7206" × 1.0000
-- pos 4: 96 extremo(s) BW de taller (1 por unidad × 48 × 2 por el caño) × 2" × 1.4169
-- pos 5: 12 extremo(s) BW de taller (3 por unidad × 2 × 2 por el caño) × 2.5794" × 1.0000
+- pos 1: 3 extremo(s) BW de taller (1 por unidad × 2 × 1.5 por el caño) × 3" × 1.3880
+- pos 3: 9 extremo(s) BW de taller (3 por unidad × 2 × 1.5 por el caño) × 3.7206" × 1.0000
+- pos 4: 72 extremo(s) BW de taller (1 por unidad × 48 × 1.5 por el caño) × 2" × 1.4169
+- pos 5: 9 extremo(s) BW de taller (3 por unidad × 2 × 1.5 por el caño) × 2.5794" × 1.0000
 - pos 6: 2 junta(s) SW × 1.5" × 1.9402
 - pos 18: 28 junta(s) de Sockolet sobre caño × 1" × 1.75 = 49.00
-- pos 21: 48 extremo(s) BW de taller (3 por unidad × 8 × 2 por el caño) × 2" × 1.4169
+- pos 21: 36 extremo(s) BW de taller (3 por unidad × 8 × 1.5 por el caño) × 2" × 1.4169
 
 ## 3. Servicios calculados
 
-- **Pintura:** 5.66 m² de caños y niples × USD 50.00/m² (Granallado y pintura piping (incluye materiales), criterio ITT, 2026-10-10) = USD 283.14. No incluye accesorios ni válvulas: sumarlos si se pintan.
+- **Pintura:** 48.49 m² (caños y niples × 3 por bridas, accesorios y válvulas 17.0 + estructura 31.5) × USD 50.00/m² (Granallado y pintura piping (incluye materiales), criterio ITT, 2026-10-10) = USD 2,424.42.
 - **Prueba hidráulica:** 36 h × USD 13.00/h (Prueba hidráulica - manifold FA0032 1.2, 2026-03-10) = USD 468.00 · volumen interior de caños y niples 62.7 l.
-- **Radiografía 100%:** 180 placas chicas + 0 grandes + 5 servicio(s) = USD 5,150.00 (Antonelli 2025-11).
+- **Radiografía 100% y tintas:** 135 placas chicas + 0 grandes + 3.38 servicio(s) de RX + 1.00 de LP por equipo = USD 2,548.50 (Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))).
+  Con las tarifas de Antonelli (11-2025) serían USD 4,168.75: confirmar el proveedor de END con el cliente o la zona.
 
 ### Horas de ingeniería, calidad y montaje (estimadas: puente, 2", 24 u, materiales USD 27,164 por unidad)
 
-- **Ingeniería:** 9 h × USD 15/h = USD 135.00 · 9 h por unidad (serie de 442) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19) · rango del mismo tipo 9–9 h
-- **Calidad y dossier:** 1 h × USD 15/h = USD 15.00 · 1 h por unidad (serie de 442) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19) · rango del mismo tipo 1–1 h
-- **Montaje en planta (armado, movimientos):** 27 h × USD 13/h = USD 351.00 · horas por unidad del antecedente · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19) · rango del mismo tipo 27–30 h
-- Candidatos: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19) | TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 4in #600 (serie de 13 unidades) (4, 13 u, 2026-02-19) | Sacde/14- 3029 RDA - SE-CPF-062_ SKID VALVULA Y BOMBA TK CONICO · Skid valvula y bomba para TK-1839 (TK conico) (4 (sch 40; tambien 3,2), 1 u, 2026-02-10)
+- **Ingeniería:** 1.04 h × USD 15/h = USD 15.60 · mediana de 1.0, 1.0, 15.0 h por unidad (repartidas en la serie y por tamaño) · antecedente: Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para bomba P-111 (SK-2111) (6, 1 u, 2026-02-20) · rango del mismo tipo 9–9 h
+- **Calidad y dossier:** 2.69 h × USD 15/h = USD 40.35 · mediana de 2.7, 20.8, 1.7 h por unidad (repartidas en la serie y por tamaño) · antecedente: Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para bomba P-111 (SK-2111) (6, 1 u, 2026-02-20) · rango del mismo tipo 1–1 h
+- **Montaje en planta (armado, movimientos, prueba hidráulica):** 124.6 h × USD 13/h = USD 1,619.80 · mediana de 135 h × 0.923, 256.5 h × 0.867, 30 h × 1.666 (horas por unidad × tamaño) · antecedente: Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para bomba P-111 (SK-2111) (6, 1 u, 2026-02-20) · rango del mismo tipo 27–30 h
+- ⚠ No hay antecedente del mismo tipo y tamaño: se usó el más parecido de otro tipo. Revisar las horas.
+- La prueba hidráulica va dentro del montaje del antecedente: se sacó la fila PH para no cobrarla dos veces.
+- Candidatos: Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para bomba P-111 (SK-2111) (6, 1 u, 2026-02-20) | TECPETROL/9. CM SKID MANIFOLD PAD S-600 · Skid Manifold PAD S600 clase A6BM (sch 40) (4 (colector 8), 28 u, 2026-01-26) | TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 4in #600 (serie de 13 unidades) (4, 13 u, 2026-02-19)
 
 ## 4. A completar (no se puede calcular)
 

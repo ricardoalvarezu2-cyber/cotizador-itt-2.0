@@ -1,5 +1,6 @@
 rubro,concepto,unidad,valor_usd,tipo,fecha,fuente,vigente,nota
 soldadura,Mano de obra soldadura piping,USD/pulg-diam-eq,19.73,costo_propio,2024-10,costo_mo_planta_2024-10,si,61.16 USD/hh por soldador / 3.1 pulg por hora
+soldadura,Mano de obra soldadura piping (criterio de las planillas de costo 2026),USD/pulg-diam-eq,16,usado_en_cotizacion,2026-02,"planillas 2026 (TAVAL/43 puentes YPF 19-02-2026; TAVAL/40 Inarteco; Sacde 12 a 15; Tecpetrol 9: 16,5)",si,"Precio por pulgada que usan las planillas de ITT de 2025-2026 (16 a 16,5; 19 en #900 en Sacde 12). Controles CTRL-M01/P01/T01, 28-10-2026"
 soldadura,Mano de obra soldadura piping,USD/pulg-diam-eq,28,usado_en_cotizacion,2024-09,costos_mo_master_2024-09,si,Valor del modelo MO Master (skid medición E+H)
 soldadura,Mano de obra soldadura piping,USD/pulg-diam-eq,32,usado_en_cotizacion,2024-02,Costos_MO_Master_II-SEP_TRIFASICO,no,Separador trifásico AESA; mismo valor en Costos_MO dic-2023
 soldadura,Mano de obra soldadura piping (tercero Ledesma),USD/pulg-diam-eq,16.31,tercero,2024-09,costo_mo_planta_2024-10,si,Más IVA. Presupuesto sep-2024
@@ -42,6 +43,10 @@ end,Placa radiográfica grande,USD/placa,24,usado_en_cotizacion,2024-09,costos_m
 end,Servicio de radiografía,USD/servicio,408,tercero,2024,planilla_base_cotizaciones,no,Reemplazado por Antonelli 2025-11
 end,Servicio de líquidos penetrantes,USD/servicio,294,tercero,2024,planilla_base_cotizaciones,no,Reemplazado por Antonelli 2025-11
 end,Placa radiográfica,USD/placa,6.5,tercero,2024,planilla_base_cotizaciones,no,Reemplazado por Antonelli 2025-11
+end,Placa radiografica chica (placa corta) DB NDT,USD/placa,6.5,tercero,2026-08,"PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT)",si,"Lista DB NDT en las planillas de Pampa (07 y 08-2026). Controles CTRL-C01/P01, 28-10-2026"
+end,Placa radiografica grande (placa larga) DB NDT,USD/placa,8,tercero,2026-08,"PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT)",si,Lista DB NDT
+end,Servicio de radiografia DB NDT,USD/servicio,408,tercero,2026-08,"PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT)",si,Lista DB NDT (hasta ~40 placas por servicio)
+end,Servicio de liquidos penetrantes DB NDT,USD/servicio,294,tercero,2026-08,"PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT)",si,"Lista DB NDT; la planilla de Pampa pone medio servicio de LP por equipo"
 material,Chapa negra A36 (1/2 1/4 3/16),USD/kg,1.16,precio_compra,2026-02,precios_varios_acero_2026-02,si,Con 10% de recortes: 1.27. Redondeo usado: 1.30 Detalle por medida (fuente única): precios/acero_por_kg.csv
 material,Chapa semilla de melón 1/8,USD/kg,1.23,precio_compra,2026-02,precios_varios_acero_2026-02,si,Con 10% de recortes: 1.35 Detalle por medida (fuente única): precios/acero_por_kg.csv
 material,Hierro ángulo,USD/kg,1.32-1.72,precio_compra,2026-02,precios_varios_acero_2026-02,si,Con 10% de recortes: 1.45-1.90 Detalle por medida (fuente única): precios/acero_por_kg.csv

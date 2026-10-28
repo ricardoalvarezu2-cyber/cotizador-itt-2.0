@@ -553,17 +553,17 @@
    "id": "S01",
    "pos": "MO",
    "grupo": "mo",
-   "descripcion": "Soldaduras: 11 a tope + SW y olets (calculado)",
-   "especificacion": "pos 8, 9: caño por metro; sus juntas se cuentan en los extremos BW de accesorios y bridas (una junta cada uno); pos 1: 8 extremo(s) BW de taller (2 por unidad × 2 × 2 por el caño) × 36\" × 1.9990; pos 2: 4 extremo(s) BW de taller (1 por unidad × 2 × 2 por el caño) × 36\" × 1.9990; pos 4: 4 extremo(s) BW de taller (2 por unidad × 1 × 2 por el caño) × 2\" × 1.0000; pos 6: 1 junta(s) SW × 2\" × 1.0000; p",
-   "cantidad": 476.118,
+   "descripcion": "Soldaduras: 6.25 a tope + SW y olets (calculado)",
+   "especificacion": "pos 8, 9: caño por metro; sus juntas se cuentan en los extremos BW de accesorios y bridas (una junta cada uno); pos 1: costura longitudinal de 2 virola(s) de 2500 mm = 62.7 pulg-eq × 1.0000; pos 1: 4 extremo(s) BW de taller (2 por unidad × 2) × 36\" × 1.0000; pos 2: 2 extremo(s) BW de taller (1 por unidad × 2) × 36\" × 1.0000; pos 4: 3 extremo(s) BW de taller (2 por unidad × 1 × 1.5 por el caño) × 2",
+   "cantidad": 203.285,
    "unidad": "pulg",
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 19.73,
-     "proveedor": "Costo propio de planta: 61.16 USD/hh por soldador / 3.1 pulg por hora",
-     "origen": "costo_mo_planta_2024-10",
-     "fecha": "2024-10-31",
+     "precio": 16.0,
+     "proveedor": "Mano de obra soldadura piping (criterio de las planillas de costo 2026): Precio por pulgada que usan las planillas de ITT de 2025-2026 (16 a 16,5; 19 en #900 en Sacde 12). Controles CTRL-M01/P01/T01, ",
+     "origen": "planillas 2026 (TAVAL/43 puentes YPF 19-02-2026; TAVAL/40 Inarteco; Sacde 12 a 15; Tecpetrol 9: 16,5)",
+     "fecha": "2026-02-31",
      "coincide": "igual"
     }
    ]
@@ -572,9 +572,9 @@
    "id": "S02",
    "pos": "PIN",
    "grupo": "servicio",
-   "descripcion": "Granallado y pintura (m² calculados de caños y niples)",
-   "especificacion": "3.22 m² exteriores (tabla ASME B36.10)",
-   "cantidad": 3.22,
+   "descripcion": "Granallado y pintura (m² calculados)",
+   "especificacion": "32.32 m² exteriores: caños y niples × 3 por bridas, accesorios y válvulas 9.7 + envolvente 16.2 + estructura 6.5",
+   "cantidad": 32.325,
    "unidad": "m2",
    "fuentes": [
     {
@@ -584,7 +584,7 @@
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN\\4.Armado de la Oferta Comercial",
      "fecha": "2026-10-10",
      "coincide": "similar",
-     "diferencia": "m² solo de caños y niples; esquema de pintura a confirmar con el pliego"
+     "diferencia": "m² calculados (caños, accesorios por regla, envolvente y estructura); esquema de pintura a confirmar con el pliego"
     }
    ]
   },
@@ -592,15 +592,23 @@
    "id": "S04",
    "pos": "RX",
    "grupo": "servicio",
-   "descripcion": "Radiografía 100% de las juntas a tope",
-   "especificacion": "16 placas chicas, 42 grandes, 2 servicio(s)",
+   "descripcion": "Radiografía 100% de las juntas a tope y tintas penetrantes en SW y olets",
+   "especificacion": "10 placas chicas, 21 grandes, 1.00 servicio(s) de RX y 1.00 de LP por equipo (servicios repartidos en 1 equipos)",
    "cantidad": 1,
    "unidad": "gl",
    "fuentes": [
     {
      "tipo": "cot",
-     "precio": 2060.0,
-     "proveedor": "NDT Antonelli (tarifas nov-2025)",
+     "precio": 935.0,
+     "proveedor": "Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))",
+     "origen": "PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT)",
+     "fecha": "2026-08-14",
+     "coincide": "igual"
+    },
+    {
+     "tipo": "cot",
+     "precio": 1550.0,
+     "proveedor": "NDT Antonelli (tarifas 11-2025), mismas placas y servicios",
      "origen": "fuentes_originales/antonelli_end_2025-11.pdf",
      "fecha": "2025-11-03",
      "coincide": "igual"
@@ -612,18 +620,18 @@
    "pos": "HH",
    "grupo": "mo",
    "descripcion": "Horas de ingeniería (estimadas del antecedente)",
-   "especificacion": "250 h por tanque · 250 h × 1 u ÷ 1 u",
-   "cantidad": 250.0,
+   "especificacion": "170 h por tanque · mediana de 101.3, 170.0, 420.5 h por unidad (repartidas en la serie y por tamaño)",
+   "cantidad": 170.0,
    "unidad": "h",
    "fuentes": [
     {
      "tipo": "est",
      "precio": 15.0,
      "proveedor": "Horas propias ITT (tarifa del antecedente)",
-     "origen": "conocimiento/costos/horas_por_equipo.csv · Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · 4.Armado de la Oferta Comercial/LM-TANQUE GLICOL.xlsx.txt · hoja Soldadura + HH",
-     "fecha": "2026-02-20",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 8.Orden de Compra/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx.txt · hoja Lanz 20x16",
+     "fecha": "2026-07-20",
      "coincide": "similar",
-     "diferencia": "ESTIMADO del antecedente Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Tanque de glicol (envolvente 12in sch30, SE-SPF-025) - opcio (12, 1 u, 2026-02-20)"
+     "diferencia": "ESTIMADO del antecedente TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · Trampa lanzadora 20x16 (Serie 600 A6C) (20 / 16, 1 u, 2026-07-20)"
     }
    ]
   },
@@ -632,18 +640,18 @@
    "pos": "CAL",
    "grupo": "mo",
    "descripcion": "Horas de calidad y dossier (estimadas del antecedente)",
-   "especificacion": "250 h por tanque · 250 h × 1 u ÷ 1 u",
-   "cantidad": 250.0,
+   "especificacion": "125.4 h por tanque · mediana de 121.6, 170.0, 125.4 h por unidad (repartidas en la serie y por tamaño)",
+   "cantidad": 125.4,
    "unidad": "h",
    "fuentes": [
     {
      "tipo": "est",
      "precio": 15.0,
      "proveedor": "Horas propias ITT (tarifa del antecedente)",
-     "origen": "conocimiento/costos/horas_por_equipo.csv · Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · 4.Armado de la Oferta Comercial/LM-TANQUE GLICOL.xlsx.txt · hoja Soldadura + HH",
-     "fecha": "2026-02-20",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 8.Orden de Compra/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx.txt · hoja Lanz 20x16",
+     "fecha": "2026-07-20",
      "coincide": "similar",
-     "diferencia": "ESTIMADO del antecedente Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Tanque de glicol (envolvente 12in sch30, SE-SPF-025) - opcio (12, 1 u, 2026-02-20)"
+     "diferencia": "ESTIMADO del antecedente TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · Trampa lanzadora 20x16 (Serie 600 A6C) (20 / 16, 1 u, 2026-07-20)"
     }
    ]
   },
@@ -652,18 +660,18 @@
    "pos": "ARM",
    "grupo": "mo",
    "descripcion": "Horas de montaje en planta (armado, movimientos, prueba hidráulica) (estimadas del antecedente)",
-   "especificacion": "554.4 h por tanque · horas por unidad del antecedente",
-   "cantidad": 554.4,
+   "especificacion": "377 h por tanque · mediana de 120 h × 1.013, 554.4 h × 0.68, 756 h × 0.836 (horas por unidad × tamaño)",
+   "cantidad": 377.0,
    "unidad": "h",
    "fuentes": [
     {
      "tipo": "est",
-     "precio": 16.0,
+     "precio": 13.0,
      "proveedor": "Horas propias ITT (tarifa del antecedente)",
-     "origen": "conocimiento/costos/horas_por_equipo.csv · Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · 4.Armado de la Oferta Comercial/LM-TANQUE GLICOL.xlsx.txt · hoja Soldadura + HH",
-     "fecha": "2026-02-20",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 8.Orden de Compra/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx.txt · hoja Lanz 20x16",
+     "fecha": "2026-07-20",
      "coincide": "similar",
-     "diferencia": "ESTIMADO del antecedente Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Tanque de glicol (envolvente 12in sch30, SE-SPF-025) - opcio (12, 1 u, 2026-02-20)"
+     "diferencia": "ESTIMADO del antecedente TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · Trampa lanzadora 20x16 (Serie 600 A6C) (20 / 16, 1 u, 2026-07-20)"
     }
    ]
   }

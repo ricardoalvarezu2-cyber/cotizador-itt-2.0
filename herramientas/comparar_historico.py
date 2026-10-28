@@ -10,6 +10,7 @@ horas de ingeniería/calidad/montaje), porque el cotizador y la planilla los agr
 Todo sin IVA y sin ajuste por inflación (precio a la fecha de cada fuente), para comparar con la planilla de ese momento.
 """
 import argparse
+import re
 import csv
 import json
 from pathlib import Path
@@ -20,9 +21,14 @@ RUBROS = [("soldadura", ("MO",), ("soldadura",)), ("radiografía y END", ("RX",)
 
 
 def rubro_de(pos, desc):
+    """Primero el código de posición (HH, ARM, RX...), después las palabras enteras de la descripción: "montaje en planta
+    (armado, movimientos, prueba hidráulica)" es montaje, no prueba hidráulica, y "end" no es parte de "recomendado"."""
+    for nombre, poss, _ in RUBROS:
+        if pos in poss:
+            return nombre
     d = desc.lower()
-    for nombre, poss, palabras in RUBROS:
-        if pos in poss or any(p in d for p in palabras):
+    for nombre, _, palabras in RUBROS:
+        if any(re.search(r"\b" + re.escape(p), d) for p in palabras):
             return nombre
     return "otros"
 
@@ -91,8 +97,9 @@ def main(carpeta, archivo="cotizacion_auto.json"):
     lin += ["", f"**MO y servicios: real USD {mo_h:,.2f} · cotizador USD {mo_c:,.2f} ({pct(mo_c, mo_h):+.0f}%).**", "",
             f"## Total por {cot.get('equipo', {}).get('singular', 'equipo')}", "",
             f"Real USD {tot_h + mo_h:,.2f} · cotizador USD {tot_c + mo_c:,.2f} ({pct(tot_c + mo_c, tot_h + mo_h):+.0f}%) antes de completar lo que el cotizador marca para revisar.", ""]
-    (carpeta / "comparacion_historico.md").write_text("\n".join(lin) + "\n", encoding="utf-8")
-    print(f"Materiales {pct(tot_c, tot_h):+.0f}% · MO y servicios {pct(mo_c, mo_h):+.0f}% · total {pct(tot_c + mo_c, tot_h + mo_h):+.0f}% → {carpeta / 'comparacion_historico.md'}")
+    salida = carpeta / ("comparacion_historico.md" if archivo == "cotizacion_auto.json" else f"comparacion_{Path(archivo).stem}.md")
+    salida.write_text("\n".join(lin) + "\n", encoding="utf-8")
+    print(f"Materiales {pct(tot_c, tot_h):+.0f}% · MO y servicios {pct(mo_c, mo_h):+.0f}% · total {pct(tot_c + mo_c, tot_h + mo_h):+.0f}% → {salida}")
 
 
 if __name__ == "__main__":

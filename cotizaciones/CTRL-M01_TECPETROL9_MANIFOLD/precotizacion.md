@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-M01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 17,950.78 por equipo · soldadura y servicios calculados USD 25,628.44 · 6 similares (6, 7, 12, 13, 15, 16) · 3 sin precio (5, 10, 14).
+**Resumen:** materiales USD 17,950.78 por equipo · soldadura y servicios calculados USD 11,979.33 · 6 similares (6, 7, 12, 13, 15, 16) · 3 sin precio (5, 10, 14).
 
 
 ## 1. Materiales
@@ -30,29 +30,30 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 
 ## 2. Soldaduras (de la columna de extremos)
 
-**68 juntas a tope de taller + juntas SW y olets = 461.09 pulgadas equivalentes** × USD 19.73 (costo propio de planta 2024-10) = USD 9,097.29
+**51 juntas a tope de taller + juntas SW y olets = 347.57 pulgadas equivalentes** × USD 16.00 (Mano de obra soldadura piping (criterio de las planillas de costo 2026), 2026-02) = USD 5,561.07
 
 - pos 3, 4: caño por metro; sus juntas se cuentan en los extremos BW de accesorios y bridas (una junta cada uno)
-- pos 1: 60 extremo(s) BW de taller (1 por unidad × 30 × 2 por el caño) × 4" × 1.4219
-- pos 2: 4 extremo(s) BW de taller (1 por unidad × 2 × 2 por el caño) × 8" × 1.5526
+- pos 1: 45 extremo(s) BW de taller (1 por unidad × 30 × 1.5 por el caño) × 4" × 1.4219
+- pos 2: 3 extremo(s) BW de taller (1 por unidad × 2 × 1.5 por el caño) × 8" × 1.5526
 - pos 10: 8 junta(s) de Sockolet sobre caño × 0.5" × 1.75 = 7.00
-- pos 12: 48 extremo(s) BW de taller (3 por unidad × 8 × 2 por el caño) × 4" × 1.4219
-- pos 13: 24 extremo(s) BW de taller (3 por unidad × 4 × 2 por el caño) × 10.1764" × 1.0000
+- pos 12: 36 extremo(s) BW de taller (3 por unidad × 8 × 1.5 por el caño) × 4" × 1.4219
+- pos 13: 18 extremo(s) BW de taller (3 por unidad × 4 × 1.5 por el caño) × 10.1764" × 1.0000
 
 ## 3. Servicios calculados
 
-- **Pintura:** 2.87 m² de caños y niples × USD 50.00/m² (Granallado y pintura piping (incluye materiales), criterio ITT, 2026-10-10) = USD 143.33. No incluye accesorios ni válvulas: sumarlos si se pintan.
+- **Pintura:** 21.08 m² (caños y niples × 3 por bridas, accesorios y válvulas 8.6 + estructura 12.5) × USD 50.00/m² (Granallado y pintura piping (incluye materiales), criterio ITT, 2026-10-10) = USD 1,053.98.
 - **Prueba hidráulica:** 27 h × USD 13.00/h (Prueba hidráulica - manifold FA0032 1.2, 2026-03-10) = USD 351.00 · volumen interior de caños y niples 88.7 l.
-- **Radiografía 100%:** 218 placas chicas + 0 grandes + 6 servicio(s) = USD 6,210.00 (Antonelli 2025-11).
+- **Radiografía 100% y tintas:** 164 placas chicas + 0 grandes + 4.11 servicio(s) de RX + 0.29 de LP por equipo = USD 2,825.71 (Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))).
+  Con las tarifas de Antonelli (11-2025) serían USD 4,612.50: confirmar el proveedor de END con el cliente o la zona.
 
 ### Horas de ingeniería, calidad y montaje (estimadas: manifold, 8", 28 u, materiales USD 17,951 por unidad)
 
-- **Ingeniería:** 17.96 h × USD 15/h = USD 269.40 · 251.5 h × 2 u ÷ 28 u · antecedente: TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E · Trampa lanzadora 8x6 #300 (LS-122/124) (8 / 6 (barrel 24 x 20 en tabla soldadura), 2 u, 2025-12-10) · rango del mismo tipo 9–9 h
-- **Calidad y dossier:** 5.36 h × USD 15/h = USD 80.40 · 75 h × 2 u ÷ 28 u · antecedente: TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E · Trampa lanzadora 8x6 #300 (LS-122/124) (8 / 6 (barrel 24 x 20 en tabla soldadura), 2 u, 2025-12-10) · rango del mismo tipo 18–18 h
-- **Montaje en planta (armado, movimientos, prueba hidráulica):** 756 h × USD 13/h = USD 9,828.00 · horas por unidad del antecedente · antecedente: TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E · Trampa lanzadora 8x6 #300 (LS-122/124) (8 / 6 (barrel 24 x 20 en tabla soldadura), 2 u, 2025-12-10)
+- **Ingeniería:** 6.38 h × USD 15/h = USD 95.70 · mediana de 1.1, 6.4, 8.8 h por unidad (repartidas en la serie y por tamaño) · antecedente: Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para bomba P-111 (SK-2111) (6, 1 u, 2026-02-20) · rango del mismo tipo 9–9 h
+- **Calidad y dossier:** 2.87 h × USD 15/h = USD 43.05 · mediana de 2.8, 2.9, 8.8 h por unidad (repartidas en la serie y por tamaño) · antecedente: Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para bomba P-111 (SK-2111) (6, 1 u, 2026-02-20) · rango del mismo tipo 18–18 h
+- **Montaje en planta (armado, movimientos, prueba hidráulica):** 184.6 h × USD 13/h = USD 2,399.80 · mediana de 135 h × 1.105, 535.5 h × 0.893, 126 h × 1.465 (horas por unidad × tamaño) · antecedente: Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para bomba P-111 (SK-2111) (6, 1 u, 2026-02-20)
 - ⚠ No hay antecedente del mismo tipo y tamaño: se usó el más parecido de otro tipo. Revisar las horas.
 - La prueba hidráulica va dentro del montaje del antecedente: se sacó la fila PH para no cobrarla dos veces.
-- Candidatos: TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E · Trampa lanzadora 8x6 #300 (LS-122/124) (8 / 6 (barrel 24 x 20 en tabla soldadura), 2 u, 2025-12-10) | TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E · Trampa receptora 8x6 #300 (RS-123/125) (8 / 6 (barrel 24 x 20 en tabla soldadura), 2 u, 2025-12-10) | Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para UFLO 2107 (SK-2104) (8, 1 u, 2026-02-20)
+- Candidatos: Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para bomba P-111 (SK-2111) (6, 1 u, 2026-02-20) | Sacde/14- 3029 RDA - SE-CPF-062_ SKID VALVULA Y BOMBA TK CONICO · Skid valvula y bomba para TK-1839 (TK conico) (4 (sch 40; tambien 3,2), 1 u, 2026-02-10) | TAVAL/70- PUENTES DE MEDICION 2 PULGADAS · Puente de inyeccion y regulacion 2in #600 (SK-2104 / SK-2105 (2 (colector 3), 24 u, 2026-10-27)
 
 ## 4. A completar (no se puede calcular)
 

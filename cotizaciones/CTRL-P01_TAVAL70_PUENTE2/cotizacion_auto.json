@@ -622,17 +622,17 @@
    "id": "S01",
    "pos": "MO",
    "grupo": "mo",
-   "descripcion": "Soldaduras: 86 a tope + SW y olets (calculado)",
-   "especificacion": "pos 2, 13: caño por metro; sus juntas se cuentan en los extremos BW de accesorios y bridas (una junta cada uno); pos 1: 4 extremo(s) BW de taller (1 por unidad × 2 × 2 por el caño) × 3\" × 1.3880; pos 3: 12 extremo(s) BW de taller (3 por unidad × 2 × 2 por el caño) × 3.7206\" × 1.0000; pos 4: 96 extremo(s) BW de taller (1 por unidad × 48 × 2 por el caño) × 2\" × 1.4169; pos 5: 12 extremo(s) BW de tal",
-   "cantidad": 304.982,
+   "descripcion": "Soldaduras: 64.5 a tope + SW y olets (calculado)",
+   "especificacion": "pos 2, 13: caño por metro; sus juntas se cuentan en los extremos BW de accesorios y bridas (una junta cada uno); pos 1: 3 extremo(s) BW de taller (1 por unidad × 2 × 1.5 por el caño) × 3\" × 1.3880; pos 3: 9 extremo(s) BW de taller (3 por unidad × 2 × 1.5 por el caño) × 3.7206\" × 1.0000; pos 4: 72 extremo(s) BW de taller (1 por unidad × 48 × 1.5 por el caño) × 2\" × 1.4169; pos 5: 9 extremo(s) BW de",
+   "cantidad": 242.442,
    "unidad": "pulg",
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 19.73,
-     "proveedor": "Costo propio de planta: 61.16 USD/hh por soldador / 3.1 pulg por hora",
-     "origen": "costo_mo_planta_2024-10",
-     "fecha": "2024-10-31",
+     "precio": 16.0,
+     "proveedor": "Mano de obra soldadura piping (criterio de las planillas de costo 2026): Precio por pulgada que usan las planillas de ITT de 2025-2026 (16 a 16,5; 19 en #900 en Sacde 12). Controles CTRL-M01/P01/T01, ",
+     "origen": "planillas 2026 (TAVAL/43 puentes YPF 19-02-2026; TAVAL/40 Inarteco; Sacde 12 a 15; Tecpetrol 9: 16,5)",
+     "fecha": "2026-02-31",
      "coincide": "igual"
     }
    ]
@@ -641,9 +641,9 @@
    "id": "S02",
    "pos": "PIN",
    "grupo": "servicio",
-   "descripcion": "Granallado y pintura (m² calculados de caños y niples)",
-   "especificacion": "5.66 m² exteriores (tabla ASME B36.10)",
-   "cantidad": 5.663,
+   "descripcion": "Granallado y pintura (m² calculados)",
+   "especificacion": "48.49 m² exteriores: caños y niples × 3 por bridas, accesorios y válvulas 17.0 + estructura 31.5",
+   "cantidad": 48.488,
    "unidad": "m2",
    "fuentes": [
     {
@@ -653,26 +653,7 @@
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN\\4.Armado de la Oferta Comercial",
      "fecha": "2026-10-10",
      "coincide": "similar",
-     "diferencia": "m² solo de caños y niples; esquema de pintura a confirmar con el pliego"
-    }
-   ]
-  },
-  {
-   "id": "S03",
-   "pos": "PH",
-   "grupo": "servicio",
-   "descripcion": "Prueba hidráulica (horas de planta)",
-   "especificacion": "36 h · volumen interior 62.7 l",
-   "cantidad": 36.0,
-   "unidad": "h",
-   "fuentes": [
-    {
-     "tipo": "ant",
-     "precio": 13.0,
-     "proveedor": "MO ITT · END-00215",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\49 - A&A Fluid Control - Manifolds Tecpetrol - Salar El Tolillar\\4.Armado de la Oferta Comercial",
-     "fecha": "2026-03-10",
-     "coincide": "igual"
+     "diferencia": "m² calculados (caños, accesorios por regla, envolvente y estructura); esquema de pintura a confirmar con el pliego"
     }
    ]
   },
@@ -680,15 +661,23 @@
    "id": "S04",
    "pos": "RX",
    "grupo": "servicio",
-   "descripcion": "Radiografía 100% de las juntas a tope",
-   "especificacion": "180 placas chicas, 0 grandes, 5 servicio(s)",
+   "descripcion": "Radiografía 100% de las juntas a tope y tintas penetrantes en SW y olets",
+   "especificacion": "135 placas chicas, 0 grandes, 3.38 servicio(s) de RX y 1.00 de LP por equipo (servicios repartidos en 24 equipos)",
    "cantidad": 1,
    "unidad": "gl",
    "fuentes": [
     {
      "tipo": "cot",
-     "precio": 5150.0,
-     "proveedor": "NDT Antonelli (tarifas nov-2025)",
+     "precio": 2548.5,
+     "proveedor": "Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))",
+     "origen": "PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT)",
+     "fecha": "2026-08-14",
+     "coincide": "igual"
+    },
+    {
+     "tipo": "cot",
+     "precio": 4168.75,
+     "proveedor": "NDT Antonelli (tarifas 11-2025), mismas placas y servicios",
      "origen": "fuentes_originales/antonelli_end_2025-11.pdf",
      "fecha": "2025-11-03",
      "coincide": "igual"
@@ -700,18 +689,18 @@
    "pos": "HH",
    "grupo": "mo",
    "descripcion": "Horas de ingeniería (estimadas del antecedente)",
-   "especificacion": "9 h por puente · 9 h por unidad (serie de 442)",
-   "cantidad": 9.0,
+   "especificacion": "1.04 h por puente · mediana de 1.0, 1.0, 15.0 h por unidad (repartidas en la serie y por tamaño)",
+   "cantidad": 1.04,
    "unidad": "h",
    "fuentes": [
     {
      "tipo": "est",
      "precio": 15.0,
      "proveedor": "Horas propias ITT (tarifa del antecedente)",
-     "origen": "conocimiento/costos/horas_por_equipo.csv · TAVAL/43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt · hoja 3\" Sold+END+Ing+Calid+Mje ",
-     "fecha": "2026-02-19",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · 4.Armado de la Oferta Comercial/SKIDs SK SACDE 1002 Rev1.xlsx.txt · hoja SK-2111 / Mano de Obra de ITT",
+     "fecha": "2026-02-20",
      "coincide": "similar",
-     "diferencia": "ESTIMADO del antecedente TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19)"
+     "diferencia": "ESTIMADO del antecedente Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para bomba P-111 (SK-2111) (6, 1 u, 2026-02-20)"
     }
    ]
   },
@@ -720,18 +709,18 @@
    "pos": "CAL",
    "grupo": "mo",
    "descripcion": "Horas de calidad y dossier (estimadas del antecedente)",
-   "especificacion": "1 h por puente · 1 h por unidad (serie de 442)",
-   "cantidad": 1.0,
+   "especificacion": "2.69 h por puente · mediana de 2.7, 20.8, 1.7 h por unidad (repartidas en la serie y por tamaño)",
+   "cantidad": 2.69,
    "unidad": "h",
    "fuentes": [
     {
      "tipo": "est",
      "precio": 15.0,
      "proveedor": "Horas propias ITT (tarifa del antecedente)",
-     "origen": "conocimiento/costos/horas_por_equipo.csv · TAVAL/43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt · hoja 3\" Sold+END+Ing+Calid+Mje ",
-     "fecha": "2026-02-19",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · 4.Armado de la Oferta Comercial/SKIDs SK SACDE 1002 Rev1.xlsx.txt · hoja SK-2111 / Mano de Obra de ITT",
+     "fecha": "2026-02-20",
      "coincide": "similar",
-     "diferencia": "ESTIMADO del antecedente TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19)"
+     "diferencia": "ESTIMADO del antecedente Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para bomba P-111 (SK-2111) (6, 1 u, 2026-02-20)"
     }
    ]
   },
@@ -739,19 +728,19 @@
    "id": "S13A",
    "pos": "ARM",
    "grupo": "mo",
-   "descripcion": "Horas de montaje en planta (armado, movimientos) (estimadas del antecedente)",
-   "especificacion": "27 h por puente · horas por unidad del antecedente",
-   "cantidad": 27.0,
+   "descripcion": "Horas de montaje en planta (armado, movimientos, prueba hidráulica) (estimadas del antecedente)",
+   "especificacion": "124.6 h por puente · mediana de 135 h × 0.923, 256.5 h × 0.867, 30 h × 1.666 (horas por unidad × tamaño)",
+   "cantidad": 124.6,
    "unidad": "h",
    "fuentes": [
     {
      "tipo": "est",
      "precio": 13.0,
      "proveedor": "Horas propias ITT (tarifa del antecedente)",
-     "origen": "conocimiento/costos/horas_por_equipo.csv · TAVAL/43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt · hoja 3\" Sold+END+Ing+Calid+Mje ",
-     "fecha": "2026-02-19",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · 4.Armado de la Oferta Comercial/SKIDs SK SACDE 1002 Rev1.xlsx.txt · hoja SK-2111 / Mano de Obra de ITT",
+     "fecha": "2026-02-20",
      "coincide": "similar",
-     "diferencia": "ESTIMADO del antecedente TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19)"
+     "diferencia": "ESTIMADO del antecedente Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para bomba P-111 (SK-2111) (6, 1 u, 2026-02-20)"
     }
    ]
   }

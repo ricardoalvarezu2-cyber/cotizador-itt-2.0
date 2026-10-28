@@ -27,7 +27,7 @@ precotizar.main(CAPEX)
 auto = {i["pos"]: i for i in json.load(open(CAPEX / "cotizacion_auto.json", encoding="utf-8"))["items"]}
 s = auto["MO"]
 igual("soldadura: pulgadas equivalentes (4 a tope 2\" sch80 + reducción 2½\" + 2 cuplas)", s["cantidad"], 13.37, 0.02)
-igual("soldadura: tarifa costo propio de planta", s["fuentes"][0]["precio"], 19.73)
+igual("soldadura: tarifa de las planillas 2026 (16 USD/pulg)", s["fuentes"][0]["precio"], 16.0)
 igual("retención 2\" #600 WCB NPT: igual (Ingeniería en Fluidos 533)", (auto["7"]["fuentes"][0]["coincide"], auto["7"]["fuentes"][0]["precio"]), ("igual", 533.0))
 igual("codo 45° 2\" sch80 BW: igual", auto["15"]["fuentes"][0]["coincide"], "igual")
 igual("junta monolítica sin precio (no se acepta una junta sin tipo)", auto["13"]["fuentes"][0]["precio"], 0)

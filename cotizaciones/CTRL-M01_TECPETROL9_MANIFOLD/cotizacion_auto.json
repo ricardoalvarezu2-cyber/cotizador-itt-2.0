@@ -514,17 +514,17 @@
    "id": "S01",
    "pos": "MO",
    "grupo": "mo",
-   "descripcion": "Soldaduras: 68 a tope + SW y olets (calculado)",
-   "especificacion": "pos 3, 4: caño por metro; sus juntas se cuentan en los extremos BW de accesorios y bridas (una junta cada uno); pos 1: 60 extremo(s) BW de taller (1 por unidad × 30 × 2 por el caño) × 4\" × 1.4219; pos 2: 4 extremo(s) BW de taller (1 por unidad × 2 × 2 por el caño) × 8\" × 1.5526; pos 10: 8 junta(s) de Sockolet sobre caño × 0.5\" × 1.75 = 7.00; pos 12: 48 extremo(s) BW de taller (3 por unidad × 8 × 2",
-   "cantidad": 461.089,
+   "descripcion": "Soldaduras: 51 a tope + SW y olets (calculado)",
+   "especificacion": "pos 3, 4: caño por metro; sus juntas se cuentan en los extremos BW de accesorios y bridas (una junta cada uno); pos 1: 45 extremo(s) BW de taller (1 por unidad × 30 × 1.5 por el caño) × 4\" × 1.4219; pos 2: 3 extremo(s) BW de taller (1 por unidad × 2 × 1.5 por el caño) × 8\" × 1.5526; pos 10: 8 junta(s) de Sockolet sobre caño × 0.5\" × 1.75 = 7.00; pos 12: 36 extremo(s) BW de taller (3 por unidad × 8",
+   "cantidad": 347.567,
    "unidad": "pulg",
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 19.73,
-     "proveedor": "Costo propio de planta: 61.16 USD/hh por soldador / 3.1 pulg por hora",
-     "origen": "costo_mo_planta_2024-10",
-     "fecha": "2024-10-31",
+     "precio": 16.0,
+     "proveedor": "Mano de obra soldadura piping (criterio de las planillas de costo 2026): Precio por pulgada que usan las planillas de ITT de 2025-2026 (16 a 16,5; 19 en #900 en Sacde 12). Controles CTRL-M01/P01/T01, ",
+     "origen": "planillas 2026 (TAVAL/43 puentes YPF 19-02-2026; TAVAL/40 Inarteco; Sacde 12 a 15; Tecpetrol 9: 16,5)",
+     "fecha": "2026-02-31",
      "coincide": "igual"
     }
    ]
@@ -533,9 +533,9 @@
    "id": "S02",
    "pos": "PIN",
    "grupo": "servicio",
-   "descripcion": "Granallado y pintura (m² calculados de caños y niples)",
-   "especificacion": "2.87 m² exteriores (tabla ASME B36.10)",
-   "cantidad": 2.867,
+   "descripcion": "Granallado y pintura (m² calculados)",
+   "especificacion": "21.08 m² exteriores: caños y niples × 3 por bridas, accesorios y válvulas 8.6 + estructura 12.5",
+   "cantidad": 21.08,
    "unidad": "m2",
    "fuentes": [
     {
@@ -545,7 +545,7 @@
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN\\4.Armado de la Oferta Comercial",
      "fecha": "2026-10-10",
      "coincide": "similar",
-     "diferencia": "m² solo de caños y niples; esquema de pintura a confirmar con el pliego"
+     "diferencia": "m² calculados (caños, accesorios por regla, envolvente y estructura); esquema de pintura a confirmar con el pliego"
     }
    ]
   },
@@ -553,15 +553,23 @@
    "id": "S04",
    "pos": "RX",
    "grupo": "servicio",
-   "descripcion": "Radiografía 100% de las juntas a tope",
-   "especificacion": "218 placas chicas, 0 grandes, 6 servicio(s)",
+   "descripcion": "Radiografía 100% de las juntas a tope y tintas penetrantes en SW y olets",
+   "especificacion": "164 placas chicas, 0 grandes, 4.11 servicio(s) de RX y 0.29 de LP por equipo (servicios repartidos en 28 equipos)",
    "cantidad": 1,
    "unidad": "gl",
    "fuentes": [
     {
      "tipo": "cot",
-     "precio": 6210.0,
-     "proveedor": "NDT Antonelli (tarifas nov-2025)",
+     "precio": 2825.71,
+     "proveedor": "Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))",
+     "origen": "PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT)",
+     "fecha": "2026-08-14",
+     "coincide": "igual"
+    },
+    {
+     "tipo": "cot",
+     "precio": 4612.5,
+     "proveedor": "NDT Antonelli (tarifas 11-2025), mismas placas y servicios",
      "origen": "fuentes_originales/antonelli_end_2025-11.pdf",
      "fecha": "2025-11-03",
      "coincide": "igual"
@@ -573,18 +581,18 @@
    "pos": "HH",
    "grupo": "mo",
    "descripcion": "Horas de ingeniería (estimadas del antecedente)",
-   "especificacion": "17.96 h por manifold · 251.5 h × 2 u ÷ 28 u",
-   "cantidad": 17.96,
+   "especificacion": "6.38 h por manifold · mediana de 1.1, 6.4, 8.8 h por unidad (repartidas en la serie y por tamaño)",
+   "cantidad": 6.38,
    "unidad": "h",
    "fuentes": [
     {
      "tipo": "est",
      "precio": 15.0,
      "proveedor": "Horas propias ITT (tarifa del antecedente)",
-     "origen": "conocimiento/costos/horas_por_equipo.csv · TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E · 4.Armado de la Oferta Comercial/Estructura de costo- Trampas 6x8 y 6x4.xlsx.txt · hoja Soldadura + HH_",
-     "fecha": "2025-12-10",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · 4.Armado de la Oferta Comercial/SKIDs SK SACDE 1002 Rev1.xlsx.txt · hoja SK-2111 / Mano de Obra de ITT",
+     "fecha": "2026-02-20",
      "coincide": "similar",
-     "diferencia": "ESTIMADO del antecedente TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E · Trampa lanzadora 8x6 #300 (LS-122/124) (8 / 6 (barrel 24 x 20 en tabla soldadura), 2 u, 2025-12-10)"
+     "diferencia": "ESTIMADO del antecedente Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para bomba P-111 (SK-2111) (6, 1 u, 2026-02-20)"
     }
    ]
   },
@@ -593,18 +601,18 @@
    "pos": "CAL",
    "grupo": "mo",
    "descripcion": "Horas de calidad y dossier (estimadas del antecedente)",
-   "especificacion": "5.36 h por manifold · 75 h × 2 u ÷ 28 u",
-   "cantidad": 5.36,
+   "especificacion": "2.87 h por manifold · mediana de 2.8, 2.9, 8.8 h por unidad (repartidas en la serie y por tamaño)",
+   "cantidad": 2.87,
    "unidad": "h",
    "fuentes": [
     {
      "tipo": "est",
      "precio": 15.0,
      "proveedor": "Horas propias ITT (tarifa del antecedente)",
-     "origen": "conocimiento/costos/horas_por_equipo.csv · TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E · 4.Armado de la Oferta Comercial/Estructura de costo- Trampas 6x8 y 6x4.xlsx.txt · hoja Soldadura + HH_",
-     "fecha": "2025-12-10",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · 4.Armado de la Oferta Comercial/SKIDs SK SACDE 1002 Rev1.xlsx.txt · hoja SK-2111 / Mano de Obra de ITT",
+     "fecha": "2026-02-20",
      "coincide": "similar",
-     "diferencia": "ESTIMADO del antecedente TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E · Trampa lanzadora 8x6 #300 (LS-122/124) (8 / 6 (barrel 24 x 20 en tabla soldadura), 2 u, 2025-12-10)"
+     "diferencia": "ESTIMADO del antecedente Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para bomba P-111 (SK-2111) (6, 1 u, 2026-02-20)"
     }
    ]
   },
@@ -613,18 +621,18 @@
    "pos": "ARM",
    "grupo": "mo",
    "descripcion": "Horas de montaje en planta (armado, movimientos, prueba hidráulica) (estimadas del antecedente)",
-   "especificacion": "756 h por manifold · horas por unidad del antecedente",
-   "cantidad": 756.0,
+   "especificacion": "184.6 h por manifold · mediana de 135 h × 1.105, 535.5 h × 0.893, 126 h × 1.465 (horas por unidad × tamaño)",
+   "cantidad": 184.6,
    "unidad": "h",
    "fuentes": [
     {
      "tipo": "est",
      "precio": 13.0,
      "proveedor": "Horas propias ITT (tarifa del antecedente)",
-     "origen": "conocimiento/costos/horas_por_equipo.csv · TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E · 4.Armado de la Oferta Comercial/Estructura de costo- Trampas 6x8 y 6x4.xlsx.txt · hoja Soldadura + HH_",
-     "fecha": "2025-12-10",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · 4.Armado de la Oferta Comercial/SKIDs SK SACDE 1002 Rev1.xlsx.txt · hoja SK-2111 / Mano de Obra de ITT",
+     "fecha": "2026-02-20",
      "coincide": "similar",
-     "diferencia": "ESTIMADO del antecedente TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E · Trampa lanzadora 8x6 #300 (LS-122/124) (8 / 6 (barrel 24 x 20 en tabla soldadura), 2 u, 2025-12-10)"
+     "diferencia": "ESTIMADO del antecedente Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para bomba P-111 (SK-2111) (6, 1 u, 2026-02-20)"
     }
    ]
   }

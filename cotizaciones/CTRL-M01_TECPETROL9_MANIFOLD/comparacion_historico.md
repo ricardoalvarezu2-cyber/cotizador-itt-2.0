@@ -30,16 +30,15 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 | Rubro | Real | Cotizador | Dif. |
 |---|---|---|---|
-| soldadura | 5,321.58 | 9,097.29 | +71% |
-| radiografía y END | 5,502.50 | 6,210.00 | +13% |
-| granallado y pintura | 523.86 | 143.35 | -73% |
-| prueba hidráulica | 0.00 | 9,828.00 | — |
-| ingeniería, calidad y montaje | 3,711.64 | 349.80 | -91% |
+| soldadura | 5,321.58 | 5,561.07 | +5% |
+| radiografía y END | 5,502.50 | 2,825.71 | -49% |
+| granallado y pintura | 523.86 | 1,054.00 | +101% |
+| ingeniería, calidad y montaje | 3,711.64 | 2,538.55 | -32% |
 | otros | 2,049.02 | 0.00 | -100% |
 
-**MO y servicios: real USD 17,108.60 · cotizador USD 25,628.44 (+50%).**
+**MO y servicios: real USD 17,108.60 · cotizador USD 11,979.33 (-30%).**
 
 ## Total por manifold
 
-Real USD 44,462.22 · cotizador USD 43,579.22 (-2%) antes de completar lo que el cotizador marca para revisar.
+Real USD 44,462.22 · cotizador USD 29,930.11 (-33%) antes de completar lo que el cotizador marca para revisar.
 

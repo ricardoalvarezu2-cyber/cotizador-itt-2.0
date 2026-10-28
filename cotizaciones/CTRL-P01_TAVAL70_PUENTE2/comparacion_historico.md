@@ -40,15 +40,14 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 | Rubro | Real | Cotizador | Dif. |
 |---|---|---|---|
-| soldadura | 7,200.00 | 6,017.29 | -16% |
-| radiografía y END | 2,428.00 | 5,150.00 | +112% |
-| granallado y pintura | 2,370.00 | 283.15 | -88% |
-| prueba hidráulica | 0.00 | 468.00 | — |
-| ingeniería, calidad y montaje | 1,818.00 | 501.00 | -72% |
+| soldadura | 7,200.00 | 3,879.07 | -46% |
+| radiografía y END | 2,428.00 | 2,548.50 | +5% |
+| granallado y pintura | 2,370.00 | 2,424.40 | +2% |
+| ingeniería, calidad y montaje | 1,818.00 | 1,675.75 | -8% |
 
-**MO y servicios: real USD 13,816.00 · cotizador USD 12,419.44 (-10%).**
+**MO y servicios: real USD 13,816.00 · cotizador USD 10,527.72 (-24%).**
 
 ## Total por puente
 
-Real USD 68,559.60 · cotizador USD 39,583.40 (-42%) antes de completar lo que el cotizador marca para revisar.
+Real USD 68,559.60 · cotizador USD 37,691.68 (-45%) antes de completar lo que el cotizador marca para revisar.
 

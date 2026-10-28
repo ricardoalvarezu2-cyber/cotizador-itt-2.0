@@ -828,10 +828,10 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 19.73,
-     "proveedor": "Costo propio de planta: 61.16 USD/hh por soldador / 3.1 pulg por hora",
-     "origen": "costo_mo_planta_2024-10",
-     "fecha": "2024-10-31",
+     "precio": 16.0,
+     "proveedor": "Mano de obra soldadura piping (criterio de las planillas de costo 2026): Precio por pulgada que usan las planillas de ITT de 2025-2026 (16 a 16,5; 19 en #900 en Sacde 12). Controles CTRL-M01/P01/T01, ",
+     "origen": "planillas 2026 (TAVAL/43 puentes YPF 19-02-2026; TAVAL/40 Inarteco; Sacde 12 a 15; Tecpetrol 9: 16,5)",
+     "fecha": "2026-02-31",
      "coincide": "igual"
     }
    ]
@@ -840,9 +840,9 @@
    "id": "S02",
    "pos": "PIN",
    "grupo": "servicio",
-   "descripcion": "Granallado y pintura (m² calculados de caños y niples)",
-   "especificacion": "1.32 m² exteriores (tabla ASME B36.10)",
-   "cantidad": 1.322,
+   "descripcion": "Granallado y pintura (m² calculados)",
+   "especificacion": "3.97 m² exteriores: caños y niples × 3 por bridas, accesorios y válvulas 4.0",
+   "cantidad": 3.967,
    "unidad": "m2",
    "fuentes": [
     {
@@ -852,7 +852,7 @@
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN\\4.Armado de la Oferta Comercial",
      "fecha": "2026-10-10",
      "coincide": "similar",
-     "diferencia": "m² solo de caños y niples; esquema de pintura a confirmar con el pliego"
+     "diferencia": "m² calculados (caños, accesorios por regla, envolvente y estructura); esquema de pintura a confirmar con el pliego"
     }
    ]
   },
@@ -881,18 +881,18 @@
    "pos": "HH",
    "grupo": "mo",
    "descripcion": "Horas de ingeniería (estimadas del antecedente)",
-   "especificacion": "9 h por puente · 9 h por unidad (serie de 442)",
-   "cantidad": 9.0,
+   "especificacion": "5.17 h por puente · mediana de 4.0, 5.2, 7.6 h por unidad (repartidas en la serie y por tamaño)",
+   "cantidad": 5.17,
    "unidad": "h",
    "fuentes": [
     {
      "tipo": "est",
      "precio": 15.0,
      "proveedor": "Horas propias ITT (tarifa del antecedente)",
-     "origen": "conocimiento/costos/horas_por_equipo.csv · TAVAL/43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt · hoja 3\" Sold+END+Ing+Calid+Mje ",
-     "fecha": "2026-02-19",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · TAVAL/41- CIA MINERA DE ORIENTE · 4.Armado de la Oferta Comercial/LM costos Manifold Pozo_Agua.xlsx.txt · hoja Costura + HH",
+     "fecha": "2026-02-11",
      "coincide": "similar",
-     "diferencia": "ESTIMADO del antecedente TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19)"
+     "diferencia": "ESTIMADO del antecedente TAVAL/41- CIA MINERA DE ORIENTE · Manifold pozo de agua DN80 ANSI 150 (reduccion 3in a DN40) c (3, 1 u, 2026-02-11)"
     }
    ]
   },
@@ -901,18 +901,18 @@
    "pos": "CAL",
    "grupo": "mo",
    "descripcion": "Horas de calidad y dossier (estimadas del antecedente)",
-   "especificacion": "1 h por puente · 1 h por unidad (serie de 442)",
-   "cantidad": 1.0,
+   "especificacion": "8.1 h por puente · mediana de 8.1, 0.6, 11.4 h por unidad (repartidas en la serie y por tamaño)",
+   "cantidad": 8.1,
    "unidad": "h",
    "fuentes": [
     {
      "tipo": "est",
      "precio": 15.0,
      "proveedor": "Horas propias ITT (tarifa del antecedente)",
-     "origen": "conocimiento/costos/horas_por_equipo.csv · TAVAL/43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt · hoja 3\" Sold+END+Ing+Calid+Mje ",
-     "fecha": "2026-02-19",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · TAVAL/41- CIA MINERA DE ORIENTE · 4.Armado de la Oferta Comercial/LM costos Manifold Pozo_Agua.xlsx.txt · hoja Costura + HH",
+     "fecha": "2026-02-11",
      "coincide": "similar",
-     "diferencia": "ESTIMADO del antecedente TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19)"
+     "diferencia": "ESTIMADO del antecedente TAVAL/41- CIA MINERA DE ORIENTE · Manifold pozo de agua DN80 ANSI 150 (reduccion 3in a DN40) c (3, 1 u, 2026-02-11)"
     }
    ]
   },
@@ -921,8 +921,8 @@
    "pos": "ARM",
    "grupo": "mo",
    "descripcion": "Horas de montaje en planta (armado, movimientos) (estimadas del antecedente)",
-   "especificacion": "27 h por puente · horas por unidad del antecedente",
-   "cantidad": 27.0,
+   "especificacion": "61.7 h por puente · mediana de 27 h × 0.575, 121.5 h × 0.508, 225 h × 0.471 (horas por unidad × tamaño)",
+   "cantidad": 61.7,
    "unidad": "h",
    "fuentes": [
     {

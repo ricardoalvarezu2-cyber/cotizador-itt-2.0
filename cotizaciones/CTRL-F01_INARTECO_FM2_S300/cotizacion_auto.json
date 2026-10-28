@@ -21,7 +21,9 @@
  ],
  "equipo": {
   "singular": "filtro",
-  "plural": "filtros"
+  "plural": "filtros",
+  "tipo": "filtro",
+  "diametro_pulg": 4
  },
  "parametros": {
   "N": 2,
@@ -35,7 +37,7 @@
   "TR_EMB": 0,
   "TR_F": 1.0,
   "fecha_referencia": "2026-01-15",
-  "rx_pct": 0,
+  "rx_pct": 100,
   "ph_horas": 0
  },
  "plazo": {
@@ -281,13 +283,13 @@
    "especificacion": "Plano: 1/2\" · 2000 · ASTM A-105 · NPT-M",
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 1.9,
-     "proveedor": "Renard (cód. 5979) · AFO-00847",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 5979",
-     "fecha": "2025-12-26",
+     "tipo": "ant",
+     "precio": 1.94,
+     "proveedor": "Miyashiro · AFO-03411",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
      "coincide": "similar",
-     "diferencia": "serie: 3000 (pedido 2000)"
+     "diferencia": "serie: sin dato (pedido 2000)"
     }
    ]
   },
@@ -636,15 +638,16 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 1/2\" · 2000 · ASTM A-105 · SW/NPT",
+   "taval": true,
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 60.32,
-     "proveedor": "planilla de costo ITT · VAL-03194",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx",
-     "fecha": "2026-06-26",
+     "precio": 36.0,
+     "proveedor": "Taval · VAL-03435",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
      "coincide": "similar",
-     "diferencia": "serie: sin dato (pedido 2000); extremos: NPT (pedido NPT/SW)"
+     "diferencia": "material: sin dato (pedido A105); extremos: NPT (pedido NPT/SW)"
     }
    ]
   },
@@ -719,10 +722,10 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 19.73,
-     "proveedor": "Costo propio de planta: 61.16 USD/hh por soldador / 3.1 pulg por hora",
-     "origen": "costo_mo_planta_2024-10",
-     "fecha": "2024-10-31",
+     "precio": 16.0,
+     "proveedor": "Mano de obra soldadura piping (criterio de las planillas de costo 2026): Precio por pulgada que usan las planillas de ITT de 2025-2026 (16 a 16,5; 19 en #900 en Sacde 12). Controles CTRL-M01/P01/T01, ",
+     "origen": "planillas 2026 (TAVAL/43 puentes YPF 19-02-2026; TAVAL/40 Inarteco; Sacde 12 a 15; Tecpetrol 9: 16,5)",
+     "fecha": "2026-02-31",
      "coincide": "igual"
     }
    ]
@@ -731,39 +734,46 @@
    "id": "S02",
    "pos": "PIN",
    "grupo": "servicio",
-   "descripcion": "Granallado y pintura (m² calculados de caños y niples)",
-   "especificacion": "0.20 m² exteriores (tabla ASME B36.10)",
-   "cantidad": 0.2,
+   "descripcion": "Granallado y pintura (m² calculados)",
+   "especificacion": "0.70 m² exteriores: caños y niples × 3 por bridas, accesorios y válvulas 0.6 + envolvente 0.0 + estructura 0.1",
+   "cantidad": 0.703,
    "unidad": "m2",
    "fuentes": [
     {
      "tipo": "ant",
      "precio": 50.0,
-     "proveedor": "criterio ITT ($50/m2 incluye materiales) · PIN-00491",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\PAMPA ENERGIA\\7- Licitacion contrato Marco Skid PAD Rincon de Aranda\\4.Armado de la Oferta Comercial",
-     "fecha": "2026-08-14",
+     "proveedor": "criterio ITT · PIN-00569",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN\\4.Armado de la Oferta Comercial",
+     "fecha": "2026-10-10",
      "coincide": "similar",
-     "diferencia": "m² solo de caños y niples; esquema de pintura a confirmar con el pliego"
+     "diferencia": "m² calculados (caños, accesorios por regla, envolvente y estructura); esquema de pintura a confirmar con el pliego"
     }
    ]
   },
   {
-   "id": "S03",
-   "pos": "PH",
+   "id": "S04",
+   "pos": "RX",
    "grupo": "servicio",
-   "descripcion": "Prueba hidráulica (horas de planta)",
-   "especificacion": "6 h · volumen interior 3.9 l",
-   "cantidad": 6,
-   "unidad": "h",
+   "descripcion": "Radiografía 100% de las juntas a tope y tintas penetrantes en SW y olets",
+   "especificacion": "7 placas chicas, 0 grandes, 0.50 servicio(s) de RX y 0.50 de LP por equipo (servicios repartidos en 2 equipos)",
+   "cantidad": 1,
+   "unidad": "gl",
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 13.0,
-     "proveedor": "MO ITT · END-00215",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\49 - A&A Fluid Control - Manifolds Tecpetrol - Salar El Tolillar\\4.Armado de la Oferta Comercial",
-     "fecha": "2026-03-10",
-     "coincide": "similar",
-     "diferencia": "horas supuestas (6 h): confirmar"
+     "tipo": "cot",
+     "precio": 396.5,
+     "proveedor": "Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))",
+     "origen": "PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT)",
+     "fecha": "2026-08-14",
+     "coincide": "igual"
+    },
+    {
+     "tipo": "cot",
+     "precio": 595.0,
+     "proveedor": "NDT Antonelli (tarifas 11-2025), mismas placas y servicios",
+     "origen": "fuentes_originales/antonelli_end_2025-11.pdf",
+     "fecha": "2025-11-03",
+     "coincide": "igual"
     }
    ]
   },
@@ -772,8 +782,8 @@
    "pos": "HH",
    "grupo": "mo",
    "descripcion": "Horas de ingeniería (estimadas del antecedente)",
-   "especificacion": "4.5 h por filtro · 9 h × 1 u ÷ 2 u",
-   "cantidad": 4.5,
+   "especificacion": "15.5 h por filtro · mediana de 4.8, 15.5, 64.4 h por unidad (repartidas en la serie y por tamaño)",
+   "cantidad": 15.5,
    "unidad": "h",
    "fuentes": [
     {
@@ -792,8 +802,8 @@
    "pos": "CAL",
    "grupo": "mo",
    "descripcion": "Horas de calidad y dossier (estimadas del antecedente)",
-   "especificacion": "9 h por filtro · 18 h × 1 u ÷ 2 u",
-   "cantidad": 9.0,
+   "especificacion": "18.6 h por filtro · mediana de 9.7, 18.6, 19.2 h por unidad (repartidas en la serie y por tamaño)",
+   "cantidad": 18.6,
    "unidad": "h",
    "fuentes": [
     {
@@ -811,19 +821,19 @@
    "id": "S13A",
    "pos": "ARM",
    "grupo": "mo",
-   "descripcion": "Horas de montaje en planta (armado, movimientos) (estimadas del antecedente)",
-   "especificacion": "30 h por filtro · horas por unidad del antecedente",
-   "cantidad": 30.0,
+   "descripcion": "Horas de montaje en planta (armado, movimientos, prueba hidráulica) (estimadas del antecedente)",
+   "especificacion": "70.9 h por filtro · mediana de 120 h × 0.31, 756 h × 0.256, 234 h × 0.303 (horas por unidad × tamaño)",
+   "cantidad": 70.9,
    "unidad": "h",
    "fuentes": [
     {
      "tipo": "est",
      "precio": 13.0,
      "proveedor": "Horas propias ITT (tarifa del antecedente)",
-     "origen": "conocimiento/costos/horas_por_equipo.csv · TAVAL/43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt · hoja 3\" Sold+END+Ing+Calid+Mje ",
-     "fecha": "2026-02-19",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 8.Orden de Compra/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx.txt · hoja Lanz 20x16",
+     "fecha": "2026-07-20",
      "coincide": "similar",
-     "diferencia": "ESTIMADO del antecedente TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 4in #600 (serie de 13 unidades) (4, 13 u, 2026-02-19)"
+     "diferencia": "ESTIMADO del antecedente TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · Trampa lanzadora 20x16 (Serie 600 A6C) (20 / 16, 1 u, 2026-07-20)"
     }
    ]
   }

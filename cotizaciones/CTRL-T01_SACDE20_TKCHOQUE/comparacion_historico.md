@@ -33,15 +33,14 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 | Rubro | Real | Cotizador | Dif. |
 |---|---|---|---|
-| soldadura | 10,700.00 | 9,393.81 | -12% |
-| radiografía y END | 2,720.00 | 2,060.00 | -24% |
-| granallado y pintura | 1,000.00 | 161.00 | -84% |
-| prueba hidráulica | 0.00 | 8,870.40 | — |
-| ingeniería, calidad y montaje | 2,100.00 | 7,500.00 | +257% |
+| soldadura | 10,700.00 | 3,252.56 | -70% |
+| radiografía y END | 2,720.00 | 935.00 | -66% |
+| granallado y pintura | 1,000.00 | 1,616.25 | +62% |
+| ingeniería, calidad y montaje | 2,100.00 | 9,332.00 | +344% |
 
-**MO y servicios: real USD 16,520.00 · cotizador USD 27,985.21 (+69%).**
+**MO y servicios: real USD 16,520.00 · cotizador USD 15,135.81 (-8%).**
 
 ## Total por tanque
 
-Real USD 22,624.65 · cotizador USD 30,547.60 (+35%) antes de completar lo que el cotizador marca para revisar.
+Real USD 22,624.65 · cotizador USD 17,698.21 (-22%) antes de completar lo que el cotizador marca para revisar.
 

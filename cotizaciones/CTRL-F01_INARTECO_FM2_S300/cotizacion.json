@@ -21,7 +21,9 @@
  ],
  "equipo": {
   "singular": "filtro",
-  "plural": "filtros"
+  "plural": "filtros",
+  "tipo": "filtro",
+  "diametro_pulg": 4
  },
  "parametros": {
   "N": 2,
@@ -35,7 +37,7 @@
   "TR_EMB": 0,
   "TR_F": 1.0,
   "fecha_referencia": "2026-01-15",
-  "rx_pct": 0,
+  "rx_pct": 100,
   "ph_horas": 0
  },
  "plazo": {
