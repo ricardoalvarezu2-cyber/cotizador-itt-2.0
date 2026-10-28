@@ -5,6 +5,9 @@
 - Usuario: Matías Russo, de ventas de ITT. Idioma: **español rioplatense**.
 - La base de conocimiento está en `conocimiento/` y empieza por **`conocimiento/estado_y_pendientes.md`** (estado, decisiones y pendientes: leerlo al empezar cada chat y actualizarlo al terminar) y `conocimiento/RESUMEN.md`. Las fuentes están en `fuentes_originales/`.
 
+## Objetivo
+- **Construir el cotizador automático.** Las cotizaciones que se hacen ahora (CAPEX) son casos de prueba para armar el proceso; los pendientes del proyecto son los del cotizador, no los de cada presupuesto.
+
 ## Reglas de datos
 - **El repositorio es privado. No omitir ni filtrar información por privacidad.** Se guardan completos los contactos de clientes y proveedores, los sueldos, los costos internos y los precios, porque sirven para costear (por ejemplo, la mano de obra). Pedido explícito del usuario el 27/10/2026.
 - La prioridad es que el cotizador **no falle por falta o pérdida de información**: todo lo que se procese se guarda en el repositorio. El entorno de trabajo es temporal y lo que no se sube a GitHub se pierde.
