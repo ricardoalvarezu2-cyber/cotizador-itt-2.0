@@ -9,6 +9,7 @@
 |---|---|
 | `src/motor.js` | Cálculo de costo y precio, igual a `herramientas/armar_cotizacion.py` (control: CAPEX = USD 7.620,59). Prueba: `node web/probar_motor.js`. |
 | `src/busqueda.js` | Buscador de materiales y servicios (igual / similar), calculadora de soldaduras y avisos de control. Prueba: `node web/probar_busqueda.js`. |
+| `src/antecedentes.js` | Comparación con antecedentes (P8) en Resumen: misma puntuación que `buscar_antecedentes.py` y misma lectura que `comparar_antecedentes.py` (CAPEX: mismos 5 y mismo aviso). Datos: `datos.json` → `antecedentes`. |
 | `src/documentos.js` | Planilla de presupuesto (con fórmulas), lista para Compras, informe PDF, ofertas técnica y económica (Word con la plantilla ITT y PDF). |
 | `src/app.js`, `src/pagina.html` | Interfaz. Estética de los informes de ITT. |
 | `src/asistente.js` | Chat con Claude (herramientas: buscar, agregar, cargar, modificar y quitar ítems, ver avisos, nueva cotización, proponer pedido; lee imágenes y PDF como imágenes; deshacer) y sección **Pedidos** (subir archivos y mandarlos a Claude Code). |

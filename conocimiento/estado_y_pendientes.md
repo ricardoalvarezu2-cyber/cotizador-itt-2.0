@@ -26,6 +26,7 @@
 | Auditoría del catálogo de materiales | Hecha y corregida | `auditorias/2026-10-27_catalogo_materiales.md` |
 | **Página web del cotizador** (Artifact en Claude, privada): lista de cotizaciones, buscador de materiales y servicios, calculadoras (soldadura, pintura, PH, RX), plazo, ofertas, firmantes, guardado automático con versiones, descarga en .zip o de a un archivo | Publicada el 28/10/2026; probada con la CAPEX (USD 7.620,59 en la página y en la planilla que arma) | https://claude.ai/artifact/HfbiaNvhAFkQjYwLe2kaBQ · `web/` (ver `web/LEEME.md`) |
 | Chat con Claude en la página y Pedidos para Claude Code (subir plano, P&ID, pliego o lista; la sesión fija los procesa con `web/LEEME.md` y deja el resultado en la página) | Publicado el 28/10/2026 | `web/src/asistente.js`, `web/LEEME.md` (Pedidos desde la página) |
+| Mejoras de la página (28/10/2026): buscador general por texto y selección múltiple en los catálogos; sección Catálogos sin cotización abierta; avisos en cada renglón; filtro y orden de los ítems; deshacer y rehacer (Ctrl+Z / Ctrl+Y); vista previa de informe y ofertas; antecedentes parecidos (P8) en Resumen; versión para celular | Publicado | `web/src/` |
 | Listas de precios nuevas que llegan por pedidos | Vigente (vacío) | `precios/listas_nuevas.csv` (lo lee `catalogo_materiales.py`) |
 | Tarea semanal (lunes 7:37, hora Argentina): dólar e índices a la página, pedidos pendientes y respaldo de sus cotizaciones en `cotizaciones_web/` | Creada el 28/10/2026 | `web/LEEME.md` (sección Tarea semanal) |
 
