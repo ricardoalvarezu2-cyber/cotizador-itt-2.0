@@ -78,7 +78,7 @@ Z = "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\"
 # ---------------------------------------------------------------- familias y columnas propias
 FAMILIAS = {
     "VAL": ("Válvulas", ["tipo", "diametro", "serie", "material", "trim", "extremos", "paso", "norma", "marca", "modelo"],
-            ["tipo", "diametro", "serie", "material", "trim", "extremos", "marca"]),
+            ["tipo", "diametro", "serie", "material", "trim", "extremos", "paso", "marca"]),
     "AFO": ("Accesorios forjados (roscados / SW)", ["tipo", "diametro", "diametro2", "serie", "schedule", "material", "extremos"],
             ["tipo", "diametro", "diametro2", "serie", "schedule", "material", "extremos"]),
     "ABW": ("Accesorios a tope (BW)", ["tipo", "diametro", "diametro2", "schedule", "material", "norma"],
@@ -149,7 +149,7 @@ def familia_texto(t):
     if re.search(r"cartucho|elemento filtrante|caja porta ?orificio|bomba dosificadora|tapa de cierre rapido|\bllave\b|argon|\bco2\b|\bled\b"
                  r"|u-?bolt|abrazadera|manguera|\bte (en caja|de |x \d)|manzanilla|yerba|\bcafe\b|azucar", t):
         return "OTR"
-    if re.search(r"manometr|transmisor|trasmisor|termometr|termovaina|caudalimetr|coriolis|presostato|sensor|indicador de nivel|visor de nivel|v-cone", t):
+    if re.search(r"manometr|transmisor|trasmisor|termometr|termovaina|caudalimetr|coriolis|presostato|sensor|indicador de nivel|visor de nivel|v-cone|computador de (?:flujo|caudal)|flow computer", t):
         return "INS"
     if re.search(r"junta|espiralad|ring joint|\bbx-?\d|\br\d{2}\b|esparrago|bulon|tuerca|kit dielectr|arandela", t):
         return "JUN"
@@ -302,9 +302,12 @@ def atributos(t, fam, proveedor=""):
                 d["diametro"] = f"{v:g}\""
     if fam == "VAL":
         d["tipo"] = primero(r"(bloqueo y purga|esferica|retencion|esclusa|aguja|globo|mariposa|seguridad|alivio|control|contrapresion|reguladora|tapon|solenoide|sdv|3 vias|tres vias|purga|c/actuador)", t)
+        if d["tipo"] in ("esferica", "globo", "mariposa", "esclusa", "3 vias", "tres vias") and re.search(r"actuad|motoriz|electroactu|neumatic|c/actuador|con actuador|limitadora de caudal", t):
+            d["tipo"] += " actuada"  # una válvula con actuador no se cotiza con una manual (CTRL-P01: globo de control a USD 80)
         d["trim"] = primero(r"(trim ?\d+|asientos? (?:metalic\w*|ptfe|teflon|blando\w*)|ptfe|metal[- ]metal)", t) or \
             (("asiento " + primero(r"\basto (tv|tr|tcc|ptfe|metal\w*)", t).upper()) if re.search(r"\basto (tv|tr|tcc|ptfe|metal)", t) else "")
-        d["paso"] = "total" if re.search(r"paso total|full bore|\bfb\b", t) else ("reducido" if re.search(r"paso (reducido|nominal)|reduced", t) else "")
+        d["paso"] = "" if not d["tipo"].startswith("esferica") else \
+            "total" if re.search(r"paso total|full bore|\bfb\b", t) else ("reducido" if re.search(r"paso (reducido|nominal)|reduced|\bpr\b|\brb\b", t) else "")
         d["norma"] = primero(r"(api ?6d|api ?602|api ?594|api ?6a|api ?608|b16\.34)", t).upper()
     elif fam == "AFO":
         d["tipo"] = primero(r"(codo 90|codo 45|codo|tees?|te|media cupla|cupla para soldar|cupla|tapon|buje|union doble a golpe extensible|union doble extensible|union extensible|union doble a golpe|union doble rapida|union doble|rosca con tuerca|entrerrosca|tapa|thredolet|threadolet|sockolet)", t)
@@ -495,6 +498,55 @@ def tramo(original):
     return (cabeza + " " + original[ini:fin]).strip()
 
 
+PRECIO_TXT = r"(?<![\w.,])(\d{1,3}(?:\.\d{3})+(?:,\d{1,2})?|\d+,\d{1,2})(?![\d])"
+
+
+def separar_renglon(original):
+    """Renglones con varios productos y un precio cada uno ("Coriolis DN150 59.539,72; computador XFC6200EX 7.345,97;
+    3 transmisores a 864,20 c/u"; "válvula de control (8.206) + 2 PSV (1.380 c/u)"): una pieza por tramo, con el precio
+    que dice el tramo (en estos renglones es el unitario). Antes la fila entera quedaba con el único precio "c/u" y el computador de caudal salía a USD 864,20
+    (error 28 repetido en CTRL-P01). Devuelve [(texto, precio)] si hay 2 o más tramos con precio; si no, None."""
+    tramos = []
+    segs = []
+    for parte in re.split(r";|\.\s(?=suma|total|subtotal)|,\s(?=\d+\s[a-záéíóú])", original, flags=re.I):
+        # " + " separa productos solo si lo de la izquierda ya tiene su precio ("válvula (8.206) + 2 PSV (1.380)");
+        # en "esférica 16\" + actuador (50.707,15)" el precio es del conjunto
+        trozos = re.split(r"\s\+\s", parte)
+        acum = trozos[0]
+        for t in trozos[1:]:
+            if re.search(PRECIO_TXT, acum) or re.search(r"\(\d{2,6}\)", acum):
+                segs.append(acum); acum = t
+            else:
+                acum += " + " + t
+        segs.append(acum)
+    for seg in segs:
+        low = seg.lower()
+        if re.search(r"suma|subtotal|total|desc\.|dto|descuento", low):
+            continue
+        if re.search(r"\d+\s+a\s+\d+|%|\benv[ií]o\b|\bflete\b", low):
+            return None  # rangos ("USD 45 a 271"), descuentos o fletes: el renglón no se separa
+        nums = (list(re.finditer(r"(?:usd|u\$s)\s?(\d[\d.]*(?:,\d{1,2})?)", seg, re.I))  # "USD 420/m": el precio es el que dice USD
+                or list(re.finditer(PRECIO_TXT, seg)) or list(re.finditer(r"\((?:usd\s*)?(\d{2,6})(?:\s*c/u)?\)", seg, re.I)))
+        if len(nums) != 1:
+            continue
+        n = nums[0].group(1)
+        v = float(n) if re.fullmatch(r"\d+\.\d{2}", n) else float(n.replace(".", "").replace(",", "."))  # "USD 26.04" es 26,04
+        texto = re.sub(r"\(?\s*(?:usd\s*)?" + re.escape(nums[0].group(1)) + r"(?:\s*c/u)?\s*\)?", "", seg, flags=re.I)
+        texto = re.sub(r"^\W*(\d{1,3}\s+(?!\d+/))?|\s+a\s*$", "", texto).strip(" :,.-")  # "2 7/8\"" es diámetro, no cantidad
+        if tramos and (texto.lower().startswith("de ") or re.match(r"\d", texto)):
+            texto = ("de " + texto) if not texto.lower().startswith("de ") else texto
+        if texto.lower().startswith("de ") and tramos:  # "+ 7 de 1/2"": el sustantivo es el del tramo anterior
+            sust = re.match(r"[^\d\"]+", re.sub(r"^\d+\s+", "", tramos[-1][0].split(":")[-1].strip()))
+            texto = (sust.group(0).strip() + " " + texto[3:]) if sust else texto
+        if len(texto) >= 6 and v >= 1:
+            tramos.append((texto, v))
+    # si algún tramo quedó sin producto ("actuador") o mezcla dos ("... y SDV-012: 3\""), el renglón no se separa
+    if any(len(t.split()) < 2 or re.search(r"\sy\s+[A-Z]{2,}-?\d", t) or re.match(r"x\s", t)
+           or re.search(r"mano de obra|armado|soldadura|por trampa|asistencia|\bdias\b|\bdías\b|\bkg\b", t, re.I) for t, _ in tramos):
+        return None
+    return tramos if len(tramos) >= 2 else None
+
+
 def desambiguar(valor, texto, total):
     """"26,338 c/u" puede ser 26,34 o 26.338. Se elige el que da una cantidad entera con el total del renglón
     (2 × 26.338 = 52.676). Si no se puede decidir, queda como ambiguo y con alerta."""
@@ -558,7 +610,18 @@ def leer_fuentes():
     for anio in ("2026", "2025"):
         for r in csv.DictReader(open(PRECIOS / f"proveedores_{anio}.csv", encoding="utf-8")):
             det = norm(r["detalle"])
-            cu = list(re.finditer(r"(?<![\d.,])(\d[\d.,]*)\s?(?:usd|u\$s|\$)?\s?c/u", det))
+            partes = separar_renglon(r["detalle"]) if not re.search(SERVICIO, det) else None
+            if partes:
+                car = r["carpeta_cotizacion"]
+                pre = r["detalle"].split(":")[0] if ":" in r["detalle"][:80] else ""
+                for texto, v in partes:
+                    add(texto, v, r["moneda"], fecha_iso(r["fecha"]), "cotización", r["proveedor"], Z + car.replace("/", "\\"),
+                        archivo_de(car, r["proveedor"]), f"fuentes_originales/ofertas_texto/{car}" if car else "", unidad_de_texto(norm(texto)),
+                        extra=f"renglón con varios productos, separado por tramo{(' (' + pre[:60] + ')') if pre else ''}: {r['detalle'][:160]}",
+                        iva=iva_de(det))
+                continue
+            cu = list(re.finditer(r"(?<![\d.,])(\d[\d.,]*)\s?(?:usd|u\$s|\$)?\s?c/u", det)) or \
+                list(re.finditer(r"\b(?:un|unidades)\s+a\s+(?:usd|u\$s)\s?(\d[\d.,]*)", det))  # "12 un a USD 3.586,58" (CTRL-C01)
             if len(cu) != 1 or re.search(SERVICIO, det):
                 continue  # varios precios unitarios, ninguno, o es un servicio (va al catálogo de MO y servicios)
             valor, ambiguo = leer_numero(cu[0].group(1))

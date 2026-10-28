@@ -44,10 +44,11 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | radiografía y END | 1,804.20 | 396.50 | -78% |
 | granallado y pintura | 22.18 | 35.15 | +58% |
 | ingeniería, calidad y montaje | 720.00 | 1,433.20 | +99% |
+| otros | 0.00 | 9.00 | — |
 
-**MO y servicios: real USD 2,979.82 · cotizador USD 2,170.19 (-27%).**
+**MO y servicios: real USD 2,979.82 · cotizador USD 2,179.19 (-27%).**
 
 ## Total por filtro
 
-Real USD 4,483.97 · cotizador USD 2,816.76 (-37%) antes de completar lo que el cotizador marca para revisar.
+Real USD 4,483.97 · cotizador USD 2,825.76 (-37%) antes de completar lo que el cotizador marca para revisar.
 

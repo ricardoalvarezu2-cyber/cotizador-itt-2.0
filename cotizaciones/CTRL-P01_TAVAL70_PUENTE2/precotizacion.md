@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-P01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 27,163.96 por equipo · soldadura y servicios calculados USD 10,527.72 · 14 similares (1, 2, 4, 6, 7, 9, 11, 12, 13, 16, 17, 19, 20, 22) · 7 sin precio (8, 10, 14, 15, 18, 23, 24).
+**Resumen:** materiales USD 26,129.89 por equipo · soldadura y servicios calculados USD 13,677.72 · 16 similares (1, 2, 4, 6, 7, 9, 11, 12, 13, 16, 17, 18, 19, 20, 22, 24) · 5 sin precio (8, 10, 14, 15, 23).
 
 
 ## 1. Materiales
@@ -14,8 +14,8 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 4 | Brida WNRF 2" | SIMILAR | 28.42 / un | 2026-03-03 · planilla interna | cara: sin dato (pedido RF) · faltan: tipo, material |
 | 5 | Tee reducción BW 2" x 1 1/2" | IGUAL | 33.59 / un | 2025-12-26 · lista | — |
 | 6 | Brida SWRF 1 1/2" | SIMILAR | 23.36 / un | 2025-12-26 · lista | serie: 300 (pedido 600); material: A105 (no pedido) · faltan: material |
-| 7 | Válvula esférica 2" | SIMILAR | 416.00 / un | 2026-02-19 · planilla interna | material: sin dato (pedido A216 WCB) |
-| 8 | Válvula globo limitadora de caudal con actuad | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (1" VAL-03176, USD 80.00): pedir cotización |
+| 7 | Válvula esférica 2" | SIMILAR | 200.00 / un | 2025-12-18 · planilla interna | material: sin dato (pedido A216 WCB) · faltan: paso |
+| 8 | Válvula globo limitadora de caudal con actuad | **SIN PRECIO** | — | — | pedir cotización |
 | 9 | Válvula retención 2" | SIMILAR | 420.16 / un | 2026-02-19 · planilla interna | diametro: 3" (pedido 2") |
 | 10 | Filtro Y 2" | **SIN PRECIO** | — | — | pedir cotización |
 | 11 | Junta espiralada RF esp. 4.5 mm anillo interi | SIMILAR | 6.00 / un | 2026-08-14 · planilla interna | serie: 300 (pedido 600); extremos: sin dato (pedido RF) |
@@ -25,13 +25,13 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 15 | Inyector de químicos | **SIN PRECIO** | — | — | pedir cotización |
 | 16 | Manómetro + válvula de bloqueo y purga | SIMILAR | 120.00 / un | 2026-08-14 · planilla interna | — · faltan: rango, conexion |
 | 17 | Transmisor de temperatura 4-20 mA + termovain | SIMILAR | 1,448.33 / un | 2026-08-14 · planilla interna | — · faltan: rango, conexion |
-| 18 | Sockolet 1" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (0.5" AFO-02393, USD 10.00): pedir cotización |
+| 18 | Sockolet 1" | SIMILAR (estimado cepo) ⚠ | 15.59 / un | 2025-03-27 · estimado (cepo) | diametro: 0.75" (pedido 1"); extremos: sin dato (pedido SW/BW) · faltan: material |
 | 19 | Junta espiralada RF esp. 4.5 mm anillo interi | SIMILAR | 6.00 / un | 2026-08-14 · planilla interna | serie: 300 (pedido 600); extremos: sin dato (pedido RF) |
-| 20 | Espárrago con tuercas 5/8 x 5 5/8" | SIMILAR | 10.00 / un | 2026-02-19 · planilla interna | material: A194 2H (no pedido); medida: 5/8 x 11 (pedido 5/8 x 5 5/8) · faltan: material |
-| 21 | Tee normal BW 2" | IGUAL | 27.89 / un | 2025-08-01 · cotización | — |
-| 22 | Válvula esférica 1" | SIMILAR | 67.50 / un | 2026-08-14 · planilla interna | serie: 300 (pedido 3000) · faltan: material |
+| 20 | Espárrago con tuercas 5/8 x 5 5/8" | SIMILAR | 10.00 / un | 2026-02-19 · planilla interna | material: A194 2H (no pedido); medida: 5/8 x 11 (pedido 5/8 x 5) · faltan: material |
+| 21 | Tee normal BW 2" | IGUAL | 25.00 / un | 2026-01-22 · planilla interna | — |
+| 22 | Válvula esférica 1" | SIMILAR | 42.04 / un | 2026-08-14 · planilla interna | diametro: 0.75" (pedido 1") · faltan: material, paso |
 | 23 | Materiales de canalizaciones (8000 verdes) | **SIN PRECIO** | — | — | pedir cotización |
-| 24 | Bastidor y soportes | **SIN PRECIO** | — | — | pedir cotización |
+| 24 | Bastidor y soportes | SIMILAR (acero por kg) | USD 1.27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2") +10% por recortes; no incluye corte, plegado ni rolado |
 
 ## 2. Soldaduras (de la columna de extremos)
 
@@ -49,11 +49,12 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 ## 3. Servicios calculados
 
 - **Pintura:** 48.49 m² (caños y niples × 3 por bridas, accesorios y válvulas 17.0 + estructura 31.5) × USD 50.00/m² (Granallado y pintura piping (incluye materiales), criterio ITT, 2026-10-10) = USD 2,424.42.
+- **Fabricación de la estructura:** 1,050 kg × USD 3/kg (Fabricación de estructura de skid por kg (tercero Ledesma), 2026-10) = USD 3,150.00.
 - **Prueba hidráulica:** 36 h × USD 13.00/h (Prueba hidráulica - manifold FA0032 1.2, 2026-03-10) = USD 468.00 · volumen interior de caños y niples 62.7 l.
 - **Radiografía 100% y tintas:** 135 placas chicas + 0 grandes + 3.38 servicio(s) de RX + 1.00 de LP por equipo = USD 2,548.50 (Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))).
   Con las tarifas de Antonelli (11-2025) serían USD 4,168.75: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: puente, 2", 24 u, materiales USD 27,164 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: puente, 2", 24 u, materiales USD 26,130 por unidad)
 
 - **Ingeniería:** 1.04 h × USD 15/h = USD 15.60 · mediana de 1.0, 1.0, 15.0 h por unidad (repartidas en la serie y por tamaño) · antecedente: Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para bomba P-111 (SK-2111) (6, 1 u, 2026-02-20) · rango del mismo tipo 9–9 h
 - **Calidad y dossier:** 2.69 h × USD 15/h = USD 40.35 · mediana de 2.7, 20.8, 1.7 h por unidad (repartidas en la serie y por tamaño) · antecedente: Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para bomba P-111 (SK-2111) (6, 1 u, 2026-02-20) · rango del mismo tipo 1–1 h

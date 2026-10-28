@@ -95,3 +95,14 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 | 55 | Desde el celular el conector "Claude Code Remote" no cargó: el pedido quedó pendiente (y el Excel se subió dos veces) | Los pendientes se procesan desde la sesión de trabajo o el lunes; revisar la doble subida |
 
 | 56 | Al armar una cotización nueva, el catálogo volvía a leer como "precio usado" los precios que la cotización había tomado del propio catálogo, y las filas de compra extra (sobrante de barra) como piezas | `catalogo_materiales.py` ignora las fuentes con código del catálogo y las filas 14b |
+| 57 | Controles con 4 agentes (28-10-2026): la app daba entre −42% y +35% y los totales "buenos" eran compensación de errores | `herramientas/correr_controles.py` mide los 5 casos antes y después de cada cambio; resumen en `conocimiento/auditorias/2026-10-28_controles_4_agentes.md` |
+| 58 | Horas de otro tipo de equipo (trampa para un manifold, TK glicol para un tanque de choque) | `estimar_horas`: grupos afines, tamaño por pulgadas de soldadura, mediana de 3 antecedentes (uno por proyecto) |
+| 59 | Soldaduras: el doble por caño se aplicaba a virolas y casquetes; espesor escrito no se leía; tarifa de 2024 con cepo | Doble solo para piezas del diámetro del caño, ajuste 0,75 por uniones directas, `espesor_mm`, costura de virolas, tarifa 16 USD/pulg de las planillas 2026 |
+| 60 | Pintura solo de caños y niples (−73% a −94%) | Caños × 3 por bridas/accesorios/válvulas + envolvente + estructura (30 m²/t, `perfiles.csv`) |
+| 61 | Radiografía con tarifa Antonelli y un servicio por equipo en series | Tarifa vigente más reciente (DB NDT 08-2026), servicios repartidos en la serie, LP para SW y olets; Antonelli como alternativa |
+| 62 | Catálogo: renglones de cotización con varios productos quedaban con el precio de otro (computador ABB a 864 en vez de 7.346; Doma a 1.380 en vez de 8.206) | `catalogo_materiales.separar_renglon`: una pieza por tramo, con guardas (rangos, descuentos, fletes, tramos sin producto) |
+| 63 | Similares inválidos: válvula manual por una actuada, #300 por #3000, paso reducido por total; se descartaba la pieza en vez de probar el siguiente similar | Tipo "actuada", paso solo en esféricas (PT = PR × 1,30), serie hasta 2,6 veces, se prueba el siguiente similar; Taval solo si el precio elegido es Taval |
+| 64 | Virolas y perfiles por metro sin precio; bastidores A-36/SA-36 no reconocidos; no se calculaba la fabricación de la estructura | Virola = kg × (chapa + rolado 3,7/kg); perfiles m → kg; regex de aceros; fila EST (kg × 3 USD/kg) |
+| 65 | `--excluir` borraba la pieza entera; precios atípicos sin alerta | Se usa el precio más reciente no excluido del historial; si el último se aparta 40% de la mediana, va la mediana |
+| 66 | `comparar_historico` ponía el montaje bajo "prueba hidráulica" y pisaba su salida con `--json` | Rubro por código primero y palabras enteras; salida propia por archivo |
+

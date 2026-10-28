@@ -1,7 +1,7 @@
 # Precotización automática — COT26-1003-001
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 3,139.46 por equipo · soldadura y servicios calculados USD 1,491.36 · 21 similares (1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 14, 14b, 17, 18, 19, 20, 22, 23, 24, 25) · 2 sin precio (13, 21).
+**Resumen:** materiales USD 3,418.86 por equipo · soldadura y servicios calculados USD 1,491.36 · 22 similares (1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 14b, 17, 18, 19, 20, 22, 23, 24, 25) · 1 sin precio (21).
 
 
 ## 1. Materiales
@@ -9,7 +9,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | Pos | Ítem | Resultado | Precio | Fecha y tipo | Diferencias / faltantes |
 |---|---|---|---|---|---|
 | 1 | Tapón 1/2" | SIMILAR | 1.94 / un | 2026-10-10 · planilla interna | serie: sin dato (pedido 2000) |
-| 2 | Válvula esférica #2000, paso nominal, cuerpo  | SIMILAR | 36.00 / un | 2026-10-10 · planilla interna | material: sin dato (pedido A216 WCB); trim: sin dato (pedido asientos metalicos) |
+| 2 | Válvula esférica #2000, paso nominal, cuerpo  | SIMILAR | 35.88 / un | 2026-02-19 · planilla interna | material: sin dato (pedido A216 WCB); trim: sin dato (pedido asientos metalicos) |
 | 3 | Niple longitud 100 mm 1/2" | SIMILAR ⚠ | 4.00 / un | 2026-10-10 · planilla interna | material: A106 B (pedido API 5L) |
 | 4 | Niple longitud 200 mm 2" | SIMILAR | 20.00 / un | 2026-04-22 · planilla interna | material: A106 B (pedido API 5L) |
 | 5 | Válvula esférica #2000, paso nominal, cuerpo  | SIMILAR | 106.86 / un | 2026-02-20 · planilla interna | material: A105 (pedido A216 WCB); trim: sin dato (pedido asientos metalicos) |
@@ -20,7 +20,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 10 | Buje reducción 2"x1/2" | SIMILAR | 11.51 / un | 2026-04-22 · planilla interna | serie: 3000 (pedido 2000) |
 | 11 | Codo 45° 2" | SIMILAR | 50.83 / un | 2025-12-26 · lista | serie: 3000 (pedido 2000) |
 | 12 | Niple longitud 200 mm 2" | SIMILAR | 20.00 / un | 2026-04-22 · planilla interna | extremos: NPT (pedido NPT/BW); material: A106 B (pedido API 5L) |
-| 13 | Junta monolítica 2" | **SIN PRECIO** | — | — | pedir cotización |
+| 13 | Junta monolítica 2" | SIMILAR | 280.00 / un | 2026-02-12 · cotización | diametro: sin dato (pedido 2"); material: sin dato (pedido A234 WPB); extremos: sin dato (pedido BW) · faltan: serie |
 | 14 | Caño longitud 1900 mm 2" | SIMILAR | 35.00 / m | 2025-12-10 · planilla interna | material: sin dato (pedido API 5L); revestimiento: sin dato (pedido polipropileno); unidad distinta: catálogo  · faltan: costura |
 | 14b | Completar barra de 6 m (compra mínima) | compra extra | USD 35.00/m × 1.1 m | | Se usan 3.8 m en 2 equipo(s) y se compran 6 m. Borrar si hay sobrante en stock |
 | 15 | Codo 45° 2" | IGUAL | 8.73 / un | 2025-12-26 · lista | — |
@@ -54,7 +54,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Prueba hidráulica:** 6 h × USD 13.00/h (Prueba hidráulica - manifold FA0032 1.2, 2026-03-10) = USD 78.00 · ⚠ horas supuestas: cargar `parametros.ph_horas` · volumen interior de caños y niples 13.0 l.
 - **Radiografía:** no se calculó (`parametros.rx_pct` = 0). Si el pliego la pide, cargar el porcentaje y volver a correr.
 
-### Horas de ingeniería, calidad y montaje (estimadas: puente, 2.5", 2 u, materiales USD 3,139 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: puente, 2.5", 2 u, materiales USD 3,419 por unidad)
 
 - **Ingeniería:** 5.17 h × USD 15/h = USD 77.55 · mediana de 4.0, 5.2, 7.6 h por unidad (repartidas en la serie y por tamaño) · antecedente: TAVAL/41- CIA MINERA DE ORIENTE · Manifold pozo de agua DN80 ANSI 150 (reduccion 3in a DN40) c (3, 1 u, 2026-02-11) · rango del mismo tipo 6–9 h
 - **Calidad y dossier:** 8.1 h × USD 15/h = USD 121.50 · mediana de 8.1, 0.6, 11.4 h por unidad (repartidas en la serie y por tamaño) · antecedente: TAVAL/41- CIA MINERA DE ORIENTE · Manifold pozo de agua DN80 ANSI 150 (reduccion 3in a DN40) c (3, 1 u, 2026-02-11) · rango del mismo tipo 1–6 h

@@ -12,7 +12,7 @@ Una carpeta por cotización: `COT[AA]-[código de cliente]-[NNN]_<CLIENTE>_<PEDI
 
 ## Casos de control (no son cotizaciones para clientes)
 
-Resumen de los 4 controles con agentes y errores repetidos: `conocimiento/auditorias/2026-10-28_controles_4_agentes.md`.
+Resumen de los 4 controles con agentes y errores repetidos: `conocimiento/auditorias/2026-10-28_controles_4_agentes.md`. Resultado actual de la app en los 5 casos: `controles_resultado.md` (lo arma `python herramientas/correr_controles.py`; correrlo antes y después de cambiar una herramienta).
 
 | Carpeta | Qué controla | Resultado |
 |---|---|---|

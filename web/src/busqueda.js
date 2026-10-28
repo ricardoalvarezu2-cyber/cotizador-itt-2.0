@@ -29,6 +29,7 @@ const Busqueda = (() => {
       if (["esparrago", "bulon", "tuerca", "arandela"].includes(f.tipo)) o.add("serie"); else o.add("material");
       if (["esparrago", "bulon"].includes(f.tipo)) o.delete("medida");
     }
+    if (fam === "VAL" && !String(f.tipo || "").startsWith("esferica")) o.add("paso");  // el paso solo distingue esféricas
     return o;
   }
 

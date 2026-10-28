@@ -51,6 +51,8 @@ def buscar(texto, familia=None, marca_pedida=""):
         opcionales |= {"serie"} if at.get("tipo") in ("esparrago", "bulon", "tuerca", "arandela") else {"material"}
         if at.get("tipo") in ("esparrago", "bulon"):
             opcionales.discard("medida")
+    if fam == "VAL" and not str(at.get("tipo", "")).startswith("esferica"):
+        opcionales.add("paso")  # el paso (total/reducido) solo distingue esféricas
     faltan = [c for c in campos if not at.get(c) and c not in opcionales]
     filas = [r for r in _FILAS if NOMBRE_A_COD.get(r["familia"]) == fam]
     res = []

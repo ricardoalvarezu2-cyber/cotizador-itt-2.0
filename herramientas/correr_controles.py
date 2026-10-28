@@ -30,24 +30,27 @@ def totales(carpeta):
     cot = json.load(open(carpeta / "cotizacion_auto.json", encoding="utf-8"))
     am = sum(i["cantidad"] * i["fuentes"][0]["precio"] for i in cot["items"] if i["grupo"] == "material")
     a_s = sum(i["cantidad"] * i["fuentes"][0]["precio"] for i in cot["items"] if i["grupo"] != "material")
-    sin = sum(1 for i in cot["items"] if not i["fuentes"][0]["precio"])
-    return rm, rs, am, a_s, sin
+    sinp = {str(i["pos"]) for i in cot["items"] if not i["fuentes"][0]["precio"]}
+    real_sin = sum(float(h["total_usd"]) for h in hist if h["pos"] in sinp)  # lo que la app deja SIN PRECIO (a cotizar)
+    return rm, rs, am, a_s, len(sinp), real_sin
 
 
 def main():
     import precotizar
     import comparar_historico
-    filas = ["| Caso | Real | App | Dif. | Materiales real / app | MO y servicios real / app | Sin precio |", "|---|---|---|---|---|---|---|"]
+    filas = ["| Caso | Real | App | Dif. | Dif. sin lo que queda SIN PRECIO | Materiales real / app | MO y servicios real / app | Sin precio (real de esos renglones) |",
+             "|---|---|---|---|---|---|---|---|"]
     for caso, excl in CASOS.items():
         c = RAIZ / "cotizaciones" / caso
         precotizar.EXCLUIR[:] = excl
         with redirect_stdout(io.StringIO()):
             precotizar.main(c)
             comparar_historico.main(c)
-        rm, rs, am, a_s, sin = totales(c)
+        rm, rs, am, a_s, sin, real_sin = totales(c)
         d = (am + a_s) / (rm + rs) - 1
-        filas.append(f"| {caso} | {rm + rs:,.0f} | {am + a_s:,.0f} | {d:+.0%} | {rm:,.0f} / {am:,.0f} ({am / rm - 1:+.0%}) | "
-                     f"{rs:,.0f} / {a_s:,.0f} ({a_s / rs - 1:+.0%}) | {sin} |")
+        d2 = (am + a_s) / (rm + rs - real_sin) - 1
+        filas.append(f"| {caso} | {rm + rs:,.0f} | {am + a_s:,.0f} | {d:+.0%} | {d2:+.0%} | {rm:,.0f} / {am:,.0f} ({am / rm - 1:+.0%}) | "
+                     f"{rs:,.0f} / {a_s:,.0f} ({a_s / rs - 1:+.0%}) | {sin} ({real_sin:,.0f}) |")
     precotizar.EXCLUIR[:] = []
     texto = "\n".join(filas)
     print(texto)

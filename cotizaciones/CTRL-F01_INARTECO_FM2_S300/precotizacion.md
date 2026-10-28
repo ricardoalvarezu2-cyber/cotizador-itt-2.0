@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-F01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 646.57 por equipo · soldadura y servicios calculados USD 2,170.19 · 19 similares (4, 4b, 5, 5b, 6, 7, 12, 13, 15, 16, 17, 18, 20, 21, 22, 24, 25, 26, 27) · 4 sin precio (10, 11, 19, 23).
+**Resumen:** materiales USD 646.57 por equipo · soldadura y servicios calculados USD 2,179.19 · 19 similares (4, 4b, 5, 5b, 6, 7, 12, 13, 15, 16, 17, 18, 20, 21, 22, 24, 25, 26, 27) · 4 sin precio (10, 11, 19, 23).
 
 
 ## 1. Materiales
@@ -33,7 +33,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 21 | Manómetro diferencial 0-2 bar 1/2" | SIMILAR | 120.00 / un | 2026-08-14 · planilla interna | rango: sin dato (pedido 0-2 bar) · faltan: conexion |
 | 22 | Conector recto con tuerca y doble virola 1/4" | SIMILAR | 0.50 / un | 2026-02-20 · planilla interna | diametro: sin dato (pedido 0.25"); material: sin dato (pedido AISI 304) |
 | 23 | Refuerzo para derivación tipo poncho 4 x 2 4" | **SIN PRECIO** | — | — | pedir cotización |
-| 24 | Válvula esférica cuerpo tripartito 1/2" | SIMILAR | 36.00 / un | 2026-10-10 · planilla interna | material: sin dato (pedido A105); extremos: NPT (pedido NPT/SW) |
+| 24 | Válvula esférica cuerpo tripartito 1/2" | SIMILAR | 36.00 / un | 2026-10-10 · planilla interna | material: sin dato (pedido A105); extremos: NPT (pedido NPT/SW) · faltan: paso |
 | 25 | Media cupla 1/2" | SIMILAR | 2.43 / un | 2025-12-26 · lista | serie: 3000 (pedido 2000) |
 | 26 | Chapa soporte manómetro diferencial y manifol | SIMILAR (acero por kg) | USD 1.26/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 3/16", la más cercana a 1.59 mm) +10% por recortes; no incluye corte, plegado ni rolado |
 | 27 | Arandela plana zincada 3/4" | SIMILAR (estimado cepo) ⚠ | 0.20 / un | 2024-11-01 · estimado (cepo) | — · faltan: material |
@@ -55,6 +55,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 ## 3. Servicios calculados
 
 - **Pintura:** 0.70 m² (caños y niples × 3 por bridas, accesorios y válvulas 0.6 + envolvente 0.0 + estructura 0.1) × USD 50.00/m² (Granallado y pintura piping (incluye materiales), criterio ITT, 2026-10-10) = USD 35.13.
+- **Fabricación de la estructura:** 3 kg × USD 3/kg (Fabricación de estructura de skid por kg (tercero Ledesma), 2026-10) = USD 9.00.
 - **Prueba hidráulica:** 6 h × USD 13.00/h (Prueba hidráulica - manifold FA0032 1.2, 2026-03-10) = USD 78.00 · ⚠ horas supuestas: cargar `parametros.ph_horas` · volumen interior de caños y niples 3.9 l.
 - **Radiografía 100% y tintas:** 7 placas chicas + 0 grandes + 0.50 servicio(s) de RX + 0.50 de LP por equipo = USD 396.50 (Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))).
   Con las tarifas de Antonelli (11-2025) serían USD 595.00: confirmar el proveedor de END con el cliente o la zona.

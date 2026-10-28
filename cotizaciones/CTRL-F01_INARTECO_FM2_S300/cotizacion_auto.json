@@ -638,7 +638,6 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 1/2\" · 2000 · ASTM A-105 · SW/NPT",
-   "taval": true,
    "fuentes": [
     {
      "tipo": "ant",
@@ -649,7 +648,8 @@
      "coincide": "similar",
      "diferencia": "material: sin dato (pedido A105); extremos: NPT (pedido NPT/SW)"
     }
-   ]
+   ],
+   "taval": true
   },
   {
    "id": "M25",
@@ -747,6 +747,26 @@
      "fecha": "2026-10-10",
      "coincide": "similar",
      "diferencia": "m² calculados (caños, accesorios por regla, envolvente y estructura); esquema de pintura a confirmar con el pliego"
+    }
+   ]
+  },
+  {
+   "id": "S05",
+   "pos": "EST",
+   "grupo": "mo",
+   "descripcion": "Fabricación de la estructura (bastidor, patas, cunas y soportes)",
+   "especificacion": "3 kg por equipo × tarifa por kg",
+   "cantidad": 3.0,
+   "unidad": "kg",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 3.0,
+     "proveedor": "Fabricación de estructura de skid por kg (tercero Ledesma): Dato al margen de la MO de Ledesma; en Tecpetrol 9 (01-2026) el bastidor UPN 140 se costeó a 4 USD/kg",
+     "origen": "YPF/28 Lic 69343 planilla PC0, hoja 1000623708 (850 kg × 3 = 2.550)",
+     "fecha": "2026-10-15",
+     "coincide": "similar",
+     "diferencia": "kg de la tabla del plano; tarifa de un trabajo de estructura de skid"
     }
    ]
   },

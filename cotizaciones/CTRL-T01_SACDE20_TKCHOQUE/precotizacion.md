@@ -1,18 +1,18 @@
 # Precotización automática — CTRL-T01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 2,562.40 por equipo · soldadura y servicios calculados USD 15,135.81 · 5 similares (3, 13, 14, 15, 18) · 8 sin precio (1, 5, 10, 11, 12, 17, 19, 20).
+**Resumen:** materiales USD 8,617.81 por equipo · soldadura y servicios calculados USD 15,783.81 · 11 similares (1, 3, 5, 12, 13, 14, 15, 17, 18, 19, 20) · 2 sin precio (10, 11).
 
 
 ## 1. Materiales
 
 | Pos | Ítem | Resultado | Precio | Fecha y tipo | Diferencias / faltantes |
 |---|---|---|---|---|---|
-| 1 | Virola rolada 2500 mm esp. 3/8 (590 kg c/u) 3 | **SIN PRECIO** | — | — | pedir cotización |
+| 1 | Virola rolada 2500 mm esp. 3/8 (590 kg c/u) 3 | ESTIMADO (por kg) | USD 2,934.90/un | 2026-02-10 | 590 kg (kg escritos en la descripción) × (USD 1.27/kg + rolado 3.7/kg (AESA/44 planilla LC servicio de mano de |
 | 2 | Casquete semielíptico 2:1 esp. 3/8 36" | IGUAL | 828.35 / un | 2025-11-20 · cotización | — |
 | 3 | Patas de chapa (2 un de 85 kg) | SIMILAR (acero por kg) | USD 1.27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2") +10% por recortes; no incluye corte, plegado ni rolado |
 | 4 | Codo 90 radio largo 2" | IGUAL | 6.08 / un | 2025-12-26 · lista | — |
-| 5 | Bafle de entrada 400 x 200 mm espesor 6.35 mm | **SIN PRECIO** | — | — | pedir cotización |
+| 5 | Bafle de entrada 400 x 200 mm espesor 6.35 mm | SIMILAR (acero por kg) | USD 1.25/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/4", la más cercana a 6.35 mm) +10% por recortes; no incluye corte, plegado ni rolado |
 | 6 | Brida slip on RF 2" | IGUAL | 12.18 / un | 2026-02-20 · planilla interna | — |
 | 7 | Brida slip on RF 6" | IGUAL | 38.19 / un | 2025-12-26 · lista | — |
 | 8 | Caño sin costura 6" | IGUAL | 60.51 / m | 2025-12-26 · lista | — |
@@ -20,15 +20,15 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 9b | Completar barra de 6 m (compra mínima) | compra extra | USD 16.62/m × 5.75 m | | Se usan 0.25 m en 1 equipo(s) y se compran 6 m. Borrar si hay sobrante en stock |
 | 10 | Sombrerete de venteo longitud 300 mm 10" | **SIN PRECIO** | — | — | pedir cotización |
 | 11 | Placa de identificación | **SIN PRECIO** | — | — | pedir cotización |
-| 12 | Deflectores 900 x 200 mm espesor 6.35 mm (9 u | **SIN PRECIO** | — | — | pedir cotización |
+| 12 | Deflectores 900 x 200 mm espesor 6.35 mm (9 u | SIMILAR (acero por kg) | USD 1.25/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/4", la más cercana a 6.35 mm) +10% por recortes; no incluye corte, plegado ni rolado |
 | 13 | Espárrago con 2 tuercas 3/4 x 130 mm 3/4" | SIMILAR | 10.00 / un | 2026-02-19 · planilla interna | medida: 3/4 x 12 (pedido 3/4 x 13) |
 | 14 | Cáncamo de izaje con chapa de respaldo (2 un) | SIMILAR (acero por kg) | USD 1.27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2") +10% por recortes; no incluye corte, plegado ni rolado |
 | 15 | Separador de niebla (con viruta) 6" | SIMILAR (acero por kg) | USD 1.27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2") +10% por recortes; no incluye corte, plegado ni rolado |
 | 16 | Brida welding neck RF 2" | IGUAL | 28.42 / un | 2025-07-11 · cotización | — |
-| 17 | Refuerzo de conexión Ø355 mm esp. 3/8 | **SIN PRECIO** | — | — | pedir cotización |
+| 17 | Refuerzo de conexión Ø355 mm esp. 3/8 | SIMILAR (acero por kg) | USD 1.27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2", la más cercana a 355 mm) +10% por recortes; no incluye corte, plegado ni rolado (A-516: se toma el precio de chapa A-36 de la lista; el A-516 suele costar más) |
 | 18 | Media cupla 2" | SIMILAR | 9.19 / un | 2025-12-26 · lista | serie: 3000 (pedido 6000); extremos: BSPT (pedido NPT/SW) |
-| 19 | Junta plana 6" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (10" JUN-02784, USD 8.00): pedir cotización |
-| 20 | Cunas de apoyo (2 un de 20 kg) | **SIN PRECIO** | — | — | pedir cotización |
+| 19 | Junta plana 6" | SIMILAR (estimado cepo) ⚠ | 5.76 / un | 2024-11-01 · estimado (cepo) | material: AISI 316 (no pedido) |
+| 20 | Cunas de apoyo (2 un de 20 kg) | SIMILAR (acero por kg) | USD 1.27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2") +10% por recortes; no incluye corte, plegado ni rolado |
 
 ## 2. Soldaduras (de la columna de extremos)
 
@@ -48,11 +48,12 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 ## 3. Servicios calculados
 
 - **Pintura:** 32.32 m² (caños y niples × 3 por bridas, accesorios y válvulas 9.7 + envolvente 16.2 + estructura 6.5) × USD 50.00/m² (Granallado y pintura piping (incluye materiales), criterio ITT, 2026-10-10) = USD 1,616.24.
+- **Fabricación de la estructura:** 216 kg × USD 3/kg (Fabricación de estructura de skid por kg (tercero Ledesma), 2026-10) = USD 648.00.
 - **Prueba hidráulica:** 36 h × USD 13.00/h (Prueba hidráulica - manifold FA0032 1.2, 2026-03-10) = USD 468.00 · volumen interior de caños y niples 112.4 l.
 - **Radiografía 100% y tintas:** 10 placas chicas + 21 grandes + 1.00 servicio(s) de RX + 1.00 de LP por equipo = USD 935.00 (Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))).
   Con las tarifas de Antonelli (11-2025) serían USD 1,550.00: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: tanque, 36", 1 u, materiales USD 2,562 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: tanque, 36", 1 u, materiales USD 8,618 por unidad)
 
 - **Ingeniería:** 170 h × USD 15/h = USD 2,550.00 · mediana de 101.3, 170.0, 420.5 h por unidad (repartidas en la serie y por tamaño) · antecedente: TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · Trampa lanzadora 20x16 (Serie 600 A6C) (20 / 16, 1 u, 2026-07-20) · rango del mismo tipo 250–250 h
 - **Calidad y dossier:** 125.4 h × USD 15/h = USD 1,881.00 · mediana de 121.6, 170.0, 125.4 h por unidad (repartidas en la serie y por tamaño) · antecedente: TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · Trampa lanzadora 20x16 (Serie 600 A6C) (20 / 16, 1 u, 2026-07-20) · rango del mismo tipo 250–250 h

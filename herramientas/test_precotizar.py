@@ -30,7 +30,7 @@ igual("soldadura: pulgadas equivalentes (4 a tope 2\" sch80 + reducción 2½\" +
 igual("soldadura: tarifa de las planillas 2026 (16 USD/pulg)", s["fuentes"][0]["precio"], 16.0)
 igual("retención 2\" #600 WCB NPT: igual (Ingeniería en Fluidos 533)", (auto["7"]["fuentes"][0]["coincide"], auto["7"]["fuentes"][0]["precio"]), ("igual", 533.0))
 igual("codo 45° 2\" sch80 BW: igual", auto["15"]["fuentes"][0]["coincide"], "igual")
-igual("junta monolítica sin precio (no se acepta una junta sin tipo)", auto["13"]["fuentes"][0]["precio"], 0)
+igual("junta monolítica: Duralitte 280 (renglón separado de una cotización con varios productos, 28-10-2026)", auto["13"]["fuentes"][0]["precio"], 280.0)
 igual("unión doble extensible sin precio", auto["21"]["fuentes"][0]["precio"], 0)
 igual("caño 1900 mm se compra por metro", (auto["14"]["unidad"], auto["14"]["cantidad"]), ("m", 1.9))
 igual("cupla BW es forjado (no se empareja con un codo)", "codo" in auto["23"]["fuentes"][0].get("diferencia", ""), False)
