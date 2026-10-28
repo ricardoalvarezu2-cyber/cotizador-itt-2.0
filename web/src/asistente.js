@@ -102,7 +102,7 @@ const Asistente = (() => {
     if (!mcp) throw new Error("Esta vista no puede comunicarse con Claude Code. Quedó pendiente: se procesa el lunes o cuando lo pidas en un chat.");
     aviso?.("Mandando el pedido a Claude Code…");
     const msg = `Pedido ${id} desde la página del cotizador (${URL_PAGINA}).\n` +
-      `Leé el documento pedidos/${id} de esa página con ArtifactData y seguí web/LEEME.md, sección "Pedidos desde la página".\n` +
+      `Primero git pull origin main. Después leé el documento pedidos/${id} de esa página con ArtifactData y seguí web/LEEME.md, sección "Pedidos desde la página".\n` +
       `Tipo: ${doc.tipo} (${TIPOS_PEDIDO[doc.tipo] || ""}).${doc.cotizacion_id ? ` Cotización: cotizaciones/${doc.cotizacion_id}.` : ""} Archivos: ${doc.archivos.length}.\n` +
       `Pedido: ${(doc.texto || "(sin texto)").slice(0, 1500)}`;
     let estado = "enviado", nota = "mandado a Claude Code";
