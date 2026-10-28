@@ -71,6 +71,12 @@ python herramientas/buscar_material.py "valvula retencion 2\" serie 600 cuerpo A
 - **Marca (válvulas e instrumentos):** cada marca es un renglón aparte, con su precio. La marca no cuenta para igual/similar: con `--marca Danco` salen primero los iguales de esa marca y después los "IGUAL (otra marca)", para elegir. Si el cliente o el pliego piden una marca, cotizar otra es un desvío (`coincide: similar`, diferencia "marca").
 - Los precios se comparan siempre en la misma unidad (un, m, tira de 6 m, m2, kg): un precio por metro nunca se junta con uno por unidad.
 - Las compras del stock anteriores a 2022 no se usan (hay compras de 2009): en su lugar va el precio maestro de nov-2024.
+**Otras tablas de apoyo (borrador, revisar antes de usar en una oferta):**
+- `conocimiento/comercial/marcas_aprobadas.csv` (+ `_resumen.md`): marcas exigidas o sugeridas por cliente y rubro, con cita y documento. YPF tiene listas completas; PAE, Pampa y Pluspetrol solo parciales (sus vendor lists no están extraídos).
+- `conocimiento/comercial/plazos_proveedores.csv` (+ `_resumen.md`): plazo de entrega por rubro y proveedor, en días corridos, con cita. Para el camino crítico usar el máximo del rubro cuando el dato es "stock salvo venta". Sin datos de pintura ni de END.
+- `conocimiento/tecnico/canos_peso_superficie.csv` (kg/m, m²/m, litros/m), `bridas_peso.csv` y `accesorios_peso.csv` (kg por pieza, con URL de origen; ver `pesos_LEEME.md`): para kg de flete, galvanizado y fabricación por kg, y m² de pintura.
+- `conocimiento/costos/dolar_mensual.csv`: dólar oficial, mayorista, MEP y blue por mes desde 2024. Para convertir se usa el promedio mensual del oficial BNA venta, salvo que el documento diga su tipo de cambio.
+
 - La columna **alerta** del catálogo marca precios a revisar antes de usarlos: historial con precios muy distintos, posible precio en pesos, sin fecha o número ambiguo.
 - Después de modificar el catálogo: `python herramientas/test_catalogo.py` (casos reales de errores ya corregidos).
 - **Todo precio va SIN IVA** (catálogo y `cotizacion.json`). Si la fuente da el precio con IVA, se divide por la alícuota que corresponda (21%, o 10,5% si la cotización lo indica) y se anota el valor original en la fuente. Si no dice nada, se toma como sin IVA. Decisión de Matías del 27/10/2026.
