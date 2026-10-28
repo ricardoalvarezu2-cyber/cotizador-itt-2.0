@@ -315,7 +315,7 @@ const Busqueda = (() => {
       if (f.marca && norm(r.a.marca) !== norm(f.marca) && f.soloMarca) continue;
       if (!clasifica) {
         if (elegidos.some(c => r.a[c] && norm(r.a[c]) !== norm(f[c]))) continue;
-        res.push({ r, estado: "lista", difs: [], orden: [0, 0, 0, r.p ? 1 : 0, 0, r.fe || ""] });
+        res.push({ r, estado: "lista", difs: [], orden: [0, 0, 0, 0, r.p ? 1 : 0, 0, r.fe || ""] });
         continue;
       }
       if (f.tipo && r.a.tipo && norm(f.tipo) !== norm(r.a.tipo)) continue;
@@ -333,9 +333,11 @@ const Busqueda = (() => {
       const oblig = cs.filter(c => !op.has(c));
       const igual = !difs.length && oblig.every(c => f[c]);
       const misma = !!f.marca && norm(r.a.marca) === norm(f.marca);
-      res.push({ r, estado: igual ? "igual" : "similar", difs, misma, orden: [igual ? 1 : 0, misma ? 1 : 0, -difs.length, r.p ? 1 : 0, coinc, r.fe || ""] });
+      // la marca no le gana al tamaño (Ø, serie, schedule, medida), igual que buscar_material.py (CTRL-TS01)
+      const crit = difs.filter(d => ["diametro", "diametro2", "serie", "schedule", "medida", "espesor_mm"].includes(d.split(":")[0]) && !d.includes("(no pedido)")).length;
+      res.push({ r, estado: igual ? "igual" : "similar", difs, misma, orden: [igual ? 1 : 0, -crit, misma ? 1 : 0, -difs.length, r.p ? 1 : 0, coinc, r.fe || ""] });
     }
-    res.sort((x, y) => { for (let i = 0; i < 6; i++) { if (x.orden[i] < y.orden[i]) return 1; if (x.orden[i] > y.orden[i]) return -1; } return 0; });
+    res.sort((x, y) => { for (let i = 0; i < 7; i++) { if (x.orden[i] < y.orden[i]) return 1; if (x.orden[i] > y.orden[i]) return -1; } return 0; });
     const faltan = fam ? cs.filter(c => !f[c] && !op.has(c)) : [];
     return { res: res.slice(0, limite), total: res.length, clasifica, faltan };
   }
