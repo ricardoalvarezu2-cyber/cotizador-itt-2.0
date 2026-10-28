@@ -99,7 +99,9 @@ const Busqueda = (() => {
     const f = { tipo: TIPO_FUENTE[r.tp] || "ant", precio: r.p || 0, proveedor: `${(r.pr || "").slice(0, 70)} · ${r.c}`, origen: r.o || "", fecha: r.fe || hoy(), coincide };
     if (coincide === "similar") f.diferencia = resultado.difs.join("; ") || "Pieza similar: completar en qué difiere";
     if (!r.p) { f.tipo = "est"; f.proveedor = "SIN PRECIO CONFIABLE: pedir cotización · " + r.c; f.coincide = "sin_ref"; f.diferencia = "Sin precio confiable en el catálogo"; }
-    return { id, pos: "", grupo: "material", descripcion: r.d.slice(0, 120), especificacion: describirAtributos(r.a), cantidad, unidad: r.u || "un", fuentes: [f] };
+    const it = { id, pos: "", grupo: "material", descripcion: r.d.slice(0, 120), especificacion: describirAtributos(r.a), cantidad, unidad: r.u || "un", fuentes: [f] };
+    if (r.f === "VAL" && /taval/i.test(`${r.a?.marca || ""} ${r.pr || ""}`)) it.taval = true;  // va con el factor de válvulas Taval
+    return it;
   }
 
   function itemDeServicio(r, cantidad, id) {

@@ -53,7 +53,7 @@ def leer_precios(carpeta):
                        check=True, capture_output=True)
         ws = load_workbook(Path(tmp) / xlsx.name, data_only=True)["Cotización"]
         precios = {"cantidad": ws["B5"].value, "precio_unitario": ws["D27"].value,
-                   "total": ws["E28"].value, "flete_incluido": ws["B9"].value == 1, "flete": ws["E22"].value or 0}
+                   "total": ws["E28"].value, "flete_incluido": ws["B9"].value == 1, "flete": ws["E23"].value or 0}
     if abs(precios["precio_unitario"] * precios["cantidad"] + precios["flete"] - precios["total"]) > 0.001:
         sys.exit(f"La planilla no cierra: unitario × cantidad + flete ≠ total ({precios})")
     return precios

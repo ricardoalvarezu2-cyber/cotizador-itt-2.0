@@ -372,7 +372,7 @@ Tipos de origen de un precio: lista, cot (cotización de proveedor), stock, ant 
       const cot = S.doc.cot, p = cot.parametros, c = I.calc();
       const filas = cot.items.map(i => { const s = i.fuentes[0]; return `${i.id} | ${i.pos} | ${i.grupo} | ${i.descripcion} | ${i.especificacion || ""} | ${i.cantidad} ${i.unidad} | USD ${s.precio} | ${s.tipo} | ${s.proveedor} ${s.fecha} | ${s.coincide}${s.diferencia ? " (" + s.diferencia + ")" : ""}`; });
       return `Hoy: ${hoy}. Cotización abierta: ${cot.codigo} ${cot.revision || ""} · ${cot.titulo || "(sin título)"} · cliente ${cot.cliente?.nombre || "—"} · estado ${cot.estado}.
-Parámetros: N=${p.N} equipos, factor materiales ${p.FM}, factor MO y servicios ${p.FMO}, contingencia ${p.CONT}%, fecha de referencia ${p.fecha_referencia}.
+Parámetros: N=${p.N} equipos, factor materiales ${p.FM}, factor MO y servicios ${p.FMO}, factor válvulas Taval ${p.FTV ?? 1}, contingencia ${p.CONT}%, fecha de referencia ${p.fecha_referencia}.
 Totales (borrador): costo por equipo USD ${c.costo.toFixed(2)}, precio unitario USD ${c.precio_unitario.toFixed(2)}, total USD ${c.total.toFixed(2)}.
 Ítems (id | pos | grupo | descripción | especificación | cantidad | precio unitario | tipo | proveedor y fecha | coincide):
 ${filas.join("\n") || "(ninguno)"}`.slice(0, 60000);
@@ -478,12 +478,12 @@ ${filas.join("\n") || "(ninguno)"}`.slice(0, 60000);
           const c = cot(), it = c.items.find(i => i.id === String(id)); if (!it) throw new Error("No existe el ítem " + id);
           marcar(); c.items = c.items.filter(i => i !== it); cambio(`Quitó ${it.id}: ${it.descripcion.slice(0, 60)}`); return "ok";
         } },
-      { name: "modificar_datos", description: "Cambia los datos y parámetros de la cotización abierta. Campos posibles: titulo, codigo, revision, cliente, codigo_itt, comprador, equipo_singular, equipo_plural, firmante_id, N (cantidad de equipos), FM (factor materiales), FMO (factor MO y servicios), CONT (contingencia %), fecha_referencia (AAAA-MM-DD), AJ (1 aplica ajuste por inflación, 0 no), TRANS (1 flete incluido), TC, TR_ARS, TR_EMB, TR_F. El factor de venta lo define la dirección: si lo cambiás, avisalo.",
+      { name: "modificar_datos", description: "Cambia los datos y parámetros de la cotización abierta. Campos posibles: titulo, codigo, revision, cliente, codigo_itt, comprador, equipo_singular, equipo_plural, firmante_id, N (cantidad de equipos), FM (factor materiales), FMO (factor MO y servicios), FTV (factor de todas las válvulas Taval, por defecto 1), CONT (contingencia %), fecha_referencia (AAAA-MM-DD), AJ (1 aplica ajuste por inflación, 0 no), TRANS (1 flete incluido), TC, TR_ARS, TR_EMB, TR_F. El factor de venta lo define la dirección: si lo cambiás, avisalo.",
         inputSchema: { type: "object", properties: { campos: { type: "object" } }, required: ["campos"] },
         execute: ({ campos }) => {
           const c = cot(); if (!campos || typeof campos !== "object") throw new Error("Pasá los campos a cambiar.");
           const RUTAS = { titulo: "titulo", codigo: "codigo", revision: "revision", cliente: "cliente.nombre", codigo_itt: "cliente.codigo_itt", comprador: "cliente.comprador", equipo_singular: "equipo.singular", equipo_plural: "equipo.plural", firmante_id: "firmante_id" };
-          const NUM = ["N", "FM", "FMO", "CONT", "AJ", "TRANS", "TC", "TR_ARS", "TR_EMB", "TR_F"], hechos = [];
+          const NUM = ["N", "FM", "FMO", "FTV", "CONT", "AJ", "TRANS", "TC", "TR_ARS", "TR_EMB", "TR_F"], hechos = [];
           marcar();
           for (const [k, v] of Object.entries(campos)) {
             if (RUTAS[k]) { const ks = RUTAS[k].split("."); let o = c; ks.slice(0, -1).forEach(x => (o = o[x] ??= {})); o[ks.at(-1)] = s(v, 200); }

@@ -86,15 +86,22 @@ def factor(item, idx, fref, aplicar):
     return en(fref) / en(mes)
 
 
+def es_taval(it):
+    """Válvula Taval (empresa del grupo): lleva su propio factor de venta, FTV (por defecto 1; decisión de Matías, 28-10-2026)."""
+    return it["grupo"] == "material" and bool(it.get("taval"))
+
+
 def calcular(cfg, idx):
     p = cfg["parametros"]
     fref = p["fecha_referencia"][:7]
-    sub = {"material": 0.0, "mo": 0.0, "servicio": 0.0}
+    ftv = p.get("FTV", 1.0)
+    sub = {"material": 0.0, "mo": 0.0, "servicio": 0.0, "taval": 0.0}
     for it in cfg["items"]:
-        sub[it["grupo"]] += it["cantidad"] * it["fuentes"][0]["precio"] * factor(it, idx, fref, p["AJ"])
+        sub["taval" if es_taval(it) else it["grupo"]] += it["cantidad"] * it["fuentes"][0]["precio"] * factor(it, idx, fref, p["AJ"])
     cont = sub["material"] * p["CONT"] / 100
-    costo = sub["material"] + cont + sub["mo"] + sub["servicio"]
-    precio = round((sub["material"] + cont) * p["FM"] + (sub["mo"] + sub["servicio"]) * p["FMO"], 2)
+    tav = sub["taval"] * (1 + p["CONT"] / 100)  # válvulas Taval con su contingencia
+    costo = sub["material"] + cont + tav + sub["mo"] + sub["servicio"]
+    precio = round((sub["material"] + cont) * p["FM"] + tav * ftv + (sub["mo"] + sub["servicio"]) * p["FMO"], 2)
     flete = (p["TR_ARS"] / p["TC"] + p["TR_EMB"]) * p["TR_F"] if p["TRANS"] else 0
     return {"costo": costo, "precio_unitario": precio, "total": round(precio * p["N"] + flete, 2)}
 
@@ -137,7 +144,8 @@ def escribir_planilla(cfg, carpeta, idx_rows):
     params = [(f"Cantidad de {eq['plural']}", p["N"], "0"), ("Factor de materiales (materiales y contingencia)", p["FM"], "0.00"),
               ("Factor de mano de obra y servicios", p["FMO"], "0.00"), ("Contingencia materiales", p["CONT"] / 100, "0%"),
               ("Incluir flete (1 = sí, 0 = no)", p["TRANS"], "0"), ("Tipo de cambio ARS/USD (cargar BNA del día)", p["TC"], "#,##0"),
-              ("Flete ARS por envío", p["TR_ARS"], "#,##0"), ("Embalaje USD por envío (estimado)", p["TR_EMB"], USD), ("Factor flete", p["TR_F"], "0.00")]
+              ("Flete ARS por envío", p["TR_ARS"], "#,##0"), ("Embalaje USD por envío (estimado)", p["TR_EMB"], USD), ("Factor flete", p["TR_F"], "0.00"),
+              ("Factor de válvulas Taval (con su contingencia)", p.get("FTV", 1.0), "0.00")]
     for r, (n, v, f) in enumerate(params, 5):
         ws.cell(r, 1, n); c = ws.cell(r, 2, v); c.fill = INP; c.number_format = f
     # ajuste por inflación
@@ -159,31 +167,32 @@ def escribir_planilla(cfg, carpeta, idx_rows):
     for j, t in enumerate(["Rubro", f"Costo / {eq['singular']}", "Factor", f"Precio / {eq['singular']}", "Total"], 1):
         c = ws.cell(17, j, t); c.font = H; c.fill = HF
     S = "'MO y servicios'"
-    filas = [("Materiales (con ajuste por inflación)", f"=SUM(Materiales!P2:P{nm})", "=$B$6"),
+    filas = [("Materiales sin válvulas Taval (con ajuste por inflación)", f'=SUMIF(Materiales!S2:S{nm},"<>sí",Materiales!P2:P{nm})', "=$B$6"),
              ("Contingencia", "=B18*$B$8", "=$B$6"),
+             ("Válvulas Taval (con ajuste y contingencia)", f'=SUMIF(Materiales!S2:S{nm},"sí",Materiales!P2:P{nm})*(1+$B$8)', "=$B$14"),
              ("Mano de obra", f'=SUMIF({S}!B2:B{ns},"MO",{S}!P2:P{ns})', "=$B$7"),
              ("Servicios e insumos", f'=SUMIF({S}!B2:B{ns},"Servicio",{S}!P2:P{ns})', "=$B$7")]
     for r, (n, f, fa) in enumerate(filas, 18):
         ws.cell(r, 1, n); ws.cell(r, 2, f).number_format = USD; ws.cell(r, 3, fa).number_format = "0.00"
         ws.cell(r, 4, f"=B{r}*C{r}").number_format = USD; ws.cell(r, 5, f"=D{r}*$B$5").number_format = USD
-    ws["A22"] = "Flete + embalaje (por envío)"; ws["C22"] = "=$B$13"; ws["E22"] = "=IF($B$9=1,($B$11/$B$10+$B$12)*$B$13,0)"
-    ws["C22"].number_format = "0.00"; ws["E22"].number_format = USD
-    ws["A23"] = "TOTAL SIN IVA"; ws["B23"] = "=SUM(B18:B21)"; ws["C23"] = "=D23/B23"; ws["D23"] = "=SUM(D18:D21)"; ws["E23"] = "=SUM(E18:E22)"
+    ws["A23"] = "Flete + embalaje (por envío)"; ws["C23"] = "=$B$13"; ws["E23"] = "=IF($B$9=1,($B$11/$B$10+$B$12)*$B$13,0)"
+    ws["C23"].number_format = "0.00"; ws["E23"].number_format = USD
+    ws["A24"] = "TOTAL SIN IVA"; ws["B24"] = "=SUM(B18:B22)"; ws["C24"] = "=D24/B24"; ws["D24"] = "=SUM(D18:D22)"; ws["E24"] = "=SUM(E18:E23)"
     # sin renglones de IVA: ITT trabaja solo con precios sin IVA (decisión de Matías, 28/10/2026)
-    ws["A26"] = "Margen sobre precio"; ws["D26"] = "=1-B23/D23"; ws["D26"].number_format = "0.0%"
-    for r in range(23, 26):
+    ws["A26"] = "Margen sobre precio"; ws["D26"] = "=1-B24/D24"; ws["D26"].number_format = "0.0%"
+    for r in range(24, 26):
         for c in range(1, 6):
             x = ws.cell(r, c); x.fill = TOT; x.font = Font(bold=True)
             if c in (2, 4, 5):
                 x.number_format = USD
-    ws["C23"].number_format = "0.00"
-    ws["A27"] = "PRECIO UNITARIO DE VENTA (redondeado, va a la oferta)"; ws["D27"] = "=ROUND(D23,2)"
-    ws["A28"] = "TOTAL DE LA OFERTA SIN IVA (unitario redondeado × cantidad + flete)"; ws["E28"] = "=D27*B5+E22"
+    ws["C24"].number_format = "0.00"
+    ws["A27"] = "PRECIO UNITARIO DE VENTA (redondeado, va a la oferta)"; ws["D27"] = "=ROUND(D24,2)"
+    ws["A28"] = "TOTAL DE LA OFERTA SIN IVA (unitario redondeado × cantidad + flete)"; ws["E28"] = "=D27*B5+E23"
     for c in ("A27", "D27", "A28", "E28"):
         ws[c].font = Font(bold=True, color="1D5F86")
     ws["D27"].number_format = ws["E28"].number_format = USD
     ws["A29"] = f"Costo / {eq['singular']} SIN ajuste por inflación"; ws["B29"] = f"=SUM(Materiales!G2:G{nm})*(1+B8)+SUM({S}!G2:G{ns})"
-    ws["A30"] = "Ajuste por inflación incluido en el costo"; ws["B30"] = "=B23-B29"; ws["C30"] = "=B30/B29"
+    ws["A30"] = "Ajuste por inflación incluido en el costo"; ws["B30"] = "=B24-B29"; ws["C30"] = "=B30/B29"
     ws["B29"].number_format = ws["B30"].number_format = USD; ws["C30"].number_format = "+0.0%"
     for k, t in enumerate(cfg.get("planilla_notas", []), 32):
         ws.cell(k, 1, t)
@@ -197,8 +206,8 @@ def escribir_planilla(cfg, carpeta, idx_rows):
                  "USD unit. (a la fecha del precio)", "Subtotal USD (sin ajuste)", "Tipo de origen", "Proveedor o criterio",
                  "Carpeta de origen", "Fecha del precio", "ID", "Meses hasta hoy",
                  "Factor inflación (" + ("costo local USD" if es_srv else "CPI EE.UU.") + ")", "USD unit. ajustado", "Subtotal USD ajustado",
-                 "Coincidencia con el plano", "Diferencia con lo pedido"],
-             [6, 10, 44, 10, 8, 13, 13, 13, 48, 26, 12, 6, 9, 10, 12, 13, 13, 50])
+                 "Coincidencia con el plano", "Diferencia con lo pedido"] + ([] if es_srv else ["Válvula Taval (factor aparte)"]),
+             [6, 10, 44, 10, 8, 13, 13, 13, 48, 26, 12, 6, 9, 10, 12, 13, 13, 50] + ([] if es_srv else [12]))
         col = 4 if es_srv else 5
         for i, it in enumerate(items, 2):
             s = it["fuentes"][0]
@@ -207,7 +216,7 @@ def escribir_planilla(cfg, carpeta, idx_rows):
                     s["proveedor"], s["origen"], fecha(s["fecha"]), it["id"], f"=MAX(0,(Cotización!$H$7-K{i})/30.4375)",
                     f"=IF(Cotización!$H$6=1,VLOOKUP(Cotización!$H$7,{RNG},{col},1)/VLOOKUP(MAX(K{i},Índices!$A$2),{RNG},{col},1),1)",
                     f"=F{i}*N{i}", f"=D{i}*O{i}", {"igual": "Igual", "similar": "Similar", "sin_ref": "Sin referencia"}.get(s.get("coincide"), ""),
-                    s.get("diferencia", "")]
+                    s.get("diferencia", "")] + ([] if es_srv else ["sí" if es_taval(it) else ""])
             for j, v in enumerate(vals, 1):
                 c = w.cell(i, j, v); c.border = B
                 if j in (4, 6):
@@ -270,7 +279,7 @@ def leer_planilla(ruta):
     with tempfile.TemporaryDirectory() as tmp:
         subprocess.run(["soffice", "--headless", "--convert-to", "xlsx", "--outdir", tmp, str(ruta)], check=True, capture_output=True)
         ws = load_workbook(Path(tmp) / ruta.name, data_only=True)["Cotización"]
-        return {"costo": ws["B23"].value, "precio_unitario": ws["D27"].value, "total": ws["E28"].value}
+        return {"costo": ws["B24"].value, "precio_unitario": ws["D27"].value, "total": ws["E28"].value}
 
 
 # ---------------------------------------------------------------- informe
@@ -289,6 +298,8 @@ def escribir_informe(cfg, carpeta, idx, adjuntos):
         o = {"id": it["id"], "pos": it["pos"], "d": it["descripcion"], "sp": it["especificacion"], "cant": it["cantidad"], "un": it["unidad"],
              "src": [{"tipo": s["tipo"], "precio": s["precio"], "who": s["proveedor"], "from": s["origen"], "fecha": s["fecha"],
                      "co": s.get("coincide", ""), "dif": s.get("diferencia", "")} for s in it["fuentes"]]}
+        if es_taval(it):
+            o["tv"] = 1
         if it["grupo"] != "material":
             o["grp"] = "mo" if it["grupo"] == "mo" else "serv"
         return o
@@ -328,7 +339,7 @@ def escribir_informe(cfg, carpeta, idx, adjuntos):
                      for b in cfg.get("pendientes", []))
     dias = cfg["plazo"]["dias"]
     ticks = "".join(f"<span>{round(dias * k / 4)}</span>" for k in range(5))
-    params = {k: v for k, v in p.items() if k != "fecha_referencia"}
+    params = {"FTV": 1.0, **{k: v for k, v in p.items() if k != "fecha_referencia"}}
     rep = {"TITULO_PAGINA": e(cfg["titulo_pagina"]), "HEADER": header, "HISTORIAL": hist, "PEDIDO": pedido, "AJUSTE": ajuste,
            "EQ": e(eq["singular"]), "EQS": e(eq["plural"]), "N": str(p["N"]), "PLAZO_DIAS": str(dias), "PLAZO_TEXTO": e(cfg["plazo"]["texto"]),
            "PLAZO_NOTA": cfg["plazo"]["nota"], "TAREAS_JSON": json.dumps(cfg["plazo"]["tareas"], ensure_ascii=False), "TICKS": ticks,

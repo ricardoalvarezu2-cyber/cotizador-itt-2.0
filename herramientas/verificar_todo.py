@@ -60,6 +60,12 @@ m = re.search(r"Planilla: .*precio unitario ([\d,.]+)", out)
 if not m or m.group(1) != CONTROL["precio_unitario"]:
     fallas.append("precio de control de la CAPEX")
     print(f"FALLA precio de control: dio {m.group(1) if m else '—'}, se esperaba {CONTROL['precio_unitario']}")
+# motor de la página (JS) igual a Python: CAPEX y una cotización con válvulas Taval (factor aparte)
+r = subprocess.run(["node", "web/probar_motor.js"], cwd=RAIZ, capture_output=True, text=True)
+print(f"{'OK  ' if r.returncode == 0 else 'FALLA'} motor de la página (web/probar_motor.js)")
+if r.returncode:
+    fallas.append("motor JS distinto de Python")
+    print((r.stdout + r.stderr)[-800:])
 despues = modificados()
 if antes is not None and despues is not None:
     nuevos = sorted(despues - antes)

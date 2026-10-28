@@ -73,7 +73,8 @@ const Documentos = (() => {
     put(ws, "A4", "PARÁMETROS (celdas amarillas editables)", { font: { bold: true } });
     [[`Cantidad de ${eq.plural}`, p.N, "0"], ["Factor de materiales (materiales y contingencia)", p.FM, "0.00"], ["Factor de mano de obra y servicios", p.FMO, "0.00"],
      ["Contingencia materiales", p.CONT / 100, "0%"], ["Incluir flete (1 = sí, 0 = no)", p.TRANS, "0"], ["Tipo de cambio ARS/USD (BNA)", p.TC, "#,##0"],
-     ["Flete ARS por envío", p.TR_ARS, "#,##0"], ["Embalaje USD por envío (estimado)", p.TR_EMB, U], ["Factor flete", p.TR_F, "0.00"]]
+     ["Flete ARS por envío", p.TR_ARS, "#,##0"], ["Embalaje USD por envío (estimado)", p.TR_EMB, U], ["Factor flete", p.TR_F, "0.00"],
+     ["Factor de válvulas Taval (con su contingencia)", p.FTV ?? 1, "0.00"]]
       .forEach(([n, v, z], i) => { put(ws, A(1, 5 + i), n); put(ws, A(2, 5 + i), Number(v) || 0, INP, z); });
     put(ws, "G5", "AJUSTE POR INFLACIÓN (desde la fecha de cada precio hasta hoy)", { font: { bold: true } });
     put(ws, "G6", "Aplicar ajuste (1 = sí, 0 = no)"); put(ws, "H6", p.AJ ? 1 : 0, INP, "0");
@@ -86,20 +87,21 @@ const Documentos = (() => {
     put(ws, "A16", "RESUMEN", { font: { bold: true } });
     ["Rubro", `Costo / ${eq.singular}`, "Factor", `Precio / ${eq.singular}`, "Total"].forEach((t, i) => put(ws, A(i + 1, 17), t, H));
     const S = "'MO y servicios'";
-    [["Materiales (con ajuste por inflación)", `SUM(Materiales!P2:P${nm})`, "$B$6"], ["Contingencia", "B18*$B$8", "$B$6"],
+    [["Materiales sin válvulas Taval (con ajuste por inflación)", `SUMIF(Materiales!S2:S${nm},"<>sí",Materiales!P2:P${nm})`, "$B$6"], ["Contingencia", "B18*$B$8", "$B$6"],
+     ["Válvulas Taval (con ajuste y contingencia)", `SUMIF(Materiales!S2:S${nm},"sí",Materiales!P2:P${nm})*(1+$B$8)`, "$B$14"],
      ["Mano de obra", `SUMIF(${S}!B2:B${ns},"MO",${S}!P2:P${ns})`, "$B$7"], ["Servicios e insumos", `SUMIF(${S}!B2:B${ns},"Servicio",${S}!P2:P${ns})`, "$B$7"]]
       .forEach(([n, f, fa], i) => {
         const r = 18 + i; put(ws, A(1, r), n); put(ws, A(2, r), { f }, null, U); put(ws, A(3, r), { f: fa }, null, "0.00");
         put(ws, A(4, r), { f: `B${r}*C${r}` }, null, U); put(ws, A(5, r), { f: `D${r}*$B$5` }, null, U);
       });
-    put(ws, "A22", "Flete + embalaje (por envío)"); put(ws, "C22", { f: "$B$13" }, null, "0.00"); put(ws, "E22", { f: "IF($B$9=1,($B$11/$B$10+$B$12)*$B$13,0)" }, null, U);
-    put(ws, "A23", "TOTAL SIN IVA", TOT); put(ws, "B23", { f: "SUM(B18:B21)" }, TOT, U); put(ws, "C23", { f: "D23/B23" }, TOT, "0.00");
-    put(ws, "D23", { f: "SUM(D18:D21)" }, TOT, U); put(ws, "E23", { f: "SUM(E18:E22)" }, TOT, U);
-    put(ws, "A26", "Margen sobre precio"); put(ws, "D26", { f: "1-B23/D23" }, null, "0.0%");
-    put(ws, "A27", "PRECIO UNITARIO DE VENTA (redondeado, va a la oferta)", AZ); put(ws, "D27", { f: "ROUND(D23,2)" }, AZ, U);
-    put(ws, "A28", "TOTAL DE LA OFERTA SIN IVA (unitario redondeado × cantidad + flete)", AZ); put(ws, "E28", { f: "D27*B5+E22" }, AZ, U);
+    put(ws, "A23", "Flete + embalaje (por envío)"); put(ws, "C23", { f: "$B$13" }, null, "0.00"); put(ws, "E23", { f: "IF($B$9=1,($B$11/$B$10+$B$12)*$B$13,0)" }, null, U);
+    put(ws, "A24", "TOTAL SIN IVA", TOT); put(ws, "B24", { f: "SUM(B18:B22)" }, TOT, U); put(ws, "C24", { f: "D24/B24" }, TOT, "0.00");
+    put(ws, "D24", { f: "SUM(D18:D22)" }, TOT, U); put(ws, "E24", { f: "SUM(E18:E23)" }, TOT, U);
+    put(ws, "A26", "Margen sobre precio"); put(ws, "D26", { f: "1-B24/D24" }, null, "0.0%");
+    put(ws, "A27", "PRECIO UNITARIO DE VENTA (redondeado, va a la oferta)", AZ); put(ws, "D27", { f: "ROUND(D24,2)" }, AZ, U);
+    put(ws, "A28", "TOTAL DE LA OFERTA SIN IVA (unitario redondeado × cantidad + flete)", AZ); put(ws, "E28", { f: "D27*B5+E23" }, AZ, U);
     put(ws, "A29", `Costo / ${eq.singular} SIN ajuste por inflación`); put(ws, "B29", { f: `SUM(Materiales!G2:G${nm})*(1+B8)+SUM(${S}!G2:G${ns})` }, null, U);
-    put(ws, "A30", "Ajuste por inflación incluido en el costo"); put(ws, "B30", { f: "B23-B29" }, null, U); put(ws, "C30", { f: "B30/B29" }, null, "+0.0%");
+    put(ws, "A30", "Ajuste por inflación incluido en el costo"); put(ws, "B30", { f: "B24-B29" }, null, U); put(ws, "C30", { f: "B30/B29" }, null, "+0.0%");
     (cot.planilla_notas || []).forEach((t, k) => put(ws, A(1, 32 + k), sinHtml(t)));
     ws["!cols"] = [{ wch: 52 }, { wch: 16 }, { wch: 16 }, { wch: 16 }, { wch: 16 }, { wch: 4 }, { wch: 58 }, { wch: 13 }];
     X.utils.book_append_sheet(wb, ws, "Cotización");
@@ -108,15 +110,15 @@ const Documentos = (() => {
       const w = hoja();
       cabecera(w, ["Pos", esSrv ? "Grupo" : "ID", "Descripción", `Cant. / ${eq.singular}`, "Unidad", "USD unit. (a la fecha del precio)", "Subtotal USD (sin ajuste)",
         "Tipo de origen", "Proveedor o criterio", "Carpeta de origen", "Fecha del precio", "ID", "Meses hasta hoy",
-        "Factor inflación (" + (esSrv ? "costo local USD" : "CPI EE.UU.") + ")", "USD unit. ajustado", "Subtotal USD ajustado", "Coincidencia con el plano", "Diferencia con lo pedido"],
-        [6, 10, 44, 10, 8, 13, 13, 13, 48, 26, 12, 6, 9, 10, 12, 13, 13, 50]);
+        "Factor inflación (" + (esSrv ? "costo local USD" : "CPI EE.UU.") + ")", "USD unit. ajustado", "Subtotal USD ajustado", "Coincidencia con el plano", "Diferencia con lo pedido", ...(esSrv ? [] : ["Válvula Taval (factor aparte)"])],
+        [6, 10, 44, 10, 8, 13, 13, 13, 48, 26, 12, 6, 9, 10, 12, 13, 13, 50, ...(esSrv ? [] : [12])]);
       const col = esSrv ? 4 : 5;
       items.forEach((it, k) => {
         const i = k + 2, s = it.fuentes[0];
         const vals = [it.pos, esSrv ? (it.grupo === "mo" ? "MO" : "Servicio") : it.id, it.descripcion, Number(it.cantidad), it.unidad, Number(s.precio), { f: `D${i}*F${i}` },
           TIPOS[s.tipo] || s.tipo, s.proveedor, s.origen, serial(s.fecha), it.id, { f: `MAX(0,('Cotización'!$H$7-K${i})/30.4375)` },
           { f: `IF('Cotización'!$H$6=1,VLOOKUP('Cotización'!$H$7,${RNG},${col},1)/VLOOKUP(MAX(K${i},'Índices'!$A$2),${RNG},${col},1),1)` },
-          { f: `F${i}*N${i}` }, { f: `D${i}*O${i}` }, COINC[s.coincide] || "", s.diferencia || ""];
+          { f: `F${i}*N${i}` }, { f: `D${i}*O${i}` }, COINC[s.coincide] || "", s.diferencia || "", ...(esSrv ? [] : [Motor.esTaval(it) ? "sí" : ""])];
         vals.forEach((v, j) => {
           const c = j + 1;
           const st = c === 4 || c === 6 ? INP : c === 8 ? { fill: { fgColor: { rgb: TF[s.tipo] || "FFFFFF" } } } :
@@ -232,6 +234,7 @@ const Documentos = (() => {
       <table><tbody>
         <tr><td>Materiales (con ajuste por inflación)</td><td class="n">${usd(calc.sub.material)}</td><td class="n">factor ${p.FM}</td></tr>
         <tr><td>Contingencia ${p.CONT}%</td><td class="n">${usd(calc.cont)}</td><td class="n">factor ${p.FM}</td></tr>
+        ${calc.tav ? `<tr><td>Válvulas Taval (con contingencia)</td><td class="n">${usd(calc.tav)}</td><td class="n">factor ${calc.ftv}</td></tr>` : ""}
         <tr><td>Mano de obra</td><td class="n">${usd(calc.sub.mo)}</td><td class="n">factor ${p.FMO}</td></tr>
         <tr><td>Servicios e insumos</td><td class="n">${usd(calc.sub.servicio)}</td><td class="n">factor ${p.FMO}</td></tr>
         <tr><td>Flete + embalaje</td><td class="n">${usd(calc.flete)}</td><td class="n">${p.TRANS ? "incluido" : "no incluido (EXW Quilmes Oeste)"}</td></tr>

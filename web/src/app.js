@@ -268,7 +268,7 @@
   function totalesHtml(c, eq) {
     const p = S.doc.cot.parametros;
     return `<div><span class="s">Costo / ${E(eq.singular)}</span><span class="v">${num(c.costo)}</span><span class="s">ajuste por inflación incluido ${num(c.costo - c.costo0)}</span></div>
-      <div class="prim"><span class="s">Precio unitario USD</span><span class="v">${num(c.precio_unitario)}</span><span class="s">factores ${p.FM} / ${p.FMO}</span></div>
+      <div class="prim"><span class="s">Precio unitario USD</span><span class="v">${num(c.precio_unitario)}</span><span class="s">factores ${p.FM} / ${p.FMO}${c.tav ? ` · Taval ${c.ftv}` : ""}</span></div>
       <div><span class="s">Cantidad</span><span class="v">${num(p.N, 0)}</span><span class="s">${E(eq.plural)}</span></div>
       <div><span class="s">Total de la oferta USD</span><span class="v">${num(c.total)}</span><span class="s">sin IVA${p.TRANS ? " · con flete" : " · EXW"}</span></div>`;
   }
@@ -300,7 +300,7 @@
       </div></section>
       <section class="panel"><h3>Parámetros de cálculo</h3><div class="campos">
       ${campo("Cantidad de equipos", "cot.parametros.N", "number")}${campo("Factor de materiales", "cot.parametros.FM", "number")}
-      ${campo("Factor de MO y servicios", "cot.parametros.FMO", "number")}${campo("Contingencia materiales (%)", "cot.parametros.CONT", "number")}
+      ${campo("Factor de MO y servicios", "cot.parametros.FMO", "number")}${campo("Factor de válvulas Taval (todas)", "cot.parametros.FTV", "number", 'placeholder="1"')}${campo("Contingencia materiales (%)", "cot.parametros.CONT", "number")}
       ${campo("Fecha de referencia (ajuste a hoy)", "cot.parametros.fecha_referencia", "date")}
       <label><span>Ajuste por inflación</span><select id="f-aj" data-b="cot.parametros.AJ" data-t="number"><option value="1" ${cot.parametros.AJ ? "selected" : ""}>Aplicar</option><option value="0" ${cot.parametros.AJ ? "" : "selected"}>No aplicar</option></select></label>
       <label><span>Flete en el precio</span><select id="f-trans" data-b="cot.parametros.TRANS" data-t="number"><option value="0" ${cot.parametros.TRANS ? "" : "selected"}>No (EXW Quilmes Oeste)</option><option value="1" ${cot.parametros.TRANS ? "selected" : ""}>Sí</option></select></label>
@@ -521,6 +521,7 @@
         <div class="tbl"><table><tbody>
         <tr><td>Materiales (con ajuste por inflación)</td><td class="n">${num(c.sub.material)}</td><td class="n">× ${p.FM}</td></tr>
         <tr><td>Contingencia ${p.CONT}%</td><td class="n">${num(c.cont)}</td><td class="n">× ${p.FM}</td></tr>
+        ${c.tav ? `<tr><td>Válvulas Taval (con contingencia)</td><td class="n">${num(c.tav)}</td><td class="n">× ${c.ftv}</td></tr>` : ""}
         <tr><td>Mano de obra</td><td class="n">${num(c.sub.mo)}</td><td class="n">× ${p.FMO}</td></tr>
         <tr><td>Servicios e insumos</td><td class="n">${num(c.sub.servicio)}</td><td class="n">× ${p.FMO}</td></tr>
         <tr class="total"><td>Costo</td><td class="n">${num(c.costo)}</td><td class="n">${num(c.precio_unitario)}</td></tr>
@@ -592,6 +593,7 @@
         <label class="ancho"><span>Descripción</span><input id="ei-descripcion" data-ei="descripcion" value="${E(it.descripcion)}"></label>
         <label class="ancho"><span>Especificación</span><input id="ei-especificacion" data-ei="especificacion" value="${E(it.especificacion || "")}"></label>
         ${inp("cantidad", "Cantidad por equipo", it.cantidad, "number")}${inp("unidad", "Unidad", it.unidad)}
+        ${it.grupo === "material" ? `<label><span>Válvula Taval</span><select id="ei-taval" data-ei="taval"><option value="" ${it.taval ? "" : "selected"}>No</option><option value="1" ${it.taval ? "selected" : ""}>Sí (usa el factor de válvulas Taval)</option></select></label>` : ""}
         ${it.grupo === "material" ? ["diametro", "serie_sch", "material", "extremos", "modelo"].map(k => inp("plano." + k, { diametro: "Ø (plano)", serie_sch: "Serie / sch (plano)", material: "Material (plano)", extremos: "Extremos (plano)", modelo: "Modelo / fabricante (plano)" }[k], it.plano[k])).join("") : ""}
       </div><h3>Precio y fuente (sin IVA)</h3><div class="campos">
         ${inp("f.precio", "Precio unitario USD sin IVA", s.precio, "number")}
@@ -640,7 +642,7 @@
     if (el.dataset.b && S.doc) {
       let v = el.value;
       if (el.dataset.t === "fecha") { v = Documentos.isoDe(v); el.classList.toggle("mal", !v); if (!v) return; }
-      if (el.dataset.t === "number") { v = v.trim() === "" ? 0 : NUM(v); el.classList.toggle("mal", v == null); if (v == null) return; }
+      if (el.dataset.t === "number") { v = v.trim() === "" ? (el.dataset.b === "cot.parametros.FTV" ? 1 : 0) : NUM(v); el.classList.toggle("mal", v == null); if (v == null) return; }
       ponerRuta(S.doc, el.dataset.b, v);
       if (el.dataset.b === "cot.estado") S.doc.oferta.estado = v;
       refrescar(); guardarPronto();
@@ -703,7 +705,8 @@
       let v = el.value;
       if (el.dataset.num !== undefined) { v = NUM(el.value); el.classList.toggle("mal", v == null && el.value.trim() !== ""); v = v ?? 0; }
       if (el.dataset.fecha !== undefined) { v = Documentos.isoDe(el.value); el.classList.toggle("mal", !v); }
-      if (k.startsWith("f.")) s[k.slice(2)] = v; else if (k.startsWith("plano.")) it.plano[k.slice(6)] = v; else it[k] = v;
+      if (k === "taval") { if (v) it.taval = true; else delete it.taval; }
+      else if (k.startsWith("f.")) s[k.slice(2)] = v; else if (k.startsWith("plano.")) it.plano[k.slice(6)] = v; else it[k] = v;
       if (k === "grupo") editorItem(it, it.grupo);
     }
   });

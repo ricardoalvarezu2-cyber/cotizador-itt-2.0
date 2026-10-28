@@ -25,7 +25,7 @@
 - `resumenes/<id>`: lo que muestra la lista (código, título, cliente, estado, unitario, total).
 - `firmantes/<id>`: nombre, cargo, teléfono, celular, email, `firma_asset` y `firma_url`.
 - `config/indices`: `{generado, indices, dolar}`. Si es más nuevo que `datos.json`, la página lo usa.
-- `cot.indices_congelados` (en cada cotización): `{fecha, filas}` con el mismo formato que `datos.json.indices`. Se guarda al pasar a revisado y se borra al volver a borrador; si está, el cálculo usa esos índices y no los de la base. `cot.aprobacion`: `{por, fecha}`.
+- `cot.indices_congelados` (en cada cotización): `{fecha, filas}` con el mismo formato que `datos.json.indices`. Se guarda al pasar a revisado y se borra al volver a borrador; si está, el cálculo usa esos índices y no los de la base. `cot.aprobacion`: `{por, fecha}`. `cot.parametros.FTV`: factor de todas las válvulas Taval (por defecto 1); cada válvula Taval lleva `"taval": true`.
 - `catalogo_nuevo/<N-MAT-… o N-SRV-…>`: `{clase, registro (mismo formato que datos.json), original: {precio, moneda, iva, documento}, creado, por, incorporado?}`. Lo carga el chat (`nuevo_en_catalogo`); la página lo suma al buscador mientras no esté `incorporado`.
 - `config/claude_code`: `{session_id}` de la sesión que recibe los pedidos (si no existe, la página usa la sesión fija de abajo).
 - `pedidos/<id>`: `{tipo, texto, cotizacion_id, archivos: [{id, url, nombre, tipo, original?}], estado, nota, respuesta, resultado_cotizacion_id, creado, enviado, historial: [{fecha, estado, nota}]}`. Tipos: `cotizacion_nueva`, `actualizar_cotizacion`, `lista_precios`, `otro`. Estados: `pendiente` → `enviado` → `en_proceso` → `listo` / `con_dudas` (o `error` si no se sabe si el envío llegó).

@@ -38,7 +38,8 @@
   "TR_F": 1.0,
   "fecha_referencia": "2026-10-28",
   "rx_pct": 100,
-  "ph_horas": 0
+  "ph_horas": 0,
+  "FTV": 1.0
  },
  "plazo": {
   "dias": 120,
@@ -852,7 +853,8 @@
      "coincide": "similar",
      "diferencia": "serie: 1500 (pedido 2000)"
     }
-   ]
+   ],
+   "taval": true
   },
   {
    "id": "M26",
@@ -881,7 +883,8 @@
      "coincide": "similar",
      "diferencia": "serie: 3000 (pedido 2000)"
     }
-   ]
+   ],
+   "taval": true
   },
   {
    "id": "M27",
@@ -901,7 +904,8 @@
      "coincide": "igual",
      "diferencia": "precio de la planilla PC0 sin fecha ni documento del proveedor: confirmar con Compras"
     }
-   ]
+   ],
+   "taval": true
   },
   {
    "id": "M28",
@@ -921,7 +925,8 @@
      "coincide": "igual",
      "diferencia": "precio de la planilla PC0 sin fecha ni documento del proveedor: confirmar con Compras"
     }
-   ]
+   ],
+   "taval": true
   },
   {
    "id": "M29",
@@ -950,7 +955,8 @@
      "coincide": "similar",
      "diferencia": "diametro: 1\" (pedido 0.75\"); serie: 600 (no pedido); material: sin dato (pedido A105); extremos: RF (pedido NPT)"
     }
-   ]
+   ],
+   "taval": true
   },
   {
    "id": "M30",
@@ -970,7 +976,8 @@
      "coincide": "igual",
      "diferencia": "precio de la planilla PC0 sin fecha ni documento del proveedor: confirmar con Compras"
     }
-   ]
+   ],
+   "taval": true
   },
   {
    "id": "M90",

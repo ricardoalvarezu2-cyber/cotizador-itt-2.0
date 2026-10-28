@@ -132,6 +132,9 @@ def material(r, n):
     item = {"id": f"M{n:02d}", "pos": r["pos"], "grupo": "material",
             "descripcion": f"{r['descripcion'][:60]} {r['diametro']}".strip(), "cantidad": cant, "unidad": unidad,
             "especificacion": f"Plano: {r['diametro']} · {r['serie_sch']} · {r['material']} · {r['extremos']}" + (f" · {r['modelo_fabricante']}" if r.get("modelo_fabricante") else "")}
+    # válvula Taval (empresa del grupo): va con el factor de válvulas Taval de la cotización (parametros.FTV, por defecto 1)
+    if fam == "VAL" and ("taval" in norm(r.get("modelo_fabricante", "")) or (elegido and "taval" in norm(elegido[7].get("marca", "") + " " + elegido[7]["proveedor"]))):
+        item["taval"] = True
     if unidad_norm(unidad) == "kg" and not (elegido and elegido[0] and unidad_norm(elegido[7]["unidad"]) == "kg"):
         fila, motivo = acero_kg(r)
         if fila:

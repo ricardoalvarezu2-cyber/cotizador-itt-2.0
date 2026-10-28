@@ -136,7 +136,7 @@ Cada ítem lleva todas sus fuentes de precio. **La primera fuente es la de base*
 - `fecha` de cada fuente: la fecha del precio. Con esa fecha se hace el ajuste por inflación.
 - Una fila por posición del plano, con la cantidad del plano. Lo que se compra de más va en una fila `14b`.
 - Soldaduras: una fila de MO con las pulgadas equivalentes, junta por junta en la especificación.
-- Parámetros: factores 1,35 / 1,35, contingencia 5%, ajuste por inflación activado y `fecha_referencia` igual a la de hoy.
+- Parámetros: factores 1,35 / 1,35, **factor de válvulas Taval `FTV` = 1** (todas las válvulas marcadas `"taval": true`; las marca solo `precotizar.py` y la página al agregarlas del catálogo), contingencia 5%, ajuste por inflación activado y `fecha_referencia` igual a la de hoy.
 
 ## 5. Armar todo
 

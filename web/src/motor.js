@@ -23,23 +23,26 @@ const Motor = (() => {
     return cg && cg.filas && cg.filas.length ? cg.filas : idx;
   }
 
+  const esTaval = it => it.grupo === "material" && !!it.taval;
+
   function calcular(cfg, idx) {
     idx = indicesDe(cfg, idx);
     const p = cfg.parametros, fref = p.fecha_referencia.slice(0, 7);
-    const sub = { material: 0, mo: 0, servicio: 0 }, sub0 = { material: 0, mo: 0, servicio: 0 };
+    const sub = { material: 0, mo: 0, servicio: 0, taval: 0 }, sub0 = { material: 0, mo: 0, servicio: 0, taval: 0 };
+    const ftv = p.FTV ?? 1;  // válvulas Taval (empresa del grupo): factor aparte, por defecto 1
     const filas = cfg.items.map(it => {
       const fa = factorAjuste(it, idx, fref, p.AJ);
-      const base = it.cantidad * it.fuentes[0].precio;
-      sub[it.grupo] += base * fa;
-      sub0[it.grupo] += base;
+      const base = it.cantidad * it.fuentes[0].precio, g = esTaval(it) ? "taval" : it.grupo;
+      sub[g] += base * fa;
+      sub0[g] += base;
       return { id: it.id, base, factor: fa, ajustado: base * fa };
     });
-    const cont = sub.material * p.CONT / 100;
-    const costo = sub.material + cont + sub.mo + sub.servicio;
-    const costo0 = sub0.material * (1 + p.CONT / 100) + sub0.mo + sub0.servicio;
-    const precio = redondear((sub.material + cont) * p.FM + (sub.mo + sub.servicio) * p.FMO, 2);
+    const cont = sub.material * p.CONT / 100, tav = sub.taval * (1 + p.CONT / 100);
+    const costo = sub.material + cont + tav + sub.mo + sub.servicio;
+    const costo0 = (sub0.material + sub0.taval) * (1 + p.CONT / 100) + sub0.mo + sub0.servicio;
+    const precio = redondear((sub.material + cont) * p.FM + tav * ftv + (sub.mo + sub.servicio) * p.FMO, 2);
     const flete = p.TRANS ? (p.TR_ARS / p.TC + p.TR_EMB) * p.TR_F : 0;
-    return { sub, cont, costo, costo0, precio_unitario: precio, flete, total: redondear(precio * p.N + flete, 2), filas };
+    return { sub, cont, tav, ftv, costo, costo0, precio_unitario: precio, flete, total: redondear(precio * p.N + flete, 2), filas };
   }
 
   // Escenarios de factor (el factor lo define la dirección; la herramienta propone 1,35 y muestra alternativas)
@@ -49,6 +52,6 @@ const Motor = (() => {
       return { F, unitario: c.precio_unitario, total: c.total, margen: 1 - c.costo / c.precio_unitario };
     });
   }
-  return { factorAjuste, calcular, escenarios, redondear, indicesDe };
+  return { factorAjuste, calcular, escenarios, redondear, indicesDe, esTaval };
 })();
 if (typeof module !== "undefined") module.exports = Motor;

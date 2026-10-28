@@ -42,6 +42,7 @@
 
 | Fecha | Decisión | Quién | Detalle |
 |---|---|---|---|
+| 28-10-2026 | Las válvulas Taval (empresa del grupo) llevan un factor de venta propio, igual para todas las de la cotización, por defecto 1 | Matías | `parametros.FTV`; cada válvula con `"taval": true`. En la planilla, fila "Válvulas Taval" con su contingencia y parámetro en B14. Como en la PC0 de YPF Lic 69343 |
 | 27/10/2026 | No omitir información por privacidad: el repo es privado | Matías | `CLAUDE.md` |
 | 27/10/2026 | Nunca enviar nada al cliente. Estados borrador → revisado → aprobado → enviado | Matías | `procedimiento_cotizacion.md` |
 | 27/10/2026 | Factores: materiales 1,35; MO y servicios 1,35; 1,40 solo para MO vendida sola. El factor final lo define la dirección | Matías | `guia_cotizacion.md` |
