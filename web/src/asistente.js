@@ -9,6 +9,7 @@ const Asistente = (() => {
     cotizacion_nueva: "Armar una cotización nueva (plano, P&ID, pliego)",
     actualizar_cotizacion: "Completar o corregir una cotización existente",
     lista_precios: "Incorporar una lista o cotización de precios al catálogo",
+    incorporar_base: "Incorporar una cotización terminada a la base (catálogos y antecedentes)",
     otro: "Otro",
   };
   const ESTADOS_PEDIDO = { pendiente: ["pendiente", "warn"], enviado: ["enviado", "info"], en_proceso: ["en proceso", "info"], listo: ["listo", "ok"], con_dudas: ["con dudas", "warn"], error: ["error", "bad"] };
@@ -667,6 +668,6 @@ ${filas.join("\n") || "(ninguno)"}`.slice(0, 60000);
     }
   }
 
-  return { renderPedidos, abrirChat, TIPOS_PEDIDO, prepararArchivo };
+  return { renderPedidos, abrirChat, TIPOS_PEDIDO, prepararArchivo, crearPedido };
 })();
 if (typeof module !== "undefined") module.exports = Asistente;

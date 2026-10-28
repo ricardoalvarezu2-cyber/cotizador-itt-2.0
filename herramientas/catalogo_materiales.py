@@ -9,6 +9,7 @@ Fuentes (etapa 1, sin IA):
   conocimiento/precios/precios_componentes.csv     base de componentes (proveedor y fecha por renglón)
   conocimiento/precios/proveedores_2025/2026.csv   cotizaciones de proveedores (solo las que traen precio unitario)
   cotizaciones/*/cotizacion.json                   fuentes de precio cargadas en cotizaciones (no los estimados)
+  cotizaciones_web/*/cotizacion.json               las de la página incorporadas a la base (ver cotizaciones_base.py)
 
 Salidas:
   conocimiento/precios/catalogo_materiales_historial.csv   un renglón por precio, con su clave de material
@@ -599,8 +600,8 @@ def leer_fuentes():
                 (r["proveedor_o_criterio"] or "planilla de costo ITT")[:80], Z + car.replace("/", "\\"), f"{r['carpeta']}/{Path(r['archivo']).name}"[:200],
                 f"fuentes_originales/ofertas_texto/{car}", unidad, extra=f"planilla de costo {r['proyecto']} ({r['ubicacion']})"[:200],
                 pista=r["rubro"], iva=iva_de(r["iva_origen"]) if r["iva_origen"] else None)
-    for f in sorted((RAIZ / "cotizaciones").glob("COT*/cotizacion.json")):
-        c = json.load(open(f, encoding="utf-8"))
+    from cotizaciones_base import cotizaciones  # repositorio + las de la página incorporadas a la base
+    for f, c in cotizaciones():
         for it in c["items"]:
             if it["grupo"] != "material" or re.fullmatch(r"\d+[a-z]", str(it["pos"])):
                 continue  # las compras extra (14b) son sobrante de otra posición, no una pieza

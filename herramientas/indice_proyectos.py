@@ -212,7 +212,7 @@ def de_cotizador(ruta):
     t = norm(texto)
     mat, union, ens = atributos(t)
     return {
-        "id": ruta.parent.name, "origen": "cotizador", "fecha": c.get("fecha", ""), "cliente": c["cliente"]["nombre"], "cliente_final": "",
+        "id": ruta.parent.name, "origen": "cotizador" if ruta.parent.parent.name == "cotizaciones" else "pagina", "fecha": c.get("fecha", ""), "cliente": c["cliente"]["nombre"], "cliente_final": "",
         "familia": etiquetas("", t)[0], "etiquetas": " ".join(etiquetas("", t)), "descripcion": c.get("titulo", ""),
         "numero_oferta": c.get("codigo", ""), "diametros": " ".join(f"{x:g}" for x in diametros(t)), "series": " ".join(series(t)),
         "material": " ".join(mat), "union": " ".join(union), "ensayos": " ".join(ens), "cantidad_principal": c["parametros"]["N"],
@@ -230,7 +230,8 @@ def main():
             fila = de_ficha(json.load(open(f, encoding="utf-8")), anio)
             fila["ficha"] = str(f.relative_to(RAIZ))
             filas.append(fila)
-    for f in sorted((RAIZ / "cotizaciones").glob("COT*/cotizacion.json")):
+    from cotizaciones_base import cotizaciones  # repositorio + las de la página incorporadas a la base
+    for f, _ in cotizaciones():
         filas.append(de_cotizador(f))
     filas = [r for r in filas if r["fecha"] >= "2025-01-01"]  # solo 2025-2026 (decisión de Ventas)
     filas.sort(key=lambda r: r["fecha"], reverse=True)

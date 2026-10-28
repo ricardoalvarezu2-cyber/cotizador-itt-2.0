@@ -1,0 +1,25 @@
+pos,grupo,descripcion,cantidad,unidad,precio_unit_usd,total_usd,proveedor,nota
+1,material,"Virola 36"" x 2500 x 3/8"" A-516 Gr.70 rolada y punteada",2,un,1888,3776,Sandri / GH,"590 kg c/u × USD 3,20/kg (chapa 1,58 + corte y biselado 0,90 + rolado 0,62)"
+2,material,"Casquete SE 36"" x 3/8""",2,un,531.44,1062.88,Cintolo,cot 24-02-2026 (mail sin precio legible en el texto)
+3,material,Patas A-36,170,kg,1.5,255,sin proveedor,2 un × 85 kg
+4,material,"Codo 90° 2"" RL Sch 40",1,un,13.3,13.3,Cot Elem Equip,"la planilla multiplica 6,65 por los 2 kg (error de la planilla: debía ser 6,65)"
+5,material,"Bafle 400 x 200 x 1/4""",5,kg,1.5,7.5,sin proveedor,
+6,material,"Brida SORF 2"" #150",1,un,10.87,10.87,Chapa pura,
+7,material,"Brida SORF 6"" #150",2,un,38.19,76.38,sin proveedor,
+8,material,"Caño S/C 6"" Sch 40",6,m,60.51,363.06,sin proveedor,se compra la tira entera de 6 m por no haber stock
+9,material,"Caño S/C 2"" Sch 80",0.25,m,16.62,4.155,sin proveedor,
+10,material,"Sombrerete 10"" Sch 20 x 300 mm",1,un,194.709,194.709,sin proveedor,"la planilla dice 0,3 × 26,709 = 194,709 (la cuenta no cierra; se toma el subtotal)"
+11,material,Placa de identificación,1,un,15,15,sin proveedor,
+12,material,"Deflectores 900 x 200 x 1/4""",90,kg,1.5,135,sin proveedor,9 un × 10 kg
+13,material,"Espárragos 3/4"" x 130 mm c/2 tuercas",8,un,10,80,sin proveedor,
+14,material,Cáncamo y respaldo,6,kg,0.75,4.5,sin proveedor,"la planilla toma 3 kg × 1,5 (error: 2 un × 3 kg = 6 kg)"
+15,material,"Separador de niebla 6"" (con viruta)",5,kg,1.5,7.5,sin proveedor,
+16,material,"Brida WNRF 2"" #600 Sch 80",1,un,28.42,28.42,Cot Elem Equip,
+17,material,"Refuerzo 355 mm x 3/8""",8,kg,1.5,12,sin proveedor,
+18,material,"Media cupla 2"" #6000",1,un,18.38,18.38,sin proveedor,estimado base S3000 × 2
+19,material,"Junta plana 6"" #150",1,un,10,10,sin proveedor,
+20,material,Cunas de apoyo,40,kg,0.75,30,sin proveedor,"la planilla toma 20 kg × 1,5 (error: 2 un × 20 kg = 40 kg); incluye MO ITT p/estructura pesada"
+MO,mo,"Fabricación tercerizada Quesada JQ-012-2026 (soldadura, armado, consumibles y PH; 1802 kg)",1,gl,10700,10700,Quesada,"columna elegida en el Resumen; la alternativa ITT era soldadura 3328 + montaje 234 h × 13 = 3042"
+RX,servicio,Radiografía y tinta penetrante (Rx + LP),1,gl,2720,2720,Planilla ITT (Antonelli),"Rx 36"" 3 juntas (21 placas) + 2"" 2 juntas + longitudinales; LP 6"" 5 juntas y 2"" 3 juntas"
+PIN,servicio,Granallado y pintura,25,m2,40,1000,Planilla ITT,
+HH,mo,Ingeniería (50 h × 15) + calidad (90 h × 15),1,gl,2100,2100,Planilla ITT,

@@ -1473,6 +1473,17 @@ if (typeof module !== "undefined") module.exports = Documentos;
   // ------------------------------------------------------------------ pestaña Resumen y descargas
   const ARCHIVOS = [["presupuesto", "1_Presupuesto.xlsx"], ["compras", "2_Lista_para_Compras.xlsx"], ["informe", "3_Informe_del_presupuesto.pdf"],
     ["tec_docx", "4_Oferta_tecnica.docx"], ["tec_pdf", "4_Oferta_tecnica.pdf"], ["eco_docx", "5_Oferta_economica.docx"], ["eco_pdf", "5_Oferta_economica.pdf"], ["json", "6_Respaldo_cotizacion.json"]];
+  // Incorporar a la base: Claude Code copia la cotización al repositorio y rearma catálogos, antecedentes y la página.
+  // Las aprobadas o enviadas entran solas con la tarea semanal (web/LEEME.md).
+  function panelBase() {
+    const cot = S.doc.cot, b = cot.base || {};
+    const estado = b.incorporada ? `Incorporada a la base el ${F(b.incorporada)}.` : b.pedida ? `Pedida el ${F(b.pedida)}: la procesa Claude Code (ver Pedidos).` : "";
+    return `<h3>Base de datos</h3>
+      <p class="small muted">Suma esta cotización a los antecedentes y sus precios con documento (cotizaciones, listas y planillas, iguales a lo pedido) al catálogo, para usarlos en las próximas búsquedas. Los estimados no entran. Las aprobadas o enviadas entran solas el lunes.</p>
+      ${estado ? `<p class="small"><b>${E(estado)}</b></p>` : ""}
+      <div class="fila"><button data-a="incorporar" ${cot.estado === "borrador" ? "disabled" : ""}>${b.incorporada || b.pedida ? "Volver a incorporar" : "Incorporar a la base de datos"}</button>
+      ${cot.estado === "borrador" ? `<span class="small muted">Primero pasala a revisado.</span>` : ""}</div>`;
+  }
   function tabResumen() {
     const c = calc(), p = S.doc.cot.parametros, avs = Busqueda.avisos(S.doc.cot), esc_ = Motor.escenarios(S.doc.cot, S.datos.indices);
     const bad = avs.filter(a => a.nivel === "bad"), warn = avs.filter(a => a.nivel !== "bad");
@@ -1487,7 +1498,8 @@ if (typeof module !== "undefined") module.exports = Documentos;
         <tr><td>Ajuste por inflación incluido</td><td class="n">${num(c.costo - c.costo0)}</td><td class="n">${c.costo0 ? "+" + num((c.costo / c.costo0 - 1) * 100, 1) + "%" : ""}</td></tr>
         <tr><td>Flete + embalaje</td><td class="n">${num(c.flete)}</td><td class="n">${p.TRANS ? "incluido" : "no incluido"}</td></tr></tbody></table></div>
         <h3>Escenarios de factor</h3><div class="tbl"><table><thead><tr><th>Factor</th><th class="n">Unitario</th><th class="n">Total</th><th class="n">Margen</th></tr></thead><tbody>
-        ${esc_.map(e => `<tr ${Math.abs(e.F - p.FM) < 1e-9 && Math.abs(e.F - p.FMO) < 1e-9 ? 'class="total"' : ""}><td>${e.F.toFixed(2)}</td><td class="n">${num(e.unitario)}</td><td class="n">${num(e.total)}</td><td class="n">${num(e.margen * 100, 1)}%</td></tr>`).join("")}</tbody></table></div></section>
+        ${esc_.map(e => `<tr ${Math.abs(e.F - p.FM) < 1e-9 && Math.abs(e.F - p.FMO) < 1e-9 ? 'class="total"' : ""}><td>${e.F.toFixed(2)}</td><td class="n">${num(e.unitario)}</td><td class="n">${num(e.total)}</td><td class="n">${num(e.margen * 100, 1)}%</td></tr>`).join("")}</tbody></table></div>
+        ${panelBase()}</section>
       <section class="panel"><h3>Descargas</h3>
         <p class="small muted">"Descargar todo" arma un .zip con la planilla, la lista para Compras, el informe, las ofertas (Word y PDF) y el respaldo. ${S.doc.cot.estado === "aprobado" ? "Estado aprobado: las ofertas salen sin la leyenda de borrador y con la firma." : "Mientras no esté aprobada, las ofertas llevan la leyenda BORRADOR – SIN REVISAR – NO ENVIAR."}</p>
         <div class="fila"><button class="prim" data-a="zip" ${S.dl ? "" : "disabled"}>Descargar todo (.zip)</button></div>
@@ -1696,6 +1708,15 @@ if (typeof module !== "undefined") module.exports = Documentos;
       case "uno-k": await descargarUno(b, b.dataset.k); break;
       case "rehacer": rehacer(); break;
       case "estado": dialogoEstado(b.dataset.v); break;
+      case "incorporar": {
+        if (b.dataset.ok !== "1") { b.dataset.ok = "1"; b.textContent = "¿Seguro? Incorporar"; setTimeout(() => { b.dataset.ok = ""; render(); }, 4000); return; }
+        cot.base = { ...(cot.base || {}), pedida: hoy() }; guardarPronto(); render();
+        try {
+          await Asistente.crearPedido({ tipo: "incorporar_base", texto: `Incorporar ${cot.codigo} (${cot.titulo || ""}) a la base: catálogos, antecedentes y página.`, cot: S.id, files: [], mandar: true });
+          toast("Pedido mandado a Claude Code: va a actualizar catálogos y antecedentes");
+        } catch (e) { toast(e.message); }
+        break;
+      }
       case "estado-ok": {
         const d = b.dataset.v;
         if (d === "aprobado") {
@@ -1860,6 +1881,7 @@ const Asistente = (() => {
     cotizacion_nueva: "Armar una cotización nueva (plano, P&ID, pliego)",
     actualizar_cotizacion: "Completar o corregir una cotización existente",
     lista_precios: "Incorporar una lista o cotización de precios al catálogo",
+    incorporar_base: "Incorporar una cotización terminada a la base (catálogos y antecedentes)",
     otro: "Otro",
   };
   const ESTADOS_PEDIDO = { pendiente: ["pendiente", "warn"], enviado: ["enviado", "info"], en_proceso: ["en proceso", "info"], listo: ["listo", "ok"], con_dudas: ["con dudas", "warn"], error: ["error", "bad"] };
@@ -2518,7 +2540,7 @@ ${filas.join("\n") || "(ninguno)"}`.slice(0, 60000);
     }
   }
 
-  return { renderPedidos, abrirChat, TIPOS_PEDIDO, prepararArchivo };
+  return { renderPedidos, abrirChat, TIPOS_PEDIDO, prepararArchivo, crearPedido };
 })();
 if (typeof module !== "undefined") module.exports = Asistente;
 
