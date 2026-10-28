@@ -25,7 +25,10 @@
 | Catálogo de mano de obra y servicios (etapas 1 y 2) | Vigente: 562 servicios (181 precios de cotizaciones y tarifas + 467 de planillas de costo); 268 con tarifa unitaria; 5 sin precio | `precios/catalogo_servicios.*`, `herramientas/catalogo_servicios.py`, `buscar_servicio.py`, `test_catalogo_servicios.py` |
 | Auditoría del catálogo de materiales | Hecha y corregida | `auditorias/2026-10-27_catalogo_materiales.md` |
 | **Página web del cotizador** (Artifact en Claude, privada): lista de cotizaciones, buscador de materiales y servicios, calculadoras (soldadura, pintura, PH, RX), plazo, ofertas, firmantes, guardado automático con versiones, descarga en .zip o de a un archivo | Publicada el 28/10/2026; probada con la CAPEX (USD 7.620,59 en la página y en la planilla que arma) | https://claude.ai/artifact/HfbiaNvhAFkQjYwLe2kaBQ · `web/` (ver `web/LEEME.md`) |
-| Tarea semanal (lunes 7:37, hora Argentina): dólar e índices a la página y respaldo de sus cotizaciones en `cotizaciones_web/` | Creada el 28/10/2026 | `web/LEEME.md` (sección Tarea semanal) |
+| Chat con Claude en la página y Pedidos para Claude Code (subir plano, P&ID, pliego o lista; la sesión fija los procesa con `web/LEEME.md` y deja el resultado en la página) | Publicado el 28/10/2026 | `web/src/asistente.js`, `web/LEEME.md` (Pedidos desde la página) |
+| Mejoras de la página (28/10/2026): buscador general por texto y selección múltiple en los catálogos; sección Catálogos sin cotización abierta; avisos en cada renglón; filtro y orden de los ítems; deshacer y rehacer (Ctrl+Z / Ctrl+Y); vista previa de informe y ofertas; antecedentes parecidos (P8) en Resumen; versión para celular | Publicado | `web/src/` |
+| Listas de precios nuevas que llegan por pedidos | Vigente (vacío) | `precios/listas_nuevas.csv` (lo lee `catalogo_materiales.py`) |
+| Tarea semanal (lunes 7:37, hora Argentina): dólar e índices a la página, pedidos pendientes y respaldo de sus cotizaciones en `cotizaciones_web/` | Creada el 28/10/2026 | `web/LEEME.md` (sección Tarea semanal) |
 
 **Caso de prueba:** COT26-1003-001 CAPEX OQ8209 (borrador, no enviada; su estado está en su `bitacora.md` y en `cotizaciones/README.md`).
 
@@ -52,6 +55,8 @@
 | 28/10/2026 | Respuestas cortas | Matías | `CLAUDE.md` |
 | 28/10/2026 | El repositorio sigue **privado** (tiene sueldos, costos, márgenes y contactos). Para que otra persona trabaje con su agente: sumarla como colaboradora en GitHub y darle edición en la página | Recomendación aceptada | — |
 | 28/10/2026 | Integrar un chat con Claude en la página y un "Mandar a Claude Code" (desde el chat o con un botón) que procese planos, P&ID, pliegos y listas de precios sobre el repositorio y deje el resultado en borrador | Matías (idea), plan por etapas abajo | — |
+| 28/10/2026 | **Control total del chat de la página**: crea, abre, duplica y modifica cotizaciones (datos, ítems, plazo, oferta), usa las calculadoras, carga artículos y MO nuevos (con documento, proveedor y fecha; ARS al BNA del mes; IVA descontado) en `catalogo_nuevo` y descarga. Excepciones: no aprueba ni marca enviada; borrar y pasar a revisado los confirma el usuario con un botón; sin documento no carga precios | Matías ("control total") | `web/src/asistente.js`, `web/LEEME.md` |
+| 28/10/2026 | **Fechas a la vista siempre DD-MM-AAAA**; adentro AAAA-MM-DD. Aplicado en la página (también los campos de fecha se escriben DD-MM-AAAA), informe, planilla, lista para Compras, ofertas, avisos del catálogo y comparación con antecedentes | Matías | `numeros.a_vista`, `Documentos.fecha` |
 | 28/10/2026 | No hay más información de precios que la ya entregada: el último precio se sigue eligiendo por fecha (no hay otras compras para preferir sobre la lista de Renard) | Matías | — |
 
 ## 3. Pendientes del proyecto
@@ -69,9 +74,9 @@ Hecho (28/10/2026): `precotizar.py` (materiales, soldaduras, pintura, PH, RX) ·
 
 **Página web: plan por etapas** (propuesto el 28/10/2026; cada etapa se usa antes de pasar a la siguiente)
 1. **Probar la página como está:** Matías arma 2 o 3 cotizaciones reales y completa su firmante (teléfono, celular, email, imagen de la firma). Revisar la primera tarea semanal (lunes 2/11).
-2. **Subir archivos desde la página** (listas de precios, planos, P&ID, pliegos) → quedan "pendientes de procesar" en la base (`assets` + colección de pedidos); se procesan en un chat o el lunes, y en la página pasan a "incorporado" o "con dudas".
-3. **Chat en la página** (capacidad `sample`, con imágenes): ve la cotización abierta, busca en los catálogos, carga y corrige ítems, explica avisos, propone la lista de materiales desde la imagen de un plano. No toca GitHub. Usa la cuenta de quien la usa.
-4. **"Mandar a Claude Code"** (desde el chat, con confirmación, o con un botón): la página manda el pedido y el archivo a una sesión de Claude Code con el repositorio (capacidad `mcp`, conector Claude Code Remote); la sesión arma la cotización o actualiza el catálogo según el procedimiento, deja el resultado en borrador en la página y lo sube a GitHub. Estado del pedido en la página: en proceso / listo / con dudas.
+2. ~~Subir archivos desde la página~~ **Hecho (28/10/2026):** sección Pedidos. Detalle original: → quedan "pendientes de procesar" en la base (`assets` + colección de pedidos); se procesan en un chat o el lunes, y en la página pasan a "incorporado" o "con dudas".
+3. ~~Chat en la página~~ **Hecho (28/10/2026), falta que Matías lo pruebe con su cuenta** (en la prueba local se simuló Claude):: ve la cotización abierta, busca en los catálogos, carga y corrige ítems, explica avisos, propone la lista de materiales desde la imagen de un plano. No toca GitHub. Usa la cuenta de quien la usa.
+4. ~~"Mandar a Claude Code"~~ **Hecho y probado de punta a punta (28/10/2026, pedido `prueba-circuito`):**: la página manda el pedido y el archivo a una sesión de Claude Code con el repositorio (capacidad `mcp`, conector Claude Code Remote); la sesión arma la cotización o actualiza el catálogo según el procedimiento, deja el resultado en borrador en la página y lo sube a GitHub. Estado del pedido en la página: en proceso / listo / con dudas.
 5. **Sumar a otra persona:** colaboradora en GitHub + edición en la página; probar su agente con una cotización de control (CAPEX = 7.620,59). Ojo: ve todos los costos; la imagen de firma hoy solo la sube quien tiene edición.
 6. **Cierre:** ver "Al terminar el proyecto".
 

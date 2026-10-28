@@ -24,6 +24,9 @@ from docx.oxml.ns import qn
 from docx.shared import Cm, Pt, RGBColor
 from openpyxl import load_workbook
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from numeros import a_vista  # noqa: E402
+
 RAIZ = Path(__file__).resolve().parent.parent
 PLANTILLA = RAIZ / "plantillas" / "oferta_itt_2026.docx"
 AZUL = RGBColor(0x00, 0x20, 0x60)
@@ -212,12 +215,12 @@ def armar(carpeta, tipo, cfg, precios):
 
     # Tabla de revisiones y recuadro azul (está dos veces: versión nueva y alternativa del cuadro de texto)
     celdas = list(tabla_rev.iter(qn("w:tc")))
-    set_texto(celdas[3], of["revision"]), set_texto(celdas[4], of["fecha"].replace("/", "-"))
+    set_texto(celdas[3], of["revision"]), set_texto(celdas[4], a_vista(of["fecha"]))
     set_texto(celdas[5], of["descripcion_revision"])
     espacios = " " * 29
     reemplazar_parrafos(recuadro, {
         "OFERTA ECONÓMICA": titulo,
-        "Oferta:": f"Oferta: {of['numero']}{espacios}Revisión {of['revision']}{' ' * 19}Fecha {of['fecha']}",
+        "Oferta:": f"Oferta: {of['numero']}{espacios}Revisión {of['revision']}{' ' * 19}Fecha {a_vista(of['fecha'])}",
         "Cliente:": f"Cliente: {cli['nombre']}",
         "Contacto:": f"Contacto: {cli['contacto']}",
         "Referencia:": f"Referencia: {cli['referencia']}",

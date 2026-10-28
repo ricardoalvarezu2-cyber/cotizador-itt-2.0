@@ -87,6 +87,26 @@ def dolar():
     return leer(C / "costos" / "dolar_mensual.csv")[-12:]
 
 
+def antecedentes():
+    """Índice de proyectos 2025–2026 y las constantes de buscar_antecedentes.py, para comparar en la página (paso P8)."""
+    import indice_proyectos as ip
+    import buscar_antecedentes as ba
+    filas = []
+    for r in leer(C / "comercial" / "indice_proyectos.csv"):
+        rep = None
+        ficha = RAIZ / r["ficha"] if r["ficha"].endswith(".json") else None
+        if ficha and ficha.exists():
+            d = json.load(open(ficha, encoding="utf-8")).get("desglose_costo") or {}
+            m, mo, te = (d.get("materiales") or 0), (d.get("mano_obra") or 0), (d.get("terceros") or 0)
+            if m + mo + te:
+                rep = round(m / (m + mo + te), 3)
+        filas.append({"id": r["id"], "fe": r["fecha"], "cl": r["cliente"], "clf": r["cliente_final"], "fam": r["familia"], "tags": r["etiquetas"],
+                      "d": r["descripcion"][:200], "of": r["numero_oferta"], "dia": r["diametros"], "ser": r["series"], "mat": r["material"], "un": r["union"],
+                      "pu": f(r["precio_unitario_principal"]), "mon": r["moneda"], "fac": r["factor"], "plazo": r["plazo_dias"], "res": r["resultado"],
+                      "pl": bool(r["tiene_planilla_costo"]), "prov": r["proveedores"], "oc": bool(r["tiene_oc"]), "conf": r["confianza"], "w": r["palabras"], "rep": rep})
+    return {"proyectos": filas, "claves": ip.CLAVES, "familias": ip.FAMILIAS, "vacias": sorted(ip.VACIAS), "cortas": sorted(ip.CORTAS), "tamanos": ba.TAMANOS}
+
+
 def main():
     mats = []
     for r in leer(C / "precios" / "catalogo_materiales.csv"):
@@ -119,10 +139,11 @@ def main():
     acc = [{"a": r["accesorio"], "f": f(r["factor"])} for r in leer(C / "tecnico" / "factores_accesorios.csv")]
     clientes = [{"c": r["codigo"], "n": r["razon_social"]} for r in leer(C / "comercial" / "clientes.csv") if r["estado"].lower().startswith("activ")]
     fam = {k: {"n": v[0], "cols": v[1], "clave": v[2]} for k, v in FAMILIAS.items()}
+    ant = antecedentes()
     datos = {
         "generado": date.today().isoformat(),
         "materiales": mats, "servicios": srv, "indices": idx, "dolar": dol, "tarifas": tar, "soldadura": fs, "canos": canos,
-        "accesorios": acc, "clientes": clientes, "familias": fam,
+        "accesorios": acc, "clientes": clientes, "familias": fam, "antecedentes": ant,
         "plantilla_cotizacion": json.load(open(RAIZ / "cotizaciones" / "_plantilla" / "cotizacion.json", encoding="utf-8")),
         "plantilla_oferta": json.load(open(RAIZ / "cotizaciones" / "_plantilla" / "oferta.json", encoding="utf-8")),
         "logo": logo(),

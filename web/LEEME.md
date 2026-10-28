@@ -9,6 +9,7 @@
 |---|---|
 | `src/motor.js` | Cálculo de costo y precio, igual a `herramientas/armar_cotizacion.py` (control: CAPEX = USD 7.620,59). Prueba: `node web/probar_motor.js`. |
 | `src/busqueda.js` | Buscador de materiales y servicios (igual / similar), calculadora de soldaduras y avisos de control. Prueba: `node web/probar_busqueda.js`. |
+| `src/antecedentes.js` | Comparación con antecedentes (P8) en Resumen: misma puntuación que `buscar_antecedentes.py` y misma lectura que `comparar_antecedentes.py` (CAPEX: mismos 5 y mismo aviso). Datos: `datos.json` → `antecedentes`. |
 | `src/documentos.js` | Planilla de presupuesto (con fórmulas), lista para Compras, informe PDF, ofertas técnica y económica (Word con la plantilla ITT y PDF). |
 | `src/app.js`, `src/pagina.html` | Interfaz. Estética de los informes de ITT. |
 | `src/asistente.js` | Chat con Claude (herramientas: buscar, agregar, cargar, modificar y quitar ítems, ver avisos, nueva cotización, proponer pedido; lee imágenes y PDF como imágenes; deshacer) y sección **Pedidos** (subir archivos y mandarlos a Claude Code). |
@@ -24,6 +25,7 @@
 - `resumenes/<id>`: lo que muestra la lista (código, título, cliente, estado, unitario, total).
 - `firmantes/<id>`: nombre, cargo, teléfono, celular, email, `firma_asset` y `firma_url`.
 - `config/indices`: `{generado, indices, dolar}`. Si es más nuevo que `datos.json`, la página lo usa.
+- `catalogo_nuevo/<N-MAT-… o N-SRV-…>`: `{clase, registro (mismo formato que datos.json), original: {precio, moneda, iva, documento}, creado, por, incorporado?}`. Lo carga el chat (`nuevo_en_catalogo`); la página lo suma al buscador mientras no esté `incorporado`.
 - `config/claude_code`: `{session_id}` de la sesión que recibe los pedidos (si no existe, la página usa la sesión fija de abajo).
 - `pedidos/<id>`: `{tipo, texto, cotizacion_id, archivos: [{id, url, nombre, tipo, original?}], estado, nota, respuesta, resultado_cotizacion_id, creado, enviado, historial: [{fecha, estado, nota}]}`. Tipos: `cotizacion_nueva`, `actualizar_cotizacion`, `lista_precios`, `otro`. Estados: `pendiente` → `enviado` → `en_proceso` → `listo` / `con_dudas` (o `error` si no se sabe si el envío llegó).
 - Si Claude Code guarda una cotización con `"editor": "claude-code"`, la página abierta la recarga sola y avisa.
@@ -37,6 +39,7 @@ Tarea programada `trig_01FE1sHFbntc3vsLmKVYvvcD` (lunes 7:37, hora Argentina). D
 3. Respaldo: ArtifactData `list` de `cotizaciones` con `out_dir` y `python web/respaldo_base.py <out_dir>/cotizaciones`.
 4. Si cambiaron los catálogos: `python web/construir_datos.py && python web/armar_pagina.py` y republicar la página (Artifact, `url` de arriba, `files: {"datos.json": "web/datos.json"}`; leerla antes con `action: read`).
 5. Pedidos `pendiente` de la colección `pedidos`: procesarlos como dice "Pedidos desde la página".
+5b. Artículos y servicios nuevos cargados en la página (colección `catalogo_nuevo`, sin `incorporado`): materiales a `conocimiento/precios/listas_nuevas.csv` (precio y moneda de `original`, `iva` de `original.iva`, `tipo_precio` del registro, `archivo_origen` = documento, `pedido` = código N-MAT-…), servicios a `servicios_extraidos.csv`. Volver a correr `actualizar_base.py`, `construir_datos.py`, `armar_pagina.py`, republicar, y recién después marcar cada documento con `incorporado: <fecha>` (ArtifactData `update`).
 6. Commit y push a `main`.
 
 ## Pedidos desde la página

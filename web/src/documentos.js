@@ -8,6 +8,23 @@ const Documentos = (() => {
   const esc = s => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   const usd = v => "USD " + Number(v || 0).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   const num = (v, d = 2) => Number(v || 0).toLocaleString("es-AR", { minimumFractionDigits: d, maximumFractionDigits: d });
+  // Fechas a la vista: siempre DD-MM-AAAA (decisión de Matías, 28/10/2026); adentro se guardan AAAA-MM-DD. Igual que numeros.a_vista.
+  const dos = n => String(n).padStart(2, "0");
+  function fecha(v) {
+    if (v instanceof Date) return `${dos(v.getDate())}-${dos(v.getMonth() + 1)}-${v.getFullYear()}`;
+    const s = String(v ?? "").trim(); let m;
+    if ((m = s.match(/^(\d{4})-(\d{2})-(\d{2})/))) return `${m[3]}-${m[2]}-${m[1]}`;
+    if ((m = s.match(/^(\d{4})-(\d{2})$/))) return `${m[2]}-${m[1]}`;
+    if ((m = s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/))) return `${dos(m[1])}-${dos(m[2])}-${m[3]}`;
+    return s;
+  }
+  const fechaHora = v => { if (!v) return ""; const d = new Date(v); return isNaN(d) ? fecha(v) : `${fecha(d)} ${dos(d.getHours())}:${dos(d.getMinutes())}`; };
+  // DD-MM-AAAA (o DD/MM/AAAA) escrita por el usuario → AAAA-MM-DD; "" si no es una fecha válida
+  function isoDe(t) {
+    const m = String(t || "").trim().match(/^(\d{1,2})[-/.](\d{1,2})[-/.](\d{4})$/); if (!m) return "";
+    const d = new Date(+m[3], +m[2] - 1, +m[1]);
+    return d.getDate() === +m[1] && d.getMonth() === +m[2] - 1 ? `${m[3]}-${dos(m[2])}-${dos(m[1])}` : "";
+  }
   const serial = iso => { const [y, m, d] = String(iso).split("-").map(Number); return (Date.UTC(y, (m || 1) - 1, d || 1) - Date.UTC(1899, 11, 30)) / 86400000; };
   const sinHtml = s => String(s ?? "").replace(/<[^>]+>/g, "");
 
@@ -37,7 +54,7 @@ const Documentos = (() => {
 
     const ws = hoja();
     put(ws, "A1", `${cot.codigo} ${cot.revision || ""} · ${cot.titulo || ""}`, { font: { bold: true, sz: 14 } });
-    put(ws, "A2", `${cot.subtitulo_planilla || ""} · ${cot.estado} ${cot.fecha || ""}`, GRIS);
+    put(ws, "A2", `${cot.subtitulo_planilla || ""} · ${cot.estado} ${fecha(cot.fecha)}`, GRIS);
     put(ws, "A4", "PARÁMETROS (celdas amarillas editables)", { font: { bold: true } });
     [[`Cantidad de ${eq.plural}`, p.N, "0"], ["Factor de materiales (materiales y contingencia)", p.FM, "0.00"], ["Factor de mano de obra y servicios", p.FMO, "0.00"],
      ["Contingencia materiales", p.CONT / 100, "0%"], ["Incluir flete (1 = sí, 0 = no)", p.TRANS, "0"], ["Tipo de cambio ARS/USD (BNA)", p.TC, "#,##0"],
@@ -45,7 +62,7 @@ const Documentos = (() => {
       .forEach(([n, v, z], i) => { put(ws, A(1, 5 + i), n); put(ws, A(2, 5 + i), Number(v) || 0, INP, z); });
     put(ws, "G5", "AJUSTE POR INFLACIÓN (desde la fecha de cada precio hasta hoy)", { font: { bold: true } });
     put(ws, "G6", "Aplicar ajuste (1 = sí, 0 = no)"); put(ws, "H6", p.AJ ? 1 : 0, INP, "0");
-    put(ws, "G7", "Fecha de hoy (referencia)"); put(ws, "H7", serial(p.fecha_referencia), INP, "dd/mm/yyyy");
+    put(ws, "G7", "Fecha de hoy (referencia)"); put(ws, "H7", serial(p.fecha_referencia), INP, "dd-mm-yyyy");
     put(ws, "G8", "Variación 12 meses — materiales (CPI EE.UU.)"); put(ws, "H8", { f: `VLOOKUP(H7,${RNG},5,1)/VLOOKUP(EDATE(H7,-12),${RNG},5,1)-1` }, null, "0.0%");
     put(ws, "G9", "Variación 12 meses — MO y servicios (costo local en USD)"); put(ws, "H9", { f: `VLOOKUP(H7,${RNG},4,1)/VLOOKUP(EDATE(H7,-12),${RNG},4,1)-1` }, null, "0.0%");
     ["Factor de cada fila = índice del mes de hoy / índice del mes del precio (hoja Índices).", "Materiales: CPI de EE.UU. (los precios ya están en dólares).",
@@ -89,7 +106,7 @@ const Documentos = (() => {
           const c = j + 1;
           const st = c === 4 || c === 6 ? INP : c === 8 ? { fill: { fgColor: { rgb: TF[s.tipo] || "FFFFFF" } } } :
             c === 17 ? { fill: { fgColor: { rgb: { igual: "DDF1E4", similar: "FBEFD6", sin_ref: "F8E1DE" }[s.coincide] || "FFFFFF" } } } : null;
-          const z = [6, 7, 15, 16].includes(c) ? U : { 11: "dd/mm/yyyy", 13: "0.0", 14: "0.000" }[c];
+          const z = [6, 7, 15, 16].includes(c) ? U : { 11: "dd-mm-yyyy", 13: "0.0", 14: "0.000" }[c];
           put(w, A(c, i), v, st, z);
         });
       });
@@ -97,7 +114,7 @@ const Documentos = (() => {
       put(w, A(3, n), `Subtotal por ${eq.singular}`, TOT);
       put(w, A(7, n), { f: `SUM(G2:G${n - 1})` }, TOT, U); put(w, A(16, n), { f: `SUM(P2:P${n - 1})` }, TOT, U);
       let k = n + 2;
-      for (const it of items) for (const a of it.fuentes.slice(1)) put(w, A(3, k++), `Alternativa pos ${it.pos}: USD ${a.precio} · ${a.proveedor} · ${a.origen} · ${a.fecha} (${TIPOS[a.tipo]})`, GRIS);
+      for (const it of items) for (const a of it.fuentes.slice(1)) put(w, A(3, k++), `Alternativa pos ${it.pos}: USD ${a.precio} · ${a.proveedor} · ${a.origen} · ${fecha(a.fecha)} (${TIPOS[a.tipo]})`, GRIS);
       w["!autofilter"] = { ref: `A1:R${Math.max(2, n - 1)}` };
       X.utils.book_append_sheet(wb, w, nombre);
     };
@@ -109,7 +126,7 @@ const Documentos = (() => {
       [11, 13, 12, 16, 12, 40, 40, 40]);
     idx.forEach((r, k) => {
       const i = k + 2;
-      put(x, A(1, i), serial(r.mes + "-01"), null, "mm/yyyy"); put(x, A(2, i), r.ipc, null, "0.00"); put(x, A(3, i), r.dolar, null, "#,##0.00");
+      put(x, A(1, i), serial(r.mes + "-01"), null, "mm-yyyy"); put(x, A(2, i), r.ipc, null, "0.00"); put(x, A(3, i), r.dolar, null, "#,##0.00");
       put(x, A(4, i), r.local, null, "0.00"); put(x, A(5, i), r.cpi, null, "0.00"); put(x, A(6, i), r.oi); put(x, A(7, i), r.od); put(x, A(8, i), r.oc);
     });
     X.utils.book_append_sheet(wb, x, "Índices");
@@ -133,7 +150,7 @@ const Documentos = (() => {
       const filas = items.map(it => {
         const s = it.fuentes[0];
         return [it.pos, it.descripcion, it.especificacion || "", Number(it.cantidad), it.cantidad_compra ?? Number(it.cantidad) * N, it.unidad, Number(s.precio) || "",
-          `${TIPOS[s.tipo] || ""} · ${s.proveedor} · ${s.fecha}`, s.coincide === "similar" ? "Referencia de una pieza similar: " + (s.diferencia || "") : "", "", "", "", "", "", "", ""];
+          `${TIPOS[s.tipo] || ""} · ${s.proveedor} · ${fecha(s.fecha)}`, s.coincide === "similar" ? "Referencia de una pieza similar: " + (s.diferencia || "") : "", "", "", "", "", "", "", ""];
       });
       const ws = X.utils.aoa_to_sheet([[titulo], [], cols, ...filas]);
       cols.forEach((c, i) => { const a = X.utils.encode_cell({ r: 2, c: i }); ws[a].s = i >= 9 ? AM : H; });
@@ -186,14 +203,14 @@ const Documentos = (() => {
       const cl = s.coincide === "igual" ? "ok" : s.coincide === "similar" ? "warn" : "bad";
       return `<tr><td>${esc(it.pos)}</td><td><b>${esc(it.descripcion)}</b><br><span class="muted">${esc(it.especificacion || "")}</span></td>
         <td class="n">${num(it.cantidad, it.cantidad % 1 ? 2 : 0)} ${esc(it.unidad)}</td><td class="n">${num(s.precio)}</td><td class="n">${num(f.factor, 3)}</td><td class="n">${num(f.ajustado)}</td>
-        <td>${esc(TIPOS[s.tipo] || s.tipo)} · ${esc(s.proveedor)}<br><span class="muted">${esc(s.origen || "")} · ${esc(s.fecha)}</span></td>
+        <td>${esc(TIPOS[s.tipo] || s.tipo)} · ${esc(s.proveedor)}<br><span class="muted">${esc(s.origen || "")} · ${esc(fecha(s.fecha))}</span></td>
         <td><span class="pill ${cl}">${COINC[s.coincide] || ""}</span>${s.diferencia ? "<br><span class='muted'>" + esc(s.diferencia) + "</span>" : ""}</td></tr>`;
     };
     const tabla = items => `<table><thead><tr><th>Pos</th><th>Ítem</th><th class="n">Cant.</th><th class="n">USD unit.</th><th class="n">Ajuste</th><th class="n">USD ajustado</th><th>Fuente y fecha</th><th>Coincidencia</th></tr></thead><tbody>${items.map(fila).join("")}</tbody></table>`;
     const p = cot.parametros;
     return `<div class="doc">${CSS_PDF}
       <div class="cab"><div><img src="${logo}" style="height:42px"><h1>${esc(cot.codigo)} ${esc(cot.revision || "")}</h1><div>${esc(cot.titulo || "")}</div>
-        <div class="muted">Cliente: ${esc(cot.cliente?.nombre || "")} · Comprador: ${esc(cot.cliente?.comprador || "")} · Fecha de referencia: ${esc(p.fecha_referencia)} · Estado: ${esc(cot.estado)}</div></div><div>${marca}</div></div>
+        <div class="muted">Cliente: ${esc(cot.cliente?.nombre || "")} · Comprador: ${esc(cot.cliente?.comprador || "")} · Fecha de referencia: ${esc(fecha(p.fecha_referencia))} · Estado: ${esc(cot.estado)}</div></div><div>${marca}</div></div>
       <h2>Resumen (USD sin IVA)</h2>
       <div class="tot"><div>Costo / ${esc(eq.singular)}<b>${usd(calc.costo)}</b></div><div>Precio unitario<b>${usd(calc.precio_unitario)}</b></div>
         <div>Cantidad<b>${num(p.N, 0)} ${esc(eq.plural)}</b></div><div>Total de la oferta<b>${usd(calc.total)}</b></div></div>
@@ -203,7 +220,7 @@ const Documentos = (() => {
         <tr><td>Mano de obra</td><td class="n">${usd(calc.sub.mo)}</td><td class="n">factor ${p.FMO}</td></tr>
         <tr><td>Servicios e insumos</td><td class="n">${usd(calc.sub.servicio)}</td><td class="n">factor ${p.FMO}</td></tr>
         <tr><td>Flete + embalaje</td><td class="n">${usd(calc.flete)}</td><td class="n">${p.TRANS ? "incluido" : "no incluido (EXW Quilmes Oeste)"}</td></tr>
-        <tr><td>Ajuste por inflación incluido</td><td class="n">${usd(calc.costo - calc.costo0)}</td><td class="n">${p.AJ ? "aplicado hasta " + esc(p.fecha_referencia) : "sin ajuste"}</td></tr>
+        <tr><td>Ajuste por inflación incluido</td><td class="n">${usd(calc.costo - calc.costo0)}</td><td class="n">${p.AJ ? "aplicado hasta " + esc(fecha(p.fecha_referencia)) : "sin ajuste"}</td></tr>
       </tbody></table>
       <h2>Materiales</h2>${tabla(cot.items.filter(i => i.grupo === "material"))}
       <h2>Mano de obra y servicios</h2>${tabla(cot.items.filter(i => i.grupo !== "material"))}
@@ -212,7 +229,7 @@ const Documentos = (() => {
       <p class="muted">Precios sin IVA. Pesos convertidos con el promedio mensual del dólar oficial BNA venta. Materiales ajustados con el CPI de EE.UU.; mano de obra y servicios con el costo local en dólares (IPC ÷ dólar).</p>
       <div class="firma nobreak">Preparó: <b>${esc(firmante?.nombre || cot.preparo || "")}</b> ${esc(firmante?.cargo || "")}
         ${firmante?.telefono ? "<span>Tel.: " + esc(firmante.telefono) + "</span>" : ""}${firmante?.email ? "<span>" + esc(firmante.email) + "</span>" : ""}
-        ${firmaUrl && cot.estado === "aprobado" ? `<img src="${firmaUrl}">` : ""}<span class="muted">Generado el ${new Date().toLocaleDateString("es-AR")}</span></div></div>`;
+        ${firmaUrl && cot.estado === "aprobado" ? `<img src="${firmaUrl}">` : ""}<span class="muted">Generado el ${fecha(new Date())}</span></div></div>`;
   }
 
   // ------------------------------------------------------------------ Ofertas (Word con la plantilla de ITT)
@@ -322,11 +339,11 @@ const Documentos = (() => {
     const tbl = body.getElementsByTagNameNS(W, "tbl")[0];
     const celdas = Array.from(tbl.getElementsByTagNameNS(W, "tc"));
     const setCelda = (i, v) => { const pp = celdas[i].getElementsByTagNameNS(W, "p")[0]; if (pp) setTexto(pp, v); };
-    setCelda(3, of.oferta.revision); setCelda(4, (of.oferta.fecha || "").replace(/\//g, "-")); setCelda(5, of.oferta.descripcion_revision);
+    setCelda(3, of.oferta.revision); setCelda(4, fecha(of.oferta.fecha)); setCelda(5, of.oferta.descripcion_revision);
     const cli = of.cliente || {};
     reemplazar(body, {
       "OFERTA ECONÓMICA": titulo,
-      "Oferta:": `Oferta: ${of.oferta.numero}${" ".repeat(29)}Revisión ${of.oferta.revision}${" ".repeat(19)}Fecha ${of.oferta.fecha}`,
+      "Oferta:": `Oferta: ${of.oferta.numero}${" ".repeat(29)}Revisión ${of.oferta.revision}${" ".repeat(19)}Fecha ${fecha(of.oferta.fecha)}`,
       "Cliente:": `Cliente: ${cli.nombre || ""}`, "Contacto:": `Contacto: ${cli.contacto || ""}`, "Referencia:": `Referencia: ${cli.referencia || ""}`,
       "Proyecto:": `Proyecto: ${cli.proyecto || ""}`, "ITT S.A.:": `ITT S.A.: ${firmante?.nombre || ""}`,
       "Agradecemos su pedido": "Agradecemos su pedido y nos complace presentarles nuestra mejor propuesta " + (tipo === "tecnica" ? "Técnica" : "Económica") + " para la provisión de la referencia solicitada.",
@@ -392,7 +409,7 @@ const Documentos = (() => {
     }
     return `<div class="doc of">${CSS_PDF}
       <div style="display:flex;justify-content:space-between;align-items:center"><img src="${logo}" style="height:46px">${aprobado ? "" : '<span class="marca">BORRADOR – SIN REVISAR – NO ENVIAR</span>'}</div>
-      <div class="of-caja"><b>${tipo === "tecnica" ? "OFERTA TÉCNICA" : "OFERTA ECONÓMICA"}</b><br>Oferta: ${esc(of.oferta.numero)} · Revisión ${esc(of.oferta.revision)} · Fecha ${esc(of.oferta.fecha)}<br>
+      <div class="of-caja"><b>${tipo === "tecnica" ? "OFERTA TÉCNICA" : "OFERTA ECONÓMICA"}</b><br>Oferta: ${esc(of.oferta.numero)} · Revisión ${esc(of.oferta.revision)} · Fecha ${esc(fecha(of.oferta.fecha))}<br>
         Cliente: ${esc(cli.nombre)}<br>Contacto: ${esc(cli.contacto)}<br>Referencia: ${esc(cli.referencia)}<br>Proyecto: ${esc(cli.proyecto)}<br>ITT S.A.: ${esc(firmante?.nombre || "")}</div>
       <p>De nuestra consideración:</p><p>Agradecemos su pedido y nos complace presentarles nuestra mejor propuesta ${tipo === "tecnica" ? "Técnica" : "Económica"} para la provisión de la referencia solicitada.</p>
       <p>Sin otro particular, los saludamos atentamente.</p>${cuerpo}
@@ -400,6 +417,6 @@ const Documentos = (() => {
         ${firmante?.telefono ? `<span>☎ ${esc(firmante.telefono)}</span>` : ""}${firmante?.celular ? `<span>📱 ${esc(firmante.celular)}</span>` : ""}${firmante?.email ? `<span>${esc(firmante.email)}</span>` : ""}</div></div>`;
   }
 
-  return { planilla, compras, informeHtml, pdfDeHtml, ofertaDocx, ofertaHtml, usd, num, esc, TIPOS, COINC };
+  return { fecha, fechaHora, isoDe, planilla, compras, informeHtml, pdfDeHtml, ofertaDocx, ofertaHtml, usd, num, esc, TIPOS, COINC };
 })();
 if (typeof module !== "undefined") module.exports = Documentos;

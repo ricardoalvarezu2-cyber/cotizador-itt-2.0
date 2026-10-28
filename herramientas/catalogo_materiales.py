@@ -35,7 +35,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from indice_proyectos import frac, norm, diametros, pulgadas, series  # noqa: E402
-from numeros import fecha_iso, leer_numero  # noqa: E402
+from numeros import a_vista, fecha_iso, leer_numero  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
 COMPRA_VIGENTE = "2022-01-01"
@@ -69,7 +69,7 @@ def factor_cepo(fecha, tipo_precio=""):
     b = _brecha().get((fecha or "")[:7])
     if b is None:
         return None, "sin dólar blue para ese mes"
-    return b, f"llevado a dólar blue: × {b:.3f} (oficial ÷ blue de {fecha[:7]})"
+    return b, f"llevado a dólar blue: × {b:.3f} (oficial ÷ blue de {a_vista(fecha[:7])})"
 PRECIOS = RAIZ / "conocimiento" / "precios"
 TEXTOS = RAIZ / "fuentes_originales" / "ofertas_texto"
 Z = "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\"
@@ -668,7 +668,7 @@ def main():
         u = buenos[0] if buenos else hs[0]
         precios = [h["precio_usd"] for h in (buenos or hs)]
         if not buenos:
-            alertas.append(f"sin precio confiable (solo valores del período con cepo; referencia descartada USD {hs[0]['precio_usd']:,.2f} del {hs[0]['fecha']}): pedir cotización")
+            alertas.append(f"sin precio confiable (solo valores del período con cepo; referencia descartada USD {hs[0]['precio_usd']:,.2f} del {a_vista(hs[0]['fecha'])}): pedir cotización")
         if max(precios) > 3 * min(precios):
             alertas.append(f"historial con precios muy distintos ({min(precios):,.2f} a {max(precios):,.2f}): revisar")
         par = sorted(pares[(u["familia"], u["atributos"].get("tipo", ""), u["atributos"].get("diametro", ""), u["unidad"])])
