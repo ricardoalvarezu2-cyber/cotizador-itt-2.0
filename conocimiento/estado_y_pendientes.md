@@ -52,7 +52,7 @@
 1. Catálogo de MO y servicios etapa 1 (en curso; si no está en `precios/catalogo_servicios.*`, relanzar con `herramientas/catalogo_servicios_instrucciones.md`).
 2. Etapa 2 de los catálogos: costos renglón por renglón de las planillas de costo 2025–2026 (materiales, MO y servicios).
 3. Revisión independiente de los pesos de bridas y accesorios.
-4. Vendor lists de PAE (A7XN-RC-85-SP-0027_R1), Pampa y Pluspetrol (AARC-100-ET-X-001): buscar en el RAR de la Tanda 1.
+4. ~~Vendor lists en el RAR de la Tanda 1~~ **No están** (revisado el 28/10/2026: la Tanda 1 solo trae las listas de YPF, ya cargadas; de PAE, Pampa y Pluspetrol solo hay referencias). Quedan en la carpeta completa `Z:\VENTAS\OFERTAS Y LICITACIONES` (1.Documentación de la licitación) o hay que pedirlas al cliente cuando se cotice para ellos.
 5. Integrar en `armar_cotizacion.py` las tablas nuevas: plazos (camino crítico), pesos (kg y m²), marcas (control del pliego).
 
 **Al terminar el proyecto** (decisión de Matías)
