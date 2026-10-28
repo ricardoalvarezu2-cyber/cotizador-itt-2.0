@@ -5,8 +5,9 @@ Uso: python herramientas/controles_tablas.py cotizaciones/<carpeta>
 
 Genera <carpeta>/controles_tablas.md y avisa en pantalla. No cambia precios: es información para revisar.
 1. Kilos y m² (por equipo): caños y niples con conocimiento/tecnico/canos_peso_superficie.csv (calculado, ASME B36.10);
-   bridas y accesorios con bridas_peso.csv y accesorios_peso.csv (borrador). Sirve para flete, galvanizado, fabricación
-   por kg y m² de pintura. Lo que no tiene tabla (válvulas, instrumentos, juntas) queda "sin dato".
+   bridas y accesorios con bridas_peso.csv y accesorios_peso.csv (borrador); válvulas con valvulas_peso.csv (Taval Lista 30).
+   Sirve para flete, galvanizado, fabricación por kg y m² de pintura. Lo que no tiene tabla (instrumentos, juntas, válvulas
+   de otros tipos) queda "sin dato".
 2. Plazos: por cada material, el plazo típico y máximo de su rubro en conocimiento/comercial/plazos_proveedores.csv.
    Avisa si el plazo típico (sin stock) de algún rubro supera el plazo ofrecido.
 3. Marcas: si el cliente (o el cliente final) tiene marcas en conocimiento/comercial/marcas_aprobadas.csv, lista las del
@@ -49,7 +50,60 @@ def sch_tabla(sch, dn):
     return s
 
 
-def peso_item(it, at, fam, canos, bridas, acc):
+def peso_valvula(it, at, valv):
+    """Peso de una válvula con valvulas_peso.csv (Taval Lista 30, 09-2025). (kg, None, fuente) o (None, None, motivo)."""
+    dn, serie = pulg(at.get("diametro", "")), re.sub(r"\D", "", str(at.get("serie", "")))
+    t = norm(f"{it['descripcion']} {it.get('especificacion', '')} {at.get('tipo', '')}")
+    mat = norm(at.get("material", "") + " " + t)
+    ext = norm(at.get("extremos", "") + " " + t)
+    roscada = bool(re.search(r"\bnpt\b|\bsw\b|rosca|socket", ext)) and not re.search(r"\brf\b|\brtj\b|brid", ext)
+    if not dn or not serie:
+        return None, None, "válvula sin diámetro o serie"
+    # el cuerpo manda: "A216 / AISI 316" es cuerpo de carbono con trim inoxidable
+    inox = bool(re.search(r"316|304|cf8m|inox", mat)) and not re.search(r"a ?216|wcb|a ?105|carbono", mat)
+    supuestos, cand = [], []
+    def buscar(tipos, ser=serie, mats=None):
+        return [r for r in valv if r["tipo"] in tipos and r["serie"] == ser and abs(float(r["dn_pulg"]) - dn) < 0.01
+                and (mats is None or r["material"] in mats) and not r["nota"].startswith("pesa menos")]
+    if "esferica" in t:
+        if roscada:
+            forjada = bool(re.search(r"a ?105|f ?316|f ?304|forjad", mat)) and not re.search(r"a ?216|wcb|cf8m|fundid", mat)
+            tipo = "ESFERICA PT FLOTANTE " + ("FORJADA" if forjada else "FUNDIDA") + " NPT (API 608)"
+            mats = (["F316"] if inox else ["A105"]) if forjada else (["CF8M"] if inox else ["WCB"])
+            cand = buscar([tipo], mats=mats) or buscar([tipo])
+            if not forjada and not re.search(r"a ?216|wcb|cf8m|fundid", mat):
+                supuestos.append("cuerpo fundido supuesto")
+        else:
+            pr = bool(re.search(r"paso reducido|\bpr\b", t))
+            base = "ESFERICA PR" if pr else "ESFERICA PT"
+            cand = buscar([base + " FLOTANTE"]) or buscar([base + " GUIADA"])
+            if cand:
+                supuestos.append(("paso reducido" if pr else "paso total") + ", " + ("flotante" if "FLOTANTE" in cand[0]["tipo"] else "guiada") + " supuesto")
+    elif "retencion" in t:
+        if re.search(r"wafer|dual", t):
+            cand = buscar(["RETENCION WAFER DUAL PLATE"])
+        elif roscada and dn <= 2:
+            return None, None, "retención roscada: sin tabla"
+        else:
+            cand = buscar(["RETENCION A CLAPETA"])
+    elif re.search(r"esclusa|compuerta|\bgate\b", t):
+        cand = buscar(["ESCLUSA API 602"]) if roscada and dn <= 2 else buscar(["ESCLUSA"])
+    elif "globo" in t:
+        cand = buscar(["GLOBO API 602"]) if roscada and dn <= 2 else buscar(["GLOBO"])
+    elif "filtro" in t and re.search(r"\by\b|tipo y", t):
+        cand = buscar(["FILTRO Y"])
+    else:
+        return None, None, "válvula de otro tipo: sin tabla"
+    if not cand:
+        return None, None, f"sin peso en la lista Taval para {dn:g}\" #{serie}"
+    r = cand[0]
+    if inox and r["material"] not in ("F316", "CF8M"):
+        supuestos.append("peso del modelo en acero al carbono")
+    return float(r["kg"]), None, (f"{r['tipo'].lower()} {dn:g}\" #{serie} (Taval Lista 30, {r['hoja']} {r['celda']}"
+                                  + (f"; {', '.join(supuestos)}" if supuestos else "") + ")")
+
+
+def peso_item(it, at, fam, canos, bridas, acc, valv=()):
     """(kg por unidad o por metro, m² por unidad o por metro, fuente) o (None, None, motivo)."""
     dn = pulg(at.get("diametro", ""))
     sch = at.get("schedule", "")
@@ -94,7 +148,9 @@ def peso_item(it, at, fam, canos, bridas, acc):
         if cand:
             return float(cand[0]["peso_kg"]), None, f"{tipo} {dn:g}\" {clase} {ext} ({cand[0]['norma']}, borrador)"
         return None, None, f"sin tabla para {t} {dn:g}\" {clase}"
-    return None, None, "sin tabla (válvula, instrumento, junta u otro)"
+    if fam == "VAL":
+        return peso_valvula(it, at, valv)
+    return None, None, "sin tabla (instrumento, junta u otro)"
 
 
 RUBRO_PLAZO = [("VAL", "esferica", "válvula esférica"), ("VAL", "retencion", "retención"), ("VAL", "aguja", "aguja/bloqueo y purga"),
@@ -115,6 +171,7 @@ def main(carpeta):
     carpeta = Path(carpeta)
     c = json.load(open(carpeta / "cotizacion.json", encoding="utf-8"))
     canos, bridas, acc = leer(TEC / "canos_peso_superficie.csv"), leer(TEC / "bridas_peso.csv"), leer(TEC / "accesorios_peso.csv")
+    valv = leer(TEC / "valvulas_peso.csv")
     plazos, marcas = leer(COM / "plazos_proveedores.csv"), leer(COM / "marcas_aprobadas.csv")
     cli = norm(" ".join([c["cliente"].get("nombre", ""), c["cliente"].get("cliente_final", ""), c.get("titulo", "")]))
     marcas_cli = [m for m in marcas if norm(re.split(r"[ (]", m["cliente"])[0]) in cli]
@@ -130,7 +187,7 @@ def main(carpeta):
         fam = familia_de(d)  # la familia sale de la descripción; la especificación puede nombrar otras piezas
         fam = familia_de(t) if fam == "OTR" else fam
         at = {**atributos(t, fam), **atributos(d, fam)}
-        kg, m2, fuente = peso_item(it, at, fam, canos, bridas, acc)
+        kg, m2, fuente = peso_item(it, at, fam, canos, bridas, acc, valv)
         if kg is None:
             sin_peso.append(f"{it['pos']} {it['descripcion'][:50]} ({fuente})")
         else:

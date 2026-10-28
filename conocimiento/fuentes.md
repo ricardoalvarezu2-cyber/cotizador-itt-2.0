@@ -107,6 +107,10 @@ Resultado: catálogo de materiales con 1.005 precios ESTIMADOS del cepo y 132 si
 
 Extraídas con IA por 3 subagentes (`herramientas/etapa2_planillas_instrucciones.md`) y unidas con `herramientas/unir_planillas_costo.py`. Criterios: los números de esos textos vienen de Excel y el punto es decimal ("131.131" = USD 131,13, no 131.131); entran a los catálogos solo los renglones con costo > 0, que no son subtotales, ni estimados, ni de lectura con confianza baja. Ninguna planilla declara el tipo de cambio (salvo 10 renglones de horas extra de Pampa), así que las de antes del 14/04/2025 quedan descartadas por la regla del cepo. Muestra de 12 renglones verificada contra los originales (12/12).
 
+## Peso de válvulas (28-10-2026)
+
+Fuente: `fuentes_originales/taval_lista30_2025-09.xlsx` (Lista 30 de Taval, columna "Kg"), descifrada con `codificador_taval_2023-07.xlsx`. Tabla: `conocimiento/tecnico/valvulas_peso.csv` (`herramientas/pesos_valvulas.py`). Criterios en `tecnico/pesos_LEEME.md`.
+
 ## Faltantes conocidos
 
 1. **Plazos:** cubierto en parte con el seguimiento de proyectos (ver `plazos.md`). Faltan plazos de proveedores actualizados por rubro.
