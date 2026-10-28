@@ -419,6 +419,7 @@
     const dns = [...new Set(S.datos.soldadura.map(r => r.dn))].sort((a, b) => a - b);
     const schs = ["10", "20", "30", "40", "STD", "60", "80", "XS", "100", "120", "140", "160", "XXS"];
     return `<section><div class="sec-head"><h2>Mano de obra y servicios</h2><button data-a="manual" data-g="servicio">Cargar a mano</button></div>${tablaItems(false)}</section>
+      ${panelRubros()}
       <section class="panel"><h3>1. Soldaduras</h3><p class="small muted">Juntas por diámetro y schedule, derivadas de la columna de extremos del plano (BW se suman de a dos extremos; SW, cuplas y olets, una junta cada una).</p>
         <div class="tbl"><table><thead><tr><th>Ø</th><th>Sch</th><th class="n">Juntas BW</th><th class="n">Juntas SW</th><th class="n">Cuplas / olets</th><th>Tipo olet</th><th></th></tr></thead><tbody>
         ${S.sold.map((r, i) => `<tr><td><select id="sd-${i}" data-sold="${i}" data-c="dn">${dns.map(d => `<option ${String(d) === String(r.dn) ? "selected" : ""}>${d}</option>`).join("")}</select></td>
@@ -443,6 +444,62 @@
           <label class="ancho"><span>Tarifa de pintura (USD/m², sin IVA)</span><select id="pin-t">${pins.map(s => `<option value="${E(s.c)}">${num(s.t)} · ${E(s.s.slice(0, 60))} · ${E(s.pr.slice(0, 30))} · ${E(F(s.fe))}</option>`).join("")}</select></label></div>
         <div class="fila"><button data-a="pin-agregar">Agregar pintura</button><button class="chico" data-a="pin-calc">Calcular m² de los caños cargados</button></div></section></div>
       ${buscadorSrv()}`;
+  }
+  // Detallado o global por rubro (Rubros, rubros.js): la ficha junta los datos para pedir el global al tercero y controlarlo
+  function panelRubros() {
+    const cot = S.doc.cot, f = Rubros.ficha(cot, S.datos, S.sold, Motor), eq = E(cot.equipo?.singular || "equipo");
+    const origen = f.aproximada ? "Ficha aproximada de la página (sin la tabla del plano: faltan juntas y placas; la completa la arma Claude Code con el plano)."
+      : `Ficha calculada con la tabla del plano el ${E(F(f.generada))}. Si cambiaste materiales después, pedí que la rearmen.`;
+    const tarjeta = r => {
+      const [nombre] = Rubros.RUBROS[r], glob = Rubros.modo(cot, r) === "global", g = Rubros.globalDe(cot, r), s = g?.fuentes[0], tr = r === "transporte";
+      return `<div class="panel rubro"><div class="sec-head"><h3>${E(nombre)}</h3><div class="estados" role="group" aria-label="Modo de ${E(nombre)}">
+          <button class="chico" data-a="rubro-modo" data-r="${r}" data-v="detallado" aria-pressed="${!glob}">${tr ? "Sin precio (EXW)" : "Detallado"}</button>
+          <button class="chico" data-a="rubro-modo" data-r="${r}" data-v="global" aria-pressed="${glob}">Global</button></div></div>
+        ${tr ? `<div class="campos">${campo("Largo (m)", "cot.transporte.largo_m", "number")}${campo("Ancho (m)", "cot.transporte.ancho_m", "number")}${campo("Alto (m)", "cot.transporte.alto_m", "number")}${campo("Destino", "cot.transporte.destino")}</div>` : ""}
+        <div id="rd-${r}">${fichaRubro(f, r)}</div>
+        ${glob ? `<div class="campos">
+          ${tr ? `<label><span>USD por viaje (sin IVA)</span><input id="gv-${r}" type="text" inputmode="decimal" class="num" data-glob="${r}" data-c="viaje" value="${NI(g.viaje_usd ?? "")}"></label>`
+               : `<label><span>Precio global USD por ${eq} (sin IVA)</span><input id="gp-${r}" type="text" inputmode="decimal" class="num" data-glob="${r}" data-c="precio" value="${NI(s.precio)}"></label>`}
+          <label><span>Proveedor</span><input id="gr-${r}" data-glob="${r}" data-c="proveedor" value="${E(s.proveedor)}"></label>
+          <label><span>Fecha de la cotización</span><input id="gf-${r}" data-glob="${r}" data-c="fecha" type="text" inputmode="numeric" placeholder="DD-MM-AAAA" value="${E(F(s.fecha))}"></label>
+          <label class="ancho"><span>Documento (cotización, mail, archivo)</span><input id="go-${r}" data-glob="${r}" data-c="origen" value="${E(s.origen)}"></label></div>
+          <p class="small" id="rg-${r}">${globalRubro(f, r)}</p>` : ""}
+        <div class="fila"><button class="chico" data-a="ficha-copiar" data-r="${r}">Copiar ficha</button><button class="chico" data-a="ficha-bajar" data-r="${r}" ${S.dl ? "" : "disabled"}>Descargar ficha (.txt)</button></div></div>`;
+    };
+    return `<section><div class="sec-head"><h2>Cotizar por rubro: detallado o global</h2><span class="eyebrow">todo por ${eq} · la cantidad multiplica al final</span></div>
+      <p class="small muted">Detallado: como hasta ahora. Global: un solo precio del tercero por rubro; los renglones detallados quedan guardados y vuelven al pasar a detallado. ${origen}</p>
+      <div class="grid-rubros">${Object.keys(Rubros.RUBROS).map(tarjeta).join("")}</div></section>`;
+  }
+  const uniRubro = (f, r, usd) => Rubros.unitarios(f, r, usd).map(([u, x]) => `USD ${num(x)}/${E(u)}`).join(" · ");
+  function fichaRubro(f, r) {
+    const ref = f.referencias[r], glob = ref.modo === "global", eq = E(S.doc.cot.equipo?.singular || "equipo");
+    const v = x => x == null || x === "" ? '<span class="muted">—</span>' : typeof x === "number" ? num(x, Number.isInteger(x) ? 0 : 2) : E(x);
+    return `<table class="ficha"><tbody>${Rubros.datosDe(f, r).map(([e, x, u]) => `<tr><td>${E(e)}</td><td${typeof x === "number" ? ' class="n"' : ""}>${v(x)}${u && x != null ? " " + E(u) : ""}</td></tr>`).join("")}</tbody></table>
+      ${(f[r].avisos || []).map(a => `<div class="small warn">⚠ ${E(a)}</div>`).join("")}
+      ${r === "transporte" ? "" : `<p class="small">Cálculo detallado: <b>USD ${num(ref.detallado_usd)}</b> por ${eq} (${ref.renglones_detalle} renglón/es${glob ? ", guardados" : ""})${ref.detallado_usd ? " · " + uniRubro(f, r, ref.detallado_usd) : ""}</p>`}`;
+  }
+  function globalRubro(f, r) {
+    const ref = f.referencias[r], g = Rubros.globalDe(S.doc.cot, r); if (!g) return "";
+    const p = g.fuentes[0].precio, dif = p && ref.detallado_usd ? p / ref.detallado_usd - 1 : 0, eq = E(S.doc.cot.equipo?.singular || "equipo");
+    return (p ? `Global: <b>USD ${num(p)}</b> por ${eq} · ${uniRubro(f, r, p)}` : '<span class="err">SIN PRECIO: pedí la cotización con la ficha.</span>')
+      + (p && (/^A cotizar/.test(g.fuentes[0].proveedor) || /^ficha_rubros/.test(g.fuentes[0].origen)) ? '<br><span class="warn">⚠ Cargá el proveedor y el documento de la cotización.</span>' : "")
+      + (r !== "transporte" && Math.abs(dif) > 0.15 ? `<br><span class="warn">⚠ El global se aparta ${num(dif * 100, 0)}% del cálculo detallado: revisar alcance.</span>` : "");
+  }
+  // Transporte global: USD por viaje ÷ equipos por camión (se recalcula si cambian las medidas)
+  function precioTransporte() {
+    const g = Rubros.globalDe(S.doc.cot, "transporte"); if (!g || g.viaje_usd == null) return;
+    const t = Rubros.ficha(S.doc.cot, S.datos, S.sold, Motor).transporte, n = t.por_camion || 1;
+    g.fuentes[0].precio = Math.round(g.viaje_usd / n * 100) / 100;
+    g.especificacion = `USD ${num(g.viaje_usd)} por viaje ÷ ${n} ${S.doc.cot.equipo?.plural || "equipos"} por camión${t.destino ? " · " + t.destino : ""}`;
+  }
+  // Actualiza fichas y resultados sin redibujar la pestaña (así no se pierde el clic en el botón siguiente)
+  function pintarRubros() {
+    const f = Rubros.ficha(S.doc.cot, S.datos, S.sold, Motor);
+    for (const r of Object.keys(Rubros.RUBROS)) {
+      const d = document.getElementById("rd-" + r), g = document.getElementById("rg-" + r);
+      if (d) d.innerHTML = fichaRubro(f, r);
+      if (g) g.innerHTML = globalRubro(f, r);
+    }
   }
   function buscadorSrv() {
     const hojas = [...new Set(S.datos.servicios.map(s => s.h))];
@@ -648,7 +705,7 @@
   // ------------------------------------------------------------------ eventos
   app.addEventListener("input", ev => {
     const el = ev.target;
-    if (bloqueada() && (el.dataset.b || el.dataset.bl || el.dataset.it || el.dataset.ta !== undefined)) {
+    if (bloqueada() && (el.dataset.b || el.dataset.bl || el.dataset.it || el.dataset.glob || el.dataset.ta !== undefined)) {
       toast(`La cotización está ${S.doc.cot.estado}: para cambiarla, volvé a borrador.`); render(); return;
     }
     if (el.dataset.b && S.doc) {
@@ -657,6 +714,7 @@
       if (el.dataset.t === "number") { v = v.trim() === "" ? (el.dataset.b === "cot.parametros.FTV" ? 1 : 0) : NUM(v); el.classList.toggle("mal", v == null); if (v == null) return; }
       ponerRuta(S.doc, el.dataset.b, v);
       if (el.dataset.b === "cot.estado") S.doc.oferta.estado = v;
+      if (el.dataset.b.startsWith("cot.transporte")) { precioTransporte(); pintarRubros(); }
       refrescar(); guardarPronto();
       if (el.tagName === "SELECT" || el.dataset.b.startsWith("cot.plazo")) { if (el.tagName === "SELECT" || ev.type === "change") render(); }
     } else if (el.dataset.bl && S.doc) {
@@ -692,6 +750,16 @@
       $("#rx-info").textContent = `Usa las juntas a tope de Soldaduras: ${sol.placas_chicas} placas chicas y ${sol.placas_grandes} grandes al 100%.`;
       document.querySelector('[data-a="sold-agregar"]').disabled = !(sol.pulg && t);
       document.querySelector('[data-a="rx-agregar"]').disabled = !(sol.placas_chicas + sol.placas_grandes);
+    } else if (el.dataset.glob && S.doc) {
+      const r = el.dataset.glob, g = Rubros.globalDe(S.doc.cot, r); if (!g) return;
+      const src = g.fuentes[0], c = el.dataset.c;
+      if (c === "precio" || c === "viaje") {
+        const v = el.value.trim() === "" ? 0 : NUM(el.value); el.classList.toggle("mal", v == null || v < 0); if (v == null || v < 0) return;
+        if (c === "viaje") { g.viaje_usd = v; precioTransporte(); } else src.precio = v;
+      } else if (c === "fecha") { const v = Documentos.isoDe(el.value); el.classList.toggle("mal", !v); if (!v) return; src.fecha = v; }
+      else src[c] = el.value;
+      if ((c === "precio" || c === "viaje") && src.precio && src.tipo === "est" && /^SIN PRECIO/.test(src.diferencia || "")) { src.tipo = "cot"; src.diferencia = ""; }
+      refrescar(); pintarRubros(); guardarPronto();
     } else if (el.dataset.ta !== undefined) {
       const t = S.doc.cot.plazo.tareas[+el.dataset.ta], c = +el.dataset.c;
       t[c] = c === 1 || c === 2 ? NUM(el.value) || 0 : el.value; guardarPronto();
@@ -736,7 +804,7 @@
 
   // Acciones que cambian la cotización: no se permiten si está aprobada o enviada (hay que volver a borrador)
   const CAMBIAN = new Set(["quitar", "editar", "manual", "item-guardar", "agregar-mat", "agregar-srv", "agregar-sel", "sold-agregar", "rx-agregar", "pin-agregar",
-    "ph-agregar", "tarea-nueva", "tarea-quitar", "restaurar", "deshacer", "rehacer"]);
+    "ph-agregar", "rubro-modo", "tarea-nueva", "tarea-quitar", "restaurar", "deshacer", "rehacer"]);
   const bloqueada = () => S.doc && ["aprobado", "enviado"].includes(S.doc.cot.estado);
   async function accion(a, b) {
     const cot = S.doc?.cot;
@@ -815,6 +883,18 @@
         const m2 = NUM($("#pin-m2").value);
         if (!m2 || !$("#pin-t").value) { toast("Cargá los m² y elegí la tarifa"); return; }
         agregarPintura(m2, $("#pin-t").value); guardarPronto(); render(); toast("Pintura agregada"); break;
+      }
+      case "rubro-modo": {
+        const r = b.dataset.r;
+        if (b.dataset.v === "global") { if (!Rubros.pasarAGlobal(cot, r, hoy())) return; toast(`${Rubros.RUBROS[r][0]}: global. Cargá el precio del tercero.`); }
+        else { Rubros.volverADetallado(cot, r); toast(`${Rubros.RUBROS[r][0]}: detallado`); }
+        guardarPronto(); render(); break;
+      }
+      case "ficha-copiar": case "ficha-bajar": {
+        const r = b.dataset.r, t = Rubros.texto(cot, Rubros.ficha(cot, S.datos, S.sold, Motor), r, num);
+        if (a === "ficha-copiar") { await navigator.clipboard.writeText(t); toast("Ficha copiada"); }
+        else await S.dl.save({ filename: `${base()} - ficha ${r}.txt`, data: new Blob(["\ufeff" + t], { type: "text/plain;charset=utf-8" }) });
+        break;
       }
       case "ph-agregar": agregarPH(NUM($("#ph-h").value) || 6); guardarPronto(); render(); toast("Prueba hidráulica agregada"); break;
       case "tarea-nueva": cot.plazo.tareas.push(["Nueva tarea", 0, 30, ""]); guardarPronto(); render(); break;

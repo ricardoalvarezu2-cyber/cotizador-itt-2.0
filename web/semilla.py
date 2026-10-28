@@ -40,6 +40,8 @@ def main(carpeta, ident="capex-oq8209", salida=None):
             if k is not None:
                 kg[str(it["pos"])] = round(k, 3)
     cot["kg_compras"] = kg
+    if (c / "ficha_rubros.json").exists():  # ficha por rubro (soldaduras, kg, m², placas, medidas) para el modo global
+        cot["ficha"] = json.load(open(c / "ficha_rubros.json", encoding="utf-8"))
     cot["firmante_id"] = "matias-russo"
     of.pop("firma", None)  # la firma sale del firmante elegido
     ahora = datetime.now().isoformat(timespec="seconds")

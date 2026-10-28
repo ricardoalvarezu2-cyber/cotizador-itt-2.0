@@ -192,3 +192,9 @@ Alguien que no armó el cómputo (otro agente o una persona) compara `pedido/lis
 | Sumar precios de una cotización nueva | Los precios con fuente quedan en `cotizacion.json`. Para sumarlos a la base general: `herramientas/indice_precios.py` |
 | Cambiar el formato de la oferta | `plantillas/oferta_itt_2026.docx` (ver `plantillas/README.md`) |
 | Cambiar el diseño del informe | `plantillas/informe_cotizacion.html` |
+
+## Detallado o global por rubro (28-10-2026, pedido de Matías)
+- Cinco rubros se pueden cotizar **detallado** (como siempre) o **global** (un precio del tercero por equipo): MO de armado y soldadura del piping, MO de fabricación de la estructura (por separado, así hay ficha de los dos; si cotizan todo junto, repartir o poner uno en 0), granallado y pintura, RX/END/procedimientos y transporte.
+- La ficha (`ficha_rubros.md`, la arma `armar_cotizacion.py`) trae lo necesario para pedir y controlar el global: juntas a tope y SW, pulgadas equivalentes, kg de piping y de estructura, m², placas de RX, juntas con LP, procedimientos, y para el transporte largo × ancho × alto, kg, equipos por semirremolque y viajes (avisa carga especial: más de 2,60 m de ancho o 4,10 m de alto cargado).
+- Cambiar de modo: en la página (MO y servicios → "Cotizar por rubro") o `python herramientas/ficha_rubros.py cotizaciones/<carpeta> --global <rubro>` / `--detallado <rubro>`. El global arranca en 0 (P4 ter) hasta cargar la cotización con proveedor, fecha y documento; se compara con el cálculo detallado y avisa si se aparta más del 15%.
+- Horas de ITT (ingeniería, calidad, planta y PH), caución y repuestos no entran en ningún rubro: quedan como renglones propios.

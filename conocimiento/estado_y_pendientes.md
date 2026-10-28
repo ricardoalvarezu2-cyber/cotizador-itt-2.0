@@ -27,6 +27,7 @@
 | **Página web del cotizador** (Artifact en Claude, privada): lista de cotizaciones, buscador de materiales y servicios, calculadoras (soldadura, pintura, PH, RX), plazo, ofertas, firmantes, guardado automático con versiones, descarga en .zip o de a un archivo | Publicada el 28/10/2026; probada con la CAPEX (USD 7.620,59 en la página y en la planilla que arma) | https://claude.ai/artifact/HfbiaNvhAFkQjYwLe2kaBQ · `web/` (ver `web/LEEME.md`) |
 | Chat con Claude en la página y Pedidos para Claude Code (subir plano, P&ID, pliego o lista; la sesión fija los procesa con `web/LEEME.md` y deja el resultado en la página) | Publicado el 28/10/2026 | `web/src/asistente.js`, `web/LEEME.md` (Pedidos desde la página) |
 | Mejoras de la página (28/10/2026): buscador general por texto y selección múltiple en los catálogos; sección Catálogos sin cotización abierta; avisos en cada renglón; filtro y orden de los ítems; deshacer y rehacer (Ctrl+Z / Ctrl+Y); vista previa de informe y ofertas; antecedentes parecidos (P8) en Resumen; versión para celular | Publicado | `web/src/` |
+| **Modo Detallado / Global por rubro** (MO piping, MO estructura, pintura, RX/END/procedimientos, transporte) con ficha del rubro (soldaduras, kg, m², placas, procedimientos, medidas y equipos por camión) para pedir el global al tercero y compararlo con el detallado | Vigente desde 28-10-2026 (repo y página) | `herramientas/ficha_rubros.py`, `web/src/rubros.js`, `ficha_rubros.md` en cada cotización |
 | Listas de precios nuevas que llegan por pedidos | Vigente (vacío) | `precios/listas_nuevas.csv` (lo lee `catalogo_materiales.py`) |
 | Tarea semanal (lunes 7:37, hora Argentina): dólar e índices a la página, pedidos pendientes y respaldo de sus cotizaciones en `cotizaciones_web/` | Creada el 28/10/2026 | `web/LEEME.md` (sección Tarea semanal) |
 
@@ -76,6 +77,7 @@
 | 28-10-2026 | Válvulas Taval: costo = Lista 30 × 0,52 (factor de las planillas TAVAL/72 y /78) | Criterio de las planillas (documentado) | `pesos_valvulas.py`, `precios/taval_lista30.csv` |
 | 28-10-2026 | Sin antecedente de horas del mismo tipo y tamaño, la precotización **no suma horas** y avisa (antes tomaba otro tipo de equipo) | Criterio técnico (controles) | `estimar_horas.py` |
 | 28-10-2026 | Prefabricado de piping: `parametros.modo = "prefabricado"` (pulgada diametral base sch 40, tarifa de terceros, +5% rechazos, pintura aparte, sin horas); materiales del cliente con la columna `provee` = cliente | Criterio técnico (CTRL-CA01) | `precotizar.py`, `guia_cotizacion.md` |
+| 28-10-2026 | MO, pintura, END y transporte: opción global por rubro, siempre **por equipo** (la cantidad multiplica al final); MO del piping y de la estructura **por separado**, con ficha de cada uno | Matías | `guia_cotizacion.md`, `ficha_rubros.py` |
 | 28/10/2026 | No hay más información de precios que la ya entregada: el último precio se sigue eligiendo por fecha (no hay otras compras para preferir sobre la lista de Renard) | Matías | — |
 
 ## 3. Pendientes del proyecto
@@ -95,6 +97,13 @@ Hecho (28/10/2026): `precotizar.py` (materiales, soldaduras, pintura, PH, RX) ·
 1. Reguladoras y monitoras 3" #150 sin OPSO (hoy Tormene #300 con OPSO de referencia) y explicar contra CAMUZZI/23 (24.454 en 2025).
 2. Filtro FM-6 #150: costearlo por componentes o cotizarlo.
 3. Separador: pedir a Camuzzi la especificación; caudal por elemento de 0,3 µm a Gora/Pall; memoria de cálculo y esquema (se entregan con la oferta).
+
+**Comparación con la planilla del vendedor (YPF Lic 69343 PC0, 28-10-2026)** — conceptos que la app todavía no tiene:
+1. Montaje + control dimensional + desmontaje como renglón propio.
+2. Repuestos de precomisionado, comisionado y puesta en marcha (aparte de los de 2 años).
+3. Hoja de alcance SI/NO (recipiente, plataforma, eléctrico, aislación, tracing, embalaje).
+4. Definir qué factor llevan transporte y caución (hoy van con el de MO y servicios).
+5. Ojo: las soldaduras de COT26-0330-001 (124 juntas, 1.334,68 pulg) son de antes del ajuste de uniones directas; la ficha actual da 93 juntas y 988,83 pulg. Rehacer la precotización.
 
 **Controles de la precotización** (28-10-2026, segunda tanda corregida: ver `auditorias/2026-10-28_controles_4_agentes.md`)
 1. Cargar horas de antecedentes que faltan (TECPETROL/7 trampas; filtros chicos; tanques grandes) en `costos/horas_por_equipo.csv`.

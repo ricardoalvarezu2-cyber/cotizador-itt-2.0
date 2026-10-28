@@ -1,0 +1,105 @@
+{
+ "generada": "2026-10-28",
+ "mo_piping": {
+  "juntas_bw": 4837.75,
+  "pulg_eq": 255915.553,
+  "juntas_sw_olet": 0.0,
+  "extremos_campo": 0.0,
+  "kg_piping": 538.6,
+  "bridas": 17,
+  "diametros": [
+   53.0,
+   10.0,
+   6.0,
+   2.0,
+   1.0
+  ],
+  "sin_peso": [
+   "1 Chapa para virola Ø53\" × 3.2 m × 1 5/8\" ",
+   "2 Cabezal semielíptico 2:1 Ø53\" × 1 3/4\" (",
+   "4 Placa portaelementos Ø1,26 m × 1 5/8\" co",
+   "5 Elemento coalescente 0,3 µm, 140 × 914 m",
+   "16 Purga automática de líquidos (controlado",
+   "17 Switch de nivel alto sobre stand-pipe, E",
+   "18 Visor de nivel óptico reflex 500 mm, 70 ",
+   "21 Internos: deflector de entrada, rompe-vó",
+   "24 Pollera / patas de apoyo (450 kg)"
+  ],
+  "avisos": []
+ },
+ "mo_estructura": {
+  "kg": 1300.0,
+  "m2": 197.28
+ },
+ "pintura": {
+  "m2_canos": 1.6,
+  "m2_piping": 10.86,
+  "m2_estructura": 197.28,
+  "m2_total": 208.14,
+  "esquema": ""
+ },
+ "end": {
+  "juntas_bw": 4837.75,
+  "rx_pct": 0,
+  "placas_chicas": 0,
+  "placas_grandes": 0,
+  "juntas_lp": 0.0,
+  "materiales": [
+   "A105N",
+   "ASTM A-105",
+   "ASTM A-106 Gr. B",
+   "SA-516 Gr. 70"
+  ],
+  "espesor_max_mm": 15.09,
+  "procedimientos": [
+   "WPS/PQR de soldadura a tope para A105N, ASTM A-105, ASTM A-106 Gr. B, SA-516 Gr. 70 hasta 15,09 mm de espesor",
+   "Calificación de soldadores (WPQ) para esos WPS",
+   "Procedimiento de RX y de LP (escrito, nivel 3 ISO 9712)",
+   "Confirmar con el pliego: si exige procedimientos nuevos o alcanzan los vigentes de ITT"
+  ]
+ },
+ "transporte": {
+  "largo_m": 0.0,
+  "ancho_m": 0.0,
+  "alto_m": 0.0,
+  "kg_equipo": 1838.6,
+  "destino": "",
+  "por_camion": null,
+  "viajes": null,
+  "avisos": [
+   "Faltan las medidas del equipo (largo × ancho × alto): cargarlas del plano de conjunto"
+  ]
+ },
+ "referencias": {
+  "mo_piping": {
+   "modo": "detallado",
+   "detallado_usd": 29503.13,
+   "renglones_detalle": 1,
+   "global_usd": null
+  },
+  "mo_estructura": {
+   "modo": "detallado",
+   "detallado_usd": 0,
+   "renglones_detalle": 0,
+   "global_usd": null
+  },
+  "pintura": {
+   "modo": "detallado",
+   "detallado_usd": 1900.0,
+   "renglones_detalle": 1,
+   "global_usd": null
+  },
+  "end": {
+   "modo": "detallado",
+   "detallado_usd": 1467.2,
+   "renglones_detalle": 1,
+   "global_usd": null
+  },
+  "transporte": {
+   "modo": "detallado",
+   "detallado_usd": 0,
+   "renglones_detalle": 0,
+   "global_usd": null
+  }
+ }
+}
