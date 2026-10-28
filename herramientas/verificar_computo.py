@@ -89,6 +89,11 @@ def main(carpeta):
             errores.append(f"{r['id']}: precio sin fuente o sin fecha")
         if r.get("coincidencia") == "similar":
             avisos.append(f"{r['id']}: precio de una pieza SIMILAR, no igual: {r.get('diferencia', '')}")
+        f_ok = re.fullmatch(r"\d{4}-\d{2}-\d{2}", r.get("fecha_precio", "").strip() or "")
+        if r.get("fecha_precio", "").strip() and (not f_ok or r["fecha_precio"] > hoy.isoformat()):
+            errores.append(f"{r['id']}: fecha de precio inválida o futura ({r['fecha_precio']}): usar AAAA-MM-DD real del documento")
+        if re.search(r"con iva|iva incluido|c/ ?iva", (r.get("proveedor_o_criterio", "") + " " + r.get("diferencia", "")).lower()):
+            avisos.append(f"{r['id']}: la fuente menciona 'con IVA': el precio tiene que estar SIN IVA (dividir por 1,21 o 1,105)")
         if precio == 0:
             avisos.append(f"{r['id']}: SIN PRECIO ({r['descripcion'][:45]}): pedir cotización antes de presentar")
         if r.get("tipo_origen", "").strip().lower() == "estimado":

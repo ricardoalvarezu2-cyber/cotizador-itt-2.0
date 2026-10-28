@@ -93,6 +93,8 @@ Calificación → Desarrollo → Cotización → Negociación │ Ejecución →
 | Actualizar una planilla fuente | Reemplazarla en `fuentes_originales/` (no se sube al repositorio), correr `python herramientas/construir_base.py` y anotar el cambio en `fuentes.md` |
 | Analizar un lote nuevo de cotizaciones | `herramientas/extraer_texto.py` (texto de los documentos) → un agente por carpeta con `herramientas/ficha_cotizacion_instrucciones.md` → `herramientas/consolidar_fichas.py` |
 | Rehacer el índice de precios | `python herramientas/indice_precios.py` |
+| Rearmar toda la base y verificarla | `python herramientas/actualizar_base.py` (dólar, índices, catálogos, índice de proyectos y al final `verificar_todo.py`) |
+| Verificar después de cualquier cambio | `python herramientas/verificar_todo.py` → tiene que decir "TODO OK" |
 | Rehacer el catálogo de materiales | `python herramientas/catalogo_materiales.py` y después `python herramientas/test_catalogo.py` (tiene que pasar) |
 | Actualizar el dólar y los índices de inflación | `python herramientas/dolar_mensual.py` y `python herramientas/indices_inflacion.py` (sumar los datos nuevos de IPC y CPI con su fuente) |
 | Leer números o fechas de un documento nuevo | Usar siempre `herramientas/numeros.py` (un solo lector para todo) |

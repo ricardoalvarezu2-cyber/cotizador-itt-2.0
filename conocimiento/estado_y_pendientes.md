@@ -14,6 +14,8 @@
 | Catálogo de materiales con marca, unidad, IVA y alertas | Vigente: 3.319 materiales (1.005 con precio ESTIMADO del cepo; 132 sin precio) | `precios/catalogo_materiales.*`, `herramientas/catalogo_materiales.py`, `buscar_material.py`, `test_catalogo.py` |
 | Lector único de números y fechas | Vigente | `herramientas/numeros.py` |
 | **Precotización automática sin IA** (materiales del catálogo, soldaduras de los extremos, pintura, PH, RX) | Vigente desde 28/10/2026; caso de control CAPEX | `herramientas/precotizar.py`, `test_precotizar.py` |
+| Plazo calculado y comparación con antecedentes (los corre `armar_cotizacion.py`) | Vigente desde 28/10/2026 | `herramientas/plazo.py`, `comparar_antecedentes.py` |
+| Un comando para rearmar y otro para verificar todo | Vigente | `herramientas/actualizar_base.py`, `verificar_todo.py` (tiene que dar "TODO OK") |
 | Dólar mensual 2024–2026 (oficial, mayorista, MEP, blue) | Vigente | `costos/dolar_mensual.csv/.xlsx`, `herramientas/dolar_mensual.py` |
 | Índices de inflación (costo local en USD y CPI EE.UU.) desde ene-2024 | Vigente | `costos/indices_ajuste.csv`, `herramientas/indices_inflacion.py` |
 | Peso y superficie de caños (ASME B36.10) | Vigente (calculado) | `tecnico/canos_peso_superficie.csv`, `herramientas/tablas_pesos.py` |
@@ -54,12 +56,9 @@
 4. ~~Vendor lists en el RAR de la Tanda 1~~ **No están** (revisado el 28/10/2026: la Tanda 1 solo trae las listas de YPF, ya cargadas; de PAE, Pampa y Pluspetrol solo hay referencias). Quedan en la carpeta completa `Z:\VENTAS\OFERTAS Y LICITACIONES` (1.Documentación de la licitación) o hay que pedirlas al cliente cuando se cotice para ellos.
 5. ~~Integrar las tablas nuevas~~ **Hecho (28/10/2026):** `armar_cotizacion.py` corre `controles_tablas.py` y deja `controles_tablas.md` en cada cotización (kilos y m², plazo típico por rubro con aviso si supera el ofrecido, marcas del cliente). Falta: pesos de válvulas, uniones dobles y bujes reductores (no hay tabla).
 
-**Herramientas sin IA (plan del 28/10/2026)** — hechas 1–3: precotización, soldaduras, servicios calculados. Siguen:
-4. Plazo automático (camino crítico con plazos de proveedores y duración de taller).
-5. Cargar las respuestas de Compras desde el Excel a `cotizacion.json`.
-6. Comparación automática con antecedentes (P8).
-7. Lectura de tablas de planos CAD (PDF vectorial, DXF) y búsqueda de requisitos en el pliego sin IA.
-8. `actualizar_base.py` y `verificar_todo.py` (un comando para rearmar y probar todo).
+**Qué hace la IA y qué es automático (decisión de Matías, 28/10/2026).** Lo que varía entre cotizaciones, clientes y proveedores lo sigue leyendo la IA: planos, pliegos, especificaciones y las cotizaciones que mande Compras (en el formato que vengan; no se usa un formato fijo de respuesta). Lo automático empieza cuando esos datos ya están en los formatos internos (`lista_materiales_plano.csv` y `cotizacion.json`): búsqueda en el catálogo, soldaduras, m², plazo, comparación con antecedentes, sumas y controles. El programa propone y marca; siempre revisa una persona o la IA.
+
+Hecho (28/10/2026): `precotizar.py` (materiales, soldaduras, pintura, PH, RX) · `plazo.py` (acopio + taller sin superponer, margen 15–20%, plazo real de la familia) · `comparar_antecedentes.py` (P8 contra los 5 más parecidos) · control de carga en `verificar_computo.py` (fecha válida, "con IVA", sin precio) · `verificar_todo.py` y `actualizar_base.py`. Descartado: lectura automática de planos y pliegos, y formato fijo para las respuestas de Compras.
 
 **Al terminar el proyecto** (decisión de Matías)
 1. Confirmar con Compras los precios sospechosos de la auditoría (columna `alerta`).
@@ -71,5 +70,5 @@
 
 1. Leer `CLAUDE.md`, este archivo y `conocimiento/RESUMEN.md`.
 2. Para cotizar: skill `cotizar` + `guia_cotizacion.md` + `procedimiento_cotizacion.md` + `errores_y_lecciones.md`.
-3. Después de tocar el catálogo: `python herramientas/test_catalogo.py`.
+3. Después de cualquier cambio en herramientas o datos: `python herramientas/verificar_todo.py` (tiene que dar "TODO OK"). Para rearmar toda la base: `python herramientas/actualizar_base.py`.
 4. Al terminar: actualizar este archivo, commit y push (lo que no se sube se pierde).

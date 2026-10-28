@@ -14,7 +14,7 @@
 - Una sola versión vigente de cada dato, con fecha y fuente. Ante dos versiones, vale la más reciente y se anota la decisión en `conocimiento/fuentes.md`.
 - **Todo costo y precio se trabaja SIN IVA.** Con IVA se divide por la alícuota (21% o 10,5%); si no dice, se toma sin IVA (decisión de Matías, 27/10/2026).
 - **Pesos a dólares: promedio mensual del dólar oficial BNA venta** (`conocimiento/costos/dolar_mensual.csv`), salvo que el documento diga su tipo de cambio (decisión de Matías, 27/10/2026). Nunca mezclar cotizaciones del dólar (oficial, divisa, MEP, blue) en una misma serie.
-- Números y fechas de documentos se leen siempre con `herramientas/numeros.py` (4.500 / 4,500 / 4500; nunca una fecha por defecto). Después de tocar el catálogo de materiales, correr `python herramientas/test_catalogo.py`.
+- Números y fechas de documentos se leen siempre con `herramientas/numeros.py` (4.500 / 4,500 / 4500; nunca una fecha por defecto). Después de cualquier cambio en herramientas o datos, correr `python herramientas/verificar_todo.py` (tiene que dar "TODO OK").
 - No hay a quién consultar las planillas viejas (Javier Elejondo ya no está en la empresa): ante dudas, tomar el criterio con más sentido técnico y dejarlo documentado.
 
 ## Ubicación de los originales
@@ -41,5 +41,5 @@
 
 ## Reglas de cálculo y comerciales
 - Moneda USD, sin IVA, entrega EXW planta Quilmes Oeste. El factor de venta lo define la dirección; la herramienta propone 1,35 y muestra escenarios.
-- El cálculo de costo y plazo es determinístico (reglas y tarifas de la base); la IA lee documentos y arma el cómputo.
+- El cálculo de costo y plazo es determinístico (reglas y tarifas de la base); la IA lee documentos y arma el cómputo. Lo que varía entre cotizaciones (planos, pliegos, cotizaciones de proveedores en cualquier formato) lo lee la IA; desde los formatos internos (`lista_materiales_plano.csv`, `cotizacion.json`) todo es automático y se revisa.
 - Antes de lanzar procesamientos con muchos agentes, estimar el costo y pedir confirmación. Usar un modelo más chico (sonnet) para extracción masiva.

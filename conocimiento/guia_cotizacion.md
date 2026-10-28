@@ -153,6 +153,12 @@ Para publicar o actualizar el informe web se usa la herramienta Artifact con `in
 
 ## 6. Revisar (P8)
 
+`armar_cotizacion.py` deja además, en la carpeta de la cotización:
+- `plazo_calculado.md`: acopio (material más largo) + taller sin superponer, con el margen de 15–20% y el plazo real histórico de la familia. Avisa si el ofrecido es menor o no tiene margen.
+- `comparacion_antecedentes.md`: precio unitario contra los 5 antecedentes más parecidos (marca ⚠ más del 15%; "otra escala" si el antecedente no es comparable). Cada ⚠ se explica rubro por rubro antes de presentar el número.
+- `controles_tablas.md`: kilos y m², plazo típico por rubro y marcas del cliente.
+
+
 - Revisar **uno por uno los avisos** del control: soldaduras de campo o taller, modelos exigidos, estimados, precios viejos.
 - Comparar el precio con al menos 2 antecedentes. **Si la diferencia es mayor al 15%, explicarla rubro por rubro.**
 - Verificar que el plazo cubra el material más largo.
