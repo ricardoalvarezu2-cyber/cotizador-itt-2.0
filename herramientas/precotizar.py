@@ -90,6 +90,28 @@ def excluido(fila):
     return any(x.lower() in origen for x in EXCLUIR)
 
 
+ACERO = RAIZ / "conocimiento" / "precios" / "acero_por_kg.csv"
+
+
+def acero_kg(r):
+    """Pieza de acero al carbono pedida por kg (chapa, placa, tapa, asa, planchuela, ángulo): precio de materia prima por kg
+    de acero_por_kg.csv (+10% por recortes). Devuelve (fila, motivo) o (None, "")."""
+    t = norm(f"{r['descripcion']} {r['material']} {r['diametro']}")
+    if not re.search(r"sae ?10\d\d|\ba ?36\b|f-? ?24|acero al carbono|\bhierro\b|\bchapa|planchuela|angulo|\bplaca\b", t) or re.search(r"inox|aisi|aluminio|bronce", t):
+        return None, ""
+    filas = leer(ACERO)
+    if not filas:
+        return None, ""
+    forma = ("hierro ángulo" if "angulo" in t else "planchuela" if "planchuela" in t else "caño estructural" if re.search(r"tubo|cano estructural", t)
+             else "chapa semilla de melón" if "semilla" in t else "chapa negra lisa")
+    cand = [f for f in filas if f["forma"] == forma] or [f for f in filas if f["forma"] == "chapa negra lisa"]
+    m = re.search(r"(?:esp\.?|espesor|e=)\s?(\d+(?:[.,]\d+)?)\s?mm", t) or re.search(r"(\d+(?:[.,]\d+)?)\s?mm", t)
+    esp = float(m.group(1).replace(",", ".")) if m else None
+    fila = min(cand, key=lambda f: abs(float(f["espesor_mm"]) - esp)) if esp else cand[0]
+    return fila, (f"precio por kg de materia prima ({fila['forma']} {fila['medida']}"
+                  + (f", la más cercana a {esp:g} mm" if esp else "") + ") +10% por recortes; no incluye corte, plegado ni rolado")
+
+
 BARRA_M = 6.0  # largo de compra mínima de caño (barra); ver caso de control CTRL-F01
 
 
@@ -110,6 +132,13 @@ def material(r, n):
     item = {"id": f"M{n:02d}", "pos": r["pos"], "grupo": "material",
             "descripcion": f"{r['descripcion'][:60]} {r['diametro']}".strip(), "cantidad": cant, "unidad": unidad,
             "especificacion": f"Plano: {r['diametro']} · {r['serie_sch']} · {r['material']} · {r['extremos']}" + (f" · {r['modelo_fabricante']}" if r.get("modelo_fabricante") else "")}
+    if unidad_norm(unidad) == "kg" and not (elegido and elegido[0] and unidad_norm(elegido[7]["unidad"]) == "kg"):
+        fila, motivo = acero_kg(r)
+        if fila:
+            item["fuentes"] = [{"tipo": "cot", "precio": float(fila["usd_kg_con_recortes"]), "proveedor": "Precios de acero (J. Elejondo)",
+                                "origen": fila["fuente"], "fecha": fila["fecha"], "coincide": "similar", "diferencia": motivo}]
+            return item, (f"| {r['pos']} | {item['descripcion'][:45]} | SIMILAR (acero por kg) | USD {float(fila['usd_kg_con_recortes']):,.2f}/kg | "
+                          f"{fila['fecha']} cot | {motivo} |")
     if not elegido:
         item["fuentes"] = [{"tipo": "est", "precio": 0, "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización", "origen": "—",
                             "fecha": date.today().isoformat(), "coincide": "sin_ref", "diferencia": "No hay pieza de esa familia y tipo con precio"}]

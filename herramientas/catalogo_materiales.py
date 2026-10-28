@@ -569,6 +569,15 @@ def leer_fuentes():
                 extra="; ".join(x for x in [f"número ambiguo '{cu[0].group(1)}' leído como {valor:g}: verificar" if ambiguo else "",
                                             f"renglón completo: {r['detalle'][:180]}" if len(r["detalle"]) > len(tramo(r["detalle"])) + 5 else ""] if x),
                 iva=iva_de(det, cu[0].end()))
+    # acero al carbono por kg (chapa, ángulo, planchuela, caño estructural): herramientas/acero_por_kg.py
+    ruta_ac = PRECIOS / "acero_por_kg.csv"
+    if ruta_ac.exists():
+        for r in csv.DictReader(open(ruta_ac, encoding="utf-8")):
+            forma = "Tubo estructural (caño estructural)" if r["forma"] == "caño estructural" else r["forma"].capitalize()
+            add(f"{forma} {r['medida']} {r['material']} (precio por kg, {r['unidad_compra']})", float(r["usd_kg"]), "USD", r["fecha"],
+                "cotización", "Precios de acero (J. Elejondo)", r["fuente"], "", "conocimiento/precios/acero_por_kg.csv", "kg",
+                extra=f"pesos con IVA ÷ 1,21 ÷ TC del documento {r['tc_documento']}; +10% por recortes: {float(r['usd_kg_con_recortes']):.2f}; no incluye corte, plegado ni rolado",
+                iva=("con IVA en el documento: ya dividido por 1,21", 1.0))
     # listas y cotizaciones nuevas que llegan por los pedidos de la página (web/LEEME.md, "Pedidos desde la página")
     ruta_ln = PRECIOS / "listas_nuevas.csv"
     if ruta_ln.exists():

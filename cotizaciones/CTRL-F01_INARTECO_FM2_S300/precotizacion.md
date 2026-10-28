@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-F01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 662.02 por equipo · soldadura y servicios calculados USD 464.53 · 14 similares (4, 4b, 5, 5b, 6, 7, 12, 13, 17, 21, 22, 24, 25, 27) · 9 sin precio (10, 11, 15, 16, 18, 19, 20, 23, 26).
+**Resumen:** materiales USD 670.85 por equipo · soldadura y servicios calculados USD 464.53 · 19 similares (4, 4b, 5, 5b, 6, 7, 12, 13, 15, 16, 17, 18, 20, 21, 22, 24, 25, 26, 27) · 4 sin precio (10, 11, 19, 23).
 
 
 ## 1. Materiales
@@ -24,18 +24,18 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 12 | Tuerca mariposa de bronce 3/8" | SIMILAR | 0.50 / un | 2026-02-20 · planilla interna | diametro: sin dato (pedido 0.375"); material: sin dato (pedido Bronce) |
 | 13 | Arandela plana 3/8" | SIMILAR (estimado cepo) ⚠ | 0.17 / un | 2025-03-27 · estimado (cepo) | diametro: sin dato (pedido 0.375") · faltan: material |
 | 14 | Espárrago con 2 tuercas zincado 3/4 x 120.70  | IGUAL | 10.00 / un | 2026-02-19 · planilla interna | — |
-| 15 | Placa apoyo con guía para elemento filtrante  | **SIN PRECIO** | — | — | pedir cotización |
-| 16 | Tapa para soporte de elemento filtrante espes | **SIN PRECIO** | — | — | pedir cotización |
+| 15 | Placa apoyo con guía para elemento filtrante  | SIMILAR (acero por kg) | USD 1.26/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 3/16", la más cercana a 4 mm) +10% por recortes; no incluye corte, plegado ni rolado |
+| 16 | Tapa para soporte de elemento filtrante espes | SIMILAR (acero por kg) | USD 1.26/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 3/16", la más cercana a 4 mm) +10% por recortes; no incluye corte, plegado ni rolado |
 | 17 | Junta espirometálica 4" | SIMILAR | 72.50 / un | 2026-05-05 · planilla interna | serie: 600 (pedido 300); unidad distinta: catálogo por uni, plano por un |
-| 18 | Soporte para chapa de identificación espesor  | **SIN PRECIO** | — | — | pedir cotización |
+| 18 | Soporte para chapa de identificación espesor  | SIMILAR (acero por kg) | USD 1.26/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 3/16", la más cercana a 2 mm) +10% por recortes; no incluye corte, plegado ni rolado |
 | 19 | Chapa de identificación litografiada espesor  | **SIN PRECIO** | — | — | pedir cotización |
-| 20 | Asas de hierro redondo 1/2" | **SIN PRECIO** | — | — | pedir cotización |
+| 20 | Asas de hierro redondo 1/2" | SIMILAR (acero por kg) | USD 1.27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2") +10% por recortes; no incluye corte, plegado ni rolado |
 | 21 | Manómetro diferencial 0-2 bar 1/2" | SIMILAR | 120.00 / un | 2026-08-14 · planilla interna | rango: sin dato (pedido 0-2 bar) · faltan: conexion |
 | 22 | Conector recto con tuerca y doble virola 1/4" | SIMILAR | 0.50 / un | 2026-02-20 · planilla interna | diametro: sin dato (pedido 0.25"); material: sin dato (pedido AISI 304) |
 | 23 | Refuerzo para derivación tipo poncho 4 x 2 4" | **SIN PRECIO** | — | — | pedir cotización |
 | 24 | Válvula esférica cuerpo tripartito 1/2" | SIMILAR | 60.32 / un | 2026-06-26 · planilla interna | serie: sin dato (pedido 2000); extremos: NPT (pedido NPT/SW) |
 | 25 | Media cupla 1/2" | SIMILAR | 2.43 / un | 2025-12-26 · lista | serie: 3000 (pedido 2000) |
-| 26 | Chapa soporte manómetro diferencial y manifol | **SIN PRECIO** | — | — | pedir cotización |
+| 26 | Chapa soporte manómetro diferencial y manifol | SIMILAR (acero por kg) | USD 1.26/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 3/16", la más cercana a 1.59 mm) +10% por recortes; no incluye corte, plegado ni rolado |
 | 27 | Arandela plana zincada 3/4" | SIMILAR (estimado cepo) ⚠ | 0.20 / un | 2024-11-01 · estimado (cepo) | — · faltan: material |
 
 ## 2. Soldaduras (de la columna de extremos)

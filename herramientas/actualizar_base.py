@@ -15,7 +15,7 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent.parent
 H = RAIZ / "herramientas"
 pasos = [["dolar_mensual.py"] + (["--sin-red"] if "--sin-red" in sys.argv else []), ["indices_inflacion.py"], ["indice_precios.py"],
-         ["unir_planillas_costo.py"], ["catalogo_materiales.py"], ["catalogo_servicios.py"], ["indice_proyectos.py"], ["pesos_valvulas.py"]]
+         ["unir_planillas_costo.py"], ["acero_por_kg.py"], ["catalogo_materiales.py"], ["catalogo_servicios.py"], ["indice_proyectos.py"], ["pesos_valvulas.py"]]
 for p in pasos:
     print(f"→ {' '.join(p)}")
     r = subprocess.run([sys.executable, str(H / p[0])] + p[1:], cwd=RAIZ)

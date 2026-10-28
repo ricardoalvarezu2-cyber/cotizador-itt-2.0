@@ -30,7 +30,7 @@
 | Listas de precios nuevas que llegan por pedidos | Vigente (vacío) | `precios/listas_nuevas.csv` (lo lee `catalogo_materiales.py`) |
 | Tarea semanal (lunes 7:37, hora Argentina): dólar e índices a la página, pedidos pendientes y respaldo de sus cotizaciones en `cotizaciones_web/` | Creada el 28/10/2026 | `web/LEEME.md` (sección Tarea semanal) |
 
-**Caso de control 2 (28-10-2026):** `cotizaciones/CTRL-F01_INARTECO_FM2_S300` (filtro, otra familia): la precotización automática sin completar da −75% contra el costo real; lo que falta es radiografía (40%), horas de ingeniería/calidad/montaje (16%) y piezas sin precio. Herramienta: `comparar_historico.py`. Pendiente del cotizador: estimar horas de ingeniería, calidad y montaje por tipo y tamaño de equipo, y cargar al catálogo chapa por kg, elementos filtrantes y refuerzos tipo poncho.
+**Caso de control 2 (28-10-2026):** `cotizaciones/CTRL-F01_INARTECO_FM2_S300` (filtro, otra familia): la precotización automática sin completar da −75% contra el costo real; lo que falta es radiografía (40%), horas de ingeniería/calidad/montaje (16%) y piezas sin precio. Herramienta: `comparar_historico.py`. **Chapa y perfiles por kg: hecho (28-10-2026)**, `precios/acero_por_kg.csv` en el catálogo y en la precotización (en CTRL-F01 las piezas de chapa dan −10% contra la planilla). Pendiente: horas de ingeniería, calidad y montaje por tipo y tamaño de equipo (extracción en curso), elementos filtrantes y refuerzos tipo poncho; mejorar los atributos de la familia Perfiles (tipo y espesor) sin cambiar los códigos existentes.
 
 **Caso de prueba:** COT26-1003-001 CAPEX OQ8209 (borrador, no enviada; su estado está en su `bitacora.md` y en `cotizaciones/README.md`).
 
