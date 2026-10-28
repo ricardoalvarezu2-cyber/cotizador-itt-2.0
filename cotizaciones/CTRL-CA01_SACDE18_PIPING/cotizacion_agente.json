@@ -1,0 +1,400 @@
+{
+ "codigo": "CTRL-CA01",
+ "revision": "Rev 0",
+ "estado": "borrador",
+ "fecha": "2026-04-20",
+ "preparo": "Caso de control del cotizador",
+ "cliente": {
+  "nombre": "SACDE (caso de control; cliente final TGS)",
+  "codigo_itt": "",
+  "comprador": ""
+ },
+ "titulo": "Caso de control: prefabricado de piping 36\" y 12\" de la PC Chacharramendi (Sacde 18, TGS)",
+ "titulo_pagina": "Control piping Sacde 18",
+ "archivo_planilla": "[CLIENTE]_[pedido]",
+ "subtitulo_planilla": "Caso de control: precotización automática contra la planilla de costo real (Sacde/18, Rev4 Dirección)",
+ "meta": [
+  "Artículo [código]",
+  "Plano [número rev]",
+  "Comprador: [nombre]",
+  "Preparó: Matías Russo · [fecha]"
+ ],
+ "equipo": {
+  "singular": "conjunto de spools",
+  "plural": "conjuntos de spools",
+  "tipo": "manifold",
+  "diametro_pulg": 36
+ },
+ "parametros": {
+  "N": 1,
+  "FM": 1.35,
+  "FMO": 1.35,
+  "CONT": 5,
+  "AJ": 1,
+  "TRANS": 0,
+  "TC": 1550,
+  "TR_ARS": 0,
+  "TR_EMB": 0,
+  "TR_F": 1.0,
+  "fecha_referencia": "2026-10-28",
+  "rx_pct": 100,
+  "ph_horas": 18,
+  "FTV": 1.0
+ },
+ "plazo": {
+  "dias": 60,
+  "texto": "desde OC · EXW Quilmes Oeste",
+  "tareas": [
+   [
+    "Material crítico [proveedor]",
+    0,
+    60,
+    "crit"
+   ],
+   [
+    "Taller: armado, PH y pintura",
+    45,
+    57,
+    "tal"
+   ],
+   [
+    "Dossier y despacho",
+    57,
+    60,
+    "tal"
+   ]
+  ],
+  "nota": "[Qué fija el plazo y cómo se acorta]"
+ },
+ "flete": {
+  "etiqueta": "Flete a [destino]",
+  "referencia_html": "[Cotización de flete de referencia, con fecha y fuente]",
+  "criterio_html": "[Si se ofrece EXW o entregado]"
+ },
+ "historial_html": [],
+ "pedido": {
+  "eyebrow": "[Nº de pedido] · emitido [fecha]",
+  "datos_html": [
+   [
+    "Cliente",
+    "[nombre] (código ITT [CCCC])"
+   ],
+   [
+    "Ítem",
+    "[ítem] · [descripción] · <b>[cantidad] un</b>"
+   ],
+   [
+    "Documento",
+    "[documento y plano]"
+   ],
+   [
+    "Entrega pedida",
+    "[lugar]"
+   ],
+   [
+    "Fechas",
+    "Límite de respuesta [fecha] · necesidad [fecha]"
+   ]
+  ],
+  "requisitos_html": [
+   "[requisito técnico del pedido]"
+  ]
+ },
+ "nota_mo_html": "[Qué incluye y excluye la MO; soldaduras de taller junta por junta; extremos para soldar en campo]",
+ "desvios": [
+  {
+   "tag": "Pos X",
+   "titulo": "[qué se ofrece distinto]",
+   "texto": "[detalle]"
+  }
+ ],
+ "antecedentes": [
+  {
+   "carpeta_html": "<b>[CLIENTE/NN]</b> · [oferta]",
+   "fecha": "dd/mm/aaaa",
+   "que": "[qué es]",
+   "precio": "[c/u]",
+   "tomado_html": "[qué se tomó]"
+  }
+ ],
+ "pendientes": [
+  {
+   "titulo": "Proveedores",
+   "items": [
+    "[confirmación pendiente]"
+   ]
+  },
+  {
+   "titulo": "Cliente",
+   "items": [
+    "[consulta]"
+   ]
+  }
+ ],
+ "pie": "Fuentes: base de conocimiento del repositorio cotizador-itt. Precios en USD sin IVA.",
+ "planilla_notas": [
+  "Plazo: [días] desde OC ([material crítico]).",
+  "Condiciones: [pago, entrega, validez]."
+ ],
+ "items": [
+  {
+   "id": "M01",
+   "pos": "1",
+   "grupo": "material",
+   "descripcion": "Caño C/C biselado 36\" sch 40 API 5L X70",
+   "cantidad": 325,
+   "unidad": "m",
+   "especificacion": "Provisto por el cliente (columnas CANT. POR TGS / CANT. FINAL SUM. POR SACDE del MTO; oferta: recepción, estiba y trazabilidad de los materiales del cliente)",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "Provisto por el cliente (TGS / SACDE)",
+     "origen": "fuentes_originales/ofertas_texto/Sacde/18- PREFABRICADO PIPING - Plantas Compresoras TGS/7.Propuesta Comercial (envío al Cliente)/Sacde - Cotización piping x pulgada+END y mtr2 Rev4 Direccion.xlsx.txt (hoja PIP 3, MTO TE-B10-202.503-LM-PI-1001 Rev 1)",
+     "fecha": "2026-04-20",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M02",
+   "pos": "2",
+   "grupo": "material",
+   "descripcion": "Caño S/C biselado 36\" sch 10 API 5L X60",
+   "cantidad": 181,
+   "unidad": "m",
+   "especificacion": "Provisto por el cliente (columnas CANT. POR TGS / CANT. FINAL SUM. POR SACDE del MTO; oferta: recepción, estiba y trazabilidad de los materiales del cliente)",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "Provisto por el cliente (TGS / SACDE)",
+     "origen": "fuentes_originales/ofertas_texto/Sacde/18- PREFABRICADO PIPING - Plantas Compresoras TGS/7.Propuesta Comercial (envío al Cliente)/Sacde - Cotización piping x pulgada+END y mtr2 Rev4 Direccion.xlsx.txt (hoja PIP 3, MTO TE-B10-202.503-LM-PI-1001 Rev 1)",
+     "fecha": "2026-04-20",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M03",
+   "pos": "3",
+   "grupo": "material",
+   "descripcion": "Brida WN RF 36\" #600 A-105",
+   "cantidad": 7,
+   "unidad": "un",
+   "especificacion": "Provisto por el cliente (columnas CANT. POR TGS / CANT. FINAL SUM. POR SACDE del MTO; oferta: recepción, estiba y trazabilidad de los materiales del cliente)",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "Provisto por el cliente (TGS / SACDE)",
+     "origen": "fuentes_originales/ofertas_texto/Sacde/18- PREFABRICADO PIPING - Plantas Compresoras TGS/7.Propuesta Comercial (envío al Cliente)/Sacde - Cotización piping x pulgada+END y mtr2 Rev4 Direccion.xlsx.txt (hoja PIP 3, MTO TE-B10-202.503-LM-PI-1001 Rev 1)",
+     "fecha": "2026-04-20",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M04",
+   "pos": "4",
+   "grupo": "material",
+   "descripcion": "Codo 90° 36\" sch 40 WPHY-70",
+   "cantidad": 6,
+   "unidad": "un",
+   "especificacion": "Provisto por el cliente (columnas CANT. POR TGS / CANT. FINAL SUM. POR SACDE del MTO; oferta: recepción, estiba y trazabilidad de los materiales del cliente)",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "Provisto por el cliente (TGS / SACDE)",
+     "origen": "fuentes_originales/ofertas_texto/Sacde/18- PREFABRICADO PIPING - Plantas Compresoras TGS/7.Propuesta Comercial (envío al Cliente)/Sacde - Cotización piping x pulgada+END y mtr2 Rev4 Direccion.xlsx.txt (hoja PIP 3, MTO TE-B10-202.503-LM-PI-1001 Rev 1)",
+     "fecha": "2026-04-20",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M05",
+   "pos": "5",
+   "grupo": "material",
+   "descripcion": "Caño S/C biselado 12\" sch 20 A53 Gr.B",
+   "cantidad": 190,
+   "unidad": "m",
+   "especificacion": "Provisto por el cliente (columnas CANT. POR TGS / CANT. FINAL SUM. POR SACDE del MTO; oferta: recepción, estiba y trazabilidad de los materiales del cliente)",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "Provisto por el cliente (TGS / SACDE)",
+     "origen": "fuentes_originales/ofertas_texto/Sacde/18- PREFABRICADO PIPING - Plantas Compresoras TGS/7.Propuesta Comercial (envío al Cliente)/Sacde - Cotización piping x pulgada+END y mtr2 Rev4 Direccion.xlsx.txt (hoja PIP 3, MTO TE-B10-202.503-LM-PI-1001 Rev 1)",
+     "fecha": "2026-04-20",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "S01",
+   "pos": "MO",
+   "grupo": "mo",
+   "descripcion": "Soldadura de prefabricado: 61 juntas de 36\" + 16 de 12\" = 2388 pulg diametrales (convención sch 40 = factor 1) + 5% de reparaciones",
+   "especificacion": "Juntas: 1 por barra de 12 m (325 + 181 m de 36\" → 42; 190 m de 12\" → 16) + 2 por codo (12) + 1 por brida WN (7). Tarifa: Ledesma 13 USD/pulg (prefabricado de cañerías sch 40: corte, biselado y soldadura, MO, herramientas, SVO, ART; más IVA) + 1 USD/pulg de consumibles (los provee ITT) × 1,05 de reparaciones",
+   "cantidad": 2388,
+   "unidad": "pulg",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 14.7,
+     "proveedor": "Edgardo Ledesma, presupuesto ITT N° 20036 (13 USD/pulg más IVA) + consumibles 1 USD/pulg (criterio)",
+     "origen": "fuentes_originales/ofertas_texto/PAN AMERICAN ENERGY/62- Contrato marco AM Prefabricado Skids 3000059425/5.Proveedores 3ros/Presupuesto ITT N° 20036 30-07-25.docx.txt",
+     "fecha": "2025-07-30",
+     "coincide": "similar",
+     "diferencia": "Mismo alcance (prefabricado sch 40 por pulgada) en skids de diámetro chico; 36\" sch 40 (19 mm) puede llevar factor de espesor: riesgo +75% en esas juntas"
+    },
+    {
+     "tipo": "cot",
+     "precio": 12.0,
+     "proveedor": "J. C. Quesada JQ-020-2026 (12 USD/pulg-eq con consumibles)",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/58 - Inarteco - ERPs tipo 1ra etapa - Litoral Gas/5.Proveedores 3ros/Cotizacion JQ-020-2026.pdf.txt",
+     "fecha": "2026-05-06",
+     "coincide": "similar",
+     "diferencia": "ERPs de diámetro chico"
+    }
+   ]
+  },
+  {
+   "id": "S04",
+   "pos": "RX",
+   "grupo": "servicio",
+   "descripcion": "Radiografía 100%: 488 placas grandes + 96 chicas + 15 servicios (Antonelli) + 5% de repeticiones",
+   "especificacion": "36\": 8 placas de 9×43 por junta; 12\": 6 placas de 9×21,5 (factores_soldadura.csv); servicio cada 40 placas; ET TGS-PPRY-032",
+   "cantidad": 1,
+   "unidad": "gl",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 19477.5,
+     "proveedor": "NDT Antonelli (JCA & Asociados): placa grande 20, chica 15, servicio 490",
+     "origen": "fuentes_originales/antonelli_end_2025-11.pdf",
+     "fecha": "2025-11-03",
+     "coincide": "igual"
+    },
+    {
+     "tipo": "cot",
+     "precio": 11180.4,
+     "proveedor": "Lista DB NDT (planillas Pampa 7, 08-2026; sin documento del proveedor)",
+     "origen": "fuentes_originales/ofertas_texto/PAMPA ENERGIA/7- Licitacion contrato Marco Skid PAD Rincon de Aranda/4.Armado de la Oferta Comercial/Cot Skid Manifolds Colectores RDA Contrato Marco (2da RDA).xlsx.txt (hoja ENOD puentes)",
+     "fecha": "2026-08-14",
+     "coincide": "similar",
+     "diferencia": "lista citada en una planilla interna; no está el presupuesto original"
+    }
+   ]
+  },
+  {
+   "id": "S03",
+   "pos": "PH",
+   "grupo": "servicio",
+   "descripcion": "Prueba hidráulica de los spools bridados (horas de planta)",
+   "especificacion": "18 h (2 jornadas); la oferta la limita a spools bridados",
+   "cantidad": 18,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 13.0,
+     "proveedor": "Prueba hidráulica por hora (catálogo de servicios, manifold FA0032)",
+     "origen": "conocimiento/precios/catalogo_servicios.csv",
+     "fecha": "2026-03-10",
+     "coincide": "similar"
+    }
+   ]
+  },
+  {
+   "id": "S1C",
+   "pos": "CAL",
+   "grupo": "mo",
+   "descripcion": "Calidad: trazabilidad por spool, listas de control y data book",
+   "especificacion": "~58 spools (36\": 506 m / 12 m ≈ 42; 12\": 16) × 0,5 h ≈ 30 h",
+   "cantidad": 30,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 15.0,
+     "proveedor": "Horas propias ITT (15 USD/h, horas_por_equipo.csv)",
+     "origen": "conocimiento/costos/horas_por_equipo.csv",
+     "fecha": "2026-02-10",
+     "coincide": "similar",
+     "diferencia": "criterio del agente"
+    }
+   ]
+  },
+  {
+   "id": "S1A",
+   "pos": "ARM",
+   "grupo": "mo",
+   "descripcion": "Recepción, estiba, movimientos y carga de los materiales del cliente y de los spools",
+   "especificacion": "~180 t de caño de 36\" y 12\"; 58 spools × 3 h-hombre",
+   "cantidad": 180,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 13.0,
+     "proveedor": "Horas propias ITT (13 USD/h de montaje)",
+     "origen": "conocimiento/costos/horas_por_equipo.csv",
+     "fecha": "2026-02-10",
+     "coincide": "similar",
+     "diferencia": "criterio del agente"
+    }
+   ]
+  },
+  {
+   "id": "S02",
+   "pos": "PIN",
+   "grupo": "servicio",
+   "descripcion": "Granallado y pintura TGS sin mano final (1688.3 m²) — SE COTIZA APARTE POR m²",
+   "especificacion": "Caños 36\" 506 m × 2,8714 + 12\" 190 m × 1,0176 + codos 6 × 6,18 + bridas 7 × 0,70 m²; la planilla real lo vende aparte (40 USD/m²) y no lo incluye en el precio por planta",
+   "cantidad": 1688.25,
+   "unidad": "m2",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 40.0,
+     "proveedor": "Granallado y pintura 40 USD/m² (Sacde/20 TK de choque, PIN-00497)",
+     "origen": "Sacde/20 - SE-3121-ASTORD-014 - TK DE CHOQUE/4.Armado de la Oferta Comercial/LM - SACDE - TK Choque.xlsx",
+     "fecha": "2026-03-03",
+     "coincide": "similar",
+     "diferencia": "esquema TGS-ING-019 sin mano final; Sacde/14: granallado 20,03 + pintura 20,41 = 40,43 USD/m²"
+    }
+   ]
+  }
+ ],
+ "compras": {
+  "fecha_respuesta": "AAAA-MM-DD",
+  "material_en_planta_dias": 45,
+  "lugar_entrega": "Planta ITT S.A., Av. 12 de Octubre 4004, Quilmes Oeste, Bs. As.",
+  "requisitos_generales": [
+   "Cotizar en USD sin IVA, con plazo de entrega y validez de la oferta.",
+   "Certificados de material (colada / 3.1).",
+   "Indicar cualquier diferencia con lo pedido (serie, material, extremos, modelo)."
+  ],
+  "notas": {
+   "1": "[requisito para el proveedor]"
+  },
+  "proveedores": {
+   "1": "Renard"
+  },
+  "cantidad_compra": {
+   "2": "1 tira de ~12 m"
+  },
+  "servicios": [
+   {
+    "servicio": "[Armado según plano]",
+    "proveedores": "[taller]",
+    "referencia": "[último precio, fecha]",
+    "nota": ""
+   }
+  ]
+ },
+ "nota_agente": "Recotización a mano del agente (CTRL-CA01), sin precios del propio proyecto (Sacde/18)."
+}

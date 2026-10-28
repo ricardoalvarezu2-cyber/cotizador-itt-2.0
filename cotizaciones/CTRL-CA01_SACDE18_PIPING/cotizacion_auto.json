@@ -1,0 +1,455 @@
+{
+ "codigo": "CTRL-CA01",
+ "revision": "Rev 0",
+ "estado": "borrador",
+ "fecha": "2026-04-20",
+ "preparo": "Caso de control del cotizador",
+ "cliente": {
+  "nombre": "SACDE (caso de control; cliente final TGS)",
+  "codigo_itt": "",
+  "comprador": ""
+ },
+ "titulo": "Caso de control: prefabricado de piping 36\" y 12\" de la PC Chacharramendi (Sacde 18, TGS)",
+ "titulo_pagina": "Control piping Sacde 18",
+ "archivo_planilla": "[CLIENTE]_[pedido]",
+ "subtitulo_planilla": "Caso de control: precotización automática contra la planilla de costo real (Sacde/18, Rev4 Dirección)",
+ "meta": [
+  "Artículo [código]",
+  "Plano [número rev]",
+  "Comprador: [nombre]",
+  "Preparó: Matías Russo · [fecha]"
+ ],
+ "equipo": {
+  "singular": "conjunto de spools",
+  "plural": "conjuntos de spools",
+  "tipo": "manifold",
+  "diametro_pulg": 36
+ },
+ "parametros": {
+  "N": 1,
+  "FM": 1.35,
+  "FMO": 1.35,
+  "CONT": 5,
+  "AJ": 1,
+  "TRANS": 0,
+  "TC": 1550,
+  "TR_ARS": 0,
+  "TR_EMB": 0,
+  "TR_F": 1.0,
+  "fecha_referencia": "2026-04-20",
+  "rx_pct": 100,
+  "ph_horas": 18,
+  "FTV": 1.0
+ },
+ "plazo": {
+  "dias": 60,
+  "texto": "desde OC · EXW Quilmes Oeste",
+  "tareas": [
+   [
+    "Material crítico [proveedor]",
+    0,
+    60,
+    "crit"
+   ],
+   [
+    "Taller: armado, PH y pintura",
+    45,
+    57,
+    "tal"
+   ],
+   [
+    "Dossier y despacho",
+    57,
+    60,
+    "tal"
+   ]
+  ],
+  "nota": "[Qué fija el plazo y cómo se acorta]"
+ },
+ "flete": {
+  "etiqueta": "Flete a [destino]",
+  "referencia_html": "[Cotización de flete de referencia, con fecha y fuente]",
+  "criterio_html": "[Si se ofrece EXW o entregado]"
+ },
+ "historial_html": [],
+ "pedido": {
+  "eyebrow": "[Nº de pedido] · emitido [fecha]",
+  "datos_html": [
+   [
+    "Cliente",
+    "[nombre] (código ITT [CCCC])"
+   ],
+   [
+    "Ítem",
+    "[ítem] · [descripción] · <b>[cantidad] un</b>"
+   ],
+   [
+    "Documento",
+    "[documento y plano]"
+   ],
+   [
+    "Entrega pedida",
+    "[lugar]"
+   ],
+   [
+    "Fechas",
+    "Límite de respuesta [fecha] · necesidad [fecha]"
+   ]
+  ],
+  "requisitos_html": [
+   "[requisito técnico del pedido]"
+  ]
+ },
+ "nota_mo_html": "[Qué incluye y excluye la MO; soldaduras de taller junta por junta; extremos para soldar en campo]",
+ "desvios": [
+  {
+   "tag": "Pos X",
+   "titulo": "[qué se ofrece distinto]",
+   "texto": "[detalle]"
+  }
+ ],
+ "antecedentes": [
+  {
+   "carpeta_html": "<b>[CLIENTE/NN]</b> · [oferta]",
+   "fecha": "dd/mm/aaaa",
+   "que": "[qué es]",
+   "precio": "[c/u]",
+   "tomado_html": "[qué se tomó]"
+  }
+ ],
+ "pendientes": [
+  {
+   "titulo": "Proveedores",
+   "items": [
+    "[confirmación pendiente]"
+   ]
+  },
+  {
+   "titulo": "Cliente",
+   "items": [
+    "[consulta]"
+   ]
+  }
+ ],
+ "pie": "Fuentes: base de conocimiento del repositorio cotizador-itt. Precios en USD sin IVA.",
+ "planilla_notas": [
+  "Plazo: [días] desde OC ([material crítico]).",
+  "Condiciones: [pago, entrega, validez]."
+ ],
+ "items": [
+  {
+   "id": "M01",
+   "pos": "1",
+   "grupo": "material",
+   "descripcion": "Caño con costura biselado (nota 14) 36\"",
+   "cantidad": 325.0,
+   "unidad": "m",
+   "especificacion": "Plano: 36\" · 40 · API 5L X70 · BW · provisto por el cliente (TGS 148 m / SACDE 177 m)",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 462.65,
+     "proveedor": "PROVEMET · CAN-01480",
+     "origen": "fuentes_originales/cotizacion_elementos_equipos_2026-03.xlsx · rubro CAÑOS · cotización 241256",
+     "fecha": "2025-08-18",
+     "coincide": "similar",
+     "diferencia": "diametro: 24\" (pedido 36\"); schedule: 20 (pedido 40)"
+    }
+   ]
+  },
+  {
+   "id": "M01B",
+   "pos": "1b",
+   "grupo": "material",
+   "descripcion": "Completar barra de 6 m de la pos 1 (compra mínima; sobrante, no va en el equipo)",
+   "cantidad": 5.0,
+   "unidad": "m",
+   "especificacion": "55 barra(s) de 6 m para 325 m en 1 equipo(s); por equipo 5 m",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 462.65,
+     "proveedor": "PROVEMET · CAN-01480",
+     "origen": "fuentes_originales/cotizacion_elementos_equipos_2026-03.xlsx · rubro CAÑOS · cotización 241256",
+     "fecha": "2025-08-18",
+     "coincide": "similar",
+     "diferencia": "diametro: 24\" (pedido 36\"); schedule: 20 (pedido 40)"
+    }
+   ]
+  },
+  {
+   "id": "M02",
+   "pos": "2",
+   "grupo": "material",
+   "descripcion": "Caño sin costura biselado 36\"",
+   "cantidad": 181.0,
+   "unidad": "m",
+   "especificacion": "Plano: 36\" · 10 · API 5L X60 · BW · provisto por el cliente (SACDE)",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 498.85,
+     "proveedor": "no dice · CAN-02634",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\10- Trampas 6x8 Trampas lanzadora - receptora LT2E · 4.Armado de la Oferta Comercial/Estructura de costo- Trampas 6x8 y 6x4.xlsx.txt",
+     "fecha": "2025-12-10",
+     "coincide": "similar",
+     "diferencia": "diametro: 24\" (pedido 36\"); material: sin dato (pedido API 5L)"
+    }
+   ]
+  },
+  {
+   "id": "M02B",
+   "pos": "2b",
+   "grupo": "material",
+   "descripcion": "Completar barra de 6 m de la pos 2 (compra mínima; sobrante, no va en el equipo)",
+   "cantidad": 5.0,
+   "unidad": "m",
+   "especificacion": "31 barra(s) de 6 m para 181 m en 1 equipo(s); por equipo 5 m",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 498.85,
+     "proveedor": "no dice · CAN-02634",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\10- Trampas 6x8 Trampas lanzadora - receptora LT2E · 4.Armado de la Oferta Comercial/Estructura de costo- Trampas 6x8 y 6x4.xlsx.txt",
+     "fecha": "2025-12-10",
+     "coincide": "similar",
+     "diferencia": "diametro: 24\" (pedido 36\"); material: sin dato (pedido API 5L)"
+    }
+   ]
+  },
+  {
+   "id": "M03",
+   "pos": "3",
+   "grupo": "material",
+   "descripcion": "Brida WN RF ASME B16.5 36\"",
+   "cantidad": 7.0,
+   "unidad": "un",
+   "especificacion": "Plano: 36\" · 600 x 40 · ASTM A-105 · RF/BW · provisto por el cliente (SACDE)",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 2205.0,
+     "proveedor": "OIL METAL · BRI-01289",
+     "origen": "fuentes_originales/cotizacion_elementos_equipos_2026-03.xlsx · rubro BRIDAS",
+     "fecha": "2025-07-03",
+     "coincide": "similar",
+     "diferencia": "diametro: 32\" (pedido 36\"); schedule: sin dato (pedido 40)"
+    }
+   ]
+  },
+  {
+   "id": "M04",
+   "pos": "4",
+   "grupo": "material",
+   "descripcion": "Codo 90° MSS-SP-75 36\"",
+   "cantidad": 6.0,
+   "unidad": "un",
+   "especificacion": "Plano: 36\" · 40 · WPHY-70 · BW · provisto por el cliente (SACDE)",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 440.46,
+     "proveedor": "Renard · ABW-02343",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx",
+     "fecha": "2026-06-26",
+     "coincide": "similar",
+     "diferencia": "diametro: sin dato (pedido 36\"); schedule: 80 (pedido 40); material: A234 WPB (pedido A860 WPHY)"
+    }
+   ]
+  },
+  {
+   "id": "M05",
+   "pos": "5",
+   "grupo": "material",
+   "descripcion": "Caño sin costura biselado 12\"",
+   "cantidad": 190.0,
+   "unidad": "m",
+   "especificacion": "Plano: 12\" · 20 · ASTM A53 Gr. B · BW · provisto por el cliente (SACDE)",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 119.11,
+     "proveedor": "Renard (cód. 1197) · CAN-01427",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1197",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "material: A106 B (pedido A53)"
+    }
+   ]
+  },
+  {
+   "id": "M05B",
+   "pos": "5b",
+   "grupo": "material",
+   "descripcion": "Completar barra de 6 m de la pos 5 (compra mínima; sobrante, no va en el equipo)",
+   "cantidad": 2.0,
+   "unidad": "m",
+   "especificacion": "32 barra(s) de 6 m para 190 m en 1 equipo(s); por equipo 2 m",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 119.11,
+     "proveedor": "Renard (cód. 1197) · CAN-01427",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1197",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "material: A106 B (pedido A53)"
+    }
+   ]
+  },
+  {
+   "id": "S01",
+   "pos": "MO",
+   "grupo": "mo",
+   "descripcion": "Soldaduras: 14.25 a tope + SW y olets (calculado)",
+   "especificacion": "pos 1, 2, 5: caño por metro; sus juntas se cuentan en los extremos BW de accesorios y bridas (una junta cada uno); pos 3: 10.5 extremo(s) BW de taller (1 por unidad × 7 × 1.5 por el caño) × 36\" × 1.9990; pos 4: 18 extremo(s) BW de taller (2 por unidad × 6 × 1.5 por el caño) × 36\" × 1.9990",
+   "cantidad": 1025.487,
+   "unidad": "pulg",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 16.0,
+     "proveedor": "Mano de obra soldadura piping (criterio de las planillas de costo 2026): Precio por pulgada que usan las planillas de ITT de 2025-2026 (16 a 16,5; 19 en #900 en Sacde 12). Controles CTRL-M01/P01/T01, ",
+     "origen": "planillas 2026 (TAVAL/43 puentes YPF 19-02-2026; TAVAL/40 Inarteco; Sacde 12 a 15; Tecpetrol 9: 16,5)",
+     "fecha": "2026-02-31",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "S02",
+   "pos": "PIN",
+   "grupo": "servicio",
+   "descripcion": "Granallado y pintura (m² calculados)",
+   "especificacion": "4938.82 m² exteriores: caños y niples × 3 por bridas, accesorios y válvulas 4938.8",
+   "cantidad": 4938.817,
+   "unidad": "m2",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 50.0,
+     "proveedor": "criterio ITT · PIN-00569",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN\\4.Armado de la Oferta Comercial",
+     "fecha": "2026-10-10",
+     "coincide": "similar",
+     "diferencia": "m² calculados (caños, accesorios por regla, envolvente y estructura); esquema de pintura a confirmar con el pliego"
+    }
+   ]
+  },
+  {
+   "id": "S04",
+   "pos": "RX",
+   "grupo": "servicio",
+   "descripcion": "Radiografía 100% de las juntas a tope y tintas penetrantes en SW y olets",
+   "especificacion": "0 placas chicas, 100 grandes, 3.00 servicio(s) de RX y 0.00 de LP por equipo (servicios repartidos en 1 equipos)",
+   "cantidad": 1,
+   "unidad": "gl",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 2024.0,
+     "proveedor": "Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))",
+     "origen": "PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT)",
+     "fecha": "2026-08-14",
+     "coincide": "igual"
+    },
+    {
+     "tipo": "cot",
+     "precio": 3470.0,
+     "proveedor": "NDT Antonelli (tarifas 11-2025), mismas placas y servicios",
+     "origen": "fuentes_originales/antonelli_end_2025-11.pdf",
+     "fecha": "2025-11-03",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "S12H",
+   "pos": "HH",
+   "grupo": "mo",
+   "descripcion": "Horas de ingeniería (estimadas del antecedente)",
+   "especificacion": "282.24 h por conjunto de spools · mediana de 282.2, 337.2, 34.1 h por unidad (repartidas en la serie y por tamaño)",
+   "cantidad": 282.24,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 15.0,
+     "proveedor": "Horas propias ITT (tarifa del antecedente)",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · Sacde/14- 3029 RDA - SE-CPF-062_ SKID VALVULA Y BOMBA TK CONICO · 4.Armado de la Oferta Comercial/LM Sacde TK Cónico Rev 0.xlsx.txt · hoja Montaje HH",
+     "fecha": "2026-02-10",
+     "coincide": "similar",
+     "diferencia": "ESTIMADO del antecedente Sacde/14- 3029 RDA - SE-CPF-062_ SKID VALVULA Y BOMBA TK CONICO · Skid valvula y bomba para TK-1828 (TK conico) (6 (sch 40; tambien 4,3,2), 1 u, 2026-02-10)"
+    }
+   ]
+  },
+  {
+   "id": "S13C",
+   "pos": "CAL",
+   "grupo": "mo",
+   "descripcion": "Horas de calidad y dossier (estimadas del antecedente)",
+   "especificacion": "113.58 h por conjunto de spools · mediana de 105.8, 202.3, 113.6 h por unidad (repartidas en la serie y por tamaño)",
+   "cantidad": 113.58,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 15.0,
+     "proveedor": "Horas propias ITT (tarifa del antecedente)",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · Sacde/14- 3029 RDA - SE-CPF-062_ SKID VALVULA Y BOMBA TK CONICO · 4.Armado de la Oferta Comercial/LM Sacde TK Cónico Rev 0.xlsx.txt · hoja Montaje HH",
+     "fecha": "2026-02-10",
+     "coincide": "similar",
+     "diferencia": "ESTIMADO del antecedente Sacde/14- 3029 RDA - SE-CPF-062_ SKID VALVULA Y BOMBA TK CONICO · Skid valvula y bomba para TK-1828 (TK conico) (6 (sch 40; tambien 4,3,2), 1 u, 2026-02-10)"
+    }
+   ]
+  },
+  {
+   "id": "S13A",
+   "pos": "ARM",
+   "grupo": "mo",
+   "descripcion": "Horas de montaje en planta (armado, movimientos, prueba hidráulica) (estimadas del antecedente)",
+   "especificacion": "570.5 h por conjunto de spools · mediana de 535.5 h × 1.176, 507.6 h × 1.124, 216 h × 1.262 (horas por unidad × tamaño)",
+   "cantidad": 570.5,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 13.0,
+     "proveedor": "Horas propias ITT (tarifa del antecedente)",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · Sacde/14- 3029 RDA - SE-CPF-062_ SKID VALVULA Y BOMBA TK CONICO · 4.Armado de la Oferta Comercial/LM Sacde TK Cónico Rev 0.xlsx.txt · hoja Montaje HH",
+     "fecha": "2026-02-10",
+     "coincide": "similar",
+     "diferencia": "ESTIMADO del antecedente Sacde/14- 3029 RDA - SE-CPF-062_ SKID VALVULA Y BOMBA TK CONICO · Skid valvula y bomba para TK-1828 (TK conico) (6 (sch 40; tambien 4,3,2), 1 u, 2026-02-10)"
+    }
+   ]
+  }
+ ],
+ "compras": {
+  "fecha_respuesta": "AAAA-MM-DD",
+  "material_en_planta_dias": 45,
+  "lugar_entrega": "Planta ITT S.A., Av. 12 de Octubre 4004, Quilmes Oeste, Bs. As.",
+  "requisitos_generales": [
+   "Cotizar en USD sin IVA, con plazo de entrega y validez de la oferta.",
+   "Certificados de material (colada / 3.1).",
+   "Indicar cualquier diferencia con lo pedido (serie, material, extremos, modelo)."
+  ],
+  "notas": {
+   "1": "[requisito para el proveedor]"
+  },
+  "proveedores": {
+   "1": "Renard"
+  },
+  "cantidad_compra": {
+   "2": "1 tira de ~12 m"
+  },
+  "servicios": [
+   {
+    "servicio": "[Armado según plano]",
+    "proveedores": "[taller]",
+    "referencia": "[último precio, fecha]",
+    "nota": ""
+   }
+  ]
+ },
+ "nota_precotizacion": "Generado por precotizar.py: revisar precotizacion.md antes de usarlo como cotizacion.json"
+}
