@@ -602,11 +602,13 @@ def leer_fuentes():
     for f in sorted((RAIZ / "cotizaciones").glob("COT*/cotizacion.json")):
         c = json.load(open(f, encoding="utf-8"))
         for it in c["items"]:
-            if it["grupo"] != "material":
-                continue
+            if it["grupo"] != "material" or re.fullmatch(r"\d+[a-z]", str(it["pos"])):
+                continue  # las compras extra (14b) son sobrante de otra posición, no una pieza
             for s in it["fuentes"]:
-                if s["tipo"] in ("est", "lista", "stock") or not s.get("precio") or s.get("coincide") != "igual":
-                    # lista y stock ya entran por su archivo; los similares describen lo pedido y no lo cotizado
+                if s["tipo"] in ("est", "lista", "stock") or not s.get("precio") or s.get("coincide") != "igual" \
+                        or re.search(r"\b[A-Z]{3}-\d{5}\b", s.get("proveedor", "")):
+                    # lista y stock ya entran por su archivo; los similares describen lo pedido y no lo cotizado;
+                    # un precio con código del catálogo (CAN-01435) salió del catálogo: volver a cargarlo lo duplicaría
                     continue
                 tp = {"cot": "cotización", "lista": "lista", "stock": "compra", "ant": "planilla interna"}[s["tipo"]]
                 car = carpeta_repo(s["origen"])

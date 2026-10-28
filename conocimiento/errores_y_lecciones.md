@@ -88,3 +88,10 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 | 48 | El precio de una cotización cambiaba solo cuando la base sumaba un mes de índices (el control de la CAPEX iba a fallar el 02-11 al completarse el dólar de octubre) | Al pasar a revisado se congelan los índices en la cotización (`indices_congelados`); al volver a borrador se descongelan |
 | 49 | La oferta económica con flete incluido sumaba el flete al total sin mostrarlo en ninguna fila (USD 2.453,79 sin explicar) | Fila "Flete y embalaje hasta destino" en la oferta (Python y página); `generar_oferta.py` verifica unitario × cantidad + flete = total |
 | 50 | La plantilla de oferta traía los datos de la CAPEX: una cotización nueva podía salir con otro cliente | Plantilla neutra con [corchetes] |
+| 51 | Skid YPF: `precotizar.py` contaba los metros de caño como piezas (11,5 m → 23 extremos BW) | Con caño por metro, cada extremo BW de accesorio o brida es una junta; tee de reducción: 2 extremos del diámetro mayor y 1 del menor |
+| 52 | Los olets se medían por el caño donde se sueldan (sockolet 12"x3/4" = 21 pulgadas) | Se miden por la salida (3/4" × 1,75) |
+| 53 | Una válvula de 2" se usó como "similar" para una de 8" (USD 131 contra 1.346) | Si el similar difiere más de 1,6 veces en diámetro, queda SIN PRECIO con el similar como referencia |
+| 54 | La plantilla de oferta neutra quedó sin `firma` y con `imagen_plano` vacío: `generar_oferta.py` fallaba en la primera cotización nueva; además decía "POR PUENTE" fijo | `firma` en la plantilla; imagen solo si es un archivo; título con `equipo.singular` |
+| 55 | Desde el celular el conector "Claude Code Remote" no cargó: el pedido quedó pendiente (y el Excel se subió dos veces) | Los pendientes se procesan desde la sesión de trabajo o el lunes; revisar la doble subida |
+
+| 56 | Al armar una cotización nueva, el catálogo volvía a leer como "precio usado" los precios que la cotización había tomado del propio catálogo, y las filas de compra extra (sobrante de barra) como piezas | `catalogo_materiales.py` ignora las fuentes con código del catálogo y las filas 14b |

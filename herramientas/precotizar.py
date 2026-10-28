@@ -144,6 +144,16 @@ def material(r, n):
                             "fecha": date.today().isoformat(), "coincide": "sin_ref", "diferencia": "No hay pieza de esa familia y tipo con precio"}]
         return item, f"| {r['pos']} | {item['descripcion'][:45]} | **SIN PRECIO** | — | — | pedir cotización |"
     igual, _, _, _, _, _, difs, c = elegido
+    # Un "similar" de otro diámetro no sirve como precio (una válvula de 2" no estima una de 8"): queda SIN PRECIO,
+    # con el similar como referencia. Se acepta hasta 1,6 veces contra alguno de los diámetros del plano (12"x3/4" → 12 o 3/4).
+    md = next((re.match(r'diametro: ([\d.]+)"', x) for x in difs if re.match(r'diametro: [\d.]+"', x)), None)
+    pedidos = [dn_de(x) for x in re.split(r"\s*x\s*", str(r["diametro"]).lower()) if dn_de(x)]
+    if not igual and md and pedidos and min(max(float(md.group(1)), d) / max(min(float(md.group(1)), d), 1e-9) for d in pedidos) > 1.6:
+        item["fuentes"] = [{"tipo": "est", "precio": 0, "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización", "origen": "—",
+                            "fecha": date.today().isoformat(), "coincide": "sin_ref",
+                            "diferencia": f"El más parecido es de otro diámetro ({c['codigo']} {c['descripcion'][:50]}, USD {float(c['ultimo_precio_usd']):,.2f}): no sirve como precio"}]
+        return item, (f"| {r['pos']} | {item['descripcion'][:45]} | **SIN PRECIO** | — | — | el más parecido es de otro diámetro "
+                      f"({md.group(1)}\" {c['codigo']}, USD {float(c['ultimo_precio_usd']):,.2f}): pedir cotización |")
     precio = float(c["ultimo_precio_usd"])
     nota_u = ""
     uc, up = unidad_norm(c["unidad"]), unidad_norm(unidad)
@@ -182,7 +192,16 @@ def soldaduras(filas):
     bw_eq, juntas_olet, juntas_sw, detalle, placas = 0.0, 0.0, 0.0, [], [0.0, 0.0]
     extremos_bw = 0
     hay_campo = any("extremos_campo" in r for r in filas)
+    # Caño por metro: no se sabe en cuántos tramos va, así que sus extremos no se cuentan; cada extremo BW de un
+    # accesorio o brida se toma como una junta con caño (por eso esos extremos cuentan doble).
+    es_cano_m = lambda r: re.search(r"\bcano\b|\bcanos\b|\btubo\b", norm(r["descripcion"])) and norm(r["unidad"]).startswith("m")
+    por_metro = [r for r in filas if es_cano_m(r) and "BW" in r["extremos"].upper()]
+    mult = 2 if por_metro else 1
+    if por_metro:
+        detalle.append(f"pos {', '.join(r['pos'] for r in por_metro)}: caño por metro; sus juntas se cuentan en los extremos BW de accesorios y bridas (una junta cada uno)")
     for r in filas:
+        if r in por_metro:
+            continue
         ext = r["extremos"].upper().replace("-M", "").replace("-H", "")
         toks = [t.strip() for t in re.split(r"[/]", ext) if t.strip()]
         d = norm(r["descripcion"])
@@ -197,18 +216,30 @@ def soldaduras(filas):
         f, pch, pgr = factor_espesor(dn, sch, tabla)
         if re.search(OLETS, d):
             fa = 2.5 if "weldolet" in d else fac_acc.get("sockolets", 1.75)
+            ds = [dn_de(x) for x in re.split(r"\s*x\s*", r["diametro"].lower()) if dn_de(x)]
+            dn = min(ds) if ds else dn  # el olet se mide por la salida (12"x3/4" → 3/4"), no por el caño donde se suelda
             juntas_olet += (n_bw + n_sw) * q * (dn or 0) * fa
             detalle.append(f"pos {r['pos']}: {int((n_bw + n_sw) * q)} junta(s) de {r['descripcion'][:25]} sobre caño × {dn:g}\" × {fa} = {(n_bw + n_sw) * q * dn * fa:.2f}")
             continue
         campo = float(r.get("extremos_campo") or 0)
-        bw_taller = max(0.0, n_bw - campo) * q
+        bw_taller = max(0.0, n_bw - campo) * q * mult
         extremos_bw += bw_taller
-        bw_eq += bw_taller * (dn or 0) * f
+        dims = [dn_de(x) for x in re.split(r"\s*x\s*", r["diametro"].lower()) if dn_de(x)]
+        if n_bw and not campo and len(dims) == 2 and dims[0] != dims[1]:
+            # reducción: en una tee, 2 extremos del diámetro mayor y 1 del menor; en una reducción, 1 y 1
+            schs = [sch_de(x) or sch for x in re.split(r"\s*x\s*", r["serie_sch"])] + [sch]
+            f2 = factor_espesor(dims[1], schs[1] if len(schs) > 2 else sch, tabla)[0]
+            n_men = 1
+            prom = ((n_bw - n_men) * dims[0] * f + n_men * dims[1] * f2) / n_bw
+            bw_eq += bw_taller * prom
+            dn, f = prom, 1.0
+        else:
+            bw_eq += bw_taller * (dn or 0) * f
         juntas_sw += n_sw * q * (dn or 0) * f
         placas[0] += bw_taller / 2 * pch
         placas[1] += bw_taller / 2 * pgr
         if n_bw:
-            detalle.append(f"pos {r['pos']}: {bw_taller:g} extremo(s) BW de taller ({n_bw:g} por unidad × {q:g}{f' − {campo:g} de campo por unidad' if campo else ''}) × {dn:g}\" × {f:.4f}")
+            detalle.append(f"pos {r['pos']}: {bw_taller:g} extremo(s) BW de taller ({n_bw:g} por unidad × {q:g}{f' − {campo:g} de campo por unidad' if campo else ''}{' × 2 por el caño' if mult == 2 else ''}) × {dn:g}\" × {f:.4f}")
         if n_sw:
             detalle.append(f"pos {r['pos']}: {n_sw * q:g} junta(s) SW × {dn:g}\" × {f:.4f}")
     juntas_bw = extremos_bw / 2

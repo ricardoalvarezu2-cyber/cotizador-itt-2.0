@@ -41,6 +41,11 @@ def usd(v):
     return f"USD {v:,.2f}"
 
 
+def cot_equipo(carpeta):
+    c = json.load(open(Path(carpeta) / "cotizacion.json", encoding="utf-8"))
+    return c.get("equipo", {}).get("singular", "equipo")
+
+
 def leer_precios(carpeta):
     xlsx = sorted(Path(carpeta).glob("*.xlsx"))[0]
     with tempfile.TemporaryDirectory() as tmp:
@@ -293,10 +298,10 @@ def armar(carpeta, tipo, cfg, precios):
         c.vinetas([f"{pres} – OFERTA TÉCNICA", f"{pres} – OFERTA ECONÓMICA"] + cfg.get("documentos_cliente", []))
         c.titulo("CARACTERÍSTICAS GENERALES SEGÚN PLANO")
         c.texto(cfg["caracteristicas"])
-        img = Path(carpeta) / cfg["imagen_plano"]
-        if img.exists():
+        img = Path(carpeta) / cfg.get("imagen_plano", "")
+        if cfg.get("imagen_plano") and img.is_file():
             c.imagen(img, 15)
-        c.titulo("MATERIALES CONSIDERADOS (POR PUENTE)")
+        c.titulo(f"MATERIALES CONSIDERADOS (POR {cot_equipo(carpeta).upper()})")
         import csv
         filas = [[r["pos"], r["descripcion"] + (f" ({r['modelo_fabricante']})" if r["modelo_fabricante"] else ""),
                   r["diametro"], r["serie_sch"], r["material"], r["extremos"], r["cantidad"]]
