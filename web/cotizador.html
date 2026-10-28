@@ -109,6 +109,7 @@ tr.total td{background:var(--soft);font-weight:600}
 .aviso.bad{border-left-color:var(--bad)} .aviso.ok{border-left-color:var(--ok)}
 .aviso ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:3px;font-size:13.5px}
 .vacio{border:1.5px dashed var(--line);border-radius:4px;padding:26px 18px;text-align:center;color:var(--muted);display:flex;flex-direction:column;gap:10px;align-items:center}
+#tab{display:flex;flex-direction:column;gap:18px}
 .grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
 @media (max-width:900px){.grid2{grid-template-columns:1fr}}
 .capa{position:fixed;inset:0;background:rgb(10 20 28 / .45);z-index:20;display:flex;align-items:flex-start;justify-content:center;overflow:auto;padding:max(24px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) 24px max(16px,env(safe-area-inset-left,0px))}
@@ -1101,8 +1102,7 @@ if (typeof module !== "undefined") module.exports = Documentos;
     const dns = [...new Set(S.datos.soldadura.map(r => r.dn))].sort((a, b) => a - b);
     const schs = ["10", "20", "30", "40", "STD", "60", "80", "XS", "100", "120", "140", "160", "XXS"];
     return `<section><div class="sec-head"><h2>Mano de obra y servicios</h2><button data-a="manual" data-g="servicio">Cargar a mano</button></div>${tablaItems(false)}</section>
-      <div class="grid2">
-      <section class="panel"><h3>Soldaduras</h3><p class="small muted">Juntas por diámetro y schedule, derivadas de la columna de extremos del plano (BW se suman de a dos extremos; SW, cuplas y olets, una junta cada una).</p>
+      <section class="panel"><h3>1. Soldaduras</h3><p class="small muted">Juntas por diámetro y schedule, derivadas de la columna de extremos del plano (BW se suman de a dos extremos; SW, cuplas y olets, una junta cada una).</p>
         <div class="tbl"><table><thead><tr><th>Ø</th><th>Sch</th><th class="n">Juntas BW</th><th class="n">Juntas SW</th><th class="n">Cuplas / olets</th><th>Tipo olet</th><th></th></tr></thead><tbody>
         ${S.sold.map((r, i) => `<tr><td><select id="sd-${i}" data-sold="${i}" data-c="dn">${dns.map(d => `<option ${String(d) === String(r.dn) ? "selected" : ""}>${d}</option>`).join("")}</select></td>
           <td><select id="ss-${i}" data-sold="${i}" data-c="sch">${schs.map(s => `<option ${s === r.sch ? "selected" : ""}>${s}</option>`).join("")}</select></td>
@@ -1110,17 +1110,21 @@ if (typeof module !== "undefined") module.exports = Documentos;
           <td><select id="so-${i}" data-sold="${i}" data-c="tipoOlet"><option value="cupla" ${r.tipoOlet !== "weldolet" ? "selected" : ""}>cupla/sockolet (1,75)</option><option value="weldolet" ${r.tipoOlet === "weldolet" ? "selected" : ""}>weldolet (2,5)</option></select></td>
           <td><button class="chico" data-a="sold-quitar" data-i="${i}" aria-label="Quitar fila">×</button></td></tr>`).join("")}</tbody></table></div>
         <div class="fila"><button class="chico" data-a="sold-fila">Agregar diámetro</button></div>
-        <p id="sold-res"><b>${num(sol.pulg, 2)} pulgadas equivalentes</b> × USD ${t ? num(t.valor) : "—"} (costo propio de planta ${E(t?.fecha || "")}) = <b>USD ${num(sol.pulg * (t ? +t.valor : 0))}</b> · placas RX: ${sol.placas_chicas} chicas, ${sol.placas_grandes} grandes</p>
-        <div class="fila"><button class="prim" data-a="sold-agregar" ${sol.pulg && t ? "" : "disabled"}>Agregar soldaduras a la cotización</button>
-          <label style="flex-direction:row;align-items:center;gap:6px"><span>RX %</span><input id="rx-pct" type="number" min="0" max="100" step="5" class="num" value="${S.rxPct ?? 0}" style="width:70px"></label>
-          <button data-a="rx-agregar" ${sol.placas_chicas + sol.placas_grandes ? "" : "disabled"}>Agregar radiografía</button></div></section>
-      <section class="panel"><h3>Pintura y prueba hidráulica</h3>
+        <p id="sold-res"><b>${num(sol.pulg, 2)} pulgadas equivalentes</b> × USD ${t ? num(t.valor) : "—"} (costo propio de planta ${E(t?.fecha || "")}) = <b>USD ${num(sol.pulg * (t ? +t.valor : 0))}</b></p>
+        <div class="fila"><button class="prim" data-a="sold-agregar" ${sol.pulg && t ? "" : "disabled"}>Agregar soldaduras a la cotización</button></div></section>
+      <div class="grid2">
+      <section class="panel"><h3>2. Ensayos</h3><p class="small muted">Controles de calidad, antes de pintar.</p>
+        <h3>Radiografía</h3><p class="small" id="rx-info">Usa las juntas a tope de Soldaduras: ${sol.placas_chicas} placas chicas y ${sol.placas_grandes} grandes al 100%.</p>
+        <div class="fila"><label style="flex-direction:row;align-items:center;gap:6px"><span>Juntas a radiografiar (%)</span><input id="rx-pct" type="number" min="0" max="100" step="5" class="num" value="${S.rxPct ?? 0}" style="width:70px"></label>
+          <button data-a="rx-agregar" ${sol.placas_chicas + sol.placas_grandes ? "" : "disabled"}>Agregar radiografía</button></div>
+        <h3>Prueba hidráulica</h3>
+        <div class="campos"><label><span>Horas de prueba</span><input id="ph-h" type="number" step="any" class="num" value="${S.phH ?? 6}"></label>
+          <label><span>Tarifa</span><input id="ph-t" readonly value="${ph ? "USD " + num(ph.t) + "/h · " + E(ph.fe) : "sin dato"}"></label></div>
+        <div class="fila"><button data-a="ph-agregar" ${ph ? "" : "disabled"}>Agregar prueba hidráulica</button></div></section>
+      <section class="panel"><h3>3. Pintura</h3><p class="small muted">Tratamiento de superficie de un tercero, al final.</p>
         <div class="campos"><label><span>Superficie a pintar (m²)</span><input id="pin-m2" type="number" step="any" class="num" value="${S.pinM2 ?? ""}"></label>
           <label class="ancho"><span>Tarifa de pintura (USD/m², sin IVA)</span><select id="pin-t">${pins.map(s => `<option value="${E(s.c)}">${num(s.t)} · ${E(s.s.slice(0, 60))} · ${E(s.pr.slice(0, 30))} · ${E(s.fe)}</option>`).join("")}</select></label></div>
-        <div class="fila"><button data-a="pin-agregar">Agregar pintura</button><button class="chico" data-a="pin-calc">Calcular m² de los caños cargados</button></div>
-        <div class="campos"><label><span>Horas de prueba hidráulica</span><input id="ph-h" type="number" step="any" class="num" value="${S.phH ?? 6}"></label>
-          <label><span>Tarifa</span><input id="ph-t" readonly value="${ph ? "USD " + num(ph.t) + "/h · " + E(ph.fe) : "sin dato"}"></label></div>
-        <div class="fila"><button data-a="ph-agregar" ${ph ? "" : "disabled"}>Agregar prueba hidráulica</button></div></section></div>
+        <div class="fila"><button data-a="pin-agregar">Agregar pintura</button><button class="chico" data-a="pin-calc">Calcular m² de los caños cargados</button></div></section></div>
       <section class="panel"><div class="sec-head"><h3>Buscar en el catálogo de mano de obra y servicios</h3><span class="eyebrow">un global solo sirve si el alcance es el mismo</span></div>
         <div class="buscador"><label><span>Rubro</span><select id="fs-hoja" data-fs="hoja"><option value="">— todos —</option>${hojas.map(h => `<option ${S.fs.hoja === h ? "selected" : ""}>${E(h)}</option>`).join("")}</select></label>
           <label style="grid-column:span 2"><span>Texto</span><input id="fs-texto" data-fs="texto" value="${E(S.fs.texto || "")}" placeholder="ej. soldadura pulgada, granallado, ledesma"></label></div>
@@ -1293,7 +1297,8 @@ if (typeof module !== "undefined") module.exports = Documentos;
     } else if (el.dataset.sold !== undefined) {
       S.sold[+el.dataset.sold][el.dataset.c] = el.value;
       const sol = Busqueda.soldadura(S.datos, S.sold), t = Busqueda.tarifa(S.datos, "soldadura", "soldadura piping");
-      $("#sold-res").innerHTML = `<b>${num(sol.pulg, 2)} pulgadas equivalentes</b> × USD ${t ? num(t.valor) : "—"} = <b>USD ${num(sol.pulg * (t ? +t.valor : 0))}</b> · placas RX: ${sol.placas_chicas} chicas, ${sol.placas_grandes} grandes`;
+      $("#sold-res").innerHTML = `<b>${num(sol.pulg, 2)} pulgadas equivalentes</b> × USD ${t ? num(t.valor) : "—"} = <b>USD ${num(sol.pulg * (t ? +t.valor : 0))}</b>`;
+      $("#rx-info").textContent = `Usa las juntas a tope de Soldaduras: ${sol.placas_chicas} placas chicas y ${sol.placas_grandes} grandes al 100%.`;
       document.querySelector('[data-a="sold-agregar"]').disabled = !(sol.pulg && t);
       document.querySelector('[data-a="rx-agregar"]').disabled = !(sol.placas_chicas + sol.placas_grandes);
     } else if (el.dataset.ta !== undefined) {
