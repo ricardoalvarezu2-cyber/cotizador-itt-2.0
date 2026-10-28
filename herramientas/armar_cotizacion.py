@@ -34,6 +34,9 @@ from datetime import date
 from pathlib import Path
 
 from openpyxl import Workbook, load_workbook
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from numeros import a_vista  # noqa: E402
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -119,7 +122,7 @@ def escribir_planilla(cfg, carpeta, idx_rows):
 
     wb = Workbook(); ws = wb.active; ws.title = "Cotización"
     ws["A1"] = f"{cfg['codigo']} {cfg['revision']} · {cfg['titulo']}"; ws["A1"].font = Font(bold=True, size=14)
-    ws["A2"] = f"{cfg['subtitulo_planilla']} · {cfg['estado']} {cfg['fecha']}"; ws["A2"].font = GRIS
+    ws["A2"] = f"{cfg['subtitulo_planilla']} · {cfg['estado']} {a_vista(cfg['fecha'])}"; ws["A2"].font = GRIS
     ws["A4"] = "PARÁMETROS (celdas amarillas editables)"; ws["A4"].font = Font(bold=True)
     params = [(f"Cantidad de {eq['plural']}", p["N"], "0"), ("Factor de materiales (materiales y contingencia)", p["FM"], "0.00"),
               ("Factor de mano de obra y servicios", p["FMO"], "0.00"), ("Contingencia materiales", p["CONT"] / 100, "0%"),
@@ -130,7 +133,7 @@ def escribir_planilla(cfg, carpeta, idx_rows):
     # ajuste por inflación
     ws["G5"] = "AJUSTE POR INFLACIÓN (desde la fecha de cada precio hasta hoy)"; ws["G5"].font = Font(bold=True)
     for r, (n, v, f) in enumerate([("Aplicar ajuste (1 = sí, 0 = no)", p["AJ"], "0"),
-                                   ("Fecha de hoy (referencia)", fecha(p["fecha_referencia"]), "dd/mm/yyyy")], 6):
+                                   ("Fecha de hoy (referencia)", fecha(p["fecha_referencia"]), "dd-mm-yyyy")], 6):
         ws.cell(r, 7, n); c = ws.cell(r, 8, v); c.fill = INP; c.number_format = f
     ws["G8"] = "Variación 12 meses — materiales (CPI EE.UU.)"; ws["H8"] = f"=VLOOKUP(H7,{RNG},5,1)/VLOOKUP(EDATE(H7,-12),{RNG},5,1)-1"
     ws["G9"] = "Variación 12 meses — MO y servicios (costo local en USD)"; ws["H9"] = f"=VLOOKUP(H7,{RNG},4,1)/VLOOKUP(EDATE(H7,-12),{RNG},4,1)-1"
@@ -201,7 +204,7 @@ def escribir_planilla(cfg, carpeta, idx_rows):
                     c.fill = INP
                 if j in (6, 7, 15, 16):
                     c.number_format = USD
-                c.number_format = {11: "dd/mm/yyyy", 13: "0.0", 14: "0.000"}.get(j, c.number_format)
+                c.number_format = {11: "dd-mm-yyyy", 13: "0.0", 14: "0.000"}.get(j, c.number_format)
             w.cell(i, 8).fill = PatternFill("solid", fgColor=TF[s["tipo"]])
             w.cell(i, 17).fill = PatternFill("solid", fgColor={"igual": "DDF1E4", "similar": "FBEFD6", "sin_ref": "F8E1DE"}.get(s.get("coincide"), "FFFFFF"))
             w.cell(i, 18).alignment = Alignment(wrap_text=True, vertical="top")
@@ -215,7 +218,7 @@ def escribir_planilla(cfg, carpeta, idx_rows):
         k = n + 2
         for it in items:
             for a in it["fuentes"][1:]:
-                w.cell(k, 3, f"Alternativa pos {it['pos']}: USD {a['precio']:g} · {a['proveedor']} · {a['origen']} · {a['fecha']} ({TIPOS[a['tipo']]})").font = GRIS
+                w.cell(k, 3, f"Alternativa pos {it['pos']}: USD {a['precio']:g} · {a['proveedor']} · {a['origen']} · {a_vista(a['fecha'])} ({TIPOS[a['tipo']]})").font = GRIS
                 k += 1
         return w
 
@@ -232,7 +235,7 @@ def escribir_planilla(cfg, carpeta, idx_rows):
         for j, v in enumerate([date(y, m, 1), float(r["ipc_argentina"]), float(r["dolar_bna"]), float(r["indice_local_usd"]),
                                float(r["cpi_eeuu"]), r["origen_ipc"], r["origen_dolar"], r["origen_cpi"]], 1):
             c = x.cell(i, j, v); c.border = B
-            c.number_format = {1: "mm/yyyy", 2: "0.00", 3: "#,##0.00", 4: "0.00", 5: "0.00"}.get(j, "General")
+            c.number_format = {1: "mm-yyyy", 2: "0.00", 3: "#,##0.00", 4: "0.00", 5: "0.00"}.get(j, "General")
             if j >= 6 and str(v).startswith("dato"):
                 c.font = Font(color="2C7A4B")
             if j >= 6 and ("ESTIMADO" in str(v) or "APROXIMADO" in str(v)):
@@ -245,7 +248,7 @@ def escribir_planilla(cfg, carpeta, idx_rows):
             c = d.cell(i, j, sin_html(v)); c.alignment = Alignment(wrap_text=True, vertical="top"); c.border = B
     a = wb.create_sheet("Antecedentes"); head(a, ["Carpeta / oferta", "Fecha", "Qué es", "Precio c/u USD", "Qué se tomó"], [34, 12, 52, 14, 60])
     for i, an in enumerate(cfg.get("antecedentes", []), 2):
-        for j, v in enumerate([an["carpeta_html"], an["fecha"], an["que"], an["precio"], an["tomado_html"]], 1):
+        for j, v in enumerate([an["carpeta_html"], a_vista(an["fecha"]), an["que"], an["precio"], an["tomado_html"]], 1):
             c = a.cell(i, j, sin_html(v)); c.alignment = Alignment(wrap_text=True, vertical="top"); c.border = B
     ruta = carpeta / f"{cfg['codigo']}_{cfg['archivo_planilla']}.xlsx"
     wb.save(ruta)
@@ -308,7 +311,7 @@ def escribir_informe(cfg, carpeta, idx, adjuntos):
               '      <li>Hay meses interpolados entre datos publicados y el último mes puede estar estimado (ver la hoja Índices).</li>\n    </ul>\n  </div>\n</section>')
     desv = "\n".join(f'    <div class="desvio"><span class="tag">{d["tag"]}</span><b>{d["titulo"]}</b><span class="small muted">{d["texto"]}</span></div>'
                      for d in cfg.get("desvios", []))
-    ante = "\n".join(f'      <tr><td>{a["carpeta_html"]}</td><td class="mono">{e(a["fecha"])}</td><td>{a["que"]}</td><td class="n">{a["precio"]}</td><td>{a["tomado_html"]}</td></tr>'
+    ante = "\n".join(f'      <tr><td>{a["carpeta_html"]}</td><td class="mono">{e(a_vista(a["fecha"]))}</td><td>{a["que"]}</td><td class="n">{a["precio"]}</td><td>{a["tomado_html"]}</td></tr>'
                      for a in cfg.get("antecedentes", []))
     pend = "\n".join(f'    <div class="bloque"><h3>{e(b["titulo"])}</h3><ol class="lista small">\n' + "\n".join(f"      <li>{x}</li>" for x in b["items"]) + "\n    </ol></div>"
                      for b in cfg.get("pendientes", []))

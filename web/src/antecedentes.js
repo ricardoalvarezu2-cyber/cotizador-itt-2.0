@@ -83,7 +83,7 @@ const Antecedentes = (() => {
       const dif = precio_unitario / p.pu - 1, otra = dif > 3 || dif < -0.75;
       return { id: p.id, fecha: p.fe, cliente: p.cl, descripcion: p.d, oferta: p.of, pu: p.pu, moneda: p.mon, factor: p.fac, reparto: p.rep, dif, otra, ojo: !otra && Math.abs(dif) > 0.15, razones };
     });
-    const avisos = filas.filter(f => f.ojo).slice(0, 2).map(f => `Precio ${(f.dif * 100).toFixed(0)}% contra "${f.id.slice(0, 50)}" (${Math.round(f.pu).toLocaleString("es-AR")} ${f.moneda}, ${f.fecha}): explicar la diferencia rubro por rubro (P8)`);
+    const avisos = filas.filter(f => f.ojo).slice(0, 2).map(f => `Precio ${(f.dif * 100).toFixed(0)}% contra "${f.id.slice(0, 50)}" (${Math.round(f.pu).toLocaleString("es-AR")} ${f.moneda}, ${f.fecha.split("-").reverse().join("-")}): explicar la diferencia rubro por rubro (P8)`);
     if (filas.length && filas.every(f => f.otra)) avisos.push("Ningún antecedente de los 5 primeros es de la misma escala: comparar a mano");
     if (!filas.length) avisos.push(`No hay antecedentes de la familia ${familia} con precio en el índice: comparar a mano`);
     return { familia, nombreFamilia: A.familias[familia] || familia, consulta: q, filas, avisos };

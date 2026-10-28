@@ -56,6 +56,7 @@
 | 28/10/2026 | El repositorio sigue **privado** (tiene sueldos, costos, márgenes y contactos). Para que otra persona trabaje con su agente: sumarla como colaboradora en GitHub y darle edición en la página | Recomendación aceptada | — |
 | 28/10/2026 | Integrar un chat con Claude en la página y un "Mandar a Claude Code" (desde el chat o con un botón) que procese planos, P&ID, pliegos y listas de precios sobre el repositorio y deje el resultado en borrador | Matías (idea), plan por etapas abajo | — |
 | 28/10/2026 | **Control total del chat de la página**: crea, abre, duplica y modifica cotizaciones (datos, ítems, plazo, oferta), usa las calculadoras, carga artículos y MO nuevos (con documento, proveedor y fecha; ARS al BNA del mes; IVA descontado) en `catalogo_nuevo` y descarga. Excepciones: no aprueba ni marca enviada; borrar y pasar a revisado los confirma el usuario con un botón; sin documento no carga precios | Matías ("control total") | `web/src/asistente.js`, `web/LEEME.md` |
+| 28/10/2026 | **Fechas a la vista siempre DD-MM-AAAA**; adentro AAAA-MM-DD. Aplicado en la página (también los campos de fecha se escriben DD-MM-AAAA), informe, planilla, lista para Compras, ofertas, avisos del catálogo y comparación con antecedentes | Matías | `numeros.a_vista`, `Documentos.fecha` |
 | 28/10/2026 | No hay más información de precios que la ya entregada: el último precio se sigue eligiendo por fecha (no hay otras compras para preferir sobre la lista de Renard) | Matías | — |
 
 ## 3. Pendientes del proyecto

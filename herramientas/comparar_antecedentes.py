@@ -19,6 +19,7 @@ from types import SimpleNamespace
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from buscar_antecedentes import INDICE, puntuar  # noqa: E402
 from indice_proyectos import etiquetas, norm  # noqa: E402
+from numeros import a_vista  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
 
@@ -71,9 +72,9 @@ def main(carpeta, precio_unitario=None, costo=None, reparto=None):
                 rep = f"mat {m / (m + mo + te):.0%} · MO+serv {(mo + te) / (m + mo + te):.0%}"
         otra_escala = dif > 3 or dif < -0.75  # más de 4 veces de diferencia: el "precio principal" del índice es otra cosa
         marca = " (otra escala: no comparable)" if otra_escala else (" ⚠" if abs(dif) > 0.15 else "")
-        lineas.append(f"| {n} | {p['id'][:55]} | {p['fecha']} | {pu:,.0f} {p['moneda']} | {dif:+.0%}{marca} | {p['factor'] or '—'} | {rep or '—'} | {p['descripcion'][:90]} |")
+        lineas.append(f"| {n} | {p['id'][:55]} | {a_vista(p['fecha'])} | {pu:,.0f} {p['moneda']} | {dif:+.0%}{marca} | {p['factor'] or '—'} | {rep or '—'} | {p['descripcion'][:90]} |")
         if not otra_escala and abs(dif) > 0.15 and len(avisos) < 2:
-            avisos.append(f"Precio {dif:+.0%} contra '{p['id'][:50]}' ({pu:,.0f} {p['moneda']}, {p['fecha']}): explicar la diferencia rubro por rubro (P8)")
+            avisos.append(f"Precio {dif:+.0%} contra '{p['id'][:50]}' ({pu:,.0f} {p['moneda']}, {a_vista(p['fecha'])}): explicar la diferencia rubro por rubro (P8)")
     if res and not any(-0.75 <= precio_unitario / float(p["precio_unitario_principal"]) - 1 <= 3 for _, p in res[:5]):
         avisos.append("Ningún antecedente de los 5 primeros es de la misma escala: comparar a mano")
     if not res:

@@ -42,8 +42,8 @@ def main(carpeta):
     ws["A2"] = f"{cfg['titulo']}  ·  {n} {eq['plural']}"; ws["A2"].font = Font(bold=True)
     hoy = date.fromisoformat(cfg["fecha"])
     datos = [("Preparó (Ventas)", cfg["preparo"]),
-             ("Fecha", hoy.strftime("%d/%m/%Y")),
-             ("Respuesta de proveedores", date.fromisoformat(comp["fecha_respuesta"]).strftime("%d/%m/%Y") if comp.get("fecha_respuesta") else "a definir"),
+             ("Fecha", hoy.strftime("%d-%m-%Y")),
+             ("Respuesta de proveedores", date.fromisoformat(comp["fecha_respuesta"]).strftime("%d-%m-%Y") if comp.get("fecha_respuesta") else "a definir"),
              ("Plazo de entrega requerido", f"Material en planta a los {comp.get('material_en_planta_dias', '—')} días de la OC del cliente"),
              ("Lugar de entrega", comp.get("lugar_entrega", "Planta ITT, Quilmes Oeste")),
              ("Plano / documento", next((v for k, v in cfg["pedido"]["datos_html"] if k.startswith("Documento")), ""))]

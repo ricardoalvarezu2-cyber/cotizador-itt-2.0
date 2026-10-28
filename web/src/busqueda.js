@@ -146,16 +146,16 @@ const Busqueda = (() => {
       const s = it.fuentes[0], tag = `${it.pos || it.id} ${it.descripcion.slice(0, 40)}`, n0 = out.length;
       if (!s.precio) out.push({ nivel: "bad", txt: `${tag}: SIN PRECIO, pedir cotización antes de presentar` });
       if (!s.proveedor || !s.fecha) out.push({ nivel: "bad", txt: `${tag}: precio sin fuente o sin fecha` });
-      if (s.fecha && (!/^\d{4}-\d{2}-\d{2}$/.test(s.fecha) || s.fecha > h)) out.push({ nivel: "bad", txt: `${tag}: fecha inválida o futura (${s.fecha})` });
+      if (s.fecha && (!/^\d{4}-\d{2}-\d{2}$/.test(s.fecha) || s.fecha > h)) out.push({ nivel: "bad", txt: `${tag}: fecha inválida o futura (${s.fecha.split("-").reverse().join("-")})` });
       if (s.coincide === "similar" && !s.diferencia) out.push({ nivel: "bad", txt: `${tag}: similar sin decir en qué difiere` });
       if (s.coincide === "similar") out.push({ nivel: "warn", txt: `${tag}: pieza SIMILAR (${(s.diferencia || "").slice(0, 80)})` });
       if (s.tipo === "est" && s.precio) out.push({ nivel: "warn", txt: `${tag}: precio ESTIMADO (USD ${(it.cantidad * s.precio).toFixed(2)})` });
       if (/con iva|iva incluido|c\/ ?iva/.test(norm(s.proveedor + " " + (s.diferencia || "")))) out.push({ nivel: "warn", txt: `${tag}: la fuente dice "con IVA": cargar el precio sin IVA` });
-      if (s.fecha && s.fecha < "2025-04-14" && !/tc |tipo de cambio/.test(norm(s.proveedor))) out.push({ nivel: "warn", txt: `${tag}: precio del período con cepo (${s.fecha}) sin tipo de cambio explícito` });
+      if (s.fecha && s.fecha < "2025-04-14" && !/tc |tipo de cambio/.test(norm(s.proveedor))) out.push({ nivel: "warn", txt: `${tag}: precio del período con cepo (${s.fecha.split("-").reverse().join("-")}) sin tipo de cambio explícito` });
       if (s.fecha && /^\d{4}-\d{2}/.test(s.fecha)) {
         const [y, m] = s.fecha.split("-").map(Number), [Y, M] = h.split("-").map(Number);
         const meses = (Y - y) * 12 + M - m;
-        if (meses > 6 && s.tipo !== "est") out.push({ nivel: "warn", txt: `${tag}: precio de hace ${meses} meses (${s.fecha}), actualizar` });
+        if (meses > 6 && s.tipo !== "est") out.push({ nivel: "warn", txt: `${tag}: precio de hace ${meses} meses (${s.fecha.split("-").reverse().join("-")}), actualizar` });
       }
       for (const x of out.slice(n0)) { x.id = it.id; x.corto = x.txt.slice(tag.length + 2); }
     }

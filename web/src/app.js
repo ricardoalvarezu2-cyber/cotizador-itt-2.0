@@ -4,7 +4,7 @@
 // (archivos y trabajos para Claude Code; ver asistente.js). window.ITT expone el estado y las funciones que usa el chat (asistente.js).
 (async function () {
   const $ = s => document.querySelector(s);
-  const E = Documentos.esc, usd = Documentos.usd, num = Documentos.num;
+  const E = Documentos.esc, usd = Documentos.usd, num = Documentos.num, F = Documentos.fecha, FH = Documentos.fechaHora;
   const app = $("#app"), capa = $("#capa");
   const ESTADOS = ["borrador", "revisado", "aprobado", "enviado"];
   const TABS = [["datos", "Datos"], ["materiales", "Materiales"], ["servicios", "MO y servicios"], ["plazo", "Plazo"], ["oferta", "Oferta"], ["resumen", "Resumen y descargas"]];
@@ -40,7 +40,7 @@
   const ultIdx = S.datos.indices[S.datos.indices.length - 1];
   const fechaDatos = S.datos.generado_indices || S.datos.generado;
   const viejo = (Date.now() - new Date(fechaDatos).getTime()) / 864e5 > 9;
-  $("#datos-al").textContent = `Dólar e índices al ${fechaDatos.split("-").reverse().join("/")} · BNA ${num(ultIdx.dolar, 2)}` + (viejo ? " · DESACTUALIZADO" : "");
+  $("#datos-al").textContent = `Dólar e índices al ${F(fechaDatos)} · BNA ${num(ultIdx.dolar, 2)}` + (viejo ? " · DESACTUALIZADO" : "");
   $("#datos-al").classList.toggle("viejo", viejo);
 
   // ------------------------------------------------------------------ guardado automático
@@ -143,7 +143,7 @@
     const id = nuevoId(), base = clon(S.datos.plantilla_cotizacion), of = clon(S.datos.plantilla_oferta);
     Object.assign(base, { codigo, revision: "Rev 0", estado: "borrador", fecha: hoy(), titulo, items: [], cliente: { nombre: cliente, codigo_itt: "", comprador: "" }, firmante_id: S.firmantes[0]?.id || "" });
     base.parametros.fecha_referencia = hoy(); base.plazo = { dias: 60, texto: "desde OC", tareas: [], nota: "" };
-    of.estado = "borrador"; of.oferta = { numero: "PRES [a asignar]", revision: "A", fecha: hoy().split("-").reverse().join("/"), descripcion_revision: "Emisión original" };
+    of.estado = "borrador"; of.oferta = { numero: "PRES [a asignar]", revision: "A", fecha: F(hoy()), descripcion_revision: "Emisión original" };
     of.cliente = { nombre: cliente, contacto: "", referencia: "", proyecto: "" };
     await S.db.doc("cotizaciones/" + id).set({ cot: base, oferta: of, creado: new Date().toISOString() });
     await S.db.doc("resumenes/" + id).set({ codigo, titulo, cliente, estado: "borrador", unitario: 0, total: 0, actualizado: new Date().toISOString() });
@@ -229,7 +229,7 @@
       ${S.db ? "" : '<span class="err">Sin conexión con la base: no se puede guardar en esta vista.</span>'}</div>
       ${filas.length ? `<div class="tbl"><table class="tarjetas"><thead><tr><th>Código</th><th>Cotización</th><th>Cliente</th><th>Estado</th><th class="n">Unitario USD</th><th class="n">Total USD</th><th>Actualizada</th><th></th></tr></thead><tbody>
         ${filas.map(r => `<tr><td class="mono">${E(r.codigo)}</td><td><a href="#c-${E(r.id)}"><b>${E(r.titulo || "(sin título)")}</b></a></td><td data-l="Cliente">${E(r.cliente)}</td><td>${pill(r.estado)}</td>
-          <td class="n" data-l="Unitario USD">${num(r.unitario)}</td><td class="n" data-l="Total USD">${num(r.total)}</td><td class="small muted" data-l="Actualizada">${r.actualizado ? new Date(r.actualizado).toLocaleString("es-AR", { dateStyle: "short", timeStyle: "short" }) : ""}</td>
+          <td class="n" data-l="Unitario USD">${num(r.unitario)}</td><td class="n" data-l="Total USD">${num(r.total)}</td><td class="small muted" data-l="Actualizada">${FH(r.actualizado)}</td>
           <td class="fila fin"><button class="chico" data-a="duplicar" data-id="${E(r.id)}">Duplicar</button><button class="chico peligro" data-a="borrar" data-id="${E(r.id)}">Borrar</button></td></tr>`).join("")}
       </tbody></table></div>` : `<div class="vacio"><b>Todavía no hay cotizaciones guardadas.</b><span>Creá la primera con "Nueva cotización": cargás los datos, buscás materiales y servicios en los catálogos, y descargás la planilla, el informe y las ofertas.</span></div>`}
       <p class="small muted">Catálogos: ${S.datos.materiales.length.toLocaleString("es-AR")} materiales y ${S.datos.servicios.length} servicios, precios sin IVA, con fecha y origen. Todo se guarda solo y se copia a GitHub una vez por semana.</p></section>`;
@@ -273,6 +273,7 @@
   // ------------------------------------------------------------------ pestaña Datos
   const campo = (etq, ruta, tipo = "text", extra = "") => {
     const v = leerRuta(S.doc, ruta) ?? "";
+    if (tipo === "date") return `<label><span>${etq}</span><input id="f-${ruta.replace(/\./g, "-")}" type="text" inputmode="numeric" placeholder="DD-MM-AAAA" data-b="${ruta}" data-t="fecha" value="${E(F(v))}" ${extra}></label>`;
     return `<label><span>${etq}</span><input id="f-${ruta.replace(/\./g, "-")}" type="${tipo}" ${tipo === "number" ? 'step="any"' : ""} data-b="${ruta}" data-t="${tipo}" value="${E(v)}" ${extra}></label>`;
   };
   function tabDatos() {
@@ -327,7 +328,7 @@
         <td><div class="d">${E(it.descripcion)}</div><div class="sp">${E(it.especificacion || "")}</div></td>
         <td class="ed"><input id="q-${E(it.id)}" type="number" step="any" class="num" data-it="${E(it.id)}" data-c="cantidad" value="${it.cantidad}"></td><td>${E(it.unidad)}</td>
         <td class="ed"><input id="u-${E(it.id)}" type="number" step="any" class="num" data-it="${E(it.id)}" data-c="precio" value="${s.precio}"></td>
-        <td class="small"><span class="pill ${s.tipo === "est" ? "bad" : s.tipo === "cot" ? "ok" : "info"}">${E(Documentos.TIPOS[s.tipo] || s.tipo)}</span><br>${E(s.proveedor)}<br><span class="muted">${E(s.fecha)}</span></td>
+        <td class="small"><span class="pill ${s.tipo === "est" ? "bad" : s.tipo === "cot" ? "ok" : "info"}">${E(Documentos.TIPOS[s.tipo] || s.tipo)}</span><br>${E(s.proveedor)}<br><span class="muted">${E(F(s.fecha))}</span></td>
         <td><span class="pill ${cl(s)}">${E(Documentos.COINC[s.coincide] || "—")}</span>${s.diferencia ? `<div class="sp">${E(s.diferencia.slice(0, 140))}</div>` : ""}</td>
         <td>${celdaAvisos(it)}</td>
         <td class="n" data-sub="${E(it.id)}">${num(c.filas.find(f => f.id === it.id)?.ajustado)}</td>
@@ -385,7 +386,7 @@
       const m = x.r, est = x.estado === "igual" ? `<span class="pill ok">igual</span>` : x.estado === "similar" ? `<span class="pill warn">similar</span>` : `<span class="pill info">catálogo</span>`;
       const ch = S.selM.has(m.c);
       return `<div class="resultado ${ch ? "sel" : ""}"><label class="tilde">${S.doc ? `<input type="checkbox" data-selm="${i}" ${ch ? "checked" : ""} ${m.p ? "" : "disabled"} aria-label="Seleccionar">` : ""}${est}</label><div><div class="d">${E(m.d)}</div><div class="small muted">${E(m.c)} · ${E(S.datos.familias[m.f]?.n || "")}${[m.a.marca, m.a.modelo].filter(Boolean).length ? " · " + E([m.a.marca, m.a.modelo].filter(Boolean).join(" ")) : ""}${m.nuevo ? " · nuevo en la página" : ""}</div></div>
-        <div class="precio">${m.p ? "USD " + num(m.p) + " / " + E(m.u || "un") : '<span class="err">sin precio confiable</span>'}<div class="small muted">${E(m.fe || "")} · ${E(m.tp)}</div></div>
+        <div class="precio">${m.p ? "USD " + num(m.p) + " / " + E(m.u || "un") : '<span class="err">sin precio confiable</span>'}<div class="small muted">${E(F(m.fe))} · ${E(m.tp)}</div></div>
         <div class="det">${x.difs.length ? "Difiere en: " + E(x.difs.join("; ")) + " · " : ""}${m.al ? "<b>Alerta:</b> " + E(m.al) + " · " : ""}${E(m.pr)} · Origen: ${E(m.o)}${m.n > 1 ? ` · ${m.n} precios en el historial (${num(m.mn)} a ${num(m.mx)})` : ""}</div>
         ${S.doc ? `<div class="acc"><input id="qm-${i}" type="number" step="any" class="num" value="${ch ? S.selM.get(m.c).q : 1}" aria-label="Cantidad"><button class="chico prim" data-a="agregar-mat" data-i="${i}">Agregar</button></div>` : ""}</div>`;
     }).join("") : `<div class="vacio">No hay materiales con esos filtros. Probá quitar alguno o cargalo a mano.</div>`;
@@ -416,7 +417,7 @@
           <td><select id="so-${i}" data-sold="${i}" data-c="tipoOlet"><option value="cupla" ${r.tipoOlet !== "weldolet" ? "selected" : ""}>cupla/sockolet (1,75)</option><option value="weldolet" ${r.tipoOlet === "weldolet" ? "selected" : ""}>weldolet (2,5)</option></select></td>
           <td><button class="chico" data-a="sold-quitar" data-i="${i}" aria-label="Quitar fila">×</button></td></tr>`).join("")}</tbody></table></div>
         <div class="fila"><button class="chico" data-a="sold-fila">Agregar diámetro</button></div>
-        <p id="sold-res"><b>${num(sol.pulg, 2)} pulgadas equivalentes</b> × USD ${t ? num(t.valor) : "—"} (costo propio de planta ${E(t?.fecha || "")}) = <b>USD ${num(sol.pulg * (t ? +t.valor : 0))}</b></p>
+        <p id="sold-res"><b>${num(sol.pulg, 2)} pulgadas equivalentes</b> × USD ${t ? num(t.valor) : "—"} (costo propio de planta ${E(F(t?.fecha))}) = <b>USD ${num(sol.pulg * (t ? +t.valor : 0))}</b></p>
         <div class="fila"><button class="prim" data-a="sold-agregar" ${sol.pulg && t ? "" : "disabled"}>Agregar soldaduras a la cotización</button></div></section>
       <div class="grid2">
       <section class="panel"><h3>2. Ensayos</h3><p class="small muted">Controles de calidad, antes de pintar.</p>
@@ -425,11 +426,11 @@
           <button data-a="rx-agregar" ${sol.placas_chicas + sol.placas_grandes ? "" : "disabled"}>Agregar radiografía</button></div>
         <h3>Prueba hidráulica</h3>
         <div class="campos"><label><span>Horas de prueba</span><input id="ph-h" type="number" step="any" class="num" value="${S.phH ?? 6}"></label>
-          <label><span>Tarifa</span><input id="ph-t" readonly value="${ph ? "USD " + num(ph.t) + "/h · " + E(ph.fe) : "sin dato"}"></label></div>
+          <label><span>Tarifa</span><input id="ph-t" readonly value="${ph ? "USD " + num(ph.t) + "/h · " + E(F(ph.fe)) : "sin dato"}"></label></div>
         <div class="fila"><button data-a="ph-agregar" ${ph ? "" : "disabled"}>Agregar prueba hidráulica</button></div></section>
       <section class="panel"><h3>3. Pintura</h3><p class="small muted">Tratamiento de superficie de un tercero, al final.</p>
         <div class="campos"><label><span>Superficie a pintar (m²)</span><input id="pin-m2" type="number" step="any" class="num" value="${S.pinM2 ?? ""}"></label>
-          <label class="ancho"><span>Tarifa de pintura (USD/m², sin IVA)</span><select id="pin-t">${pins.map(s => `<option value="${E(s.c)}">${num(s.t)} · ${E(s.s.slice(0, 60))} · ${E(s.pr.slice(0, 30))} · ${E(s.fe)}</option>`).join("")}</select></label></div>
+          <label class="ancho"><span>Tarifa de pintura (USD/m², sin IVA)</span><select id="pin-t">${pins.map(s => `<option value="${E(s.c)}">${num(s.t)} · ${E(s.s.slice(0, 60))} · ${E(s.pr.slice(0, 30))} · ${E(F(s.fe))}</option>`).join("")}</select></label></div>
         <div class="fila"><button data-a="pin-agregar">Agregar pintura</button><button class="chico" data-a="pin-calc">Calcular m² de los caños cargados</button></div></section></div>
       ${buscadorSrv()}`;
   }
@@ -446,7 +447,7 @@
     $("#fs-info").textContent = `${r.total} resultado(s)`;
     box.innerHTML = r.res.length ? r.res.map((s, i) => `<div class="resultado ${S.selS.has(s.c) ? "sel" : ""}"><label class="tilde">${S.doc ? `<input type="checkbox" data-sels="${i}" ${S.selS.has(s.c) ? "checked" : ""} ${s.p ? "" : "disabled"} aria-label="Seleccionar">` : ""}<span class="pill ${s.t ? "ok" : "info"}">${s.t ? "tarifa" : "global"}</span></label>
       <div><div class="d">${E(s.s)}</div><div class="small muted">${E(s.h)} · ${E(s.c)}${s.eq ? " · " + E(s.eq) : ""}</div></div>
-      <div class="precio">${s.p ? (s.t ? "USD " + num(s.t) + " " + E(s.ut.replace("USD", "")) : "USD " + num(s.p)) : '<span class="err">sin precio confiable</span>'}<div class="small muted">${E(s.fe || "")}</div></div>
+      <div class="precio">${s.p ? (s.t ? "USD " + num(s.t) + " " + E(s.ut.replace("USD", "")) : "USD " + num(s.p)) : '<span class="err">sin precio confiable</span>'}<div class="small muted">${E(F(s.fe))}</div></div>
       <div class="det">${s.inc ? "Incluye: " + E(s.inc) + " · " : ""}${s.ninc ? "No incluye: " + E(s.ninc) + " · " : ""}${s.al ? "<b>Alerta:</b> " + E(s.al) + " · " : ""}${E(s.pr)} · Origen: ${E(s.o)}</div>
       ${S.doc ? `<div class="acc"><input id="qs-${i}" type="number" step="any" class="num" value="${S.selS.has(s.c) ? S.selS.get(s.c).q : 1}" aria-label="Cantidad"><button class="chico prim" data-a="agregar-srv" data-i="${i}" ${s.p ? "" : "disabled"}>Agregar</button></div>` : ""}</div>`).join("")
       : `<div class="vacio">No hay servicios con ese texto.</div>`;
@@ -536,7 +537,7 @@
     return `<section><div class="sec-head"><h3>Antecedentes parecidos (P8)</h3><span class="eyebrow">familia ${E(r.nombreFamilia || r.familia)} · los 5 más parecidos con precio</span></div>
       <p class="small muted">Una diferencia de más del 15% no es un error: hay que explicarla rubro por rubro (alcance, cantidad, diámetro, serie, fecha) antes de presentar el número. Más de 4 veces es otra escala (el precio del índice es de otra cosa).</p>
       ${r.filas.length ? `<div class="tbl"><table><thead><tr><th>#</th><th>Antecedente</th><th>Fecha</th><th class="n">Precio unitario</th><th class="n">Esta vs. antecedente</th><th>Factor</th><th>Materiales</th><th>Por qué se parece</th></tr></thead><tbody>
-        ${r.filas.map((f, i) => `<tr><td>${i + 1}</td><td><div class="d">${E(f.id)}</div><div class="sp">${E(f.cliente)}${f.oferta ? " · " + E(f.oferta) : ""} · ${E(f.descripcion.slice(0, 120))}</div></td><td class="small">${E(f.fecha)}</td>
+        ${r.filas.map((f, i) => `<tr><td>${i + 1}</td><td><div class="d">${E(f.id)}</div><div class="sp">${E(f.cliente)}${f.oferta ? " · " + E(f.oferta) : ""} · ${E(f.descripcion.slice(0, 120))}</div></td><td class="small">${E(F(f.fecha))}</td>
           <td class="n">${num(f.pu, 0)} ${E(f.moneda)}</td><td class="n">${f.otra ? '<span class="muted">otra escala</span>' : `<span class="pill ${f.ojo ? "warn" : "ok"}">${f.dif > 0 ? "+" : ""}${num(f.dif * 100, 0)}%</span>`}</td>
           <td>${E(f.factor || "—")}</td><td class="small">${f.reparto != null ? num(f.reparto * 100, 0) + "%" : "—"}</td><td class="small muted">${E(f.razones.join(" · "))}</td></tr>`).join("")}</tbody></table></div>` : ""}
       ${r.avisos.length ? `<div class="aviso"><ul>${r.avisos.map(a => `<li>${E(a)}</li>`).join("")}</ul></div>` : ""}</section>`;
@@ -572,7 +573,9 @@
     it.plano ??= {};
     S.editI = { it, nuevo };
     const s = it.fuentes[0];
-    const inp = (k, etq, v, tipo = "text") => `<label><span>${etq}</span><input id="ei-${k}" data-ei="${k}" type="${tipo}" ${tipo === "number" ? 'step="any"' : ""} value="${E(v ?? "")}"></label>`;
+    const inp = (k, etq, v, tipo = "text") => tipo === "date"
+      ? `<label><span>${etq}</span><input id="ei-${k}" data-ei="${k}" data-fecha type="text" inputmode="numeric" placeholder="DD-MM-AAAA" value="${E(F(v))}"></label>`
+      : `<label><span>${etq}</span><input id="ei-${k}" data-ei="${k}" type="${tipo}" ${tipo === "number" ? 'step="any"' : ""} value="${E(v ?? "")}"></label>`;
     capa.hidden = false;
     capa.innerHTML = `<div class="capa"><section class="panel" role="dialog" aria-label="Ítem"><h2>${nuevo ? "Cargar ítem a mano" : "Editar ítem"}</h2>
       <div class="campos">${inp("pos", "Posición del plano", it.pos)}<label><span>Grupo</span><select id="ei-grupo" data-ei="grupo">${[["material", "Material"], ["mo", "Mano de obra"], ["servicio", "Servicio"]].map(([v, n]) => `<option value="${v}" ${it.grupo === v ? "selected" : ""}>${n}</option>`).join("")}</select></label>
@@ -596,6 +599,7 @@
     const el = ev.target;
     if (el.dataset.b && S.doc) {
       let v = el.value;
+      if (el.dataset.t === "fecha") { v = Documentos.isoDe(v); el.classList.toggle("mal", !v); if (!v) return; }
       if (el.dataset.t === "number") v = v === "" ? 0 : Number(v);
       if (el.dataset.b === "cot.parametros.CONT" || el.dataset.b === "cot.parametros.N") v = Number(v);
       ponerRuta(S.doc, el.dataset.b, v);
@@ -656,6 +660,7 @@
     if (el.dataset.ei) {
       const k = el.dataset.ei, it = S.editI.it, s = it.fuentes[0];
       let v = el.type === "number" ? Number(el.value) || 0 : el.value;
+      if (el.dataset.fecha !== undefined) { v = Documentos.isoDe(el.value); el.classList.toggle("mal", !v); }
       if (k.startsWith("f.")) s[k.slice(2)] = v; else if (k.startsWith("plano.")) it.plano[k.slice(6)] = v; else it[k] = v;
       if (k === "grupo") editorItem(it, it.grupo);
     }
@@ -743,7 +748,7 @@
       }
       case "ver-versiones": {
         const vs = await S.db.collection(`cotizaciones/${S.id}/versiones`).orderBy("guardado", "desc").limit(20).get();
-        $("#versiones").innerHTML = vs.docs.length ? `<ul>${vs.docs.map(d => `<li>${new Date(d.data().guardado).toLocaleString("es-AR")} · ${E(d.data().estado)} <button class="chico" data-a="restaurar" data-id="${E(d.id)}">Restaurar</button></li>`).join("")}</ul>` : "Todavía no hay versiones (se guarda una cada 10 minutos de trabajo y en cada cambio de estado).";
+        $("#versiones").innerHTML = vs.docs.length ? `<ul>${vs.docs.map(d => `<li>${FH(d.data().guardado)} · ${E(d.data().estado)} <button class="chico" data-a="restaurar" data-id="${E(d.id)}">Restaurar</button></li>`).join("")}</ul>` : "Todavía no hay versiones (se guarda una cada 10 minutos de trabajo y en cada cambio de estado).";
         break;
       }
       case "restaurar": {

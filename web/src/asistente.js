@@ -54,7 +54,7 @@ const Asistente = (() => {
 
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const ahora = () => new Date().toISOString();
-  const fechaCorta = iso => iso ? new Date(iso).toLocaleString("es-AR", { dateStyle: "short", timeStyle: "short" }) : "";
+  const fechaCorta = iso => Documentos.fechaHora(iso); // DD-MM-AAAA HH:MM
 
   // ------------------------------------------------------------------ archivos: conversión y subida
   async function prepararArchivo(file) {
@@ -177,7 +177,7 @@ const Asistente = (() => {
     return `<section><div class="sec-head"><h2>Artículos y servicios nuevos</h2><span class="eyebrow">ya están en el buscador · el lunes pasan al catálogo del repositorio</span></div>
       <div class="tbl"><table><thead><tr><th>Código</th><th>Descripción</th><th class="n">USD sin IVA</th><th>Proveedor y fecha</th><th>Documento</th><th></th></tr></thead><tbody>
       ${ns.map(n => { const r = n.registro || {}; return `<tr><td class="mono small">${esc(n.id)}</td><td><div class="d">${esc(r.d || r.s)}</div><div class="sp">${esc(n.clase === "material" ? (I.S.datos.familias[r.f]?.n || r.f) : r.h)} · ${esc(r.u || r.ut || "")}${r.al ? " · " + esc(r.al) : ""}</div></td>
-        <td class="n">${esc((r.t || r.p)?.toLocaleString("es-AR", { maximumFractionDigits: 4 }))}</td><td class="small">${esc(r.pr)}<br><span class="muted">${esc(r.fe)}</span></td><td class="small">${esc(n.original?.documento || "")}</td>
+        <td class="n">${esc((r.t || r.p)?.toLocaleString("es-AR", { maximumFractionDigits: 4 }))}</td><td class="small">${esc(r.pr)}<br><span class="muted">${esc(Documentos.fecha(r.fe))}</span></td><td class="small">${esc(n.original?.documento || "")}</td>
         <td><button class="chico peligro" data-p="nuevo-borrar" data-id="${esc(n.id)}">Borrar</button></td></tr>`; }).join("")}</tbody></table></div></section>`;
   }
 
@@ -358,6 +358,7 @@ Reglas obligatorias (un error que llega al cliente puede ser catastrófico):
 - Nunca se envía nada al cliente. Todo queda en borrador para que lo revise una persona.
 - Para trabajos largos o que necesitan el repositorio (leer un pliego entero, incorporar una lista de precios al catálogo, armar una cotización completa con plazo y ofertas, buscar antecedentes de proyectos) usá proponer_pedido_claude_code: el usuario lo confirma con un botón.
 - Antes de cambiar varios ítems, decí en una línea qué vas a hacer y hacelo. Al final, resumí qué cambiaste.
+- Fechas: al usuario siempre DD-MM-AAAA; en las herramientas, AAAA-MM-DD.
 
 Familias de materiales para buscar_materiales: ${fams}.
 Tipos de origen de un precio: lista, cot (cotización de proveedor), stock, ant (antecedente o planilla interna), est (estimado).`;

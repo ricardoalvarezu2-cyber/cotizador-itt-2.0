@@ -80,3 +80,19 @@ def fecha_iso(v, hoy=None):
     if d > hoy or d.year < 2000:
         return ""
     return d.isoformat()
+
+
+def a_vista(v):
+    """Fecha para mostrar: siempre DD-MM-AAAA (decisión de Matías, 28/10/2026). Adentro se guarda AAAA-MM-DD.
+    Acepta AAAA-MM-DD (o con hora), AAAA-MM (→ MM-AAAA) y DD/MM/AAAA; cualquier otra cosa vuelve como está."""
+    s = str(v or "").strip()
+    m = re.match(r"^(\d{4})-(\d{2})-(\d{2})", s)
+    if m:
+        return f"{m.group(3)}-{m.group(2)}-{m.group(1)}"
+    m = re.match(r"^(\d{4})-(\d{2})$", s)
+    if m:
+        return f"{m.group(2)}-{m.group(1)}"
+    m = re.match(r"^(\d{1,2})/(\d{1,2})/(\d{4})$", s)
+    if m:
+        return f"{int(m.group(1)):02d}-{int(m.group(2)):02d}-{m.group(3)}"
+    return s
