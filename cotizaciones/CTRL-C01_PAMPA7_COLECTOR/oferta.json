@@ -1,0 +1,73 @@
+{
+ "estado": "borrador",
+ "archivo_base": "[COT26-CCCC-NNN] - [CLIENTE] [PEDIDO] - [EQUIPO]",
+ "oferta": {
+  "numero": "PRES [a asignar]",
+  "revision": "A",
+  "fecha": "[DD-MM-AAAA]",
+  "descripcion_revision": "Emisión original"
+ },
+ "cliente": {
+  "nombre": "[Cliente]",
+  "contacto": "[Contacto (sector)]",
+  "referencia": "[Pedido de cotización / licitación N°]",
+  "proyecto": "[Proyecto o equipo – documento y revisión]"
+ },
+ "objeto": "El presente documento tiene por objeto establecer el alcance de nuestra Oferta {tipo} según los requerimientos solicitados por el cliente en [el pedido de cotización N°], para la provisión de [EQUIPO] ([artículo / código del cliente]), en un todo de acuerdo con [documento y revisión] y con las aclaraciones y desvíos indicados en nuestra Oferta Técnica.",
+ "item": {
+  "item": "1.000",
+  "codigo": "[código del cliente]",
+  "descripcion": "[Descripción del equipo según el pedido del cliente: tipo, serie, documento y revisión, ensayos y pintura incluidos]",
+  "observacion": "Ver aclaraciones y desvíos",
+  "plazo_dias": "[días]"
+ },
+ "nota_flete": "Precio en planta ITT (EXW Quilmes Oeste). El flete hasta [lugar de entrega del cliente] puede cotizarse por separado a pedido.",
+ "condiciones": {
+  "CONDICIONES COMERCIALES": "Precios expresados en dólares estadounidenses, el cual será facturado en pesos argentinos al tipo de cambio BNA correspondiente a la fecha de factura. Se deberá cancelar la deuda con la cantidad de pesos necesarios para comprar dichos dólares pactados al TC BNA vendedor del día anterior a la fecha de efectivo pago y se emitirá NC y/o ND cuando exista una variación superior al 3%. Precios sin IVA (21%).",
+  "PLAZO DE ENTREGA": "[días] días corridos a partir de la recepción de la Orden de Compra. Se aceptan entregas parciales.",
+  "CONDICIONES DE PAGO": "100% contado contra entrega.",
+  "LUGAR DE ENTREGA": "Sobre camión en la Planta de ITT S.A., sita en Av. 12 de Octubre 4004, Quilmes Oeste, Bs. As.",
+  "VALIDEZ DE OFERTA": "La presente tiene una validez de 15 días corridos."
+ },
+ "embalaje": "Los equipos se acondicionarán para su transporte de manera de proteger su contenido de deterioros por manipulación, mediante madera, cartón corrugado y polietileno, según corresponda. De ser necesario, el embalaje estará preparado para ser manipulado con grúa y se identificará de manera clara y legible.",
+ "documentos_cliente": [
+  "[Pedido de cotización N° (DD-MM-AAAA)]",
+  "[Documento / plano N° y revisión]"
+ ],
+ "caracteristicas": "[Características generales del equipo según el plano: diámetros, serie, tipo de unión, ensayos y pintura]",
+ "imagen_plano": "",
+ "aclaraciones_y_desvios": {
+  "titulo": "ACLARACIONES Y DESVÍOS",
+  "items": [
+   "[Desvíos respecto del pedido: series, materiales, marcas o alcances distintos a los solicitados]"
+  ]
+ },
+ "exclusiones": {
+  "titulo": "EXCLUSIONES GENERALES",
+  "items": [
+   "Materiales y/o trabajos no indicados en nuestro alcance.",
+   "Montaje, interconexión y soldaduras en campo.",
+   "Transporte hasta el lugar de destino (se cotiza por separado a pedido).",
+   "Ensayos no destructivos no solicitados.",
+   "La póliza de seguro se cotizará por separado."
+  ]
+ },
+ "alcance_general": {
+  "titulo": "ALCANCE GENERAL",
+  "items": [
+   "Ingeniería de fabricación.",
+   "Suministro de todos los materiales dentro de nuestro alcance especificado.",
+   "[Armado y soldaduras de taller]",
+   "[Inspección y ensayos: prueba hidráulica, radiografía, etc.]",
+   "[Preparación de superficie y pintura]",
+   "Embalaje para transporte terrestre."
+  ]
+ },
+ "garantia": "La garantía por los materiales aquí detallados es de 18 meses a partir de la fecha de entrega o de 12 meses desde la puesta en marcha, lo que ocurra primero.",
+ "firma": {
+  "nombre": "Matías Russo",
+  "cargo": "Representante Comercial",
+  "telefono": "[teléfono ITT / interno]",
+  "celular": "[celular]"
+ }
+}
