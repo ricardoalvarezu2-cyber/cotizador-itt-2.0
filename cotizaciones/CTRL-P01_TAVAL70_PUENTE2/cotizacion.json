@@ -1,0 +1,257 @@
+{
+ "codigo": "CTRL-P01",
+ "revision": "Rev 0",
+ "estado": "borrador",
+ "fecha": "2026-07-14",
+ "preparo": "Caso de control del cotizador",
+ "cliente": {
+  "nombre": "YPF (caso de control, oferta Taval/ITT PRES 25279)",
+  "codigo_itt": "",
+  "comprador": ""
+ },
+ "titulo": "Caso de control: puente de inyección y regulación 2\" #600 (Taval 70, YPF Gas Lift)",
+ "titulo_pagina": "Control puente 2\" #600",
+ "archivo_planilla": "[CLIENTE]_[pedido]",
+ "subtitulo_planilla": "[cantidad] [equipo] · plano [número] · USD sin IVA · EXW Quilmes Oeste",
+ "meta": [
+  "Artículo [código]",
+  "Plano [número rev]",
+  "Comprador: [nombre]",
+  "Preparó: Matías Russo · [fecha]"
+ ],
+ "equipo": {
+  "singular": "puente",
+  "plural": "puentes",
+  "tipo": "puente",
+  "diametro_pulg": 2
+ },
+ "parametros": {
+  "N": 24,
+  "FM": 1.35,
+  "FMO": 1.35,
+  "CONT": 5,
+  "AJ": 1,
+  "TRANS": 0,
+  "TC": 1550,
+  "TR_ARS": 0,
+  "TR_EMB": 0,
+  "TR_F": 1.0,
+  "fecha_referencia": "2026-10-28",
+  "rx_pct": 100,
+  "ph_horas": 36,
+  "FTV": 1.0
+ },
+ "plazo": {
+  "dias": 60,
+  "texto": "desde OC · EXW Quilmes Oeste",
+  "tareas": [
+   [
+    "Material crítico [proveedor]",
+    0,
+    60,
+    "crit"
+   ],
+   [
+    "Taller: armado, PH y pintura",
+    45,
+    57,
+    "tal"
+   ],
+   [
+    "Dossier y despacho",
+    57,
+    60,
+    "tal"
+   ]
+  ],
+  "nota": "[Qué fija el plazo y cómo se acorta]"
+ },
+ "flete": {
+  "etiqueta": "Flete a [destino]",
+  "referencia_html": "[Cotización de flete de referencia, con fecha y fuente]",
+  "criterio_html": "[Si se ofrece EXW o entregado]"
+ },
+ "historial_html": [],
+ "pedido": {
+  "eyebrow": "[Nº de pedido] · emitido [fecha]",
+  "datos_html": [
+   [
+    "Cliente",
+    "[nombre] (código ITT [CCCC])"
+   ],
+   [
+    "Ítem",
+    "[ítem] · [descripción] · <b>[cantidad] un</b>"
+   ],
+   [
+    "Documento",
+    "[documento y plano]"
+   ],
+   [
+    "Entrega pedida",
+    "[lugar]"
+   ],
+   [
+    "Fechas",
+    "Límite de respuesta [fecha] · necesidad [fecha]"
+   ]
+  ],
+  "requisitos_html": [
+   "[requisito técnico del pedido]"
+  ]
+ },
+ "nota_mo_html": "[Qué incluye y excluye la MO; soldaduras de taller junta por junta; extremos para soldar en campo]",
+ "desvios": [
+  {
+   "tag": "Pos X",
+   "titulo": "[qué se ofrece distinto]",
+   "texto": "[detalle]"
+  }
+ ],
+ "antecedentes": [
+  {
+   "carpeta_html": "<b>[CLIENTE/NN]</b> · [oferta]",
+   "fecha": "dd/mm/aaaa",
+   "que": "[qué es]",
+   "precio": "[c/u]",
+   "tomado_html": "[qué se tomó]"
+  }
+ ],
+ "pendientes": [
+  {
+   "titulo": "Proveedores",
+   "items": [
+    "[confirmación pendiente]"
+   ]
+  },
+  {
+   "titulo": "Cliente",
+   "items": [
+    "[consulta]"
+   ]
+  }
+ ],
+ "pie": "Fuentes: base de conocimiento del repositorio cotizador-itt. Precios en USD sin IVA.",
+ "planilla_notas": [
+  "Plazo: [días] desde OC ([material crítico]).",
+  "Condiciones: [pago, entrega, validez]."
+ ],
+ "items": [
+  {
+   "id": "M01",
+   "pos": "1",
+   "grupo": "material",
+   "descripcion": "[Descripción según plano]",
+   "especificacion": "[Ø, serie, material, extremos]",
+   "cantidad": 3,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 1.9,
+     "proveedor": "Renard · cód. 5979",
+     "origen": "Lista de precios ITT",
+     "fecha": "2025-12-26",
+     "coincide": "igual",
+     "diferencia": ""
+    },
+    {
+     "tipo": "cot",
+     "precio": 2.5,
+     "proveedor": "[otro proveedor]",
+     "origen": "[carpeta]",
+     "fecha": "2026-06-01",
+     "coincide": "similar",
+     "diferencia": "[qué difiere del plano]"
+    }
+   ]
+  },
+  {
+   "id": "M02",
+   "pos": "2",
+   "grupo": "material",
+   "descripcion": "[Descripción según plano]",
+   "especificacion": "",
+   "cantidad": 1.9,
+   "unidad": "m",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 24.79,
+     "proveedor": "[proveedor y nº de cotización]",
+     "origen": "[carpeta]",
+     "fecha": "2025-09-24",
+     "coincide": "igual",
+     "diferencia": ""
+    }
+   ]
+  },
+  {
+   "id": "S01",
+   "pos": "MO",
+   "grupo": "mo",
+   "descripcion": "Armado (tercero)",
+   "especificacion": "[alcance]",
+   "cantidad": 1,
+   "unidad": "gl",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 400,
+     "proveedor": "[taller y presupuesto]",
+     "origen": "[carpeta]",
+     "fecha": "2026-04-22",
+     "coincide": "igual",
+     "diferencia": ""
+    }
+   ]
+  },
+  {
+   "id": "S02",
+   "pos": "PH",
+   "grupo": "servicio",
+   "descripcion": "Prueba hidráulica con registro",
+   "especificacion": "",
+   "cantidad": 1,
+   "unidad": "gl",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 100,
+     "proveedor": "Estimado: [criterio]",
+     "origen": "—",
+     "fecha": "2026-10-27",
+     "coincide": "igual",
+     "diferencia": ""
+    }
+   ]
+  }
+ ],
+ "compras": {
+  "fecha_respuesta": "AAAA-MM-DD",
+  "material_en_planta_dias": 45,
+  "lugar_entrega": "Planta ITT S.A., Av. 12 de Octubre 4004, Quilmes Oeste, Bs. As.",
+  "requisitos_generales": [
+   "Cotizar en USD sin IVA, con plazo de entrega y validez de la oferta.",
+   "Certificados de material (colada / 3.1).",
+   "Indicar cualquier diferencia con lo pedido (serie, material, extremos, modelo)."
+  ],
+  "notas": {
+   "1": "[requisito para el proveedor]"
+  },
+  "proveedores": {
+   "1": "Renard"
+  },
+  "cantidad_compra": {
+   "2": "1 tira de ~12 m"
+  },
+  "servicios": [
+   {
+    "servicio": "[Armado según plano]",
+    "proveedores": "[taller]",
+    "referencia": "[último precio, fecha]",
+    "nota": ""
+   }
+  ]
+ }
+}

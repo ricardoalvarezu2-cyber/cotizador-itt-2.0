@@ -1,0 +1,33 @@
+pos,grupo,descripcion,cantidad,unidad,precio_unit_usd,total_usd,proveedor,nota
+1,material,"Brida WNRF 3"" #600 sch 80 SA-105",2,un,19.78,39.56,Complemet,
+2,material,"Caño S/C 3"" sch 80 SA-106 Gr.B",4,m,33.93,135.72,Renard,
+3,material,"Tee reducción 3"" x 2"" sch 80 BW SA-234 WPB",2,un,64.11,128.22,Renard,
+4,material,"Brida WNRF 2"" #600 sch 80 SA-105",48,un,19.42,932.16,Complemet,
+5,material,"Tee reducción 2"" x 1 1/2"" sch 80 BW SA-234 WPB",2,un,33.59,67.18,Renard,
+6,material,"Brida SWRF 1 1/2"" #600 sch 160 A105",2,un,18.02,36.04,Complemet,
+7,material,"Válvula esférica 2"" #600 WCB (PT flotante)",8,un,416,3328,Taval (stock Devlon),"REV 1: 8 (la lista de ingeniería dice 10; REV 0: 10 × 400,40); va como Válvulas Taval, factor 1"
+8,material,"Válvula globo 2"" #600 limitadora de caudal con actuador eléctrico",2,un,8600,17200,"leyesDoma, estimado por Sergio","en la planilla va en Instrumentación; ""PEDIR MEJOR OFERTA"""
+9,material,"Válvula retención 2"" #600 WCB",2,un,254,508,Taval (consultar stock 37138),"REV 0: 133,67; va como Válvulas Taval"
+10,material,"Filtro Y 2"" #600 WCB",2,un,378,756,Taval,"REV 0: 195,93; va como Válvulas Taval"
+11,material,"Junta espiralada 2"" #600 316+grafito (48)",48,un,0,0,—,"REV 1 la sacó (duplicada con la pos 19); REV 0: 48 × 4 = 192"
+12,material,"Caudalímetro V-Cone en carrete 2"" S600",2,un,3180,6360,Meditecna (McCrometer / Intra-Automation),"60 días"
+13,material,"Caño S/C 2"" sch 80 SA-106 Gr.B",24,m,16.62,398.88,Renard,"la planilla dice 24 ""un"" a precio por metro de Renard"
+14,material,"Transmisor multivariable DP+P+T 266CSH + manifold M26 (FQIT / computador de caudal)",2,un,4211.76,8423.52,ABB 50 días,"la lista pide 1 computador; REV 0: 1 × 8.577,82 (XFC6200EX)"
+15,material,"Inyector de químicos",2,un,2100,4200,"Mirbla, estimado (Yongjia)","la oferta lo EXCLUYE pero la planilla lo costea"
+16,material,"Manómetro",2,un,120,240,Weisz,"REV 1 sin la válvula de bloqueo y purga (REV 0: 2 × 150 Abac)"
+17,material,"Sensor RTD + termovaina (4) y transmisor de temperatura (2)",4,un,1090.5,4362,ABB 50 días,"2 × 689 (FQIT) + 2 × 689 (bypass) + 2 × 803 (TIT); REV 0: 4 × 1.176,57"
+18,material,"Sockolet 1"" 3000# SA-105",14,un,6,84,Estimado,
+19,material,"Junta espiralada 2"" #600 316+grafito anillo int. y ext.",46,un,8,368,Estimado,
+20,material,"Espárrago 5/8"" x 5"" con tuercas",368,un,8,2944,Estimado,
+21,material,"Tee normal 2"" sch 80 BW SA-234 WPB",8,un,24.06,192.48,Renard,
+22,material,"Válvulas chicas (REV 1: esf. 1"" #600 ×2, globo 1"" ×2, esf. 1/2"" ×4, esf. 3/4"" ×2)",10,un,44.184,441.84,Taval,"la lista pide 16 esféricas 1"" #3000 (REV 0: 16 × 27,49 = 439,84); va como Válvulas Taval"
+23,material,"Materiales de canalizaciones (8000 verdes)",2,un,0,0,—,"la planilla no lo costea"
+24,material,"Bastidor y soportes SA-36",1200,kg,1.5,1800,Estimado,"REV 1: 1.200 kg (lista 1.050 kg + 20% desperdicio; REV 0: 6.000 kg = 9.000)"
+X1,material,"U-bolts y tornillería del skid",1,un,200,200,Estimado,"no figura en la lista de ingeniería"
+X2,material,"Manifold de 5 vías",2,un,349,698,Abac,"no figura en la lista de ingeniería"
+X3,material,"Botellones de purga tomas de presión",2,un,450,900,—,"no figura en la lista de ingeniería"
+MO,mo,"Soldadura, prefabricado y skid de terceros (Edgardo Ledesma, ppto 200287)",1,gl,7200,7200,Edgardo Ledesma,"incluye prefabricado, soldadura, skid y soportes; no incluye montaje, END ni pintura"
+ARM,mo,"Montaje ITT: movimientos internos, PH, armado y acondicionamiento (126 h × 13)",126,h,13,1638,ITT,"2p 3d mov int + 2p 2d PH + 2p 2d acond despacho (incluye 36 h de PH)"
+HH,mo,"Horas de ingeniería (6) y calidad (6) × 15",12,h,15,180,ITT,"prorrateadas en 24 unidades"
+PIN,servicio,"Granallado y pintura: piping 20 m² + skid 18 m² × 50 (+20% / +30% overspray)",1,gl,2370,2370,criterio ITT,
+RX,servicio,"Radiografía 100% (128 placas × 8 + 2 servicios × 408) y LP (2 × 294)",1,gl,2428,2428,END terceros,
