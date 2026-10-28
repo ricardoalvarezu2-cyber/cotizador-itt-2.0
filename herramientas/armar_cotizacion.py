@@ -154,7 +154,7 @@ def escribir_planilla(cfg, carpeta, idx_rows):
     ws["A22"] = "Flete + embalaje (por envío)"; ws["C22"] = "=$B$13"; ws["E22"] = "=IF($B$9=1,($B$11/$B$10+$B$12)*$B$13,0)"
     ws["C22"].number_format = "0.00"; ws["E22"].number_format = USD
     ws["A23"] = "TOTAL SIN IVA"; ws["B23"] = "=SUM(B18:B21)"; ws["C23"] = "=D23/B23"; ws["D23"] = "=SUM(D18:D21)"; ws["E23"] = "=SUM(E18:E22)"
-    ws["A24"] = "IVA 21%"; ws["E24"] = "=E23*0.21"; ws["A25"] = "TOTAL CON IVA"; ws["E25"] = "=E23+E24"
+    # sin renglones de IVA: ITT trabaja solo con precios sin IVA (decisión de Matías, 28/10/2026)
     ws["A26"] = "Margen sobre precio"; ws["D26"] = "=1-B23/D23"; ws["D26"].number_format = "0.0%"
     for r in range(23, 26):
         for c in range(1, 6):

@@ -41,12 +41,10 @@
 | 28/10/2026 | 2025 y 2026 con dólar oficial (desde el 14/04/2025 la brecha es menor al 2%) | Propuesta aceptada en la conversación | — |
 | 27/10/2026 | Compras del stock anteriores a 2022 no se usan (precio maestro nov-2024) | Criterio técnico (documentado) | `fuentes.md` |
 | 28/10/2026 | **Valores anteriores al 14/04/2025 (cepo) sin tipo de cambio explícito: se descartan** y vale el último valor confiable. Si no hay ninguno, el material queda "sin precio confiable: pedir cotización", con el valor descartado como referencia | Matías | `catalogo_materiales.py` (FIN_CEPO), `verificar_computo.py` |
+| 28/10/2026 | Sin renglones de IVA en la planilla ni en el informe: solo precios sin IVA | Matías | `armar_cotizacion.py`, `plantillas/informe_cotizacion.html` |
 | 28/10/2026 | No hay más información de precios que la ya entregada: el último precio se sigue eligiendo por fecha (no hay otras compras para preferir sobre la lista de Renard) | Matías | — |
 
 ## 3. Pendientes del proyecto
-
-**Decide Matías**
-1. Renglones "IVA 21%" y "total con IVA" de referencia en la planilla de la cotización: ¿se dejan? (hoy se dejan).
 
 **Hace Claude** (aprobado el 28/10/2026: "el resto, dale para adelante")
 1. Catálogo de MO y servicios etapa 1 (en curso; si no está en `precios/catalogo_servicios.*`, relanzar con `herramientas/catalogo_servicios_instrucciones.md`).

@@ -345,11 +345,11 @@ function renderNums(){
   $('fServ').textContent=fmt(c.mo+c.serv);
   $('tCosto').textContent=usd(c.costo);$('tCostoS').textContent=`materiales ${fmt(c.mat+c.cont,0)} · MO y servicios ${fmt(c.mo+c.serv,0)}`;
   $('tPrecio').textContent=usd(c.precio);$('tPrecioS').textContent=`factor efectivo ${fmt(c.precio/c.costo)} · margen ${fmt((1-c.costo/c.precio)*100,1)}%`;
-  $('tTotal').textContent=usd(c.total);$('tTotalS').textContent=`${p.N} {{EQS}}${p.TRANS?' + flete':''} · más IVA 21%`;
+  $('tTotal').textContent=usd(c.total);$('tTotalS').textContent=`${p.N} {{EQS}}${p.TRANS?' + flete':''} · sin IVA`;
   const rows=[[p.AJ?'Materiales (ajustados por inflación)':'Materiales',c.mat,p.FM],[`Contingencia ${fmt(p.CONT,0)}%`,c.cont,p.FM],['Mano de obra (armado y soldadura)',c.mo,p.FMO],['Servicios e insumos (PH, pintura, calidad, sellador)',c.serv,p.FMO]];
   document.querySelector('#tRes tbody').innerHTML=rows.map(r=>`<tr><td>${r[0]}</td><td class="n">${fmt(r[1])}</td><td class="n">${fmt(r[2])}</td><td class="n">${fmt(r[1]*r[2])}</td><td class="n">${fmt(r[1]*r[2]*p.N)}</td></tr>`).join('')+
    (p.TRANS?`<tr><td>{{FLETE_ETIQUETA}} + embalaje (por envío)</td><td class="n">—</td><td class="n">${fmt(p.TR_F)}</td><td class="n">—</td><td class="n">${fmt(c.trPrecio)}</td></tr>`:'');
-  document.querySelector('#tRes tfoot').innerHTML=`<tr><td>Total sin IVA</td><td class="n">${fmt(c.costo)}</td><td class="n">${fmt(c.precio/c.costo)}</td><td class="n">${fmt(c.precio)}</td><td class="n">${fmt(c.total)}</td></tr><tr><td class="small muted" colspan="5" style="font-weight:400">${p.AJ?`Costo sin ajuste por inflación: USD ${fmt(c.costo0)} · ajuste incluido: USD ${fmt(c.costo-c.costo0)} (+${fmt((c.costo/c.costo0-1)*100,1)}%) · `:'Sin ajuste por inflación · '}IVA 21%: USD ${fmt(c.total*0.21)} · Total con IVA: USD ${fmt(c.total*1.21)}</td></tr>`;
+  document.querySelector('#tRes tfoot').innerHTML=`<tr><td>Total sin IVA</td><td class="n">${fmt(c.costo)}</td><td class="n">${fmt(c.precio/c.costo)}</td><td class="n">${fmt(c.precio)}</td><td class="n">${fmt(c.total)}</td></tr><tr><td class="small muted" colspan="5" style="font-weight:400">${p.AJ?`Costo sin ajuste por inflación: USD ${fmt(c.costo0)} · ajuste incluido: USD ${fmt(c.costo-c.costo0)} (+${fmt((c.costo/c.costo0-1)*100,1)}%)`:'Sin ajuste por inflación'}</td></tr>`;
   $('trTxt').innerHTML=`Flete ${fmt(p.TR_ARS,0)} ARS ÷ ${fmt(p.TC,0)} = <b class="mono">USD ${fmt(p.TR_ARS/p.TC)}</b> + embalaje ${fmt(p.TR_EMB)} = <b class="mono">USD ${fmt(c.trCosto)}</b> por envío. ${p.TRANS?'Está incluido en el total.':'No está incluido en el total (EXW).'}`;
 }
 function bindParams(){
