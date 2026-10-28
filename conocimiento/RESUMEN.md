@@ -1,6 +1,6 @@
 # Resumen para cotizar — ITT S.A.
 
-Los parámetros clave en una página. El detalle y la fuente de cada número están en los archivos enlazados. Actualizado al 28/10/2026. Estado del proyecto y pendientes: [`estado_y_pendientes.md`](estado_y_pendientes.md).
+Los parámetros clave en una página. El detalle y la fuente de cada número están en los archivos enlazados. Actualizado al 28/10/2026. Estado del proyecto y pendientes: [`estado_y_pendientes.md`](estado_y_pendientes.md). Página web del cotizador: https://claude.ai/artifact/HfbiaNvhAFkQjYwLe2kaBQ (instructivo en `web/LEEME.md`).
 
 ## Precio de venta
 

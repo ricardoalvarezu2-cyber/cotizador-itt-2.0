@@ -48,6 +48,10 @@
 | 28/10/2026 | **Valores en USD anteriores al 14/04/2025 (cepo) sin tipo de cambio explícito: se llevan a su valor más verosímil y quedan como ESTIMADO** (pedir cotización para el definitivo): precio maestro del stock × 0,64 (calibrado con 14 materiales contra costos reales 2025–2026); otros valores × oficial ÷ blue del mes; compras del stock siguen descartadas. Si hay un valor confiable más nuevo, manda ese | Matías ("ajustalo al valor más verosímil") | `catalogo_materiales.factor_cepo`, `catalogo_servicios.py` |
 | 28/10/2026 | Sin renglones de IVA en la planilla ni en el informe: solo precios sin IVA | Matías | `armar_cotizacion.py`, `plantillas/informe_cotizacion.html` |
 | 28/10/2026 | Página web en Claude, sin usuarios ni registro de resultados; dólar e índices una vez por semana (lunes) por tarea programada; guardado automático y respaldo semanal en GitHub; descarga en .zip y de a un archivo; firma del cotizador (la imagen solo en ofertas aprobadas) | Matías | `web/LEEME.md` |
+| 28/10/2026 | El ajuste por inflación lleva cada precio a la **fecha de referencia de la cotización** (no a "hoy" automático): una cotización calculada no cambia sola de precio. Los meses sin dato oficial (INDEC/BLS) quedan estimados y la tarea semanal los reemplaza | Criterio explicado a Matías (sin objeción) | `web/src/motor.js`, `indices_ajuste.csv` |
+| 28/10/2026 | Respuestas cortas | Matías | `CLAUDE.md` |
+| 28/10/2026 | El repositorio sigue **privado** (tiene sueldos, costos, márgenes y contactos). Para que otra persona trabaje con su agente: sumarla como colaboradora en GitHub y darle edición en la página | Recomendación aceptada | — |
+| 28/10/2026 | Integrar un chat con Claude en la página y un "Mandar a Claude Code" (desde el chat o con un botón) que procese planos, P&ID, pliegos y listas de precios sobre el repositorio y deje el resultado en borrador | Matías (idea), plan por etapas abajo | — |
 | 28/10/2026 | No hay más información de precios que la ya entregada: el último precio se sigue eligiendo por fecha (no hay otras compras para preferir sobre la lista de Renard) | Matías | — |
 
 ## 3. Pendientes del proyecto
@@ -63,9 +67,13 @@
 
 Hecho (28/10/2026): `precotizar.py` (materiales, soldaduras, pintura, PH, RX) · `plazo.py` (acopio + taller sin superponer, margen 15–20%, plazo real de la familia) · `comparar_antecedentes.py` (P8 contra los 5 más parecidos) · control de carga en `verificar_computo.py` (fecha válida, "con IVA", sin precio) · `verificar_todo.py` y `actualizar_base.py`. Descartado: lectura automática de planos y pliegos, y formato fijo para las respuestas de Compras.
 
-**Página web** (28/10/2026)
-1. Que Matías la pruebe y complete sus datos de firmante (teléfono, celular, email e imagen de la firma).
-2. Revisar el resultado de la primera tarea semanal, el lunes 2/11. La sesión fija ya se verificó el 28/10/2026: repositorio, push, base de la página y TODO OK.
+**Página web: plan por etapas** (propuesto el 28/10/2026; cada etapa se usa antes de pasar a la siguiente)
+1. **Probar la página como está:** Matías arma 2 o 3 cotizaciones reales y completa su firmante (teléfono, celular, email, imagen de la firma). Revisar la primera tarea semanal (lunes 2/11).
+2. **Subir archivos desde la página** (listas de precios, planos, P&ID, pliegos) → quedan "pendientes de procesar" en la base (`assets` + colección de pedidos); se procesan en un chat o el lunes, y en la página pasan a "incorporado" o "con dudas".
+3. **Chat en la página** (capacidad `sample`, con imágenes): ve la cotización abierta, busca en los catálogos, carga y corrige ítems, explica avisos, propone la lista de materiales desde la imagen de un plano. No toca GitHub. Usa la cuenta de quien la usa.
+4. **"Mandar a Claude Code"** (desde el chat, con confirmación, o con un botón): la página manda el pedido y el archivo a una sesión de Claude Code con el repositorio (capacidad `mcp`, conector Claude Code Remote); la sesión arma la cotización o actualiza el catálogo según el procedimiento, deja el resultado en borrador en la página y lo sube a GitHub. Estado del pedido en la página: en proceso / listo / con dudas.
+5. **Sumar a otra persona:** colaboradora en GitHub + edición en la página; probar su agente con una cotización de control (CAPEX = 7.620,59). Ojo: ve todos los costos; la imagen de firma hoy solo la sube quien tiene edición.
+6. **Cierre:** ver "Al terminar el proyecto".
 
 **Al terminar el proyecto** (decisión de Matías)
 1. Confirmar con Compras los precios sospechosos de la auditoría (columna `alerta`).
