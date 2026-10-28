@@ -133,9 +133,40 @@ input.mal{border-color:var(--bad);background:var(--bad-soft)}
 #tab{display:flex;flex-direction:column;gap:18px}
 .grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
 @media (max-width:900px){.grid2{grid-template-columns:1fr}}
-.grid-rubros{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:16px}
-.rubro table.ficha{width:100%;border-collapse:collapse;font-size:14px;margin:6px 0} .rubro table.ficha td{padding:3px 4px;border-bottom:1px solid var(--line)} .rubro table.ficha td.n{white-space:normal;overflow-wrap:anywhere}
-.rubro .warn{color:var(--warn)}
+/* rubros: lista de filas desplegables (detallado o global) */
+.rb-cuerpo[hidden]{display:none}
+.rubros{border:1px solid var(--line);border-radius:4px;background:var(--panel)}
+.rb{border-bottom:1px solid var(--line)} .rb:last-child{border-bottom:0}
+.rb.global{box-shadow:inset 3px 0 0 var(--accent)}
+.rb-cab{display:grid;grid-template-columns:minmax(190px,1.2fr) minmax(0,2fr) 110px 150px auto;gap:10px 16px;align-items:center;padding:10px 14px}
+.rb-abrir{border:0;background:none;padding:4px 0;display:flex;align-items:center;gap:8px;text-align:left;white-space:normal;font:inherit;color:var(--ink)}
+.rb-abrir b{font:650 15px/1.2 var(--f-disp);font-stretch:85%}
+.rb-abrir .flecha{color:var(--muted);width:12px;flex:none}
+.rb-datos{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center;min-width:0}
+.dato{font:400 13px var(--f-mono);font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap} .dato b{color:var(--ink);font-weight:500}
+.rb-monto{display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+.rb-monto .s{font:500 10.5px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.rb-monto .v{font:500 15px var(--f-mono);font-variant-numeric:tabular-nums}
+.segm{display:inline-flex;border:1px solid var(--line);border-radius:3px;overflow:hidden;justify-self:end}
+.segm button{border:0;border-radius:0;padding:5px 10px;font-size:12.5px;background:var(--panel)}
+.segm button+button{border-left:1px solid var(--line)}
+.segm button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.rb-cuerpo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px 28px;padding:4px 14px 16px 34px}
+.rb-cuerpo h4{margin:0;font:600 11px/1.2 var(--f-body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.rb-ficha,.rb-carga{display:flex;flex-direction:column;gap:10px;min-width:0}
+.rb table.ficha{width:100%;border-collapse:collapse;font-size:13.5px} .rb table.ficha td{padding:4px 6px;border-bottom:1px solid var(--line)}
+.rb table.ficha td.n{white-space:normal;overflow-wrap:anywhere}
+.rb .warn{color:var(--warn)}
+@media (max-width:860px){.rb-cab{grid-template-columns:1fr auto}.rb-datos{grid-column:1/-1;order:3}.rb-monto{align-items:flex-start;order:4}.segm{order:2}.rb-cuerpo{grid-template-columns:1fr;padding-left:14px}}
+/* calculadoras del modo detallado */
+.calc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 28px;align-items:start}
+.calc{display:flex;flex-direction:column;gap:10px;min-width:0}
+.calc-sold{grid-column:1/-1;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.calc-sold td select{min-width:76px;max-width:130px} .calc-sold td:nth-child(6) select{min-width:170px;max-width:220px}
+.calc-c+.calc-c{border-left:1px solid var(--line);padding-left:28px}
+.calc label{max-width:320px}
+.resultado-calc{font-size:14px}
+@media (max-width:980px){.calc-grid{grid-template-columns:1fr}.calc-c+.calc-c{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:14px}}
 .capa{position:fixed;inset:0;background:rgb(10 20 28 / .45);z-index:20;display:flex;align-items:flex-start;justify-content:center;overflow:auto;padding:max(24px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) 24px max(16px,env(safe-area-inset-left,0px))}
 .capa .panel{width:min(760px,100%);box-shadow:0 12px 40px rgb(0 0 0 / .25)}
 .firma-img{max-height:64px;max-width:200px;background:#fff;border:1px solid var(--line);border-radius:3px;padding:4px}
