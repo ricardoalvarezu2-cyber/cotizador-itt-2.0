@@ -1,0 +1,1106 @@
+{
+ "codigo": "CTRL-P02",
+ "revision": "Rev 0",
+ "estado": "borrador",
+ "fecha": "2026-07-16",
+ "preparo": "Recotización a mano del agente (caso de control)",
+ "cliente": {
+  "nombre": "Pampa Energía (caso de control, PRES 163 rev C)",
+  "codigo_itt": "",
+  "comprador": ""
+ },
+ "titulo": "Caso de control: puente de producción 3\" #300 (Pampa 5, Rincón de Aranda)",
+ "titulo_pagina": "Control puente 3\" #300",
+ "archivo_planilla": "[CLIENTE]_[pedido]",
+ "subtitulo_planilla": "[cantidad] [equipo] · plano [número] · USD sin IVA · EXW Quilmes Oeste",
+ "meta": [
+  "Artículo [código]",
+  "Plano [número rev]",
+  "Comprador: [nombre]",
+  "Preparó: Matías Russo · [fecha]"
+ ],
+ "equipo": {
+  "singular": "puente",
+  "plural": "puentes",
+  "tipo": "puente",
+  "diametro_pulg": 3
+ },
+ "parametros": {
+  "N": 10,
+  "FM": 1.35,
+  "FMO": 1.35,
+  "CONT": 5,
+  "AJ": 1,
+  "TRANS": 0,
+  "TC": 1550,
+  "TR_ARS": 0,
+  "TR_EMB": 0,
+  "TR_F": 1.0,
+  "fecha_referencia": "2026-10-28",
+  "rx_pct": 100,
+  "ph_horas": 4,
+  "FTV": 1.0
+ },
+ "plazo": {
+  "dias": 60,
+  "texto": "desde OC · EXW Quilmes Oeste",
+  "tareas": [
+   [
+    "Material crítico [proveedor]",
+    0,
+    60,
+    "crit"
+   ],
+   [
+    "Taller: armado, PH y pintura",
+    45,
+    57,
+    "tal"
+   ],
+   [
+    "Dossier y despacho",
+    57,
+    60,
+    "tal"
+   ]
+  ],
+  "nota": "[Qué fija el plazo y cómo se acorta]"
+ },
+ "flete": {
+  "etiqueta": "Flete a [destino]",
+  "referencia_html": "[Cotización de flete de referencia, con fecha y fuente]",
+  "criterio_html": "[Si se ofrece EXW o entregado]"
+ },
+ "historial_html": [],
+ "pedido": {
+  "eyebrow": "[Nº de pedido] · emitido [fecha]",
+  "datos_html": [
+   [
+    "Cliente",
+    "[nombre] (código ITT [CCCC])"
+   ],
+   [
+    "Ítem",
+    "[ítem] · [descripción] · <b>[cantidad] un</b>"
+   ],
+   [
+    "Documento",
+    "[documento y plano]"
+   ],
+   [
+    "Entrega pedida",
+    "[lugar]"
+   ],
+   [
+    "Fechas",
+    "Límite de respuesta [fecha] · necesidad [fecha]"
+   ]
+  ],
+  "requisitos_html": [
+   "[requisito técnico del pedido]"
+  ]
+ },
+ "nota_mo_html": "[Qué incluye y excluye la MO; soldaduras de taller junta por junta; extremos para soldar en campo]",
+ "desvios": [
+  {
+   "tag": "Pos X",
+   "titulo": "[qué se ofrece distinto]",
+   "texto": "[detalle]"
+  }
+ ],
+ "antecedentes": [
+  {
+   "carpeta_html": "<b>[CLIENTE/NN]</b> · [oferta]",
+   "fecha": "dd/mm/aaaa",
+   "que": "[qué es]",
+   "precio": "[c/u]",
+   "tomado_html": "[qué se tomó]"
+  }
+ ],
+ "pendientes": [
+  {
+   "titulo": "Proveedores",
+   "items": [
+    "[confirmación pendiente]"
+   ]
+  },
+  {
+   "titulo": "Cliente",
+   "items": [
+    "[consulta]"
+   ]
+  }
+ ],
+ "pie": "Fuentes: base de conocimiento del repositorio cotizador-itt. Precios en USD sin IVA.",
+ "planilla_notas": [
+  "Plazo: [días] desde OC ([material crítico]).",
+  "Condiciones: [pago, entrega, validez]."
+ ],
+ "items": [
+  {
+   "id": "M01",
+   "pos": "1",
+   "grupo": "material",
+   "descripcion": "Brida API 6A WN RTJ 10K 2 9/16 x 3 Sch. 40 2 9/16\" x 3\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2 9/16\" x 3\" · 10000 x 40 · ASTM A-694 F60 · RTJ/BW",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 312,
+     "proveedor": "Francovigh cot. 0001-00093778 rev. 1",
+     "origen": "fuentes_originales/ofertas_texto/PAMPA ENERGIA/4 - Doc 5745722125 Compra Puentes de producción 3 S300 PAD 13/5.Proveedores 3ros/Cot Francovigh O00093778.pdf.txt",
+     "fecha": "2026-06-19",
+     "coincide": "igual"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M02",
+   "pos": "2",
+   "grupo": "material",
+   "descripcion": "Anillo octogonal RTJ-10K BX 153 2 9/16\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2 9/16\" · 10000 · Stainless Steel · ",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 6.6,
+     "proveedor": "Juntas MS cot. 48.445 (RTJ BX153 D)",
+     "origen": "fuentes_originales/ofertas_texto/PAMPA ENERGIA/4 - Doc 5745722125 Compra Puentes de producción 3 S300 PAD 13/5.Proveedores 3ros/COTIZACION MS Juntas _N§_048445.pdf.txt",
+     "fecha": "2026-06-18",
+     "coincide": "igual"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M03",
+   "pos": "3",
+   "grupo": "material",
+   "descripcion": "Codo 45° RL BW Sch. 40 3\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3\" · 40 · ASTM A-234 WPB · BW · ASME B16.9",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 12.13,
+     "proveedor": "Renard (cód. 3347)",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3347",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    },
+    {
+     "tipo": "cot",
+     "precio": 17.49,
+     "proveedor": "Cintolo cot. 239607",
+     "origen": "fuentes_originales/cotizacion_elementos_equipos_2026-03.xlsx",
+     "fecha": "2026-02-11",
+     "coincide": "igual"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M04",
+   "pos": "4",
+   "grupo": "material",
+   "descripcion": "Sockolet 3 x 3/4 3\" x 3/4\"",
+   "cantidad": 6.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3\" x 3/4\" · 3000 · ASTM A-105 · BW/SW",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 14.0,
+     "proveedor": "futura/Francovigh (sockolet SW 3000 A105 12\"x3/4\")",
+     "origen": "fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotización Lic 69343 Skid concentradores VCD26217 PC0.xlsx.txt",
+     "fecha": "2026-10-10",
+     "coincide": "similar",
+     "diferencia": "caño 12\" en lugar de 3\" (misma salida 3/4\")"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M05",
+   "pos": "5",
+   "grupo": "material",
+   "descripcion": "Caño sin costura longitud 5173 mm 3\"",
+   "cantidad": 5.173,
+   "unidad": "m",
+   "especificacion": "Plano: 3\" · 40 (STD) · ASTM A-106 Gr. B · BW",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 25.08,
+     "proveedor": "Renard (cód. 1153)",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1153",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M06",
+   "pos": "6",
+   "grupo": "material",
+   "descripcion": "Tee reducción BW 3 Sch. 40 x 2 Sch. 80 3\" x 2\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3\" x 2\" · 40 x 80 · ASTM A-234 WPB · BW · ASME B16.9",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 44.2,
+     "proveedor": "Renard (cód. 3513)",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3513",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M07",
+   "pos": "7",
+   "grupo": "material",
+   "descripcion": "Brida WNRF Sch. 80 2\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 300 x 80 · ASTM A-105 · RF/BW · ASME B16.5",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 23.95,
+     "proveedor": "Renard (cód. 12052)",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 12052",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M08",
+   "pos": "8",
+   "grupo": "material",
+   "descripcion": "Junta espiralada e=4.5 mm 2\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 300 · AISI 316 SS + grafito ·  · ASME B16.20",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 2.3,
+     "proveedor": "Juntas MS cot. 48.445 (ESP SWI AC 316LFG 316L Ø2\" 3/4/600)",
+     "origen": "fuentes_originales/ofertas_texto/PAMPA ENERGIA/4 - Doc 5745722125 Compra Puentes de producción 3 S300 PAD 13/5.Proveedores 3ros/COTIZACION MS Juntas _N§_048445.pdf.txt",
+     "fecha": "2026-06-18",
+     "coincide": "igual"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M09",
+   "pos": "9",
+   "grupo": "material",
+   "descripcion": "Válvula esférica paso total RF accionamiento a palanca 2\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 300 · COMERCIAL · RF",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 136.0008,
+     "proveedor": "Taval lista 30 (BF60503R0104RP): 261.54 − 35% − 20% (criterio TAVAL/43)",
+     "origen": "fuentes_originales/taval_lista30_2025-09.xlsx",
+     "fecha": "2025-09-30",
+     "coincide": "igual"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M10",
+   "pos": "10",
+   "grupo": "material",
+   "descripcion": "Brida ciega BLRF 2\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 300 · ASTM A-105 · RF · ASME B16.5",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 18.5,
+     "proveedor": "Renard (cód. 8252)",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 8252",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M11",
+   "pos": "11",
+   "grupo": "material",
+   "descripcion": "Válvula esférica paso reducido NPT WOG 3000 3/4\"",
+   "cantidad": 9.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" · 3000 · ASTM A-105 · NPT",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 43.602,
+     "proveedor": "Taval lista 30 (forjada A105 3/4\" 3000 PSI): 83.85 − 35% − 20% (criterio TAVAL/43)",
+     "origen": "fuentes_originales/taval_lista30_2025-09.xlsx",
+     "fecha": "2025-09-30",
+     "coincide": "similar",
+     "diferencia": "la lista 30 trae la forjada PT; el plano pide PR (Taval cotiza PR y PT al mismo precio en Pampa)"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M12",
+   "pos": "12",
+   "grupo": "material",
+   "descripcion": "Niple caño Sch. 80 (XS) longitud 100 mm 3/4\"",
+   "cantidad": 6.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" · 80 · ASTM A-106 Gr. B · PE/NPT",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 4.5,
+     "proveedor": "Niple 3/4\" x 100 sch 80 (planilla YPF 28)",
+     "origen": "fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotización Lic 69343 Skid concentradores VCD26217 PC0.xlsx.txt",
+     "fecha": "2026-10-10",
+     "coincide": "igual"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M13",
+   "pos": "13",
+   "grupo": "material",
+   "descripcion": "Tapón hexagonal NPT 3/4\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" · 3000 · ASTM A-105 · NPT-M · ASME B16.11",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 2.3,
+     "proveedor": "Renard (cód. 5980)",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 5980",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M14",
+   "pos": "14",
+   "grupo": "material",
+   "descripcion": "Niple caño Sch. 80 (XS) longitud 100 mm 3/4\"",
+   "cantidad": 3.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" · 80 · ASTM A-106 Gr. B · NPT",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 4.5,
+     "proveedor": "Niple 3/4\" x 100 sch 80 (planilla YPF 28)",
+     "origen": "fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotización Lic 69343 Skid concentradores VCD26217 PC0.xlsx.txt",
+     "fecha": "2026-10-10",
+     "coincide": "similar",
+     "diferencia": "NPT ambos extremos (roscado extra)"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M15",
+   "pos": "15",
+   "grupo": "material",
+   "descripcion": "Válvula esférica paso reducido NPT WOG 3000 1\"",
+   "cantidad": 3.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1\" · 3000 · ASTM A-105 · NPT",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 53.222,
+     "proveedor": "Taval lista 30 (forjada A105 1\" 3000 PSI): 102.35 − 35% − 20% (criterio TAVAL/43)",
+     "origen": "fuentes_originales/taval_lista30_2025-09.xlsx",
+     "fecha": "2025-09-30",
+     "coincide": "similar",
+     "diferencia": "la lista 30 trae la forjada PT; el plano pide PR"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M16",
+   "pos": "16",
+   "grupo": "material",
+   "descripcion": "Niple caño Sch. 80 (XS) longitud 100 mm 1\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1\" · 80 · ASTM A-106 Gr. B · PE/NPT",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 6.0,
+     "proveedor": "Escalado del niple 3/4\" x 100 (4,50) por diámetro",
+     "origen": "fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotización Lic 69343 Skid concentradores VCD26217 PC0.xlsx.txt",
+     "fecha": "2026-10-10",
+     "coincide": "similar",
+     "diferencia": "1\" estimado desde el 3/4\""
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M17",
+   "pos": "17",
+   "grupo": "material",
+   "descripcion": "Sockolet 3 x 1 3\" x 1\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3\" x 1\" · 3000 · ASTM A-105 · BW/SW",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 15.0,
+     "proveedor": "futura/Francovigh (sockolets SW 3000: 12\"x3/4\" 14, 8\"x1 1/2\" 13-26)",
+     "origen": "fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotización Lic 69343 Skid concentradores VCD26217 PC0.xlsx.txt",
+     "fecha": "2026-10-10",
+     "coincide": "similar",
+     "diferencia": "salida 1\" interpolada"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M18",
+   "pos": "18",
+   "grupo": "material",
+   "descripcion": "Tapón hexagonal NPT 1\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1\" · 3000 · ASTM A-105 · NPT-M · ASME B16.11",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 3.08,
+     "proveedor": "Renard (cód. 5981)",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 5981",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M19",
+   "pos": "19",
+   "grupo": "material",
+   "descripcion": "Thredolet 3 x 3/4 3\" x 3/4\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3\" x 3/4\" · 3000 · ASTM A-105 · BW/NPT",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 5.0,
+     "proveedor": "Duralitte threadolet 2\" x 1/2\" #3000 A105",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/55- Tecpetrol Puentes de Producción PPar Valvula y Puente PR 54942/7.Propuesta Comercial (envío al Cliente)/Puente de producción Tec Conv y NOC versión 3.xlsx.txt",
+     "fecha": "2026-04-22",
+     "coincide": "similar",
+     "diferencia": "caño 2\" x 1/2\" en lugar de 3\" x 3/4\""
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M20",
+   "pos": "20",
+   "grupo": "material",
+   "descripcion": "Buje reducción NPT 3/4\" x 1/2\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" x 1/2\" · 3000 · ASTM A-105 · NPT",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 2.98,
+     "proveedor": "Renard (cód. 5041)",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 5041",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M21",
+   "pos": "21",
+   "grupo": "material",
+   "descripcion": "Caño sin costura longitud 258 mm 3\"",
+   "cantidad": 0.258,
+   "unidad": "m",
+   "especificacion": "Plano: 3\" · 40 (STD) · ASTM A-106 Gr. B · BW",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 25.08,
+     "proveedor": "Renard (cód. 1153)",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1153",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M22",
+   "pos": "22",
+   "grupo": "material",
+   "descripcion": "Brida WNRF Sch. 40 3\"",
+   "cantidad": 8.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3\" · 300 x 40 · ASTM A-105 · RF/BW · ASME B16.5",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 40.98,
+     "proveedor": "Renard (cód. 11978)",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 11978",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M23",
+   "pos": "23",
+   "grupo": "material",
+   "descripcion": "Niple caño Sch. 80 (XS) longitud 100 mm 1\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1\" · 80 · ASTM A-106 Gr. B · NPT",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 6.0,
+     "proveedor": "Escalado del niple 3/4\" x 100 (4,50) por diámetro",
+     "origen": "fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotización Lic 69343 Skid concentradores VCD26217 PC0.xlsx.txt",
+     "fecha": "2026-10-10",
+     "coincide": "similar",
+     "diferencia": "1\" estimado; NPT ambos extremos"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M24",
+   "pos": "24",
+   "grupo": "material",
+   "descripcion": "Junta espiralada e=4.5 mm 3\"",
+   "cantidad": 8.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3\" · 300 · AISI 316 SS + grafito ·  · ASME B16.20",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 3.98,
+     "proveedor": "Juntas MS cot. 48.445 (ESP SWI AC 316LFG 316L Ø3\" 3/4/600)",
+     "origen": "fuentes_originales/ofertas_texto/PAMPA ENERGIA/4 - Doc 5745722125 Compra Puentes de producción 3 S300 PAD 13/5.Proveedores 3ros/COTIZACION MS Juntas _N§_048445.pdf.txt",
+     "fecha": "2026-06-18",
+     "coincide": "igual"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M25",
+   "pos": "25",
+   "grupo": "material",
+   "descripcion": "Caño sin costura longitud 722 mm 3\"",
+   "cantidad": 0.722,
+   "unidad": "m",
+   "especificacion": "Plano: 3\" · 40 (STD) · ASTM A-106 Gr. B · BW",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 25.08,
+     "proveedor": "Renard (cód. 1153)",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1153",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M26",
+   "pos": "26",
+   "grupo": "material",
+   "descripcion": "Válvula esférica paso total RF accionamiento a palanca 3\"",
+   "cantidad": 3.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3\" · 300 · ASTM A-216 WCB · RF",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 256.0012,
+     "proveedor": "Taval lista 30 (BF60803R0104RP): 492.31 − 35% − 20% (criterio TAVAL/43)",
+     "origen": "fuentes_originales/taval_lista30_2025-09.xlsx",
+     "fecha": "2025-09-30",
+     "coincide": "igual"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M27",
+   "pos": "27",
+   "grupo": "material",
+   "descripcion": "Brida ciega BLRF 3\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3\" · 300 · ASTM A-105 · RF · ASME B16.5",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 36.49,
+     "proveedor": "Renard (cód. 8254)",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 8254",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M28",
+   "pos": "28",
+   "grupo": "material",
+   "descripcion": "Caño sin costura longitud 205 mm 3\"",
+   "cantidad": 0.205,
+   "unidad": "m",
+   "especificacion": "Plano: 3\" · 40 (STD) · ASTM A-106 Gr. B · BW",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 25.08,
+     "proveedor": "Renard (cód. 1153)",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1153",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M29",
+   "pos": "29",
+   "grupo": "material",
+   "descripcion": "Caño sin costura longitud 215 mm 3\"",
+   "cantidad": 0.215,
+   "unidad": "m",
+   "especificacion": "Plano: 3\" · 40 (STD) · ASTM A-106 Gr. B · BW",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 25.08,
+     "proveedor": "Renard (cód. 1153)",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1153",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M30",
+   "pos": "30",
+   "grupo": "material",
+   "descripcion": "Caño sin costura longitud 105 mm 3\"",
+   "cantidad": 0.105,
+   "unidad": "m",
+   "especificacion": "Plano: 3\" · 40 (STD) · ASTM A-106 Gr. B · BW",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 25.08,
+     "proveedor": "Renard (cód. 1153)",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1153",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M31",
+   "pos": "31",
+   "grupo": "material",
+   "descripcion": "Tee BW Sch. 40 3\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3\" · 40 · ASTM A-234 WPB · BW · ASME B16.9",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 28.36,
+     "proveedor": "Renard (cód. 3465)",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3465",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M32",
+   "pos": "32",
+   "grupo": "material",
+   "descripcion": "Tuerca hexagonal 5/8\"",
+   "cantidad": 32.0,
+   "unidad": "un",
+   "especificacion": "Plano: 5/8\" ·  · ASTM A-194 Gr. 2H · ",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "Incluida en el espárrago con 2 tuercas (pos 33)",
+     "origen": "criterio: se compra el juego",
+     "fecha": "2026-10-28",
+     "coincide": "sin_ref"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M33",
+   "pos": "33",
+   "grupo": "material",
+   "descripcion": "Espárrago 5/8 L=3 1/2 (90 mm) 5/8\"",
+   "cantidad": 16.0,
+   "unidad": "un",
+   "especificacion": "Plano: 5/8\" ·  · ASTM A-193 Gr. B7 · ",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 3.5,
+     "proveedor": "Escalado por kg desde Ind. Delgado 1 1/8\" x 7\" c/2 tuercas a 7,82 (×2 por pieza chica)",
+     "origen": "fuentes_originales/ofertas_texto/TECPETROL/12 - Skid manifold PAD S-900/5.Proveedores 3ros",
+     "fecha": "2026-05-28",
+     "coincide": "similar",
+     "diferencia": "medida distinta: precio escalado"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M34",
+   "pos": "34",
+   "grupo": "material",
+   "descripcion": "Tuerca hexagonal 3/4\"",
+   "cantidad": 112.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" ·  · ASTM A-194 Gr. 2H · ",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "Incluida en el espárrago con 2 tuercas (pos 37)",
+     "origen": "criterio: se compra el juego",
+     "fecha": "2026-10-28",
+     "coincide": "sin_ref"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M35",
+   "pos": "35",
+   "grupo": "material",
+   "descripcion": "Caño sin costura longitud 254 mm 3\"",
+   "cantidad": 0.254,
+   "unidad": "m",
+   "especificacion": "Plano: 3\" · 40 (STD) · ASTM A-106 Gr. B · BW",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 25.08,
+     "proveedor": "Renard (cód. 1153)",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1153",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M36",
+   "pos": "36",
+   "grupo": "material",
+   "descripcion": "Caño sin costura longitud 100 mm 3\"",
+   "cantidad": 0.1,
+   "unidad": "m",
+   "especificacion": "Plano: 3\" · 40 (STD) · ASTM A-106 Gr. B · BW",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 25.08,
+     "proveedor": "Renard (cód. 1153)",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1153",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M37",
+   "pos": "37",
+   "grupo": "material",
+   "descripcion": "Espárrago 3/4 L=4 1/4 (110 mm) 3/4\"",
+   "cantidad": 56.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" ·  · ASTM A-193 Gr. B7 · ",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 4.5,
+     "proveedor": "Stock ITT esp. 3/4 x 4 1/4 B7 (3,90) + 2 tuercas 2H (0,53); referencia Delgado por kg",
+     "origen": "conocimiento/precios/stock_2024-11.csv · ACS02010889EP0",
+     "fecha": "2024-11-01",
+     "coincide": "similar",
+     "diferencia": "precio del stock (cepo) + tuercas"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M38",
+   "pos": "38",
+   "grupo": "material",
+   "descripcion": "Indicador transmisor de temperatura",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano:  ·  ·  ·  · ABB TTF200",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 1492.0,
+     "proveedor": "ABB: TIT integral a sonda 803 + sensor RTD y termovaina 689 (planilla TAVAL/70 REV 1)",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/70- PUENTES DE MEDICION 2 PULGADAS/4.Armado de la Oferta Comercial/OFERTA/REV 1- OFERTA MEJORADA/Cot Puente Gas Lift SAP 1000653143 rev. 2 - PC0.xlsx.txt",
+     "fecha": "2026-06-25",
+     "coincide": "similar",
+     "diferencia": "modelo ABB del puente de Taval 70, no TTF200"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M39",
+   "pos": "39",
+   "grupo": "material",
+   "descripcion": "Indicador de presión (manómetro) con manifold NPT",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano:  ·  ·  · NPT",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 257.0,
+     "proveedor": "Manómetro Weisz 120 (TAVAL/70) + válvula de bloqueo y purga Abac 1/2\" NPT M-H 316 a 137 (TAVAL/55); HD-6312 nota 4",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/70- PUENTES DE MEDICION 2 PULGADAS/4.Armado de la Oferta Comercial/OFERTA/REV 1- OFERTA MEJORADA/Cot Puente Gas Lift SAP 1000653143 rev. 2 - PC0.xlsx.txt · fuentes_originales/ofertas_texto/TAVAL/55- Tecpetrol Puentes de Producción PPar Valvula y Puente PR 54942/7.Propuesta Comercial (envío al Cliente)/Puente de producción Tec Conv y NOC versión 3.xlsx.txt",
+     "fecha": "2026-06-25",
+     "coincide": "similar",
+     "diferencia": "rango y dial a confirmar"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M40",
+   "pos": "40",
+   "grupo": "material",
+   "descripcion": "Indicador transmisor de presión con manifold NPT",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano:  ·  ·  · NPT · ABB PGS300",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1001.2,
+     "proveedor": "ABB PGS300 OPP-26-8794766 (864,20) + bloqueo y purga Abac 137 (HD-6310 nota 1)",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/Cot ABB OPP-26-8794766-1.pdf.txt · fuentes_originales/ofertas_texto/TAVAL/55- Tecpetrol Puentes de Producción PPar Valvula y Puente PR 54942/7.Propuesta Comercial (envío al Cliente)/Puente de producción Tec Conv y NOC versión 3.xlsx.txt",
+     "fecha": "2026-07-16",
+     "coincide": "similar",
+     "diferencia": "configuración del PGS300 de Taval 69"
+    }
+   ],
+   "taval": false
+  },
+  {
+   "id": "M05B",
+   "pos": "5b",
+   "grupo": "material",
+   "descripcion": "Completar barras de caño 3\" sch 40 (compra mínima, sobrante)",
+   "especificacion": "7,032 m por puente × 10 = 70,32 m; se compran 6 barras de 12 m = 72 m; por puente 0,168 m",
+   "cantidad": 0.168,
+   "unidad": "m",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 25.08,
+     "proveedor": "Renard (cód. 1153)",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1153",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "S01",
+   "pos": "MO",
+   "grupo": "mo",
+   "descripcion": "Soldadura y armado de piping (criterio planillas 2026, 16 USD/pulg-eq)",
+   "especificacion": "16 juntas BW 3\" sch 40 (48) + 1 de 2\" sch 80 ×1,4 (2,8) + 8 olets SW y 1 thredolet (12,7) + 8 SW de niples (6,5) = 70 pulg-eq",
+   "cantidad": 70,
+   "unidad": "pulg",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 16,
+     "proveedor": "MO soldadura puente 3\" (TAVAL/43)",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/43- YPF- CM PUENTES DE PRODUCCION/4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt",
+     "fecha": "2026-02-19",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "S02",
+   "pos": "PIN",
+   "grupo": "servicio",
+   "descripcion": "Granallado y pintura (esquema Pampa RAL 7039)",
+   "especificacion": "caño 3\" 7,03 m × 0,279 = 1,96 m²; niples 0,2; bridas, ciegas y accesorios 1,0; 4 válvulas × 0,5 = 2,0; total 5,2 × 1,15 overspray = 6,0 m²",
+   "cantidad": 6.0,
+   "unidad": "m2",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 50,
+     "proveedor": "criterio ITT 50 USD/m² con materiales (PIN-00569)",
+     "origen": "fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotización Lic 69343 Skid concentradores VCD26217 PC0.xlsx.txt",
+     "fecha": "2026-10-10",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "S04",
+   "pos": "RX",
+   "grupo": "servicio",
+   "descripcion": "Radiografía 100% de juntas a tope y LP de SW y olets",
+   "especificacion": "16 juntas 3\" × 3 + 1 junta 2\" × 2 = 50 placas × 15 + 1 servicio RX 490 + 0,5 servicio LP × 490 (tarifas TAVAL/43); con DB NDT (6,50/408/294) serían 880",
+   "cantidad": 1,
+   "unidad": "gl",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 1485,
+     "proveedor": "END terceros, tarifa de la planilla TAVAL/43 (02-2026)",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/43- YPF- CM PUENTES DE PRODUCCION/4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt",
+     "fecha": "2026-02-19",
+     "coincide": "similar",
+     "diferencia": "tarifa DB NDT 08-2026 solo está en Pampa 5/7 (excluidos)"
+    }
+   ]
+  },
+  {
+   "id": "S12H",
+   "pos": "HH",
+   "grupo": "mo",
+   "descripcion": "Horas de ingeniería y calidad (dossier, procedimientos, inspección)",
+   "especificacion": "9 h ingeniería + 1 h calidad por puente (TAVAL/43, serie grande); serie de 10: 6 h por puente",
+   "cantidad": 6,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 15,
+     "proveedor": "Horas ITT",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/43- YPF- CM PUENTES DE PRODUCCION/4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt",
+     "fecha": "2026-02-19",
+     "coincide": "similar",
+     "diferencia": "horas ajustadas a una serie de 10"
+    }
+   ]
+  },
+  {
+   "id": "S13A",
+   "pos": "ARM",
+   "grupo": "mo",
+   "descripcion": "Horas de montaje en planta (movimientos, PH 78 kg/cm², armado final, despacho)",
+   "especificacion": "2 personas × 6 h por puente (PH en tanda de la serie); TAVAL/43 tomó 27 h para un puente 3\" #600",
+   "cantidad": 12,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 13,
+     "proveedor": "Horas planta ITT",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/43- YPF- CM PUENTES DE PRODUCCION/4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt",
+     "fecha": "2026-02-19",
+     "coincide": "similar",
+     "diferencia": "horas propias estimadas por el agente"
+    }
+   ]
+  }
+ ],
+ "compras": {
+  "fecha_respuesta": "AAAA-MM-DD",
+  "material_en_planta_dias": 45,
+  "lugar_entrega": "Planta ITT S.A., Av. 12 de Octubre 4004, Quilmes Oeste, Bs. As.",
+  "requisitos_generales": [
+   "Cotizar en USD sin IVA, con plazo de entrega y validez de la oferta.",
+   "Certificados de material (colada / 3.1).",
+   "Indicar cualquier diferencia con lo pedido (serie, material, extremos, modelo)."
+  ],
+  "notas": {
+   "1": "[requisito para el proveedor]"
+  },
+  "proveedores": {
+   "1": "Renard"
+  },
+  "cantidad_compra": {
+   "2": "1 tira de ~12 m"
+  },
+  "servicios": [
+   {
+    "servicio": "[Armado según plano]",
+    "proveedores": "[taller]",
+    "referencia": "[último precio, fecha]",
+    "nota": ""
+   }
+  ]
+ }
+}
