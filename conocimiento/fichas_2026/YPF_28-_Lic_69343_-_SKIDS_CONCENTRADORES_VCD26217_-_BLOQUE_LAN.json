@@ -1,0 +1,126 @@
+{
+ "carpeta": "YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN",
+ "cliente": "YPF S.A.",
+ "cliente_final": "YPF · Bloque LAN (entrega Rincón de Aranda, locación de Pampa Energía)",
+ "numero_oferta": "PC0",
+ "revisiones": "PC0 (planilla de costo preliminar; la hoja dice Lic 69434)",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-10-27",
+ "referencia_cliente": "Lic 69343 - Skids concentradores VCD26217 - Bloque LAN (ítems 1 a 9; SAP 1000623708 y 1000623713)",
+ "familia": "SK",
+ "descripcion_corta": "9 skids concentradores YPF #300 ASME B31.3: 3 × 1000623713 (8 entradas 8\" + colector 12\") y 6 × 1000623708 (3 entradas 12\" + colector 16\"), válvulas Taval, RX 100%, PH 78 kg/cm², esquema Pampa RAL 7039",
+ "items": [
+  {
+   "descripcion": "SKID CONCEN.YPF PL.VCD21223PPL020015D0 (SAP 1000623713)",
+   "cantidad": 3,
+   "unidad": "un",
+   "precio_unitario": 196780.13,
+   "precio_total": 590340.38,
+   "moneda": "USD",
+   "datos_tecnicos": "Colector 12\" XS 11,5 m, ramales 8\" SCH 60, 16 tees 8\", 8 tees 12x8, 48 bridas WN 8\" #300, 8 esféricas 8\" con caja y 8 retenciones 8\" Taval, estructura 2.100 kg, 50 m² pintura"
+  },
+  {
+   "descripcion": "SKID CONCEN.YPF PL.VCD21223PPL020019D0 (SAP 1000623708)",
+   "cantidad": 6,
+   "unidad": "un",
+   "precio_unitario": 141258.21,
+   "precio_total": 847549.27,
+   "moneda": "USD",
+   "datos_tecnicos": "Colector 16\" STD 1,7 m, ramales 12\" XS, 3 tees 12\", 3 tees 16x12, 18 bridas WN 12\" #300, 3 esféricas 12\" con caja y 3 retenciones 12\" Taval, estructura 850 kg, 22 m² pintura"
+  }
+ ],
+ "monto_total_ofertado": 1437889.65,
+ "moneda": "USD",
+ "costo_total": 1051842.42,
+ "factor_venta": 1.5,
+ "desglose_costo": {
+  "materiales": 383810.19,
+  "mano_obra": 73770.0,
+  "terceros": 181500,
+  "otros": null
+ },
+ "plazo_ofrecido": "90/120 días desde la aprobación de documentación (90/110 con instrumentos; 130/150 sin)",
+ "plazo_dias": 120,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": "EXW ITT Quilmes Oeste en las hojas de cada skid; Rincón de Aranda en la hoja Resumen (USD 3.000 por camión)",
+  "moneda_y_ajuste": "USD sin IVA",
+  "notas_y_exclusiones": [
+   "Factor 1,5 sobre materiales, MO y servicios; 1 sobre válvulas Taval, caución y transporte (713)",
+   "Soldadura y armado tercerizados en Ledesma (USD 28.000 y 13.250 por skid + 6.000 / 3.000 de montaje, dimensional y desmontaje); estructura a USD 3/kg",
+   "Repuestos PEM y 2 años (10% de bulonería y juntas)"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Edgardo Ledesma (tercero)",
+   "que": "Soldadura y armado de piping y skid",
+   "precio": 28000,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-10-10"
+  },
+  {
+   "proveedor": "Taval",
+   "que": "Válvulas esféricas 8\" y 12\" con caja, retenciones 8\" y 12\", esféricas y globos NPT",
+   "precio": 35366,
+   "moneda": "USD",
+   "plazo_entrega": "7 días con stock · 120 días sin stock",
+   "fecha": "2026-10-10"
+  },
+  {
+   "proveedor": "CINTOLO",
+   "que": "Tees y tees de reducción BW 8\" a 16\"",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-10-10"
+  },
+  {
+   "proveedor": "Renard / Provemet / Klockmetal",
+   "que": "Caño A106 Gr.B 12\" XS, 8\" SCH 60; API 5L 16\" STD",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-10-10"
+  },
+  {
+   "proveedor": "Miyashiro",
+   "que": "Bridas WN 8\" y 12\" #300, tapones",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-10-10"
+  },
+  {
+   "proveedor": "Weisz / Abac",
+   "que": "Manómetros, termómetros, termovainas, válvulas de bloqueo y purga",
+   "precio": 1780,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-10-10"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "aprendizajes": [
+  "Skid concentrador 8 × 8\": 124 juntas BW (cálculo junta por junta); la PC0 pone RX USD 5.000 por skid, el cálculo da unos USD 15.000",
+  "Las horas propias son pocas porque la soldadura va a Ledesma: ingeniería 176 h y calidad 63 h para 3 skids; 40 h de planta por skid (movimientos y PH)",
+  "Recotización con el cotizador: COT26-0330-001 y COT26-0330-002 (borrador, 28-10-2026)"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "planilla_costo": "4.Armado de la Oferta Comercial/Cotización Lic 69343 Skid concentradores VCD26217 PC0.xlsx (subida por Ventas a la página el 28-10-2026; original en fuentes_originales/pedidos_web/pmvrzbrh616ftx/)"
+ },
+ "problemas": [
+  "Pie de venta: USD unidad y subtotal cruzados en los ítems 3 a 9 (el total cierra)",
+  "Licitación 69343 en el archivo y 69434 en las hojas",
+  "Overspray 20% contado dos veces en pintura",
+  "Repuestos: el Resumen suma 3.520,04 / 2.305,40 y las listas 353,62; la lista del 708 es la del 713",
+  "EXW en las hojas y entregado en Rincón de Aranda en el Resumen",
+  "Instrumental «NO» en el alcance pero cotizado; rótulos TI/PI cruzados en el 713",
+  "MO de terceros del 708 deja afuera los USD 3.000 de montaje y dimensional",
+  "Válvulas Taval 8\": la PC0 pone retención 3.000 y esférica 1.346; en TAVAL/72 (07-2026) la lista neta daba retención 920,15 y esférica 2.344,65: revisar"
+ ]
+}

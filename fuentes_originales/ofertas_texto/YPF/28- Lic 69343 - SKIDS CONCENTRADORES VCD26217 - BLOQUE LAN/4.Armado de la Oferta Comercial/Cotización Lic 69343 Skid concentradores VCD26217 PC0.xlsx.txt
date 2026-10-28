@@ -1,0 +1,335 @@
+=== hoja Pie de Venta
+REF ID | ITEM | Código SAP (Uso Interno YPF) | DESCRIPCION | CANTIDAD | USD UNIDAD | USD SUBTOTAL | Fecha de Necesidad | Plazo de entrega (días)
+25455 | 1 | 1000623708 | SKID CONCEN.YPF PL.VCD21223PPL020019D0 | 1 | 141258.21150000003 | 141258.21150000003 | 2027-08-06 00:00:00 | 90
+25456 | 2 | 1000623713 | SKID CONCEN.YPF PL.VCD21223PPL020015D0 | 1 | 196780.127 | 196780.127 | 2027-10-01 00:00:00 | 90
+25457 | 3 | 1000623708 | SKID CONCEN.YPF PL.VCD21223PPL020019D0 | 1 | 196780.127 | 141258.21150000003 | 2027-06-01 00:00:00 | 90
+25460 | 4 | 1000623708 | SKID CONCEN.YPF PL.VCD21223PPL020019D0 | 1 | 196780.127 | 141258.21150000003 | 2027-07-01 00:00:00 | 120
+25461 | 5 | 1000623713 | SKID CONCEN.YPF PL.VCD21223PPL020015D0 | 1 | 141258.21150000003 | 196780.127 | 2027-12-01 00:00:00 | 90
+25462 | 6 | 1000623708 | SKID CONCEN.YPF PL.VCD21223PPL020019D0 | 1 | 196780.127 | 141258.21150000003 | 2027-12-01 00:00:00 | 90
+25463 | 7 | 1000623713 | SKID CONCEN.YPF PL.VCD21223PPL020015D0 | 1 | 141258.21150000003 | 196780.127 | 2027-09-01 00:00:00 | 120
+25464 | 8 | 1000623708 | SKID CONCEN.YPF PL.VCD21223PPL020019D0 | 1 | 196780.127 | 141258.21150000003 | 2027-08-01 00:00:00 | 120
+25459 | 9 | 1000623708 | SKID CONCEN.YPF PL.VCD21223PPL020019D0 | 1 | 196780.127 | 141258.21150000003 | 2027-08-01 00:00:00 | 120
+TOTAL (SIN IVA) | 1437889.6500000001
+=== hoja DISEÑO
+CONDICIONES DE DISEÑO:
+Código de diseño | ASME 31.3
+Radiografiado | 100 | %
+Presión de proceso | 52 | kg/cm2
+Presión de Prueba Hidráulica | 78 | kg/cm2
+Temperatura de operación / Temp. Max Op. | - 29º / 38º | ºC
+Revestimiento de cañerías | Esquema Pampa RAL 7039
+CONDICIONES DE DISEÑO:
+Código de diseño | ASME 31.3
+Radiografiado | 100 | %
+Presión de diseño | 52 | kg/cm2
+Presión de Prueba Hidráulica | 78 | kg/cm2
+Temperatura de diseño | - 29º / 38º | ºC
+Revestimiento de cañerías | Esquema Pampa
+=== hoja Resumen
+CLIENTE | YPF
+PEDIDO DE PRECIOS | Lic 69434 SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN
+REFERENCIA | Lic 69434 SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN
+PRESUPUESTO | solicitado por email a R Alvarez
+ÍTEM | 1 al 9
+NOMBRE | SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN
+CANTIDAD | 9
+FECHA RECEPCION PED COTIZACION | 2026-10-10 00:00:00
+FECHA DE VENCIMIENTO DE COTIZACION | 2026-10-27 00:00:00
+PLANO / ER | Plano Conjunto de cañerias_1000623708 / Plano conjunto de cañerias_1000623713
+Detalle | Costo Unitario | Factor de Rentabilidad | Precio de Venta Unitario | Precio de Venta unitario | Margen de ganancia | Precio de venta total
+U$S | U$S | U$S | %
+SKID CONCEN.YPF PL.VCD21223PPL020015D0 | 1000623713
+Materiales, MO y SVC | 3 | 66336.57400000001 | 1.5 | 99504.861 | 0.33333333333333326 | 0
+Válvulas Taval | 3 | 35366 | 1 | 35366 | 0 | 0
+Instrumentos | 3 | 1780 | 1.5 | 2670 | 0.3333333333333333 | 0
+Mano de obra de terceros | 3 | 34000 | 1.5 | 51000 | 0.3333333333333333 | 0
+Transporte | 3 | 2500 | 1 | 2500 | 0 | 0
+Repuestos 2 años+ precom+com+pem | 3 | 3520.044 | 1.5 | 5280.066 | 0.3333333333333333 | 0
+Seguro de caución | 3 | 459.2 | 1 | 459.2 | 0 | 0
+Total | 143961.81800000003 | 196780.127 | 0.2684128209755652 | 590340.381
+SKID CONCEN.YPF PL.VCD21223PPL020019D0 | 1000623708
+Materiales, MO y SVC | 6 | 56698.702999999994 | 1.5 | 85048.0545 | 0 | 0.33333333333333337 | 0
+Válvulas Taval | 6 | 27002.860000000008 | 1 | 27002.860000000008 | 0 | 0 | 0
+Instrumentos | 6 | 1110 | 1.5 | 1665 | 0 | 0.3333333333333333 | 0
+Mano de obra de terceros | 6 | 13250 | 1.5 | 19875 | 0 | 0.3333333333333333 | 0
+Transporte | 6 | 2500 | 1.5 | 3750 | 0 | 0.3333333333333333 | 0 | Se estima 2 puentes por viaje
+Repuestos 2 años+ precom+com+pem | 6 | 2305.398 | 1.5 | 3458.097 | 0 | 0.3333333333333333 | 0
+Seguro de caución | 6 | 459.2 | 1 | 459.2 | 0 | 0 | 0
+Total | 103326.161 | 141258.21150000003 | 0.26852987941164774 | 847549.2690000002
+0 | Total U$D | 1437889.6500000004
+Plazo de entrega :
+90/110 días sujeto a la recepción de instrumentos. 130/150 días si no consideramos instrumentos.
+Entrega: Rincón de Aranda, locación de PAMPA Energía.
+ENVIO A Rincón de Aranda | Cada camión completo se considera en promedio USD | 3000
+=== hoja 1000623713
+CLIENTE | YPF
+PEDIDO DE PRECIOS | Lic 69434 SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN
+REFERENCIA | Lic 69434 SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN
+PRESUPUESTO | solicitado por email a R Alvarez
+ÍTEM | 1 al 9
+NOMBRE | SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN
+CANTIDAD | 9
+FECHA RECEPCION PED COTIZACION | 2026-10-10 00:00:00
+FECHA DE VENCIMIENTO DE COTIZACION | 2026-10-27 00:00:00
+PLANO / ER | Plano Conjunto de cañerias_1000623708 / Plano conjunto de cañerias_1000623713
+Detalle | Cantidad | Costo Unitario | Factor de Rentabilidad | Precio de Venta Unitario | Precio de Venta unitario | Margen de ganancia | Precio de venta total
+Unidad | U$S | U$S | U$S | %
+SKID CONCEN.YPF PL.VCD21223PPL020015D0
+Materiales, MO y SVC | 3 | 66336.57400000001 | 1.5 | 99504.861 | 0.33333333333333326
+Válvulas Taval | 3 | 35366 | 1 | 35366 | 0
+Instrumentos | 3 | 1780 | 1.5 | 2670 | 0.3333333333333333
+Mano de obra de terceros | 3 | 34000 | 1.5 | 51000 | 0.3333333333333333
+Transporte | 3 | 2500 | 1 | 2500 | 0
+Repuestos 2 años+ precom+com+pem | 3 | 3520.044 | 1.5 | 5280.066 | 0.3333333333333333
+Seguro de caución | 3 | 459.2 | 1 | 459.2 | 0
+Total | 143961.81800000003 | 196780.127 | 0.2684128209755652 | 590340.381
+Total U$D | 590340.381
+0.030490883868572762
+Plazo de entrega : 90/120 días desde la aprobación de documentación.
+Entrega: EXW, ITT SA, Av. 12 de Octubre 4004, Quilmes Oeste, AMBA.
+MATERIA PRIMA Y MATERIALES
+Recipiente | NO
+Piping | SI
+Skid | SI
+Plataforma / escaleras | NO
+Válvulas manuales | SI
+Instrumental | NO
+Instalación eléctrica | NO
+Aislación | NO
+Tracing eléctrico | NO
+Mano de obra de 3ros | SI
+Mano de obra ITT | SI | Ingeniería - Calidad - Movimientos internos, PH, armado final
+Granallado y pintura | SI
+Ensayos no destructivos | SI
+Embalaje | NO
+Transporte a destino final | NO
+Seguro de Caución | SI
+Material principal: | Tubo S/C ASTM A106 GrB, Accesorios ASTM A234-wpb, bridas ASTM A105, valvulas manuales TAVAL.
+END | 100% Rx, y donde no se pueda Rx se harán LP
+Piping | SI
+Pos. plano | Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+1 | Caño s/c extr. BW SCH XS ASTM A106 Gr.B (323,8 x 12,70) | 12" | 11.5 | m | 297.75 | 3573 | Renard/ Provemet/ Klockmetal
+2 | Caño s/c extr. BW SCH 60 ASTM A106 Gr.B (219,1 x 10,31) | 8" | 5.1 | m | 136.34 | 695.334 | Renard/ Provemet/ Klockmetal
+3 | Tee normal BW SCH 60 ASTM A234 WPB | 8" | 16 | un | 440.78 | 7052.48 | CINTOLO
+4 | Tee de reducción BW SCH XS x SCH 60 ASTM A234 WPB | 12"x8" | 8 | un | 1829.15 | 14633.2 | CINTOLO
+21 | Sockolet SW 3000 LB ASTM A105 | 12"x3/4" | 2 | un | 14 | 28 | futura/ francovigh | REPUESTOS 2 AÑOS | 1173.348
+22 | Sockolet SW 3000 LB ASTM A105 | 12"x1/2" | 2 | un | 12 | 24 | futura/ francovigh | PRECOM-COM-PEM | 2346.696
+23 | Sockolet SW 3000 LB ASTM A105 | 8"x1 1/2" | 4 | un | 26 | 104 | futura/ francovigh | TOTAL REPUESTOS | 3520.044
+24 | Sockolet SW 3000 LB ASTM A105 | 8"x3/4" | 4 | un | 13 | 52 | futura/ francovigh
+16 | Niple s/c NPT SCH 80 L=100 mm ASTM A106 Gr.B | 1 1/2" | 4 | un | 9 | 36 | futura/ francovigh | 0.2 | 1.5
+17 | Niple s/c NPT SCH 160 L=100 mm ASTM A106 Gr.B | 3/4" | 8 | un | 6 | 48 | 1.6 | 9
+18 | Niple s/c NPT SCH 160 L=100 mm ASTM A106 Gr.B | 1/2" | 4 | un | 5 | 20 | 0.8 | 7.5
+19 | Tapón NPT cab. hexag. ASTM A105 | 3/4" | 2 | un | 2.3 | 4.6 | 0.4 | 3.4499999999999997
+20 | Tapón NPT cab. hexag. ASTM A105 | 1/2" | 2 | un | 1.94 | 3.88 | Miyashiro | 0.4 | 2.91
+5 | Brida WN RF 300 LB SCH XS ASTM A105 | 12" | 4 | un | 425.09 | 1700.36 | Miyashiro | 0.8 | 637.635
+6 | Brida WN RF 300 LB SCH 60 ASTM A105 | 8" | 48 | un | 207.43 | 9956.64 | Miyashiro | 9.600000000000001 | 311.145
+7 | Brida ciega RF 300 LB ASTM A105 | 12" | 4 | un | 477.53 | 1910.12
+8 | Brida ciega RF 300 LB ASTM A105 | 8" | 16 | un | 201.36 | 3221.76
+9 | Brida SW RF 300 LB SCH 80 ASTM A105 | 1 1/2" | 4 | un | 19.91 | 79.64
+13 | Junta espiralada RF esp. 4,5 mm 300 LB SS316 c/grafito, anillo ext. AºCº zinc. | 12" | 4 | un | 45 | 180
+14 | Junta espiralada RF esp. 4,5 mm 300 LB SS316 c/grafito, anillo ext. AºCº zinc. | 8" | 44 | un | 25 | 1100
+15 | Junta dieléctrica RF esp. 6 mm 300 LB fibra aramida NBR | 8" | 4 | un | 60 | 240
+10 | Espárrago c/2 tuercas p/brida 300 LB 1.125x186 A193 B7 / A194 2H zincado | 1 1/8" | 64 | un | 9.59 | 613.76
+11 | Espárrago c/2 tuercas p/brida 300 LB 0.875x149 A193 B7 / A194 2H zincado | 7/8" | 528 | un | 4.69 | 2476.32
+12 | Espárrago c/2 tuercas p/brida 300 LB 0.875x152 A193 B7 / A194 2H zincado | 7/8" | 48 | un | 4.76 | 228.48
+47981.57400000001
+Skid | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+Skid | Perfilería | 2100 | kg | 2 | 4200
+Skid | Granallado y pintura | 50 | m2 | 50 | 3000 | Overspray 20%
+8640
+Válvulas Manuales | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+ESFERICA PT GUIADA | 8 c/caja300 BG62003R0104RR | 8 | un | 1346 | 10768 | A confirmar (7 d c/stock · 120 d s/stock) | Pos. 26 plano: Válvula esférica 8" FLG RF 300 LB P.T. op. volante y caja red. (TCC3R). Nota 5 P&ID: requiere dispositivo porta candado (adicional, a confirmar)
+RETENCION | 8300 R012003R01008S | 8 | un | 3000 | 24000 | A confirmar (7 d c/stock · 120 d s/stock) | Pos. 25 plano: Válvula de retención a clapeta 8" FLG RF 300 LB A216 WCB (RBE3R). Trim no indicado en plano → se ofrece trim 8 (a confirmar)
+ESFERICA PT FLOT-NPT FORJADAS | 3/4 2000 PSI | 6 | un | 39 | 234 | A confirmar (7 d c/stock · 120 d s/stock) | Pos. 27 plano: Válvula esférica 3/4" NPT WOG 2000 P.T. op. palanca (TCH2N). Material no indicado → cuerpo A105
+ESFERICA PT FLOT-NPT FORJADAS | 1/2 2000 PSI | 2 | un | 36 | 72 | A confirmar (7 d c/stock · 120 d s/stock) | Pos. 28 plano: Válvula esférica 1/2" NPT WOG 2000 P.T. op. palanca (TCH2N). Material no indicado → cuerpo A105
+GLOBO API 602 A 105 TRM 5 | 3/4800 | 2 | un | 68 | 136 | A confirmar (7 d c/stock · 120 d s/stock) | Pos. 29 plano: Válvula globo 3/4" NPT 800 LB op. volante (GAB8N). Se ofrece API 602 A105 trim 5
+GLOBO API 602 A 105 TRM 5 | 1/2800 | 2 | un | 78 | 156 | A confirmar (7 d c/stock · 120 d s/stock) | Pos. 30 plano: Válvula globo 1/2" NPT 800 LB op. volante (GAB8N). Se ofrece API 602 A105 trim 5
+35366
+Mano de obra de 3ros | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+Piping y skid | Mano de obra de 3ros (Ledesma) | 1 | un | 28000 | 28000
+Piping y skid | Momtaje + dimensional + Desmontaje | 1 | un | 6000 | 6000
+28000
+6000
+Mano de obra de ITT | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+Hs de Ingeniería | 58.666666666666664 | un | 15 | 880
+Hs de Calidad | 21 | un | 15 | 315
+Hs planta para movimientos internos y PH | 40 | un | 13 | 520
+1715
+Granallado y pintura | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+Granallado y pintura Piping | Incluye materiales | 50 | m2 | 50 | 3000 | Superficie estimada con overspray de 20%
+3000
+Ensayos NO Destructivos | SI
+Descripción | Descripción ampliada | Cantidad | USD/un | Subt USD
+Rx y LP | Según detalle en hoja END | 1 | 5000 | 5000
+5000
+Transporte | SI
+Descripción | Descripción ampliada | Cantidad | USD/un | Subt USD
+Transporte a Neuquén | 1 | 2800 | 2800
+2800
+Instrumental | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+TI-011A/B/C/D | Manómetro | 4 | un | 120 | 480 | Weisz
+TW p/ TI-011A/B/C/D | Termovaina bridada | 4 | un | 150 | 600 | Abac
+PI-011A/B/C/D | Termometro 0-200 °C, cuadrante 4" | 4 | un | 100 | 400 | Weisz
+Válvula de bloqueo y purga | 2 | un | 150 | 300 | Weisz
+1780
+REPUESTOS  PEM - 10% DE BULONERIA Y JUNTAS | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+PEM - 10% DE BULONERIA Y JUNTAS | u | 0 | 0 | 1.5
+ESPARRAGOS C/2 TUERCAS 1 1/8" P/BRIDA 300 LB 1.125x186 ASTM A133 Gr.B7/ZINC.-A194 Gr.2H/ZINC. | 4 | u | 7.18 | 28.72 | 10.77
+ESPARRAGOS C/2 TUERCAS 7/8" P/BRIDA 300 LB 0.875x149 ASTM A193 Gr.B7/ZINC.-A194 Gr.2H/ZINC. | 18 | u | 3.48 | 62.64 | 5.22
+ESPARRAGOS C/2 TUERCAS 7/8" P/BRIDA 300 LB 0.875x152 ASTM A193 Gr.B7/ZINC.-A194 Gr.2H/ZINC. | 4 | u | 3.48 | 13.92 | 5.22
+JUNTA ESPIR. 12" RF ESP.=4.5mm 300 LB SS316 C/GRAF. ANILLO EXT. AºCºZINC. | 1 | u | 9.11 | 9.11 | 13.665
+JUNTA ESPIR. 8" RF ESP.=4.5mm 300 LB SS316 C/GRAF. ANILLO EXT. AºCºZINC. | 2 | u | 5.82 | 11.64 | 8.73
+JUNTA DIELECTR. 8" RF ESP.=6mm 300 LB FIBRA ARAMIDA NBR | 1 | u | 50.78 | 50.78 | 76.17
+176.81
+REPUESTOS - 2 AÑOS- 10% DE BULONERIA Y JUNTAS | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+2 AÑOS- 10% DE BULONERIA Y JUNTAS
+ESPARRAGOS C/2 TUERCAS 1 1/8" P/BRIDA 300 LB 1.125x186 ASTM A133 Gr.B7/ZINC.-A194 Gr.2H/ZINC. | 4 | u | 7.18 | 28.72 | 10.77
+ESPARRAGOS C/2 TUERCAS 7/8" P/BRIDA 300 LB 0.875x149 ASTM A193 Gr.B7/ZINC.-A194 Gr.2H/ZINC. | 18 | u | 3.48 | 62.64 | 5.22
+ESPARRAGOS C/2 TUERCAS 7/8" P/BRIDA 300 LB 0.875x152 ASTM A193 Gr.B7/ZINC.-A194 Gr.2H/ZINC. | 4 | u | 3.48 | 13.92 | 5.22
+JUNTA ESPIR. 12" RF ESP.=4.5mm 300 LB SS316 C/GRAF. ANILLO EXT. AºCºZINC. | 1 | u | 9.11 | 9.11 | 13.665
+JUNTA ESPIR. 8" RF ESP.=4.5mm 300 LB SS316 C/GRAF. ANILLO EXT. AºCºZINC. | 2 | u | 5.82 | 11.64 | 8.73
+JUNTA DIELECTR. 8" RF ESP.=6mm 300 LB FIBRA ARAMIDA NBR | 1 | u | 50.78 | 50.78 | 76.17
+176.81
+=== hoja 1000623708
+CLIENTE | YPF
+PEDIDO DE PRECIOS | Lic 69434 SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN
+REFERENCIA | Lic 69434 SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN
+PRESUPUESTO | solicitado por email a R Alvarez
+ÍTEM | 1 al 9
+NOMBRE | SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN
+CANTIDAD | 9
+FECHA RECEPCION PED COTIZACION | 2026-10-10 00:00:00
+FECHA DE VENCIMIENTO DE COTIZACION | 2026-10-27 00:00:00
+PLANO / ER | Plano Conjunto de cañerias_1000623708 / Plano conjunto de cañerias_1000623713
+Detalle | Cantidad | Costo Unitario | Factor de Rentabilidad | Precio de Venta Unitario | Precio de Venta unitario | Margen de ganancia | Precio de venta total
+Unidad | U$S | U$S | U$S | %
+SKID CONCEN.YPF PL.VCD21223PPL020019D0
+Materiales, MO y SVC | 6 | 56698.702999999994 | 1.5 | 85048.0545 | 0.33333333333333337
+Válvulas Taval | 6 | 27002.860000000008 | 1 | 27002.860000000008 | 0
+Instrumentos | 6 | 1110 | 1.5 | 1665 | 0.3333333333333333
+Mano de obra de terceros | 6 | 13250 | 1.5 | 19875 | 0.3333333333333333
+Transporte | 6 | 2500 | 1.5 | 3750 | 0.3333333333333333
+Repuestos 2 años+ precom+com+pem | 6 | 2305.398 | 1.5 | 3458.097 | 0.3333333333333333
+Seguro de caución | 6 | 459.2 | 1 | 459.2 | 0
+Total | 103326.161 | 141258.21150000003 | 0.26852987941164774 | 847549.2690000002
+Total U$D | 847549.2690000002
+Plazo de entrega : 90/120 días desde la aprobación de documentación.
+Entrega: EXW, ITT SA, Av. 12 de Octubre 4004, Quilmes Oeste, AMBA.
+MATERIA PRIMA Y MATERIALES
+Recipiente | NO
+Piping | SI
+Skid | SI
+Plataforma / escaleras | NO
+Válvulas manuales | SI
+Instrumental | NO
+Instalación eléctrica | NO
+Aislación | NO
+Tracing eléctrico | NO
+Mano de obra de 3ros | SI
+Mano de obra ITT | SI | Ingeniería - Calidad - Movimientos internos, PH, armado final
+Granallado y pintura | SI
+Ensayos no destructivos | SI
+Embalaje | NO
+Transporte a destino final | NO
+Seguro de Caución | SI
+Material principal: | Tubo S/C ASTM A106 GrB, Accesorios ASTM A234-wpb, bridas ASTM A105, valvulas manuales TAVAL.
+END | 100% Rx, y donde no se pueda Rx se harán LP
+Piping | SI
+Pos. plano | Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+1 | Caño s/c extr. BW SCH XS ASTM A106 Gr.B (323,8 x 12,70) | 12" | 2.3 | m | 297.75 | 684.8249999999999 | Renard/ Provemet/ Klockmetal
+2 | Caño c/c extr. BW API 5L Gr.B (406,4 x 9,52 STD) | 16" | 1.7 | m | 341.24 | 580.108 | Renard/ Provemet/ Klockmetal
+3 | Tee normal BW SCH XS ASTM A234 WPB | 12" | 3 | u | 1457.38 | 4372.14 | CINTOLO
+4 | Tee de reducción BW SCH STD x XS ASTM A234 WPB | 16"x12" | 3 | u | 2802.34 | 8407.02 | CINTOLO
+21 | Sockolet SW 3000 LB ASTM A105 | 12"x1 1/2" | 3 | u | 28 | 84 | futura/ francovigh | REPUESTOS 2 AÑOS | 768.466
+22 | Sockolet SW 3000 LB ASTM A105 | 12"x3/4" | 3 | u | 14 | 42 | futura/ francovigh | PRECOM-COM-PEM | 1536.932
+23 | Sockolet SW 3000 LB ASTM A105 | 16"x3/4" | 1 | u | 15 | 15 | futura/ francovigh | TOTAL REPUESTOS | 2305.398
+24 | Sockolet SW 3000 LB ASTM A105 | 16"x1/2" | 1 | u | 13 | 13 | futura/ francovigh
+15 | Niple s/c NPT SCH 80 L=100 mm ASTM A106 Gr.B | 1 1/2" | 3 | u | 9 | 27 | futura/ francovigh | 0.2 | 1.5
+16 | Niple s/c NPT SCH 80 L=100 mm ASTM A106 Gr.B | 1/2" | 1 | u | 4 | 4 | 0.2 | 6
+17 | Niple s/c NPT SCH 80 L=100 mm ASTM A106 Gr.B | 3/4" | 1 | u | 4.5 | 4.5 | 0.2 | 6.75
+18 | Niple s/c NPT SCH 160 L=100 mm ASTM A106 Gr.B | 3/4" | 3 | u | 6 | 18 | 0.6000000000000001 | 9
+19 | Tapón NPT cab. hexag. ASTM A105 | 1/2" | 1 | u | 1.94 | 1.94 | Miyashiro | 0.2 | 2.91
+20 | Tapón NPT cab. hexag. ASTM A105 | 3/4" | 2 | u | 2.3 | 4.6 | Miyashiro | 0.4 | 3.4499999999999997
+5 | Brida WN RF 300 LB SCH XS ASTM A105 | 12" | 18 | u | 425.09 | 7651.62 | Miyashiro | 3.6 | 637.635
+6 | Brida WN RF 300 LB ASTM A105 | 16" | 2 | u | 680 | 1360
+7 | Brida ciega RF 300 LB ASTM A105 | 12" | 6 | u | 477.53 | 2865.18
+8 | Brida ciega RF 300 LB ASTM A105 | 16" | 2 | u | 820 | 1640
+9 | Brida SW RF 300 LB SCH 80 ASTM A105 | 1 1/2" | 3 | u | 19.91 | 59.730000000000004
+12 | Junta espiralada RF esp. 4,5 mm 300 LB | 1 1/2" | 3 | u | 7 | 21
+13 | Junta espiralada RF esp. 4,5 mm 300 LB | 12" | 18 | u | 45 | 810
+14 | Junta espiralada RF esp. 4,5 mm 300 LB | 16" | 2 | u | 80 | 160
+10 | Espárrago c/2 tuercas p/brida 300 LB 1.25x207 A193 B7 / A194 2H zincado | 1 1/4" | 40 | u | 12.95 | 518
+11 | Espárrago c/2 tuercas p/brida 300 LB 1.125x186 A193 B7 / A194 2H zincado | 1 1/8" | 288 | u | 9.59 | 2761.92
+32105.583
+Skid | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+Skid | Perfilería | 850 | kg | 2 | 1700
+Skid | Granallado y pintura | 21 | m2 | 50 | 1260 | Overspray 20% | CARO
+3552
+Válvulas Manuales | SI
+Pos. plano | Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+30 | Válvula esférica 12" FLG RF 300 LB P.T. op. volante y caja reductora | 12" | 3 | un | 5750.000000000002 | 17250.000000000007 | A confirmar (7 d c/stock · 120 d s/stock) | Pos. 30 plano: Válvula esférica 12" FLG RF 300 LB P.T. op. volante y caja reductora. Cumple especificación
+27 | Válvula de retención a clapeta 12" FLG RF 300 LB ASTM A216 WCB | 12" | 3 | un | 3162 | 9486 | A confirmar (7 d c/stock · 120 d s/stock) | Pos. 27 plano: Válvula de retención a clapeta 12" FLG RF 300 LB ASTM A216 WCB. Trim no indicado en plano → se ofrece trim 8 (a confirmar)
+25 | Válvula esférica 1/2" NPT WOG 2000 P.T. op. palanca | 1/2" | 1 | un | 36.06000000000001 | 36.06000000000001 | A confirmar (7 d c/stock · 120 d s/stock) | Pos. 25 plano: Válvula esférica 1/2" NPT WOG 2000 P.T. op. palanca. Material no indicado en plano → cuerpo A105 (spec CE22 acero al carbono)
+26 | Válvula esférica 3/4" NPT WOG 2000 P.T. op. palanca | 3/4" | 4 | un | 38.800000000000004 | 155.20000000000002 | A confirmar (7 d c/stock · 120 d s/stock) | Pos. 26 plano: Válvula esférica 3/4" NPT WOG 2000 P.T. op. palanca. Material no indicado en plano → cuerpo A105 (spec CE22 acero al carbono)
+28 | Válvula globo 1/2" NPT 800 LB op. volante | 1/2" | 1 | un | 35.1 | 35.1 | A confirmar (7 d c/stock · 120 d s/stock) | Pos. 28 plano: Válvula globo 1/2" NPT 800 LB op. volante. Se ofrece API 602 A105 trim 5
+29 | Válvula globo 3/4" NPT 800 LB op. volante | 3/4" | 1 | un | 40.5 | 40.5 | A confirmar (7 d c/stock · 120 d s/stock) | Pos. 29 plano: Válvula globo 3/4" NPT 800 LB op. volante. Se ofrece API 602 A105 trim 5
+27002.860000000008
+Mano de obra de 3ros | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+Piping y skid | Mano de obra de 3ros (Ledesma) | 1 | un | 13250 | 13250 | 850 | 3 | 2550
+Piping y skid | Momtaje + dimensional + Desmontaje | 1 | un | 3000 | 3000 | 10700
+13250 | 13250
+3000
+Mano de obra de ITT | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+Hs de Ingeniería | 29.333333333333332 | un | 15 | 440
+Hs de Calidad | 10.5 | un | 15 | 157.5
+Hs planta para movimientos internos y PH | 40 | un | 13 | 520
+1117.5
+Granallado y pintura | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+Granallado y pintura Piping | Incluye materiales | 22 | m2 | 50 | 1320 | Superficie estimada con overspray de 20%
+1320
+Ensayos NO Destructivos | SI
+Descripción | Descripción ampliada | Cantidad | USD/un | Subt USD
+Rx y LP | Según detalle en hoja END | 1 | 5000 | 5000
+5000
+Transporte | SI
+Descripción | Descripción ampliada | Cantidad | USD/un | Subt USD
+Transporte a Neuquén | 1 | 2800 | 2800
+2800
+Instrumental | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+TI-014A/B/C | Termómetro bimetálico dial 5" cuerpo y vástago AISI 316 | 3 | un | 150 | 450
+TW p/ TI-014A/B/C | Vaina (termopozo) bridada 1 1/2" 300 LB RF barstock AISI 316 | 3 | un | 100 | 300
+PI-014A/B/C | Manómetro dial 4" inox c/glicerina, conexión 1/2" NPT inferior | 3 | un | 120 | 360
+1110
+REPUESTOS  PEM - 10% DE BULONERIA Y JUNTAS | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+PEM - 10% DE BULONERIA Y JUNTAS | u | 0 | 0
+ESPARRAGOS C/2 TUERCAS 1 1/8" P/BRIDA 300 LB 1.125x186 ASTM A133 Gr.B7/ZINC.-A194 Gr.2H/ZINC. | 4 | u | 7.18 | 28.72
+ESPARRAGOS C/2 TUERCAS 7/8" P/BRIDA 300 LB 0.875x149 ASTM A193 Gr.B7/ZINC.-A194 Gr.2H/ZINC. | 18 | u | 3.48 | 62.64
+ESPARRAGOS C/2 TUERCAS 7/8" P/BRIDA 300 LB 0.875x152 ASTM A193 Gr.B7/ZINC.-A194 Gr.2H/ZINC. | 4 | u | 3.48 | 13.92
+JUNTA ESPIR. 12" RF ESP.=4.5mm 300 LB SS316 C/GRAF. ANILLO EXT. AºCºZINC. | 1 | u | 9.11 | 9.11
+JUNTA ESPIR. 8" RF ESP.=4.5mm 300 LB SS316 C/GRAF. ANILLO EXT. AºCºZINC. | 2 | u | 5.82 | 11.64
+JUNTA DIELECTR. 8" RF ESP.=6mm 300 LB FIBRA ARAMIDA NBR | 1 | u | 50.78 | 50.78
+176.81
+REPUESTOS - 2 AÑOS- 10% DE BULONERIA Y JUNTAS | SI
+Descripción | Descripción ampliada | Cantidad | Unid | USD/un | Subt USD
+2 AÑOS- 10% DE BULONERIA Y JUNTAS
+ESPARRAGOS C/2 TUERCAS 1 1/8" P/BRIDA 300 LB 1.125x186 ASTM A133 Gr.B7/ZINC.-A194 Gr.2H/ZINC. | 4 | u | 7.18 | 28.72
+ESPARRAGOS C/2 TUERCAS 7/8" P/BRIDA 300 LB 0.875x149 ASTM A193 Gr.B7/ZINC.-A194 Gr.2H/ZINC. | 18 | u | 3.48 | 62.64
+ESPARRAGOS C/2 TUERCAS 7/8" P/BRIDA 300 LB 0.875x152 ASTM A193 Gr.B7/ZINC.-A194 Gr.2H/ZINC. | 4 | u | 3.48 | 13.92
+JUNTA ESPIR. 12" RF ESP.=4.5mm 300 LB SS316 C/GRAF. ANILLO EXT. AºCºZINC. | 1 | u | 9.11 | 9.11
+JUNTA ESPIR. 8" RF ESP.=4.5mm 300 LB SS316 C/GRAF. ANILLO EXT. AºCºZINC. | 2 | u | 5.82 | 11.64
+JUNTA DIELECTR. 8" RF ESP.=6mm 300 LB FIBRA ARAMIDA NBR | 1 | u | 50.78 | 50.78
+176.81

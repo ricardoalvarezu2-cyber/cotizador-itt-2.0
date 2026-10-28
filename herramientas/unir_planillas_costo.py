@@ -3,7 +3,7 @@
 Uso: python herramientas/unir_planillas_costo.py
      (después: python herramientas/catalogo_materiales.py y python herramientas/catalogo_servicios.py)
 
-Entrada: conocimiento/precios/planillas_costo_items_parte1..3.csv (lectura con IA, ver etapa2_planillas_instrucciones.md).
+Entrada: conocimiento/precios/planillas_costo_items_parte*.csv (1 a 3: lectura con IA, ver etapa2_planillas_instrucciones.md; 4: PC0 YPF Lic 69343).
 Salidas:
   conocimiento/precios/planillas_costo_items.csv     todo junto, sin renglones repetidos, con la ruta completa del original
   conocimiento/precios/servicios_desde_planillas.csv la MO y los servicios con el formato de servicios_extraidos.csv
@@ -63,7 +63,7 @@ def usable(r):
 def main():
     carpetas = {r["id"]: r["carpeta_textos"] for r in csv.DictReader(open(INDICE, encoding="utf-8"))}
     filas, vistos = [], set()
-    for n in (1, 2, 3):
+    for n in sorted(int(p.stem.rsplit("parte", 1)[1]) for p in PRECIOS.glob("planillas_costo_items_parte*.csv")):
         ruta = PRECIOS / f"planillas_costo_items_parte{n}.csv"
         for r in csv.DictReader(open(ruta, encoding="utf-8")):
             k = (r["proyecto"], norm(r["descripcion"]), r["cantidad"], r["unidad"], r["costo_unitario"], r["tipo"])
