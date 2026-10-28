@@ -12,6 +12,7 @@ Salida:
   computo.csv            cómputo con la fuente de base de cada ítem (lo usa verificar_computo.py)
   controles_tablas.md    kilos y m², plazos de material por rubro y marcas del cliente (controles_tablas.py)
   plazo_calculado.md     acopio + taller sin superponer, margen y comparación con el plazo real (plazo.py)
+  ficha_rubros.md/.json  ficha por rubro (MO piping, estructura, pintura, END, transporte) para el modo global (ficha_rubros.py)
   comparacion_antecedentes.md  precio contra los 5 antecedentes más parecidos (comparar_antecedentes.py, paso P8)
   <codigo>_<...>.xlsx    planilla con fórmulas: parámetros, ajuste por inflación, detalle, índices, desvíos, antecedentes
   informe.html           informe interactivo (plantillas/informe_cotizacion.html)
@@ -389,6 +390,8 @@ def main(carpeta):
     controles_tablas.main(carpeta)  # kilos y m², plazos de material y marcas del cliente → controles_tablas.md
     import plazo
     plazo.main(carpeta)  # camino crítico sin superponer y margen de la regla → plazo_calculado.md
+    import ficha_rubros
+    ficha_rubros.main(carpeta)  # datos por rubro para un precio global (soldaduras, kg, m², placas, medidas) → ficha_rubros.md
     import comparar_antecedentes
     comparar_antecedentes.main(carpeta, py["precio_unitario"], py["costo"])  # P8 → comparacion_antecedentes.md
     if (carpeta / "oferta.json").exists():

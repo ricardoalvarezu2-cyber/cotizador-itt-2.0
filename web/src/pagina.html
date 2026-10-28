@@ -133,6 +133,9 @@ input.mal{border-color:var(--bad);background:var(--bad-soft)}
 #tab{display:flex;flex-direction:column;gap:18px}
 .grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
 @media (max-width:900px){.grid2{grid-template-columns:1fr}}
+.grid-rubros{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:16px}
+.rubro table.ficha{width:100%;border-collapse:collapse;font-size:14px;margin:6px 0} .rubro table.ficha td{padding:3px 4px;border-bottom:1px solid var(--line)} .rubro table.ficha td.n{white-space:normal;overflow-wrap:anywhere}
+.rubro .warn{color:var(--warn)}
 .capa{position:fixed;inset:0;background:rgb(10 20 28 / .45);z-index:20;display:flex;align-items:flex-start;justify-content:center;overflow:auto;padding:max(24px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) 24px max(16px,env(safe-area-inset-left,0px))}
 .capa .panel{width:min(760px,100%);box-shadow:0 12px 40px rgb(0 0 0 / .25)}
 .firma-img{max-height:64px;max-width:200px;background:#fff;border:1px solid var(--line);border-radius:3px;padding:4px}

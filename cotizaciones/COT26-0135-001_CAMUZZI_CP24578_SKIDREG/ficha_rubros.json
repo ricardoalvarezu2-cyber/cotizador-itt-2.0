@@ -1,0 +1,116 @@
+{
+ "generada": "2026-10-28",
+ "mo_piping": {
+  "juntas_bw": 36.0,
+  "pulg_eq": 195.5,
+  "juntas_sw_olet": 4.0,
+  "extremos_campo": 0.0,
+  "kg_piping": 203.5,
+  "bridas": 20.0,
+  "diametros": [
+   8.0,
+   6.0,
+   3.0
+  ],
+  "sin_peso": [
+   "1 Válvula monitora pilotada obturador guia",
+   "2 Válvula reguladora pilotada a diafragma ",
+   "3 Válvula esférica bridada paso reducido a",
+   "4 Válvula esférica bridada paso reducido a",
+   "5 Brida WN RF 3\"",
+   "6 Brida WN RF 6\"",
+   "7 Brida WN RF 8\"",
+   "8 Brida ciega RF 8\"",
+   "10 Te de reducción 8\"x6\"",
+   "11 Reducción concéntrica 6\"x3\"",
+   "14 Cupla de acero para soldar 1/2\" NPT con ",
+   "15 Toma multiport acero inoxidable ABAC 1/2",
+   "16 Válvula de alivio de capacidad reducida ",
+   "18 Termovaina de acero inoxidable 3/4\" NPT ",
+   "20 Skid y soportes s/ SCE-RE-110-0006 Rev.0",
+   "21b Completar media tira de 6 m de la pos 21",
+   "22b Completar media tira de 6 m de la pos 22",
+   "23b Completar media tira de 6 m de la pos 23",
+   "24b Completar media tira de 6 m de la pos 24",
+   "A Sensor de presión regulada 0-25 bar 4-20",
+   "B Sensor de temperatura de salida 0-100 °C",
+   "C Switch indicador de válvula monitora abi"
+  ],
+  "avisos": []
+ },
+ "mo_estructura": {
+  "kg": 0.0,
+  "m2": 0.0
+ },
+ "pintura": {
+  "m2_canos": 3.44,
+  "m2_piping": 9.95,
+  "m2_estructura": 0.0,
+  "m2_total": 9.95,
+  "esquema": ""
+ },
+ "end": {
+  "juntas_bw": 36.0,
+  "rx_pct": 100,
+  "placas_chicas": 135,
+  "placas_grandes": 0,
+  "juntas_lp": 4.0,
+  "materiales": [
+   "ASTM A-105",
+   "ASTM A-105 (plano; se cotiza A-234 WPB BW)",
+   "ASTM A-234 Gr. WPB",
+   "ASTM A-53 Gr. B"
+  ],
+  "espesor_max_mm": 10.97,
+  "procedimientos": [
+   "WPS/PQR de soldadura a tope para ASTM A-105, ASTM A-105 (plano; se cotiza A-234 WPB BW), ASTM A-234 Gr. WPB, ASTM A-53 Gr. B hasta 10,97 mm de espesor",
+   "Calificación de soldadores (WPQ) para esos WPS",
+   "Procedimiento de RX y de LP (escrito, nivel 3 ISO 9712)",
+   "Confirmar con el pliego: si exige procedimientos nuevos o alcanzan los vigentes de ITT"
+  ]
+ },
+ "transporte": {
+  "largo_m": 0.0,
+  "ancho_m": 0.0,
+  "alto_m": 0.0,
+  "kg_equipo": 203.5,
+  "destino": "",
+  "por_camion": null,
+  "viajes": null,
+  "avisos": [
+   "Faltan las medidas del equipo (largo × ancho × alto): cargarlas del plano de conjunto"
+  ]
+ },
+ "referencias": {
+  "mo_piping": {
+   "modo": "detallado",
+   "detallado_usd": 3479.61,
+   "renglones_detalle": 1,
+   "global_usd": null
+  },
+  "mo_estructura": {
+   "modo": "detallado",
+   "detallado_usd": 0,
+   "renglones_detalle": 0,
+   "global_usd": null
+  },
+  "pintura": {
+   "modo": "detallado",
+   "detallado_usd": 1032.6,
+   "renglones_detalle": 1,
+   "global_usd": null
+  },
+  "end": {
+   "modo": "detallado",
+   "detallado_usd": 2884.49,
+   "renglones_detalle": 1,
+   "global_usd": null
+  },
+  "transporte": {
+   "modo": "detallado",
+   "detallado_usd": 0,
+   "renglones_detalle": 0,
+   "global_usd": null
+  }
+ }
+}

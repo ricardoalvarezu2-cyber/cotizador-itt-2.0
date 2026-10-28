@@ -66,6 +66,12 @@ print(f"{'OK  ' if r.returncode == 0 else 'FALLA'} motor de la página (web/prob
 if r.returncode:
     fallas.append("motor JS distinto de Python")
     print((r.stdout + r.stderr)[-800:])
+# modo detallado / global por rubro: página igual a Python (ficha_rubros.py)
+r = subprocess.run(["node", "web/probar_rubros.js"], cwd=RAIZ, capture_output=True, text=True)
+print(f"{'OK  ' if r.returncode == 0 else 'FALLA'} rubros detallado/global de la página (web/probar_rubros.js)")
+if r.returncode:
+    fallas.append("rubros JS distinto de Python")
+    print((r.stdout + r.stderr)[-800:])
 despues = modificados()
 if antes is not None and despues is not None:
     nuevos = sorted(despues - antes)

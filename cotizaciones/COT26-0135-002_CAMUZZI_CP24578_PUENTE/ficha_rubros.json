@@ -1,0 +1,106 @@
+{
+ "generada": "2026-10-28",
+ "mo_piping": {
+  "juntas_bw": 21.0,
+  "pulg_eq": 98.625,
+  "juntas_sw_olet": 3.0,
+  "extremos_campo": 0.0,
+  "kg_piping": 279.9,
+  "bridas": 10.0,
+  "diametros": [
+   6.0,
+   4.0
+  ],
+  "sin_peso": [
+   "1 Filtro FM-06 #150 simple módulo s/ SCE-R",
+   "2 Carretel de ajuste / provisorio de turbi",
+   "3 Válvula esférica bridada paso total anti",
+   "4 Válvula esférica bridada paso total anti",
+   "5 Brida WN RF 4\"",
+   "6 Brida WN RF 6\"",
+   "9 Reducción concéntrica 6\"x4\"",
+   "11 Termovaina de acero inoxidable 3/4\" NPT ",
+   "13 Skid y soportes s/ SCE-RE-110-0006 (3530",
+   "15b Completar media tira de 6 m de la pos 15",
+   "16 Cupla de acero para soldar 1/2\" NPT con ",
+   "A Sensor de temperatura para correctora de"
+  ],
+  "avisos": []
+ },
+ "mo_estructura": {
+  "kg": 0.0,
+  "m2": 0.0
+ },
+ "pintura": {
+  "m2_canos": 3.4,
+  "m2_piping": 6.21,
+  "m2_estructura": 0.0,
+  "m2_total": 6.21,
+  "esquema": ""
+ },
+ "end": {
+  "juntas_bw": 21.0,
+  "rx_pct": 100,
+  "placas_chicas": 71,
+  "placas_grandes": 0,
+  "juntas_lp": 3.0,
+  "materiales": [
+   "ASTM A-105",
+   "ASTM A-105 (plano; se cotiza A-234 WPB BW)",
+   "ASTM A-105 / A-53 Gr. B",
+   "ASTM A-234 Gr. WPB",
+   "ASTM A-53 Gr. B"
+  ],
+  "espesor_max_mm": 7.11,
+  "procedimientos": [
+   "WPS/PQR de soldadura a tope para ASTM A-105, ASTM A-105 (plano; se cotiza A-234 WPB BW), ASTM A-105 / A-53 Gr. B, ASTM A-234 Gr. WPB, ASTM A-53 Gr. B hasta 7,11 mm de espesor",
+   "Calificación de soldadores (WPQ) para esos WPS",
+   "Procedimiento de RX y de LP (escrito, nivel 3 ISO 9712)",
+   "Confirmar con el pliego: si exige procedimientos nuevos o alcanzan los vigentes de ITT"
+  ]
+ },
+ "transporte": {
+  "largo_m": 0.0,
+  "ancho_m": 0.0,
+  "alto_m": 0.0,
+  "kg_equipo": 279.9,
+  "destino": "",
+  "por_camion": null,
+  "viajes": null,
+  "avisos": [
+   "Faltan las medidas del equipo (largo × ancho × alto): cargarlas del plano de conjunto"
+  ]
+ },
+ "referencias": {
+  "mo_piping": {
+   "modo": "detallado",
+   "detallado_usd": 1755.38,
+   "renglones_detalle": 1,
+   "global_usd": null
+  },
+  "mo_estructura": {
+   "modo": "detallado",
+   "detallado_usd": 0,
+   "renglones_detalle": 0,
+   "global_usd": null
+  },
+  "pintura": {
+   "modo": "detallado",
+   "detallado_usd": 310.6,
+   "renglones_detalle": 1,
+   "global_usd": null
+  },
+  "end": {
+   "modo": "detallado",
+   "detallado_usd": 1616.9,
+   "renglones_detalle": 1,
+   "global_usd": null
+  },
+  "transporte": {
+   "modo": "detallado",
+   "detallado_usd": 0,
+   "renglones_detalle": 0,
+   "global_usd": null
+  }
+ }
+}
