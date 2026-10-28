@@ -37,6 +37,11 @@ def pct(a, b):
     return (a / b - 1) * 100 if b else None
 
 
+def fmt_pct(a, b):
+    v = pct(a, b)
+    return "—" if v is None else f"{v:+.0f}%"
+
+
 def main(carpeta, archivo="cotizacion_auto.json"):
     carpeta = Path(carpeta)
     hist = list(csv.DictReader(open(carpeta / "historico.csv", encoding="utf-8")))
@@ -79,7 +84,7 @@ def main(carpeta, archivo="cotizacion_auto.json"):
         lin.append(f"| {h['pos']} | {h['descripcion'][:45]} | {float(h['cantidad']):g} × {float(h['precio_unit_usd']):,.2f} = {th:,.2f} | "
                    f"{it['cantidad']:g} {it['unidad']} × {s['precio']:,.2f}{' + compra extra ' + ', '.join(e['pos'] for e in extras.get(h['pos'], [])) if extras.get(h['pos']) else ''} = {tc:,.2f} | {'' if d is None else f'{d:+.0f}%'} | "
                    f"{s['tipo']} · {s['proveedor'][:40]} · {s['fecha']} | {lectura} |")
-    lin += ["", f"**Materiales: real USD {tot_h:,.2f} · cotizador USD {tot_c:,.2f} ({pct(tot_c, tot_h):+.0f}%).** "
+    lin += ["", f"**Materiales: real USD {tot_h:,.2f} · cotizador USD {tot_c:,.2f} ({fmt_pct(tot_c, tot_h)}).** "
             f"{cuenta['bien']} dentro de ±15%, {cuenta['lejos']} fuera, {cuenta['sin precio']} sin precio.", ""]
     # MO y servicios por rubro
     real, auto = {}, {}
@@ -99,7 +104,7 @@ def main(carpeta, archivo="cotizacion_auto.json"):
             f"Real USD {tot_h + mo_h:,.2f} · cotizador USD {tot_c + mo_c:,.2f} ({pct(tot_c + mo_c, tot_h + mo_h):+.0f}%) antes de completar lo que el cotizador marca para revisar.", ""]
     salida = carpeta / ("comparacion_historico.md" if archivo == "cotizacion_auto.json" else f"comparacion_{Path(archivo).stem}.md")
     salida.write_text("\n".join(lin) + "\n", encoding="utf-8")
-    print(f"Materiales {pct(tot_c, tot_h):+.0f}% · MO y servicios {pct(mo_c, mo_h):+.0f}% · total {pct(tot_c + mo_c, tot_h + mo_h):+.0f}% → {salida}")
+    print(f"Materiales {fmt_pct(tot_c, tot_h)} · MO y servicios {pct(mo_c, mo_h):+.0f}% · total {pct(tot_c + mo_c, tot_h + mo_h):+.0f}% → {salida}")
 
 
 if __name__ == "__main__":

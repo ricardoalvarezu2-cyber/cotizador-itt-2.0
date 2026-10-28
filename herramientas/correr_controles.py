@@ -18,14 +18,18 @@ CASOS = {"CTRL-F01_INARTECO_FM2_S300": ["TAVAL/40", "INARTECO"],
          "CTRL-T01_SACDE20_TKCHOQUE": ["Sacde/20"],
          "CTRL-C01_PAMPA7_COLECTOR": ["PAMPA ENERGIA/7", "ADICIONAL DE OC Colectores"],
          "CTRL-P01_TAVAL70_PUENTE2": ["TAVAL/70"],
-         "CTRL-M01_TECPETROL9_MANIFOLD": ["TECPETROL/9", "TECHINT/12"]}
+         "CTRL-M01_TECPETROL9_MANIFOLD": ["TECPETROL/9", "TECHINT/12"],
+         "CTRL-TS01_TECPETROL13_TRAMPA": ["TECPETROL/13"],
+         "CTRL-P02_PAMPA5_PUENTE3": ["PAMPA ENERGIA/5", "PAMPA ENERGIA/7"],
+         "CTRL-SK01_YPF28_SKID708": ["YPF/28", "pedidos_web", "COT26-0330"],
+         "CTRL-CA01_SACDE18_PIPING": ["Sacde/18"]}
 
 
 def totales(carpeta):
     """(real materiales, real MO+serv, app materiales, app MO+serv) de comparacion_historico.md."""
     import json
     hist = list(csv.DictReader(open(carpeta / "historico.csv", encoding="utf-8")))
-    rm = sum(float(h["total_usd"]) for h in hist if h["grupo"] == "material")
+    rm = sum(float(h["total_usd"]) for h in hist if h["grupo"] == "material") or 1e-9  # prefabricado: materiales del cliente
     rs = sum(float(h["total_usd"]) for h in hist if h["grupo"] != "material")
     cot = json.load(open(carpeta / "cotizacion_auto.json", encoding="utf-8"))
     am = sum(i["cantidad"] * i["fuentes"][0]["precio"] for i in cot["items"] if i["grupo"] == "material")

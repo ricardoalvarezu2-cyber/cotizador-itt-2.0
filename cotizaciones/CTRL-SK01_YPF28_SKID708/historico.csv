@@ -1,0 +1,39 @@
+pos,grupo,descripcion,cantidad,unidad,precio_unit_usd,total_usd,proveedor,nota
+1,material,"Caño s/c BW SCH XS A106 Gr.B (323,8 x 12,70) 12""",2.3,m,297.75,684.83,Renard/ Provemet/ Klockmetal (PC0),
+2,material,"Caño c/c BW API 5L Gr.B (406,4 x 9,52 STD) 16""",1.7,m,341.24,580.11,Renard/ Provemet/ Klockmetal (PC0),
+3,material,"Tee normal BW SCH XS A234 WPB 12""",3,un,1457.38,4372.14,CINTOLO (PC0),
+4,material,"Tee de reducción BW SCH STD x XS A234 WPB 16""x12""",3,un,2802.34,8407.02,CINTOLO (PC0),
+5,material,"Brida WN RF 300 LB SCH XS A105 12""",18,un,425.09,7651.62,Miyashiro (PC0),
+6,material,"Brida WN RF 300 LB A105 16""",2,un,680,1360,PC0 (sin proveedor),
+7,material,"Brida ciega RF 300 LB A105 12""",6,un,477.53,2865.18,PC0 (sin proveedor),
+8,material,"Brida ciega RF 300 LB A105 16""",2,un,820,1640,PC0 (sin proveedor),
+9,material,"Brida SW RF 300 LB SCH 80 A105 1 1/2""",3,un,19.91,59.73,PC0 (sin proveedor),
+10,material,"Espárrago c/2 tuercas 1.25x207 B7/2H zincado",40,un,12.95,518,PC0 (sin proveedor),
+11,material,"Espárrago c/2 tuercas 1.125x186 B7/2H zincado",288,un,9.59,2761.92,PC0 (sin proveedor),"288 = 18 bridas 12"" × 16 espárragos (16 × 1 1/8"" por brida 12"" #300: correcto)"
+12,material,"Junta espiralada RF 4,5 mm 300 LB 1 1/2""",3,un,7,21,PC0 (sin proveedor),
+13,material,"Junta espiralada RF 4,5 mm 300 LB 12""",18,un,45,810,PC0 (sin proveedor),
+14,material,"Junta espiralada RF 4,5 mm 300 LB 16""",2,un,80,160,PC0 (sin proveedor),
+15,material,"Niple s/c NPT SCH 80 L=100 mm 1 1/2""",3,un,9,27,futura/ francovigh (PC0),
+16,material,"Niple s/c NPT SCH 80 L=100 mm 1/2""",1,un,4,4,PC0,
+17,material,"Niple s/c NPT SCH 80 L=100 mm 3/4""",1,un,4.5,4.5,PC0,
+18,material,"Niple s/c NPT SCH 160 L=100 mm 3/4""",3,un,6,18,PC0,
+19,material,"Tapón NPT cab. hexag. A105 1/2""",1,un,1.94,1.94,Miyashiro (PC0),
+20,material,"Tapón NPT cab. hexag. A105 3/4""",2,un,2.3,4.6,Miyashiro (PC0),
+21,material,"Sockolet SW 3000 LB A105 12""x1 1/2""",3,un,28,84,futura/ francovigh (PC0),
+22,material,"Sockolet SW 3000 LB A105 12""x3/4""",3,un,14,42,futura/ francovigh (PC0),
+23,material,"Sockolet SW 3000 LB A105 16""x3/4""",1,un,15,15,futura/ francovigh (PC0),
+24,material,"Sockolet SW 3000 LB A105 16""x1/2""",1,un,13,13,futura/ francovigh (PC0),
+25,material,"Válvula esférica 1/2"" NPT WOG 2000 PT palanca (Taval)",1,un,36.06,36.06,TAVAL (PC0),
+26,material,"Válvula esférica 3/4"" NPT WOG 2000 PT palanca (Taval)",4,un,38.8,155.2,TAVAL (PC0),
+27,material,"Válvula retención clapeta 12"" FLG RF 300 LB A216 WCB (Taval)",3,un,3162,9486,TAVAL (PC0),trim 8 a confirmar
+28,material,"Válvula globo 1/2"" NPT 800 LB volante (Taval)",1,un,35.1,35.1,TAVAL (PC0),API 602 A105 trim 5
+29,material,"Válvula globo 3/4"" NPT 800 LB volante (Taval)",1,un,40.5,40.5,TAVAL (PC0),API 602 A105 trim 5
+30,material,"Válvula esférica 12"" FLG RF 300 LB PT volante y caja reductora (Taval)",3,un,5750,17250,TAVAL (PC0),
+31,material,Bastidor del skid (perfilería),850,kg,2,1700,PC0 (sin proveedor),"la PC0 le aplicó un 20% de overspray (error: es acero, no pintura)"
+MO,mo,"Armado y soldadura de piping (tercero Ledesma, global)",1,gl,10700,10700,Ledesma (PC0),"Ledesma 13.250 = piping 10.700 + estructura 850 kg × 3 = 2.550. La PC0 lo suma dos veces (dentro de 'Materiales, MO y SVC' y otra vez como 'Mano de obra de terceros'): se cuenta una vez"
+EST,mo,"Fabricación de la estructura (850 kg × USD 3/kg, Ledesma)",1,gl,2550,2550,Ledesma (PC0),parte del global Ledesma 13.250
+ARM,mo,"Montaje + dimensional + desmontaje (tercero)",1,gl,3000,3000,PC0,"figura en el bloque de MO de 3ros pero la PC0 no lo suma (en el 713 sí): se agrega"
+RX,servicio,"Radiografía 100% y LP (global, hoja END)",1,gl,5000,5000,PC0,"global sin detalle de placas"
+PIN,servicio,"Granallado y pintura (skid 21 m² con overspray = 1.260; piping 22 m² × 50 = 1.100)",1,gl,2360,2360,CARO (PC0),"la PC0 aplica el 20% de overspray dos veces (skid 3.552 en vez de 2.960; piping 1.320 en vez de 1.100): se cuenta una vez"
+HH,mo,"Ingeniería 29,33 h × 15 + calidad 10,5 h × 15 + movimientos internos y PH 40 h × 13",1,gl,1117.5,1117.5,PC0,incluye la PH
+SEG,servicio,Seguro de caución,1,gl,459.2,459.2,PC0,

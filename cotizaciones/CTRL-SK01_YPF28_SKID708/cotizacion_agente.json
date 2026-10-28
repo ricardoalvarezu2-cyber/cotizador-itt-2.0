@@ -1,0 +1,1026 @@
+{
+ "codigo": "CTRL-SK01",
+ "revision": "Rev 0",
+ "estado": "borrador",
+ "fecha": "2026-10-10",
+ "preparo": "Caso de control del cotizador",
+ "cliente": {
+  "nombre": "YPF (caso de control)",
+  "codigo_itt": "",
+  "comprador": ""
+ },
+ "titulo": "Caso de control: skid concentrador 1000623708, 3 entradas 12\" + colector 16\" #300 (YPF Lic 69343)",
+ "titulo_pagina": "Control skid concentrador YPF",
+ "archivo_planilla": "[CLIENTE]_[pedido]",
+ "subtitulo_planilla": "Caso de control: precotización automática contra la planilla de costo real (YPF/28, PC0)",
+ "meta": [
+  "Artículo [código]",
+  "Plano [número rev]",
+  "Comprador: [nombre]",
+  "Preparó: Matías Russo · [fecha]"
+ ],
+ "equipo": {
+  "singular": "skid",
+  "plural": "skids",
+  "tipo": "skid",
+  "diametro_pulg": 16
+ },
+ "parametros": {
+  "N": 6,
+  "FM": 1.35,
+  "FMO": 1.35,
+  "CONT": 5,
+  "AJ": 1,
+  "TRANS": 0,
+  "TC": 1550,
+  "TR_ARS": 0,
+  "TR_EMB": 0,
+  "TR_F": 1.0,
+  "fecha_referencia": "2026-10-10",
+  "rx_pct": 100,
+  "ph_horas": 8,
+  "FTV": 1.0
+ },
+ "plazo": {
+  "dias": 60,
+  "texto": "desde OC · EXW Quilmes Oeste",
+  "tareas": [
+   [
+    "Material crítico [proveedor]",
+    0,
+    60,
+    "crit"
+   ],
+   [
+    "Taller: armado, PH y pintura",
+    45,
+    57,
+    "tal"
+   ],
+   [
+    "Dossier y despacho",
+    57,
+    60,
+    "tal"
+   ]
+  ],
+  "nota": "[Qué fija el plazo y cómo se acorta]"
+ },
+ "flete": {
+  "etiqueta": "Flete a [destino]",
+  "referencia_html": "[Cotización de flete de referencia, con fecha y fuente]",
+  "criterio_html": "[Si se ofrece EXW o entregado]"
+ },
+ "historial_html": [],
+ "pedido": {
+  "eyebrow": "[Nº de pedido] · emitido [fecha]",
+  "datos_html": [
+   [
+    "Cliente",
+    "[nombre] (código ITT [CCCC])"
+   ],
+   [
+    "Ítem",
+    "[ítem] · [descripción] · <b>[cantidad] un</b>"
+   ],
+   [
+    "Documento",
+    "[documento y plano]"
+   ],
+   [
+    "Entrega pedida",
+    "[lugar]"
+   ],
+   [
+    "Fechas",
+    "Límite de respuesta [fecha] · necesidad [fecha]"
+   ]
+  ],
+  "requisitos_html": [
+   "[requisito técnico del pedido]"
+  ]
+ },
+ "nota_mo_html": "[Qué incluye y excluye la MO; soldaduras de taller junta por junta; extremos para soldar en campo]",
+ "desvios": [
+  {
+   "tag": "Pos X",
+   "titulo": "[qué se ofrece distinto]",
+   "texto": "[detalle]"
+  }
+ ],
+ "antecedentes": [
+  {
+   "carpeta_html": "<b>[CLIENTE/NN]</b> · [oferta]",
+   "fecha": "dd/mm/aaaa",
+   "que": "[qué es]",
+   "precio": "[c/u]",
+   "tomado_html": "[qué se tomó]"
+  }
+ ],
+ "pendientes": [
+  {
+   "titulo": "Proveedores",
+   "items": [
+    "[confirmación pendiente]"
+   ]
+  },
+  {
+   "titulo": "Cliente",
+   "items": [
+    "[consulta]"
+   ]
+  }
+ ],
+ "pie": "Fuentes: base de conocimiento del repositorio cotizador-itt. Precios en USD sin IVA.",
+ "planilla_notas": [
+  "Plazo: [días] desde OC ([material crítico]).",
+  "Condiciones: [pago, entrega, validez]."
+ ],
+ "items": [
+  {
+   "id": "M1",
+   "pos": "1",
+   "grupo": "material",
+   "descripcion": "Caño s/c extr. SCH XS (323,8 x 12,70) 12\"",
+   "especificacion": "",
+   "cantidad": 2.3,
+   "unidad": "m",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 217.23,
+     "proveedor": "Renard cód. 1201",
+     "origen": "conocimiento/precios/lista_renar_2025-12.csv (fuentes_originales/renar_lista_2025-12.xlsx)",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M1b",
+   "pos": "1b",
+   "grupo": "material",
+   "descripcion": "Compra extra pos 1: 2 tubos de ~11 m para 6 equipos (22 − 13,8 m)",
+   "especificacion": "",
+   "cantidad": 1.37,
+   "unidad": "m",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 217.23,
+     "proveedor": "Renard cód. 1201",
+     "origen": "conocimiento/precios/lista_renar_2025-12.csv (fuentes_originales/renar_lista_2025-12.xlsx)",
+     "fecha": "2025-12-26",
+     "coincide": "igual",
+     "diferencia": "largo comercial 10,5–11,8 m (lista Renard); sobrante a stock"
+    }
+   ]
+  },
+  {
+   "id": "M2",
+   "pos": "2",
+   "grupo": "material",
+   "descripcion": "Caño c/c extr. STD (406,4 x 9,52) 16\"",
+   "especificacion": "",
+   "cantidad": 1.7,
+   "unidad": "m",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 248.98,
+     "proveedor": "Renard cód. 1212 (tubo s/c 406,4 x 9,52)",
+     "origen": "conocimiento/precios/lista_renar_2025-12.csv (fuentes_originales/renar_lista_2025-12.xlsx)",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "sin costura en lugar de con costura (superior)"
+    }
+   ]
+  },
+  {
+   "id": "M2b",
+   "pos": "2b",
+   "grupo": "material",
+   "descripcion": "Compra extra pos 2: 1 tubo de ~11 m para 6 equipos (11 − 10,2 m)",
+   "especificacion": "",
+   "cantidad": 0.13,
+   "unidad": "m",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 248.98,
+     "proveedor": "Renard cód. 1212",
+     "origen": "conocimiento/precios/lista_renar_2025-12.csv (fuentes_originales/renar_lista_2025-12.xlsx)",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "s/c en lugar de c/c"
+    }
+   ]
+  },
+  {
+   "id": "M3",
+   "pos": "3",
+   "grupo": "material",
+   "descripcion": "Tee normal 12\" SCH XS A234 WPB",
+   "especificacion": "",
+   "cantidad": 3,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 1761.9,
+     "proveedor": "Cintolo cot. 33764: tee 12\" SCH 80 USD 2.425,08 × 12,70/17,48 (espesor XS / sch 80)",
+     "origen": "TAVAL/69- Lic 64673 .../5.Proveedores 3ros/Cot Cíntolo 33764.pdf",
+     "fecha": "2026-07-16",
+     "coincide": "similar",
+     "diferencia": "sch 80 escalado a XS por espesor"
+    },
+    {
+     "tipo": "lista",
+     "precio": 962.15,
+     "proveedor": "Renard cód. 3471 tee 12\" STD",
+     "origen": "conocimiento/precios/lista_renar_2025-12.csv (fuentes_originales/renar_lista_2025-12.xlsx)",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "STD en lugar de XS"
+    }
+   ]
+  },
+  {
+   "id": "M4",
+   "pos": "4",
+   "grupo": "material",
+   "descripcion": "Tee de reducción 16\"x12\" SCH STD x XS",
+   "especificacion": "",
+   "cantidad": 3,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 2802.34,
+     "proveedor": "Renard cód. 3547 tee red. 16x12 STD",
+     "origen": "conocimiento/precios/lista_renar_2025-12.csv (fuentes_originales/renar_lista_2025-12.xlsx)",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "rama STD en lugar de XS"
+    }
+   ]
+  },
+  {
+   "id": "M5",
+   "pos": "5",
+   "grupo": "material",
+   "descripcion": "Brida WN RF 300 LB SCH XS 12\"",
+   "especificacion": "",
+   "cantidad": 18,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 218.49,
+     "proveedor": "Complemet (Grupo Provemet) cot. 275397",
+     "origen": "TAVAL/72- Lic 64675 - SKID CONCENTRADOR - UTE NARAMBUE/5.Proveedores 3ros/Cot Complemet para Narambue 07072026.pdf (cotización 275397)",
+     "fecha": "2026-07-06",
+     "coincide": "igual"
+    },
+    {
+     "tipo": "lista",
+     "precio": 355.68,
+     "proveedor": "Renard cód. 11984 (sch 40)",
+     "origen": "conocimiento/precios/lista_renar_2025-12.csv (fuentes_originales/renar_lista_2025-12.xlsx)",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "sch 40"
+    }
+   ]
+  },
+  {
+   "id": "M6",
+   "pos": "6",
+   "grupo": "material",
+   "descripcion": "Brida WN RF 300 LB 16\" (STD)",
+   "especificacion": "",
+   "cantidad": 2,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 669.2,
+     "proveedor": "Renard SO 16\" S300 560,29 × (WN/SO 12\" S300 = 355,68/297,79)",
+     "origen": "conocimiento/precios/lista_renar_2025-12.csv (fuentes_originales/renar_lista_2025-12.xlsx)",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "estimado de la lista Renard (no hay WN 16\" #300)"
+    }
+   ]
+  },
+  {
+   "id": "M7",
+   "pos": "7",
+   "grupo": "material",
+   "descripcion": "Brida ciega RF 300 LB 12\"",
+   "especificacion": "",
+   "cantidad": 6,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 257.65,
+     "proveedor": "Complemet cot. 275397",
+     "origen": "TAVAL/72- Lic 64675 - SKID CONCENTRADOR - UTE NARAMBUE/5.Proveedores 3ros/Cot Complemet para Narambue 07072026.pdf (cotización 275397)",
+     "fecha": "2026-07-06",
+     "coincide": "igual"
+    },
+    {
+     "tipo": "lista",
+     "precio": 426.44,
+     "proveedor": "Renard cód. 8260",
+     "origen": "conocimiento/precios/lista_renar_2025-12.csv (fuentes_originales/renar_lista_2025-12.xlsx)",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M8",
+   "pos": "8",
+   "grupo": "material",
+   "descripcion": "Brida ciega RF 300 LB 16\"",
+   "especificacion": "",
+   "cantidad": 2,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 735.42,
+     "proveedor": "Renard BL 14\" S300 565,71 × (BL 16\"/14\" S150 = 392,34/301,8)",
+     "origen": "conocimiento/precios/lista_renar_2025-12.csv (fuentes_originales/renar_lista_2025-12.xlsx)",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "estimado de la lista Renard"
+    }
+   ]
+  },
+  {
+   "id": "M9",
+   "pos": "9",
+   "grupo": "material",
+   "descripcion": "Brida SW RF 300 LB SCH 80 1 1/2\"",
+   "especificacion": "",
+   "cantidad": 3,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 14.88,
+     "proveedor": "Complemet cot. 275397",
+     "origen": "TAVAL/72- Lic 64675 - SKID CONCENTRADOR - UTE NARAMBUE/5.Proveedores 3ros/Cot Complemet para Narambue 07072026.pdf (cotización 275397)",
+     "fecha": "2026-07-06",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M10",
+   "pos": "10",
+   "grupo": "material",
+   "descripcion": "Espárrago c/2 tuercas 1 1/4\" x 207 mm B7/2H zincado",
+   "especificacion": "",
+   "cantidad": 40,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 12.4,
+     "proveedor": "planilla ITT TECPETROL/13 (1 1/8 x 170 c/2 tuercas zinc 12,00; 1 3/8 x 255 13,00), interpolado",
+     "origen": "TECPETROL/13- TRAMPAS .../4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas ... REV 1.xlsx",
+     "fecha": "2026-06-26",
+     "coincide": "similar",
+     "diferencia": "interpolado por diámetro y largo"
+    }
+   ]
+  },
+  {
+   "id": "M11",
+   "pos": "11",
+   "grupo": "material",
+   "descripcion": "Espárrago c/2 tuercas 1 1/8\" x 186 mm B7/2H zincado",
+   "especificacion": "",
+   "cantidad": 288,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 12.0,
+     "proveedor": "planilla ITT TECPETROL/13: 1 1/8 x 170 mm c/2 tuercas zinc",
+     "origen": "TECPETROL/13- TRAMPAS .../4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas ... REV 1.xlsx",
+     "fecha": "2026-06-26",
+     "coincide": "similar",
+     "diferencia": "170 mm en lugar de 186 mm"
+    }
+   ]
+  },
+  {
+   "id": "M12",
+   "pos": "12",
+   "grupo": "material",
+   "descripcion": "Junta espiralada RF 4,5 mm 300 LB 1 1/2\"",
+   "especificacion": "",
+   "cantidad": 3,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 6.0,
+     "proveedor": "MS (planilla Pampa 7, JUN-02769)",
+     "origen": "PAMPA ENERGIA/7 .../Cot Skid Manifolds Colectores RDA Contrato Marco (2da RDA).xlsx",
+     "fecha": "2026-08-14",
+     "coincide": "similar",
+     "diferencia": "2\" en lugar de 1 1/2\""
+    }
+   ]
+  },
+  {
+   "id": "M13",
+   "pos": "13",
+   "grupo": "material",
+   "descripcion": "Junta espiralada RF 4,5 mm 300 LB 12\"",
+   "especificacion": "",
+   "cantidad": 18,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 9.31,
+     "proveedor": "MS Juntas cot. 49.323 (ESP SW AC 316LFG 12\" 300)",
+     "origen": "TAVAL/78- LIC66577 SKID CONC. L. CAMP/5.Proveedores 3ros/MS Juntas COTIZACION_N§_049323.pdf",
+     "fecha": "2026-08-14",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M14",
+   "pos": "14",
+   "grupo": "material",
+   "descripcion": "Junta espiralada RF 4,5 mm 300 LB 16\"",
+   "especificacion": "",
+   "cantidad": 2,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 14.0,
+     "proveedor": "MS 49.323: 10\" 7,14 y 12\" 9,31 → 16\" por diámetro",
+     "origen": "TAVAL/78- LIC66577 SKID CONC. L. CAMP/5.Proveedores 3ros/MS Juntas COTIZACION_N§_049323.pdf",
+     "fecha": "2026-08-14",
+     "coincide": "similar",
+     "diferencia": "extrapolado de 10\" y 12\""
+    }
+   ]
+  },
+  {
+   "id": "M15",
+   "pos": "15",
+   "grupo": "material",
+   "descripcion": "Niple s/c NPT SCH 80 L=100 mm 1 1/2\"",
+   "especificacion": "",
+   "cantidad": 3,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "stock",
+     "precio": 5.6,
+     "proveedor": "Stock ITT ACI040FN1ICK100",
+     "origen": "conocimiento/precios/stock_2024-11.csv (precio maestro)",
+     "fecha": "2024-11-01",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M16",
+   "pos": "16",
+   "grupo": "material",
+   "descripcion": "Niple s/c NPT SCH 80 L=100 mm 1/2\"",
+   "especificacion": "",
+   "cantidad": 1,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "stock",
+     "precio": 4.76,
+     "proveedor": "Stock ITT ACI015FN1ICK100",
+     "origen": "conocimiento/precios/stock_2024-11.csv (precio maestro)",
+     "fecha": "2024-11-01",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M17",
+   "pos": "17",
+   "grupo": "material",
+   "descripcion": "Niple s/c NPT SCH 80 L=100 mm 3/4\"",
+   "especificacion": "",
+   "cantidad": 1,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "stock",
+     "precio": 5.59,
+     "proveedor": "Stock ITT ACI020KN1ICK100 (sch 160)",
+     "origen": "conocimiento/precios/stock_2024-11.csv (precio maestro)",
+     "fecha": "2024-11-01",
+     "coincide": "similar",
+     "diferencia": "sch 160 en lugar de 80"
+    }
+   ]
+  },
+  {
+   "id": "M18",
+   "pos": "18",
+   "grupo": "material",
+   "descripcion": "Niple s/c NPT SCH 160 L=100 mm 3/4\"",
+   "especificacion": "",
+   "cantidad": 3,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "stock",
+     "precio": 5.59,
+     "proveedor": "Stock ITT ACI020KN1ICK100",
+     "origen": "conocimiento/precios/stock_2024-11.csv (precio maestro)",
+     "fecha": "2024-11-01",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M19",
+   "pos": "19",
+   "grupo": "material",
+   "descripcion": "Tapón NPT cab. hexag. A105 1/2\"",
+   "especificacion": "",
+   "cantidad": 1,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1.38,
+     "proveedor": "Provemet (AFO-00848)",
+     "origen": "catálogo de materiales AFO-00848",
+     "fecha": "2025-08-27",
+     "coincide": "similar",
+     "diferencia": "serie sin dato"
+    }
+   ]
+  },
+  {
+   "id": "M20",
+   "pos": "20",
+   "grupo": "material",
+   "descripcion": "Tapón NPT cab. hexag. A105 3/4\"",
+   "especificacion": "",
+   "cantidad": 2,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 2.3,
+     "proveedor": "planilla ITT 2026-02 (catálogo)",
+     "origen": "catálogo de materiales",
+     "fecha": "2026-02-20",
+     "coincide": "similar",
+     "diferencia": "serie sin dato"
+    }
+   ]
+  },
+  {
+   "id": "M21",
+   "pos": "21",
+   "grupo": "material",
+   "descripcion": "Sockolet SW 3000 LB 12\"x1 1/2\"",
+   "especificacion": "",
+   "cantidad": 3,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 20.0,
+     "proveedor": "sockolet 1/2\" S3000 USD 10 (TECHINT/12) escalado por salida",
+     "origen": "catálogo AFO-02393 / AFO-03330",
+     "fecha": "2025-12-23",
+     "coincide": "similar",
+     "diferencia": "salida 1/2\" escalada a 1 1/2\""
+    }
+   ]
+  },
+  {
+   "id": "M22",
+   "pos": "22",
+   "grupo": "material",
+   "descripcion": "Sockolet SW 3000 LB 12\"x3/4\"",
+   "especificacion": "",
+   "cantidad": 3,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 12.0,
+     "proveedor": "sockolet 1/2\" S3000 USD 10 escalado",
+     "origen": "catálogo AFO-02393",
+     "fecha": "2025-12-23",
+     "coincide": "similar",
+     "diferencia": "salida 1/2\" escalada a 3/4\""
+    }
+   ]
+  },
+  {
+   "id": "M23",
+   "pos": "23",
+   "grupo": "material",
+   "descripcion": "Sockolet SW 3000 LB 16\"x3/4\"",
+   "especificacion": "",
+   "cantidad": 1,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 12.0,
+     "proveedor": "sockolet 1/2\" S3000 USD 10 escalado",
+     "origen": "catálogo AFO-02393",
+     "fecha": "2025-12-23",
+     "coincide": "similar",
+     "diferencia": "salida 1/2\" escalada a 3/4\""
+    }
+   ]
+  },
+  {
+   "id": "M24",
+   "pos": "24",
+   "grupo": "material",
+   "descripcion": "Sockolet SW 3000 LB 16\"x1/2\"",
+   "especificacion": "",
+   "cantidad": 1,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 10.0,
+     "proveedor": "planilla ITT TECHINT/12 (sockolet 1/2\" 3000 A105)",
+     "origen": "catálogo AFO-02393",
+     "fecha": "2025-12-23",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M25",
+   "pos": "25",
+   "grupo": "material",
+   "descripcion": "Válvula esférica NPT WOG 2000 PT palanca 1/2\" (Taval TCH2N)",
+   "especificacion": "",
+   "cantidad": 1,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 35.88,
+     "proveedor": "Taval lista 69 × 0,52",
+     "origen": "TAVAL/78- LIC66577 SKID CONC. L. CAMP/4.Armado de la Oferta Comercial/Valvulas/Valvulas.xlsx (lista Taval × 0,52)",
+     "fecha": "2026-08-19",
+     "coincide": "igual"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M26",
+   "pos": "26",
+   "grupo": "material",
+   "descripcion": "Válvula esférica NPT WOG 2000 PT palanca 3/4\" (Taval TCH2N)",
+   "especificacion": "",
+   "cantidad": 4,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 39.0,
+     "proveedor": "Taval lista 75 × 0,52",
+     "origen": "TAVAL/78- LIC66577 SKID CONC. L. CAMP/4.Armado de la Oferta Comercial/Valvulas/Valvulas.xlsx (lista Taval × 0,52)",
+     "fecha": "2026-08-19",
+     "coincide": "igual"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M27",
+   "pos": "27",
+   "grupo": "material",
+   "descripcion": "Válvula retención clapeta 12\" FLG RF 300 LB WCB (Taval)",
+   "especificacion": "",
+   "cantidad": 3,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 3270.0,
+     "proveedor": "Taval: 10\" #300 lista 4.500 × 0,52 = 2.340 (TAVAL/78) × 1,35 por diámetro = 3.159; 12\" #600 4.834 (Sacde 12, 12-2025) × 0,70 por serie = 3.384; promedio",
+     "origen": "TAVAL/78- LIC66577 SKID CONC. L. CAMP/4.Armado de la Oferta Comercial/Valvulas/Valvulas.xlsx (lista Taval × 0,52)",
+     "fecha": "2026-08-19",
+     "coincide": "similar",
+     "diferencia": "sin precio Taval 12\" #300 fuera del proyecto: pedir lista"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M28",
+   "pos": "28",
+   "grupo": "material",
+   "descripcion": "Válvula globo NPT 800 LB volante 1/2\" (Taval GAB8N)",
+   "especificacion": "",
+   "cantidad": 1,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 35.1,
+     "proveedor": "Taval lista 67,5 × 0,52",
+     "origen": "TAVAL/78- LIC66577 SKID CONC. L. CAMP/4.Armado de la Oferta Comercial/Valvulas/Valvulas.xlsx (lista Taval × 0,52)",
+     "fecha": "2026-08-19",
+     "coincide": "igual"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M29",
+   "pos": "29",
+   "grupo": "material",
+   "descripcion": "Válvula globo NPT 800 LB volante 3/4\" (Taval GAB8N)",
+   "especificacion": "",
+   "cantidad": 1,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 40.56,
+     "proveedor": "Taval lista 78 × 0,52",
+     "origen": "TAVAL/78- LIC66577 SKID CONC. L. CAMP/4.Armado de la Oferta Comercial/Valvulas/Valvulas.xlsx (lista Taval × 0,52)",
+     "fecha": "2026-08-19",
+     "coincide": "igual"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M30",
+   "pos": "30",
+   "grupo": "material",
+   "descripcion": "Válvula esférica 12\" FLG RF 300 LB PT volante y caja reductora (Taval TCC3R)",
+   "especificacion": "",
+   "cantidad": 3,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 5640.0,
+     "proveedor": "Taval: 10\" #300 lista 7.115 × 0,52 = 3.700 (TAVAL/78) × 1,50 por diámetro = 5.550; 12\" #600 PT 7.634 (Sacde 12, 12-2025) × 0,75 por serie = 5.725; promedio",
+     "origen": "TAVAL/78- LIC66577 SKID CONC. L. CAMP/4.Armado de la Oferta Comercial/Valvulas/Valvulas.xlsx (lista Taval × 0,52)",
+     "fecha": "2026-08-19",
+     "coincide": "similar",
+     "diferencia": "sin precio Taval 12\" #300 fuera del proyecto: pedir lista"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M31",
+   "pos": "31",
+   "grupo": "material",
+   "descripcion": "Bastidor del skid (perfilería UPN, A-36)",
+   "especificacion": "",
+   "cantidad": 850,
+   "unidad": "kg",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1.9,
+     "proveedor": "acero por kg (hierro ángulo 3x1/4 1,72 + 10% recortes)",
+     "origen": "conocimiento/precios/acero_por_kg.csv (precios_varios_acero_2026-02)",
+     "fecha": "2026-02-10",
+     "coincide": "similar",
+     "diferencia": "ángulo en lugar de UPN"
+    }
+   ]
+  },
+  {
+   "id": "S01",
+   "pos": "MO",
+   "grupo": "mo",
+   "descripcion": "Soldadura de piping en planta (28 juntas a tope + SW y olets)",
+   "especificacion": "Juntas como el skid gemelo TAVAL/72 (tabla \"Costuras\": 21 del Ø de entrada y 7 del colector): 21 × 12\" XS × 1,334 = 336,17; 7 × 16\" STD × 1,0 = 112,00; sockolets 3 × 1 1/2\" × 1,75 = 7,88, 4 × 3/4\" × 1,75 = 5,25, 1 × 1/2\" × 1,75 = 0,88; SW 6 × 1 1/2\" = 9,00, 4 × 3/4\" = 3,00, 1 × 1/2\" = 0,50 → 474,67 pulg-eq, todo de taller",
+   "cantidad": 474.67,
+   "unidad": "pulg",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 16.0,
+     "proveedor": "criterio planillas ITT 2026 (TAVAL/43, TAVAL/40, TECPETROL/9 16,5)",
+     "origen": "conocimiento/costos/tarifas.csv fila 3",
+     "fecha": "2026-02-15",
+     "coincide": "igual"
+    },
+    {
+     "tipo": "cot",
+     "precio": 16.0,
+     "proveedor": "Ledesma 200276 (980\" sch 80 + 1.300 kg de skid = 19.600) ≈ 16/pulg",
+     "origen": "ENDRESS HAUSER/33 .../5.Proveedores 3ros/E Ledesma Presupuesto ITT N° 200276",
+     "fecha": "2026-06-02",
+     "coincide": "similar",
+     "diferencia": "pulgada nominal"
+    }
+   ]
+  },
+  {
+   "id": "S05",
+   "pos": "EST",
+   "grupo": "mo",
+   "descripcion": "Fabricación de la estructura (850 kg)",
+   "especificacion": "850 kg × USD 4/kg",
+   "cantidad": 850,
+   "unidad": "kg",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 4.0,
+     "proveedor": "planilla ITT TECPETROL/9 REV C (UPN 140 384 kg × 4 = 1.536)",
+     "origen": "TECPETROL/9 .../REV C/ESTRUCTURA DE COSTOS- LM de Manifold S600 CM - PC0-C REV.1 OS.xlsx, fila 239",
+     "fecha": "2026-01-13",
+     "coincide": "similar"
+    },
+    {
+     "tipo": "cot",
+     "precio": 4.5,
+     "proveedor": "J. C. Quesada JQ-020-2026",
+     "origen": "TAVAL/58 .../Cotizacion JQ-020-2026.pdf",
+     "fecha": "2026-05-06",
+     "coincide": "similar"
+    }
+   ]
+  },
+  {
+   "id": "S04",
+   "pos": "RX",
+   "grupo": "servicio",
+   "descripcion": "Radiografía 100% de las juntas a tope y LP en SW y olets",
+   "especificacion": "21 juntas 12\" × 6 placas chicas = 126 × 6,50; 7 juntas 16\" × 3 placas grandes = 21 × 8,00; 23 servicios RX para 6 equipos (40 placas c/u) = 3,83 × 408; LP 4 servicios / 6 = 0,67 × 294",
+   "cantidad": 1,
+   "unidad": "gl",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 2747.0,
+     "proveedor": "DB NDT (lista en planillas Pampa 7, 08-2026)",
+     "origen": "conocimiento/costos/tarifas.csv filas 46–49",
+     "fecha": "2026-08-14",
+     "coincide": "igual"
+    },
+    {
+     "tipo": "cot",
+     "precio": 4514.0,
+     "proveedor": "Antonelli 11-2025 (15/20 por placa, 490 por servicio)",
+     "origen": "fuentes_originales/antonelli_end_2025-11.pdf",
+     "fecha": "2025-11-03",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "S02",
+   "pos": "PIN",
+   "grupo": "servicio",
+   "descripcion": "Granallado y pintura",
+   "especificacion": "piping 30,7 m² (válvulas 12\" 9,0; bridas y ciegas 11,4; tees 4,8; caños 4,5; menores 1,0) + bastidor 850 kg × 24 m²/t (UPN 200–240) = 20,4 m² → 51,1 m²",
+   "cantidad": 51.1,
+   "unidad": "m2",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 50.0,
+     "proveedor": "criterio ITT USD 50/m² con materiales (PIN-00491)",
+     "origen": "PAMPA ENERGIA/7 .../4.Armado de la Oferta Comercial",
+     "fecha": "2026-08-14",
+     "coincide": "similar",
+     "diferencia": "esquema según pliego YPF a confirmar"
+    }
+   ]
+  },
+  {
+   "id": "S12H",
+   "pos": "HH",
+   "grupo": "mo",
+   "descripcion": "Horas de ingeniería",
+   "especificacion": "150 h para la serie de 6 (isométricos, planos de fabricación, documentación) = 25 h por skid",
+   "cantidad": 25,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 15.0,
+     "proveedor": "tarifa hora ITT de las planillas 2026",
+     "origen": "conocimiento/costos/horas_por_equipo.csv",
+     "fecha": "2026-02-10",
+     "coincide": "sin_ref"
+    }
+   ]
+  },
+  {
+   "id": "S13C",
+   "pos": "CAL",
+   "grupo": "mo",
+   "descripcion": "Horas de calidad y dossier",
+   "especificacion": "15 h por skid (inspección, PH, dossier) + parte fija repartida",
+   "cantidad": 15,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 15.0,
+     "proveedor": "tarifa hora ITT de las planillas 2026",
+     "origen": "conocimiento/costos/horas_por_equipo.csv",
+     "fecha": "2026-02-10",
+     "coincide": "sin_ref"
+    }
+   ]
+  },
+  {
+   "id": "S13A",
+   "pos": "ARM",
+   "grupo": "mo",
+   "descripcion": "Montaje en planta (armado, movimientos, prueba hidráulica)",
+   "especificacion": "movimientos 16 h + presentación de spools 48 + válvulas y ciegas 24 + PH 16 + desarme para pintura 16 + armado final 32 + bastidor y nivelación 16 + despacho 8 = 176 h (escala de TECPETROL/9: 256,5 h para 52 juntas)",
+   "cantidad": 176,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 13.0,
+     "proveedor": "tarifa hora planta ITT de las planillas 2026",
+     "origen": "conocimiento/costos/horas_por_equipo.csv",
+     "fecha": "2026-02-10",
+     "coincide": "sin_ref"
+    }
+   ]
+  },
+  {
+   "id": "S20",
+   "pos": "SEG",
+   "grupo": "servicio",
+   "descripcion": "Seguro de caución",
+   "especificacion": "póliza 10% del precio de venta (~USD 150.000) a ~3% anual",
+   "cantidad": 1,
+   "unidad": "gl",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 450.0,
+     "proveedor": "criterio del agente (pliego no disponible)",
+     "origen": "—",
+     "fecha": "2026-10-28",
+     "coincide": "sin_ref"
+    }
+   ]
+  }
+ ],
+ "compras": {
+  "fecha_respuesta": "AAAA-MM-DD",
+  "material_en_planta_dias": 45,
+  "lugar_entrega": "Planta ITT S.A., Av. 12 de Octubre 4004, Quilmes Oeste, Bs. As.",
+  "requisitos_generales": [
+   "Cotizar en USD sin IVA, con plazo de entrega y validez de la oferta.",
+   "Certificados de material (colada / 3.1).",
+   "Indicar cualquier diferencia con lo pedido (serie, material, extremos, modelo)."
+  ],
+  "notas": {
+   "1": "[requisito para el proveedor]"
+  },
+  "proveedores": {
+   "1": "Renard"
+  },
+  "cantidad_compra": {
+   "2": "1 tira de ~12 m"
+  },
+  "servicios": [
+   {
+    "servicio": "[Armado según plano]",
+    "proveedores": "[taller]",
+    "referencia": "[último precio, fecha]",
+    "nota": ""
+   }
+  ]
+ },
+ "nota_precotizacion": "Recotización a mano del agente (caso de control), sin precios de YPF/28 ni de COT26-0330."
+}

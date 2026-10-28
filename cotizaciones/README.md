@@ -21,3 +21,7 @@ Resumen de los 4 controles con agentes y errores repetidos: `conocimiento/audito
 | `CTRL-C01_PAMPA7_COLECTOR` | Skid colector PAD 6 pozos (Pampa 7) | APP −0,5% (se copió a sí misma; +11% sin eso) · agente +5% |
 | `CTRL-P01_TAVAL70_PUENTE2` | Puente de inyección y regulación 2" #600 (Taval 70) | APP −42% · agente +11% |
 | `CTRL-M01_TECPETROL9_MANIFOLD` | Skid manifold S600 (Tecpetrol 9) | APP −2% (materiales −34%, MO +50%) · agente −9% |
+| `CTRL-TS01_TECPETROL13_TRAMPA` | Trampa receptora 16"x12" #900 (Tecpetrol 13) | APP −19% · agente +1% |
+| `CTRL-P02_PAMPA5_PUENTE3` | Puente de producción 3" #300 (Pampa 5) | APP +15% · agente +0,5% |
+| `CTRL-SK01_YPF28_SKID708` | Skid concentrador 708 (YPF 28, PC0 corregida) | APP −29% · agente −12% |
+| `CTRL-CA01_SACDE18_PIPING` | Prefabricado de piping (Sacde 18, materiales del cliente) | APP +451% sin pintura · agente −0,2%: la app no tiene modo prefabricado |

@@ -29,3 +29,14 @@ Costo por equipo, USD sin IVA. Los totales de la APP que "dan bien" son compensa
 | 12 | Herramientas de control: `comparar_historico` pone el montaje bajo "prueba hidráulica" y pisa su salida con `--json`; falta `--excluir` en `buscar_material/servicio/antecedentes` | todos | — | `comparar_historico.py`, buscadores |
 
 Menores: barra fija de 6 m (los caños de 3"+ vienen en 12 m) y compra extra para 0,25 m; precio más bajo del historial sin alerta (brida WN 4" Provemet); medidas en mm de espárragos; posiciones duplicadas sin aviso; precio verbal tomado como antecedente; catálogo con casquete duplicado; dato mal atribuido en `tarifas.csv` (Ledesma 16,03/pulg).
+
+## Segunda tanda (4 proyectos de los últimos 6 meses, después de las correcciones)
+
+| Caso | Equipo | APP | AGENTE |
+|---|---|---|---|
+| CTRL-TS01 | Trampa receptora 16"x12" #900 (Tecpetrol 13) | −19% | +1% |
+| CTRL-P02 | Puente de producción 3" #300 (Pampa 5) | +15% | +0,5% |
+| CTRL-SK01 | Skid concentrador 708 (YPF 28) | −29% | −12% |
+| CTRL-CA01 | Prefabricado de piping (Sacde 18) | +451% (sin pintura) | −0,2% |
+
+Errores que siguen o son nuevos: series y diámetros de válvulas (Taval #900 con #300; retención 12" con una wafer 3"; esférica con una retención mal rotulada; la tolerancia 2,6 de serie es alta), `sch_de("XS")` vacío y "WNRF" sin leer, tapas y piezas de la familia "Otros" sin comparar diámetro ni serie, precios de stock viejo como igual, MO de terceros del catálogo (Ledesma trampa) no se usa, horas todavía de otros equipos, instrumentos sin accesorios de la hoja de datos, tuercas cobradas dos veces, `--excluir` no filtra `tarifas.csv`, fecha imposible "2026-02-31" en soldadura, barra fija de 6 m, espesor 5/8" leído como 5 mm, proveedores de TAVAL/72 y 78 y lista 30 de Taval fuera del catálogo, y **no hay modo prefabricado** (materiales del cliente, juntas por barra, tarifa por pulgada sin factor, pintura aparte, sin horas de montaje).
