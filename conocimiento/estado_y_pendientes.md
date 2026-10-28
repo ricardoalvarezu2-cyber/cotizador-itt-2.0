@@ -53,7 +53,7 @@
 2. Etapa 2 de los catálogos: costos renglón por renglón de las planillas de costo 2025–2026 (materiales, MO y servicios).
 3. Revisión independiente de los pesos de bridas y accesorios.
 4. ~~Vendor lists en el RAR de la Tanda 1~~ **No están** (revisado el 28/10/2026: la Tanda 1 solo trae las listas de YPF, ya cargadas; de PAE, Pampa y Pluspetrol solo hay referencias). Quedan en la carpeta completa `Z:\VENTAS\OFERTAS Y LICITACIONES` (1.Documentación de la licitación) o hay que pedirlas al cliente cuando se cotice para ellos.
-5. Integrar en `armar_cotizacion.py` las tablas nuevas: plazos (camino crítico), pesos (kg y m²), marcas (control del pliego).
+5. ~~Integrar las tablas nuevas~~ **Hecho (28/10/2026):** `armar_cotizacion.py` corre `controles_tablas.py` y deja `controles_tablas.md` en cada cotización (kilos y m², plazo típico por rubro con aviso si supera el ofrecido, marcas del cliente). Falta: pesos de válvulas, uniones dobles y bujes reductores (no hay tabla).
 
 **Al terminar el proyecto** (decisión de Matías)
 1. Confirmar con Compras los precios sospechosos de la auditoría (columna `alerta`).

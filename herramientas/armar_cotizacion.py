@@ -10,6 +10,7 @@ Entrada (en la carpeta):
 
 Salida:
   computo.csv            cómputo con la fuente de base de cada ítem (lo usa verificar_computo.py)
+  controles_tablas.md    kilos y m², plazos de material por rubro y marcas del cliente (controles_tablas.py)
   <codigo>_<...>.xlsx    planilla con fórmulas: parámetros, ajuste por inflación, detalle, índices, desvíos, antecedentes
   informe.html           informe interactivo (plantillas/informe_cotizacion.html)
   compras/               lista de materiales y servicios para Compras (si cotizacion.json tiene "compras")
@@ -357,6 +358,8 @@ def main(carpeta):
     import verificar_computo
     if verificar_computo.main(carpeta) != 0:
         sys.exit("ERROR: verificar_computo.py encontró errores.")
+    import controles_tablas
+    controles_tablas.main(carpeta)  # kilos y m², plazos de material y marcas del cliente → controles_tablas.md
     if (carpeta / "oferta.json").exists():
         import generar_oferta
         generar_oferta.main(carpeta)
