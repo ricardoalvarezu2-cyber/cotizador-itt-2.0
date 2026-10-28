@@ -1,0 +1,25 @@
+pos,grupo,descripcion,cantidad,unidad,precio_unit_usd,total_usd,proveedor,nota
+1,material,Brida WN 4" S600 Sch.80 A-105,30,un,106,3180,planilla ITT (PRES en LM),"en REV D/E subió a 120,74"
+2,material,Brida WN 8" S600 Sch.80 A-105,2,un,305.43,610.86,planilla ITT (PRES en LM),"en REV D/E bajó a 176,80"
+3,material,Caño SC 4" Sch.80 A-106,4,m,57.8,231.2,planilla ITT,"LM: tramos 8 × 0,25 + 3,4 + 4 × 0,1; se costean 4 m"
+4,material,Caño SC 8" Sch.80 A-106,2,m,165.98,331.96,planilla ITT,"LM: tramo de 2,2 m; se costean 2 m"
+5,material,Drip ring 4" S600 A-516,4,un,350,1400,planilla ITT,
+6,material,Espárragos 7/8" x 100 mm,160,un,10,1600,planilla ITT,
+7,material,Espárragos 7/8" x 140 mm,32,un,10,320,planilla ITT,
+8,material,Junta espiralada 4" S600 AISI,28,un,11,308,planilla ITT,"en REV A: 6,35"
+9,material,Niple 1/2" 100 mm Sch.160 A-106,8,un,5,40,planilla ITT,
+10,material,Sockolet 1/2" S3000 A-105,4,un,10,40,planilla ITT,
+11,material,Tapón 1/2" NPT S3000 A-105,8,un,5,40,planilla ITT,
+12,material,Te normal 4" Sch.80 A-234,8,un,98,784,planilla ITT,
+13,material,Te red. 8" x 4" Sch.80 A-234,4,un,576,2304,planilla ITT,
+14,material,UPN 140,24,m,23,552,planilla ITT (PRES en LM),
+15,material,Válvula esférica 1/2" NPT S3000 A-105 (Taval),8,un,65.2,521.6,TAVAL,"lista 97,80 con descuentos (en REV A: 35,88)"
+16,material,Válvula esférica 4" S600 RF PT A-216 (Taval),8,un,1646.3,13170.4,TAVAL,"lista 2.469,45 con descuentos (en REV A: 1.049,88)"
+17,material,Válvula retención 4" S600 RF A-216 (Taval),4,un,479.9,1919.6,TAVAL,"lista 719,85 con descuentos (en REV A: 690,04)"
+MO,mo,"Soldadura cañería (4"" sch80: 34 costuras; 8"": 10; 1/2"": 8; 322,52 pulg-eq × USD 16,5)",1,gl,5321.58,5321.58,Planilla ITT,"pulgada autorizada por Claudio, comparada con Ledesma 2000103/104"
+EST,mo,"Fabricación de estructura (bastidor UPN 140: 384 kg × USD 4/kg)",1,gl,1536,1536,Planilla ITT,
+RX,servicio,"Radiografía 100% + tinta penetrante (590 placas × 3,75 + servicio 2.700 + tinta 590)",1,gl,5502.5,5502.5,Planilla ITT,
+PIN,servicio,"Granallado y pintura (cañería 232,28 + estructura 291,57)",1,gl,523.86,523.86,Planilla ITT,
+HH,mo,"Ingeniería (1,14 h) + calidad (24 h) + montaje (256,5 h × USD 13; incluye armado y PH)",1,gl,3711.64,3711.64,Planilla ITT,"montaje: armado para PH 54 h + PH 40,5 h + desarme 36 h + armado final 108 h + bastidor 18 h"
+SEG,servicio,Seguro / póliza de cumplimiento,1,gl,111.02,111.02,Planilla ITT,
+TRANS,servicio,Transporte a yacimiento,1,gl,402,402,Planilla ITT,

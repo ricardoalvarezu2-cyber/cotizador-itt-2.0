@@ -12,6 +12,12 @@ Una carpeta por cotización: `COT[AA]-[código de cliente]-[NNN]_<CLIENTE>_<PEDI
 
 ## Casos de control (no son cotizaciones para clientes)
 
+Resumen de los 4 controles con agentes y errores repetidos: `conocimiento/auditorias/2026-10-28_controles_4_agentes.md`.
+
 | Carpeta | Qué controla | Resultado |
 |---|---|---|
 | `CTRL-F01_INARTECO_FM2_S300` | Precotización automática contra el costo real de un filtro FM2 #300 (planilla TAVAL/40, 15-01-2026) | −75% sin completar; ver `bitacora.md` y `comparacion_historico.md` |
+| `CTRL-T01_SACDE20_TKCHOQUE` | Tanque de choque Ø36" (Sacde 20), recotizado por un agente | APP +35% (materiales −58%, MO +69%) · agente −7% |
+| `CTRL-C01_PAMPA7_COLECTOR` | Skid colector PAD 6 pozos (Pampa 7) | APP −0,5% (se copió a sí misma; +11% sin eso) · agente +5% |
+| `CTRL-P01_TAVAL70_PUENTE2` | Puente de inyección y regulación 2" #600 (Taval 70) | APP −42% · agente +11% |
+| `CTRL-M01_TECPETROL9_MANIFOLD` | Skid manifold S600 (Tecpetrol 9) | APP −2% (materiales −34%, MO +50%) · agente −9% |
