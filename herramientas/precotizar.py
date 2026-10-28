@@ -82,9 +82,21 @@ def texto_busqueda(r):
     return " ".join(p for p in partes if p)
 
 
+EXCLUIR = []  # textos de la ruta de origen a no usar (casos de control: el propio proyecto no puede ser su referencia)
+
+
+def excluido(fila):
+    origen = " ".join(str(fila.get(k, "")) for k in ("ruta_origen", "archivo_origen", "ruta_repo", "proveedor")).lower()
+    return any(x.lower() in origen for x in EXCLUIR)
+
+
+BARRA_M = 6.0  # largo de compra mínima de caño (barra); ver caso de control CTRL-F01
+
+
 def material(r, n):
     """Ítem de cotizacion.json para un renglón del plano, más el renglón del informe."""
     fam, at, _, faltan, res = buscar(texto_busqueda(r))
+    res = [x for x in res if not excluido(x[7])]
     cant, unidad = float(r["cantidad"] or 0), (r["unidad"] or "un").strip()
     l = largo_m(r["descripcion"])
     if fam == "CAN" and unidad_norm(unidad) == "un" and l:
@@ -190,7 +202,7 @@ def tarifa(rubro, texto, tipos=("costo_propio",)):
 def servicio_catalogo(hoja, unidad, palabras):
     mejor = None
     for r in leer(RAIZ / "conocimiento" / "precios" / "catalogo_servicios.csv"):
-        if r["hoja"].startswith(hoja) and r["ultimo_precio_usd"] and "ESTIMADO" not in r["alerta"] and \
+        if r["hoja"].startswith(hoja) and r["ultimo_precio_usd"] and "ESTIMADO" not in r["alerta"] and not excluido(r) and \
                 (unidad is None or r["unidad_tarifa"] == unidad) and all(p in norm(r["servicio"] + " " + r["descripcion"]) for p in palabras):
             if mejor is None or r["fecha_ultimo_precio"] > mejor["fecha_ultimo_precio"]:
                 mejor = r
@@ -208,10 +220,21 @@ def main(carpeta, comparar=False):
     items, informe = [], [f"# Precotización automática — {base.get('codigo', carpeta.name)}", "",
                           "Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**", "",
                           "## 1. Materiales", "", "| Pos | Ítem | Resultado | Precio | Fecha y tipo | Diferencias / faltantes |", "|---|---|---|---|---|---|"]
+    N = float(base.get("parametros", {}).get("N", 1) or 1)
     for n, r in enumerate(filas, 1):
         it, fila = material(r, n)
         items.append(it)
         informe.append(fila)
+        # el caño se compra por barra entera (6 m): lo que sobra va en una fila aparte de compra extra (como la 14b de la CAPEX)
+        s = it["fuentes"][0]
+        if it["unidad"] == "m" and s["precio"] and re.search(r"\bcano\b|\bcanos\b|\btubo\b", norm(it["descripcion"])) and 0 < it["cantidad"] * N < BARRA_M * math.ceil(it["cantidad"] * N / BARRA_M):
+            barras = math.ceil(it["cantidad"] * N / BARRA_M)
+            extra = round((barras * BARRA_M - it["cantidad"] * N) / N, 3)
+            items.append({**json.loads(json.dumps(it)), "id": it["id"] + "B", "pos": f"{it['pos']}b", "cantidad": extra,
+                          "descripcion": f"Completar barra de {BARRA_M:g} m de la pos {it['pos']} (compra mínima; sobrante, no va en el equipo)",
+                          "especificacion": f"{barras} barra(s) de {BARRA_M:g} m para {it['cantidad'] * N:g} m en {N:g} equipo(s); por equipo {extra:g} m"})
+            informe.append(f"| {it['pos']}b | Completar barra de {BARRA_M:g} m (compra mínima) | compra extra | USD {s['precio']:,.2f}/m × {extra:g} m | | "
+                           f"Se usan {it['cantidad'] * N:g} m en {N:g} equipo(s) y se compran {barras * BARRA_M:g} m. Borrar si hay sobrante en stock |")
     # 2. soldaduras
     s = soldaduras(filas)
     tar, fila_t = tarifa("soldadura", "soldadura piping")
@@ -277,6 +300,11 @@ def main(carpeta, comparar=False):
     else:
         informe.append("- **Radiografía:** no se calculó (`parametros.rx_pct` = 0). Si el pliego la pide, cargar el porcentaje y volver a correr.")
     informe += ["", "## 4. A completar (no se puede calcular)", "",
+                "**Lo que más mueve el número:** en el caso de control CTRL-F01 (filtro FM2 #300) la radiografía y tinta penetrante fueron "
+                "el 40% del costo y las horas de ingeniería, calidad y montaje el 16%. No presentar un precio sin completarlas.",
+                *(["- ⚠ **Radiografía en 0%:** confirmar con el pliego (en CTRL-F01 fue 100% + tinta penetrante, USD 1.804 por filtro)."] if not rx else []),
+                "- ⚠ **Horas de ingeniería, calidad y montaje:** cargarlas (en CTRL-F01: 9 h de ingeniería + 9 h de calidad + 45 h de montaje × USD 13–15 = USD 720 por filtro). "
+                "Si la prueba hidráulica va dentro del montaje, no sumarla dos veces.",
                 "- Armado y montaje (mano de obra de armado roscado o de terceros con el mismo alcance: `buscar_servicio.py`).",
                 "- Ingeniería, calidad y dossier · embalaje · flete (kilos en `controles_tablas.md` al armar) · insumos.",
                 "- Plazo (camino crítico con `comercial/plazos_proveedores.csv`)."]
@@ -308,5 +336,7 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("carpeta")
     ap.add_argument("--comparar", action="store_true", help="comparar con el cotizacion.json armado a mano")
+    ap.add_argument("--excluir", action="append", default=[], help="no usar precios cuyo origen contenga este texto (repetible)")
     q = ap.parse_args()
+    EXCLUIR.extend(q.excluir)
     main(q.carpeta, q.comparar)

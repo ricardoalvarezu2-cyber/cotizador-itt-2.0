@@ -129,6 +129,12 @@ PISTAS = [(r"valvul", "VAL"), (r"brida|figura 8", "BRI"), (r"esparrago|tuerca|ju
 def familia_de(t, pista=""):
     """Familia por la descripción; si no alcanza, por el grupo del stock o el rubro de la base de componentes."""
     f = familia_texto(t)
+    if f == "INS":
+        # "media cupla ... conexión manómetro", "chapa soporte manómetro": el instrumento es el destino, no la pieza
+        cabeza = re.split(r"\b(?:para|p/|con|c/|conexion|soporte|porta)\b", t, maxsplit=1)[0]
+        fc = familia_texto(cabeza) if cabeza.strip() and cabeza.strip() != t.strip() else f
+        if fc not in ("OTR", "INS"):
+            f = fc
     if f == "OTR" and pista and not re.search(NO_VALVULA, t):
         for rx, fam in PISTAS:
             if re.search(rx, norm(pista)):

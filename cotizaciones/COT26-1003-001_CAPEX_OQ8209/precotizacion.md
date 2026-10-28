@@ -1,7 +1,7 @@
 # Precotización automática — COT26-1003-001
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 3,196.24 por equipo · soldadura y servicios calculados USD 407.81 · 20 similares (1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 14, 17, 18, 19, 20, 22, 23, 24, 25) · 2 sin precio (13, 21).
+**Resumen:** materiales USD 3,234.74 por equipo · soldadura y servicios calculados USD 407.81 · 21 similares (1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 14, 14b, 17, 18, 19, 20, 22, 23, 24, 25) · 2 sin precio (13, 21).
 
 
 ## 1. Materiales
@@ -22,6 +22,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 12 | Niple longitud 200 mm 2" | SIMILAR | 20.00 / un | 2026-04-22 · planilla interna | extremos: NPT (pedido NPT/BW); material: A106 B (pedido API 5L) |
 | 13 | Junta monolítica 2" | **SIN PRECIO** | — | — | pedir cotización |
 | 14 | Caño longitud 1900 mm 2" | SIMILAR | 35.00 / m | 2025-12-10 · planilla interna | material: sin dato (pedido API 5L); revestimiento: sin dato (pedido polipropileno); unidad distinta: catálogo  · faltan: costura |
+| 14b | Completar barra de 6 m (compra mínima) | compra extra | USD 35.00/m × 1.1 m | | Se usan 3.8 m en 2 equipo(s) y se compran 6 m. Borrar si hay sobrante en stock |
 | 15 | Codo 45° 2" | IGUAL | 8.73 / un | 2025-12-26 · lista | — |
 | 16 | Reducción concéntrica 2 1/2"x2" | IGUAL | 16.51 / un | 2025-12-26 · lista | — |
 | 17 | Tapón 2" | SIMILAR | 8.45 / un | 2026-04-22 · planilla interna | serie: 3000 (pedido 2000) |
@@ -55,6 +56,9 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 
 ## 4. A completar (no se puede calcular)
 
+**Lo que más mueve el número:** en el caso de control CTRL-F01 (filtro FM2 #300) la radiografía y tinta penetrante fueron el 40% del costo y las horas de ingeniería, calidad y montaje el 16%. No presentar un precio sin completarlas.
+- ⚠ **Radiografía en 0%:** confirmar con el pliego (en CTRL-F01 fue 100% + tinta penetrante, USD 1.804 por filtro).
+- ⚠ **Horas de ingeniería, calidad y montaje:** cargarlas (en CTRL-F01: 9 h de ingeniería + 9 h de calidad + 45 h de montaje × USD 13–15 = USD 720 por filtro). Si la prueba hidráulica va dentro del montaje, no sumarla dos veces.
 - Armado y montaje (mano de obra de armado roscado o de terceros con el mismo alcance: `buscar_servicio.py`).
 - Ingeniería, calidad y dossier · embalaje · flete (kilos en `controles_tablas.md` al armar) · insumos.
 - Plazo (camino crítico con `comercial/plazos_proveedores.csv`).

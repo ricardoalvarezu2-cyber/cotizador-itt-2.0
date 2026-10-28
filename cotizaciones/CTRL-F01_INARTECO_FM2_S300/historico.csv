@@ -1,0 +1,32 @@
+pos,grupo,descripcion,cantidad,unidad,precio_unit_usd,total_usd,proveedor,nota
+1,material,Brida slip on RF 2" #300 A105,2,un,15,30,FRANCOVIGH,
+2,material,Brida slip on RF 4" #300 A105,1,un,52,52,FRANCOVIGH,
+3,material,Brida ciega 4" #300 A105,1,un,52,52,FRANCOVIGH,
+4,material,Caño sin costura 2" sch 80 A53 Gr B,0.3,m,15,90,TENARIS,"se compran 6 m (cantidad mínima): 6 × 15 = 90"
+5,material,Caño sin costura 4" sch 40 A53 Gr B,0.4,m,29,174,TENARIS,"se compran 6 m (cantidad mínima): 6 × 29 = 174"
+6,material,Tapón roscado 1/2" 2000 A105,1,un,5,5,CH,
+7,material,Media cupla con tapón roscado 1/4" 2000 A105,2,un,4.25,8.5,CH,
+8,material,Codo radio corto 2" A234 WPB,1,un,31,31,CINTOLO,
+9,material,Casquete semielíptico 4" STD A234 WPB,1,un,18,18,CINTOLO,
+10,material,Elemento filtrante G 0.5,2,un,35,70,GORA,"incluye uno de repuesto (en la planilla va como Repuestos)"
+11,material,Varilla roscada 3/8",1,un,5,5,sin proveedor,
+12,material,Tuerca mariposa de bronce 3/8",1,un,7,7,sin proveedor,
+13,material,Arandela plana 3/8",1,un,3,3,sin proveedor,
+14,material,Espárrago 3/4 x 120.70 con 2 tuercas,8,un,10,80,BULES S.R.L.,
+15,material,Placa apoyo con guía 4 mm,1,kg,1.4,1.4,sin proveedor,
+16,material,Tapa soporte elemento filtrante 4 mm,1,kg,1.4,1.4,sin proveedor,
+17,material,Junta espirometálica 4" #300,1,un,15,15,KLINGER,
+18,material,Soporte chapa identificación 2 mm,1,kg,1.4,1.4,sin proveedor,
+19,material,Chapa de identificación litografiada,1,un,25,25,sin proveedor,
+20,material,Asas hierro redondo,2,kg,1.4,2.8,sin proveedor,
+21,material,Manómetro diferencial 0-2 bar,1,un,500,500,TORMENE,
+22,material,Conector recto doble virola 1/4" AISI 304,2,un,15,30,ABAC,
+23,material,Refuerzo derivación tipo poncho 4 x 2,2,un,100,200,CINTOLO,"valor estimado: se pidió precio y no llegó"
+24,material,Válvula esférica tripartita 1/2" 2000 A105,1,un,44.85,44.85,SPIRAX SARCO,"en la planilla va como Válvulas Taval"
+25,material,Media cupla SW 1/2" 2000 A105,1,un,6,6,CH,
+26,material,Chapa soporte manómetro 1.59 mm,2,kg,1.4,2.8,sin proveedor,
+27,material,Arandela plana zincada 3/4",16,un,3,48,sin proveedor,
+MO,mo,Soldadura (4": 2 juntas; 2": 5; 1/2": 3; USD 16 por pulgada),1,gl,433.44,433.44,Planilla ITT,"pulgada autorizada por Claudio, comparada con Ledesma"
+RX,servicio,Radiografía / tinta penetrante,1,gl,1804.2,1804.2,Planilla ITT,
+PIN,servicio,Granallado y pintura,1,gl,22.18,22.18,Planilla ITT,
+HH,mo,Ingeniería (67.5) + calidad (67.5) + montaje (585),1,gl,720,720,Planilla ITT,"45 h de montaje × USD 13"
