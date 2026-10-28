@@ -154,7 +154,7 @@ igual("sinónimo rx", "radiografia" in tokens("RX 100%"), True)
 from openpyxl import load_workbook  # noqa: E402
 
 wb = load_workbook(PRECIOS / "catalogo_servicios.xlsx", read_only=True)
-igual("hojas del Excel", wb.sheetnames, ["Todos"] + [n for _, n in cs.HOJAS])
+igual("hojas del Excel", wb.sheetnames, ["Todos"] + [cs.nombre_hoja_excel(n) for _, n in cs.HOJAS])
 # 19. Toda cita de la extracción está en su documento original
 sys.path.insert(0, str(RAIZ / "herramientas"))
 TEXTOS = RAIZ / "fuentes_originales" / "ofertas_texto"

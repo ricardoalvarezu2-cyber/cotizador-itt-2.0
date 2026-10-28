@@ -1,0 +1,15 @@
+from common import *
+C="AESA/44-Doc5319481557 - AESA - SRV FABRICACION EQUIPOS - F5064"
+R=[]
+for n,eq,pr,desc,noinc in [
+ ("20078 Desgasificador SB 301-571 27-08-25.docx","Desgasificador SB-301/571 (2 unidades en la oferta)",28500,"Armado de virolas y soldadura longitudinal, refuerzos, conexiones, base (pollera), plataforma y escalera, soportes de cañería externa, montaje de internos, placa de desgaste, vane, bafle, rompevórtice","cilindrado, chapas, caños, perfiles, PH, perforado de bridas de pollera"),
+ ("20079 Desgasificador SB - 211 27-08-25.docx","Desgasificador SB-211",37200,"Armado de virolas y soldaduras, bajadas de cañerías internas, refuerzos de conexiones, soportes internos, soportería de demister, paso de hombre, escalera/plataforma, placa deflectora, bafle, rompevórtice","cilindrado de perfiles, chapas, caños, perfiles, PH, consumibles, perforado de bridas para pollera"),
+ ("20080 Scrubber de succión SB 003-004  27-08-25.docx","Scrubber de succión SB-003/004",37200,"Armado de virolas, internos, demister, vanes, placa deflectora, soportes soldados, ánodos de sacrificio, plataforma y escalera, cáncamos de izaje","cilindrado de perfiles, caños para barandas, perfiles, consumibles, perforado de bridas para pollera"),
+ ("20081 Desgasificador VTR SB 211  27-08-25.docx","Desgasificador VTR SB-211",33000,"Armado de virolas, refuerzos (ponchos), casquetes semielípticos, base de pollera, soportería de cañerías externas, plataformas y escaleras, internos, placa de desgaste, cañería, bafle, rompevórtice","cilindrado de chapas, caños, perfiles, consumibles, perforado de bridas para pollera, PH, pintura"),
+ ("20082 Desgasificador VRT SB 402-442-475  27-08-25.docx","Desgasificador VRT SB-402/442/475 (3 unidades)",33000,"Armado de virolas, refuerzos (ponchos), casquetes semielípticos, base de pollera, soportería de cañerías externas, plataformas y escaleras, internos, placa de desgaste, cañería, bafle, rompevórtice","cilindrado de chapas, perfiles, cañería, perforado de bridas para pollera, PH, pintura"),
+ ("20083 Recipiente de recirculación SB - 705  27-08-25.docx","Recipiente de recirculación SB-705",11200,"Armado de virolas y soldaduras, refuerzos (ponchos), conexiones externas, refuerzos y cáncamos, paso de hombre, patas de apoyo, internos, ánodos de sacrificio, placas de desgaste, vane, bafle, rompevórtice, soportes","PH, pintura")]:
+    arc=f"5.Proveedores 3ros/Presupuesto ITT N° {n}"
+    R.append(T(HF,"MO fabricación de equipo completo (tercero)",f"Mano de obra de fabricación del {eq.split(' (')[0]}, precio por unidad. {desc}","Edgardo Ledesma (presupuesto 0001-0000020"+n[:3]+")","2025-08-27",pr,"global",C,arc,
+       f"Precio por unidad USD {pr:,.0f}".replace(",",".")+" MÁS IVA",iva="más IVA (lo dice)",equipo=eq,incluye="M.O, herramientas, SVO, ART",no_incluye=noinc,
+       nota="Pago al dólar divisa BNA del día anterior a la facturación, 5 días FF, validez 10 días. La oferta no informa kg ni pulgadas del equipo, por eso no hay tarifa unitaria."))
+agregar(R,"AESA")

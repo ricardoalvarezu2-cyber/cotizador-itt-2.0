@@ -321,6 +321,11 @@ def resumen(filas, regs):
           f"{sum(1 for fl in filas if fl['ultimo_precio_usd'] == '')} · descartados por cepo (precios): {sum(1 for r in regs if r['descartado'])}")
 
 
+def nombre_hoja_excel(n):
+    """Excel admite 31 caracteres: 'Ingeniería, calidad e inspección' (32) pasa a 'Ingeniería, calidad, inspección'."""
+    return n.replace("calidad e inspección", "calidad, inspección")
+
+
 def escribir_excel(filas):
     from openpyxl import Workbook
     from openpyxl.styles import Alignment, Font, PatternFill
@@ -332,7 +337,7 @@ def escribir_excel(filas):
              "incluye": 40, "no_incluye": 40, "equipo_referencia": 36}
 
     def hoja(nombre, rows):
-        ws = wb.create_sheet(re.sub(r"[/\\?*\[\]:]", "-", nombre)[:31])
+        ws = wb.create_sheet(re.sub(r"[/\\?*\[\]:]", "-", nombre_hoja_excel(nombre))[:31])
         for j, c in enumerate(COMUNES, 1):
             x = ws.cell(1, j, c.replace("_", " "))
             x.font = H

@@ -19,7 +19,7 @@
 | Peso de bridas (B16.5) y accesorios (B16.9, B16.11) | **Borrador: falta revisión independiente** | `tecnico/bridas_peso.csv`, `accesorios_peso.csv`, `pesos_LEEME.md` |
 | Marcas aprobadas por cliente | **Borrador** (YPF completo; PAE, Pampa, Pluspetrol parciales) | `comercial/marcas_aprobadas.csv` + `_resumen.md` |
 | Plazos de entrega de proveedores | **Borrador** (213 datos, 154 verificados) | `comercial/plazos_proveedores.csv` + `_resumen.md` |
-| Catálogo de mano de obra y servicios | **En curso / pendiente** | Instrucciones: `herramientas/catalogo_servicios_instrucciones.md` |
+| Catálogo de mano de obra y servicios (etapa 1) | Vigente (146 servicios, 181 precios con cita verificada; 22 sin precio confiable por cepo) | `precios/catalogo_servicios.*`, `herramientas/catalogo_servicios.py`, `buscar_servicio.py`, `test_catalogo_servicios.py` |
 | Auditoría del catálogo de materiales | Hecha y corregida | `auditorias/2026-10-27_catalogo_materiales.md` |
 
 **Caso de prueba:** COT26-1003-001 CAPEX OQ8209 (borrador, no enviada; su estado está en su `bitacora.md` y en `cotizaciones/README.md`).
@@ -47,7 +47,7 @@
 ## 3. Pendientes del proyecto
 
 **Hace Claude** (aprobado el 28/10/2026: "el resto, dale para adelante")
-1. Catálogo de MO y servicios etapa 1 (en curso; si no está en `precios/catalogo_servicios.*`, relanzar con `herramientas/catalogo_servicios_instrucciones.md`).
+1. ~~Catálogo de MO y servicios etapa 1~~ **Hecho (28/10/2026).**
 2. Etapa 2 de los catálogos: costos renglón por renglón de las planillas de costo 2025–2026 (materiales, MO y servicios).
 3. Revisión independiente de los pesos de bridas y accesorios.
 4. ~~Vendor lists en el RAR de la Tanda 1~~ **No están** (revisado el 28/10/2026: la Tanda 1 solo trae las listas de YPF, ya cargadas; de PAE, Pampa y Pluspetrol solo hay referencias). Quedan en la carpeta completa `Z:\VENTAS\OFERTAS Y LICITACIONES` (1.Documentación de la licitación) o hay que pedirlas al cliente cuando se cotice para ellos.
