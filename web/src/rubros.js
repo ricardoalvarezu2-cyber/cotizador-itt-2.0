@@ -183,7 +183,7 @@ const Rubros = (() => {
       const desc = { mo_piping: `Soldadura y armado del piping (${num(f.mo_piping.juntas_bw, 0)} juntas a tope + SW y olets${base === "kg" ? ", por kg" : ""})`, mo_estructura: "Fabricación de la estructura del skid",
         pintura: "Granallado y pintura (piping y estructura)", ph: `Prueba hidráulica (horas de planta; ${num(f.ph?.litros || 0, 0)} litros)` }[r];
       return { ...res, texto: `${num(cant)} ${UNIDAD[1]} × USD ${num(elegida.valor)} = USD ${num(cant * elegida.valor)}`,
-        renglones: [{ descripcion: desc, especificacion: `${num(cant)} ${UNIDAD[0]} × USD ${num(elegida.valor)} (${elegida.etiqueta})`, cantidad: Math.round(cant * 1000) / 1000, unidad: UNIDAD[0],
+        renglones: [{ descripcion: desc, especificacion: `${num(cant)} ${UNIDAD[1]} de la ficha × tarifa de USD ${num(elegida.valor)} por ${UNIDAD[0] === "m2" ? "m²" : UNIDAD[0]}`, cantidad: Math.round(cant * 1000) / 1000, unidad: UNIDAD[0],
           precio: elegida.valor, fuente: { tipo: propia ? "cot" : "ant", precio: elegida.valor, proveedor: elegida.etiqueta.slice(0, 120), origen: elegida.origen, fecha: elegida.fecha, coincide: "igual" } }] };
     }
     if (r === "end") {

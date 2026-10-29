@@ -160,7 +160,7 @@ input.mal{border-color:var(--bad);background:var(--bad-soft)}
 .rb table.ficha td.n{white-space:normal;overflow-wrap:anywhere}
 .rb .warn{color:var(--warn)}
 .rb-cuerpo.rb-uno{grid-template-columns:1fr}
-.rb table.renglones td{vertical-align:middle} .rb table.renglones td:first-child{width:50%;min-width:200px} .rb table.renglones td.ed input{width:90px}
+.rb table.renglones td{vertical-align:middle} .rb table.renglones td:first-child{width:55%;min-width:220px} .rb table.renglones td.ed input{width:90px}
 details.panel>summary{cursor:pointer} details.panel[open]>summary{margin-bottom:8px}
 @media (max-width:860px){.rb-cab{grid-template-columns:1fr auto}.rb-datos{grid-column:1/-1;order:3}.rb-monto{align-items:flex-start;order:4}.segm{order:2}.rb-cuerpo{grid-template-columns:1fr;padding-left:14px}}
 /* calculadoras del modo detallado */
@@ -263,6 +263,15 @@ tr.it-det td{background:var(--zebra)!important;padding:4px 10px 18px 46px}
 .it-det-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 28px;font-size:.92em}
 .it-det-grid b{display:block;font-size:.9em;color:var(--muted);font-weight:700}
 @media (max-width:700px){.btn-texto{order:2;margin-left:auto}}
+
+/* renglones de MO: el cálculo en una línea y el origen desplegable */
+.renglones .calc{font-size:.95em;color:var(--ink);margin-top:2px}
+.rb-ren{grid-column:1/-1;min-width:0}
+button.link{border:0;background:none;padding:2px 0;font:inherit;font-size:.88em;color:var(--accent);font-weight:400;cursor:pointer;white-space:normal;text-align:left}
+dl.origen{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:6px 18px;margin:4px 0;font-size:.9em;max-width:90ch}
+dl.origen dt{font-weight:700;color:var(--muted)} dl.origen dd{margin:0;overflow-wrap:anywhere}
+table.renglones tbody tr:nth-child(even) td{background:transparent} table.renglones tbody tr:not(.it-det) td{border-top:1px solid var(--line)}
+table.renglones td.ed input{width:110px}
 </style>
 <div class="barra"><div class="in">
   <div class="marca"><i></i>Cotizador ITT</div>

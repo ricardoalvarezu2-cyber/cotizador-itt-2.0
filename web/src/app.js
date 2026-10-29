@@ -461,8 +461,8 @@
                   <label class="ancho"><span>Proveedor y documento</span><input id="tv-${r}" data-rb-propia="${r}" data-c="proveedor" value="${E(S.doc.cot.rubros?.[r]?.propia?.proveedor || "")}"></label></div>` : ""}` : ""}
               <p class="small" id="ra-${r}">${E(a.texto)}</p>
               ${a.renglones.length || a.unidad ? `<div class="fila"><button class="chico prim" data-a="rubro-aplicar" data-r="${r}">Aplicar al costo</button><span class="small muted">reemplaza los renglones de este rubro</span></div>` : ""}
-              ${renglonesRubro(r)}`}
-          </div></div></div>`;
+`}
+          </div>${!glob && !tr ? `<div class="rb-ren">${renglonesRubro(r)}</div>` : ""}</div></div>`;
     };
     const otros = cot.items.filter(i => i.grupo !== "material" && !i.global && !Rubros.rubroDe(i)), abO = S.rbAbiertos.has("otros");
     const subO = otros.reduce((t, i) => t + (c.filas.find(x => x.id === i.id)?.ajustado || 0), 0);
@@ -482,12 +482,19 @@
   function renglonesRubro(r) {
     const c = calc(), its = S.doc.cot.items.filter(i => i.grupo !== "material" && !i.global && (r ? Rubros.rubroDe(i) === r : !Rubros.rubroDe(i)));
     if (!its.length) return `<p class="small muted">${r ? "Sin renglones: elegí la tarifa y apretá Aplicar al costo." : "Sin renglones."}</p>`;
-    return `<div class="tbl"><table class="renglones"><thead><tr><th>Renglón</th><th class="n">Cant.</th><th>Un.</th><th class="n">USD unit.</th><th class="n">USD ajustado</th><th></th></tr></thead><tbody>
-      ${its.map(it => { const s = it.fuentes[0]; return `<tr><td><div class="d">${E(it.descripcion)}</div><div class="sp" title="${E(it.especificacion || "")}">${E((it.especificacion || "").length > 110 ? it.especificacion.slice(0, 110) + "…" : it.especificacion || "")}${s.proveedor ? " · " + E(s.proveedor.slice(0, 60)) : ""} · ${E(F(s.fecha))}${s.tipo === "est" ? ' · <span class="warn">estimado</span>' : ""}</div></td>
-        <td class="ed"><input id="q-${E(it.id)}" type="text" inputmode="decimal" class="num" data-it="${E(it.id)}" data-c="cantidad" value="${NI(it.cantidad)}"></td><td>${E(it.unidad)}</td>
-        <td class="ed"><input id="u-${E(it.id)}" type="text" inputmode="decimal" class="num" data-it="${E(it.id)}" data-c="precio" value="${NI(s.precio)}"></td>
+    S.itAbiertos ??= new Set();
+    const un = u => u === "m2" ? "m²" : u;
+    return `<div class="tbl"><table class="renglones"><thead><tr><th>Renglón</th><th class="n">Cantidad</th><th class="n">USD unitario</th><th class="n">USD ajustado</th><th></th></tr></thead><tbody>
+      ${its.map(it => { const s = it.fuentes[0], ab = S.itAbiertos.has(it.id); return `<tr><td><div class="d">${E(it.descripcion)}</div>
+          <div class="calc">${num(it.cantidad, it.cantidad % 1 ? 2 : 0)} ${E(un(it.unidad))} × USD ${num(s.precio)}${s.tipo === "est" ? ' <span class="pill warn">estimado</span>' : ""}</div>
+          <button class="link" data-a="it-abrir" data-id="${E(it.id)}" aria-expanded="${ab}">${ab ? "▾ Ocultar de dónde sale" : "▸ De dónde sale"}</button></td>
+        <td class="ed"><div class="fila" style="flex-wrap:nowrap;gap:6px"><input id="q-${E(it.id)}" type="text" inputmode="decimal" class="num" data-it="${E(it.id)}" data-c="cantidad" value="${NI(it.cantidad)}" aria-label="Cantidad"><span>${E(un(it.unidad))}</span></div></td>
+        <td class="ed"><input id="u-${E(it.id)}" type="text" inputmode="decimal" class="num" data-it="${E(it.id)}" data-c="precio" value="${NI(s.precio)}" aria-label="USD unitario"></td>
         <td class="n" data-sub="${E(it.id)}">${num(c.filas.find(x => x.id === it.id)?.ajustado)}</td>
-        <td><div class="fila fin"><button class="chico" data-a="editar" data-id="${E(it.id)}">Editar</button><button class="chico peligro" data-a="quitar" data-id="${E(it.id)}" aria-label="Quitar">×</button></div></td></tr>`; }).join("")}</tbody></table></div>`;
+        <td><div class="fila fin"><button class="chico" data-a="editar" data-id="${E(it.id)}">Editar</button></div></td></tr>
+        <tr class="it-det" ${ab ? "" : "hidden"}><td colspan="5"><dl class="origen">
+          <dt>Proveedor o criterio</dt><dd>${E(s.proveedor || "—")}</dd><dt>Fecha</dt><dd>${E(F(s.fecha))}</dd>
+          ${it.especificacion ? `<dt>Cálculo</dt><dd>${E(it.especificacion)}</dd>` : ""}${s.origen ? `<dt>Documento</dt><dd>${E(s.origen)}</dd>` : ""}</dl></td></tr>`; }).join("")}</tbody></table></div>`;
   }
   // Cabecera de la fila de un rubro: nombre, números clave, costo y modo (se repinta sola al escribir)
   function cabRubro(f, r) {
