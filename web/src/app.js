@@ -114,7 +114,7 @@
   function ruta() {
     const h = location.hash.slice(1);
     if (h.startsWith("c-")) abrir(h.slice(2));
-    else { S.vista = ["firmantes", "pedidos", "catalogos"].includes(h) ? h : "inicio"; S.id = null; S.doc = null; S.desuscribir?.(); render(); }
+    else { S.vista = ["firmantes", "catalogos"].includes(h) ? h : "inicio"; S.id = null; S.doc = null; S.desuscribir?.(); render(); }
   }
   window.addEventListener("hashchange", ruta);
   async function abrir(id) {
@@ -227,10 +227,9 @@
 
   // ------------------------------------------------------------------ render
   function render() {
-    for (const [id, v] of [["nav-inicio", "inicio"], ["nav-catalogos", "catalogos"], ["nav-pedidos", "pedidos"], ["nav-firmantes", "firmantes"]]) $("#" + id).toggleAttribute("aria-current", S.vista === v), S.vista === v && $("#" + id).setAttribute("aria-current", "page");
+    for (const [id, v] of [["nav-inicio", "inicio"], ["nav-catalogos", "catalogos"], ["nav-firmantes", "firmantes"]]) $("#" + id).toggleAttribute("aria-current", S.vista === v), S.vista === v && $("#" + id).setAttribute("aria-current", "page");
     if (S.vista === "firmantes") return renderFirmantes();
     if (S.vista === "catalogos") return renderCatalogos();
-    if (S.vista === "pedidos") return typeof Asistente !== "undefined" ? Asistente.renderPedidos(app) : (app.innerHTML = "");
     if (S.vista === "cot" && S.doc) return renderCot();
     if (S.vista === "inicio") return renderInicio();
   }

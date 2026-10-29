@@ -47,7 +47,7 @@ Tarea programada `trig_01FE1sHFbntc3vsLmKVYvvcD` (lunes 7:37, hora Argentina). D
 6. Commit y push a `main`.
 
 ## Pedidos desde la página
-Llegan a la sesión fija como un mensaje "Pedido <id> desde la página del cotizador…" (botón "Mandar a Claude Code"), o quedan `pendiente` y se procesan el lunes. Procesar uno por vez:
+La pestaña Pedidos se sacó el 29-10-2026 (Matías): hoy solo llega el pedido `incorporar_base` (botón "Incorporar a la base de datos" en Resumen); los pedidos viejos siguen en la colección. Llegan a la sesión fija como un mensaje "Pedido <id> desde la página del cotizador…", o quedan `pendiente` y se procesan el lunes. Procesar uno por vez:
 1. ArtifactData `get` de `pedidos/<id>` (url de la página, arriba). `update` con `if_version`: `estado: "en_proceso"`, `nota`, y una entrada más en `historial`.
 2. Bajar cada archivo con Artifact `action: "read"`, `url` de la página y `path` = `archivos[].id`. Guardar la copia en `fuentes_originales/pedidos_web/<id>/<nombre>` (todo queda en el repositorio). Excel y Word llegan convertidos a Markdown (`original` = nombre del archivo original); en el Excel convertido el punto es decimal.
 3. Según el `tipo`:
