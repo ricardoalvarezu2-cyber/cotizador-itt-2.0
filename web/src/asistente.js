@@ -1,5 +1,5 @@
-// Asistente de la página: chat con Claude (capacidad "sample") y pedidos para Claude Code (capacidad "mcp", conector
-// Claude Code Remote → send_message a la sesión fija con el repositorio). Los archivos se suben con "assets"; Excel y Word
+// Asistente de la página: chat y pedidos para Claude Code (capacidad "mcp", conector Claude Code Remote → send_message a
+// la sesión fija con el repositorio; la respuesta vuelve por la base de la página). Los archivos se suben con "assets"; Excel y Word
 // se pasan a texto antes de subir (assets solo guarda imágenes, PDF y texto). Ver web/LEEME.md, "Pedidos desde la página".
 const Asistente = (() => {
   const URL_PAGINA = "https://claude.ai/artifact/HfbiaNvhAFkQjYwLe2kaBQ";
@@ -15,17 +15,16 @@ const Asistente = (() => {
   const ESTADOS_PEDIDO = { pendiente: ["pendiente", "warn"], enviado: ["enviado", "info"], en_proceso: ["en proceso", "info"], listo: ["listo", "ok"], con_dudas: ["con dudas", "warn"], error: ["error", "bad"] };
   const MAX_MB = 20;
 
-  let I = null, sample = null, mcp = null, limites = null, sesion = SESION_FIJA;
+  let I = null, mcp = null, sesion = SESION_FIJA;
   const P = { lista: [], form: { tipo: "cotizacion_nueva", texto: "", cot: "" }, archivos: [], ocupado: false };
-  const chat = { turnos: [], adjuntos: [], todosAdjuntos: [], ctl: null, ocupado: false, deshacer: [], abierto: false, propuesta: null };
+  const chat = { msgs: [], adjuntos: [], conv: "", ocupado: false, abierto: false, recien: false };
 
   // ------------------------------------------------------------------ arranque
   const listo = window.ITT ? Promise.resolve() : new Promise(ok => window.addEventListener("itt-listo", ok, { once: true }));
   listo.then(async () => {
     I = window.ITT;
     const usar = n => (window.claude && window.claude.use ? window.claude.use(n).catch(() => null) : Promise.resolve(null));
-    [sample, mcp] = await Promise.all([usar("sample"), usar("mcp")]);
-    limites = sample ? await sample.limits().catch(() => null) : null;
+    mcp = await usar("mcp");
     const S = I.S;
     if (S.db) {
       S.db.doc("config/claude_code").get().then(d => { if (d.exists && d.data().session_id) sesion = d.data().session_id; }).catch(() => {});
@@ -90,6 +89,7 @@ const Asistente = (() => {
   }
   async function subir(files, aviso) {
     const S = I.S;
+    if (!files.length) return [];
     if (!S.assets) throw new Error("Esta vista no puede subir archivos (hace falta permiso de edición en la página).");
     const out = [];
     for (const f of files) {
@@ -114,6 +114,16 @@ const Asistente = (() => {
     if (mandar) await mandarPedido(id, doc, aviso);
     return id;
   }
+  function motivoError(e) {
+    const c = e.code;
+    if (["server_unavailable", "upstream_error", "cancelled"].includes(c)) return ["error", "no se sabe si llegó (" + c + "): mirá la sesión de Claude Code antes de reenviar"];
+    return ["pendiente", c === "server_not_connected" ? "falta el conector Claude Code Remote (claude.ai → Configuración → Conectores)"
+      : c === "not_in_manifest" ? "no se dio permiso a la página para usar Claude Code"
+      : c === "approval_required" ? "hace falta aprobar el envío; volvé a intentar"
+      : c === "needs_reauth" ? "hay que volver a conectar Claude Code Remote en claude.ai"
+      : c === "tool_error" ? "Claude Code respondió con un error: " + (e.message || "").slice(0, 200)
+      : "no se pudo mandar (" + (c || e.message) + ")"];
+  }
   async function mandarPedido(id, doc, aviso) {
     const S = I.S;
     if (!mcp) throw new Error("Esta vista no puede comunicarse con Claude Code. Quedó pendiente: se procesa el lunes o cuando lo pidas en un chat.");
@@ -123,21 +133,8 @@ const Asistente = (() => {
       `Tipo: ${doc.tipo} (${TIPOS_PEDIDO[doc.tipo] || ""}).${doc.cotizacion_id ? ` Cotización: cotizaciones/${doc.cotizacion_id}.` : ""} Archivos: ${doc.archivos.length}.\n` +
       `Pedido: ${(doc.texto || "(sin texto)").slice(0, 1500)}`;
     let estado = "enviado", nota = "mandado a Claude Code";
-    try {
-      await mcp.callTool(SERVIDOR, "send_message", { session_id: sesion, message: msg, priority: "later" });
-    } catch (e) {
-      const c = e.code;
-      if (["server_unavailable", "upstream_error", "cancelled"].includes(c)) { estado = "error"; nota = "no se sabe si llegó (" + c + "): mirá la sesión de Claude Code antes de reenviar"; }
-      else {
-        estado = "pendiente";
-        nota = c === "server_not_connected" ? "falta el conector Claude Code Remote (claude.ai → Configuración → Conectores)"
-          : c === "not_in_manifest" ? "no se dio permiso a la página para usar Claude Code"
-          : c === "approval_required" ? "hace falta aprobar el envío; volvé a intentar"
-          : c === "needs_reauth" ? "hay que volver a conectar Claude Code Remote en claude.ai"
-          : c === "tool_error" ? "Claude Code respondió con un error: " + (e.message || "").slice(0, 200)
-          : "no se pudo mandar (" + (c || e.message) + ")";
-      }
-    }
+    try { await mcp.callTool(SERVIDOR, "send_message", { session_id: sesion, message: msg, priority: "later" }); }
+    catch (e) { [estado, nota] = motivoError(e); }
     const d = await S.db.doc("pedidos/" + id).get();
     const h = (d.exists && d.data().historial) || [];
     await S.db.doc("pedidos/" + id).update({ estado, ...(estado === "enviado" ? { enviado: ahora() } : {}), nota, historial: [...h, { fecha: ahora(), estado, nota }] });
@@ -218,51 +215,51 @@ const Asistente = (() => {
         case "borrar":
           if (b.dataset.ok !== "1") { b.dataset.ok = "1"; b.textContent = "¿Seguro? Borrar"; setTimeout(() => { b.dataset.ok = ""; b.textContent = "Borrar"; }, 4000); return; }
           await S.db.doc("pedidos/" + b.dataset.id).delete(); I.toast("Pedido borrado (los archivos subidos se conservan)"); break;
-        case "prop-mandar": case "prop-guardar": {
-          const pr = chat.propuesta; if (!pr) return;
-          b.disabled = true; agregarTraza("Subiendo archivos y guardando el pedido…");
-          const id = await crearPedido({ tipo: pr.tipo, texto: pr.texto, cot: pr.cot || "", files: chat.todosAdjuntos, mandar: b.dataset.p === "prop-mandar" }, agregarTraza);
-          chat.propuesta = null; document.getElementById("ch-prop")?.remove();
-          agregarBurbuja("a", b.dataset.p === "prop-mandar" ? `Listo: el pedido ${id} se mandó a Claude Code. Seguilo en **Pedidos**.` : `Listo: el pedido ${id} quedó pendiente en **Pedidos**.`);
-          break;
+        case "ch-reenviar": {
+          const m = chat.msgs.find(x => x.id === b.dataset.id); if (!m) return;
+          if (m.estado === "error" && b.dataset.ok !== "1") { b.dataset.ok = "1"; b.textContent = "¿Seguro? Puede haber llegado"; return; }
+          b.disabled = true; await mandarChat(m.id, m); break;
         }
         case "nuevo-borrar":
           if (b.dataset.ok !== "1") { b.dataset.ok = "1"; b.textContent = "¿Seguro?"; setTimeout(() => { b.dataset.ok = ""; b.textContent = "Borrar"; }, 4000); return; }
           await S.db.doc("catalogo_nuevo/" + b.dataset.id).delete(); I.toast("Borrado del catálogo nuevo"); break;
-        case "prop-cancelar": chat.propuesta = null; document.getElementById("ch-prop")?.remove(); break;
-        case "conf-ok": case "conf-no": {
-          const f = confirmaciones.get(b.dataset.id); confirmaciones.delete(b.dataset.id); document.getElementById(b.dataset.id)?.remove();
-          if (b.dataset.p === "conf-ok" && f) agregarBurbuja("a", await f()); else agregarTraza("Cancelado.");
-          break;
-        }
       }
-    } catch (e) { I.toast(e.message || String(e.code || e)); if (b.dataset.p.startsWith("prop")) agregarBurbuja("a", "No se pudo: " + (e.message || e.code)); }
+    } catch (e) { I.toast(e.message || String(e.code || e)); }
   });
 
-  // ------------------------------------------------------------------ chat: panel
+  // ------------------------------------------------------------------ chat: cada mensaje va a la sesión de Claude Code
+  // Colección "chat": un documento por mensaje {conversacion, texto, archivos, contexto, estado, creado, nota, avance,
+  // respuesta, cambios, respondido}. La sesión fija lo lee con ArtifactData, trabaja sobre el repositorio y la página
+  // (control total, ver web/LEEME.md "Chat de la página") y escribe la respuesta en el mismo documento.
+  const ESPERA = { enviado: "Esperando a Claude Code…", en_proceso: "Claude Code está trabajando…" };
   function armarChat() {
     const btn = document.getElementById("btn-chat"), panel = document.getElementById("chat");
-    if (!btn || !panel) return;
-    if (!sample) { btn.hidden = true; return; }
+    if (!btn || !panel || !I.S.db) return;
     btn.hidden = false;
     btn.addEventListener("click", () => abrirChat(!chat.abierto));
-    panel.innerHTML = `<div class="ch-cab"><div class="fila"><b>Claude</b><span class="small muted" id="ch-ctx"></span><button class="chico" id="ch-cerrar" aria-label="Cerrar el chat">×</button></div>
-        <div class="fila"><button class="chico" id="ch-nuevo">Nueva conversación</button><button class="chico" id="ch-deshacer" hidden>Deshacer cambios de Claude</button></div></div>
+    try { chat.conv = localStorage.getItem("itt-conv") || ""; } catch (e) { /* sin almacenamiento */ }
+    if (!chat.conv) nuevaConversacion();
+    panel.innerHTML = `<div class="ch-cab"><div class="fila"><b>Claude Code</b><span class="small muted" id="ch-ctx"></span><button class="chico" id="ch-cerrar" aria-label="Cerrar el chat">×</button></div>
+        <div class="fila"><button class="chico" id="ch-nuevo">Nueva conversación</button></div></div>
       <div class="ch-msgs" id="ch-msgs" aria-live="polite"></div>
       <div class="ch-pie"><div id="ch-adj" class="small"></div>
-        <textarea id="ch-txt" rows="3" placeholder="Ej.: buscame una válvula esférica 2&quot; #600 · cargá la tabla del plano adjunto · ¿por qué hay tantos avisos?"></textarea>
-        <div class="fila"><label class="btn chico" style="flex-direction:row" ${limites?.images ? "" : "hidden"}>Adjuntar plano o archivo<input id="ch-arch" type="file" multiple accept="image/png,image/jpeg,image/webp,application/pdf,.xlsx,.xls,.docx,.csv,.txt" hidden></label>
-          <span style="flex:1"></span><button class="chico" id="ch-parar" hidden>Parar</button><button class="prim chico" id="ch-enviar">Enviar</button></div>
-        <span class="small muted">Usa tu cuenta de Claude. Lo que cambie queda en borrador y se puede deshacer.</span></div>`;
+        <textarea id="ch-txt" rows="3" placeholder="Ej.: armá la cotización del plano adjunto · ¿cuánto se cobró la última trampa 8&quot;? · corregí la pintura de esta cotización"></textarea>
+        <div class="fila"><label class="btn chico" style="flex-direction:row">Adjuntar archivo<input id="ch-arch" type="file" multiple accept="image/png,image/jpeg,image/webp,application/pdf,.xlsx,.xls,.xlsm,.ods,.docx,.csv,.txt,.md,.json" hidden></label>
+          <span style="flex:1"></span><button class="prim chico" id="ch-enviar" ${mcp ? "" : "disabled"}>Enviar</button></div>
+        <span class="small muted" id="ch-estado">${mcp ? "Trabaja sobre el repositorio con tu cuenta de Claude. Cada respuesta tarda de 1 a 3 minutos." : "En esta vista no se puede llamar a Claude Code (falta el conector Claude Code Remote o el permiso de la página)."}</span></div>`;
     panel.querySelector("#ch-cerrar").onclick = () => abrirChat(false);
-    panel.querySelector("#ch-nuevo").onclick = () => { chat.ctl?.abort(); chat.turnos = []; chat.adjuntos = []; chat.todosAdjuntos = []; chat.propuesta = null; document.getElementById("ch-msgs").innerHTML = ""; bienvenida(); pintarAdjuntos(); };
+    panel.querySelector("#ch-nuevo").onclick = () => { nuevaConversacion(); pintarChat(); };
     panel.querySelector("#ch-enviar").onclick = enviar;
-    panel.querySelector("#ch-parar").onclick = () => chat.ctl?.abort();
-    panel.querySelector("#ch-deshacer").onclick = deshacer;
     panel.querySelector("#ch-txt").addEventListener("keydown", e => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); enviar(); } });
-    window.addEventListener("hashchange", () => { pintarContexto(); });
-    bienvenida();
+    window.addEventListener("hashchange", pintarContexto);
+    I.S.db.collection("chat").onSnapshot(sn => { chat.msgs = sn.docs.map(d => ({ id: d.id, ...d.data() })); pintarChat(); }, () => {});
+    setInterval(() => { if (chat.abierto && chat.msgs.some(m => ESPERA[m.estado])) pintarChat(); }, 60e3);
+    pintarChat();
     try { if (localStorage.getItem("itt-chat") === "1") abrirChat(true); } catch (e) { /* sin almacenamiento */ }
+  }
+  function nuevaConversacion() {
+    chat.conv = idUnico("v");
+    try { localStorage.setItem("itt-conv", chat.conv); } catch (e) { /* sin almacenamiento */ }
   }
   function abrirChat(si) {
     chat.abierto = si;
@@ -270,403 +267,71 @@ const Asistente = (() => {
     document.body.classList.toggle("con-chat", si);
     document.getElementById("btn-chat").setAttribute("aria-pressed", String(si));
     try { localStorage.setItem("itt-chat", si ? "1" : "0"); } catch (e) { /* sin almacenamiento */ }
-    if (si) { pintarContexto(); document.getElementById("ch-txt").focus(); }
+    if (si) { pintarContexto(); pintarChat(); document.getElementById("ch-txt").focus(); }
   }
   function pintarContexto() {
     const S = I.S, el = document.getElementById("ch-ctx"); if (!el) return;
-    el.textContent = S.vista === "cot" && S.doc ? "sobre " + S.doc.cot.codigo : "sin cotización abierta";
-    const d = document.getElementById("ch-deshacer");
-    if (d) d.hidden = !chat.deshacer.some(x => x.id === S.id);
-  }
-  function bienvenida() {
-    agregarBurbuja("a", "Hola. Puedo crear, abrir, duplicar y modificar cotizaciones (datos, ítems, plazo y oferta), usar las calculadoras, cargar artículos y mano de obra nuevos con su documento, leer un plano (imagen o PDF), explicarte los avisos y descargar los archivos. Aprobar y enviar quedan para vos.\n\nPara trabajos largos (un pliego completo, una lista de precios para el catálogo, una cotización entera con ofertas) te propongo mandarlo a **Claude Code**.");
-    if (!limites?.tools) agregarBurbuja("a", "En esta vista no puedo cambiar la cotización: solo responder.");
+    el.textContent = S.vista === "cot" && S.doc ? "sobre " + S.doc.cot.codigo : "";
   }
   function md(t) {
     return esc(t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").split("\n").map(l => /^\s*[-•] /.test(l) ? `<li>${l.replace(/^\s*[-•] /, "")}</li>` : l + "<br>").join("")
       .replace(/(<li>.*?<\/li>)+/g, m => `<ul>${m}</ul>`).replace(/(<br>)+$/, "");
   }
-  function agregarBurbuja(quien, texto) {
-    const box = document.getElementById("ch-msgs"), el = document.createElement("div");
-    el.className = "msg " + quien; el.innerHTML = quien === "u" ? esc(texto).replace(/\n/g, "<br>") : md(texto);
-    box.append(el); box.scrollTop = box.scrollHeight; return el;
-  }
-  function agregarTraza(t) {
-    const box = document.getElementById("ch-msgs"), el = document.createElement("div");
-    el.className = "traza"; el.textContent = t;
-    if (chat.respEl?.isConnected) box.insertBefore(el, chat.respEl); else box.append(el); // lo que hizo va antes de la respuesta
-    box.scrollTop = box.scrollHeight;
+  const delaConv = () => chat.msgs.filter(m => m.conversacion === chat.conv).sort((a, b) => String(a.creado).localeCompare(String(b.creado)));
+  function pintarChat() {
+    const box = document.getElementById("ch-msgs"); if (!box) return;
+    const abajo = box.scrollHeight - box.scrollTop - box.clientHeight < 80;
+    const hora = iso => iso ? fechaCorta(iso).slice(-5) : "";
+    const ms = delaConv();
+    box.innerHTML = (ms.length ? "" : `<div class="msg a">Hola. Hablás con Claude Code, que trabaja sobre el repositorio y la página: busca en el historial, los catálogos y los antecedentes, arma y corrige cotizaciones, lee planos, pliegos y listas de precios, y puede cambiar la página. Nada se envía al cliente.</div>`)
+      + ms.map(m => {
+        const arch = (m.archivos || []).length ? `<div class="small muted">Adjuntó: ${m.archivos.map(a => esc(a.original || a.nombre)).join(", ")}</div>` : "";
+        const u = `<div class="msg u">${esc(m.texto).replace(/\n/g, "<br>")}${arch}</div>`;
+        if (m.respuesta) return u + `<div class="msg a">${md(m.respuesta)}${(m.cambios || []).length ? `<div class="small muted">Cambió: ${m.cambios.map(esc).join(" · ")}</div>` : ""}<div class="small muted">${hora(m.respondido)}</div></div>`;
+        if (ESPERA[m.estado]) {
+          const min = (Date.now() - Date.parse(m.enviado || m.creado)) / 60e3;
+          return u + `<div class="msg a pensando">${ESPERA[m.estado]}${m.avance ? `<div class="small">${esc(m.avance)}</div>` : ""}${min > 15 ? `<div class="small">Tarda más de lo normal: puede estar con un trabajo largo o con otro pedido antes.</div>` : ""}</div>`;
+        }
+        return u + `<div class="msg a"><span class="err">${esc(m.nota || "No se mandó.")}</span> <button class="chico" data-p="ch-reenviar" data-id="${esc(m.id)}" ${mcp ? "" : "disabled"}>Reenviar</button></div>`;
+      }).join("");
+    if (abajo || chat.recien) { box.scrollTop = box.scrollHeight; chat.recien = false; }
   }
   function pintarAdjuntos() {
     const el = document.getElementById("ch-adj"); if (!el) return;
     el.innerHTML = chat.adjuntos.map((f, i) => `<span class="pill info">${esc(f.name)} <button class="chico" data-quitar-adj="${i}" aria-label="Quitar">×</button></span>`).join(" ");
     el.querySelectorAll("[data-quitar-adj]").forEach(b => (b.onclick = () => { chat.adjuntos.splice(+b.dataset.quitarAdj, 1); pintarAdjuntos(); }));
   }
-  function deshacer() {
-    const S = I.S, i = chat.deshacer.map(x => x.id).lastIndexOf(S.id);
-    if (i < 0) return;
-    const [d] = chat.deshacer.splice(i, 1);
-    S.doc = d.doc; I.guardarPronto(); I.render(); pintarContexto();
-    agregarTraza(`Deshecho: la cotización volvió a como estaba antes del mensaje de las ${d.hora}.`);
-  }
-
-  // ------------------------------------------------------------------ chat: imágenes (PDF → páginas como imagen)
-  let pdfjs = null;
-  function cargarScript(src) { return new Promise((ok, no) => { const s = document.createElement("script"); s.src = src; s.onload = ok; s.onerror = () => no(new Error("No se pudo cargar " + src)); document.head.append(s); }); }
-  async function paginasPdf(file, max) {
-    if (!pdfjs) {
-      const base = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/";
-      await cargarScript(base + "pdf.min.js"); await cargarScript(base + "pdf.worker.min.js");
-      pdfjs = window.pdfjsLib; pdfjs.GlobalWorkerOptions.workerSrc = base + "pdf.worker.min.js";
-    }
-    const doc = await pdfjs.getDocument({ data: new Uint8Array(await file.arrayBuffer()) }).promise, out = [];
-    for (let n = 1; n <= Math.min(doc.numPages, max); n++) {
-      const pg = await doc.getPage(n), v1 = pg.getViewport({ scale: 1 }), esc_ = Math.min(3, 2000 / Math.max(v1.width, v1.height));
-      const v = pg.getViewport({ scale: esc_ }), c = document.createElement("canvas"); c.width = v.width; c.height = v.height;
-      const ctx = c.getContext("2d"); ctx.fillStyle = "#fff"; ctx.fillRect(0, 0, c.width, c.height);
-      await pg.render({ canvasContext: ctx, viewport: v }).promise;
-      out.push(await new Promise(ok => c.toBlob(ok, "image/png")));
-    }
-    return { imgs: out, total: doc.numPages };
-  }
-  async function imagenesDe(files, notas) {
-    const max = limites?.images?.maxCount || 0, imgs = [];
-    for (const f of files) {
-      if (imgs.length >= max) { notas.push(`${f.name}: no entra (máximo ${max} imágenes por mensaje)`); continue; }
-      if (/^image\//.test(f.type)) imgs.push(f);
-      else if (f.type === "application/pdf" || /\.pdf$/i.test(f.name)) {
-        const r = await paginasPdf(f, max - imgs.length); imgs.push(...r.imgs);
-        if (r.total > r.imgs.length) notas.push(`${f.name}: se mandan ${r.imgs.length} de ${r.total} páginas`);
-      } else notas.push(`${f.name}: el chat no lo lee (solo imágenes y PDF); sí va si lo mandás a Claude Code`);
-    }
-    return imgs;
-  }
-
-  // ------------------------------------------------------------------ chat: instrucciones y contexto
-  function reglas() {
-    const fams = Object.entries(I.S.datos.familias).map(([k, v]) => `${k}=${v.n}`).join(", ");
-    return `Sos el asistente del Cotizador ITT, una página para cotizar equipos de ITT S.A. (Quilmes, Argentina; fabricante de calentadores, separadores, filtros, skids, manifolds, colectores, puentes de medición, cañerías, tanques y trampas para oil & gas). Hablás con alguien de Ventas de ITT en español rioplatense. Respuestas cortas.
-Tenés control sobre la página: crear, abrir, duplicar y modificar cotizaciones (datos, ítems, plazo, oferta), usar las calculadoras, cargar artículos y servicios nuevos en el catálogo y descargar archivos.
-
-Reglas obligatorias (un error que llega al cliente puede ser catastrófico):
-- Todo en USD y SIN IVA. Si una fuente dice "con IVA", dividí por 1,21 (o 1,105 si es 10,5%).
-- Nunca inventes un precio ni lo saques de memoria. Los precios salen del catálogo (herramientas buscar_*) o de un documento que el usuario adjuntó, con proveedor y fecha. Si no hay, cargá el ítem con precio 0 (queda SIN PRECIO para pedir cotización).
-- Si la pieza del catálogo no es exactamente la del plano (otra serie, material, extremos, marca, schedule), es "similar" y tenés que decir en qué difiere. "igual" solo si coincide todo.
-- Un precio verbal, aproximado o calculado por vos es "est" (estimado).
-- Si no hay precio de la pieza ni de una pieza parecida, NO inventes un valor: precio 0, "SIN PRECIO: pedir cotización" (coincide "sin_ref"). Un estimado tiene que citar su referencia (pieza parecida, antecedente o tarifa × cantidad).
-- Al copiar la tabla de materiales de un plano: renglón por renglón, con la posición, la misma cantidad y la misma unidad del plano. Compras extra (sobrantes, mangas) van en filas aparte (pos "14b"). No juntes renglones.
-- Si una parte del plano no se lee bien, decilo y no adivines. Pedí una imagen mejor o mandá el trabajo a Claude Code.
-- La cantidad de cada ítem es por equipo; la cantidad de equipos es el parámetro N.
-- Las soldaduras, la radiografía, la pintura y la prueba hidráulica se calculan con la herramienta calculadora (las mismas fórmulas de la página), nunca con horas inventadas. Las juntas salen de la columna de extremos del plano (BW se cuentan por junta).
-- Un artículo o servicio nuevo se carga con nuevo_en_catalogo solo si hay un documento con precio, proveedor y fecha.
-- No podés aprobar ni marcar enviada una cotización; borrar y pasar a revisado los confirma el usuario con un botón.
-- Nunca se envía nada al cliente. Todo queda en borrador para que lo revise una persona.
-- Para trabajos largos o que necesitan el repositorio (leer un pliego entero, incorporar una lista de precios al catálogo, armar una cotización completa con plazo y ofertas, buscar antecedentes de proyectos) usá proponer_pedido_claude_code: el usuario lo confirma con un botón.
-- Antes de cambiar varios ítems, decí en una línea qué vas a hacer y hacelo. Al final, resumí qué cambiaste.
-- Fechas: al usuario siempre DD-MM-AAAA; en las herramientas, AAAA-MM-DD.
-
-Familias de materiales para buscar_materiales: ${fams}.
-Tipos de origen de un precio: lista, cot (cotización de proveedor), stock, ant (antecedente o planilla interna), est (estimado).`;
-  }
-  function contexto() {
-    const S = I.S, hoy = I.hoy();
-    if (S.vista === "cot" && S.doc) {
-      const cot = S.doc.cot, p = cot.parametros, c = I.calc();
-      const filas = cot.items.map(i => { const s = i.fuentes[0]; return `${i.id} | ${i.pos} | ${i.grupo} | ${i.descripcion} | ${i.especificacion || ""} | ${i.cantidad} ${i.unidad} | USD ${s.precio} | ${s.tipo} | ${s.proveedor} ${s.fecha} | ${s.coincide}${s.diferencia ? " (" + s.diferencia + ")" : ""}`; });
-      return `Hoy: ${hoy}. Cotización abierta: ${cot.codigo} ${cot.revision || ""} · ${cot.titulo || "(sin título)"} · cliente ${cot.cliente?.nombre || "—"} · estado ${cot.estado}.
-Parámetros: N=${p.N} equipos, factor materiales ${p.FM}, factor MO y servicios ${p.FMO}, factor válvulas Taval ${p.FTV ?? 1}, contingencia ${p.CONT}%, fecha de referencia ${p.fecha_referencia}.
-Totales (borrador): costo por equipo USD ${c.costo.toFixed(2)}, precio unitario USD ${c.precio_unitario.toFixed(2)}, total USD ${c.total.toFixed(2)}.
-Ítems (id | pos | grupo | descripción | especificación | cantidad | precio unitario | tipo | proveedor y fecha | coincide):
-${filas.join("\n") || "(ninguno)"}`.slice(0, 60000);
-    }
-    return `Hoy: ${hoy}. No hay una cotización abierta (el usuario está en "${S.vista}"). Cotizaciones guardadas: ${S.lista.slice(0, 30).map(r => `${r.codigo} "${r.titulo}" (id ${r.id})`).join("; ") || "ninguna"}.`;
-  }
-
-  // ------------------------------------------------------------------ chat: herramientas
-  function herramientas(marcar) {
-    const S = I.S;
-    const cot = () => { if (S.vista !== "cot" || !S.doc) throw new Error("No hay una cotización abierta. Pedile al usuario que la abra, o creá una con nueva_cotizacion."); return S.doc.cot; };
-    const cambio = (txt) => { I.guardarPronto(); I.render(); pintarContexto(); agregarTraza(txt); };
-    const s = (v, n = 200) => String(v ?? "").slice(0, n);
-    const fechaOk = f => /^\d{4}-\d{2}-\d{2}$/.test(f) && f <= I.hoy();
-    return [
-      { name: "buscar_materiales", description: "Busca en el catálogo de materiales de ITT (precios sin IVA, con fecha y origen). Devuelve hasta 12 resultados con codigo, descripción, atributos, precio USD, fecha, tipo de precio, proveedor y alerta. Usá pocas palabras (ej. 'esferica 2 600').",
-        inputSchema: { type: "object", properties: { texto: { type: "string" }, familia: { type: "string", description: "código de familia (VAL, BRI, CAN, ...) o vacío" } }, required: ["texto"] },
-        execute: ({ texto, familia }) => {
-          agregarTraza(`Busca materiales: "${s(texto, 60)}"${familia ? " en " + familia : ""}`);
-          const fam = familia && S.datos.familias[String(familia).toUpperCase()] ? String(familia).toUpperCase() : "";
-          const r = Busqueda.materiales(S.datos, { fam, texto: String(texto || "") }, 12);
-          return { total: r.total, resultados: r.res.map(x => ({ codigo: x.r.c, familia: x.r.f, descripcion: x.r.d, atributos: x.r.a, unidad: x.r.u, precio_usd: x.r.p, fecha: x.r.fe, tipo_precio: x.r.tp, proveedor: s(x.r.pr, 60), alerta: s(x.r.al, 120), precios_en_historial: x.r.n })) };
-        } },
-      { name: "buscar_servicios", description: "Busca en el catálogo de mano de obra y servicios (sin IVA). Devuelve hasta 12 con codigo, rubro, servicio, tarifa unitaria (si hay) o precio global, fecha, proveedor, incluye y equipo de referencia. Un global solo sirve si el alcance es el mismo.",
-        inputSchema: { type: "object", properties: { texto: { type: "string" }, rubro: { type: "string" } }, required: ["texto"] },
-        execute: ({ texto, rubro }) => {
-          agregarTraza(`Busca servicios: "${s(texto, 60)}"`);
-          const r = Busqueda.servicios(S.datos, { texto: String(texto || ""), hoja: rubro ? String(rubro) : "" }, 12);
-          return { total: r.total, resultados: r.res.map(x => ({ codigo: x.c, rubro: x.h, servicio: x.s, tarifa: x.t, unidad_tarifa: x.ut, precio_global: x.p, fecha: x.fe, proveedor: s(x.pr, 60), incluye: s(x.inc, 150), equipo_referencia: s(x.eq, 80), alerta: s(x.al, 100) })) };
-        } },
-      { name: "ver_detalle", description: "Devuelve una parte de la cotización abierta: datos (cliente y parámetros), oferta (todos los textos de la oferta), plazo (días y tareas), avisos (controles para corregir y revisar), calculadoras (tarifas de pintura disponibles y m² de caños calculados).",
-        inputSchema: { type: "object", properties: { parte: { type: "string", enum: ["datos", "oferta", "plazo", "avisos", "calculadoras"] } }, required: ["parte"] },
-        execute: ({ parte }) => {
-          const c = cot();
-          if (parte === "oferta") return S.doc.oferta;
-          if (parte === "plazo") return c.plazo || {};
-          if (parte === "avisos") return Busqueda.avisos(c).slice(0, 80);
-          if (parte === "calculadoras") return { m2_canos: Math.round(I.m2Canos() * 100) / 100, tarifas_pintura: I.tarifasPintura().slice(0, 12).map(s => ({ codigo: s.c, tarifa_usd_m2: s.t, servicio: s.s, proveedor: s.pr.slice(0, 40), fecha: s.fe })), prueba_hidraulica_usd_h: I.tarifaPH()?.t };
-          return { codigo: c.codigo, revision: c.revision, titulo: c.titulo, cliente: c.cliente, equipo: c.equipo, firmante_id: c.firmante_id, firmantes: S.firmantes.map(f => ({ id: f.id, nombre: f.nombre })), parametros: c.parametros, estado: c.estado };
-        } },
-      { name: "agregar_material", description: "Agrega a la cotización abierta un material del catálogo por su codigo, con su precio, proveedor y fecha. cantidad = por equipo. coincide: igual o similar (si es similar, diferencia es obligatoria). plano: los datos del renglón del plano.",
-        inputSchema: { type: "object", properties: { codigo: { type: "string" }, cantidad: { type: "number" }, pos: { type: "string" }, coincide: { type: "string", enum: ["igual", "similar"] }, diferencia: { type: "string" },
-          plano: { type: "object", properties: { diametro: { type: "string" }, serie_sch: { type: "string" }, material: { type: "string" }, extremos: { type: "string" }, modelo: { type: "string" } } } }, required: ["codigo", "cantidad", "coincide"] },
-        execute: ({ codigo, cantidad, pos, coincide, diferencia, plano }) => {
-          const c = cot(), r = S.datos.materiales.find(m => m.c === String(codigo));
-          if (!r) throw new Error("No existe el código " + codigo);
-          if (coincide === "similar" && !diferencia) throw new Error("Si es similar, decí en qué difiere (diferencia).");
-          marcar();
-          const it = Busqueda.itemDeMaterial(r, { estado: coincide === "igual" ? "igual" : "similar", difs: diferencia ? [String(diferencia)] : [] }, Number(cantidad) || 1, I.siguienteId("M"));
-          it.pos = pos ? String(pos) : String(c.items.filter(i => i.grupo === "material").length + 1);
-          it.plano = plano && typeof plano === "object" ? Object.fromEntries(Object.entries(plano).map(([k, v]) => [k, s(v, 80)])) : {};
-          c.items.push(it); cambio(`Agregó ${it.id}: ${it.descripcion.slice(0, 60)} × ${it.cantidad}`);
-          return { id: it.id, precio: it.fuentes[0].precio, coincide: it.fuentes[0].coincide };
-        } },
-      { name: "agregar_servicio", description: "Agrega a la cotización abierta un servicio o mano de obra del catálogo por su codigo. cantidad en la unidad de la tarifa (o 1 si es global).",
-        inputSchema: { type: "object", properties: { codigo: { type: "string" }, cantidad: { type: "number" } }, required: ["codigo", "cantidad"] },
-        execute: ({ codigo, cantidad }) => {
-          const c = cot(), r = S.datos.servicios.find(x => x.c === String(codigo));
-          if (!r) throw new Error("No existe el código " + codigo);
-          if (!r.p) throw new Error("Ese servicio no tiene precio confiable.");
-          marcar(); const it = Busqueda.itemDeServicio(r, Number(cantidad) || 1, I.siguienteId("S")); c.items.push(it);
-          cambio(`Agregó ${it.id}: ${it.descripcion.slice(0, 60)}`); return { id: it.id };
-        } },
-      { name: "cargar_item", description: "Carga un ítem a mano en la cotización abierta (por ejemplo, un renglón del plano sin precio en el catálogo, o un precio de un documento adjunto). precio 0 = SIN PRECIO (pedir cotización). fecha AAAA-MM-DD del precio.",
-        inputSchema: { type: "object", properties: { grupo: { type: "string", enum: ["material", "mo", "servicio"] }, pos: { type: "string" }, descripcion: { type: "string" }, especificacion: { type: "string" },
-          cantidad: { type: "number" }, unidad: { type: "string" }, precio: { type: "number" }, tipo: { type: "string", enum: ["lista", "cot", "stock", "ant", "est"] }, proveedor: { type: "string" }, origen: { type: "string" }, fecha: { type: "string" },
-          coincide: { type: "string", enum: ["igual", "similar", "sin_ref"] }, diferencia: { type: "string" },
-          plano: { type: "object", properties: { diametro: { type: "string" }, serie_sch: { type: "string" }, material: { type: "string" }, extremos: { type: "string" }, modelo: { type: "string" } } } },
-          required: ["grupo", "descripcion", "cantidad", "unidad", "precio"] },
-        execute: (a) => {
-          const c = cot(), precio = Number(a.precio) || 0;
-          const f = precio ? { tipo: a.tipo || "est", precio, proveedor: s(a.proveedor, 120), origen: s(a.origen, 240), fecha: s(a.fecha, 10), coincide: a.coincide || "similar", diferencia: s(a.diferencia, 300) }
-            : { tipo: "est", precio: 0, proveedor: "SIN PRECIO: pedir cotización", origen: s(a.origen, 240), fecha: I.hoy(), coincide: "sin_ref", diferencia: "Sin precio en el catálogo" };
-          if (precio && !f.proveedor) throw new Error("Falta el proveedor o criterio del precio.");
-          if (precio && !fechaOk(f.fecha)) throw new Error("La fecha del precio no es válida (AAAA-MM-DD, no futura).");
-          if (f.coincide === "similar" && !f.diferencia) throw new Error("Si es similar, decí en qué difiere.");
-          if (!f.diferencia) delete f.diferencia;
-          marcar();
-          const grupo = ["material", "mo", "servicio"].includes(a.grupo) ? a.grupo : "material";
-          const it = { id: I.siguienteId(grupo === "material" ? "M" : "S"), pos: s(a.pos, 12) || (grupo === "material" ? String(c.items.filter(i => i.grupo === "material").length + 1) : "SRV"), grupo,
-            descripcion: s(a.descripcion, 120), especificacion: s(a.especificacion, 300), cantidad: Number(a.cantidad) || 1, unidad: s(a.unidad, 12) || "un", fuentes: [f],
-            plano: a.plano && typeof a.plano === "object" ? Object.fromEntries(Object.entries(a.plano).map(([k, v]) => [k, s(v, 80)])) : {} };
-          c.items.push(it); cambio(`Cargó ${it.id}: ${it.descripcion.slice(0, 60)}${precio ? "" : " (SIN PRECIO)"}`); return { id: it.id };
-        } },
-      { name: "modificar_item", description: "Cambia campos de un ítem de la cotización abierta por su id: cantidad, unidad, pos, descripcion, especificacion, precio (sin IVA; si cambiás el precio, pasá también proveedor, fecha y tipo).",
-        inputSchema: { type: "object", properties: { id: { type: "string" }, cantidad: { type: "number" }, unidad: { type: "string" }, pos: { type: "string" }, descripcion: { type: "string" }, especificacion: { type: "string" },
-          precio: { type: "number" }, proveedor: { type: "string" }, fecha: { type: "string" }, tipo: { type: "string", enum: ["lista", "cot", "stock", "ant", "est"] }, coincide: { type: "string", enum: ["igual", "similar", "sin_ref"] }, diferencia: { type: "string" } }, required: ["id"] },
-        execute: (a) => {
-          const c = cot(), it = c.items.find(i => i.id === String(a.id)); if (!it) throw new Error("No existe el ítem " + a.id);
-          if (a.precio !== undefined && (!a.proveedor || !fechaOk(String(a.fecha || "")))) throw new Error("Para cambiar el precio hacen falta proveedor y fecha válida.");
-          marcar(); const f = it.fuentes[0];
-          for (const k of ["unidad", "pos", "descripcion", "especificacion"]) if (a[k] !== undefined) it[k] = s(a[k], 300);
-          if (a.cantidad !== undefined) it.cantidad = Number(a.cantidad) || 0;
-          if (a.precio !== undefined) Object.assign(f, { precio: Number(a.precio) || 0, proveedor: s(a.proveedor, 120), fecha: s(a.fecha, 10), tipo: a.tipo || f.tipo });
-          if (a.coincide) f.coincide = a.coincide;
-          if (a.diferencia !== undefined) f.diferencia = s(a.diferencia, 300);
-          if (f.coincide === "similar" && !f.diferencia) throw new Error("Quedó similar sin diferencia: pasá diferencia.");
-          cambio(`Modificó ${it.id}: ${it.descripcion.slice(0, 60)}`); return "ok";
-        } },
-      { name: "quitar_item", description: "Quita un ítem de la cotización abierta por su id.",
-        inputSchema: { type: "object", properties: { id: { type: "string" } }, required: ["id"] },
-        execute: ({ id }) => {
-          const c = cot(), it = c.items.find(i => i.id === String(id)); if (!it) throw new Error("No existe el ítem " + id);
-          marcar(); c.items = c.items.filter(i => i !== it); cambio(`Quitó ${it.id}: ${it.descripcion.slice(0, 60)}`); return "ok";
-        } },
-      { name: "modificar_datos", description: "Cambia los datos y parámetros de la cotización abierta. Campos posibles: titulo, codigo, revision, cliente, codigo_itt, comprador, equipo_singular, equipo_plural, firmante_id, N (cantidad de equipos), FM (factor materiales), FMO (factor MO y servicios), FTV (factor de todas las válvulas Taval, por defecto 1), CONT (contingencia %), fecha_referencia (AAAA-MM-DD), AJ (1 aplica ajuste por inflación, 0 no), TRANS (1 flete incluido), TC, TR_ARS, TR_EMB, TR_F. El factor de venta lo define la dirección: si lo cambiás, avisalo.",
-        inputSchema: { type: "object", properties: { campos: { type: "object" } }, required: ["campos"] },
-        execute: ({ campos }) => {
-          const c = cot(); if (!campos || typeof campos !== "object") throw new Error("Pasá los campos a cambiar.");
-          const RUTAS = { titulo: "titulo", codigo: "codigo", revision: "revision", cliente: "cliente.nombre", codigo_itt: "cliente.codigo_itt", comprador: "cliente.comprador", equipo_singular: "equipo.singular", equipo_plural: "equipo.plural", firmante_id: "firmante_id" };
-          const NUM = ["N", "FM", "FMO", "FTV", "CONT", "AJ", "TRANS", "TC", "TR_ARS", "TR_EMB", "TR_F"], hechos = [];
-          marcar();
-          for (const [k, v] of Object.entries(campos)) {
-            if (RUTAS[k]) { const ks = RUTAS[k].split("."); let o = c; ks.slice(0, -1).forEach(x => (o = o[x] ??= {})); o[ks.at(-1)] = s(v, 200); }
-            else if (NUM.includes(k)) { const n = Number(v); if (!isFinite(n) || n < 0) throw new Error(`${k} tiene que ser un número`); c.parametros[k] = n; }
-            else if (k === "fecha_referencia") { if (!fechaOk(String(v))) throw new Error("fecha_referencia inválida"); c.parametros.fecha_referencia = String(v); }
-            else throw new Error("Campo desconocido: " + k);
-            hechos.push(k);
-          }
-          if (campos.cliente) S.doc.oferta.cliente = { ...(S.doc.oferta.cliente || {}), nombre: s(campos.cliente, 200) };
-          cambio(`Cambió datos: ${hechos.join(", ")}`); const r = I.calc(); return { precio_unitario: r.precio_unitario, total: r.total };
-        } },
-      { name: "modificar_plazo", description: "Cambia el plazo de la cotización abierta: dias (ofrecidos), texto (desde cuándo, ej. 'desde OC'), nota, y/o tareas (reemplaza la lista: cada una [nombre, dia_inicio, dia_fin, tipo] con tipo '' material, 'crit' material crítico o 'tal' taller/despacho).",
-        inputSchema: { type: "object", properties: { dias: { type: "number" }, texto: { type: "string" }, nota: { type: "string" }, tareas: { type: "array", items: { type: "array" } } } },
-        execute: (a) => {
-          const c = cot(); marcar(); const pl = c.plazo ??= { dias: 60, texto: "desde OC", tareas: [], nota: "" };
-          if (a.dias !== undefined) pl.dias = Number(a.dias) || 0;
-          if (a.texto !== undefined) pl.texto = s(a.texto, 120);
-          if (a.nota !== undefined) pl.nota = s(a.nota, 800);
-          if (Array.isArray(a.tareas)) pl.tareas = a.tareas.map(x => [s(x[0], 120), Number(x[1]) || 0, Number(x[2]) || 0, ["", "crit", "tal"].includes(x[3]) ? x[3] : ""]);
-          cambio("Cambió el plazo"); return pl;
-        } },
-      { name: "modificar_oferta", description: "Cambia textos de la oferta de la cotización abierta. campos: {ruta: valor} con rutas como oferta.numero, oferta.revision, oferta.fecha, cliente.contacto, cliente.referencia, cliente.proyecto, item.descripcion, item.codigo, item.plazo_dias, item.observacion, objeto, nota_flete, embalaje, caracteristicas, garantia, archivo_base, condiciones.<NOMBRE>, y listas (valor = arreglo de textos): documentos_cliente, aclaraciones_y_desvios.items, exclusiones.items, alcance_general.items. Lo que esté entre [corchetes] sale resaltado para completar.",
-        inputSchema: { type: "object", properties: { campos: { type: "object" } }, required: ["campos"] },
-        execute: ({ campos }) => {
-          cot(); if (!campos || typeof campos !== "object") throw new Error("Pasá los campos.");
-          marcar(); const of = S.doc.oferta, hechos = [];
-          for (const [ruta, v] of Object.entries(campos)) {
-            if (/^estado$|^firma/.test(ruta) || ruta.split(".").length > 3) throw new Error("No se puede cambiar " + ruta);
-            const ks = ruta.split("."); let o = of; ks.slice(0, -1).forEach(x => (o = o[x] ??= {}));
-            o[ks.at(-1)] = Array.isArray(v) ? v.map(x => s(x, 600)) : s(v, 3000); hechos.push(ruta);
-          }
-          cambio(`Cambió la oferta: ${hechos.join(", ")}`); return "ok";
-        } },
-      { name: "calculadora", description: "Usa las calculadoras de la página y agrega el resultado a la cotización abierta. tipo: soldaduras (filas: [{dn, sch, bw, sw, olet, tipoOlet: cupla|weldolet}] por diámetro: juntas a tope, juntas socket y cuplas/olets), radiografia (filas como soldaduras + rx_pct), pintura (m2; si falta, usa los m² de caños cargados; codigo_tarifa opcional de ver_detalle calculadoras), prueba_hidraulica (horas).",
-        inputSchema: { type: "object", properties: { tipo: { type: "string", enum: ["soldaduras", "radiografia", "pintura", "prueba_hidraulica"] }, filas: { type: "array", items: { type: "object" } }, rx_pct: { type: "number" }, m2: { type: "number" }, codigo_tarifa: { type: "string" }, horas: { type: "number" } }, required: ["tipo"] },
-        execute: (a) => {
-          cot(); const filas = (a.filas || []).map(f => ({ dn: String(f.dn ?? ""), sch: String(f.sch ?? "40"), bw: String(f.bw ?? ""), sw: String(f.sw ?? ""), olet: String(f.olet ?? ""), tipoOlet: f.tipoOlet === "weldolet" ? "weldolet" : "cupla" }));
-          marcar(); let r;
-          if (a.tipo === "soldaduras") { r = I.agregarSoldaduras(filas); cambio(`Soldaduras: ${r.sol.pulg} pulgadas equivalentes`); return { id: r.it.id, pulgadas: r.sol.pulg, usd: Math.round(r.sol.pulg * r.it.fuentes[0].precio * 100) / 100, detalle: r.sol.detalle }; }
-          if (a.tipo === "radiografia") { const pct = Number(a.rx_pct) || 0; if (!pct) throw new Error("Falta rx_pct"); r = I.agregarRx(filas, pct); cambio(`Radiografía ${pct}%`); return { id: r.it.id, usd: r.it.fuentes[0].precio, detalle: r.it.especificacion }; }
-          if (a.tipo === "pintura") { const m2 = Number(a.m2) || Math.round(I.m2Canos() * 100) / 100; r = I.agregarPintura(m2, a.codigo_tarifa ? String(a.codigo_tarifa) : ""); cambio(`Pintura ${m2} m²`); return { id: r.it.id, m2, tarifa: r.tarifa.t, aviso: Number(a.m2) ? "" : "m² solo de caños y niples: sumá accesorios y válvulas si corresponde" }; }
-          if (a.tipo === "prueba_hidraulica") { r = I.agregarPH(Number(a.horas) || 6); cambio("Prueba hidráulica"); return { id: r.it.id }; }
-          throw new Error("Tipo desconocido");
-        } },
-      { name: "nuevo_en_catalogo", description: "Carga un artículo (clase material) o una mano de obra o servicio (clase servicio) NUEVO en el catálogo, desde un documento (cotización, lista, factura). Obligatorio: descripcion, unidad, precio, moneda (USD o ARS: los pesos se pasan a dólares con el BNA promedio del mes), iva ('sin IVA', 'con IVA 21%' o 'con IVA 10,5%', según el documento), proveedor, fecha del documento, documento (nombre o referencia). Material: familia (VAL, BRI, CAN, ...) y atributos opcionales (tipo, diametro, serie, schedule, material, extremos, marca, modelo). Servicio: rubro, y si es tarifa unitaria, es_tarifa=true con la unidad (ej. USD/hora, USD/m2); si es global, equipo_referencia, incluye y no_incluye. Aparece en el buscador al instante y el lunes pasa al catálogo del repositorio.",
-        inputSchema: { type: "object", properties: { clase: { type: "string", enum: ["material", "servicio"] }, familia: { type: "string" }, rubro: { type: "string" }, descripcion: { type: "string" }, unidad: { type: "string" }, precio: { type: "number" }, moneda: { type: "string", enum: ["USD", "ARS"] },
-          iva: { type: "string" }, proveedor: { type: "string" }, fecha: { type: "string" }, documento: { type: "string" }, tipo_precio: { type: "string", enum: ["cotización", "lista", "compra"] }, atributos: { type: "object" },
-          es_tarifa: { type: "boolean" }, equipo_referencia: { type: "string" }, incluye: { type: "string" }, no_incluye: { type: "string" } }, required: ["clase", "descripcion", "unidad", "precio", "moneda", "iva", "proveedor", "fecha", "documento"] },
-        execute: async (a) => {
-          if (!S.db) throw new Error("Sin conexión con la base.");
-          const precio0 = Number(a.precio); if (!(precio0 > 0)) throw new Error("Precio inválido.");
-          if (!fechaOk(String(a.fecha))) throw new Error("Fecha inválida (AAAA-MM-DD, no futura).");
-          if (!a.proveedor || !a.documento) throw new Error("Falta el proveedor o el documento de respaldo.");
-          const iva = Busqueda.norm(a.iva), div = /con iva/.test(iva) ? (/10[.,]5/.test(iva) ? 1.105 : 1.21) : 1;
-          let usd = precio0 / div, tc = null;
-          if (a.moneda === "ARS") {
-            const mes = String(a.fecha).slice(0, 7), fila = [...S.datos.indices].reverse().find(r => r.mes <= mes);
-            if (!fila?.dolar) throw new Error("No hay dólar BNA para ese mes."); tc = fila.dolar; usd = usd / tc;
-          }
-          usd = Math.round(usd * 10000) / 10000;
-          const fecha = String(a.fecha), cepo = fecha < "2025-04-14" ? "precio del período con cepo: verificar" : "";
-          const nota = [div !== 1 ? `con IVA en el documento: dividido por ${div}` : "", tc ? `ARS ${precio0} ÷ BNA ${tc} (${fecha.slice(0, 7)})` : "", cepo].filter(Boolean).join("; ");
-          const id = idUnico(a.clase === "material" ? "N-MAT-" : "N-SRV-").toUpperCase();
-          let registro;
-          if (a.clase === "material") {
-            const fam = S.datos.familias[String(a.familia || "").toUpperCase()] ? String(a.familia).toUpperCase() : "OTR";
-            registro = { f: fam, d: s(a.descripcion, 200), u: s(a.unidad, 20), p: usd, pa: usd, fe: fecha, tp: a.tipo_precio || "cotización", pr: s(a.proveedor, 120), o: "Cargado en la página · " + s(a.documento, 200),
-              al: nota, iva: div !== 1 ? "con IVA: dividido" : "sin IVA", n: 1, mn: usd, mx: usd, a: a.atributos && typeof a.atributos === "object" ? Object.fromEntries(Object.entries(a.atributos).map(([k, v]) => [k, s(v, 60)])) : {} };
-          } else {
-            const tar = !!a.es_tarifa;
-            registro = { h: s(a.rubro || "Otros servicios", 60), s: s(a.descripcion, 120), d: s(a.descripcion, 300), u: s(a.unidad, 30), p: usd, pa: usd, t: tar ? usd : null, ut: tar ? s(a.unidad, 30) : "", ta: tar ? usd : null,
-              fe: fecha, pr: s(a.proveedor, 120), o: "Cargado en la página · " + s(a.documento, 200), inc: s(a.incluye, 200), ninc: s(a.no_incluye, 200), eq: s(a.equipo_referencia, 120), al: nota, iva: div !== 1 ? "con IVA: dividido" : "sin IVA" };
-          }
-          await S.db.doc("catalogo_nuevo/" + id).set({ clase: a.clase, registro, original: { precio: precio0, moneda: a.moneda, iva: s(a.iva, 40), documento: s(a.documento, 200) }, creado: ahora(), por: "chat" });
-          agregarTraza(`Cargó en el catálogo ${id}: ${s(a.descripcion, 60)} · USD ${usd} sin IVA`);
-          return { codigo: id, precio_usd_sin_iva: usd, nota };
-        } },
-      { name: "gestionar_cotizacion", description: "abrir (id), nueva (titulo, cliente: crea una vacía en borrador y la abre), duplicar (id; sin id, la abierta), proponer_borrar (id: muestra un botón para que el usuario confirme), proponer_revisado (la abierta: muestra un botón; solo si no hay avisos para corregir), volver_a_borrador (la abierta). No se puede aprobar ni marcar enviada: eso lo hace una persona.",
-        inputSchema: { type: "object", properties: { accion: { type: "string", enum: ["abrir", "nueva", "duplicar", "proponer_borrar", "proponer_revisado", "volver_a_borrador"] }, id: { type: "string" }, titulo: { type: "string" }, cliente: { type: "string" } }, required: ["accion"] },
-        execute: async (a) => {
-          const esperar = async id => { for (let i = 0; i < 50 && !(S.id === id && S.doc); i++) await new Promise(r => setTimeout(r, 100)); pintarContexto(); return S.id === id && !!S.doc; };
-          const existe = id => S.lista.find(r => r.id === id);
-          switch (a.accion) {
-            case "abrir": if (!existe(String(a.id))) throw new Error("No existe la cotización " + a.id); location.hash = "c-" + a.id; return { abierta: await esperar(String(a.id)) };
-            case "nueva": { const id = await I.crearCotizacion({ titulo: s(a.titulo, 120), cliente: s(a.cliente, 80) }); S.tab = "materiales"; location.hash = "c-" + id; agregarTraza(`Creó la cotización "${s(a.titulo, 60)}"`); return { id, abierta: await esperar(id) }; }
-            case "duplicar": { const o = a.id ? String(a.id) : S.id; if (!o) throw new Error("¿Cuál duplico?"); const id = await I.duplicarCotizacion(o); if (!id) throw new Error("No existe " + o); location.hash = "c-" + id; agregarTraza("Duplicó la cotización"); return { id, abierta: await esperar(id) }; }
-            case "proponer_borrar": { const r = existe(String(a.id)); if (!r) throw new Error("No existe " + a.id);
-              confirmar(`Borrar la cotización ${r.codigo}`, r.titulo || "", "Borrar", "peligro", async () => { await I.borrarCotizacion(r.id); if (S.id === r.id) location.hash = "inicio"; return `Cotización ${r.codigo} borrada.`; });
-              return "Botón mostrado: el usuario tiene que confirmar."; }
-            case "proponer_revisado": { const c = cot(), malos = Busqueda.avisos(c).filter(x => x.nivel === "bad");
-              if (malos.length) throw new Error(`No puede pasar a revisado: hay ${malos.length} avisos para corregir.`);
-              confirmar(`Pasar ${c.codigo} a "revisado"`, "Confirmá solo si una persona revisó el cómputo contra el plano (procedimiento P10).", "Pasar a revisado", "prim", async () => { I.cambiarEstado("revisado"); I.guardarPronto(); I.render(); return "Pasada a revisado."; });
-              return "Botón mostrado: el usuario tiene que confirmar."; }
-            case "volver_a_borrador": { const c = cot(); marcar(); I.cambiarEstado("borrador"); cambio("Volvió a borrador"); return "ok"; }
-          }
-          throw new Error("Acción desconocida");
-        } },
-      { name: "descargar", description: "Descarga archivos de la cotización abierta (el usuario confirma cada descarga): todo (zip) o uno de: presupuesto, compras, informe, tec_docx, tec_pdf, eco_docx, eco_pdf, json.",
-        inputSchema: { type: "object", properties: { archivo: { type: "string", enum: ["todo", "presupuesto", "compras", "informe", "tec_docx", "tec_pdf", "eco_docx", "eco_pdf", "json"] } }, required: ["archivo"] },
-        execute: async ({ archivo }) => {
-          cot(); if (!S.dl) throw new Error("Las descargas no están disponibles en esta vista.");
-          agregarTraza(`Prepara la descarga: ${archivo}`);
-          try { if (archivo === "todo") await I.descargarTodo(null); else await I.descargarUno(null, String(archivo)); }
-          catch (e) { if (e.code === "declined") return "El usuario canceló la descarga."; throw e; }
-          return "Descarga ofrecida al usuario.";
-        } },
-      { name: "proponer_pedido_claude_code", description: "Propone mandar un trabajo a Claude Code (trabaja sobre el repositorio de ITT con el procedimiento completo y deja el resultado en la página). Muestra un botón para que el usuario confirme; los archivos adjuntos en esta conversación van con el pedido. tipo: cotizacion_nueva, actualizar_cotizacion, lista_precios u otro.",
-        inputSchema: { type: "object", properties: { tipo: { type: "string", enum: Object.keys(TIPOS_PEDIDO) }, texto: { type: "string", description: "el pedido completo y claro para Claude Code" } }, required: ["tipo", "texto"] },
-        execute: ({ tipo, texto }) => {
-          chat.propuesta = { tipo: TIPOS_PEDIDO[tipo] ? tipo : "otro", texto: s(texto, 3000), cot: S.vista === "cot" ? S.id : "" };
-          mostrarPropuesta(); return "Propuesta mostrada. El usuario tiene que confirmarla con el botón; no la des por enviada.";
-        } },
-    ];
-  }
-  const confirmaciones = new Map();
-  function confirmar(titulo, texto, boton, clase, accion) {
-    const id = idUnico("cf"), box = document.getElementById("ch-msgs"), el = document.createElement("div");
-    confirmaciones.set(id, accion);
-    el.className = "msg a prop"; el.id = id;
-    el.innerHTML = `<b>${esc(titulo)}</b>${texto ? `<div class="small">${esc(texto)}</div>` : ""}<div class="fila"><button class="chico ${clase}" data-p="conf-ok" data-id="${id}">${esc(boton)}</button><button class="chico" data-p="conf-no" data-id="${id}">Cancelar</button></div>`;
-    box.append(el); box.scrollTop = box.scrollHeight;
-  }
-  function mostrarPropuesta() {
-    const pr = chat.propuesta, box = document.getElementById("ch-msgs");
-    document.getElementById("ch-prop")?.remove();
-    const el = document.createElement("div"); el.className = "msg a prop"; el.id = "ch-prop";
-    el.innerHTML = `<b>Pedido para Claude Code</b><div class="small">${esc(TIPOS_PEDIDO[pr.tipo])}${pr.cot ? " · sobre " + esc(I.S.doc?.cot.codigo || pr.cot) : ""}</div>
-      <div class="small" style="white-space:pre-wrap">${esc(pr.texto)}</div>
-      <div class="small muted">${chat.todosAdjuntos.length ? "Archivos: " + chat.todosAdjuntos.map(f => esc(f.name)).join(", ") : "Sin archivos adjuntos"}</div>
-      <div class="fila"><button class="prim chico" data-p="prop-mandar" ${mcp ? "" : "disabled"}>Mandar a Claude Code</button><button class="chico" data-p="prop-guardar">Dejar pendiente</button><button class="chico" data-p="prop-cancelar">Cancelar</button></div>`;
-    box.append(el); box.scrollTop = box.scrollHeight;
-  }
-
-  // ------------------------------------------------------------------ chat: enviar
-  const ERRORES = {
-    not_granted: "No diste permiso a la página para usar Claude. Se puede habilitar desde el menú de permisos de la página.",
-    sampling_disabled: "Claude no está disponible para esta cuenta.", rate_limited: "Llegaste al límite de uso por ahora. Probá en un rato.",
-    session_expired: "Tenés que volver a iniciar sesión en Claude.", image_rejected: "Alguna imagen no se pudo usar (formato o tamaño). Probá con otra.",
-    images_unavailable: "En esta vista no se pueden mandar imágenes.", prompt_too_large: "El mensaje es muy largo. Empezá una conversación nueva o mandá menos a la vez.",
-    refused: "Claude no respondió a este pedido. Probá formularlo de otra manera.", empty_completion: "No hubo respuesta. Probá de nuevo con un pedido más simple.",
-  };
+  const contextoPagina = () => { const S = I.S, c = S.vista === "cot" && S.doc; return { vista: S.vista || "", cotizacion_id: c ? S.id : "", codigo: c ? S.doc.cot.codigo : "", pestana: c ? S.tab || "" : "" }; };
   async function enviar() {
-    if (chat.ocupado) return;
-    const ta = document.getElementById("ch-txt"), texto = ta.value.trim(), files = chat.adjuntos.slice();
+    if (chat.ocupado || !mcp) return;
+    const ta = document.getElementById("ch-txt"), texto = ta.value.trim(), files = chat.adjuntos.slice(), est = document.getElementById("ch-estado");
     if (!texto && !files.length) return;
-    chat.ocupado = true; ta.value = ""; chat.adjuntos = []; pintarAdjuntos();
-    document.getElementById("ch-enviar").disabled = true; document.getElementById("ch-parar").hidden = false;
-    chat.todosAdjuntos.push(...files);
-    const contenido = texto + (files.length ? `\n\n[Adjuntó: ${files.map(f => f.name).join(", ")}]` : "");
-    agregarBurbuja("u", contenido);
-    const resp = agregarBurbuja("a", "Pensando…"); resp.classList.add("pensando"); chat.respEl = resp;
-    const notas = []; let imgs = [];
+    chat.ocupado = true; document.getElementById("ch-enviar").disabled = true;
+    const aviso = t => (est.textContent = t);
     try {
-      if (files.length) {
-        if (!limites?.images) notas.push("en esta vista no se pueden mandar imágenes al chat");
-        else imgs = await imagenesDe(files, notas);
-        notas.forEach(n => agregarTraza(n));
-      }
-      let marcado = false;
-      const marcar = () => { if (!marcado && I.S.doc) { chat.deshacer.push({ id: I.S.id, doc: I.clon(I.S.doc), hora: new Date().toLocaleTimeString("es-AR", { hour: "2-digit", minute: "2-digit" }) }); marcado = true; } };
-      const previos = chat.turnos.slice(-20);
-      const ultimo = `${contexto()}\n\n${imgs.length ? `Van ${imgs.length} imagen(es) adjuntas (páginas de: ${files.map(f => f.name).join(", ")}).\n\n` : ""}Mensaje del usuario:\n${contenido}`;
-      const input = [{ role: "user", content: reglas() }, ...previos, { role: "user", content: ultimo }];
-      chat.turnos.push({ role: "user", content: contenido });
-      chat.ctl = new AbortController();
-      const ops = { signal: chat.ctl.signal, cache: false, modelTier: imgs.length ? "complex" : "default",
-        onText: ({ text }) => { resp.classList.remove("pensando"); resp.innerHTML = md(text); document.getElementById("ch-msgs").scrollTop = 1e9; } };
-      if (imgs.length) ops.images = imgs;
-      if (limites?.tools) { ops.tools = herramientas(marcar).slice(0, limites.tools.maxCount || 20); delete ops.cache; }
-      const r = await sample(input, ops);
-      resp.classList.remove("pensando"); resp.innerHTML = md(r.text) + (r.truncated ? '<div class="small muted">(respuesta cortada: pedí menos a la vez)</div>' : "");
-      chat.turnos.push({ role: "assistant", content: r.text });
-    } catch (e) {
-      resp.classList.remove("pensando");
-      if (e.code === "cancelled") resp.innerHTML = e.text ? md(e.text) + '<div class="small muted">(detenido)</div>' : '<span class="muted">Detenido.</span>';
-      else resp.innerHTML = (e.text ? md(e.text) + "<br>" : "") + `<span class="err">${esc(ERRORES[e.code] || "Hubo un problema de conexión con Claude. Probá de nuevo.")}</span>`;
-      if (e.text) chat.turnos.push({ role: "assistant", content: e.text });
-    } finally {
-      chat.ocupado = false; chat.ctl = null; chat.respEl = null;
-      document.getElementById("ch-enviar").disabled = false; document.getElementById("ch-parar").hidden = true; pintarContexto();
-    }
+      const archivos = await subir(files, aviso);
+      const id = idUnico("m"), doc = { conversacion: chat.conv, texto, archivos, contexto: contextoPagina(), estado: "pendiente", creado: ahora() };
+      await I.S.db.doc("chat/" + id).set(doc);
+      ta.value = ""; chat.adjuntos = []; pintarAdjuntos(); chat.recien = true;
+      aviso("Mandando a Claude Code…");
+      await mandarChat(id, doc);
+      aviso("Mandado. La respuesta aparece acá en 1 a 3 minutos; podés seguir trabajando.");
+    } catch (e) { aviso(e.message || String(e.code || e)); }
+    finally { chat.ocupado = false; document.getElementById("ch-enviar").disabled = false; }
+  }
+  async function mandarChat(id, doc) {
+    const ctx = doc.contexto || {};
+    const previos = delaConv().filter(m => m.id !== id && m.creado < doc.creado).slice(-6);
+    const msg = `Chat ${id} desde la página del cotizador (${URL_PAGINA}).\n` +
+      `Seguí web/LEEME.md, sección "Chat de la página" (primero git pull origin main). Leé el documento chat/${id} con ArtifactData y respondé en ese mismo documento.\n` +
+      `Página: ${ctx.vista || "inicio"}${ctx.cotizacion_id ? `, cotización abierta ${ctx.codigo} (documento cotizaciones/${ctx.cotizacion_id}), pestaña ${ctx.pestana}` : ""}. Conversación ${doc.conversacion}. Archivos adjuntos: ${(doc.archivos || []).length}.\n` +
+      (previos.length ? `Antes en esta conversación:\n${previos.map(p => `- Matías: ${String(p.texto).slice(0, 400)}\n  Claude Code: ${String(p.respuesta || "(sin respuesta)").slice(0, 600)}`).join("\n")}\n` : "") +
+      `Mensaje de Matías:\n${String(doc.texto || "(sin texto, ver archivos)").slice(0, 8000)}`;
+    let estado = "enviado", nota = "";
+    try { await mcp.callTool(SERVIDOR, "send_message", { session_id: sesion, message: msg, priority: "later" }); }
+    catch (e) { [estado, nota] = motivoError(e); }
+    await I.S.db.doc("chat/" + id).update({ estado, nota, ...(estado === "enviado" ? { enviado: ahora() } : {}) });
+    if (estado !== "enviado") throw new Error(nota.charAt(0).toUpperCase() + nota.slice(1) + ".");
   }
 
   return { renderPedidos, abrirChat, TIPOS_PEDIDO, prepararArchivo, crearPedido };

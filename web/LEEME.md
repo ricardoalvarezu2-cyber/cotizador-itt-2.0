@@ -27,8 +27,9 @@
 - `resumenes/<id>`: lo que muestra la lista (código, título, cliente, estado, unitario, total).
 - `firmantes/<id>`: nombre, cargo, teléfono, celular, email, `firma_asset` y `firma_url`.
 - `config/indices`: `{generado, indices, dolar}`. Si es más nuevo que `datos.json`, la página lo usa.
-- `cot.indices_congelados` (en cada cotización): `{fecha, filas}` con el mismo formato que `datos.json.indices`. Se guarda al pasar a revisado y se borra al volver a borrador; si está, el cálculo usa esos índices y no los de la base. `cot.aprobacion`: `{por, fecha}`. `cot.ficha`: ficha por rubro que arma `ficha_rubros.py` con la tabla del plano (la pone `semilla.py`; sin ella la página muestra una aproximada). `cot.rubros`: `{<rubro>: {modo, detalle}}`. `cot.transporte`: `{largo_m, ancho_m, alto_m, destino}`; el global de transporte guarda `viaje_usd` y su precio por equipo es viaje ÷ equipos por camión. `cot.parametros.FTV`: factor de todas las válvulas Taval (por defecto 1); cada válvula Taval lleva `"taval": true`.
+- `cot.indices_congelados` (en cada cotización): `{fecha, filas}` con el mismo formato que `datos.json.indices`. Se guarda al pasar a revisado y se borra al volver a borrador; si está, el cálculo usa esos índices y no los de la base. `cot.aprobacion`: `{por, fecha}`. `cot.ficha`: ficha por rubro que arma `ficha_rubros.py` con la tabla del plano (la pone `semilla.py`; sin ella la página muestra una aproximada). `cot.rubros`: `{<rubro>: {modo, detalle}}`. `cot.transporte`: `{destino, transportista}`; el precio por equipo va en el global de transporte (`G-transporte`); sin precio, EXW. `cot.parametros.FTV`: factor de todas las válvulas Taval (por defecto 1); cada válvula Taval lleva `"taval": true`.
 - `catalogo_nuevo/<N-MAT-… o N-SRV-…>`: `{clase, registro (mismo formato que datos.json), original: {precio, moneda, iva, documento}, creado, por, incorporado?}`. Lo carga el chat (`nuevo_en_catalogo`); la página lo suma al buscador mientras no esté `incorporado`.
+- `chat/<id>`: un mensaje del chat: `{conversacion, texto, archivos (como en pedidos), contexto: {vista, cotizacion_id, codigo, pestana}, estado, nota, creado, enviado, avance, respuesta, cambios: [texto], respondido}`. Estados: `pendiente` → `enviado` → `en_proceso` → `listo` / `con_dudas` (o `error`).
 - `config/claude_code`: `{session_id}` de la sesión que recibe los pedidos (si no existe, la página usa la sesión fija de abajo).
 - `pedidos/<id>`: `{tipo, texto, cotizacion_id, archivos: [{id, url, nombre, tipo, original?}], estado, nota, respuesta, resultado_cotizacion_id, creado, enviado, historial: [{fecha, estado, nota}]}`. Tipos: `cotizacion_nueva`, `actualizar_cotizacion`, `lista_precios`, `otro`. Estados: `pendiente` → `enviado` → `en_proceso` → `listo` / `con_dudas` (o `error` si no se sabe si el envío llegó).
 - Si Claude Code guarda una cotización con `"editor": "claude-code"`, la página abierta la recarga sola y avisa.
@@ -46,7 +47,7 @@ Tarea programada `trig_01FE1sHFbntc3vsLmKVYvvcD` (lunes 7:37, hora Argentina). D
 6. Commit y push a `main`.
 
 ## Pedidos desde la página
-Llegan a la sesión fija como un mensaje "Pedido <id> desde la página del cotizador…" (botón "Mandar a Claude Code" o el chat), o quedan `pendiente` y se procesan el lunes. Procesar uno por vez:
+Llegan a la sesión fija como un mensaje "Pedido <id> desde la página del cotizador…" (botón "Mandar a Claude Code"), o quedan `pendiente` y se procesan el lunes. Procesar uno por vez:
 1. ArtifactData `get` de `pedidos/<id>` (url de la página, arriba). `update` con `if_version`: `estado: "en_proceso"`, `nota`, y una entrada más en `historial`.
 2. Bajar cada archivo con Artifact `action: "read"`, `url` de la página y `path` = `archivos[].id`. Guardar la copia en `fuentes_originales/pedidos_web/<id>/<nombre>` (todo queda en el repositorio). Excel y Word llegan convertidos a Markdown (`original` = nombre del archivo original); en el Excel convertido el punto es decimal.
 3. Según el `tipo`:
@@ -58,6 +59,18 @@ Llegan a la sesión fija como un mensaje "Pedido <id> desde la página del cotiz
 4. Cerrar el pedido: `update` con `estado: "listo"` o `"con_dudas"`, `respuesta` (2 a 4 líneas: qué se hizo, qué revisar, dudas), `resultado_cotizacion_id` si corresponde, y el `historial`.
 5. `verificar_todo.py` (TODO OK), commit y push. Errores nuevos a `conocimiento/errores_y_lecciones.md`.
 - Reglas: nunca enviar nada al cliente; todo queda en borrador; si algo no se lee bien, `con_dudas` y explicarlo. Un precio sin documento no se carga.
+
+## Chat de la página
+El chat de la página habla con Claude Code (desde el 29-10-2026; antes era un chat sin acceso al repositorio). Cada mensaje llega a la sesión fija como "Chat <id> desde la página del cotizador…" y trae el contexto (cotización abierta, pestaña) y los últimos mensajes de la conversación. **Control total sobre la app** (Matías, 29-10-2026).
+1. `git pull origin main`. ArtifactData `get` de `chat/<id>` y `update` con `estado: "en_proceso"`. En trabajos largos, ir dejando `avance` (una línea: qué está haciendo). Para ver la conversación entera: `query` de `chat` con la misma `conversacion`.
+2. Archivos: como en los pedidos (paso 2), copia en `fuentes_originales/chat_web/<id>/`.
+3. Hacer lo que pida con el repositorio y la base de la página. "Esta cotización" es `contexto.cotizacion_id`. Puede: responder consultas (historial, catálogos, antecedentes, costos, proveedores); crear, duplicar, modificar y borrar cotizaciones; cargar precios y listas al catálogo; cambiar firmantes, configuración e índices; cambiar las herramientas del repositorio y el código de la página (`web/src/`, `armar_pagina.py`, pruebas, republicar). Para cotizar, skill `cotizar`.
+   - Antes de cambiar una cotización de la página, guardar una versión (`cotizaciones/<id>/versiones/<milisegundos>` = `{cot, oferta, guardado, estado}`) para que se pueda restaurar desde Resumen. Guardar con `editor: "claude-code"`, `guardado` = ahora e `if_version`, y actualizar `resumenes/<id>` con los totales del motor (`web/src/motor.js` con node). La página abierta se recarga sola.
+   - Si la cotización también está en el repositorio, trabajar ahí y recargarla con `semilla.py --salida`.
+   - Estados: a revisado solo con `verificar_computo.py` sin errores y la revisión independiente; a aprobado solo si Matías lo pide por escrito en el chat (`cot.aprobacion` = `{por: "Matías Russo (chat)", fecha}`); **enviado nunca, y nunca se envía nada al cliente**.
+   - Borrar solo lo que nombró; antes, respaldo en `cotizaciones_web/` con `respaldo_base.py`.
+4. Responder: `update` de `chat/<id>` con `estado: "listo"` (o `"con_dudas"`), `respuesta` (español rioplatense y corta: qué hizo en 2-3 líneas, errores, lo que tiene que decidir; fechas DD-MM-AAAA; `**negrita**` y listas con `- ` se ven), `cambios` (lista corta de lo que tocó, ej. "COT26-0330-001: pintura manual USD 1.200") y `respondido` = ahora.
+5. Si cambió el repositorio: `verificar_todo.py` (TODO OK), commit, push y pasar a `main`. Errores nuevos a `conocimiento/errores_y_lecciones.md`.
 
 ## Cambios en la página
 Editar `src/`, correr `python web/armar_pagina.py`, probar (ver `probar_*.js`) y republicar el mismo `web/cotizador.html`.
