@@ -38,6 +38,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from indice_proyectos import frac, norm, diametros, pulgadas, series  # noqa: E402
 from numeros import a_vista, fecha_iso, leer_numero, fmt, fmtg, precio_csv, celda_excel  # noqa: E402
+from candado import candado, escribir, guardar_libro  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
 COMPRA_VIGENTE = "2022-01-01"
@@ -769,6 +770,11 @@ def leer_fuentes():
 
 # ---------------------------------------------------------------- armado
 def main():
+    with candado("catalogo_materiales.py"):
+        _main()
+
+
+def _main():
     tabla = tabla_dolar()
     ref_cpi = tabla[max(tabla)][1]
     regs = leer_fuentes()
@@ -803,7 +809,7 @@ def main():
         if k not in registro:
             ultimo += 1
             registro[k] = f"{grupos[k][0]['familia']}-{ultimo:05d}"
-    with open(reg_ruta, "w", newline="", encoding="utf-8") as f:
+    with escribir(reg_ruta, newline="") as f:
         w = csv.writer(f)
         w.writerow(["codigo", "clave"])
         for k, c in sorted(registro.items(), key=lambda kv: kv[1]):
@@ -862,7 +868,7 @@ def main():
             h["codigo"] = fila["codigo"]
         filas.append(fila)
     # CSV de historial y de catálogo
-    with open(PRECIOS / "catalogo_materiales_historial.csv", "w", newline="", encoding="utf-8") as f:
+    with escribir(PRECIOS / "catalogo_materiales_historial.csv", newline="") as f:
         w = csv.writer(f)
         w.writerow(["codigo", "familia", "clave", "fecha", "precio_usd", "iva", "precio_ajustado_hoy_usd", "tipo_precio", "proveedor", "descripcion",
                     "unidad", "ruta_origen", "archivo_origen", "ruta_repo", "atributos", "nota"])
@@ -871,7 +877,7 @@ def main():
                         h["proveedor"], h["descripcion"], h["unidad"], h["ruta_origen"], h["archivo_origen"], h["ruta_repo"],
                         json.dumps(h["atributos"], ensure_ascii=False), h["nota"]])
     todos_at = sorted({c for v in FAMILIAS.values() for c in v[1]})
-    with open(PRECIOS / "catalogo_materiales.csv", "w", newline="", encoding="utf-8") as f:
+    with escribir(PRECIOS / "catalogo_materiales.csv", newline="") as f:
         w = csv.writer(f)
         w.writerow(COMUNES + todos_at + ["nota"])
         for fl in filas:
@@ -909,7 +915,7 @@ def escribir_excel(filas):
     for k, (nombre, cols, _) in FAMILIAS.items():
         fs = [fl for fl in filas if fl["_fam"] == k]
         hoja(nombre, base[:2] + cols + base[2:], [[fl[c] for c in base[:2]] + [atributo_csv(fl["_at"], c) for c in cols] + [fl[c] for c in base[2:]] for fl in fs])
-    wb.save(PRECIOS / "catalogo_materiales.xlsx")
+    guardar_libro(wb, PRECIOS / "catalogo_materiales.xlsx")
 
 
 if __name__ == "__main__":

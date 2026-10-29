@@ -26,6 +26,7 @@ from docx.shared import Cm, Pt, RGBColor
 from openpyxl import load_workbook
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from candado import perfil_soffice  # noqa: E402
 from numeros import a_vista, fmt, fmtg  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -84,7 +85,7 @@ def cot_equipo(carpeta):
 def leer_precios(carpeta):
     xlsx = sorted(Path(carpeta).glob("*.xlsx"))[0]
     with tempfile.TemporaryDirectory() as tmp:
-        subprocess.run(["soffice", "--headless", "--convert-to", "xlsx", "--outdir", tmp, str(xlsx)],
+        subprocess.run(["soffice", perfil_soffice(), "--headless", "--convert-to", "xlsx", "--outdir", tmp, str(xlsx)],
                        check=True, capture_output=True)
         ws = load_workbook(Path(tmp) / xlsx.name, data_only=True)["Cotización"]
         precios = {"cantidad": ws["B5"].value, "precio_unitario": ws["D27"].value,
@@ -381,7 +382,7 @@ def main(carpeta):
     for tipo, nombre in (("tecnica", "OFERTA TECNICA"), ("economica", "OFERTA ECONOMICA")):
         ruta = salida / f"{base} - {nombre}.docx"
         armar(carpeta, tipo, cfg, precios).save(ruta)
-        subprocess.run(["soffice", "--headless", "--convert-to", "pdf", "--outdir", str(salida), str(ruta)],
+        subprocess.run(["soffice", perfil_soffice(), "--headless", "--convert-to", "pdf", "--outdir", str(salida), str(ruta)],
                        check=True, capture_output=True)
         print(ruta)
     print(f"Precio unitario {usd(precios['precio_unitario'])} · total {usd(precios['total'])} (de la planilla)")

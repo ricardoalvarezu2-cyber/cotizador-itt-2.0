@@ -37,6 +37,7 @@ from pathlib import Path
 from openpyxl import Workbook, load_workbook
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from candado import perfil_soffice  # noqa: E402
 from numeros import FMT_TECNICO, a_vista, celda_excel, fmt, fmtg, precio_csv  # noqa: E402
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 
@@ -281,7 +282,7 @@ def escribir_planilla(cfg, carpeta, idx_rows):
 
 def leer_planilla(ruta):
     with tempfile.TemporaryDirectory() as tmp:
-        subprocess.run(["soffice", "--headless", "--convert-to", "xlsx", "--outdir", tmp, str(ruta)], check=True, capture_output=True)
+        subprocess.run(["soffice", perfil_soffice(), "--headless", "--convert-to", "xlsx", "--outdir", tmp, str(ruta)], check=True, capture_output=True)
         ws = load_workbook(Path(tmp) / ruta.name, data_only=True)["Cotización"]
         return {"costo": ws["B24"].value, "precio_unitario": ws["D27"].value, "total": ws["E28"].value}
 
@@ -415,4 +416,6 @@ def main(carpeta):
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         sys.exit(__doc__)
-    main(sys.argv[1])
+    from candado import candado
+    with candado("armar_cotizacion.py"):
+        main(sys.argv[1])

@@ -14,6 +14,10 @@ from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
 H = RAIZ / "herramientas"
+sys.path.insert(0, str(H))
+from candado import candado  # noqa: E402
+_CANDADO = candado("actualizar_base.py")  # se guarda: si no, se libera enseguida
+_CANDADO.__enter__()  # una corrida por vez (los hijos heredan el permiso)
 pasos = [["dolar_mensual.py"] + (["--sin-red"] if "--sin-red" in sys.argv else []), ["indices_inflacion.py"], ["indice_precios.py"],
          ["unir_planillas_costo.py"], ["acero_por_kg.py"], ["listas_vendedor.py"], ["catalogo_materiales.py"], ["catalogo_servicios.py"], ["indice_proyectos.py"], ["pesos_valvulas.py"]]
 for p in pasos:

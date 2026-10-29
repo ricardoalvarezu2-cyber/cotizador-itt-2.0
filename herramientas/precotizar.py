@@ -32,7 +32,7 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from numeros import fmt, fmtg  # noqa: E402
+from numeros import fmt, fmtg, cantidad_plano  # noqa: E402
 from buscar_material import buscar  # noqa: E402
 from catalogo_materiales import unidad_norm  # noqa: E402
 from indice_proyectos import frac, norm  # noqa: E402
@@ -255,7 +255,7 @@ def material(r, n):
     """Ítem de cotizacion.json para un renglón del plano, más el renglón del informe."""
     fam, at, _, faltan, res = buscar(texto_busqueda(r))
     res = sin_excluidos(res)
-    cant, unidad = float(r["cantidad"] or 0), (r["unidad"] or "un").strip()
+    cant, unidad = cantidad_plano(r["cantidad"]), (r["unidad"] or "un").strip()
     l = largo_m(r["descripcion"])
     if fam == "CAN" and unidad_norm(unidad) == "un" and l:
         cant, unidad = round(cant * l, 3), "m"  # "caño longitud 1900 mm × 1" se compra por metro
@@ -425,7 +425,7 @@ def superficie_pintura(filas, m2_canos):
     piezas = 0.0
     env = est = 0.0
     for r in filas:
-        d, q, u = norm(r["descripcion"]), float(r["cantidad"] or 0), norm(r["unidad"])
+        d, q, u = norm(r["descripcion"]), cantidad_plano(r["cantidad"]), norm(r["unidad"])
         D = (dn_de(r["diametro"]) or 0) * 0.0254
         if re.search(r"\bvirola", d) and D and largo_m(r["descripcion"]):
             env += math.pi * D * largo_m(r["descripcion"]) * q
@@ -466,7 +466,7 @@ def soldaduras(filas, diametral=False):
         detalle.append(f"pos {', '.join(r['pos'] for r in por_metro)}: caño por metro; sus juntas se cuentan en los extremos BW de accesorios y bridas (una junta cada uno)")
     for r in por_metro:
         # juntas de empalme entre barras: un caño recto largo lleva una junta cada barra (CTRL-CA01: 190 m de 12" daban 0)
-        dn, q = dn_de(r["diametro"]), float(r["cantidad"] or 0)
+        dn, q = dn_de(r["diametro"]), cantidad_plano(r["cantidad"])
         emp = max(0, math.ceil(q / barra_m(r["diametro"]) - 1e-9) - 1)
         if emp and dn:
             f, pch, pgr = factor_espesor(dn, sch_de(r["serie_sch"]), tabla, espesor_mm(r))
@@ -489,7 +489,7 @@ def soldaduras(filas, diametral=False):
         n_bw, n_sw = toks.count("BW"), toks.count("SW")
         if not (n_bw or n_sw):
             continue
-        q = float(r["cantidad"] or 0)
+        q = cantidad_plano(r["cantidad"])
         dn, sch = dn_de(r["diametro"]), sch_de(r["serie_sch"])
         f, pch, pgr = factor_espesor(dn, sch, tabla, espesor_mm(r))
         if diametral:
@@ -711,9 +711,9 @@ def main(carpeta, comparar=False):
             continue
         dn, sch = dn_de(r["diametro"]), sch_de(r["serie_sch"]) or "40"
         fila = next((c for c in canos if abs(float(c["dn_pulg"]) - (dn or -1)) < 1e-6 and (c["schedule"] == sch or c["clase"] == sch)), None)
-        l = largo_m(r["descripcion"]) or (float(r["cantidad"]) if norm(r["unidad"]).startswith("m") else None)
+        l = largo_m(r["descripcion"]) or (cantidad_plano(r["cantidad"]) if norm(r["unidad"]).startswith("m") else None)
         if fila and l:
-            q = float(r["cantidad"]) if not norm(r["unidad"]).startswith("m") else 1
+            q = cantidad_plano(r["cantidad"]) if not norm(r["unidad"]).startswith("m") else 1
             m2 += float(fila["m2_m_exterior"]) * l * q
             litros += float(fila["litros_m_interior"]) * l * q
     informe += ["", "## 3. Servicios calculados", ""]
@@ -735,7 +735,7 @@ def main(carpeta, comparar=False):
     # fabricación de la estructura (bastidor, patas, cunas): kg × tarifa por kg; antes no se calculaba (CTRL-M01, P01, C01)
     kg_est = 0.0
     for r in filas:
-        d, q, u = norm(r["descripcion"]), float(r["cantidad"] or 0), norm(r["unidad"])
+        d, q, u = norm(r["descripcion"]), cantidad_plano(r["cantidad"]), norm(r["unidad"])
         if re.search(INTERNOS, d):
             continue
         if perfil(r) and u.startswith("m") and not u.startswith("m2"):

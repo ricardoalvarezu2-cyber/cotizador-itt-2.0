@@ -17,6 +17,8 @@ import extract_msg
 import openpyxl
 import pymupdf
 import xlrd
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from candado import perfil_soffice  # noqa: E402
 
 MAX_CELDAS = 20000  # por hoja, para no generar textos gigantes con planillas de miles de filas vacías
 
@@ -43,7 +45,7 @@ def word(ruta: Path):
 
 def word_viejo(ruta: Path):
     with tempfile.TemporaryDirectory() as tmp:
-        subprocess.run(["soffice", "--headless", "--convert-to", "txt:Text", "--outdir", tmp, str(ruta)],
+        subprocess.run(["soffice", perfil_soffice(), "--headless", "--convert-to", "txt:Text", "--outdir", tmp, str(ruta)],
                        capture_output=True, timeout=120)
         salida = Path(tmp) / (ruta.stem + ".txt")
         return (salida.read_text(errors="replace") if salida.exists() else ""), None

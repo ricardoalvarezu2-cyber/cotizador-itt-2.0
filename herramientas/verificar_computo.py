@@ -24,7 +24,7 @@ import re
 import sys
 from datetime import date
 from pathlib import Path
-from numeros import fmt, fmtg
+from numeros import fmt, fmtg, cantidad_plano
 
 
 def num(v):
@@ -53,13 +53,13 @@ def main(carpeta):
         cant = sum(num(f["cant_por_puente"]) or 0 for f in filas)
         largo = re.search(r"(\d+)\s*mm", p["descripcion"])
         if p.get("unidad", "un") == "un" and filas[0]["unidad"] == "m" and largo:
-            esperado = int(largo.group(1)) / 1000 * num(p["cantidad"])
+            esperado = int(largo.group(1)) / 1000 * cantidad_plano(p["cantidad"])
             if abs(cant - esperado) > 1e-6:
                 errores.append(f"Pos {p['pos']}: el plano pide {p['cantidad']} × {largo.group(1)} mm = {fmtg(esperado)} m y el cómputo tiene {fmtg(cant)} m")
         elif p.get("unidad", "un") == "un" and filas[0]["unidad"] != "un":
             errores.append(f"Pos {p['pos']}: el plano pide {p['cantidad']} un y el cómputo usa '{filas[0]['unidad']}'. "
                            "Si se compra por metro, la cantidad tiene que dar el largo del plano y el sobrante va en fila aparte")
-        elif abs(cant - num(p["cantidad"])) > 1e-6:
+        elif abs(cant - cantidad_plano(p["cantidad"])) > 1e-6:
             errores.append(f"Pos {p['pos']}: plano {p['cantidad']} / cómputo {fmtg(cant)}")
         ext = p.get("extremos", "").upper()
         if "BW" in ext or "SW" in ext:

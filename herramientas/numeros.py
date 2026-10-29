@@ -186,3 +186,17 @@ def celda_excel(celda, valor, columna="", formato=None, documento=False):
         else:
             celda.number_format = FMT_TECNICO
     return celda
+
+
+def cantidad_plano(v):
+    """Cantidad de lista_materiales_plano.csv (formato interno). Acepta 12, 12.5 o 12,5 (hasta 2 decimales). Un número
+    con 3 cifras después del separador ("1.200", "1,200") es ambiguo —¿mil doscientos o uno coma dos?— y se rechaza
+    con un error claro en lugar de adivinar (auditoría 29-10-2026: "1.200" se leía como 1,2)."""
+    s = str(v if v is not None else "").strip().replace(" ", "")
+    if not s:
+        return 0.0
+    if re.fullmatch(r"\d+", s):
+        return float(s)
+    if re.fullmatch(r"\d+[.,]\d{1,2}", s):
+        return float(s.replace(",", "."))
+    raise ValueError(f"cantidad ambigua o mal escrita en la lista del plano: {s!r} (escribir 1200 o 1.2, sin separador de miles)")

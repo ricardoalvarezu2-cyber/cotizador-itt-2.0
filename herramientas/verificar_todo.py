@@ -21,6 +21,10 @@ H = RAIZ / "herramientas"
 CAPEX = "cotizaciones/COT26-1003-001_CAPEX_OQ8209"
 CONTROL = {"precio_unitario": "7.366,12"}  # 28/10/2026: dólar promedio BNA, cepo estimado, sin IVA; sin los 3 valores supuestos sin referencia (P4 ter)
 fallas = []
+sys.path.insert(0, str(H))
+from candado import candado  # noqa: E402
+_CANDADO = candado("verificar_todo.py")  # se guarda: si no, se libera enseguida
+_CANDADO.__enter__()  # una corrida por vez; se libera al terminar el proceso (auditoría 29-10-2026)
 
 
 def correr(nombre, args):
@@ -77,13 +81,20 @@ print(f"{'OK  ' if r.returncode == 0 else 'FALLA'} ficha de la página igual a P
 if r.returncode:
     fallas.append("ficha JS distinta de Python")
     print((r.stdout + r.stderr)[-800:])
+r = subprocess.run(["node", "web/probar_busqueda.js"], cwd=RAIZ, capture_output=True, text=True)
+print(f"{'OK  ' if r.returncode == 0 else 'FALLA'} búsqueda y avisos de la página (web/probar_busqueda.js)")
+if r.returncode:
+    fallas.append("búsqueda de la página")
+    print((r.stdout + r.stderr)[-800:])
 despues = modificados()
 if antes is not None and despues is not None:
     nuevos = sorted(despues - antes)
     if nuevos and all(f.endswith(DERIVADOS) for f in nuevos):
         subprocess.run(["git", "checkout", "--"] + nuevos, cwd=RAIZ, check=False)
         print(f"Restaurados {len(nuevos)} archivos derivados que solo cambiaron por regenerarse (sin cambios de datos)")
-    elif nuevos:
+    elif nuevos and not fallas:
         print(f"Cambiaron datos: quedan {len(nuevos)} archivos modificados para revisar y subir")
+    elif nuevos:
+        print(f"Cambiaron {len(nuevos)} archivos, pero el control FALLÓ: no subir nada hasta corregirlo")
 print("\nTODO OK" if not fallas else f"\nFALLAN {len(fallas)}: {', '.join(fallas)}")
 sys.exit(1 if fallas else 0)

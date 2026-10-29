@@ -35,6 +35,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from catalogo_materiales import factor_cepo, en_mes, iva_de, unidad_norm  # noqa: E402
 from indice_proyectos import norm  # noqa: E402
 from numeros import fecha_iso, leer_numero, fmt, fmtg, precio_csv, celda_excel  # noqa: E402
+from candado import candado, escribir, guardar_libro  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
 PRECIOS = RAIZ / "conocimiento" / "precios"
@@ -218,6 +219,11 @@ def rutas(r):
 
 # ---------------------------------------------------------------- armado
 def main():
+    with candado("catalogo_servicios.py"):
+        _main()
+
+
+def _main():
     regs = leer_extraccion()
     grupos = defaultdict(list)
     for r in regs:
@@ -231,7 +237,7 @@ def main():
         if k not in registro:
             ultimo += 1
             registro[k] = f"{COD_DE[grupos[k][0]['hoja']]}-{ultimo:05d}"
-    with open(reg_ruta, "w", newline="", encoding="utf-8") as f:
+    with escribir(reg_ruta, newline="") as f:
         w = csv.writer(f)
         w.writerow(["codigo", "clave"])
         for k, c in sorted(registro.items(), key=lambda kv: kv[1]):
@@ -311,13 +317,13 @@ def main():
                          h["tarifa_u"] if unit else "global", estado, h["proveedor"], h["descripcion"], h["equipo_referencia"], ro2, ar2, rr2,
                          h["texto_original"], h["confianza"], "; ".join(h["notas"] + h["alertas"] + ([h["nota"]] if h["nota"] else []))])
     # CSV
-    with open(PRECIOS / "catalogo_servicios_historial.csv", "w", newline="", encoding="utf-8") as f:
+    with escribir(PRECIOS / "catalogo_servicios_historial.csv", newline="") as f:
         w = csv.writer(f)
         w.writerow(["codigo", "hoja", "clave", "fecha", "valor_usd", "moneda_origen", "precio_origen", "iva", "precio_total_usd", "valor_ajustado_hoy_usd", "unidad",
                     "estado", "proveedor", "descripcion", "equipo_referencia", "ruta_origen", "archivo_origen", "ruta_repo", "texto_original", "confianza", "nota"])
         for h in sorted(hist, key=lambda x: (x[0], clave_fecha(x[3]), x[4] if x[4] != "" else 0)):
             w.writerow(h)
-    with open(PRECIOS / "catalogo_servicios.csv", "w", newline="", encoding="utf-8") as f:
+    with escribir(PRECIOS / "catalogo_servicios.csv", newline="") as f:
         w = csv.writer(f)
         w.writerow(COMUNES)
         for fl in filas:
@@ -368,7 +374,7 @@ def escribir_excel(filas):
     hoja("Todos", filas)
     for _, n in HOJAS:
         hoja(n, [fl for fl in filas if fl["hoja"] == n])
-    wb.save(PRECIOS / "catalogo_servicios.xlsx")
+    guardar_libro(wb, PRECIOS / "catalogo_servicios.xlsx")
 
 
 if __name__ == "__main__":
