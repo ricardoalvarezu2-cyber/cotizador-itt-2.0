@@ -135,6 +135,7 @@ Decidido (Matías, 29-10-2026): manda el repositorio; la biblioteca se alimenta 
 5. ~~Soldaduras de los skids YPF~~ Recalculadas el 29-10-2026 (713: 988,83 pulg; 708: 456,03 pulg) en el repo y en la página.
 
 **Antecedentes (29-10-2026)**
+0. Página republicada con el criterio nuevo el 29-10-2026 (versión 52); `test_antecedentes.py` controla que dé lo mismo que Python. Para decidir con Matías: umbral de 5 del mismo subtipo (propuesto por Claude) y si se arman las fichas que faltan.
 1. Faltan las fichas de 7 carpetas de 2025–2026 (TAVAL/37 coalescente FC-231, ENDRESS HAUSER/17 y /28, ALUAR/1, AESA/43, FILTRON, Los Guindos): hoy entran como SIN FICHA, sin precio ni Ø. `indice_proyectos.py` las cuenta al correr.
 2. 17 proyectos sin subtipo (manifolds y skids genéricos, servicios): sumar subtipos en `SUBTIPOS` cuando aparezca un caso.
 3. El "precio unitario principal" del índice es el renglón más caro de la oferta; en ofertas con varios equipos puede no ser el equipo comparado (por eso tantos "otra escala"). Falta guardar el precio por equipo en las fichas.
