@@ -63,9 +63,16 @@ La pestaña Pedidos se sacó el 29-10-2026 (Matías): hoy solo llega el pedido `
 
 ## Botones Claude y Chat nuevo (Claude Code en ventana aparte)
 - "Claude ↗" abre la sesión fija de Claude Code (`config/claude_code` o la sesión de abajo; la misma de los pedidos, con el repositorio) en una ventana chica aparte, como un chat flotante (Matías, 29-10-2026). claude.ai no se puede mostrar dentro de la página.
-- "Chat nuevo" crea una sesión limpia con el repositorio (`create_session`, entorno "Claude Nube", etiqueta `cotizador-itt-chat`, modo auto) y la abre en la misma ventana. Cada una queda en la colección `chats/<session_id>` `{creado, titulo, archivado?}`. Al crear un chat nuevo, la página **archiva sola** las que crearon ella y llevan más de 3 días sin uso (`config/claude_code.dias_chat` lo cambia); nunca la sesión fija ni una que esté trabajando. Una sesión archivada se puede recuperar desde claude.ai/code.
+- "Chat nuevo" crea una sesión limpia con el repositorio (`create_session`, entorno "Claude Nube", etiqueta `cotizador-itt-chat`, modo auto) y la abre en la misma ventana. Cada una queda en la colección `chats/<session_id>` `{creado, titulo, consolidar_pedido?, consolidado?, resumen?, archivado?}`. Al tocar "Claude ↗" o "Chat nuevo", la página limpia las que creó ella, en dos pasos: con más de 3 días sin uso (`config/claude_code.dias_chat` lo cambia) le pide a la sesión que consolide lo aprendido (marca `consolidar_pedido`); cuando la sesión marcó `consolidado`, la archiva. **Sin consolidar no se archiva.** Nunca la sesión fija ni una que esté trabajando. Una sesión archivada se puede recuperar desde claude.ai/code.
 - Capacidad `mcp` de la página: Claude Code Remote con `send_message`, `create_session`, `get_session` y `archive_session`.
 - Desde esas sesiones Matías tiene control total sobre la app: repositorio y base de la página (ArtifactData con la url de arriba), con las reglas de siempre (antes de cambiar una cotización de la página, guardar una versión en `cotizaciones/<id>/versiones/`; `editor: "claude-code"`; enviado nunca y nada al cliente). El chat dentro de la página (colección `chat`) se sacó el 29-10-2026.
+
+## Consolidar antes de archivar
+Lo pide la página a una sesión de "Chat nuevo" antes de archivarla, y vale igual para cualquier chat que termina (Matías, 29-10-2026):
+1. `git pull origin main`.
+2. Repasar la conversación y anotar en `conocimiento/` lo que no esté: decisiones de Matías y pendientes en `estado_y_pendientes.md`; errores y lecciones en `errores_y_lecciones.md` (con fecha y cómo se evita); criterios técnicos o de cálculo en su archivo (`guia_cotizacion.md`, `reglas_de_calculo.md`, `fuentes.md`, etc.); el estado de cada cotización tocada en su `bitacora.md` y en `cotizaciones/README.md`. Lo procesado (archivos, precios) tiene que estar en el repositorio.
+3. `python herramientas/verificar_todo.py` (TODO OK), commit y pasar a `main`.
+4. ArtifactData `update` de `chats/<session_id>` (url de la página) con `consolidado` = fecha y hora y `resumen` = una línea con lo anotado (o "sin novedades").
 
 ## Cambios en la página
 Editar `src/`, correr `python web/armar_pagina.py`, probar (ver `probar_*.js`) y republicar el mismo `web/cotizador.html`.

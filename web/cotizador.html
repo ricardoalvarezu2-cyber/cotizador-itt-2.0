@@ -2972,6 +2972,7 @@ const Asistente = (() => {
   function abrirClaude() {
     const url = "https://claude.ai/code/" + sesion, w = ventana(url);
     if (w) { try { w.focus(); } catch (e) { /* otra ventana */ } } else irA(null, url);
+    limpiarChats().catch(() => {});
   }
   const datoDe = r => { const p = r && (r.payload ?? r); return (p && p.ccr) || p || {}; };
   async function chatNuevo(ev) {
@@ -2979,11 +2980,11 @@ const Asistente = (() => {
     b.disabled = true; I.toast("Creando un chat nuevo con el repositorio…");
     try {
       const f = Documentos.fechaHora(ahora());
-      const r = await mcp.callTool(SERVIDOR, "create_session", { environment_id: ENTORNO, source_url: REPO, title: "Cotizador ITT – chat " + f, tags: [ETIQUETA], permission_mode: "auto" });
+      const r = await mcp.callTool(SERVIDOR, "create_session", { environment_id: ENTORNO, source_url: REPO, title: "Cotizador ITT - chat " + f, tags: [ETIQUETA], permission_mode: "auto" });
       const id = datoDe(r).id || (JSON.stringify(r).match(/session_[A-Za-z0-9]+/) || [])[0];
       if (!id) throw new Error("Claude Code no devolvió la sesión nueva");
       irA(w, "https://claude.ai/code/" + id);
-      await I.S.db?.doc("chats/" + id).set({ creado: ahora(), titulo: "Cotizador ITT – chat " + f });
+      await I.S.db?.doc("chats/" + id).set({ creado: ahora(), titulo: "Cotizador ITT - chat " + f });
       limpiarChats(id).catch(() => {});
     } catch (e) {
       const [, nota] = motivoError(e);
@@ -2991,21 +2992,33 @@ const Asistente = (() => {
       irA(w, "https://claude.ai/code");
     } finally { b.disabled = false; }
   }
-  // Archiva las sesiones creadas por la página que llevan más de diasChat días sin uso (la sesión fija nunca).
+  // Limpieza en dos pasos de las sesiones creadas por la página (la sesión fija nunca): 1) con más de diasChat días sin
+  // uso se le pide que consolide lo aprendido en el repositorio (web/LEEME.md, "Consolidar antes de archivar"), y la
+  // sesión marca chats/<id>.consolidado; 2) recién con eso, y sin estar trabajando, se archiva. Sin consolidar no se archiva.
   async function limpiarChats(menos) {
     const db = I.S.db; if (!db || !mcp) return;
     const sn = await db.collection("chats").get(), limite = Date.now() - diasChat * 864e5;
     for (const d of sn.docs) {
       const c = d.data(); if (d.id === menos || d.id === sesion || c.archivado) continue;
-      if (Date.parse(c.creado) > limite) continue;
+      if (!c.consolidado && Date.parse(c.creado) > limite) continue;
       try {
         const x = datoDe(await mcp.callTool(SERVIDOR, "get_session", { session_id: d.id }));
-        if (/RUNNING/.test(x.session_status || "") || Date.parse(x.updated_at || c.creado) > limite) continue;
-        await mcp.callTool(SERVIDOR, "archive_session", { session_id: d.id });
-        await db.doc("chats/" + d.id).update({ archivado: ahora() });
+        if (/RUNNING/.test(x.session_status || "")) continue;
+        if (c.consolidado) {
+          await mcp.callTool(SERVIDOR, "archive_session", { session_id: d.id });
+          await db.doc("chats/" + d.id).update({ archivado: ahora() });
+        } else if (!c.consolidar_pedido && Date.parse(x.updated_at || c.creado) <= limite) {
+          await mcp.callTool(SERVIDOR, "send_message", { session_id: d.id, priority: "later", message:
+            `Consolidación antes de archivar esta sesión (pedido automático de la página del cotizador, ${URL_PAGINA}).\n` +
+            `Seguí web/LEEME.md, sección "Consolidar antes de archivar": git pull origin main; anotá en conocimiento/ lo aprendido en esta sesión ` +
+            `(estado_y_pendientes.md, errores_y_lecciones.md y lo que corresponda), verificar_todo, commit y pasar a main. ` +
+            `Al terminar, ArtifactData update de chats/${d.id} con consolidado = fecha y hora y resumen = una línea. Si no hubo nada nuevo, marcalo igual.` });
+          await db.doc("chats/" + d.id).update({ consolidar_pedido: ahora() });
+        }
       } catch (e) { if (/not.?found|archiv/i.test(e.message || "")) await db.doc("chats/" + d.id).update({ archivado: ahora() }).catch(() => {}); }
     }
   }
+
 
   return { abrirClaude, chatNuevo, TIPOS_PEDIDO, prepararArchivo, crearPedido };
 })();
