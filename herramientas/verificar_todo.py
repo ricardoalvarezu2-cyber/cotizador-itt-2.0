@@ -81,6 +81,19 @@ print(f"{'OK  ' if r.returncode == 0 else 'FALLA'} ficha de la página igual a P
 if r.returncode:
     fallas.append("ficha JS distinta de Python")
     print((r.stdout + r.stderr)[-800:])
+# casos de control (precotización contra el costo real): el total de la app no puede moverse sin que alguien lo decida
+import json  # noqa: E402
+out = correr("casos de control (correr_controles.py)", [str(H / "correr_controles.py")])
+esperado = json.loads((RAIZ / "cotizaciones" / "controles_esperado.json").read_text(encoding="utf-8"))["casos"]
+movidos = []
+for caso, app in esperado.items():
+    m = re.search(rf"\| {re.escape(caso)} \| [\d.]+ \| ([\d.]+) \|", out)
+    v = int(m.group(1).replace(".", "")) if m else None
+    if v is None or abs(v - app) > max(1, 0.005 * app):
+        movidos.append(f"{caso}: {v} (esperado {app})")
+if movidos:
+    fallas.append("casos de control movidos")
+    print("FALLA casos de control: " + "; ".join(movidos) + ". Si es a propósito, actualizar cotizaciones/controles_esperado.json y anotar por qué.")
 r = subprocess.run(["node", "web/probar_busqueda.js"], cwd=RAIZ, capture_output=True, text=True)
 print(f"{'OK  ' if r.returncode == 0 else 'FALLA'} búsqueda y avisos de la página (web/probar_busqueda.js)")
 if r.returncode:

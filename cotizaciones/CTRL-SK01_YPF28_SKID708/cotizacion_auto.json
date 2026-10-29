@@ -150,6 +150,7 @@
      "tipo": "ant",
      "precio": 217.23,
      "proveedor": "Renard · CAN-01435",
+     "codigo": "CAN-01435",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx",
      "fecha": "2026-06-26",
      "coincide": "igual"
@@ -163,12 +164,13 @@
    "descripcion": "Completar barra de 12 m de la pos 1 (compra mínima; sobrante, no va en el equipo)",
    "cantidad": 1.7,
    "unidad": "m",
-   "especificacion": "2 barra(s) de 12 m para 13.8 m en 6 equipo(s); por equipo 1.7 m",
+   "especificacion": "2 barra(s) de 12 m para 13,8 m en 6 equipo(s); por equipo 1,7 m",
    "fuentes": [
     {
      "tipo": "ant",
      "precio": 217.23,
      "proveedor": "Renard · CAN-01435",
+     "codigo": "CAN-01435",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx",
      "fecha": "2026-06-26",
      "coincide": "igual"
@@ -188,6 +190,7 @@
      "tipo": "lista",
      "precio": 248.98,
      "proveedor": "Renard (cód. 1212) · CAN-01449",
+     "codigo": "CAN-01449",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1212",
      "fecha": "2025-12-26",
      "coincide": "similar",
@@ -202,12 +205,13 @@
    "descripcion": "Completar barra de 12 m de la pos 2 (compra mínima; sobrante, no va en el equipo)",
    "cantidad": 0.3,
    "unidad": "m",
-   "especificacion": "1 barra(s) de 12 m para 10.2 m en 6 equipo(s); por equipo 0.3 m",
+   "especificacion": "1 barra(s) de 12 m para 10,2 m en 6 equipo(s); por equipo 0,3 m",
    "fuentes": [
     {
      "tipo": "lista",
      "precio": 248.98,
      "proveedor": "Renard (cód. 1212) · CAN-01449",
+     "codigo": "CAN-01449",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1212",
      "fecha": "2025-12-26",
      "coincide": "similar",
@@ -228,6 +232,7 @@
      "tipo": "lista",
      "precio": 1797.97,
      "proveedor": "Cintolo Hnos. (cód. 7128) · ABW-03406",
+     "codigo": "ABW-03406",
      "origen": "fuentes_originales/listas_vendedor/2026-10-28/cintolo_lista_29-1_2025-02-17.xlsx · código 7128",
      "fecha": "2025-02-17",
      "coincide": "igual"
@@ -247,10 +252,11 @@
      "tipo": "lista",
      "precio": 2802.34,
      "proveedor": "Renard (cód. 3547) · ABW-00358",
+     "codigo": "ABW-00358",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3547",
      "fecha": "2025-12-26",
      "coincide": "similar",
-     "diferencia": "se prefirió un precio reciente a stock (precio maestro) del 2024-11-01 (BRI-01262, USD 215.80)"
+     "diferencia": "se prefirió un precio reciente a stock (precio maestro) del 2024-11-01 (BRI-01262, USD 215,80)"
     }
    ]
   },
@@ -264,13 +270,14 @@
    "especificacion": "Plano: 12\" · 300 · ASTM A105 · RF/BW",
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 355.68,
-     "proveedor": "Renard (cód. 11984) · BRI-01230",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 11984",
-     "fecha": "2025-12-26",
+     "tipo": "cot",
+     "precio": 218.49,
+     "proveedor": "Complemet / Provemet · BRI-03413",
+     "codigo": "BRI-03413",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\72- Lic 64675 - SKID CONCENTRADOR - UTE NARAMBUE · 5.Proveedores 3ros/Cot Complemet para Narambue 07072026.pdf",
+     "fecha": "2026-07-06",
      "coincide": "similar",
-     "diferencia": "schedule: 40 (pedido XS); se prefirió un precio reciente a compra del 2022-11-15 (BRI-01216, USD 163.20)"
+     "diferencia": "se prefirió un precio reciente a compra del 2022-11-15 (BRI-01216, USD 163,20)"
     }
    ]
   },
@@ -287,10 +294,11 @@
      "tipo": "lista",
      "precio": 634.01,
      "proveedor": "Renard (cód. 11985) · BRI-01234",
+     "codigo": "BRI-01234",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 11985",
      "fecha": "2025-12-26",
      "coincide": "similar",
-     "diferencia": "diametro: 14\" (pedido 16\"); schedule: 40 (no pedido); precio escalado por diámetro (16\" ÷ 14\")^1,5 = × 1.22"
+     "diferencia": "diametro: 14\" (pedido 16\"); schedule: 40 (no pedido); precio escalado por diámetro (16\" ÷ 14\")^1,5 = × 1,22"
     }
    ]
   },
@@ -307,6 +315,7 @@
      "tipo": "lista",
      "precio": 426.44,
      "proveedor": "Renard (cód. 8260) · BRI-01022",
+     "codigo": "BRI-01022",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 8260",
      "fecha": "2025-12-26",
      "coincide": "igual"
@@ -326,10 +335,11 @@
      "tipo": "lista",
      "precio": 691.17,
      "proveedor": "Renard (cód. 8261) · BRI-01024",
+     "codigo": "BRI-01024",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 8261",
      "fecha": "2025-12-26",
      "coincide": "similar",
-     "diferencia": "diametro: 14\" (pedido 16\"); precio escalado por diámetro (16\" ÷ 14\")^1,5 = × 1.22"
+     "diferencia": "diametro: 14\" (pedido 16\"); precio escalado por diámetro (16\" ÷ 14\")^1,5 = × 1,22"
     }
    ]
   },
@@ -343,11 +353,12 @@
    "especificacion": "Plano: 1 1/2\" · 300 · ASTM A105 · RF/SW",
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 17.96,
-     "proveedor": "Renard (cód. 10683) · BRI-01161",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 10683",
-     "fecha": "2025-12-26",
+     "tipo": "cot",
+     "precio": 14.88,
+     "proveedor": "Complemet / Provemet · BRI-01161",
+     "codigo": "BRI-01161",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\72- Lic 64675 - SKID CONCENTRADOR - UTE NARAMBUE · 5.Proveedores 3ros/Cot Complemet para Narambue 07072026.pdf",
+     "fecha": "2026-07-06",
      "coincide": "igual"
     }
    ]
@@ -365,6 +376,7 @@
      "tipo": "cot",
      "precio": 7.33,
      "proveedor": "DELGADO · JUN-01679",
+     "codigo": "JUN-01679",
      "origen": "fuentes_originales/cotizacion_elementos_equipos_2026-03.xlsx · rubro ESPARRAGOS-TUERCAS · cotización 1338",
      "fecha": "2025-09-04",
      "coincide": "similar",
@@ -385,6 +397,7 @@
      "tipo": "ant",
      "precio": 12.0,
      "proveedor": "planilla de costo ITT · JUN-04198",
+     "codigo": "JUN-04198",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx",
      "fecha": "2026-06-26",
      "coincide": "similar",
@@ -405,6 +418,7 @@
      "tipo": "ant",
      "precio": 6.0,
      "proveedor": "MS · JUN-02769",
+     "codigo": "JUN-02769",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\PAMPA ENERGIA\\7- Licitacion contrato Marco Skid PAD Rincon de Aranda · 4.Armado de la Oferta Comercial/Cot Skid Manifolds Colectores RDA Contrato Marco (2da RDA).xlsx.",
      "fecha": "2026-08-14",
      "coincide": "similar",
@@ -425,6 +439,7 @@
      "tipo": "ant",
      "precio": 15.0,
      "proveedor": "sin proveedor en planilla · JUN-02765",
+     "codigo": "JUN-02765",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios · 4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx",
      "fecha": "2025-12-18",
      "coincide": "similar",
@@ -445,6 +460,7 @@
      "tipo": "est",
      "precio": 20.86,
      "proveedor": "Stock ITT (cód. ACS4001X6MFM0) · JUN-01694",
+     "codigo": "JUN-01694",
      "origen": "fuentes_originales/stock_valorizado_2024-11.xlsx · código ACS4001X6MFM0",
      "fecha": "2024-11-01",
      "coincide": "similar",
@@ -465,6 +481,7 @@
      "tipo": "stock",
      "precio": 5.6,
      "proveedor": "Stock ITT (cód. ACI040FN1ICK100) · NIP-01794",
+     "codigo": "NIP-01794",
      "origen": "fuentes_originales/stock_valorizado_2024-11.xlsx · código ACI040FN1ICK100",
      "fecha": "2024-11-01",
      "coincide": "igual"
@@ -484,6 +501,7 @@
      "tipo": "ant",
      "precio": 20.0,
      "proveedor": "Antecedentes puentes Taval/CGC s2000 · NIP-01780",
+     "codigo": "NIP-01780",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\55- Tecpetrol Puentes de Producción PPar Valvula y Puente PR 54942 · 7.Propuesta Comercial (envío al Cliente)/Puente de producción Tec Conv y NOC versión 3.xlsx",
      "fecha": "2026-04-22",
      "coincide": "igual"
@@ -500,13 +518,14 @@
    "especificacion": "Plano: 3/4\" · 80 · ASTM A106 Gr.B · NPT",
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 36.74,
-     "proveedor": "Antecedentes puentes Taval/CGC s2000 · NIP-01780",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\55- Tecpetrol Puentes de Producción PPar Valvula y Puente PR 54942 · 7.Propuesta Comercial (envío al Cliente)/Puente de producción Tec Conv y NOC versión 3.xlsx",
-     "fecha": "2026-04-22",
+     "tipo": "stock",
+     "precio": 3.93,
+     "proveedor": "Stock ITT (cód. ACI020KN1ICK100) · NIP-01782",
+     "codigo": "NIP-01782",
+     "origen": "fuentes_originales/stock_valorizado_2024-11.xlsx · código ACI020KN1ICK100",
+     "fecha": "2024-11-01",
      "coincide": "similar",
-     "diferencia": "diametro: 0.5\" (pedido 0.75\"); precio escalado por diámetro (0.75\" ÷ 0.5\")^1,5 = × 1.84"
+     "diferencia": "schedule: 160 (pedido 80); escalado por espesor (sch 80 3,91 mm ÷ sch 160 5,56 mm = × 0,70)"
     }
    ]
   },
@@ -523,6 +542,7 @@
      "tipo": "stock",
      "precio": 5.59,
      "proveedor": "Stock ITT (cód. ACI020KN1ICK100) · NIP-01782",
+     "codigo": "NIP-01782",
      "origen": "fuentes_originales/stock_valorizado_2024-11.xlsx · código ACI020KN1ICK100",
      "fecha": "2024-11-01",
      "coincide": "igual"
@@ -542,6 +562,7 @@
      "tipo": "cot",
      "precio": 1.38,
      "proveedor": "PROVEMET · AFO-00848",
+     "codigo": "AFO-00848",
      "origen": "fuentes_originales/cotizacion_elementos_equipos_2026-03.xlsx · rubro BUJES-E.ROSCAS-TAPÓN-UNION DOBL · cotización 242356",
      "fecha": "2025-08-27",
      "coincide": "similar",
@@ -562,6 +583,7 @@
      "tipo": "ant",
      "precio": 2.3,
      "proveedor": "sin proveedor en planilla (columna PROVEEDOR vacía) · AFO-02373",
+     "codigo": "AFO-02373",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · 4.Armado de la Oferta Comercial/LM-TANQUE GLICOL.xlsx",
      "fecha": "2026-02-20",
      "coincide": "similar",
@@ -583,9 +605,9 @@
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-10-28",
+     "fecha": "2026-10-29",
      "coincide": "sin_ref",
-     "diferencia": "El más parecido es de otro diámetro (0.5\") (AFO-03330 Sockolet 1/2\" S3000 | A-105, USD 10.00): no sirve como precio"
+     "diferencia": "El más parecido es de otro diámetro (0.5\") (AFO-03330 Sockolet 1/2\" S3000 | A-105, USD 10,00): no sirve como precio"
     }
    ]
   },
@@ -602,6 +624,7 @@
      "tipo": "est",
      "precio": 15.59,
      "proveedor": "no dice · AFO-02394",
+     "codigo": "AFO-02394",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\3-YPF Separador Bifasicos - Separadores para satelites · 5.Proveedores 3ros/YPF - Sep Bifasico - 2591 - 21.2 - precios compras V1.xlsx.txt",
      "fecha": "2025-03-27",
      "coincide": "similar",
@@ -622,6 +645,7 @@
      "tipo": "est",
      "precio": 15.59,
      "proveedor": "no dice · AFO-02394",
+     "codigo": "AFO-02394",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\3-YPF Separador Bifasicos - Separadores para satelites · 5.Proveedores 3ros/YPF - Sep Bifasico - 2591 - 21.2 - precios compras V1.xlsx.txt",
      "fecha": "2025-03-27",
      "coincide": "similar",
@@ -642,6 +666,7 @@
      "tipo": "ant",
      "precio": 10.0,
      "proveedor": "sin proveedor en planilla · AFO-03330",
+     "codigo": "AFO-03330",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECHINT\\12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado · 4.Armado de la Oferta Comercial/OFERTA REV C/ESTRUCTURA DE COSTOS- LM de Manifold S600 CM - PC0-C R",
      "fecha": "2025-12-23",
      "coincide": "similar",
@@ -663,6 +688,7 @@
      "tipo": "lista",
      "precio": 36.06,
      "proveedor": "Taval (Lista 30 × 0.52) · VAL-04865",
+     "codigo": "VAL-04865",
      "origen": "taval_lista30_2025-09.xlsx · código , hoja PT Flot-NPT FORJADAS",
      "fecha": "2025-09-01",
      "coincide": "igual"
@@ -683,6 +709,7 @@
      "tipo": "lista",
      "precio": 38.8,
      "proveedor": "Taval (Lista 30 × 0.52) · VAL-04874",
+     "codigo": "VAL-04874",
      "origen": "taval_lista30_2025-09.xlsx · código , hoja PT Flot-NPT FORJADAS",
      "fecha": "2025-09-01",
      "coincide": "igual"
@@ -703,6 +730,7 @@
      "tipo": "lista",
      "precio": 1425.0,
      "proveedor": "Taval (Lista 30 × 0.52) · VAL-03580",
+     "codigo": "VAL-03580",
      "origen": "taval_lista30_2025-09.xlsx · código RW13003R01020B, hoja Waffer",
      "fecha": "2025-09-01",
      "coincide": "igual"
@@ -723,6 +751,7 @@
      "tipo": "lista",
      "precio": 35.1,
      "proveedor": "Taval (Lista 30 × 0.52) · VAL-04848",
+     "codigo": "VAL-04848",
      "origen": "taval_lista30_2025-09.xlsx · código , hoja API 602",
      "fecha": "2025-09-01",
      "coincide": "similar",
@@ -744,6 +773,7 @@
      "tipo": "lista",
      "precio": 40.5,
      "proveedor": "Taval (Lista 30 × 0.52) · VAL-04849",
+     "codigo": "VAL-04849",
      "origen": "taval_lista30_2025-09.xlsx · código , hoja API 602",
      "fecha": "2025-09-01",
      "coincide": "similar",
@@ -765,6 +795,7 @@
      "tipo": "lista",
      "precio": 5750.0,
      "proveedor": "Taval (Lista 30 × 0.52) · VAL-04436",
+     "codigo": "VAL-04436",
      "origen": "taval_lista30_2025-09.xlsx · código BG63003R0104RR, hoja PT Guiada",
      "fecha": "2025-09-01",
      "coincide": "similar",
@@ -796,8 +827,8 @@
    "id": "S01",
    "pos": "MO",
    "grupo": "mo",
-   "descripcion": "Soldaduras: 28.5 a tope + SW y olets (calculado)",
-   "especificacion": "pos 1, 2: caño por metro; sus juntas se cuentan en los extremos BW de accesorios y bridas (una junta cada uno); pos 3: 13.5 extremo(s) BW de taller (3 por unidad × 3 × 1.5 por el caño) × 12\" × 1.3340; pos 4: 13.5 extremo(s) BW de taller (3 por unidad × 3 × 1.5 por el caño) × 16.0027\" × 1.0000; pos 5: 27 extremo(s) BW de taller (1 por unidad × 18 × 1.5 por el caño) × 12\" × 1.0830; pos 6: 3 extremo(",
+   "descripcion": "Soldaduras: 29 a tope + SW y olets (calculado)",
+   "especificacion": "pos 1, 2: caño por metro; sus juntas se cuentan en los extremos BW de accesorios y bridas (una junta cada uno); pos 3: 13,5 extremo(s) BW de taller (3 por unidad × 3 × 1,5 por el caño) × 12\" × 1,3340; pos 4: 13,5 extremo(s) BW de taller (3 por unidad × 3 × 1,5 por el caño) × 16\" × 1,0000; pos 5: 27 extremo(s) BW de taller (1 por unidad × 18 × 1,5 por el caño) × 12\" × 1,0830; pos 6: 3 extremo(s) BW",
    "cantidad": 456.034,
    "unidad": "pulg",
    "fuentes": [
@@ -816,7 +847,7 @@
    "pos": "PIN",
    "grupo": "servicio",
    "descripcion": "Granallado y pintura (m² calculados)",
-   "especificacion": "66.12 m² exteriores: caños y niples 4.6 + bridas, accesorios y válvulas (largo equivalente) 36.0 + estructura 25.5",
+   "especificacion": "66,12 m² exteriores: caños y niples 4,6 + bridas, accesorios y válvulas (largo equivalente) 36,0 + estructura 25,5",
    "cantidad": 66.121,
    "unidad": "m2",
    "fuentes": [
@@ -824,6 +855,7 @@
      "tipo": "ant",
      "precio": 50.0,
      "proveedor": "criterio ITT ($50/m2 incluye materiales) · PIN-00491",
+     "codigo": "PIN-00491",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\PAMPA ENERGIA\\7- Licitacion contrato Marco Skid PAD Rincon de Aranda\\4.Armado de la Oferta Comercial",
      "fecha": "2026-08-14",
      "coincide": "similar",
@@ -856,7 +888,7 @@
    "pos": "RX",
    "grupo": "servicio",
    "descripcion": "Radiografía 100% de las juntas a tope y tintas penetrantes en SW y olets",
-   "especificacion": "122 placas chicas, 25 grandes, 3.83 servicio(s) de RX y 0.67 de LP por equipo (servicios repartidos en 6 equipos)",
+   "especificacion": "122 placas chicas, 25 grandes, 3,83 servicio(s) de RX y 0,67 de LP por equipo (servicios repartidos en 6 equipos)",
    "cantidad": 1,
    "unidad": "gl",
    "fuentes": [
@@ -883,7 +915,7 @@
    "pos": "HH",
    "grupo": "mo",
    "descripcion": "Horas de ingeniería (estimadas del antecedente)",
-   "especificacion": "5 h por skid · mediana de 4.5, 5.0, 93.3 h por unidad (repartidas en la serie)",
+   "especificacion": "5 h por skid · mediana de 4,5, 5,0, 93,3 h por unidad (repartidas en la serie)",
    "cantidad": 5.0,
    "unidad": "h",
    "fuentes": [
@@ -903,7 +935,7 @@
    "pos": "CAL",
    "grupo": "mo",
    "descripcion": "Horas de calidad y dossier (estimadas del antecedente)",
-   "especificacion": "15 h por skid · mediana de 15.0, 7.5, 40.0 h por unidad (repartidas en la serie)",
+   "especificacion": "15 h por skid · mediana de 15,0, 7,5, 40,0 h por unidad (repartidas en la serie)",
    "cantidad": 15.0,
    "unidad": "h",
    "fuentes": [
@@ -923,7 +955,7 @@
    "pos": "ARM",
    "grupo": "mo",
    "descripcion": "Horas de montaje en planta (armado, movimientos, prueba hidráulica) (estimadas del antecedente)",
-   "especificacion": "326.2 h por skid · mediana de 216 h × 0.854, 130.5 h × 2.5, 225 h × 2.5 (horas por unidad × tamaño)",
+   "especificacion": "326,2 h por skid · mediana de 216 h × 0,85, 130,5 h × 2,5, 225 h × 2,5 (horas por unidad × tamaño)",
    "cantidad": 326.2,
    "unidad": "h",
    "fuentes": [

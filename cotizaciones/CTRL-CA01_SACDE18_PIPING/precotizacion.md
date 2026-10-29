@@ -16,7 +16,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 
 ## 2. Soldaduras (de la columna de extremos)
 
-**71,25 juntas a tope de taller + juntas SW y olets = 2.017,41 pulgadas equivalentes** × USD 21,76 (prefabricado por pulgada diametral (tercero) SOL-00143, 2026-04-07) = USD 43.898,78
+**72 juntas a tope de taller + juntas SW y olets = 2.017,41 pulgadas equivalentes** × USD 21,76 (prefabricado por pulgada diametral (tercero) SOL-00143, 2026-04-07) = USD 43.898,78
 
 - pos 1, 2, 5: caño por metro; sus juntas se cuentan en los extremos BW de accesorios y bridas (una junta cada uno)
 - pos 1: 27 junta(s) de empalme entre barras de 12 m (325 m) × 36" × 1,0000
@@ -28,7 +28,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 
 ## 3. Servicios calculados
 
-- **Pintura aparte (no va en el total):** 1.711,68 m² × USD 40.00/m² (Granallado y pintura, 2026-03-03) = USD 68,467.16. Cotizarla como ítem aparte por m² (`parametros.pintura_aparte`).
+- **Pintura aparte (no va en el total):** 1.711,68 m² × USD 40,00/m² (Granallado y pintura, 2026-03-03) = USD 68.467,16. Cotizarla como ítem aparte por m² (`parametros.pintura_aparte`).
 - **Prueba hidráulica:** en el prefabricado va dentro de la pulgada (no se suma aparte).
 - **Radiografía 100% y tintas:** 90 placas chicas + 394 grandes + 13,00 servicio(s) de RX + 0,00 de LP por equipo = USD 15.600,00 (Servicio de radiografía (Antonelli) (2025-11; antonelli_end_2025-11)).
   Con las tarifas de Antonelli (11-2025) serían USD 15.600,00: confirmar el proveedor de END con el cliente o la zona.

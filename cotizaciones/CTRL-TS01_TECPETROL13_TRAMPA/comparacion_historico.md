@@ -13,51 +13,51 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 5 | Brida welding neck RF 1 1/2" 900 / sch 160 AS | 1 × 40,57 = 40,57 | 1 un × 75,00 = 75,00 | +85% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) · real: 60 días |
 | 6 | Virola/caño sin costura barril menor largo 4, | 4,8 × 690,00 = 3.312,00 | 4,8 m × 242,81 + compra extra 6b = 2.913,72 | -12% | lista · Renard (cód. 1202) · CAN-01436 · 2025-12-26 | dentro de ±15% · real: planilla: 'debería contemplar 1 tira de 12 m?' |
 | 7 | Virola/caño sin costura barril mayor largo 3, | 3,2 × 1.120,00 = 3.584,00 | 3,2 m × 750,00 + compra extra 7b = 9.000,00 | +151% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) · real: planilla: 'debería contemplar 1 tira de 12 m?' |
-| 8 | Caño sin costura 12" XS ASTM A-106 Gr B | 5,9 × 217,23 = 1.281,66 | 5,9 m × 297,75 + compra extra 8b = 3.573,00 | +179% | ant · Renard/ Provemet/ Klockmetal · CAN-01435 · 2026-10-10 | más caro |
+| 8 | Caño sin costura 12" XS ASTM A-106 Gr B | 5,9 × 217,23 = 1.281,66 | 5,9 m × 228,56 + compra extra 8b = 2.742,72 | +114% | lista · Renard (cód. 1192) · CAN-01421 · 2025-12-26 | más caro (similar) |
 | 9 | Caño sin costura 4" 120 ASTM A-106 Gr B | 8,5 × 60,37 = 513,14 | 8,5 m × 60,37 + compra extra 9b = 724,44 | +41% | lista · Renard (cód. 1162) · CAN-01493 · 2025-12-26 | más caro |
 | 10 | Caño sin costura 2" 160 ASTM A-106 Gr B | 3 × 24,67 = 74,01 | 3 m × 24,67 + compra extra 10b = 148,02 | +100% | lista · Renard (cód. 1144) · CAN-01454 · 2025-12-26 | más caro |
 | 11 | Caño sin costura 2" STD ASTM A-106 Gr B | 2 × 12,10 = 24,20 | 2 m × 12,10 + compra extra 11b = 72,60 | +200% | lista · Renard (cód. 1142) · CAN-01459 · 2025-12-26 | más caro |
 | 12 | Caño sin costura 1 1/2" 160 ASTM A-106 Gr B | 0,1 × 24,67 = 2,47 | 0,1 m × 19,30 = 1,93 | -22% | lista · Renard (cód. 1139) · CAN-01405 · 2025-12-26 | más barato · real: planilla: unidad 'u' con 0,1 (es metro) |
 | 13 | Codo 90 radio corto 2" 120 ASTM A-234 WPB | 4 × 68,50 = 274,00 | 4 un × 96,19 = 384,76 | +40% | lista · Renard (cód. 4043) · ABW-00099 · 2025-12-26 | más caro (similar) |
 | 14 | Codo 90 radio corto 2" 160 ASTM A-234 WPB | 4 × 76,95 = 307,80 | 4 un × 96,19 = 384,76 | +25% | lista · Renard (cód. 4043) · ABW-00099 · 2025-12-26 | más caro |
-| 15 | Codo 90 radio largo 6" XS ASTM A-234 WPB | 1 × 129,10 = 129,10 | 1 un × 129,10 = 129,10 | +0% | lista · Renard (cód. 3777) · ABW-00117 · 2025-12-26 | dentro de ±15% |
+| 15 | Codo 90 radio largo 6" XS ASTM A-234 WPB | 1 × 129,10 = 129,10 | 1 un × 129,10 = 129,10 | 0% | lista · Renard (cód. 3777) · ABW-00117 · 2025-12-26 | dentro de ±15% |
 | 16 | Codo 90 radio corto 2" 160 ASTM A-234 WPB | 1 × 76,95 = 76,95 | 1 un × 96,19 = 96,19 | +25% | lista · Renard (cód. 4043) · ABW-00099 · 2025-12-26 | más caro · real: fila repetida del codo 2 sch160 |
-| 17 | Niple longitud 100 mm 1/2" 160 ASTM A-106 | 1 × 10,00 = 10,00 | 1 un × 5,00 = 5,00 | -50% | ant · sin proveedor en planilla · NIP-03365 · 2026-10-10 | más barato (similar) |
+| 17 | Niple longitud 100 mm 1/2" 160 ASTM A-106 | 1 × 10,00 = 10,00 | 1 un × 20,00 = 20,00 | +100% | ant · Antecedentes puentes Taval/CGC s2000 · N · 2026-04-22 | más caro (similar) |
 | 18 | Reducción excéntrica 16" x 12" 40 ASTM A-860  | 1 × 3.172,70 = 3.172,70 | 1 un × 403,11 = 403,11 | -87% | lista · Renard (cód. 3188) · ABW-00266 · 2025-12-26 | más barato (similar) |
 | 19 | Tapa de cierre rápido (QOC) #900 16" 900 | 1 × 10.923,00 = 10.923,00 | 1 un × 10.524,00 = 10.524,00 | -4% | cot · FTS (Sypris Tube Turns, cot. FTS 260812) · 2026-08-10 | dentro de ±15% |
 | 20 | Tee de reducción 4" x 2" 160 ASTM A-234 WPB | 2 × 546,54 = 1.093,08 | 2 un × 175,37 = 350,74 | -68% | ant · Lista Renar · ABW-00400 · 2026-02-19 | más barato (similar) |
 | 21 | Tee normal 4" 120 ASTM A-234 WPB | 2 × 329,77 = 659,54 | 2 un × 300,00 = 600,00 | -9% | ant · no dice (planilla de compras; cotización · 2025-08-01 | dentro de ±15% |
 | 22 | Weldolet 1/2" x 20" ASTM A-105 | 1 × 7,00 = 7,00 | 1 un × 65,00 = 65,00 | +829% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) |
 | 23 | Espárrago con 2 tuercas zincado 7/8 x 145 mm  | 48 × 8,00 = 384,00 | 48 un × 3,17 = 152,16 | -60% | cot · PROVEMET · JUN-04186 · 2025-08-27 | más barato (similar) |
-| 24 | Espárrago con 2 tuercas zincado 1 1/8 x 170 m | 48 × 11,00 = 528,00 | 48 un × 9,59 = 460,32 | -13% | ant · sin proveedor en planilla · JUN-04194 · 2026-10-10 | dentro de ±15% |
+| 24 | Espárrago con 2 tuercas zincado 1 1/8 x 170 m | 48 × 11,00 = 528,00 | 48 un × 7,82 = 375,36 | -29% | cot · Ind Delgado · JUN-04197 · 2026-05-28 | más barato (similar) |
 | 25 | Espárrago con 2 tuercas zincado 1 3/8 x 255 m | 60 × 13,00 = 780,00 | 60 un × 30,00 = 1.800,00 | +131% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) |
 | 26 | Junta RF hierro maleable 2" 900 | 6 × 8,00 = 48,00 | 6 un × 8,40 = 50,40 | +5% | ant · no dice (planilla de compras; cotización · 2025-08-01 | dentro de ±15% |
-| 27 | Junta RF hierro maleable 8" 900 | 3 × 10,00 = 30,00 | 3 un × 220,00 = 660,00 | +2100% | ant · Bripetrol · JUN-04208 · 2026-05-05 | más caro (similar) |
-| 28 | Junta RF hierro maleable 4" 900 | 8 × 6,00 = 48,00 | 8 un × 72,50 = 580,00 | +1108% | ant · Bripetrol · JUN-04207 · 2026-05-05 | más caro (similar) |
-| 29 | Weldolet 1 1/2" x 20" 160 ASTM A-105 | 1 × 7,00 = 7,00 | 1 un × 85,00 = 85,00 | +1114% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) |
-| 30 | Weldolet 2" x 10" 160 ASTM A-105 | 1 × 7,00 = 7,00 | 1 un × 115,00 = 115,00 | +1543% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) |
-| 31 | Weldolet 2" x 20" 160 ASTM A-105 | 1 × 7,00 = 7,00 | 1 un × 115,00 = 115,00 | +1543% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) |
-| 32 | Weldolet 4" x 16" 120 ASTM A-105 | 1 × 7,00 = 7,00 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-28 | SIN PRECIO en el catálogo |
-| 33 | Weldolet 4" x 20" 120 ASTM A-105 | 1 × 7,00 = 7,00 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-28 | SIN PRECIO en el catálogo |
+| 27 | Junta RF hierro maleable 8" 900 | 3 × 10,00 = 30,00 | 3 un × 220,00 = 660,00 | +2.100% | ant · Bripetrol · JUN-04208 · 2026-05-05 | más caro (similar) |
+| 28 | Junta RF hierro maleable 4" 900 | 8 × 6,00 = 48,00 | 8 un × 72,50 = 580,00 | +1.108% | ant · Bripetrol · JUN-04207 · 2026-05-05 | más caro (similar) |
+| 29 | Weldolet 1 1/2" x 20" 160 ASTM A-105 | 1 × 7,00 = 7,00 | 1 un × 85,00 = 85,00 | +1.114% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) |
+| 30 | Weldolet 2" x 10" 160 ASTM A-105 | 1 × 7,00 = 7,00 | 1 un × 115,00 = 115,00 | +1.543% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) |
+| 31 | Weldolet 2" x 20" 160 ASTM A-105 | 1 × 7,00 = 7,00 | 1 un × 115,00 = 115,00 | +1.543% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) |
+| 32 | Weldolet 4" x 16" 120 ASTM A-105 | 1 × 7,00 = 7,00 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-29 | SIN PRECIO en el catálogo |
+| 33 | Weldolet 4" x 20" 120 ASTM A-105 | 1 × 7,00 = 7,00 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-29 | SIN PRECIO en el catálogo |
 | 34 | Abrazadera U-bolt pesada 16" | 2 × 25,00 = 50,00 | 2 un × 46,00 = 92,00 | +84% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) |
-| 35 | Abrazadera U-bolt pesada 12" | 1 × 18,00 = 18,00 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-28 | SIN PRECIO en el catálogo |
+| 35 | Abrazadera U-bolt pesada 12" | 1 × 18,00 = 18,00 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-29 | SIN PRECIO en el catálogo |
 | 36 | Abrazadera U-bolt pesada 4" | 4 × 10,00 = 40,00 | 4 un × 35,00 = 140,00 | +250% | ant · sin proveedor en planilla · OTR-02903 · 2025-12-23 | más caro (similar) |
-| 37 | Espárrago con 2 tuercas zincado 1 x 140 mm 1" | 4 × 10,00 = 40,00 | 4 un × 10,00 = 40,00 | +0% | ant · no dice (planilla de compras; cotización · 2025-08-01 | dentro de ±15% |
-| 38 | Hierro ángulo 1 1/2 x 1 1/2 x 1/4 (skid) ASTM | 5,25 × 1,40 = 7,35 | 5,25 kg × 1,90 = 9,95 | +35% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | más caro (similar) |
-| 39 | Perfil UPN 160 (skid) ASTM A-36 | 590 × 1,80 = 1.062,00 | 590 kg × 1,90 = 1.118,23 | +5% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | dentro de ±15% · real: planilla: 590 kg × 1,5 USD/kg = 885 + 20% de desperdicio = 1.062 |
-| 40 | Malla metálica romboidal tipo Shulman 50 x 30 | 14 × 0,00 = 0,00 | 14 m2 × 0,00 = 0,00 |  | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-28 | SIN PRECIO en el catálogo · real: la planilla la lista (14 m² × 25 = 250, precio WhatsApp AG Inter) pero no la suma al skid |
-| 41 | Válvula esférica, cuerpo WCB, internos 316, a | 1 × 11.934,00 = 11.934,00 | 1 un × 10.740,60 = 10.740,60 | -10% | lista · Taval (Lista 30 × 0,52) · VAL-04439 · 2025-09-01 | dentro de ±15% |
-| 42 | Válvula esférica, cuerpo WCB, internos 316, a | 2 × 1.900,08 = 3.800,16 | 2 un × 1.710,00 = 3.420,00 | -10% | lista · Taval (Lista 30 × 0,52) · VAL-04469 · 2025-09-01 | dentro de ±15% |
-| 43 | Válvula esférica, cuerpo WCB, internos 316, a | 2 × 926,00 = 1.852,00 | 2 un × 832,00 = 1.664,00 | -10% | lista · Taval (Lista 30 × 0,52) · VAL-04448 · 2025-09-01 | dentro de ±15% |
+| 37 | Espárrago con 2 tuercas zincado 1 x 140 mm 1" | 4 × 10,00 = 40,00 | 4 un × 10,00 = 40,00 | 0% | ant · no dice (planilla de compras; cotización · 2025-08-01 | dentro de ±15% |
+| 38 | Hierro ángulo 1 1/2 x 1 1/2 x 1/4 (skid) ASTM | 5,25 × 1,40 = 7,35 | 5,25 kg × 1,90 = 9,97 | +36% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | más caro (similar) |
+| 39 | Perfil UPN 160 (skid) ASTM A-36 | 590 × 1,80 = 1.062,00 | 590 kg × 1,90 = 1.121,00 | +6% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | dentro de ±15% · real: planilla: 590 kg × 1,5 USD/kg = 885 + 20% de desperdicio = 1.062 |
+| 40 | Malla metálica romboidal tipo Shulman 50 x 30 | 14 × 0,00 = 0,00 | 14 m2 × 0,00 = 0,00 |  | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-29 | SIN PRECIO en el catálogo · real: la planilla la lista (14 m² × 25 = 250, precio WhatsApp AG Inter) pero no la suma al skid |
+| 41 | Válvula esférica, cuerpo WCB, internos 316, a | 1 × 11.934,00 = 11.934,00 | 1 un × 10.740,60 = 10.740,60 | -10% | lista · Taval (Lista 30 × 0.52) · VAL-04439 · 2025-09-01 | dentro de ±15% |
+| 42 | Válvula esférica, cuerpo WCB, internos 316, a | 2 × 1.900,08 = 3.800,16 | 2 un × 1.710,00 = 3.420,00 | -10% | lista · Taval (Lista 30 × 0.52) · VAL-04469 · 2025-09-01 | dentro de ±15% |
+| 43 | Válvula esférica, cuerpo WCB, internos 316, a | 2 × 926,00 = 1.852,00 | 2 un × 832,00 = 1.664,00 | -10% | lista · Taval (Lista 30 × 0.52) · VAL-04448 · 2025-09-01 | dentro de ±15% |
 | 44 | Válvula esférica, cuerpo WCB, internos 316, a | 1 × 740,80 = 740,80 | 1 un × 775,00 = 775,00 | +5% | ant · no dice (planilla de compras; cotización · 2025-08-01 | dentro de ±15% |
 | 45 | Válvula esférica 5000 WOG, asientos Delrin, c | 1 × 60,32 = 60,32 | 1 un × 65,20 = 65,20 | +8% | ant · válvulas Taval (el resumen las agrupa co · 2026-01-26 | dentro de ±15% |
 | 46 | Válvula macho (tapón lubricado) invertida, in | 1 × 920,00 = 920,00 | 1 un × 1.203,00 = 1.203,00 | +31% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) |
-| 47 | Manómetro con glicerina Ø100 mm 0-400 1/2" | 1 × 120,00 = 120,00 | 1 un × 120,00 = 120,00 | +0% | ant · Weisz o similar · INS-02702 · 2026-08-14 | dentro de ±15% |
-| 48 | Válvula de seguridad (TSV) entrada 1 1/2" sal | 1 × 1.800,00 = 1.800,00 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-28 | SIN PRECIO en el catálogo |
+| 47 | Manómetro con glicerina Ø100 mm 0-400 1/2" | 1 × 120,00 = 120,00 | 1 un × 120,00 = 120,00 | 0% | ant · Weisz o similar · INS-02702 · 2026-08-14 | dentro de ±15% |
+| 48 | Válvula de seguridad (TSV) entrada 1 1/2" sal | 1 × 1.800,00 = 1.800,00 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-29 | SIN PRECIO en el catálogo |
 | 49 | Detector de paso de scraper | 1 × 4.209,50 = 4.209,50 | 1 un × 1.650,00 = 1.650,00 | -61% | ant · TDW (marca) · OTR-02969 · 2025-12-10 | más barato (similar) |
 | 50 | Válvula de bloqueo y purga (para manómetro) 1 | 1 × 150,00 = 150,00 | 1 un × 80,00 = 80,00 | -47% | ant · Abac · VAL-03162 · 2026-04-22 | más barato (similar) |
 
-**Materiales: real USD 58.316,80 · cotizador USD 60.721,98 (+4%).** 14 dentro de ±15%, 31 fuera, 5 sin precio.
+**Materiales: real USD 58.316,80 · cotizador USD 59.824,53 (+3%).** 13 dentro de ±15%, 32 fuera, 5 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -70,9 +70,9 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | ingeniería, calidad y montaje | 4.860,00 | 9.795,00 | +102% |
 | otros | 3.567,21 | 1.130,88 | -68% |
 
-**MO y servicios: real USD 24.861,19 · cotizador USD 25.418,22 (+2%).**
+**MO y servicios: real USD 24.861,18 · cotizador USD 25.418,22 (+2%).**
 
 ## Total por trampa
 
-Real USD 83.177,98 · cotizador USD 86.140,20 (+4%) antes de completar lo que el cotizador marca para revisar.
+Real USD 83.177,98 · cotizador USD 85.242,75 (+2%) antes de completar lo que el cotizador marca para revisar.
 

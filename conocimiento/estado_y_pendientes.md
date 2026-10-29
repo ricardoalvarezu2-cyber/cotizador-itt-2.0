@@ -24,7 +24,7 @@
 | Plazos de entrega de proveedores | **Borrador** (213 datos, 154 verificados) | `comercial/plazos_proveedores.csv` + `_resumen.md` |
 | Catálogo de mano de obra y servicios (etapas 1 y 2) | Vigente: 562 servicios (181 precios de cotizaciones y tarifas + 467 de planillas de costo); 268 con tarifa unitaria; 5 sin precio | `precios/catalogo_servicios.*`, `herramientas/catalogo_servicios.py`, `buscar_servicio.py`, `test_catalogo_servicios.py` |
 | Auditoría del catálogo de materiales | Hecha y corregida | `auditorias/2026-10-27_catalogo_materiales.md` |
-| **Página web del cotizador** (Artifact en Claude, privada): lista de cotizaciones, buscador de materiales y servicios, calculadoras (soldadura, pintura, PH, RX), plazo, ofertas, firmantes, guardado automático con versiones, descarga en .zip o de a un archivo | Publicada el 28/10/2026; probada con la CAPEX (USD 7.620,59 en la página y en la planilla que arma) | https://claude.ai/artifact/HfbiaNvhAFkQjYwLe2kaBQ · `web/` (ver `web/LEEME.md`) |
+| **Página web del cotizador** (Artifact en Claude, privada): lista de cotizaciones, buscador de materiales y servicios, calculadoras (soldadura, pintura, PH, RX), plazo, ofertas, firmantes, guardado automático con versiones, descarga en .zip o de a un archivo | Publicada el 28/10/2026; probada con la CAPEX (hoy USD 7.366,12 en el repositorio; la copia de la página del 28-10 tenía 7.620,59 por sus índices congelados) | https://claude.ai/artifact/HfbiaNvhAFkQjYwLe2kaBQ · `web/` (ver `web/LEEME.md`) |
 | **Botones Claude y Chat nuevo** (29-10-2026): "Chat nuevo" crea una sesión limpia con el repositorio y la página limpia sola las suyas con más de 2 días sin uso: primero les pide consolidar lo aprendido en el repo y recién después las archiva; "Claude ↗" abre la sesión fija de Claude Code (con el repositorio y control total sobre la app) en una ventana chica aparte, como chat flotante. El chat dentro de la página y la pestaña Pedidos se sacaron (los planos y listas se le pasan directo a Claude Code) | Vigente | `web/src/asistente.js`, `web/LEEME.md` (Botón Claude) |
 | Mejoras de la página (28/10/2026): buscador general por texto y selección múltiple en los catálogos; sección Catálogos sin cotización abierta; avisos en cada renglón; filtro y orden de los ítems; deshacer y rehacer (Ctrl+Z / Ctrl+Y); vista previa de informe y ofertas; antecedentes parecidos (P8) en Resumen; versión para celular | Publicado | `web/src/` |
 | **MO y servicios por rubro de fabricación** (página): skid (estructura), piping, granallado y pintura, radiografía y END, procedimientos, prueba hidráulica, horas de ITT, transporte y otros. Cada rubro: ficha (kg, juntas, pulgadas, m², placas, procedimientos, litros, medidas) y costo **por antecedentes** (tarifa del historial o tarifa propia × cantidad de la ficha; piping por pulgada o por kg) o **manual** (precio del tercero con fuente). Todo por equipo | Vigente desde 29-10-2026 (repo y página) | `herramientas/ficha_rubros.py`, `web/src/rubros.js`, `web/src/ficha.js`, `ficha_rubros.md` en cada cotización |
@@ -34,7 +34,7 @@
 | Tarea semanal (lunes 7:37, hora Argentina): dólar e índices a la página, pedidos pendientes y respaldo de sus cotizaciones en `cotizaciones_web/` | Creada el 28/10/2026 | `web/LEEME.md` (sección Tarea semanal) |
 
 **Consolidado al 28-10-2026 (fin del día):**
-- **Controles:** 9 casos `cotizaciones/CTRL-*` medidos con `herramientas/correr_controles.py` (`cotizaciones/controles_resultado.md`). Después de las dos tandas de correcciones (lecciones 51–81): TS01 +4%, P02 +3%, SK01 −14%, CA01 +3%, C01 +9%, M01 −23%, P01 +3% sin lo que queda SIN PRECIO; F01 y T01 quedan bajos porque no hay horas de antecedentes de su tipo (se avisa y no se suman).
+- **Controles:** 9 casos `cotizaciones/CTRL-*` medidos con `herramientas/correr_controles.py` (`cotizaciones/controles_resultado.md`). Al 29-10-2026: TS01 +2%, P02 +4%, SK01 −17%, CA01 +3%, C01 +10%, M01 −23%, P01 +3% sin lo que queda SIN PRECIO, F01 −35% y T01 −35% (faltan horas de antecedentes de su tipo). Los totales quedan fijos en `cotizaciones/controles_esperado.json` y `verificar_todo.py` avisa si se mueven.
 - **Regla P4 ter (Matías):** sin referencia ni pieza parecida, el precio va en 0 y se pide cotización; `verificar_computo.py` lo controla y el chat de la página la cumple. El control de la CAPEX pasó a 7.366,12.
 - **Cotizaciones en borrador (en el repo y en la página):** CAPEX OQ8209, YPF Lic 69343 (2), Camuzzi CP 24578 (3: skid de regulación, puente de medición, separador coalescente preliminar). Detalle en `cotizaciones/README.md`.
 - **Acceso:** Ricardo Álvarez (`ricardoalvarezu2-cyber`) invitado como colaborador del repo (escritura); falta que acepte y que se le comparta la página con edición.
@@ -44,7 +44,7 @@
 
 **Caso de prueba:** COT26-1003-001 CAPEX OQ8209 (borrador, no enviada; su estado está en su `bitacora.md` y en `cotizaciones/README.md`).
 
-**Índices congelados (28-10-2026):** al pasar una cotización a revisado, la página guarda en `cot.indices_congelados` los índices de ese día; desde ahí el precio no cambia cuando la base suma un mes. Al volver a borrador se descongelan. `armar_cotizacion.py`, el motor JS, la planilla y el informe usan los congelados si están. La CAPEX (caso de control) tiene los del 28-10-2026, así el control 7.620,59 no se mueve. La oferta económica muestra una fila de flete cuando se incluye.
+**Índices congelados (28-10-2026):** al pasar una cotización a revisado, la página guarda en `cot.indices_congelados` los índices de ese día; desde ahí el precio no cambia cuando la base suma un mes. Al volver a borrador se descongelan. `armar_cotizacion.py`, el motor JS, la planilla y el informe usan los congelados si están. La CAPEX (caso de control) tiene los del 28-10-2026, así el control de la página no se mueve (en el repositorio, desde la regla P4 ter, el control es 7.366,12). La oferta económica muestra una fila de flete cuando se incluye.
 
 **Revisión con agentes (28-10-2026):** informes en `conocimiento/auditorias/2026-10-28_revision_*.md` (arquitectura, usuario, chat, datos). Hechos: plantilla de oferta neutra, números en formato argentino en los campos, estados con control (aprobar pide quién), ids únicos en el chat, índices congelados, flete en la oferta. Siguen: endurecer el chat, avisos y UX, y los datos (manómetro CAPEX, pesos globo 14" #600, factores de soldadura, alertas de precios fuera de rango, pdf.js).
 
@@ -108,12 +108,12 @@ Hecho (28/10/2026): `precotizar.py` (materiales, soldaduras, pintura, PH, RX) ·
 1. ~~Transporte con precio sin reflejar en resumen y oferta~~ Hecho (29-10-2026).
 2. ~~Plazo menor que el calculado sin bloqueo; oferta sin los datos cargados~~ Hecho (29-10-2026): sin justificación no salen ofertas (YPF 713/708 y Camuzzi 001 quedaron sin ofertas hasta corregir o justificar el plazo).
 3. Precios de la PC0 YPF con fecha supuesta (10-10-2026) entraron al catálogo como último precio de 45 materiales (hecho 29-10-2026: ahora son "estimado (fecha supuesta)"). ~~Los borradores alimentan la base~~ Hecho: solo entra lo incorporado con el botón.
-4. Corridas simultáneas de `verificar_todo.py` corrompen los catálogos (sin escritura atómica ni bloqueo).
+4. ~~Corridas simultáneas corrompen los catálogos~~ Hecho (29-10-2026): candado y escritura atómica (`herramientas/candado.py`).
 5. ~~Formato de números distinto entre página e informe~~ Hecho (29-10-2026): todo 1.234,56.
-6. Ítems sin código de catálogo; dos versiones repo/página y `semilla.py` pisa lo cargado en la página.
-7. Página: subtotal vacío al abrir, diálogos sin Escape, avisos sin agrupar, MO arranca "sin costo" hasta aplicar cada rubro, celular sin tabla de materiales usable.
+6. ~~Ítems sin código de catálogo; `semilla.py` pisaba lo cargado en la página~~ Hecho (29-10-2026): `codigo` en cada fuente con aviso de precio más nuevo; `semilla.py --previo`.
+7. ~~Página: subtotal vacío, diálogos, avisos, MO sin costo, celular~~ Hecho (29-10-2026).
 8. Tablas: pesos argentinos en columnas de USD sin moneda (índice de proyectos), 129 materiales sin unidad, claves de peso repetidas sin `vigente`, IVA/unidad/moneda en texto libre.
-9. Control de la CAPEX: 7.366,12 (no 7.620,59; corregir la documentación); controles CTRL fuera de `verificar_todo.py`.
+9. ~~Control de la CAPEX en la documentación y controles CTRL fuera de `verificar_todo.py`~~ Hecho (29-10-2026): CAPEX 7.366,12 en todos lados; los 9 casos CTRL se controlan contra `cotizaciones/controles_esperado.json` (tolerancia 0,5%) y `probar_busqueda.js` entró al control.
 Decidido (Matías, 29-10-2026): manda el repositorio; la biblioteca se alimenta solo con el botón; números 1.234,56.
 
 **Camuzzi CP 24578** (28-10-2026; COT26-0135-001/002/003 en borrador y cargadas en la página)
@@ -150,7 +150,7 @@ Decidido (Matías, 29-10-2026): manda el repositorio; la biblioteca se alimenta 
 2. ~~Subir archivos desde la página~~ **Hecho (28/10/2026):** sección Pedidos. Detalle original: → quedan "pendientes de procesar" en la base (`assets` + colección de pedidos); se procesan en un chat o el lunes, y en la página pasan a "incorporado" o "con dudas".
 3. ~~Chat en la página~~ **Hecho (28/10/2026), falta que Matías lo pruebe con su cuenta** (en la prueba local se simuló Claude):: ve la cotización abierta, busca en los catálogos, carga y corrige ítems, explica avisos, propone la lista de materiales desde la imagen de un plano. No toca GitHub. Usa la cuenta de quien la usa.
 4. ~~"Mandar a Claude Code"~~ **Hecho y probado de punta a punta (28/10/2026, pedido `prueba-circuito`):**: la página manda el pedido y el archivo a una sesión de Claude Code con el repositorio (capacidad `mcp`, conector Claude Code Remote); la sesión arma la cotización o actualiza el catálogo según el procedimiento, deja el resultado en borrador en la página y lo sube a GitHub. Estado del pedido en la página: en proceso / listo / con dudas.
-5. **Sumar a otra persona:** colaboradora en GitHub + edición en la página; probar su agente con una cotización de control (CAPEX = 7.620,59). Ojo: ve todos los costos; la imagen de firma hoy solo la sube quien tiene edición.
+5. **Sumar a otra persona:** colaboradora en GitHub + edición en la página; probar su agente con una cotización de control (CAPEX = 7.366,12). Ojo: ve todos los costos; la imagen de firma hoy solo la sube quien tiene edición.
 6. **Cierre:** ver "Al terminar el proyecto".
 
 **Al terminar el proyecto** (decisión de Matías)

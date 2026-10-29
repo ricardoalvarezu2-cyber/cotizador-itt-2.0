@@ -7,7 +7,7 @@
 ## Qué hay en esta carpeta
 | Archivo | Para qué |
 |---|---|
-| `src/motor.js` | Cálculo de costo y precio, igual a `herramientas/armar_cotizacion.py` (control: CAPEX = USD 7.620,59). Prueba: `node web/probar_motor.js`. |
+| `src/motor.js` | Cálculo de costo y precio, igual a `herramientas/armar_cotizacion.py` (control: CAPEX = USD 7.366,12, desde la regla P4 ter del 28-10-2026). Prueba: `node web/probar_motor.js`. |
 | `src/busqueda.js` | Buscador de materiales y servicios (igual / similar), calculadora de soldaduras y avisos de control. Prueba: `node web/probar_busqueda.js`. |
 | `src/ficha.js` | Ficha calculada en la página (soldaduras, kg con tablas y aproximados, m², placas, procedimientos, litros), igual a `ficha_rubros.py`. Prueba: `node web/probar_ficha.js`. |
 | `src/rubros.js` | Rubros de MO y servicios: costo **por antecedentes** (tarifa del historial × cantidad de la ficha) o **manual** (internamente "detallado"/"global"); modo (MO del piping, MO de la estructura, pintura, RX/END/procedimientos, transporte) y su ficha (soldaduras, kg, m², placas, medidas y equipos por camión), igual a `herramientas/ficha_rubros.py`. En global, los renglones detallados quedan en `cot.rubros[r].detalle` y se suma un renglón `global: true`. Prueba: `node web/probar_rubros.js`. |

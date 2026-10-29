@@ -1,5 +1,5 @@
 // Motor de cálculo del cotizador: mismas fórmulas que herramientas/armar_cotizacion.py (calcular y factor).
-// Se prueba contra Python con web/probar_motor.js (la CAPEX tiene que dar costo 5.644,88 · unitario 7.620,59 · total 15.241,18).
+// Se prueba contra Python con web/probar_motor.js (la CAPEX tiene que dar costo 5.456,38 · unitario 7.366,12 · total 14.732,24; 29-10-2026).
 const Motor = (() => {
   // idx: [{mes:"2024-01", local, cpi}, ...] ordenado por mes
   function factorAjuste(item, idx, fref, aplicar) {
