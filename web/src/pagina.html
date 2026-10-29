@@ -272,6 +272,27 @@ dl.origen{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:6px 1
 dl.origen dt{font-weight:700;color:var(--muted)} dl.origen dd{margin:0;overflow-wrap:anywhere}
 table.renglones tbody tr:nth-child(even) td{background:transparent} table.renglones tbody tr:not(.it-det) td{border-top:1px solid var(--line)}
 table.renglones td.ed input{width:110px}
+/* avisos agrupados por tipo */
+details.grupo-av{margin:6px 0}
+details.grupo-av summary{cursor:pointer;font-weight:600}
+details.grupo-av ul{margin:6px 0 0;padding-left:20px}
+/* en el celular, cada ítem es una tarjeta: descripción arriba y los datos con su nombre */
+@media (max-width:700px){
+  table.items thead{display:none}
+  table.items,table.items tbody{display:block}
+  table.items tbody tr:not(.it-det):not(.total){display:grid;grid-template-columns:1fr 1fr;gap:6px 12px;padding:12px 0;border-top:1px solid var(--line)}
+  table.items tbody tr:not(.it-det):not(.total) td{display:flex;flex-direction:column;gap:2px;border:0;padding:0;width:auto!important}
+  table.items td[data-l]::before{content:attr(data-l);font-size:.8em;color:var(--muted)}
+  table.items td:has(.it-abrir){grid-column:1/-1;order:-1}
+  table.items td.acc-it{grid-column:1/-1}
+  table.items tbody tr:not(.it-det):not(.total) td.n{align-items:flex-start;text-align:left}
+  table.items td.acc-it button{width:100%}
+  table.items input{width:100%!important}
+  table.items tr.it-det:not([hidden]){display:block}
+  table.items tr.it-det td{display:block}
+  table.items tr.total{display:flex;justify-content:space-between;padding:10px 0}
+  table.items tr.total td:empty{display:none}
+}
 </style>
 <div class="barra"><div class="in">
   <div class="marca"><i></i>Cotizador ITT</div>

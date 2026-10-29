@@ -108,11 +108,21 @@
     if (k === "z" && !e.shiftKey) { e.preventDefault(); deshacer(); }
     else if (k === "y" || (k === "z" && e.shiftKey)) { e.preventDefault(); rehacer(); }
   });
+  // Cuadros (editor, estados, vistas previas): se cierran con Escape, con un clic afuera y al cambiar de sección
+  function cerrarCapa() { if (!capa.hidden) { capa.hidden = true; capa.innerHTML = ""; S.focoPrevio?.focus?.(); } }
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && !capa.hidden) { e.preventDefault(); cerrarCapa(); } });
+  capa.addEventListener("mousedown", e => { if (e.target.classList?.contains("capa")) cerrarCapa(); });
+  new MutationObserver(() => {
+    const d = capa.querySelector('[role="dialog"]'); if (!d || d.dataset.listo) return;
+    d.dataset.listo = "1"; d.setAttribute("aria-modal", "true");
+    if (!d.contains(document.activeElement)) { S.focoPrevio = document.activeElement; (d.querySelector("input, select, textarea, button.prim, button") || d).focus?.(); }
+  }).observe(capa, { childList: true, subtree: true });
   function marcarGuardado(t) { const el = $("#guardado"); if (el) el.textContent = t; }
   window.addEventListener("beforeunload", () => { if (S.pendiente) guardar(); });
 
   // ------------------------------------------------------------------ navegación
   function ruta() {
+    cerrarCapa();
     const h = location.hash.slice(1);
     if (h.startsWith("c-")) abrir(h.slice(2));
     else { S.vista = ["firmantes", "catalogos"].includes(h) ? h : "inicio"; S.id = null; S.doc = null; S.desuscribir?.(); render(); }
@@ -263,10 +273,11 @@
         <span class="guardado" id="guardado">${S.pendiente ? "cambios sin guardar…" : "guardado"}</span></div></div></header>
       ${cot.estado === "borrador" ? `<div class="aviso"><span><b>Borrador sin revisar.</b> Nada se envía al cliente.</span></div>` : ""}
       <div class="totales" id="totales">${totalesHtml(c, eq)}</div>
-      <div class="tabs" role="tablist">${TABS.map(([k, t], i) => `<button role="tab" aria-selected="${S.tab === k}" data-a="tab" data-v="${k}"><span class="paso">${i + 1}</span>${t}${k === "materiales" ? `<span class="cnt">${n("material")}</span>` : k === "servicios" ? `<span class="cnt">${n("mo")}</span>` : k === "resumen" && avs.length ? `<span class="cnt alerta">${avs.length} avisos</span>` : ""}</button>`).join("")}</div>
+      <div class="tabs" role="tablist">${TABS.map(([k, t], i) => `<button role="tab" aria-selected="${S.tab === k}" data-a="tab" data-v="${k}"><span class="paso">${i + 1}</span>${t}${k === "materiales" ? `<span class="cnt">${n("material")}</span>` : k === "servicios" ? `<span class="cnt">${n("mo")}</span>` : k === "resumen" && avs.length ? `<span class="cnt ${avs.some(a => a.nivel === "bad") ? "alerta" : ""}">${avs.length} avisos</span>` : ""}</button>`).join("")}</div>
       <div id="tab">${{ datos: tabDatos, materiales: tabMateriales, servicios: tabServicios, plazo: tabPlazo, oferta: tabOferta, resumen: tabResumen }[S.tab]()}</div>`;
     if (S.tab === "materiales") pintarResultadosMat();
     if (S.tab === "servicios") pintarResultadosSrv();
+    refrescar(); // subtotales de las tablas desde el primer momento
   }
 
   function totalesHtml(c, eq) {
@@ -341,13 +352,13 @@
     const k2 = grupoMat ? "m" : "s";
     return controles + `<div class="tbl"><table class="items"><thead><tr><th>Pos.</th><th>Ítem</th><th class="n">Cantidad</th><th>Unidad</th><th class="n">USD unitario</th><th class="n">USD ajustado</th><th>Estado</th><th></th></tr></thead><tbody>
       ${items.map(it => { const s = it.fuentes[0], ab = S.itAbiertos.has(it.id), avs_ = porItem[it.id] || []; return `<tr>
-        <td class="ed" style="width:70px"><input id="p-${E(it.id)}" data-it="${E(it.id)}" data-c="pos" value="${E(it.pos)}" style="width:58px" aria-label="Posición"></td>
-        <td><button class="it-abrir" data-a="it-abrir" data-id="${E(it.id)}" aria-expanded="${ab}"><span class="flecha" aria-hidden="true">${ab ? "▾" : "▸"}</span><span>${E(it.descripcion)}</span></button></td>
-        <td class="ed"><input id="q-${E(it.id)}" type="text" inputmode="decimal" class="num" data-it="${E(it.id)}" data-c="cantidad" value="${NI(it.cantidad)}" aria-label="Cantidad"></td><td>${E(it.unidad)}</td>
-        <td class="ed"><input id="u-${E(it.id)}" type="text" inputmode="decimal" class="num" data-it="${E(it.id)}" data-c="precio" value="${NI(s.precio)}" aria-label="Precio unitario"></td>
-        <td class="n" data-sub="${E(it.id)}">${num(c.filas.find(f => f.id === it.id)?.ajustado)}</td>
-        <td>${estado(it)}</td>
-        <td><button class="chico" data-a="editar" data-id="${E(it.id)}">Editar</button></td></tr>
+        <td class="ed" data-l="Pos." style="width:70px"><input id="p-${E(it.id)}" data-it="${E(it.id)}" data-c="pos" value="${E(it.pos)}" style="width:58px" aria-label="Posición"></td>
+        <td><button class="it-abrir" data-l-desc data-a="it-abrir" data-id="${E(it.id)}" aria-expanded="${ab}"><span class="flecha" aria-hidden="true">${ab ? "▾" : "▸"}</span><span>${E(it.descripcion)}</span></button></td>
+        <td class="ed" data-l="Cantidad"><input id="q-${E(it.id)}" type="text" inputmode="decimal" class="num" data-it="${E(it.id)}" data-c="cantidad" value="${NI(it.cantidad)}" aria-label="Cantidad"></td><td data-l="Unidad">${E(it.unidad)}</td>
+        <td class="ed" data-l="USD unitario"><input id="u-${E(it.id)}" type="text" inputmode="decimal" class="num" data-it="${E(it.id)}" data-c="precio" value="${NI(s.precio)}" aria-label="Precio unitario"></td>
+        <td class="n" data-l="USD ajustado" data-sub="${E(it.id)}">${num(c.filas.find(f => f.id === it.id)?.ajustado)}</td>
+        <td data-l="Estado">${estado(it)}</td>
+        <td class="acc-it"><button class="chico" data-a="editar" data-id="${E(it.id)}">Editar</button></td></tr>
         <tr class="it-det" ${ab ? "" : "hidden"}><td colspan="8"><div class="it-det-grid">
           ${it.especificacion ? `<div><b>Especificación</b>${E(it.especificacion)}</div>` : ""}
           <div><b>Precio</b>${E(Documentos.TIPOS[s.tipo] || s.tipo)} · ${E(s.proveedor)} · ${E(F(s.fecha))}</div>
@@ -521,7 +532,7 @@
     }[r] || "";
     const g = Rubros.globalDe(cot, r), p = g?.fuentes[0].precio || 0, costo = glob ? p : ref.detallado_usd, dif = glob && p && ref.detallado_usd ? p / ref.detallado_usd - 1 : 0;
     const estado = tr ? "" : glob ? (!p ? `<span class="pill bad">sin precio</span>` : Math.abs(dif) > 0.15 && !tr ? `<span class="pill warn" title="contra antecedentes">${dif > 0 ? "+" : ""}${num(dif * 100, 0)}%</span>` : `<span class="pill ok">manual</span>`)
-      : !tr && !ref.detallado_usd ? `<span class="pill warn">sin costo</span>` : "";
+      : !tr && !ref.detallado_usd ? `<span class="pill warn">falta el costo</span>` : "";
     const ab = S.rbAbiertos.has(r);
     return `<button class="rb-abrir" data-a="rubro-abrir" data-r="${r}" aria-expanded="${ab}"><span class="flecha" aria-hidden="true">${ab ? "▾" : "▸"}</span><b>${E(nombre)}</b></button>
       <div class="rb-datos">${datos || `<span class="muted small">${!tr && (x.avisos || [])[0] ? E(x.avisos[0]) : "—"}</span>`}${!tr && (x.avisos || []).length && datos ? `<span class="pill warn" title="${E(x.avisos.join(" · "))}">${x.avisos.length} aviso${x.avisos.length > 1 ? "s" : ""}</span>` : ""}</div>
@@ -687,11 +698,23 @@
         <h3>Versiones guardadas</h3><div id="versiones" class="small muted"><button class="chico" data-a="ver-versiones">Ver versiones</button></div></section></div>
       ${panelAntecedentes(c)}
       <section><div class="sec-head"><h3>Avisos de control</h3><span class="eyebrow">${bad.length} para corregir · ${warn.length} para revisar</span></div>
-        ${bad.length ? `<div class="aviso bad"><b>Para corregir antes de presentar</b><ul>${bad.map(a => `<li>${E(a.txt)}</li>`).join("")}</ul></div>` : ""}
-        ${warn.length ? `<div class="aviso"><b>Para revisar</b><ul>${warn.map(a => `<li>${E(a.txt)}</li>`).join("")}</ul></div>` : ""}
+        ${bad.length ? `<div class="aviso bad"><b>Para corregir antes de presentar</b>${gruposAvisos(bad, true)}</div>` : ""}
+        ${warn.length ? `<div class="aviso"><b>Para revisar</b>${gruposAvisos(warn, false)}</div>` : ""}
         ${!avs.length ? `<div class="aviso ok">Sin avisos.</div>` : ""}</section>`;
   }
 
+  // Avisos agrupados por tipo ("Pieza similar (18)"), desplegables: así se ve qué clase de problema hay sin leer 59 renglones
+  function gruposAvisos(lista, abiertos) {
+    const g = new Map();
+    for (const a of lista) {
+      const c = a.corto || a.txt, t = c.split(/[:(]/)[0].replace(/\d[\d.,]*/g, "").replace(/\s+/g, " ").trim();
+      const k = /^precio de hace/.test(c) ? "Precio de hace más de 6 meses" : /^el catálogo/.test(c) ? "El catálogo tiene un precio más nuevo"
+        : t.charAt(0).toUpperCase() + t.slice(1);
+      (g.get(k) || g.set(k, []).get(k)).push(a);
+    }
+    return [...g].sort((x, y) => y[1].length - x[1].length).map(([k, xs]) => xs.length === 1 && !xs[0].corto ? `<p class="small">${E(xs[0].txt)}</p>`
+      : `<details class="grupo-av" ${abiertos && g.size < 4 ? "open" : ""}><summary>${E(k)} <span class="cnt">${xs.length}</span></summary><ul>${xs.map(a => `<li>${E(a.corto ? a.txt.slice(0, a.txt.length - a.corto.length - 2) + " — " + a.corto : a.txt)}</li>`).join("")}</ul></details>`).join("");
+  }
   function panelAntecedentes(c) {
     const r = Antecedentes.comparar(S.doc.cot, S.datos, c.precio_unitario);
     return `<section><div class="sec-head"><h3>Antecedentes parecidos (P8)</h3><span class="eyebrow">familia ${E(r.nombreFamilia || r.familia)} · los 5 más parecidos con precio</span></div>
@@ -972,7 +995,10 @@
       case "borrar":
         if (b.dataset.ok !== "1") { b.dataset.ok = "1"; b.textContent = "¿Seguro? Borrar"; setTimeout(() => { b.dataset.ok = ""; b.textContent = "Borrar"; }, 4000); return; }
         await borrarCotizacion(b.dataset.id); toast("Cotización borrada"); break;
-      case "quitar": cot.items = cot.items.filter(i => i.id !== b.dataset.id); capa.hidden = true; capa.innerHTML = ""; guardarPronto(); render(); toast("Ítem quitado (Deshacer lo recupera)"); break;
+      case "quitar": {
+        if (b.dataset.ok !== "1") { b.dataset.ok = "1"; b.textContent = "¿Seguro? Quitar este ítem"; b.classList.add("peligro"); setTimeout(() => { if (b.isConnected) { b.dataset.ok = ""; b.textContent = "Quitar ítem"; } }, 4000); return; }
+        cot.items = cot.items.filter(i => i.id !== b.dataset.id); capa.hidden = true; capa.innerHTML = ""; guardarPronto(); render(); toast("Ítem quitado (Deshacer lo recupera)"); break;
+      }
       case "editar": editorItem(cot.items.find(i => i.id === b.dataset.id)); break;
       case "manual": editorItem(null, b.dataset.g); break;
       case "cerrar": capa.hidden = true; capa.innerHTML = ""; break;
@@ -1017,11 +1043,18 @@
       }
       case "recalcular": {
         const n = Ficha.completarAtributos(cot, S.datos), f = Rubros.ficha(cot, S.datos, S.sold, Motor), m = f.mo_piping;
-        if (n) guardarPronto();
+        // los rubros por antecedentes que todavía no tienen costo lo toman de una vez (antes había que aplicarlos de a uno)
+        const aplicados = [];
+        for (const r of Object.keys(Rubros.RUBROS)) {
+          const ref = f.referencias?.[r];
+          if (r === "transporte" || !ref || ref.modo === "global" || ref.detallado_usd) continue;
+          if (Rubros.aplicarAntecedentes(cot, S.datos, f, r)) aplicados.push(Rubros.RUBROS[r][0].toLowerCase());
+        }
+        if (n || aplicados.length) guardarPronto();
         render();
         const sin = (m.sin_peso || []).length, falta = (m.avisos || []).some(a => /^Sin familia/.test(a));
         toast(`Recalculado: ${num(m.juntas_bw, 0)} juntas a tope, ${num(m.pulg_eq, 0)} pulg, ${num(m.kg_piping + f.mo_estructura.kg, 0)} kg`
-          + (n ? ` · completé ${n} renglón(es) con el catálogo` : "") + (sin ? ` · ${sin} sin peso en tabla` : "") + (falta ? " · hay renglones sin datos (ver aviso)" : ""));
+          + (n ? ` · completé ${n} renglón(es) con el catálogo` : "") + (aplicados.length ? ` · costo por antecedentes en: ${aplicados.join(", ")}` : "") + (sin ? ` · ${sin} sin peso en tabla` : "") + (falta ? " · hay renglones sin datos (ver aviso)" : ""));
         break;
       }
       case "rubro-base": { const rb = (cot.rubros ??= {}).mo_piping ??= { modo: "detallado" }; rb.base = b.dataset.v; delete rb.tarifa; guardarPronto(); render(); break; }

@@ -155,7 +155,7 @@ const Busqueda = (() => {
   function avisos(cfg) {
     const out = []; const h = hoy();
     for (const it of cfg.items) {
-      const s = it.fuentes[0], tag = `${it.pos || it.id} ${it.descripcion.slice(0, 40)}`, n0 = out.length;
+      const s = it.fuentes[0], d = it.descripcion, tag = `${it.pos || it.id} ${d.length > 44 ? d.slice(0, 44).replace(/\s+\S*$/, "") + "…" : d}`, n0 = out.length; // sin cortar palabras
       if (!s.precio) out.push({ nivel: "bad", txt: `${tag}: SIN PRECIO, pedir cotización antes de presentar` });
       if (!s.proveedor || !s.fecha) out.push({ nivel: "bad", txt: `${tag}: precio sin fuente o sin fecha` });
       if (s.fecha && (!/^\d{4}-\d{2}-\d{2}$/.test(s.fecha) || s.fecha > h)) out.push({ nivel: "bad", txt: `${tag}: fecha inválida o futura (${s.fecha.split("-").reverse().join("-")})` });
