@@ -28,3 +28,6 @@ Transcripción del plano y cantidades: bien. Precios Tormene y Taval verificados
 - Purgas automáticas, switches, manómetro diferencial, internos, RX, PH, pintura, skid y MO de Ledesma: estimados subidos (eran bajos para 70 bar y el tamaño nuevo).
 - Precio: **204.970 c/u** (preliminar). Los 108 m³/h por elemento de Sacde/12 no son del mismo elemento: **pedir a Gora o Pall el caudal por elemento de 0,3 µm a 25 bar**. Si admite el doble, alcanza con ~19 elementos en Ø40" y el precio baja mucho.
 - **Crítico para presentar:** el concurso exige con la oferta la memoria de cálculo y el esquema con dimensiones; hoy no existen.
+
+## 29-10-2026 · Llegó la especificación (mail de Brian Raminger, Taval, 14-10-2026)
+Concurso aparte **Nº 24527** solo para los 2 filtros coalescentes (vencía el 20-10-2026). Adjuntos en `pedido/CP24527_mail_2026-10-14/`: **ET Separador Vertical Coalescente** (22 hojas), **Esquema General Filtro Coalescente Camuzzi 2026** (PDF de imagen, sin texto), listado de marcas y proveedores Camuzzi (789-2), cláusulas particulares, DDJJ ética, PCG CGP/CGS 2023 y la planilla del concurso (misma descripción que el ítem 1 del CP 24578). Matías volvió a pasar la planilla del CP 24578 (idéntica a la de `pedido/`). Pendiente: rehacer el dimensionamiento con la ET y el esquema, y esperar los planos que va a mandar Matías.
