@@ -1,5 +1,5 @@
-// Asistente de la página: chat y pedidos para Claude Code (capacidad "mcp", conector Claude Code Remote → send_message a
-// la sesión fija con el repositorio; la respuesta vuelve por la base de la página). Los archivos se suben con "assets"; Excel y Word
+// Asistente de la página: pedidos para Claude Code (capacidad "mcp", conector Claude Code Remote → send_message a la sesión
+// fija con el repositorio) y botón Claude, que abre esa sesión en una ventana aparte. Los archivos se suben con "assets"; Excel y Word
 // se pasan a texto antes de subir (assets solo guarda imágenes, PDF y texto). Ver web/LEEME.md, "Pedidos desde la página".
 const Asistente = (() => {
   const URL_PAGINA = "https://claude.ai/artifact/HfbiaNvhAFkQjYwLe2kaBQ";
@@ -17,8 +17,7 @@ const Asistente = (() => {
 
   let I = null, mcp = null, sesion = SESION_FIJA;
   const P = { lista: [], form: { tipo: "cotizacion_nueva", texto: "", cot: "" }, archivos: [], ocupado: false };
-  const chat = { msgs: [], adjuntos: [], conv: "", ocupado: false, abierto: false, recien: false };
-
+  
   // ------------------------------------------------------------------ arranque
   const listo = window.ITT ? Promise.resolve() : new Promise(ok => window.addEventListener("itt-listo", ok, { once: true }));
   listo.then(async () => {
@@ -191,7 +190,6 @@ const Asistente = (() => {
     if (el.id === "pd-tipo") { P.form.tipo = el.value; renderPedidos(document.getElementById("app")); }
     else if (el.id === "pd-cot") P.form.cot = el.value;
     else if (el.id === "pd-arch") { P.archivos = Array.from(el.files); renderPedidos(document.getElementById("app")); }
-    else if (el.id === "ch-arch") { chat.adjuntos.push(...Array.from(el.files)); el.value = ""; pintarAdjuntos(); }
   });
   document.addEventListener("click", async ev => {
     const b = ev.target.closest("[data-p]"); if (!b) return;
@@ -215,11 +213,6 @@ const Asistente = (() => {
         case "borrar":
           if (b.dataset.ok !== "1") { b.dataset.ok = "1"; b.textContent = "¿Seguro? Borrar"; setTimeout(() => { b.dataset.ok = ""; b.textContent = "Borrar"; }, 4000); return; }
           await S.db.doc("pedidos/" + b.dataset.id).delete(); I.toast("Pedido borrado (los archivos subidos se conservan)"); break;
-        case "ch-reenviar": {
-          const m = chat.msgs.find(x => x.id === b.dataset.id); if (!m) return;
-          if (m.estado === "error" && b.dataset.ok !== "1") { b.dataset.ok = "1"; b.textContent = "¿Seguro? Puede haber llegado"; return; }
-          b.disabled = true; await mandarChat(m.id, m); break;
-        }
         case "nuevo-borrar":
           if (b.dataset.ok !== "1") { b.dataset.ok = "1"; b.textContent = "¿Seguro?"; setTimeout(() => { b.dataset.ok = ""; b.textContent = "Borrar"; }, 4000); return; }
           await S.db.doc("catalogo_nuevo/" + b.dataset.id).delete(); I.toast("Borrado del catálogo nuevo"); break;
@@ -227,113 +220,23 @@ const Asistente = (() => {
     } catch (e) { I.toast(e.message || String(e.code || e)); }
   });
 
-  // ------------------------------------------------------------------ chat: cada mensaje va a la sesión de Claude Code
-  // Colección "chat": un documento por mensaje {conversacion, texto, archivos, contexto, estado, creado, nota, avance,
-  // respuesta, cambios, respondido}. La sesión fija lo lee con ArtifactData, trabaja sobre el repositorio y la página
-  // (control total, ver web/LEEME.md "Chat de la página") y escribe la respuesta en el mismo documento.
-  const ESPERA = { enviado: "Esperando a Claude Code…", en_proceso: "Claude Code está trabajando…" };
+  // ------------------------------------------------------------------ botón Claude: abre la sesión de Claude Code
+  // La sesión fija (la misma que recibe los pedidos, con el repositorio) se abre en una ventana chica aparte, como un
+  // chat flotante. claude.ai no se puede mostrar dentro de la página.
   function armarChat() {
-    const btn = document.getElementById("btn-chat"), panel = document.getElementById("chat");
-    if (!btn || !panel || !I.S.db) return;
-    btn.hidden = false;
-    btn.addEventListener("click", () => abrirChat(!chat.abierto));
-    try { chat.conv = localStorage.getItem("itt-conv") || ""; } catch (e) { /* sin almacenamiento */ }
-    if (!chat.conv) nuevaConversacion();
-    panel.innerHTML = `<div class="ch-cab"><div class="fila"><b>Claude Code</b><span class="small muted" id="ch-ctx"></span><button class="chico" id="ch-cerrar" aria-label="Cerrar el chat">×</button></div>
-        <div class="fila"><button class="chico" id="ch-nuevo">Nueva conversación</button></div></div>
-      <div class="ch-msgs" id="ch-msgs" aria-live="polite"></div>
-      <div class="ch-pie"><div id="ch-adj" class="small"></div>
-        <textarea id="ch-txt" rows="3" placeholder="Ej.: armá la cotización del plano adjunto · ¿cuánto se cobró la última trampa 8&quot;? · corregí la pintura de esta cotización"></textarea>
-        <div class="fila"><label class="btn chico" style="flex-direction:row">Adjuntar archivo<input id="ch-arch" type="file" multiple accept="image/png,image/jpeg,image/webp,application/pdf,.xlsx,.xls,.xlsm,.ods,.docx,.csv,.txt,.md,.json" hidden></label>
-          <span style="flex:1"></span><button class="prim chico" id="ch-enviar" ${mcp ? "" : "disabled"}>Enviar</button></div>
-        <span class="small muted" id="ch-estado">${mcp ? "Trabaja sobre el repositorio con tu cuenta de Claude. Cada respuesta tarda de 1 a 3 minutos." : "En esta vista no se puede llamar a Claude Code (falta el conector Claude Code Remote o el permiso de la página)."}</span></div>`;
-    panel.querySelector("#ch-cerrar").onclick = () => abrirChat(false);
-    panel.querySelector("#ch-nuevo").onclick = () => { nuevaConversacion(); pintarChat(); };
-    panel.querySelector("#ch-enviar").onclick = enviar;
-    panel.querySelector("#ch-txt").addEventListener("keydown", e => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); enviar(); } });
-    window.addEventListener("hashchange", pintarContexto);
-    I.S.db.collection("chat").onSnapshot(sn => { chat.msgs = sn.docs.map(d => ({ id: d.id, ...d.data() })); pintarChat(); }, () => {});
-    setInterval(() => { if (chat.abierto && chat.msgs.some(m => ESPERA[m.estado])) pintarChat(); }, 60e3);
-    pintarChat();
-    try { if (localStorage.getItem("itt-chat") === "1") abrirChat(true); } catch (e) { /* sin almacenamiento */ }
+    const btn = document.getElementById("btn-chat");
+    if (!btn) return;
+    btn.hidden = false; btn.title = "Abre Claude Code (sesión con el repositorio) en una ventana aparte";
+    btn.addEventListener("click", abrirClaude);
   }
-  function nuevaConversacion() {
-    chat.conv = idUnico("v");
-    try { localStorage.setItem("itt-conv", chat.conv); } catch (e) { /* sin almacenamiento */ }
-  }
-  function abrirChat(si) {
-    chat.abierto = si;
-    document.getElementById("chat").hidden = !si;
-    document.body.classList.toggle("con-chat", si);
-    document.getElementById("btn-chat").setAttribute("aria-pressed", String(si));
-    try { localStorage.setItem("itt-chat", si ? "1" : "0"); } catch (e) { /* sin almacenamiento */ }
-    if (si) { pintarContexto(); pintarChat(); document.getElementById("ch-txt").focus(); }
-  }
-  function pintarContexto() {
-    const S = I.S, el = document.getElementById("ch-ctx"); if (!el) return;
-    el.textContent = S.vista === "cot" && S.doc ? "sobre " + S.doc.cot.codigo : "";
-  }
-  function md(t) {
-    return esc(t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").split("\n").map(l => /^\s*[-•] /.test(l) ? `<li>${l.replace(/^\s*[-•] /, "")}</li>` : l + "<br>").join("")
-      .replace(/(<li>.*?<\/li>)+/g, m => `<ul>${m}</ul>`).replace(/(<br>)+$/, "");
-  }
-  const delaConv = () => chat.msgs.filter(m => m.conversacion === chat.conv).sort((a, b) => String(a.creado).localeCompare(String(b.creado)));
-  function pintarChat() {
-    const box = document.getElementById("ch-msgs"); if (!box) return;
-    const abajo = box.scrollHeight - box.scrollTop - box.clientHeight < 80;
-    const hora = iso => iso ? fechaCorta(iso).slice(-5) : "";
-    const ms = delaConv();
-    box.innerHTML = (ms.length ? "" : `<div class="msg a">Hola. Hablás con Claude Code, que trabaja sobre el repositorio y la página: busca en el historial, los catálogos y los antecedentes, arma y corrige cotizaciones, lee planos, pliegos y listas de precios, y puede cambiar la página. Nada se envía al cliente.</div>`)
-      + ms.map(m => {
-        const arch = (m.archivos || []).length ? `<div class="small muted">Adjuntó: ${m.archivos.map(a => esc(a.original || a.nombre)).join(", ")}</div>` : "";
-        const u = `<div class="msg u">${esc(m.texto).replace(/\n/g, "<br>")}${arch}</div>`;
-        if (m.respuesta) return u + `<div class="msg a">${md(m.respuesta)}${(m.cambios || []).length ? `<div class="small muted">Cambió: ${m.cambios.map(esc).join(" · ")}</div>` : ""}<div class="small muted">${hora(m.respondido)}</div></div>`;
-        if (ESPERA[m.estado]) {
-          const min = (Date.now() - Date.parse(m.enviado || m.creado)) / 60e3;
-          return u + `<div class="msg a pensando">${ESPERA[m.estado]}${m.avance ? `<div class="small">${esc(m.avance)}</div>` : ""}${min > 15 ? `<div class="small">Tarda más de lo normal: puede estar con un trabajo largo o con otro pedido antes.</div>` : ""}</div>`;
-        }
-        return u + `<div class="msg a"><span class="err">${esc(m.nota || "No se mandó.")}</span> <button class="chico" data-p="ch-reenviar" data-id="${esc(m.id)}" ${mcp ? "" : "disabled"}>Reenviar</button></div>`;
-      }).join("");
-    if (abajo || chat.recien) { box.scrollTop = box.scrollHeight; chat.recien = false; }
-  }
-  function pintarAdjuntos() {
-    const el = document.getElementById("ch-adj"); if (!el) return;
-    el.innerHTML = chat.adjuntos.map((f, i) => `<span class="pill info">${esc(f.name)} <button class="chico" data-quitar-adj="${i}" aria-label="Quitar">×</button></span>`).join(" ");
-    el.querySelectorAll("[data-quitar-adj]").forEach(b => (b.onclick = () => { chat.adjuntos.splice(+b.dataset.quitarAdj, 1); pintarAdjuntos(); }));
-  }
-  const contextoPagina = () => { const S = I.S, c = S.vista === "cot" && S.doc; return { vista: S.vista || "", cotizacion_id: c ? S.id : "", codigo: c ? S.doc.cot.codigo : "", pestana: c ? S.tab || "" : "" }; };
-  async function enviar() {
-    if (chat.ocupado || !mcp) return;
-    const ta = document.getElementById("ch-txt"), texto = ta.value.trim(), files = chat.adjuntos.slice(), est = document.getElementById("ch-estado");
-    if (!texto && !files.length) return;
-    chat.ocupado = true; document.getElementById("ch-enviar").disabled = true;
-    const aviso = t => (est.textContent = t);
-    try {
-      const archivos = await subir(files, aviso);
-      const id = idUnico("m"), doc = { conversacion: chat.conv, texto, archivos, contexto: contextoPagina(), estado: "pendiente", creado: ahora() };
-      await I.S.db.doc("chat/" + id).set(doc);
-      ta.value = ""; chat.adjuntos = []; pintarAdjuntos(); chat.recien = true;
-      aviso("Mandando a Claude Code…");
-      await mandarChat(id, doc);
-      aviso("Mandado. La respuesta aparece acá en 1 a 3 minutos; podés seguir trabajando.");
-    } catch (e) { aviso(e.message || String(e.code || e)); }
-    finally { chat.ocupado = false; document.getElementById("ch-enviar").disabled = false; }
-  }
-  async function mandarChat(id, doc) {
-    const ctx = doc.contexto || {};
-    const previos = delaConv().filter(m => m.id !== id && m.creado < doc.creado).slice(-6);
-    const msg = `Chat ${id} desde la página del cotizador (${URL_PAGINA}).\n` +
-      `Seguí web/LEEME.md, sección "Chat de la página" (primero git pull origin main). Leé el documento chat/${id} con ArtifactData y respondé en ese mismo documento.\n` +
-      `Página: ${ctx.vista || "inicio"}${ctx.cotizacion_id ? `, cotización abierta ${ctx.codigo} (documento cotizaciones/${ctx.cotizacion_id}), pestaña ${ctx.pestana}` : ""}. Conversación ${doc.conversacion}. Archivos adjuntos: ${(doc.archivos || []).length}.\n` +
-      (previos.length ? `Antes en esta conversación:\n${previos.map(p => `- Matías: ${String(p.texto).slice(0, 400)}\n  Claude Code: ${String(p.respuesta || "(sin respuesta)").slice(0, 600)}`).join("\n")}\n` : "") +
-      `Mensaje de Matías:\n${String(doc.texto || "(sin texto, ver archivos)").slice(0, 8000)}`;
-    let estado = "enviado", nota = "";
-    try { await mcp.callTool(SERVIDOR, "send_message", { session_id: sesion, message: msg, priority: "later" }); }
-    catch (e) { [estado, nota] = motivoError(e); }
-    await I.S.db.doc("chat/" + id).update({ estado, nota, ...(estado === "enviado" ? { enviado: ahora() } : {}) });
-    if (estado !== "enviado") throw new Error(nota.charAt(0).toUpperCase() + nota.slice(1) + ".");
+  function abrirClaude() {
+    const url = "https://claude.ai/code/" + sesion, an = 480, al = Math.min(820, screen.availHeight - 80);
+    const izq = (screen.availLeft || 0) + screen.availWidth - an - 24, arr = (screen.availTop || 0) + 40;
+    const w = window.open(url, "claude-code-itt", `popup=yes,width=${an},height=${al},left=${izq},top=${arr}`);
+    if (w) { try { w.focus(); } catch (e) { /* otra ventana */ } return; }
+    const a = document.createElement("a"); a.href = url; a.target = "_blank"; a.rel = "noopener"; document.body.append(a); a.click(); a.remove();
   }
 
-  return { renderPedidos, abrirChat, TIPOS_PEDIDO, prepararArchivo, crearPedido };
+  return { renderPedidos, abrirClaude, TIPOS_PEDIDO, prepararArchivo, crearPedido };
 })();
 if (typeof module !== "undefined") module.exports = Asistente;
