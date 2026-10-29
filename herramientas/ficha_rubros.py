@@ -46,6 +46,7 @@ RUBROS = {  # en el orden en que se muestran (pedido de Matías, 29-10-2026: un 
 # alto total 4,10 m. Más ancho o más alto: carga especial (permiso de Vialidad, escolta o carretón).
 CAMION = {"largo": 13.5, "ancho": 2.5, "piso": 1.2, "kg": 27000}
 LIMITE_ANCHO, LIMITE_ALTO = 2.60, 4.10
+INSTRUMENTOS = r"termometro|manometro|instrumento|transmisor|bloqueo y purga|vaina|termopozo|indicador|presostato|switch|\b[pt][itwe]-\d"
 ESTRUCTURA = r"estructura|perfileria|bastidor|\bskid\b|\bupn\b|\bipn\b|\bheb\b|\bhea\b|\bipe\b|angulo|planchuela"
 
 
@@ -205,6 +206,8 @@ def pesos(cfg):
                     sin.append(f"{it['pos']} {it['descripcion'][:40]}")
             continue
         d = expandir(norm(it["descripcion"]))
+        if str(it.get("pos", "")).upper() == "INS" or re.search(INSTRUMENTOS, d):
+            continue  # instrumentos: peso despreciable, no se pesan (Matías, 29-10-2026)
         fam, at = fam_at(it)
         kg, m2, fuente = peso_item(it, at, fam, canos, bridas, acc, valv)
         if kg is not None and str(fuente).startswith("APROXIMADO"):

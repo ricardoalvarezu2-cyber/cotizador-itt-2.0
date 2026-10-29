@@ -14,6 +14,7 @@ const Ficha = (() => {
   const AJUSTE_DIRECTAS = 0.75, M2_POR_KG_ESTRUCTURA = 0.030;
   const INTERNOS = /bafle|deflector|separador de niebla|interno|elemento filtrante|placa apoyo|viruta|refuerzo/;
   const LARGO_EQ_D = [[/valvula|\bvalv\b/, 6.0], [/\btee\b|\bte\b/, 3.0], [/codo 45|curva 45/, 1.2], [/\bcodo|\bcurva/, 2.4], [/reduc/, 1.5], [/brida/, 1.5], [/casquete|\bcap\b|tapa/, 1.0]];
+  const INSTRUMENTOS = /termometro|manometro|instrumento|transmisor|bloqueo y purga|vaina|termopozo|indicador|presostato|switch|\b[pt][itwe]-\d/;
   const ESTRUCTURA = /estructura|perfileria|bastidor|\bskid\b|\bupn\b|\bipn\b|\bheb\b|\bhea\b|\bipe\b|angulo|planchuela/;
   const OD_NPS = [[21.3, 0.5], [26.7, 0.75], [33.4, 1], [42.2, 1.25], [48.3, 1.5], [60.3, 2], [73.0, 2.5], [88.9, 3], [101.6, 3.5], [114.3, 4], [141.3, 5],
     [168.3, 6], [219.1, 8], [273.0, 10], [323.8, 12], [323.9, 12], [355.6, 14], [406.4, 16], [457.0, 18], [457.2, 18], [508.0, 20], [609.6, 24], [610.0, 24]];
@@ -222,12 +223,6 @@ const Ficha = (() => {
         return [3.14159265 / 4 * (de ** 2 - di ** 2) * e * rho, null, `APROXIMADO: junta anillo × ${rho} kg/m³`];
       }
     }
-    if (/termovaina|vaina|termopozo/.test(d) && /brid/.test(d)) {
-      const m = (it.descripcion + " " + (it.especificacion || "")).match(/(\d+(?: \d\/\d)?)"/), sm = d.match(/(150|300|600|900|1500|2500)\s*(?:lb|#)/);
-      const dnv = (m ? fracPulg(m[1]) : null) || 1.5, serie = sm ? sm[1] : "300";
-      const r = P.bridas.find(r => r[0] === "ciega" && Math.abs(r[1] - dnv) < 1e-6 && r[2] === serie);
-      if (r) return [r[3], null, `APROXIMADO: termovaina con el peso de una brida ciega ${dnv}" #${serie}`];
-    }
     return [null, null, ""];
   }
   function pesoItem(it, at, fam, datos) {
@@ -286,6 +281,7 @@ const Ficha = (() => {
         else { const pf = perfil(datos, it.descripcion); if (pf && u.startsWith("m")) kgE += pf[0] * it.cantidad; else sin.push(`${it.pos} ${it.descripcion.slice(0, 40)}`); }
         continue;
       }
+      if (String(it.pos || "").toUpperCase() === "INS" || INSTRUMENTOS.test(norm(it.descripcion))) continue;  // instrumentos: no se pesan
       if (!it.at) { if (!/completar barra|sobrante|manga|junta|repuesto/.test(norm(it.descripcion))) faltan.push(`${it.pos} ${it.descripcion.slice(0, 40)}`); continue; }
       const [kg, m2, fuente] = pesoItem(it, it.at, it.fam, datos);
       if (kg != null && String(fuente).startsWith("APROXIMADO")) aprox.push(`${it.pos} ${it.descripcion.slice(0, 40)}`);

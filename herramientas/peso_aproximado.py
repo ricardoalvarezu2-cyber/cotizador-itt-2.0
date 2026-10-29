@@ -12,8 +12,7 @@ Criterios (todos marcados como aproximados, nunca reemplazan un peso de tabla):
 - Válvulas sin peso para su serie: la misma válvula (tipo y Ø) en la serie más cercana de la lista Taval.
 - Juntas espiraladas y dieléctricas: anillo de Ø interior = OD del caño, ancho 25 mm, espesor de la descripción (4,5 mm por
   defecto); densidad 7.900 (espiralada, acero inoxidable con grafito) o 1.800 kg/m³ (dieléctrica, fibra).
-- Termovaina bridada: el peso de una brida ciega de su Ø y serie.
-Instrumentos (manómetros, termómetros, transmisores) siguen sin peso: no tienen una geometría que se pueda estimar.
+Instrumentos (manómetros, termómetros, vainas, transmisores, bloqueo y purga) no se pesan: peso despreciable (Matías, 29-10-2026).
 """
 import csv
 import re
@@ -121,16 +120,6 @@ def estimar(it, at, fam, tipo, canos, bridas, acc, valv, pulg):
             di, de = k[1], k[1] + 0.05
             kg = 3.14159265 / 4 * (de ** 2 - di ** 2) * e * rho
             return kg, None, f"APROXIMADO: junta anillo Ø {di * 1000:.0f}–{de * 1000:.0f} mm × {e * 1000:g} mm × {rho} kg/m³"
-    if re.search(r"termovaina|vaina|termopozo", d) and re.search(r"brid", d):
-        m = re.search(r"(\d+(?: \d/\d)?)\"", it["descripcion"] + " " + it.get("especificacion", ""))
-        from controles_tablas import frac_pulg
-        dnv = frac_pulg(m.group(1)) if m else None
-        serie = re.search(r"(150|300|600|900|1500|2500)\s*(?:lb|#)", d)
-        serie = serie.group(1) if serie else "300"
-        dnv = dnv or 1.5
-        r = next((r for r in bridas if r["tipo"] == "ciega" and abs(float(r["dn_pulg"]) - dnv) < 1e-6 and r["serie"] == serie), None)
-        if r:
-            return float(r["peso_kg"]), None, f"APROXIMADO: termovaina con el peso de una brida ciega {dnv:g}\" #{serie}"
     return None, None, ""
 
 
