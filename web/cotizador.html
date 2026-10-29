@@ -862,6 +862,28 @@ const Ficha = (() => {
     return { kgP, m2C, kgE, sin, faltan, aprox };
   }
 
+  // Peso del equipo para la planilla (ficha_rubros.peso_equipo): piping con tabla, estructura, renglones por kg y piezas con
+  // su peso en la descripción; sin compras extra, repuestos, juntas ni instrumentos.
+  function pesoEquipo(cot, datos) {
+    let kg = 0; const sin = [];
+    for (const it of cot.items.filter(i => i.grupo === "material")) {
+      const d = norm(it.descripcion), u = norm(it.unidad);
+      if (/completar|sobrante|compra minima|repuesto|junta|esparrago/.test(d) || String(it.pos || "").toUpperCase() === "INS" || INSTRUMENTOS.test(d)) continue;
+      if (u === "kg") { const rc = d.match(/\+\s*(\d+)\s*% recortes/); kg += rc ? it.cantidad / (1 + +rc[1] / 100) : it.cantidad; continue; }  // sin el recorte
+      const m = `${it.descripcion} ${it.especificacion || ""}`.match(/(\d[\d.]*)\s*kg\b/);
+      if (m) { kg += parseFloat(m[1].replace(/\./g, "")) * it.cantidad; continue; }
+      if (ESTRUCTURA.test(d)) { const pf = perfil(datos, it.descripcion); if (pf && u.startsWith("m")) kg += pf[0] * it.cantidad; else sin.push(String(it.pos)); continue; }
+      let at = it.at;
+      if (at && !at.serie) {  // "150 x STD" en serie/sch del plano (como ficha_rubros.peso_equipo: de la especificación "Plano: Ø · serie/sch")
+        const sp = String(it.especificacion || "").match(/Plano: [^·]*· ([^·]*)/), cl = sp && sp[1].match(/\b(150|300|400|600|900|1500|2500|2000|3000|6000|9000)\b/);
+        if (cl) at = { ...at, serie: cl[1] };
+      }
+      const [k] = at ? pesoItem(it, at, it.fam, datos) : [null];
+      if (k == null) sin.push(String(it.pos)); else kg += k * it.cantidad;
+    }
+    return { kg: Math.round(kg * 10) / 10, sin_peso: sin };
+  }
+
   // m² a pintar (precotizar.superficie_pintura)
   function superficie(filas, m2Canos, datos) {
     let piezas = 0, env = 0, est = 0;
@@ -955,7 +977,7 @@ const Ficha = (() => {
     return n;
   }
 
-  return { calcular, completarAtributos, soldaduras, pesoItem, filasDe, norm, dnDe, schDe };
+  return { calcular, completarAtributos, soldaduras, pesoItem, pesoEquipo, filasDe, norm, dnDe, schDe };
 })();
 if (typeof module !== "undefined") module.exports = Ficha;
 
@@ -1367,7 +1389,7 @@ const Documentos = (() => {
   const sinHtml = s => String(s ?? "").replace(/<[^>]+>/g, "");
 
   // ------------------------------------------------------------------ Excel del presupuesto
-  function planilla(cot, idx) {
+  function planilla(cot, idx, datos) {
     idx = Motor.indicesDe(cot, idx);
     const X = XLSX;
     const wb = X.utils.book_new();
@@ -1426,6 +1448,14 @@ const Documentos = (() => {
     put(ws, "A28", "TOTAL DE LA OFERTA SIN IVA (unitario redondeado × cantidad + flete)", AZ); put(ws, "E28", { f: "D27*B5+E23" }, AZ, U);
     put(ws, "A29", `Costo / ${eq.singular} SIN ajuste por inflación`); put(ws, "B29", { f: `SUM(Materiales!G2:G${nm})*(1+B8)+SUM(${S}!G2:G${ns})` }, null, U);
     put(ws, "A30", "Ajuste por inflación incluido en el costo"); put(ws, "B30", { f: "B24-B29" }, null, U); put(ws, "C30", { f: "B30/B29" }, null, "+0.0%");
+    // peso del equipo y USD/kg (pedido de Matías, 29-10-2026), igual que armar_cotizacion.py
+    const pe = datos && typeof Ficha !== "undefined" ? Ficha.pesoEquipo(cot, datos) : { kg: 0, sin_peso: [] };
+    put(ws, "G16", `PESO Y PRECIO POR KILO (por ${eq.singular})`, { font: { bold: true } });
+    put(ws, "G17", `Peso aproximado por ${eq.singular} (kg)`); put(ws, "H17", pe.kg, INP, "#,##0");
+    put(ws, "G18", "Costo por kg (USD/kg)"); put(ws, "H18", { f: "IF(H17>0,B24/H17,0)" }, null, U);
+    put(ws, "G19", "Precio de venta por kg (USD/kg)"); put(ws, "H19", { f: "IF(H17>0,D27/H17,0)" }, null, U);
+    put(ws, "G20", pe.sin_peso.length ? `Sin peso (no suman): pos ${pe.sin_peso.join(", ")}. Corregir el peso a mano si hace falta.`
+      : "Piping con tabla, estructura, renglones por kg y piezas con su peso; sin compras extra, repuestos ni instrumentos.", GRIS);
     (cot.planilla_notas || []).forEach((t, k) => put(ws, A(1, 32 + k), sinHtml(t)));
     ws["!cols"] = [{ wch: 52 }, { wch: 16 }, { wch: 16 }, { wch: 16 }, { wch: 16 }, { wch: 4 }, { wch: 58 }, { wch: 13 }];
     X.utils.book_append_sheet(wb, ws, "Cotización");
@@ -2958,7 +2988,7 @@ if (typeof module !== "undefined") module.exports = Documentos;
     const cot = S.doc.cot;
     if (/^(tec|eco)_/.test(k) && Busqueda.plazoBloquea(cot)) throw new Error(Busqueda.plazoBloquea(cot));
     switch (k) {
-      case "presupuesto": return Documentos.planilla(cot, S.datos.indices);
+      case "presupuesto": return Documentos.planilla(cot, S.datos.indices, S.datos);
       case "compras": return Documentos.compras(cot);
       case "informe": return Documentos.pdfDeHtml(Documentos.informeHtml(ctx));
       case "tec_docx": return Documentos.ofertaDocx("tecnica", ctx);

@@ -292,6 +292,28 @@ const Ficha = (() => {
     return { kgP, m2C, kgE, sin, faltan, aprox };
   }
 
+  // Peso del equipo para la planilla (ficha_rubros.peso_equipo): piping con tabla, estructura, renglones por kg y piezas con
+  // su peso en la descripción; sin compras extra, repuestos, juntas ni instrumentos.
+  function pesoEquipo(cot, datos) {
+    let kg = 0; const sin = [];
+    for (const it of cot.items.filter(i => i.grupo === "material")) {
+      const d = norm(it.descripcion), u = norm(it.unidad);
+      if (/completar|sobrante|compra minima|repuesto|junta|esparrago/.test(d) || String(it.pos || "").toUpperCase() === "INS" || INSTRUMENTOS.test(d)) continue;
+      if (u === "kg") { const rc = d.match(/\+\s*(\d+)\s*% recortes/); kg += rc ? it.cantidad / (1 + +rc[1] / 100) : it.cantidad; continue; }  // sin el recorte
+      const m = `${it.descripcion} ${it.especificacion || ""}`.match(/(\d[\d.]*)\s*kg\b/);
+      if (m) { kg += parseFloat(m[1].replace(/\./g, "")) * it.cantidad; continue; }
+      if (ESTRUCTURA.test(d)) { const pf = perfil(datos, it.descripcion); if (pf && u.startsWith("m")) kg += pf[0] * it.cantidad; else sin.push(String(it.pos)); continue; }
+      let at = it.at;
+      if (at && !at.serie) {  // "150 x STD" en serie/sch del plano (como ficha_rubros.peso_equipo: de la especificación "Plano: Ø · serie/sch")
+        const sp = String(it.especificacion || "").match(/Plano: [^·]*· ([^·]*)/), cl = sp && sp[1].match(/\b(150|300|400|600|900|1500|2500|2000|3000|6000|9000)\b/);
+        if (cl) at = { ...at, serie: cl[1] };
+      }
+      const [k] = at ? pesoItem(it, at, it.fam, datos) : [null];
+      if (k == null) sin.push(String(it.pos)); else kg += k * it.cantidad;
+    }
+    return { kg: Math.round(kg * 10) / 10, sin_peso: sin };
+  }
+
   // m² a pintar (precotizar.superficie_pintura)
   function superficie(filas, m2Canos, datos) {
     let piezas = 0, env = 0, est = 0;
@@ -385,6 +407,6 @@ const Ficha = (() => {
     return n;
   }
 
-  return { calcular, completarAtributos, soldaduras, pesoItem, filasDe, norm, dnDe, schDe };
+  return { calcular, completarAtributos, soldaduras, pesoItem, pesoEquipo, filasDe, norm, dnDe, schDe };
 })();
 if (typeof module !== "undefined") module.exports = Ficha;

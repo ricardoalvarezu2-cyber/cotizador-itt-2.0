@@ -196,6 +196,17 @@ def escribir_planilla(cfg, carpeta, idx_rows):
     ws["A29"] = f"Costo / {eq['singular']} SIN ajuste por inflación"; ws["B29"] = f"=SUM(Materiales!G2:G{nm})*(1+B8)+SUM({S}!G2:G{ns})"
     ws["A30"] = "Ajuste por inflación incluido en el costo"; ws["B30"] = "=B24-B29"; ws["C30"] = "=B30/B29"
     ws["B29"].number_format = ws["B30"].number_format = USD; ws["C30"].number_format = "+0.0%"
+    # peso del equipo y USD/kg (pedido de Matías, 29-10-2026): el peso es editable; sale de ficha_rubros.peso_equipo
+    import ficha_rubros
+    pe = ficha_rubros.peso_equipo(cfg)
+    ws["G16"] = f"PESO Y PRECIO POR KILO (por {eq['singular']})"; ws["G16"].font = Font(bold=True)
+    ws["G17"] = f"Peso aproximado por {eq['singular']} (kg)"; ws["H17"] = pe["kg"]; ws["H17"].fill = INP; ws["H17"].number_format = "#,##0"
+    ws["G18"] = "Costo por kg (USD/kg)"; ws["H18"] = "=IF(H17>0,B24/H17,0)"
+    ws["G19"] = "Precio de venta por kg (USD/kg)"; ws["H19"] = "=IF(H17>0,D27/H17,0)"
+    ws["H18"].number_format = ws["H19"].number_format = USD
+    ws["G20"] = ("Sin peso (no suman): pos " + ", ".join(pe["sin_peso"]) + ". Corregir el peso a mano si hace falta.") if pe["sin_peso"] else \
+        "Piping con tabla, estructura, renglones por kg y piezas con su peso; sin compras extra, repuestos ni instrumentos."
+    ws["G20"].font = Font(italic=True, color="5D6B75", size=9)
     for k, t in enumerate(cfg.get("planilla_notas", []), 32):
         ws.cell(k, 1, t)
     ws.column_dimensions["A"].width = 52

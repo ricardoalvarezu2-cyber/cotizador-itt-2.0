@@ -24,6 +24,7 @@ for it in cfg["items"]:
             it["plano"]["cantidad"],it["plano"]["unidad"]=p["cantidad"],p["unidad"]
 import tempfile, copy
 fi=f.armar(Path(tempfile.mkdtemp()), copy.deepcopy(cfg))  # sin la tabla del plano: los mismos renglones que ve la página
+fi["peso_equipo"]=f.peso_equipo(cfg)
 print(json.dumps({"cot":cfg,"py":fi}))`], { cwd: raiz, maxBuffer: 1 << 26 }).toString());
   // la tabla del plano manda: renglones del cómputo que no están en el plano (compras extra "1b") no llevan plano
   const js = Ficha.calcular(r.cot, datos), py = r.py;
@@ -38,6 +39,9 @@ print(json.dumps({"cot":cfg,"py":fi}))`], { cwd: raiz, maxBuffer: 1 << 26 }).toS
   cmp("placas_grandes", js.end.placas_grandes, py.end.placas_grandes, 0);
   cmp("procedimientos", js.procedimientos.cantidad, py.procedimientos.cantidad, 0);
   cmp("litros", js.ph.litros, py.ph.litros, 0.11);
+  const pe = Ficha.pesoEquipo(r.cot, datos);  // peso del equipo de la planilla (kg y USD/kg)
+  cmp("peso_equipo", pe.kg, py.peso_equipo.kg, Math.max(0.2, 1e-4 * py.peso_equipo.kg));
+  if (pe.sin_peso.join() !== py.peso_equipo.sin_peso.join()) { ok = false; console.log(`FALLA ${c} sin_peso: página ${pe.sin_peso} · Python ${py.peso_equipo.sin_peso}`); }
   cmp("espesor_max", js.end.espesor_max_mm, py.end.espesor_max_mm, 1e-6);
   n++;
 }

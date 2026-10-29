@@ -82,7 +82,7 @@ const Documentos = (() => {
   const sinHtml = s => String(s ?? "").replace(/<[^>]+>/g, "");
 
   // ------------------------------------------------------------------ Excel del presupuesto
-  function planilla(cot, idx) {
+  function planilla(cot, idx, datos) {
     idx = Motor.indicesDe(cot, idx);
     const X = XLSX;
     const wb = X.utils.book_new();
@@ -141,6 +141,14 @@ const Documentos = (() => {
     put(ws, "A28", "TOTAL DE LA OFERTA SIN IVA (unitario redondeado × cantidad + flete)", AZ); put(ws, "E28", { f: "D27*B5+E23" }, AZ, U);
     put(ws, "A29", `Costo / ${eq.singular} SIN ajuste por inflación`); put(ws, "B29", { f: `SUM(Materiales!G2:G${nm})*(1+B8)+SUM(${S}!G2:G${ns})` }, null, U);
     put(ws, "A30", "Ajuste por inflación incluido en el costo"); put(ws, "B30", { f: "B24-B29" }, null, U); put(ws, "C30", { f: "B30/B29" }, null, "+0.0%");
+    // peso del equipo y USD/kg (pedido de Matías, 29-10-2026), igual que armar_cotizacion.py
+    const pe = datos && typeof Ficha !== "undefined" ? Ficha.pesoEquipo(cot, datos) : { kg: 0, sin_peso: [] };
+    put(ws, "G16", `PESO Y PRECIO POR KILO (por ${eq.singular})`, { font: { bold: true } });
+    put(ws, "G17", `Peso aproximado por ${eq.singular} (kg)`); put(ws, "H17", pe.kg, INP, "#,##0");
+    put(ws, "G18", "Costo por kg (USD/kg)"); put(ws, "H18", { f: "IF(H17>0,B24/H17,0)" }, null, U);
+    put(ws, "G19", "Precio de venta por kg (USD/kg)"); put(ws, "H19", { f: "IF(H17>0,D27/H17,0)" }, null, U);
+    put(ws, "G20", pe.sin_peso.length ? `Sin peso (no suman): pos ${pe.sin_peso.join(", ")}. Corregir el peso a mano si hace falta.`
+      : "Piping con tabla, estructura, renglones por kg y piezas con su peso; sin compras extra, repuestos ni instrumentos.", GRIS);
     (cot.planilla_notas || []).forEach((t, k) => put(ws, A(1, 32 + k), sinHtml(t)));
     ws["!cols"] = [{ wch: 52 }, { wch: 16 }, { wch: 16 }, { wch: 16 }, { wch: 16 }, { wch: 4 }, { wch: 58 }, { wch: 13 }];
     X.utils.book_append_sheet(wb, ws, "Cotización");

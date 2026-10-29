@@ -252,6 +252,51 @@ def transporte(cfg, kg_equipo):
     return r
 
 
+NO_VA_EN_EL_EQUIPO = r"completar|sobrante|compra minima|repuesto|junta|esparrago"
+
+
+def peso_equipo(cfg):
+    """Peso aproximado de un equipo para la planilla (kg y USD/kg, pedido de Matías 29-10-2026): piping con tabla,
+    estructura, renglones cargados por kg y piezas que dicen su peso en la descripción ("(417 kg)"). No suma compras
+    extra, repuestos, juntas ni instrumentos. Devuelve kg y la lista de renglones sin peso (el total es un mínimo)."""
+    canos, bridas, valv = (leer(TEC / f) for f in ("canos_peso_superficie.csv", "bridas_peso.csv", "valvulas_peso.csv"))
+    acc = leer_acc()
+    kg, sin = 0.0, []
+    for it in cfg["items"]:
+        if it["grupo"] != "material":
+            continue
+        d, u = norm(it["descripcion"]), norm(it["unidad"])  # sin expandir: igual que la página (ficha.js)
+        if re.search(NO_VA_EN_EL_EQUIPO, d) or str(it.get("pos", "")).upper() == "INS" or re.search(INSTRUMENTOS, d):
+            continue
+        if u == "kg":  # sin el recorte que se compra de más ("+ 10% recortes")
+            rc = re.search(r"\+\s*(\d+)\s*% recortes", d)
+            kg += it["cantidad"] / (1 + int(rc.group(1)) / 100) if rc else it["cantidad"]
+            continue
+        m = re.search(r"(\d[\d.]*)\s*kg\b", f"{it['descripcion']} {it.get('especificacion', '')}")
+        if m:
+            kg += float(m.group(1).replace(".", "")) * it["cantidad"]
+            continue
+        if es_estructura(it):
+            pf = precotizar.perfil({"descripcion": it["descripcion"]})
+            if pf and u.startswith("m"):
+                kg += pf[0] * it["cantidad"]
+            else:
+                sin.append(str(it["pos"]))
+            continue
+        fam, at = fam_at(it)
+        if not at.get("serie"):  # "150 x STD" en la columna serie/sch del plano: la serie es el número de clase
+            sp = re.search(r"Plano: [^·]*· ([^·]*)", it.get("especificacion", ""))
+            cl = re.search(r"\b(150|300|400|600|900|1500|2500|2000|3000|6000|9000)\b", sp.group(1)) if sp else None
+            if cl:
+                at = {**at, "serie": cl.group(1)}
+        k, _, _ = peso_item(it, at, fam, canos, bridas, acc, valv)
+        if k is None:
+            sin.append(str(it["pos"]))
+        else:
+            kg += k * it["cantidad"]
+    return {"kg": round(kg, 1), "sin_peso": sin}
+
+
 def armar(carpeta, cfg=None):
     carpeta = Path(carpeta)
     cfg = cfg or json.load(open(carpeta / "cotizacion.json", encoding="utf-8"))
