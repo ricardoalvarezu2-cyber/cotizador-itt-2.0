@@ -104,6 +104,7 @@ const Busqueda = (() => {
     if (!r.p) { f.tipo = "est"; f.proveedor = "SIN PRECIO CONFIABLE: pedir cotización · " + r.c; f.coincide = "sin_ref"; f.diferencia = "Sin precio confiable en el catálogo"; }
     const it = { id, pos: "", grupo: "material", descripcion: r.d.slice(0, 120), especificacion: describirAtributos(r.a), cantidad, unidad: r.u || "un", fuentes: [f] };
     if (r.f === "VAL" && /taval/i.test(`${r.a?.marca || ""} ${r.pr || ""}`)) it.taval = true;  // va con el factor de válvulas Taval
+    it.fam = r.f; it.at = { ...(r.a || {}) };  // familia y atributos del catálogo: los usa la ficha (kg y soldaduras)
     return it;
   }
 

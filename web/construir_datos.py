@@ -13,6 +13,7 @@ import copy
 import csv
 import io
 import json
+import re
 import sys
 from datetime import date
 from pathlib import Path
@@ -107,6 +108,27 @@ def antecedentes():
     return {"proyectos": filas, "claves": ip.CLAVES, "familias": ip.FAMILIAS, "vacias": sorted(ip.VACIAS), "cortas": sorted(ip.CORTAS), "tamanos": ba.TAMANOS}
 
 
+def pesos_tablas():
+    """Tablas de pesos para la ficha de la página (web/src/ficha.js, espejo de controles_tablas.peso_item). Compactas: listas."""
+    T = C / "tecnico"
+    bri = [[r["tipo"], f(r["dn_pulg"]), r["serie"], f(r["peso_kg"])] for r in leer(T / "bridas_peso.csv") if "no usar" not in r["nota"]]
+    acc = [[r["tipo"], f(r["dn_pulg"]), f(r["dn2_pulg"]) if r["dn2_pulg"] else None, r["schedule_o_clase"], r["extremos"], f(r["peso_kg"]),
+            1 if r["nota"].startswith("ATENCION") else 0, r["norma"]]
+           for nombre in ("accesorios_peso.csv", "accesorios_peso_complemento.csv") for r in leer(T / nombre)
+           if "no sirve" not in r["nota"] and r["peso_kg"]]
+    olets = [[r["tipo"], f(r["dn_salida_pulg"]), r["schedule_o_clase"], f(r["peso_kg"])] for r in leer(T / "olets_peso.csv") if r["configuracion"] == "reducing"]
+    esp = {"var": {}, "tue": {}}
+    for r in leer(T / "esparragos_peso.csv"):
+        if r["tipo"] == "varilla_por_pulgada":
+            esp["var"][r["diametro_pulg"]] = f(r["peso_unidad_kg"])
+        elif r["tipo"] == "tuerca_heavy_hex_2H":
+            esp["tue"][r["diametro_pulg"]] = f(r["peso_unidad_kg"])
+    valv = [[r["tipo"], f(r["dn_pulg"]), r["serie"], r["material"], f(r["kg"]), 1 if r["nota"].startswith("pesa menos") else 0, r["hoja"], r["celda"]]
+            for r in leer(T / "valvulas_peso.csv")]
+    perf = {re.sub(r"\s", "", r["designacion"].lower()): [f(r["kg_por_m"]), f(r["m2_por_m"]) if r["m2_por_m"] else 0] for r in leer(T / "perfiles.csv")}
+    return {"bridas": bri, "acc": acc, "olets": olets, "esp": esp, "valv": valv, "perfiles": perf}
+
+
 def main():
     mats = []
     for r in leer(C / "precios" / "catalogo_materiales.csv"):
@@ -137,13 +159,14 @@ def main():
     canos = [{"dn": f(r["dn_pulg"]), "sch": r["schedule"], "cl": r["clase"], "kg": f(r["kg_m_carbono"]), "m2": f(r["m2_m_exterior"]), "l": f(r["litros_m_interior"])}
              for r in leer(C / "tecnico" / "canos_peso_superficie.csv")]
     acc = [{"a": r["accesorio"], "f": f(r["factor"])} for r in leer(C / "tecnico" / "factores_accesorios.csv")]
+    pesos = pesos_tablas()
     clientes = [{"c": r["codigo"], "n": r["razon_social"]} for r in leer(C / "comercial" / "clientes.csv") if r["estado"].lower().startswith("activ")]
     fam = {k: {"n": v[0], "cols": v[1], "clave": v[2]} for k, v in FAMILIAS.items()}
     ant = antecedentes()
     datos = {
         "generado": date.today().isoformat(),
         "materiales": mats, "servicios": srv, "indices": idx, "dolar": dol, "tarifas": tar, "soldadura": fs, "canos": canos,
-        "accesorios": acc, "clientes": clientes, "familias": fam, "antecedentes": ant,
+        "accesorios": acc, "pesos": pesos, "clientes": clientes, "familias": fam, "antecedentes": ant,
         "plantilla_cotizacion": json.load(open(RAIZ / "cotizaciones" / "_plantilla" / "cotizacion.json", encoding="utf-8")),
         "plantilla_oferta": json.load(open(RAIZ / "cotizaciones" / "_plantilla" / "oferta.json", encoding="utf-8")),
         "logo": logo(),

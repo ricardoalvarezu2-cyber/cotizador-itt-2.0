@@ -28,6 +28,15 @@ def main(carpeta, ident="capex-oq8209", salida=None):
             it["plano"] = {k: r[k] for k in ("descripcion", "diametro", "serie_sch", "material", "extremos", "modelo_fabricante") if r.get(k)}
             if "modelo_fabricante" in it["plano"]:
                 it["plano"]["modelo"] = it["plano"].pop("modelo_fabricante")
+            if r.get("extremos_campo"):
+                it["plano"]["extremos_campo"] = r["extremos_campo"]
+            it["plano"]["cantidad"], it["plano"]["unidad"] = r["cantidad"], r["unidad"]  # tal cual el plano (la soldadura se cuenta así)
+    # familia y atributos de cada material (los mismos que usa controles_tablas.peso_item): la ficha de la página los usa
+    sys.path.insert(0, str(RAIZ / "herramientas"))
+    import ficha_rubros
+    for it in cot["items"]:
+        if it["grupo"] == "material":
+            it["fam"], it["at"] = ficha_rubros.fam_at(it)
     # transcripción literal del documento y kilos por unidad, para el Excel de Compras de la página (igual que lista_compras.py)
     sys.path.insert(0, str(RAIZ / "herramientas"))
     import lista_compras

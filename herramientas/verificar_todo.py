@@ -72,6 +72,11 @@ print(f"{'OK  ' if r.returncode == 0 else 'FALLA'} rubros detallado/global de la
 if r.returncode:
     fallas.append("rubros JS distinto de Python")
     print((r.stdout + r.stderr)[-800:])
+r = subprocess.run(["node", "web/probar_ficha.js"], cwd=RAIZ, capture_output=True, text=True)
+print(f"{'OK  ' if r.returncode == 0 else 'FALLA'} ficha de la página igual a Python (web/probar_ficha.js)")
+if r.returncode:
+    fallas.append("ficha JS distinta de Python")
+    print((r.stdout + r.stderr)[-800:])
 despues = modificados()
 if antes is not None and despues is not None:
     nuevos = sorted(despues - antes)

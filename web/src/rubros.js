@@ -90,7 +90,9 @@ const Rubros = (() => {
 
   // Ficha completa: la de Claude Code (cot.ficha) o la aproximada, más transporte y referencias en vivo
   function ficha(cot, datos, sold, motor) {
-    const base = cot.ficha && cot.ficha.mo_piping ? JSON.parse(JSON.stringify(cot.ficha)) : fichaBasica(cot, datos, sold);
+    // la ficha se calcula en vivo con ficha.js (mismas fórmulas que ficha_rubros.py); sin ficha.js, la guardada o la aproximada
+    const base = typeof Ficha !== "undefined" ? Ficha.calcular(cot, datos)
+      : cot.ficha && cot.ficha.mo_piping ? JSON.parse(JSON.stringify(cot.ficha)) : fichaBasica(cot, datos, sold);
     base.transporte = transporte(cot, (base.mo_piping.kg_piping || 0) + (base.mo_estructura.kg || 0));
     base.referencias = {};
     const idx = motor.indicesDe(cot, datos.indices), p = cot.parametros, fref = p.fecha_referencia.slice(0, 7);

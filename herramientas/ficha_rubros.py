@@ -108,14 +108,28 @@ def filas_plano(carpeta, cfg):
     for it in cfg["items"]:
         if it["grupo"] == "material":
             pl = it.get("plano") or {}
-            filas.append({"pos": str(it.get("pos", "")), "descripcion": it["descripcion"], "diametro": pl.get("diametro", ""),
-                          "serie_sch": pl.get("serie_sch", ""), "material": pl.get("material", ""), "extremos": pl.get("extremos", ""),
-                          "cantidad": it["cantidad"], "unidad": it["unidad"]})
+            if not (pl.get("extremos") or pl.get("diametro")):
+                continue
+            f = {"pos": str(it.get("pos", "")), "descripcion": pl.get("descripcion") or it["descripcion"], "diametro": pl.get("diametro", ""),
+                 "serie_sch": pl.get("serie_sch", ""), "material": pl.get("material", ""), "extremos": pl.get("extremos", ""),
+                 "cantidad": pl.get("cantidad", it["cantidad"]), "unidad": pl.get("unidad", it["unidad"])}
+            if "extremos_campo" in pl:
+                f["extremos_campo"] = pl["extremos_campo"]
+            filas.append(f)
     return filas
 
 
 def es_estructura(it):
     return it["grupo"] == "material" and bool(re.search(ESTRUCTURA, norm(it["descripcion"])))
+
+
+def fam_at(it):
+    """Familia y atributos de un renglón de material, como los lee controles_tablas.peso_item."""
+    d = expandir(norm(it["descripcion"]))
+    t = expandir(norm(f"{it['descripcion']} {it.get('especificacion', '')}"))
+    fam = familia_de(d)
+    fam = familia_de(t) if fam == "OTR" else fam
+    return fam, {**atributos(t, fam), **atributos(d, fam)}
 
 
 def pesos(cfg):
@@ -139,10 +153,7 @@ def pesos(cfg):
                     sin.append(f"{it['pos']} {it['descripcion'][:40]}")
             continue
         d = expandir(norm(it["descripcion"]))
-        t = expandir(norm(f"{it['descripcion']} {it.get('especificacion', '')}"))
-        fam = familia_de(d)
-        fam = familia_de(t) if fam == "OTR" else fam
-        at = {**atributos(t, fam), **atributos(d, fam)}
+        fam, at = fam_at(it)
         kg, m2, _ = peso_item(it, at, fam, canos, bridas, acc, valv)
         if kg is None:
             if not re.search(r"junta|termometro|manometro|instrumento|transmisor|repuesto|completar barra", d):

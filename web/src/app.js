@@ -452,7 +452,8 @@
   function panelRubros() {
     const cot = S.doc.cot, f = Rubros.ficha(cot, S.datos, S.sold, Motor), eq = E(cot.equipo?.singular || "equipo");
     S.rbAbiertos ??= new Set();
-    const origen = f.aproximada ? "Ficha aproximada: la página no tiene la tabla del plano, así que faltan juntas y placas."
+    const origen = f.aproximada ? "Ficha aproximada: faltan los datos del plano de los renglones."
+      : f.origen === "pagina" ? "Calculada con los datos del plano de cada renglón (Ø, serie, extremos) y las tablas de pesos."
       : `Ficha calculada con la tabla del plano el ${E(F(f.generada))}.`;
     const fila = r => {
       const glob = Rubros.modo(cot, r) === "global", g = Rubros.globalDe(cot, r), s = g?.fuentes[0], tr = r === "transporte", ab = S.rbAbiertos.has(r);
@@ -475,8 +476,11 @@
                 : "Suma los renglones de este rubro en la tabla de arriba. Para cotizarlo con un precio del tercero, pasalo a global: los renglones quedan guardados y vuelven si pasás de nuevo a detallado."}</p>`}
           </div></div></div>`;
     };
-    return `<section><div class="sec-head"><h2>Cotizar por rubro</h2><span class="eyebrow">detallado o global · por ${eq}</span></div>
+    const faltan = f.mo_piping?.avisos?.filter(a => /^Sin familia|^Ningún renglón/.test(a)) || [];
+    return `<section><div class="sec-head"><h2>Cotizar por rubro</h2><div class="fila"><span class="eyebrow">detallado o global · por ${eq}</span>
+        <button class="chico" data-a="recalcular" title="Vuelve a calcular soldaduras, kg, m² y placas; completa con el catálogo los datos que falten">Recalcular</button></div></div>
       <p class="small muted">${origen} Abrí un rubro para ver la ficha completa y cargar el precio global.</p>
+      ${faltan.length ? `<div class="aviso"><ul>${faltan.map(a => `<li>${E(a)}</li>`).join("")}</ul></div>` : ""}
       <div class="rubros">${Object.keys(Rubros.RUBROS).map(fila).join("")}</div></section>`;
   }
   // Cabecera de la fila de un rubro: nombre, números clave, montos y modo (se repinta sola al escribir)
@@ -831,7 +835,7 @@
 
   // Acciones que cambian la cotización: no se permiten si está aprobada o enviada (hay que volver a borrador)
   const CAMBIAN = new Set(["quitar", "editar", "manual", "item-guardar", "agregar-mat", "agregar-srv", "agregar-sel", "sold-agregar", "rx-agregar", "pin-agregar",
-    "ph-agregar", "rubro-modo", "tarea-nueva", "tarea-quitar", "restaurar", "deshacer", "rehacer"]);
+    "ph-agregar", "rubro-modo", "recalcular", "tarea-nueva", "tarea-quitar", "restaurar", "deshacer", "rehacer"]);
   const bloqueada = () => S.doc && ["aprobado", "enviado"].includes(S.doc.cot.estado);
   async function accion(a, b) {
     const cot = S.doc?.cot;
@@ -910,6 +914,15 @@
         const m2 = NUM($("#pin-m2").value);
         if (!m2 || !$("#pin-t").value) { toast("Cargá los m² y elegí la tarifa"); return; }
         agregarPintura(m2, $("#pin-t").value); guardarPronto(); render(); toast("Pintura agregada"); break;
+      }
+      case "recalcular": {
+        const n = Ficha.completarAtributos(cot, S.datos), f = Rubros.ficha(cot, S.datos, S.sold, Motor), m = f.mo_piping;
+        if (n) guardarPronto();
+        render();
+        const sin = (m.sin_peso || []).length, falta = (m.avisos || []).some(a => /^Sin familia/.test(a));
+        toast(`Recalculado: ${num(m.juntas_bw, 0)} juntas a tope, ${num(m.pulg_eq, 0)} pulg, ${num(m.kg_piping + f.mo_estructura.kg, 0)} kg`
+          + (n ? ` · completé ${n} renglón(es) con el catálogo` : "") + (sin ? ` · ${sin} sin peso en tabla` : "") + (falta ? " · hay renglones sin datos (ver aviso)" : ""));
+        break;
       }
       case "rubro-abrir": { const r = b.dataset.r; S.rbAbiertos ??= new Set(); S.rbAbiertos.has(r) ? S.rbAbiertos.delete(r) : S.rbAbiertos.add(r); render(); break; }
       case "rubro-modo": {
