@@ -2,7 +2,7 @@
 
 ## Contexto
 - Herramienta de cotización para ITT S.A. (Quilmes, Argentina), fabricante de equipos para oil & gas: calentadores, separadores, filtros, skids, manifolds, colectores, puentes de medición, cañerías, tanques y trampas. Empresa del grupo Taval (válvulas).
-- Usuario: Matías Russo, de ventas de ITT. Idioma: **español rioplatense**. **Respuestas cortas** (pedido de Matías, 28/10/2026).
+- Usuario: Matías Russo, de ventas de ITT. Idioma: **español rioplatense**. **Respuestas cortas** (pedido de Matías, 28/10/2026): qué se hizo en 2-3 líneas, los errores encontrados y lo que necesita decidir; sin listas de detalle ni cifras de cobertura (29-10-2026).
 - La base de conocimiento está en `conocimiento/` y empieza por **`conocimiento/estado_y_pendientes.md`** (estado, decisiones y pendientes: leerlo al empezar cada chat y actualizarlo al terminar) y `conocimiento/RESUMEN.md`. Las fuentes están en `fuentes_originales/`.
 
 ## Objetivo
