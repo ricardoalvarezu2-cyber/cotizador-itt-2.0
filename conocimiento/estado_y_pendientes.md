@@ -100,20 +100,21 @@ Hecho (28/10/2026): `precotizar.py` (materiales, soldaduras, pintura, PH, RX) ·
 3. Separador: pedir a Camuzzi la especificación; caudal por elemento de 0,3 µm a Gora/Pall; memoria de cálculo y esquema (se entregan con la oferta).
 
 **Comparación con la planilla del vendedor (YPF Lic 69343 PC0, 28-10-2026)** — conceptos que la app todavía no tiene:
+**Por ahora no (Matías, 29-10-2026):** puntos 1 a 3.
 1. Montaje + control dimensional + desmontaje como renglón propio.
 2. Repuestos de precomisionado, comisionado y puesta en marcha (aparte de los de 2 años).
 3. Hoja de alcance SI/NO (recipiente, plataforma, eléctrico, aislación, tracing, embalaje).
-4. Definir qué factor llevan transporte y caución (hoy van con el de MO y servicios).
+4. Factor de transporte y caución: se ajusta en Datos (Matías, 29-10-2026).
 5. Ojo: las soldaduras de COT26-0330-001 (124 juntas, 1.334,68 pulg) son de antes del ajuste de uniones directas; la ficha actual da 93 juntas y 988,83 pulg. Rehacer la precotización.
 
 **Tablas de pesos y botón Recalcular (29-10-2026)**
 1. Integrar las tablas nuevas al cálculo de kg (`controles_tablas.peso_item`, ficha) y llevarlas a la página (`datos.json`).
 2. Botón "Recalcular" en la página: soldaduras, kg, m² y placas desde los datos del plano de cada renglón, sin IA (pedido de Matías).
-3. Pedir a un proveedor el peso de la tee 8" Sch 60 y la tee 12"×8" XS×60 (ninguna tabla pública trae Sch 60).
+3. ~~Pedir el peso de tees Sch 60~~ Descartado (Matías, 29-10-2026).
 4. En Sch 40 de 12"+ y Sch 80 de 10"+ preferir Hackney Ladish sobre Texas Flange/Weldbend (pesos que no siguen el espesor).
 
 **Controles de la precotización** (28-10-2026, segunda tanda corregida: ver `auditorias/2026-10-28_controles_4_agentes.md`)
-1. Cargar horas de antecedentes que faltan (TECPETROL/7 trampas; filtros chicos; tanques grandes) en `costos/horas_por_equipo.csv`.
+1. ~~Cargar horas de antecedentes que faltan~~ Descartado por ahora (Matías, 29-10-2026).
 2. Instrumentos: sumar accesorios de la hoja de datos (RTD y vaina del TT, manifolds, bloqueo y purga).
 3. RX por jornada (placas por servicio) y propuesta de caución, repuestos y transporte (hoy solo aviso).
 
