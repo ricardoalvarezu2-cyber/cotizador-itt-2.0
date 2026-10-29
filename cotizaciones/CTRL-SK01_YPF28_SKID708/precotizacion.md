@@ -8,35 +8,35 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 
 | Pos | Ítem | Resultado | Precio | Fecha y tipo | Diferencias / faltantes |
 |---|---|---|---|---|---|
-| 1 | Caño s/c extr. SCH XS (323,8 x 12,70) 12" | IGUAL | 217,23 / m | 2026-06-26 · planilla interna | — |
-| 2 | Caño c/c extr. STD (406,4 x 9,52) 16" | SIMILAR | 248,98 / m | 2025-12-26 · lista | material: A106 B (pedido API 5L); costura: sin costura (pedido con costura) |
-| 3 | Tee normal 12" | IGUAL ⚠ | 1.797,97 / un | 2025-02-17 · lista | — |
-| 4 | Tee de reducción SCH STD x XS 16"x12" | SIMILAR | 2.802,34 / un | 2025-12-26 · lista | se prefirió un precio reciente a stock (precio maestro) del 2024-11-01 (BRI-01262, USD 215,80) |
-| 5 | Brida WN RF 300 LB SCH XS 12" | SIMILAR | 218,49 / un | 2026-07-06 · cotización | se prefirió un precio reciente a compra del 2022-11-15 (BRI-01216, USD 163,20) |
-| 6 | Brida WN RF 300 LB 16" | SIMILAR | 634,01 / un | 2025-12-26 · lista | diametro: 14" (pedido 16"); schedule: 40 (no pedido); precio escalado por diámetro (16" ÷ 14")^1,5 = × 1,22 |
-| 7 | Brida ciega RF 300 LB 12" | IGUAL | 426,44 / un | 2025-12-26 · lista | — |
-| 8 | Brida ciega RF 300 LB 16" | SIMILAR | 691,17 / un | 2025-12-26 · lista | diametro: 14" (pedido 16"); precio escalado por diámetro (16" ÷ 14")^1,5 = × 1,22 |
-| 9 | Brida SW RF 300 LB SCH 80 1 1/2" | IGUAL | 14,88 / un | 2026-07-06 · cotización | — |
+| 1 | Caño s/c extr. SCH XS (323,8 x 12,70) · Ø 12" | IGUAL | 217,23 / m | 2026-06-26 · planilla interna | — |
+| 2 | Caño c/c extr. STD (406,4 x 9,52) · Ø 16" | SIMILAR | 248,98 / m | 2025-12-26 · lista | material: A106 B (pedido API 5L); costura: sin costura (pedido con costura) |
+| 3 | Tee normal · Ø 12" | IGUAL ⚠ | 1.797,97 / un | 2025-02-17 · lista | — |
+| 4 | Tee de reducción SCH STD x XS · Ø 16"x12" | SIMILAR | 2.802,34 / un | 2025-12-26 · lista | se prefirió un precio reciente a stock (precio maestro) del 2024-11-01 (BRI-01262, USD 215,80) |
+| 5 | Brida WN RF 300 LB SCH XS · Ø 12" | SIMILAR | 218,49 / un | 2026-07-06 · cotización | se prefirió un precio reciente a compra del 2022-11-15 (BRI-01216, USD 163,20) |
+| 6 | Brida WN RF 300 LB · Ø 16" | SIMILAR | 634,01 / un | 2025-12-26 · lista | diametro: 14" (pedido 16"); schedule: 40 (no pedido); precio escalado por diámetro (16" ÷ 14")^1,5 = × 1,22 |
+| 7 | Brida ciega RF 300 LB · Ø 12" | IGUAL | 426,44 / un | 2025-12-26 · lista | — |
+| 8 | Brida ciega RF 300 LB · Ø 16" | SIMILAR | 691,17 / un | 2025-12-26 · lista | diametro: 14" (pedido 16"); precio escalado por diámetro (16" ÷ 14")^1,5 = × 1,22 |
+| 9 | Brida SW RF 300 LB SCH 80 · Ø 1 1/2" | IGUAL | 14,88 / un | 2026-07-06 · cotización | — |
 | 10 | Espárrago c/2 tuercas p/brida 300 LB 1.25x207 | SIMILAR | 7,33 / un | 2025-09-04 · cotización | serie: sin dato (pedido 300); material: A193 B7 (pedido A194 2H); medida: 1 1/4 x 9 (pedido 1 1/4 x 8 1/8) |
 | 11 | Espárrago c/2 tuercas p/brida 300 LB 1.125x18 | SIMILAR | 12,00 / un | 2026-06-26 · planilla interna | serie: sin dato (pedido 300); material: sin dato (pedido A194 2H); medida: 1 1/8 x 6 3/4 (pedido 1 1/8 x 7 3/8 |
-| 12 | Junta espiralada RF esp. 4,5 mm 300 LB 1 1/2" | SIMILAR | 6,00 / un | 2026-08-14 · planilla interna | diametro: 2" (pedido 1.5"); material: AISI 316 (no pedido); extremos: sin dato (pedido RF) |
-| 13 | Junta espiralada RF esp. 4,5 mm 300 LB 12" | SIMILAR (estimado cepo) ⚠ | 42,44 / un | 2025-03-27 · estimado (cepo) | material: AISI 316 (no pedido); extremos: sin dato (pedido RF) |
-| 14 | Junta espiralada RF esp. 4,5 mm 300 LB 16" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (2") (JUN-02769, USD 6,00): pedir cotización |
-| 15 | Niple s/c NPT L=100 mm 1 1/2" | IGUAL ⚠ | 5,60 / un | 2024-11-01 · stock (precio maestro) | — |
-| 16 | Niple s/c NPT L=100 mm 1/2" | IGUAL ⚠ | 20,00 / un | 2026-04-22 · planilla interna | — |
-| 17 | Niple s/c NPT L=100 mm 3/4" | SIMILAR ⚠ | 3,93 / un | 2024-11-01 · stock (precio maestro) | schedule: 160 (pedido 80); escalado por espesor (sch 80 3,91 mm ÷ sch 160 5,56 mm = × 0,70) |
-| 18 | Niple s/c NPT L=100 mm 3/4" | IGUAL ⚠ | 5,59 / un | 2024-11-01 · stock (precio maestro) | — |
-| 19 | Tapón NPT cab. hexag. 1/2" | SIMILAR | 1,38 / un | 2025-08-27 · cotización | — · faltan: serie |
-| 20 | Tapón NPT cab. hexag. 3/4" | SIMILAR | 2,30 / un | 2026-02-20 · planilla interna | — · faltan: serie |
-| 21 | Sockolet SW 3000 LB 12"x1 1/2" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (0.5") (AFO-03330, USD 10,00): pedir cotización |
-| 22 | Sockolet SW 3000 LB 12"x3/4" | SIMILAR (estimado cepo) ⚠ | 15,59 / un | 2025-03-27 · estimado (cepo) | diametro: 0.75" (pedido 12"); material: sin dato (pedido A105); extremos: sin dato (pedido SW/BW) |
-| 23 | Sockolet SW 3000 LB 16"x3/4" | SIMILAR (estimado cepo) ⚠ | 15,59 / un | 2025-03-27 · estimado (cepo) | diametro: 0.75" (pedido 16"); material: sin dato (pedido A105); extremos: sin dato (pedido SW/BW) |
-| 24 | Sockolet SW 3000 LB 16"x1/2" | SIMILAR | 10,00 / un | 2025-12-23 · planilla interna | diametro: 0.5" (pedido 16"); extremos: sin dato (pedido SW/BW) |
+| 12 | Junta espiralada RF esp. 4,5 mm 300 LB · Ø 1  | SIMILAR | 6,00 / un | 2026-08-14 · planilla interna | diametro: 2" (pedido 1.5"); material: AISI 316 (no pedido); extremos: sin dato (pedido RF) |
+| 13 | Junta espiralada RF esp. 4,5 mm 300 LB · Ø 12 | SIMILAR (estimado cepo) ⚠ | 42,44 / un | 2025-03-27 · estimado (cepo) | material: AISI 316 (no pedido); extremos: sin dato (pedido RF) |
+| 14 | Junta espiralada RF esp. 4,5 mm 300 LB · Ø 16 | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (2") (JUN-02769, USD 6,00): pedir cotización |
+| 15 | Niple s/c NPT L=100 mm · Ø 1 1/2" | IGUAL ⚠ | 5,60 / un | 2024-11-01 · stock (precio maestro) | — |
+| 16 | Niple s/c NPT L=100 mm · Ø 1/2" | IGUAL ⚠ | 20,00 / un | 2026-04-22 · planilla interna | — |
+| 17 | Niple s/c NPT L=100 mm · Ø 3/4" | SIMILAR ⚠ | 3,93 / un | 2024-11-01 · stock (precio maestro) | schedule: 160 (pedido 80); escalado por espesor (sch 80 3,91 mm ÷ sch 160 5,56 mm = × 0,70) |
+| 18 | Niple s/c NPT L=100 mm · Ø 3/4" | IGUAL ⚠ | 5,59 / un | 2024-11-01 · stock (precio maestro) | — |
+| 19 | Tapón NPT cab. hexag. · Ø 1/2" | SIMILAR | 1,38 / un | 2025-08-27 · cotización | — · faltan: serie |
+| 20 | Tapón NPT cab. hexag. · Ø 3/4" | SIMILAR | 2,30 / un | 2026-02-20 · planilla interna | — · faltan: serie |
+| 21 | Sockolet SW 3000 LB · Ø 12"x1 1/2" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (0.5") (AFO-03330, USD 10,00): pedir cotización |
+| 22 | Sockolet SW 3000 LB · Ø 12"x3/4" | SIMILAR (estimado cepo) ⚠ | 15,59 / un | 2025-03-27 · estimado (cepo) | diametro: 0.75" (pedido 12"); material: sin dato (pedido A105); extremos: sin dato (pedido SW/BW) |
+| 23 | Sockolet SW 3000 LB · Ø 16"x3/4" | SIMILAR (estimado cepo) ⚠ | 15,59 / un | 2025-03-27 · estimado (cepo) | diametro: 0.75" (pedido 16"); material: sin dato (pedido A105); extremos: sin dato (pedido SW/BW) |
+| 24 | Sockolet SW 3000 LB · Ø 16"x1/2" | SIMILAR | 10,00 / un | 2025-12-23 · planilla interna | diametro: 0.5" (pedido 16"); extremos: sin dato (pedido SW/BW) |
 | 25 | Válvula esférica NPT WOG 2000 P.T. op. palanc | IGUAL | 36,06 / un | 2025-09-01 · lista | — |
 | 26 | Válvula esférica NPT WOG 2000 P.T. op. palanc | IGUAL | 38,80 / un | 2025-09-01 · lista | — |
 | 27 | Válvula de retención a clapeta FLG RF 300 LB  | IGUAL | 1.425,00 / un | 2025-09-01 · lista | — |
-| 28 | Válvula globo NPT 800 LB op. volante 1/2" | **SIN PRECIO** | — | — | pedir cotización |
-| 29 | Válvula globo NPT 800 LB op. volante 3/4" | **SIN PRECIO** | — | — | pedir cotización |
+| 28 | Válvula globo NPT 800 LB op. volante · Ø 1/2" | **SIN PRECIO** | — | — | pedir cotización |
+| 29 | Válvula globo NPT 800 LB op. volante · Ø 3/4" | **SIN PRECIO** | — | — | pedir cotización |
 | 30 | Válvula esférica FLG RF 300 LB P.T. op. volan | SIMILAR | 5.750,00 / un | 2025-09-01 · lista | material: A216 WCB (pedido Acero al carbono) |
 | 31 | Bastidor del skid (perfilería) | SIMILAR (acero por kg) | USD 1,90/kg | 2026-02-10 cot | precio por kg de materia prima (hierro ángulo 3x1/4) +10% por recortes; no incluye corte, plegado ni rolado |
 | 1b | Completar barra de 12 m (pos 1) | compra extra | USD 217,23/m × 1,7 m | | Se usan 13,8 m en 6 equipo(s) y se compran 24 m. Borrar si hay sobrante en stock |

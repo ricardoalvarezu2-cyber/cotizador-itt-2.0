@@ -8,28 +8,28 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 
 | Pos | Ítem | Resultado | Precio | Fecha y tipo | Diferencias / faltantes |
 |---|---|---|---|---|---|
-| 1 | Brida WNRF 3" | SIMILAR | 52,21 / un | 2026-03-03 · planilla interna | diametro: 2" (pedido 3"); precio escalado por diámetro (3" ÷ 2")^1,5 = × 1,84 · faltan: material |
-| 2 | Caño sin costura 3" | SIMILAR | 30,30 / m | 2025-12-10 · planilla interna | — · faltan: material |
-| 3 | Tee reducción BW 3" x 2" | IGUAL | 64,11 / un | 2026-08-14 · planilla interna | — |
-| 4 | Brida WNRF 2" | SIMILAR | 28,42 / un | 2026-03-03 · planilla interna | — · faltan: material |
-| 5 | Tee reducción BW 2" x 1 1/2" | IGUAL | 33,59 / un | 2025-12-26 · lista | — |
-| 6 | Brida SWRF 1 1/2" | SIMILAR (estimado cepo) ⚠ | 25,11 / un | 2024-11-01 · estimado (cepo) | diametro: 2" (pedido 1.5"); schedule: sin dato (pedido 160); material: A182 F316 (no pedido); precio escalado  · faltan: material |
-| 7 | Válvula esférica 2" | SIMILAR | 434,00 / un | 2025-09-01 · lista | paso: reducido (no pedido) · faltan: paso |
+| 1 | Brida WNRF · Ø 3" | SIMILAR | 52,21 / un | 2026-03-03 · planilla interna | diametro: 2" (pedido 3"); precio escalado por diámetro (3" ÷ 2")^1,5 = × 1,84 · faltan: material |
+| 2 | Caño sin costura · Ø 3" | SIMILAR | 30,30 / m | 2025-12-10 · planilla interna | — · faltan: material |
+| 3 | Tee reducción BW · Ø 3" x 2" | IGUAL | 64,11 / un | 2026-08-14 · planilla interna | — |
+| 4 | Brida WNRF · Ø 2" | SIMILAR | 28,42 / un | 2026-03-03 · planilla interna | — · faltan: material |
+| 5 | Tee reducción BW · Ø 2" x 1 1/2" | IGUAL | 33,59 / un | 2025-12-26 · lista | — |
+| 6 | Brida SWRF · Ø 1 1/2" | SIMILAR (estimado cepo) ⚠ | 25,11 / un | 2024-11-01 · estimado (cepo) | diametro: 2" (pedido 1.5"); schedule: sin dato (pedido 160); material: A182 F316 (no pedido); precio escalado  · faltan: material |
+| 7 | Válvula esférica · Ø 2" | SIMILAR | 434,00 / un | 2025-09-01 · lista | paso: reducido (no pedido) · faltan: paso |
 | 8 | Válvula globo limitadora de caudal con actuad | **SIN PRECIO** | — | — | pedir cotización |
-| 9 | Válvula retención 2" | IGUAL | 120,00 / un | 2025-09-01 · lista | — |
-| 10 | Filtro Y 2" | **SIN PRECIO** | — | — | pedir cotización |
+| 9 | Válvula retención · Ø 2" | IGUAL | 120,00 / un | 2025-09-01 · lista | — |
+| 10 | Filtro Y · Ø 2" | **SIN PRECIO** | — | — | pedir cotización |
 | 11 | Junta espiralada RF esp. 4.5 mm anillo interi | SIMILAR ⚠ | 2,30 / un | 2026-02-19 · planilla interna | material: sin dato (pedido AISI 316); extremos: sin dato (pedido RF) |
-| 12 | Caudalímetro V-Cone 2" | SIMILAR | 4.200,00 / un | 2026-03-10 · planilla interna | — · faltan: rango, conexion |
-| 13 | Caño sin costura 2" | SIMILAR | 16,62 / m | 2026-08-14 · planilla interna | — · faltan: material |
+| 12 | Caudalímetro V-Cone · Ø 2" | SIMILAR | 4.200,00 / un | 2026-03-10 · planilla interna | — · faltan: rango, conexion |
+| 13 | Caño sin costura · Ø 2" | SIMILAR | 16,62 / m | 2026-08-14 · planilla interna | — · faltan: material |
 | 14 | Computador de caudal | **SIN PRECIO** | — | — | pedir cotización |
 | 15 | Inyector de químicos | **SIN PRECIO** | — | — | pedir cotización |
 | 16 | Manómetro + válvula de bloqueo y purga | SIMILAR | 120,00 / un | 2026-08-14 · planilla interna | — · faltan: rango, conexion |
 | 17 | Transmisor de temperatura 4-20 mA + termovain | SIMILAR | 1.448,33 / un | 2026-08-14 · planilla interna | — · faltan: rango, conexion |
-| 18 | Sockolet 1" | SIMILAR (estimado cepo) ⚠ | 24,00 / un | 2025-03-27 · estimado (cepo) | diametro: 0.75" (pedido 1"); extremos: sin dato (pedido SW/BW); precio escalado por diámetro (1" ÷ 0,75")^1,5  · faltan: material |
+| 18 | Sockolet · Ø 1" | SIMILAR (estimado cepo) ⚠ | 24,00 / un | 2025-03-27 · estimado (cepo) | diametro: 0.75" (pedido 1"); extremos: sin dato (pedido SW/BW); precio escalado por diámetro (1" ÷ 0,75")^1,5  · faltan: material |
 | 19 | Junta espiralada RF esp. 4.5 mm anillo interi | SIMILAR ⚠ | 2,30 / un | 2026-02-19 · planilla interna | material: sin dato (pedido AISI 316); extremos: sin dato (pedido RF) |
-| 20 | Espárrago con tuercas 5/8 x 5 5/8" | SIMILAR | 2,50 / un | 2026-02-20 · planilla interna | medida: 5/8 x 2 1/2 (pedido 5/8 x 5) · faltan: material |
-| 21 | Tee normal BW 2" | IGUAL | 25,00 / un | 2026-01-22 · planilla interna | — |
-| 22 | Válvula esférica 1" | SIMILAR | 113,88 / un | 2026-03-10 · planilla interna | material: Galvanizado (no pedido); extremos: NPT (no pedido) · faltan: material, paso |
+| 20 | Espárrago con tuercas 5/8 x 5 · Ø 5/8" | SIMILAR | 2,50 / un | 2026-02-20 · planilla interna | medida: 5/8 x 2 1/2 (pedido 5/8 x 5) · faltan: material |
+| 21 | Tee normal BW · Ø 2" | IGUAL | 25,00 / un | 2026-01-22 · planilla interna | — |
+| 22 | Válvula esférica · Ø 1" | SIMILAR | 113,88 / un | 2026-03-10 · planilla interna | material: Galvanizado (no pedido); extremos: NPT (no pedido) · faltan: material, paso |
 | 23 | Materiales de canalizaciones (8000 verdes) | **SIN PRECIO** | — | — | pedir cotización |
 | 24 | Bastidor y soportes | SIMILAR (acero por kg) | USD 1,27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2") +10% por recortes; no incluye corte, plegado ni rolado |
 

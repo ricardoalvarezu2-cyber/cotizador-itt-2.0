@@ -348,11 +348,16 @@ def armar(carpeta, tipo, cfg, precios):
                 return fmtg(float(v))
             except (TypeError, ValueError):
                 return v
+        # descripción tal cual la del cliente; la cantidad que el cliente no indicó lleva (*) y la aclaración (Matías, 29-10-2026)
+        lm = list(csv.DictReader(open(Path(carpeta) / "pedido" / "lista_materiales_plano.csv", encoding="utf-8")))
         filas = [[r["pos"], r["descripcion"] + (f" ({r['modelo_fabricante']})" if r["modelo_fabricante"] else ""),
-                  r["diametro"], r["serie_sch"], r["material"], r["extremos"], cant_vista(r["cantidad"])]
-                 for r in csv.DictReader(open(Path(carpeta) / "pedido" / "lista_materiales_plano.csv", encoding="utf-8"))]
+                  r["diametro"], r["serie_sch"], r["material"], r["extremos"], cant_vista(r["cantidad"]) + (" (*)" if r.get("cantidad_origen") else "")]
+                 for r in lm]
         c.tabla(["POS", "DESCRIPCIÓN", "Ø", "SERIE / SCH", "MATERIAL", "EXT.", "CANT."], filas,
                 [1.0, 7.4, 1.6, 1.6, 3.3, 1.6, 1.1], tam=7.5, alinear=[1, 0, 1, 1, 1, 1, 1])
+        sin_cant = [r["pos"] for r in lm if r.get("cantidad_origen")]
+        if sin_cant:
+            c.texto(f"(*) Pos. {', '.join(sin_cant)}: el cliente no indica cantidad; ITT la calculó según el plano / especificación técnica.")
         for clave in ("aclaraciones_y_desvios", "exclusiones", "alcance_general"):
             c.titulo(cfg[clave]["titulo"]); c.vinetas(cfg[clave]["items"])
         c.titulo("GARANTÍA"); c.texto(cfg["garantia"])

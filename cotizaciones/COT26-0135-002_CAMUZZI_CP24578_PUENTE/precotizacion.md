@@ -8,23 +8,23 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 
 | Pos | Ítem | Resultado | Precio | Fecha y tipo | Diferencias / faltantes |
 |---|---|---|---|---|---|
-| 1 | Filtro FM-06 #150 simple módulo 6" | **SIN PRECIO** | — | — | pedir cotización |
-| 2 | Carretel de ajuste / provisorio de turbina 4" | **SIN PRECIO** | — | — | pedir cotización |
-| 3 | Válvula esférica bridada paso total antifuego | SIMILAR | 3.500,00 / un | 2026-03-10 · planilla interna | material: Galvanizado (no pedido); extremos: sin dato (pedido RF/Bridado) · faltan: material |
-| 4 | Válvula esférica bridada paso total antifuego | SIMILAR | 300,00 / un | 2025-09-01 · lista | material: A216 WCB (no pedido); extremos: RF (pedido RF/Bridado) · faltan: material |
-| 5 | Brida WN 4" | IGUAL | 35,65 / un | 2025-12-26 · lista | — |
-| 6 | Brida WN 6" | IGUAL | 58,91 / un | 2025-12-26 · lista | — |
-| 7 | Te normal 6" | SIMILAR | 104,61 / un | 2025-12-26 · lista | material: A234 WPB (pedido A105) |
-| 8 | Te normal 4" | SIMILAR | 50,63 / un | 2025-12-26 · lista | material: A234 WPB (pedido A105) |
-| 9 | Reducción concéntrica 6"x4" | SIMILAR | 49,60 / un | 2025-12-26 · lista | material: A234 WPB (no pedido) · faltan: material |
-| 10 | Codo 90° 4" | IGUAL | 26,20 / un | 2025-12-26 · lista | — |
-| 11 | Termovaina de acero inoxidable 3/4" NPT 3/4" | SIMILAR (estimado cepo) ⚠ | 256,00 / un | 2024-11-01 · estimado (cepo) | conexion: 1/2 (no pedido) · faltan: rango, conexion |
-| 12 | Cupla AC c/ válvula esférica paso total S3000 | SIMILAR | 130,65 / un | 2025-12-10 · planilla interna | material: AISI 316 (no pedido); trim: ptfe (no pedido) · faltan: material |
-| 13 | Skid y soportes | **SIN PRECIO** | — | — | pedir cotización |
-| 14 | Caño 4" | SIMILAR | 26,95 / m | 2025-12-26 · lista | costura: con costura (no pedido) · faltan: costura |
-| 15 | Caño 6" | SIMILAR | 50,60 / m | 2025-12-26 · lista | costura: con costura (no pedido) · faltan: costura |
-| 16 | Cupla de AC sold. 1/2" NPT c/ válvula esféric | SIMILAR | 65,20 / un | 2026-01-26 · planilla interna | material: A105 (pedido A106 B); extremos: NPT (pedido NPT/SW) · faltan: paso |
-| A | Temperatura para correctora de caudal 0-100 ° | **SIN PRECIO** | — | — | pedir cotización |
+| 1 | FILTRO FM-06 #150 SIMPLE MÓDULO · Ø 6" | **SIN PRECIO** | — | — | pedir cotización |
+| 2 | CARRETEL DE AJUSTE / PROVISORIO DE TURBINA ·  | **SIN PRECIO** | — | — | pedir cotización |
+| 3 | VÁLVULA ESFÉRICA BRIDADA PASO TOTAL APF · Ø 6 | SIMILAR | 3.500,00 / un | 2026-03-10 · planilla interna | material: Galvanizado (no pedido); extremos: sin dato (pedido RF/Bridado) · faltan: material |
+| 4 | VÁLVULA ESFÉRICA BRIDADA PASO TOTAL APF · Ø 4 | SIMILAR | 300,00 / un | 2025-09-01 · lista | material: A216 WCB (no pedido); extremos: RF (pedido RF/Bridado) · faltan: material |
+| 5 | BRIDA WN · Ø 4" | IGUAL | 35,65 / un | 2025-12-26 · lista | — |
+| 6 | BRIDA WN · Ø 6" | IGUAL | 58,91 / un | 2025-12-26 · lista | — |
+| 7 | TE NORMAL · Ø 6" | SIMILAR | 104,61 / un | 2025-12-26 · lista | material: A234 WPB (pedido A105) |
+| 8 | TE NORMAL · Ø 4" | SIMILAR | 50,63 / un | 2025-12-26 · lista | material: A234 WPB (pedido A105) |
+| 9 | REDUCCIÓN CONCÉNTRICA · Ø 6"x4" | SIMILAR | 49,60 / un | 2025-12-26 · lista | material: A234 WPB (no pedido) · faltan: material |
+| 10 | CODO 90° · Ø 4" | IGUAL | 26,20 / un | 2025-12-26 · lista | — |
+| 11 | TERMOVAINA DE ACERO INOXIDABLE 3/4" NPT · Ø 3 | SIMILAR (estimado cepo) ⚠ | 256,00 / un | 2024-11-01 · estimado (cepo) | conexion: 1/2 (no pedido) · faltan: rango, conexion |
+| 12 | CUPLA AC C/ VALV ESF. PASO TOTAL S3000 1/2" C | SIMILAR | 130,65 / un | 2025-12-10 · planilla interna | material: AISI 316 (no pedido); trim: ptfe (no pedido) · faltan: material |
+| 13 | SKID Y SOPORTES | **SIN PRECIO** | — | — | pedir cotización |
+| 14 | CAÑO 4" · Ø 4" | SIMILAR | 26,95 / m | 2025-12-26 · lista | costura: con costura (no pedido) · faltan: costura |
+| 15 | CAÑO 6" · Ø 6" | SIMILAR | 50,60 / m | 2025-12-26 · lista | costura: con costura (no pedido) · faltan: costura |
+| 16 | CUPLA DE AC SOLD. 1/2" NPT C/ VLV. ESF 1/2" S | SIMILAR | 65,20 / un | 2026-01-26 · planilla interna | material: A105 (pedido A106 B); extremos: NPT (pedido NPT/SW) · faltan: paso |
+| A | TEMPERATURA PARA CORRECTORA DE CAUDAL · Ø 3/4 | **SIN PRECIO** | — | — | pedir cotización |
 | 14b | Completar barra de 12 m (pos 14) | compra extra | USD 26,95/m × 4 m | | Se usan 8 m en 1 equipo(s) y se compran 12 m. Borrar si hay sobrante en stock |
 | 15b | Completar barra de 12 m (pos 15) | compra extra | USD 50,60/m × 11 m | | Se usan 1 m en 1 equipo(s) y se compran 12 m. Borrar si hay sobrante en stock |
 
@@ -40,8 +40,8 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - pos 8: 4,5 extremo(s) BW de taller (3 por unidad × 1 × 1,5 por el caño) × 4" × 1,0000
 - pos 9: 6 extremo(s) BW de taller (2 por unidad × 2 × 1,5 por el caño) × 5" × 1,0000
 - pos 10: 9 extremo(s) BW de taller (2 por unidad × 3 × 1,5 por el caño) × 4" × 1,0000
-- pos 12: 1 junta(s) de Cupla AC c/ válvula esfér sobre caño × 0,5" × 1,75 = 0,88
-- pos 16: 2 junta(s) de Cupla de AC sold. 1/2" NP sobre caño × 0,5" × 1,75 = 1,75
+- pos 12: 1 junta(s) de CUPLA AC C/ VALV ESF. PAS sobre caño × 0,5" × 1,75 = 0,88
+- pos 16: 2 junta(s) de CUPLA DE AC SOLD. 1/2" NP sobre caño × 0,5" × 1,75 = 1,75
 
 ## 3. Servicios calculados
 

@@ -8,34 +8,34 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 
 | Pos | Ítem | Resultado | Precio | Fecha y tipo | Diferencias / faltantes |
 |---|---|---|---|---|---|
-| 1 | Brida slip on RF 2" | IGUAL | 15,70 / un | 2025-12-26 · lista | — |
-| 2 | Brida slip on RF 4" | IGUAL | 51,35 / un | 2025-12-26 · lista | — |
-| 3 | Brida ciega 4" | IGUAL | 60,12 / un | 2025-12-26 · lista | — |
-| 4 | Caño sin costura longitud 150 mm 2" | SIMILAR | 16,62 / m | 2026-08-14 · planilla interna | material: sin dato (pedido A53) |
-| 5 | Caño sin costura longitud 400 mm 4" | SIMILAR | 34,34 / m | 2025-12-26 · lista | material: A106 B (pedido A53) |
-| 6 | Tapón roscado 1/2" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (1.5") (AFO-00858, USD 47,17): pedir cotización |
+| 1 | Brida slip on RF · Ø 2" | IGUAL | 15,70 / un | 2025-12-26 · lista | — |
+| 2 | Brida slip on RF · Ø 4" | IGUAL | 51,35 / un | 2025-12-26 · lista | — |
+| 3 | Brida ciega · Ø 4" | IGUAL | 60,12 / un | 2025-12-26 · lista | — |
+| 4 | Caño sin costura longitud 150 mm · Ø 2" | SIMILAR | 16,62 / m | 2026-08-14 · planilla interna | material: sin dato (pedido A53) |
+| 5 | Caño sin costura longitud 400 mm · Ø 4" | SIMILAR | 34,34 / m | 2025-12-26 · lista | material: A106 B (pedido A53) |
+| 6 | Tapón roscado · Ø 1/2" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (1.5") (AFO-00858, USD 47,17): pedir cotización |
 | 7 | Media cupla con tapón roscado conexión manóme | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (0.5") (AFO-00790, USD 3,90): pedir cotización |
-| 8 | Codo 90 radio corto 2" | IGUAL | 6,08 / un | 2025-12-26 · lista | — |
-| 9 | Casquete semielíptico 4" | IGUAL | 13,39 / un | 2026-02-11 · cotización | — |
+| 8 | Codo 90 radio corto · Ø 2" | IGUAL | 6,08 / un | 2025-12-26 · lista | — |
+| 9 | Casquete semielíptico · Ø 4" | IGUAL | 13,39 / un | 2026-02-11 · cotización | — |
 | 10 | Elemento filtrante G 0.5 | SIMILAR | 329,00 / un | 2026-03-09 · cotización | — · faltan: diametro, serie |
 | 11 | Varilla roscada para fijación de elemento fil | SIMILAR | 329,00 / un | 2026-03-09 · cotización | diametro: sin dato (pedido 0.375") · faltan: serie |
-| 12 | Tuerca mariposa de bronce 3/8" | SIMILAR (estimado cepo) ⚠ | 10,30 / un | 2024-11-01 · estimado (cepo) | diametro: sin dato (pedido 0.375"); material: sin dato (pedido Bronce) |
-| 13 | Arandela plana 3/8" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (0.875") (JUN-01602, USD 0,17): pedir cotización |
+| 12 | Tuerca mariposa de bronce · Ø 3/8" | SIMILAR (estimado cepo) ⚠ | 10,30 / un | 2024-11-01 · estimado (cepo) | diametro: sin dato (pedido 0.375"); material: sin dato (pedido Bronce) |
+| 13 | Arandela plana · Ø 3/8" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (0.875") (JUN-01602, USD 0,17): pedir cotización |
 | 14 | Espárrago con 2 tuercas zincado 3/4 x 120.70  | SIMILAR | 10,00 / un | 2026-02-19 · planilla interna | medida: 3/4 x 4 7/8 (pedido 3/4 x 4 3/4) |
 | 15 | Placa apoyo con guía para elemento filtrante  | SIMILAR (acero por kg) | USD 1,26/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 3/16", la más cercana a 4 mm) +10% por recortes; no incluye corte, plegado ni rolado |
 | 16 | Tapa para soporte de elemento filtrante espes | SIMILAR (acero por kg) | USD 1,26/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 3/16", la más cercana a 4 mm) +10% por recortes; no incluye corte, plegado ni rolado |
-| 17 | Junta espirometálica 4" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (10") (JUN-04923, USD 7,14): pedir cotización |
+| 17 | Junta espirometálica · Ø 4" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (10") (JUN-04923, USD 7,14): pedir cotización |
 | 18 | Soporte para chapa de identificación espesor  | SIMILAR (acero por kg) | USD 1,26/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 3/16", la más cercana a 2 mm) +10% por recortes; no incluye corte, plegado ni rolado |
 | 19 | Chapa de identificación litografiada espesor  | **SIN PRECIO** | — | — | pedir cotización |
-| 20 | Asas de hierro redondo 1/2" | SIMILAR (acero por kg) | USD 1,27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2") +10% por recortes; no incluye corte, plegado ni rolado |
-| 21 | Manómetro diferencial 0-2 bar 1/2" | SIMILAR | 120,00 / un | 2026-08-14 · planilla interna | rango: sin dato (pedido 0-2 bar) · faltan: conexion |
-| 22 | Conector recto con tuerca y doble virola 1/4" | SIMILAR (estimado cepo) ⚠ | 10,30 / un | 2024-11-01 · estimado (cepo) | diametro: sin dato (pedido 0.25"); material: sin dato (pedido AISI 304) |
-| 23 | Refuerzo para derivación tipo poncho 4 x 2 4" | **SIN PRECIO** | — | — | pedir cotización |
-| 24 | Válvula esférica cuerpo tripartito 1/2" | SIMILAR | 33,81 / un | 2026-02-20 · planilla interna | extremos: NPT (pedido NPT/SW); paso: reducido (no pedido) · faltan: paso |
-| 25 | Media cupla 1/2" | SIMILAR (estimado cepo) ⚠ | 3,90 / un | 2024-11-01 · estimado (cepo) | extremos: NPT (pedido SW) |
+| 20 | Asas de hierro redondo · Ø 1/2" | SIMILAR (acero por kg) | USD 1,27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2") +10% por recortes; no incluye corte, plegado ni rolado |
+| 21 | Manómetro diferencial 0-2 bar · Ø 1/2" | SIMILAR | 120,00 / un | 2026-08-14 · planilla interna | rango: sin dato (pedido 0-2 bar) · faltan: conexion |
+| 22 | Conector recto con tuerca y doble virola · Ø  | SIMILAR (estimado cepo) ⚠ | 10,30 / un | 2024-11-01 · estimado (cepo) | diametro: sin dato (pedido 0.25"); material: sin dato (pedido AISI 304) |
+| 23 | Refuerzo para derivación tipo poncho 4 x 2 ·  | **SIN PRECIO** | — | — | pedir cotización |
+| 24 | Válvula esférica cuerpo tripartito · Ø 1/2" | SIMILAR | 33,81 / un | 2026-02-20 · planilla interna | extremos: NPT (pedido NPT/SW); paso: reducido (no pedido) · faltan: paso |
+| 25 | Media cupla · Ø 1/2" | SIMILAR (estimado cepo) ⚠ | 3,90 / un | 2024-11-01 · estimado (cepo) | extremos: NPT (pedido SW) |
 | 26 | Chapa soporte manómetro diferencial y manifol | SIMILAR (acero por kg) | USD 1,26/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 3/16", la más cercana a 1,59 mm) +10% por recortes; no incluye corte, plegado ni rolado |
-| 27 | Arandela plana zincada 3/4" | SIMILAR (estimado cepo) ⚠ | 0,20 / un | 2024-11-01 · estimado (cepo) | — · faltan: material |
-| 12 | Tuerca mariposa de bronce 3/8" | INCLUIDAS EN EL ESPÁRRAGO | 0 | — | el precio elegido para los espárragos (14) trae tuercas: confirmar |
+| 27 | Arandela plana zincada · Ø 3/4" | SIMILAR (estimado cepo) ⚠ | 0,20 / un | 2024-11-01 · estimado (cepo) | — · faltan: material |
+| 12 | Tuerca mariposa de bronce · Ø 3/8" | INCLUIDAS EN EL ESPÁRRAGO | 0 | — | el precio elegido para los espárragos (14) trae tuercas: confirmar |
 | 4b | Completar barra de 6 m (pos 4) | compra extra | USD 16,62/m × 2,7 m | | Se usan 0,6 m en 2 equipo(s) y se compran 6 m. Borrar si hay sobrante en stock |
 | 5b | Completar barra de 12 m (pos 5) | compra extra | USD 34,34/m × 5,6 m | | Se usan 0,8 m en 2 equipo(s) y se compran 12 m. Borrar si hay sobrante en stock |
 

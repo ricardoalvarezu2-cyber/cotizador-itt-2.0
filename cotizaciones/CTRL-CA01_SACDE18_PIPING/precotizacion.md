@@ -8,11 +8,11 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 
 | Pos | Ítem | Resultado | Precio | Fecha y tipo | Diferencias / faltantes |
 |---|---|---|---|---|---|
-| 1 | Caño con costura biselado (nota 14) 36" | PROVISTO POR EL CLIENTE | 0 | — | cuenta para soldadura, pintura y PH; no se compra |
-| 2 | Caño sin costura biselado 36" | PROVISTO POR EL CLIENTE | 0 | — | cuenta para soldadura, pintura y PH; no se compra |
-| 3 | Brida WN RF ASME B16.5 36" | PROVISTO POR EL CLIENTE | 0 | — | cuenta para soldadura, pintura y PH; no se compra |
-| 4 | Codo 90° MSS-SP-75 36" | PROVISTO POR EL CLIENTE | 0 | — | cuenta para soldadura, pintura y PH; no se compra |
-| 5 | Caño sin costura biselado 12" | PROVISTO POR EL CLIENTE | 0 | — | cuenta para soldadura, pintura y PH; no se compra |
+| 1 | Caño con costura biselado (nota 14) · Ø 36" | PROVISTO POR EL CLIENTE | 0 | — | cuenta para soldadura, pintura y PH; no se compra |
+| 2 | Caño sin costura biselado · Ø 36" | PROVISTO POR EL CLIENTE | 0 | — | cuenta para soldadura, pintura y PH; no se compra |
+| 3 | Brida WN RF ASME B16.5 · Ø 36" | PROVISTO POR EL CLIENTE | 0 | — | cuenta para soldadura, pintura y PH; no se compra |
+| 4 | Codo 90° MSS-SP-75 · Ø 36" | PROVISTO POR EL CLIENTE | 0 | — | cuenta para soldadura, pintura y PH; no se compra |
+| 5 | Caño sin costura biselado · Ø 12" | PROVISTO POR EL CLIENTE | 0 | — | cuenta para soldadura, pintura y PH; no se compra |
 
 ## 2. Soldaduras (de la columna de extremos)
 

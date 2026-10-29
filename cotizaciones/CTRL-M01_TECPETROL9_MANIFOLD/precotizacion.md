@@ -8,23 +8,23 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 
 | Pos | Ítem | Resultado | Precio | Fecha y tipo | Diferencias / faltantes |
 |---|---|---|---|---|---|
-| 1 | Brida WN RF 4" | IGUAL | 120,00 / un | 2026-02-19 · planilla interna | — |
-| 2 | Brida WN RF 8" | IGUAL | 176,58 / un | 2025-08-27 · cotización | — |
-| 3 | Caño sin costura 4" | IGUAL | 47,60 / m | 2026-02-19 · planilla interna | — |
-| 4 | Caño sin costura 8" | IGUAL | 137,79 / m | 2025-12-26 · lista | — |
-| 5 | Drip ring 4" | **SIN PRECIO** | — | — | pedir cotización |
-| 6 | Espárrago con 2 tuercas 7/8 x 100 mm 7/8" | SIMILAR | 8,00 / un | 2026-06-26 · planilla interna | medida: 7/8 x 5 3/4 (pedido 7/8 x 3 7/8) · faltan: material |
-| 7 | Espárrago con 2 tuercas 7/8 x 140 mm 7/8" | SIMILAR | 8,00 / un | 2026-06-26 · planilla interna | medida: 7/8 x 5 3/4 (pedido 7/8 x 5 1/2) · faltan: material |
-| 8 | Junta espiralada 4" | IGUAL | 5,56 / un | 2026-02-19 · planilla interna | — |
-| 9 | Niple longitud 100 mm 1/2" | IGUAL ⚠ | 20,00 / un | 2026-04-22 · planilla interna | — |
-| 10 | Sockolet 1/2" | SIMILAR (estimado cepo) ⚠ | 8,49 / un | 2025-03-27 · estimado (cepo) | diametro: 0.75" (pedido 0.5"); material: sin dato (pedido A105); extremos: sin dato (pedido SW/BW); precio esc |
-| 11 | Tapón roscado 1/2" | IGUAL | 1,90 / un | 2025-12-26 · lista | — |
-| 12 | Tee normal 4" | SIMILAR | 85,18 / un | 2025-12-26 · lista | material: A234 WPB (no pedido) · faltan: material |
-| 13 | Tee de reducción 8" x 4" | SIMILAR | 465,34 / un | 2025-12-26 · lista | material: A234 WPB (no pedido) · faltan: material |
+| 1 | Brida WN RF · Ø 4" | IGUAL | 120,00 / un | 2026-02-19 · planilla interna | — |
+| 2 | Brida WN RF · Ø 8" | IGUAL | 176,58 / un | 2025-08-27 · cotización | — |
+| 3 | Caño sin costura · Ø 4" | IGUAL | 47,60 / m | 2026-02-19 · planilla interna | — |
+| 4 | Caño sin costura · Ø 8" | IGUAL | 137,79 / m | 2025-12-26 · lista | — |
+| 5 | Drip ring · Ø 4" | **SIN PRECIO** | — | — | pedir cotización |
+| 6 | Espárrago con 2 tuercas 7/8 x 100 mm · Ø 7/8" | SIMILAR | 8,00 / un | 2026-06-26 · planilla interna | medida: 7/8 x 5 3/4 (pedido 7/8 x 3 7/8) · faltan: material |
+| 7 | Espárrago con 2 tuercas 7/8 x 140 mm · Ø 7/8" | SIMILAR | 8,00 / un | 2026-06-26 · planilla interna | medida: 7/8 x 5 3/4 (pedido 7/8 x 5 1/2) · faltan: material |
+| 8 | Junta espiralada · Ø 4" | IGUAL | 5,56 / un | 2026-02-19 · planilla interna | — |
+| 9 | Niple longitud 100 mm · Ø 1/2" | IGUAL ⚠ | 20,00 / un | 2026-04-22 · planilla interna | — |
+| 10 | Sockolet · Ø 1/2" | SIMILAR (estimado cepo) ⚠ | 8,49 / un | 2025-03-27 · estimado (cepo) | diametro: 0.75" (pedido 0.5"); material: sin dato (pedido A105); extremos: sin dato (pedido SW/BW); precio esc |
+| 11 | Tapón roscado · Ø 1/2" | IGUAL | 1,90 / un | 2025-12-26 · lista | — |
+| 12 | Tee normal · Ø 4" | SIMILAR | 85,18 / un | 2025-12-26 · lista | material: A234 WPB (no pedido) · faltan: material |
+| 13 | Tee de reducción · Ø 8" x 4" | SIMILAR | 465,34 / un | 2025-12-26 · lista | material: A234 WPB (no pedido) · faltan: material |
 | 14 | Perfil UPN 140 (bastidor) | ESTIMADO (por kg) | USD 30,40/m | 2026-02-10 | 16 kg/m (perfiles.csv) × USD 1,90/kg; precio por kg de materia prima (hierro ángulo 3x1/4) +10% por recortes;  |
-| 15 | Válvula esférica 1/2" | SIMILAR | 36,06 / un | 2025-09-01 · lista | paso: total (no pedido) · faltan: paso |
-| 16 | Válvula esférica paso total 4" | IGUAL | 1.050,00 / un | 2025-09-01 · lista | — |
-| 17 | Válvula de retención 4" | IGUAL | 690,04 / un | 2026-02-19 · planilla interna | — |
+| 15 | Válvula esférica · Ø 1/2" | SIMILAR | 36,06 / un | 2025-09-01 · lista | paso: total (no pedido) · faltan: paso |
+| 16 | Válvula esférica paso total · Ø 4" | IGUAL | 1.050,00 / un | 2025-09-01 · lista | — |
+| 17 | Válvula de retención · Ø 4" | IGUAL | 690,04 / un | 2026-02-19 · planilla interna | — |
 | 3b | Completar barra de 12 m (pos 3) | compra extra | USD 47,60/m × 0,29 m | | Se usan 112 m en 28 equipo(s) y se compran 120 m. Borrar si hay sobrante en stock |
 | 4b | Completar barra de 12 m (pos 4) | compra extra | USD 137,79/m × 0,14 m | | Se usan 56 m en 28 equipo(s) y se compran 60 m. Borrar si hay sobrante en stock |
 

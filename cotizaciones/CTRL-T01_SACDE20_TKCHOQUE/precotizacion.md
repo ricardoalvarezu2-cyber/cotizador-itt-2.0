@@ -8,25 +8,25 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 
 | Pos | Ítem | Resultado | Precio | Fecha y tipo | Diferencias / faltantes |
 |---|---|---|---|---|---|
-| 1 | Virola rolada 2500 mm esp. 3/8 (590 kg c/u) 3 | ESTIMADO (por kg) | USD 2.932,30/un | 2026-02-10 | 590 kg (kg escritos en la descripción) × (USD 1,27/kg + rolado 3,7/kg (AESA/44 planilla LC servicio de mano de |
-| 2 | Casquete semielíptico 2:1 esp. 3/8 36" | IGUAL | 828,35 / un | 2025-11-20 · cotización | — |
+| 1 | Virola rolada 2500 mm esp. 3/8 (590 kg c/u) · | ESTIMADO (por kg) | USD 2.932,30/un | 2026-02-10 | 590 kg (kg escritos en la descripción) × (USD 1,27/kg + rolado 3,7/kg (AESA/44 planilla LC servicio de mano de |
+| 2 | Casquete semielíptico 2:1 esp. 3/8 · Ø 36" | IGUAL | 828,35 / un | 2025-11-20 · cotización | — |
 | 3 | Patas de chapa (2 un de 85 kg) | SIMILAR (acero por kg) | USD 1,27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2") +10% por recortes; no incluye corte, plegado ni rolado |
-| 4 | Codo 90 radio largo 2" | IGUAL | 6,08 / un | 2025-12-26 · lista | — |
+| 4 | Codo 90 radio largo · Ø 2" | IGUAL | 6,08 / un | 2025-12-26 · lista | — |
 | 5 | Bafle de entrada 400 x 200 mm espesor 6.35 mm | SIMILAR (acero por kg) | USD 1,25/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/4", la más cercana a 6,35 mm) +10% por recortes; no incluye corte, plegado ni rolado |
-| 6 | Brida slip on RF 2" | IGUAL | 12,18 / un | 2026-02-20 · planilla interna | — |
-| 7 | Brida slip on RF 6" | IGUAL | 38,19 / un | 2025-12-26 · lista | — |
-| 8 | Caño sin costura 6" | IGUAL | 60,51 / m | 2025-12-26 · lista | — |
-| 9 | Caño sin costura 2" | IGUAL | 16,62 / m | 2025-12-26 · lista | — |
-| 10 | Sombrerete de venteo longitud 300 mm 10" | **SIN PRECIO** | — | — | pedir cotización |
+| 6 | Brida slip on RF · Ø 2" | IGUAL | 12,18 / un | 2026-02-20 · planilla interna | — |
+| 7 | Brida slip on RF · Ø 6" | IGUAL | 38,19 / un | 2025-12-26 · lista | — |
+| 8 | Caño sin costura · Ø 6" | IGUAL | 60,51 / m | 2025-12-26 · lista | — |
+| 9 | Caño sin costura · Ø 2" | IGUAL | 16,62 / m | 2025-12-26 · lista | — |
+| 10 | Sombrerete de venteo longitud 300 mm · Ø 10" | **SIN PRECIO** | — | — | pedir cotización |
 | 11 | Placa de identificación | **SIN PRECIO** | — | — | pedir cotización |
 | 12 | Deflectores 900 x 200 mm espesor 6.35 mm (9 u | SIMILAR (acero por kg) | USD 1,25/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/4", la más cercana a 6,35 mm) +10% por recortes; no incluye corte, plegado ni rolado |
-| 13 | Espárrago con 2 tuercas 3/4 x 130 mm 3/4" | SIMILAR | 7,10 / un | 2024-11-01 · stock (precio maestro) | material: sin dato (pedido A194 2H) |
+| 13 | Espárrago con 2 tuercas 3/4 x 130 mm · Ø 3/4" | SIMILAR | 7,10 / un | 2024-11-01 · stock (precio maestro) | material: sin dato (pedido A194 2H) |
 | 14 | Cáncamo de izaje con chapa de respaldo (2 un) | SIMILAR (acero por kg) | USD 1,27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2") +10% por recortes; no incluye corte, plegado ni rolado |
-| 15 | Separador de niebla (con viruta) 6" | SIMILAR (acero por kg) | USD 1,27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2") +10% por recortes; no incluye corte, plegado ni rolado |
-| 16 | Brida welding neck RF 2" | IGUAL | 28,42 / un | 2026-02-19 · planilla interna | — |
+| 15 | Separador de niebla (con viruta) · Ø 6" | SIMILAR (acero por kg) | USD 1,27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2") +10% por recortes; no incluye corte, plegado ni rolado |
+| 16 | Brida welding neck RF · Ø 2" | IGUAL | 28,42 / un | 2026-02-19 · planilla interna | — |
 | 17 | Refuerzo de conexión Ø355 mm esp. 3/8 | SIMILAR (acero por kg) | USD 1,27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2", la más cercana a 355 mm) +10% por recortes; no incluye corte, plegado ni rolado (A-516: se toma el precio de chapa A-36 de la lista; el A-516 suele costar más) |
-| 18 | Media cupla 2" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (0.75") (AFO-04930, USD 3,82): pedir cotización |
-| 19 | Junta plana 6" | SIMILAR (estimado cepo) ⚠ | 5,76 / un | 2024-11-01 · estimado (cepo) | material: AISI 316 (no pedido) |
+| 18 | Media cupla · Ø 2" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (0.75") (AFO-04930, USD 3,82): pedir cotización |
+| 19 | Junta plana · Ø 6" | SIMILAR (estimado cepo) ⚠ | 5,76 / un | 2024-11-01 · estimado (cepo) | material: AISI 316 (no pedido) |
 | 20 | Cunas de apoyo (2 un de 20 kg) | SIMILAR (acero por kg) | USD 1,27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2") +10% por recortes; no incluye corte, plegado ni rolado |
 | 8b | Completar barra de 12 m (pos 8) | compra extra | USD 60,51/m × 6 m | | Se usan 6 m en 1 equipo(s) y se compran 12 m. Borrar si hay sobrante en stock |
 | 9b | Caño de la pos 9: 0,25 m en total | sin compra extra | | | menos de 0,5 m: sale de recortes del stock (confirmar) |

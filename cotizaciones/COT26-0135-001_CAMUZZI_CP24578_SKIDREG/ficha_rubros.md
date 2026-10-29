@@ -9,7 +9,7 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 - Pulgadas equivalentes de soldadura: **195,50**
 - kg de piping (caños, bridas, accesorios y válvulas con tabla): **401 kg** · bridas: 20
 - Diámetros soldados a tope: 8", 6", 3"
-- Sin peso (no suman kg): 1 Válvula monitora pilotada obt. guiado - ; 2 Válvula reguladora pilotada a diafragma ; 5 Brida WN 3"; 6 Brida WN 6"; 7 Brida WN 8"; 8 Brida ciega 8"; 11 Reducción concéntrica 6"x3"; 15 Toma multiport AC inoxidable ABAC 1/2"; 16 Válvula alivio cap. reducida roscada tip; 20 Skid y soportes s/ SCE-RE-110-0006 Rev.0; 21b Completar media tira de 6 m de la pos 21; 22b Completar media tira de 6 m de la pos 22; 23b Completar media tira de 6 m de la pos 23; 24b Completar media tira de 6 m de la pos 24; B Temperatura de salida 0-100 °C / 4-20 mA
+- Sin peso (no suman kg): 1 VALVULA MONITORA PILOTADA OBT. GUIADO - ; 2 VALVULA REGULADORA PILOTADA A DIAFRAGMA ; 5 BRIDA WN · Ø 3"; 6 BRIDA WN · Ø 6"; 7 BRIDA WN · Ø 8"; 8 BRIDA CIEGA · Ø 8"; 11 REDUCCIÓN CONCÉNTRICA · Ø 6"x3"; 15 TOMA MULTIPORT AC INOXIDABLE ABAC · Ø 1/; 16 VÁLVULA ALIVIO CAP. REDUCIDA ROSCADA TIP; 20 SKID Y SOPORTES S/ SCE-RE-110-0006 Rev.0; 21b Completar media tira de 6 m de la pos 21; 22b Completar media tira de 6 m de la pos 22; 23b Completar media tira de 6 m de la pos 23; 24b Completar media tira de 6 m de la pos 24; B TEMPERATURA DE SALIDA · Ø 3/4"
 - **Costo por antecedentes.** Por antecedentes: USD 3.479,61 (1 renglón/es, con ajuste por inflación).
   - Por unidad: USD 17,80/pulgada eq. · USD 8,67/kg de piping · USD 96,66/junta a tope
 

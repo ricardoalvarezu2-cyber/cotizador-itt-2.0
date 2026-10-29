@@ -281,8 +281,11 @@ def material(r, n):
                 VIEJOS[r["pos"]] = f"se prefirió un precio reciente a {elegido[7]['tipo_precio']} del {elegido[7]['fecha_ultimo_precio']} ({elegido[7]['codigo']}, USD {fmt(float(elegido[7]['ultimo_precio_usd']), 2)})"
                 elegido = nuevo
     item = {"id": f"M{n:02d}", "pos": r["pos"], "grupo": "material",
-            "descripcion": f"{r['descripcion']} {r['diametro']}".strip(), "cantidad": cant, "unidad": unidad,
-            "especificacion": f"Plano: {r['diametro']} · {r['serie_sch']} · {r['material']} · {r['extremos']}" + (f" · {r['modelo_fabricante']}" if r.get("modelo_fabricante") else "")}
+            # descripción del cliente tal cual (regla crítica, Matías 29-10-2026); el Ø es otra columna del plano y va aparte
+            "descripcion": f"{r['descripcion']} · Ø {r['diametro']}" if r["diametro"] and norm(r["diametro"]) != "n/a" else r["descripcion"],
+            "cantidad": cant, "unidad": unidad,
+            "especificacion": f"Plano: {r['diametro']} · {r['serie_sch']} · {r['material']} · {r['extremos']}" + (f" · {r['modelo_fabricante']}" if r.get("modelo_fabricante") else "")
+            + (f" · {r['cantidad_origen']}" if r.get("cantidad_origen") else "") + (f" · Nota ITT: {r['nota']}" if r.get("nota") else "")}
     if provee_cliente(r):
         item["provee"] = "cliente"
         item["fuentes"] = [{"tipo": "cot", "precio": 0, "proveedor": "PROVISTO POR EL CLIENTE (no se cotiza)", "origen": "tabla del plano / pliego",

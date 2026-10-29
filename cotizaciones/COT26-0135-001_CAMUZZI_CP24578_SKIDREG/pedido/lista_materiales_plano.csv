@@ -1,28 +1,28 @@
-pos,descripcion,diametro,serie_sch,material,extremos,modelo_fabricante,cantidad,unidad,extremos_campo
-1,Válvula monitora pilotada obt. guiado - NC,"3""",150,S/ Esp. CAMUZZI,RF,S/ Esp. CAMUZZI (SCE-IN-501-0015),2,un,0
-2,Válvula reguladora pilotada a diafragma - NA,"3""",150,S/ Esp. CAMUZZI,RF,S/ Esp. CAMUZZI (SCE-IN-501-0015),2,un,0
-3,Válvula esférica bridada paso reducido APF,"3""",150 / STD,S/ Esp. CAMUZZI,RF,SCE-IN-501-0008,2,un,0
-4,Válvula esférica bridada paso reducido APF,"6""",150 / STD,S/ Esp. CAMUZZI,RF,SCE-IN-501-0008,2,un,0
-5,Brida WN,"3""",150 x STD,ASTM A-105,RF/BW,,12,un,0
-6,Brida WN,"6""",150 x STD,ASTM A-105,RF/BW,,6,un,0
-7,Brida WN,"8""",150 x STD,ASTM A-105,RF/BW,,1,un,0
-8,Brida ciega,"8""",150 x STD,ASTM A-105,RF,,1,un,0
-9,Te normal,"6""",STD,ASTM A-105,BW,,3,un,0
-10,Te reducción,"8""x6""",STD,ASTM A-234 Gr. WPB,BW,,3,un,0
-11,Reducción concéntrica,"6""x3""",STD,S/ Esp. CAMUZZI,BW,,4,un,0
-12,Casquete semielíptico A.C.,"6""",STD,ASTM A-234 Gr. WPB,BW,,2,un,0
-13,Casquete semielíptico A.C.,"8""",STD,ASTM A-234 Gr. WPB,BW,,1,un,0
-14,"Cupla de AC sold. 1/2"" NPT c/ válvula esférica 1/2"" S3000","1/2""",3000,ASTM A-106,SW/NPT,,2,un,0
-15,Toma multiport AC inoxidable ABAC,"1/2""",3000,S/ Fabricante,NPT,ABAC,2,un,0
-16,Válvula alivio cap. reducida roscada tipo S-71,"1/2""",3000,S/ Fabricante,NPT,tipo S-71,2,un,0
-17,"Cupla de AC para soldar 1/2"" NPT con tapón","1/2""",3000,ASTM A-105,SW/NPT,,2,un,0
-18,"Termovaina de acero inoxidable 3/4"" NPT","3/4""",3000,AISI 316,NPT,,2,un,0
-19,Válvula blq. y purg. c/ manómetro 0-6 bar,"1/2""",3000,S/ Fabricante,NPT,,4,un,0
-20,Skid y soportes s/ SCE-RE-110-0006 Rev.0,,,,—,S/ Esp. CAMUZZI (3700 x 1630 mm; perfil UPN 120 estimado),1,un,0
-21,Caño,"3""",40,ASTM A-53 Gr. B,BW,"Cantidad no indicada en el plano (""_""): medida del dibujo",1.8,m,0
-22,Caño,"6""",40,ASTM A-53 Gr. B,BW,"Cantidad no indicada en el plano (""_""): medida del dibujo",2,m,0
-23,Caño,"6""",80,ASTM A-53 Gr. B,BW,"Cantidad no indicada en el plano (""_""): medida del dibujo",2.25,m,0
-24,Caño,"8""",40,ASTM A-53 Gr. B,BW,"Cantidad no indicada en el plano (""_""): medida del dibujo",1,m,0
-A,"Presión regulada, c/ val. bloq y purga 0-25 bar / 4-20 mA","3/4""",150,,NPT,,1,un,0
-B,Temperatura de salida 0-100 °C / 4-20 mA,"3/4""",150,,NPT,,1,un,0
-C,Switch indicador de válv monitora abierta 0-24 V,,,,—,,2,un,0
+pos,descripcion,diametro,serie_sch,material,extremos,modelo_fabricante,cantidad,unidad,extremos_campo,cantidad_origen,nota
+1,VALVULA MONITORA PILOTADA OBT. GUIADO - NC,"3""",150,S/ Esp. CAMUZZI,RF,,2,un,0,,SCE-IN-501-0015
+2,VALVULA REGULADORA PILOTADA A DIAFRAGMA - NA,"3""",150,S/ Esp. CAMUZZI,RF,,2,un,0,,SCE-IN-501-0015
+3,VÁLVULA ESFÉRICA BRIDADA PASO REDUCIDO APF,"3""",150 / STD,S/ Esp. CAMUZZI,RF,,2,un,0,,SCE-IN-501-0008
+4,VÁLVULA ESFÉRICA BRIDADA PASO REDUCIDO APF,"6""",150 / STD,S/ Esp. CAMUZZI,RF,,2,un,0,,SCE-IN-501-0008
+5,BRIDA WN,"3""",150 x STD,ASTM A-105,RF/BW,,12,un,0,,
+6,BRIDA WN,"6""",150 x STD,ASTM A-105,RF/BW,,6,un,0,,
+7,BRIDA WN,"8""",150 x STD,ASTM A-105,RF/BW,,1,un,0,,
+8,BRIDA CIEGA,"8""",150 x STD,ASTM A-105,RF,,1,un,0,,
+9,TE NORMAL,"6""",STD,ASTM A-105,BW,,3,un,0,,
+10,TE REDUCCIÓN,"8""x6""",STD,ASTM A-234 G°WPB,BW,,3,un,0,,
+11,REDUCCIÓN CONCÉNTRICA,"6""x3""",STD,S/ Esp. CAMUZZI,BW,,4,un,0,,
+12,CASQUETE SEMIELÍPTICO A.C.,"6""",STD,ASTM A-234 G°WPB,BW,,2,un,0,,
+13,CASQUETE SEMIELÍPTICO A.C.,"8""",STD,ASTM A-234 G°WPB,BW,,1,un,0,,
+14,"CUPLA DE AC SOLD. 1/2"" NPT C/ VLV. ESF 1/2"" S3000","1/2""",3000,ASTM A-106,SW/NPT,,2,un,0,,
+15,TOMA MULTIPORT AC INOXIDABLE ABAC,"1/2""",3000,S/ Fabricante,NPT,,2,un,0,,
+16,VÁLVULA ALIVIO CAP. REDUCIDA ROSCADA TIPO S-71,"1/2""",3000,S/ Fabricante,NPT,,2,un,0,,
+17,"CUPLA DE AC PARA SOLDAR 1/2"" NPT CON TAPÓN","1/2""",3000,ASTM A-105,SW/NPT,,2,un,0,,
+18,"TERMOVAINA DE ACERO INOXIDABLE 3/4"" NPT","3/4""",3000,AISI 316,NPT,,2,un,0,,
+19,VÁLVULA BLQ. Y PURG. C/ MANÓMETRO 0-6BAR,"1/2""",3000,S/ Fabricante,NPT,,4,un,0,,
+20,SKID Y SOPORTES S/ SCE-RE-110-0006 Rev.0,,,S/ Esp. CAMUZZI,—,,1,un,0,,3700 x 1630 mm; perfil UPN 120 estimado
+21,"CAÑO 3""","3""",40,ASTM A-53 GR°B,BW,,1.8,m,0,El cliente no indica cantidad: calculada por ITT según el plano (medida del dibujo),
+22,"CAÑO 6""","6""",40,ASTM A-53 GR°B,BW,,2,m,0,El cliente no indica cantidad: calculada por ITT según el plano (medida del dibujo),
+23,"CAÑO 6""","6""",80,ASTM A-53 GR°B,BW,,2.25,m,0,El cliente no indica cantidad: calculada por ITT según el plano (medida del dibujo),
+24,"CAÑO 8""","8""",40,ASTM A-53 GR°B,BW,,1,m,0,El cliente no indica cantidad: calculada por ITT según el plano (medida del dibujo),
+A,"PRESIÓN REGULADA, C/ VAL. BLOQ Y PURGA","3/4""",150,Rango: 0-25 bar / 4-20 mA,NPT,,1,un,0,,
+B,TEMPERATURA DE SALIDA,"3/4""",150,Rango: 0-100 °C / 4-20 mA,NPT,,1,un,0,,
+C,SWITCH INDICADOR DE VALV MONITORA ABIERTA,,,Rango: 0-24V,—,,2,un,0,,

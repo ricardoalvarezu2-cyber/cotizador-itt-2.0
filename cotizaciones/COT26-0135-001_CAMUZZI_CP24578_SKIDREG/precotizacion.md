@@ -8,33 +8,33 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 
 | Pos | Ítem | Resultado | Precio | Fecha y tipo | Diferencias / faltantes |
 |---|---|---|---|---|---|
-| 1 | Válvula monitora pilotada obt. guiado - NC 3" | **SIN PRECIO** | — | — | pedir cotización |
-| 2 | Válvula reguladora pilotada a diafragma - NA  | **SIN PRECIO** | — | — | pedir cotización |
-| 3 | Válvula esférica bridada paso reducido APF 3" | SIMILAR | 126,00 / un | 2025-09-01 · lista | material: A216 WCB (no pedido); extremos: RF (pedido RF/Bridado) · faltan: material |
-| 4 | Válvula esférica bridada paso reducido APF 6" | SIMILAR | 466,00 / un | 2025-09-01 · lista | material: A216 WCB (no pedido); extremos: RF (pedido RF/Bridado) · faltan: material |
-| 5 | Brida WN 3" | IGUAL | 26,61 / un | 2025-12-26 · lista | — |
-| 6 | Brida WN 6" | IGUAL | 58,91 / un | 2025-12-26 · lista | — |
-| 7 | Brida WN 8" | IGUAL | 92,62 / un | 2025-12-26 · lista | — |
-| 8 | Brida ciega 8" | SIMILAR | 88,17 / un | 2025-12-26 · lista | schedule: sin dato (pedido 40) |
-| 9 | Te normal 6" | SIMILAR | 104,61 / un | 2025-12-26 · lista | material: A234 WPB (pedido A105) |
-| 10 | Te reducción 8"x6" | IGUAL | 283,84 / un | 2025-12-26 · lista | — |
-| 11 | Reducción concéntrica 6"x3" | SIMILAR | 55,88 / un | 2025-12-26 · lista | material: A234 WPB (no pedido) · faltan: material |
-| 12 | Casquete semielíptico A.C. 6" | IGUAL | 25,76 / un | 2025-12-26 · lista | — |
-| 13 | Casquete semielíptico A.C. 8" | IGUAL | 39,61 / un | 2025-12-26 · lista | — |
-| 14 | Cupla de AC sold. 1/2" NPT c/ válvula esféric | SIMILAR | 65,20 / un | 2026-01-26 · planilla interna | material: A105 (pedido A106 B); extremos: NPT (pedido NPT/SW) · faltan: paso |
-| 15 | Toma multiport AC inoxidable ABAC 1/2" | **SIN PRECIO** | — | — | pedir cotización |
-| 16 | Válvula alivio cap. reducida roscada tipo S-7 | **SIN PRECIO** | — | — | pedir cotización |
-| 17 | Cupla de AC para soldar 1/2" NPT con tapón 1/ | SIMILAR | 2,71 / un | 2025-12-26 · lista | extremos: BSPT (pedido NPT/SW) |
-| 18 | Termovaina de acero inoxidable 3/4" NPT 3/4" | SIMILAR (estimado cepo) ⚠ | 256,00 / un | 2024-11-01 · estimado (cepo) | conexion: 1/2 (no pedido) · faltan: rango, conexion |
-| 19 | Válvula blq. y purg. c/ manómetro 0-6 bar 1/2 | SIMILAR | 120,00 / un | 2026-08-14 · planilla interna | rango: sin dato (pedido 0-6 bar) · faltan: conexion |
-| 20 | Skid y soportes s/ SCE-RE-110-0006 Rev.0 | **SIN PRECIO** | — | — | pedir cotización |
-| 21 | Caño 3" | SIMILAR | 18,99 / m | 2025-12-26 · lista | costura: con costura (no pedido) · faltan: costura |
-| 22 | Caño 6" | SIMILAR | 50,60 / m | 2025-12-26 · lista | costura: con costura (no pedido) · faltan: costura |
-| 23 | Caño 6" | SIMILAR | 90,70 / m | 2026-08-14 · planilla interna | material: sin dato (pedido A53); costura: sin costura (no pedido); unidad distinta: catálogo por un, plano por · faltan: costura |
-| 24 | Caño 8" | SIMILAR | 72,64 / m | 2025-12-26 · lista | costura: con costura (no pedido) · faltan: costura |
-| A | Presión regulada, c/ val. bloq y purga 0-25 b | **SIN PRECIO** | — | — | pedir cotización |
-| B | Temperatura de salida 0-100 °C / 4-20 mA 3/4" | **SIN PRECIO** | — | — | pedir cotización |
-| C | Switch indicador de válv monitora abierta 0-2 | **SIN PRECIO** | — | — | pedir cotización |
+| 1 | VALVULA MONITORA PILOTADA OBT. GUIADO - NC ·  | **SIN PRECIO** | — | — | pedir cotización |
+| 2 | VALVULA REGULADORA PILOTADA A DIAFRAGMA - NA  | **SIN PRECIO** | — | — | pedir cotización |
+| 3 | VÁLVULA ESFÉRICA BRIDADA PASO REDUCIDO APF ·  | SIMILAR | 126,00 / un | 2025-09-01 · lista | material: A216 WCB (no pedido); extremos: RF (pedido RF/Bridado) · faltan: material |
+| 4 | VÁLVULA ESFÉRICA BRIDADA PASO REDUCIDO APF ·  | SIMILAR | 466,00 / un | 2025-09-01 · lista | material: A216 WCB (no pedido); extremos: RF (pedido RF/Bridado) · faltan: material |
+| 5 | BRIDA WN · Ø 3" | IGUAL | 26,61 / un | 2025-12-26 · lista | — |
+| 6 | BRIDA WN · Ø 6" | IGUAL | 58,91 / un | 2025-12-26 · lista | — |
+| 7 | BRIDA WN · Ø 8" | IGUAL | 92,62 / un | 2025-12-26 · lista | — |
+| 8 | BRIDA CIEGA · Ø 8" | SIMILAR | 88,17 / un | 2025-12-26 · lista | schedule: sin dato (pedido 40) |
+| 9 | TE NORMAL · Ø 6" | SIMILAR | 104,61 / un | 2025-12-26 · lista | material: A234 WPB (pedido A105) |
+| 10 | TE REDUCCIÓN · Ø 8"x6" | IGUAL | 283,84 / un | 2025-12-26 · lista | — |
+| 11 | REDUCCIÓN CONCÉNTRICA · Ø 6"x3" | SIMILAR | 55,88 / un | 2025-12-26 · lista | material: A234 WPB (no pedido) · faltan: material |
+| 12 | CASQUETE SEMIELÍPTICO A.C. · Ø 6" | IGUAL | 25,76 / un | 2025-12-26 · lista | — |
+| 13 | CASQUETE SEMIELÍPTICO A.C. · Ø 8" | IGUAL | 39,61 / un | 2025-12-26 · lista | — |
+| 14 | CUPLA DE AC SOLD. 1/2" NPT C/ VLV. ESF 1/2" S | SIMILAR | 65,20 / un | 2026-01-26 · planilla interna | material: A105 (pedido A106 B); extremos: NPT (pedido NPT/SW) · faltan: paso |
+| 15 | TOMA MULTIPORT AC INOXIDABLE ABAC · Ø 1/2" | **SIN PRECIO** | — | — | pedir cotización |
+| 16 | VÁLVULA ALIVIO CAP. REDUCIDA ROSCADA TIPO S-7 | **SIN PRECIO** | — | — | pedir cotización |
+| 17 | CUPLA DE AC PARA SOLDAR 1/2" NPT CON TAPÓN ·  | SIMILAR | 2,71 / un | 2025-12-26 · lista | extremos: BSPT (pedido NPT/SW) |
+| 18 | TERMOVAINA DE ACERO INOXIDABLE 3/4" NPT · Ø 3 | SIMILAR (estimado cepo) ⚠ | 256,00 / un | 2024-11-01 · estimado (cepo) | conexion: 1/2 (no pedido) · faltan: rango, conexion |
+| 19 | VÁLVULA BLQ. Y PURG. C/ MANÓMETRO 0-6BAR · Ø  | SIMILAR | 120,00 / un | 2026-08-14 · planilla interna | rango: sin dato (pedido 0-6bar) · faltan: conexion |
+| 20 | SKID Y SOPORTES S/ SCE-RE-110-0006 Rev.0 | **SIN PRECIO** | — | — | pedir cotización |
+| 21 | CAÑO 3" · Ø 3" | SIMILAR | 18,99 / m | 2025-12-26 · lista | costura: con costura (no pedido) · faltan: costura |
+| 22 | CAÑO 6" · Ø 6" | SIMILAR | 50,60 / m | 2025-12-26 · lista | costura: con costura (no pedido) · faltan: costura |
+| 23 | CAÑO 6" · Ø 6" | SIMILAR | 90,70 / m | 2026-08-14 · planilla interna | material: sin dato (pedido A53); costura: sin costura (no pedido); unidad distinta: catálogo por un, plano por · faltan: costura |
+| 24 | CAÑO 8" · Ø 8" | SIMILAR | 72,64 / m | 2025-12-26 · lista | costura: con costura (no pedido) · faltan: costura |
+| A | PRESIÓN REGULADA, C/ VAL. BLOQ Y PURGA · Ø 3/ | **SIN PRECIO** | — | — | pedir cotización |
+| B | TEMPERATURA DE SALIDA · Ø 3/4" | **SIN PRECIO** | — | — | pedir cotización |
+| C | SWITCH INDICADOR DE VALV MONITORA ABIERTA | **SIN PRECIO** | — | — | pedir cotización |
 | 21b | Completar barra de 12 m (pos 21) | compra extra | USD 18,99/m × 10,2 m | | Se usan 1,8 m en 1 equipo(s) y se compran 12 m. Borrar si hay sobrante en stock |
 | 22b | Completar barra de 12 m (pos 22) | compra extra | USD 50,60/m × 10 m | | Se usan 2 m en 1 equipo(s) y se compran 12 m. Borrar si hay sobrante en stock |
 | 23b | Completar barra de 12 m (pos 23) | compra extra | USD 90,70/m × 9,75 m | | Se usan 2,25 m en 1 equipo(s) y se compran 12 m. Borrar si hay sobrante en stock |
@@ -53,8 +53,8 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - pos 11: 12 extremo(s) BW de taller (2 por unidad × 4 × 1,5 por el caño) × 4,5" × 1,0000
 - pos 12: 3 extremo(s) BW de taller (1 por unidad × 2 × 1,5 por el caño) × 6" × 1,0000
 - pos 13: 1,5 extremo(s) BW de taller (1 por unidad × 1 × 1,5 por el caño) × 8" × 1,0000
-- pos 14: 2 junta(s) de Cupla de AC sold. 1/2" NP sobre caño × 0,5" × 1,75 = 1,75
-- pos 17: 2 junta(s) de Cupla de AC para soldar 1 sobre caño × 0,5" × 1,75 = 1,75
+- pos 14: 2 junta(s) de CUPLA DE AC SOLD. 1/2" NP sobre caño × 0,5" × 1,75 = 1,75
+- pos 17: 2 junta(s) de CUPLA DE AC PARA SOLDAR 1 sobre caño × 0,5" × 1,75 = 1,75
 
 ## 3. Servicios calculados
 

@@ -12,6 +12,7 @@ ERRORES (impiden pasar a "revisado"):
   - posición del cómputo que no está en el plano (salvo filas de compra extra con sufijo, ej. 14b)
   - precio sin proveedor, origen o fecha
   - subtotal distinto de cantidad × precio
+  - descripción distinta de la del cliente, o cantidad que el cliente no indica sin aclarar (con pedido/transcripcion.json)
 AVISOS (revisar uno por uno):
   - extremos BW/SW: soldaduras que tienen que estar contadas en la MO
   - modelo o fabricante exigido por el plano
@@ -66,6 +67,32 @@ def main(carpeta):
             avisos.append(f"Pos {p['pos']} extremos {ext} × {p['cantidad']}: confirmar que la soldadura está contada (taller o campo)")
         if p.get("modelo_fabricante", "").strip():
             avisos.append(f"Pos {p['pos']}: el plano exige {p['modelo_fabricante']}. Confirmar que el precio es de ese modelo o declarar desvío")
+
+    # REGLA CRÍTICA (Matías, 29-10-2026): la descripción es la del cliente, exacta; si el cliente no indica cantidad,
+    # la calculada lleva la aclaración. Se controla contra pedido/transcripcion.json (copia textual del documento).
+    ruta_tr = c / "pedido" / "transcripcion.json"
+    if ruta_tr.exists():
+        import json
+        cliente = {}
+        for t in json.load(open(ruta_tr, encoding="utf-8"))["tablas"]:
+            cols = t["columnas"]
+            iq = next((i for i, x in enumerate(cols) if x.upper().startswith("CANT")), None)
+            for f in t["filas"]:
+                cliente[str(f[0]).strip()] = (f[1], f[iq] if iq is not None else "")
+        for p in plano:
+            pos = p["pos"].strip()
+            if pos not in cliente:
+                errores.append(f"Pos {pos}: no está en la transcripción del documento del cliente")
+                continue
+            desc, q = cliente[pos]
+            if " ".join(p["descripcion"].split()) != " ".join(str(desc).split()):
+                errores.append(f"Pos {pos}: la descripción no es la del cliente. Cliente: «{desc}» · cómputo: «{p['descripcion']}»")
+            if str(q).strip() in ("", "_", "-", "—") and "no indica cantidad" not in p.get("cantidad_origen", "").lower():
+                errores.append(f"Pos {pos}: el cliente no indica cantidad; aclarar en cantidad_origen que la calculó ITT (según plano o ET)")
+        for r in comp:
+            base_pos = r["pos"].strip()
+            if base_pos in cliente and not r["descripcion"].startswith(" ".join(str(cliente[base_pos][0]).split())):
+                errores.append(f"{r['id']}: la descripción del cómputo no empieza con la del cliente («{cliente[base_pos][0]}»)")
 
     for pos, filas in por_pos.items():
         if pos in pos_plano:

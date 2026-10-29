@@ -208,3 +208,6 @@ Alguien que no armó el cómputo (otro agente o una persona) compara `pedido/lis
 
 ## Similares: misma serie y misma norma (Matías, 29-10-2026)
 Un precio de referencia "similar" solo vale si la pieza es de la **misma serie** (#150/#300/#600/#900, 2000/3000/6000) y de la **misma norma** (B16.5, B16.47, B16.9, B16.11, API 6D, API 608, etc.) que la del plano. Otra marca, otro material o una diferencia menor se anotan como diferencia; otra serie u otra norma no son referencia: se pide cotización.
+
+## Descripción exacta del cliente (regla crítica)
+**REGLA CRÍTICA — descripción del cliente (Matías, 29-10-2026):** en la descripción va siempre, sin excepción, el texto exacto del documento del cliente (plano, pliego o planilla), tal cual figura: sin corregir, traducir, abreviar ni agregar palabras ("RF", "radio largo", marcas, normas). Lo mismo con el material: se cotiza lo que pide el cliente. Lo que agrega ITT va en la columna `nota` de `lista_materiales_plano.csv`; el Ø va aparte. Si el cliente no indica cantidad y ITT la calcula, se aclara siempre en `cantidad_origen` ("El cliente no indica cantidad: calculada por ITT según el plano / la ET") y la oferta la marca con (*). Se copia de `pedido/transcripcion.json` y `verificar_computo.py` da error si no coincide.
