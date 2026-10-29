@@ -6,8 +6,15 @@ const Documentos = (() => {
   const COINC = { igual: "Igual", similar: "Similar", sin_ref: "Sin referencia" };
   const W = "http://schemas.openxmlformats.org/wordprocessingml/2006/main";
   const esc = s => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-  const usd = v => "USD " + Number(v || 0).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-  const num = (v, d = 2) => Number(v || 0).toLocaleString("es-AR", { minimumFractionDigits: d, maximumFractionDigits: d });
+  // Números a la vista (decisión de Matías, 29-10-2026): punto de miles, coma decimal y 2 decimales, en la página, el
+  // informe, las planillas y las ofertas. Igual que numeros.fmt en Python. No depende del idioma del navegador.
+  function num(v, d = 2) {
+    const n = Number(v || 0), [e, f] = Math.abs(n).toFixed(d).split(".");
+    const t = e.replace(/\B(?=(\d{3})+(?!\d))/g, ".") + (f ? "," + f : "");
+    return (n < 0 && /[1-9]/.test(t) ? "-" : "") + t;
+  }
+  const numg = v => num(v).replace(/,?0+$/, ""); // sin ceros de más: 0,5 · 12 · 1.234,57
+  const usd = v => "USD " + num(v);
   // Fechas a la vista: siempre DD-MM-AAAA (decisión de Matías, 28/10/2026); adentro se guardan AAAA-MM-DD. Igual que numeros.a_vista.
   const dos = n => String(n).padStart(2, "0");
   function fecha(v) {
@@ -19,20 +26,25 @@ const Documentos = (() => {
     return s;
   }
   const fechaHora = v => { if (!v) return ""; const d = new Date(v); return isNaN(d) ? fecha(v) : `${fecha(d)} ${dos(d.getHours())}:${dos(d.getMinutes())}`; };
-  // Número escrito por el usuario en formato argentino: "1,4" = 1,4 · "3.500.000" = 3500000 · "1.234,5" = 1234,5 · "0.35" = 0,35;
-  // también entiende "3,500,000.5" (formato inglés). null si no es un número (el campo se marca en rojo y no se guarda).
+  // Número escrito por el usuario (decisión de Matías, 29-10-2026): el punto separa miles y la coma decimales, con 2
+  // decimales como máximo. "1.500" = 1500 · "1,5" = 1,5 · "1.234,56" · "1500". Lo que no cumple da null (el campo se marca
+  // en rojo, dice por qué y no se guarda): así "1,500" o "1.5" nunca se leen distinto de lo que se quiso escribir.
   function numeroDe(t) {
-    let s = String(t ?? "").trim().replace(/\s/g, "").replace(/^(usd|u\$s|\$)/i, "");
-    if (!s) return null;
-    if (/^-?\d{1,3}(\.\d{3})+(,\d+)?$/.test(s)) s = s.replace(/\./g, "").replace(",", ".");
-    else if (/^-?\d+,\d+$/.test(s)) s = s.replace(",", ".");
-    else if (/^-?\d{1,3}(,\d{3})+(\.\d+)?$/.test(s)) s = s.replace(/,/g, "");
-    else if (!/^-?\d*\.?\d+$/.test(s)) return null;
-    const n = Number(s);
+    const s = String(t ?? "").trim().replace(/\s/g, "").replace(/^(usd|u\$s|\$)/i, "");
+    if (!/^-?(\d{1,3}(\.\d{3})+|\d+)(,\d{1,2})?$/.test(s)) return null;
+    const n = Number(s.replace(/\./g, "").replace(",", "."));
     return isFinite(n) ? n : null;
   }
-  // Número para mostrar dentro de un campo editable: coma decimal, sin separador de miles
-  const NI = v => (v === "" || v == null || isNaN(Number(v))) ? "" : Number(v).toLocaleString("es-AR", { maximumFractionDigits: 6, useGrouping: false });
+  // Por qué no se aceptó lo escrito ("" si está bien o vacío)
+  function errorNumero(t) {
+    const s = String(t ?? "").trim().replace(/\s/g, "").replace(/^(usd|u\$s|\$)/i, "");
+    if (!s || numeroDe(s) != null) return "";
+    if (/,\d{3,}$/.test(s)) return "Máximo 2 decimales. Si son miles, van con punto: 1.500";
+    if (/\.\d{1,2}$/.test(s) || /\.\d{4,}/.test(s)) return "El punto separa miles; los decimales van con coma: 1,5";
+    return "Escribí el número así: 1.234,56 (punto de miles, coma decimal)";
+  }
+  // Número dentro de un campo editable: mismo formato que a la vista, sin ceros de más
+  const NI = v => (v === "" || v == null || isNaN(Number(v))) ? "" : numg(v);
   // DD-MM-AAAA (o DD/MM/AAAA) escrita por el usuario → AAAA-MM-DD; "" si no es una fecha válida
   function isoDe(t) {
     const m = String(t || "").trim().match(/^(\d{1,2})[-/.](\d{1,2})[-/.](\d{4})$/); if (!m) return "";
@@ -71,10 +83,10 @@ const Documentos = (() => {
     put(ws, "A1", `${cot.codigo} ${cot.revision || ""} · ${cot.titulo || ""}`, { font: { bold: true, sz: 14 } });
     put(ws, "A2", `${cot.subtitulo_planilla || ""} · ${cot.estado} ${fecha(cot.fecha)}`, GRIS);
     put(ws, "A4", "PARÁMETROS (celdas amarillas editables)", { font: { bold: true } });
-    [[`Cantidad de ${eq.plural}`, p.N, "0"], ["Factor de materiales (materiales y contingencia)", p.FM, "0.00"], ["Factor de mano de obra y servicios", p.FMO, "0.00"],
+    [[`Cantidad de ${eq.plural}`, p.N, "0"], ["Factor de materiales (materiales y contingencia)", p.FM, "#,##0.00"], ["Factor de mano de obra y servicios", p.FMO, "#,##0.00"],
      ["Contingencia materiales", p.CONT / 100, "0%"], ["Incluir flete (1 = sí, 0 = no)", p.TRANS, "0"], ["Tipo de cambio ARS/USD (BNA)", p.TC, "#,##0"],
-     ["Flete ARS por envío", p.TR_ARS, "#,##0"], ["Embalaje USD por envío (estimado)", p.TR_EMB, U], ["Factor flete", p.TR_F, "0.00"],
-     ["Factor de válvulas Taval (con su contingencia)", p.FTV ?? 1, "0.00"]]
+     ["Flete ARS por envío", p.TR_ARS, "#,##0"], ["Embalaje USD por envío (estimado)", p.TR_EMB, U], ["Factor flete", p.TR_F, "#,##0.00"],
+     ["Factor de válvulas Taval (con su contingencia)", p.FTV ?? 1, "#,##0.00"]]
       .forEach(([n, v, z], i) => { put(ws, A(1, 5 + i), n); put(ws, A(2, 5 + i), Number(v) || 0, INP, z); });
     put(ws, "G5", "AJUSTE POR INFLACIÓN (desde la fecha de cada precio hasta hoy)", { font: { bold: true } });
     put(ws, "G6", "Aplicar ajuste (1 = sí, 0 = no)"); put(ws, "H6", p.AJ ? 1 : 0, INP, "0");
@@ -91,11 +103,11 @@ const Documentos = (() => {
      ["Válvulas Taval (con ajuste y contingencia)", `SUMIF(Materiales!S2:S${nm},"sí",Materiales!P2:P${nm})*(1+$B$8)`, "$B$14"],
      ["Mano de obra", `SUMIF(${S}!B2:B${ns},"MO",${S}!P2:P${ns})`, "$B$7"], ["Servicios e insumos", `SUMIF(${S}!B2:B${ns},"Servicio",${S}!P2:P${ns})`, "$B$7"]]
       .forEach(([n, f, fa], i) => {
-        const r = 18 + i; put(ws, A(1, r), n); put(ws, A(2, r), { f }, null, U); put(ws, A(3, r), { f: fa }, null, "0.00");
+        const r = 18 + i; put(ws, A(1, r), n); put(ws, A(2, r), { f }, null, U); put(ws, A(3, r), { f: fa }, null, "#,##0.00");
         put(ws, A(4, r), { f: `B${r}*C${r}` }, null, U); put(ws, A(5, r), { f: `D${r}*$B$5` }, null, U);
       });
-    put(ws, "A23", "Flete + embalaje (por envío)"); put(ws, "C23", { f: "$B$13" }, null, "0.00"); put(ws, "E23", { f: "IF($B$9=1,($B$11/$B$10+$B$12)*$B$13,0)" }, null, U);
-    put(ws, "A24", "TOTAL SIN IVA", TOT); put(ws, "B24", { f: "SUM(B18:B22)" }, TOT, U); put(ws, "C24", { f: "D24/B24" }, TOT, "0.00");
+    put(ws, "A23", "Flete + embalaje (por envío)"); put(ws, "C23", { f: "$B$13" }, null, "#,##0.00"); put(ws, "E23", { f: "IF($B$9=1,($B$11/$B$10+$B$12)*$B$13,0)" }, null, U);
+    put(ws, "A24", "TOTAL SIN IVA", TOT); put(ws, "B24", { f: "SUM(B18:B22)" }, TOT, U); put(ws, "C24", { f: "D24/B24" }, TOT, "#,##0.00");
     put(ws, "D24", { f: "SUM(D18:D22)" }, TOT, U); put(ws, "E24", { f: "SUM(E18:E23)" }, TOT, U);
     put(ws, "A26", "Margen sobre precio"); put(ws, "D26", { f: "1-B24/D24" }, null, "0.0%");
     put(ws, "A27", "PRECIO UNITARIO DE VENTA (redondeado, va a la oferta)", AZ); put(ws, "D27", { f: "ROUND(D24,2)" }, AZ, U);
@@ -123,7 +135,7 @@ const Documentos = (() => {
           const c = j + 1;
           const st = c === 4 || c === 6 ? INP : c === 8 ? { fill: { fgColor: { rgb: TF[s.tipo] || "FFFFFF" } } } :
             c === 17 ? { fill: { fgColor: { rgb: { igual: "DDF1E4", similar: "FBEFD6", sin_ref: "F8E1DE" }[s.coincide] || "FFFFFF" } } } : null;
-          const z = [6, 7, 15, 16].includes(c) ? U : { 11: "dd-mm-yyyy", 13: "0.0", 14: "0.000" }[c];
+          const z = [6, 7, 15, 16].includes(c) ? U : { 11: "dd-mm-yyyy", 13: "#,##0.00", 14: "#,##0.00" }[c];
           put(w, A(c, i), v, st, z);
         });
       });
@@ -143,8 +155,8 @@ const Documentos = (() => {
       [11, 13, 12, 16, 12, 40, 40, 40]);
     idx.forEach((r, k) => {
       const i = k + 2;
-      put(x, A(1, i), serial(r.mes + "-01"), null, "mm-yyyy"); put(x, A(2, i), r.ipc, null, "0.00"); put(x, A(3, i), r.dolar, null, "#,##0.00");
-      put(x, A(4, i), r.local, null, "0.00"); put(x, A(5, i), r.cpi, null, "0.00"); put(x, A(6, i), r.oi); put(x, A(7, i), r.od); put(x, A(8, i), r.oc);
+      put(x, A(1, i), serial(r.mes + "-01"), null, "mm-yyyy"); put(x, A(2, i), r.ipc, null, "#,##0.00"); put(x, A(3, i), r.dolar, null, "#,##0.00");
+      put(x, A(4, i), r.local, null, "#,##0.00"); put(x, A(5, i), r.cpi, null, "#,##0.00"); put(x, A(6, i), r.oi); put(x, A(7, i), r.od); put(x, A(8, i), r.oc);
     });
     X.utils.book_append_sheet(wb, x, "Índices");
     if ((cot.desvios || []).length) {
@@ -264,7 +276,7 @@ const Documentos = (() => {
       const s = it.fuentes[0], f = calc.filas.find(x => x.id === it.id) || { ajustado: it.cantidad * s.precio, factor: 1 };
       const cl = s.coincide === "igual" ? "ok" : s.coincide === "similar" ? "warn" : "bad";
       return `<tr><td>${esc(it.pos)}</td><td><b>${esc(it.descripcion)}</b><br><span class="muted">${esc(it.especificacion || "")}</span></td>
-        <td class="n">${num(it.cantidad, it.cantidad % 1 ? 2 : 0)} ${esc(it.unidad)}</td><td class="n">${num(s.precio)}</td><td class="n">${num(f.factor, 3)}</td><td class="n">${num(f.ajustado)}</td>
+        <td class="n">${num(it.cantidad, it.cantidad % 1 ? 2 : 0)} ${esc(it.unidad)}</td><td class="n">${num(s.precio)}</td><td class="n">${num(f.factor, 2)}</td><td class="n">${num(f.ajustado)}</td>
         <td>${esc(TIPOS[s.tipo] || s.tipo)} · ${esc(s.proveedor)}<br><span class="muted">${esc(s.origen || "")} · ${esc(fecha(s.fecha))}</span></td>
         <td><span class="pill ${cl}">${COINC[s.coincide] || ""}</span>${s.diferencia ? "<br><span class='muted'>" + esc(s.diferencia) + "</span>" : ""}</td></tr>`;
     };
@@ -482,6 +494,6 @@ const Documentos = (() => {
         ${firmante?.telefono ? `<span>☎ ${esc(firmante.telefono)}</span>` : ""}${firmante?.celular ? `<span>📱 ${esc(firmante.celular)}</span>` : ""}${firmante?.email ? `<span>${esc(firmante.email)}</span>` : ""}</div></div>`;
   }
 
-  return { fecha, fechaHora, isoDe, numeroDe, NI, planilla, compras, informeHtml, pdfDeHtml, ofertaDocx, ofertaHtml, usd, num, esc, TIPOS, COINC };
+  return { fecha, fechaHora, isoDe, numeroDe, errorNumero, NI, numg, planilla, compras, informeHtml, pdfDeHtml, ofertaDocx, ofertaHtml, usd, num, esc, TIPOS, COINC };
 })();
 if (typeof module !== "undefined") module.exports = Documentos;

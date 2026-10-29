@@ -80,6 +80,7 @@
 | 28-10-2026 | Sin antecedente de horas del mismo tipo y tamaño, la precotización **no suma horas** y avisa (antes tomaba otro tipo de equipo) | Criterio técnico (controles) | `estimar_horas.py` |
 | 28-10-2026 | Prefabricado de piping: `parametros.modo = "prefabricado"` (pulgada diametral base sch 40, tarifa de terceros, +5% rechazos, pintura aparte, sin horas); materiales del cliente con la columna `provee` = cliente | Criterio técnico (CTRL-CA01) | `precotizar.py`, `guia_cotizacion.md` |
 | 28-10-2026 | MO, pintura, END y transporte: opción global por rubro, siempre **por equipo** (la cantidad multiplica al final); MO del piping y de la estructura **por separado**, con ficha de cada uno | Matías | `guia_cotizacion.md`, `ficha_rubros.py` |
+| 29-10-2026 | **Números: punto de miles, coma decimal, 2 decimales** en todo lo que se ve y en los campos (los campos rechazan formatos ambiguos y explican por qué; al salir del campo se reescribe en el formato de la página) | Matías | `CLAUDE.md`, `numeros.fmt`, `Documentos.num`/`numeroDe` |
 | 29-10-2026 | El botón Claude abre Claude Code (repositorio, control total sobre la app) en ventana aparte; enviado y envíos al cliente, nunca | Matías | `web/LEEME.md` |
 | 29-10-2026 | MO y servicios: un ítem por rubro de fabricación con ficha y costo por antecedentes o manual; se sacaron la tabla general y las calculadoras sueltas | Matías | `guia_cotizacion.md` |
 | 29-10-2026 | Piping por pulgada de soldadura o por kg; en cualquier rubro, tarifa propia con valor, fecha y proveedor | Matías | `web/src/rubros.js` |
@@ -106,12 +107,12 @@ Hecho (28/10/2026): `precotizar.py` (materiales, soldaduras, pintura, PH, RX) ·
 2. Plazo ofrecido menor que el calculado (YPF 120 vs 180 d) sin bloqueo; la oferta no toma plazo, cliente ni revisión ya cargados.
 3. Precios de la PC0 YPF con fecha supuesta (10-10-2026) entraron al catálogo como último precio de 45 materiales; los borradores alimentan catálogo y antecedentes.
 4. Corridas simultáneas de `verificar_todo.py` corrompen los catálogos (sin escritura atómica ni bloqueo).
-5. Formato de números distinto entre página (5.644,46) e informe (5,644.46).
+5. ~~Formato de números distinto entre página e informe~~ Hecho (29-10-2026): todo 1.234,56.
 6. Ítems sin código de catálogo; dos versiones repo/página y `semilla.py` pisa lo cargado en la página.
 7. Página: subtotal vacío al abrir, diálogos sin Escape, avisos sin agrupar, MO arranca "sin costo" hasta aplicar cada rubro, celular sin tabla de materiales usable.
 8. Tablas: pesos argentinos en columnas de USD sin moneda (índice de proyectos), 129 materiales sin unidad, claves de peso repetidas sin `vigente`, IVA/unidad/moneda en texto libre.
 9. Control de la CAPEX: 7.366,12 (no 7.620,59; corregir la documentación); controles CTRL fuera de `verificar_todo.py`.
-Para decidir (Matías): qué cotizaciones alimentan la base; quién manda (repo o página); formato de números en las ofertas.
+Para decidir (Matías): qué cotizaciones alimentan la base; quién manda (repo o página); ~~formato de números~~ (definido: 1.234,56).
 
 **Camuzzi CP 24578** (28-10-2026; COT26-0135-001/002/003 en borrador y cargadas en la página)
 1. Reguladoras y monitoras 3" #150 sin OPSO (hoy Tormene #300 con OPSO de referencia) y explicar contra CAMUZZI/23 (24.454 en 2025).

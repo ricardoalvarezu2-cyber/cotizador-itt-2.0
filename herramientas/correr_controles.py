@@ -14,6 +14,7 @@ from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RAIZ / "herramientas"))
+from numeros import fmt, fmtg  # noqa: E402
 CASOS = {"CTRL-F01_INARTECO_FM2_S300": ["TAVAL/40", "INARTECO"],
          "CTRL-T01_SACDE20_TKCHOQUE": ["Sacde/20"],
          "CTRL-C01_PAMPA7_COLECTOR": ["PAMPA ENERGIA/7", "ADICIONAL DE OC Colectores"],
@@ -53,8 +54,8 @@ def main():
         rm, rs, am, a_s, sin, real_sin = totales(c)
         d = (am + a_s) / (rm + rs) - 1
         d2 = (am + a_s) / (rm + rs - real_sin) - 1
-        filas.append(f"| {caso} | {rm + rs:,.0f} | {am + a_s:,.0f} | {d:+.0%} | {d2:+.0%} | {rm:,.0f} / {am:,.0f} ({am / rm - 1:+.0%}) | "
-                     f"{rs:,.0f} / {a_s:,.0f} ({a_s / rs - 1:+.0%}) | {sin} ({real_sin:,.0f}) |")
+        filas.append(f"| {caso} | {fmt(rm + rs, 0)} | {fmt(am + a_s, 0)} | {d:+.0%} | {d2:+.0%} | {fmt(rm, 0)} / {fmt(am, 0)} ({am / rm - 1:+.0%}) | "
+                     f"{fmt(rs, 0)} / {fmt(a_s, 0)} ({a_s / rs - 1:+.0%}) | {sin} ({fmt(real_sin, 0)}) |")
     precotizar.EXCLUIR[:] = []
     texto = "\n".join(filas)
     print(texto)

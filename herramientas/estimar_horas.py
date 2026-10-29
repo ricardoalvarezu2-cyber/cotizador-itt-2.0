@@ -30,6 +30,7 @@ import math
 import statistics
 import re
 from pathlib import Path
+from numeros import fmt, fmtg
 
 RAIZ = Path(__file__).resolve().parent.parent
 BASE = RAIZ / "conocimiento" / "costos" / "horas_por_equipo.csv"
@@ -142,11 +143,11 @@ def estimar(tipo, diametro, unidades=1, materiales=None, excluir=(), pulgadas=No
     desc = lambda r: f"{r['proyecto']} · {r['equipo'][:60]} ({r['diametro_texto'] or 's/d'}, {r['unidades']} u, {r['fecha']})"
     return {
         "ing": {"horas_u": fijo("horas_ingenieria_u"), "usd_h": f(a["usd_h_ing"]) or 15, "antecedente": desc(a), "fila": a,
-                "criterio": "mediana de " + ", ".join(f"{por_unidad(r, 'horas_ingenieria_u'):.1f}" for r in cand_a) + " h por unidad (repartidas en la serie)"},
+                "criterio": "mediana de " + ", ".join(f"{fmt(por_unidad(r, 'horas_ingenieria_u'), 1)}" for r in cand_a) + " h por unidad (repartidas en la serie)"},
         "cal": {"horas_u": fijo("horas_calidad_u"), "usd_h": f(a["usd_h_cal"]) or 15, "antecedente": desc(a), "fila": a,
-                "criterio": "mediana de " + ", ".join(f"{por_unidad(r, 'horas_calidad_u'):.1f}" for r in cand_a) + " h por unidad (repartidas en la serie)"},
+                "criterio": "mediana de " + ", ".join(f"{fmt(por_unidad(r, 'horas_calidad_u'), 1)}" for r in cand_a) + " h por unidad (repartidas en la serie)"},
         "mont": None if not m else {"horas_u": mont_h, "usd_h": f(m["usd_h_mont"]) or 13, "antecedente": desc(m), "fila": m,
-                                    "criterio": "mediana de " + ", ".join(f"{f(r['horas_montaje_u']):g} h × {escala(r, materiales, pulgadas):g}" for r in cand_m) + " (horas por unidad × tamaño)",
+                                    "criterio": "mediana de " + ", ".join(f"{fmtg(f(r['horas_montaje_u']))} h × {fmtg(escala(r, materiales, pulgadas))}" for r in cand_m) + " (horas por unidad × tamaño)",
                                     "detalle": m["detalle_montaje"]},
         "incluye_ph": bool(m and re.search(r"\bPH\b|hidr", m["detalle_montaje"] + m["cita"], re.I)),
         "nivel": nivel,
@@ -172,10 +173,10 @@ def main():
     for k, n in (("ing", "Ingeniería"), ("cal", "Calidad"), ("mont", "Montaje")):
         x = e[k]
         if x:
-            print(f"{n}: {x['horas_u']:g} h/u × USD {x['usd_h']:g} = USD {x['horas_u'] * x['usd_h']:,.2f} · {x['criterio']} · {x['antecedente']}")
+            print(f"{n}: {fmtg(x['horas_u'])} h/u × USD {fmtg(x['usd_h'])} = USD {fmt(x['horas_u'] * x['usd_h'], 2)} · {x['criterio']} · {x['antecedente']}")
         r = e["rango"][k]
         if r:
-            print(f"   rango del mismo tipo: {r[0]:g}–{r[1]:g} h/u")
+            print(f"   rango del mismo tipo: {fmtg(r[0])}–{fmtg(r[1])} h/u")
     print(("La prueba hidráulica va dentro del montaje del antecedente. " if e["incluye_ph"] else "") +
           {"mismo_tipo": "", "mismo_grupo": "⚠ No hay antecedente del mismo tipo: se usaron equipos afines.",
            "otro": "⚠ No hay antecedente del mismo tipo ni de uno afín: no usar estas horas."}[e["nivel"]])

@@ -4,29 +4,41 @@ Generado por `herramientas/controles_tablas.py`. Información para revisar; no c
 
 ## 1. Kilos y m² por equipo
 
-**Peso estimado de lo que tiene tabla: 6,981.3 kg** · m² exteriores de caños y niples: 15.37 m².
-Ítems sin dato de peso (20): 1b Completar barra de 6 m de la pos 1 (compra mínima; (sin tabla (instrumento, junta u otro)); 2b Completar barra de 6 m de la pos 2 (compra mínima; (sin tabla (instrumento, junta u otro)); 3 Tee normal 8" (sin tabla para tee 8" 3000); 4 Tee de reducción SCH XS x SCH 60 12"x8" (sin tabla para tee 12" XS); 10 Espárrago c/2 tuercas p/brida 300 LB 1.125x186 zin (sin tabla (instrumento, junta u otro)); 11 Espárrago c/2 tuercas p/brida 300 LB 0.875x149 zin (sin tabla (instrumento, junta u otro)); 12 Espárrago c/2 tuercas p/brida 300 LB 0.875x152 zin (sin tabla (instrumento, junta u otro)); 13 Junta espiralada RF esp. 4,5 mm 300 LB SS316 c/gra (sin tabla (instrumento, junta u otro)); 14 Junta espiralada RF esp. 4,5 mm 300 LB SS316 c/gra (sin tabla (instrumento, junta u otro)); 15 Junta dieléctrica RF esp. 6 mm 300 LB fibra aramid (sin tabla (instrumento, junta u otro)); 21 Sockolet SW 3000 LB 12"x3/4" (sin tabla para sockolet 12" 3000); 22 Sockolet SW 3000 LB 12"x1/2" (sin tabla para sockolet 12" 3000); 23 Sockolet SW 3000 LB 8"x1 1/2" (sin tabla para sockolet 8" 3000); 24 Sockolet SW 3000 LB 8"x3/4" (sin tabla para sockolet 8" 3000); EST Estructura del skid: perfilería (sin tabla (instrumento, junta u otro)); INS TI-011A/B/C/D: Termómetro (la planilla lo rotula « (sin tabla (instrumento, junta u otro)); INS TW-011A/B/C/D: Termovaina bridada (sin tabla (instrumento, junta u otro)); INS PI-011A/B/C/D: Manómetro (la planilla lo rotula «T (sin tabla (instrumento, junta u otro)); INS VBP: Válvula de bloqueo y purga (válvula sin diámetro o serie); REP Repuestos PEM y 2 años (10% de bulonería y juntas) (sin tabla (instrumento, junta u otro)).
+**Peso estimado de lo que tiene tabla: 8.732,7 kg** · m² exteriores de caños y niples: 15,37 m².
+Ítems sin dato de peso (8): 1b Completar barra de 6 m de la pos 1 (compra mínima; (sin tabla (instrumento, junta u otro)); 2b Completar barra de 6 m de la pos 2 (compra mínima; (sin tabla (instrumento, junta u otro)); EST Estructura del skid: perfilería (sin tabla (instrumento, junta u otro)); INS TI-011A/B/C/D: Termómetro (la planilla lo rotula « (sin tabla (instrumento, junta u otro)); INS TW-011A/B/C/D: Termovaina bridada (sin tabla (instrumento, junta u otro)); INS PI-011A/B/C/D: Manómetro (la planilla lo rotula «T (sin tabla (instrumento, junta u otro)); INS VBP: Válvula de bloqueo y purga (válvula sin diámetro o serie); REP Repuestos PEM y 2 años (10% de bulonería y juntas) (espárrago sin diámetro o largo).
 
 | Pos | Ítem | Cantidad | kg/u | kg total | Fuente |
 |---|---|---|---|---|---|
-| 1 | Caño s/c extr. SCH XS (323,8 x 12,70) 12" | 11.5 m | 97.47 | 1120.88 | caño 12" sch XS por metro (ASME B36.10, calculado) |
-| 2 | Caño s/c extr. SCH 60 (219,1 x 10,31) 8" | 5.1 m | 53.09 | 270.74 | caño 8" sch 60 por metro (ASME B36.10, calculado) |
-| 5 | Brida WN RF 300 LB SCH XS 12" | 4 un | 63.90 | 255.60 | brida WN 12" #300 (B16.5, borrador) |
-| 6 | Brida WN RF 300 LB SCH 60 8" | 48 un | 31.10 | 1492.80 | brida WN 8" #300 (B16.5, borrador) |
-| 7 | Brida ciega RF 300 LB 12" | 4 un | 83.30 | 333.20 | brida ciega 12" #300 (B16.5, borrador) |
-| 8 | Brida ciega RF 300 LB 8" | 16 un | 36.50 | 584.00 | brida ciega 8" #300 (B16.5, borrador) |
-| 9 | Brida SW RF 300 LB SCH 80 1 1/2" | 4 un | 2.70 | 10.80 | brida SW 1.5" #300 (B16.5, borrador) |
-| 16 | Niple s/c NPT L=100 mm 1 1/2" | 4 un | 0.72 | 2.90 | caño 1.5" sch  × 0.1 m (ASME B36.10, calculado) |
-| 17 | Niple s/c NPT L=100 mm 3/4" | 8 un | 0.29 | 2.32 | caño 0.75" sch  × 0.1 m (ASME B36.10, calculado) |
-| 18 | Niple s/c NPT L=100 mm 1/2" | 4 un | 0.19 | 0.78 | caño 0.5" sch  × 0.1 m (ASME B36.10, calculado) |
-| 19 | Tapón NPT cab. hexag. 3/4" | 2 un | 0.12 | 0.24 | tapon_hexagonal 0.75" 3000 NPT (ASME B16.11, borrador) |
-| 20 | Tapón NPT cab. hexag. 1/2" | 2 un | 0.07 | 0.15 | tapon_hexagonal 0.5" 3000 NPT (ASME B16.11, borrador) |
-| 25 | Válvula de retención a clapeta FLG RF 300 LB 8" | 8 un | 176.00 | 1408.00 | retencion a clapeta 8" #300 (Taval Lista 30, Retencion M61) |
-| 26 | Válvula esférica FLG RF 300 LB P.T. op. volante y caja  | 8 un | 185.00 | 1480.00 | esferica pt flotante 8" #300 (Taval Lista 30, PT Flotante T17; paso total, flotante supuesto) |
-| 27 | Válvula esférica NPT WOG 2000 P.T. op. palanca 3/4" | 6 un | 1.31 | 7.86 | esferica pt flotante forjada npt (api 608) 0.75" #2000 (Taval Lista 30, PT Flot-NPT FORJADAS K8) |
-| 28 | Válvula esférica NPT WOG 2000 P.T. op. palanca 1/2" | 2 un | 1.00 | 2.00 | esferica pt flotante forjada npt (api 608) 0.5" #2000 (Taval Lista 30, PT Flot-NPT FORJADAS K7) |
-| 29 | Válvula globo NPT 800 LB op. volante 3/4" | 2 un | 2.30 | 4.60 | globo api 602 0.75" #800 (Taval Lista 30, API 602 R7) |
-| 30 | Válvula globo NPT 800 LB op. volante 1/2" | 2 un | 2.20 | 4.40 | globo api 602 0.5" #800 (Taval Lista 30, API 602 R6) |
+| 1 | Caño s/c extr. SCH XS (323,8 x 12,70) 12" | 11,5 m | 97,47 | 1.120,88 | caño 12" sch XS por metro (ASME B36.10, calculado) |
+| 2 | Caño s/c extr. SCH 60 (219,1 x 10,31) 8" | 5,1 m | 53,09 | 270,74 | caño 8" sch 60 por metro (ASME B36.10, calculado) |
+| 3 | Tee normal 8" | 16 un | 35,41 | 566,49 | APROXIMADO: tee_recta 8" sch 60 = caño 53,09 kg/m × OD 219,1 mm × 3,04 diámetros |
+| 4 | Tee de reducción SCH XS x SCH 60 12"x8" | 8 un | 79,38 | 635,04 | tee_reduccion 12" XS BW (ASME B16.9, borrador) |
+| 5 | Brida WN RF 300 LB SCH XS 12" | 4 un | 63,90 | 255,60 | brida WN 12" #300 (B16.5, borrador) |
+| 6 | Brida WN RF 300 LB SCH 60 8" | 48 un | 31,10 | 1.492,80 | brida WN 8" #300 (B16.5, borrador) |
+| 7 | Brida ciega RF 300 LB 12" | 4 un | 83,30 | 333,20 | brida ciega 12" #300 (B16.5, borrador) |
+| 8 | Brida ciega RF 300 LB 8" | 16 un | 36,50 | 584,00 | brida ciega 8" #300 (B16.5, borrador) |
+| 9 | Brida SW RF 300 LB SCH 80 1 1/2" | 4 un | 2,70 | 10,80 | brida SW 1,5" #300 (B16.5, borrador) |
+| 10 | Espárrago c/2 tuercas p/brida 300 LB 1.125x186 zincado  | 64 un | 1,48 | 94,72 | espárrago 1,12" × 7,38" + 2 tuercas (calculado) |
+| 11 | Espárrago c/2 tuercas p/brida 300 LB 0.875x149 zincado  | 528 un | 0,72 | 382,18 | espárrago 0,88" × 5,88" + 2 tuercas (calculado) |
+| 12 | Espárrago c/2 tuercas p/brida 300 LB 0.875x152 zincado  | 48 un | 0,73 | 35,21 | espárrago 0,88" × 6,00" + 2 tuercas (calculado) |
+| 13 | Junta espiralada RF esp. 4,5 mm 300 LB SS316 c/grafito, | 4 un | 0,97 | 3,90 | APROXIMADO: junta anillo Ø 324–374 mm × 4,5 mm × 7900 kg/m³ |
+| 14 | Junta espiralada RF esp. 4,5 mm 300 LB SS316 c/grafito, | 44 un | 0,68 | 29,99 | APROXIMADO: junta anillo Ø 219–269 mm × 4,5 mm × 7900 kg/m³ |
+| 15 | Junta dieléctrica RF esp. 6 mm 300 LB fibra aramida NBR | 4 un | 0,21 | 0,83 | APROXIMADO: junta anillo Ø 219–269 mm × 6 mm × 1800 kg/m³ |
+| 16 | Niple s/c NPT L=100 mm 1 1/2" | 4 un | 0,72 | 2,90 | caño 1,5" sch  × 0,1 m (ASME B36.10, calculado) |
+| 17 | Niple s/c NPT L=100 mm 3/4" | 8 un | 0,29 | 2,32 | caño 0,75" sch  × 0,1 m (ASME B36.10, calculado) |
+| 18 | Niple s/c NPT L=100 mm 1/2" | 4 un | 0,19 | 0,78 | caño 0,5" sch  × 0,1 m (ASME B36.10, calculado) |
+| 19 | Tapón NPT cab. hexag. 3/4" | 2 un | 0,12 | 0,24 | tapon_hexagonal 0,75" 3000 NPT (ASME B16.11, borrador) |
+| 20 | Tapón NPT cab. hexag. 1/2" | 2 un | 0,07 | 0,15 | tapon_hexagonal 0,5" 3000 NPT (ASME B16.11, borrador) |
+| 21 | Sockolet SW 3000 LB 12"x3/4" | 2 un | 0,16 | 0,32 | sockolet salida 0,75" 3000 (Bonney Forge, borrador) |
+| 22 | Sockolet SW 3000 LB 12"x1/2" | 2 un | 0,14 | 0,27 | sockolet salida 0,5" 3000 (Bonney Forge, borrador) |
+| 23 | Sockolet SW 3000 LB 8"x1 1/2" | 4 un | 0,45 | 1,82 | sockolet salida 1,5" 3000 (Bonney Forge, borrador) |
+| 24 | Sockolet SW 3000 LB 8"x3/4" | 4 un | 0,16 | 0,64 | sockolet salida 0,75" 3000 (Bonney Forge, borrador) |
+| 25 | Válvula de retención a clapeta FLG RF 300 LB 8" | 8 un | 176,00 | 1.408,00 | retencion a clapeta 8" #300 (Taval Lista 30, Retencion M61) |
+| 26 | Válvula esférica FLG RF 300 LB P.T. op. volante y caja  | 8 un | 185,00 | 1.480,00 | esferica pt flotante 8" #300 (Taval Lista 30, PT Flotante T17; paso total, flotante supuesto) |
+| 27 | Válvula esférica NPT WOG 2000 P.T. op. palanca 3/4" | 6 un | 1,31 | 7,86 | esferica pt flotante forjada npt (api 608) 0,75" #2000 (Taval Lista 30, PT Flot-NPT FORJADAS K8) |
+| 28 | Válvula esférica NPT WOG 2000 P.T. op. palanca 1/2" | 2 un | 1,00 | 2,00 | esferica pt flotante forjada npt (api 608) 0,5" #2000 (Taval Lista 30, PT Flot-NPT FORJADAS K7) |
+| 29 | Válvula globo NPT 800 LB op. volante 3/4" | 2 un | 2,30 | 4,60 | globo api 602 0,75" #800 (Taval Lista 30, API 602 R7) |
+| 30 | Válvula globo NPT 800 LB op. volante 1/2" | 2 un | 2,20 | 4,40 | globo api 602 0,5" #800 (Taval Lista 30, API 602 R6) |
 
 ## 2. Plazos de material (proveedores 2025–2026)
 

@@ -271,7 +271,7 @@
   function totalesHtml(c, eq) {
     const p = S.doc.cot.parametros;
     return `<div><span class="s">Costo / ${E(eq.singular)}</span><span class="v">${num(c.costo)}</span><span class="s">ajuste por inflación incluido ${num(c.costo - c.costo0)}</span></div>
-      <div class="prim"><span class="s">Precio unitario USD</span><span class="v">${num(c.precio_unitario)}</span><span class="s">factores ${p.FM} / ${p.FMO}${c.tav ? ` · Taval ${c.ftv}` : ""}</span></div>
+      <div class="prim"><span class="s">Precio unitario USD</span><span class="v">${num(c.precio_unitario)}</span><span class="s">factores ${num(p.FM)} / ${num(p.FMO)}${c.tav ? ` · Taval ${num(c.ftv)}` : ""}</span></div>
       <div><span class="s">Cantidad</span><span class="v">${num(p.N, 0)}</span><span class="s">${E(eq.plural)}</span></div>
       <div><span class="s">Total de la oferta USD</span><span class="v">${num(c.total)}</span><span class="s">sin IVA${p.TRANS ? " · con flete" : " · EXW"}</span></div>`;
   }
@@ -643,16 +643,16 @@
     const bad = avs.filter(a => a.nivel === "bad"), warn = avs.filter(a => a.nivel !== "bad");
     return `<div class="grid2"><section class="panel"><h3>Costo y precio por ${E(S.doc.cot.equipo?.singular || "equipo")} (USD sin IVA)</h3>
         <div class="tbl"><table><tbody>
-        <tr><td>Materiales (con ajuste por inflación)</td><td class="n">${num(c.sub.material)}</td><td class="n">× ${p.FM}</td></tr>
-        <tr><td>Contingencia ${p.CONT}%</td><td class="n">${num(c.cont)}</td><td class="n">× ${p.FM}</td></tr>
+        <tr><td>Materiales (con ajuste por inflación)</td><td class="n">${num(c.sub.material)}</td><td class="n">× ${num(p.FM)}</td></tr>
+        <tr><td>Contingencia ${NI(p.CONT)}%</td><td class="n">${num(c.cont)}</td><td class="n">× ${num(p.FM)}</td></tr>
         ${c.tav ? `<tr><td>Válvulas Taval (con contingencia)</td><td class="n">${num(c.tav)}</td><td class="n">× ${c.ftv}</td></tr>` : ""}
-        <tr><td>Mano de obra</td><td class="n">${num(c.sub.mo)}</td><td class="n">× ${p.FMO}</td></tr>
-        <tr><td>Servicios e insumos</td><td class="n">${num(c.sub.servicio)}</td><td class="n">× ${p.FMO}</td></tr>
+        <tr><td>Mano de obra</td><td class="n">${num(c.sub.mo)}</td><td class="n">× ${num(p.FMO)}</td></tr>
+        <tr><td>Servicios e insumos</td><td class="n">${num(c.sub.servicio)}</td><td class="n">× ${num(p.FMO)}</td></tr>
         <tr class="total"><td>Costo</td><td class="n">${num(c.costo)}</td><td class="n">${num(c.precio_unitario)}</td></tr>
         <tr><td>Ajuste por inflación incluido</td><td class="n">${num(c.costo - c.costo0)}</td><td class="n">${c.costo0 ? "+" + num((c.costo / c.costo0 - 1) * 100, 1) + "%" : ""}</td></tr>
         <tr><td>Flete + embalaje</td><td class="n">${num(c.flete)}</td><td class="n">${p.TRANS ? "incluido" : "no incluido"}</td></tr></tbody></table></div>
         <h3>Escenarios de factor</h3><div class="tbl"><table><thead><tr><th>Factor</th><th class="n">Unitario</th><th class="n">Total</th><th class="n">Margen</th></tr></thead><tbody>
-        ${esc_.map(e => `<tr ${Math.abs(e.F - p.FM) < 1e-9 && Math.abs(e.F - p.FMO) < 1e-9 ? 'class="total"' : ""}><td>${e.F.toFixed(2)}</td><td class="n">${num(e.unitario)}</td><td class="n">${num(e.total)}</td><td class="n">${num(e.margen * 100, 1)}%</td></tr>`).join("")}</tbody></table></div>
+        ${esc_.map(e => `<tr ${Math.abs(e.F - p.FM) < 1e-9 && Math.abs(e.F - p.FMO) < 1e-9 ? 'class="total"' : ""}><td>${num(e.F)}</td><td class="n">${num(e.unitario)}</td><td class="n">${num(e.total)}</td><td class="n">${num(e.margen * 100, 1)}%</td></tr>`).join("")}</tbody></table></div>
         ${panelBase()}</section>
       <section class="panel"><h3>Descargas</h3>
         <p class="small muted">${S.doc.cot.estado === "aprobado" ? "Aprobada: las ofertas salen con firma." : "Sin aprobar: las ofertas salen con la leyenda de borrador."}</p>
@@ -759,6 +759,20 @@
   }
 
   // ------------------------------------------------------------------ eventos
+  // Campos de números (input.num): punto de miles, coma decimal, 2 decimales como máximo. Mientras se escribe, si no
+  // cumple, el campo queda en rojo con el motivo; al salir del campo se reescribe en el formato de la página
+  // (así se ve cómo se entendió: "1500" → "1.500") o se muestra el motivo si quedó mal.
+  document.addEventListener("input", ev => {
+    const el = ev.target; if (!el.classList?.contains("num")) return;
+    el.setCustomValidity(Documentos.errorNumero(el.value)); el.title = el.validationMessage || "";
+  }, true);
+  document.addEventListener("focusin", ev => { const el = ev.target; if (el.classList?.contains("num") && !el.placeholder) el.placeholder = "1.234,56"; });
+  document.addEventListener("focusout", ev => {
+    const el = ev.target; if (!el.classList?.contains("num") || !el.value.trim()) return;
+    const v = NUM(el.value);
+    if (v == null) { el.setCustomValidity(Documentos.errorNumero(el.value)); el.reportValidity(); }
+    else { el.setCustomValidity(""); el.title = ""; el.value = NI(v); el.classList.remove("mal"); }
+  });
   app.addEventListener("input", ev => {
     const el = ev.target;
     if (bloqueada() && (el.dataset.b || el.dataset.bl || el.dataset.it || el.dataset.glob || el.dataset.rbPropia || el.dataset.tr || el.dataset.ta !== undefined)) {
@@ -827,7 +841,8 @@
       } else t[c] = el.value;
       const g = Rubros.globalDe(cot, "transporte");
       if (g) {
-        const v = NUM($("#trp")?.value || "") || 0;
+        const txt = $("#trp")?.value || "", v = NUM(txt) || 0;
+        if (txt.trim() && NUM(txt) == null) { el.classList.add("mal"); return; } // número mal escrito: no se toca el transporte
         Object.assign(g, { descripcion: `Transporte${t.destino ? " a " + t.destino : ""} (por ${cot.equipo?.singular || "equipo"})`, especificacion: t.transportista || "" });
         Object.assign(g.fuentes[0], { precio: v, tipo: "cot", proveedor: t.transportista || "Transportista a definir", origen: "cargado en la página", coincide: "igual", diferencia: "" });
       }
@@ -840,6 +855,7 @@
       guardarPronto(); pintarRubros();
     } else if (el.dataset.ta !== undefined) {
       const t = S.doc.cot.plazo.tareas[+el.dataset.ta], c = +el.dataset.c;
+      if ((c === 1 || c === 2) && el.value.trim() && NUM(el.value) == null) { el.classList.add("mal"); return; }
       t[c] = c === 1 || c === 2 ? NUM(el.value) || 0 : el.value; guardarPronto();
     } else if (el.id === "rx-pct") S.rxPct = NUM(el.value) || 0;
     else if (el.id === "pin-m2") S.pinM2 = el.value;
@@ -961,7 +977,7 @@
         if (!pct) { toast("Cargá el porcentaje de juntas a radiografiar"); return; }
         agregarRx(S.sold, pct); guardarPronto(); render(); toast("Radiografía agregada"); break;
       }
-      case "pin-calc": { const m2 = m2Canos(); S.pinM2 = m2.toFixed(2); render(); toast(m2 ? `${num(m2)} m² de caños y niples (sin accesorios ni válvulas)` : "No hay caños con Ø, schedule y largo para calcular"); break; }
+      case "pin-calc": { const m2 = m2Canos(); S.pinM2 = NI(m2); render(); toast(m2 ? `${num(m2)} m² de caños y niples (sin accesorios ni válvulas)` : "No hay caños con Ø, schedule y largo para calcular"); break; }
       case "pin-agregar": {
         const m2 = NUM($("#pin-m2").value);
         if (!m2 || !$("#pin-t").value) { toast("Cargá los m² y elegí la tarifa"); return; }

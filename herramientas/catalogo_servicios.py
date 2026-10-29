@@ -34,7 +34,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from catalogo_materiales import factor_cepo, en_mes, iva_de, unidad_norm  # noqa: E402
 from indice_proyectos import norm  # noqa: E402
-from numeros import fecha_iso, leer_numero  # noqa: E402
+from numeros import fecha_iso, leer_numero, fmt, fmtg  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
 PRECIOS = RAIZ / "conocimiento" / "precios"
@@ -119,7 +119,7 @@ def numero_ambiguo(r):
     for tok in re.findall(r"\d[\d.,]*\d|\d", r["texto_original"]):
         v, amb = leer_numero(tok)
         if amb and v is not None and abs(v * 1000 - precio) < 0.5:
-            return f"número ambiguo en el origen ('{tok}' leído como {precio:g}, no como {v:g}): verificar"
+            return f"número ambiguo en el origen ('{tok}' leído como {fmtg(precio)}, no como {fmtg(v)}): verificar"
     return ""
 
 
@@ -158,7 +158,7 @@ def leer_extraccion():
                 if tc is None:
                     raise ValueError("pesos con fecha de solo año: no se puede convertir")
                 usd = precio_sin / tc
-                notas.append(f"convertido de ARS a USD con dólar BNA {tc:,.2f}" + (" (fecha anterior a la tabla)" if viejo else ""))
+                notas.append(f"convertido de ARS a USD con dólar BNA {fmt(tc, 2)}" + (" (fecha anterior a la tabla)" if viejo else ""))
         else:
             usd = precio_sin
         # tarifa unitaria: precio ÷ magnitud (el precio está en USD/algo o es global con magnitud)
@@ -253,7 +253,7 @@ def main():
                     confiables.append({**h, "usd": h["usd"] * f, "usd_aj": h["usd_aj"] * f if h["usd_aj"] is not None else None,
                                        "tarifa": h["tarifa"] * f if h["tarifa"] is not None else None,
                                        "tarifa_aj": h["tarifa_aj"] * f if h["tarifa_aj"] is not None else None,
-                                       "descartado": False, "notas": h["notas"] + [f"ESTIMADO: {txt}; valor original USD {h['usd']:,.2f}"],
+                                       "descartado": False, "notas": h["notas"] + [f"ESTIMADO: {txt}; valor original USD {fmt(h['usd'], 2)}"],
                                        "alertas": h["alertas"] + [f"ESTIMADO: valor del período con cepo {txt}; pedir cotización"]})
         fechados = [h for h in confiables if h["fecha"]]
         usable = (fechados or confiables)
@@ -262,17 +262,17 @@ def main():
             u = ultimo_h
             vals = [valor(h) for h in confiables if valor(h)]
             if vals and max(vals) > 3 * min(vals):
-                alertas.append(f"historial disperso (>3×): {min(vals):,.2f} a {max(vals):,.2f}: revisar")
+                alertas.append(f"historial disperso (>3×): {fmt(min(vals), 2)} a {fmt(max(vals), 2)}: revisar")
             alertas += u["alertas"]
             tu = u["tarifa_u"]
             if tu in TOPE and valor(u) and valor(u) > TOPE[tu]:
-                alertas.append(f"{valor(u):,.2f} {tu}: ¿total tomado como unitario o pesos tomados como dólares?")
+                alertas.append(f"{fmt(valor(u), 2)} {tu}: ¿total tomado como unitario o pesos tomados como dólares?")
             if len(vals) >= 3:
                 med = sorted(vals)[len(vals) // 2]
                 if valor(u) > 20 * med:
-                    alertas.append(f"{valor(u) / med:,.0f} veces la mediana del historial: ¿total como unitario o pesos como USD?")
+                    alertas.append(f"{fmt(valor(u) / med, 0)} veces la mediana del historial: ¿total como unitario o pesos como USD?")
                 elif valor(u) < med / 20:
-                    alertas.append(f"1/{med / valor(u):,.0f} de la mediana del historial: ¿precio mal leído?")
+                    alertas.append(f"1/{fmt(med / valor(u), 0)} de la mediana del historial: ¿precio mal leído?")
             if not fechados:
                 alertas.append("ningún precio con fecha: el último no se puede ordenar")
         else:

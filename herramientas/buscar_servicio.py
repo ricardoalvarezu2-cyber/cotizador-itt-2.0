@@ -20,6 +20,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from numeros import fmt, fmtg  # noqa: E402
 from indice_proyectos import norm  # noqa: E402
 
 PRECIOS = Path(__file__).resolve().parent.parent / "conocimiento" / "precios"
@@ -43,17 +44,17 @@ def ficha(r, i, puntaje):
     sin = r["ultimo_precio_usd"] == ""
     print(f"\n{i}. {r['codigo']} · {r['hoja']} · {r['servicio']}")
     if sin:
-        print("   SIN PRECIO CONFIABLE: pedir cotización." + (f" Referencia descartada (no usar): USD {float(r['referencia_descartada_usd']):,.2f} ({r['unidad']}) · {r['fecha_referencia_descartada']}"
+        print("   SIN PRECIO CONFIABLE: pedir cotización." + (f" Referencia descartada (no usar): USD {fmt(float(r['referencia_descartada_usd']), 2)} ({r['unidad']}) · {r['fecha_referencia_descartada']}"
                                                           if r["referencia_descartada_usd"] else ""))
     else:
-        print(f"   Último precio: USD {float(r['ultimo_precio_usd']):,.2f} {('por ' + r['unidad'][4:]) if r['unidad'].startswith('USD/') else '(' + r['unidad'] + ')'} sin IVA · {r['fecha_ultimo_precio'] or 'sin fecha'} · {r['proveedor']}")
+        print(f"   Último precio: USD {fmt(float(r['ultimo_precio_usd']), 2)} {('por ' + r['unidad'][4:]) if r['unidad'].startswith('USD/') else '(' + r['unidad'] + ')'} sin IVA · {r['fecha_ultimo_precio'] or 'sin fecha'} · {r['proveedor']}")
         if r["tarifa_unitaria_usd"]:
-            print(f"   Tarifa unitaria: USD {float(r['tarifa_unitaria_usd']):,.2f} por {r['unidad_tarifa'][4:]} "
-                  f"(ajustada a hoy: USD {float(r['tarifa_ajustada_hoy_usd'] or 0):,.2f}) · alcance comparable: {r['alcance_comparable']}")
+            print(f"   Tarifa unitaria: USD {fmt(float(r['tarifa_unitaria_usd']), 2)} por {r['unidad_tarifa'][4:]} "
+                  f"(ajustada a hoy: USD {fmt(float(r['tarifa_ajustada_hoy_usd'] or 0), 2)}) · alcance comparable: {r['alcance_comparable']}")
         if r["precio_ajustado_hoy_usd"] != "":
-            print(f"   Precio ajustado a hoy (costo local en USD): USD {float(r['precio_ajustado_hoy_usd']):,.2f}")
+            print(f"   Precio ajustado a hoy (costo local en USD): USD {fmt(float(r['precio_ajustado_hoy_usd']), 2)}")
     if r["precios_en_historial"] and int(r["precios_en_historial"]) > 1 and r["precio_min_usd"] != "":
-        print(f"   {r['precios_en_historial']} precio(s) en el historial (confiables entre {float(r['precio_min_usd']):,.2f} y {float(r['precio_max_usd']):,.2f})")
+        print(f"   {r['precios_en_historial']} precio(s) en el historial (confiables entre {fmt(float(r['precio_min_usd']), 2)} y {fmt(float(r['precio_max_usd']), 2)})")
     print(f"   {r['descripcion'][:200]}")
     if r["equipo_referencia"]:
         print(f"   Equipo de referencia: {r['equipo_referencia']}" + (f" · lugar: {r['lugar']}" if r["lugar"] else ""))

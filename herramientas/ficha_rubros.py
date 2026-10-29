@@ -30,7 +30,7 @@ import precotizar  # noqa: E402
 from catalogo_materiales import atributos, expandir, familia_de  # noqa: E402
 from controles_tablas import TEC, leer, leer_acc, peso_item  # noqa: E402
 from indice_proyectos import norm  # noqa: E402
-from numeros import a_vista  # noqa: E402
+from numeros import a_vista, fmt, fmtg  # noqa: E402
 
 RUBROS = {  # en el orden en que se muestran (pedido de Matías, 29-10-2026: un ítem por rubro de fabricación)
     "mo_estructura": ("Fabricación del skid (estructura)", "mo"),
@@ -238,11 +238,11 @@ def transporte(cfg, kg_equipo):
         r["avisos"].append("Faltan las medidas del equipo (largo × ancho × alto): cargarlas del plano de conjunto")
         return r
     if A > LIMITE_ANCHO and L > LIMITE_ANCHO:
-        r["avisos"].append(f"Ancho {A:g} m: supera {LIMITE_ANCHO:g} m → carga especial (permiso de Vialidad y escolta)")
+        r["avisos"].append(f"Ancho {fmtg(A)} m: supera {fmtg(LIMITE_ANCHO)} m → carga especial (permiso de Vialidad y escolta)")
     if H + CAMION["piso"] > LIMITE_ALTO:
-        r["avisos"].append(f"Alto cargado {H + CAMION['piso']:.2f} m (equipo {H:g} m + piso {CAMION['piso']:g} m): supera {LIMITE_ALTO:g} m → carretón o carga especial")
+        r["avisos"].append(f"Alto cargado {fmt(H + CAMION['piso'], 2)} m (equipo {fmtg(H)} m + piso {fmtg(CAMION['piso'])} m): supera {fmtg(LIMITE_ALTO)} m → carretón o carga especial")
     if max(L, A) > CAMION["largo"]:
-        r["avisos"].append(f"Largo {max(L, A):g} m: más que la caja de un semi ({CAMION['largo']:g} m) → carretón extensible")
+        r["avisos"].append(f"Largo {fmtg(max(L, A))} m: más que la caja de un semi ({fmtg(CAMION['largo'])} m) → carretón extensible")
     entra = lambda l, a: (math.floor(CAMION["largo"] / l) * math.floor(CAMION["ancho"] / a)) if l <= CAMION["largo"] and a <= CAMION["ancho"] else 0
     por_medida = max(entra(L, A), entra(A, L), 1)
     por_peso = math.floor(CAMION["kg"] / kg_equipo) if kg_equipo else por_medida
@@ -317,7 +317,7 @@ def escribir(carpeta, ficha, cfg):
     p, eq = ficha, (cfg.get("equipo") or {}).get("singular", "equipo")
     mp, me, pi, en, tr = p["mo_piping"], p["mo_estructura"], p["pintura"], p["end"], p["transporte"]
     L = [f"# Ficha por rubro — {cfg['codigo']}", "",
-         f"Generada por `herramientas/ficha_rubros.py` el {a_vista(p['generada'])}. Todo **por {eq}**; la cantidad ({cfg['parametros']['N']:g}) multiplica al final.",
+         f"Generada por `herramientas/ficha_rubros.py` el {a_vista(p['generada'])}. Todo **por {eq}**; la cantidad ({fmtg(cfg['parametros']['N'])}) multiplica al final.",
          "Sirve para pedir un precio global al tercero y para controlarlo contra el cálculo detallado.", ""]
 
     def ref(r):
@@ -339,7 +339,7 @@ def escribir(carpeta, ficha, cfg):
           f"- Juntas a tope (BW) de taller: **{n(mp['juntas_bw'], 0)}** · juntas SW, cuplas y olets: **{n(mp['juntas_sw_olet'], 0)}** · extremos para soldar en campo: {n(mp['extremos_campo'], 0)}",
           f"- Pulgadas equivalentes de soldadura: **{n(mp['pulg_eq'])}**",
           f"- kg de piping (caños, bridas, accesorios y válvulas con tabla): **{n(mp['kg_piping'], 0)} kg** · bridas: {n(mp['bridas'], 0)}",
-          f"- Diámetros soldados a tope: {', '.join(f'{d:g}\"' for d in mp['diametros']) or '—'}"]
+          f"- Diámetros soldados a tope: {', '.join(f'{fmtg(d)}\"' for d in mp['diametros']) or '—'}"]
     if mp["sin_peso"]:
         L.append(f"- Sin peso (no suman kg): {'; '.join(mp['sin_peso'])}")
     L += [f"- ⚠ {a}" for a in mp["avisos"]] + ref("mo_piping") + ["",
@@ -359,7 +359,7 @@ def escribir(carpeta, ficha, cfg):
           f"- Medidas del {eq}: {n(tr['largo_m'])} × {n(tr['ancho_m'])} × {n(tr['alto_m'])} m (largo × ancho × alto) · kg: **{n(tr['kg_equipo'], 0)}** (piping + estructura)"
           + (f" · destino: {tr['destino']}" if tr["destino"] else "")]
     if tr["por_camion"]:
-        L.append(f"- Entran **{tr['por_camion']}** por semirremolque ({CAMION['largo']:g} × {CAMION['ancho']:g} m, {CAMION['kg'] / 1000:g} t; por medidas {tr['por_medida']}, por peso {tr['por_peso']}) → **{tr['viajes']} viaje(s)** para {cfg['parametros']['N']:g}")
+        L.append(f"- Entran **{tr['por_camion']}** por semirremolque ({fmtg(CAMION['largo'])} × {fmtg(CAMION['ancho'])} m, {fmtg(CAMION['kg'] / 1000)} t; por medidas {tr['por_medida']}, por peso {tr['por_peso']}) → **{tr['viajes']} viaje(s)** para {fmtg(cfg['parametros']['N'])}")
     L += [f"- ⚠ {a}" for a in tr["avisos"]] + ref("transporte") + [""]
     (carpeta / "ficha_rubros.md").write_text("\n".join(L) + "\n", encoding="utf-8")
     (carpeta / "ficha_rubros.json").write_text(json.dumps(ficha, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")

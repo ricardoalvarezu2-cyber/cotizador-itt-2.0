@@ -24,6 +24,7 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from numeros import fmt, fmtg  # noqa: E402
 from indice_proyectos import FAMILIAS, SALIDA as INDICE, norm, palabras  # noqa: E402
 
 TAMANOS = [0.5, 0.75, 1, 1.5, 2, 2.5, 3, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 30, 36, 42, 48]
@@ -60,9 +61,9 @@ def puntuar(p, q, idf, hoy):
     dias = [float(x) for x in p["diametros"].split()]
     if q.diametro:
         if q.diametro in dias:
-            s += 15; razones.append(f'Ø{q.diametro:g}"')
+            s += 15; razones.append(f'Ø{fmtg(q.diametro)}"')
         elif any(vecino(q.diametro, d) for d in dias):
-            s += 7; razones.append(f'Ø cercano ({", ".join(f"{d:g}" for d in dias if vecino(q.diametro, d))}")')
+            s += 7; razones.append(f'Ø cercano ({", ".join(f"{fmtg(d)}" for d in dias if vecino(q.diametro, d))}")')
     if q.serie and q.serie in p["series"].split():
         s += 12; razones.append(f"serie {q.serie}")
     if q.material:
@@ -125,13 +126,13 @@ def main():
     for i, (s, razones, fe, p) in enumerate(res[:q.top], 1):
         pu = p["precio_unitario_principal"]
         datos = " · ".join(x for x in [
-            f"{p['monto'] and float(p['monto']):,.0f} {p['moneda']}" if p["monto"] else "",
-            f"unit. {float(pu):,.0f}" if pu else "", f"factor {float(p['factor']):.2f}" if p["factor"] else "",
-            f"{float(p['plazo_dias']):.0f} días" if p["plazo_dias"] else "", p["resultado"]] if x)
-        print(f"{i}. [{s:.0f}] {p['fecha']} · {p['id']}")
+            f"{fmt(p['monto'] and float(p['monto']), 0)} {p['moneda']}" if p["monto"] else "",
+            f"unit. {fmt(float(pu), 0)}" if pu else "", f"factor {fmt(float(p['factor']), 2)}" if p["factor"] else "",
+            f"{fmt(float(p['plazo_dias']), 0)} días" if p["plazo_dias"] else "", p["resultado"]] if x)
+        print(f"{i}. [{fmt(s, 0)}] {p['fecha']} · {p['id']}")
         print(f"   {p['descripcion'][:160]}")
         print(f"   {datos}")
-        print(f"   Por qué: {'; '.join(razones) or '—'} · antigüedad ×{fe:.2f}")
+        print(f"   Por qué: {'; '.join(razones) or '—'} · antigüedad ×{fmt(fe, 2)}")
         print(f"   Abrir: {p['carpeta_textos']}  |  ficha: {p['ficha']}\n")
 
 

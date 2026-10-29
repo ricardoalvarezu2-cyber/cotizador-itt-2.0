@@ -25,7 +25,7 @@ from docx.shared import Cm, Pt, RGBColor
 from openpyxl import load_workbook
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from numeros import a_vista  # noqa: E402
+from numeros import a_vista, fmt, fmtg  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
 PLANTILLA = RAIZ / "plantillas" / "oferta_itt_2026.docx"
@@ -38,7 +38,7 @@ I_TABLA_REV, I_RECUADRO, I_FIN_INTRO, I_NOTAS, I_FIRMA = 4, 8, 29, 88, 102
 
 
 def usd(v):
-    return f"USD {v:,.2f}"
+    return f"USD {fmt(v, 2)}"
 
 
 def cot_equipo(carpeta):
@@ -273,7 +273,7 @@ def armar(carpeta, tipo, cfg, precios):
         c.titulo("PRECIO DE LA PROVISIÓN")
         it = cfg["item"]
         c.tabla(["ITEM", "CÓDIGO", "DESCRIPCIÓN", "CANTIDAD", "USD UNIDAD", "USD SUBTOTAL", "Plazo de entrega (días)"],
-                [[it["item"], it["codigo"], it["descripcion"], f"{precios['cantidad']:g}", usd(precios["precio_unitario"]),
+                [[it["item"], it["codigo"], it["descripcion"], f"{fmtg(precios['cantidad'])}", usd(precios["precio_unitario"]),
                   usd(precios["precio_unitario"] * precios["cantidad"]), it["plazo_dias"]]]
                 + ([["", "", cfg.get("descripcion_flete", "Flete y embalaje hasta destino"), "1", usd(precios["flete"]), usd(precios["flete"]), ""]]
                    if precios["flete"] else []),
@@ -291,7 +291,7 @@ def armar(carpeta, tipo, cfg, precios):
         c.titulo("ALCANCE")
         it = cfg["item"]
         c.tabla(["ITEM", "CANTIDAD", "DESCRIPCIÓN", "OBSERVACIÓN / DESVÍO", "Plazo de entrega (días)"],
-                [[it["item"], f"{precios['cantidad']:g}", it["descripcion"], it["observacion"], it["plazo_dias"]]],
+                [[it["item"], f"{fmtg(precios['cantidad'])}", it["descripcion"], it["observacion"], it["plazo_dias"]]],
                 [1.4, 2.2, 7.2, 4.2, 2.2], alinear=[1, 1, 0, 1, 1])
         c.titulo("EMBALAJE"); c.texto(cfg["embalaje"])
         c.titulo("DOCUMENTOS QUE FORMAN PARTE DE LA PROPUESTA")

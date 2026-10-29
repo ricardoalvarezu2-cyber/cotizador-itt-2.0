@@ -22,6 +22,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from numeros import fmt, fmtg  # noqa: E402
 from catalogo_materiales import atributos, expandir, familia_de  # noqa: E402
 from controles_tablas import RUBRO_PLAZO, rubro  # noqa: E402
 from indice_proyectos import etiquetas, norm  # noqa: E402
@@ -78,7 +79,7 @@ def main(carpeta):
             filas.append((d, it["pos"], it["descripcion"][:50], origen))
         acopio, pos_c, critico, _ = max(filas) if filas else (0, "", "", "")
         lineas += ["## 1. Acopio (plazo por ítem)", "", "| Pos | Ítem | Días | Origen |", "|---|---|---|---|"] + \
-                  [f"| {p} | {d_} | {x:.0f} | {o} |" for x, p, d_, o in sorted(filas, reverse=True)]
+                  [f"| {p} | {d_} | {fmt(x, 0)} | {o} |" for x, p, d_, o in sorted(filas, reverse=True)]
         if supuestos:
             avisos.append(f"Plazo de acopio con valores SUPUESTOS (típico del rubro) en las posiciones {', '.join(supuestos)}: cargar el plazo cotizado por el proveedor")
     # 2. taller
@@ -87,7 +88,7 @@ def main(carpeta):
         origen_t = "tareas de taller cargadas"
         sup = [t for t in tal if t[1] < acopio]
         if sup:
-            avisos.append(f"Superposición: la tarea de taller '{sup[0][0]}' empieza el día {sup[0][1]}, antes de que llegue el material más largo (día {acopio:g})")
+            avisos.append(f"Superposición: la tarea de taller '{sup[0][0]}' empieza el día {sup[0][1]}, antes de que llegue el material más largo (día {fmtg(acopio)})")
     elif pl.get("taller_dias"):
         taller, origen_t = float(pl["taller_dias"]), "plazo.taller_dias"
     else:
@@ -97,21 +98,21 @@ def main(carpeta):
     con_margen = (round(calc * 1.15), round(calc * 1.20))
     real = REAL_FAMILIA.get(fam)
     lineas += ["", "## 2. Resultado", "",
-               f"- Material más largo: **{critico}** → acopio **{acopio:g} días**.",
-               f"- Taller, ensayos, pintura y despacho: **{taller:g} días** ({origen_t}).",
-               f"- **Plazo calculado sin superponer: {calc:g} días**; con el margen de 15–20% de la regla: **{con_margen[0]}–{con_margen[1]} días**.",
+               f"- Material más largo: **{critico}** → acopio **{fmtg(acopio)} días**.",
+               f"- Taller, ensayos, pintura y despacho: **{fmtg(taller)} días** ({origen_t}).",
+               f"- **Plazo calculado sin superponer: {fmtg(calc)} días**; con el margen de 15–20% de la regla: **{con_margen[0]}–{con_margen[1]} días**.",
                f"- Plazo ofrecido: **{ofrecido} días**." if ofrecido else "- Sin plazo ofrecido cargado.",
                f"- Plazo real histórico de la familia {fam}: {real} días (mediana, plazos.md §1)." if real else ""]
     if ofrecido:
         if ofrecido < calc:
-            avisos.append(f"El plazo ofrecido ({ofrecido} d) es MENOR que el calculado ({calc:g} d)")
+            avisos.append(f"El plazo ofrecido ({ofrecido} d) es MENOR que el calculado ({fmtg(calc)} d)")
         elif ofrecido < con_margen[0]:
             avisos.append(f"El plazo ofrecido ({ofrecido} d) no tiene el margen de 15–20% (sugerido {con_margen[0]}–{con_margen[1]} d)")
         if real and ofrecido < 0.6 * real:
             avisos.append(f"El plazo ofrecido es mucho menor que el real histórico de la familia {fam} ({real} d): confirmar antes de comprometerlo")
     lineas += ["", "## 3. Avisos", ""] + ([f"- ⚠ {a}" for a in avisos] or ["- Ninguno."])
     (carpeta / "plazo_calculado.md").write_text("\n".join(x for x in lineas if x is not None) + "\n", encoding="utf-8")
-    print(f"Plazo: calculado {calc:g} días ({con_margen[0]}–{con_margen[1]} con margen) · ofrecido {ofrecido} → {carpeta / 'plazo_calculado.md'}")
+    print(f"Plazo: calculado {fmtg(calc)} días ({con_margen[0]}–{con_margen[1]} con margen) · ofrecido {ofrecido} → {carpeta / 'plazo_calculado.md'}")
     for a in avisos:
         print("  ! " + a)
     return avisos

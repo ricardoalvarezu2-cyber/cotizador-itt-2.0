@@ -37,7 +37,7 @@ from pathlib import Path
 from openpyxl import Workbook, load_workbook
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from numeros import a_vista  # noqa: E402
+from numeros import a_vista, fmt, fmtg  # noqa: E402
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -142,11 +142,11 @@ def escribir_planilla(cfg, carpeta, idx_rows):
     ws["A1"] = f"{cfg['codigo']} {cfg['revision']} · {cfg['titulo']}"; ws["A1"].font = Font(bold=True, size=14)
     ws["A2"] = f"{cfg['subtitulo_planilla']} · {cfg['estado']} {a_vista(cfg['fecha'])}"; ws["A2"].font = GRIS
     ws["A4"] = "PARÁMETROS (celdas amarillas editables)"; ws["A4"].font = Font(bold=True)
-    params = [(f"Cantidad de {eq['plural']}", p["N"], "0"), ("Factor de materiales (materiales y contingencia)", p["FM"], "0.00"),
-              ("Factor de mano de obra y servicios", p["FMO"], "0.00"), ("Contingencia materiales", p["CONT"] / 100, "0%"),
+    params = [(f"Cantidad de {eq['plural']}", p["N"], "0"), ("Factor de materiales (materiales y contingencia)", p["FM"], "#,##0.00"),
+              ("Factor de mano de obra y servicios", p["FMO"], "#,##0.00"), ("Contingencia materiales", p["CONT"] / 100, "0%"),
               ("Incluir flete (1 = sí, 0 = no)", p["TRANS"], "0"), ("Tipo de cambio ARS/USD (cargar BNA del día)", p["TC"], "#,##0"),
-              ("Flete ARS por envío", p["TR_ARS"], "#,##0"), ("Embalaje USD por envío (estimado)", p["TR_EMB"], USD), ("Factor flete", p["TR_F"], "0.00"),
-              ("Factor de válvulas Taval (con su contingencia)", p.get("FTV", 1.0), "0.00")]
+              ("Flete ARS por envío", p["TR_ARS"], "#,##0"), ("Embalaje USD por envío (estimado)", p["TR_EMB"], USD), ("Factor flete", p["TR_F"], "#,##0.00"),
+              ("Factor de válvulas Taval (con su contingencia)", p.get("FTV", 1.0), "#,##0.00")]
     for r, (n, v, f) in enumerate(params, 5):
         ws.cell(r, 1, n); c = ws.cell(r, 2, v); c.fill = INP; c.number_format = f
     # ajuste por inflación
@@ -174,10 +174,10 @@ def escribir_planilla(cfg, carpeta, idx_rows):
              ("Mano de obra", f'=SUMIF({S}!B2:B{ns},"MO",{S}!P2:P{ns})', "=$B$7"),
              ("Servicios e insumos", f'=SUMIF({S}!B2:B{ns},"Servicio",{S}!P2:P{ns})', "=$B$7")]
     for r, (n, f, fa) in enumerate(filas, 18):
-        ws.cell(r, 1, n); ws.cell(r, 2, f).number_format = USD; ws.cell(r, 3, fa).number_format = "0.00"
+        ws.cell(r, 1, n); ws.cell(r, 2, f).number_format = USD; ws.cell(r, 3, fa).number_format = "#,##0.00"
         ws.cell(r, 4, f"=B{r}*C{r}").number_format = USD; ws.cell(r, 5, f"=D{r}*$B$5").number_format = USD
     ws["A23"] = "Flete + embalaje (por envío)"; ws["C23"] = "=$B$13"; ws["E23"] = "=IF($B$9=1,($B$11/$B$10+$B$12)*$B$13,0)"
-    ws["C23"].number_format = "0.00"; ws["E23"].number_format = USD
+    ws["C23"].number_format = "#,##0.00"; ws["E23"].number_format = USD
     ws["A24"] = "TOTAL SIN IVA"; ws["B24"] = "=SUM(B18:B22)"; ws["C24"] = "=D24/B24"; ws["D24"] = "=SUM(D18:D22)"; ws["E24"] = "=SUM(E18:E23)"
     # sin renglones de IVA: ITT trabaja solo con precios sin IVA (decisión de Matías, 28/10/2026)
     ws["A26"] = "Margen sobre precio"; ws["D26"] = "=1-B24/D24"; ws["D26"].number_format = "0.0%"
@@ -186,7 +186,7 @@ def escribir_planilla(cfg, carpeta, idx_rows):
             x = ws.cell(r, c); x.fill = TOT; x.font = Font(bold=True)
             if c in (2, 4, 5):
                 x.number_format = USD
-    ws["C24"].number_format = "0.00"
+    ws["C24"].number_format = "#,##0.00"
     ws["A27"] = "PRECIO UNITARIO DE VENTA (redondeado, va a la oferta)"; ws["D27"] = "=ROUND(D24,2)"
     ws["A28"] = "TOTAL DE LA OFERTA SIN IVA (unitario redondeado × cantidad + flete)"; ws["E28"] = "=D27*B5+E23"
     for c in ("A27", "D27", "A28", "E28"):
@@ -224,7 +224,7 @@ def escribir_planilla(cfg, carpeta, idx_rows):
                     c.fill = INP
                 if j in (6, 7, 15, 16):
                     c.number_format = USD
-                c.number_format = {11: "dd-mm-yyyy", 13: "0.0", 14: "0.000"}.get(j, c.number_format)
+                c.number_format = {11: "dd-mm-yyyy", 13: "#,##0.00", 14: "#,##0.00"}.get(j, c.number_format)
             w.cell(i, 8).fill = PatternFill("solid", fgColor=TF[s["tipo"]])
             w.cell(i, 17).fill = PatternFill("solid", fgColor={"igual": "DDF1E4", "similar": "FBEFD6", "sin_ref": "F8E1DE"}.get(s.get("coincide"), "FFFFFF"))
             w.cell(i, 18).alignment = Alignment(wrap_text=True, vertical="top")
@@ -238,7 +238,7 @@ def escribir_planilla(cfg, carpeta, idx_rows):
         k = n + 2
         for it in items:
             for a in it["fuentes"][1:]:
-                w.cell(k, 3, f"Alternativa pos {it['pos']}: USD {a['precio']:g} · {a['proveedor']} · {a['origen']} · {a_vista(a['fecha'])} ({TIPOS[a['tipo']]})").font = GRIS
+                w.cell(k, 3, f"Alternativa pos {it['pos']}: USD {fmtg(a['precio'])} · {a['proveedor']} · {a['origen']} · {a_vista(a['fecha'])} ({TIPOS[a['tipo']]})").font = GRIS
                 k += 1
         return w
 
@@ -255,7 +255,7 @@ def escribir_planilla(cfg, carpeta, idx_rows):
         for j, v in enumerate([date(y, m, 1), float(r["ipc_argentina"]), float(r["dolar_bna"]), float(r["indice_local_usd"]),
                                float(r["cpi_eeuu"]), r["origen_ipc"], r["origen_dolar"], r["origen_cpi"]], 1):
             c = x.cell(i, j, v); c.border = B
-            c.number_format = {1: "mm-yyyy", 2: "0.00", 3: "#,##0.00", 4: "0.00", 5: "0.00"}.get(j, "General")
+            c.number_format = {1: "mm-yyyy", 2: "#,##0.00", 3: "#,##0.00", 4: "#,##0.00", 5: "#,##0.00"}.get(j, "General")
             if j >= 6 and str(v).startswith("dato"):
                 c.font = Font(color="2C7A4B")
             if j >= 6 and ("ESTIMADO" in str(v) or "APROXIMADO" in str(v)):
@@ -379,8 +379,8 @@ def main(carpeta):
         adjuntos[rc.name] = base64.b64encode(rc.read_bytes()).decode()
     escribir_informe(cfg, carpeta, idx, adjuntos)  # el informe lleva los dos Excel embebidos para descargarlos
     py, xl = calcular(cfg, idx), leer_planilla(ruta)
-    print(f"Python : costo {py['costo']:,.2f} · precio unitario {py['precio_unitario']:,.2f} · total {py['total']:,.2f}")
-    print(f"Planilla: costo {xl['costo']:,.2f} · precio unitario {xl['precio_unitario']:,.2f} · total {xl['total']:,.2f}")
+    print(f"Python : costo {fmt(py['costo'], 2)} · precio unitario {fmt(py['precio_unitario'], 2)} · total {fmt(py['total'], 2)}")
+    print(f"Planilla: costo {fmt(xl['costo'], 2)} · precio unitario {fmt(xl['precio_unitario'], 2)} · total {fmt(xl['total'], 2)}")
     if any(abs(py[k] - xl[k]) > 0.011 for k in py):
         sys.exit("ERROR: el cálculo en Python y la planilla no coinciden. Revisar antes de seguir.")
     import verificar_computo

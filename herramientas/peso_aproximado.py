@@ -21,6 +21,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from numeros import fmt, fmtg  # noqa: E402
 from indice_proyectos import norm  # noqa: E402
 
 TEC = Path(__file__).resolve().parent.parent / "conocimiento" / "tecnico"
@@ -92,7 +93,7 @@ def estimar(it, at, fam, tipo, canos, bridas, acc, valv, pulg):
         k = kgm_od(canos, dn, sch) or (kgm_od(canos, dn, "STD") if sch in ("40",) else None)
         if k:
             L = factores()[tipo]
-            return k[0] * k[1] * L, None, f"APROXIMADO: {tipo} {dn:g}\" sch {sch} = caño {k[0]:.2f} kg/m × OD {k[1] * 1000:.1f} mm × {L:g} diámetros"
+            return k[0] * k[1] * L, None, f"APROXIMADO: {tipo} {fmtg(dn)}\" sch {sch} = caño {fmt(k[0], 2)} kg/m × OD {fmt(k[1] * 1000, 1)} mm × {fmtg(L)} diámetros"
     if fam == "AFO" and dn and tipo and not bw:
         ext = "SW" if "SW" in at.get("extremos", "") else "NPT"
         cl = clase_num(at.get("serie", "") or "3000")
@@ -100,7 +101,7 @@ def estimar(it, at, fam, tipo, canos, bridas, acc, valv, pulg):
                 and "no sirve" not in r["nota"]]
         if cand:
             r = min(cand, key=lambda r: (abs(clase_num(r["schedule_o_clase"]) - cl), r["nota"].startswith("ATENCION")))
-            return float(r["peso_kg"]), None, f"APROXIMADO: {tipo} {dn:g}\" {ext} con el peso de la clase {r['schedule_o_clase']} (no hay tabla para {cl})"
+            return float(r["peso_kg"]), None, f"APROXIMADO: {tipo} {fmtg(dn)}\" {ext} con el peso de la clase {r['schedule_o_clase']} (no hay tabla para {cl})"
     if fam == "VAL" and dn:
         t = d
         tipos = ["ESFERICA" if "esferica" in t else "RETENCION" if "retencion" in t else "GLOBO" if "globo" in t else
@@ -110,7 +111,7 @@ def estimar(it, at, fam, tipo, canos, bridas, acc, valv, pulg):
             cand = [r for r in valv if r["tipo"].startswith(tipos[0]) and abs(float(r["dn_pulg"]) - dn) < 0.01 and not r["nota"].startswith("pesa menos")]
             if cand:
                 r = min(cand, key=lambda r: abs(clase_num(r["serie"]) - cl))
-                return float(r["kg"]), None, f"APROXIMADO: {r['tipo'].lower()} {dn:g}\" con el peso de la serie {r['serie']} (Taval Lista 30)"
+                return float(r["kg"]), None, f"APROXIMADO: {r['tipo'].lower()} {fmtg(dn)}\" con el peso de la serie {r['serie']} (Taval Lista 30)"
     if fam == "JUN" and dn and re.search(r"junta", d):
         k = kgm_od(canos, dn, "STD") or kgm_od(canos, dn, "40")
         if k:
@@ -119,7 +120,7 @@ def estimar(it, at, fam, tipo, canos, bridas, acc, valv, pulg):
             rho = 1800 if re.search(r"dielectr|aramid|fibra|nbr", d) else 7900
             di, de = k[1], k[1] + 0.05
             kg = 3.14159265 / 4 * (de ** 2 - di ** 2) * e * rho
-            return kg, None, f"APROXIMADO: junta anillo Ø {di * 1000:.0f}–{de * 1000:.0f} mm × {e * 1000:g} mm × {rho} kg/m³"
+            return kg, None, f"APROXIMADO: junta anillo Ø {fmt(di * 1000, 0)}–{fmt(de * 1000, 0)} mm × {fmtg(e * 1000)} mm × {rho} kg/m³"
     return None, None, ""
 
 

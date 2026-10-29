@@ -96,3 +96,20 @@ def a_vista(v):
     if m:
         return f"{int(m.group(1)):02d}-{int(m.group(2)):02d}-{m.group(3)}"
     return s
+
+
+def fmt(v, d=2, signo=False):
+    """Número para mostrar: punto de miles, coma decimal y d decimales (2 por defecto: precios y cantidades,
+    decisión de Matías, 29-10-2026). fmt(1234.5) = '1.234,50'. Solo para textos a la vista; los CSV y JSON
+    internos siguen con punto decimal y sin separador de miles."""
+    if v is None or v == "":
+        return ""
+    v = float(v)
+    s = f"{abs(v):,.{d}f}".replace(",", "X").replace(".", ",").replace("X", ".")
+    return ("-" if v < 0 and float(s.replace(".", "").replace(",", ".")) else "+" if signo and v > 0 else "") + s
+
+
+def fmtg(v):
+    """Como fmt pero sin ceros de más: 0.5 → '0,5', 12 → '12', 1234.567 → '1.234,57' (máximo 2 decimales)."""
+    s = fmt(v, 2)
+    return s.rstrip("0").rstrip(",") if "," in s else s

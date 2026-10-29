@@ -12,6 +12,7 @@ const Ficha = (() => {
   const SCHEDULES = new Set(["5", "10", "20", "30", "40", "60", "80", "100", "120", "140", "160", "STD", "XS", "XXS"]);
   const OLETS = /cupla|sockolet|threadolet|thredolet|weldolet|elbowlet|latrolet|nipolet|\bolet/;
   const AJUSTE_DIRECTAS = 0.75, M2_POR_KG_ESTRUCTURA = 0.030;
+  const g2 = v => Number(v).toFixed(2).replace(/\.?0+$/, "").replace(".", ","); // como numeros.fmtg (sin miles: medidas chicas)
   const INTERNOS = /bafle|deflector|separador de niebla|interno|elemento filtrante|placa apoyo|viruta|refuerzo/;
   const LARGO_EQ_D = [[/valvula|\bvalv\b/, 6.0], [/\btee\b|\bte\b/, 3.0], [/codo 45|curva 45/, 1.2], [/\bcodo|\bcurva/, 2.4], [/reduc/, 1.5], [/brida/, 1.5], [/casquete|\bcap\b|tapa/, 1.0]];
   const INSTRUMENTOS = /termometro|manometro|instrumento|transmisor|bloqueo y purga|vaina|termopozo|indicador|presostato|switch|\b[pt][itwe]-\d/;
@@ -175,9 +176,9 @@ const Ficha = (() => {
     if (!d || !largo) return [null, null, "espárrago sin diámetro o largo"];
     const k = Object.keys(P.esp.var).find(x => Math.abs(+x - d) < 1e-6), var_ = k != null ? P.esp.var[k] : null;
     const kt = Object.keys(P.esp.tue).find(x => Math.abs(+x - d) < 1e-6), tue = kt != null ? P.esp.tue[kt] : null;
-    if (var_ == null || tue == null) return [null, null, `sin tabla para espárrago ${d}"`];
+    if (var_ == null || tue == null) return [null, null, `sin tabla para espárrago ${g2(d)}"`];
     const con = norm(it.descripcion).includes("tuerca");
-    return [var_ * largo + (con ? 2 * tue : 0), null, `espárrago ${d}" × ${largo.toFixed(2)}"${con ? " + 2 tuercas" : ""} (calculado)`];
+    return [var_ * largo + (con ? 2 * tue : 0), null, `espárrago ${g2(d)}" × ${largo.toFixed(2).replace(".", ",")}"${con ? " + 2 tuercas" : ""} (calculado)`];
   }
   // Peso APROXIMADO por volumen × densidad cuando ninguna tabla lo tiene (herramientas/peso_aproximado.estimar)
   const MAPA_ACC = { "codo 90": "codo_90_radio_largo", "codo radio corto 90": "codo_90_radio_corto", "codo 45": "codo_45", tee: "tee_recta",

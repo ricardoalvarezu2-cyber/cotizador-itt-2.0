@@ -158,3 +158,8 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 - Causa probable: desde la página no hay sesión que llame, así que no hay de dónde heredar el modelo (y el modo auto no se puede comparar con el de una sesión).
 - Corrección: el modelo va en `config/claude_code.model` (base de la página) y la página reintenta sin modo auto y sin etiqueta si el servicio rechaza. El aviso muestra el código y el mensaje real del error.
 - Lección: una llamada a un conector que en la sesión funciona puede fallar desde la página; probar el camino real (desde la página) antes de darlo por hecho y mostrar el error completo.
+
+## 29-10-2026 — Dos formatos de número a la vista (auditoría)
+- Qué pasó: la página mostraba 5.644,46 y el informe y la oferta económica 5,644.46 (`documentos.js` con `en-US`, `generar_oferta.py` con `:,.2f`); los campos aceptaban "0.35" como decimal y "3,500,000.5" en formato inglés, así que "1.5" y "1,500" se podían leer distinto de lo que se quiso escribir.
+- Corrección (Matías): punto de miles, coma decimal y 2 decimales en todo lo que se ve (`numeros.fmt`/`fmtg`, `Documentos.num`); los campos aceptan solo ese formato, marcan en rojo y explican el motivo, y al salir se reescriben (1500 → 1.500) para que se vea cómo se entendió. Las planillas usan `#,##0.00` (Excel con configuración argentina muestra 1.234,56). El control de `verificar_todo.py` pasó a "7.366,12".
+- Lección: un número que se puede leer de dos maneras es un error esperando pasar; el formato se fija en un solo lugar y lo ambiguo se rechaza, no se adivina.

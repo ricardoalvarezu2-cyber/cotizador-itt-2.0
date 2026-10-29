@@ -37,7 +37,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from indice_proyectos import frac, norm, diametros, pulgadas, series  # noqa: E402
-from numeros import a_vista, fecha_iso, leer_numero  # noqa: E402
+from numeros import a_vista, fecha_iso, leer_numero, fmt, fmtg  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
 COMPRA_VIGENTE = "2022-01-01"
@@ -622,7 +622,7 @@ def leer_fuentes():
             return  # precio cero o simbólico (hay compras del stock en 0,00): no es un precio
         iva, div = iva or iva_de(desc)
         if div != 1:
-            extra = "; ".join(x for x in [extra, f"precio original con IVA {precio:,.2f}"] if x)
+            extra = "; ".join(x for x in [extra, f"precio original con IVA {fmt(precio, 2)}"] if x)
         regs.append(dict(descripcion=desc.strip(), precio=precio / div, iva=iva, moneda=moneda or "USD", fecha=fecha, tipo_precio=tipo_precio,
                          proveedor=proveedor, ruta_origen=ruta_origen, archivo_origen=archivo, ruta_repo=ruta_repo,
                          unidad=unidad_norm(unidad), extra=extra, pista=pista))
@@ -645,7 +645,7 @@ def leer_fuentes():
         elif num(r["precio_maestro_usd"]):
             add(r["descripcion"], num(r["precio_maestro_usd"]), "USD", "2024-11-01", "stock (precio maestro)", f"Stock ITT (cód. {r['codigo']})",
                 "fuentes_originales/stock_valorizado_2024-11.xlsx", f"código {r['codigo']}", "conocimiento/precios/stock_2024-11.csv", r["unidad"],
-                extra=f"última compra {fc} a USD {uc:,.2f}, anterior a 2022: no se usa" if uc and fc else "", pista=r["grupo"])
+                extra=f"última compra {fc} a USD {fmt(uc, 2)}, anterior a 2022: no se usa" if uc and fc else "", pista=r["grupo"])
     for r in csv.DictReader(open(PRECIOS / "precios_componentes.csv", encoding="utf-8")):
         if num(r["precio"]):
             desc = " ".join(x for x in [r["descripcion"], r["dimension"], r["tipo"], r["schedule"] and f"SCH {r['schedule']}", r["serie"],
@@ -676,7 +676,7 @@ def leer_fuentes():
             car = r["carpeta_cotizacion"]
             add(tramo(r["detalle"]), valor, r["moneda"], fecha_iso(r["fecha"]), "cotización", r["proveedor"], Z + car.replace("/", "\\"),
                 archivo_de(car, r["proveedor"]), f"fuentes_originales/ofertas_texto/{car}" if car else "", unidad_de_texto(det),
-                extra="; ".join(x for x in [f"número ambiguo '{cu[0].group(1)}' leído como {valor:g}: verificar" if ambiguo else "",
+                extra="; ".join(x for x in [f"número ambiguo '{cu[0].group(1)}' leído como {fmtg(valor)}: verificar" if ambiguo else "",
                                             f"renglón completo: {r['detalle'][:180]}" if len(r["detalle"]) > len(tramo(r["detalle"])) + 5 else ""] if x),
                 iva=iva_de(det, cu[0].end()))
     # acero al carbono por kg (chapa, ángulo, planchuela, caño estructural): herramientas/acero_por_kg.py
@@ -686,7 +686,7 @@ def leer_fuentes():
             forma = "Tubo estructural (caño estructural)" if r["forma"] == "caño estructural" else r["forma"].capitalize()
             add(f"{forma} {r['medida']} {r['material']} (precio por kg, {r['unidad_compra']})", float(r["usd_kg"]), "USD", r["fecha"],
                 "cotización", "Precios de acero (J. Elejondo)", r["fuente"], "", "conocimiento/precios/acero_por_kg.csv", "kg",
-                extra=f"pesos con IVA ÷ 1,21 ÷ TC del documento {r['tc_documento']}; +10% por recortes: {float(r['usd_kg_con_recortes']):.2f}; no incluye corte, plegado ni rolado",
+                extra=f"pesos con IVA ÷ 1,21 ÷ TC del documento {r['tc_documento']}; +10% por recortes: {fmt(float(r['usd_kg_con_recortes']), 2)}; no incluye corte, plegado ni rolado",
                 iva=("con IVA en el documento: ya dividido por 1,21", 1.0))
     # listas que carga Ventas (fuentes_originales/listas_vendedor/<fecha de carga>/, herramientas/listas_vendedor.py)
     ruta_lv = PRECIOS / "listas_vendedor.csv"
@@ -769,7 +769,7 @@ def main():
         if r["moneda"].upper().startswith("ARS") or r["moneda"] == "$":
             tc, viejo = en_mes(tabla, r["fecha"], 0)
             precio = precio / tc
-            nota = f"convertido de ARS a USD con dólar BNA {tc:,.0f}" + (" (fecha anterior a la tabla)" if viejo else "")
+            nota = f"convertido de ARS a USD con dólar BNA {fmt(tc, 0)}" + (" (fecha anterior a la tabla)" if viejo else "")
         cpi, viejo = en_mes(tabla, r["fecha"], 1)
         if fam in ("AFO", "ABW", "BRI", "NIP", "VAL", "INS") and r["unidad"] not in ("un", ""):
             r["extra"] = "; ".join(x for x in [r["extra"], f"unidad del origen '{r['unidad']}' corregida a 'un' (es una pieza)"] if x)
@@ -813,23 +813,23 @@ def main():
                 f, txt = factor_cepo(h["fecha"], h["tipo_precio"])
                 if f:
                     e = {**h, "precio_usd": round(h["precio_usd"] * f, 4), "precio_ajustado_hoy_usd": round(h["precio_ajustado_hoy_usd"] * f, 4),
-                         "tipo_precio": "estimado (cepo)", "nota": f"ESTIMADO: {txt}; valor original USD {h['precio_usd']:,.2f}; " + h["nota"]}
+                         "tipo_precio": "estimado (cepo)", "nota": f"ESTIMADO: {txt}; valor original USD {fmt(h['precio_usd'], 2)}; " + h["nota"]}
                     buenos.append(e)
             if buenos:
                 alertas.append(f"ESTIMADO: valor del período con cepo llevado a su valor verosímil ({buenos[0]['nota'].split(';')[0][11:]}); pedir cotización para el definitivo")
         u = buenos[0] if buenos else hs[0]
         precios = [h["precio_usd"] for h in (buenos or hs)]
         if not buenos:
-            alertas.append(f"sin precio confiable (solo valores del período con cepo; referencia descartada USD {hs[0]['precio_usd']:,.2f} del {a_vista(hs[0]['fecha'])}): pedir cotización")
+            alertas.append(f"sin precio confiable (solo valores del período con cepo; referencia descartada USD {fmt(hs[0]['precio_usd'], 2)} del {a_vista(hs[0]['fecha'])}): pedir cotización")
         if max(precios) > 3 * min(precios):
-            alertas.append(f"historial con precios muy distintos ({min(precios):,.2f} a {max(precios):,.2f}): revisar")
+            alertas.append(f"historial con precios muy distintos ({fmt(min(precios), 2)} a {fmt(max(precios), 2)}): revisar")
         par = sorted(pares[(u["familia"], u["atributos"].get("tipo", ""), u["atributos"].get("diametro", ""), u["unidad"])])
         if len(par) >= 3 and u["atributos"].get("tipo"):
             med = par[len(par) // 2]
             if u["precio_usd"] > 50 * med:
-                alertas.append(f"{u['precio_usd'] / med:,.0f} veces la mediana de piezas parecidas: ¿pesos tomados como dólares?")
+                alertas.append(f"{fmt(u['precio_usd'] / med, 0)} veces la mediana de piezas parecidas: ¿pesos tomados como dólares?")
             elif u["precio_usd"] < med / 50:
-                alertas.append(f"1/{med / u['precio_usd']:,.0f} de la mediana de piezas parecidas: ¿precio mal leído?")
+                alertas.append(f"1/{fmt(med / u['precio_usd'], 0)} de la mediana de piezas parecidas: ¿precio mal leído?")
         if not u["fecha"]:
             alertas.append("sin fecha válida en el origen")
         if "ambiguo" in u["nota"]:

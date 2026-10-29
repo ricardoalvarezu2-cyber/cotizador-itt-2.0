@@ -1,64 +1,64 @@
 # Precotización automática — COT26-1003-001
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 3,409.23 por equipo · soldadura y servicios calculados USD 884.76 · 22 similares (1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 14b, 17, 18, 19, 20, 22, 23, 24, 25) · 1 sin precio (21).
+**Resumen:** materiales USD 3.409,23 por equipo · soldadura y servicios calculados USD 884,76 · 22 similares (1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 14b, 17, 18, 19, 20, 22, 23, 24, 25) · 1 sin precio (21).
 
 
 ## 1. Materiales
 
 | Pos | Ítem | Resultado | Precio | Fecha y tipo | Diferencias / faltantes |
 |---|---|---|---|---|---|
-| 1 | Tapón 1/2" | SIMILAR | 1.94 / un | 2026-10-10 · planilla interna | serie: sin dato (pedido 2000) |
-| 2 | Válvula esférica #2000, paso nominal, cuerpo  | SIMILAR | 33.81 / un | 2026-02-20 · planilla interna | material: A105 (pedido A216 WCB); trim: sin dato (pedido asientos metalicos) |
-| 3 | Niple longitud 100 mm 1/2" | SIMILAR ⚠ | 4.00 / un | 2026-10-10 · planilla interna | material: A106 B (pedido API 5L) |
-| 4 | Niple longitud 200 mm 2" | SIMILAR | 20.00 / un | 2026-04-22 · planilla interna | material: A106 B (pedido API 5L) |
-| 5 | Válvula esférica #2000, paso nominal, cuerpo  | SIMILAR | 106.86 / un | 2026-02-20 · planilla interna | material: A105 (pedido A216 WCB); trim: sin dato (pedido asientos metalicos) |
-| 6 | Unión doble a golpe 2" | SIMILAR | 74.75 / un | 2026-04-06 · cotización | serie: sin dato (pedido 2000); material: sin dato (pedido A105) |
-| 7 | Válvula retención #600 tipo a clapeta, cuerpo | IGUAL | 533.00 / un | 2026-06-11 · cotización | — |
-| 8 | Tee normal 2" | SIMILAR | 49.24 / un | 2026-04-22 · planilla interna | serie: 3000 (pedido 2000) |
-| 9 | Niple longitud 100 mm 2" | SIMILAR | 20.00 / un | 2026-04-22 · planilla interna | material: A106 B (pedido API 5L) |
-| 10 | Buje reducción 2"x1/2" | SIMILAR | 11.51 / un | 2026-04-22 · planilla interna | serie: 3000 (pedido 2000) |
-| 11 | Codo 45° 2" | SIMILAR | 50.83 / un | 2025-12-26 · lista | serie: 3000 (pedido 2000) |
-| 12 | Niple longitud 200 mm 2" | SIMILAR | 20.00 / un | 2026-04-22 · planilla interna | extremos: NPT (pedido NPT/BW); material: A106 B (pedido API 5L) |
-| 13 | Junta monolítica 2" | SIMILAR | 280.00 / un | 2026-02-12 · cotización | diametro: sin dato (pedido 2"); material: sin dato (pedido A234 WPB); extremos: sin dato (pedido BW) · faltan: serie |
-| 14 | Caño longitud 1900 mm 2" | SIMILAR | 35.00 / m | 2025-12-10 · planilla interna | material: sin dato (pedido API 5L); revestimiento: sin dato (pedido polipropileno); unidad distinta: catálogo  · faltan: costura |
-| 15 | Codo 45° 2" | IGUAL | 8.73 / un | 2025-12-26 · lista | — |
-| 16 | Reducción concéntrica 2 1/2"x2" | IGUAL | 16.51 / un | 2025-12-26 · lista | — |
-| 17 | Tapón 2" | SIMILAR | 8.45 / un | 2026-04-22 · planilla interna | serie: 3000 (pedido 2000) |
-| 18 | Tee normal 1/2" | SIMILAR | 8.69 / un | 2025-12-26 · lista | serie: 3000 (pedido 2000) |
-| 19 | Válvula bloqueo y purga 1/2" | SIMILAR | 137.00 / un | 2026-04-22 · planilla interna | serie: sin dato (pedido 3000) |
-| 20 | Manómetro rango 0-40 bar 1/2" | SIMILAR | 120.00 / un | 2026-08-14 · planilla interna | rango: sin dato (pedido 0-40 bar) · faltan: conexion |
+| 1 | Tapón 1/2" | SIMILAR | 1,94 / un | 2026-10-10 · planilla interna | serie: sin dato (pedido 2000) |
+| 2 | Válvula esférica #2000, paso nominal, cuerpo  | SIMILAR | 33,81 / un | 2026-02-20 · planilla interna | material: A105 (pedido A216 WCB); trim: sin dato (pedido asientos metalicos) |
+| 3 | Niple longitud 100 mm 1/2" | SIMILAR ⚠ | 4,00 / un | 2026-10-10 · planilla interna | material: A106 B (pedido API 5L) |
+| 4 | Niple longitud 200 mm 2" | SIMILAR | 20,00 / un | 2026-04-22 · planilla interna | material: A106 B (pedido API 5L) |
+| 5 | Válvula esférica #2000, paso nominal, cuerpo  | SIMILAR | 106,86 / un | 2026-02-20 · planilla interna | material: A105 (pedido A216 WCB); trim: sin dato (pedido asientos metalicos) |
+| 6 | Unión doble a golpe 2" | SIMILAR | 74,75 / un | 2026-04-06 · cotización | serie: sin dato (pedido 2000); material: sin dato (pedido A105) |
+| 7 | Válvula retención #600 tipo a clapeta, cuerpo | IGUAL | 533,00 / un | 2026-06-11 · cotización | — |
+| 8 | Tee normal 2" | SIMILAR | 49,24 / un | 2026-04-22 · planilla interna | serie: 3000 (pedido 2000) |
+| 9 | Niple longitud 100 mm 2" | SIMILAR | 20,00 / un | 2026-04-22 · planilla interna | material: A106 B (pedido API 5L) |
+| 10 | Buje reducción 2"x1/2" | SIMILAR | 11,51 / un | 2026-04-22 · planilla interna | serie: 3000 (pedido 2000) |
+| 11 | Codo 45° 2" | SIMILAR | 50,83 / un | 2025-12-26 · lista | serie: 3000 (pedido 2000) |
+| 12 | Niple longitud 200 mm 2" | SIMILAR | 20,00 / un | 2026-04-22 · planilla interna | extremos: NPT (pedido NPT/BW); material: A106 B (pedido API 5L) |
+| 13 | Junta monolítica 2" | SIMILAR | 280,00 / un | 2026-02-12 · cotización | diametro: sin dato (pedido 2"); material: sin dato (pedido A234 WPB); extremos: sin dato (pedido BW) · faltan: serie |
+| 14 | Caño longitud 1900 mm 2" | SIMILAR | 35,00 / m | 2025-12-10 · planilla interna | material: sin dato (pedido API 5L); revestimiento: sin dato (pedido polipropileno); unidad distinta: catálogo  · faltan: costura |
+| 15 | Codo 45° 2" | IGUAL | 8,73 / un | 2025-12-26 · lista | — |
+| 16 | Reducción concéntrica 2 1/2"x2" | IGUAL | 16,51 / un | 2025-12-26 · lista | — |
+| 17 | Tapón 2" | SIMILAR | 8,45 / un | 2026-04-22 · planilla interna | serie: 3000 (pedido 2000) |
+| 18 | Tee normal 1/2" | SIMILAR | 8,69 / un | 2025-12-26 · lista | serie: 3000 (pedido 2000) |
+| 19 | Válvula bloqueo y purga 1/2" | SIMILAR | 137,00 / un | 2026-04-22 · planilla interna | serie: sin dato (pedido 3000) |
+| 20 | Manómetro rango 0-40 bar 1/2" | SIMILAR | 120,00 / un | 2026-08-14 · planilla interna | rango: sin dato (pedido 0-40 bar) · faltan: conexion |
 | 21 | Unión doble golpe extensible 2" | **SIN PRECIO** | — | — | pedir cotización |
-| 22 | Niple longitud 320 mm 2" | SIMILAR | 20.00 / un | 2026-04-22 · planilla interna | largo_mm: 100 (pedido 320); extremos: NPT (pedido NPT/BW); material: A106 B (pedido API 5L) |
-| 23 | Cupla 1/2" | SIMILAR | 2.71 / un | 2025-12-26 · lista | serie: 3000 (pedido 2000); schedule: sin dato (pedido 80); material: A105 (pedido A234 WPB); extremos: BSPT (p |
-| 24 | Niple longitud 150 mm 2" | SIMILAR | 20.00 / un | 2026-04-22 · planilla interna | material: A106 B (pedido API 5L) |
-| 25 | Niple longitud 1000 mm 2" | SIMILAR | 40.00 / un | 2026-04-22 · planilla interna | extremos: NPT (pedido NPT/BW); material: A106 B (pedido API 5L) |
-| 14b | Completar barra de 6 m (pos 14) | compra extra | USD 35.00/m × 1.1 m | | Se usan 3.8 m en 2 equipo(s) y se compran 6 m. Borrar si hay sobrante en stock |
+| 22 | Niple longitud 320 mm 2" | SIMILAR | 20,00 / un | 2026-04-22 · planilla interna | largo_mm: 100 (pedido 320); extremos: NPT (pedido NPT/BW); material: A106 B (pedido API 5L) |
+| 23 | Cupla 1/2" | SIMILAR | 2,71 / un | 2025-12-26 · lista | serie: 3000 (pedido 2000); schedule: sin dato (pedido 80); material: A105 (pedido A234 WPB); extremos: BSPT (p |
+| 24 | Niple longitud 150 mm 2" | SIMILAR | 20,00 / un | 2026-04-22 · planilla interna | material: A106 B (pedido API 5L) |
+| 25 | Niple longitud 1000 mm 2" | SIMILAR | 40,00 / un | 2026-04-22 · planilla interna | extremos: NPT (pedido NPT/BW); material: A106 B (pedido API 5L) |
+| 14b | Completar barra de 6 m (pos 14) | compra extra | USD 35,00/m × 1,1 m | | Se usan 3,8 m en 2 equipo(s) y se compran 6 m. Borrar si hay sobrante en stock |
 
 ## 2. Soldaduras (de la columna de extremos)
 
-**4 juntas a tope de taller + juntas SW y olets = 13.37 pulgadas equivalentes** × USD 16.00 (Mano de obra soldadura piping (criterio de las planillas de costo 2026), 2026-02) = USD 213.86
+**4 juntas a tope de taller + juntas SW y olets = 13,37 pulgadas equivalentes** × USD 16,00 (Mano de obra soldadura piping (criterio de las planillas de costo 2026), 2026-02) = USD 213,86
 
-- pos 12: 1 extremo(s) BW de taller (1 por unidad × 1) × 2" × 1.4169
-- pos 13: 2 extremo(s) BW de taller (2 por unidad × 1) × 2" × 1.4169
-- pos 14: 2 extremo(s) BW de taller (2 por unidad × 1) × 2" × 1.4169
-- pos 15: 2 extremo(s) BW de taller (2 por unidad × 1) × 2" × 1.4169
-- pos 16: 1 extremo(s) BW de taller (2 por unidad × 1 − 1 de campo por unidad) × 2.5" × 1.3585
-- pos 22: 0 extremo(s) BW de taller (1 por unidad × 1 − 1 de campo por unidad) × 2" × 1.4169
-- pos 23: 2 junta(s) de Cupla sobre caño × 0.5" × 1.75 = 1.75
-- pos 25: 0 extremo(s) BW de taller (1 por unidad × 2 − 1 de campo por unidad) × 2" × 1.4169
+- pos 12: 1 extremo(s) BW de taller (1 por unidad × 1) × 2" × 1,4169
+- pos 13: 2 extremo(s) BW de taller (2 por unidad × 1) × 2" × 1,4169
+- pos 14: 2 extremo(s) BW de taller (2 por unidad × 1) × 2" × 1,4169
+- pos 15: 2 extremo(s) BW de taller (2 por unidad × 1) × 2" × 1,4169
+- pos 16: 1 extremo(s) BW de taller (2 por unidad × 1 − 1 de campo por unidad) × 2,5" × 1,3585
+- pos 22: 0 extremo(s) BW de taller (1 por unidad × 1 − 1 de campo por unidad) × 2" × 1,4169
+- pos 23: 2 junta(s) de Cupla sobre caño × 0,5" × 1.75 = 1,75
+- pos 25: 0 extremo(s) BW de taller (1 por unidad × 2 − 1 de campo por unidad) × 2" × 1,4169
 
 ## 3. Servicios calculados
 
-- **Pintura:** 1.85 m² (caños y niples 1.3 + bridas, accesorios y válvulas (largo equivalente) 0.5) × USD 50.00/m² (Granallado y pintura piping (incluye materiales), criterio ITT, 2026-10-10) = USD 92.51.
-- **Prueba hidráulica:** 6 h × USD 13.00/h (Prueba hidráulica - manifold FA0032 1.2, 2026-03-10) = USD 78.00 · ⚠ horas supuestas: cargar `parametros.ph_horas` · volumen interior de caños y niples 13.0 l.
+- **Pintura:** 1,85 m² (caños y niples 1,3 + bridas, accesorios y válvulas (largo equivalente) 0,5) × USD 50,00/m² (Granallado y pintura piping (incluye materiales), criterio ITT, 2026-10-10) = USD 92,51.
+- **Prueba hidráulica:** 6 h × USD 13,00/h (Prueba hidráulica - manifold FA0032 1.2, 2026-03-10) = USD 78,00 · ⚠ horas supuestas: cargar `parametros.ph_horas` · volumen interior de caños y niples 13,0 l.
 - **Radiografía:** no se calculó (`parametros.rx_pct` = 0). Si el pliego la pide, cargar el porcentaje y volver a correr.
 
-### Horas de ingeniería, calidad y montaje (estimadas: puente, 2.5", 2 u, materiales USD 3,409 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: puente, 2.5", 2 u, materiales USD 3.409 por unidad)
 
-- **Ingeniería:** 7.5 h × USD 15/h = USD 112.50 · mediana de 9.0, 6.0 h por unidad (repartidas en la serie) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19) · rango del mismo tipo 6–9 h
-- **Calidad y dossier:** 3.5 h × USD 15/h = USD 52.50 · mediana de 1.0, 6.0 h por unidad (repartidas en la serie) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19) · rango del mismo tipo 1–6 h
-- **Montaje en planta (armado, movimientos):** 25.8 h × USD 13/h = USD 335.40 · mediana de 27 h × 0.575, 126 h × 0.287 (horas por unidad × tamaño) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19) · rango del mismo tipo 27–126 h
+- **Ingeniería:** 7,5 h × USD 15/h = USD 112,50 · mediana de 9,0, 6,0 h por unidad (repartidas en la serie) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19) · rango del mismo tipo 6–9 h
+- **Calidad y dossier:** 3,5 h × USD 15/h = USD 52,50 · mediana de 1,0, 6,0 h por unidad (repartidas en la serie) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19) · rango del mismo tipo 1–6 h
+- **Montaje en planta (armado, movimientos):** 25,8 h × USD 13/h = USD 335,40 · mediana de 27 h × 0,57, 126 h × 0,29 (horas por unidad × tamaño) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19) · rango del mismo tipo 27–126 h
 - Candidatos: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19) | TAVAL/70- PUENTES DE MEDICION 2 PULGADAS · Puente de inyeccion y regulacion 2in #600 (SK-2104 / SK-2105 (2 (colector 3), 24 u, 2026-10-27)
 
 ## 4. A completar (no se puede calcular)

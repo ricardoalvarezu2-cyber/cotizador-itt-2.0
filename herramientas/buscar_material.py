@@ -22,6 +22,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from numeros import fmt, fmtg  # noqa: E402
 from catalogo_materiales import FAMILIAS, MARCAS, PRECIOS, atributos, expandir, familia_de  # noqa: E402
 from indice_proyectos import norm  # noqa: E402
 
@@ -118,11 +119,11 @@ def main():
         print(f"\n{i}. {estado} · {r['codigo']}{mm} · {r['descripcion'][:110]}")
         if not r["ultimo_precio_usd"]:
             print(f"   SIN PRECIO CONFIABLE: solo hay valores del período con cepo (referencia descartada USD "
-                  f"{float(r['referencia_descartada_usd']):,.2f} del {r['fecha_referencia_descartada']}, {r['proveedor']}). Pedir cotización.")
+                  f"{fmt(float(r['referencia_descartada_usd']), 2)} del {r['fecha_referencia_descartada']}, {r['proveedor']}). Pedir cotización.")
         else:
-            print(f"   Último precio: USD {float(r['ultimo_precio_usd']):,.2f} / {r['unidad'] or 'unidad s/d'} · {r['fecha_ultimo_precio']} · {r['tipo_precio']} · {r['proveedor']}")
-            print(f"   Ajustado a hoy: USD {float(r['precio_ajustado_hoy_usd']):,.2f} · {r['precios_en_historial']} precio(s) en el historial"
-                  + (f" (entre {float(r['precio_min_usd']):,.2f} y {float(r['precio_max_usd']):,.2f})" if int(r["precios_en_historial"]) > 1 else ""))
+            print(f"   Último precio: USD {fmt(float(r['ultimo_precio_usd']), 2)} / {r['unidad'] or 'unidad s/d'} · {r['fecha_ultimo_precio']} · {r['tipo_precio']} · {r['proveedor']}")
+            print(f"   Ajustado a hoy: USD {fmt(float(r['precio_ajustado_hoy_usd']), 2)} · {r['precios_en_historial']} precio(s) en el historial"
+                  + (f" (entre {fmt(float(r['precio_min_usd']), 2)} y {fmt(float(r['precio_max_usd']), 2)})" if int(r["precios_en_historial"]) > 1 else ""))
         if r.get("alerta") and r["ultimo_precio_usd"]:
             print(f"   ALERTA: {r['alerta']}")
         if difs:

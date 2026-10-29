@@ -14,6 +14,7 @@ import re
 import csv
 import json
 from pathlib import Path
+from numeros import fmt, fmtg
 
 RUBROS = [("soldadura", ("MO",), ("soldadura",)), ("radiografía y END", ("RX",), ("radiograf", "end", "tinta")),
           ("granallado y pintura", ("PIN",), ("pintura", "granallado")), ("prueba hidráulica", ("PH",), ("hidraulica", "hidráulica")),
@@ -39,7 +40,7 @@ def pct(a, b):
 
 def fmt_pct(a, b):
     v = pct(a, b)
-    return "—" if v is None else f"{v:+.0f}%"
+    return "—" if v is None else f"{fmt(v, 0, signo=True)}%"
 
 
 def main(carpeta, archivo="cotizacion_auto.json"):
@@ -63,7 +64,7 @@ def main(carpeta, archivo="cotizacion_auto.json"):
         th = float(h["total_usd"])
         it = items.get(h["pos"])
         if not it:
-            lin.append(f"| {h['pos']} | {h['descripcion'][:45]} | {th:,.2f} | — | — | — | falta en el cotizador |")
+            lin.append(f"| {h['pos']} | {h['descripcion'][:45]} | {fmt(th, 2)} | — | — | — | falta en el cotizador |")
             tot_h += th
             continue
         s = it["fuentes"][0]
@@ -85,10 +86,10 @@ def main(carpeta, archivo="cotizacion_auto.json"):
             cuenta["lejos"] += 1
         if h.get("nota"):
             lectura += f" · real: {h['nota']}"
-        lin.append(f"| {h['pos']} | {h['descripcion'][:45]} | {float(h['cantidad']):g} × {float(h['precio_unit_usd']):,.2f} = {th:,.2f} | "
-                   f"{it['cantidad']:g} {it['unidad']} × {s['precio']:,.2f}{' + compra extra ' + ', '.join(e['pos'] for e in extras.get(h['pos'], [])) if extras.get(h['pos']) else ''} = {tc:,.2f} | {'' if d is None else f'{d:+.0f}%'} | "
+        lin.append(f"| {h['pos']} | {h['descripcion'][:45]} | {fmtg(float(h['cantidad']))} × {fmt(float(h['precio_unit_usd']), 2)} = {fmt(th, 2)} | "
+                   f"{fmtg(it['cantidad'])} {it['unidad']} × {fmt(s['precio'], 2)}{' + compra extra ' + ', '.join(e['pos'] for e in extras.get(h['pos'], [])) if extras.get(h['pos']) else ''} = {fmt(tc, 2)} | {'' if d is None else f'{fmt(d, 0, signo=True)}%'} | "
                    f"{s['tipo']} · {s['proveedor'][:40]} · {s['fecha']} | {lectura} |")
-    lin += ["", f"**Materiales: real USD {tot_h:,.2f} · cotizador USD {tot_c:,.2f} ({fmt_pct(tot_c, tot_h)}).** "
+    lin += ["", f"**Materiales: real USD {fmt(tot_h, 2)} · cotizador USD {fmt(tot_c, 2)} ({fmt_pct(tot_c, tot_h)}).** "
             f"{cuenta['bien']} dentro de ±15%, {cuenta['lejos']} fuera, {cuenta['sin precio']} sin precio.", ""]
     # MO y servicios por rubro
     real, auto = {}, {}
@@ -101,14 +102,14 @@ def main(carpeta, archivo="cotizacion_auto.json"):
     for r in [n for n, _, _ in RUBROS] + ["otros"]:
         if r in real or r in auto:
             a, b = auto.get(r, 0), real.get(r, 0)
-            lin.append(f"| {r} | {b:,.2f} | {a:,.2f} | {'—' if not b else f'{pct(a, b):+.0f}%'} |")
+            lin.append(f"| {r} | {fmt(b, 2)} | {fmt(a, 2)} | {'—' if not b else f'{fmt(pct(a, b), 0, signo=True)}%'} |")
     mo_h, mo_c = sum(real.values()), sum(auto.values())
-    lin += ["", f"**MO y servicios: real USD {mo_h:,.2f} · cotizador USD {mo_c:,.2f} ({pct(mo_c, mo_h):+.0f}%).**", "",
+    lin += ["", f"**MO y servicios: real USD {fmt(mo_h, 2)} · cotizador USD {fmt(mo_c, 2)} ({fmt(pct(mo_c, mo_h), 0, signo=True)}%).**", "",
             f"## Total por {cot.get('equipo', {}).get('singular', 'equipo')}", "",
-            f"Real USD {tot_h + mo_h:,.2f} · cotizador USD {tot_c + mo_c:,.2f} ({pct(tot_c + mo_c, tot_h + mo_h):+.0f}%) antes de completar lo que el cotizador marca para revisar.", ""]
+            f"Real USD {fmt(tot_h + mo_h, 2)} · cotizador USD {fmt(tot_c + mo_c, 2)} ({fmt(pct(tot_c + mo_c, tot_h + mo_h), 0, signo=True)}%) antes de completar lo que el cotizador marca para revisar.", ""]
     salida = carpeta / ("comparacion_historico.md" if archivo == "cotizacion_auto.json" else f"comparacion_{Path(archivo).stem}.md")
     salida.write_text("\n".join(lin) + "\n", encoding="utf-8")
-    print(f"Materiales {fmt_pct(tot_c, tot_h)} · MO y servicios {pct(mo_c, mo_h):+.0f}% · total {pct(tot_c + mo_c, tot_h + mo_h):+.0f}% → {salida}")
+    print(f"Materiales {fmt_pct(tot_c, tot_h)} · MO y servicios {fmt(pct(mo_c, mo_h), 0, signo=True)}% · total {fmt(pct(tot_c + mo_c, tot_h + mo_h), 0, signo=True)}% → {salida}")
 
 
 if __name__ == "__main__":

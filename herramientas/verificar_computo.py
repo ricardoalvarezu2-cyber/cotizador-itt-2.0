@@ -24,6 +24,7 @@ import re
 import sys
 from datetime import date
 from pathlib import Path
+from numeros import fmt, fmtg
 
 
 def num(v):
@@ -54,12 +55,12 @@ def main(carpeta):
         if p.get("unidad", "un") == "un" and filas[0]["unidad"] == "m" and largo:
             esperado = int(largo.group(1)) / 1000 * num(p["cantidad"])
             if abs(cant - esperado) > 1e-6:
-                errores.append(f"Pos {p['pos']}: el plano pide {p['cantidad']} × {largo.group(1)} mm = {esperado:g} m y el cómputo tiene {cant:g} m")
+                errores.append(f"Pos {p['pos']}: el plano pide {p['cantidad']} × {largo.group(1)} mm = {fmtg(esperado)} m y el cómputo tiene {fmtg(cant)} m")
         elif p.get("unidad", "un") == "un" and filas[0]["unidad"] != "un":
             errores.append(f"Pos {p['pos']}: el plano pide {p['cantidad']} un y el cómputo usa '{filas[0]['unidad']}'. "
                            "Si se compra por metro, la cantidad tiene que dar el largo del plano y el sobrante va en fila aparte")
         elif abs(cant - num(p["cantidad"])) > 1e-6:
-            errores.append(f"Pos {p['pos']}: plano {p['cantidad']} / cómputo {cant:g}")
+            errores.append(f"Pos {p['pos']}: plano {p['cantidad']} / cómputo {fmtg(cant)}")
         ext = p.get("extremos", "").upper()
         if "BW" in ext or "SW" in ext:
             avisos.append(f"Pos {p['pos']} extremos {ext} × {p['cantidad']}: confirmar que la soldadura está contada (taller o campo)")
@@ -83,7 +84,7 @@ def main(carpeta):
             errores.append(f"{r['id']}: falta cantidad o precio")
             continue
         if sub is not None and abs(sub - cant * precio) > 0.05:
-            errores.append(f"{r['id']}: subtotal {sub} distinto de {cant:g} × {precio}")
+            errores.append(f"{r['id']}: subtotal {sub} distinto de {fmtg(cant)} × {precio}")
         total += cant * precio
         if not r.get("proveedor_o_criterio", "").strip() or not r.get("fecha_precio", "").strip():
             errores.append(f"{r['id']}: precio sin fuente o sin fecha")
@@ -95,12 +96,12 @@ def main(carpeta):
         if re.search(r"con iva|iva incluido|c/ ?iva", (r.get("proveedor_o_criterio", "") + " " + r.get("diferencia", "")).lower()):
             avisos.append(f"{r['id']}: la fuente menciona 'con IVA': el precio tiene que estar SIN IVA (dividir por 1,21 o 1,105)")
         if precio and r.get("coincidencia", "").strip() == "sin_ref":
-            errores.append(f"{r['id']}: precio {precio:g} sin referencia ni pieza parecida ({r['descripcion'][:45]}): no se adivina, va en 0 y se pide cotización (P4 ter)")
+            errores.append(f"{r['id']}: precio {fmtg(precio)} sin referencia ni pieza parecida ({r['descripcion'][:45]}): no se adivina, va en 0 y se pide cotización (P4 ter)")
         if precio == 0:
             avisos.append(f"{r['id']}: SIN PRECIO ({r['descripcion'][:45]}): pedir cotización antes de presentar")
         if r.get("tipo_origen", "").strip().lower() == "estimado":
             estimado += cant * precio
-            avisos.append(f"{r['id']}: precio ESTIMADO ({r['descripcion'][:45]}) USD {cant * precio:,.2f}")
+            avisos.append(f"{r['id']}: precio ESTIMADO ({r['descripcion'][:45]}) USD {fmt(cant * precio, 2)}")
         m = re.match(r"(\d{4})-(\d{2})", r.get("fecha_precio", ""))
         if m:
             meses = (hoy.year - int(m.group(1))) * 12 + hoy.month - int(m.group(2))
@@ -110,9 +111,9 @@ def main(carpeta):
             if r.get("fecha_precio", "") < "2025-04-14" and not re.search(r"tc |tipo de cambio|tc explícito|tc explicito", (r.get("proveedor_o_criterio", "") + " " + r.get("nota", "")).lower()):
                 avisos.append(f"{r['id']}: precio del período con cepo ({r['fecha_precio']}) sin tipo de cambio explícito: reemplazar por un valor confiable o justificar (por ejemplo, costo de planta oct-2024: TC 997 en la hoja Sueldos)")
 
-    print(f"Plano: {len(plano)} posiciones · Cómputo: {len(comp)} filas · Costo directo por unidad USD {total:,.2f}")
+    print(f"Plano: {len(plano)} posiciones · Cómputo: {len(comp)} filas · Costo directo por unidad USD {fmt(total, 2)}")
     if total:
-        print(f"Estimado sin fuente: USD {estimado:,.2f} ({estimado / total:.0%} del costo directo)"
+        print(f"Estimado sin fuente: USD {fmt(estimado, 2)} ({estimado / total:.0%} del costo directo)"
               + ("  ← más del 15%, justificar" if estimado / total > 0.15 else ""))
     print(f"\nERRORES ({len(errores)})")
     for e in errores:

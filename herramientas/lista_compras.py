@@ -26,6 +26,7 @@ from openpyxl import Workbook
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from numeros import fmt, fmtg  # noqa: E402
 import controles_tablas as ct  # noqa: E402
 from catalogo_materiales import atributos, expandir, familia_de  # noqa: E402
 from indice_proyectos import norm  # noqa: E402
@@ -99,7 +100,7 @@ def main(carpeta):
     ws.title = "Materiales"
     ws["A1"] = f"PEDIDO DE COTIZACIÓN DE MATERIALES · {cfg['codigo']}"
     ws["A1"].font = Font(bold=True, size=14, color=AZUL)
-    ws["A2"] = f"{cfg['titulo']}  ·  {n:g} {eq['plural'] if n != 1 else eq['singular']}"
+    ws["A2"] = f"{cfg['titulo']}  ·  {fmtg(n)} {eq['plural'] if n != 1 else eq['singular']}"
     ws["A2"].font = Font(bold=True)
     datos = [("Preparó (Ventas)", cfg["preparo"]), ("Fecha", date.fromisoformat(cfg["fecha"]).strftime("%d-%m-%Y")),
              ("Respuesta de proveedores", date.fromisoformat(comp["fecha_respuesta"]).strftime("%d-%m-%Y") if comp.get("fecha_respuesta") else "a definir"),
@@ -136,11 +137,11 @@ def main(carpeta):
             unidad = it.get("unidad", "un")
             cant_doc = str(p.get("cantidad", ""))
             if q_ext:
-                origen = f"{q:g} {unidad} para {n:g} {eq['plural'] if n != 1 else eq['singular']} + {q_ext:g} {unidad} para completar la tira"
+                origen = f"{fmtg(q)} {unidad} para {fmtg(n)} {eq['plural'] if n != 1 else eq['singular']} + {fmtg(q_ext)} {unidad} para completar la tira"
             elif re.search(r"medida del dibujo|no indicada|no indica", norm(p.get("descripcion", ""))):
                 origen = "el documento no da cantidad: medida del dibujo (±20%)"
             else:
-                origen = f"documento × {n:g}" if n != 1 else "documento"
+                origen = f"documento × {fmtg(n)}" if n != 1 else "documento"
             kg, fuente = kg_por_unidad(p or {"descripcion": it["descripcion"]}, it)
             kg_tot = round(kg * (q + q_ext), 1) if kg is not None else None
             if kg_tot is not None:
@@ -152,7 +153,7 @@ def main(carpeta):
             vals = ["—", "", "", "no se cotiza (ver cotización)"]
         nota = "; ".join(x for x in [comp.get("notas", {}).get(pos, ""), comp.get("cantidad_compra", {}).get(pos, "")] if x)
         for k, v in enumerate(vals):
-            celda(ws, r, j0 + k, v, GRIS, "#,##0.##" if k in (0, 2) and isinstance(v, (int, float)) else None)
+            celda(ws, r, j0 + k, v, GRIS, "#,##0.00" if k in (0, 2) and isinstance(v, (int, float)) else None)
         for k, v in enumerate(["", "", "", nota]):
             celda(ws, r, j0 + 4 + k, v, AMAR, "#,##0.00" if k == 1 else None)
 
@@ -198,7 +199,7 @@ def main(carpeta):
             for k, v in enumerate(["", "", "", comp.get("notas", {}).get(str(it["pos"]), "")]):
                 celda(ws, r, 8 + k, v, AMAR, "#,##0.00" if k == 1 else None)
     r += 2
-    ws.cell(r, 1, f"Peso aproximado de lo que tiene tabla: {kg_total:,.0f} kg" + (f" (sin dato: pos {', '.join(sin_kg)})" if sin_kg else "")).font = Font(bold=True)
+    ws.cell(r, 1, f"Peso aproximado de lo que tiene tabla: {fmt(kg_total, 0)} kg" + (f" (sin dato: pos {', '.join(sin_kg)})" if sin_kg else "")).font = Font(bold=True)
     r += 1
     ws.cell(r, 1, "Columnas azules: tal cual el documento. Grises: cálculo de ITT. Amarillas: para que Compras complete (proveedor, precio sin IVA, plazo y anotaciones).").font = Font(italic=True, color="5D6B75")
     ncols = max(len(t["columnas"]) for t in tr["tablas"])

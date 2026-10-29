@@ -127,6 +127,7 @@ const Busqueda = (() => {
   function hoy() { return new Date().toISOString().slice(0, 10); }
 
   // Soldaduras: juntas por diámetro y espesor → pulgadas equivalentes (factores_soldadura.csv y factores_accesorios.csv)
+  const n2 = v => typeof Documentos !== "undefined" ? Documentos.num(v) : v.toFixed(2); // en las pruebas con node no hay Documentos
   function soldadura(datos, filas) {
     let pulg = 0, pch = 0, pgr = 0; const detalle = [];
     for (const f of filas) {
@@ -136,7 +137,7 @@ const Busqueda = (() => {
       const fo = f.tipoOlet === "weldolet" ? 2.5 : 1.75;
       const v = (bw + sw) * dn * t.fe + ol * dn * fo;
       pulg += v; pch += bw * (t.pch || 0); pgr += bw * (t.pgr || 0);
-      detalle.push(`${bw + sw} junta(s) ${dn}" sch ${f.sch || "40"} × ${t.fe}` + (ol ? ` + ${ol} olet/cupla × ${dn}" × ${fo}` : "") + ` = ${v.toFixed(2)}`);
+      detalle.push(`${bw + sw} junta(s) ${dn}" sch ${f.sch || "40"} × ${t.fe}` + (ol ? ` + ${ol} olet/cupla × ${dn}" × ${fo}` : "") + ` = ${n2(v)}`);
     }
     return { pulg: Motor.redondear(pulg, 3), placas_chicas: pch, placas_grandes: pgr, detalle };
   }
@@ -155,7 +156,7 @@ const Busqueda = (() => {
       if (s.fecha && (!/^\d{4}-\d{2}-\d{2}$/.test(s.fecha) || s.fecha > h)) out.push({ nivel: "bad", txt: `${tag}: fecha inválida o futura (${s.fecha.split("-").reverse().join("-")})` });
       if (s.coincide === "similar" && !s.diferencia) out.push({ nivel: "bad", txt: `${tag}: similar sin decir en qué difiere` });
       if (s.coincide === "similar") out.push({ nivel: "warn", txt: `${tag}: pieza SIMILAR (${(s.diferencia || "").slice(0, 80)})` });
-      if (s.tipo === "est" && s.precio) out.push({ nivel: "warn", txt: `${tag}: precio ESTIMADO (USD ${(it.cantidad * s.precio).toFixed(2)})` });
+      if (s.tipo === "est" && s.precio) out.push({ nivel: "warn", txt: `${tag}: precio ESTIMADO (USD ${n2(it.cantidad * s.precio)})` });
       if (/con iva|iva incluido|c\/ ?iva/.test(norm(s.proveedor + " " + (s.diferencia || "")))) out.push({ nivel: "warn", txt: `${tag}: la fuente dice "con IVA": cargar el precio sin IVA` });
       if (s.fecha && s.fecha < "2025-04-14" && !/tc |tipo de cambio/.test(norm(s.proveedor))) out.push({ nivel: "warn", txt: `${tag}: precio del período con cepo (${s.fecha.split("-").reverse().join("-")}) sin tipo de cambio explícito` });
       if (s.fecha && /^\d{4}-\d{2}/.test(s.fecha)) {

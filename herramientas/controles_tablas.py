@@ -21,6 +21,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from numeros import fmt, fmtg  # noqa: E402
 from catalogo_materiales import atributos, expandir, familia_de  # noqa: E402
 from indice_proyectos import norm  # noqa: E402
 
@@ -95,11 +96,11 @@ def peso_valvula(it, at, valv):
     else:
         return None, None, "válvula de otro tipo: sin tabla"
     if not cand:
-        return None, None, f"sin peso en la lista Taval para {dn:g}\" #{serie}"
+        return None, None, f"sin peso en la lista Taval para {fmtg(dn)}\" #{serie}"
     r = cand[0]
     if inox and r["material"] not in ("F316", "CF8M"):
         supuestos.append("peso del modelo en acero al carbono")
-    return float(r["kg"]), None, (f"{r['tipo'].lower()} {dn:g}\" #{serie} (Taval Lista 30, {r['hoja']} {r['celda']}"
+    return float(r["kg"]), None, (f"{r['tipo'].lower()} {fmtg(dn)}\" #{serie} (Taval Lista 30, {r['hoja']} {r['celda']}"
                                   + (f"; {', '.join(supuestos)}" if supuestos else "") + ")")
 
 
@@ -147,8 +148,8 @@ def peso_olet(it, at):
     cand = [r for r in _tabla("olets_peso.csv") if r["tipo"] == tipo and pulg(r["dn_salida_pulg"]) == salida
             and r["configuracion"] == "reducing" and r["schedule_o_clase"].startswith(clase)]
     if not cand:
-        return None, None, f"sin tabla para {tipo} {salida:g}\" {clase}"
-    return float(cand[0]["peso_kg"]), None, f"{tipo} salida {salida:g}\" {clase} (Bonney Forge, borrador)"
+        return None, None, f"sin tabla para {tipo} {fmtg(salida)}\" {clase}"
+    return float(cand[0]["peso_kg"]), None, f"{tipo} salida {fmtg(salida)}\" {clase} (Bonney Forge, borrador)"
 
 
 def peso_esparrago(it, at):
@@ -165,9 +166,9 @@ def peso_esparrago(it, at):
     var = next((float(r["peso_unidad_kg"]) for r in t if r["tipo"] == "varilla_por_pulgada" and pulg(r["diametro_pulg"]) == d), None)
     tue = next((float(r["peso_unidad_kg"]) for r in t if r["tipo"] == "tuerca_heavy_hex_2H" and pulg(r["diametro_pulg"]) == d), None)
     if var is None or tue is None:
-        return None, None, f"sin tabla para espárrago {d:g}\""
+        return None, None, f"sin tabla para espárrago {fmtg(d)}\""
     con_tuercas = "tuerca" in norm(it["descripcion"])
-    return var * largo + (2 * tue if con_tuercas else 0), None, f"espárrago {d:g}\" × {largo:.2f}\"" + (" + 2 tuercas" if con_tuercas else "") + " (calculado)"
+    return var * largo + (2 * tue if con_tuercas else 0), None, f"espárrago {fmtg(d)}\" × {fmt(largo, 2)}\"" + (" + 2 tuercas" if con_tuercas else "") + " (calculado)"
 
 
 MAPA_ACC = {"codo 90": "codo_90_radio_largo", "codo radio corto 90": "codo_90_radio_corto", "codo 45": "codo_45", "tee": "tee_recta",
@@ -201,7 +202,7 @@ def peso_tabla(it, at, fam, canos, bridas, acc, valv=()):
     if fam in ("CAN", "NIP") and dn:
         fila = next((r for r in canos if pulg(r["dn_pulg"]) == dn and (r["schedule"] == sch or r["clase"] == sch.upper())), None)
         if not fila:
-            return None, None, f"caño {dn:g}\" sin schedule reconocido"
+            return None, None, f"caño {fmtg(dn)}\" sin schedule reconocido"
         kg, m2 = float(fila["kg_m_carbono"]), float(fila["m2_m_exterior"])
         if "inox" in norm(at.get("material", "")) or "316" in at.get("material", "") or "304" in at.get("material", ""):
             kg = float(fila["kg_m_inoxidable"])
@@ -210,14 +211,14 @@ def peso_tabla(it, at, fam, canos, bridas, acc, valv=()):
             if not largo:
                 return None, None, "niple sin largo"
             l = float(largo.group(1).replace(".", "")) / 1000
-            return kg * l, m2 * l, f"caño {dn:g}\" sch {sch} × {l:g} m (ASME B36.10, calculado)"
-        return kg, m2, f"caño {dn:g}\" sch {sch} por metro (ASME B36.10, calculado)"
+            return kg * l, m2 * l, f"caño {fmtg(dn)}\" sch {sch} × {fmtg(l)} m (ASME B36.10, calculado)"
+        return kg, m2, f"caño {fmtg(dn)}\" sch {sch} por metro (ASME B36.10, calculado)"
     if fam == "BRI" and dn and at.get("serie"):
         tipo = {"wn": "WN", "so": "SO", "ciega": "ciega", "sw": "SW", "roscada": "roscada", "lj": "LJ"}.get(at.get("tipo", ""), "")
         fila = next((r for r in bridas if r["tipo"] == tipo and pulg(r["dn_pulg"]) == dn and r["serie"] == at["serie"]
                      and "no usar" not in r["nota"]), None)
         if fila:
-            return float(fila["peso_kg"]), None, f"brida {tipo} {dn:g}\" #{at['serie']} (B16.5, borrador)"
+            return float(fila["peso_kg"]), None, f"brida {tipo} {fmtg(dn)}\" #{at['serie']} (B16.5, borrador)"
     if "olet" in at.get("tipo", "") or re.search(r"olet\b", norm(it["descripcion"])):
         return peso_olet(it, at)
     if fam == "JUN" and at.get("tipo") in ("esparrago", "bulon"):
@@ -236,8 +237,8 @@ def peso_tabla(it, at, fam, canos, bridas, acc, valv=()):
                 and (d2 is None or pulg(r["dn2_pulg"]) == d2)]
         cand.sort(key=lambda r: r["nota"].startswith("ATENCION"))  # sin observaciones primero
         if cand:
-            return float(cand[0]["peso_kg"]), None, f"{tipo} {dn:g}\" {clase} {ext} ({cand[0]['norma']}, borrador)"
-        return None, None, f"sin tabla para {t} {dn:g}\" {clase}"
+            return float(cand[0]["peso_kg"]), None, f"{tipo} {fmtg(dn)}\" {clase} {ext} ({cand[0]['norma']}, borrador)"
+        return None, None, f"sin tabla para {t} {fmtg(dn)}\" {clase}"
     if fam == "VAL":
         return peso_valvula(it, at, valv)
     return None, None, "sin tabla (instrumento, junta u otro)"
@@ -283,7 +284,7 @@ def main(carpeta):
         else:
             kg_tot += kg * it["cantidad"]
             m2_tot += (m2 or 0) * it["cantidad"]
-            filas_p.append(f"| {it['pos']} | {it['descripcion'][:55]} | {it['cantidad']:g} {it['unidad']} | {kg:.2f} | {kg * it['cantidad']:.2f} | {fuente} |")
+            filas_p.append(f"| {it['pos']} | {it['descripcion'][:55]} | {fmtg(it['cantidad'])} {it['unidad']} | {fmt(kg, 2)} | {fmt(kg * it['cantidad'], 2)} | {fuente} |")
         rp = rubro(RUBRO_PLAZO, fam, at.get("tipo", "") or t)
         if rp:
             filas_t.setdefault(rp, []).append(it["pos"])
@@ -292,7 +293,7 @@ def main(carpeta):
             ms = [m for m in marcas_cli if m["rubro"].startswith(rm)]
             if ms:
                 filas_m.append(f"| {it['pos']} | {it['descripcion'][:50]} | {ms[0]['cliente']} · {ms[0]['rubro']} | {ms[0]['marcas'][:120]} | {ms[0]['condicion']} |")
-    lineas += ["## 1. Kilos y m² por equipo", "", f"**Peso estimado de lo que tiene tabla: {kg_tot:,.1f} kg** · m² exteriores de caños y niples: {m2_tot:,.2f} m².",
+    lineas += ["## 1. Kilos y m² por equipo", "", f"**Peso estimado de lo que tiene tabla: {fmt(kg_tot, 1)} kg** · m² exteriores de caños y niples: {fmt(m2_tot, 2)} m².",
                f"Ítems sin dato de peso ({len(sin_peso)}): " + ("; ".join(sin_peso) if sin_peso else "ninguno") + ".", "",
                "| Pos | Ítem | Cantidad | kg/u | kg total | Fuente |", "|---|---|---|---|---|---|"] + filas_p + [""]
     dias = c.get("plazo", {}).get("dias")
@@ -303,10 +304,10 @@ def main(carpeta):
         sin_stock = [(float(r["plazo_dias_min"] or 0) + float(r["plazo_dias_max"])) / 2 for r in ds if float(r["plazo_dias_max"]) > 7]
         tip = statistics.median(sin_stock) if sin_stock else None
         mx = max((float(r["plazo_dias_max"]) for r in ds), default=None)
-        lineas.append(f"| {rp} | {', '.join(pos)} | {len(ds)} | {tip:.0f} | {mx:.0f} |" if tip is not None and mx is not None
+        lineas.append(f"| {rp} | {', '.join(pos)} | {len(ds)} | {fmt(tip, 0)} | {fmt(mx, 0)} |" if tip is not None and mx is not None
                       else f"| {rp} | {', '.join(pos)} | {len(ds)} | sin dato | {mx if mx is not None else 'sin dato'} |")
         if dias and tip and tip > dias:
-            avisos.append(f"Plazo: el típico sin stock de '{rp}' ({tip:.0f} días) supera el plazo ofrecido ({dias} días). Confirmar stock o plazo cotizado")
+            avisos.append(f"Plazo: el típico sin stock de '{rp}' ({fmt(tip, 0)} días) supera el plazo ofrecido ({dias} días). Confirmar stock o plazo cotizado")
     lineas += ["", "## 3. Marcas del cliente", ""]
     if not marcas_cli:
         lineas.append(f"No hay marcas aprobadas cargadas para este cliente ({c['cliente'].get('nombre', '')}). Si el pliego exige marcas, cargarlas en `conocimiento/comercial/marcas_aprobadas.csv`.")
@@ -314,7 +315,7 @@ def main(carpeta):
         lineas += ["| Pos | Ítem | Lista | Marcas | Condición |", "|---|---|---|---|---|"] + filas_m
         avisos.append(f"Marcas: el cliente tiene listas cargadas ({len(marcas_cli)} renglones). Controlar cada ítem contra controles_tablas.md")
     (carpeta / "controles_tablas.md").write_text("\n".join(lineas) + "\n", encoding="utf-8")
-    print(f"Controles con tablas: {kg_tot:,.1f} kg con tabla, {len(sin_peso)} ítems sin peso, {m2_tot:,.2f} m² de caño → {carpeta / 'controles_tablas.md'}")
+    print(f"Controles con tablas: {fmt(kg_tot, 1)} kg con tabla, {len(sin_peso)} ítems sin peso, {fmt(m2_tot, 2)} m² de caño → {carpeta / 'controles_tablas.md'}")
     for a in avisos:
         print("  ! " + a)
     return avisos

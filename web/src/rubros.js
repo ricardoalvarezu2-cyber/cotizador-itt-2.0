@@ -4,6 +4,8 @@
 // La ficha física (soldaduras, kg, m², placas) viene de cot.ficha (la arma ficha_rubros.py con la tabla del plano); si no está, la
 // página arma una aproximada con lo cargado. El transporte se recalcula siempre con las medidas de cot.transporte.
 const Rubros = (() => {
+  // número a la vista sin ceros de más (como numeros.fmtg): punto de miles, coma decimal, hasta 2 decimales
+  const ng = v => { const [e, f] = Math.abs(Number(v || 0)).toFixed(2).split("."); return (Number(v) < 0 ? "-" : "") + e.replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ("," + f).replace(/,?0+$/, ""); };
   const RUBROS = {  // en el orden en que se muestran (un ítem por rubro de fabricación, pedido de Matías 29-10-2026)
     mo_estructura: ["Fabricación del skid (estructura)", "mo"],
     mo_piping: ["Fabricación del piping", "mo"],
@@ -85,9 +87,9 @@ const Rubros = (() => {
     const t = cot.transporte || {}, L = +t.largo_m || 0, A = +t.ancho_m || 0, H = +t.alto_m || 0;
     const r = { largo_m: L, ancho_m: A, alto_m: H, kg_equipo: kgEquipo, destino: t.destino || "", por_camion: null, viajes: null, avisos: [] };
     if (!(L && A && H)) { r.avisos.push("Faltan las medidas del equipo (largo × ancho × alto): cargarlas del plano de conjunto"); return r; }
-    if (A > LIMITE_ANCHO && L > LIMITE_ANCHO) r.avisos.push(`Ancho ${A} m: supera ${LIMITE_ANCHO} m → carga especial (permiso de Vialidad y escolta)`);
-    if (H + CAMION.piso > LIMITE_ALTO) r.avisos.push(`Alto cargado ${(H + CAMION.piso).toFixed(2)} m (equipo ${H} m + piso ${CAMION.piso} m): supera ${LIMITE_ALTO} m → carretón o carga especial`);
-    if (Math.max(L, A) > CAMION.largo) r.avisos.push(`Largo ${Math.max(L, A)} m: más que la caja de un semi (${CAMION.largo} m) → carretón extensible`);
+    if (A > LIMITE_ANCHO && L > LIMITE_ANCHO) r.avisos.push(`Ancho ${ng(A)} m: supera ${ng(LIMITE_ANCHO)} m → carga especial (permiso de Vialidad y escolta)`);
+    if (H + CAMION.piso > LIMITE_ALTO) r.avisos.push(`Alto cargado ${(H + CAMION.piso).toFixed(2).replace(".", ",")} m (equipo ${ng(H)} m + piso ${ng(CAMION.piso)} m): supera ${ng(LIMITE_ALTO)} m → carretón o carga especial`);
+    if (Math.max(L, A) > CAMION.largo) r.avisos.push(`Largo ${ng(Math.max(L, A))} m: más que la caja de un semi (${ng(CAMION.largo)} m) → carretón extensible`);
     const entra = (l, a) => l <= CAMION.largo && a <= CAMION.ancho ? Math.floor(CAMION.largo / l) * Math.floor(CAMION.ancho / a) : 0;
     const porMedida = Math.max(entra(L, A), entra(A, L), 1), porPeso = kgEquipo ? Math.floor(CAMION.kg / kgEquipo) : porMedida;
     const n = Math.max(1, Math.min(porMedida, porPeso));
@@ -143,7 +145,7 @@ const Rubros = (() => {
     const eq = cot.equipo?.singular || "equipo";
     const v = x => x == null || x === "" ? "—" : typeof x === "number" ? num(x, Number.isInteger(x) ? 0 : 2) : x;
     return [`Pedido de cotización: ${RUBROS[r][0]}`, `${cot.codigo} · ${cot.titulo || ""}`, `Cliente: ${cot.cliente?.nombre || ""}`,
-      `Precio por ${eq} (USD sin IVA). Cantidad: ${cot.parametros.N} ${cot.equipo?.plural || "equipos"}.`, "",
+      `Precio por ${eq} (USD sin IVA). Cantidad: ${ng(cot.parametros.N)} ${cot.equipo?.plural || "equipos"}.`, "",
       ...datosDe(f, r).map(([e, x, u]) => `- ${e}: ${v(x)}${u && x != null ? " " + u : ""}`), ...(f[r].avisos || []).map(a => `- Atención: ${a}`)].join("\n");
   }
 
@@ -168,7 +170,7 @@ const Rubros = (() => {
   // Renglones por antecedentes de un rubro: [{descripcion, especificacion, cantidad, unidad, precio, fuente}] y el texto del cálculo.
   // La tarifa sale del historial o es una tarifa propia escrita a mano (cot.rubros[r].propia: valor, proveedor, fecha).
   function antecedentes(cot, datos, f, r) {
-    const N = +cot.parametros.N || 1, num = (v, d = 2) => Number(v || 0).toLocaleString("es-AR", { minimumFractionDigits: d, maximumFractionDigits: d });
+    const N = +cot.parametros.N || 1, num = (v, d = 2) => { const n = Number(v || 0), [e, f] = Math.abs(n).toFixed(d).split("."); return (n < 0 ? "-" : "") + e.replace(/\B(?=(\d{3})+(?!\d))/g, ".") + (f ? "," + f : ""); };
     const base = basePiping(cot), rb = cot.rubros?.[r] || {}, ops = opcionesTarifa(datos, r, base);
     const propia = rb.tarifa === "PROPIA" ? { id: "PROPIA", valor: +(rb.propia?.valor || 0), fecha: rb.propia?.fecha || "", etiqueta: rb.propia?.proveedor || "Tarifa propia", origen: rb.propia?.origen || "cargada a mano en la página" } : null;
     const elegida = propia || ops.find(o => o.id === rb.tarifa) || ops[0];
@@ -193,10 +195,10 @@ const Rubros = (() => {
       const ren = [];
       if (ch + gr && tc && ts) {
         const costo = ch * +tc.valor + gr * +(tg?.valor || 0) + sv * +ts.valor;
-        ren.push({ descripcion: `Radiografía ${num(e.rx_pct, 0)}% de las juntas a tope`, especificacion: `${ch} placas chicas × ${tc.valor} + ${gr} grandes × ${tg?.valor || 0} + ${sv} servicio(s) × ${ts.valor}`,
+        ren.push({ descripcion: `Radiografía ${num(e.rx_pct, 0)}% de las juntas a tope`, especificacion: `${ng(ch)} placas chicas × ${ng(tc.valor)} + ${ng(gr)} grandes × ${ng(tg?.valor || 0)} + ${ng(sv)} servicio(s) × ${ng(ts.valor)}`,
           cantidad: 1, unidad: "gl", precio: costo, fuente: { tipo: "cot", precio: costo, proveedor: "NDT Antonelli (tarifas)", origen: ts.fuente || "conocimiento/costos/tarifas.csv", fecha: fechaDia(ts.fecha), coincide: "igual" } });
       }
-      if (e.juntas_lp && tl) ren.push({ descripcion: `Líquidos penetrantes en SW, cuplas y olets (${e.juntas_lp} juntas)`, especificacion: `1 servicio × ${tl.valor}`, cantidad: 1, unidad: "servicio",
+      if (e.juntas_lp && tl) ren.push({ descripcion: `Líquidos penetrantes en SW, cuplas y olets (${e.juntas_lp} juntas)`, especificacion: `1 servicio × ${ng(tl.valor)}`, cantidad: 1, unidad: "servicio",
         precio: +tl.valor, fuente: { tipo: "cot", precio: +tl.valor, proveedor: "NDT Antonelli (tarifas)", origen: tl.fuente || "conocimiento/costos/tarifas.csv", fecha: fechaDia(tl.fecha), coincide: "igual" } });
       return { opciones: [], renglones: ren, texto: ren.length ? ren.map(x => `${x.descripcion}: USD ${num(x.precio)}`).join(" · ") : "Sin juntas a tope ni placas: completá los datos del plano y Recalculá." };
     }
