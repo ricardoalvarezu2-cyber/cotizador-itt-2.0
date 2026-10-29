@@ -7,6 +7,7 @@ Claude baja el documento con ArtifactData (action "get", collection "cotizacione
 2. Repositorio: si hay una carpeta cotizaciones/<código>_* con el mismo código, la versión de la página reemplaza su
    cotizacion.json y oferta.json (lo que la página no guarda, como la firma, se conserva) y se vuelve a armar
    (armar_cotizacion.py). Lo que había queda en el historial de git.
+Para una cotización del repositorio tal como está ahí: python web/incorporar_base.py --repo cotizaciones/<carpeta> [...]
 Después: python herramientas/actualizar_base.py (catálogo e índice de antecedentes toman la biblioteca), construir_datos,
 armar_pagina y republicar (ver web/LEEME.md, "Pedidos desde la página").
 """
@@ -74,5 +75,27 @@ def main(archivo):
         print("Repositorio: no hay carpeta cotizaciones/ con ese código; queda solo en la biblioteca.")
 
 
+def desde_repo(carpeta):
+    """Incorpora una cotización armada en el repositorio (cotizaciones/<carpeta>) tal como está en el repositorio."""
+    c = Path(carpeta)
+    cot = json.loads((c / "cotizacion.json").read_text(encoding="utf-8"))
+    of = json.loads((c / "oferta.json").read_text(encoding="utf-8")) if (c / "oferta.json").exists() else {}
+    id_ = "c" + cot["codigo"].lower().replace("cot", "")
+    destino = BIB / id_
+    meta_vieja = destino / "incorporacion.json"
+    veces = (json.loads(meta_vieja.read_text(encoding="utf-8")).get("veces", 1) + 1) if meta_vieja.exists() else 1
+    escribir(destino, cot, of)
+    meta = {"id": id_, "codigo": cot["codigo"], "titulo": cot.get("titulo", ""), "estado": cot.get("estado", ""),
+            "incorporada": datetime.now().isoformat(timespec="seconds"), "guardado_pagina": "", "veces": veces,
+            "carpeta_repo": str(c.resolve().relative_to(RAIZ)), "origen": "repositorio"}
+    (destino / "incorporacion.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    indice()
+    print(f"Biblioteca: {destino.relative_to(RAIZ)} desde {meta['carpeta_repo']} ({'reemplazó la anterior' if veces > 1 else 'nueva'})")
+
+
 if __name__ == "__main__":
-    main(sys.argv[1])
+    if sys.argv[1] == "--repo":
+        for x in sys.argv[2:]:
+            desde_repo(x)
+    else:
+        main(sys.argv[1])

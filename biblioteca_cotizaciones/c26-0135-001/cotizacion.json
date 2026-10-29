@@ -1,0 +1,1150 @@
+{
+ "codigo": "COT26-0135-001",
+ "revision": "Rev 0",
+ "estado": "borrador",
+ "fecha": "2026-10-28",
+ "preparo": "Matías Russo",
+ "cliente": {
+  "nombre": "CAMUZZI GAS PAMPEANA S.A. / CAMUZZI GAS DEL SUR S.A.",
+  "codigo_itt": "0135",
+  "comprador": "Gerencia de Abastecimiento Obras y Almacenes (Juan Filas)"
+ },
+ "titulo": "Camuzzi · Concurso de precios N° 24578 ítem 2 — 1 skid de regulación (ERP Parque Industrial Tres Arroyos)",
+ "titulo_pagina": "Cotización Camuzzi CP 24578 · Skid de regulación",
+ "archivo_planilla": "CAMUZZI_CP24578_SKID_REGULACION",
+ "subtitulo_planilla": "1 skid de regulación · plano SCE-RE-315-0048 · USD sin IVA",
+ "meta": [
+  "Concurso de precios N° 24578 · ítem 2",
+  "Plano SCE-RE-315-0048 rev 0 · Especificación SCE-RE-515-0032",
+  "Comprador: Camuzzi (portal de compras)",
+  "Preparó: Matías Russo · 28-10-2026"
+ ],
+ "equipo": {
+  "singular": "skid",
+  "plural": "skids",
+  "tipo": "skid",
+  "diametro_pulg": 6
+ },
+ "parametros": {
+  "N": 1,
+  "FM": 1.35,
+  "FMO": 1.35,
+  "CONT": 5,
+  "AJ": 1,
+  "TRANS": 1,
+  "TC": 1541.43,
+  "TR_ARS": 700000,
+  "TR_EMB": 150,
+  "TR_F": 1.0,
+  "fecha_referencia": "2026-10-28",
+  "rx_pct": 100,
+  "ph_horas": 6,
+  "FTV": 1.0
+ },
+ "plazo": {
+  "dias": 120,
+  "texto": "desde OC · entregado en Transporte Cruz del Sur (Tapiales)",
+  "tareas": [
+   [
+    "Ingeniería: planos, procedimientos y calificaciones para aprobación de Camuzzi",
+    0,
+    20,
+    ""
+   ],
+   [
+    "Reguladoras y monitoras Tormene (45/60 días de OC y anticipo)",
+    0,
+    60,
+    "crit"
+   ],
+   [
+    "Esféricas Taval, bridas, accesorios y caño",
+    0,
+    30,
+    ""
+   ],
+   [
+    "Prefabricado, soldadura, RX 100% y PH (sin válvulas)",
+    30,
+    60,
+    "tal"
+   ],
+   [
+    "Montaje de reguladoras, conexionado de pilotos, pintura y prueba de fugas",
+    60,
+    80,
+    "tal"
+   ],
+   [
+    "Inspección Camuzzi, data book y despacho",
+    80,
+    95,
+    "tal"
+   ]
+  ],
+  "nota": "Fija el plazo la entrega de las reguladoras (Tormene: 45/60 días). La inspección de Camuzzi tiene que avisarse con 5 días hábiles."
+ },
+ "flete": {
+  "etiqueta": "Flete a Transporte Cruz del Sur (Tapiales)",
+  "referencia_html": "<b>Estimado:</b> un camión con hidrogrúa Quilmes → Mercado Central nave D3 (≈ 30 km), ARS 700.000 + USD 150 de embalaje. No hay cotización de flete local en la base: pedir a Compras.",
+  "criterio_html": "La planilla del concurso dice \"Flete a cargo del proveedor hasta Transporte Cruz del Sur, Mercado Central nave D3\": el flete va incluido en el precio."
+ },
+ "historial_html": [],
+ "pedido": {
+  "eyebrow": "Concurso de precios N° 24578 · Cláusulas particulares del 01-10-2026 · especificación del 19-10-2026",
+  "datos_html": [
+   [
+    "Cliente",
+    "Camuzzi Gas Pampeana S.A. / Camuzzi Gas del Sur S.A. (código ITT 0135)"
+   ],
+   [
+    "Ítem",
+    "2 · Skid de regulación / medición · <b>1 un</b>"
+   ],
+   [
+    "Documentos",
+    "Plano SCE-RE-315-0048 rev 0 · Especificación SCE-RE-515-0032 (ERP Parque Industrial Tres Arroyos)"
+   ],
+   [
+    "Condiciones de proceso",
+    "Pe 15-10 bar · Pr 4 bar · Qmáx 6.000 Sm3/h · Qmín 1.000 Sm3/h"
+   ],
+   [
+    "Entrega pedida",
+    "Transporte Cruz del Sur, Mercado Central nave D3, Tapiales (flete a cargo del proveedor)"
+   ],
+   [
+    "Condiciones",
+    "Pago 30 días f.p.f. por transferencia, dólar BNA divisa vendedor del día de factura · validez 30 días · multas automáticas por demora"
+   ]
+  ],
+  "requisitos_html": [
+   "RX 100% de las soldaduras a tope (filetes y media V con tintas penetrantes)",
+   "PH de los prefabricados sin válvulas: 1,5 × presión máxima de la serie, 6 h (NAG-124); secado y prueba de fugas con aire o N2 a 5,5 bar",
+   "Protección anticorrosiva SCE-PC-511-0003",
+   "Esféricas según SCE-IN-501-0008 y ensayo SCE-RE-308-0001, con certificados firmados",
+   "Marcas del listado SCE-IN-501-0015",
+   "Documentación para aprobación (planos, mapa de soldaduras, procedimientos, calificaciones) y data book",
+   "Inspección de Camuzzi en etapas (aviso 5 días hábiles)",
+   "DDJJ de ética firmada con la oferta"
+  ]
+ },
+ "nota_mo_html": "Soldadura propia por pulgada (16 USD/pulg-eq): juntas contadas de la columna de extremos (bridas WN, tees, reducciones y casquetes; los caños no tienen largo en el plano y se midieron del dibujo). Montaje, ingeniería y calidad estimados del antecedente de skid más parecido. Incluye RX 100% (DB NDT 08-2026), PH, pintura, conexionado de pilotos y fabricación del skid (330 kg estimados). Las juntas y espárragos van según la nota del plano (solo uniones internas; las de conexión a la planta no).",
+ "desvios": [
+  {
+   "tag": "Pos 9",
+   "titulo": "Te normal 6\" en A-234 WPB",
+   "texto": "El plano dice ASTM A-105 (forjado) para una te STD a tope: se cotiza A-234 WPB. Confirmar o pedir te forjada."
+  },
+  {
+   "tag": "Pos 14",
+   "titulo": "Cupla en A-105",
+   "texto": "El plano dice A-106 (caño) para una cupla: se cotiza A-105 forjada."
+  },
+  {
+   "tag": "Pos 1-2",
+   "titulo": "Reguladoras de referencia en #300",
+   "texto": "El precio es de Tormene TA956 #300 (ERP Pilará, 06-2026). Pedir cotización #150 a marcas del listado SCE-IN-501-0015."
+  }
+ ],
+ "antecedentes": [
+  {
+   "carpeta_html": "<b>CAMUZZI/23</b> · Concurso 17584, ítem 5 (OC 4500150421)",
+   "fecha": "06-03-2025",
+   "que": "Skid de regulación / medición SCE-RE-315-0047 (ERP Ascensión), ganado",
+   "precio": "venta 24.454",
+   "tomado_html": "Alcance y control del orden de magnitud (no hay planilla de costo)"
+  },
+  {
+   "carpeta_html": "<b>ALONZO RED/2</b> · ERP B° Pilará (Naturgy)",
+   "fecha": "16-06-2026",
+   "que": "Reguladoras Tormene TA956 3\" monitor + activo",
+   "precio": "9.545 / 6.073",
+   "tomado_html": "Precio de las pos 1 y 2"
+  },
+  {
+   "carpeta_html": "<b>TAVAL/69</b> · YPF UTE LACH",
+   "fecha": "19-07-2026",
+   "que": "2 skids de regulación y medición SCC 113 A/B, MO Ledesma 200295",
+   "precio": "17.200 (2 skids)",
+   "tomado_html": "Control de la MO de fabricación (alternativa de tercero ≈ 8.600 por skid)"
+  }
+ ],
+ "pendientes": [
+  {
+   "titulo": "Proveedores",
+   "items": [
+    "Reguladoras y monitoras 3\" #150 para Pe 15-10 / Pr 4 bar, 6.000 Sm3/h, con switch de posición (Tormene, Fiorentini u otra del listado SCE-IN-501-0015)",
+    "Toma multiport ABAC, alivio S-71, termovainas, transmisores (marca del listado)",
+    "Flete local a Tapiales"
+   ]
+  },
+  {
+   "titulo": "Camuzzi",
+   "items": [
+    "Confirmar si los sensores A, B y C los provee Camuzzi (\"sensores a instalar\")",
+    "Largo de los caños (el plano no da cantidades)",
+    "Típico SCE-RE-110-0006 (skid) y listado SCE-IN-501-0015 (se descargan de la web de Camuzzi)"
+   ]
+  }
+ ],
+ "pie": "Fuentes: base de conocimiento del repositorio cotizador-itt. Precios en USD sin IVA. Borrador sin revisar.",
+ "planilla_notas": [
+  "Plazo: 120 días desde OC (reguladoras 60 días + taller + inspección + margen por aprobaciones); se puede acortar si las reguladoras están en stock.",
+  "Condiciones del concurso: pago 30 días f.p.f., USD al BNA divisa vendedor del día de factura, validez 30 días, entregado en Transporte Cruz del Sur (Tapiales)."
+ ],
+ "items": [
+  {
+   "id": "M01",
+   "pos": "1",
+   "grupo": "material",
+   "descripcion": "Válvula monitora pilotada obturador guiado NC 3\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3\" · 150 · S/ Esp. CAMUZZI · RF · S/ Esp. CAMUZZI (SCE-IN-501-0015)",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 9545.0,
+     "proveedor": "Tormene Americana · oferta TA7785A pos. 1 (TA956-FC+SSV monitor)",
+     "origen": "fuentes_originales/ofertas_texto/ALONZO RED/2 - ERP B° Pilara/5.Proveedores 3ros/OFERTA TA7785A-ITT-REG TA956-NATURGY.pdf.txt",
+     "fecha": "2026-06-16",
+     "coincide": "similar",
+     "diferencia": "DN3\" #300 (pedido #150), con bloqueo OPSO e indicador de posición; condiciones P1 25/7 bar, P2 1,5 bar, Q 8.000 Sm3/h (acá 15-10 / 4 bar, 6.000 Sm3/h). Pedir cotización para #150 y estas condiciones"
+    }
+   ]
+  },
+  {
+   "id": "M02",
+   "pos": "2",
+   "grupo": "material",
+   "descripcion": "Válvula reguladora pilotada a diafragma NA 3\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3\" · 150 · S/ Esp. CAMUZZI · RF · S/ Esp. CAMUZZI (SCE-IN-501-0015)",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 6073.0,
+     "proveedor": "Tormene Americana · oferta TA7785A pos. 2 (TA956-DFO activo silenciado)",
+     "origen": "fuentes_originales/ofertas_texto/ALONZO RED/2 - ERP B° Pilara/5.Proveedores 3ros/OFERTA TA7785A-ITT-REG TA956-NATURGY.pdf.txt",
+     "fecha": "2026-06-16",
+     "coincide": "similar",
+     "diferencia": "DN3\" #300 (pedido #150); silenciador interno. Pedir cotización para #150 y estas condiciones"
+    },
+    {
+     "tipo": "ant",
+     "precio": 4060.0,
+     "proveedor": "Planilla Sacde/15 (VAL-03275: válvula reguladora 3\" RF set 0,03 kg/cm2)",
+     "origen": "fuentes_originales/ofertas_texto/Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL",
+     "fecha": "2026-02-20",
+     "coincide": "similar",
+     "diferencia": "otra aplicación (baja presión)"
+    }
+   ]
+  },
+  {
+   "id": "M03",
+   "pos": "3",
+   "grupo": "material",
+   "descripcion": "Válvula esférica bridada paso reducido antifuego (APF) 3\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3\" · 150 / STD · S/ Esp. CAMUZZI (SCE-IN-501-0008) · RF",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 126.0,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04454",
+     "origen": "taval_lista30_2025-09.xlsx · código BF10801R0104VP, hoja PR Flotante",
+     "fecha": "2025-09-01",
+     "coincide": "similar",
+     "diferencia": "material: A216 WCB (no pedido); extremos: RF (pedido RF/Bridado)"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M04",
+   "pos": "4",
+   "grupo": "material",
+   "descripcion": "Válvula esférica bridada paso reducido antifuego (APF) 6\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 6\" · 150 / STD · S/ Esp. CAMUZZI (SCE-IN-501-0008) · RF",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 466.0,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04473",
+     "origen": "taval_lista30_2025-09.xlsx · código BF11501R0104VP, hoja PR Flotante",
+     "fecha": "2025-09-01",
+     "coincide": "similar",
+     "diferencia": "material: A216 WCB (no pedido); extremos: RF (pedido RF/Bridado)"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M05",
+   "pos": "5",
+   "grupo": "material",
+   "descripcion": "Brida WN RF 3\"",
+   "cantidad": 12.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3\" · 150 x STD · ASTM A-105 · RF/BW",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 26.61,
+     "proveedor": "Renard (cód. 11294) · BRI-01278",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 11294",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M5B",
+   "pos": "5b",
+   "grupo": "material",
+   "descripcion": "Junta espiralada 3\" #150 AISI 316/grafito con anillo ext. zincado (juntas de las válvulas, nota del plano)",
+   "especificacion": "Nota del plano: juntas y espárragos según diámetro de brida (SCE-IN-301-0001/2)",
+   "cantidad": 12,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 6.0,
+     "proveedor": "Planilla Techint/12 (JUN-01698)",
+     "origen": "fuentes_originales/ofertas_texto/TECHINT/12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado",
+     "fecha": "2025-12-23",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M5C",
+   "pos": "5c",
+   "grupo": "material",
+   "descripcion": "Espárrago 5/8\" × 3 1/2\" A193 B7 con 2 tuercas 2H zincado (4 por junta de 3\")",
+   "especificacion": "Nota del plano: juntas y espárragos según diámetro de brida (SCE-IN-301-0001/2)",
+   "cantidad": 48,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 2.6,
+     "proveedor": "Planilla Sacde/15 (JUN-04177: 5/8 x 90 B7M bicromatizado)",
+     "origen": "fuentes_originales/ofertas_texto/Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL",
+     "fecha": "2026-02-20",
+     "coincide": "similar",
+     "diferencia": "B7M bicromatizado; confirmar si trae tuercas"
+    }
+   ]
+  },
+  {
+   "id": "M06",
+   "pos": "6",
+   "grupo": "material",
+   "descripcion": "Brida WN RF 6\"",
+   "cantidad": 6.0,
+   "unidad": "un",
+   "especificacion": "Plano: 6\" · 150 x STD · ASTM A-105 · RF/BW",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 58.91,
+     "proveedor": "Renard (cód. 11297) · BRI-01313",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 11297",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M6B",
+   "pos": "6b",
+   "grupo": "material",
+   "descripcion": "Junta espiralada 6\" #150 AISI 316/grafito con anillo ext. zincado",
+   "especificacion": "Nota del plano: juntas y espárragos según diámetro de brida (SCE-IN-301-0001/2)",
+   "cantidad": 4,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 5.82,
+     "proveedor": "MS Juntas cot. 48.729 (8\" #300)",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/72- Lic 64675 - SKID CONCENTRADOR - UTE NARAMBUE/5.Proveedores 3ros/COTIZACION_N§_048729.pdf.txt",
+     "fecha": "2026-07-06",
+     "coincide": "similar",
+     "diferencia": "8\" #300 (pedido 6\" #150)"
+    }
+   ]
+  },
+  {
+   "id": "M6C",
+   "pos": "6c",
+   "grupo": "material",
+   "descripcion": "Espárrago 3/4\" × 4\" A193 B7 con 2 tuercas 2H zincado (8 por junta de 6\")",
+   "especificacion": "Nota del plano: juntas y espárragos según diámetro de brida (SCE-IN-301-0001/2)",
+   "cantidad": 32,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 10.0,
+     "proveedor": "Planilla Techint/12 (JUN-02733: 3/4\" L 120 mm con 2 tuercas zincado)",
+     "origen": "fuentes_originales/ofertas_texto/TECHINT/12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado",
+     "fecha": "2025-12-23",
+     "coincide": "similar",
+     "diferencia": "L 120 mm"
+    }
+   ]
+  },
+  {
+   "id": "M07",
+   "pos": "7",
+   "grupo": "material",
+   "descripcion": "Brida WN RF 8\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 8\" · 150 x STD · ASTM A-105 · RF/BW",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 92.62,
+     "proveedor": "Renard (cód. 11298) · BRI-01328",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 11298",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M7B",
+   "pos": "7b",
+   "grupo": "material",
+   "descripcion": "Junta espiralada 8\" #150 AISI 316/grafito (brida ciega)",
+   "especificacion": "Nota del plano: juntas y espárragos según diámetro de brida (SCE-IN-301-0001/2)",
+   "cantidad": 1,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 5.82,
+     "proveedor": "MS Juntas cot. 48.729 (8\" #300)",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/72- Lic 64675 - SKID CONCENTRADOR - UTE NARAMBUE/5.Proveedores 3ros/COTIZACION_N§_048729.pdf.txt",
+     "fecha": "2026-07-06",
+     "coincide": "similar",
+     "diferencia": "#300 (pedido #150)"
+    }
+   ]
+  },
+  {
+   "id": "M7C",
+   "pos": "7c",
+   "grupo": "material",
+   "descripcion": "Espárrago 3/4\" × 4 1/4\" A193 B7 con 2 tuercas 2H zincado (8 por la brida ciega 8\")",
+   "especificacion": "Nota del plano: juntas y espárragos según diámetro de brida (SCE-IN-301-0001/2)",
+   "cantidad": 8,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 10.0,
+     "proveedor": "Planilla Techint/12 (JUN-02733)",
+     "origen": "fuentes_originales/ofertas_texto/TECHINT/12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado",
+     "fecha": "2025-12-23",
+     "coincide": "similar",
+     "diferencia": "L 120 mm"
+    }
+   ]
+  },
+  {
+   "id": "M08",
+   "pos": "8",
+   "grupo": "material",
+   "descripcion": "Brida ciega RF 8\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 8\" · 150 · ASTM A-105 · RF",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 88.17,
+     "proveedor": "Renard (cód. 8030) · BRI-01061",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 8030",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M09",
+   "pos": "9",
+   "grupo": "material",
+   "descripcion": "Te normal 6\" STD A-234 WPB BW (el plano dice A-105: se cotiza WPB, desvío a declarar)",
+   "cantidad": 3.0,
+   "unidad": "un",
+   "especificacion": "Plano: 6\" · STD · ASTM A-105 (plano; se cotiza A-234 WPB BW) · BW",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 104.61,
+     "proveedor": "Renard (cód. 3468) · ABW-00418",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3468",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "material: A234 WPB (pedido A105)"
+    }
+   ]
+  },
+  {
+   "id": "M10",
+   "pos": "10",
+   "grupo": "material",
+   "descripcion": "Te de reducción 8\"x6\"",
+   "cantidad": 3.0,
+   "unidad": "un",
+   "especificacion": "Plano: 8\"x6\" · STD · ASTM A-234 Gr. WPB · BW",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 283.84,
+     "proveedor": "Renard (cód. 3533) · ABW-00423",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M11",
+   "pos": "11",
+   "grupo": "material",
+   "descripcion": "Reducción concéntrica 6\"x3\"",
+   "cantidad": 4.0,
+   "unidad": "un",
+   "especificacion": "Plano: 6\"x3\" · STD · ASTM A-234 Gr. WPB · BW",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 55.88,
+     "proveedor": "Renard (cód. 3064) · ABW-00232",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3064",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M12",
+   "pos": "12",
+   "grupo": "material",
+   "descripcion": "Casquete semielíptico 6\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 6\" · STD · ASTM A-234 Gr. WPB · BW",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 25.76,
+     "proveedor": "Renard (cód. 3435) · ABW-00032",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3435",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M13",
+   "pos": "13",
+   "grupo": "material",
+   "descripcion": "Casquete semielíptico 8\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 8\" · STD · ASTM A-234 Gr. WPB · BW",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 39.61,
+     "proveedor": "Renard (cód. 3436) · ABW-00034",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3436",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M14",
+   "pos": "14",
+   "grupo": "material",
+   "descripcion": "Cupla de acero para soldar 1/2\" NPT con válvula esférica 1/2 1/2\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1/2\" · 3000 · ASTM A-105 (plano: A-106) · SW/NPT",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 65.2,
+     "proveedor": "válvulas Taval (el resumen las agrupa como \"Valvulas Taval\", factor 1, · VAL-03526",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\9. CM SKID MANIFOLD PAD S-600 · fuentes_originales/ofertas_texto/TECPETROL/9. CM SKID MANIFOLD PAD S-600/ESTRUCTURA DE COSTOS- LM de Manifold S600 CM - PC0-C",
+     "fecha": "2026-01-26",
+     "coincide": "similar",
+     "diferencia": "extremos: NPT (pedido NPT/SW)"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M15",
+   "pos": "15",
+   "grupo": "material",
+   "descripcion": "Toma multiport acero inoxidable ABAC 1/2\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1/2\" · 3000 · AISI 316 · NPT · ABAC",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 170.0,
+     "proveedor": "Manifold ABAC de 3 vías M1-C-T AISI 304/316 (OTR-02980, planilla TAVAL/40)",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/4.Armado de la Oferta Comercial/LM costo Filtros rev.1.xlsx.txt",
+     "fecha": "2026-01-15",
+     "coincide": "similar",
+     "diferencia": "manifold de 3 vías; pedir cotización de la toma multiport a ABAC"
+    }
+   ]
+  },
+  {
+   "id": "M16",
+   "pos": "16",
+   "grupo": "material",
+   "descripcion": "Válvula de alivio de capacidad reducida roscada tipo S-71 1/2\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1/2\" · 3000 · S/ fabricante · NPT · tipo S-71",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-28",
+     "coincide": "sin_ref",
+     "diferencia": "válvula de alivio roscada 1/2\" tipo S-71: no hay precio ni pieza parecida (solo PSV de 1 1/2\" x 2\")"
+    }
+   ]
+  },
+  {
+   "id": "M17",
+   "pos": "17",
+   "grupo": "material",
+   "descripcion": "Cupla de acero para soldar 1/2\" NPT con tapón 1/2\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1/2\" · 3000 · ASTM A-105 · SW/NPT",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 2.71,
+     "proveedor": "Renard (cód. 5281) · AFO-00714",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 5281",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "extremos: BSPT (pedido NPT/SW)"
+    }
+   ]
+  },
+  {
+   "id": "M18",
+   "pos": "18",
+   "grupo": "material",
+   "descripcion": "Termovaina de acero inoxidable 3/4\" NPT 3/4\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" · 3000 · AISI 316 · NPT",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-28",
+     "coincide": "sin_ref",
+     "diferencia": "termovaina 3/4\" NPT AISI 316: la base solo tiene termovainas bridadas 1 1/2\"-2\" (otra pieza)"
+    }
+   ]
+  },
+  {
+   "id": "M19",
+   "pos": "19",
+   "grupo": "material",
+   "descripcion": "Válvula de bloqueo y purga con manómetro 0-6 bar 1/2\"",
+   "cantidad": 4.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1/2\" · 3000 · S/ fabricante · NPT",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 230.0,
+     "proveedor": "Bloqueo y purga ABAC 80 (VAL-03162, planilla TAVAL/55) + manómetro Ø100 glicerina 150 (INS-02671, Weisz o similar, TAVAL/43)",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/43- YPF- CM PUENTES DE PRODUCCION",
+     "fecha": "2026-04-22",
+     "coincide": "similar",
+     "diferencia": "manómetro según SCE-PR-506-1000 (AISI 316, certificado de calibración): confirmar (revisión independiente: faltaba el manómetro)"
+    }
+   ]
+  },
+  {
+   "id": "M20",
+   "pos": "20",
+   "grupo": "material",
+   "descripcion": "Skid y soportes s/ SCE-RE-110-0006 Rev.0 (3700 x 1630 mm; pe",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Skid 3.700 × 1.630 mm, UPN 120 perimetral y travesaños, soportes de cañería, 4 cáncamos y oreja de PAT (330 kg estimados)",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 471.36,
+     "proveedor": "Grupo Provemet cot. 236623: UPN 120 a USD 17,40/m (13,40 kg/m) = 1,30 USD/kg +10% recortes, × 330 kg estimados (medidos del plano: 3.700 × 1.630 mm, perimetral, 4 travesaños, soportes y cáncamos)",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-28/provemet_cotizacion_236623_perfiles_2025-07-01.pdf",
+     "fecha": "2025-07-01",
+     "coincide": "similar",
+     "diferencia": "kilos estimados del plano; confirmar con el típico SCE-RE-110-0006"
+    }
+   ]
+  },
+  {
+   "id": "M21",
+   "pos": "21",
+   "grupo": "material",
+   "descripcion": "Caño (cantidad no indicada en el plano: medida del dibujo) 3\"",
+   "cantidad": 1.8,
+   "unidad": "m",
+   "especificacion": "Plano: 3\" · 40 · ASTM A-53 Gr. B · BW",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 18.99,
+     "proveedor": "Renard (cód. 1007) · CAN-01485",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1007",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "costura: con costura (no pedido)"
+    }
+   ]
+  },
+  {
+   "id": "M21B",
+   "pos": "21b",
+   "grupo": "material",
+   "descripcion": "Completar media tira de 6 m de la pos 21 (compra mínima; sobrante a stock)",
+   "cantidad": 4.2,
+   "unidad": "m",
+   "especificacion": "1 tramo de 6 m para 1.8 m (con tira de 12 m el sobrante superaba 80%)",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 18.99,
+     "proveedor": "Renard (cód. 1007) · CAN-01485",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1007",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "costura: con costura (no pedido)"
+    }
+   ]
+  },
+  {
+   "id": "M22",
+   "pos": "22",
+   "grupo": "material",
+   "descripcion": "Caño (cantidad no indicada en el plano: medida del dibujo) 6\"",
+   "cantidad": 2.0,
+   "unidad": "m",
+   "especificacion": "Plano: 6\" · 40 · ASTM A-53 Gr. B · BW",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 50.6,
+     "proveedor": "Renard (cód. 1056) · CAN-01511",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1056",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "costura: con costura (no pedido)"
+    }
+   ]
+  },
+  {
+   "id": "M22B",
+   "pos": "22b",
+   "grupo": "material",
+   "descripcion": "Completar media tira de 6 m de la pos 22 (compra mínima; sobrante a stock)",
+   "cantidad": 4.0,
+   "unidad": "m",
+   "especificacion": "1 tramo de 6 m para 2 m (con tira de 12 m el sobrante superaba 80%)",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 50.6,
+     "proveedor": "Renard (cód. 1056) · CAN-01511",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1056",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "costura: con costura (no pedido)"
+    }
+   ]
+  },
+  {
+   "id": "M23",
+   "pos": "23",
+   "grupo": "material",
+   "descripcion": "Caño (cantidad no indicada en el plano: medida del dibujo) 6\"",
+   "cantidad": 2.25,
+   "unidad": "m",
+   "especificacion": "Plano: 6\" · 80 · ASTM A-53 Gr. B · BW",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 90.7,
+     "proveedor": "Renard · CAN-02603",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\PAMPA ENERGIA\\7- Licitacion contrato Marco Skid PAD Rincon de Aranda · 4.Armado de la Oferta Comercial/Cot Skid Manifolds Colectores RDA Contrato Marco (2da RDA).xlsx.",
+     "fecha": "2026-08-14",
+     "coincide": "similar",
+     "diferencia": "material: sin dato (pedido A53); costura: sin costura (no pedido); unidad distinta: catálogo por un, plano por m"
+    }
+   ]
+  },
+  {
+   "id": "M23B",
+   "pos": "23b",
+   "grupo": "material",
+   "descripcion": "Completar media tira de 6 m de la pos 23 (compra mínima; sobrante a stock)",
+   "cantidad": 3.75,
+   "unidad": "m",
+   "especificacion": "1 tramo de 6 m para 2.25 m (con tira de 12 m el sobrante superaba 80%)",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 90.7,
+     "proveedor": "Renard · CAN-02603",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\PAMPA ENERGIA\\7- Licitacion contrato Marco Skid PAD Rincon de Aranda · 4.Armado de la Oferta Comercial/Cot Skid Manifolds Colectores RDA Contrato Marco (2da RDA).xlsx.",
+     "fecha": "2026-08-14",
+     "coincide": "similar",
+     "diferencia": "material: sin dato (pedido A53); costura: sin costura (no pedido); unidad distinta: catálogo por un, plano por m"
+    }
+   ]
+  },
+  {
+   "id": "M24",
+   "pos": "24",
+   "grupo": "material",
+   "descripcion": "Caño (cantidad no indicada en el plano: medida del dibujo) 8\"",
+   "cantidad": 1.0,
+   "unidad": "m",
+   "especificacion": "Plano: 8\" · 40 · ASTM A-53 Gr. B · BW",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 72.64,
+     "proveedor": "Renard (cód. 1062) · CAN-01522",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1062",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "costura: con costura (no pedido)"
+    }
+   ]
+  },
+  {
+   "id": "M24B",
+   "pos": "24b",
+   "grupo": "material",
+   "descripcion": "Completar media tira de 6 m de la pos 24 (compra mínima; sobrante a stock)",
+   "cantidad": 5.0,
+   "unidad": "m",
+   "especificacion": "1 tramo de 6 m para 1 m (con tira de 12 m el sobrante superaba 80%)",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 72.64,
+     "proveedor": "Renard (cód. 1062) · CAN-01522",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1062",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "costura: con costura (no pedido)"
+    }
+   ]
+  },
+  {
+   "id": "M25",
+   "pos": "A",
+   "grupo": "material",
+   "descripcion": "Sensor de presión regulada 0-25 bar 4-20 mA con válvula de b 3/4\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" · 150 ·  · NPT",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 856.63,
+     "proveedor": "ABB · Transmisor de presión (INS-02708, planilla TAVAL/72)",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/72- Lic 64675 - SKID CONCENTRADOR - UTE NARAMBUE",
+     "fecha": "2026-08-14",
+     "coincide": "similar",
+     "diferencia": "rango a definir 0-25 bar; sin válvula de bloqueo y purga (va en pos 19)"
+    }
+   ]
+  },
+  {
+   "id": "M26",
+   "pos": "B",
+   "grupo": "material",
+   "descripcion": "Sensor de temperatura de salida 0-100 °C 4-20 mA 3/4\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" · 150 ·  · NPT",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 1448.33,
+     "proveedor": "ABB · Transmisor de temperatura (INS-02714, planilla TAVAL/72)",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/72- Lic 64675 - SKID CONCENTRADOR - UTE NARAMBUE",
+     "fecha": "2026-08-14",
+     "coincide": "similar",
+     "diferencia": "con sensor; rango 0-100 °C a confirmar"
+    }
+   ]
+  },
+  {
+   "id": "M27",
+   "pos": "C",
+   "grupo": "material",
+   "descripcion": "Switch indicador de válvula monitora abierta 0-24 V",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano:  ·  ·  · —",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-28",
+     "coincide": "sin_ref",
+     "diferencia": "switch de posición de la monitora: confirmar si viene con la reguladora (Tormene ofrece indicador de posición)"
+    }
+   ]
+  },
+  {
+   "id": "S01",
+   "pos": "MO",
+   "grupo": "mo",
+   "descripcion": "Soldaduras: 36 a tope + SW y olets (calculado)",
+   "especificacion": "pos 21, 22, 23, 24: caño por metro; sus juntas se cuentan en los extremos BW de accesorios y bridas (una junta cada uno); pos 5: 18 extremo(s) BW de taller (1 por unidad × 12 × 1.5 por el caño) × 3\" × 1.0000; pos 6: 9 extremo(s) BW de taller (1 por unidad × 6 × 1.5 por el caño) × 6\" × 1.0000; pos 7: 1.5 extremo(s) BW de taller (1 por unidad × 1 × 1.5 por el caño) × 8\" × 1.0000; pos 9: 13.5 extremo",
+   "cantidad": 195.5,
+   "unidad": "pulg",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 16.0,
+     "proveedor": "Mano de obra soldadura piping (criterio de las planillas de costo 2026): Precio por pulgada que usan las planillas de ITT de 2025-2026 (16 a 16,5; 19 en #900 en Sacde 12). Controles CTRL-M01/P01/T01, ",
+     "origen": "planillas 2026 (TAVAL/43 puentes YPF 19-02-2026; TAVAL/40 Inarteco; Sacde 12 a 15; Tecpetrol 9: 16,5)",
+     "fecha": "2026-02-28",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "S02",
+   "pos": "PIN",
+   "grupo": "servicio",
+   "descripcion": "Granallado y pintura (m² calculados)",
+   "especificacion": "9.95 m² exteriores: caños y niples 3.4 + bridas, accesorios y válvulas (largo equivalente) 6.4 + envolvente 0.1 + skid ≈ 10,7 m² (25 m de UPN 120)",
+   "cantidad": 20.652,
+   "unidad": "m2",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 50.0,
+     "proveedor": "criterio ITT · PIN-00569",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN\\4.Armado de la Oferta Comercial",
+     "fecha": "2026-10-10",
+     "coincide": "similar",
+     "diferencia": "m² calculados (caños, accesorios por regla, envolvente y estructura); esquema de pintura a confirmar con el pliego"
+    }
+   ]
+  },
+  {
+   "id": "S04",
+   "pos": "RX",
+   "grupo": "servicio",
+   "descripcion": "Radiografía 100% de las juntas a tope y tintas penetrantes en SW y olets",
+   "especificacion": "135 placas chicas, 0 grandes, 4.00 servicio(s) de RX y 1.00 de LP por equipo (servicios repartidos en 1 equipos)",
+   "cantidad": 1,
+   "unidad": "gl",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 2803.5,
+     "proveedor": "Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))",
+     "origen": "PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT)",
+     "fecha": "2026-08-31",
+     "coincide": "igual"
+    },
+    {
+     "tipo": "cot",
+     "precio": 4475.0,
+     "proveedor": "NDT Antonelli (tarifas 11-2025), mismas placas y servicios",
+     "origen": "fuentes_originales/antonelli_end_2025-11.pdf",
+     "fecha": "2025-11-03",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "S12H",
+   "pos": "HH",
+   "grupo": "mo",
+   "descripcion": "Horas de ingeniería (estimadas del antecedente)",
+   "especificacion": "30 h por skid · mediana de 27.0, 200.0, 30.0 h por unidad (repartidas en la serie)",
+   "cantidad": 30.0,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 15.0,
+     "proveedor": "Horas propias ITT (tarifa del antecedente)",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · 4.Armado de la Oferta Comercial/SKIDs SK SACDE 1002 Rev1.xlsx.txt · hoja SK-2111 / Mano de Obra de ITT",
+     "fecha": "2026-02-20",
+     "coincide": "similar",
+     "diferencia": "ESTIMADO del antecedente Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para bomba P-111 (SK-2111) (6, 1 u, 2026-02-20)"
+    }
+   ]
+  },
+  {
+   "id": "S13C",
+   "pos": "CAL",
+   "grupo": "mo",
+   "descripcion": "Horas de calidad y dossier (estimadas del antecedente)",
+   "especificacion": "70 h por skid · mediana de 70.0, 90.0, 45.0 h por unidad (repartidas en la serie)",
+   "cantidad": 70.0,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 15.0,
+     "proveedor": "Horas propias ITT (tarifa del antecedente)",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · 4.Armado de la Oferta Comercial/SKIDs SK SACDE 1002 Rev1.xlsx.txt · hoja SK-2111 / Mano de Obra de ITT",
+     "fecha": "2026-02-20",
+     "coincide": "similar",
+     "diferencia": "ESTIMADO del antecedente Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para bomba P-111 (SK-2111) (6, 1 u, 2026-02-20)"
+    }
+   ]
+  },
+  {
+   "id": "S13A",
+   "pos": "ARM",
+   "grupo": "mo",
+   "descripcion": "Horas de montaje en planta (armado, movimientos, prueba hidráulica) (estimadas del antecedente)",
+   "especificacion": "215.1 h por skid · mediana de 135 h × 0.828, 535.5 h × 0.67, 130.5 h × 1.648 (horas por unidad × tamaño)",
+   "cantidad": 215.1,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 13.0,
+     "proveedor": "Horas propias ITT (tarifa del antecedente)",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · 4.Armado de la Oferta Comercial/SKIDs SK SACDE 1002 Rev1.xlsx.txt · hoja SK-2111 / Mano de Obra de ITT",
+     "fecha": "2026-02-20",
+     "coincide": "similar",
+     "diferencia": "ESTIMADO del antecedente Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para bomba P-111 (SK-2111) (6, 1 u, 2026-02-20)"
+    }
+   ]
+  },
+  {
+   "id": "S05",
+   "pos": "EST",
+   "grupo": "mo",
+   "descripcion": "Fabricación del skid y soportes (330 kg estimados)",
+   "especificacion": "kg × tarifa por kg de estructura de skid",
+   "cantidad": 330,
+   "unidad": "kg",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 3.0,
+     "proveedor": "Fabricación de estructura de skid por kg (tercero Ledesma): tarifas.csv",
+     "origen": "YPF/28 Lic 69343 planilla PC0 (850 kg × 3 = 2.550)",
+     "fecha": "2026-10-10",
+     "coincide": "similar",
+     "diferencia": "kilos estimados"
+    }
+   ]
+  },
+  {
+   "id": "S06",
+   "pos": "PF",
+   "grupo": "servicio",
+   "descripcion": "Prueba de fugas con nitrógeno a 5,5 bar con el equipo terminado (especificación §5.4.3)",
+   "especificacion": "N2 + horas de planta",
+   "cantidad": 1,
+   "unidad": "gl",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-28",
+     "coincide": "sin_ref",
+     "diferencia": "prueba de fugas con N2 a 5,5 bar: no hay tarifa ni antecedente"
+    }
+   ]
+  }
+ ],
+ "compras": {
+  "fecha_respuesta": "2026-11-04",
+  "material_en_planta_dias": 60,
+  "lugar_entrega": "Planta ITT S.A., Av. 12 de Octubre 4004, Quilmes Oeste, Bs. As.",
+  "requisitos_generales": [
+   "Cotizar en USD sin IVA, con plazo de entrega y validez de la oferta.",
+   "Certificados de material 3.1; válvulas esféricas con certificados de fabricación y prueba según SCE-IN-501-0008 / SCE-RE-308-0001.",
+   "Marcas del listado SCE-IN-501-0015 de Camuzzi.",
+   "Indicar cualquier diferencia con lo pedido."
+  ],
+  "notas": {
+   "1": "Monitora pilotada NC, obturador guiado, 3\" #150 RF, Pe 15-10 bar, Pr 4 bar, Q 6.000 Sm3/h, con switch de posición",
+   "2": "Reguladora pilotada a diafragma NA, 3\" #150 RF, mismas condiciones"
+  },
+  "proveedores": {
+   "1": "Tormene Americana",
+   "2": "Tormene Americana",
+   "3": "Taval",
+   "4": "Taval",
+   "5": "Renard / Provemet",
+   "15": "ABAC"
+  },
+  "cantidad_compra": {
+   "21": "media tira de 6 m",
+   "22": "media tira de 6 m",
+   "23": "media tira de 6 m",
+   "24": "media tira de 6 m"
+  },
+  "servicios": [
+   {
+    "servicio": "Radiografía 100% y tintas penetrantes",
+    "proveedores": "DB NDT / Antonelli",
+    "referencia": "DB NDT 08-2026",
+    "nota": ""
+   },
+   {
+    "servicio": "Flete a Tapiales con hidrogrúa",
+    "proveedores": "a definir",
+    "referencia": "sin referencia",
+    "nota": ""
+   }
+  ]
+ }
+}

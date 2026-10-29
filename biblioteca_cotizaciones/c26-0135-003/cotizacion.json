@@ -1,0 +1,859 @@
+{
+ "codigo": "COT26-0135-003",
+ "revision": "Rev 0",
+ "estado": "borrador",
+ "fecha": "2026-10-28",
+ "preparo": "Matías Russo",
+ "cliente": {
+  "nombre": "CAMUZZI GAS PAMPEANA S.A. / CAMUZZI GAS DEL SUR S.A.",
+  "codigo_itt": "0135",
+  "comprador": "Gerencia de Abastecimiento Obras y Almacenes (Juan Filas)"
+ },
+ "titulo": "Camuzzi · Concurso de precios N° 24578 ítem 1 — 2 separadores verticales coalescentes (diseño preliminar ITT)",
+ "titulo_pagina": "Cotización Camuzzi CP 24578 · Separador coalescente",
+ "archivo_planilla": "CAMUZZI_CP24578_SEPARADOR_COALESCENTE",
+ "subtitulo_planilla": "2 separadores verticales coalescentes Ø53\" #600, 37 elementos · diseño preliminar ITT · USD sin IVA",
+ "meta": [
+  "Concurso de precios N° 24578 · ítem 1",
+  "Sin plano ni especificación del separador: diseño preliminar ITT",
+  "Comprador: Camuzzi (portal de compras)",
+  "Preparó: Matías Russo · 28-10-2026"
+ ],
+ "equipo": {
+  "singular": "separador",
+  "plural": "separadores",
+  "tipo": "filtro",
+  "diametro_pulg": 53
+ },
+ "parametros": {
+  "N": 2,
+  "FM": 1.35,
+  "FMO": 1.35,
+  "CONT": 5,
+  "AJ": 1,
+  "TRANS": 1,
+  "TC": 1541.43,
+  "TR_ARS": 1400000,
+  "TR_EMB": 300,
+  "TR_F": 1.0,
+  "fecha_referencia": "2026-10-28",
+  "rx_pct": 0,
+  "ph_horas": 0,
+  "FTV": 1.0
+ },
+ "plazo": {
+  "dias": 165,
+  "texto": "desde OC · entregado en Transporte Cruz del Sur (Tapiales)",
+  "tareas": [
+   [
+    "Memoria de cálculo y planos para aprobación de Camuzzi",
+    0,
+    25,
+    ""
+   ],
+   [
+    "Tapas de cierre rápido 53\" #600 (Megatap 90/110 días desde anticipo y datos de diseño)",
+    25,
+    135,
+    "crit"
+   ],
+   [
+    "Chapa, rolado, bridas y elementos",
+    25,
+    70,
+    ""
+   ],
+   [
+    "Soldadura del cuello de la tapa, RX y PH",
+    135,
+    150,
+    "tal"
+   ],
+   [
+    "Instrumentos, pintura, inspección y despacho",
+    150,
+    165,
+    "tal"
+   ]
+  ],
+  "nota": "Fija el plazo la tapa de cierre rápido (90/110 días desde anticipo y certificación de los datos de diseño, que salen de la memoria de cálculo)."
+ },
+ "flete": {
+  "etiqueta": "Flete a Transporte Cruz del Sur (Tapiales)",
+  "referencia_html": "<b>Estimado:</b> camión con hidrogrúa para los 2 separadores (≈ 30 km): ARS 1.400.000 + USD 300 de embalaje.",
+  "criterio_html": "La planilla del concurso pone el flete a cargo del proveedor hasta Transporte Cruz del Sur."
+ },
+ "historial_html": [],
+ "pedido": {
+  "eyebrow": "Concurso de precios N° 24578 · ítem 1",
+  "datos_html": [
+   [
+    "Cliente",
+    "Camuzzi Gas Pampeana S.A. / Camuzzi Gas del Sur S.A. (código ITT 0135)"
+   ],
+   [
+    "Ítem",
+    "1 · Separador vertical coalescente sobre skid con plataforma · <b>2 un</b>"
+   ],
+   [
+    "Condiciones",
+    "Pe máx 70 bar · Pe mín 25 bar · Qmáx 100.000 Sm3/h · filtrado 0,3 µm · cartuchos 140 × 914 mm"
+   ],
+   [
+    "Documentos",
+    "Solo la descripción de la planilla: el esquema y la especificación que menciona NO vinieron en el pedido"
+   ],
+   [
+    "Entrega pedida",
+    "Transporte Cruz del Sur, Mercado Central nave D3, Tapiales"
+   ]
+  ],
+  "requisitos_html": [
+   "Entrada y salida a 180°, preferentemente 10\" #600",
+   "Purga automática; switch de nivel alto Ex-d sobre stand-pipe en ambas cámaras; visor de nivel en ambas cámaras",
+   "Manómetro diferencial con aguja de arrastre y contacto seco; manómetro estático",
+   "Boca de inspección 6\" #600 a 90° de la entrada",
+   "Salida a 200 mm del límite superior de los cartuchos; 40 mm entre elementos",
+   "Un juego de elementos por equipo",
+   "<b>Con la oferta:</b> memoria de cálculo (cantidad de elementos, diámetros, espesores) y esquema con dimensiones generales"
+  ]
+ },
+ "nota_mo_html": "Diseño preliminar: 37 elementos, cuerpo Ø53\" × 3.2 m × 1 5/8\" SA-516-70 (4387 kg), fondo 2:1, tapa de cierre rápido superior, 2 cámaras. Fabricación por tercero (Ledesma, escalado de su presupuesto del separador 28\" #600 de CAMUZZI/30); ITT pone ingeniería, calidad, montaje de instrumentos, RX, PH y pintura.",
+ "desvios": [
+  {
+   "tag": "Todo",
+   "titulo": "Diseño preliminar sin especificación",
+   "texto": "La especificación y el esquema que cita la planilla no vinieron. La cantidad de elementos y el diámetro salen de un dimensionamiento preliminar: hay que hacer la memoria de cálculo antes de presentar."
+  }
+ ],
+ "antecedentes": [
+  {
+   "carpeta_html": "<b>CAMUZZI/30</b> · Concurso 22737",
+   "fecha": "14-05-2026",
+   "que": "2 separadores horizontales de polvo y líquido 28\" #600, 11 elementos 140 × 914",
+   "precio": "venta 93.033 c/u",
+   "tomado_html": "Tapa Megatap, MO Ledesma, rolado Sandri, elementos Gora, visores Riva"
+  },
+  {
+   "carpeta_html": "<b>Sacde/12</b> · Filtro coalescente FC-301/302",
+   "fecha": "18-12-2025",
+   "que": "Coalescedor 36\" #600, 16 elementos, planilla de costo",
+   "precio": "costo con planilla",
+   "tomado_html": "Caudal por elemento, chapa por kg, cabezal y tapa Futura"
+  }
+ ],
+ "pendientes": [
+  {
+   "titulo": "Ingeniería",
+   "items": [
+    "<b>CRÍTICO para presentar:</b> el concurso exige entregar con la cotización la memoria de cálculo y el esquema con dimensiones generales; sin eso la oferta incumple el ítem 1",
+    "Memoria de cálculo ASME VIII (espesores) y dimensionamiento con el fabricante de elementos (Gora / Pall): caudal por elemento a 25 bar",
+    "Esquema con dimensiones generales (lo pide el concurso con la oferta)"
+   ]
+  },
+  {
+   "titulo": "Proveedores",
+   "items": [
+    "Tapa de cierre rápido 53\" #600 vertical (Megatap / Futura)",
+    "Elementos coalescentes 0,3 µm 140 × 914",
+    "Purgas automáticas, switches de nivel Ex-d, manómetro diferencial con contacto",
+    "Fabricación (Ledesma) con el diseño"
+   ]
+  },
+  {
+   "titulo": "Camuzzi",
+   "items": [
+    "Pedir la especificación técnica y el esquema del separador que menciona la planilla (no vinieron)"
+   ]
+  }
+ ],
+ "pie": "Fuentes: base de conocimiento del repositorio cotizador-itt. Precios en USD sin IVA. Borrador sin revisar; diseño preliminar.",
+ "planilla_notas": [
+  "Plazo: 165 días desde OC (tapa de cierre rápido 90/110 días desde la memoria de cálculo; el cuerpo y el skid se fabrican mientras tanto).",
+  "Precio preliminar: diseño sin especificación del cliente, ±30%."
+ ],
+ "items": [
+  {
+   "id": "M01",
+   "pos": "1",
+   "grupo": "material",
+   "descripcion": "Chapa para virola Ø53\" × 3.2 m × 1 5/8\" (4387 kg + 10% recortes)",
+   "especificacion": "53\" e = 1 5/8\" SA-516 Gr. 70",
+   "cantidad": 4826,
+   "unidad": "kg",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 1.8,
+     "proveedor": "Planilla Sacde/12 coalescedor FC-301/302: chapa SA-516-70 1 1/2\" a 1,80 USD/kg",
+     "origen": "fuentes_originales/ofertas_texto/Sacde/12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios/4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx.txt",
+     "fecha": "2025-12-18",
+     "coincide": "similar",
+     "diferencia": "espesor 1 1/2\" (acá 1 5/8\")"
+    }
+   ]
+  },
+  {
+   "id": "M02",
+   "pos": "2",
+   "grupo": "material",
+   "descripcion": "Cabezal semielíptico 2:1 Ø53\" × 1 3/4\" (fondo inferior)",
+   "especificacion": "53\" e = 1 3/4\" SA-516 Gr. 70",
+   "cantidad": 1,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 7586.03,
+     "proveedor": "Planilla Sacde/12: cabezal 36\" × 1 1/2\" SA-516-70 a 3.000, escalado por superficie (53/36)² y espesor (1 3/4 ÷ 1 1/2)",
+     "origen": "fuentes_originales/ofertas_texto/Sacde/12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios/4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx.txt",
+     "fecha": "2025-12-18",
+     "coincide": "similar",
+     "diferencia": "Ø36\" (escalado × 2,53)"
+    }
+   ]
+  },
+  {
+   "id": "M03",
+   "pos": "3",
+   "grupo": "material",
+   "descripcion": "Tapa de cierre rápido Ø53\" #600 (70 bar) con pescante, A105N, o-rings de repuesto",
+   "especificacion": "53\" 600 A105N",
+   "cantidad": 1,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 38966.86,
+     "proveedor": "Megatap (CAMUZZI/30): tapa 28\" #600 70 kg/cm2 a 14.963 c/u, escalada × (53/28)^1,5",
+     "origen": "fuentes_originales/ofertas_texto/CAMUZZI/30 - Separador Polvo y Líquido (2 unid) - Lic 22737/5.Proveedores 3ros/Megatap PPTO ITT SA 27133.pdf.txt",
+     "fecha": "2026-05-06",
+     "coincide": "similar",
+     "diferencia": "Ø28\" horizontal; pedir cotización 53\" vertical"
+    },
+    {
+     "tipo": "ant",
+     "precio": 43387.29,
+     "proveedor": "Planilla Sacde/12: tapa Futura 36\" #600 con pescante 24.288,60, escalada × (53/36)^1,5",
+     "origen": "fuentes_originales/ofertas_texto/Sacde/12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios/4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx.txt",
+     "fecha": "2025-12-18",
+     "coincide": "similar",
+     "diferencia": "Ø36\""
+    }
+   ]
+  },
+  {
+   "id": "M04",
+   "pos": "4",
+   "grupo": "material",
+   "descripcion": "Placa portaelementos Ø1,26 m × 1 5/8\" con 37 agujeros mecanizados (415 kg)",
+   "especificacion": "e = 1 5/8\" SA-516 Gr. 70",
+   "cantidad": 1,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 747.0,
+     "proveedor": "415 kg × 1,80 USD/kg (chapa SA-516-70, planilla Sacde/12)",
+     "origen": "fuentes_originales/ofertas_texto/Sacde/12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios/4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx.txt",
+     "fecha": "2025-12-18",
+     "coincide": "similar",
+     "diferencia": "solo la chapa: el corte y el mecanizado de los agujeros, a cotizar"
+    }
+   ]
+  },
+  {
+   "id": "M05",
+   "pos": "5",
+   "grupo": "material",
+   "descripcion": "Elemento coalescente 0,3 µm, 140 × 914 mm (5 1/2\" × 36\")",
+   "especificacion": "fibra de vidrio",
+   "cantidad": 37,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 854,
+     "proveedor": "Planilla Sacde/12 FC-301/302: elemento filtrante coalescedor (16 u a 854)",
+     "origen": "fuentes_originales/ofertas_texto/Sacde/12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios/4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx.txt",
+     "fecha": "2025-12-18",
+     "coincide": "similar",
+     "diferencia": "elemento de otro tamaño (no informado); pedir el 0,3 µm 140 × 914 a Gora / Pall"
+    }
+   ]
+  },
+  {
+   "id": "M06",
+   "pos": "6",
+   "grupo": "material",
+   "descripcion": "Brida WN RF entrada y salida 10\" #600 sch 80",
+   "especificacion": "10\" 600 x 80 ASTM A-105",
+   "cantidad": 2,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 338.45,
+     "proveedor": "Provemet · BRI-01227",
+     "origen": "conocimiento/precios/catalogo_materiales.csv",
+     "fecha": "2025-07-29",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M07",
+   "pos": "7",
+   "grupo": "material",
+   "descripcion": "Caño 10\" sch 80 (toberas de entrada y salida)",
+   "especificacion": "10\" 80 ASTM A-106 Gr. B",
+   "cantidad": 0.8,
+   "unidad": "m",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 204.43,
+     "proveedor": "Renard (cód. 1193) · CAN-01420 (273 × 15,09 mm)",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M08",
+   "pos": "8",
+   "grupo": "material",
+   "descripcion": "Brida WN RF 6\" #600 sch 80 (boca de inspección a 90° de la entrada)",
+   "especificacion": "6\" 600 x 80 ASTM A-105",
+   "cantidad": 1,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 226.14,
+     "proveedor": "Renard · BRI-01320",
+     "origen": "conocimiento/precios/catalogo_materiales.csv",
+     "fecha": "2025-07-11",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M09",
+   "pos": "9",
+   "grupo": "material",
+   "descripcion": "Brida ciega RF 6\" #600 (boca de inspección)",
+   "especificacion": "6\" 600 ASTM A-105",
+   "cantidad": 1,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 248.75,
+     "proveedor": "Renard: brida WN 6\" #600 sch 80 a 226,14 (BRI-01320) + 10% (ciega más pesada)",
+     "origen": "conocimiento/precios/catalogo_materiales.csv",
+     "fecha": "2025-07-11",
+     "coincide": "similar",
+     "diferencia": "precio de la WN de la misma medida y serie"
+    }
+   ]
+  },
+  {
+   "id": "M10",
+   "pos": "10",
+   "grupo": "material",
+   "descripcion": "Caño 6\" sch 80 (boca de inspección)",
+   "especificacion": "6\" 80 ASTM A-106 Gr. B",
+   "cantidad": 0.3,
+   "unidad": "m",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 90.7,
+     "proveedor": "Renard · CAN-01512 (planilla de costo ITT)",
+     "origen": "conocimiento/precios/catalogo_materiales.csv",
+     "fecha": "2026-06-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M11",
+   "pos": "11",
+   "grupo": "material",
+   "descripcion": "Brida WN RF 2\" #600 sch 160 (purgas y stand-pipes de las 2 cámaras)",
+   "especificacion": "2\" 600 x 160 ASTM A-105",
+   "cantidad": 6,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 25.6,
+     "proveedor": "Oil Metal · BRI-01255",
+     "origen": "conocimiento/precios/catalogo_materiales.csv",
+     "fecha": "2025-07-03",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M12",
+   "pos": "12",
+   "grupo": "material",
+   "descripcion": "Caño 2\" sch 160 (conexiones y stand-pipes)",
+   "especificacion": "2\" 160 ASTM A-106 Gr. B",
+   "cantidad": 4,
+   "unidad": "m",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 24.67,
+     "proveedor": "CAN-01454 (planilla de costo ITT)",
+     "origen": "conocimiento/precios/catalogo_materiales.csv",
+     "fecha": "2026-06-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M13",
+   "pos": "13",
+   "grupo": "material",
+   "descripcion": "Brida WN RF 1\" #600 sch 160 (visores y manómetros)",
+   "especificacion": "1\" 600 x 160 ASTM A-105",
+   "cantidad": 7,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 25.0,
+     "proveedor": "Oil Metal · BRI-01201",
+     "origen": "conocimiento/precios/catalogo_materiales.csv",
+     "fecha": "2025-07-03",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M14",
+   "pos": "14",
+   "grupo": "material",
+   "descripcion": "Válvula esférica 2\" #600 PT RF (bloqueos de purgas y stand-pipes)",
+   "especificacion": "2\" 600 A216 WCB",
+   "cantidad": 6,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 220,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04447",
+     "origen": "fuentes_originales/taval_lista30_2025-09.xlsx",
+     "fecha": "2025-09-01",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M15",
+   "pos": "15",
+   "grupo": "material",
+   "descripcion": "Válvula esférica 1/2\" NPT API 608 (visores y manómetros)",
+   "especificacion": "1/2\" 2000 A105",
+   "cantidad": 8,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 36.06,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04865",
+     "origen": "fuentes_originales/taval_lista30_2025-09.xlsx",
+     "fecha": "2025-09-01",
+     "coincide": "similar",
+     "diferencia": "#2000 NPT"
+    }
+   ]
+  },
+  {
+   "id": "M16",
+   "pos": "16",
+   "grupo": "material",
+   "descripcion": "Purga automática de líquidos (controlador de nivel + válvula), una por cámara",
+   "especificacion": "600",
+   "cantidad": 2,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-28",
+     "coincide": "sin_ref",
+     "diferencia": "purga automática #600: no hay precio ni pieza parecida"
+    }
+   ]
+  },
+  {
+   "id": "M17",
+   "pos": "17",
+   "grupo": "material",
+   "descripcion": "Switch de nivel alto sobre stand-pipe, Ex-d, una por cámara",
+   "especificacion": "",
+   "cantidad": 2,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-28",
+     "coincide": "sin_ref",
+     "diferencia": "switch de nivel Ex-d para 70 bar: no hay precio ni pieza parecida"
+    }
+   ]
+  },
+  {
+   "id": "M18",
+   "pos": "18",
+   "grupo": "material",
+   "descripcion": "Visor de nivel óptico reflex 500 mm, 70 bar, una por cámara",
+   "especificacion": "",
+   "cantidad": 2,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 685,
+     "proveedor": "Riva Hnos: indicador de nivel reflex 500 mm, 70 bar",
+     "origen": "fuentes_originales/ofertas_texto/CAMUZZI/30 - Separador Polvo y Líquido (2 unid) - Lic 22737/5.Proveedores 3ros/Riva Hnos - Cotización de indicadores de nivel.msg.txt",
+     "fecha": "2026-02-12",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M19",
+   "pos": "19",
+   "grupo": "material",
+   "descripcion": "Manómetro de presión diferencial con aguja de arrastre y contacto seco",
+   "especificacion": "",
+   "cantidad": 1,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 500,
+     "proveedor": "Weisz: manómetro diferencial 0-2 bar (planilla TAVAL/40)",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/4.Armado de la Oferta Comercial/LM costo Filtros rev.1.xlsx.txt",
+     "fecha": "2026-01-15",
+     "coincide": "similar",
+     "diferencia": "sin aguja de arrastre ni contacto seco: pedir cotización"
+    }
+   ]
+  },
+  {
+   "id": "M20",
+   "pos": "20",
+   "grupo": "material",
+   "descripcion": "Manómetro de presión estática Ø100 con glicerina + manifold de 3 vías",
+   "especificacion": "",
+   "cantidad": 1,
+   "unidad": "un",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 290,
+     "proveedor": "Weisz 120 (INS-02702) + manifold ABAC 3 vías 170 (planilla TAVAL/40)",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/4.Armado de la Oferta Comercial/LM costo Filtros rev.1.xlsx.txt",
+     "fecha": "2026-01-15",
+     "coincide": "similar",
+     "diferencia": "Weisz o similar; manifold ABAC"
+    }
+   ]
+  },
+  {
+   "id": "M21",
+   "pos": "21",
+   "grupo": "material",
+   "descripcion": "Internos: deflector de entrada, rompe-vórtice, soportes y fijaciones de elementos",
+   "especificacion": "SA-516 / AISI 316",
+   "cantidad": 1,
+   "unidad": "gl",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-28",
+     "coincide": "sin_ref",
+     "diferencia": "internos del separador: dependen del diseño; no hay pieza parecida"
+    }
+   ]
+  },
+  {
+   "id": "M22",
+   "pos": "22",
+   "grupo": "material",
+   "descripcion": "Juntas espiraladas y espárragos de las conexiones internas (6\", 2\" y 1\" #600)",
+   "especificacion": "600 AISI 316 / B7",
+   "cantidad": 1,
+   "unidad": "gl",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 350,
+     "proveedor": "Juntas MS Juntas (cot. 48.445/48.729: 2,30 a 5,82) y espárragos de planillas 2026 (2,50 a 10): 1 junta 6\" + 6 de 2\" + 7 de 1\" #600 con 12, 48 y 28 espárragos",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/72- Lic 64675 - SKID CONCENTRADOR - UTE NARAMBUE/5.Proveedores 3ros/COTIZACION_N§_048729.pdf.txt",
+     "fecha": "2026-07-06",
+     "coincide": "similar",
+     "diferencia": "precios de piezas parecidas por renglón"
+    }
+   ]
+  },
+  {
+   "id": "M23",
+   "pos": "23",
+   "grupo": "material",
+   "descripcion": "Skid y plataforma de acceso con escalera y baranda (1.300 kg estimados)",
+   "especificacion": "ASTM A-36",
+   "cantidad": 1300,
+   "unidad": "kg",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1.43,
+     "proveedor": "Grupo Provemet cot. 236623: UPN 120 a 17,40/m (1,30 USD/kg +10% recortes) como precio por kg de perfiles",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-28/provemet_cotizacion_236623_perfiles_2025-07-01.pdf",
+     "fecha": "2025-07-01",
+     "coincide": "similar",
+     "diferencia": "kilos estimados; rejilla y escalera a cotizar"
+    }
+   ]
+  },
+  {
+   "id": "M24",
+   "pos": "24",
+   "grupo": "material",
+   "descripcion": "Pollera / patas de apoyo (450 kg)",
+   "especificacion": "e = 1\" ASTM A-36",
+   "cantidad": 450,
+   "unidad": "kg",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 1.27,
+     "proveedor": "Chapa negra A36 (precios de acero por kg, J. Elejondo) +10% recortes",
+     "origen": "conocimiento/precios/acero_por_kg.csv",
+     "fecha": "2026-02-10",
+     "coincide": "similar",
+     "diferencia": "chapa 1/2\" de la lista (acá 1\")"
+    }
+   ]
+  },
+  {
+   "id": "S01",
+   "pos": "ROL",
+   "grupo": "servicio",
+   "descripcion": "Rolado y punteado de la virola (4387 kg)",
+   "especificacion": "Sandri: 2 virolas 26\" × 2,5 m × 1\" A516 (≈ 1.033 kg c/u) a ARS 2.550.000 + IVA c/u = 1,74 USD/kg (BNA 03-2026 1.416,29)",
+   "cantidad": 4387,
+   "unidad": "kg",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1.74,
+     "proveedor": "Juan y Víctor Sandri S.A.: cilindrado y punteado ARS 2.550.000 + IVA por virola de 1.033 kg",
+     "origen": "fuentes_originales/ofertas_texto/CAMUZZI/30 - Separador Polvo y Líquido (2 unid) - Lic 22737/5.Proveedores 3ros/Sandri rolado de chapa esp 1.docx.txt",
+     "fecha": "2026-03-25",
+     "coincide": "similar",
+     "diferencia": "Ø26\" × 1\" (acá 53\" × 1 5/8\")"
+    },
+    {
+     "tipo": "ant",
+     "precio": 3.7,
+     "proveedor": "Rolado 3,70 USD/kg (tarifas.csv, AESA/44)",
+     "origen": "conocimiento/costos/tarifas.csv",
+     "fecha": "2025-09-30",
+     "coincide": "similar"
+    }
+   ]
+  },
+  {
+   "id": "S02",
+   "pos": "MO",
+   "grupo": "mo",
+   "descripcion": "Fabricación del separador y del skid por tercero (armado, soldadura, internos, montaje sobre skid)",
+   "especificacion": "Ledesma 28\" #600 + skid 13.000 (CAMUZZI/30) × 2,2 por tamaño (53\" vertical de 1 5/8\", plataforma)",
+   "cantidad": 1,
+   "unidad": "gl",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 28600.0,
+     "proveedor": "Edgardo Ledesma: separador de polvo y líquido 28\" #600 + skid, USD 13.000 (no incluye plegado de cunas, PH ni END), × 2,2 por tamaño",
+     "origen": "fuentes_originales/ofertas_texto/CAMUZZI/30 - Separador Polvo y Líquido (2 unid) - Lic 22737/5.Proveedores 3ros/E Ledesma - Cotización de Separador de polvo y líquido 28_ #600.pdf.txt",
+     "fecha": "2026-05-10",
+     "coincide": "similar",
+     "diferencia": "28\" horizontal; pedir cotización con el diseño"
+    }
+   ]
+  },
+  {
+   "id": "S03",
+   "pos": "RX",
+   "grupo": "servicio",
+   "descripcion": "Radiografía 100% de costuras y toberas + tintas penetrantes",
+   "especificacion": "≈ 12 m de costura en 1 5/8\" + toberas",
+   "cantidad": 1,
+   "unidad": "gl",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 1426.0,
+     "proveedor": "Tarifas DB NDT (tarifas.csv): 60 placas grandes × 8 + 20 chicas × 6,50 + 2 servicios × 408",
+     "origen": "conocimiento/costos/tarifas.csv",
+     "fecha": "2026-08-31",
+     "coincide": "similar",
+     "diferencia": "placas estimadas por metro de costura; confirmar con el mapa de soldaduras"
+    }
+   ]
+  },
+  {
+   "id": "S04",
+   "pos": "PH",
+   "grupo": "servicio",
+   "descripcion": "Prueba hidráulica (1,5 × presión de diseño) con registro",
+   "especificacion": "",
+   "cantidad": 16,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 13,
+     "proveedor": "Prueba hidráulica por hora de planta (END-00215, MO ITT)",
+     "origen": "conocimiento/precios/catalogo_servicios.csv",
+     "fecha": "2026-03-10",
+     "coincide": "similar",
+     "diferencia": "16 h para un recipiente de ≈ 5 m³ (llenado, 6 h de prueba, vaciado y secado)"
+    }
+   ]
+  },
+  {
+   "id": "S05",
+   "pos": "PIN",
+   "grupo": "servicio",
+   "descripcion": "Granallado y pintura (≈ 38 m²)",
+   "especificacion": "cuerpo 13,5 m² + fondo 2 + skid y plataforma ≈ 22",
+   "cantidad": 38,
+   "unidad": "m2",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 50,
+     "proveedor": "Granallado y pintura piping (incluye materiales), criterio ITT · PIN-00569",
+     "origen": "conocimiento/precios/catalogo_servicios.csv",
+     "fecha": "2026-10-10",
+     "coincide": "similar",
+     "diferencia": "esquema SCE-PC-511-0003 a confirmar"
+    }
+   ]
+  },
+  {
+   "id": "S06",
+   "pos": "HH",
+   "grupo": "mo",
+   "descripcion": "Ingeniería: memoria de cálculo ASME VIII Div.1, planos y documentación",
+   "especificacion": "150 h (Sacde/12 coalescedor: 250 h)",
+   "cantidad": 150,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 15,
+     "proveedor": "Horas propias ITT (15 USD/h); 150 h por criterio, contra 250 h del coalescedor Sacde/12",
+     "origen": "conocimiento/costos/horas_por_equipo.csv",
+     "fecha": "2025-12-18",
+     "coincide": "similar",
+     "diferencia": "estimado"
+    }
+   ]
+  },
+  {
+   "id": "S07",
+   "pos": "CAL",
+   "grupo": "mo",
+   "descripcion": "Calidad, inspecciones y data book",
+   "especificacion": "120 h",
+   "cantidad": 120,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 15,
+     "proveedor": "Horas propias ITT (15 USD/h); criterio",
+     "origen": "conocimiento/costos/horas_por_equipo.csv",
+     "fecha": "2025-12-18",
+     "coincide": "similar",
+     "diferencia": "estimado"
+    }
+   ]
+  },
+  {
+   "id": "S08",
+   "pos": "ARM",
+   "grupo": "mo",
+   "descripcion": "Montaje propio: instrumentos, purgas, stand-pipes, movimientos y PH",
+   "especificacion": "160 h",
+   "cantidad": 160,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 16,
+     "proveedor": "Horas propias ITT (16 USD/h en recipientes); criterio",
+     "origen": "conocimiento/costos/horas_por_equipo.csv",
+     "fecha": "2025-12-18",
+     "coincide": "similar",
+     "diferencia": "estimado"
+    }
+   ]
+  }
+ ],
+ "compras": {
+  "fecha_respuesta": "2026-11-06",
+  "material_en_planta_dias": 110,
+  "lugar_entrega": "Planta ITT S.A., Av. 12 de Octubre 4004, Quilmes Oeste, Bs. As.",
+  "requisitos_generales": [
+   "Cotizar en USD sin IVA, con plazo y validez.",
+   "Certificados 3.1 de chapas, bridas y caños.",
+   "Las cantidades son por separador × 2."
+  ],
+  "notas": {
+   "3": "Vertical, 53\" #600, 77 bar de diseño",
+   "5": "Coalescente 0,3 µm; indicar caudal por elemento a 25 bar"
+  },
+  "proveedores": {
+   "3": "Megatap / Futura",
+   "5": "Gora",
+   "18": "Riva Hnos"
+  },
+  "cantidad_compra": {},
+  "servicios": [
+   {
+    "servicio": "Rolado de virola Ø53\" × 1 5/8\"",
+    "proveedores": "Sandri",
+    "referencia": "1,74 USD/kg (03-2026)",
+    "nota": ""
+   },
+   {
+    "servicio": "Fabricación del separador y skid",
+    "proveedores": "Ledesma",
+    "referencia": "13.000 el 28\" (05-2026)",
+    "nota": "con el diseño"
+   }
+  ]
+ }
+}
