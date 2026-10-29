@@ -31,3 +31,19 @@ Transcripción del plano y cantidades: bien. Precios Tormene y Taval verificados
 
 ## 29-10-2026 · Llegó la especificación (mail de Brian Raminger, Taval, 14-10-2026)
 Concurso aparte **Nº 24527** solo para los 2 filtros coalescentes (vencía el 20-10-2026). Adjuntos en `pedido/CP24527_mail_2026-10-14/`: **ET Separador Vertical Coalescente** (22 hojas), **Esquema General Filtro Coalescente Camuzzi 2026** (PDF de imagen, sin texto), listado de marcas y proveedores Camuzzi (789-2), cláusulas particulares, DDJJ ética, PCG CGP/CGS 2023 y la planilla del concurso (misma descripción que el ítem 1 del CP 24578). Matías volvió a pasar la planilla del CP 24578 (idéntica a la de `pedido/`). Pendiente: rehacer el dimensionamiento con la ET y el esquema, y esperar los planos que va a mandar Matías.
+
+## 29-10-2026 · Revisión contra la ET y el esquema de Camuzzi (sin cambiar todavía `cotizacion.json`)
+Diferencias encontradas (la cotización se había armado sin la ET):
+1. **Presión de diseño baja.** La ET 9.16.1 pide PH a **1,3 × la presión máxima de la serie ANSI** (#600 ≈ 102 bar → ~133 bar) durante 6 h. Con 77 bar de diseño esa prueba no cumple ASME (1,3 × MAWP): el recipiente se diseña a ~102 bar. Espesor estimado: 10,2 × 640 / (138 − 0,6 × 10,2) = 49,5 + **1,6 de corrosión (ET 9; se había usado 3,2)** ≈ 51 mm → 2" a 2 1/8" (era 1 5/8"). Sube chapa, fondo, placa y rolado ~25–30%. La PH cargada (1,5 × diseño, 16 h) también cambia.
+2. **Repuestos (ET 13.1): un juego adicional de elementos** por equipo, además del instalado. Hoy hay 37 por equipo (≈ 31.600 USD); con el juego extra se duplica. La planilla dice "un juego"; la ET dice "adicional". A decidir.
+3. **Tapa de cierre rápido:** Megatap **no está en el listado de marcas de Camuzzi** (SCE-IN-501-0015: Peco, Gora, Futura, EKA). Recotizar con alguna de esas.
+4. **Válvulas esféricas Taval:** Taval no figura en el listado (Esferomatic, Worcester, Valvtronic, Pentair, Indave, Wenlen, Spirax, Beta, Valmec). Confirmar con Taval si está homologada (afecta también a COT26-0135-001 y 002).
+5. **Purgas (ET 9.2):** 2 automáticas neumáticas NC, internos inox con stellite 6, **1" bridadas**, con interruptor de nivel a flotante; drenaje superior con by-pass esférico e inferior con esférica + **tapón lubricado de sacrificio**. El cómputo tiene esféricas de 2" y no tiene el tapón lubricado. Marcas: control de nivel Epta/Fisher; actuadores Bettis/Bray/Flow/Wenlen; switches Magnetrol/Murphy/Kimray.
+6. **Caja de chicanas AISI 304 de doble bolsillo** (ET 9.8 y esquema): hoy "internos" sin precio.
+7. **Plataforma galvanizada en caliente**, piso de rejilla tipo Techno, guarda hombre desde 2 m, zócalo de metal desplegado; skid UPN con cáncamos y orejas de PAT AISI 304 (ET 9.11): falta el galvanizado y la rejilla.
+8. **Soldadura según API 1104** con procedimientos y soldadores con registro IRAM-IAS U500-138 (ET 9.14): no está la calificación.
+9. **Prueba de fugas** con N2 a 5,5 bar después de pintar (ET 9.16.3): no está.
+10. Manómetro estático con manifold de 2 vías (no de 3) y accesorios inox doble virola (ET 9.19–9.20). Menor.
+11. Transporte: la ET dice hasta destino final; la planilla, hasta Cruz del Sur (E. Echeverría). Se mantiene la planilla, aclarado en la oferta.
+12. Esquema: entrada abajo a la caja de chicanas, elementos sobre placa con soporte superior, salida arriba a ≥ 200 mm de los elementos. Coincide con el arreglo cotizado.
+Pérdida de carga máxima 100 mbar a Qmáx y Pmín con elementos limpios (ET 9.1): sirve para fijar la cantidad de elementos con la ficha de Gora/Filtron/Peco.
