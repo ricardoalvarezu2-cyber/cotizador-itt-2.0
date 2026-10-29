@@ -31,7 +31,7 @@ print(json.dumps({"cot":cfg,"py":fi}))`], { cwd: raiz, maxBuffer: 1 << 26 }).toS
   cmp("juntas_bw", js.mo_piping.juntas_bw, py.mo_piping.juntas_bw, 1e-6);
   cmp("pulg_eq", js.mo_piping.pulg_eq, py.mo_piping.pulg_eq, 0.01);
   cmp("juntas_sw_olet", js.mo_piping.juntas_sw_olet, py.mo_piping.juntas_sw_olet, 1e-6);
-  cmp("kg_piping", js.mo_piping.kg_piping, py.mo_piping.kg_piping, 0.2);
+  cmp("kg_piping", js.mo_piping.kg_piping, py.mo_piping.kg_piping, Math.max(0.2, 1e-4 * py.mo_piping.kg_piping));  // redondeo de datos.json
   cmp("kg_estructura", js.mo_estructura.kg, py.mo_estructura.kg, 0.2);
   cmp("m2_total", js.pintura.m2_total, py.pintura.m2_total, 0.02);
   cmp("placas_chicas", js.end.placas_chicas, py.end.placas_chicas, 0);

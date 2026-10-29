@@ -638,7 +638,65 @@ const Ficha = (() => {
     const con = norm(it.descripcion).includes("tuerca");
     return [var_ * largo + (con ? 2 * tue : 0), null, `espárrago ${d}" × ${largo.toFixed(2)}"${con ? " + 2 tuercas" : ""} (calculado)`];
   }
+  // Peso APROXIMADO por volumen × densidad cuando ninguna tabla lo tiene (herramientas/peso_aproximado.estimar)
+  const MAPA_ACC = { "codo 90": "codo_90_radio_largo", "codo radio corto 90": "codo_90_radio_corto", "codo 45": "codo_45", tee: "tee_recta",
+    "reduccion concentrica": "reduccion_concentrica_excentrica", "reduccion excentrica": "reduccion_concentrica_excentrica", reduccion: "reduccion_concentrica_excentrica",
+    casquete: "casquete", cupla: "cupla", "media cupla": "media_cupla", tapon: "tapon_hexagonal", buje: "buje_hexagonal" };
+  function tipoAccesorio(at, fam, dn) {
+    const t = at.tipo || "", tipo = fam === "AFO" && t === "codo 90" ? "codo_90" : MAPA_ACC[t] || "";
+    const d2 = at.diametro2 ? pulg(at.diametro2) : null;
+    return tipo === "tee_recta" && d2 && d2 !== dn ? "tee_reduccion" : tipo;
+  }
+  const kgmOd = (datos, dn, clase) => { const r = clase && datos.canos.find(r => Math.abs(r.dn - dn) < 1e-6 && (r.sch === clase || r.cl === clase)); return r ? [r.kg, r.od / 1000] : null; };
+  const claseNum = c => { const m = String(c).match(/\d+/); return m ? +m[0] : 0; };
+  const minPor = (arr, key) => arr.reduce((a, b) => { const ka = key(a), kb = key(b); return (kb[0] < ka[0] || (kb[0] === ka[0] && kb[1] < ka[1])) ? b : a; });
+  function scheduleDe(it, at) {
+    for (const c of [at.schedule || "", it.plano?.serie_sch || "", ...String(it.especificacion || "").split("·")]) { const s = schDe(String(c).trim()); if (s) return s; }
+    return "";
+  }
+  function estimar(it, at, fam, tipo, datos) {
+    const P = datos.pesos, dn = pulg(at.diametro), d = norm(`${it.descripcion} ${it.especificacion || ""}`);
+    const bw = fam === "ABW" || (fam === "AFO" && String(at.extremos || "").toUpperCase().includes("BW"));
+    const tipoBw = tipo === "codo_90" ? "codo_90_radio_largo" : tipo;
+    if (bw && dn && P.aprox[tipoBw] != null) {
+      const sch = scheduleDe(it, at) || "STD", k = kgmOd(datos, dn, sch) || (sch === "40" ? kgmOd(datos, dn, "STD") : null);
+      if (k) return [k[0] * k[1] * P.aprox[tipoBw], null, `APROXIMADO: ${tipoBw} ${dn}" sch ${sch}`];
+    }
+    if (fam === "AFO" && dn && tipo && !bw) {
+      const ext = String(at.extremos || "").includes("SW") ? "SW" : "NPT", cl = claseNum(at.serie || "3000");
+      const cand = P.acc.filter(r => r[0] === tipo && Math.abs(r[1] - dn) < 1e-6 && r[4] === ext && r[5] && r[2] == null);
+      if (cand.length) { const r = minPor(cand, r => [Math.abs(claseNum(r[3]) - cl), r[6]]); return [r[5], null, `APROXIMADO: ${tipo} ${dn}" ${ext} con el peso de la clase ${r[3]}`]; }
+    }
+    if (fam === "VAL" && dn) {
+      const t0 = d.includes("esferica") ? "ESFERICA" : d.includes("retencion") ? "RETENCION" : d.includes("globo") ? "GLOBO" : /esclusa|compuerta/.test(d) ? "ESCLUSA" : "";
+      if (t0) {
+        const cl = claseNum(at.serie || ""), cand = P.valv.filter(r => r[0].startsWith(t0) && Math.abs(r[1] - dn) < 0.01 && !r[5]);
+        if (cand.length) { const r = minPor(cand, r => [Math.abs(claseNum(r[2]) - cl), 0]); return [r[4], null, `APROXIMADO: ${r[0].toLowerCase()} ${dn}" con el peso de la serie ${r[2]}`]; }
+      }
+    }
+    if (fam === "JUN" && dn && /junta/.test(d)) {
+      const k = kgmOd(datos, dn, "STD") || kgmOd(datos, dn, "40");
+      if (k) {
+        const m = d.match(/esp\.?\s*(\d+(?:[.,]\d+)?)\s*mm/), e = m ? parseFloat(m[1].replace(",", ".")) / 1000 : 0.0045;
+        const rho = /dielectr|aramid|fibra|nbr/.test(d) ? 1800 : 7900, di = k[1], de = k[1] + 0.05;
+        return [3.14159265 / 4 * (de ** 2 - di ** 2) * e * rho, null, `APROXIMADO: junta anillo × ${rho} kg/m³`];
+      }
+    }
+    if (/termovaina|vaina|termopozo/.test(d) && /brid/.test(d)) {
+      const m = (it.descripcion + " " + (it.especificacion || "")).match(/(\d+(?: \d\/\d)?)"/), sm = d.match(/(150|300|600|900|1500|2500)\s*(?:lb|#)/);
+      const dnv = (m ? fracPulg(m[1]) : null) || 1.5, serie = sm ? sm[1] : "300";
+      const r = P.bridas.find(r => r[0] === "ciega" && Math.abs(r[1] - dnv) < 1e-6 && r[2] === serie);
+      if (r) return [r[3], null, `APROXIMADO: termovaina con el peso de una brida ciega ${dnv}" #${serie}`];
+    }
+    return [null, null, ""];
+  }
   function pesoItem(it, at, fam, datos) {
+    const r = pesoTabla(it, at, fam, datos);
+    if (r[0] != null) return r;
+    const e = estimar(it, at, fam, fam === "ABW" || fam === "AFO" ? tipoAccesorio(at, fam, pulg(at.diametro)) : "", datos);
+    return e[0] != null ? e : r;
+  }
+  function pesoTabla(it, at, fam, datos) {
     const P = datos.pesos, dn = pulg(at.diametro), sch = at.schedule || "";
     if ((fam === "CAN" || fam === "NIP") && dn) {
       const f = datos.canos.find(r => r.dn === dn && (r.sch === sch || r.cl === String(sch).toUpperCase()));
@@ -680,7 +738,7 @@ const Ficha = (() => {
   const perfil = (datos, desc) => { const m = norm(desc).match(/\b(upn|ipn|heb|hea|ipe|upe)\s*(\d+)/); return m ? datos.pesos.perfiles[m[1] + m[2]] || null : null; };
 
   function pesos(cot, datos) {
-    let kgP = 0, m2C = 0, kgE = 0; const sin = [], faltan = [];
+    let kgP = 0, m2C = 0, kgE = 0; const sin = [], faltan = [], aprox = [];
     for (const it of cot.items.filter(i => i.grupo === "material")) {
       if (ESTRUCTURA.test(norm(it.descripcion))) {
         const u = norm(it.unidad);
@@ -689,11 +747,12 @@ const Ficha = (() => {
         continue;
       }
       if (!it.at) { if (!/completar barra|sobrante|manga|junta|repuesto/.test(norm(it.descripcion))) faltan.push(`${it.pos} ${it.descripcion.slice(0, 40)}`); continue; }
-      const [kg, m2] = pesoItem(it, it.at, it.fam, datos);
+      const [kg, m2, fuente] = pesoItem(it, it.at, it.fam, datos);
+      if (kg != null && String(fuente).startsWith("APROXIMADO")) aprox.push(`${it.pos} ${it.descripcion.slice(0, 40)}`);
       if (kg == null) { if (!/junta|termometro|manometro|instrumento|transmisor|repuesto|completar barra/.test(norm(it.descripcion))) sin.push(`${it.pos} ${it.descripcion.slice(0, 40)}`); continue; }
       kgP += kg * it.cantidad; m2C += (m2 || 0) * it.cantidad;
     }
-    return { kgP, m2C, kgE, sin, faltan };
+    return { kgP, m2C, kgE, sin, faltan, aprox };
   }
 
   // m² a pintar (precotizar.superficie_pintura)
@@ -735,7 +794,7 @@ const Ficha = (() => {
     return {
       generada: new Date().toISOString().slice(0, 10), origen: "pagina",
       mo_piping: { juntas_bw: sol.juntas_bw, pulg_eq: sol.pulg_eq, juntas_sw_olet: sol.juntas_sw_olet, extremos_campo: campo, kg_piping: r1(p.kgP),
-        bridas: cot.items.filter(i => i.grupo === "material" && /^brida/.test(norm(i.descripcion))).reduce((a, i) => a + i.cantidad, 0), diametros: dns, sin_peso: p.sin, avisos },
+        bridas: cot.items.filter(i => i.grupo === "material" && /^brida/.test(norm(i.descripcion))).reduce((a, i) => a + i.cantidad, 0), diametros: dns, sin_peso: p.sin, aproximados: p.aprox, avisos },
       mo_estructura: { kg: r1(p.kgE), m2: r2(m2Est) },
       pintura: { m2_canos: r2(p.m2C), m2_piping: r2(m2Pip), m2_estructura: r2(m2Est), m2_total: r2(m2Pip + m2Est), esquema: cot.pintura?.esquema || "" },
       end: { juntas_bw: sol.juntas_bw, rx_pct: rx, placas_chicas: ch, placas_grandes: gr, juntas_lp: sol.juntas_sw_olet, materiales: mats, espesor_max_mm: esp,
@@ -879,7 +938,7 @@ const Rubros = (() => {
     const x = f[r];
     return {
       mo_piping: [["Juntas a tope (BW) de taller", x.juntas_bw, ""], ["Juntas SW, cuplas y olets", x.juntas_sw_olet, ""], ["Extremos para soldar en campo", x.extremos_campo, ""],
-        ["Pulgadas equivalentes de soldadura", x.pulg_eq, "pulg"], ["kg de piping (con tabla)", x.kg_piping, "kg"], ["Bridas", x.bridas, ""],
+        ["Pulgadas equivalentes de soldadura", x.pulg_eq, "pulg"], ["kg de piping", x.kg_piping, "kg"], ["Con peso aproximado (sin tabla)", (x.aproximados || []).length ? x.aproximados.join("; ") : null, ""], ["Sin peso", (x.sin_peso || []).length ? x.sin_peso.join("; ") : null, ""], ["Bridas", x.bridas, ""],
         ["Diámetros soldados a tope", (x.diametros || []).map(d => d + '"').join(", ") || null, ""]],
       mo_estructura: [["kg de estructura", x.kg, "kg"], ["m² de estructura", x.m2, "m²"]],
       pintura: [["m² de piping", x.m2_piping, "m²"], ["m² de estructura", x.m2_estructura, "m²"], ["m² total (sin overspray)", x.m2_total, "m²"], ["Esquema", x.esquema || "según pliego", ""]],

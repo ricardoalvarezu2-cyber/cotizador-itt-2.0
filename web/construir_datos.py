@@ -126,7 +126,8 @@ def pesos_tablas():
     valv = [[r["tipo"], f(r["dn_pulg"]), r["serie"], r["material"], f(r["kg"]), 1 if r["nota"].startswith("pesa menos") else 0, r["hoja"], r["celda"]]
             for r in leer(T / "valvulas_peso.csv")]
     perf = {re.sub(r"\s", "", r["designacion"].lower()): [f(r["kg_por_m"]), f(r["m2_por_m"]) if r["m2_por_m"] else 0] for r in leer(T / "perfiles.csv")}
-    return {"bridas": bri, "acc": acc, "olets": olets, "esp": esp, "valv": valv, "perfiles": perf}
+    aprox = {r["tipo"]: f(r["largo_eq_diametros"]) for r in leer(T / "factores_peso_aproximado.csv")}
+    return {"bridas": bri, "acc": acc, "olets": olets, "esp": esp, "valv": valv, "perfiles": perf, "aprox": aprox}
 
 
 def main():
@@ -156,7 +157,7 @@ def main():
            if r["vigente"] == "si" and r["rubro"] in ("soldadura", "end", "pintura", "hora_hombre")]
     fs = [{"dn": f(r["dn_pulg"]), "od": f(r["diam_ext_mm"]), "sch": r["schedule"], "cl": r["clase"], "e": f(r["espesor_mm"]), "fe": f(r["factor_espesor"]),
            "pch": f(r["placas_rx_chicas"]), "pgr": f(r["placas_rx_grandes"])} for r in leer(C / "tecnico" / "factores_soldadura.csv")]
-    canos = [{"dn": f(r["dn_pulg"]), "sch": r["schedule"], "cl": r["clase"], "kg": f(r["kg_m_carbono"]), "m2": f(r["m2_m_exterior"]), "l": f(r["litros_m_interior"])}
+    canos = [{"dn": f(r["dn_pulg"]), "od": f(r["diam_ext_mm"]), "sch": r["schedule"], "cl": r["clase"], "kg": f(r["kg_m_carbono"]), "m2": f(r["m2_m_exterior"]), "l": f(r["litros_m_interior"])}
              for r in leer(C / "tecnico" / "canos_peso_superficie.csv")]
     acc = [{"a": r["accesorio"], "f": f(r["factor"])} for r in leer(C / "tecnico" / "factores_accesorios.csv")]
     pesos = pesos_tablas()

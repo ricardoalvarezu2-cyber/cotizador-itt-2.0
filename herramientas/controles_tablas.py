@@ -170,7 +170,31 @@ def peso_esparrago(it, at):
     return var * largo + (2 * tue if con_tuercas else 0), None, f"espárrago {d:g}\" × {largo:.2f}\"" + (" + 2 tuercas" if con_tuercas else "") + " (calculado)"
 
 
+MAPA_ACC = {"codo 90": "codo_90_radio_largo", "codo radio corto 90": "codo_90_radio_corto", "codo 45": "codo_45", "tee": "tee_recta",
+            "reduccion concentrica": "reduccion_concentrica_excentrica", "reduccion excentrica": "reduccion_concentrica_excentrica",
+            "reduccion": "reduccion_concentrica_excentrica", "casquete": "casquete", "cupla": "cupla", "media cupla": "media_cupla",
+            "tapon": "tapon_hexagonal", "buje": "buje_hexagonal"}
+
+
+def tipo_accesorio(at, fam, dn):
+    t = at.get("tipo", "")
+    tipo = "codo_90" if fam == "AFO" and t == "codo 90" else MAPA_ACC.get(t, "")
+    d2 = pulg(at.get("diametro2", "")) if at.get("diametro2") else None
+    return "tee_reduccion" if tipo == "tee_recta" and d2 and d2 != dn else tipo
+
+
 def peso_item(it, at, fam, canos, bridas, acc, valv=()):
+    """Peso de tabla y, si ninguna tabla lo tiene, el APROXIMADO por volumen × densidad (peso_aproximado.py)."""
+    kg, m2, fuente = peso_tabla(it, at, fam, canos, bridas, acc, valv)
+    if kg is not None:
+        return kg, m2, fuente
+    import peso_aproximado
+    dn = pulg(at.get("diametro", ""))
+    k2, m22, f2 = peso_aproximado.estimar(it, at, fam, tipo_accesorio(at, fam, dn) if fam in ("ABW", "AFO") else "", canos, bridas, acc, valv, pulg)
+    return (k2, m22, f2) if k2 is not None else (kg, m2, fuente)
+
+
+def peso_tabla(it, at, fam, canos, bridas, acc, valv=()):
     """(kg por unidad o por metro, m² por unidad o por metro, fuente) o (None, None, motivo)."""
     dn = pulg(at.get("diametro", ""))
     sch = at.get("schedule", "")
@@ -200,16 +224,7 @@ def peso_item(it, at, fam, canos, bridas, acc, valv=()):
         return peso_esparrago(it, at)
     if fam in ("ABW", "AFO") and dn:
         t = at.get("tipo", "")
-        mapa = {"codo 90": "codo_90_radio_largo", "codo radio corto 90": "codo_90_radio_corto", "codo 45": "codo_45", "tee": "tee_recta",
-                "reduccion concentrica": "reduccion_concentrica_excentrica", "reduccion excentrica": "reduccion_concentrica_excentrica",
-                "reduccion": "reduccion_concentrica_excentrica", "casquete": "casquete", "cupla": "cupla", "media cupla": "media_cupla",
-                "tapon": "tapon_hexagonal", "buje": "buje_hexagonal"}
-        if fam == "AFO" and t == "codo 90":
-            mapa["codo 90"] = "codo_90"
-        tipo = mapa.get(t, "")
-        d2_ = pulg(at.get("diametro2", "")) if at.get("diametro2") else None
-        if tipo == "tee_recta" and d2_ and d2_ != dn:
-            tipo = "tee_reduccion"
+        tipo = tipo_accesorio(at, fam, dn)
         if fam == "ABW":
             clase, ext = sch_tabla(sch, dn), "BW"
         else:

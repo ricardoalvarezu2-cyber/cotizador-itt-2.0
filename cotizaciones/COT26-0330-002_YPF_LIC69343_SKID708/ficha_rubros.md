@@ -7,11 +7,11 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 - Juntas a tope (BW) de taller: **28** · juntas SW, cuplas y olets: **19** · extremos para soldar en campo: 0
 - Pulgadas equivalentes de soldadura: **456,03**
-- kg de piping (caños, bridas, accesorios y válvulas con tabla): **6.257 kg** · bridas: 31
+- kg de piping (caños, bridas, accesorios y válvulas con tabla): **6.575 kg** · bridas: 31
 - Diámetros soldados a tope: 16", 12"
-- Sin peso en tabla (no suman kg): 3 Tee normal 12"; INS TW-014A/B/C: Vaina (termopozo) bridada 1
+- Con peso APROXIMADO (volumen × densidad, sin tabla): 3 Tee normal 12"; 12 Junta espiralada RF esp. 4,5 mm 300 LB 1; 13 Junta espiralada RF esp. 4,5 mm 300 LB 1; 14 Junta espiralada RF esp. 4,5 mm 300 LB 1; INS TW-014A/B/C: Vaina (termopozo) bridada 1
 - **Modo: detallado.** Cálculo detallado: USD 10.193,42 (1 renglón/es, con ajuste por inflación).
-  - Detallado por unidad: USD 22,35/pulgada eq. · USD 1,63/kg de piping · USD 357,66/junta a tope
+  - Detallado por unidad: USD 22,35/pulgada eq. · USD 1,55/kg de piping · USD 357,66/junta a tope
 
 ## 2. MO de fabricación de la estructura
 
@@ -40,7 +40,7 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 ## 5. Transporte
 
-- Medidas del skid: 0,00 × 0,00 × 0,00 m (largo × ancho × alto) · kg: **7.107** (piping + estructura)
+- Medidas del skid: 0,00 × 0,00 × 0,00 m (largo × ancho × alto) · kg: **7.425** (piping + estructura)
 - ⚠ Faltan las medidas del equipo (largo × ancho × alto): cargarlas del plano de conjunto
 - Sin precio por equipo: se cotiza EXW (o flete aparte en los parámetros). Para sumarlo por equipo, pasar el rubro a global.
 

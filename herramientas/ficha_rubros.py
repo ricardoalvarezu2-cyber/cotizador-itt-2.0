@@ -137,7 +137,7 @@ def pesos(cfg):
     canos, bridas, valv = (leer(TEC / f) for f in ("canos_peso_superficie.csv", "bridas_peso.csv", "valvulas_peso.csv"))
     acc = leer_acc()
     kg_p = m2_c = kg_e = 0.0
-    sin = []
+    sin, aprox = [], []
     for it in cfg["items"]:
         if it["grupo"] != "material":
             continue
@@ -154,14 +154,16 @@ def pesos(cfg):
             continue
         d = expandir(norm(it["descripcion"]))
         fam, at = fam_at(it)
-        kg, m2, _ = peso_item(it, at, fam, canos, bridas, acc, valv)
+        kg, m2, fuente = peso_item(it, at, fam, canos, bridas, acc, valv)
+        if kg is not None and str(fuente).startswith("APROXIMADO"):
+            aprox.append(f"{it['pos']} {it['descripcion'][:40]}")
         if kg is None:
             if not re.search(r"junta|termometro|manometro|instrumento|transmisor|repuesto|completar barra", d):
                 sin.append(f"{it['pos']} {it['descripcion'][:40]}")
             continue
         kg_p += kg * it["cantidad"]
         m2_c += (m2 or 0) * it["cantidad"]
-    return kg_p, m2_c, kg_e, sin
+    return kg_p, m2_c, kg_e, sin, aprox
 
 
 def importe_items(items, cfg):
@@ -200,7 +202,7 @@ def armar(carpeta, cfg=None):
     cfg = cfg or json.load(open(carpeta / "cotizacion.json", encoding="utf-8"))
     filas = filas_plano(carpeta, cfg)
     sol = precotizar.soldaduras(filas) if filas else {"juntas_bw": 0, "pulg_eq": 0, "placas": [0, 0], "juntas_sw_olet": 0, "avisos": []}
-    kg_p, m2_c, kg_e, sin = pesos(cfg)
+    kg_p, m2_c, kg_e, sin, aprox = pesos(cfg)
     sup = dict(precotizar.superficie_pintura(filas, m2_c)) if filas else {}
     m2_est = sup.get("estructura") or kg_e * precotizar.M2_POR_KG_ESTRUCTURA
     m2_pip = m2_c + sup.get("bridas, accesorios y válvulas (largo equivalente)", 0) + sup.get("envolvente", 0)
@@ -217,7 +219,7 @@ def armar(carpeta, cfg=None):
     ficha = {
         "generada": date.today().isoformat(),
         "mo_piping": {"juntas_bw": sol["juntas_bw"], "pulg_eq": sol["pulg_eq"], "juntas_sw_olet": sol["juntas_sw_olet"], "extremos_campo": campo,
-                      "kg_piping": round(kg_p, 1), "bridas": bridas, "diametros": dns, "sin_peso": sin, "avisos": sol.get("avisos", [])},
+                      "kg_piping": round(kg_p, 1), "bridas": bridas, "diametros": dns, "sin_peso": sin, "aproximados": aprox, "avisos": sol.get("avisos", [])},
         "mo_estructura": {"kg": round(kg_e, 1), "m2": round(m2_est, 2)},
         "pintura": {"m2_canos": round(m2_c, 2), "m2_piping": round(m2_pip, 2), "m2_estructura": round(m2_est, 2), "m2_total": round(m2_pip + m2_est, 2),
                     "esquema": (cfg.get("pintura") or {}).get("esquema", "")},
@@ -277,8 +279,10 @@ def escribir(carpeta, ficha, cfg):
           f"- Pulgadas equivalentes de soldadura: **{n(mp['pulg_eq'])}**",
           f"- kg de piping (caños, bridas, accesorios y válvulas con tabla): **{n(mp['kg_piping'], 0)} kg** · bridas: {n(mp['bridas'], 0)}",
           f"- Diámetros soldados a tope: {', '.join(f'{d:g}\"' for d in mp['diametros']) or '—'}"]
+    if mp.get("aproximados"):
+        L.append(f"- Con peso APROXIMADO (volumen × densidad, sin tabla): {'; '.join(mp['aproximados'])}")
     if mp["sin_peso"]:
-        L.append(f"- Sin peso en tabla (no suman kg): {'; '.join(mp['sin_peso'])}")
+        L.append(f"- Sin peso (no suman kg): {'; '.join(mp['sin_peso'])}")
     L += [f"- ⚠ {a}" for a in mp["avisos"]] + ref("mo_piping") + ["",
           "## 2. MO de fabricación de la estructura", "", f"- kg de estructura: **{n(me['kg'], 0)} kg** · m²: {n(me['m2'])}"] + ref("mo_estructura") + ["",
           "## 3. Granallado y pintura", "",

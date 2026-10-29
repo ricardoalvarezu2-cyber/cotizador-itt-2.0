@@ -4,8 +4,8 @@ Generado por `herramientas/controles_tablas.py`. Información para revisar; no c
 
 ## 1. Kilos y m² por equipo
 
-**Peso estimado de lo que tiene tabla: 83.4 kg** · m² exteriores de caños y niples: 1.32 m².
-Ítems sin dato de peso (9): 6 Unión doble a golpe 2" 2000 (sin tabla para union doble a golpe 2" 3000); 7 Válvula de retención 2" #600 a clapeta (retención roscada: sin tabla); 10 Buje reducción 2" × 1/2" NPT (sin tabla para buje 2" 3000); 13 Junta monolítica 2" sch80 WPB BW (sin tabla (instrumento, junta u otro)); 14b Sobrante de caño revestido (no va en el puente) (sin tabla (instrumento, junta u otro)); 14c Manga termocontraíble para reponer el revestimient (sin tabla (instrumento, junta u otro)); 19 Bloqueo y purga 1/2" 3000 AISI 316 (válvula sin diámetro o serie); 20 Manómetro 0–40 bar, conexión 1/2" NPT-H (según pla (sin tabla (instrumento, junta u otro)); 21 Unión doble a golpe extensible 2" (sin tabla para union doble a golpe extensible 2" 3000).
+**Peso estimado de lo que tiene tabla: 125.6 kg** · m² exteriores de caños y niples: 1.32 m².
+Ítems sin dato de peso (7): 6 Unión doble a golpe 2" 2000 (sin tabla para union doble a golpe 2" 3000); 10 Buje reducción 2" × 1/2" NPT (sin tabla para buje 2" 3000); 14b Sobrante de caño revestido (no va en el puente) (sin tabla (instrumento, junta u otro)); 14c Manga termocontraíble para reponer el revestimient (sin tabla (instrumento, junta u otro)); 19 Bloqueo y purga 1/2" 3000 AISI 316 (válvula sin diámetro o serie); 20 Manómetro 0–40 bar, conexión 1/2" NPT-H (según pla (sin tabla (instrumento, junta u otro)); 21 Unión doble a golpe extensible 2" (sin tabla para union doble a golpe extensible 2" 3000).
 
 | Pos | Ítem | Cantidad | kg/u | kg total | Fuente |
 |---|---|---|---|---|---|
@@ -14,10 +14,12 @@ Generado por `herramientas/controles_tablas.py`. Información para revisar; no c
 | 3 | Niple 1/2" sch80 × 100 mm | 6 un | 0.16 | 0.97 | caño 0.5" sch 80 × 0.1 m (ASME B36.10, calculado) |
 | 4 | Niple 2" sch80 × 200 mm | 10 un | 1.50 | 14.96 | caño 2" sch 80 × 0.2 m (ASME B36.10, calculado) |
 | 5 | Válvula esférica 2" #2000 asiento metálico | 1 un | 4.00 | 4.00 | esferica pt flotante fundida npt (api 608) 2" #2000 (Taval Lista 30, PT Flot-NPT FORJADAS K23) |
+| 7 | Válvula de retención 2" #600 a clapeta | 2 un | 21.00 | 42.00 | APROXIMADO: retencion a clapeta 2" con el peso de la serie 600 (Taval Lista 30) |
 | 8 | Tee 2" NPT | 5 un | 3.46 | 17.30 | tee_recta 2" 3000 NPT (ASME B16.11, borrador) |
 | 9 | Niple 2" sch80 × 100 mm NPT-M | 2 un | 0.75 | 1.50 | caño 2" sch 80 × 0.1 m (ASME B36.10, calculado) |
 | 11 | Codo 45° 2" NPT | 1 un | 2.39 | 2.39 | codo_45 2" 3000 NPT (ASME B16.11, borrador) |
 | 12 | Niple 2" sch80 × 200 mm NPT/BW | 1 un | 1.50 | 1.50 | caño 2" sch 80 × 0.2 m (ASME B36.10, calculado) |
+| 13 | Junta monolítica 2" sch80 WPB BW | 1 un | 0.24 | 0.24 | APROXIMADO: junta anillo Ø 60–110 mm × 4.5 mm × 7900 kg/m³ |
 | 14 | Caño 2" sch80 API 5L revestido | 1.9 m | 7.48 | 14.22 | caño 2" sch 80 por metro (ASME B36.10, calculado) |
 | 15 | Codo 45° 2" sch80 BW | 1 un | 0.54 | 0.54 | codo_45 2" XS BW (ASME B16.9, borrador) |
 | 16 | Reducción concéntrica 2½" × 2" sch80 BW | 1 un | 0.91 | 0.91 | reduccion_concentrica_excentrica 2.5" XS BW (ASME B16.9, borrador) |
