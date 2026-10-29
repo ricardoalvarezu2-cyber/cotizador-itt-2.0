@@ -108,7 +108,7 @@ const Ficha = (() => {
     const avisos = [];
     if (extremosBw % 2 && !porMetro.length) avisos.push(`Quedan ${extremosBw} extremos BW de taller (número impar): falta marcar algún extremo de campo o una pieza`);
     if (!hayCampo && extremosBw) avisos.push("La tabla no tiene la columna extremos_campo: se supuso que TODOS los extremos BW se sueldan en taller. Confirmar en el dibujo cuáles quedan para campo");
-    return { juntas_bw: extremosBw / 2, pulg_eq: Math.round((bwEq / 2 + juntasSw + juntasOlet) * 1000) / 1000, placas, juntas_sw_olet: nSwOlet, avisos };
+    return { juntas_bw: Math.ceil(extremosBw / 2 - 1e-9), pulg_eq: Math.round((bwEq / 2 + juntasSw + juntasOlet) * 1000) / 1000, placas, juntas_sw_olet: nSwOlet, avisos };
   }
 
   // ---------------------------------------------------------------- pesos (controles_tablas.peso_item)

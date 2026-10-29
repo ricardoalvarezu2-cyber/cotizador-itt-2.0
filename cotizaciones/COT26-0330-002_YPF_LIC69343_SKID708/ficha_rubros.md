@@ -5,13 +5,13 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 ## 1. MO de armado y soldadura del piping
 
-- Juntas a tope (BW) de taller: **28** · juntas SW, cuplas y olets: **19** · extremos para soldar en campo: 0
+- Juntas a tope (BW) de taller: **29** · juntas SW, cuplas y olets: **19** · extremos para soldar en campo: 0
 - Pulgadas equivalentes de soldadura: **456,03**
 - kg de piping (caños, bridas, accesorios y válvulas con tabla): **6.575 kg** · bridas: 31
 - Diámetros soldados a tope: 16", 12"
 - Con peso APROXIMADO (volumen × densidad, sin tabla): 3 Tee normal 12"; 12 Junta espiralada RF esp. 4,5 mm 300 LB 1; 13 Junta espiralada RF esp. 4,5 mm 300 LB 1; 14 Junta espiralada RF esp. 4,5 mm 300 LB 1; INS TW-014A/B/C: Vaina (termopozo) bridada 1
 - **Costo por antecedentes.** Por antecedentes: USD 10.193,42 (1 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 22,35/pulgada eq. · USD 1,55/kg de piping · USD 357,66/junta a tope
+  - Por unidad: USD 22,35/pulgada eq. · USD 1,55/kg de piping · USD 351,50/junta a tope
 
 ## 2. MO de fabricación de la estructura
 
@@ -28,10 +28,10 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 ## 4. Radiografía y END
 
-- Juntas a tope: **28** · RX 100% → placas chicas **122**, grandes **25**
+- Juntas a tope: **29** · RX 100% → placas chicas **122**, grandes **25**
 - Juntas SW, cuplas y olets (LP donde no se puede radiografiar): **19**
 - **Costo por antecedentes.** Por antecedentes: USD 5.234,11 (1 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 183,65/junta a tope · USD 35,61/placa
+  - Por unidad: USD 180,49/junta a tope · USD 35,61/placa
 
 ## 5. Procedimientos
 

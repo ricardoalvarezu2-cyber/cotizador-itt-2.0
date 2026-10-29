@@ -529,7 +529,7 @@ def soldaduras(filas, diametral=False):
             detalle.append(f"pos {r['pos']}: {bw_taller:g} extremo(s) BW de taller ({n_bw:g} por unidad × {q:g}{f' − {campo:g} de campo por unidad' if campo else ''}{f' × {m_r:g} por el caño' if m_r != 1 else ''}) × {dn:g}\" × {f:.4f}")
         if n_sw:
             detalle.append(f"pos {r['pos']}: {n_sw * q:g} junta(s) SW × {dn:g}\" × {f:.4f}")
-    juntas_bw = extremos_bw / 2
+    juntas_bw = math.ceil(extremos_bw / 2 - 1e-9)  # juntas enteras (el ajuste de uniones directas deja fracciones)
     total = bw_eq / 2 + juntas_sw + juntas_olet
     avisos = []
     if extremos_bw % 2 and not por_metro:

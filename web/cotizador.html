@@ -571,7 +571,7 @@ const Ficha = (() => {
     const avisos = [];
     if (extremosBw % 2 && !porMetro.length) avisos.push(`Quedan ${extremosBw} extremos BW de taller (número impar): falta marcar algún extremo de campo o una pieza`);
     if (!hayCampo && extremosBw) avisos.push("La tabla no tiene la columna extremos_campo: se supuso que TODOS los extremos BW se sueldan en taller. Confirmar en el dibujo cuáles quedan para campo");
-    return { juntas_bw: extremosBw / 2, pulg_eq: Math.round((bwEq / 2 + juntasSw + juntasOlet) * 1000) / 1000, placas, juntas_sw_olet: nSwOlet, avisos };
+    return { juntas_bw: Math.ceil(extremosBw / 2 - 1e-9), pulg_eq: Math.round((bwEq / 2 + juntasSw + juntasOlet) * 1000) / 1000, placas, juntas_sw_olet: nSwOlet, avisos };
   }
 
   // ---------------------------------------------------------------- pesos (controles_tablas.peso_item)
@@ -985,8 +985,8 @@ const Rubros = (() => {
         ["Diámetros soldados a tope", (x.diametros || []).map(d => d + '"').join(", ") || null, ""]],
       mo_estructura: [["kg de estructura", x.kg, "kg"], ["m² de estructura", x.m2, "m²"]],
       pintura: [["m² de piping", x.m2_piping, "m²"], ["m² de estructura", x.m2_estructura, "m²"], ["m² total (sin overspray)", x.m2_total, "m²"], ["Esquema", x.esquema || "según pliego", ""]],
-      end: [["Juntas a tope", x.juntas_bw, ""], ["RX", x.rx_pct, "%"], ["Placas chicas", x.placas_chicas, ""], ["Placas grandes", x.placas_grandes, ""],
-        ["Juntas con LP (SW, cuplas y olets)", x.juntas_lp, ""]],
+      end: [["Juntas a tope (se radiografían)", x.juntas_bw, ""], ["Juntas SW, cuplas y olets (tintas penetrantes)", x.juntas_lp, ""], ["Radiografía", x.rx_pct, "%"],
+        ["Placas chicas", x.placas_chicas, ""], ["Placas grandes", x.placas_grandes, ""]],
       procedimientos: (x.lista || []).map(p => [p.nombre + (p.alcance ? ` (${p.alcance})` : ""), p.cantidad, ""]),
       ph: [["Volumen interior de los caños", x.litros, "litros"]],
       horas: [],
