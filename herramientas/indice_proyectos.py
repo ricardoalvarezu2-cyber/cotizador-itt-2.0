@@ -230,7 +230,7 @@ def main():
             fila = de_ficha(json.load(open(f, encoding="utf-8")), anio)
             fila["ficha"] = str(f.relative_to(RAIZ))
             filas.append(fila)
-    from cotizaciones_base import cotizaciones  # repositorio + las de la página incorporadas a la base
+    from cotizaciones_base import cotizaciones  # la biblioteca: las incorporadas con el botón de la página
     for f, _ in cotizaciones():
         filas.append(de_cotizador(f))
     filas = [r for r in filas if r["fecha"] >= "2025-01-01"]  # solo 2025-2026 (decisión de Ventas)

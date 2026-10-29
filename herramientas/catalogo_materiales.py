@@ -9,7 +9,7 @@ Fuentes (etapa 1, sin IA):
   conocimiento/precios/precios_componentes.csv     base de componentes (proveedor y fecha por renglón)
   conocimiento/precios/proveedores_2025/2026.csv   cotizaciones de proveedores (solo las que traen precio unitario)
   cotizaciones/*/cotizacion.json                   fuentes de precio cargadas en cotizaciones (no los estimados)
-  cotizaciones_web/*/cotizacion.json               las de la página incorporadas a la base (ver cotizaciones_base.py)
+  biblioteca_cotizaciones/*/cotizacion.json        las incorporadas con el botón de la página (ver cotizaciones_base.py)
   conocimiento/precios/listas_vendedor.csv          listas que carga Ventas (herramientas/listas_vendedor.py)
 
 Salidas:
@@ -734,7 +734,7 @@ def leer_fuentes():
                 (r["proveedor_o_criterio"] or "planilla de costo ITT")[:80], Z + car.replace("/", "\\"), f"{r['carpeta']}/{Path(r['archivo']).name}"[:200],
                 f"fuentes_originales/ofertas_texto/{car}", unidad, extra=f"planilla de costo {r['proyecto']} ({r['ubicacion']})"[:200],
                 pista=r["rubro"], iva=iva_de(r["iva_origen"]) if r["iva_origen"] else None)
-    from cotizaciones_base import cotizaciones  # repositorio + las de la página incorporadas a la base
+    from cotizaciones_base import cotizaciones  # la biblioteca: las incorporadas con el botón de la página
     for f, c in cotizaciones():
         for it in c["items"]:
             if it["grupo"] != "material" or re.fullmatch(r"\d+[a-z]", str(it["pos"])):

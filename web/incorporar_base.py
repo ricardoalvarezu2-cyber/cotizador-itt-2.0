@@ -1,0 +1,78 @@
+"""Pasa una cotización de la página al repositorio y la suma a la biblioteca (botón de Resumen; pedido "incorporar_base").
+
+Claude baja el documento con ArtifactData (action "get", collection "cotizaciones", doc_id <id>, out_dir <carpeta>) y corre:
+    python web/incorporar_base.py <carpeta>/cotizaciones/<id>.json
+1. Biblioteca: deja la cotización en biblioteca_cotizaciones/<id>/ (cotizacion.json, oferta.json e incorporacion.json con
+   fecha, estado y versión). Si ya estaba, la reemplaza: vale la última incorporada (decisión de Matías, 29-10-2026).
+2. Repositorio: si hay una carpeta cotizaciones/<código>_* con el mismo código, la versión de la página reemplaza su
+   cotizacion.json y oferta.json (lo que la página no guarda, como la firma, se conserva) y se vuelve a armar
+   (armar_cotizacion.py). Lo que había queda en el historial de git.
+Después: python herramientas/actualizar_base.py (catálogo e índice de antecedentes toman la biblioteca), construir_datos,
+armar_pagina y republicar (ver web/LEEME.md, "Pedidos desde la página").
+"""
+import json
+import subprocess
+import sys
+from datetime import datetime
+from pathlib import Path
+
+RAIZ = Path(__file__).resolve().parent.parent
+BIB = RAIZ / "biblioteca_cotizaciones"
+sys.path.insert(0, str(RAIZ / "herramientas"))
+from numeros import a_vista, fmt  # noqa: E402
+
+
+def escribir(carpeta, cot, oferta):
+    carpeta.mkdir(parents=True, exist_ok=True)
+    (carpeta / "cotizacion.json").write_text(json.dumps(cot, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    (carpeta / "oferta.json").write_text(json.dumps(oferta or {}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+
+
+def indice():
+    filas = []
+    for m in sorted(BIB.glob("*/incorporacion.json")):
+        x = json.loads(m.read_text(encoding="utf-8"))
+        filas.append(f"| {m.parent.name} | {x.get('codigo', '')} | {x.get('titulo', '')} | {x.get('estado', '')} | "
+                     f"{a_vista(x.get('incorporada', '')[:10])} | {x.get('veces', 1)} | {x.get('carpeta_repo', '') or '—'} |")
+    (BIB / "README.md").write_text(
+        "# Biblioteca de cotizaciones\n\nLas que alimentan el catálogo y el índice de antecedentes. Entran solo con el botón "
+        "\"Pasar al repositorio y a la biblioteca\" de la página (`web/incorporar_base.py`); si se incorpora de nuevo, la última "
+        "versión reemplaza a la anterior.\n\n| id | código | título | estado | incorporada | veces | carpeta en el repositorio |\n"
+        "|---|---|---|---|---|---|---|\n" + "\n".join(filas) + "\n", encoding="utf-8")
+
+
+def main(archivo):
+    d = json.loads(Path(archivo).read_text(encoding="utf-8"))
+    d = d.get("data", d)
+    cot, oferta = d["cot"], d.get("oferta", {})
+    if not cot.get("items"):
+        sys.exit("La cotización no tiene ítems: no se incorpora.")
+    id_ = Path(archivo).stem
+    destino = BIB / id_
+    meta_vieja = destino / "incorporacion.json"
+    veces = (json.loads(meta_vieja.read_text(encoding="utf-8")).get("veces", 1) + 1) if meta_vieja.exists() else 1
+    escribir(destino, cot, oferta)
+    codigo = cot.get("codigo", "")
+    repo = [p for p in sorted((RAIZ / "cotizaciones").glob(f"{codigo}_*")) if (p / "cotizacion.json").exists()] if codigo else []
+    meta = {"id": id_, "codigo": codigo, "titulo": cot.get("titulo", ""), "estado": cot.get("estado", ""),
+            "incorporada": datetime.now().isoformat(timespec="seconds"), "guardado_pagina": d.get("guardado", ""),
+            "veces": veces, "carpeta_repo": str(repo[0].relative_to(RAIZ)) if repo else ""}
+    (destino / "incorporacion.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    indice()
+    print(f"Biblioteca: {destino.relative_to(RAIZ)} ({'reemplazó la versión anterior' if veces > 1 else 'nueva'}; estado {meta['estado']})")
+    if repo:
+        # Lo que la página no guarda (por ejemplo la firma de la oferta, que la página toma de "firmantes") se conserva del repositorio
+        viejo = lambda n: json.loads((repo[0] / n).read_text(encoding="utf-8")) if (repo[0] / n).exists() else {}
+        escribir(repo[0], {**viejo("cotizacion.json"), **cot}, {**viejo("oferta.json"), **(oferta or {})})
+        r = subprocess.run([sys.executable, str(RAIZ / "herramientas" / "armar_cotizacion.py"), str(repo[0])], capture_output=True, text=True)
+        linea = next((l for l in r.stdout.splitlines() if l.startswith("Planilla:")), "")
+        print(f"Repositorio: {repo[0].relative_to(RAIZ)} reemplazada con la versión de la página y rearmada · {linea or 'ver salida de armar_cotizacion'}")
+        if r.returncode:
+            print(r.stdout[-1500:], r.stderr[-1500:])
+            sys.exit("armar_cotizacion.py falló: revisar antes de subir.")
+    else:
+        print("Repositorio: no hay carpeta cotizaciones/ con ese código; queda solo en la biblioteca.")
+
+
+if __name__ == "__main__":
+    main(sys.argv[1])

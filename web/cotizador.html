@@ -2366,16 +2366,31 @@ if (typeof module !== "undefined") module.exports = Documentos;
   // ------------------------------------------------------------------ pestaña Resumen y descargas
   const ARCHIVOS = [["presupuesto", "1_Presupuesto.xlsx"], ["compras", "2_Lista_para_Compras.xlsx"], ["informe", "3_Informe_del_presupuesto.pdf"],
     ["tec_docx", "4_Oferta_tecnica.docx"], ["tec_pdf", "4_Oferta_tecnica.pdf"], ["eco_docx", "5_Oferta_economica.docx"], ["eco_pdf", "5_Oferta_economica.pdf"], ["json", "6_Respaldo_cotizacion.json"]];
-  // Incorporar a la base: Claude Code copia la cotización al repositorio y rearma catálogos, antecedentes y la página.
-  // Las aprobadas o enviadas entran solas con la tarea semanal (web/LEEME.md).
+  // Repositorio y biblioteca (decisión de Matías, 29-10-2026): manda el repositorio; cuando la cotización está lista, el
+  // botón pasa esta versión al repositorio y la suma a la biblioteca (catálogo y antecedentes) con un pedido a Claude Code
+  // (web/incorporar_base.py). Solo entra lo que se incorpora con el botón; si se vuelve a incorporar, la última versión
+  // reemplaza a la anterior. Sin revisar o sin aprobar, se avisa y se pide confirmación.
+  const huella = () => { const t = JSON.stringify([{ ...S.doc.cot, base: undefined }, S.doc.oferta]); let h = 5381; for (let i = 0; i < t.length; i++) h = (h * 33 ^ t.charCodeAt(i)) >>> 0; return h.toString(36); };
   function panelBase() {
-    const cot = S.doc.cot, b = cot.base || {};
-    const estado = b.incorporada ? `Incorporada a la base el ${F(b.incorporada)}.` : b.pedida ? `Pedida el ${F(b.pedida)}: la procesa Claude Code (ver Pedidos).` : "";
-    return `<h3>Base de datos</h3>
-      <p class="small muted">Suma esta cotización a los antecedentes y sus precios con documento (cotizaciones, listas y planillas, iguales a lo pedido) al catálogo, para usarlos en las próximas búsquedas. Los estimados no entran. Las aprobadas o enviadas entran solas el lunes.</p>
-      ${estado ? `<p class="small"><b>${E(estado)}</b></p>` : ""}
-      <div class="fila"><button data-a="incorporar" ${cot.estado === "borrador" ? "disabled" : ""}>${b.incorporada || b.pedida ? "Volver a incorporar" : "Incorporar a la base de datos"}</button>
-      ${cot.estado === "borrador" ? `<span class="small muted">Primero pasala a revisado.</span>` : ""}</div>`;
+    const b = S.doc.cot.base || {};
+    const cambio = b.huella && b.huella !== huella();
+    const estado = b.incorporada ? `En la biblioteca desde el ${FH(b.incorporada)}.` : b.pedida ? `Mandada el ${FH(b.pedida)}: la está pasando Claude Code.` : "Todavía no está en el repositorio ni en la biblioteca.";
+    return `<h3>Repositorio y biblioteca</h3>
+      <p class="small muted">Pasa esta versión al repositorio y la suma a la biblioteca: sus precios con documento van al catálogo y la cotización queda como antecedente. Si ya estaba, esta versión reemplaza a la anterior.</p>
+      <p class="small"><b>${E(estado)}</b>${cambio ? ` <span class="pill warn">cambió después de mandarla</span>` : ""}</p>
+      <div class="fila"><button data-a="incorporar">${b.pedida || b.incorporada ? "Volver a pasar esta versión" : "Pasar al repositorio y a la biblioteca"}</button></div>`;
+  }
+  function dialogoIncorporar() {
+    const est = S.doc.cot.estado;
+    const falta = est === "borrador" ? "Tu cotización todavía no está revisada." : est === "revisado" ? "Tu cotización todavía no está aprobada." : "";
+    const ya = (S.doc.cot.base || {}).pedida || (S.doc.cot.base || {}).incorporada;
+    capa.hidden = false;
+    capa.innerHTML = `<div class="capa"><section class="panel" role="dialog" aria-modal="true" aria-label="Pasar al repositorio y a la biblioteca"><h2>Pasar al repositorio y a la biblioteca</h2>
+      ${falta ? `<div class="aviso"><b>${E(falta)}</b></div><p>¿Estás seguro que deseas incorporar esta cotización a la base de datos?</p>`
+              : `<p>¿Pasar esta versión al repositorio y sumarla a la biblioteca?</p>`}
+      ${ya ? `<p class="small muted">Ya se había incorporado: esta versión reemplaza a la anterior.</p>` : ""}
+      <div class="fila fin"><button data-a="cerrar">Cancelar</button><button class="prim" data-a="incorporar-ok">Aceptar</button></div></section></div>`;
+    capa.querySelector('[data-a="incorporar-ok"]').focus();
   }
   function tabResumen() {
     const c = calc(), p = S.doc.cot.parametros, avs = Busqueda.avisos(S.doc.cot), esc_ = Motor.escenarios(S.doc.cot, S.datos.indices);
@@ -2655,12 +2670,14 @@ if (typeof module !== "undefined") module.exports = Documentos;
       case "uno-k": await descargarUno(b, b.dataset.k); break;
       case "rehacer": rehacer(); break;
       case "estado": dialogoEstado(b.dataset.v); break;
-      case "incorporar": {
-        if (b.dataset.ok !== "1") { b.dataset.ok = "1"; b.textContent = "¿Seguro? Incorporar"; setTimeout(() => { b.dataset.ok = ""; render(); }, 4000); return; }
-        cot.base = { ...(cot.base || {}), pedida: hoy() }; guardarPronto(); render();
+      case "incorporar": dialogoIncorporar(); break;
+      case "incorporar-ok": {
+        capa.hidden = true; capa.innerHTML = "";
+        cot.base = { ...(cot.base || {}), pedida: new Date().toISOString(), huella: huella() };
+        clearTimeout(S.timer); await guardar(); render(); // se manda la versión ya guardada
         try {
-          await Asistente.crearPedido({ tipo: "incorporar_base", texto: `Incorporar ${cot.codigo} (${cot.titulo || ""}) a la base: catálogos, antecedentes y página.`, cot: S.id, files: [], mandar: true });
-          toast("Pedido mandado a Claude Code: va a actualizar catálogos y antecedentes");
+          await Asistente.crearPedido({ tipo: "incorporar_base", texto: `Pasar ${cot.codigo} (${cot.titulo || ""}) al repositorio y a la biblioteca (estado: ${cot.estado}). Si ya estaba, reemplaza a la anterior.`, cot: S.id, files: [], mandar: true });
+          toast("Mandada a Claude Code: la pasa al repositorio y a la biblioteca en unos minutos");
         } catch (e) { toast(e.message); }
         break;
       }
