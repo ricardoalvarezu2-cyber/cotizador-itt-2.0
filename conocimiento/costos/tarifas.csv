@@ -1,14 +1,14 @@
 rubro,concepto,unidad,valor_usd,tipo,fecha,fuente,vigente,nota
-soldadura,Mano de obra soldadura piping,USD/pulg-diam-eq,19.73,costo_propio,2024-10,costo_mo_planta_2024-10,si,61.16 USD/hh por soldador / 3.1 pulg por hora
+soldadura,Mano de obra soldadura piping,USD/pulg-diam-eq,19.73,costo_propio,2024-10,costo_mo_planta_2024-10,si,"61,16 USD/hh por soldador / 3,1 pulg por hora"
 soldadura,Mano de obra soldadura piping (criterio de las planillas de costo 2026),USD/pulg-diam-eq,16,usado_en_cotizacion,2026-02,"planillas 2026 (TAVAL/43 puentes YPF 19-02-2026; TAVAL/40 Inarteco; Sacde 12 a 15; Tecpetrol 9: 16,5)",si,"Precio por pulgada que usan las planillas de ITT de 2025-2026 (16 a 16,5; 19 en #900 en Sacde 12). Controles CTRL-M01/P01/T01, 28-10-2026"
 soldadura,Mano de obra soldadura piping,USD/pulg-diam-eq,28,usado_en_cotizacion,2024-09,costos_mo_master_2024-09,si,Valor del modelo MO Master (skid medición E+H)
 soldadura,Mano de obra soldadura piping,USD/pulg-diam-eq,32,usado_en_cotizacion,2024-02,Costos_MO_Master_II-SEP_TRIFASICO,no,Separador trifásico AESA; mismo valor en Costos_MO dic-2023
 soldadura,Mano de obra soldadura piping (tercero Ledesma),USD/pulg-diam-eq,16.31,tercero,2024-09,costo_mo_planta_2024-10,si,Más IVA. Presupuesto sep-2024
 soldadura,Mano de obra soldadura piping (tercero Ledesma),USD/pulg-diam-eq,6.00,tercero,2024-04,costo_mo_planta_2024-10,no,Más IVA
 soldadura,Mano de obra soldadura piping (tercero Ledesma),USD/pulg-diam-eq,4.60,tercero,2024-02,costo_mo_planta_2024-10,no,Más IVA
-soldadura,Precio de venta MO spools acero al carbono (TGS Joule Thomson),USD/pulg-diam-eq,17.2-28.8,precio_venta,2022-03,Anexo 1 4562,no,1985-3321 ARS con TC 115.5; varía por diámetro
-soldadura,Precio de venta MO spools inoxidable 316L (TGS Joule Thomson),USD/pulg-diam-eq,24.5-40.3,precio_venta,2022-03,Anexo 1 4562,no,2830-4650 ARS con TC 115.5
-estructura,Mano de obra estructura soldada,USD/kg,5.10,costo_propio,2024-10,costo_mo_planta_2024-10,si,61.16 USD/hh / 12 kg/h deposición (MIG tubular)
+soldadura,Precio de venta MO spools acero al carbono (TGS Joule Thomson),USD/pulg-diam-eq,17.2-28.8,precio_venta,2022-03,Anexo 1 4562,no,"1985-3321 ARS con TC 115,5; varía por diámetro"
+soldadura,Precio de venta MO spools inoxidable 316L (TGS Joule Thomson),USD/pulg-diam-eq,24.5-40.3,precio_venta,2022-03,Anexo 1 4562,no,"2830-4650 ARS con TC 115,5"
+estructura,Mano de obra estructura soldada,USD/kg,5.10,costo_propio,2024-10,costo_mo_planta_2024-10,si,"61,16 USD/hh / 12 kg/h deposición (MIG tubular)"
 estructura,Mano de obra estructura soldada,USD/kg,10,usado_en_cotizacion,2024-09,costos_mo_master_2024-09,si,
 estructura,Mano de obra estructura soldada,USD/kg,7.40,usado_en_cotizacion,2024-02,Costos_MO_Master_II-SEP_TRIFASICO,no,
 estructura,Mano de obra estructura (tercero Ledesma),USD/kg,1.90,tercero,2024-09,costo_mo_planta_2024-10,si,Más IVA
@@ -21,7 +21,7 @@ hora_hombre,Granallado y pintura (costo empresa por operario),USD/hh,15.02,costo
 hora_hombre,Ingeniería,USD/hh,15,usado_en_cotizacion,2024,planilla_base_cotizaciones,no,
 hora_hombre,Calidad,USD/hh,15,usado_en_cotizacion,2024,planilla_base_cotizaciones,no,
 hora_hombre,Planta (movimientos internos y prueba hidráulica),USD/hh,13,usado_en_cotizacion,2024,planilla_base_cotizaciones,no,
-pintura,Mano de obra pintura,USD/m2,7.51,costo_propio,2024-10,costo_mo_planta_2024-10,si,15.02 USD/hh / 2 m2 por hora; sin materiales
+pintura,Mano de obra pintura,USD/m2,7.51,costo_propio,2024-10,costo_mo_planta_2024-10,si,"15,02 USD/hh / 2 m2 por hora; sin materiales"
 pintura,Granallado/arenado + esquema de pintura (tercero VARPAT),USD/m2,35.28,tercero,2024-05,costo_mo_planta_2024-10,si,31750 ARS
 pintura,Suministro de pintura,USD/m2,19,tercero,2024-05,costo_mo_planta_2024-10,si,
 pintura,Granallado,USD/m2,30,usado_en_cotizacion,2024-09,costos_mo_master_2024-09,si,
@@ -47,11 +47,11 @@ end,Placa radiografica chica (placa corta) DB NDT,USD/placa,6.5,tercero,2026-08,
 end,Placa radiografica grande (placa larga) DB NDT,USD/placa,8,tercero,2026-08,"PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT)",si,Lista DB NDT
 end,Servicio de radiografia DB NDT,USD/servicio,408,tercero,2026-08,"PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT)",si,Lista DB NDT (hasta ~40 placas por servicio)
 end,Servicio de liquidos penetrantes DB NDT,USD/servicio,294,tercero,2026-08,"PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT)",si,"Lista DB NDT; la planilla de Pampa pone medio servicio de LP por equipo"
-material,Chapa negra A36 (1/2 1/4 3/16),USD/kg,1.16,precio_compra,2026-02,precios_varios_acero_2026-02,si,Con 10% de recortes: 1.27. Redondeo usado: 1.30 Detalle por medida (fuente única): precios/acero_por_kg.csv
-material,Chapa semilla de melón 1/8,USD/kg,1.23,precio_compra,2026-02,precios_varios_acero_2026-02,si,Con 10% de recortes: 1.35 Detalle por medida (fuente única): precios/acero_por_kg.csv
-material,Hierro ángulo,USD/kg,1.32-1.72,precio_compra,2026-02,precios_varios_acero_2026-02,si,Con 10% de recortes: 1.45-1.90 Detalle por medida (fuente única): precios/acero_por_kg.csv
-material,Planchuela,USD/kg,1.48-1.70,precio_compra,2026-02,precios_varios_acero_2026-02,si,Con 10% de recortes: 1.63-1.87 Detalle por medida (fuente única): precios/acero_por_kg.csv
-material,Caño estructural 3x1/8,USD/kg,1.40,precio_compra,2026-02,precios_varios_acero_2026-02,si,Con 10% de recortes: 1.54 Detalle por medida (fuente única): precios/acero_por_kg.csv
+material,Chapa negra A36 (1/2 1/4 3/16),USD/kg,1.16,precio_compra,2026-02,precios_varios_acero_2026-02,si,"Con 10% de recortes: 1,27. Redondeo usado: 1,30 Detalle por medida (fuente única): precios/acero_por_kg.csv"
+material,Chapa semilla de melón 1/8,USD/kg,1.23,precio_compra,2026-02,precios_varios_acero_2026-02,si,"Con 10% de recortes: 1,35 Detalle por medida (fuente única): precios/acero_por_kg.csv"
+material,Hierro ángulo,USD/kg,1.32-1.72,precio_compra,2026-02,precios_varios_acero_2026-02,si,"Con 10% de recortes: 1,45-1,90 Detalle por medida (fuente única): precios/acero_por_kg.csv"
+material,Planchuela,USD/kg,1.48-1.70,precio_compra,2026-02,precios_varios_acero_2026-02,si,"Con 10% de recortes: 1,63-1,87 Detalle por medida (fuente única): precios/acero_por_kg.csv"
+material,Caño estructural 3x1/8,USD/kg,1.40,precio_compra,2026-02,precios_varios_acero_2026-02,si,"Con 10% de recortes: 1,54 Detalle por medida (fuente única): precios/acero_por_kg.csv"
 soldadura,Mano de obra manifold (tercero Ledesma),USD/pulg-diam,16.03,tercero,2026,fichas_2026 (TAVAL/49-48 A&A manifold),si,USD 3.590 por manifold de 224 pulgadas; sin PH ni montaje
 soldadura,Mano de obra 3 skids + soportería (tercero Ledesma),USD/pulg-diam,21.76,tercero,2026,fichas_2026 (ppto Ledesma 200256),si,USD 27.200 por ~1.250 pulgadas incluyendo skid; sin pintura
 estructura,Mano de obra skid (tercero Ledesma),USD/kg,2.50-2.80,tercero,2026,fichas_2026,si,Alternativa de cotización por kg
