@@ -15,7 +15,7 @@ from pathlib import Path
 import openpyxl
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from numeros import fecha_iso, numero as _numero  # noqa: E402
+from numeros import es_columna_precio, fecha_iso, numero as _numero, precio_csv  # noqa: E402
 import xlrd
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -52,8 +52,9 @@ def escribir(ruta: str, columnas: list, filas: list):
     with archivo.open("w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(columnas)
+        precio = [es_columna_precio(c) for c in columnas]  # precios y montos con 2 decimales (Matías, 29-10-2026)
         for fila in filas:
-            w.writerow(["" if v is None else v for v in fila])
+            w.writerow(["" if v is None else precio_csv(v) if p and isinstance(v, (int, float)) else v for v, p in zip(fila, precio)])
     print(f"  {ruta}: {len(filas)} filas")
 
 

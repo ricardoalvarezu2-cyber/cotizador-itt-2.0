@@ -56,7 +56,7 @@ def main(carpeta, precio_unitario=None, costo=None, reparto=None):
     res.sort(key=lambda x: (round(x[0], 1), x[1]["fecha"]), reverse=True)
     lineas = [f"# Comparación con antecedentes (P8) — {c['codigo']}", "",
               f"Generado por `herramientas/comparar_antecedentes.py`. Familia {fam}. Esta cotización: **precio unitario USD {fmt(precio_unitario, 2)}**, "
-              f"costo USD {fmt(costo, 2)}, factor {c['parametros']['FM']} · reparto del costo: materiales {reparto.get('material', 0):.0%}, MO y servicios {reparto.get('mo', 0):.0%}.", "",
+              f"costo USD {fmt(costo, 2)}, factor {fmtg(c['parametros']['FM'])} · reparto del costo: materiales {reparto.get('material', 0):.0%}, MO y servicios {reparto.get('mo', 0):.0%}.", "",
               "Una diferencia de más del 15% no significa error: hay que explicarla rubro por rubro (alcance, cantidad, diámetro, serie, fecha) antes de presentar el número.", "",
               "| # | Antecedente | Fecha | Precio unitario | Diferencia | Factor | Reparto de la ficha | Qué es |", "|---|---|---|---|---|---|---|---|"]
     avisos = []
@@ -72,7 +72,7 @@ def main(carpeta, precio_unitario=None, costo=None, reparto=None):
                 rep = f"mat {m / (m + mo + te):.0%} · MO+serv {(mo + te) / (m + mo + te):.0%}"
         otra_escala = dif > 3 or dif < -0.75  # más de 4 veces de diferencia: el "precio principal" del índice es otra cosa
         marca = " (otra escala: no comparable)" if otra_escala else (" ⚠" if abs(dif) > 0.15 else "")
-        lineas.append(f"| {n} | {p['id'][:55]} | {a_vista(p['fecha'])} | {fmt(pu, 0)} {p['moneda']} | {dif:+.0%}{marca} | {p['factor'] or '—'} | {rep or '—'} | {p['descripcion'][:90]} |")
+        lineas.append(f"| {n} | {p['id'][:55]} | {a_vista(p['fecha'])} | {fmt(pu, 0)} {p['moneda']} | {dif:+.0%}{marca} | {fmtg(p['factor']) if p['factor'] not in ('', None) else '—'} | {rep or '—'} | {p['descripcion'][:90]} |")
         if not otra_escala and abs(dif) > 0.15 and len(avisos) < 2:
             avisos.append(f"Precio {dif:+.0%} contra '{p['id'][:50]}' ({fmt(pu, 0)} {p['moneda']}, {a_vista(p['fecha'])}): explicar la diferencia rubro por rubro (P8)")
     if res and not any(-0.75 <= precio_unitario / float(p["precio_unitario_principal"]) - 1 <= 3 for _, p in res[:5]):

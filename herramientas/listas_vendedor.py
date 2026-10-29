@@ -43,7 +43,7 @@ def renard(ruta, base):
                 continue
             if isinstance(v[0], (int, float)) and len(v) >= 3 and isinstance(v[2], (int, float)) and v[2] > 0:
                 yield {**base, "codigo": int(v[0]), "descripcion": f"{v[1]} ({categoria})" if categoria else str(v[1]),
-                       "precio": round(float(v[2]), 4), "unidad": (v[3] if len(v) > 3 else "un") or "un"}
+                       "precio": round(float(v[2]), 2), "unidad": (v[3] if len(v) > 3 else "un") or "un"}
 
 
 def cintolo(ruta, base):
@@ -52,14 +52,14 @@ def cintolo(ruta, base):
         if r and isinstance(r[0], (int, float)) and isinstance(r[-1], (int, float)) and r[-1] > 0:
             art, desc, esp, norma, calidad, precio = (list(r) + [None] * 6)[:6]
             yield {**base, "codigo": int(art), "descripcion": " ".join(str(x) for x in (desc, esp, norma, calidad) if x),
-                   "precio": round(float(precio), 4), "unidad": "un"}
+                   "precio": round(float(precio), 2), "unidad": "un"}
 
 
 def provemet(ruta, base):
     texto = subprocess.run(["pdftotext", "-layout", str(ruta), "-"], capture_output=True, text=True, check=True).stdout
     for m in re.finditer(r"^\s*\d+\s+(PERFIL [A-Z]+ \d+[^\n]*?)\s{2,}(\d+[.,]\d+)\s+[\d.,]+\s+Mt\s+([\d.,]+)\s+([\d.,]+)\s+Mt", texto, re.M):
         desc, kgm, precio, neto = m.group(1).strip(), m.group(2), m.group(3), m.group(4)
-        yield {**base, "codigo": "", "descripcion": f"{desc} ({kgm} kg/m, barra de 12 m)", "precio": float(neto.replace(",", ".")), "unidad": "metro"}
+        yield {**base, "codigo": "", "descripcion": f"{desc} ({kgm} kg/m, barra de 12 m)", "precio": round(float(neto.replace(",", ".")), 2), "unidad": "metro"}
 
 
 FORMATOS = [(r"^renard_lista", renard, "Tubos Renard", "lista", "sin IVA (lista Renard en USD)"),

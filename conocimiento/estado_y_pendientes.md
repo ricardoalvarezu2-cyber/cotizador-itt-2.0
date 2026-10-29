@@ -88,6 +88,7 @@
 | 29-10-2026 | Lo que no tiene peso en tabla se estima por volumen × densidad y queda marcado APROXIMADO; los instrumentos no se pesan (despreciable) | Matías | `peso_aproximado.py` |
 | 29-10-2026 | Juntas a tope siempre enteras (redondeo hacia arriba); las pulgadas equivalentes pueden tener decimales | Criterio técnico (observación de Matías) | `precotizar.soldaduras` |
 | 29-10-2026 | Respuestas más cortas: qué se hizo, errores y decisiones | Matías | `CLAUDE.md` |
+| 29-10-2026 | **Números en las tablas:** precios con 2 decimales; CSV/JSON con punto decimal y sin miles (formato de máquina); Excel con celdas numéricas (`#,##0.00` precios, `#,##0.0###` técnicos); textos y notas con 1.234,56. Pos, códigos y claves quedan como texto | Matías | `numeros.precio_csv`, `numeros.celda_excel`, `auditorias/2026-10-29_numeros_tablas.md` |
 | 28/10/2026 | No hay más información de precios que la ya entregada: el último precio se sigue eligiendo por fecha (no hay otras compras para preferir sobre la lista de Renard) | Matías | — |
 
 ## 3. Pendientes del proyecto

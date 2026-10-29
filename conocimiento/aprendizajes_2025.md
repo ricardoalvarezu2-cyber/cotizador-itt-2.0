@@ -51,9 +51,9 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 
 ## Filtros
 
-- Los filtros se ofertaron con precio unitario todo incluido (materiales, soldadura, consumibles, ingeniería, repuestos); los elementos filtrantes de repuesto COM/PEM salen aparte a USD 182.71-235.66 c/u. *(AESA/46- Cesta 23061151 -filtros)*
-- Rango por filtro: USD 37.2 mil a 47.0 mil según tag (FCC-0802 el más barato, FCC-0801/3 el más caro). *(AESA/46- Cesta 23061151 -filtros)*
-- El traslado a planta del cliente se cotizó como servicio aparte (USD 2,932.72) mientras la entrega base es EXW Quilmes. *(AESA/46- Cesta 23061151 -filtros)*
+- Los filtros se ofertaron con precio unitario todo incluido (materiales, soldadura, consumibles, ingeniería, repuestos); los elementos filtrantes de repuesto COM/PEM salen aparte a USD 182,71-235,66 c/u. *(AESA/46- Cesta 23061151 -filtros)*
+- Rango por filtro: USD 37,2 mil a 47,0 mil según tag (FCC-0802 el más barato, FCC-0801/3 el más caro). *(AESA/46- Cesta 23061151 -filtros)*
+- El traslado a planta del cliente se cotizó como servicio aparte (USD 2.932,72) mientras la entrega base es EXW Quilmes. *(AESA/46- Cesta 23061151 -filtros)*
 - En concurso con vuelta 2 ITT subió los precios (de 70.254 a 80.374, +14%); el skid pasó de 18.537 a 24.454 y se ganó a ese precio (la OC del skid coincide con la vuelta 2). *(CAMUZZI/23.Filtro FM y skid salto de regulacion de presion)*
 - Solo la OC del skid (ítem 10, 24.454) está en la carpeta; no hay constancia de OC para los 4 filtros FM. *(CAMUZZI/23.Filtro FM y skid salto de regulacion de presion)*
 - Camuzzi exige flete hasta destino final, oferta técnica con la cotización, facturación al dólar BNA divisa del día y plazo máx. de 5 días hábiles para presentar facturas. *(CAMUZZI/23.Filtro FM y skid salto de regulacion de presion)*
@@ -78,7 +78,7 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - Se excluyen transporte y repuestos para evitar sobreprecio; se cotizan aparte *(Sacde/12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios)*
 - Pago por hitos con anticipo 30% exige pólizas de caución y fondo de reparo *(Sacde/12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios)*
 - Licitación grande de 30+ filtros canasto con planilla del cliente de formato fijo (no modificar plantilla; comentarios en Notas). *(Sacde/3. 3029-CPF-022 -FILTROS TIPO CANASTO - RDA)*
-- Totales: base USD 686,278.16 y opciones USD 38,116.55; los repuestos 2 años (USD 15,240) y la percha de izaje (USD 17,400) van como opcionales. *(Sacde/3. 3029-CPF-022 -FILTROS TIPO CANASTO - RDA)*
+- Totales: base USD 686.278,16 y opciones USD 38.116,55; los repuestos 2 años (USD 15.240) y la percha de izaje (USD 17.400) van como opcionales. *(Sacde/3. 3029-CPF-022 -FILTROS TIPO CANASTO - RDA)*
 - Plazos largos de 22 a 30 semanas EXW Quilmes. *(Sacde/3. 3029-CPF-022 -FILTROS TIPO CANASTO - RDA)*
 - Cartucho coalescente MBGA 1031 140x108x915 mm AC cuesta 78 c/u (nov-2025, Filtron); fabricación 5 días hábiles. *(Sacde/9- PAE Gto TTYEN-SAO - Solicitud de Cotización BUDGETARIA FILTROS)*
 - Filtron exige pago anticipado y vigencia 10 días. *(Sacde/9- PAE Gto TTYEN-SAO - Solicitud de Cotización BUDGETARIA FILTROS)*
@@ -107,8 +107,8 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - Para paquetes de 4 equipos iguales por item se ofrecio pago con anticipo (20/20/20/40) y plazo estimado 180/210 dias, sujeto a disponibilidad de materiales; el plazo real depende del acopio de bridas (hasta 210 dias en Francovigh). *(YPF/13.YPF_TAVAL - Licitación 08-0740 Filtros Coalescentes -paquetizado- Portal Ariba Doc4104428891)*
 - Las condiciones de la OE 270 mencionan a 'AESA' (copia de otra oferta): revisar el texto de condiciones antes de reutilizarlo. *(YPF/13.YPF_TAVAL - Licitación 08-0740 Filtros Coalescentes -paquetizado- Portal Ariba Doc4104428891)*
 - Los prefabricados de pozo/puentes (OE 271) se ofertaron aparte, a unos USD 33-39 mil cada uno con plazo 90/120 dias. *(YPF/13.YPF_TAVAL - Licitación 08-0740 Filtros Coalescentes -paquetizado- Portal Ariba Doc4104428891)*
-- La oferta cayó de 2.73M (Rev 0, con errores) a 773k (Rev 1) y 691k (Rev 2, solo Ø24): precio por filtro Ø24 ~164.5k USD en Rev 2 vs 103.8k en Rev 1; el alcance/precio cambió y debe revisarse el criterio. *(YPF/21.YPF Filtros Ø24 - Ø18)*
-- Cotización china de materiales para un filtro Ø24 y un Ø18 por solo ~7.2k USD (kg de acero ~0.88-0.98 USD) es una referencia de costo de materia prima (bridas 24'' 514, 18'' 334 USD). *(YPF/21.YPF Filtros Ø24 - Ø18)*
+- La oferta cayó de 2.73M (Rev 0, con errores) a 773k (Rev 1) y 691k (Rev 2, solo Ø24): precio por filtro Ø24 ~164,5k USD en Rev 2 vs 103,8k en Rev 1; el alcance/precio cambió y debe revisarse el criterio. *(YPF/21.YPF Filtros Ø24 - Ø18)*
+- Cotización china de materiales para un filtro Ø24 y un Ø18 por solo ~7,2k USD (kg de acero ~0,88-0,98 USD) es una referencia de costo de materia prima (bridas 24'' 514, 18'' 334 USD). *(YPF/21.YPF Filtros Ø24 - Ø18)*
 - Plazo extendido de 60/75 a 120/135 días en Rev 2, sujeto a aprobación de ingeniería; pago 100% a 45 días. *(YPF/21.YPF Filtros Ø24 - Ø18)*
 - YPF cotiza por portal con planilla (cesta/posición) y precios unitarios; se desglosa el filtro, el RDO/RCP (documentación) y las plataformas como opcionales. *(YPF/22. FILTROS PTC LAS - Doc5131773884 (2 un))*
 - Los RDO/RCP son documentos de ingeniería de bajo valor (22,50 a 5.538 USD) cotizados como ítems aparte. *(YPF/22. FILTROS PTC LAS - Doc5131773884 (2 un))*
@@ -117,7 +117,7 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - Precios unitarios de filtros canasto estático van de 18.596 a 37.646 USD según tamaño; el más caro es el de despacho de petróleo (37.646,02). *(YPF/24- Filtros PTC LAS -ESTATICOS - Doc5152678540 (20 un))*
 - Los repuestos (2 años y PEM) y servicios (asistencia, ignifugado) tienen tarifas planas por unidad: 472,50, 172,50, 450 y 150 USD. *(YPF/24- Filtros PTC LAS -ESTATICOS - Doc5152678540 (20 un))*
 - Se ofertó por plazo parcial por grupo de filtros según el pedido del portal YPF. *(YPF/24- Filtros PTC LAS -ESTATICOS - Doc5152678540 (20 un))*
-- Precio por filtro canasto: 40,172 (FCC911) / 36,792 (917, 918) / 31,136 (913, 916, 919) / 21,664 (914, 915) USD; más repuestos ~14.9-16.7k y 240 por filtro según rótulos. *(YPF/25- FILTROS DE INCENDIO - PTC- Doc5152779310)*
+- Precio por filtro canasto: 40.172 (FCC911) / 36.792 (917, 918) / 31.136 (913, 916, 919) / 21.664 (914, 915) USD; más repuestos ~14,9-16,7k y 240 por filtro según rótulos. *(YPF/25- FILTROS DE INCENDIO - PTC- Doc5152779310)*
 - Los filtros se cotizan con paquete de repuestos (RDO/RCP) y asistencia PEM opcional (750 USD c/u). *(YPF/25- FILTROS DE INCENDIO - PTC- Doc5152779310)*
 - YPF carga la oferta en su portal por posiciones y exige certificados de calidad. *(YPF/25- FILTROS DE INCENDIO - PTC- Doc5152779310)*
 - Filtro de gas FCC707708 fabricado por ITT a USD 6.890 c/u con materiales incluidos, END y data book; RDO y RCP (documentación) se cotizan como renglones aparte a 30 y 87,60 USD. *(YPF/26-FILTROS DE GAS - PC C5064 - Doc5200459363)*
@@ -142,8 +142,8 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - Skid de carga/descarga ~38,6 kUSD c/u incluyendo materiales de piping, sin válvulas ni instrumentación. *(ENDRESS HAUSER/21. RFQ Materiales+Construcción mecánica CargaderosDescardaderos Proy. Los Toldos Techint-Tecpetrol)*
 - Ensayos exigidos: tintas 100% de soldaduras, UT y RX 30%, más FAT y dossier. *(ENDRESS HAUSER/21. RFQ Materiales+Construcción mecánica CargaderosDescardaderos Proy. Los Toldos Techint-Tecpetrol)*
 - Plazo de 60 días atado al acopio de materiales (importados). *(ENDRESS HAUSER/21. RFQ Materiales+Construcción mecánica CargaderosDescardaderos Proy. Los Toldos Techint-Tecpetrol)*
-- Costeo del skid Ø3: materiales 3,747 + MO 5,998 (ingeniería 450, calidad 675, montaje 121.5 HH x13 = 1,579.5, soldadura+RX+pintura 3,293) = costo 9,745 USD; precio de planilla 12,294 (MO x1.3, materiales x1.2) y oferta final 13,700 (factor efectivo 1.41). *(ENDRESS HAUSER/26- Construcción Mecánica Skid Gas Buy Back  E+H AR Ø3)*
-- Costo de MO por pulgada-diámetro soldada 16.2 USD/pulg, RX 1,684 (placas), granallado/pintura aparte. *(ENDRESS HAUSER/26- Construcción Mecánica Skid Gas Buy Back  E+H AR Ø3)*
+- Costeo del skid Ø3: materiales 3.747 + MO 5.998 (ingeniería 450, calidad 675, montaje 121,5 HH x13 = 1.579,5, soldadura+RX+pintura 3.293) = costo 9.745 USD; precio de planilla 12.294 (MO x1,3, materiales x1,2) y oferta final 13.700 (factor efectivo 1,41). *(ENDRESS HAUSER/26- Construcción Mecánica Skid Gas Buy Back  E+H AR Ø3)*
+- Costo de MO por pulgada-diámetro soldada 16,2 USD/pulg, RX 1.684 (placas), granallado/pintura aparte. *(ENDRESS HAUSER/26- Construcción Mecánica Skid Gas Buy Back  E+H AR Ø3)*
 - Plazo base 60 días; válvulas 5 días (stock Taval). *(ENDRESS HAUSER/26- Construcción Mecánica Skid Gas Buy Back  E+H AR Ø3)*
 - Costeo del skid Ø12: materiales 8.561,43 con factor 1,2 y mano de obra 7.469,54 (HH 2.821,5 + soldadura/RX/granallado/estructura 4.648,04) con factor 1,3; venta 19.984,12 (factor global ~1,247, margen ~19,8%) *(ENDRESS HAUSER/27- Construcción Mecánica Skid Gas Buy Back  E+H AR Ø12)*
 - MO interna: ingeniería 15 USD/h (30 h), calidad 15 USD/h (45 h), montaje 13 USD/h (130,5 h); soldadura por pulgada-diámetro (16,2 USD/pulgada) y RX por placa; plazo de 60 días *(ENDRESS HAUSER/27- Construcción Mecánica Skid Gas Buy Back  E+H AR Ø12)*
@@ -170,7 +170,7 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - Se cotizaron alternativas de proveedor (transmisores Rosemount vs Yokogawa EJX910A, válvula Fisher NPS16 vs V280 NPS8, válvula Taval/china DN400) para ajustar precio; validar que cumplan la especificación del cliente. *(TECHINT/10. requisition 4381-TARG-I-MR-610-078)*
 - Las validez de las ofertas de proveedores es corta (7 a 30 días) y varias están en USD sujetas a tipo de cambio BNA e importación (SIMI): reconfirmar antes de adjudicar. *(TECHINT/10. requisition 4381-TARG-I-MR-610-078)*
 - Servicios en campo (SAT, capacitación, asistencia) se ofertan como tarifa diaria separada del monto principal. *(TECHINT/10. requisition 4381-TARG-I-MR-610-078)*
-- Los precios totales de la planilla difieren de los unitarios en los skids (1.1, 1.3, 1.4), probablemente por ajustes/alternativa; el criterio no está documentado. *(TECHINT/10. requisition 4381-TARG-I-MR-610-078)*
+- Los precios totales de la planilla difieren de los unitarios en los skids (1,1, 1,3, 1,4), probablemente por ajustes/alternativa; el criterio no está documentado. *(TECHINT/10. requisition 4381-TARG-I-MR-610-078)*
 
 ## Manifolds
 
@@ -185,9 +185,9 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - El plazo depende de la llegada de la instrumentación del cliente (60/75 días) *(ENDRESS HAUSER/13. PAMPA , tramo de medicion)*
 - La planilla de costo no está en la carpeta: no se puede derivar el factor *(ENDRESS HAUSER/13. PAMPA , tramo de medicion)*
 - Trabajo de solo mano de obra: el cliente aporta cañería, estructura e instrumentación; ITT cobra fabricación, END, tratamiento y montaje eléctrico. *(ENDRESS HAUSER/14. PAE, tramo de medicion, solo MO)*
-- El precio subió de 28,360 (rev.0) a 30,890 (rev.2) al ampliar alcance (perfilería, documentos, almacenamiento opcional); referencia para MO de puentes de medición fiscales. *(ENDRESS HAUSER/14. PAE, tramo de medicion, solo MO)*
+- El precio subió de 28.360 (rev.0) a 30.890 (rev.2) al ampliar alcance (perfilería, documentos, almacenamiento opcional); referencia para MO de puentes de medición fiscales. *(ENDRESS HAUSER/14. PAE, tramo de medicion, solo MO)*
 - Plazo 45/60 días condicionado a que llegue la instrumentación del cliente. *(ENDRESS HAUSER/14. PAE, tramo de medicion, solo MO)*
-- Mismo alcance con dos precios muy distintos (40,774 vs 14,000 USD): el DOCX posterior bajó el precio a ~34%; verificar si el alcance cambió o fue una corrección/negociación antes de usar como referencia. *(ENDRESS HAUSER/15 .Profertil, tramo de medicion)*
+- Mismo alcance con dos precios muy distintos (40.774 vs 14.000 USD): el DOCX posterior bajó el precio a ~34%; verificar si el alcance cambió o fue una corrección/negociación antes de usar como referencia. *(ENDRESS HAUSER/15 .Profertil, tramo de medicion)*
 - Alcance 'llave en mano' de puente fiscal: materiales, soldadura, END, pintura, montaje, conexionado eléctrico y data book, SIN instrumentos ni ingeniería de detalle. *(ENDRESS HAUSER/15 .Profertil, tramo de medicion)*
 - Plazo 60/75 días condicionado a la llegada de la instrumentación del cliente (E+H). *(ENDRESS HAUSER/15 .Profertil, tramo de medicion)*
 
@@ -216,7 +216,7 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - Plazo uniforme de 180 días para todos los skids *(CONTRERAS HNOS/5- Pedido de precios SKIDS - Proyecto FLNG- PAE)*
 - La oferta sale por Taval (grupo) con planta ITT; el texto extraído no trae los precios (probablemente tabla de precios en imagen o columna no extraída) *(CONTRERAS HNOS/5- Pedido de precios SKIDS - Proyecto FLNG- PAE)*
 - Las trampas se ofertaron en 3 variantes según la tapa de cierre rápido: Megatap nacional es la más barata y rápida (100 días); Sypris la más cara (+USD 45 mil sobre Futura). *(PAMPA ENERGIA/2- JUEGOS DE TRAMPAS Doc5400593317)*
-- Precio de tapas: Futura USD 7,488 c/u, Megatap USD 6,750 c/u (16" #900); los indicadores de pasaje de scraper USD 1,150 c/u. *(PAMPA ENERGIA/2- JUEGOS DE TRAMPAS Doc5400593317)*
+- Precio de tapas: Futura USD 7.488 c/u, Megatap USD 6.750 c/u (16" #900); los indicadores de pasaje de scraper USD 1.150 c/u. *(PAMPA ENERGIA/2- JUEGOS DE TRAMPAS Doc5400593317)*
 - La lanzadora sale unos USD 15 mil más barata que la receptora (barrel inferior más corto). *(PAMPA ENERGIA/2- JUEGOS DE TRAMPAS Doc5400593317)*
 - Pampa exige certificación de datos de diseño (formulario R-VE-004 de Futura) antes de que empiece el plazo del proveedor. *(PAMPA ENERGIA/2- JUEGOS DE TRAMPAS Doc5400593317)*
 
@@ -235,17 +235,17 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - Ledesma subcontrata la fabricación a USD 11.200 a 37.200 por unidad sin materiales; los precios vendidos a AESA por equipo son 51.243 a 130.865, es decir una diferencia grande que cubre HH propias, END, pintura, PH y estructura. *(AESA/44-Doc5319481557 - AESA - SRV FABRICACION EQUIPOS - F5064)*
 - END a 265-292 USD y PH/tracing a 16-17 USD son renglones de la tarifa; pintura exterior 31-63 USD por unidad de la planilla según equipo (unidad no aclarada). *(AESA/44-Doc5319481557 - AESA - SRV FABRICACION EQUIPOS - F5064)*
 - La planilla PDF enviada difiere de la xlsx FINAL (p.ej. SB-003 130.865 vs 135.932; SB-475 98.089 vs 108.605): el xlsx quedó desactualizado. *(AESA/44-Doc5319481557 - AESA - SRV FABRICACION EQUIPOS - F5064)*
-- Precios de MO por skid (USD): medición 68,620; colector entrada 26,088; filtrado 24,510; colector salida 20,994; interconexión+spool 9,468; toma muestras 17,671; calidad 8,247; prover 6,779; plataforma/escalera 4,770; filtro FM 23,643. Útil como referencia de MO de terceros por skid. *(MEDITECNA/1. 320 - ULACT Los Toldos - Tecpetrol  MANO DE OBRA)*
+- Precios de MO por skid (USD): medición 68.620; colector entrada 26.088; filtrado 24.510; colector salida 20.994; interconexión+spool 9.468; toma muestras 17.671; calidad 8.247; prover 6.779; plataforma/escalera 4.770; filtro FM 23,643. Útil como referencia de MO de terceros por skid. *(MEDITECNA/1. 320 - ULACT Los Toldos - Tecpetrol  MANO DE OBRA)*
 - Servicio de solo MO: el plazo queda sujeto al acopio de materiales por parte del cliente. *(MEDITECNA/1. 320 - ULACT Los Toldos - Tecpetrol  MANO DE OBRA)*
 - Meditecna actúa de intermediario/contratista de Tecpetrol. *(MEDITECNA/1. 320 - ULACT Los Toldos - Tecpetrol  MANO DE OBRA)*
 - ITT vende MO pura por pulgada de soldadura y por kg de estructura: la Rev 1 bajó la pulgada de 52,65 a 16,46 USD y el kg de 2,93 a 2,67 (Rev 0 incluía prueba hidráulica; Rev 1 la quitó del alcance). *(SECIN/8. Fabricación Skid - Plataformas OT4735)*
 - Sirve como referencia de tarifas de venta de MO a terceros: ~16-25 USD/pulgada y ~2,7 USD/kg de estructura con grúa e END. *(SECIN/8. Fabricación Skid - Plataformas OT4735)*
 - No se cotiza total: cliente liquida por avance con cantidades reales; el precio queda atado a los planos 1046-RDA-P-IS-10850/10853. *(SECIN/8. Fabricación Skid - Plataformas OT4735)*
-- Oferta de solo MO de estructuras: USD 12.4 mil y 15.7 mil por estructura, con supervisor de calidad incluido pero sin END ni pintura. *(SECIN/9. Estructuras SK-0301)*
+- Oferta de solo MO de estructuras: USD 12,4 mil y 15,7 mil por estructura, con supervisor de calidad incluido pero sin END ni pintura. *(SECIN/9. Estructuras SK-0301)*
 - El cliente suministra los materiales y el plazo de 30 días depende de su recepción. *(SECIN/9. Estructuras SK-0301)*
 - Sirve de referencia de precio de MO de estructuras metálicas para skids. *(SECIN/9. Estructuras SK-0301)*
 - La MO de un cuadro/puente CBM roscado se subcontrato a Ledesma a USD 1.800 por cuadro (Ledesma pone MO, herramientas, SVO, ART; ITT pone materiales y las roscas en extremos). *(TAVAL/18- YPF Puente de inyeccion)*
-- El precio de venta de la MO (2.284,20) equivale a factor 1,269 sobre el costo Ledesma 1.800 (derivado, no figura en planilla); es menor al 1,35/1,40 habitual: verificar si el costo incluye otros conceptos. *(TAVAL/18- YPF Puente de inyeccion)*
+- El precio de venta de la MO (2.284,20) equivale a factor 1.269 sobre el costo Ledesma 1.800 (derivado, no figura en planilla); es menor al 1,35/1,40 habitual: verificar si el costo incluye otros conceptos. *(TAVAL/18- YPF Puente de inyeccion)*
 - Ledesma recomienda roscar NPT en torno: considerar ese costo aparte. *(TAVAL/18- YPF Puente de inyeccion)*
 - Mano de obra de terceros: 1.800 USD por cuadro vs 2.307,34 vendido por ITT, o sea relación 1,28 (inferida: no hay planilla de costo en la carpeta; el costo de 12.600 es 7 x 1.800). *(TAVAL/26- CAPSA Cotización OQ32673 Puente AIB)*
 - El tercero recomienda hacer las roscas NPT con torno; ITT puso los materiales y las roscas en extremos, que el presupuesto de Ledesma no cubre (posible costo no incluido en la relación 1,28). *(TAVAL/26- CAPSA Cotización OQ32673 Puente AIB)*
@@ -270,6 +270,6 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - Rev 1 aumentó 10% todos los renglones el mismo día que se presentó (21-22/07/2025); el cliente pidió mejor precio y bonificación por adjudicación total. *(Sacde/5- ESTRUCTURAS - SOPORTE LINEA FLARE)*
 - Estructura menor: MO 63%, materiales 28%, transporte 8% del precio de Rev 1; transporte a Neuquén cotizado aparte. *(Sacde/5- ESTRUCTURAS - SOPORTE LINEA FLARE)*
 - Licitación con cierre 18/07 15 hs y prórroga hasta 21/07 15 hs; conviene pedir prórroga con anticipación. *(Sacde/5- ESTRUCTURAS - SOPORTE LINEA FLARE)*
-- Producto de Taval vendido a Tecpetrol con vendedor ITT (Carlos Alfonso): el presupuesto Taval da 10,063.05 por unidad, y la oferta ITT 0-394 muestra el mismo unitario pero total 63,944.85. *(TAVAL/14-Tecpetrol S.A. Sourcing Event PR #44907 #10804)*
-- Precio por puente ~10.1-10.7k USD con entrega parcial 45/60 días. *(TAVAL/14-Tecpetrol S.A. Sourcing Event PR #44907 #10804)*
+- Producto de Taval vendido a Tecpetrol con vendedor ITT (Carlos Alfonso): el presupuesto Taval da 10.063,05 por unidad, y la oferta ITT 0-394 muestra el mismo unitario pero total 63.944,85. *(TAVAL/14-Tecpetrol S.A. Sourcing Event PR #44907 #10804)*
+- Precio por puente ~10,1-10,7k USD con entrega parcial 45/60 días. *(TAVAL/14-Tecpetrol S.A. Sourcing Event PR #44907 #10804)*
 - Participación vía evento de sourcing de Tecpetrol (portal). *(TAVAL/14-Tecpetrol S.A. Sourcing Event PR #44907 #10804)*

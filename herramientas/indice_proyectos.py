@@ -194,8 +194,8 @@ def de_ficha(d, anio):
         "numero_oferta": d.get("numero_oferta") or "", "diametros": " ".join(f"{x:g}" for x in diametros(t)),
         "series": " ".join(series(t)), "material": " ".join(mat), "union": " ".join(union), "ensayos": " ".join(ens),
         "cantidad_principal": num(principal.get("cantidad")) if principal else "",
-        "precio_unitario_principal": num(principal.get("precio_unitario")) if principal else "",
-        "monto": num(d.get("monto_total_ofertado")) or "", "moneda": d.get("moneda") or "", "costo": num(d.get("costo_total")) or "",
+        "precio_unitario_principal": r2(num(principal.get("precio_unitario"))) if principal else "",
+        "monto": r2(num(d.get("monto_total_ofertado"))) or "", "moneda": d.get("moneda") or "", "costo": r2(num(d.get("costo_total"))) or "",
         "factor": num(d.get("factor_venta")) or "", "plazo_dias": num(d.get("plazo_dias")) or "",
         "resultado": d.get("resultado") or "", "tiene_planilla_costo": "si" if planilla else "",
         "proveedores": len(d.get("proveedores") or []), "tiene_oferta_enviada": "si" if enviada else "",
@@ -203,6 +203,11 @@ def de_ficha(d, anio):
         "confianza": d.get("confianza") or "", "palabras": " ".join(palabras(t)),
         "ficha": f"conocimiento/fichas_{anio}/", "carpeta_textos": f"fuentes_originales/ofertas_texto/{carpeta}",
     }
+
+
+def r2(v):
+    """Montos y precios con 2 decimales (decisión de Matías, 29-10-2026)."""
+    return round(v, 2) if isinstance(v, (int, float)) and not isinstance(v, bool) else v
 
 
 def de_cotizador(ruta):

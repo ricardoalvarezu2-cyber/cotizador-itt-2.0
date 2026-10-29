@@ -221,7 +221,7 @@ const Ficha = (() => {
       if (k) {
         const m = d.match(/esp\.?\s*(\d+(?:[.,]\d+)?)\s*mm/), e = m ? parseFloat(m[1].replace(",", ".")) / 1000 : 0.0045;
         const rho = /dielectr|aramid|fibra|nbr/.test(d) ? 1800 : 7900, di = k[1], de = k[1] + 0.05;
-        return [3.14159265 / 4 * (de ** 2 - di ** 2) * e * rho, null, `APROXIMADO: junta anillo × ${rho} kg/m³`];
+        return [3.14159265 / 4 * (de ** 2 - di ** 2) * e * rho, null, `APROXIMADO: junta anillo × ${g2(rho)} kg/m³`];
       }
     }
     return [null, null, ""];
@@ -243,7 +243,7 @@ const Ficha = (() => {
         const l = norm(it.descripcion + " " + (it.especificacion || "")).match(/(\d[\d.]*)\s?mm/);
         if (!l) return [null, null, "niple sin largo"];
         const L = parseFloat(l[1].replace(/\./g, "")) / 1000;
-        return [kg * L, m2 * L, `caño ${dn}" sch ${sch} × ${L} m`];
+        return [kg * L, m2 * L, `caño ${dn}" sch ${sch} × ${g2(L)} m`];
       }
       return [kg, m2, `caño ${dn}" sch ${sch} por metro`];
     }

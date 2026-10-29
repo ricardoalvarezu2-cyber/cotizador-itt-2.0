@@ -188,7 +188,7 @@ def main():
         if f.get("_precio") and clave_p not in vistos and f["dn_pulg"] != "":
             vistos.add(clave_p)
             con_precio.append({"codigo_taval": f["codigo_taval"], "tipo": f["tipo"], "dn_pulg": f["dn_pulg"], "serie": f["serie"], "extremos": f["extremos"],
-                               "material": f["material"], "trim": f["trim"], "kg": f["kg"], "precio_lista30_usd": f["_precio"],
+                               "material": f["material"], "trim": f["trim"], "kg": f["kg"], "precio_lista30_usd": round(f["_precio"], 2),
                                "factor": FACTOR_TAVAL, "precio_neto_usd": round(f["_precio"] * FACTOR_TAVAL, 2), "hoja": f["hoja"], "nota": f["nota"]})
     for f in filas:
         f.pop("_precio", None)

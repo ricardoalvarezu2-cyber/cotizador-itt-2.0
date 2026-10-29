@@ -744,7 +744,7 @@
    "descripcion": "Completar media tira de 6 m de la pos 21 (compra mínima; sobrante a stock)",
    "cantidad": 4.2,
    "unidad": "m",
-   "especificacion": "1 tramo de 6 m para 1.8 m (con tira de 12 m el sobrante superaba 80%)",
+   "especificacion": "1 tramo de 6 m para 1,8 m (con tira de 12 m el sobrante superaba 80%)",
    "fuentes": [
     {
      "tipo": "lista",
@@ -824,7 +824,7 @@
    "descripcion": "Completar media tira de 6 m de la pos 23 (compra mínima; sobrante a stock)",
    "cantidad": 3.75,
    "unidad": "m",
-   "especificacion": "1 tramo de 6 m para 2.25 m (con tira de 12 m el sobrante superaba 80%)",
+   "especificacion": "1 tramo de 6 m para 2,25 m (con tira de 12 m el sobrante superaba 80%)",
    "fuentes": [
     {
      "tipo": "ant",
@@ -942,7 +942,7 @@
    "pos": "MO",
    "grupo": "mo",
    "descripcion": "Soldaduras: 36 a tope + SW y olets (calculado)",
-   "especificacion": "pos 21, 22, 23, 24: caño por metro; sus juntas se cuentan en los extremos BW de accesorios y bridas (una junta cada uno); pos 5: 18 extremo(s) BW de taller (1 por unidad × 12 × 1.5 por el caño) × 3\" × 1.0000; pos 6: 9 extremo(s) BW de taller (1 por unidad × 6 × 1.5 por el caño) × 6\" × 1.0000; pos 7: 1.5 extremo(s) BW de taller (1 por unidad × 1 × 1.5 por el caño) × 8\" × 1.0000; pos 9: 13.5 extremo",
+   "especificacion": "pos 21, 22, 23, 24: caño por metro; sus juntas se cuentan en los extremos BW de accesorios y bridas (una junta cada uno); pos 5: 18 extremo(s) BW de taller (1 por unidad × 12 × 1,5 por el caño) × 3\" × 1,0000; pos 6: 9 extremo(s) BW de taller (1 por unidad × 6 × 1,5 por el caño) × 6\" × 1,0000; pos 7: 1,5 extremo(s) BW de taller (1 por unidad × 1 × 1,5 por el caño) × 8\" × 1,0000; pos 9: 13,5 extremo",
    "cantidad": 195.5,
    "unidad": "pulg",
    "fuentes": [
@@ -961,7 +961,7 @@
    "pos": "PIN",
    "grupo": "servicio",
    "descripcion": "Granallado y pintura (m² calculados)",
-   "especificacion": "9.95 m² exteriores: caños y niples 3.4 + bridas, accesorios y válvulas (largo equivalente) 6.4 + envolvente 0.1 + skid ≈ 10,7 m² (25 m de UPN 120)",
+   "especificacion": "9,95 m² exteriores: caños y niples 3,4 + bridas, accesorios y válvulas (largo equivalente) 6,4 + envolvente 0,1 + skid ≈ 10,7 m² (25 m de UPN 120)",
    "cantidad": 20.652,
    "unidad": "m2",
    "fuentes": [
@@ -981,7 +981,7 @@
    "pos": "RX",
    "grupo": "servicio",
    "descripcion": "Radiografía 100% de las juntas a tope y tintas penetrantes en SW y olets",
-   "especificacion": "135 placas chicas, 0 grandes, 4.00 servicio(s) de RX y 1.00 de LP por equipo (servicios repartidos en 1 equipos)",
+   "especificacion": "135 placas chicas, 0 grandes, 4,00 servicio(s) de RX y 1,00 de LP por equipo (servicios repartidos en 1 equipos)",
    "cantidad": 1,
    "unidad": "gl",
    "fuentes": [
@@ -1008,7 +1008,7 @@
    "pos": "HH",
    "grupo": "mo",
    "descripcion": "Horas de ingeniería (estimadas del antecedente)",
-   "especificacion": "30 h por skid · mediana de 27.0, 200.0, 30.0 h por unidad (repartidas en la serie)",
+   "especificacion": "30 h por skid · mediana de 27,0, 200,0, 30,0 h por unidad (repartidas en la serie)",
    "cantidad": 30.0,
    "unidad": "h",
    "fuentes": [
@@ -1028,7 +1028,7 @@
    "pos": "CAL",
    "grupo": "mo",
    "descripcion": "Horas de calidad y dossier (estimadas del antecedente)",
-   "especificacion": "70 h por skid · mediana de 70.0, 90.0, 45.0 h por unidad (repartidas en la serie)",
+   "especificacion": "70 h por skid · mediana de 70,0, 90,0, 45,0 h por unidad (repartidas en la serie)",
    "cantidad": 70.0,
    "unidad": "h",
    "fuentes": [
@@ -1048,7 +1048,7 @@
    "pos": "ARM",
    "grupo": "mo",
    "descripcion": "Horas de montaje en planta (armado, movimientos, prueba hidráulica) (estimadas del antecedente)",
-   "especificacion": "215.1 h por skid · mediana de 135 h × 0.828, 535.5 h × 0.67, 130.5 h × 1.648 (horas por unidad × tamaño)",
+   "especificacion": "215,1 h por skid · mediana de 135 h × 0,828, 535,5 h × 0,67, 130,5 h × 1,648 (horas por unidad × tamaño)",
    "cantidad": 215.1,
    "unidad": "h",
    "fuentes": [

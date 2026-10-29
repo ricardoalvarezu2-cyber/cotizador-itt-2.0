@@ -162,7 +162,7 @@ const Documentos = (() => {
           const c = j + 1;
           const st = c === 4 || c === 6 ? INP : c === 8 ? { fill: { fgColor: { rgb: TF[s.tipo] || "FFFFFF" } } } :
             c === 17 ? { fill: { fgColor: { rgb: { igual: "DDF1E4", similar: "FBEFD6", sin_ref: "F8E1DE" }[s.coincide] || "FFFFFF" } } } : null;
-          const z = [6, 7, 15, 16].includes(c) ? U : { 11: "dd-mm-yyyy", 13: "#,##0.00", 14: "#,##0.00" }[c];
+          const z = [6, 7, 15, 16].includes(c) ? U : c === 4 ? (Number.isInteger(v) ? "#,##0" : "#,##0.0###") : { 11: "dd-mm-yyyy", 13: "#,##0.00", 14: "#,##0.00" }[c];
           put(w, A(c, i), v, st, z);
         });
       });
@@ -170,7 +170,7 @@ const Documentos = (() => {
       put(w, A(3, n), `Subtotal por ${eq.singular}`, TOT);
       put(w, A(7, n), { f: `SUM(G2:G${n - 1})` }, TOT, U); put(w, A(16, n), { f: `SUM(P2:P${n - 1})` }, TOT, U);
       let k = n + 2;
-      for (const it of items) for (const a of it.fuentes.slice(1)) put(w, A(3, k++), `Alternativa pos ${it.pos}: USD ${a.precio} · ${a.proveedor} · ${a.origen} · ${fecha(a.fecha)} (${TIPOS[a.tipo]})`, GRIS);
+      for (const it of items) for (const a of it.fuentes.slice(1)) put(w, A(3, k++), `Alternativa pos ${it.pos}: USD ${numg(a.precio)} · ${a.proveedor} · ${a.origen} · ${fecha(a.fecha)} (${TIPOS[a.tipo]})`, GRIS);
       w["!autofilter"] = { ref: `A1:R${Math.max(2, n - 1)}` };
       X.utils.book_append_sheet(wb, w, nombre);
     };
@@ -182,8 +182,8 @@ const Documentos = (() => {
       [11, 13, 12, 16, 12, 40, 40, 40]);
     idx.forEach((r, k) => {
       const i = k + 2;
-      put(x, A(1, i), serial(r.mes + "-01"), null, "mm-yyyy"); put(x, A(2, i), r.ipc, null, "#,##0.00"); put(x, A(3, i), r.dolar, null, "#,##0.00");
-      put(x, A(4, i), r.local, null, "#,##0.00"); put(x, A(5, i), r.cpi, null, "#,##0.00"); put(x, A(6, i), r.oi); put(x, A(7, i), r.od); put(x, A(8, i), r.oc);
+      put(x, A(1, i), serial(r.mes + "-01"), null, "mm-yyyy"); put(x, A(2, i), r.ipc, null, "#,##0.0##"); put(x, A(3, i), r.dolar, null, "#,##0.00");
+      put(x, A(4, i), r.local, null, "#,##0.0##"); put(x, A(5, i), r.cpi, null, "#,##0.0##"); put(x, A(6, i), r.oi); put(x, A(7, i), r.od); put(x, A(8, i), r.oc);
     });
     X.utils.book_append_sheet(wb, x, "Índices");
     if ((cot.desvios || []).length) {
@@ -215,6 +215,14 @@ const Documentos = (() => {
     const filas = [[`PEDIDO DE COTIZACIÓN DE MATERIALES · ${cot.codigo}`], [`${cot.titulo || ""} · ${N} ${eqTxt}`], ["Origen de la lista", tr.fuente]];
     const estilos = {};
     const marca = (r, c, s) => { estilos[X.utils.encode_cell({ r, c })] = s; };
+    // Números como celdas numéricas, nunca texto (Matías, 29-10-2026). Del documento se convierte solo lo que es un
+    // número sin ambigüedad (numeroDe: 1.500 · 12,5); Pos/ID/código quedan como texto. Formato según la columna.
+    const CLAVE = /^(pos|id|c[oó]d|art)/i;
+    const docNum = (v, col) => typeof v === "string" && !CLAVE.test(col) && numeroDe(v) != null ? numeroDe(v) : v;
+    const zDe = (col, v) => /precio|usd/i.test(col) ? "#,##0.00" : /serie|sch|clase/i.test(col) && Number.isInteger(v) ? "0" : Number.isInteger(v) ? "#,##0" : "#,##0.0###";
+    const formatos = {};
+    const fila = (vals, cab, r) => vals.map((v, c) => { const x = c < cab.length ? docNum(v, cab[c]) : v;
+      if (typeof x === "number") formatos[X.utils.encode_cell({ r, c })] = zDe(cab[c] || "", x); return x; });
     let kgTot = 0;
     for (const t of tr.tablas) {
       filas.push([], [t.titulo]);
@@ -230,10 +238,10 @@ const Documentos = (() => {
           const k = kgU[pos] != null ? Math.round(kgU[pos] * (q + qe) * 10) / 10 : "—";
           if (typeof k === "number") kgTot += k;
           const desc = its[0].plano?.descripcion || "";
-          calc = [Math.round((q + qe) * 1000) / 1000, u, k, qe ? `${q} ${u} para ${N} ${eqTxt} + ${qe} ${u} para completar la tira`
-            : /medida del dibujo|no indica/i.test(desc) ? "el documento no da cantidad: medida del dibujo (±20%)" : N === 1 ? "documento" : `documento × ${N}`];
+          calc = [Math.round((q + qe) * 1000) / 1000, u, k, qe ? `${numg(q)} ${u} para ${numg(N)} ${eqTxt} + ${numg(qe)} ${u} para completar la tira`
+            : /medida del dibujo|no indica/i.test(desc) ? "el documento no da cantidad: medida del dibujo (±20%)" : N === 1 ? "documento" : `documento × ${numg(N)}`];
         }
-        const r = filas.length; filas.push([...f, ...calc, "", "", "", ""]);
+        const r = filas.length; filas.push(fila([...f, ...calc, "", "", "", ""], cab, r));
         for (let c = t.columnas.length; c < t.columnas.length + 8; c++) marca(r, c, c < t.columnas.length + 4 ? CG : CA);
       }
     }
@@ -243,13 +251,14 @@ const Documentos = (() => {
       filas.push([], ["ADICIONALES (no figuran en el documento; los agrega ITT)"]);
       const cab = ["Pos", "Descripción", "Especificación", "Cant. a comprar", "Unidad", "Kg aprox.", "Por qué", "Proveedor", "Precio unit. USD", "Plazo", "Anotaciones"];
       const rc = filas.length; filas.push(cab); cab.forEach((_, c) => marca(rc, c, c < 7 ? GR : OC));
-      for (const i of adic) { const r = filas.length; filas.push([i.pos, i.descripcion, i.especificacion || "", Number(i.cantidad) * N, i.unidad, "—", "compra mínima o nota del documento", "", "", "", ""]);
+      for (const i of adic) { const r = filas.length; filas.push(fila([i.pos, i.descripcion, i.especificacion || "", Number(i.cantidad) * N, i.unidad, "—", "compra mínima o nota del documento", "", "", "", ""], cab, r));
         for (let c = 7; c < 11; c++) marca(r, c, CA); }
     }
-    filas.push([], [`Peso aproximado de lo que tiene tabla: ${Math.round(kgTot)} kg`],
+    filas.push([], [`Peso aproximado de lo que tiene tabla: ${num(kgTot, 0)} kg`],
       ["Columnas azules: tal cual el documento. Grises: cálculo de ITT. Amarillas: para que Compras complete (proveedor, precio sin IVA, plazo y anotaciones)."]);
     const ws = X.utils.aoa_to_sheet(filas);
     for (const [a, s] of Object.entries(estilos)) { ws[a] = ws[a] || { t: "s", v: "" }; ws[a].s = s; }
+    for (const [a, z] of Object.entries(formatos)) if (ws[a]) ws[a].z = z;
     ws.A1.s = { font: { bold: true, sz: 14, color: { rgb: "1D5F86" } } };
     ws["!cols"] = [6, 46, 9, 8, 8, 8, 20, 11, 8, 10, 30, 22, 13, 12, 45].map(w => ({ wch: w }));
     X.utils.book_append_sheet(wb, ws, "Materiales");
@@ -260,6 +269,7 @@ const Documentos = (() => {
     const ref = X.utils.aoa_to_sheet([["Pos", "Descripción", "Proveedor de referencia", "Último precio USD", "Fecha", "Tipo", "Coincide", "Diferencia"],
       ...cot.items.map(i => { const s = i.fuentes[0]; return [i.pos, i.descripcion, s.proveedor, Number(s.precio) || "SIN PRECIO", fecha(s.fecha), TIPOS[s.tipo] || s.tipo, COINC[s.coincide] || s.coincide || "", s.diferencia || ""]; }),
       [], ["Uso interno: no mandar al proveedor."]]);
+    cot.items.forEach((i, k) => { const c = ref[X.utils.encode_cell({ r: k + 1, c: 3 })]; if (c && c.t === "n") c.z = "#,##0.00"; });
     ref["!cols"] = [7, 45, 40, 13, 11, 12, 12, 50].map(w => ({ wch: w }));
     X.utils.book_append_sheet(wb, ref, "Referencias internas");
     return new Blob([X.write(wb, { type: "array", bookType: "xlsx" })], { type: "application/octet-stream" });
@@ -402,7 +412,7 @@ const Documentos = (() => {
   function filasPlano(cot) {
     return cot.items.filter(i => i.grupo === "material" && !/b$|c$/.test(String(i.pos))).map(i => {
       const pl = i.plano || {};
-      return [i.pos, i.descripcion + (pl.modelo ? ` (${pl.modelo})` : ""), pl.diametro || "", pl.serie_sch || "", pl.material || "", pl.extremos || "", String(i.cantidad)];
+      return [i.pos, i.descripcion + (pl.modelo ? ` (${pl.modelo})` : ""), pl.diametro || "", pl.serie_sch || "", pl.material || "", pl.extremos || "", numg(i.cantidad)];
     });
   }
 

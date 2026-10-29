@@ -22,7 +22,7 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - Cotización urgente: cliente adelantó la fecha de presentación y hubo que obtener autorización interna para entregar con menos antelación que el estándar *(FLARGENT/02 - Calentador Indirecto EAP-3541 EPF2)*
 - El rolado y punteado de virolas se terciariza (cilindrado Sandri); el detalle de precio no está en el texto disponible *(FLARGENT/02 - Calentador Indirecto EAP-3541 EPF2)*
 - El hito de pago incluye anticipo 30% con caución de fiel cumplimiento 10%, y pago ligado a compra de casquetes y bridas, lo que indica materiales principales comprados al inicio *(FLARGENT/02 - Calentador Indirecto EAP-3541 EPF2)*
-- Precio ofertado (USD 75,342.63) levemente superior al presupuesto interno 138 (USD 75,217.41 sin IVA): conviene unificar valores *(FLARGENT/02 - Calentador Indirecto EAP-3541 EPF2)*
+- Precio ofertado (USD 75.342,63) levemente superior al presupuesto interno 138 (USD 75.217,41 sin IVA): conviene unificar valores *(FLARGENT/02 - Calentador Indirecto EAP-3541 EPF2)*
 - Se recomienda que el cliente provea material importado por riesgo de licencias y ausencia de multas por mora *(FLARGENT/02 - Calentador Indirecto EAP-3541 EPF2)*
 - Precio de venta USD 60.931 para un calentador indirecto de 500.000 BTU/h con partes de proveedores múltiples; sirve de referencia para equipos tipo Camuzzi. *(NAKONSUR/1- PRESUPUESTO VALVULA REGULADORA - CALENTADOR INDIRECTO DE GAS)*
 - Para la compra se cotizaron en paralelo 3 quemadores de 250.000 y 1 de 500.000 BTU/h: este pedido forma parte de una familia (calentadores Camuzzi) con otras potencias. *(NAKONSUR/1- PRESUPUESTO VALVULA REGULADORA - CALENTADOR INDIRECTO DE GAS)*
@@ -42,7 +42,7 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - Presión, orificio y conexión de quemadores 'a definir según ingeniería de detalle': riesgo de variación de alcance *(TAVAL/67 - Inarteco - Enerfe - Calentadores indirectos entre 50000 y 370000 btu h, 20 unidades)*
 - Faltan precios de recipiente/serpentín: costear aparte (cotizaciones de Ledesma y Riva escaneadas sin texto) *(TAVAL/67 - Inarteco - Enerfe - Calentadores indirectos entre 50000 y 370000 btu h, 20 unidades)*
 - Hay opcional de interruptor de nivel neumático a USD 820 + imp. por unidad *(TAVAL/67 - Inarteco - Enerfe - Calentadores indirectos entre 50000 y 370000 btu h, 20 unidades)*
-- Quemadores EQA para calentador indirecto cuestan USD ~3.9-4.2 mil c/u sin gran diferencia entre 50 y 370 kBTU/h *(TAVAL/71- Hytech Clentadores indirectos entre 50000 y 250000 btu h, 4 modelos)*
+- Quemadores EQA para calentador indirecto cuestan USD ~3,9-4,2 mil c/u sin gran diferencia entre 50 y 370 kBTU/h *(TAVAL/71- Hytech Clentadores indirectos entre 50000 y 250000 btu h, 4 modelos)*
 - El manifold de gas de regulación (USD 12.650 lista, 20 un) pesa más que el quemador y es el ítem dominante del costo de proveedores (EQA subtotal 299.623,50 s/IVA) *(TAVAL/71- Hytech Clentadores indirectos entre 50000 y 250000 btu h, 4 modelos)*
 - EQA otorga 10% de descuento sobre lista en esta cotización; plazo 30/45 días hábiles, pago anticipado *(TAVAL/71- Hytech Clentadores indirectos entre 50000 y 250000 btu h, 4 modelos)*
 - Dos cotizaciones (Ledesma, Riva) están escaneadas: conviene revisarlas a mano para costo de armado del calentador *(TAVAL/71- Hytech Clentadores indirectos entre 50000 y 250000 btu h, 4 modelos)*
@@ -59,7 +59,7 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - Total sin IVA = suma de los dos ítems (811.564,60). *(PECOM/5 Separador trifasico #300)*
 - Mano de obra de armado/soldadura de un separador chico Sch 40 AC: USD 1.050 (Ledesma); excluye materiales, PH, pintura y montaje. *(PHOENIX/2 - Separador canalización vapores regeneradora TEG)*
 - Materiales (caños, bridas, deflector) y pruebas hidráulicas deben cotizarse aparte. *(PHOENIX/2 - Separador canalización vapores regeneradora TEG)*
-- La mano de obra de Quesada se cotiza por pulgada de diámetro (USD 5,700 con patas), lo que escala con el diámetro del equipo; no incluye arenado y pintura, END ni PH. *(TAVAL/52 - CAPEX - Degasser 126437319)*
+- La mano de obra de Quesada se cotiza por pulgada de diámetro (USD 5.700 con patas), lo que escala con el diámetro del equipo; no incluye arenado y pintura, END ni PH. *(TAVAL/52 - CAPEX - Degasser 126437319)*
 - Los materiales se compraron en partes: virolas calandradas (Sandri), casquetes (Stocco) y difusor de ARMK; hay que sumar la ingeniería del difusor. *(TAVAL/52 - CAPEX - Degasser 126437319)*
 - El cliente es una empresa vinculada (Taval): proyecto CAPEX interno con precios de proveedores competitivos. *(TAVAL/52 - CAPEX - Degasser 126437319)*
 
@@ -83,11 +83,11 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - Carpeta sin información de precios: no sirve como referencia numérica. *(PAN AMERICAN ENERGY/65 - Filtros Canasto 12)*
 - Los filtros canasto llevan PSV y transmisor de presion diferencial local (Yokogawa/ABB) como compras de terceros *(Sacde/21 - RFQ 3158 - TGS - BOP Almacenamiento – FILTROS CANASTO)*
 - MO de armado de filtro FM 2" #300 ~USD 800 (Ledesma), sin PH/END/pintura *(Sacde/21 - RFQ 3158 - TGS - BOP Almacenamiento – FILTROS CANASTO)*
-- Factores por rubro en la planilla: MO 1.4, materiales 1.2, válvulas Taval 1.0, repuestos 1.2; cotizar 5 filtros FM por ~55 kUSD (FM8 ~17.9k, FM3 ~7.5k, FM2 ~6k c/u) *(TAVAL/40- INARTECO FILTROS LIC 9333)*
-- La mano de obra se tercerizó: la comparativa de 4 talleres fue de 6.75k (Ledesma, sin consumibles/PH, +1.64k a valorizar) a 19.4k USD (MCD) por lote; conviene comparar alcances antes de elegir *(TAVAL/40- INARTECO FILTROS LIC 9333)*
-- Costo dominante en FM8: tapa cierre rápido (8.4k USD) y caño/casquetes de gran espesor; Futura 90 días de plazo, condiciona entrega *(TAVAL/40- INARTECO FILTROS LIC 9333)*
+- Factores por rubro en la planilla: MO 1,4, materiales 1,2, válvulas Taval 1,0, repuestos 1,2; cotizar 5 filtros FM por ~55 kUSD (FM8 ~17,9k, FM3 ~7,5k, FM2 ~6k c/u) *(TAVAL/40- INARTECO FILTROS LIC 9333)*
+- La mano de obra se tercerizó: la comparativa de 4 talleres fue de 6,75k (Ledesma, sin consumibles/PH, +1,64k a valorizar) a 19,4k USD (MCD) por lote; conviene comparar alcances antes de elegir *(TAVAL/40- INARTECO FILTROS LIC 9333)*
+- Costo dominante en FM8: tapa cierre rápido (8,4k USD) y caño/casquetes de gran espesor; Futura 90 días de plazo, condiciona entrega *(TAVAL/40- INARTECO FILTROS LIC 9333)*
 - Varios precios de la planilla eran estimados (refuerzos poncho, manómetros diferenciales 500 USD) a la espera de cotización *(TAVAL/40- INARTECO FILTROS LIC 9333)*
-- La OC adjudicada (55,103.12) quedó levemente por debajo de la oferta (55,297.47): FM2 y FM3 con precio algo distinto *(TAVAL/40- INARTECO FILTROS LIC 9333)*
+- La OC adjudicada (55.103,12) quedó levemente por debajo de la oferta (55.297,47): FM2 y FM3 con precio algo distinto *(TAVAL/40- INARTECO FILTROS LIC 9333)*
 - Un filtro cónico temporal se fabrica con malla (mesh), chapa inox perforada y conos rolados por terceros *(TAVAL/46 - Roma - Filtro cónico temporal 10)*
 - La MO de armado del filtro 20" se terceriza a USD 3.400 c/u + IVA, pagadera a 5 días, validez 15 días *(TAVAL/74- YPF G-65918-RV-FILTRO CANASTO CILP)*
 - Hay que cotizar aparte PH, rodamiento del pescante, torneado y pintura *(TAVAL/74- YPF G-65918-RV-FILTRO CANASTO CILP)*
@@ -107,10 +107,10 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - Bridas A105 900# nacionales (Francovigh): 5% de bonificación si se adjudica todo y mínimo USD 30.000; pedir el lote completo. *(PAMPA ENERGIA/6- Licitación contrato marco Skid de Produccion Sierra Chata)*
 - Tapas tool-less 16" CL900 importadas (Sypris/FTS): 70 días más aprobación de planos, EXW USA, 50% anticipo, validez 10 días; sumar flete, aranceles y U-Stamp (USD 500 la primera, 150 cada adicional). *(PAMPA ENERGIA/6- Licitación contrato marco Skid de Produccion Sierra Chata)*
 - Validez de proveedores muy corta (7 a 15 días) frente a un contrato marco: riesgo de actualización. *(PAMPA ENERGIA/6- Licitación contrato marco Skid de Produccion Sierra Chata)*
-- Contrato marco por volumen: factor 1.35 sobre materiales/MO/instrumentos/transporte, valvulas Taval y seguro de caucion a factor 1.0, y 3% de descuento por cantidad ya incluido (margen efectivo global ~21,6% sobre venta: 3.119k vs costo 2.447k) *(PAMPA ENERGIA/7- Licitacion contrato Marco Skid PAD Rincon de Aranda)*
+- Contrato marco por volumen: factor 1,35 sobre materiales/MO/instrumentos/transporte, valvulas Taval y seguro de caucion a factor 1,0, y 3% de descuento por cantidad ya incluido (margen efectivo global ~21,6% sobre venta: 3.119k vs costo 2.447k) *(PAMPA ENERGIA/7- Licitacion contrato Marco Skid PAD Rincon de Aranda)*
 - Costos unitarios clave: puente 3" #300 costo USD 8.926 (venta 11.185); colector 6 pozos costo USD 68.091 (venta 88.268); instrumentos ABB/Rosemount son ~26% del costo del puente y marcan el plazo critico *(PAMPA ENERGIA/7- Licitacion contrato Marco Skid PAD Rincon de Aranda)*
 - MO de terceros (Ledesma) cotizada por unidad, sin PH, END ni pintura: se cargan aparte (pintura USD 50/m2, END por % de costuras) *(PAMPA ENERGIA/7- Licitacion contrato Marco Skid PAD Rincon de Aranda)*
-- Valvulas 3 vias actuadas son item de largo plazo (12-20 semanas) y alto costo (USD 3.6-4.4k c/u); el plazo ofrecido de 70 dias depende de instrumentos *(PAMPA ENERGIA/7- Licitacion contrato Marco Skid PAD Rincon de Aranda)*
+- Valvulas 3 vias actuadas son item de largo plazo (12-20 semanas) y alto costo (USD 3,6-4,4k c/u); el plazo ofrecido de 70 dias depende de instrumentos *(PAMPA ENERGIA/7- Licitacion contrato Marco Skid PAD Rincon de Aranda)*
 - Transporte a obra y seguro de caucion se costean aparte; la oferta formal es EXW con transporte opcional (USD 2.880 por viaje) *(PAMPA ENERGIA/7- Licitacion contrato Marco Skid PAD Rincon de Aranda)*
 - La oferta rev.C (USD 293.727,39) se adjudicó a USD 287.852,86: ~2% menos; el precio por skid (100.748,50 + anticipo 43.177,93) sale de la hoja Pie de Venta de la planilla de costos *(Sacde/13- 3029-SE-CPF-061_ SKID CUADRO VALVULAS BOMBAS BOOSTER   2321-2322)*
 - El cliente provee todo el piping; ITT cotiza ingeniería, estructura (bastidor, bandeja, percha), MO de soldadura con RX, pintura, END, aislación y trazado de transmisores, junction boxes *(Sacde/13- 3029-SE-CPF-061_ SKID CUADRO VALVULAS BOMBAS BOOSTER   2321-2322)*
@@ -172,17 +172,17 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - Para un manifold cerrado 10K, la valvula esclusa es el item principal: Taval cotizo USD 2.968 tras negociar (de 3.957) *(PHOENIX/1 - Manifold Cerrado V Esclusa 3 116 - 10 kpsi)*
 - MO de armado es chica (USD 480) y no incluye prueba hidraulica ni pintura *(PHOENIX/1 - Manifold Cerrado V Esclusa 3 116 - 10 kpsi)*
 - Se pidieron cotizaciones a 6+ proveedores para materiales 10K API 6A y manguera urgente *(PHOENIX/1 - Manifold Cerrado V Esclusa 3 116 - 10 kpsi)*
-- Factores: MO skid 1.5, materiales varios 1.2, servicio END 1.5; factor global ~1.36. *(TAVAL/41- CIA MINERA DE ORIENTE)*
+- Factores: MO skid 1,5, materiales varios 1,2, servicio END 1,5; factor global ~1,36. *(TAVAL/41- CIA MINERA DE ORIENTE)*
 - Muchos componentes quedaron en 0 por falta de información: el precio es solo estructura+cañería, riesgo de subcotizar si se agregan instrumentos. *(TAVAL/41- CIA MINERA DE ORIENTE)*
-- Seguro 0.2% (9.5 USD) incorporado. *(TAVAL/41- CIA MINERA DE ORIENTE)*
+- Seguro 0,2% (9,5 USD) incorporado. *(TAVAL/41- CIA MINERA DE ORIENTE)*
 - La carpeta solo contiene el pedido (MR + condiciones generales del cliente); no hay oferta, costos ni proveedores, por lo que no sirve para referencia de precios *(TAVAL/48- A&A Fluid control- Manifold)*
 - Los pedidos de Alpha Lithium exigen declaración de excepciones/desvíos y lista de sub-proveedores: si faltan se asume aceptación total de la MR *(TAVAL/48- A&A Fluid control- Manifold)*
 - Diseño del manifold (longitud/altura) se define con la propuesta del proveedor: conviene cotizar con alternativas de caudalímetro e instrumentación explícitas *(TAVAL/48- A&A Fluid control- Manifold)*
 - Intermediario A&A Fluids Control pide cotizar a su nombre y plazo estimado desde confirmación; cierre de evento 06/03/2026 *(TAVAL/48- A&A Fluid control- Manifold)*
-- Factor 1.35 uniforme sobre materiales y MO, 1.0 sobre válvulas Taval: margen ~26% sobre venta *(TAVAL/49 - A&A Fluid Control - Manifolds Tecpetrol - Salar El Tolillar)*
-- El manifold inyector es 54% más caro por la válvula reguladora 6" full inox (~19.5 kUSD estimada por oferta telefónica Doma) *(TAVAL/49 - A&A Fluid Control - Manifolds Tecpetrol - Salar El Tolillar)*
+- Factor 1,35 uniforme sobre materiales y MO, 1,0 sobre válvulas Taval: margen ~26% sobre venta *(TAVAL/49 - A&A Fluid Control - Manifolds Tecpetrol - Salar El Tolillar)*
+- El manifold inyector es 54% más caro por la válvula reguladora 6" full inox (~19,5 kUSD estimada por oferta telefónica Doma) *(TAVAL/49 - A&A Fluid Control - Manifolds Tecpetrol - Salar El Tolillar)*
 - Plazo 90 días depende de válvulas 6" (60/70 días); ingeniería y 100% END incluidos *(TAVAL/49 - A&A Fluid Control - Manifolds Tecpetrol - Salar El Tolillar)*
-- Mano de obra ITT solo ~2.0-2.2 kUSD por manifold: el costo es casi todo material/instrumentos *(TAVAL/49 - A&A Fluid Control - Manifolds Tecpetrol - Salar El Tolillar)*
+- Mano de obra ITT solo ~2,0-2,2 kUSD por manifold: el costo es casi todo material/instrumentos *(TAVAL/49 - A&A Fluid Control - Manifolds Tecpetrol - Salar El Tolillar)*
 - Tapas de cierre rápido MTV: 6" USD 1.085, 8" USD 1.630, 12" USD 2.480 (Sch a definir, ASTM A105N) *(TAVAL/60 - Inarteco - ERPs tipo 2da etapa - Litoral Gas)*
 - Plazo 60 días corre desde anticipo y aprobación de datos de diseño: sumar tiempo de ingeniería *(TAVAL/60 - Inarteco - ERPs tipo 2da etapa - Litoral Gas)*
 - Precio sin flete, entrega en planta del proveedor *(TAVAL/60 - Inarteco - ERPs tipo 2da etapa - Litoral Gas)*
@@ -196,7 +196,7 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - Proveedores facturan por separado accesorios (Complemet) y caños (Provemet): emitir OC separadas. *(TECPETROL/12 - Skid manifold PAD S-900)*
 - Cotizaciones en USD con cláusula de reajuste por TC BNA (+/-2% o 3%). *(TECPETROL/12 - Skid manifold PAD S-900)*
 - Contrato marco por 35 skids a precio unitario fijo en USD durante 3 años, sin compromiso de cantidad; la oferta incluyó 1,5% de bonificación y las pólizas de caución y fiel cumplimiento (aprox. USD 2.900 en total, un costo menor frente a un contrato de USD 1,77 M). *(TECPETROL/9. CM SKID MANIFOLD PAD S-600)*
-- Margen sobre costo de aprox. 25% (factor de venta 1,354 antes de la bonificación y 1,334 después), con RX de aprox. USD 11.600 por skid como mayor rubro de mano de obra; las válvulas esféricas 4" S600 son más de la mitad del costo de materiales (aprox. USD 13.170 por skid). *(TECPETROL/9. CM SKID MANIFOLD PAD S-600)*
+- Margen sobre costo de aprox. 25% (factor de venta 1.354 antes de la bonificación y 1.334 después), con RX de aprox. USD 11.600 por skid como mayor rubro de mano de obra; las válvulas esféricas 4" S600 son más de la mitad del costo de materiales (aprox. USD 13.170 por skid). *(TECPETROL/9. CM SKID MANIFOLD PAD S-600)*
 - Se hizo una comparativa de 9 talleres para fabricar el skid, con precios que van de USD 2.000 a 21.320 según el alcance; hay que normalizar alcance (PH, END, pintura, planos, materiales) antes de comparar. *(TECPETROL/9. CM SKID MANIFOLD PAD S-600)*
 - Riesgo comercial: el cliente exigió pago contra entrega con anticipo devuelto por NC, penalidad de 1% diario (tope 10%) y aceptación formal de las válvulas Taval como desvío no declarado en la oferta técnica. *(TECPETROL/9. CM SKID MANIFOLD PAD S-600)*
 - Pedidos efectivos hasta agosto 2026: 6 pedidos por 12 A6BM y 2 A6CM (USD 705.878,84 en total), unos 40% del monto previsto del contrato; el cliente fue liberando lotes de 2 a 5 equipos con plazo de 150 días. *(TECPETROL/9. CM SKID MANIFOLD PAD S-600)*
@@ -224,7 +224,7 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - Hay destino Comodoro Rivadavia (flete BAI-CRD, cliente Almacenes Petroleros para Tulsa) *(APSA/15 - Capsa Capex, Puentes armados producción c AIB)*
 - Precios de proveedores tienen validez corta (10-15 dias) *(APSA/15 - Capsa Capex, Puentes armados producción c AIB)*
 - Producto fuera de la especialidad de ITT: se pidió oferta a Motomecánica (no cotizó) y a Danco; la oferta se armó sobre Danco como tercerizado llave en mano. *(APSA/9- PUENTE INY + PUENTE PROD AIB)*
-- Costo de puentes completos Danco: USD 115,395 por 20 + 3 unidades; se estudió la alternativa de armar en ITT comprando componentes sueltos (ABAC, Duralitte, Danco, Taval). *(APSA/9- PUENTE INY + PUENTE PROD AIB)*
+- Costo de puentes completos Danco: USD 115.395 por 20 + 3 unidades; se estudió la alternativa de armar en ITT comprando componentes sueltos (ABAC, Duralitte, Danco, Taval). *(APSA/9- PUENTE INY + PUENTE PROD AIB)*
 - Política: las válvulas se ofrecen siempre Taval salvo excepción de vendor list; Taval tiene precio preferencial pero en un puente anterior de CAPEX fue de los oferentes más caros. *(APSA/9- PUENTE INY + PUENTE PROD AIB)*
 - Para Danco hay que exigir detalle de alcance (pruebas, pintura, marcas) porque el cliente lo pide; los pedidos son urgentes y los plazos de proveedor son 45 días. *(APSA/9- PUENTE INY + PUENTE PROD AIB)*
 - La instrumentación Rosemount (Induquip) pesa mucho en el costo: USD 63.186 para 10 juegos de presión, RTD, vaina y transmisor de temperatura. Conviene fijar temprano la cantidad y los certificados (ATEX, IECEx, FM) porque movieron el precio entre revisiones. *(PAMPA ENERGIA/4 - Doc 5745722125 Compra Puentes de producción 3 S300 PAD 13)*
@@ -232,10 +232,10 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - Los proveedores usan monedas y ajustes distintos: Induquip y Juntas MS ajustan por tipo de cambio BNA (5% y 3%), Francovigh pide 30% de anticipo. El plazo más largo es 12 semanas para instrumentos y 75 a 90 días para bridas y juntas RTJ. *(PAMPA ENERGIA/4 - Doc 5745722125 Compra Puentes de producción 3 S300 PAD 13)*
 - Las cotizaciones tienen validez corta (7 a 30 días): Francovigh 7, Juntas MS 15, Induquip 30. Hay que cerrar las compras rápido o pedir revalidación. *(PAMPA ENERGIA/4 - Doc 5745722125 Compra Puentes de producción 3 S300 PAD 13)*
 - Material auxiliar de bajo costo pero con riesgo de plazo: juntas RTJ BX153 (90 días) y bridas WN 10000 RJ de Francovigh (75 días). *(PAMPA ENERGIA/4 - Doc 5745722125 Compra Puentes de producción 3 S300 PAD 13)*
-- Factor global real ~1.31: MO/materiales/servicios x1.35, instrumentos x1.35 (ABB) o x1.5 (Rosemount), valvulas Taval y seguro de caucion a factor 1; transporte x1.2. Los costos de transporte y seguro estan dentro del costo pero el total de oferta excluye el transporte opcional. *(PAMPA ENERGIA/5 - Doc5757155642 - Construc 10 Puentes y 2 Colectores - RDA)*
-- El cliente adjudico al precio rev C sin descuento (USD 326,521.60) tras mejorar plazos (rev B) y precio (rev C: de 365,754.90 a 326,521.59); la OC fijo precios fijos, sin ajuste, 60-70 dias y multas de 2% semanal hasta 10%. *(PAMPA ENERGIA/5 - Doc5757155642 - Construc 10 Puentes y 2 Colectores - RDA)*
-- Cambio de instrumentacion ABB a Rosemount (OC) altero el costo y genero adicionales: OC 4500773444 USD 11,169 por modificacion de puentes y presupuestos 174 (USD 117,465 colector sin valvulas 3 vias + skid de puentes) y 175 (USD 27,000 horas extra), con MO de fin de semana/feriados a costo USD 19,556 x1.4. *(PAMPA ENERGIA/5 - Doc5757155642 - Construc 10 Puentes y 2 Colectores - RDA)*
-- Las valvulas 3 vias motorizadas (USD ~4,378 c/u Valbol) pesan fuerte en el colector y tienen largo plazo (18-20 semanas, 90 dias); el plazo del colector de 150 dias interno se ofrecio recortado a 70. *(PAMPA ENERGIA/5 - Doc5757155642 - Construc 10 Puentes y 2 Colectores - RDA)*
+- Factor global real ~1,31: MO/materiales/servicios x1,35, instrumentos x1,35 (ABB) o x1,5 (Rosemount), valvulas Taval y seguro de caucion a factor 1; transporte x1,2. Los costos de transporte y seguro estan dentro del costo pero el total de oferta excluye el transporte opcional. *(PAMPA ENERGIA/5 - Doc5757155642 - Construc 10 Puentes y 2 Colectores - RDA)*
+- El cliente adjudico al precio rev C sin descuento (USD 326.521,60) tras mejorar plazos (rev B) y precio (rev C: de 365.754,90 a 326.521,59); la OC fijo precios fijos, sin ajuste, 60-70 dias y multas de 2% semanal hasta 10%. *(PAMPA ENERGIA/5 - Doc5757155642 - Construc 10 Puentes y 2 Colectores - RDA)*
+- Cambio de instrumentacion ABB a Rosemount (OC) altero el costo y genero adicionales: OC 4500773444 USD 11.169 por modificacion de puentes y presupuestos 174 (USD 117.465 colector sin valvulas 3 vias + skid de puentes) y 175 (USD 27.000 horas extra), con MO de fin de semana/feriados a costo USD 19.556 x1,4. *(PAMPA ENERGIA/5 - Doc5757155642 - Construc 10 Puentes y 2 Colectores - RDA)*
+- Las valvulas 3 vias motorizadas (USD ~4.378 c/u Valbol) pesan fuerte en el colector y tienen largo plazo (18-20 semanas, 90 dias); el plazo del colector de 150 dias interno se ofrecio recortado a 70. *(PAMPA ENERGIA/5 - Doc5757155642 - Construc 10 Puentes y 2 Colectores - RDA)*
 - Revisar rotulos en la oferta economica (items 3.4/3.5 dicen 'Puente') para evitar ambiguedad. *(PAMPA ENERGIA/5 - Doc5757155642 - Construc 10 Puentes y 2 Colectores - RDA)*
 - Factores por rubro: materiales x1,2, mano de obra ITT x1,3, válvulas sin recargo (ya con -35%/-20% de lista), viaje x1,1; factor global resultante ~1,15 por volumen alto *(TAVAL/43- YPF- CM PUENTES DE PRODUCCION)*
 - Precio unitario puente 3" ~USD 8.842 (costo ~7.704); 4" ~USD 14.288 (costo ~12.457); válvulas de TAVAL en stock son ~20% del precio *(TAVAL/43- YPF- CM PUENTES DE PRODUCCION)*
@@ -244,7 +244,7 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - Armado y sellado de un puente roscado cuesta USD 380/unidad (Quesada), sin el producto de sellado que provee el cliente. *(TAVAL/51 - CGC - Puentes de producción S2000)*
 - Para estos puentes se consultaron 4 proveedores de juntas monolíticas (incluido importación) y esclusas: comparar varias fuentes. *(TAVAL/51 - CGC - Puentes de producción S2000)*
 - La carpeta solo contiene proveedores; falta oferta enviada y planilla de costos. *(TAVAL/51 - CGC - Puentes de producción S2000)*
-- Se cotiza sobre costo con factor de rentabilidad: 1.35 sobre materiales y servicios y 1.4 sobre mano de obra (margen aprox. 25%); válvulas propias Taval a factor 1. *(TAVAL/55- Tecpetrol Puentes de Producción PPar Valvula y Puente PR 54942)*
+- Se cotiza sobre costo con factor de rentabilidad: 1,35 sobre materiales y servicios y 1,4 sobre mano de obra (margen aprox. 25%); válvulas propias Taval a factor 1. *(TAVAL/55- Tecpetrol Puentes de Producción PPar Valvula y Puente PR 54942)*
 - El costo del puente NOC (11243 USD) lo dominan las bridas API 6A 10000 psi, válvulas cl.1500 (4 x 1150 USD) y uniones #6000. Las bridas Francovigh tardan 75/90 días, lo que fija el plazo de 110 días. *(TAVAL/55- Tecpetrol Puentes de Producción PPar Valvula y Puente PR 54942)*
 - Se ofrecen desvíos a la requisición: válvula BPR Pecom hasta 2000 psi, retención de clapeta en vez de pistón y bridas porta placa en lugar de caja portaorificio. Conviene declararlos siempre. *(TAVAL/55- Tecpetrol Puentes de Producción PPar Valvula y Puente PR 54942)*
 - Los niples y accesorios chicos se estiman con antecedentes de puentes Taval/CGC (20 a 40 USD). Los espárragos se estiman (10 USD). *(TAVAL/55- Tecpetrol Puentes de Producción PPar Valvula y Puente PR 54942)*
@@ -252,7 +252,7 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - Los materiales de un puente serie 2000 2" se compran a varios terceros (uniones, juntas monolíticas, niples, válvula reguladora, caja porta orificio); cotizar todo en USD con ajuste de tipo de cambio. *(TAVAL/64 - Capsa - Puente producción caja porta orificio serie 2000)*
 - Duralitte tiene los accesorios en stock; Adita demora 30/45 días en uniones extensibles S-3000. *(TAVAL/64 - Capsa - Puente producción caja porta orificio serie 2000)*
 - Duralitte: subtotal USD 1598 confirmado (630+526,50+380,90+60,60). *(TAVAL/64 - Capsa - Puente producción caja porta orificio serie 2000)*
-- Puente 2" #600 costo unitario ~73.562 USD, venta 97.461 (factor nominal 1,35, efectivo ~1,325); la instrumentación es 52% del costo *(TAVAL/70- PUENTES DE MEDICION 2 PULGADAS)*
+- Puente 2" #600 costo unitario ~73.562 USD, venta 97.461 (factor nominal 1,35, efectivo ~1.325); la instrumentación es 52% del costo *(TAVAL/70- PUENTES DE MEDICION 2 PULGADAS)*
 - Rev. A 102.629 USD/u bajó 5,0% a 97.461 en la bonificación final pedida por YPF, aplicada a todas las posiciones (última ronda, sin más mejoras) *(TAVAL/70- PUENTES DE MEDICION 2 PULGADAS)*
 - La válvula de control actuada es el ítem más sensible: Fisher 13.400 USD/u vs Doma 7.200 USD/u; la planilla usó 8.600 'pedir mejor oferta' *(TAVAL/70- PUENTES DE MEDICION 2 PULGADAS)*
 - Se excluyó el inyector de químicos por falta de HD; el plazo de 75 d depende de transmisores ABB y V-Cone *(TAVAL/70- PUENTES DE MEDICION 2 PULGADAS)*
@@ -262,9 +262,9 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 
 - Solo se cotizaron reguladoras a un proveedor; el resto de la red (cañería, mano de obra) no tiene respaldo en la carpeta *(ALONZO RED/1 - STM - pedido de cotización ejecución red de gas natural)*
 - Pedido marcado urgente *(ALONZO RED/1 - STM - pedido de cotización ejecución red de gas natural)*
-- Cotización por pulgada diametral (USD soldadura + END x factor rechazo 5% x factor rentabilidad 1.13), con mayor peso en 4 y 6 pulgadas; USD 22-45/pulg según diámetro *(Sacde/18- PREFABRICADO PIPING - Plantas Compresoras TGS)*
+- Cotización por pulgada diametral (USD soldadura + END x factor rechazo 5% x factor rentabilidad 1,13), con mayor peso en 4 y 6 pulgadas; USD 22-45/pulg según diámetro *(Sacde/18- PREFABRICADO PIPING - Plantas Compresoras TGS)*
 - Líneas menores a 4" se estiman como 26% adicional sobre líneas mayores (15% en plantas ya construidas), según estadística TGS *(Sacde/18- PREFABRICADO PIPING - Plantas Compresoras TGS)*
-- Precio con 7% de descuento de negociación previsto: margen 1.13 sin descuento, 1.209 con; piso teórico de costo para 35% de ganancia = 1.64 M USD *(Sacde/18- PREFABRICADO PIPING - Plantas Compresoras TGS)*
+- Precio con 7% de descuento de negociación previsto: margen 1,13 sin descuento, 1,209 con; piso teórico de costo para 35% de ganancia = 1,64 M USD *(Sacde/18- PREFABRICADO PIPING - Plantas Compresoras TGS)*
 - Se ofrece solo fabricación (materiales provistos por cliente), END 100% con RX y tintas *(Sacde/18- PREFABRICADO PIPING - Plantas Compresoras TGS)*
 - Capacidad de taller 4200 pulg/mes condiciona el cronograma de 5 plantas *(Sacde/18- PREFABRICADO PIPING - Plantas Compresoras TGS)*
 
@@ -274,9 +274,9 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - El proveedor Milei limita cuántas unidades entrega antes de la fecha límite (30/03/2026); se pidió cantidad máxima: el cronograma de entrega de 15 unidades en 210 días dependió de la capacidad de terceros *(RAKIDUAMN/1-Piletas petroleras)*
 - Los accesorios (arrestallamas, uniones a golpe, metal desplegado) se cotizaron aparte *(RAKIDUAMN/1-Piletas petroleras)*
 - Hay planilla de precios de acero (chapa A36 ~USD 1,3/kg con 10% de recortes) para hacer fabricación propia como alternativa *(RAKIDUAMN/1-Piletas petroleras)*
-- Mano de obra ITT pesa ~58% del costo (factor 1.3 sobre MO, 1.2 sobre materiales) en tanques de este tipo *(Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL)*
+- Mano de obra ITT pesa ~58% del costo (factor 1,3 sobre MO, 1,2 sobre materiales) en tanques de este tipo *(Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL)*
 - Se cotizó una opción 1 completa (tanque+instrumentos+bomba glicol 11.500 USD costo, ~73.272 USD sin IVA) y una opción 2 reducida; el cliente recibió la reducida *(Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL)*
-- Escalera/plataforma se costea aparte (2.072 USD costo, factor 1.2) y el formulario la agrupa en la misma línea *(Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL)*
+- Escalera/plataforma se costea aparte (2.072 USD costo, factor 1,2) y el formulario la agrupa en la misma línea *(Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL)*
 - Plazo 75 d en opción reducida vs 90 d en completa *(Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL)*
 - Pedido a proveedor sin planos: uso para recepción de agua y lodos industriales, presión atmosférica *(TAVAL/44 - Galtech Piletas de Fractura)*
 - Se pidió ofrecer más de una configuración *(TAVAL/44 - Galtech Piletas de Fractura)*
@@ -292,8 +292,8 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - Cañerías de gran diámetro (30-40") se compran por metro a USD 235-421; el proveedor aplica un múltiplo (15, 7, 10 o 5) a cada precio por metro que no se aclara: probablemente metros mínimos de compra, verificar *(TAVAL/53- SOLTEX- TRAMPAS PELAMBRES (CHILE))*
 - Tapas de cierre rápido (Megatap) y revestimientos son los ítems críticos aparte del acero *(TAVAL/53- SOLTEX- TRAMPAS PELAMBRES (CHILE))*
 - Cliente intermediario (TAVAL) con cliente final en Chile: considerar exportación/ flete y plazos *(TAVAL/53- SOLTEX- TRAMPAS PELAMBRES (CHILE))*
-- Estructura de costo: mano de obra con factor 1.5, materiales 1.2, válvulas Taval factor 1.0, mecanizado y bruñido a factor 1; factor global resultante ~1.33. *(TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E)*
-- Costo unitario por trampa: 8x6 ~55.8-56.5 kUSD, 6x4 ~48.5-49.5 kUSD; precio receptora ~1 kUSD menor que lanzadora. *(TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E)*
+- Estructura de costo: mano de obra con factor 1,5, materiales 1,2, válvulas Taval factor 1,0, mecanizado y bruñido a factor 1; factor global resultante ~1,33. *(TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E)*
+- Costo unitario por trampa: 8x6 ~55,8-56,5 kUSD, 6x4 ~48,5-49,5 kUSD; precio receptora ~1 kUSD menor que lanzadora. *(TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E)*
 - Repuestos de puesta en marcha / 2 años figuran en la planilla pero con cantidad 0 (no cotizados en el precio). *(TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E)*
 - La oferta es budget: el presupuesto ITT muestra plazo 150 días vs 120 en el de Taval; unificar criterio. *(TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E)*
 - Margen uniforme: factor 1,35 sobre materiales/MO/servicios, 1,0 sobre válvulas Taval (traspaso) y 3 sobre seguro de caución; factor global efectivo ~1,33 antes de bonificación y ~1,29 sobre OC. *(TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681)*
@@ -302,7 +302,7 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - Incluir póliza de caución (anticipo y fiel cumplimiento), transporte USD 1.200 por trampa y repuestos de 2 años en el costo; el cliente aplica penalidad 1%/semana tope 10%. *(TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681)*
 - Hubo discusión técnica de barrel menor 8" NPS 8 Sch 80 sin mecanizar (ID 193,7 mm < 201 mm requerido): resolver con mecanizado o barrel rolado. *(TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681)*
 - Tecpetrol adjudicó a precio menor que la Rev 3: la OC /03 suma USD 247,502.07 (lanzadora 119,062.03, receptora 128,440.04) frente a USD 254,635.18 ofertados; en la OC el detector y el flete no figuran como líneas aparte (revisar si se absorbieron). La OC /01 fue 249,405.21 y subió a /02 249,792.61 y bajó a /03. *(TECPETROL/7. Trampas)*
-- La oferta bajó en 4 revisiones de 266.5k a 254.6k y se abrió originalmente con opción TCR METAP (más barata, 217.5k) vs Sypris tool-less; el cliente terminó con TCR Sypris. *(TECPETROL/7. Trampas)*
+- La oferta bajó en 4 revisiones de 266,5k a 254,6k y se abrió originalmente con opción TCR METAP (más barata, 217,5k) vs Sypris tool-less; el cliente terminó con TCR Sypris. *(TECPETROL/7. Trampas)*
 - Tras la OC el cliente pidió un adicional (OE 411-25, USD 193.70 solo MO por trampa para niple 1/2" sch160 y sockolet soldados; opción 2 con instrumentos USD 565.93). Tecpetrol eligió opción 1 en ambas trampas: conviene prever tomas de manómetro desde la cotización. *(TECPETROL/7. Trampas)*
 - Condiciones duras del cliente: penalidad 2%/semana, ajuste de precios Anexo III, seguro de carga de USD 250,000 (prima aprox. USD 105 por 30 días según transportista, no incluida), inspecciones de Tecpetrol/TUV. *(TECPETROL/7. Trampas)*
 - Mano de obra de armado se terceriza (Ledesma USD 8,500 a 10,800 por trampa más skid a USD 2/kg); el ITT hace PH y pintura. *(TECPETROL/7. Trampas)*
@@ -327,14 +327,14 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - Los reguladores se compran a Tormene Americana (USD 31.236 s/IVA, pago 40% anticipo, garantía 12 meses, validez 30 días, entrega en Versalles CABA); falta sumar cañería, montaje y MO *(ALONZO RED/2 - ERP B° Pilara)*
 - El diseño 956-000-4547-1 define el manifold de impulsos (1/2" NPT, 6 puertos 1/4") y la tubería inox 10 OD x 1 mm: parte del alcance de armado *(ALONZO RED/2 - ERP B° Pilara)*
 - La mano de obra se terceriza (Ledesma); su monto no pudo leerse y debe revisarse en el original *(ALONZO RED/2 - ERP B° Pilara)*
-- La oferta salió con factor 1.34 sobre un costo de USD 221,387 (materiales y servicios USD 113.5k, MO ITT USD 107.7k, caución USD 159); el precio ofertado es la planilla menos la caución facturada aparte. *(FLARGENT/01- O1403 - Antorchas HP-LP– EPF2)*
+- La oferta salió con factor 1.34 sobre un costo de USD 221,387 (materiales y servicios USD 113,5k, MO ITT USD 107,7k, caución USD 159); el precio ofertado es la planilla menos la caución facturada aparte. *(FLARGENT/01- O1403 - Antorchas HP-LP– EPF2)*
 - Hay una variante con MO tercerizada en Ledesma (factor 1.2 en materiales, 1.3 en MO) por USD 268,962 que se descartó a favor de la versión con MO propia. *(FLARGENT/01- O1403 - Antorchas HP-LP– EPF2)*
 - Mano de obra ITT es la mitad del costo: armado 5,250 h-h a USD 13 más plataformas a USD 5/kg; Ledesma cobró USD 81,000 sin PH, END ni pintura. *(FLARGENT/01- O1403 - Antorchas HP-LP– EPF2)*
 - Precios del material marcados 'estimado, pedir cotización' (bridas 20" y 14", plataformas por falta de cotización Avila) generan riesgo de desvío; granallado y pintura USD 14,200. *(FLARGENT/01- O1403 - Antorchas HP-LP– EPF2)*
 - Precio de venta USD 182k con plazo 75 días corridos; fabricación con mano de obra tercerizada (cotización 2026-04-20, dos días antes de la oferta). *(FLARGENT/03 - O1404 - antorcha doble 20 12)*
 - Condición estándar 30% anticipo / 70% despacho, EXW planta Quilmes, seguro aparte. *(FLARGENT/03 - O1404 - antorcha doble 20 12)*
 - Se estima un recipiente 26" con virolas de 1" de espesor y casquetes SE 25.4 mm, con cañería 12" sch80. *(Los Guindos/5.Proveedores 3ros)*
-- Precio de chapa A-516 normalizada ~ARS 2.3-2.4k/kg (marzo 2026, sin IVA). *(Los Guindos/5.Proveedores 3ros)*
+- Precio de chapa A-516 normalizada ~ARS 2.3-2,4k/kg (marzo 2026, sin IVA). *(Los Guindos/5.Proveedores 3ros)*
 - Carpeta preliminar: solo relevamiento de proveedores. *(Los Guindos/5.Proveedores 3ros)*
 - La oferta se armo con cotizaciones de insumos al 12-14/08/2024 y se envio el 19/08/2024: ciclo de 1 semana; compras pidio costos 'lo antes posible' a 7 proveedores en paralelo (cano/barra, chapa/planchuela, curvado). *(PAN AMERICAN ENERGY/59. licitacion #3000057493 - Construccion mazo)*
 - Costos de referencia (USD, 2024): tubo A179 3/4 pulg BWG16 USD 7,17/m (54 x 7,6 m = 410 m, aprox. USD 2.940 de tubo); curvado 180 grados USD 30 por curva; disco de chapa 1-1/2 pulg diam 475 mm USD 185-197 c/u. *(PAN AMERICAN ENERGY/59. licitacion #3000057493 - Construccion mazo)*
@@ -365,7 +365,7 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - Dos de los proveedores sondeados (KSB, Flowserve) ya habian ofrecido directo al cliente o cliente final; hay riesgo de competir con el propio proveedor, conviene consultar antes *(Sacde/17- (2970) SCH-PTG-034 - BOMBAS (NO LLI))*
 - Plazos de 22-26 semanas desde OC dominan la oferta; el proveedor pidio forma de pago por hitos que ITT debe trasladar al cliente *(Sacde/17- (2970) SCH-PTG-034 - BOMBAS (NO LLI))*
 - El presupuesto enviado no detalla tipo de bomba ni datos tecnicos, que quedan en las ofertas tecnicas adjuntas *(Sacde/17- (2970) SCH-PTG-034 - BOMBAS (NO LLI))*
-- Precio = (materiales x1.15 + MO ITT x1.18) + 5% colchón de negociación: 26432 -> 27754 USD (~11.8 USD/kg final). *(Sacde/20 - SE-3121-ASTORD-014 - TK DE CHOQUE)*
-- Se pidieron tres cotizaciones de rolado de virolas y dos de mano de obra tercerizada (Quesada 10.7k y Ledesma 11.8k) para comparar contra MO propia de 13.8k. *(Sacde/20 - SE-3121-ASTORD-014 - TK DE CHOQUE)*
+- Precio = (materiales x1.15 + MO ITT x1.18) + 5% colchón de negociación: 26432 -> 27754 USD (~11,8 USD/kg final). *(Sacde/20 - SE-3121-ASTORD-014 - TK DE CHOQUE)*
+- Se pidieron tres cotizaciones de rolado de virolas y dos de mano de obra tercerizada (Quesada 10,7k y Ledesma 11,8k) para comparar contra MO propia de 13,8k. *(Sacde/20 - SE-3121-ASTORD-014 - TK DE CHOQUE)*
 - Chapa se compra en bruto (1 chapa 2500x6000 3/8" ~ ARS 2.6M); se cuenta una tira de caño de 6 m por no haber stock. *(Sacde/20 - SE-3121-ASTORD-014 - TK DE CHOQUE)*
 - Tipico TGS: exige Rx y LP, procedimientos TGS-ING-009 y pintura TGS-ING-019. *(Sacde/20 - SE-3121-ASTORD-014 - TK DE CHOQUE)*

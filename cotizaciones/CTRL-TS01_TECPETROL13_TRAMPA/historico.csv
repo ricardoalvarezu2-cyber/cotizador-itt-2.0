@@ -6,11 +6,11 @@ pos,grupo,descripcion,cantidad,unidad,precio_unit_usd,total_usd,proveedor,nota
 5,material,"Brida welding neck RF 1 1/2"" 900 / sch 160 ASTM A-105",1,un,40.57,40.57,Francovigh,60 días
 6,material,"Virola/caño sin costura barril menor largo 4,8 m esp. 5/8"" 12"" esp. 5/8"" API 5L X52",4.8,m,690,3312.0,E. Montes (WhatsApp),planilla: 'debería contemplar 1 tira de 12 m?'
 7,material,"Virola/caño sin costura barril mayor largo 3,2 m esp. 5/8"" 16"" esp. 5/8"" API 5L X65",3.2,m,1120,3584.0,E. Montes (WhatsApp),planilla: 'debería contemplar 1 tira de 12 m?'
-8,material,"Caño sin costura 12"" XS ASTM A-106 Gr B",5.9,m,217.23,1281.657,Renard,
-9,material,"Caño sin costura 4"" 120 ASTM A-106 Gr B",8.5,m,60.37,513.145,Renard,
+8,material,"Caño sin costura 12"" XS ASTM A-106 Gr B",5.9,m,217.23,1281.66,Renard,
+9,material,"Caño sin costura 4"" 120 ASTM A-106 Gr B",8.5,m,60.37,513.14,Renard,
 10,material,"Caño sin costura 2"" 160 ASTM A-106 Gr B",3,m,24.67,74.01,Renard,
 11,material,"Caño sin costura 2"" STD ASTM A-106 Gr B",2,m,12.1,24.2,Renard,
-12,material,"Caño sin costura 1 1/2"" 160 ASTM A-106 Gr B",0.1,m,24.67,2.467,Estimado,"planilla: unidad 'u' con 0,1 (es metro)"
+12,material,"Caño sin costura 1 1/2"" 160 ASTM A-106 Gr B",0.1,m,24.67,2.47,Estimado,"planilla: unidad 'u' con 0,1 (es metro)"
 13,material,"Codo 90 radio corto 2"" 120 ASTM A-234 WPB",4,un,68.5,274.0,Cintolo estimado,
 14,material,"Codo 90 radio corto 2"" 160 ASTM A-234 WPB",4,un,76.95,307.8,Cintolo,
 15,material,"Codo 90 radio largo 6"" XS ASTM A-234 WPB",1,un,129.1,129.1,planilla ITT,
@@ -52,8 +52,8 @@ pos,grupo,descripcion,cantidad,unidad,precio_unit_usd,total_usd,proveedor,nota
 MO,mo,"Mano de obra de tercero (Edgardo Ledesma): fabricación del piping (corte, biselado, armado y soldadura), global",1,gl,11500,11500,Planilla ITT (Ledesma 15-07-2026),global; la planilla no dice pulgadas
 EST,mo,"Fabricación del skid (Ledesma): 590 kg × USD 2,8/kg",1,gl,1652,1652,Planilla ITT (Ledesma),
 HH,mo,"Ingeniería (100 h × 15) + calidad (120 h × 15) + MO ITT: movimientos internos, PH, montaje y acondicionamiento para despacho (120 h × 13)",1,gl,4860,4860,Planilla ITT,
-RX,servicio,Radiografía 100% y LP (85% de la trampa 20x16),1,gl,2943.975,2943.975,Planilla ITT,
+RX,servicio,Radiografía 100% y LP (85% de la trampa 20x16),1,gl,2943.97,2943.97,Planilla ITT,
 PIN,servicio,"Granallado y pintura (piping 18 m² × 50 × 1,2 = 1.080; skid 14 m² × 50 × 1,3 = 910)",1,gl,1990,1990,Planilla ITT,incluye material
 REP,servicio,"Repuestos de precomisionado, comisionado y PEM (2 × 181,8) y 2 años de operación (181,8)",1,gl,545.4,545.4,Planilla ITT,
 TRANS,servicio,Transporte a Los Toldos II,1,gl,1200,1200,Planilla ITT,
-SEG,servicio,Seguro de caución,1,gl,169.8108,169.8108,Planilla ITT,factor de venta 3
+SEG,servicio,Seguro de caución,1,gl,169.81,169.81,Planilla ITT,factor de venta 3

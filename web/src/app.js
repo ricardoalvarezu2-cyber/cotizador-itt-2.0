@@ -667,7 +667,7 @@
         <div class="tbl"><table><tbody>
         <tr><td>Materiales (con ajuste por inflación)</td><td class="n">${num(c.sub.material)}</td><td class="n">× ${num(p.FM)}</td></tr>
         <tr><td>Contingencia ${NI(p.CONT)}%</td><td class="n">${num(c.cont)}</td><td class="n">× ${num(p.FM)}</td></tr>
-        ${c.tav ? `<tr><td>Válvulas Taval (con contingencia)</td><td class="n">${num(c.tav)}</td><td class="n">× ${c.ftv}</td></tr>` : ""}
+        ${c.tav ? `<tr><td>Válvulas Taval (con contingencia)</td><td class="n">${num(c.tav)}</td><td class="n">× ${Documentos.numg(c.ftv)}</td></tr>` : ""}
         <tr><td>Mano de obra</td><td class="n">${num(c.sub.mo)}</td><td class="n">× ${num(p.FMO)}</td></tr>
         <tr><td>Servicios e insumos</td><td class="n">${num(c.sub.servicio)}</td><td class="n">× ${num(p.FMO)}</td></tr>
         <tr class="total"><td>Costo</td><td class="n">${num(c.costo)}</td><td class="n">${num(c.precio_unitario)}</td></tr>

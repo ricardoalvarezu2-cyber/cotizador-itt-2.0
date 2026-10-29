@@ -26,7 +26,7 @@ from openpyxl import Workbook
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from numeros import fmt, fmtg  # noqa: E402
+from numeros import FMT_TECNICO, celda_excel, fmt, fmtg  # noqa: E402
 import controles_tablas as ct  # noqa: E402
 from catalogo_materiales import atributos, expandir, familia_de  # noqa: E402
 from indice_proyectos import norm  # noqa: E402
@@ -61,8 +61,12 @@ def es_tira(it):
     return bool(re.match(r"completar|sobrante", norm(it.get("descripcion", ""))))
 
 
-def celda(ws, r, j, v, fill=None, fmt=None, bold=False):
-    c = ws.cell(r, j, v)
+def celda(ws, r, j, v, fill=None, fmt=None, bold=False, col=None, documento=False):
+    c = ws.cell(r, j)
+    if col is None:
+        c.value = v
+    else:  # números como celdas numéricas, nunca texto (Matías, 29-10-2026)
+        celda_excel(c, v, col, fmt, documento)
     c.border, c.alignment = B, W
     if fill:
         c.fill = PatternFill("solid", fgColor=fill)
@@ -172,7 +176,7 @@ def main(carpeta):
         for f in tabla["filas"]:
             r += 1
             for j, v in enumerate(f, 1):
-                celda(ws, r, j, v)
+                celda(ws, r, j, v, col=cab[j - 1] if j <= len(cab) else "", documento=True)
             fila_calculos(str(f[0]).strip(), ws, r, len(cols) + 1)
     if tr.get("nota"):
         r += 1
@@ -195,7 +199,7 @@ def main(carpeta):
             vals = [it["pos"], it["descripcion"], it.get("especificacion", ""), round(q, 3), it.get("unidad", "un"), "—",
                     "compra mínima o nota del documento"]
             for j, v in enumerate(vals, 1):
-                celda(ws, r, j, v, GRIS if j > 3 else None)
+                celda(ws, r, j, v, GRIS if j > 3 else None, "#,##0.00" if j == 4 else None, col=cab[j - 1])
             for k, v in enumerate(["", "", "", comp.get("notas", {}).get(str(it["pos"]), "")]):
                 celda(ws, r, 8 + k, v, AMAR, "#,##0.00" if k == 1 else None)
     r += 2
