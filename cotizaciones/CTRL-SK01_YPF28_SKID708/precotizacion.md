@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-SK01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 51.975,89 por equipo · soldadura y servicios calculados USD 19.511,19 · 21 similares (2, 2b, 4, 5, 6, 8, 10, 11, 12, 13, 14, 17, 19, 20, 22, 23, 24, 28, 29, 30, 31) · 1 sin precio (21).
+**Resumen:** materiales USD 52.352,49 por equipo · soldadura y servicios calculados USD 19.511,19 · 18 similares (2, 2b, 4, 5, 6, 8, 10, 11, 12, 13, 17, 19, 20, 22, 23, 24, 30, 31) · 4 sin precio (14, 21, 28, 29).
 
 
 ## 1. Materiales
@@ -20,8 +20,8 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 10 | Espárrago c/2 tuercas p/brida 300 LB 1.25x207 | SIMILAR | 7,33 / un | 2025-09-04 · cotización | serie: sin dato (pedido 300); material: A193 B7 (pedido A194 2H); medida: 1 1/4 x 9 (pedido 1 1/4 x 8 1/8) |
 | 11 | Espárrago c/2 tuercas p/brida 300 LB 1.125x18 | SIMILAR | 12,00 / un | 2026-06-26 · planilla interna | serie: sin dato (pedido 300); material: sin dato (pedido A194 2H); medida: 1 1/8 x 6 3/4 (pedido 1 1/8 x 7 3/8 |
 | 12 | Junta espiralada RF esp. 4,5 mm 300 LB 1 1/2" | SIMILAR | 6,00 / un | 2026-08-14 · planilla interna | diametro: 2" (pedido 1.5"); material: AISI 316 (no pedido); extremos: sin dato (pedido RF) |
-| 13 | Junta espiralada RF esp. 4,5 mm 300 LB 12" | SIMILAR | 15,00 / un | 2025-12-18 · planilla interna | serie: 600 (pedido 300); extremos: sin dato (pedido RF) |
-| 14 | Junta espiralada RF esp. 4,5 mm 300 LB 16" | SIMILAR (estimado cepo) ⚠ | 20,86 / un | 2024-11-01 · estimado (cepo) | serie: 150 (pedido 300); material: AISI 316 (no pedido); extremos: sin dato (pedido RF) |
+| 13 | Junta espiralada RF esp. 4,5 mm 300 LB 12" | SIMILAR (estimado cepo) ⚠ | 42,44 / un | 2025-03-27 · estimado (cepo) | material: AISI 316 (no pedido); extremos: sin dato (pedido RF) |
+| 14 | Junta espiralada RF esp. 4,5 mm 300 LB 16" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (2") (JUN-02769, USD 6,00): pedir cotización |
 | 15 | Niple s/c NPT L=100 mm 1 1/2" | IGUAL ⚠ | 5,60 / un | 2024-11-01 · stock (precio maestro) | — |
 | 16 | Niple s/c NPT L=100 mm 1/2" | IGUAL ⚠ | 20,00 / un | 2026-04-22 · planilla interna | — |
 | 17 | Niple s/c NPT L=100 mm 3/4" | SIMILAR ⚠ | 3,93 / un | 2024-11-01 · stock (precio maestro) | schedule: 160 (pedido 80); escalado por espesor (sch 80 3,91 mm ÷ sch 160 5,56 mm = × 0,70) |
@@ -35,8 +35,8 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 25 | Válvula esférica NPT WOG 2000 P.T. op. palanc | IGUAL | 36,06 / un | 2025-09-01 · lista | — |
 | 26 | Válvula esférica NPT WOG 2000 P.T. op. palanc | IGUAL | 38,80 / un | 2025-09-01 · lista | — |
 | 27 | Válvula de retención a clapeta FLG RF 300 LB  | IGUAL | 1.425,00 / un | 2025-09-01 · lista | — |
-| 28 | Válvula globo NPT 800 LB op. volante 1/2" | SIMILAR | 35,10 / un | 2025-09-01 · lista | serie: sin dato (pedido 800); extremos: NPT/SW (pedido NPT) |
-| 29 | Válvula globo NPT 800 LB op. volante 3/4" | SIMILAR | 40,50 / un | 2025-09-01 · lista | serie: sin dato (pedido 800); extremos: NPT/SW (pedido NPT) |
+| 28 | Válvula globo NPT 800 LB op. volante 1/2" | **SIN PRECIO** | — | — | pedir cotización |
+| 29 | Válvula globo NPT 800 LB op. volante 3/4" | **SIN PRECIO** | — | — | pedir cotización |
 | 30 | Válvula esférica FLG RF 300 LB P.T. op. volan | SIMILAR | 5.750,00 / un | 2025-09-01 · lista | material: A216 WCB (pedido Acero al carbono) |
 | 31 | Bastidor del skid (perfilería) | SIMILAR (acero por kg) | USD 1,90/kg | 2026-02-10 cot | precio por kg de materia prima (hierro ángulo 3x1/4) +10% por recortes; no incluye corte, plegado ni rolado |
 | 1b | Completar barra de 12 m (pos 1) | compra extra | USD 217,23/m × 1,7 m | | Se usan 13,8 m en 6 equipo(s) y se compran 24 m. Borrar si hay sobrante en stock |
@@ -65,7 +65,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 122 placas chicas + 25 grandes + 3,83 servicio(s) de RX + 0,67 de LP por equipo = USD 2.753,00 (Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))).
   Con las tarifas de Antonelli (11-2025) serían USD 4.535,00: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: skid, 16", 6 u, materiales USD 51.976 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: skid, 16", 6 u, materiales USD 52.352 por unidad)
 
 - **Ingeniería:** 5 h × USD 15/h = USD 75,00 · mediana de 4,5, 5,0, 93,3 h por unidad (repartidas en la serie) · antecedente: Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para UFLO 2108 (SK-2105) (8, 1 u, 2026-02-20) · rango del mismo tipo 27–280 h
 - **Calidad y dossier:** 15 h × USD 15/h = USD 225,00 · mediana de 15,0, 7,5, 40,0 h por unidad (repartidas en la serie) · antecedente: Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para UFLO 2108 (SK-2105) (8, 1 u, 2026-02-20) · rango del mismo tipo 45–120 h

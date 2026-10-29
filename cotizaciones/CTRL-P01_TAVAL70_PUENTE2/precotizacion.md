@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-P01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 26.071,88 por equipo · soldadura y servicios calculados USD 13.092,44 · 15 similares (1, 2, 4, 6, 7, 11, 12, 13, 16, 17, 18, 19, 20, 22, 24) · 5 sin precio (8, 10, 14, 15, 23).
+**Resumen:** materiales USD 26.075,38 por equipo · soldadura y servicios calculados USD 13.092,44 · 15 similares (1, 2, 4, 6, 7, 11, 12, 13, 16, 17, 18, 19, 20, 22, 24) · 5 sin precio (8, 10, 14, 15, 23).
 
 
 ## 1. Materiales
@@ -13,7 +13,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 3 | Tee reducción BW 3" x 2" | IGUAL | 64,11 / un | 2026-08-14 · planilla interna | — |
 | 4 | Brida WNRF 2" | SIMILAR | 28,42 / un | 2026-03-03 · planilla interna | — · faltan: material |
 | 5 | Tee reducción BW 2" x 1 1/2" | IGUAL | 33,59 / un | 2025-12-26 · lista | — |
-| 6 | Brida SWRF 1 1/2" | SIMILAR | 23,36 / un | 2025-12-26 · lista | serie: 300 (pedido 600); material: A105 (no pedido) · faltan: material |
+| 6 | Brida SWRF 1 1/2" | SIMILAR (estimado cepo) ⚠ | 25,11 / un | 2024-11-01 · estimado (cepo) | diametro: 2" (pedido 1.5"); schedule: sin dato (pedido 160); material: A182 F316 (no pedido); precio escalado  · faltan: material |
 | 7 | Válvula esférica 2" | SIMILAR | 434,00 / un | 2025-09-01 · lista | paso: reducido (no pedido) · faltan: paso |
 | 8 | Válvula globo limitadora de caudal con actuad | **SIN PRECIO** | — | — | pedir cotización |
 | 9 | Válvula retención 2" | IGUAL | 120,00 / un | 2025-09-01 · lista | — |
@@ -55,7 +55,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 141 placas chicas + 0 grandes + 3,54 servicio(s) de RX + 1,00 de LP por equipo = USD 2.655,50 (Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))).
   Con las tarifas de Antonelli (11-2025) serían USD 4.340,42: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: puente, 2", 24 u, materiales USD 26.072 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: puente, 2", 24 u, materiales USD 26.075 por unidad)
 
 - **Ingeniería:** 9 h × USD 15/h = USD 135,00 · mediana de 9,0 h por unidad (repartidas en la serie) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 4in #600 (serie de 13 unidades) (4, 13 u, 2026-02-19) · rango del mismo tipo 9–9 h
 - **Calidad y dossier:** 1 h × USD 15/h = USD 15,00 · mediana de 1,0 h por unidad (repartidas en la serie) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 4in #600 (serie de 13 unidades) (4, 13 u, 2026-02-19) · rango del mismo tipo 1–1 h

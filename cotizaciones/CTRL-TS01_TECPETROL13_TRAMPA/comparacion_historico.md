@@ -31,9 +31,9 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 23 | Espárrago con 2 tuercas zincado 7/8 x 145 mm  | 48 × 8,00 = 384,00 | 48 un × 3,17 = 152,16 | -60% | cot · PROVEMET · JUN-04186 · 2025-08-27 | más barato (similar) |
 | 24 | Espárrago con 2 tuercas zincado 1 1/8 x 170 m | 48 × 11,00 = 528,00 | 48 un × 7,82 = 375,36 | -29% | cot · Ind Delgado · JUN-04197 · 2026-05-28 | más barato (similar) |
 | 25 | Espárrago con 2 tuercas zincado 1 3/8 x 255 m | 60 × 13,00 = 780,00 | 60 un × 30,00 = 1.800,00 | +131% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) |
-| 26 | Junta RF hierro maleable 2" 900 | 6 × 8,00 = 48,00 | 6 un × 8,40 = 50,40 | +5% | ant · no dice (planilla de compras; cotización · 2025-08-01 | dentro de ±15% |
-| 27 | Junta RF hierro maleable 8" 900 | 3 × 10,00 = 30,00 | 3 un × 220,00 = 660,00 | +2.100% | ant · Bripetrol · JUN-04208 · 2026-05-05 | más caro (similar) |
-| 28 | Junta RF hierro maleable 4" 900 | 8 × 6,00 = 48,00 | 8 un × 72,50 = 580,00 | +1.108% | ant · Bripetrol · JUN-04207 · 2026-05-05 | más caro (similar) |
+| 26 | Junta RF hierro maleable 2" 900 | 6 × 8,00 = 48,00 | 6 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-29 | SIN PRECIO en el catálogo |
+| 27 | Junta RF hierro maleable 8" 900 | 3 × 10,00 = 30,00 | 3 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-29 | SIN PRECIO en el catálogo |
+| 28 | Junta RF hierro maleable 4" 900 | 8 × 6,00 = 48,00 | 8 un × 12,87 = 102,96 | +114% | cot · MS Juntas · JUN-01722 · 2026-05-27 | más caro (similar) |
 | 29 | Weldolet 1 1/2" x 20" 160 ASTM A-105 | 1 × 7,00 = 7,00 | 1 un × 85,00 = 85,00 | +1.114% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) |
 | 30 | Weldolet 2" x 10" 160 ASTM A-105 | 1 × 7,00 = 7,00 | 1 un × 115,00 = 115,00 | +1.543% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) |
 | 31 | Weldolet 2" x 20" 160 ASTM A-105 | 1 × 7,00 = 7,00 | 1 un × 115,00 = 115,00 | +1.543% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) |
@@ -57,7 +57,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 49 | Detector de paso de scraper | 1 × 4.209,50 = 4.209,50 | 1 un × 1.650,00 = 1.650,00 | -61% | ant · TDW (marca) · OTR-02969 · 2025-12-10 | más barato (similar) |
 | 50 | Válvula de bloqueo y purga (para manómetro) 1 | 1 × 150,00 = 150,00 | 1 un × 80,00 = 80,00 | -47% | ant · Abac · VAL-03162 · 2026-04-22 | más barato (similar) |
 
-**Materiales: real USD 58.316,80 · cotizador USD 59.824,53 (+3%).** 13 dentro de ±15%, 32 fuera, 5 sin precio.
+**Materiales: real USD 58.316,80 · cotizador USD 58.637,09 (+1%).** 12 dentro de ±15%, 31 fuera, 7 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -74,5 +74,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por trampa
 
-Real USD 83.177,98 · cotizador USD 85.242,75 (+2%) antes de completar lo que el cotizador marca para revisar.
+Real USD 83.177,98 · cotizador USD 84.055,31 (+1%) antes de completar lo que el cotizador marca para revisar.
 

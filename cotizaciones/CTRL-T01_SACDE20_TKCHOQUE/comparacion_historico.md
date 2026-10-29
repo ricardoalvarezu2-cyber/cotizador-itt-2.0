@@ -23,11 +23,11 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 15 | Separador de niebla 6" (con viruta) | 5 × 1,50 = 7,50 | 5 kg × 1,27 = 6,35 | -15% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | más barato (similar) |
 | 16 | Brida WNRF 2" #600 Sch 80 | 1 × 28,42 = 28,42 | 1 un × 28,42 = 28,42 | 0% | ant · Lista Renar · BRI-01260 · 2026-02-19 | dentro de ±15% |
 | 17 | Refuerzo 355 mm x 3/8" | 8 × 1,50 = 12,00 | 8 kg × 1,27 = 10,16 | -15% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | más barato (similar) |
-| 18 | Media cupla 2" #6000 | 1 × 18,38 = 18,38 | 1 un × 9,19 = 9,19 | -50% | lista · Renard (cód. 7035) · AFO-00810 · 2025-12-26 | más barato (similar) · real: estimado base S3000 × 2 |
+| 18 | Media cupla 2" #6000 | 1 × 18,38 = 18,38 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-29 | SIN PRECIO en el catálogo · real: estimado base S3000 × 2 |
 | 19 | Junta plana 6" #150 | 1 × 10,00 = 10,00 | 1 un × 5,76 = 5,76 | -42% | est · Stock ITT (cód. ACS1501X76FL0) · JUN-017 · 2024-11-01 | más barato (similar) |
 | 20 | Cunas de apoyo | 40 × 0,75 = 30,00 | 40 kg × 1,27 = 50,80 | +69% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | más caro (similar) · real: la planilla toma 20 kg × 1,5 (error: 2 un × 20 kg = 40 kg); incluye MO ITT p/estructura pesada |
 
-**Materiales: real USD 6.104,66 · cotizador USD 8.855,97 (+45%).** 4 dentro de ±15%, 14 fuera, 2 sin precio.
+**Materiales: real USD 6.104,66 · cotizador USD 8.846,78 (+45%).** 4 dentro de ±15%, 13 fuera, 3 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -44,5 +44,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por tanque
 
-Real USD 22.624,66 · cotizador USD 14.733,79 (-35%) antes de completar lo que el cotizador marca para revisar.
+Real USD 22.624,66 · cotizador USD 14.724,60 (-35%) antes de completar lo que el cotizador marca para revisar.
 

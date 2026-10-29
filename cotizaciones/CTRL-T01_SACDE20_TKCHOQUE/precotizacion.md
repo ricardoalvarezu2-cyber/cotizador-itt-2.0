@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-T01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 8.855,97 por equipo · soldadura y servicios calculados USD 5.877,83 · 11 similares (1, 3, 5, 12, 13, 14, 15, 17, 18, 19, 20) · 2 sin precio (10, 11).
+**Resumen:** materiales USD 8.846,77 por equipo · soldadura y servicios calculados USD 5.877,83 · 10 similares (1, 3, 5, 12, 13, 14, 15, 17, 19, 20) · 3 sin precio (10, 11, 18).
 
 
 ## 1. Materiales
@@ -25,7 +25,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 15 | Separador de niebla (con viruta) 6" | SIMILAR (acero por kg) | USD 1,27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2") +10% por recortes; no incluye corte, plegado ni rolado |
 | 16 | Brida welding neck RF 2" | IGUAL | 28,42 / un | 2026-02-19 · planilla interna | — |
 | 17 | Refuerzo de conexión Ø355 mm esp. 3/8 | SIMILAR (acero por kg) | USD 1,27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2", la más cercana a 355 mm) +10% por recortes; no incluye corte, plegado ni rolado (A-516: se toma el precio de chapa A-36 de la lista; el A-516 suele costar más) |
-| 18 | Media cupla 2" | SIMILAR | 9,19 / un | 2025-12-26 · lista | serie: 3000 (pedido 6000); extremos: BSPT (pedido NPT/SW) |
+| 18 | Media cupla 2" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (0.75") (AFO-04930, USD 3,82): pedir cotización |
 | 19 | Junta plana 6" | SIMILAR (estimado cepo) ⚠ | 5,76 / un | 2024-11-01 · estimado (cepo) | material: AISI 316 (no pedido) |
 | 20 | Cunas de apoyo (2 un de 20 kg) | SIMILAR (acero por kg) | USD 1,27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2") +10% por recortes; no incluye corte, plegado ni rolado |
 | 8b | Completar barra de 12 m (pos 8) | compra extra | USD 60,51/m × 6 m | | Se usan 6 m en 1 equipo(s) y se compran 12 m. Borrar si hay sobrante en stock |
@@ -54,7 +54,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 10 placas chicas + 21 grandes + 1,00 servicio(s) de RX + 1,00 de LP por equipo = USD 1.550,00 (Servicio de radiografía (Antonelli) (2025-11; antonelli_end_2025-11)).
   Con las tarifas de Antonelli (11-2025) serían USD 1.550,00: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: tanque, 36", 1 u, materiales USD 8.856 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: tanque, 36", 1 u, materiales USD 8.847 por unidad)
 
 - ⚠ **No hay antecedente del mismo tipo (tanque) ni de uno afín: no se suman horas.** Cargarlas a mano con el detalle de actividades. Candidatos (de otro tipo, no usar sin revisar): TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · Trampa lanzadora 20x16 (Serie 600 A6C) (20 / 16, 1 u, 2026-07-20) | Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Tanque de glicol (envolvente 12in sch30, SE-SPF-025) - opcio (12, 1 u, 2026-02-20) | TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E · Trampa lanzadora 8x6 #300 (LS-122/124) (8 / 6 (barrel 24 x 20 en tabla soldadura), 2 u, 2025-12-10)
 

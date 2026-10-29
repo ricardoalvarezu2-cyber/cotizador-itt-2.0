@@ -290,14 +290,13 @@
    "especificacion": "Plano: 1/2\" · 2000 · ASTM A-105 · NPT-M",
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 1.9,
-     "proveedor": "Renard (cód. 5979) · AFO-00847",
-     "codigo": "AFO-00847",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 5979",
-     "fecha": "2025-12-26",
-     "coincide": "similar",
-     "diferencia": "serie: 3000 (pedido 2000)"
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-29",
+     "coincide": "sin_ref",
+     "diferencia": "El más parecido es de otro diámetro (1.5\") (AFO-00858 TAPON CE 1 1/2 2000 NPT ASTM A182 F316, USD 47,17): no sirve como precio"
     }
    ]
   },
@@ -311,14 +310,13 @@
    "especificacion": "Plano: 1/4\" · 2000 · ASTM A-105 · NPT-H/SW",
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 2.35,
-     "proveedor": "Renard (cód. 7039) · AFO-00789",
-     "codigo": "AFO-00789",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 7039",
-     "fecha": "2025-12-26",
-     "coincide": "similar",
-     "diferencia": "serie: 3000 (pedido 2000); extremos: NPT (pedido NPT/SW)"
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-29",
+     "coincide": "sin_ref",
+     "diferencia": "El más parecido es de otro diámetro (0.5\") (AFO-00790 MEDIA CUPLA ½ 2000 NPT ASTM A105, USD 3,90): no sirve como precio"
     }
    ]
   },
@@ -516,14 +514,13 @@
    "especificacion": "Plano: 4\" · 300 · ASME B16.20 · ",
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 10.0,
-     "proveedor": "planilla de costo ITT · JUN-02797",
-     "codigo": "JUN-02797",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx",
-     "fecha": "2026-06-26",
-     "coincide": "similar",
-     "diferencia": "serie: sin dato (pedido 300); extremos: RF (no pedido)"
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-29",
+     "coincide": "sin_ref",
+     "diferencia": "El más parecido es de otro diámetro (10\") (JUN-04923 44 juntas espiraladas SWI AC 316LFG Ø10\" #300 (cot, USD 7,14): no sirve como precio"
     }
    ]
   },
@@ -680,14 +677,14 @@
    "especificacion": "Plano: 1/2\" · 2000 · ASTM A-105 · SW",
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 2.43,
-     "proveedor": "Renard (cód. 7052) · AFO-00793",
-     "codigo": "AFO-00793",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 7052",
-     "fecha": "2025-12-26",
+     "tipo": "est",
+     "precio": 3.9,
+     "proveedor": "Stock ITT (cód. ACS015AN2G050) · AFO-00790",
+     "codigo": "AFO-00790",
+     "origen": "fuentes_originales/stock_valorizado_2024-11.xlsx · código ACS015AN2G050",
+     "fecha": "2024-11-01",
      "coincide": "similar",
-     "diferencia": "serie: 3000 (pedido 2000)"
+     "diferencia": "extremos: NPT (pedido SW)"
     }
    ]
   },

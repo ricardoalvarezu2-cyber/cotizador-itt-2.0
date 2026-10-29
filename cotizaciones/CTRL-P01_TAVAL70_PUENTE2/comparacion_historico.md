@@ -11,7 +11,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 3 | Tee reducción 3" x 2" sch 80 BW SA-234 WPB | 2 × 64,11 = 128,22 | 2 un × 64,11 = 128,22 | 0% | ant · Renard · ABW-00390 · 2026-08-14 | dentro de ±15% |
 | 4 | Brida WNRF 2" #600 sch 80 SA-105 | 48 × 19,42 = 932,16 | 48 un × 28,42 = 1.364,16 | +46% | ant · Cot Elem Equip · BRI-02568 · 2026-03-03 | más caro (similar) |
 | 5 | Tee reducción 2" x 1 1/2" sch 80 BW SA-234 WP | 2 × 33,59 = 67,18 | 2 un × 33,59 = 67,18 | 0% | lista · Renard (cód. 3819) · ABW-00367 · 2025-12-26 | dentro de ±15% |
-| 6 | Brida SWRF 1 1/2" #600 sch 160 A105 | 2 × 18,02 = 36,04 | 2 un × 23,36 = 46,72 | +30% | lista · Renard (cód. 10531) · BRI-01159 · 2025-12-26 | más caro (similar) |
+| 6 | Brida SWRF 1 1/2" #600 sch 160 A105 | 2 × 18,02 = 36,04 | 2 un × 25,11 = 50,22 | +39% | est · Stock ITT (cód. ACS0504RBNCD0) · BRI-011 · 2024-11-01 | más caro (similar) |
 | 7 | Válvula esférica 2" #600 WCB (PT flotante) | 8 × 416,00 = 3.328,00 | 10 un × 434,00 = 4.340,00 | +30% | lista · Taval (Lista 30 × 0.52) · VAL-04446 · 2025-09-01 | más caro (similar) · real: REV 1: 8 (la lista de ingeniería dice 10; REV 0: 10 × 400,40); va como Válvulas Taval, factor 1 |
 | 8 | Válvula globo 2" #600 limitadora de caudal co | 2 × 8.600,00 = 17.200,00 | 2 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-29 | SIN PRECIO en el catálogo · real: en la planilla va en Instrumentación; "PEDIR MEJOR OFERTA" |
 | 9 | Válvula retención 2" #600 WCB | 2 × 254,00 = 508,00 | 2 un × 120,00 = 240,00 | -53% | lista · Taval (Lista 30 × 0.52) · VAL-04709 · 2025-09-01 | más barato · real: REV 0: 133,67; va como Válvulas Taval |
@@ -34,7 +34,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | X2 | Manifold de 5 vías | 698,00 | — | — | — | falta en el cotizador |
 | X3 | Botellones de purga tomas de presión | 900,00 | — | — | — | falta en el cotizador |
 
-**Materiales: real USD 54.743,60 · cotizador USD 26.071,88 (-52%).** 6 dentro de ±15%, 13 fuera, 5 sin precio.
+**Materiales: real USD 54.743,60 · cotizador USD 26.075,38 (-52%).** 6 dentro de ±15%, 13 fuera, 5 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -51,5 +51,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por puente
 
-Real USD 68.559,60 · cotizador USD 39.164,32 (-43%) antes de completar lo que el cotizador marca para revisar.
+Real USD 68.559,60 · cotizador USD 39.167,82 (-43%) antes de completar lo que el cotizador marca para revisar.
 

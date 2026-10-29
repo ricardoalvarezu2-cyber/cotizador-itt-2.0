@@ -502,12 +502,12 @@
    "fuentes": [
     {
      "tipo": "est",
-     "precio": 115.2,
-     "proveedor": "Stock ITT: válvula de tapón 1\" NPT S-3000 WCB (VAL-03596, estimado del cepo)",
-     "origen": "conocimiento/precios/stock_2024-11.csv",
-     "fecha": "2024-11-01",
-     "coincide": "similar",
-     "diferencia": "NPT 3000 (acá RF #600); pedir cotización"
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-29",
+     "coincide": "sin_ref",
+     "diferencia": "solo hay tapón 1\" NPT S-3000 (VAL-03596): otra serie no es referencia"
     }
    ]
   },
@@ -580,13 +580,13 @@
    "unidad": "un",
    "fuentes": [
     {
-     "tipo": "cot",
-     "precio": 685,
-     "proveedor": "Riva Hnos: indicador de nivel reflex 500 mm, 70 bar",
-     "origen": "fuentes_originales/ofertas_texto/CAMUZZI/30 - Separador Polvo y Líquido (2 unid) - Lic 22737/5.Proveedores 3ros/Riva Hnos - Cotización de indicadores de nivel.msg.txt",
-     "fecha": "2026-02-12",
-     "coincide": "similar",
-     "diferencia": "cotizado para 70 bar; pedir para 102 bar de diseño"
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización a Riva para #600",
+     "origen": "—",
+     "fecha": "2026-10-29",
+     "coincide": "sin_ref",
+     "diferencia": "la cotización de Riva (685, CAMUZZI/30) es para 70 bar: otra presión no es referencia"
     }
    ]
   },

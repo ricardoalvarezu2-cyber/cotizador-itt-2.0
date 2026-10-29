@@ -77,6 +77,9 @@ const Busqueda = (() => {
         else difs.push(`${c}: ${r.a[c]} (no pedido)`);
       }
       if (coinc === 0) continue;
+      // similar solo de la misma serie y la misma norma, igual que buscar_material.py (Matías, 29-10-2026)
+      if (cs.includes("serie") && !op.has("serie") && f.serie && norm(r.a.serie) !== norm(f.serie)) continue;
+      if (cs.includes("norma") && f.norma && r.a.norma && norm(r.a.norma) !== norm(f.norma)) continue;
       const oblig = cs.filter(c => !op.has(c));
       const igual = !difs.length && oblig.every(c => f[c]);
       const misma = !!f.marca && norm(r.a.marca) === norm(f.marca);

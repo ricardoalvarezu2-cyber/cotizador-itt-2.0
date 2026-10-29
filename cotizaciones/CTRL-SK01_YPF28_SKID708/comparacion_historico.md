@@ -18,8 +18,8 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 10 | Espárrago c/2 tuercas 1.25x207 B7/2H zincado | 40 × 12,95 = 518,00 | 40 un × 7,33 = 293,20 | -43% | cot · DELGADO · JUN-01679 · 2025-09-04 | más barato (similar) |
 | 11 | Espárrago c/2 tuercas 1.125x186 B7/2H zincado | 288 × 9,59 = 2.761,92 | 288 un × 12,00 = 3.456,00 | +25% | ant · planilla de costo ITT · JUN-04198 · 2026-06-26 | más caro (similar) · real: 288 = 18 bridas 12" × 16 espárragos (16 × 1 1/8" por brida 12" #300: correcto) |
 | 12 | Junta espiralada RF 4,5 mm 300 LB 1 1/2" | 3 × 7,00 = 21,00 | 3 un × 6,00 = 18,00 | -14% | ant · MS · JUN-02769 · 2026-08-14 | dentro de ±15% |
-| 13 | Junta espiralada RF 4,5 mm 300 LB 12" | 18 × 45,00 = 810,00 | 18 un × 15,00 = 270,00 | -67% | ant · sin proveedor en planilla · JUN-02765 · 2025-12-18 | más barato (similar) |
-| 14 | Junta espiralada RF 4,5 mm 300 LB 16" | 2 × 80,00 = 160,00 | 2 un × 20,86 = 41,72 | -74% | est · Stock ITT (cód. ACS4001X6MFM0) · JUN-016 · 2024-11-01 | más barato (similar) |
+| 13 | Junta espiralada RF 4,5 mm 300 LB 12" | 18 × 45,00 = 810,00 | 18 un × 42,44 = 763,92 | -6% | est · no dice · JUN-02764 · 2025-03-27 | dentro de ±15% |
+| 14 | Junta espiralada RF 4,5 mm 300 LB 16" | 2 × 80,00 = 160,00 | 2 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-29 | SIN PRECIO en el catálogo |
 | 15 | Niple s/c NPT SCH 80 L=100 mm 1 1/2" | 3 × 9,00 = 27,00 | 3 un × 5,60 = 16,80 | -38% | stock · Stock ITT (cód. ACI040FN1ICK100) · NIP-0 · 2024-11-01 | más barato |
 | 16 | Niple s/c NPT SCH 80 L=100 mm 1/2" | 1 × 4,00 = 4,00 | 1 un × 20,00 = 20,00 | +400% | ant · Antecedentes puentes Taval/CGC s2000 · N · 2026-04-22 | más caro |
 | 17 | Niple s/c NPT SCH 80 L=100 mm 3/4" | 1 × 4,50 = 4,50 | 1 un × 3,93 = 3,93 | -13% | stock · Stock ITT (cód. ACI020KN1ICK100) · NIP-0 · 2024-11-01 | dentro de ±15% |
@@ -33,12 +33,12 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 25 | Válvula esférica 1/2" NPT WOG 2000 PT palanca | 1 × 36,06 = 36,06 | 1 un × 36,06 = 36,06 | 0% | lista · Taval (Lista 30 × 0.52) · VAL-04865 · 2025-09-01 | dentro de ±15% |
 | 26 | Válvula esférica 3/4" NPT WOG 2000 PT palanca | 4 × 38,80 = 155,20 | 4 un × 38,80 = 155,20 | 0% | lista · Taval (Lista 30 × 0.52) · VAL-04874 · 2025-09-01 | dentro de ±15% |
 | 27 | Válvula retención clapeta 12" FLG RF 300 LB A | 3 × 3.162,00 = 9.486,00 | 3 un × 1.425,00 = 4.275,00 | -55% | lista · Taval (Lista 30 × 0.52) · VAL-03580 · 2025-09-01 | más barato · real: trim 8 a confirmar |
-| 28 | Válvula globo 1/2" NPT 800 LB volante (Taval) | 1 × 35,10 = 35,10 | 1 un × 35,10 = 35,10 | 0% | lista · Taval (Lista 30 × 0.52) · VAL-04848 · 2025-09-01 | dentro de ±15% · real: API 602 A105 trim 5 |
-| 29 | Válvula globo 3/4" NPT 800 LB volante (Taval) | 1 × 40,50 = 40,50 | 1 un × 40,50 = 40,50 | 0% | lista · Taval (Lista 30 × 0.52) · VAL-04849 · 2025-09-01 | dentro de ±15% · real: API 602 A105 trim 5 |
+| 28 | Válvula globo 1/2" NPT 800 LB volante (Taval) | 1 × 35,10 = 35,10 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-29 | SIN PRECIO en el catálogo · real: API 602 A105 trim 5 |
+| 29 | Válvula globo 3/4" NPT 800 LB volante (Taval) | 1 × 40,50 = 40,50 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-29 | SIN PRECIO en el catálogo · real: API 602 A105 trim 5 |
 | 30 | Válvula esférica 12" FLG RF 300 LB PT volante | 3 × 5.750,00 = 17.250,00 | 3 un × 5.750,00 = 17.250,00 | 0% | lista · Taval (Lista 30 × 0.52) · VAL-04436 · 2025-09-01 | dentro de ±15% |
 | 31 | Bastidor del skid (perfilería) | 850 × 2,00 = 1.700,00 | 850 kg × 1,90 = 1.615,00 | -5% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | dentro de ±15% · real: la PC0 le aplicó un 20% de overspray (error: es acero, no pintura) |
 
-**Materiales: real USD 60.808,45 · cotizador USD 51.975,89 (-15%).** 16 dentro de ±15%, 14 fuera, 1 sin precio.
+**Materiales: real USD 60.808,45 · cotizador USD 52.352,49 (-14%).** 15 dentro de ±15%, 12 fuera, 4 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -54,5 +54,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por skid
 
-Real USD 85.995,15 · cotizador USD 71.487,08 (-17%) antes de completar lo que el cotizador marca para revisar.
+Real USD 85.995,15 · cotizador USD 71.863,68 (-16%) antes de completar lo que el cotizador marca para revisar.
 

@@ -250,14 +250,14 @@
    "especificacion": "Plano: 1 1/2\" · 600/160 · SA-105 · RF/SW",
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 23.36,
-     "proveedor": "Renard (cód. 10531) · BRI-01159",
-     "codigo": "BRI-01159",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 10531",
-     "fecha": "2025-12-26",
+     "tipo": "est",
+     "precio": 25.11,
+     "proveedor": "Stock ITT (cód. ACS0504RBNCD0) · BRI-01167",
+     "codigo": "BRI-01167",
+     "origen": "fuentes_originales/stock_valorizado_2024-11.xlsx · código ACS0504RBNCD0",
+     "fecha": "2024-11-01",
      "coincide": "similar",
-     "diferencia": "serie: 300 (pedido 600); material: A105 (no pedido)"
+     "diferencia": "diametro: 2\" (pedido 1.5\"); schedule: sin dato (pedido 160); material: A182 F316 (no pedido); precio escalado por diámetro (1,5\" ÷ 2\")^1,5 = × 0,65"
     }
    ]
   },

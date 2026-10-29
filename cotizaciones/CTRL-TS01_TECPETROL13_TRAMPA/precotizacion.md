@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-TS01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 59.824,54 por equipo · soldadura y servicios calculados USD 25.418,22 · 39 similares (1, 2, 3, 4, 5, 6, 6b, 7, 7b, 8, 8b, 13, 17, 18, 20, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 34, 36, 37, 38, 39, 41, 42, 43, 44, 45, 46, 47, 49, 50) · 5 sin precio (32, 33, 35, 40, 48).
+**Resumen:** materiales USD 58.637,10 por equipo · soldadura y servicios calculados USD 25.418,22 · 37 similares (1, 2, 3, 4, 5, 6, 6b, 7, 7b, 8, 8b, 13, 17, 18, 20, 22, 23, 24, 25, 28, 29, 30, 31, 34, 36, 37, 38, 39, 41, 42, 43, 44, 45, 46, 47, 49, 50) · 7 sin precio (26, 27, 32, 33, 35, 40, 48).
 
 
 ## 1. Materiales
@@ -33,9 +33,9 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 23 | Espárrago con 2 tuercas zincado 7/8 x 145 mm  | SIMILAR | 3,17 / un | 2025-08-27 · cotización | unidad distinta: catálogo por juego, plano por un |
 | 24 | Espárrago con 2 tuercas zincado 1 1/8 x 170 m | SIMILAR | 7,82 / un | 2026-05-28 · cotización | material: A193 B7 (pedido A194 2H); medida: 1 1/8 x 7 (pedido 1 1/8 x 6 3/4); unidad distinta: catálogo por ju |
 | 25 | Espárrago con 2 tuercas zincado 1 3/8 x 255 m | SIMILAR | 30,00 / un | 2025-08-01 · planilla interna | material: sin dato (pedido A194 2H) |
-| 26 | Junta RF hierro maleable 2" | SIMILAR | 8,40 / un | 2025-08-01 · planilla interna | serie: sin dato (pedido 900); extremos: RTJ (pedido RF) |
-| 27 | Junta RF hierro maleable 8" | SIMILAR | 220,00 / un | 2026-05-05 · planilla interna | serie: 600 (pedido 900); unidad distinta: catálogo por uni, plano por un |
-| 28 | Junta RF hierro maleable 4" | SIMILAR | 72,50 / un | 2026-05-05 · planilla interna | serie: 600 (pedido 900); unidad distinta: catálogo por uni, plano por un |
+| 26 | Junta RF hierro maleable 2" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (6") (JUN-01722, USD 12,87): pedir cotización |
+| 27 | Junta RF hierro maleable 8" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (6") (JUN-01722, USD 12,87): pedir cotización |
+| 28 | Junta RF hierro maleable 4" | SIMILAR | 12,87 / un | 2026-05-27 · cotización | diametro: 6" (pedido 4"); extremos: RTJ (pedido RF) |
 | 29 | Weldolet 1 1/2" x 20" | SIMILAR | 85,00 / un | 2025-08-01 · planilla interna | — · faltan: tipo, serie |
 | 30 | Weldolet 2" x 10" | SIMILAR | 115,00 / un | 2025-08-01 · planilla interna | — · faltan: tipo, serie |
 | 31 | Weldolet 2" x 20" | SIMILAR | 115,00 / un | 2025-08-01 · planilla interna | — · faltan: tipo, serie |
@@ -55,7 +55,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 45 | Válvula esférica 5000 WOG, asientos Delrin, c | SIMILAR | 65,20 / un | 2026-01-26 · planilla interna | serie: 3000 (no pedido) · faltan: serie, paso |
 | 46 | Válvula macho (tapón lubricado) invertida, in | SIMILAR | 1.203,00 / un | 2025-08-01 · planilla interna | extremos: RTJ (pedido RF) |
 | 47 | Manómetro con glicerina Ø100 mm 0-400 1/2" | SIMILAR | 120,00 / un | 2026-08-14 · planilla interna | — · faltan: rango, conexion |
-| 48 | Válvula de seguridad (TSV) entrada 1 1/2" sal | **SIN PRECIO** | — | — | el más parecido es sin diámetro conocido (VAL-02252, USD 4.413,92): pedir cotización |
+| 48 | Válvula de seguridad (TSV) entrada 1 1/2" sal | **SIN PRECIO** | — | — | pedir cotización |
 | 49 | Detector de paso de scraper | SIMILAR | 1.650,00 / un | 2025-12-10 · planilla interna | diametro: 2" (no pedido); serie: 300 (no pedido) · faltan: diametro, serie |
 | 50 | Válvula de bloqueo y purga (para manómetro) 1 | SIMILAR | 80,00 / un | 2026-04-22 · planilla interna | — · faltan: serie, material |
 | 6b | Completar barra de 12 m (pos 6) | compra extra | USD 242,81/m × 7,2 m | | Se usan 4,8 m en 1 equipo(s) y se compran 12 m. Borrar si hay sobrante en stock |
@@ -101,7 +101,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 93 placas chicas + 7 grandes + 3,00 servicio(s) de RX + 1,00 de LP por equipo = USD 2.178,50 (Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))).
   Con las tarifas de Antonelli (11-2025) serían USD 3.495,00: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: trampa, 16", 1 u, materiales USD 59.825 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: trampa, 16", 1 u, materiales USD 58.637 por unidad)
 
 - Montaje propio: no se suma porque la fabricación la hace el tercero; la prueba hidráulica va aparte (fila PH).
 - **Ingeniería:** 503 h × USD 15/h = USD 7.545,00 · mediana de 503,0 h por unidad (repartidas en la serie) · antecedente: TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E · Trampa receptora 8x6 #300 (RS-123/125) (8 / 6 (barrel 24 x 20 en tabla soldadura), 2 u, 2025-12-10) · rango del mismo tipo 251,5–251,5 h

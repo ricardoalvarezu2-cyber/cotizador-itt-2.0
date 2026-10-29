@@ -34,7 +34,8 @@ igual("junta monolítica: Duralitte 280 (renglón separado de una cotización co
 igual("unión doble extensible sin precio", auto["21"]["fuentes"][0]["precio"], 0)
 igual("caño 1900 mm se compra por metro", (auto["14"]["unidad"], auto["14"]["cantidad"]), ("m", 1.9))
 igual("cupla BW es forjado (no se empareja con un codo)", "codo" in auto["23"]["fuentes"][0].get("diferencia", ""), False)
-igual("precio real antes que estimado del cepo (tee 2\")", auto["8"]["fuentes"][0]["tipo"] != "est", True)
+# tee 2" #2000 NPT: la única de la misma serie es el estimado del cepo; una #3000 ya no es referencia (Matías, 29-10-2026)
+igual("similar solo de la misma serie (tee 2\" #2000)", (auto["8"]["fuentes"][0]["codigo"], auto["8"]["fuentes"][0]["coincide"]), ("AFO-00917", "igual"))
 # lectores (segunda tanda de controles, 28-10-2026)
 from catalogo_materiales import atributos, expandir, familia_de  # noqa: E402
 from indice_proyectos import norm  # noqa: E402

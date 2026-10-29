@@ -204,3 +204,7 @@ Alguien que no armó el cómputo (otro agente o una persona) compara `pedido/lis
 - Cada rubro tiene su ficha (kg, juntas, pulgadas, m², placas, procedimientos, litros) y su costo **por antecedentes** (tarifa del historial elegida en una lista × cantidad de la ficha; "Aplicar al costo" reemplaza los renglones del rubro) o **manual** (precio del tercero con fuente).
 - Procedimientos: la ficha arma la lista (WPS/PQR por material y tipo de junta, WPQ, RX, LP, PH, pintura). Solo los de END tienen costo de antecedente (USD 250 por trabajo, repartido entre los equipos); los demás se piden si hacen falta nuevos.
 - Piping: se cotiza **por pulgada de soldadura o por kg** (hay terceros que cobran por kilo). En cualquier rubro se puede elegir "Tarifa propia" y cargar valor, fecha y proveedor (29-10-2026).
+
+
+## Similares: misma serie y misma norma (Matías, 29-10-2026)
+Un precio de referencia "similar" solo vale si la pieza es de la **misma serie** (#150/#300/#600/#900, 2000/3000/6000) y de la **misma norma** (B16.5, B16.47, B16.9, B16.11, API 6D, API 608, etc.) que la del plano. Otra marca, otro material o una diferencia menor se anotan como diferencia; otra serie u otra norma no son referencia: se pide cotización.

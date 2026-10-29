@@ -786,14 +786,13 @@
    "especificacion": "Plano: 2\" · 900 ·  · ",
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 8.4,
-     "proveedor": "no dice (planilla de compras; cotización FTS 250558 en carpeta) · JUN-02794",
-     "codigo": "JUN-02794",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\7. Trampas · 5.Proveedores 3ros/Compras ITT/TRAMPAS unificado para compras.xlsx.txt",
-     "fecha": "2025-08-01",
-     "coincide": "similar",
-     "diferencia": "serie: sin dato (pedido 900); extremos: RTJ (pedido RF)"
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-29",
+     "coincide": "sin_ref",
+     "diferencia": "El más parecido es de otro diámetro (6\") (JUN-01722 24 juntas RTJ R45 6\" #900, USD 12,87 c/u, USD 12,87): no sirve como precio"
     }
    ]
   },
@@ -807,14 +806,13 @@
    "especificacion": "Plano: 8\" · 900 ·  · ",
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 220.0,
-     "proveedor": "Bripetrol · JUN-04208",
-     "codigo": "JUN-04208",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\9. CM SKID MANIFOLD PAD S-600 · fuentes_originales/ofertas_texto/TECPETROL/9. CM SKID MANIFOLD PAD S-600/Adicional Manifold Tecpe 2026-05-05.xlsx.txt",
-     "fecha": "2026-05-05",
-     "coincide": "similar",
-     "diferencia": "serie: 600 (pedido 900); unidad distinta: catálogo por uni, plano por un"
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-29",
+     "coincide": "sin_ref",
+     "diferencia": "El más parecido es de otro diámetro (6\") (JUN-01722 24 juntas RTJ R45 6\" #900, USD 12,87 c/u, USD 12,87): no sirve como precio"
     }
    ]
   },
@@ -828,14 +826,14 @@
    "especificacion": "Plano: 4\" · 900 ·  · ",
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 72.5,
-     "proveedor": "Bripetrol · JUN-04207",
-     "codigo": "JUN-04207",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\9. CM SKID MANIFOLD PAD S-600 · fuentes_originales/ofertas_texto/TECPETROL/9. CM SKID MANIFOLD PAD S-600/Adicional Manifold Tecpe 2026-05-05.xlsx.txt",
-     "fecha": "2026-05-05",
+     "tipo": "cot",
+     "precio": 12.87,
+     "proveedor": "MS Juntas · JUN-01722",
+     "codigo": "JUN-01722",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\12 - Skid manifold PAD S-900",
+     "fecha": "2026-05-27",
      "coincide": "similar",
-     "diferencia": "serie: 600 (pedido 900); unidad distinta: catálogo por uni, plano por un"
+     "diferencia": "diametro: 6\" (pedido 4\"); extremos: RTJ (pedido RF)"
     }
    ]
   },
@@ -1254,7 +1252,7 @@
      "origen": "—",
      "fecha": "2026-10-29",
      "coincide": "sin_ref",
-     "diferencia": "El más parecido es sin diámetro conocido (VAL-02252 2 válvulas de seguridad Crosby 4L6JLTJOS-E35J, PSV, USD 4.413,92): no sirve como precio"
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
    ]
   },

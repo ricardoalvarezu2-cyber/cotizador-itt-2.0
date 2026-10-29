@@ -8,8 +8,9 @@ Uso:
   python herramientas/buscar_material.py "valvula retencion 2\\" serie 600 A216 WCB NPT" --marca Danco
 
 Igual = coinciden todas las características que definen el material en su familia (ver catalogo_materiales.py).
-Similar = misma familia y tipo, con alguna diferencia: se lista cuál. Un precio de un similar sirve de referencia,
-pero en la cotización va con "coincide": "similar" y la diferencia.
+Similar = misma familia, tipo, serie y norma, con alguna otra diferencia: se lista cuál. Un precio de un similar sirve
+de referencia, pero en la cotización va con "coincide": "similar" y la diferencia. Otra serie u otra norma no es similar
+(Matías, 29-10-2026): si no hay de la misma serie, se pide cotización.
 
 Marca (válvulas e instrumentos): la marca NO cuenta para igual/similar. Con --marca (o si la descripción nombra una
 marca), primero salen los iguales de esa marca y después los "IGUAL (otra marca)", para poder elegir. Sin marca pedida,
@@ -77,6 +78,12 @@ def buscar(texto, familia=None, marca_pedida=""):
         if fam in CON_TIPO and bool(at.get("tipo")) != bool(r.get("tipo")):
             continue  # sin tipo de un lado no se sabe qué pieza es: no se compara (ej. junta monolítica vs junta sin tipo)
         if coinc == 0:
+            continue
+        # Similar solo de la misma serie y la misma norma (Matías, 29-10-2026): otra serie u otra norma no es referencia.
+        # La serie pedida tiene que estar en el renglón (salvo en bulonería, donde la define la medida); la norma, si ambos la dicen.
+        if "serie" in campos and "serie" not in opcionales and at.get("serie") and norm(r.get("serie", "")) != norm(at["serie"]):
+            continue
+        if "norma" in campos and at.get("norma") and r.get("norma") and norm(r["norma"]) != norm(at["norma"]):
             continue
         oblig = [c for c in campos if c not in opcionales]
         igual = not difs and all(at.get(c) for c in oblig)
