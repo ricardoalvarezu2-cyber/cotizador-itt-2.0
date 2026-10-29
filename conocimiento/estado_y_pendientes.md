@@ -116,7 +116,7 @@ Hecho (28/10/2026): `precotizar.py` (materiales, soldaduras, pintura, PH, RX) ·
 **Abiertos al 29-10-2026 (para decidir con Matías)**
 1. Costos de procedimientos sin antecedente: WPS/PQR, calificación de soldadores, prueba hidráulica y pintura (hoy solo RX y LP, USD 250 cada uno).
 2. Sacar de Datos los campos viejos de flete (flete en el precio, flete ARS, embalaje, factor flete): el transporte ya está en MO y servicios.
-3. La rama de trabajo `ccr-0444e7e6-rf0euw` tiene todo lo del 28 y 29-10; las sesiones de pedidos hacen `git pull origin main`: hay que llevarla a `main` (PR o merge) con el OK de Matías.
+3. ~~Llevar la rama de trabajo a `main`~~ Resuelto: todo trabajo termina en `main` sin PR (Matías, 29-10-2026). Transporte: la ficha quedó con precio, destino y transportista (29-10-2026).
 
 **Tablas de pesos y botón Recalcular (29-10-2026)**
 1. ~~Integrar las tablas nuevas al cálculo de kg~~ **Hecho (29-10-2026):** accesorios complementarios, tees de reducción, olets y espárragos.
