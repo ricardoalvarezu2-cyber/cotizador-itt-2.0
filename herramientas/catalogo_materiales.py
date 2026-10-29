@@ -730,7 +730,9 @@ def leer_fuentes():
             unidad = "m" if "costo por m" in u else ("kg" if u.startswith("kg") else r["unidad"])
             car = r["carpeta_proyecto"]
             # costo_unitario viene del texto de un Excel: formato de máquina, el punto es decimal ("131.131" = 131,13)
-            add(r["descripcion"], float(r["costo_unitario"]), r["moneda"], fecha_iso(r["fecha_planilla"]), "planilla interna",
+            # PC0 de YPF y otras sin fecha por renglón (la fecha es la de recepción del pedido): ESTIMADO, no precio firme
+            supuesta = "se toma la recepción del pedido" in r["nota"]
+            add(r["descripcion"], float(r["costo_unitario"]), r["moneda"], fecha_iso(r["fecha_planilla"]), "estimado (fecha supuesta)" if supuesta else "planilla interna",
                 (r["proveedor_o_criterio"] or "planilla de costo ITT")[:80], Z + car.replace("/", "\\"), f"{r['carpeta']}/{Path(r['archivo']).name}"[:200],
                 f"fuentes_originales/ofertas_texto/{car}", unidad, extra=f"planilla de costo {r['proyecto']} ({r['ubicacion']})"[:200],
                 pista=r["rubro"], iva=iva_de(r["iva_origen"]) if r["iva_origen"] else None)
@@ -817,6 +819,9 @@ def main():
                     buenos.append(e)
             if buenos:
                 alertas.append(f"ESTIMADO: valor del período con cepo llevado a su valor verosímil ({buenos[0]['nota'].split(';')[0][11:]}); pedir cotización para el definitivo")
+        buenos.sort(key=lambda h: h["tipo_precio"].startswith("estimado"))  # un precio firme manda sobre un estimado más nuevo
+        if buenos and buenos[0]["tipo_precio"] == "estimado (fecha supuesta)":
+            alertas.append("ESTIMADO: precio de una planilla sin fecha por renglón (se tomó la de recepción del pedido); pedir cotización para el definitivo")
         u = buenos[0] if buenos else hs[0]
         precios = [h["precio_usd"] for h in (buenos or hs)]
         if not buenos:

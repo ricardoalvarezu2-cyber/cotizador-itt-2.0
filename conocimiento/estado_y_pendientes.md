@@ -104,9 +104,9 @@
 Hecho (28/10/2026): `precotizar.py` (materiales, soldaduras, pintura, PH, RX) · `plazo.py` (acopio + taller sin superponer, margen 15–20%, plazo real de la familia) · `comparar_antecedentes.py` (P8 contra los 5 más parecidos) · control de carga en `verificar_computo.py` (fecha válida, "con IVA", sin precio) · `verificar_todo.py` y `actualizar_base.py`. Descartado: lectura automática de planos y pliegos, y formato fijo para las respuestas de Compras.
 
 **Auditoría completa (29-10-2026)** — informes en `conocimiento/auditorias/2026-10-29_*.md` (arquitectura, cadena de datos, automatizaciones, diseño y UX, estructura de tablas, prueba de usuario con dislexia: 5/10). Pendiente corregir; lo más grave:
-1. Transporte con precio: entra al costo pero el resumen y la oferta dicen "flete no incluido / EXW" (llega al cliente).
-2. Plazo ofrecido menor que el calculado (YPF 120 vs 180 d) sin bloqueo; la oferta no toma plazo, cliente ni revisión ya cargados.
-3. Precios de la PC0 YPF con fecha supuesta (10-10-2026) entraron al catálogo como último precio de 45 materiales (falta corregir `pc0_a_planillas.py`). ~~Los borradores alimentan la base~~ Hecho: solo entra lo incorporado con el botón.
+1. ~~Transporte con precio sin reflejar en resumen y oferta~~ Hecho (29-10-2026).
+2. ~~Plazo menor que el calculado sin bloqueo; oferta sin los datos cargados~~ Hecho (29-10-2026): sin justificación no salen ofertas (YPF 713/708 y Camuzzi 001 quedaron sin ofertas hasta corregir o justificar el plazo).
+3. Precios de la PC0 YPF con fecha supuesta (10-10-2026) entraron al catálogo como último precio de 45 materiales (hecho 29-10-2026: ahora son "estimado (fecha supuesta)"). ~~Los borradores alimentan la base~~ Hecho: solo entra lo incorporado con el botón.
 4. Corridas simultáneas de `verificar_todo.py` corrompen los catálogos (sin escritura atómica ni bloqueo).
 5. ~~Formato de números distinto entre página e informe~~ Hecho (29-10-2026): todo 1.234,56.
 6. Ítems sin código de catálogo; dos versiones repo/página y `semilla.py` pisa lo cargado en la página.

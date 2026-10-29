@@ -273,7 +273,7 @@
     return `<div><span class="s">Costo / ${E(eq.singular)}</span><span class="v">${num(c.costo)}</span><span class="s">ajuste por inflación incluido ${num(c.costo - c.costo0)}</span></div>
       <div class="prim"><span class="s">Precio unitario USD</span><span class="v">${num(c.precio_unitario)}</span><span class="s">factores ${num(p.FM)} / ${num(p.FMO)}${c.tav ? ` · Taval ${num(c.ftv)}` : ""}</span></div>
       <div><span class="s">Cantidad</span><span class="v">${num(p.N, 0)}</span><span class="s">${E(eq.plural)}</span></div>
-      <div><span class="s">Total de la oferta USD</span><span class="v">${num(c.total)}</span><span class="s">sin IVA${p.TRANS ? " · con flete" : " · EXW"}</span></div>`;
+      <div><span class="s">Total de la oferta USD</span><span class="v">${num(c.total)}</span><span class="s">sin IVA${p.TRANS ? " · con flete" : Documentos.transporteIncluido(S.doc.cot) ? " · con transporte" : " · EXW"}</span></div>`;
   }
   function refrescar() {
     if (!S.doc) return;
@@ -586,7 +586,8 @@
     const calcD = acopio + taller, m1 = Math.round(calcD * 1.15), m2 = Math.round(calcD * 1.2);
     const solapa = tal.find(t => +t[1] < acopio);
     let aviso = "";
-    if (pl.dias < calcD) aviso = `<div class="aviso bad">El plazo ofrecido (${pl.dias} d) es menor que el calculado (${calcD} d).</div>`;
+    if (pl.dias < calcD) aviso = `<div class="aviso ${String(pl.justificacion || "").trim() ? "" : "bad"}">El plazo ofrecido (${pl.dias} d) es menor que el calculado (${calcD} d). ${String(pl.justificacion || "").trim() ? "Tiene justificación: las ofertas salen." : "Las ofertas no se generan hasta corregirlo o justificarlo."}</div>
+      <label class="ancho"><span>Justificación del plazo menor (stock, compra adelantada, acuerdo con el cliente…)</span><textarea id="f-plazo-just" data-b="cot.plazo.justificacion">${E(pl.justificacion || "")}</textarea></label>`;
     else if (pl.dias < m1) aviso = `<div class="aviso">El plazo ofrecido (${pl.dias} d) no tiene el margen de 15–20% (sugerido ${m1}–${m2} d).</div>`;
     if (solapa) aviso += `<div class="aviso bad">Superposición: "${E(solapa[0])}" empieza el día ${solapa[1]}, antes de que llegue el material más largo (día ${acopio}).</div>`;
     return `<div class="grid2"><section class="panel"><h3>Plazo ofrecido</h3><div class="campos">${campo("Días", "cot.plazo.dias", "number")}${campo("Desde", "cot.plazo.texto")}
@@ -608,12 +609,18 @@
     const lineas = (etq, ruta) => `<label class="ancho"><span>${etq} (una por renglón)</span><textarea id="o-${ruta.replace(/\./g, "-")}" data-bl="${ruta}">${E((leerRuta(S.doc, ruta) || []).join("\n"))}</textarea></label>`;
     const area = (etq, ruta) => `<label class="ancho"><span>${etq}</span><textarea id="o-${ruta.replace(/\./g, "-")}" data-b="${ruta}">${E(leerRuta(S.doc, ruta) || "")}</textarea></label>`;
     of.condiciones ??= {};
-    return `<p class="small muted">Lo que está entre [corchetes] sale resaltado en amarillo en el Word, para completar antes de enviar. Los precios no se escriben acá: salen del cálculo.</p>
-      <div class="grid2"><section class="panel"><h3>Encabezado</h3><div class="campos">${campo("Número de oferta", "oferta.oferta.numero")}${campo("Revisión", "oferta.oferta.revision")}
+    // Cliente, contacto y fecha: si siguen vacíos o entre [corchetes], se completan con lo cargado en Datos
+    const comp = Documentos.completarOferta(S.doc.cot, of); let cambio = false;
+    for (const [g, k] of [["cliente", "nombre"], ["cliente", "contacto"], ["oferta", "fecha"]])
+      if ((of[g] ??= {})[k] !== comp[g][k]) { of[g][k] = comp[g][k]; cambio = true; }
+    if (cambio) guardarPronto();
+    const fijo = (etq, v, de) => `<label><span>${etq}</span><input value="${E(v || "")}" disabled aria-describedby="fijo-${E(de)}"><small id="fijo-${E(de)}" class="muted">sale de ${E(de)}</small></label>`;
+    return `<p class="small muted">Lo que está entre [corchetes] sale resaltado en amarillo en el Word, para completar antes de enviar. Los precios no se escriben acá: salen del cálculo. El plazo y la revisión salen de la cotización.</p>
+      <div class="grid2"><section class="panel"><h3>Encabezado</h3><div class="campos">${campo("Número de oferta", "oferta.oferta.numero")}${fijo("Revisión", comp.oferta.revision, "Datos")}
         ${campo("Fecha", "oferta.oferta.fecha")}${campo("Descripción de la revisión", "oferta.oferta.descripcion_revision")}
         ${campo("Cliente", "oferta.cliente.nombre")}${campo("Contacto", "oferta.cliente.contacto")}${campo("Referencia", "oferta.cliente.referencia")}${campo("Proyecto", "oferta.cliente.proyecto")}
         ${campo("Nombre base de los archivos", "oferta.archivo_base")}</div></section>
-      <section class="panel"><h3>Ítem</h3><div class="campos">${campo("Ítem", "oferta.item.item")}${campo("Código", "oferta.item.codigo")}${campo("Plazo de entrega (días)", "oferta.item.plazo_dias")}
+      <section class="panel"><h3>Ítem</h3><div class="campos">${campo("Ítem", "oferta.item.item")}${campo("Código", "oferta.item.codigo")}${fijo("Plazo de entrega (días)", comp.item.plazo_dias, "Plazo")}
         ${area("Descripción", "oferta.item.descripcion")}${area("Observación / desvío", "oferta.item.observacion")}</div>
         <label><span>Imagen del plano (opcional, va en la oferta técnica)</span><input id="o-plano" type="file" accept="image/png,image/jpeg" ${S.assets ? "" : "disabled"}></label>
         ${of.imagen_plano_url ? `<img src="${E(of.imagen_plano_url)}" alt="Plano cargado" style="max-height:120px;align-self:flex-start;border:1px solid var(--line)">` : ""}</section></div>
@@ -665,7 +672,8 @@
         <tr><td>Servicios e insumos</td><td class="n">${num(c.sub.servicio)}</td><td class="n">× ${num(p.FMO)}</td></tr>
         <tr class="total"><td>Costo</td><td class="n">${num(c.costo)}</td><td class="n">${num(c.precio_unitario)}</td></tr>
         <tr><td>Ajuste por inflación incluido</td><td class="n">${num(c.costo - c.costo0)}</td><td class="n">${c.costo0 ? "+" + num((c.costo / c.costo0 - 1) * 100, 1) + "%" : ""}</td></tr>
-        <tr><td>Flete + embalaje</td><td class="n">${num(c.flete)}</td><td class="n">${p.TRANS ? "incluido" : "no incluido"}</td></tr></tbody></table></div>
+        ${Documentos.transporteIncluido(S.doc.cot) ? `<tr><td>Transporte${S.doc.cot.transporte?.destino ? " a " + E(S.doc.cot.transporte.destino) : ""} (en servicios)</td><td class="n">${num(Documentos.transporteIncluido(S.doc.cot).precio)}</td><td class="n">incluido</td></tr>` : ""}
+        <tr><td>Flete + embalaje (por envío)</td><td class="n">${num(c.flete)}</td><td class="n">${p.TRANS ? "incluido" : Documentos.transporteIncluido(S.doc.cot) ? "no se usa" : "no incluido"}</td></tr></tbody></table></div>
         <h3>Escenarios de factor</h3><div class="tbl"><table><thead><tr><th>Factor</th><th class="n">Unitario</th><th class="n">Total</th><th class="n">Margen</th></tr></thead><tbody>
         ${esc_.map(e => `<tr ${Math.abs(e.F - p.FM) < 1e-9 && Math.abs(e.F - p.FMO) < 1e-9 ? 'class="total"' : ""}><td>${num(e.F)}</td><td class="n">${num(e.unitario)}</td><td class="n">${num(e.total)}</td><td class="n">${num(e.margen * 100, 1)}%</td></tr>`).join("")}</tbody></table></div>
         ${panelBase()}</section>
@@ -876,6 +884,12 @@
     else if (el.id === "pin-m2") S.pinM2 = el.value;
     else if (el.id === "ph-h") S.phH = el.value;
   });
+  // Un "change" llega al salir del campo, en el mismo momento en que se aprieta otro botón: si se repinta ahí, el botón
+  // desaparece antes del clic y el clic se pierde (pestañas, Guardar). Con el puntero apretado, se repinta después del clic.
+  let puntero = false, pendiente = false;
+  document.addEventListener("pointerdown", () => { puntero = true; }, true);
+  document.addEventListener("pointerup", () => { puntero = false; if (pendiente) { pendiente = false; setTimeout(render, 0); } }, true);
+  const renderTrasClic = () => { if (puntero) pendiente = true; else render(); };
   app.addEventListener("change", async ev => {
     const el = ev.target;
     if (el.dataset.rbTarifa && S.doc) {
@@ -883,7 +897,7 @@
       const r = el.dataset.rbTarifa, rb = (S.doc.cot.rubros ??= {})[r] ??= { modo: "detallado" };
       rb.tarifa = el.value; guardarPronto(); render(); return;
     }
-    if (el.dataset.ta !== undefined || (el.dataset.b || "").startsWith("cot.plazo") || el.dataset.b === "cot.firmante_id") { guardarPronto(); render(); }
+    if (el.dataset.ta !== undefined || (el.dataset.b || "").startsWith("cot.plazo") || el.dataset.b === "cot.firmante_id") { guardarPronto(); renderTrasClic(); }
     if (el.id === "o-plano" && el.files[0]) {
       try {
         const r = await S.assets.upload(el.files[0]);
@@ -1069,12 +1083,13 @@
     const aprobado = cot.estado === "aprobado" || cot.estado === "enviado";
     const firma = await bytesDe(fir?.firma_url), plano = await bytesDe(of.imagen_plano_url);
     const pl = cot.plazo || {};
-    return { cot, of, calc: c, firmante: fir, firma, firmaUrl: firma?.url, planoImg: plano, planoUrl: plano?.url, datos: S.datos, aprobado, logo: S.datos.logo,
+    return { cot, of: Documentos.completarOferta(cot, of), calc: c, firmante: fir, firma, firmaUrl: firma?.url, planoImg: plano, planoUrl: plano?.url, datos: S.datos, aprobado, logo: S.datos.logo,
       avisos: Busqueda.avisos(cot), plazo: { texto: `${pl.texto || ""}. ${pl.nota || ""}` } };
   }
   const base = () => (S.doc.oferta.archivo_base || S.doc.cot.codigo || "cotizacion").replace(/[\\/:*?"<>|]/g, "-");
   async function generar(k, ctx) {
     const cot = S.doc.cot;
+    if (/^(tec|eco)_/.test(k) && Busqueda.plazoBloquea(cot)) throw new Error(Busqueda.plazoBloquea(cot));
     switch (k) {
       case "presupuesto": return Documentos.planilla(cot, S.datos.indices);
       case "compras": return Documentos.compras(cot);
@@ -1087,6 +1102,7 @@
     }
   }
   async function vistaPrevia(k) {
+    if (k !== "informe" && Busqueda.plazoBloquea(S.doc.cot)) { toast(Busqueda.plazoBloquea(S.doc.cot)); return; }
     capa.hidden = false; capa.innerHTML = `<div class="capa"><section class="panel vista"><div class="vacio">Armando la vista previa…</div></section></div>`;
     const ctx = await contexto();
     const [titulo, html, desc] = k === "informe" ? ["Informe del presupuesto", Documentos.informeHtml(ctx), "informe"]
@@ -1100,7 +1116,9 @@
     if (b) b.disabled = true;
     try {
       const ctx = await contexto(), zip = new JSZip(), carpeta = zip.folder(base());
-      for (const [k, n] of ARCHIVOS) { estadoDesc(`Generando ${n}…`); carpeta.file(n, await generar(k, ctx)); }
+      const bloq = Busqueda.plazoBloquea(S.doc.cot);
+      for (const [k, n] of ARCHIVOS) { if (bloq && /^(tec|eco)_/.test(k)) continue; estadoDesc(`Generando ${n}…`); carpeta.file(n, await generar(k, ctx)); }
+      if (bloq) carpeta.file("LEEME - faltan las ofertas.txt", bloq);
       estadoDesc("Comprimiendo…");
       const blob = await zip.generateAsync({ type: "blob" });
       await S.dl.save({ filename: base() + ".zip", data: blob });

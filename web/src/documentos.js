@@ -45,6 +45,33 @@ const Documentos = (() => {
   }
   // Número dentro de un campo editable: mismo formato que a la vista, sin ceros de más
   const NI = v => (v === "" || v == null || isNaN(Number(v))) ? "" : numg(v);
+  // Transporte cargado con precio en MO y servicios (ítem global del rubro transporte): va dentro del precio unitario,
+  // así que la oferta no puede decir EXW. null si no hay.
+  function transporteIncluido(cot) {
+    const g = (cot.items || []).find(i => i.global && i.rubro === "transporte" && +(i.fuentes?.[0]?.precio) > 0);
+    return g ? { destino: cot.transporte?.destino || "", transportista: cot.transporte?.transportista || "", precio: +g.fuentes[0].precio } : null;
+  }
+  const notaTransporte = t => `Precio puesto en ${t.destino || "el lugar de entrega acordado"}: el transporte está incluido en el precio unitario.`;
+  // La oferta toma de la cotización lo que ya está cargado (auditoría 29-10-2026): el plazo y la revisión siempre salen de
+  // la cotización (una sola fuente); cliente, contacto y fecha, si en la oferta siguen vacíos o entre [corchetes]. Igual que
+  // generar_oferta.completar en Python.
+  function completarOferta(cot, of) {
+    const o = JSON.parse(JSON.stringify(of || {}));
+    const vacio = v => v == null || !String(v).trim() || /\[[^\]]*\]/.test(String(v)), ok = v => v != null && String(v).trim() && !/\[/.test(String(v));
+    o.oferta ??= {}; o.cliente ??= {}; o.item ??= {};
+    if (vacio(o.cliente.nombre) && ok(cot.cliente?.nombre)) o.cliente.nombre = cot.cliente.nombre;
+    if (vacio(o.cliente.contacto) && ok(cot.cliente?.comprador)) o.cliente.contacto = cot.cliente.comprador;
+    if (vacio(o.oferta.fecha) && ok(cot.fecha)) o.oferta.fecha = cot.fecha;
+    const rv = String(cot.revision || "").replace(/^rev\.?\s*/i, "").trim();
+    if (rv) o.oferta.revision = rv;
+    const d = cot.plazo?.dias;
+    if (d) {
+      o.item.plazo_dias = String(d);
+      for (const k of Object.keys(o.condiciones || {}))
+        o.condiciones[k] = [].concat(o.condiciones[k]).map(l => String(l).replace(/^(\[d[ií]as\]|\d+)(?= d[ií]as)/i, String(d)).replace(/\[d[ií]as\]/gi, String(d)));
+    }
+    return o;
+  }
   // DD-MM-AAAA (o DD/MM/AAAA) escrita por el usuario → AAAA-MM-DD; "" si no es una fecha válida
   function isoDe(t) {
     const m = String(t || "").trim().match(/^(\d{1,2})[-/.](\d{1,2})[-/.](\d{4})$/); if (!m) return "";
@@ -289,12 +316,13 @@ const Documentos = (() => {
       <div class="tot"><div>Costo / ${esc(eq.singular)}<b>${usd(calc.costo)}</b></div><div>Precio unitario<b>${usd(calc.precio_unitario)}</b></div>
         <div>Cantidad<b>${num(p.N, 0)} ${esc(eq.plural)}</b></div><div>Total de la oferta<b>${usd(calc.total)}</b></div></div>
       <table><tbody>
-        <tr><td>Materiales (con ajuste por inflación)</td><td class="n">${usd(calc.sub.material)}</td><td class="n">factor ${p.FM}</td></tr>
-        <tr><td>Contingencia ${p.CONT}%</td><td class="n">${usd(calc.cont)}</td><td class="n">factor ${p.FM}</td></tr>
-        ${calc.tav ? `<tr><td>Válvulas Taval (con contingencia)</td><td class="n">${usd(calc.tav)}</td><td class="n">factor ${calc.ftv}</td></tr>` : ""}
-        <tr><td>Mano de obra</td><td class="n">${usd(calc.sub.mo)}</td><td class="n">factor ${p.FMO}</td></tr>
-        <tr><td>Servicios e insumos</td><td class="n">${usd(calc.sub.servicio)}</td><td class="n">factor ${p.FMO}</td></tr>
-        <tr><td>Flete + embalaje</td><td class="n">${usd(calc.flete)}</td><td class="n">${p.TRANS ? "incluido" : "no incluido (EXW Quilmes Oeste)"}</td></tr>
+        <tr><td>Materiales (con ajuste por inflación)</td><td class="n">${usd(calc.sub.material)}</td><td class="n">factor ${num(p.FM)}</td></tr>
+        <tr><td>Contingencia ${numg(p.CONT)}%</td><td class="n">${usd(calc.cont)}</td><td class="n">factor ${num(p.FM)}</td></tr>
+        ${calc.tav ? `<tr><td>Válvulas Taval (con contingencia)</td><td class="n">${usd(calc.tav)}</td><td class="n">factor ${num(calc.ftv)}</td></tr>` : ""}
+        <tr><td>Mano de obra</td><td class="n">${usd(calc.sub.mo)}</td><td class="n">factor ${num(p.FMO)}</td></tr>
+        <tr><td>Servicios e insumos</td><td class="n">${usd(calc.sub.servicio)}</td><td class="n">factor ${num(p.FMO)}</td></tr>
+        ${transporteIncluido(cot) ? `<tr><td>Transporte${cot.transporte?.destino ? " a " + esc(cot.transporte.destino) : ""} (en servicios, por ${esc(eq.singular)})</td><td class="n">${usd(transporteIncluido(cot).precio)}</td><td class="n">incluido en el precio</td></tr>` : ""}
+        <tr><td>Flete + embalaje (por envío)</td><td class="n">${usd(calc.flete)}</td><td class="n">${p.TRANS ? "incluido" : transporteIncluido(cot) ? "no se usa" : "no incluido (EXW Quilmes Oeste)"}</td></tr>
         <tr><td>Ajuste por inflación incluido</td><td class="n">${usd(calc.costo - calc.costo0)}</td><td class="n">${p.AJ ? "aplicado hasta " + esc(fecha(p.fecha_referencia)) : "sin ajuste"}</td></tr>
       </tbody></table>
       <h2>Materiales</h2>${tabla(cot.items.filter(i => i.grupo === "material"))}
@@ -351,7 +379,8 @@ const Documentos = (() => {
         [[it.item, it.codigo, it.descripcion, String(N), usd(calc.precio_unitario), usd(calc.precio_unitario * N), it.plazo_dias],
          ...(calc.flete ? [["", "", of.descripcion_flete || "Flete y embalaje hasta destino", "1", usd(calc.flete), usd(calc.flete), ""]] : [])],
         [1.3, 3.1, 5.0, 2.1, 2.4, 2.6, 1.9], ["TOTAL (SIN IVA)", usd(calc.total)], 9, [1, 1, 0, 1, 1, 1, 1]);
-      if (!cot.parametros.TRANS && of.nota_flete) x += texto(of.nota_flete);
+      if (transporteIncluido(cot)) x += texto(notaTransporte(transporteIncluido(cot)));
+      else if (!cot.parametros.TRANS && of.nota_flete) x += texto(of.nota_flete);
       for (const [tit, txt] of Object.entries(of.condiciones || {})) { x += titulo(tit); for (const l of [].concat(txt)) x += texto(l, { sangria: 1.25 }); }
       x += vacio();
     } else {
@@ -474,7 +503,8 @@ const Documentos = (() => {
         <tbody><tr><td>${esc(it.item)}</td><td>${esc(it.codigo)}</td><td>${esc(it.descripcion)}</td><td class="n">${N}</td><td class="n">${usd(calc.precio_unitario)}</td><td class="n">${usd(calc.precio_unitario * N)}</td><td>${esc(it.plazo_dias)}</td></tr>
         ${calc.flete ? `<tr><td></td><td></td><td>${esc(of.descripcion_flete || "Flete y embalaje hasta destino")}</td><td class="n">1</td><td class="n">${usd(calc.flete)}</td><td class="n">${usd(calc.flete)}</td><td></td></tr>` : ""}
         <tr><td colspan="5"><b>TOTAL (SIN IVA)</b></td><td class="n"><b>${usd(calc.total)}</b></td><td></td></tr></tbody></table>`;
-      if (!cot.parametros.TRANS && of.nota_flete) cuerpo += `<p>${esc(of.nota_flete)}</p>`;
+      if (transporteIncluido(cot)) cuerpo += `<p>${esc(notaTransporte(transporteIncluido(cot)))}</p>`;
+      else if (!cot.parametros.TRANS && of.nota_flete) cuerpo += `<p>${esc(of.nota_flete)}</p>`;
       for (const [t, v] of Object.entries(of.condiciones || {})) cuerpo += tit(t) + [].concat(v).map(l => `<p>${esc(l)}</p>`).join("");
     } else {
       cuerpo += tit("ALCANCE") + `<table><thead><tr><th>ITEM</th><th>CANT.</th><th>DESCRIPCIÓN</th><th>OBSERVACIÓN / DESVÍO</th><th>Plazo (días)</th></tr></thead><tbody><tr><td>${esc(it.item)}</td><td>${N}</td><td>${esc(it.descripcion)}</td><td>${esc(it.observacion)}</td><td>${esc(it.plazo_dias)}</td></tr></tbody></table>`;
@@ -494,6 +524,6 @@ const Documentos = (() => {
         ${firmante?.telefono ? `<span>☎ ${esc(firmante.telefono)}</span>` : ""}${firmante?.celular ? `<span>📱 ${esc(firmante.celular)}</span>` : ""}${firmante?.email ? `<span>${esc(firmante.email)}</span>` : ""}</div></div>`;
   }
 
-  return { fecha, fechaHora, isoDe, numeroDe, errorNumero, NI, numg, planilla, compras, informeHtml, pdfDeHtml, ofertaDocx, ofertaHtml, usd, num, esc, TIPOS, COINC };
+  return { fecha, fechaHora, isoDe, numeroDe, errorNumero, NI, numg, transporteIncluido, completarOferta, planilla, compras, informeHtml, pdfDeHtml, ofertaDocx, ofertaHtml, usd, num, esc, TIPOS, COINC };
 })();
 if (typeof module !== "undefined") module.exports = Documentos;

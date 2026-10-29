@@ -40,7 +40,7 @@ from indice_proyectos import frac, norm  # noqa: E402
 RAIZ = Path(__file__).resolve().parent.parent
 TEC = RAIZ / "conocimiento" / "tecnico"
 TIPO = {"lista": "lista", "compra": "stock", "stock (precio maestro)": "stock", "cotización": "cot", "planilla interna": "ant",
-        "estimado (cepo)": "est"}
+        "estimado (cepo)": "est", "estimado (fecha supuesta)": "est"}
 SERIES = {"150", "300", "600", "800", "900", "1500", "2500", "2000", "3000", "6000", "9000"}
 SCHEDULES = {"5", "10", "20", "30", "40", "60", "80", "100", "120", "140", "160", "STD", "XS", "XXS"}
 OLETS = r"cupla|sockolet|threadolet|thredolet|weldolet|elbowlet|latrolet|nipolet|\bolet"
@@ -261,8 +261,8 @@ def material(r, n):
         cant, unidad = round(cant * l, 3), "m"  # "caño longitud 1900 mm × 1" se compra por metro
     con_precio = [x for x in res if x[7]["ultimo_precio_usd"]]
     # orden: igual con precio real > similar con precio real > igual estimado (cepo) > similar estimado
-    real = [x for x in con_precio if x[7]["tipo_precio"] != "estimado (cepo)"]
-    est = [x for x in con_precio if x[7]["tipo_precio"] == "estimado (cepo)"]
+    real = [x for x in con_precio if not x[7]["tipo_precio"].startswith("estimado")]
+    est = [x for x in con_precio if x[7]["tipo_precio"].startswith("estimado")]
     orden = [x for x in real if x[0]] + [x for x in real if not x[0]] + [x for x in est if x[0]] + [x for x in est if not x[0]]
     # se descartan los similares de otro diámetro o de otra clase de serie y se prueba el siguiente (CTRL-M01: una
     # esférica 4" PR sirve de referencia para una 4" PT; una 2" PT no)
@@ -275,7 +275,7 @@ def material(r, n):
         ref = FECHA_REF or date.today().isoformat()
         limite = f"{int(ref[:4]) - 1}-{int(ref[5:7]) - 6:02d}" if int(ref[5:7]) > 6 else f"{int(ref[:4]) - 2}-{int(ref[5:7]) + 6:02d}"
         if elegido[7]["fecha_ultimo_precio"][:7] < limite:
-            nuevo = next((x for x in validos if x[7]["fecha_ultimo_precio"][:7] >= limite and x[7]["tipo_precio"] not in ("compra", "stock (precio maestro)", "estimado (cepo)")
+            nuevo = next((x for x in validos if x[7]["fecha_ultimo_precio"][:7] >= limite and x[7]["tipo_precio"] not in ("compra", "stock (precio maestro)", "estimado (cepo)", "estimado (fecha supuesta)")
                           and all(d.split(":")[0] in ("cara", "extremos", "norma", "marca") for d in x[6])), None)
             if nuevo:
                 VIEJOS[r["pos"]] = f"se prefirió un precio reciente a {elegido[7]['tipo_precio']} del {elegido[7]['fecha_ultimo_precio']} ({elegido[7]['codigo']}, USD {fmt(float(elegido[7]['ultimo_precio_usd']), 2)})"

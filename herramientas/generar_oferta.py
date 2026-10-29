@@ -12,6 +12,7 @@ Mientras la cotización no esté aprobada (estado distinto de "aprobado"), el do
 """
 import copy
 import json
+import re
 import subprocess
 import sys
 import tempfile
@@ -35,6 +36,40 @@ FUENTE = "Aptos"
 
 # Índices de los elementos del cuerpo de la plantilla (ver plantillas/README.md)
 I_TABLA_REV, I_RECUADRO, I_FIN_INTRO, I_NOTAS, I_FIRMA = 4, 8, 29, 88, 102
+
+
+def completar(cfg, cot):
+    """La oferta toma de la cotización lo que ya está cargado (igual que Documentos.completarOferta en la página): plazo y
+    revisión siempre de la cotización; cliente, contacto y fecha si en la oferta siguen vacíos o entre [corchetes]."""
+    o = json.loads(json.dumps(cfg))
+    vacio = lambda v: v is None or not str(v).strip() or re.search(r"\[[^\]]*\]", str(v))
+    ok = lambda v: v is not None and str(v).strip() and "[" not in str(v)
+    for k in ("oferta", "cliente", "item"):
+        o.setdefault(k, {})
+    cli = cot.get("cliente", {})
+    if vacio(o["cliente"].get("nombre")) and ok(cli.get("nombre")):
+        o["cliente"]["nombre"] = cli["nombre"]
+    if vacio(o["cliente"].get("contacto")) and ok(cli.get("comprador")):
+        o["cliente"]["contacto"] = cli["comprador"]
+    if vacio(o["oferta"].get("fecha")) and ok(cot.get("fecha")):
+        o["oferta"]["fecha"] = cot["fecha"]
+    rv = re.sub(r"^rev\.?\s*", "", str(cot.get("revision", "")), flags=re.I).strip()
+    if rv:
+        o["oferta"]["revision"] = rv
+    d = (cot.get("plazo") or {}).get("dias")
+    if d:
+        o["item"]["plazo_dias"] = str(d)
+        cambia = lambda l: re.sub(r"\[d[ií]as\]", str(d), re.sub(r"^(\[d[ií]as\]|\d+)(?= d[ií]as)", str(d), str(l), flags=re.I), flags=re.I)
+        o["condiciones"] = {k: ([cambia(x) for x in v] if isinstance(v, list) else cambia(v)) for k, v in o.get("condiciones", {}).items()}
+    return o
+
+
+def transporte_incluido(cot):
+    """Transporte cargado con precio en MO y servicios (ítem global del rubro transporte): va dentro del precio unitario."""
+    for it in cot.get("items", []):
+        if it.get("global") and it.get("rubro") == "transporte" and float((it.get("fuentes") or [{}])[0].get("precio") or 0) > 0:
+            return {"destino": (cot.get("transporte") or {}).get("destino", "")}
+    return None
 
 
 def usd(v):
@@ -279,7 +314,10 @@ def armar(carpeta, tipo, cfg, precios):
                    if precios["flete"] else []),
                 [1.3, 3.1, 5.0, 2.1, 2.4, 2.6, 1.9], total=("TOTAL (SIN IVA)", usd(precios["total"])),
                 alinear=[1, 1, 0, 1, 1, 1, 1])
-        if not precios["flete_incluido"]:
+        tr = transporte_incluido(cfg.get("_cot", {}))
+        if tr:
+            c.texto(f"Precio puesto en {tr['destino'] or 'el lugar de entrega acordado'}: el transporte está incluido en el precio unitario.", sangria=0.75)
+        elif not precios["flete_incluido"]:
             c.texto(cfg["nota_flete"], sangria=0.75)
         for n, (tit, txt) in enumerate(cfg["condiciones"].items(), 3):
             c.titulo(tit)
@@ -327,7 +365,9 @@ def armar(carpeta, tipo, cfg, precios):
 
 def main(carpeta):
     carpeta = Path(carpeta)
-    cfg = json.load(open(carpeta / "oferta.json", encoding="utf-8"))
+    cot = json.load(open(carpeta / "cotizacion.json", encoding="utf-8"))
+    cfg = completar(json.load(open(carpeta / "oferta.json", encoding="utf-8")), cot)
+    cfg["_cot"] = cot
     precios = leer_precios(carpeta)
     salida = carpeta / "oferta"
     salida.mkdir(exist_ok=True)

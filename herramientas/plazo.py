@@ -115,7 +115,21 @@ def main(carpeta):
     print(f"Plazo: calculado {fmtg(calc)} días ({con_margen[0]}–{con_margen[1]} con margen) · ofrecido {ofrecido} → {carpeta / 'plazo_calculado.md'}")
     for a in avisos:
         print("  ! " + a)
+    global ultimo
+    ultimo = {"calculado": calc, "ofrecido": ofrecido, "justificacion": str(pl.get("justificacion") or "").strip()}
     return avisos
+
+
+ultimo = {}
+
+
+def bloquea_oferta():
+    """Texto del bloqueo si el plazo ofrecido es menor que el calculado y no hay justificación escrita ("" si no bloquea).
+    Un plazo menor no llega al cliente sin que alguien lo justifique (auditoría 29-10-2026; igual que la página)."""
+    o, c = ultimo.get("ofrecido"), ultimo.get("calculado")
+    if not o or not c or o >= c or ultimo.get("justificacion"):
+        return ""
+    return f"plazo ofrecido {o} días, menor que el calculado ({fmtg(c)} días): corregir plazo.dias o escribir plazo.justificacion"
 
 
 if __name__ == "__main__":

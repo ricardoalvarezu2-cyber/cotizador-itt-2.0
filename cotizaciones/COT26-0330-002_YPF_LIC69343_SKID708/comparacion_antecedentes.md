@@ -8,11 +8,11 @@ Una diferencia de más del 15% no significa error: hay que explicarla rubro por 
 |---|---|---|---|---|---|---|---|
 | 1 | YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLO | 27-10-2026 | 196.780 USD | -44% ⚠ | 1.5 | mat 60% · MO+serv 40% | 9 skids concentradores YPF #300 ASME B31.3: 3 × 1000623713 (8 entradas 8" + colector 12")  |
 | 2 | TAVAL/70- PUENTES DE MEDICION 2 PULGADAS | 27-10-2026 | 97.461 USD | +13% | 1.35 | mat 90% · MO+serv 10% | 24 puentes de medición/regulación 2" #600 con V-Cone, instrumentación ABB y válvula de con |
-| 3 | TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento | 20-07-2026 | 130.764 USD | -16% ⚠ | 1.326 | mat 82% · MO+serv 18% | 6 trampas de scraper (3 lanzadoras + 3 receptoras) 16" S600, 12" S900, 8" S900 sobre skid, |
-| 4 | Sacde/6- 3029-SE-CPF-042 - SKID CALENTADOR DE GAS DE PR | 09-10-2025 | 246.683 USD | -55% ⚠ | — | — | Skid calentador eléctrico de gas de proceso (indirecto, inmersión 136 kW según proveedor;  |
-| 5 | PAMPA ENERGIA/7- Licitacion contrato Marco Skid PAD Rin | 14-08-2026 | 88.268 USD | +25% ⚠ | 1.35 | — | Contrato marco: 108 puentes de produccion 3" #300, 18 skids colectores para PAD de 6 pozos |
+| 3 | PAMPA ENERGIA/7- Licitacion contrato Marco Skid PAD Rin | 14-08-2026 | 88.268 USD | +25% ⚠ | 1.35 | — | Contrato marco: 108 puentes de produccion 3" #300, 18 skids colectores para PAD de 6 pozos |
+| 4 | Sacde/13- 3029-SE-CPF-061_ SKID CUADRO VALVULAS BOMBAS  | 06-03-2026 | 146.864 USD | -25% ⚠ | 1.3 | mat 14% · MO+serv 86% | 2 skids cuadro de válvulas de bombas booster (SK-2321 / SK-2322, tren 1 y 2) para CPF Rinc |
+| 5 | BTU/27 - Lic YPF - Upstream WP2 Gathering - Skid Wellpa | 30-04-2026 | 94.647 USD | +17% ⚠ | — | — | Skid wellpad WP2 Gathering: presupuesto de fabricación de skids (80 Unid en 3 renglones) d |
 
 ## Avisos
 
 - ⚠ Precio -44% contra 'YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 ' (196.780 USD, 27-10-2026): explicar la diferencia rubro por rubro (P8)
-- ⚠ Precio -16% contra 'TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD E' (130.764 USD, 20-07-2026): explicar la diferencia rubro por rubro (P8)
+- ⚠ Precio +25% contra 'PAMPA ENERGIA/7- Licitacion contrato Marco Skid PA' (88.268 USD, 14-08-2026): explicar la diferencia rubro por rubro (P8)

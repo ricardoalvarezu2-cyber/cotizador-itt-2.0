@@ -2,7 +2,7 @@
 // (igual / similar con diferencias) y que herramientas/verificar_computo.py (avisos), pero con filtros elegidos en pantalla.
 const Busqueda = (() => {
   const CON_TIPO = ["VAL", "AFO", "ABW", "BRI", "JUN", "INS"];
-  const TIPO_FUENTE = { "lista": "lista", "compra": "stock", "stock (precio maestro)": "stock", "cotización": "cot", "planilla interna": "ant", "estimado (cepo)": "est" };
+  const TIPO_FUENTE = { "lista": "lista", "compra": "stock", "stock (precio maestro)": "stock", "cotización": "cot", "planilla interna": "ant", "estimado (cepo)": "est", "estimado (fecha supuesta)": "est" };
   const FRAC = { "½": " 1/2", "¼": " 1/4", "¾": " 3/4", "⅛": " 1/8", "°": " grados ", "º": " grados ", "ø": " diam ", "Ø": " diam " };
 
   function norm(t) {
@@ -166,8 +166,22 @@ const Busqueda = (() => {
       }
       for (const x of out.slice(n0)) { x.id = it.id; x.corto = x.txt.slice(tag.length + 2); }
     }
+    const pz = plazoBloquea(cfg);
+    if (pz) out.push({ nivel: "bad", txt: pz });
     return out;
   }
-  return { norm, coincide, campos, opcionales, valores, materiales, servicios, itemDeMaterial, itemDeServicio, soldadura, tarifa, avisos, TIPO_FUENTE, CON_TIPO };
+  // Plazo calculado con las tareas de la pestaña Plazo: acopio (material más largo) + taller, sin superponer.
+  function plazoCalculado(cfg) {
+    const t = cfg.plazo?.tareas || [], mat = t.filter(x => x[3] !== "tal"), tal = t.filter(x => x[3] === "tal");
+    const acopio = Math.max(0, ...mat.map(x => +x[2] || 0)), taller = tal.reduce((a, x) => a + ((+x[2] || 0) - (+x[1] || 0)), 0);
+    return { acopio, taller, calc: acopio + taller };
+  }
+  // Un plazo ofrecido menor que el calculado no sale en la oferta sin una justificación escrita (auditoría 29-10-2026).
+  function plazoBloquea(cfg) {
+    const d = +cfg.plazo?.dias || 0, { calc } = plazoCalculado(cfg);
+    if (!d || !calc || d >= calc || String(cfg.plazo?.justificacion || "").trim()) return "";
+    return `Plazo ofrecido ${d} días, menor que el calculado (${calc} días): corregilo o escribí la justificación en Plazo. Hasta entonces no se generan las ofertas.`;
+  }
+  return { norm, coincide, campos, opcionales, valores, materiales, servicios, itemDeMaterial, itemDeServicio, soldadura, tarifa, avisos, plazoCalculado, plazoBloquea, TIPO_FUENTE, CON_TIPO };
 })();
 if (typeof module !== "undefined") module.exports = Busqueda;

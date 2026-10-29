@@ -394,12 +394,18 @@ def main(carpeta):
     ficha_rubros.main(carpeta)  # datos por rubro para un precio global (soldaduras, kg, m², placas, medidas) → ficha_rubros.md
     import comparar_antecedentes
     comparar_antecedentes.main(carpeta, py["precio_unitario"], py["costo"])  # P8 → comparacion_antecedentes.md
-    if (carpeta / "oferta.json").exists():
+    bloqueo = plazo.bloquea_oferta()
+    if bloqueo:  # no quedan ofertas viejas que digan otra cosa
+        for f in (carpeta / "oferta").glob("*") if (carpeta / "oferta").exists() else []:
+            if f.suffix in (".docx", ".pdf"):
+                f.unlink()
+        print(f"OFERTAS NO GENERADAS: {bloqueo}")
+    elif (carpeta / "oferta.json").exists():
         import generar_oferta
         generar_oferta.main(carpeta)
     import indice_proyectos
     indice_proyectos.main()  # la cotización queda en el índice de antecedentes
-    print(f"\nListo: {carpeta}/computo.csv, {ruta.name}, informe.html" + (", oferta/" if (carpeta / "oferta.json").exists() else ""))
+    print(f"\nListo: {carpeta}/computo.csv, {ruta.name}, informe.html" + (", oferta/" if (carpeta / "oferta.json").exists() and not bloqueo else ""))
     print(f"Estado: {cfg['estado']}. Recordar: revisión independiente y aprobación antes de enviar (procedimiento P9).")
 
 
