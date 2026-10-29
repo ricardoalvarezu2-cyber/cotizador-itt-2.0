@@ -340,8 +340,6 @@ def escribir(carpeta, ficha, cfg):
           f"- Pulgadas equivalentes de soldadura: **{n(mp['pulg_eq'])}**",
           f"- kg de piping (caños, bridas, accesorios y válvulas con tabla): **{n(mp['kg_piping'], 0)} kg** · bridas: {n(mp['bridas'], 0)}",
           f"- Diámetros soldados a tope: {', '.join(f'{d:g}\"' for d in mp['diametros']) or '—'}"]
-    if mp.get("aproximados"):
-        L.append(f"- Con peso APROXIMADO (volumen × densidad, sin tabla): {'; '.join(mp['aproximados'])}")
     if mp["sin_peso"]:
         L.append(f"- Sin peso (no suman kg): {'; '.join(mp['sin_peso'])}")
     L += [f"- ⚠ {a}" for a in mp["avisos"]] + ref("mo_piping") + ["",

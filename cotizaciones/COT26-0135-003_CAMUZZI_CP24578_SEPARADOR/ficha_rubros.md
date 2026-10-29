@@ -9,7 +9,6 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 - Pulgadas equivalentes de soldadura: **255.915,55**
 - kg de piping (caños, bridas, accesorios y válvulas con tabla): **539 kg** · bridas: 17
 - Diámetros soldados a tope: 53", 10", 6", 2", 1"
-- Con peso APROXIMADO (volumen × densidad, sin tabla): 22 Juntas espiraladas y espárragos de las c
 - Sin peso (no suman kg): 1 Chapa para virola Ø53" × 3.2 m × 1 5/8" ; 2 Cabezal semielíptico 2:1 Ø53" × 1 3/4" (; 4 Placa portaelementos Ø1,26 m × 1 5/8" co; 5 Elemento coalescente 0,3 µm, 140 × 914 m; 16 Purga automática de líquidos (controlado; 18 Visor de nivel óptico reflex 500 mm, 70 ; 21 Internos: deflector de entrada, rompe-vó; 24 Pollera / patas de apoyo (450 kg)
 - **Costo por antecedentes.** Por antecedentes: USD 29.503,13 (1 renglón/es, con ajuste por inflación).
   - Por unidad: USD 0,12/pulgada eq. · USD 54,73/kg de piping · USD 6,10/junta a tope

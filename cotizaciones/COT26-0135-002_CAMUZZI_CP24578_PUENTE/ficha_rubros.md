@@ -9,7 +9,6 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 - Pulgadas equivalentes de soldadura: **98,62**
 - kg de piping (caños, bridas, accesorios y válvulas con tabla): **383 kg** · bridas: 10
 - Diámetros soldados a tope: 6", 4"
-- Con peso APROXIMADO (volumen × densidad, sin tabla): 3 Válvula esférica bridada paso total anti; 4 Válvula esférica bridada paso total anti; 5b Junta espiralada 4" #150 AISI 316/grafit; 6b Junta espiralada 6" #150 AISI 316/grafit; 6c Espárrago 3/4" × 4" A193 B7 con 2 tuerca; 16 Cupla de acero para soldar 1/2" NPT con 
 - Sin peso (no suman kg): 1 Filtro FM-06 #150 simple módulo s/ SCE-R; 2 Carretel de ajuste / provisorio de turbi; 5 Brida WN RF 4"; 6 Brida WN RF 6"; 9 Reducción concéntrica 6"x4"; 13 Skid y soportes s/ SCE-RE-110-0006 (3530; 15b Completar media tira de 6 m de la pos 15; A Sensor de temperatura para correctora de
 - **Costo por antecedentes.** Por antecedentes: USD 1.755,38 (1 renglón/es, con ajuste por inflación).
   - Por unidad: USD 17,80/pulgada eq. · USD 4,58/kg de piping · USD 83,59/junta a tope

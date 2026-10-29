@@ -9,7 +9,6 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 - Pulgadas equivalentes de soldadura: **456,03**
 - kg de piping (caños, bridas, accesorios y válvulas con tabla): **6.566 kg** · bridas: 31
 - Diámetros soldados a tope: 16", 12"
-- Con peso APROXIMADO (volumen × densidad, sin tabla): 3 Tee normal 12"; 12 Junta espiralada RF esp. 4,5 mm 300 LB 1; 13 Junta espiralada RF esp. 4,5 mm 300 LB 1; 14 Junta espiralada RF esp. 4,5 mm 300 LB 1
 - **Costo por antecedentes.** Por antecedentes: USD 10.193,42 (1 renglón/es, con ajuste por inflación).
   - Por unidad: USD 22,35/pulgada eq. · USD 1,55/kg de piping · USD 351,50/junta a tope
 

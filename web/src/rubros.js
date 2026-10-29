@@ -124,7 +124,7 @@ const Rubros = (() => {
     const x = f[r];
     return {
       mo_piping: [["Juntas a tope (BW) de taller", x.juntas_bw, ""], ["Juntas SW, cuplas y olets", x.juntas_sw_olet, ""], ["Extremos para soldar en campo", x.extremos_campo, ""],
-        ["Pulgadas equivalentes de soldadura", x.pulg_eq, "pulg"], ["kg de piping", x.kg_piping, "kg"], ["Con peso aproximado (sin tabla)", (x.aproximados || []).length ? x.aproximados.join("; ") : null, ""], ["Sin peso", (x.sin_peso || []).length ? x.sin_peso.join("; ") : null, ""], ["Bridas", x.bridas, ""],
+        ["Pulgadas equivalentes de soldadura", x.pulg_eq, "pulg"], ["kg de piping", x.kg_piping, "kg"], ["Sin peso", (x.sin_peso || []).length ? x.sin_peso.join("; ") : null, ""], ["Bridas", x.bridas, ""],
         ["Diámetros soldados a tope", (x.diametros || []).map(d => d + '"').join(", ") || null, ""]],
       mo_estructura: [["kg de estructura", x.kg, "kg"], ["m² de estructura", x.m2, "m²"]],
       pintura: [["m² de piping", x.m2_piping, "m²"], ["m² de estructura", x.m2_estructura, "m²"], ["m² total (sin overspray)", x.m2_total, "m²"], ["Esquema", x.esquema || "según pliego", ""]],
