@@ -749,7 +749,7 @@ const Ficha = (() => {
       if (!it.at) { if (!/completar barra|sobrante|manga|junta|repuesto/.test(norm(it.descripcion))) faltan.push(`${it.pos} ${it.descripcion.slice(0, 40)}`); continue; }
       const [kg, m2, fuente] = pesoItem(it, it.at, it.fam, datos);
       if (kg != null && String(fuente).startsWith("APROXIMADO")) aprox.push(`${it.pos} ${it.descripcion.slice(0, 40)}`);
-      if (kg == null) { if (!/junta|termometro|manometro|instrumento|transmisor|repuesto|completar barra/.test(norm(it.descripcion))) sin.push(`${it.pos} ${it.descripcion.slice(0, 40)}`); continue; }
+      if (kg == null) { if (!/junta|termometro|manometro|instrumento|transmisor|bloqueo y purga|repuesto|completar barra/.test(norm(it.descripcion))) sin.push(`${it.pos} ${it.descripcion.slice(0, 40)}`); continue; }
       kgP += kg * it.cantidad; m2C += (m2 || 0) * it.cantidad;
     }
     return { kgP, m2C, kgE, sin, faltan, aprox };

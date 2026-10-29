@@ -158,7 +158,7 @@ def pesos(cfg):
         if kg is not None and str(fuente).startswith("APROXIMADO"):
             aprox.append(f"{it['pos']} {it['descripcion'][:40]}")
         if kg is None:
-            if not re.search(r"junta|termometro|manometro|instrumento|transmisor|repuesto|completar barra", d):
+            if not re.search(r"junta|termometro|manometro|instrumento|transmisor|bloqueo y purga|repuesto|completar barra", d):
                 sin.append(f"{it['pos']} {it['descripcion'][:40]}")
             continue
         kg_p += kg * it["cantidad"]

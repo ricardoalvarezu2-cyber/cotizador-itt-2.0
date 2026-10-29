@@ -10,7 +10,7 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 - kg de piping (caños, bridas, accesorios y válvulas con tabla): **126 kg** · bridas: 0
 - Diámetros soldados a tope: 2.5", 2", 0.5"
 - Con peso APROXIMADO (volumen × densidad, sin tabla): 7 Válvula de retención 2" #600 a clapeta; 13 Junta monolítica 2" sch80 WPB BW
-- Sin peso (no suman kg): 6 Unión doble a golpe 2" 2000; 10 Buje reducción 2" × 1/2" NPT; 14b Sobrante de caño revestido (no va en el ; 19 Bloqueo y purga 1/2" 3000 AISI 316; 21 Unión doble a golpe extensible 2"
+- Sin peso (no suman kg): 6 Unión doble a golpe 2" 2000; 10 Buje reducción 2" × 1/2" NPT; 14b Sobrante de caño revestido (no va en el ; 21 Unión doble a golpe extensible 2"
 - **Modo: detallado.** Cálculo detallado: USD 711,22 (2 renglón/es, con ajuste por inflación).
   - Detallado por unidad: USD 53,21/pulgada eq. · USD 5,66/kg de piping · USD 177,81/junta a tope
 
