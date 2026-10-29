@@ -38,102 +38,136 @@
   "TR_F": 1.0,
   "fecha_referencia": "2026-10-28",
   "rx_pct": 100,
-  "ph_horas": 0
+  "ph_horas": 0,
+  "FTV": 1.0
  },
  "plazo": {
-  "dias": 60,
-  "texto": "desde OC · EXW Quilmes Oeste",
+  "dias": 120,
+  "texto": "desde la aprobación de la documentación · EXW Quilmes Oeste",
   "tareas": [
    [
-    "Material crítico [proveedor]",
+    "Documentación e ingeniería",
     0,
-    60,
+    20,
+    "tal"
+   ],
+   [
+    "Válvulas Taval (120 d sin stock)",
+    0,
+    120,
     "crit"
    ],
    [
-    "Taller: armado, PH y pintura",
-    45,
-    57,
+    "Accesorios y bridas 8\"–16\"",
+    20,
+    80,
+    "crit"
+   ],
+   [
+    "Taller: armado, soldadura, RX, PH y pintura",
+    80,
+    115,
     "tal"
    ],
    [
     "Dossier y despacho",
-    57,
-    60,
+    115,
+    120,
     "tal"
    ]
   ],
-  "nota": "[Qué fija el plazo y cómo se acorta]"
+  "nota": "La planilla PC0 ofrece 90/120 días desde la aprobación de documentación; las válvulas Taval son 7 días con stock y 120 sin stock. Con stock de válvulas el plazo baja a unos 90 días."
  },
  "flete": {
-  "etiqueta": "Flete a [destino]",
-  "referencia_html": "[Cotización de flete de referencia, con fecha y fuente]",
-  "criterio_html": "[Si se ofrece EXW o entregado]"
+  "etiqueta": "Flete a Rincón de Aranda (Neuquén)",
+  "referencia_html": "Planilla PC0: USD 2.800 por camión a Neuquén (hoja del skid) y USD 3.000 por camión completo (hoja Resumen); sin cotización del transportista.",
+  "criterio_html": "Se cotiza EXW Quilmes Oeste. La PC0 mezcla EXW (hojas de cada skid) con entrega en Rincón de Aranda (hoja Resumen): confirmar con Ventas."
  },
- "historial_html": [],
+ "historial_html": [
+  "28-10-2026 · Rev 0 · recotización automática de la planilla PC0 (pedido pmvrzbrh616ftx desde la página)"
+ ],
  "pedido": {
-  "eyebrow": "[Nº de pedido] · emitido [fecha]",
+  "eyebrow": "Lic 69343 (la PC0 dice 69434) · recibido 10-10-2026 · vence 27-10-2026",
   "datos_html": [
    [
     "Cliente",
-    "[nombre] (código ITT [CCCC])"
+    "YPF S.A. (código ITT 0330) · Bloque LAN"
    ],
    [
     "Ítem",
-    "[ítem] · [descripción] · <b>[cantidad] un</b>"
+    "SKID CONCEN.YPF PL.VCD21223PPL020015D0 · SAP 1000623713 · <b>3 un</b> (ítems 2, 5 y 7 del pie de venta)"
    ],
    [
     "Documento",
-    "[documento y plano]"
+    "Plano conjunto de cañerías 1000623713 (no adjunto: la tabla se tomó de la planilla PC0)"
    ],
    [
     "Entrega pedida",
-    "[lugar]"
+    "Rincón de Aranda, locación de Pampa Energía (según la hoja Resumen)"
    ],
    [
     "Fechas",
-    "Límite de respuesta [fecha] · necesidad [fecha]"
+    "Recepción 10-10-2026 · vencimiento 27-10-2026 · necesidad según el pie de venta (06-2027 a 12-2027)"
    ]
   ],
   "requisitos_html": [
-   "[requisito técnico del pedido]"
+   "ASME B31.3 · radiografía 100% (LP donde no se pueda RX)",
+   "Presión de diseño 52 kg/cm² · prueba hidráulica 78 kg/cm² · -29 / 38 °C",
+   "Revestimiento: esquema Pampa RAL 7039",
+   "Tubo ASTM A106 Gr.B, accesorios A234 WPB, bridas A105, válvulas Taval"
   ]
  },
- "nota_mo_html": "[Qué incluye y excluye la MO; soldaduras de taller junta por junta; extremos para soldar en campo]",
+ "nota_mo_html": "Soldadura propia de planta, junta por junta desde los extremos (el caño va por metro: cada extremo BW de accesorio o brida es una junta). La planilla PC0 terceriza soldadura y armado en Ledesma; ese valor queda como alternativa. Sin el plano no se pudo ver qué extremos quedan para campo: se supone todo en taller.",
  "desvios": [
   {
-   "tag": "Pos X",
-   "titulo": "[qué se ofrece distinto]",
-   "texto": "[detalle]"
+   "tag": "Válvulas retención",
+   "titulo": "Trim no indicado en plano",
+   "texto": "Se ofrece trim 8 (a confirmar), como en la PC0."
+  },
+  {
+   "tag": "Válvulas NPT",
+   "titulo": "Material no indicado",
+   "texto": "Cuerpo A105 (clase CE22 acero al carbono); globos API 602 A105 trim 5."
   }
  ],
  "antecedentes": [
   {
-   "carpeta_html": "<b>[CLIENTE/NN]</b> · [oferta]",
-   "fecha": "dd/mm/aaaa",
-   "que": "[qué es]",
-   "precio": "[c/u]",
-   "tomado_html": "[qué se tomó]"
+   "carpeta_html": "<b>TAVAL/72</b> · Lic 64675 skid concentrador UTE Narambue",
+   "fecha": "08-07-2026",
+   "que": "Skid manifold concentrador SCC-010 3×8\" + 1×12\" #300 C22",
+   "precio": "—",
+   "tomado_html": "referencia de alcance (no se tomaron precios)"
+  },
+  {
+   "carpeta_html": "<b>TAVAL/78</b> · LIC66577 skid concentrador L. Camp",
+   "fecha": "19-08-2026",
+   "que": "Manifold concentrador 4\"x10\" + salida 4\" a 12\"",
+   "precio": "—",
+   "tomado_html": "referencia de alcance (no se tomaron precios)"
   }
  ],
  "pendientes": [
   {
    "titulo": "Proveedores",
    "items": [
-    "[confirmación pendiente]"
+    "Cotizar accesorios y bridas 8\"–16\" (tees, tees de reducción, bridas WN XS/SCH 60): hoy son precios de la PC0 sin documento",
+    "Confirmar con Taval precio y stock de las válvulas"
    ]
   },
   {
-   "titulo": "Cliente",
+   "titulo": "Cliente / Ventas",
    "items": [
-    "[consulta]"
+    "Cliente, comprador y N confirmados",
+    "EXW o entregado en Rincón de Aranda",
+    "Instrumental: la PC0 dice «NO» en el alcance pero lo cotiza",
+    "Plano de cañerías (para soldaduras de campo y estructura)"
    ]
   }
  ],
  "pie": "Fuentes: base de conocimiento del repositorio cotizador-itt. Precios en USD sin IVA.",
  "planilla_notas": [
-  "Plazo: [días] desde OC ([material crítico]).",
-  "Condiciones: [pago, entrega, validez]."
+  "Plazo: 120 días desde la aprobación de documentación (válvulas Taval sin stock).",
+  "Borrador sin revisar: recotización automática de la planilla PC0. EXW Quilmes Oeste, USD sin IVA."
  ],
  "items": [
   {
@@ -147,10 +181,10 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 217.23,
-     "proveedor": "Renard · CAN-01435",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx",
-     "fecha": "2026-06-26",
+     "precio": 297.75,
+     "proveedor": "Renard/ Provemet/ Klockmetal · CAN-01435",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
      "coincide": "igual"
     }
    ]
@@ -159,17 +193,17 @@
    "id": "M01B",
    "pos": "1b",
    "grupo": "material",
-   "descripcion": "Completar barra de 6 m de la pos 1 (compra mínima; sobrante, no va en el equipo)",
+   "descripcion": "Completar barra de 12 m de la pos 1 (compra mínima; sobrante, no va en el equipo)",
    "cantidad": 0.5,
    "unidad": "m",
-   "especificacion": "6 barra(s) de 6 m para 34.5 m en 3 equipo(s); por equipo 0.5 m",
+   "especificacion": "3 barra(s) de 12 m para 34.5 m en 3 equipo(s); por equipo 0.5 m",
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 217.23,
-     "proveedor": "Renard · CAN-01435",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx",
-     "fecha": "2026-06-26",
+     "precio": 297.75,
+     "proveedor": "Renard/ Provemet/ Klockmetal · CAN-01435",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
      "coincide": "igual"
     }
    ]
@@ -184,11 +218,11 @@
    "especificacion": "Plano: 8\" · 60 · ASTM A106 Gr.B · BW",
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 113.19,
-     "proveedor": "Renard (cód. 1182) · CAN-01523",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1182",
-     "fecha": "2025-12-26",
+     "tipo": "ant",
+     "precio": 136.34,
+     "proveedor": "Renard/ Provemet/ Klockmetal · CAN-01523",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
      "coincide": "igual"
     }
    ]
@@ -197,17 +231,17 @@
    "id": "M02B",
    "pos": "2b",
    "grupo": "material",
-   "descripcion": "Completar barra de 6 m de la pos 2 (compra mínima; sobrante, no va en el equipo)",
-   "cantidad": 0.9,
+   "descripcion": "Completar barra de 12 m de la pos 2 (compra mínima; sobrante, no va en el equipo)",
+   "cantidad": 2.9,
    "unidad": "m",
-   "especificacion": "3 barra(s) de 6 m para 15.3 m en 3 equipo(s); por equipo 0.9 m",
+   "especificacion": "2 barra(s) de 12 m para 15.3 m en 3 equipo(s); por equipo 2.9 m",
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 113.19,
-     "proveedor": "Renard (cód. 1182) · CAN-01523",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1182",
-     "fecha": "2025-12-26",
+     "tipo": "ant",
+     "precio": 136.34,
+     "proveedor": "Renard/ Provemet/ Klockmetal · CAN-01523",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
      "coincide": "igual"
     }
    ]
@@ -222,13 +256,12 @@
    "especificacion": "Plano: 8\" · 60 · ASTM A234 WPB · BW",
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 189.51,
-     "proveedor": "Renard (cód. 3469) · ABW-00425",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3469",
-     "fecha": "2025-12-26",
-     "coincide": "similar",
-     "diferencia": "schedule: 40 (pedido 60)"
+     "tipo": "ant",
+     "precio": 440.78,
+     "proveedor": "CINTOLO · ABW-03407",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
+     "coincide": "igual"
     }
    ]
   },
@@ -242,13 +275,12 @@
    "especificacion": "Plano: 12\"x8\" · XS x 60 · ASTM A234 WPB · BW",
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 1077.63,
-     "proveedor": "Renard (cód. 3854) · ABW-00349",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3854",
-     "fecha": "2025-12-26",
-     "coincide": "similar",
-     "diferencia": "diametro: 10\" (pedido 12\")"
+     "tipo": "ant",
+     "precio": 1829.15,
+     "proveedor": "CINTOLO · ABW-03405",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
+     "coincide": "igual"
     }
    ]
   },
@@ -262,13 +294,12 @@
    "especificacion": "Plano: 12\" · 300 · ASTM A105 · RF/BW",
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 355.68,
-     "proveedor": "Renard (cód. 11984) · BRI-01230",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 11984",
-     "fecha": "2025-12-26",
-     "coincide": "similar",
-     "diferencia": "schedule: 40 (pedido XS)"
+     "tipo": "ant",
+     "precio": 425.09,
+     "proveedor": "Miyashiro · BRI-03413",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
+     "coincide": "igual"
     }
    ]
   },
@@ -282,13 +313,12 @@
    "especificacion": "Plano: 8\" · 300 · ASTM A105 · RF/BW",
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 173.56,
-     "proveedor": "Renard (cód. 11982) · BRI-01331",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 11982",
-     "fecha": "2025-12-26",
-     "coincide": "similar",
-     "diferencia": "schedule: 40 (pedido 60)"
+     "tipo": "ant",
+     "precio": 207.43,
+     "proveedor": "Miyashiro · BRI-03415",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
+     "coincide": "igual"
     }
    ]
   },
@@ -302,11 +332,11 @@
    "especificacion": "Plano: 12\" · 300 · ASTM A105 · RF",
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 426.44,
-     "proveedor": "Renard (cód. 8260) · BRI-01022",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 8260",
-     "fecha": "2025-12-26",
+     "tipo": "ant",
+     "precio": 477.53,
+     "proveedor": "sin proveedor en planilla · BRI-01022",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
      "coincide": "igual"
     }
    ]
@@ -321,11 +351,11 @@
    "especificacion": "Plano: 8\" · 300 · ASTM A105 · RF",
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 179.82,
-     "proveedor": "Renard (cód. 8258) · BRI-01063",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 8258",
-     "fecha": "2025-12-26",
+     "tipo": "ant",
+     "precio": 201.36,
+     "proveedor": "sin proveedor en planilla · BRI-01063",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
      "coincide": "igual"
     }
    ]
@@ -340,11 +370,11 @@
    "especificacion": "Plano: 1 1/2\" · 300 · ASTM A105 · RF/SW",
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 17.96,
-     "proveedor": "Renard (cód. 10683) · BRI-01161",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 10683",
-     "fecha": "2025-12-26",
+     "tipo": "ant",
+     "precio": 19.91,
+     "proveedor": "sin proveedor en planilla · BRI-01161",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
      "coincide": "igual"
     }
    ]
@@ -360,12 +390,11 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 5.0,
-     "proveedor": "marca/proveedor: BULES S.R.L. · JUN-02839",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\40- INARTECO FILTROS LIC 9333 · fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/LM costo Filtros rev.1.xlsx.txt",
-     "fecha": "2026-01-15",
-     "coincide": "similar",
-     "diferencia": "serie: sin dato (pedido 300); medida: 3/4 x 10 (no pedido); unidad distinta: catálogo por uni, plano por un"
+     "precio": 9.59,
+     "proveedor": "sin proveedor en planilla · JUN-04194",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
+     "coincide": "igual"
     }
    ]
   },
@@ -380,12 +409,11 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 5.0,
-     "proveedor": "marca/proveedor: BULES S.R.L. · JUN-02839",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\40- INARTECO FILTROS LIC 9333 · fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/LM costo Filtros rev.1.xlsx.txt",
-     "fecha": "2026-01-15",
-     "coincide": "similar",
-     "diferencia": "serie: sin dato (pedido 300); medida: 3/4 x 10 (no pedido); unidad distinta: catálogo por uni, plano por un"
+     "precio": 4.69,
+     "proveedor": "sin proveedor en planilla · JUN-04182",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
+     "coincide": "igual"
     }
    ]
   },
@@ -400,12 +428,11 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 5.0,
-     "proveedor": "marca/proveedor: BULES S.R.L. · JUN-02839",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\40- INARTECO FILTROS LIC 9333 · fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/LM costo Filtros rev.1.xlsx.txt",
-     "fecha": "2026-01-15",
-     "coincide": "similar",
-     "diferencia": "serie: sin dato (pedido 300); medida: 3/4 x 10 (no pedido); unidad distinta: catálogo por uni, plano por un"
+     "precio": 4.76,
+     "proveedor": "sin proveedor en planilla · JUN-04183",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
+     "coincide": "igual"
     }
    ]
   },
@@ -420,12 +447,11 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 15.0,
-     "proveedor": "sin proveedor en planilla · JUN-02765",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios · 4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx",
-     "fecha": "2025-12-18",
-     "coincide": "similar",
-     "diferencia": "serie: 600 (pedido 300); extremos: sin dato (pedido RF)"
+     "precio": 45.0,
+     "proveedor": "sin proveedor en planilla · JUN-03420",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
+     "coincide": "igual"
     }
    ]
   },
@@ -440,12 +466,11 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 8.02,
-     "proveedor": "MS Juntas · JUN-02783",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\9. CM SKID MANIFOLD PAD S-600 · fuentes_originales/ofertas_texto/TECPETROL/9. CM SKID MANIFOLD PAD S-600/Adicional Manifold Tecpe 2026-05-05.xlsx.txt",
-     "fecha": "2026-05-05",
-     "coincide": "similar",
-     "diferencia": "serie: 600 (pedido 300); extremos: sin dato (pedido RF); unidad distinta: catálogo por uni, plano por un"
+     "precio": 25.0,
+     "proveedor": "sin proveedor en planilla · JUN-03422",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
+     "coincide": "igual"
     }
    ]
   },
@@ -459,13 +484,12 @@
    "especificacion": "Plano: 8\" · 300 · fibra aramida NBR · RF",
    "fuentes": [
     {
-     "tipo": "est",
-     "precio": 0,
-     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
-     "origen": "—",
-     "fecha": "2026-10-28",
-     "coincide": "sin_ref",
-     "diferencia": "El más parecido es de otro diámetro (JUN-02756 Kit de Junta Dieléctrica RTJ 2\" - #900 Resina Fenó, USD 30.36): no sirve como precio"
+     "tipo": "ant",
+     "precio": 60.0,
+     "proveedor": "sin proveedor en planilla · JUN-03418",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
+     "coincide": "igual"
     }
    ]
   },
@@ -479,13 +503,12 @@
    "especificacion": "Plano: 1 1/2\" · 80 · ASTM A106 Gr.B · NPT",
    "fuentes": [
     {
-     "tipo": "est",
-     "precio": 0,
-     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
-     "origen": "—",
-     "fecha": "2026-10-28",
-     "coincide": "sin_ref",
-     "diferencia": "El más parecido es de otro diámetro (NIP-01780 Niple s/costura Rosca NPT 1/2\" - Sch 80 x 100mm AS, USD 20.00): no sirve como precio"
+     "tipo": "ant",
+     "precio": 9.0,
+     "proveedor": "futura/ francovigh · NIP-01794",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
+     "coincide": "igual"
     }
    ]
   },
@@ -500,12 +523,11 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 20.0,
-     "proveedor": "Antecedentes puentes Taval/CGC s2000 · NIP-03365",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\55- Tecpetrol Puentes de Producción PPar Valvula y Puente PR 54942 · 7.Propuesta Comercial (envío al Cliente)/Puente de producción Tec Conv y NOC versión 3.xlsx",
-     "fecha": "2026-04-22",
-     "coincide": "similar",
-     "diferencia": "diametro: 0.5\" (pedido 0.75\")"
+     "precio": 6.0,
+     "proveedor": "sin proveedor en planilla · NIP-01782",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
+     "coincide": "igual"
     }
    ]
   },
@@ -520,10 +542,10 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 20.0,
-     "proveedor": "Antecedentes puentes Taval/CGC s2000 · NIP-03365",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\55- Tecpetrol Puentes de Producción PPar Valvula y Puente PR 54942 · 7.Propuesta Comercial (envío al Cliente)/Puente de producción Tec Conv y NOC versión 3.xlsx",
-     "fecha": "2026-04-22",
+     "precio": 5.0,
+     "proveedor": "sin proveedor en planilla · NIP-03365",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
      "coincide": "igual"
     }
    ]
@@ -540,9 +562,9 @@
     {
      "tipo": "ant",
      "precio": 2.3,
-     "proveedor": "sin proveedor en planilla (columna PROVEEDOR vacía) · AFO-02373",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · 4.Armado de la Oferta Comercial/LM-TANQUE GLICOL.xlsx",
-     "fecha": "2026-02-20",
+     "proveedor": "sin proveedor en planilla · AFO-02373",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
      "coincide": "similar",
      "diferencia": ""
     }
@@ -558,11 +580,11 @@
    "especificacion": "Plano: 1/2\" ·  · ASTM A105 · NPT",
    "fuentes": [
     {
-     "tipo": "cot",
-     "precio": 1.38,
-     "proveedor": "PROVEMET · AFO-00848",
-     "origen": "fuentes_originales/cotizacion_elementos_equipos_2026-03.xlsx · rubro BUJES-E.ROSCAS-TAPÓN-UNION DOBL · cotización 242356",
-     "fecha": "2025-08-27",
+     "tipo": "ant",
+     "precio": 1.94,
+     "proveedor": "Miyashiro · AFO-03411",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
      "coincide": "similar",
      "diferencia": ""
     }
@@ -579,12 +601,12 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 10.0,
-     "proveedor": "sin proveedor en planilla · AFO-03330",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECHINT\\12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado · 4.Armado de la Oferta Comercial/OFERTA REV C/ESTRUCTURA DE COSTOS- LM de Manifold S600 CM - PC0-C R",
-     "fecha": "2025-12-23",
+     "precio": 14.0,
+     "proveedor": "futura/ francovigh · AFO-03408",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
      "coincide": "similar",
-     "diferencia": "diametro: 0.5\" (pedido 12\"); extremos: sin dato (pedido SW/BW)"
+     "diferencia": "extremos: SW (pedido SW/BW)"
     }
    ]
   },
@@ -599,12 +621,12 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 10.0,
-     "proveedor": "sin proveedor en planilla · AFO-03330",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECHINT\\12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado · 4.Armado de la Oferta Comercial/OFERTA REV C/ESTRUCTURA DE COSTOS- LM de Manifold S600 CM - PC0-C R",
-     "fecha": "2025-12-23",
+     "precio": 14.0,
+     "proveedor": "futura/ francovigh · AFO-03408",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
      "coincide": "similar",
-     "diferencia": "diametro: 0.5\" (pedido 12\"); extremos: sin dato (pedido SW/BW)"
+     "diferencia": "extremos: SW (pedido SW/BW)"
     }
    ]
   },
@@ -618,13 +640,13 @@
    "especificacion": "Plano: 8\"x1 1/2\" · 3000 · ASTM A105 · BW/SW",
    "fuentes": [
     {
-     "tipo": "est",
-     "precio": 0,
-     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
-     "origen": "—",
-     "fecha": "2026-10-28",
-     "coincide": "sin_ref",
-     "diferencia": "El más parecido es de otro diámetro (AFO-03330 Sockolet 1/2\" S3000 | A-105, USD 10.00): no sirve como precio"
+     "tipo": "ant",
+     "precio": 26.0,
+     "proveedor": "futura/ francovigh · AFO-03410",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
+     "coincide": "similar",
+     "diferencia": "extremos: SW (pedido SW/BW)"
     }
    ]
   },
@@ -639,12 +661,12 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 10.0,
-     "proveedor": "sin proveedor en planilla · AFO-03330",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECHINT\\12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado · 4.Armado de la Oferta Comercial/OFERTA REV C/ESTRUCTURA DE COSTOS- LM de Manifold S600 CM - PC0-C R",
-     "fecha": "2025-12-23",
+     "precio": 26.0,
+     "proveedor": "futura/ francovigh · AFO-03410",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
      "coincide": "similar",
-     "diferencia": "diametro: 0.5\" (pedido 8\"); extremos: sin dato (pedido SW/BW)"
+     "diferencia": "extremos: SW (pedido SW/BW)"
     }
    ]
   },
@@ -656,15 +678,15 @@
    "cantidad": 8.0,
    "unidad": "un",
    "especificacion": "Plano: 8\" · 300 · ASTM A216 WCB · RF · Taval RBE3R",
+   "taval": true,
    "fuentes": [
     {
-     "tipo": "est",
-     "precio": 0,
-     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
-     "origen": "—",
-     "fecha": "2026-10-28",
-     "coincide": "sin_ref",
-     "diferencia": "El más parecido es de otro diámetro (VAL-03316 V. Retención a clapeta 3\" #600 RF A-216 WCB, disco, USD 420.16): no sirve como precio"
+     "tipo": "ant",
+     "precio": 3000.0,
+     "proveedor": "Taval · VAL-03594",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
+     "coincide": "igual"
     }
    ]
   },
@@ -676,15 +698,16 @@
    "cantidad": 8.0,
    "unidad": "un",
    "especificacion": "Plano: 8\" · 300 · acero al carbono · RF · Taval TCC3R",
+   "taval": true,
    "fuentes": [
     {
-     "tipo": "est",
-     "precio": 0,
-     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
-     "origen": "—",
-     "fecha": "2026-10-28",
-     "coincide": "sin_ref",
-     "diferencia": "El más parecido es de otro diámetro (VAL-03185 V. Esférica 2\" #300 RF PT, USD 131.13): no sirve como precio"
+     "tipo": "ant",
+     "precio": 1346.0,
+     "proveedor": "Taval · VAL-03440",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
+     "coincide": "similar",
+     "diferencia": "material: sin dato (pedido Acero al carbono)"
     }
    ]
   },
@@ -696,15 +719,15 @@
    "cantidad": 6.0,
    "unidad": "un",
    "especificacion": "Plano: 3/4\" · 2000 · ASTM A105 · NPT · Taval TCH2N",
+   "taval": true,
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 42.042,
-     "proveedor": "Taval · VAL-03290",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\PAMPA ENERGIA\\7- Licitacion contrato Marco Skid PAD Rincon de Aranda · 4.Armado de la Oferta Comercial/Cot Skid Manifolds Colectores RDA Contrato Marco (2da RDA).xlsx.",
-     "fecha": "2026-08-14",
-     "coincide": "similar",
-     "diferencia": "serie: 3000 (pedido 2000)"
+     "tipo": "lista",
+     "precio": 38.8,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04874",
+     "origen": "taval_lista30_2025-09.xlsx · código , hoja PT Flot-NPT FORJADAS",
+     "fecha": "2025-09-01",
+     "coincide": "igual"
     }
    ]
   },
@@ -716,15 +739,15 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 1/2\" · 2000 · ASTM A105 · NPT · Taval TCH2N",
+   "taval": true,
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 35.88,
-     "proveedor": "Taval · VAL-03385",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\55- Tecpetrol Puentes de Producción PPar Valvula y Puente PR 54942 · 7.Propuesta Comercial (envío al Cliente)/Puente de producción Tec Conv y NOC versión 3.xlsx",
-     "fecha": "2026-04-22",
-     "coincide": "similar",
-     "diferencia": "serie: 1500 (pedido 2000)"
+     "tipo": "lista",
+     "precio": 36.06,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04865",
+     "origen": "taval_lista30_2025-09.xlsx · código , hoja PT Flot-NPT FORJADAS",
+     "fecha": "2025-09-01",
+     "coincide": "igual"
     }
    ]
   },
@@ -736,15 +759,16 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 3/4\" · 800 · ASTM A105 · NPT · Taval GAB8N",
+   "taval": true,
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 80.0,
-     "proveedor": "sin proveedor en planilla · VAL-03176",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios · 4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx",
-     "fecha": "2025-12-18",
+     "precio": 68.0,
+     "proveedor": "Taval · VAL-03443",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
      "coincide": "similar",
-     "diferencia": "diametro: 1\" (pedido 0.75\"); serie: 600 (no pedido); material: sin dato (pedido A105); extremos: RF (pedido NPT)"
+     "diferencia": "material: sin dato (pedido A105)"
     }
    ]
   },
@@ -756,15 +780,16 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 1/2\" · 800 · ASTM A105 · NPT · Taval GAB8N",
+   "taval": true,
    "fuentes": [
     {
-     "tipo": "est",
-     "precio": 0,
-     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
-     "origen": "—",
-     "fecha": "2026-10-28",
-     "coincide": "sin_ref",
-     "diferencia": "El más parecido es de otro diámetro (VAL-03176 TAVAL | VALVULA GLOBO | Ø 1 - Globo | RF | 600#, USD 80.00): no sirve como precio"
+     "tipo": "ant",
+     "precio": 78.0,
+     "proveedor": "Taval · VAL-03441",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
+     "coincide": "similar",
+     "diferencia": "material: sin dato (pedido A105)"
     }
    ]
   },
@@ -772,17 +797,17 @@
    "id": "S01",
    "pos": "MO",
    "grupo": "mo",
-   "descripcion": "Soldaduras: 124 a tope + SW y olets (calculado)",
-   "especificacion": "pos 1, 2: caño por metro; sus juntas se cuentan en los extremos BW de accesorios y bridas (una junta cada uno); pos 3: 96 extremo(s) BW de taller (3 por unidad × 16 × 2 por el caño) × 8\" × 1.2604; pos 4: 48 extremo(s) BW de taller (3 por unidad × 8 × 2 por el caño) × 15.3523\" × 1.0000; pos 5: 8 extremo(s) BW de taller (1 por unidad × 4 × 2 por el caño) × 12\" × 1.0830; pos 6: 96 extremo(s) BW de ta",
-   "cantidad": 1334.682,
+   "descripcion": "Soldaduras: 93 a tope + SW y olets (calculado)",
+   "especificacion": "pos 1, 2: caño por metro; sus juntas se cuentan en los extremos BW de accesorios y bridas (una junta cada uno); pos 3: 72 extremo(s) BW de taller (3 por unidad × 16 × 1.5 por el caño) × 8\" × 1.2604; pos 4: 36 extremo(s) BW de taller (3 por unidad × 8 × 1.5 por el caño) × 14.0331\" × 1.0000; pos 5: 6 extremo(s) BW de taller (1 por unidad × 4 × 1.5 por el caño) × 12\" × 1.0830; pos 6: 72 extremo(s) BW",
+   "cantidad": 988.828,
    "unidad": "pulg",
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 19.73,
-     "proveedor": "Costo propio de planta: 61.16 USD/hh por soldador / 3.1 pulg por hora",
-     "origen": "costo_mo_planta_2024-10",
-     "fecha": "2024-10-31",
+     "precio": 16.0,
+     "proveedor": "Mano de obra soldadura piping (criterio de las planillas de costo 2026): Precio por pulgada que usan las planillas de ITT de 2025-2026 (16 a 16,5; 19 en #900 en Sacde 12). Controles CTRL-M01/P01/T01, ",
+     "origen": "planillas 2026 (TAVAL/43 puentes YPF 19-02-2026; TAVAL/40 Inarteco; Sacde 12 a 15; Tecpetrol 9: 16,5)",
+     "fecha": "2026-02-28",
      "coincide": "igual"
     }
    ]
@@ -791,19 +816,19 @@
    "id": "S02",
    "pos": "PIN",
    "grupo": "servicio",
-   "descripcion": "Granallado y pintura (m² calculados de caños y niples)",
-   "especificacion": "15.37 m² exteriores (tabla ASME B36.10)",
-   "cantidad": 15.367,
+   "descripcion": "Granallado y pintura (m² calculados)",
+   "especificacion": "65.19 m² exteriores: caños y niples 15.4 + bridas, accesorios y válvulas (largo equivalente) 49.8",
+   "cantidad": 65.193,
    "unidad": "m2",
    "fuentes": [
     {
      "tipo": "ant",
      "precio": 50.0,
-     "proveedor": "criterio ITT ($50/m2 incluye materiales) · PIN-00491",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\PAMPA ENERGIA\\7- Licitacion contrato Marco Skid PAD Rincon de Aranda\\4.Armado de la Oferta Comercial",
-     "fecha": "2026-08-14",
+     "proveedor": "criterio ITT · PIN-00569",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN\\4.Armado de la Oferta Comercial",
+     "fecha": "2026-10-10",
      "coincide": "similar",
-     "diferencia": "m² solo de caños y niples; esquema de pintura a confirmar con el pliego"
+     "diferencia": "m² calculados (caños, accesorios por regla, envolvente y estructura); esquema de pintura a confirmar con el pliego"
     }
    ]
   },
@@ -811,15 +836,23 @@
    "id": "S04",
    "pos": "RX",
    "grupo": "servicio",
-   "descripcion": "Radiografía 100% de las juntas a tope",
-   "especificacion": "552 placas chicas, 0 grandes, 14 servicio(s)",
+   "descripcion": "Radiografía 100% de las juntas a tope y tintas penetrantes en SW y olets",
+   "especificacion": "414 placas chicas, 0 grandes, 10.67 servicio(s) de RX y 1.00 de LP por equipo (servicios repartidos en 3 equipos)",
    "cantidad": 1,
    "unidad": "gl",
    "fuentes": [
     {
      "tipo": "cot",
-     "precio": 15140.0,
-     "proveedor": "NDT Antonelli (tarifas nov-2025)",
+     "precio": 7337.0,
+     "proveedor": "Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))",
+     "origen": "PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT)",
+     "fecha": "2026-08-31",
+     "coincide": "igual"
+    },
+    {
+     "tipo": "cot",
+     "precio": 11926.67,
+     "proveedor": "NDT Antonelli (tarifas 11-2025), mismas placas y servicios",
      "origen": "fuentes_originales/antonelli_end_2025-11.pdf",
      "fecha": "2025-11-03",
      "coincide": "igual"
@@ -831,18 +864,18 @@
    "pos": "HH",
    "grupo": "mo",
    "descripcion": "Horas de ingeniería (estimadas del antecedente)",
-   "especificacion": "9 h por skid · 27 h × 1 u ÷ 3 u",
-   "cantidad": 9.0,
+   "especificacion": "58.67 h por skid · mediana de 58.7, 80.0, 9.0 h por unidad (repartidas en la serie)",
+   "cantidad": 58.67,
    "unidad": "h",
    "fuentes": [
     {
      "tipo": "est",
      "precio": 15.0,
      "proveedor": "Horas propias ITT (tarifa del antecedente)",
-     "origen": "conocimiento/costos/horas_por_equipo.csv · Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · 4.Armado de la Oferta Comercial/SKIDs SK SACDE 1002 Rev1.xlsx.txt · hoja SK-2104 / Mano de Obra de ITT",
-     "fecha": "2026-02-20",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · 4.Armado de la Oferta Comercial/Cotización Lic 69343 Skid concentradores VCD26217 PC0.xlsx · hoja 1000623713",
+     "fecha": "2026-10-10",
      "coincide": "similar",
-     "diferencia": "ESTIMADO del antecedente Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para UFLO 2107 (SK-2104) (8, 1 u, 2026-02-20)"
+     "diferencia": "ESTIMADO del antecedente YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · Skid concentrador 1000623713 (8 entradas 8\" + colector 12\") (12 (colector) / 8, 3 u, 2026-10-10)"
     }
    ]
   },
@@ -851,7 +884,7 @@
    "pos": "CAL",
    "grupo": "mo",
    "descripcion": "Horas de calidad y dossier (estimadas del antecedente)",
-   "especificacion": "30 h por skid · 90 h × 1 u ÷ 3 u",
+   "especificacion": "30 h por skid · mediana de 21.0, 30.0, 30.0 h por unidad (repartidas en la serie)",
    "cantidad": 30.0,
    "unidad": "h",
    "fuentes": [
@@ -859,10 +892,10 @@
      "tipo": "est",
      "precio": 15.0,
      "proveedor": "Horas propias ITT (tarifa del antecedente)",
-     "origen": "conocimiento/costos/horas_por_equipo.csv · Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · 4.Armado de la Oferta Comercial/SKIDs SK SACDE 1002 Rev1.xlsx.txt · hoja SK-2104 / Mano de Obra de ITT",
-     "fecha": "2026-02-20",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · 4.Armado de la Oferta Comercial/Cotización Lic 69343 Skid concentradores VCD26217 PC0.xlsx · hoja 1000623713",
+     "fecha": "2026-10-10",
      "coincide": "similar",
-     "diferencia": "ESTIMADO del antecedente Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para UFLO 2107 (SK-2104) (8, 1 u, 2026-02-20)"
+     "diferencia": "ESTIMADO del antecedente YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · Skid concentrador 1000623713 (8 entradas 8\" + colector 12\") (12 (colector) / 8, 3 u, 2026-10-10)"
     }
    ]
   },
@@ -871,45 +904,39 @@
    "pos": "ARM",
    "grupo": "mo",
    "descripcion": "Horas de montaje en planta (armado, movimientos, prueba hidráulica) (estimadas del antecedente)",
-   "especificacion": "216 h por skid · horas por unidad del antecedente",
-   "cantidad": 216.0,
+   "especificacion": "326.2 h por skid · mediana de 535.5 h × 1.154, 216 h × 1.239, 130.5 h × 2.5 (horas por unidad × tamaño)",
+   "cantidad": 326.2,
    "unidad": "h",
    "fuentes": [
     {
      "tipo": "est",
      "precio": 13.0,
      "proveedor": "Horas propias ITT (tarifa del antecedente)",
-     "origen": "conocimiento/costos/horas_por_equipo.csv · Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · 4.Armado de la Oferta Comercial/SKIDs SK SACDE 1002 Rev1.xlsx.txt · hoja SK-2104 / Mano de Obra de ITT",
-     "fecha": "2026-02-20",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · Sacde/14- 3029 RDA - SE-CPF-062_ SKID VALVULA Y BOMBA TK CONICO · 4.Armado de la Oferta Comercial/LM Sacde TK Cónico Rev 0.xlsx.txt · hoja Montaje HH",
+     "fecha": "2026-02-10",
      "coincide": "similar",
-     "diferencia": "ESTIMADO del antecedente Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para UFLO 2107 (SK-2104) (8, 1 u, 2026-02-20)"
+     "diferencia": "ESTIMADO del antecedente Sacde/14- 3029 RDA - SE-CPF-062_ SKID VALVULA Y BOMBA TK CONICO · Skid valvula y bomba para TK-1828 (TK conico) (6 (sch 40; tambien 4,3,2), 1 u, 2026-02-10)"
     }
    ]
   }
  ],
  "compras": {
-  "fecha_respuesta": "AAAA-MM-DD",
-  "material_en_planta_dias": 45,
+  "fecha_respuesta": "2026-11-04",
+  "material_en_planta_dias": 80,
   "lugar_entrega": "Planta ITT S.A., Av. 12 de Octubre 4004, Quilmes Oeste, Bs. As.",
   "requisitos_generales": [
    "Cotizar en USD sin IVA, con plazo de entrega y validez de la oferta.",
    "Certificados de material (colada / 3.1).",
    "Indicar cualquier diferencia con lo pedido (serie, material, extremos, modelo)."
   ],
-  "notas": {
-   "1": "[requisito para el proveedor]"
-  },
-  "proveedores": {
-   "1": "Renard"
-  },
-  "cantidad_compra": {
-   "2": "1 tira de ~12 m"
-  },
+  "notas": {},
+  "proveedores": {},
+  "cantidad_compra": {},
   "servicios": [
    {
-    "servicio": "[Armado según plano]",
-    "proveedores": "[taller]",
-    "referencia": "[último precio, fecha]",
+    "servicio": "Radiografía 100% y LP",
+    "proveedores": "NDT Antonelli",
+    "referencia": "tarifas 03-11-2025",
     "nota": ""
    }
   ]

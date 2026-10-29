@@ -1,6 +1,6 @@
 # Ficha por rubro — COT26-0330-002
 
-Generada por `herramientas/ficha_rubros.py` el 28-10-2026. Todo **por skid**; la cantidad (6) multiplica al final.
+Generada por `herramientas/ficha_rubros.py` el 29-10-2026. Todo **por skid**; la cantidad (6) multiplica al final.
 Sirve para pedir un precio global al tercero y para controlarlo contra el cálculo detallado.
 
 ## 1. MO de armado y soldadura del piping
@@ -10,8 +10,8 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 - kg de piping (caños, bridas, accesorios y válvulas con tabla): **5.489 kg** · bridas: 31
 - Diámetros soldados a tope: 16", 12"
 - Sin peso en tabla (no suman kg): 3 Tee normal 12"; 4 Tee de reducción SCH STD x XS 16"x12"; 21 Sockolet SW 3000 LB 12"x1 1/2"; 22 Sockolet SW 3000 LB 12"x3/4"; 23 Sockolet SW 3000 LB 16"x3/4"; 24 Sockolet SW 3000 LB 16"x1/2"; INS TW-014A/B/C: Vaina (termopozo) bridada 1
-- **Modo: detallado.** Cálculo detallado: USD 12.474,38 (1 renglón/es, con ajuste por inflación).
-  - Detallado por unidad: USD 27,35/pulgada eq. · USD 2,27/kg de piping · USD 437,70/junta a tope
+- **Modo: detallado.** Cálculo detallado: USD 10.193,42 (1 renglón/es, con ajuste por inflación).
+  - Detallado por unidad: USD 22,35/pulgada eq. · USD 1,86/kg de piping · USD 357,66/junta a tope
 
 ## 2. MO de fabricación de la estructura
 
@@ -35,8 +35,8 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
   - Calificación de soldadores (WPQ) para esos WPS
   - Procedimiento de RX y de LP (escrito, nivel 3 ISO 9712)
   - Confirmar con el pliego: si exige procedimientos nuevos o alcanzan los vigentes de ITT
-- **Modo: detallado.** Cálculo detallado: USD 6.759,20 (1 renglón/es, con ajuste por inflación).
-  - Detallado por unidad: USD 237,16/junta a tope · USD 45,98/placa
+- **Modo: detallado.** Cálculo detallado: USD 5.234,11 (1 renglón/es, con ajuste por inflación).
+  - Detallado por unidad: USD 183,65/junta a tope · USD 35,61/placa
 
 ## 5. Transporte
 

@@ -1,6 +1,6 @@
 # Ficha por rubro — COT26-0330-001
 
-Generada por `herramientas/ficha_rubros.py` el 28-10-2026. Todo **por skid**; la cantidad (3) multiplica al final.
+Generada por `herramientas/ficha_rubros.py` el 29-10-2026. Todo **por skid**; la cantidad (3) multiplica al final.
 Sirve para pedir un precio global al tercero y para controlarlo contra el cálculo detallado.
 
 ## 1. MO de armado y soldadura del piping
@@ -10,8 +10,8 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 - kg de piping (caños, bridas, accesorios y válvulas con tabla): **6.981 kg** · bridas: 76
 - Diámetros soldados a tope: 12", 8"
 - Sin peso en tabla (no suman kg): 3 Tee normal 8"; 4 Tee de reducción SCH XS x SCH 60 12"x8"; 21 Sockolet SW 3000 LB 12"x3/4"; 22 Sockolet SW 3000 LB 12"x1/2"; 23 Sockolet SW 3000 LB 8"x1 1/2"; 24 Sockolet SW 3000 LB 8"x3/4"; INS TW-011A/B/C/D: Termovaina bridada; INS VBP: Válvula de bloqueo y purga
-- **Modo: detallado.** Cálculo detallado: USD 29.833,23 (1 renglón/es, con ajuste por inflación).
-  - Detallado por unidad: USD 30,17/pulgada eq. · USD 4,27/kg de piping · USD 320,79/junta a tope
+- **Modo: detallado.** Cálculo detallado: USD 22.102,59 (1 renglón/es, con ajuste por inflación).
+  - Detallado por unidad: USD 22,35/pulgada eq. · USD 3,17/kg de piping · USD 237,66/junta a tope
 
 ## 2. MO de fabricación de la estructura
 
@@ -35,8 +35,8 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
   - Calificación de soldadores (WPQ) para esos WPS
   - Procedimiento de RX y de LP (escrito, nivel 3 ISO 9712)
   - Confirmar con el pliego: si exige procedimientos nuevos o alcanzan los vigentes de ITT
-- **Modo: detallado.** Cálculo detallado: USD 18.471,89 (1 renglón/es, con ajuste por inflación).
-  - Detallado por unidad: USD 198,62/junta a tope · USD 44,62/placa
+- **Modo: detallado.** Cálculo detallado: USD 14.152,83 (1 renglón/es, con ajuste por inflación).
+  - Detallado por unidad: USD 152,18/junta a tope · USD 34,19/placa
 
 ## 5. Transporte
 

@@ -61,3 +61,6 @@ Pedido `pmvrzbrh616ftx` desde la página (28-10-2026): revisar y recotizar la pl
 - Plano de cañerías y de estructura; cliente, comprador y N; EXW o entregado; instrumental sí/no; lista de repuestos del 708.
 - Cotizar a Compras accesorios y bridas de 8" a 16" y confirmar con Taval las válvulas.
 - Revisión independiente del cómputo antes de pasar a revisado.
+
+## 29-10-2026 — Soldaduras y RX recalculadas
+- Las soldaduras eran de antes del ajuste de uniones directas (AJUSTE_DIRECTAS 0,75). Se tomaron las de `precotizar.py` actual y la RX se recalculó con esas placas (tarifas Antonelli 11-2025: placa chica 15, grande 20, servicio 490 cada 40 placas). Pedido de Matías.
