@@ -2,7 +2,7 @@
 
 **Leer al empezar cada chat.** Es la memoria del proyecto entre sesiones: qué está hecho, qué se decidió, qué falta.
 
-**Objetivo: construir el cotizador automático.** Las cotizaciones (por ahora la CAPEX) son casos de prueba para armar y validar el proceso; sus pendientes no son pendientes del proyecto. Actualizado al 28/10/2026.
+**Objetivo: construir el cotizador automático.** Las cotizaciones (por ahora la CAPEX) son casos de prueba para armar y validar el proceso; sus pendientes no son pendientes del proyecto. Actualizado al 29-10-2026.
 
 ## 1. Qué hay hoy
 
@@ -27,8 +27,9 @@
 | **Página web del cotizador** (Artifact en Claude, privada): lista de cotizaciones, buscador de materiales y servicios, calculadoras (soldadura, pintura, PH, RX), plazo, ofertas, firmantes, guardado automático con versiones, descarga en .zip o de a un archivo | Publicada el 28/10/2026; probada con la CAPEX (USD 7.620,59 en la página y en la planilla que arma) | https://claude.ai/artifact/HfbiaNvhAFkQjYwLe2kaBQ · `web/` (ver `web/LEEME.md`) |
 | Chat con Claude en la página y Pedidos para Claude Code (subir plano, P&ID, pliego o lista; la sesión fija los procesa con `web/LEEME.md` y deja el resultado en la página) | Publicado el 28/10/2026 | `web/src/asistente.js`, `web/LEEME.md` (Pedidos desde la página) |
 | Mejoras de la página (28/10/2026): buscador general por texto y selección múltiple en los catálogos; sección Catálogos sin cotización abierta; avisos en cada renglón; filtro y orden de los ítems; deshacer y rehacer (Ctrl+Z / Ctrl+Y); vista previa de informe y ofertas; antecedentes parecidos (P8) en Resumen; versión para celular | Publicado | `web/src/` |
-| **Modo Detallado / Global por rubro** (MO piping, MO estructura, pintura, RX/END/procedimientos, transporte) con ficha del rubro (soldaduras, kg, m², placas, procedimientos, medidas y equipos por camión) para pedir el global al tercero y compararlo con el detallado | Vigente desde 28-10-2026 (repo y página) | `herramientas/ficha_rubros.py`, `web/src/rubros.js`, `ficha_rubros.md` en cada cotización |
-| **Tablas de pesos ampliadas** (29-10-2026, borrador sin revisar): estructura (laminados, ángulos, planchuelas, barras, perfiles de chapa, tubos, chapas, inox), olets, bridas B16.47 y B16.36, figuras 8, espárragos, caños inox y complemento B36.10, 2.893 accesorios más. Corregidos: espesores 28"/30", HEB y UL | Todavía no las usan las herramientas: falta integrarlas al cálculo de kg y al botón Recalcular | `conocimiento/tecnico/*_LEEME.md` |
+| **MO y servicios por rubro de fabricación** (página): skid (estructura), piping, granallado y pintura, radiografía y END, procedimientos, prueba hidráulica, horas de ITT, transporte y otros. Cada rubro: ficha (kg, juntas, pulgadas, m², placas, procedimientos, litros, medidas) y costo **por antecedentes** (tarifa del historial o tarifa propia × cantidad de la ficha; piping por pulgada o por kg) o **manual** (precio del tercero con fuente). Todo por equipo | Vigente desde 29-10-2026 (repo y página) | `herramientas/ficha_rubros.py`, `web/src/rubros.js`, `web/src/ficha.js`, `ficha_rubros.md` en cada cotización |
+| **Ficha calculada en la página y botón Recalcular**: soldaduras, kg, m², placas y procedimientos con las mismas fórmulas que Python, sin IA; completa familia y atributos con el código de catálogo | Vigente desde 29-10-2026 | `web/src/ficha.js`, prueba `web/probar_ficha.js` (en `verificar_todo.py`) |
+| **Tablas de pesos ampliadas** (borrador sin revisar): estructura (laminados, ángulos, planchuelas, barras, perfiles de chapa, tubos, chapas, inox), olets, bridas B16.47 y B16.36, figuras 8, espárragos, caños inox y complemento B36.10, accesorios complementarios. Sin tabla: **peso aproximado** por volumen × densidad, marcado. Instrumentos no se pesan | Integradas al cálculo de kg (29-10-2026) | `conocimiento/tecnico/*_LEEME.md`, `herramientas/peso_aproximado.py` |
 | Listas de precios nuevas que llegan por pedidos | Vigente (vacío) | `precios/listas_nuevas.csv` (lo lee `catalogo_materiales.py`) |
 | Tarea semanal (lunes 7:37, hora Argentina): dólar e índices a la página, pedidos pendientes y respaldo de sus cotizaciones en `cotizaciones_web/` | Creada el 28/10/2026 | `web/LEEME.md` (sección Tarea semanal) |
 
@@ -79,6 +80,11 @@
 | 28-10-2026 | Sin antecedente de horas del mismo tipo y tamaño, la precotización **no suma horas** y avisa (antes tomaba otro tipo de equipo) | Criterio técnico (controles) | `estimar_horas.py` |
 | 28-10-2026 | Prefabricado de piping: `parametros.modo = "prefabricado"` (pulgada diametral base sch 40, tarifa de terceros, +5% rechazos, pintura aparte, sin horas); materiales del cliente con la columna `provee` = cliente | Criterio técnico (CTRL-CA01) | `precotizar.py`, `guia_cotizacion.md` |
 | 28-10-2026 | MO, pintura, END y transporte: opción global por rubro, siempre **por equipo** (la cantidad multiplica al final); MO del piping y de la estructura **por separado**, con ficha de cada uno | Matías | `guia_cotizacion.md`, `ficha_rubros.py` |
+| 29-10-2026 | MO y servicios: un ítem por rubro de fabricación con ficha y costo por antecedentes o manual; se sacaron la tabla general y las calculadoras sueltas | Matías | `guia_cotizacion.md` |
+| 29-10-2026 | Piping por pulgada de soldadura o por kg; en cualquier rubro, tarifa propia con valor, fecha y proveedor | Matías | `web/src/rubros.js` |
+| 29-10-2026 | Lo que no tiene peso en tabla se estima por volumen × densidad y queda marcado APROXIMADO; los instrumentos no se pesan (despreciable) | Matías | `peso_aproximado.py` |
+| 29-10-2026 | Juntas a tope siempre enteras (redondeo hacia arriba); las pulgadas equivalentes pueden tener decimales | Criterio técnico (observación de Matías) | `precotizar.soldaduras` |
+| 29-10-2026 | Respuestas más cortas: qué se hizo, errores y decisiones | Matías | `CLAUDE.md` |
 | 28/10/2026 | No hay más información de precios que la ya entregada: el último precio se sigue eligiendo por fecha (no hay otras compras para preferir sobre la lista de Renard) | Matías | — |
 
 ## 3. Pendientes del proyecto
@@ -106,6 +112,11 @@ Hecho (28/10/2026): `precotizar.py` (materiales, soldaduras, pintura, PH, RX) ·
 3. Hoja de alcance SI/NO (recipiente, plataforma, eléctrico, aislación, tracing, embalaje).
 4. Factor de transporte y caución: se ajusta en Datos (Matías, 29-10-2026).
 5. ~~Soldaduras de los skids YPF~~ Recalculadas el 29-10-2026 (713: 988,83 pulg; 708: 456,03 pulg) en el repo y en la página.
+
+**Abiertos al 29-10-2026 (para decidir con Matías)**
+1. Costos de procedimientos sin antecedente: WPS/PQR, calificación de soldadores, prueba hidráulica y pintura (hoy solo RX y LP, USD 250 cada uno).
+2. Sacar de Datos los campos viejos de flete (flete en el precio, flete ARS, embalaje, factor flete): el transporte ya está en MO y servicios.
+3. La rama de trabajo `ccr-0444e7e6-rf0euw` tiene todo lo del 28 y 29-10; las sesiones de pedidos hacen `git pull origin main`: hay que llevarla a `main` (PR o merge) con el OK de Matías.
 
 **Tablas de pesos y botón Recalcular (29-10-2026)**
 1. ~~Integrar las tablas nuevas al cálculo de kg~~ **Hecho (29-10-2026):** accesorios complementarios, tees de reducción, olets y espárragos.

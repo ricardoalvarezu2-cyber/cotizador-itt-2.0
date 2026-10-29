@@ -31,7 +31,7 @@ El factor lo define la dirección en cada cotización. La herramienta propone 1,
 | Precios de materiales | **Catálogo de 2.310 materiales** sin IVA, con último precio, fecha, ruta de origen y alertas: `python herramientas/buscar_material.py "<descripción>" [--marca X]` | `precios/catalogo_materiales.xlsx` |
 | Pesos y superficies | Caños kg/m y m²/m; bridas y accesorios kg/pieza (borrador) | `tecnico/` |
 
-Cómo se calcula cada rubro (pulgadas equivalentes, placas, superficie, kg): [`reglas_de_calculo.md`](reglas_de_calculo.md).
+Cómo se calcula cada rubro (pulgadas equivalentes, placas, superficie, kg): [`reglas_de_calculo.md`](reglas_de_calculo.md). En la página, MO y servicios se cotiza por rubro de fabricación con ficha y costo por antecedentes o manual (`ficha_rubros.py`, `web/src/ficha.js`, `web/src/rubros.js`).
 
 ## Plazo
 

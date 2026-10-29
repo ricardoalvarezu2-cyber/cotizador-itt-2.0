@@ -87,3 +87,9 @@ margen sobre venta        = (precio − costo) / precio
 | Costos MO (dic-2023) y Resumen | Llenos de #REF! por vínculos rotos. |
 | Lista Taval 30 | Columnas de precio con #REF!. |
 | Factores de soldadura (todas) | 3/4" XXS cargado como 27 y 204 en la versión de 2023 (debería ser 2,7 y 2,04). 1/2" SCH160 y XXS cargados como 3/8", heredado del escaneo original. 6" STD escrito "SDT". Desde 12", factores que no siguen la regla (cambiados de un lado a otro entre feb y mar de 2026). Todo corregido en esta base. |
+
+
+## Juntas, pesos aproximados y procedimientos (29-10-2026)
+- **Juntas a tope enteras:** con caño por metro, cada extremo BW de accesorio o brida cuenta como media junta × 2 × 0,75 (uniones directas); el total de juntas se redondea hacia arriba. Las pulgadas equivalentes no se redondean.
+- **Peso sin tabla (APROXIMADO):** accesorio a tope = kg/m del caño (mismo Ø y schedule) × OD × largo equivalente en diámetros, calibrado con las tablas (`tecnico/factores_peso_aproximado.csv`: codo 90 RL 2,24; codo 45 1,18; tee 3,04; reducción 0,80; casquete 0,67). Forjados y válvulas: clase o serie más cercana. Juntas: anillo × densidad. Termovaina bridada: brida ciega. Instrumentos: no se pesan.
+- **Procedimientos del equipo:** WPS/PQR por grupo de material (carbono o inoxidable) y tipo de junta (a tope; socket y filete), una WPQ por WPS, procedimiento de RX si hay radiografía, de LP si hay juntas SW u olets, de prueba hidráulica y de pintura. Los de END se costean con la tarifa de procedimiento escrito nivel 3 (USD 250 por trabajo, repartido entre los equipos).

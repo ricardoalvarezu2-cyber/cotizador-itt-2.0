@@ -147,3 +147,8 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 - **Error:** en `perfiles.csv` (de la planilla de ITT) las HEB repetían los kg/m de las HEA (HEB100 16,7 en vez de 20,4; HEB500 155 en vez de 187: entre 17% y 33% menos), y las UL (UPN chicos) tenían el ancho de ala como peso (UL 40x20 = 20 kg/m en vez de 2,87).
 - **Cómo se detectó:** al armar las tablas de estructura con fuente (INTI-CIRSOC, Acindar, Ferrara, ArcelorMittal).
 - **Corrección:** `construir_base.perfiles()` corrige al leer la planilla (UL fijas; HEB desde `estructura_perfiles_laminados.csv`).
+
+## Juntas a tope con decimales en la ficha (29-10-2026)
+- **Error:** la ficha mostraba "28,50 juntas a tope" (el ajuste de uniones directas 0,75 sobre el caño por metro deja medias juntas) y la cabecera "29": dos números distintos para lo mismo.
+- **Corrección:** las juntas se redondean hacia arriba en `precotizar.soldaduras` y en `web/src/ficha.js`; las pulgadas equivalentes quedan con decimales.
+- **Lección:** una cantidad física que se cuenta (juntas, piezas, viajes) se muestra entera; los equivalentes de cálculo pueden tener decimales.

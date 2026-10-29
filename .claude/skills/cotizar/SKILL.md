@@ -23,7 +23,7 @@ Leé primero `conocimiento/estado_y_pendientes.md`. Seguí **en orden** `conocim
 
 ## Datos que se usan siempre igual
 - Precios **sin IVA**; pesos a dólares con el **promedio mensual del oficial BNA venta** (`conocimiento/costos/dolar_mensual.csv`), salvo que el documento diga su tipo de cambio.
-- Materiales: `buscar_material.py` (columna `alerta`: revisar antes de usar). Marcas del cliente: `comercial/marcas_aprobadas.csv`. Plazos de proveedores: `comercial/plazos_proveedores.csv` (para el camino crítico, el máximo del rubro si es "stock salvo venta"). Kg y m²: `tecnico/canos_peso_superficie.csv`, `bridas_peso.csv`, `accesorios_peso.csv` (estos dos, borrador). MO y servicios: `buscar_servicio.py` (catálogo `precios/catalogo_servicios.*`), siempre con el mismo alcance.
+- Materiales: `buscar_material.py` (columna `alerta`: revisar antes de usar). Marcas del cliente: `comercial/marcas_aprobadas.csv`. Plazos de proveedores: `comercial/plazos_proveedores.csv` (para el camino crítico, el máximo del rubro si es "stock salvo venta"). Kg y m²: `controles_tablas.peso_item` (caños, bridas, accesorios base y complemento, olets, espárragos, válvulas; sin tabla, APROXIMADO por `peso_aproximado.py`). Ficha por rubro (MO del skid y del piping, pintura, END, procedimientos, PH, horas, transporte): `ficha_rubros.py`, que corre `armar_cotizacion.py`. MO y servicios: `buscar_servicio.py` (catálogo `precios/catalogo_servicios.*`), siempre con el mismo alcance.
 - Al terminar, actualizar `conocimiento/estado_y_pendientes.md`.
 
 ## Nunca
