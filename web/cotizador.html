@@ -1971,7 +1971,7 @@ if (typeof module !== "undefined") module.exports = Documentos;
       ${campo("Fecha de referencia (ajuste a hoy)", "cot.parametros.fecha_referencia", "date")}
       <label><span>Ajuste por inflación</span><select id="f-aj" data-b="cot.parametros.AJ" data-t="number"><option value="1" ${cot.parametros.AJ ? "selected" : ""}>Aplicar</option><option value="0" ${cot.parametros.AJ ? "" : "selected"}>No aplicar</option></select></label>
       <label><span>Flete en el precio</span><select id="f-trans" data-b="cot.parametros.TRANS" data-t="number"><option value="0" ${cot.parametros.TRANS ? "" : "selected"}>No (EXW Quilmes Oeste)</option><option value="1" ${cot.parametros.TRANS ? "selected" : ""}>Sí</option></select></label>
-      ${campo("Tipo de cambio ARS/USD (flete)", "cot.parametros.TC", "number")}${campo("Flete ARS por envío", "cot.parametros.TR_ARS", "number")}
+      ${campo("Tipo de cambio ARS/USD (BNA)", "cot.parametros.TC", "number")}${campo("Flete ARS por envío", "cot.parametros.TR_ARS", "number")}
       ${campo("Embalaje USD por envío", "cot.parametros.TR_EMB", "number")}${campo("Factor flete", "cot.parametros.TR_F", "number")}
       </div><p class="small muted">El factor de venta lo define la dirección; la herramienta propone 1,35 y muestra escenarios en Resumen. Todos los precios sin IVA.</p></section></div>`;
   }
