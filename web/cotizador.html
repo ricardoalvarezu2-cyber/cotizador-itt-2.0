@@ -1688,16 +1688,23 @@ const Documentos = (() => {
       if (ctx.planoXml) x += ctx.planoXml;
       x += titulo(`MATERIALES CONSIDERADOS (POR ${(cot.equipo?.singular || "equipo").toUpperCase()})`);
       x += tabla(["POS", "DESCRIPCIÓN", "Ø", "SERIE / SCH", "MATERIAL", "EXT.", "CANT."], plano, [1.0, 7.4, 1.6, 1.6, 3.3, 1.6, 1.1], null, 7.5, [1, 0, 1, 1, 1, 1, 1]);
+      if (notaCantidades(cot)) x += texto(notaCantidades(cot));
       for (const k of ["aclaraciones_y_desvios", "exclusiones", "alcance_general"]) if (of[k]) x += titulo(of[k].titulo) + vinetas(of[k].items || []);
       x += titulo("GARANTÍA") + texto(of.garantia || "") + vacio();
     }
     return x;
   }
 
+  function notaCantidades(cot) {
+    const ps = cot.items.filter(i => i.grupo === "material" && i.plano?.cantidad_origen && !/b$|c$/.test(String(i.pos))).map(i => i.pos);
+    return ps.length ? `(*) Pos. ${ps.join(", ")}: el cliente no indica cantidad; ITT la calculó según el plano / especificación técnica.` : "";
+  }
+
   function filasPlano(cot) {
     return cot.items.filter(i => i.grupo === "material" && !/b$|c$/.test(String(i.pos))).map(i => {
       const pl = i.plano || {};
-      return [i.pos, i.descripcion + (pl.modelo ? ` (${pl.modelo})` : ""), pl.diametro || "", pl.serie_sch || "", pl.material || "", pl.extremos || "", numg(i.cantidad)];
+      // descripción del cliente tal cual (regla crítica, 29-10-2026); la cantidad que el cliente no indicó va con (*)
+      return [i.pos, (pl.descripcion || i.descripcion) + (pl.modelo ? ` (${pl.modelo})` : ""), pl.diametro || "", pl.serie_sch || "", pl.material || "", pl.extremos || "", numg(i.cantidad) + (pl.cantidad_origen ? " (*)" : "")];
     });
   }
 
@@ -1806,6 +1813,7 @@ const Documentos = (() => {
       cuerpo += tit("EMBALAJE") + `<p>${esc(of.embalaje)}</p>` + tit("DOCUMENTOS QUE FORMAN PARTE DE LA PROPUESTA") + lis([`${of.oferta.numero} – OFERTA TÉCNICA`, `${of.oferta.numero} – OFERTA ECONÓMICA`, ...(of.documentos_cliente || [])]);
       cuerpo += tit("CARACTERÍSTICAS GENERALES SEGÚN PLANO") + `<p>${esc(of.caracteristicas)}</p>` + (ctx.planoUrl ? `<p style="text-align:center"><img src="${ctx.planoUrl}" style="max-width:560px"></p>` : "");
       cuerpo += tit("MATERIALES CONSIDERADOS") + `<table><thead><tr><th>POS</th><th>DESCRIPCIÓN</th><th>Ø</th><th>SERIE / SCH</th><th>MATERIAL</th><th>EXT.</th><th>CANT.</th></tr></thead><tbody>${filasPlano(cot).map(f => `<tr>${f.map(v => `<td>${esc(v)}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
+      if (notaCantidades(cot)) cuerpo += `<p>${esc(notaCantidades(cot))}</p>`;
       for (const k of ["aclaraciones_y_desvios", "exclusiones", "alcance_general"]) if (of[k]) cuerpo += tit(of[k].titulo) + lis(of[k].items);
       cuerpo += tit("GARANTÍA") + `<p>${esc(of.garantia)}</p>`;
     }

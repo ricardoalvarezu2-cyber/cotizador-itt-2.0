@@ -67,6 +67,8 @@ def main(carpeta, ident="capex-oq8209", salida=None, previo=None):
                 it["plano"]["modelo"] = it["plano"].pop("modelo_fabricante")
             if r.get("extremos_campo"):
                 it["plano"]["extremos_campo"] = r["extremos_campo"]
+            if r.get("cantidad_origen"):  # el cliente no indicó cantidad: la oferta la marca con (*)
+                it["plano"]["cantidad_origen"] = r["cantidad_origen"]
             it["plano"]["cantidad"], it["plano"]["unidad"] = r["cantidad"], r["unidad"]  # tal cual el plano (la soldadura se cuenta así)
     # familia y atributos de cada material (los mismos que usa controles_tablas.peso_item): la ficha de la página los usa
     sys.path.insert(0, str(RAIZ / "herramientas"))
