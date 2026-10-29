@@ -340,7 +340,7 @@ def armar(carpeta, tipo, cfg, precios):
         img = Path(carpeta) / cfg.get("imagen_plano", "")
         if cfg.get("imagen_plano") and img.is_file():
             c.imagen(img, 15)
-        c.titulo(f"MATERIALES CONSIDERADOS (POR {cot_equipo(carpeta).upper()})")
+        c.titulo(cfg.get("titulo_materiales") or f"MATERIALES CONSIDERADOS (POR {cot_equipo(carpeta).upper()})")  # título propio si la lista es de ITT
         import csv
 
         def cant_vista(v):  # el CSV guarda 0.8 (formato de máquina); a la vista va 0,8

@@ -11,6 +11,8 @@ from pathlib import Path
 C = Path(__file__).resolve().parent
 sys.path.insert(0, str(C.parent / "COT26-0135-001_CAMUZZI_CP24578_SKIDREG"))
 import camuzzi_comun  # noqa: E402
+sys.path.insert(0, str(C.parents[1] / "herramientas"))
+from numeros import fmt, fmtg  # noqa: E402
 
 BIT = "cotizaciones/COT26-0135-003_CAMUZZI_CP24578_SEPARADOR/bitacora.md"
 # ---- dimensionamiento preliminar (bitacora.md) ----
@@ -40,14 +42,14 @@ C30 = "fuentes_originales/ofertas_texto/CAMUZZI/30 - Separador Polvo y Líquido 
 L30 = "fuentes_originales/taval_lista30_2025-09.xlsx"
 # pos, descripción, Ø, serie/sch, material, extremos, cantidad, unidad, fuentes
 M = [
-    ("1", f"Chapa para virola Ø55\" (DI 1.280 mm) × {L_CUERPO:g} m × 2 1/4\" ({kg_cuerpo} kg + 10% recortes)", '55"', "e = 2 1/4\"", "SA-516 Gr. 70", "BW", round(kg_cuerpo * 1.1), "kg",
+    ("1", f"Chapa para virola Ø55\" (DI 1.280 mm) × {fmtg(L_CUERPO)} m × 2 1/4\" ({fmt(kg_cuerpo, 0)} kg + 10% recortes)", '55"', "e = 2 1/4\"", "SA-516 Gr. 70", "BW", round(kg_cuerpo * 1.1), "kg",
      [fuente("ant", 1.80, "Planilla Sacde/12 coalescedor FC-301/302: chapa SA-516-70 1 1/2\" a 1,80 USD/kg", S12, "2025-12-18", "similar", "espesor 1 1/2\" (acá 2 1/4\")")]),
     ("2", "Cabezal semielíptico 2:1 Ø55\" × 2 1/4\" (fondo inferior)", '55"', "e = 2 1/4\"", "SA-516 Gr. 70", "BW", 1, "un",
      [fuente("ant", 3000 * (55 / 36) ** 2 * 2.25 / 1.5, "Planilla Sacde/12: cabezal 36\" × 1 1/2\" SA-516-70 a 3.000, escalado por superficie (55/36)² y espesor (2 1/4 ÷ 1 1/2)", S12, "2025-12-18", "similar", "Ø36\" (escalado × 3,50); fondo 2:1 a 102 bar: 47,7 + 1,6 + afinamiento de conformado")]),
     ("3", "Tapa de cierre rápido no roscada para DI 1.280 mm #600 con pescante, A105N, o-rings de repuesto (marca del listado Camuzzi: Futura, Peco, Gora o EKA)", '53"', "600", "A105N", "BW", 1, "un",
      [fuente("ant", 24288.6 * (53 / 36) ** 1.5, "Planilla Sacde/12: tapa Futura 36\" #600 con pescante 24.288,60, escalada × (53/36)^1,5", S12, "2025-12-18", "similar", "Ø36\"; pedir cotización a Futura (Megatap no está en el listado de Camuzzi)")]),
-    ("4", f"Placa portaelementos Ø1,28 m × 1 5/8\" con {N_ELEM} agujeros mecanizados ({kg_placa} kg)", "", "e = 1 5/8\"", "SA-516 Gr. 70", "—", 1, "un",
-     [fuente("ant", kg_placa * 1.8, f"{kg_placa} kg × 1,80 USD/kg (chapa SA-516-70, planilla Sacde/12)", S12, "2025-12-18", "similar", "solo la chapa: el corte y el mecanizado de los agujeros, a cotizar")]),
+    ("4", f"Placa portaelementos Ø1,28 m × 1 5/8\" con {N_ELEM} agujeros mecanizados ({fmt(kg_placa, 0)} kg)", "", "e = 1 5/8\"", "SA-516 Gr. 70", "—", 1, "un",
+     [fuente("ant", kg_placa * 1.8, f"{fmt(kg_placa, 0)} kg × 1,80 USD/kg (chapa SA-516-70, planilla Sacde/12)", S12, "2025-12-18", "similar", "solo la chapa: el corte y el mecanizado de los agujeros, a cotizar")]),
     ("5", "Elemento coalescente 0,3 µm, 140 × 914 mm (5 1/2\" × 36\")", "", "", "fibra de vidrio", "—", N_ELEM, "un",
      [fuente("ant", 854, "Planilla Sacde/12 FC-301/302: elemento filtrante coalescedor (16 u a 854)", S12, "2025-12-18", "similar", "elemento de otro tamaño (no informado); pedir el 0,3 µm 140 × 914 a Gora / Filtron / Peco (listado Camuzzi)")]),
     ("5b", "Elemento coalescente 0,3 µm, 140 × 914 mm: juego adicional de repuesto (ET 13.1)", "", "", "fibra de vidrio", "—", N_ELEM, "un",
@@ -94,14 +96,14 @@ M = [
 ]
 with open(C / "pedido" / "lista_materiales_plano.csv", "w", newline="", encoding="utf-8") as fh:
     w = csv.writer(fh)
-    w.writerow(["pos", "descripcion", "diametro", "serie_sch", "material", "extremos", "modelo_fabricante", "cantidad", "unidad", "extremos_campo"])
-    for pos, desc, d, s, mat, ext, q, u, _ in M:
-        w.writerow([pos, desc, d, s, mat, ext, "diseño preliminar ITT (sin plano del cliente)", q, u, 0])
+    w.writerow(["pos", "descripcion", "diametro", "serie_sch", "material", "extremos", "modelo_fabricante", "cantidad", "unidad", "extremos_campo", "cantidad_origen", "nota"])
+    for pos, desc, d, s, mat, ext, q, u, _ in M:  # Camuzzi no entrega lista: toda la tabla es de ITT (lo dice el título en la oferta)
+        w.writerow([pos, desc, d, s, mat, ext, "", q, u, 0, "", "diseño preliminar ITT (sin lista del cliente)"])
 items = [{"id": f"M{int(p.rstrip('abc')):02d}{p.lstrip('0123456789')}", "pos": p, "grupo": "material", "descripcion": desc, "especificacion": f"{d} {s} {mat}".strip(), "cantidad": q, "unidad": u, "fuentes": f}
          for p, desc, d, s, mat, ext, q, u, f in M]
 ROL = C30 + "Sandri rolado de chapa esp 1.docx.txt"
 items += [
-    {"id": "S01", "pos": "ROL", "grupo": "servicio", "descripcion": f"Rolado y punteado de la virola ({kg_cuerpo} kg)", "especificacion": "Sandri: 2 virolas 26\" × 2,5 m × 1\" A516 (≈ 1.033 kg c/u) a ARS 2.550.000 + IVA c/u = 1,74 USD/kg (BNA 03-2026 1.416,29)",
+    {"id": "S01", "pos": "ROL", "grupo": "servicio", "descripcion": f"Rolado y punteado de la virola ({fmt(kg_cuerpo, 0)} kg)", "especificacion": "Sandri: 2 virolas 26\" × 2,5 m × 1\" A516 (≈ 1.033 kg c/u) a ARS 2.550.000 + IVA c/u = 1,74 USD/kg (BNA 03-2026 1.416,29)",
      "cantidad": kg_cuerpo, "unidad": "kg", "fuentes": [fuente("cot", 2550000 / 1416.29 / 1033, "Juan y Víctor Sandri S.A.: cilindrado y punteado ARS 2.550.000 + IVA por virola de 1.033 kg", ROL, "2026-03-25", "similar", "Ø26\" × 1\" (acá 55\" × 2 1/4\"; confirmar que Sandri rola ese espesor)"),
                                                          fuente("ant", 3.7, "Rolado 3,70 USD/kg (tarifas.csv, AESA/44)", "conocimiento/costos/tarifas.csv", "2025-09-30", "similar")]},
     {"id": "S02", "pos": "MO", "grupo": "mo", "descripcion": "Fabricación del separador y del skid por tercero (armado, soldadura, internos, montaje sobre skid)", "especificacion": "Ledesma 28\" #600 + skid 13.000 (CAMUZZI/30) × 2,2 por tamaño × √(57,15/41,3) = 1,18 por espesor (55\" vertical de 2 1/4\", plataforma)",
@@ -149,7 +151,7 @@ base["pedido"] = {"eyebrow": "Concurso de precios N° 24578 · ítem 1 / Concurs
                                       "2 purgas automáticas neumáticas 1\" bridadas con drenajes manuales; caja de chicanas AISI 304; tapa de apertura rápida no roscada con pescante",
                                       "Plataforma galvanizada en caliente con rejilla, guarda hombre y zócalo; skid UPN con cáncamos; materiales del listado de marcas de Camuzzi",
                                       "<b>Con la oferta:</b> memoria de cálculo (cantidad de elementos, diámetros, espesores) y esquema con dimensiones generales"]}
-base["nota_mo_html"] = (f"Diseño preliminar: {N_ELEM} elementos, cuerpo DI 1.280 mm × {L_CUERPO:g} m × 2 1/4\" SA-516-70 ({kg_cuerpo} kg) a la presión de la serie #600, fondo 2:1, tapa de cierre rápido superior, 2 cámaras. "
+base["nota_mo_html"] = (f"Diseño preliminar: {N_ELEM} elementos, cuerpo DI 1.280 mm × {fmtg(L_CUERPO)} m × 2 1/4\" SA-516-70 ({fmt(kg_cuerpo, 0)} kg) a la presión de la serie #600, fondo 2:1, tapa de cierre rápido superior, 2 cámaras. "
                         "Fabricación por tercero (Ledesma, escalado de su presupuesto del separador 28\" #600 de CAMUZZI/30); ITT pone ingeniería, calidad, montaje de instrumentos, RX, PH y pintura.")
 base["desvios"] = [{"tag": "Todo", "titulo": "Diseño preliminar", "texto": "La cantidad de elementos y el diámetro salen de un dimensionamiento preliminar (108 m³/h por elemento de Sacde/12); hay que confirmar con la ficha del elemento y la pérdida de carga máxima de 100 mbar (ET 9.1) en la memoria de cálculo antes de presentar."},
                    {"tag": "Flete", "titulo": "Lugar de entrega", "texto": "La ET dice transporte hasta destino final; la planilla del concurso, hasta Transporte Cruz del Sur. Se cotiza según la planilla."}]
@@ -173,4 +175,7 @@ camuzzi_comun.oferta(C, "COT26-0135-003", "Separador coalescente", 1, "separador
                       "Un juego de elementos instalado y un juego adicional de repuesto por equipo.",
                       "Entrega en Transporte Cruz del Sur según la planilla del concurso (la especificación indica destino final)."],
                      ["Memoria de cálculo y planos para aprobación.", "Suministro de materiales, elementos e instrumentos.", "Fabricación, RX, PH, pintura y montaje sobre skid con plataforma.", "Data book.", "Embalaje y flete hasta Transporte Cruz del Sur (Tapiales)."])
+of = json.load(open(C / "oferta.json", encoding="utf-8"))
+of["titulo_materiales"] = "LISTA DE MATERIALES ELABORADA POR ITT SEGÚN LA ESPECIFICACIÓN TÉCNICA Y EL ESQUEMA DE CAMUZZI (EL CLIENTE NO ENTREGA LISTA; POR SEPARADOR)"
+json.dump(of, open(C / "oferta.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print(len(items), "ítems · cuerpo", kg_cuerpo, "kg · placa", kg_placa, "kg")
