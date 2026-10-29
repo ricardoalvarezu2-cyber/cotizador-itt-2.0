@@ -152,3 +152,9 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 - **Error:** la ficha mostraba "28,50 juntas a tope" (el ajuste de uniones directas 0,75 sobre el caño por metro deja medias juntas) y la cabecera "29": dos números distintos para lo mismo.
 - **Corrección:** las juntas se redondean hacia arriba en `precotizar.soldaduras` y en `web/src/ficha.js`; las pulgadas equivalentes quedan con decimales.
 - **Lección:** una cantidad física que se cuenta (juntas, piezas, viajes) se muestra entera; los equivalentes de cálculo pueden tener decimales.
+
+## 29-10-2026 — "Chat nuevo" falló desde la página (upstream_error)
+- Qué pasó: `create_session` llamado desde la página devolvió `upstream_error` y no creó la sesión; la misma llamada desde una sesión de Claude Code funcionó.
+- Causa probable: desde la página no hay sesión que llame, así que no hay de dónde heredar el modelo (y el modo auto no se puede comparar con el de una sesión).
+- Corrección: el modelo va en `config/claude_code.model` (base de la página) y la página reintenta sin modo auto y sin etiqueta si el servicio rechaza. El aviso muestra el código y el mensaje real del error.
+- Lección: una llamada a un conector que en la sesión funciona puede fallar desde la página; probar el camino real (desde la página) antes de darlo por hecho y mostrar el error completo.

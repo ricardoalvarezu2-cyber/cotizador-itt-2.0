@@ -2953,12 +2953,12 @@ const Asistente = (() => {
   // repositorio (create_session) y la abre en la misma ventana. Las sesiones que crea la página quedan en la colección
   // "chats" y se archivan solas tras unos días sin uso (config/claude_code.dias_chat, por defecto 2); se pueden recuperar.
   const ENTORNO = "env_01XxXedU9fMy5bmisDSk6jJm", REPO = "https://github.com/tvmaty2186/cotizador-itt", ETIQUETA = "cotizador-itt-chat";
-  let diasChat = 2;
+  let diasChat = 2, modelo = "";
   function armarChat() {
     const btn = document.getElementById("btn-chat"), nuevo = document.getElementById("btn-chat-nuevo");
     if (btn) { btn.hidden = false; btn.title = "Abre Claude Code (la sesión de siempre, con el repositorio) en una ventana aparte"; btn.addEventListener("click", abrirClaude); }
     if (nuevo && mcp) { nuevo.hidden = false; nuevo.title = "Abre una sesión nueva de Claude Code con el repositorio"; nuevo.addEventListener("click", chatNuevo); }
-    I.S.db?.doc("config/claude_code").get().then(d => { if (d.exists && +d.data().dias_chat > 0) diasChat = +d.data().dias_chat; }).catch(() => {});
+    I.S.db?.doc("config/claude_code").get().then(d => { if (!d.exists) return; if (+d.data().dias_chat > 0) diasChat = +d.data().dias_chat; modelo = d.data().model || ""; }).catch(() => {});
   }
   function ventana(url) {
     const an = 480, al = Math.min(820, screen.availHeight - 80);
@@ -2980,15 +2980,22 @@ const Asistente = (() => {
     b.disabled = true; I.toast("Creando un chat nuevo con el repositorio…");
     try {
       const f = Documentos.fechaHora(ahora());
-      const r = await mcp.callTool(SERVIDOR, "create_session", { environment_id: ENTORNO, source_url: REPO, title: "Cotizador ITT - chat " + f, tags: [ETIQUETA], permission_mode: "auto" });
+      // Desde la página no hay sesión que llame: el modelo sale de config/claude_code.model. Si el servicio rechaza
+      // algún dato opcional (modo auto, etiqueta), se reintenta sin él.
+      const base = { environment_id: ENTORNO, source_url: REPO, title: "Cotizador ITT - chat " + f, ...(modelo ? { model: modelo } : {}) };
+      let r = null, error = null;
+      for (const extra of [{ tags: [ETIQUETA], permission_mode: "auto" }, { tags: [ETIQUETA] }, {}]) {
+        try { r = await mcp.callTool(SERVIDOR, "create_session", { ...base, ...extra }); break; }
+        catch (e) { error = e; if (!["upstream_error", "tool_error"].includes(e.code)) break; }
+      }
+      if (!r) throw error;
       const id = datoDe(r).id || (JSON.stringify(r).match(/session_[A-Za-z0-9]+/) || [])[0];
       if (!id) throw new Error("Claude Code no devolvió la sesión nueva");
       irA(w, "https://claude.ai/code/" + id);
       await I.S.db?.doc("chats/" + id).set({ creado: ahora(), titulo: "Cotizador ITT - chat " + f });
       limpiarChats(id).catch(() => {});
     } catch (e) {
-      const [, nota] = motivoError(e);
-      I.toast("No se pudo crear el chat nuevo: " + nota + ". Se abre Claude Code para empezarlo a mano.");
+      I.toast("No se pudo crear el chat nuevo (" + (e.code || "error") + (e.message ? ": " + String(e.message).slice(0, 160) : "") + "). Se abre Claude Code para empezarlo a mano.");
       irA(w, "https://claude.ai/code");
     } finally { b.disabled = false; }
   }

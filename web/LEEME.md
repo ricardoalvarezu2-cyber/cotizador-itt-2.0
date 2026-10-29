@@ -31,7 +31,7 @@
 - `catalogo_nuevo/<N-MAT-… o N-SRV-…>`: `{clase, registro (mismo formato que datos.json), original: {precio, moneda, iva, documento}, creado, por, incorporado?}`. Lo carga el chat (`nuevo_en_catalogo`); la página lo suma al buscador mientras no esté `incorporado`.
 - `chat/<id>` (en desuso desde el 29-10-2026): mensajes del chat viejo: `{conversacion, texto, archivos (como en pedidos), contexto: {vista, cotizacion_id, codigo, pestana}, estado, nota, creado, enviado, avance, respuesta, cambios: [texto], respondido}`. Estados: `pendiente` → `enviado` → `en_proceso` → `listo` / `con_dudas` (o `error`).
 - `chats/<session_id>`: sesiones de Claude Code creadas con "Chat nuevo" (ver abajo).
-- `config/claude_code`: `{session_id, dias_chat?}` de la sesión que recibe los pedidos (si no existe, la página usa la sesión fija de abajo).
+- `config/claude_code`: `{session_id, dias_chat?, model?}` (model: el que usa "Chat nuevo", porque desde la página no hay sesión de la que heredarlo; se guarda solo en la base) de la sesión que recibe los pedidos (si no existe, la página usa la sesión fija de abajo).
 - `pedidos/<id>`: `{tipo, texto, cotizacion_id, archivos: [{id, url, nombre, tipo, original?}], estado, nota, respuesta, resultado_cotizacion_id, creado, enviado, historial: [{fecha, estado, nota}]}`. Tipos: `cotizacion_nueva`, `actualizar_cotizacion`, `lista_precios`, `otro`. Estados: `pendiente` → `enviado` → `en_proceso` → `listo` / `con_dudas` (o `error` si no se sabe si el envío llegó).
 - Si Claude Code guarda una cotización con `"editor": "claude-code"`, la página abierta la recarga sola y avisa.
 - La página guarda sola 1,2 segundos después de cada cambio.
