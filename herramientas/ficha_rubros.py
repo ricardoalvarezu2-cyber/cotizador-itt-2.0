@@ -32,11 +32,14 @@ from controles_tablas import TEC, leer, leer_acc, peso_item  # noqa: E402
 from indice_proyectos import norm  # noqa: E402
 from numeros import a_vista  # noqa: E402
 
-RUBROS = {
-    "mo_piping": ("MO de armado y soldadura del piping", "mo"),
-    "mo_estructura": ("MO de fabricación de la estructura", "mo"),
+RUBROS = {  # en el orden en que se muestran (pedido de Matías, 29-10-2026: un ítem por rubro de fabricación)
+    "mo_estructura": ("Fabricación del skid (estructura)", "mo"),
+    "mo_piping": ("Fabricación del piping", "mo"),
     "pintura": ("Granallado y pintura", "servicio"),
-    "end": ("RX, END y procedimientos", "servicio"),
+    "end": ("Radiografía y END", "servicio"),
+    "procedimientos": ("Procedimientos", "servicio"),
+    "ph": ("Prueba hidráulica", "servicio"),
+    "horas": ("Horas de ITT (ingeniería, calidad y montaje)", "mo"),
     "transporte": ("Transporte", "servicio"),
 }
 # Semirremolque plano: caja útil 13,5 × 2,5 m, piso a 1,20 m, carga útil 27 t. Límites sin permiso (Ley 24.449): ancho 2,60 m,
@@ -47,18 +50,26 @@ ESTRUCTURA = r"estructura|perfileria|bastidor|\bskid\b|\bupn\b|\bipn\b|\bheb\b|\
 
 
 def rubro_de(it):
-    """Rubro de un renglón de MO o servicio, o None (horas de ITT, PH, caución, repuestos y materiales quedan afuera)."""
+    """Rubro de un renglón de MO o servicio, o None (caución, repuestos y otros quedan en "Otros servicios")."""
     if it.get("rubro"):
         return it["rubro"]
     if it["grupo"] == "material":
         return None
     t = norm(f"{it.get('pos', '')} {it['descripcion']}")
-    if re.search(r"\bhoras?\b|ingenier|calidad|hidraul|caucion|seguro|repuesto", t):
+    if re.search(r"caucion|seguro|repuesto", t):
         return None
+    if str(it.get("pos", "")).upper() == "PH" or re.search(r"^prueba hidraul", norm(it["descripcion"])):
+        return "ph"
+    if re.search(r"\bhoras?\b|ingenier|calidad", t):
+        return "horas"
+    if re.search(r"procedimiento|\bwps\b|\bpqr\b|\bwpq\b|calificacion de soldador", t):
+        return "procedimientos"
     if re.search(r"granall|pintur|arenad|revestim", t):
         return "pintura"
-    if re.search(r"radiograf|\brx\b|\blp\b|tintas|penetrant|ultrason|particulas|\bend\b|ensayo|procedimiento|\bwps\b|\bpqr\b", t):
+    if re.search(r"radiograf|\brx\b|\blp\b|tintas|penetrant|ultrason|particulas|\bend\b|ensayo", t):
         return "end"
+    if re.search(r"hidraul", t):
+        return "ph"
     if re.search(r"flete|transporte|camion", t):
         return "transporte"
     if re.search(r"estructura|bastidor|perfileria|\bmoe\b", t):
@@ -66,6 +77,47 @@ def rubro_de(it):
     if re.search(r"soldadur|armado|prefabricad|spool|ledesma|dimensional|piping", t):
         return "mo_piping"
     return None
+
+
+def procedimientos(filas, esp, juntas_bw, juntas_sw, rx, m2):
+    """Procedimientos que lleva el equipo, según materiales, juntas, END y pintura (misma regla en web/src/ficha.js)."""
+    grupos = sorted({"inoxidable" if re.search(r"304|316|inox|cf8m", norm(f["material"])) else "acero al carbono"
+                     for f in filas if f.get("material") and re.search(r"BW|SW", str(f.get("extremos", "")).upper())})
+    esp_txt = f" hasta {n(esp)} mm de espesor" if esp else ""
+    lista = []
+    for g in grupos:
+        if juntas_bw:
+            lista.append({"codigo": "WPS-BW", "nombre": f"WPS/PQR de soldadura a tope, {g}", "alcance": esp_txt.strip(), "cantidad": 1, "tipo": "soldadura"})
+        if juntas_sw:
+            lista.append({"codigo": "WPS-SW", "nombre": f"WPS/PQR de soldadura socket y filete, {g}", "alcance": "", "cantidad": 1, "tipo": "soldadura"})
+    if lista:
+        lista.append({"codigo": "WPQ", "nombre": "Calificación de soldadores (WPQ)", "alcance": "una por WPS y soldador asignado", "cantidad": len(lista), "tipo": "soldadura"})
+    if rx and juntas_bw:
+        lista.append({"codigo": "END-RX", "nombre": "Procedimiento de radiografía (nivel 3, ISO 9712)", "alcance": "", "cantidad": 1, "tipo": "end"})
+    if juntas_sw:
+        lista.append({"codigo": "END-LP", "nombre": "Procedimiento de líquidos penetrantes (nivel 3, ISO 9712)", "alcance": "", "cantidad": 1, "tipo": "end"})
+    if juntas_bw or juntas_sw:
+        lista.append({"codigo": "PH", "nombre": "Procedimiento de prueba hidráulica", "alcance": "", "cantidad": 1, "tipo": "calidad"})
+    if m2:
+        lista.append({"codigo": "PIN", "nombre": "Procedimiento de granallado y pintura", "alcance": "esquema del pliego", "cantidad": 1, "tipo": "calidad"})
+    return lista
+
+
+def litros(cfg):
+    """Volumen interior de los caños (litros por equipo), para la prueba hidráulica."""
+    canos = leer(TEC / "canos_peso_superficie.csv")
+    tot = 0.0
+    for it in cfg["items"]:
+        if it["grupo"] != "material" or norm(it["unidad"]) != "m":
+            continue
+        fam, at = fam_at(it)
+        if fam != "CAN":
+            continue
+        dn, sch = precotizar.dn_de(at.get("diametro", "")), at.get("schedule", "")
+        r = next((r for r in canos if dn and abs(float(r["dn_pulg"]) - dn) < 1e-6 and sch and (r["schedule"] == sch or r["clase"] == sch.upper())), None)
+        if r:
+            tot += float(r["litros_m_interior"]) * it["cantidad"]
+    return round(tot, 1)
 
 
 def modo(cfg, r):
@@ -86,7 +138,7 @@ def pasar_a_global(cfg, r, hoy=None):
           "fuentes": [{"tipo": "est", "precio": 0, "proveedor": "A cotizar: global del tercero", "origen": "ficha_rubros.md (pedir con la ficha)", "fecha": hoy or date.today().isoformat(), "coincide": "igual",
                        "diferencia": "SIN PRECIO: pedir cotización global con la ficha del rubro"}]}
     cfg["items"].append(it)
-    cfg.setdefault("rubros", {})[r] = {"modo": "global", "detalle": det}
+    cfg.setdefault("rubros", {})[r] = {**cfg.get("rubros", {}).get(r, {}), "modo": "global", "detalle": det}
     return it
 
 
@@ -95,7 +147,7 @@ def volver_a_detallado(cfg, r):
         return
     det = cfg["rubros"][r].get("detalle", [])
     cfg["items"] = [it for it in cfg["items"] if not (it.get("global") and it.get("rubro") == r)] + det
-    cfg["rubros"][r] = {"modo": "detallado"}
+    cfg["rubros"][r] = {"modo": "detallado", **({"tarifa": cfg["rubros"][r]["tarifa"]} if cfg["rubros"][r].get("tarifa") else {})}
 
 
 # ---------------------------------------------------------------- ficha
@@ -229,7 +281,11 @@ def armar(carpeta, cfg=None):
                                    "Calificación de soldadores (WPQ) para esos WPS", "Procedimiento de RX y de LP (escrito, nivel 3 ISO 9712)",
                                    "Confirmar con el pliego: si exige procedimientos nuevos o alcanzan los vigentes de ITT"]},
         "transporte": transporte(cfg, kg_p + kg_e),
+        "procedimientos": {"lista": procedimientos(filas, esp, sol["juntas_bw"], sol["juntas_sw_olet"], rx, m2_pip + m2_est)},
+        "ph": {"litros": litros(cfg)},
+        "horas": {},
     }
+    ficha["procedimientos"]["cantidad"] = sum(p["cantidad"] for p in ficha["procedimientos"]["lista"])
     ficha["referencias"] = {}
     for r in RUBROS:
         glob = [it for it in cfg["items"] if it.get("global") and it.get("rubro") == r]
@@ -245,7 +301,8 @@ def unitarios(ficha, r, usd):
     pares = {"mo_piping": [("pulgada eq.", f.get("pulg_eq")), ("kg de piping", f.get("kg_piping")), ("junta a tope", f.get("juntas_bw"))],
              "mo_estructura": [("kg", f.get("kg"))], "pintura": [("m²", f.get("m2_total"))],
              "end": [("junta a tope", f.get("juntas_bw")), ("placa", (f.get("placas_chicas") or 0) + (f.get("placas_grandes") or 0))],
-             "transporte": [("viaje", (1 / f["por_camion"]) if f.get("por_camion") else None)]}[r]
+             "transporte": [("viaje", (1 / f["por_camion"]) if f.get("por_camion") else None)],
+             "procedimientos": [("procedimiento", f.get("cantidad"))], "ph": [("litro", f.get("litros"))], "horas": []}[r]
     return [(u, usd / q) for u, q in pares if q]
 
 
@@ -264,14 +321,15 @@ def escribir(carpeta, ficha, cfg):
         x = p["referencias"][r]
         if r == "transporte" and x["modo"] != "global":
             return ["- Sin precio por equipo: se cotiza EXW (o flete aparte en los parámetros). Para sumarlo por equipo, pasar el rubro a global."]
-        out = [f"- **Modo: {x['modo']}.** Cálculo detallado: USD {n(x['detallado_usd'])} ({x['renglones_detalle']} renglón/es, con ajuste por inflación)."]
-        if x["detallado_usd"]:
-            out.append("  - Detallado por unidad: " + " · ".join(f"USD {n(v)}/{u}" for u, v in unitarios(p, r, x["detallado_usd"])))
+        modo_txt = "manual" if x["modo"] == "global" else "por antecedentes"
+        out = [f"- **Costo {modo_txt}.** Por antecedentes: USD {n(x['detallado_usd'])} ({x['renglones_detalle']} renglón/es, con ajuste por inflación)."]
+        if x["detallado_usd"] and unitarios(p, r, x["detallado_usd"]):
+            out.append("  - Por unidad: " + " · ".join(f"USD {n(v)}/{u}" for u, v in unitarios(p, r, x["detallado_usd"])))
         if x["global_usd"] is not None:
-            out.append(f"- Global cargado: USD {n(x['global_usd'])}" + (" — **SIN PRECIO: pedir cotización con esta ficha**" if not x["global_usd"] else
+            out.append(f"- Manual: USD {n(x['global_usd'])}" + (" — **SIN PRECIO: pedir cotización con esta ficha**" if not x["global_usd"] else
                        " (" + " · ".join(f"USD {n(v)}/{u}" for u, v in unitarios(p, r, x["global_usd"])) + ")"))
             if x["global_usd"] and x["detallado_usd"] and abs(x["global_usd"] / x["detallado_usd"] - 1) > 0.15:
-                out.append(f"- ⚠ El global se aparta {n((x['global_usd'] / x['detallado_usd'] - 1) * 100, 0)}% del detallado: revisar alcance")
+                out.append(f"- ⚠ El costo manual se aparta {n((x['global_usd'] / x['detallado_usd'] - 1) * 100, 0)}% del de antecedentes: revisar alcance")
         return out
 
     L += ["## 1. MO de armado y soldadura del piping", "",
@@ -288,11 +346,15 @@ def escribir(carpeta, ficha, cfg):
           "## 3. Granallado y pintura", "",
           f"- m² de piping: **{n(pi['m2_piping'])}** (caños y niples {n(pi['m2_canos'])}; bridas, accesorios y válvulas por largo equivalente) · m² de estructura: **{n(pi['m2_estructura'])}**",
           f"- m² total: **{n(pi['m2_total'])}** (sin overspray) · esquema: {pi['esquema'] or 'según pliego'}"] + ref("pintura") + ["",
-          "## 4. RX, END y procedimientos", "",
+          "## 4. Radiografía y END", "",
           f"- Juntas a tope: **{n(en['juntas_bw'], 0)}** · RX {n(en['rx_pct'], 0)}% → placas chicas **{n(en['placas_chicas'], 0)}**, grandes **{n(en['placas_grandes'], 0)}**",
           f"- Juntas SW, cuplas y olets (LP donde no se puede radiografiar): **{n(en['juntas_lp'], 0)}**",
-          "- Procedimientos:"] + [f"  - {x}" for x in en["procedimientos"]] + ref("end") + ["",
-          "## 5. Transporte", "",
+          ] + ref("end") + ["",
+          "## 5. Procedimientos", ""] + [f"- {x['nombre']}" + (f" ({x['alcance']})" if x["alcance"] else "") + (f" × {x['cantidad']}" if x["cantidad"] > 1 else "")
+                                         for x in p["procedimientos"]["lista"]] + ["- Confirmar con el pliego si exige procedimientos nuevos o alcanzan los vigentes de ITT"] + ref("procedimientos") + ["",
+          "## 6. Prueba hidráulica", "", f"- Volumen interior de los caños: **{n(p['ph']['litros'], 1)} litros**"] + ref("ph") + ["",
+          "## 7. Horas de ITT (ingeniería, calidad y montaje)", ""] + ref("horas") + ["",
+          "## 8. Transporte", "",
           f"- Medidas del {eq}: {n(tr['largo_m'])} × {n(tr['ancho_m'])} × {n(tr['alto_m'])} m (largo × ancho × alto) · kg: **{n(tr['kg_equipo'], 0)}** (piping + estructura)"
           + (f" · destino: {tr['destino']}" if tr["destino"] else "")]
     if tr["por_camion"]:

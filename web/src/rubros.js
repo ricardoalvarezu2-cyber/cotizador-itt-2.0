@@ -4,11 +4,14 @@
 // La ficha física (soldaduras, kg, m², placas) viene de cot.ficha (la arma ficha_rubros.py con la tabla del plano); si no está, la
 // página arma una aproximada con lo cargado. El transporte se recalcula siempre con las medidas de cot.transporte.
 const Rubros = (() => {
-  const RUBROS = {
-    mo_piping: ["MO de armado y soldadura del piping", "mo"],
-    mo_estructura: ["MO de fabricación de la estructura", "mo"],
+  const RUBROS = {  // en el orden en que se muestran (un ítem por rubro de fabricación, pedido de Matías 29-10-2026)
+    mo_estructura: ["Fabricación del skid (estructura)", "mo"],
+    mo_piping: ["Fabricación del piping", "mo"],
     pintura: ["Granallado y pintura", "servicio"],
-    end: ["RX, END y procedimientos", "servicio"],
+    end: ["Radiografía y END", "servicio"],
+    procedimientos: ["Procedimientos", "servicio"],
+    ph: ["Prueba hidráulica", "servicio"],
+    horas: ["Horas de ITT (ingeniería, calidad y montaje)", "mo"],
     transporte: ["Transporte", "servicio"],
   };
   const CAMION = { largo: 13.5, ancho: 2.5, piso: 1.2, kg: 27000 }, LIMITE_ANCHO = 2.6, LIMITE_ALTO = 4.1;
@@ -19,9 +22,13 @@ const Rubros = (() => {
     if (it.rubro) return it.rubro;
     if (it.grupo === "material") return null;
     const t = norm(`${it.pos || ""} ${it.descripcion}`);
-    if (/\bhoras?\b|ingenier|calidad|hidraul|caucion|seguro|repuesto/.test(t)) return null;
+    if (/caucion|seguro|repuesto/.test(t)) return null;
+    if (String(it.pos || "").toUpperCase() === "PH" || /^prueba hidraul/.test(norm(it.descripcion))) return "ph";
+    if (/\bhoras?\b|ingenier|calidad/.test(t)) return "horas";
+    if (/procedimiento|\bwps\b|\bpqr\b|\bwpq\b|calificacion de soldador/.test(t)) return "procedimientos";
     if (/granall|pintur|arenad|revestim/.test(t)) return "pintura";
-    if (/radiograf|\brx\b|\blp\b|tintas|penetrant|ultrason|particulas|\bend\b|ensayo|procedimiento|\bwps\b|\bpqr\b/.test(t)) return "end";
+    if (/radiograf|\brx\b|\blp\b|tintas|penetrant|ultrason|particulas|\bend\b|ensayo/.test(t)) return "end";
+    if (/hidraul/.test(t)) return "ph";
     if (/flete|transporte|camion/.test(t)) return "transporte";
     if (/estructura|bastidor|perfileria|\bmoe\b/.test(t)) return "mo_estructura";
     if (/soldadur|armado|prefabricad|spool|ledesma|dimensional|piping/.test(t)) return "mo_piping";
@@ -40,14 +47,14 @@ const Rubros = (() => {
       fuentes: [{ tipo: "est", precio: 0, proveedor: "A cotizar: global del tercero", origen: "ficha_rubros.md (pedir con la ficha)", fecha: hoy, coincide: "igual",
         diferencia: "SIN PRECIO: pedir cotización global con la ficha del rubro" }] };
     cot.items.push(it);
-    (cot.rubros ??= {})[r] = { modo: "global", detalle: det };
+    (cot.rubros ??= {})[r] = { ...(cot.rubros?.[r] || {}), modo: "global", detalle: det };
     return it;
   }
   function volverADetallado(cot, r) {
     if (modo(cot, r) !== "global") return;
     const det = cot.rubros[r].detalle || [];
     cot.items = cot.items.filter(i => !(i.global && i.rubro === r)).concat(det);
-    cot.rubros[r] = { modo: "detallado" };
+    cot.rubros[r] = { modo: "detallado", ...(cot.rubros[r].tarifa ? { tarifa: cot.rubros[r].tarifa } : {}) };
   }
 
   // Ficha aproximada de la página (sin tabla del plano): kg y m² de caños por la tabla ASME, kg de las demás piezas de cot.kg_compras
@@ -108,7 +115,7 @@ const Rubros = (() => {
     const x = f[r];
     const pares = { mo_piping: [["pulgada eq.", x.pulg_eq], ["kg de piping", x.kg_piping], ["junta a tope", x.juntas_bw]], mo_estructura: [["kg", x.kg]],
       pintura: [["m²", x.m2_total]], end: [["junta a tope", x.juntas_bw], ["placa", (x.placas_chicas || 0) + (x.placas_grandes || 0)]],
-      transporte: [["viaje", x.por_camion ? 1 / x.por_camion : null]] }[r];
+      transporte: [["viaje", x.por_camion ? 1 / x.por_camion : null]], procedimientos: [["procedimiento", x.cantidad]], ph: [["litro", x.litros]], horas: [] }[r];
     return pares.filter(([, q]) => q).map(([u, q]) => [u, usd / q]);
   }
 
@@ -122,10 +129,13 @@ const Rubros = (() => {
       mo_estructura: [["kg de estructura", x.kg, "kg"], ["m² de estructura", x.m2, "m²"]],
       pintura: [["m² de piping", x.m2_piping, "m²"], ["m² de estructura", x.m2_estructura, "m²"], ["m² total (sin overspray)", x.m2_total, "m²"], ["Esquema", x.esquema || "según pliego", ""]],
       end: [["Juntas a tope", x.juntas_bw, ""], ["RX", x.rx_pct, "%"], ["Placas chicas", x.placas_chicas, ""], ["Placas grandes", x.placas_grandes, ""],
-        ["Juntas con LP (SW, cuplas y olets)", x.juntas_lp, ""], ...(x.procedimientos || []).map(t => ["Procedimiento", t, ""])],
+        ["Juntas con LP (SW, cuplas y olets)", x.juntas_lp, ""]],
+      procedimientos: (x.lista || []).map(p => [p.nombre + (p.alcance ? ` (${p.alcance})` : ""), p.cantidad, ""]),
+      ph: [["Volumen interior de los caños", x.litros, "litros"]],
+      horas: [],
       transporte: [["Largo × ancho × alto", x.largo_m && x.ancho_m && x.alto_m ? [x.largo_m, x.ancho_m, x.alto_m].map(d => d.toLocaleString("es-AR")).join(" × ") : null, "m"], ["kg por equipo (piping + estructura)", x.kg_equipo, "kg"],
         ["Destino", x.destino || null, ""], ["Equipos por semirremolque", x.por_camion, ""], ["Viajes para la cantidad", x.viajes, ""]],
-    }[r];
+    }[r] || [];
   }
 
   // Texto de la ficha para pedir cotización al tercero (sin precios internos)
@@ -137,6 +147,71 @@ const Rubros = (() => {
       ...datosDe(f, r).map(([e, x, u]) => `- ${e}: ${v(x)}${u && x != null ? " " + u : ""}`), ...(f[r].avisos || []).map(a => `- Atención: ${a}`)].join("\n");
   }
 
-  return { RUBROS, CAMION, rubroDe, modo, globalDe, pasarAGlobal, volverADetallado, fichaBasica, transporte, ficha, unitarios, datosDe, texto };
+  // ---------------------------------------------------------------- costo por antecedentes
+  // Opciones de tarifa del historial para un rubro (tarifas.csv y catálogo de servicios con tarifa unitaria) y renglones que genera.
+  const fechaDia = f => /^\d{4}-\d{2}-\d{2}/.test(f || "") ? f.slice(0, 10) : /^\d{4}-\d{2}$/.test(f || "") ? f + "-01" : /^\d{4}$/.test(f || "") ? f + "-07-01" : "";
+  function opcionesTarifa(datos, r) {
+    const tar = (rubro, unidad) => datos.tarifas.filter(t => t.rubro === rubro && t.unidad === unidad && t.tipo !== "precio_venta" && isFinite(+t.valor) && fechaDia(t.fecha))
+      .map(t => ({ id: "T:" + t.concepto + t.fecha + t.valor, valor: +t.valor, fecha: fechaDia(t.fecha), etiqueta: `${t.concepto} (${t.tipo.replace(/_/g, " ")})`, origen: t.fuente || "conocimiento/costos/tarifas.csv" }));
+    const srv = (ut, rx) => datos.servicios.filter(x => x.ut === ut && x.t && !/ESTIMADO/.test(x.al || "") && (!rx || rx.test(norm(x.s))) && fechaDia(x.fe))
+      .map(x => ({ id: "S:" + x.c, valor: x.t, fecha: fechaDia(x.fe), etiqueta: `${x.s} · ${String(x.pr || "").slice(0, 40)} · ${x.c}`, origen: x.o || x.c }));
+    const ops = { mo_piping: [...tar("soldadura", "USD/pulg-diam-eq"), ...srv("USD/pulg-eq")],
+      mo_estructura: [...tar("estructura", "USD/kg"), ...srv("USD/kg", /estructura|skid|perfil/)],
+      pintura: [...tar("pintura", "USD/m2"), ...srv("USD/m2")],
+      ph: srv("USD/hora", /hidr/) }[r] || [];
+    return ops.sort((a, b) => b.fecha.localeCompare(a.fecha));
+  }
+  const UNIDAD = { mo_piping: ["pulg", "pulgadas equivalentes"], mo_estructura: ["kg", "kg de estructura"], pintura: ["m2", "m² a pintar"], ph: ["h", "horas de prueba"] };
+  // Renglones por antecedentes de un rubro: [{descripcion, especificacion, cantidad, unidad, precio, fuente}] y el texto del cálculo
+  function antecedentes(cot, datos, f, r) {
+    const N = +cot.parametros.N || 1, num = (v, d = 2) => Number(v || 0).toLocaleString("es-AR", { minimumFractionDigits: d, maximumFractionDigits: d });
+    const ops = opcionesTarifa(datos, r), elegida = ops.find(o => o.id === cot.rubros?.[r]?.tarifa) || ops[0];
+    if (UNIDAD[r]) {
+      const cant = r === "mo_piping" ? f.mo_piping.pulg_eq : r === "mo_estructura" ? f.mo_estructura.kg : r === "pintura" ? f.pintura.m2_total : +(cot.parametros.ph_horas || 6);
+      if (!elegida) return { opciones: ops, renglones: [], texto: "No hay tarifas del historial para este rubro." };
+      if (!cant) return { opciones: ops, elegida, renglones: [], texto: `Falta la cantidad (${UNIDAD[r][1]}): completá los datos del plano y Recalculá.` };
+      const desc = { mo_piping: `Soldadura y armado del piping (${num(f.mo_piping.juntas_bw, 0)} juntas a tope + SW y olets)`, mo_estructura: "Fabricación de la estructura del skid",
+        pintura: "Granallado y pintura (piping y estructura)", ph: `Prueba hidráulica (horas de planta; ${num(f.ph?.litros || 0, 0)} litros)` }[r];
+      return { opciones: ops, elegida, texto: `${num(cant)} ${UNIDAD[r][1]} × USD ${num(elegida.valor)} = USD ${num(cant * elegida.valor)}`,
+        renglones: [{ descripcion: desc, especificacion: `${num(cant)} ${UNIDAD[r][0]} × USD ${num(elegida.valor)} (${elegida.etiqueta})`, cantidad: Math.round(cant * 1000) / 1000, unidad: UNIDAD[r][0],
+          precio: elegida.valor, fuente: { tipo: "ant", precio: elegida.valor, proveedor: elegida.etiqueta.slice(0, 120), origen: elegida.origen, fecha: elegida.fecha, coincide: "igual" } }] };
+    }
+    if (r === "end") {
+      const t = c => datos.tarifas.find(x => x.rubro === "end" && norm(x.concepto).includes(c) && x.tipo === "tercero");
+      const tc = t("placa radiografica chica"), tg = t("placa radiografica grande"), ts = t("servicio de radiografia (antonelli)"), tl = t("liquidos penetrantes");
+      const e = f.end, ch = e.placas_chicas || 0, gr = e.placas_grandes || 0, sv = ch + gr ? Math.max(1, Math.ceil((ch + gr) / 40)) : 0;
+      const ren = [];
+      if (ch + gr && tc && ts) {
+        const costo = ch * +tc.valor + gr * +(tg?.valor || 0) + sv * +ts.valor;
+        ren.push({ descripcion: `Radiografía ${num(e.rx_pct, 0)}% de las juntas a tope`, especificacion: `${ch} placas chicas × ${tc.valor} + ${gr} grandes × ${tg?.valor || 0} + ${sv} servicio(s) × ${ts.valor}`,
+          cantidad: 1, unidad: "gl", precio: costo, fuente: { tipo: "cot", precio: costo, proveedor: "NDT Antonelli (tarifas)", origen: ts.fuente || "conocimiento/costos/tarifas.csv", fecha: fechaDia(ts.fecha), coincide: "igual" } });
+      }
+      if (e.juntas_lp && tl) ren.push({ descripcion: `Líquidos penetrantes en SW, cuplas y olets (${e.juntas_lp} juntas)`, especificacion: `1 servicio × ${tl.valor}`, cantidad: 1, unidad: "servicio",
+        precio: +tl.valor, fuente: { tipo: "cot", precio: +tl.valor, proveedor: "NDT Antonelli (tarifas)", origen: tl.fuente || "conocimiento/costos/tarifas.csv", fecha: fechaDia(tl.fecha), coincide: "igual" } });
+      return { opciones: [], renglones: ren, texto: ren.length ? ren.map(x => `${x.descripcion}: USD ${num(x.precio)}`).join(" · ") : "Sin juntas a tope ni placas: completá los datos del plano y Recalculá." };
+    }
+    if (r === "procedimientos") {
+      const t = datos.tarifas.find(x => x.rubro === "end" && norm(x.concepto).includes("procedimiento escrito"));
+      const end = (f.procedimientos?.lista || []).filter(p => p.tipo === "end");
+      const ren = t ? end.map(p => ({ descripcion: p.nombre, especificacion: `USD ${num(+t.valor)} por trabajo ÷ ${N} equipo(s)`, cantidad: 1, unidad: "gl", precio: Math.round(+t.valor / N * 100) / 100,
+        fuente: { tipo: "cot", precio: Math.round(+t.valor / N * 100) / 100, proveedor: t.concepto, origen: t.fuente || "conocimiento/costos/tarifas.csv", fecha: fechaDia(t.fecha), coincide: "igual" } })) : [];
+      const sin = (f.procedimientos?.lista || []).filter(p => p.tipo !== "end").length;
+      return { opciones: [], renglones: ren, texto: (ren.length ? `${ren.length} procedimiento(s) de END × USD ${num(+t.valor)} ÷ ${N} equipo(s)` : "Sin procedimientos de END")
+        + (sin ? ` · ${sin} sin costo de antecedente (WPS/PQR, WPQ, PH, pintura): si hacen falta nuevos, pedir cotización` : "") };
+    }
+    return { opciones: [], renglones: [], texto: r === "horas" ? "Se estiman con el antecedente más parecido (precotización de Claude Code). Los renglones se editan acá." : "" };
+  }
+  // Reemplaza los renglones por antecedentes del rubro por los que calcula antecedentes()
+  function aplicarAntecedentes(cot, datos, f, r) {
+    const a = antecedentes(cot, datos, f, r);
+    if (!a.renglones.length) return 0;
+    const [, grupo] = RUBROS[r];
+    cot.items = cot.items.filter(i => !(rubroDe(i) === r && !i.global));
+    a.renglones.forEach((x, k) => cot.items.push({ id: `A-${r}-${k + 1}`, pos: "MO", grupo, rubro: r, descripcion: x.descripcion, especificacion: x.especificacion,
+      cantidad: x.cantidad, unidad: x.unidad, fuentes: [x.fuente] }));
+    return a.renglones.length;
+  }
+
+  return { RUBROS, CAMION, rubroDe, opcionesTarifa, antecedentes, aplicarAntecedentes, modo, globalDe, pasarAGlobal, volverADetallado, fichaBasica, transporte, ficha, unitarios, datosDe, texto };
 })();
 if (typeof module !== "undefined") module.exports = Rubros;

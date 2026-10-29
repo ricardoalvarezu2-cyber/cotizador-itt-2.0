@@ -9,7 +9,8 @@
 |---|---|
 | `src/motor.js` | Cálculo de costo y precio, igual a `herramientas/armar_cotizacion.py` (control: CAPEX = USD 7.620,59). Prueba: `node web/probar_motor.js`. |
 | `src/busqueda.js` | Buscador de materiales y servicios (igual / similar), calculadora de soldaduras y avisos de control. Prueba: `node web/probar_busqueda.js`. |
-| `src/rubros.js` | Modo **Detallado / Global** por rubro (MO del piping, MO de la estructura, pintura, RX/END/procedimientos, transporte) y su ficha (soldaduras, kg, m², placas, medidas y equipos por camión), igual a `herramientas/ficha_rubros.py`. En global, los renglones detallados quedan en `cot.rubros[r].detalle` y se suma un renglón `global: true`. Prueba: `node web/probar_rubros.js`. |
+| `src/ficha.js` | Ficha calculada en la página (soldaduras, kg con tablas y aproximados, m², placas, procedimientos, litros), igual a `ficha_rubros.py`. Prueba: `node web/probar_ficha.js`. |
+| `src/rubros.js` | Rubros de MO y servicios: costo **por antecedentes** (tarifa del historial × cantidad de la ficha) o **manual** (internamente "detallado"/"global"); modo (MO del piping, MO de la estructura, pintura, RX/END/procedimientos, transporte) y su ficha (soldaduras, kg, m², placas, medidas y equipos por camión), igual a `herramientas/ficha_rubros.py`. En global, los renglones detallados quedan en `cot.rubros[r].detalle` y se suma un renglón `global: true`. Prueba: `node web/probar_rubros.js`. |
 | `src/antecedentes.js` | Comparación con antecedentes (P8) en Resumen: misma puntuación que `buscar_antecedentes.py` y misma lectura que `comparar_antecedentes.py` (CAPEX: mismos 5 y mismo aviso). Datos: `datos.json` → `antecedentes`. |
 | `src/documentos.js` | Planilla de presupuesto (con fórmulas), lista para Compras, informe PDF, ofertas técnica y económica (Word con la plantilla ITT y PDF). |
 | `src/app.js`, `src/pagina.html` | Interfaz. Estética de los informes de ITT. |

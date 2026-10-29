@@ -36,6 +36,8 @@ print(json.dumps({"cot":cfg,"py":fi}))`], { cwd: raiz, maxBuffer: 1 << 26 }).toS
   cmp("m2_total", js.pintura.m2_total, py.pintura.m2_total, 0.02);
   cmp("placas_chicas", js.end.placas_chicas, py.end.placas_chicas, 0);
   cmp("placas_grandes", js.end.placas_grandes, py.end.placas_grandes, 0);
+  cmp("procedimientos", js.procedimientos.cantidad, py.procedimientos.cantidad, 0);
+  cmp("litros", js.ph.litros, py.ph.litros, 0.11);
   cmp("espesor_max", js.end.espesor_max_mm, py.end.espesor_max_mm, 1e-6);
   n++;
 }

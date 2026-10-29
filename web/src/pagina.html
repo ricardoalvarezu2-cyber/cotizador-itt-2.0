@@ -138,7 +138,7 @@ input.mal{border-color:var(--bad);background:var(--bad-soft)}
 .rubros{border:1px solid var(--line);border-radius:4px;background:var(--panel)}
 .rb{border-bottom:1px solid var(--line)} .rb:last-child{border-bottom:0}
 .rb.global{box-shadow:inset 3px 0 0 var(--accent)}
-.rb-cab{display:grid;grid-template-columns:minmax(190px,1.2fr) minmax(0,2fr) 110px 150px auto;gap:10px 16px;align-items:center;padding:10px 14px}
+.rb-cab{display:grid;grid-template-columns:minmax(200px,1.2fr) minmax(0,2fr) 150px auto;gap:10px 16px;align-items:center;padding:10px 14px}
 .rb-abrir{border:0;background:none;padding:4px 0;display:flex;align-items:center;gap:8px;text-align:left;white-space:normal;font:inherit;color:var(--ink)}
 .rb-abrir b{font:650 15px/1.2 var(--f-disp);font-stretch:85%}
 .rb-abrir .flecha{color:var(--muted);width:12px;flex:none}
@@ -157,6 +157,9 @@ input.mal{border-color:var(--bad);background:var(--bad-soft)}
 .rb table.ficha{width:100%;border-collapse:collapse;font-size:13.5px} .rb table.ficha td{padding:4px 6px;border-bottom:1px solid var(--line)}
 .rb table.ficha td.n{white-space:normal;overflow-wrap:anywhere}
 .rb .warn{color:var(--warn)}
+.rb-cuerpo.rb-uno{grid-template-columns:1fr}
+.rb table.renglones td{vertical-align:middle} .rb table.renglones td:first-child{width:50%;min-width:200px} .rb table.renglones td.ed input{width:90px}
+details.panel>summary{cursor:pointer} details.panel[open]>summary{margin-bottom:8px}
 @media (max-width:860px){.rb-cab{grid-template-columns:1fr auto}.rb-datos{grid-column:1/-1;order:3}.rb-monto{align-items:flex-start;order:4}.segm{order:2}.rb-cuerpo{grid-template-columns:1fr;padding-left:14px}}
 /* calculadoras del modo detallado */
 .calc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 28px;align-items:start}

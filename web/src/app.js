@@ -413,110 +413,103 @@
   }
 
   // ------------------------------------------------------------------ pestaña MO y servicios
+  // Pestaña MO y servicios: un ítem por rubro de fabricación (pedido de Matías, 29-10-2026). Cada rubro tiene su ficha y su costo
+  // por antecedentes (tarifa del historial × cantidad de la ficha) o manual (global). Lo que no es de ningún rubro va en "Otros servicios".
   function tabServicios() {
-    const ph = tarifaPH(), pins = tarifasPintura();
-    const sol = Busqueda.soldadura(S.datos, S.sold), t = Busqueda.tarifa(S.datos, "soldadura", "soldadura piping");
-    const dns = [...new Set(S.datos.soldadura.map(r => r.dn))].sort((a, b) => a - b);
-    const schs = ["10", "20", "30", "40", "STD", "60", "80", "XS", "100", "120", "140", "160", "XXS"];
-    return `<section><div class="sec-head"><h2>Mano de obra y servicios</h2><button data-a="manual" data-g="servicio">Cargar a mano</button></div>${tablaItems(false)}</section>
-      ${panelRubros()}
-      <section class="panel"><div class="sec-head"><h2>Calculadoras del modo detallado</h2><span class="eyebrow">cada una agrega un renglón a la tabla de arriba</span></div>
-      <div class="calc-grid">
-      <div class="calc calc-sold"><h3>Soldaduras</h3><p class="small muted">Juntas por diámetro y schedule, de la columna de extremos del plano (BW de a dos extremos; SW, cuplas y olets, una junta cada una).</p>
-        <div class="tbl"><table><thead><tr><th>Ø</th><th>Sch</th><th class="n">Juntas BW</th><th class="n">Juntas SW</th><th class="n">Cuplas / olets</th><th>Tipo olet</th><th></th></tr></thead><tbody>
-        ${S.sold.map((r, i) => `<tr><td><select id="sd-${i}" data-sold="${i}" data-c="dn">${dns.map(d => `<option ${String(d) === String(r.dn) ? "selected" : ""}>${d}</option>`).join("")}</select></td>
-          <td><select id="ss-${i}" data-sold="${i}" data-c="sch">${schs.map(s => `<option ${s === r.sch ? "selected" : ""}>${s}</option>`).join("")}</select></td>
-          ${["bw", "sw", "olet"].map(k => `<td class="ed"><input id="s${k}-${i}" type="text" inputmode="decimal" class="num" data-sold="${i}" data-c="${k}" value="${E(r[k])}"></td>`).join("")}
-          <td><select id="so-${i}" data-sold="${i}" data-c="tipoOlet"><option value="cupla" ${r.tipoOlet !== "weldolet" ? "selected" : ""}>cupla/sockolet (1,75)</option><option value="weldolet" ${r.tipoOlet === "weldolet" ? "selected" : ""}>weldolet (2,5)</option></select></td>
-          <td><button class="chico" data-a="sold-quitar" data-i="${i}" aria-label="Quitar fila">×</button></td></tr>`).join("")}</tbody></table></div>
-        <div class="fila"><button class="chico" data-a="sold-fila">Agregar diámetro</button></div>
-        <p class="resultado-calc" id="sold-res"><b>${num(sol.pulg, 2)} pulgadas equivalentes</b> × USD ${t ? num(t.valor) : "—"} (costo propio de planta ${E(F(t?.fecha))}) = <b>USD ${num(sol.pulg * (t ? +t.valor : 0))}</b></p>
-        <div class="fila"><button class="prim" data-a="sold-agregar" ${sol.pulg && t ? "" : "disabled"}>Agregar soldaduras</button></div></div>
-      <div class="calc calc-c"><h3>Radiografía</h3><p class="small muted" id="rx-info">Usa las juntas a tope de Soldaduras: ${sol.placas_chicas} placas chicas y ${sol.placas_grandes} grandes al 100%.</p>
-        <label><span>Juntas a radiografiar (%)</span><input id="rx-pct" type="text" inputmode="decimal" class="num" value="${NI(S.rxPct ?? 0)}"></label>
-        <div class="fila"><button data-a="rx-agregar" ${sol.placas_chicas + sol.placas_grandes ? "" : "disabled"}>Agregar radiografía</button></div></div>
-      <div class="calc calc-c"><h3>Prueba hidráulica</h3>
-        <label><span>Horas de prueba</span><input id="ph-h" type="text" inputmode="decimal" class="num" value="${NI(S.phH ?? 6)}"></label>
-        <p class="small muted">Tarifa: ${ph ? "USD " + num(ph.t) + "/h · " + E(F(ph.fe)) : "sin dato"}</p>
-        <div class="fila"><button data-a="ph-agregar" ${ph ? "" : "disabled"}>Agregar prueba hidráulica</button></div></div>
-      <div class="calc calc-c"><h3>Pintura</h3><p class="small muted">Tratamiento de superficie de un tercero, al final.</p>
-        <label><span>Superficie a pintar (m²)</span><input id="pin-m2" type="text" inputmode="decimal" class="num" value="${NI(S.pinM2 ?? "")}"></label>
-        <button class="chico" data-a="pin-calc">Calcular m² de los caños cargados</button>
-        <label><span>Tarifa (USD/m², sin IVA)</span><select id="pin-t">${pins.map(s => `<option value="${E(s.c)}">${num(s.t)} · ${E(s.s.slice(0, 60))} · ${E(s.pr.slice(0, 30))} · ${E(F(s.fe))}</option>`).join("")}</select></label>
-        <div class="fila"><button data-a="pin-agregar">Agregar pintura</button></div></div>
-      </div></section>
-      ${buscadorSrv()}`;
-  }
-  // Detallado o global por rubro (Rubros, rubros.js): una fila por rubro con sus números clave; al abrirla, la ficha completa
-  // (para pedir el global al tercero) y la carga del precio global
-  function panelRubros() {
-    const cot = S.doc.cot, f = Rubros.ficha(cot, S.datos, S.sold, Motor), eq = E(cot.equipo?.singular || "equipo");
+    const cot = S.doc.cot, f = Rubros.ficha(cot, S.datos, S.sold, Motor), c = calc(), eq = E(cot.equipo?.singular || "equipo");
     S.rbAbiertos ??= new Set();
     const origen = f.aproximada ? "Ficha aproximada: faltan los datos del plano de los renglones."
-      : f.origen === "pagina" ? "Calculada con los datos del plano de cada renglón (Ø, serie, extremos) y las tablas de pesos."
-      : `Ficha calculada con la tabla del plano el ${E(F(f.generada))}.`;
+      : f.origen === "pagina" ? "Fichas calculadas con los datos del plano de cada renglón (Ø, serie, extremos) y las tablas de pesos."
+      : `Fichas calculadas con la tabla del plano el ${E(F(f.generada))}.`;
+    const faltan = f.mo_piping?.avisos?.filter(a => /^Sin familia|^Ningún renglón/.test(a)) || [];
     const fila = r => {
       const glob = Rubros.modo(cot, r) === "global", g = Rubros.globalDe(cot, r), s = g?.fuentes[0], tr = r === "transporte", ab = S.rbAbiertos.has(r);
+      const a = !glob && !tr ? Rubros.antecedentes(cot, S.datos, f, r) : null;
       return `<div class="rb${ab ? " abierto" : ""}${glob ? " global" : ""}">
         <div class="rb-cab" id="rbc-${r}">${cabRubro(f, r)}</div>
         <div class="rb-cuerpo" ${ab ? "" : "hidden"}>
-          <div class="rb-ficha"><h4>Ficha para cotizar</h4>
+          <div class="rb-ficha"><h4>Ficha</h4>
             ${tr ? `<div class="campos">${campo("Largo (m)", "cot.transporte.largo_m", "number")}${campo("Ancho (m)", "cot.transporte.ancho_m", "number")}${campo("Alto (m)", "cot.transporte.alto_m", "number")}${campo("Destino", "cot.transporte.destino")}</div>` : ""}
+            ${r === "ph" ? `<div class="campos">${campo("Horas de prueba por " + eq, "cot.parametros.ph_horas", "number", 'placeholder="6"')}</div>` : ""}
             <div id="rd-${r}">${fichaRubro(f, r)}</div>
             <div class="fila"><button class="chico" data-a="ficha-copiar" data-r="${r}">Copiar ficha</button><button class="chico" data-a="ficha-bajar" data-r="${r}" ${S.dl ? "" : "disabled"}>Descargar ficha (.txt)</button></div></div>
-          <div class="rb-carga"><h4>${glob ? "Precio global del tercero" : tr ? "Sin precio de transporte" : "Cálculo detallado"}</h4>
+          <div class="rb-carga"><h4>${glob ? "Costo manual" : tr ? "Sin costo de transporte" : "Costo por antecedentes"}</h4>
             ${glob ? `<div class="campos">
               ${tr ? `<label><span>USD por viaje (sin IVA)</span><input id="gv-${r}" type="text" inputmode="decimal" class="num" data-glob="${r}" data-c="viaje" value="${NI(g.viaje_usd ?? "")}"></label>`
                    : `<label><span>USD por ${eq} (sin IVA)</span><input id="gp-${r}" type="text" inputmode="decimal" class="num" data-glob="${r}" data-c="precio" value="${NI(s.precio)}"></label>`}
-              <label><span>Fecha de la cotización</span><input id="gf-${r}" data-glob="${r}" data-c="fecha" type="text" inputmode="numeric" placeholder="DD-MM-AAAA" value="${E(F(s.fecha))}"></label>
-              <label class="ancho"><span>Proveedor</span><input id="gr-${r}" data-glob="${r}" data-c="proveedor" value="${E(s.proveedor)}"></label>
+              <label><span>Fecha</span><input id="gf-${r}" data-glob="${r}" data-c="fecha" type="text" inputmode="numeric" placeholder="DD-MM-AAAA" value="${E(F(s.fecha))}"></label>
+              <label class="ancho"><span>Proveedor o criterio</span><input id="gr-${r}" data-glob="${r}" data-c="proveedor" value="${E(s.proveedor)}"></label>
               <label class="ancho"><span>Documento (cotización, mail, archivo)</span><input id="go-${r}" data-glob="${r}" data-c="origen" value="${E(s.origen)}"></label></div>
               <p class="small" id="rg-${r}">${globalRubro(f, r)}</p>`
-            : `<p class="small muted">${tr ? "Se cotiza EXW Quilmes Oeste. Pasalo a global para sumar el flete por " + eq + " (USD por viaje ÷ equipos por camión)."
-                : "Suma los renglones de este rubro en la tabla de arriba. Para cotizarlo con un precio del tercero, pasalo a global: los renglones quedan guardados y vuelven si pasás de nuevo a detallado."}</p>`}
+            : tr ? `<p class="small muted">Se cotiza EXW Quilmes Oeste. Pasalo a manual para sumar el flete por ${eq} (USD por viaje ÷ equipos por camión).</p>`
+            : `${a.opciones.length ? `<label><span>Tarifa del historial</span><select id="rt-${r}" data-rb-tarifa="${r}">${a.opciones.map(o => `<option value="${E(o.id)}" ${o.id === a.elegida?.id ? "selected" : ""}>USD ${num(o.valor)} · ${E(o.etiqueta.slice(0, 70))} · ${E(F(o.fecha))}</option>`).join("")}</select></label>` : ""}
+              <p class="small" id="ra-${r}">${E(a.texto)}</p>
+              ${a.renglones.length ? `<div class="fila"><button class="chico prim" data-a="rubro-aplicar" data-r="${r}">Aplicar al costo</button><span class="small muted">reemplaza los renglones de este rubro</span></div>` : ""}
+              ${renglonesRubro(r)}`}
           </div></div></div>`;
     };
-    const faltan = f.mo_piping?.avisos?.filter(a => /^Sin familia|^Ningún renglón/.test(a)) || [];
-    return `<section><div class="sec-head"><h2>Cotizar por rubro</h2><div class="fila"><span class="eyebrow">detallado o global · por ${eq}</span>
-        <button class="chico" data-a="recalcular" title="Vuelve a calcular soldaduras, kg, m² y placas; completa con el catálogo los datos que falten">Recalcular</button></div></div>
-      <p class="small muted">${origen} Abrí un rubro para ver la ficha completa y cargar el precio global.</p>
-      ${faltan.length ? `<div class="aviso"><ul>${faltan.map(a => `<li>${E(a)}</li>`).join("")}</ul></div>` : ""}
-      <div class="rubros">${Object.keys(Rubros.RUBROS).map(fila).join("")}</div></section>`;
+    const otros = cot.items.filter(i => i.grupo !== "material" && !i.global && !Rubros.rubroDe(i)), abO = S.rbAbiertos.has("otros");
+    const subO = otros.reduce((t, i) => t + (c.filas.find(x => x.id === i.id)?.ajustado || 0), 0);
+    const filaOtros = `<div class="rb${abO ? " abierto" : ""}"><div class="rb-cab">
+        <button class="rb-abrir" data-a="rubro-abrir" data-r="otros" aria-expanded="${abO}"><span class="flecha" aria-hidden="true">${abO ? "▾" : "▸"}</span><b>Otros servicios</b></button>
+        <div class="rb-datos"><span class="dato">${otros.length} renglón(es): caución, repuestos y otros</span></div>
+        <div class="rb-monto"><span class="s">Costo</span><span class="v">${num(subO)}</span></div><span></span></div>
+        <div class="rb-cuerpo rb-uno" ${abO ? "" : "hidden"}>${renglonesRubro(null)}<div class="fila"><button class="chico" data-a="manual" data-g="servicio">Cargar a mano</button></div></div></div>`;
+    return `<section><div class="sec-head"><h2>Mano de obra y servicios</h2><div class="fila"><span class="eyebrow">por ${eq} · USD ${num(c.sub.mo + c.sub.servicio)} con ajuste</span>
+        <button class="chico" data-a="recalcular" title="Vuelve a calcular las fichas; completa con el catálogo los datos que falten">Recalcular</button></div></div>
+      <p class="small muted">${origen} Cada rubro se cotiza por antecedentes (tarifa del historial × cantidad de la ficha) o con un costo manual.</p>
+      ${faltan.length ? `<div class="aviso"><ul>${faltan.map(x => `<li>${E(x)}</li>`).join("")}</ul></div>` : ""}
+      <div class="rubros">${Object.keys(Rubros.RUBROS).map(fila).join("")}${filaOtros}</div></section>
+      <details class="panel"><summary><b>Agregar desde el catálogo de MO y servicios</b></summary>${buscadorSrv()}</details>`;
   }
-  // Cabecera de la fila de un rubro: nombre, números clave, montos y modo (se repinta sola al escribir)
+  // Renglones de un rubro (o de "Otros" con r = null), con cantidad y precio editables
+  function renglonesRubro(r) {
+    const c = calc(), its = S.doc.cot.items.filter(i => i.grupo !== "material" && !i.global && (r ? Rubros.rubroDe(i) === r : !Rubros.rubroDe(i)));
+    if (!its.length) return `<p class="small muted">${r ? "Sin renglones: elegí la tarifa y apretá Aplicar al costo." : "Sin renglones."}</p>`;
+    return `<div class="tbl"><table class="renglones"><thead><tr><th>Renglón</th><th class="n">Cant.</th><th>Un.</th><th class="n">USD unit.</th><th class="n">USD ajustado</th><th></th></tr></thead><tbody>
+      ${its.map(it => { const s = it.fuentes[0]; return `<tr><td><div class="d">${E(it.descripcion)}</div><div class="sp" title="${E(it.especificacion || "")}">${E((it.especificacion || "").length > 110 ? it.especificacion.slice(0, 110) + "…" : it.especificacion || "")}${s.proveedor ? " · " + E(s.proveedor.slice(0, 60)) : ""} · ${E(F(s.fecha))}${s.tipo === "est" ? ' · <span class="warn">estimado</span>' : ""}</div></td>
+        <td class="ed"><input id="q-${E(it.id)}" type="text" inputmode="decimal" class="num" data-it="${E(it.id)}" data-c="cantidad" value="${NI(it.cantidad)}"></td><td>${E(it.unidad)}</td>
+        <td class="ed"><input id="u-${E(it.id)}" type="text" inputmode="decimal" class="num" data-it="${E(it.id)}" data-c="precio" value="${NI(s.precio)}"></td>
+        <td class="n" data-sub="${E(it.id)}">${num(c.filas.find(x => x.id === it.id)?.ajustado)}</td>
+        <td><div class="fila fin"><button class="chico" data-a="editar" data-id="${E(it.id)}">Editar</button><button class="chico peligro" data-a="quitar" data-id="${E(it.id)}" aria-label="Quitar">×</button></div></td></tr>`; }).join("")}</tbody></table></div>`;
+  }
+  // Cabecera de la fila de un rubro: nombre, números clave, costo y modo (se repinta sola al escribir)
   function cabRubro(f, r) {
-    const cot = S.doc.cot, [nombre] = Rubros.RUBROS[r], ref = f.referencias[r], glob = ref.modo === "global", tr = r === "transporte", x = f[r];
+    const cot = S.doc.cot, [nombre] = Rubros.RUBROS[r], ref = f.referencias[r], glob = ref.modo === "global", tr = r === "transporte", x = f[r] || {};
     const n0 = v => v == null ? "—" : num(v, 0), d = (v, u) => v == null ? "" : `<span class="dato"><b>${n0(v)}</b> ${u}</span>`;
     const datos = {
       mo_piping: d(x.juntas_bw, "juntas BW") + d(x.juntas_sw_olet, "SW y olets") + d(x.pulg_eq, "pulg") + d(x.kg_piping, "kg"),
       mo_estructura: d(x.kg, "kg") + d(x.m2, "m²"),
       pintura: d(x.m2_total, "m²"),
       end: d(x.juntas_bw, "juntas a tope") + (x.placas_chicas == null ? "" : d((x.placas_chicas || 0) + (x.placas_grandes || 0), "placas")) + d(x.rx_pct, "% RX"),
+      procedimientos: d(x.cantidad, "procedimientos"),
+      ph: d(x.litros, "litros") + d(+(cot.parametros.ph_horas || 6), "h"),
+      horas: d(cot.items.filter(i => Rubros.rubroDe(i) === "horas" && !i.global).reduce((t, i) => t + (i.unidad === "h" ? i.cantidad : 0), 0) || null, "h"),
       transporte: x.largo_m && x.ancho_m && x.alto_m ? `<span class="dato"><b>${[x.largo_m, x.ancho_m, x.alto_m].map(v => num(v, Number.isInteger(v) ? 0 : 2)).join(" × ")}</b> m</span>` + d(x.por_camion, "por camión") + d(x.viajes, "viajes") : "",
     }[r] || "";
-    const g = Rubros.globalDe(cot, r), p = g?.fuentes[0].precio || 0, dif = glob && p && ref.detallado_usd ? p / ref.detallado_usd - 1 : 0;
-    const estado = !glob ? "" : !p ? `<span class="pill bad">sin precio</span>` : Math.abs(dif) > 0.15 && !tr ? `<span class="pill warn">${dif > 0 ? "+" : ""}${num(dif * 100, 0)}%</span>` : `<span class="pill ok">cargado</span>`;
+    const g = Rubros.globalDe(cot, r), p = g?.fuentes[0].precio || 0, costo = glob ? p : ref.detallado_usd, dif = glob && p && ref.detallado_usd ? p / ref.detallado_usd - 1 : 0;
+    const estado = glob ? (!p ? `<span class="pill bad">sin precio</span>` : Math.abs(dif) > 0.15 && !tr ? `<span class="pill warn" title="contra antecedentes">${dif > 0 ? "+" : ""}${num(dif * 100, 0)}%</span>` : `<span class="pill ok">manual</span>`)
+      : !tr && !ref.detallado_usd ? `<span class="pill warn">sin costo</span>` : "";
     const ab = S.rbAbiertos.has(r);
     return `<button class="rb-abrir" data-a="rubro-abrir" data-r="${r}" aria-expanded="${ab}"><span class="flecha" aria-hidden="true">${ab ? "▾" : "▸"}</span><b>${E(nombre)}</b></button>
-      <div class="rb-datos">${datos || `<span class="muted small">${(x.avisos || [])[0] ? E(x.avisos[0]) : "sin datos"}</span>`}${(x.avisos || []).length && datos ? `<span class="pill warn" title="${E(x.avisos.join(" · "))}">${x.avisos.length} aviso${x.avisos.length > 1 ? "s" : ""}</span>` : ""}</div>
-      <div class="rb-monto"><span class="s">Detallado</span><span class="v">${tr ? "—" : num(ref.detallado_usd)}</span></div>
-      <div class="rb-monto"><span class="s">Global</span><span class="v">${glob ? num(p) : "—"}</span>${estado}</div>
-      <div class="segm" role="group" aria-label="Modo de ${E(nombre)}"><button data-a="rubro-modo" data-r="${r}" data-v="detallado" aria-pressed="${!glob}">${tr ? "EXW" : "Detallado"}</button><button data-a="rubro-modo" data-r="${r}" data-v="global" aria-pressed="${glob}">Global</button></div>`;
+      <div class="rb-datos">${datos || `<span class="muted small">${(x.avisos || [])[0] ? E(x.avisos[0]) : "—"}</span>`}${(x.avisos || []).length && datos ? `<span class="pill warn" title="${E(x.avisos.join(" · "))}">${x.avisos.length} aviso${x.avisos.length > 1 ? "s" : ""}</span>` : ""}</div>
+      <div class="rb-monto"><span class="s">Costo / ${E(cot.equipo?.singular || "equipo")}</span><span class="v">${tr && !glob ? "EXW" : num(costo)}</span>${estado}</div>
+      <div class="segm" role="group" aria-label="Costo de ${E(nombre)}"><button data-a="rubro-modo" data-r="${r}" data-v="detallado" aria-pressed="${!glob}">${tr ? "EXW" : "Antecedentes"}</button><button data-a="rubro-modo" data-r="${r}" data-v="global" aria-pressed="${glob}">Manual</button></div>`;
   }
   const uniRubro = (f, r, usd) => Rubros.unitarios(f, r, usd).map(([u, x]) => `USD ${num(x)}/${E(u)}`).join(" · ");
   function fichaRubro(f, r) {
     const ref = f.referencias[r], glob = ref.modo === "global", eq = E(S.doc.cot.equipo?.singular || "equipo");
     const v = x => x == null || x === "" ? '<span class="muted">—</span>' : typeof x === "number" ? num(x, Number.isInteger(x) ? 0 : 2) : E(x);
     return `<table class="ficha"><tbody>${Rubros.datosDe(f, r).map(([e, x, u]) => `<tr><td>${E(e)}</td><td${typeof x === "number" ? ' class="n"' : ""}>${v(x)}${u && x != null ? " " + E(u) : ""}</td></tr>`).join("")}</tbody></table>
-      ${(f[r].avisos || []).map(a => `<div class="small warn">⚠ ${E(a)}</div>`).join("")}
-      ${r === "transporte" ? "" : `<p class="small">Cálculo detallado: <b>USD ${num(ref.detallado_usd)}</b> por ${eq} (${ref.renglones_detalle} renglón/es${glob ? ", guardados" : ""})${ref.detallado_usd ? " · " + uniRubro(f, r, ref.detallado_usd) : ""}</p>`}`;
+      ${((f[r] || {}).avisos || []).map(a => `<div class="small warn">⚠ ${E(a)}</div>`).join("")}
+      ${glob && ref.detallado_usd ? `<p class="small muted">Por antecedentes daba USD ${num(ref.detallado_usd)} por ${eq} (${ref.renglones_detalle} renglón/es guardados).</p>` : ""}`;
   }
   function globalRubro(f, r) {
     const ref = f.referencias[r], g = Rubros.globalDe(S.doc.cot, r); if (!g) return "";
     const p = g.fuentes[0].precio, dif = p && ref.detallado_usd ? p / ref.detallado_usd - 1 : 0, eq = E(S.doc.cot.equipo?.singular || "equipo");
     return (p ? `<b>USD ${num(p)}</b> por ${eq} · ${uniRubro(f, r, p)}` : '<span class="err">SIN PRECIO: pedí la cotización con la ficha.</span>')
       + (p && (/^A cotizar/.test(g.fuentes[0].proveedor) || /^ficha_rubros/.test(g.fuentes[0].origen)) ? '<br><span class="warn">⚠ Cargá el proveedor y el documento de la cotización.</span>' : "")
-      + (r !== "transporte" && Math.abs(dif) > 0.15 ? `<br><span class="warn">⚠ El global se aparta ${num(dif * 100, 0)}% del cálculo detallado: revisar alcance.</span>` : "");
+      + (r !== "transporte" && Math.abs(dif) > 0.15 ? `<br><span class="warn">⚠ El costo manual se aparta ${num(dif * 100, 0)}% del de antecedentes: revisar alcance.</span>` : "");
   }
   // Transporte global: USD por viaje ÷ equipos por camión (se recalcula si cambian las medidas)
   function precioTransporte() {
@@ -530,6 +523,7 @@
     const f = Rubros.ficha(S.doc.cot, S.datos, S.sold, Motor);
     for (const r of Object.keys(Rubros.RUBROS)) {
       for (const [id, fn] of [["rd-", fichaRubro], ["rg-", globalRubro], ["rbc-", cabRubro]]) { const el = document.getElementById(id + r); if (el) el.innerHTML = fn(f, r); }
+      const ra = document.getElementById("ra-" + r); if (ra) ra.textContent = Rubros.antecedentes(S.doc.cot, S.datos, f, r).texto;
     }
   }
   function buscadorSrv() {
@@ -746,6 +740,7 @@
       ponerRuta(S.doc, el.dataset.b, v);
       if (el.dataset.b === "cot.estado") S.doc.oferta.estado = v;
       if (el.dataset.b.startsWith("cot.transporte")) { precioTransporte(); pintarRubros(); }
+      if (el.dataset.b === "cot.parametros.ph_horas") pintarRubros();
       refrescar(); guardarPronto();
       if (el.tagName === "SELECT" || el.dataset.b.startsWith("cot.plazo")) { if (el.tagName === "SELECT" || ev.type === "change") render(); }
     } else if (el.dataset.bl && S.doc) {
@@ -758,6 +753,7 @@
       }
       else it[el.dataset.c] = el.value;
       refrescar(); guardarPronto();
+      if (S.tab === "servicios") pintarRubros();
     } else if (el.dataset.fm !== undefined) {
       const k = el.dataset.fm; S.fm[k] = el.value;
       if (k === "fam") S.fm = { fam: el.value, texto: S.fm.texto };
@@ -800,6 +796,11 @@
   });
   app.addEventListener("change", async ev => {
     const el = ev.target;
+    if (el.dataset.rbTarifa && S.doc) {
+      if (bloqueada()) { toast(`La cotización está ${S.doc.cot.estado}: para cambiarla, volvé a borrador.`); render(); return; }
+      const r = el.dataset.rbTarifa, rb = (S.doc.cot.rubros ??= {})[r] ??= { modo: "detallado" };
+      rb.tarifa = el.value; guardarPronto(); render(); return;
+    }
     if (el.dataset.ta !== undefined || (el.dataset.b || "").startsWith("cot.plazo") || el.dataset.b === "cot.firmante_id") { guardarPronto(); render(); }
     if (el.id === "o-plano" && el.files[0]) {
       try {
@@ -835,7 +836,7 @@
 
   // Acciones que cambian la cotización: no se permiten si está aprobada o enviada (hay que volver a borrador)
   const CAMBIAN = new Set(["quitar", "editar", "manual", "item-guardar", "agregar-mat", "agregar-srv", "agregar-sel", "sold-agregar", "rx-agregar", "pin-agregar",
-    "ph-agregar", "rubro-modo", "recalcular", "tarea-nueva", "tarea-quitar", "restaurar", "deshacer", "rehacer"]);
+    "ph-agregar", "rubro-modo", "rubro-aplicar", "recalcular", "tarea-nueva", "tarea-quitar", "restaurar", "deshacer", "rehacer"]);
   const bloqueada = () => S.doc && ["aprobado", "enviado"].includes(S.doc.cot.estado);
   async function accion(a, b) {
     const cot = S.doc?.cot;
@@ -924,12 +925,16 @@
           + (n ? ` · completé ${n} renglón(es) con el catálogo` : "") + (sin ? ` · ${sin} sin peso en tabla` : "") + (falta ? " · hay renglones sin datos (ver aviso)" : ""));
         break;
       }
+      case "rubro-aplicar": {
+        const r = b.dataset.r, n = Rubros.aplicarAntecedentes(cot, S.datos, Rubros.ficha(cot, S.datos, S.sold, Motor), r);
+        guardarPronto(); render(); toast(n ? `${Rubros.RUBROS[r][0]}: costo por antecedentes aplicado (${n} renglón/es)` : "No hay nada para aplicar"); break;
+      }
       case "rubro-abrir": { const r = b.dataset.r; S.rbAbiertos ??= new Set(); S.rbAbiertos.has(r) ? S.rbAbiertos.delete(r) : S.rbAbiertos.add(r); render(); break; }
       case "rubro-modo": {
         const r = b.dataset.r;
         if (b.dataset.v === "global") { (S.rbAbiertos ??= new Set()).add(r); }
-        if (b.dataset.v === "global") { if (!Rubros.pasarAGlobal(cot, r, hoy())) return; toast(`${Rubros.RUBROS[r][0]}: global. Cargá el precio del tercero.`); }
-        else { Rubros.volverADetallado(cot, r); toast(`${Rubros.RUBROS[r][0]}: detallado`); }
+        if (b.dataset.v === "global") { if (!Rubros.pasarAGlobal(cot, r, hoy())) return; toast(`${Rubros.RUBROS[r][0]}: costo manual. Cargá el precio.`); }
+        else { Rubros.volverADetallado(cot, r); toast(`${Rubros.RUBROS[r][0]}: costo por antecedentes`); }
         guardarPronto(); render(); break;
       }
       case "ficha-copiar": case "ficha-bajar": {

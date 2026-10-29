@@ -154,7 +154,7 @@ def main():
     dol = dolar()
     tar = [{"rubro": r["rubro"], "concepto": r["concepto"], "unidad": r["unidad"], "valor": r["valor_usd"], "tipo": r["tipo"], "fecha": r["fecha"],
             "fuente": r["fuente"], "nota": r["nota"]} for r in leer(C / "costos" / "tarifas.csv")
-           if r["vigente"] == "si" and r["rubro"] in ("soldadura", "end", "pintura", "hora_hombre")]
+           if r["vigente"] == "si" and r["rubro"] in ("soldadura", "end", "pintura", "hora_hombre", "estructura", "armado")]
     fs = [{"dn": f(r["dn_pulg"]), "od": f(r["diam_ext_mm"]), "sch": r["schedule"], "cl": r["clase"], "e": f(r["espesor_mm"]), "fe": f(r["factor_espesor"]),
            "pch": f(r["placas_rx_chicas"]), "pgr": f(r["placas_rx_grandes"])} for r in leer(C / "tecnico" / "factores_soldadura.csv")]
     canos = [{"dn": f(r["dn_pulg"]), "od": f(r["diam_ext_mm"]), "sch": r["schedule"], "cl": r["clase"], "kg": f(r["kg_m_carbono"]), "m2": f(r["m2_m_exterior"]), "l": f(r["litros_m_interior"])}

@@ -73,17 +73,54 @@
    "Faltan las medidas del equipo (largo × ancho × alto): cargarlas del plano de conjunto"
   ]
  },
+ "procedimientos": {
+  "lista": [
+   {
+    "codigo": "WPS-BW",
+    "nombre": "WPS/PQR de soldadura a tope, acero al carbono",
+    "alcance": "hasta 15,09 mm de espesor",
+    "cantidad": 1,
+    "tipo": "soldadura"
+   },
+   {
+    "codigo": "WPQ",
+    "nombre": "Calificación de soldadores (WPQ)",
+    "alcance": "una por WPS y soldador asignado",
+    "cantidad": 1,
+    "tipo": "soldadura"
+   },
+   {
+    "codigo": "PH",
+    "nombre": "Procedimiento de prueba hidráulica",
+    "alcance": "",
+    "cantidad": 1,
+    "tipo": "calidad"
+   },
+   {
+    "codigo": "PIN",
+    "nombre": "Procedimiento de granallado y pintura",
+    "alcance": "esquema del pliego",
+    "cantidad": 1,
+    "tipo": "calidad"
+   }
+  ],
+  "cantidad": 4
+ },
+ "ph": {
+  "litros": 47.9
+ },
+ "horas": {},
  "referencias": {
-  "mo_piping": {
-   "modo": "detallado",
-   "detallado_usd": 29503.13,
-   "renglones_detalle": 1,
-   "global_usd": null
-  },
   "mo_estructura": {
    "modo": "detallado",
    "detallado_usd": 0,
    "renglones_detalle": 0,
+   "global_usd": null
+  },
+  "mo_piping": {
+   "modo": "detallado",
+   "detallado_usd": 29503.13,
+   "renglones_detalle": 1,
    "global_usd": null
   },
   "pintura": {
@@ -96,6 +133,24 @@
    "modo": "detallado",
    "detallado_usd": 1467.2,
    "renglones_detalle": 1,
+   "global_usd": null
+  },
+  "procedimientos": {
+   "modo": "detallado",
+   "detallado_usd": 0,
+   "renglones_detalle": 0,
+   "global_usd": null
+  },
+  "ph": {
+   "modo": "detallado",
+   "detallado_usd": 224.3,
+   "renglones_detalle": 1,
+   "global_usd": null
+  },
+  "horas": {
+   "modo": "detallado",
+   "detallado_usd": 4868.72,
+   "renglones_detalle": 2,
    "global_usd": null
   },
   "transporte": {

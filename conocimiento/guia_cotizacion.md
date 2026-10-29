@@ -198,3 +198,8 @@ Alguien que no armó el cómputo (otro agente o una persona) compara `pedido/lis
 - La ficha (`ficha_rubros.md`, la arma `armar_cotizacion.py`) trae lo necesario para pedir y controlar el global: juntas a tope y SW, pulgadas equivalentes, kg de piping y de estructura, m², placas de RX, juntas con LP, procedimientos, y para el transporte largo × ancho × alto, kg, equipos por semirremolque y viajes (avisa carga especial: más de 2,60 m de ancho o 4,10 m de alto cargado).
 - Cambiar de modo: en la página (MO y servicios → "Cotizar por rubro") o `python herramientas/ficha_rubros.py cotizaciones/<carpeta> --global <rubro>` / `--detallado <rubro>`. El global arranca en 0 (P4 ter) hasta cargar la cotización con proveedor, fecha y documento; se compara con el cálculo detallado y avisa si se aparta más del 15%.
 - Horas de ITT (ingeniería, calidad, planta y PH), caución y repuestos no entran en ningún rubro: quedan como renglones propios.
+
+## Mano de obra y servicios por rubro (29-10-2026, pedido de Matías)
+- La pestaña MO y servicios es una lista de rubros de fabricación: skid (estructura), piping, granallado y pintura, radiografía y END, procedimientos, prueba hidráulica, horas de ITT y transporte; lo demás va en "Otros servicios".
+- Cada rubro tiene su ficha (kg, juntas, pulgadas, m², placas, procedimientos, litros) y su costo **por antecedentes** (tarifa del historial elegida en una lista × cantidad de la ficha; "Aplicar al costo" reemplaza los renglones del rubro) o **manual** (precio del tercero con fuente).
+- Procedimientos: la ficha arma la lista (WPS/PQR por material y tipo de junta, WPQ, RX, LP, PH, pintura). Solo los de END tienen costo de antecedente (USD 250 por trabajo, repartido entre los equipos); los demás se piden si hacen falta nuevos.

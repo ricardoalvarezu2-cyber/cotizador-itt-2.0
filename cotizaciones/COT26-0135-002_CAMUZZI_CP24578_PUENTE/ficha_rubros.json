@@ -76,17 +76,75 @@
    "Faltan las medidas del equipo (largo × ancho × alto): cargarlas del plano de conjunto"
   ]
  },
+ "procedimientos": {
+  "lista": [
+   {
+    "codigo": "WPS-BW",
+    "nombre": "WPS/PQR de soldadura a tope, acero al carbono",
+    "alcance": "hasta 7,11 mm de espesor",
+    "cantidad": 1,
+    "tipo": "soldadura"
+   },
+   {
+    "codigo": "WPS-SW",
+    "nombre": "WPS/PQR de soldadura socket y filete, acero al carbono",
+    "alcance": "",
+    "cantidad": 1,
+    "tipo": "soldadura"
+   },
+   {
+    "codigo": "WPQ",
+    "nombre": "Calificación de soldadores (WPQ)",
+    "alcance": "una por WPS y soldador asignado",
+    "cantidad": 2,
+    "tipo": "soldadura"
+   },
+   {
+    "codigo": "END-RX",
+    "nombre": "Procedimiento de radiografía (nivel 3, ISO 9712)",
+    "alcance": "",
+    "cantidad": 1,
+    "tipo": "end"
+   },
+   {
+    "codigo": "END-LP",
+    "nombre": "Procedimiento de líquidos penetrantes (nivel 3, ISO 9712)",
+    "alcance": "",
+    "cantidad": 1,
+    "tipo": "end"
+   },
+   {
+    "codigo": "PH",
+    "nombre": "Procedimiento de prueba hidráulica",
+    "alcance": "",
+    "cantidad": 1,
+    "tipo": "calidad"
+   },
+   {
+    "codigo": "PIN",
+    "nombre": "Procedimiento de granallado y pintura",
+    "alcance": "esquema del pliego",
+    "cantidad": 1,
+    "tipo": "calidad"
+   }
+  ],
+  "cantidad": 8
+ },
+ "ph": {
+  "litros": 0.0
+ },
+ "horas": {},
  "referencias": {
-  "mo_piping": {
-   "modo": "detallado",
-   "detallado_usd": 1755.38,
-   "renglones_detalle": 1,
-   "global_usd": null
-  },
   "mo_estructura": {
    "modo": "detallado",
    "detallado_usd": 0,
    "renglones_detalle": 0,
+   "global_usd": null
+  },
+  "mo_piping": {
+   "modo": "detallado",
+   "detallado_usd": 1755.38,
+   "renglones_detalle": 1,
    "global_usd": null
   },
   "pintura": {
@@ -99,6 +157,24 @@
    "modo": "detallado",
    "detallado_usd": 1616.9,
    "renglones_detalle": 1,
+   "global_usd": null
+  },
+  "procedimientos": {
+   "modo": "detallado",
+   "detallado_usd": 0,
+   "renglones_detalle": 0,
+   "global_usd": null
+  },
+  "ph": {
+   "modo": "detallado",
+   "detallado_usd": 84.11,
+   "renglones_detalle": 1,
+   "global_usd": null
+  },
+  "horas": {
+   "modo": "detallado",
+   "detallado_usd": 1942.6,
+   "renglones_detalle": 3,
    "global_usd": null
   },
   "transporte": {

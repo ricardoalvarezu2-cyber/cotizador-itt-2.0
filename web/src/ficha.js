@@ -331,7 +331,7 @@ const Ficha = (() => {
     if (p.faltan.length) avisos.push(`Sin familia ni atributos (no suman kg): ${p.faltan.join("; ")}. Recalcular los busca en el catálogo`);
     if (!filas.length) avisos.push("Ningún renglón tiene los datos del plano (Ø, serie y extremos): no se pueden contar soldaduras");
     const espTxt = esp ? esp.toLocaleString("es-AR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : "";
-    return {
+    const out = {
       generada: new Date().toISOString().slice(0, 10), origen: "pagina",
       mo_piping: { juntas_bw: sol.juntas_bw, pulg_eq: sol.pulg_eq, juntas_sw_olet: sol.juntas_sw_olet, extremos_campo: campo, kg_piping: r1(p.kgP),
         bridas: cot.items.filter(i => i.grupo === "material" && /^brida/.test(norm(i.descripcion))).reduce((a, i) => a + i.cantidad, 0), diametros: dns, sin_peso: p.sin, aproximados: p.aprox, avisos },
@@ -342,6 +342,39 @@ const Ficha = (() => {
           "Calificación de soldadores (WPQ) para esos WPS", "Procedimiento de RX y de LP (escrito, nivel 3 ISO 9712)",
           "Confirmar con el pliego: si exige procedimientos nuevos o alcanzan los vigentes de ITT"] },
     };
+    const lista = procedimientos(filas, esp, sol.juntas_bw, sol.juntas_sw_olet, rx, m2Pip + m2Est);
+    out.procedimientos = { lista, cantidad: lista.reduce((a, p) => a + p.cantidad, 0) };
+    out.ph = { litros: litros(cot, datos) };
+    out.horas = {};
+    return out;
+  }
+
+  // Procedimientos que lleva el equipo (ficha_rubros.procedimientos)
+  function procedimientos(filas, esp, bw, sw, rx, m2) {
+    const grupos = [...new Set(filas.filter(f => f.material && /BW|SW/.test(String(f.extremos || "").toUpperCase()))
+      .map(f => /304|316|inox|cf8m/.test(norm(f.material)) ? "inoxidable" : "acero al carbono"))].sort();
+    const espTxt = esp ? `hasta ${esp.toLocaleString("es-AR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} mm de espesor` : "";
+    const l = [];
+    for (const g of grupos) {
+      if (bw) l.push({ codigo: "WPS-BW", nombre: `WPS/PQR de soldadura a tope, ${g}`, alcance: espTxt, cantidad: 1, tipo: "soldadura" });
+      if (sw) l.push({ codigo: "WPS-SW", nombre: `WPS/PQR de soldadura socket y filete, ${g}`, alcance: "", cantidad: 1, tipo: "soldadura" });
+    }
+    if (l.length) l.push({ codigo: "WPQ", nombre: "Calificación de soldadores (WPQ)", alcance: "una por WPS y soldador asignado", cantidad: l.length, tipo: "soldadura" });
+    if (rx && bw) l.push({ codigo: "END-RX", nombre: "Procedimiento de radiografía (nivel 3, ISO 9712)", alcance: "", cantidad: 1, tipo: "end" });
+    if (sw) l.push({ codigo: "END-LP", nombre: "Procedimiento de líquidos penetrantes (nivel 3, ISO 9712)", alcance: "", cantidad: 1, tipo: "end" });
+    if (bw || sw) l.push({ codigo: "PH", nombre: "Procedimiento de prueba hidráulica", alcance: "", cantidad: 1, tipo: "calidad" });
+    if (m2) l.push({ codigo: "PIN", nombre: "Procedimiento de granallado y pintura", alcance: "esquema del pliego", cantidad: 1, tipo: "calidad" });
+    return l;
+  }
+  // Volumen interior de los caños, en litros por equipo (ficha_rubros.litros)
+  function litros(cot, datos) {
+    let t = 0;
+    for (const it of cot.items.filter(i => i.grupo === "material" && norm(i.unidad) === "m" && i.fam === "CAN" && i.at)) {
+      const dn = dnDe(it.at.diametro || ""), sch = it.at.schedule || "";
+      const r = dn && sch && datos.canos.find(r => Math.abs(r.dn - dn) < 1e-6 && (r.sch === sch || r.cl === String(sch).toUpperCase()));
+      if (r) t += r.l * it.cantidad;
+    }
+    return Math.round(t * 10) / 10;
   }
 
   // Completa familia y atributos de los renglones que no los tienen, con el código de catálogo de su fuente
