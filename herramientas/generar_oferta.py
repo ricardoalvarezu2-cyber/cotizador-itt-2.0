@@ -303,8 +303,14 @@ def armar(carpeta, tipo, cfg, precios):
             c.imagen(img, 15)
         c.titulo(f"MATERIALES CONSIDERADOS (POR {cot_equipo(carpeta).upper()})")
         import csv
+
+        def cant_vista(v):  # el CSV guarda 0.8 (formato de máquina); a la vista va 0,8
+            try:
+                return fmtg(float(v))
+            except (TypeError, ValueError):
+                return v
         filas = [[r["pos"], r["descripcion"] + (f" ({r['modelo_fabricante']})" if r["modelo_fabricante"] else ""),
-                  r["diametro"], r["serie_sch"], r["material"], r["extremos"], r["cantidad"]]
+                  r["diametro"], r["serie_sch"], r["material"], r["extremos"], cant_vista(r["cantidad"])]
                  for r in csv.DictReader(open(Path(carpeta) / "pedido" / "lista_materiales_plano.csv", encoding="utf-8"))]
         c.tabla(["POS", "DESCRIPCIÓN", "Ø", "SERIE / SCH", "MATERIAL", "EXT.", "CANT."], filas,
                 [1.0, 7.4, 1.6, 1.6, 3.3, 1.6, 1.1], tam=7.5, alinear=[1, 0, 1, 1, 1, 1, 1])

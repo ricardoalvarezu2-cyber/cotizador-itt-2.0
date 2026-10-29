@@ -137,7 +137,7 @@ const Busqueda = (() => {
       const fo = f.tipoOlet === "weldolet" ? 2.5 : 1.75;
       const v = (bw + sw) * dn * t.fe + ol * dn * fo;
       pulg += v; pch += bw * (t.pch || 0); pgr += bw * (t.pgr || 0);
-      detalle.push(`${bw + sw} junta(s) ${dn}" sch ${f.sch || "40"} × ${t.fe}` + (ol ? ` + ${ol} olet/cupla × ${dn}" × ${fo}` : "") + ` = ${n2(v)}`);
+      detalle.push(`${bw + sw} junta(s) ${dn}" sch ${f.sch || "40"} × ${n2(t.fe)}` + (ol ? ` + ${ol} olet/cupla × ${dn}" × ${n2(fo)}` : "") + ` = ${n2(v)}`);
     }
     return { pulg: Motor.redondear(pulg, 3), placas_chicas: pch, placas_grandes: pgr, detalle };
   }

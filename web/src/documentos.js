@@ -383,7 +383,7 @@ const Documentos = (() => {
   function filasPlano(cot) {
     return cot.items.filter(i => i.grupo === "material" && !/b$|c$/.test(String(i.pos))).map(i => {
       const pl = i.plano || {};
-      return [i.pos, i.descripcion + (pl.modelo ? ` (${pl.modelo})` : ""), pl.diametro || "", pl.serie_sch || "", pl.material || "", pl.extremos || "", String(i.cantidad)];
+      return [i.pos, i.descripcion + (pl.modelo ? ` (${pl.modelo})` : ""), pl.diametro || "", pl.serie_sch || "", pl.material || "", pl.extremos || "", numg(i.cantidad)];
     });
   }
 

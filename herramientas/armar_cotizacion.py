@@ -37,7 +37,7 @@ from pathlib import Path
 from openpyxl import Workbook, load_workbook
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from numeros import FMT_TECNICO, a_vista, fmt, fmtg, precio_csv  # noqa: E402
+from numeros import FMT_TECNICO, a_vista, celda_excel, fmt, fmtg, precio_csv  # noqa: E402
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -272,7 +272,8 @@ def escribir_planilla(cfg, carpeta, idx_rows):
     a = wb.create_sheet("Antecedentes"); head(a, ["Carpeta / oferta", "Fecha", "Qué es", "Precio c/u USD", "Qué se tomó"], [34, 12, 52, 14, 60])
     for i, an in enumerate(cfg.get("antecedentes", []), 2):
         for j, v in enumerate([an["carpeta_html"], a_vista(an["fecha"]), an["que"], an["precio"], an["tomado_html"]], 1):
-            c = a.cell(i, j, sin_html(v)); c.alignment = Alignment(wrap_text=True, vertical="top"); c.border = B
+            c = a.cell(i, j); c.alignment = Alignment(wrap_text=True, vertical="top"); c.border = B
+            celda_excel(c, sin_html(v), "precio" if j == 4 else "", documento=True)  # "13.543" del texto → número 13.543
     ruta = carpeta / f"{cfg['codigo']}_{cfg['archivo_planilla']}.xlsx"
     wb.save(ruta)
     return ruta
