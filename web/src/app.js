@@ -38,6 +38,10 @@
       e => toast("No se pudo leer la lista de cotizaciones: " + (e.message || e.code)));
     S.db.collection("firmantes").onSnapshot(sn => { S.firmantes = sn.docs.map(d => ({ id: d.id, ...d.data() })); if (S.vista !== "cot" || S.tab === "datos") render(); });
   }
+  // Tamaño de texto (por persona, en este navegador)
+  const btnTxt = $("#btn-texto"), ponerTexto = g => { document.documentElement.classList.toggle("texto-grande", g); btnTxt?.setAttribute("aria-pressed", String(g)); };
+  try { ponerTexto(localStorage.getItem("itt-texto") === "grande"); } catch (e) { /* sin almacenamiento */ }
+  btnTxt?.addEventListener("click", () => { const g = !document.documentElement.classList.contains("texto-grande"); ponerTexto(g); try { localStorage.setItem("itt-texto", g ? "grande" : "normal"); } catch (e) { /* sin almacenamiento */ } });
   const ultIdx = S.datos.indices[S.datos.indices.length - 1];
   const fechaDatos = S.datos.generado_indices || S.datos.generado;
   const viejo = (Date.now() - new Date(fechaDatos).getTime()) / 864e5 > 9;
@@ -257,7 +261,7 @@
         <div style="display:flex;flex-direction:column;gap:6px;align-items:stretch"><div class="estados" role="group" aria-label="Estado">${ESTADOS.map(e => `<button class="chico" data-a="estado" data-v="${e}" aria-pressed="${cot.estado === e}">${e}</button>`).join("")}</div>
         <div class="fila fin"><button class="chico" data-a="deshacer" title="Deshacer (Ctrl+Z)">↶ Deshacer</button><button class="chico" data-a="rehacer" title="Rehacer (Ctrl+Y)">↷ Rehacer</button>
         <span class="guardado" id="guardado">${S.pendiente ? "cambios sin guardar…" : "guardado"}</span></div></div></header>
-      ${cot.estado === "borrador" ? `<div class="aviso"><b>Borrador, sin revisar.</b><span class="small">Los números se muestran como borrador hasta pasar a "revisado". La herramienta nunca envía nada al cliente.</span></div>` : ""}
+      ${cot.estado === "borrador" ? `<div class="aviso"><span><b>Borrador sin revisar.</b> Nada se envía al cliente.</span></div>` : ""}
       <div class="totales" id="totales">${totalesHtml(c, eq)}</div>
       <div class="tabs" role="tablist">${TABS.map(([k, t], i) => `<button role="tab" aria-selected="${S.tab === k}" data-a="tab" data-v="${k}"><span class="paso">${i + 1}</span>${t}${k === "materiales" ? `<span class="cnt">${n("material")}</span>` : k === "servicios" ? `<span class="cnt">${n("mo")}</span>` : k === "resumen" && avs.length ? `<span class="cnt alerta">${avs.length} avisos</span>` : ""}</button>`).join("")}</div>
       <div id="tab">${{ datos: tabDatos, materiales: tabMateriales, servicios: tabServicios, plazo: tabPlazo, oferta: tabOferta, resumen: tabResumen }[S.tab]()}</div>`;
@@ -331,19 +335,26 @@
       return `<details class="avs ${bad ? "bad" : "warn"}"><summary title="${E(a.map(x => x.corto).join(" · "))}">${bad ? "✖" : "⚠"} ${a.length}</summary><ul>${a.map(x => `<li>${E(x.corto)}</li>`).join("")}</ul></details>`; };
     if (todos.length && !items.length) return controles + `<div class="vacio">Ningún ítem con ese filtro.</div>`;
     if (!items.length) return `<div class="vacio">${grupoMat ? "Todavía no hay materiales. Buscalos abajo en el catálogo y agregalos, o cargá uno a mano." : "Todavía no hay mano de obra ni servicios. Buscalos en el catálogo o usá las calculadoras."}</div>`;
-    const cl = s => s.coincide === "igual" ? "ok" : s.coincide === "similar" ? "warn" : "bad";
-    return controles + `<div class="tbl"><table><thead><tr><th>Pos</th><th>Ítem</th><th class="n">Cant.</th><th>Un.</th><th class="n">USD unit.</th><th>Fuente</th><th>Coincide</th><th>Avisos</th><th class="n">USD ajustado</th><th></th></tr></thead><tbody>
-      ${items.map(it => { const s = it.fuentes[0]; return `<tr>
-        <td class="ed" style="width:60px"><input id="p-${E(it.id)}" data-it="${E(it.id)}" data-c="pos" value="${E(it.pos)}" style="width:52px"></td>
-        <td><div class="d">${E(it.descripcion)}</div><div class="sp">${E(it.especificacion || "")}</div></td>
-        <td class="ed"><input id="q-${E(it.id)}" type="text" inputmode="decimal" class="num" data-it="${E(it.id)}" data-c="cantidad" value="${NI(it.cantidad)}"></td><td>${E(it.unidad)}</td>
-        <td class="ed"><input id="u-${E(it.id)}" type="text" inputmode="decimal" class="num" data-it="${E(it.id)}" data-c="precio" value="${NI(s.precio)}"></td>
-        <td class="small"><span class="pill ${s.tipo === "est" ? "bad" : s.tipo === "cot" ? "ok" : "info"}">${E(Documentos.TIPOS[s.tipo] || s.tipo)}</span><br>${E(s.proveedor)}<br><span class="muted">${E(F(s.fecha))}</span></td>
-        <td><span class="pill ${cl(s)}">${E(Documentos.COINC[s.coincide] || "—")}</span>${s.diferencia ? `<div class="sp">${E(s.diferencia.slice(0, 140))}</div>` : ""}</td>
-        <td>${celdaAvisos(it)}</td>
+    const estado = it => { const a = porItem[it.id] || [];
+      return a.some(x => x.nivel === "bad") ? `<span class="pill bad">Corregir</span>` : a.length ? `<span class="pill warn">Revisar · ${a.length}</span>` : `<span class="pill ok">Bien</span>`; };
+    S.itAbiertos ??= new Set();
+    const k2 = grupoMat ? "m" : "s";
+    return controles + `<div class="tbl"><table class="items"><thead><tr><th>Pos.</th><th>Ítem</th><th class="n">Cantidad</th><th>Unidad</th><th class="n">USD unitario</th><th class="n">USD ajustado</th><th>Estado</th><th></th></tr></thead><tbody>
+      ${items.map(it => { const s = it.fuentes[0], ab = S.itAbiertos.has(it.id), avs_ = porItem[it.id] || []; return `<tr>
+        <td class="ed" style="width:70px"><input id="p-${E(it.id)}" data-it="${E(it.id)}" data-c="pos" value="${E(it.pos)}" style="width:58px" aria-label="Posición"></td>
+        <td><button class="it-abrir" data-a="it-abrir" data-id="${E(it.id)}" aria-expanded="${ab}"><span class="flecha" aria-hidden="true">${ab ? "▾" : "▸"}</span><span>${E(it.descripcion)}</span></button></td>
+        <td class="ed"><input id="q-${E(it.id)}" type="text" inputmode="decimal" class="num" data-it="${E(it.id)}" data-c="cantidad" value="${NI(it.cantidad)}" aria-label="Cantidad"></td><td>${E(it.unidad)}</td>
+        <td class="ed"><input id="u-${E(it.id)}" type="text" inputmode="decimal" class="num" data-it="${E(it.id)}" data-c="precio" value="${NI(s.precio)}" aria-label="Precio unitario"></td>
         <td class="n" data-sub="${E(it.id)}">${num(c.filas.find(f => f.id === it.id)?.ajustado)}</td>
-        <td><div class="fila fin"><button class="chico" data-a="editar" data-id="${E(it.id)}">Editar</button><button class="chico peligro" data-a="quitar" data-id="${E(it.id)}">Quitar</button></div></td></tr>`; }).join("")}
-      <tr class="total"><td></td><td>Subtotal por ${E(S.doc.cot.equipo?.singular || "equipo")} (con ajuste por inflación${items.length < todos.length ? ", todos los ítems" : ""})</td><td colspan="6"></td><td class="n" data-subtot="${grupoMat ? "material" : "srv"}"></td><td></td></tr></tbody></table></div>`;
+        <td>${estado(it)}</td>
+        <td><button class="chico" data-a="editar" data-id="${E(it.id)}">Editar</button></td></tr>
+        <tr class="it-det" ${ab ? "" : "hidden"}><td colspan="8"><div class="it-det-grid">
+          ${it.especificacion ? `<div><b>Especificación</b>${E(it.especificacion)}</div>` : ""}
+          <div><b>Precio</b>${E(Documentos.TIPOS[s.tipo] || s.tipo)} · ${E(s.proveedor)} · ${E(F(s.fecha))}</div>
+          <div><b>Coincide con el plano</b>${E(Documentos.COINC[s.coincide] || "—")}${s.diferencia ? " · " + E(s.diferencia) : ""}</div>
+          ${avs_.length ? `<div><b>Avisos</b>${avs_.map(x => E(x.corto)).join("<br>")}</div>` : ""}
+        </div></td></tr>`; }).join("")}
+      <tr class="total"><td></td><td>Subtotal por ${E(S.doc.cot.equipo?.singular || "equipo")}${items.length < todos.length ? " (todos los ítems)" : ""}</td><td colspan="3"></td><td class="n" data-subtot="${grupoMat ? "material" : "srv"}"></td><td colspan="2"></td></tr></tbody></table></div>`;
   }
 
   // ------------------------------------------------------------------ selección múltiple en los buscadores
@@ -397,7 +408,7 @@
       const ch = S.selM.has(m.c);
       return `<div class="resultado ${ch ? "sel" : ""}"><label class="tilde">${S.doc ? `<input type="checkbox" data-selm="${i}" ${ch ? "checked" : ""} ${m.p ? "" : "disabled"} aria-label="Seleccionar">` : ""}${est}</label><div><div class="d">${E(m.d)}</div><div class="small muted">${E(m.c)} · ${E(S.datos.familias[m.f]?.n || "")}${[m.a.marca, m.a.modelo].filter(Boolean).length ? " · " + E([m.a.marca, m.a.modelo].filter(Boolean).join(" ")) : ""}${m.nuevo ? " · nuevo en la página" : ""}</div></div>
         <div class="precio">${m.p ? "USD " + num(m.p) + " / " + E(m.u || "un") : '<span class="err">sin precio confiable</span>'}<div class="small muted">${E(F(m.fe))} · ${E(m.tp)}</div></div>
-        <div class="det">${x.difs.length ? "Difiere en: " + E(x.difs.join("; ")) + " · " : ""}${m.al ? "<b>Alerta:</b> " + E(m.al) + " · " : ""}${E(m.pr)} · Origen: ${E(m.o)}${m.n > 1 ? ` · ${m.n} precios en el historial (${num(m.mn)} a ${num(m.mx)})` : ""}</div>
+        <details class="det"><summary>${x.difs.length || m.al ? "Diferencias, alertas y origen" : "Origen del precio"}</summary>${x.difs.length ? "Difiere en: " + E(x.difs.join("; ")) + " · " : ""}${m.al ? "<b>Alerta:</b> " + E(m.al) + " · " : ""}${E(m.pr)} · Origen: ${E(m.o)}${m.n > 1 ? ` · ${m.n} precios en el historial (${num(m.mn)} a ${num(m.mx)})` : ""}</details>
         ${S.doc ? `<div class="acc"><input id="qm-${i}" type="text" inputmode="decimal" class="num" value="${NI(ch ? S.selM.get(m.c).q : 1)}" aria-label="Cantidad"><button class="chico prim" data-a="agregar-mat" data-i="${i}">Agregar</button></div>` : ""}</div>`;
     }).join("") : `<div class="vacio">No hay materiales con esos filtros. Probá quitar alguno o cargalo a mano.</div>`;
     S.ultMat = r.res;
@@ -462,7 +473,7 @@
         <div class="rb-cuerpo rb-uno" ${abO ? "" : "hidden"}>${renglonesRubro(null)}<div class="fila"><button class="chico" data-a="manual" data-g="servicio">Cargar a mano</button></div></div></div>`;
     return `<section><div class="sec-head"><h2>Mano de obra y servicios</h2><div class="fila"><span class="eyebrow">por ${eq} · USD ${num(c.sub.mo + c.sub.servicio)} con ajuste</span>
         <button class="chico" data-a="recalcular" title="Vuelve a calcular las fichas; completa con el catálogo los datos que falten">Recalcular</button></div></div>
-      <p class="small muted">${origen} Cada rubro se cotiza por antecedentes (tarifa del historial × cantidad de la ficha) o con un costo manual.</p>
+      <p class="small muted">Cada rubro: por antecedentes (tarifa del historial) o manual.</p>
       ${faltan.length ? `<div class="aviso"><ul>${faltan.map(x => `<li>${E(x)}</li>`).join("")}</ul></div>` : ""}
       <div class="rubros">${Object.keys(Rubros.RUBROS).map(fila).join("")}${filaOtros}</div></section>
       <details class="panel"><summary><b>Agregar desde el catálogo de MO y servicios</b></summary>${buscadorSrv()}</details>`;
@@ -545,7 +556,7 @@
     box.innerHTML = r.res.length ? r.res.map((s, i) => `<div class="resultado ${S.selS.has(s.c) ? "sel" : ""}"><label class="tilde">${S.doc ? `<input type="checkbox" data-sels="${i}" ${S.selS.has(s.c) ? "checked" : ""} ${s.p ? "" : "disabled"} aria-label="Seleccionar">` : ""}<span class="pill ${s.t ? "ok" : "info"}">${s.t ? "tarifa" : "global"}</span></label>
       <div><div class="d">${E(s.s)}</div><div class="small muted">${E(s.h)} · ${E(s.c)}${s.eq ? " · " + E(s.eq) : ""}</div></div>
       <div class="precio">${s.p ? (s.t ? "USD " + num(s.t) + " " + E(s.ut.replace("USD", "")) : "USD " + num(s.p)) : '<span class="err">sin precio confiable</span>'}<div class="small muted">${E(F(s.fe))}</div></div>
-      <div class="det">${s.inc ? "Incluye: " + E(s.inc) + " · " : ""}${s.ninc ? "No incluye: " + E(s.ninc) + " · " : ""}${s.al ? "<b>Alerta:</b> " + E(s.al) + " · " : ""}${E(s.pr)} · Origen: ${E(s.o)}</div>
+      <details class="det"><summary>Alcance y origen</summary>${s.inc ? "Incluye: " + E(s.inc) + " · " : ""}${s.ninc ? "No incluye: " + E(s.ninc) + " · " : ""}${s.al ? "<b>Alerta:</b> " + E(s.al) + " · " : ""}${E(s.pr)} · Origen: ${E(s.o)}</details>
       ${S.doc ? `<div class="acc"><input id="qs-${i}" type="text" inputmode="decimal" class="num" value="${NI(S.selS.has(s.c) ? S.selS.get(s.c).q : 1)}" aria-label="Cantidad"><button class="chico prim" data-a="agregar-srv" data-i="${i}" ${s.p ? "" : "disabled"}>Agregar</button></div>` : ""}</div>`).join("")
       : `<div class="vacio">No hay servicios con ese texto.</div>`;
     S.ultSrv = r.res;
@@ -629,7 +640,7 @@
         ${esc_.map(e => `<tr ${Math.abs(e.F - p.FM) < 1e-9 && Math.abs(e.F - p.FMO) < 1e-9 ? 'class="total"' : ""}><td>${e.F.toFixed(2)}</td><td class="n">${num(e.unitario)}</td><td class="n">${num(e.total)}</td><td class="n">${num(e.margen * 100, 1)}%</td></tr>`).join("")}</tbody></table></div>
         ${panelBase()}</section>
       <section class="panel"><h3>Descargas</h3>
-        <p class="small muted">"Descargar todo" arma un .zip con la planilla, la lista para Compras, el informe, las ofertas (Word y PDF) y el respaldo. ${S.doc.cot.estado === "aprobado" ? "Estado aprobado: las ofertas salen sin la leyenda de borrador y con la firma." : "Mientras no esté aprobada, las ofertas llevan la leyenda BORRADOR – SIN REVISAR – NO ENVIAR."}</p>
+        <p class="small muted">${S.doc.cot.estado === "aprobado" ? "Aprobada: las ofertas salen con firma." : "Sin aprobar: las ofertas salen con la leyenda de borrador."}</p>
         <div class="fila"><button class="prim" data-a="zip" ${S.dl ? "" : "disabled"}>Descargar todo (.zip)</button></div>
         <div class="fila"><span class="small">Ver en pantalla:</span><button class="chico" data-a="vista" data-v="informe">Informe</button><button class="chico" data-a="vista" data-v="tecnica">Oferta técnica</button><button class="chico" data-a="vista" data-v="economica">Oferta económica</button></div>
         <div class="fila"><select id="un-archivo" style="max-width:300px">${ARCHIVOS.map(([k, n]) => `<option value="${k}">${n}</option>`).join("")}</select><button data-a="uno" ${S.dl ? "" : "disabled"}>Descargar este archivo</button></div>
@@ -702,7 +713,7 @@
         <label><span>¿Coincide con el plano?</span><select id="ei-fcoincide" data-ei="f.coincide">${Object.entries(Documentos.COINC).map(([k, n]) => `<option value="${k}" ${s.coincide === k ? "selected" : ""}>${n}</option>`).join("")}</select></label>
         <label class="ancho"><span>En qué difiere (obligatorio si es similar)</span><input id="ei-fdiferencia" data-ei="f.diferencia" value="${E(s.diferencia || "")}"></label></div>
       <p class="small muted">Si la cotización del proveedor dice "con IVA", dividí por 1,21 (o 1,105) antes de cargarla. Un valor verbal o "aprox" va como Estimado.</p>
-      <p class="err" id="ei-err"></p><div class="fila fin"><button data-a="cerrar">Cancelar</button><button class="prim" data-a="item-guardar">Guardar</button></div></section></div>`;
+      <p class="err" id="ei-err"></p><div class="fila fin">${nuevo ? "" : `<button class="peligro" data-a="quitar" data-id="${E(it.id)}" style="margin-right:auto">Quitar ítem</button>`}<button data-a="cerrar">Cancelar</button><button class="prim" data-a="item-guardar">Guardar</button></div></section></div>`;
   }
 
   // ------------------------------------------------------------------ cambio de estado (con controles; la herramienta nunca envía nada)
@@ -884,7 +895,7 @@
       case "borrar":
         if (b.dataset.ok !== "1") { b.dataset.ok = "1"; b.textContent = "¿Seguro? Borrar"; setTimeout(() => { b.dataset.ok = ""; b.textContent = "Borrar"; }, 4000); return; }
         await borrarCotizacion(b.dataset.id); toast("Cotización borrada"); break;
-      case "quitar": cot.items = cot.items.filter(i => i.id !== b.dataset.id); guardarPronto(); render(); break;
+      case "quitar": cot.items = cot.items.filter(i => i.id !== b.dataset.id); capa.hidden = true; capa.innerHTML = ""; guardarPronto(); render(); toast("Ítem quitado (Deshacer lo recupera)"); break;
       case "editar": editorItem(cot.items.find(i => i.id === b.dataset.id)); break;
       case "manual": editorItem(null, b.dataset.g); break;
       case "cerrar": capa.hidden = true; capa.innerHTML = ""; break;
@@ -941,6 +952,7 @@
         const r = b.dataset.r, n = Rubros.aplicarAntecedentes(cot, S.datos, Rubros.ficha(cot, S.datos, S.sold, Motor), r);
         guardarPronto(); render(); toast(n ? `${Rubros.RUBROS[r][0]}: costo por antecedentes aplicado (${n} renglón/es)` : Rubros.antecedentes(cot, S.datos, Rubros.ficha(cot, S.datos, S.sold, Motor), r).texto); break;
       }
+      case "it-abrir": { const id = b.dataset.id; S.itAbiertos ??= new Set(); S.itAbiertos.has(id) ? S.itAbiertos.delete(id) : S.itAbiertos.add(id); render(); break; }
       case "rubro-abrir": { const r = b.dataset.r; S.rbAbiertos ??= new Set(); S.rbAbiertos.has(r) ? S.rbAbiertos.delete(r) : S.rbAbiertos.add(r); render(); break; }
       case "rubro-modo": {
         const r = b.dataset.r;

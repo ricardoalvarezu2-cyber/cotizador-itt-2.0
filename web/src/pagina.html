@@ -1,24 +1,26 @@
 <title>Cotizador ITT</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
 <style>
-/* Layout: mesa de trabajo de cotización — barra superior fija, carátula de la cotización, pestañas por rubro, tablas a todo el ancho; misma identidad que los informes de cotización */
+/* Layout: mesa de trabajo de cotización — barra superior fija, carátula, pestañas, bloques separados con mucho aire.
+   Legibilidad (dislexia, web/DISENO.md): una sola tipografía de alta legibilidad (Atkinson Hyperlegible), 17 px, interlineado 1,6,
+   sin mayúsculas sostenidas ni tipografía de máquina, fondo blanco roto y texto gris muy oscuro, alineado a la izquierda. */
 :root{
-  --bg:#f3f5f6; --panel:#ffffff; --ink:#18232b; --muted:#5d6b75; --line:#d5dde2; --soft:#e8edf0;
+  --bg:#f4f3ee; --panel:#fdfcf9; --ink:#1f2b33; --muted:#46555f; --line:#d8d7ce; --soft:#ecebe4; --zebra:#f7f6f1;
   --accent:#1d5f86; --accent-ink:#ffffff; --accent-soft:#dcebf4;
   --ok:#2c7a4b; --ok-soft:#ddf1e4; --warn:#9a6205; --warn-soft:#fbefd6; --bad:#a3392f; --bad-soft:#f8e1de;
   --azul-itt:#002060;
-  --f-disp:"Archivo","Arial Narrow",system-ui,sans-serif;
-  --f-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --f-disp:"Atkinson Hyperlegible",Verdana,Arial,sans-serif;
+  --f-body:"Atkinson Hyperlegible",Verdana,Arial,sans-serif;
+  --f-mono:"Atkinson Hyperlegible",Verdana,Arial,sans-serif;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#11181d; --panel:#172129; --ink:#e3e9ed; --muted:#97a6b0; --line:#2c3a44; --soft:#1e2a33;
+  --bg:#14191d; --panel:#1b2228; --ink:#e6eaec; --muted:#b0bcc4; --line:#33404a; --soft:#222b33; --zebra:#1f272e;
   --accent:#6cb3de; --accent-ink:#0d1a22; --accent-soft:#1d3546;
   --ok:#73c895; --ok-soft:#183427; --warn:#e5b25a; --warn-soft:#3a2e15; --bad:#ef8b80; --bad-soft:#3d1f1c; --azul-itt:#8fb4ff; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#11181d; --panel:#172129; --ink:#e3e9ed; --muted:#97a6b0; --line:#2c3a44; --soft:#1e2a33;
+  --bg:#14191d; --panel:#1b2228; --ink:#e6eaec; --muted:#b0bcc4; --line:#33404a; --soft:#222b33; --zebra:#1f272e;
   --accent:#6cb3de; --accent-ink:#0d1a22; --accent-soft:#1d3546;
   --ok:#73c895; --ok-soft:#183427; --warn:#e5b25a; --warn-soft:#3a2e15; --bad:#ef8b80; --bad-soft:#3d1f1c; --azul-itt:#8fb4ff; color-scheme:dark}
 *{box-sizing:border-box}
@@ -212,11 +214,61 @@ nav a[data-cnt]:not([data-cnt=""])::after{content:attr(data-cnt);font:600 10.5px
   table.tarjetas td.n{text-align:left}
 }
 @media (prefers-reduced-motion:no-preference){button,nav a{transition:background .12s,border-color .12s}}
+
+/* ---- Capa de legibilidad (29-10-2026): pisa los tamaños y estilos de arriba ---- */
+body{font-size:17px;line-height:1.6;letter-spacing:.012em;word-spacing:.06em}
+html.texto-grande body{font-size:19px}
+h1{font-size:clamp(26px,3.4vw,32px);font-weight:700;letter-spacing:0} h2{font-size:22px;font-weight:700} h3{font-size:18px;font-weight:700}
+h1,h2,h3{font-stretch:normal;line-height:1.3}
+p{max-width:68ch}
+.small{font-size:.88em} .muted{color:var(--muted)}
+.main{gap:32px;padding-block:28px 80px} #tab{gap:32px} section{gap:16px}
+.sec-head{border-bottom:1px solid var(--line);padding-bottom:10px;align-items:center}
+.eyebrow{font:400 .88em/1.4 var(--f-body);letter-spacing:0;text-transform:none;color:var(--muted)}
+.panel{padding:20px 22px;gap:16px;border-radius:8px}
+button,.btn{font:700 .9em var(--f-body);padding:9px 14px;border-radius:6px;letter-spacing:.01em}
+button.chico{font-size:.85em;padding:6px 11px}
+input,select,textarea{font-size:1em;padding:9px 11px;border-radius:6px}
+label{font-size:.9em;gap:6px} label>span{font-weight:700;color:var(--ink)}
+.pill{font:700 .78em/1.2 var(--f-body);letter-spacing:0;text-transform:none;padding:3px 10px;border-radius:999px;border:0}
+table{font-size:.94em}
+th{font:700 .86em/1.3 var(--f-body);letter-spacing:0;text-transform:none;color:var(--ink);padding:11px 10px;background:var(--soft)}
+td{padding:11px 10px;vertical-align:middle}
+tbody tr:nth-child(even) td{background:var(--zebra)}
+td .sp{font-size:.9em;line-height:1.45;color:var(--muted)}
+.num,.mono,td.n,input.num,.totales .v,.rb-monto .v,.resultado .precio{font-variant-numeric:tabular-nums lining-nums}
+.datos-al{font-size:.8em} .guardado{font-size:.82em}
+.totales .v{font:700 clamp(22px,2.6vw,30px)/1.15 var(--f-body)} .totales .s{font-size:.82em} .totales>div{padding:16px 18px;gap:4px}
+.tabs .cnt{font:700 .78em var(--f-body);padding:1px 8px}
+.tabs button{font-size:1em}
+.dato{font:400 .92em var(--f-body);color:var(--muted)} .dato b{font-weight:700}
+.rb-monto .s{font:400 .8em/1.2 var(--f-body);letter-spacing:0;text-transform:none}
+.rb-monto .v{font:700 1.05em var(--f-body)}
+.rb-cuerpo h4{font:700 .95em/1.3 var(--f-body);letter-spacing:0;text-transform:none;color:var(--ink)}
+.rb-abrir b{font:700 1.05em/1.3 var(--f-body)}
+.rb-cab{padding:14px 16px} .rb-cuerpo{padding:6px 16px 20px 38px;gap:20px 32px}
+.traza{font:400 .8em/1.4 var(--f-body)}
+.msg.pensando{font-style:normal}
+.aviso{padding:14px 16px;border-radius:6px} .aviso ul{font-size:.95em;gap:6px}
+nav a{font-size:1em} nav a[data-cnt]:not([data-cnt=""])::after{font:700 .7em/1 var(--f-body)}
+.resultado{padding:14px 14px;gap:6px 14px}
+.resultado details.det{grid-column:1/-1;font-size:.88em;color:var(--muted)} .resultado details.det summary{cursor:pointer;color:var(--accent);width:max-content}
+/* tabla de materiales: un renglón corto por ítem y el detalle desplegable */
+.it-abrir{border:0;background:none;padding:2px 6px 2px 0;font:inherit;color:var(--ink);text-align:left;white-space:normal;display:flex;gap:8px;align-items:flex-start;cursor:pointer}
+.it-abrir .flecha{color:var(--muted);flex:none;width:12px}
+tr.it-det[hidden]{display:none}
+table.items tbody tr:nth-child(even) td{background:transparent}
+table.items tbody tr:not(.it-det) td{border-top:1px solid var(--line)}
+tr.it-det td{background:var(--zebra)!important;padding:4px 10px 18px 46px}
+.it-det-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 28px;font-size:.92em}
+.it-det-grid b{display:block;font-size:.9em;color:var(--muted);font-weight:700}
+@media (max-width:700px){.btn-texto{order:2;margin-left:auto}}
 </style>
 <div class="barra"><div class="in">
   <div class="marca"><i></i>Cotizador ITT</div>
   <nav aria-label="Secciones"><a href="#inicio" id="nav-inicio">Cotizaciones</a><a href="#catalogos" id="nav-catalogos">Catálogos</a><a href="#pedidos" id="nav-pedidos">Pedidos</a><a href="#firmantes" id="nav-firmantes">Firmantes</a></nav>
   <span class="datos-al" id="datos-al">cargando datos…</span>
+  <button class="chico btn-texto" id="btn-texto" aria-pressed="false" title="Agrandar o achicar el texto">Aa</button>
   <button class="btn-chat" id="btn-chat" aria-pressed="false" hidden>Claude</button>
 </div></div>
 <main class="main" id="app">
