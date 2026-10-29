@@ -47,3 +47,11 @@ Diferencias encontradas (la cotización se había armado sin la ET):
 11. Transporte: la ET dice hasta destino final; la planilla, hasta Cruz del Sur (E. Echeverría). Se mantiene la planilla, aclarado en la oferta.
 12. Esquema: entrada abajo a la caja de chicanas, elementos sobre placa con soporte superior, salida arriba a ≥ 200 mm de los elementos. Coincide con el arreglo cotizado.
 Pérdida de carga máxima 100 mbar a Qmáx y Pmín con elementos limpios (ET 9.1): sirve para fijar la cantidad de elementos con la ficha de Gora/Filtron/Peco.
+
+## 29-10-2026 · Corrección contra la ET (decisiones de Matías: incluir el juego de repuesto; usar solo marcas del listado de Camuzzi)
+- Diseño a la presión de la serie #600 (102,1 bar), corrosión 1,6 mm: virola y fondo de **2 1/4"** (DI 1.280 mm, ≈ Ø55" exterior, 6.287 kg de virola). La placa portaelementos queda en 1 5/8" (solo soporta la diferencial; a verificar en la memoria).
+- **Juego de repuesto** de 37 elementos en fila aparte (5b).
+- Tapa: Futura (Sacde/12 escalada) en lugar de Megatap. Válvulas: precio de referencia Taval de la misma especificación, a comprar de una marca del listado (Esferomatic, Worcester, Valvtronic…); 1/2" con Esferomatic (TAVAL/40).
+- Purgas según ET 9.2: neumáticas 1" #600 bridadas (sin precio), 7 esféricas 1" #600 de bloqueo y by-pass, tapón lubricado 1" de sacrificio; bridas 2" de 6 a 4, bridas 1" de 7 a 15, esféricas 2" de 6 a 4.
+- Nuevos: caja de chicanas AISI 304 y accesorios doble virola (sin precio), rejilla galvanizada 3 m², galvanizado de plataforma 500 kg, prueba de fugas 8 h, calificación API 1104 (sin precio). PH a 1,3 × serie #600 durante 6 h. Visores a pedir para 102 bar. Fabricación Ledesma × 1,18 por espesor.
+- Resultado: **USD 284.971,97 c/u, 571.152,19 los 2** (antes 205.839,76 c/u), borrador ±30%. `verificar_computo.py`: 0 errores. Queda en 0 (a cotizar): purgas automáticas, switches Ex-d, chicanas, accesorios doble virola y API 1104.
