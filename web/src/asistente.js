@@ -131,23 +131,66 @@ const Asistente = (() => {
     if (estado !== "enviado") throw new Error(nota.charAt(0).toUpperCase() + nota.slice(1) + ". El pedido quedó guardado.");
   }
 
-  // ------------------------------------------------------------------ botón Claude: abre la sesión de Claude Code
-  // La sesión fija (la misma que recibe los pedidos, con el repositorio) se abre en una ventana chica aparte, como un
-  // chat flotante. claude.ai no se puede mostrar dentro de la página.
+  // ------------------------------------------------------------------ botones Claude y Chat nuevo
+  // "Claude ↗" abre la sesión fija (la de la tarea semanal y los pedidos, con el repositorio) en una ventana chica aparte,
+  // como un chat flotante; claude.ai no se puede mostrar dentro de la página. "Chat nuevo" crea una sesión limpia con el
+  // repositorio (create_session) y la abre en la misma ventana. Las sesiones que crea la página quedan en la colección
+  // "chats" y se archivan solas tras unos días sin uso (config/claude_code.dias_chat, por defecto 3); se pueden recuperar.
+  const ENTORNO = "env_01XxXedU9fMy5bmisDSk6jJm", REPO = "https://github.com/tvmaty2186/cotizador-itt", ETIQUETA = "cotizador-itt-chat";
+  let diasChat = 3;
   function armarChat() {
-    const btn = document.getElementById("btn-chat");
-    if (!btn) return;
-    btn.hidden = false; btn.title = "Abre Claude Code (sesión con el repositorio) en una ventana aparte";
-    btn.addEventListener("click", abrirClaude);
+    const btn = document.getElementById("btn-chat"), nuevo = document.getElementById("btn-chat-nuevo");
+    if (btn) { btn.hidden = false; btn.title = "Abre Claude Code (la sesión de siempre, con el repositorio) en una ventana aparte"; btn.addEventListener("click", abrirClaude); }
+    if (nuevo && mcp) { nuevo.hidden = false; nuevo.title = "Abre una sesión nueva de Claude Code con el repositorio"; nuevo.addEventListener("click", chatNuevo); }
+    I.S.db?.doc("config/claude_code").get().then(d => { if (d.exists && +d.data().dias_chat > 0) diasChat = +d.data().dias_chat; }).catch(() => {});
   }
-  function abrirClaude() {
-    const url = "https://claude.ai/code/" + sesion, an = 480, al = Math.min(820, screen.availHeight - 80);
+  function ventana(url) {
+    const an = 480, al = Math.min(820, screen.availHeight - 80);
     const izq = (screen.availLeft || 0) + screen.availWidth - an - 24, arr = (screen.availTop || 0) + 40;
-    const w = window.open(url, "claude-code-itt", `popup=yes,width=${an},height=${al},left=${izq},top=${arr}`);
-    if (w) { try { w.focus(); } catch (e) { /* otra ventana */ } return; }
+    return window.open(url, "claude-code-itt", `popup=yes,width=${an},height=${al},left=${izq},top=${arr}`);
+  }
+  function irA(w, url) {
+    if (w && !w.closed) { try { w.location.href = url; w.focus(); return; } catch (e) { /* otra ventana */ } }
     const a = document.createElement("a"); a.href = url; a.target = "_blank"; a.rel = "noopener"; document.body.append(a); a.click(); a.remove();
   }
+  function abrirClaude() {
+    const url = "https://claude.ai/code/" + sesion, w = ventana(url);
+    if (w) { try { w.focus(); } catch (e) { /* otra ventana */ } } else irA(null, url);
+  }
+  const datoDe = r => { const p = r && (r.payload ?? r); return (p && p.ccr) || p || {}; };
+  async function chatNuevo(ev) {
+    const b = ev.currentTarget, w = ventana("about:blank"); // la ventana se abre ya, con el clic; después se le pone la sesión
+    b.disabled = true; I.toast("Creando un chat nuevo con el repositorio…");
+    try {
+      const f = Documentos.fechaHora(ahora());
+      const r = await mcp.callTool(SERVIDOR, "create_session", { environment_id: ENTORNO, source_url: REPO, title: "Cotizador ITT – chat " + f, tags: [ETIQUETA], permission_mode: "auto" });
+      const id = datoDe(r).id || (JSON.stringify(r).match(/session_[A-Za-z0-9]+/) || [])[0];
+      if (!id) throw new Error("Claude Code no devolvió la sesión nueva");
+      irA(w, "https://claude.ai/code/" + id);
+      await I.S.db?.doc("chats/" + id).set({ creado: ahora(), titulo: "Cotizador ITT – chat " + f });
+      limpiarChats(id).catch(() => {});
+    } catch (e) {
+      const [, nota] = motivoError(e);
+      I.toast("No se pudo crear el chat nuevo: " + nota + ". Se abre Claude Code para empezarlo a mano.");
+      irA(w, "https://claude.ai/code");
+    } finally { b.disabled = false; }
+  }
+  // Archiva las sesiones creadas por la página que llevan más de diasChat días sin uso (la sesión fija nunca).
+  async function limpiarChats(menos) {
+    const db = I.S.db; if (!db || !mcp) return;
+    const sn = await db.collection("chats").get(), limite = Date.now() - diasChat * 864e5;
+    for (const d of sn.docs) {
+      const c = d.data(); if (d.id === menos || d.id === sesion || c.archivado) continue;
+      if (Date.parse(c.creado) > limite) continue;
+      try {
+        const x = datoDe(await mcp.callTool(SERVIDOR, "get_session", { session_id: d.id }));
+        if (/RUNNING/.test(x.session_status || "") || Date.parse(x.updated_at || c.creado) > limite) continue;
+        await mcp.callTool(SERVIDOR, "archive_session", { session_id: d.id });
+        await db.doc("chats/" + d.id).update({ archivado: ahora() });
+      } catch (e) { if (/not.?found|archiv/i.test(e.message || "")) await db.doc("chats/" + d.id).update({ archivado: ahora() }).catch(() => {}); }
+    }
+  }
 
-  return { abrirClaude, TIPOS_PEDIDO, prepararArchivo, crearPedido };
+  return { abrirClaude, chatNuevo, TIPOS_PEDIDO, prepararArchivo, crearPedido };
 })();
 if (typeof module !== "undefined") module.exports = Asistente;

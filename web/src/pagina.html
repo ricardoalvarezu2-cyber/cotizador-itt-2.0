@@ -201,7 +201,7 @@ nav a[data-cnt]:not([data-cnt=""])::after{content:attr(data-cnt);font:600 10.5px
 @media (max-width:700px){
   .barra{position:static}
   .barra .in{gap:6px 10px;padding-block:8px}
-  .marca{order:1} .btn-chat{order:2;margin-left:auto}
+  .marca{order:1} .btn-chat{order:2;margin-left:auto} #btn-chat-nuevo{margin-left:0}
   nav{order:3;width:100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
   nav a{padding:5px 8px;white-space:nowrap}
   .datos-al{order:4;width:100%;margin-left:0;font-size:11px}
@@ -278,7 +278,7 @@ table.renglones td.ed input{width:110px}
   <nav aria-label="Secciones"><a href="#inicio" id="nav-inicio">Cotizaciones</a><a href="#catalogos" id="nav-catalogos">Catálogos</a><a href="#firmantes" id="nav-firmantes">Firmantes</a></nav>
   <span class="datos-al" id="datos-al">cargando datos…</span>
   <button class="chico btn-texto" id="btn-texto" aria-pressed="false" title="Agrandar o achicar el texto">Aa</button>
-  <button class="btn-chat" id="btn-chat" hidden>Claude ↗</button>
+  <button class="btn-chat" id="btn-chat" hidden>Claude ↗</button><button class="btn-chat" id="btn-chat-nuevo" hidden>Chat nuevo</button>
 </div></div>
 <main class="main" id="app">
   <section><div class="sec-head"><h1>Cotizaciones</h1><span class="eyebrow">ITT S.A. · USD sin IVA</span></div>
