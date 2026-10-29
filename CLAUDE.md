@@ -30,7 +30,7 @@
 
 ## Procedimiento de cotización (obligatorio)
 - **Para cotizar, usar el skill `cotizar` (`.claude/skills/cotizar/SKILL.md`) y la guía `conocimiento/guia_cotizacion.md`.** Cada cotización es una carpeta en `cotizaciones/` (modelo: `cotizaciones/_plantilla/`; caso completo: `COT26-1003-001_CAPEX_OQ8209/` con su `bitacora.md`). La única fuente de datos es `cotizacion.json`. Todo lo demás (cómputo, planilla, informe, ofertas) lo genera `python herramientas/armar_cotizacion.py cotizaciones/<carpeta>`. Registro de cotizaciones: `cotizaciones/README.md`.
-- Los antecedentes se buscan primero con `python herramientas/buscar_antecedentes.py` (índice de proyectos 2025–2026: misma familia, más parecido y más nuevo primero). Por decisión de Matías, 2021–2024 no se indexa.
+- Los antecedentes se buscan primero con `python herramientas/buscar_antecedentes.py` (índice de proyectos 2025–2026: misma familia o subtipo, más parecido y más nuevo primero; criterio igual para todas las familias en `conocimiento/guia_cotizacion.md` §3). Por decisión de Matías, 2021–2024 no se indexa con fichas; esas carpetas se muestran aparte, sin precios, solo cuando hay menos de 5 del mismo subtipo.
 - La MO y los servicios se buscan con `python herramientas/buscar_servicio.py "<texto>"` (un global solo se usa si el alcance es el mismo).
 - **Antes de buscar precios a mano, correr `python herramientas/precotizar.py cotizaciones/<carpeta>`** (sin IA): arma la precotización desde la tabla del plano y marca solo lo que hay que revisar.
 - Los precios de materiales sueltos se buscan con `python herramientas/buscar_material.py "<descripción>"` (catálogo por familia; igual antes que similar; último precio con fecha y ruta de origen).

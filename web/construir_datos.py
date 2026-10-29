@@ -89,7 +89,8 @@ def dolar():
 
 
 def antecedentes():
-    """Índice de proyectos 2025–2026 y las constantes de buscar_antecedentes.py, para comparar en la página (paso P8)."""
+    """Índice de proyectos 2025–2026 y las constantes de indice_proyectos.py y buscar_antecedentes.py (familias, subtipos,
+    sinónimos, pesos), para comparar en la página (paso P8) con el mismo criterio que Python."""
     import indice_proyectos as ip
     import buscar_antecedentes as ba
     filas = []
@@ -102,10 +103,15 @@ def antecedentes():
             if m + mo + te:
                 rep = round(m / (m + mo + te), 3)
         filas.append({"id": r["id"], "fe": r["fecha"], "cl": r["cliente"], "clf": r["cliente_final"], "fam": r["familia"], "tags": r["etiquetas"],
+                      "sub": r["subtipo"], "subs": r["subtipos"], "cue": f(r["diametro_cuerpo"]) if r["diametro_cuerpo"] else None,
                       "d": r["descripcion"][:200], "of": r["numero_oferta"], "dia": r["diametros"], "ser": r["series"], "mat": r["material"], "un": r["union"],
                       "pu": f(r["precio_unitario_principal"]), "mon": r["moneda"], "fac": r["factor"], "plazo": r["plazo_dias"], "res": r["resultado"],
                       "pl": bool(r["tiene_planilla_costo"]), "prov": r["proveedores"], "oc": bool(r["tiene_oc"]), "conf": r["confianza"], "w": r["palabras"], "rep": rep})
-    return {"proyectos": filas, "claves": ip.CLAVES, "familias": ip.FAMILIAS, "vacias": sorted(ip.VACIAS), "cortas": sorted(ip.CORTAS), "tamanos": ba.TAMANOS}
+    sinonimos = [[a, b.replace("\\1", "$1")] for a, b in ip.SINONIMOS]  # en JS el grupo se escribe $1
+    return {"proyectos": filas, "claves": ip.CLAVES, "familias": ip.FAMILIAS, "vacias": sorted(ip.VACIAS), "cortas": sorted(ip.CORTAS), "tamanos": ba.TAMANOS,
+            "sinonimos": sinonimos, "subtipos": [list(x) for x in ip.SUBTIPOS], "recipientes": sorted(ip.RECIPIENTES), "tipo_familia": ip.TIPO_FAMILIA,
+            "pesos": ba.PESOS, "fracciones": ip.FRACCIONES, "pulgadas": ip.PULGADAS, "diam_texto": ip.DIAM_TEXTO, "series_rx": ip.SERIES_RX,
+            "materiales_rx": ip.MATERIALES_RX, "uniones_rx": ip.UNIONES_RX}
 
 
 def pesos_tablas():

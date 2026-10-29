@@ -25,7 +25,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from numeros import fmt, fmtg  # noqa: E402
 from catalogo_materiales import atributos, expandir, familia_de  # noqa: E402
 from controles_tablas import RUBRO_PLAZO, rubro  # noqa: E402
-from indice_proyectos import etiquetas, norm  # noqa: E402
+from indice_proyectos import clasificar_cotizacion, norm  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
 # plazos.md §3: días de taller con el material completo (cronogramas AESA 2023) y §1: plazo real histórico (mediana)
@@ -50,7 +50,7 @@ def main(carpeta):
     pl = c.get("plazo", {})
     tareas = pl.get("tareas", [])
     ofrecido = pl.get("dias")
-    fam = (etiquetas("", norm(c.get("titulo", "") + " " + " ".join(i["descripcion"] for i in c["items"]))) or ["OT"])[0]
+    fam = clasificar_cotizacion(c)[0]  # familia del equipo (equipo.familia o el título), no de los ítems
     lineas, avisos, supuestos = [f"# Plazo calculado — {c['codigo']}", "", "Generado por `herramientas/plazo.py` (regla de `conocimiento/plazos.md` §4). Propone y controla; no cambia el plazo ofrecido.", ""], [], []
     tip = tipicos()
     mat = [t for t in tareas if t[3] != "tal"]

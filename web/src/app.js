@@ -717,10 +717,10 @@
   }
   function panelAntecedentes(c) {
     const r = Antecedentes.comparar(S.doc.cot, S.datos, c.precio_unitario);
-    return `<section><div class="sec-head"><h3>Antecedentes parecidos (P8)</h3><span class="eyebrow">familia ${E(r.nombreFamilia || r.familia)} · los 5 más parecidos con precio</span></div>
+    return `<section><div class="sec-head"><h3>Antecedentes parecidos (P8)</h3><span class="eyebrow">familia ${E(r.nombreFamilia || r.familia)}${r.nombreSubtipo ? " · " + E(r.nombreSubtipo) : ""} · los 5 más parecidos con precio</span></div>
       <p class="small muted">Una diferencia de más del 15% no es un error: hay que explicarla rubro por rubro (alcance, cantidad, diámetro, serie, fecha) antes de presentar el número. Más de 4 veces es otra escala (el precio del índice es de otra cosa).</p>
       ${r.filas.length ? `<div class="tbl"><table><thead><tr><th>#</th><th>Antecedente</th><th>Fecha</th><th class="n">Precio unitario</th><th class="n">Esta vs. antecedente</th><th>Factor</th><th>Materiales</th><th>Por qué se parece</th></tr></thead><tbody>
-        ${r.filas.map((f, i) => `<tr><td>${i + 1}</td><td><div class="d">${E(f.id)}</div><div class="sp">${E(f.cliente)}${f.oferta ? " · " + E(f.oferta) : ""} · ${E(f.descripcion.slice(0, 120))}</div></td><td class="small">${E(F(f.fecha))}</td>
+        ${r.filas.map((f, i) => `<tr><td>${i + 1}</td><td><div class="d">${E(f.id)}</div><div class="sp">${E(f.cliente)}${f.oferta ? " · " + E(f.oferta) : ""}${f.subtipo ? " · " + E(f.subtipo) : ""} · ${E(f.descripcion.slice(0, 120))}</div></td><td class="small">${E(F(f.fecha))}</td>
           <td class="n">${num(f.pu, 0)} ${E(f.moneda)}</td><td class="n">${f.otra ? '<span class="muted">otra escala</span>' : `<span class="pill ${f.ojo ? "warn" : "ok"}">${f.dif > 0 ? "+" : ""}${num(f.dif * 100, 0)}%</span>`}</td>
           <td>${E(f.factor || "—")}</td><td class="small">${f.reparto != null ? num(f.reparto * 100, 0) + "%" : "—"}</td><td class="small muted">${E(f.razones.join(" · "))}</td></tr>`).join("")}</tbody></table></div>` : ""}
       ${r.avisos.length ? `<div class="aviso"><ul>${r.avisos.map(a => `<li>${E(a)}</li>`).join("")}</ul></div>` : ""}</section>`;

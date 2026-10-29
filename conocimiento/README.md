@@ -54,7 +54,8 @@ Todo lo que se necesita para cotizar, en un solo lugar y con una sola versión v
 
 | Archivo | Contenido |
 |---|---|
-| `comercial/indice_proyectos.csv` | **Índice de proyectos para buscar antecedentes** (2025–2026 + cotizador): familia y etiquetas, diámetros, series, material, unión, ensayos, precio, factor, plazo, resultado y si tiene planilla de costo. Se consulta con `herramientas/buscar_antecedentes.py` |
+| `comercial/indice_historico.csv` | Carpetas de ofertas **sin ficha** (2021–2024 y las de 2025–2026 que faltan fichar): familia, subtipo, Ø y año estimados, sin precios. El buscador las muestra aparte cuando hay menos de 5 del mismo subtipo |
+| `comercial/indice_proyectos.csv` | **Índice de proyectos para buscar antecedentes** (2025–2026 + cotizador): familia, etiquetas, subtipo, Ø del cuerpo en recipientes, diámetros, series, material, unión, ensayos, precio, factor, plazo, resultado y si tiene planilla de costo. Se consulta con `herramientas/buscar_antecedentes.py` |
 | `comercial/carpetas_ofertas.csv` | **Índice de las 532 carpetas de cotización** de `Z:\VENTAS\OFERTAS Y LICITACIONES`: cliente, fechas, etapas presentes, si tiene OC y si ya está analizada |
 | `comercial/cotizaciones_2026.csv` | 93 cotizaciones de 2026: oferta, monto, costo, factor, plazo, condiciones y resultado |
 | `comercial/cotizaciones_2026_items.csv` | 153 ítems ofertados con precio y datos técnicos |

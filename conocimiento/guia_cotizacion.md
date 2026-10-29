@@ -47,18 +47,27 @@ El proceso tiene dos etapas. El **presupuesto preliminar** se arma con anteceden
 
 ## 3. Buscar antecedentes y precios (P4, P5, P8)
 
-**Primero, el buscador de antecedentes.** Busca solo entre proyectos de la misma familia y ordena por parecido técnico. A igual parecido, gana el más nuevo.
+**Primero, el buscador de antecedentes.** El mismo criterio para todas las familias (Matías, 29-10-2026): busca entre los de la misma familia o del mismo **subtipo** (coalescente, canasto, FM, bifásico, puente de medición, skid de regulación…) y ordena por parecido técnico. A igual parecido, gana el más nuevo.
 
 ```bash
-python herramientas/buscar_antecedentes.py --familias      # códigos de familia
+python herramientas/buscar_antecedentes.py --familias      # familias y subtipos, con cuántos proyectos hay
+python herramientas/buscar_antecedentes.py --cotizacion cotizaciones/<carpeta>   # consulta armada desde cotizacion.json
+python herramientas/buscar_antecedentes.py --texto "separador vertical coalescente" --cuerpo 55 --serie 600 --cliente CAMUZZI
 python herramientas/buscar_antecedentes.py --familia CO --texto "colector de campo produccion 6 ingresos" \
        --diametro 6 --serie 300 --material carbono --union bridado --cliente PAMPA
 ```
 
+- Sin `--familia` ni `--subtipo`, se deducen del texto. En `cotizacion.json` se pueden fijar con `equipo.familia` y `equipo.subtipo`; si no, salen del título y del nombre del equipo, nunca de los ítems.
+- Lo que más pesa es el subtipo (30), después el texto (25, con sinónimos: coalescedor = coalescente, FM06 = FM6, tramo = puente de medición), el tamaño (15), la serie (12), el material (8), la unión (5) y el cliente (4).
+- En recipientes (separadores, filtros, tanques, calentadores) el tamaño es el **Ø del cuerpo** (`--cuerpo`), no el de las conexiones.
+- Un dato que falta en el antecedente no le resta puntos: el resultado dice "sin dato".
+- Si hay menos de 5 del mismo subtipo en 2025–2026, muestra aparte las **carpetas sin ficha de 2021–2024** (`indice_historico.csv`, año estimado, sin precios). Sirven para comparar diseño y alcance, no precios. Las carpetas de 2025–2026 sin ficha salen en la lista principal marcadas SIN FICHA.
+- Subtipos y sinónimos nuevos se agregan en `SUBTIPOS` y `SINONIMOS` de `herramientas/indice_proyectos.py` y se prueban con `python herramientas/test_antecedentes.py`.
+
 - Revisar los **3 a 5 primeros**, en orden.
 - Primero, los que dicen **PLANILLA DE COSTO**: traen el desglose completo y son el mejor modelo.
 - Cada resultado dice por qué se parece y qué carpeta abrir.
-- El índice (`conocimiento/comercial/indice_proyectos.csv`) cubre las cotizaciones de 2025–2026 y las armadas con el cotizador. Se actualiza solo con `armar_cotizacion.py`, o a mano con `python herramientas/indice_proyectos.py`.
+- El índice (`conocimiento/comercial/indice_proyectos.csv`) cubre las cotizaciones de 2025–2026 y las de la biblioteca. Se actualiza solo con `armar_cotizacion.py`, o a mano con `python herramientas/indice_proyectos.py` (que arma también `indice_historico.csv`).
 
 **Precotización automática (sin IA), primero:**
 

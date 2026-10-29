@@ -2,23 +2,21 @@
 
 Uso: python herramientas/comparar_antecedentes.py cotizaciones/<carpeta>   (lo corre también armar_cotizacion.py)
 
-Busca en el índice de proyectos (buscar_antecedentes.py: misma familia, más parecido y más nuevo primero) los 5 mejores
+Busca en el índice de proyectos (buscar_antecedentes.py: misma familia o subtipo, más parecido y más nuevo primero) los 5 mejores
 con precio, y compara precio unitario, factor y reparto del costo (materiales / MO y servicios, de la ficha).
 Marca diferencias de más del 15%: no dicen que esté mal, dicen que hay que explicarlas rubro por rubro antes de
 presentar el número (procedimiento P8). Genera <carpeta>/comparacion_antecedentes.md.
 """
 import csv
 import json
-import math
 import sys
 from collections import Counter
 from datetime import date
 from pathlib import Path
-from types import SimpleNamespace
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from buscar_antecedentes import INDICE, puntuar  # noqa: E402
-from indice_proyectos import etiquetas, norm  # noqa: E402
+from buscar_antecedentes import INDICE, buscar, consulta_de_cotizacion  # noqa: E402
+from indice_proyectos import SUBTIPO_NOMBRE  # noqa: E402
 from numeros import a_vista, fmt, fmtg  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -39,23 +37,12 @@ def main(carpeta, precio_unitario=None, costo=None, reparto=None):
         reparto = {k: v / tot for k, v in sub.items()}
     filas = list(csv.DictReader(open(INDICE, encoding="utf-8")))
     yo = next((r for r in filas if r["id"] == carpeta.name), None)
-    texto = norm(c.get("titulo", "") + " " + " ".join(i["descripcion"] for i in c["items"]))
-    fam = (etiquetas("", texto) or ["OT"])[0]
-    dias = [float(x) for x in (yo["diametros"].split() if yo else [])]
-    q = SimpleNamespace(familia=fam, texto=c.get("titulo", ""), diametro=max(dias) if dias else None,
-                        serie=(yo["series"].split() or [None])[-1] if yo else None, material=None, union=None, cliente=c["cliente"].get("nombre"))
-    df = Counter(w for r in filas for w in set(r["palabras"].split()))
-    idf = {w: math.log(len(filas) / n) for w, n in df.items()}
-    res = []
-    for p in filas:
-        if p["id"] == carpeta.name or not p["precio_unitario_principal"]:
-            continue
-        r = puntuar(p, q, idf, date.today())
-        if r:
-            res.append((r[0], p))
-    res.sort(key=lambda x: (round(x[0], 1), x[1]["fecha"]), reverse=True)
+    q = consulta_de_cotizacion(c, yo)  # familia y subtipo de la cotización (equipo.familia/subtipo o el título), no de los ítems
+    fam = q.familia or "OT"
+    res = [(s, p) for s, _, _, p in buscar(q, filas, hoy=date.today(), excluir=[carpeta.name], con_precio=True)[0]]
     lineas = [f"# Comparación con antecedentes (P8) — {c['codigo']}", "",
-              f"Generado por `herramientas/comparar_antecedentes.py`. Familia {fam}. Esta cotización: **precio unitario USD {fmt(precio_unitario, 2)}**, "
+              f"Generado por `herramientas/comparar_antecedentes.py`. Familia {fam}"
+              + (f", subtipo {SUBTIPO_NOMBRE.get(q.subtipo, q.subtipo)}" if q.subtipo else "") + f". Esta cotización: **precio unitario USD {fmt(precio_unitario, 2)}**, "
               f"costo USD {fmt(costo, 2)}, factor {fmtg(c['parametros']['FM'])} · reparto del costo: materiales {reparto.get('material', 0):.0%}, MO y servicios {reparto.get('mo', 0):.0%}.", "",
               "Una diferencia de más del 15% no significa error: hay que explicarla rubro por rubro (alcance, cantidad, diámetro, serie, fecha) antes de presentar el número.", "",
               "| # | Antecedente | Fecha | Precio unitario | Diferencia | Factor | Reparto de la ficha | Qué es |", "|---|---|---|---|---|---|---|---|"]
@@ -79,6 +66,8 @@ def main(carpeta, precio_unitario=None, costo=None, reparto=None):
         avisos.append("Ningún antecedente de los 5 primeros es de la misma escala: comparar a mano")
     if not res:
         avisos.append(f"No hay antecedentes de la familia {fam} con precio en el índice: comparar a mano")
+    if q.subtipo and not any(p.get("subtipo") == q.subtipo for _, p in res[:5]):
+        avisos.append(f"Ninguno de los 5 es del mismo subtipo ({SUBTIPO_NOMBRE.get(q.subtipo, q.subtipo)}): buscar más con buscar_antecedentes.py --cotizacion")
     lineas += ["", "## Avisos", ""] + ([f"- ⚠ {a}" for a in avisos] or ["- Ninguno."])
     (carpeta / "comparacion_antecedentes.md").write_text("\n".join(lineas) + "\n", encoding="utf-8")
     print(f"Antecedentes: {min(len(res), 5)} comparados → {carpeta / 'comparacion_antecedentes.md'}")
