@@ -167,6 +167,19 @@ def perfiles():
             continue
         tipo = familia or re.match(r"[A-Z]+", nombre).group(0)
         filas.append([tipo, nombre, round(kg_m, 2), round(sup, 3) if sup else ""])
+    # Correcciones de la planilla de ITT (28-10-2026, ver tecnico/estructura_pesos_LEEME.md):
+    # - UL (UPN chicos IRAM-IAS U 500-509): la columna de masa tenía el ancho de ala (20/25/38/42).
+    # - HEB: la planilla repetía los kg/m de las HEA (HEB100 16,7 en vez de 20,4). Se toman de estructura_perfiles_laminados.csv
+    #   (INTI-CIRSOC / ArcelorMittal, con fuente por renglón).
+    ul = {"UL 40x20": 2.87, "UL 50x25": 3.86, "UL 50x38": 5.59, "UL 65x42": 7.09}
+    lam = RAIZ / "conocimiento" / "tecnico" / "estructura_perfiles_laminados.csv"
+    heb = {r["designacion"].replace(" ", ""): float(r["kg_por_m"]) for r in csv.DictReader(open(lam, encoding="utf-8"))
+           if r["familia"] == "HEB" and r["kg_por_m"]} if lam.exists() else {}
+    for f in filas:
+        if f[1] in ul:
+            f[2] = ul[f[1]]
+        elif f[0] == "HEB" and f[1].replace(" ", "") in heb:
+            f[2] = heb[f[1].replace(" ", "")]
     escribir("tecnico/perfiles.csv", ["familia", "designacion", "kg_por_m", "m2_por_m"], filas)
 
 

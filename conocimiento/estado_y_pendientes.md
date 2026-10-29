@@ -28,6 +28,7 @@
 | Chat con Claude en la página y Pedidos para Claude Code (subir plano, P&ID, pliego o lista; la sesión fija los procesa con `web/LEEME.md` y deja el resultado en la página) | Publicado el 28/10/2026 | `web/src/asistente.js`, `web/LEEME.md` (Pedidos desde la página) |
 | Mejoras de la página (28/10/2026): buscador general por texto y selección múltiple en los catálogos; sección Catálogos sin cotización abierta; avisos en cada renglón; filtro y orden de los ítems; deshacer y rehacer (Ctrl+Z / Ctrl+Y); vista previa de informe y ofertas; antecedentes parecidos (P8) en Resumen; versión para celular | Publicado | `web/src/` |
 | **Modo Detallado / Global por rubro** (MO piping, MO estructura, pintura, RX/END/procedimientos, transporte) con ficha del rubro (soldaduras, kg, m², placas, procedimientos, medidas y equipos por camión) para pedir el global al tercero y compararlo con el detallado | Vigente desde 28-10-2026 (repo y página) | `herramientas/ficha_rubros.py`, `web/src/rubros.js`, `ficha_rubros.md` en cada cotización |
+| **Tablas de pesos ampliadas** (29-10-2026, borrador sin revisar): estructura (laminados, ángulos, planchuelas, barras, perfiles de chapa, tubos, chapas, inox), olets, bridas B16.47 y B16.36, figuras 8, espárragos, caños inox y complemento B36.10, 2.893 accesorios más. Corregidos: espesores 28"/30", HEB y UL | Todavía no las usan las herramientas: falta integrarlas al cálculo de kg y al botón Recalcular | `conocimiento/tecnico/*_LEEME.md` |
 | Listas de precios nuevas que llegan por pedidos | Vigente (vacío) | `precios/listas_nuevas.csv` (lo lee `catalogo_materiales.py`) |
 | Tarea semanal (lunes 7:37, hora Argentina): dólar e índices a la página, pedidos pendientes y respaldo de sus cotizaciones en `cotizaciones_web/` | Creada el 28/10/2026 | `web/LEEME.md` (sección Tarea semanal) |
 
@@ -104,6 +105,12 @@ Hecho (28/10/2026): `precotizar.py` (materiales, soldaduras, pintura, PH, RX) ·
 3. Hoja de alcance SI/NO (recipiente, plataforma, eléctrico, aislación, tracing, embalaje).
 4. Definir qué factor llevan transporte y caución (hoy van con el de MO y servicios).
 5. Ojo: las soldaduras de COT26-0330-001 (124 juntas, 1.334,68 pulg) son de antes del ajuste de uniones directas; la ficha actual da 93 juntas y 988,83 pulg. Rehacer la precotización.
+
+**Tablas de pesos y botón Recalcular (29-10-2026)**
+1. Integrar las tablas nuevas al cálculo de kg (`controles_tablas.peso_item`, ficha) y llevarlas a la página (`datos.json`).
+2. Botón "Recalcular" en la página: soldaduras, kg, m² y placas desde los datos del plano de cada renglón, sin IA (pedido de Matías).
+3. Pedir a un proveedor el peso de la tee 8" Sch 60 y la tee 12"×8" XS×60 (ninguna tabla pública trae Sch 60).
+4. En Sch 40 de 12"+ y Sch 80 de 10"+ preferir Hackney Ladish sobre Texas Flange/Weldbend (pesos que no siguen el espesor).
 
 **Controles de la precotización** (28-10-2026, segunda tanda corregida: ver `auditorias/2026-10-28_controles_4_agentes.md`)
 1. Cargar horas de antecedentes que faltan (TECPETROL/7 trampas; filtros chicos; tanques grandes) en `costos/horas_por_equipo.csv`.

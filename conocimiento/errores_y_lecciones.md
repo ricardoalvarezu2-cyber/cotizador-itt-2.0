@@ -142,3 +142,8 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 - **Cómo se detectó:** control de `canos_peso_superficie.csv` contra Wermac y Project Materials (388 valores, 373 iguales; los otros 9 desvíos eran de las fuentes).
 - **Corrección:** `construir_base.CORRIGE_B3610` corrige al leer la planilla; se regeneraron `factores_soldadura.csv` y `canos_peso_superficie.csv`.
 - **Lección:** una tabla interna vieja también se controla contra la norma antes de usarla.
+
+## Perfiles HEB y UL con kg/m equivocados en la tabla de perfiles (28-10-2026)
+- **Error:** en `perfiles.csv` (de la planilla de ITT) las HEB repetían los kg/m de las HEA (HEB100 16,7 en vez de 20,4; HEB500 155 en vez de 187: entre 17% y 33% menos), y las UL (UPN chicos) tenían el ancho de ala como peso (UL 40x20 = 20 kg/m en vez de 2,87).
+- **Cómo se detectó:** al armar las tablas de estructura con fuente (INTI-CIRSOC, Acindar, Ferrara, ArcelorMittal).
+- **Corrección:** `construir_base.perfiles()` corrige al leer la planilla (UL fijas; HEB desde `estructura_perfiles_laminados.csv`).
