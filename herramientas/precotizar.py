@@ -355,7 +355,7 @@ def material(r, n):
     ELEGIDO[item["id"]] = c["descripcion"]
     dif = "; ".join(difs + ([nota_u] if nota_u else []))
     tipo = TIPO.get(c["tipo_precio"], "ant")
-    item["fuentes"] = [{"tipo": tipo, "precio": round(precio, 2), "proveedor": f"{c['proveedor'][:70]} · {c['codigo']}",
+    item["fuentes"] = [{"tipo": tipo, "precio": round(precio, 2), "proveedor": f"{c['proveedor'][:70]} · {c['codigo']}", "codigo": c["codigo"],
                         "origen": (c["ruta_origen"] + (" · " + c["archivo_origen"] if c["archivo_origen"] else ""))[:200],
                         "fecha": c["fecha_ultimo_precio"], "coincide": coincide, **({"diferencia": dif} if coincide == "similar" else {})}]
     if fam == "VAL" and "taval" in norm(c.get("marca", "") + " " + c["proveedor"]):
@@ -692,7 +692,7 @@ def main(carpeta, comparar=False):
                        f"y sin el montaje propio del antecedente. No incluye: {terc['no_incluye'] or 's/d'}.")
         items.append({"id": "S01", "pos": "MO", "grupo": "mo", "descripcion": "Fabricación (soldadura y armado) por tercero, mismo tipo de equipo",
                       "especificacion": f"{terc['descripcion'][:200]} · alternativa propia: {fmt(s['pulg_eq'], 2)} pulg-eq × USD {fmtg(tar)}", "cantidad": 1, "unidad": "gl",
-                      "fuentes": [{"tipo": "cot", "precio": float(terc["ultimo_precio_usd"]), "proveedor": f"{terc['proveedor'][:60]} · {terc['codigo']}",
+                      "fuentes": [{"tipo": "cot", "precio": float(terc["ultimo_precio_usd"]), "proveedor": f"{terc['proveedor'][:60]} · {terc['codigo']}", "codigo": terc["codigo"],
                                    "origen": terc["ruta_origen"][:200], "fecha": terc["fecha_ultimo_precio"], "coincide": "similar",
                                    "diferencia": f"trabajo del mismo tipo ({terc['equipo_referencia'][:60]}); confirmar alcance y tamaño con el tercero"},
                                   {"tipo": "ant", "precio": propia, "proveedor": f"Soldadura propia {fmt(s['pulg_eq'], 2)} pulg-eq × {fmtg(tar)} ({fila_t['concepto']})"[:200],
@@ -730,7 +730,7 @@ def main(carpeta, comparar=False):
         informe.append(f"- **Pintura:** {fmt(m2t, 2)} m² ({det}) × USD {fmt(t, 2)}/m² ({pin['servicio'][:50]}, {pin['proveedor'][:30]}, {pin['fecha_ultimo_precio']}) = USD {fmt(m2t * t, 2)}.")
         items.append({"id": "S02", "pos": "PIN", "grupo": "servicio", "descripcion": "Granallado y pintura (m² calculados)",
                       "especificacion": f"{fmt(m2t, 2)} m² exteriores: {det}", "cantidad": round(max(m2t, 0.01), 3), "unidad": "m2",
-                      "fuentes": [{"tipo": "ant", "precio": round(t, 2), "proveedor": f"{pin['proveedor'][:60]} · {pin['codigo']}", "origen": pin["ruta_origen"][:200],
+                      "fuentes": [{"tipo": "ant", "precio": round(t, 2), "proveedor": f"{pin['proveedor'][:60]} · {pin['codigo']}", "codigo": pin["codigo"], "origen": pin["ruta_origen"][:200],
                                    "fecha": pin["fecha_ultimo_precio"], "coincide": "similar", "diferencia": "m² calculados (caños, accesorios por regla, envolvente y estructura); esquema de pintura a confirmar con el pliego"}]})
     # fabricación de la estructura (bastidor, patas, cunas): kg × tarifa por kg; antes no se calculaba (CTRL-M01, P01, C01)
     kg_est = 0.0
@@ -763,7 +763,7 @@ def main(carpeta, comparar=False):
                        + (" · ⚠ horas supuestas: cargar `parametros.ph_horas`" if supuesto else "") + f" · volumen interior de caños y niples {fmt(litros, 1)} l.")
         items.append({"id": "S03", "pos": "PH", "grupo": "servicio", "descripcion": "Prueba hidráulica (horas de planta)",
                       "especificacion": f"{fmtg(horas)} h · volumen interior {fmt(litros, 1)} l", "cantidad": horas, "unidad": "h",
-                      "fuentes": [{"tipo": "ant", "precio": t, "proveedor": f"{ph['proveedor'][:60]} · {ph['codigo']}", "origen": ph["ruta_origen"][:200],
+                      "fuentes": [{"tipo": "ant", "precio": t, "proveedor": f"{ph['proveedor'][:60]} · {ph['codigo']}", "codigo": ph["codigo"], "origen": ph["ruta_origen"][:200],
                                    "fecha": ph["fecha_ultimo_precio"], "coincide": "similar" if supuesto else "igual",
                                    **({"diferencia": "horas supuestas (6 h): confirmar"} if supuesto else {})}]})
     rx = float(base.get("parametros", {}).get("rx_pct", 0) or 0)

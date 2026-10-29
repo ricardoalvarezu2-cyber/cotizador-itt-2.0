@@ -23,6 +23,7 @@
   // ------------------------------------------------------------------ carga
   try {
     S.datos = await (await fetch("datos.json")).json();
+    Busqueda.catalogo(S.datos); // para avisar si el catálogo tiene un precio más nuevo que el de un ítem
   } catch (e) {
     app.innerHTML = `<div class="aviso bad"><b>No se pudieron cargar los catálogos.</b><p>Recargá la página. Si sigue, avisale a quien mantiene el cotizador.</p></div>`;
     return;

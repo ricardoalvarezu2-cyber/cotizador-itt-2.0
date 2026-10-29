@@ -449,7 +449,7 @@ const Busqueda = (() => {
   // Ítem de cotizacion.json a partir de un renglón del catálogo de materiales
   function itemDeMaterial(r, resultado, cantidad, id) {
     const coincide = resultado.estado === "igual" ? "igual" : "similar";
-    const f = { tipo: TIPO_FUENTE[r.tp] || "ant", precio: r.p || 0, proveedor: `${(r.pr || "").slice(0, 70)} · ${r.c}`, origen: r.o || "", fecha: r.fe || hoy(), coincide };
+    const f = { tipo: TIPO_FUENTE[r.tp] || "ant", precio: r.p || 0, proveedor: `${(r.pr || "").slice(0, 70)} · ${r.c}`, codigo: r.c, origen: r.o || "", fecha: r.fe || hoy(), coincide };
     if (coincide === "similar") f.diferencia = resultado.difs.join("; ") || "Pieza similar: completar en qué difiere";
     if (!r.p) { f.tipo = "est"; f.proveedor = "SIN PRECIO CONFIABLE: pedir cotización · " + r.c; f.coincide = "sin_ref"; f.diferencia = "Sin precio confiable en el catálogo"; }
     const it = { id, pos: "", grupo: "material", descripcion: r.d.slice(0, 120), especificacion: describirAtributos(r.a), cantidad, unidad: r.u || "un", fuentes: [f] };
@@ -497,6 +497,11 @@ const Busqueda = (() => {
   }
 
   // Avisos de una cotización (verificar_computo + control de carga)
+  // Código de catálogo de una fuente (auditoría 29-10-2026): el campo codigo, o el que quedó escrito en el proveedor
+  // ("Renard · CAN-01435") en las cotizaciones anteriores. Con él se avisa si el catálogo cambió después de cargarlo.
+  const codigoDe = s => s.codigo || (String(s.proveedor || "").match(/\b[A-Z]{3}-\d{5}\b/) || [])[0] || "";
+  let CAT = null;
+  function catalogo(datos) { CAT = new Map([...(datos.materiales || []), ...(datos.servicios || [])].map(m => [m.c, m])); }
   function avisos(cfg) {
     const out = []; const h = hoy();
     for (const it of cfg.items) {
@@ -514,6 +519,9 @@ const Busqueda = (() => {
         const meses = (Y - y) * 12 + M - m;
         if (meses > 6 && s.tipo !== "est") out.push({ nivel: "warn", txt: `${tag}: precio de hace ${meses} meses (${s.fecha.split("-").reverse().join("-")}), actualizar` });
       }
+      const cc = CAT && !it.global && codigoDe(s), m = cc && CAT.get(cc);
+      if (m && m.p && s.precio && Math.abs(m.p - s.precio) >= 0.01 && (m.fe || "") > (s.fecha || ""))
+        out.push({ nivel: "warn", txt: `${tag}: el catálogo (${cc}) tiene un precio más nuevo: USD ${n2(m.p)} del ${String(m.fe).split("-").reverse().join("-")} (acá USD ${n2(s.precio)}); actualizalo si corresponde` });
       for (const x of out.slice(n0)) { x.id = it.id; x.corto = x.txt.slice(tag.length + 2); }
     }
     const pz = plazoBloquea(cfg);
@@ -532,7 +540,7 @@ const Busqueda = (() => {
     if (!d || !calc || d >= calc || String(cfg.plazo?.justificacion || "").trim()) return "";
     return `Plazo ofrecido ${d} días, menor que el calculado (${calc} días): corregilo o escribí la justificación en Plazo. Hasta entonces no se generan las ofertas.`;
   }
-  return { norm, coincide, campos, opcionales, valores, materiales, servicios, itemDeMaterial, itemDeServicio, soldadura, tarifa, avisos, plazoCalculado, plazoBloquea, TIPO_FUENTE, CON_TIPO };
+  return { norm, coincide, campos, opcionales, valores, materiales, servicios, itemDeMaterial, itemDeServicio, soldadura, tarifa, avisos, catalogo, codigoDe, plazoCalculado, plazoBloquea, TIPO_FUENTE, CON_TIPO };
 })();
 if (typeof module !== "undefined") module.exports = Busqueda;
 
@@ -1816,6 +1824,7 @@ if (typeof module !== "undefined") module.exports = Documentos;
   // ------------------------------------------------------------------ carga
   try {
     S.datos = await (await fetch("datos.json")).json();
+    Busqueda.catalogo(S.datos); // para avisar si el catálogo tiene un precio más nuevo que el de un ítem
   } catch (e) {
     app.innerHTML = `<div class="aviso bad"><b>No se pudieron cargar los catálogos.</b><p>Recargá la página. Si sigue, avisale a quien mantiene el cotizador.</p></div>`;
     return;
