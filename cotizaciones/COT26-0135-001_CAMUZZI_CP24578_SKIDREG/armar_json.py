@@ -32,8 +32,13 @@ poner("1", [fuente("cot", 9545.0, "Tormene Americana · oferta TA7785A pos. 1 (T
 poner("2", [fuente("cot", 6073.0, "Tormene Americana · oferta TA7785A pos. 2 (TA956-DFO activo silenciado)", TORMENE, "2026-06-16", "similar",
                    "DN3\" #300 (pedido #150); silenciador interno. Pedir cotización para #150 y estas condiciones"),
             fuente("ant", 4060.0, "Planilla Sacde/15 (VAL-03275: válvula reguladora 3\" RF set 0,03 kg/cm2)", "fuentes_originales/ofertas_texto/Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL", "2026-02-20", "similar", "otra aplicación (baja presión)")])
-items["3"]["taval"] = items["4"]["taval"] = True
-poner("9", items["9"]["fuentes"], descripcion="Te normal 6\" STD A-234 WPB BW (el plano dice A-105: se cotiza WPB, desvío a declarar)")
+# Esféricas: marca del listado de Camuzzi (Matías, 29-10-2026); el precio Taval de la misma especificación queda como referencia
+for i in items.values():
+    i.pop("taval", None)  # Taval no está en el listado SCE-IN-501-0015: nada lleva el factor de válvulas Taval
+for p in ("3", "4"):
+    f = items[p]["fuentes"][0]
+    f["coincide"], f["diferencia"] = "similar", "precio de referencia Taval (misma especificación): comprar marca del listado SCE-IN-501-0015 (Esferomatic, Worcester, Valvtronic, Pentair, Indave, Wenlen, Beta, Valmec)"
+# Pos 9 y 14: se cotiza lo que dice el plano (te ASTM A-105, cupla ASTM A-106); el precio es de la pieza similar y Compras pide la del plano
 poner("10", [fuente("lista", 283.84, "Renard (cód. 3533) · ABW-00423", "fuentes_originales/renar_lista_2025-12.xlsx", "2025-12-26", "igual")])
 poner("15", [fuente("ant", 170.0, "Manifold ABAC de 3 vías M1-C-T AISI 304/316 (OTR-02980, planilla TAVAL/40)", "fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/4.Armado de la Oferta Comercial/LM costo Filtros rev.1.xlsx.txt", "2026-01-15", "similar", "manifold de 3 vías; pedir cotización de la toma multiport a ABAC")])
 poner("16", SIN("válvula de alivio roscada 1/2\" tipo S-71: no hay precio ni pieza parecida (solo PSV de 1 1/2\" x 2\")"))
@@ -90,7 +95,7 @@ base["parametros"].update({"TRANS": 1, "TC": 1541.43, "TR_ARS": 700000, "TR_EMB"
 base["plazo"] = {"dias": 120, "texto": "desde OC · entregado en Transporte Cruz del Sur (Tapiales)",
                  "tareas": [["Ingeniería: planos, procedimientos y calificaciones para aprobación de Camuzzi", 0, 20, ""],
                             ["Reguladoras y monitoras Tormene (45/60 días de OC y anticipo)", 0, 60, "crit"],
-                            ["Esféricas Taval, bridas, accesorios y caño", 0, 30, ""],
+                            ["Esféricas, bridas, accesorios y caño", 0, 30, ""],
                             ["Prefabricado, soldadura, RX 100% y PH (sin válvulas)", 30, 60, "tal"],
                             ["Montaje de reguladoras, conexionado de pilotos, pintura y prueba de fugas", 60, 80, "tal"],
                             ["Inspección Camuzzi, data book y despacho", 80, 95, "tal"]],
@@ -111,9 +116,7 @@ base["pedido"] = {"eyebrow": "Concurso de precios N° 24578 · Cláusulas partic
 base["nota_mo_html"] = ("Soldadura propia por pulgada (16 USD/pulg-eq): juntas contadas de la columna de extremos (bridas WN, tees, reducciones y casquetes; los caños no tienen largo en el plano y se midieron del dibujo). "
                         "Montaje, ingeniería y calidad estimados del antecedente de skid más parecido. Incluye RX 100% (DB NDT 08-2026), PH, pintura, conexionado de pilotos y fabricación del skid (330 kg estimados). "
                         "Las juntas y espárragos van según la nota del plano (solo uniones internas; las de conexión a la planta no).")
-base["desvios"] = [{"tag": "Pos 9", "titulo": "Te normal 6\" en A-234 WPB", "texto": "El plano dice ASTM A-105 (forjado) para una te STD a tope: se cotiza A-234 WPB. Confirmar o pedir te forjada."},
-                   {"tag": "Pos 14", "titulo": "Cupla en A-105", "texto": "El plano dice A-106 (caño) para una cupla: se cotiza A-105 forjada."},
-                   {"tag": "Pos 1-2", "titulo": "Reguladoras de referencia en #300", "texto": "El precio es de Tormene TA956 #300 (ERP Pilará, 06-2026). Pedir cotización #150 a marcas del listado SCE-IN-501-0015."}]
+base["desvios"] = [                   {"tag": "Pos 1-2", "titulo": "Reguladoras de referencia en #300", "texto": "El precio es de Tormene TA956 #300 (ERP Pilará, 06-2026). Pedir cotización #150 a marcas del listado SCE-IN-501-0015."}]
 base["antecedentes"] = [
     {"carpeta_html": "<b>CAMUZZI/23</b> · Concurso 17584, ítem 5 (OC 4500150421)", "fecha": "06-03-2025", "que": "Skid de regulación / medición SCE-RE-315-0047 (ERP Ascensión), ganado", "precio": "venta 24.454", "tomado_html": "Alcance y control del orden de magnitud (no hay planilla de costo)"},
     {"carpeta_html": "<b>ALONZO RED/2</b> · ERP B° Pilará (Naturgy)", "fecha": "16-06-2026", "que": "Reguladoras Tormene TA956 3\" monitor + activo", "precio": "9.545 / 6.073", "tomado_html": "Precio de las pos 1 y 2"},
@@ -131,7 +134,7 @@ base["compras"] = {"fecha_respuesta": "2026-11-04", "material_en_planta_dias": 6
                    "requisitos_generales": ["Cotizar en USD sin IVA, con plazo de entrega y validez de la oferta.", "Certificados de material 3.1; válvulas esféricas con certificados de fabricación y prueba según SCE-IN-501-0008 / SCE-RE-308-0001.",
                                             "Marcas del listado SCE-IN-501-0015 de Camuzzi.", "Indicar cualquier diferencia con lo pedido."],
                    "notas": {"1": "Monitora pilotada NC, obturador guiado, 3\" #150 RF, Pe 15-10 bar, Pr 4 bar, Q 6.000 Sm3/h, con switch de posición", "2": "Reguladora pilotada a diafragma NA, 3\" #150 RF, mismas condiciones"},
-                   "proveedores": {"1": "Tormene Americana", "2": "Tormene Americana", "3": "Taval", "4": "Taval", "5": "Renard / Provemet", "15": "ABAC"},
+                   "proveedores": {"1": "Tormene Americana", "2": "Tormene Americana", "3": "Esferomatic / Worcester / Valvtronic (listado Camuzzi)", "4": "Esferomatic / Worcester / Valvtronic (listado Camuzzi)", "5": "Renard / Provemet", "15": "ABAC"},
                    "cantidad_compra": {"21": "media tira de 6 m", "22": "media tira de 6 m", "23": "media tira de 6 m", "24": "media tira de 6 m"},
                    "servicios": [{"servicio": "Radiografía 100% y tintas penetrantes", "proveedores": "DB NDT / Antonelli", "referencia": "DB NDT 08-2026", "nota": ""},
                                  {"servicio": "Flete a Tapiales con hidrogrúa", "proveedores": "a definir", "referencia": "sin referencia", "nota": ""}]}
@@ -140,7 +143,7 @@ import camuzzi_comun  # noqa: E402
 camuzzi_comun.oferta(C, "COT26-0135-001", "Skid de regulacion", 2, "skid de regulación / medición según plano SCE-RE-315-0048 y especificación SCE-RE-515-0032", "1", 120,
                      ["Concurso de precios N° 24578: planilla de cotización, cláusulas particulares (01-10-2026) y condiciones generales", "Plano mecánico SCE-RE-315-0048 rev 0", "Especificación técnica SCE-RE-515-0032 (19-10-2026)"],
                      "Salto de regulación de presión sobre skid: 2 ramas 3\" #150 con monitora y reguladora pilotadas, colector de entrada 6\" y de salida 8\". Pe 15-10 bar, Pr 4 bar, Q 1.000-6.000 Sm3/h. RX 100%, PH según NAG-124, prueba de fugas a 5,5 bar, protección anticorrosiva SCE-PC-511-0003.",
-                     ["Te normal 6\" (pos 9): el plano dice ASTM A-105; se ofrece A-234 WPB a tope.", "Cupla 1/2\" (pos 14): se ofrece A-105 (el plano dice A-106).",
+                     [
                       "Largos de caño: el plano no los indica; se tomaron del dibujo.", "Sensores A, B y C: incluidos (marca del listado SCE-IN-501-0015); si los provee Camuzzi, se descuentan.",
                       "Reguladoras y monitoras: marca y modelo a confirmar dentro del listado de Camuzzi."],
                      ["Ingeniería de fabricación y documentación para aprobación (planos, mapa de soldaduras, procedimientos y calificaciones).", "Suministro de todos los materiales del plano, juntas y espárragos internos.",

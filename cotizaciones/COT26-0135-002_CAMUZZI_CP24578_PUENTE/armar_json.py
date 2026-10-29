@@ -37,9 +37,14 @@ poner("1", [fuente("est", 9000.0, "Estimado: filtro FM-6 #150 simple módulo fab
             fuente("ant", 5574.88, "Planilla TAVAL/40: costo del filtro FM3 S150 (materiales 1.639 + MO 3.855 + repuestos y seguro)", "fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/4.Armado de la Oferta Comercial/LM costo Filtros rev.1.xlsx.txt", "2026-01-15", "similar", "FM3 (menor)")])
 poner("2", [fuente("est", 90.0, "Estimado: 2 bridas WN 4\" #150 (Renard 35,65 c/u) + 0,3 m de caño 4\" sch 40 (Renard 26,95/m)", "fuentes_originales/renar_lista_2025-12.xlsx", "2025-12-26", "similar", "largo definitivo según la turbina que provee Camuzzi")])
 poner("3", [fuente("lista", 740.0, "Taval (Lista 30 × 0.52) · VAL-04474 (BF61501R0104VP)", "fuentes_originales/taval_lista30_2025-09.xlsx", "2025-09-01", "similar", "antifuego API 6D según SCE-IN-501-0008 a confirmar con Taval")], taval=True)
-items["4"]["taval"] = True
-poner("7", items["7"]["fuentes"], descripcion="Te normal 6\" STD A-234 WPB BW (el plano dice A-105: desvío a declarar)")
-poner("8", items["8"]["fuentes"], descripcion="Te normal 4\" STD A-234 WPB BW (el plano dice A-105: desvío a declarar)")
+# Esféricas: marca del listado de Camuzzi (Matías, 29-10-2026); el precio Taval de la misma especificación queda como referencia
+for i in items.values():
+    i.pop("taval", None)  # Taval no está en el listado SCE-IN-501-0015: nada lleva el factor de válvulas Taval
+for p in ("3", "4"):
+    f = items[p]["fuentes"][0]
+    f["coincide"], f["diferencia"] = "similar", "precio de referencia Taval (misma especificación): comprar marca del listado SCE-IN-501-0015 (Esferomatic, Worcester, Valvtronic, Pentair, Indave, Wenlen, Beta, Valmec)"
+# Pos 7, 8 y 16: se cotiza lo que dice el plano (tes ASTM A-105, cupla ASTM A-106); el precio es de la pieza similar y Compras pide la del plano
+poner("12", [fuente("lista", 65.2 + 2.71, "Esférica 1/2\" NPT S3000 A-105 (VAL-03526, 65,20; precio de referencia Taval, comprar marca del listado) + cupla 1/2\" S3000 A-105 (AFO-00714, Renard 2,71) con tapón", "conocimiento/precios/catalogo_materiales.csv", "2025-09-01", "similar", "material S/ Fabricante en el plano; marca del listado de Camuzzi")])
 poner("11", SIN("termovaina 3/4\" NPT AISI 316: la base solo tiene termovainas bridadas 1 1/2\"-2\" (otra pieza)"))
 poner("13", [fuente("cot", round(200 * 17.4 / 13.4 * 1.10, 2), "Grupo Provemet cot. 236623: UPN 120 a USD 17,40/m (1,30 USD/kg +10% recortes) × 200 kg estimados (3.530 × 800 mm, soportes y orejas)",
                     "fuentes_originales/listas_vendedor/2026-10-28/provemet_cotizacion_236623_perfiles_2025-07-01.pdf", "2025-07-01", "similar", "kilos estimados del plano")],
@@ -76,7 +81,7 @@ base["items"] = [items.get(i["pos"], i) if i["grupo"] == "material" else i for i
 base["parametros"].update({"TRANS": 1, "TC": 1541.43, "TR_ARS": 700000, "TR_EMB": 150, "TR_F": 1.0})
 base["plazo"] = {"dias": 105, "texto": "desde OC · entregado en Transporte Cruz del Sur (Tapiales)",
                  "tareas": [["Ingeniería y documentación para aprobación de Camuzzi", 0, 20, ""], ["Filtro FM-6: tapa, elemento y materiales", 0, 45, "crit"],
-                            ["Esféricas Taval, bridas, accesorios y caño", 0, 30, ""], ["Fabricación del filtro y prefabricado del puente, RX 100% y PH", 45, 70, "tal"],
+                            ["Esféricas, bridas, accesorios y caño", 0, 30, ""], ["Fabricación del filtro y prefabricado del puente, RX 100% y PH", 45, 70, "tal"],
                             ["Montaje, pintura y prueba de fugas", 70, 80, "tal"], ["Inspección Camuzzi, data book y despacho", 80, 90, "tal"]],
                  "nota": "Fija el plazo el filtro FM-6 (tapa de cierre rápido y elemento). La turbina la provee Camuzzi: se entrega con carretel provisorio."}
 base["flete"] = {"etiqueta": "Flete a Transporte Cruz del Sur (Tapiales)",
@@ -91,8 +96,7 @@ base["pedido"] = {"eyebrow": "Concurso de precios N° 24578 · Cláusulas partic
                                       "Protección anticorrosiva SCE-PC-511-0003", "Esféricas según SCE-IN-501-0008 / SCE-RE-308-0001", "Documentación para aprobación y data book; inspección de Camuzzi"]}
 base["nota_mo_html"] = ("Soldadura propia por pulgada (16 USD/pulg-eq) contada de la columna de extremos; caños medidos del dibujo. El filtro FM-6 va como un ítem completo (fabricado por ITT, con su MO). "
                         "Ingeniería 20 h y calidad 40 h por criterio (el antecedente de puentes en serie no sirve para un equipo único con aprobación de Camuzzi). Incluye RX 100%, PH, pintura y skid (200 kg estimados).")
-base["desvios"] = [{"tag": "Pos 7-8", "titulo": "Tes en A-234 WPB", "texto": "El plano dice A-105 para tes STD a tope: se cotiza A-234 WPB."},
-                   {"tag": "Pos 2", "titulo": "Carretel provisorio", "texto": "Largo según la turbina que provee Camuzzi (300 mm en el plano): confirmar marca y modelo."}]
+base["desvios"] = [                   {"tag": "Pos 2", "titulo": "Carretel provisorio", "texto": "Largo según la turbina que provee Camuzzi (300 mm en el plano): confirmar marca y modelo."}]
 base["antecedentes"] = [
     {"carpeta_html": "<b>CAMUZZI/23</b> · Concurso 17584", "fecha": "06-03-2025", "que": "Filtro FM-6 #300 simple módulo (venta)", "precio": "13.543", "tomado_html": "Costo estimado del filtro FM-6"},
     {"carpeta_html": "<b>TAVAL/40</b> · Inarteco Lic 9333", "fecha": "15-01-2026", "que": "Filtros FM3 S150 / FM8 S600 con planilla de costo", "precio": "costo 5.575 / 14.375", "tomado_html": "Control del costo del filtro"}]
@@ -104,13 +108,13 @@ base["pie"] = "Fuentes: base de conocimiento del repositorio cotizador-itt. Prec
 base["compras"] = {"fecha_respuesta": "2026-11-04", "material_en_planta_dias": 45, "lugar_entrega": "Planta ITT S.A., Av. 12 de Octubre 4004, Quilmes Oeste, Bs. As.",
                    "requisitos_generales": ["Cotizar en USD sin IVA, con plazo de entrega y validez de la oferta.", "Certificados 3.1; esféricas con certificados según SCE-IN-501-0008 / SCE-RE-308-0001.", "Marcas del listado SCE-IN-501-0015."],
                    "notas": {"1": "Tapa de cierre rápido y elemento filtrante para FM-6 #150 (plano tipo SCE-RE-112-0004)"},
-                   "proveedores": {"3": "Taval", "4": "Taval", "5": "Renard / Provemet"}, "cantidad_compra": {"15": "media tira de 6 m"},
+                   "proveedores": {"3": "Esferomatic / Worcester / Valvtronic (listado Camuzzi)", "4": "Esferomatic / Worcester / Valvtronic (listado Camuzzi)", "5": "Renard / Provemet"}, "cantidad_compra": {"15": "media tira de 6 m"},
                    "servicios": [{"servicio": "Radiografía 100% y tintas penetrantes", "proveedores": "DB NDT / Antonelli", "referencia": "DB NDT 08-2026", "nota": ""}]}
 json.dump(base, open(C / "cotizacion.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 camuzzi_comun.oferta(C, "COT26-0135-002", "Puente de medicion", 3, "skid puente de medición según plano SCE-ME-315-039 y especificación SCE-ME-515-0030", "1", 105,
                      ["Concurso de precios N° 24578: planilla de cotización, cláusulas particulares y condiciones generales", "Plano mecánico SCE-ME-315-039", "Especificación técnica SCE-ME-515-0030 (19-10-2026)"],
                      "Puente de medición volumétrico con bypass sobre skid: filtro FM-6 #150 simple módulo, línea de medición 4\" con carretel provisorio de turbina, bypass 4\", válvulas esféricas paso total. RX 100%, PH según NAG-124, prueba de fugas, protección anticorrosiva SCE-PC-511-0003.",
-                     ["Turbina de medición: la provee Camuzzi; se entrega un carretel provisorio con sus dimensiones.", "Tes (pos 7 y 8): se ofrecen A-234 WPB a tope (el plano dice A-105).",
+                     ["Turbina de medición: la provee Camuzzi; se entrega un carretel provisorio con sus dimensiones.",
                       "Largos de caño tomados del dibujo (el plano no los indica).", "Sensor A incluido; si lo provee Camuzzi, se descuenta."],
                      ["Ingeniería de fabricación y documentación para aprobación.", "Fabricación del filtro FM-6 según el plano tipo de Camuzzi.", "Suministro de materiales del plano, juntas y espárragos internos.",
                       "Prefabricado, armado y soldadura en taller; RX 100% y tintas; PH y prueba de fugas.", "Protección anticorrosiva SCE-PC-511-0003.", "Data book y certificados.", "Embalaje y flete hasta Transporte Cruz del Sur (Tapiales)."])

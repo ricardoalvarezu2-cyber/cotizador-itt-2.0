@@ -32,3 +32,8 @@ Transcripción del plano y cantidades: bien. Precios Tormene y Taval verificados
 - Pintura: se suma el skid (≈ 10,7 m²). Prueba de fugas con N2: renglón propio (250 estimado).
 - Quedaron archivos de plantilla en `oferta/`: borrados.
 - **Sigue abierto (crítico):** la monitora Tormene cotizada trae bloqueo OPSO y es #300 (el plano no pide OPSO y es #150), y el switch de posición (pos C) puede estar incluido en la reguladora. Pedir cotización #150 sin OPSO. Explicar contra CAMUZZI/23 (24.454) antes de presentar.
+
+## 29-10-2026 · Lista igual al plano (pedido de Matías)
+- `pedido/lista_materiales_plano.csv` corregida para que descripción y MATERIAL/OBS. digan lo mismo que el plano (antes había materiales reinterpretados, "RF" y "radio largo" agregados y textos cortados a 60 caracteres por `precotizar.py`, ya corregido). Lo que agrega ITT (planos tipo, kg estimados, largo medido de los caños) pasó a la columna `modelo_fabricante`.
+- Tes en ASTM A-105 y cupla en ASTM A-106 como dice el plano: se sacaron los desvíos "se cotiza A-234 WPB / A-105"; el precio es de la pieza similar y Compras pide la del plano.
+- Esféricas: marca del listado de Camuzzi (Taval no figura); precio Taval de la misma especificación como referencia y sin el factor de válvulas Taval (ahora llevan 1,35).

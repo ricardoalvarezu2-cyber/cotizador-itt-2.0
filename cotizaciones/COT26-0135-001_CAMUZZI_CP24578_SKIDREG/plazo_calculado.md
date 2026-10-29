@@ -6,7 +6,7 @@ Generado por `herramientas/plazo.py` (regla de `conocimiento/plazos.md` §4). Pr
 
 - Ingeniería: planos, procedimientos y calificaciones para aprobación de Camuzzi: día 0 a 20
 - Reguladoras y monitoras Tormene (45/60 días de OC y anticipo): día 0 a 60
-- Esféricas Taval, bridas, accesorios y caño: día 0 a 30
+- Esféricas, bridas, accesorios y caño: día 0 a 30
 
 ## 2. Resultado
 

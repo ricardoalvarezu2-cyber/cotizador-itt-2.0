@@ -281,7 +281,7 @@ def material(r, n):
                 VIEJOS[r["pos"]] = f"se prefirió un precio reciente a {elegido[7]['tipo_precio']} del {elegido[7]['fecha_ultimo_precio']} ({elegido[7]['codigo']}, USD {fmt(float(elegido[7]['ultimo_precio_usd']), 2)})"
                 elegido = nuevo
     item = {"id": f"M{n:02d}", "pos": r["pos"], "grupo": "material",
-            "descripcion": f"{r['descripcion'][:60]} {r['diametro']}".strip(), "cantidad": cant, "unidad": unidad,
+            "descripcion": f"{r['descripcion']} {r['diametro']}".strip(), "cantidad": cant, "unidad": unidad,
             "especificacion": f"Plano: {r['diametro']} · {r['serie_sch']} · {r['material']} · {r['extremos']}" + (f" · {r['modelo_fabricante']}" if r.get("modelo_fabricante") else "")}
     if provee_cliente(r):
         item["provee"] = "cliente"

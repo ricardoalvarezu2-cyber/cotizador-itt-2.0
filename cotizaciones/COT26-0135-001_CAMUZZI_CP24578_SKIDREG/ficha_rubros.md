@@ -7,11 +7,11 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 - Juntas a tope (BW) de taller: **36** · juntas SW, cuplas y olets: **4** · extremos para soldar en campo: 0
 - Pulgadas equivalentes de soldadura: **195,50**
-- kg de piping (caños, bridas, accesorios y válvulas con tabla): **335 kg** · bridas: 20
+- kg de piping (caños, bridas, accesorios y válvulas con tabla): **401 kg** · bridas: 20
 - Diámetros soldados a tope: 8", 6", 3"
-- Sin peso (no suman kg): 1 Válvula monitora pilotada obturador guia; 2 Válvula reguladora pilotada a diafragma ; 5 Brida WN RF 3"; 6 Brida WN RF 6"; 7 Brida WN RF 8"; 8 Brida ciega RF 8"; 10 Te de reducción 8"x6"; 11 Reducción concéntrica 6"x3"; 15 Toma multiport acero inoxidable ABAC 1/2; 16 Válvula de alivio de capacidad reducida ; 20 Skid y soportes s/ SCE-RE-110-0006 Rev.0; 21b Completar media tira de 6 m de la pos 21; 22b Completar media tira de 6 m de la pos 22; 23b Completar media tira de 6 m de la pos 23; 24b Completar media tira de 6 m de la pos 24; A Sensor de presión regulada 0-25 bar 4-20; B Sensor de temperatura de salida 0-100 °C
+- Sin peso (no suman kg): 1 Válvula monitora pilotada obt. guiado - ; 2 Válvula reguladora pilotada a diafragma ; 5 Brida WN 3"; 6 Brida WN 6"; 7 Brida WN 8"; 8 Brida ciega 8"; 11 Reducción concéntrica 6"x3"; 15 Toma multiport AC inoxidable ABAC 1/2"; 16 Válvula alivio cap. reducida roscada tip; 20 Skid y soportes s/ SCE-RE-110-0006 Rev.0; 21b Completar media tira de 6 m de la pos 21; 22b Completar media tira de 6 m de la pos 22; 23b Completar media tira de 6 m de la pos 23; 24b Completar media tira de 6 m de la pos 24; B Temperatura de salida 0-100 °C / 4-20 mA
 - **Costo por antecedentes.** Por antecedentes: USD 3.479,61 (1 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 17,80/pulgada eq. · USD 10,39/kg de piping · USD 96,66/junta a tope
+  - Por unidad: USD 17,80/pulgada eq. · USD 8,67/kg de piping · USD 96,66/junta a tope
 
 ## 2. MO de fabricación de la estructura
 
@@ -20,10 +20,10 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 ## 3. Granallado y pintura
 
-- m² de piping: **9,95** (caños y niples 3,44; bridas, accesorios y válvulas por largo equivalente) · m² de estructura: **0,00**
-- m² total: **9,95** (sin overspray) · esquema: según pliego
-- **Costo por antecedentes.** Por antecedentes: USD 1.032,60 (1 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 103,78/m²
+- m² de piping: **9,94** (caños y niples 3,44; bridas, accesorios y válvulas por largo equivalente) · m² de estructura: **0,00**
+- m² total: **9,94** (sin overspray) · esquema: según pliego
+- **Costo por antecedentes.** Por antecedentes: USD 1.031,95 (1 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 103,82/m²
 
 ## 4. Radiografía y END
 
@@ -55,7 +55,7 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 ## 8. Transporte
 
-- Medidas del skid: 0,00 × 0,00 × 0,00 m (largo × ancho × alto) · kg: **335** (piping + estructura)
+- Medidas del skid: 0,00 × 0,00 × 0,00 m (largo × ancho × alto) · kg: **401** (piping + estructura)
 - ⚠ Faltan las medidas del equipo (largo × ancho × alto): cargarlas del plano de conjunto
 - Sin precio por equipo: se cotiza EXW (o flete aparte en los parámetros). Para sumarlo por equipo, pasar el rubro a global.
 

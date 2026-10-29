@@ -6,7 +6,7 @@ Generado por `herramientas/plazo.py` (regla de `conocimiento/plazos.md` §4). Pr
 
 - Ingeniería y documentación para aprobación de Camuzzi: día 0 a 20
 - Filtro FM-6: tapa, elemento y materiales: día 0 a 45
-- Esféricas Taval, bridas, accesorios y caño: día 0 a 30
+- Esféricas, bridas, accesorios y caño: día 0 a 30
 
 ## 2. Resultado
 

@@ -58,7 +58,7 @@
     "crit"
    ],
    [
-    "Esféricas Taval, bridas, accesorios y caño",
+    "Esféricas, bridas, accesorios y caño",
     0,
     30,
     ""
@@ -132,16 +132,6 @@
  "nota_mo_html": "Soldadura propia por pulgada (16 USD/pulg-eq): juntas contadas de la columna de extremos (bridas WN, tees, reducciones y casquetes; los caños no tienen largo en el plano y se midieron del dibujo). Montaje, ingeniería y calidad estimados del antecedente de skid más parecido. Incluye RX 100% (DB NDT 08-2026), PH, pintura, conexionado de pilotos y fabricación del skid (330 kg estimados). Las juntas y espárragos van según la nota del plano (solo uniones internas; las de conexión a la planta no).",
  "desvios": [
   {
-   "tag": "Pos 9",
-   "titulo": "Te normal 6\" en A-234 WPB",
-   "texto": "El plano dice ASTM A-105 (forjado) para una te STD a tope: se cotiza A-234 WPB. Confirmar o pedir te forjada."
-  },
-  {
-   "tag": "Pos 14",
-   "titulo": "Cupla en A-105",
-   "texto": "El plano dice A-106 (caño) para una cupla: se cotiza A-105 forjada."
-  },
-  {
    "tag": "Pos 1-2",
    "titulo": "Reguladoras de referencia en #300",
    "texto": "El precio es de Tormene TA956 #300 (ERP Pilará, 06-2026). Pedir cotización #150 a marcas del listado SCE-IN-501-0015."
@@ -198,7 +188,7 @@
    "id": "M01",
    "pos": "1",
    "grupo": "material",
-   "descripcion": "Válvula monitora pilotada obturador guiado NC 3\"",
+   "descripcion": "Válvula monitora pilotada obt. guiado - NC 3\"",
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 3\" · 150 · S/ Esp. CAMUZZI · RF · S/ Esp. CAMUZZI (SCE-IN-501-0015)",
@@ -218,7 +208,7 @@
    "id": "M02",
    "pos": "2",
    "grupo": "material",
-   "descripcion": "Válvula reguladora pilotada a diafragma NA 3\"",
+   "descripcion": "Válvula reguladora pilotada a diafragma - NA 3\"",
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 3\" · 150 · S/ Esp. CAMUZZI · RF · S/ Esp. CAMUZZI (SCE-IN-501-0015)",
@@ -247,49 +237,49 @@
    "id": "M03",
    "pos": "3",
    "grupo": "material",
-   "descripcion": "Válvula esférica bridada paso reducido antifuego (APF) 3\"",
+   "descripcion": "Válvula esférica bridada paso reducido APF 3\"",
    "cantidad": 2.0,
    "unidad": "un",
-   "especificacion": "Plano: 3\" · 150 / STD · S/ Esp. CAMUZZI (SCE-IN-501-0008) · RF",
+   "especificacion": "Plano: 3\" · 150 / STD · S/ Esp. CAMUZZI · RF · SCE-IN-501-0008",
    "fuentes": [
     {
      "tipo": "lista",
      "precio": 126.0,
      "proveedor": "Taval (Lista 30 × 0.52) · VAL-04454",
+     "codigo": "VAL-04454",
      "origen": "taval_lista30_2025-09.xlsx · código BF10801R0104VP, hoja PR Flotante",
      "fecha": "2025-09-01",
      "coincide": "similar",
-     "diferencia": "material: A216 WCB (no pedido); extremos: RF (pedido RF/Bridado)"
+     "diferencia": "precio de referencia Taval (misma especificación): comprar marca del listado SCE-IN-501-0015 (Esferomatic, Worcester, Valvtronic, Pentair, Indave, Wenlen, Beta, Valmec)"
     }
-   ],
-   "taval": true
+   ]
   },
   {
    "id": "M04",
    "pos": "4",
    "grupo": "material",
-   "descripcion": "Válvula esférica bridada paso reducido antifuego (APF) 6\"",
+   "descripcion": "Válvula esférica bridada paso reducido APF 6\"",
    "cantidad": 2.0,
    "unidad": "un",
-   "especificacion": "Plano: 6\" · 150 / STD · S/ Esp. CAMUZZI (SCE-IN-501-0008) · RF",
+   "especificacion": "Plano: 6\" · 150 / STD · S/ Esp. CAMUZZI · RF · SCE-IN-501-0008",
    "fuentes": [
     {
      "tipo": "lista",
      "precio": 466.0,
      "proveedor": "Taval (Lista 30 × 0.52) · VAL-04473",
+     "codigo": "VAL-04473",
      "origen": "taval_lista30_2025-09.xlsx · código BF11501R0104VP, hoja PR Flotante",
      "fecha": "2025-09-01",
      "coincide": "similar",
-     "diferencia": "material: A216 WCB (no pedido); extremos: RF (pedido RF/Bridado)"
+     "diferencia": "precio de referencia Taval (misma especificación): comprar marca del listado SCE-IN-501-0015 (Esferomatic, Worcester, Valvtronic, Pentair, Indave, Wenlen, Beta, Valmec)"
     }
-   ],
-   "taval": true
+   ]
   },
   {
    "id": "M05",
    "pos": "5",
    "grupo": "material",
-   "descripcion": "Brida WN RF 3\"",
+   "descripcion": "Brida WN 3\"",
    "cantidad": 12.0,
    "unidad": "un",
    "especificacion": "Plano: 3\" · 150 x STD · ASTM A-105 · RF/BW",
@@ -298,6 +288,7 @@
      "tipo": "lista",
      "precio": 26.61,
      "proveedor": "Renard (cód. 11294) · BRI-01278",
+     "codigo": "BRI-01278",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 11294",
      "fecha": "2025-12-26",
      "coincide": "igual"
@@ -347,7 +338,7 @@
    "id": "M06",
    "pos": "6",
    "grupo": "material",
-   "descripcion": "Brida WN RF 6\"",
+   "descripcion": "Brida WN 6\"",
    "cantidad": 6.0,
    "unidad": "un",
    "especificacion": "Plano: 6\" · 150 x STD · ASTM A-105 · RF/BW",
@@ -356,6 +347,7 @@
      "tipo": "lista",
      "precio": 58.91,
      "proveedor": "Renard (cód. 11297) · BRI-01313",
+     "codigo": "BRI-01313",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 11297",
      "fecha": "2025-12-26",
      "coincide": "igual"
@@ -406,7 +398,7 @@
    "id": "M07",
    "pos": "7",
    "grupo": "material",
-   "descripcion": "Brida WN RF 8\"",
+   "descripcion": "Brida WN 8\"",
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 8\" · 150 x STD · ASTM A-105 · RF/BW",
@@ -415,6 +407,7 @@
      "tipo": "lista",
      "precio": 92.62,
      "proveedor": "Renard (cód. 11298) · BRI-01328",
+     "codigo": "BRI-01328",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 11298",
      "fecha": "2025-12-26",
      "coincide": "igual"
@@ -465,18 +458,20 @@
    "id": "M08",
    "pos": "8",
    "grupo": "material",
-   "descripcion": "Brida ciega RF 8\"",
+   "descripcion": "Brida ciega 8\"",
    "cantidad": 1.0,
    "unidad": "un",
-   "especificacion": "Plano: 8\" · 150 · ASTM A-105 · RF",
+   "especificacion": "Plano: 8\" · 150 x STD · ASTM A-105 · RF",
    "fuentes": [
     {
      "tipo": "lista",
      "precio": 88.17,
      "proveedor": "Renard (cód. 8030) · BRI-01061",
+     "codigo": "BRI-01061",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 8030",
      "fecha": "2025-12-26",
-     "coincide": "igual"
+     "coincide": "similar",
+     "diferencia": "schedule: sin dato (pedido 40)"
     }
    ]
   },
@@ -484,15 +479,16 @@
    "id": "M09",
    "pos": "9",
    "grupo": "material",
-   "descripcion": "Te normal 6\" STD A-234 WPB BW (el plano dice A-105: se cotiza WPB, desvío a declarar)",
+   "descripcion": "Te normal 6\"",
    "cantidad": 3.0,
    "unidad": "un",
-   "especificacion": "Plano: 6\" · STD · ASTM A-105 (plano; se cotiza A-234 WPB BW) · BW",
+   "especificacion": "Plano: 6\" · STD · ASTM A-105 · BW",
    "fuentes": [
     {
      "tipo": "lista",
      "precio": 104.61,
      "proveedor": "Renard (cód. 3468) · ABW-00418",
+     "codigo": "ABW-00418",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3468",
      "fecha": "2025-12-26",
      "coincide": "similar",
@@ -504,7 +500,7 @@
    "id": "M10",
    "pos": "10",
    "grupo": "material",
-   "descripcion": "Te de reducción 8\"x6\"",
+   "descripcion": "Te reducción 8\"x6\"",
    "cantidad": 3.0,
    "unidad": "un",
    "especificacion": "Plano: 8\"x6\" · STD · ASTM A-234 Gr. WPB · BW",
@@ -526,15 +522,17 @@
    "descripcion": "Reducción concéntrica 6\"x3\"",
    "cantidad": 4.0,
    "unidad": "un",
-   "especificacion": "Plano: 6\"x3\" · STD · ASTM A-234 Gr. WPB · BW",
+   "especificacion": "Plano: 6\"x3\" · STD · S/ Esp. CAMUZZI · BW",
    "fuentes": [
     {
      "tipo": "lista",
      "precio": 55.88,
      "proveedor": "Renard (cód. 3064) · ABW-00232",
+     "codigo": "ABW-00232",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3064",
      "fecha": "2025-12-26",
-     "coincide": "igual"
+     "coincide": "similar",
+     "diferencia": "material: A234 WPB (no pedido)"
     }
    ]
   },
@@ -542,7 +540,7 @@
    "id": "M12",
    "pos": "12",
    "grupo": "material",
-   "descripcion": "Casquete semielíptico 6\"",
+   "descripcion": "Casquete semielíptico A.C. 6\"",
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 6\" · STD · ASTM A-234 Gr. WPB · BW",
@@ -551,6 +549,7 @@
      "tipo": "lista",
      "precio": 25.76,
      "proveedor": "Renard (cód. 3435) · ABW-00032",
+     "codigo": "ABW-00032",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3435",
      "fecha": "2025-12-26",
      "coincide": "igual"
@@ -561,7 +560,7 @@
    "id": "M13",
    "pos": "13",
    "grupo": "material",
-   "descripcion": "Casquete semielíptico 8\"",
+   "descripcion": "Casquete semielíptico A.C. 8\"",
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 8\" · STD · ASTM A-234 Gr. WPB · BW",
@@ -570,6 +569,7 @@
      "tipo": "lista",
      "precio": 39.61,
      "proveedor": "Renard (cód. 3436) · ABW-00034",
+     "codigo": "ABW-00034",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3436",
      "fecha": "2025-12-26",
      "coincide": "igual"
@@ -580,31 +580,31 @@
    "id": "M14",
    "pos": "14",
    "grupo": "material",
-   "descripcion": "Cupla de acero para soldar 1/2\" NPT con válvula esférica 1/2 1/2\"",
+   "descripcion": "Cupla de AC sold. 1/2\" NPT c/ válvula esférica 1/2\" S3000 1/2\"",
    "cantidad": 2.0,
    "unidad": "un",
-   "especificacion": "Plano: 1/2\" · 3000 · ASTM A-105 (plano: A-106) · SW/NPT",
+   "especificacion": "Plano: 1/2\" · 3000 · ASTM A-106 · SW/NPT",
    "fuentes": [
     {
      "tipo": "ant",
      "precio": 65.2,
      "proveedor": "válvulas Taval (el resumen las agrupa como \"Valvulas Taval\", factor 1, · VAL-03526",
+     "codigo": "VAL-03526",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\9. CM SKID MANIFOLD PAD S-600 · fuentes_originales/ofertas_texto/TECPETROL/9. CM SKID MANIFOLD PAD S-600/ESTRUCTURA DE COSTOS- LM de Manifold S600 CM - PC0-C",
      "fecha": "2026-01-26",
      "coincide": "similar",
-     "diferencia": "extremos: NPT (pedido NPT/SW)"
+     "diferencia": "material: A105 (pedido A106 B); extremos: NPT (pedido NPT/SW)"
     }
-   ],
-   "taval": true
+   ]
   },
   {
    "id": "M15",
    "pos": "15",
    "grupo": "material",
-   "descripcion": "Toma multiport acero inoxidable ABAC 1/2\"",
+   "descripcion": "Toma multiport AC inoxidable ABAC 1/2\"",
    "cantidad": 2.0,
    "unidad": "un",
-   "especificacion": "Plano: 1/2\" · 3000 · AISI 316 · NPT · ABAC",
+   "especificacion": "Plano: 1/2\" · 3000 · S/ Fabricante · NPT · ABAC",
    "fuentes": [
     {
      "tipo": "ant",
@@ -621,10 +621,10 @@
    "id": "M16",
    "pos": "16",
    "grupo": "material",
-   "descripcion": "Válvula de alivio de capacidad reducida roscada tipo S-71 1/2\"",
+   "descripcion": "Válvula alivio cap. reducida roscada tipo S-71 1/2\"",
    "cantidad": 2.0,
    "unidad": "un",
-   "especificacion": "Plano: 1/2\" · 3000 · S/ fabricante · NPT · tipo S-71",
+   "especificacion": "Plano: 1/2\" · 3000 · S/ Fabricante · NPT · tipo S-71",
    "fuentes": [
     {
      "tipo": "est",
@@ -641,7 +641,7 @@
    "id": "M17",
    "pos": "17",
    "grupo": "material",
-   "descripcion": "Cupla de acero para soldar 1/2\" NPT con tapón 1/2\"",
+   "descripcion": "Cupla de AC para soldar 1/2\" NPT con tapón 1/2\"",
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 1/2\" · 3000 · ASTM A-105 · SW/NPT",
@@ -650,6 +650,7 @@
      "tipo": "lista",
      "precio": 2.71,
      "proveedor": "Renard (cód. 5281) · AFO-00714",
+     "codigo": "AFO-00714",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 5281",
      "fecha": "2025-12-26",
      "coincide": "similar",
@@ -681,10 +682,10 @@
    "id": "M19",
    "pos": "19",
    "grupo": "material",
-   "descripcion": "Válvula de bloqueo y purga con manómetro 0-6 bar 1/2\"",
+   "descripcion": "Válvula blq. y purg. c/ manómetro 0-6 bar 1/2\"",
    "cantidad": 4.0,
    "unidad": "un",
-   "especificacion": "Plano: 1/2\" · 3000 · S/ fabricante · NPT",
+   "especificacion": "Plano: 1/2\" · 3000 · S/ Fabricante · NPT",
    "fuentes": [
     {
      "tipo": "ant",
@@ -701,7 +702,7 @@
    "id": "M20",
    "pos": "20",
    "grupo": "material",
-   "descripcion": "Skid y soportes s/ SCE-RE-110-0006 Rev.0 (3700 x 1630 mm; pe",
+   "descripcion": "Skid y soportes s/ SCE-RE-110-0006 Rev.0",
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Skid 3.700 × 1.630 mm, UPN 120 perimetral y travesaños, soportes de cañería, 4 cáncamos y oreja de PAT (330 kg estimados)",
@@ -721,15 +722,16 @@
    "id": "M21",
    "pos": "21",
    "grupo": "material",
-   "descripcion": "Caño (cantidad no indicada en el plano: medida del dibujo) 3\"",
+   "descripcion": "Caño 3\"",
    "cantidad": 1.8,
    "unidad": "m",
-   "especificacion": "Plano: 3\" · 40 · ASTM A-53 Gr. B · BW",
+   "especificacion": "Plano: 3\" · 40 · ASTM A-53 Gr. B · BW · Cantidad no indicada en el plano (\"_\"): medida del dibujo",
    "fuentes": [
     {
      "tipo": "lista",
      "precio": 18.99,
      "proveedor": "Renard (cód. 1007) · CAN-01485",
+     "codigo": "CAN-01485",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1007",
      "fecha": "2025-12-26",
      "coincide": "similar",
@@ -744,12 +746,13 @@
    "descripcion": "Completar media tira de 6 m de la pos 21 (compra mínima; sobrante a stock)",
    "cantidad": 4.2,
    "unidad": "m",
-   "especificacion": "1 tramo de 6 m para 1,8 m (con tira de 12 m el sobrante superaba 80%)",
+   "especificacion": "1 tramo de 6 m para 1.8 m (con tira de 12 m el sobrante superaba 80%)",
    "fuentes": [
     {
      "tipo": "lista",
      "precio": 18.99,
      "proveedor": "Renard (cód. 1007) · CAN-01485",
+     "codigo": "CAN-01485",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1007",
      "fecha": "2025-12-26",
      "coincide": "similar",
@@ -761,15 +764,16 @@
    "id": "M22",
    "pos": "22",
    "grupo": "material",
-   "descripcion": "Caño (cantidad no indicada en el plano: medida del dibujo) 6\"",
+   "descripcion": "Caño 6\"",
    "cantidad": 2.0,
    "unidad": "m",
-   "especificacion": "Plano: 6\" · 40 · ASTM A-53 Gr. B · BW",
+   "especificacion": "Plano: 6\" · 40 · ASTM A-53 Gr. B · BW · Cantidad no indicada en el plano (\"_\"): medida del dibujo",
    "fuentes": [
     {
      "tipo": "lista",
      "precio": 50.6,
      "proveedor": "Renard (cód. 1056) · CAN-01511",
+     "codigo": "CAN-01511",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1056",
      "fecha": "2025-12-26",
      "coincide": "similar",
@@ -790,6 +794,7 @@
      "tipo": "lista",
      "precio": 50.6,
      "proveedor": "Renard (cód. 1056) · CAN-01511",
+     "codigo": "CAN-01511",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1056",
      "fecha": "2025-12-26",
      "coincide": "similar",
@@ -801,15 +806,16 @@
    "id": "M23",
    "pos": "23",
    "grupo": "material",
-   "descripcion": "Caño (cantidad no indicada en el plano: medida del dibujo) 6\"",
+   "descripcion": "Caño 6\"",
    "cantidad": 2.25,
    "unidad": "m",
-   "especificacion": "Plano: 6\" · 80 · ASTM A-53 Gr. B · BW",
+   "especificacion": "Plano: 6\" · 80 · ASTM A-53 Gr. B · BW · Cantidad no indicada en el plano (\"_\"): medida del dibujo",
    "fuentes": [
     {
      "tipo": "ant",
      "precio": 90.7,
      "proveedor": "Renard · CAN-02603",
+     "codigo": "CAN-02603",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\PAMPA ENERGIA\\7- Licitacion contrato Marco Skid PAD Rincon de Aranda · 4.Armado de la Oferta Comercial/Cot Skid Manifolds Colectores RDA Contrato Marco (2da RDA).xlsx.",
      "fecha": "2026-08-14",
      "coincide": "similar",
@@ -824,12 +830,13 @@
    "descripcion": "Completar media tira de 6 m de la pos 23 (compra mínima; sobrante a stock)",
    "cantidad": 3.75,
    "unidad": "m",
-   "especificacion": "1 tramo de 6 m para 2,25 m (con tira de 12 m el sobrante superaba 80%)",
+   "especificacion": "1 tramo de 6 m para 2.25 m (con tira de 12 m el sobrante superaba 80%)",
    "fuentes": [
     {
      "tipo": "ant",
      "precio": 90.7,
      "proveedor": "Renard · CAN-02603",
+     "codigo": "CAN-02603",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\PAMPA ENERGIA\\7- Licitacion contrato Marco Skid PAD Rincon de Aranda · 4.Armado de la Oferta Comercial/Cot Skid Manifolds Colectores RDA Contrato Marco (2da RDA).xlsx.",
      "fecha": "2026-08-14",
      "coincide": "similar",
@@ -841,15 +848,16 @@
    "id": "M24",
    "pos": "24",
    "grupo": "material",
-   "descripcion": "Caño (cantidad no indicada en el plano: medida del dibujo) 8\"",
+   "descripcion": "Caño 8\"",
    "cantidad": 1.0,
    "unidad": "m",
-   "especificacion": "Plano: 8\" · 40 · ASTM A-53 Gr. B · BW",
+   "especificacion": "Plano: 8\" · 40 · ASTM A-53 Gr. B · BW · Cantidad no indicada en el plano (\"_\"): medida del dibujo",
    "fuentes": [
     {
      "tipo": "lista",
      "precio": 72.64,
      "proveedor": "Renard (cód. 1062) · CAN-01522",
+     "codigo": "CAN-01522",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1062",
      "fecha": "2025-12-26",
      "coincide": "similar",
@@ -870,6 +878,7 @@
      "tipo": "lista",
      "precio": 72.64,
      "proveedor": "Renard (cód. 1062) · CAN-01522",
+     "codigo": "CAN-01522",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1062",
      "fecha": "2025-12-26",
      "coincide": "similar",
@@ -881,7 +890,7 @@
    "id": "M25",
    "pos": "A",
    "grupo": "material",
-   "descripcion": "Sensor de presión regulada 0-25 bar 4-20 mA con válvula de b 3/4\"",
+   "descripcion": "Presión regulada, c/ val. bloq y purga 0-25 bar / 4-20 mA 3/4\"",
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 3/4\" · 150 ·  · NPT",
@@ -901,7 +910,7 @@
    "id": "M26",
    "pos": "B",
    "grupo": "material",
-   "descripcion": "Sensor de temperatura de salida 0-100 °C 4-20 mA 3/4\"",
+   "descripcion": "Temperatura de salida 0-100 °C / 4-20 mA 3/4\"",
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 3/4\" · 150 ·  · NPT",
@@ -921,7 +930,7 @@
    "id": "M27",
    "pos": "C",
    "grupo": "material",
-   "descripcion": "Switch indicador de válvula monitora abierta 0-24 V",
+   "descripcion": "Switch indicador de válv monitora abierta 0-24 V",
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano:  ·  ·  · —",
@@ -961,14 +970,15 @@
    "pos": "PIN",
    "grupo": "servicio",
    "descripcion": "Granallado y pintura (m² calculados)",
-   "especificacion": "9,95 m² exteriores: caños y niples 3,4 + bridas, accesorios y válvulas (largo equivalente) 6,4 + envolvente 0,1 + skid ≈ 10,7 m² (25 m de UPN 120)",
-   "cantidad": 20.652,
+   "especificacion": "9,94 m² exteriores: caños y niples 3,4 + bridas, accesorios y válvulas (largo equivalente) 6,4 + envolvente 0,1 + skid ≈ 10,7 m² (25 m de UPN 120)",
+   "cantidad": 20.639,
    "unidad": "m2",
    "fuentes": [
     {
      "tipo": "ant",
      "precio": 50.0,
      "proveedor": "criterio ITT · PIN-00569",
+     "codigo": "PIN-00569",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN\\4.Armado de la Oferta Comercial",
      "fecha": "2026-10-10",
      "coincide": "similar",
@@ -1048,7 +1058,7 @@
    "pos": "ARM",
    "grupo": "mo",
    "descripcion": "Horas de montaje en planta (armado, movimientos, prueba hidráulica) (estimadas del antecedente)",
-   "especificacion": "215,1 h por skid · mediana de 135 h × 0,828, 535,5 h × 0,67, 130,5 h × 1,648 (horas por unidad × tamaño)",
+   "especificacion": "215,1 h por skid · mediana de 135 h × 0,83, 535,5 h × 0,67, 130,5 h × 1,65 (horas por unidad × tamaño)",
    "cantidad": 215.1,
    "unidad": "h",
    "fuentes": [
@@ -1121,8 +1131,8 @@
   "proveedores": {
    "1": "Tormene Americana",
    "2": "Tormene Americana",
-   "3": "Taval",
-   "4": "Taval",
+   "3": "Esferomatic / Worcester / Valvtronic (listado Camuzzi)",
+   "4": "Esferomatic / Worcester / Valvtronic (listado Camuzzi)",
    "5": "Renard / Provemet",
    "15": "ABAC"
   },

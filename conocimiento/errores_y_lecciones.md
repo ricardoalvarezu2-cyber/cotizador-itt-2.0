@@ -188,3 +188,8 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 ## 29-10-2026 — Separador coalescente Camuzzi cotizado sin la especificación (COT26-0135-003)
 - Qué pasó: la cotización preliminar se armó solo con la planilla; al llegar la ET aparecieron una presión de diseño baja (77 bar contra ~102 bar que exige la PH a 1,3 × la serie ANSI #600), corrosión 3,2 en vez de 1,6, falta del juego de repuestos, una tapa de una marca fuera del listado de Camuzzi (Megatap) y purgas, chicanas, galvanizado, API 1104 y prueba de fugas sin cargar.
 - Lección: la presión de diseño sale de la prueba que pide el cliente, no solo de la presión de operación; y cada marca del cómputo se cruza contra el listado de marcas del cliente antes de cotizar.
+
+## 29-10-2026 — La lista de la cotización no decía lo mismo que el plano (COT26-0135-001 y 002)
+- Qué pasó: Matías comparó la tabla del plano del puente de medición con la planilla y encontró diferencias: materiales cambiados por el criterio de ITT (tes "A-234 WPB" donde el plano dice A-105, cupla A-105 donde dice A-106, "S/ Esp. CAMUZZI" reemplazado), palabras agregadas ("RF", "radio largo", "antifuego") y descripciones cortadas a 60 caracteres por `precotizar.py`. La lista para Compras sí era copia exacta (sale de `transcripcion.json`).
+- Corrección: la descripción y el material se copian tal cual el plano; lo que agrega ITT va en `modelo_fabricante` o en la fuente del precio. Se cotiza lo que pide el plano y el precio de una pieza parecida se marca "similar"; un desvío solo si de verdad no se puede cumplir, y se declara.
+- Lección: cotizar algo distinto de lo que pide el cliente, aunque sea "técnicamente equivalente", es un error que llega al cliente.

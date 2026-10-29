@@ -7,11 +7,11 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 - Juntas a tope (BW) de taller: **21** · juntas SW, cuplas y olets: **3** · extremos para soldar en campo: 0
 - Pulgadas equivalentes de soldadura: **98,62**
-- kg de piping (caños, bridas, accesorios y válvulas con tabla): **383 kg** · bridas: 10
+- kg de piping (caños, bridas, accesorios y válvulas con tabla): **428 kg** · bridas: 10
 - Diámetros soldados a tope: 6", 4"
-- Sin peso (no suman kg): 1 Filtro FM-06 #150 simple módulo s/ SCE-R; 2 Carretel de ajuste / provisorio de turbi; 5 Brida WN RF 4"; 6 Brida WN RF 6"; 9 Reducción concéntrica 6"x4"; 13 Skid y soportes s/ SCE-RE-110-0006 (3530; 15b Completar media tira de 6 m de la pos 15; A Sensor de temperatura para correctora de
+- Sin peso (no suman kg): 1 Filtro FM-06 #150 simple módulo 6"; 2 Carretel de ajuste / provisorio de turbi; 5 Brida WN 4"; 6 Brida WN 6"; 9 Reducción concéntrica 6"x4"; 13 Skid y soportes; 15b Completar media tira de 6 m de la pos 15; A Temperatura para correctora de caudal 0-
 - **Costo por antecedentes.** Por antecedentes: USD 1.755,38 (1 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 17,80/pulgada eq. · USD 4,58/kg de piping · USD 83,59/junta a tope
+  - Por unidad: USD 17,80/pulgada eq. · USD 4,10/kg de piping · USD 83,59/junta a tope
 
 ## 2. MO de fabricación de la estructura
 
@@ -55,7 +55,7 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 ## 8. Transporte
 
-- Medidas del skid: 0,00 × 0,00 × 0,00 m (largo × ancho × alto) · kg: **383** (piping + estructura)
+- Medidas del skid: 0,00 × 0,00 × 0,00 m (largo × ancho × alto) · kg: **428** (piping + estructura)
 - ⚠ Faltan las medidas del equipo (largo × ancho × alto): cargarlas del plano de conjunto
 - Sin precio por equipo: se cotiza EXW (o flete aparte en los parámetros). Para sumarlo por equipo, pasar el rubro a global.
 
