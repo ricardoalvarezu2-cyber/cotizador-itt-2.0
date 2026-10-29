@@ -2951,9 +2951,9 @@ const Asistente = (() => {
   // "Claude ↗" abre la sesión fija (la de la tarea semanal y los pedidos, con el repositorio) en una ventana chica aparte,
   // como un chat flotante; claude.ai no se puede mostrar dentro de la página. "Chat nuevo" crea una sesión limpia con el
   // repositorio (create_session) y la abre en la misma ventana. Las sesiones que crea la página quedan en la colección
-  // "chats" y se archivan solas tras unos días sin uso (config/claude_code.dias_chat, por defecto 3); se pueden recuperar.
+  // "chats" y se archivan solas tras unos días sin uso (config/claude_code.dias_chat, por defecto 2); se pueden recuperar.
   const ENTORNO = "env_01XxXedU9fMy5bmisDSk6jJm", REPO = "https://github.com/tvmaty2186/cotizador-itt", ETIQUETA = "cotizador-itt-chat";
-  let diasChat = 3;
+  let diasChat = 2;
   function armarChat() {
     const btn = document.getElementById("btn-chat"), nuevo = document.getElementById("btn-chat-nuevo");
     if (btn) { btn.hidden = false; btn.title = "Abre Claude Code (la sesión de siempre, con el repositorio) en una ventana aparte"; btn.addEventListener("click", abrirClaude); }
