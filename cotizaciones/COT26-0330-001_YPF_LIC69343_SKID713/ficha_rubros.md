@@ -7,11 +7,11 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 - Juntas a tope (BW) de taller: **93** · juntas SW, cuplas y olets: **28** · extremos para soldar en campo: 0
 - Pulgadas equivalentes de soldadura: **988,83**
-- kg de piping (caños, bridas, accesorios y válvulas con tabla): **6.981 kg** · bridas: 76
+- kg de piping (caños, bridas, accesorios y válvulas con tabla): **8.132 kg** · bridas: 76
 - Diámetros soldados a tope: 12", 8"
-- Sin peso en tabla (no suman kg): 3 Tee normal 8"; 4 Tee de reducción SCH XS x SCH 60 12"x8"; 21 Sockolet SW 3000 LB 12"x3/4"; 22 Sockolet SW 3000 LB 12"x1/2"; 23 Sockolet SW 3000 LB 8"x1 1/2"; 24 Sockolet SW 3000 LB 8"x3/4"; INS TW-011A/B/C/D: Termovaina bridada; INS VBP: Válvula de bloqueo y purga
+- Sin peso en tabla (no suman kg): 3 Tee normal 8"; INS TW-011A/B/C/D: Termovaina bridada; INS VBP: Válvula de bloqueo y purga
 - **Modo: detallado.** Cálculo detallado: USD 22.102,59 (1 renglón/es, con ajuste por inflación).
-  - Detallado por unidad: USD 22,35/pulgada eq. · USD 3,17/kg de piping · USD 237,66/junta a tope
+  - Detallado por unidad: USD 22,35/pulgada eq. · USD 2,72/kg de piping · USD 237,66/junta a tope
 
 ## 2. MO de fabricación de la estructura
 
@@ -40,7 +40,7 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 ## 5. Transporte
 
-- Medidas del skid: 0,00 × 0,00 × 0,00 m (largo × ancho × alto) · kg: **9.081** (piping + estructura)
+- Medidas del skid: 0,00 × 0,00 × 0,00 m (largo × ancho × alto) · kg: **10.232** (piping + estructura)
 - ⚠ Faltan las medidas del equipo (largo × ancho × alto): cargarlas del plano de conjunto
 - Sin precio por equipo: se cotiza EXW (o flete aparte en los parámetros). Para sumarlo por equipo, pasar el rubro a global.
 

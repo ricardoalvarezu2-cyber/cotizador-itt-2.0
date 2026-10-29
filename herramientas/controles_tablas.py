@@ -103,6 +103,73 @@ def peso_valvula(it, at, valv):
                                   + (f"; {', '.join(supuestos)}" if supuestos else "") + ")")
 
 
+def leer_acc():
+    """Accesorios B16.9/B16.11: tabla base y complemento (29-10-2026). El complemento va después: la base manda si hay las dos."""
+    return leer(TEC / "accesorios_peso.csv") + leer(TEC / "accesorios_peso_complemento.csv")
+
+
+_EXTRA = {}
+
+
+def _tabla(nombre):
+    if nombre not in _EXTRA:
+        _EXTRA[nombre] = leer(TEC / nombre)
+    return _EXTRA[nombre]
+
+
+def frac_pulg(t):
+    """'3/4' → 0.75 · '1 1/2' → 1.5 · '12' → 12."""
+    t = str(t).strip().replace('"', "")
+    try:
+        if " " in t:
+            a, b = t.split(" ", 1)
+            return float(a) + frac_pulg(b)
+        if "/" in t:
+            a, b = t.split("/")
+            return float(a) / float(b)
+        return float(t)
+    except (ValueError, ZeroDivisionError):
+        return None
+
+
+def peso_olet(it, at):
+    """Olet (MSS SP-97) por medida de salida, de olets_peso.csv (Bonney Forge, configuración 'reducing')."""
+    d = norm(it["descripcion"] + " " + it.get("especificacion", ""))
+    tipo = next((t for t in ("weldolet", "sockolet", "thredolet") if t in d or (t == "thredolet" and "threadolet" in d)), None)
+    if not tipo:
+        return None, None, "olet de otro tipo: sin tabla"
+    medidas = [frac_pulg(x) for x in re.findall(r'(\d+(?: \d+/\d+)?|\d+/\d+)"', it["descripcion"] + " " + it.get("especificacion", ""))]
+    medidas = [m for m in medidas if m] or [pulg(at.get("diametro", ""))]
+    salida = min(m for m in medidas if m) if any(medidas) else None
+    if not salida:
+        return None, None, "olet sin medida de salida"
+    clase = (at.get("serie") or "3000") if tipo != "weldolet" else sch_tabla(at.get("schedule", "") or "STD", 1)
+    cand = [r for r in _tabla("olets_peso.csv") if r["tipo"] == tipo and pulg(r["dn_salida_pulg"]) == salida
+            and r["configuracion"] == "reducing" and r["schedule_o_clase"].startswith(clase)]
+    if not cand:
+        return None, None, f"sin tabla para {tipo} {salida:g}\" {clase}"
+    return float(cand[0]["peso_kg"]), None, f"{tipo} salida {salida:g}\" {clase} (Bonney Forge, borrador)"
+
+
+def peso_esparrago(it, at):
+    """Espárrago con 2 tuercas: varilla por pulgada × largo + 2 tuercas heavy hex (esparragos_peso.csv; calculado)."""
+    d = pulg(at.get("diametro", ""))
+    m = re.search(r"x\s*(\d+(?: \d+/\d+)?|\d+/\d+)", str(at.get("medida", "")))
+    largo = frac_pulg(m.group(1)) if m else None
+    if not largo:
+        mm = re.search(r"[\d.]+\s*x\s*(\d{2,3})\b", norm(it["descripcion"]))
+        largo = int(mm.group(1)) / 25.4 if mm else None
+    if not d or not largo:
+        return None, None, "espárrago sin diámetro o largo"
+    t = _tabla("esparragos_peso.csv")
+    var = next((float(r["peso_unidad_kg"]) for r in t if r["tipo"] == "varilla_por_pulgada" and pulg(r["diametro_pulg"]) == d), None)
+    tue = next((float(r["peso_unidad_kg"]) for r in t if r["tipo"] == "tuerca_heavy_hex_2H" and pulg(r["diametro_pulg"]) == d), None)
+    if var is None or tue is None:
+        return None, None, f"sin tabla para espárrago {d:g}\""
+    con_tuercas = "tuerca" in norm(it["descripcion"])
+    return var * largo + (2 * tue if con_tuercas else 0), None, f"espárrago {d:g}\" × {largo:.2f}\"" + (" + 2 tuercas" if con_tuercas else "") + " (calculado)"
+
+
 def peso_item(it, at, fam, canos, bridas, acc, valv=()):
     """(kg por unidad o por metro, m² por unidad o por metro, fuente) o (None, None, motivo)."""
     dn = pulg(at.get("diametro", ""))
@@ -127,6 +194,10 @@ def peso_item(it, at, fam, canos, bridas, acc, valv=()):
                      and "no usar" not in r["nota"]), None)
         if fila:
             return float(fila["peso_kg"]), None, f"brida {tipo} {dn:g}\" #{at['serie']} (B16.5, borrador)"
+    if "olet" in at.get("tipo", "") or re.search(r"olet\b", norm(it["descripcion"])):
+        return peso_olet(it, at)
+    if fam == "JUN" and at.get("tipo") in ("esparrago", "bulon"):
+        return peso_esparrago(it, at)
     if fam in ("ABW", "AFO") and dn:
         t = at.get("tipo", "")
         mapa = {"codo 90": "codo_90_radio_largo", "codo radio corto 90": "codo_90_radio_corto", "codo 45": "codo_45", "tee": "tee_recta",
@@ -136,6 +207,9 @@ def peso_item(it, at, fam, canos, bridas, acc, valv=()):
         if fam == "AFO" and t == "codo 90":
             mapa["codo 90"] = "codo_90"
         tipo = mapa.get(t, "")
+        d2_ = pulg(at.get("diametro2", "")) if at.get("diametro2") else None
+        if tipo == "tee_recta" and d2_ and d2_ != dn:
+            tipo = "tee_reduccion"
         if fam == "ABW":
             clase, ext = sch_tabla(sch, dn), "BW"
         else:
@@ -145,6 +219,7 @@ def peso_item(it, at, fam, canos, bridas, acc, valv=()):
         cand = [r for r in acc if r["tipo"] == tipo and pulg(r["dn_pulg"]) == dn and r["extremos"] == ext and "no sirve" not in r["nota"]
                 and (r["schedule_o_clase"] == clase or (tipo.startswith(("tapon", "buje")) and r["schedule_o_clase"] == "3000/6000"))
                 and (d2 is None or pulg(r["dn2_pulg"]) == d2)]
+        cand.sort(key=lambda r: r["nota"].startswith("ATENCION"))  # sin observaciones primero
         if cand:
             return float(cand[0]["peso_kg"]), None, f"{tipo} {dn:g}\" {clase} {ext} ({cand[0]['norma']}, borrador)"
         return None, None, f"sin tabla para {t} {dn:g}\" {clase}"
@@ -170,7 +245,7 @@ def rubro(tabla, fam, t):
 def main(carpeta):
     carpeta = Path(carpeta)
     c = json.load(open(carpeta / "cotizacion.json", encoding="utf-8"))
-    canos, bridas, acc = leer(TEC / "canos_peso_superficie.csv"), leer(TEC / "bridas_peso.csv"), leer(TEC / "accesorios_peso.csv")
+    canos, bridas, acc = leer(TEC / "canos_peso_superficie.csv"), leer(TEC / "bridas_peso.csv"), leer_acc()
     valv = leer(TEC / "valvulas_peso.csv")
     plazos, marcas = leer(COM / "plazos_proveedores.csv"), leer(COM / "marcas_aprobadas.csv")
     cli = norm(" ".join([c["cliente"].get("nombre", ""), c["cliente"].get("cliente_final", ""), c.get("titulo", "")]))

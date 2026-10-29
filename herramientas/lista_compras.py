@@ -48,7 +48,7 @@ def kg_por_unidad(p, it):
     at = atributos(t, fam)
     kg, _, fuente = ct.peso_item({"descripcion": p.get("descripcion", ""), "especificacion": "", "unidad": it.get("unidad", "un")}, at, fam,
                                  ct.leer(ct.TEC / "canos_peso_superficie.csv"), ct.leer(ct.TEC / "bridas_peso.csv"),
-                                 ct.leer(ct.TEC / "accesorios_peso.csv"), ct.leer(ct.TEC / "valvulas_peso.csv"))
+                                 ct.leer_acc(), ct.leer(ct.TEC / "valvulas_peso.csv"))
     m = re.search(r"(\d[\d.,]*)\s?kg", norm(it.get("especificacion", "") + " " + p.get("descripcion", "")))
     if kg is None and m and it.get("unidad", "un") == "un":  # kilos escritos en el renglón (skid, chapa)
         kg, fuente = float(m.group(1).replace(".", "").replace(",", ".")) / max(float(it.get("cantidad") or 1), 1), "kilos escritos en el renglón"

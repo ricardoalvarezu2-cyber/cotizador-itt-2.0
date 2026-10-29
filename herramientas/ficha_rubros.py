@@ -28,7 +28,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import precotizar  # noqa: E402
 from catalogo_materiales import atributos, expandir, familia_de  # noqa: E402
-from controles_tablas import TEC, leer, peso_item  # noqa: E402
+from controles_tablas import TEC, leer, leer_acc, peso_item  # noqa: E402
 from indice_proyectos import norm  # noqa: E402
 from numeros import a_vista  # noqa: E402
 
@@ -120,7 +120,8 @@ def es_estructura(it):
 
 def pesos(cfg):
     """kg de piping (caños, bridas, accesorios y válvulas con tabla), m² de caños y niples, kg de estructura y lo que no tiene tabla."""
-    canos, bridas, acc, valv = (leer(TEC / f) for f in ("canos_peso_superficie.csv", "bridas_peso.csv", "accesorios_peso.csv", "valvulas_peso.csv"))
+    canos, bridas, valv = (leer(TEC / f) for f in ("canos_peso_superficie.csv", "bridas_peso.csv", "valvulas_peso.csv"))
+    acc = leer_acc()
     kg_p = m2_c = kg_e = 0.0
     sin = []
     for it in cfg["items"]:
@@ -144,7 +145,7 @@ def pesos(cfg):
         at = {**atributos(t, fam), **atributos(d, fam)}
         kg, m2, _ = peso_item(it, at, fam, canos, bridas, acc, valv)
         if kg is None:
-            if not re.search(r"esparrago|tuerca|junta|termometro|manometro|instrumento|transmisor|repuesto|completar barra", d):
+            if not re.search(r"junta|termometro|manometro|instrumento|transmisor|repuesto|completar barra", d):
                 sin.append(f"{it['pos']} {it['descripcion'][:40]}")
             continue
         kg_p += kg * it["cantidad"]
