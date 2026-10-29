@@ -1,0 +1,155 @@
+{
+ "carpeta": "AESA/43. Temporaly- strainer 18 - 24 pulgadas",
+ "cliente": "AESA (A. Evangelista S.A.)",
+ "cliente_final": "YPF (proyecto C5092 - VMOS)",
+ "numero_oferta": "0-379 25 (rev.0 y rev.1); posterior 0-422 25 (espaciadores)",
+ "revisiones": "0-379 25 rev.0 04/07/2025 USD 19.118,88 (filtros 18\" y 24\"); rev.1 25/07/2025 suma espaciadores 18\" y 24\" y baja el precio de los filtros, total declarado USD 33.180,98 (no cierra con los renglones); la OC referencia la oferta 0-379 25 y toma los precios de la rev.0. Oferta aparte 0-422 25 del 01/12/2025: espaciadores 18\" serie 900 RTJ y 24\" serie 300 RF, USD 16.283,60.",
+ "fecha_oferta": "2025-07-04",
+ "fecha_ultima_modificacion": "2025-12-01",
+ "referencia_cliente": "OC 4508654792 - Obra C5092 - VMOS (YPF); codigos MP_SX_16221375 (18\") y MP_SX_16221374 (24\"); RI 5092-01-0000-IG-PI-RI-004-0",
+ "familia": "F",
+ "descripcion_corta": "Filtros temporales (temporary strainer) conicos 18\" CL900 RTJ y 24\" CL300 RF, 4 de cada uno, AISI 316; mas espaciadores",
+ "items": [
+  {
+   "descripcion": "Fabricacion filtros temporales 18\" (incluye materiales, soldadura, consumibles, ingenieria) - oferta 0-379 25 rev.0",
+   "cantidad": 4,
+   "unidad": "u",
+   "precio_unitario": 2098.04,
+   "precio_total": 8392.14,
+   "moneda": "USD",
+   "datos_tecnicos": "18\"; Class 900 RTJ (through bolted); tipo conico; ASTM A240 TP316; mesh 8 (segun OC)"
+  },
+  {
+   "descripcion": "Fabricacion filtros temporales 24\" (incluye materiales, soldadura, consumibles, ingenieria) - oferta 0-379 25 rev.0",
+   "cantidad": 4,
+   "unidad": "u",
+   "precio_unitario": 2756.68,
+   "precio_total": 10726.73,
+   "moneda": "USD",
+   "datos_tecnicos": "24\"; Class 300 RF (through bolted); tipo conico; ASTM A240 TP316; mesh 80 (segun OC; el texto dice 'Mesh 80 - 24')"
+  },
+  {
+   "descripcion": "Espaceador de 18\" (rev.1: canio + brida + junta + esparragos, END, granallado/pintura)",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 3687.06,
+   "precio_total": 3687.06,
+   "moneda": "USD",
+   "datos_tecnicos": "18\"; sin serie indicada en rev.1"
+  },
+  {
+   "descripcion": "Espaceador de 24\" (rev.1: canio + brida + junta + esparragos, END, granallado/pintura)",
+   "cantidad": 1,
+   "unidad": "u",
+   "precio_unitario": 4753.72,
+   "precio_total": 4753.72,
+   "moneda": "USD",
+   "datos_tecnicos": "24\"; sin serie indicada en rev.1"
+  },
+  {
+   "descripcion": "Espaceador de 18\" serie 900 RTJ en 516Gr70, conforme ASME B16.48 (oferta 0-422 25)",
+   "cantidad": 4,
+   "unidad": "u",
+   "precio_unitario": 1677.75,
+   "precio_total": 6711.0,
+   "moneda": "USD",
+   "datos_tecnicos": "18\"; #900 RTJ; material 516 Gr70 (A516 Gr70); ASME B16.48; incluye materiales, ingenieria, certificado de material"
+  },
+  {
+   "descripcion": "Espaceador de 24\" Serie 300 RF en 516Gr70, conforme ASME B16.48 (oferta 0-422 25)",
+   "cantidad": 4,
+   "unidad": "u",
+   "precio_unitario": 2393.15,
+   "precio_total": 9572.6,
+   "moneda": "USD",
+   "datos_tecnicos": "24\"; #300 RF; material 516 Gr70 (A516 Gr70); ASME B16.48; incluye materiales, ingenieria, certificado de material"
+  }
+ ],
+ "monto_total_ofertado": 19118.88,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "30/45 dias de recibida la orden de compra (entregas parciales); 0-422 25: 45/60 dias. Entrega real estimada por ITT 15/12/2025 (mail 20/11/2025)",
+ "plazo_dias": 45,
+ "condiciones": {
+  "pago": "30 dias fecha de factura (OC: 30 dias fecha de presentacion de factura)",
+  "validez": "30 dias corridos",
+  "entrega": "Nuestra planta, Quilmes Oeste (OC: FOT - deposito proveedor)",
+  "moneda_y_ajuste": "USD facturado en pesos al TC BNA a fecha de factura; se cancela con pesos al TC BNA vendedor del dia anterior al pago; NC/ND si la variacion supera 3%",
+  "notas_y_exclusiones": [
+   "Precios sin IVA (IVA 21% se suma aparte en la oferta)",
+   "ITTSA no acepta multas por mora cuando hay material importado (reglamentaciones BCRA)",
+   "Sin responsabilidad por atrasos por Licencias No Automaticas",
+   "Material importado preferentemente provisto por el cliente en comodato o deducible de facturas",
+   "OC: descuento 3% sobre bruto; inspeccion AESA (visual, dimensional, funcionamiento, certificados de materiales)"
+  ]
+ },
+ "proveedores": [],
+ "resultado": "ganada (hay OC)",
+ "orden_compra": {
+  "numero": "4508654792",
+  "fecha": "2025-09-12",
+  "monto": 18836.32
+ },
+ "contactos": [
+  {
+   "nombre": "Jorge Alejandro Vazquez",
+   "empresa": "AESA",
+   "rol": "cliente",
+   "cargo": "Comprador",
+   "email": "j.vazquez@aesa.com.ar",
+   "telefono": "17714"
+  },
+  {
+   "nombre": "Agustin Ezequiel Schlegel",
+   "empresa": "AESA",
+   "rol": "cliente",
+   "cargo": "Activacion",
+   "email": "a.schlegel@aesa.com.ar",
+   "telefono": "+54 11 2677 2480"
+  },
+  {
+   "nombre": "Carlos Alfonso",
+   "empresa": "ITT",
+   "rol": "ITT",
+   "cargo": "Representante Tecnico Comercial, Activacion",
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54 9 11 6001 5205"
+  },
+  {
+   "nombre": "Matias Ezequiel Banega",
+   "empresa": "ITT",
+   "rol": "ITT",
+   "cargo": "Ingenieria",
+   "email": "mbanega@ittsa.com.ar",
+   "telefono": "+54 11 5352 0000 int. 311"
+  }
+ ],
+ "aprendizajes": [
+  "Filtros temporales conicos AISI 316 se vendieron a USD 2.098 (18\" CL900 RTJ mesh 8) y USD 2.757 (24\" CL300 RF mesh 80) por unidad, con 3% de descuento en la OC (neto 2.035,10 y 2.673,98).",
+  "La rev.1 bajo el precio de los filtros (2.079,29 / 2.662,93) al sumar espaciadores, pero la OC se emitio con los precios de la rev.0: el cliente adjudico sobre la oferta original.",
+  "Los espaciadores (18\" #900 RTJ y 24\" #300 RF, A516 Gr70, ASME B16.48) se cotizaron aparte en 0-422 25 a USD 1.677,75 y 2.393,15 c/u; los de la rev.1 (con canio, brida, junta, esparragos y pintura) eran mas caros.",
+  "Los plazos reales dependen de la aprobacion documental del cliente (LD codificado, rev A y rev 0): fabricacion estimada en 10 dias recien tras aprobar documentos."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "precios_filtros": "4.Armado de la Oferta Comercial/OE 379- 25.pdf.txt",
+  "rev1": "4.Armado de la Oferta Comercial/OE 379- 25 Rev1.pdf.txt",
+  "espaciadores_0-422": "4.Armado de la Oferta Comercial/OE 422- 25_.pdf.txt",
+  "orden_compra": "8.Orden de Compra/Documento de Compras 4508654792.pdf.txt",
+  "plazo_real": "8.Orden de Compra/Re programacion Fecha de entrega RE_ _EXTERNO_ RE_ C5092 - OC 4508654792 - INNOVACION TECNICA TOTAL SA.msg.txt"
+ },
+ "problemas": [
+  "Sin planillas de costo ni factor: costo_total y factor_venta no figuran.",
+  "Oferta 0-379 rev.0: 4 x 2.756,68 = 11.026,72 pero el renglon muestra 10.726,73; el total de la OC (18.836,32 neto con 3% desc.) usa 11.026,72. El total declarado 19.118,88 no coincide con la suma correcta (19.418,88).",
+  "Rev.1: el total declarado USD 33.180,98 no coincide con la suma de renglones (27.409,65 sin cantidades x espaciadores); monto_total_ofertado se toma de la rev.0 porque es la que referencia la OC.",
+  "No hay propuesta enviada al cliente (carpeta 7) ni proveedores (5): solo los borradores de oferta en 4. Fecha de modificacion tomada de las fechas de los documentos.",
+  "La OC aclara mesh 8 para 18\" y 'Mesh 80 - 24' para 24\" (posible error de tipeo del cliente)."
+ ]
+}

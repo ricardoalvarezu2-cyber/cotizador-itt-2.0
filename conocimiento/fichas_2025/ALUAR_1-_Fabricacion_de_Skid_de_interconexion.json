@@ -1,0 +1,90 @@
+{
+ "carpeta": "ALUAR/1- Fabricacion de Skid de interconexion",
+ "cliente": "ALUAR",
+ "cliente_final": null,
+ "numero_oferta": null,
+ "revisiones": null,
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2025-12-23",
+ "referencia_cliente": "Skids de Aluar (P&ID y hojas de datos enviados a Induquip el 23-12-2025); la carpeta solo contiene la cotización de instrumentos del proveedor",
+ "familia": "SK",
+ "descripcion_corta": "Fabricación de skid de interconexión para ALUAR; solo hay cotización de proveedor de instrumentos (Induquip/Emerson), sin oferta de ITT ni costeo",
+ "items": [],
+ "monto_total_ofertado": null,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": 3814.67,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "12 semanas (plazo del proveedor de instrumentos)",
+ "plazo_dias": 84,
+ "condiciones": {
+  "pago": "30 días fecha de factura (proveedor)",
+  "validez": "30 días (proveedor)",
+  "entrega": "En planta o transporte en Buenos Aires a designar por el cliente (proveedor)",
+  "moneda_y_ajuste": "USD sin IVA; pago en pesos al tipo de cambio oficial del día anterior al cobro",
+  "notas_y_exclusiones": [
+   "Orden de compra a nombre de EMERSON ARGENTINA, citando el N° de referencia 25-886-RSVM",
+   "Datos de oferta ITT al cliente no presentes en la carpeta"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Induquip Ingeniería S.R.L. (representante de Emerson)",
+   "que": "Instrumentos para skids Aluar: PIT-1800, manifold 306, TE-1800, TIT-1800, TW-1800",
+   "precio": 3814.67,
+   "moneda": "USD",
+   "plazo_entrega": "12 semanas",
+   "fecha": "2025-12-23"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Raúl Santos",
+   "empresa": "Induquip Ingeniería S.R.L.",
+   "rol": "proveedor",
+   "cargo": "Representante de Emerson Automation Solutions",
+   "email": "raulsantos@induquip.com.ar",
+   "telefono": "+54 221 425-9749 / +54 9 221 15 494 2424"
+  },
+  {
+   "nombre": "Diego Ghener",
+   "empresa": "Induquip Ingeniería S.R.L.",
+   "rol": "proveedor",
+   "cargo": null,
+   "email": "diegoghener@induquip.com.ar",
+   "telefono": null
+  },
+  {
+   "nombre": "Fabián Magnago",
+   "empresa": "ITT S.A.",
+   "rol": "ITT",
+   "cargo": "Responsable de Ingeniería",
+   "email": "fmagnago@ittsa.com.ar",
+   "telefono": "+54 9 11 3988 6440 (int. 327)"
+  }
+ ],
+ "aprendizajes": [
+  "La instrumentación del skid (transmisores, RTD, vaina, manifold) se cotiza a Induquip/Emerson a partir del P&ID y las hojas de datos; plazo de 12 semanas, a considerar en el plazo total.",
+  "La oferta de Induquip pide emitir la OC a nombre de Emerson Argentina, no de Induquip.",
+  "El total de la oferta (USD 3.814,67) difiere en 0,01 de la suma de los renglones (3.814,66) por redondeo."
+ ],
+ "confianza": "baja",
+ "fuentes": {
+  "proveedores": "5.Proveedores 3ros/25-886-RSVM-RSMT.pdf.txt",
+  "contactos": "5.Proveedores 3ros/RV_ Instrumentos Aluar.msg.txt",
+  "fecha_ultima_modificacion": "5.Proveedores 3ros/RV_ Instrumentos Aluar.msg.txt"
+ },
+ "problemas": [
+  "La carpeta solo tiene la cotización del proveedor de instrumentos: faltan oferta enviada, costeo, factor, plano y OC",
+  "No se sabe si los 5 renglones son todo el skid ni cuántos skids son",
+  "Sin cantidad ni plazo de la oferta de ITT",
+  "Los renglones con precio son de la cotización de Induquip (instrumentos), no de una oferta de ITT: van en proveedores, no en items (corregido al revisar la ficha, 29-10-2026)."
+ ]
+}

@@ -64,13 +64,14 @@ for d in carpetas:
     if pref:
         chk(f"{d.name}: primero {ORIGEN[pref]}", res and res[0][3]["id"].startswith(ORIGEN[pref]), f"→ {res[0][3]['id'] if res else '-'}")
 sep = python.get("cotizaciones/COT26-0135-003_CAMUZZI_CP24578_SEPARADOR", [])
-chk("separador coalescente: los 2 primeros son coalescentes", sep[:2] and all("oalesc" in x.lower() for x in sep[:2]), sep)
+sub_de = {r["id"]: r["subtipo"] for r in filas}
+chk("separador coalescente: los 3 primeros son coalescentes", len(sep) >= 3 and all(sub_de.get(x) == "coalescente" for x in sep[:3]), sep)
 chk("separador coalescente: ningún manifold en los 5", not any("anifold" in x.lower() for x in sep), sep)
 reg = python.get("cotizaciones/COT26-0135-001_CAMUZZI_CP24578_SKIDREG", [])
 chk("skid de regulación Camuzzi: CAMUZZI/23 entre los 5", any(x.startswith("CAMUZZI/23") for x in reg), reg)
 q = consulta("separador vertical coalescente", cuerpo=55, serie="600", cliente="CAMUZZI")
 principal, anteriores, mismos = buscar(q, filas)
-chk("coalescente: entra TAVAL/37 (carpeta sin ficha 2025)", any(p["id"].startswith("TAVAL/37") for _, _, _, p in principal[:5]))
+chk("coalescente: TAVAL/37 entre los 5 (ficha hecha el 29-10-2026)", any(p["id"].startswith("TAVAL/37") for _, _, _, p in principal[:5]))
 chk("coalescente: carpetas anteriores con CAMUZZI/13", any(p["id"].startswith("CAMUZZI/13") for _, _, _, p in anteriores[:5]))
 
 # 4. dato faltante no resta

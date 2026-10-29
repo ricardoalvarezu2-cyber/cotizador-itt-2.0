@@ -127,6 +127,15 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - Taval (Control de Gestion) revisa y autoriza el numero final; en las valvulas aplica factor x2, con posibilidad de bajarlo a x1,8 (descuento de USD 7.000). *(YPF/27- Doc5222174263 - Filtros Coalescedor C5064 PC LAS)*
 - La primera rev de Julio bajo de 653.858,78 a 649.900 + transporte, pero el calculo con las horas de ingenieria y calidad dio otra mejora: verificar siempre que la planilla incluya HH de ingenieria y calidad. *(YPF/27- Doc5222174263 - Filtros Coalescedor C5064 PC LAS)*
 - Plazo 175 dias desde OC e ingenieria aprobada, con pago 20% anticipo. *(YPF/27- Doc5222174263 - Filtros Coalescedor C5064 PC LAS)*
+- Filtros temporales conicos AISI 316 se vendieron a USD 2.098 (18" CL900 RTJ mesh 8) y USD 2.757 (24" CL300 RF mesh 80) por unidad, con 3% de descuento en la OC (neto 2.035,10 y 2.673,98). *(AESA/43. Temporaly- strainer 18 - 24 pulgadas)*
+- La rev.1 bajo el precio de los filtros (2.079,29 / 2.662,93) al sumar espaciadores, pero la OC se emitio con los precios de la rev.0: el cliente adjudico sobre la oferta original. *(AESA/43. Temporaly- strainer 18 - 24 pulgadas)*
+- Los espaciadores (18" #900 RTJ y 24" #300 RF, A516 Gr70, ASME B16.48) se cotizaron aparte en 0-422 25 a USD 1.677,75 y 2.393,15 c/u; los de la rev.1 (con canio, brida, junta, esparragos y pintura) eran mas caros. *(AESA/43. Temporaly- strainer 18 - 24 pulgadas)*
+- Los plazos reales dependen de la aprobacion documental del cliente (LD codificado, rev A y rev 0): fabricacion estimada en 10 dias recien tras aprobar documentos. *(AESA/43. Temporaly- strainer 18 - 24 pulgadas)*
+- Factor por rubro en la planilla: mano de obra del filtro 1,45; materiales varios 1,2; válvulas Taval 1,0; repuestos 1,2; seguro 1,2. Factor global efectivo cercano a 1,31 *(TAVAL/37- Doc5449458609 - RFP 1 Sobre - Filtro Coales (COMPRA))*
+- Costo de mano de obra 186.339 USD (incluye RX 52.196, soldadura cañería+cuerpo 71.442, montaje 31.824, ingeniería 8.735, calidad 3.750, pintura 7.552, soldadura de estructura 10.841) *(TAVAL/37- Doc5449458609 - RFP 1 Sobre - Filtro Coales (COMPRA))*
+- Materiales: chapas y planchuelas 24,6%, cañería y accesorios 20,3%, válvulas 18,9%, instrumentos 13,3% del costo de material (hoja INSIDENCIA COSTOS) *(TAVAL/37- Doc5449458609 - RFP 1 Sobre - Filtro Coales (COMPRA))*
+- El precio bajó de 552.046,95 a 529.204,77 en la revisión económica *(TAVAL/37- Doc5449458609 - RFP 1 Sobre - Filtro Coales (COMPRA))*
+- Las hojas de la planilla traen restos de otras cotizaciones (separador bifásico, filtros FC-021 y FC-102 en las tablas de referencia): no usarlas como costo de este equipo *(TAVAL/37- Doc5449458609 - RFP 1 Sobre - Filtro Coales (COMPRA))*
 
 ## Skids
 
@@ -171,6 +180,17 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - Las validez de las ofertas de proveedores es corta (7 a 30 días) y varias están en USD sujetas a tipo de cambio BNA e importación (SIMI): reconfirmar antes de adjudicar. *(TECHINT/10. requisition 4381-TARG-I-MR-610-078)*
 - Servicios en campo (SAT, capacitación, asistencia) se ofertan como tarifa diaria separada del monto principal. *(TECHINT/10. requisition 4381-TARG-I-MR-610-078)*
 - Los precios totales de la planilla difieren de los unitarios en los skids (1,1, 1,3, 1,4), probablemente por ajustes/alternativa; el criterio no está documentado. *(TECHINT/10. requisition 4381-TARG-I-MR-610-078)*
+- La instrumentación del skid (transmisores, RTD, vaina, manifold) se cotiza a Induquip/Emerson a partir del P&ID y las hojas de datos; plazo de 12 semanas, a considerar en el plazo total. *(ALUAR/1- Fabricacion de Skid de interconexion)*
+- La oferta de Induquip pide emitir la OC a nombre de Emerson Argentina, no de Induquip. *(ALUAR/1- Fabricacion de Skid de interconexion)*
+- El total de la oferta (USD 3.814,67) difiere en 0,01 de la suma de los renglones (3.814,66) por redondeo. *(ALUAR/1- Fabricacion de Skid de interconexion)*
+- El precio subió de USD 14.000 (feb-2025) a 13.315 (Rev 1) y 15.850 (Rev 2, base de la OC): en 8 meses hubo tres revisiones; el cliente cambió de contacto en Rev 2. *(ENDRESS HAUSER/17. Skid de medicion Ø6)*
+- El costeo de materiales (USD 3.767,90 al 19-02-2025) cubre solo materiales: la planilla aclara que no incluye pintura ni soldadura; MO, ensayos y montaje no figuran, así que el factor no es comparable. *(ENDRESS HAUSER/17. Skid de medicion Ø6)*
+- Ítems sin precio en el costeo (válvula de alivio, bandeja porta cables) se consultaron a proveedores; compras estimó bandeja ~ARS 15.000 c/u y el costo de la válvula alternativa a ±20%. *(ENDRESS HAUSER/17. Skid de medicion Ø6)*
+- La OC se pagó 20% anticipo financiero y 80% contra liberación final y databook, y E+H la emite DDP en planta ITT, distinto de las condiciones ofertadas (30 días fecha factura). *(ENDRESS HAUSER/17. Skid de medicion Ø6)*
+- Instrumentación y válvulas de línea son suministro del cliente; se cotiza solo la fabricación. *(ENDRESS HAUSER/17. Skid de medicion Ø6)*
+- Alcance de solo construcción mecánica/eléctrica del skid: válvulas, filtros, separadores, instrumentación y todo lo que toca el fluido lo provee el cliente; aclararlo siempre en la oferta. *(ENDRESS HAUSER/28- RFQ Construcción Skid de Medición Gasoil CerrovanguardiaE+H AR)*
+- Incluye canalizaciones, junction box, cableado de señales y gabinete inoxidable para el controlador de batch. *(ENDRESS HAUSER/28- RFQ Construcción Skid de Medición Gasoil CerrovanguardiaE+H AR)*
+- Plazo con rango 45/60 días sujeto al acopio de materiales; pago 30% anticipo y 70% contra entrega. *(ENDRESS HAUSER/28- RFQ Construcción Skid de Medición Gasoil CerrovanguardiaE+H AR)*
 
 ## Manifolds
 

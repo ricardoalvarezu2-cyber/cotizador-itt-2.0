@@ -1,0 +1,114 @@
+{
+ "carpeta": "TAVAL/37- Doc5449458609 - RFP 1 Sobre - Filtro Coales (COMPRA)",
+ "cliente": "YPF SA",
+ "cliente_final": null,
+ "numero_oferta": "PRES 24148 Rev. A",
+ "revisiones": "Rev. A, emisión original (17-12-2025; el encabezado dice fecha 17/11/2025). La planilla de costos es 'REV. 0' y muestra un precio anterior de 552.046,95 (hoja RESUMEN, columna ANTES) contra 529.204,77 final.",
+ "fecha_oferta": "2025-12-17",
+ "fecha_ultima_modificacion": "2025-12-17",
+ "referencia_cliente": "Filtro coalescedor FC-231; proyecto IBE EMED La Angostura Sur; RFP 1 Sobre, Doc 5449458609 (nombre de carpeta); contacto cliente Mario Loyaute",
+ "familia": "F",
+ "descripcion_corta": "1 filtro coalescedor FC-231 (cuerpo Ø 32\", serie 600, 16 elementos filtrantes) con skids A y B, cañerías, válvulas e instrumentos, ASME VIII Div.1 / B31.3, diseño 99 kg/cm2; más kit de repuestos de precomisionado, comisionado y puesta en marcha",
+ "items": [
+  {
+   "descripcion": "FILTRO COALESCEDOR FC-231",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 529204.77,
+   "precio_total": 529204.77,
+   "moneda": "USD",
+   "datos_tecnicos": "cuerpo Ø 32\"; serie 600# (bridas 600#, mayoría del piping); P diseño 99 kg/cm2; T diseño -10/65 C; ASME VIII Div.1 / ASME B31.3; RT1; sobreespesor de corrosión 3,2 mm; cuerpo y cabezales SA-516 Gr 70 (virola chapa 1-1/2\", cabezal semielíptico 2:1 1-1/4\"); 16 elementos filtrantes Ø 32\" (A,B) con portafiltros; caja de vanes AISI 304; entrada y salida gas 10\" BW 600# Sch160; tapa de apertura rápida (ver alcance); incluye skid A y B, cañerías, válvulas (esféricas, globo, retención, control, PSV), instrumentos, aislación con tracing, pintura zinc silicato/epoxi/poliuretano"
+  },
+  {
+   "descripcion": "REPUESTOS: PRECOM- COM- PE",
+   "cantidad": 1,
+   "unidad": "un",
+   "precio_unitario": 3787.2,
+   "precio_total": 3787.2,
+   "moneda": "USD",
+   "datos_tecnicos": "Kit por equipo: espárragos con tuercas, bulones y juntas; costo 3.156 x 1,2. Figura en la oferta técnica y en la planilla; en la oferta económica solo aparece en el total"
+  }
+ ],
+ "monto_total_ofertado": 532991.97,
+ "moneda": "USD",
+ "costo_total": 407844.77,
+ "factor_venta": 1.31,
+ "desglose_costo": {
+  "materiales": 183331.91,
+  "mano_obra": 186339.45,
+  "terceros": null,
+  "otros": 38173.41
+ },
+ "plazo_ofrecido": "210 días (ítems 1 y 2)",
+ "plazo_dias": 210,
+ "condiciones": {
+  "pago": "Por hitos: ingeniería para construcción 10% (máx. grupal 20%); aprobación de ingeniería 10%; acopio de materiales principales 40% (grupal <=50%); terminación mecánica 5%; FAT 5%; entrega 30%. La planilla de costos trae otros porcentajes (10/15/40/30/10/30).",
+  "validez": "30 días corridos",
+  "entrega": "Planta TAVAL sa / ITT sa, Quilmes, Pcia. de Buenos Aires",
+  "moneda_y_ajuste": "USD facturado en pesos al TC BNA de la fecha de factura; se cancela al TC BNA vendedor del día anterior al pago; NC/ND si la variación supera 3%",
+  "notas_y_exclusiones": [
+   "Póliza de seguro se cotiza con la OC",
+   "Sin multas por mora en material importado (BCRA)",
+   "Licencias no automáticas: sin responsabilidad por atrasos",
+   "Taval propone que el material importado (chapas, instrumentos, válvulas) lo provea el cliente",
+   "Incluye ingeniería de detalle, data book, FAT, repuestos de precomisionado, comisionado y puesta en marcha (un kit por equipo), skid, plataformas, instrumentación y aislación"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Taval (válvulas, grupo)",
+   "que": "Válvulas, valor interno de costo (factor 1,0)",
+   "precio": 33969.1,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": null
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Mario Loyaute",
+   "empresa": "YPF SA",
+   "rol": "cliente",
+   "cargo": null,
+   "email": null,
+   "telefono": null
+  },
+  {
+   "nombre": "Ricardo Alvarez",
+   "empresa": "Taval / ITT",
+   "rol": "ITT",
+   "cargo": "Ing., Representante Comercial",
+   "email": "ralvarez@taval.com.ar",
+   "telefono": "(+54 11) 5236 6600 int. 234; móvil +54 9 11 2282 8036"
+  }
+ ],
+ "aprendizajes": [
+  "Factor por rubro en la planilla: mano de obra del filtro 1,45; materiales varios 1,2; válvulas Taval 1,0; repuestos 1,2; seguro 1,2. Factor global efectivo cercano a 1,31",
+  "Costo de mano de obra 186.339 USD (incluye RX 52.196, soldadura cañería+cuerpo 71.442, montaje 31.824, ingeniería 8.735, calidad 3.750, pintura 7.552, soldadura de estructura 10.841)",
+  "Materiales: chapas y planchuelas 24,6%, cañería y accesorios 20,3%, válvulas 18,9%, instrumentos 13,3% del costo de material (hoja INSIDENCIA COSTOS)",
+  "El precio bajó de 552.046,95 a 529.204,77 en la revisión económica",
+  "Las hojas de la planilla traen restos de otras cotizaciones (separador bifásico, filtros FC-021 y FC-102 en las tablas de referencia): no usarlas como costo de este equipo"
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "monto_total_ofertado": "4.Armado de la Oferta Comercial/PRES 24148- OFERTA ECONOMICA FILTRO COALESCEDOR FC-231.pdf.txt",
+  "items": "4.Armado de la Oferta Comercial/PRES 24148- OFERTA ECONOMICA FILTRO COALESCEDOR FC-231.pdf.txt y LM costos Coalescedor FC-231 YPF - PC0-C (REV. 0).xlsx.txt (hoja Pie de Venta)",
+  "plazo": "4.Armado de la Oferta Comercial/PRES 24148- OFERTA ECONOMICA FILTRO COALESCEDOR FC-231.pdf.txt; CRONOGRAMA FILTRO COALECEDOR FC-231.pdf.txt (27-11-2025 a 24-06-2026)",
+  "condiciones": "4.Armado de la Oferta Comercial/PRES 24148- OFERTA ECONOMICA FILTRO COALESCEDOR FC-231.pdf.txt",
+  "costos_y_factor": "4.Armado de la Oferta Comercial/LM costos Coalescedor FC-231 YPF - PC0-C (REV. 0).xlsx.txt (hoja RESUMEN; factor calculado 532.991,97 / 407.844,77)",
+  "datos_tecnicos": "4.Armado de la Oferta Comercial/PRES 24148- OFERTA TECNICA FILTRO COALESCEDOR FC-231.pdf.txt y hoja PC0-C de la planilla de costos",
+  "contactos": "4.Armado de la Oferta Comercial/PRES 24148- OFERTA ECONOMICA FILTRO COALESCEDOR FC-231.pdf.txt"
+ },
+ "problemas": [
+  "No hay propuesta enviada, documentos del cliente ni OC en la carpeta: resultado desconocido",
+  "El nombre de carpeta cita Doc5449458609 (RFP 1 Sobre), pero los documentos son la oferta PRES 24148 para YPF; no se pudo verificar la relación",
+  "Fecha de la oferta contradictoria: el encabezado dice 17/11/2025 y la revisión A 17-12-2025; el cronograma arranca el 27-11-2025. Se tomó 17-12-2025. Las fechas de archivo no sirven (todas del 29-10-2026)",
+  "La oferta económica muestra el total 532.991,97 pero solo el ítem 1 (529.204,77); el ítem 2 de repuestos (3.787,20) sale de la planilla",
+  "El factor 1,31 es derivado (precio total / costo del subtotal de la hoja RESUMEN), no figura en los documentos; hay celdas #REF! en la planilla",
+  "Presión de diseño 99 kg/cm2 e hitos de pago difieren entre oferta y planilla; las condiciones de diseño de la planilla traen además 38, 14 y 3,5 kg/cm2 (otros servicios/ítems)",
+  "El diámetro del cuerpo (32\") sale de la planilla de costos (virola, cabezal, brida del acceso a filtros), no del texto de la oferta técnica; faltan caudal y potencia",
+  "Falta el nombre de Mario Loyaute como cargo y contacto (sin mail ni teléfono); la planilla y la oferta técnica mencionan 'OTROS' ítems 1 a 4 del documento del cliente que no están en la carpeta"
+ ]
+}

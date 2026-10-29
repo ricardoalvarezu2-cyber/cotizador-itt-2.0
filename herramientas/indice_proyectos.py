@@ -476,7 +476,8 @@ def historico(con_ficha):
     vistas = set()
     for d in carpetas:
         rel = str(d.relative_to(TEXTOS))
-        if rel in con_ficha or rel in vistas or any(rel.startswith(v + "/") for v in vistas):
+        if (rel in con_ficha or any(c.startswith(rel + "/") for c in con_ficha)  # ficha hecha sobre una subcarpeta
+                or rel in vistas or any(rel.startswith(v + "/") for v in vistas)):
             continue  # una carpeta por proyecto (las etapas anidadas no son otro proyecto)
         vistas.add(rel)
         y = anio_carpeta(d)

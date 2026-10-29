@@ -1,0 +1,89 @@
+{
+ "carpeta": "ENDRESS HAUSER/28- RFQ Construcción Skid de Medición Gasoil CerrovanguardiaE+H AR",
+ "cliente": "Endress+Hauser Argentina",
+ "cliente_final": "Cerro Vanguardia (según referencia de la oferta)",
+ "numero_oferta": "423-25",
+ "revisiones": null,
+ "fecha_oferta": "2025-12-23",
+ "fecha_ultima_modificacion": "2025-12-23",
+ "referencia_cliente": "RFQ Construcción Skid de Medición Gasoil Cerrovanguardia/E+H AR",
+ "familia": "SK",
+ "descripcion_corta": "Construcción de skid-bastidor y ensamble para medición de gasoil (Cerro Vanguardia), con canalizaciones, junction box, cableado hasta controlador de batch y gabinete inoxidable; materiales en contacto con el fluido e instrumentación a cargo del cliente",
+ "items": [
+  {
+   "descripcion": "Construcción Skid de Medición Gasoil Cerro Vanguardia. Incluye: construcción de skid-bastidor y ensamble de elementos; canalizaciones, junction box y cableado de señales hasta el controlador de batch; gabinete de inoxidable para el controlador de batch. No incluye (provisto por el cliente): válvulas, filtros, separadores, resto de elementos en contacto con el fluido, instrumentación.",
+   "cantidad": 1,
+   "unidad": null,
+   "precio_unitario": 14192.97,
+   "precio_total": 14192.97,
+   "moneda": "USD",
+   "datos_tecnicos": null
+  }
+ ],
+ "monto_total_ofertado": 14192.97,
+ "moneda": "USD",
+ "costo_total": null,
+ "factor_venta": null,
+ "desglose_costo": {
+  "materiales": null,
+  "mano_obra": null,
+  "terceros": null,
+  "otros": null
+ },
+ "plazo_ofrecido": "45 dias /60 dias desde la recepción de la OC sujeto al acopio de los materiales.",
+ "plazo_dias": 60,
+ "condiciones": {
+  "pago": "30% adelantado, 70% contra entrega",
+  "validez": "30 días corridos",
+  "entrega": "Planta ITTSA, Quilmes, Buenos Aires",
+  "moneda_y_ajuste": "USD, facturado en pesos al TC BNA de la fecha de factura; cancelación al TC BNA vendedor del día anterior al pago efectivo; NC/ND si la variación supera 3%",
+  "notas_y_exclusiones": [
+   "No incluye y serán provistos por el cliente: válvulas, filtros, separadores, resto de elementos en contacto con el fluido",
+   "No incluye instrumentación (provista por el cliente)",
+   "Sin multas por mora si hay material importado (normativa BCRA); sin responsabilidad por atrasos por Licencias No Automáticas",
+   "Material importado (chapas, instrumentos, válvulas) preferentemente provisto por el cliente, en comodato o deducible de futuras facturas"
+  ]
+ },
+ "proveedores": [],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Emmanuel Pelayes Julian",
+   "empresa": "Endress+Hauser",
+   "rol": "cliente",
+   "cargo": null,
+   "email": "emmanuel.pelayes@endress.com",
+   "telefono": null
+  },
+  {
+   "nombre": "Brian Raminger",
+   "empresa": "Innovación Técnica Total S.A (ITT)",
+   "rol": "ITT",
+   "cargo": null,
+   "email": "calfonso@ittsa.com.ar",
+   "telefono": "+54-11-6001-5205"
+  }
+ ],
+ "aprendizajes": [
+  "Alcance de solo construcción mecánica/eléctrica del skid: válvulas, filtros, separadores, instrumentación y todo lo que toca el fluido lo provee el cliente; aclararlo siempre en la oferta.",
+  "Incluye canalizaciones, junction box, cableado de señales y gabinete inoxidable para el controlador de batch.",
+  "Plazo con rango 45/60 días sujeto al acopio de materiales; pago 30% anticipo y 70% contra entrega."
+ ],
+ "confianza": "media",
+ "fuentes": {
+  "numero_oferta": "7.Propuesta Comercial (envío al Cliente)/423-25 Oferta RFQ Construcción Skid de Medición Gasoil.pdf.txt",
+  "fecha_oferta": "7.Propuesta Comercial (envío al Cliente)/423-25 Oferta RFQ Construcción Skid de Medición Gasoil.pdf.txt",
+  "monto_total_ofertado": "7.Propuesta Comercial (envío al Cliente)/423-25 Oferta RFQ Construcción Skid de Medición Gasoil.pdf.txt",
+  "condiciones": "7.Propuesta Comercial (envío al Cliente)/423-25 Oferta RFQ Construcción Skid de Medición Gasoil.pdf.txt"
+ },
+ "problemas": [
+  "Solo hay la propuesta enviada; sin costos, factor, proveedores ni OC",
+  "Número de oferta 423-25 tomado del nombre del archivo",
+  "Fecha de firma en el documento dice 22/10/2024 (probable resto de plantilla); se usó 23/12/2025 de la referencia",
+  "Sin diámetros, series ni materiales en la oferta: datos_tecnicos null",
+  "Valor sin IVA 14192,97 + IVA 2980,52 = 17173,50 (total con IVA 21% de acuerdo al documento)",
+  "El mail del remitente es calfonso@ittsa.com.ar aunque firma Brian Raminger",
+  "Cliente final Cerro Vanguardia inferido del nombre de la referencia"
+ ]
+}
