@@ -436,6 +436,15 @@
     const fila = r => {
       const glob = Rubros.modo(cot, r) === "global", g = Rubros.globalDe(cot, r), s = g?.fuentes[0], tr = r === "transporte", ab = S.rbAbiertos.has(r);
       const a = !glob && !tr ? Rubros.antecedentes(cot, S.datos, f, r) : null;
+      if (tr) {  // transporte: solo precio por equipo, destino y transportista (pedido de Matías, 29-10-2026)
+        const t = cot.transporte || {};
+        return `<div class="rb${ab ? " abierto" : ""}${glob ? " global" : ""}">
+        <div class="rb-cab" id="rbc-${r}">${cabRubro(f, r)}</div>
+        <div class="rb-cuerpo rb-uno" ${ab ? "" : "hidden"}><div class="campos">
+          <label><span>Precio por ${eq} (USD sin IVA)</span><input id="trp" type="text" inputmode="decimal" class="num" data-tr="precio" value="${NI(g?.fuentes[0].precio || "")}" placeholder="vacío = EXW Quilmes Oeste"></label>
+          <label><span>Destino</span><input id="trd" data-tr="destino" value="${E(t.destino || "")}"></label>
+          <label><span>Transportista</span><input id="trt" data-tr="transportista" value="${E(t.transportista || "")}"></label></div></div></div>`;
+      }
       return `<div class="rb${ab ? " abierto" : ""}${glob ? " global" : ""}">
         <div class="rb-cab" id="rbc-${r}">${cabRubro(f, r)}</div>
         <div class="rb-cuerpo" ${ab ? "" : "hidden"}>
@@ -508,16 +517,16 @@
       procedimientos: d(x.cantidad, "procedimientos"),
       ph: d(x.litros, "litros") + d(+(cot.parametros.ph_horas || 6), "h"),
       horas: d(cot.items.filter(i => Rubros.rubroDe(i) === "horas" && !i.global).reduce((t, i) => t + (i.unidad === "h" ? i.cantidad : 0), 0) || null, "h"),
-      transporte: x.largo_m && x.ancho_m && x.alto_m ? `<span class="dato"><b>${[x.largo_m, x.ancho_m, x.alto_m].map(v => num(v, Number.isInteger(v) ? 0 : 2)).join(" × ")}</b> m</span>` + d(x.por_camion, "por camión") + d(x.viajes, "viajes") : "",
+      transporte: [cot.transporte?.destino, cot.transporte?.transportista].filter(Boolean).map(v => `<span class="dato">${E(v)}</span>`).join(""),
     }[r] || "";
     const g = Rubros.globalDe(cot, r), p = g?.fuentes[0].precio || 0, costo = glob ? p : ref.detallado_usd, dif = glob && p && ref.detallado_usd ? p / ref.detallado_usd - 1 : 0;
-    const estado = glob ? (!p ? `<span class="pill bad">sin precio</span>` : Math.abs(dif) > 0.15 && !tr ? `<span class="pill warn" title="contra antecedentes">${dif > 0 ? "+" : ""}${num(dif * 100, 0)}%</span>` : `<span class="pill ok">manual</span>`)
+    const estado = tr ? "" : glob ? (!p ? `<span class="pill bad">sin precio</span>` : Math.abs(dif) > 0.15 && !tr ? `<span class="pill warn" title="contra antecedentes">${dif > 0 ? "+" : ""}${num(dif * 100, 0)}%</span>` : `<span class="pill ok">manual</span>`)
       : !tr && !ref.detallado_usd ? `<span class="pill warn">sin costo</span>` : "";
     const ab = S.rbAbiertos.has(r);
     return `<button class="rb-abrir" data-a="rubro-abrir" data-r="${r}" aria-expanded="${ab}"><span class="flecha" aria-hidden="true">${ab ? "▾" : "▸"}</span><b>${E(nombre)}</b></button>
-      <div class="rb-datos">${datos || `<span class="muted small">${(x.avisos || [])[0] ? E(x.avisos[0]) : "—"}</span>`}${(x.avisos || []).length && datos ? `<span class="pill warn" title="${E(x.avisos.join(" · "))}">${x.avisos.length} aviso${x.avisos.length > 1 ? "s" : ""}</span>` : ""}</div>
+      <div class="rb-datos">${datos || `<span class="muted small">${!tr && (x.avisos || [])[0] ? E(x.avisos[0]) : "—"}</span>`}${!tr && (x.avisos || []).length && datos ? `<span class="pill warn" title="${E(x.avisos.join(" · "))}">${x.avisos.length} aviso${x.avisos.length > 1 ? "s" : ""}</span>` : ""}</div>
       <div class="rb-monto"><span class="s">Costo / ${E(cot.equipo?.singular || "equipo")}</span><span class="v">${tr && !glob ? "EXW" : num(costo)}</span>${estado}</div>
-      <div class="segm" role="group" aria-label="Costo de ${E(nombre)}"><button data-a="rubro-modo" data-r="${r}" data-v="detallado" aria-pressed="${!glob}">${tr ? "EXW" : "Antecedentes"}</button><button data-a="rubro-modo" data-r="${r}" data-v="global" aria-pressed="${glob}">Manual</button></div>`;
+      ${tr ? "<span></span>" : `<div class="segm" role="group" aria-label="Costo de ${E(nombre)}"><button data-a="rubro-modo" data-r="${r}" data-v="detallado" aria-pressed="${!glob}">${tr ? "EXW" : "Antecedentes"}</button><button data-a="rubro-modo" data-r="${r}" data-v="global" aria-pressed="${glob}">Manual</button></div>`}`;
   }
   const uniRubro = (f, r, usd) => Rubros.unitarios(f, r, usd).map(([u, x]) => `USD ${num(x)}/${E(u)}`).join(" · ");
   function fichaRubro(f, r) {
@@ -753,7 +762,7 @@
   // ------------------------------------------------------------------ eventos
   app.addEventListener("input", ev => {
     const el = ev.target;
-    if (bloqueada() && (el.dataset.b || el.dataset.bl || el.dataset.it || el.dataset.glob || el.dataset.rbPropia || el.dataset.ta !== undefined)) {
+    if (bloqueada() && (el.dataset.b || el.dataset.bl || el.dataset.it || el.dataset.glob || el.dataset.rbPropia || el.dataset.tr || el.dataset.ta !== undefined)) {
       toast(`La cotización está ${S.doc.cot.estado}: para cambiarla, volvé a borrador.`); render(); return;
     }
     if (el.dataset.b && S.doc) {
@@ -809,6 +818,20 @@
       } else if (c === "fecha") { const v = Documentos.isoDe(el.value); el.classList.toggle("mal", !v); if (!v) return; src.fecha = v; }
       else src[c] = el.value;
       if ((c === "precio" || c === "viaje") && src.precio && src.tipo === "est" && /^SIN PRECIO/.test(src.diferencia || "")) { src.tipo = "cot"; src.diferencia = ""; }
+      refrescar(); pintarRubros(); guardarPronto();
+    } else if (el.dataset.tr && S.doc) {
+      const cot = S.doc.cot, t = cot.transporte ??= {}, c = el.dataset.tr;
+      if (c === "precio") {
+        const v = el.value.trim() === "" ? 0 : NUM(el.value); el.classList.toggle("mal", v == null || v < 0); if (v == null || v < 0) return;
+        if (v) { if (Rubros.modo(cot, "transporte") !== "global") Rubros.pasarAGlobal(cot, "transporte", hoy()); }
+        else Rubros.volverADetallado(cot, "transporte");
+      } else t[c] = el.value;
+      const g = Rubros.globalDe(cot, "transporte");
+      if (g) {
+        const v = NUM($("#trp")?.value || "") || 0;
+        Object.assign(g, { descripcion: `Transporte${t.destino ? " a " + t.destino : ""} (por ${cot.equipo?.singular || "equipo"})`, especificacion: t.transportista || "" });
+        Object.assign(g.fuentes[0], { precio: v, tipo: "cot", proveedor: t.transportista || "Transportista a definir", origen: "cargado en la página", coincide: "igual", diferencia: "" });
+      }
       refrescar(); pintarRubros(); guardarPronto();
     } else if (el.dataset.rbPropia && S.doc) {
       const r = el.dataset.rbPropia, rb = (S.doc.cot.rubros ??= {})[r] ??= { modo: "detallado" }, pr = rb.propia ??= {};
