@@ -1,64 +1,64 @@
 # Precotización automática — CTRL-F01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 1,341.23 por equipo · soldadura y servicios calculados USD 1,216.77 · 18 similares (4, 4b, 5, 5b, 6, 7, 10, 14, 15, 16, 17, 18, 20, 21, 24, 25, 26, 27) · 6 sin precio (11, 12, 13, 19, 22, 23).
+**Resumen:** materiales USD 1.341,23 por equipo · soldadura y servicios calculados USD 1.216,77 · 18 similares (4, 4b, 5, 5b, 6, 7, 10, 14, 15, 16, 17, 18, 20, 21, 24, 25, 26, 27) · 6 sin precio (11, 12, 13, 19, 22, 23).
 
 
 ## 1. Materiales
 
 | Pos | Ítem | Resultado | Precio | Fecha y tipo | Diferencias / faltantes |
 |---|---|---|---|---|---|
-| 1 | Brida slip on RF 2" | IGUAL | 15.70 / un | 2025-12-26 · lista | — |
-| 2 | Brida slip on RF 4" | IGUAL | 51.35 / un | 2025-12-26 · lista | — |
-| 3 | Brida ciega 4" | IGUAL | 60.12 / un | 2025-12-26 · lista | — |
-| 4 | Caño sin costura longitud 150 mm 2" | SIMILAR | 16.62 / m | 2026-08-14 · planilla interna | material: sin dato (pedido A53) |
-| 5 | Caño sin costura longitud 400 mm 4" | SIMILAR | 34.34 / m | 2025-12-26 · lista | material: A106 B (pedido A53) |
-| 6 | Tapón roscado 1/2" | SIMILAR | 1.94 / un | 2026-10-10 · planilla interna | serie: sin dato (pedido 2000) |
-| 7 | Media cupla con tapón roscado conexión manóme | SIMILAR | 2.35 / un | 2025-12-26 · lista | serie: 3000 (pedido 2000); extremos: NPT (pedido NPT/SW) |
-| 8 | Codo 90 radio corto 2" | IGUAL | 6.08 / un | 2025-12-26 · lista | — |
-| 9 | Casquete semielíptico 4" | IGUAL | 13.39 / un | 2026-02-11 · cotización | — |
-| 10 | Elemento filtrante G 0.5 | SIMILAR | 329.00 / un | 2026-03-09 · cotización | — · faltan: diametro, serie |
-| 11 | Varilla roscada para fijación de elemento fil | **SIN PRECIO** | — | — | el más parecido es sin diámetro conocido (OTR-02164, USD 329.00): pedir cotización |
-| 12 | Tuerca mariposa de bronce 3/8" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (0.625") (JUN-04220, USD 0.50): pedir cotización |
-| 13 | Arandela plana 3/8" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (0.875") (JUN-01602, USD 0.17): pedir cotización |
-| 14 | Espárrago con 2 tuercas zincado 3/4 x 120.70  | SIMILAR | 10.00 / un | 2026-02-19 · planilla interna | medida: 3/4 x 4 7/8 (pedido 3/4 x 4 3/4) |
+| 1 | Brida slip on RF 2" | IGUAL | 15,70 / un | 2025-12-26 · lista | — |
+| 2 | Brida slip on RF 4" | IGUAL | 51,35 / un | 2025-12-26 · lista | — |
+| 3 | Brida ciega 4" | IGUAL | 60,12 / un | 2025-12-26 · lista | — |
+| 4 | Caño sin costura longitud 150 mm 2" | SIMILAR | 16,62 / m | 2026-08-14 · planilla interna | material: sin dato (pedido A53) |
+| 5 | Caño sin costura longitud 400 mm 4" | SIMILAR | 34,34 / m | 2025-12-26 · lista | material: A106 B (pedido A53) |
+| 6 | Tapón roscado 1/2" | SIMILAR | 1,94 / un | 2026-10-10 · planilla interna | serie: sin dato (pedido 2000) |
+| 7 | Media cupla con tapón roscado conexión manóme | SIMILAR | 2,35 / un | 2025-12-26 · lista | serie: 3000 (pedido 2000); extremos: NPT (pedido NPT/SW) |
+| 8 | Codo 90 radio corto 2" | IGUAL | 6,08 / un | 2025-12-26 · lista | — |
+| 9 | Casquete semielíptico 4" | IGUAL | 13,39 / un | 2026-02-11 · cotización | — |
+| 10 | Elemento filtrante G 0,5 | SIMILAR | 329,00 / un | 2026-03-09 · cotización | — · faltan: diametro, serie |
+| 11 | Varilla roscada para fijación de elemento fil | **SIN PRECIO** | — | — | el más parecido es sin diámetro conocido (OTR-02164, USD 329,00): pedir cotización |
+| 12 | Tuerca mariposa de bronce 3/8" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (0.625") (JUN-04220, USD 0,50): pedir cotización |
+| 13 | Arandela plana 3/8" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (0.875") (JUN-01602, USD 0,17): pedir cotización |
+| 14 | Espárrago con 2 tuercas zincado 3/4 x 120,70  | SIMILAR | 10,00 / un | 2026-02-19 · planilla interna | medida: 3/4 x 4 7/8 (pedido 3/4 x 4 3/4) |
 | 15 | Placa apoyo con guía para elemento filtrante  | SIMILAR (acero por kg) | USD 1.26/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 3/16", la más cercana a 4 mm) +10% por recortes; no incluye corte, plegado ni rolado |
 | 16 | Tapa para soporte de elemento filtrante espes | SIMILAR (acero por kg) | USD 1.26/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 3/16", la más cercana a 4 mm) +10% por recortes; no incluye corte, plegado ni rolado |
-| 17 | Junta espirometálica 4" | SIMILAR | 10.00 / un | 2026-06-26 · planilla interna | serie: sin dato (pedido 300); extremos: RF (no pedido) |
+| 17 | Junta espirometálica 4" | SIMILAR | 10,00 / un | 2026-06-26 · planilla interna | serie: sin dato (pedido 300); extremos: RF (no pedido) |
 | 18 | Soporte para chapa de identificación espesor  | SIMILAR (acero por kg) | USD 1.26/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 3/16", la más cercana a 2 mm) +10% por recortes; no incluye corte, plegado ni rolado |
 | 19 | Chapa de identificación litografiada espesor  | **SIN PRECIO** | — | — | pedir cotización |
 | 20 | Asas de hierro redondo 1/2" | SIMILAR (acero por kg) | USD 1.27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2") +10% por recortes; no incluye corte, plegado ni rolado |
-| 21 | Manómetro diferencial 0-2 bar 1/2" | SIMILAR | 120.00 / un | 2026-08-14 · planilla interna | rango: sin dato (pedido 0-2 bar) · faltan: conexion |
-| 22 | Conector recto con tuerca y doble virola 1/4" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (0.625") (JUN-04220, USD 0.50): pedir cotización |
+| 21 | Manómetro diferencial 0-2 bar 1/2" | SIMILAR | 120,00 / un | 2026-08-14 · planilla interna | rango: sin dato (pedido 0-2 bar) · faltan: conexion |
+| 22 | Conector recto con tuerca y doble virola 1/4" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (0.625") (JUN-04220, USD 0,50): pedir cotización |
 | 23 | Refuerzo para derivación tipo poncho 4 x 2 4" | **SIN PRECIO** | — | — | pedir cotización |
-| 24 | Válvula esférica cuerpo tripartito 1/2" | SIMILAR | 33.81 / un | 2026-02-20 · planilla interna | extremos: NPT (pedido NPT/SW); paso: reducido (no pedido) · faltan: paso |
-| 25 | Media cupla 1/2" | SIMILAR | 2.43 / un | 2025-12-26 · lista | serie: 3000 (pedido 2000) |
-| 26 | Chapa soporte manómetro diferencial y manifol | SIMILAR (acero por kg) | USD 1.26/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 3/16", la más cercana a 1.59 mm) +10% por recortes; no incluye corte, plegado ni rolado |
-| 27 | Arandela plana zincada 3/4" | SIMILAR (estimado cepo) ⚠ | 0.20 / un | 2024-11-01 · estimado (cepo) | — · faltan: material |
-| 4b | Completar barra de 6 m (pos 4) | compra extra | USD 16.62/m × 2.7 m | | Se usan 0.6 m en 2 equipo(s) y se compran 6 m. Borrar si hay sobrante en stock |
-| 5b | Completar barra de 12 m (pos 5) | compra extra | USD 34.34/m × 5.6 m | | Se usan 0.8 m en 2 equipo(s) y se compran 12 m. Borrar si hay sobrante en stock |
+| 24 | Válvula esférica cuerpo tripartito 1/2" | SIMILAR | 33,81 / un | 2026-02-20 · planilla interna | extremos: NPT (pedido NPT/SW); paso: reducido (no pedido) · faltan: paso |
+| 25 | Media cupla 1/2" | SIMILAR | 2,43 / un | 2025-12-26 · lista | serie: 3000 (pedido 2000) |
+| 26 | Chapa soporte manómetro diferencial y manifol | SIMILAR (acero por kg) | USD 1.26/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 3/16", la más cercana a 1,59 mm) +10% por recortes; no incluye corte, plegado ni rolado |
+| 27 | Arandela plana zincada 3/4" | SIMILAR (estimado cepo) ⚠ | 0,20 / un | 2024-11-01 · estimado (cepo) | — · faltan: material |
+| 4b | Completar barra de 6 m (pos 4) | compra extra | USD 16.62/m × 2,7 m | | Se usan 0,6 m en 2 equipo(s) y se compran 6 m. Borrar si hay sobrante en stock |
+| 5b | Completar barra de 12 m (pos 5) | compra extra | USD 34.34/m × 5,6 m | | Se usan 0,8 m en 2 equipo(s) y se compran 12 m. Borrar si hay sobrante en stock |
 
 ## 2. Soldaduras (de la columna de extremos)
 
-**3 juntas a tope de taller + juntas SW y olets = 19.08 pulgadas equivalentes** × USD 28.00 (Mano de obra soldadura piping, 2024-09) = USD 534.35
+**3 juntas a tope de taller + juntas SW y olets = 19,08 pulgadas equivalentes** × USD 28,00 (Mano de obra soldadura piping, 2024-09) = USD 534,35
 
-- pos 1: 2 junta(s) SW × 2" × 1.0000
-- pos 2: 1 junta(s) SW × 4" × 1.0000
-- pos 4: 2 extremo(s) BW de taller (1 por unidad × 2) × 2" × 1.4169
-- pos 5: 1 extremo(s) BW de taller (1 por unidad × 1) × 4" × 1.0000
-- pos 7: 2 junta(s) de Media cupla con tapón ros sobre caño × 0.25" × 1.75 = 0.88
-- pos 8: 2 extremo(s) BW de taller (2 por unidad × 1) × 2" × 1.0000
-- pos 9: 1 extremo(s) BW de taller (1 por unidad × 1) × 4" × 1.0000
-- pos 24: 1 junta(s) SW × 0.5" × 1.0000
-- pos 25: 1 junta(s) de Media cupla sobre caño × 0.5" × 1.75 = 0.88
+- pos 1: 2 junta(s) SW × 2" × 1,0000
+- pos 2: 1 junta(s) SW × 4" × 1,0000
+- pos 4: 2 extremo(s) BW de taller (1 por unidad × 2) × 2" × 1,4169
+- pos 5: 1 extremo(s) BW de taller (1 por unidad × 1) × 4" × 1,0000
+- pos 7: 2 junta(s) de Media cupla con tapón ros sobre caño × 0.25" × 1,75 = 0,88
+- pos 8: 2 extremo(s) BW de taller (2 por unidad × 1) × 2" × 1,0000
+- pos 9: 1 extremo(s) BW de taller (1 por unidad × 1) × 4" × 1,0000
+- pos 24: 1 junta(s) SW × 0.5" × 1,0000
+- pos 25: 1 junta(s) de Media cupla sobre caño × 0.5" × 1,75 = 0,88
 
 ## 3. Servicios calculados
 
-- **Pintura:** 0.50 m² (caños y niples 0.2 + bridas, accesorios y válvulas (largo equivalente) 0.2 + envolvente 0.0 + estructura 0.1) × USD 7.51/m² (Pintura MO propia (por m2), ITT (costo propio de planta), 2024-10-31) = USD 3.72.
-- **Fabricación de la estructura:** 3 kg × USD 1.9/kg (Mano de obra estructura (tercero Ledesma), 2024-09) = USD 5.70.
-- **Prueba hidráulica:** 6 h × USD 13.00/h (Prueba hidráulica Desgacificador Alivios, 2025-09-05) = USD 78.00 · ⚠ horas supuestas: cargar `parametros.ph_horas` · volumen interior de caños y niples 3.9 l.
-- **Radiografía 100% y tintas:** 7 placas chicas + 0 grandes + 0.50 servicio(s) de RX + 0.50 de LP por equipo = USD 595.00 (Servicio de radiografía (Antonelli) (2025-11; antonelli_end_2025-11)).
-  Con las tarifas de Antonelli (11-2025) serían USD 595.00: confirmar el proveedor de END con el cliente o la zona.
+- **Pintura:** 0,50 m² (caños y niples 0,2 + bridas, accesorios y válvulas (largo equivalente) 0,2 + envolvente 0,0 + estructura 0,1) × USD 7.51/m² (Pintura MO propia (por m2), ITT (costo propio de planta), 2024-10-31) = USD 3,72.
+- **Fabricación de la estructura:** 3 kg × USD 1.9/kg (Mano de obra estructura (tercero Ledesma), 2024-09) = USD 5,70.
+- **Prueba hidráulica:** 6 h × USD 13.00/h (Prueba hidráulica Desgacificador Alivios, 2025-09-05) = USD 78,00 · ⚠ horas supuestas: cargar `parametros.ph_horas` · volumen interior de caños y niples 3,9 l.
+- **Radiografía 100% y tintas:** 7 placas chicas + 0 grandes + 0,50 servicio(s) de RX + 0,50 de LP por equipo = USD 595,00 (Servicio de radiografía (Antonelli) (2025-11; antonelli_end_2025-11)).
+  Con las tarifas de Antonelli (11-2025) serían USD 595,00: confirmar el proveedor de END con el cliente o la zona.
 
 ### Horas de ingeniería, calidad y montaje (estimadas: filtro, 4", 2 u, materiales USD 1,341 por unidad)
 

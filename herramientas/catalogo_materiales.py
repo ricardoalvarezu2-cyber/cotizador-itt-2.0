@@ -37,7 +37,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from indice_proyectos import frac, norm, diametros, pulgadas, series  # noqa: E402
-from numeros import a_vista, fecha_iso, leer_numero, fmt, fmtg  # noqa: E402
+from numeros import a_vista, fecha_iso, leer_numero, fmt, fmtg, precio_csv, celda_excel  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
 COMPRA_VIGENTE = "2022-01-01"
@@ -71,7 +71,7 @@ def factor_cepo(fecha, tipo_precio=""):
     b = _brecha().get((fecha or "")[:7])
     if b is None:
         return None, "sin dólar blue para ese mes"
-    return b, f"llevado a dólar blue: × {b:.3f} (oficial ÷ blue de {a_vista(fecha[:7])})"
+    return b, f"llevado a dólar blue: × {fmt(b, 3)} (oficial ÷ blue de {a_vista(fecha[:7])})"
 PRECIOS = RAIZ / "conocimiento" / "precios"
 TEXTOS = RAIZ / "fuentes_originales" / "ofertas_texto"
 Z = "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\"
@@ -101,6 +101,17 @@ FAMILIAS = {
 COMUNES = ["codigo", "familia", "descripcion", "unidad", "ultimo_precio_usd", "iva", "alerta", "referencia_descartada_usd", "fecha_referencia_descartada", "fecha_ultimo_precio", "tipo_precio",
            "proveedor", "ruta_origen", "archivo_origen", "ruta_repo", "precio_ajustado_hoy_usd", "precios_en_historial",
            "precio_min_usd", "precio_max_usd", "primera_fecha", "confianza_clasificacion"]
+# Columnas de precio: se guardan con 2 decimales (decisión de Matías, 29-10-2026); los cálculos usan el valor sin redondear
+PRECIOS_COLS = {"ultimo_precio_usd", "referencia_descartada_usd", "precio_ajustado_hoy_usd", "precio_min_usd", "precio_max_usd"}
+
+
+def atributo_csv(at, c):
+    """Atributo para la columna del CSV/Excel: el espesor en mm va con punto decimal (formato de máquina) aunque la clave
+    conserve como vino del documento ("1,6"): la clave no se toca porque relaciona descripción y código."""
+    v = at.get(c, "")
+    return v.replace(",", ".") if c == "espesor_mm" and isinstance(v, str) else v
+
+
 PRIORIDAD = {"cotización": 4, "compra": 4, "planilla interna": 3, "lista": 2, "stock (precio maestro)": 1}
 
 
@@ -712,7 +723,7 @@ def leer_fuentes():
                     + (f" trim {r['trim']}" if r["trim"] else "") + f" Taval {r['codigo_taval']}" + (" A105 forjada" if "FORJADA" in r["tipo"] or "API 602" in r["tipo"] else ""))
             add(desc, num(r["precio_neto_usd"]), "USD", r["fecha"], "lista", f"Taval (Lista 30 × {r['factor']})", "taval_lista30_2025-09.xlsx",
                 f"código {r['codigo_taval']}, hoja {r['hoja']}", "fuentes_originales/taval_lista30_2025-09.xlsx", "un",
-                extra=f"lista USD {r['precio_lista30_usd']} × {r['factor']}; {r['kg']} kg", iva=None)
+                extra=f"lista USD {fmt(r['precio_lista30_usd'], 2)} × {fmtg(r['factor'])}; {fmtg(r['kg'])} kg", iva=None)
     # listas y cotizaciones nuevas que llegan por los pedidos de la página (web/LEEME.md, "Pedidos desde la página")
     ruta_ln = PRECIOS / "listas_nuevas.csv"
     if ruta_ln.exists():
@@ -851,7 +862,7 @@ def main():
         w.writerow(["codigo", "familia", "clave", "fecha", "precio_usd", "iva", "precio_ajustado_hoy_usd", "tipo_precio", "proveedor", "descripcion",
                     "unidad", "ruta_origen", "archivo_origen", "ruta_repo", "atributos", "nota"])
         for h in sorted(hist, key=lambda h: (h["codigo"], h["fecha"]), reverse=False):
-            w.writerow([h["codigo"], h["familia"], h["clave"] or "", h["fecha"], h["precio_usd"], h["iva"], h["precio_ajustado_hoy_usd"], h["tipo_precio"],
+            w.writerow([h["codigo"], h["familia"], h["clave"] or "", h["fecha"], precio_csv(h["precio_usd"]), h["iva"], precio_csv(h["precio_ajustado_hoy_usd"]), h["tipo_precio"],
                         h["proveedor"], h["descripcion"], h["unidad"], h["ruta_origen"], h["archivo_origen"], h["ruta_repo"],
                         json.dumps(h["atributos"], ensure_ascii=False), h["nota"]])
     todos_at = sorted({c for v in FAMILIAS.values() for c in v[1]})
@@ -859,7 +870,7 @@ def main():
         w = csv.writer(f)
         w.writerow(COMUNES + todos_at + ["nota"])
         for fl in filas:
-            w.writerow([fl[c] for c in COMUNES] + [fl["_at"].get(c, "") for c in todos_at] + [fl["_nota"]])
+            w.writerow([precio_csv(fl[c]) if c in PRECIOS_COLS else fl[c] for c in COMUNES] + [atributo_csv(fl["_at"], c) for c in todos_at] + [fl["_nota"]])
     escribir_excel(filas)
     from collections import Counter
     c = Counter(fl["_fam"] for fl in filas)
@@ -883,7 +894,7 @@ def escribir_excel(filas):
             ws.column_dimensions[x.column_letter].width = ancho.get(c, 14)
         for i, r in enumerate(rows, 2):
             for j, v in enumerate(r, 1):
-                ws.cell(i, j, v)
+                celda_excel(ws.cell(i, j), precio_csv(v) if cols[j - 1] in PRECIOS_COLS else v, cols[j - 1])
         ws.freeze_panes = "C2"
         ws.auto_filter.ref = ws.dimensions
     base = ["codigo", "descripcion", "unidad", "ultimo_precio_usd", "iva", "fecha_ultimo_precio", "tipo_precio", "proveedor",
@@ -892,7 +903,7 @@ def escribir_excel(filas):
     hoja("Todos", ["familia"] + base, [[fl["familia"]] + [fl[c] for c in base] for fl in filas])
     for k, (nombre, cols, _) in FAMILIAS.items():
         fs = [fl for fl in filas if fl["_fam"] == k]
-        hoja(nombre, base[:2] + cols + base[2:], [[fl[c] for c in base[:2]] + [fl["_at"].get(c, "") for c in cols] + [fl[c] for c in base[2:]] for fl in fs])
+        hoja(nombre, base[:2] + cols + base[2:], [[fl[c] for c in base[:2]] + [atributo_csv(fl["_at"], c) for c in cols] + [fl[c] for c in base[2:]] for fl in fs])
     wb.save(PRECIOS / "catalogo_materiales.xlsx")
 
 

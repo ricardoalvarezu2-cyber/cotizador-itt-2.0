@@ -34,7 +34,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from catalogo_materiales import factor_cepo, en_mes, iva_de, unidad_norm  # noqa: E402
 from indice_proyectos import norm  # noqa: E402
-from numeros import fecha_iso, leer_numero, fmt, fmtg  # noqa: E402
+from numeros import fecha_iso, leer_numero, fmt, fmtg, precio_csv, celda_excel  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
 PRECIOS = RAIZ / "conocimiento" / "precios"
@@ -286,18 +286,18 @@ def main():
         precios = [valor(h) for h in confiables if valor(h) is not None]
         fl = {"codigo": cod, "hoja": base["hoja"], "servicio": base["servicio"], "descripcion": (src["descripcion"] or "")[:260],
               "unidad": src["tarifa_u"] if unit else "global",
-              "ultimo_precio_usd": round(valor(ultimo_h), 4) if ultimo_h else "", "iva": src["iva"],
+              "ultimo_precio_usd": round(valor(ultimo_h), 2) if ultimo_h else "", "iva": src["iva"],
               "fecha_ultimo_precio": ultimo_h["fecha"] if ultimo_h else "", "proveedor": (ultimo_h or src)["proveedor"],
               "ruta_origen": ro, "archivo_origen": ar, "ruta_repo": rr,
-              "precio_ajustado_hoy_usd": round(valor_aj(ultimo_h), 4) if ultimo_h and valor_aj(ultimo_h) is not None else "",
-              "tarifa_unitaria_usd": round(ultimo_h["tarifa"], 4) if ultimo_h and ultimo_h["tarifa"] is not None else "",
+              "precio_ajustado_hoy_usd": round(valor_aj(ultimo_h), 2) if ultimo_h and valor_aj(ultimo_h) is not None else "",
+              "tarifa_unitaria_usd": round(ultimo_h["tarifa"], 2) if ultimo_h and ultimo_h["tarifa"] is not None else "",
               "unidad_tarifa": src["tarifa_u"],
-              "tarifa_ajustada_hoy_usd": round(ultimo_h["tarifa_aj"], 4) if ultimo_h and ultimo_h["tarifa_aj"] is not None else "",
+              "tarifa_ajustada_hoy_usd": round(ultimo_h["tarifa_aj"], 2) if ultimo_h and ultimo_h["tarifa_aj"] is not None else "",
               "alcance_comparable": "sí" if (ultimo_h and ultimo_h["tarifa"] is not None) else "no",
               "incluye": src["incluye"], "no_incluye": src["no_incluye"], "lugar": src["lugar"], "equipo_referencia": src["equipo_referencia"],
-              "precios_en_historial": len(hs), "precio_min_usd": round(min(precios), 4) if precios else "", "precio_max_usd": round(max(precios), 4) if precios else "",
+              "precios_en_historial": len(hs), "precio_min_usd": round(min(precios), 2) if precios else "", "precio_max_usd": round(max(precios), 2) if precios else "",
               "alerta": "; ".join(dict.fromkeys(alertas)), "confianza": src["confianza"],
-              "referencia_descartada_usd": round(valor(ref_h), 4) if ref_h and valor(ref_h) is not None else "",
+              "referencia_descartada_usd": round(valor(ref_h), 2) if ref_h and valor(ref_h) is not None else "",
               "fecha_referencia_descartada": ref_h["fecha"] if ref_h else "",
               "nota": "; ".join(dict.fromkeys(src["notas"] + ([src["nota"]] if src["nota"] else [])))}
         filas.append(fl)
@@ -306,8 +306,8 @@ def main():
             estado = "descartado (cepo)" if h["descartado"] else ("vigente" if h is ultimo_h else "anterior")
             if h["usd"] is None:
                 estado = "sin conversión a USD"
-            hist.append([cod, base["hoja"], k, h["fecha"], round(valor(h), 4) if valor(h) is not None else "", h["moneda"], h["precio"], h["iva"],
-                         round(h["usd"], 4) if h["usd"] is not None else "", round(valor_aj(h), 4) if valor_aj(h) is not None else "",
+            hist.append([cod, base["hoja"], k, h["fecha"], round(valor(h), 2) if valor(h) is not None else "", h["moneda"], precio_csv(h["precio"]), h["iva"],
+                         round(h["usd"], 2) if h["usd"] is not None else "", round(valor_aj(h), 2) if valor_aj(h) is not None else "",
                          h["tarifa_u"] if unit else "global", estado, h["proveedor"], h["descripcion"], h["equipo_referencia"], ro2, ar2, rr2,
                          h["texto_original"], h["confianza"], "; ".join(h["notas"] + h["alertas"] + ([h["nota"]] if h["nota"] else []))])
     # CSV
@@ -362,7 +362,7 @@ def escribir_excel(filas):
             ws.column_dimensions[x.column_letter].width = ancho.get(c, 14)
         for i, fl in enumerate(rows, 2):
             for j, c in enumerate(COMUNES, 1):
-                ws.cell(i, j, fl[c])
+                celda_excel(ws.cell(i, j), fl[c], c)
         ws.freeze_panes = "C2"
         ws.auto_filter.ref = ws.dimensions
     hoja("Todos", filas)

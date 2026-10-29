@@ -113,3 +113,76 @@ def fmtg(v):
     """Como fmt pero sin ceros de más: 0.5 → '0,5', 12 → '12', 1234.567 → '1.234,57' (máximo 2 decimales)."""
     s = fmt(v, 2)
     return s.rstrip("0").rstrip(",") if "," in s else s
+
+
+def precio_csv(v):
+    """Precio para guardar en un CSV o JSON interno: 2 decimales, punto decimal, sin separador de miles y sin ceros
+    de más (6.408 → '6.41', 12.0 → '12'). Vacío o texto no numérico vuelve como está (decisión de Matías, 29-10-2026:
+    los precios y montos llevan 2 decimales; precios por kg o por pulgada también)."""
+    if v is None or isinstance(v, bool):
+        return v
+    try:
+        x = round(float(v), 2)
+    except (TypeError, ValueError):
+        return v
+    s = f"{x:.2f}".rstrip("0").rstrip(".")
+    return "0" if s in ("-0", "") else s
+
+
+def redondear_precios(filas, columnas):
+    """Aplica precio_csv a las columnas de precio de una lista de filas (dicts) antes de escribir el CSV."""
+    for f in filas:
+        for c in columnas:
+            if c in f and f[c] not in (None, ""):
+                f[c] = precio_csv(f[c])
+    return filas
+
+
+# ---------------------------------------------------------------- Excel
+# En los xlsx los números van como celdas NUMÉRICAS (nunca texto) con formato: Excel en configuración argentina los
+# muestra con punto de miles y coma decimal (decisión de Matías, 29-10-2026).
+FMT_PRECIO = "#,##0.00"      # precios y montos: 2 decimales
+FMT_TECNICO = "#,##0.0###"   # pesos, espesores, factores: los decimales que hagan falta
+FMT_ENTERO = "#,##0"
+_RX_PRECIO = re.compile(r"(precio|costo|monto|importe|valor|total|subtotal|tarifa|_usd$|_ars$|_eur$)", re.I)
+_RX_NO_PRECIO = re.compile(r"(cantidad|cant_|peso|_kg|factor|porc|pct|horas|_hs|indice|coef|dias|filas|historial|ratio)", re.I)
+_RX_SIN_MILES = re.compile(r"(año|anio|serie|schedule|sch|clase|rating|ansi|mes)", re.I)
+_RX_CLAVE = re.compile(r"^(codigo|cod|clave|id|pos|op|numero|nro|n°|oc|oc_numero|orden_compra|cuit|telefono|tel|isis|articulo|art)(_|$)", re.I)
+
+
+def es_columna_precio(nombre):
+    n = str(nombre or "").strip().lower().replace(" ", "_")
+    return bool(_RX_PRECIO.search(n)) and not _RX_NO_PRECIO.search(n)
+
+
+def celda_excel(celda, valor, columna="", formato=None, documento=False):
+    """Escribe valor en una celda de openpyxl. Un número (o un texto que es un número entero, sin nada más) queda
+    numérico con formato de precio (2 decimales) o técnico según la columna. Las claves (código, pos, OC) quedan como
+    texto. formato fuerza un formato de número.
+    documento=False: el texto viene de un CSV/JSON interno (punto decimal, '6.41').
+    documento=True: el texto viene de un documento de terceros y se lee con leer_numero ('1.500' = 1500, '12,5' = 12,5);
+    si es ambiguo ('4,500') queda como texto, tal cual."""
+    n = str(columna or "").strip().lower().replace(" ", "_")
+    v = valor
+    if isinstance(v, str) and v.strip() and not _RX_CLAVE.search(n):
+        t = v.strip()
+        if documento:
+            if re.fullmatch(r"-?\d[\d.,]*", t) and not re.search(r"[.,]$", t):
+                x, amb = leer_numero(t)
+                if x is not None and not amb:
+                    v = int(x) if x.is_integer() and not re.search(r"[.,]\d*[1-9]", t) else x
+        elif re.fullmatch(r"-?(0|[1-9]\d*)(\.\d+)?", t):
+            v = float(t) if "." in t else int(t)
+    celda.value = v
+    if isinstance(v, (int, float)) and not isinstance(v, bool):
+        if formato:
+            celda.number_format = formato
+        elif es_columna_precio(n):
+            celda.number_format = FMT_PRECIO
+        elif _RX_SIN_MILES.search(n) and float(v).is_integer():
+            celda.number_format = "0"  # año, serie, schedule: 2025 y 2500 sin punto de miles
+        elif isinstance(v, int) or float(v).is_integer():
+            celda.number_format = FMT_ENTERO
+        else:
+            celda.number_format = FMT_TECNICO
+    return celda

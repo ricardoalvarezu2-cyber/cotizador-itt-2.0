@@ -53,8 +53,8 @@ def main():
             usd_kg = usd / cant / float(c)
             filas.append({"forma": forma, "material": material, "medida": str(f).strip(), "espesor_mm": pulg_mm(str(f)),
                           "unidad_compra": f"hoja de {cant:g} m²" if por == "m2" else f"tira de {cant:g} m",
-                          "kg_por_m2_o_m": float(c), "por": por, "precio_compra_usd": round(usd, 2), "usd_kg": round(usd_kg, 4),
-                          "usd_kg_con_recortes": round(usd_kg * RECORTES, 4), "ars_con_iva": ars_con_iva, "tc_documento": tc,
+                          "kg_por_m2_o_m": float(c), "por": por, "precio_compra_usd": round(usd, 2), "usd_kg": round(usd_kg, 2),
+                          "usd_kg_con_recortes": round(usd_kg * RECORTES, 2), "ars_con_iva": ars_con_iva, "tc_documento": tc,
                           "fecha": FECHA, "fuente": f"fuentes_originales/precios_varios_acero_2026-02.xlsx, hoja {ws.title}, {r[1].coordinate}",
                           "nota": "precio de materia prima sin IVA (pesos con IVA ÷ 1,21 ÷ TC del documento); no incluye corte, plegado ni rolado"})
     with open(SALIDA, "w", newline="", encoding="utf-8") as fh:

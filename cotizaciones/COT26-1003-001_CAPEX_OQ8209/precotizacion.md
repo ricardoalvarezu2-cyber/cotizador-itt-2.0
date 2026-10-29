@@ -45,7 +45,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - pos 15: 2 extremo(s) BW de taller (2 por unidad × 1) × 2" × 1,4169
 - pos 16: 1 extremo(s) BW de taller (2 por unidad × 1 − 1 de campo por unidad) × 2,5" × 1,3585
 - pos 22: 0 extremo(s) BW de taller (1 por unidad × 1 − 1 de campo por unidad) × 2" × 1,4169
-- pos 23: 2 junta(s) de Cupla sobre caño × 0,5" × 1.75 = 1,75
+- pos 23: 2 junta(s) de Cupla sobre caño × 0,5" × 1,75 = 1,75
 - pos 25: 0 extremo(s) BW de taller (1 por unidad × 2 − 1 de campo por unidad) × 2" × 1,4169
 
 ## 3. Servicios calculados

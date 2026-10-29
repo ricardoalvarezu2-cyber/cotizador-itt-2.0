@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-CA01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 0.00 por equipo · soldadura y servicios calculados USD 59,498.78 · 0 similares (—) · 0 sin precio (—).
+**Resumen:** materiales USD 0,00 por equipo · soldadura y servicios calculados USD 59.498,78 · 0 similares (—) · 0 sin precio (—).
 
 
 ## 1. Materiales
@@ -16,22 +16,22 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 
 ## 2. Soldaduras (de la columna de extremos)
 
-**71.25 juntas a tope de taller + juntas SW y olets = 2017.41 pulgadas equivalentes** × USD 21.76 (prefabricado por pulgada diametral (tercero) SOL-00143, 2026-04-07) = USD 43,898.78
+**71,25 juntas a tope de taller + juntas SW y olets = 2.017,41 pulgadas equivalentes** × USD 21,76 (prefabricado por pulgada diametral (tercero) SOL-00143, 2026-04-07) = USD 43.898,78
 
 - pos 1, 2, 5: caño por metro; sus juntas se cuentan en los extremos BW de accesorios y bridas (una junta cada uno)
-- pos 1: 27 junta(s) de empalme entre barras de 12 m (325 m) × 36" × 1.0000
-- pos 2: 15 junta(s) de empalme entre barras de 12 m (181 m) × 36" × 0.5003
-- pos 5: 15 junta(s) de empalme entre barras de 12 m (190 m) × 12" × 0.9234
-- pos 3: 10.5 extremo(s) BW de taller (1 por unidad × 7 × 1.5 por el caño) × 36" × 1.0000
-- pos 4: 18 extremo(s) BW de taller (2 por unidad × 6 × 1.5 por el caño) × 36" × 1.0000
+- pos 1: 27 junta(s) de empalme entre barras de 12 m (325 m) × 36" × 1,0000
+- pos 2: 15 junta(s) de empalme entre barras de 12 m (181 m) × 36" × 0,5003
+- pos 5: 15 junta(s) de empalme entre barras de 12 m (190 m) × 12" × 0,9234
+- pos 3: 10,5 extremo(s) BW de taller (1 por unidad × 7 × 1,5 por el caño) × 36" × 1,0000
+- pos 4: 18 extremo(s) BW de taller (2 por unidad × 6 × 1,5 por el caño) × 36" × 1,0000
 - +5% por rechazos y reparaciones con RX 100% (parametros.rechazo_pct)
 
 ## 3. Servicios calculados
 
-- **Pintura aparte (no va en el total):** 1711.68 m² × USD 40.00/m² (Granallado y pintura, 2026-03-03) = USD 68,467.16. Cotizarla como ítem aparte por m² (`parametros.pintura_aparte`).
+- **Pintura aparte (no va en el total):** 1.711,68 m² × USD 40.00/m² (Granallado y pintura, 2026-03-03) = USD 68,467.16. Cotizarla como ítem aparte por m² (`parametros.pintura_aparte`).
 - **Prueba hidráulica:** en el prefabricado va dentro de la pulgada (no se suma aparte).
-- **Radiografía 100% y tintas:** 90 placas chicas + 394 grandes + 13.00 servicio(s) de RX + 0.00 de LP por equipo = USD 15,600.00 (Servicio de radiografía (Antonelli) (2025-11; antonelli_end_2025-11)).
-  Con las tarifas de Antonelli (11-2025) serían USD 15,600.00: confirmar el proveedor de END con el cliente o la zona.
+- **Radiografía 100% y tintas:** 90 placas chicas + 394 grandes + 13,00 servicio(s) de RX + 0,00 de LP por equipo = USD 15.600,00 (Servicio de radiografía (Antonelli) (2025-11; antonelli_end_2025-11)).
+  Con las tarifas de Antonelli (11-2025) serían USD 15.600,00: confirmar el proveedor de END con el cliente o la zona.
 
 ### Horas de ingeniería, calidad y montaje (estimadas: prefabricado, 36", 1 u, materiales USD 0 por unidad)
 

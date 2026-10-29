@@ -7,8 +7,8 @@ pos,grupo,descripcion,cantidad,unidad,precio_unit_usd,total_usd,proveedor,nota
 6,material,"Brida SORF 2"" #150",1,un,10.87,10.87,Chapa pura,
 7,material,"Brida SORF 6"" #150",2,un,38.19,76.38,sin proveedor,
 8,material,"Caño S/C 6"" Sch 40",6,m,60.51,363.06,sin proveedor,se compra la tira entera de 6 m por no haber stock
-9,material,"Caño S/C 2"" Sch 80",0.25,m,16.62,4.155,sin proveedor,
-10,material,"Sombrerete 10"" Sch 20 x 300 mm",1,un,194.709,194.709,sin proveedor,"la planilla dice 0,3 × 26,709 = 194,709 (la cuenta no cierra; se toma el subtotal)"
+9,material,"Caño S/C 2"" Sch 80",0.25,m,16.62,4.16,sin proveedor,
+10,material,"Sombrerete 10"" Sch 20 x 300 mm",1,un,194.71,194.71,sin proveedor,"la planilla dice 0,3 × 26,709 = 194,709 (la cuenta no cierra; se toma el subtotal)"
 11,material,Placa de identificación,1,un,15,15,sin proveedor,
 12,material,"Deflectores 900 x 200 x 1/4""",90,kg,1.5,135,sin proveedor,9 un × 10 kg
 13,material,"Espárragos 3/4"" x 130 mm c/2 tuercas",8,un,10,80,sin proveedor,
@@ -19,7 +19,7 @@ pos,grupo,descripcion,cantidad,unidad,precio_unit_usd,total_usd,proveedor,nota
 18,material,"Media cupla 2"" #6000",1,un,18.38,18.38,sin proveedor,estimado base S3000 × 2
 19,material,"Junta plana 6"" #150",1,un,10,10,sin proveedor,
 20,material,Cunas de apoyo,40,kg,0.75,30,sin proveedor,"la planilla toma 20 kg × 1,5 (error: 2 un × 20 kg = 40 kg); incluye MO ITT p/estructura pesada"
-MO,mo,"Fabricación tercerizada Quesada JQ-012-2026 (soldadura, armado, consumibles y PH; 1802 kg)",1,gl,10700,10700,Quesada,"columna elegida en el Resumen; la alternativa ITT era soldadura 3328 + montaje 234 h × 13 = 3042"
+MO,mo,"Fabricación tercerizada Quesada JQ-012-2026 (soldadura, armado, consumibles y PH; 1802 kg)",1,gl,10700,10700,Quesada,columna elegida en el Resumen; la alternativa ITT era soldadura 3328 + montaje 234 h × 13 = 3042
 RX,servicio,Radiografía y tinta penetrante (Rx + LP),1,gl,2720,2720,Planilla ITT (Antonelli),"Rx 36"" 3 juntas (21 placas) + 2"" 2 juntas + longitudinales; LP 6"" 5 juntas y 2"" 3 juntas"
 PIN,servicio,Granallado y pintura,25,m2,40,1000,Planilla ITT,
 HH,mo,Ingeniería (50 h × 15) + calidad (90 h × 15),1,gl,2100,2100,Planilla ITT,

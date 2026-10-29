@@ -99,10 +99,10 @@ igual("IVA más IVA", cs.precio_sin_iva({**base, "iva_origen": "más IVA (lo dic
 r = uno("MO fabricación skid y estructura por kg (tercero)")
 igual("Quesada calentador 370: 3234 ÷ 770", [float(h["valor_usd"]) for h in hist if h["codigo"] == r["codigo"] and h["fecha"] == "2026-04-22"], [4.2])
 r = uno("MO fabricación de manifold (tercero)", unidad_tarifa="USD/pulg-eq")
-igual("Ledesma manifold 3590 ÷ 224 pulgadas", float(r["tarifa_unitaria_usd"]), 3590 / 224, 0.001)
+igual("Ledesma manifold 3590 ÷ 224 pulgadas", float(r["tarifa_unitaria_usd"]), round(3590 / 224, 2), 0.001)  # tarifa guardada con 2 decimales (29-10-2026)
 igual("manifold: alcance comparable", r["alcance_comparable"], "sí")
 r = uno("MO fabricación de antorcha (tercero)")
-igual("antorcha 81000 ÷ 24500 kg", float(r["tarifa_unitaria_usd"]), 81000 / 24500, 0.001)
+igual("antorcha 81000 ÷ 24500 kg", float(r["tarifa_unitaria_usd"]), round(81000 / 24500, 2), 0.001)
 # 8. Un global sin magnitud no tiene tarifa ni alcance comparable
 r = uno("MO fabricación de equipo completo (tercero)", equipo_referencia="Desgasificador SB-211")
 igual("global sin tarifa", (r["tarifa_unitaria_usd"], r["alcance_comparable"], r["unidad"]), ("", "no", "global"))

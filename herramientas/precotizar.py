@@ -355,7 +355,7 @@ def material(r, n):
     ELEGIDO[item["id"]] = c["descripcion"]
     dif = "; ".join(difs + ([nota_u] if nota_u else []))
     tipo = TIPO.get(c["tipo_precio"], "ant")
-    item["fuentes"] = [{"tipo": tipo, "precio": round(precio, 4), "proveedor": f"{c['proveedor'][:70]} · {c['codigo']}",
+    item["fuentes"] = [{"tipo": tipo, "precio": round(precio, 2), "proveedor": f"{c['proveedor'][:70]} · {c['codigo']}",
                         "origen": (c["ruta_origen"] + (" · " + c["archivo_origen"] if c["archivo_origen"] else ""))[:200],
                         "fecha": c["fecha_ultimo_precio"], "coincide": coincide, **({"diferencia": dif} if coincide == "similar" else {})}]
     if fam == "VAL" and "taval" in norm(c.get("marca", "") + " " + c["proveedor"]):
@@ -500,7 +500,7 @@ def soldaduras(filas, diametral=False):
             dn = min(ds) if ds else dn  # el olet se mide por la salida (12"x3/4" → 3/4"), no por el caño donde se suelda
             juntas_olet += (n_bw + n_sw) * q * (dn or 0) * fa
             n_sw_olet += (n_bw + n_sw) * q
-            detalle.append(f"pos {r['pos']}: {int((n_bw + n_sw) * q)} junta(s) de {r['descripcion'][:25]} sobre caño × {fmtg(dn)}\" × {fa} = {fmt((n_bw + n_sw) * q * dn * fa, 2)}")
+            detalle.append(f"pos {r['pos']}: {int((n_bw + n_sw) * q)} junta(s) de {r['descripcion'][:25]} sobre caño × {fmtg(dn)}\" × {fmtg(fa)} = {fmt((n_bw + n_sw) * q * dn * fa, 2)}")
             continue
         campo = float(r.get("extremos_campo") or 0)
         dims = [dn_de(x) for x in re.split(r"\s*x\s*", r["diametro"].lower()) if dn_de(x)]
@@ -730,7 +730,7 @@ def main(carpeta, comparar=False):
         informe.append(f"- **Pintura:** {fmt(m2t, 2)} m² ({det}) × USD {fmt(t, 2)}/m² ({pin['servicio'][:50]}, {pin['proveedor'][:30]}, {pin['fecha_ultimo_precio']}) = USD {fmt(m2t * t, 2)}.")
         items.append({"id": "S02", "pos": "PIN", "grupo": "servicio", "descripcion": "Granallado y pintura (m² calculados)",
                       "especificacion": f"{fmt(m2t, 2)} m² exteriores: {det}", "cantidad": round(max(m2t, 0.01), 3), "unidad": "m2",
-                      "fuentes": [{"tipo": "ant", "precio": round(t, 4), "proveedor": f"{pin['proveedor'][:60]} · {pin['codigo']}", "origen": pin["ruta_origen"][:200],
+                      "fuentes": [{"tipo": "ant", "precio": round(t, 2), "proveedor": f"{pin['proveedor'][:60]} · {pin['codigo']}", "origen": pin["ruta_origen"][:200],
                                    "fecha": pin["fecha_ultimo_precio"], "coincide": "similar", "diferencia": "m² calculados (caños, accesorios por regla, envolvente y estructura); esquema de pintura a confirmar con el pliego"}]})
     # fabricación de la estructura (bastidor, patas, cunas): kg × tarifa por kg; antes no se calculaba (CTRL-M01, P01, C01)
     kg_est = 0.0
@@ -841,6 +841,10 @@ def main(carpeta, comparar=False):
                 "- Plazo (camino crítico con `comercial/plazos_proveedores.csv`).",
                 "- ⚠ **Repuestos** (puesta en marcha y 2 años, si el pliego los pide), **transporte a destino** y **póliza de caución** "
                 "(YPF y la mayoría de las licitaciones la piden): no se calculan; en CTRL-TS01 sumaron USD 1.915 por equipo y en CTRL-SK01 la caución USD 459."]
+    for i in items:  # precios con 2 decimales (decisión de Matías, 29-10-2026)
+        for f in i["fuentes"]:
+            if isinstance(f.get("precio"), float):
+                f["precio"] = round(f["precio"], 2)
     total_mat = sum(i["cantidad"] * i["fuentes"][0]["precio"] for i in items if i["grupo"] == "material")
     total_srv = sum(i["cantidad"] * i["fuentes"][0]["precio"] for i in items if i["grupo"] != "material")
     sin = [i["pos"] for i in items if i["fuentes"][0]["precio"] == 0 and not i.get("provee")]

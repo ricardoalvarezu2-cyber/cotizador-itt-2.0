@@ -7,6 +7,9 @@ Correrlo después de construir_base.py y consolidar_fichas.py.
 import csv
 import re
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from numeros import precio_csv  # noqa: E402
 
 PRECIOS = Path(__file__).resolve().parent.parent / "conocimiento" / "precios"
 
@@ -50,6 +53,7 @@ def main():
                           f"código {r['codigo']}, cantidad {r['cantidad']}"])
     for f in filas:
         f[0] = fecha_iso(f[0])
+        f[5] = precio_csv(f[5])  # precios con 2 decimales (Matías, 29-10-2026)
     filas.sort(key=lambda f: f[0], reverse=True)
     with (PRECIOS / "indice_precios.csv").open("w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)

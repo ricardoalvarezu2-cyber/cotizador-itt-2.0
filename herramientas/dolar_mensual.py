@@ -19,7 +19,12 @@ import json
 import sys
 import urllib.request
 from collections import defaultdict
+from datetime import date
 from pathlib import Path
+import re
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from numeros import FMT_PRECIO, celda_excel  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
 DIARIO = RAIZ / "fuentes_originales" / "indices" / "dolar_diario.csv"
@@ -103,12 +108,19 @@ def escribir_excel(out):
     amarillo = PatternFill("solid", fgColor="FFF2CC")
     for i, f in enumerate(out, 2):
         for j, k in enumerate(campos, 1):
-            c = ws.cell(i, j, f.get(k, ""))
+            v = f.get(k, "")
+            c = ws.cell(i, j)
+            if k == "mes" and re.fullmatch(r"\d{4}-\d{2}", str(v)):
+                c.value, c.number_format = date(int(v[:4]), int(v[5:7]), 1), "mm-yyyy"
+            elif "fecha" in k and re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(v)):
+                c.value, c.number_format = date.fromisoformat(v), "dd-mm-yyyy"
+            else:  # números como celdas numéricas: pesos por dólar con 2 decimales, la brecha en % con 1
+                celda_excel(c, v, k, "#,##0.0" if k.endswith("_pct") else FMT_PRECIO if k != "cepo" else None)
             if f["cepo"] != "no":
                 c.fill = amarillo
     ws.freeze_panes = "B2"
     n = len(out) + 3
-    ws.cell(n, 1, "Precio de venta en pesos por dólar. Amarillo: meses con cepo (hasta el 14/04/2025), con brecha grande entre oficial y blue.")
+    ws.cell(n, 1, "Precio de venta en pesos por dólar. Amarillo: meses con cepo (hasta el 14-04-2025), con brecha grande entre oficial y blue.")
     ws.cell(n + 1, 1, "Fuente: api.argentinadatos.com (BNA, BCRA y mercados). Datos diarios en fuentes_originales/indices/dolar_diario.csv. "
                       "Se rearma con: python herramientas/dolar_mensual.py")
     wb.save(SALIDA.with_suffix(".xlsx"))

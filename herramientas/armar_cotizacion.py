@@ -37,7 +37,7 @@ from pathlib import Path
 from openpyxl import Workbook, load_workbook
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from numeros import a_vista, fmt, fmtg  # noqa: E402
+from numeros import FMT_TECNICO, a_vista, fmt, fmtg, precio_csv  # noqa: E402
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -115,7 +115,7 @@ def escribir_computo(cfg, carpeta):
                     "tipo_origen", "proveedor_o_criterio", "carpeta_origen", "fecha_precio", "coincidencia", "diferencia"])
         for it in cfg["items"]:
             s = it["fuentes"][0]
-            w.writerow([it["id"], it["pos"], it["descripcion"], f"{it['cantidad']:g}", it["unidad"], f"{s['precio']:g}",
+            w.writerow([it["id"], it["pos"], it["descripcion"], f"{it['cantidad']:.4f}".rstrip("0").rstrip("."), it["unidad"], precio_csv(s["precio"]),
                         f"{it['cantidad'] * s['precio']:.2f}", TIPOS[s["tipo"]], s["proveedor"], s["origen"], s["fecha"],
                         s.get("coincide", ""), s.get("diferencia", "")])
 
@@ -224,6 +224,8 @@ def escribir_planilla(cfg, carpeta, idx_rows):
                     c.fill = INP
                 if j in (6, 7, 15, 16):
                     c.number_format = USD
+                if j == 4 and isinstance(v, (int, float)):  # cantidad: técnico, con los decimales que tenga
+                    c.number_format = "#,##0" if float(v).is_integer() else FMT_TECNICO
                 c.number_format = {11: "dd-mm-yyyy", 13: "#,##0.00", 14: "#,##0.00"}.get(j, c.number_format)
             w.cell(i, 8).fill = PatternFill("solid", fgColor=TF[s["tipo"]])
             w.cell(i, 17).fill = PatternFill("solid", fgColor={"igual": "DDF1E4", "similar": "FBEFD6", "sin_ref": "F8E1DE"}.get(s.get("coincide"), "FFFFFF"))
@@ -255,7 +257,7 @@ def escribir_planilla(cfg, carpeta, idx_rows):
         for j, v in enumerate([date(y, m, 1), float(r["ipc_argentina"]), float(r["dolar_bna"]), float(r["indice_local_usd"]),
                                float(r["cpi_eeuu"]), r["origen_ipc"], r["origen_dolar"], r["origen_cpi"]], 1):
             c = x.cell(i, j, v); c.border = B
-            c.number_format = {1: "mm-yyyy", 2: "#,##0.00", 3: "#,##0.00", 4: "#,##0.00", 5: "#,##0.00"}.get(j, "General")
+            c.number_format = {1: "mm-yyyy", 2: "#,##0.0##", 3: "#,##0.00", 4: "#,##0.0##", 5: "#,##0.0##"}.get(j, "General")  # índices: técnicos
             if j >= 6 and str(v).startswith("dato"):
                 c.font = Font(color="2C7A4B")
             if j >= 6 and ("ESTIMADO" in str(v) or "APROXIMADO" in str(v)):

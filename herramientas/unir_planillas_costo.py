@@ -19,6 +19,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from indice_proyectos import norm  # noqa: E402
+from numeros import precio_csv  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
 PRECIOS = RAIZ / "conocimiento" / "precios"
@@ -71,7 +72,7 @@ def main():
                 continue  # la misma fila en otra revisión o copia del archivo
             vistos.add(k)
             base = carpetas.get(r["proyecto"], "")
-            filas.append({**r, "parte": n, "carpeta_proyecto": base[len(TEXTOS):] if base.startswith(TEXTOS) else base,
+            filas.append({**r, "costo_unitario": precio_csv(r["costo_unitario"]), "parte": n, "carpeta_proyecto": base[len(TEXTOS):] if base.startswith(TEXTOS) else base,
                           "usable_catalogo": "si" if usable(r) else "no"})
     cols = list(filas[0].keys())
     with open(PRECIOS / "planillas_costo_items.csv", "w", newline="", encoding="utf-8") as f:
