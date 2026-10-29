@@ -442,9 +442,14 @@
               <label class="ancho"><span>Documento (cotización, mail, archivo)</span><input id="go-${r}" data-glob="${r}" data-c="origen" value="${E(s.origen)}"></label></div>
               <p class="small" id="rg-${r}">${globalRubro(f, r)}</p>`
             : tr ? `<p class="small muted">Se cotiza EXW Quilmes Oeste. Pasalo a manual para sumar el flete por ${eq} (USD por viaje ÷ equipos por camión).</p>`
-            : `${a.opciones.length ? `<label><span>Tarifa del historial</span><select id="rt-${r}" data-rb-tarifa="${r}">${a.opciones.map(o => `<option value="${E(o.id)}" ${o.id === a.elegida?.id ? "selected" : ""}>USD ${num(o.valor)} · ${E(o.etiqueta.slice(0, 70))} · ${E(F(o.fecha))}</option>`).join("")}</select></label>` : ""}
+            : `${r === "mo_piping" ? `<div class="segm" role="group" aria-label="Base de cobro del piping"><button data-a="rubro-base" data-v="pulg" aria-pressed="${a.base !== "kg"}">Por pulgada</button><button data-a="rubro-base" data-v="kg" aria-pressed="${a.base === "kg"}">Por kg</button></div>` : ""}
+              ${a.unidad ? `<label><span>Tarifa (USD por ${E(a.unidad[0] === "m2" ? "m²" : a.unidad[0])})</span><select id="rt-${r}" data-rb-tarifa="${r}">${a.opciones.map(o => `<option value="${E(o.id)}" ${o.id === a.elegida?.id ? "selected" : ""}>USD ${num(o.valor)} · ${E(o.etiqueta.slice(0, 70))} · ${E(F(o.fecha))}</option>`).join("")}
+                <option value="PROPIA" ${a.elegida?.id === "PROPIA" ? "selected" : ""}>Tarifa propia (la cargo yo)</option></select></label>
+                ${a.elegida?.id === "PROPIA" ? `<div class="campos"><label><span>USD por ${E(a.unidad[0] === "m2" ? "m²" : a.unidad[0])} (sin IVA)</span><input id="tp-${r}" type="text" inputmode="decimal" class="num" data-rb-propia="${r}" data-c="valor" value="${NI(S.doc.cot.rubros?.[r]?.propia?.valor ?? "")}"></label>
+                  <label><span>Fecha</span><input id="tf-${r}" type="text" inputmode="numeric" placeholder="DD-MM-AAAA" data-rb-propia="${r}" data-c="fecha" value="${E(F(S.doc.cot.rubros?.[r]?.propia?.fecha || ""))}"></label>
+                  <label class="ancho"><span>Proveedor y documento</span><input id="tv-${r}" data-rb-propia="${r}" data-c="proveedor" value="${E(S.doc.cot.rubros?.[r]?.propia?.proveedor || "")}"></label></div>` : ""}` : ""}
               <p class="small" id="ra-${r}">${E(a.texto)}</p>
-              ${a.renglones.length ? `<div class="fila"><button class="chico prim" data-a="rubro-aplicar" data-r="${r}">Aplicar al costo</button><span class="small muted">reemplaza los renglones de este rubro</span></div>` : ""}
+              ${a.renglones.length || a.unidad ? `<div class="fila"><button class="chico prim" data-a="rubro-aplicar" data-r="${r}">Aplicar al costo</button><span class="small muted">reemplaza los renglones de este rubro</span></div>` : ""}
               ${renglonesRubro(r)}`}
           </div></div></div>`;
     };
@@ -730,7 +735,7 @@
   // ------------------------------------------------------------------ eventos
   app.addEventListener("input", ev => {
     const el = ev.target;
-    if (bloqueada() && (el.dataset.b || el.dataset.bl || el.dataset.it || el.dataset.glob || el.dataset.ta !== undefined)) {
+    if (bloqueada() && (el.dataset.b || el.dataset.bl || el.dataset.it || el.dataset.glob || el.dataset.rbPropia || el.dataset.ta !== undefined)) {
       toast(`La cotización está ${S.doc.cot.estado}: para cambiarla, volvé a borrador.`); render(); return;
     }
     if (el.dataset.b && S.doc) {
@@ -787,6 +792,12 @@
       else src[c] = el.value;
       if ((c === "precio" || c === "viaje") && src.precio && src.tipo === "est" && /^SIN PRECIO/.test(src.diferencia || "")) { src.tipo = "cot"; src.diferencia = ""; }
       refrescar(); pintarRubros(); guardarPronto();
+    } else if (el.dataset.rbPropia && S.doc) {
+      const r = el.dataset.rbPropia, rb = (S.doc.cot.rubros ??= {})[r] ??= { modo: "detallado" }, pr = rb.propia ??= {};
+      if (el.dataset.c === "valor") { const v = NUM(el.value); el.classList.toggle("mal", v == null); if (v == null) return; pr.valor = v; }
+      else if (el.dataset.c === "fecha") { const v = Documentos.isoDe(el.value); el.classList.toggle("mal", !v); if (!v) return; pr.fecha = v; }
+      else pr.proveedor = el.value;
+      guardarPronto(); pintarRubros();
     } else if (el.dataset.ta !== undefined) {
       const t = S.doc.cot.plazo.tareas[+el.dataset.ta], c = +el.dataset.c;
       t[c] = c === 1 || c === 2 ? NUM(el.value) || 0 : el.value; guardarPronto();
@@ -836,7 +847,7 @@
 
   // Acciones que cambian la cotización: no se permiten si está aprobada o enviada (hay que volver a borrador)
   const CAMBIAN = new Set(["quitar", "editar", "manual", "item-guardar", "agregar-mat", "agregar-srv", "agregar-sel", "sold-agregar", "rx-agregar", "pin-agregar",
-    "ph-agregar", "rubro-modo", "rubro-aplicar", "recalcular", "tarea-nueva", "tarea-quitar", "restaurar", "deshacer", "rehacer"]);
+    "ph-agregar", "rubro-modo", "rubro-aplicar", "rubro-base", "recalcular", "tarea-nueva", "tarea-quitar", "restaurar", "deshacer", "rehacer"]);
   const bloqueada = () => S.doc && ["aprobado", "enviado"].includes(S.doc.cot.estado);
   async function accion(a, b) {
     const cot = S.doc?.cot;
@@ -925,9 +936,10 @@
           + (n ? ` · completé ${n} renglón(es) con el catálogo` : "") + (sin ? ` · ${sin} sin peso en tabla` : "") + (falta ? " · hay renglones sin datos (ver aviso)" : ""));
         break;
       }
+      case "rubro-base": { const rb = (cot.rubros ??= {}).mo_piping ??= { modo: "detallado" }; rb.base = b.dataset.v; delete rb.tarifa; guardarPronto(); render(); break; }
       case "rubro-aplicar": {
         const r = b.dataset.r, n = Rubros.aplicarAntecedentes(cot, S.datos, Rubros.ficha(cot, S.datos, S.sold, Motor), r);
-        guardarPronto(); render(); toast(n ? `${Rubros.RUBROS[r][0]}: costo por antecedentes aplicado (${n} renglón/es)` : "No hay nada para aplicar"); break;
+        guardarPronto(); render(); toast(n ? `${Rubros.RUBROS[r][0]}: costo por antecedentes aplicado (${n} renglón/es)` : Rubros.antecedentes(cot, S.datos, Rubros.ficha(cot, S.datos, S.sold, Motor), r).texto); break;
       }
       case "rubro-abrir": { const r = b.dataset.r; S.rbAbiertos ??= new Set(); S.rbAbiertos.has(r) ? S.rbAbiertos.delete(r) : S.rbAbiertos.add(r); render(); break; }
       case "rubro-modo": {
