@@ -22,7 +22,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 14 | Codo 90 radio corto 2" 160 ASTM A-234 WPB | 4 × 76,95 = 307,80 | 4 un × 96,19 = 384,76 | +25% | lista · Renard (cód. 4043) · ABW-00099 · 2025-12-26 | más caro |
 | 15 | Codo 90 radio largo 6" XS ASTM A-234 WPB | 1 × 129,10 = 129,10 | 1 un × 129,10 = 129,10 | 0% | lista · Renard (cód. 3777) · ABW-00117 · 2025-12-26 | dentro de ±15% |
 | 16 | Codo 90 radio corto 2" 160 ASTM A-234 WPB | 1 × 76,95 = 76,95 | 1 un × 96,19 = 96,19 | +25% | lista · Renard (cód. 4043) · ABW-00099 · 2025-12-26 | más caro · real: fila repetida del codo 2 sch160 |
-| 17 | Niple longitud 100 mm 1/2" 160 ASTM A-106 | 1 × 10,00 = 10,00 | 1 un × 20,00 = 20,00 | +100% | ant · Antecedentes puentes Taval/CGC s2000 · N · 2026-04-22 | más caro (similar) |
+| 17 | Niple longitud 100 mm 1/2" 160 ASTM A-106 | 1 × 10,00 = 10,00 | 1 un × 8,00 = 8,00 | -20% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más barato |
 | 18 | Reducción excéntrica 16" x 12" 40 ASTM A-860  | 1 × 3.172,70 = 3.172,70 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo |
 | 19 | Tapa de cierre rápido (QOC) #900 16" 900 | 1 × 10.923,00 = 10.923,00 | 1 un × 10.524,00 = 10.524,00 | -4% | cot · FTS (Sypris Tube Turns, cot. FTS 260812) · 2026-08-10 | dentro de ±15% |
 | 20 | Tee de reducción 4" x 2" 160 ASTM A-234 WPB | 2 × 546,54 = 1.093,08 | 2 un × 39,26 = 78,52 | -93% | ant · sin proveedor en planilla · ABW-02324 · 2025-12-23 | más barato (similar) |
@@ -57,7 +57,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 49 | Detector de paso de scraper | 1 × 4.209,50 = 4.209,50 | 1 un × 1.650,00 = 1.650,00 | -61% | ant · TDW (marca) · OTR-02969 · 2025-12-10 | más barato (similar) |
 | 50 | Válvula de bloqueo y purga (para manómetro) 1 | 1 × 150,00 = 150,00 | 1 un × 80,00 = 80,00 | -47% | ant · Abac · VAL-03162 · 2026-04-22 | más barato (similar) |
 
-**Materiales: real USD 58.316,80 · cotizador USD 32.542,52 (-44%).** 6 dentro de ±15%, 28 fuera, 16 sin precio.
+**Materiales: real USD 58.316,80 · cotizador USD 32.530,52 (-44%).** 6 dentro de ±15%, 28 fuera, 16 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -74,5 +74,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por trampa
 
-Real USD 83.177,98 · cotizador USD 57.960,74 (-30%) antes de completar lo que el cotizador marca para revisar.
+Real USD 83.177,98 · cotizador USD 57.948,74 (-30%) antes de completar lo que el cotizador marca para revisar.
 

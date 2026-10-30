@@ -629,7 +629,7 @@ const Busqueda = (() => {
       const igual = !difs.length && oblig.every(c => f[c]);
       const misma = !!f.marca && norm(r.a.marca) === norm(f.marca);
       // la marca no le gana al tamaño (Ø, serie, schedule, medida), igual que buscar_material.py (CTRL-TS01)
-      const crit = difs.filter(d => ["diametro", "diametro2", "serie", "schedule", "medida", "espesor_mm"].includes(d.split(":")[0]) && !d.includes("(no pedido)")).length;
+      const crit = difs.filter(d => ["diametro", "diametro2", "serie", "schedule", "medida", "espesor_mm", "largo_mm"].includes(d.split(":")[0]) && !d.includes("(no pedido)")).length;
       res.push({ r, estado: igual ? "igual" : "similar", difs, misma, orden: [igual ? 1 : 0, -crit, misma ? 1 : 0, -difs.length, r.p ? 1 : 0, coinc, r.fe || ""] });
     }
     res.sort((x, y) => { for (let i = 0; i < 7; i++) { if (x.orden[i] < y.orden[i]) return 1; if (x.orden[i] > y.orden[i]) return -1; } return 0; });

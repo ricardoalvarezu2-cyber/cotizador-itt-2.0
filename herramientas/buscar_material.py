@@ -33,7 +33,7 @@ from compatibilidad import incompatible  # noqa: E402
 
 NOMBRE_A_COD = {v[0]: k for k, v in FAMILIAS.items()}
 CON_TIPO = ("VAL", "AFO", "ABW", "BRI", "JUN", "INS")
-CRITICOS = {"diametro", "diametro2", "serie", "schedule", "medida", "espesor_mm"}
+CRITICOS = {"diametro", "diametro2", "serie", "schedule", "medida", "espesor_mm", "largo_mm"}  # largo_mm: niples (30-10-2026)
 
 
 _FILAS = None

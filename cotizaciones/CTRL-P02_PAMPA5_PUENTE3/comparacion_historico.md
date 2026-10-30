@@ -21,14 +21,14 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 13 | Tapón hexagonal 3/4" NPT 3000 A105 | 3 × 3,50 = 10,50 | 2 un × 2,30 = 4,60 | -56% | lista · Renard (cód. 5980) · AFO-00850 · 2025-12-26 | más barato · real: la planilla compra 3; el plano pide 2 |
 | 14 | Niple 3/4" x 100 mm sch 80 NPT | 3 × 10,00 = 30,00 | 3 un × 8,74 = 26,22 | -13% | ant · Antecedentes puentes Taval/CGC s2000 · N · 2026-04-22 | dentro de ±15% |
 | 15 | Válvula esférica 1" NPT WOG 3000 A105 | 3 × 51,05 = 153,15 | 3 un × 53,22 = 159,66 | +4% | lista · Taval (Lista 30 × 0.52) · VAL-04887 · 2025-09-01 | dentro de ±15% · real: va como Válvulas Taval (factor 1) |
-| 16 | Niple 1" x 100 mm sch 80 PE x NPT | 2 × 10,00 = 20,00 | 2 un × 5,38 = 10,76 | -46% | est · Stock ITT (cód. ACI025FN1ICK150) · NIP-0 · 2024-11-01 | más barato (similar) |
+| 16 | Niple 1" x 100 mm sch 80 PE x NPT | 2 × 10,00 = 20,00 | 2 un × 4,90 = 9,80 | -51% | est · futura/ francovigh · NIP-01794 · 2026-10-10 | más barato (similar) |
 | 17 | Sockolet 3" x 1" 3000 A105 | 2 × 6,00 = 12,00 | 2 un × 1,12 = 2,24 | -81% | cot · planilla de costo ITT (proveedor sin nom · 2026-10-30 | más barato (similar) |
 | 18 | Tapón hexagonal 1" NPT 3000 A105 | 2 × 3,08 = 6,16 | 2 un × 3,08 = 6,16 | 0% | lista · Renard (cód. 5981) · AFO-00853 · 2025-12-26 | dentro de ±15% |
 | 19 | Thredolet 3" x 3/4" 3000 A105 | 1 × 15,00 = 15,00 | 1 un × 0,28 = 0,28 | -98% | cot · planilla de costo ITT (proveedor sin nom · 2026-10-30 | más barato (similar) |
 | 20 | Buje reducción 3/4" x 1/2" NPT 3000 A105 | 1 × 2,98 = 2,98 | 1 un × 2,98 = 2,98 | 0% | lista · Renard (cód. 5041) · AFO-00604 · 2025-12-26 | dentro de ±15% |
 | 21 | Caño s/c 3" sch 40 A106 B (tramo 258 mm) | 1 × 6,47 = 6,47 | 0,26 m × 25,08 = 6,47 | +0% | lista · Renard (cód. 1153) · CAN-01484 · 2025-12-26 | dentro de ±15% |
 | 22 | Brida WNRF 3" #300 sch 40 A105 | 6 × 40,98 = 245,88 | 8 un × 40,98 = 327,84 | +33% | lista · Renard (cód. 11978) · BRI-01282 · 2025-12-26 | más caro · real: la planilla compra 6 (1 + 5); el plano pide 8 |
-| 23 | Niple 1" x 100 mm sch 80 NPT | 1 × 10,00 = 10,00 | 1 un × 5,38 = 5,38 | -46% | est · Stock ITT (cód. ACI025FN1ICK150) · NIP-0 · 2024-11-01 | más barato (similar) |
+| 23 | Niple 1" x 100 mm sch 80 NPT | 1 × 10,00 = 10,00 | 1 un × 4,90 = 4,90 | -51% | est · futura/ francovigh · NIP-01794 · 2026-10-10 | más barato (similar) |
 | 24 | Junta espiralada 3" #300 316 + grafito | 7 × 6,00 = 42,00 | 8 un × 12,13 = 97,04 | +131% | est · no dice · JUN-01699 · 2025-03-27 | más caro (similar) · real: la planilla compra 7; el plano pide 8 |
 | 25 | Caño s/c 3" sch 40 A106 B (tramo 722 mm) | 1 × 18,11 = 18,11 | 0,72 m × 25,08 = 18,11 | 0% | lista · Renard (cód. 1153) · CAN-01484 · 2025-12-26 | dentro de ±15% |
 | 26 | Válvula esférica 3" #300 PT RF WCB palanca (f | 3 × 246,25 = 738,74 | 3 un × 256,00 = 768,00 | +4% | lista · Taval (Lista 30 × 0.52) · VAL-04457 · 2025-09-01 | dentro de ±15% · real: va como Válvulas Taval (factor 1) |
@@ -47,7 +47,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 39 | Manómetro con manifold | 1 × 0,00 = 0,00 | 1 un × 120,00 = 120,00 |  | cot · Weisz · INS-04947 · 2026-10-30 | más barato (similar) · real: la planilla NO lo costea |
 | 40 | Transmisor de presión ABB con manifold | 1 × 901,71 = 901,71 | 1 un × 1.100,00 = 1.100,00 | +22% | ant · Vega (cotización en 5.Proveedores 3ros)  · 2026-03-10 | más caro (similar) · real: en la planilla va en Instrumentos (factor 1,35); alternativa Rosemount 2.848,53 |
 
-**Materiales: real USD 6.400,97 · cotizador USD 5.002,15 (-22%).** 20 dentro de ±15%, 18 fuera, 2 sin precio.
+**Materiales: real USD 6.400,97 · cotizador USD 5.000,71 (-22%).** 20 dentro de ±15%, 18 fuera, 2 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -63,5 +63,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por puente
 
-Real USD 8.836,97 · cotizador USD 9.005,08 (+2%) antes de completar lo que el cotizador marca para revisar.
+Real USD 8.836,97 · cotizador USD 9.003,64 (+2%) antes de completar lo que el cotizador marca para revisar.
 

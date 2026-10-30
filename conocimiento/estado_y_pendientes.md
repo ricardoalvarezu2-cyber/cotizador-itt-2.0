@@ -118,7 +118,11 @@
 
 **Controles movidos a propósito (30-10-2026), por los precios de hoy de la planilla de colectores YPF Lic 66944:** F01 2.868 → 2.822, C01 44.337 → 44.749, P01 39.552 → 39.604, M01 34.225 → 34.622, TS01 59.014 → 59.079, P02 9.153 → 9.005, SK01 62.286 → 61.162. Solo cambian materiales: misma pieza con el precio nuevo (ej. brida WN 600 LB 4" 120 → 56,37; retención 3" 300 LB Taval 167,50 → 301,88; sockolet 8"x3/4" 26 → 8) y la globo GAG8N 3/4" Taval ahora con precio (41). 50 resultados del buscador revisados y aceptados (51 después de integrar main con Camuzzi: suma el manómetro 19b y los espárragos 22c del separador, que pasan a un similar 7/8" #600 de USD 5,50; el renglón sigue en 0 para pedir cotización); pares de compatibilidad: 0 nuevos aceptados ni rechazados. El servicio de pintura de la planilla va con nombre propio (PIN-00579) para no tapar el de 2026-03 que usan los controles.
 
-**Buscador, niples (visto el 30-10-2026 al cargar los precios de los colectores):** entre similares, un largo distinto pesa lo mismo que unos extremos distintos y desempata la fecha; así un niple 2" de 1.000 mm queda con el precio de uno de 100 mm (CAPEX pos 22 y 25). Propuesta: que el largo del niple cuente como diferencia crítica. Es un cambio de regla: necesita revisión independiente antes de aplicarlo.
+**Buscador, niples (30-10-2026, aprobado por Matías):** el largo del niple cuenta como diferencia crítica al ordenar similares (Python y página) y el largo también se lee de "L:100". Cambian 5 resultados, revisados: CAPEX pos 12 y 25 toman un niple de 200 mm y uno de 1.000 mm; TS01 pos 17 pasa a igual; P02 pos 16 y 23 toman el de 100 mm, que no tiene precio confiable (se pide cotización). NIP-02856 y NIP-02865 se unieron en NIP-05009 (misma pieza). Revisión independiente en `auditorias/2026-10-30_regla_largo_niples.md`.
+
+**Control rápido (30-10-2026, aprobado por Matías):** `verificar_todo.py --rapido` (~2 min 20 s contra ~10 min) saltea las pruebas de reglas (compatibilidades, errores sembrados, pares) y la segunda corrida de los catálogos. Para cargas de datos mientras se corrige; el completo va una sola vez antes de `main`.
+
+**Consulta a Ricardo (30-10-2026):** mensaje listo en `auditorias/2026-10-30_consulta_ricardo_colectores.md` (16 piezas con dos precios, junta dieléctrica 4" y horas de montaje). Matías se lo pasa; con la respuesta, cargar los precios.
 
 **Hace Claude** (aprobado el 28/10/2026: "el resto, dale para adelante")
 1. ~~Catálogo de MO y servicios etapa 1~~ **Hecho (28/10/2026).**

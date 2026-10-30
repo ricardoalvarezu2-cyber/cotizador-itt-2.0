@@ -1,6 +1,10 @@
 """Corre todos los controles del cotizador de una vez. Tiene que terminar en "TODO OK" antes de dar por bueno un cambio.
 
-Uso: python herramientas/verificar_todo.py
+Uso: python herramientas/verificar_todo.py [--rapido]
+     --rapido: para cargas de precios o datos que no cambian reglas ni herramientas (Matías, 30-10-2026: un control de 10
+     minutos repetido en cada corrección hacía eternas las cargas). Saltea las pruebas de reglas (test_compatibilidad,
+     test_errores_sembrados, pares de compatibilidad) y la segunda corrida de los catálogos: baja de ~10 a ~3 minutos.
+     Termina en "RÁPIDO OK", que NO alcanza para pasar a main: antes de main va una corrida completa ("TODO OK").
 
 1. Tests de regresión: catálogo de materiales, catálogo de servicios, precotización (CAPEX como caso de control) y
    errores sembrados (cada error ya cometido, metido en una copia de la CAPEX, tiene que frenarse).
@@ -23,6 +27,8 @@ H = RAIZ / "herramientas"
 CAPEX = "cotizaciones/COT26-1003-001_CAPEX_OQ8209"
 CONTROL = {"precio_unitario": "7.324,57"}  # 30-10-2026: pos 10 (BSPT por NPT) y 23 (otra serie y extremos) SIN PRECIO por compatibilidad; antes 7.366,12
 fallas = []
+RAPIDO = "--rapido" in sys.argv
+LENTOS = ("test_compatibilidad.py", "test_errores_sembrados.py")  # prueban reglas, no datos
 sys.path.insert(0, str(H))
 from candado import candado  # noqa: E402
 _CANDADO = candado("verificar_todo.py")  # se guarda: si no, se libera enseguida
@@ -53,12 +59,17 @@ antes = modificados()
 
 for t in ("test_catalogo.py", "test_catalogo_servicios.py", "test_precotizar.py", "test_antecedentes.py", "test_compatibilidad.py",
           "test_errores_sembrados.py"):
+    if RAPIDO and t in LENTOS:
+        print(f"--    {t} (salteado en --rapido)")
+        continue
     correr(t, [str(H / t)])
 # índice de precios: se regenera siempre (auditoría 30-10-2026: quedaba viejo si no se corría actualizar_base.py)
 correr("indice_precios.py", [str(H / "indice_precios.py")])
 for script, salida in (("catalogo_materiales.py", "conocimiento/precios/catalogo_materiales.csv"),
                        ("catalogo_servicios.py", "conocimiento/precios/catalogo_servicios.csv")):
     correr(script, [str(H / script)])
+    if RAPIDO:
+        continue
     a = md5(salida)
     correr(script + " (segunda corrida)", [str(H / script)])
     if md5(salida) != a:
@@ -109,8 +120,11 @@ if r.returncode:
 # norma no permite (el mismo control que verificar_computo.py hace en P9).
 correr("resultados del buscador iguales a los aceptados (revisar_cambio_busqueda.py --control)", [str(H / "revisar_cambio_busqueda.py"), "--control"])
 # tercera auditoría (30-10-2026): un cambio de reglas que amplía lo que se lee puede ACEPTAR reemplazos prohibidos
-correr("pares de compatibilidad iguales a la línea base (revisar_pares_compatibilidad.py --control)",
-       [str(H / "revisar_pares_compatibilidad.py"), "--control"])
+if RAPIDO:
+    print("--    pares de compatibilidad (salteado en --rapido)")
+else:
+    correr("pares de compatibilidad iguales a la línea base (revisar_pares_compatibilidad.py --control)",
+           [str(H / "revisar_pares_compatibilidad.py"), "--control"])
 import verificar_computo  # noqa: E402
 incomp, a_confirmar = [], []
 for carpeta in sorted((RAIZ / "cotizaciones").iterdir()):
@@ -159,5 +173,8 @@ if antes is not None and despues is not None:
         print(f"Cambiaron datos: quedan {len(nuevos)} archivos modificados para revisar y subir")
     elif nuevos:
         print(f"Cambiaron {len(nuevos)} archivos, pero el control FALLÓ: no subir nada hasta corregirlo")
+if RAPIDO and not fallas:
+    print("\nRÁPIDO OK (falta la corrida completa sin --rapido antes de pasar a main)")
+    sys.exit(0)
 print("\nTODO OK" if not fallas else f"\nFALLAN {len(fallas)}: {', '.join(fallas)}")
 sys.exit(1 if fallas else 0)

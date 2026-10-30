@@ -1,7 +1,7 @@
 # Precotización automática — COT26-1003-001
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 717,19 por equipo · soldadura y servicios calculados USD 884,76 · 8 similares (3, 4, 9, 12, 20, 22, 24, 25) · 14 sin precio (1, 2, 5, 6, 7, 10, 11, 13, 14, 16, 17, 19, 21, 23).
+**Resumen:** materiales USD 772,19 por equipo · soldadura y servicios calculados USD 884,76 · 8 similares (3, 4, 9, 12, 20, 22, 24, 25) · 14 sin precio (1, 2, 5, 6, 7, 10, 11, 13, 14, 16, 17, 19, 21, 23).
 
 
 ## 1. Materiales
@@ -19,7 +19,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 9 | NIPLE - LONGITUD: 100 mm · Ø 2" | SIMILAR | 20,00 / un | 2026-04-22 · planilla interna | material: A106 B (pedido API 5L) |
 | 10 | BUJE REDUCCION · Ø 2"x1/2" | **SIN PRECIO** | — | — | pedir cotización |
 | 11 | CODO 45° · Ø 2" | **SIN PRECIO** | — | — | pedir cotización |
-| 12 | NIPLE - LONGITUD: 200 mm · Ø 2" | SIMILAR | 15,00 / un | 2026-10-30 · cotización | largo_mm: 100 (pedido 200); material: A106 B (pedido API 5L) |
+| 12 | NIPLE - LONGITUD: 200 mm · Ø 2" | SIMILAR | 20,00 / un | 2026-04-22 · planilla interna | extremos: NPT (pedido NPT/BW); material: A106 B (pedido API 5L) |
 | 13 | JUNTA MONOLITICA · Ø 2" | **SIN PRECIO** | — | — | pedir cotización |
 | 14 | CAÑO - LONGITUD: 1900 mm · Ø 2" | **SIN PRECIO** | — | — | pedir cotización |
 | 15 | CODO 45° · Ø 2" | IGUAL | 8,73 / un | 2025-12-26 · lista | — |
@@ -32,7 +32,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 22 | NIPLE - LONGITUD: 320 mm · Ø 2" | SIMILAR | 15,00 / un | 2026-10-30 · cotización | largo_mm: 100 (pedido 320); material: A106 B (pedido API 5L) |
 | 23 | CUPLA · Ø 1/2" | **SIN PRECIO** | — | — | el más parecido es sin diámetro conocido (AFO-02391, USD 2,35): pedir cotización |
 | 24 | NIPLE - LONGITUD: 150 mm · Ø 2" | SIMILAR | 20,00 / un | 2026-04-22 · planilla interna | material: A106 B (pedido API 5L) |
-| 25 | NIPLE - LONGITUD: 1000 mm · Ø 2" | SIMILAR | 15,00 / un | 2026-10-30 · cotización | largo_mm: 100 (pedido 1000); material: A106 B (pedido API 5L) |
+| 25 | NIPLE - LONGITUD: 1000 mm · Ø 2" | SIMILAR | 40,00 / un | 2026-04-22 · planilla interna | extremos: NPT (pedido NPT/BW); material: A106 B (pedido API 5L) |
 
 ## 2. Soldaduras (de la columna de extremos)
 
@@ -53,7 +53,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Prueba hidráulica:** 6 h × USD 13,00/h (Prueba hidráulica - manifold FA0032 1.2, 2026-03-10) = USD 78,00 · ⚠ horas supuestas: cargar `parametros.ph_horas` · volumen interior de caños y niples 13,0 l.
 - **Radiografía:** no se calculó (`parametros.rx_pct` = 0). Si el pliego la pide, cargar el porcentaje y volver a correr.
 
-### Horas de ingeniería, calidad y montaje (estimadas: puente, 2.5", 2 u, materiales USD 717 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: puente, 2.5", 2 u, materiales USD 772 por unidad)
 
 - **Ingeniería:** 7,5 h × USD 15/h = USD 112,50 · mediana de 9,0, 6,0 h por unidad (repartidas en la serie) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19) · rango del mismo tipo 6–9 h
 - **Calidad y dossier:** 3,5 h × USD 15/h = USD 52,50 · mediana de 1,0, 6,0 h por unidad (repartidas en la serie) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19) · rango del mismo tipo 1–6 h
