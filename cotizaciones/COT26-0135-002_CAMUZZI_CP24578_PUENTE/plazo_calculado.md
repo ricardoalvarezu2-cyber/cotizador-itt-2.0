@@ -14,7 +14,7 @@ Generado por `herramientas/plazo.py` (regla de `conocimiento/plazos.md` §4). Pr
 - Taller, ensayos, pintura y despacho: **45 días** (tareas de taller cargadas).
 - **Plazo calculado sin superponer: 90 días**; con el margen de 15–20% de la regla: **103–108 días**.
 - Plazo ofrecido: **105 días**.
-- Plazo real histórico de la familia P: 121 días (mediana, plazos.md §1).
+- Plazo real histórico de la familia SK: 162 días (mediana, plazos.md §1).
 
 ## 3. Avisos
 

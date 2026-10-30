@@ -40,3 +40,6 @@ Transcripción del plano y cantidades: bien. Precios Tormene y Taval verificados
 
 ## 30-10-2026 · Reglas de compatibilidad sobre la cotización
 Pos 17 (cupla 1/2" SW/NPT): la referencia era una cupla BSPT (otra rosca); pasa a la cupla NPT AFO-00715, mismo precio (USD 2,71). El total no cambia. Página actualizada.
+
+## 30-10-2026 · Compatibilidades revisadas
+Pos 14 (cupla c/ válvula esférica, A-106): SIN PRECIO (la referencia A105 es otra clase de material). Pos 23 (caño 6" A-53 sch 80): pasa a CAN-01512 A106 Gr B sch XS, mismo precio (USD 90,70). Unitario USD 76.498,56.

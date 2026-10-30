@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-C01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 55.619,13 por equipo · soldadura y servicios calculados USD 17.580,35 · 21 similares (9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 23, 24, 25, 26, 27, 28, 31, 32, 33, 34, 35) · 1 sin precio (22).
+**Resumen:** materiales USD 26.581,10 por equipo · soldadura y servicios calculados USD 17.580,35 · 18 similares (9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 23, 24, 25, 26, 27, 32, 34, 35) · 4 sin precio (22, 28, 31, 33).
 
 
 ## 1. Materiales
@@ -35,12 +35,12 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 25 | Tapón hexagonal · Ø 3/4" | SIMILAR | 2,30 / un | 2026-06-26 · planilla interna | el último precio (3,50) se aparta más de 40% de la mediana de sus últimos precios: se usa la mediana 2,30 |
 | 26 | Válvula de bloqueo y purga · Ø 1/2" | SIMILAR | 137,00 / un | 2026-04-22 · planilla interna | — · faltan: serie |
 | 27 | Válvula esférica · Ø 3/4" | SIMILAR | 42,04 / un | 2026-06-26 · planilla interna | paso: reducido (no pedido) · faltan: paso |
-| 28 | Válvula esférica paso reducido · Ø 1" | SIMILAR | 67,50 / un | 2026-06-26 · planilla interna | material: sin dato (pedido A105); extremos: sin dato (pedido RF); paso: total (pedido reducido) |
+| 28 | Válvula esférica paso reducido · Ø 1" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (10") (VAL-04425, USD 2.766,00): pedir cotización |
 | 29 | Válvula esférica paso reducido · Ø 2" | IGUAL | 130,00 / un | 2025-09-01 · lista | — |
 | 30 | Válvula de retención tipo wafer · Ø 3" | IGUAL | 167,50 / un | 2025-09-01 · lista | — |
-| 31 | Válvula esférica tres vías motorizada con act | SIMILAR | 4.340,75 / un | 2026-06-26 · planilla interna | material: sin dato (pedido A216 WCB); extremos: sin dato (pedido RF) · faltan: paso |
-| 32 | Manómetro · Ø 1/2" | SIMILAR | 120,00 / un | 2026-06-26 · planilla interna | — · faltan: rango, conexion |
-| 33 | Transmisor de presión · Ø 1/2" | SIMILAR | 2.848,53 / un | 2026-06-26 · planilla interna | — · faltan: rango, conexion |
+| 31 | Válvula esférica tres vías motorizada con act | **SIN PRECIO** | — | — | pedir cotización |
+| 32 | Manómetro · Ø 1/2" | SIMILAR | 115,00 / un | 2026-02-20 · planilla interna | — · faltan: rango, conexion |
+| 33 | Transmisor de presión · Ø 1/2" | **SIN PRECIO** | — | — | pedir cotización |
 | 34 | Bastidor del skid (perfiles y chapas: corto 3 | SIMILAR (acero por kg) | USD 1,90/kg | 2026-02-10 cot | precio por kg de materia prima (hierro ángulo 3x1/4) +10% por recortes; no incluye corte, plegado ni rolado |
 | 35 | Tablero y materiales eléctricos (canalización | SIMILAR | 12.000,00 / gl | 2026-06-26 · planilla interna | unidad distinta: catálogo por un, plano por gl · faltan: diametro, serie |
 | 7b | Completar barra de 12 m (pos 7) | compra extra | USD 25,08/m × 0,27 m | | Se usan 115,2 m en 18 equipo(s) y se compran 120 m. Borrar si hay sobrante en stock |
@@ -69,7 +69,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 243 placas chicas + 0 grandes + 6,11 servicio(s) de RX + 1,44 de LP por equipo = USD 4.497,50 (Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))).
   Con las tarifas de Antonelli (11-2025) serían USD 7.347,22: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: manifold, 6", 18 u, materiales USD 55.619 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: manifold, 6", 18 u, materiales USD 26.581 por unidad)
 
 - **Ingeniería:** 0,82 h × USD 15/h = USD 12,30 · mediana de 1,1, 0,5 h por unidad (repartidas en la serie) · antecedente: TECPETROL/9. CM SKID MANIFOLD PAD S-600 · Skid Manifold PAD S600 clase A6BM (sch 40) (4 (colector 8), 28 u, 2026-01-26) · rango del mismo tipo 1,14–9 h
 - **Calidad y dossier:** 12,5 h × USD 15/h = USD 187,50 · mediana de 24,0, 1,0 h por unidad (repartidas en la serie) · antecedente: TECPETROL/9. CM SKID MANIFOLD PAD S-600 · Skid Manifold PAD S600 clase A6BM (sch 40) (4 (colector 8), 28 u, 2026-01-26) · rango del mismo tipo 18–24 h

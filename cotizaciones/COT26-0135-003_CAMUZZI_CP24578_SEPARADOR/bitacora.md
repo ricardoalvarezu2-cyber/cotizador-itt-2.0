@@ -84,3 +84,6 @@ Ingeniería 150 → 250 h y calidad 120 → 250 h, como los coalescedores Sacde/
 
 ## 30-10-2026 · Reglas de compatibilidad sobre la cotización
 Pos 15 (válvula esférica 1/2" roscada, 8 u): la referencia era una Esferomatic SW-roscada (USD 55,90, TAVAL/40), otro extremo: con la regla nueva no sirve y no hay otra en el catálogo → **SIN PRECIO, pedir cotización**. Precio: **USD 288.314,94 c/u, 577.838,13 los 2** (borrador). Página actualizada.
+
+## 30-10-2026 · Compatibilidades revisadas
+Pos 14b (esférica 1" #600 RF, A216 WCB): SIN PRECIO (la Taval de referencia no dice el material). Pos 23b (rejilla galvanizada): SIN PRECIO. Unitario USD 285.832,80, 571.665,60 los 2 (borrador).

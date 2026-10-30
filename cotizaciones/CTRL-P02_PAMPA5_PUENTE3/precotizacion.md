@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-P02
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 5.164,88 por equipo · soldadura y servicios calculados USD 4.002,94 · 17 similares (1, 2, 4, 9, 11, 12, 14, 15, 16, 17, 19, 23, 33, 37, 38, 39, 40) · 0 sin precio (—).
+**Resumen:** materiales USD 5.163,28 por equipo · soldadura y servicios calculados USD 4.002,94 · 17 similares (1, 2, 4, 9, 11, 12, 14, 15, 16, 17, 19, 23, 33, 37, 38, 39, 40) · 0 sin precio (—).
 
 
 ## 1. Materiales
@@ -40,7 +40,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 30 | Caño sin costura longitud 105 mm · Ø 3" | IGUAL | 25,08 / m | 2025-12-26 · lista | — |
 | 31 | Tee BW Sch. 40 · Ø 3" | IGUAL | 28,36 / un | 2025-12-26 · lista | — |
 | 32 | Tuerca hexagonal · Ø 5/8" | IGUAL | 0,18 / un | 2025-09-04 · cotización | — |
-| 33 | Espárrago 5/8 L=3 1/2 (90 mm) · Ø 5/8" | SIMILAR | 2,60 / un | 2026-02-20 · planilla interna | material: sin dato (pedido A193 B7) |
+| 33 | Espárrago 5/8 L=3 1/2 (90 mm) · Ø 5/8" | SIMILAR | 2,50 / un | 2026-02-20 · planilla interna | material: sin dato (pedido A193 B7); medida: 5/8 x 2 1/2 (pedido 5/8 x 3 1/2) |
 | 34 | Tuerca hexagonal · Ø 3/4" | SIMILAR | 0,18 / un | 2025-09-04 · cotización | diametro: 0.625" (pedido 0.75") |
 | 35 | Caño sin costura longitud 254 mm · Ø 3" | IGUAL | 25,08 / m | 2025-12-26 · lista | — |
 | 36 | Caño sin costura longitud 100 mm · Ø 3" | IGUAL | 25,08 / m | 2025-12-26 · lista | — |
@@ -81,7 +81,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 49 placas chicas + 0 grandes + 1,30 servicio(s) de RX + 0,60 de LP por equipo = USD 1.666,00 (Servicio de radiografía (Antonelli) (2025-11; antonelli_end_2025-11)).
   Con las tarifas de Antonelli (11-2025) serían USD 1.666,00: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: puente, 3", 10 u, materiales USD 5.165 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: puente, 3", 10 u, materiales USD 5.163 por unidad)
 
 - **Ingeniería:** 7,5 h × USD 15/h = USD 112,50 · mediana de 9,0, 6,0 h por unidad (repartidas en la serie) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 4in #600 (serie de 13 unidades) (4, 13 u, 2026-02-19) · rango del mismo tipo 6–9 h
 - **Calidad y dossier:** 3,5 h × USD 15/h = USD 52,50 · mediana de 1,0, 6,0 h por unidad (repartidas en la serie) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 4in #600 (serie de 13 unidades) (4, 13 u, 2026-02-19) · rango del mismo tipo 1–6 h

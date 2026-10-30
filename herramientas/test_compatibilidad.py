@@ -29,15 +29,37 @@ def chk(nombre, cond, det=""):
 SI, NO = True, False
 CASOS = [  # (familia, pedido, candidato, ¿compatible?)
     ("VAL", {"material": "A105"}, {"material": "A216 WCB"}, SI),
-    ("VAL", {"material": "A216 WCB"}, {"material": "A216 WCC"}, NO),
+    ("VAL", {"material": "A216 WCB"}, {"material": "A216 WCC"}, SI),   # WCC (1.2) reemplaza a WCB (1.1): revisión 30-10-2026
+    ("VAL", {"material": "A216 WCC"}, {"material": "A216 WCB"}, NO),
     ("VAL", {"material": "AISI 316"}, {"material": "A182 F304"}, NO),
-    ("VAL", {"material": "AISI 316"}, {"material": "316L"}, SI),
+    ("VAL", {"material": "AISI 316"}, {"material": "316L"}, NO),       # 316L (2.3) tiene menos rating que 316 (2.2)
+    ("VAL", {"material": "CF8M"}, {"material": "CF3M"}, SI),           # CF3M está en el grupo 2.2
+    ("VAL", {"material": "316/316L"}, {"material": "316L"}, NO),
+    ("VAL", {"material": "316"}, {"material": "316/316L"}, SI),
+    ("VAL", {"material": "A403 WP316"}, {"material": "A403 WP304"}, NO),
+    ("VAL", {"material": "CF8M"}, {"material": "CF8"}, NO),
+    ("VAL", {"material": "A105"}, {"material": "A352 LCB"}, NO),
+    ("VAL", {"material": "A105"}, {"material": ""}, NO),               # sin material no se puede comparar
+    ("VAL", {"material": "A105"}, {"material": "SA-105"}, SI),
+    ("VAL", {"material": "A182 F11"}, {"material": "A105"}, NO),
+    ("VAL", {"material": "A216 WC6"}, {"material": "A216 WCB"}, NO),
+    ("CAN", {"material": "A106 B"}, {"material": "A53"}, NO),
+    ("CAN", {"material": "A53"}, {"material": "A106 B"}, SI),
+    ("CAN", {"material": "API 5L X-52"}, {"material": "API 5L B"}, NO),
+    ("CAN", {"material": "A53 galvanizado"}, {"material": "A106 B"}, NO),
+    ("ABW", {"material": "A420 WPL6"}, {"material": "A234 WPB"}, NO),
+    ("JUN", {"material": "A193 B7"}, {"material": "A193 B7M"}, NO),
+    ("JUN", {"material": "A193 B7"}, {"material": "A320 L7"}, SI),
+    ("PER", {"material": "A36"}, {"material": "A516 Gr 60"}, NO),
+    ("BRI", {"extremos": "RF"}, {"extremos": "NPT"}, NO),              # bridada no es referencia de roscada
+    ("VAL", {"extremos": "NPT"}, {"extremos": "BW"}, NO),
+    ("CAN", {"schedule": "STD", "diametro": "DN 300"}, {"schedule": "40"}, NO),
     ("VAL", {"material": "316L"}, {"material": "AISI 316"}, NO),
     ("BRI", {"material": "A350 LF2"}, {"material": "A105"}, NO),
     ("BRI", {"material": "A105"}, {"material": "A350 LF2"}, SI),
     ("CAN", {"material": "API 5L X52"}, {"material": "API 5L X60"}, NO),
     ("ABW", {"material": "A234 WPB"}, {"material": "A403 (inox)"}, NO),
-    ("JUN", {"material": "A-193 B7 / A-194 2H"}, {"material": "A193 B7"}, SI),
+    ("JUN", {"material": "A-193 B7 / A-194 2H"}, {"material": "A193 B7"}, SI),   # sin dato de tuerca: se compara el bulón
     ("JUN", {"material": "A-193 B7 / A-194 2H"}, {"material": "A193 B8M"}, NO),
     ("BRI", {"cara": "RF", "extremos": "RF/BW"}, {"cara": "RF", "extremos": "RF"}, SI),
     ("BRI", {"cara": "RF"}, {"cara": "RTJ"}, NO),
@@ -52,6 +74,8 @@ for fam, a, b, ok in CASOS:
     m = incompatible(fam, a, b)
     chk(f"{fam} {a} ← {b}", (m == "") == ok, m)
 chk("NACE", incompatible("VAL", {}, {}, "valvula esferica NACE MR0175", "valvula esferica 2 600") != "")
+chk("MR0175 no se cubre con MR0103", incompatible("VAL", {}, {}, "NACE MR0175", "NACE MR0103") != "")
+chk("'source' no es servicio ácido", incompatible("VAL", {}, {}, "source water", "x") == "")
 
 # 2. página = Python
 bm.buscar("brida")  # carga el catálogo

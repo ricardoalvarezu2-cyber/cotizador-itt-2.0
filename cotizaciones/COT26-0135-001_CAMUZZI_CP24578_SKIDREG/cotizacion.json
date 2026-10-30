@@ -586,6 +586,15 @@
    "especificacion": "Plano: 1/2\" · 3000 · ASTM A-106 · SW/NPT",
    "fuentes": [
     {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-30",
+     "coincide": "sin_ref",
+     "diferencia": "la referencia era una válvula A105 y el plano pide A-106 (otra clase de material): sin referencia compatible (revisión de compatibilidades 30-10-2026)"
+    },
+    {
      "tipo": "ant",
      "precio": 65.2,
      "proveedor": "válvulas Taval (el resumen las agrupa como \"Valvulas Taval\", factor 1, · VAL-03526",
@@ -811,6 +820,16 @@
    "unidad": "m",
    "especificacion": "Plano: 6\" · 80 · ASTM A-53 GR°B · BW · El cliente no indica cantidad: calculada por ITT según el plano (medida del dibujo)",
    "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 90.7,
+     "proveedor": "Renard · CAN-01512",
+     "codigo": "CAN-01512",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx",
+     "fecha": "2026-06-26",
+     "coincide": "similar",
+     "diferencia": "caño A106 Gr B sch XS (el plano pide A-53 Gr B sch 80: A106 lo reemplaza, mismo espesor en 6\"); la referencia anterior no decía el material (30-10-2026)"
+    },
     {
      "tipo": "ant",
      "precio": 90.7,

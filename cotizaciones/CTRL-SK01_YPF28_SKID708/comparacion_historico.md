@@ -16,7 +16,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 8 | Brida ciega RF 300 LB A105 16" | 2 × 820,00 = 1.640,00 | 2 un × 691,17 = 1.382,34 | -16% | lista · Renard (cód. 8261) · BRI-01024 · 2025-12-26 | más barato (similar) |
 | 9 | Brida SW RF 300 LB SCH 80 A105 1 1/2" | 3 × 19,91 = 59,73 | 3 un × 14,88 = 44,64 | -25% | cot · Complemet / Provemet · BRI-01161 · 2026-07-06 | más barato |
 | 10 | Espárrago c/2 tuercas 1.25x207 B7/2H zincado | 40 × 12,95 = 518,00 | 40 un × 7,33 = 293,20 | -43% | cot · DELGADO · JUN-01679 · 2025-09-04 | más barato (similar) |
-| 11 | Espárrago c/2 tuercas 1.125x186 B7/2H zincado | 288 × 9,59 = 2.761,92 | 288 un × 12,00 = 3.456,00 | +25% | ant · planilla de costo ITT · JUN-04198 · 2026-06-26 | más caro (similar) · real: 288 = 18 bridas 12" × 16 espárragos (16 × 1 1/8" por brida 12" #300: correcto) |
+| 11 | Espárrago c/2 tuercas 1.125x186 B7/2H zincado | 288 × 9,59 = 2.761,92 | 288 un × 7,82 = 2.252,16 | -18% | cot · Ind Delgado · JUN-04197 · 2026-05-28 | más barato (similar) · real: 288 = 18 bridas 12" × 16 espárragos (16 × 1 1/8" por brida 12" #300: correcto) |
 | 12 | Junta espiralada RF 4,5 mm 300 LB 1 1/2" | 3 × 7,00 = 21,00 | 3 un × 6,00 = 18,00 | -14% | ant · MS · JUN-02769 · 2026-08-14 | dentro de ±15% |
 | 13 | Junta espiralada RF 4,5 mm 300 LB 12" | 18 × 45,00 = 810,00 | 18 un × 42,44 = 763,92 | -6% | est · no dice · JUN-02764 · 2025-03-27 | dentro de ±15% |
 | 14 | Junta espiralada RF 4,5 mm 300 LB 16" | 2 × 80,00 = 160,00 | 2 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo |
@@ -38,7 +38,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 30 | Válvula esférica 12" FLG RF 300 LB PT volante | 3 × 5.750,00 = 17.250,00 | 3 un × 5.750,00 = 17.250,00 | 0% | lista · Taval (Lista 30 × 0.52) · VAL-04436 · 2025-09-01 | dentro de ±15% |
 | 31 | Bastidor del skid (perfilería) | 850 × 2,00 = 1.700,00 | 850 kg × 1,90 = 1.615,00 | -5% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | dentro de ±15% · real: la PC0 le aplicó un 20% de overspray (error: es acero, no pintura) |
 
-**Materiales: real USD 60.808,45 · cotizador USD 52.385,30 (-14%).** 14 dentro de ±15%, 13 fuera, 4 sin precio.
+**Materiales: real USD 60.808,45 · cotizador USD 51.181,46 (-16%).** 14 dentro de ±15%, 13 fuera, 4 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -54,5 +54,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por skid
 
-Real USD 85.995,15 · cotizador USD 71.896,49 (-16%) antes de completar lo que el cotizador marca para revisar.
+Real USD 85.995,15 · cotizador USD 70.692,65 (-18%) antes de completar lo que el cotizador marca para revisar.
 

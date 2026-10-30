@@ -1,7 +1,7 @@
 # Precotización automática — COT26-1003-001
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 2.520,61 por equipo · soldadura y servicios calculados USD 884,76 · 13 similares (2, 3, 4, 5, 9, 12, 13, 14, 14b, 20, 22, 24, 25) · 8 sin precio (1, 6, 10, 11, 17, 19, 21, 23).
+**Resumen:** materiales USD 2.185,47 por equipo · soldadura y servicios calculados USD 884,76 · 12 similares (2, 3, 4, 5, 9, 12, 14, 14b, 20, 22, 24, 25) · 9 sin precio (1, 6, 10, 11, 13, 17, 19, 21, 23).
 
 
 ## 1. Materiales
@@ -20,8 +20,8 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 10 | Buje reducción · Ø 2"x1/2" | **SIN PRECIO** | — | — | pedir cotización |
 | 11 | Codo 45° · Ø 2" | **SIN PRECIO** | — | — | pedir cotización |
 | 12 | Niple longitud 200 mm · Ø 2" | SIMILAR | 20,00 / un | 2026-04-22 · planilla interna | extremos: NPT (pedido NPT/BW); material: A106 B (pedido API 5L) |
-| 13 | Junta monolítica · Ø 2" | SIMILAR | 280,00 / un | 2026-02-12 · cotización | diametro: sin dato (pedido 2"); material: sin dato (pedido A234 WPB); extremos: sin dato (pedido BW) · faltan: serie |
-| 14 | Caño longitud 1900 mm · Ø 2" | SIMILAR | 35,00 / m | 2025-12-10 · planilla interna | material: sin dato (pedido API 5L); revestimiento: sin dato (pedido polipropileno); unidad distinta: catálogo  · faltan: costura |
+| 13 | Junta monolítica · Ø 2" | **SIN PRECIO** | — | — | pedir cotización |
+| 14 | Caño longitud 1900 mm · Ø 2" | SIMILAR | 16,62 / m | 2026-06-25 · planilla interna | material: sin dato (pedido API 5L); costura: sin costura (no pedido); revestimiento: sin dato (pedido poliprop · faltan: costura |
 | 15 | Codo 45° · Ø 2" | IGUAL | 8,73 / un | 2025-12-26 · lista | — |
 | 16 | Reducción concéntrica · Ø 2 1/2"x2" | IGUAL | 16,51 / un | 2025-12-26 · lista | — |
 | 17 | Tapón · Ø 2" | **SIN PRECIO** | — | — | el más parecido es sin diámetro conocido (AFO-02417, USD 5,00): pedir cotización |
@@ -33,7 +33,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 23 | Cupla · Ø 1/2" | **SIN PRECIO** | — | — | el más parecido es sin diámetro conocido (AFO-02391, USD 2,35): pedir cotización |
 | 24 | Niple longitud 150 mm · Ø 2" | SIMILAR | 20,00 / un | 2026-04-22 · planilla interna | material: A106 B (pedido API 5L) |
 | 25 | Niple longitud 1000 mm · Ø 2" | SIMILAR | 40,00 / un | 2026-04-22 · planilla interna | extremos: NPT (pedido NPT/BW); material: A106 B (pedido API 5L) |
-| 14b | Completar barra de 6 m (pos 14) | compra extra | USD 35,00/m × 1,1 m | | Se usan 3,8 m en 2 equipo(s) y se compran 6 m. Borrar si hay sobrante en stock |
+| 14b | Completar barra de 6 m (pos 14) | compra extra | USD 16,62/m × 1,1 m | | Se usan 3,8 m en 2 equipo(s) y se compran 6 m. Borrar si hay sobrante en stock |
 
 ## 2. Soldaduras (de la columna de extremos)
 
@@ -54,7 +54,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Prueba hidráulica:** 6 h × USD 13,00/h (Prueba hidráulica - manifold FA0032 1.2, 2026-03-10) = USD 78,00 · ⚠ horas supuestas: cargar `parametros.ph_horas` · volumen interior de caños y niples 13,0 l.
 - **Radiografía:** no se calculó (`parametros.rx_pct` = 0). Si el pliego la pide, cargar el porcentaje y volver a correr.
 
-### Horas de ingeniería, calidad y montaje (estimadas: puente, 2.5", 2 u, materiales USD 2.521 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: puente, 2.5", 2 u, materiales USD 2.185 por unidad)
 
 - **Ingeniería:** 7,5 h × USD 15/h = USD 112,50 · mediana de 9,0, 6,0 h por unidad (repartidas en la serie) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19) · rango del mismo tipo 6–9 h
 - **Calidad y dossier:** 3,5 h × USD 15/h = USD 52,50 · mediana de 1,0, 6,0 h por unidad (repartidas en la serie) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19) · rango del mismo tipo 1–6 h

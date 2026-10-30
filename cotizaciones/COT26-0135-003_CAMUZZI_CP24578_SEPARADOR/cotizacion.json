@@ -499,6 +499,15 @@
    "unidad": "un",
    "fuentes": [
     {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-30",
+     "coincide": "sin_ref",
+     "diferencia": "la referencia (Taval 1\" #600 RF) no dice el material y el plano pide A216 WCB; la única compatible es de otro diámetro (4\"): pedir cotización (30-10-2026)"
+    },
+    {
      "tipo": "ant",
      "precio": 162,
      "proveedor": "Precio de referencia: Taval 1\" #600 RF PT (planilla Sacde/12) · VAL-03169",
@@ -746,6 +755,15 @@
    "cantidad": 3,
    "unidad": "m2",
    "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-30",
+     "coincide": "sin_ref",
+     "diferencia": "la rejilla de referencia no dice el material (el plano pide A36 galvanizado): pedir cotización (30-10-2026)"
+    },
     {
      "tipo": "cot",
      "precio": 190,

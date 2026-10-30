@@ -7,7 +7,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | Pos | Pieza | Real (cant × unit = total) | Cotizador (cant × unit = total) | Dif. | Fuente del cotizador | Lectura |
 |---|---|---|---|---|---|---|
 | 1 | Brida welding neck RF 6" 900 / sch 120 ASTM A | 5 × 271,72 = 1.358,60 | 5 un × 140,39 = 701,95 | -48% | ant · sin proveedor en planilla · BRI-02554 · 2025-12-18 | más barato (similar) |
-| 2 | Brida welding neck RF 12" 900 / sch 60 ASTM A | 1 × 1.285,77 = 1.285,77 | 1 un × 570,00 = 570,00 | -56% | ant · sin proveedor en planilla · BRI-02543 · 2025-12-18 | más barato (similar) · real: 60 días |
+| 2 | Brida welding neck RF 12" 900 / sch 60 ASTM A | 1 × 1.285,77 = 1.285,77 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo · real: 60 días |
 | 3 | Brida welding neck RF 4" 900 / sch 120 ASTM A | 8 × 126,06 = 1.008,48 | 8 un × 76,42 = 611,36 | -39% | ant · sin proveedor en planilla · BRI-02554 · 2025-12-18 | más barato (similar) · real: 60 días |
 | 4 | Brida welding neck RF 2" 900 / sch 160 ASTM A | 8 × 65,20 = 521,60 | 8 un × 215,80 = 1.726,40 | +231% | stock · Stock ITT (cód. ACS0506R57050K) · BRI-01 · 2024-11-01 | más caro |
 | 5 | Brida welding neck RF 1 1/2" 900 / sch 160 AS | 1 × 40,57 = 40,57 | 1 un × 163,20 = 163,20 | +302% | stock · Stock ITT · última compra (cód. ACS0406R · 2022-11-15 | más caro · real: 60 días |
@@ -30,7 +30,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 22 | Weldolet 1/2" x 20" ASTM A-105 | 1 × 7,00 = 7,00 | 1 un × 65,00 = 65,00 | +829% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) |
 | 23 | Espárrago con 2 tuercas zincado 7/8 x 145 mm  | 48 × 8,00 = 384,00 | 48 un × 3,17 = 152,16 | -60% | cot · PROVEMET · JUN-04186 · 2025-08-27 | más barato (similar) |
 | 24 | Espárrago con 2 tuercas zincado 1 1/8 x 170 m | 48 × 11,00 = 528,00 | 48 un × 7,82 = 375,36 | -29% | cot · Ind Delgado · JUN-04197 · 2026-05-28 | más barato (similar) |
-| 25 | Espárrago con 2 tuercas zincado 1 3/8 x 255 m | 60 × 13,00 = 780,00 | 60 un × 30,00 = 1.800,00 | +131% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) |
+| 25 | Espárrago con 2 tuercas zincado 1 3/8 x 255 m | 60 × 13,00 = 780,00 | 60 un × 27,00 = 1.620,00 | +108% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) |
 | 26 | Junta RF hierro maleable 2" 900 | 6 × 8,00 = 48,00 | 6 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo |
 | 27 | Junta RF hierro maleable 8" 900 | 3 × 10,00 = 30,00 | 3 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo |
 | 28 | Junta RF hierro maleable 4" 900 | 8 × 6,00 = 48,00 | 8 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo |
@@ -42,7 +42,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 34 | Abrazadera U-bolt pesada 16" | 2 × 25,00 = 50,00 | 2 un × 46,00 = 92,00 | +84% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) |
 | 35 | Abrazadera U-bolt pesada 12" | 1 × 18,00 = 18,00 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo |
 | 36 | Abrazadera U-bolt pesada 4" | 4 × 10,00 = 40,00 | 4 un × 35,00 = 140,00 | +250% | ant · sin proveedor en planilla · OTR-02903 · 2025-12-23 | más caro (similar) |
-| 37 | Espárrago con 2 tuercas zincado 1 x 140 mm 1" | 4 × 10,00 = 40,00 | 4 un × 10,00 = 40,00 | 0% | ant · no dice (planilla de compras; cotización · 2025-08-01 | dentro de ±15% |
+| 37 | Espárrago con 2 tuercas zincado 1 x 140 mm 1" | 4 × 10,00 = 40,00 | 4 un × 10,00 = 40,00 | 0% | ant · Bules o Versailles · JUN-04173 · 2026-02-19 | dentro de ±15% |
 | 38 | Hierro ángulo 1 1/2 x 1 1/2 x 1/4 (skid) ASTM | 5,25 × 1,40 = 7,35 | 5,25 kg × 1,90 = 9,97 | +36% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | más caro (similar) |
 | 39 | Perfil UPN 160 (skid) ASTM A-36 | 590 × 1,80 = 1.062,00 | 590 kg × 1,90 = 1.121,00 | +6% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | dentro de ±15% · real: planilla: 590 kg × 1,5 USD/kg = 885 + 20% de desperdicio = 1.062 |
 | 40 | Malla metálica romboidal tipo Shulman 50 x 30 | 14 × 0,00 = 0,00 | 14 m2 × 0,00 = 0,00 |  | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo · real: la planilla la lista (14 m² × 25 = 250, precio WhatsApp AG Inter) pero no la suma al skid |
@@ -57,7 +57,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 49 | Detector de paso de scraper | 1 × 4.209,50 = 4.209,50 | 1 un × 1.650,00 = 1.650,00 | -61% | ant · TDW (marca) · OTR-02969 · 2025-12-10 | más barato (similar) |
 | 50 | Válvula de bloqueo y purga (para manómetro) 1 | 1 × 150,00 = 150,00 | 1 un × 80,00 = 80,00 | -47% | ant · Abac · VAL-03162 · 2026-04-22 | más barato (similar) |
 
-**Materiales: real USD 58.316,80 · cotizador USD 53.624,68 (-8%).** 11 dentro de ±15%, 29 fuera, 10 sin precio.
+**Materiales: real USD 58.316,80 · cotizador USD 52.874,68 (-9%).** 11 dentro de ±15%, 28 fuera, 11 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -74,5 +74,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por trampa
 
-Real USD 83.177,98 · cotizador USD 79.042,90 (-5%) antes de completar lo que el cotizador marca para revisar.
+Real USD 83.177,98 · cotizador USD 78.292,90 (-6%) antes de completar lo que el cotizador marca para revisar.
 

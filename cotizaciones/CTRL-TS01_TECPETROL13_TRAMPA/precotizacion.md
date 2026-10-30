@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-TS01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 53.624,68 por equipo · soldadura y servicios calculados USD 25.418,22 · 32 similares (1, 2, 3, 6, 6b, 7, 7b, 8, 8b, 13, 17, 20, 22, 23, 24, 25, 29, 30, 31, 34, 36, 37, 38, 39, 41, 42, 43, 44, 45, 47, 49, 50) · 10 sin precio (18, 26, 27, 28, 32, 33, 35, 40, 46, 48).
+**Resumen:** materiales USD 52.874,68 por equipo · soldadura y servicios calculados USD 25.418,22 · 31 similares (1, 3, 6, 6b, 7, 7b, 8, 8b, 13, 17, 20, 22, 23, 24, 25, 29, 30, 31, 34, 36, 37, 38, 39, 41, 42, 43, 44, 45, 47, 49, 50) · 11 sin precio (2, 18, 26, 27, 28, 32, 33, 35, 40, 46, 48).
 
 
 ## 1. Materiales
@@ -9,7 +9,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | Pos | Ítem | Resultado | Precio | Fecha y tipo | Diferencias / faltantes |
 |---|---|---|---|---|---|
 | 1 | Brida welding neck RF · Ø 6" | SIMILAR | 140,39 / un | 2025-12-18 · planilla interna | diametro: 4" (pedido 6"); cara: sin dato (pedido RF); schedule: 80 (pedido 120); material: sin dato (pedido A1 |
-| 2 | Brida welding neck RF · Ø 12" | SIMILAR | 570,00 / un | 2025-12-18 · planilla interna | cara: sin dato (pedido RF); schedule: 80 (pedido 60); material: sin dato (pedido A860 WPHY) |
+| 2 | Brida welding neck RF · Ø 12" | **SIN PRECIO** | — | — | pedir cotización |
 | 3 | Brida welding neck RF · Ø 4" | SIMILAR | 76,42 / un | 2025-12-18 · planilla interna | cara: sin dato (pedido RF); schedule: 80 (pedido 120); material: sin dato (pedido A105) |
 | 4 | Brida welding neck RF · Ø 2" | IGUAL | 215,80 / un | 2024-11-01 · stock (precio maestro) | — |
 | 5 | Brida welding neck RF · Ø 1 1/2" | IGUAL | 163,20 / un | 2022-11-15 · compra | — |
@@ -32,7 +32,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 22 | Weldolet · Ø 1/2" x 20" | SIMILAR | 65,00 / un | 2025-08-01 · planilla interna | schedule: 160 (no pedido) · faltan: tipo, serie |
 | 23 | Espárrago con 2 tuercas zincado 7/8 x 145 mm  | SIMILAR | 3,17 / un | 2025-08-27 · cotización | unidad distinta: catálogo por juego, plano por un |
 | 24 | Espárrago con 2 tuercas zincado 1 1/8 x 170 m | SIMILAR | 7,82 / un | 2026-05-28 · cotización | material: A193 B7 (pedido A194 2H); medida: 1 1/8 x 7 (pedido 1 1/8 x 6 3/4); unidad distinta: catálogo por ju |
-| 25 | Espárrago con 2 tuercas zincado 1 3/8 x 255 m | SIMILAR | 30,00 / un | 2025-08-01 · planilla interna | material: sin dato (pedido A194 2H) |
+| 25 | Espárrago con 2 tuercas zincado 1 3/8 x 255 m | SIMILAR | 27,00 / un | 2025-08-01 · planilla interna | material: sin dato (pedido A194 2H); medida: 1 3/8 x 9 1/4 (pedido 1 3/8 x 10) |
 | 26 | Junta RF hierro maleable · Ø 2" | **SIN PRECIO** | — | — | pedir cotización |
 | 27 | Junta RF hierro maleable · Ø 8" | **SIN PRECIO** | — | — | pedir cotización |
 | 28 | Junta RF hierro maleable · Ø 4" | **SIN PRECIO** | — | — | pedir cotización |
@@ -44,7 +44,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 34 | Abrazadera U-bolt pesada · Ø 16" | SIMILAR | 46,00 / un | 2025-08-01 · planilla interna | — · faltan: serie |
 | 35 | Abrazadera U-bolt pesada · Ø 12" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (2") (OTR-02900, USD 15,00): pedir cotización |
 | 36 | Abrazadera U-bolt pesada · Ø 4" | SIMILAR | 35,00 / un | 2025-12-23 · planilla interna | — · faltan: serie |
-| 37 | Espárrago con 2 tuercas zincado 1 x 140 mm ·  | SIMILAR | 10,00 / un | 2025-08-01 · planilla interna | material: sin dato (pedido A194 2H) |
+| 37 | Espárrago con 2 tuercas zincado 1 x 140 mm ·  | SIMILAR | 10,00 / un | 2026-02-19 · planilla interna | diametro: 0.625" (pedido 1"); medida: 5/8 x 4 3/8 (pedido 1 x 5 1/2) |
 | 38 | Hierro ángulo 1 1/2 x 1 1/2 x 1/4 (skid) | SIMILAR (acero por kg) | USD 1,90/kg | 2026-02-10 cot | precio por kg de materia prima (hierro ángulo 3x1/4) +10% por recortes; no incluye corte, plegado ni rolado |
 | 39 | Perfil UPN 160 (skid) | SIMILAR (acero por kg) | USD 1,90/kg | 2026-02-10 cot | precio por kg de materia prima (hierro ángulo 3x1/4) +10% por recortes; no incluye corte, plegado ni rolado |
 | 40 | Malla metálica romboidal tipo Shulman 50 x 30 | **SIN PRECIO** | — | — | pedir cotización |
@@ -101,7 +101,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 93 placas chicas + 7 grandes + 3,00 servicio(s) de RX + 1,00 de LP por equipo = USD 2.178,50 (Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))).
   Con las tarifas de Antonelli (11-2025) serían USD 3.495,00: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: trampa, 16", 1 u, materiales USD 53.625 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: trampa, 16", 1 u, materiales USD 52.875 por unidad)
 
 - Montaje propio: no se suma porque la fabricación la hace el tercero; la prueba hidráulica va aparte (fila PH).
 - **Ingeniería:** 503 h × USD 15/h = USD 7.545,00 · mediana de 503,0 h por unidad (repartidas en la serie) · antecedente: TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E · Trampa receptora 8x6 #300 (RS-123/125) (8 / 6 (barrel 24 x 20 en tabla soldadura), 2 u, 2025-12-10) · rango del mismo tipo 251,5–251,5 h

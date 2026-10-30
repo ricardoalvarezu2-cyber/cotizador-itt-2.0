@@ -423,62 +423,92 @@ const Busqueda = (() => {
   const normP = t => String(t ?? "").normalize("NFKD").replace(/[^\x00-\x7f]/g, "").toLowerCase().replace(/\s+/g, " ");
   const RX = new WeakMap();
   const mats = C => { if (!RX.has(C)) RX.set(C, C.materiales.map(m => ({ ...m, rx: new RegExp(m.patron) }))); return RX.get(C); };
-  const claseMat = (C, t) => { t = normP(t); return t.trim() ? mats(C).find(m => m.rx.test(t)) || null : null; };
-  const grado = t => (normP(t).match(/\b(?:x|wphy|f) ?(\d{2})\b/) || [])[1] || "";
-  const bulones = (C, t) => { t = normP(t); return new Set(mats(C).filter(m => /^(bulon|tuerca)/.test(m.clase) && m.rx.test(t)).map(m => m.clase)); };
-  const reemp = (C, a) => new Set(C.reemplaza[a] || []);
-  function reglaMaterial(C, fam, pedido, cand) {
-    const ba = bulones(C, pedido), bb = bulones(C, cand);
-    if (ba.size && bb.size) {
-      for (const tipo of ["bulon", "tuerca"]) {
-        const xa = [...ba].filter(c => c.startsWith(tipo)), xb = [...bb].filter(c => c.startsWith(tipo));
-        if (xa.length && xb.length && !xa.some(x => xb.some(y => y === x || reemp(C, x).has(y)))) return `bulonería ${xb.sort().join("/")} no reemplaza a ${xa.sort().join("/")}`;
-      }
-      return "";
+  const prep = (C, t) => normP(t).replace(new RegExp(C.prep, "g"), "a$1");
+  function clases(C, texto) {
+    const t = prep(C, texto), hits = [];
+    for (const m of mats(C)) {
+      const x = t.match(m.rx); if (!x) continue;
+      const a = x.index, b = x.index + x[0].length;
+      if (!hits.some(h => h[1] <= a && b <= h[2])) hits.push([m, a, b]);
     }
-    const a = claseMat(C, pedido), b = claseMat(C, cand);
-    if (!a || !b) return "";
-    const ca = a.clase, cb = b.clase, generico = C.genericos.includes(cb) && ca.startsWith(cb);
-    if (ca !== cb && !reemp(C, ca).has(cb) && !generico) return `material ${b.material} no reemplaza a ${a.material}`;
-    if (ca === cb && ca === "carbono_alta_resistencia" && grado(pedido) && grado(cand) && grado(pedido) !== grado(cand)) return `grado ${grado(cand)} distinto del pedido (${grado(pedido)})`;
-    if ((fam === "VAL" || fam === "BRI") && a.grupo_b16_5 && b.grupo_b16_5 && a.grupo_b16_5 !== b.grupo_b16_5 && ca === cb) return `otro grupo de presión-temperatura de B16.5 (${b.grupo_b16_5} por ${a.grupo_b16_5})`;
+    const out = new Map();
+    for (const [m] of hits) if (!out.has(m.clase)) out.set(m.clase, m.grupo_b16_5);
+    if (out.size > 1) for (const g of Object.keys(C.genericos)) out.delete(g);
+    return out;
+  }
+  const grado = t => (normP(t).match(/\b(?:x|wphy|f)[- ]?(\d{2})\b/) || [])[1] || "";
+  const limpio = x => normP(x).replace(/[^a-z0-9]/g, "");
+  function reglaMaterial(C, fam, pedido, cand, descCand) {
+    if (!String(pedido || "").trim()) return "";
+    const gv = new RegExp(C.galv);
+    if (gv.test(normP(pedido)) !== gv.test(normP(`${cand || ""} ${descCand || ""}`))) return "galvanizado y negro no se reemplazan";
+    const a = clases(C, pedido);
+    let b = String(cand || "").trim() ? clases(C, cand) : new Map();
+    if (!b.size) b = clases(C, descCand || "");
+    if (!a.size) return limpio(pedido) && limpio(pedido) === limpio(cand) ? "" : `material ${pedido} sin regla: solo vale el mismo material`;
+    if (!b.size) return `el candidato no dice el material (el pedido es ${pedido}): no se puede comparar`;
+    for (const [ca, ga] of a) {
+      const tipo = /^(bulon|tuerca)/.test(ca) ? ca.split("_")[0] : "";
+      if (tipo && ![...b.keys()].some(c => c.startsWith(tipo))) continue;
+      let ok = false;
+      for (const [cb, gb] of b) {
+        if (!(cb === ca || (C.reemplaza[ca] || []).includes(cb) || (C.genericos[ca] || []).includes(cb))) continue;
+        if (ga && gb && !(C.grupos[ga] || [ga]).includes(gb)) continue;
+        const gc = grado(cand || descCand);
+        if (cb === ca && ca === "carbono_alta_resistencia" && grado(pedido) && gc && grado(pedido) !== gc) continue;
+        ok = true; break;
+      }
+      if (!ok) return `material ${cand || String(descCand).slice(0, 30)} no reemplaza a ${pedido}`;
+    }
     return "";
   }
+  const CARAS = ["rf", "ff", "rtj"], ROSCAS = ["npt", "bspt", "bspp"];
   function conexiones(...ts) {
     const out = new Set();
     for (let t of ts) {
-      t = normP(t);
-      for (const k of ["rf", "ff", "rtj", "npt", "bspt", "sw", "bw"]) if (new RegExp(`\\b${k}\\b`).test(t)) out.add(k);
-      if (/\bbridad|\bbrida\b/.test(t) && !["rf", "ff", "rtj"].some(k => out.has(k))) out.add("brida");
+      t = normP(t).replace(/\br\.?\s?f\.?(?=\s|\/|$)|\brfwn\b/g, " rf ").replace(/\br\.?\s?j\.?(?=\s|\/|$)|\brj\b/g, " rtj ")
+        .replace(/\b[fm]npt\b|\bnptf\b|\bnpt-?[hm]\b/g, " npt ").replace(/\bsocket ?weld\b|\bsocket\b/g, " sw ")
+        .replace(/\bbspp\b|\bbsp\b(?!t)/g, " bspp ").replace(/\bbe\b|\bbisel/g, " bw ");
+      for (const k of [...CARAS, ...ROSCAS, "sw", "bw"]) if (new RegExp(`\\b${k}\\b`).test(t)) out.add(k);
+      if (/\bbridad|\bbrida\b/.test(t) && !CARAS.some(k => out.has(k))) out.add("brida");
+      if (/\brosca|\broscad/.test(t) && !ROSCAS.some(k => out.has(k))) out.add("rosca");
     }
     return out;
   }
+  const tipos = c => new Set([...c].map(x => CARAS.includes(x) || x === "brida" ? "brida" : ROSCAS.includes(x) || x === "rosca" ? "rosca" : x));
   function reglaConexion(a, b) {
     if (!a.size || !b.size) return "";
     const inter = (s, ks) => new Set([...s].filter(x => ks.includes(x))), igual = (x, y) => x.size === y.size && [...x].every(v => y.has(v));
     const txt = `extremos o cara distintos (${[...b].sort().join("/").toUpperCase()} por ${[...a].sort().join("/").toUpperCase()})`;
-    const ca = inter(a, ["rf", "ff", "rtj"]), cb = inter(b, ["rf", "ff", "rtj"]);
+    const ta = tipos(a), tb = tipos(b);
+    if (![...ta].some(x => tb.has(x))) return txt;
+    const ca = inter(a, CARAS), cb = inter(b, CARAS);
     if (ca.size && cb.size && !igual(ca, cb)) return txt;
-    const ra = inter(a, ["npt", "bspt"]), rb = inter(b, ["npt", "bspt"]);
+    const ra = inter(a, ROSCAS), rb = inter(b, ROSCAS);
     if (ra.size && rb.size && !igual(ra, rb)) return txt;
-    if ((ra.size && !rb.size && b.has("sw") && !a.has("sw")) || (rb.size && !ra.size && a.has("sw") && !b.has("sw"))) return txt;
     return "";
   }
   function schCanonico(sch, dn) {
-    const s = String(sch || "").toUpperCase().replace("SCH", "").trim(), d = dn == null ? null : dn;
-    if ((s === "STD" || s === "40S") && (d == null || d <= 10)) return "40";
-    if ((s === "XS" || s === "80S") && (d == null || d <= 8)) return "80";
+    let s = String(sch || "").toUpperCase().replace(/[^A-Z0-9]/g, "").replace(/^(SCH|S)(?=\d)/, "");
+    s = { "40S": "STD", "80S": "XS" }[s] || s;
+    if (dn != null) { if (s === "STD" && dn <= 10) return "40"; if (s === "XS" && dn <= 8) return "80"; }
     return s;
   }
+  function dnDe(C, v) {
+    const t = normP(v), m = t.match(/\bdn ?(\d{2,3})\b|(\d{2,3}) ?mm\b/);
+    if (m) return C.dn_nps[String(+(m[1] || m[2]))] ?? null;
+    const n = t.match(/^\s*(\d+(?:[.,]\d+)?)/); return n ? parseFloat(n[1].replace(",", ".")) : null;
+  }
   function incompatible(C, fam, ped, cand, textoPed, textoCand) {
-    const m = reglaMaterial(C, fam, ped.material || "", cand.material || ""); if (m) return m;
+    const m = reglaMaterial(C, fam, ped.material || "", cand.material || "", textoCand || ""); if (m) return m;
     const c = reglaConexion(conexiones(ped.extremos || "", ped.cara || ""), conexiones(cand.extremos || "", cand.cara || "")); if (c) return c;
     if (C.familias_sch.includes(fam) && ped.schedule && cand.schedule) {
-      const dm = String(ped.diametro || "").match(/^\s*(\d+(?:[.,]\d+)?)/), dn = dm ? parseFloat(dm[1].replace(",", ".")) : null;
+      const dn = dnDe(C, ped.diametro || "");
       if (schCanonico(ped.schedule, dn) !== schCanonico(cand.schedule, dn)) return `schedule ${cand.schedule} por ${ped.schedule} (otro espesor)`;
     }
-    const nace = new RegExp(C.nace);
-    if (nace.test(normP(textoPed)) && !nace.test(normP(textoCand))) return "el pedido es para servicio ácido (NACE) y el candidato no lo dice";
+    const tp = normP(textoPed), tc = normP(textoCand);
+    if (new RegExp(C.nace_estricto).test(tp) && !new RegExp(C.nace_estricto).test(tc)) return "el pedido es MR0175 / ISO 15156 y el candidato no lo dice";
+    if (new RegExp(C.nace_pedido).test(tp) && !new RegExp(C.nace_cand).test(tc)) return "el pedido es para servicio ácido (NACE) y el candidato no lo dice";
     return "";
   }
 

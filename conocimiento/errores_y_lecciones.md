@@ -219,3 +219,8 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 - Corrección: `precotizar.soldaduras` y `web/src/ficha.js` no cuentan juntas en renglones en kg o m² y avisan para contarlas a mano. Ahora da 15.
 - Lección: las reglas de conteo suponen piezas; una lista armada por ITT (sin lista del cliente) puede traer chapa por kg con extremos.
 - Error mío del día: dije que el elemento coalescente de Camuzzi estaba en USD 400; ya estaba en 854. Verificar en `cotizacion.json` antes de proponer un cambio.
+
+## 30-10-2026 — Reglas de compatibilidad con errores técnicos (las encontró una revisión independiente)
+- Qué pasó: la primera versión de `compatibilidad.py` admitía reemplazos que la norma no permite (316L por 316, 304L por 304, B7M por B7: menos resistencia o menos rating), no controlaba el grupo de B16.5 en los reemplazos, dejaba pasar candidatos sin material (1.407 renglones del catálogo) y no comparaba bridada contra roscada. Además varios patrones no leían "WP316", "TP304", "CF8", "SA-106" o "X-52". Lo encontró un revisor que no las escribió.
+- Corrección: criterio "igual o superior en todo", tabla de grupos admitidos, candidato sin material = no similar, tipos de conexión, patrones corregidos, clases nuevas (Cr-Mo, baja temperatura por grado, caños A106/A53/API 5L separados, dúplex/súper dúplex, bulonería). 5 renglones de Camuzzi corregidos y controles actualizados.
+- Lección: una tabla técnica escrita sin la norma a mano necesita revisión independiente antes de usarse, igual que un cómputo. Y el criterio para un reemplazo es "igual o superior en todo", no "parecido".

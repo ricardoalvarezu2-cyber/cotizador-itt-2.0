@@ -1,6 +1,6 @@
 # Comparación con antecedentes (P8) — COT26-0135-002
 
-Generado por `herramientas/comparar_antecedentes.py`. Familia SK, subtipo skid / estación de regulación y medición. Esta cotización: **precio unitario USD 29.585,04**, costo USD 21.914,85, factor 1,35 · reparto del costo: materiales 71%, MO y servicios 29%.
+Generado por `herramientas/comparar_antecedentes.py`. Familia SK, subtipo skid / estación de regulación y medición. Esta cotización: **precio unitario USD 29.395,10**, costo USD 21.774,14, factor 1,35 · reparto del costo: materiales 71%, MO y servicios 29%.
 
 Se compara **costo contra costo** (Matías, 30-10-2026): el precio de venta mezcla factor, flete, caución y alcance de cada oferta. El costo del antecedente es el de su ficha, a su fecha (sin ajustar), y solo por equipo cuando la ficha lo permite sin ambigüedad; si no, queda el precio de venta marcado "solo venta". Una diferencia de más del 15% no significa error: hay que explicarla rubro por rubro (alcance, cantidad, diámetro, serie, fecha) antes de presentar el número.
 
@@ -8,9 +8,9 @@ Se compara **costo contra costo** (Matías, 30-10-2026): el precio de venta mezc
 |---|---|---|---|---|---|---|---|---|---|
 | 1 | TECHINT/10. requisition 4381-TARG-I-MR-610-078 | 18-06-2025 | — | solo venta: -96% (otra escala) · la ficha no tiene costo (solo precio de venta) | — / 71% | — / 29% | — | 735.564 USD | Paquete PMG1: skids de medición de gas, regulación de gas y medición de líquido  |
 | 2 | ENDRESS HAUSER/19. Requisition 4381-TARG-I-MR-610-078 | 23-04-2025 | — | solo venta: -63% · la ficha no tiene costo (solo precio de venta) | — / 71% | — / 29% | — | 79.189 USD | Fabricacion de 3 skids (gas, regulacion y medicion de liquido) para planta Los T |
-| 3 | CAMUZZI/23.Filtro FM y skid salto de regulacion de pres | 06-03-2025 | — | solo venta: +21% · la ficha no tiene costo (solo precio de venta) | — / 71% | — / 29% | — | 24.454 USD | 4 filtros FM (FM8, FM6, FM4) y 1 skid de regulación/medición (salto de regulació |
-| 4 | TECPETROL/8. Manifold | 03-09-2025 | — | solo venta: -48% · la ficha no tiene costo (solo precio de venta) | 0% / 71% | 100% / 29% | — | 57.166 USD | 2 manifolds simplificados tipo 600 (#600) skidados, dos alternativas de alcance |
-| 5 | PAMPA ENERGIA/7- Licitacion contrato Marco Skid PAD Rin | 14-08-2026 | — | solo venta: -66% · costo de toda la oferta (varios ítems): no se reparte por equipo | — / 71% | — / 29% | 1,35 | 88.268 USD | Contrato marco: 108 puentes de produccion 3" #300, 18 skids colectores para PAD  |
+| 3 | CAMUZZI/23.Filtro FM y skid salto de regulacion de pres | 06-03-2025 | — | solo venta: +20% · la ficha no tiene costo (solo precio de venta) | — / 71% | — / 29% | — | 24.454 USD | 4 filtros FM (FM8, FM6, FM4) y 1 skid de regulación/medición (salto de regulació |
+| 4 | TECPETROL/8. Manifold | 03-09-2025 | — | solo venta: -49% · la ficha no tiene costo (solo precio de venta) | 0% / 71% | 100% / 29% | — | 57.166 USD | 2 manifolds simplificados tipo 600 (#600) skidados, dos alternativas de alcance |
+| 5 | PAMPA ENERGIA/7- Licitacion contrato Marco Skid PAD Rin | 14-08-2026 | — | solo venta: -67% · costo de toda la oferta (varios ítems): no se reparte por equipo | — / 71% | — / 29% | 1,35 | 88.268 USD | Contrato marco: 108 puentes de produccion 3" #300, 18 skids colectores para PAD  |
 
 ## Avisos
 
