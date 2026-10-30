@@ -821,10 +821,19 @@
    "pos": "RX",
    "grupo": "servicio",
    "descripcion": "Radiografía 100% de costuras y toberas + tintas penetrantes",
-   "especificacion": "≈ 12 m de costura en 2 1/4\" + toberas; filetes y media V con tintas penetrantes en 2ª y última pasada (ET 9.15)",
+   "especificacion": "≈ 12 m de costura en 2 1/4\" + toberas; filetes y media V con tintas penetrantes en 2ª y última pasada (ET 9.15) · 80 placas → 2 visitas de hasta 45 placas",
    "cantidad": 1,
    "unidad": "gl",
    "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1881.28,
+     "proveedor": "Proveedor de RX (sin nombre), precio confirmado por Matías el 30-10-2026: 2 visitas × ARS 850.000 + 80 placas × ARS 15.000, sin IVA, a BNA oct-2026 (1.541,43) · END-00572 / END-00571",
+     "origen": "conocimiento/precios/precios_usuario.csv",
+     "fecha": "2026-10-30",
+     "coincide": "similar",
+     "diferencia": "la tarifa es la vigente; las 80 placas (60 grandes + 20 chicas) siguen estimadas por metro de costura: confirmar con el mapa de soldaduras (45 placas por visita)"
+    },
     {
      "tipo": "ant",
      "precio": 1426.0,

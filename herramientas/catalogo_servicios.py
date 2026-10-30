@@ -125,6 +125,29 @@ def numero_ambiguo(r):
 
 
 # ---------------------------------------------------------------- carga
+def precios_usuario():
+    """Servicios de precios_usuario.csv (precios que pasa Matías sin documento; confirmados por él son firmes, 30-10-2026),
+    llevados al formato de servicios_extraidos.csv."""
+    ruta = PRECIOS / "precios_usuario.csv"
+    if not ruta.exists():
+        return []
+    out = []
+    for i, r in enumerate(csv.DictReader(open(ruta, encoding="utf-8")), 2):
+        if r["clase"].strip() != "servicio":
+            continue
+        u = r["unidad"].strip()
+        out.append((i, {"hoja": r["rubro"], "servicio": r["concepto"], "descripcion": r["descripcion"], "proveedor": r["proveedor"],
+                        "fecha": r["fecha"], "precio": r["precio"], "moneda": r["moneda"], "iva_origen": r["iva"],
+                        "unidad": "global" if u in ("", "global") else ("USD/" + u if r["moneda"].upper() == "USD" else "global"),
+                        "magnitud": "" if u in ("", "global") or r["moneda"].upper() == "USD" else f"1 {u}",
+                        "equipo_referencia": "", "lugar": "", "incluye": "", "no_incluye": "", "carpeta_origen": "REPO",
+                        "archivo_origen": "conocimiento/precios/precios_usuario.csv",
+                        "texto_original": f"{r['concepto']}: {r['precio']} {r['moneda']} por {u} ({r['iva']})",
+                        "confianza": "alta", "nota": f"Confirmado por {r['confirmado_por']} ({r['como_se_obtuvo']}): precio firme, no estimado. {r['nota']}",
+                        "tc_documento": ""}))
+    return out
+
+
 def leer_extraccion():
     tabla = tabla_ajuste()
     ref = tabla[max(tabla)][1]
@@ -134,6 +157,7 @@ def leer_extraccion():
     if (PRECIOS / "servicios_desde_planillas.csv").exists():
         entradas.append((PRECIOS / "servicios_desde_planillas.csv", "P"))
     filas_in = [(f"{pre}{i}", r) for ruta, pre in entradas for i, r in enumerate(csv.DictReader(open(ruta, encoding="utf-8")), 2)]
+    filas_in += [(f"U{i}", r) for i, r in precios_usuario()]
     for i, r in filas_in:
         if not r["precio"].strip():
             continue

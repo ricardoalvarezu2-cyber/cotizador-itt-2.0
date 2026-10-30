@@ -202,7 +202,9 @@ for r in ext:
         fallas.append(f"original inexistente: {k}")
 igual("citas verificadas", malas, 0)
 ext_pl = leer(PRECIOS / "servicios_desde_planillas.csv") if (PRECIOS / "servicios_desde_planillas.csv").exists() else []
-igual("cada precio de la extracción llega al historial", len(hist), len([r for r in ext + ext_pl if r["precio"].strip()]))
+import catalogo_servicios as _cs  # noqa: E402
+usr = [r for _, r in _cs.precios_usuario()]  # precios confirmados por Matías (precios_usuario.csv, 30-10-2026)
+igual("cada precio de la extracción llega al historial", len(hist), len([r for r in ext + ext_pl + usr if r["precio"].strip()]))
 
 if fallas:
     print(f"FALLAN {len(fallas)}:")
