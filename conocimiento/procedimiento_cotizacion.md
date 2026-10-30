@@ -8,7 +8,7 @@ Vigente desde el 27/10/2026. Se escribió a partir de los errores de la COT26-10
 
 Salió de comparar dos diseños hechos desde cero (el de Claude y el de un revisor independiente que leyó todo el repositorio) contra los errores registrados; Matías lo aprobó el 30-10-2026 **sin candados de estados**. Los principios:
 
-1. **Lo que se ve frena, no avisa.** Los controles de abajo marcados ■ son *frenos*: no impiden armar el cómputo, la planilla ni el informe (salen como borrador), pero las ofertas técnica y económica **no se generan** mientras quede uno abierto (`herramientas/frenos.py`, lo corren `armar_cotizacion.py` y `generar_oferta.py`). Cada freno se levanta corrigiendo el dato o escribiendo la justificación que pide en `cotizacion.json`.
+1. **Lo que se ve, se avisa; aprueba el usuario.** Los controles de abajo marcados ■ son *pendientes*: se muestran claros en la página (Resumen, "Para revisar antes de enviar al cliente") y en `armar_cotizacion.py`, pero **no impiden generar las ofertas ni aprobar** (Matías, 30-10-2026: antes frenaban las ofertas y no se entendía; las aprobaciones las hace el usuario desde la página sin restricción). Cada pendiente se resuelve corrigiendo el dato o escribiendo la justificación en `cotizacion.json`.
 2. **Todo requisito del cliente tiene destino.** Nada se pierde en silencio.
 3. **La IA lee (dos veces, por separado); los programas calculan; las personas aprueban.**
 4. **Lo que falta frena; no se completa con un valor por defecto.**
@@ -28,7 +28,7 @@ Salió de comparar dos diseños hechos desde cero (el de Claude y el de un revis
 | 9 | Cálculo y documentos (P6, P7) | programa | planilla, informe | Python = planilla = página |
 | 10 | Contraste por otro camino (P8): costo contra el antecedente más parecido con costo | programa | `comparacion_antecedentes.md` | ■ antecedentes: sin antecedente comparable o más de 15% sin explicar |
 | 11 | Revisión independiente a ciegas (P9) | otro agente o persona | revisión en la bitácora | — |
-| 12 | Ofertas (P9 bis) y aprobación de Matías o la dirección | programa y persona | `oferta/` | no salen con frenos abiertos |
+| 12 | Ofertas (P9 bis) y aprobación de Matías o la dirección | programa y persona | `oferta/` | los pendientes se avisan; aprueba el usuario |
 | 13 | Cierre (P10): resultado, costo real si se gana, y cada error nuevo con su prueba en `test_errores_sembrados.py` | persona y programa | `errores_y_lecciones.md`, prueba nueva | `verificar_todo.py` |
 
 Justificaciones que levantan frenos (en `cotizacion.json`): `justificaciones.estimado`, `justificaciones.vencidas`, `justificaciones.antecedentes`, `plazo.justificacion`; por fuente, `validez_hasta` y `reconfirmado` (AAAA-MM-DD).

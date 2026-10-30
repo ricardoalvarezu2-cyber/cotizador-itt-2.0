@@ -382,12 +382,9 @@ def main(carpeta, frenos_revisados=False):
     cfg = completar(json.load(open(carpeta / "oferta.json", encoding="utf-8")), cot)
     cfg["_cot"] = cot
     import frenos
-    fr = [] if frenos_revisados else frenos.frenos(carpeta)  # también cuando se corre sola: ninguna oferta sale con un freno abierto
+    fr = [] if frenos_revisados else frenos.frenos(carpeta)  # solo avisan (Matías, 30-10-2026): la oferta se genera igual
     if fr:
-        for f in (carpeta / "oferta").glob("*") if (carpeta / "oferta").exists() else []:
-            if f.suffix in (".docx", ".pdf"):  # no quedan ofertas viejas que digan otra cosa
-                f.unlink()
-        sys.exit("OFERTAS NO GENERADAS:\n" + "\n".join(f"  ■ [{k}] {t}" for k, t in fr))
+        print("PENDIENTES ANTES DE ENVIAR (no impiden generar ni aprobar):\n" + "\n".join(f"  · [{k}] {t}" for k, t in fr))
     precios = leer_precios(carpeta)
     salida = carpeta / "oferta"
     salida.mkdir(exist_ok=True)

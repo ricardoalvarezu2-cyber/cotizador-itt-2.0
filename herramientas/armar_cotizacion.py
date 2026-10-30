@@ -15,7 +15,7 @@ Salida:
   ficha_rubros.md/.json  ficha por rubro (MO piping, estructura, pintura, END, transporte) para el modo global (ficha_rubros.py)
   comparacion_antecedentes.md  precio contra los 5 antecedentes más parecidos (comparar_antecedentes.py, paso P8)
   verificacion_origen.md      avisos de precios que no figuran en su documento de origen (verificar_origen.py; solo avisa)
-  frenos                 las ofertas no se generan si queda algún freno (herramientas/frenos.py): plazo, transcripción
+  frenos                 pendientes antes de enviar (herramientas/frenos.py); solo avisan, desde el 30-10-2026: plazo, transcripción
                          doble, matriz de requisitos, estimado > 15%, antecedentes, cotizaciones vencidas
   <codigo>_<...>.xlsx    planilla con fórmulas: parámetros, ajuste por inflación, detalle, índices, desvíos, antecedentes
   informe.html           informe interactivo (plantillas/informe_cotizacion.html)
@@ -415,21 +415,19 @@ def main(carpeta):
     import verificar_origen
     verificar_origen.main(carpeta)  # aviso de precio que no figura en su documento de origen → verificacion_origen.md
     import frenos
-    lista_frenos = frenos.frenos(carpeta, recalcular=False)  # controles que frenan la oferta (plazo, transcripción, requisitos, estimado, etc.)
-    bloqueo = "; ".join(f"[{k}] {t}" for k, t in lista_frenos)
-    if bloqueo:  # no quedan ofertas viejas que digan otra cosa
-        for f in (carpeta / "oferta").glob("*") if (carpeta / "oferta").exists() else []:
-            if f.suffix in (".docx", ".pdf"):
-                f.unlink()
-        print(f"OFERTAS NO GENERADAS ({len(lista_frenos)} freno(s)):")
+    lista_frenos = frenos.frenos(carpeta, recalcular=False)  # pendientes antes de enviar (plazo, transcripción, requisitos, estimado, etc.)
+    # Desde el 30-10-2026 (Matías) son avisos, no frenos: las ofertas se generan igual (en borrador) y la aprobación la
+    # decide el usuario sin restricción.
+    if lista_frenos:
+        print(f"PENDIENTES ANTES DE ENVIAR ({len(lista_frenos)}, no impiden generar ni aprobar):")
         for k, t in lista_frenos:
-            print(f"  ■ [{k}] {t}")
-    elif (carpeta / "oferta.json").exists():
+            print(f"  · [{k}] {t}")
+    if (carpeta / "oferta.json").exists():
         import generar_oferta
         generar_oferta.main(carpeta, frenos_revisados=True)
     import indice_proyectos
     indice_proyectos.main()  # la cotización queda en el índice de antecedentes
-    print(f"\nListo: {carpeta}/computo.csv, {ruta.name}, informe.html" + (", oferta/" if (carpeta / "oferta.json").exists() and not bloqueo else ""))
+    print(f"\nListo: {carpeta}/computo.csv, {ruta.name}, informe.html" + (", oferta/" if (carpeta / "oferta.json").exists() else ""))
     print(f"Estado: {cfg['estado']}. Recordar: revisión independiente y aprobación antes de enviar (procedimiento P9).")
 
 

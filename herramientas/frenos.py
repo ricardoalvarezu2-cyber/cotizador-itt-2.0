@@ -1,4 +1,8 @@
-"""Frenos de la oferta: controles que no avisan, frenan (proceso unificado, Matías, 30-10-2026).
+"""Pendientes de la oferta (antes "frenos"; proceso unificado, Matías, 30-10-2026).
+
+CAMBIO (Matías, 30-10-2026, tarde): ya no frenan. Son avisos de lo que conviene revisar antes de enviar al cliente: las
+ofertas se generan igual (en borrador) y la aprobación la hace el usuario desde la página sin restricción. El texto de
+abajo describe cada control; donde dice "frena" o "impide", leer "avisa".
 
 Uso: python herramientas/frenos.py cotizaciones/<carpeta>          lista los frenos de una cotización
      python herramientas/frenos.py --comparar A.json B.json          compara dos lecturas del documento del cliente

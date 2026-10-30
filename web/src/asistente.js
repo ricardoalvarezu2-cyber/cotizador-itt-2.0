@@ -144,23 +144,19 @@ const Asistente = (() => {
     if (nuevo && mcp) { nuevo.hidden = false; nuevo.title = "Abre una sesión nueva de Claude Code con el repositorio"; nuevo.addEventListener("click", chatNuevo); }
     I.S.db?.doc("config/claude_code").get().then(d => { if (!d.exists) return; if (+d.data().dias_chat > 0) diasChat = +d.data().dias_chat; modelo = d.data().model || ""; }).catch(() => {});
   }
-  function ventana(url) {
-    const an = 480, al = Math.min(820, screen.availHeight - 80);
-    const izq = (screen.availLeft || 0) + screen.availWidth - an - 24, arr = (screen.availTop || 0) + 40;
-    return window.open(url, "claude-code-itt", `popup=yes,width=${an},height=${al},left=${izq},top=${arr}`);
-  }
   function irA(w, url) {
     if (w && !w.closed) { try { w.location.href = url; w.focus(); return; } catch (e) { /* otra ventana */ } }
     const a = document.createElement("a"); a.href = url; a.target = "_blank"; a.rel = "noopener"; document.body.append(a); a.click(); a.remove();
   }
+  // 30-10-2026: la ventana chica (window.open con medidas) heredaba las restricciones de la página y claude.ai la
+  // rechazaba ("Se bloqueó claude.ai", ERR_BLOCKED_BY_RESPONSE). Se abre como una pestaña común con un enlace.
   function abrirClaude() {
-    const url = "https://claude.ai/code/" + sesion, w = ventana(url);
-    if (w) { try { w.focus(); } catch (e) { /* otra ventana */ } } else irA(null, url);
+    irA(null, "https://claude.ai/code/" + sesion);
     limpiarChats().catch(() => {});
   }
   const datoDe = r => { const p = r && (r.payload ?? r); return (p && p.ccr) || p || {}; };
   async function chatNuevo(ev) {
-    const b = ev.currentTarget, w = ventana("about:blank"); // la ventana se abre ya, con el clic; después se le pone la sesión
+    const b = ev.currentTarget, w = null; // sin ventana previa (claude.ai la rechazaba): al final se ofrece el enlace
     b.disabled = true; I.toast("Creando un chat nuevo con el repositorio…");
     try {
       const f = Documentos.fechaHora(ahora());
@@ -175,13 +171,23 @@ const Asistente = (() => {
       if (!r) throw error;
       const id = datoDe(r).id || (JSON.stringify(r).match(/session_[A-Za-z0-9]+/) || [])[0];
       if (!id) throw new Error("Claude Code no devolvió la sesión nueva");
-      irA(w, "https://claude.ai/code/" + id);
+      enlaceChat("https://claude.ai/code/" + id);
       await I.S.db?.doc("chats/" + id).set({ creado: ahora(), titulo: "Cotizador ITT - chat " + f });
       limpiarChats(id).catch(() => {});
     } catch (e) {
       I.toast("No se pudo crear el chat nuevo (" + (e.code || "error") + (e.message ? ": " + String(e.message).slice(0, 160) : "") + "). Se abre Claude Code para empezarlo a mano.");
-      irA(w, "https://claude.ai/code");
+      enlaceChat("https://claude.ai/code");
     } finally { b.disabled = false; }
+  }
+  // El chat nuevo se crea después del clic (tarda): el navegador bloquearía abrirlo solo, así que se muestra un enlace para abrirlo.
+  function enlaceChat(url) {
+    document.getElementById("enlace-chat")?.remove();
+    const d = document.createElement("div");
+    d.id = "enlace-chat"; d.className = "aviso"; d.style.cssText = "position:fixed;right:16px;bottom:16px;z-index:50;max-width:320px";
+    d.innerHTML = `<b>Chat listo.</b> <a href="${url}" target="_blank" rel="noopener">Abrir Claude Code ↗</a> <button class="chico" type="button">×</button>`;
+    d.querySelector("a").addEventListener("click", () => setTimeout(() => d.remove(), 300));
+    d.querySelector("button").addEventListener("click", () => d.remove());
+    document.body.append(d);
   }
   // Limpieza en dos pasos de las sesiones creadas por la página (la sesión fija nunca): 1) con más de diasChat días sin
   // uso se le pide que consolide lo aprendido en el repositorio (web/LEEME.md, "Consolidar antes de archivar"), y la

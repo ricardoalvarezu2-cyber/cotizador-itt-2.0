@@ -672,16 +672,18 @@
       <div class="fila fin"><button data-a="cerrar">Cancelar</button><button class="prim" data-a="incorporar-ok">Aceptar</button></div></section></div>`;
     capa.querySelector('[data-a="incorporar-ok"]').focus();
   }
-  // Frenos de la oferta (30-10-2026): mientras quede uno, las ofertas técnica y económica no se generan (Busqueda.frenosOferta).
+  // Pendientes antes de enviar (Matías, 30-10-2026): son avisos, no frenos. No impiden descargar las ofertas ni aprobar;
+  // las aprobaciones las decide el usuario desde la página sin restricción. Texto corto en criollo y el detalle aparte.
+  const TITULO_PEND = { repositorio: "No se controló en el repositorio (Claude Code)", transcripcion: "Falta la segunda lectura del pedido del cliente",
+    requisitos: "Hay pedidos del cliente sin resolver (consultas sin respuesta o documentos que tiene que preparar ITT)", computo: "El control del cómputo encontró diferencias con el plano",
+    sin_precio: "Hay renglones sin precio", estimado: "Más del 15% del costo es estimado", vencidas: "Hay precios de proveedor de hace más de 30 días",
+    pendientes_oferta: "La oferta tiene datos sin completar (entre corchetes)", antecedentes: "El precio se aleja de los antecedentes", plazo: "El plazo ofrecido es menor que el calculado" };
   function panelFrenos() {
-    const fr = Busqueda.frenosOferta(S.doc.cot, S.doc.oferta), j = S.doc.cot.justificaciones || {};
-    const campoJ = (k, t) => `<label class="ancho"><span>${t} (al menos 20 letras)</span><textarea data-b="cot.justificaciones.${k}">${E(j[k] || "")}</textarea></label>`;
-    const quiere = new Set(fr.map(f => f.clave));
-    const just = [["estimado", "Justificación de lo estimado (más del 15%)"], ["vencidas", "Justificación de precios vencidos"], ["antecedentes", "Explicación contra los antecedentes, rubro por rubro"]]
-      .filter(([k]) => quiere.has(k) || j[k]).map(([k, t]) => campoJ(k, t)).join("");
-    if (!fr.length) return `<div class="aviso">Sin frenos: las ofertas se pueden generar (siguen como borrador hasta la aprobación).</div>`;
-    return `<div class="aviso bad"><b>Las ofertas no se generan (${fr.length} freno${fr.length > 1 ? "s" : ""}):</b><ul>${fr.map(f => `<li>${E(f.texto)}</li>`).join("")}</ul></div>
-      ${just ? `<div class="campos">${just}</div>` : ""}`;
+    const fr = Busqueda.frenosOferta(S.doc.cot, S.doc.oferta);
+    if (!fr.length) return `<div class="aviso">Sin pendientes.</div>`;
+    return `<div class="aviso"><b>Para revisar antes de enviar al cliente</b> <span class="small muted">(no impide descargar ni aprobar)</span>
+      <ul>${fr.map(f => `<li>${E(TITULO_PEND[f.clave] || f.texto)}</li>`).join("")}</ul>
+      <details><summary class="small">Ver detalle</summary><ul class="small">${fr.map(f => `<li>${E(f.texto.replace(/ Hasta entonces no se generan las ofertas\./, ""))}</li>`).join("")}</ul></details></div>`;
   }
   function tabResumen() {
     const c = calc(), p = S.doc.cot.parametros, avs = Busqueda.avisos(S.doc.cot), esc_ = Motor.escenarios(S.doc.cot, S.datos.indices);
@@ -794,35 +796,20 @@
 
   // ------------------------------------------------------------------ cambio de estado (con controles; la herramienta nunca envía nada)
   function dialogoEstado(d) {
+    // Las aprobaciones las hace el usuario desde la página, sin restricción (Matías, 30-10-2026): los pendientes se muestran
+    // como aviso en Resumen, pero no impiden ningún cambio de estado.
     const cot = S.doc.cot, act = cot.estado;
-    // desvíos de la oferta sin resolver ([corchetes], "a confirmar") frenan revisado y aprobado como un aviso a corregir
-    const desv = ((S.doc.oferta || {}).aclaraciones_y_desvios || {}).items || [];
-    const malos = Busqueda.avisos(cot).filter(a => a.nivel === "bad").concat(
-      desv.filter(x => Busqueda.SIN_RESOLVER.test(String(x))).map(x => ({ nivel: "bad", txt: `Oferta: desvío a confirmar: ${String(x).slice(0, 80)}` })));
-    const p9 = (d === "revisado" || d === "aprobado") ? Busqueda.p9Pendiente(cot) : "";
-    if (p9) malos.push({ nivel: "bad", txt: p9 });
-    let error = "", texto = "", extra = "";
     if (d === act) return;
-    if (d === "revisado") {
-      if (malos.length) error = `Hay ${malos.length} aviso(s) para corregir. Corregilos antes de pasar a revisado (ver Resumen y descargas).`;
-      texto = "Confirmá que una persona revisó el cómputo contra el plano (procedimiento P10) y que los avisos para revisar están explicados.";
-    } else if (d === "aprobado") {
-      if (act !== "revisado") error = "Primero tiene que estar revisada.";
-      else if (malos.length) error = `Hay ${malos.length} aviso(s) para corregir.`;
-      texto = "Al aprobar, la oferta sale sin la leyenda de borrador y con la firma, y la cotización queda bloqueada para cambios.";
-      extra = `<label><span>¿Quién aprueba? (Matías o la dirección)</span><input id="ap-por" autocomplete="off"></label>`;
-    } else if (d === "enviado") {
-      if (act !== "aprobado") error = "Solo se marca enviada una cotización aprobada.";
-      texto = "La herramienta no envía nada. Marcala como enviada solo si ya la mandaste vos al cliente.";
-    } else if (d === "borrador") {
-      texto = act === "revisado" ? "Vuelve a borrador para seguir cambiándola." : "Vuelve a borrador: se desbloquea, se borra la aprobación y la oferta vuelve a salir con la leyenda de borrador.";
-    }
-    if (p9 && error && !error.includes(p9)) error += " " + p9;
+    const n = Busqueda.frenosOferta(cot, S.doc.oferta).length;
+    const texto = { revisado: "Queda marcada como revisada.", aprobado: "Al aprobar, la oferta sale sin la leyenda de borrador y con la firma, y la cotización queda bloqueada para cambios.",
+      enviado: "La herramienta no envía nada. Marcala como enviada solo si ya la mandaste vos al cliente.",
+      borrador: "Vuelve a borrador: se desbloquea y la oferta vuelve a salir con la leyenda de borrador." }[d] || "";
+    const extra = d === "aprobado" ? `<label><span>¿Quién aprueba? (opcional)</span><input id="ap-por" autocomplete="off"></label>` : "";
     capa.hidden = false;
     capa.innerHTML = `<div class="capa"><section class="panel" role="dialog" aria-label="Cambiar estado"><h2>Pasar a "${E(d)}"</h2>
-      ${error ? `<div class="aviso bad">${E(error)}</div>` : `<p>${E(texto)}</p>${extra}`}
-      <p class="err" id="est-err"></p><div class="fila fin"><button data-a="cerrar">${error ? "Volver" : "Cancelar"}</button>
-      ${error ? "" : `<button class="prim" data-a="estado-ok" data-v="${E(d)}">Pasar a ${E(d)}</button>`}</div></section></div>`;
+      <p>${E(texto)}</p>${n && d !== "borrador" ? `<p class="small muted">Quedan ${n} punto(s) para revisar (ver Resumen). No impiden el cambio.</p>` : ""}${extra}
+      <p class="err" id="est-err"></p><div class="fila fin"><button data-a="cerrar">Cancelar</button>
+      <button class="prim" data-a="estado-ok" data-v="${E(d)}">Pasar a ${E(d)}</button></div></section></div>`;
     $("#ap-por")?.focus();
   }
 
@@ -1005,8 +992,7 @@
         const d = b.dataset.v;
         if (d === "aprobado") {
           const por = ($("#ap-por")?.value || "").trim();
-          if (!por) { $("#est-err").textContent = "Escribí quién aprueba."; return; }
-          cot.aprobacion = { por, fecha: hoy() };
+          cot.aprobacion = { por: por || "usuario de la página", fecha: hoy() };
         }
         cambiarEstado(d); capa.hidden = true; capa.innerHTML = ""; guardarPronto(); render();
         toast(`Estado: ${d}`); break;
@@ -1144,8 +1130,6 @@
   const base = () => (S.doc.oferta.archivo_base || S.doc.cot.codigo || "cotizacion").replace(/[\\/:*?"<>|]/g, "-");
   async function generar(k, ctx) {
     const cot = S.doc.cot;
-    const fr = /^(tec|eco)_/.test(k) && Busqueda.frenosTexto(cot, S.doc.oferta);
-    if (fr) throw new Error("Las ofertas no se generan: " + fr);
     switch (k) {
       case "presupuesto": return Documentos.planilla(cot, S.datos.indices, S.datos);
       case "compras": return Documentos.compras(cot);
@@ -1158,8 +1142,6 @@
     }
   }
   async function vistaPrevia(k) {
-    const fr = k !== "informe" && Busqueda.frenosTexto(S.doc.cot, S.doc.oferta);
-    if (fr) { toast("Las ofertas no se generan: " + fr); return; }
     capa.hidden = false; capa.innerHTML = `<div class="capa"><section class="panel vista"><div class="vacio">Armando la vista previa…</div></section></div>`;
     const ctx = await contexto();
     const [titulo, html, desc] = k === "informe" ? ["Informe del presupuesto", Documentos.informeHtml(ctx), "informe"]
@@ -1173,9 +1155,7 @@
     if (b) b.disabled = true;
     try {
       const ctx = await contexto(), zip = new JSZip(), carpeta = zip.folder(base());
-      const bloq = Busqueda.frenosTexto(S.doc.cot, S.doc.oferta);
-      for (const [k, n] of ARCHIVOS) { if (bloq && /^(tec|eco)_/.test(k)) continue; estadoDesc(`Generando ${n}…`); carpeta.file(n, await generar(k, ctx)); }
-      if (bloq) carpeta.file("LEEME - faltan las ofertas.txt", bloq);
+      for (const [k, n] of ARCHIVOS) { estadoDesc(`Generando ${n}…`); carpeta.file(n, await generar(k, ctx)); }
       estadoDesc("Comprimiendo…");
       const blob = await zip.generateAsync({ type: "blob" });
       await S.dl.save({ filename: base() + ".zip", data: blob });

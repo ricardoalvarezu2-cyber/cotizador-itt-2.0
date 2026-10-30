@@ -404,7 +404,7 @@ const Busqueda = (() => {
   function plazoBloquea(cfg) {
     const d = +cfg.plazo?.dias || 0, { calc } = plazoCalculado(cfg);
     if (!d || !calc || d >= calc || String(cfg.plazo?.justificacion || "").trim()) return "";
-    return `Plazo ofrecido ${d} días, menor que el calculado (${calc} días): corregilo o escribí la justificación en Plazo. Hasta entonces no se generan las ofertas.`;
+    return `Plazo ofrecido ${d} días, menor que el calculado (${calc} días): corregilo o escribí la justificación en Plazo.`;
   }
   // Frenos de la oferta (proceso unificado, 30-10-2026; igual que herramientas/frenos.py). Los que dependen de archivos del
   // repositorio (transcripción doble, matriz de requisitos, cómputo, antecedentes) los calcula Python y los deja semilla.py en
