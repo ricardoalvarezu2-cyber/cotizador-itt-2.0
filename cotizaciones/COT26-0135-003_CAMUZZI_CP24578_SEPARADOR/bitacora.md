@@ -34,7 +34,7 @@ Concurso aparte **Nº 24527** solo para los 2 filtros coalescentes (vencía el 2
 
 ## 29-10-2026 · Revisión contra la ET y el esquema de Camuzzi (sin cambiar todavía `cotizacion.json`)
 Diferencias encontradas (la cotización se había armado sin la ET):
-1. **Presión de diseño baja.** La ET 9.16.1 pide PH a **1,3 × la presión máxima de la serie ANSI** (#600 ≈ 102 bar → ~133 bar) durante 6 h. Con 77 bar de diseño esa prueba no cumple ASME (1,3 × MAWP): el recipiente se diseña a ~102 bar. Espesor estimado: 10,2 × 640 / (138 − 0,6 × 10,2) = 49,5 + **1,6 de corrosión (ET 9; se había usado 3,2)** ≈ 51 mm → 2" a 2 1/8" (era 1 5/8"). Sube chapa, fondo, placa y rolado ~25–30%. La PH cargada (1,5 × diseño, 16 h) también cambia.
+1. **Presión de diseño baja.** La ET 9.16.1 pide PH a **1,3 × la presión máxima de la serie ANSI** (#600 ≈ 102 bar → ~133 bar) durante 6 h. Con 77 bar de diseño esa prueba no cumple ASME (1,3 × MAWP): el recipiente se diseña a ~102 bar. Espesor estimado: 10,2 × 640 / (138 − 0,6 × 10,2) = 49,5 + **1,6 de corrosión (ET 9; se había usado 3,2)** ≈ 51 mm → 2" a 2 1/8" (era 1 5/8"). Sube chapa, fondo, placa y rolado ~25–30%. La PH cargada (1,5 × diseño, 16 h) también cambia. **[Corregido el 30-10-2026, auditoría: 1,3 × MAWP es el mínimo de la PH en ASME VIII (UG-99), no un máximo; con 77 bar la PH a 133 bar es posible si la memoria verifica las tensiones en la prueba. El diseño a 102 bar es una opción, no una obligación: ver "Auditoría independiente".]**
 2. **Repuestos (ET 13.1): un juego adicional de elementos** por equipo, además del instalado. Hoy hay 37 por equipo (≈ 31.600 USD); con el juego extra se duplica. La planilla dice "un juego"; la ET dice "adicional". A decidir.
 3. **Tapa de cierre rápido:** Megatap **no está en el listado de marcas de Camuzzi** (SCE-IN-501-0015: Peco, Gora, Futura, EKA). Recotizar con alguna de esas.
 4. **Válvulas esféricas Taval:** Taval no figura en el listado (Esferomatic, Worcester, Valvtronic, Pentair, Indave, Wenlen, Spirax, Beta, Valmec). Confirmar con Taval si está homologada (afecta también a COT26-0135-001 y 002).
@@ -104,7 +104,7 @@ Hecha por un agente sobre `armar_json.py` (única fuente: regenera la lista, `co
 - Desvíos declarados en la oferta: moneda USD (24527 y pliego 18.1 piden pesos salvo importados) y plazo (24527 pide 30 días). Referencia y objeto de la oferta nombran los dos concursos.
 
 **Materiales (fuente en cada renglón)**
-- Tapa (3): escalada al DI 50,4" (antes 53") con el exponente de las dos tapas Futura #600 cotizadas (16": 8.432, TAVAL/40; 36": 24.288,60, Sacde/12 → 1,305; antes 1,5 sin fuente): 43.387,29 → 37.668,33.
+- Tapa (3): escalada al DI 50,4" (antes 53") con el exponente de las dos tapas Futura #600 cotizadas (16": 8.432, TAVAL/40; 36": 24.288,60, Sacde/12 → 1,305; antes 1,5 sin fuente): 43.387,29 → 37.668,33. **[Corregido por la auditoría: la Futura 36" se designa por el diámetro exterior; escalada a 54,9" da 42.103,38.]**
 - Brida ciega 6" (9): Provemet ciega 8" #600 (172,28, BRI-01064) en lugar de WN 6" + 10% sin fuente.
 - Válvula 1/2" S-2000 NPT (15): Taval lista 30 VAL-04865 (36,06) como precio de referencia de una marca del listado (estaba sin precio "porque no había": sí había).
 - Switches Ex-d (17) e interruptores de purga (16b): switch de nivel de Sacde/12 (2.500).
@@ -114,7 +114,7 @@ Hecha por un agente sobre `armar_json.py` (única fuente: regenera la lista, `co
 
 **MO y servicios**
 - Rolado (S01): Sandri cilindra hasta 50 mm (membrete de su cotización) y la virola es de 57,15 mm: la base pasa a la tarifa de rolado 3,70 USD/kg (tarifas.csv, AESA/44): 10.939 → 23.262. Pedir cotización a un taller con capacidad.
-- Fabricación Ledesma (S02): el factor × 2,2 por tamaño sobre el separador 28" de CAMUZZI/30 no tenía fuente. Base nueva: presupuestos de Ledesma de recipientes a presión de AESA/44 (27-08-2025), 4,15 USD/kg del de 8.967 kg (el de peso más cercano; el de 11.860 kg da 3,14) × 9.848 kg (virola, fondo, placa, skid, pollera y conexiones): 33.643 → 40.869. Alcance igual (virolas, soldaduras, casquetes, conexiones, internos, plataforma); no incluye consumibles ni rolado.
+- Fabricación Ledesma (S02): el factor × 2,2 por tamaño sobre el separador 28" de CAMUZZI/30 no tenía fuente. Base nueva: presupuestos de Ledesma de recipientes a presión de AESA/44 (27-08-2025), 4,15 USD/kg del de 8.967 kg (el de peso más cercano; el de 11.860 kg da 3,14) × 9.848 kg (virola, fondo, placa, skid, pollera y conexiones): 33.643 → 40.869. Alcance igual (virolas, soldaduras, casquetes, conexiones, internos, plataforma); no incluye consumibles ni rolado. **[Corregido por la auditoría: AESA/44 es de pared fina; se suma S02b por espesor y S02c consumibles.]**
 - RX (Matías, 30-10), ingeniería y calidad 250 h (Matías, 30-10), PH, pintura, prueba de fugas y montaje propio: sin cambios. API 1104 y tratamiento térmico sin precio (Compras).
 - Flete: 2 viajes de semirremolque a 1.750 + 780 USD por equipo (Suan, AESA/44, 09-2025) + 300 de embalaje; antes ARS 1.400.000 por un camión con hidrogrúa para los dos (≈ 20 t), sin fuente. Destino a confirmar (C3).
 
@@ -127,7 +127,7 @@ Hecha por un agente sobre `armar_json.py` (única fuente: regenera la lista, `co
 1. **`armar_json.py` desincronizado de `cotizacion.json`:** las decisiones del 30-10 (RX con el precio de Matías, ingeniería y calidad 250 h, 14b/15/23b sin precio, segunda fuente del elemento) estaban solo en `cotizacion.json`; correr el programa las deshacía. Corregido: todo está en `armar_json.py`.
 2. **Rolado imposible:** la base era Sandri, que cilindra hasta 50 mm; la virola es de 57,15 mm.
 3. **Factor sin fuente:** la fabricación de Ledesma se escalaba × 2,2 "por tamaño" sin dato.
-4. **Tapa mal escalada:** a 53" (no es el DI ni el diámetro exterior) y con un exponente 1,5 supuesto.
+4. **Tapa mal escalada:** a 53" (no es el DI ni el diámetro exterior) y con un exponente 1,5 supuesto. **[Corrección de la auditoría: el error fue mío al escalar por el DI; las tapas se designan por el diámetro exterior.]**
 5. **Faltaba el tratamiento térmico** que el código exige por espesor (UCS-56).
 6. **Purga automática incompleta:** sin el interruptor de nivel que la comanda ni el gas de accionamiento (ET 9.2).
 7. **Manifold de 3 vías en el manómetro equivocado** (la ET pide 2 vías en el estático y 3 o 5 en el diferencial).
@@ -138,3 +138,45 @@ Hecha por un agente sobre `armar_json.py` (única fuente: regenera la lista, `co
 12. **No se habían leído las condiciones del Concurso 24527:** moneda en pesos, plazo de 30 días, destino final a determinar y apertura del 20-10-2026 ya vencida.
 13. **Flete sin fuente** y corto para dos equipos de ≈ 10 t.
 14. Herramientas (no se tocaron; van en el informe): `ficha_rubros.py` da 38.862 m² de pintura de piping (cuenta la chapa en kg como largo equivalente); `compatibilidad.py` leyó "ABAC VA 350" como material A350 LF2; el control de material de instrumentos depende de si la descripción nombra materiales (el manómetro estático pasaba antes porque no los nombraba).
+
+## 30-10-2026 · Auditoría independiente de la revisión: hallazgos verificados contra los originales y correcciones
+**Resultado (salida de `armar_cotizacion.py`, borrador sin revisar):** antes de la auditoría USD 346.355,34 c/u y 698.070,92 los 2; ahora **USD 376.240,31 c/u y 757.840,86 los 2** (costo 278.696,52). `verificar_computo.py`: 0 errores.
+
+**Hallazgos verificados y corregidos**
+- **2. Ledesma de pared fina:** confirmado. Los recipientes de AESA/44 son de 2,5 m × 17 a 22 m y 6 a 16 t (pedido de flete a Suan, 01-09-2025), es decir ≈ 10 mm de pared; el presupuesto 20079 dice "No incluye … Consumibles". Ledesma queda a 4,15 USD/kg (S02) para el trabajo de pared normal. Se agrega **S02b**, la soldadura extra por espesor: 1.401 pulgadas equivalentes (regla de factores_soldadura.csv, espesor ÷ 9,53, en las costuras del cuerpo, la placa y las toberas) × 12 USD/pulg-eq de Quesada (JQ-020-2026, incluye consumibles) = 16.812. Va como estimado. Se agrega también **S02c**, consumibles de Ledesma: sin precio en el catálogo, queda en 0 y frena.
+- **3. Tapa:** confirmado, la Futura 36" se designa por el diámetro exterior (la de 16" es de 406 mm). Escalada a 54,9": 37.668,33 → 42.103,38. Mi "error 4" del 30-10 estaba mal planteado: el error fue mío al escalar por el DI.
+- **4. Justificación TAVAL/37:** confirmado que era falsa. La hoja "Mano de Obra de ITT" separa el cuerpo principal y las cunas (soldadura 36.858, RX 27.314) de los skids A (20.196 / 15.485) y B (14.388 / 9.397). Además ≈ 1.125 h de las 1.989 de montaje son del recipiente. Se reescribió con esos números: la MO del recipiente da parecida (≈ 82.200 allá, 81.882 acá) y la diferencia es de alcance. RX: las placas se contaron por costura, 43 grandes + 46 chicas = 89 (antes 80 por criterio): 1.968,85. El conteo de 816 placas de TAVAL/37 sale de una plantilla de "separador bifásico", no de su recipiente. Se agregan las tintas penetrantes **S03b** (2 servicios de Antonelli a 490), que faltaban.
+- **5. Elemento:** confirmado, TAVAL/37 y Sacde/12 son la misma plantilla (16 u a 854, sin tamaño). Se sacó "confirma el valor".
+- **6. Plazo:** confirmado.
+  - Futura cotizó la tapa a 120 días (Sacde/12, "plazo 120 dias"); los 90/110 eran de Megatap, que está fuera del listado.
+  - La tapa ahora se pide con el plano aprobado (ET 7.1 y 10). Se suponen 15 días de revisión de Camuzzi, porque la ET no los fija, y la oferta lo dice.
+  - Plazo calculado: 200 días; con el margen de 15% de plazos.md §4 se ofrecen **230** (antes 175).
+- **7. Fundamento de los 102 bar:** confirmado que estaba mal escrito. No se cambia el diseño; quedan dos opciones para Matías o la dirección:
+  - **(a) Actual:** diseño a 102,1 bar, 2 1/4", PH a 133 bar.
+  - **(b) Alternativa:** diseño a 77 bar, 1 5/8" (41,3 mm). La PH a 133 bar se verifica en la memoria: membrana ≈ 214 MPa, menos del 90% de la fluencia de SA-516-70 (260 MPa). Efecto:
+    - ≈ 2 t menos de chapa por equipo, entre virola y fondo.
+    - La virola la puede rolar Sandri (hasta 50 mm).
+    - Menos soldadura extra por espesor.
+    - El tratamiento térmico sigue, porque 41,3 mm es más de 38 mm.
+- **8. Oferta:** se declaran el elemento ofrecido (coalescente, la ET dice celulósico; C2 sigue abierta) y el manifold del diferencial en inoxidable del listado en lugar de zincado (requisito ET 9.19.2 → desvío).
+- **9. Kilos de la virola:** confirmado. Con el diámetro medio dan 6.031 kg (antes 6.287 con el exterior); cambian M01, S01 y S02.
+- **10. Juntas:** se agrega el segundo juego (**22b**, ET 9.16.3) y los requisitos de reemplazo de juntas y de aviso de llegada con 5 días hábiles (ET 13).
+  - Error adicional encontrado: M22 usaba la cotización 48.729 de MS Juntas, que es de juntas **#300** (otra serie).
+  - Las juntas pasan a las #600 de la planilla TAVAL/37.
+  - Los espárragos B7/2H zincados quedan aparte (**22c**, 88 un a 10, JUN-04181).
+- **11. Flete:** confirmado, 1.750 + 780 es el costo que ITT cargó para el SB-003 en la hoja "Transporte" de su planilla de AESA/44, no una cotización de Suan. Fuente corregida.
+- **12. CAMUZZI/30:** se corrigió "tomado de".
+- **13. Rolado:** pasa a estimado, porque es tarifa interna de ITT y nunca se cotizó para 57 mm.
+- **Pintura:** con la superficie corregida de la ficha (recipiente 25,5 m²) y el skid sin la plataforma galvanizada (≈ 32 m²) da 58 m² (antes 38).
+
+**Hallazgo rechazado**
+- **1. Cargar como estimado la segunda referencia de los renglones en 0** (M14b Taval 162, M16 válvula de control 2.000, M20 Weisz 120): lo probé y `verificar_computo.py` da ERROR. Las tres referencias no dicen el material, y la regla de compatibilidad (Matías, 30-10-2026; CLAUDE.md) no admite un estimado sobre una referencia sin material. Quedan en 0 con la referencia como orden de magnitud (≈ 5.250 por equipo entre las tres), y frenan.
+- M18 (visores) también queda en 0: Matías decidió el 29-10 que la Riva para 70 bar no es referencia.
+- M14c, M16c, M20b, S05d y S05e no tienen ninguna referencia.
+
+**Frenos**
+- **Requisitos:** R017 y R018 pasan a `pendiente_itt`; quedan las consultas C1 a C5.
+- **Sin precio:** 10 renglones (los motivos dicen que falta precio, así que frenan).
+- **Estimado:** 17%. No se justificó.
+- **Vencidas:** 11. Se agrega la de Antonelli; no se justificó.
+- **Datos entre corchetes de la oferta.**

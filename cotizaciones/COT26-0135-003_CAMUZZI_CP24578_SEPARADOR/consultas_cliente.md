@@ -25,10 +25,10 @@ Preparadas el 30-10-2026.
 
 ## Consultas sugeridas (no frenan: se cotizó la opción que cumple; decide Matías si se mandan)
 
-- **Presión de diseño.** La ET 9.16.1 pide la prueba de resistencia a 1,3 × la presión máxima de la serie ANSI. Para que esa prueba no supere la que admite ASME VIII, el recipiente se diseñó a la presión de la serie #600 (102,1 bar) y no a 70 bar: espesor 2 1/4" y tratamiento térmico. Preguntar si la prueba puede hacerse a 1,3 × la presión de diseño del recipiente (por ejemplo 77 bar → 100 bar); bajaría el espesor a ≈ 1 5/8" y probablemente sacaría el tratamiento térmico (≈ 25–30% menos en chapa, fondo, rolado y fabricación).
-- **Moneda y plazo.** Cotizamos en dólares y con 175 días (desvíos declarados en la oferta). El pliego general (8.7) desestima las ofertas que modifiquen sus condiciones: conviene preguntar si aceptan la cotización en USD y el plazo, como en el Concurso N° 22737 (CAMUZZI/30, cotizado en USD a 120 días).
+- **Presión de diseño.** La ET 9.16.1 pide la prueba de resistencia a 1,3 × la presión máxima de la serie ANSI (≈ 133 bar). Se cotizó el recipiente diseñado a la presión de la serie #600 (102,1 bar, 2 1/4"). Hay otra opción sin preguntar nada: diseñar a 77 bar (1 5/8") y verificar en la memoria que la PH a 133 bar no supere las tensiones admisibles en la prueba (1,3 × MAWP es el mínimo de ASME, no un máximo). Lo decide Matías o la dirección (ver bitácora). También se puede preguntar si la prueba puede hacerse a 1,3 × la presión de diseño del recipiente.
+- **Moneda y plazo.** Cotizamos en dólares y con 230 días (desvíos declarados en la oferta). El pliego general (8.7) desestima las ofertas que modifiquen sus condiciones: conviene preguntar si aceptan la cotización en USD y el plazo, como en el Concurso N° 22737 (CAMUZZI/30, cotizado en USD a 120 días).
 - **Vicios ocultos sin límite de tiempo** (ET 14): confirmar con la dirección de ITT si se acepta tal cual.
 
 ## Pendientes de ITT que también frenan (no se mandan al cliente)
 
-**P1 — Memoria de cálculo** (requisito R017) y **P2 — Esquema con dimensiones generales** (requisito R018): la planilla exige entregarlos con la cotización y todavía no existen. Se cargaron como `consulta` para que frenen la oferta; se cierran (destino `renglon`, referencia `HH`) cuando estén hechos y adjuntos.
+**P1 — Memoria de cálculo** (requisito R017) y **P2 — Esquema con dimensiones generales** (requisito R018): la planilla exige entregarlos con la cotización y todavía no existen. Están cargados con destino `pendiente_itt` (frenan la oferta); se cierran (destino `renglon`, referencia `HH`) cuando estén hechos y adjuntos.

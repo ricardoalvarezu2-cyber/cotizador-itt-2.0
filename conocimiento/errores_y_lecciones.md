@@ -279,3 +279,17 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 - Corrección: frenos nuevos `computo`, `sin_precio`, `pendientes_oferta`; atributos del cliente en `verificar_computo.py` (lo que ITT completa va con nota); lectores distintos; referencias de requisitos validadas contra el cómputo y la oferta; vencidas para listas (180 días), fechas futuras y sin fecha; justificaciones de 20 letras o más; la página con los mismos frenos (comparada con Python en cada cotización); matriz de la CAPEX completada (17 requisitos, 3 consultas abiertas). 33 siembras en `test_errores_sembrados.py`.
 - Lección: una siembra tiene que meter el error donde se comete (la lista), no en un lugar que igual lo detecta por otro motivo; si no, la prueba da OK sin probar nada.
 
+
+## 30-10-2026 — Revisión completa de Camuzzi 001, 002 y 003 (tres revisores y tres auditores independientes)
+- Detalle de cada error en la bitácora de cada cotización ("Errores encontrados en la revisión del 30-10-2026"). Los que se repiten en las tres:
+  - `armar_json.py` regeneraba `cotizacion.json` sin las correcciones de las auditorías de compatibilidad (estaban solo en el JSON): correrlo de nuevo las deshacía. Ahora todo está en el script y dos corridas dan el mismo archivo.
+  - Marcas fuera del listado de Camuzzi SCE-IN-501-0015 (ABB, Megatap, Taval, TDW, Delgado en juntas) usadas como precio sin decirlo; el listado tiene celdas combinadas: bridas solo Futura/Francovigh, accesorios para soldar solo Curvo Sold.
+  - Soldaduras estimadas por regla en vez de contadas en el dibujo (faltaba una junta de 6" en el 002); un manómetro dibujado en el plano excluido como "no figura en el plano"; prueba de fugas, PH y pintura del filtro y del skid subestimadas o en 0.
+  - Plazos sin sustento o con un proveedor fuera del listado (Megatap 110 d contra Futura 120 d); el separador pedía la tapa antes de la aprobación de planos.
+  - La oferta prometía renglones en 0 (sensores, tubing, purgas, visores, tratamiento térmico) y garantía menor que la del pliego (18 meses desde la entrega).
+  - Revisión del plano mal citada (rev A, no rev 0).
+  - Separador: fabricación con tarifa de recipientes de pared fina (≈10 mm) para 57 mm; tapa escalada con diámetro interior contra una referencia por exterior; kg de virola con diámetro exterior; juntas #300 en un equipo #600; justificación contra TAVAL/37 con datos falsos; fundamento del diseño a 102 bar mal escrito ("1,3 × MAWP" es un mínimo).
+- Errores de herramientas: la pintura de una virola cargada en kg daba 38.852 m² (tomaba el DI como largo y los kg como piezas; `precotizar.largo_virola`, prueba en `test_precotizar.py`); un renglón en 0 con motivo "pedir cotización" levantaba el freno `sin_precio` (prueba en `test_errores_sembrados.py`); faltaba el destino `pendiente_itt` (memoria, esquema).
+- Error de proceso: los agentes en paralelo compartían la carpeta temporal y un script con el mismo nombre escribió la matriz de requisitos de otra cotización (se detectó y se rehízo). Regla: cada agente usa una subcarpeta propia del scratchpad.
+- Pendiente conocido: `compatibilidad.py` lee "ABAC VA 350" (modelo) como material A350 LF2.
+- Lección: una revisión "completa" hecha por un solo agente dejó 5 a 13 hallazgos por cotización; la auditoría independiente contra el plano y los originales es la que encuentra lo que el revisor da por bueno.

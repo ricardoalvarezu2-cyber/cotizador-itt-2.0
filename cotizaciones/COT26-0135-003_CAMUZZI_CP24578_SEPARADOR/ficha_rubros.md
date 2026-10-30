@@ -6,35 +6,36 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 ## 1. MO de armado y soldadura del piping
 
 - Juntas a tope (BW) de taller: **15** · juntas SW, cuplas y olets: **0** · extremos para soldar en campo: 0
-- Pulgadas equivalentes de soldadura: **139,06**
+- Pulgadas equivalentes de soldadura: **141,36**
 - kg de piping (caños, bridas, accesorios y válvulas con tabla): **506 kg** · bridas: 23
-- Diámetros soldados a tope: 55", 50,4", 10", 6", 2", 1"
-- Sin peso (no suman kg): 1 Chapa para virola Ø55" (DI 1.280 mm) × 3; 2 Cabezal semielíptico 2:1 Ø55" × 2 1/4" (; 4 Placa portaelementos Ø1,28 m × 1 5/8" co; 14c Válvula tapón lubricado 1" #600 de sacri; 16 Purga automática 1" #600 bridada: válvul; 16b Interruptor de nivel a flotante (acciona; 21 Internos: caja de chicanas de doble bols; 21b Conector recto doble virola OD × NPT 1/2; 21c Conector recto doble virola OD × NPT 1/4; 21d Tubing de acero inoxidable 1/4" × 0,89 m; 23b Piso de rejilla antideslizante tipo Tech; 24 Pollera / patas de apoyo (450 kg); 25 Placa de identificación de acero inoxida
+- Diámetros soldados a tope: 55", 10", 6", 2", 1"
+- Sin peso (no suman kg): 1 Chapa para virola Ø55" (DI 1.280 mm) × 3; 2 Cabezal semielíptico 2:1 Ø55" × 2 1/4" (; 4 Placa portaelementos Ø1,28 m × 1 5/8" co; 14c Válvula tapón lubricado 1" #600 de sacri; 16 Purga automática 1" #600 bridada: válvul; 16b Interruptor de nivel a flotante (acciona; 21 Internos: caja de chicanas de doble bols; 21b Conector recto doble virola OD × NPT 1/2; 21c Conector recto doble virola OD × NPT 1/4; 21d Tubing de acero inoxidable 1/4" × 0,89 m; 22c Espárragos totalmente roscados ASTM A193; 23b Piso de rejilla antideslizante tipo Tech; 24 Pollera / patas de apoyo (450 kg); 25 Placa de identificación de acero inoxida
 - ⚠ pos 1: cantidad en kg con extremos BW: no se cuentan juntas (no son piezas); contar sus soldaduras a mano
 - ⚠ pos 23: cantidad en kg con extremos —: no se cuentan juntas (no son piezas); contar sus soldaduras a mano
 - ⚠ pos 23b: cantidad en m2 con extremos —: no se cuentan juntas (no son piezas); contar sus soldaduras a mano
 - ⚠ pos 24: cantidad en kg con extremos —: no se cuentan juntas (no son piezas); contar sus soldaduras a mano
-- **Costo por antecedentes.** Por antecedentes: USD 49.425,83 (2 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 355,42/pulgada eq. · USD 97,76/kg de piping · USD 3.295,06/junta a tope
+- **Costo por antecedentes.** Por antecedentes: USD 48.141,00 (3 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 340,55/pulgada eq. · USD 95,22/kg de piping · USD 3.209,40/junta a tope
 
 ## 2. MO de fabricación de la estructura
 
 - kg de estructura: **1.300 kg** · m²: 52,50
-- **Costo por antecedentes.** Por antecedentes: USD 0,00 (0 renglón/es, con ajuste por inflación).
+- **Costo por antecedentes.** Por antecedentes: USD 17.342,89 (1 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 13,34/kg
 
 ## 3. Granallado y pintura
 
-- m² de piping: **38.862,31** (caños y niples 1,60; bridas, accesorios y válvulas por largo equivalente) · m² de estructura: **52,50**
-- m² total: **38.914,81** (sin overspray) · esquema: según pliego
-- **Costo por antecedentes.** Por antecedentes: USD 1.900,00 (1 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 0,05/m²
+- m² de piping: **25,53** (caños y niples 1,60; bridas, accesorios y válvulas por largo equivalente) · m² de estructura: **52,50**
+- m² total: **78,03** (sin overspray) · esquema: según pliego
+- **Costo por antecedentes.** Por antecedentes: USD 2.900,00 (1 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 37,17/m²
 
 ## 4. Radiografía y END
 
 - Juntas a tope: **15** · RX 0% → placas chicas **0**, grandes **0**
 - Juntas SW, cuplas y olets (LP donde no se puede radiografiar): **0**
-- **Costo por antecedentes.** Por antecedentes: USD 1.881,28 (1 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 125,42/junta a tope
+- **Costo por antecedentes.** Por antecedentes: USD 3.164,52 (2 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 210,97/junta a tope
 
 ## 5. Procedimientos
 
