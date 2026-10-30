@@ -2,7 +2,7 @@
 
 **Leer al empezar cada chat.** Es la memoria del proyecto entre sesiones: qué está hecho, qué se decidió, qué falta.
 
-**Objetivo: construir el cotizador automático.** Las cotizaciones (por ahora la CAPEX) son casos de prueba para armar y validar el proceso; sus pendientes no son pendientes del proyecto. Actualizado al 29-10-2026.
+**Objetivo: construir el cotizador automático.** Las cotizaciones (por ahora la CAPEX) son casos de prueba para armar y validar el proceso; sus pendientes no son pendientes del proyecto. Actualizado al 30-10-2026.
 
 ## 1. Qué hay hoy
 
@@ -13,6 +13,11 @@
 | Índice de proyectos 2025–2026 y buscador de antecedentes | Vigente (163 proyectos con ficha + 145 carpetas sin ficha en `indice_historico.csv`). **Criterio nuevo 29-10-2026, igual para todas las familias:** subtipo de equipo (42 subtipos), sinónimos, Ø del cuerpo en recipientes, dato faltante sin castigo, carpetas anteriores cuando hay menos de 5 del subtipo; página igual a Python | `comercial/indice_proyectos.csv`, `herramientas/buscar_antecedentes.py`, `test_antecedentes.py` |
 | Catálogo de materiales con marca, unidad, IVA y alertas | Vigente: 4.549 materiales (1.385 con precio ESTIMADO del cepo; 130 sin precio); incluye listas de Ventas (Renard 05-2025, Cintolo 29.1, Provemet) y Lista 30 de Taval × 0,52 | `precios/catalogo_materiales.*`, `herramientas/catalogo_materiales.py`, `buscar_material.py`, `test_catalogo.py` |
 | Lector único de números y fechas | Vigente | `herramientas/numeros.py` |
+| **Compatibilidades de la norma en el buscador de materiales** (material y grupo B16.5, cara, rosca, schedule, NACE) | Vigente desde 30-10-2026, Python y página | `herramientas/compatibilidad.py`, `tecnico/compatibilidades_LEEME.md`, `test_compatibilidad.py` |
+| **Precios cargados por el usuario** (firmes si los confirma Matías) | Vigente desde 30-10-2026 (RX por visita y por placa) | `precios/precios_usuario.csv` |
+| **Controles que solo avisan**: precio que no figura en su documento (`verificacion_origen.md`), validador de fichas, informe de cambios del buscador; `subir_a_main.py` | Vigente desde 30-10-2026 | `herramientas/verificar_origen.py`, `validar_fichas.py`, `revisar_cambio_busqueda.py`, `subir_a_main.py` |
+| Comparación con antecedentes (P8) **costo contra costo** por rubro | Vigente desde 30-10-2026 | `comparar_antecedentes.py`, `web/src/antecedentes.js` |
+| Estructura de costo de 103 equipos de 2021–2024 (solo proporciones) | Referencia | `costos/estructura_costo_historica.csv` |
 | **Precotización automática sin IA** (materiales del catálogo, soldaduras de los extremos, pintura, PH, RX) | Vigente desde 28/10/2026; caso de control CAPEX | `herramientas/precotizar.py`, `test_precotizar.py` |
 | Plazo calculado y comparación con antecedentes (los corre `armar_cotizacion.py`) | Vigente desde 28/10/2026 | `herramientas/plazo.py`, `comparar_antecedentes.py` |
 | Un comando para rearmar y otro para verificar todo | Vigente | `herramientas/actualizar_base.py`, `verificar_todo.py` (tiene que dar "TODO OK") |
@@ -149,6 +154,9 @@ Decidido (Matías, 29-10-2026): manda el repositorio; la biblioteca se alimenta 
 7. ~~Fichas con precios de proveedor cargados como ítems de ITT~~ **Corregidas el 30-10-2026** (revisión con IA contra los originales, permitida por Matías): eran 20 ítems en 8 fichas (CAMUZZI/27, APSA/9, /12 y /16, PHOENIX/2, PLUSPETROL/8, TAVAL/74, TECPETROL/12), todas carpetas con solo cotizaciones de proveedores y sin oferta de ITT: `items` vacío, monto null, los precios quedan en `proveedores`. Quedan avisos menores (fichas sin fecha de oferta, 4 sin moneda) en `auditorias/2026-10-30_validacion_fichas.md`.
 5. **Planillas 2021–2024 (29-10-2026, pedido de Matías):** se leyeron las 59 carpetas con planilla de costo buscando horas y estructura. **No traen horas** (la MO es un monto global): `horas_por_equipo.csv` no cambió y los controles F01/T01 siguen en −35%. Quedó la estructura de costo de 103 equipos en `costos/estructura_costo_historica.csv` (solo proporciones, del cepo; ver su LEEME). Para las horas de recipientes, la fuente posible son planillas 2025–2026 que todavía no están en `horas_por_equipo.csv` o el detalle de montaje de cada cotización nueva.
 4. El Ø del cuerpo está en 13 de 158 fichas: completarlo al hacer o revisar fichas de recipientes.
+
+**Para decidir con Matías (30-10-2026)**
+1. Separador Camuzzi (COT26-0135-003): subir ingeniería y calidad a 250 h cada una (como Sacde/12 y TAVAL/37)? Pedir a Ledesma la cotización real con el diseño y confirmar las placas de RX con el mapa de soldaduras.
 
 **Abiertos al 29-10-2026 (para decidir con Matías)**
 1. Costos de procedimientos sin antecedente: WPS/PQR, calificación de soldadores, prueba hidráulica y pintura (hoy solo RX y LP, USD 250 cada uno).
