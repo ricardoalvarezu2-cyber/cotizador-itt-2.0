@@ -700,7 +700,7 @@ const Ficha = (() => {
     const esCanoM = r => /\bcano\b|\bcanos\b|\btubo\b/.test(norm(r.descripcion)) && norm(r.unidad).startsWith("m");
     const porMetro = filas.filter(r => esCanoM(r) && String(r.extremos).toUpperCase().includes("BW"));
     const diamCano = new Set(porMetro.flatMap(r => diams(r.diametro)));
-    const mult = porMetro.length ? 2 * AJUSTE_DIRECTAS : 1;
+    const mult = porMetro.length ? 2 * AJUSTE_DIRECTAS : 1, avisosKg = [];
     for (const r of porMetro) {
       const dn = dnDe(r.diametro), q = +r.cantidad || 0, emp = Math.max(0, Math.ceil(q / barraM(r.diametro) - 1e-9) - 1);
       if (emp && dn) {
@@ -710,6 +710,10 @@ const Ficha = (() => {
     }
     for (const r of filas) {
       if (porMetro.includes(r)) continue;
+      if (["kg", "kgs", "m2", "m²", "tn", "t"].includes(norm(r.unidad))) {  // kg o m² no son piezas (precotizar.soldaduras, 30-10-2026)
+        if (String(r.extremos || "").trim()) avisosKg.push(`pos ${r.pos}: cantidad en ${r.unidad} con extremos ${r.extremos}: no se cuentan juntas (no son piezas); contar sus soldaduras a mano`);
+        continue;
+      }
       const ext = String(r.extremos).toUpperCase().replace(/-M/g, "").replace(/-H/g, "");
       let toks = ext.split("/").map(t => t.trim()).filter(Boolean);
       const d = norm(r.descripcion);
@@ -742,7 +746,7 @@ const Ficha = (() => {
       placas[0] += bwTaller / 2 * pch; placas[1] += bwTaller / 2 * pgr;
       if (/\bvirola/.test(d) && largoM(r.descripcion)) bwEq += 2 * (q * largoM(r.descripcion) * 1000 / (Math.PI * 25.4)) * f;
     }
-    const avisos = [];
+    const avisos = [...avisosKg];
     if (extremosBw % 2 && !porMetro.length) avisos.push(`Quedan ${extremosBw} extremos BW de taller (número impar): falta marcar algún extremo de campo o una pieza`);
     if (!hayCampo && extremosBw) avisos.push("La tabla no tiene la columna extremos_campo: se supuso que TODOS los extremos BW se sueldan en taller. Confirmar en el dibujo cuáles quedan para campo");
     return { juntas_bw: Math.ceil(extremosBw / 2 - 1e-9), pulg_eq: Math.round((bwEq / 2 + juntasSw + juntasOlet) * 1000) / 1000, placas, juntas_sw_olet: nSwOlet, avisos };

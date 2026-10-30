@@ -1,8 +1,8 @@
 {
  "generada": "2026-10-30",
  "mo_piping": {
-  "juntas_bw": 6931,
-  "pulg_eq": 491458.626,
+  "juntas_bw": 15,
+  "pulg_eq": 140.362,
   "juntas_sw_olet": 0.0,
   "extremos_campo": 0.0,
   "kg_piping": 478.6,
@@ -30,7 +30,12 @@
    "14b Válvula esférica 1\" #600 RF (ET 9.2: 2 b",
    "22 Juntas espiraladas y espárragos de las c"
   ],
-  "avisos": []
+  "avisos": [
+   "pos 1: cantidad en kg con extremos BW: no se cuentan juntas (no son piezas); contar sus soldaduras a mano",
+   "pos 23: cantidad en kg con extremos —: no se cuentan juntas (no son piezas); contar sus soldaduras a mano",
+   "pos 23b: cantidad en m2 con extremos —: no se cuentan juntas (no son piezas); contar sus soldaduras a mano",
+   "pos 24: cantidad en kg con extremos —: no se cuentan juntas (no son piezas); contar sus soldaduras a mano"
+  ]
  },
  "mo_estructura": {
   "kg": 1300.0,
@@ -44,7 +49,7 @@
   "esquema": ""
  },
  "end": {
-  "juntas_bw": 6931,
+  "juntas_bw": 15,
   "rx_pct": 0,
   "placas_chicas": 0,
   "placas_grandes": 0,

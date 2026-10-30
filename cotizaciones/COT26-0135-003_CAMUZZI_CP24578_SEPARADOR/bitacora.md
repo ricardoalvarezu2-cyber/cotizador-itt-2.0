@@ -58,3 +58,20 @@ Pérdida de carga máxima 100 mbar a Qmáx y Pmín con elementos limpios (ET 9.1
 - Regla nueva de Matías (29-10-2026: similares solo de la misma serie y norma): el tapón lubricado (referencia S-3000 NPT) y los visores Riva (cotizados para 70 bar) pasan a SIN PRECIO. Precio: **USD 282.808,31 c/u, 566.824,87 los 2**.
 - Página actualizada desde el repositorio (29-10-2026, `semilla.py --previo`). La página tenía un renglón propio del 29-10 18:10, "Fabricación de la estructura del skid" 1.300 kg × 3 = 3.900 (FAB-00565), que se descartó: la fabricación del skid ya está en S02 (Ledesma, separador + skid) y se contaba dos veces.
 - 29-10-2026: la oferta titula la tabla "Lista de materiales elaborada por ITT según la ET y el esquema de Camuzzi (el cliente no entrega lista)" (`oferta.json` → `titulo_materiales`, también en la página) y ya no repite "diseño preliminar ITT" en cada renglón. Números de las descripciones en formato argentino.
+
+## 30-10-2026 · MO contra TAVAL/37 (coalescedor FC-231 YPF, cuerpo Ø32" #600, 16 elementos; planilla LM costos FC-231 REV. 0)
+Comparación por equipo, costo (sin factor). TAVAL/37 se fabricaba en ITT; acá el cuerpo y el skid los hace Ledesma.
+
+| Rubro | Este (Ø55", 2 1/4", 37 elementos) | TAVAL/37 (Ø32") |
+|---|---|---|
+| Ingeniería | 150 h · 2.250 | 250 h + ingeniería Gora · 8.735 |
+| Calidad | 120 h · 1.800 | 250 h · 3.750 |
+| Montaje propio | 160 h · 2.560 | 1.989 h · 31.824 (incluye armado de tacho, internos, conexionado y armado final: acá van en Ledesma) |
+| Soldadura cuerpo y conexiones + rolado | Ledesma 33.643 + rolado 10.939 | 71.442 (propia) |
+| RX y LP | 1.426 | 52.196 (1.504 placas) |
+| Pintura | 1.900 | 7.552 |
+| Total MO y servicios | 55.831 | 186.339 |
+
+Lectura: (1) **RX** es la diferencia más fuerte y no se explica por alcance: el 1.426 sale de 80 placas a tarifa DB NDT (8 USD la grande); para 2 1/4" (gammagrafía) y RX 100% (ET) parece bajo: pedir cotización. Ojo: la tabla de soldaduras de la planilla de TAVAL/37 viene rotulada "SEPARADOR BIFASICO" (resto de plantilla), así que sus 52.196 tampoco son un dato limpio del FC-231. (2) **Ingeniería y calidad**: los dos coalescedores de referencia (Sacde/12 y TAVAL/37) usan 250 h cada una; acá 150 y 120. La ET pide memoria de cálculo. (3) **Ledesma**: los 33.643 salen de escalar un separador horizontal de 28" (×2,2 × 1,18); el TAVAL/37 propio da 71.442 para un equipo más chico: pedir la cotización real con el diseño. (4) Montaje propio: no es comparable (acá lo hace Ledesma).
+Además: la ficha contaba 6.931 juntas a tope porque tomaba los 6.916 kg de chapa como piezas (error de `precotizar.soldaduras` / `ficha.js`, corregido: una cantidad en kg o m² no cuenta juntas y avisa). Ahora: 15 juntas.
+No se cambió ningún valor de la cotización (decide Matías).

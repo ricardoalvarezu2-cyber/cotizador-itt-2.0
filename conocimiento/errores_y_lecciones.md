@@ -213,3 +213,9 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 - Qué pasó: al consolidar las 8 fichas corregidas, `consolidar_fichas.py` reescribió `proveedores_2026.csv` y `cotizaciones_*` desde las fichas y borró filas que se habían cargado a mano (cotizaciones de Complemet y MS Juntas de TAVAL/72 y PAMPA/7). El catálogo perdió esos precios y el control SK01 se movió +3%. Se vio porque `verificar_todo.py` frenó por el control movido.
 - Corrección: se restauraron los CSV y se aplicaron a mano solo los cambios de las 8 fichas. `consolidar_fichas.py` ya no reescribe un CSV que existe: solo suma filas de carpetas nuevas y avisa qué carpetas ya estaban (sus cambios se pasan a mano). Se sumaron además las filas de YPF/28, que tenía ficha y nunca se había consolidado; el catálogo quedó idéntico.
 - Lección: un archivo que se arma desde otros y además se edita a mano tiene que poder sumarse, nunca regenerarse entero. Los controles de totales sirvieron: frenaron el cambio.
+
+## 30-10-2026 — La ficha contaba kilos de chapa como juntas a tope (COT26-0135-003)
+- Qué pasó: el renglón "chapa para virola … 6.916 kg" con extremos BW se contaba como 6.916 piezas: la ficha del separador daba 6.931 juntas a tope. Se vio al comparar la MO con TAVAL/37.
+- Corrección: `precotizar.soldaduras` y `web/src/ficha.js` no cuentan juntas en renglones en kg o m² y avisan para contarlas a mano. Ahora da 15.
+- Lección: las reglas de conteo suponen piezas; una lista armada por ITT (sin lista del cliente) puede traer chapa por kg con extremos.
+- Error mío del día: dije que el elemento coalescente de Camuzzi estaba en USD 400; ya estaba en 854. Verificar en `cotizacion.json` antes de proponer un cambio.

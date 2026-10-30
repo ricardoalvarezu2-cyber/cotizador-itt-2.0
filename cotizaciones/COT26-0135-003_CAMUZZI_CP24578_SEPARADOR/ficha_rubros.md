@@ -5,13 +5,17 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 ## 1. MO de armado y soldadura del piping
 
-- Juntas a tope (BW) de taller: **6.931** · juntas SW, cuplas y olets: **0** · extremos para soldar en campo: 0
-- Pulgadas equivalentes de soldadura: **491.458,63**
+- Juntas a tope (BW) de taller: **15** · juntas SW, cuplas y olets: **0** · extremos para soldar en campo: 0
+- Pulgadas equivalentes de soldadura: **140,36**
 - kg de piping (caños, bridas, accesorios y válvulas con tabla): **479 kg** · bridas: 23
 - Diámetros soldados a tope: 55", 53", 10", 6", 2", 1"
 - Sin peso (no suman kg): 1 Chapa para virola Ø55" (DI 1.280 mm) × 3; 2 Cabezal semielíptico 2:1 Ø55" × 2 1/4" (; 4 Placa portaelementos Ø1,28 m × 1 5/8" co; 5 Elemento coalescente 0,3 µm, 140 × 914 m; 14c Válvula tapón lubricado 1" #600 de sacri; 16 Purga automática 1" #600 bridada: válvul; 21 Internos: caja de chicanas de doble bols; 23b Piso de rejilla galvanizada en caliente ; 24 Pollera / patas de apoyo (450 kg)
+- ⚠ pos 1: cantidad en kg con extremos BW: no se cuentan juntas (no son piezas); contar sus soldaduras a mano
+- ⚠ pos 23: cantidad en kg con extremos —: no se cuentan juntas (no son piezas); contar sus soldaduras a mano
+- ⚠ pos 23b: cantidad en m2 con extremos —: no se cuentan juntas (no son piezas); contar sus soldaduras a mano
+- ⚠ pos 24: cantidad en kg con extremos —: no se cuentan juntas (no son piezas); contar sus soldaduras a mano
 - **Costo por antecedentes.** Por antecedentes: USD 34.705,73 (1 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 0,07/pulgada eq. · USD 72,52/kg de piping · USD 5,01/junta a tope
+  - Por unidad: USD 247,26/pulgada eq. · USD 72,52/kg de piping · USD 2.313,72/junta a tope
 
 ## 2. MO de fabricación de la estructura
 
@@ -27,10 +31,10 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 ## 4. Radiografía y END
 
-- Juntas a tope: **6.931** · RX 0% → placas chicas **0**, grandes **0**
+- Juntas a tope: **15** · RX 0% → placas chicas **0**, grandes **0**
 - Juntas SW, cuplas y olets (LP donde no se puede radiografiar): **0**
 - **Costo por antecedentes.** Por antecedentes: USD 1.467,20 (1 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 0,21/junta a tope
+  - Por unidad: USD 97,81/junta a tope
 
 ## 5. Procedimientos
 

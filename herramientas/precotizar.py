@@ -480,8 +480,15 @@ def soldaduras(filas, diametral=False):
             placas[0] += emp * pch
             placas[1] += emp * pgr
             detalle.append(f"pos {r['pos']}: {emp} junta(s) de empalme entre barras de {fmtg(barra_m(r['diametro']))} m ({fmtg(q)} m) × {fmtg(dn)}\" × {fmt(f, 4)}")
+    avisos_kg = []
     for r in filas:
         if r in por_metro:
+            continue
+        # una cantidad en kg o m² no son piezas (chapa de virola, 6.916 kg): no cuenta juntas (COT26-0135-003, 30-10-2026);
+        # la virola se cuenta por su largo si la descripción lo dice (regla de abajo), si no, avisa
+        if norm(r["unidad"]) in ("kg", "kgs", "m2", "m²", "tn", "t"):
+            if r["extremos"].strip():
+                avisos_kg.append(f"pos {r['pos']}: cantidad en {r['unidad']} con extremos {r['extremos']}: no se cuentan juntas (no son piezas); contar sus soldaduras a mano")
             continue
         ext = r["extremos"].upper().replace("-M", "").replace("-H", "")
         toks = [t.strip() for t in re.split(r"[/]", ext) if t.strip()]
@@ -535,7 +542,7 @@ def soldaduras(filas, diametral=False):
             detalle.append(f"pos {r['pos']}: {fmtg(n_sw * q)} junta(s) SW × {fmtg(dn)}\" × {fmt(f, 4)}")
     juntas_bw = math.ceil(extremos_bw / 2 - 1e-9)  # juntas enteras (el ajuste de uniones directas deja fracciones)
     total = bw_eq / 2 + juntas_sw + juntas_olet
-    avisos = []
+    avisos = list(avisos_kg)
     if extremos_bw % 2 and not por_metro:
         avisos.append(f"Quedan {fmtg(extremos_bw)} extremos BW de taller (número impar): falta marcar algún extremo de campo o una pieza")
     if not hay_campo and extremos_bw:
