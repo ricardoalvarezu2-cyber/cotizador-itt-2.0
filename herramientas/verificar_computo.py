@@ -47,13 +47,26 @@ def control_compatibilidad(c, plano, avisos=None):
         return []
     import json
     import buscar_material as bm
-    from compatibilidad import incompatible, regla_material, clases, dn_de, regla_conexion, conexiones
+    from compatibilidad import (incompatible, regla_material, clases, dn_de, regla_conexion, conexiones, regla_revestimiento,
+                                regla_sch_doble, prep, FAMILIAS_SCH, SCH_DOBLE)
     from precotizar import texto_busqueda
     bm.buscar("brida")
     cat = {r["codigo"]: r for r in bm._FILAS}
     por_lista = {m.group(1): r["codigo"] for r in bm._FILAS if (m := re.search(r"^Renard \(cód\. (\d+)\)", r.get("proveedor", "")))}
     por_pos = {p["pos"].strip(): p for p in plano}
     items = json.load(open(ruta, encoding="utf-8"))["items"]
+    # códigos de las listas de Renard que no están en el catálogo (tercera auditoría: CAPEX pos 8 y 17)
+    lista_renard = {}
+    for lr in sorted((Path(__file__).resolve().parent.parent / "conocimiento" / "precios").glob("lista_renar_*.csv")):
+        lista_renard.update({x["codigo"]: x["producto"] for x in csv.DictReader(open(lr, encoding="utf-8"))})
+    # desvíos declarados en la oferta, por posición ("Accesorios forjados (pos. 1, 8, 10): serie 3000…")
+    desvios = {}
+    if (c / "oferta.json").exists():
+        of = json.load(open(c / "oferta.json", encoding="utf-8"))
+        for x in (of.get("aclaraciones_y_desvios") or {}).get("items", []):
+            for grupo in re.findall(r"(?i)\bpos(?:ición|iciones|\.)?\s*((?:[\w]+(?:\s*(?:,|y)\s*)?)+)", str(x)):
+                for n in re.findall(r"\b\d+[a-z]?\b", grupo):
+                    desvios.setdefault(n, str(x))
     cod_de = lambda f: f.get("codigo") or (re.search(r"\b[A-Z]{3}-\d{5}\b", str(f.get("proveedor") or "")) or [None])[0]
     cod_pos = {str(it.get("pos", "")).strip(): cod_de(it["fuentes"][0]) for it in items if it.get("fuentes")}
     out = []
@@ -89,12 +102,10 @@ def control_compatibilidad(c, plano, avisos=None):
         documentado = f.get("coincide") == "similar" and str(f.get("diferencia") or "").strip()
 
         def serie_mal(serie_cand):
-            """Otra serie (rating) no es similar (Matías, 29-10-2026). Se admite solo una serie MAYOR escrita como
-            diferencia en la fuente, y nunca en juntas (la serie es la medida de la junta)."""
+            """Otra serie (rating) no es similar (Matías, 29-10-2026). Una serie mayor solo pasa como desvío declarado en
+            la oferta (abajo), nunca escrita solo en la fuente: el cliente tiene que enterarse (tercera auditoría)."""
             sp, sc = re.sub(r"\D", "", str(at.get("serie") or "")), re.sub(r"\D", "", str(serie_cand or ""))
             if not sp or not sc or sp == sc:
-                return ""
-            if documentado and fam != "JUN" and int(sc) > int(sp) and sc in str(f.get("diferencia")):
                 return ""
             return f"serie {sc} por {sp} (otro rating)"
         if cod in cat:
@@ -112,6 +123,9 @@ def control_compatibilidad(c, plano, avisos=None):
             # fuente sin pieza del catálogo (planilla, cotización): se compara el material con el texto de la fuente
             # (sin lo que la fuente dice del pedido: "el plano pide NPT", "(pedido #150)"); también conexión y serie
             desc = f"{f.get('proveedor', '')} {f.get('diferencia', '')}"
+            mr = re.search(r"(?i)\b(renard|renar)\b.*?c[óo]d\.? ?(\d+)", str(f.get("proveedor") or ""))
+            if mr and mr.group(2) in lista_renard:  # la descripción de la lista, no la nota de quien cargó
+                desc = f"{lista_renard[mr.group(2)]} {f.get('diferencia', '')}"
             limpio = re.sub(r"(?i)\(?\b(?:el plano pide|plano pide|pedid[oa]s?|se pide|pide)\b[^)\];]*\)?", " ", desc)
             motivo = ""
             if clases(texto):
@@ -121,14 +135,33 @@ def control_compatibilidad(c, plano, avisos=None):
                     avisos.append(f"Pos {pos}: la fuente ({desc[:50]}) no dice el material: verificar en el original que sea el que pide el plano")
             if not motivo:
                 motivo = regla_conexion(conexiones(at.get("extremos", ""), at.get("cara", "")), conexiones(limpio))
+            # revestimiento y schedule por extremo: solo si la fuente los menciona (una planilla sin descripción no los dice:
+            # aviso, como con el material)
+            if not motivo and re.search(r"(?i)revest|tricapa|polipropileno|polietileno|\bfbe\b|epoxi", limpio):
+                motivo = regla_revestimiento(prep(texto), prep(limpio))
+            if not motivo and fam in FAMILIAS_SCH:
+                if re.search(r"(?i)\bsch|\bstd\b|\bxs\b", limpio):
+                    motivo = regla_sch_doble(bm.norm(texto), bm.norm(limpio), at.get("diametro"))
+                elif avisos is not None and re.search(SCH_DOBLE, bm.norm(texto)):
+                    avisos.append(f"Pos {pos}: la fuente ({desc[:50]}) no dice el schedule de cada extremo: verificarlo en el original")
             if not motivo:
-                ms = re.search(r"#\s?(\d{3,4})\b|\b(\d{3,4})\s?(?:#|lbs?\b)|\bserie\s?(\d{3,4})\b|\bs(\d{3,4})\b|\bwog\s?(\d{3,4})\b", limpio.lower())
+                ms = re.search(r"#\s?(\d{3,4})\b|\b(\d{3,4})\s?(?:#|lbs?\b)|\bserie\s?(\d{3,4})\b|\bs(\d{3,4})\b|\bwog\s?(\d{3,4})\b"
+                               r"|\b(?:clase|class|cl\.?|ansi)\s?(\d{3,4})\b", limpio.lower())
                 motivo = serie_mal(next(g for g in ms.groups() if g)) if ms else ""
-        if motivo and f.get("tipo") == "est":
-            # un ESTIMADO armado sobre otra pieza (ej.: "+30% por asiento metálico") ya dice que no es la pieza: AVISO para
-            # confirmar el ajuste; sigue marcado como estimado en el costo y en la oferta
+        madre_n = madre.group(0) if madre else pos
+        if motivo and (pos in desvios or madre_n in desvios):
+            # la oferta declara el desvío en esa posición (el cliente se entera): AVISO; si el desvío sigue entre
+            # [corchetes] ("a confirmar"), hay que resolverlo antes de enviar (tercera auditoría 30-10-2026)
+            d = desvios.get(pos) or desvios[madre_n]
             if avisos is not None:
-                avisos.append(f"Pos {pos}: ESTIMADO sobre una pieza que la norma no admite como similar ({motivo[:90]}): confirmar el ajuste o pedir cotización")
+                avisos.append(f"Pos {pos}: desvío declarado en la oferta ({motivo[:80]})" +
+                              (": SIGUE A CONFIRMAR en la oferta, resolverlo antes de enviar" if "[" in d else ""))
+            continue
+        if motivo and f.get("tipo") == "est":
+            # un ESTIMADO armado sobre otra pieza no se salva por ser estimado: sin desvío declarado en la oferta la oferta
+            # afirmaría cumplimiento (tercera auditoría 30-10-2026; lección 12)
+            out.append(f"Pos {pos}: ESTIMADO sobre una pieza que la norma no admite ({motivo[:90]}) y la oferta no declara el "
+                       "desvío en esa posición: declararlo en aclaraciones y desvíos o pedir cotización")
             continue
         if motivo:
             out.append(f"Pos {pos}: la referencia {cod or ''} ({desc[:45]}) no sirve según la norma: {motivo}. "

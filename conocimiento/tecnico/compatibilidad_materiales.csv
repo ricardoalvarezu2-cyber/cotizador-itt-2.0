@@ -23,7 +23,7 @@ patron,material,clase,grupo_b16_5,forma,nota
 "\ba ?106\b.*\bgr(?:ado)?\.? ?c\b",A106 C,cano_a106c,,caño,"70/40 ksi: A106 B no lo reemplaza"
 "\ba ?106\b",A106 B,cano_a106,,caño,"Caño sin costura de acero al carbono"
 "\ba ?53a\b|\ba ?53 ?gr?(?:ado)?\.? ?a\b",A53 Gr A,cano_a53a,,caño,"Grado A (48/30 ksi): no reemplaza a A53 B"
-"\ba ?53 ?(?:gr?(?:ado)?\.? ?)?b\b",A53 B,cano_a53,,caño,"Con o sin costura; B31.3: E = 0,85 (ERW), 0,60 (tipo F). Lo reemplaza A106 B, no al revés"
+"\ba ?53 ?(?:tipo ?[efs] ?)?(?:gr?(?:ado)?\.? ?)?b\b",A53 B,cano_a53,,caño,"Con o sin costura; B31.3: E = 0,85 (ERW), 0,60 (tipo F). Lo reemplaza A106 B, no al revés"
 "\ba ?53\b",A53 sin grado,cano_a53_sin_grado,,caño,"Sin grado no se sabe si es B: no reemplaza a A53 B (auditoría 30-10-2026)"
 "\bapi ?5l\b.*\bx[- ]?\d{2}\b|\bx-?(42|46|52|56|60|65|70)\b",API 5L X,carbono_alta_resistencia,,caño,"Grado X (fluencia mínima en ksi): el grado tiene que coincidir"
 "\bapi ?5l\b",API 5L B,cano_api5l_b,,caño,"Puede tener costura; PSL2 exige Charpy. Lo reemplaza A106 B (PSL1)"

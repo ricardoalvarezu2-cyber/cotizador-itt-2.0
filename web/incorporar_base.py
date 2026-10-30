@@ -31,6 +31,18 @@ def escribir(carpeta, cot, oferta):
     (carpeta / "oferta.json").write_text(json.dumps(oferta or {}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
 
+# lo que semilla.py agrega para la página desde otros archivos del repositorio (plano, transcripción, ficha): no se
+# vuelve a escribir en cotizacion.json (tercera auditoría 30-10-2026: dejaba copias que después quedaban viejas)
+DERIVADOS_COT = ("transcripcion", "kg_compras", "ficha", "huella_repo")
+DERIVADOS_ITEM = ("plano", "fam", "at")
+
+
+def sin_derivados(cot):
+    cot = {k: v for k, v in cot.items() if k not in DERIVADOS_COT}
+    cot["items"] = [{k: v for k, v in it.items() if k not in DERIVADOS_ITEM} for it in cot.get("items", [])]
+    return cot
+
+
 def indice():
     filas = []
     for m in sorted(BIB.glob("*/incorporacion.json")):
@@ -78,7 +90,7 @@ def main(archivo, forzar=False):
     if repo:
         # Lo que la página no guarda (por ejemplo la firma de la oferta, que la página toma de "firmantes") se conserva del repositorio
         viejo = lambda n: json.loads((repo[0] / n).read_text(encoding="utf-8")) if (repo[0] / n).exists() else {}
-        escribir(repo[0], {**viejo("cotizacion.json"), **cot}, {**viejo("oferta.json"), **(oferta or {})})
+        escribir(repo[0], sin_derivados({**viejo("cotizacion.json"), **cot}), {**viejo("oferta.json"), **(oferta or {})})
         r = subprocess.run([sys.executable, str(RAIZ / "herramientas" / "armar_cotizacion.py"), str(repo[0])], capture_output=True, text=True)
         linea = next((l for l in r.stdout.splitlines() if l.startswith("Planilla:")), "")
         print(f"Repositorio: {repo[0].relative_to(RAIZ)} reemplazada con la versión de la página y rearmada · {linea or 'ver salida de armar_cotizacion'}")

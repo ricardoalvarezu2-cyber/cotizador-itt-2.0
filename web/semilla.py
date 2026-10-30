@@ -55,11 +55,11 @@ def conservar(cot, of, previo):
 
 
 def huella(carpeta):
-    """Huella de la versión del repositorio: cotizacion.json y oferta.json (segunda auditoría 30-10-2026: solo
-    cotizacion.json dejaba pisar sin aviso una corrección de la oferta)."""
+    """Huella de la versión del repositorio: cotizacion.json, oferta.json y la lista del plano (auditorías 30-10-2026: con
+    solo cotizacion.json se pisaba sin aviso una corrección de la oferta o del plano)."""
     import hashlib
     h = hashlib.sha256()
-    for n in ("cotizacion.json", "oferta.json"):
+    for n in ("cotizacion.json", "oferta.json", "pedido/lista_materiales_plano.csv"):
         f = Path(carpeta) / n
         h.update(f.read_bytes() if f.exists() else b"")
     return h.hexdigest()[:16]

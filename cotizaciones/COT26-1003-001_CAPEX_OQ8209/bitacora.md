@@ -106,3 +106,7 @@ Lo único que se edita es `cotizacion.json` (y `oferta.json` para los textos de 
 - Pos 23 (cupla 1/2" A234 WPB 80/2000 NPT/BW): la referencia era A105 NPT/NPT serie 3000, sin documentar → SIN PRECIO, pedir cotización.
 - Pos 2, 5 y 7 quedan como ESTIMADOS (ya lo eran) armados sobre piezas que no cumplen el plano (pos 7: trim 13Cr, no AISI 316): pedir cotización con la especificación del plano.
 - Unitario USD 7.324,57 (antes 7.366,12). Borrador.
+
+## 30-10-2026 · Tercera auditoría independiente
+- Los desvíos de la oferta (serie 3000, reducción 80×80, revestimiento, válvulas) son ahora lo que permite usar una pieza distinta: P9 los muestra como aviso y marca los que siguen "a confirmar" (pos 2, 5, 7, 14, 21). Hay que resolverlos antes de enviar.
+- El buscador ya no propone para la pos 14 un caño sin revestimiento ni para la pos 16 una reducción XS×XS (el plano pide 80×40). La cotización no cambia.

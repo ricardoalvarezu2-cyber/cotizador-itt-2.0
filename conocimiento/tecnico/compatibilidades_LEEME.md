@@ -80,3 +80,15 @@ Para que haya menos SIN PRECIO hay que cargar el material que falta en el catál
 - **P9:** filas b/c sin material propio se comparan con la fila madre; "Renard · cód. N" con su pieza del catálogo;
   fuentes sin código también por conexión y serie (sin lo que la fuente dice del pedido: "el plano pide…", "(pedido …)");
   una serie mayor solo si está escrita en la fuente, nunca en juntas; un ESTIMADO sobre otra pieza es AVISO.
+
+## Tercera auditoría independiente (30-10-2026)
+- Grado X después de un número ("sch 40 X52", "e=19,05 X65") se lee como grado si el texto nombra API 5L o PSL.
+- "Cuerpo bipartido/tripartito" (sin material) no es un cuerpo explícito; los internos cortan en "cuerpo"; si el pedido
+  nombra metal solo en los internos, no se compara.
+- Schedule por extremo ("80x40", "STD x XS", "SCH XS x SCH 60"): el candidato tiene que decir los dos y coincidir.
+- Revestimiento: PP reemplaza a PE, no al revés; sin revestimiento no reemplaza a uno revestido.
+- P9: una pieza que la norma no admite solo pasa como **desvío declarado en la oferta** en esa posición (aviso; si sigue
+  entre corchetes, "a confirmar"). Sin desvío declarado es ERROR, también si el precio es estimado.
+- **Para sumar o cambiar reglas:** correr `python herramientas/revisar_pares_compatibilidad.py --ref main` y revisar
+  cada NUEVO ACEPTADO (¿la norma permite ese reemplazo?); `verificar_todo.py` falla si quedan sin revisar
+  (`--aceptar` después de revisarlos). Además `revisar_cambio_busqueda.py --ref main` para los resultados.

@@ -109,10 +109,23 @@ POR_TEXTO = [  # (familia, pedido, candidato, ¿compatible?)
     ("CHA", "Chapa SA-516-70", "Chapa SA-516-60", NO),
     ("CHA", "Chapa SA-516 GR°70", "Chapa SA-516 GR°60", NO),
     ("CHA", "Chapa SA-516-60", "Chapa A516 Gr 70", SI),
+    # tercera auditoría (30-10-2026)
+    ("CAN", 'Caño API 5L PSL2 12" sch 40 X52', "Caño API 5L B", NO),
+    ("CAN", 'Caño 36" API 5L e=19,05 X65', "Caño API 5L B", NO),
+    ("VAL", 'Válvula esférica cuerpo bipartido, bola flotante, Ø 2", #150, ASTM A351 CF8M, RF', "ESF 2 150 RF WCB INT 316", NO),
+    ("VAL", "Válvula esférica cuerpo tripartito, AISI 316", "ESF 2 150 RF WCB INT 316", NO),
+    ("VAL", "Válvula esférica bola AISI 316", "A216 WCB bola AISI 316", NO),
+    ("VAL", "Válvula mariposa disco AISI 316 cuerpo WCB", "cuerpo AISI 316 disco WCB", NO),
+    ("CAN", "Caño A53 Tipo E Gr B", "Caño A53 Tipo E Gr B", SI),
+    ("CAN", "caño A106 no galvanizado", "caño A106", SI),
 ]
 for fam, a, b, ok in POR_TEXTO:
     m = regla_material(fam, a, b, b)
     chk(f"texto {fam}: {a} ← {b}", (m == "") == ok, m)
+chk("reducción 80x40 contra STD x STD", incompatible("ABW", {"diametro": '2 1/2"x2"'}, {}, 'Reducción concéntrica 2 1/2"x2" 80x40 A234', "reduccion conc std x std A234") != "")
+chk("reducción 80x40 contra XS x STD", incompatible("ABW", {"diametro": '2 1/2"x2"'}, {}, "Reducción 80x40 A234", "reduccion XS x STD A234") == "")
+chk("revestimiento PE por PP", incompatible("CAN", {}, {}, "caño revestido polipropileno", "caño tricapa de polietileno") != "")
+chk("revestimiento PP por PE", incompatible("CAN", {}, {}, "caño tricapa polietileno", "caño tricapa polipropileno") == "")
 for t, esperado in [("largo 4,8m", {}), ("L=8m", {}), ("espárrago 5/8 x70 B7", {"bulon_b7"}), ("bolsa 45 x60", {}),
                     ("caño A53 a 6 m", {"cano_a53_sin_grado"}), ("dsaw sch20 x65", {"carbono_alta_resistencia"}),
                     ("tuerca A194 8M", {"bulon_inox"}), ("SA-516-60", {"carbono_516_60"})]:
@@ -139,6 +152,9 @@ for f in sorted((RAIZ / "cotizaciones").glob("*/pedido/lista_materiales_plano.cs
 for fam, a, b, _ in POR_TEXTO:  # los casos de texto también en la página
     casos.append({"fam": fam, "ped": {"material": a}, "texto": a, "cand": {"material": b}, "d": b,
                   "py": incompatible(fam, {"material": a}, {"material": b}, a, b) != ""})
+for fam, d, a, b in [("ABW", '2 1/2"x2"', 'Reducción 2 1/2"x2" 80x40 A234', "reduccion std x std A234"), ("ABW", '2 1/2"x2"', "Reducción 80x40 A234", "reduccion XS x STD A234"),
+                     ("CAN", "", "caño revestido polipropileno A106", "caño tricapa de polietileno A106"), ("CAN", "", "caño A106 no galvanizado", "caño A106")]:
+    casos.append({"fam": fam, "ped": {"diametro": d}, "texto": a, "cand": {}, "d": b, "py": incompatible(fam, {"diametro": d}, {}, a, b) != ""})
 js = r"""const fs=require('fs');const B=require('./web/src/busqueda.js');const D=JSON.parse(fs.readFileSync('web/datos.json','utf8'));
 const cs=JSON.parse(fs.readFileSync(0,'utf8'));console.log(JSON.stringify(cs.map(c=>B.incompatible(D.compat,c.fam,c.ped,c.cand,c.texto,c.d)!=="")));"""
 r = subprocess.run(["node", "-e", js], cwd=RAIZ, input=json.dumps(casos), capture_output=True, text=True)

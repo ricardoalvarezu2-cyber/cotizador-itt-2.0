@@ -56,3 +56,8 @@ Pos 14 (cupla c/ válvula esférica, A-106): SIN PRECIO (la referencia A105 es o
 - Pos 23b: tenía otra pieza (CAN-02603, sin material) que la pos 23 → la misma CAN-01512 A106 Gr B XS de la pos 23, USD 90,70.
 - Pos 5c: el precio de USD 10 pasa a estimado (la planilla pone el mismo valor a todos los tamaños).
 - Unitario USD 76.781,76; total USD 77.385,88. Borrador, sin revisar.
+
+## 30-10-2026 · Tercera auditoría independiente
+- Pos 1 y 2 (válvulas monitora y reguladora 3" #150): la oferta de Tormene es **#300** (y la monitora con OPSO). Otra serie no es similar → SIN PRECIO hasta tener la cotización #150. El pendiente crítico ya estaba anotado; el control nuevo de serie lo frena.
+- Pos 6c/7c: USD 10 de la planilla Techint/12 (columnas ambiguas) pasa a estimado.
+- Unitario USD 31.965,44 (antes 76.781,76: faltan las dos reguladoras). Borrador, sin revisar.

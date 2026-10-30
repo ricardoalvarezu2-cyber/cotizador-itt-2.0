@@ -106,6 +106,9 @@ if r.returncode:
 # revisa renglón por renglón y se acepta a propósito); 2) ninguna cotización del repositorio usa una referencia que la
 # norma no permite (el mismo control que verificar_computo.py hace en P9).
 correr("resultados del buscador iguales a los aceptados (revisar_cambio_busqueda.py --control)", [str(H / "revisar_cambio_busqueda.py"), "--control"])
+# tercera auditoría (30-10-2026): un cambio de reglas que amplía lo que se lee puede ACEPTAR reemplazos prohibidos
+correr("pares nuevos aceptados revisados (revisar_pares_compatibilidad.py --control --ref HEAD)",
+       [str(H / "revisar_pares_compatibilidad.py"), "--control", "--ref", "HEAD"])
 import verificar_computo  # noqa: E402
 incomp = []
 for carpeta in sorted((RAIZ / "cotizaciones").iterdir()):

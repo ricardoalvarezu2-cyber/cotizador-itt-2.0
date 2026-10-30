@@ -194,13 +194,22 @@
    "especificacion": "Plano: 3\" · 150 · S/ Esp. CAMUZZI · RF · Nota ITT: SCE-IN-501-0015",
    "fuentes": [
     {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-30",
+     "coincide": "sin_ref",
+     "diferencia": "la oferta de Tormene es #300 con OPSO y el plano pide #150: pedir cotización #150 sin OPSO (Tormene u otra marca del listado)"
+    },
+    {
      "tipo": "cot",
      "precio": 9545.0,
      "proveedor": "Tormene Americana · oferta TA7785A pos. 1 (TA956-FC+SSV monitor)",
      "origen": "fuentes_originales/ofertas_texto/ALONZO RED/2 - ERP B° Pilara/5.Proveedores 3ros/OFERTA TA7785A-ITT-REG TA956-NATURGY.pdf.txt",
      "fecha": "2026-06-16",
-     "coincide": "similar",
-     "diferencia": "DN3\" #300 (pedido #150), con bloqueo OPSO e indicador de posición; condiciones P1 25/7 bar, P2 1,5 bar, Q 8.000 Sm3/h (acá 15-10 / 4 bar, 6.000 Sm3/h). Pedir cotización para #150 y estas condiciones"
+     "coincide": "descartada",
+     "diferencia": "descartada (tercera auditoría 30-10-2026): otra serie (#300 por #150) · antes: DN3\" #300 (pedido #150), con bloqueo OPSO e indicador de posición; condiciones P1 25/7 bar, P2 1,5 bar, Q 8.000 Sm3/h (acá 15-10 / 4 bar, 6.000 Sm3/h). Pedir cotización para #150 y estas condiciones"
     }
    ]
   },
@@ -214,13 +223,22 @@
    "especificacion": "Plano: 3\" · 150 · S/ Esp. CAMUZZI · RF · Nota ITT: SCE-IN-501-0015",
    "fuentes": [
     {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-30",
+     "coincide": "sin_ref",
+     "diferencia": "la oferta de Tormene es #300 y el plano pide #150: pedir cotización #150"
+    },
+    {
      "tipo": "cot",
      "precio": 6073.0,
      "proveedor": "Tormene Americana · oferta TA7785A pos. 2 (TA956-DFO activo silenciado)",
      "origen": "fuentes_originales/ofertas_texto/ALONZO RED/2 - ERP B° Pilara/5.Proveedores 3ros/OFERTA TA7785A-ITT-REG TA956-NATURGY.pdf.txt",
      "fecha": "2026-06-16",
-     "coincide": "similar",
-     "diferencia": "DN3\" #300 (pedido #150); silenciador interno. Pedir cotización para #150 y estas condiciones"
+     "coincide": "descartada",
+     "diferencia": "descartada (tercera auditoría 30-10-2026): otra serie (#300 por #150) · antes: DN3\" #300 (pedido #150); silenciador interno. Pedir cotización para #150 y estas condiciones"
     },
     {
      "tipo": "ant",
@@ -403,13 +421,13 @@
    "unidad": "un",
    "fuentes": [
     {
-     "tipo": "ant",
+     "tipo": "est",
      "precio": 10.0,
      "proveedor": "Planilla Techint/12 (JUN-02733: 3/4\" L 120 mm con 2 tuercas zincado)",
      "origen": "fuentes_originales/ofertas_texto/TECHINT/12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado",
      "fecha": "2025-12-23",
      "coincide": "similar",
-     "diferencia": "L 120 mm"
+     "diferencia": "L 120 mm · estimado: la planilla Techint/12 tiene columnas ambiguas (tercera auditoría 30-10-2026)"
     }
    ]
   },
@@ -472,13 +490,13 @@
    "unidad": "un",
    "fuentes": [
     {
-     "tipo": "ant",
+     "tipo": "est",
      "precio": 10.0,
      "proveedor": "Planilla Techint/12 (JUN-02733)",
      "origen": "fuentes_originales/ofertas_texto/TECHINT/12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado",
      "fecha": "2025-12-23",
      "coincide": "similar",
-     "diferencia": "L 120 mm"
+     "diferencia": "L 120 mm · estimado: la planilla Techint/12 tiene columnas ambiguas (tercera auditoría 30-10-2026)"
     }
    ]
   },

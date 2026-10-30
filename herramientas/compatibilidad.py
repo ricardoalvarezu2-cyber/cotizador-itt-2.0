@@ -93,10 +93,13 @@ GRADOS = r"\b(gr|g)\.? ?grados ?"
 # válvulas: internos (esfera, vástago, asientos, clapeta, resorte…) y cuerpo se leen por separado ("retención a clapeta",
 # "válvula de esfera" son el tipo, no internos) (auditoría 30-10-2026:
 # "cuerpo AISI 316" aceptaba "WCB INT 316" porque el texto nombraba 316)
-INTERNOS = r"(?<!\ba )(?<!\bde )\b(?:int(?:ernos?)?|interior(?:es)?|trim|esfera|bola|vastago|eje|asientos?|asto|clapeta|resortes?|obturador|disco)\b[^,;|()]*"
+INTERNOS = r"(?<!\ba )(?<!\bde )\b(?:int(?:ernos?)?|interior(?:es)?|trim|esfera|bola|vastago|eje|asientos?|asto|clapeta|resortes?|obturador|disco)\b(?:(?!\bcuerpo\b)[^,;|()])*"
 CUERPO = r"\bcuerpo\b[^,;|()]*"
 # "5/8 x 60", "45 x60": medidas, no API 5L X60 (auditoría 30-10-2026)
 MEDIDA_X = r"(?<![a-z\d/.,])(\d+(?:[/.,]\d+)?)\s?x\s?(?=\d)"
+# …salvo que el texto nombre API 5L / PSL y lo que sigue sea un grado X (tercera auditoría: "sch 40 X52" perdía el X52)
+MEDIDA_X_API = r"(?<![a-z\d/.,])(\d+(?:[/.,]\d+)?)\s?x\s?(?=\d)(?!(?:42|46|52|56|60|65|70|80)\b)"
+API5L = r"\bapi ?5l\b|\bpsl ?[12]\b"
 NO_METAL = {"grafito", "ptfe", "nbr", "klingerit", "bronce"}
 
 
@@ -104,7 +107,7 @@ def prep(texto):
     """Texto normalizado para los patrones: "SA-106", "SA 106", "A-105" y "A 105" quedan "a106", "a105"; sin lo negado."""
     t = re.sub(NEGACION, " ", norm(texto))
     t = re.sub(GRADOS, r"\1 ", t)
-    t = re.sub(MEDIDA_X, r"\1 por ", t)
+    t = re.sub(MEDIDA_X_API if re.search(API5L, t) else MEDIDA_X, r"\1 por ", t)
     return re.sub(r"\bs?a[- ]?(\d{2,3})\b", r"a\1", t)
 
 
@@ -148,6 +151,8 @@ def cuerpo(texto):
     t = prep(texto)
     sin_int = re.sub(INTERNOS, " ", t)
     expl = " ".join(re.findall(CUERPO, sin_int))
+    if not clases(expl, True):  # "cuerpo bipartido": no dice el material, se lee el resto (tercera auditoría 30-10-2026)
+        expl = ""
     c = {k: v for k, v in clases(expl or sin_int, True).items() if k not in NO_METAL and not k.startswith(("bulon", "tuerca"))}
     if any(es_inox(k) for k in c) and any(not es_inox(k) for k in c):
         return None
@@ -170,6 +175,9 @@ def regla_cuerpo(pedido, cand):
     exigencia: el candidato tiene que nombrarlos)."""
     pb, cb = cuerpo(pedido), cuerpo(cand)
     if pb == {}:
+        if any(k not in NO_METAL and not k.startswith(("bulon", "tuerca")) for k in clases(pedido)):
+            # el pedido nombra metal solo en los internos ("bola AISI 316"): no se sabe qué cuerpo pide
+            return "el pedido no dice el material del cuerpo (solo el de los internos): no se puede comparar"
         return ""
     if not cb:
         return f"no se sabe el material del cuerpo del candidato ({cand[:40]}): no se puede comparar"
@@ -188,7 +196,7 @@ def regla_cuerpo(pedido, cand):
 def regla_material(fam, pedido, cand, desc_cand=""):
     if not str(pedido or "").strip():
         return ""
-    if bool(re.search(GALV, norm(pedido))) != bool(re.search(GALV, norm(f"{cand} {desc_cand}"))):
+    if bool(re.search(GALV, prep(pedido))) != bool(re.search(GALV, prep(f"{cand} {desc_cand}"))):  # prep: "no galvanizado"
         return "galvanizado y negro no se reemplazan"
     a = clases(pedido)
     b = clases(cand) if str(cand or "").strip() else {}
@@ -284,6 +292,40 @@ def material_texto(atrib, texto):
     return atrib or ""
 
 
+# revestimientos (tercera auditoría 30-10-2026: tricapa de polietileno pasaba por polipropileno). El PP reemplaza al PE
+# (más temperatura), no al revés; un candidato sin revestimiento no reemplaza a uno revestido.
+REVEST = {"pp": r"polipropileno|\b3 ?lpp\b", "pe": r"polietileno|\b3 ?lpe\b", "fbe": r"\bfbe\b|epoxi"}
+REVEST_OK = {"pp": {"pp"}, "pe": {"pe", "pp"}, "fbe": {"fbe"}}
+# schedule de cada extremo de una reducción ("80x40", "XS x STD")
+SCH_DOBLE = r"\b(std|xs|xxs|s?(?:10|20|30|40|60|80|100|120|140|160)s?) ?[x×] ?(?:sch\.? ?)?(std|xs|xxs|s?(?:10|20|30|40|60|80|100|120|140|160)s?)\b"
+
+
+def regla_revestimiento(tp, tc):
+    a = {k for k, rx in REVEST.items() if re.search(rx, tp)}
+    if not a:
+        return ""
+    b = {k for k, rx in REVEST.items() if re.search(rx, tc)}
+    for k in a:
+        if not b & REVEST_OK[k]:
+            return f"revestimiento {'/'.join(sorted(b)) or 'sin dato'} por {k} (no lo reemplaza)"
+    return ""
+
+
+def regla_sch_doble(tp, tc, diametro):
+    """Reducciones: el pedido con schedule de cada extremo ("80x40") exige los dos (tercera auditoría 30-10-2026)."""
+    mp = re.search(SCH_DOBLE, tp)
+    if not mp:
+        return ""
+    mc = re.search(SCH_DOBLE, tc)
+    if not mc:
+        return f"el pedido es schedule {mp.group(1)} × {mp.group(2)} y el candidato no dice el de cada extremo"
+    ds = [dn_de(x) for x in re.split(r"\s*x\s*", norm(diametro or "")) if dn_de(x)] + [None, None]
+    for i, dn in ((1, ds[0]), (2, ds[1])):
+        if sch_canonico(mp.group(i), dn) != sch_canonico(mc.group(i), dn):
+            return f"schedule {mc.group(1)} × {mc.group(2)} por {mp.group(1)} × {mp.group(2)} (otro espesor en un extremo)"
+    return ""
+
+
 def incompatible(fam, at_pedido, at_cand, texto_pedido="", texto_cand=""):
     """Motivo por el que el candidato NO puede ser similar del pedido ("" si puede)."""
     ped = material_texto(at_pedido.get("material", ""), texto_pedido)
@@ -299,6 +341,13 @@ def incompatible(fam, at_pedido, at_cand, texto_pedido="", texto_cand=""):
         if sch_canonico(at_pedido["schedule"], dn) != sch_canonico(at_cand["schedule"], dn):
             return f"schedule {at_cand['schedule']} por {at_pedido['schedule']} (otro espesor)"
     tp, tc = norm(texto_pedido), norm(texto_cand)
+    r = regla_revestimiento(prep(texto_pedido), prep(texto_cand))
+    if r:
+        return r
+    if fam in FAMILIAS_SCH:
+        r = regla_sch_doble(tp, tc, at_pedido.get("diametro"))
+        if r:
+            return r
     if re.search(NACE_ESTRICTO, tp) and not re.search(NACE_ESTRICTO, tc):
         return "el pedido es MR0175 / ISO 15156 y el candidato no lo dice"
     if re.search(NACE_PEDIDO, tp) and not re.search(NACE_CAND, tc):
@@ -311,7 +360,8 @@ def para_pagina():
     return {"materiales": [{k: r[k] for k in ("patron", "material", "clase", "grupo_b16_5")} for r in materiales()],
             "reemplaza": {k: sorted(v) for k, v in REEMPLAZA.items()}, "genericos": {k: sorted(v) for k, v in GENERICOS.items()},
             "grupos": {k: sorted(v) for k, v in GRUPOS.items()}, "nace_estricto": NACE_ESTRICTO, "nace_pedido": NACE_PEDIDO,
-            "nace_cand": NACE_CAND, "galv": GALV, "prep": r"\bs?a[- ]?(\d{2,3})\b", "negacion": NEGACION, "grados": GRADOS, "medida_x": MEDIDA_X,
+            "nace_cand": NACE_CAND, "galv": GALV, "prep": r"\bs?a[- ]?(\d{2,3})\b", "negacion": NEGACION, "grados": GRADOS, "medida_x": MEDIDA_X, "medida_x_api": MEDIDA_X_API, "api5l": API5L,
+            "revest": REVEST, "revest_ok": {k: sorted(v) for k, v in REVEST_OK.items()}, "sch_doble": SCH_DOBLE,
             "internos": INTERNOS, "cuerpo": CUERPO, "no_metal": sorted(NO_METAL), "familias_sch": sorted(FAMILIAS_SCH), "dn_nps": DN_NPS}
 
 

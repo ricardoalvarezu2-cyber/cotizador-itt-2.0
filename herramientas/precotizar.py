@@ -84,7 +84,11 @@ def texto_busqueda(r):
     sr, sc = serie_de(r["serie_sch"]), sch_de(r["serie_sch"])
     if sr:
         partes.append(f"#{sr}")
-    if sc:
+    from compatibilidad import SCH_DOBLE
+    dob = re.search(SCH_DOBLE, norm(r["serie_sch"]))
+    if dob:  # "80x40": schedule de cada extremo, para que el control lo vea (tercera auditoría 30-10-2026)
+        partes.append(f"sch {dob.group(1)}x{dob.group(2)}")
+    elif sc:
         partes.append(f"sch {sc}")
     partes += [r["material"], r["extremos"].replace("-M", "").replace("-H", ""), r.get("modelo_fabricante", "")]
     return " ".join(p for p in partes if p)

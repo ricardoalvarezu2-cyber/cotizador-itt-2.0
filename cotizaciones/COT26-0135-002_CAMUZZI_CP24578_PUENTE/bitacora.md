@@ -37,3 +37,6 @@ Pos 16 (cupla c/ válvula esférica, A-106): SIN PRECIO. Unitario USD 29.395,10.
 - Pos 6b (junta 6" #150): la de MS Juntas es 8" #300 → SIN PRECIO, pedir cotización.
 - Pos 5c: el precio de USD 10 pasa a estimado.
 - Unitario USD 30.102,40; total USD 30.706,52. Borrador, sin revisar.
+
+## 30-10-2026 · Tercera auditoría independiente
+- Pos 6c: USD 10 de la planilla Techint/12 pasa a estimado. Total sin cambio: unitario USD 30.102,40.

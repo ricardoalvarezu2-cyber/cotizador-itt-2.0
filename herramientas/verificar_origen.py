@@ -145,6 +145,8 @@ def controlar(it):
                 if figura(precio, numeros_en_texto(ls[n - 1])):
                     return "figura", f"{a.relative_to(RAIZ)} (línea {n})"
                 return "aviso", f"en la línea {n} de {a.relative_to(RAIZ)} no figura USD {precio}"
+        # la línea citada no existe en ningún archivo: no se busca en todo el archivo (tercera auditoría 30-10-2026)
+        return "aviso", f"la línea {n} citada no existe en {archivos[0].relative_to(RAIZ)}"
     if m:  # lista con código del proveedor (auditoría 30-10-2026): el precio tiene que estar en la línea de ese código, no en
         # cualquier lugar de la lista (en una lista de miles de precios casi cualquier número "figura")
         rx = re.compile(rf"(?:^|[\s,|;(]){re.escape(m.group(1))}(?=[\s,|;)]|$)")
