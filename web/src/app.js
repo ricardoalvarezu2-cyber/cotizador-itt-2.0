@@ -672,6 +672,17 @@
       <div class="fila fin"><button data-a="cerrar">Cancelar</button><button class="prim" data-a="incorporar-ok">Aceptar</button></div></section></div>`;
     capa.querySelector('[data-a="incorporar-ok"]').focus();
   }
+  // Frenos de la oferta (30-10-2026): mientras quede uno, las ofertas técnica y económica no se generan (Busqueda.frenosOferta).
+  function panelFrenos() {
+    const fr = Busqueda.frenosOferta(S.doc.cot, S.doc.oferta), j = S.doc.cot.justificaciones || {};
+    const campoJ = (k, t) => `<label class="ancho"><span>${t} (al menos 20 letras)</span><textarea data-b="cot.justificaciones.${k}">${E(j[k] || "")}</textarea></label>`;
+    const quiere = new Set(fr.map(f => f.clave));
+    const just = [["estimado", "Justificación de lo estimado (más del 15%)"], ["vencidas", "Justificación de precios vencidos"], ["antecedentes", "Explicación contra los antecedentes, rubro por rubro"]]
+      .filter(([k]) => quiere.has(k) || j[k]).map(([k, t]) => campoJ(k, t)).join("");
+    if (!fr.length) return `<div class="aviso">Sin frenos: las ofertas se pueden generar (siguen como borrador hasta la aprobación).</div>`;
+    return `<div class="aviso bad"><b>Las ofertas no se generan (${fr.length} freno${fr.length > 1 ? "s" : ""}):</b><ul>${fr.map(f => `<li>${E(f.texto)}</li>`).join("")}</ul></div>
+      ${just ? `<div class="campos">${just}</div>` : ""}`;
+  }
   function tabResumen() {
     const c = calc(), p = S.doc.cot.parametros, avs = Busqueda.avisos(S.doc.cot), esc_ = Motor.escenarios(S.doc.cot, S.datos.indices);
     const bad = avs.filter(a => a.nivel === "bad"), warn = avs.filter(a => a.nivel !== "bad");
@@ -691,6 +702,7 @@
         ${panelBase()}</section>
       <section class="panel"><h3>Descargas</h3>
         <p class="small muted">${S.doc.cot.estado === "aprobado" ? "Aprobada: las ofertas salen con firma." : "Sin aprobar: las ofertas salen con la leyenda de borrador."}</p>
+        ${panelFrenos()}
         <div class="fila"><button class="prim" data-a="zip" ${S.dl ? "" : "disabled"}>Descargar todo (.zip)</button></div>
         <div class="fila"><span class="small">Ver en pantalla:</span><button class="chico" data-a="vista" data-v="informe">Informe</button><button class="chico" data-a="vista" data-v="tecnica">Oferta técnica</button><button class="chico" data-a="vista" data-v="economica">Oferta económica</button></div>
         <div class="fila"><select id="un-archivo" style="max-width:300px">${ARCHIVOS.map(([k, n]) => `<option value="${k}">${n}</option>`).join("")}</select><button data-a="uno" ${S.dl ? "" : "disabled"}>Descargar este archivo</button></div>
@@ -836,7 +848,7 @@
       if (el.dataset.b.startsWith("cot.transporte")) { precioTransporte(); pintarRubros(); }
       if (el.dataset.b === "cot.parametros.ph_horas") pintarRubros();
       refrescar(); guardarPronto();
-      if (el.tagName === "SELECT" || el.dataset.b.startsWith("cot.plazo")) { if (el.tagName === "SELECT" || ev.type === "change") render(); }
+      if (el.tagName === "SELECT" || el.dataset.b.startsWith("cot.plazo") || el.dataset.b.startsWith("cot.justificaciones")) { if (el.tagName === "SELECT" || ev.type === "change") render(); }
     } else if (el.dataset.bl && S.doc) {
       ponerRuta(S.doc, el.dataset.bl, el.value.split("\n").map(x => x.trim()).filter(Boolean)); guardarPronto();
     } else if (el.dataset.it && S.doc) {
@@ -1125,7 +1137,8 @@
   const base = () => (S.doc.oferta.archivo_base || S.doc.cot.codigo || "cotizacion").replace(/[\\/:*?"<>|]/g, "-");
   async function generar(k, ctx) {
     const cot = S.doc.cot;
-    if (/^(tec|eco)_/.test(k) && Busqueda.plazoBloquea(cot)) throw new Error(Busqueda.plazoBloquea(cot));
+    const fr = /^(tec|eco)_/.test(k) && Busqueda.frenosTexto(cot, S.doc.oferta);
+    if (fr) throw new Error("Las ofertas no se generan: " + fr);
     switch (k) {
       case "presupuesto": return Documentos.planilla(cot, S.datos.indices, S.datos);
       case "compras": return Documentos.compras(cot);
@@ -1138,7 +1151,8 @@
     }
   }
   async function vistaPrevia(k) {
-    if (k !== "informe" && Busqueda.plazoBloquea(S.doc.cot)) { toast(Busqueda.plazoBloquea(S.doc.cot)); return; }
+    const fr = k !== "informe" && Busqueda.frenosTexto(S.doc.cot, S.doc.oferta);
+    if (fr) { toast("Las ofertas no se generan: " + fr); return; }
     capa.hidden = false; capa.innerHTML = `<div class="capa"><section class="panel vista"><div class="vacio">Armando la vista previa…</div></section></div>`;
     const ctx = await contexto();
     const [titulo, html, desc] = k === "informe" ? ["Informe del presupuesto", Documentos.informeHtml(ctx), "informe"]
@@ -1152,7 +1166,7 @@
     if (b) b.disabled = true;
     try {
       const ctx = await contexto(), zip = new JSZip(), carpeta = zip.folder(base());
-      const bloq = Busqueda.plazoBloquea(S.doc.cot);
+      const bloq = Busqueda.frenosTexto(S.doc.cot, S.doc.oferta);
       for (const [k, n] of ARCHIVOS) { if (bloq && /^(tec|eco)_/.test(k)) continue; estadoDesc(`Generando ${n}…`); carpeta.file(n, await generar(k, ctx)); }
       if (bloq) carpeta.file("LEEME - faltan las ofertas.txt", bloq);
       estadoDesc("Comprimiendo…");

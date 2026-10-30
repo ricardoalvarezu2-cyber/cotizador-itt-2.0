@@ -36,6 +36,53 @@ def num(v):
     return float(v.replace(",", ".")) if v else None
 
 
+# Columnas del documento del cliente → columna de lista_materiales_plano.csv (auditoría 30-10-2026: Ø, serie, material,
+# extremos y modelo también son del cliente; error #7 NPT-M por NPT-H)
+COLUMNA_LISTA = {"O": "diametro", "DIAMETRO": "diametro", "SCHSERIE": "serie_sch", "SCH": "serie_sch", "SERIE": "serie_sch",
+                 "MATERIAL": "material", "MATERIALOBS": "material", "EXT": "extremos", "EXTREMOS": "extremos",
+                 "MODELOFABRICANTE": "modelo_fabricante"}
+SIN_DATO = {"", "NA", "N/A", "_", "-"}
+
+
+def _canon(t):
+    """Texto para comparar atributos: mayúsculas sin acentos, solo letras y números (2 1/2" = 21/2"; A-105 = A105)."""
+    import unicodedata
+    t = unicodedata.normalize("NFKD", str(t or "")).encode("ascii", "ignore").decode().upper()
+    return re.sub(r"[^A-Z0-9]", "", t)
+
+
+def control_atributos(p, celdas):
+    """Cada atributo de la lista tiene que ser el del cliente. Serie y schedule: la lista puede juntarlos ("150 x STD"), pero
+    cada valor del cliente tiene que estar. Donde el cliente no da el dato (celda vacía, n/a, combinada o de relleno) ITT
+    puede completarlo, con la explicación en la columna nota."""
+    out, agregado = [], []
+    por_col = {}
+    for col, v in celdas:
+        if col:
+            por_col.setdefault(col, []).append(v)
+    for col, valores in por_col.items():
+        lista = p.get(col, "")
+        dados = [v for v in valores if _canon(v) not in {_canon(x) for x in SIN_DATO} and not re.fullmatch(r"\s*-{2,}\s*", str(v))]
+        if col == "serie_sch":
+            falta = [v for v in dados if _canon(v) not in _canon(lista)]
+            if falta:
+                out.append(f"Pos {p['pos']}: {col} «{lista}» no tiene lo que pide el cliente ({' / '.join(falta)})")
+            else:
+                resto = _canon(lista)
+                for v in dados:
+                    resto = resto.replace(_canon(v), "", 1)
+                if resto.replace("X", ""):  # "150 x STD" con 150 y STD del cliente no agrega nada
+                    agregado.append(col)
+        elif dados:
+            if _canon(dados[0]) != _canon(lista):
+                out.append(f"Pos {p['pos']}: {col} «{lista}» no es el del cliente («{dados[0]}»)")
+        elif _canon(lista):
+            agregado.append(col)
+    if agregado and not str(p.get("nota", "")).strip():
+        out.append(f"Pos {p['pos']}: ITT completó {', '.join(agregado)} donde el cliente no da el dato: explicarlo en la columna nota")
+    return out
+
+
 def control_compatibilidad(c, plano):
     """P9 (Matías, 30-10-2026): cada renglón de material cuyo precio sale de una pieza del catálogo se compara con lo que
     pide el plano con las reglas de compatibilidad (compatibilidad.py). Si la norma no permite el reemplazo, es ERROR: la
@@ -108,17 +155,22 @@ def main(carpeta):
     ruta_tr = c / "pedido" / "transcripcion.json"
     if ruta_tr.exists():
         import json
-        cliente = {}
+        cliente, atributos = {}, {}
         for t in json.load(open(ruta_tr, encoding="utf-8"))["tablas"]:
             cols = t["columnas"]
             iq = next((i for i, x in enumerate(cols) if x.upper().startswith("CANT")), None)
             for f in t["filas"]:
-                cliente[str(f[0]).strip()] = (f[1], f[iq] if iq is not None else "")
+                pos = str(f[0]).strip()
+                if pos in cliente:
+                    errores.append(f"Pos {pos}: está en dos tablas de la transcripción; renumerar o separar (no se sabe cuál vale)")
+                cliente[pos] = (f[1], f[iq] if iq is not None else "")
+                atributos[pos] = [(COLUMNA_LISTA.get(_canon(col)), f[i] if i < len(f) else "") for i, col in enumerate(cols)]
         for p in plano:
             pos = p["pos"].strip()
             if pos not in cliente:
                 errores.append(f"Pos {pos}: no está en la transcripción del documento del cliente")
                 continue
+            errores.extend(control_atributos(p, atributos[pos]))
             desc, q = cliente[pos]
             if " ".join(p["descripcion"].split()) != " ".join(str(desc).split()):
                 errores.append(f"Pos {pos}: la descripción no es la del cliente. Cliente: «{desc}» · cómputo: «{p['descripcion']}»")

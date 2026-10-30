@@ -375,14 +375,18 @@ def armar(carpeta, tipo, cfg, precios):
     return doc
 
 
-def main(carpeta):
+def main(carpeta, frenos_revisados=False):
+    """frenos_revisados=True: la llama armar_cotizacion.py, que ya corrió los frenos con el cómputo recién armado."""
     carpeta = Path(carpeta)
     cot = json.load(open(carpeta / "cotizacion.json", encoding="utf-8"))
     cfg = completar(json.load(open(carpeta / "oferta.json", encoding="utf-8")), cot)
     cfg["_cot"] = cot
     import frenos
-    fr = frenos.frenos(carpeta)  # también cuando se corre sola: ninguna oferta sale con un freno abierto
+    fr = [] if frenos_revisados else frenos.frenos(carpeta)  # también cuando se corre sola: ninguna oferta sale con un freno abierto
     if fr:
+        for f in (carpeta / "oferta").glob("*") if (carpeta / "oferta").exists() else []:
+            if f.suffix in (".docx", ".pdf"):  # no quedan ofertas viejas que digan otra cosa
+                f.unlink()
         sys.exit("OFERTAS NO GENERADAS:\n" + "\n".join(f"  ■ [{k}] {t}" for k, t in fr))
     precios = leer_precios(carpeta)
     salida = carpeta / "oferta"

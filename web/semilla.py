@@ -90,6 +90,13 @@ def main(carpeta, ident="capex-oq8209", salida=None, previo=None):
     cot["kg_compras"] = kg
     if (c / "ficha_rubros.json").exists():  # ficha por rubro (soldaduras, kg, m², placas, medidas) para el modo global
         cot["ficha"] = json.load(open(c / "ficha_rubros.json", encoding="utf-8"))
+    # frenos de la oferta que dependen de archivos del repositorio (la página calcula los demás: Busqueda.frenosOferta)
+    import contextlib
+    import io
+    import frenos
+    with contextlib.redirect_stdout(io.StringIO()):
+        fr = frenos.frenos_repo(c)
+    cot["frenos_repo"] = [{"clave": k, "texto": t} for k, t in fr]
     avisos = conservar(cot, of, previo) if previo else []
     cot.setdefault("firmante_id", "matias-russo")
     of.pop("firma", None)  # la firma sale del firmante elegido

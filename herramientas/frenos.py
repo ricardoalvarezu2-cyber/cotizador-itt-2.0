@@ -13,14 +13,19 @@ Frenos:
   doble_lectura   falta pedido/transcripcion_b.json (segunda lectura hecha por otro, sin ver la primera), o las dos
                   lecturas difieren en alguna celda sin resolver (se resuelve en transcripcion.json → "diferencias_resueltas")
   requisitos      falta pedido/requisitos.csv o algún requisito no tiene destino válido (cumple, renglon, desvio,
-                  exclusion) o sigue en "consulta" sin respuesta
+                  exclusion) o sigue en "consulta" sin respuesta; renglon = posición o rubro del cómputo; desvío y exclusión
+                  = fragmento literal de oferta.json
   estimado        lo estimado pesa más del 15% del costo directo → justificaciones.estimado
   antecedentes    no hay antecedente con costo comparable, o el costo difiere más del 15% del más parecido →
                   justificaciones.antecedentes (explicación rubro por rubro)
   vencidas        cotización de proveedor (tipo "cot") vencida: validez_hasta anterior a hoy o, sin validez escrita, de
-                  más de 30 días; se levanta con "reconfirmado": "AAAA-MM-DD" (de los últimos 30 días) en la fuente o con
+                  más de 30 días; lista de precios (tipo "lista") de más de 180 días; fuente sin fecha o con fecha futura; se levanta con "reconfirmado": "AAAA-MM-DD" (de los últimos 30 días) en la fuente o con
                   justificaciones.vencidas
   plazo           plazo ofrecido menor que el calculado sin plazo.justificacion (plazo.py)
+  computo         verificar_computo.py da errores (también si generar_oferta.py se corre sola)
+  sin_precio      renglón en 0 sin sin_precio_motivo en el ítem
+  pendientes_oferta  oferta.json con datos entre [corchetes] sin completar
+Las justificaciones tienen que tener al menos 20 letras. Las dos lecturas llevan "lector" (distinto en A y B).
 """
 import csv
 import json
@@ -36,6 +41,7 @@ DESTINOS = ("cumple", "renglon", "desvio", "exclusion", "consulta")
 COLUMNAS_REQUISITOS = ("id", "documento", "pagina", "texto", "tema", "destino", "referencia")
 LIMITE_ESTIMADO = 0.15
 LIMITE_ANTECEDENTE = 0.15
+DIAS_LISTA = 180  # una lista de precios de más de 6 meses se actualiza (P4)
 DIAS_VALIDEZ = 30  # sin validez escrita en la cotización del proveedor se toma 30 días (criterio de ITT, no un dato)
 
 
@@ -84,6 +90,13 @@ def comparar_lecturas(a, b):
                 vb = _celda(fb[j]) if j < len(fb) else ""
                 if va != vb:
                     out.append((ta["titulo"], pos, col, va, vb))
+        cols_a = {_clave_col(c) for c in ta["columnas"]}
+        for col in t["columnas"]:  # columnas que solo leyó B (auditoría 30-10-2026)
+            if _clave_col(col) not in cols_a:
+                j = t["columnas"].index(col)
+                for fb in t["filas"]:
+                    if _norm(fb[0]) not in filas_b and j < len(fb) and _celda(fb[j]):
+                        out.append((ta["titulo"], _norm(fb[0]), col, "columna ausente", _celda(fb[j])))
         for pos in filas_b:
             out.append((ta["titulo"], pos, "", "fila ausente", "fila presente"))
     for t in tb.values():
@@ -114,6 +127,12 @@ def frenos_transcripcion(carpeta, cfg):
         return [("doble_lectura", "falta pedido/transcripcion_b.json: segunda lectura del documento hecha por otro agente o persona, "
                  "sin ver la primera")]
     a, b = (json.load(open(r, encoding="utf-8")) for r in (ra, rb))
+    la, lb = _norm(a.get("lector")), _norm(b.get("lector"))
+    if not la or not lb or la == lb:
+        return [("doble_lectura", f"las dos lecturas tienen que decir quién las hizo y ser de lectores distintos (lector A «{la}», "
+                 f"B «{lb}»)")]
+    if a["tablas"] == b["tablas"]:
+        print("  ! las dos lecturas son idénticas celda por celda: confirmar que B se hizo sin ver A")
     difs = [d for d in comparar_lecturas(a, b) if not _resuelta(d, a.get("diferencias_resueltas") or [])]
     if not difs:
         return []
@@ -121,6 +140,17 @@ def frenos_transcripcion(carpeta, cfg):
     return [("doble_lectura", f"las dos lecturas del documento del cliente difieren en {len(difs)} celda(s) sin resolver ({ej}"
              + ("…" if len(difs) > 4 else "") + "). Mirar el original, dejar el valor correcto en transcripcion.json y anotarlo en "
              "diferencias_resueltas [{tabla, pos, columna, vale, motivo}]")]
+
+
+def _textos(x):
+    if isinstance(x, str):
+        yield x
+    elif isinstance(x, dict):
+        for v in x.values():
+            yield from _textos(v)
+    elif isinstance(x, list):
+        for v in x:
+            yield from _textos(v)
 
 
 def frenos_requisitos(carpeta, plano_pos):
@@ -132,6 +162,8 @@ def frenos_requisitos(carpeta, plano_pos):
     faltan_cols = [c for c in COLUMNAS_REQUISITOS if filas and c not in filas[0]]
     if not filas or faltan_cols:
         return [("requisitos", "pedido/requisitos.csv vacío o sin las columnas " + ", ".join(faltan_cols or COLUMNAS_REQUISITOS))]
+    ro = carpeta / "oferta.json"
+    textos_oferta = _clave_col(" | ".join(_textos(json.load(open(ro, encoding="utf-8"))))) if ro.exists() else ""
     malos = []
     for r in filas:
         d, ref = _norm(r["destino"]).lower(), _norm(r["referencia"])
@@ -143,11 +175,50 @@ def frenos_requisitos(carpeta, plano_pos):
             malos.append(f"{r['id']}: falta el texto literal o el documento de origen")
         elif d != "cumple" and not ref:
             malos.append(f"{r['id']}: destino {d} sin referencia (posición, desvío o exclusión de la oferta)")
-        elif d == "renglon" and not all(p.strip() in plano_pos or re.fullmatch(r"[A-Z]{2,4}\d*", p.strip()) for p in ref.split(";")):
-            malos.append(f"{r['id']}: la referencia «{ref}» no es una posición del cómputo")
+        elif d == "renglon" and not all(p.strip() in plano_pos for p in ref.split(";")):
+            malos.append(f"{r['id']}: la referencia «{ref}» no es una posición ni un rubro del cómputo")
+        elif d in ("desvio", "exclusion") and _clave_col(ref) not in textos_oferta:
+            malos.append(f"{r['id']}: la referencia «{ref[:50]}» no está en la oferta (copiar un fragmento literal de la aclaración, "
+                         "desvío o exclusión de oferta.json)")
     if not malos:
         return []
     return [("requisitos", f"{len(malos)} requisito(s) sin destino cerrado: " + "; ".join(malos[:5]) + ("…" if len(malos) > 5 else ""))]
+
+
+def _justificada(t):
+    """Una justificación tiene que decir algo: al menos 20 letras (auditoría 30-10-2026: "." o "ok" levantaban el freno)."""
+    return len(_norm(t)) >= 20
+
+
+def frenos_sin_precio(cfg):
+    """Lo que falta frena (principio 4): un renglón en 0 baja el costo y además levantaba el freno de lo estimado."""
+    malos = [it["id"] for it in cfg["items"] if not (it["fuentes"][0].get("precio") or 0) and not _justificada(it.get("sin_precio_motivo"))]
+    if not malos:
+        return []
+    return [("sin_precio", f"{len(malos)} renglón(es) en 0 ({', '.join(malos[:8])}{'…' if len(malos) > 8 else ''}): pedir el precio o "
+             "escribir en el ítem sin_precio_motivo (por qué va en 0: lo provee el cliente, está incluido en otro renglón…)")]
+
+
+def frenos_pendientes_oferta(carpeta):
+    ro = carpeta / "oferta.json"
+    if not ro.exists():
+        return []
+    marcas = [t for x in _textos(json.load(open(ro, encoding="utf-8"))) for t in re.findall(r"\[[^\]]+\]", x)]
+    if not marcas:
+        return []
+    return [("pendientes_oferta", f"la oferta tiene {len(marcas)} dato(s) entre corchetes sin completar ({'; '.join(m[:40] for m in marcas[:3])}"
+             f"{'…' if len(marcas) > 3 else ''}): completarlos en oferta.json")]
+
+
+def frenos_computo(carpeta):
+    import contextlib
+    import io
+    import verificar_computo
+    if not (carpeta / "computo.csv").exists():
+        return [("computo", "falta computo.csv: armar la cotización con armar_cotizacion.py")]
+    with contextlib.redirect_stdout(io.StringIO()):
+        rc = verificar_computo.main(carpeta)
+    return [("computo", "verificar_computo.py da errores: corregirlos antes de generar ofertas")] if rc else []
 
 
 def frenos_estimado(cfg, just):
@@ -158,22 +229,30 @@ def frenos_estimado(cfg, just):
         tot += v
         if f.get("tipo") == "est":
             est += v
-    if tot and est / tot > LIMITE_ESTIMADO and not _norm(just.get("estimado")):
+    if tot and est / tot > LIMITE_ESTIMADO and not _justificada(just.get("estimado")):
         return [("estimado", f"lo estimado es el {est / tot:.0%} del costo directo (USD {fmt(est, 2)} de {fmt(tot, 2)}), más del "
                  f"{LIMITE_ESTIMADO:.0%}: pedir cotizaciones o escribir justificaciones.estimado")]
     return []
 
 
 def frenos_vencidas(cfg, just, hoy):
-    if _norm(just.get("vencidas")):
+    if _justificada(just.get("vencidas")):
         return []
     malos = []
     for it in cfg["items"]:
         f = it["fuentes"][0]
-        if f.get("tipo") != "cot" or not f.get("precio"):
+        if f.get("tipo") not in ("cot", "lista") or not f.get("precio"):
+            continue
+        fecha = str(f.get("fecha") or "")
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", fecha) or date.fromisoformat(fecha) > hoy:
+            malos.append(f"{it['id']} (sin fecha válida)")
+            continue
+        if f["tipo"] == "lista":  # una lista de precios no tiene validez escrita: vale hasta DIAS_LISTA
+            if (hoy - date.fromisoformat(fecha)).days > DIAS_LISTA:
+                malos.append(f"{it['id']} (lista del {a_vista(fecha)}, más de {DIAS_LISTA} días)")
             continue
         rec = str(f.get("reconfirmado") or "")
-        if re.fullmatch(r"\d{4}-\d{2}-\d{2}", rec) and (hoy - date.fromisoformat(rec)).days <= DIAS_VALIDEZ:
+        if re.fullmatch(r"\d{4}-\d{2}-\d{2}", rec) and 0 <= (hoy - date.fromisoformat(rec)).days <= DIAS_VALIDEZ:
             continue
         val = str(f.get("validez_hasta") or "")
         if re.fullmatch(r"\d{4}-\d{2}-\d{2}", val):
@@ -190,7 +269,7 @@ def frenos_vencidas(cfg, just, hoy):
 
 
 def frenos_antecedentes(carpeta, just, recalcular=True):
-    if _norm(just.get("antecedentes")):
+    if _justificada(just.get("antecedentes")):
         return []
     import comparar_antecedentes
     if recalcular or not comparar_antecedentes.ultimo:
@@ -213,6 +292,17 @@ def frenos_plazo(carpeta, recalcular=True):
     return [("plazo", b)] if b else []
 
 
+def frenos_repo(carpeta):
+    """Los frenos que dependen de archivos del repositorio, para la página (web/semilla.py → cot.frenos_repo). El de
+    antecedentes va sin mirar la justificación: la página lo levanta si se escribe justificaciones.antecedentes."""
+    carpeta = Path(carpeta)
+    cfg = json.load(open(carpeta / "cotizacion.json", encoding="utf-8"))
+    rp = carpeta / "pedido" / "lista_materiales_plano.csv"
+    plano_pos = {r["pos"].strip() for r in csv.DictReader(open(rp, encoding="utf-8"))} if rp.exists() else set()
+    plano_pos |= {str(it.get("pos", "")).strip() for it in cfg["items"]}
+    return frenos_computo(carpeta) + frenos_transcripcion(carpeta, cfg) + frenos_requisitos(carpeta, plano_pos) + frenos_antecedentes(carpeta, {})
+
+
 def frenos(carpeta, hoy=None, recalcular=True):
     """Lista de (clave, texto). Vacía = la oferta puede generarse (sigue en borrador hasta la aprobación).
     recalcular=False usa la última corrida de comparar_antecedentes y plazo (armar_cotizacion.py ya los corrió)."""
@@ -223,7 +313,8 @@ def frenos(carpeta, hoy=None, recalcular=True):
     rp = carpeta / "pedido" / "lista_materiales_plano.csv"
     plano_pos = {r["pos"].strip() for r in csv.DictReader(open(rp, encoding="utf-8"))} if rp.exists() else set()
     plano_pos |= {str(it.get("pos", "")).strip() for it in cfg["items"]}
-    out = frenos_transcripcion(carpeta, cfg) + frenos_requisitos(carpeta, plano_pos) + frenos_estimado(cfg, just) + frenos_vencidas(cfg, just, hoy)
+    out = (frenos_computo(carpeta) if recalcular else []) + frenos_transcripcion(carpeta, cfg) + frenos_requisitos(carpeta, plano_pos)
+    out += frenos_sin_precio(cfg) + frenos_estimado(cfg, just) + frenos_vencidas(cfg, just, hoy) + frenos_pendientes_oferta(carpeta)
     return out + frenos_antecedentes(carpeta, just, recalcular) + frenos_plazo(carpeta, recalcular)
 
 

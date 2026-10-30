@@ -426,7 +426,7 @@ def main(carpeta):
             print(f"  ■ [{k}] {t}")
     elif (carpeta / "oferta.json").exists():
         import generar_oferta
-        generar_oferta.main(carpeta)
+        generar_oferta.main(carpeta, frenos_revisados=True)
     import indice_proyectos
     indice_proyectos.main()  # la cotización queda en el índice de antecedentes
     print(f"\nListo: {carpeta}/computo.csv, {ruta.name}, informe.html" + (", oferta/" if (carpeta / "oferta.json").exists() and not bloqueo else ""))

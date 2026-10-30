@@ -288,6 +288,50 @@ const Busqueda = (() => {
     if (!d || !calc || d >= calc || String(cfg.plazo?.justificacion || "").trim()) return "";
     return `Plazo ofrecido ${d} días, menor que el calculado (${calc} días): corregilo o escribí la justificación en Plazo. Hasta entonces no se generan las ofertas.`;
   }
-  return { norm, coincide, incompatible, campos, opcionales, valores, materiales, servicios, itemDeMaterial, itemDeServicio, soldadura, tarifa, avisos, catalogo, codigoDe, plazoCalculado, plazoBloquea, TIPO_FUENTE, CON_TIPO };
+  // Frenos de la oferta (proceso unificado, 30-10-2026; igual que herramientas/frenos.py). Los que dependen de archivos del
+  // repositorio (transcripción doble, matriz de requisitos, cómputo, antecedentes) los calcula Python y los deja semilla.py en
+  // cot.frenos_repo; una cotización que nunca pasó por el repositorio no tiene esos controles y frena hasta mandarla a Claude Code.
+  const LIM_EST = 0.15, DIAS_VALIDEZ = 30, DIAS_LISTA = 180;
+  const justificada = t => String(t || "").trim().replace(/\s+/g, " ").length >= 20;
+  const dias = (a, b) => Math.round((Date.parse(b) - Date.parse(a)) / 864e5);
+  function textos(x, out = []) {
+    if (typeof x === "string") out.push(x);
+    else if (Array.isArray(x)) x.forEach(v => textos(v, out));
+    else if (x && typeof x === "object") Object.values(x).forEach(v => textos(v, out));
+    return out;
+  }
+  function frenosOferta(cfg, oferta, hoyIso) {
+    const h = hoyIso || hoy(), j = cfg.justificaciones || {}, out = [];
+    if (!Array.isArray(cfg.frenos_repo)) out.push({ clave: "repositorio", texto: "La cotización no pasó por el repositorio (transcripción doble del cliente, matriz de requisitos, control del cómputo y de antecedentes): mandala a Claude Code." });
+    else out.push(...cfg.frenos_repo.filter(f => !(f.clave === "antecedentes" && justificada(j.antecedentes))));
+    const sinP = cfg.items.filter(it => !(it.fuentes[0].precio || 0) && !justificada(it.sin_precio_motivo)).map(it => it.id);
+    if (sinP.length) out.push({ clave: "sin_precio", texto: `${sinP.length} renglón(es) en 0 (${sinP.slice(0, 8).join(", ")}${sinP.length > 8 ? "…" : ""}): pedir el precio o escribir en el ítem por qué va en 0.` });
+    let tot = 0, est = 0;
+    for (const it of cfg.items) { const v = (it.cantidad || 0) * (it.fuentes[0].precio || 0); tot += v; if (it.fuentes[0].tipo === "est") est += v; }
+    if (tot && est / tot > LIM_EST && !justificada(j.estimado)) out.push({ clave: "estimado", texto: `Lo estimado es el ${Math.round(est / tot * 100)}% del costo directo, más del 15%: pedir cotizaciones o justificarlo.` });
+    if (!justificada(j.vencidas)) {
+      const malos = [];
+      for (const it of cfg.items) {
+        const f = it.fuentes[0];
+        if (!["cot", "lista"].includes(f.tipo) || !f.precio) continue;
+        const fe = String(f.fecha || "");
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(fe) || fe > h) { malos.push(`${it.id} (sin fecha válida)`); continue; }
+        if (f.tipo === "lista") { if (dias(fe, h) > DIAS_LISTA) malos.push(`${it.id} (lista de más de ${DIAS_LISTA} días)`); continue; }
+        const rec = String(f.reconfirmado || "");
+        if (/^\d{4}-\d{2}-\d{2}$/.test(rec) && dias(rec, h) >= 0 && dias(rec, h) <= DIAS_VALIDEZ) continue;
+        const val = String(f.validez_hasta || "");
+        if (/^\d{4}-\d{2}-\d{2}$/.test(val)) { if (val < h) malos.push(`${it.id} (válida hasta ${val.split("-").reverse().join("-")})`); }
+        else if (dias(fe, h) > DIAS_VALIDEZ) malos.push(`${it.id} (${dias(fe, h)} días, sin validez escrita)`);
+      }
+      if (malos.length) out.push({ clave: "vencidas", texto: `${malos.length} precio(s) de proveedor vencido(s): ${malos.slice(0, 6).join(", ")}${malos.length > 6 ? "…" : ""}. Reconfirmarlos o justificarlo.` });
+    }
+    const marcas = textos(oferta || {}).flatMap(t => t.match(/\[[^\]]+\]/g) || []);
+    if (marcas.length) out.push({ clave: "pendientes_oferta", texto: `La oferta tiene ${marcas.length} dato(s) entre corchetes sin completar (${marcas.slice(0, 3).map(m => m.slice(0, 40)).join("; ")}${marcas.length > 3 ? "…" : ""}).` });
+    const pz = plazoBloquea(cfg);
+    if (pz) out.push({ clave: "plazo", texto: pz });
+    return out;
+  }
+  const frenosTexto = (cfg, oferta) => frenosOferta(cfg, oferta).map(f => f.texto).join(" · ");
+  return { norm, coincide, incompatible, campos, opcionales, valores, materiales, servicios, itemDeMaterial, itemDeServicio, soldadura, tarifa, avisos, catalogo, codigoDe, plazoCalculado, plazoBloquea, frenosOferta, frenosTexto, TIPO_FUENTE, CON_TIPO };
 })();
 if (typeof module !== "undefined") module.exports = Busqueda;
