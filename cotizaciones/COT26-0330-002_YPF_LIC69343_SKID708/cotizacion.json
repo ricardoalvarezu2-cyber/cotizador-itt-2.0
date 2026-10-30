@@ -285,12 +285,22 @@
    "especificacion": "Plano: 16\"x12\" · STD x XS · ASTM A234 WPB · BW",
    "fuentes": [
     {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-30",
+     "coincide": "sin_ref",
+     "diferencia": "Renard 3547 es Std en los dos extremos y el plano pide STD x XS (12\" XS): pedir cotización"
+    },
+    {
      "tipo": "lista",
      "precio": 2802.34,
      "proveedor": "Renard (cód. 3547) · ABW-00358",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3547",
      "fecha": "2025-12-26",
-     "coincide": "igual"
+     "coincide": "descartada",
+     "diferencia": "descartada (tercera auditoría 30-10-2026): schedule del ramal distinto · antes:"
     },
     {
      "tipo": "est",
@@ -298,8 +308,8 @@
      "proveedor": "Planilla PC0 de este pedido · CINTOLO",
      "origen": "fuentes_originales/pedidos_web/pmvrzbrh616ftx/Cotización Lic 69343 Skid concentradores VCD26217 PC0.xlsx.md · hoja 1000623708",
      "fecha": "2026-10-10",
-     "coincide": "igual",
-     "diferencia": "precio de la planilla PC0 sin fecha ni documento del proveedor: confirmar con Compras"
+     "coincide": "descartada",
+     "diferencia": "descartada (cuarta auditoría 30-10-2026): mismo precio que la Renard 3547 Std, probablemente la misma pieza · antes: precio de la planilla PC0 sin fecha ni documento del proveedor: confirmar con Compras"
     }
    ]
   },

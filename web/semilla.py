@@ -54,9 +54,23 @@ def conservar(cot, of, previo):
     return avisos
 
 
+def huella(carpeta):
+    """Huella de la versión del repositorio: cotizacion.json, oferta.json y la lista del plano (auditorías 30-10-2026: con
+    solo cotizacion.json se pisaba sin aviso una corrección de la oferta o del plano)."""
+    import hashlib
+    h = hashlib.sha256()
+    for n in ("cotizacion.json", "oferta.json", "pedido/lista_materiales_plano.csv"):
+        f = Path(carpeta) / n
+        h.update(f.read_bytes() if f.exists() else b"")
+    return h.hexdigest()[:16]
+
+
 def main(carpeta, ident="capex-oq8209", salida=None, previo=None):
     c = Path(carpeta)
     cot = json.load(open(c / "cotizacion.json", encoding="utf-8"))
+    # versión del repositorio de la que sale la copia de la página: incorporar_base.py frena si el repositorio cambió
+    # después (auditoría 30-10-2026: una corrección hecha en el repositorio se perdía al pasar la página)
+    cot["huella_repo"] = huella(c)
     of = json.load(open(c / "oferta.json", encoding="utf-8"))
     plano = {r["pos"]: r for r in csv.DictReader(open(c / "pedido" / "lista_materiales_plano.csv", encoding="utf-8"))}
     for it in cot["items"]:
@@ -98,6 +112,14 @@ def main(carpeta, ident="capex-oq8209", salida=None, previo=None):
         fr = frenos.frenos_repo(c)
     cot["frenos_repo"] = [{"clave": k, "texto": t} for k, t in fr]
     avisos = conservar(cot, of, previo) if previo else []
+    # P9 del repositorio sobre esta versión: la página no deja pasar a revisado ni aprobar si los renglones de material
+    # cambiaron desde acá o si P9 tenía errores (sexta auditoría 30-10-2026: la página no controla las fuentes sin código)
+    import verificar_computo
+    err = verificar_computo.control_compatibilidad(c, list(plano.values()))
+    cot["p9"] = {"ok": not err, "errores": len(err), "firma": verificar_computo.firma_p9(cot),
+                 "fecha": datetime.now().isoformat(timespec="seconds")}
+    if err:
+        avisos.append(f"P9 con {len(err)} error(es): la página no la deja pasar a revisado hasta corregirlos en el repositorio")
     cot.setdefault("firmante_id", "matias-russo")
     of.pop("firma", None)  # la firma sale del firmante elegido
     ahora = datetime.now().isoformat(timespec="seconds")

@@ -28,7 +28,9 @@ auto = {i["pos"]: i for i in json.load(open(CAPEX / "cotizacion_auto.json", enco
 s = auto["MO"]
 igual("soldadura: pulgadas equivalentes (4 a tope 2\" sch80 + reducción 2½\" + 2 cuplas)", s["cantidad"], 13.37, 0.02)
 igual("soldadura: tarifa de las planillas 2026 (16 USD/pulg)", s["fuentes"][0]["precio"], 16.0)
-igual("retención 2\" #600 WCB NPT: igual (Ingeniería en Fluidos 533)", (auto["7"]["fuentes"][0]["coincide"], auto["7"]["fuentes"][0]["precio"]), ("igual", 533.0))
+# auditoría 30-10-2026: antes se esperaba "igual" con la de Ingeniería en Fluidos (USD 533), pero esa es trim 8 (13Cr, no
+# AISI 316) y el plano pide internos AISI 316: la regla de material (el texto del plano, no el atributo) la descarta bien
+igual("retención 2\" #600 A-216 / AISI 316: la WCB trim 13Cr no sirve", (auto["7"]["fuentes"][0]["coincide"], auto["7"]["fuentes"][0]["precio"]), ("sin_ref", 0))
 igual("codo 45° 2\" sch80 BW: igual", auto["15"]["fuentes"][0]["coincide"], "igual")
 # 30-10-2026: la junta de Duralitte no dice el material y el plano pide A-234 WPB → no es similar (compatibilidades revisadas)
 igual("junta monolítica: SIN PRECIO (la de Duralitte no dice el material; regla del 30-10-2026)", auto["13"]["fuentes"][0]["precio"], 0)

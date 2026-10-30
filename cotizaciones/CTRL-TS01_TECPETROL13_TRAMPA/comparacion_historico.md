@@ -11,7 +11,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 3 | Brida welding neck RF 4" 900 / sch 120 ASTM A | 8 × 126,06 = 1.008,48 | 8 un × 76,42 = 611,36 | -39% | ant · sin proveedor en planilla · BRI-02554 · 2025-12-18 | más barato (similar) · real: 60 días |
 | 4 | Brida welding neck RF 2" 900 / sch 160 ASTM A | 8 × 65,20 = 521,60 | 8 un × 215,80 = 1.726,40 | +231% | stock · Stock ITT (cód. ACS0506R57050K) · BRI-01 · 2024-11-01 | más caro |
 | 5 | Brida welding neck RF 1 1/2" 900 / sch 160 AS | 1 × 40,57 = 40,57 | 1 un × 163,20 = 163,20 | +302% | stock · Stock ITT · última compra (cód. ACS0406R · 2022-11-15 | más caro · real: 60 días |
-| 6 | Virola/caño sin costura barril menor largo 4, | 4,8 × 690,00 = 3.312,00 | 4,8 m × 242,81 + compra extra 6b = 2.913,72 | -12% | lista · Renard (cód. 1202) · CAN-01436 · 2025-12-26 | dentro de ±15% · real: planilla: 'debería contemplar 1 tira de 12 m?' |
+| 6 | Virola/caño sin costura barril menor largo 4, | 4,8 × 690,00 = 3.312,00 | 4,8 m × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo · real: planilla: 'debería contemplar 1 tira de 12 m?' |
 | 7 | Virola/caño sin costura barril mayor largo 3, | 3,2 × 1.120,00 = 3.584,00 | 3,2 m × 750,00 + compra extra 7b = 9.000,00 | +151% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) · real: planilla: 'debería contemplar 1 tira de 12 m?' |
 | 8 | Caño sin costura 12" XS ASTM A-106 Gr B | 5,9 × 217,23 = 1.281,66 | 5,9 m × 228,56 + compra extra 8b = 2.742,72 | +114% | lista · Renard (cód. 1192) · CAN-01421 · 2025-12-26 | más caro (similar) |
 | 9 | Caño sin costura 4" 120 ASTM A-106 Gr B | 8,5 × 60,37 = 513,14 | 8,5 m × 60,37 + compra extra 9b = 724,44 | +41% | lista · Renard (cód. 1162) · CAN-01493 · 2025-12-26 | más caro |
@@ -46,10 +46,10 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 38 | Hierro ángulo 1 1/2 x 1 1/2 x 1/4 (skid) ASTM | 5,25 × 1,40 = 7,35 | 5,25 kg × 1,90 = 9,97 | +36% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | más caro (similar) |
 | 39 | Perfil UPN 160 (skid) ASTM A-36 | 590 × 1,80 = 1.062,00 | 590 kg × 1,90 = 1.121,00 | +6% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | dentro de ±15% · real: planilla: 590 kg × 1,5 USD/kg = 885 + 20% de desperdicio = 1.062 |
 | 40 | Malla metálica romboidal tipo Shulman 50 x 30 | 14 × 0,00 = 0,00 | 14 m2 × 0,00 = 0,00 |  | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo · real: la planilla la lista (14 m² × 25 = 250, precio WhatsApp AG Inter) pero no la suma al skid |
-| 41 | Válvula esférica, cuerpo WCB, internos 316, a | 1 × 11.934,00 = 11.934,00 | 1 un × 10.740,60 = 10.740,60 | -10% | lista · Taval (Lista 30 × 0.52) · VAL-04439 · 2025-09-01 | dentro de ±15% |
-| 42 | Válvula esférica, cuerpo WCB, internos 316, a | 2 × 1.900,08 = 3.800,16 | 2 un × 1.710,00 = 3.420,00 | -10% | lista · Taval (Lista 30 × 0.52) · VAL-04469 · 2025-09-01 | dentro de ±15% |
-| 43 | Válvula esférica, cuerpo WCB, internos 316, a | 2 × 926,00 = 1.852,00 | 2 un × 832,00 = 1.664,00 | -10% | lista · Taval (Lista 30 × 0.52) · VAL-04448 · 2025-09-01 | dentro de ±15% |
-| 44 | Válvula esférica, cuerpo WCB, internos 316, a | 1 × 740,80 = 740,80 | 1 un × 540,40 = 540,40 | -27% | lista · Taval (Lista 30 × 0.52) · VAL-04448 · 2025-09-01 | más barato (similar) |
+| 41 | Válvula esférica, cuerpo WCB, internos 316, a | 1 × 11.934,00 = 11.934,00 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo |
+| 42 | Válvula esférica, cuerpo WCB, internos 316, a | 2 × 1.900,08 = 3.800,16 | 2 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo |
+| 43 | Válvula esférica, cuerpo WCB, internos 316, a | 2 × 926,00 = 1.852,00 | 2 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo |
+| 44 | Válvula esférica, cuerpo WCB, internos 316, a | 1 × 740,80 = 740,80 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo |
 | 45 | Válvula esférica 5000 WOG, asientos Delrin, c | 1 × 60,32 = 60,32 | 1 un × 65,20 = 65,20 | +8% | ant · válvulas Taval (el resumen las agrupa co · 2026-01-26 | dentro de ±15% |
 | 46 | Válvula macho (tapón lubricado) invertida, in | 1 × 920,00 = 920,00 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo |
 | 47 | Manómetro con glicerina Ø100 mm 0-400 1/2" | 1 × 120,00 = 120,00 | 1 un × 120,00 = 120,00 | 0% | ant · Weisz o similar · INS-02702 · 2026-08-14 | dentro de ±15% |
@@ -57,7 +57,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 49 | Detector de paso de scraper | 1 × 4.209,50 = 4.209,50 | 1 un × 1.650,00 = 1.650,00 | -61% | ant · TDW (marca) · OTR-02969 · 2025-12-10 | más barato (similar) |
 | 50 | Válvula de bloqueo y purga (para manómetro) 1 | 1 × 150,00 = 150,00 | 1 un × 80,00 = 80,00 | -47% | ant · Abac · VAL-03162 · 2026-04-22 | más barato (similar) |
 
-**Materiales: real USD 58.316,80 · cotizador USD 52.874,68 (-9%).** 11 dentro de ±15%, 28 fuera, 11 sin precio.
+**Materiales: real USD 58.316,80 · cotizador USD 33.595,96 (-42%).** 7 dentro de ±15%, 27 fuera, 16 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -74,5 +74,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por trampa
 
-Real USD 83.177,98 · cotizador USD 78.292,90 (-6%) antes de completar lo que el cotizador marca para revisar.
+Real USD 83.177,98 · cotizador USD 59.014,18 (-29%) antes de completar lo que el cotizador marca para revisar.
 

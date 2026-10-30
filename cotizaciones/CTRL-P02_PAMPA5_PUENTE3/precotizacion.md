@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-P02
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 5.163,28 por equipo · soldadura y servicios calculados USD 4.002,94 · 17 similares (1, 2, 4, 9, 11, 12, 14, 15, 16, 17, 19, 23, 33, 37, 38, 39, 40) · 0 sin precio (—).
+**Resumen:** materiales USD 5.150,12 por equipo · soldadura y servicios calculados USD 4.002,94 · 18 similares (1, 2, 4, 9, 11, 12, 14, 15, 16, 17, 19, 23, 24, 33, 37, 38, 39, 40) · 2 sin precio (6, 8).
 
 
 ## 1. Materiales
@@ -13,9 +13,9 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 3 | Codo 45° RL BW Sch. 40 · Ø 3" | IGUAL | 17,49 / un | 2026-02-11 · cotización | — |
 | 4 | Sockolet 3 x 3/4 · Ø 3" x 3/4" | SIMILAR | 18,37 / un | 2025-12-23 · planilla interna | diametro: 0.5" (pedido 3"); extremos: sin dato (pedido SW/BW); precio escalado por diámetro (0,75" ÷ 0,5")^1,5 |
 | 5 | Caño sin costura longitud 5173 mm · Ø 3" | IGUAL | 25,08 / m | 2025-12-26 · lista | — |
-| 6 | Tee reducción BW 3 Sch. 40 x 2 Sch. 80 · Ø 3" | IGUAL | 44,20 / un | 2025-12-26 · lista | — |
+| 6 | Tee reducción BW 3 Sch. 40 x 2 Sch. 80 · Ø 3" | **SIN PRECIO** | — | — | pedir cotización |
 | 7 | Brida WNRF Sch. 80 · Ø 2" | IGUAL | 23,95 / un | 2025-12-26 · lista | — |
-| 8 | Junta espiralada e=4.5 mm · Ø 2" | IGUAL | 5,00 / un | 2025-12-23 · planilla interna | — |
+| 8 | Junta espiralada e=4.5 mm · Ø 2" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (0.75") (JUN-02760, USD 2,00): pedir cotización |
 | 9 | Válvula esférica paso total RF accionamiento  | SIMILAR | 170,30 / un | 2025-12-10 · planilla interna | — · faltan: material |
 | 10 | Brida ciega BLRF · Ø 2" | IGUAL | 18,50 / un | 2025-12-26 · lista | — |
 | 11 | Válvula esférica paso reducido NPT WOG 3000 · | SIMILAR | 43,60 / un | 2025-09-01 · lista | paso: total (pedido reducido) |
@@ -31,7 +31,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 21 | Caño sin costura longitud 258 mm · Ø 3" | IGUAL | 25,08 / m | 2025-12-26 · lista | — |
 | 22 | Brida WNRF Sch. 40 · Ø 3" | IGUAL | 40,98 / un | 2025-12-26 · lista | — |
 | 23 | Niple caño Sch. 80 (XS) longitud 100 mm · Ø 1 | SIMILAR (estimado cepo) ⚠ | 5,38 / un | 2024-11-01 · estimado (cepo) | largo_mm: 150 (pedido 100) |
-| 24 | Junta espiralada e=4.5 mm · Ø 3" | IGUAL | 7,00 / un | 2025-12-23 · planilla interna | — |
+| 24 | Junta espiralada e=4.5 mm · Ø 3" | SIMILAR (estimado cepo) ⚠ | 12,13 / un | 2025-03-27 · estimado (cepo) | diametro: 4" (pedido 3") |
 | 25 | Caño sin costura longitud 722 mm · Ø 3" | IGUAL | 25,08 / m | 2025-12-26 · lista | — |
 | 26 | Válvula esférica paso total RF accionamiento  | IGUAL | 256,00 / un | 2025-09-01 · lista | — |
 | 27 | Brida ciega BLRF · Ø 3" | IGUAL | 36,49 / un | 2025-12-26 · lista | — |
@@ -81,7 +81,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 49 placas chicas + 0 grandes + 1,30 servicio(s) de RX + 0,60 de LP por equipo = USD 1.666,00 (Servicio de radiografía (Antonelli) (2025-11; antonelli_end_2025-11)).
   Con las tarifas de Antonelli (11-2025) serían USD 1.666,00: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: puente, 3", 10 u, materiales USD 5.163 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: puente, 3", 10 u, materiales USD 5.150 por unidad)
 
 - **Ingeniería:** 7,5 h × USD 15/h = USD 112,50 · mediana de 9,0, 6,0 h por unidad (repartidas en la serie) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 4in #600 (serie de 13 unidades) (4, 13 u, 2026-02-19) · rango del mismo tipo 6–9 h
 - **Calidad y dossier:** 3,5 h × USD 15/h = USD 52,50 · mediana de 1,0, 6,0 h por unidad (repartidas en la serie) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 4in #600 (serie de 13 unidades) (4, 13 u, 2026-02-19) · rango del mismo tipo 1–6 h

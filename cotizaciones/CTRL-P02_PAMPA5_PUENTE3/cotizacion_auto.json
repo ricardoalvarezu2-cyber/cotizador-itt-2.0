@@ -250,13 +250,13 @@
    "especificacion": "Plano: 3\" x 2\" · 40 x 80 · ASTM A-234 WPB · BW · ASME B16.9",
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 44.2,
-     "proveedor": "Renard (cód. 3513) · ABW-00389",
-     "codigo": "ABW-00389",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3513",
-     "fecha": "2025-12-26",
-     "coincide": "igual"
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-30",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
    ]
   },
@@ -290,13 +290,13 @@
    "especificacion": "Plano: 2\" · 300 · AISI 316 SS + grafito ·  · ASME B16.20",
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 5.0,
-     "proveedor": "sin proveedor en planilla · JUN-02769",
-     "codigo": "JUN-02769",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECHINT\\12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado · 4.Armado de la Oferta Comercial/OFERTA REV A/LM costo Desarenador rev ventas REV. 1.xlsx",
-     "fecha": "2025-12-23",
-     "coincide": "igual"
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-30",
+     "coincide": "sin_ref",
+     "diferencia": "El más parecido es de otro diámetro (0.75\") (JUN-02760 JUNTA ESPIRALADA C/ANILLO EXT AC ZINC/ A.INT AI | , USD 2,00): no sirve como precio"
     }
    ]
   },
@@ -622,13 +622,14 @@
    "especificacion": "Plano: 3\" · 300 · AISI 316 SS + grafito ·  · ASME B16.20",
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 7.0,
-     "proveedor": "sin proveedor en planilla · JUN-02775",
-     "codigo": "JUN-02775",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECHINT\\12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado · 4.Armado de la Oferta Comercial/OFERTA REV A/LM costo Desarenador rev ventas REV. 1.xlsx",
-     "fecha": "2025-12-23",
-     "coincide": "igual"
+     "tipo": "est",
+     "precio": 12.13,
+     "proveedor": "no dice · JUN-01699",
+     "codigo": "JUN-01699",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\3-YPF Separador Bifasicos - Separadores para satelites · 5.Proveedores 3ros/YPF - Sep Bifasico - 2591 - 21.2 - precios compras V1.xlsx.txt",
+     "fecha": "2025-03-27",
+     "coincide": "similar",
+     "diferencia": "diametro: 4\" (pedido 3\")"
     }
    ]
   },

@@ -249,35 +249,13 @@
    "especificacion": "Plano: 12\" · esp. 5/8\" · API 5L X52 · BW",
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 242.81,
-     "proveedor": "Renard (cód. 1202) · CAN-01436",
-     "codigo": "CAN-01436",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1202",
-     "fecha": "2025-12-26",
-     "coincide": "similar",
-     "diferencia": "espesor_mm: 14.27 (pedido 15.88); material: A106 B (pedido API 5L)"
-    }
-   ]
-  },
-  {
-   "id": "M06B",
-   "pos": "6b",
-   "grupo": "material",
-   "descripcion": "Completar barra de 12 m de la pos 6 (compra mínima; sobrante, no va en el equipo)",
-   "cantidad": 7.2,
-   "unidad": "m",
-   "especificacion": "1 barra(s) de 12 m para 4,8 m en 1 equipo(s); por equipo 7,2 m",
-   "fuentes": [
-    {
-     "tipo": "lista",
-     "precio": 242.81,
-     "proveedor": "Renard (cód. 1202) · CAN-01436",
-     "codigo": "CAN-01436",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1202",
-     "fecha": "2025-12-26",
-     "coincide": "similar",
-     "diferencia": "espesor_mm: 14.27 (pedido 15.88); material: A106 B (pedido API 5L)"
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-30",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
    ]
   },
@@ -1089,14 +1067,13 @@
    "taval": true,
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 10740.6,
-     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04439",
-     "codigo": "VAL-04439",
-     "origen": "taval_lista30_2025-09.xlsx · código BG13006R0104NP, hoja PR Guiada",
-     "fecha": "2025-09-01",
-     "coincide": "similar",
-     "diferencia": "trim: sin dato (pedido ptfe); paso: reducido (no pedido)"
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-30",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
    ]
   },
@@ -1111,14 +1088,13 @@
    "taval": true,
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 1710.0,
-     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04469",
-     "codigo": "VAL-04469",
-     "origen": "taval_lista30_2025-09.xlsx · código BG11006R0104NP, hoja PR Guiada",
-     "fecha": "2025-09-01",
-     "coincide": "similar",
-     "diferencia": "trim: sin dato (pedido ptfe); paso: reducido (no pedido)"
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-30",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
    ]
   },
@@ -1133,14 +1109,13 @@
    "taval": true,
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 832.0,
-     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04448",
-     "codigo": "VAL-04448",
-     "origen": "taval_lista30_2025-09.xlsx · código BG10506R0104NP, hoja PR Guiada",
-     "fecha": "2025-09-01",
-     "coincide": "similar",
-     "diferencia": "trim: sin dato (pedido ptfe); paso: reducido (no pedido)"
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-30",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
    ]
   },
@@ -1155,14 +1130,13 @@
    "taval": true,
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 540.4,
-     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04448",
-     "codigo": "VAL-04448",
-     "origen": "taval_lista30_2025-09.xlsx · código BG10506R0104NP, hoja PR Guiada",
-     "fecha": "2025-09-01",
-     "coincide": "similar",
-     "diferencia": "diametro: 2\" (pedido 1.5\"); trim: sin dato (pedido ptfe); paso: reducido (no pedido); precio escalado por diámetro (1,5\" ÷ 2\")^1,5 = × 0,65"
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-30",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
    ]
   },

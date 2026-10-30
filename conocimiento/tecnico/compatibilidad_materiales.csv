@@ -16,14 +16,16 @@ patron,material,clase,grupo_b16_5,forma,nota
 "\ba ?333\b",A333 sin grado,a333_sin_grado,,caño,"Sin grado no se sabe si es Gr 6"
 "\ba ?420\b|\bwpl ?6\b",A420 WPL6,carbono_baja_temp,,accesorio_bw,"Accesorio para baja temperatura (Charpy): A234 WPB no lo reemplaza"
 "\ba ?515\b",A515,a515,,chapa,"Grano grueso, peor tenacidad que A516: no lo reemplaza"
-"\ba ?516\b.*\b(?:gr\.? ?)?60\b|\b516[- ]?60\b",A516-60,carbono_516_60,1.4,chapa,
-"\ba ?516\b.*\b(?:gr\.? ?)?65\b|\b516[- ]?65\b",A516-65,carbono_516_65,1.3,chapa,
+"\ba ?516[- ]?(?:gr(?:ado)?\.? ?)?60\b|\b516[- ]?60\b",A516-60,carbono_516_60,1.4,chapa,
+"\ba ?516[- ]?(?:gr(?:ado)?\.? ?)?65\b|\b516[- ]?65\b",A516-65,carbono_516_65,1.3,chapa,
 "\ba ?516\b|\b516[- ]?70\b",A516-70,carbono,1.1,chapa,"Chapa para recipientes a presión"
 "\ba ?36\b",A36,carbono_estructural,,chapa_perfil,"Acero estructural: no apto para partes a presión"
 "\ba ?106\b.*\bgr(?:ado)?\.? ?c\b",A106 C,cano_a106c,,caño,"70/40 ksi: A106 B no lo reemplaza"
 "\ba ?106\b",A106 B,cano_a106,,caño,"Caño sin costura de acero al carbono"
-"\ba ?53\b",A53 B,cano_a53,,caño,"Con o sin costura; B31.3: E = 0,85 (ERW), 0,60 (tipo F). Lo reemplaza A106 B, no al revés"
-"\bapi ?5l\b.*\bx[- ]?\d{2}|\bx[- ]?(42|46|52|56|60|65|70)\b",API 5L X,carbono_alta_resistencia,,caño,"Grado X (fluencia mínima en ksi): el grado tiene que coincidir"
+"\ba ?53a\b|\ba ?53 ?gr?(?:ado)?\.? ?a\b",A53 Gr A,cano_a53a,,caño,"Grado A (48/30 ksi): no reemplaza a A53 B"
+"\ba ?53 ?(?:tipo ?[efs] ?)?(?:gr?(?:ado)?\.? ?)?b\b",A53 B,cano_a53,,caño,"Con o sin costura; B31.3: E = 0,85 (ERW), 0,60 (tipo F). Lo reemplaza A106 B, no al revés"
+"\ba ?53\b",A53 sin grado,cano_a53_sin_grado,,caño,"Sin grado no se sabe si es B: no reemplaza a A53 B (auditoría 30-10-2026)"
+"\bapi ?5l\b.*\bx[- ]?\d{2}\b|\bx-?(42|46|52|56|60|65|70)\b",API 5L X,carbono_alta_resistencia,,caño,"Grado X (fluencia mínima en ksi): el grado tiene que coincidir"
 "\bapi ?5l\b",API 5L B,cano_api5l_b,,caño,"Puede tener costura; PSL2 exige Charpy. Lo reemplaza A106 B (PSL1)"
 "\ba ?234\b|\bwpb\b",A234 WPB,carbono,,accesorio_bw,"Accesorios a tope de acero al carbono"
 "\ba ?860\b|\bwphy\b",A860 WPHY,carbono_alta_resistencia,,accesorio_bw,"El grado (WPHY 52, 60, 65…) tiene que coincidir"
@@ -44,11 +46,11 @@ patron,material,clase,grupo_b16_5,forma,nota
 "\bl ?7\b",A320 L7,bulon_l7,,bulon,"125 ksi + Charpy: reemplaza a B7, no al revés"
 "\bb ?7\b",A193 B7,bulon_b7,,bulon,
 "\bb ?8 ?m\b.*\bcl(?:ase)?\.? ?2\b",A193 B8M Cl 2,bulon_b8m_cl2,,bulon,"Endurecido por deformación: reemplaza a B8M Cl 1"
-"\bb ?8 ?m\b|\b8 ?m\b",A193 B8M / A194 8M,bulon_inox,,bulon,
+"\bb ?8 ?m\b|\b(?:a194|tuercas?|gr\.?|grado) ?8 ?m\b",A193 B8M / A194 8M,bulon_inox,,bulon,
 "\bb ?8\b",A193 B8 (304),bulon_304,,bulon,
 "\b2 ?hm\b",A194 2HM,tuerca_2hm,,tuerca,"NACE: menor carga de prueba que 2H; no la reemplaza"
 "\b2 ?h\b",A194 2H,tuerca_2h,,tuerca,
-"\ba ?194\b.*\b(?:gr\.? ?)?[47]\b",A194 4 / 7,tuerca_4_7,,tuerca,"Reemplaza a 2H"
+"\ba ?194 ?(?:gr(?:ado)?\.? ?)?[47]\b(?!/)",A194 4 / 7,tuerca_4_7,,tuerca,"Reemplaza a 2H"
 "\bklinger",Klingerit,klingerit,,,
 "\bgrafito\b",Grafito,grafito,,,
 "\bpt ?fe\b",PTFE,ptfe,,,

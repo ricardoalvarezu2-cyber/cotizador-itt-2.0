@@ -8,6 +8,6 @@ Generado por `herramientas/verificar_origen.py`. Solo avisa cuando el precio NO 
 
 ## No controlados
 
-- estimado o sin precio: 35
+- estimado o sin precio: 36
 - el documento no está como texto en el repositorio: 3
 - convertido de pesos: 1

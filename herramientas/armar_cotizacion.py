@@ -402,7 +402,7 @@ def main(carpeta):
     if any(abs(py[k] - xl[k]) > 0.011 for k in py):
         sys.exit("ERROR: el cálculo en Python y la planilla no coinciden. Revisar antes de seguir.")
     import verificar_computo
-    if verificar_computo.main(carpeta) != 0:
+    if verificar_computo.main(carpeta) not in (0, 2):  # 2: solo desvíos a confirmar en un borrador (no frena el armado)
         sys.exit("ERROR: verificar_computo.py encontró errores.")
     import controles_tablas
     controles_tablas.main(carpeta)  # kilos y m², plazos de material y marcas del cliente → controles_tablas.md

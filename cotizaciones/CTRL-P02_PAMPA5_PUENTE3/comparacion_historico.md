@@ -11,9 +11,9 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 3 | Codo 45° RL 3" sch 40 BW A234 WPB | 1 × 12,13 = 12,13 | 1 un × 17,49 = 17,49 | +44% | cot · Cintolo cot 11/02/26 · ABW-00064 · 2026-02-11 | más caro |
 | 4 | Sockolet 3" x 3/4" 3000 A105 | 6 × 6,00 = 36,00 | 6 un × 18,37 = 110,22 | +206% | ant · sin proveedor en planilla · AFO-03330 · 2025-12-23 | más caro (similar) |
 | 5 | Caño s/c 3" sch 40 A106 B (tramo 5173 mm) | 1 × 138,97 = 138,97 | 5,17 m × 25,08 = 129,74 | -7% | lista · Renard (cód. 1153) · CAN-01484 · 2025-12-26 | dentro de ±15% · real: la planilla compra 7,4 m de caño 3" (0,9 + 5,2 + 1,3 m) a 25,08 = 185,59; aquí van 5,541 m (el tramo de 5,173 m + el sobrante de 0,368 m); los otros tramos van en su posición |
-| 6 | Tee reducción 3" sch 40 x 2" sch 80 BW A234 W | 1 × 44,20 = 44,20 | 1 un × 44,20 = 44,20 | 0% | lista · Renard (cód. 3513) · ABW-00389 · 2025-12-26 | dentro de ±15% |
+| 6 | Tee reducción 3" sch 40 x 2" sch 80 BW A234 W | 1 × 44,20 = 44,20 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo |
 | 7 | Brida WNRF 2" #300 A105 | 1 × 22,20 = 22,20 | 1 un × 23,95 = 23,95 | +8% | lista · Renard (cód. 12052) · BRI-01254 · 2025-12-26 | dentro de ±15% · real: la planilla la toma sch 40 ("Considero sch40"); el plano dice sch 80 |
-| 8 | Junta espiralada 2" #300 316 + grafito | 2 × 6,00 = 12,00 | 2 un × 5,00 = 10,00 | -17% | ant · sin proveedor en planilla · JUN-02769 · 2025-12-23 | más barato |
+| 8 | Junta espiralada 2" #300 316 + grafito | 2 × 6,00 = 12,00 | 2 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo |
 | 9 | Válvula esférica 2" #300 PT RF WCB palanca (f | 1 × 131,13 = 131,13 | 1 un × 170,30 = 170,30 | +30% | ant · Válvulas Taval (s/listado de Valv.) · VA · 2025-12-10 | más caro (similar) · real: va como Válvulas Taval (factor 1) |
 | 10 | Brida ciega 2" #300 RF A105 | 1 × 18,50 = 18,50 | 1 un × 18,50 = 18,50 | 0% | lista · Renard (cód. 8252) · BRI-01031 · 2025-12-26 | dentro de ±15% |
 | 11 | Válvula esférica 3/4" NPT WOG 3000 A105 | 9 × 42,04 = 378,38 | 9 un × 43,60 = 392,40 | +4% | lista · Taval (Lista 30 × 0.52) · VAL-04878 · 2025-09-01 | dentro de ±15% · real: va como Válvulas Taval (factor 1); la planilla dice "PR" y anota "P Total" |
@@ -29,7 +29,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 21 | Caño s/c 3" sch 40 A106 B (tramo 258 mm) | 1 × 6,47 = 6,47 | 0,26 m × 25,08 = 6,47 | +0% | lista · Renard (cód. 1153) · CAN-01484 · 2025-12-26 | dentro de ±15% |
 | 22 | Brida WNRF 3" #300 sch 40 A105 | 6 × 40,98 = 245,88 | 8 un × 40,98 = 327,84 | +33% | lista · Renard (cód. 11978) · BRI-01282 · 2025-12-26 | más caro · real: la planilla compra 6 (1 + 5); el plano pide 8 |
 | 23 | Niple 1" x 100 mm sch 80 NPT | 1 × 10,00 = 10,00 | 1 un × 5,38 = 5,38 | -46% | est · Stock ITT (cód. ACI025FN1ICK150) · NIP-0 · 2024-11-01 | más barato (similar) |
-| 24 | Junta espiralada 3" #300 316 + grafito | 7 × 6,00 = 42,00 | 8 un × 7,00 = 56,00 | +33% | ant · sin proveedor en planilla · JUN-02775 · 2025-12-23 | más caro · real: la planilla compra 7; el plano pide 8 |
+| 24 | Junta espiralada 3" #300 316 + grafito | 7 × 6,00 = 42,00 | 8 un × 12,13 = 97,04 | +131% | est · no dice · JUN-01699 · 2025-03-27 | más caro (similar) · real: la planilla compra 7; el plano pide 8 |
 | 25 | Caño s/c 3" sch 40 A106 B (tramo 722 mm) | 1 × 18,11 = 18,11 | 0,72 m × 25,08 = 18,11 | 0% | lista · Renard (cód. 1153) · CAN-01484 · 2025-12-26 | dentro de ±15% |
 | 26 | Válvula esférica 3" #300 PT RF WCB palanca (f | 3 × 246,25 = 738,74 | 3 un × 256,00 = 768,00 | +4% | lista · Taval (Lista 30 × 0.52) · VAL-04457 · 2025-09-01 | dentro de ±15% · real: va como Válvulas Taval (factor 1) |
 | 27 | Brida ciega 3" #300 RF A105 | 1 × 36,49 = 36,49 | 1 un × 36,49 = 36,49 | 0% | lista · Renard (cód. 8254) · BRI-01044 · 2025-12-26 | dentro de ±15% |
@@ -47,7 +47,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 39 | Manómetro con manifold | 1 × 0,00 = 0,00 | 1 un × 120,00 = 120,00 |  | ant · planilla de costo ITT · INS-02694 · 2026-06-26 | más barato (similar) · real: la planilla NO lo costea |
 | 40 | Transmisor de presión ABB con manifold | 1 × 901,71 = 901,71 | 1 un × 1.100,00 = 1.100,00 | +22% | ant · Vega (cotización en 5.Proveedores 3ros)  · 2026-03-10 | más caro (similar) · real: en la planilla va en Instrumentos (factor 1,35); alternativa Rosemount 2.848,53 |
 
-**Materiales: real USD 6.400,97 · cotizador USD 5.163,28 (-19%).** 22 dentro de ±15%, 18 fuera, 0 sin precio.
+**Materiales: real USD 6.400,97 · cotizador USD 5.150,12 (-20%).** 21 dentro de ±15%, 17 fuera, 2 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -63,5 +63,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por puente
 
-Real USD 8.836,97 · cotizador USD 9.166,21 (+4%) antes de completar lo que el cotizador marca para revisar.
+Real USD 8.836,97 · cotizador USD 9.153,05 (+4%) antes de completar lo que el cotizador marca para revisar.
 

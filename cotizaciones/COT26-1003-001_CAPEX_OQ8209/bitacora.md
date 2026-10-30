@@ -100,3 +100,25 @@ python herramientas/armar_cotizacion.py cotizaciones/COT26-1003-001_CAPEX_OQ8209
 ```
 
 Lo único que se edita es `cotizacion.json` (y `oferta.json` para los textos de la oferta). El informe se genera en `informe.html` (ya no se publica como página aparte; la cotización se ve en el Cotizador).
+
+## 30-10-2026 · Segunda auditoría independiente de compatibilidades
+- Pos 10 (buje 2"x1/2" NPT serie 2000): la referencia Renard es BSPT → SIN PRECIO, pedir buje NPT.
+- Pos 23 (cupla 1/2" A234 WPB 80/2000 NPT/BW): la referencia era A105 NPT/NPT serie 3000, sin documentar → SIN PRECIO, pedir cotización.
+- Pos 2, 5 y 7 quedan como ESTIMADOS (ya lo eran) armados sobre piezas que no cumplen el plano (pos 7: trim 13Cr, no AISI 316): pedir cotización con la especificación del plano.
+- Unitario USD 7.324,57 (antes 7.366,12). Borrador.
+
+## 30-10-2026 · Tercera auditoría independiente
+- Los desvíos de la oferta (serie 3000, reducción 80×80, revestimiento, válvulas) son ahora lo que permite usar una pieza distinta: P9 los muestra como aviso y marca los que siguen "a confirmar" (pos 2, 5, 7, 14, 21). Hay que resolverlos antes de enviar.
+- El buscador ya no propone para la pos 14 un caño sin revestimiento ni para la pos 16 una reducción XS×XS (el plano pide 80×40). La cotización no cambia.
+
+## 30-10-2026 · Cuarta auditoría independiente
+- El desvío de la oferta vale solo si habla de lo que no cumple y está resuelto: pos 2, 5, 7, 14 y 14b quedan como "DESVÍO A CONFIRMAR" (frenan el paso a revisado).
+- Pos 21 (unión doble serie 3000 por 2000): se sumó al desvío de serie 3000 de la oferta ("Accesorios forjados roscados (pos. 1, 8, 10, 11, 17, 18) y unión doble (pos. 21)"). Revisar con Matías.
+
+## 30-10-2026 · Quinta auditoría independiente: desvíos estructurados
+- Cada desvío pasa a ser un dato del renglón (`desvio`): serie 3000 por 2000 en pos 1, 8, 11, 17, 18 y 21; schedule 80×80 por 80×40 en pos 16; "a confirmar" en pos 2, 5 (material y, nuevo, serie WOG 3000), 7, 14 y 14b. Los "a confirmar" frenan el paso a revisado.
+- Pos 21: la oferta dice "sello metal-metal, marca Duralite o equivalente", pero el precio es de Adita M-H sin mención del sello: revisar con Matías.
+
+## 30-10-2026 · Sexta auditoría independiente
+- Pos 13 (junta monolítica): la fuente Duralitte es BW/NPT y el plano pide BW/BW → desvío de extremos a confirmar (la oferta ya lo tenía entre corchetes). Con la regla nueva de extremos sería ERROR sin desvío.
+- Las aclaraciones de la oferta entre [corchetes] (pos 2, 5, 7, 13, 14, 19, 20, 21, 23 y niples) frenan el paso a revisado también en Python.

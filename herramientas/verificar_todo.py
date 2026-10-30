@@ -21,7 +21,7 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent.parent
 H = RAIZ / "herramientas"
 CAPEX = "cotizaciones/COT26-1003-001_CAPEX_OQ8209"
-CONTROL = {"precio_unitario": "7.366,12"}  # 28/10/2026: dólar promedio BNA, cepo estimado, sin IVA; sin los 3 valores supuestos sin referencia (P4 ter)
+CONTROL = {"precio_unitario": "7.324,57"}  # 30-10-2026: pos 10 (BSPT por NPT) y 23 (otra serie y extremos) SIN PRECIO por compatibilidad; antes 7.366,12
 fallas = []
 sys.path.insert(0, str(H))
 from candado import candado  # noqa: E402
@@ -54,6 +54,8 @@ antes = modificados()
 for t in ("test_catalogo.py", "test_catalogo_servicios.py", "test_precotizar.py", "test_antecedentes.py", "test_compatibilidad.py",
           "test_errores_sembrados.py"):
     correr(t, [str(H / t)])
+# índice de precios: se regenera siempre (auditoría 30-10-2026: quedaba viejo si no se corría actualizar_base.py)
+correr("indice_precios.py", [str(H / "indice_precios.py")])
 for script, salida in (("catalogo_materiales.py", "conocimiento/precios/catalogo_materiales.csv"),
                        ("catalogo_servicios.py", "conocimiento/precios/catalogo_servicios.csv")):
     correr(script, [str(H / script)])
@@ -106,16 +108,36 @@ if r.returncode:
 # revisa renglón por renglón y se acepta a propósito); 2) ninguna cotización del repositorio usa una referencia que la
 # norma no permite (el mismo control que verificar_computo.py hace en P9).
 correr("resultados del buscador iguales a los aceptados (revisar_cambio_busqueda.py --control)", [str(H / "revisar_cambio_busqueda.py"), "--control"])
+# tercera auditoría (30-10-2026): un cambio de reglas que amplía lo que se lee puede ACEPTAR reemplazos prohibidos
+correr("pares de compatibilidad iguales a la línea base (revisar_pares_compatibilidad.py --control)",
+       [str(H / "revisar_pares_compatibilidad.py"), "--control"])
 import verificar_computo  # noqa: E402
-incomp = []
+incomp, a_confirmar = [], []
 for carpeta in sorted((RAIZ / "cotizaciones").iterdir()):
     if (carpeta / "cotizacion.json").exists() and (carpeta / "pedido" / "lista_materiales_plano.csv").exists() and not carpeta.name.startswith("_"):
         plano = list(csv.DictReader(open(carpeta / "pedido" / "lista_materiales_plano.csv", encoding="utf-8")))
-        incomp += [f"{carpeta.name}: {e}" for e in verificar_computo.control_compatibilidad(carpeta, plano)]
+        est = json.load(open(carpeta / "cotizacion.json", encoding="utf-8")).get("estado", "borrador")
+        for e in verificar_computo.control_compatibilidad(carpeta, plano):
+            if e.startswith(verificar_computo.A_CONFIRMAR) and est == "borrador":
+                a_confirmar.append(f"{carpeta.name}: {e[len(verificar_computo.A_CONFIRMAR):]}")
+            else:  # un desvío a confirmar no frena un borrador, pero sí una cotización revisada o aprobada
+                incomp.append(f"{carpeta.name}: {e}")
 print(f"{'OK  ' if not incomp else 'FALLA'} referencias compatibles con la norma en todas las cotizaciones ({len(incomp)} problemas)")
+if a_confirmar:
+    print(f"     {len(a_confirmar)} desvíos de la oferta a confirmar en borradores (frenan el paso a revisado):")
+    print("\n".join("       " + x[:150] for x in a_confirmar[:12]))
 if incomp:
     fallas.append("cotizaciones con referencias incompatibles")
     print("\n".join("  " + x for x in incomp[:20]))
+# Fichas (auditoría 30-10-2026): ninguna ficha consolidada tiene en sus ítems un precio que solo figura en documentos de
+# proveedores (error de ALUAR/1; consolidar_fichas.py ya no las deja entrar, esto controla las que ya están).
+import validar_fichas  # noqa: E402
+mal = [f"{f.parent.name}/{f.name}: {x[len(validar_fichas.CRITICO):]}" for f in sorted((RAIZ / "conocimiento").glob("fichas_*/*.json"))
+       for x in validar_fichas.criticos(validar_fichas.validar(json.load(open(f, encoding="utf-8")))) if "documentos de proveedores" in x]
+print(f"{'OK  ' if not mal else 'FALLA'} fichas sin precios de proveedor en los ítems ({len(mal)} problemas)")
+if mal:
+    fallas.append("fichas con precios de proveedor en los ítems")
+    print("\n".join("  " + x for x in mal[:20]))
 # Frenos de la oferta (proceso unificado, 30-10-2026): no fallan el control (son de cada cotización), se informan para que
 # se vea qué le falta a cada una antes de generar ofertas.
 import contextlib  # noqa: E402

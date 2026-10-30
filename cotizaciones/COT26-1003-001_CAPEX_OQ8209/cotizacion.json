@@ -318,6 +318,13 @@
      "coincide": "similar",
      "diferencia": "Serie 3000 en lugar de 2000 (superior)"
     }
+   ],
+   "desvio": [
+    {
+     "que": "serie",
+     "ofrecido": "serie 3000",
+     "pedido": "serie 2000"
+    }
    ]
   },
   {
@@ -344,6 +351,13 @@
      "proveedor": "Taval 1/2\" 1500# (asiento blando)",
      "origen": "TAVAL/55 · PRES 24879",
      "fecha": "2026-04-22"
+    }
+   ],
+   "desvio": [
+    {
+     "que": "material",
+     "ofrecido": "a confirmar con el proveedor (cotizada forjada con asiento PTFE)",
+     "pedido": "cuerpo enterizo A216, asientos metálicos AISI 316"
     }
    ]
   },
@@ -412,6 +426,18 @@
      "origen": "TAVAL/55 · PRES 24879",
      "fecha": "2026-04-22"
     }
+   ],
+   "desvio": [
+    {
+     "que": "material",
+     "ofrecido": "a confirmar con el proveedor (cotizada forjada con asiento PTFE)",
+     "pedido": "cuerpo enterizo A216, asientos metálicos AISI 316"
+    },
+    {
+     "que": "serie",
+     "ofrecido": "WOG 3000 (a confirmar)",
+     "pedido": "serie 2000"
+    }
    ]
   },
   {
@@ -473,6 +499,13 @@
      "origen": "TAVAL/55 · PRES 24879",
      "fecha": "2026-04-21"
     }
+   ],
+   "desvio": [
+    {
+     "que": "material",
+     "ofrecido": "trim 8 (13Cr) sin resorte, a confirmar",
+     "pedido": "clapeta, asientos y resorte AISI 316"
+    }
    ]
   },
   {
@@ -492,6 +525,13 @@
      "fecha": "2025-12-26",
      "coincide": "similar",
      "diferencia": "Serie 3000 en lugar de 2000 (superior)"
+    }
+   ],
+   "desvio": [
+    {
+     "que": "serie",
+     "ofrecido": "serie 3000",
+     "pedido": "serie 2000"
     }
    ]
   },
@@ -525,13 +565,22 @@
    "unidad": "un",
    "fuentes": [
     {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-30",
+     "coincide": "sin_ref",
+     "diferencia": "la referencia Renard es BSPT y el plano pide NPT: pedir buje NPT serie 2000"
+    },
+    {
      "tipo": "lista",
      "precio": 11.51,
      "proveedor": "Renard · cód. 6592 (es BSPT; el plano pide NPT: cotizar NPT)",
      "origen": "Lista de precios ITT",
      "fecha": "2025-12-26",
-     "coincide": "similar",
-     "diferencia": "Rosca BSPT, serie 3000; el plano pide NPT serie 2000"
+     "coincide": "descartada",
+     "diferencia": "descartada (segunda auditoría 30-10-2026): rosca BSPT por NPT · antes: Rosca BSPT, serie 3000; el plano pide NPT serie 2000"
     }
    ]
   },
@@ -552,6 +601,13 @@
      "fecha": "2025-12-26",
      "coincide": "similar",
      "diferencia": "Serie 3000 en lugar de 2000 (superior)"
+    }
+   ],
+   "desvio": [
+    {
+     "que": "serie",
+     "ofrecido": "serie 3000",
+     "pedido": "serie 2000"
     }
    ]
   },
@@ -600,6 +656,13 @@
      "origen": "APSA/9 · Puente iny + prod AIB",
      "fecha": "2026-02-05"
     }
+   ],
+   "desvio": [
+    {
+     "que": "extremos",
+     "ofrecido": "BW/NPT, a confirmar BW/BW",
+     "pedido": "BW/BW sch 80"
+    }
    ]
   },
   {
@@ -619,6 +682,13 @@
      "fecha": "2025-09-24",
      "coincide": "similar",
      "diferencia": "Revestimiento tricapa de polietileno; el plano pide polipropileno"
+    }
+   ],
+   "desvio": [
+    {
+     "que": "revestimiento",
+     "ofrecido": "tricapa de polietileno, a confirmar",
+     "pedido": "polipropileno"
     }
    ]
   },
@@ -646,6 +716,13 @@
      "proveedor": "Sin cargo si se compra por metro o hay sobrante en stock",
      "origen": "—",
      "fecha": "2026-10-27"
+    }
+   ],
+   "desvio": [
+    {
+     "que": "revestimiento",
+     "ofrecido": "tricapa de polietileno, a confirmar",
+     "pedido": "polipropileno"
     }
    ]
   },
@@ -707,6 +784,13 @@
      "coincide": "similar",
      "diferencia": "XS × XS; el plano pide 80 × 40"
     }
+   ],
+   "desvio": [
+    {
+     "que": "schedule",
+     "ofrecido": "2½\" Sch 80 × 2\" Sch 80",
+     "pedido": "80 × 40"
+    }
    ]
   },
   {
@@ -727,6 +811,13 @@
      "coincide": "similar",
      "diferencia": "Serie 3000 en lugar de 2000 (superior)"
     }
+   ],
+   "desvio": [
+    {
+     "que": "serie",
+     "ofrecido": "serie 3000",
+     "pedido": "serie 2000"
+    }
    ]
   },
   {
@@ -746,6 +837,13 @@
      "fecha": "2025-12-26",
      "coincide": "similar",
      "diferencia": "Serie 3000 en lugar de 2000 (superior)"
+    }
+   ],
+   "desvio": [
+    {
+     "que": "serie",
+     "ofrecido": "serie 3000",
+     "pedido": "serie 2000"
     }
    ]
   },
@@ -828,6 +926,13 @@
      "origen": "APSA/3 · OE 150-22",
      "fecha": "2022-08-25"
     }
+   ],
+   "desvio": [
+    {
+     "que": "serie",
+     "ofrecido": "serie 3000",
+     "pedido": "serie 2000"
+    }
    ]
   },
   {
@@ -860,13 +965,22 @@
    "unidad": "un",
    "fuentes": [
     {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-30",
+     "coincide": "sin_ref",
+     "diferencia": "la cupla Renard es A105 NPT/NPT serie 3000 y el plano pide A234 WPB 80/2000 NPT/BW: pedir cotización"
+    },
+    {
      "tipo": "lista",
      "precio": 2.71,
      "proveedor": "Renard · cód. 5292",
      "origen": "Lista de precios ITT",
      "fecha": "2025-12-26",
-     "coincide": "similar",
-     "diferencia": "Cupla entera A105 NPT/NPT; el plano pide A234 WPB 80/2000 NPT/BW"
+     "coincide": "descartada",
+     "diferencia": "descartada (segunda auditoría 30-10-2026): otra serie y otros extremos sin documentar · antes: Cupla entera A105 NPT/NPT; el plano pide A234 WPB 80/2000 NPT/BW"
     }
    ]
   },

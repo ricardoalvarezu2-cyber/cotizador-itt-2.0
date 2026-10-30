@@ -420,12 +420,21 @@ const Busqueda = (() => {
   }
 
   // ------------------------------------------------------------------ compatibilidad (espejo de herramientas/compatibilidad.py)
-  const normP = t => String(t ?? "").normalize("NFKD").replace(/[^\x00-\x7f]/g, "").toLowerCase().replace(/\s+/g, " ");
+  // igual que indice_proyectos.norm: las fracciones antes de NFKD ("½" no queda "12")
+  const FRACCIONES = { "½": " 1/2", "¼": " 1/4", "¾": " 3/4", "⅛": " 1/8", "⅜": " 3/8", "⅝": " 5/8", "⅞": " 7/8", "\u2044": "/", "ø": " diam ", "Ø": " diam ", "⌀": " diam ", "°": " grados ", "º": " grados " };
+  const normP = t => Object.entries(FRACCIONES).reduce((s, [a, b]) => s.split(a).join(b), String(t ?? "")).normalize("NFKD").replace(/[^\x00-\x7f]/g, "").toLowerCase().replace(/\s+/g, " ");
   const RX = new WeakMap();
   const mats = C => { if (!RX.has(C)) RX.set(C, C.materiales.map(m => ({ ...m, rx: new RegExp(m.patron) }))); return RX.get(C); };
-  const prep = (C, t) => normP(t).replace(new RegExp(C.prep, "g"), "a$1");
-  function clases(C, texto) {
-    const t = prep(C, texto), hits = [];
+  // igual que compatibilidad.prep: sin lo negado ("NO AISI 316"), "GR°B" → "gr b", medidas "5/8 x 60" → "5/8 por 60"
+  function medida(C, t) {  // compatibilidad._medida
+    const api = new RegExp(C.api5l).test(t);
+    return t.replace(new RegExp(C.medida_x, "g"), (m0, g1, g2, off) =>
+      C.grados_x.includes(g2) && (api || /sch ?$/.test(t.slice(Math.max(0, off - 4), off))) ? m0 : g1 + " por ");
+  }
+  const prep = (C, t) => medida(C, normP(t).replace(new RegExp(C.negacion, "g"), " ").replace(new RegExp(C.negacion_rev, "g"), " ").replace(new RegExp(C.grados, "g"), "$1 "))
+    .replace(new RegExp(C.prep, "g"), "a$1");
+  function clases(C, texto, preparado = false) {
+    const t = preparado ? texto : prep(C, texto), hits = [];
     for (const m of mats(C)) {
       const x = t.match(m.rx); if (!x) continue;
       const a = x.index, b = x.index + x[0].length;
@@ -438,10 +447,39 @@ const Busqueda = (() => {
   }
   const grado = t => (normP(t).match(/\b(?:x|wphy|f)[- ]?(\d{2})\b/) || [])[1] || "";
   const limpio = x => normP(x).replace(/[^a-z0-9]/g, "");
+  const esInox = c => c.startsWith("inox") || c === "duplex" || c === "superduplex";
+  function reemplaza(C, ca, ga, cb, gb, pedido, cand) {
+    if (!(cb === ca || (C.reemplaza[ca] || []).includes(cb) || (C.genericos[ca] || []).includes(cb))) return false;
+    if (ga && gb && !(C.grupos[ga] || [ga]).includes(gb)) return false;
+    if (cb === ca && ca === "carbono_alta_resistencia" && grado(pedido) && grado(cand) && grado(pedido) !== grado(cand)) return false;
+    return true;
+  }
+  // válvulas: clases del cuerpo (compatibilidad.cuerpo); null si nombra carbono e inoxidable sin decir cuál es el cuerpo
+  function cuerpo(C, texto) {
+    const sinInt = prep(C, texto).replace(new RegExp(C.internos, "g"), " ");
+    let expl = (sinInt.match(new RegExp(C.cuerpo, "g")) || []).join(" ");
+    if (!clases(C, expl, true).size) expl = "";  // "cuerpo bipartido": no dice el material
+    const c = new Map([...clases(C, expl || sinInt, true)].filter(([k]) => !C.no_metal.includes(k) && !/^(bulon|tuerca)/.test(k)));
+    if ([...c.keys()].some(esInox) && [...c.keys()].some(k => !esInox(k))) return null;
+    return c;
+  }
+  function reglaCuerpo(C, pedido, cand) {
+    const pb = cuerpo(C, pedido), cb = cuerpo(C, cand);
+    if (pb && !pb.size) return [...clases(C, pedido).keys()].some(k => !C.no_metal.includes(k) && !/^(bulon|tuerca)/.test(k))
+      ? "el pedido no dice el material del cuerpo (solo el de los internos): no se puede comparar" : "";
+    if (!cb || !cb.size) return `no se sabe el material del cuerpo del candidato (${String(cand).slice(0, 40)}): no se puede comparar`;
+    if (!pb) {
+      const a = clases(C, pedido);
+      for (const [k, g] of cb) if (![...a].some(([ca, ga]) => reemplaza(C, ca, ga, k, g, pedido, cand))) return `cuerpo ${k} del candidato: el pedido no lo nombra`;
+      return "";
+    }
+    for (const [ca, ga] of pb) if (![...cb].some(([k, g]) => reemplaza(C, ca, ga, k, g, pedido, cand))) return `cuerpo del candidato no reemplaza al cuerpo pedido (${ca})`;
+    return "";
+  }
   function reglaMaterial(C, fam, pedido, cand, descCand) {
     if (!String(pedido || "").trim()) return "";
     const gv = new RegExp(C.galv);
-    if (gv.test(normP(pedido)) !== gv.test(normP(`${cand || ""} ${descCand || ""}`))) return "galvanizado y negro no se reemplazan";
+    if (gv.test(prep(C, pedido)) !== gv.test(prep(C, `${cand || ""} ${descCand || ""}`))) return "galvanizado y negro no se reemplazan";
     const a = clases(C, pedido);
     let b = String(cand || "").trim() ? clases(C, cand) : new Map();
     if (!b.size) b = clases(C, descCand || "");
@@ -449,17 +487,13 @@ const Busqueda = (() => {
     if (!b.size) return `el candidato no dice el material (el pedido es ${pedido}): no se puede comparar`;
     for (const [ca, ga] of a) {
       const tipo = /^(bulon|tuerca)/.test(ca) ? ca.split("_")[0] : "";
-      if (tipo && ![...b.keys()].some(c => c.startsWith(tipo))) continue;
-      let ok = false;
-      for (const [cb, gb] of b) {
-        if (!(cb === ca || (C.reemplaza[ca] || []).includes(cb) || (C.genericos[ca] || []).includes(cb))) continue;
-        if (ga && gb && !(C.grupos[ga] || [ga]).includes(gb)) continue;
-        const gc = grado(cand || descCand);
-        if (cb === ca && ca === "carbono_alta_resistencia" && grado(pedido) && gc && grado(pedido) !== gc) continue;
-        ok = true; break;
+      if (tipo && ![...b.keys()].some(c => c.startsWith(tipo))) {
+        if ([...b.keys()].some(c => /^(bulon|tuerca)/.test(c))) continue;
+        return `el candidato no dice el grado del ${tipo.replace("bulon", "bulón")} (el pedido es ${String(pedido).slice(0, 40)}): no se puede comparar`;
       }
-      if (!ok) return `material ${cand || String(descCand).slice(0, 30)} no reemplaza a ${pedido}`;
+      if (![...b].some(([cb, gb]) => reemplaza(C, ca, ga, cb, gb, pedido, cand || descCand))) return `material ${cand || String(descCand).slice(0, 30)} no reemplaza a ${pedido}`;
     }
+    if (fam === "VAL") return reglaCuerpo(C, pedido, clases(C, cand || "").size ? cand : descCand);
     return "";
   }
   const CARAS = ["rf", "ff", "rtj"], ROSCAS = ["npt", "bspt", "bspp"];
@@ -482,6 +516,8 @@ const Busqueda = (() => {
     const txt = `extremos o cara distintos (${[...b].sort().join("/").toUpperCase()} por ${[...a].sort().join("/").toUpperCase()})`;
     const ta = tipos(a), tb = tipos(b);
     if (![...ta].some(x => tb.has(x))) return txt;
+    const extra = [...tb].filter(x => !ta.has(x) && !(x === "bw" && (ta.has("brida") || tb.has("brida"))));  // compatibilidad.regla_conexion
+    if (extra.length) return txt;
     const ca = inter(a, CARAS), cb = inter(b, CARAS);
     if (ca.size && cb.size && !igual(ca, cb)) return txt;
     const ra = inter(a, ROSCAS), rb = inter(b, ROSCAS);
@@ -499,17 +535,59 @@ const Busqueda = (() => {
     if (m) return C.dn_nps[String(+(m[1] || m[2]))] ?? null;
     const n = t.match(/^\s*(\d+(?:[.,]\d+)?)/); return n ? parseFloat(n[1].replace(",", ".")) : null;
   }
-  function incompatible(C, fam, ped, cand, textoPed, textoCand) {
-    const m = reglaMaterial(C, fam, ped.material || "", cand.material || "", textoCand || ""); if (m) return m;
-    const c = reglaConexion(conexiones(ped.extremos || "", ped.cara || ""), conexiones(cand.extremos || "", cand.cara || "")); if (c) return c;
+  // el atributo "material" viene simplificado (pierde el grado): se usa el texto si nombra un material (compatibilidad.material_texto)
+  const materialTexto = (C, atrib, texto) => clases(C, texto).size ? texto : (atrib || "");
+  // revestimientos y schedule de cada extremo (compatibilidad.regla_revestimiento / regla_sch_doble)
+  function reglaCostura(C, fam, tp, tc, textoCand) {
+    if (!["CAN", "NIP"].includes(fam) || !new RegExp(C.sin_costura).test(tp)) return "";
+    if (new RegExp(C.con_costura).test(tc)) return "con costura por sin costura (no lo reemplaza)";
+    if (!new RegExp(C.sin_costura).test(tc) && ![...clases(C, textoCand).keys()].some(k => C.sin_costura_norma.includes(k))) return "el pedido es sin costura y el candidato no lo dice";
+    return "";
+  }
+  function reglaRevestimiento(C, tp, tc) {
+    let a = Object.keys(C.revest).filter(k => new RegExp(C.revest[k]).test(tp));
+    if (a.length > 1) a = a.filter(k => k !== "gen");
+    if (!a.length) return "";
+    const b = Object.keys(C.revest).filter(k => new RegExp(C.revest[k]).test(tc));
+    for (const k of a) if (!b.some(x => C.revest_ok[k].includes(x))) return `revestimiento ${b.sort().join("/") || "sin dato"} por ${k} (no lo reemplaza)`;
+    return "";
+  }
+  function reglaSchDoble(C, tp, tc, diametro, schPed = "") {
+    const mp = tp.match(new RegExp(C.sch_doble));
+    if (!mp) {
+      const mc = tc.match(new RegExp(C.sch_doble));
+      if (mc && schPed) {
+        const ds = normP(diametro).split(/\s*x\s*/).map(x => dnDe(C, x)).filter(x => x).concat([null, null]);
+        for (const [i, dn] of [[1, ds[0]], [2, ds[1]]]) if (schCanonico(mc[i], dn) !== schCanonico(schPed, dn)) return `schedule ${mc[1]} × ${mc[2]} por ${schPed} (otro espesor en un extremo)`;
+      }
+      return "";
+    }
+    const mc = tc.match(new RegExp(C.sch_doble));
+    if (!mc) return `el pedido es schedule ${mp[1]} × ${mp[2]} y el candidato no dice el de cada extremo`;
+    const ds = normP(diametro).split(/\s*x\s*/).map(x => dnDe(C, x)).filter(x => x).concat([null, null]);
+    for (const [i, dn] of [[1, ds[0]], [2, ds[1]]]) if (schCanonico(mp[i], dn) !== schCanonico(mc[i], dn)) return `schedule ${mc[1]} × ${mc[2]} por ${mp[1]} × ${mp[2]} (otro espesor en un extremo)`;
+    return "";
+  }
+  // todos los motivos [[tipo, texto]] (compatibilidad.motivos); incompatible = el primero
+  function motivos(C, fam, ped, cand, textoPed, textoCand) {
+    const out = [];
+    const m = reglaMaterial(C, fam, materialTexto(C, ped.material, textoPed || ""), materialTexto(C, cand.material, textoCand || ""), textoCand || ""); if (m) out.push(["material", m]);
+    const c = reglaConexion(conexiones(ped.extremos || "", ped.cara || ""), conexiones(cand.extremos || "", cand.cara || "")); if (c) out.push(["extremos", c]);
     if (C.familias_sch.includes(fam) && ped.schedule && cand.schedule) {
       const dn = dnDe(C, ped.diametro || "");
-      if (schCanonico(ped.schedule, dn) !== schCanonico(cand.schedule, dn)) return `schedule ${cand.schedule} por ${ped.schedule} (otro espesor)`;
+      if (schCanonico(ped.schedule, dn) !== schCanonico(cand.schedule, dn)) out.push(["schedule", `schedule ${cand.schedule} por ${ped.schedule} (otro espesor)`]);
     }
     const tp = normP(textoPed), tc = normP(textoCand);
-    if (new RegExp(C.nace_estricto).test(tp) && !new RegExp(C.nace_estricto).test(tc)) return "el pedido es MR0175 / ISO 15156 y el candidato no lo dice";
-    if (new RegExp(C.nace_pedido).test(tp) && !new RegExp(C.nace_cand).test(tc)) return "el pedido es para servicio ácido (NACE) y el candidato no lo dice";
-    return "";
+    const r = reglaRevestimiento(C, prep(C, textoPed), prep(C, textoCand)); if (r) out.push(["revestimiento", r]);
+    const k = reglaCostura(C, fam, prep(C, textoPed), prep(C, textoCand), textoCand || ""); if (k) out.push(["costura", k]);
+    if (C.familias_sch.includes(fam)) { const r2 = reglaSchDoble(C, tp, tc, ped.diametro || "", ped.schedule || ""); if (r2) out.push(["schedule", r2]); }
+    if (new RegExp(C.nace_estricto).test(tp) && !new RegExp(C.nace_estricto).test(tc)) out.push(["nace", "el pedido es MR0175 / ISO 15156 y el candidato no lo dice"]);
+    else if (new RegExp(C.nace_pedido).test(tp) && !new RegExp(C.nace_cand).test(tc)) out.push(["nace", "el pedido es para servicio ácido (NACE) y el candidato no lo dice"]);
+    return out;
+  }
+  function incompatible(C, fam, ped, cand, textoPed, textoCand) {
+    const m = motivos(C, fam, ped, cand, textoPed, textoCand);
+    return m.length ? m[0][1] : "";
   }
 
   function materiales(datos, f, limite = 60) {
@@ -619,8 +697,40 @@ const Busqueda = (() => {
   // Código de catálogo de una fuente (auditoría 29-10-2026): el campo codigo, o el que quedó escrito en el proveedor
   // ("Renard · CAN-01435") en las cotizaciones anteriores. Con él se avisa si el catálogo cambió después de cargarlo.
   const codigoDe = s => s.codigo || (String(s.proveedor || "").match(/\b[A-Z]{3}-\d{5}\b/) || [])[0] || "";
-  let CAT = null;
-  function catalogo(datos) { CAT = new Map([...(datos.materiales || []), ...(datos.servicios || [])].map(m => [m.c, m])); }
+  let CAT = null, COMPAT = null, REN = new Map();
+  function catalogo(datos) { CAT = new Map([...(datos.materiales || []), ...(datos.servicios || [])].map(m => [m.c, m])); COMPAT = datos.compat || null;
+    REN = new Map((datos.materiales || []).map(m => [(String(m.pr || "").match(/^Renard \(cód\. (\d+)\)/) || [])[1], m.c]).filter(x => x[0])); }
+  // P9 en la página (quinta auditoría 30-10-2026: se podía aprobar con una referencia que la norma no admite). Compara la
+  // pieza del catálogo con lo que pide el plano (it.plano); cada diferencia necesita un desvío resuelto en it.desvio.
+  // Las fuentes sin código del catálogo las controla verificar_computo.py al pasar al repositorio.
+  const SIN_RESOLVER = /\[|a confirmar|a definir|confirmar con|por confirmar|pendiente|a cotizar/i;
+  // verificar_computo.firma_p9: lo que el repositorio controló (P9 completo, incluidas las fuentes sin código)
+  function firmaP9(cot) {
+    return (cot.items || []).filter(it => it.grupo === "material" && (it.fuentes || []).length).map(it => {
+      const f = it.fuentes[0], dv = (it.desvio || []).filter(d => d && typeof d === "object").map(d => `${d.que || ""}:${d.ofrecido || ""}:${d.pedido || ""}`).join(";");
+      return `${it.id || ""}|${it.pos || ""}|${f.codigo || ""}|${f.proveedor || ""}|${(+f.precio || 0).toFixed(4)}|${dv}`;
+    }).join("\n");
+  }
+  function p9Pendiente(cot) {
+    const p = cot.p9;
+    if (!p) return "El control de compatibilidad completo (P9) lo hace el repositorio: pasar la cotización al repositorio antes de revisarla o aprobarla.";
+    if (firmaP9(cot) !== p.firma) return "Los materiales cambiaron desde el último control de compatibilidad (P9) del repositorio: pasarla al repositorio de nuevo antes de revisarla o aprobarla.";
+    if (!p.ok) return `El control de compatibilidad (P9) del repositorio tiene ${p.errores} error(es) o desvíos a confirmar: corregirlos antes de revisarla o aprobarla.`;
+    return "";
+  }
+  function compatItem(it, m) {
+    const pl = it.plano || {}, C = COMPAT;
+    if (!C || !m || !m.a || !pl.descripcion || it.grupo !== "material") return [];
+    const ss = String(pl.serie_sch || ""), num = (ss.match(/\b(150|300|600|900|1500|2000|2500|3000|6000|9000)\b/) || [])[1] || "";
+    const sch = num ? "" : (ss.match(/^\s*(std|xs|xxs|\d{2,3}s?)\s*$/i) || [])[1] || "";
+    // material "" : sale del texto si nombra uno ("S/ Esp. CAMUZZI" o "Rango 0-25 bar" en la columna no son material)
+    const ped = { material: "", extremos: pl.extremos || "", diametro: pl.diametro || "", schedule: sch };
+    const texto = `${pl.descripcion} , Ø ${pl.diametro || ""}, ${ss} ${pl.material || ""} ${pl.extremos || ""}`;
+    const mots = motivos(C, it.fam || "", ped, m.a, texto, m.d || "");
+    const sc = String(m.a.serie || "").replace(/\D/g, "");
+    if (num && sc && sc !== num) mots.push(["serie", `serie ${sc} por ${num} (otro rating)`]);
+    return mots;
+  }
   function avisos(cfg) {
     const out = []; const h = hoy();
     for (const it of cfg.items) {
@@ -641,6 +751,13 @@ const Busqueda = (() => {
       const cc = CAT && !it.global && codigoDe(s), m = cc && CAT.get(cc);
       if (m && m.p && s.precio && Math.abs(m.p - s.precio) >= 0.01 && (m.fe || "") > (s.fecha || ""))
         out.push({ nivel: "warn", txt: `${tag}: el catálogo (${cc}) tiene un precio más nuevo: USD ${n2(m.p)} del ${String(m.fe).split("-").reverse().join("-")} (acá USD ${n2(s.precio)}); actualizalo si corresponde` });
+      const cr = !it.global && !cc && REN.get((String(s.proveedor || "").match(/\brenard\b.*?c[óo]d\.? ?(\d+)/i) || [])[1]);  // "Renard · cód. N"
+      for (const [tipo, txt] of compatItem(it, m || (cr && CAT.get(cr)))) {
+        const dv = (it.desvio || []).find(x => String(x.que || "").toLowerCase() === tipo);
+        if (!dv) out.push({ nivel: "bad", txt: `${tag}: la referencia ${cc || cr} no sirve según la norma (${tipo}: ${txt.slice(0, 90)}): cambiarla, dejar SIN PRECIO o declarar el desvío` });
+        else if (!dv.ofrecido || !dv.pedido || SIN_RESOLVER.test(`${dv.ofrecido} ${dv.pedido}`)) out.push({ nivel: "bad", txt: `${tag}: desvío de ${tipo} a confirmar (${dv.ofrecido || "?"} por ${dv.pedido || "?"})` });
+        else out.push({ nivel: "warn", txt: `${tag}: desvío declarado de ${tipo}: ${dv.ofrecido} por ${dv.pedido} (tiene que figurar en la oferta)` });
+      }
       for (const x of out.slice(n0)) { x.id = it.id; x.corto = x.txt.slice(tag.length + 2); }
     }
     const pz = plazoBloquea(cfg);
@@ -703,7 +820,7 @@ const Busqueda = (() => {
     return out;
   }
   const frenosTexto = (cfg, oferta) => frenosOferta(cfg, oferta).map(f => f.texto).join(" · ");
-  return { norm, coincide, incompatible, campos, opcionales, valores, materiales, servicios, itemDeMaterial, itemDeServicio, soldadura, tarifa, avisos, catalogo, codigoDe, plazoCalculado, plazoBloquea, frenosOferta, frenosTexto, TIPO_FUENTE, CON_TIPO };
+  return { norm, coincide, incompatible, motivos, compatItem, SIN_RESOLVER, firmaP9, p9Pendiente, campos, opcionales, valores, materiales, servicios, itemDeMaterial, itemDeServicio, soldadura, tarifa, avisos, catalogo, codigoDe, plazoCalculado, plazoBloquea, TIPO_FUENTE, CON_TIPO, frenosOferta, frenosTexto };
 })();
 if (typeof module !== "undefined") module.exports = Busqueda;
 
@@ -784,7 +901,7 @@ const Ficha = (() => {
     }
     for (const r of filas) {
       if (porMetro.includes(r)) continue;
-      if (["kg", "kgs", "m2", "m²", "tn", "t"].includes(norm(r.unidad))) {  // kg o m² no son piezas (precotizar.soldaduras, 30-10-2026)
+      if (/^(kgs?|kilos?|kilogramos?|m2|mts?2|metros?cuadrados?|tn|t|tons?|toneladas?)$/.test(norm(r.unidad).replace(/[\s.]/g, ""))) {  // kg o m² no son piezas (precotizar.soldaduras, 30-10-2026)
         if (String(r.extremos || "").trim()) avisosKg.push(`pos ${r.pos}: cantidad en ${r.unidad} con extremos ${r.extremos}: no se cuentan juntas (no son piezas); contar sus soldaduras a mano`);
         continue;
       }
@@ -798,6 +915,7 @@ const Ficha = (() => {
       const nBw = toks.filter(t => t === "BW").length, nSw = toks.filter(t => t === "SW").length;
       if (!(nBw || nSw)) continue;
       const q = +r.cantidad || 0;
+      if ((nBw + nSw) * q > 500) avisosKg.push(`pos ${r.pos}: ${(nBw + nSw) * q} extremos soldados en un solo renglón (${q} ${r.unidad}): confirmar la unidad`);
       let dn = dnDe(r.diametro); const sch = schDe(r.serie_sch);
       let [f, pch, pgr] = factorEspesor(dn, sch, tabla, espesorMm(r));
       if (OLETS.test(d)) {
@@ -2928,7 +3046,13 @@ if (typeof module !== "undefined") module.exports = Documentos;
 
   // ------------------------------------------------------------------ cambio de estado (con controles; la herramienta nunca envía nada)
   function dialogoEstado(d) {
-    const cot = S.doc.cot, malos = Busqueda.avisos(cot).filter(a => a.nivel === "bad"), act = cot.estado;
+    const cot = S.doc.cot, act = cot.estado;
+    // desvíos de la oferta sin resolver ([corchetes], "a confirmar") frenan revisado y aprobado como un aviso a corregir
+    const desv = ((S.doc.oferta || {}).aclaraciones_y_desvios || {}).items || [];
+    const malos = Busqueda.avisos(cot).filter(a => a.nivel === "bad").concat(
+      desv.filter(x => Busqueda.SIN_RESOLVER.test(String(x))).map(x => ({ nivel: "bad", txt: `Oferta: desvío a confirmar: ${String(x).slice(0, 80)}` })));
+    const p9 = (d === "revisado" || d === "aprobado") ? Busqueda.p9Pendiente(cot) : "";
+    if (p9) malos.push({ nivel: "bad", txt: p9 });
     let error = "", texto = "", extra = "";
     if (d === act) return;
     if (d === "revisado") {
@@ -2945,6 +3069,7 @@ if (typeof module !== "undefined") module.exports = Documentos;
     } else if (d === "borrador") {
       texto = act === "revisado" ? "Vuelve a borrador para seguir cambiándola." : "Vuelve a borrador: se desbloquea, se borra la aprobación y la oferta vuelve a salir con la leyenda de borrador.";
     }
+    if (p9 && error && !error.includes(p9)) error += " " + p9;
     capa.hidden = false;
     capa.innerHTML = `<div class="capa"><section class="panel" role="dialog" aria-label="Cambiar estado"><h2>Pasar a "${E(d)}"</h2>
       ${error ? `<div class="aviso bad">${E(error)}</div>` : `<p>${E(texto)}</p>${extra}`}

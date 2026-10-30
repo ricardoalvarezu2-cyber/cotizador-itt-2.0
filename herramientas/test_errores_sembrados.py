@@ -58,9 +58,12 @@ def base(tmp):
             if not it["fuentes"][0].get("precio"):
                 it["sin_precio_motivo"] = JUST
     editar_json(c / "cotizacion.json", levantar)
-    def sin_corchetes(x):  # la base no tiene datos pendientes en la oferta
+    import re
+    pend = re.compile(r"\[|\]|,? ?a confirmar|,? ?a definir|confirmar con|por confirmar|pendiente|a cotizar", re.I)
+
+    def sin_corchetes(x):  # la base no tiene datos pendientes ni desvíos "a confirmar" (oferta y renglones)
         if isinstance(x, str):
-            return x.replace("[", "").replace("]", "")
+            return pend.sub("", x)
         if isinstance(x, list):
             return [sin_corchetes(v) for v in x]
         if isinstance(x, dict):
@@ -68,8 +71,14 @@ def base(tmp):
         return x
     o = sin_corchetes(json.load(open(c / "oferta.json", encoding="utf-8")))
     json.dump(o, open(c / "oferta.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    editar_json(c / "cotizacion.json", lambda d: [it.update(desvio=sin_corchetes(it["desvio"])) for it in d["items"] if it.get("desvio")])
+    cot = json.load(open(c / "cotizacion.json", encoding="utf-8"))
+    o["aclaraciones_y_desvios"]["items"] += [f"Pos. {it['pos']}: se ofrece {d['ofrecido']} por {d['pedido']}." for it in cot["items"]
+                                             for d in it.get("desvio") or [] if isinstance(d, dict)]  # cada desvío, declarado
+    json.dump(o, open(c / "oferta.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     req, cols = leer_csv(c / "pedido" / "requisitos.csv")
     for r in req:
+        r["referencia"] = pend.sub("", r["referencia"])
         if r["destino"] == "consulta":
             r["destino"] = "cumple"
     escribir_csv(c / "pedido" / "requisitos.csv", req, cols)
