@@ -49,7 +49,9 @@ const Busqueda = (() => {
   }
 
   // ------------------------------------------------------------------ compatibilidad (espejo de herramientas/compatibilidad.py)
-  const normP = t => String(t ?? "").normalize("NFKD").replace(/[^\x00-\x7f]/g, "").toLowerCase().replace(/\s+/g, " ");
+  // igual que indice_proyectos.norm: las fracciones antes de NFKD ("½" no queda "12")
+  const FRACCIONES = { "½": " 1/2", "¼": " 1/4", "¾": " 3/4", "⅛": " 1/8", "⅜": " 3/8", "⅝": " 5/8", "⅞": " 7/8", "\u2044": "/", "ø": " diam ", "Ø": " diam ", "⌀": " diam ", "°": " grados ", "º": " grados " };
+  const normP = t => Object.entries(FRACCIONES).reduce((s, [a, b]) => s.split(a).join(b), String(t ?? "")).normalize("NFKD").replace(/[^\x00-\x7f]/g, "").toLowerCase().replace(/\s+/g, " ");
   const RX = new WeakMap();
   const mats = C => { if (!RX.has(C)) RX.set(C, C.materiales.map(m => ({ ...m, rx: new RegExp(m.patron) }))); return RX.get(C); };
   const prep = (C, t) => normP(t).replace(new RegExp(C.prep, "g"), "a$1");
@@ -78,7 +80,10 @@ const Busqueda = (() => {
     if (!b.size) return `el candidato no dice el material (el pedido es ${pedido}): no se puede comparar`;
     for (const [ca, ga] of a) {
       const tipo = /^(bulon|tuerca)/.test(ca) ? ca.split("_")[0] : "";
-      if (tipo && ![...b.keys()].some(c => c.startsWith(tipo))) continue;
+      if (tipo && ![...b.keys()].some(c => c.startsWith(tipo))) {
+        if ([...b.keys()].some(c => /^(bulon|tuerca)/.test(c))) continue;
+        return `el candidato no dice el grado del ${tipo.replace("bulon", "bulón")} (el pedido es ${String(pedido).slice(0, 40)}): no se puede comparar`;
+      }
       let ok = false;
       for (const [cb, gb] of b) {
         if (!(cb === ca || (C.reemplaza[ca] || []).includes(cb) || (C.genericos[ca] || []).includes(cb))) continue;
@@ -128,8 +133,10 @@ const Busqueda = (() => {
     if (m) return C.dn_nps[String(+(m[1] || m[2]))] ?? null;
     const n = t.match(/^\s*(\d+(?:[.,]\d+)?)/); return n ? parseFloat(n[1].replace(",", ".")) : null;
   }
+  // el atributo "material" viene simplificado (pierde el grado): se usa el texto si nombra un material (compatibilidad.material_texto)
+  const materialTexto = (C, atrib, texto) => clases(C, texto).size ? texto : (atrib || "");
   function incompatible(C, fam, ped, cand, textoPed, textoCand) {
-    const m = reglaMaterial(C, fam, ped.material || "", cand.material || "", textoCand || ""); if (m) return m;
+    const m = reglaMaterial(C, fam, materialTexto(C, ped.material, textoPed || ""), materialTexto(C, cand.material, textoCand || ""), textoCand || ""); if (m) return m;
     const c = reglaConexion(conexiones(ped.extremos || "", ped.cara || ""), conexiones(cand.extremos || "", cand.cara || "")); if (c) return c;
     if (C.familias_sch.includes(fam) && ped.schedule && cand.schedule) {
       const dn = dnDe(C, ped.diametro || "");

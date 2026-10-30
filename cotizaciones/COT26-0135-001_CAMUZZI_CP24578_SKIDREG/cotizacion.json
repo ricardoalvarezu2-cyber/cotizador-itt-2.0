@@ -325,12 +325,22 @@
    "fuentes": [
     {
      "tipo": "ant",
+     "precio": 10.0,
+     "proveedor": "Bules o Versailles (planilla TAVAL/43, hoja 3\" x 442u ítem 9) · JUN-04173",
+     "codigo": "JUN-04173",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/43- YPF- CM PUENTES DE PRODUCCION/4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt · línea 147",
+     "fecha": "2026-02-19",
+     "coincide": "similar",
+     "diferencia": "largo 110 mm (pedido 3 1/2\" ≈ 89 mm, más largo: sirve); la planilla pone USD 10 también al de 7/8\" x 230 mm: parece valor global, pedir cotización"
+    },
+    {
+     "tipo": "ant",
      "precio": 2.6,
      "proveedor": "Planilla Sacde/15 (JUN-04177: 5/8 x 90 B7M bicromatizado)",
      "origen": "fuentes_originales/ofertas_texto/Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL",
      "fecha": "2026-02-20",
-     "coincide": "similar",
-     "diferencia": "B7M bicromatizado; confirmar si trae tuercas"
+     "coincide": "descartada",
+     "diferencia": "descartada (auditoría 30-10-2026): B7M no reemplaza a B7 (menor resistencia) · antes: B7M bicromatizado; confirmar si trae tuercas"
     }
    ]
   },
@@ -616,13 +626,22 @@
    "especificacion": "Plano: 1/2\" · 3000 · S/ Fabricante · NPT",
    "fuentes": [
     {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-30",
+     "coincide": "sin_ref",
+     "diferencia": "la referencia era un manifold serie 2000 y el plano pide 3000: sin referencia compatible (auditoría 30-10-2026); pedir cotización de la toma multiport a ABAC"
+    },
+    {
      "tipo": "ant",
      "precio": 170.0,
      "proveedor": "Manifold ABAC de 3 vías M1-C-T AISI 304/316 (OTR-02980, planilla TAVAL/40)",
      "origen": "fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/4.Armado de la Oferta Comercial/LM costo Filtros rev.1.xlsx.txt",
      "fecha": "2026-01-15",
-     "coincide": "similar",
-     "diferencia": "manifold de 3 vías; pedir cotización de la toma multiport a ABAC"
+     "coincide": "descartada",
+     "diferencia": "descartada (auditoría 30-10-2026): manifold serie 2000, el plano pide 3000 (otra serie no es similar) · antes: manifold de 3 vías; pedir cotización de la toma multiport a ABAC"
     }
    ]
   },
@@ -738,13 +757,23 @@
    "fuentes": [
     {
      "tipo": "lista",
+     "precio": 25.08,
+     "proveedor": "Renard (cód. 1153) · CAN-01484",
+     "codigo": "CAN-01484",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1153",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "Tubo s/costura 88,9 x 5,49 mm A53/A106/API 5L B (sin costura, triple certificación: cumple A53 Gr B); largo 10,50 a 12,50 m"
+    },
+    {
+     "tipo": "lista",
      "precio": 18.99,
      "proveedor": "Renard (cód. 1007) · CAN-01485",
      "codigo": "CAN-01485",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1007",
      "fecha": "2025-12-26",
-     "coincide": "similar",
-     "diferencia": "costura: con costura (no pedido)"
+     "coincide": "descartada",
+     "diferencia": "descartada (auditoría 30-10-2026): la lista de Renard dice A53A (grado A), el plano pide A-53 Gr B · antes: costura: con costura (no pedido)"
     }
    ]
   },
@@ -759,13 +788,23 @@
    "fuentes": [
     {
      "tipo": "lista",
+     "precio": 25.08,
+     "proveedor": "Renard (cód. 1153) · CAN-01484",
+     "codigo": "CAN-01484",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1153",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "Tubo s/costura 88,9 x 5,49 mm A53/A106/API 5L B (sin costura, triple certificación: cumple A53 Gr B); largo 10,50 a 12,50 m"
+    },
+    {
+     "tipo": "lista",
      "precio": 18.99,
      "proveedor": "Renard (cód. 1007) · CAN-01485",
      "codigo": "CAN-01485",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1007",
      "fecha": "2025-12-26",
-     "coincide": "similar",
-     "diferencia": "costura: con costura (no pedido)"
+     "coincide": "descartada",
+     "diferencia": "descartada (auditoría 30-10-2026): la lista de Renard dice A53A (grado A), el plano pide A-53 Gr B · antes: costura: con costura (no pedido)"
     }
    ]
   },

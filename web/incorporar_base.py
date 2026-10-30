@@ -7,6 +7,8 @@ Claude baja el documento con ArtifactData (action "get", collection "cotizacione
 2. Repositorio: si hay una carpeta cotizaciones/<código>_* con el mismo código, la versión de la página reemplaza su
    cotizacion.json y oferta.json (lo que la página no guarda, como la firma, se conserva) y se vuelve a armar
    (armar_cotizacion.py). Lo que había queda en el historial de git.
+Si la carpeta del repositorio cambió después de la copia que tiene la página (semilla.py guarda su huella en
+cot.huella_repo), frena: comparar y, solo si después de revisar vale la de la página, repetir con --forzar.
 Para una cotización del repositorio tal como está ahí: python web/incorporar_base.py --repo cotizaciones/<carpeta> [...]
 Después: python herramientas/actualizar_base.py (catálogo e índice de antecedentes toman la biblioteca), construir_datos,
 armar_pagina y republicar (ver web/LEEME.md, "Pedidos desde la página").
@@ -42,19 +44,28 @@ def indice():
         "|---|---|---|---|---|---|---|\n" + "\n".join(filas) + "\n", encoding="utf-8")
 
 
-def main(archivo):
+def main(archivo, forzar=False):
     d = json.loads(Path(archivo).read_text(encoding="utf-8"))
     d = d.get("data", d)
     cot, oferta = d["cot"], d.get("oferta", {})
     if not cot.get("items"):
         sys.exit("La cotización no tiene ítems: no se incorpora.")
+    codigo = cot.get("codigo", "")
+    repo = [p for p in sorted((RAIZ / "cotizaciones").glob(f"{codigo}_*")) if (p / "cotizacion.json").exists()] if codigo else []
+    huella_pagina = cot.pop("huella_repo", "")
+    if repo and not forzar:
+        sys.path.insert(0, str(RAIZ / "web"))
+        from semilla import huella
+        if huella_pagina != huella(repo[0]):
+            sys.exit(f"FRENADO: {repo[0].relative_to(RAIZ)} cambió en el repositorio después de la copia que tiene la página "
+                     f"({'la página no dice de qué versión salió' if not huella_pagina else 'huella ' + huella_pagina + ' ≠ ' + huella(repo[0])}). "
+                     "Pasarla pisaría las correcciones del repositorio. Comparar las dos versiones, pasar a la página lo que falte "
+                     "(semilla.py --previo) o, si después de revisar vale la de la página, volver a correr con --forzar.")
     id_ = Path(archivo).stem
     destino = BIB / id_
     meta_vieja = destino / "incorporacion.json"
     veces = (json.loads(meta_vieja.read_text(encoding="utf-8")).get("veces", 1) + 1) if meta_vieja.exists() else 1
     escribir(destino, cot, oferta)
-    codigo = cot.get("codigo", "")
-    repo = [p for p in sorted((RAIZ / "cotizaciones").glob(f"{codigo}_*")) if (p / "cotizacion.json").exists()] if codigo else []
     meta = {"id": id_, "codigo": codigo, "titulo": cot.get("titulo", ""), "estado": cot.get("estado", ""),
             "incorporada": datetime.now().isoformat(timespec="seconds"), "guardado_pagina": d.get("guardado", ""),
             "veces": veces, "carpeta_repo": str(repo[0].relative_to(RAIZ)) if repo else ""}
@@ -98,4 +109,4 @@ if __name__ == "__main__":
         for x in sys.argv[2:]:
             desde_repo(x)
     else:
-        main(sys.argv[1])
+        main(sys.argv[1], forzar="--forzar" in sys.argv[2:])

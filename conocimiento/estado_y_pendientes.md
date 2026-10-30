@@ -157,7 +157,13 @@ Decidido (Matías, 29-10-2026): manda el repositorio; la biblioteca se alimenta 
 5. **Planillas 2021–2024 (29-10-2026, pedido de Matías):** se leyeron las 59 carpetas con planilla de costo buscando horas y estructura. **No traen horas** (la MO es un monto global): `horas_por_equipo.csv` no cambió y los controles F01/T01 siguen en −35%. Quedó la estructura de costo de 103 equipos en `costos/estructura_costo_historica.csv` (solo proporciones, del cepo; ver su LEEME). Para las horas de recipientes, la fuente posible son planillas 2025–2026 que todavía no están en `horas_por_equipo.csv` o el detalle de montaje de cada cotización nueva.
 4. El Ø del cuerpo está en 13 de 158 fichas: completarlo al hacer o revisar fichas de recipientes.
 
-**Cotizaciones cargadas revisadas con las reglas de compatibilidad (30-10-2026):** solo 2 renglones usaban un similar que la norma no admite: COT26-0135-001 pos 17 (cupla BSPT → NPT, mismo precio) y COT26-0135-003 pos 15 (válvula SW-roscada → SIN PRECIO). El resto no cambia; no hace falta rehacer las cotizaciones. Para revisar otras: comparar cada renglón con `compatibilidad.incompatible` (como en este chat) o volver a correr `precotizar.py` y comparar.
+**Cotizaciones cargadas revisadas con las reglas de compatibilidad (30-10-2026, corregido después de la auditoría independiente):** la primera revisión (2 renglones) quedó corta: la auditoría encontró más. Corregidos: 001 pos 17 (BSPT → NPT), 003 pos 15 (SIN PRECIO), 001/002 pos 5c (B7M → B7/2H, USD 2,60 → 10), 001 pos 21/21b y 002 pos 14/14b (Renard A53 Gr A → sin costura A53/A106/API 5L B), 001 pos 15 (manifold serie 2000 → SIN PRECIO). Hoy `verificar_computo.py` (P9) controla todas las filas y `verificar_todo.py` todas las cotizaciones: 0 errores. Camuzzi 001 USD 76.572,52 y 002 USD 30.040,50 por unidad (borrador).
+
+**Decisiones pendientes de Matías (30-10-2026):**
+- ¿Se admite como "similar" una pieza de **otro diámetro** (hoy el buscador la propone, p. ej. brida 16" para una de 12", junta 3/4" para una de 2")? P9 solo avisa. Propuesta: no admitirla como referencia de precio.
+- Ficha `fichas_2025/YPF_13…` es una oferta de 2023 (0-270 23): se dejó porque es antecedente de filtro coalescente; ¿se mantiene en el índice aunque 2021–2024 no lleve fichas?
+- Pedir cotización: espárragos 5/8" B7/2H (la planilla TAVAL/43 pone USD 10 a todos los tamaños) y toma multiport ABAC 3000 (Camuzzi 001 pos 15).
+- Tapa vertical AFO-03445 mal clasificada en el catálogo (lo marcó la auditoría; sin corregir).
 
 **Catálogo sin material (30-10-2026):** 1.407 renglones del catálogo de materiales no tienen el material cargado y, con las reglas revisadas, no sirven como similar (quedan SIN PRECIO). Completar el material leyendo la descripción o el original (tarea de IA con revisión) bajaría los SIN PRECIO.
 

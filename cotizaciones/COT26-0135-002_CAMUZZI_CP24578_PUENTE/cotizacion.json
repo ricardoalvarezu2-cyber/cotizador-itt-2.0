@@ -315,12 +315,22 @@
    "fuentes": [
     {
      "tipo": "ant",
+     "precio": 10.0,
+     "proveedor": "Bules o Versailles (planilla TAVAL/43, hoja 3\" x 442u ítem 9) · JUN-04173",
+     "codigo": "JUN-04173",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/43- YPF- CM PUENTES DE PRODUCCION/4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt · línea 147",
+     "fecha": "2026-02-19",
+     "coincide": "similar",
+     "diferencia": "largo 110 mm (pedido 3 1/2\" ≈ 89 mm, más largo: sirve); la planilla pone USD 10 también al de 7/8\" x 230 mm: parece valor global, pedir cotización"
+    },
+    {
+     "tipo": "ant",
      "precio": 2.6,
      "proveedor": "Planilla Sacde/15 (JUN-04177: 5/8 x 90 B7M bicromatizado)",
      "origen": "fuentes_originales/ofertas_texto/Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL",
      "fecha": "2026-02-20",
-     "coincide": "similar",
-     "diferencia": "B7M bicromatizado; confirmar tuercas"
+     "coincide": "descartada",
+     "diferencia": "descartada (auditoría 30-10-2026): B7M no reemplaza a B7 (menor resistencia) · antes: B7M bicromatizado; confirmar tuercas"
     }
    ]
   },
@@ -538,13 +548,23 @@
    "fuentes": [
     {
      "tipo": "lista",
+     "precio": 34.34,
+     "proveedor": "Renard (cód. 1160) · CAN-01495",
+     "codigo": "CAN-01495",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1160",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "Tubo s/costura 114,3 x 6,02 mm A53/A106/API 5L B (sin costura, triple certificación: cumple A53 Gr B); largo 10,50 a 12,50 m"
+    },
+    {
+     "tipo": "lista",
      "precio": 26.95,
      "proveedor": "Renard (cód. 1008) · CAN-01496",
      "codigo": "CAN-01496",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1008",
      "fecha": "2025-12-26",
-     "coincide": "similar",
-     "diferencia": "costura: con costura (no pedido)"
+     "coincide": "descartada",
+     "diferencia": "descartada (auditoría 30-10-2026): la lista de Renard dice A53A (grado A), el plano pide A-53 Gr B · antes: costura: con costura (no pedido)"
     }
    ]
   },
@@ -559,13 +579,23 @@
    "fuentes": [
     {
      "tipo": "lista",
+     "precio": 34.34,
+     "proveedor": "Renard (cód. 1160) · CAN-01495",
+     "codigo": "CAN-01495",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1160",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "Tubo s/costura 114,3 x 6,02 mm A53/A106/API 5L B (sin costura, triple certificación: cumple A53 Gr B); largo 10,50 a 12,50 m"
+    },
+    {
+     "tipo": "lista",
      "precio": 26.95,
      "proveedor": "Renard (cód. 1008) · CAN-01496",
      "codigo": "CAN-01496",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1008",
      "fecha": "2025-12-26",
-     "coincide": "similar",
-     "diferencia": "costura: con costura (no pedido)"
+     "coincide": "descartada",
+     "diferencia": "descartada (auditoría 30-10-2026): la lista de Renard dice A53A (grado A), el plano pide A-53 Gr B · antes: costura: con costura (no pedido)"
     }
    ]
   },

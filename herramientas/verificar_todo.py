@@ -52,6 +52,8 @@ antes = modificados()
 
 for t in ("test_catalogo.py", "test_catalogo_servicios.py", "test_precotizar.py", "test_antecedentes.py", "test_compatibilidad.py"):
     correr(t, [str(H / t)])
+# índice de precios: se regenera siempre (auditoría 30-10-2026: quedaba viejo si no se corría actualizar_base.py)
+correr("indice_precios.py", [str(H / "indice_precios.py")])
 for script, salida in (("catalogo_materiales.py", "conocimiento/precios/catalogo_materiales.csv"),
                        ("catalogo_servicios.py", "conocimiento/precios/catalogo_servicios.csv")):
     correr(script, [str(H / script)])
@@ -114,6 +116,15 @@ print(f"{'OK  ' if not incomp else 'FALLA'} referencias compatibles con la norma
 if incomp:
     fallas.append("cotizaciones con referencias incompatibles")
     print("\n".join("  " + x for x in incomp[:20]))
+# Fichas (auditoría 30-10-2026): ninguna ficha consolidada tiene en sus ítems un precio que solo figura en documentos de
+# proveedores (error de ALUAR/1; consolidar_fichas.py ya no las deja entrar, esto controla las que ya están).
+import validar_fichas  # noqa: E402
+mal = [f"{f.parent.name}/{f.name}: {x[len(validar_fichas.CRITICO):]}" for f in sorted((RAIZ / "conocimiento").glob("fichas_*/*.json"))
+       for x in validar_fichas.criticos(validar_fichas.validar(json.load(open(f, encoding="utf-8")))) if "documentos de proveedores" in x]
+print(f"{'OK  ' if not mal else 'FALLA'} fichas sin precios de proveedor en los ítems ({len(mal)} problemas)")
+if mal:
+    fallas.append("fichas con precios de proveedor en los ítems")
+    print("\n".join("  " + x for x in mal[:20]))
 despues = modificados()
 if antes is not None and despues is not None:
     nuevos = sorted(despues - antes)

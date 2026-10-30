@@ -35,36 +35,66 @@ def num(v):
     return float(v.replace(",", ".")) if v else None
 
 
-def control_compatibilidad(c, plano):
-    """P9 (Matías, 30-10-2026): cada renglón de material cuyo precio sale de una pieza del catálogo se compara con lo que
-    pide el plano con las reglas de compatibilidad (compatibilidad.py). Si la norma no permite el reemplazo, es ERROR: la
-    cotización no pasa a revisado hasta cambiar la referencia o dejarla SIN PRECIO. Se controla la fuente vigente."""
+def control_compatibilidad(c, plano, avisos=None):
+    """P9 (Matías, 30-10-2026): cada renglón de material con precio se compara con lo que pide el plano con las reglas de
+    compatibilidad (compatibilidad.py). Si la norma no permite el reemplazo, es ERROR: la cotización no pasa a revisado
+    hasta cambiar la referencia o dejarla SIN PRECIO. Se controla la fuente vigente.
+    Auditoría 30-10-2026: también las filas que no están en el plano (5c, 14b: se comparan con su fila madre si usan la
+    misma pieza, o con su propia descripción), las fuentes sin código del catálogo (con el texto de la fuente) y el tipo
+    y la serie de la pieza (ERROR si difieren); otro Ø es AVISO."""
     ruta = c / "cotizacion.json"
     if not ruta.exists():
         return []
     import json
     import buscar_material as bm
-    from compatibilidad import incompatible
+    from compatibilidad import incompatible, regla_material, clases, dn_de
     from precotizar import texto_busqueda
     bm.buscar("brida")
     cat = {r["codigo"]: r for r in bm._FILAS}
     por_pos = {p["pos"].strip(): p for p in plano}
+    items = json.load(open(ruta, encoding="utf-8"))["items"]
+    cod_de = lambda f: f.get("codigo") or (re.search(r"\b[A-Z]{3}-\d{5}\b", str(f.get("proveedor") or "")) or [None])[0]
+    cod_pos = {str(it.get("pos", "")).strip(): cod_de(it["fuentes"][0]) for it in items if it.get("fuentes")}
     out = []
-    for it in json.load(open(ruta, encoding="utf-8"))["items"]:
-        if it.get("grupo") != "material":
+    for it in items:
+        if it.get("grupo") != "material" or not it.get("fuentes"):
             continue
         f = it["fuentes"][0]
         if not f.get("precio"):
             continue
-        cod = f.get("codigo") or (re.search(r"\b[A-Z]{3}-\d{5}\b", str(f.get("proveedor") or "")) or [None])[0] if not f.get("codigo") else f.get("codigo")
-        p = por_pos.get(str(it.get("pos", "")).strip())
-        if not cod or cod not in cat or not p:
-            continue
-        texto = texto_busqueda(p)
+        cod = cod_de(f)
+        pos = str(it.get("pos", "")).strip()
+        madre = re.match(r"\d+", pos)
+        p = por_pos.get(pos)
+        if not p and madre and madre.group(0) != pos and cod and cod_pos.get(madre.group(0)) == cod:
+            p = por_pos.get(madre.group(0))  # compra extra de la misma pieza (14b): se compara con lo que pide el plano
+        texto = texto_busqueda(p) if p else f"{it.get('descripcion', '')} {it.get('especificacion', '')}"
         fam, at, *_ = bm.buscar(texto)
-        motivo = incompatible(fam, at, cat[cod], texto, cat[cod]["descripcion"])
+        if cod in cat:
+            r = cat[cod]
+            motivo = incompatible(fam, at, r, texto, r["descripcion"])
+            documentado = f.get("coincide") == "similar" and str(f.get("diferencia") or "").strip()
+            if not motivo and at.get("serie") and r.get("serie") and bm.norm(at["serie"]) != bm.norm(r["serie"]):
+                # otra serie (rating) no es similar (Matías, 29-10-2026), salvo que la diferencia esté escrita en la fuente
+                if not (documentado and re.sub(r"\D", "", r["serie"]) in str(f.get("diferencia"))):
+                    motivo = f"serie {r['serie']} por {at['serie']} (otro rating)"
+            if not motivo and avisos is not None and at.get("tipo") and r.get("tipo") and bm.norm(at["tipo"]) != bm.norm(r["tipo"]) and not documentado:
+                # el tipo del pedido se lee del texto y puede estar mal leído ("manómetros" en una nota): AVISO, no ERROR
+                avisos.append(f"Pos {pos}: la referencia {cod} es de otro tipo ({r['tipo']} por {at['tipo']}): confirmar que sea la misma pieza")
+            if not motivo and avisos is not None and at.get("diametro") and r.get("diametro") and dn_de(at["diametro"]) != dn_de(r["diametro"]):
+                avisos.append(f"Pos {pos}: la referencia {cod} es de otro Ø ({r['diametro']} por {at['diametro']}): justificar")
+            desc = r["descripcion"]
+        else:
+            # fuente sin pieza del catálogo (planilla, cotización): se compara el material con el texto de la fuente
+            desc = f"{f.get('proveedor', '')} {f.get('diferencia', '')}"
+            motivo = ""
+            if clases(texto):
+                if clases(desc):
+                    motivo = regla_material(fam, texto, desc, desc)
+                elif avisos is not None:
+                    avisos.append(f"Pos {pos}: la fuente ({desc[:50]}) no dice el material: verificar en el original que sea el que pide el plano")
         if motivo:
-            out.append(f"Pos {it['pos']}: la referencia {cod} ({cat[cod]['descripcion'][:45]}) no sirve según la norma: {motivo}. "
+            out.append(f"Pos {pos}: la referencia {cod or ''} ({desc[:45]}) no sirve según la norma: {motivo}. "
                        "Cambiarla por una compatible o dejar SIN PRECIO (compatibilidades_LEEME.md)")
     return out
 
@@ -172,7 +202,7 @@ def main(carpeta):
             if r.get("fecha_precio", "") < "2025-04-14" and not re.search(r"tc |tipo de cambio|tc explícito|tc explicito", (r.get("proveedor_o_criterio", "") + " " + r.get("nota", "")).lower()):
                 avisos.append(f"{r['id']}: precio del período con cepo ({r['fecha_precio']}) sin tipo de cambio explícito: reemplazar por un valor confiable o justificar (por ejemplo, costo de planta oct-2024: TC 997 en la hoja Sueldos)")
 
-    errores += control_compatibilidad(c, plano)
+    errores += control_compatibilidad(c, plano, avisos)
 
     print(f"Plano: {len(plano)} posiciones · Cómputo: {len(comp)} filas · Costo directo por unidad USD {fmt(total, 2)}")
     if total:

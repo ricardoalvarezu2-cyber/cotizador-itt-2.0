@@ -396,6 +396,12 @@ def factor_espesor(dn, sch, tabla, esp=None):
 
 
 PERFILES = None
+def no_son_piezas(unidad):
+    """Cantidad en kg, m² o toneladas (no son piezas: no cuentan juntas). Acepta Kg, KG., kgs, kilos, m², M2, mts2, tn, ton."""
+    u = re.sub(r"[\s.]", "", norm(unidad))
+    return bool(re.fullmatch(r"kgs?|kilos?|kilogramos?|m2|mts?2|metros?cuadrados?|tn|t|tons?|toneladas?", u))
+
+
 M2_POR_KG_ESTRUCTURA = 0.030  # 30 m²/t: perfiles livianos (UPN 140 = 32,5 m²/t) y chapas de apoyo
 INTERNOS = r"bafle|deflector|separador de niebla|interno|elemento filtrante|placa apoyo|viruta|refuerzo"
 
@@ -486,7 +492,7 @@ def soldaduras(filas, diametral=False):
             continue
         # una cantidad en kg o m² no son piezas (chapa de virola, 6.916 kg): no cuenta juntas (COT26-0135-003, 30-10-2026);
         # la virola se cuenta por su largo si la descripción lo dice (regla de abajo), si no, avisa
-        if norm(r["unidad"]) in ("kg", "kgs", "m2", "m²", "tn", "t"):
+        if no_son_piezas(r["unidad"]):
             if r["extremos"].strip():
                 avisos_kg.append(f"pos {r['pos']}: cantidad en {r['unidad']} con extremos {r['extremos']}: no se cuentan juntas (no son piezas); contar sus soldaduras a mano")
             continue
@@ -500,6 +506,8 @@ def soldaduras(filas, diametral=False):
         if not (n_bw or n_sw):
             continue
         q = cantidad_plano(r["cantidad"])
+        if (n_bw + n_sw) * q > 500:  # auditoría 30-10-2026: más de 500 juntas en un renglón es casi seguro una unidad mal leída
+            avisos_kg.append(f"pos {r['pos']}: {fmtg((n_bw + n_sw) * q)} extremos soldados en un solo renglón ({fmtg(q)} {r['unidad']}): confirmar la unidad")
         dn, sch = dn_de(r["diametro"]), sch_de(r["serie_sch"])
         f, pch, pgr = factor_espesor(dn, sch, tabla, espesor_mm(r))
         if diametral:

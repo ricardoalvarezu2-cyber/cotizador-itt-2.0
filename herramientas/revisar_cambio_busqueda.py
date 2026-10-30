@@ -54,18 +54,24 @@ def clave(x):
     return f"{x['cot']} · pos {x['pos']}"
 
 
+def firma(x):
+    """Lo que se acepta de cada renglón: pieza, si es igual o similar y precio (auditoría 30-10-2026: con solo el código,
+    un cambio de precio en el catálogo o de igual a similar pasaba sin revisar)."""
+    return f"{x['codigo']} · {'igual' if x['igual'] else 'similar'} · {x['precio']}" if x["codigo"] else ""
+
+
 def control(aceptar=False):
     """Compara el primer resultado de cada renglón con los aceptados (o los guarda con aceptar)."""
     ahora = {clave(x): x for x in correr(RAIZ / "herramientas") if not x["cot"].startswith("_")}
     if aceptar:
-        ACEPTADOS.write_text(json.dumps({k: v["codigo"] for k, v in sorted(ahora.items())}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+        ACEPTADOS.write_text(json.dumps({k: firma(v) for k, v in sorted(ahora.items())}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
         print(f"Resultados del buscador aceptados: {len(ahora)} renglones → {ACEPTADOS.relative_to(RAIZ)}")
         return 0
     if not ACEPTADOS.exists():
         print("No hay resultados aceptados: correr --aceptar después de revisar")
         return 1
     antes = json.loads(ACEPTADOS.read_text(encoding="utf-8"))
-    cambios = [(k, antes.get(k, "(nuevo)"), v["codigo"] or "SIN PRECIO", v["desc"]) for k, v in ahora.items() if antes.get(k) != v["codigo"]]
+    cambios = [(k, antes.get(k, "(nuevo)"), firma(v) or "SIN PRECIO", v["desc"]) for k, v in ahora.items() if antes.get(k) != firma(v)]
     for k, a, b, d in cambios:
         print(f"  {k}: {a or 'SIN PRECIO'} → {b} {d[:60]}")
     print(f"Buscador de materiales: {len(cambios)} renglones cambiaron respecto de lo aceptado" +

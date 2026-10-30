@@ -11,7 +11,9 @@ Genera:
                                                           carpetas nuevas: no pisa lo escrito a mano)
 Los CSV que ya existen no se reescriben: solo se suman las filas de carpetas nuevas (tienen filas cargadas a mano; se
 perdían, 30-10-2026). Si se corrige la ficha de una carpeta que ya estaba, el cambio en los CSV se pasa a mano.
-Al final corre validar_fichas.py sobre las fichas que entran (solo avisos).
+Una ficha que ya está en conocimiento/fichas_<SUFIJO>/ no se pisa ni se suman de nuevo sus filas (puede estar corregida
+a mano); una ficha con un aviso CRÍTICO de validar_fichas.py (precio de proveedor en los ítems, carpeta inexistente,
+fecha de otro año) no se consolida. Al final corre validar_fichas.py sobre las fichas que entran.
 """
 import csv
 import json
@@ -91,9 +93,23 @@ def main():
     carpeta_fichas.mkdir(parents=True, exist_ok=True)
     cot, items, prov = [], [], []
     aprendizajes = defaultdict(list)
+    import validar_fichas
+    anio = int(sufijo) if re.fullmatch(r"20\d\d", sufijo) else None
+    ya, frenadas = [], []
     for n, f in enumerate(sorted(fichas, key=lambda f: f.get("carpeta", "")), 1):
         nombre = re.sub(r"[^\w-]+", "_", f.get("carpeta", f"ficha_{n}"))[:90]
-        (carpeta_fichas / f"{nombre}.json").write_text(json.dumps(f, ensure_ascii=False, indent=1), encoding="utf-8")
+        destino = carpeta_fichas / f"{nombre}.json"
+        # Auditoría 30-10-2026: una ficha ya consolidada puede estar corregida a mano (precios de proveedor sacados de
+        # los ítems): no se pisa ni se vuelven a sumar sus filas. Se decide por la ficha, no por los CSV.
+        if destino.exists():
+            if json.loads(destino.read_text(encoding="utf-8")) != f:
+                ya.append(f.get("carpeta"))
+            continue
+        crit = validar_fichas.criticos(validar_fichas.validar(f, anio))
+        if crit:
+            frenadas.append((f.get("carpeta"), crit))
+            continue
+        destino.write_text(json.dumps(f, ensure_ascii=False, indent=1), encoding="utf-8")
         fam = codigo_familia(f.get("familia"))
         oc = f.get("orden_compra") or {}
         cond = f.get("condiciones") or {}
@@ -137,8 +153,11 @@ def main():
     else:
         ruta_apr.write_text("\n".join(lineas), encoding="utf-8")
         print(f"  conocimiento/aprendizajes_{sufijo}.md: {sum(len(v) for v in aprendizajes.values())} aprendizajes")
-    import validar_fichas
-    validar_fichas.main([str(origen)])  # solo avisos: cada uno se revisa contra el original
+    for c in ya:
+        print(f"  ✗ {c}: ya estaba consolidada con otro contenido; no se pisó (pasar el cambio a mano, revisado)")
+    for c, crit in frenadas:
+        print(f"  ✗ {c}: NO se consolidó: " + "; ".join(x[len(validar_fichas.CRITICO):] for x in crit))
+    validar_fichas.main([str(origen)])  # el resto son avisos: cada uno se revisa contra el original
 
 
 if __name__ == "__main__":

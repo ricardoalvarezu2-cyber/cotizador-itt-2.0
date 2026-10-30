@@ -54,9 +54,17 @@ def conservar(cot, of, previo):
     return avisos
 
 
+def huella(carpeta):
+    import hashlib
+    return hashlib.sha256((Path(carpeta) / "cotizacion.json").read_bytes()).hexdigest()[:16]
+
+
 def main(carpeta, ident="capex-oq8209", salida=None, previo=None):
     c = Path(carpeta)
     cot = json.load(open(c / "cotizacion.json", encoding="utf-8"))
+    # versión del repositorio de la que sale la copia de la página: incorporar_base.py frena si el repositorio cambió
+    # después (auditoría 30-10-2026: una corrección hecha en el repositorio se perdía al pasar la página)
+    cot["huella_repo"] = huella(c)
     of = json.load(open(c / "oferta.json", encoding="utf-8"))
     plano = {r["pos"]: r for r in csv.DictReader(open(c / "pedido" / "lista_materiales_plano.csv", encoding="utf-8"))}
     for it in cot["items"]:

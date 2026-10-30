@@ -75,7 +75,7 @@ const Ficha = (() => {
     }
     for (const r of filas) {
       if (porMetro.includes(r)) continue;
-      if (["kg", "kgs", "m2", "m²", "tn", "t"].includes(norm(r.unidad))) {  // kg o m² no son piezas (precotizar.soldaduras, 30-10-2026)
+      if (/^(kgs?|kilos?|kilogramos?|m2|mts?2|metros?cuadrados?|tn|t|tons?|toneladas?)$/.test(norm(r.unidad).replace(/[\s.]/g, ""))) {  // kg o m² no son piezas (precotizar.soldaduras, 30-10-2026)
         if (String(r.extremos || "").trim()) avisosKg.push(`pos ${r.pos}: cantidad en ${r.unidad} con extremos ${r.extremos}: no se cuentan juntas (no son piezas); contar sus soldaduras a mano`);
         continue;
       }
@@ -89,6 +89,7 @@ const Ficha = (() => {
       const nBw = toks.filter(t => t === "BW").length, nSw = toks.filter(t => t === "SW").length;
       if (!(nBw || nSw)) continue;
       const q = +r.cantidad || 0;
+      if ((nBw + nSw) * q > 500) avisosKg.push(`pos ${r.pos}: ${(nBw + nSw) * q} extremos soldados en un solo renglón (${q} ${r.unidad}): confirmar la unidad`);
       let dn = dnDe(r.diametro); const sch = schDe(r.serie_sch);
       let [f, pch, pgr] = factorEspesor(dn, sch, tabla, espesorMm(r));
       if (OLETS.test(d)) {

@@ -46,6 +46,9 @@ REEMPLAZA = {
     "cano_a53": {"cano_a106", "cano_a106c"},
     "cano_api5l_b": {"cano_a106", "cano_a106c"},
     "a333_gr1": {"carbono_baja_temp"},
+    "cano_a53a": {"cano_a53", "cano_a106", "cano_a106c"},
+    "carbono_516_60": {"carbono", "carbono_516_65"},       # A516-70 / -65 por -60 (el grupo se controla aparte)
+    "carbono_516_65": {"carbono"},
     "inox_304": {"inox_316", "inox_304l"},                 # 304L solo si su grupo alcanza (CF3, 2.1; F304L 2.3 no)
     "inox_304l": {"inox_316l"},
     "inox_316": {"inox_316l"},                             # 316L solo si su grupo alcanza (CF3M, 2.2; F316L 2.3 no)
@@ -134,7 +137,10 @@ def regla_material(fam, pedido, cand, desc_cand=""):
     for ca, ga in a.items():
         tipo = ca.split("_")[0] if ca.startswith(("bulon", "tuerca")) else ""
         if tipo and not any(c.startswith(tipo) for c in b):
-            continue  # bulonería: el candidato no dice la tuerca (o el bulón): no hay dato para comparar esa parte
+            if any(c.startswith(("bulon", "tuerca")) for c in b):
+                continue  # bulonería: el candidato dice el bulón pero no la tuerca (o al revés): esa parte no se compara
+            # el candidato no dice ningún grado de bulonería ("espárrago 304"): no prueba el grado (auditoría 30-10-2026)
+            return f"el candidato no dice el grado del {tipo.replace('bulon', 'bulón')} (el pedido es {pedido[:40]}): no se puede comparar"
         ok = False
         for cb, gb in b.items():
             if not (cb == ca or cb in REEMPLAZA.get(ca, set()) or cb in GENERICOS.get(ca, set())):
@@ -212,9 +218,19 @@ def dn_de(v):
     return float(m.group(1).replace(",", ".")) if m else None
 
 
+def material_texto(atrib, texto):
+    """Texto del material para las reglas. El atributo "material" del catálogo y del buscador viene simplificado (pierde
+    el grado: "316L" → "AISI 316", "WC6" → "A216 WCB"; auditoría 30-10-2026), así que se usa el texto original (plano o
+    descripción del proveedor) cuando nombra un material de la tabla, y el atributo solo si el texto no dice nada."""
+    if clases(texto):
+        return texto
+    return atrib or ""
+
+
 def incompatible(fam, at_pedido, at_cand, texto_pedido="", texto_cand=""):
     """Motivo por el que el candidato NO puede ser similar del pedido ("" si puede)."""
-    m = regla_material(fam, at_pedido.get("material", ""), at_cand.get("material", ""), texto_cand)
+    ped = material_texto(at_pedido.get("material", ""), texto_pedido)
+    m = regla_material(fam, ped, material_texto(at_cand.get("material", ""), texto_cand), texto_cand)
     if m:
         return m
     c = regla_conexion(conexiones(at_pedido.get("extremos", ""), at_pedido.get("cara", "")),

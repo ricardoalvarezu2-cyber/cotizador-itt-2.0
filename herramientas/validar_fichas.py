@@ -29,15 +29,24 @@ def num(v):
         return None
 
 
-def validar(d):
-    """Lista de avisos de una ficha (dict)."""
+CRITICO = "CRÍTICO: "  # consolidar_fichas.py no consolida una ficha con un aviso crítico (auditoría 30-10-2026)
+
+
+def criticos(avisos):
+    return [a for a in avisos if a.startswith(CRITICO)]
+
+
+def validar(d, anio=None):
+    """Lista de avisos de una ficha (dict). anio: año de la tanda (sufijo de consolidar_fichas), si es un año."""
     av = []
     carpeta = TEXTOS / str(d.get("carpeta") or "")
     if not d.get("carpeta") or not carpeta.is_dir():
-        return [f"la carpeta '{d.get('carpeta')}' no está en fuentes_originales/ofertas_texto/"]
+        return [f"{CRITICO}la carpeta '{d.get('carpeta')}' no está en fuentes_originales/ofertas_texto/"]
     f = str(d.get("fecha_oferta") or "")
     if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", f):
         av.append(f"fecha de oferta {'vacía' if not f else 'no es AAAA-MM-DD: ' + f}")
+    elif anio and not f.startswith(str(anio)) and not str(d.get("fecha_ultima_modificacion") or "").startswith(str(anio)):
+        av.append(f"{CRITICO}la fecha de oferta {f} no es del año de la tanda ({anio})")
     fam = str(d.get("familia") or "").strip().split(" ")[0].upper()
     if fam not in FAMILIAS:
         av.append(f"familia '{d.get('familia')}' no es un código válido")
@@ -60,7 +69,7 @@ def validar(d):
         en_itt, en_prov = figura(pu, itt), figura(pu, prov)
         nombre = str(i.get("descripcion") or "")[:50]
         if en_prov and not en_itt:
-            av.append(f"ítem «{nombre}»: el precio {pu} aparece solo en documentos de proveedores (los ítems son lo que ofertó ITT)")
+            av.append(f"{CRITICO}ítem «{nombre}»: el precio {pu} aparece solo en documentos de proveedores (los ítems son lo que ofertó ITT)")
         elif not en_itt and not en_prov:
             av.append(f"ítem «{nombre}»: el precio {pu} no aparece en ningún documento de la carpeta")
     return av

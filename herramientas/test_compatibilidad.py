@@ -77,6 +77,22 @@ chk("NACE", incompatible("VAL", {}, {}, "valvula esferica NACE MR0175", "valvula
 chk("MR0175 no se cubre con MR0103", incompatible("VAL", {}, {}, "NACE MR0175", "NACE MR0103") != "")
 chk("'source' no es servicio ácido", incompatible("VAL", {}, {}, "source water", "x") == "")
 
+# 1b. por el buscador completo (auditoría 30-10-2026: el atributo "material" del buscador pierde el grado, y las reglas
+# probadas solo con atributos dejaban pasar WC6 → WCB y WPL6 → WPB). Cada pedido: el primer resultado no puede tener
+# en la descripción lo que se prohíbe.
+POR_BUSCADOR = [
+    ('Válvula esférica 2" #600 RF ASTM A216 WC6', r"\bwcb\b"),
+    ('Codo 90 2" sch 80 ASTM A420 WPL6 BW', r"\bwpb\b|a ?234"),
+    ('Brida WN 2" #150 RF A182 F316L', r"^(?!.*316 ?l)"),
+    ('Caño 6" sch 40 ASTM A106 Gr C BE', r"^(?!.*gr(?:ado)?\.? ?c\b)"),
+    ('Espárrago 5/8" A193 B7M c/2 tuercas A194 2HM', r"^(?!.*b ?7 ?m)"),
+]
+import re  # noqa: E402
+for t, prohibido in POR_BUSCADOR:
+    *_, res = bm.buscar(t)
+    d = bm.norm(res[0][-1]["descripcion"]) if res else ""
+    chk(f"buscador: {t}", not (d and re.search(prohibido, d)), d[:80])
+
 # 2. página = Python
 bm.buscar("brida")  # carga el catálogo
 filas = bm._FILAS

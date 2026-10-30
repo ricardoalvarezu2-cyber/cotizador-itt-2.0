@@ -43,3 +43,9 @@ Pos 17 (cupla 1/2" SW/NPT): la referencia era una cupla BSPT (otra rosca); pasa 
 
 ## 30-10-2026 · Compatibilidades revisadas
 Pos 14 (cupla c/ válvula esférica, A-106): SIN PRECIO (la referencia A105 es otra clase de material). Pos 23 (caño 6" A-53 sch 80): pasa a CAN-01512 A106 Gr B sch XS, mismo precio (USD 90,70). Unitario USD 76.498,56.
+
+## 30-10-2026 · Auditoría independiente de compatibilidades
+- Pos 5c (espárragos 5/8" B7 + 2H): la referencia era B7M (menor resistencia, no reemplaza a B7). Pasa a JUN-04173 "Espárragos con 2 tuercas 5/8" x 110 mm A-193 Gr. B7 / A-194 Gr. 2H. Zincados", USD 10 c/u (Bules o Versailles, planilla TAVAL/43, 19-02-2026, verificado en el texto, línea 147). Más largo que el pedido (sirve). La planilla pone USD 10 también al de 7/8" × 230 mm: parece valor global, **pedir cotización**.
+- Pos 21 y 21b (caño 3" sch 40 A-53 Gr B): la lista de Renard dice "A53A" (grado A, con costura; verificado en `renar_lista_2025-12.xlsx`, cód. 1007). Pasa a cód. 1153 "Tubo s/costura 88,9 x 5,49 mm A53/A106/API 5L B", USD 25,08/m (misma lista). Cantidades sin cambio.
+- Pos 15 (toma multiport 1/2" 3000): la referencia era un manifold serie 2000: otra serie no es similar → SIN PRECIO, pedir cotización a ABAC.
+- Unitario USD 76.572,52 (antes 76.498,56); total USD 77.176,64. Borrador, sin revisar.

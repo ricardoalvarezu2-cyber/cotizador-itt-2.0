@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-TS01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 52.874,68 por equipo · soldadura y servicios calculados USD 25.418,22 · 31 similares (1, 3, 6, 6b, 7, 7b, 8, 8b, 13, 17, 20, 22, 23, 24, 25, 29, 30, 31, 34, 36, 37, 38, 39, 41, 42, 43, 44, 45, 47, 49, 50) · 11 sin precio (2, 18, 26, 27, 28, 32, 33, 35, 40, 46, 48).
+**Resumen:** materiales USD 33.595,97 por equipo · soldadura y servicios calculados USD 25.418,22 · 25 similares (1, 3, 7, 7b, 8, 8b, 13, 17, 20, 22, 23, 24, 25, 29, 30, 31, 34, 36, 37, 38, 39, 45, 47, 49, 50) · 16 sin precio (2, 6, 18, 26, 27, 28, 32, 33, 35, 40, 41, 42, 43, 44, 46, 48).
 
 
 ## 1. Materiales
@@ -13,7 +13,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 3 | Brida welding neck RF · Ø 4" | SIMILAR | 76,42 / un | 2025-12-18 · planilla interna | cara: sin dato (pedido RF); schedule: 80 (pedido 120); material: sin dato (pedido A105) |
 | 4 | Brida welding neck RF · Ø 2" | IGUAL | 215,80 / un | 2024-11-01 · stock (precio maestro) | — |
 | 5 | Brida welding neck RF · Ø 1 1/2" | IGUAL | 163,20 / un | 2022-11-15 · compra | — |
-| 6 | Virola/caño sin costura barril menor largo 4, | SIMILAR | 242,81 / m | 2025-12-26 · lista | espesor_mm: 14.27 (pedido 15.88); material: A106 B (pedido API 5L) |
+| 6 | Virola/caño sin costura barril menor largo 4, | **SIN PRECIO** | — | — | pedir cotización |
 | 7 | Virola/caño sin costura barril mayor largo 3, | SIMILAR | 750,00 / m | 2025-08-01 · planilla interna | espesor_mm: sin dato (pedido 15.88) |
 | 8 | Caño sin costura · Ø 12" | SIMILAR | 228,56 / m | 2025-12-26 · lista | diametro: 10" (pedido 12"); precio escalado por diámetro (12" ÷ 10")^1,5 = × 1,31 |
 | 9 | Caño sin costura · Ø 4" | IGUAL | 60,37 / m | 2025-12-26 · lista | — |
@@ -48,17 +48,16 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 38 | Hierro ángulo 1 1/2 x 1 1/2 x 1/4 (skid) | SIMILAR (acero por kg) | USD 1,90/kg | 2026-02-10 cot | precio por kg de materia prima (hierro ángulo 3x1/4) +10% por recortes; no incluye corte, plegado ni rolado |
 | 39 | Perfil UPN 160 (skid) | SIMILAR (acero por kg) | USD 1,90/kg | 2026-02-10 cot | precio por kg de materia prima (hierro ángulo 3x1/4) +10% por recortes; no incluye corte, plegado ni rolado |
 | 40 | Malla metálica romboidal tipo Shulman 50 x 30 | **SIN PRECIO** | — | — | pedir cotización |
-| 41 | Válvula esférica, cuerpo WCB, internos 316, a | SIMILAR | 10.740,60 / un | 2025-09-01 · lista | trim: sin dato (pedido ptfe); paso: reducido (no pedido) · faltan: paso |
-| 42 | Válvula esférica, cuerpo WCB, internos 316, a | SIMILAR | 1.710,00 / un | 2025-09-01 · lista | trim: sin dato (pedido ptfe); paso: reducido (no pedido) · faltan: paso |
-| 43 | Válvula esférica, cuerpo WCB, internos 316, a | SIMILAR | 832,00 / un | 2025-09-01 · lista | trim: sin dato (pedido ptfe); paso: reducido (no pedido) · faltan: paso |
-| 44 | Válvula esférica, cuerpo WCB, internos 316, a | SIMILAR | 540,40 / un | 2025-09-01 · lista | diametro: 2" (pedido 1.5"); trim: sin dato (pedido ptfe); paso: reducido (no pedido); precio escalado por diám · faltan: paso |
+| 41 | Válvula esférica, cuerpo WCB, internos 316, a | **SIN PRECIO** | — | — | pedir cotización |
+| 42 | Válvula esférica, cuerpo WCB, internos 316, a | **SIN PRECIO** | — | — | pedir cotización |
+| 43 | Válvula esférica, cuerpo WCB, internos 316, a | **SIN PRECIO** | — | — | pedir cotización |
+| 44 | Válvula esférica, cuerpo WCB, internos 316, a | **SIN PRECIO** | — | — | pedir cotización |
 | 45 | Válvula esférica 5000 WOG, asientos Delrin, c | SIMILAR | 65,20 / un | 2026-01-26 · planilla interna | serie: 3000 (no pedido) · faltan: serie, paso |
 | 46 | Válvula macho (tapón lubricado) invertida, in | **SIN PRECIO** | — | — | pedir cotización |
 | 47 | Manómetro con glicerina Ø100 mm 0-400 · Ø 1/2 | SIMILAR | 120,00 / un | 2026-08-14 · planilla interna | — · faltan: rango, conexion |
 | 48 | Válvula de seguridad (TSV) entrada 1 1/2" sal | **SIN PRECIO** | — | — | pedir cotización |
 | 49 | Detector de paso de scraper | SIMILAR | 1.650,00 / un | 2025-12-10 · planilla interna | diametro: 2" (no pedido); serie: 300 (no pedido) · faltan: diametro, serie |
 | 50 | Válvula de bloqueo y purga (para manómetro) · | SIMILAR | 80,00 / un | 2026-04-22 · planilla interna | — · faltan: serie, material |
-| 6b | Completar barra de 12 m (pos 6) | compra extra | USD 242,81/m × 7,2 m | | Se usan 4,8 m en 1 equipo(s) y se compran 12 m. Borrar si hay sobrante en stock |
 | 7b | Completar barra de 12 m (pos 7) | compra extra | USD 750,00/m × 8,8 m | | Se usan 3,2 m en 1 equipo(s) y se compran 12 m. Borrar si hay sobrante en stock |
 | 8b | Completar barra de 12 m (pos 8) | compra extra | USD 228,56/m × 6,1 m | | Se usan 5,9 m en 1 equipo(s) y se compran 12 m. Borrar si hay sobrante en stock |
 | 9b | Completar barra de 12 m (pos 9) | compra extra | USD 60,37/m × 3,5 m | | Se usan 8,5 m en 1 equipo(s) y se compran 12 m. Borrar si hay sobrante en stock |
@@ -101,7 +100,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 93 placas chicas + 7 grandes + 3,00 servicio(s) de RX + 1,00 de LP por equipo = USD 2.178,50 (Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))).
   Con las tarifas de Antonelli (11-2025) serían USD 3.495,00: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: trampa, 16", 1 u, materiales USD 52.875 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: trampa, 16", 1 u, materiales USD 33.596 por unidad)
 
 - Montaje propio: no se suma porque la fabricación la hace el tercero; la prueba hidráulica va aparte (fila PH).
 - **Ingeniería:** 503 h × USD 15/h = USD 7.545,00 · mediana de 503,0 h por unidad (repartidas en la serie) · antecedente: TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E · Trampa receptora 8x6 #300 (RS-123/125) (8 / 6 (barrel 24 x 20 en tabla soldadura), 2 u, 2025-12-10) · rango del mismo tipo 251,5–251,5 h

@@ -54,3 +54,17 @@ Efecto sobre las cotizaciones: 40 renglones de las precotizaciones cambian (28 p
 cotizaciones cargadas, 5 renglones de Camuzzi 001, 002 y 003 (4 quedan SIN PRECIO, 1 pasa a un caño A106 al mismo precio).
 Controles: C01 baja de 73.198 a 44.161 (la válvula de 3 vías motorizada y otras quedan sin precio; sin contarlas da −2%).
 Para que haya menos SIN PRECIO hay que cargar el material que falta en el catálogo (1.407 renglones sin material).
+
+## Auditoría independiente (30-10-2026, segunda vuelta)
+- Las reglas se aplican sobre el **texto** del plano y de la descripción del proveedor (`material_texto`), no sobre el
+  atributo "material" del buscador, que pierde el grado (WC6 → WCB, 316L → 316, WPL6 → vacío).
+- Bulonería: si el candidato no dice ningún grado de bulón ni de tuerca ("espárrago 304"), no se puede comparar.
+- Patrones corregidos: tuerca 8M solo pegado ("8m", no "4,8 m"); API 5L X sin espacio fuera de "API 5L" ("x60" sí,
+  "5/8 x 60" no); A516-60/65 con "Gr"; A194 4/7; A53 Gr A como clase propia (no reemplaza a A53 B).
+- Válvulas con cuerpo e internos ("WCB, internos 316"): el candidato tiene que decir los dos; uno que solo dice el cuerpo
+  no prueba los internos (caso real: la retención WCB de USD 533 era trim 13Cr).
+- P9 (`verificar_computo.py`) controla todas las filas con precio: las de compra extra contra su fila madre si usan la
+  misma pieza, las agregadas por ITT contra su propia descripción, las fuentes sin código contra el texto de la fuente.
+  Otra serie es ERROR (salvo que la diferencia esté escrita en la fuente); otro Ø u otro tipo, AVISO.
+- Efecto: 25 renglones de las precotizaciones cambian (revisados uno por uno y aceptados); en las cotizaciones cargadas,
+  7 renglones de Camuzzi 001 y 002 (ver bitácoras). Control TS01 78.293 → 59.014.
