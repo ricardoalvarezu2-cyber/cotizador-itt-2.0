@@ -25,6 +25,7 @@ from docx.oxml.ns import qn
 RAIZ = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RAIZ / "herramientas"))
 from catalogo_materiales import FAMILIAS  # noqa: E402
+import compatibilidad  # noqa: E402
 
 C = RAIZ / "conocimiento"
 I_TABLA_REV, I_RECUADRO, I_FIN_INTRO, I_NOTAS, I_FIRMA = 4, 8, 29, 88, 102
@@ -173,7 +174,7 @@ def main():
     datos = {
         "generado": date.today().isoformat(),
         "materiales": mats, "servicios": srv, "indices": idx, "dolar": dol, "tarifas": tar, "soldadura": fs, "canos": canos,
-        "accesorios": acc, "pesos": pesos, "clientes": clientes, "familias": fam, "antecedentes": ant,
+        "accesorios": acc, "pesos": pesos, "clientes": clientes, "familias": fam, "antecedentes": ant, "compat": compatibilidad.para_pagina(),
         "plantilla_cotizacion": json.load(open(RAIZ / "cotizaciones" / "_plantilla" / "cotizacion.json", encoding="utf-8")),
         "plantilla_oferta": json.load(open(RAIZ / "cotizaciones" / "_plantilla" / "oferta.json", encoding="utf-8")),
         "logo": logo(),

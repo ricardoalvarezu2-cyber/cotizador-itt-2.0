@@ -255,8 +255,7 @@
      "codigo": "ABW-00358",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3547",
      "fecha": "2025-12-26",
-     "coincide": "similar",
-     "diferencia": "se prefirió un precio reciente a stock (precio maestro) del 2024-11-01 (BRI-01262, USD 215,80)"
+     "coincide": "igual"
     }
    ]
   },
@@ -276,8 +275,7 @@
      "codigo": "BRI-03413",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\72- Lic 64675 - SKID CONCENTRADOR - UTE NARAMBUE · 5.Proveedores 3ros/Cot Complemet para Narambue 07072026.pdf",
      "fecha": "2026-07-06",
-     "coincide": "similar",
-     "diferencia": "se prefirió un precio reciente a compra del 2022-11-15 (BRI-01216, USD 163,20)"
+     "coincide": "igual"
     }
    ]
   },
@@ -461,7 +459,7 @@
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-10-29",
+     "fecha": "2026-10-30",
      "coincide": "sin_ref",
      "diferencia": "El más parecido es de otro diámetro (2\") (JUN-02769 JUNTA ESPIRALADA 2\" - 300LB, AISI 316 ESP: 4.5mm C, USD 6,00): no sirve como precio"
     }
@@ -517,14 +515,14 @@
    "especificacion": "Plano: 3/4\" · 80 · ASTM A106 Gr.B · NPT",
    "fuentes": [
     {
-     "tipo": "stock",
-     "precio": 3.93,
-     "proveedor": "Stock ITT (cód. ACI020KN1ICK100) · NIP-01782",
-     "codigo": "NIP-01782",
-     "origen": "fuentes_originales/stock_valorizado_2024-11.xlsx · código ACI020KN1ICK100",
-     "fecha": "2024-11-01",
+     "tipo": "ant",
+     "precio": 36.74,
+     "proveedor": "Antecedentes puentes Taval/CGC s2000 · NIP-01780",
+     "codigo": "NIP-01780",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\55- Tecpetrol Puentes de Producción PPar Valvula y Puente PR 54942 · 7.Propuesta Comercial (envío al Cliente)/Puente de producción Tec Conv y NOC versión 3.xlsx",
+     "fecha": "2026-04-22",
      "coincide": "similar",
-     "diferencia": "schedule: 160 (pedido 80); escalado por espesor (sch 80 3,91 mm ÷ sch 160 5,56 mm = × 0,70)"
+     "diferencia": "diametro: 0.5\" (pedido 0.75\"); precio escalado por diámetro (0,75\" ÷ 0,5\")^1,5 = × 1,84"
     }
    ]
   },
@@ -604,7 +602,7 @@
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-10-29",
+     "fecha": "2026-10-30",
      "coincide": "sin_ref",
      "diferencia": "El más parecido es de otro diámetro (0.5\") (AFO-03330 Sockolet 1/2\" S3000 | A-105, USD 10,00): no sirve como precio"
     }
@@ -751,7 +749,7 @@
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-10-29",
+     "fecha": "2026-10-30",
      "coincide": "sin_ref",
      "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
@@ -772,7 +770,7 @@
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-10-29",
+     "fecha": "2026-10-30",
      "coincide": "sin_ref",
      "diferencia": "No hay pieza de esa familia y tipo con precio"
     }

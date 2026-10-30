@@ -147,14 +147,14 @@
    "especificacion": "Plano: 6\" · 900 / sch 120 · ASTM A-105 · RF/BW",
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 471.35,
-     "proveedor": "Renard (cód. 12551) · BRI-01324",
-     "codigo": "BRI-01324",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 12551",
-     "fecha": "2025-12-26",
+     "tipo": "ant",
+     "precio": 140.39,
+     "proveedor": "sin proveedor en planilla · BRI-02554",
+     "codigo": "BRI-02554",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios · 4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 303 y 304 #900 - PC0-C.xlsx",
+     "fecha": "2025-12-18",
      "coincide": "similar",
-     "diferencia": "cara: RTJ (pedido RF); schedule: 80 (pedido 120)"
+     "diferencia": "diametro: 4\" (pedido 6\"); cara: sin dato (pedido RF); schedule: 80 (pedido 120); material: sin dato (pedido A105); precio escalado por diámetro (6\" ÷ 4\")^1,5 = × 1,84"
     }
    ]
   },
@@ -190,13 +190,13 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 280.0,
-     "proveedor": "no dice (planilla de compras; cotización FTS 250558 en carpeta) · BRI-02454",
-     "codigo": "BRI-02454",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\7. Trampas · 5.Proveedores 3ros/Compras ITT/TRAMPAS unificado para compras.xlsx.txt",
-     "fecha": "2025-08-01",
+     "precio": 76.42,
+     "proveedor": "sin proveedor en planilla · BRI-02554",
+     "codigo": "BRI-02554",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios · 4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 303 y 304 #900 - PC0-C.xlsx",
+     "fecha": "2025-12-18",
      "coincide": "similar",
-     "diferencia": "cara: sin dato (pedido RF)"
+     "diferencia": "cara: sin dato (pedido RF); schedule: 80 (pedido 120); material: sin dato (pedido A105)"
     }
    ]
   },
@@ -210,14 +210,13 @@
    "especificacion": "Plano: 2\" · 900 / sch 160 · ASTM A-105 · RF/BW",
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 121.0,
-     "proveedor": "no dice (planilla de compras; cotización FTS 250558 en carpeta) · BRI-02449",
-     "codigo": "BRI-02449",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\7. Trampas · 5.Proveedores 3ros/Compras ITT/TRAMPAS unificado para compras.xlsx.txt",
-     "fecha": "2025-08-01",
-     "coincide": "similar",
-     "diferencia": "cara: sin dato (pedido RF); se prefirió un precio reciente a stock (precio maestro) del 2024-11-01 (BRI-01262, USD 215,80)"
+     "tipo": "stock",
+     "precio": 215.8,
+     "proveedor": "Stock ITT (cód. ACS0506R57050K) · BRI-01262",
+     "codigo": "BRI-01262",
+     "origen": "fuentes_originales/stock_valorizado_2024-11.xlsx · código ACS0506R57050K",
+     "fecha": "2024-11-01",
+     "coincide": "igual"
     }
    ]
   },
@@ -231,14 +230,13 @@
    "especificacion": "Plano: 1 1/2\" · 900 / sch 160 · ASTM A-105 · RF/BW",
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 75.0,
-     "proveedor": "no dice (planilla de compras; cotización FTS 250558 en carpeta) · BRI-02441",
-     "codigo": "BRI-02441",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\7. Trampas · 5.Proveedores 3ros/Compras ITT/TRAMPAS unificado para compras.xlsx.txt",
-     "fecha": "2025-08-01",
-     "coincide": "similar",
-     "diferencia": "cara: sin dato (pedido RF); se prefirió un precio reciente a compra del 2022-11-15 (BRI-01216, USD 163,20)"
+     "tipo": "stock",
+     "precio": 163.2,
+     "proveedor": "Stock ITT · última compra (cód. ACS0406R57050K) · BRI-01216",
+     "codigo": "BRI-01216",
+     "origen": "fuentes_originales/stock_valorizado_2024-11.xlsx · código ACS0406R57050K",
+     "fecha": "2022-11-15",
+     "coincide": "igual"
     }
    ]
   },
@@ -518,14 +516,14 @@
    "especificacion": "Plano: 2\" · 120 · ASTM A-234 WPB · BW",
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 96.19,
-     "proveedor": "Renard (cód. 4043) · ABW-00099",
-     "codigo": "ABW-00099",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 4043",
-     "fecha": "2025-12-26",
+     "tipo": "est",
+     "precio": 6.27,
+     "proveedor": "Cintolo Hnos. (cód. 2025) · ABW-03646",
+     "codigo": "ABW-03646",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-28/cintolo_lista_29-1_2025-02-17.xlsx · código 2025",
+     "fecha": "2025-02-17",
      "coincide": "similar",
-     "diferencia": "schedule: 160 (pedido 120)"
+     "diferencia": "schedule: sin dato (pedido 120)"
     }
    ]
   },
@@ -620,14 +618,13 @@
    "especificacion": "Plano: 16\" x 12\" · 40 · ASTM A-860 WPHY 52 · BW",
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 403.11,
-     "proveedor": "Renard (cód. 3188) · ABW-00266",
-     "codigo": "ABW-00266",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3188",
-     "fecha": "2025-12-26",
-     "coincide": "similar",
-     "diferencia": "diametro: 10\" (pedido 16\"); diametro2: 4\" (pedido 12\"); material: A234 WPB (pedido A860 WPHY); precio escalado por diámetro (16\" ÷ 10\")^1,5 = × 2,02"
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-30",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
    ]
   },
@@ -662,13 +659,13 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 175.37,
-     "proveedor": "Lista Renar · ABW-00400",
-     "codigo": "ABW-00400",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt",
-     "fecha": "2026-02-19",
+     "precio": 39.26,
+     "proveedor": "sin proveedor en planilla · ABW-02324",
+     "codigo": "ABW-02324",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECHINT\\12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado · 4.Armado de la Oferta Comercial/OFERTA REV A/LM costo Desarenador rev ventas REV. 1.xlsx",
+     "fecha": "2025-12-23",
      "coincide": "similar",
-     "diferencia": "schedule: 80 (pedido 160); escalado por espesor (sch 160 13,49 mm ÷ sch 80 8,56 mm = × 1,58)"
+     "diferencia": "diametro: 3\" (pedido 4\"); precio escalado por diámetro (4\" ÷ 3\")^1,5 = × 1,54"
     }
    ]
   },
@@ -790,9 +787,9 @@
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-10-29",
+     "fecha": "2026-10-30",
      "coincide": "sin_ref",
-     "diferencia": "El más parecido es de otro diámetro (6\") (JUN-01722 24 juntas RTJ R45 6\" #900, USD 12,87 c/u, USD 12,87): no sirve como precio"
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
    ]
   },
@@ -810,9 +807,9 @@
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-10-29",
+     "fecha": "2026-10-30",
      "coincide": "sin_ref",
-     "diferencia": "El más parecido es de otro diámetro (6\") (JUN-01722 24 juntas RTJ R45 6\" #900, USD 12,87 c/u, USD 12,87): no sirve como precio"
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
    ]
   },
@@ -826,14 +823,13 @@
    "especificacion": "Plano: 4\" · 900 ·  · ",
    "fuentes": [
     {
-     "tipo": "cot",
-     "precio": 12.87,
-     "proveedor": "MS Juntas · JUN-01722",
-     "codigo": "JUN-01722",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\12 - Skid manifold PAD S-900",
-     "fecha": "2026-05-27",
-     "coincide": "similar",
-     "diferencia": "diametro: 6\" (pedido 4\"); extremos: RTJ (pedido RF)"
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-30",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
    ]
   },
@@ -914,7 +910,7 @@
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-10-29",
+     "fecha": "2026-10-30",
      "coincide": "sin_ref",
      "diferencia": "El más parecido es de otro diámetro (1.5\") (AFO-03342 WELDOLET | 1½ | ASTM A105 | BW | WELDOLET 1½\" X 20, USD 85,00): no sirve como precio"
     }
@@ -934,7 +930,7 @@
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-10-29",
+     "fecha": "2026-10-30",
      "coincide": "sin_ref",
      "diferencia": "El más parecido es de otro diámetro (1.5\") (AFO-03342 WELDOLET | 1½ | ASTM A105 | BW | WELDOLET 1½\" X 20, USD 85,00): no sirve como precio"
     }
@@ -975,7 +971,7 @@
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-10-29",
+     "fecha": "2026-10-30",
      "coincide": "sin_ref",
      "diferencia": "El más parecido es de otro diámetro (2\") (OTR-02900 ABRAZADERA U-BOLT STANDART | 2\" | ACERO AL CARBONO, USD 15,00): no sirve como precio"
     }
@@ -1077,7 +1073,7 @@
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-10-29",
+     "fecha": "2026-10-30",
      "coincide": "sin_ref",
      "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
@@ -1160,14 +1156,14 @@
    "taval": true,
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 775.0,
-     "proveedor": "no dice (planilla de compras; cotización FTS 250558 en carpeta) · VAL-03536",
-     "codigo": "VAL-03536",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\7. Trampas · 5.Proveedores 3ros/Compras ITT/TRAMPAS unificado para compras.xlsx.txt",
-     "fecha": "2025-08-01",
+     "tipo": "lista",
+     "precio": 540.4,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04448",
+     "codigo": "VAL-04448",
+     "origen": "taval_lista30_2025-09.xlsx · código BG10506R0104NP, hoja PR Guiada",
+     "fecha": "2025-09-01",
      "coincide": "similar",
-     "diferencia": "extremos: RTJ (pedido RF)"
+     "diferencia": "diametro: 2\" (pedido 1.5\"); trim: sin dato (pedido ptfe); paso: reducido (no pedido); precio escalado por diámetro (1,5\" ÷ 2\")^1,5 = × 0,65"
     }
    ]
   },
@@ -1204,14 +1200,13 @@
    "taval": true,
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 1203.0,
-     "proveedor": "no dice (planilla de compras; cotización FTS 250558 en carpeta) · VAL-03597",
-     "codigo": "VAL-03597",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\7. Trampas · 5.Proveedores 3ros/Compras ITT/TRAMPAS unificado para compras.xlsx.txt",
-     "fecha": "2025-08-01",
-     "coincide": "similar",
-     "diferencia": "extremos: RTJ (pedido RF)"
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-30",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
    ]
   },
@@ -1250,7 +1245,7 @@
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-10-29",
+     "fecha": "2026-10-30",
      "coincide": "sin_ref",
      "diferencia": "No hay pieza de esa familia y tipo con precio"
     }

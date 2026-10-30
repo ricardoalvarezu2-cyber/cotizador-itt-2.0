@@ -48,6 +48,69 @@ const Busqueda = (() => {
     });
   }
 
+  // ------------------------------------------------------------------ compatibilidad (espejo de herramientas/compatibilidad.py)
+  const normP = t => String(t ?? "").normalize("NFKD").replace(/[^\x00-\x7f]/g, "").toLowerCase().replace(/\s+/g, " ");
+  const RX = new WeakMap();
+  const mats = C => { if (!RX.has(C)) RX.set(C, C.materiales.map(m => ({ ...m, rx: new RegExp(m.patron) }))); return RX.get(C); };
+  const claseMat = (C, t) => { t = normP(t); return t.trim() ? mats(C).find(m => m.rx.test(t)) || null : null; };
+  const grado = t => (normP(t).match(/\b(?:x|wphy|f) ?(\d{2})\b/) || [])[1] || "";
+  const bulones = (C, t) => { t = normP(t); return new Set(mats(C).filter(m => /^(bulon|tuerca)/.test(m.clase) && m.rx.test(t)).map(m => m.clase)); };
+  const reemp = (C, a) => new Set(C.reemplaza[a] || []);
+  function reglaMaterial(C, fam, pedido, cand) {
+    const ba = bulones(C, pedido), bb = bulones(C, cand);
+    if (ba.size && bb.size) {
+      for (const tipo of ["bulon", "tuerca"]) {
+        const xa = [...ba].filter(c => c.startsWith(tipo)), xb = [...bb].filter(c => c.startsWith(tipo));
+        if (xa.length && xb.length && !xa.some(x => xb.some(y => y === x || reemp(C, x).has(y)))) return `bulonería ${xb.sort().join("/")} no reemplaza a ${xa.sort().join("/")}`;
+      }
+      return "";
+    }
+    const a = claseMat(C, pedido), b = claseMat(C, cand);
+    if (!a || !b) return "";
+    const ca = a.clase, cb = b.clase, generico = C.genericos.includes(cb) && ca.startsWith(cb);
+    if (ca !== cb && !reemp(C, ca).has(cb) && !generico) return `material ${b.material} no reemplaza a ${a.material}`;
+    if (ca === cb && ca === "carbono_alta_resistencia" && grado(pedido) && grado(cand) && grado(pedido) !== grado(cand)) return `grado ${grado(cand)} distinto del pedido (${grado(pedido)})`;
+    if ((fam === "VAL" || fam === "BRI") && a.grupo_b16_5 && b.grupo_b16_5 && a.grupo_b16_5 !== b.grupo_b16_5 && ca === cb) return `otro grupo de presión-temperatura de B16.5 (${b.grupo_b16_5} por ${a.grupo_b16_5})`;
+    return "";
+  }
+  function conexiones(...ts) {
+    const out = new Set();
+    for (let t of ts) {
+      t = normP(t);
+      for (const k of ["rf", "ff", "rtj", "npt", "bspt", "sw", "bw"]) if (new RegExp(`\\b${k}\\b`).test(t)) out.add(k);
+      if (/\bbridad|\bbrida\b/.test(t) && !["rf", "ff", "rtj"].some(k => out.has(k))) out.add("brida");
+    }
+    return out;
+  }
+  function reglaConexion(a, b) {
+    if (!a.size || !b.size) return "";
+    const inter = (s, ks) => new Set([...s].filter(x => ks.includes(x))), igual = (x, y) => x.size === y.size && [...x].every(v => y.has(v));
+    const txt = `extremos o cara distintos (${[...b].sort().join("/").toUpperCase()} por ${[...a].sort().join("/").toUpperCase()})`;
+    const ca = inter(a, ["rf", "ff", "rtj"]), cb = inter(b, ["rf", "ff", "rtj"]);
+    if (ca.size && cb.size && !igual(ca, cb)) return txt;
+    const ra = inter(a, ["npt", "bspt"]), rb = inter(b, ["npt", "bspt"]);
+    if (ra.size && rb.size && !igual(ra, rb)) return txt;
+    if ((ra.size && !rb.size && b.has("sw") && !a.has("sw")) || (rb.size && !ra.size && a.has("sw") && !b.has("sw"))) return txt;
+    return "";
+  }
+  function schCanonico(sch, dn) {
+    const s = String(sch || "").toUpperCase().replace("SCH", "").trim(), d = dn == null ? null : dn;
+    if ((s === "STD" || s === "40S") && (d == null || d <= 10)) return "40";
+    if ((s === "XS" || s === "80S") && (d == null || d <= 8)) return "80";
+    return s;
+  }
+  function incompatible(C, fam, ped, cand, textoPed, textoCand) {
+    const m = reglaMaterial(C, fam, ped.material || "", cand.material || ""); if (m) return m;
+    const c = reglaConexion(conexiones(ped.extremos || "", ped.cara || ""), conexiones(cand.extremos || "", cand.cara || "")); if (c) return c;
+    if (C.familias_sch.includes(fam) && ped.schedule && cand.schedule) {
+      const dm = String(ped.diametro || "").match(/^\s*(\d+(?:[.,]\d+)?)/), dn = dm ? parseFloat(dm[1].replace(",", ".")) : null;
+      if (schCanonico(ped.schedule, dn) !== schCanonico(cand.schedule, dn)) return `schedule ${cand.schedule} por ${ped.schedule} (otro espesor)`;
+    }
+    const nace = new RegExp(C.nace);
+    if (nace.test(normP(textoPed)) && !nace.test(normP(textoCand))) return "el pedido es para servicio ácido (NACE) y el candidato no lo dice";
+    return "";
+  }
+
   function materiales(datos, f, limite = 60) {
     const fam = f.fam;
     const ok = coincide(f.texto);
@@ -80,6 +143,8 @@ const Busqueda = (() => {
       // similar solo de la misma serie y la misma norma, igual que buscar_material.py (Matías, 29-10-2026)
       if (cs.includes("serie") && !op.has("serie") && f.serie && norm(r.a.serie) !== norm(f.serie)) continue;
       if (cs.includes("norma") && f.norma && r.a.norma && norm(r.a.norma) !== norm(f.norma)) continue;
+      // compatibilidad que pide la norma (material, cara, roscas, schedule, NACE), igual que compatibilidad.py (Matías, 30-10-2026)
+      if (datos.compat && incompatible(datos.compat, fam, f, r.a, f.texto || "", r.d || "")) continue;
       const oblig = cs.filter(c => !op.has(c));
       const igual = !difs.length && oblig.every(c => f[c]);
       const misma = !!f.marca && norm(r.a.marca) === norm(f.marca);
@@ -193,6 +258,6 @@ const Busqueda = (() => {
     if (!d || !calc || d >= calc || String(cfg.plazo?.justificacion || "").trim()) return "";
     return `Plazo ofrecido ${d} días, menor que el calculado (${calc} días): corregilo o escribí la justificación en Plazo. Hasta entonces no se generan las ofertas.`;
   }
-  return { norm, coincide, campos, opcionales, valores, materiales, servicios, itemDeMaterial, itemDeServicio, soldadura, tarifa, avisos, catalogo, codigoDe, plazoCalculado, plazoBloquea, TIPO_FUENTE, CON_TIPO };
+  return { norm, coincide, incompatible, campos, opcionales, valores, materiales, servicios, itemDeMaterial, itemDeServicio, soldadura, tarifa, avisos, catalogo, codigoDe, plazoCalculado, plazoBloquea, TIPO_FUENTE, CON_TIPO };
 })();
 if (typeof module !== "undefined") module.exports = Busqueda;

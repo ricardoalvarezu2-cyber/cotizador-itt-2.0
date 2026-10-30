@@ -369,13 +369,13 @@
    "fuentes": [
     {
      "tipo": "est",
-     "precio": 7.51,
-     "proveedor": "Stock ITT (cód. ACI025FN1ICK150) · NIP-01789",
-     "codigo": "NIP-01789",
-     "origen": "fuentes_originales/stock_valorizado_2024-11.xlsx · código ACI025FN1ICK150",
-     "fecha": "2024-11-01",
+     "precio": 9.24,
+     "proveedor": "sin proveedor en planilla · NIP-01782",
+     "codigo": "NIP-01782",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
+     "fecha": "2026-10-10",
      "coincide": "similar",
-     "diferencia": "schedule: 80 (pedido 160); escalado por espesor (sch 160 6,35 mm ÷ sch 80 4,55 mm = × 1,40)"
+     "diferencia": "diametro: 0.75\" (pedido 1\"); largo_mm: 100 (pedido 150); precio escalado por diámetro (1\" ÷ 0,75\")^1,5 = × 1,54"
     }
    ]
   },
@@ -621,7 +621,7 @@
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-10-29",
+     "fecha": "2026-10-30",
      "coincide": "sin_ref",
      "diferencia": "No hay pieza de esa familia y tipo con precio"
     }

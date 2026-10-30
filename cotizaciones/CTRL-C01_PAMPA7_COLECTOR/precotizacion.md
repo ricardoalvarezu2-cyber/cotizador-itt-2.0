@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-C01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 55.617,40 por equipo · soldadura y servicios calculados USD 17.580,35 · 21 similares (9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 23, 24, 25, 26, 27, 28, 31, 32, 33, 34, 35) · 1 sin precio (22).
+**Resumen:** materiales USD 55.619,13 por equipo · soldadura y servicios calculados USD 17.580,35 · 21 similares (9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 23, 24, 25, 26, 27, 28, 31, 32, 33, 34, 35) · 1 sin precio (22).
 
 
 ## 1. Materiales
@@ -17,7 +17,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 7 | Caño sin costura · Ø 3" | IGUAL | 25,08 / m | 2025-12-26 · lista | — |
 | 8 | Caño sin costura · Ø 6" | IGUAL | 60,51 / m | 2025-12-26 · lista | — |
 | 9 | Niple caño sin costura longitud 150 mm · Ø 3/ | SIMILAR ⚠ | 36,74 / un | 2026-04-22 · planilla interna | diametro: 0.5" (pedido 0.75"); largo_mm: 100 (pedido 150); precio escalado por diámetro (0,75" ÷ 0,5")^1,5 = × |
-| 10 | Niple caño sin costura longitud 150 mm · Ø 1" | SIMILAR (estimado cepo) ⚠ | 7,51 / un | 2024-11-01 · estimado (cepo) | schedule: 80 (pedido 160); escalado por espesor (sch 160 6,35 mm ÷ sch 80 4,55 mm = × 1,40) |
+| 10 | Niple caño sin costura longitud 150 mm · Ø 1" | SIMILAR (estimado cepo) ⚠ | 9,24 / un | 2026-10-10 · estimado (fecha supuesta) | diametro: 0.75" (pedido 1"); largo_mm: 100 (pedido 150); precio escalado por diámetro (1" ÷ 0,75")^1,5 = × 1,5 |
 | 11 | Junta espiralada RF espesor 4.5 mm con anillo | SIMILAR | 15,00 / un | 2025-12-10 · planilla interna | extremos: sin dato (pedido RF) |
 | 12 | Junta espiralada RF espesor 4.5 mm con anillo | SIMILAR | 6,00 / un | 2026-06-26 · planilla interna | extremos: sin dato (pedido RF) |
 | 13 | Junta espiralada RF espesor 4.5 mm con anillo | SIMILAR | 6,00 / un | 2026-06-26 · planilla interna | extremos: sin dato (pedido RF) |
@@ -69,7 +69,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 243 placas chicas + 0 grandes + 6,11 servicio(s) de RX + 1,44 de LP por equipo = USD 4.497,50 (Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))).
   Con las tarifas de Antonelli (11-2025) serían USD 7.347,22: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: manifold, 6", 18 u, materiales USD 55.617 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: manifold, 6", 18 u, materiales USD 55.619 por unidad)
 
 - **Ingeniería:** 0,82 h × USD 15/h = USD 12,30 · mediana de 1,1, 0,5 h por unidad (repartidas en la serie) · antecedente: TECPETROL/9. CM SKID MANIFOLD PAD S-600 · Skid Manifold PAD S600 clase A6BM (sch 40) (4 (colector 8), 28 u, 2026-01-26) · rango del mismo tipo 1,14–9 h
 - **Calidad y dossier:** 12,5 h × USD 15/h = USD 187,50 · mediana de 24,0, 1,0 h por unidad (repartidas en la serie) · antecedente: TECPETROL/9. CM SKID MANIFOLD PAD S-600 · Skid Manifold PAD S600 clase A6BM (sch 40) (4 (colector 8), 28 u, 2026-01-26) · rango del mismo tipo 18–24 h

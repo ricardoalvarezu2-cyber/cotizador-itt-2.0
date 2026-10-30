@@ -15,7 +15,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 7 | Caño s/c 3" sch 40 A106 B | 6,4 × 25,08 = 160,51 | 6,4 m × 25,08 + compra extra 7b = 167,21 | +4% | lista · Renard (cód. 1153) · CAN-01484 · 2025-12-26 | dentro de ±15% · real: media tira de 12,8 m por colector |
 | 8 | Caño s/c 6" sch 40 A106 B | 6,4 × 60,51 = 387,26 | 6,4 m × 60,51 + compra extra 8b = 403,42 | +4% | lista · Renard (cód. 1173) · CAN-01510 · 2025-12-26 | dentro de ±15% · real: media tira de 12,8 m por colector |
 | 9 | Niple 3/4" x 150 mm sch 160 A106 B | 17 × 10,00 = 170,00 | 17 un × 36,74 = 624,58 | +267% | ant · Antecedentes puentes Taval/CGC s2000 · N · 2026-04-22 | más caro (similar) |
-| 10 | Niple 1" x 150 mm sch 160 A106 B | 1 × 10,00 = 10,00 | 1 un × 7,51 = 7,51 | -25% | est · Stock ITT (cód. ACI025FN1ICK150) · NIP-0 · 2024-11-01 | más barato (similar) |
+| 10 | Niple 1" x 150 mm sch 160 A106 B | 1 × 10,00 = 10,00 | 1 un × 9,24 = 9,24 | -8% | est · sin proveedor en planilla · NIP-01782 · 2026-10-10 | dentro de ±15% |
 | 11 | Junta espiralada 6" #300 316+grafito | 1 × 10,00 = 10,00 | 1 un × 15,00 = 15,00 | +50% | ant · no dice · JUN-01703 · 2025-12-10 | más caro (similar) |
 | 12 | Junta espiralada 3" #300 316+grafito | 21 × 8,00 = 168,00 | 21 un × 6,00 = 126,00 | -25% | ant · MS · JUN-02775 · 2026-06-26 | más barato (similar) |
 | 13 | Junta espiralada 2" #300 316+grafito | 12 × 6,00 = 72,00 | 12 un × 6,00 = 72,00 | 0% | ant · MS · JUN-02769 · 2026-06-26 | dentro de ±15% |
@@ -27,7 +27,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 19 | Tee reducción 3"x2" sch 80 BW WPB | 6 × 64,11 = 384,66 | 6 un × 64,11 = 384,66 | 0% | ant · Renard · ABW-00390 · 2026-06-26 | dentro de ±15% |
 | 20 | Tee normal 3" sch 80 BW WPB | 6 × 60,36 = 362,16 | 6 un × 60,36 = 362,16 | 0% | ant · Renard · ABW-00396 · 2026-06-26 | dentro de ±15% |
 | 21 | Tee reducción 6"x3" sch 40 BW WPB | 6 × 164,91 = 989,46 | 6 un × 164,91 = 989,46 | 0% | ant · Renard · ABW-00413 · 2026-06-26 | dentro de ±15% |
-| 22 | Entrerosca 3/4" NPT A105 | 3 × 2,50 = 7,50 | 3 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-29 | SIN PRECIO en el catálogo |
+| 22 | Entrerosca 3/4" NPT A105 | 3 × 2,50 = 7,50 | 3 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo |
 | 23 | Sockolet 3/4" 3000 A105 | 17 × 6,00 = 102,00 | 17 un × 18,37 = 312,29 | +206% | ant · sin proveedor en planilla · AFO-03330 · 2025-12-23 | más caro (similar) |
 | 24 | Sockolet 1" 3000 A105 | 2 × 7,00 = 14,00 | 2 un × 24,00 = 48,00 | +243% | est · no dice · AFO-02394 · 2025-03-27 | más caro (similar) |
 | 25 | Tapón hexagonal 3/4" NPT A105 | 17 × 2,50 = 42,50 | 17 un × 2,30 = 39,10 | -8% | ant · Renard · AFO-00850 · 2026-06-26 | dentro de ±15% |
@@ -42,7 +42,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 34 | Bastidor skid (300 + 500 kg con 20% de desper | 960 × 1,50 = 1.440,00 | 800 kg × 1,90 = 1.520,00 | +6% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | dentro de ±15% · real: 800 kg × 1,2 de desperdicio × USD 1,5/kg |
 | 35 | Tablero y materiales eléctricos | 1 × 12.000,00 = 12.000,00 | 1 gl × 12.000,00 = 12.000,00 | 0% | ant · planilla de costo ITT · OTR-03018 · 2026-06-26 | dentro de ±15% |
 
-**Materiales: real USD 47.654,86 · cotizador USD 55.617,40 (+17%).** 19 dentro de ±15%, 15 fuera, 1 sin precio.
+**Materiales: real USD 47.654,86 · cotizador USD 55.619,13 (+17%).** 20 dentro de ±15%, 14 fuera, 1 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -58,5 +58,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por colector
 
-Real USD 66.490,02 · cotizador USD 73.197,75 (+10%) antes de completar lo que el cotizador marca para revisar.
+Real USD 66.490,02 · cotizador USD 73.199,48 (+10%) antes de completar lo que el cotizador marca para revisar.
 

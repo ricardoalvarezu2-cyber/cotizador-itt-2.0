@@ -1,18 +1,18 @@
 # Precotización automática — CTRL-TS01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 58.637,10 por equipo · soldadura y servicios calculados USD 25.418,22 · 37 similares (1, 2, 3, 4, 5, 6, 6b, 7, 7b, 8, 8b, 13, 17, 18, 20, 22, 23, 24, 25, 28, 29, 30, 31, 34, 36, 37, 38, 39, 41, 42, 43, 44, 45, 46, 47, 49, 50) · 7 sin precio (26, 27, 32, 33, 35, 40, 48).
+**Resumen:** materiales USD 53.624,68 por equipo · soldadura y servicios calculados USD 25.418,22 · 32 similares (1, 2, 3, 6, 6b, 7, 7b, 8, 8b, 13, 17, 20, 22, 23, 24, 25, 29, 30, 31, 34, 36, 37, 38, 39, 41, 42, 43, 44, 45, 47, 49, 50) · 10 sin precio (18, 26, 27, 28, 32, 33, 35, 40, 46, 48).
 
 
 ## 1. Materiales
 
 | Pos | Ítem | Resultado | Precio | Fecha y tipo | Diferencias / faltantes |
 |---|---|---|---|---|---|
-| 1 | Brida welding neck RF · Ø 6" | SIMILAR | 471,35 / un | 2025-12-26 · lista | cara: RTJ (pedido RF); schedule: 80 (pedido 120) |
+| 1 | Brida welding neck RF · Ø 6" | SIMILAR | 140,39 / un | 2025-12-18 · planilla interna | diametro: 4" (pedido 6"); cara: sin dato (pedido RF); schedule: 80 (pedido 120); material: sin dato (pedido A1 |
 | 2 | Brida welding neck RF · Ø 12" | SIMILAR | 570,00 / un | 2025-12-18 · planilla interna | cara: sin dato (pedido RF); schedule: 80 (pedido 60); material: sin dato (pedido A860 WPHY) |
-| 3 | Brida welding neck RF · Ø 4" | SIMILAR | 280,00 / un | 2025-08-01 · planilla interna | cara: sin dato (pedido RF) |
-| 4 | Brida welding neck RF · Ø 2" | SIMILAR | 121,00 / un | 2025-08-01 · planilla interna | cara: sin dato (pedido RF); se prefirió un precio reciente a stock (precio maestro) del 2024-11-01 (BRI-01262, |
-| 5 | Brida welding neck RF · Ø 1 1/2" | SIMILAR | 75,00 / un | 2025-08-01 · planilla interna | cara: sin dato (pedido RF); se prefirió un precio reciente a compra del 2022-11-15 (BRI-01216, USD 163,20) |
+| 3 | Brida welding neck RF · Ø 4" | SIMILAR | 76,42 / un | 2025-12-18 · planilla interna | cara: sin dato (pedido RF); schedule: 80 (pedido 120); material: sin dato (pedido A105) |
+| 4 | Brida welding neck RF · Ø 2" | IGUAL | 215,80 / un | 2024-11-01 · stock (precio maestro) | — |
+| 5 | Brida welding neck RF · Ø 1 1/2" | IGUAL | 163,20 / un | 2022-11-15 · compra | — |
 | 6 | Virola/caño sin costura barril menor largo 4, | SIMILAR | 242,81 / m | 2025-12-26 · lista | espesor_mm: 14.27 (pedido 15.88); material: A106 B (pedido API 5L) |
 | 7 | Virola/caño sin costura barril mayor largo 3, | SIMILAR | 750,00 / m | 2025-08-01 · planilla interna | espesor_mm: sin dato (pedido 15.88) |
 | 8 | Caño sin costura · Ø 12" | SIMILAR | 228,56 / m | 2025-12-26 · lista | diametro: 10" (pedido 12"); precio escalado por diámetro (12" ÷ 10")^1,5 = × 1,31 |
@@ -20,22 +20,22 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 10 | Caño sin costura · Ø 2" | IGUAL | 24,67 / m | 2025-12-26 · lista | — |
 | 11 | Caño sin costura · Ø 2" | IGUAL | 12,10 / m | 2025-12-26 · lista | — |
 | 12 | Caño sin costura · Ø 1 1/2" | IGUAL | 19,30 / m | 2025-12-26 · lista | — |
-| 13 | Codo 90 radio corto · Ø 2" | SIMILAR ⚠ | 96,19 / un | 2025-12-26 · lista | schedule: 160 (pedido 120) |
+| 13 | Codo 90 radio corto · Ø 2" | SIMILAR (estimado cepo) ⚠ | 6,27 / un | 2025-02-17 · estimado (cepo) | schedule: sin dato (pedido 120) |
 | 14 | Codo 90 radio corto · Ø 2" | IGUAL ⚠ | 96,19 / un | 2025-12-26 · lista | — |
 | 15 | Codo 90 radio largo · Ø 6" | IGUAL | 129,10 / un | 2025-12-26 · lista | — |
 | 16 | Codo 90 radio corto · Ø 2" | IGUAL ⚠ | 96,19 / un | 2025-12-26 · lista | — |
 | 17 | Niple longitud 100 mm · Ø 1/2" | SIMILAR ⚠ | 20,00 / un | 2026-04-22 · planilla interna | extremos: NPT (pedido NPT/BW) |
-| 18 | Reducción excéntrica · Ø 16" x 12" | SIMILAR | 403,11 / un | 2025-12-26 · lista | diametro: 10" (pedido 16"); diametro2: 4" (pedido 12"); material: A234 WPB (pedido A860 WPHY); precio escalado |
+| 18 | Reducción excéntrica · Ø 16" x 12" | **SIN PRECIO** | — | — | pedir cotización |
 | 19 | Tapa de cierre rápido (QOC) #900 · Ø 16" | IGUAL | 10.524,00 / un | 2026-08-10 · cotización | — |
-| 20 | Tee de reducción · Ø 4" x 2" | SIMILAR | 175,37 / un | 2026-02-19 · planilla interna | schedule: 80 (pedido 160); escalado por espesor (sch 160 13,49 mm ÷ sch 80 8,56 mm = × 1,58) |
+| 20 | Tee de reducción · Ø 4" x 2" | SIMILAR | 39,26 / un | 2025-12-23 · planilla interna | diametro: 3" (pedido 4"); precio escalado por diámetro (4" ÷ 3")^1,5 = × 1,54 |
 | 21 | Tee normal · Ø 4" | IGUAL | 300,00 / un | 2025-08-01 · planilla interna | — |
 | 22 | Weldolet · Ø 1/2" x 20" | SIMILAR | 65,00 / un | 2025-08-01 · planilla interna | schedule: 160 (no pedido) · faltan: tipo, serie |
 | 23 | Espárrago con 2 tuercas zincado 7/8 x 145 mm  | SIMILAR | 3,17 / un | 2025-08-27 · cotización | unidad distinta: catálogo por juego, plano por un |
 | 24 | Espárrago con 2 tuercas zincado 1 1/8 x 170 m | SIMILAR | 7,82 / un | 2026-05-28 · cotización | material: A193 B7 (pedido A194 2H); medida: 1 1/8 x 7 (pedido 1 1/8 x 6 3/4); unidad distinta: catálogo por ju |
 | 25 | Espárrago con 2 tuercas zincado 1 3/8 x 255 m | SIMILAR | 30,00 / un | 2025-08-01 · planilla interna | material: sin dato (pedido A194 2H) |
-| 26 | Junta RF hierro maleable · Ø 2" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (6") (JUN-01722, USD 12,87): pedir cotización |
-| 27 | Junta RF hierro maleable · Ø 8" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (6") (JUN-01722, USD 12,87): pedir cotización |
-| 28 | Junta RF hierro maleable · Ø 4" | SIMILAR | 12,87 / un | 2026-05-27 · cotización | diametro: 6" (pedido 4"); extremos: RTJ (pedido RF) |
+| 26 | Junta RF hierro maleable · Ø 2" | **SIN PRECIO** | — | — | pedir cotización |
+| 27 | Junta RF hierro maleable · Ø 8" | **SIN PRECIO** | — | — | pedir cotización |
+| 28 | Junta RF hierro maleable · Ø 4" | **SIN PRECIO** | — | — | pedir cotización |
 | 29 | Weldolet · Ø 1 1/2" x 20" | SIMILAR | 85,00 / un | 2025-08-01 · planilla interna | — · faltan: tipo, serie |
 | 30 | Weldolet · Ø 2" x 10" | SIMILAR | 115,00 / un | 2025-08-01 · planilla interna | — · faltan: tipo, serie |
 | 31 | Weldolet · Ø 2" x 20" | SIMILAR | 115,00 / un | 2025-08-01 · planilla interna | — · faltan: tipo, serie |
@@ -51,9 +51,9 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 41 | Válvula esférica, cuerpo WCB, internos 316, a | SIMILAR | 10.740,60 / un | 2025-09-01 · lista | trim: sin dato (pedido ptfe); paso: reducido (no pedido) · faltan: paso |
 | 42 | Válvula esférica, cuerpo WCB, internos 316, a | SIMILAR | 1.710,00 / un | 2025-09-01 · lista | trim: sin dato (pedido ptfe); paso: reducido (no pedido) · faltan: paso |
 | 43 | Válvula esférica, cuerpo WCB, internos 316, a | SIMILAR | 832,00 / un | 2025-09-01 · lista | trim: sin dato (pedido ptfe); paso: reducido (no pedido) · faltan: paso |
-| 44 | Válvula esférica, cuerpo WCB, internos 316, a | SIMILAR | 775,00 / un | 2025-08-01 · planilla interna | extremos: RTJ (pedido RF) · faltan: paso |
+| 44 | Válvula esférica, cuerpo WCB, internos 316, a | SIMILAR | 540,40 / un | 2025-09-01 · lista | diametro: 2" (pedido 1.5"); trim: sin dato (pedido ptfe); paso: reducido (no pedido); precio escalado por diám · faltan: paso |
 | 45 | Válvula esférica 5000 WOG, asientos Delrin, c | SIMILAR | 65,20 / un | 2026-01-26 · planilla interna | serie: 3000 (no pedido) · faltan: serie, paso |
-| 46 | Válvula macho (tapón lubricado) invertida, in | SIMILAR | 1.203,00 / un | 2025-08-01 · planilla interna | extremos: RTJ (pedido RF) |
+| 46 | Válvula macho (tapón lubricado) invertida, in | **SIN PRECIO** | — | — | pedir cotización |
 | 47 | Manómetro con glicerina Ø100 mm 0-400 · Ø 1/2 | SIMILAR | 120,00 / un | 2026-08-14 · planilla interna | — · faltan: rango, conexion |
 | 48 | Válvula de seguridad (TSV) entrada 1 1/2" sal | **SIN PRECIO** | — | — | pedir cotización |
 | 49 | Detector de paso de scraper | SIMILAR | 1.650,00 / un | 2025-12-10 · planilla interna | diametro: 2" (no pedido); serie: 300 (no pedido) · faltan: diametro, serie |
@@ -101,7 +101,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 93 placas chicas + 7 grandes + 3,00 servicio(s) de RX + 1,00 de LP por equipo = USD 2.178,50 (Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))).
   Con las tarifas de Antonelli (11-2025) serían USD 3.495,00: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: trampa, 16", 1 u, materiales USD 58.637 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: trampa, 16", 1 u, materiales USD 53.625 por unidad)
 
 - Montaje propio: no se suma porque la fabricación la hace el tercero; la prueba hidráulica va aparte (fila PH).
 - **Ingeniería:** 503 h × USD 15/h = USD 7.545,00 · mediana de 503,0 h por unidad (repartidas en la serie) · antecedente: TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E · Trampa receptora 8x6 #300 (RS-123/125) (8 / 6 (barrel 24 x 20 en tabla soldadura), 2 u, 2025-12-10) · rango del mismo tipo 251,5–251,5 h

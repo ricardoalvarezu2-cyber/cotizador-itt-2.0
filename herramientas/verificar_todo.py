@@ -49,7 +49,7 @@ def modificados():
 DERIVADOS = (".xlsx", ".docx", ".pdf", ".html")
 antes = modificados()
 
-for t in ("test_catalogo.py", "test_catalogo_servicios.py", "test_precotizar.py", "test_antecedentes.py"):
+for t in ("test_catalogo.py", "test_catalogo_servicios.py", "test_precotizar.py", "test_antecedentes.py", "test_compatibilidad.py"):
     correr(t, [str(H / t)])
 for script, salida in (("catalogo_materiales.py", "conocimiento/precios/catalogo_materiales.csv"),
                        ("catalogo_servicios.py", "conocimiento/precios/catalogo_servicios.csv")):

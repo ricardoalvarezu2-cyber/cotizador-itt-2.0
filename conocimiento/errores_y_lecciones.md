@@ -202,3 +202,9 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 ## 29-10-2026 — Ficha con precios del proveedor como si fueran de ITT (ALUAR/1)
 - Qué pasó: al armar la ficha de ALUAR/1 (carpeta con solo la cotización de instrumentos de Induquip), el agente cargó los renglones del proveedor en `items`, que es lo ofertado por ITT. El índice toma el renglón más caro de `items` como precio del equipo, así que el skid habría figurado a USD 1.763,54. Se detectó al revisar la ficha contra el original y se pasó a `proveedores`.
 - Lección: toda ficha nueva se revisa contra el original antes de consolidarla; `items` es solo lo que ofertó ITT. Además `consolidar_fichas.py` reescribe `aprendizajes_<año>.md` y borra lo agregado a mano: los aprendizajes nuevos se suman al archivo existente.
+
+## 30-10-2026 — Reglas de compatibilidad que descartaban piezas iguales
+- Qué pasó: la primera versión de la regla de extremos comparaba el conjunto completo de conexiones y descartaba bridas WN iguales al pedido ("RF/BW" en el plano contra "RF" en el catálogo, que no anota el extremo para soldar) y sockolets ("BW/SW" contra "SW"). Además, un espárrago "B7 / 2H" (bulón y tuerca en el mismo texto) se clasificaba por la tuerca y descartaba el B7. Se detectó revisando uno por uno los renglones cuyo primer resultado cambiaba con la regla.
+- Corrección: cara con cara y rosca con rosca; el BW que falta de un lado no cuenta; bulonería por bulón y por tuerca por separado.
+- Lección: antes de activar una regla que descarta, comparar el resultado con y sin la regla en los renglones reales y revisar cada cambio. Un descarte equivocado deja sin precio una pieza que estaba bien.
+- Otro error de la sesión: dije que TAVAL/37 no estaba en `horas_por_equipo.csv` y sí estaba. Lección: verificar en el archivo antes de proponer trabajo.

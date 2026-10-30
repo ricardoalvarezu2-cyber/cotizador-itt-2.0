@@ -10,7 +10,10 @@ Uso:
 Igual = coinciden todas las características que definen el material en su familia (ver catalogo_materiales.py).
 Similar = misma familia, tipo, serie y norma, con alguna otra diferencia: se lista cuál. Un precio de un similar sirve
 de referencia, pero en la cotización va con "coincide": "similar" y la diferencia. Otra serie u otra norma no es similar
-(Matías, 29-10-2026): si no hay de la misma serie, se pide cotización.
+(Matías, 29-10-2026): si no hay de la misma serie, se pide cotización. Tampoco es similar lo que la norma no permite
+reemplazar (Matías, 30-10-2026; compatibilidad.py): otro material (304 por 316, B8M por B7, A105 por LF2; WCB por A105 sí),
+otra cara (RF/RTJ/FF), otros extremos (NPT/BSPT/SW/BW), otro schedule en caños y accesorios a tope, o sin NACE si el
+pedido es para servicio ácido.
 
 Marca (válvulas e instrumentos): la marca NO cuenta para igual/similar. Con --marca (o si la descripción nombra una
 marca), primero salen los iguales de esa marca y después los "IGUAL (otra marca)", para poder elegir. Sin marca pedida,
@@ -26,6 +29,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from numeros import fmt, fmtg  # noqa: E402
 from catalogo_materiales import FAMILIAS, MARCAS, PRECIOS, atributos, expandir, familia_de  # noqa: E402
 from indice_proyectos import norm  # noqa: E402
+from compatibilidad import incompatible  # noqa: E402
 
 NOMBRE_A_COD = {v[0]: k for k, v in FAMILIAS.items()}
 CON_TIPO = ("VAL", "AFO", "ABW", "BRI", "JUN", "INS")
@@ -84,6 +88,10 @@ def buscar(texto, familia=None, marca_pedida=""):
         if "serie" in campos and "serie" not in opcionales and at.get("serie") and norm(r.get("serie", "")) != norm(at["serie"]):
             continue
         if "norma" in campos and at.get("norma") and r.get("norma") and norm(r["norma"]) != norm(at["norma"]):
+            continue
+        # Compatibilidad (Matías, 30-10-2026): material, cara, extremos, schedule y servicio ácido que la norma no
+        # permite reemplazar no son similares (compatibilidad.py, conocimiento/tecnico/compatibilidades_LEEME.md)
+        if incompatible(fam, at, r, texto, r.get("descripcion", "")):
             continue
         oblig = [c for c in campos if c not in opcionales]
         igual = not difs and all(at.get(c) for c in oblig)

@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-P02
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 5.164,88 por equipo · soldadura y servicios calculados USD 4.002,94 · 18 similares (1, 2, 4, 5, 9, 11, 12, 14, 15, 16, 17, 19, 23, 33, 37, 38, 39, 40) · 0 sin precio (—).
+**Resumen:** materiales USD 5.164,88 por equipo · soldadura y servicios calculados USD 4.002,94 · 17 similares (1, 2, 4, 9, 11, 12, 14, 15, 16, 17, 19, 23, 33, 37, 38, 39, 40) · 0 sin precio (—).
 
 
 ## 1. Materiales
@@ -12,7 +12,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 2 | Anillo octogonal RTJ-10K BX 153 · Ø 2 9/16" | SIMILAR | 6,60 / un | 2026-06-18 · cotización | diametro: sin dato (pedido 2.5625") · faltan: serie |
 | 3 | Codo 45° RL BW Sch. 40 · Ø 3" | IGUAL | 17,49 / un | 2026-02-11 · cotización | — |
 | 4 | Sockolet 3 x 3/4 · Ø 3" x 3/4" | SIMILAR | 18,37 / un | 2025-12-23 · planilla interna | diametro: 0.5" (pedido 3"); extremos: sin dato (pedido SW/BW); precio escalado por diámetro (0,75" ÷ 0,5")^1,5 |
-| 5 | Caño sin costura longitud 5173 mm · Ø 3" | SIMILAR | 25,08 / m | 2025-12-26 · lista | se prefirió un precio reciente a compra del 2022-11-15 (BRI-01216, USD 163,20) |
+| 5 | Caño sin costura longitud 5173 mm · Ø 3" | IGUAL | 25,08 / m | 2025-12-26 · lista | — |
 | 6 | Tee reducción BW 3 Sch. 40 x 2 Sch. 80 · Ø 3" | IGUAL | 44,20 / un | 2025-12-26 · lista | — |
 | 7 | Brida WNRF Sch. 80 · Ø 2" | IGUAL | 23,95 / un | 2025-12-26 · lista | — |
 | 8 | Junta espiralada e=4.5 mm · Ø 2" | IGUAL | 5,00 / un | 2025-12-23 · planilla interna | — |

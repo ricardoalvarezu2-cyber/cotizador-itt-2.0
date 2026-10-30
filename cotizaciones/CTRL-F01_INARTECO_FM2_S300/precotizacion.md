@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-F01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 1.675,59 por equipo · soldadura y servicios calculados USD 1.216,77 · 17 similares (4, 4b, 5, 5b, 10, 11, 14, 15, 16, 18, 20, 21, 22, 24, 25, 26, 27) · 6 sin precio (6, 7, 13, 17, 19, 23).
+**Resumen:** materiales USD 1.671,69 por equipo · soldadura y servicios calculados USD 1.216,77 · 16 similares (4, 4b, 5, 5b, 10, 11, 14, 15, 16, 18, 20, 21, 22, 24, 26, 27) · 7 sin precio (6, 7, 13, 17, 19, 23, 25).
 
 
 ## 1. Materiales
@@ -13,7 +13,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 3 | Brida ciega · Ø 4" | IGUAL | 60,12 / un | 2025-12-26 · lista | — |
 | 4 | Caño sin costura longitud 150 mm · Ø 2" | SIMILAR | 16,62 / m | 2026-08-14 · planilla interna | material: sin dato (pedido A53) |
 | 5 | Caño sin costura longitud 400 mm · Ø 4" | SIMILAR | 34,34 / m | 2025-12-26 · lista | material: A106 B (pedido A53) |
-| 6 | Tapón roscado · Ø 1/2" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (1.5") (AFO-00858, USD 47,17): pedir cotización |
+| 6 | Tapón roscado · Ø 1/2" | **SIN PRECIO** | — | — | pedir cotización |
 | 7 | Media cupla con tapón roscado conexión manóme | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (0.5") (AFO-00790, USD 3,90): pedir cotización |
 | 8 | Codo 90 radio corto · Ø 2" | IGUAL | 6,08 / un | 2025-12-26 · lista | — |
 | 9 | Casquete semielíptico · Ø 4" | IGUAL | 13,39 / un | 2026-02-11 · cotización | — |
@@ -32,7 +32,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 22 | Conector recto con tuerca y doble virola · Ø  | SIMILAR (estimado cepo) ⚠ | 10,30 / un | 2024-11-01 · estimado (cepo) | diametro: sin dato (pedido 0.25"); material: sin dato (pedido AISI 304) |
 | 23 | Refuerzo para derivación tipo poncho 4 x 2 ·  | **SIN PRECIO** | — | — | pedir cotización |
 | 24 | Válvula esférica cuerpo tripartito · Ø 1/2" | SIMILAR | 33,81 / un | 2026-02-20 · planilla interna | extremos: NPT (pedido NPT/SW); paso: reducido (no pedido) · faltan: paso |
-| 25 | Media cupla · Ø 1/2" | SIMILAR (estimado cepo) ⚠ | 3,90 / un | 2024-11-01 · estimado (cepo) | extremos: NPT (pedido SW) |
+| 25 | Media cupla · Ø 1/2" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (1") (AFO-00799, USD 3,20): pedir cotización |
 | 26 | Chapa soporte manómetro diferencial y manifol | SIMILAR (acero por kg) | USD 1,26/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 3/16", la más cercana a 1,59 mm) +10% por recortes; no incluye corte, plegado ni rolado |
 | 27 | Arandela plana zincada · Ø 3/4" | SIMILAR (estimado cepo) ⚠ | 0,20 / un | 2024-11-01 · estimado (cepo) | — · faltan: material |
 | 12 | Tuerca mariposa de bronce · Ø 3/8" | INCLUIDAS EN EL ESPÁRRAGO | 0 | — | el precio elegido para los espárragos (14) trae tuercas: confirmar |
@@ -61,7 +61,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 7 placas chicas + 0 grandes + 0,50 servicio(s) de RX + 0,50 de LP por equipo = USD 595,00 (Servicio de radiografía (Antonelli) (2025-11; antonelli_end_2025-11)).
   Con las tarifas de Antonelli (11-2025) serían USD 595,00: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: filtro, 4", 2 u, materiales USD 1.676 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: filtro, 4", 2 u, materiales USD 1.672 por unidad)
 
 - ⚠ **No hay antecedente del mismo tipo (filtro) ni de uno afín: no se suman horas.** Cargarlas a mano con el detalle de actividades. Candidatos (de otro tipo, no usar sin revisar): TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · Trampa lanzadora 20x16 (Serie 600 A6C) (20 / 16, 1 u, 2026-07-20) | TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E · Trampa lanzadora 8x6 #300 (LS-122/124) (8 / 6 (barrel 24 x 20 en tabla soldadura), 2 u, 2025-12-10) | Sacde/20 - SE-3121-ASTORD-014 - TK DE CHOQUE · Tanque de choque Ø36in x 5000 mm (Sacde para TGS), A-516 Gr7 (36, 1 u, 2026-03-03)
 

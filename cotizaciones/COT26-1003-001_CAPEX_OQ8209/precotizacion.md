@@ -1,7 +1,7 @@
 # Precotización automática — COT26-1003-001
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 2.738,47 por equipo · soldadura y servicios calculados USD 884,76 · 14 similares (2, 3, 4, 5, 9, 12, 13, 14, 14b, 17, 20, 22, 24, 25) · 7 sin precio (1, 6, 10, 11, 19, 21, 23).
+**Resumen:** materiales USD 2.520,61 por equipo · soldadura y servicios calculados USD 884,76 · 13 similares (2, 3, 4, 5, 9, 12, 13, 14, 14b, 20, 22, 24, 25) · 8 sin precio (1, 6, 10, 11, 17, 19, 21, 23).
 
 
 ## 1. Materiales
@@ -24,7 +24,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 14 | Caño longitud 1900 mm · Ø 2" | SIMILAR | 35,00 / m | 2025-12-10 · planilla interna | material: sin dato (pedido API 5L); revestimiento: sin dato (pedido polipropileno); unidad distinta: catálogo  · faltan: costura |
 | 15 | Codo 45° · Ø 2" | IGUAL | 8,73 / un | 2025-12-26 · lista | — |
 | 16 | Reducción concéntrica · Ø 2 1/2"x2" | IGUAL | 16,51 / un | 2025-12-26 · lista | — |
-| 17 | Tapón · Ø 2" | SIMILAR (estimado cepo) ⚠ | 72,62 / un | 2024-11-01 · estimado (cepo) | diametro: 1.5" (pedido 2"); material: A182 F316 (pedido A105); precio escalado por diámetro (2" ÷ 1,5")^1,5 =  |
+| 17 | Tapón · Ø 2" | **SIN PRECIO** | — | — | el más parecido es sin diámetro conocido (AFO-02417, USD 5,00): pedir cotización |
 | 18 | Tee normal · Ø 1/2" | IGUAL (estimado cepo) ⚠ | 10,80 / un | 2024-11-01 · estimado (cepo) | — |
 | 19 | Válvula bloqueo y purga · Ø 1/2" | **SIN PRECIO** | — | — | pedir cotización |
 | 20 | Manómetro rango 0-40 bar · Ø 1/2" | SIMILAR | 120,00 / un | 2026-08-14 · planilla interna | rango: sin dato (pedido 0-40 bar) · faltan: conexion |
@@ -54,7 +54,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Prueba hidráulica:** 6 h × USD 13,00/h (Prueba hidráulica - manifold FA0032 1.2, 2026-03-10) = USD 78,00 · ⚠ horas supuestas: cargar `parametros.ph_horas` · volumen interior de caños y niples 13,0 l.
 - **Radiografía:** no se calculó (`parametros.rx_pct` = 0). Si el pliego la pide, cargar el porcentaje y volver a correr.
 
-### Horas de ingeniería, calidad y montaje (estimadas: puente, 2.5", 2 u, materiales USD 2.738 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: puente, 2.5", 2 u, materiales USD 2.521 por unidad)
 
 - **Ingeniería:** 7,5 h × USD 15/h = USD 112,50 · mediana de 9,0, 6,0 h por unidad (repartidas en la serie) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19) · rango del mismo tipo 6–9 h
 - **Calidad y dossier:** 3,5 h × USD 15/h = USD 52,50 · mediana de 1,0, 6,0 h por unidad (repartidas en la serie) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19) · rango del mismo tipo 1–6 h

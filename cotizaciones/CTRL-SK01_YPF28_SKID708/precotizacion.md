@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-SK01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 52.352,49 por equipo · soldadura y servicios calculados USD 19.511,19 · 18 similares (2, 2b, 4, 5, 6, 8, 10, 11, 12, 13, 17, 19, 20, 22, 23, 24, 30, 31) · 4 sin precio (14, 21, 28, 29).
+**Resumen:** materiales USD 52.385,30 por equipo · soldadura y servicios calculados USD 19.511,19 · 16 similares (2, 2b, 6, 8, 10, 11, 12, 13, 17, 19, 20, 22, 23, 24, 30, 31) · 4 sin precio (14, 21, 28, 29).
 
 
 ## 1. Materiales
@@ -11,8 +11,8 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 1 | Caño s/c extr. SCH XS (323,8 x 12,70) · Ø 12" | IGUAL | 217,23 / m | 2026-06-26 · planilla interna | — |
 | 2 | Caño c/c extr. STD (406,4 x 9,52) · Ø 16" | SIMILAR | 248,98 / m | 2025-12-26 · lista | material: A106 B (pedido API 5L); costura: sin costura (pedido con costura) |
 | 3 | Tee normal · Ø 12" | IGUAL ⚠ | 1.797,97 / un | 2025-02-17 · lista | — |
-| 4 | Tee de reducción SCH STD x XS · Ø 16"x12" | SIMILAR | 2.802,34 / un | 2025-12-26 · lista | se prefirió un precio reciente a stock (precio maestro) del 2024-11-01 (BRI-01262, USD 215,80) |
-| 5 | Brida WN RF 300 LB SCH XS · Ø 12" | SIMILAR | 218,49 / un | 2026-07-06 · cotización | se prefirió un precio reciente a compra del 2022-11-15 (BRI-01216, USD 163,20) |
+| 4 | Tee de reducción SCH STD x XS · Ø 16"x12" | IGUAL | 2.802,34 / un | 2025-12-26 · lista | — |
+| 5 | Brida WN RF 300 LB SCH XS · Ø 12" | IGUAL | 218,49 / un | 2026-07-06 · cotización | — |
 | 6 | Brida WN RF 300 LB · Ø 16" | SIMILAR | 634,01 / un | 2025-12-26 · lista | diametro: 14" (pedido 16"); schedule: 40 (no pedido); precio escalado por diámetro (16" ÷ 14")^1,5 = × 1,22 |
 | 7 | Brida ciega RF 300 LB · Ø 12" | IGUAL | 426,44 / un | 2025-12-26 · lista | — |
 | 8 | Brida ciega RF 300 LB · Ø 16" | SIMILAR | 691,17 / un | 2025-12-26 · lista | diametro: 14" (pedido 16"); precio escalado por diámetro (16" ÷ 14")^1,5 = × 1,22 |
@@ -24,7 +24,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 14 | Junta espiralada RF esp. 4,5 mm 300 LB · Ø 16 | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (2") (JUN-02769, USD 6,00): pedir cotización |
 | 15 | Niple s/c NPT L=100 mm · Ø 1 1/2" | IGUAL ⚠ | 5,60 / un | 2024-11-01 · stock (precio maestro) | — |
 | 16 | Niple s/c NPT L=100 mm · Ø 1/2" | IGUAL ⚠ | 20,00 / un | 2026-04-22 · planilla interna | — |
-| 17 | Niple s/c NPT L=100 mm · Ø 3/4" | SIMILAR ⚠ | 3,93 / un | 2024-11-01 · stock (precio maestro) | schedule: 160 (pedido 80); escalado por espesor (sch 80 3,91 mm ÷ sch 160 5,56 mm = × 0,70) |
+| 17 | Niple s/c NPT L=100 mm · Ø 3/4" | SIMILAR ⚠ | 36,74 / un | 2026-04-22 · planilla interna | diametro: 0.5" (pedido 0.75"); precio escalado por diámetro (0,75" ÷ 0,5")^1,5 = × 1,84 |
 | 18 | Niple s/c NPT L=100 mm · Ø 3/4" | IGUAL ⚠ | 5,59 / un | 2024-11-01 · stock (precio maestro) | — |
 | 19 | Tapón NPT cab. hexag. · Ø 1/2" | SIMILAR | 1,38 / un | 2025-08-27 · cotización | — · faltan: serie |
 | 20 | Tapón NPT cab. hexag. · Ø 3/4" | SIMILAR | 2,30 / un | 2026-02-20 · planilla interna | — · faltan: serie |
@@ -65,7 +65,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 122 placas chicas + 25 grandes + 3,83 servicio(s) de RX + 0,67 de LP por equipo = USD 2.753,00 (Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))).
   Con las tarifas de Antonelli (11-2025) serían USD 4.535,00: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: skid, 16", 6 u, materiales USD 52.352 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: skid, 16", 6 u, materiales USD 52.385 por unidad)
 
 - **Ingeniería:** 5 h × USD 15/h = USD 75,00 · mediana de 4,5, 5,0, 93,3 h por unidad (repartidas en la serie) · antecedente: Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para UFLO 2108 (SK-2105) (8, 1 u, 2026-02-20) · rango del mismo tipo 27–280 h
 - **Calidad y dossier:** 15 h × USD 15/h = USD 225,00 · mediana de 15,0, 7,5, 40,0 h por unidad (repartidas en la serie) · antecedente: Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para UFLO 2108 (SK-2105) (8, 1 u, 2026-02-20) · rango del mismo tipo 45–120 h

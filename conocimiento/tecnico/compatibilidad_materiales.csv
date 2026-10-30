@@ -1,0 +1,31 @@
+patron,material,clase,grupo_b16_5,forma,nota
+"\ba ?105\b",A105,carbono,1.1,forjado,"Bridas y accesorios forjados de acero al carbono (ASTM A105)"
+"\bwcc\b",A216 WCC,carbono,1.2,fundido,
+"\ba ?216\b|\bwcb\b",A216 WCB,carbono,1.1,fundido,"Cuerpo fundido de válvula; mismo grupo 1.1 que A105 (B16.5 tabla 1A)"
+"\ba ?350\b|\blf ?2\b",A350 LF2,carbono_baja_temp,1.1,forjado,"Acero al carbono para baja temperatura (con ensayo Charpy): no reemplazar por A105 si el pliego pide LF2"
+"\ba ?352\b|\blcb\b|\blcc\b",A352 LCB/LCC,carbono_baja_temp,1.3,fundido,
+"\ba ?333\b",A333,carbono_baja_temp,,caño,"Caño para baja temperatura"
+"\ba ?51[56]\b|\b516[- ]?70\b",A516-70,carbono,1.1,chapa,"Chapa para recipientes a presión"
+"\ba ?36\b",A36,carbono_estructural,,chapa_perfil,"Acero estructural: no apto para partes a presión"
+"\ba ?106\b",A106 B,carbono,,caño,"Caño sin costura de acero al carbono"
+"\ba ?53\b",A53 B,carbono,,caño,"Caño con o sin costura; B31.3 limita el A53 tipo F (soldado a tope en horno)"
+"\bapi ?5l\b(?!.*\bx ?\d)",API 5L B,carbono,,caño,"Caño de línea grado B"
+"\bapi ?5l\b.*\bx ?(\d{2})|\bx ?(42|46|52|56|60|65|70)\b",API 5L X,carbono_alta_resistencia,,caño,"Grado X (fluencia mínima en ksi): el grado tiene que coincidir"
+"\ba ?234\b|\bwpb\b",A234 WPB,carbono,,accesorio_bw,"Accesorios a tope de acero al carbono para caño A106/A53"
+"\ba ?860\b|\bwphy\b",A860 WPHY,carbono_alta_resistencia,,accesorio_bw,"Accesorios de alta resistencia para caño API 5L X: el grado (WPHY 52, 60, 65…) tiene que coincidir"
+"\ba ?694\b|\bf ?6[05]\b|\bf ?5[02]\b|\bf ?70\b",A694 F,carbono_alta_resistencia,,forjado,"Bridas de alta resistencia para ductos API 5L X: el grado tiene que coincidir"
+"\bf ?316 ?l\b|\b316 ?l\b|\bcf3m\b",316L,inox_316l,2.3,,"316L (bajo carbono): reemplaza a 316 pero no al revés si el pliego pide L"
+"\ba ?182\b.*\bf ?316\b|\bf ?316\b|\bcf8m\b|\ba ?351\b|\b316\b|\btp ?316\b",316,inox_316,2.2,,"A182 F316 forjado, A351 CF8M fundido, A312 TP316 caño, A403 WP316 accesorio: mismo acero"
+"\bf ?304 ?l\b|\b304 ?l\b|\bcf3\b",304L,inox_304l,2.3,,
+"\bf ?304\b|\bcf8\b|\b304\b",304,inox_304,2.1,,"No reemplaza a 316 (316 tiene molibdeno)"
+"\ba ?403\b|\binox|\binoxidable\b|\ba ?312\b|\ba ?240\b",inoxidable sin grado,inox,,,"Inoxidable sin decir 304 o 316: sirve de referencia para cualquiera de los dos, con la diferencia anotada"
+"\bduplex\b|\bf ?51\b|\bs31803\b|\b2205\b",Dúplex,duplex,2.8,,"Super dúplex y dúplex no son intercambiables con 316"
+"\bb ?7 ?m\b",A193 B7M,bulon_b7m,,bulon,"B7M (NACE): reemplaza a B7, no al revés en servicio ácido"
+"\bb ?7\b",A193 B7,bulon_b7,,bulon,
+"\bb ?8 ?m\b|\b8 ?m\b",A193 B8M / A194 8M,bulon_inox,,bulon,
+"\b2 ?hm\b",A194 2HM,tuerca_2hm,,tuerca,
+"\b2 ?h\b",A194 2H,tuerca_2h,,tuerca,
+"\bgalvaniz",Galvanizado,carbono_galvanizado,,,"Solo para servicios que lo admiten (agua, aire, estructura)"
+"\bacero al carbono\b|\bcarbono\b",carbono sin grado,carbono,,,"Acero al carbono sin norma: referencia con la diferencia anotada"
+"\bbronce\b",Bronce,bronce,,,
+"\bklinger|\bgrafito\b|\bpt ?fe\b|\bnbr\b",No metálico,no_metalico,,,
