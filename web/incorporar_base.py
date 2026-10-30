@@ -53,17 +53,20 @@ def main(archivo, forzar=False):
     codigo = cot.get("codigo", "")
     repo = [p for p in sorted((RAIZ / "cotizaciones").glob(f"{codigo}_*")) if (p / "cotizacion.json").exists()] if codigo else []
     huella_pagina = cot.pop("huella_repo", "")
+    sys.path.insert(0, str(RAIZ / "web"))
+    from semilla import huella
+    id_ = Path(archivo).stem
+    meta_vieja = BIB / id_ / "incorporacion.json"
+    # el repositorio no cambió desde la última vez que se pasó esta cotización de la página: no hay correcciones que pisar
+    # (segunda auditoría 30-10-2026: sin esto la segunda incorporación frenaba siempre y terminaba en --forzar)
+    ultima = json.loads(meta_vieja.read_text(encoding="utf-8")).get("huella_repo_despues", "") if meta_vieja.exists() else ""
     if repo and not forzar:
-        sys.path.insert(0, str(RAIZ / "web"))
-        from semilla import huella
-        if huella_pagina != huella(repo[0]):
+        if huella(repo[0]) not in (huella_pagina, ultima):
             sys.exit(f"FRENADO: {repo[0].relative_to(RAIZ)} cambió en el repositorio después de la copia que tiene la página "
                      f"({'la página no dice de qué versión salió' if not huella_pagina else 'huella ' + huella_pagina + ' ≠ ' + huella(repo[0])}). "
                      "Pasarla pisaría las correcciones del repositorio. Comparar las dos versiones, pasar a la página lo que falte "
                      "(semilla.py --previo) o, si después de revisar vale la de la página, volver a correr con --forzar.")
-    id_ = Path(archivo).stem
     destino = BIB / id_
-    meta_vieja = destino / "incorporacion.json"
     veces = (json.loads(meta_vieja.read_text(encoding="utf-8")).get("veces", 1) + 1) if meta_vieja.exists() else 1
     escribir(destino, cot, oferta)
     meta = {"id": id_, "codigo": codigo, "titulo": cot.get("titulo", ""), "estado": cot.get("estado", ""),
@@ -82,6 +85,9 @@ def main(archivo, forzar=False):
         if r.returncode:
             print(r.stdout[-1500:], r.stderr[-1500:])
             sys.exit("armar_cotizacion.py falló: revisar antes de subir.")
+        meta["huella_repo_despues"] = huella(repo[0])
+        (destino / "incorporacion.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+        print(f"Huella del repositorio después de pasarla: {meta['huella_repo_despues']} (escribirla en cot.huella_repo de la página)")
     else:
         print("Repositorio: no hay carpeta cotizaciones/ con ese código; queda solo en la biblioteca.")
 

@@ -525,13 +525,22 @@
    "unidad": "un",
    "fuentes": [
     {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-30",
+     "coincide": "sin_ref",
+     "diferencia": "la referencia Renard es BSPT y el plano pide NPT: pedir buje NPT serie 2000"
+    },
+    {
      "tipo": "lista",
      "precio": 11.51,
      "proveedor": "Renard · cód. 6592 (es BSPT; el plano pide NPT: cotizar NPT)",
      "origen": "Lista de precios ITT",
      "fecha": "2025-12-26",
-     "coincide": "similar",
-     "diferencia": "Rosca BSPT, serie 3000; el plano pide NPT serie 2000"
+     "coincide": "descartada",
+     "diferencia": "descartada (segunda auditoría 30-10-2026): rosca BSPT por NPT · antes: Rosca BSPT, serie 3000; el plano pide NPT serie 2000"
     }
    ]
   },
@@ -860,13 +869,22 @@
    "unidad": "un",
    "fuentes": [
     {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-30",
+     "coincide": "sin_ref",
+     "diferencia": "la cupla Renard es A105 NPT/NPT serie 3000 y el plano pide A234 WPB 80/2000 NPT/BW: pedir cotización"
+    },
+    {
      "tipo": "lista",
      "precio": 2.71,
      "proveedor": "Renard · cód. 5292",
      "origen": "Lista de precios ITT",
      "fecha": "2025-12-26",
-     "coincide": "similar",
-     "diferencia": "Cupla entera A105 NPT/NPT; el plano pide A234 WPB 80/2000 NPT/BW"
+     "coincide": "descartada",
+     "diferencia": "descartada (segunda auditoría 30-10-2026): otra serie y otros extremos sin documentar · antes: Cupla entera A105 NPT/NPT; el plano pide A234 WPB 80/2000 NPT/BW"
     }
    ]
   },

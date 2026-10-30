@@ -47,10 +47,11 @@ def control_compatibilidad(c, plano, avisos=None):
         return []
     import json
     import buscar_material as bm
-    from compatibilidad import incompatible, regla_material, clases, dn_de
+    from compatibilidad import incompatible, regla_material, clases, dn_de, regla_conexion, conexiones
     from precotizar import texto_busqueda
     bm.buscar("brida")
     cat = {r["codigo"]: r for r in bm._FILAS}
+    por_lista = {m.group(1): r["codigo"] for r in bm._FILAS if (m := re.search(r"^Renard \(cód\. (\d+)\)", r.get("proveedor", "")))}
     por_pos = {p["pos"].strip(): p for p in plano}
     items = json.load(open(ruta, encoding="utf-8"))["items"]
     cod_de = lambda f: f.get("codigo") or (re.search(r"\b[A-Z]{3}-\d{5}\b", str(f.get("proveedor") or "")) or [None])[0]
@@ -63,21 +64,44 @@ def control_compatibilidad(c, plano, avisos=None):
         if not f.get("precio"):
             continue
         cod = cod_de(f)
+        if not cod:  # "Renard · cód. 5979": la pieza del catálogo de esa lista (segunda auditoría 30-10-2026)
+            m = re.search(r"(?i)\b(renard|renar)\b.*?c[óo]d\.? ?(\d+)", str(f.get("proveedor") or ""))
+            cod = por_lista.get(m.group(2)) if m else None
         pos = str(it.get("pos", "")).strip()
         madre = re.match(r"\d+", pos)
         p = por_pos.get(pos)
-        if not p and madre and madre.group(0) != pos and cod and cod_pos.get(madre.group(0)) == cod:
-            p = por_pos.get(madre.group(0))  # compra extra de la misma pieza (14b): se compara con lo que pide el plano
-        texto = texto_busqueda(p) if p else f"{it.get('descripcion', '')} {it.get('especificacion', '')}"
+        desc_it = f"{it.get('descripcion', '')} {it.get('especificacion', '')}"
+        if str(it.get("descripcion", "")).startswith("["):
+            continue  # renglón de la plantilla (casos de control: cotizacion.json solo trae parámetros)
+        if not p and madre and madre.group(0) != pos and madre.group(0) in por_pos and (
+                (cod and cod_pos.get(madre.group(0)) == cod) or re.search(rf"\bpos\.? ?{madre.group(0)}\b", desc_it.lower())
+                or not clases(desc_it)):
+            # compra extra de la pieza de la fila madre (14b) o fila sin material propio: se compara con lo que pide el
+            # plano en la fila madre (segunda auditoría 30-10-2026: una 21b con otra pieza pasaba sin control)
+            p = por_pos.get(madre.group(0))
+        texto = texto_busqueda(p) if p else desc_it
+        if not p and not clases(texto):
+            # fila agregada por ITT (EST, INS…) sin material en su descripción: no hay con qué comparar
+            if avisos is not None:
+                avisos.append(f"Pos {pos}: fila agregada sin material en la descripción ({desc_it[:45]}): controlar a mano la referencia")
+            continue
         fam, at, *_ = bm.buscar(texto)
+        documentado = f.get("coincide") == "similar" and str(f.get("diferencia") or "").strip()
+
+        def serie_mal(serie_cand):
+            """Otra serie (rating) no es similar (Matías, 29-10-2026). Se admite solo una serie MAYOR escrita como
+            diferencia en la fuente, y nunca en juntas (la serie es la medida de la junta)."""
+            sp, sc = re.sub(r"\D", "", str(at.get("serie") or "")), re.sub(r"\D", "", str(serie_cand or ""))
+            if not sp or not sc or sp == sc:
+                return ""
+            if documentado and fam != "JUN" and int(sc) > int(sp) and sc in str(f.get("diferencia")):
+                return ""
+            return f"serie {sc} por {sp} (otro rating)"
         if cod in cat:
             r = cat[cod]
             motivo = incompatible(fam, at, r, texto, r["descripcion"])
-            documentado = f.get("coincide") == "similar" and str(f.get("diferencia") or "").strip()
-            if not motivo and at.get("serie") and r.get("serie") and bm.norm(at["serie"]) != bm.norm(r["serie"]):
-                # otra serie (rating) no es similar (Matías, 29-10-2026), salvo que la diferencia esté escrita en la fuente
-                if not (documentado and re.sub(r"\D", "", r["serie"]) in str(f.get("diferencia"))):
-                    motivo = f"serie {r['serie']} por {at['serie']} (otro rating)"
+            if not motivo:
+                motivo = serie_mal(r.get("serie"))
             if not motivo and avisos is not None and at.get("tipo") and r.get("tipo") and bm.norm(at["tipo"]) != bm.norm(r["tipo"]) and not documentado:
                 # el tipo del pedido se lee del texto y puede estar mal leído ("manómetros" en una nota): AVISO, no ERROR
                 avisos.append(f"Pos {pos}: la referencia {cod} es de otro tipo ({r['tipo']} por {at['tipo']}): confirmar que sea la misma pieza")
@@ -86,13 +110,26 @@ def control_compatibilidad(c, plano, avisos=None):
             desc = r["descripcion"]
         else:
             # fuente sin pieza del catálogo (planilla, cotización): se compara el material con el texto de la fuente
+            # (sin lo que la fuente dice del pedido: "el plano pide NPT", "(pedido #150)"); también conexión y serie
             desc = f"{f.get('proveedor', '')} {f.get('diferencia', '')}"
+            limpio = re.sub(r"(?i)\(?\b(?:el plano pide|plano pide|pedid[oa]s?|se pide|pide)\b[^)\];]*\)?", " ", desc)
             motivo = ""
             if clases(texto):
-                if clases(desc):
-                    motivo = regla_material(fam, texto, desc, desc)
+                if clases(limpio):
+                    motivo = regla_material(fam, texto, limpio, limpio)
                 elif avisos is not None:
                     avisos.append(f"Pos {pos}: la fuente ({desc[:50]}) no dice el material: verificar en el original que sea el que pide el plano")
+            if not motivo:
+                motivo = regla_conexion(conexiones(at.get("extremos", ""), at.get("cara", "")), conexiones(limpio))
+            if not motivo:
+                ms = re.search(r"#\s?(\d{3,4})\b|\b(\d{3,4})\s?(?:#|lbs?\b)|\bserie\s?(\d{3,4})\b|\bs(\d{3,4})\b|\bwog\s?(\d{3,4})\b", limpio.lower())
+                motivo = serie_mal(next(g for g in ms.groups() if g)) if ms else ""
+        if motivo and f.get("tipo") == "est":
+            # un ESTIMADO armado sobre otra pieza (ej.: "+30% por asiento metálico") ya dice que no es la pieza: AVISO para
+            # confirmar el ajuste; sigue marcado como estimado en el costo y en la oferta
+            if avisos is not None:
+                avisos.append(f"Pos {pos}: ESTIMADO sobre una pieza que la norma no admite como similar ({motivo[:90]}): confirmar el ajuste o pedir cotización")
+            continue
         if motivo:
             out.append(f"Pos {pos}: la referencia {cod or ''} ({desc[:45]}) no sirve según la norma: {motivo}. "
                        "Cambiarla por una compatible o dejar SIN PRECIO (compatibilidades_LEEME.md)")

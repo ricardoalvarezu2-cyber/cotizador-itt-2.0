@@ -324,7 +324,7 @@
    "unidad": "un",
    "fuentes": [
     {
-     "tipo": "ant",
+     "tipo": "est",
      "precio": 10.0,
      "proveedor": "Bules o Versailles (planilla TAVAL/43, hoja 3\" x 442u ítem 9) · JUN-04173",
      "codigo": "JUN-04173",
@@ -374,13 +374,22 @@
    "unidad": "un",
    "fuentes": [
     {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-30",
+     "coincide": "sin_ref",
+     "diferencia": "sin junta 6\" #150 cotizada (la de MS Juntas es 8\" #300): pedir cotización a MS Juntas"
+    },
+    {
      "tipo": "cot",
      "precio": 5.82,
      "proveedor": "MS Juntas cot. 48.729 (8\" #300)",
      "origen": "fuentes_originales/ofertas_texto/TAVAL/72- Lic 64675 - SKID CONCENTRADOR - UTE NARAMBUE/5.Proveedores 3ros/COTIZACION_N§_048729.pdf.txt",
      "fecha": "2026-07-06",
-     "coincide": "similar",
-     "diferencia": "8\" #300 (pedido 6\" #150)"
+     "coincide": "descartada",
+     "diferencia": "descartada (segunda auditoría 30-10-2026): junta #300 para bridas #150 (otra serie: otra medida de junta) · antes: 8\" #300 (pedido 6\" #150)"
     }
    ]
   },
@@ -434,13 +443,22 @@
    "unidad": "un",
    "fuentes": [
     {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-30",
+     "coincide": "sin_ref",
+     "diferencia": "sin junta 8\" #150 cotizada (la de MS Juntas es #300): pedir cotización a MS Juntas"
+    },
+    {
      "tipo": "cot",
      "precio": 5.82,
      "proveedor": "MS Juntas cot. 48.729 (8\" #300)",
      "origen": "fuentes_originales/ofertas_texto/TAVAL/72- Lic 64675 - SKID CONCENTRADOR - UTE NARAMBUE/5.Proveedores 3ros/COTIZACION_N§_048729.pdf.txt",
      "fecha": "2026-07-06",
-     "coincide": "similar",
-     "diferencia": "#300 (pedido #150)"
+     "coincide": "descartada",
+     "diferencia": "descartada (segunda auditoría 30-10-2026): junta #300 para bridas #150 (otra serie: otra medida de junta) · antes: #300 (pedido #150)"
     }
    ]
   },
@@ -819,13 +837,23 @@
    "fuentes": [
     {
      "tipo": "lista",
+     "precio": 60.51,
+     "proveedor": "Renard (cód. 1173) · CAN-01510",
+     "codigo": "CAN-01510",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1173",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "Tubo s/costura 168,3 x 7,11 mm A53/A106/API 5L B (sin costura, triple certificación: cumple A53 Gr B); largo 10,50 a 14,50 m"
+    },
+    {
+     "tipo": "lista",
      "precio": 50.6,
      "proveedor": "Renard (cód. 1056) · CAN-01511",
      "codigo": "CAN-01511",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1056",
      "fecha": "2025-12-26",
-     "coincide": "similar",
-     "diferencia": "costura: con costura (no pedido)"
+     "coincide": "descartada",
+     "diferencia": "descartada (segunda auditoría 30-10-2026): la lista de Renard dice A53/135 sin grado; el plano pide A-53 Gr B · antes: costura: con costura (no pedido)"
     }
    ]
   },
@@ -840,13 +868,23 @@
    "fuentes": [
     {
      "tipo": "lista",
+     "precio": 60.51,
+     "proveedor": "Renard (cód. 1173) · CAN-01510",
+     "codigo": "CAN-01510",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1173",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "Tubo s/costura 168,3 x 7,11 mm A53/A106/API 5L B (sin costura, triple certificación: cumple A53 Gr B); largo 10,50 a 14,50 m"
+    },
+    {
+     "tipo": "lista",
      "precio": 50.6,
      "proveedor": "Renard (cód. 1056) · CAN-01511",
      "codigo": "CAN-01511",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1056",
      "fecha": "2025-12-26",
-     "coincide": "similar",
-     "diferencia": "costura: con costura (no pedido)"
+     "coincide": "descartada",
+     "diferencia": "descartada (segunda auditoría 30-10-2026): la lista de Renard dice A53/135 sin grado; el plano pide A-53 Gr B · antes: costura: con costura (no pedido)"
     }
    ]
   },
@@ -893,12 +931,22 @@
     {
      "tipo": "ant",
      "precio": 90.7,
+     "proveedor": "Renard · CAN-01512",
+     "codigo": "CAN-01512",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx",
+     "fecha": "2026-06-26",
+     "coincide": "similar",
+     "diferencia": "caño A106 Gr B sch XS (el plano pide A-53 Gr B sch 80: A106 lo reemplaza, mismo espesor en 6\"); la referencia anterior no decía el material (30-10-2026)"
+    },
+    {
+     "tipo": "ant",
+     "precio": 90.7,
      "proveedor": "Renard · CAN-02603",
      "codigo": "CAN-02603",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\PAMPA ENERGIA\\7- Licitacion contrato Marco Skid PAD Rincon de Aranda · 4.Armado de la Oferta Comercial/Cot Skid Manifolds Colectores RDA Contrato Marco (2da RDA).xlsx.",
      "fecha": "2026-08-14",
-     "coincide": "similar",
-     "diferencia": "material: sin dato (pedido A53); costura: sin costura (no pedido); unidad distinta: catálogo por un, plano por m"
+     "coincide": "descartada",
+     "diferencia": "descartada (segunda auditoría 30-10-2026): otra pieza que la pos 23 y sin material en la descripción · antes: material: sin dato (pedido A53); costura: sin costura (no pedido); unidad distinta: catálogo por un, plano por m"
     }
    ]
   },
@@ -913,13 +961,23 @@
    "fuentes": [
     {
      "tipo": "lista",
+     "precio": 91.01,
+     "proveedor": "Renard (cód. 1181) · CAN-01521",
+     "codigo": "CAN-01521",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1181",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "Tubo s/costura 219,1 x 8,18 mm A53/A106/API 5L B (sin costura, triple certificación: cumple A53 Gr B); largo 10,50 a 14,50 m"
+    },
+    {
+     "tipo": "lista",
      "precio": 72.64,
      "proveedor": "Renard (cód. 1062) · CAN-01522",
      "codigo": "CAN-01522",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1062",
      "fecha": "2025-12-26",
-     "coincide": "similar",
-     "diferencia": "costura: con costura (no pedido)"
+     "coincide": "descartada",
+     "diferencia": "descartada (segunda auditoría 30-10-2026): la lista de Renard dice A53/135 sin grado; el plano pide A-53 Gr B · antes: costura: con costura (no pedido)"
     }
    ]
   },
@@ -934,13 +992,23 @@
    "fuentes": [
     {
      "tipo": "lista",
+     "precio": 91.01,
+     "proveedor": "Renard (cód. 1181) · CAN-01521",
+     "codigo": "CAN-01521",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1181",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "Tubo s/costura 219,1 x 8,18 mm A53/A106/API 5L B (sin costura, triple certificación: cumple A53 Gr B); largo 10,50 a 14,50 m"
+    },
+    {
+     "tipo": "lista",
      "precio": 72.64,
      "proveedor": "Renard (cód. 1062) · CAN-01522",
      "codigo": "CAN-01522",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1062",
      "fecha": "2025-12-26",
-     "coincide": "similar",
-     "diferencia": "costura: con costura (no pedido)"
+     "coincide": "descartada",
+     "diferencia": "descartada (segunda auditoría 30-10-2026): la lista de Renard dice A53/135 sin grado; el plano pide A-53 Gr B · antes: costura: con costura (no pedido)"
     }
    ]
   },

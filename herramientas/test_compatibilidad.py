@@ -7,6 +7,7 @@ Uso: python herramientas/test_compatibilidad.py   (lo corre verificar_todo.py)
 """
 import csv
 import json
+import random
 import subprocess
 import sys
 from pathlib import Path
@@ -88,6 +89,34 @@ POR_BUSCADOR = [
     ('Espárrago 5/8" A193 B7M c/2 tuercas A194 2HM', r"^(?!.*b ?7 ?m)"),
 ]
 import re  # noqa: E402
+from compatibilidad import clases, regla_material  # noqa: E402
+# 1c. segunda auditoría (30-10-2026): cuerpo contra internos, negaciones, "GR°", guiones, A53 sin grado, medidas "x"
+POR_TEXTO = [  # (familia, pedido, candidato, ¿compatible?)
+    ("VAL", 'Válvula esférica 2" #150 RF cuerpo AISI 316', "ESF 2 150 RF WCB INT 316", NO),
+    ("VAL", "Válvula cuerpo A351 CF8M", "cuerpo WCB, internos 316", NO),
+    ("VAL", "Válvula cuerpo A182 F316", "cuerpo A105 trim 316", NO),
+    ("VAL", "Válvula esférica A105", "valvula esferica 0.5 #2000 NPT F316 Taval A105 forjada", NO),  # no se sabe el cuerpo
+    ("VAL", "Válvula esférica, cuerpo WCB, internos 316 ASTM A-216 WCB", "VALV ESF G 12 S900 RF WCB INT 316 ASTO RPTFE", SI),
+    ("VAL", "Válvula esférica, cuerpo WCB, internos 316 ASTM A-216 WCB", "valvula esferica WCB Taval", NO),  # no dice internos
+    ("VAL", "Válvula retención, cuerpo ASTM A-216, clapeta AISI-316", "S600 A216 WCB, internos TRIM 8 (13Cr, NO AISI 316)", NO),
+    ("VAL", "Válvula retención, cuerpo ASTM A-216, clapeta AISI-316", "retención A216 WCB internos AISI 316", SI),
+    ("VAL", "Válvula esférica WCB", "valvula esferica WCB Taval", SI),
+    ("ACC", "Tapón A105", "inoxidable AISI 304, NO A105", NO),
+    ("CAN", "Caño ASTM A-53 GR°B", "Caño ASTM A-53 GR°A", NO),
+    ("CAN", "Caño ASTM A-53 GR°B", "Caño c/c 168,3 x 7,11 mm A53/135", NO),      # A53 sin grado
+    ("CAN", "Caño ASTM A-53 GR°B", "Tubo s/costura 168,3 x 7,11 mm A53/A106/API 5L B", SI),
+    ("CAN", "Caño A106 GR°C", "Caño A106 Gr B", NO),
+    ("CHA", "Chapa SA-516-70", "Chapa SA-516-60", NO),
+    ("CHA", "Chapa SA-516 GR°70", "Chapa SA-516 GR°60", NO),
+    ("CHA", "Chapa SA-516-60", "Chapa A516 Gr 70", SI),
+]
+for fam, a, b, ok in POR_TEXTO:
+    m = regla_material(fam, a, b, b)
+    chk(f"texto {fam}: {a} ← {b}", (m == "") == ok, m)
+for t, esperado in [("largo 4,8m", {}), ("L=8m", {}), ("espárrago 5/8 x70 B7", {"bulon_b7"}), ("bolsa 45 x60", {}),
+                    ("caño A53 a 6 m", {"cano_a53_sin_grado"}), ("dsaw sch20 x65", {"carbono_alta_resistencia"}),
+                    ("tuerca A194 8M", {"bulon_inox"}), ("SA-516-60", {"carbono_516_60"})]:
+    chk(f"clases {t}", set(clases(t)) == set(esperado), clases(t))
 for t, prohibido in POR_BUSCADOR:
     *_, res = bm.buscar(t)
     d = bm.norm(res[0][-1]["descripcion"]) if res else ""
@@ -101,11 +130,15 @@ for f in sorted((RAIZ / "cotizaciones").glob("*/pedido/lista_materiales_plano.cs
     for r in pc.leer(f):
         texto = pc.texto_busqueda(r)
         fam, at, *_ = bm.buscar(texto)
-        cands = [c for c in filas if bm.NOMBRE_A_COD.get(c["familia"]) == fam][:60]
+        todos = [c for c in filas if bm.NOMBRE_A_COD.get(c["familia"]) == fam]
+        cands = todos[:60] + random.Random(f"{f.parent.parent.name}{r.get('pos')}").sample(todos[60:], min(90, len(todos[60:])))
         for c in cands:
             casos.append({"fam": fam, "ped": {k: at.get(k, "") for k in ("material", "extremos", "cara", "schedule", "diametro")}, "texto": texto,
                           "cand": {k: c.get(k, "") for k in ("material", "extremos", "cara", "schedule", "diametro")}, "d": c["descripcion"],
                           "py": incompatible(fam, at, c, texto, c["descripcion"]) != ""})
+for fam, a, b, _ in POR_TEXTO:  # los casos de texto también en la página
+    casos.append({"fam": fam, "ped": {"material": a}, "texto": a, "cand": {"material": b}, "d": b,
+                  "py": incompatible(fam, {"material": a}, {"material": b}, a, b) != ""})
 js = r"""const fs=require('fs');const B=require('./web/src/busqueda.js');const D=JSON.parse(fs.readFileSync('web/datos.json','utf8'));
 const cs=JSON.parse(fs.readFileSync(0,'utf8'));console.log(JSON.stringify(cs.map(c=>B.incompatible(D.compat,c.fam,c.ped,c.cand,c.texto,c.d)!=="")));"""
 r = subprocess.run(["node", "-e", js], cwd=RAIZ, input=json.dumps(casos), capture_output=True, text=True)

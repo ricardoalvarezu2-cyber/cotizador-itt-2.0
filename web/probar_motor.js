@@ -1,5 +1,5 @@
 // Prueba del motor JS contra Python. Uso: node web/probar_motor.js
-// 1) CAPEX (caso de control): costo 5.456,38 · unitario 7.366,12 · total 14.732,24 (índices congelados; 28-10-2026 sin los 3 valores supuestos, P4 ter).
+// 1) CAPEX (caso de control): costo 5.425,60 · unitario 7.324,57 · total 14.649,14 (índices congelados; 30-10-2026: pos 10 y 23 SIN PRECIO por compatibilidad).
 // 2) Paridad con armar_cotizacion.py en una cotización con válvulas Taval (factor FTV aparte): COT26-0330-001, FTV 1 y 1,5.
 const fs = require("fs");
 const { execFileSync } = require("child_process");
@@ -14,7 +14,7 @@ const comparar = (nombre, r, esperado) => {
   }
 };
 const r = Motor.calcular(leer("COT26-1003-001_CAPEX_OQ8209"), datos.indices);
-comparar("CAPEX", r, { costo: 5456.38, precio_unitario: 7366.12, total: 14732.24 });
+comparar("CAPEX", r, { costo: 5425.6, precio_unitario: 7324.57, total: 14649.14 });
 const ypf = leer("COT26-0330-001_YPF_LIC69343_SKID713");
 for (const ftv of [1, 1.5]) {
   const cfg = { ...ypf, parametros: { ...ypf.parametros, FTV: ftv } };

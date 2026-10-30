@@ -47,6 +47,7 @@ REEMPLAZA = {
     "cano_api5l_b": {"cano_a106", "cano_a106c"},
     "a333_gr1": {"carbono_baja_temp"},
     "cano_a53a": {"cano_a53", "cano_a106", "cano_a106c"},
+    "cano_a53_sin_grado": {"cano_a53", "cano_a106", "cano_a106c"},  # el pedido sin grado: A53 B o mejor
     "carbono_516_60": {"carbono", "carbono_516_65"},       # A516-70 / -65 por -60 (el grupo se controla aparte)
     "carbono_516_65": {"carbono"},
     "inox_304": {"inox_316", "inox_304l"},                 # 304L solo si su grupo alcanza (CF3, 2.1; F304L 2.3 no)
@@ -59,7 +60,7 @@ REEMPLAZA = {
 }
 # genéricos del pedido: aceptan cualquiera de estas clases
 GENERICOS = {
-    "carbono_generico": {"carbono", "carbono_baja_temp", "cano_a106", "cano_a106c", "cano_a53", "cano_api5l_b", "carbono_estructural"},
+    "carbono_generico": {"carbono", "carbono_baja_temp", "cano_a106", "cano_a106c", "cano_a53", "cano_a53a", "cano_a53_sin_grado", "cano_api5l_b", "carbono_estructural"},
     "inox": {"inox_316", "inox_316l", "inox_304", "inox_304l", "inox_347"},
 }
 # grupo de B16.5 pedido -> grupos admitidos en el candidato (rating igual o mayor)
@@ -85,16 +86,33 @@ def materiales():
     return _MAT
 
 
+# lo negado no es el material ("13Cr, NO AISI 316", "Serie 3000 en lugar de 2000"): se saca antes de leer (auditoría 30-10-2026)
+NEGACION = r"\b(?:no|en lugar de|en vez de|excepto|distint[oa]s? de|faltan?|a cotizar|cotizar)\b[^,;|()]*"
+# "GR°B" y "SA-516 GR°60": "°" queda " grados " (norm): se vuelve "gr b" (auditoría 30-10-2026: se leía A53 B por A53 GR°A)
+GRADOS = r"\b(gr|g)\.? ?grados ?"
+# válvulas: internos (esfera, vástago, asientos, clapeta, resorte…) y cuerpo se leen por separado ("retención a clapeta",
+# "válvula de esfera" son el tipo, no internos) (auditoría 30-10-2026:
+# "cuerpo AISI 316" aceptaba "WCB INT 316" porque el texto nombraba 316)
+INTERNOS = r"(?<!\ba )(?<!\bde )\b(?:int(?:ernos?)?|interior(?:es)?|trim|esfera|bola|vastago|eje|asientos?|asto|clapeta|resortes?|obturador|disco)\b[^,;|()]*"
+CUERPO = r"\bcuerpo\b[^,;|()]*"
+# "5/8 x 60", "45 x60": medidas, no API 5L X60 (auditoría 30-10-2026)
+MEDIDA_X = r"(?<![a-z\d/.,])(\d+(?:[/.,]\d+)?)\s?x\s?(?=\d)"
+NO_METAL = {"grafito", "ptfe", "nbr", "klingerit", "bronce"}
+
+
 def prep(texto):
-    """Texto normalizado para los patrones: "SA-106", "SA 106", "A-105" y "A 105" quedan "a106", "a105"."""
-    return re.sub(r"\bs?a[- ]?(\d{2,3})\b", r"a\1", norm(texto))
+    """Texto normalizado para los patrones: "SA-106", "SA 106", "A-105" y "A 105" quedan "a106", "a105"; sin lo negado."""
+    t = re.sub(NEGACION, " ", norm(texto))
+    t = re.sub(GRADOS, r"\1 ", t)
+    t = re.sub(MEDIDA_X, r"\1 por ", t)
+    return re.sub(r"\bs?a[- ]?(\d{2,3})\b", r"a\1", t)
 
 
-def clases(texto):
+def clases(texto, preparado=False):
     """{clase: grupo} de todos los materiales que nombra el texto (doble certificación). Si una fila más general coincide
     dentro de lo que ya tomó una más específica ("A516 Gr 60" no es además A516-70), se descarta; los genéricos se
     descartan si hay uno específico."""
-    t = prep(texto)
+    t = texto if preparado else prep(texto)
     hits = []
     for m in materiales():
         x = m["rx"].search(t)
@@ -120,6 +138,53 @@ def grado(texto):
     return m.group(1) if m else ""
 
 
+def es_inox(c):
+    return c.startswith("inox") or c in ("duplex", "superduplex")
+
+
+def cuerpo(texto):
+    """Clases del cuerpo de una válvula: lo que sigue a "cuerpo" si lo dice; si no, lo que no es de internos. None si nombra
+    a la vez carbono e inoxidable sin decir cuál es el cuerpo ("F316 … A105": no se sabe); {} si no dice el material."""
+    t = prep(texto)
+    sin_int = re.sub(INTERNOS, " ", t)
+    expl = " ".join(re.findall(CUERPO, sin_int))
+    c = {k: v for k, v in clases(expl or sin_int, True).items() if k not in NO_METAL and not k.startswith(("bulon", "tuerca"))}
+    if any(es_inox(k) for k in c) and any(not es_inox(k) for k in c):
+        return None
+    return c
+
+
+def reemplaza(ca, ga, cb, gb, pedido, cand):
+    """¿La clase cb (grupo gb) del candidato puede reemplazar a la clase ca (grupo ga) del pedido?"""
+    if not (cb == ca or cb in REEMPLAZA.get(ca, set()) or cb in GENERICOS.get(ca, set())):
+        return False
+    if ga and gb and gb not in GRUPOS.get(ga, {ga}):
+        return False
+    if cb == ca == "carbono_alta_resistencia" and grado(pedido) and grado(cand) and grado(pedido) != grado(cand):
+        return False
+    return True
+
+
+def regla_cuerpo(pedido, cand):
+    """Válvulas: el cuerpo del candidato tiene que reemplazar al del pedido (los internos se controlan aparte, como
+    exigencia: el candidato tiene que nombrarlos)."""
+    pb, cb = cuerpo(pedido), cuerpo(cand)
+    if pb == {}:
+        return ""
+    if not cb:
+        return f"no se sabe el material del cuerpo del candidato ({cand[:40]}): no se puede comparar"
+    if pb is None:  # el pedido nombra cuerpo e internos sin separarlos: cada material del cuerpo del candidato tiene que estar pedido
+        a = clases(pedido)
+        for k, g in cb.items():
+            if not any(reemplaza(ca, ga, k, g, pedido, cand) for ca, ga in a.items()):
+                return f"cuerpo {k.replace('_', ' ')} del candidato: el pedido no lo nombra"
+        return ""
+    for ca, ga in pb.items():
+        if not any(reemplaza(ca, ga, k, g, pedido, cand) for k, g in cb.items()):
+            return f"cuerpo {', '.join(sorted(cb)).replace('_', ' ')} no reemplaza al cuerpo pedido ({ca.replace('_', ' ')})"
+    return ""
+
+
 def regla_material(fam, pedido, cand, desc_cand=""):
     if not str(pedido or "").strip():
         return ""
@@ -141,19 +206,11 @@ def regla_material(fam, pedido, cand, desc_cand=""):
                 continue  # bulonería: el candidato dice el bulón pero no la tuerca (o al revés): esa parte no se compara
             # el candidato no dice ningún grado de bulonería ("espárrago 304"): no prueba el grado (auditoría 30-10-2026)
             return f"el candidato no dice el grado del {tipo.replace('bulon', 'bulón')} (el pedido es {pedido[:40]}): no se puede comparar"
-        ok = False
-        for cb, gb in b.items():
-            if not (cb == ca or cb in REEMPLAZA.get(ca, set()) or cb in GENERICOS.get(ca, set())):
-                continue
-            if ga and gb and gb not in GRUPOS.get(ga, {ga}):
-                continue
-            if cb == ca == "carbono_alta_resistencia" and grado(pedido) and grado(cand or desc_cand) and grado(pedido) != grado(cand or desc_cand):
-                continue
-            ok = True
-            break
-        if not ok:
+        if not any(reemplaza(ca, ga, cb, gb, pedido, cand or desc_cand) for cb, gb in b.items()):
             nb = ", ".join(sorted(b)).replace("_", " ")
             return f"material {cand or desc_cand[:30]} ({nb}) no reemplaza a {pedido} ({ca.replace('_', ' ')})"
+    if fam == "VAL":
+        return regla_cuerpo(pedido, cand if clases(cand or "") else desc_cand)
     return ""
 
 
@@ -254,7 +311,8 @@ def para_pagina():
     return {"materiales": [{k: r[k] for k in ("patron", "material", "clase", "grupo_b16_5")} for r in materiales()],
             "reemplaza": {k: sorted(v) for k, v in REEMPLAZA.items()}, "genericos": {k: sorted(v) for k, v in GENERICOS.items()},
             "grupos": {k: sorted(v) for k, v in GRUPOS.items()}, "nace_estricto": NACE_ESTRICTO, "nace_pedido": NACE_PEDIDO,
-            "nace_cand": NACE_CAND, "galv": GALV, "prep": r"\bs?a[- ]?(\d{2,3})\b", "familias_sch": sorted(FAMILIAS_SCH), "dn_nps": DN_NPS}
+            "nace_cand": NACE_CAND, "galv": GALV, "prep": r"\bs?a[- ]?(\d{2,3})\b", "negacion": NEGACION, "grados": GRADOS, "medida_x": MEDIDA_X,
+            "internos": INTERNOS, "cuerpo": CUERPO, "no_metal": sorted(NO_METAL), "familias_sch": sorted(FAMILIAS_SCH), "dn_nps": DN_NPS}
 
 
 if __name__ == "__main__":

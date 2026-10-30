@@ -133,6 +133,18 @@ def controlar(it):
     archivos = list(dict.fromkeys(archivos))
     if not archivos:
         return "sin_control", "el documento no está como texto en el repositorio"
+    ml = re.search(r"l[íi]nea (\d+)", str(s.get("origen") or ""))
+    if ml:  # "· línea 147": el precio tiene que estar en esa línea (segunda auditoría 30-10-2026)
+        n = int(ml.group(1))
+        for a in archivos:
+            try:
+                ls = a.read_text(encoding="utf-8", errors="ignore").splitlines()
+            except OSError:
+                continue
+            if len(ls) >= n:
+                if figura(precio, numeros_en_texto(ls[n - 1])):
+                    return "figura", f"{a.relative_to(RAIZ)} (línea {n})"
+                return "aviso", f"en la línea {n} de {a.relative_to(RAIZ)} no figura USD {precio}"
     if m:  # lista con código del proveedor (auditoría 30-10-2026): el precio tiene que estar en la línea de ese código, no en
         # cualquier lugar de la lista (en una lista de miles de precios casi cualquier número "figura")
         rx = re.compile(rf"(?:^|[\s,|;(]){re.escape(m.group(1))}(?=[\s,|;)]|$)")

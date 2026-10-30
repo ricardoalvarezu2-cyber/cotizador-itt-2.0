@@ -100,3 +100,9 @@ python herramientas/armar_cotizacion.py cotizaciones/COT26-1003-001_CAPEX_OQ8209
 ```
 
 Lo único que se edita es `cotizacion.json` (y `oferta.json` para los textos de la oferta). El informe se genera en `informe.html` (ya no se publica como página aparte; la cotización se ve en el Cotizador).
+
+## 30-10-2026 · Segunda auditoría independiente de compatibilidades
+- Pos 10 (buje 2"x1/2" NPT serie 2000): la referencia Renard es BSPT → SIN PRECIO, pedir buje NPT.
+- Pos 23 (cupla 1/2" A234 WPB 80/2000 NPT/BW): la referencia era A105 NPT/NPT serie 3000, sin documentar → SIN PRECIO, pedir cotización.
+- Pos 2, 5 y 7 quedan como ESTIMADOS (ya lo eran) armados sobre piezas que no cumplen el plano (pos 7: trim 13Cr, no AISI 316): pedir cotización con la especificación del plano.
+- Unitario USD 7.324,57 (antes 7.366,12). Borrador.

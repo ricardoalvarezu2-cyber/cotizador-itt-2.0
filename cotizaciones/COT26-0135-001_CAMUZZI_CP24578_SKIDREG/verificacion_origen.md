@@ -9,5 +9,5 @@ Generado por `herramientas/verificar_origen.py`. Solo avisa cuando el precio NO 
 ## No controlados
 
 - precio calculado (lista × factor): 3
-- estimado o sin precio: 9
+- estimado o sin precio: 12
 - el documento no está como texto en el repositorio: 1

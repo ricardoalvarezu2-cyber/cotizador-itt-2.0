@@ -31,3 +31,9 @@ Pos 16 (cupla c/ válvula esférica, A-106): SIN PRECIO. Unitario USD 29.395,10.
 - Pos 5c (espárragos 5/8" B7 + 2H): la referencia era B7M (no reemplaza a B7). Pasa a JUN-04173 (B7/2H zincado con 2 tuercas, 5/8" × 110 mm), USD 10 c/u, planilla TAVAL/43 (19-02-2026, línea 147); valor que parece global: **pedir cotización**.
 - Pos 14 y 14b (caño 4" sch 40 A-53 Gr B): la lista de Renard dice "A53A" (grado A, cód. 1008). Pasa a cód. 1160 "Tubo s/costura 114,3 x 6,02 mm A53/A106/API 5L B", USD 34,34/m (misma lista, verificado en el original). Cantidades sin cambio.
 - Unitario USD 30.040,50 (antes 29.395,10); total USD 30.644,62. Borrador, sin revisar.
+
+## 30-10-2026 · Segunda auditoría independiente
+- Pos 15/15b (caño 6" sch 40 A-53 Gr B): Renard "A53/135" sin grado → cód. 1173 sin costura A53/A106/API 5L B, USD 60,51/m (verificado en la lista).
+- Pos 6b (junta 6" #150): la de MS Juntas es 8" #300 → SIN PRECIO, pedir cotización.
+- Pos 5c: el precio de USD 10 pasa a estimado.
+- Unitario USD 30.102,40; total USD 30.706,52. Borrador, sin revisar.

@@ -54,9 +54,11 @@ const Busqueda = (() => {
   const normP = t => Object.entries(FRACCIONES).reduce((s, [a, b]) => s.split(a).join(b), String(t ?? "")).normalize("NFKD").replace(/[^\x00-\x7f]/g, "").toLowerCase().replace(/\s+/g, " ");
   const RX = new WeakMap();
   const mats = C => { if (!RX.has(C)) RX.set(C, C.materiales.map(m => ({ ...m, rx: new RegExp(m.patron) }))); return RX.get(C); };
-  const prep = (C, t) => normP(t).replace(new RegExp(C.prep, "g"), "a$1");
-  function clases(C, texto) {
-    const t = prep(C, texto), hits = [];
+  // igual que compatibilidad.prep: sin lo negado ("NO AISI 316"), "GR°B" → "gr b", medidas "5/8 x 60" → "5/8 por 60"
+  const prep = (C, t) => normP(t).replace(new RegExp(C.negacion, "g"), " ").replace(new RegExp(C.grados, "g"), "$1 ")
+    .replace(new RegExp(C.medida_x, "g"), "$1 por ").replace(new RegExp(C.prep, "g"), "a$1");
+  function clases(C, texto, preparado = false) {
+    const t = preparado ? texto : prep(C, texto), hits = [];
     for (const m of mats(C)) {
       const x = t.match(m.rx); if (!x) continue;
       const a = x.index, b = x.index + x[0].length;
@@ -69,6 +71,33 @@ const Busqueda = (() => {
   }
   const grado = t => (normP(t).match(/\b(?:x|wphy|f)[- ]?(\d{2})\b/) || [])[1] || "";
   const limpio = x => normP(x).replace(/[^a-z0-9]/g, "");
+  const esInox = c => c.startsWith("inox") || c === "duplex" || c === "superduplex";
+  function reemplaza(C, ca, ga, cb, gb, pedido, cand) {
+    if (!(cb === ca || (C.reemplaza[ca] || []).includes(cb) || (C.genericos[ca] || []).includes(cb))) return false;
+    if (ga && gb && !(C.grupos[ga] || [ga]).includes(gb)) return false;
+    if (cb === ca && ca === "carbono_alta_resistencia" && grado(pedido) && grado(cand) && grado(pedido) !== grado(cand)) return false;
+    return true;
+  }
+  // válvulas: clases del cuerpo (compatibilidad.cuerpo); null si nombra carbono e inoxidable sin decir cuál es el cuerpo
+  function cuerpo(C, texto) {
+    const sinInt = prep(C, texto).replace(new RegExp(C.internos, "g"), " ");
+    const expl = (sinInt.match(new RegExp(C.cuerpo, "g")) || []).join(" ");
+    const c = new Map([...clases(C, expl || sinInt, true)].filter(([k]) => !C.no_metal.includes(k) && !/^(bulon|tuerca)/.test(k)));
+    if ([...c.keys()].some(esInox) && [...c.keys()].some(k => !esInox(k))) return null;
+    return c;
+  }
+  function reglaCuerpo(C, pedido, cand) {
+    const pb = cuerpo(C, pedido), cb = cuerpo(C, cand);
+    if (pb && !pb.size) return "";
+    if (!cb || !cb.size) return `no se sabe el material del cuerpo del candidato (${String(cand).slice(0, 40)}): no se puede comparar`;
+    if (!pb) {
+      const a = clases(C, pedido);
+      for (const [k, g] of cb) if (![...a].some(([ca, ga]) => reemplaza(C, ca, ga, k, g, pedido, cand))) return `cuerpo ${k} del candidato: el pedido no lo nombra`;
+      return "";
+    }
+    for (const [ca, ga] of pb) if (![...cb].some(([k, g]) => reemplaza(C, ca, ga, k, g, pedido, cand))) return `cuerpo del candidato no reemplaza al cuerpo pedido (${ca})`;
+    return "";
+  }
   function reglaMaterial(C, fam, pedido, cand, descCand) {
     if (!String(pedido || "").trim()) return "";
     const gv = new RegExp(C.galv);
@@ -84,16 +113,9 @@ const Busqueda = (() => {
         if ([...b.keys()].some(c => /^(bulon|tuerca)/.test(c))) continue;
         return `el candidato no dice el grado del ${tipo.replace("bulon", "bulón")} (el pedido es ${String(pedido).slice(0, 40)}): no se puede comparar`;
       }
-      let ok = false;
-      for (const [cb, gb] of b) {
-        if (!(cb === ca || (C.reemplaza[ca] || []).includes(cb) || (C.genericos[ca] || []).includes(cb))) continue;
-        if (ga && gb && !(C.grupos[ga] || [ga]).includes(gb)) continue;
-        const gc = grado(cand || descCand);
-        if (cb === ca && ca === "carbono_alta_resistencia" && grado(pedido) && gc && grado(pedido) !== gc) continue;
-        ok = true; break;
-      }
-      if (!ok) return `material ${cand || String(descCand).slice(0, 30)} no reemplaza a ${pedido}`;
+      if (![...b].some(([cb, gb]) => reemplaza(C, ca, ga, cb, gb, pedido, cand || descCand))) return `material ${cand || String(descCand).slice(0, 30)} no reemplaza a ${pedido}`;
     }
+    if (fam === "VAL") return reglaCuerpo(C, pedido, clases(C, cand || "").size ? cand : descCand);
     return "";
   }
   const CARAS = ["rf", "ff", "rtj"], ROSCAS = ["npt", "bspt", "bspp"];

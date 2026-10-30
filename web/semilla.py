@@ -55,8 +55,14 @@ def conservar(cot, of, previo):
 
 
 def huella(carpeta):
+    """Huella de la versión del repositorio: cotizacion.json y oferta.json (segunda auditoría 30-10-2026: solo
+    cotizacion.json dejaba pisar sin aviso una corrección de la oferta)."""
     import hashlib
-    return hashlib.sha256((Path(carpeta) / "cotizacion.json").read_bytes()).hexdigest()[:16]
+    h = hashlib.sha256()
+    for n in ("cotizacion.json", "oferta.json"):
+        f = Path(carpeta) / n
+        h.update(f.read_bytes() if f.exists() else b"")
+    return h.hexdigest()[:16]
 
 
 def main(carpeta, ident="capex-oq8209", salida=None, previo=None):

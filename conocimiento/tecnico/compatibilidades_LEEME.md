@@ -68,3 +68,15 @@ Para que haya menos SIN PRECIO hay que cargar el material que falta en el catál
   Otra serie es ERROR (salvo que la diferencia esté escrita en la fuente); otro Ø u otro tipo, AVISO.
 - Efecto: 25 renglones de las precotizaciones cambian (revisados uno por uno y aceptados); en las cotizaciones cargadas,
   7 renglones de Camuzzi 001 y 002 (ver bitácoras). Control TS01 78.293 → 59.014.
+
+## Segunda auditoría independiente (30-10-2026)
+- **Válvulas: cuerpo e internos por separado.** Los internos (int, trim, esfera, vástago, asientos, clapeta, resorte,
+  disco…) son una exigencia aparte; el cuerpo del candidato tiene que reemplazar al cuerpo pedido. "Retención a clapeta"
+  y "válvula de esfera" son el tipo, no internos. Si el candidato nombra carbono e inoxidable sin decir cuál es el cuerpo
+  ("F316 … A105 forjada"), no se compara.
+- **Lo negado no es el material:** se saca "no …", "en lugar de …", "falta …", "cotizar …" antes de leer.
+- **Notaciones:** "GR°B" = Gr B; "SA-516-60" = A516-60; "A53" sin grado es una clase propia que no reemplaza a A53 B;
+  "5/8 x 70" es una medida, no API 5L X70; 8M solo junto a A194, tuerca o Gr.
+- **P9:** filas b/c sin material propio se comparan con la fila madre; "Renard · cód. N" con su pieza del catálogo;
+  fuentes sin código también por conexión y serie (sin lo que la fuente dice del pedido: "el plano pide…", "(pedido …)");
+  una serie mayor solo si está escrita en la fuente, nunca en juntas; un ESTIMADO sobre otra pieza es AVISO.

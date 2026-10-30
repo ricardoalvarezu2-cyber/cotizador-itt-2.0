@@ -20,7 +20,7 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent.parent
 H = RAIZ / "herramientas"
 CAPEX = "cotizaciones/COT26-1003-001_CAPEX_OQ8209"
-CONTROL = {"precio_unitario": "7.366,12"}  # 28/10/2026: dólar promedio BNA, cepo estimado, sin IVA; sin los 3 valores supuestos sin referencia (P4 ter)
+CONTROL = {"precio_unitario": "7.324,57"}  # 30-10-2026: pos 10 (BSPT por NPT) y 23 (otra serie y extremos) SIN PRECIO por compatibilidad; antes 7.366,12
 fallas = []
 sys.path.insert(0, str(H))
 from candado import candado  # noqa: E402

@@ -1,6 +1,6 @@
 # Comparación con antecedentes (P8) — COT26-0135-002
 
-Generado por `herramientas/comparar_antecedentes.py`. Familia SK, subtipo skid / estación de regulación y medición. Esta cotización: **precio unitario USD 30.040,50**, costo USD 22.252,22, factor 1,35 · reparto del costo: materiales 71%, MO y servicios 29%.
+Generado por `herramientas/comparar_antecedentes.py`. Familia SK, subtipo skid / estación de regulación y medición. Esta cotización: **precio unitario USD 30.102,40**, costo USD 22.298,07, factor 1,35 · reparto del costo: materiales 71%, MO y servicios 29%.
 
 Se compara **costo contra costo** (Matías, 30-10-2026): el precio de venta mezcla factor, flete, caución y alcance de cada oferta. El costo del antecedente es el de su ficha, a su fecha (sin ajustar), y solo por equipo cuando la ficha lo permite sin ambigüedad; si no, queda el precio de venta marcado "solo venta". Una diferencia de más del 15% no significa error: hay que explicarla rubro por rubro (alcance, cantidad, diámetro, serie, fecha) antes de presentar el número.
 

@@ -9,10 +9,10 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | Pos | Ítem | Resultado | Precio | Fecha y tipo | Diferencias / faltantes |
 |---|---|---|---|---|---|
 | 1 | Tapón · Ø 1/2" | **SIN PRECIO** | — | — | el más parecido es sin diámetro conocido (AFO-02417, USD 5,00): pedir cotización |
-| 2 | Válvula esférica #2000, paso nominal, cuerpo  | **SIN PRECIO** | — | — | el más parecido es de otro material (A182 F316 contra A216 WCB) (VAL-04866, USD 61,80): pedir cotización |
+| 2 | Válvula esférica #2000, paso nominal, cuerpo  | **SIN PRECIO** | — | — | pedir cotización |
 | 3 | Niple longitud 100 mm · Ø 1/2" | SIMILAR ⚠ | 4,76 / un | 2026-04-22 · planilla interna | material: A106 B (pedido API 5L); el último precio (20,00) se aparta más de 40% de la mediana de sus últimos p |
 | 4 | Niple longitud 200 mm · Ø 2" | SIMILAR | 20,00 / un | 2026-04-22 · planilla interna | material: A106 B (pedido API 5L) |
-| 5 | Válvula esférica #2000, paso nominal, cuerpo  | **SIN PRECIO** | — | — | el más parecido es de otro material (A182 F316 contra A216 WCB) (VAL-04911, USD 284,96): pedir cotización |
+| 5 | Válvula esférica #2000, paso nominal, cuerpo  | **SIN PRECIO** | — | — | pedir cotización |
 | 6 | Unión doble a golpe · Ø 2" | **SIN PRECIO** | — | — | pedir cotización |
 | 7 | Válvula retención #600 tipo a clapeta, cuerpo | **SIN PRECIO** | — | — | pedir cotización |
 | 8 | Tee normal · Ø 2" | IGUAL (estimado cepo) ⚠ | 21,82 / un | 2024-11-01 · estimado (cepo) | — |
