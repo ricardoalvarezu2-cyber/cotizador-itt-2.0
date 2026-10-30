@@ -72,7 +72,7 @@ M = [
      [fuente("ant", 1.80, "Planilla Sacde/12 coalescedor FC-301/302: chapa SA-516-70 1 1/2\" a 1,80 USD/kg", S12, "2025-12-18", "similar", "espesor 1 1/2\" (acá 2 1/4\"); si la temperatura mínima de diseño lo exige (UCS-66, consulta C4) va normalizada (70N)")]),
     ("2", "Cabezal semielíptico 2:1 Ø55\" × 2 1/4\" (fondo inferior)", '55"', "e = 2 1/4\"", "SA-516 Gr. 70", "BW", 1, "un",
      [fuente("ant", 3000 * (55 / 36) ** 2 * 2.25 / 1.5, "Planilla Sacde/12: cabezal 36\" × 1 1/2\" SA-516-70 a 3.000, escalado por superficie (55/36)² y espesor (2 1/4 ÷ 1 1/2)", S12, "2025-12-18", "similar", f"Ø36\" (escalado × 3,50 por peso: ≈ {fmt(kg_fondo, 0)} kg); fondo 2:1 a 102 bar: 47,7 + 1,6 + afinamiento de conformado")]),
-    ("3", "Tapa de cierre rápido no roscada para DI 1.280 mm #600 con pescante, A105N, o-rings de repuesto (marca del listado Camuzzi: Futura, Peco, Gora o EKA)", "DI 1.280 mm", "600", "A105N", "BW", 1, "un",
+    ("3", "Tapa de cierre rápido no roscada para DI 1.280 mm #600 con pescante, A105N, o-rings de repuesto (marca del listado Camuzzi: Futura, Peco, Gora o EKA)", '50,4"', "600", "A105N", "BW", 1, "un",
      [fuente("ant", 24288.6 * (DI_PULG / 36) ** EXP_TAPA, f"Planilla Sacde/12: tapa Futura 36\" #600 con pescante 24.288,60, escalada al DI 50,4\" × (50,4/36)^{fmt(EXP_TAPA, 3)} (exponente de las tapas Futura #600 de 16\" y 36\")", S12, "2025-12-18", "similar", "Ø36\", extrapolada fuera del rango cotizado; pedir cotización a Futura (Megatap no está en el listado de Camuzzi)"),
       fuente("ant", 8432, "Futura FV16 #600 A-105 (cotización Futura S00356, planilla TAVAL/40): 16\" a 8.432 (punto bajo del exponente)", T40, "2026-01-15", "similar", "16\": solo para el exponente de escala")]),
     ("4", f"Placa portaelementos Ø1,28 m × 1 5/8\" con {N_ELEM} agujeros mecanizados ({fmt(kg_placa, 0)} kg)", "", "e = 1 5/8\"", "SA-516 Gr. 70", "—", 1, "un",
@@ -132,8 +132,10 @@ M = [
       fuente("ant", 120, "Weisz: manómetro (planilla PAMPA/7) · INS-02702", "fuentes_originales/ofertas_texto/PAMPA ENERGIA/7- Licitacion contrato Marco Skid PAD Rincon de Aranda/4.Armado de la Oferta Comercial/Cot Skid Manifolds Colectores RDA Contrato Marco (2da RDA).xlsx.txt", "2026-08-14", "similar", "la planilla no detalla clase, caja, bourdon ni certificado de calibración: solo orden de magnitud")],
      "La referencia (Weisz 120) no dice los materiales que pide la ET (caja AISI 304, bourdon AISI 316): pedir cotización (lista para Compras)"),
     ("20b", "Bloqueo y purga de 2 vías para el manómetro estático, 1/2\" NPT serie 3000 (ET 9.19.1 y 9.20), ABAC (modelo homologado por Camuzzi) o Casucci", '1/2"', "3000", "ASTM A105 zincado o superior", "NPT", 1, "un",
-     [fuente("ant", 137, "ABAC válvula de bloqueo y purga 1/2\" NPT M-H AISI 316 (planilla TAVAL/55) · VAL-03198", "fuentes_originales/ofertas_texto/TAVAL/55- Tecpetrol Puentes de Producción PPar Valvula y Puente PR 54942/7.Propuesta Comercial (envío al Cliente)/Puente de producción Tec Conv y NOC versión 3.xlsx.txt", "2026-04-22", "similar", "AISI 316 (la ET pide A105 zincado serie 3000: el inoxidable es superior)")]),
-    ("21", "Internos: caja de chicanas de doble bolsillo en AISI 304 (ET 9.8), soporte superior y fijaciones de elementos", "", "", "AISI 304", "—", 1, "gl",
+     [sin_precio("pedir cotización a ABAC / Casucci", "2026-10-30", "la referencia (ABAC bloqueo y purga 1/2\" NPT AISI 316, 137, TAVAL/55, VAL-03198) es inoxidable y la ET pide A105 zincado: compatibilidad.py no admite el reemplazo; no hay A105 en el catálogo"),
+      fuente("ant", 137, "ABAC válvula de bloqueo y purga 1/2\" NPT M-H AISI 316 (planilla TAVAL/55) · VAL-03198", "fuentes_originales/ofertas_texto/TAVAL/55- Tecpetrol Puentes de Producción PPar Valvula y Puente PR 54942/7.Propuesta Comercial (envío al Cliente)/Puente de producción Tec Conv y NOC versión 3.xlsx.txt", "2026-04-22", "similar", "AISI 316: otro material, solo orden de magnitud")],
+     "Sin referencia en A105 (la ABAC de 137 es AISI 316 y la regla de compatibilidad no la admite por A105): pedir cotización (lista para Compras)"),
+("21", "Internos: caja de chicanas de doble bolsillo en AISI 304 (ET 9.8), soporte superior y fijaciones de elementos", "", "", "AISI 304", "—", 1, "gl",
      [fuente("ant", 6000, "Planilla TAVAL/37 FC-231: caja de chicana 800 × 400 × 400 mm AISI 304 («caja de vanes - a calcular»)", T37, "2025-12-17", "similar", "valor de planilla ITT, no cotización; Gora cotizó una caja de chicanas doble bolsillo AISI 316 250 × 250 × 150 a 615 (PPTO 27131, 11-02-2026, CAMUZZI/30): pedir a Gora con el tamaño del diseño")]),
     ("21b", "Conector recto doble virola OD × NPT 1/2\" AISI 304/316 (ET 9.20), ABAC / Swagelok / Parker / Fittinox / Casucci", '1/2"', "", "AISI 316", "NPT", 4, "un",
      [fuente("ant", 28, "ABAC conector recto c/tuerca y doble virola OD×NPT 1/2\" S-2000 AISI 304/316 (planilla TAVAL/40)", T40, "2026-01-15", "igual")]),
@@ -274,7 +276,7 @@ base["historial_html"] = ["30-10-2026: revisión completa renglón por renglón 
 json.dump(base, open(C / "cotizacion.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
 PLAZO = base["plazo"]["dias"]
-DESV_MONEDA = ("Moneda: cotizamos en dólares estadounidenses, sin IVA, a facturar en pesos al tipo de cambio BNA divisa vendedor del día anterior a la facturación. "
+DESV_MONEDA = ("Moneda: cotizamos en dólares estadounidenses, sin IVA, a facturar en pesos al tipo de cambio BNA divisa vendedor del día de la facturación (cláusulas particulares). "
                "Las cláusulas particulares del Concurso N° 24527 y el pliego general piden cotizar en pesos (en dólares solo materiales importados o con componentes extranjeros): "
                "el equipo lleva componentes importados y precios de proveedores en dólares.")
 DESV_PLAZO = (f"Plazo de entrega: {PLAZO} días corridos desde la orden de compra. El plazo de 30 días corridos de las cláusulas particulares del Concurso N° 24527 "

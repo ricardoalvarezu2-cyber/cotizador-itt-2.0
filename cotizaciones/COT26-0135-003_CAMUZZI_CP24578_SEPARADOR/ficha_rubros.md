@@ -6,16 +6,16 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 ## 1. MO de armado y soldadura del piping
 
 - Juntas a tope (BW) de taller: **15** · juntas SW, cuplas y olets: **0** · extremos para soldar en campo: 0
-- Pulgadas equivalentes de soldadura: **140,36**
-- kg de piping (caños, bridas, accesorios y válvulas con tabla): **479 kg** · bridas: 23
-- Diámetros soldados a tope: 55", 53", 10", 6", 2", 1"
-- Sin peso (no suman kg): 1 Chapa para virola Ø55" (DI 1.280 mm) × 3; 2 Cabezal semielíptico 2:1 Ø55" × 2 1/4" (; 4 Placa portaelementos Ø1,28 m × 1 5/8" co; 5 Elemento coalescente 0,3 µm, 140 × 914 m; 14c Válvula tapón lubricado 1" #600 de sacri; 16 Purga automática 1" #600 bridada: válvul; 21 Internos: caja de chicanas de doble bols; 23b Piso de rejilla galvanizada en caliente ; 24 Pollera / patas de apoyo (450 kg)
+- Pulgadas equivalentes de soldadura: **139,06**
+- kg de piping (caños, bridas, accesorios y válvulas con tabla): **506 kg** · bridas: 23
+- Diámetros soldados a tope: 55", 50,4", 10", 6", 2", 1"
+- Sin peso (no suman kg): 1 Chapa para virola Ø55" (DI 1.280 mm) × 3; 2 Cabezal semielíptico 2:1 Ø55" × 2 1/4" (; 4 Placa portaelementos Ø1,28 m × 1 5/8" co; 14c Válvula tapón lubricado 1" #600 de sacri; 16 Purga automática 1" #600 bridada: válvul; 16b Interruptor de nivel a flotante (acciona; 21 Internos: caja de chicanas de doble bols; 21b Conector recto doble virola OD × NPT 1/2; 21c Conector recto doble virola OD × NPT 1/4; 21d Tubing de acero inoxidable 1/4" × 0,89 m; 23b Piso de rejilla antideslizante tipo Tech; 24 Pollera / patas de apoyo (450 kg); 25 Placa de identificación de acero inoxida
 - ⚠ pos 1: cantidad en kg con extremos BW: no se cuentan juntas (no son piezas); contar sus soldaduras a mano
 - ⚠ pos 23: cantidad en kg con extremos —: no se cuentan juntas (no son piezas); contar sus soldaduras a mano
 - ⚠ pos 23b: cantidad en m2 con extremos —: no se cuentan juntas (no son piezas); contar sus soldaduras a mano
 - ⚠ pos 24: cantidad en kg con extremos —: no se cuentan juntas (no son piezas); contar sus soldaduras a mano
-- **Costo por antecedentes.** Por antecedentes: USD 34.705,73 (1 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 247,26/pulgada eq. · USD 72,52/kg de piping · USD 2.313,72/junta a tope
+- **Costo por antecedentes.** Por antecedentes: USD 49.425,83 (2 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 355,42/pulgada eq. · USD 97,76/kg de piping · USD 3.295,06/junta a tope
 
 ## 2. MO de fabricación de la estructura
 
@@ -24,8 +24,8 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 ## 3. Granallado y pintura
 
-- m² de piping: **38.862,86** (caños y niples 1,60; bridas, accesorios y válvulas por largo equivalente) · m² de estructura: **52,50**
-- m² total: **38.915,36** (sin overspray) · esquema: según pliego
+- m² de piping: **38.862,31** (caños y niples 1,60; bridas, accesorios y válvulas por largo equivalente) · m² de estructura: **52,50**
+- m² total: **38.914,81** (sin overspray) · esquema: según pliego
 - **Costo por antecedentes.** Por antecedentes: USD 1.900,00 (1 renglón/es, con ajuste por inflación).
   - Por unidad: USD 0,05/m²
 
@@ -57,7 +57,7 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 ## 8. Transporte
 
-- Medidas del separador: 0,00 × 0,00 × 0,00 m (largo × ancho × alto) · kg: **1.779** (piping + estructura)
+- Medidas del separador: 0,00 × 0,00 × 0,00 m (largo × ancho × alto) · kg: **1.806** (piping + estructura)
 - ⚠ Faltan las medidas del equipo (largo × ancho × alto): cargarlas del plano de conjunto
 - Sin precio por equipo: se cotiza EXW (o flete aparte en los parámetros). Para sumarlo por equipo, pasar el rubro a global.
 

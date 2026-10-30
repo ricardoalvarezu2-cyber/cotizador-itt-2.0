@@ -258,7 +258,7 @@
    "pos": "3",
    "grupo": "material",
    "descripcion": "Tapa de cierre rápido no roscada para DI 1.280 mm #600 con pescante, A105N, o-rings de repuesto (marca del listado Camuzzi: Futura, Peco, Gora o EKA)",
-   "especificacion": "DI 1.280 mm 600 A105N",
+   "especificacion": "50,4\" 600 A105N",
    "cantidad": 1,
    "unidad": "un",
    "fuentes": [
@@ -787,15 +787,25 @@
    "unidad": "un",
    "fuentes": [
     {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización a ABAC / Casucci",
+     "origen": "—",
+     "fecha": "2026-10-30",
+     "coincide": "sin_ref",
+     "diferencia": "la referencia (ABAC bloqueo y purga 1/2\" NPT AISI 316, 137, TAVAL/55, VAL-03198) es inoxidable y la ET pide A105 zincado: compatibilidad.py no admite el reemplazo; no hay A105 en el catálogo"
+    },
+    {
      "tipo": "ant",
      "precio": 137,
      "proveedor": "ABAC válvula de bloqueo y purga 1/2\" NPT M-H AISI 316 (planilla TAVAL/55) · VAL-03198",
      "origen": "fuentes_originales/ofertas_texto/TAVAL/55- Tecpetrol Puentes de Producción PPar Valvula y Puente PR 54942/7.Propuesta Comercial (envío al Cliente)/Puente de producción Tec Conv y NOC versión 3.xlsx.txt",
      "fecha": "2026-04-22",
      "coincide": "similar",
-     "diferencia": "AISI 316 (la ET pide A105 zincado serie 3000: el inoxidable es superior)"
+     "diferencia": "AISI 316: otro material, solo orden de magnitud"
     }
-   ]
+   ],
+   "sin_precio_motivo": "Sin referencia en A105 (la ABAC de 137 es AISI 316 y la regla de compatibilidad no la admite por A105): pedir cotización (lista para Compras)"
   },
   {
    "id": "M21",

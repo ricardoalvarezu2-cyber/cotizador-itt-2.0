@@ -87,3 +87,54 @@ Pos 15 (válvula esférica 1/2" roscada, 8 u): la referencia era una Esferomatic
 
 ## 30-10-2026 · Compatibilidades revisadas
 Pos 14b (esférica 1" #600 RF, A216 WCB): SIN PRECIO (la Taval de referencia no dice el material). Pos 23b (rejilla galvanizada): SIN PRECIO. Unitario USD 285.832,80, 571.665,60 los 2 (borrador).
+
+## 30-10-2026 · Revisión completa renglón por renglón (pedido de Matías: "revisar por completo los presupuestos de Camuzzi")
+Hecha por un agente sobre `armar_json.py` (única fuente: regenera la lista, `cotizacion.json` y `oferta.json`; correrlo de nuevo no deshace nada). **Sin revisión independiente todavía.**
+
+**Resultado (salida de `armar_cotizacion.py`, borrador sin revisar):** antes USD 285.832,80 c/u y 572.873,85 los 2 con flete (costo 211.728,00); ahora **USD 346.355,34 c/u y 698.070,92 los 2** (costo 256.559,51). `verificar_computo.py`: 0 errores. Quedan 9 renglones en 0 (SIN PRECIO, con motivo y en la lista para Compras): 14b, 14c, 16, 16c, 18, 20, 20b, S05d (API 1104) y S05e (tratamiento térmico).
+
+**Diseño y requisitos**
+- Matriz de requisitos `pedido/requisitos.csv` (148 renglones con texto literal, documento y hoja: planillas de los dos concursos, cláusulas particulares 24578 y 24527, ET, esquema, listado de marcas y pliego general). 10 quedan en `consulta` y frenan: memoria y esquema (pendientes de ITT, se exigen con la oferta), C1 concurso 24527 con apertura vencida, C2 elemento celulósico (ET 9) o coalescente (planilla), C3 destino final, C4 temperatura de diseño y plano tipo, C5 especificaciones SCE citadas que no vinieron. Redactadas en `consultas_cliente.md` (no se envió nada).
+- Tratamiento térmico post soldadura agregado (S05e): ASME VIII UCS-56 lo exige en P-No.1 de más de 38 mm (acá 57,15 mm). Sin la temperatura mínima de diseño no se puede eximir de Charpy (UCS-66): consulta C4; la chapa pasa a 70N si hace falta.
+- Purgas (ET 9.2): la purga automática se separa en válvula neumática NC (16), interruptor de nivel a flotante que la comanda (16b) y regulador de gas de instrumentos (16c, faltaba).
+- Manómetros: el manifold de 3 vías pasa al diferencial (19b, ET 9.19.2) y el estático lleva bloqueo y purga de 2 vías (20b, ET 9.19.1 y 9.20).
+- Accesorios doble virola (ET 9.20) con precio ABAC de TAVAL/40: conectores 1/2" y 1/4" y tubing 1/4" (21b–21d).
+- Placa de identificación inoxidable (25, ET 9.12). Orejas de PAT y cáncamos en la descripción del skid (23) y en el alcance de Ledesma.
+- Elementos: la descripción dice lo que piden los dos documentos (planilla coalescente, ET celulósico) y se cotiza el coalescente (854, el más caro) hasta la respuesta de C2. Proveedores corregidos al listado de Camuzzi (Gora, Filtron, De Nichilo, Panden, SP; Peco solo está homologado para tapas).
+- Desvíos declarados en la oferta: moneda USD (24527 y pliego 18.1 piden pesos salvo importados) y plazo (24527 pide 30 días). Referencia y objeto de la oferta nombran los dos concursos.
+
+**Materiales (fuente en cada renglón)**
+- Tapa (3): escalada al DI 50,4" (antes 53") con el exponente de las dos tapas Futura #600 cotizadas (16": 8.432, TAVAL/40; 36": 24.288,60, Sacde/12 → 1,305; antes 1,5 sin fuente): 43.387,29 → 37.668,33.
+- Brida ciega 6" (9): Provemet ciega 8" #600 (172,28, BRI-01064) en lugar de WN 6" + 10% sin fuente.
+- Válvula 1/2" S-2000 NPT (15): Taval lista 30 VAL-04865 (36,06) como precio de referencia de una marca del listado (estaba sin precio "porque no había": sí había).
+- Switches Ex-d (17) e interruptores de purga (16b): switch de nivel de Sacde/12 (2.500).
+- Chicanas AISI 304 (21): planilla TAVAL/37 (6.000, caja 800 × 400 × 400, valor "a calcular" de ITT); Gora cotizó una de 250 × 250 × 150 a 615.
+- Rejilla (23b): TAVAL/37 rejilla TDL SA-36 a 265/m², galvanizada con la plataforma (S05b pasa a 620 kg).
+- Pasan a SIN PRECIO por la regla "sin material no es similar": válvula neumática (16, la de control de Sacde/12 no dice material), manómetro estático (20, Weisz no dice caja ni bourdon) y bloqueo y purga (20b, la ABAC es AISI 316 y la ET pide A105 zincado: `compatibilidad.py` no admite el reemplazo).
+
+**MO y servicios**
+- Rolado (S01): Sandri cilindra hasta 50 mm (membrete de su cotización) y la virola es de 57,15 mm: la base pasa a la tarifa de rolado 3,70 USD/kg (tarifas.csv, AESA/44): 10.939 → 23.262. Pedir cotización a un taller con capacidad.
+- Fabricación Ledesma (S02): el factor × 2,2 por tamaño sobre el separador 28" de CAMUZZI/30 no tenía fuente. Base nueva: presupuestos de Ledesma de recipientes a presión de AESA/44 (27-08-2025), 4,15 USD/kg del de 8.967 kg (el de peso más cercano; el de 11.860 kg da 3,14) × 9.848 kg (virola, fondo, placa, skid, pollera y conexiones): 33.643 → 40.869. Alcance igual (virolas, soldaduras, casquetes, conexiones, internos, plataforma); no incluye consumibles ni rolado.
+- RX (Matías, 30-10), ingeniería y calidad 250 h (Matías, 30-10), PH, pintura, prueba de fugas y montaje propio: sin cambios. API 1104 y tratamiento térmico sin precio (Compras).
+- Flete: 2 viajes de semirremolque a 1.750 + 780 USD por equipo (Suan, AESA/44, 09-2025) + 300 de embalaje; antes ARS 1.400.000 por un camión con hidrogrúa para los dos (≈ 20 t), sin fuente. Destino a confirmar (C3).
+
+**Plazo y antecedentes**
+- Plazo 165 → 175 días (se suma el tratamiento térmico después de soldar el cuello de la tapa). Con el margen de la regla serían 201–210; el histórico de separadores es 370. Lo decide Matías.
+- Antecedentes: el −48% contra TAVAL/37 (ahora −37%) es de alcance, explicado rubro por rubro en `justificaciones.antecedentes` con los números de su planilla (TAVAL/37 suma 2 skids de cañería 10"/16", válvulas 10" e instrumentación cableada por ≈ 150.000 y MO propia de toda la cañería con 1.504 placas de RX; su recipiente solo costó 54.951 sin tapa de cierre rápido).
+- Vencidas: 10 renglones (bridas y caños 2025, listas Taval, perfiles Provemet y Ledesma AESA/44) siguen frenando: van a Compras para reconfirmar; no se escribió justificación.
+
+### Errores encontrados en la revisión del 30-10-2026
+1. **`armar_json.py` desincronizado de `cotizacion.json`:** las decisiones del 30-10 (RX con el precio de Matías, ingeniería y calidad 250 h, 14b/15/23b sin precio, segunda fuente del elemento) estaban solo en `cotizacion.json`; correr el programa las deshacía. Corregido: todo está en `armar_json.py`.
+2. **Rolado imposible:** la base era Sandri, que cilindra hasta 50 mm; la virola es de 57,15 mm.
+3. **Factor sin fuente:** la fabricación de Ledesma se escalaba × 2,2 "por tamaño" sin dato.
+4. **Tapa mal escalada:** a 53" (no es el DI ni el diámetro exterior) y con un exponente 1,5 supuesto.
+5. **Faltaba el tratamiento térmico** que el código exige por espesor (UCS-56).
+6. **Purga automática incompleta:** sin el interruptor de nivel que la comanda ni el gas de accionamiento (ET 9.2).
+7. **Manifold de 3 vías en el manómetro equivocado** (la ET pide 2 vías en el estático y 3 o 5 en el diferencial).
+8. **Pos 15 dejada sin precio con un dato falso** ("no hay 1/2" S-2000 NPT en el catálogo": está VAL-04865).
+9. **Proveedor fuera del listado sugerido para los elementos** (Peco; homologado solo para tapas) y material "fibra de vidrio" puesto por ITT cuando la ET dice celulósico y la planilla coalescente.
+10. **Brida ciega con un recargo supuesto** (WN + 10%).
+11. **Faltaba la placa de identificación** (ET 9.12).
+12. **No se habían leído las condiciones del Concurso 24527:** moneda en pesos, plazo de 30 días, destino final a determinar y apertura del 20-10-2026 ya vencida.
+13. **Flete sin fuente** y corto para dos equipos de ≈ 10 t.
+14. Herramientas (no se tocaron; van en el informe): `ficha_rubros.py` da 38.862 m² de pintura de piping (cuenta la chapa en kg como largo equivalente); `compatibilidad.py` leyó "ABAC VA 350" como material A350 LF2; el control de material de instrumentos depende de si la descripción nombra materiales (el manómetro estático pasaba antes porque no los nombraba).
