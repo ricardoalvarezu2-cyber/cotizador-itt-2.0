@@ -78,3 +78,6 @@ No se cambió ningún valor de la cotización (decide Matías).
 
 ## 30-10-2026 · RX con el precio confirmado por Matías
 Proveedor de RX (sin nombre, hablado con el proveedor): ARS 850.000 por visita (hasta 45 placas) + ARS 15.000 por placa, sin IVA, firme (`precios_usuario.csv`). Con las 80 placas estimadas: 2 visitas → USD 1.881,28 (antes 1.426, tarifa DB NDT). Precio: **USD 283.367,32 c/u, 567.942,89 los 2** (borrador). Las placas siguen estimadas: confirmar con el mapa de soldaduras. Ingeniería, calidad y Ledesma sin cambios (pendiente de Matías).
+
+## 30-10-2026 · Ingeniería y calidad a 250 h (decisión de Matías)
+Ingeniería 150 → 250 h y calidad 120 → 250 h, como los coalescedores Sacde/12 y TAVAL/37. Precio: **USD 288.966,36 c/u, 579.140,97 los 2** (borrador). Página actualizada (`semilla.py --previo`). Pendiente: cotización real de Ledesma y placas de RX con el mapa de soldaduras.

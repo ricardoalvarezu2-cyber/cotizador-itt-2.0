@@ -950,18 +950,18 @@
    "pos": "HH",
    "grupo": "mo",
    "descripcion": "Ingeniería: memoria de cálculo ASME VIII Div.1, planos y documentación",
-   "especificacion": "150 h (Sacde/12 coalescedor: 250 h)",
-   "cantidad": 150,
+   "especificacion": "250 h (antes 150 h; Sacde/12 y TAVAL/37: 250 h)",
+   "cantidad": 250,
    "unidad": "h",
    "fuentes": [
     {
-     "tipo": "est",
+     "tipo": "ant",
      "precio": 15,
-     "proveedor": "Horas propias ITT (15 USD/h); 150 h por criterio, contra 250 h del coalescedor Sacde/12",
+     "proveedor": "Horas propias ITT (15 USD/h): 250 h, como los coalescedores Sacde/12 y TAVAL/37 (250 h cada uno); decisión de Matías 30-10-2026",
      "origen": "conocimiento/costos/horas_por_equipo.csv",
      "fecha": "2025-12-18",
      "coincide": "similar",
-     "diferencia": "estimado"
+     "diferencia": "horas de coalescedores más chicos (Ø32\"–36\"); la ET pide memoria de cálculo"
     }
    ]
   },
@@ -970,18 +970,18 @@
    "pos": "CAL",
    "grupo": "mo",
    "descripcion": "Calidad, inspecciones y data book",
-   "especificacion": "120 h",
-   "cantidad": 120,
+   "especificacion": "250 h (antes 120 h; Sacde/12 y TAVAL/37: 250 h)",
+   "cantidad": 250,
    "unidad": "h",
    "fuentes": [
     {
-     "tipo": "est",
+     "tipo": "ant",
      "precio": 15,
-     "proveedor": "Horas propias ITT (15 USD/h); criterio",
+     "proveedor": "Horas propias ITT (15 USD/h): 250 h, como los coalescedores Sacde/12 y TAVAL/37 (250 h cada uno); decisión de Matías 30-10-2026",
      "origen": "conocimiento/costos/horas_por_equipo.csv",
      "fecha": "2025-12-18",
      "coincide": "similar",
-     "diferencia": "estimado"
+     "diferencia": "horas de coalescedores más chicos (Ø32\"–36\"); la ET pide memoria de cálculo"
     }
    ]
   },

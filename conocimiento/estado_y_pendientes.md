@@ -156,7 +156,7 @@ Decidido (Matías, 29-10-2026): manda el repositorio; la biblioteca se alimenta 
 4. El Ø del cuerpo está en 13 de 158 fichas: completarlo al hacer o revisar fichas de recipientes.
 
 **Para decidir con Matías (30-10-2026)**
-1. Separador Camuzzi (COT26-0135-003): subir ingeniería y calidad a 250 h cada una (como Sacde/12 y TAVAL/37)? Pedir a Ledesma la cotización real con el diseño y confirmar las placas de RX con el mapa de soldaduras.
+1. Separador Camuzzi (COT26-0135-003): ~~ingeniería y calidad a 250 h~~ hecho (Matías, 30-10-2026). Falta pedir a Ledesma la cotización real con el diseño y confirmar las placas de RX con el mapa de soldaduras.
 
 **Abiertos al 29-10-2026 (para decidir con Matías)**
 1. Costos de procedimientos sin antecedente: WPS/PQR, calificación de soldadores, prueba hidráulica y pintura (hoy solo RX y LP, USD 250 cada uno).

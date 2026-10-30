@@ -53,7 +53,7 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 ## 7. Horas de ITT (ingeniería, calidad y montaje)
 
-- **Costo por antecedentes.** Por antecedentes: USD 4.868,72 (2 renglón/es, con ajuste por inflación).
+- **Costo por antecedentes.** Por antecedentes: USD 9.016,16 (2 renglón/es, con ajuste por inflación).
 
 ## 8. Transporte
 
