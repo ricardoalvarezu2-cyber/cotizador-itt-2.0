@@ -47,7 +47,7 @@ Vigente desde el 27/10/2026. Se escribió a partir de los errores de la COT26-10
 **P8. Contrastar con antecedentes.** Comparar con al menos dos cotizaciones parecidas (mismo cliente o mismo tipo de equipo) de `comercial/`. Si la diferencia es mayor al 15%, explicarla rubro por rubro **antes** de presentar el número.
 
 **P9. Control automático y revisión independiente.**
-1. Correr `python herramientas/armar_cotizacion.py <carpeta>` (incluye `verificar_computo.py`). Tiene que terminar sin errores. Los avisos se revisan uno por uno.
+1. Correr `python herramientas/armar_cotizacion.py <carpeta>` (incluye `verificar_computo.py`). Tiene que terminar sin errores. Los avisos se revisan uno por uno, también los de `verificacion_origen.md` (precios que no figuran tal cual en su documento de origen; solo avisa, no confirma nada).
 2. Revisión independiente: alguien que no armó el cómputo (otro agente o una persona) compara la lista de materiales del plano con el cómputo y el informe, y busca cantidades, especificaciones, extremos, soldaduras y precios sin fuente. Lo que encuentre se corrige o se justifica.
 3. Recién ahí la cotización pasa a `revisado`.
 

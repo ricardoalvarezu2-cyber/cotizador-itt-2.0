@@ -1,0 +1,94 @@
+# Validación de fichas existentes (30-10-2026)
+
+Salida de `python herramientas/validar_fichas.py conocimiento/fichas_2025 conocimiento/fichas_2026` (solo avisos: cada uno se revisa contra el original antes de corregir la ficha). Lo más importante: los ítems con precio que figura solo en documentos de proveedores, porque el índice toma el ítem más caro como precio del equipo.
+
+Validador de fichas: 165 fichas, 89 avisos (solo avisos: revisar contra el original)
+- TECHINT/10. requisition 4381-TARG-I-MR-610-078: el monto total 2086840.33 no aparece en ningún documento de ITT de la carpeta
+- AESA/44-Doc5319481557 - AESA - SRV FABRICACION EQUIPOS - F5064: el monto total 990152.97 no aparece en ningún documento de ITT de la carpeta
+- APSA/16 - Virolas y tapas calentadores: falta la moneda
+- PHOENIX/2 - Separador canalización vapores regeneradora TEG: falta la moneda
+- TAVAL/74- YPF G-65918-RV-FILTRO CANASTO CILP: falta la moneda
+- TECPETROL/12 - Skid manifold PAD S-900: falta la moneda
+- A&A FLUIDS CONTROL SRL/Manifolds pozo de agua: fecha de oferta vacía
+- ALONZO RED/1 - STM - pedido de cotización ejecución red de gas natural: fecha de oferta vacía
+- ALONZO RED/2 - ERP B° Pilara: fecha de oferta vacía
+- ALUAR/1- Fabricacion de Skid de interconexion: fecha de oferta vacía
+- APSA/10 - Cuerpo de Calentador 370 KTBU Camuzzi: fecha de oferta vacía
+- APSA/11 - Puente Ac Inox Capex, BVO OQ24737: fecha de oferta vacía
+- APSA/12 - Puente A° C° para YPF: fecha de oferta vacía
+- APSA/13 - Cot CAPSA OQ33581, Colectores: fecha de oferta vacía
+- APSA/14 - Capex Capsa , trampas scraper 6x10 #150 y #300: fecha de oferta vacía
+- APSA/15 - Capsa Capex, Puentes armados producción c AIB: fecha de oferta vacía
+- APSA/16 - Virolas y tapas calentadores: fecha de oferta vacía
+- APSA/9- PUENTE INY + PUENTE PROD AIB: fecha de oferta vacía
+- CAMUZZI/27. #21217 - Adquisición de equipos de procesos: fecha de oferta vacía
+- CAMUZZI/28. N° 21694 - Equipos de procesos: fecha de oferta vacía
+- CAMUZZI/29. Concurso de Precios N° 22152 - “Calentador de gas- Piedra Buena: fecha de oferta vacía
+- ENDRESS HAUSER/30- Construcción Mecánica Skid Gas Buy Back  E+H AR Ø20: fecha de oferta vacía
+- ENDRESS HAUSER/31- Mano de obra para montaje en shelter (Construcción Mecánica Skid Gas Buy Back  E+H AR): fecha de oferta vacía
+- ENDRESS HAUSER/33 - Skid de medición ULACT CA1-MO-381: fecha de oferta vacía
+- Los Guindos/5.Proveedores 3ros: fecha de oferta vacía
+- Oilmetal/1 - Filtros temporales 6 #150: fecha de oferta vacía
+- PAMPA ENERGIA/4 - Doc 5745722125 Compra Puentes de producción 3 S300 PAD 13: fecha de oferta vacía
+- PAMPA ENERGIA/6- Licitación contrato marco Skid de Produccion Sierra Chata: fecha de oferta vacía
+- PAN AMERICAN ENERGY/65 - Filtros Canasto 12: fecha de oferta vacía
+- PAN AMERICAN ENERGY/67 - Postes 4 pulg - Lic 3000061771: fecha de oferta vacía
+- PHOENIX/1 - Manifold Cerrado V Esclusa 3 116 - 10 kpsi: fecha de oferta vacía
+- PHOENIX/2 - Separador canalización vapores regeneradora TEG: fecha de oferta vacía
+- PLUSPETROL/8 - Valvulas ABAC: fecha de oferta vacía
+- SECIN/12 - OT-4746 -Plataforma Separadores -Fabricación: fecha de oferta vacía
+- Sacde/19 - SE-3117-ASTCHA-016 - SKID DISTRIB AGUA SK-4200: fecha de oferta vacía
+- Sacde/21 - RFQ 3158 - TGS - BOP Almacenamiento – FILTROS CANASTO: fecha de oferta vacía
+- Sacde/9- PAE Gto TTYEN-SAO - Solicitud de Cotización BUDGETARIA FILTROS: fecha de oferta vacía
+- TAVAL/089- Lic 66944 CM colec.manual: fecha de oferta vacía
+- TAVAL/092- Lic 69343 skid concentradores VCD26217: fecha de oferta vacía
+- TAVAL/16-Calentador Mexico: fecha de oferta vacía
+- TAVAL/20- BTU Buget Skid de gas: fecha de oferta vacía
+- TAVAL/3-YPF Separador Bifasicos - Separadores para satelites: fecha de oferta vacía
+- TAVAL/34- Hard Solution: fecha de oferta vacía
+- TAVAL/39- YPF- SEPARADOR GENERAL: fecha de oferta vacía
+- TAVAL/44 - Galtech Piletas de Fractura: fecha de oferta vacía
+- TAVAL/46 - Roma - Filtro cónico temporal 10: fecha de oferta vacía
+- TAVAL/48- A&A Fluid control- Manifold: fecha de oferta vacía
+- TAVAL/50 - Petroequip: fecha de oferta vacía
+- TAVAL/51 - CGC - Puentes de producción S2000: fecha de oferta vacía
+- TAVAL/52 - CAPEX - Degasser 126437319: fecha de oferta vacía
+- TAVAL/53- SOLTEX- TRAMPAS PELAMBRES (CHILE): fecha de oferta vacía
+- TAVAL/56 - Spark Energy Skid Metanol OC 0001-00009221: fecha de oferta vacía
+- TAVAL/58 - Inarteco - ERPs tipo 1ra etapa - Litoral Gas: fecha de oferta vacía
+- TAVAL/59 - Jamut y Vicente, pileta 80 m3: fecha de oferta vacía
+- TAVAL/60 - Inarteco - ERPs tipo 2da etapa - Litoral Gas: fecha de oferta vacía
+- TAVAL/64 - Capsa - Puente producción caja porta orificio serie 2000: fecha de oferta vacía
+- TAVAL/67 - Inarteco - Enerfe - Calentadores indirectos entre 50000 y 370000 btu h, 20 unidades: fecha de oferta vacía
+- TAVAL/68 - YPF - Manifold concentradores Aguada del Chañar: fecha de oferta vacía
+- TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH: fecha de oferta vacía
+- TAVAL/71- Hytech Clentadores indirectos entre 50000 y 250000 btu h, 4 modelos: fecha de oferta vacía
+- TAVAL/72- Lic 64675 - SKID CONCENTRADOR - UTE NARAMBUE: fecha de oferta vacía
+- TAVAL/74- YPF G-65918-RV-FILTRO CANASTO CILP: fecha de oferta vacía
+- TAVAL/75- Evento de Adhesion a Subasta 26-001 - SKIDS: fecha de oferta vacía
+- TAVAL/77 - Briales - Manifold: fecha de oferta vacía
+- TAVAL/78- LIC66577 SKID CONC. L. CAMP: fecha de oferta vacía
+- TAVAL/82- Lic 66944 - CM COLECTORES MANUALES: fecha de oferta vacía
+- TECPETROL/12 - Skid manifold PAD S-900: fecha de oferta vacía
+- YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN: fecha de oferta vacía
+- FILTRON/4.Armado de la Oferta Comercial (+ FILTRON/7.Propuesta Comercial (envío al Cliente)): la carpeta 'FILTRON/4.Armado de la Oferta Comercial (+ FILTRON/7.Propuesta Comercial (envío al Cliente))' no está en fuentes_originales/ofertas_texto/
+- APSA/16 - Virolas y tapas calentadores: ítem «Brida D ext 1540 / int 1390 mm, planchuela 3" x 3/»: el precio 950000.0 aparece solo en documentos de proveedores (los ítems son lo que ofertó ITT)
+- CAMUZZI/27. #21217 - Adquisición de equipos de procesos: ítem «Elemento filtrante papel celulósico plisado, 5 mic»: el precio 498.0 aparece solo en documentos de proveedores (los ítems son lo que ofertó ITT)
+- CAMUZZI/27. #21217 - Adquisición de equipos de procesos: ítem «Elemento filtrante separador de polvo y líquido pa»: el precio 90.0 aparece solo en documentos de proveedores (los ítems son lo que ofertó ITT)
+- TECPETROL/12 - Skid manifold PAD S-900: ítem «Espárragos roscados A193 B7 1 1/8" x 7" con 2 tuer»: el precio 7.82 aparece solo en documentos de proveedores (los ítems son lo que ofertó ITT)
+- TAVAL/74- YPF G-65918-RV-FILTRO CANASTO CILP: ítem «Filtro horizontal 20" SCH 40 - armado y soldadura »: el precio 3400.0 aparece solo en documentos de proveedores (los ítems son lo que ofertó ITT)
+- PHOENIX/2 - Separador canalización vapores regeneradora TEG: ítem «HD separador SCH 40 AC: armado y soldadura, conexi»: el precio 1050.0 aparece solo en documentos de proveedores (los ítems son lo que ofertó ITT)
+- APSA/12 - Puente A° C° para YPF: ítem «Junta monolítica 2" BW/NPT 2000 (mapeo inferido)»: el precio 315.0 aparece solo en documentos de proveedores (los ítems son lo que ofertó ITT)
+- TECPETROL/12 - Skid manifold PAD S-900: ítem «Juntas RTJ R45 octogonal 6" #900»: el precio 12.87 aparece solo en documentos de proveedores (los ítems son lo que ofertó ITT)
+- APSA/12 - Puente A° C° para YPF: ítem «Niple reducción 2 7/8" EU x 3/4" NPT SCH80 (mapeo »: el precio 87.75 aparece solo en documentos de proveedores (los ítems son lo que ofertó ITT)
+- APSA/12 - Puente A° C° para YPF: ítem «Niple reducción 2" x 1 1/2" NPT Sch80 A106B (mapeo»: el precio 15.15 aparece solo en documentos de proveedores (los ítems son lo que ofertó ITT)
+- APSA/9- PUENTE INY + PUENTE PROD AIB: ítem «Puente de inyección 2 3/8" 2000, acero al carbono,»: el precio 5220.0 aparece solo en documentos de proveedores (los ítems son lo que ofertó ITT)
+- APSA/9- PUENTE INY + PUENTE PROD AIB: ítem «Puente de producción AIB con recirculación, acero »: el precio 3665.0 aparece solo en documentos de proveedores (los ítems son lo que ofertó ITT)
+- APSA/12 - Puente A° C° para YPF: ítem «Rosca con tuerca 2 7/8" EUE S3000 A105 (mapeo infe»: el precio 190.45 aparece solo en documentos de proveedores (los ítems son lo que ofertó ITT)
+- APSA/16 - Virolas y tapas calentadores: ítem «Tapa D 1540 mm, e 3/8", A-36»: el precio 800000.0 aparece solo en documentos de proveedores (los ítems son lo que ofertó ITT)
+- CAMUZZI/27. #21217 - Adquisición de equipos de procesos: ítem «Tapa de cierre rápido horizontal MTHF 32" S/600, 7»: el precio 6180.0 aparece solo en documentos de proveedores (los ítems son lo que ofertó ITT)
+- CAMUZZI/27. #21217 - Adquisición de equipos de procesos: ítem «Tapa de cierre rápido vertical MTV 20" S/300, 49 b»: el precio 19950.0 aparece solo en documentos de proveedores (los ítems son lo que ofertó ITT)
+- CAMUZZI/27. #21217 - Adquisición de equipos de procesos: ítem «Vane pack modelo VNSB-540X850X203-SB bajo plano Ca»: el precio 3395.0 aparece solo en documentos de proveedores (los ítems son lo que ofertó ITT)
+- APSA/16 - Virolas y tapas calentadores: ítem «Virola D ext 1390 mm, L 4490 mm (2480+2010), e 1/4»: el precio 3760000.0 aparece solo en documentos de proveedores (los ítems son lo que ofertó ITT)
+- APSA/16 - Virolas y tapas calentadores: ítem «Virola D ext 1390 mm, L 990 mm, e 3/8", A-36»: el precio 1950000.0 aparece solo en documentos de proveedores (los ítems son lo que ofertó ITT)
+- PLUSPETROL/8 - Valvulas ABAC: ítem «Válvula aguja bloqueo recta 1/2" NPTM x NPTH, 1000»: el precio 136.9 aparece solo en documentos de proveedores (los ítems son lo que ofertó ITT)

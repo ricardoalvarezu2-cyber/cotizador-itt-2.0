@@ -14,6 +14,7 @@ Salida:
   plazo_calculado.md     acopio + taller sin superponer, margen y comparación con el plazo real (plazo.py)
   ficha_rubros.md/.json  ficha por rubro (MO piping, estructura, pintura, END, transporte) para el modo global (ficha_rubros.py)
   comparacion_antecedentes.md  precio contra los 5 antecedentes más parecidos (comparar_antecedentes.py, paso P8)
+  verificacion_origen.md      avisos de precios que no figuran en su documento de origen (verificar_origen.py; solo avisa)
   <codigo>_<...>.xlsx    planilla con fórmulas: parámetros, ajuste por inflación, detalle, índices, desvíos, antecedentes
   informe.html           informe interactivo (plantillas/informe_cotizacion.html)
   compras/               lista de materiales y servicios para Compras (si cotizacion.json tiene "compras")
@@ -409,6 +410,8 @@ def main(carpeta):
     ficha_rubros.main(carpeta)  # datos por rubro para un precio global (soldaduras, kg, m², placas, medidas) → ficha_rubros.md
     import comparar_antecedentes
     comparar_antecedentes.main(carpeta, py["precio_unitario"], py["costo"])  # P8 → comparacion_antecedentes.md
+    import verificar_origen
+    verificar_origen.main(carpeta)  # aviso de precio que no figura en su documento de origen → verificacion_origen.md
     bloqueo = plazo.bloquea_oferta()
     if bloqueo:  # no quedan ofertas viejas que digan otra cosa
         for f in (carpeta / "oferta").glob("*") if (carpeta / "oferta").exists() else []:

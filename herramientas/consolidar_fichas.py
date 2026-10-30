@@ -7,7 +7,9 @@ Genera:
   conocimiento/comercial/cotizaciones_<SUFIJO>.csv        una fila por cotización
   conocimiento/comercial/cotizaciones_<SUFIJO>_items.csv  ítems ofertados
   conocimiento/precios/proveedores_<SUFIJO>.csv           cotizaciones de proveedores
-  conocimiento/aprendizajes_<SUFIJO>.md                   aprendizajes por familia
+  conocimiento/aprendizajes_<SUFIJO>.md                   aprendizajes por familia (si ya existe, solo suma los de
+                                                          carpetas nuevas: no pisa lo escrito a mano)
+Al final corre validar_fichas.py sobre las fichas que entran (solo avisos).
 """
 import csv
 import json
@@ -17,6 +19,7 @@ from collections import defaultdict
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 DESTINO = RAIZ / "conocimiento"
 FAMILIAS = {"C": "Calentadores", "SEP": "Separadores", "F": "Filtros", "SK": "Skids", "M": "Manifolds",
             "CO": "Colectores", "P": "Puentes y tramos de medición", "CA": "Cañería / piping", "T": "Tanques",
@@ -36,6 +39,31 @@ def escribir(ruta: Path, columnas, filas):
         w.writerow(columnas)
         w.writerows([["" if v is None else v for v in fila] for fila in filas])
     print(f"  {ruta.relative_to(RAIZ)}: {len(filas)} filas")
+
+
+def sumar_aprendizajes(ruta, aprendizajes):
+    """Agrega al archivo existente los aprendizajes de las carpetas que todavía no figuran (marca "*(carpeta)*"), al final
+    de la sección de su familia (o en una sección nueva). No borra ni reescribe nada de lo que ya está."""
+    texto = ruta.read_text(encoding="utf-8")
+    lineas = texto.split("\n")
+    n = 0
+    for fam in sorted(aprendizajes, key=lambda c: list(FAMILIAS).index(c)):
+        nuevas = [f"- {t} *({c})*" for c, t in aprendizajes[fam] if f"*({c})*" not in texto]
+        if not nuevas:
+            continue
+        n += len(nuevas)
+        cab = f"## {FAMILIAS[fam]}"
+        if cab in lineas:
+            i = lineas.index(cab) + 1
+            while i < len(lineas) and not lineas[i].startswith("## "):
+                i += 1
+            while i > 0 and lineas[i - 1] == "":
+                i -= 1
+            lineas[i:i] = nuevas
+        else:
+            lineas += ["", cab, ""] + nuevas
+    ruta.write_text("\n".join(lineas), encoding="utf-8")
+    return n
 
 
 def main():
@@ -88,8 +116,15 @@ def main():
         for carpeta, texto in aprendizajes[fam]:
             lineas.append(f"- {texto} *({carpeta})*")
         lineas.append("")
-    (DESTINO / f"aprendizajes_{sufijo}.md").write_text("\n".join(lineas), encoding="utf-8")
-    print(f"  conocimiento/aprendizajes_{sufijo}.md: {sum(len(v) for v in aprendizajes.values())} aprendizajes")
+    ruta_apr = DESTINO / f"aprendizajes_{sufijo}.md"
+    if ruta_apr.exists():  # no se pisa lo escrito a mano: solo se suman los de carpetas que todavía no están (30-10-2026)
+        sumados = sumar_aprendizajes(ruta_apr, aprendizajes)
+        print(f"  {ruta_apr.relative_to(RAIZ)}: {sumados} aprendizajes nuevos sumados (lo existente no se tocó)")
+    else:
+        ruta_apr.write_text("\n".join(lineas), encoding="utf-8")
+        print(f"  conocimiento/aprendizajes_{sufijo}.md: {sum(len(v) for v in aprendizajes.values())} aprendizajes")
+    import validar_fichas
+    validar_fichas.main([str(origen)])  # solo avisos: cada uno se revisa contra el original
 
 
 if __name__ == "__main__":

@@ -92,7 +92,9 @@ Calificación → Desarrollo → Cotización → Negociación │ Ejecución →
 | Para… | Se hace |
 |---|---|
 | Actualizar una planilla fuente | Reemplazarla en `fuentes_originales/` (no se sube al repositorio), correr `python herramientas/construir_base.py` y anotar el cambio en `fuentes.md` |
-| Analizar un lote nuevo de cotizaciones | `herramientas/extraer_texto.py` (texto de los documentos) → un agente por carpeta con `herramientas/ficha_cotizacion_instrucciones.md` → `herramientas/consolidar_fichas.py` |
+| Analizar un lote nuevo de cotizaciones | `herramientas/extraer_texto.py` (texto de los documentos) → un agente por carpeta con `herramientas/ficha_cotizacion_instrucciones.md` → `herramientas/consolidar_fichas.py` (suma los aprendizajes sin pisar lo existente y corre `validar_fichas.py`: revisar cada aviso contra el original) |
+| Cambiar el buscador de materiales o sus reglas | Antes de subir: `python herramientas/revisar_cambio_busqueda.py --ref HEAD` y revisar cada renglón que cambia |
+| Subir y pasar a `main` | `python herramientas/subir_a_main.py "mensaje"` (commit, push, main por fast-forward o merge, sin force-push) |
 | Rehacer el índice de precios | `python herramientas/indice_precios.py` |
 | Rearmar toda la base y verificarla | `python herramientas/actualizar_base.py` (dólar, índices, catálogos, índice de proyectos y al final `verificar_todo.py`) |
 | Verificar después de cualquier cambio | `python herramientas/verificar_todo.py` → tiene que decir "TODO OK" |
