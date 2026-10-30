@@ -2,14 +2,13 @@
  "generada": "2026-10-30",
  "mo_piping": {
   "juntas_bw": 15,
-  "pulg_eq": 140.362,
+  "pulg_eq": 141.362,
   "juntas_sw_olet": 0.0,
   "extremos_campo": 0.0,
-  "kg_piping": 478.6,
+  "kg_piping": 505.6,
   "bridas": 23,
   "diametros": [
    55.0,
-   53.0,
    10.0,
    6.0,
    2.0,
@@ -19,16 +18,21 @@
    "1 Chapa para virola Ø55\" (DI 1.280 mm) × 3",
    "2 Cabezal semielíptico 2:1 Ø55\" × 2 1/4\" (",
    "4 Placa portaelementos Ø1,28 m × 1 5/8\" co",
-   "5 Elemento coalescente 0,3 µm, 140 × 914 m",
    "14c Válvula tapón lubricado 1\" #600 de sacri",
    "16 Purga automática 1\" #600 bridada: válvul",
+   "16b Interruptor de nivel a flotante (acciona",
    "21 Internos: caja de chicanas de doble bols",
-   "23b Piso de rejilla galvanizada en caliente ",
-   "24 Pollera / patas de apoyo (450 kg)"
+   "21b Conector recto doble virola OD × NPT 1/2",
+   "21c Conector recto doble virola OD × NPT 1/4",
+   "21d Tubing de acero inoxidable 1/4\" × 0,89 m",
+   "22c Espárragos totalmente roscados ASTM A193",
+   "23b Piso de rejilla antideslizante tipo Tech",
+   "24 Pollera / patas de apoyo (450 kg)",
+   "25 Placa de identificación de acero inoxida"
   ],
   "aproximados": [
    "14b Válvula esférica 1\" #600 RF (ET 9.2: 2 b",
-   "22 Juntas espiraladas y espárragos de las c"
+   "22 Juntas espiraladas #600 de las conexione"
   ],
   "avisos": [
    "pos 1: cantidad en kg con extremos BW: no se cuentan juntas (no son piezas); contar sus soldaduras a mano",
@@ -43,9 +47,9 @@
  },
  "pintura": {
   "m2_canos": 1.6,
-  "m2_piping": 38862.86,
+  "m2_piping": 25.53,
   "m2_estructura": 52.5,
-  "m2_total": 38915.36,
+  "m2_total": 78.03,
   "esquema": ""
  },
  "end": {
@@ -72,7 +76,7 @@
   "largo_m": 0.0,
   "ancho_m": 0.0,
   "alto_m": 0.0,
-  "kg_equipo": 1778.6,
+  "kg_equipo": 1805.6,
   "destino": "",
   "por_camion": null,
   "viajes": null,
@@ -120,26 +124,26 @@
  "referencias": {
   "mo_estructura": {
    "modo": "detallado",
-   "detallado_usd": 0,
-   "renglones_detalle": 0,
+   "detallado_usd": 17342.89,
+   "renglones_detalle": 1,
    "global_usd": null
   },
   "mo_piping": {
    "modo": "detallado",
-   "detallado_usd": 34705.73,
-   "renglones_detalle": 1,
+   "detallado_usd": 48141.0,
+   "renglones_detalle": 3,
    "global_usd": null
   },
   "pintura": {
    "modo": "detallado",
-   "detallado_usd": 1900.0,
+   "detallado_usd": 2900.0,
    "renglones_detalle": 1,
    "global_usd": null
   },
   "end": {
    "modo": "detallado",
-   "detallado_usd": 1881.28,
-   "renglones_detalle": 1,
+   "detallado_usd": 3164.52,
+   "renglones_detalle": 2,
    "global_usd": null
   },
   "procedimientos": {

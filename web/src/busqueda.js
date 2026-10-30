@@ -409,6 +409,7 @@ const Busqueda = (() => {
   // repositorio (transcripción doble, matriz de requisitos, cómputo, antecedentes) los calcula Python y los deja semilla.py en
   // cot.frenos_repo; una cotización que nunca pasó por el repositorio no tiene esos controles y frena hasta mandarla a Claude Code.
   const LIM_EST = 0.15, DIAS_VALIDEZ = 30, DIAS_LISTA = 180;
+  const PENDIENTE_PRECIO = /pedir|cotiza|compras|sin referencia|sin precio|a definir|pendiente|confirmar|averiguar|consultar/;  // frenos.PENDIENTE_PRECIO
   const justificada = t => String(t || "").trim().replace(/\s+/g, " ").length >= 20;
   const dias = (a, b) => Math.round((Date.parse(b) - Date.parse(a)) / 864e5);
   function textos(x, out = []) {
@@ -421,7 +422,7 @@ const Busqueda = (() => {
     const h = hoyIso || hoy(), j = cfg.justificaciones || {}, out = [];
     if (!Array.isArray(cfg.frenos_repo)) out.push({ clave: "repositorio", texto: "La cotización no pasó por el repositorio (transcripción doble del cliente, matriz de requisitos, control del cómputo y de antecedentes): mandala a Claude Code." });
     else out.push(...cfg.frenos_repo.filter(f => !(f.clave === "antecedentes" && justificada(j.antecedentes))));
-    const sinP = cfg.items.filter(it => !(it.fuentes[0].precio || 0) && !justificada(it.sin_precio_motivo)).map(it => it.id);
+    const sinP = cfg.items.filter(it => !(it.fuentes[0].precio || 0) && (!justificada(it.sin_precio_motivo) || PENDIENTE_PRECIO.test(String(it.sin_precio_motivo).toLowerCase()))).map(it => it.id);
     if (sinP.length) out.push({ clave: "sin_precio", texto: `${sinP.length} renglón(es) en 0 (${sinP.slice(0, 8).join(", ")}${sinP.length > 8 ? "…" : ""}): pedir el precio o escribir en el ítem por qué va en 0.` });
     let tot = 0, est = 0;
     for (const it of cfg.items) { const v = (it.cantidad || 0) * (it.fuentes[0].precio || 0); tot += v; if (it.fuentes[0].tipo === "est") est += v; }

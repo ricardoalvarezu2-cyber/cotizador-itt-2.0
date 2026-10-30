@@ -4,16 +4,16 @@ Generado por `herramientas/plazo.py` (regla de `conocimiento/plazos.md` §4). Pr
 
 ## 1. Acopio (tareas de material cargadas)
 
-- Ingeniería y documentación para aprobación de Camuzzi: día 0 a 20
-- Filtro FM-6: tapa, elemento y materiales: día 0 a 45
-- Esféricas, bridas, accesorios y caño: día 0 a 30
+- Ingeniería, documentación y aprobación de Camuzzi (datos de diseño de la tapa): día 0 a 20
+- Tapa de cierre rápido 12" #150 de marca del listado (referencia Futura FV16: 90 días desde OC): día 15 a 105
+- Esféricas de marca del listado, elemento filtrante, instrumentos, bridas, accesorios y caño: día 0 a 45
 
 ## 2. Resultado
 
-- Material más largo: **Filtro FM-6: tapa, elemento y materiales** → acopio **45 días**.
-- Taller, ensayos, pintura y despacho: **45 días** (tareas de taller cargadas).
-- **Plazo calculado sin superponer: 90 días**; con el margen de 15–20% de la regla: **103–108 días**.
-- Plazo ofrecido: **105 días**.
+- Material más largo: **Tapa de cierre rápido 12" #150 de marca del listado (referencia Futura FV16: 90 días desde OC)** → acopio **105 días**.
+- Taller, ensayos, pintura y despacho: **25 días** (tareas de taller cargadas).
+- **Plazo calculado sin superponer: 130 días**; con el margen de 15–20% de la regla: **150–156 días**.
+- Plazo ofrecido: **150 días**.
 - Plazo real histórico de la familia SK: 162 días (mediana, plazos.md §1).
 
 ## 3. Avisos

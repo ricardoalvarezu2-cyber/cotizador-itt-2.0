@@ -13,7 +13,7 @@ Frenos:
   doble_lectura   falta pedido/transcripcion_b.json (segunda lectura hecha por otro, sin ver la primera), o las dos
                   lecturas difieren en alguna celda sin resolver (se resuelve en transcripcion.json → "diferencias_resueltas")
   requisitos      falta pedido/requisitos.csv o algún requisito no tiene destino válido (cumple, renglon, desvio,
-                  exclusion) o sigue en "consulta" sin respuesta; renglon = posición o rubro del cómputo; desvío y exclusión
+                  exclusion) o sigue en "consulta" sin respuesta o en "pendiente_itt" (algo que hace ITT: memoria, esquema); renglon = posición o rubro del cómputo; desvío y exclusión
                   = fragmento literal de oferta.json
   estimado        lo estimado pesa más del 15% del costo directo → justificaciones.estimado
   antecedentes    no hay antecedente con costo comparable, o el costo difiere más del 15% del más parecido →
@@ -23,7 +23,8 @@ Frenos:
                   justificaciones.vencidas
   plazo           plazo ofrecido menor que el calculado sin plazo.justificacion (plazo.py)
   computo         verificar_computo.py da errores (también si generar_oferta.py se corre sola)
-  sin_precio      renglón en 0 sin sin_precio_motivo en el ítem
+  sin_precio      renglón en 0 sin sin_precio_motivo en el ítem, o con un motivo que solo dice que falta el precio
+                  ("pedir cotización", "a Compras"); valen "lo provee el cliente", "incluido en el renglón X"
   pendientes_oferta  oferta.json con datos entre [corchetes] sin completar
 Las justificaciones tienen que tener al menos 20 letras. Las dos lecturas llevan "lector" (distinto en A y B).
 """
@@ -37,7 +38,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from numeros import a_vista, fmt  # noqa: E402
 
-DESTINOS = ("cumple", "renglon", "desvio", "exclusion", "consulta")
+DESTINOS = ("cumple", "renglon", "desvio", "exclusion", "consulta", "pendiente_itt")
 COLUMNAS_REQUISITOS = ("id", "documento", "pagina", "texto", "tema", "destino", "referencia")
 LIMITE_ESTIMADO = 0.15
 LIMITE_ANTECEDENTE = 0.15
@@ -171,6 +172,8 @@ def frenos_requisitos(carpeta, plano_pos):
             malos.append(f"{r['id']}: destino «{r['destino']}» no válido")
         elif d == "consulta":
             malos.append(f"{r['id']}: consulta al cliente sin respuesta")
+        elif d == "pendiente_itt":  # lo tiene que hacer ITT antes de ofertar (memoria de cálculo, esquema, planos): frena igual
+            malos.append(f"{r['id']}: pendiente de ITT ({ref[:60] or 'sin detalle'})")
         elif not _norm(r["texto"]) or not _norm(r["documento"]):
             malos.append(f"{r['id']}: falta el texto literal o el documento de origen")
         elif d != "cumple" and not ref:
@@ -185,6 +188,12 @@ def frenos_requisitos(carpeta, plano_pos):
     return [("requisitos", f"{len(malos)} requisito(s) sin destino cerrado: " + "; ".join(malos[:5]) + ("…" if len(malos) > 5 else ""))]
 
 
+# un motivo que dice que falta el precio ("pedir cotización", "a Compras") no explica por qué va en 0: el precio falta y frena
+# (auditoría del 30-10-2026, Camuzzi 003: 9 renglones en 0 con "pedir cotización" levantaban el freno). Valen motivos como
+# "lo provee el cliente" o "incluido en el renglón M05".
+PENDIENTE_PRECIO = r"pedir|cotiza|compras|sin referencia|sin precio|a definir|pendiente|confirmar|averiguar|consultar"
+
+
 def _justificada(t):
     """Una justificación tiene que decir algo: al menos 20 letras (auditoría 30-10-2026: "." o "ok" levantaban el freno)."""
     return len(_norm(t)) >= 20
@@ -192,7 +201,8 @@ def _justificada(t):
 
 def frenos_sin_precio(cfg):
     """Lo que falta frena (principio 4): un renglón en 0 baja el costo y además levantaba el freno de lo estimado."""
-    malos = [it["id"] for it in cfg["items"] if not (it["fuentes"][0].get("precio") or 0) and not _justificada(it.get("sin_precio_motivo"))]
+    malos = [it["id"] for it in cfg["items"] if not (it["fuentes"][0].get("precio") or 0)
+             and (not _justificada(it.get("sin_precio_motivo")) or re.search(PENDIENTE_PRECIO, str(it.get("sin_precio_motivo")).lower()))]
     if not malos:
         return []
     return [("sin_precio", f"{len(malos)} renglón(es) en 0 ({', '.join(malos[:8])}{'…' if len(malos) > 8 else ''}): pedir el precio o "

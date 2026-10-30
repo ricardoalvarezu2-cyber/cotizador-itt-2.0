@@ -4,7 +4,7 @@
 
 ## Pedido
 - Concurso de precios N° 24578 "Adquisición de SKID DE REGULACIÓN – MEDICIÓN" (Camuzzi Gas Pampeana / del Sur). Tres ítems: 1) 2 separadores coalescentes (COT26-0135-003), 2) este skid de regulación, 3) skid puente de medición (COT26-0135-002).
-- Plano SCE-RE-315-0048 rev 0 y especificación SCE-RE-515-0032 (19-10-2026). Pe 15-10 bar, Pr 4 bar, Q 1.000–6.000 Sm3/h.
+- Plano SCE-RE-315-0048 rev A (rótulo; el archivo se llama SCERE3150048-0) y especificación SCE-RE-515-0032 (19-10-2026). Pe 15-10 bar, Pr 4 bar, Q 1.000–6.000 Sm3/h.
 - Cláusulas: plazo a indicar, validez 30 días, entrega en Transporte Cruz del Sur (Tapiales) con flete a cargo del proveedor, pago 30 días f.p.f., USD al BNA divisa del día de factura, multas automáticas, DDJJ de ética.
 
 ## Qué se hizo
@@ -61,3 +61,61 @@ Pos 14 (cupla c/ válvula esférica, A-106): SIN PRECIO (la referencia A105 es o
 - Pos 1 y 2 (válvulas monitora y reguladora 3" #150): la oferta de Tormene es **#300** (y la monitora con OPSO). Otra serie no es similar → SIN PRECIO hasta tener la cotización #150. El pendiente crítico ya estaba anotado; el control nuevo de serie lo frena.
 - Pos 6c/7c: USD 10 de la planilla Techint/12 (columnas ambiguas) pasa a estimado.
 - Unitario USD 31.965,44 (antes 76.781,76: faltan las dos reguladoras). Borrador, sin revisar.
+
+## 30-10-2026 · Revisión completa (pedido de Matías: "revisar por completo los presupuestos de Camuzzi")
+Antes: unitario USD 31.965,44, total USD 32.569,56. Después: **unitario USD 37.730,89, total USD 38.335,01** (salida de `armar_cotizacion.py`; borrador, sin revisar; **sin las reguladoras, la junta 8", el tubing, la termovaina, la pos 14 ni el switch**, que siguen en 0 hasta que Compras traiga precio). Costo directo: materiales 9.775,11 → 11.819,10; MO y servicios 12.249,75 → 14.144,48.
+
+**`armar_json.py` reescrito:** ahora tiene todas las correcciones (también las de las tres auditorías de compatibilidad, que estaban solo en `cotizacion.json`) y correrlo dos veces da el mismo archivo (probado).
+
+**Requisitos:** `pedido/requisitos.csv` con 80 requisitos literales (planilla, cláusulas particulares, CGP, ET, plano, DDJJ), cada uno con destino. 4 quedan como consulta (borrador en `consultas_cliente.md`, lo manda Matías): R76 cantidad de la pos 14 (tabla 2, dibujo 4), R78 pos 14 en ASTM A-106, R77 caño 23 sch 80 contra bridas/reducciones STD, R33 documentos técnicos de Camuzzi que no están (SCE-RE-110-0006, SCE-PC-511-0003, SCE-IN-501-0008, SCE-RE-308-0001, SCE-IN-301-0005, SCE-IN-501-0003). Se copió a `pedido/` el listado de marcas SCE-IN-501-0015 rev 1 (10-02-2026) que estaba en la carpeta de la 003.
+
+**Materiales** (fuentes en `armar_json.py`):
+- Pos 1, 2 y C: siguen SIN PRECIO (Tormene #300 descartada); a Compras con los modelos homologados del listado (TA956 FC/DFO, Fiorentini Reflux/Aperflux, Fisher EZR).
+- Pos 3 y 4: Taval lista 30 como referencia; la diferencia aclara que no incluye el ensayo SCE-RE-308-0001 con certificado firmado (ET 5.6.2) y que se compra marca del listado.
+- Pos 14: SIN PRECIO hasta la respuesta R78. Pos 15 (toma multiport) USD 312 y pos 16 (alivio, tipo S70/H200) USD 465 estimados de la planilla de costo de Camuzzi ERP Caseros (CAMUZZI/14, 15-03-2022, renglones 18 y 48). Pos 17: se suma el tapón (Renard cód. 5979, USD 1,90) y se corrige el código (5292 NPT; se citaba 5281, que es la BSPT). Pos 18: la del stock es 316L, que no reemplaza a 316 → SIN PRECIO.
+- Sensores: A = Rosemount 2051TG (Induquip 26-523, 17-07-2026, USD 1.478) + bloqueo y purga ABAC USD 80 (antes ABB sin bloqueo y purga; ABB no está en el listado); B = Rosemount 644H + RTD 214C (USD 1.138,98; antes ABB 1.448,33). Alternativa Yokogawa (CV Control) con 140 días de plazo.
+- Juntas: 6b → JUN-01702 6" #150 estimada USD 12,99; 7b sigue SIN PRECIO (MS Juntas además no está en el listado).
+- Agregados de ITT (aclarados en la oferta): 17b 8 cuplas 1/2" NPT 3000 y 18b 3 cuplas 3/4" para montar 15, 16, 18, 19 y A (el dibujo las muestra soldadas al caño, la tabla no las lista); 2b tubing y accesorios inoxidables de doble virola (ET 5.8, SIN PRECIO); 20b placa de identificación (ET 7, USD 10 de CAMUZZI/14).
+- Marca exigida por posición en `compras.proveedores` (listado SCE-IN-501-0015).
+
+**MO y servicios:**
+- Soldaduras contadas junta por junta del dibujo (planta y corte A-A): 37 a tope (12 × 3", 19 × 6", 6 × 8") + 15 cuplas SW = 212,44 pulg-eq (antes 195,5: la precotización estimaba juntas = extremos × 0,75 y no tenía las cuplas agregadas). Detalle en la especificación de S01.
+- RX: tarifa confirmada por Matías (precios_usuario.csv, 30-10-2026): 136 placas → 4 visitas = USD 3.529,19 (antes DB NDT 2.803,50 con LP). LP aparte (DB NDT 294) y procedimientos de RX y LP (Antonelli 2 × 250, ET 3.1.3).
+- Prueba de fugas (ET 5.4.3): 8 h de planta × USD 13 (estimado; antes 0 sin referencia).
+- Ingeniería 30 h, calidad 70 h y montaje 215,1 h siguen estimadas de Sacde/15 (sin antecedente de Camuzzi con horas).
+
+**Plazo:** el último material son los transmisores (Rosemount 12 semanas = 84 días); las reguladoras se piden después de que Camuzzi apruebe el modelo (ET 5.6.1): días 20 a 80. Taller sin superponer 65 días → calculado 149; con el margen de 15–20% (plazos.md §4) 171–179 → **se ofrecen 175 días** (antes 120, menor que el calculado). Mediana real de la familia SK: 162.
+
+**Antecedentes (P8):** ninguna ficha tiene costo por equipo. El único antecedente con costo por rubro del mismo cliente y subtipo es CAMUZZI/14 (salto ERP Caseros, 4" #150, 15-03-2022, sin ajustar): piping 17.299 (con una te 12"x10" sch 80 de 9.880), skid 1.142, válvulas e instrumentos 46.363 (de los cuales reguladoras 4" 34.326), pintura 730, MO 5.700 (cañerías 2.780, skid 420, RX 2.500), transporte 600; costo 71.834. No se escribió `justificaciones.antecedentes`: sin el precio de las reguladoras la comparación no se puede cerrar.
+
+### Errores encontrados en la revisión del 30-10-2026
+1. **`armar_json.py` deshacía las correcciones de las auditorías**: las de compatibilidad (pos 1, 2, 5c, 6b, 6c, 7b, 7c, 14, 15, 21–24 y 23b) se habían hecho directo en `cotizacion.json`; correr el script volvía a cargar Tormene #300, B7M, MS Juntas #300 y los caños de grado A. Corregido: todo está en el script.
+2. **Pos 17 citaba el código de Renard de la cupla BSPT (5281)** aunque la descripción decía NPT (la NPT es 5292, mismo precio) y **no tenía el tapón** que pide el plano.
+3. **Sensores A y B de marca ABB, que no está en el listado SCE-IN-501-0015**; el A además no incluía la válvula de bloqueo y purga que pide su descripción.
+4. **Faltaban las conexiones soldadas de las pos 15, 16, 18, 19 y A** (11 cuplas) y el tubing de doble virola de la ET 5.8: el cómputo copiaba la tabla, pero la tabla no alcanza para armar el equipo.
+5. **Soldaduras estimadas por regla (36) en lugar de contadas del dibujo (37 + 15 SW)**.
+6. **Plazo 120 días menor que el calculado** (no consideraba la aprobación previa del modelo de reguladoras ni el plazo de los transmisores).
+7. **La oferta decía "a confirmar"** (reguladoras) y el informe tenía el desvío "Reguladoras de referencia en #300" cuando ese precio ya no se usaba.
+8. **Prueba de fugas en 0 "sin referencia"** cuando hay tarifa de horas de planta; **RX con la tarifa DB NDT** cuando Matías ya había confirmado otra (30-10-2026).
+9. **Faltaba la matriz de requisitos** y no se había usado el listado de marcas de Camuzzi, que estaba en la carpeta de la 003.
+
+### Frenos que quedan (las ofertas no se generan)
+requisitos (4 consultas), sin_precio (pos 1, 2, 2b, 7b, 14, 18, C), estimado 27% (horas, espárragos, pos 15/16), vencidas (24: listas Renard 12-2025 y Taval 09-2025, cotizaciones de 07-2026 y Provemet 07-2025: reconfirmar), pendientes de la oferta (número de PRES y teléfonos), antecedentes (sin costo comparable). No se escribió ninguna justificación para levantarlos.
+
+## 30-10-2026 · Hallazgos de la auditoría independiente de la revisión
+Antes: unitario USD 37.730,89, total USD 38.335,01. Después: **unitario USD 38.778,26, total USD 39.382,38** (borrador, sin revisar; siguen en 0 las pos 1, 2, 2b, 7b, 14, 18 y C). Cada hallazgo se verificó contra el original:
+1. **Real.** Pos 9 (te 6" ASTM A-105): las tes B16.9 a tope se fabrican en A234 WPB; precio de WPB y compra de Curvo Sold sin declararlo. Ahora es la consulta R83 (consulta 5 en `consultas_cliente.md`).
+2. **Real** (hoja 2 del PDF del listado SCE-IN-501-0015, celdas combinadas). Accesorios para soldar: solo CURVO SOLD (TDW es de perforar y obturar). Bridas: solo Futura y Francovigh (CH es de threadolet y socketweld). Delgado es de espárragos, no de juntas. Se corrigió `compras.proveedores`. Pos 9, 10 y 11 pasan a la lista 29.1 de Cintolo (Curvo Sold, 17-02-2025): te 6" 129,55, te 8"x6" 351,50 y reducción 6"x3" 69,19; Renard queda como alternativa. Los casquetes 12 y 13 pasan a estimado, porque Cintolo no los lista.
+3. **Real.** El rótulo del plano dice REV. N° A; el nombre del archivo, "-0". Corregido en la oferta, el informe, las consultas y la bitácora, y la oferta aclara que se cotiza sobre la rev A.
+4. **Real.** El CGP 13.1 da 18 meses desde la entrega y la ET 9 puede quedar por debajo. La garantía ahora toma el plazo mayor de los dos, más la responsabilidad por vicios ocultos (se reescribe en `armar_json.py`; `camuzzi_comun.py` no cambió). Se corrigió la referencia de R26.
+5. **Real.** M03 y M04 (Taval: fuera del listado y sin ensayo) pasan a estimado. M19 pasa a estimado sobre Weisz 16-07-2026 (manómetro clase 1, certificado, bloqueo y purga AISI 316), con CAMUZZI/14 (manifold zincado 136 + manómetro 65, 2022) y la referencia anterior como alternativas.
+6. **Real.** La oferta afirmaba que estaban incluidos los sensores A, B y C, "todos los materiales del plano" y el tubing, que valen 0. Se sacaron esas afirmaciones.
+7. **Real.** M23 y M23B citaban la planilla Tecpetrol/13; el origen es Renard cód. 1174 (168,3 × 10,97 mm, USD 90,70, lista 26-12-2025). Corregido; como lista de más de 180 días, ahora entra entre las vencidas.
+8. **Real.** M15 pasa de "igual" a "similar".
+9. **Real en parte.** M25 ya decía rango 2 contra rango 3. En M26 se agregó que el sensor 214C se cotizó armado a otra termovaina de Induquip (opción XW).
+10. **Rechazado.** CAMUZZI/14 no tiene horas: trae montos globales de 2022 (MO de cañerías 2.780 y de skid 420, RX 2.500) de un salto 4" con mariposas 10". No sirve para reemplazar las horas de ingeniería, calidad y montaje, que siguen estimadas de Sacde/15. Queda como pendiente para Matías.
+11. **Real.** Se agregaron R81 (revisión vigente al recibir la nota de pedido), R82 (puntos de espera de la inspección) y R84 (vicios ocultos). R33 (descargar los documentos de Camuzzi) pasa a "pendiente_itt".
+
+**Error propio durante la corrección:** el generador de la matriz estaba en una ruta compartida del área de trabajo (`scratchpad/req.py`) y otro agente lo pisó con el suyo. Una corrida volcó en `pedido/requisitos.csv` la matriz del separador (148 requisitos). Se rehízo desde cero (84 requisitos) con un generador en una carpeta propia.
+
+Frenos: requisitos (4 consultas y R33 pendiente de ITT), sin_precio (7), estimado 35%, vencidas (22), pendientes de la oferta y antecedentes. No se escribió ninguna justificación.

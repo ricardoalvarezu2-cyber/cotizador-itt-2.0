@@ -4,11 +4,15 @@ Generado por `herramientas/controles_tablas.py`. Información para revisar; no c
 
 ## 1. Kilos y m² por equipo
 
-**Peso estimado de lo que tiene tabla: 427,8 kg** · m² exteriores de caños y niples: 3,40 m².
-Ítems sin dato de peso (11): 1 FILTRO FM-06 #150 SIMPLE MÓDULO · Ø 6" (sin tabla (instrumento, junta u otro)); 2 CARRETEL DE AJUSTE / PROVISORIO DE TURBINA · Ø 4" (sin tabla (instrumento, junta u otro)); 5 BRIDA WN · Ø 4" (sin tabla (instrumento, junta u otro)); 5c Espárrago 5/8" × 3 1/2" A193 B7 con 2 tuercas 2H z (espárrago sin diámetro o largo); 6 BRIDA WN · Ø 6" (sin tabla (instrumento, junta u otro)); 9 REDUCCIÓN CONCÉNTRICA · Ø 6"x4" (sin tabla para  6" 3000); 11 TERMOVAINA DE ACERO INOXIDABLE 3/4" NPT · Ø 3/4" (sin tabla (instrumento, junta u otro)); 13 SKID Y SOPORTES (sin tabla (instrumento, junta u otro)); 14b Completar barra de 12 m de la pos 14 (compra mínim (sin tabla (instrumento, junta u otro)); 15b Completar media tira de 6 m de la pos 15 (sobrante (sin tabla (instrumento, junta u otro)); A TEMPERATURA PARA CORRECTORA DE CAUDAL · Ø 3/4" (sin tabla (instrumento, junta u otro)).
+**Peso estimado de lo que tiene tabla: 592,9 kg** · m² exteriores de caños y niples: 5,09 m².
+Ítems sin dato de peso (18): 1 FILTRO FM-06 #150 SIMPLE MÓDULO · Ø 6" (sin tabla (instrumento, junta u otro)); 1d Tapa de cierre rápido 12" #150 soldada, para el fi (sin tabla (instrumento, junta u otro)); 1e Elemento filtrante para filtro FM-06 (Gora / Metpo (sin tabla (instrumento, junta u otro)); 1h Instrumentos del filtro FM-06: manómetro diferenci (sin tabla (instrumento, junta u otro)); 1j Manómetro de presión estática Ø 100, conexión 1/2" (sin tabla (instrumento, junta u otro)); 1i Internos, refuerzos tipo poncho, purga (esférica 1 (sin tabla (instrumento, junta u otro)); 1k Refuerzos tipo poncho 12" x 6" STD ASTM A-234 WPB  (sin tabla (instrumento, junta u otro)); 2 CARRETEL DE AJUSTE / PROVISORIO DE TURBINA · Ø 4" (sin tabla (instrumento, junta u otro)); 5 BRIDA WN · Ø 4" (sin tabla (instrumento, junta u otro)); 5c Espárrago 5/8" × 3 1/2" A193 B7 con 2 tuercas 2H z (espárrago sin diámetro o largo); 6 BRIDA WN · Ø 6" (sin tabla (instrumento, junta u otro)); 9 REDUCCIÓN CONCÉNTRICA · Ø 6"x4" (sin tabla para  6" 3000); 11 TERMOVAINA DE ACERO INOXIDABLE 3/4" NPT · Ø 3/4" (sin tabla (instrumento, junta u otro)); 11b Cupla 3/4" NPT S3000 ASTM A105 soldada sobre el ca (niple sin largo); 13 SKID Y SOPORTES (sin tabla (instrumento, junta u otro)); 14b Completar barra de 12 m de la pos 14 (compra mínim (sin tabla (instrumento, junta u otro)); 15b Completar media tira de 6 m de la pos 15 (sobrante (sin tabla (instrumento, junta u otro)); A TEMPERATURA PARA CORRECTORA DE CAUDAL · Ø 3/4" (sin tabla (instrumento, junta u otro)).
 
 | Pos | Ítem | Cantidad | kg/u | kg total | Fuente |
 |---|---|---|---|---|---|
+| 1b | Cuerpo y pollera del filtro FM-06: caño 12" sch 40 sin  | 1,5 m | 79,73 | 119,60 | caño 12" sch 40 por metro (ASME B36.10, calculado) |
+| 1c | Fondo del filtro FM-06: casquete semielíptico 12" Std A | 1 un | 13,61 | 13,61 | casquete 12" STD BW (ASME B16.9, borrador) |
+| 1f | Toberas del filtro FM-06: brida WN 6" #150 RF sch 40 AS | 2 un | 11,70 | 23,40 | brida WN 6" #150 (B16.5, borrador) |
+| 1g | Toberas del filtro FM-06: caño 6" sch 40 sin costura A5 | 0,3 m | 28,26 | 8,48 | caño 6" sch 40 por metro (ASME B36.10, calculado) |
 | 3 | VÁLVULA ESFÉRICA BRIDADA PASO TOTAL APF · Ø 6" | 1 un | 44,00 | 44,00 | APROXIMADO: esferica pr flotante 6" con el peso de la serie 150 (Taval Lista 30) |
 | 4 | VÁLVULA ESFÉRICA BRIDADA PASO TOTAL APF · Ø 4" | 2 un | 25,00 | 50,00 | APROXIMADO: esferica pr flotante 4" con el peso de la serie 150 (Taval Lista 30) |
 | 5b | Junta espiralada 4" #150 AISI 316/grafito con anillo ex | 6 un | 0,39 | 2,33 | APROXIMADO: junta anillo Ø 114–164 mm × 4,5 mm × 7900 kg/m³ |
@@ -24,15 +28,16 @@ Generado por `herramientas/controles_tablas.py`. Información para revisar; no c
 
 ## 2. Plazos de material (proveedores 2025–2026)
 
-Plazo ofrecido: **105 días**.
+Plazo ofrecido: **150 días**.
 
 | Rubro | Posiciones | Datos | Típico sin stock (días) | Máximo (días) |
 |---|---|---|---|---|
+| accesorio BW | 1c | 17 | 24 | 40 |
 | accesorio forjado | 7, 8, 9, 10 | 14 | 35 | 60 |
-| brida | 5, 6 | 26 | 75 | 210 |
+| brida | 1f, 2, 5, 6 | 26 | 75 | 210 |
 | bulonería | 5c, 6c | 4 | 10 | 10 |
-| caño | 14, 15 | 15 | 38 | 40 |
-| instrumento | 11 | 31 | 90 | 308 |
+| caño | 1b, 1g, 11b, 14, 15 | 15 | 38 | 40 |
+| instrumento | 1h, 1j, 11 | 31 | 90 | 308 |
 | junta | 5b, 6b | 7 | 30 | 90 |
 | válvula esférica | 3, 4, 12, 16 | 12 | 90 | 140 |
 

@@ -4,10 +4,13 @@ Generado por `herramientas/verificar_origen.py`. Solo avisa cuando el precio NO 
 
 ## Avisos
 
-- ⚠ RX Radiografía 100% de las juntas a tope y tintas penetrantes e: USD 2803.5 no figura tal cual en fuentes_originales/ofertas_texto/PAMPA ENERGIA/5 - Doc5757155642 - Construc 10 Puentes y 2 Colectores - RDA/8.Orden de Compra/nv 502 (adicional oc puente de produccion - pampa).pdf.txt, fuentes_originales/ofertas_texto/PAMPA ENERGIA/5 - Doc5757155642 - Construc 10 Puentes y 2 Colectores - RDA/8.Orden de Compra/presupuesto itt 163.pdf.txt (si es un valor calculado o escalado, que lo diga la fuente). Mirarlo en el original.
+- ⚠ 17 CUPLA DE AC PARA SOLDAR 1/2" NPT CON TAPÓN · Ø 1/2": USD 4.61 no figura tal cual en en la línea del código 5292 no figura USD 4.61 (conocimiento/precios/listas_vendedor.csv) (si es un valor calculado o escalado, que lo diga la fuente). Mirarlo en el original.
+- ⚠ A PRESIÓN REGULADA, C/ VAL. BLOQ Y PURGA · Ø 3/4": USD 1558.0 no figura tal cual en fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/Oferta Induquip 26-333-RSDGVM-USM.pdf.txt (si es un valor calculado o escalado, que lo diga la fuente). Mirarlo en el original.
+- ⚠ B TEMPERATURA DE SALIDA · Ø 3/4": USD 1138.98 no figura tal cual en fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/Oferta Induquip 26-333-RSDGVM-USM.pdf.txt (si es un valor calculado o escalado, que lo diga la fuente). Mirarlo en el original.
 
 ## No controlados
 
-- estimado o sin precio: 16
-- precio calculado (lista × factor): 3
-- el documento no está como texto en el repositorio: 1
+- estimado o sin precio: 23
+- el documento no está como texto en el repositorio: 5
+- precio calculado (lista × factor): 1
+- convertido de pesos: 1
