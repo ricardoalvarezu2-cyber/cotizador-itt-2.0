@@ -649,12 +649,12 @@
     {
      "tipo": "lista",
      "precio": 2.71,
-     "proveedor": "Renard (cód. 5281) · AFO-00714",
-     "codigo": "AFO-00714",
+     "proveedor": "Renard · AFO-00715 (Cupla 1/2\" NPT S3000 ASTM A105)",
+     "codigo": "AFO-00715",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 5281",
      "fecha": "2025-12-26",
      "coincide": "similar",
-     "diferencia": "extremos: BSPT (pedido NPT/SW)"
+     "diferencia": "cupla 1/2\" NPT S3000 A105; el plano pide SW/NPT (antes se tomaba la BSPT, que la norma no admite como reemplazo de NPT; 30-10-2026)"
     }
    ]
   },

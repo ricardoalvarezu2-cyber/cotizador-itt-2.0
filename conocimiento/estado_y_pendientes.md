@@ -155,8 +155,10 @@ Decidido (Matías, 29-10-2026): manda el repositorio; la biblioteca se alimenta 
 5. **Planillas 2021–2024 (29-10-2026, pedido de Matías):** se leyeron las 59 carpetas con planilla de costo buscando horas y estructura. **No traen horas** (la MO es un monto global): `horas_por_equipo.csv` no cambió y los controles F01/T01 siguen en −35%. Quedó la estructura de costo de 103 equipos en `costos/estructura_costo_historica.csv` (solo proporciones, del cepo; ver su LEEME). Para las horas de recipientes, la fuente posible son planillas 2025–2026 que todavía no están en `horas_por_equipo.csv` o el detalle de montaje de cada cotización nueva.
 4. El Ø del cuerpo está en 13 de 158 fichas: completarlo al hacer o revisar fichas de recipientes.
 
+**Cotizaciones cargadas revisadas con las reglas de compatibilidad (30-10-2026):** solo 2 renglones usaban un similar que la norma no admite: COT26-0135-001 pos 17 (cupla BSPT → NPT, mismo precio) y COT26-0135-003 pos 15 (válvula SW-roscada → SIN PRECIO). El resto no cambia; no hace falta rehacer las cotizaciones. Para revisar otras: comparar cada renglón con `compatibilidad.incompatible` (como en este chat) o volver a correr `precotizar.py` y comparar.
+
 **Para decidir con Matías (30-10-2026)**
-1. Separador Camuzzi (COT26-0135-003): ~~ingeniería y calidad a 250 h~~ hecho (Matías, 30-10-2026). Falta pedir a Ledesma la cotización real con el diseño y confirmar las placas de RX con el mapa de soldaduras.
+1. Separador Camuzzi (COT26-0135-003): ~~ingeniería y calidad a 250 h~~ hecho (Matías, 30-10-2026). Falta pedir a Ledesma la cotización real con el diseño, confirmar las placas de RX con el mapa de soldaduras y cotizar la válvula esférica 1/2" roscada S-2000 (pos 15, sin precio por la regla de compatibilidad).
 
 **Abiertos al 29-10-2026 (para decidir con Matías)**
 1. Costos de procedimientos sin antecedente: WPS/PQR, calificación de soldadores, prueba hidráulica y pintura (hoy solo RX y LP, USD 250 cada uno).
