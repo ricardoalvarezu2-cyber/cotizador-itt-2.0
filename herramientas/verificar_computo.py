@@ -35,6 +35,40 @@ def num(v):
     return float(v.replace(",", ".")) if v else None
 
 
+def control_compatibilidad(c, plano):
+    """P9 (Matías, 30-10-2026): cada renglón de material cuyo precio sale de una pieza del catálogo se compara con lo que
+    pide el plano con las reglas de compatibilidad (compatibilidad.py). Si la norma no permite el reemplazo, es ERROR: la
+    cotización no pasa a revisado hasta cambiar la referencia o dejarla SIN PRECIO. Se controla la fuente vigente."""
+    ruta = c / "cotizacion.json"
+    if not ruta.exists():
+        return []
+    import json
+    import buscar_material as bm
+    from compatibilidad import incompatible
+    from precotizar import texto_busqueda
+    bm.buscar("brida")
+    cat = {r["codigo"]: r for r in bm._FILAS}
+    por_pos = {p["pos"].strip(): p for p in plano}
+    out = []
+    for it in json.load(open(ruta, encoding="utf-8"))["items"]:
+        if it.get("grupo") != "material":
+            continue
+        f = it["fuentes"][0]
+        if not f.get("precio"):
+            continue
+        cod = f.get("codigo") or (re.search(r"\b[A-Z]{3}-\d{5}\b", str(f.get("proveedor") or "")) or [None])[0] if not f.get("codigo") else f.get("codigo")
+        p = por_pos.get(str(it.get("pos", "")).strip())
+        if not cod or cod not in cat or not p:
+            continue
+        texto = texto_busqueda(p)
+        fam, at, *_ = bm.buscar(texto)
+        motivo = incompatible(fam, at, cat[cod], texto, cat[cod]["descripcion"])
+        if motivo:
+            out.append(f"Pos {it['pos']}: la referencia {cod} ({cat[cod]['descripcion'][:45]}) no sirve según la norma: {motivo}. "
+                       "Cambiarla por una compatible o dejar SIN PRECIO (compatibilidades_LEEME.md)")
+    return out
+
+
 def main(carpeta):
     c = Path(carpeta)
     plano = list(csv.DictReader(open(c / "pedido" / "lista_materiales_plano.csv", encoding="utf-8")))
@@ -137,6 +171,8 @@ def main(carpeta):
             # decisión de Matías (28/10/2026): valores de antes del fin del cepo sin tipo de cambio explícito no son confiables
             if r.get("fecha_precio", "") < "2025-04-14" and not re.search(r"tc |tipo de cambio|tc explícito|tc explicito", (r.get("proveedor_o_criterio", "") + " " + r.get("nota", "")).lower()):
                 avisos.append(f"{r['id']}: precio del período con cepo ({r['fecha_precio']}) sin tipo de cambio explícito: reemplazar por un valor confiable o justificar (por ejemplo, costo de planta oct-2024: TC 997 en la hoja Sueldos)")
+
+    errores += control_compatibilidad(c, plano)
 
     print(f"Plano: {len(plano)} posiciones · Cómputo: {len(comp)} filas · Costo directo por unidad USD {fmt(total, 2)}")
     if total:

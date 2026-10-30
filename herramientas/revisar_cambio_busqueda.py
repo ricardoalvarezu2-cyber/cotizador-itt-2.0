@@ -3,6 +3,10 @@ anterior de las herramientas y la actual (solo informa; no cambia nada — Matí
 
 Uso: python herramientas/revisar_cambio_busqueda.py [--ref HEAD] [--salida archivo.md]
      --ref: versión de git contra la que se compara (por defecto HEAD, lo último guardado; ej. main, HEAD~1).
+     python herramientas/revisar_cambio_busqueda.py --control    compara con los resultados aceptados
+         (conocimiento/tecnico/buscador_resultados_aceptados.json); lo corre verificar_todo.py y falla si algo cambió.
+     python herramientas/revisar_cambio_busqueda.py --aceptar    guarda los resultados de ahora como aceptados: solo
+         después de revisar cada cambio (y anotar por qué en estado_y_pendientes.md).
 
 Para cada renglón de cotizaciones/*/pedido/lista_materiales_plano.csv busca con las herramientas de --ref y con las de
 ahora (los dos con los datos actuales del catálogo) y lista los que cambian: antes / ahora / motivo de descarte si la
@@ -43,11 +47,41 @@ def correr(dir_herr):
     return json.loads(r.stdout.strip().splitlines()[-1])
 
 
+ACEPTADOS = RAIZ / "conocimiento" / "tecnico" / "buscador_resultados_aceptados.json"
+
+
+def clave(x):
+    return f"{x['cot']} · pos {x['pos']}"
+
+
+def control(aceptar=False):
+    """Compara el primer resultado de cada renglón con los aceptados (o los guarda con aceptar)."""
+    ahora = {clave(x): x for x in correr(RAIZ / "herramientas") if not x["cot"].startswith("_")}
+    if aceptar:
+        ACEPTADOS.write_text(json.dumps({k: v["codigo"] for k, v in sorted(ahora.items())}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+        print(f"Resultados del buscador aceptados: {len(ahora)} renglones → {ACEPTADOS.relative_to(RAIZ)}")
+        return 0
+    if not ACEPTADOS.exists():
+        print("No hay resultados aceptados: correr --aceptar después de revisar")
+        return 1
+    antes = json.loads(ACEPTADOS.read_text(encoding="utf-8"))
+    cambios = [(k, antes.get(k, "(nuevo)"), v["codigo"] or "SIN PRECIO", v["desc"]) for k, v in ahora.items() if antes.get(k) != v["codigo"]]
+    for k, a, b, d in cambios:
+        print(f"  {k}: {a or 'SIN PRECIO'} → {b} {d[:60]}")
+    print(f"Buscador de materiales: {len(cambios)} renglones cambiaron respecto de lo aceptado" +
+          (" — revisarlos (--ref main para ver el motivo) y aceptar con --aceptar" if cambios else ""))
+    return 1 if cambios else 0
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--ref", default="HEAD")
     ap.add_argument("--salida")
+    ap.add_argument("--control", action="store_true")
+    ap.add_argument("--aceptar", action="store_true")
     a = ap.parse_args()
+    if a.control or a.aceptar:
+        sys.exit(control(a.aceptar))
     with tempfile.TemporaryDirectory() as tmp:
         tmp = Path(tmp)
         arch = subprocess.run(["git", "archive", a.ref, "herramientas"], cwd=RAIZ, capture_output=True)

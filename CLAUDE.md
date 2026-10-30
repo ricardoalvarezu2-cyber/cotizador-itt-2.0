@@ -44,6 +44,10 @@
 - Los totales salen de la planilla o del informe con fórmulas, nunca de cuentas hechas en el chat. Excel e informe tienen que dar igual.
 - Antes de pasar a "revisado": `python herramientas/verificar_computo.py cotizaciones/<carpeta>` sin errores, más una revisión independiente (otro agente o persona) del cómputo contra el plano.
 - Todo error detectado se anota en `conocimiento/errores_y_lecciones.md`.
+- **Ciclo ante cada error o serie de errores (Matías, 30-10-2026), sin esperar a que lo pida:** 1) anotarlo en `errores_y_lecciones.md`; 2) corregirlo; 3) repensar el proceso (procedimiento, programa, controles, instrucciones) para que no vuelva a pasar, contrastando con los errores ya anotados; 4) recién ahí, una **auditoría independiente** (otro agente que no hizo la corrección) de la corrección y de la prevención. Sus hallazgos vuelven al paso 1.
+- **Reglas y tablas técnicas nuevas** (compatibilidades, pesos, factores, tarifas, criterios de cálculo) pasan por una revisión independiente antes de usarse, igual que un cómputo; cada hallazgo queda como caso de prueba.
+- **Antes de afirmar un dato o proponer un cambio, comprobarlo en el archivo** (no de memoria). No responder que algo "no hace falta" o "está completo" sin auditoría independiente; si no se hizo, decirlo.
+- **Compatibilidades (P4 y P9):** el buscador descarta lo que la norma no permite reemplazar (`herramientas/compatibilidad.py`; criterio: igual o superior en todo); `verificar_computo.py` da ERROR si un renglón usa una referencia incompatible; `verificar_todo.py` frena si cambia un resultado del buscador sin aceptarlo (`revisar_cambio_busqueda.py --control` / `--aceptar` después de revisar cada cambio) o si alguna cotización del repositorio quedó con una referencia incompatible. Al cambiar reglas o catálogo, revisar también las copias de la página (`semilla.py --previo`).
 
 ## Página web
 - Página del cotizador: https://claude.ai/artifact/HfbiaNvhAFkQjYwLe2kaBQ (fuente en `web/`, instructivo en `web/LEEME.md`, incluida la sección "Pedidos desde la página").

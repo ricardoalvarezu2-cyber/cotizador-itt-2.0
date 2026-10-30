@@ -30,6 +30,8 @@ Vigente desde el 27/10/2026. Se escribió a partir de los errores de la COT26-10
 - Hay que leer la especificación completa del documento del proveedor: modelo, código de trim (TRIM 8 = 13Cr, no 316), material de asientos, extremos (M-H, BW/NPT, BSPT vs. NPT).
 - Se prefiere el precio más reciente **con la misma especificación**. Si es de más de 6 meses o el proveedor da una validez corta, se marca para actualizar.
 
+**P4 compatibilidad (30-10-2026).** Un precio de otra pieza sirve de referencia solo si la norma permite el reemplazo: igual o superior en todo (material y grupo de B16.5, cara, rosca, schedule, servicio NACE). Sin material conocido no es similar. Lo aplica el buscador (`compatibilidad.py`, `conocimiento/tecnico/compatibilidades_LEEME.md`) y lo controla `verificar_computo.py` en P9 (error).
+
 **P4 ter. Sin referencia no se adivina** (decisión de Matías, 28-10-2026). Si no hay precio de la pieza ni de un producto parecido (otra medida, serie o marca de la misma pieza), el renglón va en **0 con "SIN PRECIO: pedir cotización"** y entra en la lista para Compras. Un estimado solo vale si sale de una referencia concreta (pieza parecida, antecedente, tarifa × cantidad) que se cita. `verificar_computo.py` da error si encuentra un estimado "sin referencia" con precio.
 
 **P4 bis. Ajuste por inflación.** Cada precio se actualiza desde su fecha hasta hoy con `conocimiento/costos/indices_ajuste.csv` (se arma con `herramientas/indices_inflacion.py`; se agregan los meses nuevos cuando se publican el IPC y el dólar). Materiales en dólares: CPI de EE.UU. MO, talleres y servicios locales: IPC del INDEC ÷ dólar BNA. **No usar una tasa anual fija:** en algunos años el costo local en dólares sube y en otros baja, según cuánto suba el dólar frente a la inflación. La planilla y el informe muestran el subtotal a la fecha del precio, el factor y el subtotal ajustado.
@@ -48,6 +50,7 @@ Vigente desde el 27/10/2026. Se escribió a partir de los errores de la COT26-10
 
 **P9. Control automático y revisión independiente.**
 1. Correr `python herramientas/armar_cotizacion.py <carpeta>` (incluye `verificar_computo.py`). Tiene que terminar sin errores. Los avisos se revisan uno por uno, también los de `verificacion_origen.md` (precios que no figuran tal cual en su documento de origen; solo avisa, no confirma nada).
+1b. Sin errores de compatibilidad: ningún renglón con una referencia que la norma no permite (`verificar_computo.py` lo da como error).
 2. Revisión independiente: alguien que no armó el cómputo (otro agente o una persona) compara la lista de materiales del plano con el cómputo y el informe, y busca cantidades, especificaciones, extremos, soldaduras y precios sin fuente. Lo que encuentre se corrige o se justifica.
 3. Recién ahí la cotización pasa a `revisado`.
 

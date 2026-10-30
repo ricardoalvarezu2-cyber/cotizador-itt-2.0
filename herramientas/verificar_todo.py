@@ -10,6 +10,7 @@ Uso: python herramientas/verificar_todo.py
    sin cambios y no cambió ningún dato (CSV, JSON, MD), se restauran. Así el control no deja "cambios" de fechas internas
    que traban el git pull de la sesión de la tarea semanal (lección 43).
 """
+import csv
 import hashlib
 import re
 import subprocess
@@ -99,6 +100,20 @@ print(f"{'OK  ' if r.returncode == 0 else 'FALLA'} búsqueda y avisos de la pág
 if r.returncode:
     fallas.append("búsqueda de la página")
     print((r.stdout + r.stderr)[-800:])
+# Compatibilidades (Matías, 30-10-2026): 1) el buscador da los resultados aceptados (un cambio de reglas o de catálogo se
+# revisa renglón por renglón y se acepta a propósito); 2) ninguna cotización del repositorio usa una referencia que la
+# norma no permite (el mismo control que verificar_computo.py hace en P9).
+correr("resultados del buscador iguales a los aceptados (revisar_cambio_busqueda.py --control)", [str(H / "revisar_cambio_busqueda.py"), "--control"])
+import verificar_computo  # noqa: E402
+incomp = []
+for carpeta in sorted((RAIZ / "cotizaciones").iterdir()):
+    if (carpeta / "cotizacion.json").exists() and (carpeta / "pedido" / "lista_materiales_plano.csv").exists() and not carpeta.name.startswith("_"):
+        plano = list(csv.DictReader(open(carpeta / "pedido" / "lista_materiales_plano.csv", encoding="utf-8")))
+        incomp += [f"{carpeta.name}: {e}" for e in verificar_computo.control_compatibilidad(carpeta, plano)]
+print(f"{'OK  ' if not incomp else 'FALLA'} referencias compatibles con la norma en todas las cotizaciones ({len(incomp)} problemas)")
+if incomp:
+    fallas.append("cotizaciones con referencias incompatibles")
+    print("\n".join("  " + x for x in incomp[:20]))
 despues = modificados()
 if antes is not None and despues is not None:
     nuevos = sorted(despues - antes)
