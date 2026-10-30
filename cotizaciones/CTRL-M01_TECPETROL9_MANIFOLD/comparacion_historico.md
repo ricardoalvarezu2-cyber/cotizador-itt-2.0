@@ -6,10 +6,10 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 | Pos | Pieza | Real (cant × unit = total) | Cotizador (cant × unit = total) | Dif. | Fuente del cotizador | Lectura |
 |---|---|---|---|---|---|---|
-| 1 | Brida WN 4" S600 Sch.80 A-105 | 30 × 106,00 = 3.180,00 | 30 un × 120,00 = 3.600,00 | +13% | ant · Lista Renar · BRI-01305 · 2026-02-19 | dentro de ±15% · real: en REV D/E subió a 120,74 |
-| 2 | Brida WN 8" S600 Sch.80 A-105 | 2 × 305,43 = 610,86 | 2 un × 176,58 = 353,16 | -42% | cot · PROVEMET · BRI-01334 · 2025-08-27 | más barato · real: en REV D/E bajó a 176,80 |
-| 3 | Caño SC 4" Sch.80 A-106 | 4 × 57,80 = 231,20 | 4 m × 47,60 + compra extra 3b = 204,01 | -12% | ant · Lista Renar · CAN-01497 · 2026-02-19 | dentro de ±15% · real: LM: tramos 8 × 0,25 + 3,4 + 4 × 0,1; se costean 4 m |
-| 4 | Caño SC 8" Sch.80 A-106 | 2 × 165,98 = 331,96 | 2 m × 137,79 + compra extra 4b = 295,28 | -11% | lista · Renard (cód. 1183) · CAN-01524 · 2025-12-26 | dentro de ±15% · real: LM: tramo de 2,2 m; se costean 2 m |
+| 1 | Brida WN 4" S600 Sch.80 A-105 | 30 × 106,00 = 3.180,00 | 30 un × 112,79 = 3.383,70 | +6% | cot · Grupo Provemet · BRI-01305 · 2026-10-29 | dentro de ±15% · real: en REV D/E subió a 120,74 |
+| 2 | Brida WN 8" S600 Sch.80 A-105 | 2 × 305,43 = 610,86 | 2 un × 178,08 = 356,16 | -42% | cot · Grupo Provemet · BRI-01335 · 2026-10-29 | más barato · real: en REV D/E bajó a 176,80 |
+| 3 | Caño SC 4" Sch.80 A-106 | 4 × 57,80 = 231,20 | 4 m × 39,07 + compra extra 3b = 167,45 | -28% | cot · Grupo Provemet · CAN-01497 · 2026-10-29 | más barato · real: LM: tramos 8 × 0,25 + 3,4 + 4 × 0,1; se costean 4 m |
+| 4 | Caño SC 8" Sch.80 A-106 | 2 × 165,98 = 331,96 | 2 m × 113,16 + compra extra 4b = 242,50 | -27% | cot · Grupo Provemet · CAN-01524 · 2026-10-29 | más barato · real: LM: tramo de 2,2 m; se costean 2 m |
 | 5 | Drip ring 4" S600 A-516 | 4 × 350,00 = 1.400,00 | 4 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo |
 | 6 | Espárragos 7/8" x 100 mm | 160 × 10,00 = 1.600,00 | 160 un × 8,00 = 1.280,00 | -20% | ant · REPUESTOS · JUN-04190 · 2026-06-26 | más barato (similar) |
 | 7 | Espárragos 7/8" x 140 mm | 32 × 10,00 = 320,00 | 32 un × 8,00 = 256,00 | -20% | ant · REPUESTOS · JUN-04190 · 2026-06-26 | más barato (similar) |
@@ -24,7 +24,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 16 | Válvula esférica 4" S600 RF PT A-216 (Taval) | 8 × 1.646,30 = 13.170,40 | 8 un × 1.050,00 = 8.400,00 | -36% | lista · Taval (Lista 30 × 0.52) · VAL-03559 · 2025-09-01 | más barato · real: lista 2.469,45 con descuentos (en REV A: 1.049,88) |
 | 17 | Válvula retención 4" S600 RF A-216 (Taval) | 4 × 479,90 = 1.919,60 | 4 un × 690,04 = 2.760,16 | +44% | ant · Válvulas TAVAL (cotización -35% -20% sob · 2026-02-19 | más caro · real: lista 719,85 con descuentos (en REV A: 690,04) |
 
-**Materiales: real USD 27.353,62 · cotizador USD 21.074,34 (-23%).** 4 dentro de ±15%, 12 fuera, 1 sin precio.
+**Materiales: real USD 27.353,62 · cotizador USD 20.771,70 (-24%).** 2 dentro de ±15%, 14 fuera, 1 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -40,5 +40,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por manifold
 
-Real USD 44.462,22 · cotizador USD 34.225,17 (-23%) antes de completar lo que el cotizador marca para revisar.
+Real USD 44.462,22 · cotizador USD 33.922,53 (-24%) antes de completar lo que el cotizador marca para revisar.
 

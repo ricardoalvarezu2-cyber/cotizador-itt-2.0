@@ -124,6 +124,17 @@ POR_TEXTO = [  # (familia, pedido, candidato, ¿compatible?)
 for fam, a, b, ok in POR_TEXTO:
     m = regla_material(fam, a, b, b)
     chk(f"texto {fam}: {a} ← {b}", (m == "") == ok, m)
+# "Raised Face" / "Ring Type Joint" escritos enteros (Provemet 30-10-2026): misma cara que RF / RTJ
+from compatibilidad import conexiones  # noqa: E402
+chk("conexiones: Raised Face = rf", "rf" in conexiones("Brida Welding Neck Sch 80 Raised Face Serie 300"))
+chk("conexiones: Ring Type Joint = rtj", "rtj" in conexiones("Brida WN Ring Type Joint #900"))
+chk("brida RF ← Raised Face", incompatible("BRI", {"diametro": '6"'}, {}, 'Brida WN RF #300 6" A105', 'Brida Welding Neck Sch 80 Raised Face Serie 300 ASTM A 105 6"') == "")
+from catalogo_materiales import atributos, norm as norm_cat  # noqa: E402
+_at = atributos(norm_cat('Brida Welding Neck Sch 80 Raised Face Serie 600 ASTM A 105 ANSI B16.5 6"'), "BRI")
+chk("catálogo: Raised Face → cara RF", _at.get("cara") == "RF", str(_at))
+_per = atributos(norm_cat("PERFIL IPN 240 ALTURA 240 ALA 106 LARGO"), "PER")
+chk("catálogo: ALA 106 de un perfil no es A106", not _per.get("material"), str(_per))
+chk("brida RTJ ← Raised Face (no)", incompatible("BRI", {"diametro": '6"', "cara": "RTJ"}, _at, 'Brida WN RTJ #600 6" A105', 'Brida Welding Neck Sch 80 Raised Face Serie 600 ASTM A 105 6"') != "")
 chk("reducción 80x40 contra STD x STD", incompatible("ABW", {"diametro": '2 1/2"x2"'}, {}, 'Reducción concéntrica 2 1/2"x2" 80x40 A234', "reduccion conc std x std A234") != "")
 chk("reducción 80x40 contra XS x STD", incompatible("ABW", {"diametro": '2 1/2"x2"'}, {}, "Reducción 80x40 A234", "reduccion XS x STD A234") == "")
 chk("revestimiento PE por PP", incompatible("CAN", {}, {}, "caño revestido polipropileno", "caño tricapa de polietileno") != "")
@@ -173,6 +184,9 @@ for fam, d, a, b in [("ABW", '2 1/2"x2"', 'Reducción 2 1/2"x2" 80x40 A234', "re
                      ("CAN", "", 'Caño 16" sin costura API 5L B', "caño c/c API 5L B"), ("CAN", "", "caño tricapa A106", "caño A106"),
                      ("CAN", "", "caño tricapa polietileno A106", "caño A106 sin revestimiento de polietileno")]:
     casos.append({"fam": fam, "ped": {"diametro": d}, "texto": a, "cand": {}, "d": b, "py": incompatible(fam, {"diametro": d}, {}, a, b) != ""})
+for a, b in [('Brida WN RF #300 6" A105', 'Brida Welding Neck Sch 80 Raised Face Serie 300 ASTM A 105 6"'),
+             ('Brida WN RF #600 6" A105', 'Brida Welding Neck Sch 80 Raised Face Serie 600 ASTM A 105 6"')]:
+    casos.append({"fam": "BRI", "ped": {"diametro": '6"'}, "texto": a, "cand": {}, "d": b, "py": incompatible("BRI", {"diametro": '6"'}, {}, a, b) != ""})
 for d, sch, a, b in [('12"x8"', "XS", 'Tee 12"x8" sch XS A234', "Tee BW SCH XS x SCH 60 A234"), ('6"', "40", 'Caño 6" sch 40 X52', "Caño API 5L X42")]:
     casos.append({"fam": "ABW" if "Tee" in a else "CAN", "ped": {"diametro": d, "schedule": sch}, "texto": a, "cand": {}, "d": b,
                   "py": incompatible("ABW" if "Tee" in a else "CAN", {"diametro": d, "schedule": sch}, {}, a, b) != ""})

@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-C01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 26.756,23 por equipo · soldadura y servicios calculados USD 17.580,35 · 17 similares (9, 10, 11, 12, 14, 15, 16, 17, 18, 23, 24, 25, 26, 27, 32, 34, 35) · 5 sin precio (13, 22, 28, 31, 33).
+**Resumen:** materiales USD 26.632,77 por equipo · soldadura y servicios calculados USD 17.580,35 · 17 similares (9, 10, 11, 12, 14, 15, 16, 17, 18, 23, 24, 25, 26, 27, 32, 34, 35) · 5 sin precio (13, 22, 28, 31, 33).
 
 
 ## 1. Materiales
@@ -10,12 +10,12 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 |---|---|---|---|---|---|
 | 1 | Brida welding neck RF · Ø 6" | IGUAL | 114,39 / un | 2025-12-26 · lista | — |
 | 2 | Brida welding neck RF · Ø 3" | IGUAL | 40,98 / un | 2025-12-26 · lista | — |
-| 3 | Brida welding neck RF · Ø 2" | IGUAL | 23,95 / un | 2025-12-26 · lista | — |
+| 3 | Brida welding neck RF · Ø 2" | IGUAL | 15,63 / un | 2026-10-29 · cotización | — |
 | 4 | Brida socket weld RF · Ø 1" | IGUAL | 17,96 / un | 2025-12-26 · lista | — |
 | 5 | Brida ciega RF · Ø 1" | IGUAL | 16,46 / un | 2025-12-26 · lista | — |
 | 6 | Brida ciega RF · Ø 2" | IGUAL | 18,50 / un | 2026-06-26 · planilla interna | — |
 | 7 | Caño sin costura · Ø 3" | IGUAL | 25,08 / m | 2025-12-26 · lista | — |
-| 8 | Caño sin costura · Ø 6" | IGUAL | 60,51 / m | 2025-12-26 · lista | — |
+| 8 | Caño sin costura · Ø 6" | IGUAL | 49,48 / m | 2026-10-29 · cotización | — |
 | 9 | Niple caño sin costura longitud 150 mm · Ø 3/ | SIMILAR ⚠ | 36,74 / un | 2026-04-22 · planilla interna | diametro: 0.5" (pedido 0.75"); largo_mm: 100 (pedido 150); precio escalado por diámetro (0,75" ÷ 0,5")^1,5 = × |
 | 10 | Niple caño sin costura longitud 150 mm · Ø 1" | SIMILAR (estimado cepo) ⚠ | 9,24 / un | 2026-10-10 · estimado (fecha supuesta) | diametro: 0.75" (pedido 1"); largo_mm: 100 (pedido 150); precio escalado por diámetro (1" ÷ 0,75")^1,5 = × 1,5 |
 | 11 | Junta espiralada RF espesor 4.5 mm con anillo | SIMILAR | 15,00 / un | 2025-12-10 · planilla interna | extremos: sin dato (pedido RF) |
@@ -44,7 +44,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 34 | Bastidor del skid (perfiles y chapas: corto 3 | SIMILAR (acero por kg) | USD 1,90/kg | 2026-02-10 cot | precio por kg de materia prima (hierro ángulo 3x1/4) +10% por recortes; no incluye corte, plegado ni rolado |
 | 35 | Tablero y materiales eléctricos (canalización | SIMILAR | 12.000,00 / gl | 2026-06-26 · planilla interna | unidad distinta: catálogo por un, plano por gl · faltan: diametro, serie |
 | 7b | Completar barra de 12 m (pos 7) | compra extra | USD 25,08/m × 0,27 m | | Se usan 115,2 m en 18 equipo(s) y se compran 120 m. Borrar si hay sobrante en stock |
-| 8b | Completar barra de 12 m (pos 8) | compra extra | USD 60,51/m × 0,27 m | | Se usan 115,2 m en 18 equipo(s) y se compran 120 m. Borrar si hay sobrante en stock |
+| 8b | Completar barra de 12 m (pos 8) | compra extra | USD 49,48/m × 0,27 m | | Se usan 115,2 m en 18 equipo(s) y se compran 120 m. Borrar si hay sobrante en stock |
 
 ## 2. Soldaduras (de la columna de extremos)
 
@@ -69,7 +69,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 243 placas chicas + 0 grandes + 6,11 servicio(s) de RX + 1,44 de LP por equipo = USD 4.497,50 (Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))).
   Con las tarifas de Antonelli (11-2025) serían USD 7.347,22: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: manifold, 6", 18 u, materiales USD 26.756 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: manifold, 6", 18 u, materiales USD 26.633 por unidad)
 
 - **Ingeniería:** 0,82 h × USD 15/h = USD 12,30 · mediana de 1,1, 0,5 h por unidad (repartidas en la serie) · antecedente: TECPETROL/9. CM SKID MANIFOLD PAD S-600 · Skid Manifold PAD S600 clase A6BM (sch 40) (4 (colector 8), 28 u, 2026-01-26) · rango del mismo tipo 1,14–9 h
 - **Calidad y dossier:** 12,5 h × USD 15/h = USD 187,50 · mediana de 24,0, 1,0 h por unidad (repartidas en la serie) · antecedente: TECPETROL/9. CM SKID MANIFOLD PAD S-600 · Skid Manifold PAD S600 clase A6BM (sch 40) (4 (colector 8), 28 u, 2026-01-26) · rango del mismo tipo 18–24 h

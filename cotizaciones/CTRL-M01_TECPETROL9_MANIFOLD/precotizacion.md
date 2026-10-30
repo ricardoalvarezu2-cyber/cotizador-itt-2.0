@@ -1,17 +1,17 @@
 # Precotización automática — CTRL-M01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 21.074,34 por equipo · soldadura y servicios calculados USD 13.150,84 · 7 similares (6, 7, 10, 12, 13, 14, 15) · 1 sin precio (5).
+**Resumen:** materiales USD 20.771,70 por equipo · soldadura y servicios calculados USD 13.150,84 · 8 similares (1, 6, 7, 10, 12, 13, 14, 15) · 1 sin precio (5).
 
 
 ## 1. Materiales
 
 | Pos | Ítem | Resultado | Precio | Fecha y tipo | Diferencias / faltantes |
 |---|---|---|---|---|---|
-| 1 | Brida WN RF · Ø 4" | IGUAL | 120,00 / un | 2026-02-19 · planilla interna | — |
-| 2 | Brida WN RF · Ø 8" | IGUAL | 176,58 / un | 2025-08-27 · cotización | — |
-| 3 | Caño sin costura · Ø 4" | IGUAL | 47,60 / m | 2026-02-19 · planilla interna | — |
-| 4 | Caño sin costura · Ø 8" | IGUAL | 137,79 / m | 2025-12-26 · lista | — |
+| 1 | Brida WN RF · Ø 4" | SIMILAR | 112,79 / un | 2026-10-29 · cotización | el último precio (56,37) se aparta más de 40% de la mediana de sus últimos precios: se usa la mediana 112,79 |
+| 2 | Brida WN RF · Ø 8" | IGUAL | 178,08 / un | 2026-10-29 · cotización | — |
+| 3 | Caño sin costura · Ø 4" | IGUAL | 39,07 / m | 2026-10-29 · cotización | — |
+| 4 | Caño sin costura · Ø 8" | IGUAL | 113,16 / m | 2026-10-29 · cotización | — |
 | 5 | Drip ring · Ø 4" | **SIN PRECIO** | — | — | pedir cotización |
 | 6 | Espárrago con 2 tuercas 7/8 x 100 mm · Ø 7/8" | SIMILAR | 8,00 / un | 2026-06-26 · planilla interna | medida: 7/8 x 5 3/4 (pedido 7/8 x 3 7/8) · faltan: material |
 | 7 | Espárrago con 2 tuercas 7/8 x 140 mm · Ø 7/8" | SIMILAR | 8,00 / un | 2026-06-26 · planilla interna | medida: 7/8 x 5 3/4 (pedido 7/8 x 5 1/2) · faltan: material |
@@ -25,8 +25,8 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 15 | Válvula esférica · Ø 1/2" | SIMILAR | 36,06 / un | 2025-09-01 · lista | paso: total (no pedido) · faltan: paso |
 | 16 | Válvula esférica paso total · Ø 4" | IGUAL | 1.050,00 / un | 2025-09-01 · lista | — |
 | 17 | Válvula de retención · Ø 4" | IGUAL | 690,04 / un | 2026-02-19 · planilla interna | — |
-| 3b | Completar barra de 12 m (pos 3) | compra extra | USD 47,60/m × 0,29 m | | Se usan 112 m en 28 equipo(s) y se compran 120 m. Borrar si hay sobrante en stock |
-| 4b | Completar barra de 12 m (pos 4) | compra extra | USD 137,79/m × 0,14 m | | Se usan 56 m en 28 equipo(s) y se compran 60 m. Borrar si hay sobrante en stock |
+| 3b | Completar barra de 12 m (pos 3) | compra extra | USD 39,07/m × 0,29 m | | Se usan 112 m en 28 equipo(s) y se compran 120 m. Borrar si hay sobrante en stock |
+| 4b | Completar barra de 12 m (pos 4) | compra extra | USD 113,16/m × 0,14 m | | Se usan 56 m en 28 equipo(s) y se compran 60 m. Borrar si hay sobrante en stock |
 
 ## 2. Soldaduras (de la columna de extremos)
 
@@ -47,7 +47,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 164 placas chicas + 0 grandes + 4,11 servicio(s) de RX + 0,29 de LP por equipo = USD 4.612,50 (Servicio de radiografía (Antonelli) (2025-11; antonelli_end_2025-11)).
   Con las tarifas de Antonelli (11-2025) serían USD 4.612,50: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: manifold, 8", 28 u, materiales USD 21.074 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: manifold, 8", 28 u, materiales USD 20.772 por unidad)
 
 - **Ingeniería:** 6,29 h × USD 15/h = USD 94,35 · mediana de 1,0, 7,1, 6,3 h por unidad (repartidas en la serie) · antecedente: Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para bomba P-111 (SK-2111) (6, 1 u, 2026-02-20)
 - **Calidad y dossier:** 2,5 h × USD 15/h = USD 37,50 · mediana de 2,5, 3,2, 2,2 h por unidad (repartidas en la serie) · antecedente: Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para bomba P-111 (SK-2111) (6, 1 u, 2026-02-20)

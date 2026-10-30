@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-TS01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 33.595,97 por equipo · soldadura y servicios calculados USD 25.418,22 · 25 similares (1, 3, 7, 7b, 8, 8b, 13, 17, 20, 22, 23, 24, 25, 29, 30, 31, 34, 36, 37, 38, 39, 45, 47, 49, 50) · 16 sin precio (2, 6, 18, 26, 27, 28, 32, 33, 35, 40, 41, 42, 43, 44, 46, 48).
+**Resumen:** materiales USD 32.477,33 por equipo · soldadura y servicios calculados USD 25.418,22 · 25 similares (1, 3, 7, 7b, 8, 8b, 13, 17, 20, 22, 23, 24, 25, 29, 30, 31, 34, 36, 37, 38, 39, 45, 47, 49, 50) · 16 sin precio (2, 6, 18, 26, 27, 28, 32, 33, 35, 40, 41, 42, 43, 44, 46, 48).
 
 
 ## 1. Materiales
@@ -11,7 +11,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 1 | Brida welding neck RF · Ø 6" | SIMILAR | 140,39 / un | 2025-12-18 · planilla interna | diametro: 4" (pedido 6"); cara: sin dato (pedido RF); schedule: 80 (pedido 120); material: sin dato (pedido A1 |
 | 2 | Brida welding neck RF · Ø 12" | **SIN PRECIO** | — | — | pedir cotización |
 | 3 | Brida welding neck RF · Ø 4" | SIMILAR | 76,42 / un | 2025-12-18 · planilla interna | cara: sin dato (pedido RF); schedule: 80 (pedido 120); material: sin dato (pedido A105) |
-| 4 | Brida welding neck RF · Ø 2" | IGUAL | 215,80 / un | 2024-11-01 · stock (precio maestro) | — |
+| 4 | Brida welding neck RF · Ø 2" | IGUAL | 75,97 / un | 2026-10-29 · cotización | — |
 | 5 | Brida welding neck RF · Ø 1 1/2" | IGUAL | 163,20 / un | 2022-11-15 · compra | — |
 | 6 | Virola/caño sin costura barril menor largo 4, | **SIN PRECIO** | — | — | pedir cotización |
 | 7 | Virola/caño sin costura barril mayor largo 3, | SIMILAR | 750,00 / m | 2025-08-01 · planilla interna | espesor_mm: sin dato (pedido 15.88) |
@@ -100,7 +100,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 93 placas chicas + 7 grandes + 3,00 servicio(s) de RX + 1,00 de LP por equipo = USD 2.178,50 (Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))).
   Con las tarifas de Antonelli (11-2025) serían USD 3.495,00: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: trampa, 16", 1 u, materiales USD 33.596 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: trampa, 16", 1 u, materiales USD 32.477 por unidad)
 
 - Montaje propio: no se suma porque la fabricación la hace el tercero; la prueba hidráulica va aparte (fila PH).
 - **Ingeniería:** 503 h × USD 15/h = USD 7.545,00 · mediana de 503,0 h por unidad (repartidas en la serie) · antecedente: TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E · Trampa receptora 8x6 #300 (RS-123/125) (8 / 6 (barrel 24 x 20 en tabla soldadura), 2 u, 2025-12-10) · rango del mismo tipo 251,5–251,5 h

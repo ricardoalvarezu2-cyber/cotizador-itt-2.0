@@ -241,8 +241,9 @@ def conexiones(*textos):
     out = set()
     for t in textos:
         t = norm(t)
-        t = re.sub(r"\br\.?\s?f\.?(?=\s|/|$)|\brfwn\b", " rf ", t)
-        t = re.sub(r"\br\.?\s?j\.?(?=\s|/|$)|\brj\b", " rtj ", t)
+        t = re.sub(r"\br\.?\s?f\.?(?=\s|/|$)|\brfwn\b|\braised face\b", " rf ", t)
+        t = re.sub(r"\bflat face\b", " ff ", t)
+        t = re.sub(r"\br\.?\s?j\.?(?=\s|/|$)|\brj\b|\bring (?:type )?joint\b", " rtj ", t)
         t = re.sub(r"\b[fm]npt\b|\bnptf\b|\bnpt-?[hm]\b", " npt ", t)
         t = re.sub(r"\bsocket ?weld\b|\bsocket\b", " sw ", t)
         t = re.sub(r"\bbspp\b|\bbsp\b(?!t)", " bspp ", t)

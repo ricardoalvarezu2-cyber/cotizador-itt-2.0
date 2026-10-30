@@ -500,7 +500,8 @@ const Busqueda = (() => {
   function conexiones(...ts) {
     const out = new Set();
     for (let t of ts) {
-      t = normP(t).replace(/\br\.?\s?f\.?(?=\s|\/|$)|\brfwn\b/g, " rf ").replace(/\br\.?\s?j\.?(?=\s|\/|$)|\brj\b/g, " rtj ")
+      t = normP(t).replace(/\br\.?\s?f\.?(?=\s|\/|$)|\brfwn\b|\braised face\b/g, " rf ").replace(/\bflat face\b/g, " ff ")
+        .replace(/\br\.?\s?j\.?(?=\s|\/|$)|\brj\b|\bring (?:type )?joint\b/g, " rtj ")
         .replace(/\b[fm]npt\b|\bnptf\b|\bnpt-?[hm]\b/g, " npt ").replace(/\bsocket ?weld\b|\bsocket\b/g, " sw ")
         .replace(/\bbspp\b|\bbsp\b(?!t)/g, " bspp ").replace(/\bbe\b|\bbisel/g, " bw ");
       for (const k of [...CARAS, ...ROSCAS, "sw", "bw"]) if (new RegExp(`\\b${k}\\b`).test(t)) out.add(k);

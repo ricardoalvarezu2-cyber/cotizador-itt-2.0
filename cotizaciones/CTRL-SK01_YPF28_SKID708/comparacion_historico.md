@@ -11,7 +11,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 3 | Tee normal BW SCH XS A234 WPB 12" | 3 × 1.457,38 = 4.372,14 | 3 un × 1.797,97 = 5.393,91 | +23% | lista · Cintolo Hnos. (cód. 7128) · ABW-03406 · 2025-02-17 | más caro |
 | 4 | Tee de reducción BW SCH STD x XS A234 WPB 16" | 3 × 2.802,34 = 8.407,02 | 3 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo |
 | 5 | Brida WN RF 300 LB SCH XS A105 12" | 18 × 425,09 = 7.651,62 | 18 un × 218,49 = 3.932,82 | -49% | cot · Complemet / Provemet · BRI-03413 · 2026-07-06 | más barato |
-| 6 | Brida WN RF 300 LB A105 16" | 2 × 680,00 = 1.360,00 | 2 un × 634,01 = 1.268,02 | -7% | lista · Renard (cód. 11985) · BRI-01234 · 2025-12-26 | dentro de ±15% |
+| 6 | Brida WN RF 300 LB A105 16" | 2 × 680,00 = 1.360,00 | 2 un × 822,61 = 1.645,22 | +21% | cot · Grupo Provemet · BRI-04965 · 2026-10-29 | más caro (similar) |
 | 7 | Brida ciega RF 300 LB A105 12" | 6 × 477,53 = 2.865,18 | 6 un × 426,44 = 2.558,64 | -11% | lista · Renard (cód. 8260) · BRI-01022 · 2025-12-26 | dentro de ±15% |
 | 8 | Brida ciega RF 300 LB A105 16" | 2 × 820,00 = 1.640,00 | 2 un × 691,17 = 1.382,34 | -16% | lista · Renard (cód. 8261) · BRI-01024 · 2025-12-26 | más barato (similar) |
 | 9 | Brida SW RF 300 LB SCH 80 A105 1 1/2" | 3 × 19,91 = 59,73 | 3 un × 14,88 = 44,64 | -25% | cot · Complemet / Provemet · BRI-01161 · 2026-07-06 | más barato |
@@ -38,7 +38,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 30 | Válvula esférica 12" FLG RF 300 LB PT volante | 3 × 5.750,00 = 17.250,00 | 3 un × 5.750,00 = 17.250,00 | 0% | lista · Taval (Lista 30 × 0.52) · VAL-04436 · 2025-09-01 | dentro de ±15% |
 | 31 | Bastidor del skid (perfilería) | 850 × 2,00 = 1.700,00 | 850 kg × 1,90 = 1.615,00 | -5% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | dentro de ±15% · real: la PC0 le aplicó un 20% de overspray (error: es acero, no pintura) |
 
-**Materiales: real USD 60.808,45 · cotizador USD 42.774,44 (-30%).** 13 dentro de ±15%, 13 fuera, 5 sin precio.
+**Materiales: real USD 60.808,45 · cotizador USD 43.151,64 (-29%).** 12 dentro de ±15%, 14 fuera, 5 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -54,5 +54,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por skid
 
-Real USD 85.995,15 · cotizador USD 62.285,63 (-28%) antes de completar lo que el cotizador marca para revisar.
+Real USD 85.995,15 · cotizador USD 62.662,83 (-27%) antes de completar lo que el cotizador marca para revisar.
 

@@ -117,7 +117,7 @@ Fuente: `fuentes_originales/taval_lista30_2025-09.xlsx` (Lista 30 de Taval, colu
 
 ## Listas cargadas por Ventas (28-10-2026)
 
-`fuentes_originales/listas_vendedor/<fecha de carga>/` (con README) y `herramientas/listas_vendedor.py` → `conocimiento/precios/listas_vendedor.csv`. Cada precio conserva la **fecha del documento**; la fecha de carga es la carpeta. Primera carga (Matías, 28-10-2026): Renard 27-05-2025, Cintolo lista 29.1 (vigencia 17-02-2025) y Provemet perfiles cot. 236623 (01-07-2025). Como son de 2025, la lista Renard 12-2025 sigue siendo la más reciente.
+`fuentes_originales/listas_vendedor/<fecha de carga>/` (con README) y `herramientas/listas_vendedor.py` → `conocimiento/precios/listas_vendedor.csv`. Cada precio conserva la **fecha del documento**; la fecha de carga es la carpeta. Primera carga (Matías, 28-10-2026): Renard 27-05-2025, Cintolo lista 29.1 (vigencia 17-02-2025) y Provemet perfiles cot. 236623 (01-07-2025). Como son de 2025, la lista Renard 12-2025 sigue siendo la más reciente. Segunda carga (Matías, 30-10-2026): Provemet a Taval del 29-10-2026, cot. 288974 (caños), 288977 (perfiles), 288978 y 288979 (bridas WN), más sus antecedentes 2025 a Tormene (212464-01, 224190, 228859) como historial; las del 29-10-2026 pasan a ser el último precio de esas piezas. Cinco bridas #150/#300 de 14" a 20" y la 2" #900 repiten el precio de 2025: a confirmar con Provemet (detalle en el README de la carpeta).
 
 ## Faltantes conocidos
 

@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-T01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 8.869,98 por equipo · soldadura y servicios calculados USD 5.877,83 · 10 similares (1, 3, 5, 12, 13, 14, 15, 17, 19, 20) · 3 sin precio (10, 11, 18).
+**Resumen:** materiales USD 8.727,75 por equipo · soldadura y servicios calculados USD 5.877,83 · 10 similares (1, 3, 5, 12, 13, 14, 15, 17, 19, 20) · 3 sin precio (10, 11, 18).
 
 
 ## 1. Materiales
@@ -15,20 +15,20 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 5 | Bafle de entrada 400 x 200 mm espesor 6.35 mm | SIMILAR (acero por kg) | USD 1,25/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/4", la más cercana a 6,35 mm) +10% por recortes; no incluye corte, plegado ni rolado |
 | 6 | Brida slip on RF · Ø 2" | IGUAL | 12,18 / un | 2026-02-20 · planilla interna | — |
 | 7 | Brida slip on RF · Ø 6" | IGUAL | 38,19 / un | 2025-12-26 · lista | — |
-| 8 | Caño sin costura · Ø 6" | IGUAL | 60,51 / m | 2025-12-26 · lista | — |
-| 9 | Caño sin costura · Ø 2" | IGUAL | 16,62 / m | 2025-12-26 · lista | — |
+| 8 | Caño sin costura · Ø 6" | IGUAL | 49,48 / m | 2026-10-29 · cotización | — |
+| 9 | Caño sin costura · Ø 2" | IGUAL | 13,61 / m | 2026-10-29 · cotización | — |
 | 10 | Sombrerete de venteo longitud 300 mm · Ø 10" | **SIN PRECIO** | — | — | pedir cotización |
 | 11 | Placa de identificación | **SIN PRECIO** | — | — | pedir cotización |
 | 12 | Deflectores 900 x 200 mm espesor 6.35 mm (9 u | SIMILAR (acero por kg) | USD 1,25/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/4", la más cercana a 6,35 mm) +10% por recortes; no incluye corte, plegado ni rolado |
 | 13 | Espárrago con 2 tuercas 3/4 x 130 mm · Ø 3/4" | SIMILAR | 10,00 / un | 2026-02-19 · planilla interna | medida: 3/4 x 4 7/8 (pedido 3/4 x 5 1/8) |
 | 14 | Cáncamo de izaje con chapa de respaldo (2 un) | SIMILAR (acero por kg) | USD 1,27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2") +10% por recortes; no incluye corte, plegado ni rolado |
 | 15 | Separador de niebla (con viruta) · Ø 6" | SIMILAR (acero por kg) | USD 1,27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2") +10% por recortes; no incluye corte, plegado ni rolado |
-| 16 | Brida welding neck RF · Ø 2" | IGUAL | 28,42 / un | 2026-02-19 · planilla interna | — |
+| 16 | Brida welding neck RF · Ø 2" | IGUAL | 19,31 / un | 2026-10-29 · cotización | — |
 | 17 | Refuerzo de conexión Ø355 mm esp. 3/8 | SIMILAR (acero por kg) | USD 1,27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2", la más cercana a 355 mm) +10% por recortes; no incluye corte, plegado ni rolado (A-516: se toma el precio de chapa A-36 de la lista; el A-516 suele costar más) |
 | 18 | Media cupla · Ø 2" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (0.75") (AFO-04930, USD 3,82): pedir cotización |
 | 19 | Junta plana · Ø 6" | SIMILAR (estimado cepo) ⚠ | 5,76 / un | 2024-11-01 · estimado (cepo) | material: AISI 316 (no pedido) |
 | 20 | Cunas de apoyo (2 un de 20 kg) | SIMILAR (acero por kg) | USD 1,27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2") +10% por recortes; no incluye corte, plegado ni rolado |
-| 8b | Completar barra de 12 m (pos 8) | compra extra | USD 60,51/m × 6 m | | Se usan 6 m en 1 equipo(s) y se compran 12 m. Borrar si hay sobrante en stock |
+| 8b | Completar barra de 12 m (pos 8) | compra extra | USD 49,48/m × 6 m | | Se usan 6 m en 1 equipo(s) y se compran 12 m. Borrar si hay sobrante en stock |
 | 9b | Caño de la pos 9: 0,25 m en total | sin compra extra | | | menos de 0,5 m: sale de recortes del stock (confirmar) |
 
 ## 2. Soldaduras (de la columna de extremos)
@@ -54,7 +54,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 10 placas chicas + 21 grandes + 1,00 servicio(s) de RX + 1,00 de LP por equipo = USD 1.550,00 (Servicio de radiografía (Antonelli) (2025-11; antonelli_end_2025-11)).
   Con las tarifas de Antonelli (11-2025) serían USD 1.550,00: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: tanque, 36", 1 u, materiales USD 8.870 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: tanque, 36", 1 u, materiales USD 8.728 por unidad)
 
 - ⚠ **No hay antecedente del mismo tipo (tanque) ni de uno afín: no se suman horas.** Cargarlas a mano con el detalle de actividades. Candidatos (de otro tipo, no usar sin revisar): TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · Trampa lanzadora 20x16 (Serie 600 A6C) (20 / 16, 1 u, 2026-07-20) | Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Tanque de glicol (envolvente 12in sch30, SE-SPF-025) - opcio (12, 1 u, 2026-02-20) | TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E · Trampa lanzadora 8x6 #300 (LS-122/124) (8 / 6 (barrel 24 x 20 en tabla soldadura), 2 u, 2025-12-10)
 

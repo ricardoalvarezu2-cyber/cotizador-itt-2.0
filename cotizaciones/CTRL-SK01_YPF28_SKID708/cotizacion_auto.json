@@ -289,14 +289,14 @@
    "especificacion": "Plano: 16\" · 300 · ASTM A105 · RF/BW",
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 634.01,
-     "proveedor": "Renard (cód. 11985) · BRI-01234",
-     "codigo": "BRI-01234",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 11985",
-     "fecha": "2025-12-26",
+     "tipo": "cot",
+     "precio": 822.61,
+     "proveedor": "Grupo Provemet · BRI-04965",
+     "codigo": "BRI-04965",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288978_bridas_2026-10-29.pdf",
+     "fecha": "2026-10-29",
      "coincide": "similar",
-     "diferencia": "diametro: 14\" (pedido 16\"); schedule: 40 (no pedido); precio escalado por diámetro (16\" ÷ 14\")^1,5 = × 1,22"
+     "diferencia": "schedule: 80 (no pedido)"
     }
    ]
   },

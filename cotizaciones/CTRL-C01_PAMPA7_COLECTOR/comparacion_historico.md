@@ -8,12 +8,12 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 |---|---|---|---|---|---|---|
 | 1 | Brida WNRF 6" #300 sch 40 A105 | 4 × 114,39 = 457,56 | 4 un × 114,39 = 457,56 | 0% | lista · Renard (cód. 11981) · BRI-01317 · 2025-12-26 | dentro de ±15% |
 | 2 | Brida WNRF 3" #300 sch 40 A105 | 40 × 40,98 = 1.639,20 | 40 un × 40,98 = 1.639,20 | 0% | lista · Renard (cód. 11978) · BRI-01282 · 2025-12-26 | dentro de ±15% |
-| 3 | Brida WNRF 2" #300 sch 80 A105 | 6 × 23,95 = 143,70 | 6 un × 23,95 = 143,70 | 0% | lista · Renard (cód. 12052) · BRI-01254 · 2025-12-26 | dentro de ±15% |
+| 3 | Brida WNRF 2" #300 sch 80 A105 | 6 × 23,95 = 143,70 | 6 un × 15,63 = 93,78 | -35% | cot · Grupo Provemet · BRI-01254 · 2026-10-29 | más barato |
 | 4 | Brida SWRF 1" #300 sch 80 A105 | 4 × 17,96 = 71,84 | 4 un × 17,96 = 71,84 | 0% | lista · Renard (cód. 10681) · BRI-01153 · 2025-12-26 | dentro de ±15% |
 | 5 | Brida ciega RF 1" #300 A105 | 2 × 16,46 = 32,92 | 2 un × 16,46 = 32,92 | 0% | lista · Renard (cód. 8249) · BRI-01010 · 2025-12-26 | dentro de ±15% |
 | 6 | Brida ciega RF 2" #300 A105 | 6 × 18,50 = 111,00 | 6 un × 18,50 = 111,00 | 0% | ant · Renard · BRI-01031 · 2026-06-26 | dentro de ±15% |
 | 7 | Caño s/c 3" sch 40 A106 B | 6,4 × 25,08 = 160,51 | 6,4 m × 25,08 + compra extra 7b = 167,21 | +4% | lista · Renard (cód. 1153) · CAN-01484 · 2025-12-26 | dentro de ±15% · real: media tira de 12,8 m por colector |
-| 8 | Caño s/c 6" sch 40 A106 B | 6,4 × 60,51 = 387,26 | 6,4 m × 60,51 + compra extra 8b = 403,42 | +4% | lista · Renard (cód. 1173) · CAN-01510 · 2025-12-26 | dentro de ±15% · real: media tira de 12,8 m por colector |
+| 8 | Caño s/c 6" sch 40 A106 B | 6,4 × 60,51 = 387,26 | 6,4 m × 49,48 + compra extra 8b = 329,88 | -15% | cot · Grupo Provemet · CAN-01510 · 2026-10-29 | dentro de ±15% · real: media tira de 12,8 m por colector |
 | 9 | Niple 3/4" x 150 mm sch 160 A106 B | 17 × 10,00 = 170,00 | 17 un × 36,74 = 624,58 | +267% | ant · Antecedentes puentes Taval/CGC s2000 · N · 2026-04-22 | más caro (similar) |
 | 10 | Niple 1" x 150 mm sch 160 A106 B | 1 × 10,00 = 10,00 | 1 un × 9,24 = 9,24 | -8% | est · sin proveedor en planilla · NIP-01782 · 2026-10-10 | dentro de ±15% |
 | 11 | Junta espiralada 6" #300 316+grafito | 1 × 10,00 = 10,00 | 1 un × 15,00 = 15,00 | +50% | ant · no dice · JUN-01703 · 2025-12-10 | más caro (similar) |
@@ -42,7 +42,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 34 | Bastidor skid (300 + 500 kg con 20% de desper | 960 × 1,50 = 1.440,00 | 800 kg × 1,90 = 1.520,00 | +6% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | dentro de ±15% · real: 800 kg × 1,2 de desperdicio × USD 1,5/kg |
 | 35 | Tablero y materiales eléctricos | 1 × 12.000,00 = 12.000,00 | 1 gl × 12.000,00 = 12.000,00 | 0% | ant · planilla de costo ITT · OTR-03018 · 2026-06-26 | dentro de ±15% |
 
-**Materiales: real USD 47.654,86 · cotizador USD 26.756,23 (-44%).** 18 dentro de ±15%, 12 fuera, 5 sin precio.
+**Materiales: real USD 47.654,86 · cotizador USD 26.632,77 (-44%).** 17 dentro de ±15%, 13 fuera, 5 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -58,5 +58,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por colector
 
-Real USD 66.490,02 · cotizador USD 44.336,58 (-33%) antes de completar lo que el cotizador marca para revisar.
+Real USD 66.490,02 · cotizador USD 44.213,12 (-34%) antes de completar lo que el cotizador marca para revisar.
 

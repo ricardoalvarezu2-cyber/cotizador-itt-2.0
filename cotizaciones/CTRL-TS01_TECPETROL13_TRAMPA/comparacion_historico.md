@@ -9,7 +9,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 1 | Brida welding neck RF 6" 900 / sch 120 ASTM A | 5 × 271,72 = 1.358,60 | 5 un × 140,39 = 701,95 | -48% | ant · sin proveedor en planilla · BRI-02554 · 2025-12-18 | más barato (similar) |
 | 2 | Brida welding neck RF 12" 900 / sch 60 ASTM A | 1 × 1.285,77 = 1.285,77 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo · real: 60 días |
 | 3 | Brida welding neck RF 4" 900 / sch 120 ASTM A | 8 × 126,06 = 1.008,48 | 8 un × 76,42 = 611,36 | -39% | ant · sin proveedor en planilla · BRI-02554 · 2025-12-18 | más barato (similar) · real: 60 días |
-| 4 | Brida welding neck RF 2" 900 / sch 160 ASTM A | 8 × 65,20 = 521,60 | 8 un × 215,80 = 1.726,40 | +231% | stock · Stock ITT (cód. ACS0506R57050K) · BRI-01 · 2024-11-01 | más caro |
+| 4 | Brida welding neck RF 2" 900 / sch 160 ASTM A | 8 × 65,20 = 521,60 | 8 un × 75,97 = 607,76 | +17% | cot · Grupo Provemet · BRI-01262 · 2026-10-29 | más caro |
 | 5 | Brida welding neck RF 1 1/2" 900 / sch 160 AS | 1 × 40,57 = 40,57 | 1 un × 163,20 = 163,20 | +302% | stock · Stock ITT · última compra (cód. ACS0406R · 2022-11-15 | más caro · real: 60 días |
 | 6 | Virola/caño sin costura barril menor largo 4, | 4,8 × 690,00 = 3.312,00 | 4,8 m × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo · real: planilla: 'debería contemplar 1 tira de 12 m?' |
 | 7 | Virola/caño sin costura barril mayor largo 3, | 3,2 × 1.120,00 = 3.584,00 | 3,2 m × 750,00 + compra extra 7b = 9.000,00 | +151% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) · real: planilla: 'debería contemplar 1 tira de 12 m?' |
@@ -57,7 +57,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 49 | Detector de paso de scraper | 1 × 4.209,50 = 4.209,50 | 1 un × 1.650,00 = 1.650,00 | -61% | ant · TDW (marca) · OTR-02969 · 2025-12-10 | más barato (similar) |
 | 50 | Válvula de bloqueo y purga (para manómetro) 1 | 1 × 150,00 = 150,00 | 1 un × 80,00 = 80,00 | -47% | ant · Abac · VAL-03162 · 2026-04-22 | más barato (similar) |
 
-**Materiales: real USD 58.316,80 · cotizador USD 33.595,96 (-42%).** 7 dentro de ±15%, 27 fuera, 16 sin precio.
+**Materiales: real USD 58.316,80 · cotizador USD 32.477,33 (-44%).** 7 dentro de ±15%, 27 fuera, 16 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -74,5 +74,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por trampa
 
-Real USD 83.177,98 · cotizador USD 59.014,18 (-29%) antes de completar lo que el cotizador marca para revisar.
+Real USD 83.177,98 · cotizador USD 57.895,55 (-30%) antes de completar lo que el cotizador marca para revisar.
 

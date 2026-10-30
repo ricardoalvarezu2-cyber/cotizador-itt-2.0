@@ -6,7 +6,7 @@ Cada renglón conserva la fecha del documento (no la de carga): con eso el catá
 ajusta por inflación. Formatos conocidos:
   renard_lista_AAAA-MM-DD.xlsx       hojas "Table N": Código | Producto | Precio (usd/Un) | Unidad
   cintolo_lista_*_AAAA-MM-DD.xlsx    ARTIC. | DESCRIPCION | ESPESOR | NORMA | CALIDAD | PRECIO USD
-  provemet_cotizacion_*_AAAA-MM-DD.pdf   cotización de perfiles: # | descripción | kg/m | cant | unid | precio | … | neto
+  provemet_cotizacion_*_AAAA-MM-DD.pdf   cotización Provemet (perfiles, caños, bridas): # | descripción | [kg/m] | cant | unid | precio | … | neto
 Un archivo de otro formato se avisa y no se carga (pedir que lo lea la IA y lo pase a conocimiento/precios/listas_nuevas.csv).
 """
 import csv
@@ -56,10 +56,29 @@ def cintolo(ruta, base):
 
 
 def provemet(ruta, base):
+    """Cotización de Grupo Provemet (perfiles, caños, bridas): # | descripción (1 o 2 renglones) | [kg/m] | cant | unid | precio |
+    [bonif.] | neto | unid | total. Se toma el precio neto; un ítem en 0 («Lamentamos no cotizar») no se carga."""
     texto = subprocess.run(["pdftotext", "-layout", str(ruta), "-"], capture_output=True, text=True, check=True).stdout
-    for m in re.finditer(r"^\s*\d+\s+(PERFIL [A-Z]+ \d+[^\n]*?)\s{2,}(\d+[.,]\d+)\s+[\d.,]+\s+Mt\s+([\d.,]+)\s+([\d.,]+)\s+Mt", texto, re.M):
-        desc, kgm, precio, neto = m.group(1).strip(), m.group(2), m.group(3), m.group(4)
-        yield {**base, "codigo": "", "descripcion": f"{desc} ({kgm} kg/m, barra de 12 m)", "precio": round(float(neto.replace(",", ".")), 2), "unidad": "metro"}
+    renglones = texto.splitlines()
+    item = re.compile(r"^\s*(\d+)\s+(.*?)\s*(?:(\d+\.\d+)\s+)?(\d+\.\d+)\s+(Mt|U)\s+([\d.]+)\s+(?:[\d.]+\s+)?([\d.]+)\s+(Mt|U)\s+[\d.]+")
+    for i, linea in enumerate(renglones):
+        m = item.match(linea)
+        if not m:
+            continue
+        desc, kgm, unid, neto = m.group(2).strip(), m.group(3), m.group(5), float(m.group(7))
+        if not desc:  # el texto quedó en el renglón de arriba (ítem con entregas partidas)
+            desc = re.split(r"\s{2,}", renglones[i - 1].strip())[0]
+        if neto <= 0:
+            continue
+        sig = renglones[i + 1].strip() if i + 1 < len(renglones) else ""
+        if desc.startswith("PERFIL "):  # el segundo renglón es el largo (12000 mm)
+            desc = f"{desc} ({kgm} kg/m, barra de 12 m)"
+        else:
+            if sig and not item.match(renglones[i + 1]):
+                desc = f"{desc} {re.split(r'\s{2,}', sig)[0]}"
+            if kgm:
+                desc = f"{desc} ({kgm} kg/m)"
+        yield {**base, "codigo": "", "descripcion": desc, "precio": round(neto, 2), "unidad": "metro" if unid == "Mt" else "un"}
 
 
 FORMATOS = [(r"^renard_lista", renard, "Tubos Renard", "lista", "sin IVA (lista Renard en USD)"),

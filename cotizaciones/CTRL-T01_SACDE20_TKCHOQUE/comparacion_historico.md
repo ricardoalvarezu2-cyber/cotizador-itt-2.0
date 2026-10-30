@@ -13,21 +13,21 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 5 | Bafle 400 x 200 x 1/4" | 5 × 1,50 = 7,50 | 5 kg × 1,25 = 6,25 | -17% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | más barato (similar) |
 | 6 | Brida SORF 2" #150 | 1 × 10,87 = 10,87 | 1 un × 12,18 = 12,18 | +12% | ant · sin proveedor en planilla (columna PROVE · 2026-02-20 | dentro de ±15% |
 | 7 | Brida SORF 6" #150 | 2 × 38,19 = 76,38 | 2 un × 38,19 = 76,38 | 0% | lista · Renard (cód. 9397) · BRI-01139 · 2025-12-26 | dentro de ±15% |
-| 8 | Caño S/C 6" Sch 40 | 6 × 60,51 = 363,06 | 6 m × 60,51 + compra extra 8b = 726,12 | +100% | lista · Renard (cód. 1173) · CAN-01510 · 2025-12-26 | más caro · real: se compra la tira entera de 6 m por no haber stock |
-| 9 | Caño S/C 2" Sch 80 | 0,25 × 16,62 = 4,16 | 0,25 m × 16,62 = 4,16 | 0% | lista · Renard (cód. 1143) · CAN-01463 · 2025-12-26 | dentro de ±15% |
+| 8 | Caño S/C 6" Sch 40 | 6 × 60,51 = 363,06 | 6 m × 49,48 + compra extra 8b = 593,76 | +64% | cot · Grupo Provemet · CAN-01510 · 2026-10-29 | más caro · real: se compra la tira entera de 6 m por no haber stock |
+| 9 | Caño S/C 2" Sch 80 | 0,25 × 16,62 = 4,16 | 0,25 m × 13,61 = 3,40 | -18% | cot · Grupo Provemet · CAN-01463 · 2026-10-29 | más barato |
 | 10 | Sombrerete 10" Sch 20 x 300 mm | 1 × 194,71 = 194,71 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo · real: la planilla dice 0,3 × 26,709 = 194,709 (la cuenta no cierra; se toma el subtotal) |
 | 11 | Placa de identificación | 1 × 15,00 = 15,00 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo |
 | 12 | Deflectores 900 x 200 x 1/4" | 90 × 1,50 = 135,00 | 90 kg × 1,25 = 112,50 | -17% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | más barato (similar) · real: 9 un × 10 kg |
 | 13 | Espárragos 3/4" x 130 mm c/2 tuercas | 8 × 10,00 = 80,00 | 8 un × 10,00 = 80,00 | 0% | ant · Bules o Versailles · JUN-04181 · 2026-02-19 | dentro de ±15% |
 | 14 | Cáncamo y respaldo | 6 × 0,75 = 4,50 | 6 kg × 1,27 = 7,62 | +69% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | más caro (similar) · real: la planilla toma 3 kg × 1,5 (error: 2 un × 3 kg = 6 kg) |
 | 15 | Separador de niebla 6" (con viruta) | 5 × 1,50 = 7,50 | 5 kg × 1,27 = 6,35 | -15% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | más barato (similar) |
-| 16 | Brida WNRF 2" #600 Sch 80 | 1 × 28,42 = 28,42 | 1 un × 28,42 = 28,42 | 0% | ant · Lista Renar · BRI-01260 · 2026-02-19 | dentro de ±15% |
+| 16 | Brida WNRF 2" #600 Sch 80 | 1 × 28,42 = 28,42 | 1 un × 19,31 = 19,31 | -32% | cot · Grupo Provemet · BRI-01260 · 2026-10-29 | más barato |
 | 17 | Refuerzo 355 mm x 3/8" | 8 × 1,50 = 12,00 | 8 kg × 1,27 = 10,16 | -15% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | más barato (similar) |
 | 18 | Media cupla 2" #6000 | 1 × 18,38 = 18,38 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo · real: estimado base S3000 × 2 |
 | 19 | Junta plana 6" #150 | 1 × 10,00 = 10,00 | 1 un × 5,76 = 5,76 | -42% | est · Stock ITT (cód. ACS1501X76FL0) · JUN-017 · 2024-11-01 | más barato (similar) |
 | 20 | Cunas de apoyo | 40 × 0,75 = 30,00 | 40 kg × 1,27 = 50,80 | +69% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | más caro (similar) · real: la planilla toma 20 kg × 1,5 (error: 2 un × 20 kg = 40 kg); incluye MO ITT p/estructura pesada |
 
-**Materiales: real USD 6.104,66 · cotizador USD 8.869,98 (+45%).** 5 dentro de ±15%, 12 fuera, 3 sin precio.
+**Materiales: real USD 6.104,66 · cotizador USD 8.727,75 (+43%).** 3 dentro de ±15%, 14 fuera, 3 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -44,5 +44,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por tanque
 
-Real USD 22.624,66 · cotizador USD 14.747,80 (-35%) antes de completar lo que el cotizador marca para revisar.
+Real USD 22.624,66 · cotizador USD 14.605,58 (-35%) antes de completar lo que el cotizador marca para revisar.
 

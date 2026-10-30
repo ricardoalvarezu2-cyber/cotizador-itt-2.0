@@ -6,10 +6,10 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 | Pos | Pieza | Real (cant × unit = total) | Cotizador (cant × unit = total) | Dif. | Fuente del cotizador | Lectura |
 |---|---|---|---|---|---|---|
-| 1 | Brida WNRF 3" #600 sch 80 SA-105 | 2 × 19,78 = 39,56 | 2 un × 52,21 = 104,42 | +164% | ant · Lista Renar · BRI-01260 · 2026-02-19 | más caro (similar) |
+| 1 | Brida WNRF 3" #600 sch 80 SA-105 | 2 × 19,78 = 39,56 | 2 un × 49,78 = 99,56 | +152% | cot · Grupo Provemet · BRI-01286 · 2026-10-29 | más caro (similar) |
 | 2 | Caño S/C 3" sch 80 SA-106 Gr.B | 4 × 33,93 = 135,72 | 4 m × 30,30 = 121,20 | -11% | ant · no dice · CAN-02638 · 2025-12-10 | dentro de ±15% |
 | 3 | Tee reducción 3" x 2" sch 80 BW SA-234 WPB | 2 × 64,11 = 128,22 | 2 un × 64,11 = 128,22 | 0% | ant · Renard · ABW-00390 · 2026-08-14 | dentro de ±15% |
-| 4 | Brida WNRF 2" #600 sch 80 SA-105 | 48 × 19,42 = 932,16 | 48 un × 28,42 = 1.364,16 | +46% | ant · Lista Renar · BRI-01260 · 2026-02-19 | más caro (similar) |
+| 4 | Brida WNRF 2" #600 sch 80 SA-105 | 48 × 19,42 = 932,16 | 48 un × 19,31 = 926,88 | -1% | cot · Grupo Provemet · BRI-01260 · 2026-10-29 | dentro de ±15% |
 | 5 | Tee reducción 2" x 1 1/2" sch 80 BW SA-234 WP | 2 × 33,59 = 67,18 | 2 un × 33,59 = 67,18 | 0% | lista · Renard (cód. 3819) · ABW-00367 · 2025-12-26 | dentro de ±15% |
 | 6 | Brida SWRF 1 1/2" #600 sch 160 A105 | 2 × 18,02 = 36,04 | 2 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo |
 | 7 | Válvula esférica 2" #600 WCB (PT flotante) | 8 × 416,00 = 3.328,00 | 10 un × 434,00 = 4.340,00 | +30% | lista · Taval (Lista 30 × 0.52) · VAL-04446 · 2025-09-01 | más caro (similar) · real: REV 1: 8 (la lista de ingeniería dice 10; REV 0: 10 × 400,40); va como Válvulas Taval, factor 1 |
@@ -34,7 +34,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | X2 | Manifold de 5 vías | 698,00 | — | — | — | falta en el cotizador |
 | X3 | Botellones de purga tomas de presión | 900,00 | — | — | — | falta en el cotizador |
 
-**Materiales: real USD 54.743,60 · cotizador USD 26.459,72 (-52%).** 5 dentro de ±15%, 13 fuera, 6 sin precio.
+**Materiales: real USD 54.743,60 · cotizador USD 26.017,58 (-52%).** 6 dentro de ±15%, 12 fuera, 6 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -51,5 +51,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por puente
 
-Real USD 68.559,60 · cotizador USD 39.552,16 (-42%) antes de completar lo que el cotizador marca para revisar.
+Real USD 68.559,60 · cotizador USD 39.110,02 (-43%) antes de completar lo que el cotizador marca para revisar.
 

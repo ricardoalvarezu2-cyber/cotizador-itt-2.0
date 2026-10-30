@@ -1,6 +1,6 @@
 # Comparación con antecedentes (P8) — COT26-0135-003
 
-Generado por `herramientas/comparar_antecedentes.py`. Familia SEP, subtipo filtro / separador coalescente. Esta cotización: **precio unitario USD 376.240,31**, costo USD 278.696,52, factor 1,35 · reparto del costo: materiales 61%, MO y servicios 39%.
+Generado por `herramientas/comparar_antecedentes.py`. Familia SEP, subtipo filtro / separador coalescente. Esta cotización: **precio unitario USD 376.122,88**, costo USD 278.609,54, factor 1,35 · reparto del costo: materiales 61%, MO y servicios 39%.
 
 Se compara **costo contra costo** (Matías, 30-10-2026): el precio de venta mezcla factor, flete, caución y alcance de cada oferta. El costo del antecedente es el de su ficha, a su fecha (sin ajustar), y solo por equipo cuando la ficha lo permite sin ambigüedad; si no, queda el precio de venta marcado "solo venta". Una diferencia de más del 15% no significa error: hay que explicarla rubro por rubro (alcance, cantidad, diámetro, serie, fecha) antes de presentar el número.
 

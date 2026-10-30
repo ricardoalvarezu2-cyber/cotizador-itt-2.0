@@ -217,6 +217,7 @@ def modelo_de(t):
 
 
 def material_de(t):
+    t = re.sub(r"\bala \d+", " ", t)  # "ALA 106" de un perfil no es A106 (Provemet 30-10-2026, PER-04133)
     for rx, nombre in [(r"a ?860|wphy", "A860 WPHY"), (r"a ?403|wp ?304|wp ?316", "A403 (inox)"), (r"a ?350|lf2", "A350 LF2"),
                        (r"a ?333", "A333"), (r"a ?694 ?(?:gr\.? ?)?f ?(\d{2})", "A694 F{}"), (r"a ?694", "A694"), (r"\bf ?65\b", "A694 F65"), (r"a ?194 ?(gr\.?|grado)? ?8ma?\b", "A194 8M"), (r"a ?194 ?(gr\.?|grado)? ?2h\b", "A194 2H"), (r"a ?194", "A194"),
                        (r"a ?193 ?(gr\.?|grado)? ?b ?8m", "A193 B8M"), (r"a ?193 ?(gr\.?|grado)? ?b ?7m", "A193 B7M"), (r"a ?320 ?(gr\.?)? ?l7", "A320 L7"),
@@ -239,7 +240,7 @@ def material_de(t):
 def extremos_de(t, fam=""):
     t = re.sub(r"\d+ ?d(?:ias)?\.? ?ff\b|\bff ?\d+ ?d", " ", t)  # "60 días FF" = fecha de factura, no cara plana
     ext = [e for e, rx in (("NPT", r"\bnpt"), ("BSPT", r"bspt"), ("SW", r"\bsw\b|socket"), ("BW", r"\bbw\b|biselad|a tope"),
-                           ("RTJ", r"\brtj\b|\brj\b|ring joint"), ("RF", r"\brf\b"), ("FF", r"\bff\b"), ("Bridado", r"bridad")) if re.search(rx, t)]
+                           ("RTJ", r"\brtj\b|\brj\b|ring (?:type )?joint"), ("RF", r"\brf\b|\braised face\b"), ("FF", r"\bff\b|\bflat face\b"), ("Bridado", r"bridad")) if re.search(rx, t)]
     if fam == "JUN":
         ext = [e for e in ext if e != "SW"]  # en una junta, SW = spiral wound
     return "/".join(ext)
@@ -372,7 +373,9 @@ def atributos(t, fam, proveedor=""):
         d["tipo"] = primero(r"\b(wn|welding neck|slip ?on|so|ciega|blind|bl|lj|sw|roscada|lap joint|adaptadora|porta ?placa|instrumentacion)\b", t)
         if d["tipo"] in ("ciega", "blind", "bl") and re.search(r"c/ ?aguj|agujer|perforad|roscado", t):
             d["tipo"] = "ciega perforada"
-        d["cara"] = primero(r"\b(rtj|rf|ff)\b", t).upper()
+        # "Raised Face" escrito entero (Provemet 30-10-2026: sin esto la brida no se juntaba con la misma pieza "RF")
+        tc = re.sub(r"\braised face\b", "rf", re.sub(r"\bflat face\b", "ff", re.sub(r"\bring (?:type )?joint\b", "rtj", t)))
+        d["cara"] = primero(r"\b(rtj|rf|ff)\b", tc).upper()
         d["norma"] = primero(r"(b16\.5|b16\.47|api ?6a)", t).upper()
     elif fam == "CAN":
         fr = primero(r"(?:esp\.?|espesor|e=)\s?(\d+ \d+/\d+|\d+/\d+)\s?(?:\"|pulg|plg)?", t)  # "esp. 5/8"" = 15,88 mm, no 5 (CTRL-TS01)

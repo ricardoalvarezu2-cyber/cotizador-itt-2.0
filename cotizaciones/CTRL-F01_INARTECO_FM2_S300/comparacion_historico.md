@@ -9,7 +9,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 1 | Brida slip on RF 2" #300 A105 | 2 × 15,00 = 30,00 | 2 un × 15,70 = 31,40 | +5% | lista · Renard (cód. 9620) · BRI-01114 · 2025-12-26 | dentro de ±15% |
 | 2 | Brida slip on RF 4" #300 A105 | 1 × 52,00 = 52,00 | 1 un × 51,35 = 51,35 | -1% | lista · Renard (cód. 9623) · BRI-01133 · 2025-12-26 | dentro de ±15% |
 | 3 | Brida ciega 4" #300 A105 | 1 × 52,00 = 52,00 | 1 un × 60,12 = 60,12 | +16% | lista · Renard (cód. 8255) · BRI-01050 · 2025-12-26 | más caro |
-| 4 | Caño sin costura 2" sch 80 A53 Gr B | 0,3 × 15,00 = 90,00 | 0,3 m × 16,62 + compra extra 4b = 49,86 | -45% | ant · Renard · CAN-02604 · 2026-06-25 | más barato (similar) · real: se compran 6 m (cantidad mínima): 6 × 15 = 90 |
+| 4 | Caño sin costura 2" sch 80 A53 Gr B | 0,3 × 15,00 = 90,00 | 0,3 m × 13,61 + compra extra 4b = 40,83 | -55% | cot · Grupo Provemet · CAN-01463 · 2026-10-29 | más barato (similar) · real: se compran 6 m (cantidad mínima): 6 × 15 = 90 |
 | 5 | Caño sin costura 4" sch 40 A53 Gr B | 0,4 × 29,00 = 174,00 | 0,4 m × 34,34 + compra extra 5b = 206,04 | +18% | lista · Renard (cód. 1160) · CAN-01495 · 2025-12-26 | más caro (similar) · real: se compran 6 m (cantidad mínima): 6 × 29 = 174 |
 | 6 | Tapón roscado 1/2" 2000 A105 | 1 × 5,00 = 5,00 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo |
 | 7 | Media cupla con tapón roscado 1/4" 2000 A105 | 2 × 4,25 = 8,50 | 2 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo |
@@ -34,7 +34,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 26 | Chapa soporte manómetro 1.59 mm | 2 × 1,40 = 2,80 | 2 kg × 1,26 = 2,52 | -10% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | dentro de ±15% |
 | 27 | Arandela plana zincada 3/4" | 16 × 3,00 = 48,00 | 16 un × 0,20 = 3,20 | -93% | est · Stock ITT (cód. ACS020XXX31FA0) · JUN-01 · 2024-11-01 | más barato (similar) |
 
-**Materiales: real USD 1.504,15 · cotizador USD 1.651,09 (+10%).** 8 dentro de ±15%, 10 fuera, 9 sin precio.
+**Materiales: real USD 1.504,15 · cotizador USD 1.642,06 (+9%).** 8 dentro de ±15%, 10 fuera, 9 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -51,5 +51,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por filtro
 
-Real USD 4.483,97 · cotizador USD 2.867,86 (-36%) antes de completar lo que el cotizador marca para revisar.
+Real USD 4.483,97 · cotizador USD 2.858,83 (-36%) antes de completar lo que el cotizador marca para revisar.
 
