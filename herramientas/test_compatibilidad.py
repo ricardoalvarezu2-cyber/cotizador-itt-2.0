@@ -176,6 +176,13 @@ for fam, d, a, b in [("ABW", '2 1/2"x2"', 'Reducción 2 1/2"x2" 80x40 A234', "re
 for d, sch, a, b in [('12"x8"', "XS", 'Tee 12"x8" sch XS A234', "Tee BW SCH XS x SCH 60 A234"), ('6"', "40", 'Caño 6" sch 40 X52', "Caño API 5L X42")]:
     casos.append({"fam": "ABW" if "Tee" in a else "CAN", "ped": {"diametro": d, "schedule": sch}, "texto": a, "cand": {}, "d": b,
                   "py": incompatible("ABW" if "Tee" in a else "CAN", {"diametro": d, "schedule": sch}, {}, a, b) != ""})
+# firma de P9: la misma en Python y en la página (la página no deja revisar/aprobar si no coincide; sexta auditoría)
+import verificar_computo  # noqa: E402
+for f in sorted((RAIZ / "cotizaciones").glob("*/cotizacion.json")):
+    d = json.load(open(f, encoding="utf-8"))
+    r = subprocess.run(["node", "-e", "const B=require('./web/src/busqueda.js');const c=JSON.parse(require('fs').readFileSync(0,'utf8'));process.stdout.write(B.firmaP9(c))"],
+                       cwd=RAIZ, input=json.dumps(d), capture_output=True, text=True)
+    chk(f"firma P9 página = Python ({f.parent.name})", r.stdout == verificar_computo.firma_p9(d), r.stderr[-200:])
 js = r"""const fs=require('fs');const B=require('./web/src/busqueda.js');const D=JSON.parse(fs.readFileSync('web/datos.json','utf8'));
 const cs=JSON.parse(fs.readFileSync(0,'utf8'));console.log(JSON.stringify(cs.map(c=>B.incompatible(D.compat,c.fam,c.ped,c.cand,c.texto,c.d)!=="")));"""
 r = subprocess.run(["node", "-e", js], cwd=RAIZ, input=json.dumps(casos), capture_output=True, text=True)

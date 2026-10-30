@@ -36,7 +36,20 @@ def num(v):
 
 
 A_CONFIRMAR = "DESVÍO A CONFIRMAR · "
-SIN_RESOLVER = r"\[|a confirmar|a definir|confirmar con|por confirmar"
+SIN_RESOLVER = r"\[|a confirmar|a definir|confirmar con|por confirmar|pendiente|a cotizar"
+
+
+def firma_p9(cot):
+    """Lo que P9 controló de una cotización: la página no deja pasar a revisado ni aprobar si sus renglones de material
+    ya no son los que controló el repositorio (sexta auditoría 30-10-2026). La misma cuenta en web/src/busqueda.js."""
+    out = []
+    for it in cot.get("items", []):
+        if it.get("grupo") != "material" or not it.get("fuentes"):
+            continue
+        f = it["fuentes"][0]
+        dv = ";".join(f"{d.get('que', '')}:{d.get('ofrecido', '')}:{d.get('pedido', '')}" for d in (it.get("desvio") or []) if isinstance(d, dict))
+        out.append(f"{it.get('id', '')}|{it.get('pos', '')}|{f.get('codigo') or ''}|{f.get('proveedor') or ''}|{float(f.get('precio') or 0):.4f}|{dv}")
+    return "\n".join(out)
 TIPOS_DESVIO = ("material", "extremos", "schedule", "revestimiento", "costura", "nace", "serie")
 
 
@@ -63,7 +76,11 @@ def revisar_desvios(pos, it, mots, textos_oferta):
     confirmar", y que la oferta lo muestre: un texto de aclaraciones y desvíos que nombre la posición y lo ofrecido.
     Devuelve (errores, avisos)."""
     err, av = [], []
-    decl = {str(d.get("que", "")).lower(): d for d in (it.get("desvio") or []) if isinstance(d, dict)}
+    lista = [d for d in (it.get("desvio") or []) if isinstance(d, dict)]
+    tipos = [str(d.get("que", "")).lower() for d in lista]
+    for t in sorted({t for t in tipos if tipos.count(t) > 1}):  # sexta auditoría: el último tapaba al primero
+        err.append(f"Pos {pos}: hay más de un desvío de {t} en el renglón: dejar uno solo")
+    decl = {str(d.get("que", "")).lower(): d for d in lista}
     for tipo, txt in mots:
         d = decl.get(tipo)
         if not d:
@@ -76,10 +93,18 @@ def revisar_desvios(pos, it, mots, textos_oferta):
                        "pedir cotización que cumpla o completar el desvío antes de pasar a revisado")
             continue
         limpio = lambda x: re.sub(r"[^a-z0-9]", "", x.lower())
-        en_oferta = [t for t in textos_oferta if limpio(ofr) in limpio(t)]
+        if len(limpio(ofr)) < 5 or not re.search(r"[a-z]", limpio(ofr)) or len(limpio(ped)) < 4 or limpio(ofr) == limpio(ped):
+            err.append(f"Pos {pos}: el desvío de {tipo} ({ofr} por {ped}) es demasiado genérico: decir qué se ofrece y qué pide el plano")
+            continue
+        ms = re.match(r"serie (\d+) por (\d+)", txt)
+        if tipo == "serie" and ms and not (ms.group(1) in ofr and ms.group(2) in ped):
+            # lo declarado tiene que ser lo que encontró el control (sexta auditoría: un desvío invertido pasaba)
+            err.append(f"Pos {pos}: el desvío de serie dice {ofr} por {ped}, pero la fuente es serie {ms.group(1)} y el plano pide {ms.group(2)}")
+            continue
+        en_oferta = [t for t in textos_oferta if limpio(ofr) in limpio(t) and limpio(ped) in limpio(t)]
         if not en_oferta:
             err.append(f"Pos {pos}: el desvío de {tipo} ({ofr} por {ped}) no está en aclaraciones y desvíos de la oferta "
-                       "(un texto que nombre la posición y lo que se ofrece): el cliente tiene que enterarse")
+                       "(un texto que nombre la posición, lo que se ofrece y lo que pide el plano): el cliente tiene que enterarse")
             continue
         if any(re.search(SIN_RESOLVER, t.lower()) for t in en_oferta) and not any(not re.search(SIN_RESOLVER, t.lower()) for t in en_oferta):
             err.append(f"{A_CONFIRMAR}Pos {pos}: el desvío de {tipo} figura en la oferta como \"a confirmar\": resolverlo antes de pasar a revisado")
@@ -113,15 +138,23 @@ def control_compatibilidad(c, plano, avisos=None):
     cod_de = lambda f: f.get("codigo") or (re.search(r"\b[A-Z]{3}-\d{5}\b", str(f.get("proveedor") or "")) or [None])[0]
     cod_pos = {str(it.get("pos", "")).strip(): cod_de(it["fuentes"][0]) for it in items if it.get("fuentes")}
     out = []
+    if (c / "oferta.json").exists() and not c.name.startswith("CTRL-"):  # textos de la oferta sin resolver: frenan el paso a revisado (como en la página)
+        of = json.load(open(c / "oferta.json", encoding="utf-8"))
+        for x in (of.get("aclaraciones_y_desvios") or {}).get("items", []):
+            if re.search(SIN_RESOLVER, str(x).lower()):
+                out.append(f"{A_CONFIRMAR}Oferta: aclaración o desvío sin resolver: {str(x)[:120]}")
     for it in items:
         if it.get("grupo") != "material" or not it.get("fuentes"):
             continue
         f = it["fuentes"][0]
         if not f.get("precio"):
             continue
-        if str(it.get("descripcion", "")).startswith("["):
+        if str(it.get("descripcion", "")).startswith("[") and c.name.startswith("CTRL-"):
             continue  # renglón de la plantilla (casos de control: cotizacion.json solo trae parámetros)
         cod = cod_de(f)
+        if f.get("codigo") and f["codigo"] not in cat:
+            out.append(f"Pos {it.get('pos')}: el código {f['codigo']} no está en el catálogo: corregirlo")
+            continue
         if not cod:  # "Renard · cód. 5979": la pieza del catálogo de esa lista
             m = re.search(r"(?i)\b(renard|renar)\b.*?c[óo]d\.? ?(\d+)", str(f.get("proveedor") or ""))
             cod = por_lista.get(m.group(2)) if m else None
@@ -161,14 +194,23 @@ def control_compatibilidad(c, plano, avisos=None):
             # el material sale del texto de la fuente, no del atributo que deduce el buscador ("Futura 36\"" no es A36)
             mots = motivos(fam, at, {**at_f, "material": ""}, texto, limpio)
             # lo que la fuente NO dice (material, sin costura, NACE, schedule por extremo) no se puede comparar: AVISO
+            # lo que la fuente no dice: del material es aviso (las planillas casi nunca lo escriben); revestimiento,
+            # costura, NACE o schedule de cada extremo que pide el plano son ERROR (sexta auditoría 30-10-2026)
             no_dice = [m for m in mots if re.search(r"no (?:lo )?dice|no se sabe|sin dato", m[1])]
             mots = [m for m in mots if m not in no_dice]
+            for m in [m for m in no_dice if m[0] != "material"]:
+                # lo que pide el plano y la fuente no dice: verificarlo en el original y escribirlo en la fuente; frena el
+                # paso a revisado como un desvío a confirmar
+                out.append(f"{A_CONFIRMAR}Pos {pos}: la fuente ({desc[:45]}) no dice {m[0]} ({m[1][:70]}): verificarlo en el original y escribirlo en la fuente")
+            no_dice = [m for m in no_dice if m[0] == "material"]
             for m in no_dice:
                 if avisos is not None:
                     avisos.append(f"Pos {pos}: la fuente ({desc[:50]}) no lo dice ({m[1][:70]}): verificarlo en el original")
             ms = re.search(r"#\s?(\d{3,4})\b|\b(\d{3,4})\s?(?:#|lbs?\b)|\bserie\s?(\d{3,4})\b|\bs(\d{3,4})\b|\bwog\s?(\d{3,4})\b"
                            r"|\b(?:clase|class|cl\.?|ansi)\s?(\d{3,4})\b", limpio.lower())
             serie_c = next(g for g in ms.groups() if g) if ms else ""
+            if not serie_c and at.get("serie") and avisos is not None:
+                avisos.append(f"Pos {pos}: la fuente ({desc[:50]}) no dice la serie (el plano pide {at['serie']}): verificarla en el original")
         sp, sc = re.sub(r"\D", "", str(at.get("serie") or "")), re.sub(r"\D", "", str(serie_c or ""))
         if sp and sc and sp != sc:  # otra serie no es similar (Matías, 29-10-2026)
             mots.append(("serie", f"serie {sc} por {sp} (otro rating)"))

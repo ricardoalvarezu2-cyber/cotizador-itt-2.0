@@ -33,7 +33,7 @@ def escribir(carpeta, cot, oferta):
 
 # lo que semilla.py agrega para la página desde otros archivos del repositorio (plano, transcripción, ficha): no se
 # vuelve a escribir en cotizacion.json (tercera auditoría 30-10-2026: dejaba copias que después quedaban viejas)
-DERIVADOS_COT = ("transcripcion", "kg_compras", "ficha", "huella_repo")
+DERIVADOS_COT = ("transcripcion", "kg_compras", "ficha", "huella_repo", "p9")
 DERIVADOS_ITEM = ("plano", "fam", "at")
 
 

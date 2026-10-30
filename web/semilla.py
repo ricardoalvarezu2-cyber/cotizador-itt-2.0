@@ -105,6 +105,14 @@ def main(carpeta, ident="capex-oq8209", salida=None, previo=None):
     if (c / "ficha_rubros.json").exists():  # ficha por rubro (soldaduras, kg, m², placas, medidas) para el modo global
         cot["ficha"] = json.load(open(c / "ficha_rubros.json", encoding="utf-8"))
     avisos = conservar(cot, of, previo) if previo else []
+    # P9 del repositorio sobre esta versión: la página no deja pasar a revisado ni aprobar si los renglones de material
+    # cambiaron desde acá o si P9 tenía errores (sexta auditoría 30-10-2026: la página no controla las fuentes sin código)
+    import verificar_computo
+    err = verificar_computo.control_compatibilidad(c, list(plano.values()))
+    cot["p9"] = {"ok": not err, "errores": len(err), "firma": verificar_computo.firma_p9(cot),
+                 "fecha": datetime.now().isoformat(timespec="seconds")}
+    if err:
+        avisos.append(f"P9 con {len(err)} error(es): la página no la deja pasar a revisado hasta corregirlos en el repositorio")
     cot.setdefault("firmante_id", "matias-russo")
     of.pop("firma", None)  # la firma sale del firmante elegido
     ahora = datetime.now().isoformat(timespec="seconds")

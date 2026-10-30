@@ -118,3 +118,7 @@ Lo único que se edita es `cotizacion.json` (y `oferta.json` para los textos de 
 ## 30-10-2026 · Quinta auditoría independiente: desvíos estructurados
 - Cada desvío pasa a ser un dato del renglón (`desvio`): serie 3000 por 2000 en pos 1, 8, 11, 17, 18 y 21; schedule 80×80 por 80×40 en pos 16; "a confirmar" en pos 2, 5 (material y, nuevo, serie WOG 3000), 7, 14 y 14b. Los "a confirmar" frenan el paso a revisado.
 - Pos 21: la oferta dice "sello metal-metal, marca Duralite o equivalente", pero el precio es de Adita M-H sin mención del sello: revisar con Matías.
+
+## 30-10-2026 · Sexta auditoría independiente
+- Pos 13 (junta monolítica): la fuente Duralitte es BW/NPT y el plano pide BW/BW → desvío de extremos a confirmar (la oferta ya lo tenía entre corchetes). Con la regla nueva de extremos sería ERROR sin desvío.
+- Las aclaraciones de la oferta entre [corchetes] (pos 2, 5, 7, 13, 14, 19, 20, 21, 23 y niples) frenan el paso a revisado también en Python.

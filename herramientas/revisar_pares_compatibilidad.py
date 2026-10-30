@@ -51,7 +51,8 @@ for f in sorted(Path(sys.argv[2]).glob("cotizaciones/*/pedido/lista_materiales_p
             if c["codigo"] in vistos:
                 continue
             vistos.add(c["codigo"])
-            out[f"{cot}|{r.get('pos', '')}|{c['codigo']}"] = [t[:110], c["descripcion"][:90], cp.incompatible(fam, at, c, t, c["descripcion"])]
+            mo = cp.motivos(fam, at, c, t, c["descripcion"]) if hasattr(cp, "motivos") else ([("?", cp.incompatible(fam, at, c, t, c["descripcion"]))] if cp.incompatible(fam, at, c, t, c["descripcion"]) else [])
+            out[f"{cot}|{r.get('pos', '')}|{c['codigo']}"] = [t[:110], c["descripcion"][:90], mo[0][1] if mo else "", ",".join(sorted({m[0] for m in mo}))]
 print(json.dumps(out, ensure_ascii=False))
 """
 
@@ -96,12 +97,13 @@ def main():
     a = ap.parse_args()
     ahora = correr(RAIZ / "herramientas")
     if a.aceptar:
-        BASE.write_text(json.dumps({k: [huella(v), 1 if v[2] else 0] for k, v in sorted(ahora.items())},
+        BASE.write_text(json.dumps({k: [huella(v), v[3]] for k, v in sorted(ahora.items())},
                                    ensure_ascii=False, separators=(",", ":")).replace('],"', '],\n"') + "\n", encoding="utf-8")
         print(f"Línea base de pares guardada: {len(ahora)} pares → {BASE.relative_to(RAIZ)}")
         return 0
     if a.ref:
-        antes = {k: bool(v[2]) for k, v in con_ref(a.ref).items()}
+        antes = {k: v[3] for k, v in con_ref(a.ref).items()}
+        datos = []
         nombre = a.ref
     else:
         if not BASE.exists():
@@ -110,16 +112,22 @@ def main():
         b = json.loads(BASE.read_text(encoding="utf-8"))
         # solo cuentan los pares con los MISMOS textos de pedido y candidato: si cambió el dato (el renglón del plano o la
         # descripción del catálogo), no es un cambio de reglas (quinta auditoría 30-10-2026)
-        antes = {k: bool(v[1]) for k, v in b.items() if k in ahora and v[0] == huella(ahora[k])}
-        datos = sum(1 for k, v in b.items() if k in ahora and v[0] != huella(ahora[k]))
-        nombre = f"la línea base ({datos} pares con datos cambiados, no se comparan)"
-    acept = [k for k, v in ahora.items() if k in antes and antes[k] and not v[2]]
-    rech = [k for k, v in ahora.items() if k in antes and not antes[k] and v[2]]
+        antes = {k: v[1] for k, v in b.items() if k in ahora and v[0] == huella(ahora[k])}
+        # un par con otros textos (cambió el plano, el catálogo o cómo se arma el texto) también frena: si no, quedaría
+        # sin comparar para siempre (sexta auditoría 30-10-2026)
+        datos = [k for k, v in b.items() if k in ahora and v[0] != huella(ahora[k])]
+        nombre = f"la línea base ({len(datos)} pares con textos cambiados)"
+    # se comparan los TIPOS de motivo (sexta auditoría: comparar solo compatible/incompatible no veía una regla borrada
+    # si otro motivo seguía rechazando el par)
+    acept = [k for k, v in ahora.items() if k in antes and set(filter(None, antes[k].split(","))) - set(filter(None, v[3].split(",")))]
+    rech = [k for k, v in ahora.items() if k in antes and set(filter(None, v[3].split(","))) - set(filter(None, antes[k].split(",")))]
     nuevos = sum(1 for k in ahora if k not in antes)
     lin = [f"# Pares que cambian: reglas de {nombre} → ahora", "",
            f"**{len(acept)} nuevos aceptados** (revisar uno por uno: ¿la norma permite ese reemplazo?) · {len(rech)} nuevos "
            f"rechazados · {nuevos} pares sin comparar (renglones o piezas nuevas)", "", "## Nuevos aceptados", ""]
-    lin += [f"- {k.replace('|', ' · ')}\n  pedido: {ahora[k][0]}\n  candidato: {ahora[k][1]}" for k in acept]
+    lin += [f"- {k.replace('|', ' · ')} (deja de dar: {', '.join(sorted(set(antes[k].split(',')) - set(ahora[k][3].split(','))))})\n  pedido: {ahora[k][0]}\n  candidato: {ahora[k][1]}" for k in acept]
+    lin += ["", "## Pares con textos cambiados (revisar si el cambio de texto es correcto)", ""]
+    lin += [f"- {k.replace('|', ' · ')}: {ahora[k][0][:80]} ← {ahora[k][1][:60]}" for k in datos[:300]]
     lin += ["", "## Nuevos rechazados", ""]
     lin += [f"- {k.replace('|', ' · ')} · {ahora[k][1][:60]}: {ahora[k][2][:120]}" for k in rech]
     texto = "\n".join(lin) + "\n"
@@ -130,9 +138,9 @@ def main():
     if a.control:
         for k in acept[:20]:
             print("  nuevo aceptado sin revisar:", k.replace("|", " · "), "←", ahora[k][1][:60])
-        if acept or rech:
+        if acept or rech or datos:
             print("  Revisar cada cambio (--salida para el detalle) y, si está bien, --aceptar")
-        return 1 if (acept or rech) else 0
+        return 1 if (acept or rech or datos) else 0
     if not a.salida:
         print(texto[:6000])
     return 0

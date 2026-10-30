@@ -116,3 +116,14 @@ Para que haya menos SIN PRECIO hay que cargar el material que falta en el catál
 - La página hace el mismo control con las piezas del catálogo y no deja pasar a revisado o aprobado con referencias
   incompatibles o desvíos sin resolver (también los de la oferta entre [corchetes] o "a confirmar").
 - Pendiente conocido: NPT/BW pedido contra NPT/NPT (el BW que falta de un lado no cuenta, decisión del 30-10-2026).
+
+## Sexta auditoría independiente (30-10-2026)
+- La página no deja pasar a revisado ni aprobar sin el P9 del repositorio sobre la misma versión (`cot.p9`, firma de
+  los renglones de material; `semilla.py` la escribe al pasar la cotización a la página).
+- Desvío: el texto de la oferta tiene que tener lo ofrecido y lo pedido; no genérico, no repetido; el de serie tiene que
+  coincidir con la serie de la fuente y la del plano.
+- Extremos: el candidato no puede tener un tipo de extremo que el pedido no tiene (salvo el BW de una brida WN).
+- Fuentes sin código: lo que pide el plano y la fuente no dice (revestimiento, costura, schedule por extremo, NACE)
+  frena el paso a revisado hasta verificarlo en el original.
+- Pendientes conocidos: texto de fuente escrito a mano que afirma cumplir; material no dicho por una planilla (aviso);
+  código con el precio de otra pieza.

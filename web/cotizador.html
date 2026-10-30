@@ -516,6 +516,8 @@ const Busqueda = (() => {
     const txt = `extremos o cara distintos (${[...b].sort().join("/").toUpperCase()} por ${[...a].sort().join("/").toUpperCase()})`;
     const ta = tipos(a), tb = tipos(b);
     if (![...ta].some(x => tb.has(x))) return txt;
+    const extra = [...tb].filter(x => !ta.has(x) && !(x === "bw" && (ta.has("brida") || tb.has("brida"))));  // compatibilidad.regla_conexion
+    if (extra.length) return txt;
     const ca = inter(a, CARAS), cb = inter(b, CARAS);
     if (ca.size && cb.size && !igual(ca, cb)) return txt;
     const ra = inter(a, ROSCAS), rb = inter(b, ROSCAS);
@@ -701,7 +703,21 @@ const Busqueda = (() => {
   // P9 en la página (quinta auditoría 30-10-2026: se podía aprobar con una referencia que la norma no admite). Compara la
   // pieza del catálogo con lo que pide el plano (it.plano); cada diferencia necesita un desvío resuelto en it.desvio.
   // Las fuentes sin código del catálogo las controla verificar_computo.py al pasar al repositorio.
-  const SIN_RESOLVER = /\[|a confirmar|a definir|confirmar con|por confirmar/i;
+  const SIN_RESOLVER = /\[|a confirmar|a definir|confirmar con|por confirmar|pendiente|a cotizar/i;
+  // verificar_computo.firma_p9: lo que el repositorio controló (P9 completo, incluidas las fuentes sin código)
+  function firmaP9(cot) {
+    return (cot.items || []).filter(it => it.grupo === "material" && (it.fuentes || []).length).map(it => {
+      const f = it.fuentes[0], dv = (it.desvio || []).filter(d => d && typeof d === "object").map(d => `${d.que || ""}:${d.ofrecido || ""}:${d.pedido || ""}`).join(";");
+      return `${it.id || ""}|${it.pos || ""}|${f.codigo || ""}|${f.proveedor || ""}|${(+f.precio || 0).toFixed(4)}|${dv}`;
+    }).join("\n");
+  }
+  function p9Pendiente(cot) {
+    const p = cot.p9;
+    if (!p) return "El control de compatibilidad completo (P9) lo hace el repositorio: pasar la cotización al repositorio antes de revisarla o aprobarla.";
+    if (firmaP9(cot) !== p.firma) return "Los materiales cambiaron desde el último control de compatibilidad (P9) del repositorio: pasarla al repositorio de nuevo antes de revisarla o aprobarla.";
+    if (!p.ok) return `El control de compatibilidad (P9) del repositorio tiene ${p.errores} error(es) o desvíos a confirmar: corregirlos antes de revisarla o aprobarla.`;
+    return "";
+  }
   function compatItem(it, m) {
     const pl = it.plano || {}, C = COMPAT;
     if (!C || !m || !m.a || !pl.descripcion || it.grupo !== "material") return [];
@@ -738,7 +754,7 @@ const Busqueda = (() => {
       const cr = !it.global && !cc && REN.get((String(s.proveedor || "").match(/\brenard\b.*?c[óo]d\.? ?(\d+)/i) || [])[1]);  // "Renard · cód. N"
       for (const [tipo, txt] of compatItem(it, m || (cr && CAT.get(cr)))) {
         const dv = (it.desvio || []).find(x => String(x.que || "").toLowerCase() === tipo);
-        if (!dv) out.push({ nivel: "bad", txt: `${tag}: la referencia ${cc} no sirve según la norma (${tipo}: ${txt.slice(0, 90)}): cambiarla, dejar SIN PRECIO o declarar el desvío` });
+        if (!dv) out.push({ nivel: "bad", txt: `${tag}: la referencia ${cc || cr} no sirve según la norma (${tipo}: ${txt.slice(0, 90)}): cambiarla, dejar SIN PRECIO o declarar el desvío` });
         else if (!dv.ofrecido || !dv.pedido || SIN_RESOLVER.test(`${dv.ofrecido} ${dv.pedido}`)) out.push({ nivel: "bad", txt: `${tag}: desvío de ${tipo} a confirmar (${dv.ofrecido || "?"} por ${dv.pedido || "?"})` });
         else out.push({ nivel: "warn", txt: `${tag}: desvío declarado de ${tipo}: ${dv.ofrecido} por ${dv.pedido} (tiene que figurar en la oferta)` });
       }
@@ -760,7 +776,7 @@ const Busqueda = (() => {
     if (!d || !calc || d >= calc || String(cfg.plazo?.justificacion || "").trim()) return "";
     return `Plazo ofrecido ${d} días, menor que el calculado (${calc} días): corregilo o escribí la justificación en Plazo. Hasta entonces no se generan las ofertas.`;
   }
-  return { norm, coincide, incompatible, motivos, compatItem, SIN_RESOLVER, campos, opcionales, valores, materiales, servicios, itemDeMaterial, itemDeServicio, soldadura, tarifa, avisos, catalogo, codigoDe, plazoCalculado, plazoBloquea, TIPO_FUENTE, CON_TIPO };
+  return { norm, coincide, incompatible, motivos, compatItem, SIN_RESOLVER, firmaP9, p9Pendiente, campos, opcionales, valores, materiales, servicios, itemDeMaterial, itemDeServicio, soldadura, tarifa, avisos, catalogo, codigoDe, plazoCalculado, plazoBloquea, TIPO_FUENTE, CON_TIPO };
 })();
 if (typeof module !== "undefined") module.exports = Busqueda;
 
@@ -2979,6 +2995,8 @@ if (typeof module !== "undefined") module.exports = Documentos;
     const desv = ((S.doc.oferta || {}).aclaraciones_y_desvios || {}).items || [];
     const malos = Busqueda.avisos(cot).filter(a => a.nivel === "bad").concat(
       desv.filter(x => Busqueda.SIN_RESOLVER.test(String(x))).map(x => ({ nivel: "bad", txt: `Oferta: desvío a confirmar: ${String(x).slice(0, 80)}` })));
+    const p9 = (d === "revisado" || d === "aprobado") ? Busqueda.p9Pendiente(cot) : "";
+    if (p9) malos.push({ nivel: "bad", txt: p9 });
     let error = "", texto = "", extra = "";
     if (d === act) return;
     if (d === "revisado") {
@@ -2995,6 +3013,7 @@ if (typeof module !== "undefined") module.exports = Documentos;
     } else if (d === "borrador") {
       texto = act === "revisado" ? "Vuelve a borrador para seguir cambiándola." : "Vuelve a borrador: se desbloquea, se borra la aprobación y la oferta vuelve a salir con la leyenda de borrador.";
     }
+    if (p9 && error && !error.includes(p9)) error += " " + p9;
     capa.hidden = false;
     capa.innerHTML = `<div class="capa"><section class="panel" role="dialog" aria-label="Cambiar estado"><h2>Pasar a "${E(d)}"</h2>
       ${error ? `<div class="aviso bad">${E(error)}</div>` : `<p>${E(texto)}</p>${extra}`}

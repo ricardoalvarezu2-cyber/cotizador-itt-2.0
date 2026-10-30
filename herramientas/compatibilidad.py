@@ -267,6 +267,13 @@ def regla_conexion(pedido, cand):
     txt = f"extremos o cara distintos ({'/'.join(sorted(cand)).upper()} por {'/'.join(sorted(pedido)).upper()})"
     if not tipos(pedido) & tipos(cand):
         return txt
+    # el candidato no puede tener un tipo de extremo que el pedido no tiene (sexta auditoría: "BW/NPT" pasaba por "BW");
+    # el BW de una brida WN no cuenta (el catálogo o el plano a veces no lo anotan)
+    extra = tipos(cand) - tipos(pedido)
+    if "brida" in tipos(pedido) | tipos(cand):
+        extra -= {"bw"}
+    if extra:
+        return txt
     ca, cb = pedido & CARAS, cand & CARAS
     if ca and cb and ca != cb:
         return txt

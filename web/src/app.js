@@ -787,6 +787,8 @@
     const desv = ((S.doc.oferta || {}).aclaraciones_y_desvios || {}).items || [];
     const malos = Busqueda.avisos(cot).filter(a => a.nivel === "bad").concat(
       desv.filter(x => Busqueda.SIN_RESOLVER.test(String(x))).map(x => ({ nivel: "bad", txt: `Oferta: desvío a confirmar: ${String(x).slice(0, 80)}` })));
+    const p9 = (d === "revisado" || d === "aprobado") ? Busqueda.p9Pendiente(cot) : "";
+    if (p9) malos.push({ nivel: "bad", txt: p9 });
     let error = "", texto = "", extra = "";
     if (d === act) return;
     if (d === "revisado") {
@@ -803,6 +805,7 @@
     } else if (d === "borrador") {
       texto = act === "revisado" ? "Vuelve a borrador para seguir cambiándola." : "Vuelve a borrador: se desbloquea, se borra la aprobación y la oferta vuelve a salir con la leyenda de borrador.";
     }
+    if (p9 && error && !error.includes(p9)) error += " " + p9;
     capa.hidden = false;
     capa.innerHTML = `<div class="capa"><section class="panel" role="dialog" aria-label="Cambiar estado"><h2>Pasar a "${E(d)}"</h2>
       ${error ? `<div class="aviso bad">${E(error)}</div>` : `<p>${E(texto)}</p>${extra}`}
