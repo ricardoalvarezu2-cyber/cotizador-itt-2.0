@@ -71,6 +71,16 @@ def serie_de(v):
     return next((p for p in partes_sch(v) if p in SERIES), "")
 
 
+def largo_virola(desc):
+    """Largo de una virola: "× 3,2 m" o "L 3200 mm"; nunca el diámetro ("DI 1.280 mm" se tomaba como largo, Camuzzi 003)."""
+    t = norm(desc)
+    m = re.search(r"(?<![\d.,])(\d+(?:,\d+)?)\s?m\b", t)
+    if m:
+        return float(m.group(1).replace(",", "."))
+    t = re.sub(r"\b(?:di|de|od|id|diam)\s?\d[\d.]*\s?mm", " ", t)
+    return largo_m(t)
+
+
 def largo_m(desc):
     m = re.search(r"(\d[\d.]*)\s?mm", norm(desc))
     return float(m.group(1).replace(".", "")) / 1000 if m else None
@@ -170,8 +180,8 @@ def kg_de(r):
     m = re.search(r"(\d+(?:[.,]\d+)?)\s?kg\s?(?:c/u|cada)", t)
     if m:
         return float(m.group(1).replace(",", ".")), "kg escritos en la descripción"
-    if re.search(r"\bvirola", t) and dn_de(r["diametro"]) and largo_m(r["descripcion"]) and espesor_mm(r):
-        D, L, e = dn_de(r["diametro"]) * 0.0254, largo_m(r["descripcion"]), espesor_mm(r) / 1000
+    if re.search(r"\bvirola", t) and dn_de(r["diametro"]) and largo_virola(r["descripcion"]) and espesor_mm(r):
+        D, L, e = dn_de(r["diametro"]) * 0.0254, largo_virola(r["descripcion"]), espesor_mm(r) / 1000
         return round(math.pi * D * L * e * 7850, 1), f"π × {fmt(D, 3)} m × {fmtg(L)} m × {fmt(e * 1000, 2)} mm × 7.850 kg/m³"
     return None, ""
 
@@ -440,10 +450,13 @@ def superficie_pintura(filas, m2_canos):
     for r in filas:
         d, q, u = norm(r["descripcion"]), cantidad_plano(r["cantidad"]), norm(r["unidad"])
         D = (dn_de(r["diametro"]) or 0) * 0.0254
-        if re.search(r"\bvirola", d) and D and largo_m(r["descripcion"]):
-            env += math.pi * D * largo_m(r["descripcion"]) * q
+        # una virola o un casquete cargado en kg es UNA pieza con sus medidas en la descripción: la cantidad son kilos, no
+        # piezas (Camuzzi 003, 30-10-2026: 6.916 kg de chapa daban 38.852 m² de pintura)
+        n_pz = 1 if u == "kg" else q
+        if re.search(r"\bvirola", d) and D and largo_virola(r["descripcion"]) and not u.startswith("m"):  # por metro ya está en caños
+            env += math.pi * D * largo_virola(r["descripcion"]) * n_pz
         elif re.search(r"casquete|cabezal", d) and D:
-            env += 1.09 * D * D * q
+            env += 1.09 * D * D * n_pz
         elif re.search(INTERNOS, d):
             continue
         elif perfil(r) and u.startswith("m") and not u.startswith("m2"):
@@ -543,11 +556,11 @@ def soldaduras(filas, diametral=False):
         n_sw_olet += n_sw * q
         placas[0] += bw_taller / 2 * pch
         placas[1] += bw_taller / 2 * pgr
-        if re.search(r"\bvirola", d) and largo_m(r["descripcion"]):
+        if re.search(r"\bvirola", d) and largo_virola(r["descripcion"]) and not norm(r["unidad"]).startswith("m"):
             # costura longitudinal de la virola rolada: largo / (π · 25,4) pulgadas de diámetro equivalente (CTRL-T01)
-            lon = q * largo_m(r["descripcion"]) * 1000 / (math.pi * 25.4)
+            lon = q * largo_virola(r["descripcion"]) * 1000 / (math.pi * 25.4)
             bw_eq += 2 * lon * f  # bw_eq se divide por 2 al final (cuenta extremos)
-            detalle.append(f"pos {r['pos']}: costura longitudinal de {fmtg(q)} virola(s) de {fmtg(largo_m(r['descripcion']) * 1000)} mm = {fmt(lon, 1)} pulg-eq × {fmt(f, 4)}")
+            detalle.append(f"pos {r['pos']}: costura longitudinal de {fmtg(q)} virola(s) de {fmtg(largo_virola(r['descripcion']) * 1000)} mm = {fmt(lon, 1)} pulg-eq × {fmt(f, 4)}")
         if n_bw:
             detalle.append(f"pos {r['pos']}: {fmtg(bw_taller)} extremo(s) BW de taller ({fmtg(n_bw)} por unidad × {fmtg(q)}{f' − {fmtg(campo)} de campo por unidad' if campo else ''}{f' × {fmtg(m_r)} por el caño' if m_r != 1 else ''}) × {fmtg(dn)}\" × {fmt(f, 4)}")
         if n_sw:

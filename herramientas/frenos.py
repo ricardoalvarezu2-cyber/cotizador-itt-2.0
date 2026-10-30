@@ -13,7 +13,7 @@ Frenos:
   doble_lectura   falta pedido/transcripcion_b.json (segunda lectura hecha por otro, sin ver la primera), o las dos
                   lecturas difieren en alguna celda sin resolver (se resuelve en transcripcion.json → "diferencias_resueltas")
   requisitos      falta pedido/requisitos.csv o algún requisito no tiene destino válido (cumple, renglon, desvio,
-                  exclusion) o sigue en "consulta" sin respuesta; renglon = posición o rubro del cómputo; desvío y exclusión
+                  exclusion) o sigue en "consulta" sin respuesta o en "pendiente_itt" (algo que hace ITT: memoria, esquema); renglon = posición o rubro del cómputo; desvío y exclusión
                   = fragmento literal de oferta.json
   estimado        lo estimado pesa más del 15% del costo directo → justificaciones.estimado
   antecedentes    no hay antecedente con costo comparable, o el costo difiere más del 15% del más parecido →
@@ -37,7 +37,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from numeros import a_vista, fmt  # noqa: E402
 
-DESTINOS = ("cumple", "renglon", "desvio", "exclusion", "consulta")
+DESTINOS = ("cumple", "renglon", "desvio", "exclusion", "consulta", "pendiente_itt")
 COLUMNAS_REQUISITOS = ("id", "documento", "pagina", "texto", "tema", "destino", "referencia")
 LIMITE_ESTIMADO = 0.15
 LIMITE_ANTECEDENTE = 0.15
@@ -171,6 +171,8 @@ def frenos_requisitos(carpeta, plano_pos):
             malos.append(f"{r['id']}: destino «{r['destino']}» no válido")
         elif d == "consulta":
             malos.append(f"{r['id']}: consulta al cliente sin respuesta")
+        elif d == "pendiente_itt":  # lo tiene que hacer ITT antes de ofertar (memoria de cálculo, esquema, planos): frena igual
+            malos.append(f"{r['id']}: pendiente de ITT ({ref[:60] or 'sin detalle'})")
         elif not _norm(r["texto"]) or not _norm(r["documento"]):
             malos.append(f"{r['id']}: falta el texto literal o el documento de origen")
         elif d != "cumple" and not ref:

@@ -69,6 +69,10 @@ igual("válvula sin Ø: no es similar", bool(precotizar.rechazo((0, 0, 0, 0, 0, 
 igual('brida 16" con una de 10": no (más de 1,25× desde 8")', bool(precotizar.rechazo((0, 0, 0, 0, 0, 0, ['diametro: 10" (pedido 16")'], {}), {**fila, "diametro": '16"'}, "BRI")), True)
 igual('sockolet 12"x3/4": se escala por la salida', precotizar.ajuste_similar((0, 0, 0, 0, 0, 0, ['diametro: 0.75" (pedido 12")'], {}), {"diametro": '12"x3/4"', "descripcion": "Sockolet"}, "AFO")[0], 1.0)
 
+# pintura de una virola cargada en kg: es una pieza (π·D·L), no "kg piezas" (Camuzzi 003, 30-10-2026: daba 38.852 m²)
+sup = dict(precotizar.superficie_pintura([{"descripcion": 'Chapa para virola Ø55" (DI 1.280 mm) × 3,2 m × 2 1/4" (6.287 kg + 10% recortes)', "diametro": '55"', "cantidad": "6916", "unidad": "kg", "extremos": "BW", "serie_sch": ""}], 0))
+igual("virola en kg: π·D·L de una pieza", round(sup["envolvente"], 1), round(3.14159265 * 55 * 0.0254 * 3.2, 1))
+
 if fallas:
     print(f"FALLAN {len(fallas)}:")
     for f in fallas:
