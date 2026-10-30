@@ -30,6 +30,12 @@ const Ficha = (() => {
   const partesSch = v => String(v ?? "").toUpperCase().split(/\s+X\s+|[/ ]|(?<=\d)X(?=\d)/).filter(p => p.replace(/^#+|#+$/g, "")).map(p => p.replace(/^#+|#+$/g, "").replace("SCH", ""));
   const schDe = v => partesSch(v).find(p => SCHEDULES.has(p)) || "";
   const largoM = d => { const m = norm(d).match(/(\d[\d.]*)\s?mm/); return m ? parseFloat(m[1].replace(/\./g, "")) / 1000 : null; };
+  // largo de una virola: "× 3,2 m" o "L 3200 mm", nunca el diámetro "DI 1.280 mm" (precotizar.largo_virola)
+  const largoVirola = d => {
+    const t = norm(d), m = t.match(/(?<![\d.,])(\d+(?:,\d+)?)\s?m\b/);
+    if (m) return parseFloat(m[1].replace(",", "."));
+    return largoM(t.replace(/\b(?:di|de|od|id|diam)\s?\d[\d.]*\s?mm/g, " "));
+  };
   const barraM = d => (dnDe(d) || 0) >= 3 ? 12.0 : 6.0;
   function espesorMm(r) {
     const m = (String(r.descripcion || "") + " " + String(r.serie_sch || "")).match(/\b(?:esp|e)\s*[.=:]?\s*(\d+(?:[.,]\d+)?(?:\s*\d+\/\d+|\/\d+)?)\s*("|mm|pulg)/i);
@@ -110,7 +116,7 @@ const Ficha = (() => {
       } else bwEq += bwTaller * (dn || 0) * f;
       juntasSw += nSw * q * (dn || 0) * f; nSwOlet += nSw * q;
       placas[0] += bwTaller / 2 * pch; placas[1] += bwTaller / 2 * pgr;
-      if (/\bvirola/.test(d) && largoM(r.descripcion)) bwEq += 2 * (q * largoM(r.descripcion) * 1000 / (Math.PI * 25.4)) * f;
+      if (/\bvirola/.test(d) && largoVirola(r.descripcion) && !norm(r.unidad).startsWith("m")) bwEq += 2 * (q * largoVirola(r.descripcion) * 1000 / (Math.PI * 25.4)) * f;
     }
     const avisos = [...avisosKg];
     if (extremosBw % 2 && !porMetro.length) avisos.push(`Quedan ${extremosBw} extremos BW de taller (número impar): falta marcar algún extremo de campo o una pieza`);
@@ -324,8 +330,9 @@ const Ficha = (() => {
     let piezas = 0, env = 0, est = 0;
     for (const r of filas) {
       const d = norm(r.descripcion), q = +r.cantidad || 0, u = norm(r.unidad), D = (dnDe(r.diametro) || 0) * 0.0254;
-      if (/\bvirola/.test(d) && D && largoM(r.descripcion)) env += Math.PI * D * largoM(r.descripcion) * q;
-      else if (/casquete|cabezal/.test(d) && D) env += 1.09 * D * D * q;
+      const nPz = u === "kg" ? 1 : q;  // una virola o un casquete en kg es una pieza (los kg no son piezas)
+      if (/\bvirola/.test(d) && D && largoVirola(r.descripcion) && !u.startsWith("m")) env += Math.PI * D * largoVirola(r.descripcion) * nPz;
+      else if (/casquete|cabezal/.test(d) && D) env += 1.09 * D * D * nPz;
       else if (INTERNOS.test(d)) continue;
       else if (perfil(datos, r.descripcion) && u.startsWith("m") && !u.startsWith("m2")) est += perfil(datos, r.descripcion)[1] * q;
       else if (u === "kg" && /perfil|upn|ipn|heb|bastidor|estructura|pata|cuna|soporte|skid|chapa|cancamo|angulo|planchuela/.test(d)) est += q * M2_POR_KG_ESTRUCTURA;
