@@ -162,6 +162,9 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - Se pidieron cotizaciones a muchos terceros (tubos, instrumental, portaplaca, rejillas, MO de armado): el costo del skid depende mucho de compras y MO tercerizada *(VISTA/1 - Skid de acondicionamiento de gas combustible, Aguada Federal)*
 - Algunas cotizaciones de proveedores (Esferomatic, Gora) parecen reutilizadas de otro proyecto (Tecpetrol PE-91285), cuidar que correspondan al alcance *(VISTA/1 - Skid de acondicionamiento de gas combustible, Aguada Federal)*
 - Anticipo del 30% y 20% contra OC de casquetes y bridas indican material principal de largo plazo *(VISTA/1 - Skid de acondicionamiento de gas combustible, Aguada Federal)*
+- Skid concentrador 8 × 8": 124 juntas BW (cálculo junta por junta); la PC0 pone RX USD 5.000 por skid, el cálculo da unos USD 15.000 *(YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN)*
+- Las horas propias son pocas porque la soldadura va a Ledesma: ingeniería 176 h y calidad 63 h para 3 skids; 40 h de planta por skid (movimientos y PH) *(YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN)*
+- Recotización con el cotizador: COT26-0330-001 y COT26-0330-002 (borrador, 28-10-2026) *(YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN)*
 
 ## Manifolds
 

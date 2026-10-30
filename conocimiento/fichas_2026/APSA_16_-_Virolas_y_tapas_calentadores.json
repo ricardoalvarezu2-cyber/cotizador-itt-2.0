@@ -9,44 +9,7 @@
  "referencia_cliente": null,
  "familia": "C",
  "descripcion_corta": "Virolas, bridas y tapas para calentadores: solo hay oferta de mano de obra de rolado/armado de Sandri",
- "items": [
-  {
-   "descripcion": "Virola D ext 1390 mm, L 4490 mm (2480+2010), e 1/4\", A-36 (MO corte, biselado, cilindrado, armado, punteado)",
-   "cantidad": 1,
-   "unidad": "u",
-   "precio_unitario": 3760000.0,
-   "precio_total": 3760000.0,
-   "moneda": "ARS",
-   "datos_tecnicos": "costo de proveedor"
-  },
-  {
-   "descripcion": "Virola D ext 1390 mm, L 990 mm, e 3/8\", A-36",
-   "cantidad": 1,
-   "unidad": "u",
-   "precio_unitario": 1950000.0,
-   "precio_total": 1950000.0,
-   "moneda": "ARS",
-   "datos_tecnicos": "costo de proveedor"
-  },
-  {
-   "descripcion": "Brida D ext 1540 / int 1390 mm, planchuela 3\" x 3/8\", A-36",
-   "cantidad": 4,
-   "unidad": "u",
-   "precio_unitario": 950000.0,
-   "precio_total": 3800000.0,
-   "moneda": "ARS",
-   "datos_tecnicos": "costo de proveedor"
-  },
-  {
-   "descripcion": "Tapa D 1540 mm, e 3/8\", A-36",
-   "cantidad": 4,
-   "unidad": "u",
-   "precio_unitario": 800000.0,
-   "precio_total": 3200000.0,
-   "moneda": "ARS",
-   "datos_tecnicos": "costo de proveedor"
-  }
- ],
+ "items": [],
  "monto_total_ofertado": null,
  "moneda": null,
  "costo_total": 12710000.0,
@@ -92,6 +55,7 @@
  "problemas": [
   "No hay propuesta de ITT, precio ofertado ni factor",
   "Total proveedor calculado por suma de ítems (no figura en el texto)",
-  "Cantidades de bridas y tapas (4 c/u) pueden corresponder a 2 calentadores; no confirmado"
+  "Cantidades de bridas y tapas (4 c/u) pueden corresponder a 2 calentadores; no confirmado",
+  "Revisada el 30-10-2026: se sacaron los 4 ítems de 'items' porque eran precios de proveedor (Sandri (ARS + IVA, MO de rolado/armado); ya figura en proveedores); la carpeta solo tiene 5.Proveedores 3ros, sin oferta de ITT, por lo que items queda vacío y monto_total_ofertado null."
  ]
 }

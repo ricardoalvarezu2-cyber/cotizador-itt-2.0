@@ -9,17 +9,7 @@
  "referencia_cliente": "YPF G-65918-RV",
  "familia": "F",
  "descripcion_corta": "Filtro horizontal canasto 20\" SCH 40: solo cotización de mano de obra de armado",
- "items": [
-  {
-   "descripcion": "Filtro horizontal 20\" SCH 40 - armado y soldadura (MO)",
-   "cantidad": 1,
-   "unidad": "u",
-   "precio_unitario": 3400.0,
-   "precio_total": 3400.0,
-   "moneda": "USD",
-   "datos_tecnicos": "20\" SCH 40; cuna metálica PNU 120; conexiones; pescante 2\"; costo de proveedor, cantidad no confirmada"
-  }
- ],
+ "items": [],
  "monto_total_ofertado": null,
  "moneda": null,
  "costo_total": null,
@@ -65,6 +55,7 @@
  "problemas": [
   "No hay propuesta de ITT, materiales, precio ni plazo",
   "Cantidad no indicada (precio C/U)",
-  "Cliente final YPF inferido del nombre de carpeta"
+  "Cliente final YPF inferido del nombre de carpeta",
+  "Revisada el 30-10-2026: se sacó de items el filtro horizontal 20\" SCH 40 armado y soldadura (USD 3.400), precio del proveedor Ledesma (presupuesto 200299, 23-07-2026) ya presente en proveedores. La carpeta no tiene oferta de ITT: items vacío y monto_total_ofertado null."
  ]
 }

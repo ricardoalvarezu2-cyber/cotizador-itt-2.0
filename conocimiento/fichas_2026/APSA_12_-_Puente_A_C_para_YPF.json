@@ -9,44 +9,7 @@
  "referencia_cliente": "Puente de producción/inyección de agua de formación en acero al carbono para YPF",
  "familia": "P",
  "descripcion_corta": "Puente de acero al carbono para YPF (inyección de agua de formación): solo se conservan cotizaciones de proveedores de accesorios y mangueras.",
- "items": [
-  {
-   "descripcion": "Junta monolítica 2\" BW/NPT 2000 (mapeo inferido)",
-   "cantidad": 2,
-   "unidad": "un",
-   "precio_unitario": 315.0,
-   "precio_total": 630.0,
-   "moneda": "USD",
-   "datos_tecnicos": "2\" BW/NPT 2000"
-  },
-  {
-   "descripcion": "Niple reducción 2 7/8\" EU x 3/4\" NPT SCH80 (mapeo inferido)",
-   "cantidad": 6,
-   "unidad": "un",
-   "precio_unitario": 87.75,
-   "precio_total": 526.5,
-   "moneda": "USD",
-   "datos_tecnicos": "2 7/8\" EUE x 3/4\" NPT Sch80"
-  },
-  {
-   "descripcion": "Rosca con tuerca 2 7/8\" EUE S3000 A105 (mapeo inferido)",
-   "cantidad": 2,
-   "unidad": "un",
-   "precio_unitario": 190.45,
-   "precio_total": 380.9,
-   "moneda": "USD",
-   "datos_tecnicos": "2 7/8\" EUE S3000 A105"
-  },
-  {
-   "descripcion": "Niple reducción 2\" x 1 1/2\" NPT Sch80 A106B (mapeo inferido)",
-   "cantidad": 4,
-   "unidad": "un",
-   "precio_unitario": 15.15,
-   "precio_total": 60.6,
-   "moneda": "USD",
-   "datos_tecnicos": "A106 Gr.B Sch80"
-  }
- ],
+ "items": [],
  "monto_total_ofertado": null,
  "moneda": "USD",
  "costo_total": 1598.0,
@@ -118,6 +81,7 @@
   "El PDF de Duralitte perdió la correspondencia fila/descripción; mapeo inferido por orden y por el subtotal 1.598,00 (sobra una cantidad '4,00' y la cruz 2 7/8\" no tiene línea clara)",
   "Cot Duralitte válvulas esféricas 278.docx sin texto",
   "El hilo de Dinatecnica mezcla pedidos (juntas monolíticas CGC, mangueras 1\" y 2\"); no es seguro que todo corresponda a este puente",
-  "costo_total es solo accesorios Duralitte, no el costo del puente"
+  "costo_total es solo accesorios Duralitte, no el costo del puente",
+  "Revisada el 30-10-2026: se sacaron los 4 ítems de 'items' porque eran precios de proveedor (Duralitte (P_16838); ya figuran en proveedores); la carpeta solo tiene 5.Proveedores 3ros, sin oferta de ITT, por lo que items queda vacío y monto_total_ofertado null."
  ]
 }

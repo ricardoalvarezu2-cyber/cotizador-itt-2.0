@@ -9,35 +9,7 @@
  "referencia_cliente": "Manifold de PAD S-900 (Ledesma/Taval hacen referencia a vistas y MR de 'Manifold PAD S-600')",
  "familia": "M",
  "descripcion_corta": "Skid manifold de PAD S-900: solo cotizaciones de materiales de terceros (bridas WN RJ #900, juntas RTJ, espárragos); sin oferta de ITT.",
- "items": [
-  {
-   "descripcion": "Bridas WN Sch80 RJ serie 900 A105 (10\" x2, 6\" x26, 4\" x4)",
-   "cantidad": 32,
-   "unidad": "un",
-   "precio_unitario": null,
-   "precio_total": 5832.26,
-   "moneda": "USD",
-   "datos_tecnicos": "ASTM A105 ANSI B16.5, Sch 80, RJ #900 (cotización de proveedor)"
-  },
-  {
-   "descripcion": "Juntas RTJ R45 octogonal 6\" #900",
-   "cantidad": 24,
-   "unidad": "un",
-   "precio_unitario": 12.87,
-   "precio_total": 308.88,
-   "moneda": "USD",
-   "datos_tecnicos": "RTJ R45 D octogonal, 6\" 3/6/900"
-  },
-  {
-   "descripcion": "Espárragos roscados A193 B7 1 1/8\" x 7\" con 2 tuercas A194 2H, zincado amarillo",
-   "cantidad": 160,
-   "unidad": "un",
-   "precio_unitario": 7.82,
-   "precio_total": 1251.2,
-   "moneda": "USD",
-   "datos_tecnicos": "ASTM A193 B7 / A194 2H, zincado ASTM F1941"
-  }
- ],
+ "items": [],
  "monto_total_ofertado": null,
  "moneda": null,
  "costo_total": null,
@@ -110,6 +82,7 @@
   "No hay oferta ITT, costos ni OC: monto, factor, plazo y resultado desconocidos.",
   "Taval: sin precio legible (solo adjuntos en el mail).",
   "Referencias a PAD S-600 en adjuntos Taval vs S-900 en la carpeta.",
-  "Items del cliente no disponibles; cantidades de bridas/juntas/espárragos son las de los proveedores."
+  "Items del cliente no disponibles; cantidades de bridas/juntas/espárragos son las de los proveedores.",
+  "Revisada el 30-10-2026: se sacaron de items las juntas RTJ R45 6\" #900 (12,87; MS Juntas), los espárragos A193 B7 1 1/8\" x 7\" (7,82; Ind Delgado) y también las bridas WN RJ #900 (5.832,26; Grupo Provemet), todos precios de proveedor ya presentes en proveedores. La carpeta no tiene oferta de ITT: items vacío y monto_total_ofertado null."
  ]
 }

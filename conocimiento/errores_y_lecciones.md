@@ -208,3 +208,8 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 - Corrección: cara con cara y rosca con rosca; el BW que falta de un lado no cuenta; bulonería por bulón y por tuerca por separado.
 - Lección: antes de activar una regla que descarta, comparar el resultado con y sin la regla en los renglones reales y revisar cada cambio. Un descarte equivocado deja sin precio una pieza que estaba bien.
 - Otro error de la sesión: dije que TAVAL/37 no estaba en `horas_por_equipo.csv` y sí estaba. Lección: verificar en el archivo antes de proponer trabajo.
+
+## 30-10-2026 — consolidar_fichas.py borraba filas cargadas a mano en los CSV
+- Qué pasó: al consolidar las 8 fichas corregidas, `consolidar_fichas.py` reescribió `proveedores_2026.csv` y `cotizaciones_*` desde las fichas y borró filas que se habían cargado a mano (cotizaciones de Complemet y MS Juntas de TAVAL/72 y PAMPA/7). El catálogo perdió esos precios y el control SK01 se movió +3%. Se vio porque `verificar_todo.py` frenó por el control movido.
+- Corrección: se restauraron los CSV y se aplicaron a mano solo los cambios de las 8 fichas. `consolidar_fichas.py` ya no reescribe un CSV que existe: solo suma filas de carpetas nuevas y avisa qué carpetas ya estaban (sus cambios se pasan a mano). Se sumaron además las filas de YPF/28, que tenía ficha y nunca se había consolidado; el catálogo quedó idéntico.
+- Lección: un archivo que se arma desde otros y además se edita a mano tiene que poder sumarse, nunca regenerarse entero. Los controles de totales sirvieron: frenaron el cambio.

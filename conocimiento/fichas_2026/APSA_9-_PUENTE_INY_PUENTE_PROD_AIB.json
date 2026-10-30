@@ -9,26 +9,7 @@
  "referencia_cliente": "Pedido del 28/01/2026: PUENTE INY.2.3/8\"2000 P/ARMAR PL.0186/94 x20 y PUENTE PROD AIB C/RECIRC.PROD.NORMAL x3",
  "familia": "P",
  "descripcion_corta": "20 puentes de inyección de agua 2 3/8\" y 3 puentes de producción AIB con recirculación, roscados serie 2000/3000, para pozos petroleros",
- "items": [
-  {
-   "descripcion": "Puente de inyección 2 3/8\" 2000, acero al carbono, armado, probado y pintado (precio de proveedor Danco)",
-   "cantidad": 20,
-   "unidad": "un",
-   "precio_unitario": 5220,
-   "precio_total": 104400,
-   "moneda": "USD",
-   "datos_tecnicos": "Acero al carbono, roscado NPT/API-LP, serie 2000; precio de COSTO del proveedor, no precio de venta"
-  },
-  {
-   "descripcion": "Puente de producción AIB con recirculación, acero al carbono, armado, probado y pintado (precio de proveedor Danco)",
-   "cantidad": 3,
-   "unidad": "un",
-   "precio_unitario": 3665,
-   "precio_total": 10995,
-   "moneda": "USD",
-   "datos_tecnicos": "Acero al carbono, serie 2000; precio de COSTO del proveedor, no precio de venta"
-  }
- ],
+ "items": [],
  "monto_total_ofertado": null,
  "moneda": "USD",
  "costo_total": 115395,
@@ -141,6 +122,7 @@
   "Familia P es la más cercana, pero son puentes de pozo roscados, no de medición",
   "Posición 23 duplicada en la lista de válvulas de Danco (USD 195 y USD 130)",
   "Precios de Taval, MS Juntas y parte de ABAC en adjuntos no extraídos",
-  "El cliente figura como Almacenes Petroleros (APSA) y el pedido llegó vía Taval, que oferta como intermediaria"
+  "El cliente figura como Almacenes Petroleros (APSA) y el pedido llegó vía Taval, que oferta como intermediaria",
+  "Revisada el 30-10-2026: se sacaron los 2 ítems de 'items' porque eran precios de proveedor (Danco; ya figuran en proveedores); la carpeta solo tiene 5.Proveedores 3ros, sin oferta de ITT, por lo que items queda vacío y monto_total_ofertado null."
  ]
 }

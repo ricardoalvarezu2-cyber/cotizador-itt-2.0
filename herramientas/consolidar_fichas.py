@@ -9,6 +9,8 @@ Genera:
   conocimiento/precios/proveedores_<SUFIJO>.csv           cotizaciones de proveedores
   conocimiento/aprendizajes_<SUFIJO>.md                   aprendizajes por familia (si ya existe, solo suma los de
                                                           carpetas nuevas: no pisa lo escrito a mano)
+Los CSV que ya existen no se reescriben: solo se suman las filas de carpetas nuevas (tienen filas cargadas a mano; se
+perdían, 30-10-2026). Si se corrige la ficha de una carpeta que ya estaba, el cambio en los CSV se pasa a mano.
 Al final corre validar_fichas.py sobre las fichas que entran (solo avisos).
 """
 import csv
@@ -32,7 +34,19 @@ def codigo_familia(texto) -> str:
     return next((c for c in sorted(FAMILIAS, key=len, reverse=True) if t.startswith(c)), "OT")
 
 
-def escribir(ruta: Path, columnas, filas):
+def escribir(ruta: Path, columnas, filas, col_carpeta=0):
+    """Si el CSV ya existe, NO lo reescribe (30-10-2026: tenía filas cargadas a mano que se perdían): solo agrega las filas
+    de carpetas que todavía no están. Una carpeta que ya figura no se toca y se avisa: sus cambios se pasan a mano."""
+    if ruta.exists():
+        viejas = list(csv.reader(ruta.open(encoding="utf-8")))
+        ya = {r[col_carpeta] for r in viejas[1:] if len(r) > col_carpeta}
+        nuevas = [["" if v is None else v for v in f] for f in filas if str(f[col_carpeta] or "") not in ya]
+        repetidas = sorted({str(f[col_carpeta]) for f in filas if str(f[col_carpeta] or "") in ya})
+        with ruta.open("a", newline="", encoding="utf-8") as fh:
+            csv.writer(fh).writerows(nuevas)
+        print(f"  {ruta.relative_to(RAIZ)}: {len(nuevas)} filas nuevas sumadas; {len(repetidas)} carpetas ya estaban y no se tocaron"
+              + (" (si cambió su ficha, pasar el cambio a mano)" if repetidas else ""))
+        return
     ruta.parent.mkdir(parents=True, exist_ok=True)
     with ruta.open("w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
@@ -107,7 +121,7 @@ def main():
              ["carpeta", "cliente", "fecha_oferta", "familia", "descripcion", "cantidad", "unidad",
               "precio_unitario", "precio_total", "moneda", "datos_tecnicos"], items)
     escribir(DESTINO / f"precios/proveedores_{sufijo}.csv",
-             ["fecha", "proveedor", "detalle", "precio", "moneda", "plazo_entrega", "carpeta_cotizacion"], prov)
+             ["fecha", "proveedor", "detalle", "precio", "moneda", "plazo_entrega", "carpeta_cotizacion"], prov, col_carpeta=6)
     lineas = [f"# Aprendizajes de las cotizaciones {sufijo}", "",
               "Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sirven como lista de "
               "control al cotizar un pedido parecido. Fuente: `fichas_" + sufijo + "/`.", ""]

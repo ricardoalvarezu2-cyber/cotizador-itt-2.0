@@ -9,17 +9,7 @@
  "referencia_cliente": "Separador canalización vapores regeneradora TEG",
  "familia": "SEP",
  "descripcion_corta": "Separador de vapores (regeneradora TEG), 'HD separador SCH 40 AC': solo hay presupuesto del taller Ledesma por fabricación.",
- "items": [
-  {
-   "descripcion": "HD separador SCH 40 AC: armado y soldadura, conexiones, deflector (cotización de taller)",
-   "cantidad": 1,
-   "unidad": "un",
-   "precio_unitario": 1050,
-   "precio_total": 1050,
-   "moneda": "USD",
-   "datos_tecnicos": "Sch 40 acero al carbono; sin diámetro/presión indicados"
-  }
- ],
+ "items": [],
  "monto_total_ofertado": null,
  "moneda": null,
  "costo_total": null,
@@ -61,6 +51,7 @@
  },
  "problemas": [
   "Solo un presupuesto de proveedor: no hay oferta ITT, costo total, factor, plazo ni resultado.",
-  "Sin dimensiones ni presión de diseño."
+  "Sin dimensiones ni presión de diseño.",
+  "Revisada el 30-10-2026: se sacó de items el HD separador SCH 40 (USD 1.050), que es precio del taller Ledesma (presupuesto 200279, 08-06-2026) y ya figuraba en proveedores. La carpeta no tiene oferta de ITT: items vacío y monto_total_ofertado null."
  ]
 }

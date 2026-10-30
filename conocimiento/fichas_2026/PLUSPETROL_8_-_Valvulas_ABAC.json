@@ -9,17 +9,7 @@
  "referencia_cliente": "Válvulas (cotización de proveedor ABAC, ref. 1401)",
  "familia": "V",
  "descripcion_corta": "Cotización de válvulas de aguja/bloqueo y purga ABAC para puentes de inyección y producción; sin oferta a cliente en la carpeta",
- "items": [
-  {
-   "descripcion": "Válvula aguja bloqueo recta 1/2\" NPTM x NPTH, 10000 psi, AISI 316, empaque grafoil, ABAC VA150M IG-HS",
-   "cantidad": 8,
-   "unidad": "u",
-   "precio_unitario": 136.9,
-   "precio_total": 1095.2,
-   "moneda": "USD",
-   "datos_tecnicos": "Costo de proveedor + IVA; AISI 316, 689 bar"
-  }
- ],
+ "items": [],
  "monto_total_ofertado": null,
  "moneda": "USD",
  "costo_total": 1095.2,
@@ -88,6 +78,7 @@
  },
  "problemas": [
   "Solo hay mail de proveedor; no hay oferta ni cliente confirmado (cliente tomado del nombre de carpeta)",
-  "Se desconoce si 1.401 es referencia ITT o de ABAC; el asunto menciona puentes de inyección y producción"
+  "Se desconoce si 1.401 es referencia ITT o de ABAC; el asunto menciona puentes de inyección y producción",
+  "Revisada el 30-10-2026: se sacó de items la válvula aguja ABAC 1/2\" (USD 136,90 + IVA), precio de proveedor (mail ABAC) que ya figuraba en proveedores. La carpeta no tiene oferta de ITT: items vacío y monto_total_ofertado null. costo_total/desglose materiales (1.095,20 = 8 x 136,90) se mantienen como costo de proveedor."
  ]
 }
