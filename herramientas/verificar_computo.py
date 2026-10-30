@@ -35,6 +35,43 @@ def num(v):
     return float(v.replace(",", ".")) if v else None
 
 
+A_CONFIRMAR = "DESVÍO A CONFIRMAR · "
+# palabras que tiene que tener el desvío de la oferta según lo que no cumple
+DESVIO_KW = {"serie": r"serie|clase|class|#\s?\d|rating",
+             "material": r"material|cuerpo|trim|intern|asiento|aisi|astm|\ba ?\d{3}\b|inox|acero|wcb|grado|\bgr\b",
+             "extremos": r"rosca|npt|bspt|bsp\b|extremo|\bbw\b|\bsw\b|soldar|\bcara\b|\brf\b|rtj",
+             "revestimiento": r"revest|tricapa|polietileno|polipropileno|fbe|epox",
+             "schedule": r"\bsch|schedule|espesor",
+             "nace": r"nace|mr ?0175|mr ?0103|15156"}
+
+
+def tipo_motivo(m):
+    m = m.lower()
+    for k, rx in (("serie", r"^serie"), ("extremos", r"^extremos"), ("revestimiento", r"^revestimiento"),
+                  ("schedule", r"schedule"), ("nace", r"nace|mr0175|iso 15156"),
+                  ("material", r"material|cuerpo|galvaniz|grado del|internos")):
+        if re.search(rx, m):
+            return k
+    return ""
+
+
+def desvios_oferta(c):
+    """{pos: [textos]} de aclaraciones y desvíos de la oferta: "(pos. 1, 8, 10 y 11)", "pos. 1 a 5", "pos. 21-23"."""
+    import json
+    out = {}
+    if not (c / "oferta.json").exists():
+        return out
+    of = json.load(open(c / "oferta.json", encoding="utf-8"))
+    for x in (of.get("aclaraciones_y_desvios") or {}).get("items", []):
+        x = str(x)
+        for m in re.finditer(r"(?i)\bpos(?:ición|iciones|\.)?\s*(\d+[a-z]?(?:\s*(?:,|y|e|a|-|–)\s*\d+[a-z]?)*)", x):
+            for a, sep, b in re.findall(r"(\d+[a-z]?)(?:\s*(a|-|–)\s*(\d+)(?![a-z]))?", m.group(1)):
+                nums = [str(n) for n in range(int(a), int(b) + 1)] if b and a.isdigit() and int(b) - int(a) < 60 else [a]
+                for n in nums:
+                    out.setdefault(n, []).append(x)
+    return out
+
+
 def control_compatibilidad(c, plano, avisos=None):
     """P9 (Matías, 30-10-2026): cada renglón de material con precio se compara con lo que pide el plano con las reglas de
     compatibilidad (compatibilidad.py). Si la norma no permite el reemplazo, es ERROR: la cotización no pasa a revisado
@@ -60,13 +97,7 @@ def control_compatibilidad(c, plano, avisos=None):
     for lr in sorted((Path(__file__).resolve().parent.parent / "conocimiento" / "precios").glob("lista_renar_*.csv")):
         lista_renard.update({x["codigo"]: x["producto"] for x in csv.DictReader(open(lr, encoding="utf-8"))})
     # desvíos declarados en la oferta, por posición ("Accesorios forjados (pos. 1, 8, 10): serie 3000…")
-    desvios = {}
-    if (c / "oferta.json").exists():
-        of = json.load(open(c / "oferta.json", encoding="utf-8"))
-        for x in (of.get("aclaraciones_y_desvios") or {}).get("items", []):
-            for grupo in re.findall(r"(?i)\bpos(?:ición|iciones|\.)?\s*((?:[\w]+(?:\s*(?:,|y)\s*)?)+)", str(x)):
-                for n in re.findall(r"\b\d+[a-z]?\b", grupo):
-                    desvios.setdefault(n, str(x))
+    desvios = desvios_oferta(c)
     cod_de = lambda f: f.get("codigo") or (re.search(r"\b[A-Z]{3}-\d{5}\b", str(f.get("proveedor") or "")) or [None])[0]
     cod_pos = {str(it.get("pos", "")).strip(): cod_de(it["fuentes"][0]) for it in items if it.get("fuentes")}
     out = []
@@ -149,14 +180,21 @@ def control_compatibilidad(c, plano, avisos=None):
                                r"|\b(?:clase|class|cl\.?|ansi)\s?(\d{3,4})\b", limpio.lower())
                 motivo = serie_mal(next(g for g in ms.groups() if g)) if ms else ""
         madre_n = madre.group(0) if madre else pos
-        if motivo and (pos in desvios or madre_n in desvios):
-            # la oferta declara el desvío en esa posición (el cliente se entera): AVISO; si el desvío sigue entre
-            # [corchetes] ("a confirmar"), hay que resolverlo antes de enviar (tercera auditoría 30-10-2026)
-            d = desvios.get(pos) or desvios[madre_n]
-            if avisos is not None:
-                avisos.append(f"Pos {pos}: desvío declarado en la oferta ({motivo[:80]})" +
-                              (": SIGUE A CONFIRMAR en la oferta, resolverlo antes de enviar" if "[" in d else ""))
-            continue
+        if motivo:
+            # la oferta declara ESE desvío en esa posición (el cliente se entera): AVISO. El texto tiene que hablar de lo que
+            # cambia (serie, material, extremos…) y estar resuelto: entre [corchetes] sigue "a confirmar" y no sirve
+            # (cuarta auditoría 30-10-2026: cualquier mención de "pos. N" tapaba el error)
+            textos = desvios.get(pos, []) + (desvios.get(madre_n, []) if madre_n != pos else [])
+            kw = DESVIO_KW.get(tipo_motivo(motivo))
+            hablan = [t for t in textos if kw and re.search(kw, t.lower())]
+            if any("[" not in t for t in hablan):
+                if avisos is not None:
+                    avisos.append(f"Pos {pos}: desvío declarado en la oferta ({motivo[:80]})")
+                continue
+            if hablan:
+                out.append(f"{A_CONFIRMAR}Pos {pos}: el desvío de la oferta sigue a confirmar ({motivo[:80]}): resolverlo "
+                           "(cotización que cumpla o desvío escrito sin corchetes) antes de pasar a revisado")
+                continue
         if motivo and f.get("tipo") == "est":
             # un ESTIMADO armado sobre otra pieza no se salva por ser estimado: sin desvío declarado en la oferta la oferta
             # afirmaría cumplimiento (tercera auditoría 30-10-2026; lección 12)
@@ -284,6 +322,13 @@ def main(carpeta):
     print(f"\nAVISOS ({len(avisos)})")
     for a in avisos:
         print("  !", a)
+    # un desvío "a confirmar" frena el paso a revisado (está en ERRORES) pero no el armado de un borrador: devuelve 2
+    pendientes = [e for e in errores if e.startswith(A_CONFIRMAR)]
+    if errores and len(pendientes) == len(errores):
+        import json
+        if json.load(open(c / "cotizacion.json", encoding="utf-8")).get("estado", "borrador") == "borrador":
+            print(f"\n{len(pendientes)} desvíos a confirmar: el borrador se arma, pero NO pasa a revisado hasta resolverlos")
+            return 2
     return 1 if errores else 0
 
 

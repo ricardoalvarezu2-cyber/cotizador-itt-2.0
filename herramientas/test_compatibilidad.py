@@ -118,6 +118,8 @@ POR_TEXTO = [  # (familia, pedido, candidato, ¿compatible?)
     ("VAL", "Válvula mariposa disco AISI 316 cuerpo WCB", "cuerpo AISI 316 disco WCB", NO),
     ("CAN", "Caño A53 Tipo E Gr B", "Caño A53 Tipo E Gr B", SI),
     ("CAN", "caño A106 no galvanizado", "caño A106", SI),
+    # cuarta auditoría (30-10-2026)
+    ("CAN", 'Caño 6" sch 40 X52 BW', "Caño API 5L X42", NO),
 ]
 for fam, a, b, ok in POR_TEXTO:
     m = regla_material(fam, a, b, b)
@@ -125,6 +127,15 @@ for fam, a, b, ok in POR_TEXTO:
 chk("reducción 80x40 contra STD x STD", incompatible("ABW", {"diametro": '2 1/2"x2"'}, {}, 'Reducción concéntrica 2 1/2"x2" 80x40 A234', "reduccion conc std x std A234") != "")
 chk("reducción 80x40 contra XS x STD", incompatible("ABW", {"diametro": '2 1/2"x2"'}, {}, "Reducción 80x40 A234", "reduccion XS x STD A234") == "")
 chk("revestimiento PE por PP", incompatible("CAN", {}, {}, "caño revestido polipropileno", "caño tricapa de polietileno") != "")
+chk("tee XS x 60 para pedido XS", incompatible("ABW", {"diametro": '12"x8"', "schedule": "XS"}, {}, 'Tee de reducción 12"x8" sch XS A234', "Tee de reducción BW SCH XS x SCH 60 A234") != "")
+chk("reducción 120x160 para pedido 120", incompatible("ABW", {"diametro": '4"x2"', "schedule": "120"}, {}, 'Reducción 4" x 2" sch 120 A234', "Reduccion 4 x 2 Sch 120x160 A234") != "")
+chk("revestido tricapa contra caño desnudo", incompatible("CAN", {}, {}, 'Caño 2" sch 80 API 5L B revestido tricapa BW', "caño API 5L B sch 80") != "")
+chk("'sin revestimiento de polietileno' no es PE", incompatible("CAN", {}, {}, "caño tricapa polietileno", "caño sin revestimiento de polietileno") != "")
+chk("rev. PU", incompatible("CAN", {}, {}, "caño rev. PU", "caño rev. PU 16") == "")
+chk("con costura por sin costura", incompatible("CAN", {}, {}, 'Caño 16" sch STD sin costura API 5L Gr B', "caño c/c API 5L B") != "")
+chk("A53 tipo E por tipo S", incompatible("CAN", {}, {}, "Caño A53 tipo S Gr B", "caño A53 tipo E Gr B") != "")
+chk("S/COSTURA es sin costura", incompatible("CAN", {}, {}, "caño sin costura A53 B", "CAÑO S/COSTURA SCH 80 ASTM A-53 GrB") == "")
+chk("A106 es sin costura por norma", incompatible("CAN", {}, {}, "Caño sin costura A106 B", "caño A106 B") == "")
 chk("revestimiento PP por PE", incompatible("CAN", {}, {}, "caño tricapa polietileno", "caño tricapa polipropileno") == "")
 for t, esperado in [("largo 4,8m", {}), ("L=8m", {}), ("espárrago 5/8 x70 B7", {"bulon_b7"}), ("bolsa 45 x60", {}),
                     ("caño A53 a 6 m", {"cano_a53_sin_grado"}), ("dsaw sch20 x65", {"carbono_alta_resistencia"}),
@@ -153,8 +164,13 @@ for fam, a, b, _ in POR_TEXTO:  # los casos de texto también en la página
     casos.append({"fam": fam, "ped": {"material": a}, "texto": a, "cand": {"material": b}, "d": b,
                   "py": incompatible(fam, {"material": a}, {"material": b}, a, b) != ""})
 for fam, d, a, b in [("ABW", '2 1/2"x2"', 'Reducción 2 1/2"x2" 80x40 A234', "reduccion std x std A234"), ("ABW", '2 1/2"x2"', "Reducción 80x40 A234", "reduccion XS x STD A234"),
-                     ("CAN", "", "caño revestido polipropileno A106", "caño tricapa de polietileno A106"), ("CAN", "", "caño A106 no galvanizado", "caño A106")]:
+                     ("CAN", "", "caño revestido polipropileno A106", "caño tricapa de polietileno A106"), ("CAN", "", "caño A106 no galvanizado", "caño A106"),
+                     ("CAN", "", 'Caño 16" sin costura API 5L B', "caño c/c API 5L B"), ("CAN", "", "caño tricapa A106", "caño A106"),
+                     ("CAN", "", "caño tricapa polietileno A106", "caño A106 sin revestimiento de polietileno")]:
     casos.append({"fam": fam, "ped": {"diametro": d}, "texto": a, "cand": {}, "d": b, "py": incompatible(fam, {"diametro": d}, {}, a, b) != ""})
+for d, sch, a, b in [('12"x8"', "XS", 'Tee 12"x8" sch XS A234', "Tee BW SCH XS x SCH 60 A234"), ('6"', "40", 'Caño 6" sch 40 X52', "Caño API 5L X42")]:
+    casos.append({"fam": "ABW" if "Tee" in a else "CAN", "ped": {"diametro": d, "schedule": sch}, "texto": a, "cand": {}, "d": b,
+                  "py": incompatible("ABW" if "Tee" in a else "CAN", {"diametro": d, "schedule": sch}, {}, a, b) != ""})
 js = r"""const fs=require('fs');const B=require('./web/src/busqueda.js');const D=JSON.parse(fs.readFileSync('web/datos.json','utf8'));
 const cs=JSON.parse(fs.readFileSync(0,'utf8'));console.log(JSON.stringify(cs.map(c=>B.incompatible(D.compat,c.fam,c.ped,c.cand,c.texto,c.d)!=="")));"""
 r = subprocess.run(["node", "-e", js], cwd=RAIZ, input=json.dumps(casos), capture_output=True, text=True)

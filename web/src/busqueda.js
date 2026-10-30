@@ -55,8 +55,13 @@ const Busqueda = (() => {
   const RX = new WeakMap();
   const mats = C => { if (!RX.has(C)) RX.set(C, C.materiales.map(m => ({ ...m, rx: new RegExp(m.patron) }))); return RX.get(C); };
   // igual que compatibilidad.prep: sin lo negado ("NO AISI 316"), "GR°B" → "gr b", medidas "5/8 x 60" → "5/8 por 60"
-  const prep = (C, t) => normP(t).replace(new RegExp(C.negacion, "g"), " ").replace(new RegExp(C.grados, "g"), "$1 ")
-    .replace(new RegExp(new RegExp(C.api5l).test(normP(t)) ? C.medida_x_api : C.medida_x, "g"), "$1 por ").replace(new RegExp(C.prep, "g"), "a$1");
+  function medida(C, t) {  // compatibilidad._medida
+    const api = new RegExp(C.api5l).test(t);
+    return t.replace(new RegExp(C.medida_x, "g"), (m0, g1, g2, off) =>
+      C.grados_x.includes(g2) && (api || /sch ?$/.test(t.slice(Math.max(0, off - 4), off))) ? m0 : g1 + " por ");
+  }
+  const prep = (C, t) => medida(C, normP(t).replace(new RegExp(C.negacion, "g"), " ").replace(new RegExp(C.grados, "g"), "$1 "))
+    .replace(new RegExp(C.prep, "g"), "a$1");
   function clases(C, texto, preparado = false) {
     const t = preparado ? texto : prep(C, texto), hits = [];
     for (const m of mats(C)) {
@@ -160,15 +165,30 @@ const Busqueda = (() => {
   // el atributo "material" viene simplificado (pierde el grado): se usa el texto si nombra un material (compatibilidad.material_texto)
   const materialTexto = (C, atrib, texto) => clases(C, texto).size ? texto : (atrib || "");
   // revestimientos y schedule de cada extremo (compatibilidad.regla_revestimiento / regla_sch_doble)
+  function reglaCostura(C, fam, tp, tc, textoCand) {
+    if (!["CAN", "NIP"].includes(fam) || !new RegExp(C.sin_costura).test(tp)) return "";
+    if (new RegExp(C.con_costura).test(tc)) return "con costura por sin costura (no lo reemplaza)";
+    if (!new RegExp(C.sin_costura).test(tc) && ![...clases(C, textoCand).keys()].some(k => C.sin_costura_norma.includes(k))) return "el pedido es sin costura y el candidato no lo dice";
+    return "";
+  }
   function reglaRevestimiento(C, tp, tc) {
-    const a = Object.keys(C.revest).filter(k => new RegExp(C.revest[k]).test(tp));
+    let a = Object.keys(C.revest).filter(k => new RegExp(C.revest[k]).test(tp));
+    if (a.length > 1) a = a.filter(k => k !== "gen");
     if (!a.length) return "";
     const b = Object.keys(C.revest).filter(k => new RegExp(C.revest[k]).test(tc));
     for (const k of a) if (!b.some(x => C.revest_ok[k].includes(x))) return `revestimiento ${b.sort().join("/") || "sin dato"} por ${k} (no lo reemplaza)`;
     return "";
   }
-  function reglaSchDoble(C, tp, tc, diametro) {
-    const mp = tp.match(new RegExp(C.sch_doble)); if (!mp) return "";
+  function reglaSchDoble(C, tp, tc, diametro, schPed = "") {
+    const mp = tp.match(new RegExp(C.sch_doble));
+    if (!mp) {
+      const mc = tc.match(new RegExp(C.sch_doble));
+      if (mc && schPed) {
+        const ds = normP(diametro).split(/\s*x\s*/).map(x => dnDe(C, x)).filter(x => x).concat([null, null]);
+        for (const [i, dn] of [[1, ds[0]], [2, ds[1]]]) if (schCanonico(mc[i], dn) !== schCanonico(schPed, dn)) return `schedule ${mc[1]} × ${mc[2]} por ${schPed} (otro espesor en un extremo)`;
+      }
+      return "";
+    }
     const mc = tc.match(new RegExp(C.sch_doble));
     if (!mc) return `el pedido es schedule ${mp[1]} × ${mp[2]} y el candidato no dice el de cada extremo`;
     const ds = normP(diametro).split(/\s*x\s*/).map(x => dnDe(C, x)).filter(x => x).concat([null, null]);
@@ -183,8 +203,8 @@ const Busqueda = (() => {
       if (schCanonico(ped.schedule, dn) !== schCanonico(cand.schedule, dn)) return `schedule ${cand.schedule} por ${ped.schedule} (otro espesor)`;
     }
     const tp = normP(textoPed), tc = normP(textoCand);
-    const r = reglaRevestimiento(C, prep(C, textoPed), prep(C, textoCand)); if (r) return r;
-    if (C.familias_sch.includes(fam)) { const r2 = reglaSchDoble(C, tp, tc, ped.diametro || ""); if (r2) return r2; }
+    const r = reglaRevestimiento(C, prep(C, textoPed), prep(C, textoCand)) || reglaCostura(C, fam, prep(C, textoPed), prep(C, textoCand), textoCand || ""); if (r) return r;
+    if (C.familias_sch.includes(fam)) { const r2 = reglaSchDoble(C, tp, tc, ped.diametro || "", ped.schedule || ""); if (r2) return r2; }
     if (new RegExp(C.nace_estricto).test(tp) && !new RegExp(C.nace_estricto).test(tc)) return "el pedido es MR0175 / ISO 15156 y el candidato no lo dice";
     if (new RegExp(C.nace_pedido).test(tp) && !new RegExp(C.nace_cand).test(tc)) return "el pedido es para servicio ácido (NACE) y el candidato no lo dice";
     return "";

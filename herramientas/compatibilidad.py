@@ -87,7 +87,7 @@ def materiales():
 
 
 # lo negado no es el material ("13Cr, NO AISI 316", "Serie 3000 en lugar de 2000"): se saca antes de leer (auditoría 30-10-2026)
-NEGACION = r"\b(?:no|en lugar de|en vez de|excepto|distint[oa]s? de|faltan?|a cotizar|cotizar)\b[^,;|()]*"
+NEGACION = r"\b(?:no|en lugar de|en vez de|excepto|distint[oa]s? de|faltan?|a cotizar|cotizar|sin revest\w*)\b[^,;|()]*"
 # "GR°B" y "SA-516 GR°60": "°" queda " grados " (norm): se vuelve "gr b" (auditoría 30-10-2026: se leía A53 B por A53 GR°A)
 GRADOS = r"\b(gr|g)\.? ?grados ?"
 # válvulas: internos (esfera, vástago, asientos, clapeta, resorte…) y cuerpo se leen por separado ("retención a clapeta",
@@ -96,10 +96,21 @@ GRADOS = r"\b(gr|g)\.? ?grados ?"
 INTERNOS = r"(?<!\ba )(?<!\bde )\b(?:int(?:ernos?)?|interior(?:es)?|trim|esfera|bola|vastago|eje|asientos?|asto|clapeta|resortes?|obturador|disco)\b(?:(?!\bcuerpo\b)[^,;|()])*"
 CUERPO = r"\bcuerpo\b[^,;|()]*"
 # "5/8 x 60", "45 x60": medidas, no API 5L X60 (auditoría 30-10-2026)
-MEDIDA_X = r"(?<![a-z\d/.,])(\d+(?:[/.,]\d+)?)\s?x\s?(?=\d)"
-# …salvo que el texto nombre API 5L / PSL y lo que sigue sea un grado X (tercera auditoría: "sch 40 X52" perdía el X52)
-MEDIDA_X_API = r"(?<![a-z\d/.,])(\d+(?:[/.,]\d+)?)\s?x\s?(?=\d)(?!(?:42|46|52|56|60|65|70|80)\b)"
+MEDIDA_X = r"(?<![a-z\d/.,])(\d+(?:[/.,]\d+)?)\s?x\s?(?=(\d+))"
+# …salvo que lo que sigue sea un grado X y el texto nombre API 5L / PSL o venga después de "sch NN" (auditorías 3 y 4:
+# "sch 40 X52" y "e=19,05 X65" perdían el grado)
+GRADOS_X = ["42", "46", "52", "56", "60", "65", "70", "80"]
 API5L = r"\bapi ?5l\b|\bpsl ?[12]\b"
+
+
+def _medida(t):
+    api = bool(re.search(API5L, t))
+
+    def f(m):
+        if m.group(2) in GRADOS_X and (api or re.search(r"sch ?$", t[max(0, m.start() - 4):m.start()])):
+            return m.group(0)
+        return m.group(1) + " por "
+    return re.sub(MEDIDA_X, f, t)
 NO_METAL = {"grafito", "ptfe", "nbr", "klingerit", "bronce"}
 
 
@@ -107,7 +118,7 @@ def prep(texto):
     """Texto normalizado para los patrones: "SA-106", "SA 106", "A-105" y "A 105" quedan "a106", "a105"; sin lo negado."""
     t = re.sub(NEGACION, " ", norm(texto))
     t = re.sub(GRADOS, r"\1 ", t)
-    t = re.sub(MEDIDA_X_API if re.search(API5L, t) else MEDIDA_X, r"\1 por ", t)
+    t = _medida(t)
     return re.sub(r"\bs?a[- ]?(\d{2,3})\b", r"a\1", t)
 
 
@@ -294,14 +305,21 @@ def material_texto(atrib, texto):
 
 # revestimientos (tercera auditoría 30-10-2026: tricapa de polietileno pasaba por polipropileno). El PP reemplaza al PE
 # (más temperatura), no al revés; un candidato sin revestimiento no reemplaza a uno revestido.
-REVEST = {"pp": r"polipropileno|\b3 ?lpp\b", "pe": r"polietileno|\b3 ?lpe\b", "fbe": r"\bfbe\b|epoxi"}
-REVEST_OK = {"pp": {"pp"}, "pe": {"pe", "pp"}, "fbe": {"fbe"}}
+REVEST = {"pp": r"polipropileno|\b3 ?lpp\b", "pe": r"polietileno|\b3 ?lpe\b", "fbe": r"\bfbe\b|epoxi",
+          "pu": r"poliuretano|\brev\.? ?pu\b", "gen": r"revest|tricapa|coating"}
+REVEST_OK = {"pp": {"pp"}, "pe": {"pe", "pp"}, "fbe": {"fbe"}, "pu": {"pu"}, "gen": {"pp", "pe", "fbe", "pu", "gen"}}
+# costura (cuarta auditoría 30-10-2026): con costura (ERW, SAW, tipo E/F) no reemplaza a sin costura; sí al revés
+SIN_COSTURA = r"sin costura|\bs/ ?c(?:ostura)?\b|\bsmls\b|seamless|\btipo s\b"
+CON_COSTURA = r"con costura|\bc/c\b|\berw\b|\b[ld]?saw\b|\bhfw\b|\btipo [ef]\b"
+SIN_COSTURA_POR_NORMA = {"cano_a106", "cano_a106c"}  # A106 es sin costura por norma
 # schedule de cada extremo de una reducción ("80x40", "XS x STD")
 SCH_DOBLE = r"\b(std|xs|xxs|s?(?:10|20|30|40|60|80|100|120|140|160)s?) ?[x×] ?(?:sch\.? ?)?(std|xs|xxs|s?(?:10|20|30|40|60|80|100|120|140|160)s?)\b"
 
 
 def regla_revestimiento(tp, tc):
     a = {k for k, rx in REVEST.items() if re.search(rx, tp)}
+    if len(a) > 1:
+        a.discard("gen")  # "revestido polipropileno": vale el polímero
     if not a:
         return ""
     b = {k for k, rx in REVEST.items() if re.search(rx, tc)}
@@ -311,10 +329,27 @@ def regla_revestimiento(tp, tc):
     return ""
 
 
-def regla_sch_doble(tp, tc, diametro):
-    """Reducciones: el pedido con schedule de cada extremo ("80x40") exige los dos (tercera auditoría 30-10-2026)."""
+def regla_costura(fam, tp, tc, texto_cand):
+    if fam not in ("CAN", "NIP") or not re.search(SIN_COSTURA, tp):
+        return ""
+    if re.search(CON_COSTURA, tc):
+        return "con costura por sin costura (no lo reemplaza)"
+    if not re.search(SIN_COSTURA, tc) and not set(clases(texto_cand)) & SIN_COSTURA_POR_NORMA:
+        return "el pedido es sin costura y el candidato no lo dice"
+    return ""
+
+
+def regla_sch_doble(tp, tc, diametro, sch_pedido=""):
+    """Reducciones: el pedido con schedule de cada extremo ("80x40") exige los dos (tercera auditoría 30-10-2026); un
+    candidato con dos schedules para un pedido de uno solo tiene que tener ese en los dos extremos (cuarta auditoría)."""
     mp = re.search(SCH_DOBLE, tp)
     if not mp:
+        mc = re.search(SCH_DOBLE, tc)
+        if mc and sch_pedido:
+            ds = [dn_de(x) for x in re.split(r"\s*x\s*", norm(diametro or "")) if dn_de(x)] + [None, None]
+            for i, dn in ((1, ds[0]), (2, ds[1])):
+                if sch_canonico(mc.group(i), dn) != sch_canonico(sch_pedido, dn):
+                    return f"schedule {mc.group(1)} × {mc.group(2)} por {sch_pedido} (otro espesor en un extremo)"
         return ""
     mc = re.search(SCH_DOBLE, tc)
     if not mc:
@@ -341,11 +376,11 @@ def incompatible(fam, at_pedido, at_cand, texto_pedido="", texto_cand=""):
         if sch_canonico(at_pedido["schedule"], dn) != sch_canonico(at_cand["schedule"], dn):
             return f"schedule {at_cand['schedule']} por {at_pedido['schedule']} (otro espesor)"
     tp, tc = norm(texto_pedido), norm(texto_cand)
-    r = regla_revestimiento(prep(texto_pedido), prep(texto_cand))
+    r = regla_revestimiento(prep(texto_pedido), prep(texto_cand)) or regla_costura(fam, prep(texto_pedido), prep(texto_cand), texto_cand)
     if r:
         return r
     if fam in FAMILIAS_SCH:
-        r = regla_sch_doble(tp, tc, at_pedido.get("diametro"))
+        r = regla_sch_doble(tp, tc, at_pedido.get("diametro"), at_pedido.get("schedule", ""))
         if r:
             return r
     if re.search(NACE_ESTRICTO, tp) and not re.search(NACE_ESTRICTO, tc):
@@ -360,7 +395,8 @@ def para_pagina():
     return {"materiales": [{k: r[k] for k in ("patron", "material", "clase", "grupo_b16_5")} for r in materiales()],
             "reemplaza": {k: sorted(v) for k, v in REEMPLAZA.items()}, "genericos": {k: sorted(v) for k, v in GENERICOS.items()},
             "grupos": {k: sorted(v) for k, v in GRUPOS.items()}, "nace_estricto": NACE_ESTRICTO, "nace_pedido": NACE_PEDIDO,
-            "nace_cand": NACE_CAND, "galv": GALV, "prep": r"\bs?a[- ]?(\d{2,3})\b", "negacion": NEGACION, "grados": GRADOS, "medida_x": MEDIDA_X, "medida_x_api": MEDIDA_X_API, "api5l": API5L,
+            "nace_cand": NACE_CAND, "galv": GALV, "prep": r"\bs?a[- ]?(\d{2,3})\b", "negacion": NEGACION, "grados": GRADOS, "medida_x": MEDIDA_X, "grados_x": GRADOS_X, "api5l": API5L, "sin_costura": SIN_COSTURA,
+            "con_costura": CON_COSTURA, "sin_costura_norma": sorted(SIN_COSTURA_POR_NORMA),
             "revest": REVEST, "revest_ok": {k: sorted(v) for k, v in REVEST_OK.items()}, "sch_doble": SCH_DOBLE,
             "internos": INTERNOS, "cuerpo": CUERPO, "no_metal": sorted(NO_METAL), "familias_sch": sorted(FAMILIAS_SCH), "dn_nps": DN_NPS}
 

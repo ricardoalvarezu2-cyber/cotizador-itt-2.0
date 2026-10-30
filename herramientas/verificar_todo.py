@@ -107,15 +107,23 @@ if r.returncode:
 # norma no permite (el mismo control que verificar_computo.py hace en P9).
 correr("resultados del buscador iguales a los aceptados (revisar_cambio_busqueda.py --control)", [str(H / "revisar_cambio_busqueda.py"), "--control"])
 # tercera auditoría (30-10-2026): un cambio de reglas que amplía lo que se lee puede ACEPTAR reemplazos prohibidos
-correr("pares nuevos aceptados revisados (revisar_pares_compatibilidad.py --control --ref HEAD)",
-       [str(H / "revisar_pares_compatibilidad.py"), "--control", "--ref", "HEAD"])
+correr("pares de compatibilidad iguales a la línea base (revisar_pares_compatibilidad.py --control)",
+       [str(H / "revisar_pares_compatibilidad.py"), "--control"])
 import verificar_computo  # noqa: E402
-incomp = []
+incomp, a_confirmar = [], []
 for carpeta in sorted((RAIZ / "cotizaciones").iterdir()):
     if (carpeta / "cotizacion.json").exists() and (carpeta / "pedido" / "lista_materiales_plano.csv").exists() and not carpeta.name.startswith("_"):
         plano = list(csv.DictReader(open(carpeta / "pedido" / "lista_materiales_plano.csv", encoding="utf-8")))
-        incomp += [f"{carpeta.name}: {e}" for e in verificar_computo.control_compatibilidad(carpeta, plano)]
+        est = json.load(open(carpeta / "cotizacion.json", encoding="utf-8")).get("estado", "borrador")
+        for e in verificar_computo.control_compatibilidad(carpeta, plano):
+            if e.startswith(verificar_computo.A_CONFIRMAR) and est == "borrador":
+                a_confirmar.append(f"{carpeta.name}: {e[len(verificar_computo.A_CONFIRMAR):]}")
+            else:  # un desvío a confirmar no frena un borrador, pero sí una cotización revisada o aprobada
+                incomp.append(f"{carpeta.name}: {e}")
 print(f"{'OK  ' if not incomp else 'FALLA'} referencias compatibles con la norma en todas las cotizaciones ({len(incomp)} problemas)")
+if a_confirmar:
+    print(f"     {len(a_confirmar)} desvíos de la oferta a confirmar en borradores (frenan el paso a revisado):")
+    print("\n".join("       " + x[:150] for x in a_confirmar[:12]))
 if incomp:
     fallas.append("cotizaciones con referencias incompatibles")
     print("\n".join("  " + x for x in incomp[:20]))

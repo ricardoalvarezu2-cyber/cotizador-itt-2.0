@@ -89,6 +89,19 @@ Para que haya menos SIN PRECIO hay que cargar el material que falta en el catál
 - Revestimiento: PP reemplaza a PE, no al revés; sin revestimiento no reemplaza a uno revestido.
 - P9: una pieza que la norma no admite solo pasa como **desvío declarado en la oferta** en esa posición (aviso; si sigue
   entre corchetes, "a confirmar"). Sin desvío declarado es ERROR, también si el precio es estimado.
-- **Para sumar o cambiar reglas:** correr `python herramientas/revisar_pares_compatibilidad.py --ref main` y revisar
-  cada NUEVO ACEPTADO (¿la norma permite ese reemplazo?); `verificar_todo.py` falla si quedan sin revisar
-  (`--aceptar` después de revisarlos). Además `revisar_cambio_busqueda.py --ref main` para los resultados.
+- **Para sumar o cambiar reglas:** correr `python herramientas/revisar_pares_compatibilidad.py --control --salida x.md`
+  (o `--ref main`) y revisar cada NUEVO ACEPTADO (¿la norma permite ese reemplazo?); `verificar_todo.py` falla mientras
+  no se acepten (`--aceptar`, después de revisarlos). Además `revisar_cambio_busqueda.py --ref main` para los resultados.
+
+## Cuarta auditoría independiente (30-10-2026)
+- **Desvío declarado:** vale solo si el texto de aclaraciones y desvíos de la oferta que nombra la posición habla de lo
+  que no cumple (serie, material, extremos, revestimiento, schedule, NACE) y no tiene [corchetes]. Con corchetes es
+  "DESVÍO A CONFIRMAR": ERROR que frena el paso a revisado (en borradores `verificar_todo` lo lista sin frenar).
+- Candidato con schedule por extremo para un pedido de uno solo: los dos extremos tienen que ser el del pedido.
+- Grado X después de "sch NN" ("sch 40 X52") es grado, no medida.
+- Revestimiento: "revestido/tricapa" sin polímero exige que el candidato esté revestido; PU; "sin revestimiento de …"
+  no cuenta como revestido.
+- Costura: con costura (c/c, ERW, SAW, tipo E/F) no reemplaza a sin costura (s/c, S/COSTURA, SMLS, tipo S); A106 es sin
+  costura por norma.
+- **Línea base de pares:** `revisar_pares_compatibilidad.py --control` (en `verificar_todo`) compara con
+  `pares_linea_base.json`; ante cambios, revisar cada uno (`--salida`) y recién ahí `--aceptar`.

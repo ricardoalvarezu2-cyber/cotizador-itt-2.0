@@ -67,3 +67,6 @@ Pedido `pmvrzbrh616ftx` desde la página (28-10-2026): revisar y recotizar la pl
 
 ## 30-10-2026 · Tercera auditoría independiente (compatibilidades)
 - Pos 4 (tee de reducción 16"x12" STD x XS): la referencia Renard 3547 es Std en los dos extremos; el ramal de 12" pide XS → SIN PRECIO, pedir cotización. Se cambió el renglón en el repositorio y en la página (la copia de la página tiene cambios propios, no se reemplazó entera).
+
+## 30-10-2026 · Cuarta auditoría independiente
+- Pos 4: la fuente de respaldo "Planilla PC0 · CINTOLO" (USD 2.802,34) se marcó descartada: es el mismo precio de la tee Std descartada.

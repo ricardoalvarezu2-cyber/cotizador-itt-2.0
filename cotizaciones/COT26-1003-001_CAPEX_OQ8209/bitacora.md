@@ -110,3 +110,7 @@ Lo único que se edita es `cotizacion.json` (y `oferta.json` para los textos de 
 ## 30-10-2026 · Tercera auditoría independiente
 - Los desvíos de la oferta (serie 3000, reducción 80×80, revestimiento, válvulas) son ahora lo que permite usar una pieza distinta: P9 los muestra como aviso y marca los que siguen "a confirmar" (pos 2, 5, 7, 14, 21). Hay que resolverlos antes de enviar.
 - El buscador ya no propone para la pos 14 un caño sin revestimiento ni para la pos 16 una reducción XS×XS (el plano pide 80×40). La cotización no cambia.
+
+## 30-10-2026 · Cuarta auditoría independiente
+- El desvío de la oferta vale solo si habla de lo que no cumple y está resuelto: pos 2, 5, 7, 14 y 14b quedan como "DESVÍO A CONFIRMAR" (frenan el paso a revisado).
+- Pos 21 (unión doble serie 3000 por 2000): se sumó al desvío de serie 3000 de la oferta ("Accesorios forjados roscados (pos. 1, 8, 10, 11, 17, 18) y unión doble (pos. 21)"). Revisar con Matías.
