@@ -137,6 +137,8 @@ END-00563,Ensayos y END|horas de planta para movimientos internos y ph|USD/hora
 END-00564,Ensayos y END|radiografia y lp segun hoja end|global|ypf/28- lic 69343 - skids concentradores vcd26217 - bloque lan|ypf/28- lic 69343 - skids concentradores vcd26217 - bloque lan/4.armado de la oferta comercial
 END-00571,Ensayos y END|placa radiografica|USD/placa
 END-00572,Ensayos y END|visita de radiografia (hasta 45 placas)|USD/visita
+END-00573,Ensayos y END|rx y lp de colector manual (100% rx)|USD/equipo
+END-00574,Ensayos y END|rx y lp de colector manual (30% rx)|USD/equipo
 FAB-00020,Fabricación y armado (terceros)|hora hombre armado (tercero)|USD/hora
 FAB-00021,Fabricación y armado (terceros)|mo armado de cuadro roscado de puente (tercero)|global|puente cbm roscado (cuadro)|taval/18- ypf puente de inyeccion
 FAB-00022,Fabricación y armado (terceros)|mo armado y sellado de puente roscado (tercero)|global|puente roscado s2000 cgc (armado y sellado)|taval/51 - cgc - puentes de produccion s2000
@@ -300,6 +302,7 @@ FAB-00565,Fabricación y armado (terceros)|fabricacion de estructura de skid por
 FAB-00566,"Fabricación y armado (terceros)|mano de obra de terceros (ledesma): soldadura y armado de piping y skid concentrador 3 entradas 12"" + colector 16""|global|ypf/28- lic 69343 - skids concentradores vcd26217 - bloque lan|ypf/28- lic 69343 - skids concentradores vcd26217 - bloque lan/4.armado de la oferta comercial"
 FAB-00567,"Fabricación y armado (terceros)|mano de obra de terceros (ledesma): soldadura y armado de piping y skid concentrador 8 entradas 8"" + colector 12""|global|ypf/28- lic 69343 - skids concentradores vcd26217 - bloque lan|ypf/28- lic 69343 - skids concentradores vcd26217 - bloque lan/4.armado de la oferta comercial"
 FAB-00568,Fabricación y armado (terceros)|montaje + dimensional + desmontaje (piping y skid)|global|ypf/28- lic 69343 - skids concentradores vcd26217 - bloque lan|ypf/28- lic 69343 - skids concentradores vcd26217 - bloque lan/4.armado de la oferta comercial
+FAB-00575,Fabricación y armado (terceros)|fabricacion de colector manual (piping y skid)|USD/equipo
 ING-00084,"Ingeniería, calidad e inspección|ingenieria de detalle de modulo (tercero)|global|modulo kod de pluma de venteo sk-2455|sacde/2.kod de pluma de venteo( bomba + tanque)"
 ING-00085,"Ingeniería, calidad e inspección|ingenieria de documentos por juego (tercero)|USD/documento"
 ING-00086,"Ingeniería, calidad e inspección|procedimiento escrito end nivel 3|USD/procedimiento"
@@ -395,6 +398,8 @@ MOP-00107,"MO propia|sueldo mensual por persona, centro ingenieria|USD/persona-m
 MOP-00108,"MO propia|sueldo mensual por persona, centro mantenimiento|USD/persona-mes"
 MOP-00109,"MO propia|sueldo mensual por persona, centro soldadura|USD/persona-mes"
 MOP-00110,"MO propia|sueldo mensual por persona, centro suministros|USD/persona-mes"
+MOP-00576,MO propia|hora de ingenieria itt|USD/hora
+MOP-00577,MO propia|hora de planta itt (movimientos internos y ph)|USD/hora
 OTR-00111,Otros servicios|asistencia de puesta en marcha en obra (proveedor de equipo)|USD/dia
 OTR-00112,Otros servicios|dia de campo: comisionado|USD/dia
 OTR-00113,Otros servicios|dia de campo: pre-comisionado|USD/dia
@@ -496,6 +501,7 @@ PIN-00497,Pintura y revestimientos|granallado y pintura|USD/m2
 PIN-00498,Pintura y revestimientos|piping|USD/m2
 PIN-00499,Pintura y revestimientos|skid|USD/m2
 PIN-00569,Pintura y revestimientos|granallado y pintura piping (incluye materiales)|USD/m2
+PIN-00579,"Pintura y revestimientos|granallado y pintura de colector (piping y skid, incluye materiales)|USD/m2"
 SOL-00136,"Soldadura y piping|mo armado de bypass 2"" (tercero)|global|bypass doble 2"" sch160 cromo (endress+hauser)|endress hauser/24- baypass radares"
 SOL-00137,"Soldadura y piping|mo armado de bypass 2"" (tercero)|global|bypass simple 2"" sch80 inox (endress+hauser)|endress hauser/24- baypass radares"
 SOL-00138,Soldadura y piping|mo armado de carreteles (tercero)|USD/carretel
@@ -571,3 +577,4 @@ TRA-00560,Transporte e izaje|transporte vrt sb 442 a planta canning|global|aesa/
 TRA-00561,Transporte e izaje|transporte vrt sb 475 a planta canning|global|aesa/44-doc5319481557 - aesa - srv fabricacion equipos - f5064|aesa/44-doc5319481557 - aesa - srv fabricacion equipos - f5064/4.armado de la oferta comercial/superado
 TRA-00562,Transporte e izaje|transporte vrt sb-211 a planta canning|global|aesa/44-doc5319481557 - aesa - srv fabricacion equipos - f5064|aesa/44-doc5319481557 - aesa - srv fabricacion equipos - f5064/4.armado de la oferta comercial/superado
 TRA-00570,"Transporte e izaje|transporte a neuquen (rincon de aranda), un camion|global|ypf/28- lic 69343 - skids concentradores vcd26217 - bloque lan|ypf/28- lic 69343 - skids concentradores vcd26217 - bloque lan/4.armado de la oferta comercial"
+TRA-00578,Transporte e izaje|transporte de colector a neuquen|USD/equipo

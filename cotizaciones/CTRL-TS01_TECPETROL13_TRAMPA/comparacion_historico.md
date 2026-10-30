@@ -29,7 +29,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 21 | Tee normal 4" 120 ASTM A-234 WPB | 2 × 329,77 = 659,54 | 2 un × 300,00 = 600,00 | -9% | ant · no dice (planilla de compras; cotización · 2025-08-01 | dentro de ±15% |
 | 22 | Weldolet 1/2" x 20" ASTM A-105 | 1 × 7,00 = 7,00 | 1 un × 65,00 = 65,00 | +829% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) |
 | 23 | Espárrago con 2 tuercas zincado 7/8 x 145 mm  | 48 × 8,00 = 384,00 | 48 un × 3,17 = 152,16 | -60% | cot · PROVEMET · JUN-04186 · 2025-08-27 | más barato (similar) |
-| 24 | Espárrago con 2 tuercas zincado 1 1/8 x 170 m | 48 × 11,00 = 528,00 | 48 un × 7,82 = 375,36 | -29% | cot · Ind Delgado · JUN-04197 · 2026-05-28 | más barato (similar) |
+| 24 | Espárrago con 2 tuercas zincado 1 1/8 x 170 m | 48 × 11,00 = 528,00 | 48 un × 10,00 = 480,00 | -9% | cot · planilla de costo ITT (proveedor sin nom · 2026-10-30 | dentro de ±15% |
 | 25 | Espárrago con 2 tuercas zincado 1 3/8 x 255 m | 60 × 13,00 = 780,00 | 60 un × 27,00 = 1.620,00 | +108% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) |
 | 26 | Junta RF hierro maleable 2" 900 | 6 × 8,00 = 48,00 | 6 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo |
 | 27 | Junta RF hierro maleable 8" 900 | 3 × 10,00 = 30,00 | 3 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo |
@@ -42,7 +42,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 34 | Abrazadera U-bolt pesada 16" | 2 × 25,00 = 50,00 | 2 un × 46,00 = 92,00 | +84% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) |
 | 35 | Abrazadera U-bolt pesada 12" | 1 × 18,00 = 18,00 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo |
 | 36 | Abrazadera U-bolt pesada 4" | 4 × 10,00 = 40,00 | 4 un × 35,00 = 140,00 | +250% | ant · sin proveedor en planilla · OTR-02903 · 2025-12-23 | más caro (similar) |
-| 37 | Espárrago con 2 tuercas zincado 1 x 140 mm 1" | 4 × 10,00 = 40,00 | 4 un × 10,00 = 40,00 | 0% | ant · Bules o Versailles · JUN-04173 · 2026-02-19 | dentro de ±15% |
+| 37 | Espárrago con 2 tuercas zincado 1 x 140 mm 1" | 4 × 10,00 = 40,00 | 4 un × 8,00 = 32,00 | -20% | cot · planilla de costo ITT (proveedor sin nom · 2026-10-30 | más barato (similar) |
 | 38 | Hierro ángulo 1 1/2 x 1 1/2 x 1/4 (skid) ASTM | 5,25 × 1,40 = 7,35 | 5,25 kg × 1,90 = 9,97 | +36% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | más caro (similar) |
 | 39 | Perfil UPN 160 (skid) ASTM A-36 | 590 × 1,80 = 1.062,00 | 590 kg × 1,90 = 1.121,00 | +6% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | dentro de ±15% · real: planilla: 590 kg × 1,5 USD/kg = 885 + 20% de desperdicio = 1.062 |
 | 40 | Malla metálica romboidal tipo Shulman 50 x 30 | 14 × 0,00 = 0,00 | 14 m2 × 0,00 = 0,00 |  | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo · real: la planilla la lista (14 m² × 25 = 250, precio WhatsApp AG Inter) pero no la suma al skid |
@@ -50,14 +50,14 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 42 | Válvula esférica, cuerpo WCB, internos 316, a | 2 × 1.900,08 = 3.800,16 | 2 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo |
 | 43 | Válvula esférica, cuerpo WCB, internos 316, a | 2 × 926,00 = 1.852,00 | 2 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo |
 | 44 | Válvula esférica, cuerpo WCB, internos 316, a | 1 × 740,80 = 740,80 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo |
-| 45 | Válvula esférica 5000 WOG, asientos Delrin, c | 1 × 60,32 = 60,32 | 1 un × 65,20 = 65,20 | +8% | ant · válvulas Taval (el resumen las agrupa co · 2026-01-26 | dentro de ±15% |
+| 45 | Válvula esférica 5000 WOG, asientos Delrin, c | 1 × 60,32 = 60,32 | 1 un × 33,75 = 33,75 | -44% | cot · Taval · VAL-04990 · 2026-10-30 | más barato (similar) |
 | 46 | Válvula macho (tapón lubricado) invertida, in | 1 × 920,00 = 920,00 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo |
-| 47 | Manómetro con glicerina Ø100 mm 0-400 1/2" | 1 × 120,00 = 120,00 | 1 un × 120,00 = 120,00 | 0% | ant · Weisz o similar · INS-02702 · 2026-08-14 | dentro de ±15% |
+| 47 | Manómetro con glicerina Ø100 mm 0-400 1/2" | 1 × 120,00 = 120,00 | 1 un × 120,00 = 120,00 | 0% | cot · Weisz · INS-04947 · 2026-10-30 | dentro de ±15% |
 | 48 | Válvula de seguridad (TSV) entrada 1 1/2" sal | 1 × 1.800,00 = 1.800,00 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo |
 | 49 | Detector de paso de scraper | 1 × 4.209,50 = 4.209,50 | 1 un × 1.650,00 = 1.650,00 | -61% | ant · TDW (marca) · OTR-02969 · 2025-12-10 | más barato (similar) |
 | 50 | Válvula de bloqueo y purga (para manómetro) 1 | 1 × 150,00 = 150,00 | 1 un × 80,00 = 80,00 | -47% | ant · Abac · VAL-03162 · 2026-04-22 | más barato (similar) |
 
-**Materiales: real USD 58.316,80 · cotizador USD 32.477,33 (-44%).** 7 dentro de ±15%, 27 fuera, 16 sin precio.
+**Materiales: real USD 58.316,80 · cotizador USD 32.542,52 (-44%).** 6 dentro de ±15%, 28 fuera, 16 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -74,5 +74,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por trampa
 
-Real USD 83.177,98 · cotizador USD 57.895,55 (-30%) antes de completar lo que el cotizador marca para revisar.
+Real USD 83.177,98 · cotizador USD 57.960,74 (-30%) antes de completar lo que el cotizador marca para revisar.
 

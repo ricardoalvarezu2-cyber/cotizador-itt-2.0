@@ -280,6 +280,10 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 - Lección: una siembra tiene que meter el error donde se comete (la lista), no en un lugar que igual lo detecta por otro motivo; si no, la prueba da OK sin probar nada.
 
 
+## 30-10-2026 — Planilla de colectores YPF Lic 66944 (2da entrega): arrastres de la 1ª entrega y precios distintos entre hojas
+- Qué pasó (revisión pedida por Matías de una planilla armada por Ricardo Álvarez): las cuentas estaban bien, pero la columna "Margen de ganancia" del Resumen traía el margen de las hojas de colector con factor 1,5 (25,83–27,50%) cuando el real es 12,30%; quedaron cantidades y textos de la 1ª entrega; la misma pieza tenía precios distintos según la hoja (caños × 1,3 en una, sockolets de 4 a 9, una reducción y un cap con el precio de otra pieza). En la revisión también se marcaron como error los valores cargados a mano (MO de terceros y transporte), pero eran el último precio negociado: no era error.
+- Corrección: decisiones de Matías anotadas en la revisión y en `estado_y_pendientes.md`; las piezas con precios distintos no entran al catálogo hasta que se decida.
+- Lección: en una planilla ajena, antes de llamar error a un valor cargado a mano, preguntar si es un ajuste negociado; y al pasar precios de una planilla a la base, comparar la misma pieza entre hojas: si hay dos precios el mismo día, no se carga ninguno sin decisión.
 ## 30-10-2026 — Revisión completa de Camuzzi 001, 002 y 003 (tres revisores y tres auditores independientes)
 - Detalle de cada error en la bitácora de cada cotización ("Errores encontrados en la revisión del 30-10-2026"). Los que se repiten en las tres:
   - `armar_json.py` regeneraba `cotizacion.json` sin las correcciones de las auditorías de compatibilidad (estaban solo en el JSON): correrlo de nuevo las deshacía. Ahora todo está en el script y dos corridas dan el mismo archivo.

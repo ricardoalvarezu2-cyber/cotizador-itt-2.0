@@ -23,7 +23,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 13 | Caño sin costura · Ø 2" | SIMILAR | 20,00 / m | 2026-02-20 · planilla interna | — · faltan: material |
 | 14 | Computador de caudal | **SIN PRECIO** | — | — | pedir cotización |
 | 15 | Inyector de químicos | **SIN PRECIO** | — | — | pedir cotización |
-| 16 | Manómetro + válvula de bloqueo y purga | SIMILAR | 120,00 / un | 2026-08-14 · planilla interna | — · faltan: rango, conexion |
+| 16 | Manómetro + válvula de bloqueo y purga | SIMILAR | 120,00 / un | 2026-10-30 · cotización | — · faltan: rango, conexion |
 | 17 | Transmisor de temperatura 4-20 mA + termovain | SIMILAR | 1.448,33 / un | 2026-08-14 · planilla interna | — · faltan: rango, conexion |
 | 18 | Sockolet · Ø 1" | SIMILAR (estimado cepo) ⚠ | 24,00 / un | 2025-03-27 · estimado (cepo) | diametro: 0.75" (pedido 1"); extremos: sin dato (pedido SW/BW); precio escalado por diámetro (1" ÷ 0,75")^1,5  · faltan: material |
 | 19 | Junta espiralada RF esp. 4.5 mm anillo interi | SIMILAR (estimado cepo) ⚠ | 6,06 / un | 2025-03-27 · estimado (cepo) | extremos: sin dato (pedido RF) |

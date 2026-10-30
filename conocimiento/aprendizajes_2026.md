@@ -214,6 +214,11 @@ Observaciones que dejó el análisis de cada carpeta, agrupadas por familia. Sir
 - La licitación exige Anexo 3 de subproveedores; se adjuntan los vendor lists del cliente (electricidad, instrumentación, NOC) y se completa el Anexo 3A con taller/proveedor si se terceriza *(TAVAL/82- Lic 66944 - CM COLECTORES MANUALES)*
 - Regla del Anexo 3A: el % de ejecución del subproveedor no puede superar la provisión principal del oferente *(TAVAL/82- Lic 66944 - CM COLECTORES MANUALES)*
 - Carpeta incompleta: faltan propuestas técnica y comercial, costos y pliego; no sirve como referencia de precio *(TAVAL/82- Lic 66944 - CM COLECTORES MANUALES)*
+- Costo por colector con precios al 30-10-2026: 300 LB 4 pozos 8" (2658) USD 45.474,77; 300 LB 6 pozos (7955) 55.534,17; 300 LB 4 pozos 10" (3152) 54.645,79; 600 LB 6 pozos (7487) 66.588,53 *(YPF/Lic 66944 - Colectores manuales 2da entrega)*
+- MO de terceros (Ledesma) USD 15.000 por colector, solo fabricación; montaje, dimensional y desmontaje con personal de ITT (90 h de planta + 5 h de ingeniería por equipo; no está confirmado que alcancen) *(YPF/Lic 66944 - Colectores manuales 2da entrega)*
+- Los valores cargados a mano en el Resumen y en las filas 15-21 de cada hoja son los últimos negociados y mandan sobre el detalle de abajo (MO terceros 23.000-24.350 y transporte 2.500-3.000 del detalle quedaron viejos) *(YPF/Lic 66944 - Colectores manuales 2da entrega)*
+- Válvulas Taval al costo (factor 1,0): pesan 25-35% del costo del colector; el margen total quedó en 12,30%, por debajo del 1,35 de referencia *(YPF/Lic 66944 - Colectores manuales 2da entrega)*
+- Hay piezas con precios distintos entre hojas (caños 2"-4" en la hoja 7955 = precio × 1,3; sockolets USD 4-9; reducción excéntrica 4"x2" a precio de tee en la 7955): ver la revisión antes de reutilizarlos *(YPF/Lic 66944 - Colectores manuales 2da entrega)*
 
 ## Puentes y tramos de medición
 

@@ -189,10 +189,10 @@
     {
      "tipo": "cot",
      "precio": 15.63,
-     "proveedor": "Grupo Provemet · BRI-01254",
+     "proveedor": "planilla de costo ITT (proveedor sin nombre) · BRI-01254",
      "codigo": "BRI-01254",
-     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288979_bridas_2026-10-29.pdf",
-     "fecha": "2026-10-29",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
      "coincide": "igual"
     }
    ]
@@ -347,14 +347,14 @@
    "especificacion": "Plano: 3/4\" · 160 · ASTM A-106 Gr B · PE/NPT",
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 36.74,
-     "proveedor": "Antecedentes puentes Taval/CGC s2000 · NIP-03365",
-     "codigo": "NIP-03365",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\55- Tecpetrol Puentes de Producción PPar Valvula y Puente PR 54942 · 7.Propuesta Comercial (envío al Cliente)/Puente de producción Tec Conv y NOC versión 3.xlsx",
-     "fecha": "2026-04-22",
+     "tipo": "cot",
+     "precio": 11.0,
+     "proveedor": "planilla de costo ITT (proveedor sin nombre) · NIP-01782",
+     "codigo": "NIP-01782",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
      "coincide": "similar",
-     "diferencia": "diametro: 0.5\" (pedido 0.75\"); largo_mm: 100 (pedido 150); precio escalado por diámetro (0,75\" ÷ 0,5\")^1,5 = × 1,84"
+     "diferencia": "largo_mm: 100 (pedido 150)"
     }
    ]
   },
@@ -368,12 +368,12 @@
    "especificacion": "Plano: 1\" · 160 · ASTM A-106 Gr B · PE/NPT",
    "fuentes": [
     {
-     "tipo": "est",
-     "precio": 9.24,
-     "proveedor": "sin proveedor en planilla · NIP-01782",
+     "tipo": "cot",
+     "precio": 16.94,
+     "proveedor": "planilla de costo ITT (proveedor sin nombre) · NIP-01782",
      "codigo": "NIP-01782",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
-     "fecha": "2026-10-10",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
      "coincide": "similar",
      "diferencia": "diametro: 0.75\" (pedido 1\"); largo_mm: 100 (pedido 150); precio escalado por diámetro (1\" ÷ 0,75\")^1,5 = × 1,54"
     }
@@ -576,12 +576,12 @@
    "especificacion": "Plano: 3\" · 80 · ASTM A-234 WPB · BW",
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 60.36,
-     "proveedor": "Renard · ABW-00396",
+     "tipo": "cot",
+     "precio": 74.75,
+     "proveedor": "planilla de costo ITT (proveedor sin nombre) · ABW-00396",
      "codigo": "ABW-00396",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\PAMPA ENERGIA\\5 - Doc5757155642 - Construc 10 Puentes y 2 Colectores - RDA · 4.Armado de la Oferta Comercial/Cot Skid Manifolds Colectores RDA Rev2.xlsx",
-     "fecha": "2026-06-26",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
      "coincide": "igual"
     }
    ]
@@ -785,12 +785,12 @@
    "taval": true,
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 167.5,
-     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04757",
+     "tipo": "cot",
+     "precio": 301.88,
+     "proveedor": "Taval · VAL-04757",
      "codigo": "VAL-04757",
-     "origen": "taval_lista30_2025-09.xlsx · código RW10803R01020B, hoja Waffer",
-     "fecha": "2025-09-01",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
      "coincide": "igual"
     }
    ]

@@ -148,13 +148,12 @@
    "fuentes": [
     {
      "tipo": "cot",
-     "precio": 112.79,
-     "proveedor": "Grupo Provemet · BRI-01305",
+     "precio": 56.37,
+     "proveedor": "planilla de costo ITT (proveedor sin nombre) · BRI-01305",
      "codigo": "BRI-01305",
-     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288979_bridas_2026-10-29.pdf",
-     "fecha": "2026-10-29",
-     "coincide": "similar",
-     "diferencia": "el último precio (56,37) se aparta más de 40% de la mediana de sus últimos precios: se usa la mediana 112,79"
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
+     "coincide": "igual"
     }
    ]
   },
@@ -170,10 +169,10 @@
     {
      "tipo": "cot",
      "precio": 178.08,
-     "proveedor": "Grupo Provemet · BRI-01335",
+     "proveedor": "planilla de costo ITT (proveedor sin nombre) · BRI-01335",
      "codigo": "BRI-01335",
-     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288978_bridas_2026-10-29.pdf",
-     "fecha": "2026-10-29",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
      "coincide": "igual"
     }
    ]
@@ -230,10 +229,10 @@
     {
      "tipo": "cot",
      "precio": 113.16,
-     "proveedor": "Grupo Provemet · CAN-01524",
+     "proveedor": "planilla de costo ITT (proveedor sin nombre) · CAN-01524",
      "codigo": "CAN-01524",
-     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288974_canos_2026-10-29.pdf",
-     "fecha": "2026-10-29",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
      "coincide": "igual"
     }
    ]
@@ -250,10 +249,10 @@
     {
      "tipo": "cot",
      "precio": 113.16,
-     "proveedor": "Grupo Provemet · CAN-01524",
+     "proveedor": "planilla de costo ITT (proveedor sin nombre) · CAN-01524",
      "codigo": "CAN-01524",
-     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288974_canos_2026-10-29.pdf",
-     "fecha": "2026-10-29",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
      "coincide": "igual"
     }
    ]
@@ -432,12 +431,12 @@
    "especificacion": "Plano: 8\" x 4\" · 80 · ASTM A-234 · BW",
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 465.34,
-     "proveedor": "Renard (cód. 3848) · ABW-00422",
+     "tipo": "cot",
+     "precio": 577.0,
+     "proveedor": "planilla de costo ITT (proveedor sin nombre) · ABW-00422",
      "codigo": "ABW-00422",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3848",
-     "fecha": "2025-12-26",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
      "coincide": "similar",
      "diferencia": "material: A234 WPB (no pedido)"
     }

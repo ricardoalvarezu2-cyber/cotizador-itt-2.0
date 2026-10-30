@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-F01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 1.642,06 por equipo · soldadura y servicios calculados USD 1.216,77 · 15 similares (4, 4b, 5, 5b, 10, 11, 14, 15, 16, 18, 20, 21, 24, 26, 27) · 9 sin precio (6, 7, 12, 13, 17, 19, 22, 23, 25).
+**Resumen:** materiales USD 1.596,59 por equipo · soldadura y servicios calculados USD 1.216,77 · 16 similares (4, 4b, 5, 5b, 10, 11, 14, 15, 16, 17, 18, 20, 21, 24, 26, 27) · 8 sin precio (6, 7, 12, 13, 19, 22, 23, 25).
 
 
 ## 1. Materiales
@@ -21,17 +21,17 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 11 | Varilla roscada para fijación de elemento fil | SIMILAR | 329,00 / un | 2026-03-09 · cotización | diametro: sin dato (pedido 0.375") · faltan: serie |
 | 12 | Tuerca mariposa de bronce · Ø 3/8" | **SIN PRECIO** | — | — | pedir cotización |
 | 13 | Arandela plana · Ø 3/8" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (0.875") (JUN-01602, USD 0,17): pedir cotización |
-| 14 | Espárrago con 2 tuercas zincado 3/4 x 120.70  | SIMILAR | 10,00 / un | 2026-02-19 · planilla interna | medida: 3/4 x 4 7/8 (pedido 3/4 x 4 3/4) |
+| 14 | Espárrago con 2 tuercas zincado 3/4 x 120.70  | SIMILAR | 4,00 / un | 2026-10-30 · cotización | serie: 300 (no pedido) |
 | 15 | Placa apoyo con guía para elemento filtrante  | SIMILAR (acero por kg) | USD 1,26/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 3/16", la más cercana a 4 mm) +10% por recortes; no incluye corte, plegado ni rolado |
 | 16 | Tapa para soporte de elemento filtrante espes | SIMILAR (acero por kg) | USD 1,26/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 3/16", la más cercana a 4 mm) +10% por recortes; no incluye corte, plegado ni rolado |
-| 17 | Junta espirometálica · Ø 4" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (10") (JUN-04923, USD 7,14): pedir cotización |
+| 17 | Junta espirometálica · Ø 4" | SIMILAR | 2,59 / un | 2026-10-30 · cotización | extremos: RF (no pedido) |
 | 18 | Soporte para chapa de identificación espesor  | SIMILAR (acero por kg) | USD 1,26/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 3/16", la más cercana a 2 mm) +10% por recortes; no incluye corte, plegado ni rolado |
 | 19 | Chapa de identificación litografiada espesor  | **SIN PRECIO** | — | — | pedir cotización |
 | 20 | Asas de hierro redondo · Ø 1/2" | SIMILAR (acero por kg) | USD 1,27/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 1/2") +10% por recortes; no incluye corte, plegado ni rolado |
-| 21 | Manómetro diferencial 0-2 bar · Ø 1/2" | SIMILAR | 120,00 / un | 2026-08-14 · planilla interna | rango: sin dato (pedido 0-2 bar) · faltan: conexion |
+| 21 | Manómetro diferencial 0-2 bar · Ø 1/2" | SIMILAR | 120,00 / un | 2026-10-30 · cotización | rango: sin dato (pedido 0-2 bar) · faltan: conexion |
 | 22 | Conector recto con tuerca y doble virola · Ø  | **SIN PRECIO** | — | — | pedir cotización |
 | 23 | Refuerzo para derivación tipo poncho 4 x 2 ·  | **SIN PRECIO** | — | — | pedir cotización |
-| 24 | Válvula esférica cuerpo tripartito · Ø 1/2" | SIMILAR | 33,81 / un | 2026-02-20 · planilla interna | extremos: NPT (pedido NPT/SW); paso: reducido (no pedido) · faltan: paso |
+| 24 | Válvula esférica cuerpo tripartito · Ø 1/2" | SIMILAR | 33,75 / un | 2026-10-30 · cotización | extremos: NPT (pedido NPT/SW) · faltan: paso |
 | 25 | Media cupla · Ø 1/2" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (1") (AFO-00799, USD 3,20): pedir cotización |
 | 26 | Chapa soporte manómetro diferencial y manifol | SIMILAR (acero por kg) | USD 1,26/kg | 2026-02-10 cot | precio por kg de materia prima (chapa negra lisa 3/16", la más cercana a 1,59 mm) +10% por recortes; no incluye corte, plegado ni rolado |
 | 27 | Arandela plana zincada · Ø 3/4" | SIMILAR (estimado cepo) ⚠ | 0,20 / un | 2024-11-01 · estimado (cepo) | — · faltan: material |
@@ -60,7 +60,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 7 placas chicas + 0 grandes + 0,50 servicio(s) de RX + 0,50 de LP por equipo = USD 595,00 (Servicio de radiografía (Antonelli) (2025-11; antonelli_end_2025-11)).
   Con las tarifas de Antonelli (11-2025) serían USD 595,00: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: filtro, 4", 2 u, materiales USD 1.642 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: filtro, 4", 2 u, materiales USD 1.597 por unidad)
 
 - ⚠ **No hay antecedente del mismo tipo (filtro) ni de uno afín: no se suman horas.** Cargarlas a mano con el detalle de actividades. Candidatos (de otro tipo, no usar sin revisar): TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · Trampa lanzadora 20x16 (Serie 600 A6C) (20 / 16, 1 u, 2026-07-20) | TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E · Trampa lanzadora 8x6 #300 (LS-122/124) (8 / 6 (barrel 24 x 20 en tabla soldadura), 2 u, 2025-12-10) | Sacde/20 - SE-3121-ASTORD-014 - TK DE CHOQUE · Tanque de choque Ø36in x 5000 mm (Sacde para TGS), A-516 Gr7 (36, 1 u, 2026-03-03)
 
