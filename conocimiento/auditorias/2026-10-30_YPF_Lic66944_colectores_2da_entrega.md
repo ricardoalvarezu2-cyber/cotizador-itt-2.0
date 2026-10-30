@@ -49,6 +49,12 @@ Las fórmulas se recalcularon con LibreOffice y coinciden con los valores guarda
 | Tapón NPT cab. hexag. 1/2" | 1,00 (7955) · 2,00 (3152) |
 | Caño S/C PL SCH 160 3/4" | 8,00 con unidad "UN." y cantidad 0,2 (7487): unidad dudosa |
 
+Tampoco se cargaron los precios del detalle de repuestos (espárragos 1 1/8" y 7/8", juntas 12", 8" y dieléctrica 8"; filas 154-170 en 2658, 7955 y 3152, 138-154 en 7487): es un detalle arrastrado de otro equipo y el monto usado es un global.
+La junta dieléctrica RF 300 LB 4" de la hoja 3152 (USD 2,59) tiene el mismo precio que la espiralada 4": parece copiado. Se cargó con ese aviso en la nota.
+
+## Auditoría independiente (30-10-2026)
+Otro agente comparó contra la planilla los 99 materiales, los servicios, la ficha y esta tabla de totales: sin discrepancias. Sus dos observaciones (repuestos y junta dieléctrica 4") quedaron anotadas arriba.
+
 ## Arrastrados de la 1ª entrega (no cambian el total)
 - Hoja 2658: cantidad de equipos 15 en I55 e I102 ("TOTAL DE EQUIPO 1RA ENTREGA") y los montos fijos de H26/H27 (Taval vs. precio válvulas).
 - Hoja 7487: "TOTAL DE EQUIPOS 3" en H89.
