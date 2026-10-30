@@ -9,9 +9,9 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 - Pulgadas equivalentes de soldadura: **195,50**
 - kg de piping (caños, bridas, accesorios y válvulas con tabla): **401 kg** · bridas: 20
 - Diámetros soldados a tope: 8", 6", 3"
-- Sin peso (no suman kg): 1 VALVULA MONITORA PILOTADA OBT. GUIADO - ; 2 VALVULA REGULADORA PILOTADA A DIAFRAGMA ; 5 BRIDA WN · Ø 3"; 6 BRIDA WN · Ø 6"; 7 BRIDA WN · Ø 8"; 8 BRIDA CIEGA · Ø 8"; 11 REDUCCIÓN CONCÉNTRICA · Ø 6"x3"; 15 TOMA MULTIPORT AC INOXIDABLE ABAC · Ø 1/; 16 VÁLVULA ALIVIO CAP. REDUCIDA ROSCADA TIP; 20 SKID Y SOPORTES S/ SCE-RE-110-0006 Rev.0; 21b Completar media tira de 6 m de la pos 21; 22b Completar media tira de 6 m de la pos 22; 23b Completar media tira de 6 m de la pos 23; 24b Completar media tira de 6 m de la pos 24; B TEMPERATURA DE SALIDA · Ø 3/4"
-- **Costo por antecedentes.** Por antecedentes: USD 3.479,61 (1 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 17,80/pulgada eq. · USD 8,67/kg de piping · USD 96,66/junta a tope
+- Sin peso (no suman kg): 1 VALVULA MONITORA PILOTADA OBT. GUIADO - ; 2 VALVULA REGULADORA PILOTADA A DIAFRAGMA ; 2b Tubing de acero inoxidable y accesorios ; 5 BRIDA WN · Ø 3"; 6 BRIDA WN · Ø 6"; 7 BRIDA WN · Ø 8"; 8 BRIDA CIEGA · Ø 8"; 11 REDUCCIÓN CONCÉNTRICA · Ø 6"x3"; 15 TOMA MULTIPORT AC INOXIDABLE ABAC · Ø 1/; 16 VÁLVULA ALIVIO CAP. REDUCIDA ROSCADA TIP; 20 SKID Y SOPORTES S/ SCE-RE-110-0006 Rev.0; 20b Placa de identificación del equipo AISI ; 21b Completar media tira de 6 m de la pos 21; 22b Completar media tira de 6 m de la pos 22; 23b Completar media tira de 6 m de la pos 23; 24b Completar media tira de 6 m de la pos 24; B TEMPERATURA DE SALIDA · Ø 3/4"
+- **Costo por antecedentes.** Por antecedentes: USD 3.781,12 (1 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 19,34/pulgada eq. · USD 9,42/kg de piping · USD 105,03/junta a tope
 
 ## 2. MO de fabricación de la estructura
 
@@ -29,8 +29,8 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 - Juntas a tope: **36** · RX 100% → placas chicas **135**, grandes **0**
 - Juntas SW, cuplas y olets (LP donde no se puede radiografiar): **4**
-- **Costo por antecedentes.** Por antecedentes: USD 2.884,49 (1 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 80,12/junta a tope · USD 21,37/placa
+- **Costo por antecedentes.** Por antecedentes: USD 3.831,68 (2 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 106,44/junta a tope · USD 28,38/placa
 
 ## 5. Procedimientos
 
@@ -42,7 +42,8 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 - Procedimiento de prueba hidráulica
 - Procedimiento de granallado y pintura (esquema del pliego)
 - Confirmar con el pliego si exige procedimientos nuevos o alcanzan los vigentes de ITT
-- **Costo por antecedentes.** Por antecedentes: USD 0,00 (0 renglón/es, con ajuste por inflación).
+- **Costo por antecedentes.** Por antecedentes: USD 610,04 (1 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 76,25/procedimiento
 
 ## 6. Prueba hidráulica
 

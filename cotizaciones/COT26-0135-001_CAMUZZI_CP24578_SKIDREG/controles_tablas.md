@@ -5,7 +5,7 @@ Generado por `herramientas/controles_tablas.py`. Información para revisar; no c
 ## 1. Kilos y m² por equipo
 
 **Peso estimado de lo que tiene tabla: 401,3 kg** · m² exteriores de caños y niples: 3,44 m².
-Ítems sin dato de peso (20): 1 VALVULA MONITORA PILOTADA OBT. GUIADO - NC · Ø 3" (válvula sin diámetro o serie); 2 VALVULA REGULADORA PILOTADA A DIAFRAGMA - NA · Ø 3 (válvula sin diámetro o serie); 5 BRIDA WN · Ø 3" (sin tabla (instrumento, junta u otro)); 5c Espárrago 5/8" × 3 1/2" A193 B7 con 2 tuercas 2H z (espárrago sin diámetro o largo); 6 BRIDA WN · Ø 6" (sin tabla (instrumento, junta u otro)); 7 BRIDA WN · Ø 8" (sin tabla (instrumento, junta u otro)); 8 BRIDA CIEGA · Ø 8" (sin tabla (instrumento, junta u otro)); 11 REDUCCIÓN CONCÉNTRICA · Ø 6"x3" (sin tabla para  6" 3000); 15 TOMA MULTIPORT AC INOXIDABLE ABAC · Ø 1/2" (sin tabla (instrumento, junta u otro)); 16 VÁLVULA ALIVIO CAP. REDUCIDA ROSCADA TIPO S-71 · Ø (válvula sin diámetro o serie); 18 TERMOVAINA DE ACERO INOXIDABLE 3/4" NPT · Ø 3/4" (sin tabla (instrumento, junta u otro)); 19 VÁLVULA BLQ. Y PURG. C/ MANÓMETRO 0-6BAR · Ø 1/2" (sin tabla (instrumento, junta u otro)); 20 SKID Y SOPORTES S/ SCE-RE-110-0006 Rev.0 (sin tabla (instrumento, junta u otro)); 21b Completar media tira de 6 m de la pos 21 (compra m (sin tabla (instrumento, junta u otro)); 22b Completar media tira de 6 m de la pos 22 (compra m (sin tabla (instrumento, junta u otro)); 23b Completar media tira de 6 m de la pos 23 (compra m (sin tabla (instrumento, junta u otro)); 24b Completar media tira de 6 m de la pos 24 (compra m (sin tabla (instrumento, junta u otro)); A PRESIÓN REGULADA, C/ VAL. BLOQ Y PURGA · Ø 3/4" (válvula sin diámetro o serie); B TEMPERATURA DE SALIDA · Ø 3/4" (sin tabla (instrumento, junta u otro)); C SWITCH INDICADOR DE VALV MONITORA ABIERTA (válvula sin diámetro o serie).
+Ítems sin dato de peso (24): 1 VALVULA MONITORA PILOTADA OBT. GUIADO - NC · Ø 3" (válvula sin diámetro o serie); 2 VALVULA REGULADORA PILOTADA A DIAFRAGMA - NA · Ø 3 (válvula sin diámetro o serie); 2b Tubing de acero inoxidable y accesorios de doble v (válvula sin diámetro o serie); 5 BRIDA WN · Ø 3" (sin tabla (instrumento, junta u otro)); 5c Espárrago 5/8" × 3 1/2" A193 B7 con 2 tuercas 2H z (espárrago sin diámetro o largo); 6 BRIDA WN · Ø 6" (sin tabla (instrumento, junta u otro)); 7 BRIDA WN · Ø 8" (sin tabla (instrumento, junta u otro)); 8 BRIDA CIEGA · Ø 8" (sin tabla (instrumento, junta u otro)); 11 REDUCCIÓN CONCÉNTRICA · Ø 6"x3" (sin tabla para  6" 3000); 15 TOMA MULTIPORT AC INOXIDABLE ABAC · Ø 1/2" (sin tabla (instrumento, junta u otro)); 16 VÁLVULA ALIVIO CAP. REDUCIDA ROSCADA TIPO S-71 · Ø (válvula sin diámetro o serie); 17b Cupla para soldar 1/2" NPT S3000 ASTM A-105 para l (sin tabla para cupla para soldar 0,5" 3000); 18 TERMOVAINA DE ACERO INOXIDABLE 3/4" NPT · Ø 3/4" (sin tabla (instrumento, junta u otro)); 18b Cupla para soldar 3/4" NPT S3000 ASTM A-105 para l (sin tabla para cupla para soldar 0,75" 3000); 19 VÁLVULA BLQ. Y PURG. C/ MANÓMETRO 0-6BAR · Ø 1/2" (sin tabla (instrumento, junta u otro)); 20 SKID Y SOPORTES S/ SCE-RE-110-0006 Rev.0 (sin tabla (instrumento, junta u otro)); 20b Placa de identificación del equipo AISI 304 (ET §7 (sin tabla (instrumento, junta u otro)); 21b Completar media tira de 6 m de la pos 21 (compra m (sin tabla (instrumento, junta u otro)); 22b Completar media tira de 6 m de la pos 22 (compra m (sin tabla (instrumento, junta u otro)); 23b Completar media tira de 6 m de la pos 23 (compra m (sin tabla (instrumento, junta u otro)); 24b Completar media tira de 6 m de la pos 24 (compra m (sin tabla (instrumento, junta u otro)); A PRESIÓN REGULADA, C/ VAL. BLOQ Y PURGA · Ø 3/4" (válvula sin diámetro o serie); B TEMPERATURA DE SALIDA · Ø 3/4" (sin tabla (instrumento, junta u otro)); C SWITCH INDICADOR DE VALV MONITORA ABIERTA (válvula sin diámetro o serie).
 
 | Pos | Ítem | Cantidad | kg/u | kg total | Fuente |
 |---|---|---|---|---|---|
@@ -29,13 +29,13 @@ Generado por `herramientas/controles_tablas.py`. Información para revisar; no c
 
 ## 2. Plazos de material (proveedores 2025–2026)
 
-Plazo ofrecido: **120 días**.
+Plazo ofrecido: **175 días**.
 
 | Rubro | Posiciones | Datos | Típico sin stock (días) | Máximo (días) |
 |---|---|---|---|---|
 | PSV | 16 | 3 | 100 | 112 |
 | accesorio BW | 12, 13 | 17 | 24 | 40 |
-| accesorio forjado | 9, 10, 11, 17 | 14 | 35 | 60 |
+| accesorio forjado | 9, 10, 11, 17, 17b, 18b | 14 | 35 | 60 |
 | aguja/bloqueo y purga | A | 3 | 15 | 30 |
 | brida | 5, 6, 7, 8 | 26 | 75 | 210 |
 | bulonería | 5c, 6c, 7c | 4 | 10 | 10 |
