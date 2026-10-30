@@ -68,18 +68,34 @@ poner("2", [SIN("la única oferta de reguladoras de la base (Tormene TA956 DFO #
 # Esféricas: precio de referencia Taval de la misma especificación; se compra marca del listado (Matías, 29-10-2026)
 for p in ("3", "4"):
     f = items[p]["fuentes"][0]
+    f["tipo"] = "est"  # auditoría 30-10-2026: marca fuera del listado y sin el ensayo que pide la ET: es estimado, no lista de la marca comprable
     f["coincide"] = "similar"
     f["diferencia"] = ("precio de referencia Taval (marca fuera del listado; lista de precios, sin el ensayo SCE-RE-308-0001 con certificado firmado "
                        "por la inspección que pide la ET 5.6.2): comprar Esferomatic, Worcester, Valvtronic, Pentair, Indave, Wenlen, Beta o Valmec")
-# Pos 10: precotizar no la encontraba (texto "Te de reducción"); misma lista y código
-poner("10", [fuente("lista", 283.84, "Renard (cód. 3533) · ABW-00423", RENARD + " · código 3533", "2025-12-26", "igual", codigo="ABW-00423")])
+# Accesorios para soldar: el listado SCE-IN-501-0015 (hoja 2) admite solo CURVO SOLD (Cintolo); auditoría 30-10-2026: se toma la lista de
+# Cintolo 29.1 (vigencia 17-02-2025) donde tiene la pieza, y Renard (otra marca) queda como alternativa o, sin Cintolo, como estimado
+CIN = "fuentes_originales/listas_vendedor/2026-10-28/cintolo_lista_29-1_2025-02-17.xlsx"
+poner("9", [fuente("lista", 129.55, "Cintolo Hnos. (Curvo Sold) lista 29.1 art. 6046: TE NORMAL 6\" STANDARD ASME B16.9 A234-WPB", CIN + " · art. 6046",
+                   "2025-02-17", "similar", "A234 WPB (el plano pide ASTM A-105, que no es material de te a tope B16.9): consulta R83"),
+            fuente("lista", 104.61, "Renard (cód. 3468) · ABW-00418", RENARD + " · código 3468", "2025-12-26", "similar", "marca fuera del listado; A234 WPB", codigo="ABW-00418")])
+poner("10", [fuente("lista", 351.5, "Cintolo Hnos. (Curvo Sold) lista 29.1 art. 7086: TE RED. 8\" X 6\" STANDARD ASME B16.9 A234-WPB", CIN + " · art. 7086",
+                    "2025-02-17", "igual"),
+             fuente("lista", 283.84, "Renard (cód. 3533) · ABW-00423", RENARD + " · código 3533", "2025-12-26", "similar", "marca fuera del listado", codigo="ABW-00423")])
+poner("11", [fuente("lista", 69.19, "Cintolo Hnos. (Curvo Sold) lista 29.1 art. 8161: RED. CON. 6\" X 3\" STANDARD ASME B16.9 A234-WPB", CIN + " · art. 8161",
+                    "2025-02-17", "similar", "A234 WPB (el plano dice S/ Esp. CAMUZZI)"),
+             fuente("lista", 55.88, "Renard (cód. 3064) · ABW-00232", RENARD + " · código 3064", "2025-12-26", "similar", "marca fuera del listado", codigo="ABW-00232")])
+for p in ("12", "13"):  # Cintolo no lista casquetes: el de Renard es de marca no identificada → estimado
+    f = items[p]["fuentes"][0]
+    f["tipo"] = "est"
+    f["coincide"] = "similar"
+    f["diferencia"] = "marca no identificada (el listado admite solo Curvo Sold y la lista 29.1 de Cintolo no tiene casquetes): pedir a Cintolo"
 # Pos 14: el plano pide la cupla en ASTM A-106 (norma de caño, no de cupla forjada): consulta al cliente (requisito R78)
 poner("14", [SIN("el plano pide la cupla en ASTM A-106 (norma de caño; las cuplas B16.11 son forjadas A-105): consulta al cliente R78. "
                  "Compras: cupla 1/2\" NPT S3000 + esférica 1/2\" NPT S3000 de marca del listado"),
              descartada(items["14"]["fuentes"][0], "revisión de compatibilidades 30-10-2026: válvula A105, el plano pide A-106")])
 # Pos 15 y 16: misma pieza en la planilla de costo del salto de regulación de Camuzzi ERP Caseros (CAMUZZI/14, 15-03-2022)
 poner("15", [fuente("est", 312.0, "Planilla de costo ITT, salto de regulación Camuzzi ERP Caseros (CAMUZZI/14, CGP 6910, rev 2, renglón 18: "
-                    "TOMA MULTIPORT Ø 1/2\" - 3000 LB, 312 USD)", CAM14, "2022-03-15", "igual",
+                    "TOMA MULTIPORT Ø 1/2\" - 3000 LB, 312 USD)", CAM14, "2022-03-15", "similar",
                     "misma pieza (toma multiport 1/2\" serie 3000; la planilla no dice el material) en un salto de Camuzzi; precio de 2022 (período con cepo): pedir cotización a ABAC"),
              descartada(fuente("ant", 170.0, "Manifold ABAC de 3 vías M1-C-T AISI 304/316 (OTR-02980, planilla TAVAL/40)",
                                "fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/4.Armado de la Oferta Comercial/LM costo Filtros rev.1.xlsx.txt",
@@ -98,13 +114,16 @@ poner("18", [SIN("termovaina 3/4\" NPT AISI 316: la base solo tiene la del stock
              descartada(fuente("est", 70.4, "Stock ITT (cód. TC6020N5NA2T1DO, 2 un): TERMOVAINA ¾ NPT L: 6\" CONEX ½ NPT INS 6mm EXT 1\" AISI 316L · INS-01587",
                                "fuentes_originales/stock_valorizado_2024-11.xlsx · código TC6020N5NA2T1DO", "2024-11-01", "similar", "AISI 316L (pedido AISI 316)",
                                codigo="INS-01587"), "revisión 30-10-2026: 316L no reemplaza a 316 según compatibilidad.py")])
-poner("19", [fuente("ant", 230.0, "Bloqueo y purga ABAC 80 (VAL-03162, planilla TAVAL/55) + manómetro Ø100 150 (INS-02671, Weisz o similar, TAVAL/43)",
+poner("19", [fuente("est", 316.4, "Weisz presupuesto 30.0.10.027.203 ítem 01 (16-07-2026): manómetro 4100N 4\" clase 1, caja AISI 304 IP65, bourdon AISI 316 + limitador 080M + "
+                    "bloqueo y purga 070 AISI 316 + certificado de calibración", LACH + "Oferta Weisz de ventas_30.0.10.027.203.pdf.txt", "2026-07-16", "similar",
+                    "estimado (auditoría 30-10-2026): sin glicerina, con limitador que no se pide, y bloqueo y purga Weisz AISI 316 en lugar del manifold de 3 vías "
+                    "A-105 zincado serie 3000 (ET 5.8; Weisz no figura para bloqueo y purga): pedir manómetro Weisz/Wika con glicerina + manifold ABAC VA 350 o Casucci"),
+             fuente("est", 136.0 + 65.0, "Planilla de costo ITT, salto Camuzzi ERP Caseros (CAMUZZI/14, renglones 51 manifold 3 vías zincado 136 y 49 manómetro según la ET, 65)",
+                    CAM14, "2022-03-15", "igual", "misma especificación, precio de 2022"),
+             fuente("ant", 230.0, "Bloqueo y purga ABAC 80 (VAL-03162, planilla TAVAL/55) + manómetro Ø100 150 (INS-02671, Weisz o similar, TAVAL/43)",
                     "fuentes_originales/ofertas_texto/TAVAL/43- YPF- CM PUENTES DE PRODUCCION", "2026-04-22", "similar",
                     "manómetro según ET 5.7.1 (glicerina, clase 1, certificado de calibración) montado con manifold de 3 vías A-105 zincado serie 3000 (ET 5.8): "
-                    "pedir a ABAC (VA 350) / Weisz o Wika"),
-             fuente("cot", 316.4, "Weisz presupuesto 30.0.10.027.203 ítem 01: manómetro 4100N + limitador 080M + bloqueo y purga 070 AISI 316 + certificado de calibración",
-                    LACH + "Oferta Weisz de ventas_30.0.10.027.203.pdf.txt", "2026-07-16", "similar",
-                    "sin glicerina y con limitador; bloqueo y purga Weisz (no figura en el listado para bloqueo y purga)", validez_hasta="2026-08-16")])
+                    "VAL-03162 es un manifold de transmisor (PIT) de Tecpetrol y INS-02671 no demuestra la ET 5.7.1: solo referencia")])
 poner("20", [fuente("cot", round(330 * 17.4 / 13.4 * 1.10, 2), "Grupo Provemet cot. 236623: UPN 120 a USD 17,40/m (13,40 kg/m) = 1,30 USD/kg +10% recortes, "
                     "× 330 kg estimados (medidos del plano: 3.700 × 1.630 mm, perimetral, 4 travesaños, soportes y cáncamos)",
                     "fuentes_originales/listas_vendedor/2026-10-28/provemet_cotizacion_236623_perfiles_2025-07-01.pdf", "2025-07-01", "similar",
@@ -124,8 +143,7 @@ for p, (pr, cod, cc, txt, largo, (pr2, cod2, cc2, mot, quien)) in CAN.items():
                            "costura: con costura (no pedido)", codigo=cc2), f"{quien}: {mot}")
     items[p]["fuentes"] = [f1, f2]
     items[p + "b"]["fuentes"] = [dict(f1), dict(f2)]
-F23 = fuente("ant", 90.7, "Renard · CAN-01512", "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · "
-             "4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx", "2026-06-26", "similar",
+F23 = fuente("lista", 90.7, "Renard (cód. 1174) · Tubo s/costura 168,3 x 10,97 mm A53/A106/API 5L B · CAN-01512", RENARD + " · código 1174", "2025-12-26", "similar",
              "caño A106 Gr B sch XS (el plano pide A-53 Gr B sch 80: A106 lo reemplaza, mismo espesor en 6\")", codigo="CAN-01512")
 items["23"]["fuentes"] = [F23]
 items["23b"]["fuentes"] = [dict(F23)]  # segunda auditoría 30-10-2026: la 23b tenía otra pieza (CAN-02603, sin material)
@@ -139,7 +157,7 @@ poner("A", [fuente("cot", 1478.0 + 80.0, "Induquip (Emerson) cot. 26-523-RSDGVM-
                    "Yokogawa (listado), rango a confirmar; plazo 140 días (por eso no es la base)")])
 poner("B", [fuente("cot", round(829.04 + 309.936, 2), "Induquip (Emerson) cot. 26-523-RSDGVM-RSMT: transmisor Rosemount 644HAE7J6M5Q4 USD 829,04 + "
                    "sensor RTD 214C PT100 USD 309,94 (la termovaina es la pos 18)", LACH + "Oferta Induquip 26-333-RSDGVM-USM.pdf.txt", "2026-07-17",
-                   "similar", "rango 0-100 °C a configurar; Rosemount está en el listado", validez_hasta="2026-08-16")])
+                   "similar", "rango 0-100 °C a configurar; el sensor 214C cotizado va armado a la termovaina bridada C-276 de Induquip (opción XW): pedirlo para la termovaina 3/4\" NPT de la pos 18; Rosemount está en el listado", validez_hasta="2026-08-16")])
 poner("C", [SIN("switch de fin de carrera de la monitora (0-24 V): pedir con las reguladoras (Tormene ofrece indicador de posición; confirmar si trae contacto)")])
 
 # ---------------------------------------------------------------- filas que agrega ITT (no están en la tabla del plano)
@@ -148,13 +166,13 @@ ext = {
            SIN("tubing inoxidable 3/8\" y conectores de doble virola: no hay precio en la base; pedir a Swagelok, Parker, Casucci, Fittinox, ABAC, Famiq o Hoke (listado)"),
            "ET SCE-RE-515-0032 §5.8: \"Para el montaje de las señales de las válvulas reguladoras se utilizarán tubings y accesorios en acero inoxidable del tipo doble virola\"")],
     "5": [("5b", "Junta espiralada 3\" #150 AISI 316/grafito con anillo ext. zincado (juntas de las válvulas, nota del plano)", 12, "un",
-           fuente("ant", 6.0, "Planilla Techint/12 (JUN-01698)", TECHINT12, "2025-12-23", "igual", "comprar Klinger, Teadit, Flexseal, Miyashiro, Garlock o Delgado (listado)"),
+           fuente("ant", 6.0, "Planilla Techint/12 (JUN-01698)", TECHINT12, "2025-12-23", "igual", "comprar Klinger, Teadit, Flexseal, Miyashiro Schonborn o Garlock (listado)"),
            "Nota del plano: juntas y espárragos según diámetro de brida (SCE-IN-301-0001/2)"),
           ("5c", "Espárrago 5/8\" × 3 1/2\" A193 B7 con 2 tuercas 2H zincado (4 por junta de 3\")", 48, "un",
            fuente("est", 10.0, "Bules o Versailles (planilla TAVAL/43, hoja 3\" x 442u ítem 9) · JUN-04173",
                   "fuentes_originales/ofertas_texto/TAVAL/43- YPF- CM PUENTES DE PRODUCCION/4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt · línea 147",
                   "2026-02-19", "similar", "largo 110 mm (pedido 3 1/2\" ≈ 89 mm, más largo: sirve); la planilla pone USD 10 también al de 7/8\" x 230 mm: "
-                  "parece valor global, pedir cotización (Petrobul, Versailles o Fornis)", codigo="JUN-04173"),
+                  "parece valor global, pedir cotización (Delgado, Petrobul, Versailles o Fornis)", codigo="JUN-04173"),
            "Nota del plano: juntas y espárragos según diámetro de brida (SCE-IN-301-0001/2)")],
     "6": [("6b", "Junta espiralada 6\" #150 AISI 316/grafito con anillo ext. zincado", 4, "un",
            fuente("est", 12.99, "JUN-01702 JUNTA ESPIRALADA C/ANILLO INT. 6\" 150# AISI 316/GRAFITO/AC CAB. ZINCADO (planilla de compras TAVAL/3)",
@@ -256,6 +274,8 @@ for it in lista:  # pintura: sumar el skid (≈ 25 m de UPN 120 ≈ 10,7 m²), q
 base["items"] = lista
 
 # ---------------------------------------------------------------- parámetros, plazo, textos del informe
+base["meta"] = ["Concurso de precios N° 24578 · ítem 2", "Plano SCE-RE-315-0048 rev A · Especificación SCE-RE-515-0032", "Comprador: Camuzzi (portal de compras)",
+                "Preparó: Matías Russo · 28-10-2026"]
 base["parametros"].update({"TRANS": 1, "TC": TC_OCT, "TR_ARS": 700000, "TR_EMB": 150, "TR_F": 1.0, "fecha_referencia": HOY})
 base["fecha"] = "2026-10-28"
 base["plazo"] = {"dias": 175, "texto": "desde OC · entregado en Transporte Cruz del Sur (Tapiales)",
@@ -276,11 +296,11 @@ base["flete"] = {"etiqueta": "Flete a Transporte Cruz del Sur (Tapiales)",
 base["pedido"] = {"eyebrow": "Concurso de precios N° 24578 · Cláusulas particulares del 01-10-2026 · especificación del 19-10-2026",
                   "datos_html": [["Cliente", "Camuzzi Gas Pampeana S.A. / Camuzzi Gas del Sur S.A. (código ITT 0135)"],
                                  ["Ítem", "2 · Skid de regulación / medición · <b>1 un</b>"],
-                                 ["Documentos", "Plano SCE-RE-315-0048 rev 0 · Especificación SCE-RE-515-0032 (ERP Parque Industrial Tres Arroyos) · Listado de marcas SCE-IN-501-0015 rev 1"],
+                                 ["Documentos", "Plano SCE-RE-315-0048 rev A · Especificación SCE-RE-515-0032 (ERP Parque Industrial Tres Arroyos) · Listado de marcas SCE-IN-501-0015 rev 1"],
                                  ["Condiciones de proceso", "Pe 15-10 bar · Pr 4 bar · Qmáx 6.000 Sm3/h · Qmín 1.000 Sm3/h"],
                                  ["Entrega pedida", "Transporte Cruz del Sur, Mercado Central nave D3, Tapiales (flete a cargo del proveedor)"],
                                  ["Condiciones", "Pago 30 días f.p.f. por transferencia, dólar BNA divisa vendedor del día de factura · validez 30 días · multas automáticas por demora (0,30% a 0,60% diario, tope 25%)"]],
-                  "requisitos_html": ["Matriz completa en pedido/requisitos.csv (80 requisitos con destino) y consultas en consultas_cliente.md",
+                  "requisitos_html": ["Matriz completa en pedido/requisitos.csv (84 requisitos con destino) y consultas en consultas_cliente.md",
                                       "RX 100% de las soldaduras a tope (filetes y media V con tintas penetrantes)", "PH de los prefabricados sin válvulas: 1,5 × presión máxima de la serie, 6 h (NAG-124); secado y prueba de fugas con aire o N2 a 5,5 bar",
                                       "Protección anticorrosiva SCE-PC-511-0003", "Esféricas según SCE-IN-501-0008 y ensayo SCE-RE-308-0001, con certificados firmados", "Marcas del listado SCE-IN-501-0015",
                                       "Tubing inoxidable de doble virola para las señales de las reguladoras; manifold de 3 vías A-105 zincado serie 3000; espárragos B7/2H zincados",
@@ -292,7 +312,7 @@ base["nota_mo_html"] = ("Soldadura propia por pulgada (16 USD/pulg-eq): 37 junta
 base["desvios"] = [
     {"tag": "Pos 1-2 y C", "titulo": "Reguladoras sin precio", "texto": "No hay cotización #150 en la base (la de Tormene es #300 con OPSO): quedan en 0 hasta que Compras traiga el precio. El total no es comparable hasta entonces."},
     {"tag": "Pos 17b, 18b, 2b", "titulo": "Agregados de ITT", "texto": "Cuplas de las conexiones 15, 16, 18, 19 y A (el dibujo las muestra, la tabla no) y tubing inoxidable de doble virola de la ET 5.8."},
-    {"tag": "Consultas", "titulo": "4 consultas al cliente", "texto": "Pos 14 (cantidad y material A-106), pos 23 sch 80 contra bridas y reducciones STD, y documentos técnicos de Camuzzi que no están en el pliego (ver consultas_cliente.md)."}]
+    {"tag": "Consultas", "titulo": "5 consultas al cliente", "texto": "Pos 14 (cantidad y material A-106), pos 9 (te A-105 o A234 WPB), pos 23 sch 80 contra bridas y reducciones STD, y documentos técnicos de Camuzzi que no están en el pliego (ver consultas_cliente.md)."}]
 base["antecedentes"] = [
     {"carpeta_html": "<b>CAMUZZI/14</b> · CGP 6910, salto de regulación ERP Caseros (planilla de costo rev 2)", "fecha": "15-03-2022",
      "que": "Salto de regulación 4\" #150 con 2 monitoras + 2 reguladoras 4\", esféricas, mariposas 10\" y skid", "precio": "costo 71.833,70 (reguladoras 34.326)",
@@ -310,21 +330,21 @@ base["pendientes"] = [
         "Toma multiport ABAC (15), alivio S-71 (16), cupla con esférica (14, según la respuesta R78), tubing de doble virola (2b)",
         "Reconfirmar: lista Renard (12-2025), Taval (09-2025), Induquip y Weisz (07-2026), Provemet (07-2025), Antonelli (11-2025); flete local a Tapiales"]},
     {"titulo": "Camuzzi (consultas_cliente.md, borrador: las manda Matías)", "items": [
-        "R76: pos 14, 2 en la tabla y 4 en el dibujo", "R78: pos 14 en ASTM A-106", "R77: pos 23 sch 80 contra bridas y reducciones STD",
-        "R33: documentos técnicos citados (SCE-RE-110-0006, SCE-PC-511-0003, SCE-IN-501-0008, SCE-RE-308-0001, SCE-IN-301-0005, SCE-IN-501-0003)"]}]
+        "R76: pos 14, 2 en la tabla y 4 en el dibujo", "R83: pos 9, te A-105 (¿se acepta A234 WPB?)", "R78: pos 14 en ASTM A-106", "R77: pos 23 sch 80 contra bridas y reducciones STD",
+        "R33 (pendiente de ITT: descargarlos; si no están, consulta 4): documentos técnicos citados (SCE-RE-110-0006, SCE-PC-511-0003, SCE-IN-501-0008, SCE-RE-308-0001, SCE-IN-301-0005, SCE-IN-501-0003)"]}]
 base["planilla_notas"] = ["Plazo: 175 días desde OC (transmisores 84 días + taller 65 = 149, más 15-20% de margen).",
                           "Condiciones del concurso: pago 30 días f.p.f., USD al BNA divisa vendedor del día de factura, validez 30 días, entregado en Transporte Cruz del Sur (Tapiales)."]
 base["pie"] = "Fuentes: base de conocimiento del repositorio cotizador-itt. Precios en USD sin IVA. Borrador sin revisar."
 base["historial_html"] = ["30-10-2026: revisión completa (matriz de requisitos, precios, compatibilidades, soldaduras junta por junta, RX, plazo); ver bitácora."]
 MARCAS = {"1": "Tormene (TA956 FC monitor), Fiorentini, Fisher u otro modelo homologado", "2": "Tormene (TA956 DFO), Fiorentini (Reflux/Aperflux), Fisher (EZR) u otro homologado",
           "3": "Esferomatic / Worcester / Valvtronic / Pentair / Indave / Wenlen / Beta / Valmec", "4": "Esferomatic / Worcester / Valvtronic / Pentair / Indave / Wenlen / Beta / Valmec",
-          "5": "Francovigh / CH / Futura (bridas)", "6": "Francovigh / CH / Futura (bridas)", "7": "Francovigh / CH / Futura (bridas)", "8": "Francovigh / CH / Futura (bridas)",
-          "9": "Curvo Sold (Cintolo) / TDW", "10": "Curvo Sold (Cintolo) / TDW", "11": "Curvo Sold (Cintolo) / TDW", "12": "Curvo Sold (Cintolo) / TDW", "13": "Curvo Sold (Cintolo) / TDW",
+          "5": "Futura / Francovigh (bridas)", "6": "Futura / Francovigh (bridas)", "7": "Futura / Francovigh (bridas)", "8": "Futura / Francovigh (bridas)",
+          "9": "Curvo Sold (Cintolo)", "10": "Curvo Sold (Cintolo)", "11": "Curvo Sold (Cintolo)", "12": "Curvo Sold (Cintolo)", "13": "Curvo Sold (Cintolo)",
           "14": "Thorsa / Forja Atlas (cupla); esférica del listado", "15": "ABAC", "16": "Farinola / Favra / Aerre", "17": "Thorsa / Forja Atlas", "18": "Weisz / Wika / ABAC / Casucci",
           "19": "ABAC VA 350 / Casucci (bloqueo y purga); Weisz / Wika / ABAC / Casucci (manómetro)", "20": "taller (UPN 120, Provemet)", "A": "Rosemount / Yokogawa / Siemens / Aplisens / SMAR",
-          "B": "Rosemount / Yokogawa / Siemens / Aplisens / SMAR", "C": "con las reguladoras", "5b": "Klinger / Teadit / Flexseal / Miyashiro / Garlock / Delgado",
-          "6b": "Klinger / Teadit / Flexseal / Miyashiro / Garlock / Delgado", "7b": "Klinger / Teadit / Flexseal / Miyashiro / Garlock / Delgado",
-          "5c": "Petrobul / Talleres Versailles / Fornis", "6c": "Petrobul / Talleres Versailles / Fornis", "7c": "Petrobul / Talleres Versailles / Fornis",
+          "B": "Rosemount / Yokogawa / Siemens / Aplisens / SMAR", "C": "con las reguladoras", "5b": "Klinger / Teadit / Flexseal / Miyashiro Schonborn / Garlock (solo espirometálicas)",
+          "6b": "Klinger / Teadit / Flexseal / Miyashiro Schonborn / Garlock (solo espirometálicas)", "7b": "Klinger / Teadit / Flexseal / Miyashiro Schonborn / Garlock (solo espirometálicas)",
+          "5c": "Delgado / Petrobul / Talleres Versailles / Fornis", "6c": "Delgado / Petrobul / Talleres Versailles / Fornis", "7c": "Delgado / Petrobul / Talleres Versailles / Fornis",
           "2b": "Swagelok / Parker / Casucci / Fittinox / ABAC / Famiq / Hoke", "17b": "Thorsa / Forja Atlas", "18b": "Thorsa / Forja Atlas"}
 base["compras"] = {"fecha_respuesta": "2026-11-04", "material_en_planta_dias": 84, "lugar_entrega": "Planta ITT S.A., Av. 12 de Octubre 4004, Quilmes Oeste, Bs. As.",
                    "requisitos_generales": ["Cotizar en USD sin IVA, con plazo de entrega y validez de la oferta.",
@@ -349,19 +369,26 @@ json.dump(base, open(C / "cotizacion.json", "w", encoding="utf-8"), ensure_ascii
 import camuzzi_comun  # noqa: E402
 camuzzi_comun.oferta(C, "COT26-0135-001", "Skid de regulacion", 2, "skid de regulación / medición según plano SCE-RE-315-0048 y especificación SCE-RE-515-0032", "1",
                      base["plazo"]["dias"],
-                     ["Concurso de precios N° 24578: planilla de cotización, cláusulas particulares (01-10-2026) y condiciones generales", "Plano mecánico SCE-RE-315-0048 rev 0",
+                     ["Concurso de precios N° 24578: planilla de cotización, cláusulas particulares (01-10-2026) y condiciones generales", "Plano mecánico SCE-RE-315-0048 rev A (rótulo; el archivo se llama SCERE3150048-0)",
                       "Especificación técnica SCE-RE-515-0032 (19-10-2026)", "Listado de marcas y proveedores SCE-IN-501-0015 rev 1 (10-02-2026)"],
                      "Salto de regulación de presión sobre skid: 2 ramas 3\" #150 con monitora y reguladora pilotadas, colector de entrada 6\" y de salida 8\". Pe 15-10 bar, Pr 4 bar, Q 1.000-6.000 Sm3/h. RX 100%, PH según NAG-124, prueba de fugas a 5,5 bar, protección anticorrosiva SCE-PC-511-0003.",
                      ["Largos de caño (pos 21 a 24): el plano no indica cantidad; ITT los midió del dibujo (*).",
-                      "Sensores A, B y C: incluidos en el precio, de marcas del listado SCE-IN-501-0015.",
+                      "Se cotiza sobre el plano SCE-RE-315-0048 revisión A (emitido para calificación según la especificación 3.2) y la especificación SCE-RE-515-0032 del 19-10-2026.",
                       "Reguladoras y monitoras: de un modelo homologado en el listado SCE-IN-501-0015 (solapa Válvulas Reguladoras), sujeto a la aprobación previa de Camuzzi (especificación 5.6.1).",
-                      "Se agregan las cuplas para soldar 1/2\" y 3/4\" NPT serie 3000 ASTM A-105 de las conexiones de las pos 15, 16, 18, 19 y A, que la tabla del plano no lista, y el tubing y los accesorios de acero inoxidable de doble virola para las señales de las reguladoras (especificación 5.8).",
+                      "Se agregan las cuplas para soldar 1/2\" y 3/4\" NPT serie 3000 ASTM A-105 de las conexiones de las pos 15, 16, 18, 19 y A, que la tabla del plano no lista.",
                       "Juntas y espárragos de las uniones internas del equipo según la nota del plano (SCE-IN-301-0001/2).",
                       "Precio entregado en Transporte Cruz del Sur según las cláusulas particulares y la planilla de cotización."],
                      ["Ingeniería de fabricación y documentación para aprobación (cronograma, listado de documentos, planos, hoja de datos de instrumentos, mapa y planilla de soldaduras, procedimientos y calificaciones).",
-                      "Suministro de todos los materiales del plano, juntas y espárragos internos, y sensores A, B y C.",
-                      "Prefabricado, armado y soldadura en taller; montaje de reguladoras y conexionado de pilotos en tubing inoxidable de doble virola.",
+                      "Suministro de materiales, juntas y espárragos internos.",
+                      "Prefabricado, armado y soldadura en taller; montaje de reguladoras y conexionado de pilotos.",
                       "Radiografía 100% y tintas penetrantes; prueba hidráulica de los prefabricados y prueba de fugas.",
                       "Protección anticorrosiva según SCE-PC-511-0003.", "Data book (copia digital, CD y copia en papel) y certificados; placa de identificación.",
                       "Embalaje y flete hasta Transporte Cruz del Sur (Tapiales)."])
 print(len(base["items"]), "ítems · soldadura", round(pulg, 2), "pulg-eq · RX", placas, "placas,", visitas, "visitas")
+# Garantía: CGP 13.1 (18 meses desde la entrega) y ET §9 (2 años desde la entrega o 1 desde la instalación, lo primero; vicios ocultos sin límite).
+# La de camuzzi_comun solo cita la ET y puede quedar por debajo de los 18 meses del CGP (auditoría 30-10-2026).
+o = json.load(open(C / "oferta.json", encoding="utf-8"))
+o["garantia"] = ("Garantía general por el plazo que resulte mayor entre 18 meses desde la entrega (Pliego de Cláusulas Generales, art. 13.1) y 2 años desde la "
+                 "entrega o 1 año desde la instalación, lo que ocurra primero (especificación SCE-RE-515-0032, punto 9); responsabilidad por vicios ocultos de "
+                 "fabricación sin límite de tiempo (especificación, punto 9); más las garantías particulares de materiales e instrumentos.")
+json.dump(o, open(C / "oferta.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)

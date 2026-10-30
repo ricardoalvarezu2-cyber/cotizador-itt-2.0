@@ -5,7 +5,7 @@ Generado por `herramientas/controles_tablas.py`. Información para revisar; no c
 ## 1. Kilos y m² por equipo
 
 **Peso estimado de lo que tiene tabla: 592,9 kg** · m² exteriores de caños y niples: 5,09 m².
-Ítems sin dato de peso (16): 1 FILTRO FM-06 #150 SIMPLE MÓDULO · Ø 6" (sin tabla (instrumento, junta u otro)); 1d Tapa de cierre rápido 12" #150 soldada, para el fi (sin tabla (instrumento, junta u otro)); 1e Elemento filtrante para filtro FM-06 (Gora / Metpo (sin tabla (instrumento, junta u otro)); 1h Instrumentos del filtro FM-06: manómetro diferenci (sin tabla (instrumento, junta u otro)); 1i Internos, refuerzos tipo poncho, purga (esférica 1 (sin tabla (instrumento, junta u otro)); 2 CARRETEL DE AJUSTE / PROVISORIO DE TURBINA · Ø 4" (sin tabla (instrumento, junta u otro)); 5 BRIDA WN · Ø 4" (sin tabla (instrumento, junta u otro)); 5c Espárrago 5/8" × 3 1/2" A193 B7 con 2 tuercas 2H z (espárrago sin diámetro o largo); 6 BRIDA WN · Ø 6" (sin tabla (instrumento, junta u otro)); 9 REDUCCIÓN CONCÉNTRICA · Ø 6"x4" (sin tabla para  6" 3000); 11 TERMOVAINA DE ACERO INOXIDABLE 3/4" NPT · Ø 3/4" (sin tabla (instrumento, junta u otro)); 11b Cupla 3/4" NPT S3000 ASTM A105 soldada sobre el ca (niple sin largo); 13 SKID Y SOPORTES (sin tabla (instrumento, junta u otro)); 14b Completar barra de 12 m de la pos 14 (compra mínim (sin tabla (instrumento, junta u otro)); 15b Completar media tira de 6 m de la pos 15 (sobrante (sin tabla (instrumento, junta u otro)); A TEMPERATURA PARA CORRECTORA DE CAUDAL · Ø 3/4" (sin tabla (instrumento, junta u otro)).
+Ítems sin dato de peso (18): 1 FILTRO FM-06 #150 SIMPLE MÓDULO · Ø 6" (sin tabla (instrumento, junta u otro)); 1d Tapa de cierre rápido 12" #150 soldada, para el fi (sin tabla (instrumento, junta u otro)); 1e Elemento filtrante para filtro FM-06 (Gora / Metpo (sin tabla (instrumento, junta u otro)); 1h Instrumentos del filtro FM-06: manómetro diferenci (sin tabla (instrumento, junta u otro)); 1j Manómetro de presión estática Ø 100, conexión 1/2" (sin tabla (instrumento, junta u otro)); 1i Internos, refuerzos tipo poncho, purga (esférica 1 (sin tabla (instrumento, junta u otro)); 1k Refuerzos tipo poncho 12" x 6" STD ASTM A-234 WPB  (sin tabla (instrumento, junta u otro)); 2 CARRETEL DE AJUSTE / PROVISORIO DE TURBINA · Ø 4" (sin tabla (instrumento, junta u otro)); 5 BRIDA WN · Ø 4" (sin tabla (instrumento, junta u otro)); 5c Espárrago 5/8" × 3 1/2" A193 B7 con 2 tuercas 2H z (espárrago sin diámetro o largo); 6 BRIDA WN · Ø 6" (sin tabla (instrumento, junta u otro)); 9 REDUCCIÓN CONCÉNTRICA · Ø 6"x4" (sin tabla para  6" 3000); 11 TERMOVAINA DE ACERO INOXIDABLE 3/4" NPT · Ø 3/4" (sin tabla (instrumento, junta u otro)); 11b Cupla 3/4" NPT S3000 ASTM A105 soldada sobre el ca (niple sin largo); 13 SKID Y SOPORTES (sin tabla (instrumento, junta u otro)); 14b Completar barra de 12 m de la pos 14 (compra mínim (sin tabla (instrumento, junta u otro)); 15b Completar media tira de 6 m de la pos 15 (sobrante (sin tabla (instrumento, junta u otro)); A TEMPERATURA PARA CORRECTORA DE CAUDAL · Ø 3/4" (sin tabla (instrumento, junta u otro)).
 
 | Pos | Ítem | Cantidad | kg/u | kg total | Fuente |
 |---|---|---|---|---|---|
@@ -37,7 +37,7 @@ Plazo ofrecido: **150 días**.
 | brida | 1f, 2, 5, 6 | 26 | 75 | 210 |
 | bulonería | 5c, 6c | 4 | 10 | 10 |
 | caño | 1b, 1g, 11b, 14, 15 | 15 | 38 | 40 |
-| instrumento | 1h, 11 | 31 | 90 | 308 |
+| instrumento | 1h, 1j, 11 | 31 | 90 | 308 |
 | junta | 5b, 6b | 7 | 30 | 90 |
 | válvula esférica | 3, 4, 12, 16 | 12 | 90 | 140 |
 

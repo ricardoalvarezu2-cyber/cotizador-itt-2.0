@@ -15,7 +15,7 @@
  "subtitulo_planilla": "1 skid de regulación · plano SCE-RE-315-0048 · USD sin IVA",
  "meta": [
   "Concurso de precios N° 24578 · ítem 2",
-  "Plano SCE-RE-315-0048 rev 0 · Especificación SCE-RE-515-0032",
+  "Plano SCE-RE-315-0048 rev A · Especificación SCE-RE-515-0032",
   "Comprador: Camuzzi (portal de compras)",
   "Preparó: Matías Russo · 28-10-2026"
  ],
@@ -117,7 +117,7 @@
    ],
    [
     "Documentos",
-    "Plano SCE-RE-315-0048 rev 0 · Especificación SCE-RE-515-0032 (ERP Parque Industrial Tres Arroyos) · Listado de marcas SCE-IN-501-0015 rev 1"
+    "Plano SCE-RE-315-0048 rev A · Especificación SCE-RE-515-0032 (ERP Parque Industrial Tres Arroyos) · Listado de marcas SCE-IN-501-0015 rev 1"
    ],
    [
     "Condiciones de proceso",
@@ -133,7 +133,7 @@
    ]
   ],
   "requisitos_html": [
-   "Matriz completa en pedido/requisitos.csv (80 requisitos con destino) y consultas en consultas_cliente.md",
+   "Matriz completa en pedido/requisitos.csv (84 requisitos con destino) y consultas en consultas_cliente.md",
    "RX 100% de las soldaduras a tope (filetes y media V con tintas penetrantes)",
    "PH de los prefabricados sin válvulas: 1,5 × presión máxima de la serie, 6 h (NAG-124); secado y prueba de fugas con aire o N2 a 5,5 bar",
    "Protección anticorrosiva SCE-PC-511-0003",
@@ -159,8 +159,8 @@
   },
   {
    "tag": "Consultas",
-   "titulo": "4 consultas al cliente",
-   "texto": "Pos 14 (cantidad y material A-106), pos 23 sch 80 contra bridas y reducciones STD, y documentos técnicos de Camuzzi que no están en el pliego (ver consultas_cliente.md)."
+   "titulo": "5 consultas al cliente",
+   "texto": "Pos 14 (cantidad y material A-106), pos 9 (te A-105 o A234 WPB), pos 23 sch 80 contra bridas y reducciones STD, y documentos técnicos de Camuzzi que no están en el pliego (ver consultas_cliente.md)."
   }
  ],
  "antecedentes": [
@@ -208,9 +208,10 @@
    "titulo": "Camuzzi (consultas_cliente.md, borrador: las manda Matías)",
    "items": [
     "R76: pos 14, 2 en la tabla y 4 en el dibujo",
+    "R83: pos 9, te A-105 (¿se acepta A234 WPB?)",
     "R78: pos 14 en ASTM A-106",
     "R77: pos 23 sch 80 contra bridas y reducciones STD",
-    "R33: documentos técnicos citados (SCE-RE-110-0006, SCE-PC-511-0003, SCE-IN-501-0008, SCE-RE-308-0001, SCE-IN-301-0005, SCE-IN-501-0003)"
+    "R33 (pendiente de ITT: descargarlos; si no están, consulta 4): documentos técnicos citados (SCE-RE-110-0006, SCE-PC-511-0003, SCE-IN-501-0008, SCE-RE-308-0001, SCE-IN-301-0005, SCE-IN-501-0003)"
    ]
   }
  ],
@@ -317,7 +318,7 @@
    "especificacion": "Plano: 3\" · 150 / STD · S/ Esp. CAMUZZI · RF · Nota ITT: SCE-IN-501-0008",
    "fuentes": [
     {
-     "tipo": "lista",
+     "tipo": "est",
      "precio": 126.0,
      "proveedor": "Taval (Lista 30 × 0.52) · VAL-04454",
      "codigo": "VAL-04454",
@@ -338,7 +339,7 @@
    "especificacion": "Plano: 6\" · 150 / STD · S/ Esp. CAMUZZI · RF · Nota ITT: SCE-IN-501-0008",
    "fuentes": [
     {
-     "tipo": "lista",
+     "tipo": "est",
      "precio": 466.0,
      "proveedor": "Taval (Lista 30 × 0.52) · VAL-04473",
      "codigo": "VAL-04473",
@@ -385,7 +386,7 @@
      "origen": "fuentes_originales/ofertas_texto/TECHINT/12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado",
      "fecha": "2025-12-23",
      "coincide": "igual",
-     "diferencia": "comprar Klinger, Teadit, Flexseal, Miyashiro, Garlock o Delgado (listado)"
+     "diferencia": "comprar Klinger, Teadit, Flexseal, Miyashiro Schonborn o Garlock (listado)"
     }
    ]
   },
@@ -405,7 +406,7 @@
      "origen": "fuentes_originales/ofertas_texto/TAVAL/43- YPF- CM PUENTES DE PRODUCCION/4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt · línea 147",
      "fecha": "2026-02-19",
      "coincide": "similar",
-     "diferencia": "largo 110 mm (pedido 3 1/2\" ≈ 89 mm, más largo: sirve); la planilla pone USD 10 también al de 7/8\" x 230 mm: parece valor global, pedir cotización (Petrobul, Versailles o Fornis)",
+     "diferencia": "largo 110 mm (pedido 3 1/2\" ≈ 89 mm, más largo: sirve); la planilla pone USD 10 también al de 7/8\" x 230 mm: parece valor global, pedir cotización (Delgado, Petrobul, Versailles o Fornis)",
      "codigo": "JUN-04173"
     }
    ]
@@ -563,13 +564,22 @@
    "fuentes": [
     {
      "tipo": "lista",
+     "precio": 129.55,
+     "proveedor": "Cintolo Hnos. (Curvo Sold) lista 29.1 art. 6046: TE NORMAL 6\" STANDARD ASME B16.9 A234-WPB",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-28/cintolo_lista_29-1_2025-02-17.xlsx · art. 6046",
+     "fecha": "2025-02-17",
+     "coincide": "similar",
+     "diferencia": "A234 WPB (el plano pide ASTM A-105, que no es material de te a tope B16.9): consulta R83"
+    },
+    {
+     "tipo": "lista",
      "precio": 104.61,
      "proveedor": "Renard (cód. 3468) · ABW-00418",
-     "codigo": "ABW-00418",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3468",
      "fecha": "2025-12-26",
      "coincide": "similar",
-     "diferencia": "material: A234 WPB (pedido A105)"
+     "diferencia": "marca fuera del listado; A234 WPB",
+     "codigo": "ABW-00418"
     }
    ]
   },
@@ -584,11 +594,20 @@
    "fuentes": [
     {
      "tipo": "lista",
+     "precio": 351.5,
+     "proveedor": "Cintolo Hnos. (Curvo Sold) lista 29.1 art. 7086: TE RED. 8\" X 6\" STANDARD ASME B16.9 A234-WPB",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-28/cintolo_lista_29-1_2025-02-17.xlsx · art. 7086",
+     "fecha": "2025-02-17",
+     "coincide": "igual"
+    },
+    {
+     "tipo": "lista",
      "precio": 283.84,
      "proveedor": "Renard (cód. 3533) · ABW-00423",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3533",
      "fecha": "2025-12-26",
-     "coincide": "igual",
+     "coincide": "similar",
+     "diferencia": "marca fuera del listado",
      "codigo": "ABW-00423"
     }
    ]
@@ -604,13 +623,22 @@
    "fuentes": [
     {
      "tipo": "lista",
+     "precio": 69.19,
+     "proveedor": "Cintolo Hnos. (Curvo Sold) lista 29.1 art. 8161: RED. CON. 6\" X 3\" STANDARD ASME B16.9 A234-WPB",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-28/cintolo_lista_29-1_2025-02-17.xlsx · art. 8161",
+     "fecha": "2025-02-17",
+     "coincide": "similar",
+     "diferencia": "A234 WPB (el plano dice S/ Esp. CAMUZZI)"
+    },
+    {
+     "tipo": "lista",
      "precio": 55.88,
      "proveedor": "Renard (cód. 3064) · ABW-00232",
-     "codigo": "ABW-00232",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3064",
      "fecha": "2025-12-26",
      "coincide": "similar",
-     "diferencia": "material: A234 WPB (no pedido)"
+     "diferencia": "marca fuera del listado",
+     "codigo": "ABW-00232"
     }
    ]
   },
@@ -624,13 +652,14 @@
    "especificacion": "Plano: 6\" · STD · ASTM A-234 G°WPB · BW",
    "fuentes": [
     {
-     "tipo": "lista",
+     "tipo": "est",
      "precio": 25.76,
      "proveedor": "Renard (cód. 3435) · ABW-00032",
      "codigo": "ABW-00032",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3435",
      "fecha": "2025-12-26",
-     "coincide": "igual"
+     "coincide": "similar",
+     "diferencia": "marca no identificada (el listado admite solo Curvo Sold y la lista 29.1 de Cintolo no tiene casquetes): pedir a Cintolo"
     }
    ]
   },
@@ -644,13 +673,14 @@
    "especificacion": "Plano: 8\" · STD · ASTM A-234 G°WPB · BW",
    "fuentes": [
     {
-     "tipo": "lista",
+     "tipo": "est",
      "precio": 39.61,
      "proveedor": "Renard (cód. 3436) · ABW-00034",
      "codigo": "ABW-00034",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3436",
      "fecha": "2025-12-26",
-     "coincide": "igual"
+     "coincide": "similar",
+     "diferencia": "marca no identificada (el listado admite solo Curvo Sold y la lista 29.1 de Cintolo no tiene casquetes): pedir a Cintolo"
     }
    ]
   },
@@ -699,7 +729,7 @@
      "proveedor": "Planilla de costo ITT, salto de regulación Camuzzi ERP Caseros (CAMUZZI/14, CGP 6910, rev 2, renglón 18: TOMA MULTIPORT Ø 1/2\" - 3000 LB, 312 USD)",
      "origen": "fuentes_originales/ofertas_texto/CAMUZZI/14_#5067 - (CGP 6910  CGS 6911) - Estaciones de medición y regulación/4.Armado de la Oferta Comercial/6910/Planilla de Costo- Salto de Regulación_6910 rev 2.xlsx.txt",
      "fecha": "2022-03-15",
-     "coincide": "igual",
+     "coincide": "similar",
      "diferencia": "misma pieza (toma multiport 1/2\" serie 3000; la planilla no dice el material) en un salto de Camuzzi; precio de 2022 (período con cepo): pedir cotización a ABAC"
     },
     {
@@ -834,23 +864,31 @@
    "especificacion": "Plano: 1/2\" · 3000 · S/ Fabricante · NPT",
    "fuentes": [
     {
+     "tipo": "est",
+     "precio": 316.4,
+     "proveedor": "Weisz presupuesto 30.0.10.027.203 ítem 01 (16-07-2026): manómetro 4100N 4\" clase 1, caja AISI 304 IP65, bourdon AISI 316 + limitador 080M + bloqueo y purga 070 AISI 316 + certificado de calibración",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/Oferta Weisz de ventas_30.0.10.027.203.pdf.txt",
+     "fecha": "2026-07-16",
+     "coincide": "similar",
+     "diferencia": "estimado (auditoría 30-10-2026): sin glicerina, con limitador que no se pide, y bloqueo y purga Weisz AISI 316 en lugar del manifold de 3 vías A-105 zincado serie 3000 (ET 5.8; Weisz no figura para bloqueo y purga): pedir manómetro Weisz/Wika con glicerina + manifold ABAC VA 350 o Casucci"
+    },
+    {
+     "tipo": "est",
+     "precio": 201.0,
+     "proveedor": "Planilla de costo ITT, salto Camuzzi ERP Caseros (CAMUZZI/14, renglones 51 manifold 3 vías zincado 136 y 49 manómetro según la ET, 65)",
+     "origen": "fuentes_originales/ofertas_texto/CAMUZZI/14_#5067 - (CGP 6910  CGS 6911) - Estaciones de medición y regulación/4.Armado de la Oferta Comercial/6910/Planilla de Costo- Salto de Regulación_6910 rev 2.xlsx.txt",
+     "fecha": "2022-03-15",
+     "coincide": "igual",
+     "diferencia": "misma especificación, precio de 2022"
+    },
+    {
      "tipo": "ant",
      "precio": 230.0,
      "proveedor": "Bloqueo y purga ABAC 80 (VAL-03162, planilla TAVAL/55) + manómetro Ø100 150 (INS-02671, Weisz o similar, TAVAL/43)",
      "origen": "fuentes_originales/ofertas_texto/TAVAL/43- YPF- CM PUENTES DE PRODUCCION",
      "fecha": "2026-04-22",
      "coincide": "similar",
-     "diferencia": "manómetro según ET 5.7.1 (glicerina, clase 1, certificado de calibración) montado con manifold de 3 vías A-105 zincado serie 3000 (ET 5.8): pedir a ABAC (VA 350) / Weisz o Wika"
-    },
-    {
-     "tipo": "cot",
-     "precio": 316.4,
-     "proveedor": "Weisz presupuesto 30.0.10.027.203 ítem 01: manómetro 4100N + limitador 080M + bloqueo y purga 070 AISI 316 + certificado de calibración",
-     "origen": "fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/Oferta Weisz de ventas_30.0.10.027.203.pdf.txt",
-     "fecha": "2026-07-16",
-     "coincide": "similar",
-     "diferencia": "sin glicerina y con limitador; bloqueo y purga Weisz (no figura en el listado para bloqueo y purga)",
-     "validez_hasta": "2026-08-16"
+     "diferencia": "manómetro según ET 5.7.1 (glicerina, clase 1, certificado de calibración) montado con manifold de 3 vías A-105 zincado serie 3000 (ET 5.8): VAL-03162 es un manifold de transmisor (PIT) de Tecpetrol y INS-02671 no demuestra la ET 5.7.1: solo referencia"
     }
    ]
   },
@@ -1028,11 +1066,11 @@
    "especificacion": "Plano: 6\" · 80 · ASTM A-53 GR°B · BW · El cliente no indica cantidad: calculada por ITT según el plano (medida del dibujo)",
    "fuentes": [
     {
-     "tipo": "ant",
+     "tipo": "lista",
      "precio": 90.7,
-     "proveedor": "Renard · CAN-01512",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx",
-     "fecha": "2026-06-26",
+     "proveedor": "Renard (cód. 1174) · Tubo s/costura 168,3 x 10,97 mm A53/A106/API 5L B · CAN-01512",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1174",
+     "fecha": "2025-12-26",
      "coincide": "similar",
      "diferencia": "caño A106 Gr B sch XS (el plano pide A-53 Gr B sch 80: A106 lo reemplaza, mismo espesor en 6\")",
      "codigo": "CAN-01512"
@@ -1049,11 +1087,11 @@
    "especificacion": "1 tramo de 6 m para 2.25 m (con tira de 12 m el sobrante superaba 80%)",
    "fuentes": [
     {
-     "tipo": "ant",
+     "tipo": "lista",
      "precio": 90.7,
-     "proveedor": "Renard · CAN-01512",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx",
-     "fecha": "2026-06-26",
+     "proveedor": "Renard (cód. 1174) · Tubo s/costura 168,3 x 10,97 mm A53/A106/API 5L B · CAN-01512",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1174",
+     "fecha": "2025-12-26",
      "coincide": "similar",
      "diferencia": "caño A106 Gr B sch XS (el plano pide A-53 Gr B sch 80: A106 lo reemplaza, mismo espesor en 6\")",
      "codigo": "CAN-01512"
@@ -1168,7 +1206,7 @@
      "origen": "fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/Oferta Induquip 26-333-RSDGVM-USM.pdf.txt",
      "fecha": "2026-07-17",
      "coincide": "similar",
-     "diferencia": "rango 0-100 °C a configurar; Rosemount está en el listado",
+     "diferencia": "rango 0-100 °C a configurar; el sensor 214C cotizado va armado a la termovaina bridada C-276 de Induquip (opción XW): pedirlo para la termovaina 3/4\" NPT de la pos 18; Rosemount está en el listado",
      "validez_hasta": "2026-08-16"
     }
    ]
@@ -1426,15 +1464,15 @@
    "2": "Tormene (TA956 DFO), Fiorentini (Reflux/Aperflux), Fisher (EZR) u otro homologado",
    "3": "Esferomatic / Worcester / Valvtronic / Pentair / Indave / Wenlen / Beta / Valmec",
    "4": "Esferomatic / Worcester / Valvtronic / Pentair / Indave / Wenlen / Beta / Valmec",
-   "5": "Francovigh / CH / Futura (bridas)",
-   "6": "Francovigh / CH / Futura (bridas)",
-   "7": "Francovigh / CH / Futura (bridas)",
-   "8": "Francovigh / CH / Futura (bridas)",
-   "9": "Curvo Sold (Cintolo) / TDW",
-   "10": "Curvo Sold (Cintolo) / TDW",
-   "11": "Curvo Sold (Cintolo) / TDW",
-   "12": "Curvo Sold (Cintolo) / TDW",
-   "13": "Curvo Sold (Cintolo) / TDW",
+   "5": "Futura / Francovigh (bridas)",
+   "6": "Futura / Francovigh (bridas)",
+   "7": "Futura / Francovigh (bridas)",
+   "8": "Futura / Francovigh (bridas)",
+   "9": "Curvo Sold (Cintolo)",
+   "10": "Curvo Sold (Cintolo)",
+   "11": "Curvo Sold (Cintolo)",
+   "12": "Curvo Sold (Cintolo)",
+   "13": "Curvo Sold (Cintolo)",
    "14": "Thorsa / Forja Atlas (cupla); esférica del listado",
    "15": "ABAC",
    "16": "Farinola / Favra / Aerre",
@@ -1445,12 +1483,12 @@
    "A": "Rosemount / Yokogawa / Siemens / Aplisens / SMAR",
    "B": "Rosemount / Yokogawa / Siemens / Aplisens / SMAR",
    "C": "con las reguladoras",
-   "5b": "Klinger / Teadit / Flexseal / Miyashiro / Garlock / Delgado",
-   "6b": "Klinger / Teadit / Flexseal / Miyashiro / Garlock / Delgado",
-   "7b": "Klinger / Teadit / Flexseal / Miyashiro / Garlock / Delgado",
-   "5c": "Petrobul / Talleres Versailles / Fornis",
-   "6c": "Petrobul / Talleres Versailles / Fornis",
-   "7c": "Petrobul / Talleres Versailles / Fornis",
+   "5b": "Klinger / Teadit / Flexseal / Miyashiro Schonborn / Garlock (solo espirometálicas)",
+   "6b": "Klinger / Teadit / Flexseal / Miyashiro Schonborn / Garlock (solo espirometálicas)",
+   "7b": "Klinger / Teadit / Flexseal / Miyashiro Schonborn / Garlock (solo espirometálicas)",
+   "5c": "Delgado / Petrobul / Talleres Versailles / Fornis",
+   "6c": "Delgado / Petrobul / Talleres Versailles / Fornis",
+   "7c": "Delgado / Petrobul / Talleres Versailles / Fornis",
    "2b": "Swagelok / Parker / Casucci / Fittinox / ABAC / Famiq / Hoke",
    "17b": "Thorsa / Forja Atlas",
    "18b": "Thorsa / Forja Atlas"

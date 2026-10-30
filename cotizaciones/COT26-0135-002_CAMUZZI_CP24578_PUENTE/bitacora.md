@@ -83,3 +83,21 @@ Borrador, sin revisar. Antes: unitario USD 30.102,40, total USD 30.706,52 (con f
 10. Error mío durante la revisión: el directorio temporal es compartido con los agentes del 001 y el 003; un script de requisitos del 001 con el mismo nombre escribió sus requisitos en esta carpeta. Se detectó al instante y se rehizo el archivo desde un script propio. Usar nombres únicos en el temporal.
 
 **Frenos que quedan:** consultas C1–C4; lo estimado 16% (horas de ingeniería, calidad y montaje por criterio, espárragos, carretel, prueba de fugas); 20 precios vencidos (lista Renard 12-2025, lista Taval 09-2025, Megatap, Provemet, Quesada): pedir a Compras; datos entre corchetes de la oferta (número de PRES, teléfonos); antecedentes sin costo comparable. Falta la revisión independiente (P9).
+
+## 30-10-2026 · Hallazgos de la auditoría independiente de esta revisión
+Cada hallazgo se verificó contra el plano (imagen ampliada del dibujo) y los originales. Antes: unitario USD 31.122,70, total USD 31.726,82. Después (`armar_cotizacion.py`): **unitario USD 32.269,12, total USD 32.873,24**. Borrador, sin revisar.
+
+Errores reales, corregidos (se suman a los de la revisión):
+11. **Faltaba una junta de 6"**: entre el ramal de la te 7 y la brida de la válvula 3 hay un tramo de caño (dibujo de elevación), así que son 2 juntas y no 1. S01 pasa a 105,25 pulgadas (22 a tope). RX: 92 placas, 3 visitas = ARS 3.930.000 = USD 2.549,58.
+12. **El filtro dibuja un manómetro de presión estática con su válvula**, además del diferencial, y la exclusión decía que no figuraban en el plano. Se agrega la fila 1j: manómetro Ø 100, 1/2" NPT, AISI 316 (INS-02698, planilla Sacde/15, 115) + manifold de 3 vías ABAC (TAVAL/40, 170). La exclusión y la consulta C1 quedan solo para manómetros adicionales en el puente.
+13. **La válvula 3 (6") está dibujada con volante (caja reductora)**: la referencia Taval es a palanca. Queda la diferencia en el renglón, en los desvíos del informe y en Compras. No hay precio con reductor en la base, así que no se agregó un monto.
+14. **PH del puente en 6 h**: era solo el tiempo de mantenimiento. Pasa a 18 h por armado, cegado de bridas, llenado, desarme y secado (TAVAL/40, «PH con armado y desarme» 1 día × 2 × 9 h).
+15. **`sin_precio_motivo` mal usado** en 6b, 11 y 16: decía "pedida a Compras", que no es un motivo para ir en 0, y tapaba el freno de sin precio. Se sacó; ahora frenan. Solo la fila 1 lo conserva, porque su precio está en los componentes.
+16. **Refuerzos tipo poncho del filtro** con el valor de 6"x3" de TAVAL/40 (150 c/u, que la propia planilla marcaba como estimado). Pasan a una fila 1k SIN PRECIO, para pedir a Cintolo.
+17. En la lista para Compras faltaban las marcas de accesorios para soldar del listado (Cintolo/Curvo Sold, TDW) en las pos 8, 9, 10, 1c y 1k. Agregadas.
+18. Faltaba en la matriz de requisitos la ET §5.8 sobre los manifolds (A-105 o superior, zincado, serie 3000): va a 1h y 1j. Se agregan como `pendiente_itt` la descarga de los documentos de Camuzzi y el plano tipo del filtro (largos, internos y refuerzos estimados). Se agrega la consulta C5: el dibujo muestra la pos 12 dos veces, la 16 una y la 11 una, contra 1, 2 y 2 en la tabla; se cotiza la tabla. La C2 ahora pregunta si el sensor A trae termovaina propia.
+
+Hallazgo no aceptado, con su evidencia:
+- **Tapa de cierre rápido 1d (USD 2.480, Megatap).** Se mantiene como referencia de precio. Es la misma medida y la misma serie (12" #150, ASME VIII). Según la guía (§ "Similares: misma serie y misma norma", Matías 29-10-2026), otra marca se anota como diferencia y no invalida la referencia. Las referencias de Futura que propone el auditor son de otra medida y otra serie (8" #300 USD 3.424; 16" #600 USD 8.432), así que no sirven como referencia. La Futura 8" #300 queda cargada como fuente descartada, porque muestra que una marca del listado puede cotizar más. La cotización de Megatap está vencida, ya frena por eso y está pedida a Compras.
+
+Siguen abiertos: ARMF (45 h del FM3) y los internos del filtro, que salen de un FM3 con tapa bridada, hasta tener el plano tipo (pendiente_itt).

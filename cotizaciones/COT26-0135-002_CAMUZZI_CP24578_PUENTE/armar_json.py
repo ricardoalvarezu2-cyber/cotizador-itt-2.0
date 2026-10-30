@@ -64,9 +64,9 @@ MARCA_ESF = "comprar marca del listado SCE-IN-501-0015 (Esferomatic, Worcester, 
 # (16 USD/pulg) + horas de montaje. El FM-6 #150 simple módulo de Camuzzi lleva cuerpo de 12" y toberas de 6" (oferta ITT OE 260-23,
 # CAMUZZI/19) y tapa de cierre rápido (OE 260-23; CAMUZZI/23: "Con tapa de cierre rápido"). El plano tipo SCE-RE-112-0004 no está en
 # el repositorio: los largos del cuerpo y de la pollera son estimados y se confirman con él.
-P("1", [F("est", 0, "Costeado por componentes en las filas 1b a 1i y en la MO del filtro (MOF, ARMF)", "—", HOY, "sin_ref",
-          "el precio del filtro es la suma de sus componentes: ver filas 1b–1i, MOF y ARMF")],
-  sin_precio_motivo="Filtro fabricado por ITT: costeado por componentes en las filas 1b a 1i (materiales) y MOF / ARMF (mano de obra); RX, PH y pintura en sus rubros")
+P("1", [F("est", 0, "Costeado por componentes en las filas 1b a 1k y en la MO del filtro (MOF, ARMF)", "—", HOY, "sin_ref",
+          "el precio del filtro es la suma de sus componentes: ver filas 1b–1k, MOF y ARMF")],
+  sin_precio_motivo="Filtro fabricado por ITT: costeado por componentes en las filas 1b a 1k (materiales) y MOF / ARMF (mano de obra); RX, PH y pintura en sus rubros")
 X("M01B", "1b", "material", "Cuerpo y pollera del filtro FM-06: caño 12\" sch 40 sin costura A53/A106/API 5L B", 1.5, "m",
   "Estimado ITT: cuerpo ≈ 1,1 m + pollera ≈ 0,4 m (confirmar con el plano tipo SCE-RE-112-0004)",
   [F("lista", 177.72, "Renard (cód. 1200) · Tubo s/costura 323,8 x 10,31 mm A53/A106/API 5L B", f"{RENARD} · código 1200", "2025-12-26", "igual",
@@ -79,7 +79,9 @@ X("M01D", "1d", "material", "Tapa de cierre rápido 12\" #150 soldada, para el f
   [F("cot", 2480.0, "Megatap presupuesto 2026-143 (19-05-2026): tapa de cierre rápido horizontal MTV 12\" S/150 (serie 150), ASTM A105N, ASME VIII Div 1, con 2 o-rings de repuesto",
      MEGATAP, "2026-05-19", "similar",
      "marca Megatap (no está en el listado de Camuzzi: comprar Futura, Gora, Peco o EKA) y apertura horizontal (el FM es vertical); la asignación 6\" 1.085 / 8\" 1.630 / 12\" 2.480 sale del orden del texto (conocimiento/comercial/plazos_proveedores.csv): verificar en el PDF",
-     validez_hasta="2026-06-03")])
+     validez_hasta="2026-06-03"),
+   F("ant", 3424.0, "Futura cot. S00198 (planilla, OTR-03021): tapa de cierre rápido 8\" #300", "Z:\\VENTAS\\OFERTAS Y LICITACIONES (catálogo de materiales, OTR-03021)", "2025-12-10", "descartada",
+     "no es referencia (otra medida y otra serie); muestra que Futura, del listado, puede cotizar más que Megatap")])
 X("M01E", "1e", "material", "Elemento filtrante para filtro FM-06 (Gora / Metpor / Filtron / De Nichilo / Panden / SP, listado SCE-IN-501-0015)", 1, "un",
   "Según plano tipo SCE-RE-112-0004 y ET SCE-RE-512-0004",
   [F("ant", 75.0, "Planilla TAVAL/40: elemento filtrante G4 Metpor (hoja del filtro FM8, pos 10)", TAVAL40, "2026-01-15", "similar",
@@ -94,17 +96,24 @@ X("M01H", "1h", "material", "Instrumentos del filtro FM-06: manómetro diferenci
   1, "gl", "Listado SCE-IN-501-0015: manómetros diferenciales Wika con aguja de arrastre; manifold para manómetro diferencial ABAC / Casucci / Fittinox",
   [F("ant", 950.0, "Planilla TAVAL/40, filtro FM3 S150 (pos 21 manómetro diferencial 500, 28 manifold 3 vías ABAC 170, 22/29/30 conectores 30+30+112, 31/32 tubing 42+66)",
      TAVAL40, "2026-01-15", "similar", "FM3 de Inarteco (manómetro Weisz): Camuzzi pide Wika con aguja de arrastre; pedir cotización")])
+X("M01J", "1j", "material", "Manómetro de presión estática Ø 100, conexión 1/2\" NPT, AISI 316, para el filtro FM-06 (dibujado en el plano), montado con manifold de tres vías",
+  1, "gl", "Características de la ET §5.7 (clase 1, glicerina, IP65, certificado de calibración) y §5.8; marcas Weisz / Wika / ABAC / Casucci / Capino",
+  [F("ant", 115.0 + 170.0, "Manómetro Ø 100 1/2\" NPT AISI 316 (INS-02698, planilla Sacde/15 LM-TANQUE GLICOL, 115) + manifold de 3 vías AISI 304/316 ABAC M1-C-T (planilla TAVAL/40, filtro FM3 S150 pos 28, 170)",
+     "fuentes_originales/ofertas_texto/Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL/4.Armado de la Oferta Comercial/LM-TANQUE GLICOL.xlsx.txt; " + TAVAL40, "2026-01-15", "similar",
+     "marca no dicha en la planilla: comprar Weisz / Wika / ABAC / Casucci / Capino; confirmar clase 1, IP65 y certificado de calibración; manifold AISI 304/316 (superior al A-105 zincado)")])
 X("M01I", "1i", "material", "Internos, refuerzos tipo poncho, purga (esférica 1/2\" + tapón), medias cuplas, asas y chapa de identificación del filtro FM-06", 1, "gl",
   "Plano tipo SCE-RE-112-0004",
-  [F("ant", 427.5, "Planilla TAVAL/40, filtro FM3 S150: pos 6, 7, 11, 12, 13, 15, 16, 18, 19, 20, 23 (refuerzos tipo poncho 2 × 150, valor estimado de la planilla), 24, 25 y 26",
-     TAVAL40, "2026-01-15", "similar", "lista del FM3 (cuerpo 6\"); refuerzos 12\" x 6\" a pedir a Cintolo")])
+  [F("ant", 127.5, "Planilla TAVAL/40, filtro FM3 S150: pos 6, 7, 11, 12, 13, 15, 16, 18, 19, 20, 24, 25 y 26 (los refuerzos tipo poncho van aparte en la fila 1k)",
+     TAVAL40, "2026-01-15", "similar", "lista del FM3 (cuerpo 6\", tapa bridada): confirmar con el plano tipo SCE-RE-112-0004")])
+X("M01K", "1k", "material", "Refuerzos tipo poncho 12\" x 6\" STD ASTM A-234 WPB para las toberas del filtro FM-06 (Cintolo / Curvo Sold)", 2, "un", "Plano tipo SCE-RE-112-0004 (no está en el repositorio)",
+  [SIN("sin precio de refuerzo 12\" x 6\": la planilla TAVAL/40 pone 150 estimado para el de 6\" x 3\" (auditoría 30-10-2026): pedir a Cintolo")])
 
 # ---------------------------------------------------------------- 2 a 16 y A
 P("2", [F("est", round(2 * 35.65 + 0.3 * 34.34, 2), "Estimado: 2 bridas WN 4\" #150 (Renard cód. 11295, 35,65 c/u) + 0,3 m de caño 4\" sch 40 sin costura A53/A106/API 5L B (Renard cód. 1160, 34,34/m)",
           RENARD, "2025-12-26", "similar", "largo entre caras 300 mm del plano; definitivo según la turbina que provee Camuzzi")],
   especificacion="Plano: 4\" · 150 · S/ Esp. CAMUZZI · Nota ITT: carretel bridado entre las bridas pos 5 (2 bridas WN 4\" + caño, 2 soldaduras en la MO); 300 mm entre caras en el plano")
 P("3", [F("lista", 740.0, "Taval (Lista 30 × 0.52) · VAL-04474 (BF61501R0104VP)", "fuentes_originales/taval_lista30_2025-09.xlsx", "2025-09-01", "similar",
-          "precio de referencia Taval (misma especificación): " + MARCA_ESF + "; certificados según SCE-IN-501-0008 y SCE-RE-308-0001")])
+          "precio de referencia Taval PT flotante a palanca: el plano dibuja la válvula 3 con volante (caja reductora), que no está en el precio; " + MARCA_ESF + "; certificados según SCE-IN-501-0008 y SCE-RE-308-0001")])
 P("4", [F("lista", 300.0, "Taval (Lista 30 × 0.52) · VAL-04465", "fuentes_originales/taval_lista30_2025-09.xlsx", "2025-09-01", "similar",
           "precio de referencia Taval (misma especificación): " + MARCA_ESF + "; certificados según SCE-IN-501-0008 y SCE-RE-308-0001")])
 P("5", [F("lista", 35.65, "Renard (cód. 11295) · BRI-01295", f"{RENARD} · código 11295", "2025-12-26", "igual", "marca: comprar Futura o Francovigh (listado)", codigo="BRI-01295")])
@@ -119,8 +128,7 @@ X("M5C", "5c", "material", "Espárrago 5/8\" × 3 1/2\" A193 B7 con 2 tuercas 2H
 P("6", [F("lista", 58.91, "Renard (cód. 11297) · BRI-01313", f"{RENARD} · código 11297", "2025-12-26", "igual", "marca: comprar Futura o Francovigh (listado)", codigo="BRI-01313")])
 X("M6B", "6b", "material", "Junta espiralada 6\" #150 AISI 316/grafito (entrada del filtro, filtro–válvula 3 y salida de la válvula 3)", 3, "un",
   "Nota del plano: juntas y espárragos según diámetro de brida (SCE-IN-301-0001/2)",
-  [SIN("sin junta 6\" #150 cotizada (la de MS Juntas es 8\" #300; la 6\" #150 del catálogo es del cepo): pedir cotización a MS Juntas / Klinger")],
-  sin_precio_motivo="Junta 6\" #150 sin precio válido (la referencia era #300 y la 6\" #150 del catálogo es de 2025 con cepo): pedida a Compras")
+  [SIN("sin junta 6\" #150 cotizada (la de MS Juntas es 8\" #300; la 6\" #150 del catálogo es del cepo): pedir cotización a MS Juntas / Klinger")])
 X("M6C", "6c", "material", "Espárrago 3/4\" × 4\" A193 B7 con 2 tuercas 2H zincado (8 por junta de 6\")", 24, "un",
   "ET §5.8: espárragos ASTM A193 B7 y tuercas A194 2H zincados; marcas Petrobul / Talleres Versailles / Fornis",
   [F("est", 10.0, "Planilla Techint/12 (JUN-02733: 3/4\" L 120 mm con 2 tuercas)", "fuentes_originales/ofertas_texto/TECHINT/12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado",
@@ -131,8 +139,7 @@ P("8", [F("lista", 50.63, "Renard (cód. 3466) · ABW-00406", f"{RENARD} · cód
           "material: A234 WPB (pedido A105): consulta al cliente C4; Compras pide la del plano", codigo="ABW-00406")])
 P("9", [F("lista", 49.6, "Renard (cód. 3065) · ABW-00236", f"{RENARD} · código 3065", "2025-12-26", "similar", "material: A234 WPB (S/ Esp. CAMUZZI en el plano)", codigo="ABW-00236")])
 P("10", [F("lista", 26.2, "Renard (cód. 3400) · ABW-00111", f"{RENARD} · código 3400", "2025-12-26", "igual", "radio largo (el plano no dice el radio)", codigo="ABW-00111")])
-P("11", [SIN("termovaina 3/4\" NPT AISI 316: la base solo tiene termovainas bridadas 1 1/2\"-2\" o en conjunto con transmisor (otra pieza)")],
-  sin_precio_motivo="Termovaina 3/4\" NPT AISI 316 sin referencia de la misma pieza: pedida a Compras (Wika / ABAC / Casucci / Capino / Weisz)")
+P("11", [SIN("termovaina 3/4\" NPT AISI 316: la base solo tiene termovainas bridadas 1 1/2\"-2\" o en conjunto con transmisor (otra pieza)")])
 X("M11B", "11b", "material", "Cupla 3/4\" NPT S3000 ASTM A105 soldada sobre el caño 4\" para cada termovaina (no figura en la tabla del plano)", 2, "un",
   "Agregado por ITT: conexión de cada termovaina al caño (marcas CH / Thorsa / Forja Atlas)",
   [F("lista", 3.51, "Renard (cód. 5293) · Cupla 3/4\" NPT S3000 ASTM A105 · AFO-00721", f"{RENARD} · código 5293", "2025-12-26", "igual", codigo="AFO-00721")])
@@ -151,8 +158,7 @@ P("15", [F("lista", 60.51, "Renard (cód. 1173) · CAN-01510", f"{RENARD} · có
 X("M15B", "15b", "material", "Completar media tira de 6 m de la pos 15 (sobrante a stock)", 4.7, "m",
   "1 tramo de 6 m: 1 m pos 15 + 0,3 m toberas del filtro (fila 1g) + 4,7 m de sobrante",
   [F("lista", 60.51, "Renard (cód. 1173) · CAN-01510", f"{RENARD} · código 1173", "2025-12-26", "similar", "misma pieza que la pos 15", codigo="CAN-01510")])
-P("16", [SIN("la referencia era una válvula A105 y el plano pide A-106 (otra clase de material): sin referencia compatible (consulta al cliente C3)", "2026-10-30")],
-  sin_precio_motivo="Cupla ASTM A-106 con esférica 1/2\": sin referencia compatible (A-106 es especificación de caño); consulta C3 al cliente y pedido a Compras")
+P("16", [SIN("la referencia era una válvula A105 y el plano pide A-106 (otra clase de material): sin referencia compatible (consulta al cliente C3)", "2026-10-30")])
 P("A", [F("ant", 3470.06, "Rosemount · transmisor de temperatura (INS-02716, planilla PAMPA ENERGIA/5, proveedor Induquip)",
           "fuentes_originales/ofertas_texto/PAMPA ENERGIA/5 - Doc5757155642 - Construc 10 Puentes y 2 Colectores - RDA/4.Armado de la Oferta Comercial/Cot Skid Manifolds Colectores RDA Rev2.xlsx.txt · línea 177",
           "2026-06-26", "similar",
@@ -161,11 +167,11 @@ P("A", [F("ant", 3470.06, "Rosemount · transmisor de temperatura (INS-02716, pl
 
 # ---------------------------------------------------------------- MO y servicios
 # Soldaduras del puente, junta por junta del dibujo SCE-ME-315-039 (revisión 30-10-2026): 21 a tope + 5 cuplas
-JUNTAS = ("A tope 6\" (5): brida 6 de entrada–caño 15 (120 mm), caño 15–te 7, te 7–brida 6 (válvula 3), te 7–reducción 9 (lado 6\"), reducción 9 (antes del filtro)–brida 6 · "
+JUNTAS = ("A tope 6\" (6): brida 6 de entrada–caño 15, caño 15–te 7, te 7–caño (≈ 290 mm hacia la válvula 3), caño–brida 6 (válvula 3), te 7–reducción 9 (lado 6\"), reducción 9 (antes del filtro)–brida 6 · "
           "A tope 4\" (16): reducción 9 (sobre te 7)–brida 5 · bypass: brida 5–caño 911, caño–codo 10, codo–caño 3.961, caño–codo 10, codo–te 8, te 8–caño 1.213, caño–codo 10, te 8–brida 5 de salida · "
           "línea: codo 10–brida 5 (válvula 4), brida 5–caño 452, caño 452–brida 5, brida 5–caño 1.100, caño 1.100–reducción 9 · carretel 2: 2 (brida–caño) · "
-          "Cuplas (×1,75): pos 12 (1 × 1/2\"), pos 16 (2 × 1/2\"), cuplas 11b (2 × 3/4\") · pulgadas: 5 × 6 + 16 × 4 + 3 × 0,5 × 1,75 + 2 × 0,75 × 1,75 = 99,25")
-X("S01", "MO", "mo", "Soldaduras del puente: 21 a tope + 5 cuplas (junta por junta)", 99.25, "pulg", JUNTAS,
+          "Cuplas (×1,75): pos 12 (1 × 1/2\"), pos 16 (2 × 1/2\"), cuplas 11b (2 × 3/4\") · pulgadas: 6 × 6 + 16 × 4 + 3 × 0,5 × 1,75 + 2 × 0,75 × 1,75 = 105,25 (auditoría 30-10-2026: tramo de caño entre la te 7 y la brida de la válvula 3)")
+X("S01", "MO", "mo", "Soldaduras del puente: 22 a tope + 5 cuplas (junta por junta)", 105.25, "pulg", JUNTAS,
   [F("ant", 16.0, "Mano de obra soldadura piping (criterio de las planillas de costo 2026): precio por pulgada de las planillas de ITT 2025-2026 (16 a 16,5)",
      "planillas 2026 (TAVAL/43 puentes YPF 19-02-2026; TAVAL/40 Inarteco; Sacde 12 a 15; Tecpetrol 9: 16,5)", "2026-02-28", "igual"),
    F("cot", 12.0, "J. C. Quesada presupuesto JQ-020-2026: precio por pulgada soldada (ERP tipo Litoral Gas; incluye consumibles y calificación de soldadores ASME IX; sin END, PH ni pintura)",
@@ -182,16 +188,16 @@ X("S02", "PIN", "servicio", "Granallado y pintura (m² calculados: piping, filtr
   "Piping 6,21 m² (ficha_rubros: caños, bridas, accesorios y válvulas) + filtro 1,94 m² (caño 12\" 1,5 m × 1,018 m²/m + casquete, tapa y toberas) + skid 6,65 m² (≈ 14,9 m de UPN 120 × 0,446 m²/m); esquema según SCE-PC-511-0003 (no leído)",
   [F("ant", 50.0, "criterio ITT: granallado y pintura de skids, incluye materiales · PIN-00494", "fuentes_originales/ofertas_texto/PAMPA ENERGIA/7- Licitacion contrato Marco Skid PAD Rincon de Aranda",
      "2026-08-14", "similar", "esquema SCE-PC-511-0003 sin leer: confirmar espesores y productos (Sherwin Williams / Hempel)", codigo="PIN-00494")])
-X("S03", "PH", "servicio", "Pruebas hidráulicas de resistencia y hermeticidad del puente (horas de planta)", 6, "h",
-  "ET §5.4: prefabricados del puente sin válvulas ni equipos, 1,5 × presión máxima de la serie ANSI 150, durante 6 h; incluye secado. La PH del filtro FM-06 va en ARMF (18 h, como en la planilla TAVAL/40)",
+X("S03", "PH", "servicio", "Pruebas hidráulicas de resistencia y hermeticidad del puente (horas de planta)", 18, "h",
+  "ET §5.4: prefabricados del puente sin válvulas ni equipos, 1,5 × presión máxima de la serie ANSI 150, durante 6 h, con las bridas de las válvulas cegadas; armado, llenado, desarme y secado: 1 día × 2 personas × 9 h = 18 h (planilla TAVAL/40, hoja Soldadura + HH, «PH con armado y desarme»). La PH del filtro FM-06 va en ARMF (18 h, como en la planilla TAVAL/40)",
   [F("ant", 13.0, "MO ITT · END-00215", "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\49 - A&A Fluid Control - Manifolds Tecpetrol - Salar El Tolillar\\4.Armado de la Oferta Comercial",
      "2026-03-10", "igual", codigo="END-00215")])
-PLACAS = 5 * 4 + 16 * 3 + 2 * 6 + 2 * 4  # puente 6" (4 placas) y 4" (3); filtro 12" (6) y bridas–toberas 6" (4): factores_soldadura.csv
+PLACAS = 6 * 4 + 16 * 3 + 2 * 6 + 2 * 4  # puente 6" (4 placas) y 4" (3); filtro 12" (6) y bridas–toberas 6" (4): factores_soldadura.csv
 VISITAS = math.ceil(PLACAS / 45)
 ARS_RX = VISITAS * 850000 + PLACAS * 15000
 X("S04", "RX", "servicio", "Radiografía 100% de las soldaduras a tope (puente y filtro)", 1, "gl",
-  f"ET §5.3.1 · {PLACAS} placas (puente: 5 juntas 6\" × 4 + 16 juntas 4\" × 3; filtro: 2 juntas 12\" × 6 + 2 bridas–toberas 6\" × 4) → {VISITAS} visitas de hasta 45 placas; placas originales y digitalizadas para el data book",
-  [F("cot", round(ARS_RX / TC_OCT, 2), f"Proveedor de RX (sin nombre), precio confirmado por Matías el 30-10-2026: {VISITAS} visitas × ARS 850.000 + {PLACAS} placas × ARS 15.000 = ARS {ARS_RX:,}".replace(",", ".")
+  f"ET §5.3.1 · {PLACAS} placas (puente: 6 juntas 6\" × 4 + 16 juntas 4\" × 3; filtro: 2 juntas 12\" × 6 + 2 bridas–toberas 6\" × 4) → {VISITAS} visitas de hasta 45 placas; placas originales y digitalizadas para el data book",
+  [F("cot", round(ARS_RX / TC_OCT, 2), f"Proveedor de RX (sin nombre), precio confirmado por Matías el 30-10-2026: {VISITAS} visitas × ARS 850.000 + {PLACAS} placas × ARS 15.000 = ARS {ARS_RX:,}".replace(",", ".").replace("(sin nombre). precio", "(sin nombre), precio")
      + " sin IVA, a BNA oct-2026 (1.541,43)", "conocimiento/precios/precios_usuario.csv", HOY, "igual"),
    F("ant", 1571.5, "Servicio de radiografía DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD)", "PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT)", "2026-08-31", "similar", "71 placas del cómputo anterior")])
 X("S04L", "LP", "servicio", "Líquidos penetrantes en uniones que no se radiografían (cuplas, toberas injertadas, filetes)", 10, "junta",
@@ -216,7 +222,7 @@ X("ARMF", "ARMF", "mo", "Horas de montaje del filtro FM-06 (corte y presentació
   [F("est", 13.0, "Horas propias ITT (tarifa de la planilla TAVAL/40)", TAVAL40, "2026-01-15", "similar", "horas del FM3 S150 (menor) aplicadas al FM-06")])
 
 base["items"] = items
-base["parametros"].update({"TRANS": 1, "TC": TC_OCT, "TR_ARS": 700000, "TR_EMB": 150, "TR_F": 1.0, "ph_horas": 6, "fecha_referencia": HOY})
+base["parametros"].update({"TRANS": 1, "TC": TC_OCT, "TR_ARS": 700000, "TR_EMB": 150, "TR_F": 1.0, "ph_horas": 18, "fecha_referencia": HOY})
 PLAZO = 150
 base["plazo"] = {"dias": PLAZO, "texto": "desde OC · entregado en Transporte Cruz del Sur (Tapiales)",
                  "tareas": [["Ingeniería, documentación y aprobación de Camuzzi (datos de diseño de la tapa)", 0, 20, ""],
@@ -239,11 +245,12 @@ base["pedido"] = {"eyebrow": "Concurso de precios N° 24578 · Cláusulas partic
                                       "RX 100% (LP donde no se puede radiografiar), PH 1,5 × serie ANSI durante 6 h (NAG-124), prueba de fugas a 5,5 bar",
                                       "Protección anticorrosiva SCE-PC-511-0003", "Esféricas según SCE-IN-501-0008 / SCE-RE-308-0001", "Marcas del listado SCE-IN-501-0015",
                                       "Documentación para aprobación, data book (pdf, CD y papel) e inspección de Camuzzi por etapas"]}
-base["nota_mo_html"] = ("Soldadura por pulgada (16 USD/pulg-eq) contada junta por junta del dibujo: puente 99,25 pulg (21 a tope + 5 cuplas) y filtro FM-06 70,75 pulg. "
+base["nota_mo_html"] = ("Soldadura por pulgada (16 USD/pulg-eq) contada junta por junta del dibujo: puente 105,25 pulg (22 a tope + 5 cuplas) y filtro FM-06 70,75 pulg. "
                         "El filtro se costea por componentes (planilla TAVAL/40 como modelo). RX con la tarifa confirmada por Matías (30-10-2026), LP, PH (puente y filtro), "
                         "pintura de piping, filtro y skid, prueba de fugas, skid por kg (Quesada) y horas de ingeniería, calidad y montaje.")
-base["desvios"] = [{"tag": "Pos 2", "titulo": "Carretel provisorio", "texto": "Largo entre caras 300 mm del plano; se ajusta a la turbina que provee Camuzzi."},
-                   {"tag": "Consultas", "titulo": "4 consultas al cliente abiertas", "texto": "Manómetros de la ET §5.7, sensor A, material A-106 de la pos 16 y tes A-105 (consultas_cliente.md)."}]
+base["desvios"] = [{"tag": "Pos 3", "titulo": "Esférica 6\" con reductor", "texto": "El plano la dibuja con volante: el precio de referencia es a palanca; Compras la pide con caja reductora."},
+                   {"tag": "Pos 2", "titulo": "Carretel provisorio", "texto": "Largo entre caras 300 mm del plano; se ajusta a la turbina que provee Camuzzi."},
+                   {"tag": "Consultas", "titulo": "5 consultas al cliente abiertas", "texto": "Manómetros adicionales de la ET §5.7, sensor A, material A-106 de la pos 16, tes A-105 y cantidades dibujadas de las pos 11, 12 y 16 (consultas_cliente.md)."}]
 base["antecedentes"] = [
     {"carpeta_html": "<b>TAVAL/40</b> · Inarteco Lic 9333", "fecha": "15-01-2026", "que": "Filtros FM3 S150 / FM8 S600 con planilla de costo", "precio": "costo FM3 5.575",
      "tomado_html": "Modelo de costeo del filtro FM-06 por componentes"},
@@ -254,7 +261,7 @@ base["antecedentes"] = [
 base["pendientes"] = [{"titulo": "Compras", "items": ["Tapa de cierre rápido 12\" #150 de marca del listado (Futura / Gora / Peco / EKA)", "Elemento filtrante FM-6, manómetro diferencial Wika y manifold",
                                                       "Esféricas 6\" y 4\" #150 de marca del listado con certificados SCE-IN-501-0008", "Bridas, accesorios y caños (Renard 12-2025 vencida)",
                                                       "Termovainas, junta 6\" #150, espárragos B7/2H, cupla A-106", "UPN del skid; MO del skid (Quesada) y flete a Tapiales"]},
-                      {"titulo": "Camuzzi (consultas_cliente.md)", "items": ["C1 manómetros de la ET §5.7", "C2 sensor A de temperatura", "C3 cupla A-106 de la pos 16", "C4 tes A-105 (pos 7 y 8)"]},
+                      {"titulo": "Camuzzi (consultas_cliente.md)", "items": ["C1 manómetros adicionales de la ET §5.7", "C2 sensor A de temperatura", "C3 cupla A-106 de la pos 16", "C4 tes A-105 (pos 7 y 8)", "C5 cantidades de las pos 11, 12 y 16 en el dibujo"]},
                       {"titulo": "ITT", "items": ["Descargar de la web de Camuzzi SCE-RE-112-0004, SCE-RE-512-0004, SCE-PC-511-0003, SCE-RE-110-0006 y SCE-IN-301-0005",
                                                   "Confirmar si los WPS/PQR y soldadores calificados vigentes sirven (ET §3.1.3)"]}]
 base["planilla_notas"] = [f"Plazo: {PLAZO} días desde OC (tapa de cierre rápido del filtro ≈ 105 días + taller 25 días = 130, más margen).",
@@ -263,15 +270,17 @@ base["pie"] = "Fuentes: base de conocimiento del repositorio cotizador-itt. Prec
 base["compras"] = {"fecha_respuesta": "2026-11-04", "material_en_planta_dias": 45, "lugar_entrega": "Planta ITT S.A., Av. 12 de Octubre 4004, Quilmes Oeste, Bs. As.",
                    "requisitos_generales": ["Cotizar en USD sin IVA, con plazo de entrega y validez de la oferta.", "Certificados 3.1; esféricas con certificados según SCE-IN-501-0008 / SCE-RE-308-0001.",
                                             "Solo marcas del listado SCE-IN-501-0015 de Camuzzi (rev. 1, 10-02-2026)."],
-                   "notas": {"1": "Filtro FM-06 #150 simple módulo fabricado por ITT: ver filas 1b a 1i",
+                   "notas": {"1": "Filtro FM-06 #150 simple módulo fabricado por ITT: ver filas 1b a 1k",
                              "1d": "Tapa de cierre rápido 12\" #150 vertical soldada: Futura, Gora, Peco o EKA (referencia Megatap 2026-143: 2.480, fuera del listado)",
                              "1e": "Elemento filtrante para FM-06 según SCE-RE-112-0004: Gora / Metpor / Filtron / De Nichilo / Panden / SP",
                              "1h": "Manómetro diferencial Wika con aguja de arrastre; manifold ABAC / Casucci / Fittinox",
                              "11": "Termovaina 3/4\" NPT AISI 316 (Wika / ABAC / Casucci / Capino / Weisz)",
                              "16": "Cupla de acero ASTM A-106 1/2\" NPT soldable con esférica 1/2\" S3000 (consulta C3 al cliente)",
+                             "3": "Esférica 6\" #150 PT con caja reductora y volante (como en el plano), marca del listado",
+                             "1k": "Refuerzos tipo poncho 12\" x 6\" STD A-234 WPB (Cintolo)",
                              "A": "Sensor / transmisor de temperatura 0-100 °C 4-20 mA 3/4\" para correctora (Rosemount, Yokogawa, Siemens, Aplisens, Smar…; consulta C2)"},
                    "proveedores": {"1d": "Futura Hnos. / Gora / EKA Técnica", "1e": "Gora / Metpor", "3": "Esferomatic / Worcester / Valvtronic (listado Camuzzi)",
-                                   "4": "Esferomatic / Worcester / Valvtronic (listado Camuzzi)", "5": "Futura / Francovigh", "6": "Futura / Francovigh", "5b": "Klinger / Teadit / Flexseal / Miyashiro / Garlock", "7": "Cintolo (Curvo Sold)",
+                                   "4": "Esferomatic / Worcester / Valvtronic (listado Camuzzi)", "5": "Futura / Francovigh", "6": "Futura / Francovigh", "5b": "Klinger / Teadit / Flexseal / Miyashiro / Garlock", "7": "Cintolo (Curvo Sold) / TDW", "8": "Cintolo (Curvo Sold) / TDW", "9": "Cintolo (Curvo Sold) / TDW", "10": "Cintolo (Curvo Sold) / TDW", "1c": "Cintolo (Curvo Sold) / TDW", "1k": "Cintolo (Curvo Sold) / TDW", "1j": "Weisz / Wika + ABAC / Casucci", "11b": "CH / Thorsa / Forja Atlas",
                                    "5c": "Petrobul / Talleres Versailles / Fornis", "6c": "Petrobul / Talleres Versailles / Fornis", "6b": "Klinger / Teadit / Flexseal / Miyashiro"},
                    "cantidad_compra": {"15": "media tira de 6 m (incluye 0,3 m para las toberas del filtro)", "1b": "tramo de 1,5 m de 12\" sch 40"},
                    "servicios": [{"servicio": "Reconfirmar MO del skid por kg (J. C. Quesada JQ-020-2026 vencida)", "proveedores": "Quesada / Ledesma", "referencia": "4,50 USD/kg (06-05-2026)", "nota": ""},
@@ -288,12 +297,12 @@ camuzzi_comun.oferta(C, "COT26-0135-002", "Puente de medicion", 3, "skid puente 
                       "Cupla 3/4\" NPT para cada termovaina (pos 11), necesaria para su montaje, incluida aunque no figura en la tabla del plano.",
                       "Sensor de temperatura A incluido (transmisor 4-20 mA); si lo provee Camuzzi con la correctora, se descuenta.",
                       "Con la oferta se presentan la DDJJ de ética, el Anexo I y los Anexos II y III (Compre Argentino), y la especificación y el plano firmados."],
-                     ["Ingeniería de fabricación, cronograma, listado de documentos y documentación para aprobación (ET §3).", "Fabricación del filtro FM-06 según el plano tipo de Camuzzi.",
+                     ["Ingeniería de fabricación, cronograma, listado de documentos y documentación para aprobación (ET §3).", "Fabricación del filtro FM-06 según el plano tipo de Camuzzi, con su manómetro diferencial y su manómetro de presión estática.",
                       "Suministro de materiales del plano, juntas y espárragos internos.", "Prefabricado, armado y soldadura en taller; RX 100% y líquidos penetrantes; PH y prueba de fugas.",
                       "Protección anticorrosiva SCE-PC-511-0003.", "Data book (pdf, CD y copia en papel) y certificados.", "Embalaje y flete hasta Transporte Cruz del Sur (Tapiales)."])
 ro = C / "oferta.json"
 o = json.load(open(ro, encoding="utf-8"))
-o["exclusiones"]["items"] += ["Turbina de medición (la provee Camuzzi, ET §4).", "Manómetros de presión estática de la ET §5.7: no figuran en el plano; se cotizan si Camuzzi lo confirma."]
+o["exclusiones"]["items"] += ["Turbina de medición (la provee Camuzzi, ET §4).", "Manómetros de presión estática adicionales al del filtro FM-06 (ET §5.7): la tabla del plano no los lista; se cotizan si Camuzzi lo confirma."]
 o["garantia"] = ("Garantía general de 2 años desde la entrega o 1 año desde la instalación, lo que ocurra primero (especificación de Camuzzi, §9), con responsabilidad por vicios ocultos de "
                  "fabricación, más las garantías particulares de materiales e instrumentos.")
 json.dump(o, open(ro, "w", encoding="utf-8"), ensure_ascii=False, indent=1)

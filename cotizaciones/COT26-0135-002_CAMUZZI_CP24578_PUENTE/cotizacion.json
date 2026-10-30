@@ -38,7 +38,7 @@
   "TR_F": 1.0,
   "fecha_referencia": "2026-10-30",
   "rx_pct": 100,
-  "ph_horas": 6,
+  "ph_horas": 18,
   "FTV": 1.0
  },
  "plazo": {
@@ -128,8 +128,13 @@
    "Documentación para aprobación, data book (pdf, CD y papel) e inspección de Camuzzi por etapas"
   ]
  },
- "nota_mo_html": "Soldadura por pulgada (16 USD/pulg-eq) contada junta por junta del dibujo: puente 99,25 pulg (21 a tope + 5 cuplas) y filtro FM-06 70,75 pulg. El filtro se costea por componentes (planilla TAVAL/40 como modelo). RX con la tarifa confirmada por Matías (30-10-2026), LP, PH (puente y filtro), pintura de piping, filtro y skid, prueba de fugas, skid por kg (Quesada) y horas de ingeniería, calidad y montaje.",
+ "nota_mo_html": "Soldadura por pulgada (16 USD/pulg-eq) contada junta por junta del dibujo: puente 105,25 pulg (22 a tope + 5 cuplas) y filtro FM-06 70,75 pulg. El filtro se costea por componentes (planilla TAVAL/40 como modelo). RX con la tarifa confirmada por Matías (30-10-2026), LP, PH (puente y filtro), pintura de piping, filtro y skid, prueba de fugas, skid por kg (Quesada) y horas de ingeniería, calidad y montaje.",
  "desvios": [
+  {
+   "tag": "Pos 3",
+   "titulo": "Esférica 6\" con reductor",
+   "texto": "El plano la dibuja con volante: el precio de referencia es a palanca; Compras la pide con caja reductora."
+  },
   {
    "tag": "Pos 2",
    "titulo": "Carretel provisorio",
@@ -137,8 +142,8 @@
   },
   {
    "tag": "Consultas",
-   "titulo": "4 consultas al cliente abiertas",
-   "texto": "Manómetros de la ET §5.7, sensor A, material A-106 de la pos 16 y tes A-105 (consultas_cliente.md)."
+   "titulo": "5 consultas al cliente abiertas",
+   "texto": "Manómetros adicionales de la ET §5.7, sensor A, material A-106 de la pos 16, tes A-105 y cantidades dibujadas de las pos 11, 12 y 16 (consultas_cliente.md)."
   }
  ],
  "antecedentes": [
@@ -179,10 +184,11 @@
   {
    "titulo": "Camuzzi (consultas_cliente.md)",
    "items": [
-    "C1 manómetros de la ET §5.7",
+    "C1 manómetros adicionales de la ET §5.7",
     "C2 sensor A de temperatura",
     "C3 cupla A-106 de la pos 16",
-    "C4 tes A-105 (pos 7 y 8)"
+    "C4 tes A-105 (pos 7 y 8)",
+    "C5 cantidades de las pos 11, 12 y 16 en el dibujo"
    ]
   },
   {
@@ -211,14 +217,14 @@
     {
      "tipo": "est",
      "precio": 0,
-     "proveedor": "Costeado por componentes en las filas 1b a 1i y en la MO del filtro (MOF, ARMF)",
+     "proveedor": "Costeado por componentes en las filas 1b a 1k y en la MO del filtro (MOF, ARMF)",
      "origen": "—",
      "fecha": "2026-10-30",
      "coincide": "sin_ref",
-     "diferencia": "el precio del filtro es la suma de sus componentes: ver filas 1b–1i, MOF y ARMF"
+     "diferencia": "el precio del filtro es la suma de sus componentes: ver filas 1b–1k, MOF y ARMF"
     }
    ],
-   "sin_precio_motivo": "Filtro fabricado por ITT: costeado por componentes en las filas 1b a 1i (materiales) y MOF / ARMF (mano de obra); RX, PH y pintura en sus rubros"
+   "sin_precio_motivo": "Filtro fabricado por ITT: costeado por componentes en las filas 1b a 1k (materiales) y MOF / ARMF (mano de obra); RX, PH y pintura en sus rubros"
   },
   {
    "id": "M01B",
@@ -278,6 +284,15 @@
      "coincide": "similar",
      "diferencia": "marca Megatap (no está en el listado de Camuzzi: comprar Futura, Gora, Peco o EKA) y apertura horizontal (el FM es vertical); la asignación 6\" 1.085 / 8\" 1.630 / 12\" 2.480 sale del orden del texto (conocimiento/comercial/plazos_proveedores.csv): verificar en el PDF",
      "validez_hasta": "2026-06-03"
+    },
+    {
+     "tipo": "ant",
+     "precio": 3424.0,
+     "proveedor": "Futura cot. S00198 (planilla, OTR-03021): tapa de cierre rápido 8\" #300",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES (catálogo de materiales, OTR-03021)",
+     "fecha": "2025-12-10",
+     "coincide": "descartada",
+     "diferencia": "no es referencia (otra medida y otra serie); muestra que Futura, del listado, puede cotizar más que Megatap"
     }
    ]
   },
@@ -363,6 +378,26 @@
    ]
   },
   {
+   "id": "M01J",
+   "pos": "1j",
+   "grupo": "material",
+   "descripcion": "Manómetro de presión estática Ø 100, conexión 1/2\" NPT, AISI 316, para el filtro FM-06 (dibujado en el plano), montado con manifold de tres vías",
+   "cantidad": 1,
+   "unidad": "gl",
+   "especificacion": "Características de la ET §5.7 (clase 1, glicerina, IP65, certificado de calibración) y §5.8; marcas Weisz / Wika / ABAC / Casucci / Capino",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 285.0,
+     "proveedor": "Manómetro Ø 100 1/2\" NPT AISI 316 (INS-02698, planilla Sacde/15 LM-TANQUE GLICOL, 115) + manifold de 3 vías AISI 304/316 ABAC M1-C-T (planilla TAVAL/40, filtro FM3 S150 pos 28, 170)",
+     "origen": "fuentes_originales/ofertas_texto/Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL/4.Armado de la Oferta Comercial/LM-TANQUE GLICOL.xlsx.txt; fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/4.Armado de la Oferta Comercial/LM costo Filtros rev.1.xlsx.txt",
+     "fecha": "2026-01-15",
+     "coincide": "similar",
+     "diferencia": "marca no dicha en la planilla: comprar Weisz / Wika / ABAC / Casucci / Capino; confirmar clase 1, IP65 y certificado de calibración; manifold AISI 304/316 (superior al A-105 zincado)"
+    }
+   ]
+  },
+  {
    "id": "M01I",
    "pos": "1i",
    "grupo": "material",
@@ -373,12 +408,32 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 427.5,
-     "proveedor": "Planilla TAVAL/40, filtro FM3 S150: pos 6, 7, 11, 12, 13, 15, 16, 18, 19, 20, 23 (refuerzos tipo poncho 2 × 150, valor estimado de la planilla), 24, 25 y 26",
+     "precio": 127.5,
+     "proveedor": "Planilla TAVAL/40, filtro FM3 S150: pos 6, 7, 11, 12, 13, 15, 16, 18, 19, 20, 24, 25 y 26 (los refuerzos tipo poncho van aparte en la fila 1k)",
      "origen": "fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/4.Armado de la Oferta Comercial/LM costo Filtros rev.1.xlsx.txt",
      "fecha": "2026-01-15",
      "coincide": "similar",
-     "diferencia": "lista del FM3 (cuerpo 6\"); refuerzos 12\" x 6\" a pedir a Cintolo"
+     "diferencia": "lista del FM3 (cuerpo 6\", tapa bridada): confirmar con el plano tipo SCE-RE-112-0004"
+    }
+   ]
+  },
+  {
+   "id": "M01K",
+   "pos": "1k",
+   "grupo": "material",
+   "descripcion": "Refuerzos tipo poncho 12\" x 6\" STD ASTM A-234 WPB para las toberas del filtro FM-06 (Cintolo / Curvo Sold)",
+   "cantidad": 2,
+   "unidad": "un",
+   "especificacion": "Plano tipo SCE-RE-112-0004 (no está en el repositorio)",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-10-30",
+     "coincide": "sin_ref",
+     "diferencia": "sin precio de refuerzo 12\" x 6\": la planilla TAVAL/40 pone 150 estimado para el de 6\" x 3\" (auditoría 30-10-2026): pedir a Cintolo"
     }
    ]
   },
@@ -418,7 +473,7 @@
      "origen": "fuentes_originales/taval_lista30_2025-09.xlsx",
      "fecha": "2025-09-01",
      "coincide": "similar",
-     "diferencia": "precio de referencia Taval (misma especificación): comprar marca del listado SCE-IN-501-0015 (Esferomatic, Worcester, Valvtronic, Pentair, Indave, Wenlen, Spirax Sarco hasta 4\" S150, Beta, Valmec); certificados según SCE-IN-501-0008 y SCE-RE-308-0001"
+     "diferencia": "precio de referencia Taval PT flotante a palanca: el plano dibuja la válvula 3 con volante (caja reductora), que no está en el precio; comprar marca del listado SCE-IN-501-0015 (Esferomatic, Worcester, Valvtronic, Pentair, Indave, Wenlen, Spirax Sarco hasta 4\" S150, Beta, Valmec); certificados según SCE-IN-501-0008 y SCE-RE-308-0001"
     }
    ]
   },
@@ -542,8 +597,7 @@
      "coincide": "sin_ref",
      "diferencia": "sin junta 6\" #150 cotizada (la de MS Juntas es 8\" #300; la 6\" #150 del catálogo es del cepo): pedir cotización a MS Juntas / Klinger"
     }
-   ],
-   "sin_precio_motivo": "Junta 6\" #150 sin precio válido (la referencia era #300 y la 6\" #150 del catálogo es de 2025 con cepo): pedida a Compras"
+   ]
   },
   {
    "id": "M6C",
@@ -667,8 +721,7 @@
      "coincide": "sin_ref",
      "diferencia": "termovaina 3/4\" NPT AISI 316: la base solo tiene termovainas bridadas 1 1/2\"-2\" o en conjunto con transmisor (otra pieza)"
     }
-   ],
-   "sin_precio_motivo": "Termovaina 3/4\" NPT AISI 316 sin referencia de la misma pieza: pedida a Compras (Wika / ABAC / Casucci / Capino / Weisz)"
+   ]
   },
   {
    "id": "M11B",
@@ -832,8 +885,7 @@
      "coincide": "sin_ref",
      "diferencia": "la referencia era una válvula A105 y el plano pide A-106 (otra clase de material): sin referencia compatible (consulta al cliente C3)"
     }
-   ],
-   "sin_precio_motivo": "Cupla ASTM A-106 con esférica 1/2\": sin referencia compatible (A-106 es especificación de caño); consulta C3 al cliente y pedido a Compras"
+   ]
   },
   {
    "id": "M17",
@@ -860,10 +912,10 @@
    "id": "S01",
    "pos": "MO",
    "grupo": "mo",
-   "descripcion": "Soldaduras del puente: 21 a tope + 5 cuplas (junta por junta)",
-   "cantidad": 99.25,
+   "descripcion": "Soldaduras del puente: 22 a tope + 5 cuplas (junta por junta)",
+   "cantidad": 105.25,
    "unidad": "pulg",
-   "especificacion": "A tope 6\" (5): brida 6 de entrada–caño 15 (120 mm), caño 15–te 7, te 7–brida 6 (válvula 3), te 7–reducción 9 (lado 6\"), reducción 9 (antes del filtro)–brida 6 · A tope 4\" (16): reducción 9 (sobre te 7)–brida 5 · bypass: brida 5–caño 911, caño–codo 10, codo–caño 3.961, caño–codo 10, codo–te 8, te 8–caño 1.213, caño–codo 10, te 8–brida 5 de salida · línea: codo 10–brida 5 (válvula 4), brida 5–caño 452, caño 452–brida 5, brida 5–caño 1.100, caño 1.100–reducción 9 · carretel 2: 2 (brida–caño) · Cuplas (×1,75): pos 12 (1 × 1/2\"), pos 16 (2 × 1/2\"), cuplas 11b (2 × 3/4\") · pulgadas: 5 × 6 + 16 × 4 + 3 × 0,5 × 1,75 + 2 × 0,75 × 1,75 = 99,25",
+   "especificacion": "A tope 6\" (6): brida 6 de entrada–caño 15, caño 15–te 7, te 7–caño (≈ 290 mm hacia la válvula 3), caño–brida 6 (válvula 3), te 7–reducción 9 (lado 6\"), reducción 9 (antes del filtro)–brida 6 · A tope 4\" (16): reducción 9 (sobre te 7)–brida 5 · bypass: brida 5–caño 911, caño–codo 10, codo–caño 3.961, caño–codo 10, codo–te 8, te 8–caño 1.213, caño–codo 10, te 8–brida 5 de salida · línea: codo 10–brida 5 (válvula 4), brida 5–caño 452, caño 452–brida 5, brida 5–caño 1.100, caño 1.100–reducción 9 · carretel 2: 2 (brida–caño) · Cuplas (×1,75): pos 12 (1 × 1/2\"), pos 16 (2 × 1/2\"), cuplas 11b (2 × 3/4\") · pulgadas: 6 × 6 + 16 × 4 + 3 × 0,5 × 1,75 + 2 × 0,75 × 1,75 = 105,25 (auditoría 30-10-2026: tramo de caño entre la te 7 y la brida de la válvula 3)",
    "fuentes": [
     {
      "tipo": "ant",
@@ -959,9 +1011,9 @@
    "pos": "PH",
    "grupo": "servicio",
    "descripcion": "Pruebas hidráulicas de resistencia y hermeticidad del puente (horas de planta)",
-   "cantidad": 6,
+   "cantidad": 18,
    "unidad": "h",
-   "especificacion": "ET §5.4: prefabricados del puente sin válvulas ni equipos, 1,5 × presión máxima de la serie ANSI 150, durante 6 h; incluye secado. La PH del filtro FM-06 va en ARMF (18 h, como en la planilla TAVAL/40)",
+   "especificacion": "ET §5.4: prefabricados del puente sin válvulas ni equipos, 1,5 × presión máxima de la serie ANSI 150, durante 6 h, con las bridas de las válvulas cegadas; armado, llenado, desarme y secado: 1 día × 2 personas × 9 h = 18 h (planilla TAVAL/40, hoja Soldadura + HH, «PH con armado y desarme»). La PH del filtro FM-06 va en ARMF (18 h, como en la planilla TAVAL/40)",
    "fuentes": [
     {
      "tipo": "ant",
@@ -981,12 +1033,12 @@
    "descripcion": "Radiografía 100% de las soldaduras a tope (puente y filtro)",
    "cantidad": 1,
    "unidad": "gl",
-   "especificacion": "ET §5.3.1 · 88 placas (puente: 5 juntas 6\" × 4 + 16 juntas 4\" × 3; filtro: 2 juntas 12\" × 6 + 2 bridas–toberas 6\" × 4) → 2 visitas de hasta 45 placas; placas originales y digitalizadas para el data book",
+   "especificacion": "ET §5.3.1 · 92 placas (puente: 6 juntas 6\" × 4 + 16 juntas 4\" × 3; filtro: 2 juntas 12\" × 6 + 2 bridas–toberas 6\" × 4) → 3 visitas de hasta 45 placas; placas originales y digitalizadas para el data book",
    "fuentes": [
     {
      "tipo": "cot",
-     "precio": 1959.22,
-     "proveedor": "Proveedor de RX (sin nombre). precio confirmado por Matías el 30-10-2026: 2 visitas × ARS 850.000 + 88 placas × ARS 15.000 = ARS 3.020.000 sin IVA, a BNA oct-2026 (1.541,43)",
+     "precio": 2549.58,
+     "proveedor": "Proveedor de RX (sin nombre), precio confirmado por Matías el 30-10-2026: 3 visitas × ARS 850.000 + 92 placas × ARS 15.000 = ARS 3.930.000 sin IVA, a BNA oct-2026 (1.541,43)",
      "origen": "conocimiento/precios/precios_usuario.csv",
      "fecha": "2026-10-30",
      "coincide": "igual"
@@ -1135,12 +1187,14 @@
    "Solo marcas del listado SCE-IN-501-0015 de Camuzzi (rev. 1, 10-02-2026)."
   ],
   "notas": {
-   "1": "Filtro FM-06 #150 simple módulo fabricado por ITT: ver filas 1b a 1i",
+   "1": "Filtro FM-06 #150 simple módulo fabricado por ITT: ver filas 1b a 1k",
    "1d": "Tapa de cierre rápido 12\" #150 vertical soldada: Futura, Gora, Peco o EKA (referencia Megatap 2026-143: 2.480, fuera del listado)",
    "1e": "Elemento filtrante para FM-06 según SCE-RE-112-0004: Gora / Metpor / Filtron / De Nichilo / Panden / SP",
    "1h": "Manómetro diferencial Wika con aguja de arrastre; manifold ABAC / Casucci / Fittinox",
    "11": "Termovaina 3/4\" NPT AISI 316 (Wika / ABAC / Casucci / Capino / Weisz)",
    "16": "Cupla de acero ASTM A-106 1/2\" NPT soldable con esférica 1/2\" S3000 (consulta C3 al cliente)",
+   "3": "Esférica 6\" #150 PT con caja reductora y volante (como en el plano), marca del listado",
+   "1k": "Refuerzos tipo poncho 12\" x 6\" STD A-234 WPB (Cintolo)",
    "A": "Sensor / transmisor de temperatura 0-100 °C 4-20 mA 3/4\" para correctora (Rosemount, Yokogawa, Siemens, Aplisens, Smar…; consulta C2)"
   },
   "proveedores": {
@@ -1151,7 +1205,14 @@
    "5": "Futura / Francovigh",
    "6": "Futura / Francovigh",
    "5b": "Klinger / Teadit / Flexseal / Miyashiro / Garlock",
-   "7": "Cintolo (Curvo Sold)",
+   "7": "Cintolo (Curvo Sold) / TDW",
+   "8": "Cintolo (Curvo Sold) / TDW",
+   "9": "Cintolo (Curvo Sold) / TDW",
+   "10": "Cintolo (Curvo Sold) / TDW",
+   "1c": "Cintolo (Curvo Sold) / TDW",
+   "1k": "Cintolo (Curvo Sold) / TDW",
+   "1j": "Weisz / Wika + ABAC / Casucci",
+   "11b": "CH / Thorsa / Forja Atlas",
    "5c": "Petrobul / Talleres Versailles / Fornis",
    "6c": "Petrobul / Talleres Versailles / Fornis",
    "6b": "Klinger / Teadit / Flexseal / Miyashiro"
