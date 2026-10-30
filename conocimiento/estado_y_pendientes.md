@@ -173,7 +173,8 @@ Decidido (Matías, 29-10-2026): manda el repositorio; la biblioteca se alimenta 
 
 **Flujo unificado (30-10-2026)** — hecho: frenos de la oferta, doble lectura (CAPEX y Camuzzi 001/002), matriz de requisitos (CAPEX), cantidad del cliente en `verificar_computo.py`, 18 errores sembrados. Pendiente:
 1. Matriz de requisitos de Camuzzi 001, 002 y 003 e YPF 713/708; transcripción del plano del cliente de YPF (en el repositorio solo está la planilla PC0 del vendedor).
-2. Notas del plano de la CAPEX en la matriz (solo se cargó la OR) y las 3 consultas abiertas: documento 17009 contra plano 23001, condición de pago "Habitual", esféricas de cuerpo enterizo.
+2. ~~Notas del plano de la CAPEX en la matriz~~ Hechas. Las 3 consultas abiertas (documento 17009 contra plano 23001, esféricas de cuerpo enterizo, condición de pago "Habitual"): Matías dijo que sí (30-10-2026); borrador en `cotizaciones/COT26-1003-001_CAPEX_OQ8209/consultas_cliente.md`, las manda él.
+   **Decidido (Matías, 30-10-2026):** una cotización armada solo en la página no genera ofertas hasta pasar por Claude Code (transcripción doble y matriz de requisitos).
 3. Cargar `validez_hasta` en las fuentes `cot`; S02 de la CAPEX (costo propio de planta) está como `cot` y frena por "vencida".
 4. ~~La página sin los frenos nuevos~~ Hecho (30-10-2026): la página frena igual que Python (`Busqueda.frenosOferta`, `web/probar_frenos.js` en `test_errores_sembrados.py`); los frenos que dependen de archivos del repositorio llegan en `cot.frenos_repo` (`semilla.py`). Pendiente: las copias de la página solo recibieron `frenos_repo`; la CAPEX de la página sigue con las descripciones viejas (volver a cargarla con `semilla.py --previo`) y el skid 708 de la página (USD 121.693 c/u) no coincide con el repositorio (98.014): ver cuál vale antes de recargarlo.
 5. Doble método por USD/kg: las fichas de antecedentes no tienen kg; hoy el contraste es costo contra costo del antecedente.
