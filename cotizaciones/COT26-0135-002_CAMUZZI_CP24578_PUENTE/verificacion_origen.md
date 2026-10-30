@@ -4,10 +4,11 @@ Generado por `herramientas/verificar_origen.py`. Solo avisa cuando el precio NO 
 
 ## Avisos
 
-- ⚠ RX Radiografía 100% de las juntas a tope y tintas penetrantes e: USD 1571.5 no figura tal cual en fuentes_originales/ofertas_texto/PAMPA ENERGIA/5 - Doc5757155642 - Construc 10 Puentes y 2 Colectores - RDA/8.Orden de Compra/nv 502 (adicional oc puente de produccion - pampa).pdf.txt, fuentes_originales/ofertas_texto/PAMPA ENERGIA/5 - Doc5757155642 - Construc 10 Puentes y 2 Colectores - RDA/8.Orden de Compra/presupuesto itt 163.pdf.txt (si es un valor calculado o escalado, que lo diga la fuente). Mirarlo en el original.
+- ⚠ 1h Instrumentos del filtro FM-06: manómetro diferencial con agu: USD 950.0 no figura tal cual en fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/4.Armado de la Oferta Comercial/LM costo Filtros rev.1.xlsx.txt (si es un valor calculado o escalado, que lo diga la fuente). Mirarlo en el original.
 
 ## No controlados
 
-- estimado o sin precio: 11
-- precio calculado (lista × factor): 3
-- el documento no está como texto en el repositorio: 1
+- estimado o sin precio: 12
+- precio calculado (lista × factor): 4
+- el documento no está como texto en el repositorio: 2
+- convertido de pesos: 1

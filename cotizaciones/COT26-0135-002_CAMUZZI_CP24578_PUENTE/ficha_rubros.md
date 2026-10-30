@@ -5,13 +5,13 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 ## 1. MO de armado y soldadura del piping
 
-- Juntas a tope (BW) de taller: **21** · juntas SW, cuplas y olets: **3** · extremos para soldar en campo: 0
-- Pulgadas equivalentes de soldadura: **98,62**
-- kg de piping (caños, bridas, accesorios y válvulas con tabla): **428 kg** · bridas: 10
+- Juntas a tope (BW) de taller: **20** · juntas SW, cuplas y olets: **3** · extremos para soldar en campo: 0
+- Pulgadas equivalentes de soldadura: **92,62**
+- kg de piping (caños, bridas, accesorios y válvulas con tabla): **593 kg** · bridas: 10
 - Diámetros soldados a tope: 6", 4"
-- Sin peso (no suman kg): 1 FILTRO FM-06 #150 SIMPLE MÓDULO · Ø 6"; 2 CARRETEL DE AJUSTE / PROVISORIO DE TURBI; 5 BRIDA WN · Ø 4"; 6 BRIDA WN · Ø 6"; 9 REDUCCIÓN CONCÉNTRICA · Ø 6"x4"; 13 SKID Y SOPORTES; 15b Completar media tira de 6 m de la pos 15; A TEMPERATURA PARA CORRECTORA DE CAUDAL · 
-- **Costo por antecedentes.** Por antecedentes: USD 1.755,38 (1 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 17,80/pulgada eq. · USD 4,10/kg de piping · USD 83,59/junta a tope
+- Sin peso (no suman kg): 1 FILTRO FM-06 #150 SIMPLE MÓDULO · Ø 6"; 1d Tapa de cierre rápido 12" #150 soldada, ; 1e Elemento filtrante para filtro FM-06 (Go; 1i Internos, refuerzos tipo poncho, purga (; 2 CARRETEL DE AJUSTE / PROVISORIO DE TURBI; 5 BRIDA WN · Ø 4"; 6 BRIDA WN · Ø 6"; 9 REDUCCIÓN CONCÉNTRICA · Ø 6"x4"; 13 SKID Y SOPORTES; 15b Completar media tira de 6 m de la pos 15; A TEMPERATURA PARA CORRECTORA DE CAUDAL · 
+- **Costo por antecedentes.** Por antecedentes: USD 3.097,13 (2 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 33,44/pulgada eq. · USD 5,22/kg de piping · USD 154,86/junta a tope
 
 ## 2. MO de fabricación de la estructura
 
@@ -20,17 +20,17 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 ## 3. Granallado y pintura
 
-- m² de piping: **6,21** (caños y niples 3,40; bridas, accesorios y válvulas por largo equivalente) · m² de estructura: **0,00**
-- m² total: **6,21** (sin overspray) · esquema: según pliego
-- **Costo por antecedentes.** Por antecedentes: USD 310,60 (1 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 50,02/m²
+- m² de piping: **7,90** (caños y niples 5,09; bridas, accesorios y válvulas por largo equivalente) · m² de estructura: **0,00**
+- m² total: **7,90** (sin overspray) · esquema: según pliego
+- **Costo por antecedentes.** Por antecedentes: USD 761,38 (1 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 96,38/m²
 
 ## 4. Radiografía y END
 
-- Juntas a tope: **21** · RX 100% → placas chicas **71**, grandes **0**
+- Juntas a tope: **20** · RX 100% → placas chicas **66**, grandes **0**
 - Juntas SW, cuplas y olets (LP donde no se puede radiografiar): **3**
-- **Costo por antecedentes.** Por antecedentes: USD 1.616,90 (1 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 77,00/junta a tope · USD 22,77/placa
+- **Costo por antecedentes.** Por antecedentes: USD 2.272,95 (2 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 113,65/junta a tope · USD 34,44/placa
 
 ## 5. Procedimientos
 
@@ -46,16 +46,17 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 ## 6. Prueba hidráulica
 
-- Volumen interior de los caños: **0,0 litros**
+- Volumen interior de los caños: **114,0 litros**
 - **Costo por antecedentes.** Por antecedentes: USD 84,11 (1 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 0,74/litro
 
 ## 7. Horas de ITT (ingeniería, calidad y montaje)
 
-- **Costo por antecedentes.** Por antecedentes: USD 1.942,60 (3 renglón/es, con ajuste por inflación).
+- **Costo por antecedentes.** Por antecedentes: USD 2.930,59 (4 renglón/es, con ajuste por inflación).
 
 ## 8. Transporte
 
-- Medidas del skid: 0,00 × 0,00 × 0,00 m (largo × ancho × alto) · kg: **428** (piping + estructura)
+- Medidas del skid: 0,00 × 0,00 × 0,00 m (largo × ancho × alto) · kg: **593** (piping + estructura)
 - ⚠ Faltan las medidas del equipo (largo × ancho × alto): cargarlas del plano de conjunto
 - Sin precio por equipo: se cotiza EXW (o flete aparte en los parámetros). Para sumarlo por equipo, pasar el rubro a global.
 
