@@ -114,3 +114,7 @@ Lo único que se edita es `cotizacion.json` (y `oferta.json` para los textos de 
 ## 30-10-2026 · Cuarta auditoría independiente
 - El desvío de la oferta vale solo si habla de lo que no cumple y está resuelto: pos 2, 5, 7, 14 y 14b quedan como "DESVÍO A CONFIRMAR" (frenan el paso a revisado).
 - Pos 21 (unión doble serie 3000 por 2000): se sumó al desvío de serie 3000 de la oferta ("Accesorios forjados roscados (pos. 1, 8, 10, 11, 17, 18) y unión doble (pos. 21)"). Revisar con Matías.
+
+## 30-10-2026 · Quinta auditoría independiente: desvíos estructurados
+- Cada desvío pasa a ser un dato del renglón (`desvio`): serie 3000 por 2000 en pos 1, 8, 11, 17, 18 y 21; schedule 80×80 por 80×40 en pos 16; "a confirmar" en pos 2, 5 (material y, nuevo, serie WOG 3000), 7, 14 y 14b. Los "a confirmar" frenan el paso a revisado.
+- Pos 21: la oferta dice "sello metal-metal, marca Duralite o equivalente", pero el precio es de Adita M-H sin mención del sello: revisar con Matías.

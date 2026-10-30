@@ -134,6 +134,11 @@ chk("'sin revestimiento de polietileno' no es PE", incompatible("CAN", {}, {}, "
 chk("rev. PU", incompatible("CAN", {}, {}, "caño rev. PU", "caño rev. PU 16") == "")
 chk("con costura por sin costura", incompatible("CAN", {}, {}, 'Caño 16" sch STD sin costura API 5L Gr B', "caño c/c API 5L B") != "")
 chk("A53 tipo E por tipo S", incompatible("CAN", {}, {}, "Caño A53 tipo S Gr B", "caño A53 tipo E Gr B") != "")
+chk("'sin revestimiento' no borra el grado", incompatible("CAN", {}, {}, 'Caño 6" sch 40 sin revestimiento API 5L X52', 'Caño 6" sch 40 API 5L Gr B') != "")
+chk("'para revestir' no es revestido", incompatible("CAN", {}, {}, "caño tricapa A106", "caño A106 para revestir") != "")
+chk("'revestimiento a cargo del cliente' no es revestido", incompatible("CAN", {}, {}, "caño tricapa A106", "caño A106 revestimiento a cargo del cliente") != "")
+from compatibilidad import motivos  # noqa: E402
+chk("todos los motivos", {t for t, _ in motivos("CAN", {"schedule": "80", "diametro": '2"'}, {"schedule": "40"}, 'caño 2" sch 80 A106 sin costura revestido polipropileno', "caño c/c A53 B")} >= {"material", "schedule", "revestimiento", "costura"})
 chk("S/COSTURA es sin costura", incompatible("CAN", {}, {}, "caño sin costura A53 B", "CAÑO S/COSTURA SCH 80 ASTM A-53 GrB") == "")
 chk("A106 es sin costura por norma", incompatible("CAN", {}, {}, "Caño sin costura A106 B", "caño A106 B") == "")
 chk("revestimiento PP por PE", incompatible("CAN", {}, {}, "caño tricapa polietileno", "caño tricapa polipropileno") == "")

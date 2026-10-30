@@ -782,7 +782,11 @@
 
   // ------------------------------------------------------------------ cambio de estado (con controles; la herramienta nunca envía nada)
   function dialogoEstado(d) {
-    const cot = S.doc.cot, malos = Busqueda.avisos(cot).filter(a => a.nivel === "bad"), act = cot.estado;
+    const cot = S.doc.cot, act = cot.estado;
+    // desvíos de la oferta sin resolver ([corchetes], "a confirmar") frenan revisado y aprobado como un aviso a corregir
+    const desv = ((S.doc.oferta || {}).aclaraciones_y_desvios || {}).items || [];
+    const malos = Busqueda.avisos(cot).filter(a => a.nivel === "bad").concat(
+      desv.filter(x => Busqueda.SIN_RESOLVER.test(String(x))).map(x => ({ nivel: "bad", txt: `Oferta: desvío a confirmar: ${String(x).slice(0, 80)}` })));
     let error = "", texto = "", extra = "";
     if (d === act) return;
     if (d === "revisado") {

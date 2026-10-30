@@ -164,7 +164,7 @@ Decidido (Matías, 29-10-2026): manda el repositorio; la biblioteca se alimenta 
 - Ficha `fichas_2025/YPF_13…` es una oferta de 2023 (0-270 23): se dejó porque es antecedente de filtro coalescente; ¿se mantiene en el índice aunque 2021–2024 no lleve fichas?
 - Pedir cotización: espárragos 5/8" B7/2H (la planilla TAVAL/43 pone USD 10 a todos los tamaños) y toma multiport ABAC 3000 (Camuzzi 001 pos 15).
 - ¿Una serie MAYOR vale como desvío declarado en la oferta? (CAPEX pos 1, 8, 11, 17 y 18: serie 3000 por 2000, declarado en aclaraciones y desvíos). Hoy P9 lo admite solo así; la regla del 29-10-2026 dice que otra serie no es similar.
-- CAPEX: la oferta tiene 5 desvíos "a confirmar" (pos 2, 5, 7, 14 y 14b): frenan el paso a revisado hasta resolverlos. Se sumó la unión doble pos 21 al desvío de serie 3000 (revisar).
+- CAPEX: desvíos estructurados por renglón; 2, 5, 7, 14 y 14b siguen "a confirmar" y frenan el paso a revisado. Pos 21 sumada al desvío de serie 3000 y con la oferta diciendo "sello metal-metal, Duralite" sobre un precio de Adita: revisar.
 - `verificar_origen.py`: con "· línea N" alcanza con que el precio sea un número de esa línea (límite conocido).
 - Tapa vertical AFO-03445 mal clasificada en el catálogo (lo marcó la auditoría; sin corregir).
 

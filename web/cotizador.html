@@ -431,7 +431,7 @@ const Busqueda = (() => {
     return t.replace(new RegExp(C.medida_x, "g"), (m0, g1, g2, off) =>
       C.grados_x.includes(g2) && (api || /sch ?$/.test(t.slice(Math.max(0, off - 4), off))) ? m0 : g1 + " por ");
   }
-  const prep = (C, t) => medida(C, normP(t).replace(new RegExp(C.negacion, "g"), " ").replace(new RegExp(C.grados, "g"), "$1 "))
+  const prep = (C, t) => medida(C, normP(t).replace(new RegExp(C.negacion, "g"), " ").replace(new RegExp(C.negacion_rev, "g"), " ").replace(new RegExp(C.grados, "g"), "$1 "))
     .replace(new RegExp(C.prep, "g"), "a$1");
   function clases(C, texto, preparado = false) {
     const t = preparado ? texto : prep(C, texto), hits = [];
@@ -566,19 +566,26 @@ const Busqueda = (() => {
     for (const [i, dn] of [[1, ds[0]], [2, ds[1]]]) if (schCanonico(mp[i], dn) !== schCanonico(mc[i], dn)) return `schedule ${mc[1]} × ${mc[2]} por ${mp[1]} × ${mp[2]} (otro espesor en un extremo)`;
     return "";
   }
-  function incompatible(C, fam, ped, cand, textoPed, textoCand) {
-    const m = reglaMaterial(C, fam, materialTexto(C, ped.material, textoPed || ""), materialTexto(C, cand.material, textoCand || ""), textoCand || ""); if (m) return m;
-    const c = reglaConexion(conexiones(ped.extremos || "", ped.cara || ""), conexiones(cand.extremos || "", cand.cara || "")); if (c) return c;
+  // todos los motivos [[tipo, texto]] (compatibilidad.motivos); incompatible = el primero
+  function motivos(C, fam, ped, cand, textoPed, textoCand) {
+    const out = [];
+    const m = reglaMaterial(C, fam, materialTexto(C, ped.material, textoPed || ""), materialTexto(C, cand.material, textoCand || ""), textoCand || ""); if (m) out.push(["material", m]);
+    const c = reglaConexion(conexiones(ped.extremos || "", ped.cara || ""), conexiones(cand.extremos || "", cand.cara || "")); if (c) out.push(["extremos", c]);
     if (C.familias_sch.includes(fam) && ped.schedule && cand.schedule) {
       const dn = dnDe(C, ped.diametro || "");
-      if (schCanonico(ped.schedule, dn) !== schCanonico(cand.schedule, dn)) return `schedule ${cand.schedule} por ${ped.schedule} (otro espesor)`;
+      if (schCanonico(ped.schedule, dn) !== schCanonico(cand.schedule, dn)) out.push(["schedule", `schedule ${cand.schedule} por ${ped.schedule} (otro espesor)`]);
     }
     const tp = normP(textoPed), tc = normP(textoCand);
-    const r = reglaRevestimiento(C, prep(C, textoPed), prep(C, textoCand)) || reglaCostura(C, fam, prep(C, textoPed), prep(C, textoCand), textoCand || ""); if (r) return r;
-    if (C.familias_sch.includes(fam)) { const r2 = reglaSchDoble(C, tp, tc, ped.diametro || "", ped.schedule || ""); if (r2) return r2; }
-    if (new RegExp(C.nace_estricto).test(tp) && !new RegExp(C.nace_estricto).test(tc)) return "el pedido es MR0175 / ISO 15156 y el candidato no lo dice";
-    if (new RegExp(C.nace_pedido).test(tp) && !new RegExp(C.nace_cand).test(tc)) return "el pedido es para servicio ácido (NACE) y el candidato no lo dice";
-    return "";
+    const r = reglaRevestimiento(C, prep(C, textoPed), prep(C, textoCand)); if (r) out.push(["revestimiento", r]);
+    const k = reglaCostura(C, fam, prep(C, textoPed), prep(C, textoCand), textoCand || ""); if (k) out.push(["costura", k]);
+    if (C.familias_sch.includes(fam)) { const r2 = reglaSchDoble(C, tp, tc, ped.diametro || "", ped.schedule || ""); if (r2) out.push(["schedule", r2]); }
+    if (new RegExp(C.nace_estricto).test(tp) && !new RegExp(C.nace_estricto).test(tc)) out.push(["nace", "el pedido es MR0175 / ISO 15156 y el candidato no lo dice"]);
+    else if (new RegExp(C.nace_pedido).test(tp) && !new RegExp(C.nace_cand).test(tc)) out.push(["nace", "el pedido es para servicio ácido (NACE) y el candidato no lo dice"]);
+    return out;
+  }
+  function incompatible(C, fam, ped, cand, textoPed, textoCand) {
+    const m = motivos(C, fam, ped, cand, textoPed, textoCand);
+    return m.length ? m[0][1] : "";
   }
 
   function materiales(datos, f, limite = 60) {
@@ -688,8 +695,26 @@ const Busqueda = (() => {
   // Código de catálogo de una fuente (auditoría 29-10-2026): el campo codigo, o el que quedó escrito en el proveedor
   // ("Renard · CAN-01435") en las cotizaciones anteriores. Con él se avisa si el catálogo cambió después de cargarlo.
   const codigoDe = s => s.codigo || (String(s.proveedor || "").match(/\b[A-Z]{3}-\d{5}\b/) || [])[0] || "";
-  let CAT = null;
-  function catalogo(datos) { CAT = new Map([...(datos.materiales || []), ...(datos.servicios || [])].map(m => [m.c, m])); }
+  let CAT = null, COMPAT = null, REN = new Map();
+  function catalogo(datos) { CAT = new Map([...(datos.materiales || []), ...(datos.servicios || [])].map(m => [m.c, m])); COMPAT = datos.compat || null;
+    REN = new Map((datos.materiales || []).map(m => [(String(m.pr || "").match(/^Renard \(cód\. (\d+)\)/) || [])[1], m.c]).filter(x => x[0])); }
+  // P9 en la página (quinta auditoría 30-10-2026: se podía aprobar con una referencia que la norma no admite). Compara la
+  // pieza del catálogo con lo que pide el plano (it.plano); cada diferencia necesita un desvío resuelto en it.desvio.
+  // Las fuentes sin código del catálogo las controla verificar_computo.py al pasar al repositorio.
+  const SIN_RESOLVER = /\[|a confirmar|a definir|confirmar con|por confirmar/i;
+  function compatItem(it, m) {
+    const pl = it.plano || {}, C = COMPAT;
+    if (!C || !m || !m.a || !pl.descripcion || it.grupo !== "material") return [];
+    const ss = String(pl.serie_sch || ""), num = (ss.match(/\b(150|300|600|900|1500|2000|2500|3000|6000|9000)\b/) || [])[1] || "";
+    const sch = num ? "" : (ss.match(/^\s*(std|xs|xxs|\d{2,3}s?)\s*$/i) || [])[1] || "";
+    // material "" : sale del texto si nombra uno ("S/ Esp. CAMUZZI" o "Rango 0-25 bar" en la columna no son material)
+    const ped = { material: "", extremos: pl.extremos || "", diametro: pl.diametro || "", schedule: sch };
+    const texto = `${pl.descripcion} , Ø ${pl.diametro || ""}, ${ss} ${pl.material || ""} ${pl.extremos || ""}`;
+    const mots = motivos(C, it.fam || "", ped, m.a, texto, m.d || "");
+    const sc = String(m.a.serie || "").replace(/\D/g, "");
+    if (num && sc && sc !== num) mots.push(["serie", `serie ${sc} por ${num} (otro rating)`]);
+    return mots;
+  }
   function avisos(cfg) {
     const out = []; const h = hoy();
     for (const it of cfg.items) {
@@ -710,6 +735,13 @@ const Busqueda = (() => {
       const cc = CAT && !it.global && codigoDe(s), m = cc && CAT.get(cc);
       if (m && m.p && s.precio && Math.abs(m.p - s.precio) >= 0.01 && (m.fe || "") > (s.fecha || ""))
         out.push({ nivel: "warn", txt: `${tag}: el catálogo (${cc}) tiene un precio más nuevo: USD ${n2(m.p)} del ${String(m.fe).split("-").reverse().join("-")} (acá USD ${n2(s.precio)}); actualizalo si corresponde` });
+      const cr = !it.global && !cc && REN.get((String(s.proveedor || "").match(/\brenard\b.*?c[óo]d\.? ?(\d+)/i) || [])[1]);  // "Renard · cód. N"
+      for (const [tipo, txt] of compatItem(it, m || (cr && CAT.get(cr)))) {
+        const dv = (it.desvio || []).find(x => String(x.que || "").toLowerCase() === tipo);
+        if (!dv) out.push({ nivel: "bad", txt: `${tag}: la referencia ${cc} no sirve según la norma (${tipo}: ${txt.slice(0, 90)}): cambiarla, dejar SIN PRECIO o declarar el desvío` });
+        else if (!dv.ofrecido || !dv.pedido || SIN_RESOLVER.test(`${dv.ofrecido} ${dv.pedido}`)) out.push({ nivel: "bad", txt: `${tag}: desvío de ${tipo} a confirmar (${dv.ofrecido || "?"} por ${dv.pedido || "?"})` });
+        else out.push({ nivel: "warn", txt: `${tag}: desvío declarado de ${tipo}: ${dv.ofrecido} por ${dv.pedido} (tiene que figurar en la oferta)` });
+      }
       for (const x of out.slice(n0)) { x.id = it.id; x.corto = x.txt.slice(tag.length + 2); }
     }
     const pz = plazoBloquea(cfg);
@@ -728,7 +760,7 @@ const Busqueda = (() => {
     if (!d || !calc || d >= calc || String(cfg.plazo?.justificacion || "").trim()) return "";
     return `Plazo ofrecido ${d} días, menor que el calculado (${calc} días): corregilo o escribí la justificación en Plazo. Hasta entonces no se generan las ofertas.`;
   }
-  return { norm, coincide, incompatible, campos, opcionales, valores, materiales, servicios, itemDeMaterial, itemDeServicio, soldadura, tarifa, avisos, catalogo, codigoDe, plazoCalculado, plazoBloquea, TIPO_FUENTE, CON_TIPO };
+  return { norm, coincide, incompatible, motivos, compatItem, SIN_RESOLVER, campos, opcionales, valores, materiales, servicios, itemDeMaterial, itemDeServicio, soldadura, tarifa, avisos, catalogo, codigoDe, plazoCalculado, plazoBloquea, TIPO_FUENTE, CON_TIPO };
 })();
 if (typeof module !== "undefined") module.exports = Busqueda;
 
@@ -2942,7 +2974,11 @@ if (typeof module !== "undefined") module.exports = Documentos;
 
   // ------------------------------------------------------------------ cambio de estado (con controles; la herramienta nunca envía nada)
   function dialogoEstado(d) {
-    const cot = S.doc.cot, malos = Busqueda.avisos(cot).filter(a => a.nivel === "bad"), act = cot.estado;
+    const cot = S.doc.cot, act = cot.estado;
+    // desvíos de la oferta sin resolver ([corchetes], "a confirmar") frenan revisado y aprobado como un aviso a corregir
+    const desv = ((S.doc.oferta || {}).aclaraciones_y_desvios || {}).items || [];
+    const malos = Busqueda.avisos(cot).filter(a => a.nivel === "bad").concat(
+      desv.filter(x => Busqueda.SIN_RESOLVER.test(String(x))).map(x => ({ nivel: "bad", txt: `Oferta: desvío a confirmar: ${String(x).slice(0, 80)}` })));
     let error = "", texto = "", extra = "";
     if (d === act) return;
     if (d === "revisado") {

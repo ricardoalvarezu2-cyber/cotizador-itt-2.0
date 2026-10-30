@@ -105,3 +105,14 @@ Para que haya menos SIN PRECIO hay que cargar el material que falta en el catál
   costura por norma.
 - **Línea base de pares:** `revisar_pares_compatibilidad.py --control` (en `verificar_todo`) compara con
   `pares_linea_base.json`; ante cambios, revisar cada uno (`--salida`) y recién ahí `--aceptar`.
+
+## Quinta auditoría independiente (30-10-2026): desvío estructurado
+- Un reemplazo que la norma no admite solo pasa con un **desvío en el renglón** de `cotizacion.json`:
+  `"desvio": [{"que": "serie", "ofrecido": "serie 3000", "pedido": "serie 2000"}]` (que: material, extremos, schedule,
+  revestimiento, costura, nace, serie), uno por cada diferencia, sin "a confirmar", y lo ofrecido tiene que figurar en un
+  texto de aclaraciones y desvíos de la oferta que nombre la posición. Un desvío "a confirmar" es ERROR "DESVÍO A
+  CONFIRMAR": el borrador se arma, pero no pasa a revisado.
+- `compatibilidad.motivos()` devuelve todos los motivos; P9 pide un desvío para cada uno.
+- La página hace el mismo control con las piezas del catálogo y no deja pasar a revisado o aprobado con referencias
+  incompatibles o desvíos sin resolver (también los de la oferta entre [corchetes] o "a confirmar").
+- Pendiente conocido: NPT/BW pedido contra NPT/NPT (el BW que falta de un lado no cuenta, decisión del 30-10-2026).

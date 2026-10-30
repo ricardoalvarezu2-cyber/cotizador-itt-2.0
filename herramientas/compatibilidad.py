@@ -87,7 +87,10 @@ def materiales():
 
 
 # lo negado no es el material ("13Cr, NO AISI 316", "Serie 3000 en lugar de 2000"): se saca antes de leer (auditoría 30-10-2026)
-NEGACION = r"\b(?:no|en lugar de|en vez de|excepto|distint[oa]s? de|faltan?|a cotizar|cotizar|sin revest\w*)\b[^,;|()]*"
+NEGACION = r"\b(?:no|en lugar de|en vez de|excepto|distint[oa]s? de|faltan?|a cotizar|cotizar)\b[^,;|()]*"
+# "sin revestimiento (de polietileno)", "para revestir", "revestimiento a cargo del cliente": no es revestido; se saca solo
+# esa frase, no el resto (quinta auditoría: "sin revestimiento API 5L X52" borraba el grado)
+NEGACION_REV = r"\bsin revest\w*(?: (?:de )?(?:polietileno|polipropileno|fbe|epoxi\w*|pu|poliuretano|tricapa))?|\b(?:para|a) revestir\b|\brevestimiento a cargo\w*(?: del cliente)?"
 # "GR°B" y "SA-516 GR°60": "°" queda " grados " (norm): se vuelve "gr b" (auditoría 30-10-2026: se leía A53 B por A53 GR°A)
 GRADOS = r"\b(gr|g)\.? ?grados ?"
 # válvulas: internos (esfera, vástago, asientos, clapeta, resorte…) y cuerpo se leen por separado ("retención a clapeta",
@@ -116,7 +119,7 @@ NO_METAL = {"grafito", "ptfe", "nbr", "klingerit", "bronce"}
 
 def prep(texto):
     """Texto normalizado para los patrones: "SA-106", "SA 106", "A-105" y "A 105" quedan "a106", "a105"; sin lo negado."""
-    t = re.sub(NEGACION, " ", norm(texto))
+    t = re.sub(NEGACION_REV, " ", re.sub(NEGACION, " ", norm(texto)))
     t = re.sub(GRADOS, r"\1 ", t)
     t = _medida(t)
     return re.sub(r"\bs?a[- ]?(\d{2,3})\b", r"a\1", t)
@@ -361,33 +364,45 @@ def regla_sch_doble(tp, tc, diametro, sch_pedido=""):
     return ""
 
 
-def incompatible(fam, at_pedido, at_cand, texto_pedido="", texto_cand=""):
-    """Motivo por el que el candidato NO puede ser similar del pedido ("" si puede)."""
+def motivos(fam, at_pedido, at_cand, texto_pedido="", texto_cand=""):
+    """TODOS los motivos por los que el candidato no reemplaza al pedido, como [(tipo, texto)] (quinta auditoría
+    30-10-2026: se miraba solo el primero y un desvío declarado de uno tapaba los demás). Tipos: material, extremos,
+    schedule, revestimiento, costura, nace (la serie la agrega verificar_computo)."""
+    out = []
     ped = material_texto(at_pedido.get("material", ""), texto_pedido)
     m = regla_material(fam, ped, material_texto(at_cand.get("material", ""), texto_cand), texto_cand)
     if m:
-        return m
+        out.append(("material", m))
     c = regla_conexion(conexiones(at_pedido.get("extremos", ""), at_pedido.get("cara", "")),
                        conexiones(at_cand.get("extremos", ""), at_cand.get("cara", "")))
     if c:
-        return c
+        out.append(("extremos", c))
     if fam in FAMILIAS_SCH and at_pedido.get("schedule") and at_cand.get("schedule"):
         dn = dn_de(at_pedido.get("diametro"))
         if sch_canonico(at_pedido["schedule"], dn) != sch_canonico(at_cand["schedule"], dn):
-            return f"schedule {at_cand['schedule']} por {at_pedido['schedule']} (otro espesor)"
+            out.append(("schedule", f"schedule {at_cand['schedule']} por {at_pedido['schedule']} (otro espesor)"))
     tp, tc = norm(texto_pedido), norm(texto_cand)
-    r = regla_revestimiento(prep(texto_pedido), prep(texto_cand)) or regla_costura(fam, prep(texto_pedido), prep(texto_cand), texto_cand)
+    r = regla_revestimiento(prep(texto_pedido), prep(texto_cand))
     if r:
-        return r
+        out.append(("revestimiento", r))
+    r = regla_costura(fam, prep(texto_pedido), prep(texto_cand), texto_cand)
+    if r:
+        out.append(("costura", r))
     if fam in FAMILIAS_SCH:
         r = regla_sch_doble(tp, tc, at_pedido.get("diametro"), at_pedido.get("schedule", ""))
         if r:
-            return r
+            out.append(("schedule", r))
     if re.search(NACE_ESTRICTO, tp) and not re.search(NACE_ESTRICTO, tc):
-        return "el pedido es MR0175 / ISO 15156 y el candidato no lo dice"
-    if re.search(NACE_PEDIDO, tp) and not re.search(NACE_CAND, tc):
-        return "el pedido es para servicio ácido (NACE) y el candidato no lo dice"
-    return ""
+        out.append(("nace", "el pedido es MR0175 / ISO 15156 y el candidato no lo dice"))
+    elif re.search(NACE_PEDIDO, tp) and not re.search(NACE_CAND, tc):
+        out.append(("nace", "el pedido es para servicio ácido (NACE) y el candidato no lo dice"))
+    return out
+
+
+def incompatible(fam, at_pedido, at_cand, texto_pedido="", texto_cand=""):
+    """Primer motivo por el que el candidato NO puede ser similar del pedido ("" si puede)."""
+    m = motivos(fam, at_pedido, at_cand, texto_pedido, texto_cand)
+    return m[0][1] if m else ""
 
 
 def para_pagina():
@@ -395,7 +410,7 @@ def para_pagina():
     return {"materiales": [{k: r[k] for k in ("patron", "material", "clase", "grupo_b16_5")} for r in materiales()],
             "reemplaza": {k: sorted(v) for k, v in REEMPLAZA.items()}, "genericos": {k: sorted(v) for k, v in GENERICOS.items()},
             "grupos": {k: sorted(v) for k, v in GRUPOS.items()}, "nace_estricto": NACE_ESTRICTO, "nace_pedido": NACE_PEDIDO,
-            "nace_cand": NACE_CAND, "galv": GALV, "prep": r"\bs?a[- ]?(\d{2,3})\b", "negacion": NEGACION, "grados": GRADOS, "medida_x": MEDIDA_X, "grados_x": GRADOS_X, "api5l": API5L, "sin_costura": SIN_COSTURA,
+            "nace_cand": NACE_CAND, "galv": GALV, "prep": r"\bs?a[- ]?(\d{2,3})\b", "negacion": NEGACION, "negacion_rev": NEGACION_REV, "grados": GRADOS, "medida_x": MEDIDA_X, "grados_x": GRADOS_X, "api5l": API5L, "sin_costura": SIN_COSTURA,
             "con_costura": CON_COSTURA, "sin_costura_norma": sorted(SIN_COSTURA_POR_NORMA),
             "revest": REVEST, "revest_ok": {k: sorted(v) for k, v in REVEST_OK.items()}, "sch_doble": SCH_DOBLE,
             "internos": INTERNOS, "cuerpo": CUERPO, "no_metal": sorted(NO_METAL), "familias_sch": sorted(FAMILIAS_SCH), "dn_nps": DN_NPS}

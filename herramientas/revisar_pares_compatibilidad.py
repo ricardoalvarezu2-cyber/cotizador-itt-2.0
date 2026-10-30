@@ -56,6 +56,11 @@ print(json.dumps(out, ensure_ascii=False))
 """
 
 
+def huella(v):
+    import hashlib
+    return hashlib.sha1(f"{v[0]}|{v[1]}".encode()).hexdigest()[:8]
+
+
 def correr(dir_herr, tabla=None):
     args = [sys.executable, "-c", SONDA, str(dir_herr), str(RAIZ)] + ([str(tabla)] if tabla else [])
     r = subprocess.run(args, cwd=RAIZ, capture_output=True, text=True)
@@ -91,9 +96,8 @@ def main():
     a = ap.parse_args()
     ahora = correr(RAIZ / "herramientas")
     if a.aceptar:
-        BASE.write_text(json.dumps({"incompatibles": sorted(k for k, v in ahora.items() if v[2]),
-                                    "compatibles": sorted(k for k, v in ahora.items() if not v[2])},
-                                   ensure_ascii=False, indent=0) + "\n", encoding="utf-8")
+        BASE.write_text(json.dumps({k: [huella(v), 1 if v[2] else 0] for k, v in sorted(ahora.items())},
+                                   ensure_ascii=False, separators=(",", ":")).replace('],"', '],\n"') + "\n", encoding="utf-8")
         print(f"Línea base de pares guardada: {len(ahora)} pares → {BASE.relative_to(RAIZ)}")
         return 0
     if a.ref:
@@ -104,8 +108,11 @@ def main():
             print("No hay línea base de pares: correr --aceptar después de revisar")
             return 1
         b = json.loads(BASE.read_text(encoding="utf-8"))
-        antes = {**{k: True for k in b["incompatibles"]}, **{k: False for k in b["compatibles"]}}
-        nombre = "la línea base"
+        # solo cuentan los pares con los MISMOS textos de pedido y candidato: si cambió el dato (el renglón del plano o la
+        # descripción del catálogo), no es un cambio de reglas (quinta auditoría 30-10-2026)
+        antes = {k: bool(v[1]) for k, v in b.items() if k in ahora and v[0] == huella(ahora[k])}
+        datos = sum(1 for k, v in b.items() if k in ahora and v[0] != huella(ahora[k]))
+        nombre = f"la línea base ({datos} pares con datos cambiados, no se comparan)"
     acept = [k for k, v in ahora.items() if k in antes and antes[k] and not v[2]]
     rech = [k for k, v in ahora.items() if k in antes and not antes[k] and v[2]]
     nuevos = sum(1 for k in ahora if k not in antes)
