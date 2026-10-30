@@ -391,7 +391,7 @@ def atributos(t, fam, proveedor=""):
         if d.get("espesor_mm") and not d.get("schedule") and d.get("diametro", "").endswith('"'):
             d["schedule"] = schedule_de_espesor(float(d["diametro"][:-1]), float(d["espesor_mm"]))
     elif fam == "NIP":
-        d["largo_mm"] = primero(r"(\d{2,4})\s?mm", t) or primero(r"x\s?(\d{2,4})\b", t) or primero(r"\bl\s?[:=]\s?(\d{2,4})\b", t)  # "L:100" (30-10-2026)
+        d["largo_mm"] = primero(r"(\d{2,4})\s?mm", t) or primero(r"x\s?(\d{2,4})\b", t) or primero(r"\b(?:l|largo)\s?[:=]?\s?(\d{2,4})\b", t)  # "L:100", "Largo 150" (30-10-2026)
     elif fam == "INS":
         d["tipo"] = primero(r"(manometro|transmisor de presion|transmisor de temperatura|transmisor de nivel|visor de nivel|transmisor|termometro|termovaina|caudalimetro|coriolis|presostato|sensor)", t)
         d["rango"] = primero(r"(\d+\s?[-–a]\s?\d+\s?(?:bar|psi|kg/cm2|kg|°c|c\b))", t)
