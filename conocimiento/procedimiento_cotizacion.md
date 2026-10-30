@@ -4,6 +4,39 @@ Las reglas. El paso a paso con archivos y comandos está en [`guia_cotizacion.md
 
 Vigente desde el 27/10/2026. Se escribió a partir de los errores de la COT26-1003-001 (ver [`errores_y_lecciones.md`](errores_y_lecciones.md)). **Ningún número sale hacia el cliente, ni se le presenta a Matías como precio, sin haber pasado por estos pasos.** Si un paso no se puede cumplir, se dice explícitamente qué quedó sin verificar.
 
+## Flujo unificado (30-10-2026)
+
+Salió de comparar dos diseños hechos desde cero (el de Claude y el de un revisor independiente que leyó todo el repositorio) contra los errores registrados; Matías lo aprobó el 30-10-2026 **sin candados de estados**. Los principios:
+
+1. **Lo que se ve frena, no avisa.** Los controles de abajo marcados ■ son *frenos*: no impiden armar el cómputo, la planilla ni el informe (salen como borrador), pero las ofertas técnica y económica **no se generan** mientras quede uno abierto (`herramientas/frenos.py`, lo corren `armar_cotizacion.py` y `generar_oferta.py`). Cada freno se levanta corrigiendo el dato o escribiendo la justificación que pide en `cotizacion.json`.
+2. **Todo requisito del cliente tiene destino.** Nada se pierde en silencio.
+3. **La IA lee (dos veces, por separado); los programas calculan; las personas aprueban.**
+4. **Lo que falta frena; no se completa con un valor por defecto.**
+5. **Cada número importante se controla por otro camino** (renglones contra antecedentes, extremos contra dibujo).
+6. **Cada error se vuelve una prueba automática** (`test_errores_sembrados.py`), no solo una nota.
+
+| # | Paso | Quién | Sale | Control que lo cierra |
+|---|---|---|---|---|
+| 1 | Recepción: originales en `pedido/`, con su revisión. Si llega otra revisión del cliente, se compara con la anterior y se rehace lo que cambió | IA | inventario de documentos | — |
+| 2 | **Matriz de requisitos** (P1): cada requisito del pedido (OC, pliego, ET, notas del plano, condiciones comerciales) con su texto literal, documento y página. **Las consultas al cliente salen ese mismo día** | IA | `pedido/requisitos.csv` | ■ requisitos: cada uno con destino `cumple`, `renglon` (posición o rubro), `desvio` o `exclusion` (con referencia a la oferta); `consulta` sin respuesta frena |
+| 3 | **Doble lectura** de la tabla del cliente (P2): dos agentes o personas, cada uno sin ver al otro | 2 IA | `pedido/transcripcion.json` (A) y `transcripcion_b.json` (B) | ■ transcripción / doble lectura: el programa compara celda por celda; cada diferencia se resuelve mirando el original y se anota en `diferencias_resueltas`. Si no hay tabla del cliente (diseño de ITT), se declara `origen_lista: {tipo: diseno_itt, motivo}` |
+| 4 | Lista de materiales: descripción y cantidad del cliente, atributos aparte, lo de ITT en `nota` | IA | `lista_materiales_plano.csv` | ERROR en `verificar_computo.py` si la descripción o la cantidad no son las del cliente |
+| 5 | Cantidades derivadas (P3): kg, m², soldaduras junta por junta (taller/campo), roscados, PH, RX | programa | `precotizacion.md`, `ficha_rubros.md` | reglas con casos de prueba |
+| 6 | Precios (P4): catálogo y antecedentes con compatibilidades; lo que no tiene precio queda en 0 y **va a Compras en ese momento** (la lista para Compras sale con el preliminar) | programa propone, IA elige | `cotizacion.json`, `compras/` | ERROR si es incompatible, sin fuente o sin fecha; ■ estimado > 15% del costo; ■ cotización de proveedor vencida (validez escrita o 30 días) |
+| 7 | MO y servicios (P5) desde las cantidades del paso 5 y los requisitos del paso 2 | programa e IA | `cotizacion.json` | mismo alcance que la fuente |
+| 8 | Plazo: llegada del último material + taller + dossier | programa | `plazo_calculado.md` | ■ plazo menor que el calculado sin justificar |
+| 9 | Cálculo y documentos (P6, P7) | programa | planilla, informe | Python = planilla = página |
+| 10 | Contraste por otro camino (P8): costo contra el antecedente más parecido con costo | programa | `comparacion_antecedentes.md` | ■ antecedentes: sin antecedente comparable o más de 15% sin explicar |
+| 11 | Revisión independiente a ciegas (P9) | otro agente o persona | revisión en la bitácora | — |
+| 12 | Ofertas (P9 bis) y aprobación de Matías o la dirección | programa y persona | `oferta/` | no salen con frenos abiertos |
+| 13 | Cierre (P10): resultado, costo real si se gana, y cada error nuevo con su prueba en `test_errores_sembrados.py` | persona y programa | `errores_y_lecciones.md`, prueba nueva | `verificar_todo.py` |
+
+Justificaciones que levantan frenos (en `cotizacion.json`): `justificaciones.estimado`, `justificaciones.vencidas`, `justificaciones.antecedentes`, `plazo.justificacion`; por fuente, `validez_hasta` y `reconfirmado` (AAAA-MM-DD).
+
+### Errores sembrados (validación del proceso)
+
+`herramientas/test_errores_sembrados.py` mete cada error en una copia de la CAPEX y exige que un control lo frene. Hoy cubre: descripción con palabras agregadas (regla crítica), cantidad distinta de la del cliente (#6, #14, Camuzzi), posición faltante, fecha futura o supuesta (PC0), precio sin referencia (P4 ter), subtotal a mano, precio sin fuente, referencia incompatible (BSPT por NPT), sin transcripción, sin segunda lectura, lecturas distintas (NPT-M/NPT-H, #7), sin matriz de requisitos, requisito sin destino y consulta abierta (separador Camuzzi), estimado > 15% (#17), cotización vencida (#18), antecedentes sin explicar (#19) y plazo menor (YPF 120/180). **No cubre todavía:** factor 1,40 mal aplicado (#1, #4), alcance de MO distinto (#58), juntas contadas en kg (30-10), errores de tablas técnicas (espesores, HEB/UL) y de dimensionamiento de ingeniería (#82). Al anotar un error nuevo, sumar su siembra.
+
 ## Estados de una cotización
 
 `borrador` → `revisado` (pasó P1–P9) → `aprobado` (Matías o la dirección) → `enviado` → `ganada / perdida`

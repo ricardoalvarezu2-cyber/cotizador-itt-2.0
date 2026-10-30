@@ -8,31 +8,31 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 
 | Pos | Ítem | Resultado | Precio | Fecha y tipo | Diferencias / faltantes |
 |---|---|---|---|---|---|
-| 1 | Tapón · Ø 1/2" | **SIN PRECIO** | — | — | el más parecido es sin diámetro conocido (AFO-02417, USD 5,00): pedir cotización |
-| 2 | Válvula esférica #2000, paso nominal, cuerpo  | SIMILAR | 33,81 / un | 2026-02-20 · planilla interna | material: A105 (pedido A216 WCB); trim: sin dato (pedido asientos metalicos) |
-| 3 | Niple longitud 100 mm · Ø 1/2" | SIMILAR ⚠ | 4,76 / un | 2026-04-22 · planilla interna | material: A106 B (pedido API 5L); el último precio (20,00) se aparta más de 40% de la mediana de sus últimos p |
-| 4 | Niple longitud 200 mm · Ø 2" | SIMILAR | 20,00 / un | 2026-04-22 · planilla interna | material: A106 B (pedido API 5L) |
-| 5 | Válvula esférica #2000, paso nominal, cuerpo  | SIMILAR | 106,86 / un | 2026-02-20 · planilla interna | material: A105 (pedido A216 WCB); trim: sin dato (pedido asientos metalicos) |
-| 6 | Unión doble a golpe · Ø 2" | **SIN PRECIO** | — | — | pedir cotización |
-| 7 | Válvula retención #600 tipo a clapeta, cuerpo | IGUAL | 533,00 / un | 2026-06-11 · cotización | — |
-| 8 | Tee normal · Ø 2" | IGUAL (estimado cepo) ⚠ | 21,82 / un | 2024-11-01 · estimado (cepo) | — |
-| 9 | Niple longitud 100 mm · Ø 2" | SIMILAR | 20,00 / un | 2026-04-22 · planilla interna | material: A106 B (pedido API 5L) |
-| 10 | Buje reducción · Ø 2"x1/2" | **SIN PRECIO** | — | — | pedir cotización |
-| 11 | Codo 45° · Ø 2" | **SIN PRECIO** | — | — | pedir cotización |
-| 12 | Niple longitud 200 mm · Ø 2" | SIMILAR | 20,00 / un | 2026-04-22 · planilla interna | extremos: NPT (pedido NPT/BW); material: A106 B (pedido API 5L) |
-| 13 | Junta monolítica · Ø 2" | **SIN PRECIO** | — | — | pedir cotización |
-| 14 | Caño longitud 1900 mm · Ø 2" | SIMILAR | 16,62 / m | 2026-06-25 · planilla interna | material: sin dato (pedido API 5L); costura: sin costura (no pedido); revestimiento: sin dato (pedido poliprop · faltan: costura |
-| 15 | Codo 45° · Ø 2" | IGUAL | 8,73 / un | 2025-12-26 · lista | — |
-| 16 | Reducción concéntrica · Ø 2 1/2"x2" | IGUAL | 16,51 / un | 2025-12-26 · lista | — |
-| 17 | Tapón · Ø 2" | **SIN PRECIO** | — | — | el más parecido es sin diámetro conocido (AFO-02417, USD 5,00): pedir cotización |
-| 18 | Tee normal · Ø 1/2" | IGUAL (estimado cepo) ⚠ | 10,80 / un | 2024-11-01 · estimado (cepo) | — |
-| 19 | Válvula bloqueo y purga · Ø 1/2" | **SIN PRECIO** | — | — | pedir cotización |
-| 20 | Manómetro rango 0-40 bar · Ø 1/2" | SIMILAR | 120,00 / un | 2026-08-14 · planilla interna | rango: sin dato (pedido 0-40 bar) · faltan: conexion |
-| 21 | Unión doble golpe extensible · Ø 2" | **SIN PRECIO** | — | — | pedir cotización |
-| 22 | Niple longitud 320 mm · Ø 2" | SIMILAR | 20,00 / un | 2026-04-22 · planilla interna | largo_mm: 100 (pedido 320); extremos: NPT (pedido NPT/BW); material: A106 B (pedido API 5L) |
-| 23 | Cupla · Ø 1/2" | **SIN PRECIO** | — | — | el más parecido es sin diámetro conocido (AFO-02391, USD 2,35): pedir cotización |
-| 24 | Niple longitud 150 mm · Ø 2" | SIMILAR | 20,00 / un | 2026-04-22 · planilla interna | material: A106 B (pedido API 5L) |
-| 25 | Niple longitud 1000 mm · Ø 2" | SIMILAR | 40,00 / un | 2026-04-22 · planilla interna | extremos: NPT (pedido NPT/BW); material: A106 B (pedido API 5L) |
+| 1 | TAPON · Ø 1/2" | **SIN PRECIO** | — | — | el más parecido es sin diámetro conocido (AFO-02417, USD 5,00): pedir cotización |
+| 2 | VALVULA ESFERICA Ø 1/2" #2000 - PASO NOMINAL  | SIMILAR | 33,81 / un | 2026-02-20 · planilla interna | material: A105 (pedido A216 WCB); trim: sin dato (pedido asientos metalicos) |
+| 3 | NIPLE - LONGITUD: 100 mm · Ø 1/2" | SIMILAR ⚠ | 4,76 / un | 2026-04-22 · planilla interna | material: A106 B (pedido API 5L); el último precio (20,00) se aparta más de 40% de la mediana de sus últimos p |
+| 4 | NIPLE - LONGITUD: 200 mm · Ø 2" | SIMILAR | 20,00 / un | 2026-04-22 · planilla interna | material: A106 B (pedido API 5L) |
+| 5 | VALVULA ESFERICA Ø 2" #2000 - PASO NOMINAL -  | SIMILAR | 106,86 / un | 2026-02-20 · planilla interna | material: A105 (pedido A216 WCB); trim: sin dato (pedido asientos metalicos) |
+| 6 | UNION DOBLE A GOLPE · Ø 2" | **SIN PRECIO** | — | — | pedir cotización |
+| 7 | VALVULA RETENCION Ø 2" # 600 - TIPO A CLAPETA | IGUAL | 533,00 / un | 2026-06-11 · cotización | — |
+| 8 | TEE NORMAL · Ø 2" | IGUAL (estimado cepo) ⚠ | 21,82 / un | 2024-11-01 · estimado (cepo) | — |
+| 9 | NIPLE - LONGITUD: 100 mm · Ø 2" | SIMILAR | 20,00 / un | 2026-04-22 · planilla interna | material: A106 B (pedido API 5L) |
+| 10 | BUJE REDUCCION · Ø 2"x1/2" | **SIN PRECIO** | — | — | pedir cotización |
+| 11 | CODO 45° · Ø 2" | **SIN PRECIO** | — | — | pedir cotización |
+| 12 | NIPLE - LONGITUD: 200 mm · Ø 2" | SIMILAR | 20,00 / un | 2026-04-22 · planilla interna | extremos: NPT (pedido NPT/BW); material: A106 B (pedido API 5L) |
+| 13 | JUNTA MONOLITICA · Ø 2" | **SIN PRECIO** | — | — | pedir cotización |
+| 14 | CAÑO - LONGITUD: 1900 mm · Ø 2" | SIMILAR | 16,62 / m | 2026-06-25 · planilla interna | material: sin dato (pedido API 5L); costura: sin costura (no pedido); revestimiento: sin dato (pedido poliprop · faltan: costura |
+| 15 | CODO 45° · Ø 2" | IGUAL | 8,73 / un | 2025-12-26 · lista | — |
+| 16 | REDUCCION CONCENTRICA · Ø 2 1/2"x2" | IGUAL | 16,51 / un | 2025-12-26 · lista | — |
+| 17 | TAPON · Ø 2" | **SIN PRECIO** | — | — | el más parecido es sin diámetro conocido (AFO-02417, USD 5,00): pedir cotización |
+| 18 | TEE NORMAL · Ø 1/2" | IGUAL (estimado cepo) ⚠ | 10,80 / un | 2024-11-01 · estimado (cepo) | — |
+| 19 | VALVULA BLOQUEO Y PURGA · Ø 1/2" | **SIN PRECIO** | — | — | pedir cotización |
+| 20 | MANOMETRO RANGO 0-40 BAR · Ø 1/2" | SIMILAR | 120,00 / un | 2026-08-14 · planilla interna | rango: sin dato (pedido 0-40 bar) · faltan: conexion |
+| 21 | UNION DOBLE GOLPE EXTENSIBLE · Ø 2" | **SIN PRECIO** | — | — | pedir cotización |
+| 22 | NIPLE - LONGITUD: 320 mm · Ø 2" | SIMILAR | 20,00 / un | 2026-04-22 · planilla interna | largo_mm: 100 (pedido 320); extremos: NPT (pedido NPT/BW); material: A106 B (pedido API 5L) |
+| 23 | CUPLA · Ø 1/2" | **SIN PRECIO** | — | — | el más parecido es sin diámetro conocido (AFO-02391, USD 2,35): pedir cotización |
+| 24 | NIPLE - LONGITUD: 150 mm · Ø 2" | SIMILAR | 20,00 / un | 2026-04-22 · planilla interna | material: A106 B (pedido API 5L) |
+| 25 | NIPLE - LONGITUD: 1000 mm · Ø 2" | SIMILAR | 40,00 / un | 2026-04-22 · planilla interna | extremos: NPT (pedido NPT/BW); material: A106 B (pedido API 5L) |
 | 14b | Completar barra de 6 m (pos 14) | compra extra | USD 16,62/m × 1,1 m | | Se usan 3,8 m en 2 equipo(s) y se compran 6 m. Borrar si hay sobrante en stock |
 
 ## 2. Soldaduras (de la columna de extremos)
@@ -45,7 +45,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - pos 15: 2 extremo(s) BW de taller (2 por unidad × 1) × 2" × 1,4169
 - pos 16: 1 extremo(s) BW de taller (2 por unidad × 1 − 1 de campo por unidad) × 2,5" × 1,3585
 - pos 22: 0 extremo(s) BW de taller (1 por unidad × 1 − 1 de campo por unidad) × 2" × 1,4169
-- pos 23: 2 junta(s) de Cupla sobre caño × 0,5" × 1,75 = 1,75
+- pos 23: 2 junta(s) de CUPLA sobre caño × 0,5" × 1,75 = 1,75
 - pos 25: 0 extremo(s) BW de taller (1 por unidad × 2 − 1 de campo por unidad) × 2" × 1,4169
 
 ## 3. Servicios calculados

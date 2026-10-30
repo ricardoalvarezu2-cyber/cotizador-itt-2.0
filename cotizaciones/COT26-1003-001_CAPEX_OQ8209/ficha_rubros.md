@@ -7,11 +7,11 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 - Juntas a tope (BW) de taller: **4** · juntas SW, cuplas y olets: **2** · extremos para soldar en campo: 4
 - Pulgadas equivalentes de soldadura: **13,37**
-- kg de piping (caños, bridas, accesorios y válvulas con tabla): **126 kg** · bridas: 0
+- kg de piping (caños, bridas, accesorios y válvulas con tabla): **127 kg** · bridas: 0
 - Diámetros soldados a tope: 2,5", 2", 0,5"
-- Sin peso (no suman kg): 6 Unión doble a golpe 2" 2000; 10 Buje reducción 2" × 1/2" NPT; 14b Sobrante de caño revestido (no va en el ; 21 Unión doble a golpe extensible 2"
+- Sin peso (no suman kg): 6 UNION DOBLE A GOLPE; 10 BUJE REDUCCION; 14b Sobrante de caño revestido (no va en el ; 16 REDUCCION CONCENTRICA; 21 UNION DOBLE GOLPE EXTENSIBLE
 - **Costo por antecedentes.** Por antecedentes: USD 711,22 (2 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 53,21/pulgada eq. · USD 5,66/kg de piping · USD 177,81/junta a tope
+  - Por unidad: USD 53,21/pulgada eq. · USD 5,62/kg de piping · USD 177,81/junta a tope
 
 ## 2. MO de fabricación de la estructura
 
@@ -54,7 +54,7 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 ## 8. Transporte
 
-- Medidas del puente: 0,00 × 0,00 × 0,00 m (largo × ancho × alto) · kg: **126** (piping + estructura)
+- Medidas del puente: 0,00 × 0,00 × 0,00 m (largo × ancho × alto) · kg: **127** (piping + estructura)
 - ⚠ Faltan las medidas del equipo (largo × ancho × alto): cargarlas del plano de conjunto
 - Sin precio por equipo: se cotiza EXW (o flete aparte en los parámetros). Para sumarlo por equipo, pasar el rubro a global.
 

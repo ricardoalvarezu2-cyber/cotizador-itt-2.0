@@ -1,0 +1,310 @@
+{
+ "fuente": "plano_23001-PDC-YAC-PC-P-001_rev1.pdf, tabla MATERIALES PARA FABRICACION (hoja 1, A3, rotada 90 grados)",
+ "lector": "B",
+ "fecha": "2026-10-30",
+ "notas": [
+  "Orden de columnas igual al plano (ITEM, DESCRIPCION primero; CANT. al final).",
+  "Descripciones de 2 renglones (items 2, 5, 7, 21) unidas con un espacio; el item 2 tiene doble espacio entre ESFERICA y Ø.",
+  "Las comillas de pulgada se leen como comilla doble recta (\").",
+  "Items 11 y 15: despues de 45 el plano muestra un punto elevado pequeno (simbolo de grado); se transcribe como ° [?].",
+  "Item 16, columna Ø: el plano dice 21/2\"X2\" (sin espacio entre el 2 y el 1/2); copiado tal cual.",
+  "Guiones de celdas sin dato: '----' (columnas Ø/SCH, CODIGO) y '----------' (MODELO/FABRICANTE) tal como estan dibujados; los guiones largos de los textos se copian como '-'.",
+  "Celdas vacias en el plano: item 2, 5, 7 (Ø, SCH/SERIE, MATERIAL: celdas fusionadas con la descripcion), item 13 MODELO/FABRICANTE, item 20 MATERIAL.",
+  "Item 20 SCH/SERIE tiene '----'.",
+  "Item 12 y 22/23/25 EXT. 'NPT/BW'; item 24 'NPT/NPT' (la N inicial queda pegada al borde de la celda).",
+  "Encabezado del plano: 'MATERIALES PARA FABRICACION'; columna Ø con el simbolo Ø."
+ ],
+ "tablas": [
+  {
+   "titulo": "MATERIALES PARA FABRICACION",
+   "columnas": [
+    "ITEM",
+    "DESCRIPCION",
+    "Ø",
+    "SCH/SERIE",
+    "MATERIAL",
+    "EXT.",
+    "CODIGO",
+    "MODELO/FABRICANTE",
+    "CANT."
+   ],
+   "filas": [
+    [
+     "1",
+     "TAPON",
+     "1/2\"",
+     "2000",
+     "ASTM A-105",
+     "NPT-M",
+     "----",
+     "----------",
+     "3"
+    ],
+    [
+     "2",
+     "VALVULA ESFERICA  Ø 1/2\" #2000 - PASO NOMINAL - CUERPO ASTM A-216 VASTAGO AISI-316 - ESFERA FLOTANTE AISI 316 - ASIENTOS METALICOS AISI-316",
+     "",
+     "",
+     "",
+     "NPT-H",
+     "----",
+     "----------",
+     "5"
+    ],
+    [
+     "3",
+     "NIPLE - LONGITUD: 100 mm",
+     "1/2\"",
+     "80",
+     "API 5L",
+     "NPT-M",
+     "----",
+     "----------",
+     "6"
+    ],
+    [
+     "4",
+     "NIPLE - LONGITUD: 200 mm",
+     "2\"",
+     "80",
+     "API 5L",
+     "NPT-M",
+     "----",
+     "----------",
+     "10"
+    ],
+    [
+     "5",
+     "VALVULA ESFERICA Ø 2\" #2000 - PASO NOMINAL - CUERPO ASTM A-216 VASTAGO AISI-316 - ESFERA FLOTANTE AISI 316 - ASIENTOS METALICOS AISI-316",
+     "",
+     "",
+     "",
+     "NPT-H",
+     "----",
+     "----------",
+     "1"
+    ],
+    [
+     "6",
+     "UNION DOBLE A GOLPE",
+     "2\"",
+     "2000",
+     "ASTM A-105",
+     "NPT-H",
+     "----",
+     "----------",
+     "5"
+    ],
+    [
+     "7",
+     "VALVULA RETENCION Ø 2\" # 600 - TIPO A CLAPETA - CUERPO ASTM A-216 CLAPETA AISI-316 - ASIENTOS RENOVABLES AISI-316 - RESORTE AISI-316",
+     "",
+     "",
+     "",
+     "NPT-H",
+     "----",
+     "----------",
+     "2"
+    ],
+    [
+     "8",
+     "TEE NORMAL",
+     "2\"",
+     "2000",
+     "ASTM A-105",
+     "NPT-H",
+     "----",
+     "----------",
+     "5"
+    ],
+    [
+     "9",
+     "NIPLE - LONGITUD: 100 mm",
+     "2\"",
+     "80",
+     "API 5L",
+     "NPT-M",
+     "----",
+     "----------",
+     "2"
+    ],
+    [
+     "10",
+     "BUJE REDUCCION",
+     "2\"X1/2\"",
+     "2000",
+     "ASTM A-105",
+     "NPT",
+     "----",
+     "----------",
+     "2"
+    ],
+    [
+     "11",
+     "CODO 45°",
+     "2\"",
+     "2000",
+     "ASTM A-105",
+     "NPT-H",
+     "----",
+     "----------",
+     "1"
+    ],
+    [
+     "12",
+     "NIPLE - LONGITUD: 200 mm",
+     "2\"",
+     "80",
+     "API 5L",
+     "NPT/BW",
+     "----",
+     "----------",
+     "1"
+    ],
+    [
+     "13",
+     "JUNTA MONOLITICA",
+     "2\"",
+     "80",
+     "ASTM A-234 Gr. WPB",
+     "BW",
+     "----",
+     "",
+     "1"
+    ],
+    [
+     "14",
+     "CAÑO - LONGITUD: 1900 mm",
+     "2\"",
+     "80",
+     "API 5L - REVESTIDO POLIPROPILENO",
+     "BW",
+     "----",
+     "----------",
+     "1"
+    ],
+    [
+     "15",
+     "CODO 45°",
+     "2\"",
+     "80",
+     "ASTM A-234 Gr. WPB",
+     "BW",
+     "----",
+     "----------",
+     "1"
+    ],
+    [
+     "16",
+     "REDUCCION CONCENTRICA",
+     "21/2\"X2\"",
+     "80X40",
+     "ASTM A-234 Gr. WPB",
+     "BW",
+     "----",
+     "----------",
+     "1"
+    ],
+    [
+     "17",
+     "TAPON",
+     "2\"",
+     "2000",
+     "ASTM A-105",
+     "NPT-M",
+     "----",
+     "----------",
+     "3"
+    ],
+    [
+     "18",
+     "TEE NORMAL",
+     "1/2\"",
+     "2000",
+     "ASTM A-105",
+     "NPT-H",
+     "----",
+     "----------",
+     "1"
+    ],
+    [
+     "19",
+     "VALVULA BLOQUEO Y PURGA",
+     "1/2\"",
+     "3000",
+     "AISI 316",
+     "NPT-M",
+     "----",
+     "VI 550-M / ABAC",
+     "2"
+    ],
+    [
+     "20",
+     "MANOMETRO RANGO 0-40 BAR",
+     "1/2\"",
+     "----",
+     "",
+     "NPT-H",
+     "----",
+     "----------",
+     "2"
+    ],
+    [
+     "21",
+     "UNION DOBLE GOLPE EXTENSIBLE",
+     "2\"",
+     "2000",
+     "ASTM A-105",
+     "NPT-H",
+     "----",
+     "DURALITE",
+     "2"
+    ],
+    [
+     "22",
+     "NIPLE - LONGITUD: 320 mm",
+     "2\"",
+     "80",
+     "API 5L",
+     "NPT/BW",
+     "----",
+     "----------",
+     "1"
+    ],
+    [
+     "23",
+     "CUPLA",
+     "1/2\"",
+     "80/2000",
+     "ASTM A-234 Gr. WPB",
+     "NPT/BW",
+     "----",
+     "----------",
+     "2"
+    ],
+    [
+     "24",
+     "NIPLE - LONGITUD: 150 mm",
+     "2\"",
+     "80",
+     "API 5L",
+     "NPT/NPT",
+     "----",
+     "----------",
+     "1"
+    ],
+    [
+     "25",
+     "NIPLE - LONGITUD: 1000 mm",
+     "2\"",
+     "80",
+     "API 5L",
+     "NPT/BW",
+     "----",
+     "----------",
+     "2"
+    ]
+   ]
+  }
+ ]
+}

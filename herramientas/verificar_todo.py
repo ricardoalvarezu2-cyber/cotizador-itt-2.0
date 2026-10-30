@@ -2,7 +2,8 @@
 
 Uso: python herramientas/verificar_todo.py
 
-1. Tests de regresión: catálogo de materiales, catálogo de servicios, precotización (CAPEX como caso de control).
+1. Tests de regresión: catálogo de materiales, catálogo de servicios, precotización (CAPEX como caso de control) y
+   errores sembrados (cada error ya cometido, metido en una copia de la CAPEX, tiene que frenarse).
 2. Armado determinístico: dos corridas de cada catálogo dan el mismo CSV.
 3. La cotización de control (CAPEX) se vuelve a armar: Python y planilla iguales, verificar_computo sin errores y
    el precio unitario igual al registrado en CONTROL (si cambia a propósito, actualizar CONTROL y anotar por qué).
@@ -50,7 +51,8 @@ def modificados():
 DERIVADOS = (".xlsx", ".docx", ".pdf", ".html")
 antes = modificados()
 
-for t in ("test_catalogo.py", "test_catalogo_servicios.py", "test_precotizar.py", "test_antecedentes.py", "test_compatibilidad.py"):
+for t in ("test_catalogo.py", "test_catalogo_servicios.py", "test_precotizar.py", "test_antecedentes.py", "test_compatibilidad.py",
+          "test_errores_sembrados.py"):
     correr(t, [str(H / t)])
 for script, salida in (("catalogo_materiales.py", "conocimiento/precios/catalogo_materiales.csv"),
                        ("catalogo_servicios.py", "conocimiento/precios/catalogo_servicios.csv")):
@@ -114,6 +116,17 @@ print(f"{'OK  ' if not incomp else 'FALLA'} referencias compatibles con la norma
 if incomp:
     fallas.append("cotizaciones con referencias incompatibles")
     print("\n".join("  " + x for x in incomp[:20]))
+# Frenos de la oferta (proceso unificado, 30-10-2026): no fallan el control (son de cada cotización), se informan para que
+# se vea qué le falta a cada una antes de generar ofertas.
+import contextlib  # noqa: E402
+import io  # noqa: E402
+import frenos  # noqa: E402
+print("Frenos de la oferta por cotización (informativo):")
+for carpeta in sorted((RAIZ / "cotizaciones").iterdir()):
+    if carpeta.name.startswith("COT") and (carpeta / "cotizacion.json").exists():
+        with contextlib.redirect_stdout(io.StringIO()):
+            fr = frenos.frenos(carpeta)
+        print(f"  {carpeta.name}: " + (", ".join(k for k, _ in fr) if fr else "sin frenos"))
 despues = modificados()
 if antes is not None and despues is not None:
     nuevos = sorted(despues - antes)

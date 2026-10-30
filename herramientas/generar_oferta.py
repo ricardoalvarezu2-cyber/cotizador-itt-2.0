@@ -380,6 +380,10 @@ def main(carpeta):
     cot = json.load(open(carpeta / "cotizacion.json", encoding="utf-8"))
     cfg = completar(json.load(open(carpeta / "oferta.json", encoding="utf-8")), cot)
     cfg["_cot"] = cot
+    import frenos
+    fr = frenos.frenos(carpeta)  # también cuando se corre sola: ninguna oferta sale con un freno abierto
+    if fr:
+        sys.exit("OFERTAS NO GENERADAS:\n" + "\n".join(f"  ■ [{k}] {t}" for k, t in fr))
     precios = leer_precios(carpeta)
     salida = carpeta / "oferta"
     salida.mkdir(exist_ok=True)

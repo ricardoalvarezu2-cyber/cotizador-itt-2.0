@@ -12,7 +12,8 @@ ERRORES (impiden pasar a "revisado"):
   - posición del cómputo que no está en el plano (salvo filas de compra extra con sufijo, ej. 14b)
   - precio sin proveedor, origen o fecha
   - subtotal distinto de cantidad × precio
-  - descripción distinta de la del cliente, o cantidad que el cliente no indica sin aclarar (con pedido/transcripcion.json)
+  - descripción o cantidad distinta de la del cliente, o cantidad que el cliente no indica sin aclarar (con pedido/transcripcion.json)
+FRENOS DE LA OFERTA (no impiden armar el informe; impiden generar las ofertas): ver herramientas/frenos.py
 AVISOS (revisar uno por uno):
   - extremos BW/SW: soldaduras que tienen que estar contadas en la MO
   - modelo o fabricante exigido por el plano
@@ -123,6 +124,16 @@ def main(carpeta):
                 errores.append(f"Pos {pos}: la descripción no es la del cliente. Cliente: «{desc}» · cómputo: «{p['descripcion']}»")
             if str(q).strip() in ("", "_", "-", "—") and "no indica cantidad" not in p.get("cantidad_origen", "").lower():
                 errores.append(f"Pos {pos}: el cliente no indica cantidad; aclarar en cantidad_origen que la calculó ITT (según plano o ET)")
+            elif str(q).strip() not in ("", "_", "-", "—"):
+                # la cantidad de la lista es la del cliente (P2; errores 6, 7 y lista ≠ plano de Camuzzi): se compara con su número
+                try:
+                    qc = cantidad_plano(q)
+                except (ValueError, TypeError):
+                    qc = None
+                if qc is None:
+                    avisos.append(f"Pos {pos}: la cantidad del cliente «{q}» no se pudo leer como número: compararla a mano")
+                elif abs(qc - cantidad_plano(p["cantidad"])) > 1e-6:
+                    errores.append(f"Pos {pos}: el cliente pide {q} y la lista tiene {p['cantidad']}")
         for r in comp:
             base_pos = r["pos"].strip()
             if base_pos in cliente and not r["descripcion"].startswith(" ".join(str(cliente[base_pos][0]).split())):

@@ -1,0 +1,191 @@
+{
+ "fuente": "SCEME315039 Plano Mecánico Puente de Medición ERP Parque Industrial Tres Arroyos.pdf; tablas LISTADO DE MATERIALES y SENSORES A INSTALAR",
+ "lector": "B",
+ "fecha": "2026-10-30",
+ "notas": [
+  "Filas 12 y 16: descripción en dos renglones en la celda, unidos con un espacio.",
+  "Nota al pie de las tablas: \"La cantidad de juntas y espárragos a utilizar serán las indicadas según el diámetro de brida utilizada, y en función de la SCE-IN-301-0001/2: Ajuste de espárragos de uniones bridadas.\"",
+  "Filas 14 y 15: CANT. figura como \"_\"."
+ ],
+ "tablas": [
+  {
+   "titulo": "LISTADO DE MATERIALES",
+   "columnas": [
+    "ITEM",
+    "DESCRIPCIÓN",
+    "Ø",
+    "SCH",
+    "SERIE",
+    "CANT.",
+    "MATERIAL/OBS."
+   ],
+   "filas": [
+    [
+     "1",
+     "FILTRO FM-06 #150 SIMPLE MÓDULO",
+     "6\"",
+     "STD",
+     "150",
+     "1",
+     "S/ Esp. CAMUZZI"
+    ],
+    [
+     "2",
+     "CARRETEL DE AJUSTE / PROVISORIO DE TURBINA",
+     "4\"",
+     "n/a",
+     "150",
+     "1",
+     "S/ Esp. CAMUZZI"
+    ],
+    [
+     "3",
+     "VÁLVULA ESFÉRICA BRIDADA PASO TOTAL APF",
+     "6\"",
+     "STD",
+     "150",
+     "1",
+     "S/ Esp. CAMUZZI"
+    ],
+    [
+     "4",
+     "VÁLVULA ESFÉRICA BRIDADA PASO TOTAL APF",
+     "4\"",
+     "STD",
+     "150",
+     "2",
+     "S/ Esp. CAMUZZI"
+    ],
+    [
+     "5",
+     "BRIDA WN",
+     "4\"",
+     "STD",
+     "150",
+     "7",
+     "ASTM A-105"
+    ],
+    [
+     "6",
+     "BRIDA WN",
+     "6\"",
+     "STD",
+     "150",
+     "3",
+     "ASTM A-105"
+    ],
+    [
+     "7",
+     "TE NORMAL",
+     "6\"",
+     "STD",
+     "n/a",
+     "1",
+     "ASTM A-105"
+    ],
+    [
+     "8",
+     "TE NORMAL",
+     "4\"",
+     "STD",
+     "n/a",
+     "1",
+     "ASTM A-105"
+    ],
+    [
+     "9",
+     "REDUCCIÓN CONCÉNTRICA",
+     "6\"x4\"",
+     "STD",
+     "n/a",
+     "2",
+     "S/ Esp. CAMUZZI"
+    ],
+    [
+     "10",
+     "CODO 90°",
+     "4\"",
+     "STD",
+     "n/a",
+     "3",
+     "ASTM A-234 G°WPB"
+    ],
+    [
+     "11",
+     "TERMOVAINA DE ACERO INOXIDABLE 3/4\" NPT",
+     "3/4\"",
+     "n/a",
+     "3000",
+     "2",
+     "AISI 316"
+    ],
+    [
+     "12",
+     "CUPLA AC C/ VALV ESF. PASO TOTAL S3000 1/2\" C/ TAPÓN",
+     "1/2\"",
+     "n/a",
+     "3000",
+     "1",
+     "S/ Fabricante"
+    ],
+    [
+     "13",
+     "SKID Y SOPORTES",
+     "n/a",
+     "n/a",
+     "n/a",
+     "1",
+     "S/ Esp. CAMUZZI"
+    ],
+    [
+     "14",
+     "CAÑO 4\"",
+     "4\"",
+     "40",
+     "n/a",
+     "_",
+     "ASTM A-53 GR°B"
+    ],
+    [
+     "15",
+     "CAÑO 6\"",
+     "6\"",
+     "40",
+     "n/a",
+     "_",
+     "ASTM A-53 GR°B"
+    ],
+    [
+     "16",
+     "CUPLA DE AC SOLD. 1/2\" NPT C/ VLV. ESF 1/2\" S3000",
+     "1/2\"",
+     "n/a",
+     "3000",
+     "2",
+     "ASTM A-106"
+    ]
+   ]
+  },
+  {
+   "titulo": "SENSORES A INSTALAR",
+   "columnas": [
+    "POS",
+    "DESCRIPCIÓN",
+    "Ø",
+    "CANT",
+    "SERIE",
+    "RANGO"
+   ],
+   "filas": [
+    [
+     "A",
+     "TEMPERATURA PARA CORRECTORA DE CAUDAL",
+     "3/4\"",
+     "1",
+     "150",
+     "0-100 °C / 4-20 mA"
+    ]
+   ]
+  }
+ ]
+}

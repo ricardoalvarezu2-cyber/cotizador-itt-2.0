@@ -20,6 +20,7 @@ from indice_proyectos import SUBTIPO_NOMBRE  # noqa: E402
 from numeros import a_vista, fmt, fmtg  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
+ultimo = {}  # resultado de la última corrida para frenos.py: {"dif": costo contra el más parecido con costo comparable o None, "id"}
 
 
 def costo_antecedente(p):
@@ -84,6 +85,8 @@ def main(carpeta, precio_unitario=None, costo=None, reparto=None):
               "| # | Antecedente | Fecha | Costo por equipo | Costo: esta vs. antecedente | Materiales (ant. / esta) | MO y servicios (ant. / esta) | Factor | Precio de venta (solo referencia) | Qué es |",
               "|---|---|---|---|---|---|---|---|---|---|"]
     avisos = []
+    ultimo.clear()
+    ultimo.update({"dif": None, "id": ""})
     mat_n, mo_n = reparto.get("material", 0), reparto.get("mo", 0)
     for n, (s, p) in enumerate(res[:5], 1):
         pu = float(p["precio_unitario_principal"])
@@ -93,6 +96,8 @@ def main(carpeta, precio_unitario=None, costo=None, reparto=None):
             dif = costo / ca["cu"] - 1
             otra = dif > 3 or dif < -0.75
             cel_c, cel_d = f"{fmt(ca['cu'], 0)} {p['moneda']}", f"{dif:+.0%}" + (" (otra escala: no comparable)" if otra else " ⚠" if abs(dif) > 0.15 else "")
+            if not otra and ultimo["dif"] is None:
+                ultimo.update({"dif": dif, "id": p["id"]})
             if not otra and abs(dif) > 0.15 and len(avisos) < 2:
                 avisos.append(f"Costo {dif:+.0%} contra '{p['id'][:50]}' ({fmt(ca['cu'], 0)} {p['moneda']}, {a_vista(p['fecha'])}): explicar la diferencia rubro por rubro (P8)")
         else:

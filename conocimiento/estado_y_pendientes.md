@@ -14,6 +14,7 @@
 | Catálogo de materiales con marca, unidad, IVA y alertas | Vigente: 4.549 materiales (1.385 con precio ESTIMADO del cepo; 130 sin precio); incluye listas de Ventas (Renard 05-2025, Cintolo 29.1, Provemet) y Lista 30 de Taval × 0,52 | `precios/catalogo_materiales.*`, `herramientas/catalogo_materiales.py`, `buscar_material.py`, `test_catalogo.py` |
 | Lector único de números y fechas | Vigente | `herramientas/numeros.py` |
 | **Compatibilidades de la norma en el buscador de materiales** (material y grupo B16.5, cara, rosca, schedule, NACE) | Vigente desde 30-10-2026, Python y página | `herramientas/compatibilidad.py`, `tecnico/compatibilidades_LEEME.md`, `test_compatibilidad.py` |
+| **Flujo unificado y frenos de la oferta** (transcripción doble, matriz de requisitos, estimado > 15%, cotizaciones vencidas, antecedentes, plazo) y **errores sembrados** | Vigente desde 30-10-2026 (aprobado por Matías sin candados de estados) | `procedimiento_cotizacion.md` ("Flujo unificado"), `herramientas/frenos.py`, `test_errores_sembrados.py` |
 | **Precios cargados por el usuario** (firmes si los confirma Matías) | Vigente desde 30-10-2026 (RX por visita y por placa) | `precios/precios_usuario.csv` |
 | **Controles que solo avisan**: precio que no figura en su documento (`verificacion_origen.md`), validador de fichas, informe de cambios del buscador; `subir_a_main.py` | Vigente desde 30-10-2026 | `herramientas/verificar_origen.py`, `validar_fichas.py`, `revisar_cambio_busqueda.py`, `subir_a_main.py` |
 | Comparación con antecedentes (P8) **costo contra costo** por rubro | Vigente desde 30-10-2026 | `comparar_antecedentes.py`, `web/src/antecedentes.js` |
@@ -160,6 +161,14 @@ Decidido (Matías, 29-10-2026): manda el repositorio; la biblioteca se alimenta 
 **Cotizaciones cargadas revisadas con las reglas de compatibilidad (30-10-2026):** solo 2 renglones usaban un similar que la norma no admite: COT26-0135-001 pos 17 (cupla BSPT → NPT, mismo precio) y COT26-0135-003 pos 15 (válvula SW-roscada → SIN PRECIO). El resto no cambia; no hace falta rehacer las cotizaciones. Para revisar otras: comparar cada renglón con `compatibilidad.incompatible` (como en este chat) o volver a correr `precotizar.py` y comparar.
 
 **Catálogo sin material (30-10-2026):** 1.407 renglones del catálogo de materiales no tienen el material cargado y, con las reglas revisadas, no sirven como similar (quedan SIN PRECIO). Completar el material leyendo la descripción o el original (tarea de IA con revisión) bajaría los SIN PRECIO.
+
+**Flujo unificado (30-10-2026)** — hecho: frenos de la oferta, doble lectura (CAPEX y Camuzzi 001/002), matriz de requisitos (CAPEX), cantidad del cliente en `verificar_computo.py`, 18 errores sembrados. Pendiente:
+1. Matriz de requisitos de Camuzzi 001, 002 y 003 e YPF 713/708; transcripción del plano del cliente de YPF (en el repositorio solo está la planilla PC0 del vendedor).
+2. Notas del plano de la CAPEX en la matriz (solo se cargó la OR) y las 3 consultas abiertas: documento 17009 contra plano 23001, condición de pago "Habitual", esféricas de cuerpo enterizo.
+3. Cargar `validez_hasta` en las fuentes `cot`; S02 de la CAPEX (costo propio de planta) está como `cot` y frena por "vencida".
+4. La página todavía no tiene los frenos nuevos (solo el de plazo): sus ofertas pueden salir sin ellos.
+5. Doble método por USD/kg: las fichas de antecedentes no tienen kg; hoy el contraste es costo contra costo del antecedente.
+6. Medir contra el costo real (los casos CTRL siguen congelados contra lo que da la app) y sumar siembras para los errores que no cubre (factor 1,40, alcance de MO, tablas técnicas).
 
 **Para decidir con Matías (30-10-2026)**
 1. Separador Camuzzi (COT26-0135-003): ~~ingeniería y calidad a 250 h~~ hecho (Matías, 30-10-2026). Falta pedir a Ledesma la cotización real con el diseño, confirmar las placas de RX con el mapa de soldaduras y cotizar la válvula esférica 1/2" roscada S-2000 (pos 15, sin precio por la regla de compatibilidad).

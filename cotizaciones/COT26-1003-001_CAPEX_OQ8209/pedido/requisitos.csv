@@ -1,0 +1,12 @@
+id,documento,pagina,texto,tema,destino,referencia
+R01,OR53081 - OQ8209.pdf,1,"PUENTE ARMADO BBO MEC 1500 · Cant. 2,0000 UN",alcance,cumple,"parametros.N = 2"
+R02,OR53081 - OQ8209.pdf,1,"POR DETALLES VER DOCUMENTO ADJUNTO N° 17009-PDC-YAC-PC-P-001 REV 1",documentación,consulta,"El documento citado (17009-PDC-YAC-PC-P-001 rev 1) no es el plano recibido (23001-PDC-YAC-PC-P-001 rev 1): confirmar con el cliente que es el mismo"
+R03,OR53081 - OQ8209.pdf,1,"SE DEBE REALIZAR PRUEBA HIDRAULICA A 15 KG/CM2, VERIFICANDO UNIONES",ensayos,renglon,PH
+R04,OR53081 - OQ8209.pdf,1,"ADJUNTAR REGISTRO DE LA PH CON DOCUMENTACION DEL PRODUCTO",documentación,renglon,CAL
+R05,OR53081 - OQ8209.pdf,1,"UNION DOBLE A GOLPE EXTENSIBLE CON SELLO METAL-METAL",material,renglon,21
+R06,OR53081 - OQ8209.pdf,1,"VALVULAS ESFERICAS TIPO CUERPO ENTERIZO SIN BULONES DE UNION.",material,consulta,"Pos 2 y 5 sin cotización con esa especificación: pedir a Compras o declarar desvío"
+R07,OR53081 - OQ8209.pdf,1,"Fecha de Necesidad 09/11/2026",plazo,desvio,"Aclaración 1 de la oferta: el plazo no permite cumplir la fecha de necesidad"
+R08,OR53081 - OQ8209.pdf,1,"Fecha Limite Respuesta 22/10/2026",comercial,desvio,"Aclaración 1 de la oferta: oferta fuera del plazo de respuesta"
+R09,OR53081 - OQ8209.pdf,1,"Envio a Depósito Pampa del Castillo Ruta Nacional 26- km 42",entrega,exclusion,"Entrega EXW Quilmes Oeste; exclusión: transporte hasta el lugar de destino"
+R10,OR53081 - OQ8209.pdf,1,"Condición de Pago: Habitual",comercial,consulta,"La oferta dice 100% contado contra entrega: confirmar cuál es la condición habitual con CAPEX"
+R11,OR53081 - OQ8209.pdf,1,"CODIGO ANTERIOR SAP 5049792",informativo,cumple,
