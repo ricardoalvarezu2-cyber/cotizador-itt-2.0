@@ -175,7 +175,7 @@ Decidido (Matías, 29-10-2026): manda el repositorio; la biblioteca se alimenta 
 1. Matriz de requisitos de Camuzzi 001, 002 y 003 e YPF 713/708; transcripción del plano del cliente de YPF (en el repositorio solo está la planilla PC0 del vendedor).
 2. Notas del plano de la CAPEX en la matriz (solo se cargó la OR) y las 3 consultas abiertas: documento 17009 contra plano 23001, condición de pago "Habitual", esféricas de cuerpo enterizo.
 3. Cargar `validez_hasta` en las fuentes `cot`; S02 de la CAPEX (costo propio de planta) está como `cot` y frena por "vencida".
-4. La página todavía no tiene los frenos nuevos (solo el de plazo): sus ofertas pueden salir sin ellos.
+4. ~~La página sin los frenos nuevos~~ Hecho (30-10-2026): la página frena igual que Python (`Busqueda.frenosOferta`, `web/probar_frenos.js` en `test_errores_sembrados.py`); los frenos que dependen de archivos del repositorio llegan en `cot.frenos_repo` (`semilla.py`). Pendiente: las copias de la página solo recibieron `frenos_repo`; la CAPEX de la página sigue con las descripciones viejas (volver a cargarla con `semilla.py --previo`) y el skid 708 de la página (USD 121.693 c/u) no coincide con el repositorio (98.014): ver cuál vale antes de recargarlo.
 5. Doble método por USD/kg: las fichas de antecedentes no tienen kg; hoy el contraste es costo contra costo del antecedente.
 6. Medir contra el costo real (los casos CTRL siguen congelados contra lo que da la app) y sumar siembras para los errores que no cubre (factor 1,40, alcance de MO, tablas técnicas).
 
