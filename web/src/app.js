@@ -716,13 +716,15 @@
       : `<details class="grupo-av" ${abiertos && g.size < 4 ? "open" : ""}><summary>${E(k)} <span class="cnt">${xs.length}</span></summary><ul>${xs.map(a => `<li>${E(a.corto ? a.txt.slice(0, a.txt.length - a.corto.length - 2) + " — " + a.corto : a.txt)}</li>`).join("")}</ul></details>`).join("");
   }
   function panelAntecedentes(c) {
-    const r = Antecedentes.comparar(S.doc.cot, S.datos, c.precio_unitario);
-    return `<section><div class="sec-head"><h3>Antecedentes parecidos (P8)</h3><span class="eyebrow">familia ${E(r.nombreFamilia || r.familia)}${r.nombreSubtipo ? " · " + E(r.nombreSubtipo) : ""} · los 5 más parecidos con precio</span></div>
-      <p class="small muted">Una diferencia de más del 15% no es un error: hay que explicarla rubro por rubro (alcance, cantidad, diámetro, serie, fecha) antes de presentar el número. Más de 4 veces es otra escala (el precio del índice es de otra cosa).</p>
-      ${r.filas.length ? `<div class="tbl"><table><thead><tr><th>#</th><th>Antecedente</th><th>Fecha</th><th class="n">Precio unitario</th><th class="n">Esta vs. antecedente</th><th>Factor</th><th>Materiales</th><th>Por qué se parece</th></tr></thead><tbody>
+    const r = Antecedentes.comparar(S.doc.cot, S.datos, c.precio_unitario, c.costo), pc = v => v == null ? "—" : num(v * 100, 0) + "%";
+    return `<section><div class="sec-head"><h3>Antecedentes parecidos (P8)</h3><span class="eyebrow">familia ${E(r.nombreFamilia || r.familia)}${r.nombreSubtipo ? " · " + E(r.nombreSubtipo) : ""} · costo contra costo</span></div>
+      <p class="small muted">Se compara el costo por equipo (el precio de venta mezcla factor, flete, caución y alcance). El costo del antecedente es el de su ficha, a su fecha y sin ajustar; si la ficha no lo permite, queda el precio de venta como "solo venta". Una diferencia de más del 15% no es un error: hay que explicarla rubro por rubro antes de presentar el número.</p>
+      ${r.filas.length ? `<div class="tbl"><table><thead><tr><th>#</th><th>Antecedente</th><th>Fecha</th><th class="n">Costo por equipo</th><th class="n">Costo: esta vs. ant.</th><th class="n">Materiales ant. / esta</th><th class="n">MO y serv. ant. / esta</th><th>Factor</th><th class="n">Precio de venta (ref.)</th><th>Por qué se parece</th></tr></thead><tbody>
         ${r.filas.map((f, i) => `<tr><td>${i + 1}</td><td><div class="d">${E(f.id)}</div><div class="sp">${E(f.cliente)}${f.oferta ? " · " + E(f.oferta) : ""}${f.subtipo ? " · " + E(f.subtipo) : ""} · ${E(f.descripcion.slice(0, 120))}</div></td><td class="small">${E(F(f.fecha))}</td>
-          <td class="n">${num(f.pu, 0)} ${E(f.moneda)}</td><td class="n">${f.otra ? '<span class="muted">otra escala</span>' : `<span class="pill ${f.ojo ? "warn" : "ok"}">${f.dif > 0 ? "+" : ""}${num(f.dif * 100, 0)}%</span>`}</td>
-          <td>${E(f.factor || "—")}</td><td class="small">${f.reparto != null ? num(f.reparto * 100, 0) + "%" : "—"}</td><td class="small muted">${E(f.razones.join(" · "))}</td></tr>`).join("")}</tbody></table></div>` : ""}
+          <td class="n">${f.cu ? num(f.cu, 0) + " " + E(f.moneda) : "—"}</td>
+          <td class="n">${f.dif == null ? `<span class="muted small">solo venta: ${f.difV > 0 ? "+" : ""}${num(f.difV * 100, 0)}%${f.cnota ? " · " + E(f.cnota) : ""}</span>` : f.otra ? '<span class="muted">otra escala</span>' : `<span class="pill ${f.ojo ? "warn" : "ok"}">${f.dif > 0 ? "+" : ""}${num(f.dif * 100, 0)}%</span>`}</td>
+          <td class="n small">${pc(f.reparto)} / ${pc(r.matN)}</td><td class="n small">${f.reparto == null ? "—" : pc(1 - f.reparto)} / ${pc(r.moN)}</td>
+          <td>${E(f.factor || "—")}</td><td class="n small">${num(f.pu, 0)} ${E(f.moneda)}</td><td class="small muted">${E(f.razones.join(" · "))}</td></tr>`).join("")}</tbody></table></div>` : ""}
       ${r.avisos.length ? `<div class="aviso"><ul>${r.avisos.map(a => `<li>${E(a)}</li>`).join("")}</ul></div>` : ""}</section>`;
   }
 

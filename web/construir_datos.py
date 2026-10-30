@@ -94,20 +94,17 @@ def antecedentes():
     sinónimos, pesos), para comparar en la página (paso P8) con el mismo criterio que Python."""
     import indice_proyectos as ip
     import buscar_antecedentes as ba
+    import comparar_antecedentes
     filas = []
     for r in leer(C / "comercial" / "indice_proyectos.csv"):
-        rep = None
-        ficha = RAIZ / r["ficha"] if r["ficha"].endswith(".json") else None
-        if ficha and ficha.exists():
-            d = json.load(open(ficha, encoding="utf-8")).get("desglose_costo") or {}
-            m, mo, te = (d.get("materiales") or 0), (d.get("mano_obra") or 0), (d.get("terceros") or 0)
-            if m + mo + te:
-                rep = round(m / (m + mo + te), 3)
+        ca = comparar_antecedentes.costo_antecedente(r)  # costo por equipo y reparto, igual que comparar_antecedentes.py
+        rep = round(ca["mat"], 3) if ca["mat"] is not None else None
         filas.append({"id": r["id"], "fe": r["fecha"], "cl": r["cliente"], "clf": r["cliente_final"], "fam": r["familia"], "tags": r["etiquetas"],
                       "sub": r["subtipo"], "subs": r["subtipos"], "cue": f(r["diametro_cuerpo"]) if r["diametro_cuerpo"] else None,
                       "d": r["descripcion"][:200], "of": r["numero_oferta"], "dia": r["diametros"], "ser": r["series"], "mat": r["material"], "un": r["union"],
                       "pu": f(r["precio_unitario_principal"]), "mon": r["moneda"], "fac": r["factor"], "plazo": r["plazo_dias"], "res": r["resultado"],
-                      "pl": bool(r["tiene_planilla_costo"]), "prov": r["proveedores"], "oc": bool(r["tiene_oc"]), "conf": r["confianza"], "w": r["palabras"], "rep": rep})
+                      "pl": bool(r["tiene_planilla_costo"]), "prov": r["proveedores"], "oc": bool(r["tiene_oc"]), "conf": r["confianza"], "w": r["palabras"], "rep": rep,
+                      "cu": round(ca["cu"], 2) if ca["cu"] else None, "cno": ca["nota"]})
     sinonimos = [[a, b.replace("\\1", "$1")] for a, b in ip.SINONIMOS]  # en JS el grupo se escribe $1
     return {"proyectos": filas, "claves": ip.CLAVES, "familias": ip.FAMILIAS, "vacias": sorted(ip.VACIAS), "cortas": sorted(ip.CORTAS), "tamanos": ba.TAMANOS,
             "sinonimos": sinonimos, "subtipos": [list(x) for x in ip.SUBTIPOS], "recipientes": sorted(ip.RECIPIENTES), "tipo_familia": ip.TIPO_FAMILIA,

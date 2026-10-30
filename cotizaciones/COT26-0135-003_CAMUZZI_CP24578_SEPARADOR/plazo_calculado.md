@@ -14,8 +14,9 @@ Generado por `herramientas/plazo.py` (regla de `conocimiento/plazos.md` §4). Pr
 - Taller, ensayos, pintura y despacho: **30 días** (tareas de taller cargadas).
 - **Plazo calculado sin superponer: 165 días**; con el margen de 15–20% de la regla: **190–198 días**.
 - Plazo ofrecido: **165 días**.
-- Plazo real histórico de la familia M: 58 días (mediana, plazos.md §1).
+- Plazo real histórico de la familia SEP: 370 días (mediana, plazos.md §1).
 
 ## 3. Avisos
 
 - ⚠ El plazo ofrecido (165 d) no tiene el margen de 15–20% (sugerido 190–198 d)
+- ⚠ El plazo ofrecido es mucho menor que el real histórico de la familia SEP (370 d): confirmar antes de comprometerlo

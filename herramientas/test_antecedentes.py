@@ -96,5 +96,17 @@ else:
         jids = [x[0] for x in js[k]["top"]]
         chk(f"página = Python en {k}", jids == ids, f"\n  py {ids}\n  js {jids}\n  consulta js {js[k]}")
 
+# 6. costo contra costo (30-10-2026): la página toma el mismo costo por equipo que Python
+from comparar_antecedentes import costo_antecedente  # noqa: E402
+por_id = {r["id"]: r for r in filas}
+datos = json.load(open(RAIZ / "web" / "datos.json", encoding="utf-8"))
+cu_pag = {p["id"]: p.get("cu") for p in datos["antecedentes"]["proyectos"]}
+for i, r in por_id.items():
+    cu = costo_antecedente(r)["cu"]
+    if (round(cu, 2) if cu else None) != cu_pag.get(i):
+        chk(f"costo por equipo página = Python en {i[:40]}", False, (cu, cu_pag.get(i)))
+        break
+chk("TAVAL/37 tiene costo por equipo (planilla de costo)", costo_antecedente(next(r for k, r in por_id.items() if k.startswith("TAVAL/37")))["cu"])
+
 print("Antecedentes: todo OK" if not fallas else f"Antecedentes: {len(fallas)} fallas")
 sys.exit(1 if fallas else 0)

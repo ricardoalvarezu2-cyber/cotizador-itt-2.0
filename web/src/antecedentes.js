@@ -196,18 +196,25 @@ const Antecedentes = (() => {
     return { q, res, T };
   }
 
-  function comparar(cot, datos, precio_unitario) {
+  // igual que comparar_antecedentes.py: costo contra costo (Matías, 30-10-2026); el precio de venta queda como referencia
+  function comparar(cot, datos, precio_unitario, costo) {
     const A = datos.antecedentes; if (!A) return { filas: [], avisos: ["No hay índice de proyectos en esta versión de la página"] };
     const { q, res, T } = buscar(cot, datos), familia = q.familia || "OT";
+    let mat = 0, tot = 0;
+    for (const it of cot.items || []) { const v = (+it.cantidad || 0) * (+it.fuentes?.[0]?.precio || 0); tot += v; if (it.grupo === "material") mat += v; }
+    const matN = tot ? mat / tot : 0, moN = tot ? 1 - matN : 0, avisos = [];
     const filas = res.slice(0, 5).map(({ p, razones }) => {
-      const dif = precio_unitario / p.pu - 1, otra = dif > 3 || dif < -0.75;
-      return { id: p.id, fecha: p.fe, cliente: p.cl, descripcion: p.d, oferta: p.of, pu: p.pu, moneda: p.mon, factor: p.fac, reparto: p.rep, dif, otra, ojo: !otra && Math.abs(dif) > 0.15, razones, subtipo: T.subNom[p.sub] || "" };
+      const difV = p.pu ? precio_unitario / p.pu - 1 : 0, otraV = difV > 3 || difV < -0.75;
+      const dif = p.cu && costo ? costo / p.cu - 1 : null, otra = dif != null && (dif > 3 || dif < -0.75);
+      if (dif != null && !otra && Math.abs(dif) > 0.15 && avisos.length < 2)
+        avisos.push(`Costo ${(dif * 100).toFixed(0)}% contra "${p.id.slice(0, 50)}" (${Math.round(p.cu).toLocaleString("es-AR")} ${p.mon}, ${p.fe.split("-").reverse().join("-")}): explicar la diferencia rubro por rubro (P8)`);
+      return { id: p.id, fecha: p.fe, cliente: p.cl, descripcion: p.d, oferta: p.of, pu: p.pu, cu: p.cu, cnota: p.cno, moneda: p.mon, factor: p.fac, reparto: p.rep,
+        dif, otra, ojo: dif != null && !otra && Math.abs(dif) > 0.15, difV, otraV, razones, subtipo: T.subNom[p.sub] || "" };
     });
-    const avisos = filas.filter(f => f.ojo).slice(0, 2).map(f => `Precio ${(f.dif * 100).toFixed(0)}% contra "${f.id.slice(0, 50)}" (${Math.round(f.pu).toLocaleString("es-AR")} ${f.moneda}, ${f.fecha.split("-").reverse().join("-")}): explicar la diferencia rubro por rubro (P8)`);
-    if (filas.length && filas.every(f => f.otra)) avisos.push("Ningún antecedente de los 5 primeros es de la misma escala: comparar a mano");
+    if (filas.length && !filas.some(f => f.cu)) avisos.push("Ninguno de los 5 tiene costo por equipo en su ficha: la comparación es solo de precio de venta");
     if (!filas.length) avisos.push(`No hay antecedentes de la familia ${familia} con precio en el índice: comparar a mano`);
     if (q.subtipo && !res.slice(0, 5).some(r => r.p.sub === q.subtipo)) avisos.push(`Ninguno de los 5 es del mismo subtipo (${T.subNom[q.subtipo] || q.subtipo}): pedir a Claude que busque más antecedentes`);
-    return { familia, nombreFamilia: A.familias[familia] || familia, subtipo: q.subtipo, nombreSubtipo: T.subNom[q.subtipo] || "", consulta: q, filas, avisos };
+    return { familia, nombreFamilia: A.familias[familia] || familia, subtipo: q.subtipo, nombreSubtipo: T.subNom[q.subtipo] || "", consulta: q, filas, avisos, matN, moN };
   }
   return { comparar, buscar, palabras, etiquetas, clasificar: (pr, re, f, A) => clasificar(pr, re, f, A, tablas(A)) };
 })();

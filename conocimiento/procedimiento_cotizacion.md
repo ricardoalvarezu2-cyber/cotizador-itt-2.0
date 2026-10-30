@@ -44,7 +44,7 @@ Vigente desde el 27/10/2026. Se escribió a partir de los errores de la COT26-10
 
 **P7. Los números salen de la herramienta, no del chat.** Todo total que se informe sale de `herramientas/armar_cotizacion.py`, que arma la planilla y el informe desde `cotizacion.json`, recalcula el precio en Python y lo compara con la planilla recalculada con LibreOffice. Si no coinciden, frena. No se escriben en un mensaje cuentas hechas a mano.
 
-**P8. Contrastar con antecedentes.** Comparar con al menos dos cotizaciones parecidas (mismo cliente o mismo tipo de equipo) de `comercial/`. Si la diferencia es mayor al 15%, explicarla rubro por rubro **antes** de presentar el número.
+**P8. Contrastar con antecedentes.** Comparar con al menos dos cotizaciones parecidas (mismo cliente o mismo tipo de equipo) de `comercial/`, **costo contra costo** (Matías, 30-10-2026): `comparacion_antecedentes.md` muestra el costo por equipo y el reparto materiales / MO y servicios de cada antecedente que tiene planilla; el precio de venta queda solo como referencia. Si la diferencia es mayor al 15%, explicarla rubro por rubro **antes** de presentar el número.
 
 **P9. Control automático y revisión independiente.**
 1. Correr `python herramientas/armar_cotizacion.py <carpeta>` (incluye `verificar_computo.py`). Tiene que terminar sin errores. Los avisos se revisan uno por uno, también los de `verificacion_origen.md` (precios que no figuran tal cual en su documento de origen; solo avisa, no confirma nada).
