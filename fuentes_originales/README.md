@@ -21,6 +21,7 @@ Copias de las planillas y documentos de ITT a partir de los cuales se genera la 
 | `remitos_valorizados_2022-2023.xls` | Remitos valorizados por cliente |
 | `seguimiento_presupuestos_proyectos_2026-08.xlsx` | Seguimiento de presupuestos, proyectos y facturación |
 | `diagrama_proceso_2022-09.docx` | Diagrama del proceso comercial de ITT |
+| `ypf_lic66944_colectores_2da_entrega_2026-10.xlsx` | Planilla de costo "COMPRA 2da ENTREGA AM COLECTORES" (YPF Lic 66944, colectores manuales, armada por Ricardo Álvarez), pasada por Matías el 30-10-2026. Vale solo la hoja "Pie de Venta rev 2"; texto en `ofertas_texto/YPF/Lic 66944 - Colectores manuales 2da entrega/`; revisión en `conocimiento/auditorias/2026-10-30_YPF_Lic66944_colectores_2da_entrega.md` |
 
 ## Cotizaciones (carpeta Z:\VENTAS\OFERTAS Y LICITACIONES)
 

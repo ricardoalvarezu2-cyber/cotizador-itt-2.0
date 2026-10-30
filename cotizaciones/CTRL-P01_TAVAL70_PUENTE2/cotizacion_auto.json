@@ -147,14 +147,14 @@
    "especificacion": "Plano: 3\" · 600/80 · SA-105 · RF/BW",
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 52.21,
-     "proveedor": "Lista Renar · BRI-01260",
-     "codigo": "BRI-01260",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt",
-     "fecha": "2026-02-19",
+     "tipo": "cot",
+     "precio": 77.94,
+     "proveedor": "planilla de costo ITT (proveedor sin nombre) · BRI-01305",
+     "codigo": "BRI-01305",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
      "coincide": "similar",
-     "diferencia": "diametro: 2\" (pedido 3\"); material: A105 (no pedido); precio escalado por diámetro (3\" ÷ 2\")^1,5 = × 1,84"
+     "diferencia": "diametro: 4\" (pedido 3\"); material: A105 (no pedido); el último precio (56,37) se aparta más de 40% de la mediana de sus últimos precios: se usa la mediana 120,00; precio escalado por diámetro (3\" ÷ 4\")^1,5 = × 0,65"
     }
    ]
   },
@@ -456,12 +456,12 @@
    "especificacion": "Plano:  ·  ·  · ",
    "fuentes": [
     {
-     "tipo": "ant",
+     "tipo": "cot",
      "precio": 120.0,
-     "proveedor": "Weisz o similar · INS-02702",
-     "codigo": "INS-02702",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\PAMPA ENERGIA\\7- Licitacion contrato Marco Skid PAD Rincon de Aranda · 4.Armado de la Oferta Comercial/Cot Skid Manifolds Colectores RDA Contrato Marco (2da RDA).xlsx.",
-     "fecha": "2026-08-14",
+     "proveedor": "Weisz · INS-04947",
+     "codigo": "INS-04947",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
      "coincide": "similar",
      "diferencia": ""
     }

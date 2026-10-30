@@ -1,0 +1,148 @@
+{
+ "carpeta": "YPF/Lic 66944 - Colectores manuales 2da entrega",
+ "cliente": "YPF",
+ "cliente_final": "YPF (entrega en Rincón de Aranda, locación de Pampa Energía)",
+ "numero_oferta": null,
+ "revisiones": "Pie de Venta rev 2 (la única vigente; la hoja 'Pie de Venta' anterior y la hoja DISEÑO no valen)",
+ "fecha_oferta": null,
+ "fecha_ultima_modificacion": "2026-10-30",
+ "referencia_cliente": "Lic 66944 - CONTRATO MARCO - COLECTORES MANUALES - UP LL NORTE NOC (2da entrega, 2º semestre)",
+ "familia": "CO",
+ "descripcion_corta": "Colectores manuales de campo (4 tipos: 300 LB 4 y 6 pozos, 600 LB 6 pozos), 2da entrega de 35 equipos del contrato marco YPF Lic 66944. Costo con precios vigentes al 30-10-2026 confirmados por Matías",
+ "items": [
+  {
+   "descripcion": "SCC-500 COLECT.CAMP.CORR.MED 300 4PZ VCD16011GE* (SAP 1000652658)",
+   "cantidad": 27,
+   "unidad": "un",
+   "precio_unitario": 51899.34,
+   "precio_total": 1401282.16,
+   "moneda": "USD",
+   "datos_tecnicos": "Colector manual de campo 300 LB, 4 pozos, cabezal 8\" SCH 60, ramales 3\"/4\" SCH 80, A106 Gr.B / A234 WPB / A105; 30% RX; plano 2658"
+  },
+  {
+   "descripcion": "SCC-100 COLECT.CAMP.CORR.MED 300 6PZ VCD13001PE* (SAP 1000617955)",
+   "cantidad": 4,
+   "unidad": "un",
+   "precio_unitario": 63027.86,
+   "precio_total": 252111.45,
+   "moneda": "USD",
+   "datos_tecnicos": "Colector manual de campo 300 LB, 6 pozos, cabezal 8\" SCH 60, ramales 3\"/4\" SCH 80; 100% RX; plano YPF-GATH20STDCOLGRL-VCD21223-P-PL-020004 (7955)"
+  },
+  {
+   "descripcion": "SCC-700 COLECT.CAMP.CORR.MED 300 4PZ VCD16011GE* (SAP 1000653152)",
+   "cantidad": 2,
+   "unidad": "un",
+   "precio_unitario": 62427.66,
+   "precio_total": 124855.32,
+   "moneda": "USD",
+   "datos_tecnicos": "Colector manual de campo 300 LB, 4 pozos, cabezal 10\" SCH 60, ramales 4\" SCH 80; 30% RX; plano 3152"
+  },
+  {
+   "descripcion": "SCC-101X COLECT.CAMP.CORR.MED 600 6PZ VCD16011GE* (SAP 1000627487)",
+   "cantidad": 2,
+   "unidad": "un",
+   "precio_unitario": 75735.03,
+   "precio_total": 151470.07,
+   "moneda": "USD",
+   "datos_tecnicos": "Colector manual de campo 600 LB, 6 pozos, cabezal 8\" SCH 80, ramales 4\" SCH 80, bridas SW RTJ 1500 LB; 100% RX; plano 7487"
+  }
+ ],
+ "monto_total_ofertado": 1929719.0,
+ "moneda": "USD",
+ "costo_total": 1692424.19,
+ "factor_venta": 1.14,
+ "desglose_costo": {
+  "materiales": 909581.99,
+  "mano_obra": 43575.0,
+  "terceros": 686767.2,
+  "otros": 52500.0
+ },
+ "plazo_ofrecido": "90/110 días sujeto a la recepción de instrumentos. 130/150 días si no consideramos instrumentos.",
+ "plazo_dias": 110,
+ "condiciones": {
+  "pago": null,
+  "validez": null,
+  "entrega": "Rincón de Aranda, locación de PAMPA Energía (las hojas de cada colector dicen EXW Quilmes: vale el Resumen)",
+  "moneda_y_ajuste": "USD sin IVA",
+  "notas_y_exclusiones": [
+   "Factor (MU) 1,2 sobre materiales, instrumentos, MO de terceros y repuestos; 1,0 sobre válvulas Taval; 1,1 sobre transporte. Margen real 12,30% (la columna 'Margen de ganancia' del Resumen muestra 25,83–27,50%: quedó de la 1ª entrega con factor 1,5)",
+   "Incluye repuestos 2 años + precomisionado, comisionado y puesta en marcha (global USD 1.000 por equipo en 300 LB 4 pozos y 1.500 en 6 pozos)",
+   "Sin seguro de caución"
+  ]
+ },
+ "proveedores": [
+  {
+   "proveedor": "Ledesma",
+   "que": "MO de terceros: solo fabricación de colector (piping y skid), sin montaje/dimensional/desmontaje",
+   "precio": 15000,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-10-30"
+  },
+  {
+   "proveedor": "Taval",
+   "que": "Válvulas manuales (esféricas, retención a clapeta, globo) con precio Taval actualizado",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-10-30"
+  },
+  {
+   "proveedor": "Weisz",
+   "que": "Manómetro USD 120, termómetro 0-200 °C cuadrante 4\" USD 75, termovaina bridada USD 75",
+   "precio": null,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-10-30"
+  },
+  {
+   "proveedor": "Abac",
+   "que": "Válvula de bloqueo y purga",
+   "precio": 150,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-10-30"
+  },
+  {
+   "proveedor": "Transportista (sin nombre)",
+   "que": "Transporte a Neuquén, por equipo",
+   "precio": 1500,
+   "moneda": "USD",
+   "plazo_entrega": null,
+   "fecha": "2026-10-30"
+  }
+ ],
+ "resultado": "sin resultado",
+ "orden_compra": null,
+ "contactos": [
+  {
+   "nombre": "Ricardo Álvarez",
+   "empresa": "ITT",
+   "rol": "ITT",
+   "cargo": "Ventas (armó la planilla)",
+   "email": null,
+   "telefono": null
+  }
+ ],
+ "aprendizajes": [
+  "Costo por colector con precios al 30-10-2026: 300 LB 4 pozos 8\" (2658) USD 45.474,77; 300 LB 6 pozos (7955) 55.534,17; 300 LB 4 pozos 10\" (3152) 54.645,79; 600 LB 6 pozos (7487) 66.588,53",
+  "MO de terceros (Ledesma) USD 15.000 por colector, solo fabricación; montaje, dimensional y desmontaje con personal de ITT (90 h de planta + 5 h de ingeniería por equipo; no está confirmado que alcancen)",
+  "Los valores cargados a mano en el Resumen y en las filas 15-21 de cada hoja son los últimos negociados y mandan sobre el detalle de abajo (MO terceros 23.000-24.350 y transporte 2.500-3.000 del detalle quedaron viejos)",
+  "Válvulas Taval al costo (factor 1,0): pesan 25-35% del costo del colector; el margen total quedó en 12,30%, por debajo del 1,35 de referencia",
+  "Hay piezas con precios distintos entre hojas (caños 2\"-4\" en la hoja 7955 = precio × 1,3; sockolets USD 4-9; reducción excéntrica 4\"x2\" a precio de tee en la 7955): ver la revisión antes de reutilizarlos"
+ ],
+ "confianza": "alta",
+ "fuentes": {
+  "items": "4.Armado de la Oferta Comercial/COMPRA_2da_ENTREGA_AM_COLECTORES.xlsx.txt (hoja Pie de Venta rev 2)",
+  "costo_total": "4.Armado de la Oferta Comercial/COMPRA_2da_ENTREGA_AM_COLECTORES.xlsx.txt (hoja Pie de Venta rev 2, J8 / Resumen C63)",
+  "desglose_costo": "4.Armado de la Oferta Comercial/COMPRA_2da_ENTREGA_AM_COLECTORES.xlsx.txt (hojas COLECTOR 2658, 7955, 3152, 7487)",
+  "plazo_ofrecido": "4.Armado de la Oferta Comercial/COMPRA_2da_ENTREGA_AM_COLECTORES.xlsx.txt (hoja Resumen, A67)",
+  "original": "fuentes_originales/ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+  "revision": "conocimiento/auditorias/2026-10-30_YPF_Lic66944_colectores_2da_entrega.md"
+ },
+ "problemas": [
+  "No hay oferta enviada ni OC en el repositorio: es la planilla de costo y precio de venta",
+  "Desglose: materiales = piping (con 20% de contingencia), perfilería, válvulas, instrumentos y repuestos; mano de obra = horas de ITT; terceros = MO Ledesma, granallado y pintura y END; otros = transporte",
+  "Precios de algunas piezas distintos entre hojas (ver revisión)"
+ ]
+}

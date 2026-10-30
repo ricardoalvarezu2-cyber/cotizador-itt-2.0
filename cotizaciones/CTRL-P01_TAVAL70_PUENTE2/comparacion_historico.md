@@ -6,7 +6,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 | Pos | Pieza | Real (cant × unit = total) | Cotizador (cant × unit = total) | Dif. | Fuente del cotizador | Lectura |
 |---|---|---|---|---|---|---|
-| 1 | Brida WNRF 3" #600 sch 80 SA-105 | 2 × 19,78 = 39,56 | 2 un × 52,21 = 104,42 | +164% | ant · Lista Renar · BRI-01260 · 2026-02-19 | más caro (similar) |
+| 1 | Brida WNRF 3" #600 sch 80 SA-105 | 2 × 19,78 = 39,56 | 2 un × 77,94 = 155,88 | +294% | cot · planilla de costo ITT (proveedor sin nom · 2026-10-30 | más caro (similar) |
 | 2 | Caño S/C 3" sch 80 SA-106 Gr.B | 4 × 33,93 = 135,72 | 4 m × 30,30 = 121,20 | -11% | ant · no dice · CAN-02638 · 2025-12-10 | dentro de ±15% |
 | 3 | Tee reducción 3" x 2" sch 80 BW SA-234 WPB | 2 × 64,11 = 128,22 | 2 un × 64,11 = 128,22 | 0% | ant · Renard · ABW-00390 · 2026-08-14 | dentro de ±15% |
 | 4 | Brida WNRF 2" #600 sch 80 SA-105 | 48 × 19,42 = 932,16 | 48 un × 28,42 = 1.364,16 | +46% | ant · Lista Renar · BRI-01260 · 2026-02-19 | más caro (similar) |
@@ -21,7 +21,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 13 | Caño S/C 2" sch 80 SA-106 Gr.B | 24 × 16,62 = 398,88 | 24 m × 20,00 = 480,00 | +20% | ant · sin proveedor en planilla (columna PROVE · 2026-02-20 | más caro (similar) · real: la planilla dice 24 "un" a precio por metro de Renard |
 | 14 | Transmisor multivariable DP+P+T 266CSH + mani | 2 × 4.211,76 = 8.423,52 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo · real: la lista pide 1 computador; REV 0: 1 × 8.577,82 (XFC6200EX) |
 | 15 | Inyector de químicos | 2 × 2.100,00 = 4.200,00 | 2 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-10-30 | SIN PRECIO en el catálogo · real: la oferta lo EXCLUYE pero la planilla lo costea |
-| 16 | Manómetro | 2 × 120,00 = 240,00 | 2 un × 120,00 = 240,00 | 0% | ant · Weisz o similar · INS-02702 · 2026-08-14 | dentro de ±15% · real: REV 1 sin la válvula de bloqueo y purga (REV 0: 2 × 150 Abac) |
+| 16 | Manómetro | 2 × 120,00 = 240,00 | 2 un × 120,00 = 240,00 | 0% | cot · Weisz · INS-04947 · 2026-10-30 | dentro de ±15% · real: REV 1 sin la válvula de bloqueo y purga (REV 0: 2 × 150 Abac) |
 | 17 | Sensor RTD + termovaina (4) y transmisor de t | 4 × 1.090,50 = 4.362,00 | 4 un × 1.448,33 = 5.793,32 | +33% | ant · ABB · INS-02714 · 2026-08-14 | más caro (similar) · real: 2 × 689 (FQIT) + 2 × 689 (bypass) + 2 × 803 (TIT); REV 0: 4 × 1.176,57 |
 | 18 | Sockolet 1" 3000# SA-105 | 14 × 6,00 = 84,00 | 14 un × 24,00 = 336,00 | +300% | est · no dice · AFO-02394 · 2025-03-27 | más caro (similar) |
 | 19 | Junta espiralada 2" #600 316+grafito anillo i | 46 × 8,00 = 368,00 | 46 un × 6,06 = 278,76 | -24% | est · no dice · JUN-02770 · 2025-03-27 | más barato (similar) |
@@ -34,7 +34,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | X2 | Manifold de 5 vías | 698,00 | — | — | — | falta en el cotizador |
 | X3 | Botellones de purga tomas de presión | 900,00 | — | — | — | falta en el cotizador |
 
-**Materiales: real USD 54.743,60 · cotizador USD 26.459,72 (-52%).** 5 dentro de ±15%, 13 fuera, 6 sin precio.
+**Materiales: real USD 54.743,60 · cotizador USD 26.511,18 (-52%).** 5 dentro de ±15%, 13 fuera, 6 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -51,5 +51,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por puente
 
-Real USD 68.559,60 · cotizador USD 39.552,16 (-42%) antes de completar lo que el cotizador marca para revisar.
+Real USD 68.559,60 · cotizador USD 39.603,62 (-42%) antes de completar lo que el cotizador marca para revisar.
 

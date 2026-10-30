@@ -452,14 +452,14 @@
    "especificacion": "Plano: 3/4\" ·  · ASTM A-193 B7 / A-194 2H · ",
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 10.0,
-     "proveedor": "Bules o Versailles · JUN-04181",
-     "codigo": "JUN-04181",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt",
-     "fecha": "2026-02-19",
+     "tipo": "cot",
+     "precio": 4.0,
+     "proveedor": "planilla de costo ITT (proveedor sin nombre) · JUN-04956",
+     "codigo": "JUN-04956",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
      "coincide": "similar",
-     "diferencia": "medida: 3/4 x 4 7/8 (pedido 3/4 x 4 3/4)"
+     "diferencia": "serie: 300 (no pedido)"
     }
    ]
   },
@@ -513,13 +513,14 @@
    "especificacion": "Plano: 4\" · 300 · ASME B16.20 · ",
    "fuentes": [
     {
-     "tipo": "est",
-     "precio": 0,
-     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
-     "origen": "—",
+     "tipo": "cot",
+     "precio": 2.59,
+     "proveedor": "planilla de costo ITT (proveedor sin nombre) · JUN-04968",
+     "codigo": "JUN-04968",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
      "fecha": "2026-10-30",
-     "coincide": "sin_ref",
-     "diferencia": "El más parecido es de otro diámetro (10\") (JUN-04923 44 juntas espiraladas SWI AC 316LFG Ø10\" #300 (cot, USD 7,14): no sirve como precio"
+     "coincide": "similar",
+     "diferencia": "extremos: RF (no pedido)"
     }
    ]
   },
@@ -593,12 +594,12 @@
    "especificacion": "Plano: 1/2\" ·  ·  · NPT · TORMENE",
    "fuentes": [
     {
-     "tipo": "ant",
+     "tipo": "cot",
      "precio": 120.0,
-     "proveedor": "Weisz o similar · INS-02702",
-     "codigo": "INS-02702",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\PAMPA ENERGIA\\7- Licitacion contrato Marco Skid PAD Rincon de Aranda · 4.Armado de la Oferta Comercial/Cot Skid Manifolds Colectores RDA Contrato Marco (2da RDA).xlsx.",
-     "fecha": "2026-08-14",
+     "proveedor": "Weisz · INS-04947",
+     "codigo": "INS-04947",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
      "coincide": "similar",
      "diferencia": "rango: sin dato (pedido 0-2 bar)"
     }
@@ -654,16 +655,17 @@
    "especificacion": "Plano: 1/2\" · 2000 · ASTM A-105 · SW/NPT",
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 33.81,
-     "proveedor": "sin proveedor en planilla (columna PROVEEDOR vacía) · VAL-04223",
-     "codigo": "VAL-04223",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · 4.Armado de la Oferta Comercial/LM-TANQUE GLICOL.xlsx",
-     "fecha": "2026-02-20",
+     "tipo": "cot",
+     "precio": 33.75,
+     "proveedor": "Taval · VAL-04990",
+     "codigo": "VAL-04990",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
      "coincide": "similar",
-     "diferencia": "extremos: NPT (pedido NPT/SW); paso: reducido (no pedido)"
+     "diferencia": "extremos: NPT (pedido NPT/SW)"
     }
-   ]
+   ],
+   "taval": true
   },
   {
    "id": "M25",
