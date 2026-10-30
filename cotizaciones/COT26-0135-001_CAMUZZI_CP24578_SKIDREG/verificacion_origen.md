@@ -10,7 +10,7 @@ Generado por `herramientas/verificar_origen.py`. Solo avisa cuando el precio NO 
 
 ## No controlados
 
-- estimado o sin precio: 18
-- precio calculado (lista × factor): 3
-- el documento no está como texto en el repositorio: 2
+- estimado o sin precio: 23
+- el documento no está como texto en el repositorio: 5
+- precio calculado (lista × factor): 1
 - convertido de pesos: 1

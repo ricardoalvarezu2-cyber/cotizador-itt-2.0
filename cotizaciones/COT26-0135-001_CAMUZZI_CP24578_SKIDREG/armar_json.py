@@ -157,7 +157,7 @@ poner("A", [fuente("cot", 1478.0 + 80.0, "Induquip (Emerson) cot. 26-523-RSDGVM-
                    "Yokogawa (listado), rango a confirmar; plazo 140 días (por eso no es la base)")])
 poner("B", [fuente("cot", round(829.04 + 309.936, 2), "Induquip (Emerson) cot. 26-523-RSDGVM-RSMT: transmisor Rosemount 644HAE7J6M5Q4 USD 829,04 + "
                    "sensor RTD 214C PT100 USD 309,94 (la termovaina es la pos 18)", LACH + "Oferta Induquip 26-333-RSDGVM-USM.pdf.txt", "2026-07-17",
-                   "similar", "rango 0-100 °C a configurar; el sensor 214C cotizado va armado a la termovaina bridada C-276 de Induquip (opción XW): pedirlo para la termovaina 3/4\" NPT de la pos 18; Rosemount está en el listado", validez_hasta="2026-08-16")])
+                   "similar", "rango 0-100 °C a configurar; el sensor 214C cotizado se cotizó armado a la termovaina de C-276 de esa misma oferta (opción XW, otra conexión a proceso): pedirlo para la termovaina 3/4\" NPT de la pos 18; Rosemount está en el listado", validez_hasta="2026-08-16")])
 poner("C", [SIN("switch de fin de carrera de la monitora (0-24 V): pedir con las reguladoras (Tormene ofrece indicador de posición; confirmar si trae contacto)")])
 
 # ---------------------------------------------------------------- filas que agrega ITT (no están en la tabla del plano)

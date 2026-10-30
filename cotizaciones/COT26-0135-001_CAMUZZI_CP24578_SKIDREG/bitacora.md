@@ -101,3 +101,21 @@ Antes: unitario USD 31.965,44, total USD 32.569,56. Después: **unitario USD 37.
 
 ### Frenos que quedan (las ofertas no se generan)
 requisitos (4 consultas), sin_precio (pos 1, 2, 2b, 7b, 14, 18, C), estimado 27% (horas, espárragos, pos 15/16), vencidas (24: listas Renard 12-2025 y Taval 09-2025, cotizaciones de 07-2026 y Provemet 07-2025: reconfirmar), pendientes de la oferta (número de PRES y teléfonos), antecedentes (sin costo comparable). No se escribió ninguna justificación para levantarlos.
+
+## 30-10-2026 · Hallazgos de la auditoría independiente de la revisión
+Antes: unitario USD 37.730,89, total USD 38.335,01. Después: **unitario USD 38.778,26, total USD 39.382,38** (borrador, sin revisar; siguen en 0 las pos 1, 2, 2b, 7b, 14, 18 y C). Cada hallazgo se verificó contra el original:
+1. **Real.** Pos 9 (te 6" ASTM A-105): las tes B16.9 a tope se fabrican en A234 WPB; precio de WPB y compra de Curvo Sold sin declararlo. Ahora es la consulta R83 (consulta 5 en `consultas_cliente.md`).
+2. **Real** (hoja 2 del PDF del listado SCE-IN-501-0015, celdas combinadas). Accesorios para soldar: solo CURVO SOLD (TDW es de perforar y obturar). Bridas: solo Futura y Francovigh (CH es de threadolet y socketweld). Delgado es de espárragos, no de juntas. Se corrigió `compras.proveedores`. Pos 9, 10 y 11 pasan a la lista 29.1 de Cintolo (Curvo Sold, 17-02-2025): te 6" 129,55, te 8"x6" 351,50 y reducción 6"x3" 69,19; Renard queda como alternativa. Los casquetes 12 y 13 pasan a estimado, porque Cintolo no los lista.
+3. **Real.** El rótulo del plano dice REV. N° A; el nombre del archivo, "-0". Corregido en la oferta, el informe, las consultas y la bitácora, y la oferta aclara que se cotiza sobre la rev A.
+4. **Real.** El CGP 13.1 da 18 meses desde la entrega y la ET 9 puede quedar por debajo. La garantía ahora toma el plazo mayor de los dos, más la responsabilidad por vicios ocultos (se reescribe en `armar_json.py`; `camuzzi_comun.py` no cambió). Se corrigió la referencia de R26.
+5. **Real.** M03 y M04 (Taval: fuera del listado y sin ensayo) pasan a estimado. M19 pasa a estimado sobre Weisz 16-07-2026 (manómetro clase 1, certificado, bloqueo y purga AISI 316), con CAMUZZI/14 (manifold zincado 136 + manómetro 65, 2022) y la referencia anterior como alternativas.
+6. **Real.** La oferta afirmaba que estaban incluidos los sensores A, B y C, "todos los materiales del plano" y el tubing, que valen 0. Se sacaron esas afirmaciones.
+7. **Real.** M23 y M23B citaban la planilla Tecpetrol/13; el origen es Renard cód. 1174 (168,3 × 10,97 mm, USD 90,70, lista 26-12-2025). Corregido; como lista de más de 180 días, ahora entra entre las vencidas.
+8. **Real.** M15 pasa de "igual" a "similar".
+9. **Real en parte.** M25 ya decía rango 2 contra rango 3. En M26 se agregó que el sensor 214C se cotizó armado a otra termovaina de Induquip (opción XW).
+10. **Rechazado.** CAMUZZI/14 no tiene horas: trae montos globales de 2022 (MO de cañerías 2.780 y de skid 420, RX 2.500) de un salto 4" con mariposas 10". No sirve para reemplazar las horas de ingeniería, calidad y montaje, que siguen estimadas de Sacde/15. Queda como pendiente para Matías.
+11. **Real.** Se agregaron R81 (revisión vigente al recibir la nota de pedido), R82 (puntos de espera de la inspección) y R84 (vicios ocultos). R33 (descargar los documentos de Camuzzi) pasa a "pendiente_itt".
+
+**Error propio durante la corrección:** el generador de la matriz estaba en una ruta compartida del área de trabajo (`scratchpad/req.py`) y otro agente lo pisó con el suyo. Una corrida volcó en `pedido/requisitos.csv` la matriz del separador (148 requisitos). Se rehízo desde cero (84 requisitos) con un generador en una carpeta propia.
+
+Frenos: requisitos (4 consultas y R33 pendiente de ITT), sin_precio (7), estimado 35%, vencidas (22), pendientes de la oferta y antecedentes. No se escribió ninguna justificación.
