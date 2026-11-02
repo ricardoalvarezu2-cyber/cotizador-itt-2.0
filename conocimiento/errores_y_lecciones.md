@@ -313,3 +313,8 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 - Qué pasó: Matías vio en Resumen "Las ofertas no se generan (5 frenos)" con textos técnicos (R017, M14b, "destino cerrado") y no podía descargar ni aprobar. Además "Claude ↗" abría una ventana chica que claude.ai rechazaba (ERR_BLOCKED_BY_RESPONSE).
 - Corrección: los frenos pasan a ser avisos en criollo ("Para revisar antes de enviar al cliente", detalle aparte), las ofertas se generan siempre y los cambios de estado no tienen restricción (página y Python). El botón abre una pestaña común; "Chat nuevo" muestra un enlace cuando la sesión está lista.
 - Lección: un control tiene que ayudar al usuario, no bloquearlo con textos internos. Lo que ve el usuario va en su idioma (qué falta, no el código del control) y la decisión final es de la persona. Y lo que la página abre afuera (claude.ai) hay que probarlo en el navegador real: no se puede probar desde el entorno de Claude.
+
+## 02-11-2026 — La tarea semanal falló en "motor JS distinto de Python" por datos de la página viejos
+- Qué pasó: `actualizar_base.py` cerró el dólar BNA de octubre (1.542,67 → 1.543,23) y el control comparó el motor de la página, que lee `web/datos.json` (todavía con el dólar viejo), contra Python, que ya usaba el nuevo. La YPF SKID713 dio unos USD 15 de diferencia en el costo y el control falló.
+- Corrección: `python web/construir_datos.py` y volver a correr `actualizar_base.py` (TODO OK). Anotado en el paso 1 de la tarea semanal (`web/LEEME.md`).
+- Prevención: pendiente que `actualizar_base.py` regenere `web/datos.json` antes del control del motor, así no depende del orden.

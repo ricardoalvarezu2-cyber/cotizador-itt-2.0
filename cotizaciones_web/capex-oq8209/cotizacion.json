@@ -2,56 +2,56 @@
  "antecedentes": [
   {
    "carpeta_html": "<b>TAVAL/55</b> · PRES 24879 rev A (Tecpetrol)",
-   "fecha": "22/04/2026",
+   "fecha": "22-04-2026",
    "precio": "costo 6.015",
    "que": "Puente de producción convencional para bombeo mecánico, planilla de costo completa",
    "tomado_html": "<b>Modelo de la estructura de costo:</b> armado Ledesma 400, pintura 100, niples, bloqueo y purga ABAC 137. Factor 1,35 sobre todo el puente, incluida la MO de Ledesma (el 1,40 se aplicó solo a la MO vendida aparte)"
   },
   {
    "carpeta_html": "<b>APSA/15</b> · Capsa Capex, puentes AIB (OR 33661)",
-   "fecha": "10–11/06/2026",
+   "fecha": "10–11-06-2026",
    "precio": "≈ 6.729",
    "que": "7 puentes de producción con AIB para el mismo cliente. Ofertado USD 47.102,49, sin resultado",
    "tomado_html": "Esféricas Indave, retención Ingeniería en Fluidos, uniones Adita, Danco, flete a Comodoro"
   },
   {
    "carpeta_html": "<b>APSA/8</b> · OE 332-24 (Carlos Perea)",
-   "fecha": "05/11/2024",
+   "fecha": "05-11-2024",
    "precio": "6.200",
    "que": "5 puentes armados para bomba electrosumergible serie 1500 (doc. …-P-002 rev B)",
    "tomado_html": "Condiciones: contado contra entrega, 45/60 días, entrega en planta ITT, validez 30 días"
   },
   {
    "carpeta_html": "<b>APSA/3</b> · OE 150-22, planilla \"Puente Producción 1500\"",
-   "fecha": "25/08/2022",
+   "fecha": "25-08-2022",
    "precio": "5.935",
    "que": "5 puentes de producción serie 1500, costo 3.957 con factor 1,5",
    "tomado_html": "Control de alcance: lleva soportes UPN, pintura 450 y MO 550"
   },
   {
    "carpeta_html": "<b>APSA/12</b> · Puente A° C° para YPF",
-   "fecha": "13/05/2026",
+   "fecha": "13-05-2026",
    "precio": "—",
    "que": "Cotización Duralitte P_16838",
    "tomado_html": "Junta monolítica 2\" a USD 315"
   },
   {
    "carpeta_html": "<b>TAVAL/51</b> · CGC puentes S2000",
-   "fecha": "07/04/2026",
+   "fecha": "07-04-2026",
    "precio": "380 (MO)",
    "que": "Armado y sellado de puente roscado, J. Quesada (JQ-016-2026)",
    "tomado_html": "Alternativa de armado"
   },
   {
    "carpeta_html": "<b>TAVAL/26</b> · CAPSA OQ32673 puente AIB · Ledesma ppto 20099",
-   "fecha": "24/09/2025",
+   "fecha": "24-09-2025",
    "precio": "1.800 (MO)",
    "que": "Cuadro de puente CBM roscado: MO, corte de caño y armado. ITT pone materiales y roscas",
    "tomado_html": "Alternativa de armado (alcance mayor)"
   },
   {
    "carpeta_html": "<b>APSA/9</b> · Danco puente de producción AIB",
-   "fecha": "05/02/2026",
+   "fecha": "05-02-2026",
    "precio": "costo 3.665",
    "que": "Puente completo tercerizado, armado, probado y pintado, 45 días",
    "tomado_html": "Referencia para tercerizar el puente completo"
@@ -212,7 +212,7 @@
   },
   {
    "tag": "Fecha",
-   "texto": "La fecha de necesidad del 09/11/2026 no se puede cumplir y la respuesta se presenta después del 22/10/2026. Hay que decirlo en la oferta.",
+   "texto": "La fecha de necesidad del 09-11-2026 no se puede cumplir y la respuesta se presenta después del 22-10-2026. Hay que decirlo en la oferta.",
    "titulo": "Plazo de 75 días desde la OC y oferta fuera de término"
   },
   {
@@ -232,12 +232,196 @@
  },
  "estado": "borrador",
  "fecha": "2026-10-27",
+ "ficha": {
+  "end": {
+   "espesor_max_mm": 7.01,
+   "juntas_bw": 4,
+   "juntas_lp": 2,
+   "materiales": [
+    "API 5L",
+    "API 5L revestido polipropileno",
+    "ASTM A-234 Gr. WPB"
+   ],
+   "placas_chicas": 0,
+   "placas_grandes": 0,
+   "procedimientos": [
+    "WPS/PQR de soldadura a tope para API 5L, API 5L revestido polipropileno, ASTM A-234 Gr. WPB hasta 7,01 mm de espesor",
+    "Calificación de soldadores (WPQ) para esos WPS",
+    "Procedimiento de RX y de LP (escrito, nivel 3 ISO 9712)",
+    "Confirmar con el pliego: si exige procedimientos nuevos o alcanzan los vigentes de ITT"
+   ],
+   "rx_pct": 0
+  },
+  "generada": "2026-10-30",
+  "horas": {},
+  "mo_estructura": {
+   "kg": 0,
+   "m2": 0
+  },
+  "mo_piping": {
+   "aproximados": [
+    "7 Válvula de retención 2\" #600 a clapeta",
+    "13 Junta monolítica 2\" sch80 WPB BW"
+   ],
+   "avisos": [],
+   "bridas": 0,
+   "diametros": [
+    2.5,
+    2,
+    0.5
+   ],
+   "extremos_campo": 4,
+   "juntas_bw": 4,
+   "juntas_sw_olet": 2,
+   "kg_piping": 125.6,
+   "pulg_eq": 13.366,
+   "sin_peso": [
+    "6 Unión doble a golpe 2\" 2000",
+    "10 Buje reducción 2\" × 1/2\" NPT",
+    "14b Sobrante de caño revestido (no va en el ",
+    "21 Unión doble a golpe extensible 2\""
+   ]
+  },
+  "ph": {
+   "litros": 3.6
+  },
+  "pintura": {
+   "esquema": "",
+   "m2_canos": 1.32,
+   "m2_estructura": 0,
+   "m2_piping": 1.85,
+   "m2_total": 1.85
+  },
+  "procedimientos": {
+   "cantidad": 7,
+   "lista": [
+    {
+     "alcance": "hasta 7,01 mm de espesor",
+     "cantidad": 1,
+     "codigo": "WPS-BW",
+     "nombre": "WPS/PQR de soldadura a tope, acero al carbono",
+     "tipo": "soldadura"
+    },
+    {
+     "alcance": "",
+     "cantidad": 1,
+     "codigo": "WPS-SW",
+     "nombre": "WPS/PQR de soldadura socket y filete, acero al carbono",
+     "tipo": "soldadura"
+    },
+    {
+     "alcance": "una por WPS y soldador asignado",
+     "cantidad": 2,
+     "codigo": "WPQ",
+     "nombre": "Calificación de soldadores (WPQ)",
+     "tipo": "soldadura"
+    },
+    {
+     "alcance": "",
+     "cantidad": 1,
+     "codigo": "END-LP",
+     "nombre": "Procedimiento de líquidos penetrantes (nivel 3, ISO 9712)",
+     "tipo": "end"
+    },
+    {
+     "alcance": "",
+     "cantidad": 1,
+     "codigo": "PH",
+     "nombre": "Procedimiento de prueba hidráulica",
+     "tipo": "calidad"
+    },
+    {
+     "alcance": "esquema del pliego",
+     "cantidad": 1,
+     "codigo": "PIN",
+     "nombre": "Procedimiento de granallado y pintura",
+     "tipo": "calidad"
+    }
+   ]
+  },
+  "referencias": {
+   "end": {
+    "detallado_usd": 0,
+    "global_usd": null,
+    "modo": "detallado",
+    "renglones_detalle": 0
+   },
+   "horas": {
+    "detallado_usd": 0,
+    "global_usd": null,
+    "modo": "detallado",
+    "renglones_detalle": 1
+   },
+   "mo_estructura": {
+    "detallado_usd": 0,
+    "global_usd": null,
+    "modo": "detallado",
+    "renglones_detalle": 0
+   },
+   "mo_piping": {
+    "detallado_usd": 711.22,
+    "global_usd": null,
+    "modo": "detallado",
+    "renglones_detalle": 2
+   },
+   "ph": {
+    "detallado_usd": 118.11,
+    "global_usd": null,
+    "modo": "detallado",
+    "renglones_detalle": 1
+   },
+   "pintura": {
+    "detallado_usd": 104.62,
+    "global_usd": null,
+    "modo": "detallado",
+    "renglones_detalle": 1
+   },
+   "procedimientos": {
+    "detallado_usd": 0,
+    "global_usd": null,
+    "modo": "detallado",
+    "renglones_detalle": 0
+   },
+   "transporte": {
+    "detallado_usd": 0,
+    "global_usd": null,
+    "modo": "detallado",
+    "renglones_detalle": 0
+   }
+  },
+  "transporte": {
+   "alto_m": 0,
+   "ancho_m": 0,
+   "avisos": [
+    "Faltan las medidas del equipo (largo × ancho × alto): cargarlas del plano de conjunto"
+   ],
+   "destino": "",
+   "kg_equipo": 125.6,
+   "largo_m": 0,
+   "por_camion": null,
+   "viajes": null
+  }
+ },
  "firmante_id": "matias-russo",
  "flete": {
   "criterio_html": "Los antecedentes con CAPEX (OE 150-22 y OE 332-24) se ofrecieron con entrega en planta ITT. Si CAPEX pide entrega en Pampa del Castillo, conviene cotizar el flete como ítem aparte, actualizado al tipo de cambio del día. El presupuesto del transportista tiene más de 4 meses: hay que volver a pedirlo.",
   "etiqueta": "Flete a Comodoro",
   "referencia_html": "Referencia: WhatsApp con Fernando Transporte (carpeta APSA/15 \"Cot ETFA Logística BAI-CRD\", jun-2026). Carga seca parcial en Sprinter de Buenos Aires a Comodoro Rivadavia, 2 bultos de 1,5×1×1,1 m y 1.200 kg en total: <b class=\"mono\">ARS 3.500.000</b>. Dos puentes entran en la misma Sprinter."
  },
+ "frenos_repo": [
+  {
+   "clave": "computo",
+   "texto": "verificar_computo.py da errores: corregirlos antes de generar ofertas"
+  },
+  {
+   "clave": "requisitos",
+   "texto": "3 requisito(s) sin destino cerrado: R05: consulta al cliente sin respuesta; R09: consulta al cliente sin respuesta; R14: consulta al cliente sin respuesta"
+  },
+  {
+   "clave": "antecedentes",
+   "texto": "el costo difiere +201% del antecedente más parecido con costo (TAVAL/26- CAPSA Cotización OQ32673 Puente AIB): explicarlo rubro por rubro en justificaciones.antecedentes"
+  }
+ ],
  "historial_html": [
   "<b>Revisión independiente (27/10):</b> encontró 3 problemas críticos. 1) El plazo real es 75 días, no 60: el taller no puede arrancar antes de que lleguen las esféricas. 2) Las esféricas no tienen cotización metal-metal enteriza: el +30% era un supuesto. 3) La retención cotizada es trim 8, no AISI 316. También encontró el manómetro NPT-H mal transcripto, la extensible sin sello metal-metal, la junta BW/NPT, el buje BSPT, el revestimiento de las juntas sin costear y cotizaciones vencidas. Los precios sin respaldo pasaron a \"estimado\" (~33% del costo). <b>No pasa a \"revisado\"</b> hasta que Compras traiga los precios.",
   "<b>Armado:</b> en el borrador usé Ledesma USD 1.800 (sep-2025, cuadro CBM con corte de caño). Lo más reciente para un puente equivalente es Ledesma <b>USD 400</b> en la PRES 24879 (Tecpetrol, abr-2026). Las dos opciones quedan para elegir en la fila de armado.",
@@ -247,13 +431,375 @@
   "<b>Factores:</b> ahora son dos: materiales, y mano de obra y servicios. Los dos van en 1,35 como en la PRES 24879, donde la MO de Ledesma dentro del puente entró a 1,35. El 1,40 quedaba para MO vendida sola.",
   "<b>Ajuste por inflación (27/10):</b> cada precio se actualiza desde su fecha hasta hoy. Los materiales siguen el CPI de EE.UU. y la mano de obra y los servicios, el IPC del INDEC dividido por el dólar BNA. Suma +3,3% al costo.",
   "<b>Revisión contra el plano (27/10):</b> el caño 14 pasa a 1,9 m más el sobrante de la tira en una fila aparte. El manómetro tiene que tener conexión 1/2\" (el de stock es 1/4\"). Se suman las 2 soldaduras de las cuplas 23. Se completaron extremos y materiales de cada posición.",
-  "<b>Accesorios forjados:</b> ahora salen de la lista Renard (dic-2025), con su código. En el borrador estaban estimados."
+  "<b>Accesorios forjados:</b> ahora salen de la lista Renard (dic-2025), con su código. En el borrador estaban estimados.",
+  "<b>28-10-2026:</b> manga termocontraíble (35), sellador (15) e ingeniería/dossier (100) estaban supuestos sin referencia: pasan a SIN PRECIO, pedir cotización (regla P4 ter de Matías)."
  ],
+ "huella_repo": "a15fb59f90315f0a",
+ "indices_congelados": {
+  "fecha": "2026-10-28",
+  "filas": [
+   {
+    "cpi": 98.121,
+    "dolar": 837.4,
+    "ipc": 58.263,
+    "local": 69.64,
+    "mes": "2024-01",
+    "oc": "dato: BLS mensual 2024: feb 0,4%, mar 0,4%, abr 0,3%, may 0,0%, jun -0,1%, jul 0,2%",
+    "od": "dato: promedio BNA billete vendedor (31 días, último 2024-01-31)",
+    "oi": "dato: INDEC mensual 2024: feb 13,2%, mar 11,0%, abr 8,8%, may 4,2%, jun 4,6%, jul 4,0%"
+   },
+   {
+    "cpi": 98.317,
+    "dolar": 853.02,
+    "ipc": 65.953,
+    "local": 77.389,
+    "mes": "2024-02",
+    "oc": "interpolado",
+    "od": "dato: promedio BNA billete vendedor (29 días, último 2024-02-29)",
+    "oi": "dato: INDEC mensual 2024"
+   },
+   {
+    "cpi": 98.514,
+    "dolar": 869.55,
+    "ipc": 73.208,
+    "local": 84.268,
+    "mes": "2024-03",
+    "oc": "interpolado",
+    "od": "dato: promedio BNA billete vendedor (31 días, último 2024-03-31)",
+    "oi": "dato: INDEC mensual 2024"
+   },
+   {
+    "cpi": 98.71,
+    "dolar": 887.07,
+    "ipc": 79.651,
+    "local": 89.873,
+    "mes": "2024-04",
+    "oc": "interpolado",
+    "od": "dato: promedio BNA billete vendedor (30 días, último 2024-04-30)",
+    "oi": "dato: INDEC mensual 2024"
+   },
+   {
+    "cpi": 98.908,
+    "dolar": 904.79,
+    "ipc": 82.996,
+    "local": 91.814,
+    "mes": "2024-05",
+    "oc": "interpolado",
+    "od": "dato: promedio BNA billete vendedor (31 días, último 2024-05-31)",
+    "oi": "dato: INDEC mensual 2024"
+   },
+   {
+    "cpi": 99.105,
+    "dolar": 922.38,
+    "ipc": 86.814,
+    "local": 94.206,
+    "mes": "2024-06",
+    "oc": "interpolado",
+    "od": "dato: promedio BNA billete vendedor (30 días, último 2024-06-30)",
+    "oi": "dato: INDEC mensual 2024"
+   },
+   {
+    "cpi": 99.303,
+    "dolar": 941.73,
+    "ipc": 90.286,
+    "local": 95.961,
+    "mes": "2024-07",
+    "oc": "dato: BLS: ~0,2%-0,3% mensual ago-oct 2024",
+    "od": "dato: promedio BNA billete vendedor (31 días, último 2024-07-31)",
+    "oi": "dato: INDEC: ago-24 4,2%, sep-24 3,5%, oct-24 2,7% mensual"
+   },
+   {
+    "cpi": 99.535,
+    "dolar": 961.21,
+    "ipc": 93.415,
+    "local": 97.274,
+    "mes": "2024-08",
+    "oc": "interpolado",
+    "od": "dato: promedio BNA billete vendedor (31 días, último 2024-08-31)",
+    "oi": "interpolado"
+   },
+   {
+    "cpi": 99.767,
+    "dolar": 981.27,
+    "ipc": 96.651,
+    "local": 98.587,
+    "mes": "2024-09",
+    "oc": "interpolado",
+    "od": "dato: promedio BNA billete vendedor (30 días, último 2024-09-30)",
+    "oi": "interpolado"
+   },
+   {
+    "cpi": 100,
+    "dolar": 1000.92,
+    "ipc": 100,
+    "local": 100,
+    "mes": "2024-10",
+    "oc": "dato: Base",
+    "od": "dato: promedio BNA billete vendedor (31 días, último 2024-10-31)",
+    "oi": "dato: Base"
+   },
+   {
+    "cpi": 100.247,
+    "dolar": 1020.92,
+    "ipc": 102.295,
+    "local": 100.291,
+    "mes": "2024-11",
+    "oc": "interpolado",
+    "od": "dato: promedio BNA billete vendedor (30 días, último 2024-11-30)",
+    "oi": "interpolado"
+   },
+   {
+    "cpi": 100.494,
+    "dolar": 1041.55,
+    "ipc": 104.643,
+    "local": 100.561,
+    "mes": "2024-12",
+    "oc": "interpolado",
+    "od": "dato: promedio BNA billete vendedor (31 días, último 2024-12-31)",
+    "oi": "interpolado"
+   },
+   {
+    "cpi": 100.742,
+    "dolar": 1062.48,
+    "ipc": 107.045,
+    "local": 100.843,
+    "mes": "2025-01",
+    "oc": "interpolado",
+    "od": "dato: promedio BNA billete vendedor (31 días, último 2025-01-31)",
+    "oi": "interpolado"
+   },
+   {
+    "cpi": 100.99,
+    "dolar": 1077.76,
+    "ipc": 109.502,
+    "local": 101.695,
+    "mes": "2025-02",
+    "oc": "interpolado",
+    "od": "dato: promedio BNA billete vendedor (28 días, último 2025-02-28)",
+    "oi": "interpolado"
+   },
+   {
+    "cpi": 101.239,
+    "dolar": 1088.38,
+    "ipc": 112.015,
+    "local": 103.014,
+    "mes": "2025-03",
+    "oc": "interpolado",
+    "od": "dato: promedio BNA billete vendedor (31 días, último 2025-03-31)",
+    "oi": "interpolado"
+   },
+   {
+    "cpi": 101.489,
+    "dolar": 1140.9,
+    "ipc": 114.586,
+    "local": 100.527,
+    "mes": "2025-04",
+    "oc": "interpolado",
+    "od": "dato: promedio BNA billete vendedor (30 días, último 2025-04-30)",
+    "oi": "interpolado"
+   },
+   {
+    "cpi": 101.739,
+    "dolar": 1166.29,
+    "ipc": 117.216,
+    "local": 100.596,
+    "mes": "2025-05",
+    "oc": "interpolado",
+    "od": "dato: promedio BNA billete vendedor (31 días, último 2025-05-31)",
+    "oi": "interpolado"
+   },
+   {
+    "cpi": 101.99,
+    "dolar": 1196.17,
+    "ipc": 119.907,
+    "local": 100.334,
+    "mes": "2025-06",
+    "oc": "interpolado",
+    "od": "dato: promedio BNA billete vendedor (30 días, último 2025-06-30)",
+    "oi": "interpolado"
+   },
+   {
+    "cpi": 102.242,
+    "dolar": 1284.03,
+    "ipc": 122.659,
+    "local": 95.614,
+    "mes": "2025-07",
+    "oc": "interpolado",
+    "od": "dato: promedio BNA billete vendedor (31 días, último 2025-07-31)",
+    "oi": "interpolado"
+   },
+   {
+    "cpi": 102.494,
+    "dolar": 1340.65,
+    "ipc": 125.474,
+    "local": 93.678,
+    "mes": "2025-08",
+    "oc": "interpolado",
+    "od": "dato: promedio BNA billete vendedor (31 días, último 2025-08-31)",
+    "oi": "interpolado"
+   },
+   {
+    "cpi": 102.747,
+    "dolar": 1420.5,
+    "ipc": 128.354,
+    "local": 90.441,
+    "mes": "2025-09",
+    "oc": "dato: BLS: ~3,0% interanual a sep-2025",
+    "od": "dato: promedio BNA billete vendedor (30 días, último 2025-09-30)",
+    "oi": "interpolado"
+   },
+   {
+    "cpi": 103.058,
+    "dolar": 1463.39,
+    "ipc": 131.3,
+    "local": 89.806,
+    "mes": "2025-10",
+    "oc": "interpolado",
+    "od": "dato: promedio BNA billete vendedor (31 días, último 2025-10-31)",
+    "oi": "dato: INDEC: 31,3% interanual a oct-2025 (12/11/2025)"
+   },
+   {
+    "cpi": 103.371,
+    "dolar": 1453.67,
+    "ipc": 134.857,
+    "local": 92.856,
+    "mes": "2025-11",
+    "oc": "interpolado",
+    "od": "dato: promedio BNA billete vendedor (30 días, último 2025-11-30)",
+    "oi": "interpolado"
+   },
+   {
+    "cpi": 103.684,
+    "dolar": 1471.13,
+    "ipc": 138.511,
+    "local": 94.24,
+    "mes": "2025-12",
+    "oc": "interpolado",
+    "od": "dato: promedio BNA billete vendedor (31 días, último 2025-12-31)",
+    "oi": "dato: Derivado: acumulado ene-sep 2026 23,6% (INDEC 13/10/2026)"
+   },
+   {
+    "cpi": 103.998,
+    "dolar": 1472.74,
+    "ipc": 141.812,
+    "local": 96.38,
+    "mes": "2026-01",
+    "oc": "interpolado",
+    "od": "dato: promedio BNA billete vendedor (31 días, último 2026-01-31)",
+    "oi": "interpolado"
+   },
+   {
+    "cpi": 104.314,
+    "dolar": 1426.96,
+    "ipc": 145.192,
+    "local": 101.843,
+    "mes": "2026-02",
+    "oc": "interpolado",
+    "od": "dato: promedio BNA billete vendedor (28 días, último 2026-02-28)",
+    "oi": "interpolado"
+   },
+   {
+    "cpi": 104.63,
+    "dolar": 1416.29,
+    "ipc": 148.652,
+    "local": 105.056,
+    "mes": "2026-03",
+    "oc": "interpolado",
+    "od": "dato: promedio BNA billete vendedor (31 días, último 2026-03-31)",
+    "oi": "interpolado"
+   },
+   {
+    "cpi": 104.947,
+    "dolar": 1406.17,
+    "ipc": 152.195,
+    "local": 108.333,
+    "mes": "2026-04",
+    "oc": "interpolado",
+    "od": "dato: promedio BNA billete vendedor (30 días, último 2026-04-30)",
+    "oi": "interpolado"
+   },
+   {
+    "cpi": 105.266,
+    "dolar": 1420.16,
+    "ipc": 155.822,
+    "local": 109.823,
+    "mes": "2026-05",
+    "oc": "interpolado",
+    "od": "dato: promedio BNA billete vendedor (31 días, último 2026-05-31)",
+    "oi": "interpolado"
+   },
+   {
+    "cpi": 105.585,
+    "dolar": 1469.63,
+    "ipc": 159.536,
+    "local": 108.655,
+    "mes": "2026-06",
+    "oc": "interpolado",
+    "od": "dato: promedio BNA billete vendedor (30 días, último 2026-06-30)",
+    "oi": "interpolado"
+   },
+   {
+    "cpi": 105.905,
+    "dolar": 1508.71,
+    "ipc": 163.338,
+    "local": 108.363,
+    "mes": "2026-07",
+    "oc": "interpolado",
+    "od": "dato: promedio BNA billete vendedor (31 días, último 2026-07-31)",
+    "oi": "interpolado"
+   },
+   {
+    "cpi": 106.226,
+    "dolar": 1520.16,
+    "ipc": 167.231,
+    "local": 110.11,
+    "mes": "2026-08",
+    "oc": "interpolado",
+    "od": "dato: promedio BNA billete vendedor (31 días, último 2026-08-31)",
+    "oi": "interpolado"
+   },
+   {
+    "cpi": 106.548,
+    "dolar": 1535,
+    "ipc": 171.216,
+    "local": 111.644,
+    "mes": "2026-09",
+    "oc": "dato: BLS: 3,7% interanual a sep-2026 (14/10/2026)",
+    "od": "dato: promedio BNA billete vendedor (30 días, último 2026-09-30)",
+    "oi": "dato: INDEC: 33,4% interanual a sep-2026; oct-25 2,3% mensual"
+   },
+   {
+    "cpi": 106.871,
+    "dolar": 1540.74,
+    "ipc": 174.469,
+    "local": 113.342,
+    "mes": "2026-10",
+    "oc": "dato: ESTIMADO: oct-2026 al ritmo de 3,7% anual",
+    "od": "dato: promedio BNA billete vendedor (27 días, último 2026-10-27)",
+    "oi": "dato: ESTIMADO: oct-2026 igual a sep-2026 (1,9%), sin dato publicado"
+   }
+  ]
+ },
  "items": [
   {
+   "at": {
+    "diametro": "0.5\"",
+    "extremos": "NPT",
+    "material": "A105",
+    "serie": "3000",
+    "tipo": "tapon"
+   },
    "cantidad": 3,
    "descripcion": "Tapón 1/2\" NPT",
+   "desvio": [
+    {
+     "ofrecido": "serie 3000",
+     "pedido": "serie 2000",
+     "que": "serie"
+    }
+   ],
    "especificacion": "Pedido: 2000 A105 · ofrecido S3000 A105",
+   "fam": "AFO",
    "fuentes": [
     {
      "coincide": "similar",
@@ -268,19 +814,38 @@
    "grupo": "material",
    "id": "M01",
    "plano": {
+    "cantidad": "3",
     "descripcion": "Tapón",
     "diametro": "1/2\"",
     "extremos": "NPT-M",
     "material": "ASTM A-105",
-    "serie_sch": "2000"
+    "serie_sch": "2000",
+    "unidad": "un"
    },
    "pos": "1",
    "unidad": "un"
   },
   {
+   "at": {
+    "diametro": "0.5\"",
+    "extremos": "NPT",
+    "material": "A216 WCB",
+    "paso": "reducido",
+    "serie": "2000",
+    "tipo": "esferica",
+    "trim": "asiento metalico"
+   },
    "cantidad": 5,
    "descripcion": "Válvula esférica 1/2\" #2000 asiento metálico",
+   "desvio": [
+    {
+     "ofrecido": "a confirmar con el proveedor (cotizada forjada con asiento PTFE)",
+     "pedido": "cuerpo enterizo A216, asientos metálicos AISI 316",
+     "que": "material"
+    }
+   ],
    "especificacion": "Paso nominal · cuerpo A216 · vástago, esfera flotante y asientos metálicos AISI 316 · NPT-H",
+   "fam": "VAL",
    "fuentes": [
     {
      "coincide": "similar",
@@ -302,19 +867,28 @@
    "grupo": "material",
    "id": "M02",
    "plano": {
+    "cantidad": "5",
     "descripcion": "Válvula esférica #2000, paso nominal, cuerpo ASTM A-216, vástago AISI-316, esfera flotante AISI 316, asientos metálicos AISI-316",
     "diametro": "1/2\"",
     "extremos": "NPT-H",
     "material": "ASTM A-216 / AISI 316",
-    "serie_sch": "2000"
+    "serie_sch": "2000",
+    "unidad": "un"
    },
    "pos": "2",
    "unidad": "un"
   },
   {
+   "at": {
+    "diametro": "0.5\"",
+    "largo_mm": "100",
+    "material": "A106 B",
+    "schedule": "80"
+   },
    "cantidad": 6,
    "descripcion": "Niple 1/2\" sch80 × 100 mm",
    "especificacion": "A106 B",
+   "fam": "NIP",
    "fuentes": [
     {
      "coincide": "similar",
@@ -329,19 +903,28 @@
    "grupo": "material",
    "id": "M03",
    "plano": {
+    "cantidad": "6",
     "descripcion": "Niple longitud 100 mm",
     "diametro": "1/2\"",
     "extremos": "NPT-M",
     "material": "API 5L",
-    "serie_sch": "80"
+    "serie_sch": "80",
+    "unidad": "un"
    },
    "pos": "3",
    "unidad": "un"
   },
   {
+   "at": {
+    "diametro": "2\"",
+    "largo_mm": "200",
+    "material": "A106 B",
+    "schedule": "80"
+   },
    "cantidad": 10,
    "descripcion": "Niple 2\" sch80 × 200 mm",
    "especificacion": "A106 B",
+   "fam": "NIP",
    "fuentes": [
     {
      "coincide": "similar",
@@ -356,19 +939,43 @@
    "grupo": "material",
    "id": "M04",
    "plano": {
+    "cantidad": "10",
     "descripcion": "Niple longitud 200 mm",
     "diametro": "2\"",
     "extremos": "NPT-M",
     "material": "API 5L",
-    "serie_sch": "80"
+    "serie_sch": "80",
+    "unidad": "un"
    },
    "pos": "4",
    "unidad": "un"
   },
   {
+   "at": {
+    "diametro": "2\"",
+    "extremos": "NPT",
+    "material": "A216 WCB",
+    "paso": "reducido",
+    "serie": "2000",
+    "tipo": "esferica",
+    "trim": "asiento metalico"
+   },
    "cantidad": 1,
    "descripcion": "Válvula esférica 2\" #2000 asiento metálico",
+   "desvio": [
+    {
+     "ofrecido": "a confirmar con el proveedor (cotizada forjada con asiento PTFE)",
+     "pedido": "cuerpo enterizo A216, asientos metálicos AISI 316",
+     "que": "material"
+    },
+    {
+     "ofrecido": "WOG 3000 (a confirmar)",
+     "pedido": "serie 2000",
+     "que": "serie"
+    }
+   ],
    "especificacion": "Paso nominal · cuerpo A216 · vástago, esfera flotante y asientos metálicos AISI 316 · NPT-H",
+   "fam": "VAL",
    "fuentes": [
     {
      "coincide": "similar",
@@ -390,19 +997,27 @@
    "grupo": "material",
    "id": "M05",
    "plano": {
+    "cantidad": "1",
     "descripcion": "Válvula esférica #2000, paso nominal, cuerpo ASTM A-216, vástago AISI-316, esfera flotante AISI 316, asientos metálicos AISI-316",
     "diametro": "2\"",
     "extremos": "NPT-H",
     "material": "ASTM A-216 / AISI 316",
-    "serie_sch": "2000"
+    "serie_sch": "2000",
+    "unidad": "un"
    },
    "pos": "5",
    "unidad": "un"
   },
   {
+   "at": {
+    "diametro": "2\"",
+    "extremos": "NPT",
+    "tipo": "union doble a golpe"
+   },
    "cantidad": 5,
    "descripcion": "Unión doble a golpe 2\" 2000",
    "especificacion": "Unión rápida NPT",
+   "fam": "AFO",
    "fuentes": [
     {
      "coincide": "igual",
@@ -424,19 +1039,36 @@
    "grupo": "material",
    "id": "M06",
    "plano": {
+    "cantidad": "5",
     "descripcion": "Unión doble a golpe",
     "diametro": "2\"",
     "extremos": "NPT-H",
     "material": "ASTM A-105",
-    "serie_sch": "2000"
+    "serie_sch": "2000",
+    "unidad": "un"
    },
    "pos": "6",
    "unidad": "un"
   },
   {
+   "at": {
+    "diametro": "2\"",
+    "extremos": "NPT",
+    "material": "A216 WCB",
+    "serie": "600",
+    "tipo": "retencion"
+   },
    "cantidad": 2,
    "descripcion": "Válvula de retención 2\" #600 a clapeta",
+   "desvio": [
+    {
+     "ofrecido": "trim 8 (13Cr) sin resorte, a confirmar",
+     "pedido": "clapeta, asientos y resorte AISI 316",
+     "que": "material"
+    }
+   ],
    "especificacion": "Cuerpo A216 · clapeta, asientos renovables y resorte AISI 316 · NPT-H. Confirmar trim: la cotización de APSA/15 era para asiento AISI 410",
+   "fam": "VAL",
    "fuentes": [
     {
      "coincide": "similar",
@@ -465,19 +1097,36 @@
    "grupo": "material",
    "id": "M07",
    "plano": {
+    "cantidad": "2",
     "descripcion": "Válvula retención #600 tipo a clapeta, cuerpo ASTM A-216, clapeta AISI-316, asientos renovables AISI-316, resorte AISI-316",
     "diametro": "2\"",
     "extremos": "NPT-H",
     "material": "ASTM A-216 / AISI 316",
-    "serie_sch": "600"
+    "serie_sch": "600",
+    "unidad": "un"
    },
    "pos": "7",
    "unidad": "un"
   },
   {
+   "at": {
+    "diametro": "2\"",
+    "extremos": "NPT",
+    "material": "A105",
+    "serie": "3000",
+    "tipo": "tee"
+   },
    "cantidad": 5,
    "descripcion": "Tee 2\" NPT",
+   "desvio": [
+    {
+     "ofrecido": "serie 3000",
+     "pedido": "serie 2000",
+     "que": "serie"
+    }
+   ],
    "especificacion": "Pedido 2000 · ofrecido S3000 A105",
+   "fam": "AFO",
    "fuentes": [
     {
      "coincide": "similar",
@@ -492,19 +1141,28 @@
    "grupo": "material",
    "id": "M08",
    "plano": {
+    "cantidad": "5",
     "descripcion": "Tee normal",
     "diametro": "2\"",
     "extremos": "NPT-H",
     "material": "ASTM A-105",
-    "serie_sch": "2000"
+    "serie_sch": "2000",
+    "unidad": "un"
    },
    "pos": "8",
    "unidad": "un"
   },
   {
+   "at": {
+    "diametro": "2\"",
+    "extremos": "NPT",
+    "largo_mm": "100",
+    "schedule": "80"
+   },
    "cantidad": 2,
    "descripcion": "Niple 2\" sch80 × 100 mm NPT-M",
    "especificacion": "",
+   "fam": "NIP",
    "fuentes": [
     {
      "coincide": "similar",
@@ -519,23 +1177,43 @@
    "grupo": "material",
    "id": "M09",
    "plano": {
+    "cantidad": "2",
     "descripcion": "Niple longitud 100 mm",
     "diametro": "2\"",
     "extremos": "NPT-M",
     "material": "API 5L",
-    "serie_sch": "80"
+    "serie_sch": "80",
+    "unidad": "un"
    },
    "pos": "9",
    "unidad": "un"
   },
   {
+   "at": {
+    "diametro": "2\"",
+    "diametro2": "0.5\"",
+    "extremos": "NPT",
+    "material": "A105",
+    "serie": "3000",
+    "tipo": "buje"
+   },
    "cantidad": 2,
    "descripcion": "Buje reducción 2\" × 1/2\" NPT",
    "especificacion": "S3000 A105, rosca NPT (el código Renard de referencia es BSPT)",
+   "fam": "AFO",
    "fuentes": [
     {
-     "coincide": "similar",
-     "diferencia": "Rosca BSPT, serie 3000; el plano pide NPT serie 2000",
+     "coincide": "sin_ref",
+     "diferencia": "la referencia Renard es BSPT y el plano pide NPT: pedir buje NPT serie 2000",
+     "fecha": "2026-10-30",
+     "origen": "—",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "tipo": "est"
+    },
+    {
+     "coincide": "descartada",
+     "diferencia": "descartada (segunda auditoría 30-10-2026): rosca BSPT por NPT · antes: Rosca BSPT, serie 3000; el plano pide NPT serie 2000",
      "fecha": "2025-12-26",
      "origen": "Lista de precios ITT",
      "precio": 11.51,
@@ -546,19 +1224,36 @@
    "grupo": "material",
    "id": "M10",
    "plano": {
+    "cantidad": "2",
     "descripcion": "Buje reducción",
     "diametro": "2\"x1/2\"",
     "extremos": "NPT",
     "material": "ASTM A-105",
-    "serie_sch": "2000"
+    "serie_sch": "2000",
+    "unidad": "un"
    },
    "pos": "10",
    "unidad": "un"
   },
   {
+   "at": {
+    "diametro": "2\"",
+    "extremos": "NPT",
+    "material": "A105",
+    "serie": "3000",
+    "tipo": "codo 45"
+   },
    "cantidad": 1,
    "descripcion": "Codo 45° 2\" NPT",
+   "desvio": [
+    {
+     "ofrecido": "serie 3000",
+     "pedido": "serie 2000",
+     "que": "serie"
+    }
+   ],
    "especificacion": "S3000 A105",
+   "fam": "AFO",
    "fuentes": [
     {
      "coincide": "similar",
@@ -573,19 +1268,28 @@
    "grupo": "material",
    "id": "M11",
    "plano": {
+    "cantidad": "1",
     "descripcion": "Codo 45°",
     "diametro": "2\"",
     "extremos": "NPT-H",
     "material": "ASTM A-105",
-    "serie_sch": "2000"
+    "serie_sch": "2000",
+    "unidad": "un"
    },
    "pos": "11",
    "unidad": "un"
   },
   {
+   "at": {
+    "diametro": "2\"",
+    "extremos": "NPT/BW",
+    "largo_mm": "200",
+    "schedule": "80"
+   },
    "cantidad": 1,
    "descripcion": "Niple 2\" sch80 × 200 mm NPT/BW",
    "especificacion": "Extremo BW soldado a la junta monolítica (13)",
+   "fam": "NIP",
    "fuentes": [
     {
      "coincide": "similar",
@@ -600,19 +1304,36 @@
    "grupo": "material",
    "id": "M12",
    "plano": {
+    "cantidad": "1",
     "descripcion": "Niple longitud 200 mm",
     "diametro": "2\"",
     "extremos": "NPT/BW",
     "material": "API 5L",
-    "serie_sch": "80"
+    "serie_sch": "80",
+    "unidad": "un"
    },
    "pos": "12",
    "unidad": "un"
   },
   {
+   "at": {
+    "diametro": "2\"",
+    "extremos": "BW",
+    "material": "A234 WPB",
+    "schedule": "80",
+    "tipo": "junta monolitica"
+   },
    "cantidad": 1,
    "descripcion": "Junta monolítica 2\" sch80 WPB BW",
+   "desvio": [
+    {
+     "ofrecido": "BW/NPT, a confirmar BW/BW",
+     "pedido": "BW/BW sch 80",
+     "que": "extremos"
+    }
+   ],
    "especificacion": "BW en los dos extremos. Duralitte cotizó BW/NPT: confirmar",
+   "fam": "JUN",
    "fuentes": [
     {
      "coincide": "similar",
@@ -634,19 +1355,36 @@
    "grupo": "material",
    "id": "M13",
    "plano": {
+    "cantidad": "1",
     "descripcion": "Junta monolítica",
     "diametro": "2\"",
     "extremos": "BW",
     "material": "ASTM A-234 Gr. WPB",
-    "serie_sch": "80"
+    "serie_sch": "80",
+    "unidad": "un"
    },
    "pos": "13",
    "unidad": "un"
   },
   {
+   "at": {
+    "diametro": "2\"",
+    "extremos": "BW",
+    "material": "API 5L",
+    "revestimiento": "polipropileno",
+    "schedule": "80"
+   },
    "cantidad": 1.9,
    "descripcion": "Caño 2\" sch80 API 5L revestido",
+   "desvio": [
+    {
+     "ofrecido": "tricapa de polietileno, a confirmar",
+     "pedido": "polipropileno",
+     "que": "revestimiento"
+    }
+   ],
    "especificacion": "1 tramo de 1.900 mm según plano · BW · pedido: polipropileno",
+   "fam": "CAN",
    "fuentes": [
     {
      "coincide": "similar",
@@ -661,19 +1399,30 @@
    "grupo": "material",
    "id": "M14",
    "plano": {
+    "cantidad": "1",
     "descripcion": "Caño longitud 1900 mm",
     "diametro": "2\"",
     "extremos": "BW",
     "material": "API 5L revestido polipropileno",
-    "serie_sch": "80"
+    "serie_sch": "80",
+    "unidad": "un"
    },
    "pos": "14",
    "unidad": "m"
   },
   {
+   "at": {},
    "cantidad": 4.1,
    "descripcion": "Sobrante de caño revestido (no va en el puente)",
+   "desvio": [
+    {
+     "ofrecido": "tricapa de polietileno, a confirmar",
+     "pedido": "polipropileno",
+     "que": "revestimiento"
+    }
+   ],
    "especificacion": "Compra mínima: tira de 12 m para los 2 puentes. Usa 3,8 m y sobran 8,2 m (4,1 m por puente)",
+   "fam": "CAN",
    "fuentes": [
     {
      "coincide": "similar",
@@ -698,17 +1447,21 @@
    "unidad": "m"
   },
   {
+   "at": {
+    "tipo": "junta"
+   },
    "cantidad": 2,
    "descripcion": "Manga termocontraíble para reponer el revestimiento en las 2 juntas soldadas del caño 14 (13–14 y 14–15)",
    "especificacion": "No figura en el plano; hace falta para no dejar las soldaduras sin revestir",
+   "fam": "JUN",
    "fuentes": [
     {
      "coincide": "sin_ref",
-     "diferencia": "Precio supuesto sin artículo de referencia",
-     "fecha": "2026-10-27",
+     "diferencia": "manga termocontraíble: no hay precio ni pieza parecida",
+     "fecha": "2026-10-28",
      "origen": "—",
-     "precio": 35,
-     "proveedor": "ESTIMADO sin referencia: pedir precio a Compras",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
      "tipo": "est"
     }
    ],
@@ -718,9 +1471,17 @@
    "unidad": "un"
   },
   {
+   "at": {
+    "diametro": "2\"",
+    "extremos": "BW",
+    "material": "A234 WPB",
+    "schedule": "80",
+    "tipo": "codo 45"
+   },
    "cantidad": 1,
    "descripcion": "Codo 45° 2\" sch80 BW",
    "especificacion": "A234 WPB radio largo",
+   "fam": "ABW",
    "fuentes": [
     {
      "coincide": "igual",
@@ -735,19 +1496,36 @@
    "grupo": "material",
    "id": "M15",
    "plano": {
+    "cantidad": "1",
     "descripcion": "Codo 45°",
     "diametro": "2\"",
     "extremos": "BW",
     "material": "ASTM A-234 Gr. WPB",
-    "serie_sch": "80"
+    "serie_sch": "80",
+    "unidad": "un"
    },
    "pos": "15",
    "unidad": "un"
   },
   {
+   "at": {
+    "diametro": "2.5\"",
+    "diametro2": "2\"",
+    "extremos": "BW",
+    "schedule": "80",
+    "tipo": "reduccion concentrica"
+   },
    "cantidad": 1,
    "descripcion": "Reducción concéntrica 2½\" × 2\" sch80 BW",
+   "desvio": [
+    {
+     "ofrecido": "2½\" Sch 80 × 2\" Sch 80",
+     "pedido": "80 × 40",
+     "que": "schedule"
+    }
+   ],
    "especificacion": "Plano: 80×40 (2½\" sch80 × 2\" sch40) · precio de XS×XS",
+   "fam": "ABW",
    "fuentes": [
     {
      "coincide": "similar",
@@ -762,19 +1540,37 @@
    "grupo": "material",
    "id": "M16",
    "plano": {
+    "cantidad": "1",
     "descripcion": "Reducción concéntrica",
     "diametro": "2 1/2\"x2\"",
     "extremos": "BW",
+    "extremos_campo": "1",
     "material": "ASTM A-234 Gr. WPB",
-    "serie_sch": "80x40"
+    "serie_sch": "80x40",
+    "unidad": "un"
    },
    "pos": "16",
    "unidad": "un"
   },
   {
+   "at": {
+    "diametro": "2\"",
+    "extremos": "NPT",
+    "material": "A105",
+    "serie": "3000",
+    "tipo": "tapon"
+   },
    "cantidad": 3,
    "descripcion": "Tapón 2\" NPT",
+   "desvio": [
+    {
+     "ofrecido": "serie 3000",
+     "pedido": "serie 2000",
+     "que": "serie"
+    }
+   ],
    "especificacion": "S3000 A105",
+   "fam": "AFO",
    "fuentes": [
     {
      "coincide": "similar",
@@ -789,19 +1585,36 @@
    "grupo": "material",
    "id": "M17",
    "plano": {
+    "cantidad": "3",
     "descripcion": "Tapón",
     "diametro": "2\"",
     "extremos": "NPT-M",
     "material": "ASTM A-105",
-    "serie_sch": "2000"
+    "serie_sch": "2000",
+    "unidad": "un"
    },
    "pos": "17",
    "unidad": "un"
   },
   {
+   "at": {
+    "diametro": "0.5\"",
+    "extremos": "NPT",
+    "material": "A105",
+    "serie": "3000",
+    "tipo": "tee"
+   },
    "cantidad": 1,
    "descripcion": "Tee 1/2\" NPT",
+   "desvio": [
+    {
+     "ofrecido": "serie 3000",
+     "pedido": "serie 2000",
+     "que": "serie"
+    }
+   ],
    "especificacion": "S3000 A105",
+   "fam": "AFO",
    "fuentes": [
     {
      "coincide": "similar",
@@ -816,19 +1629,29 @@
    "grupo": "material",
    "id": "M18",
    "plano": {
+    "cantidad": "1",
     "descripcion": "Tee normal",
     "diametro": "1/2\"",
     "extremos": "NPT-H",
     "material": "ASTM A-105",
-    "serie_sch": "2000"
+    "serie_sch": "2000",
+    "unidad": "un"
    },
    "pos": "18",
    "unidad": "un"
   },
   {
+   "at": {
+    "diametro": "0.5\"",
+    "extremos": "NPT",
+    "marca": "ABAC",
+    "material": "AISI 316",
+    "tipo": "bloqueo y purga"
+   },
    "cantidad": 2,
    "descripcion": "Bloqueo y purga 1/2\" 3000 AISI 316",
    "especificacion": "ABAC VI 550-M · NPT-M",
+   "fam": "VAL",
    "fuentes": [
     {
      "coincide": "similar",
@@ -850,20 +1673,29 @@
    "grupo": "material",
    "id": "M19",
    "plano": {
+    "cantidad": "2",
     "descripcion": "Válvula bloqueo y purga",
     "diametro": "1/2\"",
     "extremos": "NPT-M",
     "material": "AISI 316",
     "modelo": "VI 550-M / ABAC",
-    "serie_sch": "3000"
+    "serie_sch": "3000",
+    "unidad": "un"
    },
    "pos": "19",
    "unidad": "un"
   },
   {
+   "at": {
+    "conexion": "1/2",
+    "diametro": "0.5\"",
+    "extremos": "NPT",
+    "tipo": "manometro"
+   },
    "cantidad": 2,
    "descripcion": "Manómetro 0–40 bar, conexión 1/2\" NPT-H (según plano)",
    "especificacion": "El plano indica NPT-H; el bloqueo y purga (pos 19) es NPT-M. Confirmar el par con el cliente. El de stock (1/4\") no sirve",
+   "fam": "INS",
    "fuentes": [
     {
      "coincide": "similar",
@@ -885,17 +1717,33 @@
    "grupo": "material",
    "id": "M20",
    "plano": {
+    "cantidad": "2",
     "descripcion": "Manómetro rango 0-40 bar",
     "diametro": "1/2\"",
-    "extremos": "NPT-H"
+    "extremos": "NPT-H",
+    "unidad": "un"
    },
    "pos": "20",
    "unidad": "un"
   },
   {
+   "at": {
+    "diametro": "2\"",
+    "extremos": "NPT",
+    "material": "A105",
+    "tipo": "union doble a golpe extensible"
+   },
    "cantidad": 2,
    "descripcion": "Unión doble a golpe extensible 2\"",
+   "desvio": [
+    {
+     "ofrecido": "serie 3000",
+     "pedido": "serie 2000",
+     "que": "serie"
+    }
+   ],
    "especificacion": "2000 · A105 · NPT-H · sello metal-metal · plano: Duralite",
+   "fam": "AFO",
    "fuentes": [
     {
      "coincide": "similar",
@@ -903,7 +1751,7 @@
      "fecha": "2026-04-06",
      "origen": "APSA/15 · Capsa Capex puentes AIB",
      "precio": 249,
-     "proveedor": "Adita S01988: U. extensible M-H 2\" NPT S3000, sin mención de sello metal-metal; cotización vencida el 13/04/2026",
+     "proveedor": "Adita S01988: U. extensible M-H 2\" NPT S3000, sin mención de sello metal-metal; cotización vencida el 13-04-2026",
      "tipo": "est"
     },
     {
@@ -917,20 +1765,29 @@
    "grupo": "material",
    "id": "M21",
    "plano": {
+    "cantidad": "2",
     "descripcion": "Unión doble golpe extensible",
     "diametro": "2\"",
     "extremos": "NPT-H",
     "material": "ASTM A-105",
     "modelo": "DURALITE",
-    "serie_sch": "2000"
+    "serie_sch": "2000",
+    "unidad": "un"
    },
    "pos": "21",
    "unidad": "un"
   },
   {
+   "at": {
+    "diametro": "2\"",
+    "extremos": "NPT/BW",
+    "largo_mm": "320",
+    "schedule": "80"
+   },
    "cantidad": 1,
    "descripcion": "Niple 2\" sch80 × 320 mm NPT/BW",
    "especificacion": "Extremo BW biselado para soldar en campo (confirmar)",
+   "fam": "NIP",
    "fuentes": [
     {
      "coincide": "similar",
@@ -945,23 +1802,42 @@
    "grupo": "material",
    "id": "M22",
    "plano": {
+    "cantidad": "1",
     "descripcion": "Niple longitud 320 mm",
     "diametro": "2\"",
     "extremos": "NPT/BW",
+    "extremos_campo": "1",
     "material": "API 5L",
-    "serie_sch": "80"
+    "serie_sch": "80",
+    "unidad": "un"
    },
    "pos": "22",
    "unidad": "un"
   },
   {
+   "at": {
+    "diametro": "0.5\"",
+    "extremos": "NPT/BW",
+    "material": "A105",
+    "tipo": "cupla"
+   },
    "cantidad": 2,
    "descripcion": "Cupla 1/2\" 80/2000 NPT/BW",
    "especificacion": "Plano: A234 WPB, soldada sobre niple (pos 4 y 25) · precio de cupla A105 NPT",
+   "fam": "AFO",
    "fuentes": [
     {
-     "coincide": "similar",
-     "diferencia": "Cupla entera A105 NPT/NPT; el plano pide A234 WPB 80/2000 NPT/BW",
+     "coincide": "sin_ref",
+     "diferencia": "la cupla Renard es A105 NPT/NPT serie 3000 y el plano pide A234 WPB 80/2000 NPT/BW: pedir cotización",
+     "fecha": "2026-10-30",
+     "origen": "—",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
+     "tipo": "est"
+    },
+    {
+     "coincide": "descartada",
+     "diferencia": "descartada (segunda auditoría 30-10-2026): otra serie y otros extremos sin documentar · antes: Cupla entera A105 NPT/NPT; el plano pide A234 WPB 80/2000 NPT/BW",
      "fecha": "2025-12-26",
      "origen": "Lista de precios ITT",
      "precio": 2.71,
@@ -972,19 +1848,28 @@
    "grupo": "material",
    "id": "M23",
    "plano": {
+    "cantidad": "2",
     "descripcion": "Cupla",
     "diametro": "1/2\"",
     "extremos": "NPT/BW",
     "material": "ASTM A-234 Gr. WPB",
-    "serie_sch": "80/2000"
+    "serie_sch": "80/2000",
+    "unidad": "un"
    },
    "pos": "23",
    "unidad": "un"
   },
   {
+   "at": {
+    "diametro": "2\"",
+    "extremos": "NPT",
+    "largo_mm": "150",
+    "schedule": "80"
+   },
    "cantidad": 1,
    "descripcion": "Niple 2\" sch80 × 150 mm NPT/NPT",
    "especificacion": "",
+   "fam": "NIP",
    "fuentes": [
     {
      "coincide": "similar",
@@ -999,19 +1884,28 @@
    "grupo": "material",
    "id": "M24",
    "plano": {
+    "cantidad": "1",
     "descripcion": "Niple longitud 150 mm",
     "diametro": "2\"",
     "extremos": "NPT/NPT",
     "material": "API 5L",
-    "serie_sch": "80"
+    "serie_sch": "80",
+    "unidad": "un"
    },
    "pos": "24",
    "unidad": "un"
   },
   {
+   "at": {
+    "diametro": "2\"",
+    "extremos": "NPT/BW",
+    "largo_mm": "000",
+    "schedule": "80"
+   },
    "cantidad": 2,
    "descripcion": "Niple 2\" sch80 × 1.000 mm NPT/BW",
    "especificacion": "Lleva la cupla 23. Extremo BW biselado para soldar en campo (confirmar)",
+   "fam": "NIP",
    "fuentes": [
     {
      "coincide": "similar",
@@ -1026,11 +1920,14 @@
    "grupo": "material",
    "id": "M25",
    "plano": {
+    "cantidad": "2",
     "descripcion": "Niple longitud 1000 mm",
     "diametro": "2\"",
     "extremos": "NPT/BW",
+    "extremos_campo": "1",
     "material": "API 5L",
-    "serie_sch": "80"
+    "serie_sch": "80",
+    "unidad": "un"
    },
    "pos": "25",
    "unidad": "un"
@@ -1110,11 +2007,11 @@
    "fuentes": [
     {
      "coincide": "sin_ref",
-     "diferencia": "Supuesto sin referencia",
-     "fecha": "2026-10-27",
+     "diferencia": "sellador de roscas: no hay precio ni pieza parecida",
+     "fecha": "2026-10-28",
      "origen": "—",
-     "precio": 15,
-     "proveedor": "Estimado",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
      "tipo": "est"
     }
    ],
@@ -1177,11 +2074,11 @@
    "fuentes": [
     {
      "coincide": "sin_ref",
-     "diferencia": "Supuesto sin referencia",
-     "fecha": "2026-10-27",
+     "diferencia": "ingeniería, calidad y dossier: no hay antecedente con el mismo alcance; cargar horas × tarifa cuando se definan",
+     "fecha": "2026-10-28",
      "origen": "—",
-     "precio": 100,
-     "proveedor": "Estimado",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización",
      "tipo": "est"
     }
    ],
@@ -1189,15 +2086,64 @@
    "id": "S06",
    "pos": "CAL",
    "unidad": "gl"
+  },
+  {
+   "cantidad": 1,
+   "descripcion": "Transporte (global por equipo)",
+   "especificacion": "Precio global del tercero: ver la ficha del rubro",
+   "fuentes": [
+    {
+     "coincide": "igual",
+     "diferencia": "SIN PRECIO: pedir cotización global con la ficha del rubro",
+     "fecha": "2026-10-28",
+     "origen": "ficha_rubros.md (pedir con la ficha)",
+     "precio": 0,
+     "proveedor": "A cotizar: global del tercero",
+     "tipo": "est"
+    }
+   ],
+   "global": true,
+   "grupo": "servicio",
+   "id": "G-transporte",
+   "pos": "GL",
+   "rubro": "transporte",
+   "unidad": "gl"
   }
  ],
+ "kg_compras": {
+  "1": 0.073,
+  "2": 0.5,
+  "3": 0.162,
+  "4": 1.496,
+  "5": 4,
+  "7": 21,
+  "8": 2,
+  "9": 0.748,
+  "11": 1.374,
+  "12": 1.496,
+  "13": 0.238,
+  "14": 7.482,
+  "15": 0.54,
+  "16": 0.506,
+  "17": 1.025,
+  "18": 0.286,
+  "22": 2.394,
+  "24": 1.122,
+  "25": 7.482
+ },
  "meta": [
   "Artículo C01A930098080",
   "Plano 23001-PDC-YAC-PC-P-001 rev 1",
   "Comprador: Carlos Russ",
-  "Preparó: Matías Russo · 27/10/2026"
+  "Preparó: Matías Russo · 27-10-2026"
  ],
  "nota_mo_html": "No se incluyen soportes ni estructura porque no figuran en la lista de materiales del plano. No se pidió radiografía. Soldaduras de taller: 4 a tope (niple 12–junta 13, junta–caño 14, caño–codo 15, codo–reducción 16) y 2 cuplas 1/2\" (pos 23) sobre niples. Los extremos BW de los niples 22 y 25 y la punta 2½\" de la reducción 16 quedan biselados para soldar en campo.",
+ "p9": {
+  "errores": 16,
+  "fecha": "2026-10-30T05:42:35",
+  "firma": "M01|1||Renard · cód. 5979|1.9000|serie:serie 3000:serie 2000\nM02|2||ESTIMADO: Indave IRA2F 1/2\" WOG2000 forjada, asiento PTFE (USD 45,50) + 30% supuesto por asiento metálico y cuerpo enterizo. Sin cotización con la especificación del plano|59.1500|material:a confirmar con el proveedor (cotizada forjada con asiento PTFE):cuerpo enterizo A216, asientos metálicos AISI 316\nM03|3||ESTIMADO: valor de la planilla PRES 24879 (\"antecedentes puentes Taval/CGC S2000\"), material A53/A106 B; sin cotización|20.0000|\nM04|4||ESTIMADO: valor de la planilla PRES 24879 (\"antecedentes puentes Taval/CGC S2000\"), material A53/A106 B; sin cotización|20.0000|\nM05|5||ESTIMADO: Indave IRA2F 2\" WOG3000 forjada, asiento PTFE (USD 150,50) + 30% supuesto por asiento metálico y cuerpo enterizo. Sin cotización con la especificación del plano|195.6500|material:a confirmar con el proveedor (cotizada forjada con asiento PTFE):cuerpo enterizo A216, asientos metálicos AISI 316;serie:WOG 3000 (a confirmar):serie 2000\nM06|6||Adita (IMB Oil) cot. S01988|74.7500|\nM07|7||Ingeniería en Fluidos ppto 110626: S600 A216 WCB, internos TRIM 8 (13Cr, NO AISI 316), sin resorte cotizado. Falta precio con trim 316 y resorte|533.0000|material:trim 8 (13Cr) sin resorte, a confirmar:clapeta, asientos y resorte AISI 316\nM08|8||Renard · cód. 6048|49.2400|serie:serie 3000:serie 2000\nM09|9||ESTIMADO: valor de la planilla PRES 24879 (\"antecedentes puentes Taval/CGC S2000\"), material A53/A106 B; sin cotización|20.0000|\nM10|10||SIN PRECIO: pedir cotización|0.0000|\nM11|11||Renard · cód. 5113|50.8300|serie:serie 3000:serie 2000\nM12|12||ESTIMADO: valor de la planilla PRES 24879 (\"antecedentes puentes Taval/CGC S2000\"), material A53/A106 B; sin cotización|20.0000|\nM13|13||Duralitte P_16838: junta 2\" BW/NPT 2000 (el plano pide BW/BW sch 80). Falta cotizar BW/BW|315.0000|extremos:BW/NPT, a confirmar BW/BW:BW/BW sch 80\nM14|14||Provemet: tricapa de polietileno 60,3×5,54 (pedido: PP)|24.7900|revestimiento:tricapa de polietileno, a confirmar:polipropileno\nM14B|14b||Provemet: tricapa de polietileno 60,3×5,54|24.7900|revestimiento:tricapa de polietileno, a confirmar:polipropileno\nM14C|14c||SIN PRECIO: pedir cotización|0.0000|\nM15|15||Renard · cód. 3758|8.7300|\nM16|16||Renard · cód. 3639|16.5100|schedule:2½\" Sch 80 × 2\" Sch 80:80 × 40\nM17|17||Renard · cód. 5984|8.4500|serie:serie 3000:serie 2000\nM18|18||Renard · cód. 6043|8.6900|serie:serie 3000:serie 2000\nM19|19||Línea \"Válvula bloqueo y purga (ABAC) 1/2\\\" NPT M-H AISI 316 | 137\" de la planilla de costo PRES 24879; no hay cotización de ABAC del VI 550-M|137.0000|\nM20|20||Referencia: manómetro 4\" conexión 1/2\" de stock ITT (rango 0–100 bar, cód. MN310005N0100GL). Cotizar 0–40 bar|83.4000|\nM21|21||Adita S01988: U. extensible M-H 2\" NPT S3000, sin mención de sello metal-metal; cotización vencida el 13-04-2026|249.0000|serie:serie 3000:serie 2000\nM22|22||ESTIMADO: valor de la planilla PRES 24879 (\"antecedentes puentes Taval/CGC S2000\"), material A53/A106 B; sin cotización|20.0000|\nM23|23||SIN PRECIO: pedir cotización|0.0000|\nM24|24||ESTIMADO: valor de la planilla PRES 24879 (\"antecedentes puentes Taval/CGC S2000\"), material A53/A106 B; sin cotización|20.0000|\nM25|25||ESTIMADO: valor de la planilla PRES 24879 (\"antecedentes puentes Taval/CGC S2000\"), material A53/A106 B; sin cotización|40.0000|",
+  "ok": false
+ },
  "parametros": {
   "AJ": 1,
   "CONT": 5,
@@ -1223,7 +2169,7 @@
    ],
    [
     "Documento",
-    "17009-PDC-YAC-PC-P-001 rev 1 (plano recibido: 23001-PDC-YAC-PC-P-001 rev 1, \"para construcción\", 12/06/2024)"
+    "17009-PDC-YAC-PC-P-001 rev 1 (plano recibido: 23001-PDC-YAC-PC-P-001 rev 1, \"para construcción\", 12-06-2024)"
    ],
    [
     "Código SAP anterior",
@@ -1235,10 +2181,10 @@
    ],
    [
     "Fechas",
-    "Límite de respuesta <b style=\"color:var(--bad)\">22/10/2026 (vencida)</b> · necesidad 09/11/2026"
+    "Límite de respuesta <b style=\"color:var(--bad)\">22-10-2026 (vencida)</b> · necesidad 09-11-2026"
    ]
   ],
-  "eyebrow": "OR 53081 · emitida 19/10/2026",
+  "eyebrow": "OR 53081 · emitida 19-10-2026",
   "requisitos_html": [
    "Prueba hidráulica a 15 kg/cm² verificando uniones, con <b>registro adjunto</b>.",
    "Unión doble a golpe extensible con <b>sello metal-metal</b>.",
@@ -1271,15 +2217,15 @@
    "titulo": "CAPEX"
   }
  ],
- "pie": "Fuentes: base de conocimiento del repositorio cotizador-itt (carpeta Z:\\VENTAS\\OFERTAS Y LICITACIONES, tanda 1, lista Renard 26/12/2025, stock valorizado nov-2024, costo de planta oct-2024). Precios en USD sin IVA.",
+ "pie": "Fuentes: base de conocimiento del repositorio cotizador-itt (carpeta Z:\\VENTAS\\OFERTAS Y LICITACIONES, tanda 1, lista Renard 26-12-2025, stock valorizado nov-2024, costo de planta oct-2024). Precios en USD sin IVA.",
  "planilla_notas": [
-  "Plazo: 75 días desde OC (esféricas 60 días + 12 de taller + 3 de dossier; a confirmar con el plazo de las esféricas metal-metal). Fecha de necesidad 09/11/2026: no se puede cumplir.",
+  "Plazo: 75 días desde OC (esféricas 60 días + 12 de taller + 3 de dossier; a confirmar con el plazo de las esféricas metal-metal). Fecha de necesidad 09-11-2026: no se puede cumplir.",
   "Condiciones (como OE 332-24): USD facturado en pesos al TC BNA vendedor · contado contra entrega · entrega en planta ITT · validez 15 días.",
-  "Modelo de costo: PRES 24879 rev A (TAVAL/55, Tecpetrol, 22/04/2026), puente convencional de bombeo mecánico. Factor 1,35 sobre todo el puente (incluida la MO de Ledesma); 1,40 solo para MO vendida sola."
+  "Modelo de costo: PRES 24879 rev A (TAVAL/55, Tecpetrol, 22-04-2026), puente convencional de bombeo mecánico. Factor 1,35 sobre todo el puente (incluida la MO de Ledesma); 1,40 solo para MO vendida sola."
  ],
  "plazo": {
   "dias": 75,
-  "nota": "El taller arranca cuando llega el material más largo: las esféricas (60 días en Indave para asiento PTFE; para asiento metálico y cuerpo enterizo no hay plazo cotizado). Plazo = 60 + 12 de taller + 3 de dossier = 75 días. Si Taval tiene las esféricas en stock, baja a ~30 días. La fecha de necesidad del 09/11/2026 no se puede cumplir.",
+  "nota": "El taller arranca cuando llega el material más largo: las esféricas (60 días en Indave para asiento PTFE; para asiento metálico y cuerpo enterizo no hay plazo cotizado). Plazo = 60 + 12 de taller + 3 de dossier = 75 días. Si Taval tiene las esféricas en stock, baja a ~30 días. La fecha de necesidad del 09-11-2026 no se puede cumplir.",
   "tareas": [
    [
     "Esféricas 2\" y 1/2\" (plazo Indave asiento PTFE; metal-metal sin dato)",
@@ -1328,6 +2274,18 @@
  },
  "preparo": "Matías Russo",
  "revision": "Rev 0",
+ "rubros": {
+  "mo_estructura": {
+   "modo": "detallado"
+  },
+  "mo_piping": {
+   "modo": "detallado"
+  },
+  "transporte": {
+   "detalle": [],
+   "modo": "global"
+  }
+ },
  "subtitulo_planilla": "2 puentes armados BBO MEC 1500 · plano 23001-PDC-YAC-PC-P-001 rev 1 · USD sin IVA · EXW Quilmes Oeste",
  "titulo": "CAPEX · OQ 8209 — 2 puentes armados BBO MEC 1500",
  "titulo_pagina": "Cotización CAPEX OQ8209"

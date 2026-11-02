@@ -1,6 +1,6 @@
 # Ficha por rubro — COT26-1003-001
 
-Generada por `herramientas/ficha_rubros.py` el 30-10-2026. Todo **por puente**; la cantidad (2) multiplica al final.
+Generada por `herramientas/ficha_rubros.py` el 02-11-2026. Todo **por puente**; la cantidad (2) multiplica al final.
 Sirve para pedir un precio global al tercero y para controlarlo contra el cálculo detallado.
 
 ## 1. MO de armado y soldadura del piping

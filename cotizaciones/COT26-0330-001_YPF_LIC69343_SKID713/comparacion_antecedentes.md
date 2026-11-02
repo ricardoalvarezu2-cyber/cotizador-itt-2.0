@@ -1,6 +1,6 @@
 # Comparación con antecedentes (P8) — COT26-0330-001
 
-Generado por `herramientas/comparar_antecedentes.py`. Familia SK, subtipo skid concentrador / colector. Esta cotización: **precio unitario USD 182.116,22**, costo USD 144.528,31, factor 1,35 · reparto del costo: materiales 66%, MO y servicios 34%.
+Generado por `herramientas/comparar_antecedentes.py`. Familia SK, subtipo skid concentrador / colector. Esta cotización: **precio unitario USD 182.095,40**, costo USD 144.512,89, factor 1,35 · reparto del costo: materiales 66%, MO y servicios 34%.
 
 Se compara **costo contra costo** (Matías, 30-10-2026): el precio de venta mezcla factor, flete, caución y alcance de cada oferta. El costo del antecedente es el de su ficha, a su fecha (sin ajustar), y solo por equipo cuando la ficha lo permite sin ambigüedad; si no, queda el precio de venta marcado "solo venta". Una diferencia de más del 15% no significa error: hay que explicarla rubro por rubro (alcance, cantidad, diámetro, serie, fecha) antes de presentar el número.
 

@@ -1,7 +1,12 @@
 # Respaldo de las cotizaciones de la página
 
-Último respaldo: 2026-10-28 (lo hace la tarea semanal; ver web/LEEME.md).
+Último respaldo: 2026-11-02 (lo hace la tarea semanal; ver web/LEEME.md).
 
 | id | código | título | estado | guardado |
 |---|---|---|---|---|
-| capex-oq8209 | COT26-1003-001 | CAPEX · OQ 8209 — 2 puentes armados BBO MEC 1500 | borrador | 2026-10-28T02:31 |
+| c26-0135-001 | COT26-0135-001 | Camuzzi · Concurso de precios N° 24578 ítem 2 — 1 skid de regulación (ERP Parque Industrial Tres Arroyos) | borrador | 2026-10-30T12:55 |
+| c26-0135-002 | COT26-0135-002 | Camuzzi · Concurso de precios N° 24578 ítem 3 — 1 skid puente de medición (ERP Parque Industrial Tres Arroyos) | borrador | 2026-10-30T12:55 |
+| c26-0135-003 | COT26-0135-003 | Camuzzi · Concurso de precios N° 24578 ítem 1 / Concurso N° 24527 — 2 separadores verticales coalescentes (diseño preliminar ITT según ET) | borrador | 2026-10-30T12:55 |
+| c26-0330-001 | COT26-0330-001 | YPF · Lic 69343 — 3 skids concentradores 1000623713 | borrador | 2026-10-29T00:26 |
+| c26-0330-002 | COT26-0330-002 | YPF · Lic 69343 — 6 skids concentradores 1000623708 | borrador | 2026-10-30T04:32 |
+| capex-oq8209 | COT26-1003-001 | CAPEX · OQ 8209 — 2 puentes armados BBO MEC 1500 | borrador | 2026-10-30T05:42 |
