@@ -318,3 +318,8 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 - Qué pasó: `actualizar_base.py` cerró el dólar BNA de octubre (1.542,67 → 1.543,23) y el control comparó el motor de la página, que lee `web/datos.json` (todavía con el dólar viejo), contra Python, que ya usaba el nuevo. La YPF SKID713 dio unos USD 15 de diferencia en el costo y el control falló.
 - Corrección: `python web/construir_datos.py` y volver a correr `actualizar_base.py` (TODO OK). Anotado en el paso 1 de la tarea semanal (`web/LEEME.md`).
 - Prevención: pendiente que `actualizar_base.py` regenere `web/datos.json` antes del control del motor, así no depende del orden.
+
+## 03-11-2026 — Al cargar datos en columnas se pisó una columna literal (Camuzzi 003)
+- Qué pasó: al fijar a mano los datos del separador se escribió "DI 1.280 mm" en la columna literal `diametro` de la lista; cambiaban las pulgadas de soldadura de la ficha (141 → 114). Se vio en el diff de `ficha_rubros.json` antes de subir.
+- Corrección: `atributos_plano.fijar` solo acepta las columnas de datos (`ATRIBUTOS`); las literales del documento (descripción, Ø, serie/sch, material, extremos, modelo/fabricante) no se tocan nunca.
+- Lección: los datos estructurados se suman al lado del texto del cliente, nunca encima; y un cambio "de datos" se controla también por lo que mueve en los cálculos derivados.
