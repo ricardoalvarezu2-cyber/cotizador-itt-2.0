@@ -145,6 +145,17 @@
    "cantidad": 4.0,
    "unidad": "un",
    "especificacion": "Plano: 6\" · 300 x 40 · ASTM A-105 · RF/BW",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "6\"",
+    "serie": "300",
+    "schedule": "40",
+    "material": "A105",
+    "extremos": "BW/RF",
+    "tipo": "wn",
+    "cara": "RF"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -165,6 +176,17 @@
    "cantidad": 40.0,
    "unidad": "un",
    "especificacion": "Plano: 3\" · 300 x 40 · ASTM A-105 · RF/BW",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "3\"",
+    "serie": "300",
+    "schedule": "40",
+    "material": "A105",
+    "extremos": "BW/RF",
+    "tipo": "wn",
+    "cara": "RF"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -185,6 +207,17 @@
    "cantidad": 6.0,
    "unidad": "un",
    "especificacion": "Plano: 2\" · 300 x 80 · ASTM A-105 · RF/BW",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "2\"",
+    "serie": "300",
+    "schedule": "80",
+    "material": "A105",
+    "extremos": "BW/RF",
+    "tipo": "wn",
+    "cara": "RF"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "cot",
@@ -205,6 +238,17 @@
    "cantidad": 4.0,
    "unidad": "un",
    "especificacion": "Plano: 1\" · 300 x 80 · ASTM A-105 · RF/SW",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "1\"",
+    "serie": "300",
+    "schedule": "80",
+    "material": "A105",
+    "extremos": "SW/RF",
+    "tipo": "sw",
+    "cara": "RF"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -225,6 +269,16 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 1\" · 300 · ASTM A-105 · RF",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "1\"",
+    "serie": "300",
+    "material": "A105",
+    "extremos": "RF",
+    "tipo": "ciega",
+    "cara": "RF"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -245,6 +299,16 @@
    "cantidad": 6.0,
    "unidad": "un",
    "especificacion": "Plano: 2\" · 300 · ASTM A-105 · RF",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "2\"",
+    "serie": "300",
+    "material": "A105",
+    "extremos": "RF",
+    "tipo": "ciega",
+    "cara": "RF"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "ant",
@@ -265,6 +329,15 @@
    "cantidad": 6.4,
    "unidad": "m",
    "especificacion": "Plano: 3\" · 40 · ASTM A-106 Gr B · BW",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "3\"",
+    "schedule": "40",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -285,6 +358,15 @@
    "cantidad": 0.267,
    "unidad": "m",
    "especificacion": "10 barra(s) de 12 m para 115,2 m en 18 equipo(s); por equipo 0,27 m",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "3\"",
+    "schedule": "40",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -305,6 +387,15 @@
    "cantidad": 6.4,
    "unidad": "m",
    "especificacion": "Plano: 6\" · 40 · ASTM A-106 Gr B · BW",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "6\"",
+    "schedule": "40",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "cot",
@@ -325,6 +416,15 @@
    "cantidad": 0.267,
    "unidad": "m",
    "especificacion": "10 barra(s) de 12 m para 115,2 m en 18 equipo(s); por equipo 0,27 m",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "6\"",
+    "schedule": "40",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "cot",
@@ -345,6 +445,15 @@
    "cantidad": 17.0,
    "unidad": "un",
    "especificacion": "Plano: 3/4\" · 160 · ASTM A-106 Gr B · PE/NPT",
+   "atributos": {
+    "familia": "NIP",
+    "diametro": "0.75\"",
+    "schedule": "160",
+    "material": "A106 B",
+    "extremos": "NPT",
+    "largo_mm": "150"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "cot",
@@ -366,6 +475,15 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 1\" · 160 · ASTM A-106 Gr B · PE/NPT",
+   "atributos": {
+    "familia": "NIP",
+    "diametro": "1\"",
+    "schedule": "160",
+    "material": "A106 B",
+    "extremos": "NPT",
+    "largo_mm": "150"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "cot",
@@ -387,6 +505,15 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 6\" · 300 · AISI 316 + grafito · ",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "6\"",
+    "serie": "300",
+    "material": "AISI 316",
+    "extremos": "RF",
+    "tipo": "junta espiralada"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "ant",
@@ -408,6 +535,15 @@
    "cantidad": 21.0,
    "unidad": "un",
    "especificacion": "Plano: 3\" · 300 · AISI 316 + grafito · ",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "3\"",
+    "serie": "300",
+    "material": "AISI 316",
+    "extremos": "RF",
+    "tipo": "junta espiralada"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "est",
@@ -429,13 +565,22 @@
    "cantidad": 12.0,
    "unidad": "un",
    "especificacion": "Plano: 2\" · 300 · AISI 316 + grafito · ",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "2\"",
+    "serie": "300",
+    "material": "AISI 316",
+    "extremos": "RF",
+    "tipo": "junta espiralada"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "est",
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-11-02",
+     "fecha": "2026-11-03",
      "coincide": "sin_ref",
      "diferencia": "El más parecido es de otro diámetro (0.75\") (JUN-02760 JUNTA ESPIRALADA C/ANILLO EXT AC ZINC/ A.INT AI | , USD 2,00): no sirve como precio"
     }
@@ -449,6 +594,15 @@
    "cantidad": 4.0,
    "unidad": "un",
    "especificacion": "Plano: 1\" · 300 · AISI 316 + grafito · ",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "1\"",
+    "serie": "300",
+    "material": "AISI 316",
+    "extremos": "RF",
+    "tipo": "junta espiralada"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "ant",
@@ -470,6 +624,14 @@
    "cantidad": 12.0,
    "unidad": "un",
    "especificacion": "Plano: 3/4\" ·  · ASTM A-193 B7 / A-194 2H · ",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "0.75\"",
+    "material": "A194 2H",
+    "tipo": "esparrago",
+    "medida": "3/4 x 6"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "ant",
@@ -491,6 +653,14 @@
    "cantidad": 168.0,
    "unidad": "un",
    "especificacion": "Plano: 3/4\" ·  · ASTM A-193 B7 / A-194 2H · ",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "0.75\"",
+    "material": "A194 2H",
+    "tipo": "esparrago",
+    "medida": "3/4 x 5"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "ant",
@@ -512,6 +682,14 @@
    "cantidad": 96.0,
    "unidad": "un",
    "especificacion": "Plano: 5/8\" ·  · ASTM A-193 B7 / A-194 2H · ",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "0.625\"",
+    "material": "A194 2H",
+    "tipo": "esparrago",
+    "medida": "5/8 x 4"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "ant",
@@ -533,6 +711,14 @@
    "cantidad": 16.0,
    "unidad": "un",
    "especificacion": "Plano: 5/8\" ·  · ASTM A-193 B7 / A-194 2H · ",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "0.625\"",
+    "material": "A194 2H",
+    "tipo": "esparrago",
+    "medida": "5/8 x 3 1/2"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "ant",
@@ -554,6 +740,16 @@
    "cantidad": 6.0,
    "unidad": "un",
    "especificacion": "Plano: 3\" x 2\" · 80 · ASTM A-234 WPB · BW",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "3\"",
+    "diametro2": "2\"",
+    "schedule": "80",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "tee"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "ant",
@@ -574,6 +770,15 @@
    "cantidad": 6.0,
    "unidad": "un",
    "especificacion": "Plano: 3\" · 80 · ASTM A-234 WPB · BW",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "3\"",
+    "schedule": "80",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "tee"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "cot",
@@ -594,6 +799,16 @@
    "cantidad": 6.0,
    "unidad": "un",
    "especificacion": "Plano: 6\" x 3\" · 40 · ASTM A-234 WPB · BW",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "6\"",
+    "diametro2": "3\"",
+    "schedule": "40",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "tee"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "ant",
@@ -614,13 +829,22 @@
    "cantidad": 3.0,
    "unidad": "un",
    "especificacion": "Plano: 3/4\" · 3000 · ASTM A-105 · NPT",
+   "atributos": {
+    "familia": "OTR",
+    "diametro": "0.75\"",
+    "serie": "3000",
+    "material": "A105",
+    "extremos": "NPT",
+    "tipo": "entrerosca , diam"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "est",
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-11-02",
+     "fecha": "2026-11-03",
      "coincide": "sin_ref",
      "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
@@ -634,6 +858,15 @@
    "cantidad": 17.0,
    "unidad": "un",
    "especificacion": "Plano: 3/4\" · 3000 · ASTM A-105 · BW/SW",
+   "atributos": {
+    "familia": "AFO",
+    "diametro": "0.75\"",
+    "serie": "3000",
+    "material": "A105",
+    "extremos": "SW/BW",
+    "tipo": "sockolet"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "ant",
@@ -655,6 +888,15 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 1\" · 3000 · ASTM A-105 · BW/SW",
+   "atributos": {
+    "familia": "AFO",
+    "diametro": "1\"",
+    "serie": "3000",
+    "material": "A105",
+    "extremos": "SW/BW",
+    "tipo": "sockolet"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "est",
@@ -676,6 +918,15 @@
    "cantidad": 17.0,
    "unidad": "un",
    "especificacion": "Plano: 3/4\" · 3000 · ASTM A-105 · NPT-M",
+   "atributos": {
+    "familia": "AFO",
+    "diametro": "0.75\"",
+    "serie": "3000",
+    "material": "A105",
+    "extremos": "NPT",
+    "tipo": "tapon"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "ant",
@@ -697,6 +948,17 @@
    "cantidad": 15.0,
    "unidad": "un",
    "especificacion": "Plano: 1/2\" ·  · AISI 316 · NPT · ABAC",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "0.5\"",
+    "material": "AISI 316",
+    "extremos": "NPT",
+    "tipo": "bloqueo y purga",
+    "marca": "ABAC"
+   },
+   "faltan_datos": [
+    "serie"
+   ],
    "fuentes": [
     {
      "tipo": "ant",
@@ -718,6 +980,18 @@
    "cantidad": 4.0,
    "unidad": "un",
    "especificacion": "Plano: 3/4\" · 3000 · ASTM A-105 · NPT-H · TAVAL (stock)",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "0.75\"",
+    "serie": "3000",
+    "material": "A105",
+    "extremos": "NPT",
+    "tipo": "esferica",
+    "marca": "Taval"
+   },
+   "faltan_datos": [
+    "paso"
+   ],
    "taval": true,
    "fuentes": [
     {
@@ -740,6 +1014,17 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 1\" · 300 · ASTM A-105 · RF · TAVAL BF60253R0144RP",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "1\"",
+    "serie": "300",
+    "material": "A105",
+    "extremos": "RF",
+    "tipo": "esferica",
+    "paso": "reducido",
+    "marca": "Taval"
+   },
+   "faltan_datos": [],
    "taval": true,
    "fuentes": [
     {
@@ -747,7 +1032,7 @@
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-11-02",
+     "fecha": "2026-11-03",
      "coincide": "sin_ref",
      "diferencia": "El más parecido es de otro diámetro (10\") (VAL-04425 valvula esferica paso reducido guiada 10\" #300 RF , USD 2.766,00): no sirve como precio"
     }
@@ -761,6 +1046,17 @@
    "cantidad": 6.0,
    "unidad": "un",
    "especificacion": "Plano: 2\" · 300 · ASTM A-216 WCB · RF · TAVAL BG10503R0104RP",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "2\"",
+    "serie": "300",
+    "material": "A216 WCB",
+    "extremos": "RF",
+    "tipo": "esferica",
+    "paso": "reducido",
+    "marca": "Taval"
+   },
+   "faltan_datos": [],
    "taval": true,
    "fuentes": [
     {
@@ -782,6 +1078,16 @@
    "cantidad": 6.0,
    "unidad": "un",
    "especificacion": "Plano: 3\" · 300 · ASTM A-216 WCB · RF · TAVAL",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "3\"",
+    "serie": "300",
+    "material": "A216 WCB",
+    "extremos": "RF",
+    "tipo": "retencion",
+    "marca": "Taval"
+   },
+   "faltan_datos": [],
    "taval": true,
    "fuentes": [
     {
@@ -803,13 +1109,25 @@
    "cantidad": 6.0,
    "unidad": "un",
    "especificacion": "Plano: 3\" · 300 · ASTM A-216 WCB · RF · Valvtronic / Valbol",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "3\"",
+    "serie": "300",
+    "material": "A216 WCB",
+    "extremos": "RF",
+    "tipo": "esferica actuada",
+    "marca": "Valvtronic"
+   },
+   "faltan_datos": [
+    "paso"
+   ],
    "fuentes": [
     {
      "tipo": "est",
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-11-02",
+     "fecha": "2026-11-03",
      "coincide": "sin_ref",
      "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
@@ -823,6 +1141,18 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 1/2\" ·  · AISI 316 · NPT · Weisz o similar",
+   "atributos": {
+    "familia": "INS",
+    "diametro": "0.5\"",
+    "material": "AISI 316",
+    "extremos": "NPT",
+    "tipo": "manometro",
+    "marca": "Weisz"
+   },
+   "faltan_datos": [
+    "rango",
+    "conexion"
+   ],
    "fuentes": [
     {
      "tipo": "ant",
@@ -832,7 +1162,7 @@
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · 4.Armado de la Oferta Comercial/LM-TANQUE GLICOL.xlsx",
      "fecha": "2026-02-20",
      "coincide": "similar",
-     "diferencia": ""
+     "diferencia": "marca: sin dato (pedido Weisz)"
     }
    ]
   },
@@ -844,13 +1174,25 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 1/2\" ·  · AISI 316 · NPT · ABB 266GST",
+   "atributos": {
+    "familia": "INS",
+    "diametro": "0.5\"",
+    "material": "AISI 316",
+    "extremos": "NPT",
+    "tipo": "transmisor de presion",
+    "marca": "ABB"
+   },
+   "faltan_datos": [
+    "rango",
+    "conexion"
+   ],
    "fuentes": [
     {
      "tipo": "est",
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-11-02",
+     "fecha": "2026-11-03",
      "coincide": "sin_ref",
      "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
@@ -864,6 +1206,15 @@
    "cantidad": 800.0,
    "unidad": "kg",
    "especificacion": "Plano:  ·  · ASTM A-36 · ",
+   "atributos": {
+    "familia": "PER",
+    "tipo": "bastidor del skid",
+    "material": "A36"
+   },
+   "faltan_datos": [
+    "designacion",
+    "espesor_mm"
+   ],
    "fuentes": [
     {
      "tipo": "cot",
@@ -884,6 +1235,14 @@
    "cantidad": 1.0,
    "unidad": "gl",
    "especificacion": "Plano:  ·  ·  · ",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "tablero y materiales"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
    "fuentes": [
     {
      "tipo": "ant",

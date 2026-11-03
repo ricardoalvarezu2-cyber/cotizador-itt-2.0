@@ -146,6 +146,15 @@
    "cantidad": 325.0,
    "unidad": "m",
    "especificacion": "Plano: 36\" · 40 · API 5L X70 · BW · provisto por el cliente (TGS 148 m / SACDE 177 m)",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "36\"",
+    "schedule": "40",
+    "material": "API 5L",
+    "extremos": "BW",
+    "costura": "con costura"
+   },
+   "faltan_datos": [],
    "provee": "cliente",
    "fuentes": [
     {
@@ -166,6 +175,15 @@
    "cantidad": 181.0,
    "unidad": "m",
    "especificacion": "Plano: 36\" · 10 · API 5L X60 · BW · provisto por el cliente (SACDE)",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "36\"",
+    "schedule": "10",
+    "material": "API 5L",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
    "provee": "cliente",
    "fuentes": [
     {
@@ -186,6 +204,18 @@
    "cantidad": 7.0,
    "unidad": "un",
    "especificacion": "Plano: 36\" · 600 x 40 · ASTM A-105 · RF/BW · provisto por el cliente (SACDE)",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "36\"",
+    "serie": "600",
+    "schedule": "40",
+    "material": "A105",
+    "extremos": "BW/RF",
+    "tipo": "wn",
+    "cara": "RF",
+    "norma": "B16.5"
+   },
+   "faltan_datos": [],
    "provee": "cliente",
    "fuentes": [
     {
@@ -206,6 +236,15 @@
    "cantidad": 6.0,
    "unidad": "un",
    "especificacion": "Plano: 36\" · 40 · WPHY-70 · BW · provisto por el cliente (SACDE)",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "36\"",
+    "schedule": "40",
+    "material": "A860 WPHY",
+    "extremos": "BW",
+    "tipo": "codo 90"
+   },
+   "faltan_datos": [],
    "provee": "cliente",
    "fuentes": [
     {
@@ -226,6 +265,15 @@
    "cantidad": 190.0,
    "unidad": "m",
    "especificacion": "Plano: 12\" · 20 · ASTM A53 Gr. B · BW · provisto por el cliente (SACDE)",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "12\"",
+    "schedule": "20",
+    "material": "A53",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
    "provee": "cliente",
    "fuentes": [
     {

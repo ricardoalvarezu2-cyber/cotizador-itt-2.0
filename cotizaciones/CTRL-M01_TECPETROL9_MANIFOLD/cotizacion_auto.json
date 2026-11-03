@@ -145,6 +145,17 @@
    "cantidad": 30.0,
    "unidad": "un",
    "especificacion": "Plano: 4\" · 600 x 80 · ASTM A-105 · RF/BW",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "4\"",
+    "serie": "600",
+    "schedule": "80",
+    "material": "A105",
+    "extremos": "BW/RF",
+    "tipo": "wn",
+    "cara": "RF"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "cot",
@@ -165,6 +176,17 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 8\" · 600 x 80 · ASTM A-105 · RF/BW",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "8\"",
+    "serie": "600",
+    "schedule": "80",
+    "material": "A105",
+    "extremos": "BW/RF",
+    "tipo": "wn",
+    "cara": "RF"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "cot",
@@ -185,6 +207,15 @@
    "cantidad": 4.0,
    "unidad": "m",
    "especificacion": "Plano: 4\" · 80 · ASTM A-106 · BW",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "4\"",
+    "schedule": "80",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "cot",
@@ -205,6 +236,15 @@
    "cantidad": 0.286,
    "unidad": "m",
    "especificacion": "10 barra(s) de 12 m para 112 m en 28 equipo(s); por equipo 0,29 m",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "4\"",
+    "schedule": "80",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "cot",
@@ -225,6 +265,15 @@
    "cantidad": 2.0,
    "unidad": "m",
    "especificacion": "Plano: 8\" · 80 · ASTM A-106 · BW",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "8\"",
+    "schedule": "80",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "cot",
@@ -245,6 +294,15 @@
    "cantidad": 0.143,
    "unidad": "m",
    "especificacion": "5 barra(s) de 12 m para 56 m en 28 equipo(s); por equipo 0,14 m",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "8\"",
+    "schedule": "80",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "cot",
@@ -265,13 +323,21 @@
    "cantidad": 4.0,
    "unidad": "un",
    "especificacion": "Plano: 4\" · 600 · ASTM A-516 · ",
+   "atributos": {
+    "familia": "OTR",
+    "diametro": "4\"",
+    "serie": "600",
+    "material": "A516-70",
+    "tipo": "drip ring ,"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "est",
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-11-02",
+     "fecha": "2026-11-03",
      "coincide": "sin_ref",
      "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
@@ -285,6 +351,15 @@
    "cantidad": 160.0,
    "unidad": "un",
    "especificacion": "Plano: 7/8\" ·  ·  · ",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "0.875\"",
+    "tipo": "esparrago",
+    "medida": "7/8 x 3 7/8"
+   },
+   "faltan_datos": [
+    "material"
+   ],
    "fuentes": [
     {
      "tipo": "ant",
@@ -306,6 +381,15 @@
    "cantidad": 32.0,
    "unidad": "un",
    "especificacion": "Plano: 7/8\" ·  ·  · ",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "0.875\"",
+    "tipo": "esparrago",
+    "medida": "7/8 x 5 1/2"
+   },
+   "faltan_datos": [
+    "material"
+   ],
    "fuentes": [
     {
      "tipo": "ant",
@@ -327,6 +411,13 @@
    "cantidad": 28.0,
    "unidad": "un",
    "especificacion": "Plano: 4\" · 600 · AISI · ",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "4\"",
+    "serie": "600",
+    "tipo": "junta espiralada"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "ant",
@@ -347,6 +438,15 @@
    "cantidad": 8.0,
    "unidad": "un",
    "especificacion": "Plano: 1/2\" · 160 · ASTM A-106 · PE/NPT",
+   "atributos": {
+    "familia": "NIP",
+    "diametro": "0.5\"",
+    "schedule": "160",
+    "material": "A106 B",
+    "extremos": "NPT",
+    "largo_mm": "100"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "ant",
@@ -367,6 +467,15 @@
    "cantidad": 4.0,
    "unidad": "un",
    "especificacion": "Plano: 1/2\" · 3000 · ASTM A-105 · BW/SW",
+   "atributos": {
+    "familia": "AFO",
+    "diametro": "0.5\"",
+    "serie": "3000",
+    "material": "A105",
+    "extremos": "SW/BW",
+    "tipo": "sockolet"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "est",
@@ -388,6 +497,15 @@
    "cantidad": 8.0,
    "unidad": "un",
    "especificacion": "Plano: 1/2\" · 3000 · ASTM A-105 · NPT",
+   "atributos": {
+    "familia": "AFO",
+    "diametro": "0.5\"",
+    "serie": "3000",
+    "material": "A105",
+    "extremos": "NPT",
+    "tipo": "tapon"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -408,6 +526,16 @@
    "cantidad": 8.0,
    "unidad": "un",
    "especificacion": "Plano: 4\" · 80 · ASTM A-234 · BW",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "4\"",
+    "schedule": "80",
+    "extremos": "BW",
+    "tipo": "tee"
+   },
+   "faltan_datos": [
+    "material"
+   ],
    "fuentes": [
     {
      "tipo": "lista",
@@ -429,6 +557,17 @@
    "cantidad": 4.0,
    "unidad": "un",
    "especificacion": "Plano: 8\" x 4\" · 80 · ASTM A-234 · BW",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "8\"",
+    "diametro2": "4\"",
+    "schedule": "80",
+    "extremos": "BW",
+    "tipo": "tee"
+   },
+   "faltan_datos": [
+    "material"
+   ],
    "fuentes": [
     {
      "tipo": "cot",
@@ -450,6 +589,15 @@
    "cantidad": 24.0,
    "unidad": "m",
    "especificacion": "Plano:  ·  ·  · ",
+   "atributos": {
+    "familia": "PER",
+    "tipo": "perfil upn 140",
+    "designacion": "140"
+   },
+   "faltan_datos": [
+    "espesor_mm",
+    "material"
+   ],
    "fuentes": [
     {
      "tipo": "est",
@@ -470,6 +618,18 @@
    "cantidad": 8.0,
    "unidad": "un",
    "especificacion": "Plano: 1/2\" · 3000 · ASTM A-105 · NPT · TAVAL",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "0.5\"",
+    "serie": "3000",
+    "material": "A105",
+    "extremos": "NPT",
+    "tipo": "esferica",
+    "marca": "Taval"
+   },
+   "faltan_datos": [
+    "paso"
+   ],
    "taval": true,
    "fuentes": [
     {
@@ -492,6 +652,17 @@
    "cantidad": 8.0,
    "unidad": "un",
    "especificacion": "Plano: 4\" · 600 · ASTM A-216 · RF · TAVAL",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "4\"",
+    "serie": "600",
+    "material": "A216 WCB",
+    "extremos": "RF",
+    "tipo": "esferica",
+    "paso": "total",
+    "marca": "Taval"
+   },
+   "faltan_datos": [],
    "taval": true,
    "fuentes": [
     {
@@ -513,6 +684,16 @@
    "cantidad": 4.0,
    "unidad": "un",
    "especificacion": "Plano: 4\" · 600 · ASTM A-216 · RF · TAVAL",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "4\"",
+    "serie": "600",
+    "material": "A216 WCB",
+    "extremos": "RF",
+    "tipo": "retencion",
+    "marca": "Taval"
+   },
+   "faltan_datos": [],
    "taval": true,
    "fuentes": [
     {

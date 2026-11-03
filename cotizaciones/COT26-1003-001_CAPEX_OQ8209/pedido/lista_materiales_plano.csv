@@ -1,26 +1,26 @@
-pos,descripcion,diametro,serie_sch,material,extremos,modelo_fabricante,cantidad,unidad,extremos_campo,nota
-1,TAPON,"1/2""",2000,ASTM A-105,NPT-M,,3,un,,Descripción de ITT antes del 30-10-2026: Tapón
-2,"VALVULA ESFERICA Ø 1/2"" #2000 - PASO NOMINAL - CUERPO ASTM A-216 VASTAGO AISI-316 - ESFERA FLOTANTE AISI 316 - ASIENTOS METALICOS AISI-316","1/2""",2000,ASTM A-216 / AISI 316,NPT-H,,5,un,,"Descripción de ITT antes del 30-10-2026: Válvula esférica #2000, paso nominal, cuerpo ASTM A-216, vástago AISI-316, esfera flotante AISI 316, asientos metálicos AISI-316"
-3,NIPLE - LONGITUD: 100 mm,"1/2""",80,API 5L,NPT-M,,6,un,,Descripción de ITT antes del 30-10-2026: Niple longitud 100 mm
-4,NIPLE - LONGITUD: 200 mm,"2""",80,API 5L,NPT-M,,10,un,,Descripción de ITT antes del 30-10-2026: Niple longitud 200 mm
-5,"VALVULA ESFERICA Ø 2"" #2000 - PASO NOMINAL - CUERPO ASTM A-216 VASTAGO AISI-316 - ESFERA FLOTANTE AISI 316 - ASIENTOS METALICOS AISI-316","2""",2000,ASTM A-216 / AISI 316,NPT-H,,1,un,,"Descripción de ITT antes del 30-10-2026: Válvula esférica #2000, paso nominal, cuerpo ASTM A-216, vástago AISI-316, esfera flotante AISI 316, asientos metálicos AISI-316"
-6,UNION DOBLE A GOLPE,"2""",2000,ASTM A-105,NPT-H,,5,un,,Descripción de ITT antes del 30-10-2026: Unión doble a golpe
-7,"VALVULA RETENCION Ø 2"" # 600 - TIPO A CLAPETA - CUERPO ASTM A-216 CLAPETA AISI-316 - ASIENTOS RENOVABLES AISI-316 - RESORTE AISI-316","2""",600,ASTM A-216 / AISI 316,NPT-H,,2,un,,"Descripción de ITT antes del 30-10-2026: Válvula retención #600 tipo a clapeta, cuerpo ASTM A-216, clapeta AISI-316, asientos renovables AISI-316, resorte AISI-316"
-8,TEE NORMAL,"2""",2000,ASTM A-105,NPT-H,,5,un,,Descripción de ITT antes del 30-10-2026: Tee normal
-9,NIPLE - LONGITUD: 100 mm,"2""",80,API 5L,NPT-M,,2,un,,Descripción de ITT antes del 30-10-2026: Niple longitud 100 mm
-10,BUJE REDUCCION,"2""x1/2""",2000,ASTM A-105,NPT,,2,un,,Descripción de ITT antes del 30-10-2026: Buje reducción
-11,CODO 45°,"2""",2000,ASTM A-105,NPT-H,,1,un,,Descripción de ITT antes del 30-10-2026: Codo 45°
-12,NIPLE - LONGITUD: 200 mm,"2""",80,API 5L,NPT/BW,,1,un,,Descripción de ITT antes del 30-10-2026: Niple longitud 200 mm
-13,JUNTA MONOLITICA,"2""",80,ASTM A-234 Gr. WPB,BW,,1,un,,Descripción de ITT antes del 30-10-2026: Junta monolítica
-14,CAÑO - LONGITUD: 1900 mm,"2""",80,API 5L revestido polipropileno,BW,,1,un,,Descripción de ITT antes del 30-10-2026: Caño longitud 1900 mm
-15,CODO 45°,"2""",80,ASTM A-234 Gr. WPB,BW,,1,un,,Descripción de ITT antes del 30-10-2026: Codo 45°
-16,REDUCCION CONCENTRICA,"2 1/2""x2""",80x40,ASTM A-234 Gr. WPB,BW,,1,un,1,Descripción de ITT antes del 30-10-2026: Reducción concéntrica
-17,TAPON,"2""",2000,ASTM A-105,NPT-M,,3,un,,Descripción de ITT antes del 30-10-2026: Tapón
-18,TEE NORMAL,"1/2""",2000,ASTM A-105,NPT-H,,1,un,,Descripción de ITT antes del 30-10-2026: Tee normal
-19,VALVULA BLOQUEO Y PURGA,"1/2""",3000,AISI 316,NPT-M,VI 550-M / ABAC,2,un,,Descripción de ITT antes del 30-10-2026: Válvula bloqueo y purga
-20,MANOMETRO RANGO 0-40 BAR,"1/2""",,,NPT-H,,2,un,,Descripción de ITT antes del 30-10-2026: Manómetro rango 0-40 bar
-21,UNION DOBLE GOLPE EXTENSIBLE,"2""",2000,ASTM A-105,NPT-H,DURALITE,2,un,,Descripción de ITT antes del 30-10-2026: Unión doble golpe extensible
-22,NIPLE - LONGITUD: 320 mm,"2""",80,API 5L,NPT/BW,,1,un,1,Descripción de ITT antes del 30-10-2026: Niple longitud 320 mm
-23,CUPLA,"1/2""",80/2000,ASTM A-234 Gr. WPB,NPT/BW,,2,un,,Descripción de ITT antes del 30-10-2026: Cupla
-24,NIPLE - LONGITUD: 150 mm,"2""",80,API 5L,NPT/NPT,,1,un,,Descripción de ITT antes del 30-10-2026: Niple longitud 150 mm
-25,NIPLE - LONGITUD: 1000 mm,"2""",80,API 5L,NPT/BW,,2,un,1,Descripción de ITT antes del 30-10-2026: Niple longitud 1000 mm
+pos,descripcion,diametro,serie_sch,material,extremos,modelo_fabricante,cantidad,unidad,extremos_campo,nota,familia,tipo,diametro2,serie,schedule,espesor_mm,cara,norma,marca,modelo,rango,trim,paso,costura,revestimiento,largo_mm,medida
+1,TAPON,"1/2""",2000,ASTM A-105,NPT-M,,3,un,,Descripción de ITT antes del 30-10-2026: Tapón,AFO,tapon,,2000,,,,,,,,,,,,,
+2,"VALVULA ESFERICA Ø 1/2"" #2000 - PASO NOMINAL - CUERPO ASTM A-216 VASTAGO AISI-316 - ESFERA FLOTANTE AISI 316 - ASIENTOS METALICOS AISI-316","1/2""",2000,ASTM A-216 / AISI 316,NPT-H,,5,un,,"Descripción de ITT antes del 30-10-2026: Válvula esférica #2000, paso nominal, cuerpo ASTM A-216, vástago AISI-316, esfera flotante AISI 316, asientos metálicos AISI-316",VAL,esferica,,2000,,,,,,,,asientos metalicos,reducido,,,,
+3,NIPLE - LONGITUD: 100 mm,"1/2""",80,API 5L,NPT-M,,6,un,,Descripción de ITT antes del 30-10-2026: Niple longitud 100 mm,NIP,,,,80,,,,,,,,,,,100,
+4,NIPLE - LONGITUD: 200 mm,"2""",80,API 5L,NPT-M,,10,un,,Descripción de ITT antes del 30-10-2026: Niple longitud 200 mm,NIP,,,,80,,,,,,,,,,,200,
+5,"VALVULA ESFERICA Ø 2"" #2000 - PASO NOMINAL - CUERPO ASTM A-216 VASTAGO AISI-316 - ESFERA FLOTANTE AISI 316 - ASIENTOS METALICOS AISI-316","2""",2000,ASTM A-216 / AISI 316,NPT-H,,1,un,,"Descripción de ITT antes del 30-10-2026: Válvula esférica #2000, paso nominal, cuerpo ASTM A-216, vástago AISI-316, esfera flotante AISI 316, asientos metálicos AISI-316",VAL,esferica,,2000,,,,,,,,asientos metalicos,reducido,,,,
+6,UNION DOBLE A GOLPE,"2""",2000,ASTM A-105,NPT-H,,5,un,,Descripción de ITT antes del 30-10-2026: Unión doble a golpe,AFO,union doble a golpe,,2000,,,,,,,,,,,,,
+7,"VALVULA RETENCION Ø 2"" # 600 - TIPO A CLAPETA - CUERPO ASTM A-216 CLAPETA AISI-316 - ASIENTOS RENOVABLES AISI-316 - RESORTE AISI-316","2""",600,ASTM A-216 / AISI 316,NPT-H,,2,un,,"Descripción de ITT antes del 30-10-2026: Válvula retención #600 tipo a clapeta, cuerpo ASTM A-216, clapeta AISI-316, asientos renovables AISI-316, resorte AISI-316",VAL,retencion,,600,,,,,,,,,,,,,
+8,TEE NORMAL,"2""",2000,ASTM A-105,NPT-H,,5,un,,Descripción de ITT antes del 30-10-2026: Tee normal,AFO,tee,,2000,,,,,,,,,,,,,
+9,NIPLE - LONGITUD: 100 mm,"2""",80,API 5L,NPT-M,,2,un,,Descripción de ITT antes del 30-10-2026: Niple longitud 100 mm,NIP,,,,80,,,,,,,,,,,100,
+10,BUJE REDUCCION,"2""x1/2""",2000,ASTM A-105,NPT,,2,un,,Descripción de ITT antes del 30-10-2026: Buje reducción,AFO,buje,"0.5""",2000,,,,,,,,,,,,,
+11,CODO 45°,"2""",2000,ASTM A-105,NPT-H,,1,un,,Descripción de ITT antes del 30-10-2026: Codo 45°,AFO,codo 45,,2000,,,,,,,,,,,,,
+12,NIPLE - LONGITUD: 200 mm,"2""",80,API 5L,NPT/BW,,1,un,,Descripción de ITT antes del 30-10-2026: Niple longitud 200 mm,NIP,,,,80,,,,,,,,,,,200,
+13,JUNTA MONOLITICA,"2""",80,ASTM A-234 Gr. WPB,BW,,1,un,,Descripción de ITT antes del 30-10-2026: Junta monolítica,JUN,junta monolitica,,,80,,,,,,,,,,,,
+14,CAÑO - LONGITUD: 1900 mm,"2""",80,API 5L revestido polipropileno,BW,,1,un,,Descripción de ITT antes del 30-10-2026: Caño longitud 1900 mm,CAN,,,,80,,,,,,,,,,polipropileno,,
+15,CODO 45°,"2""",80,ASTM A-234 Gr. WPB,BW,,1,un,,Descripción de ITT antes del 30-10-2026: Codo 45°,ABW,codo 45,,,80,,,,,,,,,,,,
+16,REDUCCION CONCENTRICA,"2 1/2""x2""",80x40,ASTM A-234 Gr. WPB,BW,,1,un,1,Descripción de ITT antes del 30-10-2026: Reducción concéntrica,ABW,reduccion concentrica,"2""",,,,,,,,,,,,,,
+17,TAPON,"2""",2000,ASTM A-105,NPT-M,,3,un,,Descripción de ITT antes del 30-10-2026: Tapón,AFO,tapon,,2000,,,,,,,,,,,,,
+18,TEE NORMAL,"1/2""",2000,ASTM A-105,NPT-H,,1,un,,Descripción de ITT antes del 30-10-2026: Tee normal,AFO,tee,,2000,,,,,,,,,,,,,
+19,VALVULA BLOQUEO Y PURGA,"1/2""",3000,AISI 316,NPT-M,VI 550-M / ABAC,2,un,,Descripción de ITT antes del 30-10-2026: Válvula bloqueo y purga,VAL,bloqueo y purga,,3000,,,,,ABAC,,,,,,,,
+20,MANOMETRO RANGO 0-40 BAR,"1/2""",,,NPT-H,,2,un,,Descripción de ITT antes del 30-10-2026: Manómetro rango 0-40 bar,INS,manometro,,,,,,,,,0-40 bar,,,,,,
+21,UNION DOBLE GOLPE EXTENSIBLE,"2""",2000,ASTM A-105,NPT-H,DURALITE,2,un,,Descripción de ITT antes del 30-10-2026: Unión doble golpe extensible,AFO,union doble a golpe extensible,,2000,,,,,,,,,,,,,
+22,NIPLE - LONGITUD: 320 mm,"2""",80,API 5L,NPT/BW,,1,un,1,Descripción de ITT antes del 30-10-2026: Niple longitud 320 mm,NIP,,,,80,,,,,,,,,,,320,
+23,CUPLA,"1/2""",80/2000,ASTM A-234 Gr. WPB,NPT/BW,,2,un,,Descripción de ITT antes del 30-10-2026: Cupla,AFO,cupla,,2000,80,,,,,,,,,,,,
+24,NIPLE - LONGITUD: 150 mm,"2""",80,API 5L,NPT/NPT,,1,un,,Descripción de ITT antes del 30-10-2026: Niple longitud 150 mm,NIP,,,,80,,,,,,,,,,,150,
+25,NIPLE - LONGITUD: 1000 mm,"2""",80,API 5L,NPT/BW,,2,un,1,Descripción de ITT antes del 30-10-2026: Niple longitud 1000 mm,NIP,,,,80,,,,,,,,,,,1000,

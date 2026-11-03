@@ -347,6 +347,16 @@ def main(carpeta):
             if base_pos in cliente and not r["descripcion"].startswith(" ".join(str(cliente[base_pos][0]).split())):
                 errores.append(f"{r['id']}: la descripción del cómputo no empieza con la del cliente («{cliente[base_pos][0]}»)")
 
+    # Datos del pedido que faltan para identificar cada pieza (Matías, 03-11-2026): se completan en las columnas de la
+    # lista del plano (atributos_plano.py) o se piden al cliente
+    import atributos_plano
+    from buscar_material import faltan_datos
+    for p in plano:
+        fam, at = atributos_plano.leer(p)
+        falta = faltan_datos(fam, at)
+        if falta:
+            avisos.append(f"Pos {p['pos']}: faltan datos del pedido: {', '.join(atributos_plano.NOMBRES.get(k, k) for k in falta)} (completar en la lista o pedirlos al cliente)")
+
     for pos, filas in por_pos.items():
         if pos in pos_plano:
             continue

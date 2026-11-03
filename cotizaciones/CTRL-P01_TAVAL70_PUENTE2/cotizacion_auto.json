@@ -145,6 +145,18 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 3\" · 600/80 · SA-105 · RF/BW",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "3\"",
+    "serie": "600",
+    "schedule": "80",
+    "extremos": "BW/RF",
+    "tipo": "wn",
+    "cara": "RF"
+   },
+   "faltan_datos": [
+    "material"
+   ],
    "fuentes": [
     {
      "tipo": "cot",
@@ -166,6 +178,16 @@
    "cantidad": 4.0,
    "unidad": "m",
    "especificacion": "Plano: 3\" · 80 · SA-106 Gr.B · BW",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "3\"",
+    "schedule": "80",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [
+    "material"
+   ],
    "fuentes": [
     {
      "tipo": "ant",
@@ -187,6 +209,16 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 3\" x 2\" · 80 · SA-234 Gr.WPB · BW",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "3\"",
+    "diametro2": "2\"",
+    "schedule": "80",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "tee"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "ant",
@@ -207,6 +239,18 @@
    "cantidad": 48.0,
    "unidad": "un",
    "especificacion": "Plano: 2\" · 600/80 · SA-105 · RF/BW",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "2\"",
+    "serie": "600",
+    "schedule": "80",
+    "extremos": "BW/RF",
+    "tipo": "wn",
+    "cara": "RF"
+   },
+   "faltan_datos": [
+    "material"
+   ],
    "fuentes": [
     {
      "tipo": "cot",
@@ -228,6 +272,16 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 2\" x 1 1/2\" · 80 · SA-234 Gr.WPB · BW",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "2\"",
+    "diametro2": "1.5\"",
+    "schedule": "80",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "tee"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -248,13 +302,25 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 1 1/2\" · 600/160 · SA-105 · RF/SW",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "1.5\"",
+    "serie": "600",
+    "schedule": "160",
+    "extremos": "SW/RF",
+    "tipo": "sw",
+    "cara": "RF"
+   },
+   "faltan_datos": [
+    "material"
+   ],
    "fuentes": [
     {
      "tipo": "est",
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-11-02",
+     "fecha": "2026-11-03",
      "coincide": "sin_ref",
      "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
@@ -268,6 +334,18 @@
    "cantidad": 10.0,
    "unidad": "un",
    "especificacion": "Plano: 2\" · 600 · SA-216 WCB · RF · TAVAL",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "2\"",
+    "serie": "600",
+    "material": "A216 WCB",
+    "extremos": "RF",
+    "tipo": "esferica",
+    "marca": "Taval"
+   },
+   "faltan_datos": [
+    "paso"
+   ],
    "taval": true,
    "fuentes": [
     {
@@ -290,13 +368,22 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 2\" · 600 · SA-216 WCB · RF",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "2\"",
+    "serie": "600",
+    "material": "A216 WCB",
+    "extremos": "RF",
+    "tipo": "globo actuada"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "est",
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-11-02",
+     "fecha": "2026-11-03",
      "coincide": "sin_ref",
      "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
@@ -310,6 +397,16 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 2\" · 600 · SA-216 WCB · RF · TAVAL",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "2\"",
+    "serie": "600",
+    "material": "A216 WCB",
+    "extremos": "RF",
+    "tipo": "retencion",
+    "marca": "Taval"
+   },
+   "faltan_datos": [],
    "taval": true,
    "fuentes": [
     {
@@ -331,13 +428,22 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 2\" · 600 · SA-216 WCB · RF · TAVAL",
+   "atributos": {
+    "familia": "OTR",
+    "diametro": "2\"",
+    "serie": "600",
+    "material": "A216 WCB",
+    "extremos": "RF",
+    "tipo": "filtro y ,"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "est",
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-11-02",
+     "fecha": "2026-11-03",
      "coincide": "sin_ref",
      "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
@@ -351,6 +457,15 @@
    "cantidad": 48.0,
    "unidad": "un",
    "especificacion": "Plano: 2\" · 600 · AISI 316 + grafito · ",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "2\"",
+    "serie": "600",
+    "material": "AISI 316",
+    "extremos": "RF",
+    "tipo": "junta espiralada"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "est",
@@ -372,6 +487,17 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 2\" · 600 · Varios · RF",
+   "atributos": {
+    "familia": "INS",
+    "diametro": "2\"",
+    "serie": "600",
+    "extremos": "RF",
+    "tipo": "caudalimetro"
+   },
+   "faltan_datos": [
+    "rango",
+    "conexion"
+   ],
    "fuentes": [
     {
      "tipo": "ant",
@@ -393,6 +519,16 @@
    "cantidad": 24.0,
    "unidad": "m",
    "especificacion": "Plano: 2\" · 80 · SA-106 Gr.B · BW",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "2\"",
+    "schedule": "80",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [
+    "material"
+   ],
    "fuentes": [
     {
      "tipo": "ant",
@@ -414,13 +550,21 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano:  ·  ·  · ",
+   "atributos": {
+    "familia": "INS"
+   },
+   "faltan_datos": [
+    "tipo",
+    "rango",
+    "conexion"
+   ],
    "fuentes": [
     {
      "tipo": "est",
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-11-02",
+     "fecha": "2026-11-03",
      "coincide": "sin_ref",
      "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
@@ -434,13 +578,21 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano:  ·  ·  · ",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "inyector de quimicos"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
    "fuentes": [
     {
      "tipo": "est",
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-11-02",
+     "fecha": "2026-11-03",
      "coincide": "sin_ref",
      "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
@@ -454,6 +606,14 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano:  ·  ·  · ",
+   "atributos": {
+    "familia": "INS",
+    "tipo": "manometro"
+   },
+   "faltan_datos": [
+    "rango",
+    "conexion"
+   ],
    "fuentes": [
     {
      "tipo": "cot",
@@ -475,6 +635,14 @@
    "cantidad": 4.0,
    "unidad": "un",
    "especificacion": "Plano:  ·  ·  · ",
+   "atributos": {
+    "familia": "INS",
+    "tipo": "transmisor de temperatura"
+   },
+   "faltan_datos": [
+    "rango",
+    "conexion"
+   ],
    "fuentes": [
     {
      "tipo": "ant",
@@ -496,6 +664,16 @@
    "cantidad": 14.0,
    "unidad": "un",
    "especificacion": "Plano: 1\" · 3000 · SA-105 · BW/SW",
+   "atributos": {
+    "familia": "AFO",
+    "diametro": "1\"",
+    "serie": "3000",
+    "extremos": "SW/BW",
+    "tipo": "sockolet"
+   },
+   "faltan_datos": [
+    "material"
+   ],
    "fuentes": [
     {
      "tipo": "est",
@@ -517,6 +695,15 @@
    "cantidad": 46.0,
    "unidad": "un",
    "especificacion": "Plano: 2\" · 600 · AISI 316 + grafito · ",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "2\"",
+    "serie": "600",
+    "material": "AISI 316",
+    "extremos": "RF",
+    "tipo": "junta espiralada"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "est",
@@ -538,6 +725,15 @@
    "cantidad": 368.0,
    "unidad": "un",
    "especificacion": "Plano: 5/8\" ·  ·  · ",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "0.625\"",
+    "tipo": "esparrago",
+    "medida": "5/8 x 5"
+   },
+   "faltan_datos": [
+    "material"
+   ],
    "fuentes": [
     {
      "tipo": "ant",
@@ -559,6 +755,15 @@
    "cantidad": 8.0,
    "unidad": "un",
    "especificacion": "Plano: 2\" · 80 · SA-234 Gr.WPB · BW",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "2\"",
+    "schedule": "80",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "tee"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "ant",
@@ -579,6 +784,17 @@
    "cantidad": 16.0,
    "unidad": "un",
    "especificacion": "Plano: 1\" · 3000 ·  ·  · TAVAL",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "1\"",
+    "serie": "3000",
+    "tipo": "esferica",
+    "marca": "Taval"
+   },
+   "faltan_datos": [
+    "material",
+    "paso"
+   ],
    "taval": true,
    "fuentes": [
     {
@@ -601,13 +817,21 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano:  ·  · Varios · ",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "materiales de canalizaciones"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
    "fuentes": [
     {
      "tipo": "est",
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-11-02",
+     "fecha": "2026-11-03",
      "coincide": "sin_ref",
      "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
@@ -621,6 +845,14 @@
    "cantidad": 1050.0,
    "unidad": "kg",
    "especificacion": "Plano:  ·  · SA-36 · ",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "bastidor y soportes"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
    "fuentes": [
     {
      "tipo": "cot",

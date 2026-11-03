@@ -145,6 +145,16 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 36\" · esp. 3/8\" · ASTM A-516 Gr.70 · BW/BW",
+   "atributos": {
+    "familia": "OTR",
+    "diametro": "36\"",
+    "material": "A516-70",
+    "extremos": "BW",
+    "tipo": "virola rolada 2500"
+   },
+   "faltan_datos": [
+    "serie"
+   ],
    "fuentes": [
     {
      "tipo": "est",
@@ -165,6 +175,14 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 36\" · esp. 3/8\" · ASTM A-516 Gr.70 · BW",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "36\"",
+    "material": "A516-70",
+    "extremos": "BW",
+    "tipo": "casquete"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "cot",
@@ -185,6 +203,15 @@
    "cantidad": 170.0,
    "unidad": "kg",
    "especificacion": "Plano:  ·  · ASTM A-36 · ",
+   "atributos": {
+    "familia": "PER",
+    "tipo": "patas de chapa",
+    "material": "A36"
+   },
+   "faltan_datos": [
+    "designacion",
+    "espesor_mm"
+   ],
    "fuentes": [
     {
      "tipo": "cot",
@@ -205,6 +232,15 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 2\" · 40 · ASTM A-234 WPB · BW",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "2\"",
+    "schedule": "40",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "codo 90"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -225,6 +261,15 @@
    "cantidad": 5.0,
    "unidad": "kg",
    "especificacion": "Plano:  ·  · ASTM A-36 · ",
+   "atributos": {
+    "familia": "OTR",
+    "material": "A36",
+    "tipo": "bafle de entrada"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
    "fuentes": [
     {
      "tipo": "cot",
@@ -245,6 +290,16 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 2\" · 150 · ASTM A-105 · RF/SW",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "2\"",
+    "serie": "150",
+    "material": "A105",
+    "extremos": "SW/RF",
+    "tipo": "so",
+    "cara": "RF"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "ant",
@@ -265,6 +320,16 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 6\" · 150 · ASTM A-105 · RF/SW",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "6\"",
+    "serie": "150",
+    "material": "A105",
+    "extremos": "SW/RF",
+    "tipo": "so",
+    "cara": "RF"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -285,6 +350,15 @@
    "cantidad": 6.0,
    "unidad": "m",
    "especificacion": "Plano: 6\" · 40 · ASTM A-106 Gr B · BW",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "6\"",
+    "schedule": "40",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "cot",
@@ -305,6 +379,15 @@
    "cantidad": 6.0,
    "unidad": "m",
    "especificacion": "1 barra(s) de 12 m para 6 m en 1 equipo(s); por equipo 6 m",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "6\"",
+    "schedule": "40",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "cot",
@@ -325,6 +408,15 @@
    "cantidad": 0.25,
    "unidad": "m",
    "especificacion": "Plano: 2\" · 80 · ASTM A-106 Gr B · BW",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "2\"",
+    "schedule": "80",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "cot",
@@ -345,13 +437,24 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 10\" · 20 · ASTM A-106 Gr B · BW",
+   "atributos": {
+    "familia": "OTR",
+    "diametro": "10\"",
+    "schedule": "20",
+    "material": "A106 B",
+    "extremos": "BW",
+    "tipo": "sombrerete de venteo"
+   },
+   "faltan_datos": [
+    "serie"
+   ],
    "fuentes": [
     {
      "tipo": "est",
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-11-02",
+     "fecha": "2026-11-03",
      "coincide": "sin_ref",
      "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
@@ -365,13 +468,22 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano:  ·  · AISI 304 · ",
+   "atributos": {
+    "familia": "OTR",
+    "material": "AISI 304",
+    "tipo": "placa de identificacion"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
    "fuentes": [
     {
      "tipo": "est",
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-11-02",
+     "fecha": "2026-11-03",
      "coincide": "sin_ref",
      "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
@@ -385,6 +497,15 @@
    "cantidad": 90.0,
    "unidad": "kg",
    "especificacion": "Plano:  ·  · ASTM A-36 · ",
+   "atributos": {
+    "familia": "OTR",
+    "material": "A36",
+    "tipo": "deflectores 900 x"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
    "fuentes": [
     {
      "tipo": "cot",
@@ -405,6 +526,14 @@
    "cantidad": 8.0,
    "unidad": "un",
    "especificacion": "Plano: 3/4\" ·  · ASTM A-193 B7 / A-194 2H · ",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "0.75\"",
+    "material": "A194 2H",
+    "tipo": "esparrago",
+    "medida": "3/4 x 5 1/8"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "ant",
@@ -426,6 +555,15 @@
    "cantidad": 6.0,
    "unidad": "kg",
    "especificacion": "Plano:  ·  · ASTM A-36 · ",
+   "atributos": {
+    "familia": "PER",
+    "tipo": "cancamo de izaje",
+    "material": "A36"
+   },
+   "faltan_datos": [
+    "designacion",
+    "espesor_mm"
+   ],
    "fuentes": [
     {
      "tipo": "cot",
@@ -446,6 +584,15 @@
    "cantidad": 5.0,
    "unidad": "kg",
    "especificacion": "Plano: 6\" ·  · acero al carbono · ",
+   "atributos": {
+    "familia": "OTR",
+    "diametro": "6\"",
+    "material": "Acero al carbono",
+    "tipo": "separador de niebla"
+   },
+   "faltan_datos": [
+    "serie"
+   ],
    "fuentes": [
     {
      "tipo": "cot",
@@ -466,6 +613,17 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 2\" · 600 / sch 80 · ASTM A-105 · RF/BW",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "2\"",
+    "serie": "600",
+    "schedule": "80",
+    "material": "A105",
+    "extremos": "BW/RF",
+    "tipo": "wn",
+    "cara": "RF"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "cot",
@@ -486,6 +644,15 @@
    "cantidad": 8.0,
    "unidad": "kg",
    "especificacion": "Plano:  ·  · ASTM A-516 Gr.70 · ",
+   "atributos": {
+    "familia": "OTR",
+    "material": "A516-70",
+    "tipo": "refuerzo de conexion"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
    "fuentes": [
     {
      "tipo": "cot",
@@ -506,13 +673,22 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 2\" · 6000 · ASTM A-105 · NPT-H/SW",
+   "atributos": {
+    "familia": "AFO",
+    "diametro": "2\"",
+    "serie": "6000",
+    "material": "A105",
+    "extremos": "NPT/SW",
+    "tipo": "media cupla"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "est",
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-11-02",
+     "fecha": "2026-11-03",
      "coincide": "sin_ref",
      "diferencia": "El más parecido es de otro diámetro (0.75\") (AFO-04930 MEDIA CUPLA ¾ 6000 NPT ASTM A105, USD 3,82): no sirve como precio"
     }
@@ -526,6 +702,13 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 6\" · 150 ·  · ",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "6\"",
+    "serie": "150",
+    "tipo": "junta plana"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "est",
@@ -547,6 +730,15 @@
    "cantidad": 40.0,
    "unidad": "kg",
    "especificacion": "Plano:  ·  · ASTM A-36 · ",
+   "atributos": {
+    "familia": "OTR",
+    "material": "A36",
+    "tipo": "cunas de apoyo"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
    "fuentes": [
     {
      "tipo": "cot",

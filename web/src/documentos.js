@@ -153,6 +153,26 @@ const Documentos = (() => {
     ws["!cols"] = [{ wch: 52 }, { wch: 16 }, { wch: 16 }, { wch: 16 }, { wch: 16 }, { wch: 4 }, { wch: 58 }, { wch: 13 }];
     X.utils.book_append_sheet(wb, ws, "Cotización");
 
+    // Datos del pedido y del antecedente, columna por columna (Matías, 03-11-2026), como atributos_plano.fila_datos
+    const COLS = [["Ø", "diametro"], ["Ø2", "diametro2"], ["Serie", "serie"], ["Sch", "schedule"], ["Espesor mm", "espesor_mm"], ["Material", "material"],
+      ["Extremos", "extremos"], ["Cara", "cara"], ["Norma", "norma"], ["Marca", "marca"], ["Modelo", "modelo"], ["Rango", "rango"]];
+    const OTROS = ["tipo", "trim", "paso", "costura", "revestimiento", "largo_mm", "medida", "designacion", "conexion"];
+    const NOMBRES = { diametro: "Ø", diametro2: "Ø2", espesor_mm: "espesor", largo_mm: "largo", designacion: "designación", conexion: "conexión" };
+    const otros = a => OTROS.filter(k => a[k]).map(k => `${k}: ${a[k]}`).join("; ");
+    const CATM = new Map(((datos && datos.materiales) || []).map(m => [m.c, m]));
+    const filaDatos = it => {
+      const at = it.atributos || (it.at ? { familia: it.fam || "", ...it.at } : {});
+      let faltan = it.faltan_datos;
+      if (!faltan && datos && at.familia && datos.familias?.[at.familia]) {
+        const op = Busqueda.opcionales(at.familia, at);
+        faltan = Busqueda.campos(datos, at.familia).filter(c => !at[c] && !op.has(c));
+      }
+      const s = it.fuentes[0], cod = Busqueda.codigoDe(s), m = CATM.get(cod), ra = m ? { ...(m.a || {}) } : {};
+      return [[at.familia || "", ...COLS.map(([, k]) => at[k] || ""), otros(at), (faltan || []).map(k => NOMBRES[k] || k).join(", ")],
+              [cod, m ? m.d : "", ...COLS.map(([, k]) => ra[k] || ""), otros(ra)]];
+    };
+    const ENC_P = ["Pedido: familia", ...COLS.map(([n]) => `Pedido: ${n}`), "Pedido: otros datos", "Datos que faltan del pedido"];
+    const ENC_A = ["Antecedente: código", "Antecedente: descripción", ...COLS.map(([n]) => `Antecedente: ${n}`), "Antecedente: otros datos"];
     const detalle = (nombre, items, esSrv) => {
       const w = hoja();
       cabecera(w, ["Pos", esSrv ? "Grupo" : "ID", "Descripción", `Cant. / ${eq.singular}`, "Unidad", "USD unit. (a la fecha del precio)", "Subtotal USD (sin ajuste)",
@@ -173,13 +193,21 @@ const Documentos = (() => {
           const z = [6, 7, 15, 16].includes(c) ? U : c === 4 ? (Number.isInteger(v) ? "#,##0" : "#,##0.0###") : { 11: "dd-mm-yyyy", 13: "#,##0.00", 14: "#,##0.00" }[c];
           put(w, A(c, i), v, st, z);
         });
+        if (!esSrv) {
+          const [ped, ant] = filaDatos(it);
+          [...ped, ...ant].forEach((v, j) => put(w, A(20 + j, i), v, j === ped.length - 1 && v ? { fill: { fgColor: { rgb: "F8E1DE" } } } : null));
+        }
       });
+      if (!esSrv) {
+        [...ENC_P, ...ENC_A].forEach((t, j) => put(w, A(20 + j, 1), t, { ...H, fill: { fgColor: { rgb: j < ENC_P.length ? "2C7A4B" : "6B4E9B" } } }));
+        w["!cols"] = [...(w["!cols"] || []), ...[...ENC_P, ...ENC_A].map(t => ({ wch: /descripción|otros datos|faltan del pedido/.test(t) ? 40 : 12 }))];
+      }
       const n = items.length + 2;
       put(w, A(3, n), `Subtotal por ${eq.singular}`, TOT);
       put(w, A(7, n), { f: `SUM(G2:G${n - 1})` }, TOT, U); put(w, A(16, n), { f: `SUM(P2:P${n - 1})` }, TOT, U);
       let k = n + 2;
       for (const it of items) for (const a of it.fuentes.slice(1)) put(w, A(3, k++), `Alternativa pos ${it.pos}: USD ${numg(a.precio)} · ${a.proveedor} · ${a.origen} · ${fecha(a.fecha)} (${TIPOS[a.tipo]})`, GRIS);
-      w["!autofilter"] = { ref: `A1:R${Math.max(2, n - 1)}` };
+      w["!autofilter"] = { ref: `A1:${X.utils.encode_col(esSrv ? 17 : 19 + ENC_P.length + ENC_A.length - 1)}${Math.max(2, n - 1)}` };
       X.utils.book_append_sheet(wb, w, nombre);
     };
     detalle("Materiales", mat, false);

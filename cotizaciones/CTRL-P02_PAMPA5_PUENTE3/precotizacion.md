@@ -14,7 +14,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 4 | Sockolet 3 x 3/4 · Ø 3" x 3/4" | SIMILAR | 0,73 / un | 2026-10-30 · cotización | diametro: 4" (pedido 3"); extremos: SW (pedido SW/BW); precio escalado por diámetro (0,75" ÷ 4")^1,5 = × 0,08 |
 | 5 | Caño sin costura longitud 5173 mm · Ø 3" | IGUAL | 25,08 / m | 2025-12-26 · lista | — |
 | 6 | Tee reducción BW 3 Sch. 40 x 2 Sch. 80 · Ø 3" | **SIN PRECIO** | — | — | pedir cotización |
-| 7 | Brida WNRF Sch. 80 · Ø 2" | IGUAL | 15,63 / un | 2026-10-30 · cotización | — |
+| 7 | Brida WNRF Sch. 80 · Ø 2" | IGUAL | 15,63 / un | 2026-10-30 · cotización | norma: sin dato (pedido B16.5) |
 | 8 | Junta espiralada e=4.5 mm · Ø 2" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (0.75") (JUN-02760, USD 2,00): pedir cotización |
 | 9 | Válvula esférica paso total RF accionamiento  | SIMILAR | 170,30 / un | 2025-12-10 · planilla interna | — · faltan: material |
 | 10 | Brida ciega BLRF · Ø 2" | IGUAL | 18,50 / un | 2025-12-26 · lista | — |
@@ -34,20 +34,20 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 24 | Junta espiralada e=4.5 mm · Ø 3" | SIMILAR (estimado cepo) ⚠ | 12,13 / un | 2025-03-27 · estimado (cepo) | diametro: 4" (pedido 3") |
 | 25 | Caño sin costura longitud 722 mm · Ø 3" | IGUAL | 25,08 / m | 2025-12-26 · lista | — |
 | 26 | Válvula esférica paso total RF accionamiento  | IGUAL | 256,00 / un | 2025-09-01 · lista | — |
-| 27 | Brida ciega BLRF · Ø 3" | IGUAL | 33,31 / un | 2026-10-30 · cotización | — |
+| 27 | Brida ciega BLRF · Ø 3" | IGUAL | 33,31 / un | 2026-10-30 · cotización | norma: sin dato (pedido B16.5) |
 | 28 | Caño sin costura longitud 205 mm · Ø 3" | IGUAL | 25,08 / m | 2025-12-26 · lista | — |
 | 29 | Caño sin costura longitud 215 mm · Ø 3" | IGUAL | 25,08 / m | 2025-12-26 · lista | — |
 | 30 | Caño sin costura longitud 105 mm · Ø 3" | IGUAL | 25,08 / m | 2025-12-26 · lista | — |
-| 31 | Tee BW Sch. 40 · Ø 3" | IGUAL | 28,36 / un | 2025-12-26 · lista | — |
+| 31 | Tee BW Sch. 40 · Ø 3" | IGUAL | 28,36 / un | 2025-12-26 · lista | norma: sin dato (pedido B16.9) |
 | 32 | Tuerca hexagonal · Ø 5/8" | IGUAL | 0,18 / un | 2025-09-04 · cotización | — |
 | 33 | Espárrago 5/8 L=3 1/2 (90 mm) · Ø 5/8" | SIMILAR | 3,50 / un | 2026-10-30 · cotización | serie: 300 (no pedido); medida: 5/8 x 3 5/8 (pedido 5/8 x 3 1/2) |
 | 34 | Tuerca hexagonal · Ø 3/4" | SIMILAR | 0,18 / un | 2025-09-04 · cotización | diametro: 0.625" (pedido 0.75") |
 | 35 | Caño sin costura longitud 254 mm · Ø 3" | IGUAL | 25,08 / m | 2025-12-26 · lista | — |
 | 36 | Caño sin costura longitud 100 mm · Ø 3" | IGUAL | 25,08 / m | 2025-12-26 · lista | — |
 | 37 | Espárrago 3/4 L=4 1/4 (110 mm) · Ø 3/4" | SIMILAR | 5,00 / un | 2026-01-15 · planilla interna | material: A194 2H (pedido A193 B7); unidad distinta: catálogo por uni, plano por un |
-| 38 | Indicador transmisor de temperatura | SIMILAR | 803,00 / un | 2026-06-25 · planilla interna | — · faltan: rango, conexion |
+| 38 | Indicador transmisor de temperatura | SIMILAR | 803,00 / un | 2026-06-25 · planilla interna | marca: sin dato (pedido ABB) · faltan: rango, conexion |
 | 39 | Indicador de presión (manómetro) con manifold | SIMILAR | 120,00 / un | 2026-10-30 · cotización | — · faltan: rango, conexion |
-| 40 | Indicador transmisor de presión con manifold  | SIMILAR | 1.100,00 / un | 2026-03-10 · planilla interna | — · faltan: rango, conexion |
+| 40 | Indicador transmisor de presión con manifold  | SIMILAR | 1.100,00 / un | 2026-03-10 · planilla interna | marca: sin dato (pedido ABB) · faltan: rango, conexion |
 | 32 | Tuerca hexagonal · Ø 5/8" | INCLUIDAS EN EL ESPÁRRAGO | 0 | — | el precio elegido para los espárragos (33, 37) trae tuercas: confirmar |
 | 34 | Tuerca hexagonal · Ø 3/4" | INCLUIDAS EN EL ESPÁRRAGO | 0 | — | el precio elegido para los espárragos (33, 37) trae tuercas: confirmar |
 | 36b | Completar barra de 12 m (pos 5, 21, 25, 28, 29, 30, 35, 36) | compra extra | USD 25,08/m × 0,17 m | | Se usan 70,32 m en 10 equipo(s) y se compran 72 m. Borrar si hay sobrante en stock |

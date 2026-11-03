@@ -1,6 +1,6 @@
-pos,descripcion,diametro,serie_sch,material,extremos,modelo_fabricante,cantidad,unidad,extremos_campo
-1,Caño con costura biselado (nota 14),"36""",40,API 5L X70,BW,provisto por el cliente (TGS 148 m / SACDE 177 m),325,m,0
-2,Caño sin costura biselado,"36""",10,API 5L X60,BW,provisto por el cliente (SACDE),181,m,0
-3,Brida WN RF ASME B16.5,"36""",600 x 40,ASTM A-105,RF/BW,provisto por el cliente (SACDE),7,un,0
-4,Codo 90° MSS-SP-75,"36""",40,WPHY-70,BW,provisto por el cliente (SACDE),6,un,0
-5,Caño sin costura biselado,"12""",20,ASTM A53 Gr. B,BW,provisto por el cliente (SACDE),190,m,0
+pos,descripcion,diametro,serie_sch,material,extremos,modelo_fabricante,cantidad,unidad,extremos_campo,familia,tipo,diametro2,serie,schedule,espesor_mm,cara,norma,marca,modelo,rango,trim,paso,costura,revestimiento,largo_mm,medida
+1,Caño con costura biselado (nota 14),"36""",40,API 5L X70,BW,provisto por el cliente (TGS 148 m / SACDE 177 m),325,m,0,CAN,,,,40,,,,,,,,,con costura,,,
+2,Caño sin costura biselado,"36""",10,API 5L X60,BW,provisto por el cliente (SACDE),181,m,0,CAN,,,,10,,,,,,,,,sin costura,,,
+3,Brida WN RF ASME B16.5,"36""",600 x 40,ASTM A-105,RF/BW,provisto por el cliente (SACDE),7,un,0,BRI,wn,,600,40,,RF,B16.5,,,,,,,,,
+4,Codo 90° MSS-SP-75,"36""",40,WPHY-70,BW,provisto por el cliente (SACDE),6,un,0,ABW,codo 90,,,40,,,,,,,,,,,,
+5,Caño sin costura biselado,"12""",20,ASTM A53 Gr. B,BW,provisto por el cliente (SACDE),190,m,0,CAN,,,,20,,,,,,,,,sin costura,,,

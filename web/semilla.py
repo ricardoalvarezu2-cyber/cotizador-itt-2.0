@@ -72,6 +72,9 @@ def main(carpeta, ident="capex-oq8209", salida=None, previo=None):
     # después (auditoría 30-10-2026: una corrección hecha en el repositorio se perdía al pasar la página)
     cot["huella_repo"] = huella(c)
     of = json.load(open(c / "oferta.json", encoding="utf-8"))
+    sys.path.insert(0, str(RAIZ / "herramientas"))
+    import atributos_plano  # datos del pedido en columnas y los que faltan (planilla de la página, 03-11-2026)
+    atributos_plano.atributos_items(c, cot)
     plano = {r["pos"]: r for r in csv.DictReader(open(c / "pedido" / "lista_materiales_plano.csv", encoding="utf-8"))}
     for it in cot["items"]:
         r = plano.get(str(it.get("pos")))

@@ -1,6 +1,6 @@
 # Ficha por rubro — COT26-0330-002
 
-Generada por `herramientas/ficha_rubros.py` el 30-10-2026. Todo **por skid**; la cantidad (6) multiplica al final.
+Generada por `herramientas/ficha_rubros.py` el 03-11-2026. Todo **por skid**; la cantidad (6) multiplica al final.
 Sirve para pedir un precio global al tercero y para controlarlo contra el cálculo detallado.
 
 ## 1. MO de armado y soldadura del piping
@@ -9,8 +9,8 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 - Pulgadas equivalentes de soldadura: **456,03**
 - kg de piping (caños, bridas, accesorios y válvulas con tabla): **6.566 kg** · bridas: 31
 - Diámetros soldados a tope: 16", 12"
-- **Costo por antecedentes.** Por antecedentes: USD 10.193,42 (1 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 22,35/pulgada eq. · USD 1,55/kg de piping · USD 351,50/junta a tope
+- **Costo por antecedentes.** Por antecedentes: USD 10.181,54 (1 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 22,33/pulgada eq. · USD 1,55/kg de piping · USD 351,09/junta a tope
 
 ## 2. MO de fabricación de la estructura
 
@@ -22,15 +22,15 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 - m² de piping: **40,62** (caños y niples 4,60; bridas, accesorios y válvulas por largo equivalente) · m² de estructura: **25,50**
 - m² total: **66,12** (sin overspray) · esquema: según pliego
-- **Costo por antecedentes.** Por antecedentes: USD 2.181,78 (2 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 33,00/m²
+- **Costo por antecedentes.** Por antecedentes: USD 2.180,46 (2 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 32,98/m²
 
 ## 4. Radiografía y END
 
 - Juntas a tope: **29** · RX 100% → placas chicas **122**, grandes **25**
 - Juntas SW, cuplas y olets (LP donde no se puede radiografiar): **19**
-- **Costo por antecedentes.** Por antecedentes: USD 5.234,11 (1 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 180,49/junta a tope · USD 35,61/placa
+- **Costo por antecedentes.** Por antecedentes: USD 5.228,01 (1 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 180,28/junta a tope · USD 35,56/placa
 
 ## 5. Procedimientos
 
@@ -51,7 +51,7 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 ## 7. Horas de ITT (ingeniería, calidad y montaje)
 
-- **Costo por antecedentes.** Por antecedentes: USD 3.449,02 (3 renglón/es, con ajuste por inflación).
+- **Costo por antecedentes.** Por antecedentes: USD 3.445,00 (3 renglón/es, con ajuste por inflación).
 
 ## 8. Transporte
 

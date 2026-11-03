@@ -22,6 +22,7 @@ los iguales se ordenan por fecha y se muestra la marca de cada uno. Cotizar una 
 """
 import argparse
 import csv
+import re
 import sys
 from pathlib import Path
 
@@ -34,22 +35,35 @@ from compatibilidad import incompatible  # noqa: E402
 NOMBRE_A_COD = {v[0]: k for k, v in FAMILIAS.items()}
 CON_TIPO = ("VAL", "AFO", "ABW", "BRI", "JUN", "INS")
 CRITICOS = {"diametro", "diametro2", "serie", "schedule", "medida", "espesor_mm", "largo_mm"}  # largo_mm: niples (30-10-2026)
+# Datos que se comparan además de los que definen la pieza en su familia: no cambian igual/similar ni el orden, pero toda
+# diferencia se lista para que no falte ningún dato del pedido (Matías, 03-11-2026)
+EXTRAS = ["norma", "rango", "cara", "marca", "modelo", "trim", "paso", "costura", "revestimiento", "largo_mm", "espesor_mm", "conexion", "medida", "designacion"]
+
+
+def normalizar_fijos(fijos, fam):
+    """Datos cargados en columnas (lista del plano) llevados a la forma del catálogo: "#300" → 300, "Sch 80" → 80,
+    "ASTM A-105" → A105. Lo que el lector no reconoce queda tal cual."""
+    out = {}
+    for k, v in (fijos or {}).items():
+        v = str(v or "").strip()
+        if not v or v.lower() in ("n/a", "-", "—", "_"):
+            continue
+        if k == "serie":
+            v = re.sub(r"(?i)^(serie|clase|class)\s*|#|lbs?$|\s", "", v)
+        elif k == "schedule":
+            v = re.sub(r"(?i)^sch(edule)?\.?\s*", "", v).upper()
+        elif k in ("diametro", "diametro2", "material", "extremos", "tipo", "norma"):
+            leido = atributos(expandir(norm(("diam " if k.startswith("diametro") else "") + v)), fam).get(k.replace("diametro2", "diametro"))
+            v = leido or v
+        out[k] = v
+    return out
 
 
 _FILAS = None
 
 
-def buscar(texto, familia=None, marca_pedida=""):
-    """Búsqueda en el catálogo (la usan este comando y precotizar.py).
-    Devuelve (familia, atributos leídos, marca, faltan, resultados). Cada resultado: (igual, misma_marca, -n_difs,
-    tiene_precio, coincidencias, fecha, difs, renglón del catálogo), ordenados del mejor al peor."""
-    global _FILAS
-    if _FILAS is None:
-        _FILAS = list(csv.DictReader(open(PRECIOS / "catalogo_materiales.csv", encoding="utf-8")))
-    t = expandir(norm(texto))
-    fam = familia or familia_de(t)
-    at = atributos(t, fam)
-    marca = MARCAS.get(norm(marca_pedida), marca_pedida.strip()) if marca_pedida else at.get("marca", "")
+def obligatorios(fam, at):
+    """Datos que definen la pieza en su familia (campos) y los que pueden faltar (opcionales), según lo pedido."""
     campos = [c for c in (FAMILIAS[fam][2] or ["tipo"]) if c not in ("marca", "modelo")]
     opcionales = {"diametro2", "trim", "schedule", "cara", "medida", "extremos"}
     if fam == "CAN":  # alcanza con schedule o espesor
@@ -60,6 +74,28 @@ def buscar(texto, familia=None, marca_pedida=""):
             opcionales.discard("medida")
     if fam == "VAL" and not str(at.get("tipo", "")).startswith("esferica"):
         opcionales.add("paso")  # el paso (total/reducido) solo distingue esféricas
+    return campos, opcionales
+
+
+def faltan_datos(fam, at):
+    """Datos del pedido que hacen falta para identificar la pieza y no están (lista de materiales y planilla)."""
+    campos, opcionales = obligatorios(fam, at)
+    return [c for c in campos if not at.get(c) and c not in opcionales]
+
+
+def buscar(texto, familia=None, marca_pedida="", fijos=None):
+    """Búsqueda en el catálogo (la usan este comando y precotizar.py).
+    Devuelve (familia, atributos leídos, marca, faltan, resultados). Cada resultado: (igual, misma_marca, -n_difs,
+    tiene_precio, coincidencias, fecha, difs, renglón del catálogo), ordenados del mejor al peor."""
+    global _FILAS
+    if _FILAS is None:
+        _FILAS = list(csv.DictReader(open(PRECIOS / "catalogo_materiales.csv", encoding="utf-8")))
+    t = expandir(norm(texto))
+    fam = familia or familia_de(t)
+    at = atributos(t, fam)
+    at.update(normalizar_fijos(fijos, fam))  # los datos cargados en columnas mandan sobre lo leído del texto
+    marca = MARCAS.get(norm(marca_pedida), marca_pedida.strip()) if marca_pedida else at.get("marca", "")
+    campos, opcionales = obligatorios(fam, at)
     faltan = [c for c in campos if not at.get(c) and c not in opcionales]
     filas = [r for r in _FILAS if NOMBRE_A_COD.get(r["familia"]) == fam]
     res = []
@@ -98,7 +134,15 @@ def buscar(texto, familia=None, marca_pedida=""):
         misma_marca = bool(marca) and norm(r.get("marca", "")) == norm(marca)
         # la marca no le gana al tamaño: una Taval #300 no va antes que una #900 de otra marca (CTRL-TS01)
         crit = sum(1 for d in difs if d.split(":")[0] in CRITICOS and "(no pedido)" not in d)
-        res.append((igual, -crit, misma_marca, -len(difs), bool(r["ultimo_precio_usd"]), coinc, r["fecha_ultimo_precio"], difs, r))
+        n_difs = len(difs)
+        for c in EXTRAS:  # todas las demás diferencias, para verlas (no cambian igual/similar ni el orden)
+            if c in campos or not at.get(c):
+                continue
+            if not r.get(c):
+                difs.append(f"{c}: sin dato (pedido {at[c]})")
+            elif norm(r[c]) != norm(at[c]):
+                difs.append(f"{c}: {r[c]} (pedido {at[c]})")
+        res.append((igual, -crit, misma_marca, -n_difs, bool(r["ultimo_precio_usd"]), coinc, r["fecha_ultimo_precio"], difs, r))
     res.sort(key=lambda x: x[:7], reverse=True)  # a igual parecido, primero el que tiene precio confiable
     res = [(x[0], x[2], *x[3:]) for x in res]
     return fam, at, marca, faltan, res

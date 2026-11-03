@@ -145,6 +145,19 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 2 9/16\" x 3\" · 10000 x 40 · ASTM A-694 F60 · RTJ/BW",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "3\"",
+    "schedule": "40",
+    "material": "A694 F60",
+    "extremos": "BW/RTJ",
+    "tipo": "wn",
+    "cara": "RTJ",
+    "norma": "API 6A"
+   },
+   "faltan_datos": [
+    "serie"
+   ],
    "fuentes": [
     {
      "tipo": "cot",
@@ -166,6 +179,16 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 2 9/16\" · 10000 · Stainless Steel · ",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "2.5625\"",
+    "extremos": "RTJ",
+    "tipo": "ring joint",
+    "medida": "BX153"
+   },
+   "faltan_datos": [
+    "serie"
+   ],
    "fuentes": [
     {
      "tipo": "cot",
@@ -187,6 +210,16 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 3\" · 40 · ASTM A-234 WPB · BW · ASME B16.9",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "3\"",
+    "schedule": "40",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "codo 45",
+    "norma": "B16.9"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "cot",
@@ -207,6 +240,15 @@
    "cantidad": 6.0,
    "unidad": "un",
    "especificacion": "Plano: 3\" x 3/4\" · 3000 · ASTM A-105 · BW/SW",
+   "atributos": {
+    "familia": "AFO",
+    "diametro": "3\"",
+    "serie": "3000",
+    "material": "A105",
+    "extremos": "SW/BW",
+    "tipo": "sockolet"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "cot",
@@ -228,6 +270,15 @@
    "cantidad": 5.173,
    "unidad": "m",
    "especificacion": "Plano: 3\" · 40 (STD) · ASTM A-106 Gr. B · BW",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "3\"",
+    "schedule": "40",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -248,13 +299,24 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 3\" x 2\" · 40 x 80 · ASTM A-234 WPB · BW · ASME B16.9",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "3\"",
+    "diametro2": "2\"",
+    "schedule": "40",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "tee",
+    "norma": "B16.9"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "est",
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-11-02",
+     "fecha": "2026-11-03",
      "coincide": "sin_ref",
      "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
@@ -268,6 +330,18 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 2\" · 300 x 80 · ASTM A-105 · RF/BW · ASME B16.5",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "2\"",
+    "serie": "300",
+    "schedule": "80",
+    "material": "A105",
+    "extremos": "BW/RF",
+    "tipo": "wn",
+    "cara": "RF",
+    "norma": "B16.5"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "cot",
@@ -288,13 +362,21 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 2\" · 300 · AISI 316 SS + grafito ·  · ASME B16.20",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "2\"",
+    "serie": "300",
+    "material": "AISI 316",
+    "tipo": "junta espiralada"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "est",
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-11-02",
+     "fecha": "2026-11-03",
      "coincide": "sin_ref",
      "diferencia": "El más parecido es de otro diámetro (0.75\") (JUN-02760 JUNTA ESPIRALADA C/ANILLO EXT AC ZINC/ A.INT AI | , USD 2,00): no sirve como precio"
     }
@@ -308,6 +390,17 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 2\" · 300 · COMERCIAL · RF",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "2\"",
+    "serie": "300",
+    "extremos": "RF",
+    "tipo": "esferica",
+    "paso": "total"
+   },
+   "faltan_datos": [
+    "material"
+   ],
    "fuentes": [
     {
      "tipo": "ant",
@@ -330,6 +423,17 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 2\" · 300 · ASTM A-105 · RF · ASME B16.5",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "2\"",
+    "serie": "300",
+    "material": "A105",
+    "extremos": "RF",
+    "tipo": "ciega",
+    "cara": "RF",
+    "norma": "B16.5"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -350,6 +454,16 @@
    "cantidad": 9.0,
    "unidad": "un",
    "especificacion": "Plano: 3/4\" · 3000 · ASTM A-105 · NPT",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "0.75\"",
+    "serie": "3000",
+    "material": "A105",
+    "extremos": "NPT",
+    "tipo": "esferica",
+    "paso": "reducido"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -372,6 +486,15 @@
    "cantidad": 6.0,
    "unidad": "un",
    "especificacion": "Plano: 3/4\" · 80 · ASTM A-106 Gr. B · PE/NPT",
+   "atributos": {
+    "familia": "NIP",
+    "diametro": "0.75\"",
+    "schedule": "80",
+    "material": "A106 B",
+    "extremos": "NPT",
+    "largo_mm": "100"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "ant",
@@ -393,6 +516,15 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 3/4\" · 3000 · ASTM A-105 · NPT-M · ASME B16.11",
+   "atributos": {
+    "familia": "AFO",
+    "diametro": "0.75\"",
+    "serie": "3000",
+    "material": "A105",
+    "extremos": "NPT",
+    "tipo": "tapon"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -413,6 +545,15 @@
    "cantidad": 3.0,
    "unidad": "un",
    "especificacion": "Plano: 3/4\" · 80 · ASTM A-106 Gr. B · NPT",
+   "atributos": {
+    "familia": "NIP",
+    "diametro": "0.75\"",
+    "schedule": "80",
+    "material": "A106 B",
+    "extremos": "NPT",
+    "largo_mm": "100"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "ant",
@@ -434,6 +575,16 @@
    "cantidad": 3.0,
    "unidad": "un",
    "especificacion": "Plano: 1\" · 3000 · ASTM A-105 · NPT",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "1\"",
+    "serie": "3000",
+    "material": "A105",
+    "extremos": "NPT",
+    "tipo": "esferica",
+    "paso": "reducido"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -456,6 +607,15 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 1\" · 80 · ASTM A-106 Gr. B · PE/NPT",
+   "atributos": {
+    "familia": "NIP",
+    "diametro": "1\"",
+    "schedule": "80",
+    "material": "A106 B",
+    "extremos": "NPT",
+    "largo_mm": "100"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "est",
@@ -477,6 +637,15 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 3\" x 1\" · 3000 · ASTM A-105 · BW/SW",
+   "atributos": {
+    "familia": "AFO",
+    "diametro": "3\"",
+    "serie": "3000",
+    "material": "A105",
+    "extremos": "SW/BW",
+    "tipo": "sockolet"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "cot",
@@ -498,6 +667,15 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 1\" · 3000 · ASTM A-105 · NPT-M · ASME B16.11",
+   "atributos": {
+    "familia": "AFO",
+    "diametro": "1\"",
+    "serie": "3000",
+    "material": "A105",
+    "extremos": "NPT",
+    "tipo": "tapon"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -518,6 +696,15 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 3\" x 3/4\" · 3000 · ASTM A-105 · BW/NPT",
+   "atributos": {
+    "familia": "AFO",
+    "diametro": "3\"",
+    "serie": "3000",
+    "material": "A105",
+    "extremos": "NPT/BW",
+    "tipo": "threadolet"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "cot",
@@ -539,6 +726,16 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 3/4\" x 1/2\" · 3000 · ASTM A-105 · NPT",
+   "atributos": {
+    "familia": "AFO",
+    "diametro": "0.75\"",
+    "diametro2": "0.5\"",
+    "serie": "3000",
+    "material": "A105",
+    "extremos": "NPT",
+    "tipo": "buje"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -559,6 +756,15 @@
    "cantidad": 0.258,
    "unidad": "m",
    "especificacion": "Plano: 3\" · 40 (STD) · ASTM A-106 Gr. B · BW",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "3\"",
+    "schedule": "40",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -579,6 +785,18 @@
    "cantidad": 8.0,
    "unidad": "un",
    "especificacion": "Plano: 3\" · 300 x 40 · ASTM A-105 · RF/BW · ASME B16.5",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "3\"",
+    "serie": "300",
+    "schedule": "40",
+    "material": "A105",
+    "extremos": "BW/RF",
+    "tipo": "wn",
+    "cara": "RF",
+    "norma": "B16.5"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -599,6 +817,15 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 1\" · 80 · ASTM A-106 Gr. B · NPT",
+   "atributos": {
+    "familia": "NIP",
+    "diametro": "1\"",
+    "schedule": "80",
+    "material": "A106 B",
+    "extremos": "NPT",
+    "largo_mm": "100"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "est",
@@ -620,6 +847,14 @@
    "cantidad": 8.0,
    "unidad": "un",
    "especificacion": "Plano: 3\" · 300 · AISI 316 SS + grafito ·  · ASME B16.20",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "3\"",
+    "serie": "300",
+    "material": "AISI 316",
+    "tipo": "junta espiralada"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "est",
@@ -641,6 +876,15 @@
    "cantidad": 0.722,
    "unidad": "m",
    "especificacion": "Plano: 3\" · 40 (STD) · ASTM A-106 Gr. B · BW",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "3\"",
+    "schedule": "40",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -661,6 +905,16 @@
    "cantidad": 3.0,
    "unidad": "un",
    "especificacion": "Plano: 3\" · 300 · ASTM A-216 WCB · RF",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "3\"",
+    "serie": "300",
+    "material": "A216 WCB",
+    "extremos": "RF",
+    "tipo": "esferica",
+    "paso": "total"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -682,6 +936,17 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 3\" · 300 · ASTM A-105 · RF · ASME B16.5",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "3\"",
+    "serie": "300",
+    "material": "A105",
+    "extremos": "RF",
+    "tipo": "ciega",
+    "cara": "RF",
+    "norma": "B16.5"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "cot",
@@ -702,6 +967,15 @@
    "cantidad": 0.205,
    "unidad": "m",
    "especificacion": "Plano: 3\" · 40 (STD) · ASTM A-106 Gr. B · BW",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "3\"",
+    "schedule": "40",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -722,6 +996,15 @@
    "cantidad": 0.215,
    "unidad": "m",
    "especificacion": "Plano: 3\" · 40 (STD) · ASTM A-106 Gr. B · BW",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "3\"",
+    "schedule": "40",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -742,6 +1025,15 @@
    "cantidad": 0.105,
    "unidad": "m",
    "especificacion": "Plano: 3\" · 40 (STD) · ASTM A-106 Gr. B · BW",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "3\"",
+    "schedule": "40",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -762,6 +1054,16 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 3\" · 40 · ASTM A-234 WPB · BW · ASME B16.9",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "3\"",
+    "schedule": "40",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "tee",
+    "norma": "B16.9"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -782,6 +1084,13 @@
    "cantidad": 32.0,
    "unidad": "un",
    "especificacion": "Plano: 5/8\" ·  · ASTM A-194 Gr. 2H · ",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "0.625\"",
+    "material": "A194 2H",
+    "tipo": "tuerca"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "cot",
@@ -803,6 +1112,14 @@
    "cantidad": 16.0,
    "unidad": "un",
    "especificacion": "Plano: 5/8\" ·  · ASTM A-193 Gr. B7 · ",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "0.625\"",
+    "material": "A193 B7",
+    "tipo": "esparrago",
+    "medida": "5/8 x 3 1/2"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "cot",
@@ -824,6 +1141,13 @@
    "cantidad": 112.0,
    "unidad": "un",
    "especificacion": "Plano: 3/4\" ·  · ASTM A-194 Gr. 2H · ",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "0.75\"",
+    "material": "A194 2H",
+    "tipo": "tuerca"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "cot",
@@ -845,6 +1169,15 @@
    "cantidad": 0.254,
    "unidad": "m",
    "especificacion": "Plano: 3\" · 40 (STD) · ASTM A-106 Gr. B · BW",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "3\"",
+    "schedule": "40",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -865,6 +1198,15 @@
    "cantidad": 0.1,
    "unidad": "m",
    "especificacion": "Plano: 3\" · 40 (STD) · ASTM A-106 Gr. B · BW",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "3\"",
+    "schedule": "40",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -885,6 +1227,15 @@
    "cantidad": 0.168,
    "unidad": "m",
    "especificacion": "6 barra(s) de 12 m para 70,32 m en 10 equipo(s); por equipo 0,17 m",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "3\"",
+    "schedule": "40",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -905,6 +1256,14 @@
    "cantidad": 56.0,
    "unidad": "un",
    "especificacion": "Plano: 3/4\" ·  · ASTM A-193 Gr. B7 · ",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "0.75\"",
+    "material": "A193 B7",
+    "tipo": "esparrago",
+    "medida": "3/4 x 4 1/4"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "ant",
@@ -926,6 +1285,15 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano:  ·  ·  ·  · ABB TTF200",
+   "atributos": {
+    "familia": "INS",
+    "tipo": "transmisor de temperatura",
+    "marca": "ABB"
+   },
+   "faltan_datos": [
+    "rango",
+    "conexion"
+   ],
    "fuentes": [
     {
      "tipo": "ant",
@@ -935,7 +1303,7 @@
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\70- PUENTES DE MEDICION 2 PULGADAS · 4.Armado de la Oferta Comercial/OFERTA/REV 1- OFERTA MEJORADA/Cot Puente Gas Lift SAP 1000653143 rev. 2 - PC0.xlsx",
      "fecha": "2026-06-25",
      "coincide": "similar",
-     "diferencia": ""
+     "diferencia": "marca: sin dato (pedido ABB)"
     }
    ]
   },
@@ -947,6 +1315,15 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano:  ·  ·  · NPT",
+   "atributos": {
+    "familia": "INS",
+    "extremos": "NPT",
+    "tipo": "manometro"
+   },
+   "faltan_datos": [
+    "rango",
+    "conexion"
+   ],
    "fuentes": [
     {
      "tipo": "cot",
@@ -968,6 +1345,16 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano:  ·  ·  · NPT · ABB PGS300",
+   "atributos": {
+    "familia": "INS",
+    "extremos": "NPT",
+    "tipo": "transmisor de presion",
+    "marca": "ABB"
+   },
+   "faltan_datos": [
+    "rango",
+    "conexion"
+   ],
    "fuentes": [
     {
      "tipo": "ant",
@@ -977,7 +1364,7 @@
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\49 - A&A Fluid Control - Manifolds Tecpetrol - Salar El Tolillar · fuentes_originales/ofertas_texto/TAVAL/49 - A&A Fluid Control - Manifolds Tecpetrol - Salar El",
      "fecha": "2026-03-10",
      "coincide": "similar",
-     "diferencia": ""
+     "diferencia": "marca: sin dato (pedido ABB)"
     }
    ]
   },

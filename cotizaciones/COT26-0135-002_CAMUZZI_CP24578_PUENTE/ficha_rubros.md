@@ -1,6 +1,6 @@
 # Ficha por rubro — COT26-0135-002
 
-Generada por `herramientas/ficha_rubros.py` el 30-10-2026. Todo **por skid**; la cantidad (1) multiplica al final.
+Generada por `herramientas/ficha_rubros.py` el 03-11-2026. Todo **por skid**; la cantidad (1) multiplica al final.
 Sirve para pedir un precio global al tercero y para controlarlo contra el cálculo detallado.
 
 ## 1. MO de armado y soldadura del piping
@@ -10,8 +10,8 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 - kg de piping (caños, bridas, accesorios y válvulas con tabla): **593 kg** · bridas: 10
 - Diámetros soldados a tope: 6", 4"
 - Sin peso (no suman kg): 1 FILTRO FM-06 #150 SIMPLE MÓDULO · Ø 6"; 1d Tapa de cierre rápido 12" #150 soldada, ; 1e Elemento filtrante para filtro FM-06 (Go; 1i Internos, refuerzos tipo poncho, purga (; 1k Refuerzos tipo poncho 12" x 6" STD ASTM ; 2 CARRETEL DE AJUSTE / PROVISORIO DE TURBI; 5 BRIDA WN · Ø 4"; 6 BRIDA WN · Ø 6"; 9 REDUCCIÓN CONCÉNTRICA · Ø 6"x4"; 13 SKID Y SOPORTES; 15b Completar media tira de 6 m de la pos 15; A TEMPERATURA PARA CORRECTORA DE CAUDAL · 
-- **Costo por antecedentes.** Por antecedentes: USD 3.203,92 (2 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 34,59/pulgada eq. · USD 5,40/kg de piping · USD 160,20/junta a tope
+- **Costo por antecedentes.** Por antecedentes: USD 3.200,19 (2 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 34,55/pulgada eq. · USD 5,40/kg de piping · USD 160,01/junta a tope
 
 ## 2. MO de fabricación de la estructura
 
@@ -22,15 +22,15 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 - m² de piping: **7,90** (caños y niples 5,09; bridas, accesorios y válvulas por largo equivalente) · m² de estructura: **0,00**
 - m² total: **7,90** (sin overspray) · esquema: según pliego
-- **Costo por antecedentes.** Por antecedentes: USD 761,38 (1 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 96,38/m²
+- **Costo por antecedentes.** Por antecedentes: USD 760,49 (1 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 96,26/m²
 
 ## 4. Radiografía y END
 
 - Juntas a tope: **20** · RX 100% → placas chicas **66**, grandes **0**
 - Juntas SW, cuplas y olets (LP donde no se puede radiografiar): **3**
-- **Costo por antecedentes.** Por antecedentes: USD 2.863,31 (2 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 143,17/junta a tope · USD 43,38/placa
+- **Costo por antecedentes.** Por antecedentes: USD 2.862,94 (2 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 143,15/junta a tope · USD 43,38/placa
 
 ## 5. Procedimientos
 
@@ -47,12 +47,12 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 ## 6. Prueba hidráulica
 
 - Volumen interior de los caños: **114,0 litros**
-- **Costo por antecedentes.** Por antecedentes: USD 252,34 (1 renglón/es, con ajuste por inflación).
+- **Costo por antecedentes.** Por antecedentes: USD 252,05 (1 renglón/es, con ajuste por inflación).
   - Por unidad: USD 2,21/litro
 
 ## 7. Horas de ITT (ingeniería, calidad y montaje)
 
-- **Costo por antecedentes.** Por antecedentes: USD 2.930,59 (4 renglón/es, con ajuste por inflación).
+- **Costo por antecedentes.** Por antecedentes: USD 2.927,18 (4 renglón/es, con ajuste por inflación).
 
 ## 8. Transporte
 

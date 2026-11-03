@@ -43,6 +43,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from candado import perfil_soffice  # noqa: E402
 from numeros import FMT_TECNICO, a_vista, celda_excel, fmt, fmtg, precio_csv  # noqa: E402
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
+from openpyxl.utils import get_column_letter
 
 RAIZ = Path(__file__).resolve().parent.parent
 INDICES = RAIZ / "conocimiento" / "costos" / "indices_ajuste.csv"
@@ -131,6 +132,9 @@ def escribir_planilla(cfg, carpeta, idx_rows):
     B = Border(bottom=Side(style="thin", color="C9D3D9")); USD = "#,##0.00"; GRIS = Font(italic=True, color="5D6B75")
     TF = {"cot": "DDF1E4", "lista": "DCEBF4", "stock": "DCEBF4", "ant": "FBEFD6", "est": "F8E1DE"}
     p, eq = cfg["parametros"], cfg["equipo"]
+    import atributos_plano
+    atributos_plano.atributos_items(carpeta, cfg)
+    CAT = {r["codigo"]: r for r in csv.DictReader(open(Path(__file__).resolve().parents[1] / "conocimiento" / "precios" / "catalogo_materiales.csv", encoding="utf-8"))}
     mat = [i for i in cfg["items"] if i["grupo"] == "material"]
     srv = [i for i in cfg["items"] if i["grupo"] != "material"]
     nm, ns, ni = len(mat) + 1, len(srv) + 1, len(idx_rows) + 1
@@ -139,7 +143,7 @@ def escribir_planilla(cfg, carpeta, idx_rows):
     def head(ws, cols, widths):
         for i, (c, wd) in enumerate(zip(cols, widths), 1):
             x = ws.cell(1, i, c); x.font = H; x.fill = HF; x.alignment = Alignment(wrap_text=True, vertical="center")
-            ws.column_dimensions[chr(64 + i)].width = wd
+            ws.column_dimensions[get_column_letter(i)].width = wd
         ws.freeze_panes = "A2"
 
     wb = Workbook(); ws = wb.active; ws.title = "Cotización"
@@ -245,13 +249,25 @@ def escribir_planilla(cfg, carpeta, idx_rows):
             w.cell(i, 8).fill = PatternFill("solid", fgColor=TF[s["tipo"]])
             w.cell(i, 17).fill = PatternFill("solid", fgColor={"igual": "DDF1E4", "similar": "FBEFD6", "sin_ref": "F8E1DE"}.get(s.get("coincide"), "FFFFFF"))
             w.cell(i, 18).alignment = Alignment(wrap_text=True, vertical="top")
+            if not es_srv:  # datos del pedido y del antecedente, columna por columna (Matías, 03-11-2026)
+                ped, ant = atributos_plano.fila_datos(it, CAT)
+                for j, v in enumerate(ped + ant, 20):
+                    c = w.cell(i, j, v); c.border = B
+                    if j == 19 + len(ped) and v:
+                        c.fill = PatternFill("solid", fgColor="F8E1DE")
         n = len(items) + 2
         w.cell(n, 3, f"Subtotal por {eq['singular']}").font = Font(bold=True)
         for col_, letra in ((7, "G"), (16, "P")):
             c = w.cell(n, col_, f"=SUM({letra}2:{letra}{n - 1})"); c.font = Font(bold=True); c.number_format = USD
         for j in range(1, 19):
             w.cell(n, j).fill = TOT
-        w.auto_filter.ref = f"A1:R{n - 1}"
+        if not es_srv:
+            hp, ha = atributos_plano.encabezados()
+            for j, t in enumerate(hp + ha, 20):
+                x = w.cell(1, j, t); x.font = H; x.alignment = Alignment(wrap_text=True, vertical="center")
+                x.fill = PatternFill("solid", fgColor="2C7A4B" if j < 20 + len(hp) else "6B4E9B")
+                w.column_dimensions[get_column_letter(j)].width = 40 if t.endswith(("descripción", "otros datos", "faltan del pedido")) else 12
+        w.auto_filter.ref = f"A1:{get_column_letter(w.max_column)}{n - 1}"
         k = n + 2
         for it in items:
             for a in it["fuentes"][1:]:

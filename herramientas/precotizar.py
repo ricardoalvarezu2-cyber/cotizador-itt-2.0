@@ -267,7 +267,8 @@ VIEJOS, ELEGIDO = {}, {}  # pos → nota de precio viejo reemplazado; id → des
 
 def material(r, n):
     """Ítem de cotizacion.json para un renglón del plano, más el renglón del informe."""
-    fam, at, _, faltan, res = buscar(texto_busqueda(r))
+    from atributos_plano import fijos
+    fam, at, _, faltan, res = buscar(texto_busqueda(r), fijos=fijos(r))  # los datos en columnas mandan (03-11-2026)
     res = sin_excluidos(res)
     cant, unidad = cantidad_plano(r["cantidad"]), (r["unidad"] or "un").strip()
     l = largo_m(r["descripcion"])
@@ -300,6 +301,11 @@ def material(r, n):
             "cantidad": cant, "unidad": unidad,
             "especificacion": f"Plano: {r['diametro']} · {r['serie_sch']} · {r['material']} · {r['extremos']}" + (f" · {r['modelo_fabricante']}" if r.get("modelo_fabricante") else "")
             + (f" · {r['cantidad_origen']}" if r.get("cantidad_origen") else "") + (f" · Nota ITT: {r['nota']}" if r.get("nota") else "")}
+    # datos del pedido en columnas (familia, Ø, serie, schedule, material, marca, norma, rango…) y los que faltan: los usan
+    # la planilla y la página para comparar con el antecedente dato por dato (Matías, 03-11-2026)
+    from buscar_material import faltan_datos
+    item["atributos"] = {"familia": fam, **{k: v for k, v in at.items() if v}}
+    item["faltan_datos"] = faltan_datos(fam, at)
     if provee_cliente(r):
         item["provee"] = "cliente"
         item["fuentes"] = [{"tipo": "cot", "precio": 0, "proveedor": "PROVISTO POR EL CLIENTE (no se cotiza)", "origen": "tabla del plano / pliego",

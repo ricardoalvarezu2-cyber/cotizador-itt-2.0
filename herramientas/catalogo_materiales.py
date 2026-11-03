@@ -914,9 +914,15 @@ def escribir_excel(filas):
     base = ["codigo", "descripcion", "unidad", "ultimo_precio_usd", "iva", "fecha_ultimo_precio", "tipo_precio", "proveedor",
             "precio_ajustado_hoy_usd", "precios_en_historial", "precio_min_usd", "precio_max_usd", "ruta_origen", "archivo_origen", "ruta_repo",
             "confianza_clasificacion", "alerta", "referencia_descartada_usd", "fecha_referencia_descartada"]
-    hoja("Todos", ["familia"] + base, [[fl["familia"]] + [fl[c] for c in base] for fl in filas])
+    # todos los datos de cada pieza en columnas, también en la hoja Todos (Matías, 03-11-2026): los de la familia primero
+    # y después cualquier otro dato que tenga alguna pieza de esa familia
+    todos_at = list(dict.fromkeys(c for _, cols, _ in FAMILIAS.values() for c in cols))
+    todos_at += [c for c in sorted({c for fl in filas for c in fl["_at"]}) if c not in todos_at]
+    hoja("Todos", base[:2] + ["familia"] + todos_at + base[2:],
+         [[fl[c] for c in base[:2]] + [fl["familia"]] + [atributo_csv(fl["_at"], c) for c in todos_at] + [fl[c] for c in base[2:]] for fl in filas])
     for k, (nombre, cols, _) in FAMILIAS.items():
         fs = [fl for fl in filas if fl["_fam"] == k]
+        cols = cols + [c for c in todos_at if c not in cols and (c == "marca" or any(fl["_at"].get(c) for fl in fs))]  # marca siempre
         hoja(nombre, base[:2] + cols + base[2:], [[fl[c] for c in base[:2]] + [atributo_csv(fl["_at"], c) for c in cols] + [fl[c] for c in base[2:]] for fl in fs])
     guardar_libro(wb, PRECIOS / "catalogo_materiales.xlsx")
 

@@ -176,6 +176,17 @@ with open(C / "pedido" / "lista_materiales_plano.csv", "w", newline="", encoding
     w.writerow(["pos", "descripcion", "diametro", "serie_sch", "material", "extremos", "modelo_fabricante", "cantidad", "unidad", "extremos_campo", "cantidad_origen", "nota"])
     for pos, desc, d, s, mat, ext, q, u, *_ in M:  # Camuzzi no entrega lista: toda la tabla es de ITT (lo dice el título en la oferta)
         w.writerow([pos, desc, d, s, mat, ext, "", q, u, 0, CANT_ITT, "diseño preliminar ITT (sin lista del cliente)"])
+import atributos_plano  # noqa: E402
+atributos_plano.completar(C)  # datos en columnas (Ø, serie, schedule, norma, marca…), 03-11-2026
+CS = "SA-516 Gr. 70"  # lista de ITT: los datos de las piezas del recipiente se cargan a mano (el lector no los saca del texto)
+atributos_plano.fijar(C, {
+    "1": {"familia": "PER", "tipo": "chapa", "espesor_mm": "57.15", "medida": "virola DI 1.280 mm × 3,2 m", "norma": "ASME VIII Div.1"},
+    "2": {"familia": "ABW", "tipo": "casquete semielíptico 2:1", "espesor_mm": "57.15", "norma": "ASME VIII Div.1"},
+    "3": {"familia": "OTR", "tipo": "tapa de cierre rápido", "serie": "600", "medida": "para DI 1.280 mm", "marca": "Futura / Peco / Gora / EKA"},
+    "4": {"familia": "PER", "tipo": "chapa", "espesor_mm": "41.3", "medida": "Ø 1,28 m, 37 agujeros"},
+    "5": {"familia": "OTR", "tipo": "elemento coalescente", "medida": "140 × 914 mm", "rango": "0,3 µm", "marca": "Gora / Filtron / Peco"},
+    "5b": {"familia": "OTR", "tipo": "elemento coalescente", "medida": "140 × 914 mm", "rango": "0,3 µm", "marca": "Gora / Filtron / Peco"},
+})
 items = []
 for p, desc, d, s, mat, ext, q, u, f, *motivo in M:
     it = {"id": f"M{int(p.rstrip('abcd')):02d}{p.lstrip('0123456789')}", "pos": p, "grupo": "material", "descripcion": desc, "especificacion": f"{d} {s} {mat}".strip(), "cantidad": q, "unidad": u, "fuentes": f}

@@ -2,6 +2,7 @@
 // (igual / similar con diferencias) y que herramientas/verificar_computo.py (avisos), pero con filtros elegidos en pantalla.
 const Busqueda = (() => {
   const CON_TIPO = ["VAL", "AFO", "ABW", "BRI", "JUN", "INS"];
+  const EXTRAS = ["norma", "rango", "cara", "marca", "modelo", "trim", "paso", "costura", "revestimiento", "largo_mm", "espesor_mm", "conexion", "medida", "designacion"];
   const TIPO_FUENTE = { "lista": "lista", "compra": "stock", "stock (precio maestro)": "stock", "cotización": "cot", "planilla interna": "ant", "estimado (cepo)": "est", "estimado (fecha supuesta)": "est" };
   const FRAC = { "½": " 1/2", "¼": " 1/4", "¾": " 3/4", "⅛": " 1/8", "°": " grados ", "º": " grados ", "ø": " diam ", "Ø": " diam " };
 
@@ -259,7 +260,14 @@ const Busqueda = (() => {
       const misma = !!f.marca && norm(r.a.marca) === norm(f.marca);
       // la marca no le gana al tamaño (Ø, serie, schedule, medida), igual que buscar_material.py (CTRL-TS01)
       const crit = difs.filter(d => ["diametro", "diametro2", "serie", "schedule", "medida", "espesor_mm", "largo_mm"].includes(d.split(":")[0]) && !d.includes("(no pedido)")).length;
-      res.push({ r, estado: igual ? "igual" : "similar", difs, misma, orden: [igual ? 1 : 0, -crit, misma ? 1 : 0, -difs.length, r.p ? 1 : 0, coinc, r.fe || ""] });
+      const nDifs = difs.length;
+      // todas las demás diferencias, para verlas: no cambian igual/similar ni el orden (buscar_material.EXTRAS, 03-11-2026)
+      for (const c of EXTRAS) {
+        if (cs.includes(c) || !f[c]) continue;
+        if (!r.a[c]) difs.push(`${c}: sin dato (pedido ${f[c]})`);
+        else if (norm(r.a[c]) !== norm(f[c])) difs.push(`${c}: ${r.a[c]} (pedido ${f[c]})`);
+      }
+      res.push({ r, estado: igual ? "igual" : "similar", difs, misma, orden: [igual ? 1 : 0, -crit, misma ? 1 : 0, -nDifs, r.p ? 1 : 0, coinc, r.fe || ""] });
     }
     res.sort((x, y) => { for (let i = 0; i < 7; i++) { if (x.orden[i] < y.orden[i]) return 1; if (x.orden[i] > y.orden[i]) return -1; } return 0; });
     const faltan = fam ? cs.filter(c => !f[c] && !op.has(c)) : [];
@@ -296,9 +304,12 @@ const Busqueda = (() => {
     };
   }
 
+  // todos los datos de la pieza, cada uno con su nombre (Matías, 03-11-2026)
+  const ETIQ = { diametro: "Ø", diametro2: "Ø2", serie: "serie", schedule: "sch", espesor_mm: "espesor mm", material: "material", extremos: "extremos",
+    cara: "cara", norma: "norma", marca: "marca", modelo: "modelo", rango: "rango", trim: "trim", paso: "paso", costura: "costura",
+    revestimiento: "revestimiento", largo_mm: "largo mm", medida: "medida", designacion: "designación", conexion: "conexión" };
   function describirAtributos(a) {
-    return ["tipo", "diametro", "diametro2", "serie", "schedule", "material", "trim", "extremos", "marca", "modelo"].filter(k => a[k])
-      .map(k => (k === "serie" ? "#" : k === "schedule" ? "sch " : "") + a[k]).join(" · ");
+    return (a.tipo ? [a.tipo] : []).concat(Object.keys(ETIQ).filter(k => a[k]).map(k => `${ETIQ[k]} ${a[k]}`)).join(" · ");
   }
 
   function hoy() { return new Date().toISOString().slice(0, 10); }
@@ -451,6 +462,6 @@ const Busqueda = (() => {
     return out;
   }
   const frenosTexto = (cfg, oferta) => frenosOferta(cfg, oferta).map(f => f.texto).join(" · ");
-  return { norm, coincide, incompatible, motivos, compatItem, SIN_RESOLVER, firmaP9, p9Pendiente, campos, opcionales, valores, materiales, servicios, itemDeMaterial, itemDeServicio, soldadura, tarifa, avisos, catalogo, codigoDe, plazoCalculado, plazoBloquea, TIPO_FUENTE, CON_TIPO, frenosOferta, frenosTexto };
+  return { describirAtributos, norm, coincide, incompatible, motivos, compatItem, SIN_RESOLVER, firmaP9, p9Pendiente, campos, opcionales, valores, materiales, servicios, itemDeMaterial, itemDeServicio, soldadura, tarifa, avisos, catalogo, codigoDe, plazoCalculado, plazoBloquea, TIPO_FUENTE, CON_TIPO, frenosOferta, frenosTexto };
 })();
 if (typeof module !== "undefined") module.exports = Busqueda;

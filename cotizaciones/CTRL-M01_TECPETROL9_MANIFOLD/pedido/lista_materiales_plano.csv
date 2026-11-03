@@ -1,18 +1,18 @@
-pos,descripcion,diametro,serie_sch,material,extremos,modelo_fabricante,cantidad,unidad,extremos_campo
-1,Brida WN RF,"4""",600 x 80,ASTM A-105,RF/BW,,30,un,0
-2,Brida WN RF,"8""",600 x 80,ASTM A-105,RF/BW,,2,un,0
-3,Caño sin costura,"4""",80,ASTM A-106,BW,,4,m,0
-4,Caño sin costura,"8""",80,ASTM A-106,BW,,2,m,0
-5,Drip ring,"4""",600,ASTM A-516,,,4,un,0
-6,Espárrago con 2 tuercas 7/8 x 100 mm,"7/8""",,,,,160,un,0
-7,Espárrago con 2 tuercas 7/8 x 140 mm,"7/8""",,,,,32,un,0
-8,Junta espiralada,"4""",600,AISI,,,28,un,0
-9,Niple longitud 100 mm,"1/2""",160,ASTM A-106,PE/NPT,,8,un,0
-10,Sockolet,"1/2""",3000,ASTM A-105,BW/SW,,4,un,0
-11,Tapón roscado,"1/2""",3000,ASTM A-105,NPT,,8,un,0
-12,Tee normal,"4""",80,ASTM A-234,BW,,8,un,0
-13,Tee de reducción,"8"" x 4""",80,ASTM A-234,BW,,4,un,0
-14,Perfil UPN 140 (bastidor),,,,,,24,m,0
-15,Válvula esférica,"1/2""",3000,ASTM A-105,NPT,TAVAL,8,un,0
-16,Válvula esférica paso total,"4""",600,ASTM A-216,RF,TAVAL,8,un,0
-17,Válvula de retención,"4""",600,ASTM A-216,RF,TAVAL,4,un,0
+pos,descripcion,diametro,serie_sch,material,extremos,modelo_fabricante,cantidad,unidad,extremos_campo,familia,tipo,diametro2,serie,schedule,espesor_mm,cara,norma,marca,modelo,rango,trim,paso,costura,revestimiento,largo_mm,medida
+1,Brida WN RF,"4""",600 x 80,ASTM A-105,RF/BW,,30,un,0,BRI,wn,,600,80,,RF,,,,,,,,,,
+2,Brida WN RF,"8""",600 x 80,ASTM A-105,RF/BW,,2,un,0,BRI,wn,,600,80,,RF,,,,,,,,,,
+3,Caño sin costura,"4""",80,ASTM A-106,BW,,4,m,0,CAN,,,,80,,,,,,,,,sin costura,,,
+4,Caño sin costura,"8""",80,ASTM A-106,BW,,2,m,0,CAN,,,,80,,,,,,,,,sin costura,,,
+5,Drip ring,"4""",600,ASTM A-516,,,4,un,0,OTR,"drip ring ,",,600,,,,,,,,,,,,,
+6,Espárrago con 2 tuercas 7/8 x 100 mm,"7/8""",,,,,160,un,0,JUN,esparrago,,,,,,,,,,,,,,,7/8 x 3 7/8
+7,Espárrago con 2 tuercas 7/8 x 140 mm,"7/8""",,,,,32,un,0,JUN,esparrago,,,,,,,,,,,,,,,7/8 x 5 1/2
+8,Junta espiralada,"4""",600,AISI,,,28,un,0,JUN,junta espiralada,,600,,,,,,,,,,,,,
+9,Niple longitud 100 mm,"1/2""",160,ASTM A-106,PE/NPT,,8,un,0,NIP,,,,160,,,,,,,,,,,100,
+10,Sockolet,"1/2""",3000,ASTM A-105,BW/SW,,4,un,0,AFO,sockolet,,3000,,,,,,,,,,,,,
+11,Tapón roscado,"1/2""",3000,ASTM A-105,NPT,,8,un,0,AFO,tapon,,3000,,,,,,,,,,,,,
+12,Tee normal,"4""",80,ASTM A-234,BW,,8,un,0,ABW,tee,,,80,,,,,,,,,,,,
+13,Tee de reducción,"8"" x 4""",80,ASTM A-234,BW,,4,un,0,ABW,tee,"4""",,80,,,,,,,,,,,,
+14,Perfil UPN 140 (bastidor),,,,,,24,m,0,PER,perfil upn 140,,,,,,,,,,,,,,,
+15,Válvula esférica,"1/2""",3000,ASTM A-105,NPT,TAVAL,8,un,0,VAL,esferica,,3000,,,,,Taval,,,,,,,,
+16,Válvula esférica paso total,"4""",600,ASTM A-216,RF,TAVAL,8,un,0,VAL,esferica,,600,,,,,Taval,,,,total,,,,
+17,Válvula de retención,"4""",600,ASTM A-216,RF,TAVAL,4,un,0,VAL,retencion,,600,,,,,Taval,,,,,,,,

@@ -1,41 +1,41 @@
-pos,descripcion,diametro,serie_sch,material,extremos,modelo_fabricante,cantidad,unidad,extremos_campo
-1,Brida API 6A WN RTJ 10K 2 9/16 x 3 Sch. 40,"2 9/16"" x 3""",10000 x 40,ASTM A-694 F60,RTJ/BW,,1,un,0
-2,Anillo octogonal RTJ-10K BX 153,"2 9/16""",10000,Stainless Steel,,,1,un,0
-3,Codo 45° RL BW Sch. 40,"3""",40,ASTM A-234 WPB,BW,ASME B16.9,1,un,0
-4,Sockolet 3 x 3/4,"3"" x 3/4""",3000,ASTM A-105,BW/SW,,6,un,0
-5,Caño sin costura longitud 5173 mm,"3""",40 (STD),ASTM A-106 Gr. B,BW,,1,un,0
-6,Tee reducción BW 3 Sch. 40 x 2 Sch. 80,"3"" x 2""",40 x 80,ASTM A-234 WPB,BW,ASME B16.9,1,un,0
-7,Brida WNRF Sch. 80,"2""",300 x 80,ASTM A-105,RF/BW,ASME B16.5,1,un,0
-8,Junta espiralada e=4.5 mm,"2""",300,AISI 316 SS + grafito,,ASME B16.20,2,un,0
-9,Válvula esférica paso total RF accionamiento a palanca,"2""",300,COMERCIAL,RF,,1,un,0
-10,Brida ciega BLRF,"2""",300,ASTM A-105,RF,ASME B16.5,1,un,0
-11,Válvula esférica paso reducido NPT WOG 3000,"3/4""",3000,ASTM A-105,NPT,,9,un,0
-12,Niple caño Sch. 80 (XS) longitud 100 mm,"3/4""",80,ASTM A-106 Gr. B,PE/NPT,,6,un,0
-13,Tapón hexagonal NPT,"3/4""",3000,ASTM A-105,NPT-M,ASME B16.11,2,un,0
-14,Niple caño Sch. 80 (XS) longitud 100 mm,"3/4""",80,ASTM A-106 Gr. B,NPT,,3,un,0
-15,Válvula esférica paso reducido NPT WOG 3000,"1""",3000,ASTM A-105,NPT,,3,un,0
-16,Niple caño Sch. 80 (XS) longitud 100 mm,"1""",80,ASTM A-106 Gr. B,PE/NPT,,2,un,0
-17,Sockolet 3 x 1,"3"" x 1""",3000,ASTM A-105,BW/SW,,2,un,0
-18,Tapón hexagonal NPT,"1""",3000,ASTM A-105,NPT-M,ASME B16.11,2,un,0
-19,Thredolet 3 x 3/4,"3"" x 3/4""",3000,ASTM A-105,BW/NPT,,1,un,0
-20,Buje reducción NPT,"3/4"" x 1/2""",3000,ASTM A-105,NPT,,1,un,0
-21,Caño sin costura longitud 258 mm,"3""",40 (STD),ASTM A-106 Gr. B,BW,,1,un,0
-22,Brida WNRF Sch. 40,"3""",300 x 40,ASTM A-105,RF/BW,ASME B16.5,8,un,0
-23,Niple caño Sch. 80 (XS) longitud 100 mm,"1""",80,ASTM A-106 Gr. B,NPT,,1,un,0
-24,Junta espiralada e=4.5 mm,"3""",300,AISI 316 SS + grafito,,ASME B16.20,8,un,0
-25,Caño sin costura longitud 722 mm,"3""",40 (STD),ASTM A-106 Gr. B,BW,,1,un,0
-26,Válvula esférica paso total RF accionamiento a palanca,"3""",300,ASTM A-216 WCB,RF,,3,un,0
-27,Brida ciega BLRF,"3""",300,ASTM A-105,RF,ASME B16.5,1,un,0
-28,Caño sin costura longitud 205 mm,"3""",40 (STD),ASTM A-106 Gr. B,BW,,1,un,0
-29,Caño sin costura longitud 215 mm,"3""",40 (STD),ASTM A-106 Gr. B,BW,,1,un,0
-30,Caño sin costura longitud 105 mm,"3""",40 (STD),ASTM A-106 Gr. B,BW,,1,un,0
-31,Tee BW Sch. 40,"3""",40,ASTM A-234 WPB,BW,ASME B16.9,1,un,0
-32,Tuerca hexagonal,"5/8""",,ASTM A-194 Gr. 2H,,,32,un,0
-33,Espárrago 5/8 L=3 1/2 (90 mm),"5/8""",,ASTM A-193 Gr. B7,,,16,un,0
-34,Tuerca hexagonal,"3/4""",,ASTM A-194 Gr. 2H,,,112,un,0
-35,Caño sin costura longitud 254 mm,"3""",40 (STD),ASTM A-106 Gr. B,BW,,1,un,0
-36,Caño sin costura longitud 100 mm,"3""",40 (STD),ASTM A-106 Gr. B,BW,,1,un,0
-37,Espárrago 3/4 L=4 1/4 (110 mm),"3/4""",,ASTM A-193 Gr. B7,,,56,un,0
-38,Indicador transmisor de temperatura,,,,,ABB TTF200,1,un,0
-39,Indicador de presión (manómetro) con manifold NPT,,,,NPT,,1,un,0
-40,Indicador transmisor de presión con manifold NPT,,,,NPT,ABB PGS300,1,un,0
+pos,descripcion,diametro,serie_sch,material,extremos,modelo_fabricante,cantidad,unidad,extremos_campo,familia,tipo,diametro2,serie,schedule,espesor_mm,cara,norma,marca,modelo,rango,trim,paso,costura,revestimiento,largo_mm,medida
+1,Brida API 6A WN RTJ 10K 2 9/16 x 3 Sch. 40,"2 9/16"" x 3""",10000 x 40,ASTM A-694 F60,RTJ/BW,,1,un,0,BRI,wn,,,40,,RTJ,API 6A,,,,,,,,,
+2,Anillo octogonal RTJ-10K BX 153,"2 9/16""",10000,Stainless Steel,,,1,un,0,JUN,ring joint,,,,,,,,,,,,,,,BX153
+3,Codo 45° RL BW Sch. 40,"3""",40,ASTM A-234 WPB,BW,ASME B16.9,1,un,0,ABW,codo 45,,,40,,,B16.9,,,,,,,,,
+4,Sockolet 3 x 3/4,"3"" x 3/4""",3000,ASTM A-105,BW/SW,,6,un,0,AFO,sockolet,,3000,,,,,,,,,,,,,
+5,Caño sin costura longitud 5173 mm,"3""",40 (STD),ASTM A-106 Gr. B,BW,,1,un,0,CAN,,,,40,,,,,,,,,sin costura,,,
+6,Tee reducción BW 3 Sch. 40 x 2 Sch. 80,"3"" x 2""",40 x 80,ASTM A-234 WPB,BW,ASME B16.9,1,un,0,ABW,tee,"2""",,40,,,B16.9,,,,,,,,,
+7,Brida WNRF Sch. 80,"2""",300 x 80,ASTM A-105,RF/BW,ASME B16.5,1,un,0,BRI,wn,,300,80,,RF,B16.5,,,,,,,,,
+8,Junta espiralada e=4.5 mm,"2""",300,AISI 316 SS + grafito,,ASME B16.20,2,un,0,JUN,junta espiralada,,300,,,,,,,,,,,,,
+9,Válvula esférica paso total RF accionamiento a palanca,"2""",300,COMERCIAL,RF,,1,un,0,VAL,esferica,,300,,,,,,,,,total,,,,
+10,Brida ciega BLRF,"2""",300,ASTM A-105,RF,ASME B16.5,1,un,0,BRI,ciega,,300,,,RF,B16.5,,,,,,,,,
+11,Válvula esférica paso reducido NPT WOG 3000,"3/4""",3000,ASTM A-105,NPT,,9,un,0,VAL,esferica,,3000,,,,,,,,,reducido,,,,
+12,Niple caño Sch. 80 (XS) longitud 100 mm,"3/4""",80,ASTM A-106 Gr. B,PE/NPT,,6,un,0,NIP,,,,80,,,,,,,,,,,100,
+13,Tapón hexagonal NPT,"3/4""",3000,ASTM A-105,NPT-M,ASME B16.11,2,un,0,AFO,tapon,,3000,,,,,,,,,,,,,
+14,Niple caño Sch. 80 (XS) longitud 100 mm,"3/4""",80,ASTM A-106 Gr. B,NPT,,3,un,0,NIP,,,,80,,,,,,,,,,,100,
+15,Válvula esférica paso reducido NPT WOG 3000,"1""",3000,ASTM A-105,NPT,,3,un,0,VAL,esferica,,3000,,,,,,,,,reducido,,,,
+16,Niple caño Sch. 80 (XS) longitud 100 mm,"1""",80,ASTM A-106 Gr. B,PE/NPT,,2,un,0,NIP,,,,80,,,,,,,,,,,100,
+17,Sockolet 3 x 1,"3"" x 1""",3000,ASTM A-105,BW/SW,,2,un,0,AFO,sockolet,,3000,,,,,,,,,,,,,
+18,Tapón hexagonal NPT,"1""",3000,ASTM A-105,NPT-M,ASME B16.11,2,un,0,AFO,tapon,,3000,,,,,,,,,,,,,
+19,Thredolet 3 x 3/4,"3"" x 3/4""",3000,ASTM A-105,BW/NPT,,1,un,0,AFO,threadolet,,3000,,,,,,,,,,,,,
+20,Buje reducción NPT,"3/4"" x 1/2""",3000,ASTM A-105,NPT,,1,un,0,AFO,buje,"0.5""",3000,,,,,,,,,,,,,
+21,Caño sin costura longitud 258 mm,"3""",40 (STD),ASTM A-106 Gr. B,BW,,1,un,0,CAN,,,,40,,,,,,,,,sin costura,,,
+22,Brida WNRF Sch. 40,"3""",300 x 40,ASTM A-105,RF/BW,ASME B16.5,8,un,0,BRI,wn,,300,40,,RF,B16.5,,,,,,,,,
+23,Niple caño Sch. 80 (XS) longitud 100 mm,"1""",80,ASTM A-106 Gr. B,NPT,,1,un,0,NIP,,,,80,,,,,,,,,,,100,
+24,Junta espiralada e=4.5 mm,"3""",300,AISI 316 SS + grafito,,ASME B16.20,8,un,0,JUN,junta espiralada,,300,,,,,,,,,,,,,
+25,Caño sin costura longitud 722 mm,"3""",40 (STD),ASTM A-106 Gr. B,BW,,1,un,0,CAN,,,,40,,,,,,,,,sin costura,,,
+26,Válvula esférica paso total RF accionamiento a palanca,"3""",300,ASTM A-216 WCB,RF,,3,un,0,VAL,esferica,,300,,,,,,,,,total,,,,
+27,Brida ciega BLRF,"3""",300,ASTM A-105,RF,ASME B16.5,1,un,0,BRI,ciega,,300,,,RF,B16.5,,,,,,,,,
+28,Caño sin costura longitud 205 mm,"3""",40 (STD),ASTM A-106 Gr. B,BW,,1,un,0,CAN,,,,40,,,,,,,,,sin costura,,,
+29,Caño sin costura longitud 215 mm,"3""",40 (STD),ASTM A-106 Gr. B,BW,,1,un,0,CAN,,,,40,,,,,,,,,sin costura,,,
+30,Caño sin costura longitud 105 mm,"3""",40 (STD),ASTM A-106 Gr. B,BW,,1,un,0,CAN,,,,40,,,,,,,,,sin costura,,,
+31,Tee BW Sch. 40,"3""",40,ASTM A-234 WPB,BW,ASME B16.9,1,un,0,ABW,tee,,,40,,,B16.9,,,,,,,,,
+32,Tuerca hexagonal,"5/8""",,ASTM A-194 Gr. 2H,,,32,un,0,JUN,tuerca,,,,,,,,,,,,,,,
+33,Espárrago 5/8 L=3 1/2 (90 mm),"5/8""",,ASTM A-193 Gr. B7,,,16,un,0,JUN,esparrago,,,,,,,,,,,,,,,5/8 x 3 1/2
+34,Tuerca hexagonal,"3/4""",,ASTM A-194 Gr. 2H,,,112,un,0,JUN,tuerca,,,,,,,,,,,,,,,
+35,Caño sin costura longitud 254 mm,"3""",40 (STD),ASTM A-106 Gr. B,BW,,1,un,0,CAN,,,,40,,,,,,,,,sin costura,,,
+36,Caño sin costura longitud 100 mm,"3""",40 (STD),ASTM A-106 Gr. B,BW,,1,un,0,CAN,,,,40,,,,,,,,,sin costura,,,
+37,Espárrago 3/4 L=4 1/4 (110 mm),"3/4""",,ASTM A-193 Gr. B7,,,56,un,0,JUN,esparrago,,,,,,,,,,,,,,,3/4 x 4 1/4
+38,Indicador transmisor de temperatura,,,,,ABB TTF200,1,un,0,INS,transmisor de temperatura,,,,,,,ABB,,,,,,,,
+39,Indicador de presión (manómetro) con manifold NPT,,,,NPT,,1,un,0,INS,manometro,,,,,,,,,,,,,,,
+40,Indicador transmisor de presión con manifold NPT,,,,NPT,ABB PGS300,1,un,0,INS,transmisor de presion,,,,,,,ABB,,,,,,,,

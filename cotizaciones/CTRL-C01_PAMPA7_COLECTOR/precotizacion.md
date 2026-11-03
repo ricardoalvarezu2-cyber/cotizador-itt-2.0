@@ -39,7 +39,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 29 | Válvula esférica paso reducido · Ø 2" | IGUAL | 130,00 / un | 2025-09-01 · lista | — |
 | 30 | Válvula de retención tipo wafer · Ø 3" | IGUAL | 301,88 / un | 2026-10-30 · cotización | — |
 | 31 | Válvula esférica tres vías motorizada con act | **SIN PRECIO** | — | — | pedir cotización |
-| 32 | Manómetro · Ø 1/2" | SIMILAR | 115,00 / un | 2026-02-20 · planilla interna | — · faltan: rango, conexion |
+| 32 | Manómetro · Ø 1/2" | SIMILAR | 115,00 / un | 2026-02-20 · planilla interna | marca: sin dato (pedido Weisz) · faltan: rango, conexion |
 | 33 | Transmisor de presión · Ø 1/2" | **SIN PRECIO** | — | — | pedir cotización |
 | 34 | Bastidor del skid (perfiles y chapas: corto 3 | SIMILAR (acero por kg) | USD 1,90/kg | 2026-02-10 cot | precio por kg de materia prima (hierro ángulo 3x1/4) +10% por recortes; no incluye corte, plegado ni rolado |
 | 35 | Tablero y materiales eléctricos (canalización | SIMILAR | 12.000,00 / gl | 2026-06-26 · planilla interna | unidad distinta: catálogo por un, plano por gl · faltan: diametro, serie |

@@ -1,18 +1,18 @@
-pos,descripcion,diametro,serie_sch,material,extremos,modelo_fabricante,cantidad,unidad,extremos_campo,cantidad_origen,nota
-1,FILTRO FM-06 #150 SIMPLE MÓDULO,"6""",150 / STD,S/ Esp. CAMUZZI,RF,,1,un,0,,plano tipo SCE-RE-112-0004 y SCE-RE-512-0004
-2,CARRETEL DE AJUSTE / PROVISORIO DE TURBINA,"4""",150,S/ Esp. CAMUZZI,RF,,1,un,0,,carretel bridado entre las bridas pos 5 (2 bridas WN 4" + caño; sus 2 soldaduras van en la MO); largo según turbina; 300 mm en el plano
-3,VÁLVULA ESFÉRICA BRIDADA PASO TOTAL APF,"6""",150 / STD,S/ Esp. CAMUZZI,RF,,1,un,0,,SCE-IN-501-0008
-4,VÁLVULA ESFÉRICA BRIDADA PASO TOTAL APF,"4""",150 / STD,S/ Esp. CAMUZZI,RF,,2,un,0,,SCE-IN-501-0008
-5,BRIDA WN,"4""",150 x STD,ASTM A-105,RF/BW,,7,un,0,,
-6,BRIDA WN,"6""",150 x STD,ASTM A-105,RF/BW,,3,un,0,,
-7,TE NORMAL,"6""",STD,ASTM A-105,BW,,1,un,0,,
-8,TE NORMAL,"4""",STD,ASTM A-105,BW,,1,un,0,,
-9,REDUCCIÓN CONCÉNTRICA,"6""x4""",STD,S/ Esp. CAMUZZI,BW,,2,un,0,,
-10,CODO 90°,"4""",STD,ASTM A-234 G°WPB,BW,,3,un,0,,
-11,"TERMOVAINA DE ACERO INOXIDABLE 3/4"" NPT","3/4""",3000,AISI 316,NPT,,2,un,0,,
-12,"CUPLA AC C/ VALV ESF. PASO TOTAL S3000 1/2"" C/ TAPÓN","1/2""",3000,S/ Fabricante,SW/NPT,,1,un,0,,
-13,SKID Y SOPORTES,,,S/ Esp. CAMUZZI,—,,1,un,0,,SCE-RE-110-0006; 3530 x 800 mm; 200 kg estimados
-14,"CAÑO 4""","4""",40,ASTM A-53 GR°B,BW,,8,m,0,El cliente no indica cantidad: calculada por ITT según el plano (medida del dibujo),"bypass ≈ 6,1 m + línea ≈ 1,9 m"
-15,"CAÑO 6""","6""",40,ASTM A-53 GR°B,BW,,1,m,0,El cliente no indica cantidad: calculada por ITT según el plano (medida del dibujo),
-16,"CUPLA DE AC SOLD. 1/2"" NPT C/ VLV. ESF 1/2"" S3000","1/2""",3000,ASTM A-106,SW/NPT,,2,un,0,,
-A,TEMPERATURA PARA CORRECTORA DE CAUDAL,"3/4""",150,Rango: 0-100 °C / 4-20 mA,NPT,,1,un,0,,
+pos,descripcion,diametro,serie_sch,material,extremos,modelo_fabricante,cantidad,unidad,extremos_campo,cantidad_origen,nota,familia,tipo,diametro2,serie,schedule,espesor_mm,cara,norma,marca,modelo,rango,trim,paso,costura,revestimiento,largo_mm,medida
+1,FILTRO FM-06 #150 SIMPLE MÓDULO,"6""",150 / STD,S/ Esp. CAMUZZI,RF,,1,un,0,,plano tipo SCE-RE-112-0004 y SCE-RE-512-0004,OTR,filtro fm-06 #150,,150,40,,,,,,,,,,,,
+2,CARRETEL DE AJUSTE / PROVISORIO DE TURBINA,"4""",150,S/ Esp. CAMUZZI,RF,,1,un,0,,"carretel bridado entre las bridas pos 5 (2 bridas WN 4"" + caño; sus 2 soldaduras van en la MO); largo según turbina; 300 mm en el plano",OTR,carretel de ajuste,,150,,,,,,,,,,,,,
+3,VÁLVULA ESFÉRICA BRIDADA PASO TOTAL APF,"6""",150 / STD,S/ Esp. CAMUZZI,RF,,1,un,0,,SCE-IN-501-0008,VAL,esferica,,150,40,,,,,,,,total,,,,
+4,VÁLVULA ESFÉRICA BRIDADA PASO TOTAL APF,"4""",150 / STD,S/ Esp. CAMUZZI,RF,,2,un,0,,SCE-IN-501-0008,VAL,esferica,,150,40,,,,,,,,total,,,,
+5,BRIDA WN,"4""",150 x STD,ASTM A-105,RF/BW,,7,un,0,,,BRI,wn,,150,40,,RF,,,,,,,,,,
+6,BRIDA WN,"6""",150 x STD,ASTM A-105,RF/BW,,3,un,0,,,BRI,wn,,150,40,,RF,,,,,,,,,,
+7,TE NORMAL,"6""",STD,ASTM A-105,BW,,1,un,0,,,ABW,tee,,,40,,,,,,,,,,,,
+8,TE NORMAL,"4""",STD,ASTM A-105,BW,,1,un,0,,,ABW,tee,,,40,,,,,,,,,,,,
+9,REDUCCIÓN CONCÉNTRICA,"6""x4""",STD,S/ Esp. CAMUZZI,BW,,2,un,0,,,ABW,reduccion concentrica,"4""",,40,,,,,,,,,,,,
+10,CODO 90°,"4""",STD,ASTM A-234 G°WPB,BW,,3,un,0,,,ABW,codo 90,,,40,,,,,,,,,,,,
+11,"TERMOVAINA DE ACERO INOXIDABLE 3/4"" NPT","3/4""",3000,AISI 316,NPT,,2,un,0,,,INS,termovaina,,3000,,,,,,,,,,,,,
+12,"CUPLA AC C/ VALV ESF. PASO TOTAL S3000 1/2"" C/ TAPÓN","1/2""",3000,S/ Fabricante,SW/NPT,,1,un,0,,,VAL,esferica,,3000,,,,,,,,,total,,,,
+13,SKID Y SOPORTES,,,S/ Esp. CAMUZZI,—,,1,un,0,,SCE-RE-110-0006; 3530 x 800 mm; 200 kg estimados,OTR,skid y soportes,,,,,,,,,,,,,,,
+14,"CAÑO 4""","4""",40,ASTM A-53 GR°B,BW,,8,m,0,El cliente no indica cantidad: calculada por ITT según el plano (medida del dibujo),"bypass ≈ 6,1 m + línea ≈ 1,9 m",CAN,,,,40,,,,,,,,,,,,
+15,"CAÑO 6""","6""",40,ASTM A-53 GR°B,BW,,1,m,0,El cliente no indica cantidad: calculada por ITT según el plano (medida del dibujo),,CAN,,,,40,,,,,,,,,,,,
+16,"CUPLA DE AC SOLD. 1/2"" NPT C/ VLV. ESF 1/2"" S3000","1/2""",3000,ASTM A-106,SW/NPT,,2,un,0,,,VAL,esferica,,3000,,,,,,,,,,,,,
+A,TEMPERATURA PARA CORRECTORA DE CAUDAL,"3/4""",150,Rango: 0-100 °C / 4-20 mA,NPT,,1,un,0,,,OTR,temperatura para correctora,,150,,,,,,,0-100 °C / 4-20 mA,,,,,,

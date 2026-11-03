@@ -373,6 +373,7 @@ if (typeof module !== "undefined") module.exports = Motor;
 // (igual / similar con diferencias) y que herramientas/verificar_computo.py (avisos), pero con filtros elegidos en pantalla.
 const Busqueda = (() => {
   const CON_TIPO = ["VAL", "AFO", "ABW", "BRI", "JUN", "INS"];
+  const EXTRAS = ["norma", "rango", "cara", "marca", "modelo", "trim", "paso", "costura", "revestimiento", "largo_mm", "espesor_mm", "conexion", "medida", "designacion"];
   const TIPO_FUENTE = { "lista": "lista", "compra": "stock", "stock (precio maestro)": "stock", "cotización": "cot", "planilla interna": "ant", "estimado (cepo)": "est", "estimado (fecha supuesta)": "est" };
   const FRAC = { "½": " 1/2", "¼": " 1/4", "¾": " 3/4", "⅛": " 1/8", "°": " grados ", "º": " grados ", "ø": " diam ", "Ø": " diam " };
 
@@ -630,7 +631,14 @@ const Busqueda = (() => {
       const misma = !!f.marca && norm(r.a.marca) === norm(f.marca);
       // la marca no le gana al tamaño (Ø, serie, schedule, medida), igual que buscar_material.py (CTRL-TS01)
       const crit = difs.filter(d => ["diametro", "diametro2", "serie", "schedule", "medida", "espesor_mm", "largo_mm"].includes(d.split(":")[0]) && !d.includes("(no pedido)")).length;
-      res.push({ r, estado: igual ? "igual" : "similar", difs, misma, orden: [igual ? 1 : 0, -crit, misma ? 1 : 0, -difs.length, r.p ? 1 : 0, coinc, r.fe || ""] });
+      const nDifs = difs.length;
+      // todas las demás diferencias, para verlas: no cambian igual/similar ni el orden (buscar_material.EXTRAS, 03-11-2026)
+      for (const c of EXTRAS) {
+        if (cs.includes(c) || !f[c]) continue;
+        if (!r.a[c]) difs.push(`${c}: sin dato (pedido ${f[c]})`);
+        else if (norm(r.a[c]) !== norm(f[c])) difs.push(`${c}: ${r.a[c]} (pedido ${f[c]})`);
+      }
+      res.push({ r, estado: igual ? "igual" : "similar", difs, misma, orden: [igual ? 1 : 0, -crit, misma ? 1 : 0, -nDifs, r.p ? 1 : 0, coinc, r.fe || ""] });
     }
     res.sort((x, y) => { for (let i = 0; i < 7; i++) { if (x.orden[i] < y.orden[i]) return 1; if (x.orden[i] > y.orden[i]) return -1; } return 0; });
     const faltan = fam ? cs.filter(c => !f[c] && !op.has(c)) : [];
@@ -667,9 +675,12 @@ const Busqueda = (() => {
     };
   }
 
+  // todos los datos de la pieza, cada uno con su nombre (Matías, 03-11-2026)
+  const ETIQ = { diametro: "Ø", diametro2: "Ø2", serie: "serie", schedule: "sch", espesor_mm: "espesor mm", material: "material", extremos: "extremos",
+    cara: "cara", norma: "norma", marca: "marca", modelo: "modelo", rango: "rango", trim: "trim", paso: "paso", costura: "costura",
+    revestimiento: "revestimiento", largo_mm: "largo mm", medida: "medida", designacion: "designación", conexion: "conexión" };
   function describirAtributos(a) {
-    return ["tipo", "diametro", "diametro2", "serie", "schedule", "material", "trim", "extremos", "marca", "modelo"].filter(k => a[k])
-      .map(k => (k === "serie" ? "#" : k === "schedule" ? "sch " : "") + a[k]).join(" · ");
+    return (a.tipo ? [a.tipo] : []).concat(Object.keys(ETIQ).filter(k => a[k]).map(k => `${ETIQ[k]} ${a[k]}`)).join(" · ");
   }
 
   function hoy() { return new Date().toISOString().slice(0, 10); }
@@ -822,7 +833,7 @@ const Busqueda = (() => {
     return out;
   }
   const frenosTexto = (cfg, oferta) => frenosOferta(cfg, oferta).map(f => f.texto).join(" · ");
-  return { norm, coincide, incompatible, motivos, compatItem, SIN_RESOLVER, firmaP9, p9Pendiente, campos, opcionales, valores, materiales, servicios, itemDeMaterial, itemDeServicio, soldadura, tarifa, avisos, catalogo, codigoDe, plazoCalculado, plazoBloquea, TIPO_FUENTE, CON_TIPO, frenosOferta, frenosTexto };
+  return { describirAtributos, norm, coincide, incompatible, motivos, compatItem, SIN_RESOLVER, firmaP9, p9Pendiente, campos, opcionales, valores, materiales, servicios, itemDeMaterial, itemDeServicio, soldadura, tarifa, avisos, catalogo, codigoDe, plazoCalculado, plazoBloquea, TIPO_FUENTE, CON_TIPO, frenosOferta, frenosTexto };
 })();
 if (typeof module !== "undefined") module.exports = Busqueda;
 
@@ -1858,6 +1869,26 @@ const Documentos = (() => {
     ws["!cols"] = [{ wch: 52 }, { wch: 16 }, { wch: 16 }, { wch: 16 }, { wch: 16 }, { wch: 4 }, { wch: 58 }, { wch: 13 }];
     X.utils.book_append_sheet(wb, ws, "Cotización");
 
+    // Datos del pedido y del antecedente, columna por columna (Matías, 03-11-2026), como atributos_plano.fila_datos
+    const COLS = [["Ø", "diametro"], ["Ø2", "diametro2"], ["Serie", "serie"], ["Sch", "schedule"], ["Espesor mm", "espesor_mm"], ["Material", "material"],
+      ["Extremos", "extremos"], ["Cara", "cara"], ["Norma", "norma"], ["Marca", "marca"], ["Modelo", "modelo"], ["Rango", "rango"]];
+    const OTROS = ["tipo", "trim", "paso", "costura", "revestimiento", "largo_mm", "medida", "designacion", "conexion"];
+    const NOMBRES = { diametro: "Ø", diametro2: "Ø2", espesor_mm: "espesor", largo_mm: "largo", designacion: "designación", conexion: "conexión" };
+    const otros = a => OTROS.filter(k => a[k]).map(k => `${k}: ${a[k]}`).join("; ");
+    const CATM = new Map(((datos && datos.materiales) || []).map(m => [m.c, m]));
+    const filaDatos = it => {
+      const at = it.atributos || (it.at ? { familia: it.fam || "", ...it.at } : {});
+      let faltan = it.faltan_datos;
+      if (!faltan && datos && at.familia && datos.familias?.[at.familia]) {
+        const op = Busqueda.opcionales(at.familia, at);
+        faltan = Busqueda.campos(datos, at.familia).filter(c => !at[c] && !op.has(c));
+      }
+      const s = it.fuentes[0], cod = Busqueda.codigoDe(s), m = CATM.get(cod), ra = m ? { ...(m.a || {}) } : {};
+      return [[at.familia || "", ...COLS.map(([, k]) => at[k] || ""), otros(at), (faltan || []).map(k => NOMBRES[k] || k).join(", ")],
+              [cod, m ? m.d : "", ...COLS.map(([, k]) => ra[k] || ""), otros(ra)]];
+    };
+    const ENC_P = ["Pedido: familia", ...COLS.map(([n]) => `Pedido: ${n}`), "Pedido: otros datos", "Datos que faltan del pedido"];
+    const ENC_A = ["Antecedente: código", "Antecedente: descripción", ...COLS.map(([n]) => `Antecedente: ${n}`), "Antecedente: otros datos"];
     const detalle = (nombre, items, esSrv) => {
       const w = hoja();
       cabecera(w, ["Pos", esSrv ? "Grupo" : "ID", "Descripción", `Cant. / ${eq.singular}`, "Unidad", "USD unit. (a la fecha del precio)", "Subtotal USD (sin ajuste)",
@@ -1878,13 +1909,21 @@ const Documentos = (() => {
           const z = [6, 7, 15, 16].includes(c) ? U : c === 4 ? (Number.isInteger(v) ? "#,##0" : "#,##0.0###") : { 11: "dd-mm-yyyy", 13: "#,##0.00", 14: "#,##0.00" }[c];
           put(w, A(c, i), v, st, z);
         });
+        if (!esSrv) {
+          const [ped, ant] = filaDatos(it);
+          [...ped, ...ant].forEach((v, j) => put(w, A(20 + j, i), v, j === ped.length - 1 && v ? { fill: { fgColor: { rgb: "F8E1DE" } } } : null));
+        }
       });
+      if (!esSrv) {
+        [...ENC_P, ...ENC_A].forEach((t, j) => put(w, A(20 + j, 1), t, { ...H, fill: { fgColor: { rgb: j < ENC_P.length ? "2C7A4B" : "6B4E9B" } } }));
+        w["!cols"] = [...(w["!cols"] || []), ...[...ENC_P, ...ENC_A].map(t => ({ wch: /descripción|otros datos|faltan del pedido/.test(t) ? 40 : 12 }))];
+      }
       const n = items.length + 2;
       put(w, A(3, n), `Subtotal por ${eq.singular}`, TOT);
       put(w, A(7, n), { f: `SUM(G2:G${n - 1})` }, TOT, U); put(w, A(16, n), { f: `SUM(P2:P${n - 1})` }, TOT, U);
       let k = n + 2;
       for (const it of items) for (const a of it.fuentes.slice(1)) put(w, A(3, k++), `Alternativa pos ${it.pos}: USD ${numg(a.precio)} · ${a.proveedor} · ${a.origen} · ${fecha(a.fecha)} (${TIPOS[a.tipo]})`, GRIS);
-      w["!autofilter"] = { ref: `A1:R${Math.max(2, n - 1)}` };
+      w["!autofilter"] = { ref: `A1:${X.utils.encode_col(esSrv ? 17 : 19 + ENC_P.length + ENC_A.length - 1)}${Math.max(2, n - 1)}` };
       X.utils.book_append_sheet(wb, w, nombre);
     };
     detalle("Materiales", mat, false);
@@ -2678,7 +2717,7 @@ if (typeof module !== "undefined") module.exports = Documentos;
     box.innerHTML = r.res.length ? r.res.map((x, i) => {
       const m = x.r, est = x.estado === "igual" ? `<span class="pill ok">igual</span>` : x.estado === "similar" ? `<span class="pill warn">similar</span>` : `<span class="pill info">catálogo</span>`;
       const ch = S.selM.has(m.c);
-      return `<div class="resultado ${ch ? "sel" : ""}"><label class="tilde">${S.doc ? `<input type="checkbox" data-selm="${i}" ${ch ? "checked" : ""} ${m.p ? "" : "disabled"} aria-label="Seleccionar">` : ""}${est}</label><div><div class="d">${E(m.d)}</div><div class="small muted">${E(m.c)} · ${E(S.datos.familias[m.f]?.n || "")}${[m.a.marca, m.a.modelo].filter(Boolean).length ? " · " + E([m.a.marca, m.a.modelo].filter(Boolean).join(" ")) : ""}${m.nuevo ? " · nuevo en la página" : ""}</div></div>
+      return `<div class="resultado ${ch ? "sel" : ""}"><label class="tilde">${S.doc ? `<input type="checkbox" data-selm="${i}" ${ch ? "checked" : ""} ${m.p ? "" : "disabled"} aria-label="Seleccionar">` : ""}${est}</label><div><div class="d">${E(m.d)}</div><div class="small muted">${E(m.c)} · ${E(S.datos.familias[m.f]?.n || "")}${m.nuevo ? " · nuevo en la página" : ""}</div><div class="small">${E(Busqueda.describirAtributos(m.a || {}))}</div></div>
         <div class="precio">${m.p ? "USD " + num(m.p) + " / " + E(m.u || "un") : '<span class="err">sin precio confiable</span>'}<div class="small muted">${E(F(m.fe))} · ${E(m.tp)}</div></div>
         <details class="det"><summary>${x.difs.length || m.al ? "Diferencias, alertas y origen" : "Origen del precio"}</summary>${x.difs.length ? "Difiere en: " + E(x.difs.join("; ")) + " · " : ""}${m.al ? "<b>Alerta:</b> " + E(m.al) + " · " : ""}${E(m.pr)} · Origen: ${E(m.o)}${m.n > 1 ? ` · ${m.n} precios en el historial (${num(m.mn)} a ${num(m.mx)})` : ""}</details>
         ${S.doc ? `<div class="acc"><input id="qm-${i}" type="text" inputmode="decimal" class="num" value="${NI(ch ? S.selM.get(m.c).q : 1)}" aria-label="Cantidad"><button class="chico prim" data-a="agregar-mat" data-i="${i}">Agregar</button></div>` : ""}</div>`;

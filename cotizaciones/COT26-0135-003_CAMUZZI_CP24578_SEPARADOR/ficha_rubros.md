@@ -1,6 +1,6 @@
 # Ficha por rubro — COT26-0135-003
 
-Generada por `herramientas/ficha_rubros.py` el 30-10-2026. Todo **por separador**; la cantidad (2) multiplica al final.
+Generada por `herramientas/ficha_rubros.py` el 03-11-2026. Todo **por separador**; la cantidad (2) multiplica al final.
 Sirve para pedir un precio global al tercero y para controlarlo contra el cálculo detallado.
 
 ## 1. MO de armado y soldadura del piping
@@ -14,14 +14,14 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 - ⚠ pos 23: cantidad en kg con extremos —: no se cuentan juntas (no son piezas); contar sus soldaduras a mano
 - ⚠ pos 23b: cantidad en m2 con extremos —: no se cuentan juntas (no son piezas); contar sus soldaduras a mano
 - ⚠ pos 24: cantidad en kg con extremos —: no se cuentan juntas (no son piezas); contar sus soldaduras a mano
-- **Costo por antecedentes.** Por antecedentes: USD 48.141,00 (3 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 340,55/pulgada eq. · USD 95,22/kg de piping · USD 3.209,40/junta a tope
+- **Costo por antecedentes.** Por antecedentes: USD 48.084,90 (3 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 340,15/pulgada eq. · USD 95,10/kg de piping · USD 3.205,66/junta a tope
 
 ## 2. MO de fabricación de la estructura
 
 - kg de estructura: **1.300 kg** · m²: 52,50
-- **Costo por antecedentes.** Por antecedentes: USD 17.342,89 (1 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 13,34/kg
+- **Costo por antecedentes.** Por antecedentes: USD 17.322,68 (1 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 13,33/kg
 
 ## 3. Granallado y pintura
 
@@ -34,8 +34,8 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 - Juntas a tope: **15** · RX 0% → placas chicas **0**, grandes **0**
 - Juntas SW, cuplas y olets (LP donde no se puede radiografiar): **0**
-- **Costo por antecedentes.** Por antecedentes: USD 3.164,52 (2 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 210,97/junta a tope
+- **Costo por antecedentes.** Por antecedentes: USD 3.163,13 (2 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 210,88/junta a tope
 
 ## 5. Procedimientos
 
@@ -49,12 +49,12 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 ## 6. Prueba hidráulica
 
 - Volumen interior de los caños: **47,9 litros**
-- **Costo por antecedentes.** Por antecedentes: USD 224,30 (1 renglón/es, con ajuste por inflación).
+- **Costo por antecedentes.** Por antecedentes: USD 224,04 (1 renglón/es, con ajuste por inflación).
   - Por unidad: USD 4,68/litro
 
 ## 7. Horas de ITT (ingeniería, calidad y montaje)
 
-- **Costo por antecedentes.** Por antecedentes: USD 9.016,16 (2 renglón/es, con ajuste por inflación).
+- **Costo por antecedentes.** Por antecedentes: USD 9.005,65 (2 renglón/es, con ajuste por inflación).
 
 ## 8. Transporte
 

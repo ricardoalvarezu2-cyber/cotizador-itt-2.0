@@ -1,6 +1,6 @@
 # Ficha por rubro — COT26-0135-001
 
-Generada por `herramientas/ficha_rubros.py` el 30-10-2026. Todo **por skid**; la cantidad (1) multiplica al final.
+Generada por `herramientas/ficha_rubros.py` el 03-11-2026. Todo **por skid**; la cantidad (1) multiplica al final.
 Sirve para pedir un precio global al tercero y para controlarlo contra el cálculo detallado.
 
 ## 1. MO de armado y soldadura del piping
@@ -10,8 +10,8 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 - kg de piping (caños, bridas, accesorios y válvulas con tabla): **401 kg** · bridas: 20
 - Diámetros soldados a tope: 8", 6", 3"
 - Sin peso (no suman kg): 1 VALVULA MONITORA PILOTADA OBT. GUIADO - ; 2 VALVULA REGULADORA PILOTADA A DIAFRAGMA ; 2b Tubing de acero inoxidable y accesorios ; 5 BRIDA WN · Ø 3"; 6 BRIDA WN · Ø 6"; 7 BRIDA WN · Ø 8"; 8 BRIDA CIEGA · Ø 8"; 11 REDUCCIÓN CONCÉNTRICA · Ø 6"x3"; 15 TOMA MULTIPORT AC INOXIDABLE ABAC · Ø 1/; 16 VÁLVULA ALIVIO CAP. REDUCIDA ROSCADA TIP; 20 SKID Y SOPORTES S/ SCE-RE-110-0006 Rev.0; 20b Placa de identificación del equipo AISI ; 21b Completar media tira de 6 m de la pos 21; 22b Completar media tira de 6 m de la pos 22; 23b Completar media tira de 6 m de la pos 23; 24b Completar media tira de 6 m de la pos 24; B TEMPERATURA DE SALIDA · Ø 3/4"
-- **Costo por antecedentes.** Por antecedentes: USD 3.781,12 (1 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 19,34/pulgada eq. · USD 9,42/kg de piping · USD 105,03/junta a tope
+- **Costo por antecedentes.** Por antecedentes: USD 3.776,71 (1 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 19,32/pulgada eq. · USD 9,41/kg de piping · USD 104,91/junta a tope
 
 ## 2. MO de fabricación de la estructura
 
@@ -29,8 +29,8 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 - Juntas a tope: **36** · RX 100% → placas chicas **135**, grandes **0**
 - Juntas SW, cuplas y olets (LP donde no se puede radiografiar): **4**
-- **Costo por antecedentes.** Por antecedentes: USD 3.831,68 (2 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 106,44/junta a tope · USD 28,38/placa
+- **Costo por antecedentes.** Por antecedentes: USD 3.831,33 (2 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 106,43/junta a tope · USD 28,38/placa
 
 ## 5. Procedimientos
 
@@ -42,8 +42,8 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 - Procedimiento de prueba hidráulica
 - Procedimiento de granallado y pintura (esquema del pliego)
 - Confirmar con el pliego si exige procedimientos nuevos o alcanzan los vigentes de ITT
-- **Costo por antecedentes.** Por antecedentes: USD 610,04 (1 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 76,25/procedimiento
+- **Costo por antecedentes.** Por antecedentes: USD 609,33 (1 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 76,17/procedimiento
 
 ## 6. Prueba hidráulica
 
@@ -52,7 +52,7 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 ## 7. Horas de ITT (ingeniería, calidad y montaje)
 
-- **Costo por antecedentes.** Por antecedentes: USD 4.779,24 (3 renglón/es, con ajuste por inflación).
+- **Costo por antecedentes.** Por antecedentes: USD 4.773,67 (3 renglón/es, con ajuste por inflación).
 
 ## 8. Transporte
 
