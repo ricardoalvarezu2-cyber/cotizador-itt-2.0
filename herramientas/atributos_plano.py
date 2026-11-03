@@ -90,8 +90,9 @@ def completar(carpeta, pisar=False):
         if pisar or not r["familia"]:
             r["familia"] = fam
         fam = r["familia"]
+        ajustar_marca(at, f"{r['descripcion']} {r.get('modelo_fabricante', '')}")
         for k in ATRIBUTOS[1:]:
-            if at.get(k) and (pisar or not r[k].strip()):
+            if at.get(k) and (pisar or not r[k].strip() or (k == "marca" and "/" in at[k] and "/" not in r[k])):
                 r[k] = at[k]
         _, todo = leer(r)
         todo.update({k: v for k, v in at.items() if k in LITERALES})
@@ -102,6 +103,38 @@ def completar(carpeta, pisar=False):
     w.writeheader()
     w.writerows(filas)
     return informe
+
+
+# Marcas que aparecen en los listados de marcas aprobadas de los clientes (además de catalogo_materiales.MARCAS)
+MARCAS_EXTRA = {"esferomatic": "Esferomatic", "pentair": "Pentair", "wenlen": "Wenlen", "valmec": "Valmec", "xomox": "Xomox-Tufline",
+                "nordstrom": "Nordstrom", "favra": "Favra", "bettis": "Bettis", "casucci": "Casucci", "magnetrol": "Magnetrol", "murphy": "Murphy",
+                "kimray": "Kimray", "futura": "Futura", "peco": "Peco", "gora": "Gora", "eka": "EKA", "filtron": "Filtron", "epta": "Epta",
+                "fittinox": "Fittinox", "riva": "Riva", "metpor": "Metpor", "de nichilo": "De Nichilo", "spirax": "Spirax Sarco"}
+
+
+def marcas_en(texto):
+    """Todas las marcas nombradas en un texto, en el orden en que aparecen."""
+    import re
+    from catalogo_materiales import MARCAS
+    todas = {**MARCAS, **MARCAS_EXTRA}
+    t = norm(texto)
+    hall = sorted(((m.start(), todas[k]) for k in todas for m in re.finditer(r"\b" + re.escape(k) + r"\b", t)), key=lambda x: x[0])
+    return list(dict.fromkeys(n for _, n in hall))
+
+
+def ajustar_marca(at, texto):
+    """Si el texto nombra varias marcas (las del listado aprobado del cliente), la marca es "a elección" entre todas,
+    nunca la primera que aparece (Camuzzi 003: "Worcester" parecía la marca pedida, 03-11-2026)."""
+    ms = marcas_en(texto)
+    if len(ms) >= 2:
+        at["marca"] = "A elección del listado: " + " / ".join(ms)
+    elif ms and not at.get("marca"):
+        at["marca"] = ms[0]
+    elif not ms and not at.get("marca") and "listado" in norm(texto):
+        at["marca"] = "Del listado de marcas del cliente"
+    if "/" in str(at.get("marca", "")) and not at["marca"].startswith("A elección"):
+        at["marca"] = "A elección del listado: " + at["marca"]
+    return at
 
 
 def fijar(carpeta, datos):
@@ -138,6 +171,9 @@ def atributos_items(carpeta, cfg):
             at = atributos(t, fam)
         it["atributos"] = {"familia": fam, **{k: v for k, v in at.items() if v}}
         it["faltan_datos"] = faltan_datos(fam, at)
+    for it in cfg["items"]:  # marcas: las que nombra la descripción mandan (varias = a elección del listado del cliente)
+        if it["grupo"] == "material" and it.get("atributos") is not None:
+            ajustar_marca(it["atributos"], it.get("descripcion", ""))
     return cfg
 
 

@@ -1959,7 +1959,7 @@ const Documentos = (() => {
       r = 3;
       Busqueda.GRUPOS.forEach(([nombre, , cols], g) => {
         const its = mat.filter(it => Busqueda.grupoDe(it) === g); if (!its.length) return;
-        const izq = ["Ítem", "Descripción (lista del cliente)", ...cols.map(k => Busqueda.ETIQUETAS[k]), "Cantidad", "Unidad"];
+        const izq = ["Ítem", /ITT/.test(of?.titulo_materiales || "") ? "Descripción (lista de ITT)" : "Descripción (lista del cliente)", ...cols.map(k => Busqueda.ETIQUETAS[k]), "Cantidad", "Unidad"];
         const der = ["Equivalencia encontrada", "Precio ajustado a hoy USD", "Subtotal USD", "Fecha del último precio", "Antecedente", "Descripción del reemplazo", "Diferencias"];
         for (let j = 1; j <= izq.length + der.length; j++) put(wf, A(j, r), j === 1 ? nombre.toUpperCase() : j === izq.length + 1 ? "DATOS ENCONTRADOS" : "", HF2);
         r++;

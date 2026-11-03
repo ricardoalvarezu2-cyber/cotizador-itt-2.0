@@ -280,6 +280,10 @@ def escribir_planilla(cfg, carpeta, idx_rows):
     # Materiales por familia (Matías, 03-11-2026): una lista debajo de la otra, a la izquierda lo que da el cliente con
     # las características de su familia y a la derecha lo encontrado; precios y subtotales por fórmula de la hoja Materiales
     wf = wb.create_sheet("Materiales por familia", 1)
+    try:  # la oferta lo dice cuando el cliente no entrega lista y la arma ITT (Camuzzi 003)
+        lista_itt = "ITT" in json.load(open(carpeta / "oferta.json", encoding="utf-8")).get("titulo_materiales", "")
+    except (OSError, ValueError):
+        lista_itt = False
     fila_mat = {id(it): i for i, it in enumerate(mat, 2)}
     EQUIV = {"igual": "Igual", "similar": "Similar", "sin_ref": "No encontrado"}
     r, subt = 1, []
@@ -289,7 +293,7 @@ def escribir_planilla(cfg, carpeta, idx_rows):
         its = [it for it in mat if atributos_plano.grupo_de(it) == g]
         if not its:
             continue
-        izq = ["Ítem", "Descripción (lista del cliente)"] + [atributos_plano.ETIQUETAS[k] for k in cols] + ["Cantidad", "Unidad"]
+        izq = ["Ítem", "Descripción (lista de ITT)" if lista_itt else "Descripción (lista del cliente)"] + [atributos_plano.ETIQUETAS[k] for k in cols] + ["Cantidad", "Unidad"]
         der = ["Equivalencia encontrada", "Precio ajustado a hoy USD", "Subtotal USD", "Fecha del último precio", "Antecedente", "Descripción del reemplazo", "Diferencias"]
         c = wf.cell(r, 1, nombre.upper()); c.font = Font(bold=True, color="FFFFFF"); c.fill = HF
         for j in range(2, len(izq) + len(der) + 1):
