@@ -1133,7 +1133,7 @@
   async function generar(k, ctx) {
     const cot = S.doc.cot;
     switch (k) {
-      case "presupuesto": return Documentos.planilla(cot, S.datos.indices, S.datos);
+      case "presupuesto": return Documentos.planilla(cot, S.datos.indices, S.datos, S.doc?.oferta || {});
       case "compras": return Documentos.compras(cot);
       case "informe": return Documentos.pdfDeHtml(Documentos.informeHtml(ctx));
       case "tec_docx": return Documentos.ofertaDocx("tecnica", ctx);

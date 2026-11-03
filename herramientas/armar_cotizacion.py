@@ -361,6 +361,15 @@ def escribir_planilla(cfg, carpeta, idx_rows):
         for j, v in enumerate([an["carpeta_html"], a_vista(an["fecha"]), an["que"], an["precio"], an["tomado_html"]], 1):
             c = a.cell(i, j); c.alignment = Alignment(wrap_text=True, vertical="top"); c.border = B
             celda_excel(c, sin_html(v), "precio" if j == 4 else "", documento=True)  # "13.543" del texto → número 13.543
+    # hoja con la distribución de la planilla base de ITT que lee la dirección (Matías, 03-11-2026), primera del libro
+    import planilla_itt
+    try:
+        cfg["_oferta"] = json.load(open(carpeta / "oferta.json", encoding="utf-8"))
+    except (OSError, ValueError):
+        cfg["_oferta"] = {}
+    planilla_itt.escribir(wb, cfg, mat, srv, CAT, fecha)
+    cfg.pop("_oferta", None)
+    wb.active = 0
     ruta = carpeta / f"{cfg['codigo']}_{cfg['archivo_planilla']}.xlsx"
     wb.save(ruta)
     return ruta

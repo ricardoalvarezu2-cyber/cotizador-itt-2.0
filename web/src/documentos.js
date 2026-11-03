@@ -82,7 +82,7 @@ const Documentos = (() => {
   const sinHtml = s => String(s ?? "").replace(/<[^>]+>/g, "");
 
   // ------------------------------------------------------------------ Excel del presupuesto
-  function planilla(cot, idx, datos) {
+  function planilla(cot, idx, datos, of = {}) {
     idx = Motor.indicesDe(cot, idx);
     const X = XLSX;
     const wb = X.utils.book_new();
@@ -266,7 +266,177 @@ const Documentos = (() => {
       cot.desvios.forEach((dv, k) => { put(d, A(1, k + 2), sinHtml(dv.tag)); put(d, A(2, k + 2), sinHtml(dv.titulo)); put(d, A(3, k + 2), sinHtml(dv.texto)); });
       X.utils.book_append_sheet(wb, d, "Desvíos");
     }
+    planillaItt(X, wb, cot, of || {}, mat, srv, { put, A, hoja, serial, U, filaDatos });
     return new Blob([X.write(wb, { type: "array", bookType: "xlsx" })], { type: "application/octet-stream" });
+  }
+
+  // ------------------------------------------------------------------ hoja "Planilla ITT" (herramientas/planilla_itt.py)
+  // Distribución de la planilla base de ITT que lee la dirección (Matías, 03-11-2026): encabezado, cuadro de rentabilidad,
+  // plazo y entrega, alcance SI/NO, material principal y END, y un bloque por rubro. Los números salen por fórmula de las
+  // hojas Materiales, "MO y servicios" y Cotización (mismo total que siempre).
+  const BLOQUES = ["Recipiente", "Piping", "Skid", "Plataforma / escaleras", "Válvulas manuales", "Instrumental", "Instalación eléctrica",
+    "Aislación", "Tracing eléctrico", "Otros materiales", "Mano de obra de 3ros", "Mano de obra ITT", "Granallado y pintura",
+    "Ensayos no destructivos", "Embalaje", "Transporte a destino final", "Seguro de Caución", "Otros servicios"];
+  const INSTR = /^(sensor|transmisor|presion regulada|temperatura|switch|interruptor|manometro|termometro|termovaina|indicador|toma multiport|regulador y filtro|tubing|conector)|\bdoble virola\b|\binstrumento/;
+  const RECIP = /filtro|separador|recipiente|tanque|calentador|trampa|coalesc|depurador|scrubber|slug/;
+  function bloqueDe(it, cot) {
+    const n = Busqueda.norm, d = n(it.descripcion || "");
+    if (it.grupo === "material") {
+      if (/aislac/.test(d)) return "Aislación";
+      if (/tracing|traceado/.test(d)) return "Tracing eléctrico";
+      if (/\bcable|bandeja portacable|conduit|prensacable|caja de paso|luminaria|instalacion electrica/.test(d)) return "Instalación eléctrica";
+      if (/escalera|plataforma|baranda|rejilla|guarda ?hombre|pasarela/.test(d)) return "Plataforma / escaleras";
+      if (INSTR.test(d)) return "Instrumental";
+      if (/^valv/.test(d)) return "Válvulas manuales";
+      const g = Busqueda.grupoDe(it), e = cot.equipo || {};
+      if (g === 0) return "Válvulas manuales";
+      if ([1, 2, 6].includes(g)) return "Piping";
+      if (g === 5) return "Instrumental";
+      if (g === 3) return "Skid";
+      if (RECIP.test(n(`${e.tipo || ""} ${e.singular || ""}`)) && (g === 4 || g === 7) && !/\bskid\b|soporte|pollera|patas/.test(d)) return "Recipiente";
+      if (g === 4 || /\bskid\b|soporte|estructura|bastidor|pollera|patas/.test(d)) return "Skid";
+      return "Otros materiales";
+    }
+    const t = n(`${it.descripcion || ""} ${it.fuentes[0].proveedor || ""}`);
+    if (/caucion|seguro/.test(t)) return "Seguro de Caución";
+    if (/embalaje/.test(t)) return "Embalaje";
+    if (/galvaniz/.test(t)) return "Granallado y pintura";
+    if (/rolado|cilindrado|plegado/.test(t)) return "Mano de obra de 3ros";
+    if (/prueba de fugas|horas de planta/.test(t)) return "Mano de obra ITT";
+    const r = typeof Rubros !== "undefined" ? Rubros.rubroDe(it) : null;
+    if (r === "procedimientos" && /radiograf|penetrant|\brx\b|\blp\b|ultrason/.test(t)) return "Ensayos no destructivos";
+    if (r === "horas" || r === "ph" || (it.grupo === "mo" && /propi|\bitt\b/.test(t))) return "Mano de obra ITT";
+    if (r === "pintura") return "Granallado y pintura";
+    if (r === "end") return "Ensayos no destructivos";
+    if (r === "transporte") return "Transporte a destino final";
+    if (r === "mo_piping" || r === "mo_estructura" || it.grupo === "mo") return "Mano de obra de 3ros";
+    return "Otros servicios";
+  }
+  function bloquesDe(cot) {
+    const out = new Map(), porPos = new Map();
+    for (const it of cot.items) { out.set(it, bloqueDe(it, cot)); if (!porPos.has(String(it.pos ?? ""))) porPos.set(String(it.pos ?? ""), out.get(it)); }
+    for (const it of cot.items) {
+      const m = String(it.pos ?? "").match(/^(\d+)[a-z]$/);
+      if (m && porPos.has(m[1]) && /completar|sobrante|compra minima|tira|barra/.test(Busqueda.norm(it.descripcion || ""))) out.set(it, porPos.get(m[1]));
+    }
+    return out;
+  }
+  const ETQ = { diametro: "Ø", diametro2: "Ø2", serie: "serie", schedule: "sch", espesor_mm: "esp. mm", material: "", extremos: "", cara: "", norma: "",
+    marca: "marca", modelo: "modelo", rango: "rango", trim: "trim", paso: "paso", costura: "", revestimiento: "", largo_mm: "largo mm", medida: "", designacion: "", conexion: "conexión" };
+  const ampliada = it => { const at = it.atributos || {};
+    return it.grupo === "material" && Object.keys(at).length ? [...(at.tipo ? [at.tipo] : []), ...Object.keys(ETQ).filter(k => at[k]).map(k => `${ETQ[k]} ${at[k]}`.trim())].join(" · ") : String(it.especificacion || ""); };
+  function materialPrincipal(cot, b) {
+    const out = [], fam = it => (it.atributos || {}).familia;
+    for (const [n, c] of [["Caños", it => Busqueda.grupoDe(it) === 2], ["Accesorios", it => ["ABW", "AFO"].includes(fam(it))], ["Bridas", it => fam(it) === "BRI"],
+      ["Válvulas", it => b.get(it) === "Válvulas manuales"], ["Recipiente", it => b.get(it) === "Recipiente"]]) {
+      const its = cot.items.filter(it => it.grupo === "material" && c(it) && (it.atributos || {}).material).sort((x, y) => y.cantidad * y.fuentes[0].precio - x.cantidad * x.fuentes[0].precio);
+      if (its.length) out.push(`${n} ${its[0].atributos.material}`);
+    }
+    return out.join(", ");
+  }
+  function planillaItt(X, wb, cot, of, mat, srv, h) {
+    const { put, A, hoja, serial, filaDatos } = h, p = cot.parametros, eq = cot.equipo || { singular: "equipo", plural: "equipos" };
+    const ws = hoja(), b = bloquesDe(cot), CONT = '_-* #,##0.00_-;\\-* #,##0.00_-;_-* "-"??_-;_-@_-';
+    const fill = c => ({ fill: { fgColor: { rgb: c } } }), BT = { top: { style: "thin" }, bottom: { style: "thin" }, left: { style: "thin" }, right: { style: "thin" } };
+    const AN = (o = {}) => ({ font: { name: "Arial Narrow", sz: 11, ...o } });
+    const merges = [];
+    const datosP = Object.fromEntries((cot.pedido?.datos_html || []).map(x => [x[0], x[1]]));
+    const enc = [["CLIENTE", cot.cliente?.nombre], ["PEDIDO DE PRECIOS", of.cliente?.referencia || cot.pedido?.eyebrow], ["REFERENCIA", of.cliente?.proyecto || cot.titulo],
+      ["PRESUPUESTO", [`${cot.codigo} ${cot.revision || ""}`.trim(), of.oferta?.numero].filter(Boolean).join(" · ")], ["ÍTEM", of.item?.item], ["NOMBRE", of.item?.descripcion || cot.titulo],
+      ["CANTIDAD", `${p.N} ${p.N !== 1 ? eq.plural : eq.singular}`], ["FECHA RECEPCION PED COTIZACION", cot.fecha_recepcion], ["FECHA DE VENCIMIENTO DE COTIZACION", cot.fecha_vencimiento],
+      ["PLANO / ER", cot.plano || datosP.Documento || datosP.Documentos]];
+    enc.forEach(([k, v], i) => {
+      const r = i + 1; v = sinHtml(v ?? "");
+      put(ws, A(1, r), k, { font: { name: "Arial", sz: 10 }, alignment: { horizontal: "center", vertical: "center" }, border: BT });
+      const f = /^\d{4}-\d{2}-\d{2}$/.test(v);
+      put(ws, A(2, r), f ? serial(v) : v, { font: { name: "Arial", sz: 12, bold: true }, alignment: { horizontal: "center", vertical: "center", wrapText: true }, border: BT }, f ? "dd-mm-yyyy" : undefined);
+      for (let j = 3; j <= 8; j++) put(ws, A(j, r), "", { border: BT });
+      merges.push({ s: { r: r - 1, c: 1 }, e: { r: r - 1, c: 7 } });
+    });
+    const filaMat = new Map(mat.map((it, k) => [it, k + 2])), filaSrv = new Map(srv.map((it, k) => [it, k + 2]));
+    const activos = BLOQUES.filter(n => cot.items.some(it => b.get(it) === n));
+    const nFilas = 5 + (p.FM === p.FMO ? 0 : 1) + (p.TRANS ? 1 : 0);
+    const rTot = 15 + nFilas, rt = rTot + 2, rp = rt + 3, ra = rp + 4;
+    let r = ra + 1 + BLOQUES.length + 5;
+    const sub = {}, EQV = { igual: "Igual", similar: "Similar", sin_ref: "No encontrado" };
+    for (const nombre of activos) {
+      const its = [...mat, ...srv].filter(it => b.get(it) === nombre);
+      put(ws, A(1, r), nombre, { font: { name: "Arial", sz: 12, bold: true }, ...fill("BFBFBF") }); put(ws, A(2, r), "SI", { font: { name: "Arial", sz: 10 } });
+      r++;
+      ["Descripción", "Descripción ampliada", "Cantidad", "Unid", "USD/un", "Subt USD", "Posición", "Proveedor / antecedente", "Equivalencia", "Fecha del precio"]
+        .forEach((t, j) => put(ws, A(j + 1, r), t, { font: { name: "Arial", sz: 10 }, ...fill(j < 7 ? "D9D9D9" : "E8E1F3"), alignment: { horizontal: "center" }, border: BT }));
+      r++; const r0 = r;
+      for (const it of its) {
+        const s = it.fuentes[0], esM = it.grupo === "material", hj = esM ? "Materiales" : "'MO y servicios'", i = esM ? filaMat.get(it) : filaSrv.get(it);
+        const ant = esM ? filaDatos(it)[1] : ["", ""];
+        const eqv = !s.precio || s.coincide === "sin_ref" ? "No encontrado" : EQV[s.coincide] || "";
+        const st = { font: { name: "Calibri", sz: 11 }, border: BT, alignment: { vertical: "center", wrapText: true } };
+        put(ws, A(1, r), it.descripcion, st); put(ws, A(2, r), ampliada(it), st);
+        put(ws, A(3, r), Number(it.cantidad), { ...st, alignment: { horizontal: "center" } }, Number.isInteger(Number(it.cantidad)) ? "#,##0" : "#,##0.00##");
+        put(ws, A(4, r), it.unidad, { ...st, alignment: { horizontal: "center" } });
+        put(ws, A(5, r), { f: `${hj}!O${i}` }, st, CONT); put(ws, A(6, r), { f: `${hj}!P${i}` }, st, CONT);
+        put(ws, A(7, r), String(it.pos ?? ""), { ...st, alignment: { horizontal: "center" } });
+        put(ws, A(8, r), (ant[0] ? ant[0] + " · " : "") + (s.proveedor || ""), st);
+        put(ws, A(9, r), eqv, { ...st, ...fill({ Igual: "DDF1E4", Similar: "FBEFD6" }[eqv] || "F8E1DE"), alignment: { horizontal: "center" } });
+        put(ws, A(10, r), s.fecha ? serial(s.fecha) : "", { ...st, alignment: { horizontal: "center" } }, "dd-mm-yyyy");
+        r++;
+      }
+      put(ws, A(6, r), { f: `SUM(F${r0}:F${r - 1})` }, { font: { name: "Calibri", sz: 11, bold: true }, ...fill("FFFF00"), border: BT }, CONT);
+      sub[nombre] = `F${r}`; r += 3;
+    }
+    const ref = n => sub[n] || "0", C = "'Cotización'!";
+    [["Detalle", ""], ["Cantidad", "Unidad"], ["Costo Unitario", "U$S"], ["Factor de Rentabilidad", ""], ["Precio de Venta Unitario", "U$S"], ["Precio de Venta unitario", "U$S"],
+      ["Margen de ganancia", "%"], ["Precio de venta total", "U$S"]].forEach(([t1, t2], j) => {
+      [[12, t1], [13, t2]].forEach(([rr, t]) => put(ws, A(j + 1, rr), t, { ...fill("FCD5B4"), border: BT, font: { name: "Arial Narrow", sz: j === 0 ? 16 : 11, bold: j === 0 }, alignment: { horizontal: "center", vertical: "center", wrapText: true } }));
+    });
+    merges.push({ s: { r: 11, c: 0 }, e: { r: 12, c: 0 } });
+    const resto = `(${C}B21+${C}B22-${ref("Mano de obra de 3ros")}-${ref("Seguro de Caución")}-${ref("Transporte a destino final")})`;
+    const filas = p.FM === p.FMO ? [["Materiales, MO y SVC", `${C}B5`, `${C}B18+${C}B19+${resto}`, `${C}B6`]]
+      : [["Materiales (con contingencia)", `${C}B5`, `${C}B18+${C}B19`, `${C}B6`], ["MO ITT y servicios", `${C}B5`, resto, `${C}B7`]];
+    filas.push(["Válvulas Taval", `${C}B5`, `${C}B20`, `${C}B14`], ["Mano de obra de terceros", `${C}B5`, ref("Mano de obra de 3ros"), `${C}B7`],
+      ["Seguro de caución", `${C}B5`, ref("Seguro de Caución"), `${C}B7`], ["Transporte", `${C}B5`, ref("Transporte a destino final"), `${C}B7`]);
+    if (p.TRANS) filas.push(["Flete y embalaje (por envío)", 1, `${C}E23`, 1]);
+    filas.forEach(([n, cant, costo, fac], k) => {
+      const rr = 15 + k, st = { ...AN(), border: BT };
+      put(ws, A(1, rr), n, { ...st, alignment: { horizontal: "right" } });
+      put(ws, A(2, rr), typeof cant === "number" ? cant : { f: cant }, { ...st, alignment: { horizontal: "center" } }, "0");
+      put(ws, A(3, rr), { f: costo }, st, "#,##0.00");
+      put(ws, A(4, rr), typeof fac === "number" ? fac : { f: fac }, { ...st, ...fill("FFFF00"), alignment: { horizontal: "center" } }, "0.00");
+      put(ws, A(5, rr), { f: `C${rr}*D${rr}` }, st, CONT); put(ws, A(6, rr), { f: `E${rr}` }, st, CONT);
+      put(ws, A(7, rr), { f: `IFERROR((E${rr}-C${rr})/E${rr},0)` }, st, "0.0%"); put(ws, A(8, rr), { f: `F${rr}*B${rr}` }, st, "#,##0.00");
+    });
+    const kUlt = 14 + filas.length, unit = filas.map((_, k) => 15 + k).filter(k => !(p.TRANS && k === kUlt)), rT = kUlt + 1;
+    put(ws, A(2, rT), "Total", { ...AN({ bold: true }), border: BT });
+    put(ws, A(3, rT), { f: unit.map(k => `C${k}`).join("+") }, { ...AN({ bold: true }), border: BT, ...fill("DDEBF7") }, "#,##0.00");
+    put(ws, A(6, rT), { f: unit.map(k => `F${k}`).join("+") }, { ...AN({ bold: true }), border: BT, ...fill("FFFF00") }, CONT);
+    put(ws, A(8, rT), { f: `SUM(H15:H${kUlt})` }, { ...AN({ bold: true }), border: BT, ...fill("FFFF00") }, "#,##0.00");
+    put(ws, A(7, rT + 1), { f: `IFERROR((F${rT}-C${rT})/F${rT},0)` }, null, "0.0%");
+    const BM = { top: { style: "medium" }, bottom: { style: "medium" }, left: { style: "medium" }, right: { style: "medium" } };
+    put(ws, A(6, rT + 2), "Total U$D", { ...AN({ sz: 18, bold: true }), ...fill("FFFF00"), alignment: { horizontal: "center" }, border: BM }); put(ws, A(7, rT + 2), "", { ...fill("FFFF00"), border: BM });
+    merges.push({ s: { r: rT + 1, c: 5 }, e: { r: rT + 1, c: 6 } });
+    put(ws, A(8, rT + 2), { f: `${C}E28` }, { ...AN({ sz: 18, bold: true }), ...fill("FFFF00"), alignment: { horizontal: "center" }, border: BM }, "#,##0.00");
+    put(ws, A(6, rT + 3), "Precio unitario de la oferta (redondeado):", AN({ sz: 10, italic: true })); put(ws, A(8, rT + 3), { f: `${C}D27` }, AN({ sz: 10, italic: true }), "#,##0.00");
+    const pz = cot.plazo || {}, entrega = p.TRANS ? cot.flete?.etiqueta || "" : "EXW, ITT SA, Av. 12 de Octubre 4004, Quilmes Oeste, AMBA.";
+    [[rp, `Plazo de entrega : ${pz.dias ?? ""} días ${pz.texto || ""}`.trim()], [rp + 1, `Entrega: ${entrega}`]].forEach(([rr, t]) => {
+      for (let j = 1; j <= 8; j++) put(ws, A(j, rr), j === 1 ? t : "", { ...AN({ sz: 14, bold: true }), ...fill("FCD5B4") });
+      merges.push({ s: { r: rr - 1, c: 0 }, e: { r: rr - 1, c: 7 } });
+    });
+    put(ws, A(1, ra), "MATERIA PRIMA Y MATERIALES", { font: { name: "Arial", sz: 12, bold: true }, ...fill("BFBFBF") });
+    BLOQUES.forEach((n, k) => {
+      const rr = ra + 1 + k, si = activos.includes(n);
+      put(ws, A(1, rr), n, { font: { name: "Arial", sz: 12 }, alignment: { horizontal: "center" } });
+      put(ws, A(2, rr), si ? "SI" : "NO", { font: { name: "Arial", sz: 10 }, ...(si ? fill("FCD5B4") : {}) });
+      if (si) { put(ws, A(3, rr), { f: ref(n) }, fill("FCD5B4"), CONT); put(ws, A(4, rr), "", fill("FCD5B4")); }
+      if (n === "Mano de obra ITT") put(ws, A(5, rr), "Ingeniería - Calidad - Movimientos internos, PH, armado final", { font: { name: "Arial", sz: 9 } });
+    });
+    const rm = ra + BLOQUES.length + 2, end = srv.filter(it => b.get(it) === "Ensayos no destructivos").map(it => it.descripcion).join("; ");
+    [["Material principal:", materialPrincipal(cot, b)], ["END", end || "Sin ensayos no destructivos"]].forEach(([k, v], i) => {
+      put(ws, A(1, rm + i), k, { font: { name: "Calibri", sz: 14 } }); put(ws, A(2, rm + i), v, { font: { name: "Calibri", sz: 14, color: { rgb: "FF0000" } } });
+    });
+    ws["!merges"] = merges;
+    ws["!cols"] = [43.5, 61.2, 13.7, 9, 16.8, 17.3, 13, 30, 16, 14].map(w => ({ wch: w }));
+    X.utils.book_append_sheet(wb, ws, "Planilla ITT");
+    wb.SheetNames.splice(wb.SheetNames.indexOf("Planilla ITT"), 1); wb.SheetNames.unshift("Planilla ITT");
   }
 
   // ------------------------------------------------------------------ Excel para Compras
