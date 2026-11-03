@@ -211,6 +211,45 @@ const Documentos = (() => {
       X.utils.book_append_sheet(wb, w, nombre);
     };
     detalle("Materiales", mat, false);
+
+    // Materiales por familia (como armar_cotizacion.py): una lista debajo de la otra, precios por fórmula de la hoja Materiales
+    {
+      const wf = hoja(), filaMat = new Map(mat.map((it, k) => [it, k + 2])), EQ = { igual: "Igual", similar: "Similar", sin_ref: "No encontrado" };
+      const HF2 = { font: { bold: true, color: { rgb: "FFFFFF" } }, fill: { fgColor: { rgb: "1D5F86" } } };
+      let r = 1; const subt = [];
+      put(wf, "A1", `MATERIALES POR FAMILIA · por ${eq.singular} · USD sin IVA (precios ajustados a hoy, de la hoja Materiales)`, { font: { bold: true, sz: 13 } });
+      r = 3;
+      Busqueda.GRUPOS.forEach(([nombre, , cols], g) => {
+        const its = mat.filter(it => Busqueda.grupoDe(it) === g); if (!its.length) return;
+        const izq = ["Ítem", "Descripción (lista del cliente)", ...cols.map(k => Busqueda.ETIQUETAS[k]), "Cantidad", "Unidad"];
+        const der = ["Equivalencia encontrada", "Precio ajustado a hoy USD", "Subtotal USD", "Fecha del último precio", "Antecedente", "Descripción del reemplazo", "Diferencias"];
+        for (let j = 1; j <= izq.length + der.length; j++) put(wf, A(j, r), j === 1 ? nombre.toUpperCase() : j === izq.length + 1 ? "DATOS ENCONTRADOS" : "", HF2);
+        r++;
+        [...izq, ...der].forEach((t, j) => put(wf, A(j + 1, r), t, { font: { bold: true }, alignment: { wrapText: true }, fill: { fgColor: { rgb: j < izq.length ? "DDF1E4" : "E8E1F3" } } }));
+        r++; const r0 = r, n = izq.length;
+        for (const it of its) {
+          const at = Busqueda.atributosDe(it), s = it.fuentes[0], i = filaMat.get(it), [, ant] = filaDatos(it);
+          const eqv = !s.precio || s.coincide === "sin_ref" ? "No encontrado" : EQ[s.coincide] || "";
+          [it.pos, it.descripcion, ...cols.map(k => at[k] || ""), Number(it.cantidad), it.unidad].forEach((v, j) => put(wf, A(j + 1, r), v));
+          put(wf, A(n + 1, r), eqv, { fill: { fgColor: { rgb: { Igual: "DDF1E4", Similar: "FBEFD6" }[eqv] || "F8E1DE" } } });
+          put(wf, A(n + 2, r), { f: `Materiales!O${i}` }, null, U); put(wf, A(n + 3, r), { f: `Materiales!P${i}` }, null, U);
+          put(wf, A(n + 4, r), serial(s.fecha), null, "dd-mm-yyyy"); put(wf, A(n + 5, r), (ant[0] ? ant[0] + " · " : "") + (s.proveedor || ""));
+          put(wf, A(n + 6, r), ant[1]); put(wf, A(n + 7, r), s.diferencia || "");
+          r++;
+        }
+        const col = X.utils.encode_col(n + 2);
+        put(wf, A(2, r), `Subtotal ${nombre.split(" (")[0].toLowerCase()}`, TOT); put(wf, A(n + 3, r), { f: `SUM(${col}${r0}:${col}${r - 1})` }, TOT, U);
+        subt.push([nombre.split(" (")[0], `'Materiales por familia'!${col}${r}`]);
+        r += 3;
+      });
+      put(wf, A(2, r), `TOTAL MATERIALES por ${eq.singular} (sin contingencia; igual a la hoja Materiales)`, AZ);
+      put(wf, A(4, r), subt.length ? { f: subt.map(x => x[1]).join("+") } : 0, AZ, U);
+      wf["!cols"] = [{ wch: 6 }, { wch: 46 }, ...Array(23).fill({ wch: 14 })];
+      X.utils.book_append_sheet(wb, wf, "Materiales por familia");
+      wb.SheetNames.splice(wb.SheetNames.indexOf("Materiales por familia"), 1); wb.SheetNames.splice(1, 0, "Materiales por familia");
+      put(ws, "G22", `COSTO DE MATERIALES POR FAMILIA (por ${eq.singular}, ajustado a hoy, sin contingencia)`, { font: { bold: true } });
+      subt.forEach(([nombre, ref], k) => { put(ws, A(7, 23 + k), nombre); put(ws, A(8, 23 + k), { f: ref }, null, U); });
+    }
     detalle("MO y servicios", srv, true);
 
     const x = hoja();

@@ -152,3 +152,32 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         sys.exit(__doc__)
     main(*sys.argv[1:])
+
+
+# Listas por familia de la planilla y de la página (Matías, 03-11-2026): una lista debajo de la otra, cada una con las
+# características que corresponden a esa familia y su subtotal. (nombre, familias del catálogo, columnas)
+GRUPOS = [
+    ("Válvulas", ("VAL",), ["diametro", "tipo", "serie", "paso", "material", "trim", "extremos", "norma", "marca", "modelo"]),
+    ("Accesorios de piping (bridas, tes, codos, reducciones, olets, cuplas)", ("BRI", "AFO", "ABW"),
+     ["diametro", "diametro2", "tipo", "serie", "schedule", "cara", "material", "extremos", "norma"]),
+    ("Caños y niples", ("CAN", "NIP"), ["diametro", "schedule", "espesor_mm", "material", "costura", "revestimiento", "largo_mm", "extremos", "norma"]),
+    ("Perfiles y estructura", ("PER",), ["tipo", "designacion", "espesor_mm", "material", "medida", "norma"]),
+    ("Chapas, rejillas y mallas", ("PER",), ["tipo", "espesor_mm", "material", "medida", "norma"]),
+    ("Instrumentos", ("INS",), ["tipo", "rango", "diametro", "conexion", "material", "marca", "modelo"]),
+    ("Juntas, espárragos y bulonería", ("JUN",), ["tipo", "diametro", "serie", "material", "medida", "norma"]),
+    ("Otros materiales", (), ["tipo", "diametro", "serie", "material", "medida", "rango", "marca", "modelo"]),
+]
+ETIQUETAS = {"diametro": "Ø", "diametro2": "Ø2", "tipo": "Tipo", "serie": "Serie", "schedule": "Sch", "paso": "Paso", "material": "Material",
+             "trim": "Trim", "extremos": "Extremos", "cara": "Cara", "norma": "Norma", "marca": "Marca", "modelo": "Modelo", "espesor_mm": "Espesor mm",
+             "costura": "Costura", "revestimiento": "Revestimiento", "largo_mm": "Largo mm", "designacion": "Designación", "medida": "Medida",
+             "rango": "Rango", "conexion": "Conexión"}
+
+
+def grupo_de(it):
+    """Índice en GRUPOS de un material, por la familia de sus datos (chapas, rejillas y mallas aparte de los perfiles)."""
+    import re
+    at = it.get("atributos") or {}
+    fam = at.get("familia", "")
+    if fam == "PER":
+        return 4 if re.search(r"chapa|rejilla|malla|desplegad", norm(f"{at.get('tipo', '')} {it.get('descripcion', '')}")) else 3
+    return next((i for i, (_, fams, _) in enumerate(GRUPOS) if fam in fams), len(GRUPOS) - 1)

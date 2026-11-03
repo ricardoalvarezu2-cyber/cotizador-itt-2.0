@@ -304,6 +304,26 @@ const Busqueda = (() => {
     };
   }
 
+  // Listas por familia de la página y del Excel (atributos_plano.GRUPOS, Matías 03-11-2026)
+  const GRUPOS = [
+    ["Válvulas", ["VAL"], ["diametro", "tipo", "serie", "paso", "material", "trim", "extremos", "norma", "marca", "modelo"]],
+    ["Accesorios de piping (bridas, tes, codos, reducciones, olets, cuplas)", ["BRI", "AFO", "ABW"], ["diametro", "diametro2", "tipo", "serie", "schedule", "cara", "material", "extremos", "norma"]],
+    ["Caños y niples", ["CAN", "NIP"], ["diametro", "schedule", "espesor_mm", "material", "costura", "revestimiento", "largo_mm", "extremos", "norma"]],
+    ["Perfiles y estructura", ["PER"], ["tipo", "designacion", "espesor_mm", "material", "medida", "norma"]],
+    ["Chapas, rejillas y mallas", ["PER"], ["tipo", "espesor_mm", "material", "medida", "norma"]],
+    ["Instrumentos", ["INS"], ["tipo", "rango", "diametro", "conexion", "material", "marca", "modelo"]],
+    ["Juntas, espárragos y bulonería", ["JUN"], ["tipo", "diametro", "serie", "material", "medida", "norma"]],
+    ["Otros materiales", [], ["tipo", "diametro", "serie", "material", "medida", "rango", "marca", "modelo"]]];
+  const ETIQUETAS = { diametro: "Ø", diametro2: "Ø2", tipo: "Tipo", serie: "Serie", schedule: "Sch", paso: "Paso", material: "Material", trim: "Trim", extremos: "Extremos",
+    cara: "Cara", norma: "Norma", marca: "Marca", modelo: "Modelo", espesor_mm: "Espesor mm", costura: "Costura", revestimiento: "Revestimiento", largo_mm: "Largo mm",
+    designacion: "Designación", medida: "Medida", rango: "Rango", conexion: "Conexión" };
+  const atributosDe = it => it.atributos || (it.at ? { familia: it.fam || "", ...it.at } : {});
+  function grupoDe(it) {
+    const at = atributosDe(it), fam = at.familia || "";
+    if (fam === "PER") return /chapa|rejilla|malla|desplegad/.test(norm(`${at.tipo || ""} ${it.descripcion || ""}`)) ? 4 : 3;
+    const i = GRUPOS.findIndex(g => g[1].includes(fam)); return i < 0 ? GRUPOS.length - 1 : i;
+  }
+
   // todos los datos de la pieza, cada uno con su nombre (Matías, 03-11-2026)
   const ETIQ = { diametro: "Ø", diametro2: "Ø2", serie: "serie", schedule: "sch", espesor_mm: "espesor mm", material: "material", extremos: "extremos",
     cara: "cara", norma: "norma", marca: "marca", modelo: "modelo", rango: "rango", trim: "trim", paso: "paso", costura: "costura",
@@ -462,6 +482,6 @@ const Busqueda = (() => {
     return out;
   }
   const frenosTexto = (cfg, oferta) => frenosOferta(cfg, oferta).map(f => f.texto).join(" · ");
-  return { describirAtributos, norm, coincide, incompatible, motivos, compatItem, SIN_RESOLVER, firmaP9, p9Pendiente, campos, opcionales, valores, materiales, servicios, itemDeMaterial, itemDeServicio, soldadura, tarifa, avisos, catalogo, codigoDe, plazoCalculado, plazoBloquea, TIPO_FUENTE, CON_TIPO, frenosOferta, frenosTexto };
+  return { GRUPOS, ETIQUETAS, grupoDe, atributosDe, describirAtributos, norm, coincide, incompatible, motivos, compatItem, SIN_RESOLVER, firmaP9, p9Pendiente, campos, opcionales, valores, materiales, servicios, itemDeMaterial, itemDeServicio, soldadura, tarifa, avisos, catalogo, codigoDe, plazoCalculado, plazoBloquea, TIPO_FUENTE, CON_TIPO, frenosOferta, frenosTexto };
 })();
 if (typeof module !== "undefined") module.exports = Busqueda;

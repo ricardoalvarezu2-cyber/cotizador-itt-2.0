@@ -350,10 +350,12 @@
       return a.some(x => x.nivel === "bad") ? `<span class="pill bad">Corregir</span>` : a.length ? `<span class="pill warn">Revisar · ${a.length}</span>` : `<span class="pill ok">Bien</span>`; };
     S.itAbiertos ??= new Set();
     const k2 = grupoMat ? "m" : "s";
+    // materiales: una lista por familia (válvulas, accesorios, caños, perfiles, chapas…) con su subtotal (Matías, 03-11-2026)
+    const grupos = lista => !grupoMat ? [["", lista]] : Busqueda.GRUPOS.map(([n], g) => [n, lista.filter(it => Busqueda.grupoDe(it) === g)]).filter(([, l]) => l.length);
     return controles + `<div class="tbl"><table class="items"><thead><tr><th>Pos.</th><th>Ítem</th><th class="n">Cantidad</th><th>Unidad</th><th class="n">USD unitario</th><th class="n">USD ajustado</th><th>Estado</th><th></th></tr></thead><tbody>
-      ${items.map(it => { const s = it.fuentes[0], ab = S.itAbiertos.has(it.id), avs_ = porItem[it.id] || []; return `<tr>
+      ${grupos(items).map(([titulo, its]) => (titulo ? `<tr class="grupo"><td colspan="8"><b>${E(titulo)}</b> <span class="small muted">· ${its.length} ítem(s)</span></td></tr>` : "") + its.map(it => { const s = it.fuentes[0], ab = S.itAbiertos.has(it.id), avs_ = porItem[it.id] || []; return `<tr>
         <td class="ed" data-l="Pos." style="width:70px"><input id="p-${E(it.id)}" data-it="${E(it.id)}" data-c="pos" value="${E(it.pos)}" style="width:58px" aria-label="Posición"></td>
-        <td><button class="it-abrir" data-l-desc data-a="it-abrir" data-id="${E(it.id)}" aria-expanded="${ab}"><span class="flecha" aria-hidden="true">${ab ? "▾" : "▸"}</span><span>${E(it.descripcion)}</span></button></td>
+        <td><button class="it-abrir" data-l-desc data-a="it-abrir" data-id="${E(it.id)}" aria-expanded="${ab}"><span class="flecha" aria-hidden="true">${ab ? "▾" : "▸"}</span><span>${E(it.descripcion)}${grupoMat && Busqueda.describirAtributos(Busqueda.atributosDe(it)) ? `<span class="sp" style="display:block">${E(Busqueda.describirAtributos(Busqueda.atributosDe(it)))}</span>` : ""}</span></button></td>
         <td class="ed" data-l="Cantidad"><input id="q-${E(it.id)}" type="text" inputmode="decimal" class="num" data-it="${E(it.id)}" data-c="cantidad" value="${NI(it.cantidad)}" aria-label="Cantidad"></td><td data-l="Unidad">${E(it.unidad)}</td>
         <td class="ed" data-l="USD unitario"><input id="u-${E(it.id)}" type="text" inputmode="decimal" class="num" data-it="${E(it.id)}" data-c="precio" value="${NI(s.precio)}" aria-label="Precio unitario"></td>
         <td class="n" data-l="USD ajustado" data-sub="${E(it.id)}">${num(c.filas.find(f => f.id === it.id)?.ajustado)}</td>
@@ -364,7 +366,7 @@
           <div><b>Precio</b>${E(Documentos.TIPOS[s.tipo] || s.tipo)} · ${E(s.proveedor)} · ${E(F(s.fecha))}</div>
           <div><b>Coincide con el plano</b>${E(Documentos.COINC[s.coincide] || "—")}${s.diferencia ? " · " + E(s.diferencia) : ""}</div>
           ${avs_.length ? `<div><b>Avisos</b>${avs_.map(x => E(x.corto)).join("<br>")}</div>` : ""}
-        </div></td></tr>`; }).join("")}
+        </div></td></tr>`; }).join("") + (titulo ? `<tr class="subgrupo"><td></td><td>Subtotal ${E(titulo.split(" (")[0].toLowerCase())}</td><td colspan="3"></td><td class="n">${num(its.reduce((t, it) => t + imp(it.id), 0))}</td><td colspan="2"></td></tr>` : "")).join("")}
       <tr class="total"><td></td><td>Subtotal por ${E(S.doc.cot.equipo?.singular || "equipo")}${items.length < todos.length ? " (todos los ítems)" : ""}</td><td colspan="3"></td><td class="n" data-subtot="${grupoMat ? "material" : "srv"}"></td><td colspan="2"></td></tr></tbody></table></div>`;
   }
 

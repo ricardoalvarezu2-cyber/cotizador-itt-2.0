@@ -276,6 +276,62 @@ def escribir_planilla(cfg, carpeta, idx_rows):
         return w
 
     detalle("Materiales", mat, False)
+
+    # Materiales por familia (Matías, 03-11-2026): una lista debajo de la otra, a la izquierda lo que da el cliente con
+    # las características de su familia y a la derecha lo encontrado; precios y subtotales por fórmula de la hoja Materiales
+    wf = wb.create_sheet("Materiales por familia", 1)
+    fila_mat = {id(it): i for i, it in enumerate(mat, 2)}
+    EQUIV = {"igual": "Igual", "similar": "Similar", "sin_ref": "No encontrado"}
+    r, subt = 1, []
+    wf.cell(r, 1, f"MATERIALES POR FAMILIA · por {eq['singular']} · USD sin IVA (precios ajustados a hoy, de la hoja Materiales)").font = Font(bold=True, size=13)
+    r += 2
+    for g, (nombre, _, cols) in enumerate(atributos_plano.GRUPOS):
+        its = [it for it in mat if atributos_plano.grupo_de(it) == g]
+        if not its:
+            continue
+        izq = ["Ítem", "Descripción (lista del cliente)"] + [atributos_plano.ETIQUETAS[k] for k in cols] + ["Cantidad", "Unidad"]
+        der = ["Equivalencia encontrada", "Precio ajustado a hoy USD", "Subtotal USD", "Fecha del último precio", "Antecedente", "Descripción del reemplazo", "Diferencias"]
+        c = wf.cell(r, 1, nombre.upper()); c.font = Font(bold=True, color="FFFFFF"); c.fill = HF
+        for j in range(2, len(izq) + len(der) + 1):
+            wf.cell(r, j).fill = HF
+        wf.cell(r, len(izq) + 1, "DATOS ENCONTRADOS").font = Font(bold=True, color="FFFFFF")
+        r += 1
+        for j, t in enumerate(izq + der, 1):
+            x = wf.cell(r, j, t); x.font = Font(bold=True); x.alignment = Alignment(wrap_text=True, vertical="center")
+            x.fill = PatternFill("solid", fgColor="DDF1E4" if j <= len(izq) else "E8E1F3"); x.border = B
+        r += 1
+        r0 = r
+        for it in its:
+            at, s, i = it.get("atributos") or {}, it["fuentes"][0], fila_mat[id(it)]
+            ped, ant = atributos_plano.fila_datos(it, CAT)
+            cod, desc_ant = ant[0], ant[1]
+            eqv = "No encontrado" if not s["precio"] or s.get("coincide") == "sin_ref" else EQUIV.get(s.get("coincide"), "")
+            vals = [it["pos"], it["descripcion"]] + [at.get(k, "") for k in cols] + [it["cantidad"], it["unidad"],
+                    eqv, f"=Materiales!O{i}", f"=Materiales!P{i}", fecha(s["fecha"]), (cod + " · " if cod else "") + s["proveedor"], desc_ant, s.get("diferencia", "")]
+            for j, v in enumerate(vals, 1):
+                x = wf.cell(r, j, v); x.border = B
+            n = len(izq)
+            wf.cell(r, n + 2).number_format = wf.cell(r, n + 3).number_format = USD
+            wf.cell(r, n + 4).number_format = "dd-mm-yyyy"
+            wf.cell(r, n + 1).fill = PatternFill("solid", fgColor={"Igual": "DDF1E4", "Similar": "FBEFD6"}.get(eqv, "F8E1DE"))
+            r += 1
+        n = len(izq)
+        wf.cell(r, 2, f"Subtotal {nombre.split(' (')[0].lower()}").font = Font(bold=True)
+        x = wf.cell(r, n + 3, f"=SUM({get_column_letter(n + 3)}{r0}:{get_column_letter(n + 3)}{r - 1})"); x.font = Font(bold=True); x.number_format = USD
+        for j in range(1, n + 8):
+            wf.cell(r, j).fill = TOT
+        subt.append((nombre.split(" (")[0], f"'Materiales por familia'!{get_column_letter(n + 3)}{r}"))
+        r += 3
+    wf.cell(r, 2, f"TOTAL MATERIALES por {eq['singular']} (sin contingencia; igual a la hoja Materiales)").font = Font(bold=True, color="1D5F86")
+    x = wf.cell(r, 4, "=" + "+".join(ref for _, ref in subt) if subt else 0); x.font = Font(bold=True, color="1D5F86"); x.number_format = USD
+    wf.column_dimensions["A"].width = 6; wf.column_dimensions["B"].width = 46
+    for j in range(3, 26):
+        wf.column_dimensions[get_column_letter(j)].width = 14
+    wf.freeze_panes = "C2"
+    # costo de materiales por familia en la hoja Cotización
+    ws["G22"] = f"COSTO DE MATERIALES POR FAMILIA (por {eq['singular']}, ajustado a hoy, sin contingencia)"; ws["G22"].font = Font(bold=True)
+    for k, (nombre, ref) in enumerate(subt, 23):
+        ws.cell(k, 7, nombre); c = ws.cell(k, 8, "=" + ref); c.number_format = USD
     w = detalle("MO y servicios", srv, True)
     if cfg.get("nota_mo_html"):
         w.cell(w.max_row + 2, 3, sin_html(cfg["nota_mo_html"])).font = GRIS

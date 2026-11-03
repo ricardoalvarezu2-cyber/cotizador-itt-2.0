@@ -77,6 +77,8 @@ td .d{font-weight:500} td .sp{font-size:12px;color:var(--muted)}
 td input{padding:4px 6px}
 td.ed{width:92px} td.ed input{width:84px}
 tr.total td{background:var(--soft);font-weight:600}
+tr.grupo td{background:var(--accent-soft)!important;border-top:2px solid var(--accent);padding-top:12px}
+tr.subgrupo td{background:var(--soft)!important;font-weight:600}
 /* carátula */
 .cab{display:grid;grid-template-columns:1fr auto;gap:12px 24px;align-items:end;border-bottom:3px solid var(--ink);padding-bottom:14px}
 .cab .meta{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:13px;color:var(--muted)}
@@ -675,6 +677,26 @@ const Busqueda = (() => {
     };
   }
 
+  // Listas por familia de la página y del Excel (atributos_plano.GRUPOS, Matías 03-11-2026)
+  const GRUPOS = [
+    ["Válvulas", ["VAL"], ["diametro", "tipo", "serie", "paso", "material", "trim", "extremos", "norma", "marca", "modelo"]],
+    ["Accesorios de piping (bridas, tes, codos, reducciones, olets, cuplas)", ["BRI", "AFO", "ABW"], ["diametro", "diametro2", "tipo", "serie", "schedule", "cara", "material", "extremos", "norma"]],
+    ["Caños y niples", ["CAN", "NIP"], ["diametro", "schedule", "espesor_mm", "material", "costura", "revestimiento", "largo_mm", "extremos", "norma"]],
+    ["Perfiles y estructura", ["PER"], ["tipo", "designacion", "espesor_mm", "material", "medida", "norma"]],
+    ["Chapas, rejillas y mallas", ["PER"], ["tipo", "espesor_mm", "material", "medida", "norma"]],
+    ["Instrumentos", ["INS"], ["tipo", "rango", "diametro", "conexion", "material", "marca", "modelo"]],
+    ["Juntas, espárragos y bulonería", ["JUN"], ["tipo", "diametro", "serie", "material", "medida", "norma"]],
+    ["Otros materiales", [], ["tipo", "diametro", "serie", "material", "medida", "rango", "marca", "modelo"]]];
+  const ETIQUETAS = { diametro: "Ø", diametro2: "Ø2", tipo: "Tipo", serie: "Serie", schedule: "Sch", paso: "Paso", material: "Material", trim: "Trim", extremos: "Extremos",
+    cara: "Cara", norma: "Norma", marca: "Marca", modelo: "Modelo", espesor_mm: "Espesor mm", costura: "Costura", revestimiento: "Revestimiento", largo_mm: "Largo mm",
+    designacion: "Designación", medida: "Medida", rango: "Rango", conexion: "Conexión" };
+  const atributosDe = it => it.atributos || (it.at ? { familia: it.fam || "", ...it.at } : {});
+  function grupoDe(it) {
+    const at = atributosDe(it), fam = at.familia || "";
+    if (fam === "PER") return /chapa|rejilla|malla|desplegad/.test(norm(`${at.tipo || ""} ${it.descripcion || ""}`)) ? 4 : 3;
+    const i = GRUPOS.findIndex(g => g[1].includes(fam)); return i < 0 ? GRUPOS.length - 1 : i;
+  }
+
   // todos los datos de la pieza, cada uno con su nombre (Matías, 03-11-2026)
   const ETIQ = { diametro: "Ø", diametro2: "Ø2", serie: "serie", schedule: "sch", espesor_mm: "espesor mm", material: "material", extremos: "extremos",
     cara: "cara", norma: "norma", marca: "marca", modelo: "modelo", rango: "rango", trim: "trim", paso: "paso", costura: "costura",
@@ -833,7 +855,7 @@ const Busqueda = (() => {
     return out;
   }
   const frenosTexto = (cfg, oferta) => frenosOferta(cfg, oferta).map(f => f.texto).join(" · ");
-  return { describirAtributos, norm, coincide, incompatible, motivos, compatItem, SIN_RESOLVER, firmaP9, p9Pendiente, campos, opcionales, valores, materiales, servicios, itemDeMaterial, itemDeServicio, soldadura, tarifa, avisos, catalogo, codigoDe, plazoCalculado, plazoBloquea, TIPO_FUENTE, CON_TIPO, frenosOferta, frenosTexto };
+  return { GRUPOS, ETIQUETAS, grupoDe, atributosDe, describirAtributos, norm, coincide, incompatible, motivos, compatItem, SIN_RESOLVER, firmaP9, p9Pendiente, campos, opcionales, valores, materiales, servicios, itemDeMaterial, itemDeServicio, soldadura, tarifa, avisos, catalogo, codigoDe, plazoCalculado, plazoBloquea, TIPO_FUENTE, CON_TIPO, frenosOferta, frenosTexto };
 })();
 if (typeof module !== "undefined") module.exports = Busqueda;
 
@@ -1927,6 +1949,45 @@ const Documentos = (() => {
       X.utils.book_append_sheet(wb, w, nombre);
     };
     detalle("Materiales", mat, false);
+
+    // Materiales por familia (como armar_cotizacion.py): una lista debajo de la otra, precios por fórmula de la hoja Materiales
+    {
+      const wf = hoja(), filaMat = new Map(mat.map((it, k) => [it, k + 2])), EQ = { igual: "Igual", similar: "Similar", sin_ref: "No encontrado" };
+      const HF2 = { font: { bold: true, color: { rgb: "FFFFFF" } }, fill: { fgColor: { rgb: "1D5F86" } } };
+      let r = 1; const subt = [];
+      put(wf, "A1", `MATERIALES POR FAMILIA · por ${eq.singular} · USD sin IVA (precios ajustados a hoy, de la hoja Materiales)`, { font: { bold: true, sz: 13 } });
+      r = 3;
+      Busqueda.GRUPOS.forEach(([nombre, , cols], g) => {
+        const its = mat.filter(it => Busqueda.grupoDe(it) === g); if (!its.length) return;
+        const izq = ["Ítem", "Descripción (lista del cliente)", ...cols.map(k => Busqueda.ETIQUETAS[k]), "Cantidad", "Unidad"];
+        const der = ["Equivalencia encontrada", "Precio ajustado a hoy USD", "Subtotal USD", "Fecha del último precio", "Antecedente", "Descripción del reemplazo", "Diferencias"];
+        for (let j = 1; j <= izq.length + der.length; j++) put(wf, A(j, r), j === 1 ? nombre.toUpperCase() : j === izq.length + 1 ? "DATOS ENCONTRADOS" : "", HF2);
+        r++;
+        [...izq, ...der].forEach((t, j) => put(wf, A(j + 1, r), t, { font: { bold: true }, alignment: { wrapText: true }, fill: { fgColor: { rgb: j < izq.length ? "DDF1E4" : "E8E1F3" } } }));
+        r++; const r0 = r, n = izq.length;
+        for (const it of its) {
+          const at = Busqueda.atributosDe(it), s = it.fuentes[0], i = filaMat.get(it), [, ant] = filaDatos(it);
+          const eqv = !s.precio || s.coincide === "sin_ref" ? "No encontrado" : EQ[s.coincide] || "";
+          [it.pos, it.descripcion, ...cols.map(k => at[k] || ""), Number(it.cantidad), it.unidad].forEach((v, j) => put(wf, A(j + 1, r), v));
+          put(wf, A(n + 1, r), eqv, { fill: { fgColor: { rgb: { Igual: "DDF1E4", Similar: "FBEFD6" }[eqv] || "F8E1DE" } } });
+          put(wf, A(n + 2, r), { f: `Materiales!O${i}` }, null, U); put(wf, A(n + 3, r), { f: `Materiales!P${i}` }, null, U);
+          put(wf, A(n + 4, r), serial(s.fecha), null, "dd-mm-yyyy"); put(wf, A(n + 5, r), (ant[0] ? ant[0] + " · " : "") + (s.proveedor || ""));
+          put(wf, A(n + 6, r), ant[1]); put(wf, A(n + 7, r), s.diferencia || "");
+          r++;
+        }
+        const col = X.utils.encode_col(n + 2);
+        put(wf, A(2, r), `Subtotal ${nombre.split(" (")[0].toLowerCase()}`, TOT); put(wf, A(n + 3, r), { f: `SUM(${col}${r0}:${col}${r - 1})` }, TOT, U);
+        subt.push([nombre.split(" (")[0], `'Materiales por familia'!${col}${r}`]);
+        r += 3;
+      });
+      put(wf, A(2, r), `TOTAL MATERIALES por ${eq.singular} (sin contingencia; igual a la hoja Materiales)`, AZ);
+      put(wf, A(4, r), subt.length ? { f: subt.map(x => x[1]).join("+") } : 0, AZ, U);
+      wf["!cols"] = [{ wch: 6 }, { wch: 46 }, ...Array(23).fill({ wch: 14 })];
+      X.utils.book_append_sheet(wb, wf, "Materiales por familia");
+      wb.SheetNames.splice(wb.SheetNames.indexOf("Materiales por familia"), 1); wb.SheetNames.splice(1, 0, "Materiales por familia");
+      put(ws, "G22", `COSTO DE MATERIALES POR FAMILIA (por ${eq.singular}, ajustado a hoy, sin contingencia)`, { font: { bold: true } });
+      subt.forEach(([nombre, ref], k) => { put(ws, A(7, 23 + k), nombre); put(ws, A(8, 23 + k), { f: ref }, null, U); });
+    }
     detalle("MO y servicios", srv, true);
 
     const x = hoja();
@@ -2650,10 +2711,12 @@ if (typeof module !== "undefined") module.exports = Documentos;
       return a.some(x => x.nivel === "bad") ? `<span class="pill bad">Corregir</span>` : a.length ? `<span class="pill warn">Revisar · ${a.length}</span>` : `<span class="pill ok">Bien</span>`; };
     S.itAbiertos ??= new Set();
     const k2 = grupoMat ? "m" : "s";
+    // materiales: una lista por familia (válvulas, accesorios, caños, perfiles, chapas…) con su subtotal (Matías, 03-11-2026)
+    const grupos = lista => !grupoMat ? [["", lista]] : Busqueda.GRUPOS.map(([n], g) => [n, lista.filter(it => Busqueda.grupoDe(it) === g)]).filter(([, l]) => l.length);
     return controles + `<div class="tbl"><table class="items"><thead><tr><th>Pos.</th><th>Ítem</th><th class="n">Cantidad</th><th>Unidad</th><th class="n">USD unitario</th><th class="n">USD ajustado</th><th>Estado</th><th></th></tr></thead><tbody>
-      ${items.map(it => { const s = it.fuentes[0], ab = S.itAbiertos.has(it.id), avs_ = porItem[it.id] || []; return `<tr>
+      ${grupos(items).map(([titulo, its]) => (titulo ? `<tr class="grupo"><td colspan="8"><b>${E(titulo)}</b> <span class="small muted">· ${its.length} ítem(s)</span></td></tr>` : "") + its.map(it => { const s = it.fuentes[0], ab = S.itAbiertos.has(it.id), avs_ = porItem[it.id] || []; return `<tr>
         <td class="ed" data-l="Pos." style="width:70px"><input id="p-${E(it.id)}" data-it="${E(it.id)}" data-c="pos" value="${E(it.pos)}" style="width:58px" aria-label="Posición"></td>
-        <td><button class="it-abrir" data-l-desc data-a="it-abrir" data-id="${E(it.id)}" aria-expanded="${ab}"><span class="flecha" aria-hidden="true">${ab ? "▾" : "▸"}</span><span>${E(it.descripcion)}</span></button></td>
+        <td><button class="it-abrir" data-l-desc data-a="it-abrir" data-id="${E(it.id)}" aria-expanded="${ab}"><span class="flecha" aria-hidden="true">${ab ? "▾" : "▸"}</span><span>${E(it.descripcion)}${grupoMat && Busqueda.describirAtributos(Busqueda.atributosDe(it)) ? `<span class="sp" style="display:block">${E(Busqueda.describirAtributos(Busqueda.atributosDe(it)))}</span>` : ""}</span></button></td>
         <td class="ed" data-l="Cantidad"><input id="q-${E(it.id)}" type="text" inputmode="decimal" class="num" data-it="${E(it.id)}" data-c="cantidad" value="${NI(it.cantidad)}" aria-label="Cantidad"></td><td data-l="Unidad">${E(it.unidad)}</td>
         <td class="ed" data-l="USD unitario"><input id="u-${E(it.id)}" type="text" inputmode="decimal" class="num" data-it="${E(it.id)}" data-c="precio" value="${NI(s.precio)}" aria-label="Precio unitario"></td>
         <td class="n" data-l="USD ajustado" data-sub="${E(it.id)}">${num(c.filas.find(f => f.id === it.id)?.ajustado)}</td>
@@ -2664,7 +2727,7 @@ if (typeof module !== "undefined") module.exports = Documentos;
           <div><b>Precio</b>${E(Documentos.TIPOS[s.tipo] || s.tipo)} · ${E(s.proveedor)} · ${E(F(s.fecha))}</div>
           <div><b>Coincide con el plano</b>${E(Documentos.COINC[s.coincide] || "—")}${s.diferencia ? " · " + E(s.diferencia) : ""}</div>
           ${avs_.length ? `<div><b>Avisos</b>${avs_.map(x => E(x.corto)).join("<br>")}</div>` : ""}
-        </div></td></tr>`; }).join("")}
+        </div></td></tr>`; }).join("") + (titulo ? `<tr class="subgrupo"><td></td><td>Subtotal ${E(titulo.split(" (")[0].toLowerCase())}</td><td colspan="3"></td><td class="n">${num(its.reduce((t, it) => t + imp(it.id), 0))}</td><td colspan="2"></td></tr>` : "")).join("")}
       <tr class="total"><td></td><td>Subtotal por ${E(S.doc.cot.equipo?.singular || "equipo")}${items.length < todos.length ? " (todos los ítems)" : ""}</td><td colspan="3"></td><td class="n" data-subtot="${grupoMat ? "material" : "srv"}"></td><td colspan="2"></td></tr></tbody></table></div>`;
   }
 
