@@ -30,3 +30,6 @@ Archivo: `Cotizacion_Subasta_26-005_YPF_Skids_concentrador_rev.0.xlsx` (7 hojas)
 19. Celdas sueltas sin rótulo: 713 G27 (=6000/F23), 710 C26, H26, K28, H29.
 20. Simulador MU: G47, G56 y G64 tienen 1,3 escrito a mano (no siguen a D5); los tres cuadros de lote dicen "Costo total - LOTE 1". Hereda los errores 1–3, así que los márgenes que muestra (27 %) están calculados sobre un costo inflado.
 21. La hoja Revisión cita celdas que ya se corrieron (por ejemplo "E88" para la retención, hoy fila 89).
+
+## Copia marcada
+`Cotizacion_Subasta_26-005_REVISADA_errores_marcados.xlsx`: copia del original sin corregir, con cada celda pintada (rojo origen, rosa arrastre, naranja precio, amarillo a revisar), un comentario por celda (qué pasa, de dónde viene, efecto, qué revisar) y la hoja "LEER PRIMERO" con el índice e hipervínculos. Total sin cambios: 1.074.752,06.
