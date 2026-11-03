@@ -53,6 +53,8 @@
 
 **REGLA CRÍTICA — descripción del cliente (Matías, 29-10-2026):** en la descripción va siempre, sin excepción, el texto exacto del documento del cliente (plano, pliego o planilla), tal cual figura: sin corregir, traducir, abreviar ni agregar palabras ("RF", "radio largo", marcas, normas). Lo mismo con el material: se cotiza lo que pide el cliente. Lo que agrega ITT va en la columna `nota` de `lista_materiales_plano.csv`; el Ø va aparte. Si el cliente no indica cantidad y ITT la calcula, se aclara siempre en `cantidad_origen` ("El cliente no indica cantidad: calculada por ITT según el plano / la ET") y la oferta la marca con (*). Se copia de `pedido/transcripcion.json` y `verificar_computo.py` da error si no coincide.
 
+**Precios al 03-11-2026 (planilla regenerada; repositorio y página iguales):** CAPEX 7.324,57 · YPF 713 182.095,40 · YPF 708 97.982,70 · Camuzzi 001 38.763,36 · 002 32.255,75 · 003 376.069,98 c/u (todas en borrador).
+
 **Similares solo de la misma serie y la misma norma (Matías, 29-10-2026):** `buscar_material.py` (y con él `precotizar.py`) ya no ofrece como similar una pieza de otra serie (#3000 por #2000, #600 por #900) ni de otra norma; si el renglón no dice la serie, tampoco (salvo bulonería, donde manda la medida). Sin similar válido queda SIN PRECIO y se pide cotización. Controles movidos a propósito: F01 2.907 → 2.892, TS01 85.243 → 84.055, SK01 71.487 → 71.864.
 
 **Caso de prueba:** COT26-1003-001 CAPEX OQ8209 (borrador, no enviada; su estado está en su `bitacora.md` y en `cotizaciones/README.md`).
