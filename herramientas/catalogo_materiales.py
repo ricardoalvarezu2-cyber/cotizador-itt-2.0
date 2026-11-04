@@ -327,15 +327,15 @@ def atributos(t, fam, proveedor=""):
         ord_ds = pulgadas(t) or ([frac(stock.group(1))] if stock else []) or ([frac(sin_comillas.group(1))] if sin_comillas else []) or ds
         # "8x6"" (una sola comilla al final) es 8" x 6": antes se leía solo 6" y una tee de reducción 8x6" daba IGUAL a una
         # tee de 6" (RFQ ERP Tres Arroyos, 04-11-2026)
-        # Solo en reducciones y si el texto trae un único Ø con comillas ("2x 20"" es una cantidad; "4" Sch. 40 x 3"" ya trae dos).
-        axb = (fam in ("AFO", "ABW") and re.search(r"reduc|buje", t) and len(pulgadas(t)) == 1
-               and re.search(r"(?<![\d/.,])(?<!sch )(?<!sch\. )(\d{1,2}(?: \d/\d)?|\d/\d)\s?x\s?(\d{1,2}(?: \d/\d)?|\d/\d)\s?(?:\"|''|”)", t))
+        # Solo en reducciones, tes y cruces, y si el texto trae un único Ø con comillas ("2x 20"" es una cantidad; "4" Sch. 40 x 3"" ya trae dos).
+        axb = (fam in ("AFO", "ABW") and re.search(r"reduc|buje|\btee?\b|cruz", t) and len(pulgadas(t)) == 1
+               and re.search(r"(?<![\d/.,])(?<!sch )(?<!sch\. )(\d{1,2}(?: \d/\d)?|\d/\d)\s?x\s?(\d{1,2}(?: \d/\d)?|\d/\d)\s?(?:\"|'')", t))
         if axb and frac(axb.group(1)) > frac(axb.group(2)):
             ord_ds = [frac(axb.group(1)), frac(axb.group(2))]
         ord_ds = [x for x in ord_ds if x in NPS_VALIDOS] if fam not in ("INS", "JUN") else ord_ds  # "45,5"" no existe (bulonería: 1 7/8" sí)
         if ord_ds:
             d["diametro"] = f"{ord_ds[0]:g}\""
-            if len(ord_ds) > 1 and fam in ("AFO", "ABW") and re.search(r"reduc|buje", t):
+            if len(ord_ds) > 1 and fam in ("AFO", "ABW") and (re.search(r"reduc|buje", t) or axb):
                 d["diametro2"] = f"{ord_ds[1]:g}\""
     sr = series(t)
     suelta = re.search(r"(?:\b(?:npt|sw|rf|rtj|bw|wog|lb)\s+|\|\s*)(150|300|600|800|900|1500|2000|2500|3000|6000)\b(?!\s?(?:mm|kg|°))", t) \
