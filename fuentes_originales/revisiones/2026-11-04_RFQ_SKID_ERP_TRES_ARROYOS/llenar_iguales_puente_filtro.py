@@ -52,21 +52,33 @@ sin = {
  "PM13B": "Sin igual en el catálogo: la única placa AISI 304 con precio es de 2022 (período con cepo).",
  "PM21": CAN % 4, "PM21B": CAN % 4, "PM22": CAN % 6, "PM22B": CAN % 6,
 }
-ws["L5"] = "Antecedente (fecha · precio original USD)"; estilo(ws["L5"], ws["K5"], wrap=True); ws["L5"].font = copy.copy(ws["K5"].font)
+# Mismas columnas que la RFQ del skid (Matías, 04-11-2026): L Antecedente · M fecha · N precio unit original ·
+# O precio unitario ajustado · P precio total ajustado · Q observaciones (el original traía M Precio Unit, N Total, O Obs.)
+for rng in list(ws.merged_cells.ranges):
+    ws.unmerge_cells(str(rng))
+ws.merge_cells("A1:Q1"); ws.merge_cells("A2:Q3")
+for col, titulo in zip("LMNOPQ", ["Antecedente", "fecha del antecedente", "Precio Unit original", "precio unitario ajustado",
+                                  "Precio Total ajustado", "Observaciones"]):
+    ws[f"{col}5"] = titulo; estilo(ws[f"{col}5"], ws["K5"], wrap=True); ws[f"{col}5"].font = copy.copy(ws["K5"].font)
 for row in range(6, 34):
     i = ws[f"B{row}"].value; ref = ws[f"H{row}"]
+    for col in "LMNOPQ":
+        ws[f"{col}{row}"] = None; estilo(ws[f"{col}{row}"], ref)
     if i in ig:
         a, f, n, o, q = ig[i]
-        ws[f"L{row}"] = f"{a} · {f} · USD {fmt(n, 2)}"; estilo(ws[f"L{row}"], ref, wrap=True)
-        ws[f"M{row}"] = o; estilo(ws[f"M{row}"], ref, fmt=NUM)
-        ws[f"N{row}"] = f"=F{row}*M{row}"; estilo(ws[f"N{row}"], ref, fmt=NUM)
-        ws[f"O{row}"] = q; estilo(ws[f"O{row}"], ref, wrap=True)
+        ws[f"L{row}"] = a; estilo(ws[f"L{row}"], ref, wrap=True)
+        ws[f"M{row}"] = f
+        ws[f"N{row}"] = n; estilo(ws[f"N{row}"], ref, fmt=NUM)
+        ws[f"O{row}"] = o; estilo(ws[f"O{row}"], ref, fmt=NUM)
+        ws[f"P{row}"] = f"=F{row}*O{row}"; estilo(ws[f"P{row}"], ref, fmt=NUM)
+        ws[f"Q{row}"] = q; estilo(ws[f"Q{row}"], ref, wrap=True)
     else:
-        ws[f"O{row}"] = sin[i]; estilo(ws[f"O{row}"], ref, wrap=True)
-ws["M34"] = "Total iguales (USD, sin IVA)"; ws["N34"] = "=SUM(N6:N33)"; ws["N34"].number_format = NUM
-ws["M34"].font = Font(bold=True); ws["N34"].font = Font(bold=True)
+        ws[f"Q{row}"] = sin[i]; estilo(ws[f"Q{row}"], ref, wrap=True)
+ws["O34"] = "Total iguales (USD, sin IVA)"; ws["P34"] = "=SUM(P6:P33)"; ws["P34"].number_format = NUM
+ws["O34"].font = Font(bold=True); ws["P34"].font = Font(bold=True)
 ws["A4"] = NOTA; ws["A4"].font = Font(bold=True, color="C00000")
-ws.column_dimensions["L"].width = 45; ws.column_dimensions["O"].width = 60
+ws.column_dimensions["L"].width = 45; ws.column_dimensions["M"].width = 12; ws.column_dimensions["Q"].width = 60
+for c in "NOP": ws.column_dimensions[c].width = 13
 wb.save(f"{S}/pm/RFQ_REV4_1_PUENTE_MEDICION_precios_iguales.xlsx")
 
 # ---------- Filtro coalescente ----------
