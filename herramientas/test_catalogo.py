@@ -59,6 +59,11 @@ igual("B8M no es B7", at("ESPARRAGO 7/8 x 7 ASTM A 193 B8M")[1].get("material"),
 igual("FF de factura", "FF" in at('24 juntas RTJ R45 6" #900, 60 días FF')[1].get("extremos", ""), False)
 igual("SW en junta espiralada", at('JUNTA ESPIRALADA SW AC 316 LFG 4" #600')[1].get("extremos", ""), "")
 igual("casquete 36\" x 3/8\" sin diametro2", at('Casquetes SE 36" x 3/8"')[1].get("diametro2"), None)
+igual("tee reducción 8x6\" es 8\" x 6\"", {k: at('Tee reduccion 8x6" STD ASTM A234 WPB')[1].get(k) for k in ("diametro", "diametro2")},
+      {"diametro": '8"', "diametro2": '6"'})
+igual("2x 20\" es cantidad, no Ø", at('Casquetes ASME B16.9 A234-WPB: 2x 20" std (146,65 c/u)')[1].get("diametro"), '20"')
+igual("4\" Sch. 40 x 3\" no es 40\"", {k: at('Reducción concéntrica 4" Sch. 40 x 3" Sch. 40 ASTM A-106 Gr. B')[1].get(k) for k in ("diametro", "diametro2")},
+      {"diametro": '4"', "diametro2": '3"'})
 igual("XS 10\" no es Sch 80", at('Casquete Semieliptico 10" XS ASTM A234 WPB')[1].get("schedule"), "XS")
 igual("caño 48,3 x 3,68", {k: at("Tubo s/costura 48,3 x 3,68 mm A53/A106")[1].get(k) for k in ("diametro", "schedule", "costura")},
       {"diametro": '1.5"', "schedule": "40", "costura": "sin costura"})
