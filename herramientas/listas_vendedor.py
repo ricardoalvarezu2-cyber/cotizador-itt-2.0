@@ -95,7 +95,8 @@ def _control_importe(ruta, linea, cant, precio, importe, bonif=0.0):
 
 
 # Abreviaturas de los proveedores → texto que entiende el catálogo (el original queda entre paréntesis)
-ABREV_MS = [(r"^ESP SWI?\b", "JUNTA ESPIRALADA SW"), (r"^KIT AISL\.?\s*F\b", "KIT AISLACION TIPO F"), (r"\b316LFG\b", "AISI 316L + GRAFITO")]
+ABREV_MS = [(r"^ESP SWI\b", "JUNTA ESPIRALADA SW C/ANILLO INT."), (r"^ESP SW\b", "JUNTA ESPIRALADA SW"), (r"^KIT AISL\.?\s*([A-Z])\b", r"KIT AISLACION TIPO \1"),
+            (r"\bMIC\.", "MICARTA "), (r"\b316LFG\b", "AISI 316L + GRAFITO")]
 ABREV_OM = [(r"\bBWN\b", "WN"), (r"\bBCI\b", "CIEGA"), (r"\bBSW\b", "SW"), (r"^RED EXC\b", "REDUCCION EXCENTRICA"),
             (r"^TEE RED\b", "TEE REDUCCION"), (r"^TEE TOT\b", "TEE"), (r"\bC/TCAS\b", "C/2 TUERCAS"), (r"\bGR B7\b", "ASTM A193 B7"),
             (r"\bCWI\b", "C/ANILLO EXT. E INT."), (r"\bCW\b", "C/ANILLO EXT."), (r"\b316/316L\+FG\b", "AISI 316/316L + GRAFITO"), (r"\b316L\+FG\b", "AISI 316L + GRAFITO"),

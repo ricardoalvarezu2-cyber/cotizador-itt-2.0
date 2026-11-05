@@ -32,3 +32,16 @@ entrega en 90 días; niple 1 1/2": 7 días). Quedan pendientes, porque vienen de
   ~40 espárragos y juntas y deja códigos usados por cotizaciones sin referencia: hay que hacerlo con migración de códigos).
 - 16 códigos citados en `cotizaciones/` no existen en el catálogo (anteriores a esta carga; dos en `cotizacion.json`:
   JUN-02839 en COT26-0330-001 y VAL-03290 en COT26-0330-002).
+
+## Juntas YPF (Miyashiro / MS Juntas, 05-11-2026)
+
+Matías pasó el mail «RE: COTIZACION JUNTAS - YPF» con 4 cotizaciones de Miyashiro (MS Juntas, Eduardo Quinteros, equinteros@juntasms.com) para Taval, del 05-11-2026, USD sin IVA (IVA 21 % aparte), TC usado 1.546,00, validez 15 días (vence 20-11-2026), pago echeq 15 días / 60 días FF:
+
+| Archivo | Ref. | Contenido |
+|---|---|---|
+| miyashiro_cotizacion_50627_2026-11-05.pdf | P-PL-20002 | junta SWI 8" #600 10,96; junta SW 4" #600 3,38; kit aislante tipo D doble micarta 1 1/2" #1500 R-20 17,66 |
+| miyashiro_cotizacion_50628_2026-11-05.pdf | P-PL-20015 | junta SW 10" #300 7,14; 4" #300 2,59; 2" #300/400/600 1,29; kit aislante tipo F doble micarta 4" #300 29,77 |
+| miyashiro_cotizacion_50629_2026-11-05.pdf | P-PL-020004 | junta SW 8" #300 5,95; 4" #300 2,59; 3" #300/400/600 1,93; 2" 1,29; kit F 3" #300 30,44 |
+| miyashiro_cotizacion_50630_2026-11-05.pdf | (sin ref.) | mismos ítems que la 50629 en mayor cantidad (kit 3": 14 un a 7 días, resto 15/20 días) |
+
+Los lee `listas_vendedor.py` (lector `miyashiro`; se sumaron las abreviaturas «ESP SWI» = con anillo interior, «KIT AISL.D» y «MIC.» = micarta). Al catálogo: 7 ítems nuevos y 2 actualizados. Las juntas «3/4/600» (aptas #300/#400/#600) quedan sin serie en el catálogo, que admite una sola; la junta 8" #600 con anillo interior cae en el mismo código que una con anillo exterior (el catálogo no separa los anillos: pendiente ya anotado).

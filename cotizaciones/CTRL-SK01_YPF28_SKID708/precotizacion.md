@@ -21,7 +21,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 11 | Espárrago c/2 tuercas p/brida 300 LB 1.125x18 | SIMILAR | 4,20 / un | 2026-10-30 · cotización | diametro: 0.875" (pedido 1.125"); medida: 7/8 x 5 7/8 (pedido 1 1/8 x 7 3/8) |
 | 12 | Junta espiralada RF esp. 4,5 mm 300 LB · Ø 1  | SIMILAR ⚠ | 5,50 / un | 2026-10-30 · cotización | diametro: 2" (pedido 1.5"); material: AISI 316 (no pedido); extremos: sin dato (pedido RF); el último precio ( |
 | 13 | Junta espiralada RF esp. 4,5 mm 300 LB · Ø 12 | SIMILAR | 9,31 / un | 2026-11-03 · cotización | material: AISI 316 (no pedido); extremos: sin dato (pedido RF) |
-| 14 | Junta espiralada RF esp. 4,5 mm 300 LB · Ø 16 | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (12") (JUN-02764, USD 9,31): pedir cotización |
+| 14 | Junta espiralada RF esp. 4,5 mm 300 LB · Ø 16 | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (4") (JUN-01699, USD 2,59): pedir cotización |
 | 15 | Niple s/c NPT L=100 mm · Ø 1 1/2" | IGUAL | 8,15 / un | 2026-10-30 · cotización | — |
 | 16 | Niple s/c NPT L=100 mm · Ø 1/2" | IGUAL ⚠ | 20,00 / un | 2026-04-22 · planilla interna | — |
 | 17 | Niple s/c NPT L=100 mm · Ø 3/4" | SIMILAR ⚠ | 36,74 / un | 2026-04-22 · planilla interna | diametro: 0.5" (pedido 0.75"); precio escalado por diámetro (0,75" ÷ 0,5")^1,5 = × 1,84 |
