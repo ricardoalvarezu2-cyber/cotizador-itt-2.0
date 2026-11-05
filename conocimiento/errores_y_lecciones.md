@@ -355,3 +355,8 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 - Qué pasó: al recibir el plano tipo del separador vertical coalescente lo nombré "SCE-RE-113-0001" sin leer el rótulo; el rótulo dice SCE-RE-112-0001 rev. 1 (lo corrigió Matías). El error llegó al nombre del archivo y al borrador de consulta al cliente.
 - Corrección: archivos y consulta renombrados a SCE-RE-112-0001 rev. 1.
 - Lección: el número y la revisión de un plano se copian del rótulo (imagen o texto del rótulo), nunca se deducen del nombre del archivo ni de otros documentos; si pdftotext no trae el rótulo, mirar la imagen antes de citarlo.
+
+## 05-11-2026 — Separador sobre plano tipo: medidas leídas a ojo del dibujo
+- Qué pasó: al rehacer el separador con el plano tipo SCE-RE-112-0001 tomé el faldón de 0,9 m de alto (el esquema del plano dice 405 mm) y la envolvente de 3,0 m (la tangente del cabezal está a ≈ 470 mm de la base, no a 890); además conté 10 bridas de 1" cuando el propio texto del renglón daba 11, y describí el cartucho Gora 46600 como de 140 × 914 cuando la cotización no dice la medida. Lo encontró la revisión independiente (el cartucho, yo antes de la revisión).
+- Corrección: faldón 405 mm, envolvente 3,3 m, 11 bridas, cartucho como referencia débil. Separador 140.980,08 → 142.960,82.
+- Lección: las medidas de un plano se toman de sus cotas y detalles (esquema del faldón, cotas M1/M2), no estimadas a ojo de la vista; cuando una cantidad sale de una cuenta escrita en el mismo renglón, la cantidad tiene que dar esa cuenta; y la descripción de una referencia dice solo lo que dice su documento.

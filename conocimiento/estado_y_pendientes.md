@@ -245,6 +245,8 @@ Decidido (Matías, 29-10-2026): manda el repositorio; la biblioteca se alimenta 
 3. Después de cualquier cambio en herramientas o datos: `python herramientas/verificar_todo.py` (tiene que dar "TODO OK"). Para rearmar toda la base: `python herramientas/actualizar_base.py`.
 4. Al terminar: actualizar este archivo, commit y push (lo que no se sube se pierde).
 
+**Separador Camuzzi 003 rehecho sobre el plano tipo SCE-RE-112-0001 rev. 1 (05-11-2026, circular de Camuzzi):** #600, 20 cartuchos, 36" × 31,75 mm, 70 bar; 142.960,82 por equipo (antes 375.341,76 con el diseño propio). Consulta al cliente pendiente (cantidad de cartuchos, PH 91 bar, papel o coalescente).
+
 **Camuzzi 001–003 rehechas (05-11-2026):** precios Provemet 29-10-2026 en caños y bridas, pintura 37,98/m² × 1,2 (confirmada por Matías), dólar oct 1.543,23, referencia 31-10-2026; unitarios 38.199,47 · 31.858,09 · 375.341,76 (borrador), cargadas en la página. Para confirmar: precios Provemet por compra total y cantidades cotizadas (validez 13-11-2026); pintura de piping aplicada al recipiente del separador.
 
 **Listas Miyashiro 50594 y Oil Metal 37278 (05-11-2026):** cargadas al catálogo y a la página (lectores nuevos en `listas_vendedor.py`); pendientes en `fuentes_originales/listas_vendedor/2026-11-05/README.md` (juntas sin distinguir anillos, lectura de "SA-193 B7M" y "316LFG" con migración de códigos).

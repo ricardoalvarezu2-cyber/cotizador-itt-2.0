@@ -36,14 +36,15 @@ CANT_ITT = f"El cliente no indica cantidad: calculada por ITT según el plano {P
 
 # ---- pesos (para precios por kg, fabricación por kg y pintura) ----
 DM = (C1_MM - C2_MM) / 1000           # diámetro medio de la envolvente (m)
-L_ENV = 3.0                           # m: del corte A-A, base a brida superior M1 + M2 = 3.880 mm, menos 890 mm de base a la tangente del cabezal
+L_ENV = 3.3                           # m: corte A-A, M1 + M2 = 3.880 mm de la base a la brida de la tapa, menos ≈ 470 mm de la base a la tangente del cabezal y el cuello de la tapa (revisión 05-11-2026: antes 3,0 m con 890 mm)
 kg_env = round(math.pi * DM * L_ENV * C2_MM / 1000 * 7850)
 kg_cab = round((1.084 * DM ** 2 + math.pi * DM * 0.05) * C2_MM / 1000 * 7850)    # cabezal 2:1 + pestaña de 50 mm
 T_PLACAS = 19.05                      # placa portacartuchos y placa guía superior (corte A-A; el plano no da el espesor: criterio ITT)
 kg_placas = round(2 * math.pi / 4 * 0.85 ** 2 * T_PLACAS / 1000 * 7850)
 kg_disco_g = round(math.pi / 4 * ((G1 / 1000) ** 2 - 0.273 ** 2) * G2 / 1000 * 7850, 1)
 kg_disco_h = round(math.pi / 4 * ((H1 / 1000) ** 2 - 0.1683 ** 2) * H2 / 1000 * 7850, 1)
-kg_faldon = round(math.pi * DM * 0.9 * 9.53 / 1000 * 7850 + 40)                   # esquema faldón: 3/8" × ≈ 0,9 m + anillo base y refuerzos
+H_FALDON = 0.405
+kg_faldon = round(math.pi * DM * H_FALDON * 9.53 / 1000 * 7850 + math.pi / 4 * ((C1_MM + 200) ** 2 - (C1_MM - 10) ** 2) / 1e6 * 0.01905 * 7850 + 8)  # esquema faldón: 3/8" × 405 mm + anillo base Ø C1 + 200 de 3/4" + 4 refuerzos
 M_UPN120, M_UPN80 = 12, 30                                                        # m: skid (vista superior) y estructura de la tarima (vista lateral)
 kg_skid = round(M_UPN120 * 13.4 + M_UPN80 * 8.64)
 KG_TARIMA_EXTRA = 150                                                              # escalera protegida y barandas (pos 25), sin la rejilla
@@ -52,7 +53,7 @@ KG_CONEX = 260                                                                  
 kg_fabricado = kg_env + kg_cab + kg_placas + 2 * kg_disco_g + kg_disco_h + kg_faldon + kg_skid + KG_TARIMA_EXTRA + KG_CONEX
 # Soldadura extra por espesor (31,75 mm frente a la pared ≈ 10 mm de los presupuestos de Ledesma de AESA/44): regla de factores_soldadura.csv
 F_ESP = C2_MM / 9.53
-PULG_CUERPO = 3 * 36 + 2 * 1500 / math.pi / 25.4      # cabezal–envolvente, unión de las 2 virolas de 1,5 m, cuello de la tapa + 2 longitudinales
+PULG_CUERPO = 3 * 36 + 2 * L_ENV / 2 * 1000 / math.pi / 25.4      # cabezal–envolvente, unión de las 2 virolas, cuello de la tapa + 2 longitudinales
 PULG_TOBERAS = 2 * 10 + 6
 pulg_extra = round((PULG_CUERPO + PULG_TOBERAS) * (F_ESP - 1), 1)
 TC_OCT = 1543.23       # BNA venta, promedio 10-2026 (conocimiento/costos/dolar_mensual.csv)
@@ -90,7 +91,7 @@ CHAPA_A36 = fuente("ant", 1.2744, "Chapa negra A36 (precios de acero por kg, J. 
 # REF., descripción literal, MATERIAL, Øn, SERIE / SCH (literales del plano) · cantidad, unidad · nota ITT · fuentes · [motivo sin precio]
 M = [
     ("01", "Envolvente", "C2", "C1", "C2", round(kg_env * 1.1), "kg",
-     f"C1 = 36\" ({C1_MM} mm), C2 = chapa G° 70 de {fmt(C2_MM)} mm (SA-516 Gr. 70); 2 virolas de 1,5 m ({fmt(kg_env, 0)} kg + 10 % de recortes)", [CHAPA]),
+     f"C1 = 36\" ({C1_MM} mm), C2 = chapa G° 70 de {fmt(C2_MM)} mm (SA-516 Gr. 70); 2 virolas de {fmt(L_ENV / 2, 2)} m ({fmt(kg_env, 0)} kg + 10 % de recortes)", [CHAPA]),
     ("01b", "Placa portacartuchos y placa guía superior (dibujadas en el corte A-A; el plano no las lista ni da su espesor)", "SA-516 Gr. 70", "", "", round(kg_placas * 1.1), "kg",
      f"Agregado de ITT: 2 placas Ø 850 mm × {fmt(T_PLACAS)} mm (criterio ITT, a verificar en la memoria) con {B} agujeros", [CHAPA]),
     ("02", "Cabezal semielíptico (2:1)", "C2", "C1", "C2", 1, "un", f"Ø 36\" × {fmt(C2_MM)} mm SA-516 Gr. 70 (≈ {fmt(kg_cab, 0)} kg)",
@@ -115,11 +116,11 @@ M = [
      [fuente("cot", 8.64 * UPN_KG, "UPN 80 (8,64 kg/m) al precio por kg del UPN 120 de Provemet cot. 288977 (1,26 USD/kg)", PVP + " · ítem 2", "2026-10-29", "similar", "Provemet no cotizó el UPN 80: precio por kg del UPN 120")]),
     ("12", "Media cupla p/soldar", "ASTM A-105 G° B", "2\"", "6000", 2, "un", "interruptores de nivel (pos 16), una por cámara",
      [fuente("cot", 7.26, "Provemet: cupla 1\" NPT 6000# ASTM A-105 (AFO-03328)", CAT, "2025-07-29", "similar", "otra medida (1\") y cupla entera: pedir media cupla 2\" 6000 (CH / Thorsa / Forja Atlas)")]),
-    ("13", "Media cupla p/soldar", "ASTM A-105 G° B", "1\"", "6000", 3, "un", "drenaje inferior del cabezal y salidas a las 2 válvulas automáticas",
+    ("13", "Media cupla p/soldar", "ASTM A-105 G° B", "1\"", "6000", 3, "un", "drenaje inferior del cabezal (rotulada en el plano) y salidas a las 2 válvulas automáticas (supuesto ITT: el dibujo no las rotula)",
      [fuente("cot", 7.26, "Provemet: cupla 1\" NPT 6000# ASTM A-105 (AFO-03328)", CAT, "2025-07-29", "similar", "cupla entera en lugar de media cupla (precio de más)")]),
     ("14", "Media cupla p/soldar", "ASTM A-105 G° B", "1/2\"", "6000", 4, "un", "2 por indicador de nivel (pos 23)",
      [fuente("cot", 3.99, "Provemet: cupla 1/2\" NPT 6000# ASTM A-105 (AFO-03327)", CAT, "2025-07-29", "similar", "cupla entera en lugar de media cupla (precio de más)")]),
-    ("15", "Faldon de Apoyo (segun detalle)", "ASTM A-36", "C1", "--", kg_faldon, "kg", "esquema faldón: chapa 3/8\" Ø 36\" × ≈ 0,9 m, refuerzo 3/4\", anillo base y orificios de 3/4\"", [CHAPA_A36]),
+    ("15", "Faldon de Apoyo (segun detalle)", "ASTM A-36", "C1", "--", kg_faldon, "kg", "esquema faldón: chapa 3/8\" Ø 36\" × 405 mm, anillo base Ø C1 + 200 mm de 3/4\", 4 refuerzos y orificios de 3/4\"", [CHAPA_A36]),
     ("16", "Interruptor neumático de nivel", "--", "2 \"", "B", 2, "un", "uno por cámara; comanda la válvula automática (ET 9.2)",
      [fuente("ant", 2500, "Planilla Sacde/12 FC-301/302: switch de nivel 2\" NPT 3000# (4 u a 2.500)", S12, "2025-12-18", "similar", "sin modelo ni accionamiento neumático: pedir a Epta / Fisher / Magnetrol / Kimray")]),
     ("17", "Niple", "ACERO AL CARBONO", "4 \"", "40", B, "un", f"uno por cartucho (detalle conjunto soporte), largo J3 = {J3} mm",
@@ -174,7 +175,7 @@ M = [
      [fuente("lista", 18.38, "Renard (cód. 3797) · Tee 1\" XS ASTM A234 WPB · ABW-00334", REN + " · código 3797", "2025-12-26", "igual")]),
     ("37", "Codo de radio largo", "ASTM A-234 G°WPB", "1", "80", 4, "un", "",
      [fuente("lista", 4.49, "Renard (cód. 3769) · Codo Radio Largo 90° 1\" XS ASTM A234 WPB · ABW-00083", REN + " · código 3769", "2025-12-26", "igual")]),
-    ("38", "Brida W.N.", "ASTM A-105", "1", "A", 10, "un", "1\" #600 RF sch 80: 2 por válvula bridada (pos 20, 21, 22) y salida del drenaje",
+    ("38", "Brida W.N.", "ASTM A-105", "1", "A", 11, "un", "1\" #600 RF sch 80: 2 por válvula bridada (pos 20, 21, 22) y salida del drenaje",
      [fuente("ant", 26.54, "Renard: brida Welding Neck 1\" RF sch 80 600# ASTM A 105 · BRI-01202", CAT, "2025-07-11", "igual", "marca del listado (Francovigh / CH / Thorsa / Forja Atlas)")]),
     ("38b", "Juntas espiraladas 1\" #600 AISI 316 / grafito de las uniones bridadas de purgas y drenajes, más un segundo juego (ET 9.16.3)", "AISI 316 / grafito", "1\"", "600", 22, "un", "compra extra: 11 uniones × 2 juegos",
      [fuente("ant", 5, "Planilla TAVAL/37 FC-231: junta espiralada 1\" #600 c/anillo ext. a 5", T37, "2025-12-17", "similar", "valor de planilla ITT")]),
@@ -216,7 +217,7 @@ for p, desc, mat, dn, ser, q, u, nota, f, *motivo in M:
 
 ROL = C30 + "Sandri rolado de chapa esp 1.docx.txt"
 items += [
-    {"id": "S01", "pos": "ROL", "grupo": "servicio", "descripcion": f"Rolado y punteado de la envolvente (2 virolas de 1,5 m, {fmt(kg_env, 0)} kg, {fmt(C2_MM)} mm)", "especificacion": "Sandri cilindra hasta 50 mm en 2.500 mm de largo: sirve con 2 virolas",
+    {"id": "S01", "pos": "ROL", "grupo": "servicio", "descripcion": f"Rolado y punteado de la envolvente (2 virolas de {fmt(L_ENV / 2, 2)} m, {fmt(kg_env, 0)} kg, {fmt(C2_MM)} mm)", "especificacion": "Sandri cilindra hasta 50 mm en 2.500 mm de largo: sirve con 2 virolas",
      "cantidad": kg_env, "unidad": "kg",
      "fuentes": [fuente("cot", 2550000 / 1416.29 / 1033, "Juan y Víctor Sandri S.A.: cilindrado y punteado ARS 2.550.000 + IVA por virola de 1.033 kg de chapa de 1\" (1,74 USD/kg al BNA de 03-2026)", ROL, "2026-03-25", "similar", "chapa de 1\" (acá 1 1/4\"): pedir cotización con el espesor del plano"),
                  fuente("est", 3.7, "Tarifa interna de rolado 3,70 USD/kg (tarifas.csv, AESA/44)", "conocimiento/costos/tarifas.csv", "2025-09-30", "similar", "criterio interno, no cotización")]},
@@ -230,7 +231,7 @@ items += [
                  fuente("cot", 13000, "Edgardo Ledesma: separador de polvo y líquido 28\" #600 + skid, USD 13.000 (sin plegado de cunas, PH ni END)", C30 + "E Ledesma - Cotización de Separador de polvo y líquido 28_ #600.pdf.txt", "2026-05-10", "similar",
                          "control: equipo de 28\" horizontal de Camuzzi (mismo cliente y serie)")]},
     {"id": "S02b", "pos": "MOE", "grupo": "mo", "descripcion": f"Soldadura extra del recipiente por espesor ({fmt(C2_MM)} mm en lugar de la pared ≈ 10 mm de la referencia de Ledesma): {fmt(pulg_extra, 1)} pulgadas equivalentes",
-     "especificacion": f"cuerpo {fmt(PULG_CUERPO, 1)} pulg (3 circunferenciales de 36\" y 2 longitudinales de 1,5 m) + toberas {PULG_TOBERAS}\" × (factor {fmt(F_ESP, 2)} − 1)",
+     "especificacion": f"cuerpo {fmt(PULG_CUERPO, 1)} pulg (3 circunferenciales de 36\" y 2 longitudinales) + toberas {PULG_TOBERAS}\" × (factor {fmt(F_ESP, 2)} − 1)",
      "cantidad": pulg_extra, "unidad": "pulg-eq",
      "fuentes": [fuente("est", 12, "J. C. Quesada, USD 12 por pulgada equivalente (presupuesto JQ-020-2026; incluye consumibles y calificación ASME IX) × pulgadas extra por espesor (factores_soldadura.csv: espesor ÷ 9,53)",
                          "fuentes_originales/ofertas_texto/TAVAL/58 - Inarteco - ERPs tipo 1ra etapa - Litoral Gas/5.Proveedores 3ros/Cotizacion JQ-020-2026.pdf.txt", "2026-05-06", "similar",
@@ -239,12 +240,12 @@ items += [
      "fuentes": [sin_precio("pedir a Ledesma la cotización con consumibles", "no hay precios de electrodos ni alambre en el catálogo", "2026-10-30")],
      "sin_precio_motivo": "El presupuesto 20079 de Ledesma dice «No incluye … Consumibles» y no hay precio en el catálogo: queda en 0 hasta la cotización de Ledesma"},
 ]
-N_PG = round((3 * math.pi * C1_MM / 1000 + 2 * 1.5) / 0.38)  # placas grandes: costuras del cuerpo ÷ 0,38 m por placa
-N_PC = 2 * 3 + 2 + 10 * 2                                   # chicas: 2 × 10" a 3, 6" a 2, 10 bridas 1" a 2
+N_PG = round((3 * math.pi * C1_MM / 1000 + L_ENV) / 0.38)  # placas grandes: costuras del cuerpo ÷ 0,38 m por placa
+N_PC = 2 * 3 + 2 + 11 * 2                                   # chicas: 2 × 10" a 3, 6" a 2, 10 bridas 1" a 2
 VIS = math.ceil((N_PG + N_PC) / 45)
 items += [
     {"id": "S03", "pos": "RX", "grupo": "servicio", "descripcion": "Radiografía 100 % de las soldaduras a tope (plano: RADIOGRAFIADO 100 % TOPE)",
-     "especificacion": f"{N_PG} placas grandes (3 circunferenciales de 36\" + 2 longitudinales de 1,5 m ÷ 0,38 m por placa) + {N_PC} chicas (bridas WN 10\", 6\" y 1\") = {N_PG + N_PC} placas → {VIS} visitas de hasta 45 placas",
+     "especificacion": f"{N_PG} placas grandes (3 circunferenciales de 36\" + 2 longitudinales ÷ 0,38 m por placa) + {N_PC} chicas (bridas WN 10\", 6\" y 1\") = {N_PG + N_PC} placas → {VIS} visitas de hasta 45 placas",
      "cantidad": 1, "unidad": "gl",
      "fuentes": [fuente("cot", VIS * round(850000 / TC_OCT, 2) + (N_PG + N_PC) * round(15000 / TC_OCT, 2), f"Proveedor de RX (sin nombre), precio confirmado por Matías el 30-10-2026: {VIS} visitas × ARS 850.000 + {N_PG + N_PC} placas × ARS 15.000, sin IVA, a BNA oct-2026 ({fmt(TC_OCT)}) · END-00572 / END-00571",
                          "conocimiento/precios/precios_usuario.csv", "2026-10-30", "similar", "placas contadas por costura: confirmar con el mapa de soldaduras")]},
@@ -253,7 +254,7 @@ items += [
     {"id": "S04", "pos": "PH", "grupo": "servicio", "descripcion": "Prueba hidráulica a 91 bar (plano tipo, serie 600) durante 6 h, con registro y secado", "especificacion": "la ET 9.16.1 pide 1,3 × la presión máxima de la serie ANSI (≈ 133 bar): consulta del 05-11-2026", "cantidad": 12, "unidad": "h",
      "fuentes": [fuente("ant", 13, "Prueba hidráulica por hora de planta (END-00215, MO ITT)", "conocimiento/precios/catalogo_servicios.csv", "2026-03-10", "similar", "12 h para un recipiente de ≈ 2 m³ (llenado, 6 h de prueba, vaciado y secado)")]},
 ]
-M2_REC = round(math.pi * C1_MM / 1000 * L_ENV + 1.0 + math.pi * C1_MM / 1000 * 0.9 + 1.0, 1)  # envolvente + cabezal + faldón + toberas y tapa
+M2_REC = round(math.pi * C1_MM / 1000 * L_ENV + 1.0 + math.pi * C1_MM / 1000 * H_FALDON + 1.0, 1)  # envolvente + cabezal + faldón + toberas y tapa
 M2_SKID = round(M_UPN120 * 13.4 / 1000 * 40, 1)                                                  # skid (la tarima va galvanizada)
 M2_PIN = round(M2_REC + M2_SKID, 1)
 KG_GALV = round(M_UPN80 * 8.64 + KG_TARIMA_EXTRA + M2_REJILLA * 40)
@@ -294,7 +295,7 @@ base["plazo"] = {"dias": 230, "texto": "desde OC · entregado en Transporte Cruz
                             ["Chapa, rolado, bridas, cartuchos y fabricación del cuerpo y el skid (Ledesma)", 40, 140, ""],
                             ["Soldadura del cuello de la tapa, RX y PH", 160, 178, "tal"],
                             ["Instrumentos, pintura, prueba de fugas, inspección de Camuzzi y despacho", 178, 200, "tal"]],
-                 "nota": "Calculado 200 días (tapa Futura de 120 días pedida con el plano aprobado + taller); se ofrecen 230 con el margen de 15 % de plazos.md §4. Sin tratamiento térmico: con 31,75 mm no lo exige UCS-56 (hasta 38 mm)."}
+                 "nota": "Calculado 200 días (tapa Futura de 120 días pedida con el plano aprobado + taller); se ofrecen 230 con el margen de 15 % de plazos.md §4. Sin tratamiento térmico: SA-516-70 (P-No.1) de 31,75 mm no lo exige UCS-56 (ni precalentamiento hasta 1 1/4\"); si la memoria engrosa la chapa, revisarlo."}
 base["flete"] = {"etiqueta": "Flete a Transporte Cruz del Sur (Tapiales)",
                  "referencia_html": "<b>Estimado:</b> un viaje de semirremolque para los 2 separadores (≈ 4 t c/u) a 1.750 + 780 USD (hoja «Transporte» de la planilla ITT de AESA/44, 09-2025; no es cotización de transportista) + USD 300 de embalaje.",
                  "criterio_html": "La planilla del concurso pone el flete a cargo del proveedor hasta Transporte Cruz del Sur; el Concurso 24527 y la ET dicen destino final (consulta C3)."}
@@ -338,7 +339,7 @@ base["compras"] = {"fecha_respuesta": "2026-11-10", "material_en_planta_dias": 1
                    "proveedores": {"03": "Futura / Peco / Gora / EKA", "05": PROV_BRIDA, "07": PROV_BRIDA, "28": PROV_BRIDA, "38": PROV_BRIDA, "18": "Gora / Filtron / De Nichilo / Panden / SP", "18b": "Gora / Filtron / De Nichilo / Panden / SP",
                                    "19": "Gora", "20": "Bettis / Bray / Flow / Wenlen (actuador)", "21": "Esferomatic / Worcester / Valvtronic / Pentair / Indave / Wenlen / Beta / Valmec", "22": "Xomox-Tufline / Nordstrom / Favra",
                                    "23": "Riva Hnos", "26": "Weisz / Wika", "27": "Wika + ABAC / Casucci", "30": "Fisher (Emerson)", "33": "Fisher (Emerson)", "34": "ABAC / Swagelok / Parker / Fittinox / Casucci"},
-                   "cantidad_compra": {}, "servicios": [{"servicio": f"Rolado de 2 virolas 36\" × {fmt(C2_MM)} mm × 1,5 m", "proveedores": "Sandri (hasta 50 mm × 2.500 mm)", "referencia": "1,74 USD/kg (03-2026, chapa de 1\")", "nota": "con el plano tipo"},
+                   "cantidad_compra": {}, "servicios": [{"servicio": f"Rolado de 2 virolas 36\" × {fmt(C2_MM)} mm × {fmt(L_ENV / 2, 2)} m", "proveedores": "Sandri (hasta 50 mm × 2.500 mm)", "referencia": "1,74 USD/kg (03-2026, chapa de 1\")", "nota": "con el plano tipo"},
                                                         {"servicio": "Fabricación del separador y skid", "proveedores": "Ledesma", "referencia": "4,15 USD/kg (AESA/44); 13.000 el 28\" de CAMUZZI/30", "nota": "con el plano tipo; aclarar consumibles y calificación"},
                                                         {"servicio": "Flete de 2 separadores de ≈ 4 t", "proveedores": "a definir", "referencia": "1.750 + 780 USD (planilla ITT de AESA/44)", "nota": "destino a confirmar (consulta C3)"}]}
 base["origen_lista"] = {"tipo": "plano_cliente", "motivo": f"Plano tipo de Camuzzi {PLANO} (circular del 05-11-2026): tabla de 39 referencias sin cantidades; las cantidades las calcula ITT con la tabla para #600 / B = {B}"}

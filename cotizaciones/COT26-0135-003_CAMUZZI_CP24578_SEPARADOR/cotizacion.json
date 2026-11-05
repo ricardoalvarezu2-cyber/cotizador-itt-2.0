@@ -82,7 +82,7 @@
     "tal"
    ]
   ],
-  "nota": "Calculado 200 días (tapa Futura de 120 días pedida con el plano aprobado + taller); se ofrecen 230 con el margen de 15 % de plazos.md §4. Sin tratamiento térmico: con 31,75 mm no lo exige UCS-56 (hasta 38 mm)."
+  "nota": "Calculado 200 días (tapa Futura de 120 días pedida con el plano aprobado + taller); se ofrecen 230 con el margen de 15 % de plazos.md §4. Sin tratamiento térmico: SA-516-70 (P-No.1) de 31,75 mm no lo exige UCS-56 (ni precalentamiento hasta 1 1/4\"); si la memoria engrosa la chapa, revisarlo."
  },
  "flete": {
   "etiqueta": "Flete a Transporte Cruz del Sur (Tapiales)",
@@ -131,7 +131,7 @@
    "Matriz de requisitos: <code>pedido/requisitos.csv</code>; consultas al cliente: <code>consultas_cliente.md</code> (consulta del 05-11-2026)"
   ]
  },
- "nota_mo_html": "Equipo según plano tipo SCE-RE-112-0001 rev. 1: cuerpo 36\" × 31,75 mm SA-516-70 (2.072 kg), cabezal 2:1, tapa de cierre rápido, 20 cartuchos de 5½\" × 36\", 2 cámaras con caja de chicanas. Fabricación por tercero (Ledesma, a 4,15 USD/kg × 3.602 kg, más la soldadura extra por espesor); ITT pone ingeniería, calidad, montaje de instrumentos, rolado, RX, PH y pintura.",
+ "nota_mo_html": "Equipo según plano tipo SCE-RE-112-0001 rev. 1: cuerpo 36\" × 31,75 mm SA-516-70 (2.280 kg), cabezal 2:1, tapa de cierre rápido, 20 cartuchos de 5½\" × 36\", 2 cámaras con caja de chicanas. Fabricación por tercero (Ledesma, a 4,15 USD/kg × 3.724 kg, más la soldadura extra por espesor); ITT pone ingeniería, calidad, montaje de instrumentos, rolado, RX, PH y pintura.",
  "desvios": [
   {
    "tag": "Cartuchos",
@@ -233,8 +233,8 @@
    "pos": "01",
    "grupo": "material",
    "descripcion": "Envolvente",
-   "especificacion": "C2 · C1 · C2 · C1 = 36\" (914 mm), C2 = chapa G° 70 de 31,75 mm (SA-516 Gr. 70); 2 virolas de 1,5 m (2.072 kg + 10 % de recortes)",
-   "cantidad": 2279,
+   "especificacion": "C2 · C1 · C2 · C1 = 36\" (914 mm), C2 = chapa G° 70 de 31,75 mm (SA-516 Gr. 70); 2 virolas de 1,65 m (2.280 kg + 10 % de recortes)",
+   "cantidad": 2508,
    "unidad": "kg",
    "fuentes": [
     {
@@ -493,7 +493,7 @@
    "pos": "13",
    "grupo": "material",
    "descripcion": "Media cupla p/soldar",
-   "especificacion": "ASTM A-105 G° B · 1\" · 6000 · drenaje inferior del cabezal y salidas a las 2 válvulas automáticas",
+   "especificacion": "ASTM A-105 G° B · 1\" · 6000 · drenaje inferior del cabezal (rotulada en el plano) y salidas a las 2 válvulas automáticas (supuesto ITT: el dibujo no las rotula)",
    "cantidad": 3,
    "unidad": "un",
    "fuentes": [
@@ -533,8 +533,8 @@
    "pos": "15",
    "grupo": "material",
    "descripcion": "Faldon de Apoyo (segun detalle)",
-   "especificacion": "ASTM A-36 · C1 · esquema faldón: chapa 3/8\" Ø 36\" × ≈ 0,9 m, refuerzo 3/4\", anillo base y orificios de 3/4\"",
-   "cantidad": 227,
+   "especificacion": "ASTM A-36 · C1 · esquema faldón: chapa 3/8\" Ø 36\" × 405 mm, anillo base Ø C1 + 200 mm de 3/4\", 4 refuerzos y orificios de 3/4\"",
+   "cantidad": 142,
    "unidad": "kg",
    "fuentes": [
     {
@@ -1037,7 +1037,7 @@
    "grupo": "material",
    "descripcion": "Brida W.N.",
    "especificacion": "ASTM A-105 · 1 · A · 1\" #600 RF sch 80: 2 por válvula bridada (pos 20, 21, 22) y salida del drenaje",
-   "cantidad": 10,
+   "cantidad": 11,
    "unidad": "un",
    "fuentes": [
     {
@@ -1115,9 +1115,9 @@
    "id": "S01",
    "pos": "ROL",
    "grupo": "servicio",
-   "descripcion": "Rolado y punteado de la envolvente (2 virolas de 1,5 m, 2.072 kg, 31,75 mm)",
+   "descripcion": "Rolado y punteado de la envolvente (2 virolas de 1,65 m, 2.280 kg, 31,75 mm)",
    "especificacion": "Sandri cilindra hasta 50 mm en 2.500 mm de largo: sirve con 2 virolas",
-   "cantidad": 2072,
+   "cantidad": 2280,
    "unidad": "kg",
    "fuentes": [
     {
@@ -1144,9 +1144,9 @@
    "id": "S02",
    "pos": "MO",
    "grupo": "mo",
-   "descripcion": "Fabricación del separador y del skid por tercero (armado, soldadura, toberas, internos, faldón, cáncamos, tarima y montaje sobre skid; ≈ 3.602 kg)",
-   "especificacion": "Ledesma, recipientes a presión AESA/44: 4,15 USD/kg × 3.602 kg (envolvente 2.072 + cabezal 245 + placas 170 + discos 58 + faldón 227 + skid y tarima 420 + escalera y barandas 150 + conexiones 260); la soldadura extra por espesor va en S02b",
-   "cantidad": 3601.5,
+   "descripcion": "Fabricación del separador y del skid por tercero (armado, soldadura, toberas, internos, faldón, cáncamos, tarima y montaje sobre skid; ≈ 3.724 kg)",
+   "especificacion": "Ledesma, recipientes a presión AESA/44: 4,15 USD/kg × 3.724 kg (envolvente 2.280 + cabezal 245 + placas 170 + discos 58 + faldón 142 + skid y tarima 420 + escalera y barandas 150 + conexiones 260); la soldadura extra por espesor va en S02b",
+   "cantidad": 3724.5,
    "unidad": "kg",
    "fuentes": [
     {
@@ -1173,9 +1173,9 @@
    "id": "S02b",
    "pos": "MOE",
    "grupo": "mo",
-   "descripcion": "Soldadura extra del recipiente por espesor (31,75 mm en lugar de la pared ≈ 10 mm de la referencia de Ledesma): 400,1 pulgadas equivalentes",
-   "especificacion": "cuerpo 145,6 pulg (3 circunferenciales de 36\" y 2 longitudinales de 1,5 m) + toberas 26\" × (factor 3,33 − 1)",
-   "cantidad": 400.1,
+   "descripcion": "Soldadura extra del recipiente por espesor (31,75 mm en lugar de la pared ≈ 10 mm de la referencia de Ledesma): 408,9 pulgadas equivalentes",
+   "especificacion": "cuerpo 149,4 pulg (3 circunferenciales de 36\" y 2 longitudinales) + toberas 26\" × (factor 3,33 − 1)",
+   "cantidad": 408.9,
    "unidad": "pulg-eq",
    "fuentes": [
     {
@@ -1215,14 +1215,14 @@
    "pos": "RX",
    "grupo": "servicio",
    "descripcion": "Radiografía 100 % de las soldaduras a tope (plano: RADIOGRAFIADO 100 % TOPE)",
-   "especificacion": "31 placas grandes (3 circunferenciales de 36\" + 2 longitudinales de 1,5 m ÷ 0,38 m por placa) + 28 chicas (bridas WN 10\", 6\" y 1\") = 59 placas → 2 visitas de hasta 45 placas",
+   "especificacion": "31 placas grandes (3 circunferenciales de 36\" + 2 longitudinales ÷ 0,38 m por placa) + 30 chicas (bridas WN 10\", 6\" y 1\") = 61 placas → 2 visitas de hasta 45 placas",
    "cantidad": 1,
    "unidad": "gl",
    "fuentes": [
     {
      "tipo": "cot",
-     "precio": 1675.06,
-     "proveedor": "Proveedor de RX (sin nombre), precio confirmado por Matías el 30-10-2026: 2 visitas × ARS 850.000 + 59 placas × ARS 15.000, sin IVA, a BNA oct-2026 (1.543,23) · END-00572 / END-00571",
+     "precio": 1694.5,
+     "proveedor": "Proveedor de RX (sin nombre), precio confirmado por Matías el 30-10-2026: 2 visitas × ARS 850.000 + 61 placas × ARS 15.000, sin IVA, a BNA oct-2026 (1.543,23) · END-00572 / END-00571",
      "origen": "conocimiento/precios/precios_usuario.csv",
      "fecha": "2026-10-30",
      "coincide": "similar",
@@ -1274,9 +1274,9 @@
    "id": "S05",
    "pos": "PIN",
    "grupo": "servicio",
-   "descripcion": "Granallado y pintura (≈ 19,6 m² + 20 % de overspray)",
-   "especificacion": "recipiente 13,2 m² (envolvente, cabezal, faldón, tapa y toberas) + skid 6,4 m²; × 1,2 como la planilla del precio; terminaciones SCE-PC-511-0003",
-   "cantidad": 23.5,
+   "descripcion": "Granallado y pintura (≈ 19,0 m² + 20 % de overspray)",
+   "especificacion": "recipiente 12,6 m² (envolvente, cabezal, faldón, tapa y toberas) + skid 6,4 m²; × 1,2 como la planilla del precio; terminaciones SCE-PC-511-0003",
+   "cantidad": 22.8,
    "unidad": "m2",
    "fuentes": [
     {
@@ -1453,7 +1453,7 @@
   "cantidad_compra": {},
   "servicios": [
    {
-    "servicio": "Rolado de 2 virolas 36\" × 31,75 mm × 1,5 m",
+    "servicio": "Rolado de 2 virolas 36\" × 31,75 mm × 1,65 m",
     "proveedores": "Sandri (hasta 50 mm × 2.500 mm)",
     "referencia": "1,74 USD/kg (03-2026, chapa de 1\")",
     "nota": "con el plano tipo"
