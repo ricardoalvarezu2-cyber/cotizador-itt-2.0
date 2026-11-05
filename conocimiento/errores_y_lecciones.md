@@ -339,3 +339,9 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 - Qué pasó: al cargar la cotización Oil Metal 37278, "ESPARRAGO 5/8" X 90MM … GR B7" cayó en el mismo código que "ESPARRAGO 5/8 X 90 SA-193 B7M" (JUN-04177): ninguno de los dos textos se leía como material ("GR B7" sin A193; "SA-193" con guion), y la clave quedaba igual. Un B7 más barato habría pasado como precio de un B7M (servicio ácido).
 - Corrección: el lector `oilmetal` pasa "GR B7" a "ASTM A193 B7" (y "316LFG" / "316L+FG" a AISI 316L + grafito), y el espárrago nuevo queda en su propio código. Se probó también ampliar `material_de` a "SA-193" y "316LFG", pero cambiaba las claves de ~40 espárragos y juntas y hacía desaparecer códigos usados por cotizaciones (JUN-02733, Camuzzi): se descartó y queda pendiente con migración de códigos.
 - Lección: después de cargar una lista, revisar cada precio que cae en un código existente con un material distinto en la descripción, y antes de tocar la lectura de atributos, mirar si desaparecen códigos (no solo si cambian precios).
+
+## 05-11-2026 — La prueba nueva de la planilla borraba los Excel de las cotizaciones
+- Qué pasó: al armar `web/probar_planilla.js` (rediseño de la planilla), la prueba generaba la planilla de Python en la carpeta de cada cotización y la movía a una carpeta temporal: después de correrla, los 6 Excel del repositorio quedaron borrados. Se vio en `git status` antes de subir nada.
+- Corrección: `planilla_excel.escribir` acepta la ruta de salida y la prueba escribe directo en la carpeta temporal; se regeneraron los 6 Excel (mismos precios).
+- Lección: una prueba nunca escribe ni mueve archivos dentro de `cotizaciones/`; después de correr una prueba nueva, mirar `git status`.
+

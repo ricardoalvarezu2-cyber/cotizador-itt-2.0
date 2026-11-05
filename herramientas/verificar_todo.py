@@ -97,6 +97,12 @@ print(f"{'OK  ' if r.returncode == 0 else 'FALLA'} ficha de la página igual a P
 if r.returncode:
     fallas.append("ficha JS distinta de Python")
     print((r.stdout + r.stderr)[-800:])
+# planilla Excel de la página igual a la de Python, celda por celda, en las cotizaciones del repositorio (rediseño 05-11-2026)
+r = subprocess.run(["node", "web/probar_planilla.js"], cwd=RAIZ, capture_output=True, text=True)
+print(f"{'OK  ' if r.returncode == 0 else 'FALLA'} planilla Excel de la página igual a Python (web/probar_planilla.js)")
+if r.returncode:
+    fallas.append("planilla Excel de la página distinta de Python")
+    print((r.stdout + r.stderr)[-1500:])
 # casos de control (precotización contra el costo real): el total de la app no puede moverse sin que alguien lo decida
 import json  # noqa: E402
 out = correr("casos de control (correr_controles.py)", [str(H / "correr_controles.py")])
