@@ -28,7 +28,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 20 | Tapón NPT cab. hexag. A105 3/4" | 2 × 2,30 = 4,60 | 2 un × 2,00 = 4,00 | -13% | cot · planilla de costo ITT (proveedor sin nom · 2026-10-30 | dentro de ±15% |
 | 21 | Sockolet SW 3000 LB A105 12"x1 1/2" | 3 × 28,00 = 84,00 | 3 un × 0,52 = 1,56 | -98% | cot · planilla de costo ITT (proveedor sin nom · 2026-10-30 | más barato (similar) |
 | 22 | Sockolet SW 3000 LB A105 12"x3/4" | 3 × 14,00 = 42,00 | 3 un × 0,18 = 0,54 | -99% | cot · planilla de costo ITT (proveedor sin nom · 2026-10-30 | más barato (similar) |
-| 23 | Sockolet SW 3000 LB A105 16"x3/4" | 1 × 15,00 = 15,00 | 1 un × 15,59 = 15,59 | +4% | est · no dice · AFO-02394 · 2025-03-27 | dentro de ±15% |
+| 23 | Sockolet SW 3000 LB A105 16"x3/4" | 1 × 15,00 = 15,00 | 1 un × 2,33 = 2,33 | -84% | cot · Oil Metal (cód. SOC007508030105) · AFO-0 · 2026-10-30 | más barato (similar) |
 | 24 | Sockolet SW 3000 LB A105 16"x1/2" | 1 × 13,00 = 13,00 | 1 un × 10,00 = 10,00 | -23% | ant · sin proveedor en planilla · AFO-03330 · 2025-12-23 | más barato (similar) |
 | 25 | Válvula esférica 1/2" NPT WOG 2000 PT palanca | 1 × 36,06 = 36,06 | 1 un × 36,06 = 36,06 | 0% | lista · Taval (Lista 30 × 0.52) · VAL-04865 · 2025-09-01 | dentro de ±15% |
 | 26 | Válvula esférica 3/4" NPT WOG 2000 PT palanca | 4 × 38,80 = 155,20 | 4 un × 38,80 = 155,20 | 0% | lista · Taval (Lista 30 × 0.52) · VAL-04874 · 2025-09-01 | dentro de ±15% |
@@ -38,7 +38,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 30 | Válvula esférica 12" FLG RF 300 LB PT volante | 3 × 5.750,00 = 17.250,00 | 3 un × 5.750,00 = 17.250,00 | 0% | lista · Taval (Lista 30 × 0.52) · VAL-04436 · 2025-09-01 | dentro de ±15% |
 | 31 | Bastidor del skid (perfilería) | 850 × 2,00 = 1.700,00 | 850 kg × 1,90 = 1.615,00 | -5% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | dentro de ±15% · real: la PC0 le aplicó un 20% de overspray (error: es acero, no pintura) |
 
-**Materiales: real USD 60.808,45 · cotizador USD 41.424,46 (-32%).** 10 dentro de ±15%, 19 fuera, 2 sin precio.
+**Materiales: real USD 60.808,45 · cotizador USD 41.411,20 (-32%).** 9 dentro de ±15%, 20 fuera, 2 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -54,5 +54,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por skid
 
-Real USD 85.995,15 · cotizador USD 60.935,65 (-29%) antes de completar lo que el cotizador marca para revisar.
+Real USD 85.995,15 · cotizador USD 60.922,39 (-29%) antes de completar lo que el cotizador marca para revisar.
 

@@ -19,3 +19,16 @@ GR B7 → ASTM A193 B7, CW/CWI → con anillo exterior / exterior e interior).
 **Para revisar:** la tee 3" Sch 80 WPB (ABW-00396) pasa de 74,75 (planilla YPF Lic 66944 confirmada por Matías el 30-10-2026)
 a 38,72 de Oil Metal, con la misma fecha; varias juntas espiraladas y niples bajan 60–80 % contra los precios anteriores
 (p. ej. junta 2" #300 de 6,00 a 1,41; niple 1/2" Sch 160 de 20,00 a 2,79). Se cargó lo que dice el documento.
+
+**Auditoría independiente (05-11-2026):** los 3 + 28 precios coinciden con los PDF (los códigos repetidos de Oil Metal tienen
+el mismo precio). Corregido después: la junta CWI conserva "316/316L"; sockolets y weldolet leen la serie 3000; la nota de
+disponibilidad de Oil Metal queda en `listas_vendedor.csv` (brida 8" WN: "alternativa en stock, ver schedule"; brida 4" WN:
+entrega en 90 días; niple 1 1/2": 7 días). Quedan pendientes, porque vienen de cómo arma las claves el catálogo:
+- Las juntas espiraladas no se distinguen por anillos ni espesor: en JUN-01699 (4" #300), JUN-02764 (12"), JUN-02769 (2") y
+  JUN-02775 (3") el precio nuevo (anillo exterior solo o SW) reemplaza históricos con anillo interior a ~1/4 del valor.
+- Las juntas "#300-600" se cargan solo en la serie 300.
+- Los sockolets nuevos (con Sch 80) quedan con código aparte de los sockolet 3000 sin schedule (AFO-03330 y otros).
+- El weldolet queda sin tipo; "SA-193 B7M" y "316LFG" no se leen como material en otros textos (corregirlo cambia claves de
+  ~40 espárragos y juntas y deja códigos usados por cotizaciones sin referencia: hay que hacerlo con migración de códigos).
+- 16 códigos citados en `cotizaciones/` no existen en el catálogo (anteriores a esta carga; dos en `cotizacion.json`:
+  JUN-02839 en COT26-0330-001 y VAL-03290 en COT26-0330-002).

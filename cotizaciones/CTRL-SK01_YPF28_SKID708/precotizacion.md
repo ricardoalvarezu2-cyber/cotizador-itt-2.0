@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-SK01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 41.424,46 por equipo · soldadura y servicios calculados USD 19.511,19 · 20 similares (2, 2b, 6, 8, 9, 10, 11, 12, 13, 17, 18, 19, 20, 21, 22, 23, 24, 28, 30, 31) · 2 sin precio (4, 14).
+**Resumen:** materiales USD 41.411,20 por equipo · soldadura y servicios calculados USD 19.511,19 · 20 similares (2, 2b, 6, 8, 9, 10, 11, 12, 13, 17, 18, 19, 20, 21, 22, 23, 24, 28, 30, 31) · 2 sin precio (4, 14).
 
 
 ## 1. Materiales
@@ -30,7 +30,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 20 | Tapón NPT cab. hexag. · Ø 3/4" | SIMILAR | 2,00 / un | 2026-10-30 · cotización | — · faltan: serie |
 | 21 | Sockolet SW 3000 LB · Ø 12"x1 1/2" | SIMILAR | 0,52 / un | 2026-10-30 · cotización | diametro: 10" (pedido 12"); extremos: SW (pedido SW/BW); precio escalado por diámetro (1,5" ÷ 10")^1,5 = × 0,0 |
 | 22 | Sockolet SW 3000 LB · Ø 12"x3/4" | SIMILAR | 0,18 / un | 2026-10-30 · cotización | diametro: 10" (pedido 12"); extremos: SW (pedido SW/BW); precio escalado por diámetro (0,75" ÷ 10")^1,5 = × 0, |
-| 23 | Sockolet SW 3000 LB · Ø 16"x3/4" | SIMILAR (estimado cepo) ⚠ | 15,59 / un | 2025-03-27 · estimado (cepo) | diametro: 0.75" (pedido 16"); material: sin dato (pedido A105); extremos: sin dato (pedido SW/BW) |
+| 23 | Sockolet SW 3000 LB · Ø 16"x3/4" | SIMILAR | 2,33 / un | 2026-10-30 · cotización | diametro: 0.75" (pedido 16"); schedule: 80 (no pedido); extremos: sin dato (pedido SW/BW) |
 | 24 | Sockolet SW 3000 LB · Ø 16"x1/2" | SIMILAR | 10,00 / un | 2025-12-23 · planilla interna | diametro: 0.5" (pedido 16"); extremos: sin dato (pedido SW/BW) |
 | 25 | Válvula esférica NPT WOG 2000 P.T. op. palanc | IGUAL | 36,06 / un | 2025-09-01 · lista | — |
 | 26 | Válvula esférica NPT WOG 2000 P.T. op. palanc | IGUAL | 38,80 / un | 2025-09-01 · lista | — |
@@ -65,7 +65,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 122 placas chicas + 25 grandes + 3,83 servicio(s) de RX + 0,67 de LP por equipo = USD 2.753,00 (Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))).
   Con las tarifas de Antonelli (11-2025) serían USD 4.535,00: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: skid, 16", 6 u, materiales USD 41.424 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: skid, 16", 6 u, materiales USD 41.411 por unidad)
 
 - **Ingeniería:** 5 h × USD 15/h = USD 75,00 · mediana de 4,5, 5,0, 93,3 h por unidad (repartidas en la serie) · antecedente: Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para UFLO 2108 (SK-2105) (8, 1 u, 2026-02-20) · rango del mismo tipo 27–280 h
 - **Calidad y dossier:** 15 h × USD 15/h = USD 225,00 · mediana de 15,0, 7,5, 40,0 h por unidad (repartidas en la serie) · antecedente: Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para UFLO 2108 (SK-2105) (8, 1 u, 2026-02-20) · rango del mismo tipo 45–120 h

@@ -28,8 +28,8 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 20 | Tee normal 3" sch 80 BW WPB | 6 × 60,36 = 362,16 | 6 un × 38,72 = 232,32 | -36% | cot · Oil Metal (cód. AC0300-4K280527) · ABW-0 · 2026-10-30 | más barato |
 | 21 | Tee reducción 6"x3" sch 40 BW WPB | 6 × 164,91 = 989,46 | 6 un × 164,91 = 989,46 | 0% | ant · Renard · ABW-00413 · 2026-06-26 | dentro de ±15% |
 | 22 | Entrerosca 3/4" NPT A105 | 3 × 2,50 = 7,50 | 3 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-05 | SIN PRECIO en el catálogo |
-| 23 | Sockolet 3/4" 3000 A105 | 17 × 6,00 = 102,00 | 17 un × 18,37 = 312,29 | +206% | ant · sin proveedor en planilla · AFO-03330 · 2025-12-23 | más caro (similar) |
-| 24 | Sockolet 1" 3000 A105 | 2 × 7,00 = 14,00 | 2 un × 24,00 = 48,00 | +243% | est · no dice · AFO-02394 · 2025-03-27 | más caro (similar) |
+| 23 | Sockolet 3/4" 3000 A105 | 17 × 6,00 = 102,00 | 17 un × 2,33 = 39,61 | -61% | cot · Oil Metal (cód. SOC007508030105) · AFO-0 · 2026-10-30 | más barato (similar) |
+| 24 | Sockolet 1" 3000 A105 | 2 × 7,00 = 14,00 | 2 un × 3,59 = 7,18 | -49% | cot · Oil Metal (cód. SOC007508030105) · AFO-0 · 2026-10-30 | más barato (similar) |
 | 25 | Tapón hexagonal 3/4" NPT A105 | 17 × 2,50 = 42,50 | 17 un × 2,30 = 39,10 | -8% | ant · Renard · AFO-00850 · 2026-06-26 | dentro de ±15% |
 | 26 | Válvula bloqueo y purga 1/2" AISI 316 | 15 × 180,00 = 2.700,00 | 15 un × 137,00 = 2.055,00 | -24% | ant · Abac · VAL-03198 · 2026-04-22 | más barato (similar) |
 | 27 | Válvula esférica 3/4" #3000 A105 (Taval stock | 4 × 42,04 = 168,17 | 4 un × 42,04 = 168,16 | 0% | ant · Taval · VAL-03530 · 2026-06-26 | dentro de ±15% · real: Válvulas Taval, factor 1 |
@@ -42,7 +42,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 34 | Bastidor skid (300 + 500 kg con 20% de desper | 960 × 1,50 = 1.440,00 | 800 kg × 1,90 = 1.520,00 | +6% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | dentro de ±15% · real: 800 kg × 1,2 de desperdicio × USD 1,5/kg |
 | 35 | Tablero y materiales eléctricos | 1 × 12.000,00 = 12.000,00 | 1 gl × 12.000,00 = 12.000,00 | 0% | ant · planilla de costo ITT · OTR-03018 · 2026-06-26 | dentro de ±15% |
 
-**Materiales: real USD 47.654,86 · cotizador USD 26.558,49 (-44%).** 15 dentro de ±15%, 16 fuera, 4 sin precio.
+**Materiales: real USD 47.654,86 · cotizador USD 26.244,99 (-45%).** 15 dentro de ±15%, 16 fuera, 4 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -58,5 +58,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por colector
 
-Real USD 66.490,02 · cotizador USD 44.138,84 (-34%) antes de completar lo que el cotizador marca para revisar.
+Real USD 66.490,02 · cotizador USD 43.825,34 (-34%) antes de completar lo que el cotizador marca para revisar.
 

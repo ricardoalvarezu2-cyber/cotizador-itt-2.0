@@ -98,7 +98,8 @@ def _control_importe(ruta, linea, cant, precio, importe, bonif=0.0):
 ABREV_MS = [(r"^ESP SWI?\b", "JUNTA ESPIRALADA SW"), (r"^KIT AISL\.?\s*F\b", "KIT AISLACION TIPO F"), (r"\b316LFG\b", "AISI 316L + GRAFITO")]
 ABREV_OM = [(r"\bBWN\b", "WN"), (r"\bBCI\b", "CIEGA"), (r"\bBSW\b", "SW"), (r"^RED EXC\b", "REDUCCION EXCENTRICA"),
             (r"^TEE RED\b", "TEE REDUCCION"), (r"^TEE TOT\b", "TEE"), (r"\bC/TCAS\b", "C/2 TUERCAS"), (r"\bGR B7\b", "ASTM A193 B7"),
-            (r"\bCWI\b", "C/ANILLO EXT. E INT."), (r"\bCW\b", "C/ANILLO EXT."), (r"\b316(?:/316)?L\+FG\b", "AISI 316L + GRAFITO")]
+            (r"\bCWI\b", "C/ANILLO EXT. E INT."), (r"\bCW\b", "C/ANILLO EXT."), (r"\b316/316L\+FG\b", "AISI 316/316L + GRAFITO"), (r"\b316L\+FG\b", "AISI 316L + GRAFITO"),
+            (r"\b(SCH ?\d+) (3000|6000)\b", r"\1 #\2")]
 
 
 def _expandir(desc, reglas, serie_suelta=False):
@@ -129,7 +130,8 @@ def oilmetal(ruta, base):
     punto decimal; se toma el neto de la bonificación y se controla contra el importe. Un código repetido se carga una vez."""
     item = re.compile(r"^\s*(\d+)\s+(\S+)\s+(.+?)\s{2,}\d\d/\d\d/\d{4}\s+([\d.]+)\s+U\s+USD\s+([\d.]+)\s+([\d.]+)\s+([\d.]+)\s*$")
     vistos = set()
-    for linea in _pdf(ruta).splitlines():
+    renglones = _pdf(ruta).splitlines()
+    for i, linea in enumerate(renglones):
         m = item.match(linea)
         if not m:
             continue
@@ -138,8 +140,11 @@ def oilmetal(ruta, base):
         if m.group(2) in vistos:
             continue
         vistos.add(m.group(2))
+        # el renglón de abajo trae la disponibilidad: "STOCK", "ENTREGA EN 90 DIAS", "** ALTERNATIVA EN STOCK, VER SCHEDULE **"
+        abajo = renglones[i + 1].strip().strip("* ") if i + 1 < len(renglones) else ""
+        nota = base.get("nota", "") + (f"; Oil Metal: {abajo.lower()}" if abajo and abajo != "STOCK" and not item.match(renglones[i + 1]) else "")
         yield {**base, "codigo": m.group(2), "descripcion": _expandir(m.group(3).strip(), ABREV_OM),
-               "precio": round(precio * (1 - bonif / 100), 2), "unidad": "un"}
+               "precio": round(precio * (1 - bonif / 100), 2), "unidad": "un", "nota": nota}
 
 
 FORMATOS = [(r"^renard_lista", renard, "Tubos Renard", "lista", "sin IVA (lista Renard en USD)"),

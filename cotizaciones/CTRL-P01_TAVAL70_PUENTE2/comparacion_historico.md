@@ -23,7 +23,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 15 | Inyector de químicos | 2 × 2.100,00 = 4.200,00 | 2 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-05 | SIN PRECIO en el catálogo · real: la oferta lo EXCLUYE pero la planilla lo costea |
 | 16 | Manómetro | 2 × 120,00 = 240,00 | 2 un × 120,00 = 240,00 | 0% | cot · Weisz · INS-04947 · 2026-10-30 | dentro de ±15% · real: REV 1 sin la válvula de bloqueo y purga (REV 0: 2 × 150 Abac) |
 | 17 | Sensor RTD + termovaina (4) y transmisor de t | 4 × 1.090,50 = 4.362,00 | 4 un × 1.448,33 = 5.793,32 | +33% | ant · ABB · INS-02714 · 2026-08-14 | más caro (similar) · real: 2 × 689 (FQIT) + 2 × 689 (bypass) + 2 × 803 (TIT); REV 0: 4 × 1.176,57 |
-| 18 | Sockolet 1" 3000# SA-105 | 14 × 6,00 = 84,00 | 14 un × 24,00 = 336,00 | +300% | est · no dice · AFO-02394 · 2025-03-27 | más caro (similar) |
+| 18 | Sockolet 1" 3000# SA-105 | 14 × 6,00 = 84,00 | 14 un × 3,59 = 50,26 | -40% | cot · Oil Metal (cód. SOC007508030105) · AFO-0 · 2026-10-30 | más barato (similar) |
 | 19 | Junta espiralada 2" #600 316+grafito anillo i | 46 × 8,00 = 368,00 | 46 un × 6,06 = 278,76 | -24% | est · no dice · JUN-02770 · 2025-03-27 | más barato (similar) |
 | 20 | Espárrago 5/8" x 5" con tuercas | 368 × 8,00 = 2.944,00 | 368 un × 2,50 = 920,00 | -69% | ant · sin proveedor en planilla (columna PROVE · 2026-02-20 | más barato (similar) |
 | 21 | Tee normal 2" sch 80 BW SA-234 WPB | 8 × 24,06 = 192,48 | 8 un × 25,00 = 200,00 | +4% | ant · no dice · ABW-00373 · 2026-01-22 | dentro de ±15% |
@@ -34,7 +34,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | X2 | Manifold de 5 vías | 698,00 | — | — | — | falta en el cotizador |
 | X3 | Botellones de purga tomas de presión | 900,00 | — | — | — | falta en el cotizador |
 
-**Materiales: real USD 54.743,60 · cotizador USD 26.017,58 (-52%).** 6 dentro de ±15%, 12 fuera, 6 sin precio.
+**Materiales: real USD 54.743,60 · cotizador USD 25.731,84 (-53%).** 6 dentro de ±15%, 12 fuera, 6 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -51,5 +51,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por puente
 
-Real USD 68.559,60 · cotizador USD 39.110,02 (-43%) antes de completar lo que el cotizador marca para revisar.
+Real USD 68.559,60 · cotizador USD 38.824,28 (-43%) antes de completar lo que el cotizador marca para revisar.
 

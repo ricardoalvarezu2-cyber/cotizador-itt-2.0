@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-C01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 26.558,49 por equipo · soldadura y servicios calculados USD 17.580,35 · 18 similares (9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 23, 24, 25, 26, 27, 32, 34, 35) · 4 sin precio (22, 28, 31, 33).
+**Resumen:** materiales USD 26.244,99 por equipo · soldadura y servicios calculados USD 17.580,35 · 18 similares (9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 23, 24, 25, 26, 27, 32, 34, 35) · 4 sin precio (22, 28, 31, 33).
 
 
 ## 1. Materiales
@@ -30,8 +30,8 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 20 | Tee normal · Ø 3" | IGUAL | 38,72 / un | 2026-10-30 · cotización | — |
 | 21 | Tee de reducción · Ø 6" x 3" | IGUAL | 164,91 / un | 2026-06-26 · planilla interna | — |
 | 22 | Entrerosca · Ø 3/4" | **SIN PRECIO** | — | — | pedir cotización |
-| 23 | Sockolet · Ø 3/4" | SIMILAR | 18,37 / un | 2025-12-23 · planilla interna | diametro: 0.5" (pedido 0.75"); extremos: sin dato (pedido SW/BW); precio escalado por diámetro (0,75" ÷ 0,5")^ |
-| 24 | Sockolet · Ø 1" | SIMILAR (estimado cepo) ⚠ | 24,00 / un | 2025-03-27 · estimado (cepo) | diametro: 0.75" (pedido 1"); material: sin dato (pedido A105); extremos: sin dato (pedido SW/BW); precio escal |
+| 23 | Sockolet · Ø 3/4" | SIMILAR | 2,33 / un | 2026-10-30 · cotización | schedule: 80 (no pedido); extremos: sin dato (pedido SW/BW) |
+| 24 | Sockolet · Ø 1" | SIMILAR | 3,59 / un | 2026-10-30 · cotización | diametro: 0.75" (pedido 1"); schedule: 80 (no pedido); extremos: sin dato (pedido SW/BW); precio escalado por  |
 | 25 | Tapón hexagonal · Ø 3/4" | SIMILAR | 2,30 / un | 2026-06-26 · planilla interna | el último precio (3,50) se aparta más de 40% de la mediana de sus últimos precios: se usa la mediana 2,30 |
 | 26 | Válvula de bloqueo y purga · Ø 1/2" | SIMILAR | 137,00 / un | 2026-04-22 · planilla interna | — · faltan: serie |
 | 27 | Válvula esférica · Ø 3/4" | SIMILAR | 42,04 / un | 2026-06-26 · planilla interna | paso: reducido (no pedido) · faltan: paso |
@@ -69,7 +69,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 243 placas chicas + 0 grandes + 6,11 servicio(s) de RX + 1,44 de LP por equipo = USD 4.497,50 (Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))).
   Con las tarifas de Antonelli (11-2025) serían USD 7.347,22: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: manifold, 6", 18 u, materiales USD 26.558 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: manifold, 6", 18 u, materiales USD 26.245 por unidad)
 
 - **Ingeniería:** 0,82 h × USD 15/h = USD 12,30 · mediana de 1,1, 0,5 h por unidad (repartidas en la serie) · antecedente: TECPETROL/9. CM SKID MANIFOLD PAD S-600 · Skid Manifold PAD S600 clase A6BM (sch 40) (4 (colector 8), 28 u, 2026-01-26) · rango del mismo tipo 1,14–9 h
 - **Calidad y dossier:** 12,5 h × USD 15/h = USD 187,50 · mediana de 24,0, 1,0 h por unidad (repartidas en la serie) · antecedente: TECPETROL/9. CM SKID MANIFOLD PAD S-600 · Skid Manifold PAD S600 clase A6BM (sch 40) (4 (colector 8), 28 u, 2026-01-26) · rango del mismo tipo 18–24 h
