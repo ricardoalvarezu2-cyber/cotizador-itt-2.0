@@ -133,7 +133,8 @@ def buscar(texto, familia=None, marca_pedida="", fijos=None):
         igual = not difs and all(at.get(c) for c in oblig)
         misma_marca = bool(marca) and norm(r.get("marca", "")) == norm(marca)
         # la marca no le gana al tamaño: una Taval #300 no va antes que una #900 de otra marca (CTRL-TS01)
-        crit = sum(1 for d in difs if d.split(":")[0] in CRITICOS and "(no pedido)" not in d)
+        # otro Ø pesa más que cualquier otra diferencia crítica: una junta 2" con otro anillo va antes que una 3" (05-11-2026)
+        crit = sum(10 if d.split(":")[0] == "diametro" else 1 for d in difs if d.split(":")[0] in CRITICOS and "(no pedido)" not in d)
         n_difs = len(difs)
         for c in EXTRAS:  # todas las demás diferencias, para verlas (no cambian igual/similar ni el orden)
             if c in campos or not at.get(c):

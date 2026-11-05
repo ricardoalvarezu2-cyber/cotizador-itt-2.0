@@ -79,6 +79,17 @@ igual("cepo: precio maestro del stock × 0,64", factor_cepo("2024-11-01", "stock
 igual("cepo: compra del stock sigue descartada", factor_cepo("2023-06-13", "compra")[0], None)
 igual("cepo: otros × oficial/blue del mes", round(factor_cepo("2024-05-20", "cotización")[0], 3), round(904.79 / 1125.48, 3))
 
+# juntas espiraladas separadas por anillos y aptas para varias series (05-11-2026)
+for txt, esperado in [('JUNTA ESPIRALADA SW AC 316LFG Ø2" 3/4/600', "anillo ext."), ('ESP SWI AC 316LFG 316L Ø8" 600', None),
+                      ('JUNTA ESPIRALADA C/ANILLO EXT AC ZINC/ A.INT AI | 3" | 150# | AISI 316 / GRAFITO', "anillos ext. e int."),
+                      ('Junta espiralada RF espesor 4.5 mm con anillo interior y exterior 3" #300 AISI 316', "anillos ext. e int."),
+                      ('JUNTA ESPIRALADA C/ANILLO INT. | 6" | 150# | AISI 316 / GRAFITO', "anillo int."),
+                      ('JUNTA ESPIRALADA CW 316L+FG/CS 4" #300', "anillo ext.")]:
+    if esperado:
+        igual(f"anillos: {txt[:40]}", at(txt)[1].get("medida"), esperado)
+igual("3/4/600 = series 300, 400 y 600", at('JUNTA ESPIRALADA SW AC 316LFG Ø3" 3/4/600')[1].get("_series"), ["300", "400", "600"])
+igual("#300-600 = 300, 400 y 600", at('JUNTA ESPIRALADA CWI 316L+FG/CS 3" #300-600')[1].get("_series"), ["300", "400", "600"])
+
 # lectores de cotizaciones de proveedores (05-11-2026): Miyashiro con coma y 3 decimales, Oil Metal con códigos repetidos
 import listas_vendedor as lv  # noqa: E402
 LV = Path(__file__).resolve().parent.parent / "fuentes_originales" / "listas_vendedor" / "2026-11-05"

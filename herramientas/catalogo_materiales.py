@@ -412,6 +412,11 @@ def atributos(t, fam, proveedor=""):
             d["diametro"] = f"{frac(d['medida'].split(' x ')[0]):g}\""
         if d["tipo"] == "ring joint":
             d["medida"] = primero(r"\b((?:bx|rx|r) ?-?\d{2,3})\b", t).replace(" ", "").replace("-", "").upper()
+        if d["tipo"] in ("junta espiralada", "espiralada"):
+            d["medida"] = anillos_junta(t)
+            multi = series_multiples(t)
+            if multi:
+                d["serie"], d["_series"] = multi[0], multi
     else:
         d["tipo"] = next((n for n, rx in OTR_TIPOS if re.search(rx, t)), " ".join(t.split()[:3]))
     if fam in ("VAL", "INS"):
@@ -446,6 +451,31 @@ def unidad_norm(u):
         if re.match(rx, u):
             return nombre
     return u
+
+
+def anillos_junta(t):
+    """Anillos de una junta espiralada (05-11-2026, Matías: separar las juntas por anillos). Devuelve "anillos ext. e int.",
+    "anillo ext.", "anillo int." o "" si el texto no lo dice. Convenciones de los proveedores: MS Juntas «SW AC» = con anillo
+    centrador (exterior) y «SWI AC» = interior y exterior; Oil Metal «CW» = exterior y «CWI» = interior y exterior; planillas
+    «c/anillo ext ... a.int» = los dos."""
+    ext = re.search(r"anillo\s?(?:ext|centrador)|\bcwi?\b|\bswi? (?:c/anillo int\.? )?ac\b|\banillo exterior|\b(?:interior|int\.?) y ext|\bext\.? e int", t)
+    inn = re.search(r"anillo\s?int|\ba\.?\s?int\b|\bcwi\b|\bswi\b|anillo interior|interior y exterior|ext\.? e int", t)
+    if ext and inn:
+        return "anillos ext. e int."
+    return "anillo ext." if ext else "anillo int." if inn else ""
+
+
+def series_multiples(t):
+    """Juntas aptas para varias series ("3/4/600" de MS Juntas = #300, #400 y #600; "#300-600" de Oil Metal): en esas medidas la junta
+    es la misma (ASME B16.20), así que el precio vale para cada serie (05-11-2026)."""
+    m = re.search(r"(?<![\d/])([1-9])/([1-9])/([1-9])00\b", t)
+    if m:
+        return [f"{x}00" for x in m.groups()]
+    m = re.search(r"#\s?(150|300|400|600|900)\s?-\s?(300|400|600|900|1500)\b", t)
+    if m:
+        orden = ["150", "300", "400", "600", "900", "1500"]
+        return orden[orden.index(m.group(1)):orden.index(m.group(2)) + 1]
+    return []
 
 
 def clave(fam, at, unidad="un"):
@@ -803,11 +833,15 @@ def _main():
         if fam in ("AFO", "ABW", "BRI", "NIP", "VAL", "INS") and r["unidad"] not in ("un", ""):
             r["extra"] = "; ".join(x for x in [r["extra"], f"unidad del origen '{r['unidad']}' corregida a 'un' (es una pieza)"] if x)
             r["unidad"] = "un"
-        k = clave(fam, at, r["unidad"])
-        hist.append({**r, "familia": fam, "atributos": at, "clave": k, "precio_usd": round(precio, 4),
-                     "precio_ajustado_hoy_usd": round(precio * ref_cpi / cpi, 4),
-                     "nota": "; ".join(x for x in [nota, "ajuste parcial: fecha anterior a ene-2024" if viejo else "", r["extra"]] if x),
-                     "confianza_clasificacion": "alta" if k and len(at) >= 4 else ("media" if k else "baja")})
+        multi = at.pop("_series", None)
+        for serie in (multi or [at.get("serie", "")]):  # junta apta para varias series: el mismo precio en cada una (05-11-2026)
+            at_s = {**at, "serie": serie} if multi else at
+            k = clave(fam, at_s, r["unidad"])
+            hist.append({**r, "familia": fam, "atributos": at_s, "clave": k, "precio_usd": round(precio, 4),
+                         "precio_ajustado_hoy_usd": round(precio * ref_cpi / cpi, 4),
+                         "nota": "; ".join(x for x in [nota, "ajuste parcial: fecha anterior a ene-2024" if viejo else "", r["extra"],
+                                                        f"junta apta para las series {' / '.join(multi)}: mismo precio en cada una" if multi else ""] if x),
+                         "confianza_clasificacion": "alta" if k and len(at_s) >= 4 else ("media" if k else "baja")})
     grupos = defaultdict(list)
     for h in hist:
         grupos[h["clave"] or "SOLO|" + "|".join([h["familia"], norm(h["descripcion"])[:150], h["proveedor"], h["ruta_repo"], h["archivo_origen"]])].append(h)
@@ -815,6 +849,26 @@ def _main():
     reg_ruta = PRECIOS / "catalogo_codigos.csv"
     registro = {r["clave"]: r["codigo"] for r in csv.DictReader(open(reg_ruta, encoding="utf-8"))} if reg_ruta.exists() else {}
     ultimo = max([int(c.split("-")[1]) for c in registro.values()] or [0])
+    # Migración de códigos (05-11-2026): si cambia la regla de la clave (p. ej. juntas separadas por anillos), un código cuyos precios
+    # pasan todos a claves nuevas no se pierde: lo hereda la clave nueva que se lleva más precios de él (las cotizaciones lo citan).
+    hist_prev = PRECIOS / "catalogo_materiales_historial.csv"
+    if hist_prev.exists():
+        cod_prev = {(r["descripcion"], r["proveedor"], r["fecha"], r["archivo_origen"]): r["codigo"] for r in csv.DictReader(open(hist_prev, encoding="utf-8"))}
+        vivos = {registro[k] for k in grupos if k in registro}
+        candidatos = defaultdict(lambda: defaultdict(int))  # código viejo → clave nueva → precios
+        for k, hs in grupos.items():
+            if k in registro:
+                continue
+            for h in hs:
+                c = cod_prev.get((h["descripcion"], h["proveedor"], h["fecha"], h["archivo_origen"]))
+                if c and c not in vivos:
+                    candidatos[c][k] += 1
+        for c, ks in sorted(candidatos.items()):
+            k = max(ks, key=lambda x: (ks[x], x))
+            if k not in registro:
+                for viejo in [x for x, v in registro.items() if v == c]:
+                    del registro[viejo]
+                registro[k] = c
     for k in sorted(grupos, key=lambda k: (grupos[k][0]["familia"], k)):
         if k not in registro:
             ultimo += 1
