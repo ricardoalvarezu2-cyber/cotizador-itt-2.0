@@ -10,6 +10,7 @@ Pedido de Matías (05-11-2026): sumar a la base todas las ET que Camuzzi tiene p
 ## Qué hay en el repositorio
 - `fuentes_originales/camuzzi_ET/`: 34 PDF bajados el 05-11-2026 con su texto (`.txt`, pdftotext -layout).
 - `camuzzi_ET_indice.csv`: código, revisión, fecha, título, tipo, para qué le sirve a ITT, archivo y URL.
+- `camuzzi_ET_referencias.csv`: los 105 documentos que citan las ET y pliegos de Camuzzi, con quién los cita, si los tenemos y si importan para fabricar.
 - `camuzzi_ET_requisitos.md`: requisitos de las ET de equipos que pesan en costo, plazo u oferta (filtro FM, separador, tanque de purga, calentador, reguladoras, juntas, válvulas, pintura, soldadura, prueba neumática, eléctrica).
 - Documentos que vinieron en pedidos (más nuevos que la web cuando coinciden): `cotizaciones/COT26-0135-00*/pedido/` — listado de marcas **SCE-IN-501-0015 rev 1 (10-02-2026)** (la web tiene la rev 00 de 11-12-2020: vale la rev 1), ET del proyecto ERP Tres Arroyos (SCE-ME-515-0030, SCE-RE-515-0032), planos SCE-ME-315-0039 y SCE-RE-315-0048 y plano tipo SCE-RE-112-0001 rev 1 (separador vertical coalescente).
 
