@@ -33,11 +33,11 @@ Preparadas el 30-10-2026.
 
 **P1 — Memoria de cálculo** (requisito R017) y **P2 — Esquema con dimensiones generales** (requisito R018): la planilla exige entregarlos con la cotización y todavía no existen. Están cargados con destino `pendiente_itt` (frenan la oferta); se cierran (destino `renglon`, referencia `HH`) cuando estén hechos y adjuntos.
 
-## Consulta del 05-11-2026 (después de la circular con el plano tipo SCE-RE-113-0001) — borrador para que la mande Matías
+## Consulta del 05-11-2026 (después de la circular con el plano tipo SCE-RE-112-0001 rev. 1) — borrador para que la mande Matías
 
 Asunto: Concurso de Precios N° 24578 / N° 24527 – Separador Vertical Coalescente – Consultas técnicas
 
-1. Cantidad de cartuchos: la tabla del plano tipo SCE-RE-113-0001 llega hasta 20 cartuchos (cuerpo de 36" en serie #600). Para Qmáx 100.000 Sm3/h con Pe mín 25 bar, ¿qué cantidad de cartuchos (fila "B" de la tabla) debemos adoptar? Si el cálculo con la ficha del elemento diera más de 20, ¿aceptan dos equipos en paralelo o un cuerpo de mayor diámetro fuera de la tabla?
+1. Cantidad de cartuchos: la tabla del plano tipo SCE-RE-112-0001 rev. 1 llega hasta 20 cartuchos (cuerpo de 36" en serie #600). Para Qmáx 100.000 Sm3/h con Pe mín 25 bar, ¿qué cantidad de cartuchos (fila "B" de la tabla) debemos adoptar? Si el cálculo con la ficha del elemento diera más de 20, ¿aceptan dos equipos en paralelo o un cuerpo de mayor diámetro fuera de la tabla?
 2. Presión de diseño y prueba hidráulica: el plano tipo indica, para serie #600, presión de diseño 70 bar y prueba hidráulica 91 bar; la especificación técnica (punto 9.16.1) pide la prueba a 1,3 veces la presión máxima de la serie ANSI (≈ 133 bar para #600). ¿Cuál debemos considerar?
 3. Elemento filtrante: el plano tipo y la especificación (punto 9) indican cartucho de papel / material celulósico; la planilla de cotización habla de separador coalescente de 0,3 µm. ¿Se cotiza cartucho de papel celulósico de 5½" × 36" con eficiencia ≥ 98 % para partículas de 0,3 µm?
 4. Documentos citados: el plano tipo remite a la especificación SCE-RE-512-0001 y a SCE-PC-511-0003 (terminaciones). ¿Pueden enviarlos?
