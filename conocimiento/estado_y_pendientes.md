@@ -245,4 +245,6 @@ Decidido (Matías, 29-10-2026): manda el repositorio; la biblioteca se alimenta 
 3. Después de cualquier cambio en herramientas o datos: `python herramientas/verificar_todo.py` (tiene que dar "TODO OK"). Para rearmar toda la base: `python herramientas/actualizar_base.py`.
 4. Al terminar: actualizar este archivo, commit y push (lo que no se sube se pierde).
 
+**Listas Miyashiro 50594 y Oil Metal 37278 (05-11-2026):** cargadas al catálogo y a la página (lectores nuevos en `listas_vendedor.py`); pendientes en `fuentes_originales/listas_vendedor/2026-11-05/README.md` (juntas sin distinguir anillos, lectura de "SA-193 B7M" y "316LFG" con migración de códigos).
+
 **RFQ ERP Tres Arroyos (04-11-2026):** skid (10 iguales, USD 1.958,78) y puente de medición (5 iguales, USD 542,59); filtro sin iguales. Hoja 1 completada solo con iguales (10 renglones, USD 1.958,78, borrador) en `fuentes_originales/revisiones/2026-11-04_RFQ_SKID_ERP_TRES_ARROYOS/`. Corregido el buscador: "Tee reducción 8x6"" se leía como tee de 6" y salía igual. Pendientes: decidir si "igual" exige marca del listado del cliente; leer Ø2 en "Tee 8" x 6"" sin la palabra reducción (mueve ~100 renglones del catálogo, revisar aparte).
