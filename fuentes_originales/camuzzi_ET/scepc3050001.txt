@@ -1,0 +1,541 @@
+                                                                            SCE-PC-305-
+                                                            CÓDIGO:
+                                                                               0001
+                       PROCEDIMIENTO                       REVISIÓN:               1
+
+                                                             HOJA:              1 de 12
+
+
+                                                            FECHA               FECHA
+                                                          APROBACION           VIGENCIA
+       PROCESO         OPERACIÓN DE LA RED
+                                                           21/05/2020          26/05/2020
+
+                                                              LIDER DEL PROCESO
+           TEMA         Instalación de Puestas a Tierra
+                                                                   Alejandro Lorenzo
+
+                                                                   APROBADO POR:
+  ANULA/REEMPLAZA             SCE-PC-305-0001/0
+                                                                   Guillermo Montag
+
+
+                              MODIFICACIONES
+  Nº de      FECHA
+                                       MOTIVO DE LA MODIFICACIÓN
+REVISIÓN    REVISION
+
+
+
+
+AREAS INVOLUCRADAS:
+
+
+
+
+OBSERVACIONES:
+                                                                                             CÓDIGO           SCE-PC-305-0001
+                                 INSTRUCCIÓN DE                                             REVISIÓN                    1
+                                    TRABAJO                                                    HOJA                 2 de 12
+
+
+INDICE
+                                                                                                                               Página
+1     OBJETO................................................................................................................... 3
+2     ALCANCE ................................................................................................................ 3
+3     AREAS INVOLUCRADAS ....................................................................................... 3
+4     DOCUMENTACION COMPLEMENTARIA Y/O DE REFERENCIA......................... 3
+5     DEFINICIONES ........................................................................................................ 4
+5.1      Puesta a Tierra .................................................................................................... 4
+6     DESARROLLO ........................................................................................................ 4
+6.1      Sistemas de Puesta a Tierra .............................................................................. 4
+    6.1.1   Conexiones a la PATESTRUCTURAL .................................................................................. 5
+    6.1.2   Conexiones a la PATINSTRUMENTO .................................................................................. 6
+    6.1.3   Conexiones a la PATSISTEMA ........................................................................................ 6
+6.2      Electrodo de Puesta a Tierra (PAT) ................................................................... 7
+    6.2.1   Electrodos de Jabalina ................................................................................................ 7
+    6.2.2   Electrodo de Anillo ...................................................................................................... 8
+    6.2.3   Electrodo de Malla ...................................................................................................... 8
+6.3      Protección de personas contra contactos indirectos ..................................... 9
+6.4      Esquemas de Conexión ..................................................................................... 9
+6.5      Medición de Puesta a tierra ............................................................................... 9
+7     REGISTRO Y ARCHIVO .......................................................................................... 9
+8     ANEXO................................................................................................................... 10
+8.1      Normativa para la protección de personas contra contactos indirectos..... 10
+8.2      Tensiones de paso y de contacto Permisibles .............................................. 10
+    8.2.1   Tensión de paso ....................................................................................................... 10
+    8.2.2   Tensión de contacto.................................................................................................. 10
+    8.2.3   Tensiones Máximas de contacto ............................................................................... 11
+    8.2.4   Tiempo de Contacto.................................................................................................. 11
+8.3      Corrientes máximas por el cuerpo humano (Efectos) ................................... 11
+                                                            CÓDIGO    SCE-PC-305-0001
+                      INSTRUCCIÓN DE                       REVISIÓN          1
+                         TRABAJO                             HOJA         3 de 12
+
+
+1   OBJETO
+
+Establecer los requerimientos mínimos y la forma de instalación de sistemas de
+puestas a tierra y descargas atmosféricas para las distintas instalaciones que posee la
+Compañía.
+
+2   ALCANCE
+
+Comprende entre otras instalaciones de superficie a:
+   Estaciones Reguladoras de Presión.
+   Estaciones Compresoras.
+   Plantas de GLP, GNC, GNP
+   Trampas de scraper.
+   Instrumentos de Medición.
+
+
+3   AREAS INVOLUCRADAS
+
+Área Técnica de las Unidades de Negocios
+
+4   DOCUMENTACION COMPLEMENTARIA Y/O DE REFERENCIA
+
+
+ SCE-PC-304-0001: Instalación de CMP, probetas calibradas para medir velocidad
+  de corrosión y aplicación de Soldadura Cuproaluminotérmica
+ SCE-PC-512-0001: Especificación Técnica de Cajas de Medición Permanente
+ SCE-PC-105-0003: Esquemas de conexionado de puesta a tierra
+ I OR-002: Glosario de Términos y Símbolos de Protección Anticorrosiva
+ I OR-045: Mediciones Complementarias para Protección Catódica
+ NAG 100: Seguridad Para El Transporte y Distribución De Gas Natural y Otros
+  Gases Por Cañerías
+ NAG 126: Mantenimiento y operación de Plantas Compresoras de gas natural
+  (Apartado 2.4.2).
+ NAG 148: Condiciones de seguridad para la ubicación e Instalación de estaciones
+  de separación y Medición y estaciones reductoras de presión
+ GE-R2-105: Normas Mínimas de Seguridad para Obras y Trabajos
+ AEA 90364 Parte 4: Reglamentación para la ejecución de instalaciones eléctricas de
+  inmuebles – Protecciones para preservar la seguridad.
+ AEA 90364 Parte 7 (771): Reglamentación para la ejecución de instalaciones
+  eléctricas de inmuebles – Reglas particulares para la ejecución de instalaciones
+  eléctricas en inmuebles.
+ IRAM 2281: Puesta a tierra en sistemas eléctricos, consideraciones generales
+ IRAM 2309: Materiales para puesta a tierra, jabalina cilíndrica de acero-cobre y sus
+  accesorios.
+                                                             CÓDIGO     SCE-PC-305-0001
+                         INSTRUCCIÓN DE                      REVISIÓN          1
+                            TRABAJO                           HOJA          4 de 12
+
+
+ IRAM 2310: Materiales para puesta a tierra, jabalina de acero cincado y sus
+  accesorios
+ IRAM 2467: Materiales para puesta a tierra, cables desnudos
+ IRAM 2371: Efecto fisiopatológico de la corriente eléctrica alterna y continua sobre el
+  cuerpo humano.
+
+5     DEFINICIONES
+
+En la I OR-002 se incluye un listado de Términos y Símbolos comúnmente utilizados en
+la redacción de documentos de Protección Anticorrosiva.
+
+
+5.1    Puesta a Tierra
+
+La Puesta a Tierra (PAT) es un sistema cuyo objetivo es formar un plano de referencia
+estable y equipotencial, al cual se conectan todos los sistemas eléctricos y electrónicos
+de una instalación, limitando las tensiones de contacto peligrosas, proveer el drenaje
+para las corrientes eléctricas de retorno y de falla, dispersar las corrientes de las
+descargas atmosféricas y neutralizar las descargas electrostáticas.
+
+6     DESARROLLO
+
+
+6.1    Sistemas de Puesta a Tierra
+
+Se deberá utilizar un esquema TT según la reglamentación AEA 90364 parte 4. Este
+esquema separa la puesta a tierra en dos partes: Tierra de Servicio (puesta a tierra de
+la red de electricidad) y Tierra de Protección (puesta a tierra de la instalación). Para
+poder respetar este esquema, se debe calcular la distancia mínima entre ambas partes
+de acuerdo a la reglamentación indicada y el diámetro y la longitud de la jabalina de
+servicio.
+
+Todas las instalaciones aéreas de una planta, cercos, plataformas, escaleras,
+pasarelas, bandejas, conductos, cañerías, gabinetes, consolas, paneles, cajas,
+soportes de instrumentos, tableros, tinglados, casetas, armaduras de plateas,
+columnas, etc. deben estar conectadas a tierra para reducir cualquier diferencia de
+potencial entre ellas, además de todo equipo que pueda estar o quedar energizado
+eléctricamente.
+
+La PAT podrá poseer además 2 (dos) sub-circuitos de PAT que se mantendrán
+aislados e independientes entre si, y solo se vincularan con los electrodos de la PAT
+del sistema (jabalinas, anillo, malla, etc) en un solo punto, conformando un sistema
+integrado equipotencial.
+
+Dependiendo de que tipo de estructura se este protegiendo, ésta se conectará a uno de
+los dos sub-circuitos de PAT o a la PATsistema:
+                                                                                CÓDIGO          SCE-PC-305-0001
+                       INSTRUCCIÓN DE                                           REVISIÓN                 1
+                          TRABAJO                                                 HOJA               5 de 12
+
+
+
+
+      PATESTRUCTURAL:
+           Placas de transformadores.
+           Carcazas y estructuras de equipos.
+           Carcazas y gabinetes de instrumentos y equipos eléctricos.
+           Tableros eléctricos.
+           Cañeros y bandejas porta cables.
+           Otros equipos eléctricos.
+
+      PATINSTRUMENTO:
+            Común o masa de alimentación de CC.
+            Mallado de los cables de instrumentación
+
+      PATSISTEMA:
+            Edificios metálicos, recintos, estructuras.
+            Cañerías aéreas, recipientes, válvulas, tanques y zeppelín.
+            Mástiles y/o columnas, torres de iluminación y comunicaciones.
+            Casetas y armaduras de plateas.
+            Alambrados perimetrales y portones.
+            Neutro de red.
+                                                          Conexión a tierra
+                                                          del equipamiento           Conexión a tierra
+                                                         Electrónico (común          del equipamiento
+                                                           o masa de CC)               ELECTRICO
+
+
+
+
+                                                       PATINSTRUMENTO                      PATESTRUCTURAL
+                              TANQUES
+
+
+                                                                            PATSISTEMA          RPAT
+ Cañerías AEREAS
+
+
+
+
+                                                                                     OTRAS...
+                    ALAMBRADO               Plateas de H.A.
+                    PERIMETRAL
+
+
+                   Ejemplo de conexiones empleando una PATsistema en forma de anillo
+                               Donde RPAT: resistencia de puesta a tierra
+
+                                               FIGURA 1
+
+
+6.1.1 CONEXIONES A LA PATESTRUCTURAL
+Para estas conexiones se tendrá una barra de cobre de sección y longitud suficiente
+para disponer orificios roscados que permitan conectar individualmente a los equipos
+eléctricos anteriormente mencionados. También se debe asegurar la continuidad
+eléctrica de todas las partes móviles metálicas de gabinetes y paneles que tengan
+                                                              CÓDIGO     SCE-PC-305-0001
+                      INSTRUCCIÓN DE                         REVISIÓN           1
+                         TRABAJO                               HOJA          6 de 12
+
+
+bisagras y puertas, mediante el uso de cables flexibles y terminales atornilladas. El
+cable conector desde los equipos a la barra de conexión de cobre deberá ser un cable
+de cobre revestido de 16 mm2 (mínimo) de color verde con una línea amarilla.
+
+6.1.2 CONEXIONES A LA PATINSTRUMENTO
+Para estas conexiones se deberá tener una barra de cobre de sección y longitud
+suficiente como para disponer de orificios roscados que permitan la conexión individual
+del cable común o masa de alimentación de corriente continua de los equipos
+electrónicos de medición, de lazos de control, de equipos de comunicaciones y de
+cualquier otro equipamiento que este alimentado por corriente continua. La estructura
+del gabinete/s contenedor/s del equipamiento electrónico y el circuito magnético del
+transformador (las placas de hierro) AC/DC deberá estar conectado al PAT estructural.
+El cable conector desde los equipos a la barra de conexión de cobre deberá ser un
+cable de cobre revestido de 8 mm2 (mínimo) de color verde con una línea amarilla.
+
+Los blindajes de los cables deben conectarse a la puesta tierra en el extremo dentro del
+tablero, no en el extremo del transmisor de campo y al mismo sistema de PATinstrumento.
+En el caso que en una misma instalación de superficie existan varios tableros con
+equipos electrónicos alejados entre sí, la vinculación de datos entre ellos estará aislada
+eléctricamente entre ellos (optoacopladores, fibra óptica, enlace de radio, etc.)
+
+6.1.3 CONEXIONES A LA PATSISTEMA
+Todas las estructuras anteriormente mencionadas, incluyendo el neutro de red, se
+deberán conectar a la PATSISTEMA en el punto más cercano disponible a la PAT, según
+la configuración de electrodo de PAT (jabalinas, anillo, malla, etc) que el estudio de
+ingeniería previo haya arrojado con el objeto de cumplir con las especificaciones
+solicitadas.
+
+La conexión de estas estructuras a la PATSISTEMA se hará mediante cables desnudos de
+cobre o acero cobreado IRAM 2467 de 35 mm2 de sección y la unión a la estructura a
+proteger se hará con ojales conectados a la estructura mediante bulones o espárragos.
+
+Asimismo, para evitar la formación de procesos corrosivos originados por el par
+galvánico de diferentes metales en una conexión directa, se deberán aislar las cañerías
+enterradas de las instalaciones aéreas, por medio de juntas aislantes, bridadas o
+monolíticas. La entrada y la salida de las plantas deberán aislarse con juntas aislantes
+monolíticas.
+
+Se recomienda que, en lo posible, todos los componentes del sistema de PAT sean del
+mismo material.
+
+Las conexiones con jabalinas, o cable de anillo, o de malla serán del tipo soldadura
+cuproaluminotérmica; en el caso de plantas en funcionamiento se podrán utilizar las
+conexiones mediante sistema de compresión. Como es útil tener acceso a estas
+                                                              CÓDIGO      SCE-PC-305-0001
+                             INSTRUCCIÓN DE                   REVISIÓN              1
+                                TRABAJO                        HOJA             7 de 12
+
+
+conexiones para efectuar controles y mantenimiento, se deberán instalar cámaras de
+inspección de plástico enterradas, provistas de una tapa identificadora.
+
+Con el fin de tener protección contra descargas atmosféricas y al mismo tiempo
+garantizar las corrientes de potencial catódico en los tramos de cañerías enterradas, se
+deberán instalar, en la totalidad de las juntas monolíticas de la planta, vías de chispas
+tipo OBO BETTERMAN modelo EX ISG o similares que hayan sido homologadas por la
+Distribuidora. También se deberán instalar vías de chispas en las juntas
+aislantes/monolíticas instaladas en válvulas de entrada y salida de la planta,
+empleando todos los accesorios de fijación indicados por el fabricante. La fijación a
+ambos lados de la junta de los cables de la vía de chispas será preferentemente del
+tipo soldadura cuproaluminotérmica.
+
+Los hierros del hormigón armado de las plateas y bases para las instalaciones deberán
+estar conectadas eléctricamente a la varillas de hierro del armazón de las plateas para
+su conexión a la PATSISTEMA, según lo indicado en el plano tipo SCE-PC-105-0003, El
+cable conector desde las plateas a la PATSISTEMA deberá ser un cable de cobre
+desnudo de 35 mm2.
+
+Nota: la armadura de hierros de las plateas de hormigón armado deberán ser de
+armadura soldada.
+
+
+6.2   Electrodo de Puesta a Tierra (PAT)
+
+Se deberá obtener para todas las instalaciones de la Compañía una resistencia
+máxima de PATSISTEMA (RPAT), medida en el punto de unión de la PATSISTEMA con las
+PATESTRUCTURAL y PATINSTRUMENTOS, como se indico en la figura 1.
+
+Según las características del terreno, su resistividad, el valor R PAT a obtener y los
+estudios de ingeniería correspondientes, el electrodo de PATSISTEMA podrá ser del tipo
+jabalinas, anillo, malla, una combinación de estos u otra que el estudio de ingeniería
+previo haya arrojado con el objeto de cumplir con esta especificación.
+
+
+
+
+      PATSISTEMA con Jabalinas        PATSISTEMA con Anillo              PATSISTEMA con Malla
+
+
+
+
+6.2.1 ELECTRODOS DE JABALINA
+Se deberá instalar la cantidad de jabalinas necesarias para cumplir con las
+especificaciones solicitadas. Las jabalinas serán según normas IRAM 2309 o 2310 y
+                                                             CÓDIGO     SCE-PC-305-0001
+                      INSTRUCCIÓN DE                         REVISIÓN          1
+                         TRABAJO                              HOJA          8 de 12
+
+
+sus dimensiones mínimas serán ½” de diámetro y 1,5 m de longitud, y la distancia
+mínima entre jabalinas y cañerías enterradas será de 5 metros.
+
+Las jabalinas deberán estar unidas por un conductor desnudo de cobre o acero
+cobreado de sección mínima 50 mm2 para terrenos normales y de 70 mm2 para
+terrenos agresivos (  1.000  cm), también podrá ser utilizado un conductor laminar
+de cobre en fleje de 70x1mm del tipo ASTM 11000.
+
+Las conexiones del cable conductor con la jabalina serán del tipo soldadura cupro-
+aluminotérmica, adecuados al tipo y cantidad de conductores a unir a la jabalina. Para
+la instalación de cada jabalina, los primeros 250 mm irán encamisados con un tubo de
+PVC de Ø 250 mm. En su interior quedará alojado la conexión entre el cable y jabalina
+sin ningún tipo de relleno y la distancia entre la cabeza de la jabalina y en nivel del
+suelo será de 150 mm. La camisa llevará una tapa ciega del mismo material con el fin
+de lograr la estanqueidad de la instalación y posibilitar la realización inspecciones. El
+cable desnudo será conducido por una zanja de 0,5 m de profundidad debidamente
+acondicionada, rellenadas preferentemente con tierra vegetal zarandeada libre de
+cantos rodados y pedregullo, la tapada de tierra se deberá apisonar para obtener una
+buena compactación y mejor conductividad. A 0,2 m por encima del mismo y en todo el
+recorrido se protegerá con ladrillos comunes o cintas de aviso.
+
+6.2.2 ELECTRODO DE ANILLO
+El anillo es un electrodo de tierra que forma un lazo cerrado alrededor de la estructura
+a proteger. Estará constituido por un cable de acero cobreado desnudo de 35 mm2 de
+sección mínima IRAM 2467, enterrado a una profundidad mínima de 0,5 my a una
+distancia mínima de 1,5 m de las estructuras.
+
+Si se combinan jabalinas con el anillo para obtener una mejor dispersión y RPAT más
+baja, será importante que la instalación y conexión entre jabalinas y cables conductores
+cumplan con lo expuesto punto 6.2.1.
+
+Para evitar discontinuidades en la conducción de altas corrientes, las curvas del anillo
+deben realizarse con un radio amplio.
+
+6.2.3 ELECTRODO DE MALLA
+La malla es un electrodo horizontal con forma de red que ocupa mayor superficie que la
+instalación a proteger. Las celdas de la malla, formada por cables de acero cobreado
+desnudo de 35 mm2 de sección mínima IRAM 2467 enterrado a una profundidad de 0,4
+m, pueden tener una dimensión desde 1 m x 1 m hasta 10 m x 10 m según el grado de
+protección requerida.
+
+Este tipo de electrodo deberá utilizarse en terrenos de alta resistividad, asegurando que
+cubra todas las superficies donde se instalen equipos o puedan transitar seres
+humanos, con un espaciado entre conductores paralelos no mayor a 1,5 m.
+                                                              CÓDIGO     SCE-PC-305-0001
+                      INSTRUCCIÓN DE                         REVISIÓN           1
+                         TRABAJO                               HOJA          9 de 12
+
+
+Si se combinan jabalinas con el anillo para obtener una mejor dispersión y RPAT más
+baja, será importante que la instalación y conexión entre jabalinas y los cables
+conductores cumplan con lo expuesto punto 6.2.1.
+
+
+6.3   Protección de personas contra contactos indirectos
+
+La protección mediante sistemas de PAT debe complementarse con la instalación de
+un dispositivo que desconecte, en caso de falla, el circuito eléctrico de la planta en que
+se produjo la falla en el menor tiempo posible, con el fin generar una protección efectiva
+contra contactos indirectos de un operario contra estructuras metálicas que se ha
+puesto bajo tensión, accidentalmente o como consecuencia de una falla de aislación.
+
+Se deberá generar un corte automático de la alimentación del circuito en cuestión, de
+manera que la corriente de falla a tierra en cualquier momento sea capaz de producir el
+disparo de las protecciones.
+
+Se deberá colocar en el tablero eléctrico por cada circuito, un disyuntor diferencial,
+dimensionado e instalado correctamente para que en función de la resistencia de
+puesta a tierra lograda en la planta y la corriente de falla a tierra fijada, las máximas
+tensiones de paso y contacto sean como máximo las establecidas por la norma IRAM
+2371, y se produzca el disparo de corte de la alimentación en el tiempo fijado por la
+norma. El valor de RPAT deberá calcularse según lo indicado en el punto 771.3.3.1 de la
+norma AEA 90364 parte 7, considerando que la sensibilidad del disyuntor diferencial no
+debe ser mayor que 300 mA.
+
+En el ANEXO se muestran los valores establecidos en la norma IRAM 2371 y la
+metodología del cálculo.
+
+
+6.4   Esquemas de Conexión
+
+Se presentan a modo de ejemplo, distintos esquemas de conexión de equipos e
+instalaciones para los sistemas de Puesta a Tierra en el plano tipo SCE-PC-105-0003.
+
+
+6.5   Medición de Puesta a tierra
+
+La medición de la puesta a tierra se hará conforme a la I OR-045 Mediciones
+Complementarias para Protección Catódica.
+
+7     REGISTRO Y ARCHIVO
+
+El Técnico de Protección Catódica deberá confeccionar un Plano Conforme a Obra con
+los detalles de la instalación realizada, indicando claramente el valor de resistencia de
+puesta a tierra conseguido y la cantidad de jabalinas instaladas.
+                                                              CÓDIGO     SCE-PC-305-0001
+                      INSTRUCCIÓN DE                         REVISIÓN            1
+                         TRABAJO                               HOJA           10 de 12
+
+
+
+
+En el caso que la instalación haya sido realizada por un contratista, éste realizará el
+plano conforme a obra y el Técnico de Protección Catódica o Inspector de Obra, según
+corresponda, lo revisará y aprobará.
+
+El Técnico de Protección Catódica archivará estos documentos y los conservará por
+todo el tiempo de vida útil de las instalaciones.
+
+8     ANEXO
+
+
+8.1   Normativa para la protección de personas contra contactos indirectos
+
+La normativa IRAM 2281 establece que toda instalación eléctrica debe disponer de un
+sistema de puesta a tierra, en tal forma que cualquier punto accesible a las personas
+que puedan transitar o permanecer allí, no estén sometidas a tensiones de paso o de
+contacto que superen los umbrales de soportabilidad, cuando se presente una falla. Se
+debe tener presente que el criterio fundamental para garantizar la seguridad de los
+seres humanos, es la máxima corriente que pueden soportar, debida a la tensión de
+paso o de contacto y no el valor de la resistencia de puesta a tierra tomado
+aisladamente.
+
+
+8.2   Tensiones de paso y de contacto Permisibles
+
+8.2.1 TENSIÓN DE PASO
+Es la diferencia de potencial entre dos puntos de un terreno que pueden ser tocados
+simultáneamente por una persona; su valor permisible esta dado por:
+
+
+                             165   S
+                     EP 
+                                    t
+Donde:
+                    Ep = Tensión de Paso Permisible en voltios.
+                    ρs = Resistividad de la superficie del terreno en (Ω m)
+                    t= Duración máxima de falla en segundos
+
+8.2.2 TENSIÓN DE CONTACTO
+Es la diferencia de potencial entre un punto en la superficie del terreno y cualquier otro
+punto que se pueda ser tocado simultáneamente por una persona; su valor permisible
+está dado por:
+                                                             CÓDIGO    SCE-PC-305-0001
+                      INSTRUCCIÓN DE                        REVISIÓN           1
+                         TRABAJO                              HOJA          11 de 12
+
+
+                           165  0,25 S
+                    Et 
+                                  t
+
+                   Donde:
+                   Et = Tensión de contacto permisible en voltios.
+
+
+
+
+                                                      Tensión de paso Ep y de
+                                                      contacto Et
+
+
+
+
+8.2.3 TENSIONES MÁXIMAS DE CONTACTO
+Son las tensiones máximas con que una persona puede entrar en contacto sin que esto
+implique riesgo alguno para su vida. Dichos valores deberán ser tomados como base
+para diseñar los sistemas de protección.
+
+             24 VCA en medios secos y húmedos.
+             12 VCA si el cuerpo esta sumergido
+
+(fijados por ley 19.587 Decreto reglamentario 351 de seguridad e higiene)
+
+8.2.4 TIEMPO DE CONTACTO
+
+             5 segundos si 24 VCA  ET< 50 VCA
+             0,17 segundos si 230 VCA  ET  250 VCA
+
+
+8.3   Corrientes máximas por el cuerpo humano (Efectos)
+
+Los daños sufridos por las personas que son atravesadas por corrientes eléctricas
+dependen de la tensión de contacto que se aplica sobre una persona y del tiempo del
+paso de la misma (IRAM 2371 – Efecto fisiopatológico de la corriente eléctrica alterna y
+continua sobre el cuerpo humano).
+                                                                      CÓDIGO       SCE-PC-305-0001
+                        INSTRUCCIÓN DE                               REVISIÓN              1
+                           TRABAJO                                     HOJA            12 de 12
+
+
+    Hasta 1mA           Imperceptible para el hombre.
+    De 2 a 3 mA         Sensación de hormigueo.
+    De 3 a 10 mA        La corriente no es mortal. El sujeto logra normalmente desprenderse
+                        del contacto.
+    De 10 a 25 mA       Contracción muscular, aumento de tensión sanguínea.
+    De 25 a 80 mA       Posible perturbación en el ritmo cardiaco y respiratorio. Posibilidad de
+                        parálisis cardiaca y respiratoria.
+    De 80 mA a 3 Amp.   Perturbación del ritmo cardiaco. Posibilidad de parálisis cardiaca y
+                        respiratoria.
+    Mayor a 3 Amp.      Especialmente peligrosa. Puede ocasionar fibrilación ventricular de
+                        consecuencias mortales en la mayoría de los casos, por lo general
+                        ocasiona la muerte.
+
+
+Estos valores varían en función del tiempo de exposición.
+

@@ -1,0 +1,1073 @@
+                                                             CÓDIGO:       SCE-IN-501-0014
+                           ESPECIFICACIÓN                   REVISIÓN:            00
+                              TÉCNICA                         HOJA:           1 de 10
+
+
+                                                             FECHA            FECHA
+                                                           APROBACION        VIGENCIA
+       PROCESO                OPERACIÓN DE LA RED
+                                                             08-05-2020      11-05-2020
+
+                              Especificación para la            LIDER DEL PROCESO
+            TEMA            realización de Informes de
+                             Evaluación de Seguridad              Alejandro Sagula
+
+                                                                  APROBADO POR:
+   ANULA / REEMPLAZA
+                                                                 Alejandro Lorenzo
+
+
+                                  MODIFICACIONES
+   Nº de       FECHA
+                                         MOTIVO DE LA MODIFICACIÓN
+ REVISIÓN     REVISION
+
+
+
+
+AREAS INVOLUCRADAS:
+Gerencia de Operaciones
+Gerencia de Técnica
+Gerencia de Seguridad y Medio Ambiente
+Unidades de Negocios
+OBSERVACIONES:
+Fecha de impresión: 11 de mayo de 2020
+                                                                                                            CÓDIGO               SCE-IN-501-0014
+                                        ESPECIFICACIÓN                                                      REVISIÓN                      00
+                                           TÉCNICA                                                            HOJA                    2 de 21
+
+
+
+INDICE
+                                                                                                                                                    Página
+1    OBJETO .............................................................................................................................................. 3
+2    ALCANCE ........................................................................................................................................... 3
+3    AREAS INVOLUCRADAS .................................................................................................................. 3
+4    DOCUMENTACION COMPLEMENTARIA Y/O DE REFERENCIA ................................................... 3
+5    DEFINICIONES .................................................................................................................................. 4
+6    RESPONSABILIDADES ..................................................................................................................... 5
+7    DESARROLLO ................................................................................................................................... 5
+     7.1 DEFINICIÓN DEL ALCANCE, RELEVAMIENTO Y RECOPILACIÓN DE LOS DATOS, INCLUYENDO LOS
+         ANTECEDENTES ................................................................................................................................ 6
+     7.2 IDENTIFICACIÓN DE LAS CAUSAS DE FALLA O PELIGROS ....................................................................... 7
+     7.3 EVALUACIÓN DE LOS PELIGROS IDENTIFICADOS .................................................................................. 8
+     7.4 PREDICCIÓN DE LA PROBABILIDAD DE FALLA ....................................................................................... 9
+     7.5 PREDICCIÓN DE CONSECUENCIAS Y ESTIMACIÓN DE DAÑO ................................................................ 11
+     7.6 CÁLCULO DE RIESGOS .................................................................................................................... 13
+         7.6.1 ESTIMACIÓN DEL RIESGO INDIVIDUAL .................................................................................. 13
+         7.6.2 ESTIMACIÓN DEL RIESGO SOCIAL ........................................................................................ 16
+     7.7 EVALUACIÓN DEL RIESGO ................................................................................................................ 17
+     7.8 DEFINICIÓN DE SITIOS Y MEDIDAS PARA MITIGAR EL RIESGO .............................................................. 19
+8    SIMULACIÓN DE CRECIMIENTO POBLACIONAL ......................................................................... 19
+9    RESUMEN DE TABLAS Y GRÁFICOS A PRESENTAR ................................................................. 20
+10   REGISTRO Y ARCHIVO .................................................................................................................. 21
+                                                                    CÓDIGO       SCE-IN-501-0014
+                          ESPECIFICACIÓN                            REVISIÓN           00
+                             TÉCNICA                                 HOJA           3 de 21
+
+
+1   OBJETO
+
+Establecer los criterios para la realización de Informes de Evaluación de Seguridad, de acuerdo
+a lo exigido en la Adenda Nº 2 - Año 2016 de la NAG-100. Contiene también los lineamientos
+para la realización de Análisis cuantitativos de riesgos (abreviado como QRA, por sus siglas en
+inglés) en gasoductos y/o ramales.
+
+
+2   ALCANCE
+
+Es aplicable a los gasoductos y ramales del sistema de distribución de gas natural de la
+Compañía que hayan sido construidos con posterioridad a la puesta en vigencia de la Adenda
+Nº 2 - Año 2016 de la NAG-100. Allí se indica que los Informes de Evaluación de Seguridad
+tienen aplicación específica en aquellas líneas de transmisión que operen a una tensión
+circunferencial del 30% o más de la TFME y que contengan viviendas o sitios aptos para el
+transporte de seres humanos dentro del Círculo de Impacto Potencial.
+Cuando sea requerido en casos particulares sobre líneas que operen a una tensión
+circunferencial menor al 30% de la TFME, la presente Instrucción puede ser utilizada a criterio
+del Analista de riesgo siempre que los datos utilizados en los cálculos y las asunciones del
+análisis sean representativos de los ductos bajo estudio.
+En todos los casos de aplicación, el alcance de cada informe estará delimitado por las asunciones
+y las incertezas asociadas al modelo de cálculo y por la información que se utiliza. Al respecto,
+se requiere que aquello sea técnicamente razonable y que sea representativo tanto de la
+condición operativa de los ductos como de la exposición de terceros en cercanías de la línea.
+
+
+3   AREAS INVOLUCRADAS
+
+Gerencia de Operaciones.
+Gerencia Técnica.
+Gerencia de Seguridad y Medio Ambiente.
+Unidades de Negocios.
+
+
+4   DOCUMENTACION COMPLEMENTARIA Y/O DE REFERENCIA
+
+NAG 100 Normas Argentinas Mínimas de Seguridad para el Transporte y Distribución de Gas
+Natural y otros Gases por Cañería.
+Adenda Nº 1 - Año 2010 de la NAG 100
+Adenda Nº 2 - Año 2016 de la NAG 100
+Código ASME B31.8S Managing System Integrity of Gas Pipelines
+Norma Europea EN 14161:2011 “Industrias del petróleo y del gas natural. Sistemas de transporte
+por tuberías. (ISO 13623:2009 modificada)”. Anexo A: Safety evaluation of pipelines.
+Norma IGE/TD/1 “Steel pipeline and associated installations for high pressure gas transmission”.
+Norma IGEM/TD/2 “Application of pipeline risk assessment to proposed developments in the
+vicinity of high pressure Natural Gas pipeline”.
+British Standard PD 8010” Code of practice for pipelines – Part 3: Steel pipelines on land – Guide
+to the application of pipeline risk assessment to proposed developments in the vicinity of major
+accident hazard pipelines containing flammables”.
+                                                                     CÓDIGO       SCE-IN-501-0014
+                          ESPECIFICACIÓN                            REVISIÓN            00
+                             TÉCNICA                                  HOJA           4 de 21
+
+
+5   DEFINICIONES
+
+ALARP: abreviación adoptada mundialmente para el criterio de aceptación del riesgo que
+representa un valor “tan bajo como sea razonablemente posible”, delimitado numéricamente por
+los valores 1x10-6 y 1x10-4 fatalidades por año.
+Amenaza: condición o acción que potencialmente podría provocar un daño a la integridad de la
+cañería.
+Área sensible: Aquella área donde la línea de transmisión atraviese clases de trazado 3 o 4, o
+que contenga Sitios Identificados y esté ubicada dentro del círculo de impacto potencial.
+Círculo de Impacto Potencial: Es un circulo centrado en el eje de la cañería, de radio
+equivalente al radio de impacto potencial, calculado de acuerdo con lo indicado en el apartado
+3.2 del Código ASME/ANSI B31.8S Sistema de Gestión de la Integridad de cañerías de gas.
+Distancia de interacción: distancia en metros entre la ubicación de la falla y el punto donde la
+intensidad de radiación térmica es menor al límite de Intensidad de radiación térmica permitida
+en el modelo de daño.
+Falla: pérdida de estanqueidad de un ducto.
+IAPG: Instituto Argentino del Petróleo y del Gas
+Línea de transmisión: una cañería o tubería que no sea línea de captación, y que:
+   a) transporte gas desde una línea de captación o instalación de almacenamiento a un centro
+        de distribución u otra instalación de almacenamiento;
+   b) opere a una tensión circunferencial del 20% o más de la TFME, o
+   c) transporte gas dentro de un campo de almacenamiento.
+Línea de distribución: una cañería que no sea línea de captación o de transmisión.
+MAPO: Máxima Presión Admisible de Operación.
+PO: Presión Operativa
+QRA: abreviación de Análisis cuantitativos de riesgos, por sus siglas en inglés
+Riesgo: matemáticamente, es el producto entre la probabilidad de ocurrencia de daño y la
+potencial consecuencia asociada a la ocurrencia de una falla con ignición. Consiste en la
+sumatoria de los riesgos asociados a cada uno de los peligros identificados.
+Riesgo individual: hace referencia al riesgo al que está sometido una persona en las
+inmediaciones de un ducto en operación.
+Riesgo social: hace referencia al riesgo al que está sometido un conjunto de personas en las
+inmediaciones de uno o varios ductos en operación.
+Sitio identificado: Significa:
+a) Un área (playas, campos de juego, instalaciones de recreación, lugares para acampar,
+anfiteatros, estadios, instalaciones con fines religiosos, edificios de oficinas, centros
+comunitarios, centros comerciales, etc.) que es ocupada por 20 o más personas en como mínimo
+50 días, sean consecutivos o no, en un período de 12 meses (se considera como día
+todo aquel en el que se produzca la reunión cualquiera sea su duración), o
+b) Una instalación ocupada por personas que se encuentren confinadas, con movilidad reducida,
+o que fuesen de difícil evacuación (hospitales, prisiones, escuelas, orfanatos, geriátricos, etc.).
+TFME: Tensión de fluencia mínima especificada.
+UNIDAD DE CLASE DE TRAZADO: es una superficie que se extiende 200 metros a cada lado
+del eje longitudinal de un tramo continuo de gasoducto de 1600 metros.
+                                                                    CÓDIGO       SCE-IN-501-0014
+                          ESPECIFICACIÓN                            REVISIÓN           00
+                             TÉCNICA                                 HOJA           5 de 21
+
+
+6    RESPONSABILIDADES
+
+Gerente Técnica
+ Aprobar y suscribir los Informes de Evaluación de Seguridad, de acuerdo a lo exigido
+  en el apéndice G-20 de la Adenda Nº2 Año 2016 de la NAG 100.
+
+Gerente de Seguridad y Medio Ambiente
+ Aprobar y suscribir los Informes de Evaluación de Seguridad, de acuerdo a lo exigido
+  en el apéndice G-20 de la Adenda Nº2 Año 2016 de la NAG 100.
+ Brindar asesoramiento referido a Seguridad y Medio Ambiente respecto a las
+  asunciones asociadas al modelo de cálculo, a los datos utilizados en el análisis y a las
+  medidas de mitigación de riesgo propuestas.
+
+Departamento de Ingeniería e Integridad de Sede Central
+ Brindar el asesoramiento Técnico, en lo referente a la interpretación y aplicación de
+  los modelos de cálculo correspondientes, así como también, respecto a las
+  asunciones contempladas en cada informe particular y a los datos utilizados como
+  base para los análisis.
+ Proponer medidas de mitigación para la reducción del riesgo. Evaluar la factibilidad
+  de aplicar las medidas de mitigación propuestas, pudiendo sugerir su reemplazo o
+  adecuación.
+
+Jefe Técnico de UN
+ Brindar información respecto a la operación y mantenimiento de los ductos. Informar
+  todas las particularidades que puedan influir en el riesgo asociado a posibles fallas en
+  las cañerías, siendo particularmente relevante la identificación de áreas sensibles y
+  de clases de trazado 3 y 4. Consultar al municipio y a las autoridades competentes sobre
+    futuros proyectos industriales, planes de vivienda y/o desarrollos de infraestructura
+    proyectados en las proximidades de la traza. Cumplir con las observaciones y medidas
+    de mitigación que surjan de los informes de evaluación de seguridad.
+
+7    DESARROLLO
+
+Los lineamientos que a continuación se presentan son de aplicación en todo ramal o gasoducto
+sobre el cual se requiera la realización de un Informe de Evaluación de Seguridad o de un Análisis
+cuantitativo de riesgo.
+Los motivos para la realización de un Informe de Evaluación de Seguridad o de un Análisis de
+riesgo cuantitativo podrían ser cualquiera de los siguientes:
+     Exigencias normativas
+     Cambios en las condiciones operativas del ducto
+     Cambios en el entorno, tales como cambios en la clase de trazado, surgimiento de áreas
+        sensibles, instalación de ductos o líneas eléctricas en las proximidades, construcción de
+        rutas, avenidas o calles transitadas
+     Evaluación de efectos de medidas de mitigación de riesgo
+                                                                         CÓDIGO       SCE-IN-501-0014
+                             ESPECIFICACIÓN                             REVISIÓN            00
+                                TÉCNICA                                   HOJA           6 de 21
+
+
+          Proyectos industriales, planes de vivienda y/o desarrollos de infraestructura futuros en las
+           proximidades de la traza, a evaluar consultando al municipio o a autoridades competentes
+          Necesidades particulares
+
+De acuerdo a lo exigido en la Adenda 2- Año 2016 de la NAG 100, el informe debe contener
+suficiente detalle de forma que permita:
+     Sustentar la toma de decisiones que permitan disminuir el nivel de riesgo de las
+        instalaciones a través de medidas de mitigación y control.
+     Identificar todas las causas primarias y secundarias que pueden causar una falla de la
+        línea.
+     Cuantificar y evaluar los riesgos derivados de estas causas.
+     Comparar los niveles de riesgos del ducto con los criterios de tolerancia de riesgo
+        individual y social definidos por la empresa operadora, los cuales como mínimo deben
+        cumplir con el criterio ALARP.
+     Evaluar las distancias de seguridad a lo largo de la traza.
+     Preparar planes de emergencia y contingencias.
+
+Una vez concluido el análisis, el informe deberá permitir identificar y valorar los riesgos de
+accidentes que podrían tener consecuencias sobre terceros ubicados en las cercanías de la
+línea, así como también debe indicar detalladamente las acciones que permitan prevenir,
+controlar y mitigar los riesgos más significativos, en relación a las amenazas preponderantes. En
+suma, debe demostrar que el o los ductos se diseñan, construyen, operan y mantienen de forma
+de minimizar el riesgo al público en general.
+A continuación, se presentan los lineamientos para cada una de las secciones a incluir en el
+informe:
+
+
+7.1       Definición del alcance, relevamiento y recopilación de los datos, incluyendo
+          los antecedentes
+
+En primer lugar, se debe definir el alcance del estudio, es decir, la extensión y progresivas
+de inicio y fin del ducto o tramo bajo análisis. La segmentación a aplicar en los análisis será
+metro a metro y cada segmento estará caracterizado por su progresiva y por un punto con
+coordenadas geográficas en grados decimales en sistema de coordenadas WGS84.
+Aquí es relevante tener en cuenta que se deberá cumplir con lo indicado en la sección 7 de la
+norma IGEM/TD/2, requiriéndose la inclusión de aquellos ductos que se encuentren dentro del
+área de interés en el análisis de datos F- N correspondiente al cálculo de riesgo social. Esto
+implica la necesidad de calcular el riesgo individual para todos los ductos que se encuentren
+dentro del radio de afectación que surge de los cálculos de consecuencias.
+En esta etapa se deberá realizar un relevamiento en campo de toda la traza bajo estudio para
+identificar cada uno de los sitios que pueden ser ocupados por personas y las viviendas,
+cuantificando la cantidad de personas involucradas en cada caso. Además, esto incluye consultar
+al municipio y a autoridades competentes que brinden toda la información sobre proyectos
+industriales, planes de vivienda y/o desarrollos de infraestructura futuros en las proximidades de
+la traza, de forma tal que puedan ser considerados en la simulación de crecimiento poblacional.
+Por otro lado, respecto a la recopilación de datos se requiere como mínimo la siguiente
+información, que deberá ser detallada en el informe:
+                                                                       CÓDIGO       SCE-IN-501-0014
+                             ESPECIFICACIÓN                           REVISIÓN            00
+                                TÉCNICA                                 HOJA           7 de 21
+
+
+          Traza georreferenciada
+          Diámetro
+          Espesor
+          Grado del material
+          Revestimiento
+          MAPO
+          PO
+          Año de habilitación
+          Tapada nominal
+          Tapada en cruces especiales
+          Ubicación de protección mecánica si hubiese
+          Ubicación de caños camisa si hubiese
+          Clasificación en clases de trazado e identificación de áreas sensibles mediante imágenes
+           satelitales, relevamientos y/o recorridos de inspección
+          Planes de vivienda o expansión de la ciudad cercana al caño
+          Proyectos industriales y/o desarrollos de infraestructura futuros
+          Posibles cambios de zonificación de las zonas aledañas.
+
+
+Adicionalmente, para casos de líneas en operación que no cumplan las distancias de seguridad
+de la norma con la que fueron construidas y para casos bajo estudio por alguna necesidad
+particular se requiere incluir en el informe los siguientes antecedentes:
+
+          Resultados de inspecciones realizadas
+          Historial de fallas
+          Detalle de reparaciones realizadas, incluyendo su fecha y el tipo de defecto involucrado
+
+
+7.2       Identificación de las causas de falla o peligros
+
+En esta instancia del proyecto se deberán aplicar criterios que permitan identificar las causas
+de falla o peligros latentes sobre cada uno de los segmentos bajo estudio. A modo de
+referencia se presentan los 9 grupos de amenazas y los criterios de evaluación que se presentan
+en el Código ASME B31.8S y su Apéndice A. También se incluye su delineamiento en 3 tipos de
+defectos respecto a su evolución en el tiempo:
+
+Dependientes del tiempo
+          Corrosión externa: no se contemplan criterios para descartar esta amenaza.
+          Corrosión interna: para descartar esta amenaza, el operador debe determinar que un
+           medio corrosivo no existe.
+          Corrosión bajo tensión: la amenaza de corrosión bajo tensión a pH casi neutro solo se
+           debe considerar si se cumple simultáneamente que la tensión de operación supera el
+           60% de la TFME, la antigüedad de la cañería supera 10 años y el revestimiento no es
+           FBE ni epoxi líquido. La amenaza de corrosión bajo tensión a pH alto solo se debe
+           considerar si se cumple simultáneamente que la temperatura de operación supera 38 °C
+                                                                      CÓDIGO       SCE-IN-501-0014
+                          ESPECIFICACIÓN                             REVISIÓN            00
+                             TÉCNICA                                   HOJA           8 de 21
+
+
+       y el segmento bajo estudio se encuentra a menos de 32 km de distancia de la descarga
+       de una estación compresora.
+Estables en el tiempo
+    Defectos relacionados a la fabricación: la amenaza se debe considerar en cañerías con
+       factores de junta menores a 1.0, cuando las soldaduras fueron realizadas mediante
+       técnica ERW de baja frecuencia o por soldadura flash.
+    Defectos relacionados a soldadura/construcción: este grupo amenaza debe ser
+       identificado mediante una revisión de los procedimientos de soldadura y la información
+       de ensayos no destructivos y/o inspección visual, aunque no implica un problema a la
+       integridad por sí solo. Toma probabilidad de falla significativa cuando la presencia de la
+       amenaza está combinada con la potencial ocurrencia de fuerzas externas.
+    Fallas en equipamiento: los criterios de evaluación para este grupo de amenazas indica
+       que ciertas válvulas de alivio y regulación requieren evaluaciones adicionales por sufrir
+       desviaciones en sus puntos de seteo. A su vez, se indica que ciertos tipos de juntas
+       pueden requerir pruebas de fugas más frecuentes porque son propensos a degradación
+       prematura.
+
+Independientes del tiempo
+    Daños por terceras partes/daño mecánico: los criterios de evaluación indican que, dado
+      que se trata de una amenaza independiente del tiempo, incluso si no existieran
+      indicadores de susceptibilidad por estas amenazas, puede ocurrir daño por terceros y son
+      necesarias medidas de prevención, especialmente en áreas sensibles. Es decir, que la
+      amenaza nunca puede ser descartada.
+    Procedimiento operacional incorrecto: los criterios de evaluación indican que no se
+      requiere evaluación si las operaciones y mantenimiento se ejecutan por personal
+      calificado siguiendo procedimientos correctos.
+    Fallas relacionadas con el clima y fuerzas externas: los criterios de evaluación de estas
+      amenazas indican que las cañerías serán susceptibles a estas amenazas en las zonas
+      donde el ducto cruza una línea de falla geológica, atraviesa una pendiente pronunciada,
+      cruza o se desarrolla paralelo a un curso de agua, está sometido a fuerzas superficiales
+      extremas causando asentamiento en suelos subyacentes, cuando ocurren explosiones
+      cerca de la cañería, cuando la cañería se encuentra sobre la línea de congelamiento,
+      cuando el suelo sufre licuefacción o cuando la aceleración del suelo supera 0,2g.
+
+
+7.3   Evaluación de los peligros identificados
+
+El Apéndice G-20 indica que “basándose en la probabilidad de su aparición y estimación de las
+posibles consecuencias, este paso de la evaluación debe resultar en uno de los siguientes cursos
+de acción para cada uno de los riesgos identificados:
+     Eliminación o reducción de la evaluación porque la probabilidad de ocurrencias o
+       consecuencias del riesgo es insignificante.
+     Medidas recomendadas para eliminar o reducir el riesgo a un nivel tolerable.
+     Apreciación del riesgo.”
+Es decir, esta etapa del análisis de riesgo permite realizar una primera apreciación de los peligros
+e incluso contempla la posibilidad de aplicar medidas para eliminar o reducir el riesgo. Al
+respecto, es importante destacar que las especificaciones técnicas de Camuzzi utilizadas como
+referencia durante las etapas de diseño prevén la aplicación de medidas de mitigación, tales
+                                                                                                                                                                                                              CÓDIGO                                                          SCE-IN-501-0014
+                                  ESPECIFICACIÓN                                                                                                                                                              REVISIÓN                                                                        00
+                                     TÉCNICA                                                                                                                                                                     HOJA                                                                       9 de 21
+
+
+como aumento de profundidades de tapada en cruces especiales, instalación de losetas en
+cunetas pronunciadas, etc.
+
+
+7.4   Predicción de la probabilidad de falla
+
+Para la predicción de las probabilidades de falla se procederá con la metodología que se
+presenta en la norma de referencia IGEM/TD/2 y en su Apéndice 4. Es decir, que se
+determinarán las frecuencias de falla de cada amenaza a partir de reconocidas bases de
+datos operacionales (recomienda la base de datos de la Asociación de Operadores de Ductos
+Onshore del Reino Unido –UKOPA- para determinar las frecuencias de falla de ductos en el
+Reino Unido) teniendo en cuenta factores de reducción asociados a las condiciones de diseño y
+operación específicos para ciertas amenazas. Sin embargo, a futuro también se dispondrá de
+una base de datos correspondiente a los ductos de Argentina, tal como la está desarrollando el
+IAPG en conjunto con las empresas operadoras de ductos.
+En todos los casos, las estimaciones deben ser expresadas cuantitativamente indicando las
+unidades correspondientes a cada caso.
+Para el caso particular de la predicción de la probabilidad de falla por corrosión externa,
+si bien se trata de una amenaza dependiente del tiempo, no se podrá utilizar una frecuencia
+de falla igual a cero en ningún caso. Al respecto, a modo de referencia la norma IGEM/TD/2
+indica que para ductos de hasta 15 mm de espesor construidos luego de 1980 y en los que se
+hayan aplicado procedimientos de control de corrosión se puede aplicar un factor de reducción
+de 10 a los valores de la tabla 6 de dicha norma.
+Las Tablas 1 y 2 representan mediante dos ejemplos el modelo que se debe utilizar para
+presentar las frecuencias de base y los factores de reducción asociados a las amenazas.
+Asimismo, la Figura 1 presenta el modelo para representar el perfil de probabilidad de falla,
+conteniendo todas las amenazas que fueron identificadas y distinguiéndolas según el tamaño de
+falla correspondiente. Cada gráfico podrá tener una longitud de hasta 5000 m y deberá contar
+con un documento anexo en formato .xls que cuente con todos los datos utilizados.
+
+Tabla 1: Modelo para la presentación de frecuencias de falla y factores de reducción, ejemplo
+                        aplicado a la amenaza de Corrosión externa.
+                         Frec. Base Corrosión Externa Rotura
+
+
+
+
+                                                                                                                                                                                                               Frec. Corrosión Externa Fuga menor
+                                                                                                                                                                         Frec. Corrosión Externa Fuga mayor
+
+
+
+
+                                                                                                                                                                                                                                                    Frec. Total Corrosión Externa (fallas
+                                                               Frec. Base Corrosión Externa Fuga
+
+                                                                                                   Frec. Base Corrosión Externa Fuga
+
+
+                                                                                                                                       Factor ducto puesto en servicio
+
+                                                                                                                                       Frec. Corrosión Externa Rotura
+                                                                                                        menor (fallas x m x año)
+                                                                    mayor (fallas x m x año)
+                                   (fallas x m x año)
+
+
+
+
+                                                                                                                                              (fallas x m x año)
+
+
+                                                                                                                                                                                   (fallas x m x año)
+
+
+                                                                                                                                                                                                                         (fallas x m x año)
+                                                                                                                                              despues de 1980
+
+
+
+
+                                                                                                                                                                                                                                                                 x m x año)
+                Ducto
+
+
+
+
+             Loop         0.00E+00                                                  0               3.50E-08                             0.1 0.00E+00                    0.00E+00                               3.50E-09                            3.50E-09
+
+             Gasoducto      2.00E-09                                                0               3.90E-07                             0.1         2.00E-10            0.00E+00                               3.90E-08                            3.92E-08
+                                                                                                                                                                                                                                                                                                                                                                                                                                              CÓDIGO                                                                                                             SCE-IN-501-0014
+                                                                                                                                                                                     ESPECIFICACIÓN                                                                                                                                                                                                                                       REVISIÓN                                                                                                                                                                 00
+                                                                                                                                                                                        TÉCNICA                                                                                                                                                                                                                                               HOJA                                                                                                                 10 de 21
+
+
+                 Tabla 2: Modelo para la presentación de frecuencias de falla y factores de reducción, ejemplo
+                                         aplicado a la amenaza de daño por terceros.
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                               Factor por cartelería de alta visibilidad, a definir por analista de
+                                                                     Proporción Fuga mayor respecto al total de fugas según UKOPA
+
+
+
+
+                                                                                                                                                                                                                                           Frec. Base Terceros Fuga menor (fallas x m x año)
+                                                                                                                                                                                      Frec. Base Terceros Fuga mayor (fallas x m x año)
+                                                                                                                                     Frec. Base Terceros Rotura (fallas x m x año)
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Frec. Terceros Fuga menor (fallas x m x año)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Frec. Terceros Fuga mayor (fallas x m x año)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Frec. Terceros Rotura (fallas x m x año)
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Frec. Total Terceros (fallas x m x año)
+                                                                                                                                                                                                                                                                                                                         Reducción por Factor de diseño
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                               Factor Protección por loseta
+                 Frec. Base Total Terceros
+
+
+
+
+                                                                                                                                                                                                                                                                                               Factor Clase de Trazado
+                                             Proporción de roturas
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                           Factor Patrullaje
+                                                                                                                                                                                                                                                                                                                                                          Factor Espesor
+Progresiva (m)
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                           Factor Tapada
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                             riesgo
+                                                                                                                                    1.38E-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        1.381E-07 5.34E-08 1.78E-08 2.09E-07
+             0 2.09E-07                      0.66                                     0.75                                              07                                           5.3E-08                                              1.8E-08                                                             1                              1 0.7146 1.10                                    1.4                                 1 0.91
+                                                                                                                                    1.38E-
+    335 2.09E-07                             0.66                                     0.75                                              07                                           5.3E-08                                              1.8E-08                                                             1                              1 0.7146 0.41                                    1.4                                 1 0.91 5.147E-08 1.99E-08 6.63E-09 7.80E-08
+                                                                                           1.38E-
+    785 2.09E-07                             0.66                                     0.75     07                                                                                    5.3E-08                                              1.8E-08                                                             1                              1 0.7146 0.41                                    1.4                                 1 0.91 5.147E-08 1.99E-08 6.63E-09 7.80E-08
+                                                                                           1.38E-
+3154 2.09E-07                                0.66                                     0.75     07                                                                                    5.3E-08                                              1.8E-08                                                             1                              1 0.7146 0.41                                    1.4                                 1 0.91 5.147E-08 1.99E-08 6.63E-09 7.80E-08
+                                                                                           1.38E-
+3479 2.09E-07                                0.66                                     0.75     07                                                                                    5.3E-08                                              1.8E-08                                                             1                              1 0.7146 0.25                                    1.4                                 1 0.91 3.091E-08 1.19E-08 3.98E-09 4.68E-08
+                                                                                                                               CÓDIGO               SCE-IN-501-0014
+                                                                        ESPECIFICACIÓN                                        REVISIÓN                     00
+                                                                           TÉCNICA                                               HOJA                 11 de 21
+
+
+
+                                                                        Modelo de Perfil de probabilidad de falla
+                                                        Fuga menor Terceros Loop           Fuga mayor Terceros Loop          Rotura Terceros Loop
+                                                        Fuga menor Corrosión Loop          Fuga mayor Otras Causas Loop
+
+                                                 1.00E-06
+      Probabilidad de falla (fallas x m x año)
+
+
+
+
+                                                 1.00E-07
+
+
+
+                                                 1.00E-08
+
+
+
+                                                 1.00E-09
+
+
+
+                                                 1.00E-10
+                                                            0     500      1000     1500        2000      2500        3000   3500      4000         4500    5000
+                                                                                                   Progresiva (m)
+
+                                                    Figura 1: Modelo para la presentación del perfil de probabilidad de falla.
+
+
+7.5                 Predicción de consecuencias y estimación de daño
+De acuerdo a lo indicado en el Apéndice G-20 de la Adenda Nº 2 año 2016 de la NAG-100, se
+deben predecir las consecuencias “mediante programas computarizados utilizando una
+metodología de cálculo apropiada que contemple modelos matemáticos para estimar el área
+afectada por los peligros potenciales definidos previamente”.
+Para la aprobación de los informes, será una condición necesaria, la presentación detallada
+del modelo de cálculo utilizado y de las simplificaciones asociadas.
+Se deberán evaluar únicamente los riesgos asociados al efecto directo de quemaduras y las
+consecuencias deberán cuantificarse en función de las fatalidades provocadas por dichas
+quemaduras. A su vez, se deberá presentar de manera explícita un árbol de eventos y sus
+correspondientes factores de ponderación, que sean representativos de las fallas en
+gasoductos y que distinga el tipo de fuego que se puede manifestar y el tamaño de cada falla.
+Está permitido el uso de distintos arboles de eventos para cada peligro identificado.
+La metodología de cálculo debe contar con:
+     Capacidad para realizar los cálculos y presentar los resultados en función del tamaño de
+       la falla (diámetro equivalente) bajo la clasificación de Fuga menor, Fuga mayor y Rotura
+       que se indica en el Apéndice G-20 de Adenda 2 de la NAG 100.
+     Capacidad para modelar al menos eventos con fuegos tipo Jet y con bola de fuego.
+     Un modelo de flujo (cuyas ecuaciones se deberán presentar) para descargas de
+       gasoductos a la atmósfera que permita cuantificar el caudal de fuga. El resultado deberá
+       ser presentado según el modelo de la Tabla 3, distinguiendo valores para cada tamaño
+       de falla para valores pico y valores efectivos (de corresponder). Se deberán utilizar
+       unidades de caudal.
+     Capacidad para asignar distintos valores de probabilidad de ignición en función de la
+       clase de trazado y de la cantidad y el tipo de fuentes de ignición que estén presentes en
+       cada sitio, debiendo respetar el modelo y la clasificación de inmediaciones del ducto
+       indicada en la Tabla 4.
+                                                                                       CÓDIGO           SCE-IN-501-0014
+                             ESPECIFICACIÓN                                            REVISIÓN               00
+                                TÉCNICA                                                 HOJA              12 de 21
+
+
+     Un modelo de intensidad de radiación térmica (cuyas ecuaciones se deberán presentar),
+      que permita obtener resultados en función de la distancia a la falla.
+     Un modelo de daño por radiación térmica (cuyas ecuaciones se deberán presentar) que
+      permita distinguir los resultados en función del tiempo de exposición y de la intensidad de
+      radiación térmica. Los criterios de daño deberán responder al caso en el cual el 50% de
+      aquellos que reciban esa dosis o una mayor sufran fatalidades. Para el caso particular de
+      aquellos Sitios Identificados, debido a su mayor vulnerabilidad se deberá aplicar un
+      criterio más conservativo correspondiente a la condición en la cual el 1% de aquellos que
+      reciban esa dosis o una mayor sufran fatalidades. El resultado deberá ser indicado en
+      una tabla que distinga radios de fatalidad para cada tamaño de falla, según el modelo de
+      la Tabla 5.
+
+Tabla 3: Modelo para la presentación de caudales pico y efectivos distinguidos según tamaño
+                                        de la falla.
+
+
+                                                   Fuga  Fuga
+                                                               Rotura
+                                                   menor mayor
+                                 Qpico [m3/s]         0.02       0.14           4.61
+
+                                 Qpico[Kg/s]          0.85       4.92       165.50
+
+
+
+
+ Tabla 4: Modelo para la presentación de probabilidad de ignición según clasificación de las
+                                 inmediaciones del ducto.
+                                                                        Fuga  Fuga
+              Clasificación de las inmediaciones del ducto                          Rotura
+                                                                        menor mayor
+              Cañería en clase de trazado 1                                0,1          0,2       0,8
+
+              Cañería en clase de trazado 2                                0,2          0,3       0,8
+              Cañería en clase de trazado 3, incluyendo áreas
+                                                                           0,3          0,4       0,8
+              sensibles
+              Cañería en clase de trazado 4                                0,4          0,5       0,8
+
+              Cañería en cruce y/o paralela a caminos rurales              0,1          0,2       0,8
+              Cañería en cruce y/o paralela a rutas provinciales,
+                                                                           0,4          0,4       0,8
+              nacionales
+              Cañería en cruce y/o paralela a vías de ferrocarriles        0,3          0,4       0,8
+              Cañería en cruce y/o paralela a línea eléctrica de baja
+                                                                           0,2          0,3       1,0
+              tensión
+              Cañería en cruce y/o paralela a línea eléctrica de
+                                                                           0,3          0,4       1,0
+              media tensión
+              Cañería en cruce y/o paralela a línea eléctrica de alta
+                                                                           0,4          0,5       1,0
+              tensión
+
+
+Tabla 5: Modelo para la presentación de radios de fatalidad distinguidos según tamaño de la
+                                           falla.
+                                    Fuga menor         Fuga mayor           Rotura en
+                        Fuga                     Fuga
+                                      en Sitio           en Sitio   Rotura    Sitio
+                        menor                    mayor
+                                    identificado       identificado        identificado
+      r [m]               3.95           12.62          9.48            27.35           77,77       102.26
+                                                                    CÓDIGO       SCE-IN-501-0014
+                          ESPECIFICACIÓN                            REVISIÓN           00
+                             TÉCNICA                                 HOJA           13 de 21
+
+
+7.6   Cálculo de riesgos
+Tal como se presenta en las definiciones, el riesgo para cada peligro se deberá obtener a partir
+del producto entre la probabilidad de ocurrencia de daño y la potencial consecuencia (las
+fatalidades) asociada a la ocurrencia de una falla con ignición. Además, se deberá realizar la
+sumatoria de los riesgos asociados a cada uno de los peligros identificados y cada uno de los
+tamaños de fallas.
+Luego, se deberán estimar el riesgo individual y el riesgo social dado que son representativos de
+distintas situaciones. El riesgo individual debe representar el riesgo de un ser humano que pueda
+estar en cualquier punto de la zona de efectos de la falla con ignición, en tanto que el riesgo
+social debe representar el riesgo a las poblaciones que están en las zonas de efectos.
+A continuación, se presentan las particularidades a tener en cuenta en la estimación de cada tipo
+de riesgo.
+
+7.6.1 Estimación del riesgo individual
+Para la Estimación del Riesgo Individual se debe calcular en cada segmento bajo análisis el
+producto entre la frecuencia de falla, la probabilidad de ignición, la distancia de
+interacción (donde R es el radio de afectación en función del criterio de causalidad) y la
+probabilidad de que una persona esté en el lugar (dentro del radio de afectación).
+Como criterio general, la “Distancia de interacción” permite ponderar la probabilidad de que el
+efecto del evento llegue a una ubicación específica en el cálculo de riesgo. Al respecto, la norma
+de referencia IGEM/TD/2 indica que “para un modelo simple de personas presentes
+continuamente y donde la velocidad del viento es cero, las consecuencias son circulares y la
+distancia de interacción se calcula como se muestra en la Figura 4 (correspondiente a la Figura
+2 de este documento)”. Allí, un punto puede ser alcanzado por una falla que se desarrolle aguas
+arriba o aguas debajo de dicho punto, a una distancia menor o igual al Radio de Afectación.
+
+
+
+
+ Figura 2: Método de cálculo para la Distancia de interacción, corresponde a la Figura 4 de la
+                                     norma IGEM/TD/2.
+                                                                        CÓDIGO        SCE-IN-501-0014
+                          ESPECIFICACIÓN                                REVISIÓN            00
+                             TÉCNICA                                     HOJA            14 de 21
+
+
+Como criterio general, para la “probabilidad de que una persona esté en el lugar”, se deberán
+utilizar los siguientes valores, según corresponda, a menos que se cuente con información
+precisa que sustente la definición de otras probabilidades :
+      Clase de trazado 1: se define una probabilidad de que una persona esté en el lugar de una
+       hora diaria durante los 365 días del año es decir que el factor vale 1/24=0.042
+      Clase de trazado 2: se define una probabilidad de que una persona esté en el lugar de dos
+       horas diarias durante los 365 días del año es decir que el factor vale 2/24=0.083
+      Clase de trazado 3 incluyendo áreas sensibles: se define una probabilidad de que una persona
+       esté en el lugar de cuatro horas diarias durante los 365 días del año es decir que el factor vale
+       4/24=0.167
+      Clase de trazado 4: se define una probabilidad de que una persona esté en el lugar de seis
+       horas diarias durante los 365 días del año es decir que el factor vale 6/24=0.250
+      Cruces y zonas paralelas a caminos rurales: se define una probabilidad de que una persona
+       esté en el lugar de dos horas diarias durante los 365 días del año es decir que el factor vale
+       2/24=0.083
+      Cruces y zonas paralelas a rutas provinciales, nacionales y de ferrocarriles: se define una
+       probabilidad de que una persona esté en el lugar de ocho horas diarias durante los 365 días
+       del año es decir que el factor vale 8/24=0.333.
+      Viviendas: se define una probabilidad de que una persona esté en el lugar diurna del 50% y
+       nocturna del 100 % durante los 365 días del año es decir que el factor vale
+       (1x8/24)+(0,5x16/24)=0.333+0.333=0.666.
+
+Los resultados deberán ser representados en gráficos de riesgo (eje Y) en función de la
+progresiva del gasoducto (eje X), tal como lo muestra la Figura 3. Allí, se deberá presentar una
+línea por cada amenaza y una línea correspondiente a la suma (riesgo total) para poder observar
+la incidencia de cada amenaza en el riesgo. También se deberán incluir las líneas que definan
+los límites establecidos para la evaluación del riesgo (Sección 7.7 Evaluación del Riesgo). Cada
+gráfico podrá tener una longitud de hasta 5000 m y deberá contar con un documento anexo en
+formato .xls donde se deberán presentar todos los datos utilizados y los resultados de la
+estimación de riesgo individual. Allí, cada punto representará un segmento de 1 m y estará
+caracterizado por los siguientes los atributos:
+      Progresiva (m)
+      Latitud en grados decimales (sistema de coordenadas WGS84)
+      Longitud en grados decimales (sistema de coordenadas WGS84)
+      Probabilidad de falla amenaza 1
+      Probabilidad de falla amenaza 2
+      Probabilidad de falla amenaza n
+      Probabilidad de falla total
+      Radio de fatalidad fuga menor
+      Radio de fatalidad fuga mayor
+      Radio de fatalidad Rotura
+      Probabilidad de ignición
+      Probabilidad de que una persona esté en el lugar
+      Consecuencia (fatalidades)
+      Riesgo (fatalidades año-1)
+                                                                                                                             CÓDIGO       SCE-IN-501-0014
+                                                                   ESPECIFICACIÓN                                            REVISIÓN             00
+                                                                      TÉCNICA                                                 HOJA             15 de 21
+
+
+
+                                                                                Riesgo individual Loop
+                                          1.000E-06
+
+                                          9.000E-07
+  Riesgo individual (fatalidades x año)
+
+
+
+
+                                          8.000E-07
+
+                                          7.000E-07
+
+                                          6.000E-07
+
+                                          5.000E-07
+
+                                          4.000E-07
+
+                                          3.000E-07
+
+                                          2.000E-07
+
+                                          1.000E-07
+
+                                          0.000E+00
+                                                      0      500   1000         1500       2000        2500   3000    3500      4000    4500     5000
+                                                                                               Progresiva (m)
+
+
+                                                      Figura 3: Modelo para la presentación del perfil de riesgo individual.
+
+También se deberá presentar un gráfico de riesgo (y su documento .xls) en función de la distancia
+respecto al eje del gasoducto en las progresivas más riesgosas, tal como lo muestra la Figura 4.
+Allí se deberá distinguir con colores el riesgo asociado a las distintas amenazas.
+
+                                                             Corte transversal de Riesgo Loop en Prog. 2523 m
+                                                                                       2.000E-07
+
+                                                                                       1.800E-07
+  Riesgo individual (fatalidades x año)
+
+
+
+
+                                                                                       1.600E-07
+
+                                                                                       1.400E-07
+
+                                                                                       1.200E-07
+
+                                                                                       1.000E-07
+
+                                                                                       8.000E-08
+
+                                                                                       6.000E-08
+
+                                                                                       4.000E-08
+
+                                                                                       2.000E-08
+
+                                                                                       0.000E+00
+                     -150                                 -100            -50                      0             50               100             150
+                                                                                   -2.000E-08
+                                                                     Distancia transversal al eje del caño (m)
+
+
+                 Figura 4: Modelo para presentación del contorno de Riesgo individual en una progresiva
+                                                      específica.
+                                                                         CÓDIGO       SCE-IN-501-0014
+                            ESPECIFICACIÓN                              REVISIÓN            00
+                               TÉCNICA                                    HOJA          16 de 21
+
+
+7.6.2   Estimación del riesgo social
+
+Para la estimación del riesgo social se debe obtener la relación entre la frecuencia de un incidente
+y la cantidad de fatalidades que resultarían como consecuencia del mismo. Su metodología de
+cálculo es similar a la usada para obtener el riesgo individual, teniendo en cuenta adicionalmente
+la cantidad de personas que pueden resultar afectadas producto de una falla y se puedan
+encontrar ubicadas dentro de la Unidad de Clase de Trazado bajo análisis.
+A modo de resumen, el riesgo social se debe obtener mediante el cálculo y la representación de
+puntos discretos en Gráficos F-N, donde cada uno de ellos estará asociado a una locación que
+debe estar caracterizada por su distancia al ducto, por la frecuencia (por año) de los posibles
+eventos y por el número de fatalidades que allí podrían ocurrir. La Tabla 6 y la Figura 5 deben
+utilizarse como modelos para la presentación de los resultados. Nótese que en la Tabla 6 los
+pares f-N se deben ordenar de menor a mayor cantidad de fatalidades.
+
+             Tabla 6: Modelo de tabla para presentación de resultados de Riesgo Social.
+
+                                                                                    N (Cantidad de
+  Descripción de la locación   Distancia ducto - locación (m) f (Fatalidades/año)   fatalidades)
+  Vivienda 1                                               0             7.14E-06                   1
+  Vivienda 2                                               5             3.14E-06                   5
+  Taller 3                                                17             8.45E-07                   8
+  Vivienda 4                                              20             5.45E-07                  11
+  Vivienda 5                                              20             5.45E-07                  16
+  Duplex 6                                                86             2.40E-07                  17
+  Edificio 7                                             101             1.45E-07                  35
+  Edificio 8                                             117             2.59E-08                  38
+                                                                                                                               CÓDIGO            SCE-IN-501-0014
+                                                                              ESPECIFICACIÓN                                  REVISIÓN                  00
+                                                                                 TÉCNICA                                           HOJA             17 de 21
+
+
+
+                                                                                     Modelo de gráfico Riesgo Social
+                                                                     Riesgo social del gasoducto         Criterio ALARP            Límite intolerable
+
+                                                               1.00E-02
+      Frecuencia de ocurrencia de N o mas eventos por año
+
+
+
+
+                                                               1.00E-03
+
+                                                               1.00E-04
+
+                                                               1.00E-05
+
+                                                               1.00E-06
+
+                                                               1.00E-07
+
+                                                               1.00E-08
+
+                                                               1.00E-09
+
+                                                               1.00E-10
+                                                                          1                        10                        100                         1000
+                                                                                                   N: Cantidad de fatalidades
+
+
+                                                            Figura 5: Modelo de gráfico para presentación de resultados de Riesgo Social.
+
+Cada tabla y cada gráfico deben corresponder al resultado del Análisis de Sitio específico, que
+debe ser realizado en todas aquellas zonas donde pudiera haber más de una persona afectada
+por una falla.
+Cada sitio específico corresponderá a una Unidad de clase de trazado, por lo que incluirá una
+longitud de 1,6 km de ducto donde se deberán analizar todas las locaciones ubicadas allí. En
+casos particulares se podrá reducir dicho valor, teniendo en cuenta que durante el análisis se
+debe adoptar una comparación conservativa dividiendo los valores de la frecuencia F por el
+cociente entre 1.6 km y la distancia de interacción del sitio.
+Si por algún motivo no hubiese zonas donde se cree que podría haber más de una persona
+afectada por una falla, se deberá proceder a realizar un Análisis genérico, asumiendo una
+población distribuida aleatoriamente en la proximidad del ducto y adoptando una posición
+conservativa considerando la máxima cantidad de viviendas que surgen de las definiciones de
+Clases de Trazado, según NAG 100 y considerando que cada una de esas viviendas es habitada
+por 4 personas.
+
+
+7.7                            Evaluación del riesgo
+
+Para la evaluación del riesgo se debe utilizar el criterio ALARP (representado en la Figura 6),
+según lo establece el Apéndice G-20 de la NAG 100. A continuación, se presentan los límites
+establecidos:
+                                                                       CÓDIGO        SCE-IN-501-0014
+                           ESPECIFICACIÓN                              REVISIÓN            00
+                              TÉCNICA                                   HOJA           18 de 21
+
+
+Para riesgo individual:
+    REGIÓN INTOLERABLE: Si el riesgo está en la región intolerable, el mismo no puede
+        ser justificado. Se considera región de riesgo intolerable si el valor de riesgo individual es
+        superior a 1 x 10-4.
+    REGIÓN REDUCIBLE: Si el riesgo está en la región reducible, el riesgo es tolerable solo
+        si una reducción adicional del mismo es impracticable o si se requiere una acción
+        desproporcionada en tiempo y esfuerzo respecto de la reducción alcanzada (criterio
+        ALARP, As Low As Reasonably Practicable). Esta región está definida por valores de
+        riesgo individual desde 1 x 10-4 hasta 1 x 10-6.
+    REGIÓN ACEPTABLE: Si el riesgo está en la región aceptable, el nivel del riesgo residual
+        es considerado insignificante. Se considera región de riesgo aceptable si el valor de
+        riesgo individual es inferior a 1 x 10-6.
+
+Para riesgo social:
+ En ninguno de los puntos a lo largo del gasoducto se podrá superar que accidentes que
+   causen 100 o más muertes contengan frecuencias de 1 x 10-5 por año.
+ Para aquellos casos donde se encuentren otros ductos dentro de la Unidad de Clase de
+   trazado bajo análisis se deberá evaluar si ocurre una interacción entre ellos (según normativa
+   IGEM/TD1). De no ser así, el riesgo de dichos ductos debe ser incluido en la evaluación
+   mediante la suma de los datos f-N acumulados. El resultado total debería ser comparado en
+   el criterio indicado previamente.
+
+
+
+
+Figura 6: Representación gráfica de los criterios de tolerancia al riesgo, corresponde a Figura 5
+                                  de la norma IGEM/TD/2.
+                                                                       CÓDIGO        SCE-IN-501-0014
+                           ESPECIFICACIÓN                              REVISIÓN            00
+                              TÉCNICA                                   HOJA           19 de 21
+
+
+7.8    Definición de sitios y medidas para mitigar el riesgo
+
+El Apéndice G-20 a la NAG-100 indica que “Se debe llevar a cabo la identificación de sitios
+específicos para la toma de medidas para mitigar el riesgo.
+Se debe desarrollar con el mayor detalle posible el establecimiento de las medidas de mitigación,
+prevención, monitoreo y control de cada uno de los riesgos. Todas las medidas de mitigación y
+prevención propuestas deben ser específicas, concretas y medibles, evitando todo tipo de
+generalidad.
+Entre las medidas que pueden utilizarse se encuentran:
+     Reubicar la traza del ducto.
+     Aumentar la profundidad de tapada.
+     Aumentar el espesor del caño.
+     Disminuir el factor de diseño.
+     Utilizar otras metodologías de protección, como losas de hormigón.
+     Reducir la MAPO.
+     Odorizar el gas.
+     Instalar cupones.
+     Aumentar la frecuencia de vigilancia.
+     Aumentar la frecuencia de pasaje de Scraper Instrumentado.
+     Combinación de las anteriores.
+     Otras medidas fundamentadas en la normativa de referencia para el cálculo.”
+
+
+Cualquier propuesta de medida de mitigación será definida de común acuerdo entre el analista
+de riesgo, el Gerente de Seguridad y Medio Ambiente y el Departamento de Ingeniería e
+Integridad. Deberá estar fundamentada mediante la estimación del riesgo individual y del riesgo
+social, dando a conocer los valores que se alcanzarían al aplicar dichas medidas. El proceso de
+dichos análisis deberá cumplir con todos los lineamientos enunciados en esta especificación.
+
+
+8     SIMULACIÓN DE CRECIMIENTO POBLACIONAL
+Se presentarán por separado dos informes, uno de los cuales reflejará las condiciones actuales
+incluyendo las medidas de mitigación acordadas y el otro corresponderá a una simulación de
+crecimiento poblacional que a su vez será evaluada con un criterio de riesgo social más exigente
+respecto al ALARP. El informe con la simulación de crecimiento poblacional debe estar
+relacionado con las averiguaciones previas respecto a los planes de expansión/viviendas,
+desarrollo de infraestructura y proyectos industriales de las ciudades cercanas a la cañería o
+cambios de zonificación.
+Ambos informes serán elaborados de acuerdo a las bases establecidas en la presente
+Especificación Técnica.
+Si en la simulación no se cumpliera con los límites establecidos para la evaluación del riesgo, se
+deberán aplicar medidas de mitigación y/o modificaciones en el diseño del ducto para reducir el
+riesgo. Dichas medidas y/o modificaciones deberán cumplir con lo indicado en la sección 7.8
+Definición de sitios y medidas para mitigar el riesgo.
+A continuación, se presentan las Pautas para la Simulación:
+     La simulación se realizará suponiendo un crecimiento de la cantidad de fatalidades en un 30 %
+        (Figura 7) por lo que se deberán multiplicar por 1,3 los valores de N indicados en la Tabla 6.
+                                                                                                                                   CÓDIGO            SCE-IN-501-0014
+                                                                                ESPECIFICACIÓN                                     REVISIÓN                00
+                                                                                   TÉCNICA                                             HOJA            20 de 21
+
+
+                                                         Los límites de evaluación del riesgo disminuirán en un 30 %, es decir que, por ejemplo, el criterio
+                                                          ALARP para 1 fatalidad será 7,69 x 10 -7 fatalidades al año (Figura 7).
+
+
+                                                                                              Limites para simulación
+                                                                         Riesgo social del gasoducto                Riesgo social simulación
+                                                                         Criterio ALARP                             Criterio ALARP para simulación
+                                                                         Límite intolerable                         Límite Intolerable para simulación
+    Frecuencia de ocurrencia de N o mas eventos por año
+
+
+
+
+                                                              1.00E-02
+
+                                                              1.00E-03
+
+                                                              1.00E-04
+
+                                                              1.00E-05
+
+                                                              1.00E-06
+
+                                                              1.00E-07
+
+                                                              1.00E-08
+
+                                                              1.00E-09
+
+                                                              1.00E-10
+                                                                          1                            10                        100                        1000
+                                                                                                       N: Cantidad de fatalidades
+
+  Figura 7: Modelo de gráfico para presentación de resultados de Simulación de crecimiento
+ poblacional, incluyendo en línea punteada la representación de las pautas para la simulación.
+
+9   RESUMEN DE TABLAS Y GRÁFICOS A PRESENTAR
+A continuación, se presenta un listado con las tablas y gráficos que se deben presentar en los
+informes:
+    - Tablas de frecuencia de falla y factores de reducción para cada una de las amenazas
+       identificadas, según modelo y ejemplos Tablas 1 y 2.
+    - Gráficos de perfiles de probabilidad de falla, según modelo Figura 1.
+    - Árbol de los eventos distinguiendo el tipo de fuego que se puede manifestar y el tamaño
+       de falla.
+    - Tabla de caudales de fuga, según modelo Tabla 3.
+    - Tabla de probabilidades de ignición, según modelo Tabla 4.
+    - Tabla de radios de fatalidad, según modelo Tabla 5.
+    - Gráfico de perfil de riesgo, según modelo Figura 3.
+    - Documento .xls conteniendo los datos y resultados de la estimación de riesgo individual,
+       conteniendo los atributos indicado en el Punto 7.6.1.
+    - Gráficos de cortes transversales de riesgo en progresivas más riesgosas, según modelo
+       Figura 4.
+    - Resultados de Riesgo Social para los sitios específicos donde el riesgo es mayor, según
+       modelos Tabla 6 y Figura 5.
+                                                                     CÓDIGO       SCE-IN-501-0014
+                          ESPECIFICACIÓN                             REVISIÓN           00
+                             TÉCNICA                                  HOJA           21 de 21
+
+
+10 REGISTRO Y ARCHIVO
+
+
+Los informes, deberán ser archivados junto al historial de mantenimiento y operación de la
+cañería. Además, debe actualizarse ante cambios en las condiciones del ducto o su entorno.
+El Informe de Evaluación de Seguridad debe ser aprobado y suscripto por los responsables
+Técnicos y de Seguridad autorizados por el operador del ducto. También deberá ser firmado por
+el responsable de la empresa que realiza el informe.
+Se deberán entregar en papel dos (2) copias encarpetadas, bien identificadas de los informes
+con carátulas donde conste la información identificatoria del estudio y las firmas correspondientes
+(Contratista/Distribuidora). Los informes deberán contener todas las tablas y gráficos indicados
+en esta especificación técnica, tal como se resumen en el punto 9.
+Además, se entregarán dos (2) copias del informe en archivo digital CD o DVD y Pendrive en
+formato solo lectura (*.pdf) y las tablas y gráficos se entregarán en formato Excel (*.xls/*.xlsx).
+Además, se deberán entregar los resultados de la estimación de riesgo individual en un archivo
+.shp donde cada punto (que represente un segmento de 1 m) estará caracterizado por los
+atr3ibutos que se indican en el Punto 7.6.1.
+

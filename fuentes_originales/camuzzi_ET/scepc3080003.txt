@@ -1,0 +1,548 @@
+                                                                                SCE-PC-308-
+                                                               CÓDIGO:
+                                                                                   0003
+                          PROCEDIMIENTO                       REVISIÓN:               0
+
+                                                                HOJA:              1 de 13
+
+
+                                                               FECHA               FECHA
+                                                             APROBACION           VIGENCIA
+       PROCESO                 OPERACIÓN DE LA RED
+                                                               05/08/19            05/08/19
+
+                                                                 LIDER DEL PROCESO
+           TEMA            Instalación de Termogeneradores
+                                                                      Guillermo Montag
+
+                                                                      APROBADO POR:
+   ANULA/REEMPLAZA                    I OR 064
+                                                                      Alejandro Lorenzo
+
+
+                                 MODIFICACIONES
+  Nº de      FECHA
+                                          MOTIVO DE LA MODIFICACIÓN
+REVISIÓN    REVISION
+
+
+
+
+AREAS INVOLUCRADAS:
+
+Área Técnica de las Unidades de Negocio/Centros Operativos
+
+
+
+OBSERVACIONES:
+                                                                                                               CÓDIGO             SCE-PC-308-0003
+
+                                         PROCEDIMIENTO                                                        REVISIÓN                        0
+
+                                                                                                                 HOJA                    2 de 13
+
+
+INDICE
+                                                                                                                                                   Página
+1    OBJETO .............................................................................................................................................. 3
+2    DOCUMENTACION COMPLEMENTARIA Y/O DE REFERENCIA ................................................... 3
+3    DEFINICIONES .................................................................................................................................. 3
+  3.1 GLOSARIO .......................................................................................................................................... 3
+  3.2 TERMOGENERADOR ............................................................................................................................ 3
+  3.3 BUDI ................................................................................................................................................. 4
+4    RESPONSABILIDADES ..................................................................................................................... 4
+  4.1 TÉCNICO DE PROTECCIÓN CATÓDICA .................................................................................................. 4
+5    DESARROLLO ................................................................................................................................... 4
+  5.1 INSTALACIÓN DE LA CAÑERÍA ENTERRADA DE ACOMETIDA Y LA PLANTA
+      REGULADORA ..................................................................................................................................... 4
+  5.2 INSTALACIÓN DEL TERMOGENERADOR ................................................................................................. 6
+6    REGISTRO Y ARCHIVO .................................................................................................................... 6
+7    ANEXOS ............................................................................................................................................. 6
+  7.1 ANEXO 1: PLANILLA DE PUESTA EN MARCHA DE TERMOGENERADORES................................................. 6
+  7.2 ANEXO 2: CORRECCIÓN DE TEMPERATURA AMBIENTE DEBIDA AL VIENTO ............................................. 9
+  7.3 ANEXO 3: POTENCIA DISPONIBLE EN FUNCIÓN DE LA TEMPERATURA AMBIENTE
+      CORREGIDA ....................................................................................................................................... 9
+  7.4 ANEXO 4: CARGA DE UN NUEVO TERMOGENERADOR EN LA BUDI ....................................................... 10
+  7.5 ANEXO 5: MODIFICACIÓN DE DATOS DE EQUIPOS DE PROTECCIÓN CATÓDICA EN
+      LA BUDI........................................................................................................................................... 12
+  7.6 ANEXO 6: DAR DE BAJA UN EQUIPO DE PROTECCIÓN CATÓDICA EN LA BUDI ........................................ 13
+                                                              CÓDIGO     SCE-PC-308-0003
+
+                       PROCEDIMIENTO                          REVISIÓN          0
+
+                                                               HOJA          3 de 13
+
+
+1     OBJETO
+
+El presente procedimiento establece la forma en que se debe realizar la instalación de
+Termogeneradores para protección catódica por corriente impresa.
+
+2     DOCUMENTACION COMPLEMENTARIA Y/O DE REFERENCIA
+
+I OR – 002: Glosario de Términos y Símbolos de Protección Anticorrosiva
+
+SCE-PC-304-0001: Instalación de CMP, Probetas Calibradas Para Medir la Velocidad
+          de Corrosión, Celdas Libres de IR y Aplicación de Soldadura
+          Cuproaluminotérmica
+
+SCE-PC-108-0007: Plano Tipo de Montaje de Termogenerador
+
+SCE-PR-110-1002: Cerco Tipo Olímpico
+
+SCE-PC-511-0003: Protección Anticorrosiva
+
+NAG-148: Condiciones de Seguridad para la Ubicación e Instalación de Estaciones de
+           Separación y Medición y Estaciones Reductoras de Presión
+
+Instrucciones de Montaje del Fabricante (depende de cada tipo de termogenerador)
+
+3     DEFINICIONES
+
+
+3.1    Glosario
+
+En el documento I OR – 002 se incluye un listado de términos y símbolos
+comúnmente utilizados en la redacción de los Documentos de Protección
+Anticorrosiva.
+
+
+3.2    Termogenerador
+
+Un termogenerador (o generador termoeléctrico) convierte directamente el calor en
+electricidad. El calor induce la circulación de una corriente eléctrica al fluir desde el
+quemador de gas a través del módulo termoeléctrico.
+
+El módulo termoeléctrico es una termopila (conjunto de termocuplas interconectadas
+entre sí) en un módulo sellado. De un lado de la termopila se instala el quemador de
+gas, mientras que en otro lado se refrigera mediante un disipador de aluminio aletado
+                                                             CÓDIGO    SCE-PC-308-0003
+
+                      PROCEDIMIENTO                         REVISIÓN          0
+
+                                                              HOJA         4 de 13
+
+
+o un sistema de tubos refrigerantes (dependiendo de la capacidad del
+termogenerador.) El flujo de calor a través de la termopila genera electricidad
+(corriente continua) en forma estable y sin partes móviles.
+
+
+
+
+                                               Termogenerador (en la parte superior
+                                               se pueden ver las aletas de
+                                               refrigeración)
+
+
+
+
+3.3   BUDI
+
+BUDI es la abreviatura de Base Unificada de Instalaciones. Es un programa, que tiene
+asociada una base de datos, en la cual se guardan los datos de los elementos de
+protección catódica y las mediciones realizadas en los mismos, además de otra
+información relacionada con las cañerías, instalaciones de superficie, etc.
+
+4     RESPONSABILIDADES
+
+
+4.1   Técnico de Protección Catódica
+
+Es responsable de que los trabajos sean ejecutados de acuerdo a lo establecido en el
+presente procedimiento.
+
+Es responsable de que los datos de la BUDI estén actualizados.
+
+5     DESARROLLO
+
+
+5.1   Instalación de la cañería enterrada de acometida y la planta reguladora
+
+En los planos de proyecto se indica la instalación de todas las cañerías y de la planta
+reguladora. En el plano tipo SCE-PC-108-0007 puede servir de complemento a los
+planos de proyecto.
+                                                                 CÓDIGO   SCE-PC-308-0003
+
+                       PROCEDIMIENTO                         REVISIÓN            0
+
+                                                                  HOJA        5 de 13
+
+
+En caso de ser necesario, se realizará la conexión al gasoducto existente (Hot-
+tapping.) Para ello se utilizará una cupla NPT S-3000 de Ø 3/4", con una entre rosca
+de igual diámetro y serie y una válvula esférica de paso total NPT S-3000 también de
+Ø 3/4". En caso de que el gasoducto existente sea línea de transmisión, la soldadura
+deberá realizarse con procedimiento y soldador calificado según Apéndice B de la
+norma API 1104. Si el gasoducto existente no es línea de transmisión, el
+procedimiento de soldadura y la calificación de soldadores deberán ser según API
+1104 o ASME IX.
+
+  NOTA: En todos los casos el trabajo de perforación propiamente dicho será
+                       realizado por la Distribuidora
+
+La cañería enterrada desde la derivación hasta la planta reguladora y desde ésta al
+termogenerador deberá enterrarse de acuerdo a lo especificado en el Pliego de
+Especificaciones Técnicas.
+
+Las alternativas para unir entre sí los tramos de cañería son:
+
+  •   Uniones dobles roscadas S-3000, con accesorios roscados también S-3000.
+  •   Soldadura a tope, con accesorios S-3000 para soldar. En caso de elegir esta
+      opción, el procedimiento de soldadura y la calificación de soldadores deberá
+      ser según API 1104 o ASME IX.
+
+Antes de la planta reguladora se instalará una válvula esférica S-3000 de Ø 3/4" de
+extremos roscados, que irá en una cámara de 500 mm x 500 mm x 400 mm de
+profundidad con tapa metálica. Esta válvula en cámara deberá estar ubicada fuera del
+cerco olímpico.
+
+La cañería estará revestida de acuerdo a la Especificación Técnica
+SCE-PC-511-0003, punto 7.2. Como alternativa podrá utilizarse un revestimiento
+según el punto 7.2.2.2 de la misma especificación técnica.
+
+La planta reguladora se instalará dentro un gabinete metálico o de un gabinete de
+mampostería con puertas metálicas. El recinto de la E.R.P. debe cumplir la norma
+NAG-148. Se tendrá en especial cuidado de que el extremo superior de los venteos
+queden 0,50 m más altos que la altura del termogenerador. Además, para ambos
+tipos de gabinete se tendrá en cuenta que la ventilación natural del recinto debe cubrir
+el 5% de la superficie total de las paredes, distribuido 80% arriba y 20% abajo, en el
+frente y contrafrente.
+
+Si el plano de proyecto así lo indica, se deberá realizar un cerco perimetral que
+proteja al termogenerador y a la ERP. El cerco se realizará de acuerdo a lo
+especificado en el plano de proyecto y al plano SCE-PR-110-1002.
+                                                               CÓDIGO     SCE-PC-308-0003
+
+                       PROCEDIMIENTO                           REVISIÓN          0
+
+                                                                 HOJA         6 de 13
+
+
+5.2   Instalación del Termogenerador
+
+El termogenerador se instalará sobre una platea de hormigón de 2 m x 2 m y un
+espesor mínimo de 0,12 m, a 0,5 m del cerco y a 6 m (como mínimo) de la reguladora.
+
+El termogenerador deberá montarse siguiendo las instrucciones del fabricante.
+
+La conexión a la cañería a proteger se realizará a través de una CMP de tres puntos
+montada en un mojón. Uno de los puntos estará identificado como "GE" y será el
+conductor que venga de venga del termogenerador (terminal "-" del termogenerador.)
+Otro de los puntos será identificado como "CA" y será el cable catódico que se
+soldará al caño (este cable será de 25 mm2 de sección, tipo TW.) Se realizará un
+puente entre los puntos "GE" y "CA". El tercer punto estará identificado como "TP" y
+será la toma de potencial de la cañería. Este cable se soldará a 0,5 m del cable
+catódico. La identificación y tendido de los cables se realizará de acuerdo al
+procedimiento SCE-PC-304-0001.
+
+El terminal "+" del termogenerador se conectará al dispersor, ubicado de acuerdo al
+plano de proyecto.
+
+6     REGISTRO Y ARCHIVO
+
+El Técnico de Protección Catódica deberá confeccionar un Plano Conforme a Obra
+con los detalles de la instalación realizada.
+
+En el caso de que la instalación haya sido realizada por un contratista, éste realizará
+el plano Conforme a Obra y el Técnico de Protección Catódica y/o el Inspector de la
+Distribuidora lo revisará y aprobará.
+
+El Técnico de Protección Catódica archivará estos documentos, junto con la Planilla
+de Puesta En Marcha (ver Anexo 1) y los conservará por todo el tiempo de vida útil de
+las instalaciones.
+
+El Técnico de Protección Catódica deberá dar de alta en el programa BUDI el
+termogenerador instalado o modificar los datos si trata de un reemplazo rectificador,
+completando toda la información requerida, que deberá coincidir con la indicada en la
+Planilla de Check List.
+
+7     ANEXOS
+
+
+7.1   Anexo 1: Planilla de Puesta en Marcha de Termogeneradores
+
+Hacer doble clic en el icono a continuación para abrir la Planilla.
+                                                           CÓDIGO    SCE
+                                                                     SCE-PC-308-0003
+
+                      PROCEDIMIENTO                       REVISIÓN          0
+
+                                                            HOJA         7 de 13
+
+
+
+
+En el caso de un documento PDF,
+seleccionar el clip en el borde izquierdo y se
+despliega el listado de documentos adjuntos:
+
+Hacer doble clic en el archivo Excel y en la
+ventana que se abre, seleccionar “Abrir
+archivo” y presionar “Aceptar” y se abrirá la
+planilla.
+
+Referencias
+
+1. Unidad de Negocios o Centro Operativo, según corresponda
+2. Código de Obra
+3. Dirección o Progresiva y Localidad donde está ubicado el equipo
+4. Planos conforme a obra de la instalación del rectificador
+5. Fecha de Instalación
+6. Código de la cañería a la cual está conectado. Si el equipo protege a más de una
+    cañería, indicarlo en este lugar
+7. Modelo del Termogenerador
+8. Número de Serie
+9. Tipo de Combustible que alimenta al termogenerador
+10. Temperatura ambiente (en °C) sin corrección
+11. Velocidad del Viento (en km/h)
+12. Temperatura ambiente corregida (ver Anexo II)
+13. Potencia (en watts) de disposición a la temperatura ambiente corregida (ver
+    Anexo III)
+14. Presión del combustible en el encendido
+                                   en
+15. Presión del combustible durante el funcionamiento normal del termogenerador.
+16. Hora de encendido y puesta en marcha del termogenerador.
+17. En estos espacios colocar la hora de acuerdo a los tiempos especificados (hora a
+    los 15 minutos de encendido, etc.
+                                   etc.)
+18. Tensión (en V) a la salida del termogenerador
+19. Corriente (en A) entregada por el equipo
+20. Potencia (en W) suministrada por el equipo (multiplicar tensión por corriente)
+21. En estos lugares se realizará cualquier aclaración necesaria con respecto a la
+    instalación
+             ón del termogenerador.
+                                                                       CÓDIGO          SCE-PC-308-0003
+
+                     PROCEDIMIENTO                                     REVISIÓN               0
+
+                                                                        HOJA               8 de 13
+
+
+22. En estos lugares se realizará cualquier aclaración necesaria con respecto a la
+    puesta en marcha del termogenerador.
+23. Nombre y Apellido del responsable
+24. Firma del responsable
+
+
+
+
+                                                                               22
+                 5
+
+
+                         6
+
+
+
+
+                                                                                             24
+                                                  21
+
+
+
+
+                                                                               20
+                                                       12
+
+
+                                                                 14
+                                             10
+
+
+
+
+                                                                               19
+                                     8
+
+
+
+                                                  11
+
+                                                            13
+
+                                                                  15
+                                         9
+                                 7
+
+
+
+
+                                                                               18
+                             4
+                     2
+                         3
+
+
+
+
+                                                                                             23
+                 1
+
+
+
+
+                                                                                  17
+                                                                       16
+                                                                   CÓDIGO        SCE-PC-308-0003
+
+                           PROCEDIMIENTO                           REVISIÓN              0
+
+                                                                    HOJA               9 de 13
+
+
+7.2   Anexo 2: Corrección de Temperatura Ambiente Debida al Viento
+
+Con la tabla siguiente se realizará la corrección de la temperatura ambiente. Se
+ingresa con la temperatura del aire medida y la velocidad del viento y en la tabla se
+lee la temperatura ambiente corregida. De ser necesario, se pueden realizar
+interpolaciones.
+
+Veloc.
+                                       Temperatura del aire (°C)
+del
+viento
+(km/h)   -20   -15   -10   -5    0     5     10   15    20    25    30      35    40     45      50
+
+0        -20   -15   -10   -5    0     5     10   15    20    25    30      35    40     45      50
+5        -27   -21   -16   -11   -6    -1    5    11    16    21    27      32    37     42      47
+10       -34   -27   -21   -15   -9    -3    2    9     13    18    24      29    35     40      46
+15       -40   -32   -24   -18   -12   -6    -1   4     10    15    21      26    32     37      43
+20       -41   -35   -29   -21   -14   -8    -3   2     8     13    19      24    30     35      41
+25       -44   -37   -31   -23   -16   -10   -5   0     6     11    17      22    28     33      38
+30       -46   -39   -33   -25   -18   -12   -7   -1    4     9     15      20    26     31      37
+35       -47   -40   -34   -26   -19   -13   -8   -2    3     8     14      19    25     30      35
+40       -49   -42   -35   -22   -20   -14   -9   -3    2     7     13      18    24     29      35
+
+
+Ejemplo:
+
+Temperatura del aire medida: 20 °C
+Velocidad del viento: 10 km/h
+Temperatura ambiente corregida: 13 °C
+
+
+7.3   Anexo 3: Potencia Disponible en Función de la Temperatura Ambiente
+      Corregida
+
+Con este gráfico se puede obtener la potencia máxima que puede entregar el
+termogenerador a la temperatura ambiente corregida. Este valor de potencia no debe
+sobrepasarse ya que podría causar serios daños al termogenerador.
+
+Se entra por el eje de abscisas con la temperatura ambiente corregida, en donde
+corta con la curva sobre el eje de coordenadas se lee la potencia disponible.
+
+NOTA: El siguiente gráfico es válido sólo para el termogenerador Global modelo
+8550 de 500 W de potencia. Para otra marca y/o modelo deberá utilizarse el
+gráfico suministrado por el fabricante.
+                                                          CÓDIGO    SCE-PC-308-0003
+
+                     PROCEDIMIENTO                       REVISIÓN          0
+
+                                                           HOJA        10 de 13
+
+
+
+
+Ejemplo:
+
+Temperatura ambiente corregida: 13 °C
+Potencia disponible: 590 W
+
+
+7.4   Anexo 4: Carga de un Nuevo Termogenerador en la BUDI
+
+Para cargar un nuevo termogenerador en la BUDI, primero se selecciona “Equipos” en
+el menú “Consultas – Protección Catódica”, tal como se indica en la figura a
+continuación.
+
+
+
+
+Se abre una ventana, en la que se debe seleccionar el sistema y la cañería en donde
+se debe agregar el termogenerador.
+                                                            CÓDIGO     SCE-PC-308-0003
+
+                      PROCEDIMIENTO                         REVISIÓN          0
+
+                                                             HOJA         11 de 13
+
+
+
+
+A continuación se presiona el botón “Crear EPC” (EPC=equipo de protección
+catódica). Se abre la ventana para cargar los datos del termogenerador nuevo.
+Primero verificar que en la ventana se está cargando los datos para un TEG:
+
+
+
+
+Los campos que tienen un punto anaranjado son obligatorios. Se debe indicar la
+progresiva, dirección (no es obligatorio pero es conveniente completarlo), fecha de
+instalación, tensión de salida nominal (en V), corriente de salida nominal (en A),
+marca y modelo (salvo indicación en contrario la marca siempre es Global
+Thermoelectric y el modelo 8550), número de serie, tensión (en mV) y corriente (en A)
+del shunt, tipo de regulación (manual o automática), si posee interruptor On/Off
+incorporado, si está preparado para ser telecontrolado y telemedido, si el
+termogenerador posee una ERP (estación de regulación de presión), el contratista
+que lo instaló, latitud y longitud donde está instalado el TEG, y cualquier comentario
+que el Técnico de Protección Catódica crea conveniente. La potencia es calculada por
+el programa.
+                                                           CÓDIGO       SCE
+                                                                        SCE-PC-308-0003
+
+                      PROCEDIMIENTO                        REVISIÓN            0
+
+                                                            HOJA           12 de 13
+
+
+
+
+Si es una instalación nueva, también se deber
+                                        deberán
+                                             án cargar los datos del dispersor (ver
+procedimiento SCE-PC-301-0001).
+                           0001).
+
+Una vez que se cargaron los datos del equipo, se debe presionar “Aceptar” para que
+los datos se guarden en la BUDI. Si se presiona “Salir”, los datos no se guardarán y
+se deberán cargass los mismos nuevamente.
+
+
+7.5   Anexo 5: Modificación de datos de equipos de protección catódica en la
+      BUDI
+
+Primero se selecciona “Equipos” en el menú “Consultas – Protección Catódica”. Se
+abre una ventana, en la que se debe seleccionar el sistema y la cañería en donde se
+encuentra el equipo rectificador a modificar y se presiona el botón “Buscar”.
+
+A continuación se despliegan todos los equipos que tiene esa cañería:
+
+
+Para editar los datos de un equipo, se hace doble clic en el botón de edición         del
+renglón correspondiente. Entonces se abre la ventana con los datos del e
+                                                                       equipo.
+                                                            CÓDIGO     SCE-PC-308-0003
+
+                      PROCEDIMIENTO                         REVISIÓN          0
+
+                                                             HOJA         13 de 13
+
+
+Se presiona el botón “Modificar” y se abre la ventana con todos los datos del equipo,
+listos para modificarse.
+
+Una vez realizadas las modificaciones, se debe presionar el botón “Aceptar” para que
+se guarden las modificaciones en la BUDI, de lo contrario se perderán los cambios.
+
+
+7.6   Anexo 6: Dar de baja un equipo de protección catódica en la BUDI
+
+Se siguen todos los pasos del Anexo 5 hasta abrir la pantalla con los datos del equipo
+que se desea dar de baja.
+
+Luego se presiona el botón “Dar de Baja” y aparecerá un nuevo campo que dice
+“Fecha de Baja”, en donde se debe ingresa la fecha en que se desafectó el equipo.
+Finalmente, se presiona el botón “Dar de Baja” para que la baja en la BUDI sea
+efectiva. Si se presiona “Salir” no se dará de baja el equipo.
+

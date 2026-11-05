@@ -1,0 +1,2142 @@
+                                                                                           CÓDIGO
+                                      ESPECIFICACIÓN                                      REVISIÓN                   03
+                                         TÉCNICA                                             HOJA
+                                                                                                                 1 de 40
+
+
+                                                                                          FECHA                  FECHA
+                                                                                        APROBACION              VIGENCIA
+           PROCESO                    OPERACIÓN DE LA RED
+                                                                                          27/03/2019           01/04/2019
+                                       Requisitos técnicos para la                           LIDER DEL PROCESO
+            TEMA                      construcción e instalación de
+                                           cañerías de redes                                       Hugo García
+
+                                                                                                APROBADO POR:
+ ANULA/REEMPLAZA
+                                                                                                Alejandro Lorenzo
+
+                                                 MODIFICACIONES
+
+    Nº de            FECHA
+                                                                MOTIVO DE LA MODIFICACIÓN
+ REVISIÓN           REVISION
+                                    Agregado punto d) en Apartado 6.4.4 y actualización Apartados 6.7.1; 6.9.1
+     01            19-03-14         y 6.9.2
+      02            04-01-17        Se adapta Especificación Técnica por la entrada en vigencia de la NAG 140
+                                    Se agregan las cañerías de SDR 17.6 y materiales de fabricación PE 80 y
+      03            25/02/19        PE 110. Se modifica apartados. 6.2.1, 6.4.7.1, 6.4.14 y 6.8. Se agrega
+                                    Apartado 9 Croquis de Ubicación.
+
+
+
+
+AREAS INVOLUCRADAS:
+Unidades Negocios
+Gerencia Técnica
+
+
+
+
+OBSERVACIONES:
+Fecha de impresión:
+
+La validez del presente documento debe ser ratificada contra el archivo informático disponible en: Carpetas Públicas \ Todas las
+Carpetas Públicas \ Documentación \ 03 Instrucciones de Trabajo ( ) \ (OR) Operación de la Red \ OR-091 Inspección de
+Recipientes a Presión.
+                                                                                                           CÓDIGO
+                                     ESPECIFICACIÓN                                                       REVISIÓN                       01
+                                        TÉCNICA                                                              HOJA                    2 de 41
+
+
+
+                                                                    INDICE
+                                                                                                                                                Página
+1   OBJETO.............................................................................................................................................. 4
+2   ALCANCE ........................................................................................................................................... 4
+3   AREAS INVOLUCRADAS .................................................................................................................. 4
+4   DOCUMENTACION COMPLEMENTARIA Y/O DE REFERENCIA ................................................... 4
+5   DEFINICIONES .................................................................................................................................. 5
+6   DESARROLLO ................................................................................................................................... 5
+        6.1  CONDICIONES GENERALES .................................................................................... 5
+             6.1.1       PRESIÓN DE OPERACIÓN ........................................................................................ 5
+             6.1.2       LIBRE CIRCULACIÓN................................................................................................. 6
+             6.2         MATERIALES .............................................................................................................. 6
+             6.2.1       TUBERÍAS DE POLIETILENO .................................................................................... 6
+             6.2.2       CAÑERÍAS DE ACERO............................................................................................... 7
+             6.2.3       ACCESORIOS DE POLIETILENO .............................................................................. 7
+             6.2.3.1 ACCESORIOS UNIDOS POR ELECTROFUSIÓN ..................................................... 7
+             6.2.3.2 ACCESORIOS DE TRANSICIÓN ............................................................................... 7
+             6.2.4       ACCESORIOS DE ACERO ......................................................................................... 7
+             6.2.4.1 JUNTAS AISLANTES MONOLÍTICAS ........................................................................ 7
+             6.2.4.2 BRIDAS........................................................................................................................ 8
+             6.2.4.3 ACCESORIOS ............................................................................................................. 8
+             6.2.5       VÁLVULAS DE BLOQUEO ......................................................................................... 8
+             6.2.5.1 VÁLVULAS DE POLIETILENO ................................................................................... 8
+             6.2.5.2 VÁLVULAS DE ACERO .............................................................................................. 8
+             6.2.5.3 VÁLVULAS A INSTALAR CON EL SERVICIO INTEGRAL ........................................ 8
+             6.2.5.4 VÁLVULAS A INSTALAR SOBRE LÍNEA MUNICIPAL EN REDES DE PE ............... 8
+             6.2.6       REGULADORES ......................................................................................................... 9
+             6.2.7       PROTECCIÓN ANTICORROSIVA .............................................................................. 9
+             6.3         MOVIMIENTO Y ALMACENAMIENTO DE MATERIALES ......................................... 9
+             6.4         DESARROLLO DE LOS TRABAJOS .......................................................................... 9
+             6.4.1       PERMISOS .................................................................................................................. 9
+             6.4.2       VALLADOS Y BALIZAMIENTO ................................................................................. 10
+             6.4.3       ROTURA DE VEREDAS Y PAVIMENTOS ............................................................... 10
+             6.4.4       ZANJEO ..................................................................................................................... 10
+             6.4.5       TAPADA..................................................................................................................... 11
+             6.4.6       TRANSPORTE Y DESFILE ....................................................................................... 12
+             6.4.7       INSTALACIÓN DE LA CAÑERÍA .............................................................................. 12
+             6.4.7.1 TUBERÍA DE POLIETILENO .................................................................................... 13
+             6.4.7.2 CAÑERÍA DE ACERO ............................................................................................... 14
+             6.4.8       INSTALACIÓN DE VÁLVULAS ................................................................................. 14
+             6.4.9       PROTECCIÓN MECÁNICA ....................................................................................... 14
+                                                                                                       CÓDIGO
+                                   ESPECIFICACIÓN                                                     REVISIÓN                       01
+                                      TÉCNICA                                                            HOJA                    3 de 41
+
+             6.4.10 RELLENO, TAPADO Y COMPACTACIÓN DE LA ZANJA DE TUBERÍAS DE
+                    POLIETILENO Y ACERO .......................................................................................... 14
+             6.4.10.1       ELEMENTO DE ADVERTENCIA .......................................................................... 15
+             6.4.11 REPARACIÓN DE VEREDAS ................................................................................... 15
+             6.4.12 REPARACIÓN DE PAVIMENTOS ............................................................................ 18
+             6.4.13 CRUCE DE CALLES ................................................................................................. 19
+             6.4.14 CRUCES ESPECIALES ............................................................................................ 20
+             6.4.15 CONEXIONADO A CAÑERÍAS EXISTENTES ......................................................... 21
+             6.4.16 DESAFECTACIÓN DE CAÑERÍAS ........................................................................... 22
+             6.5        TÉCNICAS DE UNIÓN DE CAÑERÍAS Y ACCESORIOS ........................................ 22
+             6.5.1      UNIÓN DE CAÑERÍAS DE POLIETILENO POR FUSIÓN ....................................... 22
+             6.5.2      SOLDADURA DE CAÑERÍAS DE ACERO ............................................................... 24
+             6.6        SERVICIOS ............................................................................................................... 26
+             6.6.1      CONDICIONES GENERALES .................................................................................. 26
+             6.6.2      INSTALACIÓN ........................................................................................................... 27
+             6.6.2.1 SERVICIOS INTEGRALES CON CONVERSIÓN DE BAJA A MEDIA PRESIÓN.... 27
+             6.6.2.2 SERVICIOS INTEGRALES SOBRE REDES DE MEDIA PRESIÓN ........................ 29
+             6.6.2.3 SERVICIOS ESPECIALES ........................................................................................ 29
+             6.6.2.4 TRAMO ADICIONAL DE CAÑERÍA DE BAJA PRESIÓN BAJO VEREDA .............. 29
+             6.6.2.5 INSTALACIÓN DE REGULADORES ........................................................................ 30
+             6.6.2.6 CORTE DE SUMINISTRO Y CAMBIO DE ALIMENTACIÓN Y/O TRASLADO DE
+                     MEDIDOR .................................................................................................................. 30
+             6.6.2.7 PERFORACIÓN DEL SERVICIO .............................................................................. 35
+             6.7        PROCEDIMIENTOS APLICABLES ........................................................................... 35
+             6.7.1      PROCEDIMIENTO DE SOLDADURA ....................................................................... 35
+             6.8        PRUEBAS .................................................................................................................. 35
+             6.8.1      PRUEBA DE FUGA ................................................................................................... 35
+             6.8.2      PRUEBA DE HERMETICIDAD FINAL ...................................................................... 36
+             6.9        PROTECCIÓN ANTICORROSIVA ............................................................................ 37
+             6.9.1      CAÑERÍAS Y ACCESORIOS ENTERRADOS .......................................................... 37
+             6.9.2      INSTALACIONES AÉREAS ...................................................................................... 37
+             6.9.3      VERIFICACIÓN DEL REVESTIMIENTO................................................................... 37
+             6.9.4      PRUEBA DE AISLACIÓN ELÉCTRICA .................................................................... 37
+             6.9.5      PROTECCIÓN CATÓDICA ....................................................................................... 37
+7    REGISTRO Y ARCHIVO .................................................................................................................. 37
+8    PROYECTO CONSTRUCTIVO ........................................................................................................ 37
+         8.1   PLANOS .................................................................................................................... 37
+             8.2        PROCEDIMIENTOS .................................................................................................. 39
+9    CROQUIS DE UBICACIÓN .............................................................................................................. 39
+10   PLANOS CONFORME A OBRA ....................................................................................................... 41
+11   CONSULTA Y DESCARGA DE DOCUMENTACIÓN DE CAMUZZI ............................................... 41
+                                                                 CÓDIGO
+                        ESPECIFICACIÓN                          REVISIÓN           01
+                           TÉCNICA                                HOJA          4 de 41
+
+1   OBJETO
+
+Establecer las pautas y requisitos bajo las cuales deben ejecutarse las obras de redes de
+distribución.
+
+
+2   ALCANCE
+
+Estas especificaciones son de aplicación tanto en la construcción de redes enteramente
+nuevas como en la modificación total o parcial de las instalaciones existentes.
+
+
+3   AREAS INVOLUCRADAS
+
+Todas las Áreas Técnicas de las Unidades de Negocios y la Gerencia Técnica de Sede Central.
+
+
+4   DOCUMENTACION COMPLEMENTARIA Y/O DE REFERENCIA
+
+NAG 100 Normas Argentinas Mínimas de Seguridad para el Transporte y Distribución de Gas
+        Natural y otros Gases por Cañería
+NAG 108 Normas para revestimiento anticorrosivo de Tuberías y Accesorios
+NAG 109 Normas para almacenamiento de caños de acero revestido y sin revestir.
+NAG-132 Redes para la distribución hasta 4 bar de gases de petróleo y manufacturado. De
+polietileno, acero u otros materiales aprobados por la sociedad (Gas del Estado) - Accesorios
+de transición.
+NAG-140 Sistemas de tuberías plásticas de polietileno (PE) para el suministro de combustibles
+gaseosos Parte 1 Generalidades
+NAG-140 Sistemas de tuberías plásticas de polietileno (PE) para el suministro de combustibles
+gaseosos Parte 2 Tubos
+NAG-140 Sistemas de tuberías plásticas de polietileno (PE) para el suministro de combustibles
+gaseosos Parte 3 Accesorios
+NAG-140 Sistemas de tuberías plásticas de polietileno (PE) para el suministro de combustibles
+gaseosos Parte 4 Válvulas
+NAG-140 Sistemas de tuberías plásticas de polietileno (PE) para el suministro de combustibles
+gaseosos Parte 6 Requisitos mínimos para la instalación
+NAG-138 Redes para la distribución hasta 4 bar de gases de petróleo y manufacturado. De
+polietileno, acero u otros materiales aprobados por la sociedad (Gas del Estado) - Conjunto de
+accesorios de montaje para la instalación del sistema de regulación-medición.
+NAG-165 Normas Mínimas de Seguridad para Obras y Trabajos
+ANSI/ASME B16.5 Bridas
+ANSI/ASME B16.9 Norma dimensional de accesorios para soldar
+ANSI/ASME B16.11 Norma dimensional de accesorios para roscar o para soldar a enchufe
+ASTM A 53 Norma de cañerías de acero al carbono
+ASTM A 105 Norma materiales para bridas y accesorios
+ASTM A 193 Norma materiales de espárragos
+                                                                   CÓDIGO
+                         ESPECIFICACIÓN                           REVISIÓN             01
+                            TÉCNICA                                 HOJA           5 de 41
+
+ASTM A 194 Norma materiales de tuercas
+ASTM A 234 Norma materiales para accesorios forjados
+API 5L Norma de cañerías de acero al carbono
+API 1104 Calificación de soldadores y procedimientos de soldadura.
+IRAM 2184-1 Norma para la protección de estructuras contra descargas eléctricas atmosféricas
+
+
+Las últimas revisiones de las especificaciones, planos tipo, y procedimientos incorporados por
+referencia a las presentes especificaciones y demás vigentes de la Distribuidora.
+
+
+Reglamentaciones vigentes de los Entes de Vialidad, Ferrocarriles, Hidráulica, Riego, a nivel
+nacional, provincial, municipal o privados.
+
+
+Toda otra normativa de carácter nacional, provincial, municipal o privada aplicable.
+
+
+5     DEFINICIONES
+
+A los efectos de la presente Especificación Técnica, serán de aplicación las siguientes
+definiciones:
+
+Línea de captación: cañería que transporta gas desde una instalación de producción a una
+línea de transporte o red de distribución.
+
+Línea de transmisión: cañería o tubería que no sea línea de captación, y que:
+
+         a) transporte gas desde una línea de captación o instalación de almacenamiento a un
+             centro de distribución u otra instalación de almacenamiento;
+         b) opere a una tensión circunferencial del 20% o más de la TFME, o
+         c) transporte gas dentro de un campo de almacenamiento.
+
+Línea de distribución: una cañería que no sea una línea de captación o de transmisión.
+
+
+Línea Municipal: Línea que deslinda la propiedad privada de la vía pública actual o la línea
+señalada por la Municipalidad para las futuras vías públicas.
+
+
+6     DESARROLLO
+
+
+6.1     Condiciones generales
+
+6.1.1    PRESIÓN DE OPERACIÓN
+La presión de diseño de las redes de distribución estará comprendida en el rango de 1.5 a 4
+kg/cm2 según corresponda.
+                                                                       CÓDIGO
+                        ESPECIFICACIÓN                                 REVISIÓN      01
+                           TÉCNICA                                      HOJA       6 de 41
+
+6.1.2 LIBRE CIRCULACIÓN
+La totalidad de los trabajos deberán ser realizados, asegurando la libre circulación de vehículos
+y peatones en garajes y bocacalles.
+
+
+6.2     Materiales
+
+6.2.1    TUBERÍAS DE POLIETILENO
+Las cañerías fabricadas en polietileno deberán ser aptas para trabajar enterradas, construidas
+con materiales que correspondan en un todo de acuerdo con lo especificado por la Norma NAG
+140 parte 2 y toda otra norma o especificación técnica vigente. La relación diámetro - espesor
+(SDR) será:
+.
+                               Material     Diametros         SDR
+                                PE 80         Todos           11
+                                              50 y 63         11
+                                PE 100
+                                              = >90        17.6 u 11
+
+
+Se admitirán solamente las marcas que estén homologadas por organismos de certificación
+autorizados por el ENARGAS y asimismo autorizadas por la Distribuidora y podrán ser
+suministradas indistintamente en bobinas o en tiras, de acuerdo a lo indicado en el cuadro a
+continuación.
+
+                                   Presentación de Cañerías
+                                          de Polietileno
+
+
+                                   Diámetro       Formato
+                                    25 mm
+                                    32 mm
+                                    40 mm          Bobinas
+                                    50 mm
+                                    63 mm
+                                    90 mm          Tiras o
+                                   125 mm          Bobinas
+                                   180 mm
+                                                      Tiras
+                                   250 mm
+
+
+No se deberán utilizar tubos con una antigüedad superior a 24 meses, contados a partir de
+su fecha de fabricación, excepto aquellos que hayan sido revalidados conforme a lo
+indicado en la NAG 140 parte 2, Anexo B. Los tubos que tengan una antigüedad superior a
+los 60 meses no podrán revalidarse.
+                                                                  CÓDIGO
+                        ESPECIFICACIÓN                            REVISIÓN          01
+                           TÉCNICA                                  HOJA          7 de 41
+
+6.2.2 CAÑERÍAS DE ACERO
+Para redes de distribución, las cañerías de acero estarán fabricadas bajo norma ASTM A 53,
+Grado A o API 5L Grado A como mínimo, con extremos biselados para soldar. El espesor de
+las mismas se indica en el siguiente cuadro.
+                                Espesor de cañerías de acero
+                                 para Redes de Distribución
+                                                          Espesor
+                                ∅n            ∅n
+                                                          Minimo
+                                (")          (mm)
+                                                           (mm)
+                               1½             38            3.7
+                                2             51            3.2
+                                3             76            3.6
+                                4             102           4.0
+                                6             152           4.8
+
+
+
+6.2.3   ACCESORIOS DE POLIETILENO
+
+
+6.2.3.1 ACCESORIOS UNIDOS POR ELECTROFUSIÓN
+Cumplimentarán los requerimientos de la Norma NAG-140 Parte 3.
+
+
+Se aceptará cualquier marca de accesorios de electrofusión que cumplan los requisitos de
+fusionabilidad (Capitulo 4 de la Norma NAG 140 Parte 5) con la resina correspondiente a la
+cañería de polietileno a utilizar y estén aprobados por entidades autorizadas por el Enargas.
+
+
+6.2.3.2 ACCESORIOS DE TRANSICIÓN
+Los accesorios de transición acero - polietileno serán tipo monolítico, y estarán de acuerdo con
+la Norma NAG-132.
+
+
+6.2.4   ACCESORIOS DE ACERO
+
+
+6.2.4.1 JUNTAS AISLANTES MONOLÍTICAS
+Serán Serie ANSI/ASME 150.
+
+
+A cada junta aislante monolítica se conectará una vía de chispas tipo OBO BETTERMANN 480
+y se la conectará a una CMP de 4 (cuatro) puntos, según especificación técnica y Plano Tipo
+correspondiente indicados en el anteproyecto de la instalación.
+
+
+Terminado el montaje se deberá verificar la correcta aislación de las juntas mediante la
+utilización del equipo de radiofrecuencia adecuado.
+                                                                 CÓDIGO
+                        ESPECIFICACIÓN                          REVISIÓN           01
+                           TÉCNICA                                HOJA          8 de 41
+
+6.2.4.2 BRIDAS
+Las bridas estarán fabricadas bajo Norma ANSI/ASME B16.5 Serie 150.
+
+
+6.2.4.3 ACCESORIOS
+Los accesorios para soldar estarán fabricados bajo Norma ANSI/ASME B16.9.
+
+
+En su transporte, manipuleo y almacenamiento, todos los accesorios que tengan superficies
+maquinadas o biseladas deberán ser protegidos, cubiertos y colocados sobre soportes,
+evitando su contacto con el suelo.
+
+
+6.2.5   VÁLVULAS DE BLOQUEO
+
+
+6.2.5.1 VÁLVULAS DE POLIETILENO
+Las válvulas de polietileno que se instalen en la red, serán de tipo esféricas, operadas
+manualmente, aptas para trabajar enterradas, fabricadas, inspeccionadas, ensayadas y
+aprobadas de acuerdo con la Norma NAG 140 Parte 4. Serán del mismo diámetro que la
+cañería a las que se instalará.
+
+
+Las mismas presentarán sus extremos compatibles para ser unidos por electrofusión, con tubos
+de polietileno que respondan a la Norma NAG 140 Parte 2 y con accesorios conforme a la
+Norma NAG 140 Parte 3.
+
+
+Las válvulas deberán ser adecuadamente protegidas por el proveedor, a fin de asegurar que
+mantengan la calidad durante el transporte y almacenamiento (Capitulo 11 de la Norma NAG
+140 Parte 4).
+
+
+Deberán instalarse enterradas, siguiendo las instrucciones del Capitulo 13 de la Norma NAG
+140 Parte 6 y operadas a través de extensor y caja de operación en vereda.
+
+
+6.2.5.2 VÁLVULAS DE ACERO
+Las válvulas a proveer serán de acero al carbono, Serie ANSI/ASME 150 y cumplirán con la
+Especificación Técnica SCE-IN-501-0008. A su vez, los ensayos a realizar cumplirán con lo
+definido en el procedimiento SCE-RE-308-0001.
+
+
+6.2.5.3 VÁLVULAS A INSTALAR CON EL SERVICIO INTEGRAL
+Serán válvulas de bloqueo esféricas; se ajustarán a la normativa vigente y estarán aprobadas
+por entidades autorizadas por el Enargas.
+
+
+6.2.5.4 VÁLVULAS A INSTALAR SOBRE LÍNEA MUNICIPAL EN REDES DE PE
+Cuando corresponda instalar válvulas sobre línea municipal, éstas serán de polietileno, se
+ajustarán a la normativa vigente y estarán aprobadas por entidades autorizadas por el Enargas.
+                                                                   CÓDIGO
+                        ESPECIFICACIÓN                            REVISIÓN           01
+                           TÉCNICA                                  HOJA           9 de 41
+
+6.2.6 REGULADORES
+Salvo indicación en el Pliego de Condiciones Particulares, los reguladores a instalar en redes de
+distribución tendrán un caudal de salida nominal mínimo de 6 m3/h, cumplirán con la Norma NAG
+235.
+
+
+6.2.7    PROTECCIÓN ANTICORROSIVA
+Los materiales a utilizar se ajustarán a lo indicado en la Especificación Técnica SCE-PC-501-
+0003 y SCE-PC-306-0001.
+
+
+6.3     Movimiento y almacenamiento de materiales
+
+El transporte, manipulación y almacenamiento de las tuberías y accesorios de polietileno se
+realizará en un todo de acuerdo con lo indicado en el Capitulo 6 de la Norma NAG 140 Parte 6.
+
+
+El transporte y estiba de las cañerías de acero se realizará en un todo de acuerdo con lo
+indicado en la Norma NAG 109, Revisión 1 del año 1986 (DI GE N° 2432).
+
+
+Durante el manipuleo de cañería de acero se deberá tener especial cuidado de no golpearla,
+evitando abolladuras o daños en el bisel y en su protección aislante.
+
+
+La cañería estibada a la intemperie, ya sea de polietileno o de acero, deberá cubrirse con
+mantos de polietileno negro. Esta protección deberá ser permanente y de la suficiente solidez
+para soportar condiciones de viento y lluvia.
+
+
+Las válvulas, accesorios, bridas y todos los materiales que tengan superficies maquinadas o
+biseladas, serán colocados sobre soportes y cubiertos para evitar que estén en contacto con el
+suelo.
+
+
+6.4     Desarrollo de los trabajos
+
+6.4.1    PERMISOS
+Se deberán obtener de la autoridad competente los permisos para la apertura de vereda, calles
+y cierres de tránsito, cumplimentar los requisitos técnicos y administrativos requeridos y abonar
+los aranceles correspondientes.
+
+
+Asimismo se deberá contar con los permisos para cruces especiales, ruta, vías férreas, ríos,
+etc, debiendo cumplimentar todos los requerimientos técnicos solicitados por los entes
+permisionarios y abonar los aranceles correspondientes.
+
+
+Antes del inicio de los trabajos mencionados, se deberá notificar a la autoridad competente la
+fecha de comienzo, forma de ejecución y fecha de terminación de los mismos.
+                                                                  CÓDIGO
+                         ESPECIFICACIÓN                          REVISIÓN           01
+                            TÉCNICA                                HOJA          10 de 41
+
+6.4.2 VALLADOS Y BALIZAMIENTO
+Con anticipación no inferior a 24 hs antes del inicio de los trabajos de rotura de pavimentos,
+veredas y de zanjeo, se deberá señalizar y vallar la zona afectada, en un todo de acuerdo con
+lo que fijen las disposiciones de las autoridades competentes, las presentes especificaciones y
+las Normas NAG 140 Parte 6 y NAG 165.
+
+
+Se instalarán rejillas de seguridad y barandas en todo lugar necesario, en particular en accesos
+peatonales, domiciliarios y de ingreso de vehículos.
+
+
+El balizamiento a efectuar será del tipo eléctrico en 24 Volt, que permita una rápida
+identificación del peligro a distancia prudencial, extensivo a horarios diurnos cuando fuere
+necesario de acuerdo con las condiciones climáticas. No se admitirán balizas de fuego abierto.
+
+
+6.4.3 ROTURA DE VEREDAS Y PAVIMENTOS
+Deberá darse cumplimiento a lo indicado en los Puntos 8.6 y 8.7 de la Norma NAG 140 Parte 6
+y a lo expuesto a continuación.
+
+
+Previo al inicio de las tareas de rotura de veredas y pavimentos, se deberán tener localizados
+los servicios e instalaciones subterráneas a través de la realización de sondeos y de pedidos
+de interferencias con instalaciones subterráneas de otras empresas prestadoras de servicios
+públicos.
+
+
+Se ejecutarán todos los sondeos necesarios para determinar la posición y profundidad de las
+cañerías y servicios existentes. En cualquier caso se realizará un mínimo de 3 (tres) sondeos
+por cuadra.
+
+
+La rotura del pavimento se ejecutará únicamente en caso de último recurso (pozos para
+conexión y/o corte de cañerías).
+
+
+Deberán respetarse los requerimientos municipales para las instancias de rotura, zanjeo y
+reparación de veredas y pavimentos.
+
+
+Se utilizarán volquetes para evacuar diariamente los escombros de obra.
+
+
+6.4.4 ZANJEO
+Deberá darse cumplimiento a lo indicado en el Apartado 8.8 Excavación y en la Tabla N° 13 de
+la Norma NAG 140 Parte 6 y a lo expuesto a continuación.
+
+
+Previo al inicio de las tareas de zanjeo, se deberá:
+
+
+a)   En todos los casos, independientemente de la exigencia del Municipio, ubicar cajones o
+     bolsas apropiadas para contener totalmente el material extraído.
+b)   Tomar las medidas necesarias para evitar roturas o deterioro en raíces de árboles, líneas
+     telefónicas y eléctricas, cañerías de agua, gas, cloacas, desagües y otras.
+                                                                      CÓDIGO
+                         ESPECIFICACIÓN                              REVISIÓN            01
+                            TÉCNICA                                    HOJA           11 de 41
+
+c)   Tomar las previsiones necesarias a fin de que la tierra extraída, no obstruya el
+     escurrimiento de los desagües pluviales y se respeten las distancias mínimas entre talud y
+     borde de zanja, de acuerdo con lo estipulado en la Norma NAG 165.
+d)   Se deberán tomar todas las precauciones necesarias a los efectos de no afectar la
+     cimentación de las estructuras existentes. Si impedimentos técnicos insalvables en terreno,
+     obligan a que la zanja resulte próxima a la propiedad privada, y principalmente frente a
+     construcciones antiguas, se deberán ultimar los cuidados a los efectos de preservar la
+     misma, y de ser necesario la Contratista solicitará la colaboración de un especialista en la
+     materia para corroborar que las excavaciones que se están llevando a cabo no afectarán la
+     cimentación de la misma, los honorarios del especialista deberán ser costeado por la
+     Contratista.
+
+
+La cañería deberá conservar una distancia mayor de 0,30 metros a cualquier obstáculo
+permanente que se encuentre (poste, columna, base de hormigón, tubería de gas, cloacas,
+línea telefónica y líneas eléctricas hasta 1 kV). Si la tensión de la línea eléctrica fuera superior,
+se deberá instalar una pantalla protectora o tomar un retiro mínimo de 0,50 metros.
+
+
+En los lugares en que deban efectuarse uniones de cañerías en zanja o fusionado de
+accesorios, empalmes, etc., se construirán pozos de las dimensiones necesarias que permitan
+el libre y correcto accionar del personal, máquinas y herramientas a utilizar.
+
+
+Si en algún punto o sector fuera necesario superar la profundidad normal, se deberá considerar
+el tipo de terreno y efectuar cortes laterales de acuerdo con su talud o en su defecto efectuar
+apuntalamientos o tablestacados. Además de lo indicado se tendrá en cuenta las
+recomendaciones de la Norma NAG 165 y también de la Norma NAG 140 Parte 6 para
+cañerías de polietileno.
+
+
+No deberán mezclarse los materiales extraídos en el zanjeo.
+
+
+Previo a la instalación de la cañería, se deberá nivelar el piso de zanja en los lugares donde se
+considere necesario a fin de proporcionar un asentamiento uniforme a la misma.
+
+
+6.4.5 TAPADA
+Para cañerías y servicios de polietileno, la tapada mínima será la indicada en la Tabla Nº 13 del
+Apartado 8.9 de la Norma NAG 140 Parte 6, debiéndose dar cumplimiento a las demás
+consideraciones vertidas en dicho Apartado.
+
+Para el caso de cañerías de acero, la tapada mínima será la indicada en el item b) de la
+SECCIÓN 327 – “TAPADA” de la ADENDA N° 2 - Año 2016 de la Norma NAG 100.
+
+Si a causa de interferencias o exigencias de Entes Permisionarios fuese necesario dejar una
+tapada mayor, se respetará ésta última.
+
+
+Los cruces especiales (rutas, vías, cursos de agua, etc.) deberán cumplir con lo indicado en el
+Capitulo 17 de la Norma NAG 140 Parte 6 y el Apartado 6.4.14 de la presente Especificación
+Técnica.
+                                                                   CÓDIGO
+                        ESPECIFICACIÓN                            REVISIÓN           01
+                           TÉCNICA                                  HOJA          12 de 41
+
+En veredas y calzadas definitivas la tapada se medirá desde el nivel superior de cordón y
+desde la parte más baja del pavimento respectivamente.
+
+
+Para veredas y calzadas de tierra, la Contratista tramitará y obtendrá de la autoridad
+competente el estudio de niveles que exista para la zona de trabajo, constituyéndose éste en
+un condicionamiento adicional a los efectos de la determinación de la tapada mínima.
+
+
+Si por razones de fuerza mayor, fuera necesario instalar tramos de cañerías con tapadas
+menores a las indicadas se aplicará protección mecánica adicional la que deberá ser aprobada
+por la Distribuidora.
+
+
+Debe preverse la instalación de cañerías y servicios asociados en forma conjunta evitando que
+queden pozos y zonas sin reparar para conexiones futuras, para lo que se establecerá
+previamente una metodología en la memoria descriptiva del proyecto constructivo. Si fuera
+necesario se preverá la sectorización de la red, para asegurar un trabajo más ordenado y
+seguro.
+
+
+6.4.6 TRANSPORTE Y DESFILE
+Durante el manipuleo de cañería de acero se deberá tener especial cuidado de no golpearlos,
+evitando abolladuras o daños en el bisel de los extremos de los mismos y en su protección
+aislante. El transporte y la estiba de los caños se realizará en un todo de acuerdo con lo
+indicado en la Norma NAG-109.
+
+Para el transporte y desfile de la tubería de polietileno desde el obrador hasta la línea, se
+deberá respetar lo establecido en los Aparatados 6.2 y 9.1 de la Norma NAG 140 Parte 6, así
+como los lineamientos que a continuación se exponen.
+
+
+En el caso de utilizarse cañería de polietileno de Ø 125 mm en bobinas, será obligatorio el
+debobinado de la misma previamente a su instalación, utilizando el equipo de debobinado
+apropiado, a fin de asegurar el correcto enderezamiento de la misma. Para esta tarea se
+deberá utilizar un debobinador vertical.
+
+
+6.4.7   INSTALACIÓN DE LA CAÑERÍA
+Al momento de bajar la cañería, el borde de la zanja (0,20 metros de ambos lados) estará libre
+de tierra o cualquier otro objeto.
+
+
+En zonas arboladas, se evitará asentar la cañería sobre raíces, las que no podrán ser cortadas
+o dañadas; en las zonas en la que la cañería se encuentre cercana a raíces y el crecimiento de
+las mismas pueda estrangular la cañería se deberá colocar protección mecánica (media caña
+de cemento) a la cañería de PE.
+
+
+Para cañerías de PE, la distancia a Línea Municipal (LM) a la que se instalará la cañería será la
+indicada en el Apartado 8.5 de la Norma NAG 140 Parte 6.
+
+Para cañerías de acero la distancia a Línea Municipal (LM) a la que se instalará la cañería será
+la indicada en item c) del Apartado 3 de la SECCIÓN 325 – “ESPACIAMIENTO ENTRE
+                                                                      CÓDIGO
+                         ESPECIFICACIÓN                              REVISIÓN            01
+                            TÉCNICA                                    HOJA           13 de 41
+
+ESTRUCTURAS Y OTRAS DISTANCIAS” de la ADENDA N° 2 - Año 2016 de la Norma NAG
+100.
+
+Si por impedimentos perfectamente justificados, se deba instalar la cañería a una
+distancia menor a la indicada por la Norma, se deberá realizar un pedido de excepción
+según lo indicado en el instrucción de trabajo ISM 142.
+
+Si al momento de la realización del tendido la LM no se encontrara definida, un agrimensor
+matriculado deberá certificar su ubicación.
+
+
+Se priorizará en el tendido mantener una línea recta sin quiebres, para facilitar su posterior
+mantenimiento y ubicación.
+
+
+Si el fondo de la zanja presentara objetos que pudieran dañar la cañería y fueran de difícil
+remoción (tosca, piedra, etc.) se deberá colocar un manto de tierra fina o tamizada libre de
+desperdicios de 0,15 a 0,20 m de espesor, que será debidamente compactado, sobre el que se
+colocará la cañería, cubriendo a continuación la misma con otro manto de tierra fina.
+
+
+6.4.7.1 TUBERÍA DE POLIETILENO
+Deberá cumplimentarse lo indicado en el Capitulo 12 de la Norma NAG 140 - Parte 6 para la
+instalación de cañería de polietileno, así como los lineamientos que a continuación se exponen.
+
+
+Si las condiciones del fondo, las paredes y el costado de la zanja no son las requeridas (suelo
+rocoso, relleno, etc.) y no obstante haber colocado el manto de tierra seleccionado, se deberán
+utilizar almohadillas y rodillos para la instalación de la tubería por arrastre. La cañería deberá
+instalarse zigzagueando en el plano horizontal, a fin de permitir la variación de longitud por
+cambio de temperatura, sin transmitir esfuerzos en los puntos fijos.
+
+
+En todos los casos, las uniones entre tramos de cañerías de polietileno con accesorios, se
+realizarán exclusivamente por electrofusión.
+
+
+Las uniones entre cañerías de polietileno de Dn 125 mm o mayores, solo para una conexión a
+tope, podrán realizarse por termofusión con máquina automática. En el caso de uniones por
+termofusión a tope de tubos de distintas marcas, se admitirá la misma, si la unión de éstos fue
+ensayada y aprobada (compatibilidad de fusión) según lo indicado en la norma NAG-140 Parte
+5. Caso contrario la unión solo podrá realizarse mediante la utilización de un accesorio de
+electrofusión.
+
+
+En el caso que el replanteo de obra permita la instalación de la tubería de polietileno por el
+método de perforación dirigida, la Contratista deberá cumplir los requisitos indicados en el
+apartado 12.2 de la norma NAG-140 Parte 6. En estos casos la instalación de señalizaciones al
+nivel de superficie, consistirán en la instalación de una baldosa de advertencia según plano tipo
+SCE-IN-101-0007.
+
+
+Sea que la instalación se realice por el tendido en zanja o utilizando la técnica de perforación
+dirigida, para la localización en el futuro de la tubería de red, sea esta de acero o polietileno, se
+utilizará el método de coordenadas georreferenciadas y referencias a puntos fijos permanentes,
+                                                                   CÓDIGO
+                        ESPECIFICACIÓN                            REVISIÓN           01
+                           TÉCNICA                                  HOJA        14 de 41
+
+para tal efecto la Contratista deberá dar cumplimiento a lo indicado en la Especificación
+Técnica SCE-PC-511-0004.
+
+
+6.4.7.2 CAÑERÍA DE ACERO
+Se verificará que la protección mecánica, revestimiento de polietileno, del ducto no se dañe
+durante el proceso de bajada de la cañería dentro de la zanja, de producirse alguna rotura se
+deberá proceder a su reparación inmediata.
+
+
+La reparación se realizará siguiendo los lineamientos del Apartado 7.4 de la especificación
+técnica SCE-PC-211-0003.
+
+
+6.4.8   INSTALACIÓN DE VÁLVULAS
+Las válvulas de bloqueo serán instaladas de modo tal de no transmitir a la cañería esfuerzos de
+flexión, torsión, corte y otros secundarios que puedan generarse por su accionamiento.
+
+
+En todas las válvulas enterradas deberá colocarse un extensor que permita accionarlas
+manualmente desde la superficie, desde el exterior de la caja de operación, según los
+lineamientos de los Planos Tipo SCE-PR-105-1500 y SCE-PR-105-1501.
+
+
+Las válvulas serán del mismo diámetro que la cañería sobre la que sean instaladas.
+
+
+Sobre cañerías de PE y salvo indicación contraria indicada en los Planos de Anteproyecto o
+Pliego de Condiciones Particulares, se utilizarán válvulas de polietileno que respondan a la
+Norma NAG 140 Parte 4. Su forma de fijación será tal que permita resistir esfuerzos siguiendo
+los lineamientos del Plano Tipo SCE-PR-105-1500 y lo indicado en la Capitulo 13 de Norma
+NAG 140 Parte 6, previendo fijaciones o zunchos entre la válvula y su base de hormigón. Las
+válvulas se unirán a la cañería mediante cuplas de electrofusión
+
+
+No se utilizarán válvulas de acero en reemplazo de válvulas de polietileno.
+
+
+Para cañerías de acero, las válvulas a instalar serán de acero, esféricas Serie 150, enterradas
+con extensor, bridadas, según Especificación Técnica SCE-IN-501-0008.
+
+
+6.4.9   PROTECCIÓN MECÁNICA
+En las entradas de vehículos pesados (corralones de materiales, fábricas, estaciones de
+servicio, etc.) o cuando la cañería deba ser instalada con una tapada menor a la mínima
+establecida en la Tabla N° 13 de la Norma NAG 140 Parte 6, deberá construirse una losa de
+protección de hormigón armado, cuya memoria de cálculo deberá ser sometida a la aprobación
+de la Distribuidora.
+
+
+6.4.10 RELLENO, TAPADO Y COMPACTACIÓN DE LA ZANJA DE TUBERÍAS DE POLIETILENO Y ACERO
+Se dará cumplimiento a lo expresado en el Capitulo 14 de la Norma NAG 140 Parte 6 y a las
+consideraciones vertidas a continuación.
+                                                                   CÓDIGO
+                        ESPECIFICACIÓN                            REVISIÓN           01
+                           TÉCNICA                                  HOJA          15 de 41
+
+Instalada la cañería de polietileno, se realizará la tapada con tierra seleccionada hasta 0,20 m
+por sobre la misma, compactándose cuidadosamente en forma manual.
+
+
+Cuando la instalación de la tubería se realiza a cielo abierto, antes de concluir el relleno y
+compactación de la zanja se debe instalar en forma continua un elemento de advertencia que,
+ante la eventual intervención de terceros por excavación, advierta la presencia de tubería de
+gas enterrada.
+
+
+Este elemento de advertencia deberá cumplimentar con lo indicado en el Apartado 15.1 de la
+Norma NAG 140 Parte 6, mientras que sus requisitos mínimos técnicos y de calidad deberán
+cumplir con lo indicado en el Anexo B de dicha norma.
+
+
+Cuando la tubería sea instalada por perforación dirigida, túnel-hombre o túnel-máquina que no
+permitan la instalación del elemento de advertencia, se deberá alertar la presencia de la tubería
+conductora de gas mediante la instalación de señalizaciones al nivel de superficie, las que
+consistirán en una baldosa de advertencia según plano tipo SCE-IN-101-0007.
+
+
+El tapado de la zanja se hará dejando al final un sobre nivel de tierra de 0,10 m que deberá ser
+también apisonado. Este sobre nivel de tierra deberá dejarse por un espacio de tiempo que
+respete lo indicado en la Tabla 11 de la Norma NAG 140 Parte 6, para permitir que se complete
+el asentamiento de la misma; antes de ejecutarse la reparación de la vereda o pavimento.
+
+
+Se tendrá cuidado que la compactación se efectúe de manera tal de evitar introducir tensiones
+externas, que se produzcan, ya sea por causa del mismo terreno o por mal asentamiento de la
+cañería.
+
+
+La tierra sobrante del tapado de zanja deberá ser retirada de inmediato, tan pronto como haya
+sido repuesto el contrapiso de la vereda o la base del pavimento.
+
+
+6.4.10.1 ELEMENTO DE ADVERTENCIA
+La malla de advertencia deberá cumplir con lo indicado en el Anexo B de la Norma NAG 140
+Parte 6.
+
+
+Tanto el elemento de advertencia como la banda, deberán estar aprobadas por la Distribuidora
+y las entidades autorizadas por el Enargas.
+
+
+6.4.11 REPARACIÓN DE VEREDAS
+El contrapiso y la colocación de mosaicos deberán ejecutarse dentro de los plazos indicados en
+la Tabla 11 de la Norma NAG 140 Parte 6 luego de tapada la zanja o pozo.
+
+
+Estos plazos rigen siempre y cuando la Municipalidad no exija otros debiendo considerarse el
+más exigente.
+
+
+La aprobación final de la reparación será dada por el Municipio, Inspección u organismo
+competente en cada caso.
+                                                                   CÓDIGO
+                         ESPECIFICACIÓN                            REVISIÓN          01
+                            TÉCNICA                                 HOJA          16 de 41
+
+
+
+No se aceptará la reparación discontinua de veredas en la línea de la zanja. Para evitarlo, la
+Contratista deberá demostrar a la Inspección el acopio o reserva de compra de baldosas
+necesarias para la zona que solicite intervenir. No se certificará ninguna reparación de veredas
+en una cuadra hasta tanto se haya reparado la totalidad de las veredas de la misma dañadas
+con motivo de la obra.
+
+
+Una vez asentada la tierra de la zanja, se procederá a ejecutar el contrapiso para las veredas,
+que deberá ser de 10 cm de espesor con el siguiente dosaje:
+
+
+       -   ¼ parte de cemento.
+       -   1 parte de cal hidráulica.
+       -   4 partes de arena gruesa.
+       -   6 partes de cascote.
+
+
+Los materiales indicados serán bien mezclados, convenientemente humedecidos y cuando se
+proceda a su colocación deberán ser bien apisonados.
+
+
+Como alternativa podrá utilizarse la siguiente mezcla, con las proporciones indicadas:
+
+
+       -   ¼ parte de cemento.
+       -   1 parte de cal hidráulica.
+       -   3 partes de arena gruesa.
+       -   3 partes de polvo de ladrillo.
+       -   10 partes de cascote de ladrillo.
+
+
+Se deberán respetar los niveles y las pendientes de las veredas.
+
+
+Cuando hubiera diferencias de nivel entre una vereda a reparar y una contigua existente, la
+transición se hará mediante planos inclinados y sólo cuando la Inspección lo juzgue
+imprescindible, por escalones, en cuyo caso se deberán adoptar las medidas de seguridad que
+sean necesarias.
+
+
+Sobre el contrapiso terminado y bien fraguado, podrán ser colocados los mosaicos de la
+vereda, que deberán ser de igual calidad, forma, color y dibujo que los retirados, y deberán
+tener un estacionamiento mínimo de 20 días después de su fabricación.
+
+
+La mezcla para la colocación de los mosaicos será:
+
+
+       -   1/8 parte de cemento.
+       -   1 parte de cal hidráulica.
+       -   4 partes de arena mediana.
+
+
+Como alternativa podrá emplearse la siguiente mezcla:
+                                                                  CÓDIGO
+                         ESPECIFICACIÓN                           REVISIÓN         01
+                            TÉCNICA                                HOJA         17 de 41
+
+
+
+       -   ½ parte de cemento.
+       -   1 parte de cal hidráulica.
+       -   3 partes de arena gruesa.
+       -   2 partes de polvo de ladrillo.
+
+
+El cemento, la cal y la arena deben ser de buena calidad. Previa colocación del mosaico sobre
+la mezcla, se deberá espolvorear cemento en cantidad adecuada.
+
+
+Una vez colocados los mosaicos en su lugar se deberá llenar los intersticios de los mismos con
+una lechada de cemento puro, que deberá eliminarse antes que el cemento fragüe. La lechada
+será lo suficientemente fluida como para asegurar su escurrimiento en las juntas.
+
+
+En la colocación de los mosaicos deberá emplearse personal especializado que ejecute el
+trabajo con todas las reglas del buen arte. De ser necesario y para respetar el mismo paso que
+los mosaicos extraídos, se deberán hacer baldosas a medida.
+
+
+Se utilizará como terminación una lechada de 0,5 kg de cemento por metro cuadrado de
+vereda, debiendo limpiarse con arena perfectamente la superficie terminada. Esta lechada será
+de material coloreado de acuerdo al color de las baldosas.
+
+
+El corte de los mosaicos o baldosones será efectuado a máquina.
+
+
+Para la colocación de baldosas de goma o paños de goma de cualquier medida, se utilizarán
+pegamentos habituales en plaza debiendo ser sometidos a la aprobación de la Inspección.
+
+
+Para los casos de aceras especiales (entradas de vehículos, rampas, etc.) no incluidas en
+estas Especificaciones Técnicas se deberá efectuar la reparación con materiales similares a los
+existentes en el lugar. Únicamente la Inspección podrá autorizar cambios en los materiales.
+
+
+Siempre se deberá ejecutar sobre el contrapiso un alisado de concreto de 2 cm de espesor,
+que debe ser completamente liso sin imperfecciones de ningún tipo, y hecho con una parte de
+cemento portland y tres partes de arena.
+
+
+Deben respetarse el tipo y material de las juntas de dilatación, teniendo que ser reparadas o
+reconstruidas de igual forma que lo estaban al comienzo de la obra.
+
+
+La protección de la vereda reparada debe efectuarse de acuerdo con las normas municipales y
+la normativa de seguridad vigentes.
+
+
+La aprobación de las reparaciones será dada por la Inspección y el Municipio o conforme del
+propietario/rentista, según se establezca en cada caso.
+                                                                     CÓDIGO
+                         ESPECIFICACIÓN                             REVISIÓN            01
+                            TÉCNICA                                   HOJA           18 de 41
+
+En el caso de efectuar tareas sobre canteros con césped, el mismo deberá ser restituido a su
+condición original una vez terminados los trabajos. No obstante ello, no se certificarán rotura y
+reparación de veredas en este caso.
+
+
+6.4.12 REPARACIÓN DE PAVIMENTOS
+Sin perjuicio de plazos menores que puedan establecer los correspondientes municipios, la
+reparación de los pavimentos deberá ejecutarse dentro de los plazos indicados en la Tabla Nº
+11 de la Norma NAG 140 Parte 6.
+
+
+En todos los casos la reparación del pavimento se efectuará en un todo de acuerdo con las
+normas municipales, en lo que atañe a forma de reparación, materiales a emplear y
+dosificación de los mismos. La aprobación final de la reparación será dada por el Municipio,
+Inspección u organismo competente en cada caso.
+
+
+Salvo en casos especiales indicados por la Inspección, se tratará de que tanto la zona
+reparada como la inmediata existente posean una conformación estructural similar,
+constituyendo una superficie única sin resaltos ni depresiones.
+
+
+En todos los casos se recortarán por aserrado mecánico los bordes del pavimento existente
+previo a la rotura del mismo. Dicho corte será vertical y de una profundidad no menor a 7 cm.
+
+
+La Distribuidora no autorizará el cierre definitivo de las aperturas si las subrasante final y capas
+intermedias no reunieran el grado de compactación tal, que asegure contra posibles
+hundimientos posteriores.
+
+
+La compactación será cuidadosamente realizada con pisones vibratorios o de percusión, en
+capas sucesivas de no más de 30 cm de espesor.
+
+
+Los materiales a utilizar deben ser de primera calidad, y ajustarse a las especificaciones
+técnicas municipales. No obstante, y a fin de establecer pautas de calidad, los materiales
+deben cumplir con las siguientes características:
+
+
+a)   El cemento portland será de marca probada del denominado de “fragüe normal”. Cuando
+     se requiera una rápida habilitación al tránsito será del tipo denominado “de fragüe rápido”.
+b)   La arena debe ser silícea, bien limpia, y el porcentaje máximo de arcilla y otros cuerpos
+     extraños será de 4%. Deberá estar libre de impurezas orgánicas. En caso de duda se
+     realizará un ensayo colorimétrico de Abrams Hardar y deberá estar dentro del Tipo 2, color
+     azafrán como máximo según Norma ASTM, Designación 0-40-33.
+A fin de cumplimentar la granulometría exigida, la Distribuidora podrá autorizar el uso de arena
+     granítica o de tipo oriental para ser mezclada.
+c) La piedra partida debe ser granítica o cuarcítica, tener una resistencia a la compresión no
+     menor a 500 kg/cm2 y una resistencia al desgaste menor al 40%. Se admitirá un máximo
+     de 20 % en peso de piedra en forma de lajas, considerándose lajas a aquéllas en las
+     cuales la relación entre dimensiones mayor y menor sea de 0,20.
+                                                                    CÓDIGO
+                         ESPECIFICACIÓN                             REVISIÓN           01
+                            TÉCNICA                                   HOJA          19 de 41
+
+d)   El canto rodado que se use debe ser limpio, libre de arcilla y material adherido. Tampoco
+     contendrá restos orgánicos, y deberá tener una buena curva granulométrica que asegure
+     varios tipos de tamaños en sus partículas.
+e)   El agua que se utilice debe ser limpia, libre de sales, grasas y otras materias extrañas.
+f)   La cal hidráulica debe ser de buena calidad y de marca reconocida.
+g)   Debe preverse que las juntas de dilatación sean de 0,5 a 1 cm de ancho a los efectos de
+     permitir el escurrimiento de la brea asfáltica caliente. Este ancho podrá lograrse por
+     aserrado del hormigón terminado o por colocación previa de separadores removibles
+     (telgopor, madera, etc.)
+     Las juntas de dilatación premoldeadas estarán constituidas por betún asfáltico incorporado
+     a una textura fibrosa imputrescible no deformable por manipuleo común en tiempos
+     calurosos y no quebradiza en tiempos de frío. Reducida por compresión a 2/3 de su
+     espesor original debe recuperar no menos del 90% del mismo en el término de 12 horas de
+     suprimida la carga.
+     El espesor de las juntas premoldeadas será de 15 cm con una tolerancia en más o en
+     menos del 10 %.
+Se deberá prever con posterioridad al llenado con brea, esparcir talco o cal sobre la junta para
+    evitar el ensuciar las calles al paso de vehículos.
+h) El bitumen asfáltico será obtenido por reducción de crudos nacionales al vacío y vapor sin
+    tratamiento correctivo de ninguna especie. Sus características deben ser:
+     •    Densidad (20 ºC): mayor a 0,99
+     •    Penetración (25 ºC - 100 g - 5 seg): 70 a 100
+     •    Ablandamiento (anillo y esfera): 45 ºC - 52 ºC
+i)   Los aditivos que se utilicen podrán ser de origen calcáreo o granítico.
+j)   La pintura asfáltica que se utilice como adhesivo de superficie bituminosa en contacto, será
+     asfalto diluido del tipo denominado ER1 o ER2.
+k)   Los adoquines de granito o granitullo deben ser de óptima calidad, sin exceso de mica, ni
+     color amarillento o blancuzco, y debe tener una resistencia al desgaste determinada por el
+     ensayo Los Angeles menos al 40%.
+
+
+6.4.13 CRUCE DE CALLES
+Todo cruce de calle pavimentada se realizará por perforación a mecha, por punzado u otro
+método similar.
+
+
+Se debe alertar la presencia de la tubería conductora de gas mediante la instalación de
+señalizaciones al nivel de superficie, las que deben consistir en una baldosa de advertencia
+según plano tipo SCE-IN-101-0007.
+
+
+Si los trabajos necesarios para la realización del cruce alteraran el uso normal de la calzada, se
+deberán elaborar procedimientos específicos de trabajo y señalamiento, los que deberán ser
+sometidos a la aprobación de la Distribuidora.
+                                                                  CÓDIGO
+                        ESPECIFICACIÓN                            REVISIÓN            01
+                           TÉCNICA                                 HOJA          20 de 41
+
+En casos excepcionales donde por causas de las características del terreno o la presencia de
+obstáculos insalvables, se haga necesaria la rotura del pavimento, se deberá disponer para ello
+del permiso Municipal.
+
+
+6.4.14 CRUCES ESPECIALES
+Se considerarán cruces especiales los correspondientes a rutas, vías de ferrocarril, ríos,
+arroyos, canales, etc.
+
+
+Previo a la realización de los mismos deberán presentarse los proyectos constructivos
+correspondientes y deberán obtenerse de las autoridades las autorizaciones pertinentes. Las
+construcciones respectivas se realizarán cumplimentando todos los requisitos exigidos por los
+entes permisionarios.
+
+Los cruces especiales se pueden realizar con o sin caño camisa conforme a los requisitos
+exigidos por la autoridad competente que otorgue el permiso.
+
+En caso de ser ejecutado sin caño camisa la instalación debe ser diseñada de manera tal de
+soportar las cargas externas a la que será expuesta.
+
+
+Siempre que se disponga de la previa aprobación de la correspondiente Dirección de Vialidad,
+sea ésta Nacional o Provincial, los cruces de ruta podrán realizarse sin caño camisa.
+
+
+•   Para Acero se respetará lo establecido en la NAG 100 para este tipo de cruces, siguiendo
+    los lineamientos de la última revisión del Plano Tipo SCE-PR-113-1005.
+•   Para Polietileno se respetará lo establecido en la NAG 140 parte 6.
+
+
+A la fecha de la emisión de la presente especificación, se encuentran aprobados los cruces de
+ruta de cañería de acero sin caño camisa en: Dirección Nacional de Vialidad y Dirección
+Provincial de Vialidad de la Provincia de Chubut.
+
+
+Cuando los cruces de ruta deban realizarse con caño camisa, así como para todo cruce de
+vías, la tubería de polietileno o acero, será protegida con caño camisa de acero, según lo
+establecido en los Planos Tipo SCE-PR-113-0007 ó SCE-PR-113-0008 respectivamente en lo
+referente a dimensiones, venteos y materiales, prestándose especial atención al sellado del
+caño camisa.
+
+
+El cruce de ruta o vía férrea se realizará tan perpendicularmente como sea posible.
+
+
+En el caso de cruces realizados con caño camisa, el tubo de conducción se mantendrá
+separado del caño camisa mediante espaciadores. Debiendo realizarse el mismo de acuerdo
+con los Planos Tipo SCE-PR-113-0007 ó SCE-PR-113-0008 según corresponda. La protección
+aislante del caño camisa, cumplirá con lo establecido en la Especificación Técnica SCE-PC-
+501-0003
+
+
+En el caso de cruces realizados sin caño camisa, deberá contemplarse el efecto abrasivo que
+se producirá sobre la protección aislante de la cañería de acero o directamente sobre la
+superficie de la cañería de polietileno, debiéndose tomar los recaudos correspondientes a los
+                                                                   CÓDIGO
+                        ESPECIFICACIÓN                             REVISIÓN           01
+                           TÉCNICA                                  HOJA            21 de 41
+
+efectos de preservar la superficie externa del ducto, dichas medidas deberán explicitarse en el
+proyecto constructivo.
+
+
+Cuando se realice el cruce a "cielo abierto", el relleno de la zanja deberá compactarse hasta
+alcanzar densidades semejantes a las del terreno adyacente.
+
+
+El diámetro de la perforación a realizar por mecha, torpedo o por perforación dirigida, en lo
+posible no debe exceder los 10 cm del diámetro exterior del caño-camisa o de la tubería de
+conducción, si el cruce se realiza sin caño-camisa.
+
+
+Se podrá aplicar la técnica de perforación dirigida para efectivizar los cruces especiales
+incluyendo canales, arroyos, etc. En todos los casos los entes permisionarios deberán permitir
+el uso de esta metodología.
+
+
+En los casos de cruce de ríos, arroyos, zonas pantanosas o anegadizas, los cruces podrán
+realizarse:
+
+
+a)   Con acero, se podrá utilizar para el cruce cualquiera de las 2 alternativas:
+
+
+       •   A cielos abierto con cañería contrapesada, debiendo cumplir con el plano tipo SCE-
+           PR-113-1004 y presentar para su aprobación ante la Distribuidora el cálculo de
+           flotabilidad.
+       •   Con perforación dirigida. La mínima tapada será de 2.50 m respecto del lecho. Se
+           deberá cumplir con lo indicado en Apéndice G-15A de la Norma NAG 100.
+b)   Con polietileno, solo se permitirá el cruce con perforación dirigida, siendo la tapada
+     mínima de 2.50 m respecto del lecho. Se deberá cumplir con lo indicado en el Apartado
+     12.2 de la Norma NAG 140 Parte 6 y el Apéndice G-15B de la Norma NAG 100.
+
+
+La tapada mínima en cruces especiales (rutas, vías, cursos de agua, etc.) será de 2 metros
+respecto del nivel de ruta, vía o lecho según planos tipo de la Distribuidora, salvo que el ente
+permisionario exija una tapada mayor.
+
+
+A ambos lados del cruce se deberán colocar señales de advertencia según plano tipo SCE-SE-
+103-0004 (zonas urbanas) y SCE-SE-103-0005 (campo).
+
+
+6.4.15 CONEXIONADO A CAÑERÍAS EXISTENTES
+Previo al inicio de los trabajos destinados a la realización de las conexiones a las mismas, las
+cañerías existentes deberán ser localizadas, debiendo realizar todos los trabajos que resulten
+necesarios a tal fin, entre ellos, sondeos, detección, medición de diámetro y espesor, etc.
+
+
+Como paso previo a la realización de la conexionado a cañerías existentes, se deberá elaborar
+un plano en el que se indiquen la totalidad de los materiales requeridos para la efectivización
+de la conexión y que será sometido a la aprobación de la Distribuidora.
+                                                                  CÓDIGO
+                        ESPECIFICACIÓN                           REVISIÓN           01
+                           TÉCNICA                                 HOJA          22 de 41
+
+Todas las soldaduras requeridas para llevar a cabo el conexionado con cañerías existentes
+serán ejecutadas por la Contratista.
+
+
+Todos los trabajos y la provisión de la totalidad de los materiales necesarios serán a cargo de
+la Contratista, con la única excepción de los equipos para las perforaciones u obturaciones de
+la cañería en servicio que serán provistos por la Distribuidora.
+
+
+Las trabajos de perforación u obturación de cañerías bajo presión que sea necesario realizar
+serán efectuadas por operadores de la Distribuidora; debiendo la Contratista suministrar e
+instalar (soldar) los accesorios necesarios y prestar la ayuda de gremio y de terminación de
+trabajos e instalación (movimientos de suelo, tablestacados, desagote de pozos y zanjas, izaje
+y movimiento de equipos, conexionado, revestimiento, etc.).
+
+
+Previo a efectuar la perforación de redes de acero, ya sea para la realización de una derivación
+o una obturación temporaria, la Contratista deberá someter a una prueba neumática los
+conjuntos de accesorios soldados sobre la cañería, a los efectos de asegurar la resistencia y
+hermeticidad de los mismos. Dicha presión de prueba será igual a la presión de operación de la
+cañería, al momento de la prueba.
+
+
+La Contratista deberá presentar los Procedimiento de Pruebas de los Conjuntos y Válvulas,
+para someterlos a consideración de la Distribuidora, para su aceptación.
+
+
+En el caso de las válvulas esféricas de bloqueo, previo a su montaje se deberá realizar una
+prueba de la misma, la que deberá seguir los lineamientos de la especificación técnica SCE-
+RE-308-0001.
+
+
+6.4.16 DESAFECTACIÓN DE CAÑERÍAS
+La desvinculación de cañerías de red de distribución cuya presión no sea mayor a 4 Kg/cm2,
+incluyendo las tareas de inertización, corte y abandono o retiro de las mismas, deberá seguir
+los lineamientos del procedimiento SCE-CO-302-0001.
+.
+6.5     Técnicas de unión de cañerías y accesorios
+
+6.5.1    UNIÓN DE CAÑERÍAS DE POLIETILENO POR FUSIÓN
+A los efectos de realizar uniones satisfactorias entre tubos y accesorios se deberá tener en
+consideración lo indicado en el ítem j) del Apartado 9.2.1 de la Norma NAG 140 Parte 6 y el
+ítem i) del Apartado 9.3.2 de dicha Norma NAG 140 Parte 6.
+
+
+Previo a la utilización de máquinas de electrofusión o termofusión automática, la Contratista
+deberá presentar un certificado de calibración de las mismas, el cual será sometido a
+consideración de la Distribuidora.
+
+
+Los componentes que operan con energía eléctrica deberán ser apropiados para su
+alimentación con una fuente de 220 V (CA) con protección contra sobretensiones y
+sobrecargas. Los equipos deberán ser conservados en perfecto estado y condiciones de
+operación.
+                                                                 CÓDIGO
+                        ESPECIFICACIÓN                          REVISIÓN           01
+                           TÉCNICA                                HOJA          23 de 41
+
+
+
+Las uniones por fusión entre caños y accesorios, o entre tramos de caños, se efectuarán
+utilizando herramientas y accesorios adecuados para todos los diámetros.
+
+
+Deberán respetarse estrictamente los procedimientos detallados por escrito por el proveedor de
+cada sistema.
+
+
+Los elementos o accesorios a unir por termofusión o electrofusión deberán cumplir con la
+Norma NAG 140 Partes 2, 3 y 4 según corresponda.
+
+
+Se respetará para la realización de la fusión lo establecido en la Norma NAG 140 Parte 6 en
+sus Apartados 9.2 y 9.3 según corresponda, en cuanto a consideraciones, procedimientos y
+criterios.
+
+
+Cuando la fusión realizada sea defectuosa se desechará y deberá realizarse nuevamente,
+debiendo tenerse en cuenta las siguientes reglas:
+
+
+a)   Si se desecha una unión por termofusión o por electrofusión a montura, la nueva unión se
+     realizará a una distancia no inferior a 1 Dn (de la tubería principal) de la anterior.
+b)   La distancia mínima permitida entre cualquier unión por termofusión o por electrofusión
+     debe ser de 4 (cuatro) veces el Dn de la tubería, como mínimo, excepto lo señalado en el
+     punto a) para uniones a montura.
+c)   En todo accesorio utilizado y desechado se efectuará una entalladura de profundidad no
+     inferior al 50% del espesor de las paredes a efectos de imposibilitar su reutilización.
+d)   La inspección de las fusiones se regirá por los lineamientos de la Norma NAG 140 Parte 6
+     o por las recomendaciones del proveedor cuando éstas fueran más rigurosas.
+
+
+Al final de cada jornada o cuando se suspendan los trabajos deberán cerrarse completamente
+los extremos abiertos de la línea con tapas herméticas y no deberán abrirse hasta recomenzar
+los trabajos y en presencia de un Inspector.
+
+
+En caso de que no se cumpliera con esta cláusula la Contratista deberá demostrar
+fehacientemente que la cañería no posee elementos extraños en toda su longitud, en caso
+contrario, todo el tramo de cañería que hubiera quedado destapado será rechazado sin más
+trámite.
+
+
+No se permitirá la unión por termofusión de un accesorio de montura o enchufe con tubería de
+PE que se encuentre o haya estado presurizada.
+
+
+Se realizarán periódicamente ensayos en obra para tener un seguimiento de la calidad y
+confiabilidad de las uniones que se están realizando. El ensayo a realizar es el de doblado
+según Artículo D.9.5.2. de Norma NAG 140 Parte 6.
+                                                                  CÓDIGO
+                        ESPECIFICACIÓN                           REVISIÓN           01
+                           TÉCNICA                                 HOJA          24 de 41
+
+6.5.2   SOLDADURA DE CAÑERÍAS DE ACERO
+La cañería será soldada a tope por el proceso de soldadura manual eléctrica de arco protegido
+(SMAW), usando los tipos de electrodos adecuados, de acuerdo con la Norma AWS,
+verificados previamente por la Inspección.
+
+
+Los elementos a utilizar responderán a la especificación del procedimiento de soldadura
+previamente calificado y aceptado por la Distribuidora.
+
+
+Los trabajos de soldadura y su aceptabilidad se regirán según lo establecido en la Norma API
+1104, última edición.
+
+
+Al comienzo de la soldadura de cada tramo de cañería, se deberá colocar un cepillo de
+alambre de acero de diámetro adecuado, que se hará deslizar a través de la misma mediante
+un alambre a medida que avance la soldadura de los empalmes, con el objeto de asegurar la
+perfecta limpieza del tramo de cañería ejecutado. El cepillo debe quedar siempre detrás de la
+soldadura que se ejecute.
+
+
+Al final de cada jornada o cuando se suspendan los trabajos deberán cerrarse completamente
+los extremos abiertos de la línea con tapas herméticas y no deberán abrirse hasta recomenzar
+los trabajos y en presencia de un Inspector.
+
+
+En caso de que no se cumpliera con esta cláusula, la Contratista deberá demostrar
+fehacientemente que la cañería no posee elementos extraños en toda su longitud, en caso
+contrario, todo el tramo de cañería que hubiera quedado destapado será rechazado sin más
+trámite.
+
+
+Previamente a la iniciación de cada soldadura, deberá removerse perfectamente todo polvo,
+óxido, escamas, pinturas, aceites, escoria y/o cualquier otra materia extraña de los extremos de
+cada caño a soldar, debiendo quedar en ellos el metal brillante, realizándose esta operación
+con disco esmeril de accionamiento eléctrico o neumático.
+
+
+Se usará presentador para asegurar una adecuada alineación de los caños mientras se ejecuta
+la primera pasada o pasada de raíz. El presentador no podrá ser removido hasta después de
+ejecutar el 50% como mínimo de esta primera pasada. La parte ejecutada de la primera pasada
+estará distribuida al menos en cuatro segmentos de aproximadamente igual longitud,
+espaciados simétricamente sobre la circunferencia del caño, debiendo ejecutárselos en forma
+diametralmente opuesta. Si las condiciones hacen difícil asegurar la inmovilidad del caño
+durante esta operación o si durante la misma estuviera expuesto a soportar esfuerzos, deberá
+completarse la primera pasada antes de retirar el presentador.
+
+
+La primera pasada deberá limpiarse con discos abrasivos. Después de cada una de las
+siguientes pasadas se removerá perfectamente la escoria y escamas mediante un cepillo de
+acero de accionamiento eléctrico o neumático y herramientas de punta, debiendo cuidarse este
+detalle para permitir la correcta inspección de la misma.
+
+
+En ningún caso se deberá dejar enfriar la primera pasada sin aplicar la segunda. El tiempo que
+medie entre la primera y la segunda pasada será lo más corto posible y como máximo el
+indicado en el procedimiento calificado.
+                                                                  CÓDIGO
+                        ESPECIFICACIÓN                           REVISIÓN           01
+                           TÉCNICA                                 HOJA          25 de 41
+
+
+
+No deberán coincidir los puntos de iniciación de dos pasadas sucesivas.
+
+
+La Contratista presentará, para aprobación por parte de la Distribuidora, las Especificaciones
+de Procedimientos de Soldadura a emplear en cada caso y los Registros de Calificación de
+dichos procedimientos.
+
+
+Los procedimientos calificados por un fabricante no son transferibles a otro fabricante. En caso
+de que la Contratista quiera utilizar procedimientos propiedad de terceros, deberá presentar a
+la Distribuidora una nota del propietario autorizando la cesión de los mismos para la obra en
+cuestión.
+
+
+Cada soldador deberá estar calificado mediante ensayos destructivos de acuerdo a la Norma
+API 1104 y su calificación deberá ser obtenida en entes calificadores habilitados según la
+norma IRAM-IAS U 500-138. Calificaciones de soldadores realizadas a través de ensayos no
+destructivos se aceptarán con previa autorización de la Gerencia Técnica. La vigencia de una
+calificación no se extenderá más de 24 meses y al momento de realizar los trabajos de
+soldadura, el soldador deberá tener la renovación semestral de la calificación en vigencia.
+
+
+La calificación de los soldadores y de los procedimientos deberá ser realizada ante los
+organismos habilitados de acuerdo a la Norma IRAM-IAS U 500-138: Fundación
+Latinoamericana de Soldadura, Instituto Nacional de Tecnología Industrial (I.N.T.I.), RFO
+Soldadura, etc. .. Los mismos se pueden consultar en http://www.siderurgia.org.ar/soldadura-
+entes-habilitados.php, teniendo en cuenta la fecha de actualización del listado.
+
+
+La habilitación de dichos Organismos ó Entidades deberá estar vigente al momento de la
+calificación de los soldadores.
+
+
+La documentación de soldadura debe ser entregada, para revisión, con un plano Welding Map
+que indique, para cada soldadura a realizar, el procedimiento (con registro que lo avala) a
+aplicar y certificado de soldador que realizará la costura. Dicha documentación incluirá la
+presentación de la planilla tipo de uniones soldadas de la Distribuidora.
+
+
+Cada soldador será provisto de una marca para individualizar sus soldaduras. Cuando el
+soldador abandone la obra su marca será eliminada, no permitiéndose su uso por otro
+soldador. Cualquier soldadura encontrada sin marca será eliminada si así es exigido por la
+Inspección, a expensas de la Contratista.
+
+
+Los soldadores tendrán obligación de tener siempre a la vista durante el trabajo, las
+correspondientes tarjetas de identificación, donde constará la aprobación de la Inspección en lo
+referente a su calificación para soldar.
+
+
+Si se descubren "laminaciones" o rajaduras en los extremos de algún caño durante el proceso
+de soldadura, la pieza será eliminada y no volverá a ser utilizada en la obra.
+
+
+El caño a utilizarse podrá tener una costura longitudinal con resaltos interno y externo. Los
+tramos soldados serán colocados de tal manera que las costuras queden en la parte superior
+                                                                   CÓDIGO
+                        ESPECIFICACIÓN                             REVISIÓN          01
+                           TÉCNICA                                  HOJA           26 de 41
+
+del caño, aún durante las operaciones de revestimiento y después de su bajada a zanja,
+excepto en las curvas en las que deberán quedar en el plano neutro. Las costuras
+longitudinales de dos caños consecutivos no deben coincidir.
+
+
+Después que cada soldador haya sido calificado, la Inspección tendrá opción a cortar de la
+línea, por cada soldador, la cantidad de soldaduras que considere necesarias para aprobar la
+calidad de su trabajo o reprobar el mismo. Todos los gastos ocasionados por estos cortes y
+piezas de reemplazo soldadas, así como los ensayos, estarán a cargo de la Contratista.
+
+
+Las probetas se obtendrán y ensayarán siguiendo los procesos indicados en la Norma API
+1104. Si más de una probeta fallara en la soldadura mientras es ensayada o si el metal de
+soldadura es de estructura de grano grande o porosa, dando la evidencia de haber sido
+recalentado en exceso (sobrecalentado) durante el proceso de soldadura, o contiene vacíos, no
+se permitirá al soldador continuar soldando en la línea.
+
+
+Si en esta soldadura han participado dos o más soldadores, el capataz de soldadura de la
+Contratista y el Inspector determinarán cuál de los soldadores fue el responsable del trabajo
+defectuoso, el que será separado de la obra.
+
+
+Las soldaduras que sean denunciadas como defectuosas serán reemplazadas o reparadas
+según lo exija la Inspección, libre de cargo, retirándose de ellas las probetas necesarias para
+realizar los ensayos correspondientes, a fin de determinar los defectos y sus causas.
+
+
+6.6     Servicios
+
+6.6.1    CONDICIONES GENERALES
+Al realizar el proyecto constructivo, la Contratista listará todas las viviendas y edificios
+comprendidos en la zona donde se realizarán los trabajos, indicando la localización y consumo
+de los servicios existentes, individualizando los servicios de baja y los de media presión.
+
+
+Se indicará también el estado y características de los gabinetes, reguladores y medidores
+existentes, identificando aquellos elementos que en cada caso deberán ser reemplazados.
+
+
+El servicio domiciliario deberá responder al Plano SCE-PR-116-1500 o SCE-PR-116-1502 y a
+los criterios y pautas para su instalación dados en el Capitulo 20 de la Norma NAG 140 Parte 6.
+
+
+Los servicios serán prearmados y probados con aire y agua jabonosa en el obrador, a fin de
+detectar y reparar eventuales pérdidas en las válvulas de corte en nicho y en el gripper.
+
+
+También se deberá probar la electrofusión a montura de la Tee de derivación según lo indicado
+en el Apartado 10.6 de la Norma NAG-140 Parte 6.
+
+
+Los servicios instalados     serán   individualizados   en   los   planos     conforme    a   obra
+correspondientes.
+                                                                   CÓDIGO
+                        ESPECIFICACIÓN                            REVISIÓN           01
+                           TÉCNICA                                  HOJA          27 de 41
+
+6.6.2     INSTALACIÓN
+
+
+6.6.2.1     SERVICIOS INTEGRALES CON CONVERSIÓN DE BAJA A MEDIA PRESIÓN
+Donde se realicen trabajos de renovación de la red de baja presión por red de media presión,
+se construirán los servicios domiciliarios de edificios y viviendas que estén conectados a la red
+de baja presión, incorporando el correspondiente sistema de regulación de media presión.
+
+
+La construcción de los servicios domiciliarios comprende la provisión e instalación de los
+elementos que conforman el mismo, el sistema de regulación, válvulas y elementos de
+conexión, pilares para medidores, corte y cierre del servicio de baja presión, instalación de la
+cañería, accesorios necesarios para dejar conectados el sistema de regulación con la cañería
+interna existente, instalación del medidor y todo otro trabajo complementario que resulte
+necesario para la conversión.
+
+
+En el proyecto constructivo se explicitará el tiempo y forma en que se instalarán y conectarán
+los servicios mencionados, período de corte de suministro y participación de la Distribuidora en
+el operativo.
+
+
+La Contratista no realizará la conversión de servicios de baja a media presión sin antes haber
+advertido al usuario de la realización de estas tareas. Previo a la conversión del servicio, el
+usuario deberá haber firmado la “Nota por responsabilidad de regulador instalado”, realizada
+según el modelo adjunto a continuación. Estos comprobantes, debidamente firmados por los
+usuarios, deberán adjuntarse al pedido de habilitación respectivo.
+                                                                                            CÓDIGO
+                                 ESPECIFICACIÓN                                            REVISIÓN                   01
+                                    TÉCNICA                                                     HOJA              28 de 41
+
+     NOTA POR RESPONSABILIDAD DE REGULADOR INSTALADO
+
+          LOGOTIPO
+          DE LA DISTRIBUIDORA
+
+                                                                         .............., ............ de ................ de 20....
+
+
+      Att: Sr. Usuario del Servicio de Gas Natural
+
+
+      Sr.:
+
+
+      Calle:                           N°:
+
+
+  La presente tiene carácter de Nota de Conformidad por los trabajos ejecutados para la
+  conversión del sistema de alimentación de baja a media presión correspondiente a su
+  domicilio, en lo que concierne a la instalación del sistema de regulación, conectándolo al
+  medidor con la colocación de los accesorios necesarios.
+
+
+  Siendo el nuevo servicio domiciliario empalmado a la red de media presión, queda así
+  desconectado del sistema de baja presión.
+
+
+  Se entiende que, vencido el período de garantía (6 meses de la fecha de la presente
+  acta), el Sr. Usuario deberá encargarse del correspondiente mantenimiento del equipo de
+  regulación, pasando éste a estar en custodia y bajo responsabilidad del usuario mismo.
+
+
+  Se firman cuatro ejemplares de un mismo tenor y a un solo efecto.
+
+
+  Firma Sr. Usuario: ........................................................................
+  Aclaración de firma: ......................................................................
+  N° de Documento: ........................................................................
+
+
+  Firma Inspector de Obra: .............................................................
+  Aclaración de firma: .....................................................................
+
+
+  Firma Jefe de Obra: .....................................................................
+  Aclaración de firma: .....................................................................
+En el lugar del logotipo de la Distribuidora, se colocará el que corresponda de los
+siguientes:
+                                                                    CÓDIGO
+                         ESPECIFICACIÓN                             REVISIÓN          01
+                            TÉCNICA                                  HOJA           29 de 41
+
+6.6.2.2   SERVICIOS INTEGRALES SOBRE REDES DE MEDIA PRESIÓN
+En zonas comprendidas por la renovación de red de media presión, se construirán los servicios
+domiciliarios de edificios y viviendas que en el momento de la renovación estén conectadas a la
+misma.
+
+
+Cuando los trabajos a realizar consistan únicamente en la renovación de servicios, éstos
+deberán individualizarse en las planchetas conforme a obra existentes.
+
+
+6.6.2.3   SERVICIOS ESPECIALES
+Cualquier situación especial que se presente respecto a la instalación del servicio debe ser
+puesta a consideración de la Distribuidora, la que determinará en cada caso el procedimiento a
+seguir.
+
+
+6.6.2.4   TRAMO ADICIONAL DE CAÑERÍA DE BAJA PRESIÓN BAJO VEREDA
+En aquellos casos excepcionales donde circunstancias insalvables no permitieran el tendido de
+la prolongación domiciliaria inmediatamente aguas abajo del gabinete de regulación y
+medición, se deberá efectuar un desvío a través de la vía pública mediante un tramo de cañería
+a emplazarse debajo del nivel de vereda que interconecte la salida aguas abajo del gabinete
+con la prolongación domiciliaria.
+
+
+La construcción debe efectuarse de acuerdo a lo establecido en la Nota ENRG/GD/P.N° 0532
+del Enargas, de fecha 6 de febrero de 1997, debiendo cumplir con las siguientes exigencias:
+
+
+a)   La construcción se realizará de acuerdo con las normas vigentes para la ejecución de
+     redes de distribución y el plano tipo vigente, debiéndose utilizar cañerías de polietileno.
+b)   El tramo se ubicará a la menor distancia posible de la línea de edificación.
+c)   La cañería de polietileno debe quedar doblemente protegida, colocando una media caña o
+     hileras de ladrillos sobre la cañería, seguida a 0,20 m sobre su nivel, de la correspondiente
+     malla de advertencia normalizada. La salida del gabinete deberá ser encamisada.
+d)   Para todos aquellos casos que el nicho esté a más de 0,50 m del ingreso del colector a la
+     vivienda se instalará una válvula sobre la línea municipal, en el punto de ingreso a la
+     vivienda, en su conexión a la prolongación domiciliaria. Será de polietileno, enterrada, con
+     extensor de accionamiento y tapa de hierro fundido de acuerdo a los Planos Tipo SCE-PR-
+     105-1500 y SCE-PR-105-1501.
+e)   Los tramos bajo vereda deberán ser sometidos a las mismas exigencias de prueba que los
+     servicios domiciliarios.
+f)   Los diámetros de las cañerías y de las válvulas serán los mismos que los del servicio
+     integral correspondiente.
+g)   Estas instalaciones quedarán debidamente registradas en los planos conforme a obra y se
+     elaborará un croquis individual para cada usuario para el que se presente esta situación.
+
+
+Para aquellos casos en que el colector del servicio de baja presión existente esté deteriorado la
+Contratista deberá cambiarlo hasta la Línea Municipal incluyendo el uso de juntas WASH para
+los casos que no se pudiera roscar. Si el deterioro excediera la línea municipal hacia la
+propiedad privada se deberá dar aviso a la Inspección.
+                                                                      CÓDIGO
+                         ESPECIFICACIÓN                              REVISIÓN           01
+                            TÉCNICA                                    HOJA          30 de 41
+
+
+
+6.6.2.5    INSTALACIÓN DE REGULADORES
+Salvo indicación en el Pliego de Condiciones Particulares, los reguladores a instalar en redes
+de distribución tendrán un caudal nominal de salida de 6 m3/h. La utilización de reguladores de
+capacidad superior a esta y la ejecución de esquemas de instalación especiales (reguladores
+en vereda, reguladores en paralelo, etc.) deberán ser en cada caso expresamente autorizadas
+por la Distribuidora.
+
+
+La Contratista realizará un plano de detalle de cada instalación que se adjuntará a la
+correspondiente plancheta conforme a obra de la cuadra.
+
+
+6.6.2.6    CORTE DE SUMINISTRO Y CAMBIO DE ALIMENTACIÓN Y/O TRASLADO DE MEDIDOR
+El “Aviso de Corte de Suministro” al usuario será implementado de común acuerdo con la
+Distribuidora según cada caso.
+
+
+A estos efectos se tendrá en cuenta que será responsabilidad de la Contratista:
+
+
+a)    Emitir el aviso de corte 24 horas antes de efectuar el mismo.
+b)    Realizar el corte de suministro y el cambio de alimentación.
+c)    Efectuar la rehabilitación del suministro en presencia del usuario.
+
+
+Para la rehabilitación del suministro, deberá verificarse el estado de la instalación interna en
+presencia del usuario. Si la instalación interna presentara fugas, se le notificará tal situación al
+usuario, dejando constancia de que no se rehabilitará el servicio hasta tanto un instalador
+matriculado haya corregido tal situación.
+
+
+Si el usuario no se encuentra en el domicilio, o si se constataran pérdidas en la instalación
+interna, se deberá dejar cerrada la válvula de corte con precinto numerado. La rehabilitación
+del servicio podrá en estos casos ser realizada únicamente por personal de la Distribuidora.
+
+
+Ante ausencia del usuario, la Contratista deberá dejar en el domicilio un volante de aviso con el
+teléfono de la guardia de la Distribuidora.
+
+
+En todos los trabajos de renovación de redes o traslado de medidores serán de aplicación y
+responsabilidad de la Contratista la utilización de las notas modelos que se detallan a
+continuación:
+     1. Aviso de Obra
+     2. Nota Conformidad Inicio de Trabajos
+     3. Aviso de Corte de Suministro
+     4. Nota de Conformidad Finalización de Trabajos
+                                                                                 CÓDIGO
+                           ESPECIFICACIÓN                                       REVISIÓN                      01
+                              TÉCNICA                                             HOJA                   31 de 41
+
+                                       AVISO DE OBRA
+      LOGOTIPO
+      DE LA DISTRIBUIDORA
+
+
+                                                   .............., ............ de ................ de 20             .
+
+
+
+       ESTIMADO CLIENTE
+
+
+
+    Tengo el agrado de dirigirme a Ud. a fin de llevar a su conocimiento que esta
+    Distribuidora ha programado la realización de trabajos en las instalaciones
+    correspondientes al suministro de gas natural a su domicilio.
+
+
+    Estos trabajos, que se efectuarán a partir del .......... / ..... / ......., tienen por objeto
+    mejorar la calidad del servicio que prestamos.
+
+
+    Los trabajos descriptos han sido confiados a la empresa ............................................
+
+
+    Esperamos sepa disculpar las molestias que le ocasionaremos, que son las mínimas
+    necesarias a fin de alcanzar la calidad y excelencia del servicio que Ud. merece.
+
+
+    Sin otro particular, lo saludo con la mayor cordialidad.
+
+
+
+
+                                                                      ..................................................
+                                                                      Gerente de Unidad de Negocio
+
+
+
+
+En el lugar del logotipo de la Distribuidora, se colocará el que corresponda de los
+siguientes:
+                                                                                                  CÓDIGO
+                                     ESPECIFICACIÓN                                              REVISIÓN                   01
+                                        TÉCNICA                                                     HOJA                32 de 41
+
+
+              NOTA DE CONFORMIDAD INICIO DE TRABAJOS
+       LOGOTIPO
+       DE LA DISTRIBUIDORA
+                                                                              .............., ............ de ................ de 20   .
+ At.: Sr. Usuario del Servicio de Gas Natural
+ Sr.: .....................................................................
+ Calle.................................N°............................Censista.......................
+
+
+ La presente tiene carácter de Nota de Conformidad de inicio de los trabajos para la
+ renovación de red de media presión correspondiente a su domicilio, en lo que concierne a la
+ conexión de la red con el medidor, con los accesorios necesarios.
+
+
+ A fin de llevar a cabo dichas tareas, se hace imprescindible que Ud. autorice a la firma
+ Contratista......................................... la iniciación de los trabajos en el nicho de regulación y
+ medición correspondiente al frente de su predio.
+
+
+ No tenemos otra posibilidad que recurrir a Ud. por este medio a prestar conformidad a la
+ modalidad indicada.
+
+
+ En consecuencia le rogamos sepa comprender los beneficios de las mejoras de las
+ instalaciones que estamos llevando a cabo, que por otra parte se realizan a nuestro
+ exclusivo costo redundando en un mejor servicio para Ud.
+
+
+ Firma Sr. Usuario:................................
+ Aclaración de firma:..................................
+ N° de documento:......................................
+
+
+ Empresa Contratista:...................................................
+ Dirección Empresa Contratista:..................................
+ Teléfono Empresa Contratista:....................................
+
+
+ Firma del Inspector de Obra.........................
+ Aclaración de firma.......................................
+
+
+ Firma del Jefe de Obra:..............................
+ Aclaración de firma:..............................
+En el lugar del logotipo de la Distribuidora, se colocará el que corresponda de los
+siguientes:
+                                                                               CÓDIGO
+                          ESPECIFICACIÓN                                      REVISIÓN                   01
+                             TÉCNICA                                            HOJA                 33 de 41
+
+
+                    AVISO DE CORTE DE SUMINISTRO
+      LOGOTIPO
+      DE LA DISTRIBUIDORA
+
+                                                       .............., ............ de ................ de 20     .
+      ESTIMADO CLIENTE
+
+
+      Tengo el agrado de dirigirme a Ud. a fin de llevar a su conocimiento que esta
+      Distribuidora ha programado la realización de reparaciones en las instalaciones
+      correspondientes al suministro de gas natural a su domicilio.
+
+
+      Estos trabajos, que se efectuarán el .......... / ..... / ....... son SIN CARGO ALGUNO
+      PARA USTED y tienen por objeto mejorar la calidad del servicio que prestamos.
+
+
+      La labor de referencia será realizada en horario entre las 7.00 y las 20.00 horas,
+      requiriendo para su efectivización un corte de suministro a su domicilio de
+      aproximadamente una hora.
+
+
+      Los         trabajos           descriptos         han    sido      confiados    a     la   empresa
+      ............................................, cuyos agentes irán identificados con el emblema de la
+      misma y que solicitarán su autorización para ingresar a su domicilio, a los efectos
+      de la rehabilitación del suministro.
+
+
+      En caso de no encontrarse en su domicilio en el momento de la realización de las
+      tareas, el suministro quedará interrumpido por razones de seguridad. Para
+      reestablecer el mismo deberá dirigirse telefónicamente al número ...........................
+
+
+      Esperamos sepa disculpar las molestias que le estamos ocasionando, que son las
+      mínimas necesarias a fin de alcanzar la calidad y excelencia del servicio que Ud.
+      merece.
+
+
+      Sin otro particular, lo saludo con la mayor cordialidad.
+
+
+                                                                   ................................................
+                                                                    Gerente de Unidad Operativa
+
+En el lugar del logotipo de la Distribuidora, se colocará el que corresponda de los
+siguientes:
+                                                                                                 CÓDIGO
+                                  ESPECIFICACIÓN                                                REVISIÓN                   01
+                                     TÉCNICA                                                      HOJA                 34 de 41
+
+
+  NOTA DE CONFORMIDAD FINALIZACIÓN DE TRABAJOS
+       LOGOTIPO
+       DE LA DISTRIBUIDORA
+
+                                                                         .............., ............ de ................ de 20   .
+
+
+    At.: Sr. Usuario del Servicio de Gas Natural
+    Sr.: .....................................................................
+    Calle.................................N°............................
+
+
+    La presente tiene carácter de Nota de Conformidad por los trabajos ejecutados para
+    la renovación de red de media presión correspondiente a su domicilio, en lo que
+    concierne a la instalación del nuevo sistema de regulación, conectándolo al medidor
+    con la colocación de los accesorios necesarios.
+
+
+    Se entiende que, vencido el período de garantía (6 meses a partir de la fecha de la
+    presente acta), el Sr. Usuario deberá encargarse del correspondiente mantenimiento
+    del equipo de regulación, pasando éste a estar en su custodia y bajo responsabilidad
+    del usuario mismo.
+
+
+    Se firman cuatro ejemplares de un mismo tenor y a un solo efecto.
+
+
+    Firma Sr. Usuario:................................
+    Aclaración de firma:..................................
+    N° de documento:......................................
+
+
+    Firma del Inspector de Obra.........................
+    Aclaración de firma.......................................
+
+
+    Firma del Jefe de Obra:..............................
+    Aclaración de firma:..............................
+
+
+
+En el lugar del logotipo de la Distribuidora, se colocará el que corresponda de los
+siguientes:
+                                                                   CÓDIGO
+                           ESPECIFICACIÓN                          REVISIÓN           01
+                              TÉCNICA                                HOJA          35 de 41
+
+6.6.2.7     PERFORACIÓN DEL SERVICIO
+Luego de perforar el servicio se debe tener especial atención en el ajuste manual de la tapa
+roscada, ya que es usual que queden mal selladas por hacer tope con el sacabocados, lo que
+generaría pérdidas de difícil localización.
+
+
+La perforación de servicios sobre cañerías con gas será realizada por personal de la
+Distribuidora.
+
+
+6.7     Procedimientos aplicables
+
+6.7.1     PROCEDIMIENTO DE SOLDADURA
+
+
+Se regirán por la Norma API 1104.
+
+
+La calificación de los soldadores y de los procedimientos deberá ser realizada ante los
+organismos habilitados según norma IRAM-IAS U 500-138: Fundación Latinoamericana de
+Soldadura, Instituto Nacional de Tecnología Industrial (I.N.T.I.), RFO Soldadura, etc.. Los
+mismos se pueden consultar en http://www.siderurgia.org.ar/soldadura-entes-habilitados.php,
+teniendo en cuenta la fecha de actualización del listado.
+
+
+La documentación de soldadura debe ser entregada, para revisión, con un plano Welding Map
+que indique, para cada soldadura a realizar, el procedimiento (con registro que lo avala) a
+aplicar y certificado de soldador. Dicha presentación incluirá la presentación de la planilla tipo
+de uniones soldadas de la Distribuidora.
+
+
+Las especificaciones de procedimientos de soldadura a emplear en cada caso deben ser
+específicas para cada tipo o detalle de junta a soldar, por lo tanto no se aceptarán como válidos
+EPS.
+
+
+La calificación de la especificación del procedimiento de soldadura debe indicar el rango de
+espesores y diámetros para los cuales el procedimiento resulta aplicable.
+
+
+6.8     Pruebas
+
+6.8.1     PRUEBA DE FUGA
+La cañería a instalar deberá ser probada neumáticamente a una presión de 6 kg/cm2 a fin de
+detectar cualquier pérdida en las uniones de la cañería entre sí y con los accesorios. Se dará
+cumplimiento a lo establecido en el Capitulo 11 de la Norma NAG 140 Parte 6, para todo tipo
+de cañerías.
+
+
+Efectuada la prueba de fuga del tramo, se descomprimirá bruscamente el mismo para que la
+salida repentina del medio de prueba limpie internamente la tubería. Esta operación ("pop") se
+repetirá tantas veces como sea necesario hasta que el tramo quede completamente limpio.
+                                                                    CÓDIGO
+                         ESPECIFICACIÓN                            REVISIÓN            01
+                            TÉCNICA                                  HOJA            36 de 41
+
+
+
+
+6.8.2   PRUEBA DE HERMETICIDAD FINAL
+A los efectos de detectar cualquier falla del material instalado o uniones realizadas, se deberá
+efectuar una prueba de hermeticidad, siguiendo los lineamientos previstos en el Capitulo 19 de
+la Norma NAG 140 Parte 6, para todo tipo de cañerías.
+
+
+Las pruebas de hermeticidad deberán realizarse con los servicios perforados hasta la válvula
+esférica. Las cañerías correspondientes a los traslados de medidores que se realicen, deben
+probarse como cualquier parte de la instalación.
+
+
+La tubería será presurizada con gas inerte o aire a una presión manométrica de 6 kg/cm2,
+dejando transcurrir un lapso de no menor a 2 (dos) horas, como mínimo, para estabilizar la
+presión y la temperatura.
+
+
+La duración de la prueba, es función de la longitud de la tubería a probar y será:
+
+
+   •    6 horas              para longitudes hasta                  500 metros
+   •    24 horas             para longitudes hasta                501 a 10.000 metros
+   •    48 horas             para longitudes mayores a            10.000 metros
+
+
+La presión inicial y final serán medidas mediante manómetros, con certificado de calibración en
+vigencia el cual será presentado a la Inspección de Obra, de características según
+especificación SCE-PR-506-1000 de 150 mm de diámetro mínimo de cuadrante y división
+mínima 0,5 bar.
+
+
+En las redes de longitud menor a 500 m el control de la prueba podrá ser realizado con
+manómetro o con registrador; para longitudes mayores a esta deberá utilizarse registrador de
+presión.
+
+
+Se deberá utilizar un registrador de presión y temperatura, electrónico o electromecánico, de
+clase 0,5 como mínimo y rango de 0 a 10 bar en lo que se refiere a presión, y de precisión ± 1,0
+%, resolución 1° C (1 K) y rango de - 10 °C a + 40 °C en lo que se refiere a temperatura.
+
+
+Aprobada la prueba la Contratista dejará cada zona presurizada a la presión de operación,
+tomando los recaudos para mantenerla en esas condiciones hasta su habilitación definitiva, a
+fin de que cualquier deterioro que sufriere en ese período, sea fácilmente detectable.
+
+
+Las especificaciones mencionadas precedentemente serán válidas también para el caso de
+cañerías de acero.
+                                                                   CÓDIGO
+                          ESPECIFICACIÓN                          REVISIÓN           01
+                             TÉCNICA                                HOJA          37 de 41
+
+6.9     Protección anticorrosiva
+
+6.9.1    CAÑERÍAS Y ACCESORIOS ENTERRADOS
+Se cumplirá con la Especificación Técnica SCE-PC-501-0003 y SCE-PC-306-0001.
+
+
+Todos los materiales utilizados para el revestimiento anticorrosivo de cañerías metálicas
+enterradas deberán cumplir con las exigencias y orden de prelación de las siguientes normas:
+NAG 100 y NAG 108.
+
+
+6.9.2    INSTALACIONES AÉREAS
+Se realizará en un todo de acuerdo con la Especificación Técnica SCE-PC-501-0003.
+
+
+6.9.3    VERIFICACIÓN DEL REVESTIMIENTO
+La calidad del revestimiento será verificada de acuerdo con lo establecido en el procedimiento
+SCE-PC-506-0001.
+
+
+6.9.4    PRUEBA DE AISLACIÓN ELÉCTRICA
+Una vez terminada la instalación de la cañería de acero, la Contratista deberá realizar una
+prueba de aislación eléctrica para determinar la ausencia de contactos entre la cañería y otras
+estructuras conductoras y el estado del revestimiento de la cañería una vez tapada. Se dejará
+constancia de esta prueba mediante un acta con los datos de la cañería y los resultados de la
+prueba.
+
+
+No se aceptará una densidad de corriente superior a 10 µA/m2.
+
+
+La Contratista presentará con el proyecto constructivo el Procedimiento de Prueba de Aislación
+Eléctrica, el cual seguirá los lineamientos de la E.T.P.A. 265 (Ex Gas del Estado).
+
+
+6.9.5    PROTECCIÓN CATÓDICA
+Se cumplirá con la Especificación Técnica SCE-PC-511-0001.
+
+
+7     REGISTRO Y ARCHIVO
+
+No corresponde a este caso.
+
+
+8     Proyecto Constructivo
+
+
+8.1     Planos
+Los planos del Proyecto Constructivo de Redes estarán compuestos por:
+
+•     Plano llave que contenga a cada uno de los sectores de que consta la red a construir.
+                                                                   CÓDIGO
+                        ESPECIFICACIÓN                             REVISIÓN           01
+                           TÉCNICA                                  HOJA           38 de 41
+
+•   Planos constructivos con ubicación de la línea municipal, acera, todos los elementos
+    existentes aéreos y enterrados (canteros, postes de luz y/o teléfono, cañerías de agua,
+    cloacas, árboles, etc.) y la ubicación de la cañería a instalar.
+    Se deberá acotar la ubicación de la cañería y de todos los obstáculos tomando como
+    referencia la L.M. La escala deberá ser tal que permita una fácil identificación de los
+    elementos existentes tanto sobre como debajo del terreno (Ej. 1:1000).
+    En obras de renovación, se indicará la cantidad de servicios por cuadra, identificando su
+    tipo.
+    Se deberá realizar un corte tipo, perpendicular a traza del tendido, indicando los elementos
+    a instalar, servicios y obstáculos sobre terreno, acotados respecto a la LM. Como mínimo
+    se realizará un corte por cuadra. Dicho corte deberá estar en escala.
+    En el caso que exista interferencias se deberá realizar un detalle del cruce. Dicho detalle
+    deberá estar compuesto por un corte transversal en escala. Ppudiendo estos detalles ser
+    presentados en planos separado del plano de trazado, en este caso el plano de detalle
+    deberá estar compuesto por una vista en planta y un corte transversal, ambos en escala.
+    Detalles de los puntos de conexión a cañerías existentes.
+    El plano constructivo contará con un listado de materiales, donde para cada posición se
+    indicará la descripción característica del material, cantidad, material, norma de aplicación y
+    serie y/o SDR. Cada posición del listado de materiales deberá tener una ubicación en el
+    plano que corresponda. El listado de materiales solo podrá contener los materiales que se
+    encuentren indicados en dicho plano.
+
+
+•   Planos de detalle de instalación de los elementos de protección catódica a instalar, cuando
+    corresponda.
+
+•   De corresponder, planos de manifolds, cámaras, etc.
+
+•   Plano detallado de los cruces especiales (vías, rutas, canales, etc), cumplimentando los
+    requerimientos de las Entidades Permisionarias.
+En el caso de contener conexiones con cañería de acero, se deberán confeccionar un plano
+Welding Map indicando por cada soldadura a utilizar el procedimiento a utilizar y soldador.
+
+En la confección de los planos del proyecto constructivo se deberán tener en cuenta
+todas las exigencias de los entes permisionarios y planos tipo de la Distribuidora.
+
+A continuación se adjunta un ejemplo de Proyecto Constructivo plano SCE-PR-119-0001 y
+SCE-PR-119-0002.
+
+
+Los planos correspondientes al proyecto constructivo deberán ser confeccionados cumpliendo
+en un todo de acuerdo a lo establecido en los Instructivos de Trabajo I OR-051, I OR-053 y I
+OR-077.
+
+
+Toda la documentación que se presente, tales como notas, cartas, informes, croquis
+preliminares, croquis de ubicación, material informativo, planos, etc., deberá estar
+                                                                    CÓDIGO
+                           ESPECIFICACIÓN                          REVISIÓN           01
+                              TÉCNICA                                HOJA          39 de 41
+
+perfectamente clasificada, numerada y ordenada, para facilitar su archivo e
+identificación.
+
+
+8.2     Procedimientos
+
+Para aquellos casos en que no sean utilizados procedimientos propios de la Distribuidora, la
+Contratista deberá realizar y presentar los siguientes:
+
+•     Procedimiento de prueba neumática.
+
+•     Especificación de Procedimientos de soldadura y registro de calificación de procedimientos.
+
+•     Registro de calificación de soldadores.
+
+•     Calificación de fusionistas (a presentar en el UN).
+
+•     Procedimiento de pintura y revestimiento.
+
+•     Procedimiento de inertización.
+
+•     Procedimiento de prueba neumática de fuga y de hermeticidad final.
+
+•     Procedimiento de prueba de aislación eléctrica.
+
+•     Toda otra documentación solicitada por la Distribuidora.
+
+
+9     Croquis de Ubicación
+
+Se deberá realizar por cada cuadra del tendido un croquis de ubicación, el que deberá señalar
+esquemáticamente el recorrido de la tubería de distribución y la de los servicios, como así
+también la ubicación exacta de las válvulas, reducciones, fusiones, desvíos (en cualquier plano
+o nivel), obstáculos que modifiquen el recorrido normal de la tubería, diámetro nominal, tapada
+y todo otro dato que sea necesario para la confección del plano conforme a obra. Toda
+acotación se debe referir a puntos fijos (línea municipal u otros).
+
+Cuando existan servicios se indicará el N ° del domicilio
+
+
+El croquis de ubicación debe ser conformado con rúbrica y aclaración del Representante
+Técnico de la Contratista y por el representante de la Distribuidora.
+                 CÓDIGO
+ESPECIFICACIÓN   REVISIÓN     01
+   TÉCNICA        HOJA      40 de 41
+                                                                          CÓDIGO
+                          ESPECIFICACIÓN                                 REVISIÓN             01
+                             TÉCNICA                                       HOJA            41 de 41
+
+
+
+
+10 Planos conforme a obra
+
+
+Los planos conforme a obra contendrán toda la información correspondiente a los trabajos
+realizados, especificando ubicación y altimetría de las instalaciones con respecto al terreno,
+puntos fijos o líneas existentes, detalles constructivos, especificación de materiales, equipos e
+instrumentos, ubicación de los elementos de protección catódica (ánodos, cajas de medición) y
+de puesta a tierra, etc.
+
+
+Los planos serán confeccionados en AUTOCAD v.2000 ó posterior y se entregará copia de los
+mismos en DVD o CD.
+
+
+Siempre que por el tipo de obra sea posible, los planos conforme a obra se irán
+confeccionando en forma paralela con el avance de los trabajos.
+
+
+En los planos de redes, se incluirá una nota, con carácter de acta, firmada por la Contratista y
+el Inspector de Obra, con la siguiente leyenda:
+
+
+     Se realizó la prueba de hermeticidad final de acuerdo a la norma NAG 140 Parte 6,
+     a la presión de ........... kg/cm2 M.
+
+
+     De conformidad, en la localidad de ............. a los ........ días del mes de ............ del
+     año .........
+
+
+            ___________________                                  __________________
+                Contratista                                             Inspector
+
+
+Los planos conforme a obra deberán ser confeccionados cumpliendo en un todo de acuerdo a
+lo establecido en los Instructivos de Trabajo I OR-051, I OR-053 y I OR-077.
+
+
+11 Consulta y Descarga de documentación de Camuzzi
+
+Toda la documentación Técnica de la Compañía mencionada en la presente Especificación
+Técnica podrá ser consultada y descargada de la página Web de la Distribuidora:
+
+
+                      http://www.camuzzigas.com/info-contratistas.php
+

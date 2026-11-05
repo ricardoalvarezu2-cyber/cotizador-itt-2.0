@@ -1,0 +1,760 @@
+                                                                  CÓDIGO:          SCE-RE-512-0004
+                              ESPECIFICACIÓN                     REVISIÓN:               1
+                                 TÉCNICA
+                                                                   HOJA:              1 de 19
+
+
+                                                                  FECHA               FECHA
+                                                                APROBACION           VIGENCIA
+            PROCESO            OPERACIÓN DE LA RED
+                                                               23/10/18           23/10/18
+
+
+                               Filtro FM Simple y doble              LIDER DEL PROCESO
+             TEMA
+                                        Módulo                            Guillermo Montag
+
+                                                                          APROBADO POR:
+     ANULA/REEMPLAZA
+                                                                         Alejandro Lorenzo
+
+
+                                    MODIFICACIONES
+
+    Nº de      FECHA
+                                             MOTIVO DE LA MODIFICACIÓN
+REVISIÓN      REVISION
+1             23/10/18 Correcciones varias
+
+
+
+
+AREAS INVOLUCRADAS:
+
+
+
+
+OBSERVACIONES:
+                                                                                                                CÓDIGO               SCE-RE-512-0004
+                                          ESPECIFICACION                                                       REVISIÓN                        1
+1                                            TECNICA                                                              HOJA                    2 de 19
+
+
+INDICE
+
+1       OBJETO.............................................................................................................................................. 4
+2       ALCANCE ........................................................................................................................................... 4
+3       AREAS INVOLUCRADAS .................................................................................................................. 4
+4       DOCUMENTACION COMPLEMENTARIA Y/O DE REFERENCIA ................................................... 4
+5       DEFINICIONES .................................................................................................................................. 5
+6       RESPONSABILIDADES ..................................................................................................................... 5
+7       DOCUMENTACIÓN PARA FABRICACIÓN ....................................................................................... 5
+    7.1 DOCUMENTOS A PRESENTAR ............................................................................................................... 5
+      7.1.1 CRONOGRAMA DE FABRICACIÓN Y ENSAYOS ................................................................................. 5
+      7.1.2       LISTADO DE DOCUMENTOS ........................................................................................................... 5
+      7.1.3       DOCUMENTACIÓN PARA EL FILTRO FM ......................................................................................... 6
+    7.2 ENTREGAS Y REVISIONES .................................................................................................................... 6
+      7.2.1 ENVÍO Y RETIRO DE DOCUMENTACIÓN ........................................................................................... 7
+      7.2.2       MODELO DE RÓTULO ................................................................................................................... 7
+    7.3 CALIFICACIÓN DE LA DOCUMENTACIÓN ................................................................................................. 8
+    7.4 FORMATO DE LA DOCUMENTACIÓN ....................................................................................................... 8
+8       PROVISIÓN DE MATERIALES .......................................................................................................... 8
+9       CONSIDERACIONES PARTICULARES ............................................................................................ 9
+    9.1 CAPACIDAD DE FILTRADO .................................................................................................................... 9
+    9.2 CUERPO............................................................................................................................................. 9
+    9.3 CASQUETES SEMIELÍPTICOS .............................................................................................................. 10
+    9.4 CONEXIONES .................................................................................................................................... 10
+    9.5 TAPA................................................................................................................................................ 10
+    9.6 POLLERA O FALDÓN.......................................................................................................................... 10
+    9.1 PURGA ............................................................................................................................................. 10
+    9.2 CÁNCAMOS DE IZAJE ......................................................................................................................... 10
+    9.3 PLACA DE IDENTIFICACIÓN................................................................................................................. 10
+    9.4 TARIMA ............................................................................................................................................ 10
+    9.5 ESPÁRRAGOS ................................................................................................................................... 11
+    9.6 SOLDADURA ..................................................................................................................................... 11
+    9.7 ENSAYOS NO DESTRUCTIVOS ............................................................................................................ 11
+    9.8 PRUEBAS DE RESISTENCIA Y HERMETICIDAD...................................................................................... 11
+      9.8.1 PRUEBA DE RESISTENCIA ........................................................................................................... 11
+      9.8.2       PRUEBA DE HERMETICIDAD ........................................................................................................ 11
+      9.8.3       PRUEBA DE FUGAS .................................................................................................................... 12
+    9.9 PROTECCIÓN ANTICORROSIVA .......................................................................................................... 12
+    9.10 VÁLVULAS DE BLOQUEO ESFÉRICAS ................................................................................................... 12
+    9.11 MANÓMETROS .................................................................................................................................. 12
+      9.11.1 MANÓMETRO DE PRESIÓN ESTÁTICA: .......................................................................................... 12
+      9.11.2 MANÓMETRO DE PRESIÓN DIFERENCIAL: .................................................................................... 13
+    9.12 ACCESORIOS .................................................................................................................................... 14
+10      INSPECCION.................................................................................................................................... 14
+11      DOCUMENTACION CONFORME A OBRA (DATA BOOK) ............................................................ 15
+12      CERTIFICACIÓN DE LOS TRABAJOS............................................................................................ 16
+                                                                                                             CÓDIGO              SCE-RE-512-0004
+                                        ESPECIFICACION                                                      REVISIÓN                       1
+ 1                                         TECNICA                                                             HOJA                    3 de 19
+
+
+13 ENTREGA DE MATERIAL ............................................................................................................... 16
+ 13.1 REPUESTOS ..................................................................................................................................... 16
+14     GARANTIA ........................................................................................................................................ 17
+15     REGISTRO Y ARCHIVO .................................................................................................................. 17
+16 ANEXOS ........................................................................................................................................... 18
+ 16.1 ANEXO 1- MODELO DE RÒTULO. ...................................................................................................... 18
+ 16.2 ANEXO 2- VÁLVULAS ESFÉRICAS HOMOLOGADAS. ........................................................................... 18
+ 16.3 ANEXO 3- MANÓMETROS Y ACCESORIOS DE CONEXIÓN. MARCAS
+      HOMOLOGADAS ................................................................................................................................ 19
+                                                           CÓDIGO     SCE-RE-512-0004
+                      ESPECIFICACION                       REVISIÓN         1
+1                        TECNICA                            HOJA          4 de 19
+
+
+1   OBJETO
+
+
+La presente Especificación Técnica tiene por objeto establecer los requisitos mínimos
+de diseño y fabricación que debe cumplir un filtro tipo FM de simple o doble módulo.
+
+
+2   ALCANCE
+
+
+Todos los Filtros FM diseñados y fabricados con posterioridad a la fecha de vigencia
+del presente documento.
+
+
+3   AREAS INVOLUCRADAS
+
+
+Todas las áreas técnicas de la Compañía
+
+
+4   DOCUMENTACION COMPLEMENTARIA Y/O DE REFERENCIA
+
+
+NAG-100         Normas Argentina Mínimas de Seguridad para el transporte y
+                Distribución de Gas Natural y otros Gases por Cañerías.
+Código ASME     Sección VIII
+Código ASME     Sección IX
+SCE-IN-501-0003 Juntas
+SCE-IN-501-0008 Válvulas Esféricas
+SC-RE-308-0001 Ensayos de Válvulas Esféricas
+IOR-067         Ajustes de Uniones Bridadas
+IOR-068         Procedimiento General de Soldaduras
+SCE-PC-511-0003 Protección Anticorrosiva
+SCE-IN-101-0003 Informe de Ensayos por Líquidos Penetrantes
+SCE-IN-101-0004 Detalle de Uniones soldadas
+SCE-IN-101-0005 Informe Gammagráfico
+SCE-IN-107-0004 Sistema de Identificación de Placas Radiográficas
+SCE-RE-112-0004 Plano tipo Filtro FM Simple Módulo
+SCE-RE-112-0005 Plano tipo Filtro FM Doble Módulo
+
+Toda la documentación Técnica de la Compañía mencionada en la presente
+especificación deberá ser consultada y descargada de la página web de la
+Distribuidora:
+                                                           CÓDIGO     SCE-RE-512-0004
+                      ESPECIFICACION                       REVISIÓN         1
+1                        TECNICA                            HOJA         5 de 19
+
+
+http://www.camuzzigas.com/info-contratistas.php
+Será de aplicación únicamente la revisión vigente al momento de recibir la nota de
+pedido.
+
+
+5    DEFINICIONES
+
+
+No corresponde para este caso en particular
+
+
+6    RESPONSABILIDADES
+
+
+No corresponde para este caso en particular
+
+
+7    DOCUMENTACIÓN PARA FABRICACIÓN
+
+
+    7.1   Documentos a presentar
+
+Antes de comenzar con la fabricación el proveedor presentará a la Distribuidora la
+siguiente documentación para conocimiento y/o aprobación corresponda.
+
+           7.1.1   CRONOGRAMA DE FABRICACIÓN Y ENSAYOS
+Se presentará el cronograma detallado de fabricación y ensayos de cada equipo y/o
+elemento a construir, considerando los hitos de participación de la inspección.
+
+           7.1.2   LISTADO DE DOCUMENTOS
+Todos los documentos a presentar por la contratista deberán estar detallados en un
+listado, que acompañará cada presentación, e incluirá como mínimo los siguientes
+datos:
+
+-    Identificación del equipo.
+-    Número de documento.
+-    Denominación del documento.
+-    Revisión.
+-    Fecha de presentación
+
+El listado mencionado incluirá todas las revisiones efectuadas a cada documento.
+
+Los documentos presentados que no se encuentren incluidos en el listado serán
+devueltos sin calificar.
+                                                                 CÓDIGO     SCE-RE-512-0004
+                          ESPECIFICACION                         REVISIÓN         1
+1                            TECNICA                              HOJA         6 de 19
+
+
+            7.1.3      DOCUMENTACIÓN PARA EL FILTRO FM
+Para la construcción del Filtro FM se presentará la siguiente documentación:
+
+-    Hoja de datos del equipo.
+-    Hoja de datos de elementos filtrantes.
+-    Procedimiento de protección anticorrosiva.
+
+Notas:
+1) La hoja de datos del equipo deberá incluir al menos los siguientes ítems:
+    •     Presión máxima de entrada (en Bar).
+    •     Presión mínima de entrada (en Bar).
+    •     Caudal máximo (Sm3/hora) a presión mínima.
+    •     Sentido de flujo de gas (visto el equipo de frente).
+    •     Posición de las bridas de entrada y/o salida: en línea o a 90°.
+    •     Presión de ensayo y factor de corrosión.
+    •     Plano dimensional del equipo y pollera, cuando corresponda.
+
+2) La hoja de datos de los elementos filtrantes deberá incluir al menos los siguientes
+   ítems:
+    •     Tabla de eficiencia.
+    •     Plano dimensional.
+
+
+    7.2    Entregas y revisiones
+
+
+
+La documentación presentada seguirá las siguientes secuencias de revisión:
+
+-    Entregas para Calificación: Revisiones A, B, C, D, etc. (firmadas digitalmente)
+-    Entrega para Construcción: Revisión 0 (cero). (firmadas en original)
+
+Notas:
+
+-    1) Se incluirá “Nube de Revisión”: indicará la corrección a las observaciones
+     realizadas por la Distribuidora en la revisión anterior del documento.
+-    2) Además de lo mencionado en el punto 1), la Revisión “0” incluirá el siguiente
+     texto:
+      “La presente edición es copia fiel de la revisión precedente y solamente
+     incluye la corrección de las observaciones indicadas en la misma”.
+                                                           CÓDIGO     SCE-RE-512-0004
+                      ESPECIFICACION                      REVISIÓN          1
+1                        TECNICA                            HOJA         7 de 19
+
+
+         7.2.1     ENVÍO Y RETIRO DE DOCUMENTACIÓN
+
+
+a) Entregas para Calificación.
+
+    Las Revisiones A, B, C, D, etc. serán colocadas por el fabricante en un servidor
+    interno de la Distribuidora, en la carpeta asignada para la obra en cuestión. El
+    acceso al servidor será indicado al fabricante una vez adjudicada la compra del
+    equipo.
+
+    Los documentos que hayan sido calificados por la Distribuidora serán colocados
+    en el mismo servidor para que el contratista los retire.
+
+b) Entrega para Construcción
+
+    La Revisión 0 se entregará en mano en la Gerencia de Técnica sito en: Alicia
+    Moreau de Justo 240, Piso 3. CABA.
+
+    La Distribuidora informará cuando el documento se encuentre calificado y
+    disponible para retirar.
+
+Para cada entrega realizada de los puntos a) y b), el fabricante deberá comunicar el
+listado de documentos enviados a los siguientes correos electrónicos:
+
+Gerencia Técnica: matías.rizo@camuzzigas.com.ar
+
+Gerencia de Abastecimiento Obras y Almacenes: juan.filas@camuzzigas.com.ar
+
+Los correos electrónicos incluirán en el campo “Asunto” la siguiente información,
+ubicada en el mismo orden:
+
+-   Denominación de la Obra.
+-   Número de Contrato.
+-   Denominación de la Empresa Contratista.
+-   Número de envío.
+
+De igual manera la Distribuidora informará por correo electrónico los documentos
+calificados.
+
+         7.2.2     MODELO DE RÓTULO
+Ver Anexo 1.
+                                                             CÓDIGO     SCE-RE-512-0004
+                         ESPECIFICACION                      REVISIÓN         1
+1                           TECNICA                              HOJA      8 de 19
+
+
+     7.3   Calificación de la documentación
+
+
+
+Se utilizarán las siguientes calificaciones según corresponda:
+
+a) Para las revisiones A, B, C, D, etc.
+
+      - Observado.
+      - Aprobado con Observaciones.
+      - Aprobado sin Observaciones.
+
+b) Para la revisión 0.
+
+      - Aprobado - Apto para Construcción.
+
+
+     7.4   Formato de la documentación
+
+
+La documentación se entregará en los siguientes formatos:
+
+a) El Listado de documentos y la Planilla de uniones soldadas (Entregas para
+   calificación), en formato “.xlsx” (Microsoft Excel version 2010).
+
+b) Los Planos y Procedimientos (Entregas para Calificación), en formato “.pdf”
+   (Adobe Acrobat, sin protección).
+
+      El tamaño del plano será tal que permita amplificar todas las vistas sin que se
+      produzcan deformaciones de la imagen. Calidad de impresión 600 dpi o superior.
+
+c) Todos los documentos Mencionados en a) y b) (Entrega para Construcción),
+   impresión en papel 3 copias.
+
+
+ 8     PROVISIÓN DE MATERIALES
+
+
+Todos los materiales detallados en los planos constructivos correspondientes a la
+presente especificación y los que surjan de la ingeniería de detalle, serán provistos
+por el fabricante.
+Los materiales a utilizar serán de marcas, módelos y calidades reconocidas, y se los
+seleccionará procurando la minimización del parque de repuestos requeridos.
+                                                             CÓDIGO      SCE-RE-512-0004
+                        ESPECIFICACION                       REVISIÓN          1
+1                          TECNICA                             HOJA         9 de 19
+
+
+Las características y especificaciones de los materiales serán sometidas a la
+aprobación de la Distribuidora quien decidirá a su exclusivo juicio su aceptación.
+El fabricante proveerá las válvulas, instrumentos y accesorios respetando las marcas
+y modelos que están homologados por la Distribuidora, los cuales se detallan en los
+anexos de la presente especificación.
+
+
+ 9     CONSIDERACIONES PARTICULARES
+
+
+El equipo será fabricado de acuerdo a lo definido en el Plano Tipo N° SCE-RE-112-
+0004 o Plano Tipo N° SCE-RE-112-0005, y la presente Especificación Técnica.
+El equipo será instalado en posición vertical, contará con una brida de entrada y una
+de salida, pudiéndose ser el sentido de flujo del gas, de izquierda a derecha o
+viceversa, la posición normal de las bridas de entrada y salida será en línea, aunque
+se podrán solicitar a 90°.
+Estará provisto de elementos filtrantes reemplazables, de material celulósico, malla
+reforzada y armadura de refuerzo zincada, con junta de goma en su extremo de
+apoyo interior; serán compatibles con gas natural a la presión de diseño del sistema.
+La marca de los mismos será de calidad reconocida, debiéndose presentar la ficha
+técnica de dicho elemento filtrante.
+El filtro, a los efectos de construcción será considerado como un recipiente a presión y
+estará de acuerdo con las reglas del Código ASME, Sección VIII, División 1 y Sección
+IX, última revisión. Se aplicará un sobre espesor por corrosión de 1.6 mm.
+
+     9.1   Capacidad de filtrado
+
+Tendrá una eficiencia del 98% o superior, respecto de la retención de partículas de
+polvo mayores o iguales a 5 µm.
+La pérdida de carga máxima admisible en el sistema de filtrado será de 150 mbar, en
+la condición de máximo caudal y mínima presión de entrada, con elementos filtrantes
+limpios.
+
+     9.2   Cuerpo
+
+El cuerpo se construirá con:
+
+      Cañería de acero al carbono calidad ASTM A53 grado B o superior
+      Chapa de acero al carbono rolada calidad ASTM A 516 X60 o superior.
+                                                             CÓDIGO      SCE-RE-512-0004
+                       ESPECIFICACION                        REVISIÓN          1
+1                         TECNICA                              HOJA         10 de 19
+
+
+     Faldón y soportes de acero al carbono calidad ASTM A 36 o superior.
+
+
+    9.3   Casquetes semielípticos
+
+Se construirán en acero al carbono ASTM A 234 grado WPB o superior.
+    9.4   Conexiones
+
+Las conexiones del equipo a la línea de proceso serán bridadas.
+    9.5   Tapa
+
+La tapa deberá ser únicamente de apertura rápida (no roscada) tipo Peco, Tube
+Turns, Williamson, Futura o similar.
+
+    9.6   Pollera o Faldón
+
+A partir del modelo FM 6 (en todas las series) contará con faldón o pollera, que servirá
+de apoyo del equipo; se colocará una oreja en la pollera de apoyo del equipo para
+conectar el sistema de puesta a tierra.
+
+    9.1   Purga
+
+
+Para drenar los sólidos acumulados, se colocarán doble válvula esférica de operación
+manual NPT serie 3000 (una de sacrificio y otra de cierre).
+
+    9.2   Cáncamos de izaje
+
+Los equipos FM mencionados llevarán cáncamos de izaje.
+
+    9.3   Placa de identificación
+
+Será de acero inoxidable y se instalará sobre un soporte de chapa soldada al cuerpo
+del equipo.
+
+    9.4   Tarima
+
+Cuando la altura de la tapa del equipo supere 1,80 m con respecto a la platea, se
+construirá una tarima con escalera que permita acceder a la parte superior del mismo.
+                                                             CÓDIGO         SCE-RE-512-0004
+                        ESPECIFICACION                       REVISIÓN             1
+1                          TECNICA                            HOJA             11 de 19
+
+
+La tarima o plataforma será apta para realizar la apertura de la tapa del equipo y
+cambiar los elementos filtrantes durante su mantenimiento. Dicha tarima dispondrá
+de baranda metálica.
+
+    9.5   Espárragos
+
+De utilizarse, serán totalmente roscados de acero ASTM-A 193 B7, con tuercas de
+acero ASTM-A 194 - 2H y terminación zincados.
+
+    9.6   Soldadura
+
+
+Todas las soldaduras cumplirán con lo definido en la Instrucción de Trabajo I OR-068.
+
+    9.7   Ensayos no destructivos
+
+Se debe radiografiar el 100% de las soldaduras, salvo las uniones de filete, media V y
+aquellas que por su ubicación no puedan ensayarse por radiografiado, las cuales se
+ensayarán por el método de líquidos penetrantes.
+
+
+    9.8   Pruebas de Resistencia y Hermeticidad
+
+Se realizará una prueba de resistencia y hermeticidad, de acuerdo con lo establecido
+en la Sección VIII, División 1 del Código ASME.
+El ensayo será llevado a cabo siguiendo un procedimiento específico donde consten
+todos los pasos, formas e instrumentos de control, a utilizar durante el mismo.
+
+
+            9.8.1     PRUEBA DE RESISTENCIA
+Se realizará a una presión de 1.3 veces la presión máxima de la serie ANSI, durante 6
+horas.
+
+            9.8.2     PRUEBA DE HERMETICIDAD
+Se considerará aprobada siempre que, durante la prueba de resistencia, no se hayan
+producido pérdidas de presión (sin agregado adicional de agua) ni exudaciones a su
+exterior.
+
+Finalizadas las pruebas hidráulicas se realizará el secado de la cañería.
+                                                            CÓDIGO     SCE-RE-512-0004
+                      ESPECIFICACION                       REVISIÓN             1
+1                        TECNICA                             HOJA            12 de 19
+
+
+           9.8.3    PRUEBA DE FUGAS
+
+Finalizado el secado de las cañerías, con todos los elementos instalados, y el equipo
+pintado, se realizará la prueba de fugas.
+Esta prueba se realizará con aire seco o nitrógeno a una presión de 5.5 bar, por el
+tiempo necesario, para verificar con solución jabonosa que no existen fugas en cada
+una de sus partes. La parte inferior de las uniones será inspeccionada mediante un
+espejo.
+Antes de realizar este ensayo se debe verificar que todos los elementos puedan
+soportar la presión de ensayo. De no ser así, se aislarán los sectores afectados
+mediante el cierre de sus válvulas de bloqueo y se ensayarán a la presión límite de
+dichos elementos, sin desarmar ni plaqueár ningúno de ellos.
+
+    9.9   Protección Anticorrosiva
+
+Se protegerá el equipo y los accesorios de acuerdo a lo indicado en la especificación
+SCE-PC-511-0003.
+
+    9.10 Válvulas de bloqueo esféricas
+
+
+Las válvulas a utilizar responderán a lo indicado en la especificación SCE-IN-501-
+0008 y en el procedimiento de prueba SCE-RE-308-0001.
+
+No se aceptarán válvulas que no hayan sido construidas y ensayadas en un todo de
+acuerdo a lo definido en los documentos mencionados.
+
+El proveedor de las válvulas deberá entregar al contratista los certificados de
+fabricación y prueba, firmados por la inspección, que avalen el cumplimiento de la
+especificación y el procedimiento mencionados.
+
+Marcas aceptadas: ver Anexo 2
+
+    9.11 Manómetros
+
+
+           9.11.1   MANÓMETRO DE PRESIÓN ESTÁTICA:
+
+
+Los manómetros de presión estática tendrán las siguientes características:
+
+-    Diámetro del cuadrante 4” (100 mm)
+                                                            CÓDIGO     SCE-RE-512-0004
+                        ESPECIFICACION                     REVISIÓN            1
+1                          TECNICA                           HOJA         13 de 19
+
+
+-   Precisión clase 1
+-   Caja en AISI 304
+-   Aro bayoneta
+-   Relleno con glicerina
+-   Visor de vidrio templado
+-   Bourdón y mecanismo en AISI 316
+-   Conexión inferior de ½” NPT, construido en AISI 316 para montaje directo
+-   Norma IRAM IAP AS 165
+-   Grado de protección IP65.
+-   Certificado de Calibración.
+
+Serán provistos montados con manifold de tres vías de acero zincado, rosca NPT.
+
+Marcas aceptadas: ver Anexo 3
+
+
+         9.11.2     MANÓMETRO DE PRESIÓN DIFERENCIAL:
+Los manómetros de presión Diferencial tendrán las siguientes características:
+
+-   Manómetro diferencial a diafragma
+-   Rango 0-2 Bar
+-   Diámetro del cuadrante 3”
+-   Precisión clase 2
+-   Caja en AISI 304
+-   Visor con vidrio templado o acrílico con aguja de arrastre puntero seguidor rojo,
+    relleno con glicerina.
+-   Sellos ; Buna N o Viton
+-   Cuerpo de aluminio, para presiòn max. 100 bar.
+-   Conexión a proceso de ¼” NPT.
+-   Norma IRAM IAP AS 165
+-   Grado de protección IP65.
+-   Certificado de Calibración.
+
+Serán provistos montados con manifold de tres o cinco vías de acero zincado, rosca
+NPT.
+
+Marcas aceptadas: ver Anexo 3
+                                                              CÓDIGO      SCE-RE-512-0004
+                       ESPECIFICACION                         REVISIÓN          1
+1                         TECNICA                              HOJA          14 de 19
+
+
+    9.12 Accesorios
+
+
+Se proveerán todos los accesorios necesarios para el montaje de los manómetros, en
+acero inoxidable del tipo doble virola.
+
+El manifold de tres vías será de acero forjado ASTM-A-105 o superior, con
+terminación zincado en serie 3000.
+
+Marcas aceptadas: ver Anexo 3
+
+
+10 INSPECCION
+
+
+La Distribuidora inspeccionará las distintas etapas de fabricación del Filtro FM.
+
+Para las inspecciones deberá darse aviso a la Gerencia Técnica, 5 días hábiles
+antes, con el fin de lograr una correcta coordinación entre las partes intervinientes.
+
+En correspondencia con lo mencionado, siguiendo el plan de fabricación y ensayos,
+el fabricante no podrá avanzar con la construcción hasta tanto la inspección haya
+comprobado como mínimo los siguientes ítems:
+
+a) Verificaciones de documentación:
+
+     - Certificado de calidad de cañerías, bridas, manómetros, transmisores y
+       accesorios.
+     - Certificado de calidad y de pruebas de válvulas esféricas realizadas por el
+       fabricante de las mismas, según especificación SCE-IN-501-0008 y
+       procedimiento de prueba SCE-RE-308-0001.
+     - Plano mecánico aprobado.
+     - Procedimientos de soldadura aprobados.
+     - Calificaciones de soldadores aprobadas.
+     - Procedimientos de ensayos no destructivos aprobados.
+     - Certificación de operador de radiografiado aprobada.
+     - Procedimiento de Prueba Hidráulica aprobado.
+     - Procedimiento de Protección Anticorrosiva aprobado.
+
+b) Verificaciones durante la construcción:
+                                                           CÓDIGO     SCE-RE-512-0004
+                       ESPECIFICACION                     REVISIÓN           1
+1                         TECNICA                           HOJA         15 de 19
+
+
+    -   Soldaduras.
+    -   Ensayos no destructivos.
+    -   Pruebas de resistencia y hermeticidad.
+    -   Pruebas de fugas.
+    -   Limpieza de superficies y Pintura
+    -   Embalaje y carga en transporte
+    -   Data Book
+
+
+11 DOCUMENTACION CONFORME A OBRA (DATA BOOK)
+
+
+La documentación Conforme a Obra deberá incluir todos los documentos de proyecto
+constructivo aprobados por la Distribuidora y los ensayos del filtro FM, tales como:
+
+-   Listado de documentos.
+-   Plan de inspección y ensayos.
+-   Reportes de inspección.
+-   Planos constructivos.
+-   Hojas de datos de equipos e instrumentos.
+-   Hoja de datos de los elementos filtrantes.
+-   Certificados de materiales e instrumentos.
+-   Mapa de soldaduras.
+-   Procedimientos de soldaduras.
+-   Calificaciones de procedimientos y soldadores.
+-   Procedimientos de ensayos no destructivos.
+-   Calificación de operador de radiografía.
+-   Procedimiento de prueba hidráulica y neumática.
+-   Actas y registros de resultados de ensayos.
+-   Placas radiográficas originales y digitalizadas.
+-   Procedimiento de limpieza y pintura.
+-   Placa de identificación del equipo.
+-   Manual de operación y mantenimiento.
+-   Manual de instalación y operación de la instrumentación.
+-   Certificados de garantías de materiales e instrumentos.
+-   Certificado de garantía del fabricante.
+-   Ocho fotos del conjunto terminado y montado (desde todos los ángulos).
+
+La presentación se identificará con el Nombre de la Obra, Contratista, Número de
+Pedido y Año de fabricación.
+                                                              CÓDIGO      SCE-RE-512-0004
+                       ESPECIFICACION                         REVISIÓN          1
+1                         TECNICA                              HOJA          16 de 19
+
+
+-    Una copia digital (pdf) se enviará a Sede Central de Camuzzi, quien aprobará la
+     misma si corresponde. En ese caso la Distribuidora informá la calificación del
+     documento y liberará el despacho de los equipos a su destino final.
+
+-    El despacho al destino final incluirá un disco compacto con el mismo contenido
+     que el enviado a Sede central de Camuzzi y una copia en papel firmado en
+     original y encuadernado en bibliorato tamaño A4.
+
+
+12 CERTIFICACIÓN DE LOS TRABAJOS
+
+
+Los trabajos se certificarán según lo establecido en la Nota de Pedido.
+
+
+13 Entrega de Material
+
+
+El equipo deberá entregarse completamente armado.
+
+Todos los elementos deberán estar debidamente acondicionados para su traslado,
+teniendo en cuenta la instalación de tapas en las bridas y la adecuada protección de
+los equipos e instrumentos.
+
+La liberación del equipo para su carga y traslado al destino final será realizada por la
+inspección de la Distribuidora.
+
+Estará a cargo del fabricante la carga del equipo para su despacho hasta el destino
+final indicado por la Distribuidora en la Nota de Pedido. La descarga en el destino final
+estará a cargo de la Distribuidora.
+
+El fabricante deberá dar aviso a la Distribuidora como mínimo 5 días hábiles antes de
+la fecha prevista de llegada a del equipo a destino, con el fin de lograr una correcta
+coordinación para la descarga del mismo.
+
+    13.1 Repuestos
+
+El equipo se suministrará con un juego adicional de elementos filtrantes, de las
+mismas características.
+                                                               CÓDIGO     SCE-RE-512-0004
+                       ESPECIFICACION                         REVISIÓN          1
+1                         TECNICA                               HOJA         17 de 19
+
+
+14 GARANTIA
+
+
+Además de las garantías particulares de los materiales e instrumentos que forman
+parte del equipo construido, el fabricante emitirá un Certificado de Garantía General,
+en el cual garantizará el correcto funcionamiento del equipo, la integridad estructural y
+la protección anticorrosiva en condiciones normales de servicio, por el termino de 2
+(dos) años contados desde la fecha de entrega o 1 (un) año desde la fecha de
+instalación, lo que ocurra primero.
+
+También se hará responsable ante vicios ocultos de fabricación sin límite de tiempo.
+
+
+15 REGISTRO Y ARCHIVO
+
+
+No corresponde para este caso en particular.
+                                                                      CÓDIGO     SCE-RE-512-0004
+                     ESPECIFICACION                                  REVISIÓN          1
+1                       TECNICA                                        HOJA         18 de 19
+
+
+16 ANEXOS
+
+    16.1 ANEXO 1- Modelo de Ròtulo.
+
+
+
+
+    16.2 ANEXO 2- Válvulas Esféricas Homologadas.
+
+     Proveedor                         Observaciones
+Valmec           Valvulas roscadas hasta 2´´ y bridadas hasta 3´´ s-150
+Wenlen           Todas las válvulas homologadas
+Esferomatic      Todas las válvulas homologadas
+Indave           Todas las válvulas homologadas
+Pentair          Todas las válvulas homologadas
+Spirax Sarco     Válvulas roscadas y bridadas hasta Ø 4´´ s-150 y Ø 1.5" s-300
+Valvtronic       Todas las válvulas homologadas
+Worcester        Todas las válvulas homologadas
+Beta             Todas las válvulas homologadas
+                                                    CÓDIGO    SCE-RE-512-0004
+                    ESPECIFICACION                 REVISIÓN         1
+1                      TECNICA                       HOJA        19 de 19
+
+
+    16.3 ANEXO 3- Manómetros y Accesorios de conexión. Marcas Homologadas
+
+Manómetros de Presión Estática y Diferencial:
+
+-    Weisz
+-    Ing Capino
+-    Abac
+-    Casucci
+
+Accesorios de Conexión:
+
+-    Swagelock
+-    Girolock
+-    Parker
+-    Casucci
+

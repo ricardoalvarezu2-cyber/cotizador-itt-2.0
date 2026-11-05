@@ -1,0 +1,540 @@
+                                                      CÓDIGO                       -0001
+
+                       PROCEDIMIENTO                  REVISIÓN               00
+
+                                                       HOJA                1 de 11
+
+                                                            FECHA              FECHA
+                                                          APROBACION          VIGENCIA
+       PROCESO             OPERACIÓN DE LA RED
+                                                           06-07-2018        10-07-2018
+
+                             Requisitos Generales                LIDER DEL PROCESO
+           TEMA          Plantas C
+                                 Compresoras de Gas
+                                   Natural                          Matias Pahor
+
+                                                                  APROBADO POR:
+   ANULA/REEMPLAZA                   -
+                                                                  Alejandro Lorenzo
+
+
+                               MODIFICACIONES
+  Nº de      FECHA
+                                      MOTIVO DE LA MODIFICACIÓN
+REVISIÓN    REVISION
+
+
+
+
+AREAS INVOLUCRADAS:
+Gerencia Técnica
+Unidades de Negocios / Centros Operativos
+
+
+
+
+OBSERVACIONES:
+                                                                                                            CÓDIGO             SCE
+                                                                                                                               SCE-EC-301-0001
+
+                                          PROCEDIMIENTO                                                    REVISIÓN                        00
+
+                                                                                                              HOJA                     2 de 11
+
+
+
+
+INDICE
+                                                                                                                                                   Página
+1   OBJETO ................................................................
+                                           ................................................................................................
+                                                                                                           ................................................. 3
+2   ALCANCE ................................................................................................................................
+              ................................                                                                .............................................. 3
+3   AREAS INVOLUCRADAS ................................................................................................
+                                       ................................                                ..................................................... 3
+4   DOCUMENTACION COMPLEMENTARIA             MENTARIA Y/O DE REFERENCIA       REFE                    ................................
+                                                                                                      ...................................................... 3
+5   DEFINICIONES ................................................................................................................................
+                       ................................                                                                ..................................... 3
+6   RESPONSABILIDADES ................................................................................................
+                                    ................................                                ........................................................ 4
+7   DESARROLLO ................................................................................................................................
+                      ................................                                                                ...................................... 5
+    7.1 GENERALIDADES ..............................................................................................................................
+                              ................................                                                                .............................. 5
+    7.2 FUNCIONES DE UNA PC ................................................................................................
+                                        ................................                                .................................................... 5
+    7.3 MODOS DE OPERACIÓN ................................................................................................
+                                       ................................                                ..................................................... 5
+    7.4 CONFIGURACIÓN ..............................................................................................................................
+                              ................................                                                                .............................. 6
+    7.5 LOS EQUIPOS COMPRESORES             ES ................................................................................................
+                                                                                                                 ........................................... 7
+        7.5.1 COMPRESORES DE GAS ................................................................................................
+                                                                                                                  .......................................... 7
+        7.5.2 IMPULSORES ................................................................................................
+                                  ................................                                .......................................................... 8
+    7.6 EQUIPOS AUXILIARES ................................................................................................
+                                    ................................                                ........................................................ 8
+    7.7 CODIFICACIÓN DE ÁREAS EN INSTALACIONES DE PLANTAS COMPRESORAS ................................            ........................................ 10
+8   REGISTRO Y ARCHIVO ................................................................................................
+                                     ................................                                ..................................................... 11
+9   ANEXOS ................................................................
+                                            ................................................................................................
+                                                                                                            .............................................. 11
+    9.1 PLANO DE DIAGRAMA DE FLUJO DE PLANTA. ................................................................
+                                                                                                     ..................................................... 11
+                                                            CÓDIGO     SCE
+                                                                       SCE-EC-301-0001
+
+                        PROCEDIMIENTO                       REVISIÓN         00
+
+                                                             HOJA          3 de 11
+
+1   OBJETO
+
+Establecerr requisitos generales a cumplimentar para la elaboración de documentación
+técnica, referido a Plantas Compresoras de Gas Natural, ya sean nuevas instalaciones
+ó modificación de las existentes.
+
+El mismo está basado, considerando diferentes bibliografías y documentación de
+respaldo de la actividad de la industria del gas.
+
+2   ALCANCE
+
+Todas las plantas compresoras de gas natural instaladas en gasoductos de transporte,
+operadas por la Compañía.
+
+3   AREAS INVOLUCRADAS
+
+Todas las Áreas Técnicas de la Compañía.
+
+4   DOCUMENTACION COMPLEMENTARIA Y/O DE REFERENCIA
+
+NAG 100 Normas Argentinas Mínimas de Seguridad para el Transporte y Distribución
+de Gas Natural y otros Gases por Cañería.
+
+NAG 126 Seguridad en Plantas Compresoras de Gas Natural.
+                                                Natural
+
+NAG 153 Normas Argentinas Mínimas para la Protección Ambiental en el Transporte y
+la Distribución de Gas Natural y otros Gases por Cañería.
+
+Ley de Higiene y Seguridad Industrial N° 19.587 y sus decretos reglamentarios.
+
+Resolución Enargas 1192
+
+5   DEFINICIONES
+
+Gas: Gas natural, gas inflamable,
+                          amable, gas tóxico o corrosivo.
+
+Gasoducto:: Conducto que transporta o transmite gas natural, en general a largas
+distancias y grandes volúmenes y cuya presión de diseño es igual o mayor a 40 bar.
+
+Motocompresor: Es una máquina  quina especialmente diseñada y construida para aumentar
+la presión y desplazar cierto tipo de fluidos llamados compresibles (gases y vapores).
+                                                              CÓDIGO    SCE
+                                                                        SCE-EC-301-0001
+
+                          PROCEDIMIENTO                      REVISIÓN          00
+
+                                                               HOJA         4 de 11
+
+
+
+                             natural: Comprende los distintos equipos e instalaciones
+Planta compresora de gas natural
+destinados a elevar la presión del gas en cabecera y puntos intermedios de una línea
+de conducción (gasoducto) para permitir su transporte a través del mismo.
+
+Relación de compresión: Es un índice que se calcula como la relación   relación entre la
+presión absoluta en la descarga (Pd) y la presión absoluta en la succión (Ps).
+
+    RC= Pd/Ps, (presiones absolutas) RC se limita a un valor entre 2.5 y 4.5 por etapa.
+
+
+       Relaciones de compresión muy alta altas requerirán un compresor de gran tamaño y
+    por otra parte, en virtud a que todo proceso de compresión implica un aumento de la
+    temperatura del fluido que se comprime, estas altas temperaturas pueden
+                                                                        ueden afectar al
+    equipo tanto desde el aspecto mecánico como el de lubricación.
+
+Temperatura ambiente:: Es la temperatura del medio circundante, que por lo general
+hace referencia a la temperatura del aire en el cual se sitúa una estructura u opera un
+dispositivo.
+
+Transporte de Gas: Captación,
+                            ción, conducción y/o distribución de gas por gasoducto,
+incluido el almacenamiento del fluido.
+
+6    RESPONSABILIDADES
+
+Gerencia Técnica
+
+    • Mantener actualizado el presente procedimiento.
+    • Aplicar las definiciones establecidas en el presente documento tanto en las obras
+      propias
+           ias como en las que realicen terceros.
+    • Servir de consulta al resto de las áreas técnicas ante situaciones no previstas o
+      cuando surjan dudas respecto de la aplicación de lo aquí establecido.
+
+Unidades de Negocio y Centros Operativos
+
+    • Aplicar el presente procedimiento en lo que
+                                              que respecta a su área de competencia.
+                                                               CÓDIGO     SCE
+                                                                          SCE-EC-301-0001
+
+                         PROCEDIMIENTO                         REVISIÓN          00
+
+                                                                HOJA          5 de 11
+
+7     DESARROLLO
+
+
+7.1   Generalidades
+
+En el caso de la circulación del gas por una cañería, una caída de presión se produce
+como consecuencia de fricción en las cañerías. Esta caída se compensa al elevar la
+presión del gas, en un proceso denominado compresión.
+El proceso de compresión se realiza
+                                 realiza entregando el gas natural a una presión mayor a
+la que la recibe, a fin de lograr el flujo deseado para enviar el gas hasta su destino en el
+domicilio del consumidor.
+
+
+7.2   Funciones de una PC
+
+Básicamente,, la función de las plantas compresoras
+                                        compresor es tomar el gas que entregan los
+productores en los yacimientos o recibir el mismo de los transportistas y transportarlo
+través de varios kilómetros de gasoducto hacia las zonas de consumo.
+
+Las plantas compresoras reciben el gas a una presión determinada, lo filtran, lo
+comprimen y los descargan nuevamente en el gasoducto a una presión mayor a la de
+su ingreso. Impulsado por la nueva presión, el gas llega a la próxima planta
+compresora, distante aproximadamente
+                          imadamente a 150/200 kilómetros; o en su defecto hasta
+una zona cercana
+             ana al consumo.
+
+7.3   Modos de operación
+
+Las plantas compresoras pueden controlarse en forma manual, automática o por
+control remoto.
+
+El grado de automatización va a determinar
+                                       determinar los sistemas de control y los
+requerimientos de personal, ya que es necesario cumplir con los procedimientos
+operativos y de mantenimiento para garantizar una operación segura y eficiente.
+                                                                     eficiente.
+
+   • Operación en forma manual
+Todas las tareas se realizan manualmente. Este tipo de operación requiere
+                                                                     requi     ser
+atendida por operadores siempre que se encuentre en funcionamiento.
+El operador de la planta se encarga de la puesta en marcha y parada del equipo, de
+ajustes operativos y también de las situaciones de emergencia que se presenten de
+manera manual.
+
+   • Operación en forma automática
+En una operación automatizada, los sistemas de instrumentación controlan la mayor
+parte de las funciones de rutina. Sin embargo, se debe contar con personal permanente
+en la planta siempre que esté en funcionamiento, para atender situaciones de
+                                                             CÓDIGO     SCE
+                                                                        SCE-EC-301-0001
+
+                           PROCEDIMIENTO                     REVISIÓN         00
+
+                                                              HOJA          6 de 11
+
+emergencia o ciertas cuestiones operativas como por ejemplo, carga de aceites, o
+control de perdidas
+
+      •    Operación en forma remota
+
+En una operación de manera remota, las funciones de control y la información se
+transmiten remotamente a una central de control. La central de control moni
+                                                                       monitorea y
+controla las plantas. Además, este sistema puede establecer y/o leer parámetros
+operativos y controlar el equipo desde un lugar remoto.
+
+
+7.4       Configuración
+
+Uno de los aspectos de diseño y constructivos de una planta compresora es la
+disposición de los equipos compresores de acuerdo a las características técnicas de
+estos; y a los requerimientos operativos del sistema del transporte de gas.
+
+La configuración en  n paralelo es la adoptada comúnmente. Los compresores se
+disponen de tal forma que las cañerías de entrada y salida de cada uno confluyen en
+colectores que direccionan el gas al gasoducto.
+Tiene la ventaja de que, más allá que cada equipo trabaja con la mismas
+                                                                      smas presiones de
+entrada y salida, pueden entrar y salir de servicio sin afectar la operación del resto de
+los equipos. Este diseño se tiene en cuenta para lograr pasar el máximo caudal posible
+con relaciones de compresión moderadas.
+
+
+
+
+                                 Configuración paralelo
+                                                               CÓDIGO     SCE
+                                                                          SCE-EC-301-0001
+
+                            PROCEDIMIENTO                     REVISIÓN          00
+
+                                                                HOJA          7 de 11
+
+La configuración en serie tiene la particularidad que la cañería de descarga de uno de
+los equipos compresores converge en la cañería de entrada del siguiente equipo en
+servicio. Esta disposición tiene el fin de lograr altas relaciones de compresión.
+                                                                      compres
+Sin embargo,, una desventaja típica de este tipo de diseño es la poca flexibilidad
+operativa, ya que hay una interdependencia entre los compresores que hace que ante
+la salida de servicio de un equipo, afecta al resto a tal punto que puede arrastrar al paro
+al resto de los compresores de gas.
+
+
+
+
+                                    Configuración serie
+
+7.5       Los equipos compresores
+
+Una estación compresora de gas tiene uno o más equipos compresores, y equipos
+auxiliares asociados.. Cada equipo de compresión cuenta con un compresor y un
+accionamiento o impulsor.
+
+7.5.1      COMPRESORES DE GAS
+
+
+Hay dos categorías principales, utilizados en nuestra industria:
+
+      •    El compresor de desplazamiento positivo,
+                                              positivo confina una cantidad determinada
+           de gas y eleva su presión reduciendo su volumen.
+
+      •    El compresor centrífugo,
+                          centrífugo, convierte una repentina disminución de la velocidad
+           del gas en presión.
+                                                                      CÓDIGO     SCE
+                                                                                 SCE-EC-301-0001
+
+                              PROCEDIMIENTO                          REVISIÓN             00
+
+                                                                       HOJA           8 de 11
+
+7.5.2      IMPULSORES
+
+
+ n compresor trasmite energía al gas aumentando su presión. Debido a que la energía
+Un
+no puede ser creada o destruida,
+                      destruida la misma debe tener una fuente.
+Todos los compresores, tienen un eje y el accionamiento debe girar dicho eje.
+
+Los siguientes tipos de accionamiento de uso común son:
+
+      •    Motores de combustión interna.
+
+      •    Motores eléctricos.
+
+      •    Turbinas de gas.
+
+Estos accionamientos usan un eje rotativo para transformar la energía proveniente de
+combustibles (gas natural o combustible líquido)) o electricidad, en energía mecánica.
+
+7.6       Equipos auxiliares
+
+Para una operación segura y eficiente de los equipos de compresión, y para
+acondicionar el gas en proceso, se utilizan una serie de equipos auxiliares.
+
+Estos pueden ser:
+
+      •                                          planta, que permiten la puesta fuera de
+           Válvulas de entrada y salida de planta,
+           servicio de la planta y la circulación directa por el gasoducto (operación
+                                                                           (ope       que
+           vulgarmente se denomina “by-pass”
+                                     “by        de planta).
+
+      •                      entrada, que retienen los líquidos y partículas de arrastre
+           Separadores de entrada,
+           antes de la compresión.
+
+      •                 medición, con la finalidad de cuantificar el volumen de gas
+           Sistema de medición,
+           comprimido, gas de consumo, y otras mediciones relacionadas con el proceso.
+
+      •    Interenfriadores, que enfrían el gas cuando este se recicla antes de volver
+           ingresar a la
+                       a compresión.
+
+      •                   salida, que enfrían el gas antes de descargarlo a la cañería de
+           Enfriadores de salida,
+           alta presión.
+
+      •    Sistema de aire, para distintos usos: el motor de accionamiento o arranque de
+           un motocompresor, para alimentar los sistemas de sellos secos de los
+           compresores, para el instrumental neumático de la planta. El sistema de aire debe
+           estar compuesto por filtros y reguladores
+                                         reguladores de presión, entre otros elementos.
+                                                          CÓDIGO    SCE
+                                                                    SCE-EC-301-0001
+
+                     PROCEDIMIENTO                       REVISIÓN         00
+
+                                                           HOJA         9 de 11
+
+
+       CGP/CGS también utiliza gas naturall para arranque y accionamiento de
+válvulas, etc.
+
+•                               agua, que consiste en una bomba circulante, un
+    Sistema de enfriamiento del agua,
+    enfriador y un sistema de control para mantener el agua a temperaturas
+    operativas.
+
+•   Sistemas de control y monitoreo para todos los parámetros en los
+                                                               servicios, que
+    accionamientos, compresores y sistemas de control de servicios
+    incluyen alarmas y sistemas de paradas de emergencia (PE).
+
+•                             ventilación, que incluyen ventiladores circulantes,
+    Sistema de calor y ventilación,
+    extractores de techos y radiadores.
+
+•                              seguridad, que protegen la maquinaria del clima
+    Construcciones y cercos de seguridad,
+    y del vandalismo.
+
+•                                             eléctrica, que es requerida para el
+    Sistema de generación de energía eléctrica,
+    accionamiento de e motores de equipos auxiliares tales como los de circulación de
+    agua, refrigeración, ventiladores, compresores de aire y tableros de control.
+
+•               lubricación que consisten en bombas, filtros y enfriadores.
+    Sistemas de lubricación,
+
+•   Sistema de parada de emergencia Internacionalmente llamado “SHUT
+    DOWN”, que comprende elementos que generan alarmas y paradas
+                                                         paradas; con o sin
+    venteo, asociadas a los procesos de la planta.
+
+•                 comunicaciones, que permiten la comunicación con distintos
+    Sistema de comunicaciones,
+    sectores de la compañía.
+
+•   Sistema de incendio o red de incendio.
+
+•   Sistemas regenadores de aceite lubricantes.
+
+•   Sistema de precalentamiento de aceite lubricante de motor, compresor y
+    liquido refrigerante.
+
+•                                                               combustión, cada
+    Sistema de admisión de aire y de escape de gases de combustión
+    equipo debe tomar el aire del exterior de la sala mediante filtros de capacidad
+    adecuada que proteja a la máquina de la acción erosiva. El sistema de escape
+    además debe estar revestido a los efectos de evitar un calentamiento excesivo
+    del ambiente, y por razones de seguridad, también deben contar con silenciador
+    adecuado.
+
+•   Sistema de alimentación y regulación de gas combustible, gas de
+    arranque, servicios, etc.:
+                                                                           CÓDIGO       SCE
+                                                                                        SCE-EC-301-0001
+
+                               PROCEDIMIENTO                              REVISIÓN                00
+
+                                                                            HOJA            10 de 11
+
+
+
+    Todos estos equipos pueden formar parte de las instalaciones, aunque no
+necesariamente tienen que estar todos presentes en una misma planta.
+
+Además, la planta compresora puede incluir o no, los gasoductos y las llamadas
+“Trampas de Scraper”, donde eventualmente se introducen y reciben las herramientas
+de inspección o limpieza de la cañería.
+                               cañería
+
+
+7.7       Codificación de áreas en iinstalaciones de Plantas Compresora
+                                                             Compresoras
+
+Las instalaciones de Planta Compresoras están organizadas según su función en
+diferentes áreas, como ser:
+
+      •    Sistema de comunicaciones - Área 1000
+
+      •    Sistema de acondicionamiento y alimentación - Área 2000
+      (Gas consumo, gas combustible,
+                                  e, gas arranque, gas emergencia)
+
+
+      •    Sistema de generación de energía eléctrica - Área 3000
+
+      •    Sistema de servicios auxiliares - Área 4000
+      (Aire
+         ire comprimido para: instrumentos, arranque, motorización, uso industrial)
+      (Aceite
+         ceite para: lubricación y sellos, sistema de almacenamiento, recuperación y enfriamiento)
+      (Agua para: almacenamiento y distribución para uso humano e industrial, sistema de provisión,
+      tratamiento y enfriamiento)
+
+
+      •    Sistema de vinculación de la planta con gasoducto
+                                                   gas       - Área 5000
+      (Colectores
+        olectores de entrada y salida, sistema de acondicionamiento de gas de proceso, bypass interno
+      de planta, válvulas de entrada succión/descarga, filtros y separadores)
+
+
+      •    Sistema de compresión y equipos - Área 6000
+      (Líneas de succión y de descarga, compresores y sistemas auxiliares, sistema de reciclo, sistema
+      enfriamiento del gas de los equipos y auxiliares)
+
+
+      •    Venteos y drenajes - Área 7000
+      (Chimeneas de venteo, líneas de venteo de alta y baja presión, venteos individuales)
+      (Sistema de drenajes
+                     najes presurizados. sistema de drenajes abiertos, planta de tratamiento ecológico de
+      drenajes)
+
+
+      •    Sistema de control de planta - Área 8000
+      (Medición
+       Medición y acciones de control de variables de proceso-nivel,
+                                                               ivel, temperatura, caudal, etc.
+                                                                                          etc.)
+
+
+      •    Seguridad de planta - Área 9000
+      (Sistemas de detección de eventos de seguridad, sistemas contra Incendio, red de agua contra
+      incendio)
+                                                        CÓDIGO     SCE
+                                                                   SCE-EC-301-0001
+
+                            PROCEDIMIENTO               REVISIÓN         00
+
+                                                         HOJA         11 de 11
+
+      •    Gasoducto y trampa de scraper - Área 12000
+
+      •    Cañerías de planta y válvulas - Área 20000
+
+8     REGISTRO Y ARCHIVO
+
+No corresponde.
+
+9     ANEXOS
+
+
+9.1       Plano de diagrama de flujo de planta.
+                                        planta
+

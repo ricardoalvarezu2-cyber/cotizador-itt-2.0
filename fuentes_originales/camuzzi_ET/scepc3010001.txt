@@ -1,0 +1,820 @@
+                                                                                   SCE-PC-301-
+                                                                     CÓDIGO:
+                                                                                      0001
+                          PROCEDIMIENTO                             REVISIÓN:            0
+
+                                                                      HOJA:           1 de 21
+
+
+                                                                      FECHA           FECHA
+                                                                    APROBACION       VIGENCIA
+       PROCESO                 OPERACIÓN DE LA RED
+                                                                      05/08/19        05/08/19
+
+                                                                        LIDER DEL PROCESO
+                       Instalación de Dispersores de Corriente de
+           TEMA
+                       Protección Catódica y Ánodos Galvánicos
+                                                                          Guillermo Montag
+
+                                                                          APROBADO POR:
+   ANULA/REEMPLAZA                     I OR 062
+                                                                         Alejandro Lorenzo
+
+
+                                  MODIFICACIONES
+  Nº de      FECHA
+                                            MOTIVO DE LA MODIFICACIÓN
+REVISIÓN    REVISION
+
+
+
+
+AREAS INVOLUCRADAS:
+
+Todas las áreas Técnicas de las Unidades de Negocio
+
+
+
+
+OBSERVACIONES:
+                                                                                                              CÓDIGO             SCE-PC-301-0001
+
+                                         PROCEDIMIENTO                                                       REVISIÓN                        0
+
+                                                                                                                HOJA                    2 de 21
+
+
+INDICE
+                                                                                                                                                  Página
+1     OBJETO .............................................................................................................................................. 3
+2     DOCUMENTACIÓN COMPLEMENTARIA Y/O DE REFERENCIA ................................................... 3
+3     DEFINICIONES .................................................................................................................................. 3
+  3.1 GLOSARIO ....................................................................................................................................... 3
+  3.2 BUDI .............................................................................................................................................. 4
+4     RESPONSABILIDADES ..................................................................................................................... 4
+  4.1 TÉCNICO DE PROTECCIÓN CATÓDICA ................................................................................................ 4
+5     DESARROLLO ................................................................................................................................... 4
+  5.1 DISPERSORES DE CORRIENTE IMPRESA ............................................................................................ 4
+    5.1.1 INSTALACIÓN DE DISPERSOR PROFUNDO ....................................................................................... 4
+    5.1.2 INSTALACIÓN DE DISPERSOR SUPERFICIAL HORIZONTAL O CONTINUO.............................................. 9
+    5.1.3 INSTALACIÓN DE DISPERSOR SUPERFICIAL VERTICAL O DISCONTINUO ........................................... 11
+  5.2 CEGADO DE POZOS DE DISPERSORES PROFUNDOS ......................................................................... 12
+  5.3 INSTALACIÓN DE ÁNODOS GALVÁNICOS........................................................................................... 13
+    5.3.1 MATERIALES A UTILIZAR EN LA INSTALACIÓN DEL SISTEMA............................................................ 13
+    5.3.2 PROCEDIMIENTO DE INSTALACIÓN .............................................................................................. 13
+    5.3.3 INSTALACIÓN DE CMP ............................................................................................................... 14
+  5.4 SIMBOLOGÍA E IDENTIFICACIÓN DE CONDUCTORES ........................................................................... 14
+6     REGISTRO Y ARCHIVO .................................................................................................................. 14
+7     ANEXOS ........................................................................................................................................... 15
+  7.1 ANEXO 1: PLANILLAS DE COMPROBACIÓN DE LA INSTALACIÓN (CHECK LIST) ..................................... 15
+    7.1.1 DISPERSORES DE CORRIENTE IMPRESA...................................................................................... 15
+    7.1.2 ÁNODOS GALVÁNICOS ............................................................................................................... 16
+    7.1.3 PLANILLAS DE CHECK LIST ......................................................................................................... 17
+  7.2 ANEXO 2: CARGA DE DATOS DE DISPERSORES EN LA BUDI .............................................................. 17
+    7.2.1 CARGA DE UN DISPERSOR NUEVO.............................................................................................. 17
+    7.2.2 MODIFICACIÓN Y CARGA DE LA RENOVACIÓN DE UN DISPERSOR .................................................. 18
+                                                            CÓDIGO     SCE-PC-301-0001
+
+                      PROCEDIMIENTO                         REVISIÓN          0
+
+                                                             HOJA          3 de 21
+
+
+1     OBJETO
+
+El presente Procedimiento establece la forma en que se debe realizar la instalación de
+dispersores de corriente impresa y ánodos galvánicos para protección catódica.
+
+2     DOCUMENTACIÓN COMPLEMENTARIA Y/O DE REFERENCIA
+
+I MA – 119:           Protección Catódica
+I OR – 002:           Glosario de Términos y Símbolos de Protección Anticorrosivo
+I OR – 045:           Mediciones Complementarias para Protección Catódica
+SCE-PC-101-0002:      Cámara de boca de pozo para Dispersor Profundo
+SCE-PC-101-0003:      Instalación de Dispersores de Profundidad Tipos A y B
+SCE-PC-101-0009:      Instalación de Batería de Ánodos de Magnesio (vertical)
+SCE-PC-101-0010:      Instalación de Batería de Ánodos de Magnesio (horizontal)
+SCE-PC-101-0011:      Dispersor Superficial Continuo con Ánodos de Fe Si
+SCE-PC-101-0012:      Dispersor Superficial Discontinuo con Ánodos de Fe Si
+SCE-PC-101-0016:      Instalación de un Ánodo de Magnesio (vertical)
+SCE-PC-101-0019:      Caja de interconexión para dispersor
+SCE-PC-101-0020:      Instalación de Dispersores de Profundidad Tipos C y D
+SCE-PC-101-0021:      Instalación de Dispersores de Profundidad Tipo E
+SCE-PC-101-0022:      Instalación de Dispersores de Profundidad Tipo F
+SCE-PC-304-0001:      Instalación de CMP, Probetas Calibradas Para Medir la
+                      Velocidad de Corrosión y Aplicación de Soldadura
+                      Cuproaluminotérmica
+SCE-PC-512-0003:      Coque de petróleo calcinado para dispersores profundos y
+                      superficiales
+SCE-PC-512-0004:      Tubos de venteo para dispersores profundos
+NAG 100:              Normas Argentinas Mínimas de Seguridad para el Transporte y
+                      Distribución de Gas Natural y otros Gases por Cañería
+Norma IRAM 2214:      Cables para Protección Catódica
+
+3     DEFINICIONES
+
+
+3.1    Glosario
+
+En el documento I OR – 002 se incluye un listado de términos y símbolos
+comúnmente utilizados en la redacción de los Documentos de Protección
+Anticorrosiva
+                                                              CÓDIGO     SCE-PC-301-0001
+
+                       PROCEDIMIENTO                          REVISIÓN          0
+
+                                                               HOJA          4 de 21
+
+
+3.2   BUDI
+
+BUDI es la abreviatura de Base Unificada de Instalaciones. Es un programa, que tiene
+asociada una base de datos, en la cual se guardan los datos de los elementos de
+protección catódica y las mediciones realizadas en los mismos, además de otra
+información relacionada con las cañerías, instalaciones de superficie, etc.
+
+4     RESPONSABILIDADES
+
+
+4.1   Técnico de Protección Catódica
+
+Es responsable de que los trabajos sean ejecutados de acuerdo a lo establecido en el
+presente Procedimiento.
+
+Es responsable de que los datos de la BUDI estén actualizados.
+
+5     DESARROLLO
+
+
+5.1   Dispersores de Corriente Impresa
+
+5.1.1 INSTALACIÓN DE DISPERSOR PROFUNDO
+
+5.1.1.1 Materiales a utilizar en la instalación del sistema
+
+Cañería para encamisado: será de PVC, de 10" de diámetro
+
+Ánodos: Son los electrodos que emiten la corriente del sistema, el tipo y la cantidad a
+utilizar se ajustarán a cada proyecto.
+
+Cañería de ventilación: Se utilizarán tubos de ventilación según la especificación
+técnica SCE-PC-512-0004.
+
+Relleno (Backfill): Para asegurar la continuidad eléctrica de los ánodos con el terreno,
+se rellenará el espacio anular entre los mismos y la pared de la perforación con coque
+de petróleo calcinado, según la especificación técnica SCE-PC-512-0003.
+
+5.1.1.2 Procedimiento de perforación
+
+Primero se procede a realizar un sondeo de la zona de obra, removiendo como
+mínimo un 1 m3 del terreno, con el fin de comprobar que no existan otras estructuras y
+evitar ocasionarles algún daño.
+                                                             CÓDIGO    SCE-PC-301-0001
+
+                      PROCEDIMIENTO                         REVISIÓN          0
+
+                                                              HOJA         5 de 21
+
+
+
+
+A continuación se emplaza el equipo, se montan las bateas y volquetes necesarios
+para efectuar el bombeo y la inyección.
+
+Se inicia la perforación con la herramienta que corresponda para permitir la
+colocación del caño camisa a la profundidad establecida en el artículo 7.1.1.4 y el
+plano de proyecto.
+
+Se cementará el espacio anular entre el caño camisa y la perforación inyectando de
+abajo hacia arriba una mezcla compuesta por 1 bolsa de cemento cada 30 litros de
+agua. La inyección se continuará hasta que dicha mezcla cubra perfectamente todos
+los espacios y llegue hasta la superficie del terreno.
+
+Una vez que quede concluida la operación y haya fraguado el cemento, se continúa
+con la perforación hasta alcanzar la profundidad indicada en el artículo 7.1.1.4.
+
+Durante la perforación se deberá realizar un perfil fitológico, de acuerdo a lo
+establecido en la I MA – 119, como también de un perfilaje eléctrico del pozo.
+
+5.1.1.3 Procedimiento de instalación
+
+Finalizada la perforación, se procede a lavar perfectamente el pozo y se retiran las
+herramientas utilizadas en la maniobra. Se deberá ejecutar entonces la medición del
+perfil eléctrico del mismo y/o la realización de otros ensayos específicos que pudieran
+estar indicados en el proyecto.
+
+Se procede a la bajada de los electrodos con dos cañerías de ventilación, tal como se
+detalla en el plano tipo correspondiente para cada tipo de dispersor (ver punto
+7.1.1.4.)
+
+Durante todo el proceso de bajada y maniobra se tendrá especial cuidado en el trato
+de los conductores a fin de no marcarlos ni dañarlos.
+
+Posteriormente, se bombea el coque por medio de manguerotes u otra cañería de
+maniobra no metálica, para no dañar los electrodos ya ubicados dentro del pozo.
+
+El bombeo se hará de abajo hacia arriba, dando por terminada la operación cuando
+se haya alcanzado una altura de la columna de coque tal, que supere no menos de
+10 m al electrodo más cercano a la superficie y todo el espacio entre los ánodos y la
+pared del terreno esté completamente cubierto.
+
+Pasadas 24 hs de concluido el trabajo, se verificará la altura de la columna de coque
+agregando más material en caso de ser necesario.
+                                                               CÓDIGO     SCE-PC-301-0001
+
+                       PROCEDIMIENTO                          REVISIÓN           0
+
+                                                                HOJA          6 de 21
+
+
+
+
+La instalación podrá ser completada (de acuerdo a lo indicado en el proyecto) con el
+Ilenado de piedra partida de tamaño pequeño hasta la altura solicitada.
+
+Por último, se procederá a la construcción de la cámara de boca de pozo de acuerdo
+a lo especificado en el plano tipo SCE-PC-101-0002.
+
+Los caños de ventilación serán Ilevados al exterior atravesando la pared de la cámara
+y dejándolos fijados al lado del equipo rectificador o a alguna instalación fija existente
+de acuerdo a lo que decida la Inspección para cada circunstancia.
+
+También se preverá la instalación de un tubo de PVC para el pasaje de los
+conductores anódicos fuera de la cámara y que se conducirán enterrados hasta la
+caja de interconexión de fundición de aluminio detallada en el plano tipo
+SCE-PC-101-0019 última revisión. Los cables deberán estar identificados
+apropiadamente (ver el procedimiento SCE-PC-304-0001.)
+
+Se verificará también que el tubo de venteo no esté obturado. En caso de estarlo se
+deberá lavar con agua hasta dejarlo libre de sólidos.
+
+Por último se efectuará una medición para determinar el valor de la resistencia de
+puesta a tierra del dispersor, según lo descripto en la I OR - 045 "Mediciones
+Complementarias para Protección Catódica".
+
+5.1.1.4 Tipos de dispersores
+
+Los dispersores profundos a instalar podrán ser de algunos de los tipos que se
+describen a continuación:
+
+Dispersor profundo tipo (A):
+
+      Plano Tipo: SCE-PC-101-0003
+      Profundidad total: 100 m.
+      Longitud activa (sin encamisar): 50 m.
+      Longitud perforada con mecha Ø 12/14”, encamisada con tubo PVC reforzado
+      Ø 10” y cementada el espacio entre la cara exterior de la camisa y el terreno
+      natural: lo que determine el organismo de obras sanitarias de cada lugar (si
+      dicho organismo no indica la profundidad de cementado, ésta será de 20
+      metros mínimo, todo valor menor deberá ser aprobado por la Distribuidora)
+      Longitud perforada con mecha Ø 8”: diferencia entre profundidad total y
+      longitud cementada.
+      Número de ánodos de grafito: 20
+      Número de tubos de venteo: 2
+                                                           CÓDIGO    SCE-PC-301-0001
+
+                      PROCEDIMIENTO                       REVISIÓN          0
+
+                                                            HOJA         7 de 21
+
+
+
+
+Dispersor profundo tipo (B):
+
+      Plano Tipo: SCE-PC-101-0003
+      Profundidad total: 90 m.
+      Longitud activa (sin encamisar): 50 m.
+      Longitud perforada con mecha Ø 12/14”, encamisada con tubo PVC reforzado
+      Ø 10” y cementada el espacio entre la cara exterior de la camisa y el terreno
+      natural: lo que determine el organismo de obras sanitarias de cada lugar (si
+      dicho organismo no indica la profundidad de cementado, ésta será de 20
+      metros mínimo, todo valor menor deberá ser aprobado por la Distribuidora)
+      Longitud perforada con mecha Ø 8”: diferencia entre profundidad total y
+      longitud cementada.
+      Número de ánodos de grafito: 15
+      Número de tubos de venteo: 2
+
+Dispersor tipo (C):
+
+Este dispersor estará compuesto por dos (2) perforaciones paralelas, separadas entre
+sí de 6 a 10 metros. Cada una de ellas tendrá las siguientes características:
+
+      Plano Tipo: SCE-PC-101-0020
+      Profundidad total: 50 m.
+      Longitud activa (sin encamisar): 15 m
+      Longitud perforada con mecha Ø 12/14”, encamisada con tubo PVC reforzado
+      Ø 10” y cementada el espacio entre la cara exterior de la camisa y el terreno
+      natural: lo que determine el organismo de obras sanitarias de cada lugar (si
+      dicho organismo no indica la profundidad de cementado, ésta será de 20
+      metros mínimo, todo valor menor deberá ser aprobado por la Distribuidora)
+      Longitud perforada con mecha Ø 8”: diferencia entre profundidad total y
+      longitud cementada.
+      Número de ánodos de grafito en cada perforación: 7 – 8 (total 15 ánodos)
+      Número de tubos de venteo en cada perforación: 2
+
+Dispersor tipo (D):
+
+      Plano Tipo: SCE-PC-101-0020
+      Tiene las mismas características que el dispersor tipo (C), pero con 10 ánodos
+      en cada perforación
+                                                           CÓDIGO     SCE-PC-301-0001
+
+                      PROCEDIMIENTO                        REVISIÓN          0
+
+                                                            HOJA          8 de 21
+
+
+Dispersor tipo (E):
+
+Este dispersor estará compuesto por tres (3) perforaciones paralelas, separadas entre
+sí de 6 a 10 metros. Cada una de ellas tendrá las siguientes características:
+
+       Plano Tipo: SCE-PC-101-0021
+       Profundidad total: 35 m.
+       Longitud activa (sin encamisar): 15 m
+       Longitud perforada con mecha Ø 12/14”, encamisada con tubo PVC reforzado
+       Ø 10” y cementada el espacio entre la cara exterior de la camisa y el terreno
+       natural: lo que determine el organismo de obras sanitarias de cada lugar (si
+       dicho organismo no indica la profundidad de cementado, ésta será de 20
+       metros mínimo, todo valor menor deberá ser aprobado por la Distribuidora)
+       Longitud perforada con mecha Ø 8”: diferencia entre profundidad total y
+       longitud cementada.
+       Número de ánodos de grafito en cada perforación: 5
+       Número de tubos de venteo en cada perforación: 2
+
+Dispersor tipo (F):
+
+Este dispersor estará compuesto por tres (3) perforaciones paralelas, separadas entre
+sí de 6 a 10 metros. Cada una de ellas tendrá las siguientes características:
+
+       Plano Tipo: SCE-PC-101-0022
+       Profundidad total: 20 m.
+       Longitud activa (sin encamisar): 9 m
+       Longitud perforada con mecha Ø 12/14”, encamisada con tubo PVC reforzado
+       Ø 10” y cementada el espacio entre la cara exterior de la camisa y el terreno
+       natural: lo que determine el organismo de obras sanitarias de cada lugar (si
+       dicho organismo no indica la profundidad de cementado, ésta será de 10
+       metros mínimo, todo valor menor deberá ser aprobado por la Distribuidora)
+       Longitud perforada con mecha Ø 8”: diferencia entre profundidad total y
+       longitud cementada.
+       Número de ánodos de grafito en cada perforación: 3
+       Número de tubos de venteo en cada perforación: 2
+                                                              CÓDIGO     SCE-PC-301-0001
+
+                       PROCEDIMIENTO                          REVISIÓN          0
+
+                                                               HOJA          9 de 21
+
+
+5.1.2 INSTALACIÓN DE DISPERSOR SUPERFICIAL HORIZONTAL O CONTINUO
+
+5.1.2.1 Materiales a utilizar en la instalación del sistema
+
+Relleno (Backfill): Para asegurar la continuidad eléctrica de los ánodos con el terreno,
+se rellenará el espacio entre los mismos y la pared de excavación con coque de
+petróleo calcinado, según la especificación técnica SCE-PC-512-0003.
+
+Ánodos: La cantidad y tipo se designarán para cada instalación.
+
+Conductores: La totalidad de los conductores a utilizar responderán en un todo a la
+norma IRAM 2214, correspondiente a conductores para protección catódica. Las
+secciones de los conductores surgirán de cada proyecto en particular.
+
+Empalmes: Serán realizados mediante grapas paralelas o tubos indentados, aisladas
+mediante tubos termocontraíbles de pared gruesa con adhesivo.
+
+5.1.2.2 Procedimiento de instalación
+
+Una vez determinada la ubicación del dispersor de acuerdo con el plano proyecto
+respectivo, se procederá al replanteo de la instalación. Estará compuesto por la
+cantidad de ánodos que establezca el proyecto, separados entre sí 1,5 m.
+
+Se recorrerá la zona indicada en el proyecto, se verificará la factibilidad de la
+instalación, considerando para ello, las distancias mínimas a estructuras enterradas,
+la ausencia de estructuras que puedan verse comprometidas dentro del campo
+eléctrico y suficiente espacio para el desplazamiento del equipo seleccionando para
+los trabajos.
+
+La zanja para instalación de los ánodos se ejecutará utilizando retroexcavadora (balde
+angosto), observando todas las reglamentaciones de seguridad correspondientes a la
+operación de este tipo de maquinaria.
+
+Realizada la zanja, se introducirá el coque dentro de ésta, en capas de ≈10 cm,
+procediéndose a su perfecta compactación manual con el agregado de agua hasta la
+saturación.
+
+Cuando se consigue un nivel de coque en el fondo de la zanja adecuado se bajan los
+ánodos y se completa la instalación con el coque restante, compactando siempre en
+capas de ≈10 cm, humectado hasta la saturación, hasta completar el nivel requerido.
+                                                              CÓDIGO     SCE-PC-301-0001
+
+                       PROCEDIMIENTO                          REVISIÓN          0
+
+                                                               HOJA          10 de 21
+
+
+Se procederá luego al tendido de un conductor de 16 mm2 por cada 3 (tres) ánodos.
+Se establecerá la vinculación eléctrica entre dicho conductor y los ánodos de acuerdo
+con lo indicado en el plano correspondiente.
+
+Una vez realizadas las conexiones, se baja la cañería de humectación, que
+responderá a lo indicado en el plano tipo SCE-PC-101-0011.
+
+La cañería quedará alojada en un lecho de canto rodado o piedra partida mediana y
+limpia para lograr una mejor distribución del agua de las humectaciones futuras.
+
+La totalidad de los conductores se alojará en la zanja flojos, libres de tensiones y
+previamente controlada su cobertura visualmente. Se cubrirán con una capa de arena
+o tierra fina seleccionada, protegiéndolos mecánicamente con ladrillos, medias cañas
+de hormigón o cintas plásticas de advertencia.
+
+Se colocarán la cantidad de embudos que indique el plano proyecto, se terminarán
+con un dado de hormigón armado que alojará al embudo con tapa y que oficiará como
+boca de humectación.
+
+Si así lo indica el Proyecto Constructivo, se realizará a continuación la instalación del
+humectador continuo, de acuerdo a lo indicado en el plano tipo SCE-PC-101-0011.
+
+Se instalará una caja colectora que aloje y vincule los cables colectores (16 mm2) al
+conductor anódico, esta caja irá montada sobre un mojón dispuesto para tal efecto.
+Contará con una bornera con la cantidad de bornes suficientes, identificados
+(identificación tipo Grafoplas, ver SCE-PC-304-0001) y puenteados para conseguir
+continuidad eléctrica entre los cables provenientes de los ánodos y el conductor
+anódico que vincula al dispersor con el TR, el que también se instalará según lo
+indicado en cada proyecto en particular.
+
+En los extremos del dispersor se instalarán estacas indicadoras de acuerdo a lo
+pautado en cada proyecto en particular.
+
+Terminados los trabajos se procederá a realizar el croquis para la confección del
+plano Conforme a Obra y se efectuará la medición de resistencia de puesta a tierra
+(RPAT) según el procedimiento indicado en la I OR – 045.
+
+Concluida la instalación, se recompondrá el terreno a su condición original.
+                                                              CÓDIGO     SCE-PC-301-0001
+
+                       PROCEDIMIENTO                          REVISIÓN          0
+
+                                                               HOJA         11 de 21
+
+
+5.1.3 INSTALACIÓN DE DISPERSOR SUPERFICIAL VERTICAL O DISCONTINUO
+
+5.1.3.1 Materiales a utilizar en la instalación del sistema
+
+Relleno (Backfill): Para asegurar la continuidad eléctrica de los ánodos con el terreno,
+se rellenará el espacio anular entre los mismos y la pared de la perforación con coque
+de petróleo calcinado, según la especificación técnica SCE-PC-512-0003.
+
+Ánodos: Se designarán para cada instalación en especial.
+
+Conductores: La totalidad de los conductores a utilizar responderán en un todo a la
+norma IRAM 2214, correspondiente a conductores para protección catódica. Las
+secciones de los conductores surgirán de cada proyecto en particular.
+
+Empalmes: Serán realizados mediante grapas paralelas o tubos indentados, aisladas
+mediante tubos termocontraíbles de pared gruesa con adhesivo.
+
+5.1.3.2 Procedimiento de instalación
+
+Una vez determinada la ubicación del dispersor de acuerdo con el plano proyecto
+respectivo, se procederá al replanteo de la instalación. Estará compuesto por 15 ó 20
+ánodos, según proyecto, separados entre sí 6 m. Se recorrerá la zona indicada en el
+proyecto, se verificará la factibilidad de la instalación, considerando para ello, las
+distancias mínimas a estructuras enterradas, la ausencia de estructuras que puedan
+verse comprometidas dentro del campo eléctrico y suficiente espacio para el
+desplazamiento del equipo necesario para los trabajos.
+
+Utilizando una hoyadora con mechas de un diámetro adecuado a las dimensiones de
+los agujeros a realizar, se confeccionarán los agujeros hasta la profundidad indicada
+en el plano tipo código SCE-PC-101-0012.
+
+Luego se introducirá el coque en los agujeros, en capas de ≈10 cm, humectadas
+hasta la saturación, compactándose por medios manuales.
+
+Una vez completada la capa de coque hasta la altura indicada en el plano
+correspondiente, se introducen los ánodos, llenándose el espacio anular y
+completándose el llenado hasta lo indicado, siempre con el coque humectado y
+adicionándose en capas de ≈10 cm.
+
+Se terminará la instalación de los electrodos con el agregado de canto rodado o
+piedra partida y el sistema de humectación correspondiente, de acuerdo a lo indicado
+en el plano correspondiente.
+                                                             CÓDIGO     SCE-PC-301-0001
+
+                       PROCEDIMIENTO                         REVISIÓN          0
+
+                                                              HOJA         12 de 21
+
+
+Se procederá luego al tendido de un conductor de 16 mm2 de sección por cada tres
+(3) ánodos. Se establecerá la conducción eléctrica entre dicho conductor y los ánodos
+de acuerdo con el plano correspondiente.
+
+La totalidad de los conductores se alojarán en zanja flojos, libres de tensiones y
+previamente controlada su cobertura visualmente. Se cubrirán con una capa de arena
+o tierra fina seleccionada, protegiéndolos mecánicamente con ladrillos, medias cañas
+de hormigón o cintas plásticas de advertencia.
+
+Se instalará una caja colectora que aloje y vincule eléctricamente los cables
+colectores (16 mm2) al conductor anódico. Esta caja irá montada sobre una estaca o
+mojón dispuesto para tal efecto. Contará con una bornera con la cantidad de bornes
+suficientes, identificados (identificación tipo Grafoplas, ver SCE-PC-304-0001) y
+puenteados para conseguir continuidad eléctrica entre los cables provenientes de los
+ánodos y el conductor anódico que vincula el dispersor al rectificador, el que también
+se instalará según lo indicado en cada proyecto en particular respecto a longitud de
+tendido y sección.
+
+En los extremos del dispersor se instalarán estacas indicadoras de acuerdo a lo
+determinado en cada proyecto en particular.
+
+Terminados los trabajos se procederá a realizar el croquis para la confección del
+plano Conforme a Obra y se efectuará la medición de resistencia de puesta a tierra
+(RPAT), según el procedimiento indicado en la I OR – 045.
+
+Concluida la instalación, se recompondrá el terreno a su condición original.
+
+
+5.2   Cegado de Pozos de Dispersores Profundos
+
+En el caso que la renovación de un dispersor profundo no se realice en la perforación
+existente, se deberá cegar el pozo del dispersor agotado, siguiendo los lineamientos
+indicados en la I MA -119 última revisión.
+
+Normalmente hay dos formas de instalar dispersores en pozos profundos, una de
+ellas en coque y la otra en agua. En ambos casos, según corresponda, se deberá:
+
+1. Retirar, si es posible, los ánodos y cañería de venteo
+2. Retirar, si es posible, el coque y el caño camisa
+3. Rellenar el pozo con cemento pobre de la siguiente proporción: una parte de
+   cemento, cuatro partes de arena y ocho partes de piedra partida o canto rodado. El
+   relleno con hormigón deberá realizar desde abajo, para asegurar que el pozo
+   quedó completamente lleno con hormigón.
+4. Cortar la cámara de pozo 10 cm por debajo del nivel de piso
+                                                                CÓDIGO     SCE-PC-301-0001
+
+                       PROCEDIMIENTO                            REVISIÓN          0
+
+                                                                 HOJA         13 de 21
+
+
+5. Rellenar la boca de pozo con hormigón pobre, de iguales características que el
+   punto 3.
+6. Retirar venteos y otras instalaciones de superficie
+7. Reparar la zona afectada en forma estética con su entorno.
+
+
+5.3   Instalación de Ánodos Galvánicos
+
+5.3.1 MATERIALES A UTILIZAR EN LA INSTALACIÓN DEL SISTEMA
+
+Ánodos galvánicos: Los ánodos vendrán con su mezcla despolarizante, en una bolsa
+sellada. La aleación de los mismos estará definida en el Proyecto de Ingeniería de la
+obra.
+
+CMP: Puede ser con o sin mojón, en caso que se deba instalar una nueva.
+
+5.3.2 PROCEDIMIENTO DE INSTALACIÓN
+
+Una vez obtenidos los valores de resistividades del terreno (según la I OR – 045) se
+determinará la ubicación definitiva de las baterías de ánodos.
+
+En caso que los ánodos se instalen en forma vertical, se utilizará una hoyadora con
+mechas de un diámetro adecuado a las dimensiones de los agujeros a realizar y se
+confeccionarán los agujeros hasta la profundidad indicada en el plano
+correspondiente. Sólo si las condiciones del terreno no lo permitieran los ánodos se
+instalarán en forma horizontal. La zanja para instalación de los ánodos en forma
+horizontal se ejecutará utilizando retroexcavadora (balde angosto), observando todas
+las reglamentaciones de seguridad correspondientes a la operación de este tipo de
+maquinaria.
+
+Luego de realizada la instalación y humectada la zona se medirá el potencial de los
+ánodos, la corriente de drenaje de los mismos y el potencial de la cañería en la
+progresiva inmediata anterior y posterior de la ubicación de los ánodos.
+
+Estos datos serán volcados a un formulario del tipo unifilar.
+
+Los ánodos que componen cada batería (3) se instalarán por debajo de la línea de la
+cañería, siguiendo los lineamientos del plano tipo código SCE-PC-101-0009 ó
+SCE-PC-101-0010 última revisión, ya sea que los ánodos estén instalados en forma
+vertical u horizontal.
+
+La unión entre el cable del ánodo (4 mm2 de sección) y el cable colector (6 mm2 de
+sección) se realizará con soldadura cuproaluminotérmica de 15 gr de peso.
+                                                             CÓDIGO    SCE-PC-301-0001
+
+                      PROCEDIMIENTO                         REVISIÓN          0
+
+                                                              HOJA         14 de 21
+
+
+La zona de empalme se deberá recubrir con tres vueltas de cinta autovulcanizable y
+dos vueltas de cinta dieléctrica de PVC.
+
+5.3.3 INSTALACIÓN DE CMP
+
+En ningún caso se permitirá que se instalen ánodos galvánicos conectados
+directamente a la cañería. Siempre se utilizará una CMP para realizar la conexión
+del ánodo a la cañería.
+
+Si la CMP es existente se efectuará el acondicionamiento mecánico y eléctrico de la
+misma, cambiando tornillos, arandelas tuercas y tablero de micarta o borneras. En
+este caso se deberá comprobar la integridad del cable catódico, reemplazándolo de
+ser necesario, se deberá identificar el borne correspondiente con la leyenda "CA". En
+todos los casos, la identificación de los cables será del tipo Grafoplast (ver
+SCE-PC-304-0001.)
+
+Si se debe instalar una CMP, se seguirán los lineamientos establecidos en el
+procedimiento SCE-PC-304-0001.
+
+
+5.4   Simbología e identificación de conductores
+
+La Instrucción de Trabajo I OR – 002 es un Glosario de Términos y Símbolos de
+Protección Anticorrosiva, en el cual se encuentra un compendio con las siglas
+utilizadas para los distintos elementos de Protección Catódica.
+
+La identificación de los cables en las CMP y en las cajas colectoras será del tipo
+Grafoplast, siguiendo los lineamientos del procedimiento SCE-PC-304-0001.
+
+6     REGISTRO Y ARCHIVO
+
+El Técnico de Protección Catódica deberá confeccionar un Plano Conforme a Obra
+con los detalles de la instalación realizada y también completará una planilla de Check
+List.
+
+En el caso de que la instalación haya sido realizada por un contratista, éste realizará
+el plano conforme a obra y la planilla de check List y el Técnico de Protección
+Catódica de la Distribuidora/Inspector los revisará y aprobará.
+
+El Técnico de Protección Catódica archivará estos documentos en la Unidad
+Operativa y los conservará por todo el tiempo de vida útil de las cañerías.
+
+El Técnico de Protección Catódica deberá dar de alta en el programa BUDI el
+dispersor instalado o modificar los datos si fue una renovación, completando toda la
+                                                          CÓDIGO    SCE
+                                                                    SCE-PC-301-0001
+
+                     PROCEDIMIENTO
+                     PROCEDIMIEN                         REVISIÓN          0
+
+                                                           HOJA        15 de 21
+
+
+información requerida, que deberá coincidir con la indicada en la Planilla de Check
+List.
+
+7     ANEXOS
+
+
+7.1   Anexo 1: Planillas de comprobación de la instalación (Check List)
+
+7.1.1 DISPERSORES DE CORRIENTE IMPRESA
+                                                          CÓDIGO    SCE-PC-301-0001
+
+                     PROCEDIMIENTO                       REVISIÓN          0
+
+                                                           HOJA        16 de 21
+
+
+
+
+En "Obra" se completará con el código de obra asignado.
+En "Ubicación" se completará con la dirección o progresiva, localidad y provincia
+En "Planos de Referencia" se completará con el código del plano conforme a obra.
+Los ítems 1 al 9 corresponden a dispersores superficiales.
+Los ítems 10 al 12 corresponden a dispersores profundos.
+Los ítems 13 al 16 son comunes para todos los tipos de dispersores.
+En el ítem 15 debe indicarse la profundidad final (para dispersores profundos) o la
+longitud final (para dispersor superficiales)
+En la columna "Observaciones" se completará con todas las aclaraciones necesarias
+relacionadas con cada ítem.
+En la columna "OK Final" se completará con "SI" cuando el ítem esté terminado y
+cumpla las especificaciones.
+
+7.1.2 ÁNODOS GALVÁNICOS
+                                                             CÓDIGO    SCE-PC-301-0001
+
+                      PROCEDIMIENTO                         REVISIÓN          0
+
+                                                              HOJA         17 de 21
+
+
+En "Obra" se completará con el código de obra asignado.
+En "Ubicación" se completará con la dirección o progresiva, localidad y provincia
+En "Planos de Referencia" se completará con el código del plano conforme a obra.
+En la columna "Observaciones" se completará con todas las aclaraciones necesarias
+relacionadas con cada ítem.
+En la columna "OK Final" se completará con "SI" cuando el ítem esté terminado y
+cumpla las especificaciones.
+
+7.1.3 PLANILLAS DE CHECK LIST
+
+Haciendo doble clic en el siguiente icono se podrán abrir los formularios en blanco del
+Anexo.
+
+
+
+
+En el caso de un documento PDF, seleccionar el clip en el borde izquierdo y se
+despliega el listado de documentos adjuntos:
+
+
+
+
+Hacer doble clic en el archivo Excel y en la ventana que se abre, seleccionar “Abrir
+archivo” y presionar “Aceptar” y se abrirá la planilla.
+
+
+7.2   Anexo 2: Carga de datos de dispersores en la BUDI
+
+7.2.1 CARGA DE UN DISPERSOR NUEVO
+
+La carga de un nuevo dispersor se debe realizar junto con la carga de su equipo de
+protección catódica nuevo (ya sea rectificador o termogenerador, ver Procedimientos
+SCE-PC-302-0001 y SCE-PC-308-0003, respectivamente).
+
+Una vez que se cargó el nuevo equipo, se va a la solapa “Dispersor”:
+                                                               CÓDIGO     SCE-PC-301-0001
+
+                       PROCEDIMIENTO                          REVISIÓN           0
+
+                                                                HOJA         18 de 21
+
+
+
+
+Se deben ingresar la fecha de instalación, que tipo de dispersor es (profundo,
+superficial continuo o superficial discontinuo), el tipo (Fe-Si, por ej.) y la cantidad de
+ánodos, la marca de los ánodos, el tipo de relleno (de ser posible que el instalador
+informe la marca del coque en el conforme a obra, de lo contrario se debe seleccionar
+coque genérico), el nombre de la empresa que realizó la instalación, la ubicación del
+dispersor (latitud y longitud) y cualquier comentario que el Técnico de Protección
+Catódica considere necesario.
+
+Una vez cargados los datos, presionar “Aceptar” para que los mismos queden
+grabados en la BUDI, de lo contrario no se grabarán.
+
+7.2.2 MODIFICACIÓN Y CARGA DE LA RENOVACIÓN DE UN DISPERSOR
+
+Primero se selecciona “Equipos” en el menú “Consultas – Protección Catódica”. Se
+abre una ventana, en la que se debe seleccionar el sistema y la cañería en donde se
+encuentra el equipo rectificador a modificar y se presiona el botón “Buscar”.
+                                                           CÓDIGO       SCE
+                                                                        SCE-PC-301-0001
+
+                      PROCEDIMIENTO
+                      PROCEDIMIEN                          REVISIÓN            0
+
+                                                            HOJA           19 de 21
+
+
+
+
+A continuación se despliegan todos los equipos que tiene esa cañería:
+
+
+
+
+Para editar los datos de un dispersor, se hace doble clic en el botón de edición
+del renglón correspondiente. Entonces se abre la ventana con los datos del equipo, a
+continuación se selecciona la solapa “Dispersor”:
+
+
+
+
+Entonces aparecerán los datos del dispersor actual.
+                                                           CÓDIGO    SCE-PC-301-0001
+
+                      PROCEDIMIENTO                       REVISIÓN          0
+
+                                                            HOJA        20 de 21
+
+
+
+
+A continuación se presiona el botón “Modificar” y se habilita esta ventana para
+modificar datos del dispersor actual.
+
+
+
+
+Si es una renovación, se debe tildar la casilla “Renovación dispersor”, el programa
+consulta si está seguro de realizar esta acción, si se presiona “Si” aparecerá la
+ventana sin datos para cargarlos (ver 7.2.1) y se agrega el campo “Fecha de baja
+dispersor anterior”, en la que se debe ingresar la fecha en que dejó de funcionar el
+dispersor (o se reemplazó con el nuevo, en caso de que no se haya agotado
+totalmente).
+                                                            CÓDIGO    SCE-PC-301-0001
+
+                      PROCEDIMIENTO                        REVISIÓN            0
+
+                                                             HOJA         21 de 21
+
+
+
+
+Para terminar, se presiona el botón “Aceptar” para que se guarden los datos.
+

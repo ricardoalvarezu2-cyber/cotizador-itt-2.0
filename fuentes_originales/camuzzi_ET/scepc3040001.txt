@@ -1,0 +1,618 @@
+                                                                                 SCE-PC-304-
+                                                                  CÓDIGO:           0001
+
+                         PROCEDIMIENTO                           REVISIÓN:            0
+
+                                                                   HOJA:           1 de 14
+
+
+                                                                   FECHA           FECHA
+                                                                 APROBACION       VIGENCIA
+         PROCESO              OPERACIÓN DE LA RED
+                                                                  10/06/2019      10/06/2019
+                       Instalación de CMP, Probetas Calibradas
+                                                                     LIDER DEL PROCESO
+                        Para Medir la Velocidad de Corrosión y
+           TEMA
+                               Aplicación de Soldadura
+                                 Cuproaluminotérmica                   Guillermo Montag
+
+                                                                       APROBADO POR:
+  ANULA/REEMPLAZA                     I OR 024
+                                                                      Alejandro Lorenzo
+
+
+                                 MODIFICACIONES
+ Nº de       FECHA
+                                          MOTIVO DE LA MODIFICACIÓN
+REVISIÓN    REVISION
+
+
+
+
+AREAS INVOLUCRADAS:
+
+
+
+
+OBSERVACIONES:
+                                                                                                                  CÓDIGO             SCE-PC-304-0001
+
+                                            PROCEDIMIENTO                                                        REVISIÓN                        0
+
+                                                                                                                    HOJA                    2 de 14
+
+
+INDICE
+                                                                                                                                                      Página
+1         OBJETO .............................................................................................................................................. 3
+2         ALCANCE ........................................................................................................................................... 3
+3         AREAS INVOLUCRADAS .................................................................................................................. 3
+4         DOCUMENTACION COMPLEMENTARIA Y/O DE REFERENCIA ................................................... 3
+5         DEFINICIONES .................................................................................................................................. 4
+    5.1     GLOSARIO ....................................................................................................................................... 4
+    5.2     CAJA DE MEDICIÓN DE POTENCIALES (CMP)..................................................................................... 4
+    5.3     PROBETAS CALIBRADAS PARA MEDIR LA VELOCIDAD DE CORROSIÓN ................................................. 4
+    5.4     SOLDADURA CUPROALUMINOTÉRMICA .............................................................................................. 5
+6         RESPONSABILIDADES ..................................................................................................................... 6
+    6.1     JEFE TÉCNICO DE LA UNIDAD OPERATIVA.......................................................................................... 6
+    6.2     TÉCNICO DE PROTECCIÓN CATÓDICA DE LA UNIDAD OPERATIVA ........................................................ 6
+7       DESARROLLO ................................................................................................................................... 6
+    7.1 ELEMENTOS NECESARIOS ................................................................................................................ 6
+      7.1.1 INSTALACIÓN DE CMP ................................................................................................................. 7
+      7.1.2        INSTALACIÓN DE PROBETAS PARA MEDIR VELOCIDAD DE CORROSIÓN ........................................... 7
+    7.2 EXCAVACIÓN.................................................................................................................................... 7
+      7.2.1 EXCAVACIÓN PARA EL MOJÓN CON CMP ...................................................................................... 7
+      7.2.2        EXCAVACIÓN PARA LA CMP DE BALDOSA ..................................................................................... 7
+      7.2.3        ZANJA PARA LOS CABLES............................................................................................................. 8
+    7.3 INSTALACIÓN DE LA CMP ................................................................................................................. 8
+      7.3.1 INSTALACIÓN DE MOJÓN CON CMP .............................................................................................. 8
+      7.3.2        INSTALACIÓN DE CMP SOBRE LÍNEA MUNICIPAL ........................................................................... 8
+      7.3.3        INSTALACIÓN DE CMP DE BALDOSA ............................................................................................. 8
+    7.4 INSTALACIÓN DE LAS PROBETAS PARA MEDIR VELOCIDAD DE CORROSIÓN ......................................... 9
+    7.5 SOLDADURA CUPROALUMINOTÉRMICA DE LOS CONDUCTORES ........................................................... 9
+      7.5.1 CONEXIÓN DE CABLES A CAÑERÍAS AJENAS ............................................................................... 11
+    7.6 TENDIDO DE LOS CONDUCTORES .................................................................................................... 11
+    7.7 IDENTIFICACIÓN DE LOS CABLES ..................................................................................................... 11
+      7.7.1 CONTINUIDAD ELÉCTRICA .......................................................................................................... 12
+    7.8 REPARACIÓN DEL REVESTIMIENTO .................................................................................................. 12
+      7.8.1 TAPADA DE LA CAÑERÍA ............................................................................................................. 13
+    7.9 ROTURA Y REPARACIÓN DE VEREDAS O PAVIMENTOS ...................................................................... 13
+    7.10 PLACA DE IDENTIFICACIÓN .............................................................................................................. 13
+8         REGISTRO Y ARCHIVO .................................................................................................................. 13
+9         ANEXOS ........................................................................................................................................... 14
+                                                          CÓDIGO     SCE-PC-304-0001
+
+                     PROCEDIMIENTO                        REVISIÓN           0
+
+                                                           HOJA          3 de 14
+
+
+1   OBJETO
+
+
+Establecer la Metodología que se debe seguir para la instalación de Cajas de
+Medición de Potencial (CMP), probetas calibradas para medir la velocidad de
+corrosión y la aplicación de soldadura cuproaluminotérmica en gasoductos, ramales y
+redes de distribución.
+
+
+2   ALCANCE
+
+
+No corresponde
+
+
+3   AREAS INVOLUCRADAS
+
+
+Todas las Áreas Técnicas de las Unidades Operativas
+
+
+4   DOCUMENTACION COMPLEMENTARIA Y/O DE REFERENCIA
+
+
+Norma Argentina de Gas NAG – 100
+
+Resolución del ENARGAS N° 1192/99
+
+Normas Cirsoc
+
+NAG-108: Revestimientos Anticorrosivos de Tuberías y Accesorios
+
+I OR 002: Glosario de Términos y Símbolos de Protección Anticorrosiva
+
+SCE-PC-112-0001: Caja de medición permanente
+
+SCE-PC-112-0003: Placas de identificación para CMP (gasoductos, ramales, redes)
+
+SCE-PC-109-0003: Mojón indicador (kilométrico y aéreo)
+
+SCE-PC-109-0004: Instalación de CMP en redes – línea municipal
+
+SCE-PC-109-0005: Instalación de CMP en gasoducto
+
+SCE-PC-109-0008: Instalación de probeta para medir velocidad de corrosión.
+                                                                CÓDIGO    SCE-PC-304-0001
+
+                         PROCEDIMIENTO                         REVISIÓN          0
+
+                                                                 HOJA          4 de 14
+
+
+
+
+SCE-PC-109-0009: Instalación de CMP tipo baldosa
+
+SCE-PC-512-0001: Especificación Técnica de cajas de medición permanente
+
+SCE-PC-511-0003: Especificación Técnica de protección anticorrosiva
+
+
+5     DEFINICIONES
+
+
+5.1     Glosario
+
+En el documento I OR 002 se incluye un listado de Términos y Símbolos comúnmente
+utilizados en la redacción de documentos de Protección Anticorrosiva.
+
+
+5.2     Caja de Medición de Potenciales (CMP)
+
+Caja metálica con tapa, que aloja un tablero aislante con bornes de conexión del
+cableado que vincula la estructura protegida con los mismos.
+
+Una CMP puede estar instalada:
+
+
+•     Sobre un mojón, utilizada principalmente en gasoductos y ramales.
+•     En la línea municipal, utilizada normalmente en redes de distribución.
+•     En la vereda (tipo baldosa), también utilizada normalmente en redes de
+      distribución.
+
+
+5.3     Probetas Calibradas para Medir la Velocidad de Corrosión
+
+Es un elemento que permite conocer la velocidad de corrosión que ocurre en el
+cuerpo metálico del mismo, siendo éste de acero de composición similar a la de la
+cañería bajo estudio. El funcionamiento se basa en el principio de la resistencia
+eléctrica de un metal, que está dada por la siguiente expresión:
+
+                                                L
+                                          R=
+                                                A
+
+donde:
+      L = longitud del elemento
+                                                           CÓDIGO     SCE-PC-304-0001
+
+                          PROCEDIMIENTO                    REVISIÓN          0
+
+                                                            HOJA          5 de 14
+
+
+       A = área transversal
+       ρ = resistividad
+
+La reducción de la sección transversal del
+elemento (pérdida de metal) debido a la
+corrosión estará acompañada por un
+incremento proporcional en la resistencia
+eléctrica del mismo.
+
+La medición práctica se logra utilizando
+probetas equipadas con un elemento que
+está expuesto libremente al medio
+corrosivo y un elemento “protegido”
+dentro del cuerpo sellado de la probeta.
+La medición de la relación de la
+resistencia entre la parte expuesta y la
+protegida se realiza según la figura.
+
+Dado que los cambios de temperatura
+afectan a ambos elementos por igual,
+midiendo la relación de las resistencias se
+minimiza la influencia de los cambios en la temperatura ambiente. Por lo tanto,
+cualquier cambio en la resistencia es atribuible únicamente a la pérdida de metal del
+elemento expuesto una vez que se estableció el equilibrio de la temperatura.
+
+Considerando que la probeta está enterrada en el mismo terreno que la cañería, está
+protegida con el mismo sistema de protección catódica y es de características
+similares a la chapa de la cañería, se asume que la tasa de corrosión medida en la
+misma puede ser representativa de la tasa de corrosión que puede tener la cañería en
+esa sección.
+
+
+5.4   Soldadura Cuproaluminotérmica
+
+El proceso de conexión eléctrica mediante soldadura cuproaluminotérmica es un
+método simple y eficiente para soldar cobre con cobre o cobre con acero. Este tipo de
+soldadura utiliza la alta temperatura que produce la reacción del polvo de óxido de
+cobre y el aluminio. Esta reacción tiene lugar en un molde de grafito semipermanente
+que sirve para varias soldaduras.
+
+De acuerdo a las normativas vigentes, cuando se suelden cables de cobre a una
+cañería de acero que transporta gas el tamaño máximo del cartucho de la soldadura
+será de 15 g. Si el cable es de una sección mayor que la admitida para una carga de
+15 g deberán realizarse dos o más soldaduras del cable sobre el caño.
+                                                                CÓDIGO    SCE-PC-304-0001
+
+                         PROCEDIMIENTO                         REVISIÓN          0
+
+                                                                 HOJA         6 de 14
+
+
+6     RESPONSABILIDADES
+
+
+6.1     Jefe Técnico de la Unidad Operativa
+
+Establece los mecanismos necesarios para que esta Instrucción de Trabajo pueda ser
+ejecutada por el Técnico de Protección Catódica en los términos especificados.
+
+Toma la figura de Técnico de Protección Catódica y asume sus responsabilidades si la
+misma no estuviese disponible.
+
+
+6.2     Técnico de Protección Catódica de la Unidad Operativa
+
+Es responsable de que los trabajos sean ejecutados de acuerdo a lo establecido en la
+presente Instrucción de Trabajo.
+
+En el caso que el trabajo sea realizado por un Contratista, es responsable de que el
+mismo siga los lineamientos establecidos en esta Instrucción de Trabajo.
+
+
+7     DESARROLLO
+
+
+7.1     Elementos Necesarios
+
+El Técnico de Protección Catódica, debe tener como mínimo los siguientes
+elementos:
+
+
+•     Un Multímetro, (Resistencia interna mínima de 50.000 Ohm/Volt)
+•     Un Electrodo de Referencia de Cu/SO4Cu
+•     Accesorios de CMP (tornillos, tapas, placa aislante, spray antisulfatante, sellante,
+      etc.)
+•     Herramientas básicas (pinza de fuerza, pinza de punta, destornillador de punta
+      plana, destornillador phillips, llave para abrir las CMP’s)
+•     Lima fina y cepillo de alambre
+•     Soldaduras cuproaluminotérmicas de 15 g
+•     Crisol para soldaduras cuproaluminotérmicas
+•     Chispero para encender la soldadura
+•     Cables (cantidad necesaria de cada sección, de acuerdo a la instalación)
+•     Revestimiento compatible con el revestimiento original del caño.
+•     Elementos para excavación manual
+                                                              CÓDIGO    SCE-PC-304-0001
+
+                         PROCEDIMIENTO                       REVISIÓN          0
+
+                                                               HOJA         7 de 14
+
+
+
+
+7.1.1 INSTALACIÓN DE CMP
+
+Además de los elementos indicados, el Técnico de Protección Catódica deberá tener
+la CMP correspondiente para su instalación.
+
+
+7.1.2 INSTALACIÓN DE PROBETAS PARA MEDIR VELOCIDAD DE CORROSIÓN
+
+Para esta instalación, el Técnico de Protección Catódica deberá tener además:
+
+
+•     Dos probetas calibradas para medir la velocidad de corrosión
+•     Una caja de medición permanente especial, con dos caños de bajada de diámetro
+      1” (25,4 mm), espesor 3,5 mm de acero con costura
+•     Mojón kilométrico (sólo para instalación en campo)
+
+
+7.2    Excavación
+
+Se debe realizar manualmente una excavación hasta alcanzar el caño de acero en la
+zona en donde se practicará la soldadura de los conductores. La excavación debe
+dejar libre toda la zona periférica del caño en un radio de 30 cm sobre el lomo del
+mismo con el fin de permitir una correcta reparación de la cobertura. El largo de la
+zanja, sobre el eje longitudinal de la cañería no será menor de un metro. Se deberá
+tener especial cuidado de no dañar el revestimiento en la zona donde se está
+practicando la zanja.
+
+
+7.2.1 EXCAVACIÓN PARA EL MOJÓN CON CMP
+
+En el lugar de instalación del mojón, se debe practicar una excavación de 0,50 m por
+0,50m por 0,60 m de profundidad para permitir la colocación del encofrado para el
+dado de hormigón que le servirá de base.
+
+
+7.2.2 EXCAVACIÓN PARA LA CMP DE BALDOSA
+
+En la primer hilada de baldosas, es decir a 0,20 m de la línea municipal se deberá
+realizar una excavación de 0,20 m por 0,20 m por 0,60 m de profundidad para poder
+empotrar la CMP de baldosa al ras de la vereda.
+                                                             CÓDIGO     SCE-PC-304-0001
+
+                       PROCEDIMIENTO                         REVISIÓN          0
+
+                                                               HOJA         8 de 14
+
+
+7.2.3 ZANJA PARA LOS CABLES
+
+Desde el lugar de instalación de la CMP, hasta la zanja abierta para la soldadura de
+los conductores, se debe practicar una excavación de 0,20 m de ancho por 0,60 m de
+profundidad para el tendido de los cables
+
+
+7.3   Instalación de la CMP
+
+
+7.3.1 INSTALACIÓN DE MOJÓN CON CMP
+
+La columna del mojón se hincará en la tierra en el centro de la excavación preparada
+para hormigonar la base. Luego se colocará el encofrado y se realizará la colada de
+hormigón. El hormigón será tipo H-13.
+
+Una vez fraguado el hormigón, se retira el encofrado y se rellena el espacio dejado
+por el mismo. El relleno se realizará con el material retirado durante la excavación. Se
+deberá tener especial atención en la compactación del terreno circundante a los
+efectos de evitar que la erosión provocada por el agua de lluvia e inundaciones atente
+contra la estabilidad o integridad de la base.
+
+
+7.3.2 INSTALACIÓN DE CMP SOBRE LÍNEA MUNICIPAL
+
+La caja para medición de potenciales se debe colocar a 0,50 m sobre el nivel de la
+vereda y a por lo menos 0,20 m de la arista de ochava de esquina, hacia la cuadra.
+
+La CMP deberá fijarse a la mampostería mediante dos tornillos y tarugos tipo Fischer
+de 8 mm de diámetro.
+
+La canalización de los cables se realizará colocando un caño de 1”, roscado en la
+parte inferior de la CMP. El otro extremo de este caño de bajada se hace llegar hasta
+el centro de la zanja para los cables.
+
+Este caño, debe ser fijado al contrapiso de la vereda con mezcla fuerte de cemento.
+En caso de no existir vereda en el lugar de emplazamiento de la CMP se deberá
+construir un dado de hormigón para soportar al caño. El hormigón será tipo H-13.
+
+
+7.3.3 INSTALACIÓN DE CMP DE BALDOSA
+
+La CMP quedará empotrada en la vereda a ras del embaldosado existente y rodeada
+de una mezcla fuerte con cemento de 5 cm de ancho en todas sus partes. El
+hormigón será H-13.
+                                                           CÓDIGO     SCE-PC-304-0001
+
+                      PROCEDIMIENTO                        REVISIÓN          0
+
+                                                            HOJA          9 de 14
+
+
+
+
+7.4   Instalación de las Probetas Para Medir Velocidad de Corrosión
+
+Las dos probetas calibradas se instalarán al mismo nivel que el eje central del caño.
+Primero se debe humedecer el terreno donde se instalarán las mismas. Se prestará
+especial atención que no queden burbujas de aire en contacto con las probetas.
+
+La distancia que las separa del caño deberá ser de aproximadamente 20 cm. La
+distancia entre ambas probetas será también de 20 cm.
+
+Una de las probetas estará conectada al sistema de protección catódica, a través de
+una cable soldado a la cañería. El cable se soldará de acuerdo a la sección 7.6. La
+otra probeta quedará sin conectarse al sistema de protección catódica.
+
+La CMP donde se conectarán los cables de las probetas se realizará según lo
+indicado en la sección 7.3.
+
+
+7.5   Soldadura Cuproaluminotérmica de los Conductores
+
+Para las tomas de potencial, se soldarán dos cables a la cañería, uno de 6 mm2 y otro
+de 4 mm2. La distancia entre ambas soldaduras será de por lo menos 0,50 m. Para
+las probetas para medir velocidad de corrosión, se soldará un solo cable de 4 mm2.
+
+El Técnico de Protección Catódica debe efectuar una excavación manual hasta
+alcanzar la profundidad del caño al que se le soldará el cable. Durante este proceso
+deberá tener cuidado de no dañar el revestimiento anticorrosivo.
+
+Una vez descubierto, el Técnico procederá a remover el revestimiento en la zona en
+donde se realizará la soldadura. Como primera medida efectuará un corte de 10 cm
+por 10 cm, sin dañar la superficie metálica debajo del revestimiento.
+
+Procederá a limpiar la zona con un cepillo de alambre y luego con una lima fina hasta
+obtener un brillo metálico. El Técnico deberá asegurarse que la superficie esté
+completamente pulida.
+                                                              CÓDIGO     SCE-PC-304-0001
+
+                       PROCEDIMIENTO                          REVISIÓN          0
+
+                                                               HOJA          10 de 14
+
+
+
+
+Una vez que se limpió la zona y se eliminó todo resto de limadura, el Técnico
+procederá a la verificación de la existencia de corrosión. De haber signos de corrosión
+no podrá efectuarse la soldadura en ese lugar y deberá informar esta anomalía al Jefe
+Técnico y identificar las causas que produjeron la corrosión. Si no hubo signos
+externos de corrosión, el Técnico procederá a realizar la medición del espesor de la
+pared de la cañería. Si el valor medido es inferior al espesor nominal de la cañería, no
+efectuará la soldadura.
+
+Si el espesor es correcto se puede proceder con la soldadura. Primero se colocará el
+crisol adecuado sobre el caño, en el centro de la zona descubierta. Luego pelará unos
+20 a 30 mm de cable y lo insertará en la ranura del crisol prevista para tal fin. Sellará
+todos los espacios que pudieran quedar entre el crisol y la cañería (en la zona del
+apoyo) con masilla adecuada. Finalmente, vierte el contenido del cartucho en el crisol.
+
+
+
+
+Luego cierra la tapa del crisol y enciende la soldadura con el uso del chispero.
+
+
+
+
+NO SE DEBE EFECTUAR EL ENCENDIDO DE LA SOLDADURA CON OTRO
+ELEMENTO QUE NO SEA EL CHISPERO CORRESPONDIENTE.
+                                                              CÓDIGO     SCE-PC-304-0001
+
+                       PROCEDIMIENTO                          REVISIÓN          0
+
+                                                               HOJA          11 de 14
+
+
+Aproximadamente 10 segundos después que se realizó la soldadura el Técnico podrá
+sacar el crisol. Luego, debe eliminar la escoria de la soldadura y verificar que el cable
+quedó firmemente soldado al caño.
+
+
+7.5.1 CONEXIÓN DE CABLES A CAÑERÍAS AJENAS
+
+No se soldaran cables a cañerías ajenas a la Distribuidora a menos que un
+Representante de la Compañía propietaria del caño ajeno firme un Acta de
+autorización o conformidad correspondiente.
+
+
+7.6   Tendido de los Conductores
+
+Los conductores se alojarán en la zanja excavada al efecto, flojos y libres de
+tensiones. Previo al tendido de los mismos se realizará una cama de arena de 10 cm
+de espesor en la zanja.
+
+El llenado de la zanja se debe realizar controlando manualmente la calidad del relleno
+hasta tapar el cableado, luego se cubrirán con una capa de arena o tierra fina
+seleccionada, protegiéndolos mecánicamente con ladrillos o medias cañas y cintas
+plásticas de advertencia.
+
+
+7.7   Identificación de los Cables
+
+Se conectaran los dos cables de la cañería a la CMP; el primero de 6 mm2 de sección
+que será identificado con la leyenda “CA”, y el segundo, de 4 mm2 de sección, se
+identificará con la leyenda “TP”. La identificación, en ambos casos, será del tipo
+Grafoplast (ver foto a continuación.)
+
+
+
+
+                      Identificación de Cables Tipo Grafoplast
+
+En el caso que la CMP tenga conectado material galvánico se deberá colocar además
+un Puente entre los bornes identificados con las leyendas “MG” y “CA”
+                                                              CÓDIGO     SCE-PC-304-0001
+
+                       PROCEDIMIENTO                          REVISIÓN          0
+
+                                                               HOJA          12 de 14
+
+
+
+
+Los cables se cortarán de un largo superior al necesario de modo que queda una
+reserva dentro de la CMP para facilitar su manipuleo luego de instalados o en caso
+que haya que realizarles algún tipo de mantenimiento.
+
+
+7.7.1 CONTINUIDAD ELÉCTRICA
+
+Previo a la aplicación del revestimiento y a la tapada, se deberá chequear la
+continuidad eléctrica de los conductores, desde la conexión soldada a la cañería,
+hasta la bornera de la caja respectiva.
+
+
+7.8   Reparación del Revestimiento
+
+El Técnico de Protección Catódica deberá realizar una limpieza de la zona afectada
+con cepillo de alambre y limará en forma manual los puntos sobresalientes de la
+soldadura que puedan dañar el revestimiento a aplicar.
+
+Primero se aplicará un relleno mastic compatible con el revestimiento a utilizar para
+disminuir el resalte formado entre la superficie de la cañería y el botón de la soldadura
+cuproaluminotérmica.
+
+El revestimiento a colocar deberá ser compatible con el revestimiento original del
+caño, ver punto 7.5 de la Especificación Técnica SCE-511-0003. Una vez
+seleccionado el tipo de revestimiento, se procederá a su colocación, siguiendo las
+instrucciones del fabricante.
+
+Antes de tapar la cañería se asegurará el cable al caño por medio de algún adhesivo,
+tal como lo indica la siguiente figura:
+                                                           CÓDIGO    SCE-PC-304-0001
+
+                      PROCEDIMIENTO                       REVISIÓN          0
+
+                                                            HOJA        13 de 14
+
+
+
+
+                                      Corte A-A
+
+
+
+
+7.8.1 TAPADA DE LA CAÑERÍA
+
+La primera capa de tapada deberá efectuarse con tierra libre de piedras u otros
+elementos que puedan dañar la cobertura hasta cubrir 100 mm por sobre la generatriz
+superior de la cañería, luego se continuará con la tierra sobrante extraída de la
+excavación.
+
+
+7.9   Rotura y Reparación de Veredas o Pavimentos
+
+En los casos que fuera necesario efectuar la rotura de veredas y/o Pavimentos, los
+mismos serán reparados a las condiciones originales de acuerdo a las normativas de
+los Entes Municipales, Nacionales o Provinciales correspondientes. Se deberá tener
+en cuenta que en algunas localidades se exige que se reponga todo el paño de
+pavimento en que se efectuó la rotura.
+
+
+7.10 Placa de Identificación
+
+Cuando se instale una CMP con mojón o sobre la línea municipal, se deberá
+completar la Placa de Identificación de la misma, con todos los datos requeridos, de
+acuerdo a lo indicado en la Plano Tipo de la placa de identificación
+SCE-PC-112-0003.
+
+Adicionalmente, para las CMP de las probetas para medir velocidad de corrosión, en
+la tapa será pintada una franja de color azul marino de 30 mm de ancho para
+identificar su uso
+
+
+8     REGISTRO Y ARCHIVO
+
+
+El Técnico de Protección Catódica deberá confeccionar un Plano Conforme a Obra
+con los detalles de la instalación realizada.
+                                                             CÓDIGO    SCE-PC-304-0001
+
+                      PROCEDIMIENTO                         REVISIÓN          0
+
+                                                              HOJA         14 de 14
+
+
+
+
+En el caso de que la instalación haya sido realizada por un contratista, éste realizará
+el plano conforme a obra y el Técnico de Protección Catódica de la Distribuidora y/o el
+Inspector contratado lo revisará y aprobará.
+
+El Técnico de Protección Catódica archivará estos documentos en la Unidad
+Operativa y los conservará por todo el tiempo de vida útil de las cañerías.
+
+
+9   ANEXOS
+
+
+No corresponde.
+

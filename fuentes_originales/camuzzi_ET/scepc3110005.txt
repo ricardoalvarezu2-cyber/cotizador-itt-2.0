@@ -1,0 +1,1061 @@
+                                                                                 SCE-PC-311-
+                                                                CÓDIGO:
+                                                                                    0005
+                          PROCEDIMIENTO                        REVISIÓN:               0
+
+                                                                 HOJA:              1 de 26
+
+
+                                                                FECHA               FECHA
+                                                              APROBACION           VIGENCIA
+       PROCESO                 OPERACIÓN DE LA RED
+                                                                05/08/19            05/08/19
+
+                                                                  LIDER DEL PROCESO
+                            Relevamiento de Potenciales de
+           TEMA
+                                 Protección Catódica
+                                                                       Guillermo Montag
+
+                                                                       APROBADO POR:
+   ANULA/REEMPLAZA                     I OR 004
+                                                                       Alejandro Lorenzo
+
+
+                                 MODIFICACIONES
+  Nº de      FECHA
+                                           MOTIVO DE LA MODIFICACIÓN
+REVISIÓN    REVISION
+
+
+
+
+AREAS INVOLUCRADAS:
+
+Todas las áreas Técnicas de las Unidades Operativas.
+
+
+
+OBSERVACIONES:
+                                                                                                               CÓDIGO             SCE-PC-311-0005
+
+                                        PROCEDIMIENTO                                                         REVISIÓN                        0
+
+                                                                                                                 HOJA                    2 de 26
+
+
+INDICE
+                                                                                                                                                   Página
+1    OBJETO .............................................................................................................................................. 3
+2    DOCUMENTACION COMPLEMENTARIA Y/O DE REFERENCIA ................................................... 3
+3    DEFINICIONES .................................................................................................................................. 3
+  3.1 GLOSARIO .......................................................................................................................................... 3
+  3.2 BUDI ................................................................................................................................................. 3
+  3.3 POTENCIAL ON ................................................................................................................................... 3
+  3.4 POTENCIAL OFF ................................................................................................................................. 3
+  3.5 POTENCIAL NATURAL .......................................................................................................................... 4
+  3.6 MEDICIÓN DE POTENCIAL .................................................................................................................... 4
+  3.7 RELEVAMIENTO DE POTENCIAL ............................................................................................................ 4
+  3.8 TOMA DE POTENCIAL .......................................................................................................................... 4
+  3.9 PUNTOS SINGULARES ......................................................................................................................... 5
+  3.10 CAJA DE MEDICIÓN DE POTENCIALES (CMP) ....................................................................................... 5
+  3.11 CELDA LIBRE DE IR............................................................................................................................. 5
+4    RESPONSABILIDADES ..................................................................................................................... 6
+  4.1 TÉCNICO DE PROTECCIÓN CATÓDICA DE LA UNIDAD OPERATIVA ........................................................... 6
+5    DESARROLLO ................................................................................................................................... 7
+  5.1 ELEMENTOS NECESARIOS ................................................................................................................... 7
+  5.2 MEDICIÓN DE POTENCIALES ................................................................................................................ 9
+  5.3 RELEVAMIENTO DE POTENCIALES ON ................................................................................................ 11
+  5.4 RELEVAMIENTO DE POTENCIALES OFF .............................................................................................. 11
+  5.5 RELEVAMIENTO DE POTENCIALES NATURALES ................................................................................... 12
+  5.6 MEDICIÓN DE POTENCIAL EN CELDA LIBRE IR .................................................................................... 14
+  5.7 MEDICIÓN DE ÁNODOS GALVÁNICOS.................................................................................................. 16
+  5.8 EVALUACIÓN DEL NIVEL DE POTENCIAL.............................................................................................. 18
+  5.9 INSPECCIÓN VISUAL .......................................................................................................................... 19
+6    REGISTRO Y ARCHIVO .................................................................................................................. 20
+7    ANEXOS ........................................................................................................................................... 20
+  7.1 ANEXO 1: ALTA DE UNA TOMA DE POTENCIAL EN LA BUDI ................................................................... 20
+  7.2 ANEXO 2: BAJA DE UNA TOMA DE POTENCIAL...................................................................................... 22
+  7.3 ANEXO 3: CARGA DE UNA MEDICIÓN DE POTENCIAL ............................................................................ 22
+                                                             CÓDIGO    SCE-PC-311-0005
+
+                       PROCEDIMIENTO                        REVISIÓN          0
+
+                                                              HOJA         3 de 26
+
+
+1     OBJETO
+
+El objeto del presente Procedimiento es especificar la forma de realizar la medición de
+los potenciales de Protección Catódica.
+
+2     DOCUMENTACION COMPLEMENTARIA Y/O DE REFERENCIA
+
+Norma Argentina de Gas NAG – 100
+
+Resolución del ENARGAS N° 1192/99
+
+I OR – 002: Glosario de Términos y Símbolos de Protección Anticorrosiva
+
+3     DEFINICIONES
+
+
+3.1    Glosario
+
+En el documento I OR – 002 se incluye un listado de Términos y Símbolos
+comúnmente utilizados en la redacción de documentos de Protección Anticorrosiva.
+
+
+3.2    BUDI
+
+BUDI es la abreviatura de Base Unificada de Instalaciones. Es un programa, que tiene
+asociada una base de datos, en la cual se guardan los datos de los elementos de
+protección catódica y las mediciones realizadas en los mismos, además de otra
+información relacionada con las cañerías, instalaciones de superficie, etc.
+
+
+3.3    Potencial On
+
+Se trata del potencial estructura-suelo medido con el sistema de protección catódica
+aplicado.
+
+
+3.4    Potencial Off
+
+Es el valor del potencial estructura-suelo medido en el instante en que el sistema de
+protección catódica es desconectado.
+                                                             CÓDIGO    SCE-PC-311-0005
+
+                       PROCEDIMIENTO                        REVISIÓN          0
+
+                                                              HOJA         4 de 26
+
+
+3.5    Potencial Natural
+
+Es el Potencial estructura-suelo medido con el sistema de Protección Catódica
+desconectado pero a partir del momento en que se considere despolarizada la
+cañería.
+
+
+3.6    Medición de Potencial
+
+Se refiere a la medición del valor del ∆V (diferencia de potencial) entre la estructura
+enterrada y un electrodo estable utilizado como referencia.
+
+
+3.7    Relevamiento de Potencial
+
+Es la acción sistemática de medir potenciales con el objeto de evaluar el estado de la
+Protección Catódica de una estructura enterrada.
+
+
+3.8    Toma de Potencial
+
+Se define Toma de Potencial a aquel punto que está conectado eléctricamente a la
+cañería que se está relevando, en el cual se puede conectar un instrumento para
+realizar la medición del potencial.
+
+Todas las cañerías enterradas deben poseer puntos fijos para la toma de potenciales,
+éstos bien pueden ser CMP's (caja de medición de potencial) ó cualquier otro
+elemento que tenga continuidad eléctrica con las mismas.
+
+3.8.1 NÚMERO MÍNIMO DE TOMAS DE POTENCIAL
+
+El número mínimo de tomas de potencial es:
+
+En Redes de distribución
+
+•     Cada 1.000 metros de cañería, distribuidos geométricamente y en coincidencia
+      con los puntos más desfavorables respecto a la inyección de corriente.
+•     Además, en todos los puntos singulares.
+
+En Ramales y Gasoductos
+
+•     Cada 1.000 metros en zonas no urbanizadas (clase de trazado 1 y 2)
+•     Cada 300 metros en zonas urbanas (clase de trazado 3 y 4)
+•     Además, en todos los puntos singulares.
+                                                             CÓDIGO    SCE-PC-311-0005
+
+                      PROCEDIMIENTO                         REVISIÓN          0
+
+                                                              HOJA         5 de 26
+
+
+
+3.8.2 FRECUENCIA
+
+Los Relevamientos de Potenciales en redes de distribución, ramales y gasoductos,
+deben ser realizados tantas veces como sea necesario para asegurar que el nivel de
+Protección Catódica de la estructura enterrada sea el adecuado.
+
+No obstante, de acuerdo a lo establecido en las Normas y Estándares vigentes, los
+relevamientos de potenciales deben efectuarse como mínimo una vez al año, no
+excediendo intervalos de 15 meses entre relevamientos.
+
+
+3.9   Puntos Singulares
+
+Se consideran Puntos Singulares a aquellos en donde se encuentran instalados
+elementos o accesorios de la cañería que pueden ocasionar la pérdida total ó la
+disminución de los niveles de protección catódica por efecto de la pérdida de aislación
+o aumento de la resistencia del circuito eléctrico del que forman parte.
+
+
+3.10 Caja de Medición de Potenciales (CMP)
+
+La caja de medición de potencial (abreviada como CMP) es el elemento en el que
+comúnmente se realizan las conexiones necesarias para medir potenciales.
+Normalmente tienen un solo borne, donde está conectado el cable proveniente de la
+cañería, pero pueden llegar a tener 4 bornes, dependiendo de su aplicación.
+
+En el caso de que la CMP tenga varios bornes, cada uno de ellos debe estar
+claramente identificado.
+
+
+3.11 Celda Libre de IR
+
+Las Celdas Libres de IR son utilizadas normalmente para conocer con mayor
+exactitud algunos parámetros de las cañerías, en las cuales dicha evaluación no
+puede realizarse en forma directa.
+
+Es una estación de monitoreo de potencial y corriente que permite la medición de
+distintos parámetros eléctricos. Se encuentra enterrada al mismo nivel y condiciones
+locales de la cañería que se quiere supervisar.
+
+El esquema de instalación típico es el siguiente:
+                                                           CÓDIGO     SCE-PC-311-0005
+
+                     PROCEDIMIENTO                         REVISIÓN          0
+
+                                                            HOJA          6 de 26
+
+
+
+
+Básicamente se compone de una chapa de acero de similares características que la
+de la cañería en estudio y, por tanto, se admite que los potenciales y corrientes
+medidos en la misma, serán similares a la de la estructura a supervisar.
+
+En algunos casos tiene incorporado un electrodo de referencia permanente de
+Cu/SO4Cu. Si así no fuera, se debe conectar el electrodo de referencia en el punto 1
+indicado en el esquema anterior.
+
+Todas las celdas IR Free deben tener asignado un número de toma de potencial.
+
+4     RESPONSABILIDADES
+
+
+4.1   Técnico de Protección Catódica
+
+Es responsable de que los trabajos sean ejecutados de acuerdo a lo establecido en el
+presente Procedimiento y de que se realicen tantas mediciones de potencial como
+sean necesarias para asegurar el correcto funcionamiento del sistema de protección
+catódica durante todo el tiempo de vida útil de la cañería y además que el nivel de
+polarización alcanzado se encuentre dentro de lo establecido en la normativa vigente.
+
+También es el responsable de que las mediciones realizadas estén cargadas en
+tiempo y forma en la BUDI.
+                                                                CÓDIGO    SCE-PC-311-0005
+
+                        PROCEDIMIENTO                          REVISIÓN          0
+
+                                                                 HOJA         7 de 26
+
+
+5     DESARROLLO
+
+
+5.1     Elementos Necesarios
+
+El Técnico de Protección Catódica, o quién se designe para realizar el relevamiento,
+debe tener como mínimo los siguientes elementos:
+
+•     Un Multímetro, (Resistencia interna mínima de 50.000 Ohm/Volt)
+•     Un Electrodo de Referencia de Cu/So4Cu
+•     Historial de los Equipos Rectificadores y Dispersores
+•     Historial de Relevamiento de Potenciales
+•     Accesorios de CMP (tornillos, tapas, placa aislante, spray antisulfatante, sellante,
+      etc.)
+•     Herramientas básicas (pinza de fuerza, pinza de punta, destornillador de punta
+      plana, destornillador phillips, llave para abrir las CMP’s)
+•     Interruptor de corriente Sincronizable, o Unidad de Sincronismo Portátil.
+
+5.1.1 INTERRUPTOR DE CORRIENTE SINCRONIZABLE
+
+Este instrumento tiene por finalidad conectar y desconectar la inyección de la
+corriente de protección en ciclos de tiempo prefijados. Se utiliza únicamente en
+equipos rectificadores que no tengan incorporados interruptores fijos (normalmente
+los rectificadores manuales montados sobre columna.)
+
+Los tiempos de conexión (ON) y desconexión (OFF) se programan por medio de
+selectores triples que tienen una capacidad de regulación de décimas de segundo. En
+todos los casos el tiempo de ON se fijará en 8 segundos y el de OFF en 1 segundo.
+
+Si la zona en estudio está protegida con más de un equipo rectificador habrá que
+sincronizar los interruptores a instalar en cada uno de ellos con la finalidad que en
+todos se conecte y desconecte la corriente de protección al mismo tiempo.
+
+La sincronización se realiza en taller, conectando entre sí todos los interruptores, para
+lo cual deben estar encendidos y con igual ajuste de tiempos ON (8 segundos) y OFF
+(1 segundo), de esta forma estarán listos para recibir el pulso de sincronismo.
+
+El emisor de pulso de sincronismo se puede conectar en cualquier interruptor, al
+presionar el botón emitirá una señal que llegará a todos los interruptores conectados,
+quedando todos ellos sincronizados. Si algún interruptor se apaga, después de esta
+operación, se deberá repetir todo el proceso de sincronización.
+                                                           CÓDIGO    SCE-PC-311-0005
+
+                     PROCEDIMIENTO                        REVISIÓN          0
+
+                                                            HOJA         8 de 26
+
+
+
+
+La alimentación del instrumento es provista por una batería interna de 12 V 3 Ah que
+le da una autonomía aproximada de 30 horas de funcionamiento ininterrumpido.
+Posee además un cargador interno que le permite recargarla en 10 hs. Se
+recomienda cargar la batería antes de comenzar con los trabajos
+
+5.1.2 UNIDAD DE SINCRONISMO PORTÁTIL
+
+La unidad de sincronismo portátil es un instrumento capaz de transportar la señal de
+sincronismo necesaria para sincronizar el interruptor ON – OFF de aquellos equipos
+rectificadores que lo poseen instalado en forma fija.
+
+
+
+
+Se alimenta de una batería interna con una autonomía de 30 horas de funcionamiento
+continuo. El Cargador incorporado recarga la misma en 10 horas.
+
+Tanto el interruptor ON – OFF instalado en el equipo rectificador y la unidad de
+sincronismo portátil deben estar ajustados para 8 segundos de ON y 1 segundo de
+                                                            CÓDIGO       SCE-PC-311-0005
+
+                       PROCEDIMIENTO                        REVISIÓN            0
+
+                                                             HOJA             9 de 26
+
+
+OFF y encendidos. Al conectar el patrón al interruptor fijo, este último se sincroniza
+con el mismo.
+
+
+5.2   Medición de Potenciales
+
+5.2.1 GENERALIDADES
+
+El Técnico de Protección Catódica se encarga de que todas las tareas relacionadas
+con la medición de potenciales sean realizadas, con mano de obra propia o
+contratada, de acuerdo a lo especificado en las partes de este Procedimiento.
+
+El personal que realice el relevamiento siempre debe llevar consigo el historial de
+mediciones de potencial y el correspondiente a los equipos rectificadores ó ánodos
+galvánicos.
+
+La documentación debe tener claramente registrada la ubicación de cada elemento y
+el orden de lectura del mismo. También se debe llevar la ubicación y las mediciones
+anteriores de las celdas IR Free.
+
+5.2.2 ESQUEMA DE CONEXIÓN
+
+
+                                                                 Multímetro
+                                                 - 1120
+
+            Línea
+            Imaginaria
+                                                  com +
+
+                                                                       CMP
+
+                                                            TP
+
+          Electrodo      de
+          Referencia
+
+
+
+
+                                                 Cañería enterrada
+
+
+
+
+En general, para la medición de potenciales se deben seguir los pasos:
+                                                              CÓDIGO     SCE-PC-311-0005
+
+                      PROCEDIMIENTO                          REVISIÓN            0
+
+                                                               HOJA           10 de 26
+
+
+
+
+a) Seleccionar en el multímetro la opción para medir mV de corriente continua (CC.)
+b) Conectar el terminal del borne COM (o negativo) del multímetro al borne TP de la
+   CMP, o a la estructura, en el caso de medir potencial en un servicio.
+c) Conectar el terminal positivo del multímetro al electrodo de referencia.
+d) Leer en la pantalla del multímetro el valor de potencial mostrado.
+
+5.2.3 POSICIÓN DEL ELECTRODO
+
+Para realizar una medida de potenciales debemos ubicar el Electrodo de Referencia
+lo más cerca posible de la estructura en estudio para evitar errores en la lectura
+derivados de la introducción de resistencias adicionales.
+
+En el caso de una tubería enterrada, el Electrodo se debe ubicar en el punto del
+terreno que corte con una línea vertical imaginaria el eje de la misma (Ver Esquema
+de conexión del punto 5.2.2.) Estas precauciones deben ser tenidas en cuenta ya se
+trate de mediciones de potenciales de sistemas protegidos por corriente impresa (ON-
+OFF) o galvánica. La zona de contacto del Electrodo de referencia con el suelo
+(electrolito) debe ser humectada antes de realizar la medición de los potenciales.
+
+5.2.4 IDENTIFICACIÓN DEL CABLE DE TOMA DE POTENCIAL
+
+Si la CMP tiene un solo borne, éste es donde está conectado el cable proveniente de
+la cañería.
+
+En algunos casos, pueden encontrarse CMP's con 2, 3 y hasta 4 bornes de conexión.
+
+
+
+
+En este caso, cada uno de los bornes debería estar identificado, correspondiendo a la
+conexión de elementos como:
+                                                             CÓDIGO     SCE-PC-311-0005
+
+                         PROCEDIMIENTO                       REVISIÓN          0
+
+                                                               HOJA         11 de 26
+
+
+      •    Juntas aislantes
+      •    Ánodos de magnesio
+      •    Interconexión de sectores de cañería aérea
+      •    Tomas de potencial
+      •    Caños camisa
+
+Si los bornes no están marcados, habrá que recurrir al uso de un instrumento detector
+de cables enterrados ó a zanjear la zona. La medición de potencial en cada borne
+como medio de identificación suele ser confusa, ya que los valores obtenidos pueden
+llegar a ser similares.
+
+
+5.3       Relevamiento de Potenciales On
+
+El Técnico de Protección Catódica se asegura que todas las inyecciones de corriente
+se encuentren en correcto funcionamiento antes de iniciar la medición.
+
+En todos los casos las conexiones se realizarán según lo establecido en el punto
+5.2.2).
+
+El potencial ON obtenido como resultado de esta medición no puede ser tenido en
+cuenta en forma directa debido a que incluye una serie de caídas de tensión que
+deberán ser determinadas y corregidas.
+
+Las estructuras enterradas, en las que no se puede realizar mediciones OFF, es
+posible determinar adecuadamente estas caídas de tensión con el uso de “Celdas de
+Referencia Libres de IR”, ubicadas estratégicamente.
+
+
+5.4       Relevamiento de Potenciales OFF
+
+Para las mediciones del Potencial de Protección con la Inyección de Corriente
+interrumpida es necesario utilizar un Interruptor de Corriente Sincronizable.
+
+En el caso de que el equipo rectificador posea un interruptor On-Off incorporado, se
+debe sincronizar el mismo con la unidad de sincronismo portátil. Para esta tarea se
+debe conectar la unidad portátil a través de su conector por medio de un cable al
+interruptor On-Off fijo del equipo.
+
+Cuando el equipo rectificador no tiene incorporado un interruptor On-Off, se debe
+instalar un Interruptor portátil (ver esquema a continuación). Para ello se seguirán los
+siguientes pasos:
+
+a) Apagar el Equipo Rectificador.
+                                                              CÓDIGO     SCE-PC-311-0005
+
+                      PROCEDIMIENTO                          REVISIÓN           0
+
+                                                               HOJA         12 de 26
+
+
+b) Desconectar el cable anódico (Dispersor de corriente).
+c) Conectar el cable rojo (Borne + del Interruptor) al borne positivo del equipo
+   rectificador (donde estaba conectado el Dispersor).
+d) Conectar el cable negro del interruptor al dispersor de corriente.
+e) Encender el Equipo Rectificador.
+
+
+      Importante:
+      Si el interruptor de corriente o la unidad de sincronización portátil
+      fueron sincronizados con otros, se debe mantener encendido
+      durante toda la operación. Si por alguna razón llegase a apagarse
+      habrá que repetir la sincronización de todos los interruptores.
+
+         Esquema de conexión del interruptor de corriente sincronizable
+
+
+
+
+Una vez realizada alguna de las tareas anteriores, se debe realizar la medición de los
+potenciales según lo establecido en el punto 5.2, adoptando como valor OFF, el
+primer potencial estable que pueda ser leído en la pantalla del multímetro.
+
+
+5.5   Relevamiento de Potenciales Naturales
+
+La medición de potenciales naturales de cañerías enterradas consta de cuatro etapas:
+                                                            CÓDIGO    SCE-PC-311-0005
+
+                     PROCEDIMIENTO                         REVISIÓN          0
+
+                                                             HOJA        13 de 26
+
+
+
+
+1. Desconexión del sistema de protección catódica.
+2. Despolarización de la cañería.
+3. Medición de los potenciales naturales.
+4. Reconexión del sistema de protección catódica.
+
+5.5.1 DESCONEXIÓN DEL SISTEMA PROTECCIÓN CATÓDICA
+
+Se refiere a los equipos rectificadores, termogeneradores y ánodos galvánicos.
+
+El Técnico de Protección Catódica debe apagar todos los equipos de protección
+catódica que estén conectados a la cañería, (en el caso de los paneles solares y
+generadores eólicos se debe desconectar el cable del cátodo y/o los ánodos
+galvánicos, según corresponda.)
+
+También deberán desconectarse los puentes que unan ambas caras de las juntas
+aislantes (en caso de ser necesario), para poder aislar efectivamente la cañería a la
+cual se le tomarán los potenciales naturales.
+
+5.5.2 DESPOLARIZACIÓN DE LA CAÑERÍA
+
+En esta etapa, el Técnico de Protección Catódica debe verificar periódicamente que la
+cañería esté despolarizándose, midiendo el potencial caño-suelo de la misma. A
+medida que la cañería se despolarice, el potencial comenzará a aumentar (el
+potencial es menos negativo.) Cuando no haya variación entre dos mediciones de
+potencial consecutivas, la cañería estará despolarizada.
+
+5.5.3 MEDICIÓN DEL POTENCIAL NATURAL
+
+Despolarizada la cañería, el Técnico de Protección Catódica deberá realizar el
+relevamiento de los potenciales naturales midiendo el potencial caño-suelo de la
+cañería, según lo establecido en el punto 5.2.
+
+El valor medido debería ser, en la mayoría de los casos, cercano a los –500 mV,
+referidos al electrodo de Cu/SO4Cu.
+
+5.5.4 RECONEXIÓN DEL SISTEMA DE PROTECCIÓN CATÓDICA
+
+El Técnico de Protección Catódica debe volver a conectar los equipos que fueron
+desconectados en la primera etapa, incluyendo los puentes de las juntas aislantes.
+                                                               CÓDIGO     SCE-PC-311-0005
+
+                       PROCEDIMIENTO                          REVISIÓN           0
+
+                                                                   HOJA      14 de 26
+
+
+5.6   Medición de Potencial en Celda Libre IR
+
+5.6.1 MEDICIÓN DE POTENCIAL ON
+
+La medición del potencial “ON” se efectúa midiendo la tensión que existe entre el
+borne del cupón de testeo (T) y la hemipila (H), en la caja de interconexión. El polo
+positivo (color rojo) del voltímetro debe conectarse al borne de la hemipila y el
+negativo (color negro) al conector del cupón de testeo. Durante la medición no debe
+accionarse el pulsador del dispositivo de interconexión.
+
+5.6.2 MEDICIÓN DE POTENCIAL OFF
+
+Para medir el potencial “OFF” se podrán usar 3 (tres) tipos distintos de instrumentos:
+multímetro convencional, osciloscopio o registrador. En función del tipo de
+instrumento a utilizar se emplearán distintas técnicas de lectura.
+
+a) Medición de potencial “OFF”, con multímetro convencional:
+   Se conecta el terminal positivo del multímetro a la Hemipila (H) y el terminal
+   negativo al cupón de testeo (T), en la caja de interconexión. Se acciona el
+   interruptor del dispositivo de corte, adoptándose como valor “OFF”, el primer
+   potencial estable que puede ser leído en la pantalla del multímetro.
+
+b) Medición de potencial “OFF” con Osciloscopio o Registrador:
+   Se conecta el Osciloscopio o Registrador entre el borne correspondiente del
+   cupón de testeo (T) y el de la Hemipila (H) en la caja de interconexión, con las
+   polaridades indicadas en el punto a). Se acciona entonces el interruptor del
+   dispositivo de corte y el valor del potencial “OFF” se deducirá a partir del análisis
+   de la curva del registro efectuado, que debería muy similar a la que se muestra a
+   continuación:
+
+
+                     -500
+
+             E      -600
+         (mV contra
+         Cu/CuSO4) -700
+                     -800
+
+                     -900
+                                                        Caída IR
+        Potencial   -1000
+           Off
+                    -1100
+                                                           Tiempo
+                     Accionamiento del
+                        Interruptor       Transitorio
+                                                                CÓDIGO      SCE-PC-311-0005
+
+                       PROCEDIMIENTO                            REVISIÓN           0
+
+                                                                 HOJA          15 de 26
+
+
+5.6.3 MEDICIÓN DE LA CORRIENTE QUE CIRCULA A TRAVÉS DEL CUPÓN
+
+Para medir la corriente circulante entre el cupón de testeo (T) y la estructura, se
+utilizará un instrumento que no provoque, bajo ninguna condición de funcionamiento
+una caída de tensión superior a 0,3 mV.
+
+Para que la condición descrita se cumpla deberá utilizarse un microvoltímetro
+asociado a un shunt apropiado.
+
+La técnica consistirá en colocar las puntas de medición del instrumento utilizado de la
+siguiente manera: terminal positivo en el borne correspondiente a la estructura (C) y el
+terminal negativo en el borne correspondiente al cupón de testeo (T).
+
+La lectura del instrumento se efectúa simultáneamente al pulsar el interruptor,
+forzando la circulación a través del instrumento.
+
+Si la corriente medida es negativa significa que la corriente circula desde el suelo
+hacia el cupón de testeo; si la corriente es positiva, la corriente circula de la estructura
+al cupón y de éste al terreno. Es importante registrar la polaridad de la corriente para
+realizar análisis posteriores.
+
+5.6.4 RELEVAMIENTO DE POTENCIALES NATURALES
+
+La medición de potenciales naturales de las celdas libres de IR (o IR Free) consta de
+las siguientes etapas:
+
+1. Desconexión
+2. Despolarización
+3. Medición
+4. Reconexión
+
+5.6.5 DESCONEXIÓN
+
+El Técnico de Protección Catódica debe desconectar la corriente de protección
+catódica de la celda, para lo cual desconecta el cable que está indicado como cupón
+de testeo (T) (este es el vínculo del cupón de testeo con el sistema de protección
+catódica.)
+
+5.6.6 DESPOLARIZACIÓN
+
+Es esta etapa, el Técnico de Protección Catódica debe verificar periódicamente que la
+celda esté despolarizándose, midiendo el potencial caño-suelo de la misma.
+                                                            CÓDIGO     SCE-PC-311-0005
+
+                      PROCEDIMIENTO                         REVISIÓN          0
+
+                                                             HOJA         16 de 26
+
+
+A medida que la celda se despolarice, el potencial comenzará a aumentar (el
+potencial es menos negativo.) Cuando no haya variación entre dos mediciones de
+potencial consecutivas, la celda estará despolarizada.
+
+5.6.7 MEDICIÓN
+
+Se realiza según lo establecido en el Punto 5.2
+
+El valor medido debería ser, en la mayoría de los casos, cercano a los –500 mV,
+referidos al electrodo de Cu/SO4Cu.
+
+5.6.8 RECONEXIÓN DE LA CELDA LIBRE IR
+
+El último paso que debe realizar el Técnico de Protección Catódica es volver a
+conectar el cable del cupón (T). De esta manera queda restablecida la corriente de
+protección catódica a la celda.
+
+
+5.7     Medición de Ánodos Galvánicos
+
+Si la Protección Catódica es Galvánica, habrá que verificar el funcionamiento de los
+ánodos, midiendo el potencial de los mismos y la corriente que drenan, para lo cual se
+debe abrir el puente entre ánodo galvánico (MG si es de magnesio, como ocurre en
+general) y la cañería que protege (TP), como se ve en la figura siguiente.
+
+
+
+
+5.7.1    POTENCIAL DEL ÁNODO
+
+
+El potencial de un ánodo de magnesio enterrado en un suelo homogéneo y medido
+respecto al electrodo de referencia de cobre/sulfato de cobre, depende de su
+aleación:
+
+                      Tipo de Aleación            Potencial en mV
+                Aleación AZ 63 (estándar)              -1500
+                Alto potencial                         -1700
+                                                              CÓDIGO     SCE-PC-311-0005
+
+                      PROCEDIMIENTO                           REVISIÓN          0
+
+                                                               HOJA          17 de 26
+
+
+
+
+Para realizar la medición se debe seleccionar rango de tensión en mV de corriente
+continua (CC) en el Multímetro, conectar el borne negativo al ánodo y el positivo al
+electrodo de referencia, como se ve en la figura.
+
+En caso de obtener valores significativamente inferiores a los mencionados, en
+primera instancia se debe desarmar la CMP y limpiar sus contactos; de persistir el
+problema, antes de tomar una decisión es conveniente medir la corriente que drena el
+ánodo.
+
+
+
+
+5.7.2 CORRIENTE DEL ÁNODO
+
+La corriente que drena el ánodo va a depender de la resistencia del circuito, y ésta de
+la resistividad del terreno y la forma geométrica del mismo. Es decir que cuanto más
+resistivo sea el terreno, mayor será la resistencia del circuito y menor la corriente que
+drenará el Ánodo. Siempre está en el orden de los miliamperes (mA.)
+
+Para efectuar la medición se debe seleccionar rango de miliamperes de corriente
+continua (CC) en el Multímetro y colocar una de las puntas de prueba en el borne de
+la CMP donde está conectado el ánodo y la otra en el borne donde está conectada la
+cañería como se indica en la figura. De ésta forma se cierra el circuito Ánodo Cañería
+a través del instrumento.
+
+El esquema de conexión se indica en el dibujo a continuación.
+                                                                CÓDIGO     SCE-PC-311-0005
+
+                       PROCEDIMIENTO                           REVISIÓN           0
+
+                                                                 HOJA         18 de 26
+
+
+
+
+El valor obtenido (en mA) se deberá comparar con el medido en relevamientos
+anteriores. Si éste es inferior al histórico, habrá que desarmar la CMP para limpiar los
+contactos. También pudo haberse cortado algún cable (en caso de tratarse de una
+batería de ánodos), por lo que habrá que utilizar un instrumento detector ó zanjear la
+zona.
+
+Si persiste el bajo rendimiento del ánodo se deberá humectar la zona donde está
+instalado, si no se modifica el valor de corriente verificar la fecha en que fue instalado,
+es posible que se esté agotando, en este caso habrá que reemplazarlo.
+
+La vida útil de un ánodo de magnesio depende de la corriente que drena, siendo muy
+variable. Normalmente cuando se proyecta una instalación de protección catódica con
+ánodos galvánicos se calcula el número necesario para tener una vida útil mínima de
+10 años. Esto significa que si el que estamos midiendo tiene menos antigüedad,
+difícilmente el problema esté causado por agotamiento, sino por alguno de los motivos
+ya detallados.
+
+
+5.8   Evaluación del Nivel de Potencial
+
+5.8.1 GENERALIDADES
+
+Cada vez que se efectúa el Relevamiento de Potenciales se debe comparar el valor
+medido en cada CMP con el registrado en Inspecciones anteriores.
+
+De haber diferencias importantes se deberá identificar las causas que las motivan.
+
+Generalmente, entre el punto de conexión del cable de toma de potencial y el borne
+de la CMP se forman sulfatos que aumentan la resistencia y generan falsos contactos,
+ocasionando un error en la lectura. En este caso la solución es sencilla, se deberá
+desarmar la CMP y limpiar terminales y tornillos ó cambiarlos si están deteriorados.
+                                                             CÓDIGO    SCE-PC-311-0005
+
+                      PROCEDIMIENTO                         REVISIÓN          0
+
+                                                              HOJA         19 de 26
+
+
+
+
+Una vez rearmada se repite la medición, si persiste el problema se deberá evaluar
+globalmente, identificando la ubicación de los Ánodos de magnesio ó los Equipos
+Rectificadores.
+
+Cuando la Protección Catódica es por corriente impresa habrá que verificar que la
+inyección de corriente no se haya modificado respecto a la anterior. Si la Protección
+es Galvánica habrá que verificar el funcionamiento de los Ánodos, midiendo el
+potencial de los mismos y la corriente que drenan.
+
+Si el valor de la corriente inyectada por los equipos rectificadores o ánodos no se ha
+modificado respecto a los parámetros de funcionamiento anteriores, es posible que el
+problema esté originado por una rotura del revestimiento, un contacto con una
+estructura extraña, una interferencia, el aumento de la superficie de acero a proteger
+etc.
+
+Cualquiera sea la causa, se debe identificar fehacientemente y generar la acción
+correctiva que corresponda.
+
+5.8.2 CAÑERÍAS ASOCIADAS A CELDAS IR FREE
+
+Donde se han instalado celdas IR Free asociadas a un grupo de cañerías,
+normalmente vinculadas eléctricamente entre sí, el criterio aplicado fue que la Ir Free
+se ubicó en el punto con el potencial más bajo (en valor absoluto) de las cañerías que
+componen dicho grupo. El informe del relevamiento de potenciales deberá contener la
+información que permita conocer claramente cuales son las cañerías que componen
+el grupo asociado a una única celda IR Free.
+
+La celda IR Free representa el nivel de polarización de la cañería a la que está
+conectada (y por extensión, a todas las cañerías conectadas a ella), por lo tanto, los
+valores On de la/s cañería/s no deberían ser menores (en valor absoluto) que el valor
+On de la celda IR Free asociada.
+
+
+5.9   Inspección Visual
+
+Cuando el Técnico de Protección Catódica realice el relevamiento de potenciales
+debe también efectuar un relevamiento visual del entorno de la traza de la cañería en
+busca de elementos que puedan afectar a la integridad de la misma y su
+revestimiento.
+
+Cualquier indicio de cambios en la constitución del terreno ó modificación de la
+tapada, tendido de líneas eléctricas nuevas ó modificación de las existentes, cambios
+en el cauce de los ríos, estado de las instalaciones de superficie, etc. deberán
+registrarse en una planilla de relevamiento.
+                                                              CÓDIGO     SCE-PC-311-0005
+
+                        PROCEDIMIENTO                         REVISIÓN          0
+
+                                                               HOJA         20 de 26
+
+
+
+
+Con estos datos se podrán determinar las obras necesarias para mantener el Sistema
+en estado óptimo de funcionamiento.
+
+6     REGISTRO Y ARCHIVO
+
+El Técnico de Protección Catódica debe cargar las mediciones de potencial en la
+BUDI. La medición anual para el cumplimiento del Estándar de Calidad de Protección
+Catódica debe estar cargado antes del 10 de enero del año posterior al de la medición
+(por ejemplo, los potenciales para el informe del año 2019 deben estar cargados en la
+BUDI antes del 10 de enero del año 2020.)
+
+7     ANEXOS
+
+
+7.1    Anexo 1: Alta de una toma de potencial en la BUDI
+
+Para dar de alta un nuevo punto de toma de potencial en la BUDI, se puede acceder a
+través de dos lugares:
+
+      1) A través de la consulta de Protección Catódica:
+
+
+
+
+         Se selecciona el Sistema y la Cañería a la que se quiere agregar la nueva toma
+         de potencial, y se presiona el botón “Crear PM”.
+
+      2) Otra forma es a través de la consulta “Cañerías”. Se selecciona el Sistema y se
+         elige la cañería. Luego que se abre la ventana con todos los datos de la
+         cañería, en el panel de la izquierda se debe desplegar el árbol de Protección
+         Catódica, se posiciona el cursor sobre “Puntos de Medición” y se presiona con
+         el botón derecho del mouse. Aparecerá una llamada que dice “+ Nuevo” y se
+         debe presionar la misma para abrir la ventana para cargar un nuevo punto.
+                                                          CÓDIGO     SCE-PC-311-0005
+
+                      PROCEDIMIENTO                       REVISIÓN            0
+
+                                                           HOJA            21 de 26
+
+
+
+
+En ambos casos, se abrirá la siguiente ventana:
+
+
+
+
+Se deben completar todos los campos habilitados. El número de ENARGAS es puesto
+automáticamente por el sistema y no puede modificarse. En “Descripción” debe
+indicarse de tipo de punto de medición se trata, siendo una de las siguientes
+posibilidades:
+
+    I.   CCA: si la medición de potencial de un caño camisa.
+   II.   CMP: si la toma de potencial se realiza en una CMP.
+  III.   IRF: si la toma de potencial corresponde a una celda libre de IR.
+  IV.    JAB: si la toma de potencial corresponde a una cara de una junta aislante
+         bridada.
+   V.    JAM: si la toma de potencial corresponde a un lado de una junta aislante
+         monolítica.
+ VI.     Nicho: si la toma de potencial se realiza en un nicho (sólo para redes).
+ VII.    VAL: si la toma de potencial se realiza en una válvula.
+
+Para el caso de redes, la progresiva es un número correlativo para las tomas de
+potencial.
+
+Para el caso de gasoductos y ramales, la dirección puede no completarse.
+                                                             CÓDIGO    SCE-PC-311-0005
+
+                      PROCEDIMIENTO                         REVISIÓN          0
+
+                                                              HOJA         22 de 26
+
+
+
+
+7.2   Anexo 2: Baja de una toma de potencial
+
+Para dar de baja una toma de potencial, primero se selecciona el sistema y la cañería
+donde está ubicada la toma de potencial en cuestión. Luego se selecciona la toma
+que se quiere dar de baja en el listado, haciendo doble clic en el ícono de edición.
+
+
+
+
+Aparecerá la siguiente ventana:
+
+
+
+
+Se presiona el botón modificar y en la parte de “Baja del PM” se selecciona “Si”, junto
+con la fecha en que se dio de baja el punto de medición. En la parte de
+“Comentarios”, de ser posible, indicar las causas de la baja y si fue reemplazado por
+otro punto de medición, indicando su número. Para finalizar, se debe presionar el
+botón “Aceptar”. Si se presiona el botón “Salir” no se tomarán los cambios.
+
+
+7.3   Anexo 3: Carga de una medición de potencial
+
+7.3.1 CARGA INDIVIDUAL DE MEDICIONES
+
+Primero se selecciona el sistema y la cañería, luego, desde la grilla de puntos de
+medición, se debe acceder al icono de mediciones con doble clic:
+                                                            CÓDIGO    SCE-PC-311-0005
+
+                     PROCEDIMIENTO                         REVISIÓN          0
+
+                                                             HOJA         23 de 26
+
+
+
+
+Se abre la ventana de mediciones de potenciales:
+
+
+
+
+En la sección “Carga de medición” es donde se deben cargar la nueva medición de
+potencial:
+
+   1) Fecha de medición: debe ser una fecha anterior a la fecha actual de carga y
+      posterior a la fecha de alta del punto de medición.
+   2) Tipo de potencial: si es una medición On/Off o si es una medición de potencial
+      natural; si es una medición On/Off se debe indicar si es medición anual (para el
+      Estándar de Calidad de Protección Catódica que se presenta la ENARGas
+      todos los años).
+   3) Si no se pudo realizar la medición de potencial, indicarlo junto con una causa.
+      De ser necesario, se puede utilizar el campo “Comentarios” para mayor
+      información.
+   4) Carga de potenciales On/Off o natural (según corresponda).
+   5) Comentarios.
+                                                             CÓDIGO    SCE-PC-311-0005
+
+                      PROCEDIMIENTO                         REVISIÓN          0
+
+                                                              HOJA         24 de 26
+
+
+   6) Se debe presionar el botón “Guardar” para que se grabe la medición en la
+      BUDI. Caso contrario, la medición no queda grabada en la BUDI.
+
+7.3.2 CARGA MASIVA DE MEDICIONES
+
+Para realizar la carga de varias mediciones de potencial, se puede realizar a través de
+la llamada “Carga Masiva” de potenciales.
+
+Para acceder a la misma, se debe seleccionar la misma de la siguiente manera:
+
+
+
+
+Al seleccionar se abre la siguiente ventana:
+
+
+
+
+Primero se debe seleccionar el Sistema y la Cañería. Indicando la fecha de las
+mediciones, si son potenciales On/Off o naturales, si son puntos representativos y se
+todas las mediciones son anuales. A continuación aparece la lista de todos los puntos
+con los campos para ingresar las mediciones:
+                                                             CÓDIGO     SCE-PC-311-0005
+
+                      PROCEDIMIENTO                          REVISIÓN          0
+
+                                                               HOJA         25 de 26
+
+
+
+
+En esta pantalla se pueden cargar los potenciales, comentarios, etc. Al finalizar se
+debe presionar el botón “Guardar” para que se graben los datos que se cargaron.
+
+Otra forma de realizar una carga masiva de mediciones de potencial es a través de un
+archivo con extensión “.CSV”.
+
+Se presiona en el botón “Cargar Archivo” y se abre la siguiente ventana:
+
+
+
+
+Se selecciona el separador de lista, si la medición es anual y si se deben actualizar la
+ubicación geográfica del punto. Se presiona en “Cargar Archivo” y se abre la ventana
+para seleccionar el archivo (que debe ser con extensión .CSV). Si debe indicar el tipo
+de separador utilizado en el archivo CSV (sugerimos usar siempre comas). Se debe
+indicar si la medición es anual (si se selecciona, TODAS las mediciones que se
+carguen serán consideradas como anuales) y si se van a actualizar la longitud y
+latitud del punto de medición (si se deja Si, pero no se completa estos datos en el
+archivo, no se van a cargar los datos y se producirá un error).
+
+El archivo modelo es el indicado en azul: Plantilla.xls. Si se hace clic sobre el
+nombre, se puede descargar. Los campos que tiene este archivo son los siguientes:
+
+   •   FID: número secuencial (comenzando por 0) para todas las mediciones
+       incluidas.
+   •   Shape*: ingresar “Point” (sin las comillas).
+   •   Latitud y longitud: se debe ingresar la latitud y la longitud de la medición en
+       formato de grados con decimales (por ejemplo, -64.120286). Se pueden dejar
+       en blanco.
+   •   BUDI: se debe ingresar Sistema-Cañería (por ejemplo, 112-002).
+   •   Fecha: fecha en que se realizó la medición.
+   •   Nro_Mojón: se debe ingresar la progresiva de la medición.
+                                                           CÓDIGO     SCE-PC-311-0005
+
+                     PROCEDIMIENTO                         REVISIÓN          0
+
+                                                            HOJA         26 de 26
+
+
+   •   Nro_ENARGA: se debe ingresar el número de punto del ENARGAS de la
+       medición.
+   •   Pot_On y Pot-Off: potenciales On y Off con signo negativo, sin puntos ni comas
+       (por ejemplo, -1000).
+   •   Tecnico: nombre del técnico que realizó las mediciones.
+   •   Comentarios: se puede agregar cualquier comentario que ayude a comprender
+       la medición.
+
+Una vez completada la planilla, se debe guardar con formato CSV (se sugiere el
+formato CSV delimitado por comas):
+

@@ -1,0 +1,640 @@
+                                                       CÓDIGO          SCE-ME-501-0001
+                       ESPECIFICACIÓN                  REVISIÓN               00
+                          TÉCNICA
+                                                        HOJA                1 de 15
+
+
+                                                          FECHA               FECHA
+                                                        APROBACION           VIGENCIA
+       PROCESO           OPERACIÓN DE LA RED
+                                                         23-07-2019         23-07-2019
+
+                        Montajes, Canalizaciones y          LIDER DEL PROCESO
+           TEMA
+                        Cableado de Alimentación y
+                          Señales para Equipos e                 Guillermo Montag
+                              Instrumentos.
+                                                                 APROBADO POR:
+   ANULA/REEMPLAZA                  -
+                                                                 Alejandro Lorenzo
+
+
+                              MODIFICACIONES
+
+  Nº de      FECHA
+                                     MOTIVO DE LA MODIFICACIÓN
+REVISIÓN    REVISION
+
+
+
+
+AREAS INVOLUCRADAS:
+Gerencia Técnica
+Unidades de Negocios / Centros Operativos
+
+
+
+
+OBSERVACIONES:
+                                                                                                            CÓDIGO             SCE-ME-501-0001
+                                            ESPECIFICACIÓN                                                 REVISIÓN                        00
+                                               TÉCNICA
+                                                                                                              HOJA                     2 de 15
+
+
+
+
+INDICE
+                                                                                                                                                   Página
+1   OBJETO ................................................................................................................................................. 3
+2   ALCANCE .............................................................................................................................................. 3
+3   AREAS INVOLUCRADAS ..................................................................................................................... 3
+4   DOCUMENTACION COMPLEMENTARIA Y/O DE REFERENCIA ...................................................... 3
+5   DEFINICIONES Y GLOSARIO .............................................................................................................. 4
+6   RESPONSABILIDADES ........................................................................................................................ 5
+7   DESARROLLO ...................................................................................................................................... 5
+    7.1 CONSIDERACIONES GENERALES ............................................................................................. 5
+    7.2 CLASIFICACIONES DE ALIMENTACIÓN ELÉCTRICA, SEÑALES ELÉCTRICAS Y ÁREAS ..... 6
+        7.2.1 CLASIFICACIÓN DE ALIMENTACIÓN Y SEÑALES ELÉCTRICAS ....................................................... 6
+        7.2.2 CLASIFICACIÓN DE ÁREAS ....................................................................................................... 7
+    7.3 MÉTODOS DE PROTECCIÓN DE EQUIPOS E INSTALACIONES .............................................. 8
+        7.3.1 ASPECTOS CONSTRUCTIVOS .................................................................................................. 8
+        7.3.2 DISTANCIAS DE SEGURIDAD .................................................................................................... 9
+        7.3.3 CONSIDERACIONES .............................................................................................................. 10
+    7.4 CANALIZACIONES ELÉCTRICAS .............................................................................................. 10
+        7.4.1 CANALIZACIONES ENTERRADAS ............................................................................................. 11
+        7.4.2 CANALIZACIONES AÉREAS ..................................................................................................... 12
+        7.4.3 BANDEJAS PORTACABLES ..................................................................................................... 13
+        7.4.4 CONDUCTORES ELÉCTRICOS Y PROTECCIONES ...................................................................... 13
+8   REGISTRO Y ARCHIVO ..................................................................................................................... 15
+9   ANEXOS .............................................................................................................................................. 15
+                                                            CÓDIGO    SCE-ME-501-0001
+                         ESPECIFICACIÓN                    REVISIÓN          00
+                            TÉCNICA
+                                                             HOJA          3 de 15
+
+
+1   OBJETO
+
+La presente Especificación Técnica tiene por objeto establecer los lineamientos
+generales y los requisitos mínimos que se deben respetar para el montaje y el tendido
+de canalizaciones para alimentación eléctrica, instrumentos de campo, equipos de
+medición, adquisición de datos e iluminación en las instalaciones de superficie.
+
+
+
+
+2   ALCANCE
+
+Provisión, construcción, instalación y montaje en todas las Instalaciones de superficie
+operadas por la Compañía.
+
+
+
+
+3   AREAS INVOLUCRADAS
+
+Todas las Áreas Técnicas de la Compañía.
+
+
+
+
+4   DOCUMENTACION COMPLEMENTARIA Y/O DE REFERENCIA
+
+IRAM-IEC 60079-10-1. Atmósferas explosivas. Parte 10-1. Clasificación de áreas.
+Atmósferas gaseosas explosivas. Año 2012.
+
+
+IRAM 2178. Cables de energía con aislamiento extruido y sus accesorios.
+
+
+IEC 60079-10-1. Classification of areas where flammable gas or vapour hazards may
+arise. (Clasificación de áreas donde pueden surgir peligros de gases o vapores
+inflamables). Año 2015.
+
+
+NEC-NFPA-API-RP. Recommended practice for classification of locations for electrical
+installations at petroleum facilities classified as Class I, Division 1 and Division 2.
+(Práctica recomendada para la clasificación de zonas para instalaciones eléctricas en
+plantas de petróleo clasificadas como Clase I, División 1 o División 2).
+                                                            CÓDIGO     SCE-ME-501-0001
+                         ESPECIFICACIÓN                     REVISIÓN          00
+                            TÉCNICA
+                                                             HOJA           4 de 15
+
+NAG148. Condiciones de seguridad para la ubicación e instalación de estaciones de
+separación y medición y estaciones reductoras de presión.
+
+
+NAG 100. Normas Argentinas Mínimas de Seguridad para el Transporte y Distribución
+de Gas Natural y otros Gases por Cañería.
+
+
+SCE-ME-106-0014. Cañeros, cámaras de paso y trinchera.
+
+
+SCE-ME-106-0013. Esquema de Montaje de Instrumentación.
+
+
+SCE-PC-305-0001. Procedimiento de Puesta a Tierra.
+
+
+SCE-PC-105-0003. Esquema de conexionado de Puesta a Tierra.
+
+
+
+5   DEFINICIONES Y GLOSARIO
+
+INTI: Instituto Nacional de Tecnología Industrial, organismo nacional habilitado para
+certificar elementos APE.
+
+
+CSA: (Canadian Standards Association). Organismo Canadiense Regulador que
+elabora normas de seguridad de los equipos eléctricos.
+
+
+FM: (Factory Mutual). Organismo de Testeo y Certificación de productos y servicios con
+altos estándares para la prevención de pérdidas.
+
+
+UL: (Underwriters Laboratories) Consultoría de Seguridad y Certificación.
+
+
+APE: A Prueba de Explosión.
+
+
+JB: (Junction Boxes). Terminología usada para referirse a Cajas de Unión de cables.
+
+
+NPT: (National Pipe Thread). Rosca Nacional de Tubos.
+                                                              CÓDIGO     SCE-ME-501-0001
+                          ESPECIFICACIÓN                      REVISIÓN            00
+                             TÉCNICA
+                                                               HOJA          5 de 15
+
+HG: Hierro Galvanizado.
+
+
+PVC: Policloruro de vinilo. Plástico utilizado para la construcción de cañeros.
+
+
+RTU: Unidad Correctora de Volumen o Computador de Caudal según el caso.
+
+
+
+6     RESPONSABILIDADES
+
+Gerencia Técnica
+   Mantener actualizada la presente Especificación Técnica.
+     Aplicar las definiciones establecidas en el presente documento tanto en las obras
+      propias como en obras de terceros.
+     Asistir a las Unidades de Negocio ante situaciones no previstas o cuando surjan
+      dudas respecto de la aplicación de lo aquí establecido.
+
+
+Unidades de Negocio
+   Aplicar la presente Especificación Técnica en lo que respecta a su área de
+    competencia.
+
+
+
+7     DESARROLLO
+
+
+7.1   CONSIDERACIONES GENERALES
+
+Todos los trabajos se deberán realizar con los más altos niveles de calidad, seguridad
+e higiene, respetando las reglas del buen arte.
+
+
+Se deben considerar los conceptos de clasificación de área, distancias de seguridad,
+instalaciones APE y certificaciones de equipos AtEx.
+
+
+Emplear e instalar materiales, cañerías y accesorios según lo indicado en el Plano Tipo
+SCE-ME-106-0013 y el Plano Tipo SCE-ME-106-0014.
+                                                             CÓDIGO     SCE-ME-501-0001
+                           ESPECIFICACIÓN                    REVISIÓN         00
+                              TÉCNICA
+                                                              HOJA          6 de 15
+
+7.2    CLASIFICACIONES   DE            ALIMENTACIÓN         ELÉCTRICA,        SEÑALES
+       ELÉCTRICAS Y ÁREAS
+
+7.2.1 CLASIFICACIÓN DE ALIMENTACIÓN Y SEÑALES ELÉCTRICAS
+
+Las canalizaciones eléctricas de distinto tipo, destinadas a la alimentación de equipos,
+señales de instrumentación y transmisión de datos, se tenderán por conductos
+independientes entre gabinete de RTU, gabinete de alimentación e instrumentos de
+campo, pasando por las respectivas cajas de unión JB.
+
+
+     Alimentación Eléctrica Vca
+      Alimentación eléctrica alterna proveniente de la red de distribución de energía
+      eléctrica en 220Vca y 50Hz.
+
+
+     Alimentación Eléctrica Vcc
+      Alimentación eléctrica continua que proviene de paneles solares, fuentes
+      rectificadoras, fuentes de regulación y/o baterías con niveles de tensión de 5Vcc,
+      12Vcc y/o 24Vcc dependiendo las características de los equipos que alimentan.
+.
+     Señales Analógicas – A
+      Transmisión de señales analógicas variable de tensión comprendida entre 0 y
+      15Vcc, corriente entre 0 y 50mA que formen lazos de sensores, transmisores,
+      termocuplas, termo resistencias y controladores.
+
+
+     Señales Digitales – D
+      Transmisión de señales discretas de tensión 0 o 24Vcc destinados a detectores e
+      interruptores, alarmas e indicaciones varias.
+
+
+     Señales Comando - C
+      Transmisión de señales de comando de tensión 0 o 24Vcc para activación de
+      válvulas solenoide y actuadores.
+
+
+     Señales Varias - V
+      Transmisión de alimentación eléctrica y señales múltiples comprendiendo las
+      mencionadas anteriormente que se podrán reunir en un único cable multipar para
+      simplificar las canalizaciones de los transmisores multivariables, RTU y medidores
+      ultrasónicos, que poseen una única acometida para su conexionado.
+                                                             CÓDIGO    SCE-ME-501-0001
+                         ESPECIFICACIÓN                     REVISIÓN         00
+                            TÉCNICA
+                                                              HOJA         7 de 15
+
+7.2.2 CLASIFICACIÓN DE ÁREAS
+
+Se seguirán los lineamientos de la norma argentina IRAM-IEC 60079-10-1 (Atmósferas
+explosivas. Parte 10-1-Clasificación de áreas. Atmósferas gaseosas explosivas)
+basada en la norma europea IEC-60079-10-1 con el mismo tipo de clasificación. Se
+identifican y clasifican las áreas peligrosas, en las cuales se ubican las instalaciones
+eléctricas en Clases, Divisiones y Grupos.
+
+Será de aplicación válida la norma americana NEC-NFPA-API-RP 500. La principal
+diferencia radica en que esta norma define la clasificación en Clases, Zonas y Grupos.
+Se expondrá entre paréntesis, en las siguientes definiciones de clasificación, la
+mencionada diferencia y equivalencia.
+
+   Clase I, División 1 (Clase I, Zonas 0-1)
+   Sitios donde las concentraciones de gases, vapores o líquidos volátiles inflamables
+   están presentes en forma continua, pueden existir bajo condiciones normales de
+   operación o con frecuencia debido a reparaciones o tareas de mantenimiento y
+   averías que produzcan pérdidas.
+
+   Clase I, División 2 (Clase I, Zona 2)
+   Sitios donde existen gases, líquidos volátiles o vapores inflamables que
+   normalmente están confinados dentro de cañerías o recipientes cerrados, las
+   concentraciones inflamables son poco probables durante la operación normal y se
+   previenen mediante ventilación forzada o lugares contiguos a sitios de Clase I,
+   División 1 (Clase I, Zonas 0-1) donde las concentraciones                inflamables
+   esporádicamente pueden llegar durante cortos periodos.
+
+Se entiende que el riesgo es función de la masa liberada, densidad del producto y
+persistencia en la atmósfera.
+
+Respecto al campo perteneciente al Grupo, independientemente a la norma, aplica el
+Grupo IIA para las instalaciones de la presente Especificación Técnica que abarca
+gases y vapores de hidrocarburos y aromáticos (gas natural, gas licuado de petróleo,
+gasolinas, naftas, metanol, etc.).
+                                                           CÓDIGO     SCE-ME-501-0001
+                         ESPECIFICACIÓN                    REVISIÓN         00
+                            TÉCNICA
+                                                            HOJA          8 de 15
+
+7.3   MÉTODOS DE PROTECCIÓN DE EQUIPOS E INSTALACIONES
+
+Se deberán aplicar y considerar los siguientes métodos en equipos e instalaciones para
+resguardar la seguridad.
+
+
+
+7.3.1 ASPECTOS CONSTRUCTIVOS
+
+En las plantas y estaciones de La Distribuidora, todas las instalaciones eléctricas
+(equipos, instrumentos, dispositivos y cableados de alimentación, datos y señales de
+instrumentación) ubicadas dentro de las áreas clasificadas como División 1 (Zonas 0-1)
+emplearán los siguientes tipos de protección:
+   A prueba de explosión (d).
+   Seguridad intrínseca (i).
+   Presurizado y purgado (p).
+
+En División 2 (Zona 2) además de los métodos anteriores, se aceptarán los siguientes:
+   Encapsulado (m).
+   Relleno de polvo (q).
+   Inmersión en aceite (o).
+   Seguridad aumentada (e).
+
+En general las instalaciones de La Distribuidora donde se miden, controlan y
+almacenan gases inflamables deberán aplicar simultáneamente las protecciones (d) +
+(i) para instrumentación (señales y control) y protección (d) para alimentación
+(comandos, iluminación y fuerza motriz).
+
+
+7.3.1.1 A Prueba de Explosión (d)
+
+Son equipos que ofrecen la capacidad de resistir una explosión de gas o vapor que se
+espera puede ocurrir en su interior, prevenir la ignición de mezcla explosiva externa
+debido al escape de chispas, llama o gases de combustión calientes, operar a una
+temperatura externa que no encienda la mezcla explosiva circundante.
+
+La capacidad de resistencia del equipo depende del material, diseño, espesor y
+elementos de fijación. Los equipos antiexplosivos APE deben estar certificados
+                                                                CÓDIGO     SCE-ME-501-0001
+                           ESPECIFICACIÓN                       REVISIÓN          00
+                              TÉCNICA
+                                                                 HOJA           9 de 15
+
+mediante aprobación de ensayos y pruebas realizadas por un organismo reconocido
+como INTI, UL, FM o CSA.
+
+Las instalaciones APE emplearán Caño Conduit Sch. 80 sin rebabas internas y
+accesorios de HG con rosca NPT diseñados y construidos específicamente para ser
+antiexplosivos.
+
+
+
+7.3.1.2 Seguridad Intrínseca (SI) (i)
+
+Un circuito intrínsecamente seguro es incapaz de provocar el encendido de una mezcla
+explosiva, debido a la limitación de la energía eléctrica en condiciones normales y
+defectuosas.
+
+El circuito de SI está integrado por barreras, cableado y dispositivos de campo. Las
+Barreras SI (BSI) encargadas de limitar la energía en el área clasificada, deben estar
+instaladas en área segura y los cableados deben respetar los parámetros (longitud,
+capacidad e inductancia) establecidos en las BSI. Los instrumentos y actuadores deben
+ser intrínsecamente seguros para minimizar la energía acumulada en campos
+magnéticos y eléctricos.
+
+Las condiciones de falla son: cortocircuito, circuito abierto y sobretensión.
+
+La categoría (ia) de BSI tolera la ocurrencia de hasta dos fallas de sus componentes,
+sin degradar la condición de limitación de energía eléctrica.
+
+
+
+7.3.2 DISTANCIAS DE SEGURIDAD
+
+Como regla general se debe respetar la norma IRAM-IEC 60079-10-1 que establece las
+siguientes distancias de seguridad para limitar las áreas peligrosas de una fuente de
+gas inflamable localizada en espacio abierto exterior a nivel:
+   Límite División 1 (Zonas 0-1): radio R1 = 1,5m.
+   Límite División 2 (Zonas 2): radio R2 = 5m.
+
+Deberá tenerse en cuenta que toda instalación de superficie de La Distribuidora se
+realizará respetando lo establecido en la Norma NAG148 y sus consideraciones para
+aumentar la seguridad.
+                                                           CÓDIGO     SCE-ME-501-0001
+                         ESPECIFICACIÓN                    REVISIÓN         00
+                            TÉCNICA
+                                                              HOJA       10 de 15
+
+7.3.3 CONSIDERACIONES
+
+Deberán considerarse los siguientes requerimientos de construcción y desempeño que
+deben ser tenidos en cuenta al momento de seleccionar equipos y/o realizar
+instalaciones, aparte de los métodos de protección para atmósferas explosivas citados.
+   Aislación y separación de señales.
+   Protección de descargas atmosféricas y electrostáticas.
+   Eliminación de lazos de tierra.
+   Calificación de cerramientos.
+   Identificación y señalización de equipos y componentes.
+
+
+
+
+7.4   CANALIZACIONES ELÉCTRICAS
+
+Toda cañería soterrada será realizada según Plano Tipo SCE-ME-106-0014 y
+canalizaciones aéreas según Plano Tipo SCE-ME-106-0013.
+
+Tanto para canalizaciones enterradas, canalizaciones aéreas o bandejas portacables,
+deberá considerarse la agrupación de señales y alimentación (definidas en 7.4.1)
+según los siguientes niveles:
+   Nivel 1: Señales analógicas A, discretas D y señales varias V.
+   Nivel 2: Señales de comando C y alimentación Vcc.
+   Nivel 3: Alimentación Vca y puesta a tierra PAT.
+
+Los cables para transmisión de datos (comunicaciones) y circuitos de seguridad
+intrínseca podrán compartir el Nivel 1.
+
+Deberán tenderse cañeros o bandejas independientes para cada Nivel de señal y
+alimentación. La distancia mínima de separación entre dichas canalizaciones será de
+100mm.
+                                                            CÓDIGO    SCE-ME-501-0001
+                         ESPECIFICACIÓN                    REVISIÓN         00
+                            TÉCNICA
+                                                             HOJA         11 de 15
+
+7.4.1 CANALIZACIONES ENTERRADAS
+
+Cañeros
+
+Para las canalizaciones enterradas en zona clasificada se utilizará Caño Conduit Sch.
+80 de acero galvanizado. Se tenderán cubiertos de Hormigón H8.
+
+En zona segura, las canalizaciones enterradas podrán utilizar caños de PVC reforzado
+cubiertos con arena y una hilera de ladrillos para protección.
+
+La tapada mínima de los caños en ambos casos será de 650mm antes de proceder a
+tapar el resto de la zanja con tierra compactada. Deberá tener una malla de advertencia
+color rojo o amarillo en la parte superior.
+
+El ancho mínimo de la zanja para tender un cañero será de 450mm.
+
+Los diámetros mínimos para cañerías enterradas serán de 1". La cantidad de caños y
+diámetro se determinará según necesidad. El espacio de ocupación de los cables no
+podrá superar el 30% de la sección del caño.
+
+Los caños se instalarán con pendiente hacia las cámaras para el drenaje de agua,
+donde se conectarán a la PAT de planta mediante boquillas con tornillo y cable
+desnudo.
+
+
+Cámaras de Paso
+
+Según el trazado del cañero, cada 20 a 50m se instalarán cámaras de paso enterradas
+cuyas medidas mínimas serán de 0,60x0,60x0,80m. Deberán construirse con Hormigón
+H21 disponiendo de piedra partida en el fondo para favorecer el drenaje de agua.
+
+Las cámaras llevarán tapas de chapa de hierro antideslizante de 3/16" de espesor con
+refuerzos y manijas pasantes de 100x50mm en el centro de hierro ø8mm. La chapa
+estará plegada en sus bordes.
+
+Las acometidas de los caños a las cámaras terminarán en planchuelas hechas en
+chapa de hierro lisa de 3/16" de espesor con perforaciones que guarden distancias
+apropiadas para separar los diferentes caños según la necesidad.
+                                                              CÓDIGO     SCE-ME-501-0001
+                          ESPECIFICACIÓN                     REVISIÓN          00
+                             TÉCNICA
+                                                                  HOJA      12 de 15
+
+Los caños Conduit de áreas clasificadas llevarán selladores en la cámara a la cual
+acometan.
+
+Cuando se utilicen selladores, la separación de los caños será mayor que la requerida
+por los niveles de señal, para permitir maniobrar las herramientas durante el enroscado
+y desenroscado de los mismos.
+
+Cuando las cámaras estén ubicadas en zonas donde circulen vehículos, se instalarán
+corrales de señalización construidos con pedestales y cadenas metálicas pintadas de
+amarillo y negro (franjas).
+
+
+
+7.4.2 CANALIZACIONES AÉREAS
+
+Las canalizaciones APE aéreas se realizarán con Caño Conduit Sch. 80, Flexible
+Conduit, selladores, uniones dobles, condulets, cajas y accesorios APE que faciliten el
+montaje de las instalaciones y posterior tendido de los cables.
+
+Para la distancia de separación entre caños que acometen a una caja JB se deberá
+considerar el espacio requerido para acceder libremente a las uniones dobles utilizando
+herramientas de mano. El diámetro mínimo será de 1" para Caño y 1/2” para Flexible.
+
+Los soportes de las cajas JB deben conectarse a PAT mediante bulonería de bronce.
+
+Las cajas JB se pintarán color azul y las cañerías y accesorios rígidos color negro.
+
+Los soportes de las cajas e instrumentos se pintarán color verde inglés.
+
+Las cajas APE construidas en fundición de aluminio, estarán provistas de borneras
+montadas sobre riel DIN con tornillos adecuados para soportar terminales aptos para la
+sección de los conductores utilizados y en cantidad suficiente su conexión, tanto
+individuales como del multipar, contemplando un 20% de reserva sin cablear para
+futuras ampliaciones.
+
+Las dimensiones mínimas de las cajas serán 200x300x150mm.
+                                                            CÓDIGO    SCE-ME-501-0001
+                         ESPECIFICACIÓN                    REVISIÓN         00
+                            TÉCNICA
+                                                             HOJA         13 de 15
+
+Las cajas dispondrán de orificios roscados NPT en cantidad y diámetro suficiente para
+satisfacer las necesidades de conexión, más los de reserva con tapón para futuras
+ampliaciones.
+
+En áreas seguras las canalizaciones podrán realizarse utilizando Caño Plástico
+Reforzado de PVC y accesorios estancos para operar en intemperie con grado de
+protección IP54 mínimo.
+
+
+
+7.4.3 BANDEJAS PORTACABLES
+
+Bajo el techo de casetas y salas podrán utilizarse bandejas portacables perimetrales en
+formaciones separadas según los niveles de señales.
+
+Las bandejas portacables deberán ser del tipo perforadas construidas con chapa
+galvanizada de al menos 1,6mm de espesor o del tipo escalera. Las medidas mínimas
+serán 150x50mm.
+
+Una vez tendidos los cables se fijaran con precintos a las bandejas. Los tramos de
+bandejas expuestos a la intemperie deberán llevar tapas ciegas.
+
+El montaje de las bandejas asegurará una buena continuidad eléctrica para conectarlas
+a PAT en forma efectiva.
+
+
+
+7.4.4 CONDUCTORES ELÉCTRICOS Y PROTECCIONES
+
+Todos los conductores utilizados serán fabricados de acuerdo a las normas IRAM-
+IECASTM-VDE-BS-NEC-ANSI en vigencia.
+
+Los cables llevarán impreso en su vaina externa, como mínimo la identificación de la
+norma de fabricación, el grado de aislación y la temperatura de servicio.
+
+Los materiales seleccionados para su construcción deberán ser inmunes a los
+hidrocarburos, vapor de agua, monoetalonamina, glicoles, agua salada y aceites
+lubricantes.
+
+El material de la cubierta de protección será autoextinguible. Además los cables serán
+aptos para trabajo continuo en ambientes con 100% de humedad.
+                                                             CÓDIGO    SCE-ME-501-0001
+                         ESPECIFICACIÓN                     REVISIÓN         00
+                            TÉCNICA
+                                                              HOJA         14 de 15
+
+
+
+Los cables serán arrollados sobre carretes, en una sola pieza sin empalmes ni
+añadiduras tanto en los conductores y blindajes como en la aislación. Los carretes
+deberán resistir el transporte y manipulación desde la fábrica hasta el sitio de
+instalación en obra.
+
+Cada carrete deberá llevar una etiqueta indicando el nombre del fabricante, tipo de
+cable, formación y longitud, peso del cable y del carrete, número del carrete, número de
+orden de compra.
+
+El fabricante deberá indicar todas las características de los cables a proveer,
+incluyendo entre otras el radio de curvatura mínimo, diámetro exterior nominal,
+espesores de aislación, capacidad e inductancia específica, tensión de aislación y
+grado de inmunidad a las interferencias.
+
+Todos los extremos de los cables dispondrán de terminales de compresión del tipo pin
+para insertar.
+
+Dependiendo el tipo de señal, la selección de cables se realizará respetando los
+siguientes lineamientos:
+
+   Alimentación eléctrica 220Vca
+  Deberán utilizarse cables diseñados para distribución de energía en baja tensión en
+  edificios e instalaciones industriales, en tendidos subterráneos o sobre bandejas.
+  Especialmente aptos para instalaciones en industrias y empleos donde se requiera
+  amplia maniobrabilidad y seguridad ante la propagación de incendios según IRAM
+  2178 de dimensión mínima de 4mm2 de sección. Se deberá disponer de dispositivos
+  de protección disyuntor diferencial y llave termomagnética dimensionado acorde al
+  consumo total de la instalación.
+
+
+   Alimentación eléctrica 24Vcc
+  Todas las conexiones de alimentación provenientes de rectificador, panel solar y/o
+  batería se realizarán con cable unipolar 1,3mm 2 de sección. La acometida de 24Vcc
+  se conecta a un interruptor termomagnético general de 6A. En la salida de la
+  alimentación general saldrán cada par de cables para alimentación individual para
+  cada equipo con interruptor termomagnético correctamente dimensionado para tal
+  fin.
+                                                              CÓDIGO     SCE-ME-501-0001
+                           ESPECIFICACIÓN                     REVISIÓN         00
+                              TÉCNICA
+                                                               HOJA          15 de 15
+
+     Señales Analógicas, Digitales y Varias – A, D y V
+    El cable a utilizar para el conexionado de señales será del tipo par simple o multipar
+    retorcido de sección mínima 0,8mm2 (de uso típico en computación). Dispondrán de
+    mallas de blindaje individual (no necesariamente para señales D) por cada par o
+    terna más un blindaje general para todo el cable multipar. Se debe conectar al
+    sistema PAT Instrumento únicamente en un extremo del blindaje de modo de evitar
+    atraer señales de ruido y corrientes parásitas. Estas señales dispondrán de BSI
+    bipolares con fusible incorporado de 80mA.
+
+
+     Señales Comando – C
+    Estos circuitos emplean cables de instrumentación sin blindaje y sin protección
+    externa, con pares retorcidos de 1,3mm2 de sección. Estas señales se deben
+    proteger con fusible de 1A.
+
+     Puesta a tierra
+    Para las conexiones internas en gabinetes se usará cable aislado verde-amarillo de
+    1,3mm2 de sección. Las conexiones a las barras se efectuarán con terminales de
+    compresión individuales no apilables, asegurados con tornillos, vinculados al PAT
+    que corresponda según Procedimiento SCE-PC-305-0001 y Plano Tipo SCE-PC-
+    105-0003.
+
+
+
+
+8    REGISTRO Y ARCHIVO
+
+No corresponde.
+
+
+
+9    ANEXOS
+
+No corresponde.
+

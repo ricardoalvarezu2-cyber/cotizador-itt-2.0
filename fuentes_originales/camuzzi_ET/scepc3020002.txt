@@ -1,0 +1,752 @@
+                                                                                         SCE-PC-302-
+                                                                           CÓDIGO:
+                                                                                            0002
+                                 PROCEDIMIENTO                            REVISIÓN:            0
+
+                                                                            HOJA:           1 de 19
+
+
+                                                                            FECHA           FECHA
+                                                                          APROBACION       VIGENCIA
+           PROCESO                    OPERACIÓN DE LA RED
+                                                                            05/08/19        05/08/19
+
+                                                                              LIDER DEL PROCESO
+                                 Inspección y Control de Equipos de
+              TEMA
+                              Protección Catódica por Corriente Impresa
+                                                                                Guillermo Montag
+
+                                                                                APROBADO POR:
+     ANULA/REEMPLAZA                          I OR-005
+                                                                               Alejandro Lorenzo
+
+
+                                         MODIFICACIONES
+  Nº de          FECHA
+                                                  MOTIVO DE LA MODIFICACIÓN
+REVISIÓN        REVISION
+
+
+
+
+AREAS INVOLUCRADAS:
+
+                       Todas las áreas Técnicas de las Unidades Operativas.
+
+
+
+OBSERVACIONES:
+
+
+
+
+Archivo Informático:
+                                                                                                           CÓDIGO             SCE-PC-302-0002
+
+                                        PROCEDIMIENTO                                                     REVISIÓN                        0
+
+                                                                                                             HOJA                    2 de 19
+
+
+INDICE
+                                                                                                                                                 Página
+1    OBJETO ............................................................................................................................................3
+2    DOCUMENTACION COMPLEMENTARIA Y/O DE REFERENCIA .................................................3
+3    DEFINICIONES ................................................................................................................................3
+  3.1 GLOSARIO .....................................................................................................................................3
+  3.2 FRECUENCIA DE LA RUTINA DE INSPECCIÓN Y CONTROL ..................................................................3
+  3.3 EQUIPOS RECTIFICADORES ............................................................................................................4
+  3.4 TERMOGENERADOR .......................................................................................................................4
+  3.5 PUNTOS REPRESENTATIVOS ...........................................................................................................5
+  3.6 CARACTERÍSTICAS DEL SHUNT........................................................................................................5
+  3.7 BUDI ............................................................................................................................................6
+4    RESPONSABILIDADES ...................................................................................................................6
+  4.1 TÉCNICO DE PROTECCIÓN CATÓDICA DE LA UNIDAD OPERATIVA ......................................................6
+5    DESARROLLO .................................................................................................................................7
+  5.1 ELEMENTOS NECESARIOS GENERALES ...........................................................................................7
+  5.2 EQUIPOS RECTIFICADORES ............................................................................................................7
+  5.3 TERMOGENERADORES..................................................................................................................10
+  5.4 MEDICIÓN DEL POTENCIAL CAÑO-SUELO.......................................................................................15
+  5.5 OTRAS MEDICIONES .....................................................................................................................16
+6    REGISTRO Y ARCHIVO ................................................................................................................16
+7    ANEXOS .........................................................................................................................................17
+  7.1 ANEXO 1 – CARGA DE MEDICIONES DE RECTIFICADORES EN LA BUDI .............................................17
+  7.2 ANEXO 2 – CARGA DE MEDICIONES DE TERMOGENERADORES EN LA BUDI ......................................19
+                                                           CÓDIGO    SCE-PC-302-0002
+
+                      PROCEDIMIENTO                       REVISIÓN           0
+
+                                                            HOJA           3 de 19
+
+
+1     OBJETO
+
+El presente procedimiento establece la forma en que se debe realizar la Inspección y
+el Control de los Equipos de Corriente Impresa del Sistema de Protección Catódica.
+Se incluyen rectificadores y termogeneradores.
+
+2     DOCUMENTACION COMPLEMENTARIA Y/O DE REFERENCIA
+
+Norma Nacional NAG –100.
+
+Resolución del ENARGAS N° 1192.
+
+I OR – 002: Glosario de Términos y Símbolos de Protección Anticorrosiva.
+
+SCE-PC-311-0005: Relevamiento de potenciales de protección catódica.
+
+Manuales de Operación de los diferentes Equipos.
+
+
+3     DEFINICIONES
+
+
+3.1    Glosario
+
+En el documento I OR – 002 se incluye un listado de términos y símbolos
+comúnmente utilizados en la redacción de los Documentos de Protección
+Anticorrosiva
+
+
+3.2    Frecuencia de la Rutina de Inspección y Control
+
+Las inspecciones a los equipos de protección catódica deberán realizarse tantas
+veces como sea necesario para asegurar un nivel de protección catódica adecuado a
+la estructura enterrada.
+
+No obstante, de acuerdo a lo establecido en las Normas vigentes, las inspecciones de
+los equipos se deben realizar cada dos (2) meses calendario (con un máximo de 2 ½
+meses entre dos inspecciones consecutivas) independientemente del nivel de
+protección.
+                                                              CÓDIGO     SCE-PC-302-0002
+
+                       PROCEDIMIENTO                          REVISIÓN          0
+
+                                                               HOJA          4 de 19
+
+
+3.3   Equipos Rectificadores
+
+Son fuentes de corriente continua que se utilizan para los sistemas de protección
+catódica por corriente impresa. Básicamente reducen, rectifican y estabilizan la
+corriente alterna de línea para generar la corriente de protección.
+
+
+3.4   Termogenerador
+
+Un termogenerador (o generador termoeléctrico) convierte directamente calor en
+electricidad. El calor induce la circulación de una corriente eléctrica al fluir desde el
+quemador de gas a través del módulo termoeléctrico.
+
+En la figura a continuación se muestra el esquema de un termogenerador.
+
+
+
+
+El corazón del termogenerador es el módulo termoeléctrico sellado (termopila) que
+contiene un conjunto de elementos semiconductores. Este módulo extremadamente
+durable provee un medio químicamente estable a los elementos termoeléctricos
+asegurando una larga vida de servicio. De un lado de la termopila se instala un
+quemador de gas, mientras que el otro lado se refrigera mediante un disipador de
+aluminio aleteado o un sistema de tubos refrigerantes. Mientras está funcionando, el
+generador se mantiene una temperatura de aproximadamente 540 °C en el lado
+caliente y 140 °C en el lado frío. El flujo de calor a través de la termopila genera
+electricidad (corriente continua) en forma estable y sin partes móviles.
+                                                              CÓDIGO     SCE-PC-302-0002
+
+                      PROCEDIMIENTO                           REVISIÓN          0
+
+                                                               HOJA          5 de 19
+
+
+3.5   Puntos representativos
+
+Se define a los puntos representativos de un equipo de protección catódica a aquellas
+tomas de potencial, pertenecientes a la estructura protegida por el equipo en cuestión,
+y que son las más desfavorables de la zona de cobertura del mismo.
+
+Generalmente, éstos están incluidos en el listado de puntos que se mide anualmente
+en el relevamiento de potenciales. La medición periódica de los puntos
+representativos permite un control adecuado de la inyección de corriente a la
+estructura, evitando de esta manera la sub o la sobreprotección de la misma.
+
+La cantidad y ubicación de puntos representativos para cada equipo será definida por
+el Técnico de Protección Catódica. Quién realice la inspección y control de equipos de
+protección catódica deberá llevar también el listado de puntos representativos de cada
+equipo y relevar los mismos.
+
+
+3.6   Características del Shunt
+
+Los shunt son resistencias de un valor conocido y estable que permite medir
+indirectamente la corriente que circula por el circuito. Como la caída de tensión es
+proporcional a la corriente, se mide en bornes del shunt esta caída y mediante una
+relación mV/A se obtiene intensidad de corriente circulante.
+
+Los shunts tienen distintas relaciones mV/A, siendo las siguientes las más comunes:
+
+                                  Relación del Shunt
+
+                         100 mV - 100 A        30 mV - 30 A
+                          50 mV - 50 A         30 mV - 15 A
+                          50 mV - 30 A         15 mV - 15 A
+                          50 mV - 15 A
+
+
+La relación (mV/A) correspondiente a cada shunt, está grabada en una de sus caras.
+Tomando el primero, 100 mV-100 A, si se miden 100 mV en el shunt, la corriente que
+lo circula es de 100 A.
+
+
+
+                                  Tensión   Corriente
+                                  100 mV     100 A
+                                   80 mV      80 A
+                                   25 mV      25 A
+                                                            CÓDIGO     SCE-PC-302-0002
+
+                      PROCEDIMIENTO                         REVISIÓN          0
+
+                                                                HOJA       6 de 19
+
+
+
+
+Esto significa que por cada milivolt medido, en bornes del Shunt, indica que circula
+por el mismo una corriente de 1 A
+
+Sin embargo, esta relación se modifica cuando se cambia la clase del shunt. Se
+puede establecer un coeficiente de calibración aplicable a cada uno de ellos:
+
+                                                       Ampere
+                        Coeficiente de calibración =
+                                                        Volt
+
+Por lo tanto:
+
+                  Relación del Shunt              Coeficiente
+                   100 mV – 100 A                      1
+                     50 mV – 50 A                      1
+                     50 mV – 30 A                    0,6
+                     50 mV – 15 A                    0,3
+                     30 mV – 30 A                      1
+                     30 mV – 15 A                    0,5
+                     15 mV – 15 A                      1
+
+Este coeficiente multiplicado por la tensión medida en el shunt da como resultado la
+corriente circulante por el mismo.
+
+El shunt siempre está ubicado en un punto accesible para facilitar la medición,
+normalmente sobre el tablero frontal del equipo rectificador o en el tablero de
+protección catódica del termogenerador.
+
+
+3.7   BUDI
+
+BUDI es la abreviatura de Base Unificada de Instalaciones. Es un programa, que tiene
+asociada una base de datos, en la cual se guardan los datos de los elementos de
+protección catódica y las mediciones realizadas en los mismos, además de otra
+información relacionada con las cañerías, instalaciones de superficie, etc.
+
+4     RESPONSABILIDADES
+
+
+4.1   Técnico de Protección Catódica de la Unidad Operativa
+
+Es responsable de que los trabajos sean ejecutados de acuerdo a lo establecido en el
+presente procedimiento, así como de ingresar las mediciones en la BUDI y mantener un
+archivo de los equipos de protección catódica de corriente impresa.
+                                                             CÓDIGO     SCE-PC-302-0002
+
+                       PROCEDIMIENTO                         REVISIÓN          0
+
+                                                               HOJA         7 de 19
+
+
+
+
+5     DESARROLLO
+
+
+5.1    Elementos Necesarios Generales
+
+1 - Un Multímetro
+2 - Un Electrodo de Referencia de Cu/So4Cu
+3 - 10 metros de cable 1 x 2 mm2
+4 – Herramientas manuales
+
+
+5.2   Equipos Rectificadores
+
+5.2.1 COMPROBACIÓN DEL INSTRUMENTAL INSTALADO
+
+Todos los Equipos Rectificadores tienen dos instrumentos de corriente continua, un
+Voltímetro y un Amperímetro. La primera tarea del Técnico de Protección Catódica
+consiste en comprobar el correcto funcionamiento de los mismos.
+
+5.2.1.1 Verificación del Voltímetro
+
+El voltímetro está conectado en la salida de corriente continua del equipo Rectificador.
+En algunos casos, debido a la acción del viento, polvo, humedad ambiente ó
+antigüedad del instrumento, la lectura puede ser errónea.
+
+             Esquema de conexión para la verificación del voltímetro
+                                                              CÓDIGO     SCE-PC-302-0002
+
+                       PROCEDIMIENTO                          REVISIÓN          0
+
+                                                               HOJA          8 de 19
+
+
+
+
+El Técnico de Protección Catódica debe controlarlo colocando la perilla de selección
+del multímetro en tensión de corriente continua y conectando las puntas de prueba del
+mismo en la salida del equipo Rectificador. La lectura de tensión debe ser igual a la
+del instrumento fijo con una tolerancia de hasta el doble de la Clase del Instrumento
+fijo instalado en la Unidad.
+
+Si el error fuera mayor, se deberá calibrar el Instrumento fijo. En la parte inferior del
+cuadrante del mismo, hay un pequeño tornillo que al girarlo modifica la posición de la
+aguja.
+
+Con el equipo apagado el Técnico debe hacer coincidir la misma con el cero de la
+escala.
+
+Luego debe encender el equipo y comparar las lecturas (voltímetro/multímetro), si el
+error persiste se deberá cambiar el instrumento, a cuyo efecto deberá indicarse esta
+anomalía cuando se carga la medición en la BUDI.
+
+Los valores para registrar, en ese caso, se relevarán con el instrumento portátil a
+efecto de completar los datos previstos en la BUDI, hasta el cambio del instrumento.
+
+5.2.1.2 Verificación del Amperímetro
+
+                                Esquema de Conexión
+                                                              CÓDIGO     SCE-PC-302-0002
+
+                      PROCEDIMIENTO                          REVISIÓN           0
+
+                                                               HOJA          9 de 19
+
+
+El Amperímetro, igual que el Voltímetro, puede deteriorarse con el paso del tiempo ó
+por la acción de agentes como el polvo y la humedad, esto hace a la necesidad de
+comprobar su funcionamiento en cada inspección mensual.
+Este instrumento va conectado en paralelo al shunt.
+El Amperímetro debe tener características compatibles con el Shunt al que se lo va a
+conectar. El valor máximo de la escala del instrumento (Amper), corresponde al valor
+máximo de la diferencia de potencial del shunt multiplicado por el coeficiente de
+calibración.
+
+Para comprobar el funcionamiento del Amperímetro, el Técnico de Protección
+Catódica debe seguir los siguientes pasos:
+
+  1 - Ubica el shunt y lee la relación mV/A, y calcula el coeficiente de calibración.
+  2 - Selecciona en el multímetro la escala de milivolts (mV) de corriente continua.
+  3 - A continuación, debe medir la tensión en el shunt.
+  4 - Multiplicar la tensión por el coeficiente de calibración.
+
+El valor resultante debe ser igual al indicado en el Amperímetro con una tolerancia de
+hasta el doble de su Clase. Si el desvío fuese mayor se debe calibrar el instrumento
+de la misma forma que se indica para el voltímetro. Si el error persiste se debe
+reemplazar el instrumento. En este último caso, el valor registrado en el Anexo 1 es el
+obtenido del producto de la tensión del shunt medida con el multímetro en milivolts por
+el coeficiente de calibración.
+
+5.2.1.3 Instrumentos digitales
+
+En el caso de que el voltímetro, amperímetro o ambos sean digitales y se verifique
+que no están midiendo correctamente, el Técnico de Protección Catódica deberá
+prever de instalar un equipo alternativo y enviar a reparación el equipo defectuoso.
+
+5.2.2 OTRAS COMPROBACIONES
+
+5.2.2.1 Potencia y Eficiencia
+
+Otro punto importante es el consumo del rectificador y verificar la eficiencia del
+mismo.
+
+En la planilla de carga de la BUDI se deberá indicar la lectura del medidor de energía
+eléctrica que posee el equipo.
+
+Para calcular la eficiencia del rectificador se debe determinar el tiempo T (en
+segundos) que tarda el disco del medidor eléctrico en dar una cantidad N de vueltas.
+                                                               CÓDIGO    SCE-PC-302-0002
+
+                        PROCEDIMIENTO                         REVISIÓN          0
+
+                                                                HOJA        10 de 19
+
+
+Luego conociendo la constante del medidor se puede calcular la potencia consumida
+(en Watt) a través de la siguiente fórmula:
+
+                  3600 × N × K
+             P=                                                           [1]
+                       T
+
+Luego, para conocer la eficiencia del equipo se utiliza la fórmula:
+
+                        I× V
+             EF [%] =        × 100                                        [2]
+                         P
+
+Siendo V e I la tensión y la corriente medidas a la salida del rectificador y P la
+potencia calculada por la fórmula [1].
+
+5.2.2.2 Regulación
+
+Otra información importante, en especial para los equipos manuales, es la regulación
+a la cual están trabajando los mismos; se deberá consignar la regulación gruesa y fina
+en la que está trabajando el equipo en el momento de la inspección y estos datos
+deben indicarse en el campo “Comentarios”.
+
+En el caso de los rectificadores automáticos, en general sólo hay tres o cinco
+posiciones de regulación gruesa (dependiendo del modelo del equipo), al sólo efecto
+de corregir el cos ϕ del equipo y evitar multas por parte las empresas de energía
+eléctrica.
+
+
+5.3   Termogeneradores
+
+5.3.1 ELEMENTOS NECESARIOS PARTICULARES
+
+ 1 - Termómetro para medir Temperatura Ambiente
+ 2 - Anemómetro
+
+5.3.2 CARACTERÍSTICAS TÉCNICAS
+
+Las características eléctricas de salida típicas de un termogenerador sin el
+acondicionador de potencia se muestran en el gráfico 5.3.2.1. En él se pueden
+observar las variaciones de potencia (W), tensión (V) y corriente (A) en función de la
+resistencia de carga (Ohm, ). Por ejemplo para una resistencia de carga de 1,25
+Ohm, la tensión de salida es de 27 V, la corriente de 21 A y la potencia de 580 W.
+                                                             CÓDIGO    SCE-PC-302-0002
+
+                      PROCEDIMIENTO                         REVISIÓN          0
+
+                                                              HOJA         11 de 19
+
+
+
+
+                                    Gráfico 5.3.2.1
+
+El equipo posee un acondicionador de potencia para evitar una elevación de tensión
+debido a un aumento de la resistencia de carga.
+
+La alimentación de gas natural al termogenerador se hace desde el gasoducto, ramal
+o red al que se conecte. Como la presión de entrada nominal de equipo (2,1-17.5
+kg/cm2) es menor a la de operación de la cañería, se debe instalar una reguladora de
+presión (ERP) para acondicionarla a los valores admitidos.
+
+5.3.3 COMPROBACIÓN DEL INSTRUMENTAL DE MEDICIÓN
+
+El termogenerador viene provisto con una interface de Protección Catódica (PC) la
+cual sirve para ajustar y supervisar la alimentación de potencia a la carga de PC. En
+dicho sistema está montado un instrumento de corriente continua que permite medir la
+tensión y la corriente de salida mediante un pulsador que alterna las mediciones.
+
+En la figura 5.3.3.1 se muestra el frente de una interface de protección catódica en la
+que se puede observar la disposición de los elementos típicos. La primera tarea del
+Técnico de Protección Catódica consiste en comprobar el correcto funcionamiento de
+los mismos.
+                                                             CÓDIGO    SCE-PC-302-0002
+
+                      PROCEDIMIENTO                         REVISIÓN           0
+
+                                                              HOJA         12 de 19
+
+
+
+
+                                                                       Ajuste de cero
+
+
+
+
+                                      FIGURA 5.3.3.1
+
+5.3.3.1 Verificación del Voltímetro
+
+La tensión de salida del termogenerador a la protección catódica se mide en el
+voltímetro de la interface de PC (figura 5.3.3.1)
+
+Seguir el procedimiento del punto 5.2.1.1 para verificar el correcto funcionamiento del
+mismo.
+
+5.3.3.2 Verificación del Amperímetro
+
+La corriente de salida del termogenerador se mide en el Amperímetro de la interface
+de PC presionando el pulsador que alterna la medición Tensión/Corriente (figura
+5.3.3.1).
+
+Seguir el procedimiento del punto 5.2.1.2 para verificar el correcto funcionamiento del
+mismo.
+                                                          CÓDIGO    SCE-PC-302-0002
+
+                     PROCEDIMIENTO                       REVISIÓN          0
+
+                                                           HOJA        13 de 19
+
+
+
+
+                             Esquema de Conexión
+
+
+
+
+5.3.4 MEDICIÓN DE LA POTENCIA
+
+La potencia disponible depende del enfriamiento que a su vez depende de la
+temperatura ambiente y de la velocidad del viento. Del gráfico 7.3.4.2 se puede
+obtener la potencia de salida en función de la variación de la temperatura ambiente
+considerando un funcionamiento en aire sin viento. No se debe utilizar el equipo en
+condiciones que correspondan a puntos por encima de la curva del gráfico 7.3.4.2.
+
+
+
+
+                                  Gráfico 7.3.4.2
+                                                                     CÓDIGO          SCE-PC-302-0002
+
+                           PROCEDIMIENTO                             REVISIÓN               0
+
+                                                                       HOJA             14 de 19
+
+
+
+
+Si las condiciones del tiempo no son las de referencia se debe hacer una corrección
+de la temperatura ambiente utilizando la tabla 7.3.4.1.
+
+ Veloci-
+                                           Temperatura del Aire (ºC)
+ dad del
+  viento
+ (km/h)    -20     -15   -10   -5    0      5    10   15   20   25      30      35     40       45   50
+
+   0       -20     -15   -10   -5    0      5    10   15   20   25      30      35     40       45   50
+
+   5       -27     -21   -16   -11   -6     -1   5    10   16   21      27      32     37       42   47
+
+   10      -34     -27   -21   -15   -9     -3   2    9    13   18      24      29     35       40   46
+
+   15      -40     -32   -24   -18   -12    -6   -1   4    10   15      21      26     32       37   42
+
+   20      -41     -35   -29   -21   -14    -8   -3   2     8   13      19      24     30       35   41
+
+   25      -44     -37   -31   -23   -16   -10   -5   0     6   11      17      22     28       33   38
+
+   30      -46     -39   -33   -25   -18   -12   -7   -1    4    9      15      20     26       31   37
+
+   35      -47     -40   -34   -26   -19   -13   -8   2     3    8      14      19     25       30   36
+
+   40      -49     -42   -35   -22   -20   -14   -9   -3    2    7      13      18     24       29   35
+
+                 Tabla 7.3.4.1 – Temperatura ambiente corregida por el viento
+
+La temperatura ambiente se mide con un termómetro (°C) en la cercanía del sistema
+de refrigeración. Esta temperatura es la que se debe cargar en la BUDI.
+
+La velocidad del viento se mide con un anemómetro (km/h) en la cercanía del circuito
+de refrigeración.
+
+La temperatura corregida se obtiene de la Tabla 7.3.4.1 donde se ingresa con la
+temperatura ambiente y la velocidad del viento.
+
+La potencia de ajuste se obtiene del gráfico 7.3.4.2 ingresando con la temperatura
+ambiente corregida hasta cortar la curva y leyendo el valor de potencia en el eje de
+ordenadas.
+
+Si la potencia de salida de la unidad de potencia se encuentra a más de 10 Watts por
+sobre la potencia de ajuste, se debe reducir la presión de combustible.
+
+Si la potencia de salida de la unidad de potencia se encuentra dentro de los 10 Watts
+de la potencia de ajuste, el equipo está funcionando correctamente.
+                                                            CÓDIGO     SCE-PC-302-0002
+
+                      PROCEDIMIENTO                         REVISIÓN          0
+
+                                                             HOJA         15 de 19
+
+
+Si la potencia de salida de la unidad de potencia se encuentra a menos de 10 Watts
+por debajo de la potencia de ajuste, se deberá consultar el manual de Mantenimiento
+del Equipo para evaluar la causa.
+
+5.3.5 MEDICIÓN DE PRESIÓN DE GAS
+
+La presión de entrada a la Reguladora de Presión (ERP) se obtiene de la lectura del
+manómetro ubicado a la entrada de la ERP.
+
+La presión de salida de la Reguladora de Presión (ERP) se obtiene de la lectura del
+manómetro ubicado a la salida de la ERP.
+
+
+5.4   Medición del Potencial Caño-Suelo
+
+5.4.1 MEDICIÓN DEL POTENCIAL CAÑO-SUELO EN EL PUNTO DE INYECCIÓN
+
+En todos los casos se deberá medir el potencial caño-suelo en el punto de inyección
+del equipo relevado.
+
+El potencial se mide en el borne identificado como TP, ubicado dentro del equipo, o
+en una CMP instalada en la base de la columna sostén del mismo o cercano a él.
+
+Si el cable TP no está identificado se debe medir continuidad entre el cable conectado
+al borne negativo del Equipo Rectificador en la salida de C.C. y los terminales de la
+CMP hasta establecer continuidad con alguno de ellos. La llave de selección de rango
+del multímetro debe ubicarse en la posición de medición de resistencia (Ω) con señal
+audible, de esta forma, cada vez que haya continuidad entre los puntos medidos, el
+instrumento dará un bip de aviso.
+
+Identificado el cable catódico, la medición de los potenciales On/Off se realiza de
+acuerdo al procedimiento SCE-311-0005.
+
+El potencial OFF en el punto de inyección nunca debe ser inferior a -1.200 mV, para
+evitar la sobreprotección de la cañería con el consecuente daño al revestimiento.
+
+5.4.2 POTENCIAL CAÑO-SUELO EN PUNTOS REPRESENTATIVOS
+
+Para que el relevamiento de equipos de protección catódica y diagnóstico y solución
+de fallas sea exitoso se deben tener cuenta otros factores.
+
+Un sistema de protección catódica por corriente impresa tiene como objeto proteger
+de la corrosión en forma continua las cañerías enterradas a él conectadas, inyectando
+la corriente necesaria para que los niveles de polarización sean los adecuados. Por lo
+                                                              CÓDIGO     SCE-PC-302-0002
+
+                       PROCEDIMIENTO                          REVISIÓN          0
+
+                                                               HOJA          16 de 19
+
+
+tanto, no es suficiente saber que el equipo de protección catódica funciona, también
+se debe tener la certeza que se está protegiendo la estructura.
+
+El operador que realiza la inspección y control de equipos de corriente impresa debe
+llevar consigo el formulario de relevamiento de potenciales con la marcación de los
+puntos representativos de cada equipo.
+
+Estos puntos se deben medir cuando se efectúa el relevamiento de equipos. Si en el
+punto de inyección de corriente el potencial OFF es menor a –1200mV y en los puntos
+representativos el nivel de protección es aceptable, se deberá disminuir dicha
+inyección y posteriormente volver a medir los puntos representativos y verificar el nivel
+de protección catódica. De esta manera, se reduce la sobreprotección en el punto de
+inyección.
+
+Si el nivel de protección medida en los puntos representativos da como resultado que
+la estructura no está protegida, se debe investigar la causa y resolver el problema.
+
+En los puntos representativos debe tomarse el potencial On, verificando que los
+valores medidos estén dentro del mismo orden de magnitud con los medidos en los
+relevamientos anteriores, suponiendo que no hubo modificaciones al sistema. En caso
+de que esto no suceda deberán realizarse mediciones de potenciales Off en estos
+puntos para verificar que la estructura está protegida.
+
+
+5.5   Otras Mediciones
+
+5.5.1 HORÓMETRO
+
+Se deberá registrar las horas acumuladas de trabajo de todos aquellos equipos que
+poseen horómetros. Este dato es muy importante para conocer cuando es el
+momento de realizar el mantenimiento regular del equipo.
+
+6     REGISTRO Y ARCHIVO
+
+El Técnico de Protección Catódica deberá cargar en la BUDI las mediciones
+realizadas en los equipos de protección catódica, teniendo en cuenta la frecuencia de
+medición indicada en el punto 3.2 del presente Procedimiento.
+                                                             CÓDIGO     SCE
+                                                                        SCE-PC-302-0002
+
+                       PROCEDIMIENTO                         REVISIÓN          0
+
+                                                               HOJA         17 de 19
+
+
+7     ANEXOS
+
+
+7.1   Anexo 1 – Carga de mediciones de rectificadores en la BUDI
+
+Para cargar una nueva medición de un equipo rectificador en la BUDI, primero se
+selecciona “Equipos” en el menú “Consultas – Protección Catódica”, tal como se
+indica en la figura a continuación.
+
+
+
+
+Se abre una ventana, en la que se debe seleccionar el sistema
+                                                           sistema y la cañería en donde
+está instalado el equipo rectificador al que se le quiere cargar la medición.
+
+Se presiona el botón “Buscar” y en la ventana aparecen todos los equipos de
+protección catódica asociados a esa cañería:
+
+
+
+
+Se hace doble clic sobre            del equipo requerido. A continuación se abre la
+ventana con las últimas mediciones del equipo rectificador.
+                                                             CÓDIGO    SCE-PC-302-0002
+
+                      PROCEDIMIENTO                         REVISIÓN          0
+
+                                                              HOJA         18 de 19
+
+
+
+
+En la sección inferior izquierda se encuentran los campos para ingresar la medición.
+Se debe completar la fecha de medición, la tensión de salida (en V), la corriente de
+salida (en A), los potenciales On y Off (en mV) y si las mediciones son anuales para
+incluir en el informe al ENARGAS, las horas indicadas en el horómetro (si el equipo
+posee uno), el tipo de control del equipo (manual, corriente constante o potencial
+constante), los kWh indicados en el medidor, el nombre del técnico y los comentarios,
+si son necesarios.
+
+En caso de que el equipo no funcione, se debe tildar la casilla de verificación “Equipo
+No Funciona”, desaparecerán los campos para las mediciones y se reemplazarán por
+un solo campo, “Motivo”. Se debe cargar la fecha de medición y en motivo están las
+siguientes opciones:
+                                                            CÓDIGO     SCE-PC-302-0002
+
+                      PROCEDIMIENTO                         REVISIÓN          0
+
+                                                             HOJA         19 de 19
+
+
+En caso de seleccionar “Otros”, en el campo comentarios indicar el motivo por el cual
+el equipo no está funcionando.
+
+Finalmente, se debe presionar el botón “Guardar” para que la medición quede
+cargada en la BUDI, de lo contrario la información se perderá.
+
+
+7.2   Anexo 2 – Carga de mediciones de termogeneradores en la BUDI
+
+Se realiza la búsqueda del termogenerador en cuestión de la misma manera que para
+un equipo rectificador. La ventana para cargar las mediciones para termogeneradores
+tiene la siguiente configuración:
+
+
+
+
+Se debe completar la fecha de medición, la tensión de salida (en V), la corriente de
+salida (en A), los potenciales On y Off (en mV) y si las mediciones son anuales para
+incluir en el informe al ENARGAS, la presión de gas a la entrada del termogenerador,
+la temperatura ambiente sin corrección por viento (en ºC), la velocidad del viento (en
+km/h), el nombre del técnico y los comentarios, en caso de ser necesarios.
+
+En caso de que el termogenerador no funcione, se deben seguir los mismos pasos
+que para un rectificador.
+
+Finalmente, se debe presionar el botón “Guardar” para que la medición quede
+almacenada en la BUDI
+

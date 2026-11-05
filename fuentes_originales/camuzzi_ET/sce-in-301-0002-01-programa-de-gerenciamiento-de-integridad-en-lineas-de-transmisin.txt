@@ -1,0 +1,455 @@
+                                                           CÓDIGO      SCE-IN-301-0002
+
+
+                           PROCEDIMIENTO                   REVISIÓN          01
+
+                                                             HOJA         1 de 11
+
+
+                                                           FECHA          FECHA
+                                                         APROBACION      VIGENCIA
+     PROCESO              OPERACIÓN DE LA RED
+                                                            01/07/12     17/07/12
+
+                                                             LIDER DEL PROCESO
+                               PROGRAMA DE
+          TEMA               GERENCIAMIENTO DE
+                          INTEGRIDAD EN LINEAS DE             Alejandro Sagula
+                                TRANSMISÍON
+
+                                                               APROBADO POR:
+ANULA/REEMPLAZA
+                                                             Alejandro Lorenzo
+
+                                  MODIFICACIONES
+
+  Nº de       FECHA
+                                         MOTIVO DE LA MODIFICACIÓN
+REVISIÓN     REVISION
+   01        17/7/12    Actualización
+
+
+
+
+AREAS INVOLUCRADAS:
+Unidades Negocios
+Gerencias Regionales
+Gerencia Técnica
+
+
+OBSERVACIONES:
+                                                                                                               CÓDIGO               SCE-IN-301-0002
+
+                                                PROCEDIMIENTO                                                 REVISIÓN                       01
+
+                                                                                                                 HOJA                    2 de 10
+
+
+                                                                       INDICE
+
+                                                                                                                                                       Página
+1       OBJETO.............................................................................................................................................. 3
+2       ALCANCE ........................................................................................................................................... 3
+3       AREAS INVOLUCRADAS .................................................................................................................. 3
+4       DOCUMENTACION COMPLEMENTARIA Y/O DE REFERENCIA ................................................... 4
+5       DEFINICIONES .................................................................................................................................. 4
+6       DESARROLLO ................................................................................................................................... 5
+    7.1 IDENTIFICACIÓN DE ÁREAS SENSIBLE .................................................................................................. 5
+    7.2 IDENTIFICACIÓN DE AMENAZAS, INTEGRACIÓN DE INFORMACIÓN Y EVALUACIÓN
+         DE RIESGO ......................................................................................................................................... 5
+      7.2.1 INTEGRACIÓN DE INFORMACION Y EVALUACION DE RIESGO ............................................................. 5
+      7.2.2      IDENTIFICACION DE AMENAZAS ...................................................................................................... 6
+    7.3 PLAN DE EVALUACIÓN BASE ............................................................................................................... 6
+    7.4 PLAN DE EVALUACIÓN DIRECTA .......................................................................................................... 7
+    7.5 EVALUACIÓN DEL RESULTADO DE LAS INSPECCIONES ........................................................................... 8
+      7.5.1 ACCIONES A TOMAR DE ACUERDO AL RESULTADO OBTENIDO EN LAS INSPECCIONES. ....................... 8
+      7.5.2      DETERMINACIÓN DEL PERIODO DE REINSPECCIÓN ........................................................................ 8
+7       PROGRAMA DE EVALUACIÓN CONTINUA..................................................................................... 8
+8       PLAN DE MEDIDAS PREVENTIVAS Y MITIGATORIAS .................................................................. 9
+9       PLAN PARA LA EVALUACIÓN CONFIRMATORIA DIRECTA.......................................................... 9
+10      PROCESO PARA IDENTIFICAR NUEVAS ÁREAS SENSIBLES ..................................................... 9
+11      DOCUMENTACIÓN Y REGISTROS ................................................................................................ 10
+12      ANEXOS ........................................................................................................................................... 10
+                                                            CÓDIGO      SCE-IN-301-0002
+
+                         PROCEDIMIENTO                      REVISIÓN          01
+
+                                                             HOJA          3 de 10
+
+
+1   OBJETO
+
+
+El presente documento tiene por objeto establecer los medios y elementos necesarios
+para conformar el programa de integridad a aplicar sobre las líneas de transmisión de
+acero de la Compañía con la finalidad de lograr una apropiada prevención, detección y
+mitigación de riesgos que apunte a reducir la probabilidad y consecuencias de incidentes,
+y garantice la integridad física de la instalación en pos del mejoramiento de la seguridad
+del sistema de distribución.
+Así misma también es la finalidad de este programa asegurar dentro de sus posibilidades
+el suministro de gas natural en forma confiable de manera de minimizar cualquier efecto
+adverso sobre empleados, público en general, clientes y medio ambiente.
+
+Este programa de gerenciamiento de integridad cubre los requerimientos que se deben
+cumplir según lo indicado en la Sección 911, “Elementos de un Programa de
+Gerenciamiento de Integridad” de la Adenda N°1 de la Norma NAG-100.
+
+
+
+2   ALCANCE
+
+
+El presente programa de gerenciamiento de integridad es de aplicación a todas las
+líneas de transmisión de la Compañía que, sobre un total de aproximadamente 6762
+Km, se distribuyen de la siguiente manera en las dos zonas de jurisdicción de esta
+Licenciataria:
+
+Líneas de transmisión de Camuzzi Gas Pampeana: 4168 Km
+
+Líneas de transmisión de Camuzzi Gas del Sur: 2594 Km
+
+Quedan excluidas de este programa los ductos correspondientes a instalaciones
+auxiliares o complementarias, estaciones de regulación y medición, estaciones
+compresoras de gas natural, plantas de proceso, conjuntos prefabricados y recipientes de
+presión.
+
+
+
+3   AREAS INVOLUCRADAS
+Gerencias Interior
+Gerencia Técnica
+Unidades de Negocio
+                                                             CÓDIGO      SCE-IN-301-0002
+
+                          PROCEDIMIENTO                      REVISIÓN          01
+
+                                                              HOJA          4 de 10
+
+
+
+
+4   DOCUMENTACION COMPLEMENTARIA Y/O DE REFERENCIA
+
+
+•   NAG-100 Normas mínimas de seguridad para el transporte y distribución de gas
+    natural y otros gases por cañerías (ed. Año 1993).
+•   Adenda N°1/ AÑO 2010 de la Norma NAG-100.
+•   Código ASME/ANSI B31.8S Managing System Integrity of Gas Pipeline (ed. Año
+    2010)
+•   SCE-IN-301-0003 “Inspecciones Directas en Líneas de Transmisión”
+•   SCE-PC-311-0001 “Inspecciones Indirectas en Cañerías de Acero Enterradas
+    Selección de Técnicas
+•   SCE-PC-311-0003 “Criterios para Seleccionar la Ubicación de las Evaluaciones
+    Directas”
+•   Instructivo de Trabajo IOR 089 (Cálculo para la Categorización del Riesgo de
+    Líneas de Transmisión)
+
+
+
+5   DEFINICIONES
+
+
+Distribuidora ó Compañía: se hace referencia indistintamente a Camuzzi Gas
+Pampeana o Camuzzi Gas del Sur.
+
+Área sensible (AS): Aquellas áreas donde las cañerías atraviesen clases de trazado 3, ó
+4.
+
+Evaluación: Es el uso de técnicas como las permitidas en la Adenda N°1 de la Norma
+NAG-100 para establecer la condición de integridad de una línea de transmisión.
+
+Evaluación confirmatoria directa (ECD): Método focalizado que, basado en los
+principios y las técnicas de evaluación directa, se utiliza para identificar la presencia de
+corrosión interna y externa en una línea de transmisión.
+
+Evaluación directa (ED): Método que utiliza un proceso de análisis para amenazas
+específicas a la integridad de las cañerías (por ejemplo: corrosión externa, corrosión
+interna y corrosión bajo tensión). El proceso de ED incluye el ingreso e integración de
+datos de factores de riesgo, examinación indirecta o análisis para identificar áreas de
+posible corrosión, examinación directa de las áreas donde se sospecha corrosión y una
+evaluación posterior.
+                                                            CÓDIGO      SCE-IN-301-0002
+
+                         PROCEDIMIENTO                      REVISIÓN          01
+
+                                                             HOJA          5 de 10
+
+
+Método de evaluación primario: Es la técnica elegida por el operador como la más
+apropiada para efectuar la evaluación de integridad de la línea. Debe estar en relación
+con la amenaza identificada.
+
+Método de evaluación suplementario: Es la técnica elegida para profundizar la
+evaluación alcanzada con el método de evaluación primario.
+
+Remediación: Una actividad de reparación o mitigación realizada por un operador de una
+línea de transmisión, para limitar o reducir la probabilidad de ocurrencia de un evento no
+deseado.
+
+Parte de línea de transmisión: Tramo o segmento de una línea de transmisión sobre el
+que el operador debe elegir de manera justificada por la utilización de métodos de
+evaluación diferentes al resto de la línea.
+
+
+
+6   DESARROLLO
+
+
+7.1 Identificación de Áreas Sensible
+
+Se identificaran las áreas sensibles de cada línea de transmisión indicando las
+progresivas de la línea que se corresponden con clases de trazado 3 ó 4.
+
+Se revisará anualmente la extensión y ubicación de las áreas sensibles (ó la aparición de
+una nueva) teniendo en cuenta la información recabada en la vigilancia continua de las
+instalaciones.
+
+
+
+7.2 Identificación de Amenazas, Integración de Información y Evaluación de
+   Riesgo
+
+
+
+7.2.1   INTEGRACIÓN DE INFORMACION Y EVALUACION DE RIESGO
+
+
+Se realizará una primera integración de datos y análisis de riesgo según la instrucción de
+trabajo IOR – 089, a los efectos de determinar una priorización de líneas de transmisión
+para realizar un cronograma que permita la realización de las evaluaciones base a los
+efectos de cumplir con la Sección 921 de la Adenda N°1 de la Norma NAG-100.
+                                                             CÓDIGO      SCE-IN-301-0002
+
+                          PROCEDIMIENTO                      REVISIÓN          01
+
+                                                              HOJA          6 de 10
+
+
+Se generará una planilla con el resultado de la evaluación de riesgo efectuada ordenando
+las líneas de transmisión de mayor a menor riesgo.
+
+Una vez efectuadas las evaluaciones base se realizará una reevaluación de la situación
+de cada línea de transmisión teniendo en cuenta, además de los datos existentes, los
+obtenidos en las inspecciones realizadas.
+
+
+7.2.2   IDENTIFICACION DE AMENAZAS
+
+
+Se realizará una identificación de amenazas de cada línea de transmisión siguiendo los
+lineamientos del Apéndice A de la norma B31.8 S, “Diagramas de procesos de amenazas
+y planes de gerenciamiento de integridad prescriptivo”.
+
+Se comenzará con las líneas de transmisión de mayor riesgo de manera de realizar la
+correspondiente identificación con la suficiente antelación que permita cumplir con el
+cronograma de evaluación base.
+
+Se generarán planillas particulares con la identificación de amenazas de cada línea de
+transmisión ya analizada.
+
+
+
+7.3 Plan de Evaluación Base
+
+Dentro de los elementos constitutivos del plan de gestión de integridad se encuentra el
+Plan de Evaluación Base. Este Plan Base o Inicial permite, mediante el empleo de un
+algoritmo especifico, realizar el calculo para la categorización del riesgo relativo de cada
+una de las líneas de transmisión de la Compañía, como se mencionó precedentemente.
+Dicho cálculo establece las consideraciones y criterios necesarios para elaborar un
+análisis de riesgo y priorizar cada una de las líneas en la Evaluación Base. Es importante
+destacar que el instructivo utilizado para la evaluación base no contempla las re-
+categorizaciones a realizar sobre el nivel de riesgo de las líneas de transmisión.
+
+Forma parte del presente Programa de Gerenciamiento de Integridad de líneas de
+transmisión, el Instructivo de Trabajo IOR-089 (Cálculo para la Categorización del Riesgo
+de Líneas de Transmisión).
+Así mismo se adjuntará al Plan de Gestión de Integridad de Líneas, las planillas con el
+valor del riesgo relativo calculado para cada una de las líneas evaluadas y el código de
+identificación BUDI, correspondiente.
+En estas planillas se dispone del ranking ordenado de mayor a menor de todas las líneas
+analizadas que se obtuvo como resultado de la aplicación del instructivo mencionado
+precedentemente.
+                                                            CÓDIGO      SCE-IN-301-0002
+
+                         PROCEDIMIENTO                      REVISIÓN          01
+
+                                                             HOJA          7 de 10
+
+
+Las evaluaciones base se realizarán teniendo en cuenta el análisis de riesgo efectuado y
+según cronograma adjunto.
+
+De acuerdo a la identificación de amenazas de cada línea de transmisión se efectuará la
+selección de los métodos de inspección aplicables para evaluar y manejar cada amenaza
+identificada.
+
+Cuando la amenaza permita ser evaluada con distintos métodos, se dará preferencia la
+método de “Evaluación Directa”, por considerar que el mismo presenta características
+preventivas en relación a los otros permitidos.
+
+Así mismo existirán casos particulares donde se analizara la situación particular de la
+cañería como es el ejemplo del Gasoducto Fueguino en donde se optó por evaluar la
+línea mediante el pasaje de scraper instrumentado; encontrándose ésta instalación en
+condiciones para ser evaluada por este método.
+
+Se indicara en el Plan de Gestión de Integridad de cada línea de transmisión el método
+seleccionado para la realizar la inspección de la evaluación base de las mismas, ya
+analizadas.
+
+
+
+7.4 Plan de Evaluación Directa
+
+La evaluación directa será realizada por medio de pozos exploratorios de acuerdo al
+Procedimiento de Inspecciones Directas en Líneas de Transmisión SCE-IN-301-0003.
+
+Previamente, a los efectos de definir la cantidad y ubicación de los pozos exploratorios a
+realizar, se ejecutará una Inspección Indirecta, para lo cual:
+
+   a) Se seleccionarán las técnicas de Inspección Indirecta de aplicación para cada caso
+      según lo definido en el Procedimiento SCE-PC-311-0001 “Selección de Técnicas
+      de Inspección Indirecta”.
+   b) Los resultados obtenidos se clasificarán de acuerdo a lo definido en el
+      procedimiento SCE-PC-311-0003 “Criterios para Seleccionar las Ubicaciones de
+      las Evaluaciones Directas”
+   c) La ubicación de los pozos se definirá mediante la aplicación de los criterios
+      detallados en el procedimiento SCE-PC-311-0003 “Criterios para Seleccionar las
+      Ubicaciones de las Evaluaciones Directas”
+                                                              CÓDIGO     SCE-IN-301-0002
+
+                            PROCEDIMIENTO                    REVISIÓN          01
+
+                                                               HOJA         8 de 10
+
+
+
+
+7.5 Evaluación del Resultado de las Inspecciones
+
+
+
+7.5.1      ACCIONES A TOMAR DE ACUERDO AL RESULTADO OBTENIDO EN LAS INSPECCIONES.
+
+Ante el descubrimiento de un defecto sobre la cañería se llevará a cabo un análisis de la
+necesidad de reparación y el método aplicable de acuerdo a lo establecido en la
+instrucción de trabajo I OR-087.
+
+Las indicaciones se clasificarán en tres grupos, según la respuesta que requieran:
+
+    i)       Inmediata: La indicación demuestra que el defecto está en el punto de falla
+    ii)      Programado: La indicación señala que el defecto es significativo pero no en el
+             punto de falla.
+    iii)     Supervisado: La indicación señala que el defecto no fallará antes de la
+             inspección siguiente.
+
+El instructivo IOR-087 establece los métodos de reparación de líneas aceptados por la
+Compañía y fija los plazos para las reparaciones. O sea que una vez detectado un defecto
+sobre la cañería, éste será analizado para ver la necesidad de reparación del mismo, el
+método a utilizar y determinación del plazo para materializar dicha reparación.
+
+
+
+7.5.2      DETERMINACIÓN DEL PERIODO DE REINSPECCIÓN
+
+Se utilizará el método prescriptivo para analizar el periodo de reinspección por lo que en
+consecuencia, el plazo máximo para una nueva inspección será el indicado en la tabla de
+la Sección 939 de la Adenda N°1 de la Norma NAG-100.
+
+
+
+7    Programa de Evaluación Continua
+
+
+Una vez que se halla completado la evaluación base de cada línea de transmisión y
+conformado el Plan de Gestión de Integridad de cada una de ellas, quedará definido en el
+mismo los intervalos de evaluación según lo prescripto en la Sección 939 e ítem “e” de la
+Sección 921 de la Adenda N°1 de la NAG 100. El método de evaluación a aplicar
+dependerá en cada caso del tipo de amenaza a la que se encuentra expuesta la línea,
+características constructivas de la misma, condiciones operativas, etc.
+                                                             CÓDIGO     SCE-IN-301-0002
+
+                          PROCEDIMIENTO                     REVISIÓN          01
+
+                                                              HOJA         9 de 10
+
+
+
+
+8    Plan de Medidas Preventivas y Mitigatorias
+
+
+En el Plan de Gestión de Integridad de cada línea de transmisión analizada se indicará las
+medidas preventivas y mitigatorias a adoptar en función de la amenaza potencial
+detectada ya sean estas dependientes del tiempo como corrosión interna, externa, etc.,
+amenazas residuales que tienen su origen en defectos de fabricación del caño o durante
+la construcción de la línea, y otros tipos de amenazas que puedan surgir durante los
+recorridos de vigilancia ordinarios tales como daños por terceros o bien fuerzas externas
+como por ejemplo movimientos de suelo, inundaciones, socavación de apoyos o
+sustentación de la línea, etc..
+
+
+
+9    Plan para la Evaluación Confirmatoria Directa
+
+
+Para cada línea de transmisión quedará indicado en el Plan de Gestión de Integridad los
+intervalos de evaluación de acuerdo a lo solicitado por la Sección 939 de la Adenda N°1
+de la NAG 100.
+Ahora bien como las líneas se deben evaluar en forma continua la reevaluación de las
+mismas no deberá superar los 7 años, por lo tanto se realizara una Evaluación
+Confirmatoria Directa que permita asegurar la integridad de la cañería. Para la realización
+de las reevaluación de las líneas se tendrán en cuenta los Procedimientos específicos que
+se elaboraron al efecto para determinar el método que mejor se adapte al tipo de
+amenaza y características de la línea, así como aquellas áreas sensibles o con
+características de suelos de baja resistividad, o simplemente particularidades de la traza
+que obligan a poner la atención sobre las mismas para realizar una evaluación
+confirmatoria.
+
+
+
+10   Proceso para Identificar Nuevas Áreas Sensibles
+
+
+Todas las líneas de transmisión e instalaciones complementarios de la Compañía son
+anualmente recorridas a los efectos de realizar inspecciones de vigilancia de las mismas
+cumpliendo con programas, frecuencias y requerimientos estipulados en la NAG100 e
+instructivos internos propios.
+Dichos recorridos están orientados a recabar información de varios y distintos aspectos
+que pueden afectar la línea, entre ellos uno especifico corresponde a la conservación a la
+clase de trazado. Por lo tanto cualquier modificación en cuanto la clase de trazado que
+pueda derivar en una nueva Área sensible (AS) sobre la línea, de acuerdo a la definición
+estipulada en la Sección 903 de la Adenda N°1 de la NAG 100, será informada para que
+la misma sea incluida dentro del Plan de Integridad de la Línea a los efectos de que se
+tomen las medidas preventivas que correspondan.
+                                                            CÓDIGO      SCE-IN-301-0002
+
+                         PROCEDIMIENTO                      REVISIÓN          01
+
+                                                             HOJA         10 de 10
+
+
+
+
+11   Documentación y Registros
+
+
+Se dispondrá, durante toda la vida útil de cada línea de transmisión, de un registro en el
+cual se podrá visualizar la evaluación del riesgo relativo o ranking de la línea obtenido
+mediante la aplicación del instructivo para la determinación del análisis de riesgo de
+aplicación en la Distribuidora.
+Así mismo estos registros dispondrán para cada línea o tramo las características de la
+misma así como el criterio de valoración del riesgo, la valoración de la integridad o sea
+que acciones tomar, como mitigar un determinado riesgo (reparación, prevención,
+periodos de reinspección, etc.)
+
+Complementariamente se proveerá a la Autoridad Regulatoria de las copias necesarias
+del Programa de Gerenciamiento de Integridad de la Compañía, a requerimiento de ese
+Organismo.
+
+
+
+12   ANEXOS
+
+
+No corresponde para este caso en particular
+
