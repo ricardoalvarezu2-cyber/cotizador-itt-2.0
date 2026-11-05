@@ -36,7 +36,7 @@
   "TR_ARS": 7800000.0,
   "TR_EMB": 300,
   "TR_F": 1.0,
-  "fecha_referencia": "2026-10-29",
+  "fecha_referencia": "2026-10-31",
   "rx_pct": 0,
   "ph_horas": 0,
   "FTV": 1.0
@@ -368,6 +368,15 @@
    "fuentes": [
     {
      "tipo": "cot",
+     "precio": 301.86,
+     "proveedor": "Grupo Provemet cot. 288978 ítem 12 · BRI-04996",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288978_bridas_2026-10-29.pdf · ítem 12",
+     "fecha": "2026-10-29",
+     "coincide": "igual",
+     "diferencia": "Brida Welding Neck Sch 80 Raised Face Serie 600 ASTM A 105 ANSI B16.5 10\"; validez 15 días"
+    },
+    {
+     "tipo": "cot",
      "precio": 338.45,
      "proveedor": "Provemet · BRI-01227",
      "origen": "conocimiento/precios/catalogo_materiales.csv",
@@ -385,6 +394,15 @@
    "cantidad": 0.8,
    "unidad": "m",
    "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 168.01,
+     "proveedor": "Grupo Provemet cot. 288974 ítem 12 · CAN-01420",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288974_canos_2026-10-29.pdf · ítem 12",
+     "fecha": "2026-10-29",
+     "coincide": "igual",
+     "diferencia": "TUBO S/C PSL2 ASTM A53/A106/API5L B 10'' SCH 80 Ø 273 X 15,09 mm; Provemet cot. 288974 (29-10-2026), precio neto con bonificación 4% (vale comprando toda la cotización), validez 15 días"
+    },
     {
      "tipo": "lista",
      "precio": 204.43,
@@ -404,6 +422,15 @@
    "cantidad": 1,
    "unidad": "un",
    "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 112.28,
+     "proveedor": "Grupo Provemet cot. 288978 ítem 8 · BRI-01321",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288978_bridas_2026-10-29.pdf · ítem 8",
+     "fecha": "2026-10-29",
+     "coincide": "igual",
+     "diferencia": "Brida Welding Neck Sch 80 Raised Face Serie 600 ASTM A 105 ANSI B16.5 6\"; validez 15 días"
+    },
     {
      "tipo": "cot",
      "precio": 226.14,
@@ -443,6 +470,15 @@
    "cantidad": 0.3,
    "unidad": "m",
    "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 74.52,
+     "proveedor": "Grupo Provemet cot. 288974 ítem 10 · CAN-01512",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288974_canos_2026-10-29.pdf · ítem 10",
+     "fecha": "2026-10-29",
+     "coincide": "igual",
+     "diferencia": "TUBO S/C ASTM A53/A106/API5L B 6'' SCH 80 Ø 168,3 X 10,97 mm; Provemet cot. 288974 (29-10-2026), precio neto con bonificación 4% (vale comprando toda la cotización), validez 15 días"
+    },
     {
      "tipo": "ant",
      "precio": 90.7,
@@ -1203,10 +1239,19 @@
    "pos": "PIN",
    "grupo": "servicio",
    "descripcion": "Granallado y pintura (≈ 58 m²)",
-   "especificacion": "recipiente 25,5 m² (ficha_rubros.md: cuerpo, fondo, pollera, tapa y toberas) + skid sin la plataforma galvanizada ≈ 800 kg × 40 m²/t (ficha: 52,5 m² por 1.300 kg) ≈ 32 m² (antes 38 m² por criterio)",
-   "cantidad": 58,
+   "especificacion": "recipiente 25,5 m² (ficha_rubros.md: cuerpo, fondo, pollera, tapa y toberas) + skid sin la plataforma galvanizada ≈ 800 kg × 40 m²/t (ficha: 52,5 m² por 1.300 kg) ≈ 32 m² (antes 38 m² por criterio); × 1,2 de overspray como la planilla del precio",
+   "cantidad": 69.6,
    "unidad": "m2",
    "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 37.98,
+     "proveedor": "Pintor (sin nombre) · PIN-00579 (precio confirmado por Matías)",
+     "origen": "conocimiento/precios/precios_usuario.csv",
+     "fecha": "2026-10-30",
+     "coincide": "similar",
+     "diferencia": "Granallado y pintura de piping y skid, incluye materiales: USD 37,98/m² confirmado por Matías Russo el 30-10-2026 (precio firme, PIN-00579); la planilla de origen (YPF Lic 66944 colectores) lo aplica sobre los m² + 20 % de overspray, por eso la cantidad va × 1,2; esquema SCE-PC-511-0003 a confirmar"
+    },
     {
      "tipo": "ant",
      "precio": 50,

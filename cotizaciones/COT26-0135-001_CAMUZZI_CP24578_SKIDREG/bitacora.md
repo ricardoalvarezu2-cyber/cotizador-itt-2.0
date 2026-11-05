@@ -119,3 +119,11 @@ Antes: unitario USD 37.730,89, total USD 38.335,01. Después: **unitario USD 38.
 **Error propio durante la corrección:** el generador de la matriz estaba en una ruta compartida del área de trabajo (`scratchpad/req.py`) y otro agente lo pisó con el suyo. Una corrida volcó en `pedido/requisitos.csv` la matriz del separador (148 requisitos). Se rehízo desde cero (84 requisitos) con un generador en una carpeta propia.
 
 Frenos: requisitos (4 consultas y R33 pendiente de ITT), sin_precio (7), estimado 35%, vencidas (22), pendientes de la oferta y antecedentes. No se escribió ninguna justificación.
+
+## 05-11-2026 — Actualización con los precios nuevos del catálogo (pedido de Matías: «revisá y rehacé las cotizaciones de Camuzzi»)
+
+- Se cruzó cada renglón con el catálogo actualizado (listas Provemet 29-10-2026, Oil Metal 37278, Miyashiro 50594). Solo cambian los renglones con la **misma pieza** y precio más nuevo; donde la marca se eligió por el listado SCE-IN-501-0015 (Cintolo / Curvo Sold) se mantiene, y las juntas nuevas (#300) no son de la serie pedida.
+- Granallado y pintura: USD 37,98/m² (PIN-00579, precio firme confirmado por Matías el 30-10-2026, mismo alcance: granallado y pintura con materiales). La planilla de origen lo aplica sobre los m² + 20 % de overspray, así que la cantidad va × 1,2. Antes: criterio ITT 50 USD/m² (queda de alternativa).
+- Fecha de referencia del ajuste: 31-10-2026 (todavía no hay índices de noviembre).
+- Caños con Provemet cot. 288974 (29-10-2026, neto con 4 % de bonificación): 22/22b 6" sch 40 60,51 → 49,48; 23/23b 6" sch 80 90,70 → 74,52; 24/24b 8" sch 40 91,01 → 74,51 (Renard queda de alternativa). El 3" sch 40 sigue Renard (Provemet no lo cotizó).
+- Precio unitario 38.763,36 → **38.205,03** (total con flete 38.809,15), borrador.

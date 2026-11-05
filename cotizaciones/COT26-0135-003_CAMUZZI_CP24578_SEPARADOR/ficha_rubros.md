@@ -1,6 +1,6 @@
 # Ficha por rubro — COT26-0135-003
 
-Generada por `herramientas/ficha_rubros.py` el 03-11-2026. Todo **por separador**; la cantidad (2) multiplica al final.
+Generada por `herramientas/ficha_rubros.py` el 05-11-2026. Todo **por separador**; la cantidad (2) multiplica al final.
 Sirve para pedir un precio global al tercero y para controlarlo contra el cálculo detallado.
 
 ## 1. MO de armado y soldadura del piping
@@ -27,8 +27,8 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 - m² de piping: **25,53** (caños y niples 1,60; bridas, accesorios y válvulas por largo equivalente) · m² de estructura: **52,50**
 - m² total: **78,03** (sin overspray) · esquema: según pliego
-- **Costo por antecedentes.** Por antecedentes: USD 2.900,00 (1 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 37,17/m²
+- **Costo por antecedentes.** Por antecedentes: USD 2.643,41 (1 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 33,88/m²
 
 ## 4. Radiografía y END
 

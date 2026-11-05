@@ -36,7 +36,7 @@
   "TR_ARS": 700000,
   "TR_EMB": 150,
   "TR_F": 1.0,
-  "fecha_referencia": "2026-10-30",
+  "fecha_referencia": "2026-10-31",
   "rx_pct": 100,
   "ph_horas": 18,
   "FTV": 1.0
@@ -219,7 +219,7 @@
      "precio": 0,
      "proveedor": "Costeado por componentes en las filas 1b a 1k y en la MO del filtro (MOF, ARMF)",
      "origen": "—",
-     "fecha": "2026-10-30",
+     "fecha": "2026-11-05",
      "coincide": "sin_ref",
      "diferencia": "el precio del filtro es la suma de sus componentes: ver filas 1b–1k, MOF y ARMF"
     }
@@ -347,6 +347,16 @@
    "especificacion": "2 toberas de ≈ 150 mm",
    "fuentes": [
     {
+     "tipo": "cot",
+     "precio": 49.48,
+     "proveedor": "Grupo Provemet cot. 288974 ítem 1 · CAN-01510",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288974_canos_2026-10-29.pdf · ítem 1",
+     "fecha": "2026-10-29",
+     "coincide": "igual",
+     "diferencia": "TUBO S/C ASTM A53/A106/API5L B 6'' SCH 40 Ø 168,3 X 7,11 mm; Provemet cot. 288974 (29-10-2026), precio neto con bonificación 4% (vale comprando toda la cotización), validez 15 días",
+     "codigo": "CAN-01510"
+    },
+    {
      "tipo": "lista",
      "precio": 60.51,
      "proveedor": "Renard (cód. 1173) · CAN-01510",
@@ -431,7 +441,7 @@
      "precio": 0,
      "proveedor": "SIN PRECIO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-10-30",
+     "fecha": "2026-11-05",
      "coincide": "sin_ref",
      "diferencia": "sin precio de refuerzo 12\" x 6\": la planilla TAVAL/40 pone 150 estimado para el de 6\" x 3\" (auditoría 30-10-2026): pedir a Cintolo"
     }
@@ -448,8 +458,8 @@
    "fuentes": [
     {
      "tipo": "est",
-     "precio": 81.6,
-     "proveedor": "Estimado: 2 bridas WN 4\" #150 (Renard cód. 11295, 35,65 c/u) + 0,3 m de caño 4\" sch 40 sin costura A53/A106/API 5L B (Renard cód. 1160, 34,34/m)",
+     "precio": 57.14,
+     "proveedor": "Estimado: 2 bridas WN 4\" #150 (Provemet cot. 288979 ítem 5, 23,42 c/u, 29-10-2026) + 0,3 m de caño 4\" sch 40 sin costura A53/A106/API 5L B (Renard cód. 1160, 34,34/m)",
      "origen": "fuentes_originales/renar_lista_2025-12.xlsx",
      "fecha": "2025-12-26",
      "coincide": "similar",
@@ -506,6 +516,16 @@
    "unidad": "un",
    "especificacion": "Plano: 4\" · 150 x STD · ASTM A-105 · RF/BW",
    "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 23.42,
+     "proveedor": "Grupo Provemet cot. 288979 ítem 5 · BRI-01295",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288979_bridas_2026-10-29.pdf · ítem 5",
+     "fecha": "2026-10-29",
+     "coincide": "igual",
+     "diferencia": "Brida Welding Neck Sch 40 Raised Face Serie 150 ASTM A 105 ANSI B16.5 4\"; cotizada para 4 un, validez 15 días; marca: comprar Futura o Francovigh (listado)",
+     "codigo": "BRI-01295"
+    },
     {
      "tipo": "lista",
      "precio": 35.65,
@@ -593,7 +613,7 @@
      "precio": 0,
      "proveedor": "SIN PRECIO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-10-30",
+     "fecha": "2026-11-05",
      "coincide": "sin_ref",
      "diferencia": "sin junta 6\" #150 cotizada (la de MS Juntas es 8\" #300; la 6\" #150 del catálogo es del cepo): pedir cotización a MS Juntas / Klinger"
     }
@@ -717,7 +737,7 @@
      "precio": 0,
      "proveedor": "SIN PRECIO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-10-30",
+     "fecha": "2026-11-05",
      "coincide": "sin_ref",
      "diferencia": "termovaina 3/4\" NPT AISI 316: la base solo tiene termovainas bridadas 1 1/2\"-2\" o en conjunto con transmisor (otra pieza)"
     }
@@ -835,6 +855,16 @@
    "especificacion": "Plano: 6\" · 40 · ASTM A-53 GR°B · BW · El cliente no indica cantidad: calculada por ITT según el plano (medida del dibujo)",
    "fuentes": [
     {
+     "tipo": "cot",
+     "precio": 49.48,
+     "proveedor": "Grupo Provemet cot. 288974 ítem 1 · CAN-01510",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288974_canos_2026-10-29.pdf · ítem 1",
+     "fecha": "2026-10-29",
+     "coincide": "similar",
+     "diferencia": "TUBO S/C ASTM A53/A106/API5L B 6'' SCH 40 Ø 168,3 X 7,11 mm (cumple A53 Gr B); Provemet cot. 288974 (29-10-2026), precio neto con bonificación 4% (vale comprando toda la cotización), validez 15 días",
+     "codigo": "CAN-01510"
+    },
+    {
      "tipo": "lista",
      "precio": 60.51,
      "proveedor": "Renard (cód. 1173) · CAN-01510",
@@ -855,6 +885,16 @@
    "unidad": "m",
    "especificacion": "1 tramo de 6 m: 1 m pos 15 + 0,3 m toberas del filtro (fila 1g) + 4,7 m de sobrante",
    "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 49.48,
+     "proveedor": "Grupo Provemet cot. 288974 ítem 1 · CAN-01510",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288974_canos_2026-10-29.pdf · ítem 1",
+     "fecha": "2026-10-29",
+     "coincide": "similar",
+     "diferencia": "misma pieza que la pos 15",
+     "codigo": "CAN-01510"
+    },
     {
      "tipo": "lista",
      "precio": 60.51,
@@ -990,10 +1030,20 @@
    "pos": "PIN",
    "grupo": "servicio",
    "descripcion": "Granallado y pintura (m² calculados: piping, filtro y skid)",
-   "cantidad": 14.8,
+   "cantidad": 17.76,
    "unidad": "m2",
    "especificacion": "Piping 6,21 m² (ficha_rubros: caños, bridas, accesorios y válvulas) + filtro 1,94 m² (caño 12\" 1,5 m × 1,018 m²/m + casquete, tapa y toberas) + skid 6,65 m² (≈ 14,9 m de UPN 120 × 0,446 m²/m); esquema según SCE-PC-511-0003 (no leído)",
    "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 37.98,
+     "proveedor": "Pintor (sin nombre) · PIN-00579 (precio confirmado por Matías)",
+     "origen": "conocimiento/precios/precios_usuario.csv",
+     "fecha": "2026-10-30",
+     "coincide": "similar",
+     "diferencia": "Granallado y pintura de piping y skid, incluye materiales: USD 37,98/m² confirmado por Matías Russo el 30-10-2026 (precio firme, PIN-00579); la planilla de origen (YPF Lic 66944 colectores) lo aplica sobre los m² + 20 % de overspray, por eso la cantidad va × 1,2; esquema SCE-PC-511-0003 a confirmar (× 1,2 sobre 14,8 m²)",
+     "codigo": "PIN-00579"
+    },
     {
      "tipo": "ant",
      "precio": 50.0,
@@ -1040,7 +1090,7 @@
      "precio": 2549.58,
      "proveedor": "Proveedor de RX (sin nombre), precio confirmado por Matías el 30-10-2026: 3 visitas × ARS 850.000 + 92 placas × ARS 15.000 = ARS 3.930.000 sin IVA, a BNA oct-2026 (1.541,43)",
      "origen": "conocimiento/precios/precios_usuario.csv",
-     "fecha": "2026-10-30",
+     "fecha": "2026-11-05",
      "coincide": "igual"
     },
     {
@@ -1141,9 +1191,9 @@
    "pos": "ARM",
    "grupo": "mo",
    "descripcion": "Horas de montaje en planta (armado, movimientos) (estimadas del antecedente)",
-   "cantidad": 65.1,
+   "cantidad": 63.1,
    "unidad": "h",
-   "especificacion": "65,1 h por skid · mediana de 30 h × 1,06, 126 h × 0,78 (horas por unidad × tamaño)",
+   "especificacion": "63,1 h por skid · mediana de 30 h × 1,03, 126 h × 0,76 (horas por unidad × tamaño)",
    "fuentes": [
     {
      "tipo": "est",

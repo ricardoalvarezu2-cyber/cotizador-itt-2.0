@@ -180,3 +180,12 @@ Hecha por un agente sobre `armar_json.py` (única fuente: regenera la lista, `co
 - **Estimado:** 17%. No se justificó.
 - **Vencidas:** 11. Se agrega la de Antonelli; no se justificó.
 - **Datos entre corchetes de la oferta.**
+
+## 05-11-2026 — Actualización con los precios nuevos del catálogo (pedido de Matías: «revisá y rehacé las cotizaciones de Camuzzi»)
+
+- Se cruzó cada renglón con el catálogo actualizado (listas Provemet 29-10-2026, Oil Metal 37278, Miyashiro 50594). Solo cambian los renglones con la **misma pieza** y precio más nuevo; donde la marca se eligió por el listado SCE-IN-501-0015 (Cintolo / Curvo Sold) se mantiene, y las juntas nuevas (#300) no son de la serie pedida.
+- Granallado y pintura: USD 37,98/m² (PIN-00579, precio firme confirmado por Matías el 30-10-2026, mismo alcance: granallado y pintura con materiales). La planilla de origen lo aplica sobre los m² + 20 % de overspray, así que la cantidad va × 1,2. Antes: criterio ITT 50 USD/m² (queda de alternativa).
+- Fecha de referencia del ajuste: 31-10-2026 (todavía no hay índices de noviembre).
+- Provemet 29-10-2026: brida WN 10" #600 sch 80 338,45 → 301,86 (cot. 288978 ítem 12); caño 10" sch 80 204,43 → 168,01 (cot. 288974 ítem 12); brida WN 6" #600 sch 80 226,14 → 112,28 (cot. 288978 ítem 8); caño 6" sch 80 90,70 → 74,52 (cot. 288974 ítem 10).
+- Pintura: 58 m² × 1,2 = 69,6 m² a 37,98.
+- Precio unitario 376.069,98 → **375.344,72** (total 2 equipos con flete 756.049,68), borrador.
