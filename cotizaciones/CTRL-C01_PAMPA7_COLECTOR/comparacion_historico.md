@@ -17,8 +17,8 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 9 | Niple 3/4" x 150 mm sch 160 A106 B | 17 × 10,00 = 170,00 | 17 un × 8,50 = 144,50 | -15% | cot · Oil Metal (cód. NP0075NN0100706) · NIP-0 · 2026-10-30 | más barato (similar) |
 | 10 | Niple 1" x 150 mm sch 160 A106 B | 1 × 10,00 = 10,00 | 1 un × 13,09 = 13,09 | +31% | cot · Oil Metal (cód. NP0075NN0100706) · NIP-0 · 2026-10-30 | más caro (similar) |
 | 11 | Junta espiralada 6" #300 316+grafito | 1 × 10,00 = 10,00 | 1 un × 15,00 = 15,00 | +50% | ant · no dice · JUN-01703 · 2025-12-10 | más caro (similar) |
-| 12 | Junta espiralada 3" #300 316+grafito | 21 × 8,00 = 168,00 | 21 un × 4,32 = 90,72 | -46% | cot · Oil Metal (cód. JUE0300CWI3060) · JUN-05 · 2026-10-30 | más barato (similar) |
-| 13 | Junta espiralada 2" #300 316+grafito | 12 × 6,00 = 72,00 | 12 un × 5,00 = 60,00 | -17% | ant · sin proveedor en planilla · JUN-05037 · 2025-12-23 | más barato (similar) |
+| 12 | Junta espiralada 3" #300 316+grafito | 21 × 8,00 = 168,00 | 21 un × 4,32 = 90,72 | -46% | cot · Oil Metal (cód. JUE0300CWI3060) · JUN-02 · 2026-10-30 | más barato (similar) |
+| 13 | Junta espiralada 2" #300 316+grafito | 12 × 6,00 = 72,00 | 12 un × 4,32 = 51,84 | -28% | cot · Oil Metal (cód. JUE0300CWI3060) · JUN-02 · 2026-10-30 | más barato (similar) |
 | 14 | Junta espiralada 1" #300 316+grafito | 4 × 5,00 = 20,00 | 4 un × 3,00 = 12,00 | -40% | ant · no dice · JUN-02761 · 2025-12-10 | más barato (similar) |
 | 15 | Espárrago 3/4 x 6" B7/2H con tuercas | 12 × 8,00 = 96,00 | 12 un × 10,00 = 120,00 | +25% | ant · Bules o Versailles · JUN-04181 · 2026-02-19 | más caro (similar) |
 | 16 | Espárrago 3/4 x 5" B7/2H con tuercas | 168 × 8,00 = 1.344,00 | 168 un × 10,00 = 1.680,00 | +25% | ant · Bules o Versailles · JUN-04181 · 2026-02-19 | más caro (similar) |
@@ -42,7 +42,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 34 | Bastidor skid (300 + 500 kg con 20% de desper | 960 × 1,50 = 1.440,00 | 800 kg × 1,90 = 1.520,00 | +6% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | dentro de ±15% · real: 800 kg × 1,2 de desperdicio × USD 1,5/kg |
 | 35 | Tablero y materiales eléctricos | 1 × 12.000,00 = 12.000,00 | 1 gl × 12.000,00 = 12.000,00 | 0% | ant · planilla de costo ITT · OTR-03018 · 2026-06-26 | dentro de ±15% |
 
-**Materiales: real USD 47.654,86 · cotizador USD 26.253,15 (-45%).** 15 dentro de ±15%, 16 fuera, 4 sin precio.
+**Materiales: real USD 47.654,86 · cotizador USD 26.244,99 (-45%).** 15 dentro de ±15%, 16 fuera, 4 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -58,5 +58,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por colector
 
-Real USD 66.490,02 · cotizador USD 43.833,50 (-34%) antes de completar lo que el cotizador marca para revisar.
+Real USD 66.490,02 · cotizador USD 43.825,34 (-34%) antes de completar lo que el cotizador marca para revisar.
 

@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-P02
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 4.895,62 por equipo · soldadura y servicios calculados USD 4.002,94 · 18 similares (1, 2, 4, 8, 9, 11, 12, 14, 15, 16, 17, 19, 23, 24, 37, 38, 39, 40) · 1 sin precio (6).
+**Resumen:** materiales USD 4.894,26 por equipo · soldadura y servicios calculados USD 4.002,94 · 18 similares (1, 2, 4, 8, 9, 11, 12, 14, 15, 16, 17, 19, 23, 24, 37, 38, 39, 40) · 1 sin precio (6).
 
 
 ## 1. Materiales
@@ -15,7 +15,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 5 | Caño sin costura longitud 5173 mm · Ø 3" | IGUAL | 25,08 / m | 2025-12-26 · lista | — |
 | 6 | Tee reducción BW 3 Sch. 40 x 2 Sch. 80 · Ø 3" | **SIN PRECIO** | — | — | pedir cotización |
 | 7 | Brida WNRF Sch. 80 · Ø 2" | IGUAL | 12,47 / un | 2026-10-30 · cotización | norma: sin dato (pedido B16.5) |
-| 8 | Junta espiralada e=4.5 mm · Ø 2" | SIMILAR | 5,00 / un | 2025-12-23 · planilla interna | medida: anillos ext. e int. (no pedido) |
+| 8 | Junta espiralada e=4.5 mm · Ø 2" | SIMILAR | 4,32 / un | 2026-10-30 · cotización | diametro: 3" (pedido 2"); medida: anillos ext. e int. (no pedido) |
 | 9 | Válvula esférica paso total RF accionamiento  | SIMILAR | 170,30 / un | 2025-12-10 · planilla interna | — · faltan: material |
 | 10 | Brida ciega BLRF · Ø 2" | IGUAL | 18,50 / un | 2025-12-26 · lista | — |
 | 11 | Válvula esférica paso reducido NPT WOG 3000 · | SIMILAR | 43,60 / un | 2025-09-01 · lista | paso: total (pedido reducido) |
@@ -81,7 +81,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 49 placas chicas + 0 grandes + 1,30 servicio(s) de RX + 0,60 de LP por equipo = USD 1.666,00 (Servicio de radiografía (Antonelli) (2025-11; antonelli_end_2025-11)).
   Con las tarifas de Antonelli (11-2025) serían USD 1.666,00: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: puente, 3", 10 u, materiales USD 4.896 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: puente, 3", 10 u, materiales USD 4.894 por unidad)
 
 - **Ingeniería:** 7,5 h × USD 15/h = USD 112,50 · mediana de 9,0, 6,0 h por unidad (repartidas en la serie) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 4in #600 (serie de 13 unidades) (4, 13 u, 2026-02-19) · rango del mismo tipo 6–9 h
 - **Calidad y dossier:** 3,5 h × USD 15/h = USD 52,50 · mediana de 1,0, 6,0 h por unidad (repartidas en la serie) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 4in #600 (serie de 13 unidades) (4, 13 u, 2026-02-19) · rango del mismo tipo 1–6 h

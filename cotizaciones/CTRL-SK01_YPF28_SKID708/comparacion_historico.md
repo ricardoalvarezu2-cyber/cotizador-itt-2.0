@@ -17,8 +17,8 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 9 | Brida SW RF 300 LB SCH 80 A105 1 1/2" | 3 × 19,91 = 59,73 | 3 un × 16,42 = 49,26 | -18% | cot · Oil Metal (cód. AC0150BSW2R505) · BRI-01 · 2026-10-30 | más barato (similar) |
 | 10 | Espárrago c/2 tuercas 1.25x207 B7/2H zincado | 40 × 12,95 = 518,00 | 40 un × 7,33 = 293,20 | -43% | cot · DELGADO · JUN-01679 · 2025-09-04 | más barato (similar) |
 | 11 | Espárrago c/2 tuercas 1.125x186 B7/2H zincado | 288 × 9,59 = 2.761,92 | 288 un × 10,00 = 2.880,00 | +4% | cot · planilla de costo ITT (proveedor sin nom · 2026-10-30 | dentro de ±15% · real: 288 = 18 bridas 12" × 16 espárragos (16 × 1 1/8" por brida 12" #300: correcto) |
-| 12 | Junta espiralada RF 4,5 mm 300 LB 1 1/2" | 3 × 7,00 = 21,00 | 3 un × 6,00 = 18,00 | -14% | ant · MS · JUN-02769 · 2026-08-14 | dentro de ±15% |
-| 13 | Junta espiralada RF 4,5 mm 300 LB 12" | 18 × 45,00 = 810,00 | 18 un × 9,31 = 167,58 | -79% | cot · Miyashiro (MS Juntas) (cód. 2-031-0039)  · 2026-11-03 | más barato (similar) |
+| 12 | Junta espiralada RF 4,5 mm 300 LB 1 1/2" | 3 × 7,00 = 21,00 | 3 un × 1,29 = 3,87 | -82% | cot · Miyashiro (MS Juntas) (cód. 2-031-0073)  · 2026-11-05 | más barato (similar) |
+| 13 | Junta espiralada RF 4,5 mm 300 LB 12" | 18 × 45,00 = 810,00 | 18 un × 9,31 = 167,58 | -79% | cot · MS Juntas · JUN-04924 · 2026-08-14 | más barato (similar) |
 | 14 | Junta espiralada RF 4,5 mm 300 LB 16" | 2 × 80,00 = 160,00 | 2 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-05 | SIN PRECIO en el catálogo |
 | 15 | Niple s/c NPT SCH 80 L=100 mm 1 1/2" | 3 × 9,00 = 27,00 | 3 un × 8,15 = 24,45 | -9% | cot · Oil Metal (cód. NP0150NN0100806) · NIP-0 · 2026-10-30 | dentro de ±15% |
 | 16 | Niple s/c NPT SCH 80 L=100 mm 1/2" | 1 × 4,00 = 4,00 | 1 un × 20,00 = 20,00 | +400% | ant · Antecedentes puentes Taval/CGC s2000 · N · 2026-04-22 | más caro |
@@ -38,7 +38,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 30 | Válvula esférica 12" FLG RF 300 LB PT volante | 3 × 5.750,00 = 17.250,00 | 3 un × 5.750,00 = 17.250,00 | 0% | lista · Taval (Lista 30 × 0.52) · VAL-04436 · 2025-09-01 | dentro de ±15% |
 | 31 | Bastidor del skid (perfilería) | 850 × 2,00 = 1.700,00 | 850 kg × 1,90 = 1.615,00 | -5% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | dentro de ±15% · real: la PC0 le aplicó un 20% de overspray (error: es acero, no pintura) |
 
-**Materiales: real USD 60.808,45 · cotizador USD 43.208,30 (-29%).** 11 dentro de ±15%, 18 fuera, 2 sin precio.
+**Materiales: real USD 60.808,45 · cotizador USD 43.194,17 (-29%).** 10 dentro de ±15%, 19 fuera, 2 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -54,5 +54,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por skid
 
-Real USD 85.995,15 · cotizador USD 62.719,49 (-27%) antes de completar lo que el cotizador marca para revisar.
+Real USD 85.995,15 · cotizador USD 62.705,36 (-27%) antes de completar lo que el cotizador marca para revisar.
 

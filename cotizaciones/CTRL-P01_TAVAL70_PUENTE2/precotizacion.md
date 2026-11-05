@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-P01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 25.568,28 por equipo · soldadura y servicios calculados USD 13.092,44 · 14 similares (1, 2, 4, 7, 11, 12, 13, 16, 17, 18, 19, 20, 22, 24) · 6 sin precio (6, 8, 10, 14, 15, 23).
+**Resumen:** materiales USD 26.102,20 por equipo · soldadura y servicios calculados USD 13.092,44 · 14 similares (1, 2, 4, 7, 11, 12, 13, 16, 17, 18, 19, 20, 22, 24) · 6 sin precio (6, 8, 10, 14, 15, 23).
 
 
 ## 1. Materiales
@@ -18,7 +18,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 8 | Válvula globo limitadora de caudal con actuad | **SIN PRECIO** | — | — | pedir cotización |
 | 9 | Válvula retención · Ø 2" | IGUAL | 120,00 / un | 2025-09-01 · lista | — |
 | 10 | Filtro Y · Ø 2" | **SIN PRECIO** | — | — | pedir cotización |
-| 11 | Junta espiralada RF esp. 4.5 mm anillo interi | SIMILAR | 4,32 / un | 2026-10-30 · cotización | diametro: 3" (pedido 2"); extremos: sin dato (pedido RF) |
+| 11 | Junta espiralada RF esp. 4.5 mm anillo interi | SIMILAR | 10,00 / un | 2026-10-30 · cotización | diametro: 3" (pedido 2"); extremos: sin dato (pedido RF); el último precio (4,32) se aparta más de 40% de la m |
 | 12 | Caudalímetro V-Cone · Ø 2" | SIMILAR | 4.200,00 / un | 2026-03-10 · planilla interna | — · faltan: rango, conexion |
 | 13 | Caño sin costura · Ø 2" | SIMILAR | 20,00 / m | 2026-02-20 · planilla interna | — · faltan: material |
 | 14 | Computador de caudal | **SIN PRECIO** | — | — | pedir cotización |
@@ -26,7 +26,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 16 | Manómetro + válvula de bloqueo y purga | SIMILAR | 120,00 / un | 2026-10-30 · cotización | — · faltan: rango, conexion |
 | 17 | Transmisor de temperatura 4-20 mA + termovain | SIMILAR | 1.448,33 / un | 2026-08-14 · planilla interna | — · faltan: rango, conexion |
 | 18 | Sockolet · Ø 1" | SIMILAR | 3,59 / un | 2026-10-30 · cotización | diametro: 0.75" (pedido 1"); schedule: 80 (no pedido); material: A105 (no pedido); extremos: sin dato (pedido  · faltan: material |
-| 19 | Junta espiralada RF esp. 4.5 mm anillo interi | SIMILAR | 4,32 / un | 2026-10-30 · cotización | diametro: 3" (pedido 2"); extremos: sin dato (pedido RF) |
+| 19 | Junta espiralada RF esp. 4.5 mm anillo interi | SIMILAR | 10,00 / un | 2026-10-30 · cotización | diametro: 3" (pedido 2"); extremos: sin dato (pedido RF); el último precio (4,32) se aparta más de 40% de la m |
 | 20 | Espárrago con tuercas 5/8 x 5 · Ø 5/8" | SIMILAR | 2,50 / un | 2026-02-20 · planilla interna | medida: 5/8 x 2 1/2 (pedido 5/8 x 5) · faltan: material |
 | 21 | Tee normal BW · Ø 2" | IGUAL | 25,00 / un | 2026-01-22 · planilla interna | — |
 | 22 | Válvula esférica · Ø 1" | SIMILAR | 113,88 / un | 2026-03-10 · planilla interna | material: Galvanizado (no pedido); extremos: NPT (no pedido) · faltan: material, paso |
@@ -55,7 +55,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 141 placas chicas + 0 grandes + 3,54 servicio(s) de RX + 1,00 de LP por equipo = USD 2.655,50 (Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))).
   Con las tarifas de Antonelli (11-2025) serían USD 4.340,42: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: puente, 2", 24 u, materiales USD 25.568 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: puente, 2", 24 u, materiales USD 26.102 por unidad)
 
 - **Ingeniería:** 9 h × USD 15/h = USD 135,00 · mediana de 9,0 h por unidad (repartidas en la serie) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 4in #600 (serie de 13 unidades) (4, 13 u, 2026-02-19) · rango del mismo tipo 9–9 h
 - **Calidad y dossier:** 1 h × USD 15/h = USD 15,00 · mediana de 1,0 h por unidad (repartidas en la serie) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 4in #600 (serie de 13 unidades) (4, 13 u, 2026-02-19) · rango del mismo tipo 1–1 h
