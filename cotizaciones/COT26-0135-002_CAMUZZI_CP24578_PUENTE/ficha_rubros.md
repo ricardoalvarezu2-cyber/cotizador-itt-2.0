@@ -29,8 +29,8 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 - Juntas a tope: **20** · RX 100% → placas chicas **66**, grandes **0**
 - Juntas SW, cuplas y olets (LP donde no se puede radiografiar): **3**
-- **Costo por antecedentes.** Por antecedentes: USD 2.862,94 (2 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 143,15/junta a tope · USD 43,38/placa
+- **Costo por antecedentes.** Por antecedentes: USD 2.859,97 (2 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 143,00/junta a tope · USD 43,33/placa
 
 ## 5. Procedimientos
 
@@ -52,7 +52,7 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 ## 7. Horas de ITT (ingeniería, calidad y montaje)
 
-- **Costo por antecedentes.** Por antecedentes: USD 2.898,29 (4 renglón/es, con ajuste por inflación).
+- **Costo por antecedentes.** Por antecedentes: USD 2.927,18 (4 renglón/es, con ajuste por inflación).
 
 ## 8. Transporte
 

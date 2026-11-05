@@ -32,8 +32,8 @@
   "CONT": 5,
   "AJ": 1,
   "TRANS": 1,
-  "TC": 1541.43,
-  "TR_ARS": 7800000.0,
+  "TC": 1543.23,
+  "TR_ARS": 7809000.0,
   "TR_EMB": 300,
   "TR_F": 1.0,
   "fecha_referencia": "2026-10-31",
@@ -401,7 +401,7 @@
      "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288974_canos_2026-10-29.pdf · ítem 12",
      "fecha": "2026-10-29",
      "coincide": "igual",
-     "diferencia": "TUBO S/C PSL2 ASTM A53/A106/API5L B 10'' SCH 80 Ø 273 X 15,09 mm; Provemet cot. 288974 (29-10-2026), precio neto con bonificación 4% (vale comprando toda la cotización), validez 15 días"
+     "diferencia": "TUBO S/C PSL2 ASTM A53/A106/API5L B 10'' SCH 80 Ø 273 X 15,09 mm (PSL2 de API 5L: igual o superior al A-106 Gr B que pide el plano); Provemet cot. 288974 (29-10-2026), precio neto con bonificación 4% (vale comprando toda la cotización), validez 15 días"
     },
     {
      "tipo": "lista",
@@ -1176,8 +1176,8 @@
    "fuentes": [
     {
      "tipo": "cot",
-     "precio": 1968.85,
-     "proveedor": "Proveedor de RX (sin nombre), precio confirmado por Matías el 30-10-2026: 2 visitas × ARS 850.000 + 89 placas × ARS 15.000, sin IVA, a BNA oct-2026 (1.541,43) · END-00572 / END-00571",
+     "precio": 1966.66,
+     "proveedor": "Proveedor de RX (sin nombre), precio confirmado por Matías el 30-10-2026: 2 visitas × ARS 850.000 + 89 placas × ARS 15.000, sin IVA, a BNA oct-2026 (1.543,23) · END-00572 / END-00571",
      "origen": "conocimiento/precios/precios_usuario.csv",
      "fecha": "2026-10-30",
      "coincide": "similar",
@@ -1238,7 +1238,7 @@
    "id": "S05",
    "pos": "PIN",
    "grupo": "servicio",
-   "descripcion": "Granallado y pintura (≈ 58 m²)",
+   "descripcion": "Granallado y pintura (≈ 58 m² + 20 % de overspray)",
    "especificacion": "recipiente 25,5 m² (ficha_rubros.md: cuerpo, fondo, pollera, tapa y toberas) + skid sin la plataforma galvanizada ≈ 800 kg × 40 m²/t (ficha: 52,5 m² por 1.300 kg) ≈ 32 m² (antes 38 m² por criterio); × 1,2 de overspray como la planilla del precio",
    "cantidad": 69.6,
    "unidad": "m2",

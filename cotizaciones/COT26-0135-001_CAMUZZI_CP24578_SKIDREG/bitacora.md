@@ -127,3 +127,6 @@ Frenos: requisitos (4 consultas y R33 pendiente de ITT), sin_precio (7), estimad
 - Fecha de referencia del ajuste: 31-10-2026 (todavía no hay índices de noviembre).
 - Caños con Provemet cot. 288974 (29-10-2026, neto con 4 % de bonificación): 22/22b 6" sch 40 60,51 → 49,48; 23/23b 6" sch 80 90,70 → 74,52; 24/24b 8" sch 40 91,01 → 74,51 (Renard queda de alternativa). El 3" sch 40 sigue Renard (Provemet no lo cotizó).
 - Precio unitario 38.763,36 → **38.205,03** (total con flete 38.809,15), borrador.
+- Revisión independiente (05-11-2026): los 8 precios Provemet coinciden con el PDF y la pieza con el plano; el × 1,2 de la pintura está en la planilla de origen (=D×37,98×1,2, «Overspray 20%»). Corregido después: la fecha de los precios que no cambiaron había pasado a hoy (HOY se usaba también como referencia: vuelve a 30-10-2026); dólar de octubre cerrado 1.543,23 (era 1.541,43); sin otros cambios.
+- Para confirmar: Provemet da el precio con bonificación 4 % por compra total, para las cantidades cotizadas (no las del plano) y con validez hasta el 13-11-2026.
+- Precio unitario final: **38.199,47** (total con flete 38.803,06), borrador.

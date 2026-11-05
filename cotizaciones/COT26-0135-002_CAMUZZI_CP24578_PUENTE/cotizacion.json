@@ -32,7 +32,7 @@
   "CONT": 5,
   "AJ": 1,
   "TRANS": 1,
-  "TC": 1541.43,
+  "TC": 1543.23,
   "TR_ARS": 700000,
   "TR_EMB": 150,
   "TR_F": 1.0,
@@ -219,7 +219,7 @@
      "precio": 0,
      "proveedor": "Costeado por componentes en las filas 1b a 1k y en la MO del filtro (MOF, ARMF)",
      "origen": "—",
-     "fecha": "2026-11-05",
+     "fecha": "2026-10-30",
      "coincide": "sin_ref",
      "diferencia": "el precio del filtro es la suma de sus componentes: ver filas 1b–1k, MOF y ARMF"
     }
@@ -441,7 +441,7 @@
      "precio": 0,
      "proveedor": "SIN PRECIO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-11-05",
+     "fecha": "2026-10-30",
      "coincide": "sin_ref",
      "diferencia": "sin precio de refuerzo 12\" x 6\": la planilla TAVAL/40 pone 150 estimado para el de 6\" x 3\" (auditoría 30-10-2026): pedir a Cintolo"
     }
@@ -613,7 +613,7 @@
      "precio": 0,
      "proveedor": "SIN PRECIO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-11-05",
+     "fecha": "2026-10-30",
      "coincide": "sin_ref",
      "diferencia": "sin junta 6\" #150 cotizada (la de MS Juntas es 8\" #300; la 6\" #150 del catálogo es del cepo): pedir cotización a MS Juntas / Klinger"
     }
@@ -737,7 +737,7 @@
      "precio": 0,
      "proveedor": "SIN PRECIO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-11-05",
+     "fecha": "2026-10-30",
      "coincide": "sin_ref",
      "diferencia": "termovaina 3/4\" NPT AISI 316: la base solo tiene termovainas bridadas 1 1/2\"-2\" o en conjunto con transmisor (otra pieza)"
     }
@@ -1087,10 +1087,10 @@
    "fuentes": [
     {
      "tipo": "cot",
-     "precio": 2549.58,
-     "proveedor": "Proveedor de RX (sin nombre), precio confirmado por Matías el 30-10-2026: 3 visitas × ARS 850.000 + 92 placas × ARS 15.000 = ARS 3.930.000 sin IVA, a BNA oct-2026 (1.541,43)",
+     "precio": 2546.61,
+     "proveedor": "Proveedor de RX (sin nombre), precio confirmado por Matías el 30-10-2026: 3 visitas × ARS 850.000 + 92 placas × ARS 15.000 = ARS 3.930.000 sin IVA, a BNA oct-2026 (1.543,23)",
      "origen": "conocimiento/precios/precios_usuario.csv",
-     "fecha": "2026-11-05",
+     "fecha": "2026-10-30",
      "coincide": "igual"
     },
     {
@@ -1191,9 +1191,9 @@
    "pos": "ARM",
    "grupo": "mo",
    "descripcion": "Horas de montaje en planta (armado, movimientos) (estimadas del antecedente)",
-   "cantidad": 63.1,
+   "cantidad": 65.1,
    "unidad": "h",
-   "especificacion": "63,1 h por skid · mediana de 30 h × 1,03, 126 h × 0,76 (horas por unidad × tamaño)",
+   "especificacion": "65,1 h por skid · mediana de 30 h × 1,03, 126 h × 0,76 (horas por unidad × tamaño) · fijadas en 65,1 h (30-10-2026): el cambio de precios de materiales no cambia el alcance del armado",
    "fuentes": [
     {
      "tipo": "est",

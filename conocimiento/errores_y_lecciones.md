@@ -345,3 +345,8 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 - Corrección: `planilla_excel.escribir` acepta la ruta de salida y la prueba escribe directo en la carpeta temporal; se regeneraron los 6 Excel (mismos precios).
 - Lección: una prueba nunca escribe ni mueve archivos dentro de `cotizaciones/`; después de correr una prueba nueva, mirar `git status`.
 
+
+## 05-11-2026 — Al rehacer las Camuzzi, la fecha de precios viejos pasó a hoy
+- Qué pasó: en `armar_json.py` de la 001 y la 002, `HOY` se usaba como fecha de referencia del ajuste y también como fecha de los precios cargados ese día (RX confirmado el 30-10-2026, renglones sin precio). Al pasar `HOY` al 05-11-2026 para la referencia, esos precios figuraban con fecha 05-11-2026. Además, el dólar de octubre seguía en 1.541,43 (promedio parcial) cuando el mes cerrado da 1.543,23, y las horas de armado de la 002 bajaban de 65,1 a 63,1 h solo porque los materiales salieron más baratos (el estimador escala por costo de materiales). Lo encontró la revisión independiente.
+- Corrección: `HOY` vuelve al 30-10-2026 y la referencia va aparte (31-10-2026, último mes con índices); dólar 1.543,23; horas de armado fijas en 65,1 h.
+- Lección: la fecha de un precio es la de su documento o confirmación, nunca la del día en que se rearma; separar siempre la fecha de referencia del ajuste. Al rehacer una cotización, revisar el dólar del mes cerrado y que las horas no cambien por un cambio de precios.

@@ -189,3 +189,6 @@ Hecha por un agente sobre `armar_json.py` (única fuente: regenera la lista, `co
 - Provemet 29-10-2026: brida WN 10" #600 sch 80 338,45 → 301,86 (cot. 288978 ítem 12); caño 10" sch 80 204,43 → 168,01 (cot. 288974 ítem 12); brida WN 6" #600 sch 80 226,14 → 112,28 (cot. 288978 ítem 8); caño 6" sch 80 90,70 → 74,52 (cot. 288974 ítem 10).
 - Pintura: 58 m² × 1,2 = 69,6 m² a 37,98.
 - Precio unitario 376.069,98 → **375.344,72** (total 2 equipos con flete 756.049,68), borrador.
+- Revisión independiente (05-11-2026): los 8 precios Provemet coinciden con el PDF y la pieza con el plano; el × 1,2 de la pintura está en la planilla de origen (=D×37,98×1,2, «Overspray 20%»). Corregido después: la fecha de los precios que no cambiaron había pasado a hoy (HOY se usaba también como referencia: vuelve a 30-10-2026); dólar de octubre cerrado 1.543,23 (era 1.541,43); caño 10" PSL2 aclarado (igual o superior al A-106 Gr B); la descripción de la pintura dice el 20 % de overspray. A confirmar por Matías: el precio de pintura es de piping y skid y se aplica también al recipiente (25,5 de los 58 m²).
+- Para confirmar: Provemet da el precio con bonificación 4 % por compra total, para las cantidades cotizadas (no las del plano) y con validez hasta el 13-11-2026.
+- Precio unitario final: **375.341,76** (total con flete 756.043,69), borrador.

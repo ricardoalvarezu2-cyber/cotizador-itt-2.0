@@ -34,8 +34,8 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 - Juntas a tope: **15** · RX 0% → placas chicas **0**, grandes **0**
 - Juntas SW, cuplas y olets (LP donde no se puede radiografiar): **0**
-- **Costo por antecedentes.** Por antecedentes: USD 3.163,13 (2 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 210,88/junta a tope
+- **Costo por antecedentes.** Por antecedentes: USD 3.160,94 (2 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 210,73/junta a tope
 
 ## 5. Procedimientos
 

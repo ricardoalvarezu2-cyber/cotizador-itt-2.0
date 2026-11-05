@@ -110,3 +110,6 @@ Siguen abiertos: ARMF (45 h del FM3) y los internos del filtro, que salen de un 
 - Brida WN 4" #150 (pos 5 y carretel pos 2): Renard 35,65 → Provemet cot. 288979 ítem 5, 23,42 (29-10-2026; cotizada para 4 un). Caño 6" sch 40 (pos 15, 15b y 1g): 60,51 → Provemet cot. 288974 ítem 1, 49,48. El 4" sch 40 sigue Renard.
 - Horas de armado (ARM) 65,1 → 63,1 h al volver a correr precotizar.py (estimador de horas).
 - Precio unitario 32.255,75 → **31.823,10** (total con flete 32.427,22), borrador.
+- Revisión independiente (05-11-2026): los 8 precios Provemet coinciden con el PDF y la pieza con el plano; el × 1,2 de la pintura está en la planilla de origen (=D×37,98×1,2, «Overspray 20%»). Corregido después: la fecha de los precios que no cambiaron había pasado a hoy (HOY se usaba también como referencia: vuelve a 30-10-2026); dólar de octubre cerrado 1.543,23 (era 1.541,43); las horas de armado quedan en 65,1 h (el estimador las bajaba solo porque los materiales salieron más baratos).
+- Para confirmar: Provemet da el precio con bonificación 4 % por compra total, para las cantidades cotizadas (no las del plano) y con validez hasta el 13-11-2026.
+- Precio unitario final: **31.858,09** (total con flete 32.461,68), borrador.

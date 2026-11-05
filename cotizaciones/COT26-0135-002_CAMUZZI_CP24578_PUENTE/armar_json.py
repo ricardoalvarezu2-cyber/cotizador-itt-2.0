@@ -16,13 +16,13 @@ auto = json.load(open(C / "cotizacion_auto.json", encoding="utf-8"))
 base = json.load(open(C / "cotizacion.json", encoding="utf-8"))
 plano = {i["pos"]: i for i in auto["items"] if i["grupo"] == "material" and not i["pos"][-1].isalpha() or i["pos"] == "A"}
 
-HOY = "2026-11-05"
+HOY = "2026-10-30"  # fecha de las decisiones de precio (la referencia del ajuste va aparte)
 RENARD = "fuentes_originales/renar_lista_2025-12.xlsx"
 TAVAL40 = "fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/4.Armado de la Oferta Comercial/LM costo Filtros rev.1.xlsx.txt"
 MEGATAP = "fuentes_originales/ofertas_texto/TAVAL/60 - Inarteco - ERPs tipo 2da etapa - Litoral Gas/5.Proveedores 3ros/Megatap PRESUPUESTO ITT SA 27143.pdf.txt"
 QUESADA = "fuentes_originales/ofertas_texto/TAVAL/58 - Inarteco - ERPs tipo 1ra etapa - Litoral Gas/5.Proveedores 3ros/Cotizacion JQ-020-2026.pdf.txt"
 LISTADO = "cotizaciones/COT26-0135-003_CAMUZZI_CP24578_SEPARADOR/pedido/CP24527_mail_2026-10-14/789-2- LISTADO DE MARCAS Y PROVEEDORES CAMUZZI.txt"
-TC_OCT = 1541.43  # BNA oficial venta, promedio de oct-2026 (conocimiento/costos/dolar_mensual.csv)
+TC_OCT = 1543.23  # BNA oficial venta, promedio de oct-2026 (conocimiento/costos/dolar_mensual.csv)
 
 
 def F(tipo, precio, prov, origen, fecha, coincide="similar", dif="", **extra):
@@ -199,7 +199,7 @@ ARS_RX = VISITAS * 850000 + PLACAS * 15000
 X("S04", "RX", "servicio", "Radiografía 100% de las soldaduras a tope (puente y filtro)", 1, "gl",
   f"ET §5.3.1 · {PLACAS} placas (puente: 6 juntas 6\" × 4 + 16 juntas 4\" × 3; filtro: 2 juntas 12\" × 6 + 2 bridas–toberas 6\" × 4) → {VISITAS} visitas de hasta 45 placas; placas originales y digitalizadas para el data book",
   [F("cot", round(ARS_RX / TC_OCT, 2), f"Proveedor de RX (sin nombre), precio confirmado por Matías el 30-10-2026: {VISITAS} visitas × ARS 850.000 + {PLACAS} placas × ARS 15.000 = ARS {ARS_RX:,}".replace(",", ".").replace("(sin nombre). precio", "(sin nombre), precio")
-     + " sin IVA, a BNA oct-2026 (1.541,43)", "conocimiento/precios/precios_usuario.csv", HOY, "igual"),
+     + " sin IVA, a BNA oct-2026 (1.543,23)", "conocimiento/precios/precios_usuario.csv", HOY, "igual"),
    F("ant", 1571.5, "Servicio de radiografía DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD)", "PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT)", "2026-08-31", "similar", "71 placas del cómputo anterior")])
 X("S04L", "LP", "servicio", "Líquidos penetrantes en uniones que no se radiografían (cuplas, toberas injertadas, filetes)", 10, "junta",
   "ET §5.3.1 · puente: 5 cuplas (pos 12, 16 y 11b); filtro: 2 toberas, 3 cuplas (purga y manómetro diferencial)",
@@ -217,6 +217,9 @@ for ident, pos, h, crit in (("S12H", "HH", 29, "20 h del puente (único equipo c
     X(ident, pos, "mo", a["descripcion"].replace("(estimadas del antecedente)", "(estimadas por criterio)"), h, "h", f"{h} h · criterio: {crit}",
       [dict(a["fuentes"][0], diferencia=f"horas por criterio; el antecedente de puentes en serie (TAVAL/43) da {a['cantidad']} h por unidad")])
 a = HORAS["ARM"]
+# 05-11-2026 (revisión independiente): el estimador escala las horas por el costo de materiales y bajaba a 63,1 h solo porque
+# los caños y bridas salieron más baratos (mismo alcance): se mantienen las 65,1 h del cálculo del 30-10-2026
+a = dict(a, cantidad=65.1, especificacion=a["especificacion"].replace("63,1 h", "65,1 h") + " · fijadas en 65,1 h (30-10-2026): el cambio de precios de materiales no cambia el alcance del armado")
 X("S13A", "ARM", "mo", a["descripcion"], a["cantidad"], a["unidad"], a["especificacion"], a["fuentes"])
 X("ARMF", "ARMF", "mo", "Horas de montaje del filtro FM-06 (corte y presentación, PH, pintura y armado final)", 45, "h",
   "Planilla TAVAL/40, hoja Soldadura + HH, filtro FM3 150: corte y presentación 18 h + PH con armado y desarme 18 h + armado final 9 h",

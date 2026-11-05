@@ -12,8 +12,8 @@ C = Path(__file__).resolve().parent
 auto = json.load(open(C / "cotizacion_auto.json", encoding="utf-8"))
 base = json.load(open(C / "cotizacion.json", encoding="utf-8"))
 items = {i["pos"]: i for i in auto["items"]}
-HOY = "2026-11-05"
-TC_OCT = 1541.43  # dólar oficial BNA venta, promedio de 10-2026 (conocimiento/costos/dolar_mensual.csv)
+HOY = "2026-10-30"  # fecha de las decisiones de precio (la referencia del ajuste va aparte)
+TC_OCT = 1543.23  # dólar oficial BNA venta, promedio de 10-2026 (conocimiento/costos/dolar_mensual.csv)
 RENARD = "fuentes_originales/renar_lista_2025-12.xlsx"
 TORMENE = "fuentes_originales/ofertas_texto/ALONZO RED/2 - ERP B° Pilara/5.Proveedores 3ros/OFERTA TA7785A-ITT-REG TA956-NATURGY.pdf.txt"
 CAM14 = ("fuentes_originales/ofertas_texto/CAMUZZI/14_#5067 - (CGP 6910  CGS 6911) - Estaciones de medición y regulación/"
@@ -252,7 +252,7 @@ visitas = math.ceil(placas / 45)
 rx_ars = visitas * 850000 + placas * 15000
 poner("RX", [fuente("cot", round(rx_ars / TC_OCT, 2),
                     f"Proveedor de RX (sin nombre), precio confirmado por Matías el 30-10-2026: {visitas} visitas × ARS 850.000 + {placas} placas × ARS 15.000, "
-                    f"sin IVA, a BNA venta promedio 10-2026 (1.541,43) · END-00572 / END-00571", "conocimiento/precios/precios_usuario.csv", HOY, "igual",
+                    f"sin IVA, a BNA venta promedio 10-2026 (1.543,23) · END-00572 / END-00571", "conocimiento/precios/precios_usuario.csv", HOY, "igual",
                     "placas contadas por junta (37 juntas a tope); confirmar con el mapa de soldaduras"),
              fuente("ant", 2803.5, "Servicio de radiografía DB NDT (2026-08; tarifas.csv): 135 placas + 4 servicios + 1 LP", "PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT)",
                     "2026-08-31", "similar", "tarifa anterior (incluía LP)")],
