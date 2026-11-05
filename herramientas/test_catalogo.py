@@ -79,6 +79,18 @@ igual("cepo: precio maestro del stock × 0,64", factor_cepo("2024-11-01", "stock
 igual("cepo: compra del stock sigue descartada", factor_cepo("2023-06-13", "compra")[0], None)
 igual("cepo: otros × oficial/blue del mes", round(factor_cepo("2024-05-20", "cotización")[0], 3), round(904.79 / 1125.48, 3))
 
+# lectores de cotizaciones de proveedores (05-11-2026): Miyashiro con coma y 3 decimales, Oil Metal con códigos repetidos
+import listas_vendedor as lv  # noqa: E402
+LV = Path(__file__).resolve().parent.parent / "fuentes_originales" / "listas_vendedor" / "2026-11-05"
+ms = list(lv.miyashiro(LV / "miyashiro_cotizacion_50594_2026-11-03.pdf", {}))
+igual("Miyashiro: 3 renglones", len(ms), 3)
+igual("Miyashiro: 9,310 es 9,31", ms[0]["precio"], 9.31)
+igual("Miyashiro: ESP SW → junta espiralada 316", at(ms[1]["descripcion"])[1].get("material"), "AISI 316")
+om = list(lv.oilmetal(LV / "oilmetal_cotizacion_37278_2026-10-30.pdf", {}))
+igual("Oil Metal: 34 ítems, 28 códigos distintos", len(om), 28)
+igual("Oil Metal: GR B7 es A193 B7 (no se mezcla con B7M)", at(om[13]["descripcion"])[1].get("material"), "A193 B7")
+igual("Oil Metal: BWN es WN", at(om[5]["descripcion"])[1].get("tipo"), "wn")
+
 if fallas:
     print(f"FALLAN {len(fallas)}:")
     for f in fallas:

@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-M01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 19.525,74 por equipo · soldadura y servicios calculados USD 13.150,84 · 7 similares (6, 7, 10, 12, 13, 14, 15) · 1 sin precio (5).
+**Resumen:** materiales USD 19.487,02 por equipo · soldadura y servicios calculados USD 13.150,84 · 8 similares (6, 7, 9, 10, 12, 13, 14, 15) · 1 sin precio (5).
 
 
 ## 1. Materiales
@@ -16,10 +16,10 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 6 | Espárrago con 2 tuercas 7/8 x 100 mm · Ø 7/8" | SIMILAR | 8,00 / un | 2026-06-26 · planilla interna | medida: 7/8 x 5 3/4 (pedido 7/8 x 3 7/8) · faltan: material |
 | 7 | Espárrago con 2 tuercas 7/8 x 140 mm · Ø 7/8" | SIMILAR | 8,00 / un | 2026-06-26 · planilla interna | medida: 7/8 x 5 3/4 (pedido 7/8 x 5 1/2) · faltan: material |
 | 8 | Junta espiralada · Ø 4" | IGUAL | 5,56 / un | 2026-02-19 · planilla interna | — |
-| 9 | Niple longitud 100 mm · Ø 1/2" | IGUAL ⚠ | 20,00 / un | 2026-04-22 · planilla interna | — |
+| 9 | Niple longitud 100 mm · Ø 1/2" | SIMILAR ⚠ | 5,00 / un | 2026-10-30 · cotización | el último precio (2,79) se aparta más de 40% de la mediana de sus últimos precios: se usa la mediana 5,00 |
 | 10 | Sockolet · Ø 1/2" | SIMILAR (estimado cepo) ⚠ | 8,49 / un | 2025-03-27 · estimado (cepo) | diametro: 0.75" (pedido 0.5"); material: sin dato (pedido A105); extremos: sin dato (pedido SW/BW); precio esc |
 | 11 | Tapón roscado · Ø 1/2" | IGUAL | 1,90 / un | 2025-12-26 · lista | — |
-| 12 | Tee normal · Ø 4" | SIMILAR | 85,18 / un | 2025-12-26 · lista | material: A234 WPB (no pedido) · faltan: material |
+| 12 | Tee normal · Ø 4" | SIMILAR | 95,34 / un | 2026-10-30 · cotización | material: A234 WPB (no pedido); el último precio (53,92) se aparta más de 40% de la mediana de sus últimos pre · faltan: material |
 | 13 | Tee de reducción · Ø 8" x 4" | SIMILAR | 577,00 / un | 2026-10-30 · cotización | material: A234 WPB (no pedido) · faltan: material |
 | 14 | Perfil UPN 140 (bastidor) | ESTIMADO (por kg) | USD 30,40/m | 2026-02-10 | 16 kg/m (perfiles.csv) × USD 1,90/kg; precio por kg de materia prima (hierro ángulo 3x1/4) +10% por recortes;  |
 | 15 | Válvula esférica · Ø 1/2" | SIMILAR | 36,06 / un | 2025-09-01 · lista | paso: total (no pedido) · faltan: paso |
@@ -47,7 +47,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 164 placas chicas + 0 grandes + 4,11 servicio(s) de RX + 0,29 de LP por equipo = USD 4.612,50 (Servicio de radiografía (Antonelli) (2025-11; antonelli_end_2025-11)).
   Con las tarifas de Antonelli (11-2025) serían USD 4.612,50: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: manifold, 8", 28 u, materiales USD 19.526 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: manifold, 8", 28 u, materiales USD 19.487 por unidad)
 
 - **Ingeniería:** 6,29 h × USD 15/h = USD 94,35 · mediana de 1,0, 7,1, 6,3 h por unidad (repartidas en la serie) · antecedente: Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para bomba P-111 (SK-2111) (6, 1 u, 2026-02-20)
 - **Calidad y dossier:** 2,5 h × USD 15/h = USD 37,50 · mediana de 2,5, 3,2, 2,2 h por unidad (repartidas en la serie) · antecedente: Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para bomba P-111 (SK-2111) (6, 1 u, 2026-02-20)

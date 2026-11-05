@@ -312,7 +312,7 @@
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-11-03",
+     "fecha": "2026-11-05",
      "coincide": "sin_ref",
      "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
@@ -463,12 +463,13 @@
    "fuentes": [
     {
      "tipo": "cot",
-     "precio": 18.04,
-     "proveedor": "planilla de costo ITT (proveedor sin nombre) · BRI-01161",
+     "precio": 16.42,
+     "proveedor": "Oil Metal (cód. AC0150BSW2R505) · BRI-01161",
      "codigo": "BRI-01161",
-     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "origen": "fuentes_originales/listas_vendedor/2026-11-05/oilmetal_cotizacion_37278_2026-10-30.pdf · código AC0150BSW2R505",
      "fecha": "2026-10-30",
-     "coincide": "igual"
+     "coincide": "similar",
+     "diferencia": "el último precio (9,40) se aparta más de 40% de la mediana de sus últimos precios: se usa la mediana 16,42"
     }
    ]
   },
@@ -550,14 +551,14 @@
    "faltan_datos": [],
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 6.0,
-     "proveedor": "MS · JUN-02769",
+     "tipo": "cot",
+     "precio": 5.5,
+     "proveedor": "Oil Metal (cód. JUE0200CW03060) · JUN-02769",
      "codigo": "JUN-02769",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\PAMPA ENERGIA\\7- Licitacion contrato Marco Skid PAD Rincon de Aranda · 4.Armado de la Oferta Comercial/Cot Skid Manifolds Colectores RDA Contrato Marco (2da RDA).xlsx.",
-     "fecha": "2026-08-14",
+     "origen": "fuentes_originales/listas_vendedor/2026-11-05/oilmetal_cotizacion_37278_2026-10-30.pdf · código JUE0200CW03060",
+     "fecha": "2026-10-30",
      "coincide": "similar",
-     "diferencia": "diametro: 2\" (pedido 1.5\"); material: AISI 316 (no pedido); extremos: sin dato (pedido RF)"
+     "diferencia": "diametro: 2\" (pedido 1.5\"); material: AISI 316 (no pedido); extremos: sin dato (pedido RF); el último precio (1,41) se aparta más de 40% de la mediana de sus últimos precios: se usa la mediana 5,50"
     }
    ]
   },
@@ -579,12 +580,12 @@
    "faltan_datos": [],
    "fuentes": [
     {
-     "tipo": "est",
-     "precio": 42.44,
-     "proveedor": "no dice · JUN-02764",
+     "tipo": "cot",
+     "precio": 9.31,
+     "proveedor": "Miyashiro (MS Juntas) (cód. 2-031-0039) · JUN-02764",
      "codigo": "JUN-02764",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\3-YPF Separador Bifasicos - Separadores para satelites · 5.Proveedores 3ros/YPF - Sep Bifasico - 2591 - 21.2 - precios compras V1.xlsx.txt",
-     "fecha": "2025-03-27",
+     "origen": "fuentes_originales/listas_vendedor/2026-11-05/miyashiro_cotizacion_50594_2026-11-03.pdf · código 2-031-0039",
+     "fecha": "2026-11-03",
      "coincide": "similar",
      "diferencia": "material: AISI 316 (no pedido); extremos: sin dato (pedido RF)"
     }
@@ -612,9 +613,9 @@
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-11-03",
+     "fecha": "2026-11-05",
      "coincide": "sin_ref",
-     "diferencia": "El más parecido es de otro diámetro (2\") (JUN-02769 JUNTA ESPIRALADA 2\" - 300LB, AISI 316 ESP: 4.5mm C, USD 6,00): no sirve como precio"
+     "diferencia": "El más parecido es de otro diámetro (12\") (JUN-02764 JUNTA ESPIRALADA SW AC AISI 316L + GRAFITO Ø12\" #3, USD 9,31): no sirve como precio"
     }
    ]
   },
@@ -637,12 +638,12 @@
    "faltan_datos": [],
    "fuentes": [
     {
-     "tipo": "stock",
-     "precio": 5.6,
-     "proveedor": "Stock ITT (cód. ACI040FN1ICK100) · NIP-01794",
+     "tipo": "cot",
+     "precio": 8.15,
+     "proveedor": "Oil Metal (cód. NP0150NN0100806) · NIP-01794",
      "codigo": "NIP-01794",
-     "origen": "fuentes_originales/stock_valorizado_2024-11.xlsx · código ACI040FN1ICK100",
-     "fecha": "2024-11-01",
+     "origen": "fuentes_originales/listas_vendedor/2026-11-05/oilmetal_cotizacion_37278_2026-10-30.pdf · código NP0150NN0100806",
+     "fecha": "2026-10-30",
      "coincide": "igual"
     }
    ]
@@ -726,12 +727,13 @@
    "fuentes": [
     {
      "tipo": "cot",
-     "precio": 11.0,
-     "proveedor": "planilla de costo ITT (proveedor sin nombre) · NIP-01782",
+     "precio": 8.29,
+     "proveedor": "Oil Metal (cód. NP0075NN0100706) · NIP-01782",
      "codigo": "NIP-01782",
-     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "origen": "fuentes_originales/listas_vendedor/2026-11-05/oilmetal_cotizacion_37278_2026-10-30.pdf · código NP0075NN0100706",
      "fecha": "2026-10-30",
-     "coincide": "igual"
+     "coincide": "similar",
+     "diferencia": "el último precio (3,80) se aparta más de 40% de la mediana de sus últimos precios: se usa la mediana 8,29"
     }
    ]
   },

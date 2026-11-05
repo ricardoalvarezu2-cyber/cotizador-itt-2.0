@@ -337,7 +337,7 @@
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-11-03",
+     "fecha": "2026-11-05",
      "coincide": "sin_ref",
      "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
@@ -449,13 +449,14 @@
    "faltan_datos": [],
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 20.0,
-     "proveedor": "Antecedentes puentes Taval/CGC s2000 · NIP-03365",
+     "tipo": "cot",
+     "precio": 5.0,
+     "proveedor": "Oil Metal (cód. NP0050NN0100706) · NIP-03365",
      "codigo": "NIP-03365",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\55- Tecpetrol Puentes de Producción PPar Valvula y Puente PR 54942 · 7.Propuesta Comercial (envío al Cliente)/Puente de producción Tec Conv y NOC versión 3.xlsx",
-     "fecha": "2026-04-22",
-     "coincide": "igual"
+     "origen": "fuentes_originales/listas_vendedor/2026-11-05/oilmetal_cotizacion_37278_2026-10-30.pdf · código NP0050NN0100706",
+     "fecha": "2026-10-30",
+     "coincide": "similar",
+     "diferencia": "el último precio (2,79) se aparta más de 40% de la mediana de sus últimos precios: se usa la mediana 5,00"
     }
    ]
   },
@@ -538,14 +539,14 @@
    ],
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 85.18,
-     "proveedor": "Renard (cód. 3803) · ABW-00408",
+     "tipo": "cot",
+     "precio": 95.34,
+     "proveedor": "Oil Metal (cód. AC0400-4K280527) · ABW-00408",
      "codigo": "ABW-00408",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3803",
-     "fecha": "2025-12-26",
+     "origen": "fuentes_originales/listas_vendedor/2026-11-05/oilmetal_cotizacion_37278_2026-10-30.pdf · código AC0400-4K280527",
+     "fecha": "2026-10-30",
      "coincide": "similar",
-     "diferencia": "material: A234 WPB (no pedido)"
+     "diferencia": "material: A234 WPB (no pedido); el último precio (53,92) se aparta más de 40% de la mediana de sus últimos precios: se usa la mediana 95,34"
     }
    ]
   },

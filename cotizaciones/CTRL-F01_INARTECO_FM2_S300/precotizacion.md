@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-F01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 1.596,59 por equipo · soldadura y servicios calculados USD 1.216,77 · 16 similares (4, 4b, 5, 5b, 10, 11, 14, 15, 16, 17, 18, 20, 21, 24, 26, 27) · 8 sin precio (6, 7, 12, 13, 19, 22, 23, 25).
+**Resumen:** materiales USD 1.581,85 por equipo · soldadura y servicios calculados USD 1.216,77 · 16 similares (4, 4b, 5, 5b, 10, 11, 14, 15, 16, 17, 18, 20, 21, 24, 26, 27) · 8 sin precio (6, 7, 12, 13, 19, 22, 23, 25).
 
 
 ## 1. Materiales
@@ -10,7 +10,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 |---|---|---|---|---|---|
 | 1 | Brida slip on RF · Ø 2" | IGUAL | 15,70 / un | 2025-12-26 · lista | — |
 | 2 | Brida slip on RF · Ø 4" | IGUAL | 51,35 / un | 2025-12-26 · lista | — |
-| 3 | Brida ciega · Ø 4" | IGUAL | 60,12 / un | 2025-12-26 · lista | — |
+| 3 | Brida ciega · Ø 4" | IGUAL | 45,38 / un | 2026-10-30 · cotización | — |
 | 4 | Caño sin costura longitud 150 mm · Ø 2" | SIMILAR | 13,61 / m | 2026-10-29 · cotización | material: A106 B (pedido A53) |
 | 5 | Caño sin costura longitud 400 mm · Ø 4" | SIMILAR | 34,34 / m | 2025-12-26 · lista | material: A106 B (pedido A53) |
 | 6 | Tapón roscado · Ø 1/2" | **SIN PRECIO** | — | — | pedir cotización |
@@ -60,7 +60,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 7 placas chicas + 0 grandes + 0,50 servicio(s) de RX + 0,50 de LP por equipo = USD 595,00 (Servicio de radiografía (Antonelli) (2025-11; antonelli_end_2025-11)).
   Con las tarifas de Antonelli (11-2025) serían USD 595,00: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: filtro, 4", 2 u, materiales USD 1.597 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: filtro, 4", 2 u, materiales USD 1.582 por unidad)
 
 - ⚠ **No hay antecedente del mismo tipo (filtro) ni de uno afín: no se suman horas.** Cargarlas a mano con el detalle de actividades. Candidatos (de otro tipo, no usar sin revisar): TECPETROL/13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · Trampa lanzadora 20x16 (Serie 600 A6C) (20 / 16, 1 u, 2026-07-20) | TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E · Trampa lanzadora 8x6 #300 (LS-122/124) (8 / 6 (barrel 24 x 20 en tabla soldadura), 2 u, 2025-12-10) | Sacde/20 - SE-3121-ASTORD-014 - TK DE CHOQUE · Tanque de choque Ø36in x 5000 mm (Sacde para TGS), A-516 Gr7 (36, 1 u, 2026-03-03)
 

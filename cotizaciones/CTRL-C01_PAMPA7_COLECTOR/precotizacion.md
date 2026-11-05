@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-C01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 27.095,51 por equipo · soldadura y servicios calculados USD 17.580,35 · 17 similares (9, 10, 11, 12, 14, 15, 16, 17, 18, 23, 24, 25, 26, 27, 32, 34, 35) · 5 sin precio (13, 22, 28, 31, 33).
+**Resumen:** materiales USD 26.558,49 por equipo · soldadura y servicios calculados USD 17.580,35 · 18 similares (9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 23, 24, 25, 26, 27, 32, 34, 35) · 4 sin precio (22, 28, 31, 33).
 
 
 ## 1. Materiales
@@ -10,24 +10,24 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 |---|---|---|---|---|---|
 | 1 | Brida welding neck RF · Ø 6" | IGUAL | 114,39 / un | 2025-12-26 · lista | — |
 | 2 | Brida welding neck RF · Ø 3" | IGUAL | 40,98 / un | 2025-12-26 · lista | — |
-| 3 | Brida welding neck RF · Ø 2" | IGUAL | 15,63 / un | 2026-10-30 · cotización | — |
+| 3 | Brida welding neck RF · Ø 2" | IGUAL | 12,47 / un | 2026-10-30 · cotización | — |
 | 4 | Brida socket weld RF · Ø 1" | IGUAL | 17,96 / un | 2025-12-26 · lista | — |
 | 5 | Brida ciega RF · Ø 1" | IGUAL | 16,46 / un | 2025-12-26 · lista | — |
 | 6 | Brida ciega RF · Ø 2" | IGUAL | 18,50 / un | 2026-06-26 · planilla interna | — |
 | 7 | Caño sin costura · Ø 3" | IGUAL | 25,08 / m | 2025-12-26 · lista | — |
 | 8 | Caño sin costura · Ø 6" | IGUAL | 49,48 / m | 2026-10-29 · cotización | — |
-| 9 | Niple caño sin costura longitud 150 mm · Ø 3/ | SIMILAR | 11,00 / un | 2026-10-30 · cotización | largo_mm: 100 (pedido 150) |
-| 10 | Niple caño sin costura longitud 150 mm · Ø 1" | SIMILAR | 16,94 / un | 2026-10-30 · cotización | diametro: 0.75" (pedido 1"); largo_mm: 100 (pedido 150); precio escalado por diámetro (1" ÷ 0,75")^1,5 = × 1,5 |
+| 9 | Niple caño sin costura longitud 150 mm · Ø 3/ | SIMILAR | 8,50 / un | 2026-10-30 · cotización | largo_mm: 100 (pedido 150); el último precio (3,80) se aparta más de 40% de la mediana de sus últimos precios: |
+| 10 | Niple caño sin costura longitud 150 mm · Ø 1" | SIMILAR | 13,09 / un | 2026-10-30 · cotización | diametro: 0.75" (pedido 1"); largo_mm: 100 (pedido 150); el último precio (3,80) se aparta más de 40% de la me |
 | 11 | Junta espiralada RF espesor 4.5 mm con anillo | SIMILAR | 15,00 / un | 2025-12-10 · planilla interna | extremos: sin dato (pedido RF) |
-| 12 | Junta espiralada RF espesor 4.5 mm con anillo | SIMILAR (estimado cepo) ⚠ | 12,13 / un | 2025-03-27 · estimado (cepo) | diametro: 4" (pedido 3"); extremos: sin dato (pedido RF) |
-| 13 | Junta espiralada RF espesor 4.5 mm con anillo | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (0.75") (JUN-02760, USD 2,00): pedir cotización |
+| 12 | Junta espiralada RF espesor 4.5 mm con anillo | SIMILAR | 4,32 / un | 2026-10-30 · cotización | extremos: sin dato (pedido RF) |
+| 13 | Junta espiralada RF espesor 4.5 mm con anillo | SIMILAR | 4,32 / un | 2026-10-30 · cotización | diametro: 3" (pedido 2"); extremos: sin dato (pedido RF) |
 | 14 | Junta espiralada RF espesor 4.5 mm con anillo | SIMILAR | 3,00 / un | 2025-12-10 · planilla interna | extremos: sin dato (pedido RF) |
 | 15 | Espárrago con 2 tuercas zincado y bicromatado | SIMILAR | 10,00 / un | 2026-02-19 · planilla interna | medida: 3/4 x 4 7/8 (pedido 3/4 x 6) |
 | 16 | Espárrago con 2 tuercas zincado y bicromatado | SIMILAR | 10,00 / un | 2026-02-19 · planilla interna | medida: 3/4 x 4 7/8 (pedido 3/4 x 5) |
 | 17 | Espárrago con 2 tuercas zincado y bicromatado | SIMILAR | 10,00 / un | 2026-02-19 · planilla interna | medida: 5/8 x 4 3/8 (pedido 5/8 x 4) |
-| 18 | Espárrago con 2 tuercas zincado y bicromatado | SIMILAR | 10,00 / un | 2026-02-19 · planilla interna | medida: 5/8 x 4 3/8 (pedido 5/8 x 3 1/2) |
+| 18 | Espárrago con 2 tuercas zincado y bicromatado | SIMILAR | 1,04 / un | 2026-10-30 · cotización | material: A193 B7 (pedido A194 2H) |
 | 19 | Tee de reducción · Ø 3" x 2" | IGUAL | 64,11 / un | 2026-06-26 · planilla interna | — |
-| 20 | Tee normal · Ø 3" | IGUAL | 74,75 / un | 2026-10-30 · cotización | — |
+| 20 | Tee normal · Ø 3" | IGUAL | 38,72 / un | 2026-10-30 · cotización | — |
 | 21 | Tee de reducción · Ø 6" x 3" | IGUAL | 164,91 / un | 2026-06-26 · planilla interna | — |
 | 22 | Entrerosca · Ø 3/4" | **SIN PRECIO** | — | — | pedir cotización |
 | 23 | Sockolet · Ø 3/4" | SIMILAR | 18,37 / un | 2025-12-23 · planilla interna | diametro: 0.5" (pedido 0.75"); extremos: sin dato (pedido SW/BW); precio escalado por diámetro (0,75" ÷ 0,5")^ |
@@ -69,7 +69,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 243 placas chicas + 0 grandes + 6,11 servicio(s) de RX + 1,44 de LP por equipo = USD 4.497,50 (Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))).
   Con las tarifas de Antonelli (11-2025) serían USD 7.347,22: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: manifold, 6", 18 u, materiales USD 27.096 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: manifold, 6", 18 u, materiales USD 26.558 por unidad)
 
 - **Ingeniería:** 0,82 h × USD 15/h = USD 12,30 · mediana de 1,1, 0,5 h por unidad (repartidas en la serie) · antecedente: TECPETROL/9. CM SKID MANIFOLD PAD S-600 · Skid Manifold PAD S600 clase A6BM (sch 40) (4 (colector 8), 28 u, 2026-01-26) · rango del mismo tipo 1,14–9 h
 - **Calidad y dossier:** 12,5 h × USD 15/h = USD 187,50 · mediana de 24,0, 1,0 h por unidad (repartidas en la serie) · antecedente: TECPETROL/9. CM SKID MANIFOLD PAD S-600 · Skid Manifold PAD S600 clase A6BM (sch 40) (4 (colector 8), 28 u, 2026-01-26) · rango del mismo tipo 18–24 h

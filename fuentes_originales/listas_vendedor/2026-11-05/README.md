@@ -1,0 +1,21 @@
+# Listas cargadas el 05-11-2026
+
+Matías Russo pidió cargar "todas estas listas de precios, son precios actualizados" de la carpeta de Google Drive "Precios de
+materiales" (de Ricardo Álvarez, https://drive.google.com/drive/folders/1gCEHg1TNIoa5UVKoa4x7AM8buw3Yjyck). De sus 9 archivos,
+7 ya estaban en el repositorio (Renard 27-05-2025, Provemet 236623, 288974, 288977, 288978, 288979 y "Cintolo Lista 29-2.xlsx",
+que es el mismo archivo que `2026-10-28/cintolo_lista_29-1_2025-02-17.xlsx`: mismo tamaño y adentro dice "Lista 29.1, vigencia
+17/02/2025"). Se cargan los 2 nuevos:
+
+| Archivo | Original en Drive | Fecha | Proveedor | Contenido |
+|---|---|---|---|---|
+| miyashiro_cotizacion_50594_2026-11-03.pdf | MIYASHIRO COTIZACION_N§_050594.pdf | 03-11-2026 | Miyashiro / MS Juntas (Eduardo Quinteros, equinteros@juntasms.com, +54 11 4290-1798) para Taval | 3 renglones: juntas espiraladas SW 316LFG 12" y 8" #300, kit aislante tipo F doble 6" #300. USD sin IVA (el IVA 21% va aparte); TC usado 1.545,50; validez 15 días (vence 18-11-2026); pago echeq 15 días / 60 días FF |
+| oilmetal_cotizacion_37278_2026-10-30.pdf | oil metal 37278_TAVAL.pdf | 30-10-2026 | Oil Metal S.A. (Darío Fernando Villafañez, pablo.villafanez@oilmetal.com.ar, 011-3764-1628) para Taval | 34 ítems (28 códigos distintos): tees y reducciones BW Sch 80 WPB, bridas WN/ciegas/SW #300 A105, espárragos B7 zincados con tuercas, juntas espiraladas 316L+grafito, niples NPT, tapa hexagonal, weldolet y sockolets. USD, "no incluyen impuestos"; vigencia 09-11-2026; cta. cte. 30 días. Brida 4" WN #300 con entrega a 90 días; brida 8" WN "alternativa en stock, ver schedule" |
+
+Las lee `herramientas/listas_vendedor.py` (lectores `miyashiro` y `oilmetal`, nuevos el 05-11-2026): cada renglón se controla
+contra su importe (cantidad × precio), las abreviaturas del proveedor se pasan a texto que entiende el catálogo y el original
+queda entre paréntesis (ESP SW → junta espiralada SW, 316LFG → AISI 316L + grafito, BWN → WN, BCI → ciega, BSW → SW,
+GR B7 → ASTM A193 B7, CW/CWI → con anillo exterior / exterior e interior).
+
+**Para revisar:** la tee 3" Sch 80 WPB (ABW-00396) pasa de 74,75 (planilla YPF Lic 66944 confirmada por Matías el 30-10-2026)
+a 38,72 de Oil Metal, con la misma fecha; varias juntas espiraladas y niples bajan 60–80 % contra los precios anteriores
+(p. ej. junta 2" #300 de 6,00 a 1,41; niple 1/2" Sch 160 de 20,00 a 2,79). Se cargó lo que dice el documento.
