@@ -82,6 +82,9 @@ def escribir(cfg, carpeta, idx_rows, ruta=None):
     p, eq = cfg["parametros"], cfg["equipo"]
     atributos_plano.atributos_items(carpeta, cfg)
     CAT = {r["codigo"]: r for r in csv.DictReader(open(RAIZ / "conocimiento" / "precios" / "catalogo_materiales.csv", encoding="utf-8"))}
+    fus = RAIZ / "conocimiento" / "precios" / "catalogo_codigos_fusionados.csv"
+    if fus.exists():  # códigos fusionados al cambiar una regla del catálogo (05-11-2026)
+        CAT.update({x["codigo_viejo"]: CAT[x["codigo_vigente"]] for x in csv.DictReader(open(fus, encoding="utf-8")) if x["codigo_vigente"] in CAT})
     mat = [i for i in cfg["items"] if i["grupo"] == "material"]
     srv = [i for i in cfg["items"] if i["grupo"] != "material"]
     try:

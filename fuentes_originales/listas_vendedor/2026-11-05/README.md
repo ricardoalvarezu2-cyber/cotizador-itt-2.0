@@ -45,3 +45,10 @@ Matías pasó el mail «RE: COTIZACION JUNTAS - YPF» con 4 cotizaciones de Miya
 | miyashiro_cotizacion_50630_2026-11-05.pdf | (sin ref.) | mismos ítems que la 50629 en mayor cantidad (kit 3": 14 un a 7 días, resto 15/20 días) |
 
 Los lee `listas_vendedor.py` (lector `miyashiro`; se sumaron las abreviaturas «ESP SWI» = con anillo interior, «KIT AISL.D» y «MIC.» = micarta). Al catálogo: 7 ítems nuevos y 2 actualizados. Las juntas «3/4/600» (aptas #300/#400/#600) quedan sin serie en el catálogo, que admite una sola; la junta 8" #600 con anillo interior cae en el mismo código que una con anillo exterior (el catálogo no separa los anillos: pendiente ya anotado).
+
+## Juntas separadas por anillos (05-11-2026, aprobado por Matías)
+
+Desde esta carga el catálogo separa las juntas espiraladas por anillos (ext., int., ext. e int.) y por 316 / 316L, y carga las
+aptas para varias series en cada una (así deja de valer lo de arriba: "#300-600" ya no queda solo en la 300). Convenciones:
+MS «SW AC» = anillo exterior, «SWI AC» = interior y exterior; Oil Metal «CW» / «CWI» igual; acero zincado = anillo exterior.
+Códigos que se fusionaron con otro quedan en `conocimiento/precios/catalogo_codigos_fusionados.csv`.

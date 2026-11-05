@@ -126,7 +126,7 @@ ABREV = [(r"\besf\b", "valvula esferica"), (r"\bpt\b", "paso total"), (r"\bred c
          (r"\bescl\b", "valvula esclusa"), (r"\bbloq\.? y (pga|purga)\b", "bloqueo y purga"), (r"\bvalv byp\b|\bbyp\b", "valvula bloqueo y purga"),
          (r"\bept\b", "valvula esferica paso total"), (r"\bvalv reg\b", "valvula reguladora"), (r"a/fuego|a/fgo|\ba/f\b|\baf\b", "antifuego"),
          (r"\bgda\b", "guiada"), (r"\ba-(?=\d{2,3}\b)", "a"), (r"\bunion doble golpe\b", "union doble a golpe"),
-         (r"\besp\.? swi?\b", "junta espiralada"), (r"scrapper", "scraper"), (r"\bp\.t\.", "paso total"), (r"\bp\.r\.", "paso reducido"),
+         (r"\besp\.? (swi?)\b", r"junta espiralada \1"), (r"\bjuntas espiraladas\b", "junta espiralada"), (r"\bjunta esp (?=.*\b(?:cwi?|swi?)\b)", "junta espiralada "), (r"scrapper", "scraper"), (r"\bp\.t\.", "paso total"), (r"\bp\.r\.", "paso reducido"),
          (r"\bwnrf\b", "wn rf"), (r"\bsorf\b", "so rf"), (r"\bswrf\b", "sw rf"), (r"\bblrf\b", "bl rf"), (r"\bwnrtj\b", "wn rtj")]
 # Otros: el tipo es la pieza (antes eran las tres primeras palabras y "tapa de cierre rápido #900" no se comparaba por Ø ni
 # serie; CTRL-TS01)
@@ -276,8 +276,8 @@ def schedule_de_espesor(nps, esp):
 
 def schedule_de(t, diam=None):
     """XS = Sch 80 solo hasta 8" y STD = Sch 40 solo hasta 10" (ASME B36.10); más grandes son espesores distintos."""
-    s = primero(r"\bsch\.? ?(\d{2,3}s?|xxs|xs|std)\b", t) or primero(r"\b(xxs|xs|std|extra pesado)\b", t)
-    s = "xs" if s == "extra pesado" else s
+    s = primero(r"\bsch\.? ?(\d{2,3}s?|xxs|xs|std)\b", t) or primero(r"\b(xxs|xs|std|extra pesado|standard(?! port| bore))\b", t)
+    s = "xs" if s == "extra pesado" else "std" if s == "standard" else s  # "2\" STANDARD" (Cintolo) es Std (05-11-2026)
     if s == "xs" and (diam is None or diam <= 8):
         return "80"
     if s == "std" and (diam is None or diam <= 10):
@@ -414,6 +414,8 @@ def atributos(t, fam, proveedor=""):
             d["medida"] = primero(r"\b((?:bx|rx|r) ?-?\d{2,3})\b", t).replace(" ", "").replace("-", "").upper()
         if d["tipo"] in ("junta espiralada", "espiralada"):
             d["medida"] = anillos_junta(t)
+            if d.get("material") == "AISI 316" and re.search(r"\b316 ?l(?:fg)?\b|316l ?\+", t) and not re.search(r"\b316/316l|aisi ?316(?! ?l)", t):
+                d["material"] = "AISI 316L"  # 316L no reemplaza a 316 (compatibilidad): en el mismo código ocultaba al 316 (05-11-2026)
             multi = series_multiples(t)
             if multi:
                 d["serie"], d["_series"] = multi[0], multi
@@ -457,9 +459,11 @@ def anillos_junta(t):
     """Anillos de una junta espiralada (05-11-2026, Matías: separar las juntas por anillos). Devuelve "anillos ext. e int.",
     "anillo ext.", "anillo int." o "" si el texto no lo dice. Convenciones de los proveedores: MS Juntas «SW AC» = con anillo
     centrador (exterior) y «SWI AC» = interior y exterior; Oil Metal «CW» = exterior y «CWI» = interior y exterior; planillas
-    «c/anillo ext ... a.int» = los dos."""
-    ext = re.search(r"anillo\s?(?:ext|centrador)|\bcwi?\b|\bswi? (?:c/anillo int\.? )?ac\b|\banillo exterior|\b(?:interior|int\.?) y ext|\bext\.? e int", t)
-    inn = re.search(r"anillo\s?int|\ba\.?\s?int\b|\bcwi\b|\bswi\b|anillo interior|interior y exterior|ext\.? e int", t)
+    «c/anillo ext ... a.int» = los dos; MS «c/ani cent int ... + ext» = los dos. El acero zincado (ac. cab.
+    zincado, a°c° zn) es siempre material del anillo exterior: si figura, la junta lleva anillo exterior (auditoría 05-11-2026).
+    «SW»/«SWI» sin «AC» no alcanza para asegurar el anillo exterior: queda como lo que dice."""
+    ext = re.search(r"zinc|\bani(?:l|llo)?\.? ?cent|\+ ext\b|anillo\s?(?:ext|centrador)|\bcwi?\b|\bswi? (?:c/anillo int\.? )?ac\b|\banillo exterior|\b(?:interior|int\.?) y ext|\bext\.? e int", t)
+    inn = re.search(r"\bcent(?:rador)? int\b|anillo\s?int|\ba\.?\s?int\b|\bcwi\b|\bswi\b|anillo interior|interior y exterior|ext\.? e int", t)
     if ext and inn:
         return "anillos ext. e int."
     return "anillo ext." if ext else "anillo int." if inn else ""
@@ -468,7 +472,7 @@ def anillos_junta(t):
 def series_multiples(t):
     """Juntas aptas para varias series ("3/4/600" de MS Juntas = #300, #400 y #600; "#300-600" de Oil Metal): en esas medidas la junta
     es la misma (ASME B16.20), así que el precio vale para cada serie (05-11-2026)."""
-    m = re.search(r"(?<![\d/])([1-9])/([1-9])/([1-9])00\b", t)
+    m = re.search(r"(?<![\d/])([3469])/([3469])/([3469])00\b", t)
     if m:
         return [f"{x}00" for x in m.groups()]
     m = re.search(r"#\s?(150|300|400|600|900)\s?-\s?(300|400|600|900|1500)\b", t)
@@ -863,6 +867,12 @@ def _main():
                 c = cod_prev.get((h["descripcion"], h["proveedor"], h["fecha"], h["archivo_origen"]))
                 if c and c not in vivos:
                     candidatos[c][k] += 1
+        destino = defaultdict(lambda: defaultdict(int))  # código viejo → clave nueva (con o sin código) → precios
+        for k, hs in grupos.items():
+            for h in hs:
+                c = cod_prev.get((h["descripcion"], h["proveedor"], h["fecha"], h["archivo_origen"]))
+                if c and c not in vivos:
+                    destino[c][k] += 1
         for c, ks in sorted(candidatos.items()):
             k = max(ks, key=lambda x: (ks[x], x))
             if k not in registro:
@@ -873,6 +883,25 @@ def _main():
         if k not in registro:
             ultimo += 1
             registro[k] = f"{grupos[k][0]['familia']}-{ultimo:05d}"
+    # Códigos fusionados (05-11-2026, auditoría): si los precios de un código pasan todos a una clave que ya tenía código, el viejo
+    # no desaparece: queda como equivalencia (catalogo_codigos_fusionados.csv) y verificar_computo / la planilla lo resuelven.
+    fus_ruta = PRECIOS / "catalogo_codigos_fusionados.csv"
+    fusion = {r["codigo_viejo"]: r for r in csv.DictReader(open(fus_ruta, encoding="utf-8"))} if fus_ruta.exists() else {}
+    vigentes = {registro[k] for k in grupos}
+    if hist_prev.exists():
+        for c, ks in sorted(destino.items()):
+            if c not in vigentes:
+                k = max(ks, key=lambda x: (ks[x], x))
+                fusion[c] = {"codigo_viejo": c, "codigo_vigente": registro[k], "fecha": __import__("datetime").date.today().isoformat(),
+                             "motivo": "sus precios pasaron a otra clave al cambiar la regla del catálogo"}
+    for r in fusion.values():  # cadenas viejo → intermedio → vigente
+        while r["codigo_vigente"] not in vigentes and r["codigo_vigente"] in fusion and fusion[r["codigo_vigente"]] is not r:
+            r["codigo_vigente"] = fusion[r["codigo_vigente"]]["codigo_vigente"]
+    fusion = {c: r for c, r in fusion.items() if c not in vigentes}
+    with escribir(fus_ruta, newline="") as f:
+        w = csv.DictWriter(f, fieldnames=["codigo_viejo", "codigo_vigente", "fecha", "motivo"])
+        w.writeheader()
+        w.writerows(sorted(fusion.values(), key=lambda r: r["codigo_viejo"]))
     with escribir(reg_ruta, newline="") as f:
         w = csv.writer(f)
         w.writerow(["codigo", "clave"])

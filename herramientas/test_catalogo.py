@@ -80,7 +80,10 @@ igual("cepo: compra del stock sigue descartada", factor_cepo("2023-06-13", "comp
 igual("cepo: otros × oficial/blue del mes", round(factor_cepo("2024-05-20", "cotización")[0], 3), round(904.79 / 1125.48, 3))
 
 # juntas espiraladas separadas por anillos y aptas para varias series (05-11-2026)
-for txt, esperado in [('JUNTA ESPIRALADA SW AC 316LFG Ø2" 3/4/600', "anillo ext."), ('ESP SWI AC 316LFG 316L Ø8" 600', None),
+for txt, esperado in [('JUNTA ESPIRALADA SW AC 316LFG Ø2" 3/4/600', "anillo ext."), ('ESP SWI AC 316LFG 316L Ø8" 600', "anillos ext. e int."),
+                      ('ESP SW AC 316LFG Ø8" 600', "anillo ext."), ('JUNTA ESPIRALADA C/ANI CENT INT 316LSS + EXT A°C° Zn Ø2" #300', "anillos ext. e int."),
+                      ('JUNTA ESPIRALADA C/ANILLO INT. | 6" | 150# | AISI 316 / GRAFITO | AC CAB. ZINCADO', "anillos ext. e int."),
+                      ('4 juntas espiraladas SWI AC 316 2" 600', "anillos ext. e int."), ('JUNTA ESP 10 150 TIPO CW', "anillo ext."),
                       ('JUNTA ESPIRALADA C/ANILLO EXT AC ZINC/ A.INT AI | 3" | 150# | AISI 316 / GRAFITO', "anillos ext. e int."),
                       ('Junta espiralada RF espesor 4.5 mm con anillo interior y exterior 3" #300 AISI 316', "anillos ext. e int."),
                       ('JUNTA ESPIRALADA C/ANILLO INT. | 6" | 150# | AISI 316 / GRAFITO', "anillo int."),
@@ -88,6 +91,7 @@ for txt, esperado in [('JUNTA ESPIRALADA SW AC 316LFG Ø2" 3/4/600', "anillo ext
     if esperado:
         igual(f"anillos: {txt[:40]}", at(txt)[1].get("medida"), esperado)
 igual("3/4/600 = series 300, 400 y 600", at('JUNTA ESPIRALADA SW AC 316LFG Ø3" 3/4/600')[1].get("_series"), ["300", "400", "600"])
+igual("1/2/300 no es serie", at('JUNTA ESPIRALADA 1/2/300')[1].get("_series"), None)
 igual("#300-600 = 300, 400 y 600", at('JUNTA ESPIRALADA CWI 316L+FG/CS 3" #300-600')[1].get("_series"), ["300", "400", "600"])
 
 # lectores de cotizaciones de proveedores (05-11-2026): Miyashiro con coma y 3 decimales, Oil Metal con códigos repetidos
@@ -96,7 +100,7 @@ LV = Path(__file__).resolve().parent.parent / "fuentes_originales" / "listas_ven
 ms = list(lv.miyashiro(LV / "miyashiro_cotizacion_50594_2026-11-03.pdf", {}))
 igual("Miyashiro: 3 renglones", len(ms), 3)
 igual("Miyashiro: 9,310 es 9,31", ms[0]["precio"], 9.31)
-igual("Miyashiro: ESP SW → junta espiralada 316", at(ms[1]["descripcion"])[1].get("material"), "AISI 316")
+igual("Miyashiro: ESP SW 316LFG → junta espiralada 316L (no 316)", at(ms[1]["descripcion"])[1].get("material"), "AISI 316L")
 om = list(lv.oilmetal(LV / "oilmetal_cotizacion_37278_2026-10-30.pdf", {}))
 igual("Oil Metal: 34 ítems, 28 códigos distintos", len(om), 28)
 igual("Oil Metal: GR B7 es A193 B7 (no se mezcla con B7M)", at(om[13]["descripcion"])[1].get("material"), "A193 B7")

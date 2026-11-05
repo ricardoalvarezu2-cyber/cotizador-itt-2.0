@@ -403,13 +403,13 @@
    "fuentes": [
     {
      "tipo": "lista",
-     "precio": 228.56,
-     "proveedor": "Renard (cód. 1192) · CAN-01421",
-     "codigo": "CAN-01421",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1192",
+     "precio": 242.81,
+     "proveedor": "Renard (cód. 1202) · CAN-01436",
+     "codigo": "CAN-01436",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1202",
      "fecha": "2025-12-26",
      "coincide": "similar",
-     "diferencia": "diametro: 10\" (pedido 12\"); precio escalado por diámetro (12\" ÷ 10\")^1,5 = × 1,31"
+     "diferencia": "schedule: sin dato (pedido XS); espesor_mm: 14.27 (no pedido)"
     }
    ]
   },
@@ -433,13 +433,13 @@
    "fuentes": [
     {
      "tipo": "lista",
-     "precio": 228.56,
-     "proveedor": "Renard (cód. 1192) · CAN-01421",
-     "codigo": "CAN-01421",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1192",
+     "precio": 242.81,
+     "proveedor": "Renard (cód. 1202) · CAN-01436",
+     "codigo": "CAN-01436",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1202",
      "fecha": "2025-12-26",
      "coincide": "similar",
-     "diferencia": "diametro: 10\" (pedido 12\"); precio escalado por diámetro (12\" ÷ 10\")^1,5 = × 1,31"
+     "diferencia": "schedule: sin dato (pedido XS); espesor_mm: 14.27 (no pedido)"
     }
    ]
   },
@@ -870,14 +870,14 @@
    "faltan_datos": [],
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 39.26,
-     "proveedor": "sin proveedor en planilla · ABW-02324",
-     "codigo": "ABW-02324",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECHINT\\12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado · 4.Armado de la Oferta Comercial/OFERTA REV A/LM costo Desarenador rev ventas REV. 1.xlsx",
-     "fecha": "2025-12-23",
+     "tipo": "cot",
+     "precio": 441.06,
+     "proveedor": "PROVEMET · ABW-00404",
+     "codigo": "ABW-00404",
+     "origen": "fuentes_originales/cotizacion_elementos_equipos_2026-03.xlsx · rubro TEE · cotización 239607",
+     "fecha": "2025-08-01",
      "coincide": "similar",
-     "diferencia": "diametro: 3\" (pedido 4\"); precio escalado por diámetro (4\" ÷ 3\")^1,5 = × 1,54"
+     "diferencia": "diametro2: sin dato (pedido 2\")"
     }
    ]
   },

@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-M01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 19.461,06 por equipo · soldadura y servicios calculados USD 13.150,84 · 8 similares (6, 7, 9, 10, 12, 13, 14, 15) · 1 sin precio (5).
+**Resumen:** materiales USD 19.461,06 por equipo · soldadura y servicios calculados USD 13.150,84 · 9 similares (6, 7, 8, 9, 10, 12, 13, 14, 15) · 1 sin precio (5).
 
 
 ## 1. Materiales
@@ -15,7 +15,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 5 | Drip ring · Ø 4" | **SIN PRECIO** | — | — | pedir cotización |
 | 6 | Espárrago con 2 tuercas 7/8 x 100 mm · Ø 7/8" | SIMILAR | 8,00 / un | 2026-06-26 · planilla interna | medida: 7/8 x 5 3/4 (pedido 7/8 x 3 7/8) · faltan: material |
 | 7 | Espárrago con 2 tuercas 7/8 x 140 mm · Ø 7/8" | SIMILAR | 8,00 / un | 2026-06-26 · planilla interna | medida: 7/8 x 5 3/4 (pedido 7/8 x 5 1/2) · faltan: material |
-| 8 | Junta espiralada · Ø 4" | IGUAL | 5,56 / un | 2026-02-19 · planilla interna | — |
+| 8 | Junta espiralada · Ø 4" | SIMILAR | 5,56 / un | 2026-02-19 · planilla interna | medida: anillos ext. e int. (no pedido) |
 | 9 | Niple longitud 100 mm · Ø 1/2" | SIMILAR ⚠ | 5,00 / un | 2026-10-30 · cotización | el último precio (2,79) se aparta más de 40% de la mediana de sus últimos precios: se usa la mediana 5,00 |
 | 10 | Sockolet · Ø 1/2" | SIMILAR | 2,00 / un | 2026-10-30 · cotización | schedule: 80 (no pedido); extremos: sin dato (pedido SW/BW) |
 | 11 | Tapón roscado · Ø 1/2" | IGUAL | 1,90 / un | 2025-12-26 · lista | — |

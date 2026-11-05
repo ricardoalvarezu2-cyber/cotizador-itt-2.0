@@ -13,7 +13,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 5 | Caño s/c 3" sch 40 A106 B (tramo 5173 mm) | 1 × 138,97 = 138,97 | 5,17 m × 25,08 = 129,74 | -7% | lista · Renard (cód. 1153) · CAN-01484 · 2025-12-26 | dentro de ±15% · real: la planilla compra 7,4 m de caño 3" (0,9 + 5,2 + 1,3 m) a 25,08 = 185,59; aquí van 5,541 m (el tramo de 5,173 m + el sobrante de 0,368 m); los otros tramos van en su posición |
 | 6 | Tee reducción 3" sch 40 x 2" sch 80 BW A234 W | 1 × 44,20 = 44,20 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-05 | SIN PRECIO en el catálogo |
 | 7 | Brida WNRF 2" #300 A105 | 1 × 22,20 = 22,20 | 1 un × 12,47 = 12,47 | -44% | cot · Oil Metal (cód. AC0200BWN2R505) · BRI-01 · 2026-10-30 | más barato · real: la planilla la toma sch 40 ("Considero sch40"); el plano dice sch 80 |
-| 8 | Junta espiralada 2" #300 316 + grafito | 2 × 6,00 = 12,00 | 2 un × 4,32 = 8,64 | -28% | cot · Oil Metal (cód. JUE0300CWI3060) · JUN-02 · 2026-10-30 | más barato (similar) |
+| 8 | Junta espiralada 2" #300 316 + grafito | 2 × 6,00 = 12,00 | 2 un × 5,00 = 10,00 | -17% | ant · sin proveedor en planilla · JUN-05037 · 2025-12-23 | más barato (similar) |
 | 9 | Válvula esférica 2" #300 PT RF WCB palanca (f | 1 × 131,13 = 131,13 | 1 un × 170,30 = 170,30 | +30% | ant · Válvulas Taval (s/listado de Valv.) · VA · 2025-12-10 | más caro (similar) · real: va como Válvulas Taval (factor 1) |
 | 10 | Brida ciega 2" #300 RF A105 | 1 × 18,50 = 18,50 | 1 un × 18,50 = 18,50 | 0% | lista · Renard (cód. 8252) · BRI-01031 · 2025-12-26 | dentro de ±15% |
 | 11 | Válvula esférica 3/4" NPT WOG 3000 A105 | 9 × 42,04 = 378,38 | 9 un × 43,60 = 392,40 | +4% | lista · Taval (Lista 30 × 0.52) · VAL-04878 · 2025-09-01 | dentro de ±15% · real: va como Válvulas Taval (factor 1); la planilla dice "PR" y anota "P Total" |
@@ -29,7 +29,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 21 | Caño s/c 3" sch 40 A106 B (tramo 258 mm) | 1 × 6,47 = 6,47 | 0,26 m × 25,08 = 6,47 | +0% | lista · Renard (cód. 1153) · CAN-01484 · 2025-12-26 | dentro de ±15% |
 | 22 | Brida WNRF 3" #300 sch 40 A105 | 6 × 40,98 = 245,88 | 8 un × 40,98 = 327,84 | +33% | lista · Renard (cód. 11978) · BRI-01282 · 2025-12-26 | más caro · real: la planilla compra 6 (1 + 5); el plano pide 8 |
 | 23 | Niple 1" x 100 mm sch 80 NPT | 1 × 10,00 = 10,00 | 1 un × 4,44 = 4,44 | -56% | cot · Oil Metal (cód. NP0150NN0100806) · NIP-0 · 2026-10-30 | más barato (similar) |
-| 24 | Junta espiralada 3" #300 316 + grafito | 7 × 6,00 = 42,00 | 8 un × 4,32 = 34,56 | -18% | cot · Oil Metal (cód. JUE0300CWI3060) · JUN-02 · 2026-10-30 | más barato · real: la planilla compra 7; el plano pide 8 |
+| 24 | Junta espiralada 3" #300 316 + grafito | 7 × 6,00 = 42,00 | 8 un × 4,32 = 34,56 | -18% | cot · Oil Metal (cód. JUE0300CWI3060) · JUN-05 · 2026-10-30 | más barato (similar) · real: la planilla compra 7; el plano pide 8 |
 | 25 | Caño s/c 3" sch 40 A106 B (tramo 722 mm) | 1 × 18,11 = 18,11 | 0,72 m × 25,08 = 18,11 | 0% | lista · Renard (cód. 1153) · CAN-01484 · 2025-12-26 | dentro de ±15% |
 | 26 | Válvula esférica 3" #300 PT RF WCB palanca (f | 3 × 246,25 = 738,74 | 3 un × 256,00 = 768,00 | +4% | lista · Taval (Lista 30 × 0.52) · VAL-04457 · 2025-09-01 | dentro de ±15% · real: va como Válvulas Taval (factor 1) |
 | 27 | Brida ciega 3" #300 RF A105 | 1 × 36,49 = 36,49 | 1 un × 24,60 = 24,60 | -33% | cot · Oil Metal (cód. AC0300BCI2R305) · BRI-01 · 2026-10-30 | más barato |
@@ -47,7 +47,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 39 | Manómetro con manifold | 1 × 0,00 = 0,00 | 1 un × 120,00 = 120,00 |  | cot · Weisz · INS-04947 · 2026-10-30 | más barato (similar) · real: la planilla NO lo costea |
 | 40 | Transmisor de presión ABB con manifold | 1 × 901,71 = 901,71 | 1 un × 1.100,00 = 1.100,00 | +22% | ant · Vega (cotización en 5.Proveedores 3ros)  · 2026-03-10 | más caro (similar) · real: en la planilla va en Instrumentos (factor 1,35); alternativa Rosemount 2.848,53 |
 
-**Materiales: real USD 6.400,97 · cotizador USD 4.894,26 (-24%).** 19 dentro de ±15%, 20 fuera, 1 sin precio.
+**Materiales: real USD 6.400,97 · cotizador USD 4.895,62 (-24%).** 19 dentro de ±15%, 20 fuera, 1 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -63,5 +63,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por puente
 
-Real USD 8.836,97 · cotizador USD 8.897,19 (+1%) antes de completar lo que el cotizador marca para revisar.
+Real USD 8.836,97 · cotizador USD 8.898,55 (+1%) antes de completar lo que el cotizador marca para revisar.
 

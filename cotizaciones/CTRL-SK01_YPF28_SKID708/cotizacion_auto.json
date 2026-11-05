@@ -493,13 +493,13 @@
    "fuentes": [
     {
      "tipo": "cot",
-     "precio": 4.2,
-     "proveedor": "planilla de costo ITT (proveedor sin nombre) · JUN-04182",
-     "codigo": "JUN-04182",
-     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
-     "fecha": "2026-10-30",
+     "precio": 7.33,
+     "proveedor": "DELGADO · JUN-01679",
+     "codigo": "JUN-01679",
+     "origen": "fuentes_originales/cotizacion_elementos_equipos_2026-03.xlsx · rubro ESPARRAGOS-TUERCAS · cotización 1338",
+     "fecha": "2025-09-04",
      "coincide": "similar",
-     "diferencia": "diametro: 0.875\" (pedido 1.25\"); medida: 7/8 x 5 7/8 (pedido 1 1/4 x 8 1/8)"
+     "diferencia": "serie: sin dato (pedido 300); material: A193 B7 (pedido A194 2H); medida: 1 1/4 x 9 (pedido 1 1/4 x 8 1/8)"
     }
    ]
   },
@@ -523,13 +523,13 @@
    "fuentes": [
     {
      "tipo": "cot",
-     "precio": 4.2,
-     "proveedor": "planilla de costo ITT (proveedor sin nombre) · JUN-04182",
-     "codigo": "JUN-04182",
+     "precio": 10.0,
+     "proveedor": "planilla de costo ITT (proveedor sin nombre) · JUN-04963",
+     "codigo": "JUN-04963",
      "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
      "fecha": "2026-10-30",
      "coincide": "similar",
-     "diferencia": "diametro: 0.875\" (pedido 1.125\"); medida: 7/8 x 5 7/8 (pedido 1 1/8 x 7 3/8)"
+     "diferencia": "serie: 600 (pedido 300); medida: 1 1/8 x 8 1/4 (pedido 1 1/8 x 7 3/8)"
     }
    ]
   },
@@ -551,14 +551,14 @@
    "faltan_datos": [],
    "fuentes": [
     {
-     "tipo": "cot",
-     "precio": 5.5,
-     "proveedor": "Oil Metal (cód. JUE0200CW03060) · JUN-02769",
+     "tipo": "ant",
+     "precio": 6.0,
+     "proveedor": "MS · JUN-02769",
      "codigo": "JUN-02769",
-     "origen": "fuentes_originales/listas_vendedor/2026-11-05/oilmetal_cotizacion_37278_2026-10-30.pdf · código JUE0200CW03060",
-     "fecha": "2026-10-30",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\PAMPA ENERGIA\\7- Licitacion contrato Marco Skid PAD Rincon de Aranda · 4.Armado de la Oferta Comercial/Cot Skid Manifolds Colectores RDA Contrato Marco (2da RDA).xlsx.",
+     "fecha": "2026-08-14",
      "coincide": "similar",
-     "diferencia": "diametro: 2\" (pedido 1.5\"); material: AISI 316 (no pedido); extremos: sin dato (pedido RF); el último precio (1,41) se aparta más de 40% de la mediana de sus últimos precios: se usa la mediana 5,50"
+     "diferencia": "diametro: 2\" (pedido 1.5\"); material: AISI 316 (no pedido); extremos: sin dato (pedido RF)"
     }
    ]
   },
@@ -582,12 +582,12 @@
     {
      "tipo": "cot",
      "precio": 9.31,
-     "proveedor": "Miyashiro (MS Juntas) (cód. 2-031-0039) · JUN-02764",
-     "codigo": "JUN-02764",
+     "proveedor": "Miyashiro (MS Juntas) (cód. 2-031-0039) · JUN-05032",
+     "codigo": "JUN-05032",
      "origen": "fuentes_originales/listas_vendedor/2026-11-05/miyashiro_cotizacion_50594_2026-11-03.pdf · código 2-031-0039",
      "fecha": "2026-11-03",
      "coincide": "similar",
-     "diferencia": "material: AISI 316 (no pedido); extremos: sin dato (pedido RF)"
+     "diferencia": "material: AISI 316 (no pedido); medida: anillo ext. (no pedido); extremos: sin dato (pedido RF)"
     }
    ]
   },
@@ -615,7 +615,7 @@
      "origen": "—",
      "fecha": "2026-11-05",
      "coincide": "sin_ref",
-     "diferencia": "El más parecido es de otro diámetro (4\") (JUN-01699 JUNTA ESPIRALADA SW AC AISI 316L + GRAFITO Ø4\" #30, USD 2,59): no sirve como precio"
+     "diferencia": "El más parecido es de otro diámetro (2\") (JUN-02769 JUNTA ESPIRALADA 2\" - 300LB, AISI 316 ESP: 4.5mm C, USD 6,00): no sirve como precio"
     }
    ]
   },

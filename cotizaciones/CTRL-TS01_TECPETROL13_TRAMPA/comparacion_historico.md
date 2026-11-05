@@ -13,7 +13,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 5 | Brida welding neck RF 1 1/2" 900 / sch 160 AS | 1 × 40,57 = 40,57 | 1 un × 163,20 = 163,20 | +302% | stock · Stock ITT · última compra (cód. ACS0406R · 2022-11-15 | más caro · real: 60 días |
 | 6 | Virola/caño sin costura barril menor largo 4, | 4,8 × 690,00 = 3.312,00 | 4,8 m × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-05 | SIN PRECIO en el catálogo · real: planilla: 'debería contemplar 1 tira de 12 m?' |
 | 7 | Virola/caño sin costura barril mayor largo 3, | 3,2 × 1.120,00 = 3.584,00 | 3,2 m × 750,00 + compra extra 7b = 9.000,00 | +151% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) · real: planilla: 'debería contemplar 1 tira de 12 m?' |
-| 8 | Caño sin costura 12" XS ASTM A-106 Gr B | 5,9 × 217,23 = 1.281,66 | 5,9 m × 228,56 + compra extra 8b = 2.742,72 | +114% | lista · Renard (cód. 1192) · CAN-01421 · 2025-12-26 | más caro (similar) |
+| 8 | Caño sin costura 12" XS ASTM A-106 Gr B | 5,9 × 217,23 = 1.281,66 | 5,9 m × 242,81 + compra extra 8b = 2.913,72 | +127% | lista · Renard (cód. 1202) · CAN-01436 · 2025-12-26 | más caro (similar) |
 | 9 | Caño sin costura 4" 120 ASTM A-106 Gr B | 8,5 × 60,37 = 513,14 | 8,5 m × 60,37 + compra extra 9b = 724,44 | +41% | lista · Renard (cód. 1162) · CAN-01493 · 2025-12-26 | más caro |
 | 10 | Caño sin costura 2" 160 ASTM A-106 Gr B | 3 × 24,67 = 74,01 | 3 m × 24,67 + compra extra 10b = 148,02 | +100% | lista · Renard (cód. 1144) · CAN-01454 · 2025-12-26 | más caro |
 | 11 | Caño sin costura 2" STD ASTM A-106 Gr B | 2 × 12,10 = 24,20 | 2 m × 12,10 + compra extra 11b = 72,60 | +200% | lista · Renard (cód. 1142) · CAN-01459 · 2025-12-26 | más caro |
@@ -25,7 +25,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 17 | Niple longitud 100 mm 1/2" 160 ASTM A-106 | 1 × 10,00 = 10,00 | 1 un × 8,00 = 8,00 | -20% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más barato |
 | 18 | Reducción excéntrica 16" x 12" 40 ASTM A-860  | 1 × 3.172,70 = 3.172,70 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-05 | SIN PRECIO en el catálogo |
 | 19 | Tapa de cierre rápido (QOC) #900 16" 900 | 1 × 10.923,00 = 10.923,00 | 1 un × 10.524,00 = 10.524,00 | -4% | cot · FTS (Sypris Tube Turns, cot. FTS 260812) · 2026-08-10 | dentro de ±15% |
-| 20 | Tee de reducción 4" x 2" 160 ASTM A-234 WPB | 2 × 546,54 = 1.093,08 | 2 un × 39,26 = 78,52 | -93% | ant · sin proveedor en planilla · ABW-02324 · 2025-12-23 | más barato (similar) |
+| 20 | Tee de reducción 4" x 2" 160 ASTM A-234 WPB | 2 × 546,54 = 1.093,08 | 2 un × 441,06 = 882,12 | -19% | cot · PROVEMET · ABW-00404 · 2025-08-01 | más barato (similar) |
 | 21 | Tee normal 4" 120 ASTM A-234 WPB | 2 × 329,77 = 659,54 | 2 un × 300,00 = 600,00 | -9% | ant · no dice (planilla de compras; cotización · 2025-08-01 | dentro de ±15% |
 | 22 | Weldolet 1/2" x 20" ASTM A-105 | 1 × 7,00 = 7,00 | 1 un × 65,00 = 65,00 | +829% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) |
 | 23 | Espárrago con 2 tuercas zincado 7/8 x 145 mm  | 48 × 8,00 = 384,00 | 48 un × 3,17 = 152,16 | -60% | cot · PROVEMET · JUN-04186 · 2025-08-27 | más barato (similar) |
@@ -57,7 +57,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 49 | Detector de paso de scraper | 1 × 4.209,50 = 4.209,50 | 1 un × 1.650,00 = 1.650,00 | -61% | ant · TDW (marca) · OTR-02969 · 2025-12-10 | más barato (similar) |
 | 50 | Válvula de bloqueo y purga (para manómetro) 1 | 1 × 150,00 = 150,00 | 1 un × 80,00 = 80,00 | -47% | ant · Abac · VAL-03162 · 2026-04-22 | más barato (similar) |
 
-**Materiales: real USD 58.316,80 · cotizador USD 32.530,52 (-44%).** 6 dentro de ±15%, 28 fuera, 16 sin precio.
+**Materiales: real USD 58.316,80 · cotizador USD 33.505,12 (-43%).** 6 dentro de ±15%, 28 fuera, 16 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -74,5 +74,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por trampa
 
-Real USD 83.177,98 · cotizador USD 57.948,74 (-30%) antes de completar lo que el cotizador marca para revisar.
+Real USD 83.177,98 · cotizador USD 58.923,34 (-29%) antes de completar lo que el cotizador marca para revisar.
 

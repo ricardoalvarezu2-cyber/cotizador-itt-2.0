@@ -176,6 +176,9 @@ def control_compatibilidad(c, plano, avisos=None):
     from precotizar import texto_busqueda
     bm.buscar("brida")
     cat = {r["codigo"]: r for r in bm._FILAS}
+    fus = Path(__file__).resolve().parent.parent / "conocimiento" / "precios" / "catalogo_codigos_fusionados.csv"
+    if fus.exists():  # códigos fusionados al cambiar una regla del catálogo: valen como el vigente (05-11-2026)
+        cat.update({x["codigo_viejo"]: cat[x["codigo_vigente"]] for x in csv.DictReader(open(fus, encoding="utf-8")) if x["codigo_vigente"] in cat})
     por_lista = {m.group(1): r["codigo"] for r in bm._FILAS if (m := re.search(r"^Renard \(cód\. (\d+)\)", r.get("proveedor", "")))}
     por_pos = {p["pos"].strip(): p for p in plano}
     items = json.load(open(ruta, encoding="utf-8"))["items"]

@@ -13,7 +13,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 5 | Drip ring 4" S600 A-516 | 4 × 350,00 = 1.400,00 | 4 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-05 | SIN PRECIO en el catálogo |
 | 6 | Espárragos 7/8" x 100 mm | 160 × 10,00 = 1.600,00 | 160 un × 8,00 = 1.280,00 | -20% | ant · REPUESTOS · JUN-04190 · 2026-06-26 | más barato (similar) |
 | 7 | Espárragos 7/8" x 140 mm | 32 × 10,00 = 320,00 | 32 un × 8,00 = 256,00 | -20% | ant · REPUESTOS · JUN-04190 · 2026-06-26 | más barato (similar) |
-| 8 | Junta espiralada 4" S600 AISI | 28 × 11,00 = 308,00 | 28 un × 5,56 = 155,68 | -49% | ant · MS o Fseal · JUN-02780 · 2026-02-19 | más barato · real: en REV A: 6,35 |
+| 8 | Junta espiralada 4" S600 AISI | 28 × 11,00 = 308,00 | 28 un × 5,56 = 155,68 | -49% | ant · MS o Fseal · JUN-05049 · 2026-02-19 | más barato (similar) · real: en REV A: 6,35 |
 | 9 | Niple 1/2" 100 mm Sch.160 A-106 | 8 × 5,00 = 40,00 | 8 un × 5,00 = 40,00 | 0% | cot · Oil Metal (cód. NP0050NN0100706) · NIP-0 · 2026-10-30 | dentro de ±15% |
 | 10 | Sockolet 1/2" S3000 A-105 | 4 × 10,00 = 40,00 | 4 un × 2,00 = 8,00 | -80% | cot · Oil Metal (cód. SOC005008030105) · AFO-0 · 2026-10-30 | más barato (similar) |
 | 11 | Tapón 1/2" NPT S3000 A-105 | 8 × 5,00 = 40,00 | 8 un × 1,90 = 15,20 | -62% | lista · Renard (cód. 5979) · AFO-00847 · 2025-12-26 | más barato |
