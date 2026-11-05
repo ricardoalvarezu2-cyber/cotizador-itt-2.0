@@ -123,7 +123,11 @@ const Documentos = (() => {
     // datos del pedido y del antecedente (atributos_plano.fila_datos)
     const OTROS = ["tipo", "trim", "paso", "costura", "revestimiento", "largo_mm", "medida", "designacion", "conexion"];
     const NOMBRES = { diametro: "Ø", diametro2: "Ø2", espesor_mm: "espesor", largo_mm: "largo", designacion: "designación", conexion: "conexión" };
-    const otros = a => OTROS.filter(k => a[k]).map(k => `${k}: ${a[k]}`).join("; ");
+    // datos sin columna propia en su familia (planilla_excel.otros; auditoría 05-11-2026: ningún dato se pierde)
+    const CLAVES = ["diametro", "diametro2", "serie", "schedule", "espesor_mm", "material", "extremos", "cara", "norma", "marca", "modelo", "rango", ...OTROS];
+    const NOMB = { ...NOMBRES, serie: "serie", schedule: "schedule" };
+    const otrosFam = (a, cols, fam = false) => [...(fam && a.familia ? [`familia: ${a.familia}`] : []),
+      ...CLAVES.filter(k => !cols.includes(k) && a[k]).map(k => `${NOMB[k] || k}: ${a[k]}`)].join("; ");
     const CATM = new Map(((datos && datos.materiales) || []).map(m => [m.c, m]));
     const faltanDe = it => {
       const at = Busqueda.atributosDe(it); let f = it.faltan_datos;
@@ -158,10 +162,10 @@ const Documentos = (() => {
       let r = 4, nMax = nf; const subt = [];
       for (const [titulo, its, cols] of secciones) {
         let extra, gex;
-        if (esSrv) { extra = ["Especificación"]; gex = ["extra"]; }
+        if (esSrv) { extra = ["ID", "Especificación"]; gex = ["extra", "extra"]; }
         else {
-          extra = ["Faltan datos del pedido", ...cols.map(k => `Pedido: ${Busqueda.ETIQUETAS[k]}`), "Pedido: otros datos", ...cols.map(k => `Antecedente: ${Busqueda.ETIQUETAS[k]}`), "Antecedente: otros datos"];
-          gex = ["extra", ...Array(cols.length + 1).fill("datos_ped"), ...Array(cols.length + 1).fill("datos_ant")];
+          extra = ["ID", "Faltan datos del pedido", ...cols.map(k => `Pedido: ${Busqueda.ETIQUETAS[k]}`), "Pedido: otros datos", ...cols.map(k => `Antecedente: ${Busqueda.ETIQUETAS[k]}`), "Antecedente: otros datos"];
+          gex = ["extra", "extra", ...Array(cols.length + 1).fill("datos_ped"), ...Array(cols.length + 1).fill("datos_ant")];
         }
         nMax = Math.max(nMax, nf + extra.length);
         barra(w, r, titulo.toUpperCase(), nf + extra.length); r++;
@@ -177,17 +181,17 @@ const Documentos = (() => {
           const vals = [String(it.pos ?? ""), it.descripcion, Number(it.cantidad), it.unidad, eqv, Number(s.precio), fserial(s.fecha),
             { f: `IF(AplicarAjuste=1,VLOOKUP(FechaHoy,Indices,${colInd},1)/VLOOKUP(MAX(G${f},'Índices'!$A$5),Indices,${colInd},1),1)` },
             { f: `F${f}*H${f}` }, { f: `C${f}*I${f}` }, { f: `C${f}*F${f}` }, clase, TIPOS_PY[s.tipo] || s.tipo, s.proveedor || "", cod, dant, s.diferencia || "", s.origen || ""];
-          if (esSrv) vals.push(String(it.especificacion || ""));
+          if (esSrv) vals.push(it.id || "", String(it.especificacion || ""));
           else {
             const at = it.atributos || {}, ra = m ? { ...(m.a || {}) } : {};
-            vals.push(faltanDe(it), ...cols.map(k => at[k] || ""), otros(at), ...cols.map(k => ra[k] || ""), m ? otros(ra) : "");
+            vals.push(it.id || "", faltanDe(it), ...cols.map(k => at[k] || ""), otrosFam(at, cols, true), ...cols.map(k => ra[k] || ""), m ? otrosFam(ra, cols) : "");
           }
           vals.forEach((v, j) => {
             const c = j + 1, st = { ...BB, alignment: { vertical: "top", wrapText: [2, 14, 16, 17].includes(c) } };
             if (c === 3 || c === 6) Object.assign(st, fill(AMA));
             if (c === 5) Object.assign(st, fill(EQC[eqv] || "FFFFFF"));
             if (c === 13) Object.assign(st, fill(TF[s.tipo] || "FFFFFF"));
-            if (!esSrv && c === nf + 1 && v) Object.assign(st, fill("F8E1DE"));
+            if (!esSrv && c === nf + 2 && v) Object.assign(st, fill("F8E1DE"));
             const z = c === 3 ? (Number.isInteger(Number(it.cantidad)) ? "#,##0" : "#,##0.0###") : [6, 9, 10, 11].includes(c) ? U : c === 7 ? "dd-mm-yyyy" : c === 8 ? "#,##0.0000" : undefined;
             put(w, A(c, r), v, st, z);
           });
@@ -213,7 +217,7 @@ const Documentos = (() => {
         }
       }
       if (esSrv && cot.nota_mo_html) put(w, A(2, r + 1), sinHtml(cot.nota_mo_html), GRIS);
-      w["!cols"] = [...COLS_PL.map(([, a]) => ({ wch: a })), ...Array(nMax - nf).fill(0).map((_, k) => ({ wch: esSrv ? 30 : k === 0 ? 22 : 13 }))];
+      w["!cols"] = [...COLS_PL.map(([, a]) => ({ wch: a })), ...Array(nMax - nf).fill(0).map((_, k) => ({ wch: k === 0 ? 7 : esSrv ? 30 : k === 1 ? 22 : 13 }))];
       return [w, subt];
     };
     const secMat = [];

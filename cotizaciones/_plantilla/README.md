@@ -33,7 +33,7 @@ Copiar esta carpeta a `cotizaciones/COT[AA]-[CCCC]-[NNN]_<CLIENTE>_<PEDIDO>/` y 
 | `compras` | Para la lista que va a Compras (`compras/*.xlsx`): `fecha_respuesta`, `material_en_planta_dias`, `lugar_entrega`, `requisitos_generales`, `notas` y `proveedores` por posición del plano, `cantidad_compra` (si se compra distinto de cantidad × equipos, p. ej. tira de caño) y `servicios` (armado, pintura, flete) |
 | `justificaciones` | Levantan frenos de la oferta (`herramientas/frenos.py`): `estimado` (más del 15% estimado), `vencidas` (cotizaciones de proveedor vencidas), `antecedentes` (sin antecedente comparable o más del 15% de diferencia, explicado rubro por rubro). El plazo se justifica en `plazo.justificacion` |
 | `origen_lista` | Solo si no hay tabla del cliente: `{"tipo": "diseno_itt", "motivo": "..."}`. Si hay tabla, van `pedido/transcripcion.json` y `pedido/transcripcion_b.json` (doble lectura) |
-| `pie`, `planilla_notas` | Pie del informe y notas de la hoja Cotización |
+| `pie`, `planilla_notas` | Pie del informe y notas de la hoja Resumen |
 | `items` | Ver abajo |
 
 Cada ítem:

@@ -54,6 +54,15 @@ COLOR_GRUPO = {"pedido": VERDE, "precio": AZUL, "origen": VIOLETA, "datos_ped": 
 NOMBRES_RESULTADO = ("PrecioUnitario", "TotalOferta", "Cantidad", "Flete", "IncluirFlete", "CostoUnitario")
 
 
+def otros(at, cols, familia=False):
+    """Datos de la pieza que no tienen columna propia en su familia (auditoría 05-11-2026: ningún dato se pierde)."""
+    import atributos_plano
+    claves = [k for _, k in atributos_plano.COLS] + atributos_plano.OTROS
+    out = ([f"familia: {at['familia']}"] if familia and at.get("familia") else []) + \
+        [f"{atributos_plano.NOMBRES.get(k, k)}: {at[k]}" for k in claves if k not in cols and at.get(k)]
+    return "; ".join(out)
+
+
 def _fill(c):
     return PatternFill("solid", fgColor=c)
 
@@ -148,11 +157,11 @@ def escribir(cfg, carpeta, idx_rows, ruta=None):
         col_ind = 4 if es_srv else 5  # columna de Índices: costo local USD (MO y servicios) o CPI EE.UU. (materiales)
         r, subt, n_max = 4, [], n_fijas
         for titulo, its, cols in secciones:
-            extra = [] if es_srv else (["Faltan datos del pedido"] + [f"Pedido: {atributos_plano.ETIQUETAS[k]}" for k in cols] + ["Pedido: otros datos"]
+            extra = [] if es_srv else (["ID", "Faltan datos del pedido"] + [f"Pedido: {atributos_plano.ETIQUETAS[k]}" for k in cols] + ["Pedido: otros datos"]
                                        + [f"Antecedente: {atributos_plano.ETIQUETAS[k]}" for k in cols] + ["Antecedente: otros datos"])
-            grupos_extra = [] if es_srv else (["extra"] + ["datos_ped"] * (len(cols) + 1) + ["datos_ant"] * (len(cols) + 1))
+            grupos_extra = [] if es_srv else (["extra", "extra"] + ["datos_ped"] * (len(cols) + 1) + ["datos_ant"] * (len(cols) + 1))
             if es_srv:
-                extra, grupos_extra = ["Especificación"], ["extra"]
+                extra, grupos_extra = ["ID", "Especificación"], ["extra", "extra"]
             n_max = max(n_max, n_fijas + len(extra))
             barra(w, r, titulo.upper(), n_fijas + len(extra))
             r += 1
@@ -176,12 +185,12 @@ def escribir(cfg, carpeta, idx_rows, ruta=None):
                         f"=F{f}*H{f}", f"=C{f}*I{f}", f"=C{f}*F{f}", clase, ac.TIPOS[s["tipo"]], s["proveedor"], cod, desc_ant,
                         s.get("diferencia", ""), s.get("origen", "")]
                 if es_srv:
-                    vals += [str(it.get("especificacion", ""))]
+                    vals += [it["id"], str(it.get("especificacion", ""))]
                 else:
                     at, ra = it.get("atributos") or {}, CAT.get(cod, {})
-                    vals += ([", ".join(atributos_plano.NOMBRES.get(k, k) for k in it.get("faltan_datos", []))]
-                             + [at.get(k, "") for k in cols] + [atributos_plano.otros(at)]
-                             + [ra.get(k, "") for k in cols] + [atributos_plano.otros(ra) if ra else ""])
+                    vals += ([it["id"], ", ".join(atributos_plano.NOMBRES.get(k, k) for k in it.get("faltan_datos", []))]
+                             + [at.get(k, "") for k in cols] + [otros(at, cols, True)]
+                             + [ra.get(k, "") for k in cols] + [otros(ra, cols) if ra else ""])
                 for j, v in enumerate(vals, 1):
                     c = w.cell(r, j, v); c.border = B
                     c.alignment = Alignment(vertical="top", wrap_text=j in (2, 14, 16, 17))
@@ -193,8 +202,8 @@ def escribir(cfg, carpeta, idx_rows, ruta=None):
                 w.cell(r, 8).number_format = "#,##0.0000"
                 w.cell(r, 5).fill = _fill(EQ_COLOR.get(eqv, "FFFFFF"))
                 w.cell(r, 13).fill = _fill(TIPO_COLOR[s["tipo"]])
-                if not es_srv and vals[n_fijas]:
-                    w.cell(r, n_fijas + 1).fill = _fill("F8E1DE")
+                if not es_srv and vals[n_fijas + 1]:
+                    w.cell(r, n_fijas + 2).fill = _fill("F8E1DE")
                 filas[id(it)] = (nombre, r)
                 r += 1
             w.cell(r, 2, f"Subtotal {titulo.split(' (')[0].lower()}").font = BOLD
@@ -228,8 +237,9 @@ def escribir(cfg, carpeta, idx_rows, ruta=None):
             w.cell(r + 1, 2, ac.sin_html(cfg["nota_mo_html"])).font = GRIS
         for j in range(n_fijas + 1, n_max + 1):
             w.column_dimensions[get_column_letter(j)].width = 30 if es_srv else 13
+        w.column_dimensions[get_column_letter(n_fijas + 1)].width = 7
         if not es_srv:
-            w.column_dimensions[get_column_letter(n_fijas + 1)].width = 22
+            w.column_dimensions[get_column_letter(n_fijas + 2)].width = 22
         w.freeze_panes = "C4"
         w.sheet_view.zoomScale = 90
         return subt

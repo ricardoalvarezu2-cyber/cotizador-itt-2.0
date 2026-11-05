@@ -63,7 +63,7 @@ for n in a.sheetnames:
             if n=="Materiales" and enc.get(k,"") in SALTEAR: continue
             x,y=v(A.cell(r,k).value),v(B.cell(r,k).value)
             if x!=y and not (isinstance(x,float) and isinstance(y,float) and abs(x-y)<=0.011): dif.append(f"{n}!{A.cell(r,k).coordinate}: py={x!r} js={y!r}")
-for n in ("PrecioUnitario","TotalOferta","CostoUnitario"):
+for n in ("PrecioUnitario","TotalOferta","CostoUnitario","Cantidad","Flete","IncluirFlete"):
     for w,t in ((a,"py"),(b,"js")):
         if n not in w.defined_names: dif.append(f"falta el nombre {n} en {t}")
 print("\\n".join(dif[:25])+(f"\\n… y {len(dif)-25} más" if len(dif)>25 else ""))
