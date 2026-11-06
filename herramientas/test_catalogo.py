@@ -106,6 +106,17 @@ igual("Oil Metal: 34 ítems, 28 códigos distintos", len(om), 28)
 igual("Oil Metal: GR B7 es A193 B7 (no se mezcla con B7M)", at(om[13]["descripcion"])[1].get("material"), "A193 B7")
 igual("Oil Metal: BWN es WN", at(om[5]["descripcion"])[1].get("tipo"), "wn")
 
+# lector de la carga del Drive del 06-11-2026 (Delgado, Provemet, Bripetrol) y regla con/sin tuercas
+igual("GR.B7 7/8\" es 7/8\" (no 7 7/8\")", at('ESPARRAGO TOTALMENTE ROSCADO ASTM A193 GR.B7 7/8" x 6" SIN TUERCAS')[1].get("diametro"), '0.875"')
+igual("espárrago c/2 tuercas A193 B7 / A194 2H es A193 B7", at('Esparrago c/2 tuercas A193 B7 / A194 2H 1 1/8" x 7 3/4"')[1].get("material"), "A193 B7")
+igual("tuerca A194 2H sigue A194 2H", at('TUERCA ASTM A194 GR.2H 7/8" 9UNC')[1].get("material"), "A194 2H")
+igual("Brida WN Ring Joint es brida", at('Brida Welding Neck Sch 80 Ring Joint Serie 1500 ASTM A 105 ANSI B16.5 4"')[0], "BRI")
+igual("junta ring joint sigue junta", at('junta ring joint R37 4" #1500')[0], "JUN")
+igual("Brida Socket Welding es SW", at('Brida Socket Welding Sch 80 Raised Face Serie 300 ASTM A 105 1 1/2"')[1].get("tipo"), "sw")
+from compatibilidad import regla_tuercas  # noqa: E402
+igual("con tuercas no se reemplaza por sin tuercas", bool(regla_tuercas(norm("esparrago 3/4 x 5 con 2 tuercas"), norm("esparrago 3/4 x 5 sin tuercas"))), True)
+igual("si uno no aclara, no hay regla", regla_tuercas(norm("esparrago 3/4 x 5"), norm("esparrago 3/4 x 5 sin tuercas")), "")
+
 if fallas:
     print(f"FALLAN {len(fallas)}:")
     for f in fallas:

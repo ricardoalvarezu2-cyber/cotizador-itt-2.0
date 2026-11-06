@@ -36,6 +36,7 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from compatibilidad import CON_TUERCAS, SIN_TUERCAS  # noqa: E402
 from indice_proyectos import frac, norm, diametros, pulgadas, series  # noqa: E402
 from numeros import a_vista, fecha_iso, leer_numero, fmt, fmtg, precio_csv, celda_excel  # noqa: E402
 from candado import candado, escribir, guardar_libro  # noqa: E402
@@ -127,6 +128,7 @@ ABREV = [(r"\besf\b", "valvula esferica"), (r"\bpt\b", "paso total"), (r"\bred c
          (r"\bept\b", "valvula esferica paso total"), (r"\bvalv reg\b", "valvula reguladora"), (r"a/fuego|a/fgo|\ba/f\b|\baf\b", "antifuego"),
          (r"\bgda\b", "guiada"), (r"\ba-(?=\d{2,3}\b)", "a"), (r"\bunion doble golpe\b", "union doble a golpe"),
          (r"\besp\.? (swi?)\b", r"junta espiralada \1"), (r"\bjuntas espiraladas\b", "junta espiralada"), (r"\bjunta esp (?=.*\b(?:cwi?|swi?)\b)", "junta espiralada "), (r"scrapper", "scraper"), (r"\bp\.t\.", "paso total"), (r"\bp\.r\.", "paso reducido"),
+         (r"\b(b ?7m?|b ?8m?|2h|l7)\s+(?=\d{1,2}/\d)", r"\1; "), (r"(?<![\d.,])(\d{1,2})\.(\d/\d)(?=\s?(?:\"|''|pulg))", r"\1 \2"),  # "1.1/2\"" = 1 1/2" (Cintolo, Complemet; 06-11-2026)  # "GR.B7 7/8\"" no es 7 7/8" (Delgado, 06-11-2026)
          (r"\bwnrf\b", "wn rf"), (r"\bsorf\b", "so rf"), (r"\bswrf\b", "sw rf"), (r"\bblrf\b", "bl rf"), (r"\bwnrtj\b", "wn rtj")]
 # Otros: el tipo es la pieza (antes eran las tres primeras palabras y "tapa de cierre rápido #900" no se comparaba por Ø ni
 # serie; CTRL-TS01)
@@ -170,6 +172,8 @@ def familia_texto(t):
         return "OTR"
     if re.search(r"manometr|transmisor|trasmisor|termometr|termovaina|caudalimetr|coriolis|presostato|sensor|indicador de nivel|visor de nivel|v-cone|computador de (?:flujo|caudal)|flow computer", t):
         return "INS"
+    if re.match(r"\s*bridas?\b", t) and not re.search(r"\bjunta|\bkit\b|aislac|dielectr", t):
+        return "BRI"  # "Brida WN … Ring Joint" es una brida, no una junta (Provemet 289909, 06-11-2026)
     if re.search(r"junta|espiralad|ring joint|\bbx ?-?\d|\br\d{2}\b|esparrago|bulon|tuerca|kit dielectr|arandela|anillo (?:octogonal|oval|rtj)|\brtj\b.*anillo", t):
         return "JUN"
     if re.search(r"\bbridas?\b", t):
@@ -378,6 +382,8 @@ def atributos(t, fam, proveedor=""):
         d["norma"] = primero(r"(b16\.9|b16\.28)", t).upper()
     elif fam == "BRI":
         d["tipo"] = primero(r"\b(wn|welding neck|slip ?on|so|ciega|blind|bl|lj|sw|roscada|lap joint|adaptadora|porta ?placa|instrumentacion)\b", t)
+        if not d["tipo"] and re.search(r"\bsocket ?weld", t):
+            d["tipo"] = "sw"  # "Brida Socket Welding" (Provemet 289897, 06-11-2026)
         if d["tipo"] in ("ciega", "blind", "bl") and re.search(r"c/ ?aguj|agujer|perforad|roscado", t):
             d["tipo"] = "ciega perforada"
         # "Raised Face" escrito entero (Provemet 30-10-2026: sin esto la brida no se juntaba con la misma pieza "RF")
@@ -408,6 +414,8 @@ def atributos(t, fam, proveedor=""):
         if d["tipo"] in ("kit junta aislamiento", "kit de aislacion"):
             d["tipo"] = "kit dielectrico"
         d["medida"] = medida_esparrago(t) if d["tipo"] in ("esparrago", "bulon") else ""
+        if d["tipo"] in ("esparrago", "bulon") and re.search(r"a ?193", t):  # "c/2 tuercas A193 B7 / A194 2H": el material es el del espárrago
+            d["material"] = material_de(re.sub(r"a ?194[^/;,]*", " ", t))
         if d["medida"]:  # el Ø del espárrago es el primero de la medida ("1.25x207" → 1 1/4", no 1")
             d["diametro"] = f"{frac(d['medida'].split(' x ')[0]):g}\""
         if d["tipo"] == "ring joint":
@@ -838,6 +846,8 @@ def _main():
             r["extra"] = "; ".join(x for x in [r["extra"], f"unidad del origen '{r['unidad']}' corregida a 'un' (es una pieza)"] if x)
             r["unidad"] = "un"
         multi = at.pop("_series", None)
+        if fam == "JUN" and at.get("tipo") in ("esparrago", "bulon") and re.search(CON_TUERCAS, t) and not re.search(SIN_TUERCAS, t):
+            r = {**r, "unidad": "juego"}  # con 2 tuercas es otra pieza: juego aparte del espárrago solo (06-11-2026)
         for serie in (multi or [at.get("serie", "")]):  # junta apta para varias series: el mismo precio en cada una (05-11-2026)
             at_s = {**at, "serie": serie} if multi else at
             k = clave(fam, at_s, r["unidad"])

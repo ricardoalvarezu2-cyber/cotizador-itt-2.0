@@ -212,6 +212,11 @@ const Busqueda = (() => {
     const r = reglaRevestimiento(C, prep(C, textoPed), prep(C, textoCand)); if (r) out.push(["revestimiento", r]);
     const k = reglaCostura(C, fam, prep(C, textoPed), prep(C, textoCand), textoCand || ""); if (k) out.push(["costura", k]);
     if (C.familias_sch.includes(fam)) { const r2 = reglaSchDoble(C, tp, tc, ped.diametro || "", ped.schedule || ""); if (r2) out.push(["schedule", r2]); }
+    if (fam === "JUN" && C.con_tuercas) {  // compatibilidad.regla_tuercas (06-11-2026)
+      const lado = t => new RegExp(C.sin_tuercas).test(t) ? "sin" : new RegExp(C.con_tuercas).test(t) ? "con" : "";
+      const a = lado(tp), b = lado(tc);
+      if (a && b && a !== b) out.push(["tuercas", `espárrago ${b} tuercas por uno ${a} tuercas (otra pieza y otro precio)`]);
+    }
     if (new RegExp(C.nace_estricto).test(tp) && !new RegExp(C.nace_estricto).test(tc)) out.push(["nace", "el pedido es MR0175 / ISO 15156 y el candidato no lo dice"]);
     else if (new RegExp(C.nace_pedido).test(tp) && !new RegExp(C.nace_cand).test(tc)) out.push(["nace", "el pedido es para servicio ácido (NACE) y el candidato no lo dice"]);
     return out;

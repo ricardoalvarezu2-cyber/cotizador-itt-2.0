@@ -372,10 +372,28 @@ def regla_sch_doble(tp, tc, diametro, sch_pedido=""):
     return ""
 
 
+# Espárrago con o sin tuercas (06-11-2026): son piezas distintas (el juego con 2 tuercas cuesta ~1,7 veces más). Solo se aplica
+# cuando los dos textos lo dicen; si uno no aclara, no hay regla.
+CON_TUERCAS = r"c/ ?(?:2|dos)? ?(?:tuercas?|tcas)\b|con (?:2 |dos )?tuercas?\b"
+SIN_TUERCAS = r"sin tuercas?\b|s/ ?tuercas?\b"
+
+
+def lado_tuercas(t):
+    """"con", "sin" o "" (no lo dice) para un texto ya normalizado."""
+    return "sin" if re.search(SIN_TUERCAS, t) else "con" if re.search(CON_TUERCAS, t) else ""
+
+
+def regla_tuercas(tp, tc):
+    a, b = lado_tuercas(tp), lado_tuercas(tc)
+    if a and b and a != b:
+        return f"espárrago {b} tuercas por uno {a} tuercas (otra pieza y otro precio)"
+    return ""
+
+
 def motivos(fam, at_pedido, at_cand, texto_pedido="", texto_cand=""):
     """TODOS los motivos por los que el candidato no reemplaza al pedido, como [(tipo, texto)] (quinta auditoría
     30-10-2026: se miraba solo el primero y un desvío declarado de uno tapaba los demás). Tipos: material, extremos,
-    schedule, revestimiento, costura, nace (la serie la agrega verificar_computo)."""
+    schedule, revestimiento, costura, tuercas, nace (la serie la agrega verificar_computo)."""
     out = []
     ped = material_texto(at_pedido.get("material", ""), texto_pedido)
     m = regla_material(fam, ped, material_texto(at_cand.get("material", ""), texto_cand), texto_cand)
@@ -400,6 +418,10 @@ def motivos(fam, at_pedido, at_cand, texto_pedido="", texto_cand=""):
         r = regla_sch_doble(tp, tc, at_pedido.get("diametro"), at_pedido.get("schedule", ""))
         if r:
             out.append(("schedule", r))
+    if fam == "JUN":
+        r = regla_tuercas(tp, tc)
+        if r:
+            out.append(("tuercas", r))
     if re.search(NACE_ESTRICTO, tp) and not re.search(NACE_ESTRICTO, tc):
         out.append(("nace", "el pedido es MR0175 / ISO 15156 y el candidato no lo dice"))
     elif re.search(NACE_PEDIDO, tp) and not re.search(NACE_CAND, tc):
@@ -421,7 +443,7 @@ def para_pagina():
             "nace_cand": NACE_CAND, "galv": GALV, "prep": r"\bs?a[- ]?(\d{2,3})\b", "negacion": NEGACION, "negacion_rev": NEGACION_REV, "grados": GRADOS, "medida_x": MEDIDA_X, "grados_x": GRADOS_X, "api5l": API5L, "sin_costura": SIN_COSTURA,
             "con_costura": CON_COSTURA, "sin_costura_norma": sorted(SIN_COSTURA_POR_NORMA),
             "revest": REVEST, "revest_ok": {k: sorted(v) for k, v in REVEST_OK.items()}, "sch_doble": SCH_DOBLE,
-            "internos": INTERNOS, "cuerpo": CUERPO, "no_metal": sorted(NO_METAL), "familias_sch": sorted(FAMILIAS_SCH), "dn_nps": DN_NPS}
+            "con_tuercas": CON_TUERCAS, "sin_tuercas": SIN_TUERCAS, "internos": INTERNOS, "cuerpo": CUERPO, "no_metal": sorted(NO_METAL), "familias_sch": sorted(FAMILIAS_SCH), "dn_nps": DN_NPS}
 
 
 if __name__ == "__main__":

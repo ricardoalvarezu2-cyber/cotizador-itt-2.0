@@ -30,11 +30,11 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from numeros import fmt, fmtg  # noqa: E402
 from catalogo_materiales import FAMILIAS, MARCAS, PRECIOS, atributos, expandir, familia_de  # noqa: E402
 from indice_proyectos import norm  # noqa: E402
-from compatibilidad import incompatible  # noqa: E402
+from compatibilidad import incompatible, lado_tuercas  # noqa: E402
 
 NOMBRE_A_COD = {v[0]: k for k, v in FAMILIAS.items()}
 CON_TIPO = ("VAL", "AFO", "ABW", "BRI", "JUN", "INS")
-CRITICOS = {"diametro", "diametro2", "serie", "schedule", "medida", "espesor_mm", "largo_mm"}  # largo_mm: niples (30-10-2026)
+CRITICOS = {"diametro", "diametro2", "serie", "schedule", "medida", "espesor_mm", "largo_mm", "tuercas"}  # largo_mm: niples (30-10-2026)
 # Datos que se comparan además de los que definen la pieza en su familia: no cambian igual/similar ni el orden, pero toda
 # diferencia se lista para que no falte ningún dato del pedido (Matías, 03-11-2026)
 EXTRAS = ["norma", "rango", "cara", "marca", "modelo", "trim", "paso", "costura", "revestimiento", "largo_mm", "espesor_mm", "conexion", "medida", "designacion"]
@@ -113,6 +113,9 @@ def buscar(texto, familia=None, marca_pedida="", fijos=None):
                 difs.append(f"{c}: sin dato (pedido {at[c]})")
             else:
                 difs.append(f"{c}: {r[c]} (no pedido)")
+        if fam == "JUN" and at.get("tipo") in ("esparrago", "bulon") and lado_tuercas(norm(texto)) == "con" \
+                and not lado_tuercas(norm(r.get("descripcion", ""))):
+            difs.append("tuercas: sin dato (pedido con tuercas)")  # el juego con tuercas va antes que el que no lo aclara (06-11-2026)
         if at.get("tipo") and r.get("tipo") and norm(at["tipo"]) != norm(r["tipo"]):
             continue  # otro tipo de pieza: no es ni similar
         if fam in CON_TIPO and bool(at.get("tipo")) != bool(r.get("tipo")):
