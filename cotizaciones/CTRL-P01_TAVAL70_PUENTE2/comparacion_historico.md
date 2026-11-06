@@ -11,7 +11,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 3 | Tee reducción 3" x 2" sch 80 BW SA-234 WPB | 2 × 64,11 = 128,22 | 2 un × 64,11 = 128,22 | 0% | ant · Renard · ABW-00390 · 2026-08-14 | dentro de ±15% |
 | 4 | Brida WNRF 2" #600 sch 80 SA-105 | 48 × 19,42 = 932,16 | 48 un × 19,31 = 926,88 | -1% | cot · Grupo Provemet · BRI-01260 · 2026-10-29 | dentro de ±15% |
 | 5 | Tee reducción 2" x 1 1/2" sch 80 BW SA-234 WP | 2 × 33,59 = 67,18 | 2 un × 33,59 = 67,18 | 0% | lista · Renard (cód. 3819) · ABW-00367 · 2025-12-26 | dentro de ±15% |
-| 6 | Brida SWRF 1 1/2" #600 sch 160 A105 | 2 × 18,02 = 36,04 | 2 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-06 | SIN PRECIO en el catálogo |
+| 6 | Brida SWRF 1 1/2" #600 sch 160 A105 | 2 × 18,02 = 36,04 | 2 un × 67,71 = 135,42 | +276% | est · Stock ITT (cód. ACS0404RBN050F) · BRI-01 · 2024-11-01 | más caro (similar) |
 | 7 | Válvula esférica 2" #600 WCB (PT flotante) | 8 × 416,00 = 3.328,00 | 10 un × 434,00 = 4.340,00 | +30% | lista · Taval (Lista 30 × 0.52) · VAL-04446 · 2025-09-01 | más caro (similar) · real: REV 1: 8 (la lista de ingeniería dice 10; REV 0: 10 × 400,40); va como Válvulas Taval, factor 1 |
 | 8 | Válvula globo 2" #600 limitadora de caudal co | 2 × 8.600,00 = 17.200,00 | 2 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-06 | SIN PRECIO en el catálogo · real: en la planilla va en Instrumentación; "PEDIR MEJOR OFERTA" |
 | 9 | Válvula retención 2" #600 WCB | 2 × 254,00 = 508,00 | 2 un × 120,00 = 240,00 | -53% | lista · Taval (Lista 30 × 0.52) · VAL-04709 · 2025-09-01 | más barato · real: REV 0: 133,67; va como Válvulas Taval |
@@ -25,7 +25,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 17 | Sensor RTD + termovaina (4) y transmisor de t | 4 × 1.090,50 = 4.362,00 | 4 un × 1.448,33 = 5.793,32 | +33% | ant · ABB · INS-02714 · 2026-08-14 | más caro (similar) · real: 2 × 689 (FQIT) + 2 × 689 (bypass) + 2 × 803 (TIT); REV 0: 4 × 1.176,57 |
 | 18 | Sockolet 1" 3000# SA-105 | 14 × 6,00 = 84,00 | 14 un × 3,59 = 50,26 | -40% | cot · Oil Metal (cód. SOC007508030105) · AFO-0 · 2026-10-30 | más barato (similar) |
 | 19 | Junta espiralada 2" #600 316+grafito anillo i | 46 × 8,00 = 368,00 | 46 un × 10,00 = 460,00 | +25% | cot · Oil Metal (cód. JUE0300CWI3060) · JUN-02 · 2026-10-30 | más caro (similar) |
-| 20 | Espárrago 5/8" x 5" con tuercas | 368 × 8,00 = 2.944,00 | 368 un × 2,50 = 920,00 | -69% | ant · sin proveedor en planilla (columna PROVE · 2026-02-20 | más barato (similar) |
+| 20 | Espárrago 5/8" x 5" con tuercas | 368 × 8,00 = 2.944,00 | 368 un × 10,00 = 3.680,00 | +25% | ant · sin proveedor en planilla · JUN-04178 · 2025-12-23 | más caro (similar) |
 | 21 | Tee normal 2" sch 80 BW SA-234 WPB | 8 × 24,06 = 192,48 | 8 un × 25,00 = 200,00 | +4% | ant · no dice · ABW-00373 · 2026-01-22 | dentro de ±15% |
 | 22 | Válvulas chicas (REV 1: esf. 1" #600 ×2, glob | 10 × 44,18 = 441,84 | 16 un × 113,88 = 1.822,08 | +312% | ant · Taval (cotización Comex Taval en 5.Prove · 2026-03-10 | más caro (similar) · real: la lista pide 16 esféricas 1" #3000 (REV 0: 16 × 27,49 = 439,84); va como Válvulas Taval |
 | 23 | Materiales de canalizaciones (8000 verdes) | 2 × 0,00 = 0,00 | 2 un × 0,00 = 0,00 |  | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-06 | SIN PRECIO en el catálogo · real: la planilla no lo costea |
@@ -34,7 +34,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | X2 | Manifold de 5 vías | 698,00 | — | — | — | falta en el cotizador |
 | X3 | Botellones de purga tomas de presión | 900,00 | — | — | — | falta en el cotizador |
 
-**Materiales: real USD 54.743,60 · cotizador USD 26.102,20 (-52%).** 6 dentro de ±15%, 12 fuera, 6 sin precio.
+**Materiales: real USD 54.743,60 · cotizador USD 28.997,62 (-47%).** 6 dentro de ±15%, 13 fuera, 5 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -51,5 +51,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por puente
 
-Real USD 68.559,60 · cotizador USD 39.194,64 (-43%) antes de completar lo que el cotizador marca para revisar.
+Real USD 68.559,60 · cotizador USD 42.090,06 (-39%) antes de completar lo que el cotizador marca para revisar.
 

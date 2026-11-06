@@ -18,7 +18,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 10 | Sombrerete 10" Sch 20 x 300 mm | 1 × 194,71 = 194,71 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-06 | SIN PRECIO en el catálogo · real: la planilla dice 0,3 × 26,709 = 194,709 (la cuenta no cierra; se toma el subtotal) |
 | 11 | Placa de identificación | 1 × 15,00 = 15,00 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-06 | SIN PRECIO en el catálogo |
 | 12 | Deflectores 900 x 200 x 1/4" | 90 × 1,50 = 135,00 | 90 kg × 1,25 = 112,50 | -17% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | más barato (similar) · real: 9 un × 10 kg |
-| 13 | Espárragos 3/4" x 130 mm c/2 tuercas | 8 × 10,00 = 80,00 | 8 un × 10,00 = 80,00 | 0% | ant · Bules o Versailles · JUN-04181 · 2026-02-19 | dentro de ±15% |
+| 13 | Espárragos 3/4" x 130 mm c/2 tuercas | 8 × 10,00 = 80,00 | 8 un × 1,91 = 15,28 | -81% | cot · Oil Metal (cód. ESP0190ZC120193) · JUN-0 · 2026-10-30 | más barato (similar) |
 | 14 | Cáncamo y respaldo | 6 × 0,75 = 4,50 | 6 kg × 1,27 = 7,62 | +69% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | más caro (similar) · real: la planilla toma 3 kg × 1,5 (error: 2 un × 3 kg = 6 kg) |
 | 15 | Separador de niebla 6" (con viruta) | 5 × 1,50 = 7,50 | 5 kg × 1,27 = 6,35 | -15% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | más barato (similar) |
 | 16 | Brida WNRF 2" #600 Sch 80 | 1 × 28,42 = 28,42 | 1 un × 19,31 = 19,31 | -32% | cot · Grupo Provemet · BRI-01260 · 2026-10-29 | más barato |
@@ -27,7 +27,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 19 | Junta plana 6" #150 | 1 × 10,00 = 10,00 | 1 un × 5,76 = 5,76 | -42% | est · Stock ITT (cód. ACS1501X76FL0) · JUN-017 · 2024-11-01 | más barato (similar) |
 | 20 | Cunas de apoyo | 40 × 0,75 = 30,00 | 40 kg × 1,27 = 50,80 | +69% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | más caro (similar) · real: la planilla toma 20 kg × 1,5 (error: 2 un × 20 kg = 40 kg); incluye MO ITT p/estructura pesada |
 
-**Materiales: real USD 6.104,66 · cotizador USD 8.727,75 (+43%).** 3 dentro de ±15%, 14 fuera, 3 sin precio.
+**Materiales: real USD 6.104,66 · cotizador USD 8.663,03 (+42%).** 2 dentro de ±15%, 15 fuera, 3 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -44,5 +44,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por tanque
 
-Real USD 22.624,66 · cotizador USD 14.605,58 (-35%) antes de completar lo que el cotizador marca para revisar.
+Real USD 22.624,66 · cotizador USD 14.540,86 (-36%) antes de completar lo que el cotizador marca para revisar.
 

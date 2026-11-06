@@ -19,7 +19,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 11 | Varilla roscada 3/8" | 1 × 5,00 = 5,00 | 1 un × 329,00 = 329,00 | +6.480% | cot · Gora S.A. · OTR-02164 · 2026-03-09 | más caro (similar) |
 | 12 | Tuerca mariposa de bronce 3/8" | 1 × 7,00 = 7,00 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-06 | SIN PRECIO en el catálogo |
 | 13 | Arandela plana 3/8" | 1 × 3,00 = 3,00 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-06 | SIN PRECIO en el catálogo |
-| 14 | Espárrago 3/4 x 120.70 con 2 tuercas | 8 × 10,00 = 80,00 | 8 un × 4,00 = 32,00 | -60% | cot · planilla de costo ITT (proveedor sin nom · 2026-10-30 | más barato (similar) |
+| 14 | Espárrago 3/4 x 120.70 con 2 tuercas | 8 × 10,00 = 80,00 | 8 un × 1,91 = 15,28 | -81% | cot · Oil Metal (cód. ESP0190ZC120193) · JUN-0 · 2026-10-30 | más barato (similar) |
 | 15 | Placa apoyo con guía 4 mm | 1 × 1,40 = 1,40 | 1 kg × 1,26 = 1,26 | -10% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | dentro de ±15% |
 | 16 | Tapa soporte elemento filtrante 4 mm | 1 × 1,40 = 1,40 | 1 kg × 1,26 = 1,26 | -10% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | dentro de ±15% |
 | 17 | Junta espirometálica 4" #300 | 1 × 15,00 = 15,00 | 1 un × 2,59 = 2,59 | -83% | cot · planilla de costo ITT (proveedor sin nom · 2026-10-30 | más barato (similar) |
@@ -34,7 +34,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 26 | Chapa soporte manómetro 1.59 mm | 2 × 1,40 = 2,80 | 2 kg × 1,26 = 2,52 | -10% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | dentro de ±15% |
 | 27 | Arandela plana zincada 3/4" | 16 × 3,00 = 48,00 | 16 un × 0,20 = 3,20 | -93% | est · Stock ITT (cód. ACS020XXX31FA0) · JUN-01 · 2024-11-01 | más barato (similar) |
 
-**Materiales: real USD 1.504,15 · cotizador USD 1.581,85 (+5%).** 8 dentro de ±15%, 11 fuera, 8 sin precio.
+**Materiales: real USD 1.504,15 · cotizador USD 1.565,13 (+4%).** 8 dentro de ±15%, 11 fuera, 8 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -51,5 +51,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por filtro
 
-Real USD 4.483,97 · cotizador USD 2.798,62 (-38%) antes de completar lo que el cotizador marca para revisar.
+Real USD 4.483,97 · cotizador USD 2.781,90 (-38%) antes de completar lo que el cotizador marca para revisar.
 

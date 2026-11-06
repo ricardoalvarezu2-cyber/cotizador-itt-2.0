@@ -317,12 +317,13 @@
    "fuentes": [
     {
      "tipo": "est",
-     "precio": 0,
-     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
-     "origen": "—",
-     "fecha": "2026-11-06",
-     "coincide": "sin_ref",
-     "diferencia": "No hay pieza de esa familia y tipo con precio"
+     "precio": 67.71,
+     "proveedor": "Stock ITT (cód. ACS0404RBN050F) · BRI-01349",
+     "codigo": "BRI-01349",
+     "origen": "fuentes_originales/stock_valorizado_2024-11.xlsx · código ACS0404RBN050F",
+     "fecha": "2024-11-01",
+     "coincide": "similar",
+     "diferencia": "schedule: 80 (pedido 160); material: A105 (no pedido)"
     }
    ]
   },
@@ -739,13 +740,13 @@
    "fuentes": [
     {
      "tipo": "ant",
-     "precio": 2.5,
-     "proveedor": "sin proveedor en planilla (columna PROVEEDOR vacía) · JUN-04176",
-     "codigo": "JUN-04176",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · 4.Armado de la Oferta Comercial/LM-TANQUE GLICOL.xlsx",
-     "fecha": "2026-02-20",
+     "precio": 10.0,
+     "proveedor": "sin proveedor en planilla · JUN-04178",
+     "codigo": "JUN-04178",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECHINT\\12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado · 4.Armado de la Oferta Comercial/OFERTA REV A/LM costo Desarenador rev ventas REV. 1.xlsx",
+     "fecha": "2025-12-23",
      "coincide": "similar",
-     "diferencia": "medida: 5/8 x 2 1/2 (pedido 5/8 x 5)"
+     "diferencia": "medida: sin dato (pedido 5/8 x 5); unidad distinta: catálogo por juego, plano por un"
     }
    ]
   },

@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-SK01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 42.198,74 por equipo · soldadura y servicios calculados USD 19.511,19 · 18 similares (2, 2b, 6, 8, 10, 11, 12, 13, 17, 19, 20, 21, 22, 23, 24, 28, 30, 31) · 2 sin precio (4, 14).
+**Resumen:** materiales USD 40.294,37 por equipo · soldadura y servicios calculados USD 19.511,19 · 18 similares (2, 2b, 6, 8, 10, 11, 12, 13, 17, 19, 20, 21, 22, 23, 24, 28, 30, 31) · 2 sin precio (4, 14).
 
 
 ## 1. Materiales
@@ -10,15 +10,15 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 |---|---|---|---|---|---|
 | 1 | Caño s/c extr. SCH XS (323,8 x 12,70) · Ø 12" | IGUAL | 215,01 / m | 2026-11-05 · cotización | — |
 | 2 | Caño c/c extr. STD (406,4 x 9,52) · Ø 16" | SIMILAR | 248,98 / m | 2025-12-26 · lista | material: A106 B (pedido API 5L); costura: sin costura (pedido con costura) |
-| 3 | Tee normal · Ø 12" | IGUAL ⚠ | 1.797,97 / un | 2025-02-17 · lista | — |
+| 3 | Tee normal · Ø 12" | IGUAL ⚠ | 1.457,38 / un | 2025-02-17 · lista | — |
 | 4 | Tee de reducción SCH STD x XS · Ø 16"x12" | **SIN PRECIO** | — | — | pedir cotización |
 | 5 | Brida WN RF 300 LB SCH XS · Ø 12" | IGUAL | 210,79 / un | 2026-11-05 · cotización | — |
 | 6 | Brida WN RF 300 LB · Ø 16" | SIMILAR | 822,61 / un | 2026-10-29 · cotización | schedule: 80 (no pedido) |
 | 7 | Brida ciega RF 300 LB · Ø 12" | IGUAL | 268,00 / un | 2026-11-03 · cotización | — |
 | 8 | Brida ciega RF 300 LB · Ø 16" | SIMILAR | 691,17 / un | 2025-12-26 · lista | diametro: 14" (pedido 16"); precio escalado por diámetro (16" ÷ 14")^1,5 = × 1,22 |
-| 9 | Brida SW RF 300 LB SCH 80 · Ø 1 1/2" | IGUAL | 22,07 / un | 2026-11-03 · cotización | — |
-| 10 | Espárrago c/2 tuercas p/brida 300 LB 1.25x207 | SIMILAR | 9,58 / un | 2026-11-05 · cotización | serie: sin dato (pedido 300); material: A193 B7 (pedido A194 2H); medida: 1 1/4 x 8 1/2 (pedido 1 1/4 x 8 1/8) |
-| 11 | Espárrago c/2 tuercas p/brida 300 LB 1.125x18 | SIMILAR | 10,00 / un | 2026-10-30 · cotización | serie: 600 (pedido 300); medida: 1 1/8 x 8 1/4 (pedido 1 1/8 x 7 3/8) |
+| 9 | Brida SW RF 300 LB SCH 80 · Ø 1 1/2" | IGUAL | 10,11 / un | 2026-11-05 · cotización | — |
+| 10 | Espárrago c/2 tuercas p/brida 300 LB 1.25x207 | SIMILAR | 9,58 / un | 2026-11-05 · cotización | serie: sin dato (pedido 300); medida: 1 1/4 x 8 1/2 (pedido 1 1/4 x 8 1/8); unidad distinta: catálogo por jueg |
+| 11 | Espárrago c/2 tuercas p/brida 300 LB 1.125x18 | SIMILAR | 7,06 / un | 2026-11-05 · cotización | serie: sin dato (pedido 300); medida: 1 1/8 x 7 3/4 (pedido 1 1/8 x 7 3/8); unidad distinta: catálogo por jueg |
 | 12 | Junta espiralada RF esp. 4,5 mm 300 LB · Ø 1  | SIMILAR | 1,29 / un | 2026-11-05 · cotización | diametro: 2" (pedido 1.5"); material: AISI 316L (no pedido); medida: anillo ext. (no pedido); extremos: sin da |
 | 13 | Junta espiralada RF esp. 4,5 mm 300 LB · Ø 12 | SIMILAR | 9,31 / un | 2026-08-14 · cotización | medida: anillos ext. e int. (no pedido); extremos: sin dato (pedido RF) |
 | 14 | Junta espiralada RF esp. 4,5 mm 300 LB · Ø 16 | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (10") (JUN-04923, USD 7,14): pedir cotización |
@@ -65,7 +65,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 122 placas chicas + 25 grandes + 3,83 servicio(s) de RX + 0,67 de LP por equipo = USD 2.753,00 (Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))).
   Con las tarifas de Antonelli (11-2025) serían USD 4.535,00: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: skid, 16", 6 u, materiales USD 42.199 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: skid, 16", 6 u, materiales USD 40.294 por unidad)
 
 - **Ingeniería:** 5 h × USD 15/h = USD 75,00 · mediana de 4,5, 5,0, 93,3 h por unidad (repartidas en la serie) · antecedente: Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para UFLO 2108 (SK-2105) (8, 1 u, 2026-02-20) · rango del mismo tipo 27–280 h
 - **Calidad y dossier:** 15 h × USD 15/h = USD 225,00 · mediana de 15,0, 7,5, 40,0 h por unidad (repartidas en la serie) · antecedente: Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL · Skid para UFLO 2108 (SK-2105) (8, 1 u, 2026-02-20) · rango del mismo tipo 45–120 h

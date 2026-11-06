@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-P02
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 4.894,26 por equipo · soldadura y servicios calculados USD 4.002,94 · 18 similares (1, 2, 4, 8, 9, 11, 12, 14, 15, 16, 17, 19, 23, 24, 37, 38, 39, 40) · 1 sin precio (6).
+**Resumen:** materiales USD 4.894,26 por equipo · soldadura y servicios calculados USD 4.002,94 · 19 similares (1, 2, 4, 8, 9, 11, 12, 14, 15, 16, 17, 19, 23, 24, 33, 37, 38, 39, 40) · 1 sin precio (6).
 
 
 ## 1. Materiales
@@ -40,11 +40,11 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 30 | Caño sin costura longitud 105 mm · Ø 3" | IGUAL | 25,08 / m | 2025-12-26 · lista | — |
 | 31 | Tee BW Sch. 40 · Ø 3" | IGUAL | 28,36 / un | 2025-12-26 · lista | norma: sin dato (pedido B16.9) |
 | 32 | Tuerca hexagonal · Ø 5/8" | IGUAL | 0,22 / un | 2026-11-05 · cotización | — |
-| 33 | Espárrago 5/8 L=3 1/2 (90 mm) · Ø 5/8" | IGUAL | 1,04 / un | 2026-10-30 · cotización | — |
+| 33 | Espárrago 5/8 L=3 1/2 (90 mm) · Ø 5/8" | SIMILAR | 1,04 / un | 2026-10-30 · cotización | unidad distinta: catálogo por juego, plano por un |
 | 34 | Tuerca hexagonal · Ø 3/4" | IGUAL | 0,36 / un | 2026-11-05 · cotización | — |
 | 35 | Caño sin costura longitud 254 mm · Ø 3" | IGUAL | 25,08 / m | 2025-12-26 · lista | — |
 | 36 | Caño sin costura longitud 100 mm · Ø 3" | IGUAL | 25,08 / m | 2025-12-26 · lista | — |
-| 37 | Espárrago 3/4 L=4 1/4 (110 mm) · Ø 3/4" | SIMILAR | 5,00 / un | 2026-01-15 · planilla interna | material: A194 2H (pedido A193 B7); unidad distinta: catálogo por uni, plano por un |
+| 37 | Espárrago 3/4 L=4 1/4 (110 mm) · Ø 3/4" | SIMILAR | 5,00 / un | 2026-01-15 · planilla interna | unidad distinta: catálogo por juego, plano por un |
 | 38 | Indicador transmisor de temperatura | SIMILAR | 803,00 / un | 2026-06-25 · planilla interna | marca: sin dato (pedido ABB) · faltan: rango, conexion |
 | 39 | Indicador de presión (manómetro) con manifold | SIMILAR | 120,00 / un | 2026-10-30 · cotización | — · faltan: rango, conexion |
 | 40 | Indicador transmisor de presión con manifold  | SIMILAR | 1.100,00 / un | 2026-03-10 · planilla interna | marca: sin dato (pedido ABB) · faltan: rango, conexion |

@@ -38,7 +38,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 30 | Caño s/c 3" sch 40 A106 B (tramo 105 mm) | 1 × 2,63 = 2,63 | 0,1 m × 25,08 = 2,63 | +0% | lista · Renard (cód. 1153) · CAN-01484 · 2025-12-26 | dentro de ±15% |
 | 31 | Tee normal 3" sch 40 BW A234 WPB | 1 × 28,36 = 28,36 | 1 un × 28,36 = 28,36 | 0% | lista · Renard (cód. 3465) · ABW-00394 · 2025-12-26 | dentro de ±15% |
 | 32 | Tuerca hexagonal 5/8" 2H | 32 × 0,00 = 0,00 | 32 un × 0,00 = 0,00 |  | cot · Incluidas en el precio del espárrago · 2026-10-28 | incluido en otra posición · real: incluida en el espárrago con 2 tuercas (pos 33) |
-| 33 | Espárrago 5/8" x 89 mm B7 con 2 tuercas 2H, z | 16 × 10,00 = 160,00 | 16 un × 1,04 = 16,64 | -90% | cot · Oil Metal (cód. ESP0158ZC090193) · JUN-0 · 2026-10-30 | más barato |
+| 33 | Espárrago 5/8" x 89 mm B7 con 2 tuercas 2H, z | 16 × 10,00 = 160,00 | 16 un × 1,04 = 16,64 | -90% | cot · Oil Metal (cód. ESP0158ZC090193) · JUN-0 · 2026-10-30 | más barato (similar) |
 | 34 | Tuerca hexagonal 3/4" 2H | 112 × 0,00 = 0,00 | 112 un × 0,00 = 0,00 |  | cot · Incluidas en el precio del espárrago · 2026-10-28 | incluido en otra posición · real: incluida en el espárrago con 2 tuercas (pos 37) |
 | 35 | Caño s/c 3" sch 40 A106 B (tramo 254 mm) | 1 × 6,37 = 6,37 | 0,25 m × 25,08 = 6,37 | +0% | lista · Renard (cód. 1153) · CAN-01484 · 2025-12-26 | dentro de ±15% |
 | 36 | Caño s/c 3" sch 40 A106 B (tramo 100 mm) | 1 × 2,51 = 2,51 | 0,1 m × 25,08 + compra extra 36b = 6,72 | +168% | lista · Renard (cód. 1153) · CAN-01484 · 2025-12-26 | más caro |

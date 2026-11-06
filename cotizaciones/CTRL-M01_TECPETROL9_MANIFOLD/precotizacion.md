@@ -13,8 +13,8 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 3 | Caño sin costura · Ø 4" | IGUAL | 39,07 / m | 2026-10-29 · cotización | — |
 | 4 | Caño sin costura · Ø 8" | IGUAL | 113,16 / m | 2026-10-30 · cotización | — |
 | 5 | Drip ring · Ø 4" | **SIN PRECIO** | — | — | pedir cotización |
-| 6 | Espárrago con 2 tuercas 7/8 x 100 mm · Ø 7/8" | SIMILAR | 8,00 / un | 2026-06-26 · planilla interna | medida: 7/8 x 5 3/4 (pedido 7/8 x 3 7/8) · faltan: material |
-| 7 | Espárrago con 2 tuercas 7/8 x 140 mm · Ø 7/8" | SIMILAR | 8,00 / un | 2026-06-26 · planilla interna | medida: 7/8 x 5 3/4 (pedido 7/8 x 5 1/2) · faltan: material |
+| 6 | Espárrago con 2 tuercas 7/8 x 100 mm · Ø 7/8" | SIMILAR | 8,00 / un | 2026-06-26 · planilla interna | medida: 7/8 x 5 3/4 (pedido 7/8 x 3 7/8); unidad distinta: catálogo por juego, plano por un · faltan: material |
+| 7 | Espárrago con 2 tuercas 7/8 x 140 mm · Ø 7/8" | SIMILAR | 8,00 / un | 2026-06-26 · planilla interna | medida: 7/8 x 5 3/4 (pedido 7/8 x 5 1/2); unidad distinta: catálogo por juego, plano por un · faltan: material |
 | 8 | Junta espiralada · Ø 4" | SIMILAR | 5,56 / un | 2026-02-19 · planilla interna | medida: anillos ext. e int. (no pedido) |
 | 9 | Niple longitud 100 mm · Ø 1/2" | IGUAL ⚠ | 5,66 / un | 2026-11-05 · cotización | — |
 | 10 | Sockolet · Ø 1/2" | SIMILAR | 2,00 / un | 2026-10-30 · cotización | schedule: 80 (no pedido); extremos: sin dato (pedido SW/BW) |

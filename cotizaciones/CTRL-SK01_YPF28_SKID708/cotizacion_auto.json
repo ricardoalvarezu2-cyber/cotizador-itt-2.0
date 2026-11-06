@@ -279,10 +279,10 @@
    "fuentes": [
     {
      "tipo": "lista",
-     "precio": 1797.97,
-     "proveedor": "Cintolo Hnos. (cód. 7128) · ABW-03406",
+     "precio": 1457.38,
+     "proveedor": "Cintolo Hnos. (cód. 6068) · ABW-03406",
      "codigo": "ABW-03406",
-     "origen": "fuentes_originales/listas_vendedor/2026-10-28/cintolo_lista_29-1_2025-02-17.xlsx · código 7128",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-28/cintolo_lista_29-1_2025-02-17.xlsx · código 6068",
      "fecha": "2025-02-17",
      "coincide": "igual"
     }
@@ -463,11 +463,11 @@
    "fuentes": [
     {
      "tipo": "cot",
-     "precio": 22.07,
-     "proveedor": "Bripetrol · BRI-01161",
+     "precio": 10.11,
+     "proveedor": "Grupo Provemet · BRI-01161",
      "codigo": "BRI-01161",
-     "origen": "BRIPETROL - CZ000100016310.PDF",
-     "fecha": "2026-11-03",
+     "origen": "Grupo_Provemet_Cotizacion_0000289897_TAVAL_SA BRIDAS 12.pdf",
+     "fecha": "2026-11-05",
      "coincide": "igual"
     }
    ]
@@ -484,7 +484,7 @@
     "familia": "JUN",
     "diametro": "1.25\"",
     "serie": "300",
-    "material": "A194 2H",
+    "material": "A193 B7",
     "tipo": "esparrago",
     "medida": "1 1/4 x 8 1/8"
    },
@@ -498,7 +498,7 @@
      "origen": "Grupo_Provemet_Cotizacion_0000289909_TAVAL_SA.pdf",
      "fecha": "2026-11-05",
      "coincide": "similar",
-     "diferencia": "serie: sin dato (pedido 300); material: A193 B7 (pedido A194 2H); medida: 1 1/4 x 8 1/2 (pedido 1 1/4 x 8 1/8); unidad distinta: catálogo por juego, plano por un"
+     "diferencia": "serie: sin dato (pedido 300); medida: 1 1/4 x 8 1/2 (pedido 1 1/4 x 8 1/8); unidad distinta: catálogo por juego, plano por un"
     }
    ]
   },
@@ -514,7 +514,7 @@
     "familia": "JUN",
     "diametro": "1.125\"",
     "serie": "300",
-    "material": "A194 2H",
+    "material": "A193 B7",
     "tipo": "esparrago",
     "medida": "1 1/8 x 7 3/8"
    },
@@ -522,13 +522,13 @@
    "fuentes": [
     {
      "tipo": "cot",
-     "precio": 10.0,
-     "proveedor": "planilla de costo ITT (proveedor sin nombre) · JUN-04963",
-     "codigo": "JUN-04963",
-     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
-     "fecha": "2026-10-30",
+     "precio": 7.06,
+     "proveedor": "Grupo Provemet · JUN-05060",
+     "codigo": "JUN-05060",
+     "origen": "Grupo_Provemet_Cotizacion_0000289897_TAVAL_SA BRIDAS 12.pdf",
+     "fecha": "2026-11-05",
      "coincide": "similar",
-     "diferencia": "serie: 600 (pedido 300); medida: 1 1/8 x 8 1/4 (pedido 1 1/8 x 7 3/8)"
+     "diferencia": "serie: sin dato (pedido 300); medida: 1 1/8 x 7 3/4 (pedido 1 1/8 x 7 3/8); unidad distinta: catálogo por juego, plano por un"
     }
    ]
   },

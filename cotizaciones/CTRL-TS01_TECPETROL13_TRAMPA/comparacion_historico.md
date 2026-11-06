@@ -29,7 +29,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 21 | Tee normal 4" 120 ASTM A-234 WPB | 2 × 329,77 = 659,54 | 2 un × 300,00 = 600,00 | -9% | ant · no dice (planilla de compras; cotización · 2025-08-01 | dentro de ±15% |
 | 22 | Weldolet 1/2" x 20" ASTM A-105 | 1 × 7,00 = 7,00 | 1 un × 65,00 = 65,00 | +829% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) |
 | 23 | Espárrago con 2 tuercas zincado 7/8 x 145 mm  | 48 × 8,00 = 384,00 | 48 un × 3,17 = 152,16 | -60% | cot · PROVEMET · JUN-04186 · 2025-08-27 | más barato (similar) |
-| 24 | Espárrago con 2 tuercas zincado 1 1/8 x 170 m | 48 × 11,00 = 528,00 | 48 un × 10,00 = 480,00 | -9% | cot · planilla de costo ITT (proveedor sin nom · 2026-10-30 | dentro de ±15% |
+| 24 | Espárrago con 2 tuercas zincado 1 1/8 x 170 m | 48 × 11,00 = 528,00 | 48 un × 7,06 = 338,88 | -36% | cot · Grupo Provemet · JUN-05060 · 2026-11-05 | más barato (similar) |
 | 25 | Espárrago con 2 tuercas zincado 1 3/8 x 255 m | 60 × 13,00 = 780,00 | 60 un × 27,00 = 1.620,00 | +108% | ant · no dice (planilla de compras; cotización · 2025-08-01 | más caro (similar) |
 | 26 | Junta RF hierro maleable 2" 900 | 6 × 8,00 = 48,00 | 6 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-06 | SIN PRECIO en el catálogo |
 | 27 | Junta RF hierro maleable 8" 900 | 3 × 10,00 = 30,00 | 3 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-06 | SIN PRECIO en el catálogo |
@@ -57,7 +57,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 49 | Detector de paso de scraper | 1 × 4.209,50 = 4.209,50 | 1 un × 1.650,00 = 1.650,00 | -61% | ant · TDW (marca) · OTR-02969 · 2025-12-10 | más barato (similar) |
 | 50 | Válvula de bloqueo y purga (para manómetro) 1 | 1 × 150,00 = 150,00 | 1 un × 80,00 = 80,00 | -47% | ant · Abac · VAL-03162 · 2026-04-22 | más barato (similar) |
 
-**Materiales: real USD 58.316,80 · cotizador USD 33.168,79 (-43%).** 6 dentro de ±15%, 28 fuera, 16 sin precio.
+**Materiales: real USD 58.316,80 · cotizador USD 33.027,68 (-43%).** 5 dentro de ±15%, 29 fuera, 16 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -74,5 +74,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por trampa
 
-Real USD 83.177,98 · cotizador USD 58.587,01 (-30%) antes de completar lo que el cotizador marca para revisar.
+Real USD 83.177,98 · cotizador USD 58.445,90 (-30%) antes de completar lo que el cotizador marca para revisar.
 
