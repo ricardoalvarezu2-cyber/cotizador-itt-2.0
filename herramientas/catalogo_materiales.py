@@ -129,6 +129,8 @@ ABREV = [(r"\besf\b", "valvula esferica"), (r"\bpt\b", "paso total"), (r"\bred c
          (r"\bgda\b", "guiada"), (r"\ba-(?=\d{2,3}\b)", "a"), (r"\bunion doble golpe\b", "union doble a golpe"),
          (r"\besp\.? (swi?)\b", r"junta espiralada \1"), (r"\bjuntas espiraladas\b", "junta espiralada"), (r"\bjunta esp (?=.*\b(?:cwi?|swi?)\b)", "junta espiralada "), (r"scrapper", "scraper"), (r"\bp\.t\.", "paso total"), (r"\bp\.r\.", "paso reducido"),
          (r"\b(b ?7m?|b ?8m?|2h|l7)\s+(?=\d{1,2}/\d)", r"\1; "), (r"(?<![\d.,])(\d{1,2})\.(\d/\d)(?=\s?(?:\"|''|pulg))", r"\1 \2"),  # "1.1/2\"" = 1 1/2" (Cintolo, Complemet; 06-11-2026)  # "GR.B7 7/8\"" no es 7 7/8" (Delgado, 06-11-2026)
+         (r"\bte red\.? ", "tee reduccion "), (r"\bte normal\b", "tee"), (r"\bred\. ?con\.? ", "reduccion concentrica "),
+         (r"\bred\. ?exc\.? ", "reduccion excentrica "), (r"\bcas\. ?se\.? ", "casquete semieliptico "),  # abreviaturas de la lista Cintolo (auditoría 06-11-2026)
          (r"\bwnrf\b", "wn rf"), (r"\bsorf\b", "so rf"), (r"\bswrf\b", "sw rf"), (r"\bblrf\b", "bl rf"), (r"\bwnrtj\b", "wn rtj")]
 # Otros: el tipo es la pieza (antes eran las tres primeras palabras y "tapa de cierre rápido #900" no se comparaba por Ø ni
 # serie; CTRL-TS01)
