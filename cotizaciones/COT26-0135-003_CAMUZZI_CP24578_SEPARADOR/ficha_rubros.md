@@ -1,6 +1,6 @@
 # Ficha por rubro — COT26-0135-003
 
-Generada por `herramientas/ficha_rubros.py` el 05-11-2026. Todo **por separador**; la cantidad (2) multiplica al final.
+Generada por `herramientas/ficha_rubros.py` el 06-11-2026. Todo **por separador**; la cantidad (2) multiplica al final.
 Sirve para pedir un precio global al tercero y para controlarlo contra el cálculo detallado.
 
 ## 1. MO de armado y soldadura del piping
