@@ -10,11 +10,11 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 2 | Brida WN 8" S600 Sch.80 A-105 | 2 × 305,43 = 610,86 | 2 un × 178,08 = 356,16 | -42% | cot · planilla de costo ITT (proveedor sin nom · 2026-10-30 | más barato · real: en REV D/E bajó a 176,80 |
 | 3 | Caño SC 4" Sch.80 A-106 | 4 × 57,80 = 231,20 | 4 m × 39,07 + compra extra 3b = 167,45 | -28% | cot · Grupo Provemet · CAN-01497 · 2026-10-29 | más barato · real: LM: tramos 8 × 0,25 + 3,4 + 4 × 0,1; se costean 4 m |
 | 4 | Caño SC 8" Sch.80 A-106 | 2 × 165,98 = 331,96 | 2 m × 113,16 + compra extra 4b = 242,50 | -27% | cot · planilla de costo ITT (proveedor sin nom · 2026-10-30 | más barato · real: LM: tramo de 2,2 m; se costean 2 m |
-| 5 | Drip ring 4" S600 A-516 | 4 × 350,00 = 1.400,00 | 4 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-05 | SIN PRECIO en el catálogo |
+| 5 | Drip ring 4" S600 A-516 | 4 × 350,00 = 1.400,00 | 4 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-06 | SIN PRECIO en el catálogo |
 | 6 | Espárragos 7/8" x 100 mm | 160 × 10,00 = 1.600,00 | 160 un × 8,00 = 1.280,00 | -20% | ant · REPUESTOS · JUN-04190 · 2026-06-26 | más barato (similar) |
 | 7 | Espárragos 7/8" x 140 mm | 32 × 10,00 = 320,00 | 32 un × 8,00 = 256,00 | -20% | ant · REPUESTOS · JUN-04190 · 2026-06-26 | más barato (similar) |
 | 8 | Junta espiralada 4" S600 AISI | 28 × 11,00 = 308,00 | 28 un × 5,56 = 155,68 | -49% | ant · MS o Fseal · JUN-05048 · 2026-02-19 | más barato (similar) · real: en REV A: 6,35 |
-| 9 | Niple 1/2" 100 mm Sch.160 A-106 | 8 × 5,00 = 40,00 | 8 un × 5,00 = 40,00 | 0% | cot · Oil Metal (cód. NP0050NN0100706) · NIP-0 · 2026-10-30 | dentro de ±15% |
+| 9 | Niple 1/2" 100 mm Sch.160 A-106 | 8 × 5,00 = 40,00 | 8 un × 5,66 = 45,28 | +13% | cot · Grupo Provemet · NIP-03365 · 2026-11-05 | dentro de ±15% |
 | 10 | Sockolet 1/2" S3000 A-105 | 4 × 10,00 = 40,00 | 4 un × 2,00 = 8,00 | -80% | cot · Oil Metal (cód. SOC005008030105) · AFO-0 · 2026-10-30 | más barato (similar) |
 | 11 | Tapón 1/2" NPT S3000 A-105 | 8 × 5,00 = 40,00 | 8 un × 1,90 = 15,20 | -62% | lista · Renard (cód. 5979) · AFO-00847 · 2025-12-26 | más barato |
 | 12 | Te normal 4" Sch.80 A-234 | 8 × 98,00 = 784,00 | 8 un × 95,34 = 762,72 | -3% | cot · Oil Metal (cód. AC0400-4K280527) · ABW-0 · 2026-10-30 | dentro de ±15% |
@@ -24,7 +24,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 16 | Válvula esférica 4" S600 RF PT A-216 (Taval) | 8 × 1.646,30 = 13.170,40 | 8 un × 1.050,00 = 8.400,00 | -36% | lista · Taval (Lista 30 × 0.52) · VAL-03559 · 2025-09-01 | más barato · real: lista 2.469,45 con descuentos (en REV A: 1.049,88) |
 | 17 | Válvula retención 4" S600 RF A-216 (Taval) | 4 × 479,90 = 1.919,60 | 4 un × 690,04 = 2.760,16 | +44% | ant · Válvulas TAVAL (cotización -35% -20% sob · 2026-02-19 | más caro · real: lista 719,85 con descuentos (en REV A: 690,04) |
 
-**Materiales: real USD 27.353,62 · cotizador USD 19.461,06 (-29%).** 3 dentro de ±15%, 13 fuera, 1 sin precio.
+**Materiales: real USD 27.353,62 · cotizador USD 19.466,34 (-29%).** 3 dentro de ±15%, 13 fuera, 1 sin precio.
 
 ## Mano de obra y servicios (por rubro)
 
@@ -40,5 +40,5 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 
 ## Total por manifold
 
-Real USD 44.462,22 · cotizador USD 32.611,89 (-27%) antes de completar lo que el cotizador marca para revisar.
+Real USD 44.462,22 · cotizador USD 32.617,17 (-27%) antes de completar lo que el cotizador marca para revisar.
 

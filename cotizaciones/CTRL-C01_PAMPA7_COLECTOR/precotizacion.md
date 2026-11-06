@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-C01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 26.244,99 por equipo · soldadura y servicios calculados USD 17.580,35 · 18 similares (9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 23, 24, 25, 26, 27, 32, 34, 35) · 4 sin precio (22, 28, 31, 33).
+**Resumen:** materiales USD 26.224,96 por equipo · soldadura y servicios calculados USD 17.580,35 · 18 similares (9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 23, 24, 25, 26, 27, 32, 34, 35) · 4 sin precio (22, 28, 31, 33).
 
 
 ## 1. Materiales
@@ -16,8 +16,8 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 6 | Brida ciega RF · Ø 2" | IGUAL | 18,50 / un | 2026-06-26 · planilla interna | — |
 | 7 | Caño sin costura · Ø 3" | IGUAL | 25,08 / m | 2025-12-26 · lista | — |
 | 8 | Caño sin costura · Ø 6" | IGUAL | 49,48 / m | 2026-10-29 · cotización | — |
-| 9 | Niple caño sin costura longitud 150 mm · Ø 3/ | SIMILAR | 8,50 / un | 2026-10-30 · cotización | largo_mm: 100 (pedido 150); el último precio (3,80) se aparta más de 40% de la mediana de sus últimos precios: |
-| 10 | Niple caño sin costura longitud 150 mm · Ø 1" | SIMILAR | 13,09 / un | 2026-10-30 · cotización | diametro: 0.75" (pedido 1"); largo_mm: 100 (pedido 150); el último precio (3,80) se aparta más de 40% de la me |
+| 9 | Niple caño sin costura longitud 150 mm · Ø 3/ | SIMILAR | 7,42 / un | 2026-11-05 · cotización | largo_mm: 100 (pedido 150) |
+| 10 | Niple caño sin costura longitud 150 mm · Ø 1" | SIMILAR | 11,42 / un | 2026-11-05 · cotización | diametro: 0.75" (pedido 1"); largo_mm: 100 (pedido 150); precio escalado por diámetro (1" ÷ 0,75")^1,5 = × 1,5 |
 | 11 | Junta espiralada RF espesor 4.5 mm con anillo | SIMILAR | 15,00 / un | 2025-12-10 · planilla interna | extremos: sin dato (pedido RF) |
 | 12 | Junta espiralada RF espesor 4.5 mm con anillo | SIMILAR | 4,32 / un | 2026-10-30 · cotización | extremos: sin dato (pedido RF) |
 | 13 | Junta espiralada RF espesor 4.5 mm con anillo | SIMILAR | 4,32 / un | 2026-10-30 · cotización | diametro: 3" (pedido 2"); extremos: sin dato (pedido RF) |
@@ -69,7 +69,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 243 placas chicas + 0 grandes + 6,11 servicio(s) de RX + 1,44 de LP por equipo = USD 4.497,50 (Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))).
   Con las tarifas de Antonelli (11-2025) serían USD 7.347,22: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: manifold, 6", 18 u, materiales USD 26.245 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: manifold, 6", 18 u, materiales USD 26.225 por unidad)
 
 - **Ingeniería:** 0,82 h × USD 15/h = USD 12,30 · mediana de 1,1, 0,5 h por unidad (repartidas en la serie) · antecedente: TECPETROL/9. CM SKID MANIFOLD PAD S-600 · Skid Manifold PAD S600 clase A6BM (sch 40) (4 (colector 8), 28 u, 2026-01-26) · rango del mismo tipo 1,14–9 h
 - **Calidad y dossier:** 12,5 h × USD 15/h = USD 187,50 · mediana de 24,0, 1,0 h por unidad (repartidas en la serie) · antecedente: TECPETROL/9. CM SKID MANIFOLD PAD S-600 · Skid Manifold PAD S600 clase A6BM (sch 40) (4 (colector 8), 28 u, 2026-01-26) · rango del mismo tipo 18–24 h

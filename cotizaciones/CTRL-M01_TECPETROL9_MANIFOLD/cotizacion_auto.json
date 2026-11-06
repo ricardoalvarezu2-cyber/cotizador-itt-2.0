@@ -337,7 +337,7 @@
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-11-05",
+     "fecha": "2026-11-06",
      "coincide": "sin_ref",
      "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
@@ -451,13 +451,12 @@
    "fuentes": [
     {
      "tipo": "cot",
-     "precio": 5.0,
-     "proveedor": "Oil Metal (cód. NP0050NN0100706) · NIP-03365",
+     "precio": 5.66,
+     "proveedor": "Grupo Provemet · NIP-03365",
      "codigo": "NIP-03365",
-     "origen": "fuentes_originales/listas_vendedor/2026-11-05/oilmetal_cotizacion_37278_2026-10-30.pdf · código NP0050NN0100706",
-     "fecha": "2026-10-30",
-     "coincide": "similar",
-     "diferencia": "el último precio (2,79) se aparta más de 40% de la mediana de sus últimos precios: se usa la mediana 5,00"
+     "origen": "Grupo_Provemet_Cotizacion_0000289909_TAVAL_SA.pdf",
+     "fecha": "2026-11-05",
+     "coincide": "igual"
     }
    ]
   },

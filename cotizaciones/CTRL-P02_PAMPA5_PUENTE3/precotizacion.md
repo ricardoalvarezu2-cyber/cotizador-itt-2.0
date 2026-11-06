@@ -39,9 +39,9 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 29 | Caño sin costura longitud 215 mm · Ø 3" | IGUAL | 25,08 / m | 2025-12-26 · lista | — |
 | 30 | Caño sin costura longitud 105 mm · Ø 3" | IGUAL | 25,08 / m | 2025-12-26 · lista | — |
 | 31 | Tee BW Sch. 40 · Ø 3" | IGUAL | 28,36 / un | 2025-12-26 · lista | norma: sin dato (pedido B16.9) |
-| 32 | Tuerca hexagonal · Ø 5/8" | IGUAL | 0,18 / un | 2025-09-04 · cotización | — |
+| 32 | Tuerca hexagonal · Ø 5/8" | IGUAL | 0,22 / un | 2026-11-05 · cotización | — |
 | 33 | Espárrago 5/8 L=3 1/2 (90 mm) · Ø 5/8" | IGUAL | 1,04 / un | 2026-10-30 · cotización | — |
-| 34 | Tuerca hexagonal · Ø 3/4" | SIMILAR | 0,18 / un | 2025-09-04 · cotización | diametro: 0.625" (pedido 0.75") |
+| 34 | Tuerca hexagonal · Ø 3/4" | IGUAL | 0,36 / un | 2026-11-05 · cotización | — |
 | 35 | Caño sin costura longitud 254 mm · Ø 3" | IGUAL | 25,08 / m | 2025-12-26 · lista | — |
 | 36 | Caño sin costura longitud 100 mm · Ø 3" | IGUAL | 25,08 / m | 2025-12-26 · lista | — |
 | 37 | Espárrago 3/4 L=4 1/4 (110 mm) · Ø 3/4" | SIMILAR | 5,00 / un | 2026-01-15 · planilla interna | material: A194 2H (pedido A193 B7); unidad distinta: catálogo por uni, plano por un |
