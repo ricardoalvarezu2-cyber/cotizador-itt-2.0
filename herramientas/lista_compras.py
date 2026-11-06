@@ -123,15 +123,17 @@ def main(carpeta):
             r += 1
             ws.cell(r, 1, "• " + t)
 
-    calc = ["Cant. a comprar", "Unidad", "Kg aprox.", "Origen de la cantidad"]
+    calc = ["Material según la ET", "Marcas aprobadas (SCE-IN-501-0015)", "Cant. a comprar", "Unidad", "Kg aprox.", "Origen de la cantidad"]  # solo si el documento remite a una ET que tenemos ("S/ Esp. CAMUZZI"): lo que pide esa ET para ese caso; la columna del documento queda literal (Matías, 06-11-2026)
     resp = ["Proveedor", "Precio unit. USD", "Plazo", "Anotaciones"]
-    ancho_calc, ancho_resp = [11, 8, 10, 30], [22, 13, 12, 45]
+    ancho_calc, ancho_resp = [34, 30, 11, 8, 10, 30], [22, 13, 12, 45]
     kg_total, sin_kg = 0.0, []
 
     def fila_calculos(pos, ws, r, j0):
         """Escribe las columnas calculadas y de Compras para la posición pos, desde la columna j0."""
         nonlocal kg_total
         its = por_pos.get(pos, [])
+        mat = comp.get("material", {}).get(pos, "")
+        marcas = comp.get("marcas", {}).get(pos, "")  # listado de marcas del cliente por tipo de producto (Matías, 06-11-2026)
         p = plano.get(pos, {})
         extras = [i for i in items if re.fullmatch(re.escape(pos) + r"[b-z]", str(i["pos"]).strip()) and es_tira(i)]  # completar tira
         if its:
@@ -152,14 +154,14 @@ def main(carpeta):
                 kg_total += kg_tot
             else:
                 sin_kg.append(pos)
-            vals = [round(q + q_ext, 3), unidad, kg_tot if kg_tot is not None else "—", origen]
+            vals = [mat, marcas, round(q + q_ext, 3), unidad, kg_tot if kg_tot is not None else "—", origen]
         else:
-            vals = ["—", "", "", "no se cotiza (ver cotización)"]
+            vals = [mat, marcas, "—", "", "", "no se cotiza (ver cotización)"]
         nota = "; ".join(x for x in [comp.get("notas", {}).get(pos, ""), comp.get("cantidad_compra", {}).get(pos, "")] if x)
         for k, v in enumerate(vals):
-            celda(ws, r, j0 + k, v, GRIS, "#,##0.00" if k in (0, 2) and isinstance(v, (int, float)) else None)
+            celda(ws, r, j0 + k, v, GRIS, "#,##0.00" if k in (2, 4) and isinstance(v, (int, float)) else None)
         for k, v in enumerate(["", "", "", nota]):
-            celda(ws, r, j0 + 4 + k, v, AMAR, "#,##0.00" if k == 1 else None)
+            celda(ws, r, j0 + 6 + k, v, AMAR, "#,##0.00" if k == 1 else None)
 
     for tabla in tr["tablas"]:
         r += 2
@@ -170,7 +172,7 @@ def main(carpeta):
         for j, c in enumerate(cab, 1):
             x = celda(ws, r, j, c)
             x.font = H
-            x.fill = PatternFill("solid", fgColor=AZUL if j <= len(cols) else ("5D6B75" if j <= len(cols) + 4 else "B7791F"))
+            x.fill = PatternFill("solid", fgColor=AZUL if j <= len(cols) else ("5D6B75" if j <= len(cols) + 6 else "B7791F"))
             x.alignment = Alignment(wrap_text=True, vertical="center", horizontal="center")
         ws.row_dimensions[r].height = 32
         for f in tabla["filas"]:
@@ -188,20 +190,20 @@ def main(carpeta):
         r += 2
         ws.cell(r, 1, "ADICIONALES (no figuran en el documento; los agrega ITT)").font = Font(bold=True, size=12, color=AZUL)
         r += 1
-        cab = ["Pos", "Descripción", "Especificación", "Cant. a comprar", "Unidad", "Kg aprox.", "Por qué"] + resp
+        cab = ["Pos", "Descripción", "Especificación", "Cant. a comprar", "Unidad", "Kg aprox.", "Por qué", "Marcas aprobadas (SCE-IN-501-0015)"] + resp
         for j, c in enumerate(cab, 1):
             x = celda(ws, r, j, c)
             x.font = H
-            x.fill = PatternFill("solid", fgColor="5D6B75" if j <= 7 else "B7791F")
+            x.fill = PatternFill("solid", fgColor="5D6B75" if j <= 8 else "B7791F")
         for it in adic:
             r += 1
             q = float(it["cantidad"]) * n
             vals = [it["pos"], it["descripcion"], it.get("especificacion", ""), round(q, 3), it.get("unidad", "un"), "—",
-                    "compra mínima o nota del documento"]
+                    "compra mínima o nota del documento", comp.get("marcas", {}).get(str(it["pos"]), "")]
             for j, v in enumerate(vals, 1):
                 celda(ws, r, j, v, GRIS if j > 3 else None, "#,##0.00" if j == 4 else None, col=cab[j - 1])
             for k, v in enumerate(["", "", "", comp.get("notas", {}).get(str(it["pos"]), "")]):
-                celda(ws, r, 8 + k, v, AMAR, "#,##0.00" if k == 1 else None)
+                celda(ws, r, 9 + k, v, AMAR, "#,##0.00" if k == 1 else None)
     r += 2
     ws.cell(r, 1, f"Peso aproximado de lo que tiene tabla: {fmt(kg_total, 0)} kg" + (f" (sin dato: pos {', '.join(sin_kg)})" if sin_kg else "")).font = Font(bold=True)
     r += 1

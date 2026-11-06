@@ -2290,9 +2290,9 @@ const Documentos = (() => {
     let kgTot = 0;
     for (const t of tr.tablas) {
       filas.push([], [t.titulo]);
-      const cab = [...t.columnas, "Cant. a comprar", "Unidad", "Kg aprox.", "Origen de la cantidad", "Proveedor", "Precio unit. USD", "Plazo", "Anotaciones"];
+      const cab = [...t.columnas, "Material según la ET", "Marcas aprobadas (SCE-IN-501-0015)", "Cant. a comprar", "Unidad", "Kg aprox.", "Origen de la cantidad", "Proveedor", "Precio unit. USD", "Plazo", "Anotaciones"];
       const rc = filas.length; filas.push(cab);
-      cab.forEach((_, c) => marca(rc, c, c < t.columnas.length ? AZ : c < t.columnas.length + 4 ? GR : OC));
+      cab.forEach((_, c) => marca(rc, c, c < t.columnas.length ? AZ : c < t.columnas.length + 6 ? GR : OC));
       for (const f of t.filas) {
         const pos = String(f[0]).trim(), its = mats.filter(i => String(i.pos).trim() === pos);
         const extras = mats.filter(i => esTira(i) && new RegExp("^" + pos.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "[b-z]$").test(String(i.pos).trim()));
@@ -2305,18 +2305,18 @@ const Documentos = (() => {
           calc = [Math.round((q + qe) * 1000) / 1000, u, k, qe ? `${numg(q)} ${u} para ${numg(N)} ${eqTxt} + ${numg(qe)} ${u} para completar la tira`
             : /medida del dibujo|no indica/i.test(desc) ? "el documento no da cantidad: medida del dibujo (±20%)" : N === 1 ? "documento" : `documento × ${numg(N)}`];
         }
-        const r = filas.length; filas.push(fila([...f, ...calc, "", "", "", nota(pos)], cab, r));
-        for (let c = t.columnas.length; c < t.columnas.length + 8; c++) marca(r, c, c < t.columnas.length + 4 ? CG : CA);
+        const r = filas.length; filas.push(fila([...f, comp.material?.[pos] || "", comp.marcas?.[pos] || "", ...calc, "", "", "", nota(pos)], cab, r));
+        for (let c = t.columnas.length; c < t.columnas.length + 10; c++) marca(r, c, c < t.columnas.length + 6 ? CG : CA);
       }
     }
     if (tr.nota) filas.push(["", "Nota del documento: " + tr.nota]);
     const adic = mats.filter(i => !enDoc.has(String(i.pos).trim()) && !esTira(i));
     if (adic.length) {
       filas.push([], ["ADICIONALES (no figuran en el documento; los agrega ITT)"]);
-      const cab = ["Pos", "Descripción", "Especificación", "Cant. a comprar", "Unidad", "Kg aprox.", "Por qué", "Proveedor", "Precio unit. USD", "Plazo", "Anotaciones"];
-      const rc = filas.length; filas.push(cab); cab.forEach((_, c) => marca(rc, c, c < 7 ? GR : OC));
-      for (const i of adic) { const r = filas.length; filas.push(fila([i.pos, i.descripcion, i.especificacion || "", Number(i.cantidad) * N, i.unidad, "—", "compra mínima o nota del documento", "", "", "", nota(String(i.pos).trim())], cab, r));
-        for (let c = 7; c < 11; c++) marca(r, c, CA); }
+      const cab = ["Pos", "Descripción", "Especificación", "Cant. a comprar", "Unidad", "Kg aprox.", "Por qué", "Marcas aprobadas (SCE-IN-501-0015)", "Proveedor", "Precio unit. USD", "Plazo", "Anotaciones"];
+      const rc = filas.length; filas.push(cab); cab.forEach((_, c) => marca(rc, c, c < 8 ? GR : OC));
+      for (const i of adic) { const r = filas.length; filas.push(fila([i.pos, i.descripcion, i.especificacion || "", Number(i.cantidad) * N, i.unidad, "—", "compra mínima o nota del documento", comp.marcas?.[String(i.pos).trim()] || "", "", "", "", nota(String(i.pos).trim())], cab, r));
+        for (let c = 8; c < 12; c++) marca(r, c, CA); }
     }
     filas.push([], [`Peso aproximado de lo que tiene tabla: ${num(kgTot, 0)} kg`],
       ["Columnas azules: tal cual el documento. Grises: cálculo de ITT. Amarillas: para que Compras complete (proveedor, precio sin IVA, plazo y anotaciones)."]);
@@ -2324,7 +2324,7 @@ const Documentos = (() => {
     for (const [a, s] of Object.entries(estilos)) { ws[a] = ws[a] || { t: "s", v: "" }; ws[a].s = s; }
     for (const [a, z] of Object.entries(formatos)) if (ws[a]) ws[a].z = z;
     ws.A1.s = { font: { bold: true, sz: 14, color: { rgb: "1D5F86" } } };
-    ws["!cols"] = [6, 46, 9, 8, 8, 8, 20, 11, 8, 10, 30, 22, 13, 12, 45].map(w => ({ wch: w }));
+    ws["!cols"] = [6, 46, 9, 8, 8, 8, 20, 34, 30, 11, 8, 10, 30, 22, 13, 12, 45].map(w => ({ wch: w }));
     X.utils.book_append_sheet(wb, ws, "Materiales");
     const serv = cot.items.filter(i => i.grupo !== "material");
     const sv = X.utils.aoa_to_sheet([["Servicio", "Aclaraciones", "Proveedor", "Precio unit. USD", "Plazo", "Anotaciones"], ...serv.map(i => [i.descripcion, i.especificacion || "", "", "", "", ""])]);
