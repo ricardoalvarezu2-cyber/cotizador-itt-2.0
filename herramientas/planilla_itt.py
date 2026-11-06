@@ -59,6 +59,8 @@ def bloque_de(it, cfg):
             return "Instrumental"
         if re.match(r"valv", d):
             return "Válvulas manuales"
+        if es_recipiente(cfg) and re.search(r"\b(envolvente|virola|cabezal|casquete|fondo)\b", d):
+            return "Recipiente"
         g = atributos_plano.grupo_de(it)
         if g == 0:
             return "Válvulas manuales"
@@ -195,7 +197,7 @@ def escribir(wb, cfg, filas, CAT, fecha):
             hoja = f"'{hoja}'"
             ped, ant = atributos_plano.fila_datos(it, CAT) if it["grupo"] == "material" else ([], ["", ""])
             eqv = "No encontrado" if not s["precio"] or s.get("coincide") == "sin_ref" else EQV.get(s.get("coincide"), "")
-            vals = [it["descripcion"], ampliada(it), it["cantidad"], it["unidad"], f"={hoja}!I{i}", f"={hoja}!J{i}", it.get("pos", ""),
+            vals = [it["descripcion"], ampliada(it), f"={hoja}!C{i}", it["unidad"], f"={hoja}!I{i}", f"={hoja}!J{i}", it.get("pos", ""),  # cantidad enlazada a la hoja (06-11-2026)
                     (ant[0] + " · " if ant[0] else "") + str(s.get("proveedor", "")), eqv, fecha(s["fecha"]) if s.get("fecha") else ""]
             for j, v in enumerate(vals, 1):
                 x = ws.cell(r, j, v); x.border = BT; x.font = Font(name="Calibri", size=11)
@@ -233,7 +235,7 @@ def escribir(wb, cfg, filas, CAT, fecha):
             x = ws.cell(k, j, v); x.border = BT; x.font = F(size=11)
             x.number_format = {2: "0", 3: "#,##0.00", 4: "0.00", 5: CONT, 6: CONT, 7: "0.0%", 8: "#,##0.00"}.get(j, "General")
             x.alignment = Alignment(horizontal="right" if j == 1 else "center" if j in (2, 4) else "right")
-        ws.cell(k, 4).fill = AMA
+        ws.cell(k, 4).fill = GRIS2  # el factor se cambia en Resumen (parámetros): acá es fórmula, no se escribe (06-11-2026)
     k_ult = 14 + len(filas)
     unit = [k for k in range(15, k_ult + 1) if not (p.get("TRANS") and k == k_ult)]
     r_tot = k_ult + 1

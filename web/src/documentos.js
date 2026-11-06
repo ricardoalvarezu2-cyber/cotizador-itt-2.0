@@ -350,6 +350,7 @@ const Documentos = (() => {
       if (INSTR.test(d)) return "Instrumental";
       if (/^valv/.test(d)) return "Válvulas manuales";
       const g = Busqueda.grupoDe(it), e = cot.equipo || {};
+      if (RECIP.test(n(`${e.tipo || ""} ${e.singular || ""}`)) && /\b(envolvente|virola|cabezal|casquete|fondo)\b/.test(d)) return "Recipiente";
       if (g === 0) return "Válvulas manuales";
       if ([1, 2, 6].includes(g)) return "Piping";
       if (g === 5) return "Instrumental";
@@ -434,7 +435,7 @@ const Documentos = (() => {
         const eqv = !s.precio || s.coincide === "sin_ref" ? "No encontrado" : EQV[s.coincide] || "";
         const st = { font: { name: "Calibri", sz: 11 }, border: BT, alignment: { vertical: "center", wrapText: true } };
         put(ws, A(1, r), it.descripcion, st); put(ws, A(2, r), ampliada(it), st);
-        put(ws, A(3, r), Number(it.cantidad), { ...st, alignment: { horizontal: "center" } }, Number.isInteger(Number(it.cantidad)) ? "#,##0" : "#,##0.00##");
+        put(ws, A(3, r), { f: `${hj}!C${i}` }, { ...st, alignment: { horizontal: "center" } }, Number.isInteger(Number(it.cantidad)) ? "#,##0" : "#,##0.00##");  // enlazada, igual que planilla_itt.py
         put(ws, A(4, r), it.unidad, { ...st, alignment: { horizontal: "center" } });
         put(ws, A(5, r), { f: `${hj}!I${i}` }, st, CONT); put(ws, A(6, r), { f: `${hj}!J${i}` }, st, CONT);
         put(ws, A(7, r), String(it.pos ?? ""), { ...st, alignment: { horizontal: "center" } });
@@ -463,7 +464,7 @@ const Documentos = (() => {
       put(ws, A(1, rr), n, { ...st, alignment: { horizontal: "right" } });
       put(ws, A(2, rr), typeof cant === "number" ? cant : { f: cant }, { ...st, alignment: { horizontal: "center" } }, "0");
       put(ws, A(3, rr), { f: costo }, st, "#,##0.00");
-      put(ws, A(4, rr), typeof fac === "number" ? fac : { f: fac }, { ...st, ...fill("FFFF00"), alignment: { horizontal: "center" } }, "0.00");
+      put(ws, A(4, rr), typeof fac === "number" ? fac : { f: fac }, { ...st, ...fill("D9D9D9"), alignment: { horizontal: "center" } }, "0.00");  // fórmula: el factor se cambia en Resumen
       put(ws, A(5, rr), { f: `C${rr}*D${rr}` }, st, CONT); put(ws, A(6, rr), { f: `E${rr}` }, st, CONT);
       put(ws, A(7, rr), { f: `IFERROR((E${rr}-C${rr})/E${rr},0)` }, st, "0.0%"); put(ws, A(8, rr), { f: `F${rr}*B${rr}` }, st, "#,##0.00");
     });
