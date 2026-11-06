@@ -11,7 +11,7 @@
 |---|---|---|
 | 1 — planta de regulación | COT26-0135-001 (skid de regulación) | ítems 1, 2, 3, 4, 14, 16, 19 y sensor A (coinciden con `lista_materiales_plano.csv`) |
 | 2 — estación con filtro FM-06 y carretel de turbina | COT26-0135-002 (puente de medición) | ítems 3, 4, 12 y 16 (coinciden) |
-| 3 — válvulas del filtro (ítems 20, 21, 22, 26/27, 30, 31, 33) | Filtro FM-06 #150 del puente (ítem 1 de la 002), a confirmar | No coincide con la lista del separador COT26-0135-003 (que es de ITT): no aplicarle estos ítems |
+| 3 — válvulas del "filtro" (ítems 20, 21, 22, 26/27, 30, 31, 33) | COT26-0135-003 (separador vertical coalescente, plano tipo SCE-RE-112-0001 rev. 1, serie "A" = #600) | Coinciden con la tabla de referencias del plano tipo; el informe lo llama "filtro" |
 
 ## Normas base de las esféricas
 Diseño ASME B16.34; fabricación API 6D (última edición); bridas ASME B16.5 (MSS SP44 en 22" y desde 26"); biseles ASME B16.25; fuego API 607; soldadura ASME IX; cálculo ASME VIII Div. 1. Ante conflicto, prevalece la especificación de Camuzzi. Servicio: gas natural (densidad relativa 0,6) o propano-butano líquido; temperatura según API 6D.
@@ -64,9 +64,12 @@ Comunes a todas:
 3. Cara de brida (RF) de todas las esféricas bridadas.
 4. Si las esféricas de 1/2" clase 3000 roscadas (cuplas) deben cumplir la SCE-IN-501-0008.
 5. Material de las cuplas de los ítems 14 y 16: el listado dice A-106; lo habitual es A-105.
-6. Listado 3: clase del filtro (serie "A"), extremos de la esférica de 1" y cantidades.
+6. Listado 3 (separador 003): serie "A" = #600 según la tabla del plano tipo; extremos bridados RF y cantidades calculadas por ITT (ET 9.2).
 7. Especificación de Camuzzi para la monitora y la reguladora de 3", con presiones y caudal.
 8. Presiones de apertura de los alivios S-70 y S-71 y rangos de salida de las reguladoras 1301F y 67FR.
 9. Si algún modelo es nuevo para Camuzzi (ensayos de prototipo).
 
 Regla de descripción: estos requisitos no cambian el texto del cliente en el cómputo; lo que agrega ITT va en la columna `nota` (regla crítica de CLAUDE.md).
+
+## Uso
+Los requisitos de esta ficha, del listado de marcas SCE-IN-501-0015 rev 1 y de las ET de cada equipo están cargados como anotaciones por válvula en la sección `compras` de las COT26-0135-001, 002 y 003 (06-11-2026); salen en la lista para Compras del repositorio y de la página.

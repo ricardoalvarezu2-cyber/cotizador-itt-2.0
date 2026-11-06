@@ -518,7 +518,15 @@ const Documentos = (() => {
       filas: mats.filter(i => !esTira(i) && !/[a-z]$/i.test(String(i.pos))).map(i => { const p = i.plano || {};
         return [i.pos, p.descripcion || i.descripcion, p.diametro || "", p.serie_sch || "", p.material || "", p.modelo || "", i.cantidad, i.unidad]; }) }] };
     const enDoc = new Set(tr.tablas.flatMap(t => t.filas.map(f => String(f[0]).trim())));
-    const filas = [[`PEDIDO DE COTIZACIÓN DE MATERIALES · ${cot.codigo}`], [`${cot.titulo || ""} · ${N} ${eqTxt}`], ["Origen de la lista", tr.fuente]];
+    // Datos del pedido, requisitos generales y anotaciones por posición: cot.compras, igual que lista_compras.py
+    const comp = cot.compras || {};
+    const nota = pos => [comp.notas?.[pos], comp.cantidad_compra?.[pos]].filter(Boolean).join("; ");
+    const filas = [[`PEDIDO DE COTIZACIÓN DE MATERIALES · ${cot.codigo}`], [`${cot.titulo || ""} · ${N} ${eqTxt}`]];
+    if (comp.fecha_respuesta) filas.push(["Respuesta de proveedores", fecha(comp.fecha_respuesta)]);
+    if (comp.material_en_planta_dias != null) filas.push(["Material en planta", `a los ${comp.material_en_planta_dias} días de la OC del cliente`]);
+    if (comp.lugar_entrega) filas.push(["Lugar de entrega", comp.lugar_entrega]);
+    filas.push(["Origen de la lista", tr.fuente]);
+    if ((comp.requisitos_generales || []).length) filas.push([], ["Requisitos generales"], ...comp.requisitos_generales.map(t => ["• " + t]));
     const estilos = {};
     const marca = (r, c, s) => { estilos[X.utils.encode_cell({ r, c })] = s; };
     // Números como celdas numéricas, nunca texto (Matías, 29-10-2026). Del documento se convierte solo lo que es un
@@ -547,7 +555,7 @@ const Documentos = (() => {
           calc = [Math.round((q + qe) * 1000) / 1000, u, k, qe ? `${numg(q)} ${u} para ${numg(N)} ${eqTxt} + ${numg(qe)} ${u} para completar la tira`
             : /medida del dibujo|no indica/i.test(desc) ? "el documento no da cantidad: medida del dibujo (±20%)" : N === 1 ? "documento" : `documento × ${numg(N)}`];
         }
-        const r = filas.length; filas.push(fila([...f, ...calc, "", "", "", ""], cab, r));
+        const r = filas.length; filas.push(fila([...f, ...calc, "", "", "", nota(pos)], cab, r));
         for (let c = t.columnas.length; c < t.columnas.length + 8; c++) marca(r, c, c < t.columnas.length + 4 ? CG : CA);
       }
     }
@@ -557,7 +565,7 @@ const Documentos = (() => {
       filas.push([], ["ADICIONALES (no figuran en el documento; los agrega ITT)"]);
       const cab = ["Pos", "Descripción", "Especificación", "Cant. a comprar", "Unidad", "Kg aprox.", "Por qué", "Proveedor", "Precio unit. USD", "Plazo", "Anotaciones"];
       const rc = filas.length; filas.push(cab); cab.forEach((_, c) => marca(rc, c, c < 7 ? GR : OC));
-      for (const i of adic) { const r = filas.length; filas.push(fila([i.pos, i.descripcion, i.especificacion || "", Number(i.cantidad) * N, i.unidad, "—", "compra mínima o nota del documento", "", "", "", ""], cab, r));
+      for (const i of adic) { const r = filas.length; filas.push(fila([i.pos, i.descripcion, i.especificacion || "", Number(i.cantidad) * N, i.unidad, "—", "compra mínima o nota del documento", "", "", "", nota(String(i.pos).trim())], cab, r));
         for (let c = 7; c < 11; c++) marca(r, c, CA); }
     }
     filas.push([], [`Peso aproximado de lo que tiene tabla: ${num(kgTot, 0)} kg`],

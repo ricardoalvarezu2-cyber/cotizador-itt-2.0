@@ -1421,15 +1421,25 @@
    "Certificados 3.1 de chapas, bridas y caños.",
    "Las cantidades son por separador × 2.",
    "Plano tipo Camuzzi SCE-RE-112-0001 rev. 1, serie #600, 20 cartuchos.",
-   "Solo marcas del listado SCE-IN-501-0015 de Camuzzi."
+   "Solo marcas del listado SCE-IN-501-0015 de Camuzzi.",
+   "Válvulas esféricas (SCE-IN-501-0008 y ensayo SCE-RE-308-0001; no se aceptan sin certificados de fabricación y prueba firmados por la inspección): diseño ASME B16.34, fabricación API 6D, bridas ASME B16.5, a prueba de fuego API 607 con dispositivo antiestático, topes e indicador abierto/cerrado, fuerza de maniobra máx. 345 N a máxima ΔP (ensayo de torque API 6D B.6), esfera y vástago inox o AC con cromo duro / níquel químico ≥ 35 µm (hasta 2\": esfera solo inox), cuerpo AC calmado CE ≤ 0,50 %, espárragos A193 B7 / tuercas A194 2H, largo entre caras API 6D, prueba hidráulica de cuerpo y asientos y neumática burbuja cero sin sellador, marcado con fabricante, N° de OC, PT o PR, Ø, presión máx. y sentido de flujo, pintura SCE-PC-511-0003 (amarillo), entrega abierta con extremos protegidos (no cartón) y termocontraíble ≥ 500 µm, documentación por lote (certificados de materiales, ensayos hidráulico/neumático/torque, antifuego, cromado o niquelado, manual, despiece con repuestos, grasa recomendada), lista de repuestos valorizada para 1 año, garantía 12 meses desde instalación o 24 desde despacho. Fabricante aprobado por Camuzzi; si el modelo es nuevo para Camuzzi, ensayos de prototipo (8.2).",
+   "Reguladoras, monitoras y alivios (SCE-RE-508-0002): cuerpo A216 WCB / A350 / A105 (prohibido bronce, latón o aluminio), internos inox, obturador blando PTFE, diafragmas de nitrilo IRAM 113001, espárragos B7/2H, placa de identificación con modelo, Ø, serie, internos, piloto, presiones máx. y N° de OC; ensayos de cuerpo a 1,5 × la serie (28,5 bar en #150; 110 bar en #600) 4 h y hermeticidad a 5,5 bar; pintura: cuerpo y actuador amarillo, válvulas de alivio naranja (SCE-PC-511-0003); entrega con extremos obturados, piloto protegido y fijada a bancada; hoja de datos y lista de repuestos recomendados con vida útil. Solo modelos homologados de la solapa \"Válvulas Reguladoras\" del SCE-IN-501-0015 rev 1 (Ø mayor a 4\" requiere aprobación de Camuzzi)."
   ],
   "notas": {
+   "23b": "Bloqueo y purga 1/2\" NPT de los indicadores de nivel (ET 9.9): si no vienen con el Reflex, ABAC VA 350 con tapón 50 T o Casucci, clase apta para 70 bar",
+   "27": "Manómetro diferencial a diafragma 0-2 bar, 3\", clase 2, aguja de arrastre, sellos Buna N o Vitón, presión estática máx. 100 bar, 1/4\" NPT, IP65, certificado de calibración (ET 9.19.2), con manifold de 3 vías ABAC / Casucci / Fittinox (inox, listado); accesorios inox doble virola",
+   "26": "Manómetro estático Ø 100 (ET 9.19.1: clase 1, glicerina, caja AISI 304, bourdon AISI 316, 1/2\" NPT, IRAM IAP AS 165, IP65, certificado de calibración) montado con manifold de 2 vías (bloqueo y purga) de acero forjado ASTM A-105 zincado serie 3000 (ET 9.20): ABAC VA 350 con tapón 50 T o Casucci",
+   "33": "Reguladora 67FR 1/4\" NPT con manómetro y filtro incorporado (Fisher o Doma, ambas en el listado), segunda etapa del gas de instrumentos; rango de salida según el actuador de la pos 20; verificar material del cuerpo (sin bronce ni aluminio, SCE-RE-508-0002)",
+   "31": "Alivio 1/4\" NPT tipo S-70 (modelo Doma; Doma está en el listado de alivios), cuerpo ASTM A216 WCB, protege el gas de instrumentos aguas abajo de las reguladoras; presión de apertura a confirmar según el actuador de la pos 20; pintura naranja",
+   "30": "Reguladora Fisher 1301F 1/4\" NPT con manómetro, alimentación de gas de instrumentos a los actuadores de las purgas automáticas: indicar rangos de entrada (hasta la presión del separador) y salida según el actuador de la pos 20; el plano pide cuerpo ASTM A216 WCB y la SCE-RE-508-0002 prohíbe bronce o latón: verificar el material del cuerpo que ofrece Fisher. Requisitos SCE-RE-508-0002",
+   "22": "Tapón lubricado 1\" #600 bridada RF de sacrificio (drenaje inferior, ET 9.2), SCE-IN-501-0009: cono invertido (series 300/600), cuerpo ASTM A216 WCB, vástago inexpulsable A182 F6 o AISI 410, tapón de acero aleado con dureza ≥ 100 HB sobre el cuerpo, palanca; ensayos API 598 / API 6D (hidráulica 60 min, neumática de asiento a 7 kg/cm2, torque, LP en vástago, obturador y asiento); con grasa sellante compatible con gas, alemite de inyección, repuestos para 2 años y marca y tipo de sellante recomendado; garantía 12 / 24 meses",
+   "21": "Esférica 1\" #600 bridada RF, PASO TOTAL, cuerpo fundido ASTM A216 WCB (by-pass de la purga superior y bloqueo del drenaje inferior, ET 9.2): esfera flotante solo inox, asientos PTFE, palanca con cierre horario ≤ 345 N; RX de extremos si fuera para soldar (B16.34). Requisitos SCE-IN-501-0008 en requisitos generales",
    "01": "SA-516 Gr. 70, 31,75 mm, certificado 3.1 (70N si la memoria lo pide)",
    "03": "36\" #600 vertical, no roscada, con pescante y o-rings de repuesto",
    "18": "Papel 5½\" × 36\"; indicar caudal por elemento a 25 bar y pérdida de carga limpio",
    "19": "900 × 900 × 570 AISI 304 doble bolsillo (detalle de chicanas del plano)",
-   "20": "1\" #600 RF A216 WCB neumática NC, internos inox, stellite 6",
-   "23": "Reflex 500 mm, 70 bar, con válvulas de bloqueo y purga"
+   "20": "Purga automática 1\" #600 bridada RF (serie \"A\" del plano = #600), cuerpo ASTM A216 WCB, accionamiento neumático NORMAL CERRADA, internos inox y cierres con aporte stellite N° 6, comandada por interruptor de nivel a flotante on-off (ET 9.2); indicar presión y consumo del aire o gas de instrumentos del actuador; pintura amarillo",
+   "23": "Reflex 500 mm, 70 bar (presión de diseño #600), con sus válvulas de bloqueo y purga (ET 9.9)"
   },
   "proveedores": {
    "03": "Futura / Peco / Gora / EKA",
@@ -1441,13 +1451,14 @@
    "18b": "Gora / Filtron / De Nichilo / Panden / SP",
    "19": "Gora",
    "20": "Bettis / Bray / Flow / Wenlen (actuador)",
-   "21": "Esferomatic / Worcester / Valvtronic / Pentair / Indave / Wenlen / Beta / Valmec",
+   "21": "Esferomatic / Worcester / Valvtronic / Pentair / Indave / Wenlen / Beta / Valmec (Spirax Sarco no: solo hasta 1 1/2\" S300)",
    "22": "Xomox-Tufline / Nordstrom / Favra",
    "23": "Riva Hnos",
-   "26": "Weisz / Wika",
    "27": "Wika + ABAC / Casucci",
    "30": "Fisher (Emerson)",
-   "33": "Fisher (Emerson)",
+   "33": "Fisher (Emerson) / Doma",
+   "31": "Doma (S-70) / Farinola / Favra / Aerre",
+   "26": "Weisz / Wika / Capino / ABAC / Casucci + ABAC VA 350 / Casucci",
    "34": "ABAC / Swagelok / Parker / Fittinox / Casucci"
   },
   "cantidad_compra": {},
