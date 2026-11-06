@@ -203,7 +203,7 @@ with open(C / "pedido" / "lista_materiales_plano.csv", "w", newline="", encoding
 import atributos_plano  # noqa: E402
 atributos_plano.completar(C)
 atributos_plano.fijar(C, {
-    "01": {"familia": "PER", "tipo": "chapa", "espesor_mm": "31.75", "medida": "envolvente Ø 36\" × 3,0 m", "norma": "ASME VIII Div.1"},
+    "01": {"familia": "PER", "tipo": "chapa", "espesor_mm": "31.75", "medida": f"envolvente Ø 36\" × {fmt(L_ENV, 1)} m", "norma": "ASME VIII Div.1"},
     "02": {"familia": "ABW", "tipo": "casquete semielíptico 2:1", "espesor_mm": "31.75", "medida": "Ø 36\"", "norma": "ASME VIII Div.1"},
     "03": {"familia": "OTR", "tipo": "tapa de cierre rápido", "serie": "600", "medida": "36\"", "marca": "Futura / Peco / Gora / EKA"},
     "18": {"familia": "OTR", "tipo": "cartucho filtrante", "medida": "5½\" × 36\" (140 × 914 mm)", "marca": "Gora / Filtron / De Nichilo / Panden / SP"},

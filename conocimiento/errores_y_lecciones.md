@@ -384,3 +384,8 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 - Qué pasó: en las anotaciones de compra de los alivios S-71 (001) y S-70 (003) escribí "Doma está en el listado de alivios". Al armar la columna de marcas mirando el PDF del SCE-IN-501-0015 rev 1, Doma figura en válvulas reguladoras, no en válvulas de seguridad por alivio (Favra, Aerre, Farinola). El texto extraído con pdftotext pone las filas de las dos categorías juntas y lo leí mal.
 - Corrección: notas, proveedores sugeridos y columna de marcas corregidos; consulta a Camuzzi pendiente (el S-70 y el S-71 son modelos Doma).
 - Lección: las tablas de marcas se leen en la imagen del PDF, no en el texto extraído, cuando las categorías vienen agrupadas; cada marca que se ofrece se verifica en su subgrupo exacto.
+
+## 06-11-2026 — Medida de la envolvente del separador quedó en 3,0 m
+- Qué pasó: al revisar cómo se estimó la envolvente de la COT26-0135-003, el atributo "medida" de la pos 01 decía "envolvente Ø 36\" × 3,0 m", escrito a mano, mientras el cálculo de kilos ya usaba 3,3 m (revisión del 05-11-2026). Los kilos y el precio estaban bien; el texto, no.
+- Corrección: la medida sale de la misma variable que el cálculo (`L_ENV`).
+- Lección: un dato que se usa en una cuenta no se repite escrito a mano en otro lado del mismo archivo: se toma de la variable.
