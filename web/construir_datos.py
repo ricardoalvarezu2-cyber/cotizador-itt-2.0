@@ -172,6 +172,7 @@ def main():
         "generado": date.today().isoformat(),
         "materiales": mats, "servicios": srv, "indices": idx, "dolar": dol, "tarifas": tar, "soldadura": fs, "canos": canos,
         "accesorios": acc, "pesos": pesos, "clientes": clientes, "familias": fam, "antecedentes": ant, "compat": compatibilidad.para_pagina(),
+        "listados_marcas": [{**r, "orden": int(r["orden"])} for r in leer(C / "comercial" / "listados_marcas.csv")],
         "plantilla_cotizacion": json.load(open(RAIZ / "cotizaciones" / "_plantilla" / "cotizacion.json", encoding="utf-8")),
         "plantilla_oferta": json.load(open(RAIZ / "cotizaciones" / "_plantilla" / "oferta.json", encoding="utf-8")),
         "logo": logo(),

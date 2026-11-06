@@ -22,6 +22,7 @@ AVISOS (revisar uno por uno):
 Ver conocimiento/procedimiento_cotizacion.md.
 """
 import csv
+import json
 import re
 import sys
 from datetime import date
@@ -313,7 +314,6 @@ def main(carpeta):
     # la calculada lleva la aclaración. Se controla contra pedido/transcripcion.json (copia textual del documento).
     ruta_tr = c / "pedido" / "transcripcion.json"
     if ruta_tr.exists():
-        import json
         cliente, atributos = {}, {}
         for t in json.load(open(ruta_tr, encoding="utf-8"))["tablas"]:
             cols = t["columnas"]
@@ -359,6 +359,16 @@ def main(carpeta):
         falta = faltan_datos(fam, at)
         if falta:
             avisos.append(f"Pos {p['pos']}: faltan datos del pedido: {', '.join(atributos_plano.NOMBRES.get(k, k) for k in falta)} (completar en la lista o pedirlos al cliente)")
+
+    # Material que el documento remite a una ET (Matías, 06-11-2026): la lista para Compras lleva lo que pide esa ET para
+    # ese caso (compras.material[pos], con la cita); si no tenemos la ET, se anota en compras.material_sin_et[pos] el motivo
+    cfg_c = json.load(open(c / "cotizacion.json", encoding="utf-8")) if (c / "cotizacion.json").exists() else {}
+    cc = cfg_c.get("compras", {})
+    for p in plano:
+        if re.search(r"\bs/? ?esp|seg[uú]n esp|\bespecificaci[oó]n\b", (p.get("material") or "") + " " + (p.get("serie_sch") or ""), re.I) \
+                and p["pos"].strip() not in cc.get("material", {}) and p["pos"].strip() not in cc.get("material_sin_et", {}):
+            avisos.append(f"Pos {p['pos']}: el material remite a una especificación ({p.get('material', '')}): cargar en compras.material lo que pide esa ET "
+                          "para este caso, o en compras.material_sin_et por qué no se puede (ET que no tenemos)")
 
     for pos, filas in por_pos.items():
         if pos in pos_plano:
@@ -419,7 +429,6 @@ def main(carpeta):
     # un desvío "a confirmar" frena el paso a revisado (está en ERRORES) pero no el armado de un borrador: devuelve 2
     pendientes = [e for e in errores if e.startswith(A_CONFIRMAR)]
     if errores and len(pendientes) == len(errores):
-        import json
         if json.load(open(c / "cotizacion.json", encoding="utf-8")).get("estado", "borrador") == "borrador":
             print(f"\n{len(pendientes)} desvíos a confirmar: el borrador se arma, pero NO pasa a revisado hasta resolverlos")
             return 2

@@ -55,6 +55,7 @@ Todo lo que se necesita para cotizar, en un solo lugar y con una sola versión v
 
 | Archivo | Contenido |
 |---|---|
+| `comercial/listados_marcas.csv` | **Listados de marcas aprobadas por cliente** (Camuzzi SCE-IN-501-0015 rev 1): subgrupo, patrón, marcas y observaciones; lo aplica `herramientas/marcas_cliente.py` a la columna "Marcas aprobadas" de la lista para Compras (repositorio y página). Agregar acá el vendor list de cada cliente o proyecto nuevo |
 | `comercial/indice_historico.csv` | Carpetas de ofertas **sin ficha** (2021–2024 y las de 2025–2026 que faltan fichar): familia, subtipo, Ø y año estimados, sin precios. El buscador las muestra aparte cuando hay menos de 5 del mismo subtipo |
 | `comercial/indice_proyectos.csv` | **Índice de proyectos para buscar antecedentes** (2025–2026 + cotizador): familia, etiquetas, subtipo, Ø del cuerpo en recipientes, diámetros, series, material, unión, ensayos, precio, factor, plazo, resultado y si tiene planilla de costo. Se consulta con `herramientas/buscar_antecedentes.py` |
 | `comercial/carpetas_ofertas.csv` | **Índice de las 532 carpetas de cotización** de `Z:\VENTAS\OFERTAS Y LICITACIONES`: cliente, fechas, etapas presentes, si tiene OC y si ya está analizada |

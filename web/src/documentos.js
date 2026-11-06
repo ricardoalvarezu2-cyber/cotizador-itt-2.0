@@ -505,7 +505,7 @@ const Documentos = (() => {
   // (cot.transcripcion: tablas con sus columnas y su texto), a la derecha la cantidad a comprar calculada (m, kg o un),
   // los kg aproximados y de dónde sale la cantidad; después Proveedor, Precio, Plazo y Anotaciones para Compras.
   // Lo que se compra y no está en el documento va aparte; los precios de referencia, en otra hoja (uso interno).
-  function compras(cot) {
+  function compras(cot, datos) {
     const X = XLSX, wb = X.utils.book_new(), N = Number(cot.parametros.N) || 1;
     const est = (rgb, bold, color) => ({ font: { bold: !!bold, color: { rgb: color || "000000" } }, fill: { fgColor: { rgb } }, alignment: { wrapText: true, vertical: "top" } });
     const AZ = est("1D5F86", true, "FFFFFF"), GR = est("5D6B75", true, "FFFFFF"), OC = est("B7791F", true, "FFFFFF"), CG = est("EEF3F6"), CA = est("FBEFD6");
@@ -521,6 +521,17 @@ const Documentos = (() => {
     // Datos del pedido, requisitos generales y anotaciones por posición: cot.compras, igual que lista_compras.py
     const comp = cot.compras || {};
     const nota = pos => [comp.notas?.[pos], comp.cantidad_compra?.[pos]].filter(Boolean).join("; ");
+    // Marcas aprobadas: lo cargado a mano (compras.marcas) o el listado del cliente (datos.listados_marcas), igual que
+    // herramientas/marcas_cliente.py: primer subgrupo cuyo patrón coincide con la descripción; si no hay, se dice.
+    const nCli = Busqueda.norm(cot.cliente?.nombre || cot.cliente || "");
+    const lst = (datos?.listados_marcas || []).filter(r => new RegExp(r.patron_cliente).test(nCli)).sort((a, b) => a.orden - b.orden);
+    const marcasDe = (pos, desc) => {
+      if (comp.marcas?.[pos]) return comp.marcas[pos];
+      if (!lst.length) return "";
+      const d = Busqueda.norm(desc || "");
+      const r = lst.find(x => new RegExp(x.patron).test(d));
+      return r && r.marcas ? r.marcas + (r.observaciones ? ` (${r.observaciones})` : "") : `El listado ${lst[0].listado.split(" (")[0]} no trae marcas para este producto`;
+    };
     const filas = [[`PEDIDO DE COTIZACIÓN DE MATERIALES · ${cot.codigo}`], [`${cot.titulo || ""} · ${N} ${eqTxt}`]];
     if (comp.fecha_respuesta) filas.push(["Respuesta de proveedores", fecha(comp.fecha_respuesta)]);
     if (comp.material_en_planta_dias != null) filas.push(["Material en planta", `a los ${comp.material_en_planta_dias} días de la OC del cliente`]);
@@ -540,7 +551,7 @@ const Documentos = (() => {
     let kgTot = 0;
     for (const t of tr.tablas) {
       filas.push([], [t.titulo]);
-      const cab = [...t.columnas, "Material según la ET", "Marcas aprobadas (SCE-IN-501-0015)", "Cant. a comprar", "Unidad", "Kg aprox.", "Origen de la cantidad", "Proveedor", "Precio unit. USD", "Plazo", "Anotaciones"];
+      const cab = [...t.columnas, "Material según la ET", "Marcas aprobadas (listado del cliente)", "Cant. a comprar", "Unidad", "Kg aprox.", "Origen de la cantidad", "Proveedor", "Precio unit. USD", "Plazo", "Anotaciones"];
       const rc = filas.length; filas.push(cab);
       cab.forEach((_, c) => marca(rc, c, c < t.columnas.length ? AZ : c < t.columnas.length + 6 ? GR : OC));
       for (const f of t.filas) {
@@ -555,7 +566,7 @@ const Documentos = (() => {
           calc = [Math.round((q + qe) * 1000) / 1000, u, k, qe ? `${numg(q)} ${u} para ${numg(N)} ${eqTxt} + ${numg(qe)} ${u} para completar la tira`
             : /medida del dibujo|no indica/i.test(desc) ? "el documento no da cantidad: medida del dibujo (±20%)" : N === 1 ? "documento" : `documento × ${numg(N)}`];
         }
-        const r = filas.length; filas.push(fila([...f, comp.material?.[pos] || "", comp.marcas?.[pos] || "", ...calc, "", "", "", nota(pos)], cab, r));
+        const r = filas.length; filas.push(fila([...f, comp.material?.[pos] || (comp.material_sin_et?.[pos] ? "Sin dato: " + comp.material_sin_et[pos] : ""), marcasDe(pos, its[0]?.descripcion || f[1]), ...calc, "", "", "", nota(pos)], cab, r));
         for (let c = t.columnas.length; c < t.columnas.length + 10; c++) marca(r, c, c < t.columnas.length + 6 ? CG : CA);
       }
     }
@@ -563,9 +574,9 @@ const Documentos = (() => {
     const adic = mats.filter(i => !enDoc.has(String(i.pos).trim()) && !esTira(i));
     if (adic.length) {
       filas.push([], ["ADICIONALES (no figuran en el documento; los agrega ITT)"]);
-      const cab = ["Pos", "Descripción", "Especificación", "Cant. a comprar", "Unidad", "Kg aprox.", "Por qué", "Marcas aprobadas (SCE-IN-501-0015)", "Proveedor", "Precio unit. USD", "Plazo", "Anotaciones"];
+      const cab = ["Pos", "Descripción", "Especificación", "Cant. a comprar", "Unidad", "Kg aprox.", "Por qué", "Marcas aprobadas (listado del cliente)", "Proveedor", "Precio unit. USD", "Plazo", "Anotaciones"];
       const rc = filas.length; filas.push(cab); cab.forEach((_, c) => marca(rc, c, c < 8 ? GR : OC));
-      for (const i of adic) { const r = filas.length; filas.push(fila([i.pos, i.descripcion, i.especificacion || "", Number(i.cantidad) * N, i.unidad, "—", "compra mínima o nota del documento", comp.marcas?.[String(i.pos).trim()] || "", "", "", "", nota(String(i.pos).trim())], cab, r));
+      for (const i of adic) { const r = filas.length; filas.push(fila([i.pos, i.descripcion, i.especificacion || "", Number(i.cantidad) * N, i.unidad, "—", "compra mínima o nota del documento", marcasDe(String(i.pos).trim(), i.descripcion), "", "", "", nota(String(i.pos).trim())], cab, r));
         for (let c = 8; c < 12; c++) marca(r, c, CA); }
     }
     filas.push([], [`Peso aproximado de lo que tiene tabla: ${num(kgTot, 0)} kg`],

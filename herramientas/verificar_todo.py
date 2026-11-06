@@ -57,7 +57,7 @@ def modificados():
 DERIVADOS = (".xlsx", ".docx", ".pdf", ".html")
 antes = modificados()
 
-for t in ("test_catalogo.py", "test_catalogo_servicios.py", "test_precotizar.py", "test_antecedentes.py", "test_compatibilidad.py",
+for t in ("test_catalogo.py", "test_catalogo_servicios.py", "test_precotizar.py", "test_antecedentes.py", "test_marcas_cliente.py", "test_compatibilidad.py",
           "test_errores_sembrados.py"):
     if RAPIDO and t in LENTOS:
         print(f"--    {t} (salteado en --rapido)")

@@ -30,6 +30,7 @@ from numeros import FMT_TECNICO, celda_excel, fmt, fmtg  # noqa: E402
 import controles_tablas as ct  # noqa: E402
 from catalogo_materiales import atributos, expandir, familia_de  # noqa: E402
 from indice_proyectos import norm  # noqa: E402
+import marcas_cliente  # noqa: E402
 
 AZUL, GRIS, AMAR, VERDE = "1D5F86", "EEF3F6", "FBEFD6", "E6F2EA"
 H = Font(bold=True, color="FFFFFF")
@@ -91,6 +92,9 @@ def main(carpeta):
                           "filas": [[p["pos"], p["descripcion"], p["diametro"], p["serie_sch"], p["material"], p.get("modelo_fabricante", ""),
                                      p["cantidad"], p.get("unidad", "")] for p in plano.values()]}]}
     comp = cfg.get("compras", {})
+    cliente = cfg["cliente"].get("nombre", "") if isinstance(cfg.get("cliente"), dict) else str(cfg.get("cliente", ""))
+    lst = marcas_cliente.tabla()
+    marcas_de = lambda pos, desc: comp.get("marcas", {}).get(pos) or marcas_cliente.marcas(cliente, desc, lst)  # a mano manda; si no, el listado del cliente
     n = float(cfg["parametros"]["N"])
     eq = cfg["equipo"]
     items = [i for i in cfg["items"] if i["grupo"] == "material"]
@@ -123,7 +127,7 @@ def main(carpeta):
             r += 1
             ws.cell(r, 1, "• " + t)
 
-    calc = ["Material según la ET", "Marcas aprobadas (SCE-IN-501-0015)", "Cant. a comprar", "Unidad", "Kg aprox.", "Origen de la cantidad"]  # solo si el documento remite a una ET que tenemos ("S/ Esp. CAMUZZI"): lo que pide esa ET para ese caso; la columna del documento queda literal (Matías, 06-11-2026)
+    calc = ["Material según la ET", "Marcas aprobadas (listado del cliente)", "Cant. a comprar", "Unidad", "Kg aprox.", "Origen de la cantidad"]  # solo si el documento remite a una ET que tenemos ("S/ Esp. CAMUZZI"): lo que pide esa ET para ese caso; la columna del documento queda literal (Matías, 06-11-2026)
     resp = ["Proveedor", "Precio unit. USD", "Plazo", "Anotaciones"]
     ancho_calc, ancho_resp = [34, 30, 11, 8, 10, 30], [22, 13, 12, 45]
     kg_total, sin_kg = 0.0, []
@@ -132,8 +136,8 @@ def main(carpeta):
         """Escribe las columnas calculadas y de Compras para la posición pos, desde la columna j0."""
         nonlocal kg_total
         its = por_pos.get(pos, [])
-        mat = comp.get("material", {}).get(pos, "")
-        marcas = comp.get("marcas", {}).get(pos, "")  # listado de marcas del cliente por tipo de producto (Matías, 06-11-2026)
+        mat = comp.get("material", {}).get(pos, "") or (("Sin dato: " + comp["material_sin_et"][pos]) if pos in comp.get("material_sin_et", {}) else "")
+        marcas = marcas_de(pos, (its[0]["descripcion"] if its else "") or p.get("descripcion", ""))  # listado de marcas del cliente por tipo de producto (Matías, 06-11-2026)
         p = plano.get(pos, {})
         extras = [i for i in items if re.fullmatch(re.escape(pos) + r"[b-z]", str(i["pos"]).strip()) and es_tira(i)]  # completar tira
         if its:
@@ -190,7 +194,7 @@ def main(carpeta):
         r += 2
         ws.cell(r, 1, "ADICIONALES (no figuran en el documento; los agrega ITT)").font = Font(bold=True, size=12, color=AZUL)
         r += 1
-        cab = ["Pos", "Descripción", "Especificación", "Cant. a comprar", "Unidad", "Kg aprox.", "Por qué", "Marcas aprobadas (SCE-IN-501-0015)"] + resp
+        cab = ["Pos", "Descripción", "Especificación", "Cant. a comprar", "Unidad", "Kg aprox.", "Por qué", "Marcas aprobadas (listado del cliente)"] + resp
         for j, c in enumerate(cab, 1):
             x = celda(ws, r, j, c)
             x.font = H
@@ -199,7 +203,7 @@ def main(carpeta):
             r += 1
             q = float(it["cantidad"]) * n
             vals = [it["pos"], it["descripcion"], it.get("especificacion", ""), round(q, 3), it.get("unidad", "un"), "—",
-                    "compra mínima o nota del documento", comp.get("marcas", {}).get(str(it["pos"]), "")]
+                    "compra mínima o nota del documento", marcas_de(str(it["pos"]), it["descripcion"])]
             for j, v in enumerate(vals, 1):
                 celda(ws, r, j, v, GRIS if j > 3 else None, "#,##0.00" if j == 4 else None, col=cab[j - 1])
             for k, v in enumerate(["", "", "", comp.get("notas", {}).get(str(it["pos"]), "")]):

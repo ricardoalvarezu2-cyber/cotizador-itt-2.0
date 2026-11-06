@@ -1,0 +1,27 @@
+cliente,patron_cliente,listado,orden,subgrupo,patron,marcas,observaciones
+Camuzzi,camuzzi,SCE-IN-501-0015 rev 1 (10-02-2026),5,"Sin subgrupo en el listado (switches, conectores)",\bswitch\b|^conector\b,,
+Camuzzi,camuzzi,SCE-IN-501-0015 rev 1 (10-02-2026),10,Cupla con válvula esférica,^cupla\b.*\b(vlv|valv|valvula)\b.*\besf,Cupla: CH / Thorsa / Forja Atlas. Esférica: Esferomatic / Worcester / Valvtronic / Pentair / Indave / Wenlen / Spirax Sarco / Beta / Valmec,"Spirax Sarco: bridadas o roscadas hasta 4"" S150 y 1 1/2"" S300"
+Camuzzi,camuzzi,SCE-IN-501-0015 rev 1 (10-02-2026),12,"Accesorios forjados: threadolet, weldolet, socketweld, couplet",^(media )?cupla\b|\b(weldolet|threadolet|sockolet|socketweld|couplet)\b,CH / Thorsa / Forja Atlas,
+Camuzzi,camuzzi,SCE-IN-501-0015 rev 1 (10-02-2026),14,Espárragos según norma ASTM,^(esparrago|bulon),Delgado / Petrobul / Talleres Versailles / Fornis,Terminación zincado / anodizado
+Camuzzi,camuzzi,SCE-IN-501-0015 rev 1 (10-02-2026),15,Juntas dieléctricas,^junta\b.*\bdielectr,KAB / Electron GS / Pikotek,KAB simple Micarta Minlon con canutos doble aislación; Electron GS para dentro de planta
+Camuzzi,camuzzi,SCE-IN-501-0015 rev 1 (10-02-2026),16,Juntas de lámina comprimida y espirometálicas,^junta,Klinger / Teadit / Flexseal / Miyashiro Schonborn / Garlock,Garlock solo juntas espirometálicas
+Camuzzi,camuzzi,SCE-IN-501-0015 rev 1 (10-02-2026),17,"Bridas serie 150, 300 y 600",^brida|: brida\b,Futura / Francovigh,
+Camuzzi,camuzzi,SCE-IN-501-0015 rev 1 (10-02-2026),18,Válvulas reguladoras,\b(monitora|reguladora|regulador)\b,Doma / Satesa / EQA / Epta / Tormene / Fiorentini / Fisher / Francel,"Solo modelos homologados de la solapa ""Válvulas Reguladoras"" (máx. 4""; Ø mayor con aprobación de la Gerencia Técnica)"
+Camuzzi,camuzzi,SCE-IN-501-0015 rev 1 (10-02-2026),19,Válvulas de seguridad por alivio,\b(alivio|valvula de seguridad|psv)\b,Favra / Aerre / Farinola,Con bridas ANSI o roscadas
+Camuzzi,camuzzi,SCE-IN-501-0015 rev 1 (10-02-2026),20,Bloqueo y purga para manómetro con manómetro,\b(blq|bloq|bloqueo)\b.*\bpurg.*\bmanometro|\bmanometro\b.*\b(bloqueo y purga|manifold de 2 vias|manifold de dos vias),Bloqueo y purga: ABAC / Casucci. Manómetro: Ing. Capino / Weisz / Wika / ABAC / Casucci,ABAC modelo VA 350 y tapón 50 T; Wika: diferencial con aguja de arrastre
+Camuzzi,camuzzi,SCE-IN-501-0015 rev 1 (10-02-2026),21,Válvulas tapón lubricado,\btapon lubricado,Xomox-Tufline (autolubricado) / Nordstrom / Favra,
+Camuzzi,camuzzi,SCE-IN-501-0015 rev 1 (10-02-2026),22,"Válvulas esféricas paso reducido / total, bridadas / roscadas / extremos soldados",\besf(ericas?)?\b,Esferomatic / Worcester / Valvtronic / Pentair / Indave / Wenlen / Spirax Sarco / Beta / Valmec,"Spirax Sarco: bridadas o roscadas hasta 4"" S150 y 1 1/2"" S300"
+Camuzzi,camuzzi,SCE-IN-501-0015 rev 1 (10-02-2026),30,Manómetro diferencial con manifold,\bmanometro\b.*\bdiferencial,Manómetro: Ing. Capino / Weisz / Wika / ABAC / Casucci. Manifold: ABAC / Casucci / Fittinox,Wika: diferencial con aguja de arrastre; manifold de acero inoxidable
+Camuzzi,camuzzi,SCE-IN-501-0015 rev 1 (10-02-2026),40,Manómetros de presión estática y diferencial,\bmanometro,Ing. Capino / Weisz / Wika / ABAC / Casucci,Wika: diferencial con aguja de arrastre
+Camuzzi,camuzzi,SCE-IN-501-0015 rev 1 (10-02-2026),90,Válvulas globo,\bglobo\b,Favra / Thorsa,"Serie 150, 300 y 600"
+Camuzzi,camuzzi,SCE-IN-501-0015 rev 1 (10-02-2026),91,Válvulas de retención,\bretencion\b,Favra / Thorsa,"Serie 150, 300 y 600"
+Camuzzi,camuzzi,SCE-IN-501-0015 rev 1 (10-02-2026),92,Válvulas mariposa,\bmariposa\b,Favra / Thorsa / Valvtronic,
+Camuzzi,camuzzi,SCE-IN-501-0015 rev 1 (10-02-2026),93,Válvulas aguja,\baguja\b,LVM / Casucci / ABAC,"LVM solo hasta Ø 2"""
+Camuzzi,camuzzi,SCE-IN-501-0015 rev 1 (10-02-2026),94,Actuadores neumáticos,\bactuador|\bvalvula automatica,Actuador: Bettis-Biffi-Morin / Bray / Flow / Wenlen,El listado no tiene subgrupo para la válvula automática en sí
+Camuzzi,camuzzi,SCE-IN-501-0015 rev 1 (10-02-2026),100,Control de nivel líquido para separadores,\binterruptor\b.*\bnivel|\bcontrol de nivel,Epta / Fisher,
+Camuzzi,camuzzi,SCE-IN-501-0015 rev 1 (10-02-2026),101,Niveles tipo reflex y americano,\b(indicador|visor)\b.*\bnivel|\breflex\b|\bpenberthy\b,Jefferson / Farinola / Riva,
+Camuzzi,camuzzi,SCE-IN-501-0015 rev 1 (10-02-2026),110,"Tapas de cierre rápido, para filtro, separadores y trampas de scrapers",\btapa\b.*\b(apertura|cierre) rapid,Tube Turn / Peco / Gora / Futura / EKA Técnica / T.D. Williamson,"Con tapa soldada, no roscada"
+Camuzzi,camuzzi,SCE-IN-501-0015 rev 1 (10-02-2026),120,Elementos filtrantes,\belemento filtrante|\bcartucho,Gora / De Nichilo / Filtron / Panden / SP / Metpor,Mismas marcas para separadores y para filtros tipo FM
+Camuzzi,camuzzi,SCE-IN-501-0015 rev 1 (10-02-2026),130,Transmisores de presión y temperatura,\btransmisor|\bsensor\b|\bpresion regulada\b|\btemperatura (de salida|para correctora),Rosemount / Yokogawa / Siemens / Aplisens / Bristol / Zürich / Smar,
+Camuzzi,camuzzi,SCE-IN-501-0015 rev 1 (10-02-2026),160,Accesorios para conexiones de acero inoxidable,\btubing\b|\bdoble virola\b,Swagelok / Parker / Casucci / Fittinox / ABAC / Famiq / Hoke-Gyrolok,
+Camuzzi,camuzzi,SCE-IN-501-0015 rev 1 (10-02-2026),190,Accesorios para soldar,\b(te|tee|codo|curva|reduccion|casquete|cabezal|poncho)\b,Curvo Sold / TDW,
