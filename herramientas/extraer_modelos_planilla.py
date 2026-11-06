@@ -9,7 +9,9 @@ Criterios (ver conocimiento/tecnico/separadores_coalescentes_LEEME.md):
   ("SEPARADOR COALESCENTE 24\"", "SEPARADOR COLAESCENTE VERTICAL DE Ø22” ...") debajo de la fila 20. Si no hay
   título, se lee toda la hoja.
 - Solo se toman renglones con cantidad > 0 (una fila con cantidad vacía no suma en la planilla).
-- Repuestos se lee entera (sus renglones también llevan cantidad).
+- Repuestos se lee desde el primer encabezado: también trae arriba el bloque de plantilla, pero sin cantidad (no entra).
+- Algunas celdas están bajo otro encabezado (42" 32 mm, fila 137: el Sch 80 de un codo está en "Esp."): se copian
+  tal cual; el renglón original queda en la última columna.
 - Los precios son los de la planilla (USD, sin IVA, de 2017–2020): sirven como referencia de proporciones, no
   como precio vigente. No se cargan al catálogo de materiales.
 """
@@ -118,8 +120,9 @@ def extraer(ruta, base):
                 if not f[j] or f[j] == "0":
                     continue
                 original.append(f"{enc[j] or '?'}={f[j]}")
-                if not enc[j]:
-                    notas.append(f[j])  # celda sin encabezado: nota al margen (cotización, fecha, "Estimado"...)
+                if not enc[j] and numero(f[j]) is None:
+                    notas.append(f[j])  # celda sin encabezado con texto: nota al margen (cotización, fecha, "Estimado"...);
+                    # los números sueltos (incidencia %, $/m sin encabezado) quedan solo en renglon_original
                 col = MAPA.get(enc[j])
                 if col and col not in d:
                     d[col] = f[j]
