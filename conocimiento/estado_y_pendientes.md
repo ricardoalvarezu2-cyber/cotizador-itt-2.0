@@ -2,7 +2,7 @@
 
 **Leer al empezar cada chat.** Es la memoria del proyecto entre sesiones: qué está hecho, qué se decidió, qué falta.
 
-**Objetivo: construir el cotizador automático.** Las cotizaciones (por ahora la CAPEX) son casos de prueba para armar y validar el proceso; sus pendientes no son pendientes del proyecto. Actualizado al 05-11-2026.
+**Objetivo: construir el cotizador automático.** Las cotizaciones (por ahora la CAPEX) son casos de prueba para armar y validar el proceso; sus pendientes no son pendientes del proyecto. Actualizado al 06-11-2026.
 
 ## 1. Qué hay hoy
 
@@ -125,6 +125,8 @@
 | 28/10/2026 | No hay más información de precios que la ya entregada: el último precio se sigue eligiendo por fecha (no hay otras compras para preferir sobre la lista de Renard) | Matías | — |
 
 ## 3. Pendientes del proyecto
+
+**Modelos de separador coalescente 2017–2020 (06-11-2026, Matías: "aprovechar toda la info técnica"):** 12 planillas de la carpeta "15-SEPARADOR COALESCENTE" cargadas como datos técnicos: `tecnico/separadores_coalescentes_modelos.csv` (diseño por modelo), `tecnico/separadores_coalescentes_componentes.csv` (609 renglones) y su LEEME; originales en `fuentes_originales/planillas_modelo/`. Sus precios no entran a los catálogos (2017–2020, sin dólar de esos años). **Para decidir:** si se quiere sumar esos precios al catálogo como referencia vieja; revisar el SA-36 de 19–38 mm en recipientes #300/#600 de esos modelos si se vuelven a usar. Falta una revisión independiente de las dos tablas (hecha a mano/IA).
 
 **Lector del catálogo (06-11-2026, corregido el mismo día con auditoría):** resueltos "GR.B7 7/8\"" (Ø), "1.1/2\"" (Ø; afectaba la lista Cintolo), material del espárrago "A193 B7 / A194 2H", "Brida … Ring Joint" (familia), "Brida Socket Welding" (tipo), abreviaturas Cintolo (TE RED., TE NORMAL, RED. CON./EXC., CAS. SE.: 186 renglones pasaron de "Otros" a accesorios a tope) y la regla con/sin tuercas (compatibilidad.py y página; el juego con tuercas va con unidad "juego"). **Quedan pendientes:** "SA-105"/"SA-193 B7M" con guion no se leen como material (probado y revertido: al leerlo se juntaban brida ciega con y sin cupla y weldolets para caños distintos; antes hay que distinguir esas piezas); "espárrago completo" y "C /2 TUERCAS" no se reconocen como juego; la regla de tuercas abarca toda la familia JUN (hay conectores y un cepillo mal clasificados ahí); "2.9/16\"" (API 6A) no se lee; "CRUZ NORMAL" queda sin tipo.
 

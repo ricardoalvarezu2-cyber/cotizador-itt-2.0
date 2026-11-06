@@ -48,6 +48,7 @@ Todo lo que se necesita para cotizar, en un solo lugar y con una sola versión v
 | `tecnico/perfiles.csv` | kg/m y m²/m de UPN, IPN, IPE, HEA, HEB, UL y W |
 | `tecnico/canos_peso_superficie.csv` | Caños por NPS y schedule: kg/m (carbono e inoxidable), m²/m exterior e interior, litros/m (ASME B36.10) |
 | `tecnico/bridas_peso.csv`, `accesorios_peso.csv` | Peso por pieza de bridas B16.5 y accesorios B16.9/B16.11, con URL de origen. **Borrador** (ver `pesos_LEEME.md`) |
+| `tecnico/separadores_coalescentes_modelos.csv`, `separadores_coalescentes_componentes.csv` | 12 modelos de separador coalescente de ITT 2017–2020 (14" a 42"): diseño por modelo y lista de materiales completa. Solo información técnica; precios viejos, no vigentes (ver `separadores_coalescentes_LEEME.md`) |
 | [`codificacion/`](codificacion/README.md) | Codificador Taval/ITT (válvulas, materiales, series, extremos, mandos, componentes) y familias de producto |
 
 ## 4. Historial comercial

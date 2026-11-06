@@ -137,3 +137,8 @@ Fuente: `fuentes_originales/taval_lista30_2025-09.xlsx` (Lista 30 de Taval, colu
 
 ## 06-11-2026 — Resumen de la SCE-IN-501-0008 (válvulas esféricas de Camuzzi)
 `tecnico/camuzzi_SCE-IN-501-0008_resumen.md`: del "Informe técnico de válvulas – Listados Camuzzi" (Matías Russo, 06-11-2026; PDF y texto en `fuentes_originales/camuzzi_ET/2026-11-06_Informe_tecnico_valvulas_listados_Camuzzi.*`), basado en la SCE-IN-501-0008 Rev. 0 tomada de Scribd. Fuente secundaria hasta tener la especificación original de la web de Camuzzi.
+
+## 06-11-2026 — Modelos de separador coalescente 2017–2020 (carpeta "15-SEPARADOR COALESCENTE")
+- 12 planillas de oferta (plantilla vieja Pres./Mat./M.O.) pasadas por Matías para sumar la información técnica. Originales en `fuentes_originales/planillas_modelo/15-SEPARADOR COALESCENTE/`; tablas `tecnico/separadores_coalescentes_modelos.csv` (resumen por modelo, a mano) y `tecnico/separadores_coalescentes_componentes.csv` (609 renglones, `herramientas/extraer_modelos_planilla.py`). Criterios y cuidados en `tecnico/separadores_coalescentes_LEEME.md`.
+- Decisión: sus precios (USD 2017–2020) **no** entran a los catálogos de materiales ni de servicios: son anteriores a la serie del dólar mensual (desde 2024), del cepo de 2019 en adelante sin tipo de cambio, y hay precios más nuevos de cada pieza. Quedan en la tabla de componentes solo como referencia de proporciones.
+- Se descartan como dato los restos de plantilla: peso total 2.500 kg, hojas de pintura (26,31 m²), hoja M.O. y "CALCULO PB-2" repetidas, y el bloque superior de la hoja Mat. (tags PSV21103/LV21103).
