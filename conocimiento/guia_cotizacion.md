@@ -144,6 +144,8 @@ El informe lo muestra en cada fila, la planilla en una columna y el control lo l
 - Un precio "aproximado", verbal o por WhatsApp es `est` (estimado), nunca precio de base.
 - Si el original es una imagen (WhatsApp, escaneo), está en el RAR de Drive (ver `CLAUDE.md`). Hay que extraerlo y leerlo.
 
+**Separadores y filtros coalescentes (06-11-2026):** además del buscador, mirar `conocimiento/tecnico/separadores_coalescentes_modelos.csv` (12 diseños de ITT 2017–2020, 14" a 42") como lista de control de lo que lleva el equipo (cierre, internos, elementos, caja de chicanas, purga, instrumentos). Sus precios no son vigentes.
+
 ## 4. Cargar `cotizacion.json`
 
 Cada ítem lleva todas sus fuentes de precio. **La primera fuente es la de base**; las demás son alternativas que se pueden elegir en el informe. Los campos se explican en [`cotizaciones/_plantilla/README.md`](../cotizaciones/_plantilla/README.md).

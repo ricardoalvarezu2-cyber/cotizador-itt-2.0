@@ -22,6 +22,7 @@ Copias de las planillas y documentos de ITT a partir de los cuales se genera la 
 | `seguimiento_presupuestos_proyectos_2026-08.xlsx` | Seguimiento de presupuestos, proyectos y facturación |
 | `diagrama_proceso_2022-09.docx` | Diagrama del proceso comercial de ITT |
 | `ypf_lic66944_colectores_2da_entrega_2026-10.xlsx` | Planilla de costo "COMPRA 2da ENTREGA AM COLECTORES" (YPF Lic 66944, colectores manuales, armada por Ricardo Álvarez), pasada por Matías el 30-10-2026. Vale solo la hoja "Pie de Venta rev 2"; texto en `ofertas_texto/YPF/Lic 66944 - Colectores manuales 2da entrega/`; revisión en `conocimiento/auditorias/2026-10-30_YPF_Lic66944_colectores_2da_entrega.md` |
+| `planillas_modelo/15-SEPARADOR COALESCENTE/` | Carpeta "15-SEPARADOR COALESCENTE" de ITT: 12 planillas de oferta de separadores coalescentes 2017–2020 (14" a 42", #150 a #600; tipo TGS, Camuzzi, CAPEX y Pluspetrol), pasada por Matías el 06-11-2026; texto extraído en `texto/`. Se usa solo la información técnica: `conocimiento/tecnico/separadores_coalescentes_LEEME.md` |
 
 ## Cotizaciones (carpeta Z:\VENTAS\OFERTAS Y LICITACIONES)
 
