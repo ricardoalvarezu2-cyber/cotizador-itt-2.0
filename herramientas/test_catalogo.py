@@ -59,6 +59,12 @@ igual("B8M no es B7", at("ESPARRAGO 7/8 x 7 ASTM A 193 B8M")[1].get("material"),
 igual("FF de factura", "FF" in at('24 juntas RTJ R45 6" #900, 60 días FF')[1].get("extremos", ""), False)
 igual("SW en junta espiralada", at('JUNTA ESPIRALADA SW AC 316 LFG 4" #600')[1].get("extremos", ""), "")
 igual("casquete 36\" x 3/8\" sin diametro2", at('Casquetes SE 36" x 3/8"')[1].get("diametro2"), None)
+igual("tee reducción 8x6\" es 8\" x 6\"", {k: at('Tee reduccion 8x6" STD ASTM A234 WPB')[1].get(k) for k in ("diametro", "diametro2")},
+      {"diametro": '8"', "diametro2": '6"'})
+igual("tee 8x6\" sin 'reducción' es 8\" x 6\"", at('Tee 8x6" STD ASTM A234 WPB')[1].get("diametro2"), '6"')
+igual("2x 20\" es cantidad, no Ø", at('Casquetes ASME B16.9 A234-WPB: 2x 20" std (146,65 c/u)')[1].get("diametro"), '20"')
+igual("4\" Sch. 40 x 3\" no es 40\"", {k: at('Reducción concéntrica 4" Sch. 40 x 3" Sch. 40 ASTM A-106 Gr. B')[1].get(k) for k in ("diametro", "diametro2")},
+      {"diametro": '4"', "diametro2": '3"'})
 igual("XS 10\" no es Sch 80", at('Casquete Semieliptico 10" XS ASTM A234 WPB')[1].get("schedule"), "XS")
 igual("caño 48,3 x 3,68", {k: at("Tubo s/costura 48,3 x 3,68 mm A53/A106")[1].get(k) for k in ("diametro", "schedule", "costura")},
       {"diametro": '1.5"', "schedule": "40", "costura": "sin costura"})
@@ -72,6 +78,44 @@ from catalogo_materiales import factor_cepo  # noqa: E402
 igual("cepo: precio maestro del stock × 0,64", factor_cepo("2024-11-01", "stock (precio maestro)")[0], 0.64)
 igual("cepo: compra del stock sigue descartada", factor_cepo("2023-06-13", "compra")[0], None)
 igual("cepo: otros × oficial/blue del mes", round(factor_cepo("2024-05-20", "cotización")[0], 3), round(904.79 / 1125.48, 3))
+
+# juntas espiraladas separadas por anillos y aptas para varias series (05-11-2026)
+for txt, esperado in [('JUNTA ESPIRALADA SW AC 316LFG Ø2" 3/4/600', "anillo ext."), ('ESP SWI AC 316LFG 316L Ø8" 600', "anillos ext. e int."),
+                      ('ESP SW AC 316LFG Ø8" 600', "anillo ext."), ('JUNTA ESPIRALADA C/ANI CENT INT 316LSS + EXT A°C° Zn Ø2" #300', "anillos ext. e int."),
+                      ('JUNTA ESPIRALADA C/ANILLO INT. | 6" | 150# | AISI 316 / GRAFITO | AC CAB. ZINCADO', "anillos ext. e int."),
+                      ('4 juntas espiraladas SWI AC 316 2" 600', "anillos ext. e int."), ('JUNTA ESP 10 150 TIPO CW', "anillo ext."),
+                      ('JUNTA ESPIRALADA C/ANILLO EXT AC ZINC/ A.INT AI | 3" | 150# | AISI 316 / GRAFITO', "anillos ext. e int."),
+                      ('Junta espiralada RF espesor 4.5 mm con anillo interior y exterior 3" #300 AISI 316', "anillos ext. e int."),
+                      ('JUNTA ESPIRALADA C/ANILLO INT. | 6" | 150# | AISI 316 / GRAFITO', "anillo int."),
+                      ('JUNTA ESPIRALADA CW 316L+FG/CS 4" #300', "anillo ext.")]:
+    if esperado:
+        igual(f"anillos: {txt[:40]}", at(txt)[1].get("medida"), esperado)
+igual("3/4/600 = series 300, 400 y 600", at('JUNTA ESPIRALADA SW AC 316LFG Ø3" 3/4/600')[1].get("_series"), ["300", "400", "600"])
+igual("1/2/300 no es serie", at('JUNTA ESPIRALADA 1/2/300')[1].get("_series"), None)
+igual("#300-600 = 300, 400 y 600", at('JUNTA ESPIRALADA CWI 316L+FG/CS 3" #300-600')[1].get("_series"), ["300", "400", "600"])
+
+# lectores de cotizaciones de proveedores (05-11-2026): Miyashiro con coma y 3 decimales, Oil Metal con códigos repetidos
+import listas_vendedor as lv  # noqa: E402
+LV = Path(__file__).resolve().parent.parent / "fuentes_originales" / "listas_vendedor" / "2026-11-05"
+ms = list(lv.miyashiro(LV / "miyashiro_cotizacion_50594_2026-11-03.pdf", {}))
+igual("Miyashiro: 3 renglones", len(ms), 3)
+igual("Miyashiro: 9,310 es 9,31", ms[0]["precio"], 9.31)
+igual("Miyashiro: ESP SW 316LFG → junta espiralada 316L (no 316)", at(ms[1]["descripcion"])[1].get("material"), "AISI 316L")
+om = list(lv.oilmetal(LV / "oilmetal_cotizacion_37278_2026-10-30.pdf", {}))
+igual("Oil Metal: 34 ítems, 28 códigos distintos", len(om), 28)
+igual("Oil Metal: GR B7 es A193 B7 (no se mezcla con B7M)", at(om[13]["descripcion"])[1].get("material"), "A193 B7")
+igual("Oil Metal: BWN es WN", at(om[5]["descripcion"])[1].get("tipo"), "wn")
+
+# lector de la carga del Drive del 06-11-2026 (Delgado, Provemet, Bripetrol) y regla con/sin tuercas
+igual("GR.B7 7/8\" es 7/8\" (no 7 7/8\")", at('ESPARRAGO TOTALMENTE ROSCADO ASTM A193 GR.B7 7/8" x 6" SIN TUERCAS')[1].get("diametro"), '0.875"')
+igual("espárrago c/2 tuercas A193 B7 / A194 2H es A193 B7", at('Esparrago c/2 tuercas A193 B7 / A194 2H 1 1/8" x 7 3/4"')[1].get("material"), "A193 B7")
+igual("tuerca A194 2H sigue A194 2H", at('TUERCA ASTM A194 GR.2H 7/8" 9UNC')[1].get("material"), "A194 2H")
+igual("Brida WN Ring Joint es brida", at('Brida Welding Neck Sch 80 Ring Joint Serie 1500 ASTM A 105 ANSI B16.5 4"')[0], "BRI")
+igual("junta ring joint sigue junta", at('junta ring joint R37 4" #1500')[0], "JUN")
+igual("Brida Socket Welding es SW", at('Brida Socket Welding Sch 80 Raised Face Serie 300 ASTM A 105 1 1/2"')[1].get("tipo"), "sw")
+from compatibilidad import regla_tuercas  # noqa: E402
+igual("con tuercas no se reemplaza por sin tuercas", bool(regla_tuercas(norm("esparrago 3/4 x 5 con 2 tuercas"), norm("esparrago 3/4 x 5 sin tuercas"))), True)
+igual("si uno no aclara, no hay regla", regla_tuercas(norm("esparrago 3/4 x 5"), norm("esparrago 3/4 x 5 sin tuercas")), "")
 
 if fallas:
     print(f"FALLAN {len(fallas)}:")

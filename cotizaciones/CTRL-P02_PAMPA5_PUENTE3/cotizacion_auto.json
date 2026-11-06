@@ -316,7 +316,7 @@
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-11-03",
+     "fecha": "2026-11-06",
      "coincide": "sin_ref",
      "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
@@ -345,10 +345,10 @@
    "fuentes": [
     {
      "tipo": "cot",
-     "precio": 15.63,
-     "proveedor": "planilla de costo ITT (proveedor sin nombre) · BRI-01254",
+     "precio": 12.47,
+     "proveedor": "Oil Metal (cód. AC0200BWN2R505) · BRI-01254",
      "codigo": "BRI-01254",
-     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "origen": "fuentes_originales/listas_vendedor/2026-11-05/oilmetal_cotizacion_37278_2026-10-30.pdf · código AC0200BWN2R505",
      "fecha": "2026-10-30",
      "coincide": "igual"
     }
@@ -372,13 +372,14 @@
    "faltan_datos": [],
    "fuentes": [
     {
-     "tipo": "est",
-     "precio": 0,
-     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
-     "origen": "—",
-     "fecha": "2026-11-03",
-     "coincide": "sin_ref",
-     "diferencia": "El más parecido es de otro diámetro (0.75\") (JUN-02760 JUNTA ESPIRALADA C/ANILLO EXT AC ZINC/ A.INT AI | , USD 2,00): no sirve como precio"
+     "tipo": "cot",
+     "precio": 4.32,
+     "proveedor": "Oil Metal (cód. JUE0300CWI3060) · JUN-02775",
+     "codigo": "JUN-02775",
+     "origen": "fuentes_originales/listas_vendedor/2026-11-05/oilmetal_cotizacion_37278_2026-10-30.pdf · código JUE0300CWI3060",
+     "fecha": "2026-10-30",
+     "coincide": "similar",
+     "diferencia": "diametro: 3\" (pedido 2\"); medida: anillos ext. e int. (no pedido)"
     }
    ]
   },
@@ -618,12 +619,12 @@
    "faltan_datos": [],
    "fuentes": [
     {
-     "tipo": "est",
-     "precio": 4.9,
-     "proveedor": "futura/ francovigh · NIP-01794",
+     "tipo": "cot",
+     "precio": 4.44,
+     "proveedor": "Oil Metal (cód. NP0150NN0100806) · NIP-01794",
      "codigo": "NIP-01794",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
-     "fecha": "2026-10-10",
+     "origen": "fuentes_originales/listas_vendedor/2026-11-05/oilmetal_cotizacion_37278_2026-10-30.pdf · código NP0150NN0100806",
+     "fecha": "2026-10-30",
      "coincide": "similar",
      "diferencia": "diametro: 1.5\" (pedido 1\"); precio escalado por diámetro (1\" ÷ 1,5\")^1,5 = × 0,54"
     }
@@ -828,12 +829,12 @@
    "faltan_datos": [],
    "fuentes": [
     {
-     "tipo": "est",
-     "precio": 4.9,
-     "proveedor": "futura/ francovigh · NIP-01794",
+     "tipo": "cot",
+     "precio": 4.44,
+     "proveedor": "Oil Metal (cód. NP0150NN0100806) · NIP-01794",
      "codigo": "NIP-01794",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · fuentes_originales/ofertas_texto/YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN/Cotiza",
-     "fecha": "2026-10-10",
+     "origen": "fuentes_originales/listas_vendedor/2026-11-05/oilmetal_cotizacion_37278_2026-10-30.pdf · código NP0150NN0100806",
+     "fecha": "2026-10-30",
      "coincide": "similar",
      "diferencia": "diametro: 1.5\" (pedido 1\"); precio escalado por diámetro (1\" ÷ 1,5\")^1,5 = × 0,54"
     }
@@ -857,14 +858,14 @@
    "faltan_datos": [],
    "fuentes": [
     {
-     "tipo": "est",
-     "precio": 12.13,
-     "proveedor": "no dice · JUN-01699",
-     "codigo": "JUN-01699",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\3-YPF Separador Bifasicos - Separadores para satelites · 5.Proveedores 3ros/YPF - Sep Bifasico - 2591 - 21.2 - precios compras V1.xlsx.txt",
-     "fecha": "2025-03-27",
+     "tipo": "cot",
+     "precio": 4.32,
+     "proveedor": "Oil Metal (cód. JUE0300CWI3060) · JUN-02775",
+     "codigo": "JUN-02775",
+     "origen": "fuentes_originales/listas_vendedor/2026-11-05/oilmetal_cotizacion_37278_2026-10-30.pdf · código JUE0300CWI3060",
+     "fecha": "2026-10-30",
      "coincide": "similar",
-     "diferencia": "diametro: 4\" (pedido 3\")"
+     "diferencia": "medida: anillos ext. e int. (no pedido)"
     }
    ]
   },
@@ -950,10 +951,10 @@
    "fuentes": [
     {
      "tipo": "cot",
-     "precio": 33.31,
-     "proveedor": "planilla de costo ITT (proveedor sin nombre) · BRI-01044",
+     "precio": 24.6,
+     "proveedor": "Oil Metal (cód. AC0300BCI2R305) · BRI-01044",
      "codigo": "BRI-01044",
-     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "origen": "fuentes_originales/listas_vendedor/2026-11-05/oilmetal_cotizacion_37278_2026-10-30.pdf · código AC0300BCI2R305",
      "fecha": "2026-10-30",
      "coincide": "igual"
     }
@@ -1123,13 +1124,13 @@
    "fuentes": [
     {
      "tipo": "cot",
-     "precio": 3.5,
-     "proveedor": "planilla de costo ITT (proveedor sin nombre) · JUN-04950",
-     "codigo": "JUN-04950",
-     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "precio": 1.04,
+     "proveedor": "Oil Metal (cód. ESP0158ZC090193) · JUN-05014",
+     "codigo": "JUN-05014",
+     "origen": "fuentes_originales/listas_vendedor/2026-11-05/oilmetal_cotizacion_37278_2026-10-30.pdf · código ESP0158ZC090193",
      "fecha": "2026-10-30",
      "coincide": "similar",
-     "diferencia": "serie: 300 (no pedido); medida: 5/8 x 3 5/8 (pedido 5/8 x 3 1/2)"
+     "diferencia": "unidad distinta: catálogo por juego, plano por un"
     }
    ]
   },
@@ -1273,7 +1274,7 @@
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\40- INARTECO FILTROS LIC 9333 · fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/LM costo Filtros rev.1.xlsx.txt",
      "fecha": "2026-01-15",
      "coincide": "similar",
-     "diferencia": "material: A194 2H (pedido A193 B7); unidad distinta: catálogo por uni, plano por un"
+     "diferencia": "unidad distinta: catálogo por juego, plano por un"
     }
    ]
   },

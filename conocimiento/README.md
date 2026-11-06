@@ -48,7 +48,6 @@ Todo lo que se necesita para cotizar, en un solo lugar y con una sola versión v
 | `tecnico/perfiles.csv` | kg/m y m²/m de UPN, IPN, IPE, HEA, HEB, UL y W |
 | `tecnico/canos_peso_superficie.csv` | Caños por NPS y schedule: kg/m (carbono e inoxidable), m²/m exterior e interior, litros/m (ASME B36.10) |
 | `tecnico/bridas_peso.csv`, `accesorios_peso.csv` | Peso por pieza de bridas B16.5 y accesorios B16.9/B16.11, con URL de origen. **Borrador** (ver `pesos_LEEME.md`) |
-| [`tecnico/especificaciones_clientes/`](tecnico/especificaciones_clientes/README.md) | **Especificaciones técnicas de clientes** resumidas por requisito (Camuzzi SCE-IN-501-0008 válvulas esféricas), con fuente y estado |
 | [`codificacion/`](codificacion/README.md) | Codificador Taval/ITT (válvulas, materiales, series, extremos, mandos, componentes) y familias de producto |
 
 ## 4. Historial comercial

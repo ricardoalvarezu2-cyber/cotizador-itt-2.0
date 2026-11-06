@@ -1,7 +1,7 @@
 # Camuzzi — válvulas esféricas (SCE-IN-501-0008 Rev. 0)
 
-- **Fuente:** "Informe técnico de válvulas – Listados Camuzzi", 06-11-2026, de Matías Russo (PDF de 10 páginas). Original y texto completo en `fuentes_originales/especificaciones_clientes/camuzzi/2026-11-06_Informe_tecnico_valvulas_listados_Camuzzi.*`.
-- El informe se basa en la especificación Camuzzi **SCE-IN-501-0008 Rev. 0** (vigente desde 10-11-2014), tomada de Scribd, y en los tres listados de materiales del concurso CP 24578.
+- **Fuente:** "Informe técnico de válvulas – Listados Camuzzi", 06-11-2026, de Matías Russo (PDF de 10 páginas). Original y texto completo en `fuentes_originales/camuzzi_ET/2026-11-06_Informe_tecnico_valvulas_listados_Camuzzi.*`.
+- El informe se basa en la especificación Camuzzi **SCE-IN-501-0008 Rev. 0** (vigente desde 10-11-2014), tomada de una copia de Scribd (no oficial: el sitio de Camuzzi ya no la publica, ver `camuzzi_ET_LEEME.md`), y en los tres listados de materiales del concurso CP 24578.
 - **Estado:** fuente secundaria. La especificación original no está en el repositorio: hay que bajarla de la web de Camuzzi (lo pide la ET SCE-ME-515-0030, requisito R56 de la COT26-0135-002) y verificar cada punto contra ella antes de usarlo en una oferta.
 - **Alcance:** solo las válvulas **esféricas**. Las reguladoras, monitoras, alivios, bloqueos y válvulas de instrumentación se rigen por otras especificaciones de Camuzzi o por el fabricante.
 

@@ -1,6 +1,6 @@
 # Ficha por rubro — COT26-0135-001
 
-Generada por `herramientas/ficha_rubros.py` el 03-11-2026. Todo **por skid**; la cantidad (1) multiplica al final.
+Generada por `herramientas/ficha_rubros.py` el 05-11-2026. Todo **por skid**; la cantidad (1) multiplica al final.
 Sirve para pedir un precio global al tercero y para controlarlo contra el cálculo detallado.
 
 ## 1. MO de armado y soldadura del piping
@@ -22,15 +22,15 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 - m² de piping: **9,94** (caños y niples 3,44; bridas, accesorios y válvulas por largo equivalente) · m² de estructura: **0,00**
 - m² total: **9,94** (sin overspray) · esquema: según pliego
-- **Costo por antecedentes.** Por antecedentes: USD 1.031,95 (1 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 103,82/m²
+- **Costo por antecedentes.** Por antecedentes: USD 940,65 (1 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 94,63/m²
 
 ## 4. Radiografía y END
 
 - Juntas a tope: **36** · RX 100% → placas chicas **135**, grandes **0**
 - Juntas SW, cuplas y olets (LP donde no se puede radiografiar): **4**
-- **Costo por antecedentes.** Por antecedentes: USD 3.831,33 (2 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 106,43/junta a tope · USD 28,38/placa
+- **Costo por antecedentes.** Por antecedentes: USD 3.827,21 (2 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 106,31/junta a tope · USD 28,35/placa
 
 ## 5. Procedimientos
 

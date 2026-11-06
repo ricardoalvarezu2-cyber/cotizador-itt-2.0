@@ -65,7 +65,11 @@ for d in carpetas:
         chk(f"{d.name}: primero {ORIGEN[pref]}", res and res[0][3]["id"].startswith(ORIGEN[pref]), f"→ {res[0][3]['id'] if res else '-'}")
 sep = python.get("cotizaciones/COT26-0135-003_CAMUZZI_CP24578_SEPARADOR", [])
 sub_de = {r["id"]: r["subtipo"] for r in filas}
-chk("separador coalescente: los 3 primeros son coalescentes", len(sep) >= 3 and all(sub_de.get(x) == "coalescente" for x in sep[:3]), sep)
+# 05-11-2026: con el plano tipo (36" #600) el 3.° es CAMUZZI/30 (separador de polvo y líquido 28" #600 del mismo cliente, 41 contra 40
+# del coalescente YPF/27, que no tiene Ø ni serie): antecedente válido. Se exige que los 2 primeros sean coalescentes y los 3 primeros, separadores o filtros
+fam_de = {r["id"]: r["familia"] for r in filas}
+chk("separador coalescente: los 2 primeros son coalescentes", len(sep) >= 3 and all(sub_de.get(x) == "coalescente" for x in sep[:2]), sep)
+chk("separador coalescente: los 3 primeros son separadores o filtros", all(fam_de.get(x) in ("SEP", "F") for x in sep[:3]), sep)
 chk("separador coalescente: ningún manifold en los 5", not any("anifold" in x.lower() for x in sep), sep)
 reg = python.get("cotizaciones/COT26-0135-001_CAMUZZI_CP24578_SKIDREG", [])
 chk("skid de regulación Camuzzi: CAMUZZI/23 entre los 5", any(x.startswith("CAMUZZI/23") for x in reg), reg)

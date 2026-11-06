@@ -16,13 +16,13 @@ auto = json.load(open(C / "cotizacion_auto.json", encoding="utf-8"))
 base = json.load(open(C / "cotizacion.json", encoding="utf-8"))
 plano = {i["pos"]: i for i in auto["items"] if i["grupo"] == "material" and not i["pos"][-1].isalpha() or i["pos"] == "A"}
 
-HOY = "2026-10-30"
+HOY = "2026-10-30"  # fecha de las decisiones de precio (la referencia del ajuste va aparte)
 RENARD = "fuentes_originales/renar_lista_2025-12.xlsx"
 TAVAL40 = "fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/4.Armado de la Oferta Comercial/LM costo Filtros rev.1.xlsx.txt"
 MEGATAP = "fuentes_originales/ofertas_texto/TAVAL/60 - Inarteco - ERPs tipo 2da etapa - Litoral Gas/5.Proveedores 3ros/Megatap PRESUPUESTO ITT SA 27143.pdf.txt"
 QUESADA = "fuentes_originales/ofertas_texto/TAVAL/58 - Inarteco - ERPs tipo 1ra etapa - Litoral Gas/5.Proveedores 3ros/Cotizacion JQ-020-2026.pdf.txt"
 LISTADO = "cotizaciones/COT26-0135-003_CAMUZZI_CP24578_SEPARADOR/pedido/CP24527_mail_2026-10-14/789-2- LISTADO DE MARCAS Y PROVEEDORES CAMUZZI.txt"
-TC_OCT = 1541.43  # BNA oficial venta, promedio de oct-2026 (conocimiento/costos/dolar_mensual.csv)
+TC_OCT = 1543.23  # BNA oficial venta, promedio de oct-2026 (conocimiento/costos/dolar_mensual.csv)
 
 
 def F(tipo, precio, prov, origen, fecha, coincide="similar", dif="", **extra):
@@ -91,7 +91,7 @@ X("M01F", "1f", "material", "Toberas del filtro FM-06: brida WN 6\" #150 RF sch 
      codigo="BRI-01313")])
 X("M01G", "1g", "material", "Toberas del filtro FM-06: caño 6\" sch 40 sin costura A53/A106/API 5L B (sale del sobrante de la media tira de la pos 15)", 0.3, "m",
   "2 toberas de ≈ 150 mm",
-  [F("lista", 60.51, "Renard (cód. 1173) · CAN-01510", f"{RENARD} · código 1173", "2025-12-26", "igual", codigo="CAN-01510")])
+  [F("cot", 49.48, "Grupo Provemet cot. 288974 ítem 1 · CAN-01510", "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288974_canos_2026-10-29.pdf · ítem 1", "2026-10-29", "igual", "TUBO S/C ASTM A53/A106/API5L B 6'' SCH 40 Ø 168,3 X 7,11 mm; Provemet cot. 288974 (29-10-2026), precio neto con bonificación 4% (vale comprando toda la cotización), validez 15 días", codigo="CAN-01510"), F("lista", 60.51, "Renard (cód. 1173) · CAN-01510", f"{RENARD} · código 1173", "2025-12-26", "igual", codigo="CAN-01510")])
 X("M01H", "1h", "material", "Instrumentos del filtro FM-06: manómetro diferencial con aguja de arrastre (Wika), manifold 3 vías (ABAC / Casucci / Fittinox), conectores doble virola y tubing inox",
   1, "gl", "Listado SCE-IN-501-0015: manómetros diferenciales Wika con aguja de arrastre; manifold para manómetro diferencial ABAC / Casucci / Fittinox",
   [F("ant", 950.0, "Planilla TAVAL/40, filtro FM3 S150 (pos 21 manómetro diferencial 500, 28 manifold 3 vías ABAC 170, 22/29/30 conectores 30+30+112, 31/32 tubing 42+66)",
@@ -109,14 +109,14 @@ X("M01K", "1k", "material", "Refuerzos tipo poncho 12\" x 6\" STD ASTM A-234 WPB
   [SIN("sin precio de refuerzo 12\" x 6\": la planilla TAVAL/40 pone 150 estimado para el de 6\" x 3\" (auditoría 30-10-2026): pedir a Cintolo")])
 
 # ---------------------------------------------------------------- 2 a 16 y A
-P("2", [F("est", round(2 * 35.65 + 0.3 * 34.34, 2), "Estimado: 2 bridas WN 4\" #150 (Renard cód. 11295, 35,65 c/u) + 0,3 m de caño 4\" sch 40 sin costura A53/A106/API 5L B (Renard cód. 1160, 34,34/m)",
+P("2", [F("est", round(2 * 23.42 + 0.3 * 34.34, 2), "Estimado: 2 bridas WN 4\" #150 (Provemet cot. 288979 ítem 5, 23,42 c/u, 29-10-2026) + 0,3 m de caño 4\" sch 40 sin costura A53/A106/API 5L B (Renard cód. 1160, 34,34/m)",
           RENARD, "2025-12-26", "similar", "largo entre caras 300 mm del plano; definitivo según la turbina que provee Camuzzi")],
   especificacion="Plano: 4\" · 150 · S/ Esp. CAMUZZI · Nota ITT: carretel bridado entre las bridas pos 5 (2 bridas WN 4\" + caño, 2 soldaduras en la MO); 300 mm entre caras en el plano")
 P("3", [F("lista", 740.0, "Taval (Lista 30 × 0.52) · VAL-04474 (BF61501R0104VP)", "fuentes_originales/taval_lista30_2025-09.xlsx", "2025-09-01", "similar",
           "precio de referencia Taval PT flotante a palanca: el plano dibuja la válvula 3 con volante (caja reductora), que no está en el precio; " + MARCA_ESF + "; certificados según SCE-IN-501-0008 y SCE-RE-308-0001")])
 P("4", [F("lista", 300.0, "Taval (Lista 30 × 0.52) · VAL-04465", "fuentes_originales/taval_lista30_2025-09.xlsx", "2025-09-01", "similar",
           "precio de referencia Taval (misma especificación): " + MARCA_ESF + "; certificados según SCE-IN-501-0008 y SCE-RE-308-0001")])
-P("5", [F("lista", 35.65, "Renard (cód. 11295) · BRI-01295", f"{RENARD} · código 11295", "2025-12-26", "igual", "marca: comprar Futura o Francovigh (listado)", codigo="BRI-01295")])
+P("5", [F("cot", 23.42, "Grupo Provemet cot. 288979 ítem 5 · BRI-01295", "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288979_bridas_2026-10-29.pdf · ítem 5", "2026-10-29", "igual", "Brida Welding Neck Sch 40 Raised Face Serie 150 ASTM A 105 ANSI B16.5 4\"; cotizada para 4 un, validez 15 días; marca: comprar Futura o Francovigh (listado)", codigo="BRI-01295"), F("lista", 35.65, "Renard (cód. 11295) · BRI-01295", f"{RENARD} · código 11295", "2025-12-26", "igual", "marca: comprar Futura o Francovigh (listado)", codigo="BRI-01295")])
 X("M5B", "5b", "material", "Junta espiralada 4\" #150 AISI 316/grafito con anillo ext. zincado (válvulas y carretel)", 6, "un",
   "Nota del plano: juntas y espárragos según diámetro de brida (SCE-IN-301-0001/2)",
   [F("ant", 15.0, "Planilla Techint/12 (JUN-02778)", "fuentes_originales/ofertas_texto/TECHINT/12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado", "2025-12-23", "igual")])
@@ -153,11 +153,11 @@ P("14", [F("lista", 34.34, "Renard (cód. 1160) · CAN-01495", f"{RENARD} · có
            "Tubo s/costura 114,3 x 6,02 mm A53/A106/API 5L B (sin costura, triple certificación: cumple A53 Gr B); largo 10,50 a 12,50 m", codigo="CAN-01495")])
 X("M14B", "14b", "material", "Completar barra de 12 m de la pos 14 (compra mínima; sobrante, no va en el equipo)", 4.0, "m", "1 barra de 12 m para 8 m",
   [F("lista", 34.34, "Renard (cód. 1160) · CAN-01495", f"{RENARD} · código 1160", "2025-12-26", "similar", "misma pieza que la pos 14", codigo="CAN-01495")])
-P("15", [F("lista", 60.51, "Renard (cód. 1173) · CAN-01510", f"{RENARD} · código 1173", "2025-12-26", "similar",
+P("15", [F("cot", 49.48, "Grupo Provemet cot. 288974 ítem 1 · CAN-01510", "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288974_canos_2026-10-29.pdf · ítem 1", "2026-10-29", "similar", "TUBO S/C ASTM A53/A106/API5L B 6'' SCH 40 Ø 168,3 X 7,11 mm (cumple A53 Gr B); Provemet cot. 288974 (29-10-2026), precio neto con bonificación 4% (vale comprando toda la cotización), validez 15 días", codigo="CAN-01510"), F("lista", 60.51, "Renard (cód. 1173) · CAN-01510", f"{RENARD} · código 1173", "2025-12-26", "similar",
            "Tubo s/costura 168,3 x 7,11 mm A53/A106/API 5L B (cumple A53 Gr B)", codigo="CAN-01510")])
 X("M15B", "15b", "material", "Completar media tira de 6 m de la pos 15 (sobrante a stock)", 4.7, "m",
   "1 tramo de 6 m: 1 m pos 15 + 0,3 m toberas del filtro (fila 1g) + 4,7 m de sobrante",
-  [F("lista", 60.51, "Renard (cód. 1173) · CAN-01510", f"{RENARD} · código 1173", "2025-12-26", "similar", "misma pieza que la pos 15", codigo="CAN-01510")])
+  [F("cot", 49.48, "Grupo Provemet cot. 288974 ítem 1 · CAN-01510", "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288974_canos_2026-10-29.pdf · ítem 1", "2026-10-29", "similar", "misma pieza que la pos 15", codigo="CAN-01510"), F("lista", 60.51, "Renard (cód. 1173) · CAN-01510", f"{RENARD} · código 1173", "2025-12-26", "similar", "misma pieza que la pos 15", codigo="CAN-01510")])
 P("16", [SIN("la referencia era una válvula A105 y el plano pide A-106 (otra clase de material): sin referencia compatible (consulta al cliente C3)", "2026-10-30")])
 P("A", [F("ant", 3470.06, "Rosemount · transmisor de temperatura (INS-02716, planilla PAMPA ENERGIA/5, proveedor Induquip)",
           "fuentes_originales/ofertas_texto/PAMPA ENERGIA/5 - Doc5757155642 - Construc 10 Puentes y 2 Colectores - RDA/4.Armado de la Oferta Comercial/Cot Skid Manifolds Colectores RDA Rev2.xlsx.txt · línea 177",
@@ -184,9 +184,10 @@ X("S05", "EST", "mo", "Fabricación del skid y soportes (200 kg estimados)", 200
      validez_hasta="2026-06-05"),
    F("ant", 3.0, "Fabricación de estructura de skid por kg (Ledesma, YPF/28 PC0: precio con fecha supuesta)", "YPF/28 Lic 69343 planilla PC0", "2026-10-10", "similar", "descartada como base: fecha supuesta (error 3 de la PC0)")])
 M2 = {"piping": 6.21, "filtro": 1.94, "skid": 6.65}
-X("S02", "PIN", "servicio", "Granallado y pintura (m² calculados: piping, filtro y skid)", round(sum(M2.values()), 2), "m2",
+X("S02", "PIN", "servicio", "Granallado y pintura (m² calculados: piping, filtro y skid)", round(sum(M2.values()) * 1.2, 2), "m2",
   "Piping 6,21 m² (ficha_rubros: caños, bridas, accesorios y válvulas) + filtro 1,94 m² (caño 12\" 1,5 m × 1,018 m²/m + casquete, tapa y toberas) + skid 6,65 m² (≈ 14,9 m de UPN 120 × 0,446 m²/m); esquema según SCE-PC-511-0003 (no leído)",
-  [F("ant", 50.0, "criterio ITT: granallado y pintura de skids, incluye materiales · PIN-00494", "fuentes_originales/ofertas_texto/PAMPA ENERGIA/7- Licitacion contrato Marco Skid PAD Rincon de Aranda",
+  [F("ant", 37.98, "Pintor (sin nombre) · PIN-00579 (precio confirmado por Matías)", "conocimiento/precios/precios_usuario.csv", "2026-10-30", "similar", "Granallado y pintura de piping y skid, incluye materiales: USD 37,98/m² confirmado por Matías Russo el 30-10-2026 (precio firme, PIN-00579); la planilla de origen (YPF Lic 66944 colectores) lo aplica sobre los m² + 20 % de overspray, por eso la cantidad va × 1,2; esquema SCE-PC-511-0003 a confirmar (× 1,2 sobre 14,8 m²)", codigo="PIN-00579"),
+   F("ant", 50.0, "criterio ITT: granallado y pintura de skids, incluye materiales · PIN-00494", "fuentes_originales/ofertas_texto/PAMPA ENERGIA/7- Licitacion contrato Marco Skid PAD Rincon de Aranda",
      "2026-08-14", "similar", "esquema SCE-PC-511-0003 sin leer: confirmar espesores y productos (Sherwin Williams / Hempel)", codigo="PIN-00494")])
 X("S03", "PH", "servicio", "Pruebas hidráulicas de resistencia y hermeticidad del puente (horas de planta)", 18, "h",
   "ET §5.4: prefabricados del puente sin válvulas ni equipos, 1,5 × presión máxima de la serie ANSI 150, durante 6 h, con las bridas de las válvulas cegadas; armado, llenado, desarme y secado: 1 día × 2 personas × 9 h = 18 h (planilla TAVAL/40, hoja Soldadura + HH, «PH con armado y desarme»). La PH del filtro FM-06 va en ARMF (18 h, como en la planilla TAVAL/40)",
@@ -198,7 +199,7 @@ ARS_RX = VISITAS * 850000 + PLACAS * 15000
 X("S04", "RX", "servicio", "Radiografía 100% de las soldaduras a tope (puente y filtro)", 1, "gl",
   f"ET §5.3.1 · {PLACAS} placas (puente: 6 juntas 6\" × 4 + 16 juntas 4\" × 3; filtro: 2 juntas 12\" × 6 + 2 bridas–toberas 6\" × 4) → {VISITAS} visitas de hasta 45 placas; placas originales y digitalizadas para el data book",
   [F("cot", round(ARS_RX / TC_OCT, 2), f"Proveedor de RX (sin nombre), precio confirmado por Matías el 30-10-2026: {VISITAS} visitas × ARS 850.000 + {PLACAS} placas × ARS 15.000 = ARS {ARS_RX:,}".replace(",", ".").replace("(sin nombre). precio", "(sin nombre), precio")
-     + " sin IVA, a BNA oct-2026 (1.541,43)", "conocimiento/precios/precios_usuario.csv", HOY, "igual"),
+     + " sin IVA, a BNA oct-2026 (1.543,23)", "conocimiento/precios/precios_usuario.csv", HOY, "igual"),
    F("ant", 1571.5, "Servicio de radiografía DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD)", "PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT)", "2026-08-31", "similar", "71 placas del cómputo anterior")])
 X("S04L", "LP", "servicio", "Líquidos penetrantes en uniones que no se radiografían (cuplas, toberas injertadas, filetes)", 10, "junta",
   "ET §5.3.1 · puente: 5 cuplas (pos 12, 16 y 11b); filtro: 2 toberas, 3 cuplas (purga y manómetro diferencial)",
@@ -216,13 +217,16 @@ for ident, pos, h, crit in (("S12H", "HH", 29, "20 h del puente (único equipo c
     X(ident, pos, "mo", a["descripcion"].replace("(estimadas del antecedente)", "(estimadas por criterio)"), h, "h", f"{h} h · criterio: {crit}",
       [dict(a["fuentes"][0], diferencia=f"horas por criterio; el antecedente de puentes en serie (TAVAL/43) da {a['cantidad']} h por unidad")])
 a = HORAS["ARM"]
+# 05-11-2026 (revisión independiente): el estimador escala las horas por el costo de materiales y bajaba a 63,1 h solo porque
+# los caños y bridas salieron más baratos (mismo alcance): se mantienen las 65,1 h del cálculo del 30-10-2026
+a = dict(a, cantidad=65.1, especificacion=a["especificacion"].replace("63,1 h", "65,1 h") + " · fijadas en 65,1 h (30-10-2026): el cambio de precios de materiales no cambia el alcance del armado")
 X("S13A", "ARM", "mo", a["descripcion"], a["cantidad"], a["unidad"], a["especificacion"], a["fuentes"])
 X("ARMF", "ARMF", "mo", "Horas de montaje del filtro FM-06 (corte y presentación, PH, pintura y armado final)", 45, "h",
   "Planilla TAVAL/40, hoja Soldadura + HH, filtro FM3 150: corte y presentación 18 h + PH con armado y desarme 18 h + armado final 9 h",
   [F("est", 13.0, "Horas propias ITT (tarifa de la planilla TAVAL/40)", TAVAL40, "2026-01-15", "similar", "horas del FM3 S150 (menor) aplicadas al FM-06")])
 
 base["items"] = items
-base["parametros"].update({"TRANS": 1, "TC": TC_OCT, "TR_ARS": 700000, "TR_EMB": 150, "TR_F": 1.0, "ph_horas": 18, "fecha_referencia": HOY})
+base["parametros"].update({"TRANS": 1, "TC": TC_OCT, "TR_ARS": 700000, "TR_EMB": 150, "TR_F": 1.0, "ph_horas": 18, "fecha_referencia": "2026-10-31"})  # último mes con índices (05-11-2026)
 PLAZO = 150
 base["plazo"] = {"dias": PLAZO, "texto": "desde OC · entregado en Transporte Cruz del Sur (Tapiales)",
                  "tareas": [["Ingeniería, documentación y aprobación de Camuzzi (datos de diseño de la tapa)", 0, 20, ""],

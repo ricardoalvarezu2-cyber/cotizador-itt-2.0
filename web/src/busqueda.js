@@ -212,6 +212,11 @@ const Busqueda = (() => {
     const r = reglaRevestimiento(C, prep(C, textoPed), prep(C, textoCand)); if (r) out.push(["revestimiento", r]);
     const k = reglaCostura(C, fam, prep(C, textoPed), prep(C, textoCand), textoCand || ""); if (k) out.push(["costura", k]);
     if (C.familias_sch.includes(fam)) { const r2 = reglaSchDoble(C, tp, tc, ped.diametro || "", ped.schedule || ""); if (r2) out.push(["schedule", r2]); }
+    if (fam === "JUN" && C.con_tuercas) {  // compatibilidad.regla_tuercas (06-11-2026)
+      const lado = t => new RegExp(C.sin_tuercas).test(t) ? "sin" : new RegExp(C.con_tuercas).test(t) ? "con" : "";
+      const a = lado(tp), b = lado(tc);
+      if (a && b && a !== b) out.push(["tuercas", `espárrago ${b} tuercas por uno ${a} tuercas (otra pieza y otro precio)`]);
+    }
     if (new RegExp(C.nace_estricto).test(tp) && !new RegExp(C.nace_estricto).test(tc)) out.push(["nace", "el pedido es MR0175 / ISO 15156 y el candidato no lo dice"]);
     else if (new RegExp(C.nace_pedido).test(tp) && !new RegExp(C.nace_cand).test(tc)) out.push(["nace", "el pedido es para servicio ácido (NACE) y el candidato no lo dice"]);
     return out;
@@ -249,6 +254,11 @@ const Busqueda = (() => {
         else if (a) difs.push(`${c}: sin dato (pedido ${f[c]})`);
         else difs.push(`${c}: ${r.a[c]} (no pedido)`);
       }
+      // espárrago pedido con tuercas y candidato que no lo dice: diferencia crítica (buscar_material.py, 06-11-2026)
+      if (fam === "JUN" && ["esparrago", "bulon"].includes(f.tipo) && datos.compat && datos.compat.con_tuercas) {
+        const C = datos.compat, lado = t => new RegExp(C.sin_tuercas).test(t) ? "sin" : new RegExp(C.con_tuercas).test(t) ? "con" : "";
+        if (lado(normP(f.texto || "")) === "con" && !lado(normP(r.d || ""))) difs.push("tuercas: sin dato (pedido con tuercas)");
+      }
       if (coinc === 0) continue;
       // similar solo de la misma serie y la misma norma, igual que buscar_material.py (Matías, 29-10-2026)
       if (cs.includes("serie") && !op.has("serie") && f.serie && norm(r.a.serie) !== norm(f.serie)) continue;
@@ -259,7 +269,9 @@ const Busqueda = (() => {
       const igual = !difs.length && oblig.every(c => f[c]);
       const misma = !!f.marca && norm(r.a.marca) === norm(f.marca);
       // la marca no le gana al tamaño (Ø, serie, schedule, medida), igual que buscar_material.py (CTRL-TS01)
-      const crit = difs.filter(d => ["diametro", "diametro2", "serie", "schedule", "medida", "espesor_mm", "largo_mm"].includes(d.split(":")[0]) && !d.includes("(no pedido)")).length;
+      // otro Ø pesa más que cualquier otra diferencia crítica, igual que buscar_material.py (05-11-2026)
+      const crit = difs.filter(d => ["diametro", "diametro2", "serie", "schedule", "medida", "espesor_mm", "largo_mm", "tuercas"].includes(d.split(":")[0]) && !d.includes("(no pedido)"))
+        .reduce((s, d) => s + (d.split(":")[0] === "diametro" ? 10 : 1), 0);
       const nDifs = difs.length;
       // todas las demás diferencias, para verlas: no cambian igual/similar ni el orden (buscar_material.EXTRAS, 03-11-2026)
       for (const c of EXTRAS) {

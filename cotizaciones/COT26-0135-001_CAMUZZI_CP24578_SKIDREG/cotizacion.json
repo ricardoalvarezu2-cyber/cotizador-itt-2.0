@@ -32,11 +32,11 @@
   "CONT": 5,
   "AJ": 1,
   "TRANS": 1,
-  "TC": 1541.43,
+  "TC": 1543.23,
   "TR_ARS": 700000,
   "TR_EMB": 150,
   "TR_F": 1.0,
-  "fecha_referencia": "2026-10-30",
+  "fecha_referencia": "2026-10-31",
   "rx_pct": 100,
   "ph_horas": 6,
   "FTV": 1.0
@@ -229,6 +229,16 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 3\" · 150 · S/ Esp. CAMUZZI · RF · Nota ITT: SCE-IN-501-0015",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "3\"",
+    "serie": "150",
+    "extremos": "RF"
+   },
+   "faltan_datos": [
+    "tipo",
+    "material"
+   ],
    "fuentes": [
     {
      "tipo": "est",
@@ -258,6 +268,16 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 3\" · 150 · S/ Esp. CAMUZZI · RF · Nota ITT: SCE-IN-501-0015",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "3\"",
+    "serie": "150",
+    "extremos": "RF",
+    "tipo": "reguladora"
+   },
+   "faltan_datos": [
+    "material"
+   ],
    "fuentes": [
     {
      "tipo": "est",
@@ -316,6 +336,18 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 3\" · 150 / STD · S/ Esp. CAMUZZI · RF · Nota ITT: SCE-IN-501-0008",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "3\"",
+    "serie": "150",
+    "schedule": "40",
+    "extremos": "RF/Bridado",
+    "tipo": "esferica",
+    "paso": "reducido"
+   },
+   "faltan_datos": [
+    "material"
+   ],
    "fuentes": [
     {
      "tipo": "est",
@@ -337,6 +369,18 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 6\" · 150 / STD · S/ Esp. CAMUZZI · RF · Nota ITT: SCE-IN-501-0008",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "6\"",
+    "serie": "150",
+    "schedule": "40",
+    "extremos": "RF/Bridado",
+    "tipo": "esferica",
+    "paso": "reducido"
+   },
+   "faltan_datos": [
+    "material"
+   ],
    "fuentes": [
     {
      "tipo": "est",
@@ -358,6 +402,17 @@
    "cantidad": 12.0,
    "unidad": "un",
    "especificacion": "Plano: 3\" · 150 x STD · ASTM A-105 · RF/BW",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "3\"",
+    "serie": "150",
+    "schedule": "40",
+    "material": "A105",
+    "extremos": "BW/RF",
+    "tipo": "wn",
+    "cara": "RF"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -419,6 +474,17 @@
    "cantidad": 6.0,
    "unidad": "un",
    "especificacion": "Plano: 6\" · 150 x STD · ASTM A-105 · RF/BW",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "6\"",
+    "serie": "150",
+    "schedule": "40",
+    "material": "A105",
+    "extremos": "BW/RF",
+    "tipo": "wn",
+    "cara": "RF"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -480,6 +546,17 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 8\" · 150 x STD · ASTM A-105 · RF/BW",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "8\"",
+    "serie": "150",
+    "schedule": "40",
+    "material": "A105",
+    "extremos": "BW/RF",
+    "tipo": "wn",
+    "cara": "RF"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -540,6 +617,17 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 8\" · 150 x STD · ASTM A-105 · RF",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "8\"",
+    "serie": "150",
+    "schedule": "40",
+    "material": "A105",
+    "extremos": "RF",
+    "tipo": "ciega",
+    "cara": "RF"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -561,6 +649,15 @@
    "cantidad": 3.0,
    "unidad": "un",
    "especificacion": "Plano: 6\" · STD · ASTM A-105 · BW",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "6\"",
+    "schedule": "40",
+    "material": "A105",
+    "extremos": "BW",
+    "tipo": "tee"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -591,6 +688,16 @@
    "cantidad": 3.0,
    "unidad": "un",
    "especificacion": "Plano: 8\"x6\" · STD · ASTM A-234 G°WPB · BW",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "8\"",
+    "diametro2": "6\"",
+    "schedule": "40",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "tee"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -620,6 +727,17 @@
    "cantidad": 4.0,
    "unidad": "un",
    "especificacion": "Plano: 6\"x3\" · STD · S/ Esp. CAMUZZI · BW",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "6\"",
+    "diametro2": "3\"",
+    "schedule": "40",
+    "extremos": "BW",
+    "tipo": "reduccion concentrica"
+   },
+   "faltan_datos": [
+    "material"
+   ],
    "fuentes": [
     {
      "tipo": "lista",
@@ -650,6 +768,15 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 6\" · STD · ASTM A-234 G°WPB · BW",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "6\"",
+    "schedule": "40",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "casquete"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "est",
@@ -671,6 +798,15 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 8\" · STD · ASTM A-234 G°WPB · BW",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "8\"",
+    "schedule": "40",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "casquete"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "est",
@@ -692,6 +828,17 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 1/2\" · 3000 · ASTM A-106 · SW/NPT",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "0.5\"",
+    "serie": "3000",
+    "material": "A106 B",
+    "extremos": "NPT/SW",
+    "tipo": "esferica"
+   },
+   "faltan_datos": [
+    "paso"
+   ],
    "fuentes": [
     {
      "tipo": "est",
@@ -703,14 +850,13 @@
      "diferencia": "el plano pide la cupla en ASTM A-106 (norma de caño; las cuplas B16.11 son forjadas A-105): consulta al cliente R78. Compras: cupla 1/2\" NPT S3000 + esférica 1/2\" NPT S3000 de marca del listado"
     },
     {
-     "tipo": "ant",
-     "precio": 65.2,
-     "proveedor": "válvulas Taval (el resumen las agrupa como \"Valvulas Taval\", factor 1, · VAL-03526",
-     "codigo": "VAL-03526",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\9. CM SKID MANIFOLD PAD S-600 · fuentes_originales/ofertas_texto/TECPETROL/9. CM SKID MANIFOLD PAD S-600/ESTRUCTURA DE COSTOS- LM de Manifold S600 CM - PC0-C",
-     "fecha": "2026-01-26",
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-05",
      "coincide": "descartada",
-     "diferencia": "descartada (revisión de compatibilidades 30-10-2026: válvula A105, el plano pide A-106) · antes: material: A105 (pedido A106 B); extremos: NPT (pedido NPT/SW)"
+     "diferencia": "descartada (revisión de compatibilidades 30-10-2026: válvula A105, el plano pide A-106) · antes: No hay pieza de esa familia y tipo con precio"
     }
    ]
   },
@@ -722,6 +868,15 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 1/2\" · 3000 · S/ Fabricante · NPT",
+   "atributos": {
+    "familia": "OTR",
+    "diametro": "0.5\"",
+    "serie": "3000",
+    "material": "Inoxidable",
+    "extremos": "NPT",
+    "tipo": "toma multiport ac"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "est",
@@ -751,6 +906,16 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 1/2\" · 3000 · S/ Fabricante · NPT",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "0.5\"",
+    "serie": "3000",
+    "extremos": "NPT",
+    "tipo": "alivio"
+   },
+   "faltan_datos": [
+    "material"
+   ],
    "fuentes": [
     {
      "tipo": "est",
@@ -771,6 +936,15 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 1/2\" · 3000 · ASTM A-105 · SW/NPT",
+   "atributos": {
+    "familia": "AFO",
+    "diametro": "0.5\"",
+    "serie": "3000",
+    "material": "A105",
+    "extremos": "NPT/SW",
+    "tipo": "cupla"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "lista",
@@ -812,6 +986,18 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano: 3/4\" · 3000 · AISI 316 · NPT",
+   "atributos": {
+    "familia": "INS",
+    "diametro": "0.75\"",
+    "serie": "3000",
+    "material": "AISI 316",
+    "extremos": "NPT",
+    "tipo": "termovaina"
+   },
+   "faltan_datos": [
+    "rango",
+    "conexion"
+   ],
    "fuentes": [
     {
      "tipo": "est",
@@ -862,6 +1048,17 @@
    "cantidad": 4.0,
    "unidad": "un",
    "especificacion": "Plano: 1/2\" · 3000 · S/ Fabricante · NPT",
+   "atributos": {
+    "familia": "INS",
+    "diametro": "0.5\"",
+    "serie": "3000",
+    "extremos": "NPT",
+    "tipo": "manometro",
+    "rango": "0-6bar"
+   },
+   "faltan_datos": [
+    "conexion"
+   ],
    "fuentes": [
     {
      "tipo": "est",
@@ -900,6 +1097,14 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Skid 3.700 × 1.630 mm, UPN 120 perimetral y travesaños, soportes de cañería, 4 cáncamos y oreja de PAT (330 kg estimados)",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "skid y soportes"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
    "fuentes": [
     {
      "tipo": "cot",
@@ -940,6 +1145,16 @@
    "cantidad": 1.8,
    "unidad": "m",
    "especificacion": "Plano: 3\" · 40 · ASTM A-53 GR°B · BW · El cliente no indica cantidad: calculada por ITT según el plano (medida del dibujo)",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "3\"",
+    "schedule": "40",
+    "material": "A53",
+    "extremos": "BW"
+   },
+   "faltan_datos": [
+    "costura"
+   ],
    "fuentes": [
     {
      "tipo": "lista",
@@ -971,6 +1186,16 @@
    "cantidad": 4.2,
    "unidad": "m",
    "especificacion": "1 tramo de 6 m para 1.8 m (con tira de 12 m el sobrante superaba 80%)",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "3\"",
+    "schedule": "40",
+    "material": "A53",
+    "extremos": "BW"
+   },
+   "faltan_datos": [
+    "costura"
+   ],
    "fuentes": [
     {
      "tipo": "lista",
@@ -1002,7 +1227,27 @@
    "cantidad": 2.0,
    "unidad": "m",
    "especificacion": "Plano: 6\" · 40 · ASTM A-53 GR°B · BW · El cliente no indica cantidad: calculada por ITT según el plano (medida del dibujo)",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "6\"",
+    "schedule": "40",
+    "material": "A53",
+    "extremos": "BW"
+   },
+   "faltan_datos": [
+    "costura"
+   ],
    "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 49.48,
+     "proveedor": "Grupo Provemet cot. 288974 ítem 1 · CAN-01510",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288974_canos_2026-10-29.pdf · ítem 1",
+     "fecha": "2026-10-29",
+     "coincide": "similar",
+     "diferencia": "TUBO S/C ASTM A53/A106/API5L B 6'' SCH 40 Ø 168,3 X 7,11 mm x 12 / 13,7 mts BW (sin costura, triple certificación: cumple A53 Gr B, que pide el plano); Provemet cot. 288974 (29-10-2026), precio neto con bonificación 4% (vale comprando toda la cotización), validez 15 días",
+     "codigo": "CAN-01510"
+    },
     {
      "tipo": "lista",
      "precio": 60.51,
@@ -1033,7 +1278,27 @@
    "cantidad": 4.0,
    "unidad": "m",
    "especificacion": "1 tramo de 6 m para 2 m (con tira de 12 m el sobrante superaba 80%)",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "6\"",
+    "schedule": "40",
+    "material": "A53",
+    "extremos": "BW"
+   },
+   "faltan_datos": [
+    "costura"
+   ],
    "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 49.48,
+     "proveedor": "Grupo Provemet cot. 288974 ítem 1 · CAN-01510",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288974_canos_2026-10-29.pdf · ítem 1",
+     "fecha": "2026-10-29",
+     "coincide": "similar",
+     "diferencia": "TUBO S/C ASTM A53/A106/API5L B 6'' SCH 40 Ø 168,3 X 7,11 mm x 12 / 13,7 mts BW (sin costura, triple certificación: cumple A53 Gr B, que pide el plano); Provemet cot. 288974 (29-10-2026), precio neto con bonificación 4% (vale comprando toda la cotización), validez 15 días",
+     "codigo": "CAN-01510"
+    },
     {
      "tipo": "lista",
      "precio": 60.51,
@@ -1064,7 +1329,27 @@
    "cantidad": 2.25,
    "unidad": "m",
    "especificacion": "Plano: 6\" · 80 · ASTM A-53 GR°B · BW · El cliente no indica cantidad: calculada por ITT según el plano (medida del dibujo)",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "6\"",
+    "schedule": "80",
+    "material": "A53",
+    "extremos": "BW"
+   },
+   "faltan_datos": [
+    "costura"
+   ],
    "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 74.52,
+     "proveedor": "Grupo Provemet cot. 288974 ítem 10 · CAN-01512",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288974_canos_2026-10-29.pdf · ítem 10",
+     "fecha": "2026-10-29",
+     "coincide": "similar",
+     "diferencia": "TUBO S/C ASTM A53/A106/API5L B 6'' SCH 80 Ø 168,3 X 10,97 mm x 12 / 13,7 mts BW (sin costura, triple certificación: cumple A53 Gr B, que pide el plano); Provemet cot. 288974 (29-10-2026), precio neto con bonificación 4% (vale comprando toda la cotización), validez 15 días",
+     "codigo": "CAN-01512"
+    },
     {
      "tipo": "lista",
      "precio": 90.7,
@@ -1085,7 +1370,27 @@
    "cantidad": 3.75,
    "unidad": "m",
    "especificacion": "1 tramo de 6 m para 2.25 m (con tira de 12 m el sobrante superaba 80%)",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "6\"",
+    "schedule": "80",
+    "material": "A53",
+    "extremos": "BW"
+   },
+   "faltan_datos": [
+    "costura"
+   ],
    "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 74.52,
+     "proveedor": "Grupo Provemet cot. 288974 ítem 10 · CAN-01512",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288974_canos_2026-10-29.pdf · ítem 10",
+     "fecha": "2026-10-29",
+     "coincide": "similar",
+     "diferencia": "TUBO S/C ASTM A53/A106/API5L B 6'' SCH 80 Ø 168,3 X 10,97 mm x 12 / 13,7 mts BW (sin costura, triple certificación: cumple A53 Gr B, que pide el plano); Provemet cot. 288974 (29-10-2026), precio neto con bonificación 4% (vale comprando toda la cotización), validez 15 días",
+     "codigo": "CAN-01512"
+    },
     {
      "tipo": "lista",
      "precio": 90.7,
@@ -1106,7 +1411,27 @@
    "cantidad": 1.0,
    "unidad": "m",
    "especificacion": "Plano: 8\" · 40 · ASTM A-53 GR°B · BW · El cliente no indica cantidad: calculada por ITT según el plano (medida del dibujo)",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "8\"",
+    "schedule": "40",
+    "material": "A53",
+    "extremos": "BW"
+   },
+   "faltan_datos": [
+    "costura"
+   ],
    "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 74.51,
+     "proveedor": "Grupo Provemet cot. 288974 ítem 2 · CAN-01521",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288974_canos_2026-10-29.pdf · ítem 2",
+     "fecha": "2026-10-29",
+     "coincide": "similar",
+     "diferencia": "TUBO S/C ASTM A53/A106/API5L B 8'' SCH 40 Ø 219,1 X 8,18 mm x 12 / 13,7 mts BW (sin costura, triple certificación: cumple A53 Gr B, que pide el plano); Provemet cot. 288974 (29-10-2026), precio neto con bonificación 4% (vale comprando toda la cotización), validez 15 días",
+     "codigo": "CAN-01521"
+    },
     {
      "tipo": "lista",
      "precio": 91.01,
@@ -1137,7 +1462,27 @@
    "cantidad": 5.0,
    "unidad": "m",
    "especificacion": "1 tramo de 6 m para 1 m (con tira de 12 m el sobrante superaba 80%)",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "8\"",
+    "schedule": "40",
+    "material": "A53",
+    "extremos": "BW"
+   },
+   "faltan_datos": [
+    "costura"
+   ],
    "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 74.51,
+     "proveedor": "Grupo Provemet cot. 288974 ítem 2 · CAN-01521",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288974_canos_2026-10-29.pdf · ítem 2",
+     "fecha": "2026-10-29",
+     "coincide": "similar",
+     "diferencia": "TUBO S/C ASTM A53/A106/API5L B 8'' SCH 40 Ø 219,1 X 8,18 mm x 12 / 13,7 mts BW (sin costura, triple certificación: cumple A53 Gr B, que pide el plano); Provemet cot. 288974 (29-10-2026), precio neto con bonificación 4% (vale comprando toda la cotización), validez 15 días",
+     "codigo": "CAN-01521"
+    },
     {
      "tipo": "lista",
      "precio": 91.01,
@@ -1168,6 +1513,17 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 3/4\" · 150 · Rango: 0-25 bar / 4-20 mA · NPT",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "0.75\"",
+    "serie": "150",
+    "extremos": "NPT",
+    "tipo": "bloqueo y purga",
+    "rango": "0-25 bar / 4-20 mA"
+   },
+   "faltan_datos": [
+    "material"
+   ],
    "fuentes": [
     {
      "tipo": "cot",
@@ -1198,6 +1554,15 @@
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 3/4\" · 150 · Rango: 0-100 °C / 4-20 mA · NPT",
+   "atributos": {
+    "familia": "OTR",
+    "diametro": "0.75\"",
+    "serie": "150",
+    "extremos": "NPT",
+    "tipo": "temperatura de salida",
+    "rango": "0-100 °C / 4-20 mA"
+   },
+   "faltan_datos": [],
    "fuentes": [
     {
      "tipo": "cot",
@@ -1219,6 +1584,16 @@
    "cantidad": 2.0,
    "unidad": "un",
    "especificacion": "Plano:  ·  · Rango: 0-24V · —",
+   "atributos": {
+    "familia": "VAL",
+    "rango": "0-24V"
+   },
+   "faltan_datos": [
+    "tipo",
+    "diametro",
+    "serie",
+    "material"
+   ],
    "fuentes": [
     {
      "tipo": "est",
@@ -1255,19 +1630,29 @@
    "pos": "PIN",
    "grupo": "servicio",
    "descripcion": "Granallado y pintura (m² calculados)",
-   "especificacion": "9,94 m² exteriores: caños y niples 3,4 + bridas, accesorios y válvulas (largo equivalente) 6,4 + envolvente 0,1 + skid ≈ 10,7 m² (25 m de UPN 120) · esquema SCE-PC-511-0003 a confirmar (consulta R33)",
-   "cantidad": 20.639,
+   "especificacion": "9,94 m² exteriores: caños y niples 3,4 + bridas, accesorios y válvulas (largo equivalente) 6,4 + envolvente 0,1 + skid ≈ 10,7 m² (25 m de UPN 120), × 1,2 de overspray como la planilla del precio · esquema SCE-PC-511-0003 a confirmar (consulta R33)",
+   "cantidad": 24.767,
    "unidad": "m2",
    "fuentes": [
     {
      "tipo": "ant",
+     "precio": 37.98,
+     "proveedor": "Pintor (sin nombre) · PIN-00579 (precio confirmado por Matías)",
+     "origen": "conocimiento/precios/precios_usuario.csv",
+     "fecha": "2026-10-30",
+     "coincide": "similar",
+     "diferencia": "Granallado y pintura de piping y skid, incluye materiales: USD 37,98/m² confirmado por Matías Russo el 30-10-2026 (precio firme, PIN-00579); la planilla de origen (YPF Lic 66944 colectores) lo aplica sobre los m² + 20 % de overspray, por eso la cantidad va × 1,2; esquema SCE-PC-511-0003 a confirmar",
+     "codigo": "PIN-00579"
+    },
+    {
+     "tipo": "ant",
      "precio": 50.0,
-     "proveedor": "criterio ITT · PIN-00569",
-     "codigo": "PIN-00569",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN\\4.Armado de la Oferta Comercial",
+     "proveedor": "criterio ITT · PIN-00569 (YPF/28)",
+     "origen": "conocimiento/precios/catalogo_servicios.csv",
      "fecha": "2026-10-10",
      "coincide": "similar",
-     "diferencia": "m² calculados (caños, accesorios por regla, envolvente y estructura); esquema de pintura a confirmar con el pliego"
+     "diferencia": "referencia anterior (hasta el 05-11-2026)",
+     "codigo": "PIN-00569"
     }
    ]
   },
@@ -1282,8 +1667,8 @@
    "fuentes": [
     {
      "tipo": "cot",
-     "precio": 3529.19,
-     "proveedor": "Proveedor de RX (sin nombre), precio confirmado por Matías el 30-10-2026: 4 visitas × ARS 850.000 + 136 placas × ARS 15.000, sin IVA, a BNA venta promedio 10-2026 (1.541,43) · END-00572 / END-00571",
+     "precio": 3525.07,
+     "proveedor": "Proveedor de RX (sin nombre), precio confirmado por Matías el 30-10-2026: 4 visitas × ARS 850.000 + 136 placas × ARS 15.000, sin IVA, a BNA venta promedio 10-2026 (1.543,23) · END-00572 / END-00571",
      "origen": "conocimiento/precios/precios_usuario.csv",
      "fecha": "2026-10-30",
      "coincide": "igual",

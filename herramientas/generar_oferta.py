@@ -3,7 +3,7 @@
 Uso: python herramientas/generar_oferta.py cotizaciones/<carpeta>
 
 Lee <carpeta>/oferta.json (textos, desvíos, condiciones) y toma los precios de la planilla de la
-cotización (<carpeta>/*.xlsx, hoja "Cotización"), recalculada con LibreOffice. Los precios nunca se
+cotización (<carpeta>/*.xlsx, celdas con nombre del Resumen), recalculada con LibreOffice. Los precios nunca se
 escriben a mano en el JSON (procedimiento P7).
 Plantilla: plantillas/oferta_itt_2026.docx (ver plantillas/README.md).
 
@@ -83,13 +83,12 @@ def cot_equipo(carpeta):
 
 
 def leer_precios(carpeta):
+    """Precios de la planilla recalculada, por las celdas con nombre del Resumen (planilla_excel.py)."""
+    import planilla_excel
     xlsx = sorted(Path(carpeta).glob("*.xlsx"))[0]
-    with tempfile.TemporaryDirectory() as tmp:
-        subprocess.run(["soffice", perfil_soffice(), "--headless", "--convert-to", "xlsx", "--outdir", tmp, str(xlsx)],
-                       check=True, capture_output=True)
-        ws = load_workbook(Path(tmp) / xlsx.name, data_only=True)["Cotización"]
-        precios = {"cantidad": ws["B5"].value, "precio_unitario": ws["D27"].value,
-                   "total": ws["E28"].value, "flete_incluido": ws["B9"].value == 1, "flete": ws["E23"].value or 0}
+    v = planilla_excel.leer_valores(xlsx)
+    precios = {"cantidad": v["Cantidad"], "precio_unitario": v["PrecioUnitario"], "total": v["TotalOferta"],
+               "flete_incluido": v["IncluirFlete"] == 1, "flete": v["Flete"] or 0}
     if abs(precios["precio_unitario"] * precios["cantidad"] + precios["flete"] - precios["total"]) > 0.001:
         sys.exit(f"La planilla no cierra: unitario × cantidad + flete ≠ total ({precios})")
     return precios

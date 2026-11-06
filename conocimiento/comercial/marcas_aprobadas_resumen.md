@@ -96,7 +96,7 @@ Pampa distingue entre "vendor list" (cerrada para válvulas e instrumentos) y "m
 - Tecpetrol (vía Techint, Los Toldos II Este, y vía A&A Fluid Control): solo exige que la lista de subproveedores quede sujeta a aprobación del Comprador y/o Cliente; no hay lista de marcas en el texto.
 - AESA: mail de ITT a proveedores (2022-10-21) con "marcas y modelos indicadas en las HD son meramente de referencia, el vendor list es abierto". Es texto de ITT.
 - "Homologados por la Distribuidora": frase de plantilla en 13 OT de AESA, 5 de Albanesi, 1 de PAE y 2 de Tecpetrol; no verificada en un pliego.
-- Camuzzi: sin vendor list. Solo la oferta de ITT con ABAC VHP 9H S IT y manómetro CENI 74.
+- Camuzzi: **tiene vendor list propio, SCE-IN-501-0015 «Listado de marcas y proveedores»**: vigente rev 1 (10-02-2026), en `cotizaciones/COT26-0135-001_CAMUZZI_CP24578_SKIDREG/pedido/789-2- LISTADO DE MARCAS Y PROVEEDORES CAMUZZI.pdf`; la rev 00 (11-12-2020) está en `fuentes_originales/camuzzi_ET/` (corregido 05-11-2026; antes decía «sin vendor list»). Ver `conocimiento/tecnico/camuzzi_ET_LEEME.md`.
 
 ## Diferencias entre clientes
 

@@ -1,0 +1,1052 @@
+                                                                                             SCE-PC-511-
+                                                                              CÓDIGO:           0003
+                                  ESPECIFICACIÓN                             REVISIÓN:             6
+                                     TÉCNICA                                   HOJA:            1 de 23
+
+
+                                                                              FECHA             FECHA
+                                                                            APROBACION         VIGENCIA
+       PROCESO                      OPERACIÓN DE LA RED
+                                                                              14/07/2022       14/07/2022
+
+                                                                                 LIDER DEL PROCESO
+           TEMA                    Protección Anticorrosiva
+                                                                                   Guillermo Montag
+
+                                                                                   APROBADO POR:
+   ANULA/REEMPLAZA                       SCE-PC-511-0003 Rev. 5
+                                                                                   Alejandro Lorenzo
+
+
+                                           MODIFICACIONES
+  Nº de      FECHA
+                                                      MOTIVO DE LA MODIFICACIÓN
+REVISIÓN    REVISION
+            26/06/2011   Reemplaza a I OR 073-2
+   2                     Actualización
+   3                     Actualización
+   4                     Actualización
+   5        30/06/2021   Actualización. Se incorporó el procedimiento SCE-PC-306-0006
+   6        14/07/2022   Actualización. Se incorporó Art. 5.9 y recoating
+
+
+
+
+AREAS INVOLUCRADAS:
+
+Todas las Áreas Técnicas
+Gerencia de Seguridad y Medio Ambiente.
+
+OBSERVACIONES:
+                                                                                                              CÓDIGO             SCE-PC-511-0003
+                                           ESPECIFICACIÓN                                                    REVISIÓN                        6
+                                              TÉCNICA                                                           HOJA                    2 de 23
+
+
+
+
+                                                                     INDICE
+
+                                                                                                                                                  Página
+1     OBJETO .............................................................................................................................................. 4
+2     ALCANCE ........................................................................................................................................... 4
+3     DOCUMENTACION COMPLEMENTARIA Y/O DE REFERENCIA ................................................... 4
+  3.1 NORMAS EXTERNAS ........................................................................................................................... 4
+  3.2 NORMAS INTERNAS ............................................................................................................................. 5
+4     DEFINICIONES .................................................................................................................................. 5
+  4.1 GLOSARIO .......................................................................................................................................... 5
+  4.2 RECOATING ........................................................................................................................................ 5
+5     PROTECCIÓN ANTICORROSIVA DE INSTALACIONES AÉREAS ................................................. 5
+  5.1 CONSIDERACIONES EN EL DISEÑO........................................................................................................ 5
+  5.2 PREPARACIÓN DE LAS SUPERFICIES ..................................................................................................... 5
+  5.3 MATERIALES A EMPLEAR Y ESPESORES A APLICAR ................................................................................ 6
+    5.3.1 ESQUEMA A ................................................................................................................................ 6
+    5.3.2 ESQUEMA B ................................................................................................................................ 7
+    5.3.3 GENERALIDADES ......................................................................................................................... 7
+  5.4 CONDICIONES AMBIENTALES ............................................................................................................... 8
+  5.5 APLICACIÓN........................................................................................................................................ 9
+    5.5.1 PREVIO A LA APLICACIÓN ............................................................................................................. 9
+    5.5.2 MÉTODO DE APLICACIÓN .............................................................................................................. 9
+    5.5.3 RECOMENDACIONES GENERALES ................................................................................................. 9
+    5.5.4 ÁREAS DE REFERENCIA .............................................................................................................. 10
+    5.5.5 ENSAYOS .................................................................................................................................. 10
+  5.6 COLORES DE IDENTIFICACIÓN DE LAS INSTALACIONES ......................................................................... 10
+  5.7 IDENTIFICACIÓN DE EQUIPOS ............................................................................................................. 11
+  5.8 MOTOCOMPRESORES, MOTOGENERADORES Y TURBINAS .................................................................... 11
+  5.9 TRANSICIÓN DE CAÑERÍA AÉREA A CAÑERÍA ENTERRADA ..................................................................... 11
+  5.10 INSPECCIÓN DE LOS REVESTIMIENTOS ............................................................................................... 12
+6     PROTECCIÓN ANTICORROSIVA DE CAÑERÍAS Y ACCESORIOS ENTERRADOS................... 12
+  6.1 REVESTIMIENTO INTEGRAL DE LA CAÑERÍA ......................................................................................... 12
+    6.1.1 ESPESOR DEL REVESTIMIENTO ................................................................................................... 12
+  6.2 REVESTIMIENTO DE UNIONES SOLDADAS ............................................................................................ 13
+    6.2.1 REVESTIMIENTOS TERMOCONTRAÍBLES....................................................................................... 13
+    6.2.2 POLIURETANO ........................................................................................................................... 13
+  6.3 REVESTIMIENTO DE VÁLVULAS Y ACCESORIOS MULTIFORMES .............................................................. 14
+    6.3.1 POLIURETANO ........................................................................................................................... 15
+    6.3.2 EPOXI ....................................................................................................................................... 15
+  6.4 REVESTIMIENTO DE CAÑOS CAMISA.................................................................................................... 16
+  6.5 PROTECCIÓN ANTICORROSIVA DE SOLDADURAS CUPROALUMINOTÉRMICAS .......................................... 16
+  6.6 REVESTIMIENTO DE VÁLVULAS EN CÁMARAS ....................................................................................... 16
+    6.6.1 ESQUEMA PARA ESTRUCTURAS AÉREAS...................................................................................... 16
+    6.6.2 POLIURETANO ........................................................................................................................... 16
+    6.6.3 CERAS MICROCRISTALINAS DE PETRÓLEO ................................................................................... 17
+    6.6.4 TRANSICIÓN CON EL REVESTIMIENTO INTEGRAL DE LA CAÑERÍA .................................................... 17
+  6.7 REPARACIÓN DE REVESTIMIENTOS Y RECOATING DE CAÑERÍAS EXISTENTES......................................... 18
+                                                                                                             CÓDIGO             SCE-PC-511-0003
+                                           ESPECIFICACIÓN                                                   REVISIÓN                       6
+                                              TÉCNICA                                                          HOJA                    3 de 23
+
+
+    6.7.1 REPARACIÓN DE REVESTIMIENTOS ............................................................................................. 18
+    6.7.2 RECOATING DE CAÑERÍAS EXISTENTES ....................................................................................... 19
+    6.7.3 APLICACIÓN DE CINTAS PLÁSTICAS (GRUPO B) ............................................................................ 19
+  6.8 CALIDAD DE LOS MATERIALES ............................................................................................................ 19
+  6.9 INSPECCIÓN DE LOS REVESTIMIENTOS ............................................................................................... 20
+7     REGISTRO Y ARCHIVO .................................................................................................................. 20
+8     ANEXOS ........................................................................................................................................... 20
+  8.1 ANEXO I: COLORES DE IDENTIFICACIÓN DE INSTALACIONES ................................................................. 20
+  8.2 ANEXO II: MARCACIÓN DE ÁREAS DE REFERENCIA .............................................................................. 22
+  8.3 ANEXO III: INFORMACIÓN MÍNIMA PARA EL REPORTE DE ÁREAS DE REFERENCIA.................................... 22
+  8.4 ANEXO IV: CARACTERÍSTICAS DE LA ARENA PARA ARENADO DE SUPERFICIES ...................................... 23
+                                                           CÓDIGO     SCE-PC-511-0003
+                       ESPECIFICACIÓN                      REVISIÓN          6
+                          TÉCNICA                           HOJA          4 de 23
+
+
+1   OBJETO
+
+Establecer los requerimientos generales mínimos tanto para las tareas de limpieza,
+preparación de superficies y aplicación de revestimientos de instalaciones metálicas,
+ya sea que estén a la intemperie o para cañerías y accesorios que se encuentren
+enterrados, como para los materiales a utilizar en estas tareas.
+
+2   ALCANCE
+
+Todas las instalaciones, nuevas o existentes, en las que se le han aplicado un
+revestimiento anticorrosivo a partir de la vigencia de la presente Especificación
+Técnica.
+
+3   DOCUMENTACION COMPLEMENTARIA Y/O DE REFERENCIA
+
+
+3.1 Normas Externas
+ ISO 8501-1:     Preparación de superficies de acero previa a la aplicación de
+                 pinturas y productos análogos. Evaluación visual de la limpieza
+                 superficial. Grados de oxidación y de preparación de superficies
+                 de acero sin recubrir y de las superficies de acero después de
+                 eliminar totalmente los recubrimientos anteriores.
+ ISO 8501-3:     Preparación de superficies de acero previa a la aplicación de
+                 pinturas y productos análogos. Evaluación visual de la limpieza
+                 superficial. Grados de preparación de soldaduras, bordes y otras
+                 áreas con imperfecciones en la superficie.
+ ISO 8502-3      Preparation of steel substrates before application of paints and
+                 related products — Test for assessment of surface cleanliness —
+                 Part 3: Assessment of dust on steel surfaces prepared for
+                 painting (pressure-sensitive tape method).
+ ISO 8503-5      Preparation of steel substrates before application of paints and
+                 related products — Surface roughness characteristics of blast-
+                 cleaned steel substrates — Part 5: Replica tape method for the
+                 determination of the surface profile.
+ SSPC SP 10:     Preparación de superficies. Limpieza a metal casi blanco (Near-
+                 White Blast Cleaning).
+ SSPC SP 3:      Preparación de superficies. Limpieza mecánica (Power tool
+                 Cleaning).
+ ISO 12944-3     Paints and varnishes — Corrosion protection of steel structures
+                 by protective paint systems — Part 3: Design considerations.
+ ISO 12944-5     Paints and varnishes — Corrosion protection of steel structures
+                 by protective paint systems — Part 5: Protective paint systems.
+ ISO 12944-7     Paints and varnishes — Corrosion protection of steel structures
+                 by protective paint systems — Part 7: Execution and supervision
+                 of paint work.
+                                                             CÓDIGO    SCE-PC-511-0003
+                         ESPECIFICACIÓN                     REVISIÓN             6
+                            TÉCNICA                           HOJA         5 de 23
+
+
+    ISO 12944-8      Paints and varnishes — Corrosion protection of steel structures
+                     by protective paint systems — Part 8: Development of
+                     specifications for new work and maintenance.
+    ASTM D4285       Standard Test Method for Indicating Oil and Water in
+                     Compressed Air
+    IRAM-DEF D 1054: Carta de colores para pinturas de acabado brillante, semimate y
+                     mate.
+    IRAM 10005:      Colores y señales de seguridad.
+    NAG-100:         Normas Argentinas Mínimas de Seguridad para el Transporte y
+                     Distribución de Gas Natural y otros Gases por Cañería.
+    NAG-108 2009:    Revestimientos Anticorrosivos de Tuberías y Accesorios.
+    NAG-123:         Normas de colores de seguridad para la identificación de
+                     cañerías y la demarcación de lugares de trabajo.
+
+
+3.2 Normas Internas
+I OR-002:        Glosario de Términos y Símbolos de Protección Anticorrosiva.
+SCE-PC-306-0001: Instalación de Mantas y Cintas Termocontraíbles.
+SCE-PC-506-0001: Guía para la inspección de revestimientos de cañerías y
+                 accesorios.
+
+4     DEFINICIONES
+
+
+4.1 Glosario
+En la Instrucción I OR-002 se detallan los términos y símbolos comúnmente utilizados
+en la redacción de documentos de Protección Anticorrosiva.
+
+
+4.2 Recoating
+Es aquella tarea en la que se vuelve a revestir un tramo de cañería enterrada.
+
+5     PROTECCIÓN ANTICORROSIVA DE INSTALACIONES AÉREAS
+
+
+5.1 Consideraciones en el diseño
+Durante la etapa de diseño de las instalaciones aéreas se deberán tener en cuenta
+las consideraciones sobre accesibilidad, tratamiento de espacios o grietas, prevenir la
+acumulación de suciedad y/o agua, imperfecciones de las superficies, partes
+abulonadas o atornilladas, muescas y entallas, y refuerzos, teniendo como referencia
+la norma ISO 12944-3.
+
+
+5.2 Preparación de las superficies
+La superficie a pintar deberá ser preparada mediante un “arenado cercano al blanco”
+(norma SSPC SP 10) hasta un grado Sa 2 1/2 de la norma ISO 8501-1.
+                                                             CÓDIGO    SCE-PC-511-0003
+                        ESPECIFICACIÓN                      REVISIÓN          6
+                           TÉCNICA                            HOJA         6 de 23
+
+
+
+
+Previo al arenado se deberá asegurar que el aire comprimido utilizado en esta tarea
+esté libre de aceites y/o agua. Para ello, al inicio de cada jornada de trabajo se
+realizará el ensayo indicado en la norma ASTM D4285, debiendo ser el resultado
+satisfactorio para poder utilizar el equipo de aire comprimido.
+
+En caso de tratarse de plantas reguladoras, compresoras, etc. en operación, este
+tratamiento deberá ser aprobado por la Gerencia de Seguridad y Medio Ambiente,
+quien evaluará la necesidad de efectuar la limpieza por hidroarenado. En caso de que
+se deba realizar hidroarenado y si se utilizan inhibidores de corrosión, el aplicador
+deberá asegurarse que el mismo sea compatible con las pinturas a utilizar.
+
+Las características de la arena para la preparación de la superficie se indican en el
+Anexo IV.
+
+En caso de no poder realizar un arenado, podrá hacerse una limpieza superficial
+mediante equipos mecánicos (norma SSPC SP 3) hasta un grado St 3 de la norma
+ISO 8501-1, previa aprobación de la Gerencia Técnica de la Distribuidora.
+
+No se permitirá, salvo indicación expresa, que la superficie arenada quede sin revestir
+durante o al final de la jornada de trabajo, razón por la cual se deberán coordinar
+adecuadamente dichas operaciones.
+
+Posteriormente se deberá eliminar todo residuo del abrasivo o del polvo de la
+superficie. Se medirán los residuos de abrasivo o polvo según lo estipulado en la
+norma ISO 8502-3, aceptándose un nivel de limpieza 2 (como máximo) según el
+patrón visual de la mencionada norma.
+
+En todos los casos, el grado de preparación será P3 según la norma ISO 8501-3.
+
+Se deberá respetar la rugosidad requerida por el fabricante de la pintura a utilizar
+como fondo. La medición de la rugosidad se realizará por medio de una cinta de
+réplica, de acuerdo a lo indicado en la norma ISO 8503-5 (para mayor información ver
+la especificación técnica SCE-PC-306-0001).
+
+
+5.3 Materiales a emplear y espesores a aplicar
+A continuación, se presentan los dos esquemas aceptados por la Distribuidora. En
+caso que no esté claramente indicado el esquema a utilizar, se podrá utilizar
+cualquiera de ambos.
+
+5.3.1 ESQUEMA A
+El esquema A es el siguiente:
+                                                         CÓDIGO     SCE-PC-511-0003
+                       ESPECIFICACIÓN                    REVISIÓN          6
+                          TÉCNICA                         HOJA          7 de 23
+
+
+     Fondo:     Pintura epoxi autoimprimante de alto contenido de sólidos o
+                 100% sólidos, secado rápido.
+                 Espesor: 100-150 micrones.
+                 Color: Sin especificar.
+   Capa intermedia: Pintura epoxi de alto contenido de sólidos o 100% sólidos,
+                 secado rápido, compatible con la pintura epoxi de fondo (puede
+                 ser la misma pintura que el fondo).
+                 Espesor: 100-150 micrones.
+                 Color: Sin especificar.
+                 Espesor total entre fondo y capa intermedia: 240-270 micrones
+   Terminación: Esmalte de poliuretano alifático de alto contenido de sólidos o
+                 100% sólidos, compatible con la capa intermedia.
+                 Espesor: 80-100 micrones.
+                 Color: Ver 5.6.
+                 Espesor total del esquema: 320-370 micrones
+
+5.3.2 ESQUEMA B
+El esquema B es el siguiente:
+
+     Fondo:     Pintura epoxi autoimprimante de alto contenido de sólidos o
+                 100% sólidos, rica en zinc (mayor al 80% en peso de la película
+                 seca), secado rápido.
+                 Espesor: 60-80 micrones.
+                 Color: Sin especificar.
+   Capa intermedia: Pintura epoxi de alto contenido de sólidos o 100% sólidos,
+                 secado rápido, compatible con la pintura epoxi de fondo.
+                 Espesor: 170-190 micrones.
+                 Color: Sin especificar.
+                 Espesor total entre fondo y capa intermedia: 240-270 micrones
+   Terminación: Esmalte de poliuretano alifático de alto contenido de sólidos o
+                 100% sólidos, compatible con la capa intermedia.
+                 Espesor: 80-100 micrones.
+                 Color: Ver 5.6.
+                 Espesor total del esquema: 320-370 micrones
+
+5.3.3 GENERALIDADES
+Los solventes a utilizar serán los recomendados por los respectivos fabricantes de
+pintura.
+
+Los espesores indicados son de película seca y deberán medirse con un instrumento
+calibrado.
+                                                            CÓDIGO     SCE-PC-511-0003
+                        ESPECIFICACIÓN                      REVISIÓN          6
+                           TÉCNICA                            HOJA         8 de 23
+
+
+Como parte del proyecto constructivo, se deberán informar las marcas y productos a
+utilizar, que deberán ser aprobados por la Distribuidora previo a su utilización.
+
+
+5.4 Condiciones ambientales
+Cuando se aplican recubrimientos protectores, los factores más importantes que se
+deben considerar son el estado del substrato, la temperatura superficial y las
+condiciones atmosféricas durante la aplicación de la pintura.
+
+La aplicación de la pintura sólo debe llevarse a cabo cuando las condiciones
+atmosféricas son buenas y el tiempo moderado.
+
+No se procederá a pintar:
+
+      cuando la temperatura del aire está por debajo del límite de endurecimiento o
+       secado inferior del recubrimiento,
+      durante condiciones de niebla o bruma o cuando la lluvia o nieve son
+       inminentes
+      cuando la superficie que se va a pintar está húmeda con condensación o
+       cuando puede producirse condensación durante el periodo de secado inicial de
+       la pintura.
+
+Las temperaturas del acero bajan durante la noche y suben durante el día, pero hay
+siempre un movimiento retardado de la temperatura del acero con respecto a las
+condiciones atmosféricas, con lo cual es posible que ocurra condensación sobre la
+superficie del acero. La condensación ocurrirá si la temperatura del acero está por
+debajo del punto de rocío de la atmósfera.
+
+Las condiciones ambientales para aplicación de la pintura serán las siguientes:
+
+    Temperatura ambiente:                    superior a 5° C.
+    Temperatura de la superficie a pintar:   superior a 5° C, y 3° C por encima del
+                                              punto de rocío.
+      Humedad relativa ambiente:             < 85 %.
+
+Se deberá evitar que el viento arrastre polvo o partículas, para lo cual se deberán
+realizar las protecciones correspondientes.
+
+Cuando la especificación particular emitida por el fabricante de la pintura a emplear
+tenga límites distintos que los aquí especificados, se respetarán los más rigurosos.
+                                                            CÓDIGO     SCE-PC-511-0003
+                        ESPECIFICACIÓN                      REVISIÓN          6
+                           TÉCNICA                           HOJA           9 de 23
+
+
+5.5   Aplicación
+
+5.5.1 PREVIO A LA APLICACIÓN
+Los materiales para el revestimiento deberán ser suministrados en una condición tal
+que permitan su uso inmediato por el método de aplicación especificado. Todos estos
+detalles deberán figurar en las especificaciones técnicas del fabricante del material.
+
+En los contenedores deberán indicarse la fecha de caducidad de las pinturas a
+utilizar.
+
+Las pinturas y solventes a utilizar deberán guardarse en lugares seguros.
+
+Contenedores parcialmente utilizados deberán estar visiblemente rotulados y sólo se
+podrá utilizar el material remanente si está indicado claramente por el fabricante en
+sus especificaciones técnicas.
+
+5.5.2 MÉTODO DE APLICACIÓN
+La forma de aplicación de las pinturas del esquema indicado será soplete (“airless” o
+convencional).
+
+Se deberá dar preferencia al soplete “airless”, ya que se consiguen mayores
+espesores por mano.
+
+Sólo se aceptará la aplicación con pincel para retoques y reparaciones en zonas
+donde se realizaron ensayos de adherencia.
+
+Bajo ningún concepto está aceptada la aplicación de revestimientos con la
+mano, enguantada o sin guante.
+
+5.5.3 RECOMENDACIONES GENERALES
+En todos los casos se deberán respetar las instrucciones de preparación y aplicación
+dadas por el fabricante de la pintura: proporciones de los componentes a mezclar,
+vida útil de la mezcla, tiempos de secado, etc.
+
+Se deberá tener especial cuidado en no pintar juntas, tubos y arandelas de bridas
+aislantes.
+
+También se tendrán en cuenta las recomendaciones del fabricante en cuanto al
+tratamiento de los desechos tales como pinceles, recipientes, etc.
+
+Si la aplicación mediante pistola convencional no se controla correctamente, se
+pueden producir grandes pérdidas de pintura por sobrepulverización y rebote en la
+superficie, además de otros problemas como escaso flujo, chorreado y picaduras.
+                                                             CÓDIGO     SCE-PC-511-0003
+                        ESPECIFICACIÓN                       REVISIÓN          6
+                           TÉCNICA                             HOJA         10 de 23
+
+
+
+
+Para mayor información, referirse a la norma ISO 12944-7.
+
+5.5.4 ÁREAS DE REFERENCIA
+Se establecerán áreas de referencia para determinar el rendimiento o desempeño de
+las pinturas aplicadas y/o del trabajo realizado.
+
+En los planos mecánicos se indicarán donde se ubicarán las áreas de referencia, para
+que las apruebe la Distribuidora.
+
+Estás áreas de referencia serán cuadrados de 20 cm de lado, que, al finalizar los
+trabajos de pintura, deberán quedar señalados con pintura negra (ver Anexo II).
+
+Para los skids (de regulación, de medición, etc.) deberá haber un área de referencia
+para el bastidor y otra área de referencia para el equipo.
+
+En las cañerías aéreas que conectan los diferentes equipos de una planta deberá
+haber un área de referencia (del tamaño indicado anteriormente, ver Anexo II).
+
+La preparación de la superficie y la aplicación de la pintura en las áreas de referencia
+deberán ser ejecutadas en presencia de la inspección designada por la Distribuidora.
+Todas las áreas de referencia deberán estar precisamente documentadas (ver
+Anexo III).
+
+5.5.5 ENSAYOS
+Se realizarán los ensayos indicados en la especificación técnica SCE-PC-506-0001.
+
+
+5.6 Colores de identificación de las instalaciones
+Todas las instalaciones se pintarán con los colores indicados en las tablas 1 y 2 que
+se incluyen en el Anexo I de la presente especificación técnica.
+
+Como generalidad, se indican los colores de las cañerías según el fluido que
+transportan, Tabla 1.
+
+Como casos particulares, se indican los colores de cada elemento componente de las
+instalaciones, Tabla 2.
+
+Los códigos de los colores corresponden a la Norma IRAM-DEF D 1054. Para los
+colores de seguridad y las formas y colores de las señales de seguridad se seguirán
+los lineamientos de la Norma IRAM 10005.
+                                                             CÓDIGO     SCE-PC-511-0003
+                        ESPECIFICACIÓN                       REVISIÓN          6
+                           TÉCNICA                             HOJA         11 de 23
+
+
+5.7 Identificación de equipos
+En caso de ser necesaria la identificación de equipos, la misma se deberá ubicar en
+un lugar bien visible. El número de identificación que corresponda será el definido en
+el proyecto de detalle.
+
+La identificación irá pintada de color negro. La altura de las letras y cifras oscilará
+entre 100 y 200 mm, guardando relación con las dimensiones del equipo, y
+respetando los formatos especificados en el plano tipo SCE-PR-103-1001
+(Normalización de Letras).
+
+
+5.8 Motocompresores, motogeneradores y turbinas
+Para los casos particulares de motocompresores, motogeneradores y turbinas, el
+fabricante podrá proponer un esquema de pintura diferente a los especificados en
+este documento, que deberá ser aprobado por la Distribuidora previo a su utilización.
+
+
+5.9 Transición de cañería aérea a cañería enterrada
+Cuando una cañería pase de ser aérea a estar enterrada, el Esquema utilizado para
+la cañería aérea (según Art. 5.3 de la presente Especificación Técnica) continuará
+hasta 50 cm por debajo del nivel del terreno en donde la cañería pasa a enterrarse
+llegando hasta el revestimiento integral de la cañería enterrada.
+
+En la transición entre el revestimiento de la cañería enterrada y el tramo que se
+entierra que tiene el Esquema de instalación aérea deberá instalarse una manta
+termocontraíble tricapa, de las mismas características que las indicada en el Art. 6.2.1
+de la presente Especificación Técnica. Ver croquis a continuación.
+
+
+
+
+                                                Esquema de pintura
+                                                para estructura aérea
+            Nivel de
+            terreno
+
+
+                                                50 cm
+
+
+
+                                                   Manta termocontraíble
+
+
+                                                Revestimiento integral de
+                                                la cañería enterrada
+                                                             CÓDIGO      SCE-PC-511-0003
+                        ESPECIFICACIÓN                       REVISIÓN           6
+                           TÉCNICA                            HOJA           12 de 23
+
+
+
+
+5.10 Inspección de los revestimientos
+La inspección de los revestimientos aplicados en estructuras aéreas, se realizará
+siguiendo los lineamientos establecidos en la Especificación Técnica
+SCE-PC-506-0001.
+
+6       PROTECCIÓN    ANTICORROSIVA          DE    CAÑERÍAS          Y   ACCESORIOS
+        ENTERRADOS
+
+
+6.1 Revestimiento integral de la cañería
+Se adoptará el sistema de revestimiento denominado “Polietileno Extruido Tricapa”,
+correspondiente al grupo G.4) Subgrupo G.4.2) “Polietileno extruido de alta densidad
+y adhesivos duros “de la Norma NAG-108.
+
+Este esquema compuesto por:
+
+    a) Una película de resina epoxi en polvo de 120 µm de espesor mínimo, aplicado
+       por medios electroestáticos.
+    b) Una película de copolímero o termopolímero destinado a asegurar la
+       adherencia entre la primera y tercera capa, con un espesor mínimo de 200 µm,
+       aplicada por extrusión.
+    c) Una capa de polietileno de alta densidad
+
+Deberá cumplir obligatoriamente con lo establecido en los siguientes ítems:
+
+     Propiedades físicas de la resina epoxi: subgrupo G4.2.1
+     Propiedades físicas del adhesivo: subgrupo G4.2.2
+     Propiedades físicas del polietileno de alta densidad: subgrupo G4.2.3
+     Propiedades físicas del sistema aplicado con PE de alta densidad: subgrupo
+      G4.2.4
+
+6.1.1 ESPESOR DEL REVESTIMIENTO
+En la tabla siguiente se fijan los espesores mínimos del sistema aplicado:
+
+           Diámetro de la cañería (mm)       Espesor mínimo (mm)
+                     Ø ≤ 114,3                         1,4
+                  114,3≤ Ø ≤273                        1,6
+                   273≤ Ø ≤508                         1,8
+                   508≤ Ø ≤762                         2,0
+                      Ø>762                            2,5
+                                                             CÓDIGO      SCE-PC-511-0003
+                        ESPECIFICACIÓN                       REVISIÓN           6
+                           TÉCNICA                            HOJA          13 de 23
+
+
+El espesor de las capas intermedias será como mínimo:
+
+   Primer epoxi          entre 120 y 150 μm
+   Adhesivo              entre 200 y 300 μm
+   Polietileno: el necesario hasta obtener el espesor total indicado.
+
+
+6.2 Revestimiento de uniones soldadas
+Se podrá aplicar alguno de los esquemas detallados a continuación, teniendo en
+cuenta lo especificado en el punto d) de la sección 461 de la Norma NAG-100 y que
+dice: “Para toda reparación o unión de tramos soldados, se utilizará un revestimiento
+de idénticas características o superiores al empleado en el conducto principal”.
+
+6.2.1 REVESTIMIENTOS TERMOCONTRAÍBLES
+Estará compuesto por una lámina externa termocontraíble compuesta por un film de
+polietileno reticulado por proceso de radiación electrónica y una capa interna de
+adhesivo duro tipo "hot melt" en una de sus caras (no se aceptarán sistemas con
+primer incorporado).
+
+La preparación de la superficie deberá cumplir con 5.2.
+
+Previo a la instalación, se deberá imprimar la cañería con resina epoxídica compatible
+con el revestimiento termocontraíble.
+
+Este esquema corresponde al grupo H, subgrupo H1, de la Norma NAG-108. El
+subgrupo H1 presenta los siguientes ítems de cumplimiento obligatorio:
+
+     Propiedades físicas del material base: subgrupo H1.1
+     Propiedades físicas del adhesivo: subgrupo H1.2
+     Propiedades físicas de la imprimación: subgrupo H1.3
+     Propiedades físicas del sistema aplicado: subgrupo H1.4
+     Guía de aplicación: subgrupo H5
+     Guía para la inspección: subgrupo H6
+
+La aplicación de las mantas deberá realizarse según lo indicado en el procedimiento
+SCE-PC-306-0001.
+
+6.2.2 POLIURETANO
+El revestimiento será de resinas poliuretánicas de 100% de contenido de sólidos (sin
+solventes) y autoimprimante, hasta lograr un espesor uniforme mínimo de 1.200
+micrones.
+                                                               CÓDIGO     SCE-PC-511-0003
+                         ESPECIFICACIÓN                       REVISIÓN           6
+                            TÉCNICA                             HOJA         14 de 23
+
+
+Este esquema corresponde al grupo E, subgrupo E3 de la Norma NAG-108. El
+subgrupo E3 se subdivide en los siguientes ítems de cumplimiento obligatorio:
+
+   Propiedades físicas de las resinas poliuretánicas: subgrupo E3.2.1
+   Propiedades físicas del sistema aplicado: subgrupo E3.2.2
+   Guía de aplicación: subgrupo E3.3
+   Guía para la inspección: subgrupo E3.4
+
+
+La preparación de la superficie se realizará de acuerdo a lo indicado en el art. 5.2.
+
+Se deberá precalentar la zona donde se solapa el poliuretano con el revestimiento
+integral tricapa de la cañería, cuidando de no quemarlo. El polietileno del
+revestimiento tricapa deberá quedar brillante, como indicación que se puede aplicar el
+poliuretano.
+
+Dentro de los cinco minutos posteriores a que se haya evaporado totalmente el
+limpiador y antes que se enfríe el polietileno, puede aplicarse el poliuretano por
+soplete con una pistola tipo airless para pinturas de dos componentes, para secado
+rápido. En general, el revestimiento estará seco al tacto a los 15 segundos de haberse
+aplicado.
+
+En caso de requerirse más de una mano para alcanzar el espesor solicitado, deben
+respetarse las especificaciones del fabricante para el tiempo máximo que debe
+transcurrir para una segunda mano.
+
+En suelo seco, la cañería puede taparse tres horas después de aplicarse el
+poliuretano. En suelos húmedos (con presencia de agua), se puede realizar la tapada
+ocho horas después de realizarse la aplicación del revestimiento. Deberá tenerse el
+cuidado que durante este tiempo el revestimiento no esté en contacto con el suelo
+húmedo. Si el caño va a quedar sumergido totalmente en agua, deberán pasar 24
+horas antes de sumergirlo, cuidando que el revestimiento no entre en contacto con el
+agua.
+
+
+6.3 Revestimiento de válvulas y accesorios multiformes
+Se podrá aplicar alguno de los esquemas detallados a continuación. Como parte del
+proyecto constructivo, se deberán informar las marcas y productos a utilizar, que
+deberán ser aprobados por la Distribuidora previo a su utilización.
+
+En ambos esquemas, la forma de aplicación será por soplete (convencional o
+“airless”).
+
+Bajo ningún concepto se acepta la aplicación de revestimientos con la mano,
+enguantada o sin guante.
+                                                             CÓDIGO    SCE-PC-511-0003
+                          ESPECIFICACIÓN                    REVISIÓN          6
+                             TÉCNICA                          HOJA        15 de 23
+
+
+Está terminantemente prohibido la utilización de mantas o porciones de las
+mismas para realizar el revestimiento de curvas, tees y demás accesorios
+multiformes. La utilización de cintas termocontraíbles para revestir accesorios
+multiformes sólo podrá realizarse con la aprobación de la Gerencia Técnica de
+la Distribuidora.
+
+6.3.1 POLIURETANO
+El revestimiento será de resinas poliuretánicas de alto contenido de sólidos y
+autoimprimante, hasta lograr un espesor uniforme mínimo de 1.200 micrones. La
+preparación de la superficie deberá cumplir con 5.2.
+
+Este esquema corresponde al grupo E, subgrupo E3 de la Norma NAG-108. El
+subgrupo E3 se subdivide en los siguientes ítems de cumplimiento obligatorio:
+
+   Propiedades físicas de las resinas poliuretánicas: subgrupo E3.2.1
+   Propiedades físicas del sistema aplicado: subgrupo E3.2.2
+   Guía de aplicación: subgrupo E3.3
+   Guía para la inspección: subgrupo E3.4
+
+
+Para la aplicación, ver art. 6.2.2.
+
+6.3.2 EPOXI
+Como alternativa al poliuretano para las válvulas y accesorios multiformes enterrados,
+se podrá utilizar un revestimiento epoxi de alto contenido de sólidos, autoimprimante.
+El mismo tendrá un espesor mínimo y uniforme de 500 micrones.
+
+Este esquema corresponde al grupo E, subgrupo E2 tipo A o tipo B, de la Norma
+NAG-108. El subgrupo E2 se subdivide en los siguientes ítems de cumplimiento
+obligatorio:
+
+Tipo A
+
+   Propiedades físicas de las resinas epoxi: subgrupo E.2.1.1
+   Propiedades físicas del sistema aplicado: subgrupo E.2.1.2
+   Guía de aplicación: subgrupo E.2.2
+   Guía para la inspección: subgrupo E.2. 3
+
+
+Tipo B
+
+   Descripción. Aplicaciones y requisitos: subgrupo E.2.1
+   Propiedades físicas del sistema aplicado: subgrupo E.2
+   Guía de aplicación: subgrupo E.2.3
+                                                              CÓDIGO      SCE-PC-511-0003
+                        ESPECIFICACIÓN                       REVISIÓN            6
+                           TÉCNICA                             HOJA          16 de 23
+
+
+     Guía para la inspección: subgrupo E.2. 4
+
+La preparación de la superficie deberá cumplir con el art. 5.2. La aplicación del epoxi
+se realizará como se indica en el art. 5.5.
+
+
+6.4 Revestimiento de caños camisa
+El revestimiento de los caños camisa será el mismo que el del caño conductor (ver
+6.1). Si se debieran realizar soldaduras entre caños para alcanzar el largo requerido
+del cruce, las mismas deberán ser revestidas como se indica en el punto 6.2.
+
+El caño camisa deberá estar revestido completamente, incluyendo los extremos.
+
+Los venteos serán revestidos según el art. 5 para la parte aérea de los mismos y
+según el art. 6.3 para la parte enterrada, teniendo en cuenta el Art. 5.9 para la
+transición entre aéreo y enterrado.
+
+NOTA: El cierre entre el caño camisa y el gasoducto se realizará con un sello
+      hermético tipo “Link-Seal”® y se completará con un sello exterior tipo “PSI”®.
+
+
+6.5 Protección anticorrosiva de soldaduras cuproaluminotérmicas
+Para proteger las soldaduras cuproaluminotérmicas su utilizará algunos de los
+siguientes esquemas, de acuerdo con el revestimiento integral de la cañería existente:
+
+       Revestimiento de cañerías                 Material de reparación
+                                   Cintas plásticas (Grupo B), doble
+      Asfáltico (Grupo A) y Cintas
+                                   cobertura, espesor mínimo 1,65 mm, más
+      plásticas (Grupo B)
+                                   primer y relleno compatible
+
+      FBE (Grupo E) y polietileno
+      extruido bicapa o tricapa Parches Polycupro o Handy Cap IP
+      (Grupo G)
+
+
+6.6   Revestimiento de válvulas en cámaras
+
+6.6.1 ESQUEMA PARA ESTRUCTURAS AÉREAS
+El revestimiento será un esquema de un fondo epoxi y una capa final de poliuretano,
+según el Esquema A de las estructuras aéreas. Para las características y forma de
+aplicación, ver Art. 5 de la presente Especificación Técnica.
+
+6.6.2 POLIURETANO
+El revestimiento será de resinas poliuretánicas de alto contenido de sólidos y
+autoimprimante, hasta lograr un espesor uniforme mínimo de 1.200 micrones.
+                                                               CÓDIGO     SCE-PC-511-0003
+                         ESPECIFICACIÓN                       REVISIÓN           6
+                            TÉCNICA                             HOJA         17 de 23
+
+
+
+
+Este esquema corresponde al grupo E, subgrupo E3 de la Norma NAG-108. El
+subgrupo E3 se subdivide en los siguientes ítems de cumplimiento obligatorio:
+
+   Propiedades físicas de las resinas poliuretánicas: subgrupo E3.2.1
+   Propiedades físicas del sistema aplicado: subgrupo E3.2.2
+   Guía de aplicación: subgrupo E3.3
+   Guía para la inspección: subgrupo E3.4
+
+
+La preparación de la superficie deberá cumplir con el Art. 5.2. Para la aplicación, ver
+art. 6.2.2.
+
+6.6.3 CERAS MICROCRISTALINAS DE PETRÓLEO
+Este revestimiento sólo se podrá utilizar con la aprobación de la Gerencia Técnica.
+Las propiedades de las cintas microcristalinas de petróleo están especificadas en la
+norma NAG-108 Grupo I. La superficie por recubrir estará libre de grasas, aceites,
+barnices o cualquier otro material extraño. Se eliminarán mediante solventes u otros
+productos adecuados que aseguren la remoción de contaminantes, según lo
+recomendado por el fabricante. Se realizará una limpieza mecánica manual por medio
+de un cepillo de cerdas de alambre, eliminando toda la herrumbre suelta,
+revestimiento suelto, capa de óxido, suciedad y otras materias extrañas. El grado de
+limpieza deberá responder a SSPC SP 3. Si la superficie estuviese mojada, se deberá
+esperar a que seque o se secará con un trapo.
+
+Se aplicará una delgada capa de cera imprimadora (que deberá ser compatible con la
+cera a aplicar posteriormente.) A continuación, se aplica la cinta saturada en cera, en
+forma manual y en espiral. El solapado mínimo será de 2,5 mm. Se moldeará la cinta
+presionando para que se conforme a la superficie en la que se aplica, de tal modo que
+adhiera totalmente y evitar la formación de cámaras de aire.
+
+A continuación, se aplicará el refuerzo de protección mecánica (opcional) en forma
+similar a la cinta.
+
+6.6.4 TRANSICIÓN CON EL REVESTIMIENTO INTEGRAL DE LA CAÑERÍA
+Para las pinturas (Art. 6.6.1 y 6.6.2), la transición entre el revestimiento integral y la
+pintura se efectuará fuera de la cámara, por medio de una manta termocontraíble (ver
+Art. 6.2.1).
+
+Para las ceras microcristalinas, la transición se efectuará dentro de la cámara. Las
+ceras se superpondrán 30 cm con el revestimiento integral de la cañería.
+                                                                CÓDIGO    SCE-PC-511-0003
+                            ESPECIFICACIÓN                     REVISIÓN          6
+                               TÉCNICA                           HOJA        18 de 23
+
+
+6.7       Reparación de revestimientos y recoating de cañerías existentes
+
+6.7.1 REPARACIÓN DE REVESTIMIENTOS
+Para la reparación de polietileno extruido tricapa (Subgrupo G4) se podrá utilizar
+alguno de los siguientes esquemas:
+
+          Parche de reparación de revestimiento: para los siguientes tamaños de daño,
+           según el diámetro de la cañería:
+
+                 Ø ≤ 10”            100 x 100 mm
+                 10” ≤ Ø            150 x 150 mm
+
+           La terminación será con dos vueltas de cinta plástica alrededor del caño en la
+           zona de la reparación.
+
+          Manta termocontraíble: para daños de mayor tamaño a los indicados en el
+           punto anterior.
+
+Para la reparación de revestimientos existentes que no sea del Subgrupo G4, se
+aplicará alguno de los siguientes esquemas, de acuerdo con el revestimiento integral
+de la cañería existente:
+
+             Revestimiento de
+                                                Material de reparación
+           cañerías en operación
+                                     Cintas plásticas (Grupo B), doble cobertura,
+          Asfáltico (Grupo A)        espesor mínimo 1,65 mm, más primer
+                                     Ceras microcristalinas (Grupo I)
+                                     Cintas plásticas (Grupo B), doble cobertura,
+          Cintas plásticas (Grupo    espesor mínimo 1,65 mm, más primer
+          B)
+                                     Mantas termocontraíbles bicapa (Grupo H)
+                                     Pintura Epoxi, alto contenido de sólidos,
+          FBE (Grupo E)              autoimprimante
+                                     Mantas termocontraíbles tricapa (Grupo H)
+          Polietileno extruido
+          bicapa (Subgrupos G1,      Mantas termocontraíbles bicapa (Grupo H)
+          G2 y G3)
+
+Para los revestimientos de cañerías en operación que no estén incluidos la tabla
+anterior, se deberá consultar con la Distribuidora el material a utilizar para las
+reparaciones.
+                                                              CÓDIGO     SCE-PC-511-0003
+                        ESPECIFICACIÓN                        REVISIÓN          6
+                           TÉCNICA                             HOJA          19 de 23
+
+
+6.7.2 RECOATING DE CAÑERÍAS EXISTENTES
+En el caso de reparaciones de gran extensión, y a criterio de la Distribuidora, deberá
+retirarse el revestimiento existente y proceder al recoating de la instalación en
+cuestión.
+
+Para la elección del revestimiento del recoating se utilizará la tabla del art. 6.7.1.,
+según el tipo de revestimiento integral original que posea la instalación a recubrir.
+
+La preparación de la superficie para el recoating deberá cumplir con el Art. 5.2.
+
+Para el caso de las mantas termocontraíbles, podrán reemplazarse por cintas
+termocontraíbles (Grupo H.2 y H.3 de la norma NAG-108 2009).
+
+6.7.3 APLICACIÓN DE CINTAS PLÁSTICAS (GRUPO B)
+Se utilizarán cintas de aplicación en frío (Grupo B de la norma NAG-108 2009), con o
+sin primer incorporado, compuestas por una lámina de polipropileno tramado y
+adhesivo.
+
+En el caso que el primer no esté incorporado a cinta, previo a la instalación de la cinta
+se deberá aplicar el primer, que deberá ser de la misma marca que la cinta.
+
+La aplicación de la cinta se efectuará con máquina, será helicoidal y doble cobertura
+(solape del 50%).
+
+En todos los casos deberán observarse las recomendaciones de aplicación del
+fabricante.
+
+
+6.8 Calidad de los materiales
+Los materiales especificados en los puntos 6.1 a 6.7 deberán cumplir con todas las
+características requeridas en las Normas NAG-108 2009 y NAG-100. Se podrá
+requerir la presentación de los documentos de homologación correspondientes
+emitidos por alguno de los laboratorios que para tal fin fueron autorizados por el
+Organismo Regulador (ENARGAS).
+
+La homologación o en su defecto la presentación de los protocolos de ensayo es un
+requisito indispensable para la aceptación de los materiales nuevos.
+
+Nota: Cada prueba se debe efectuar en un todo de acuerdo al método de ensayo
+establecido en la Norma NAG-108, o aquel que el ENARGAS defina en particular.
+                                                                  CÓDIGO      SCE-PC-511-0003
+                              ESPECIFICACIÓN                      REVISIÓN            6
+                                 TÉCNICA                           HOJA            20 de 23
+
+
+6.9    Inspección de los revestimientos
+
+La inspección de los revestimientos aplicados se realizará siguiendo los lineamientos
+establecidos en la Especificación Técnica SCE-PC-506-0001.
+
+7     REGISTRO Y ARCHIVO
+
+Los resultados de los ensayos realizados junto con los certificados de calidad de los
+revestimientos aplicados se guardarán junto con el resto de la información de la
+cañería en la U.N. o C.O., según corresponda, por todo el tiempo de la vida útil de la
+cañería
+
+8     ANEXOS
+
+
+8.1    Anexo I: Colores de identificación de instalaciones
+
+                               TABLA 1
+    COLOR DE LAS CAÑERÍAS EN FUNCIÓN DEL PRODUCTO TRANSPORTADO
+
+
+            PRODUCTO TRANSPORTADO                         COLOR DE LAS CAÑERÍAS
+                        Gas natural                            Amarillo (05-1-020)
+                       Gas licuado                             Amarillo (05-1-020)
+                         Propano                                Amarillo (05-1-020)
+                                                          con franjas celeste (08-1-040)
+      Gasoil, diesel-oil, fuel-oil, aceites lubricantes        Castaño (07-1-120)
+          Anticongelantes (metanol glicol, etc.)                Crema (04-1-110)
+                         Agua fría                              Verde (01-1-120)
+                      Agua caliente                              Verde (01-1-120)
+                                                          con franjas naranja (02-1-040)
+                   Agua para incendio                            Rojo (03-1-080)
+                      Vapor de agua                            Naranja (02-1-040)
+                     Aire comprimido                             Azul (08-1-070)
+                        Electricidad                            Negro (11-1-070)
+                      Venteo de gas                             Amarillo (05-1-020)
+                                                          con franjas naranja (02-1-040)
+                      Venteo de aire                             Azul (08-1-070)
+                                                          con franjas naranja (02-1-040)
+                                                                  CÓDIGO      SCE-PC-511-0003
+                          ESPECIFICACIÓN                         REVISIÓN             6
+                             TÉCNICA                               HOJA            21 de 23
+
+
+                                TABLA 2
+              COLOR DE LOS ELEMENTOS DE LAS INSTALACIONES
+
+
+                    ELEMENTO                                         COLOR
+           Cañerías, válvulas de bloqueo                       Amarillo (05-1-020)
+     Tanques de almacenamiento GLP o GNP                        Blanco (11-1-010)
+      Válvulas reguladoras, pilotos, reguladores               Amarillo (05-1-020)
+ auxiliares, cuerpo y actuador de válvulas de control
+     Válvulas de seguridad por alivio y/o venteo               Naranja (02-1-040)
+              Caños de venteo de gas                          Amarillo (05-1-020)
+                                                         Con franjas naranja (02-1-040)
+             Controladores neumáticos                            Azul (08-1-070)
+   Bridas aislantes y Juntas Aislante Monolíticas                Rojo (03-1-050)
+ Elementos contra incendio, cabinas metálicas para               Rojo (03-1-050)
+                    matafuegos
+  Odorizadores, separadores de polvo, tanques de                Blanco (11-1-010)
+   choque, separadores de líquido, filtros (incluye
+                    soportes)
+    Palancas y volantes de válvulas de bloqueo                  Negro (11-1-070)
+  Soportes metálicos, bases metálicas, escaleras,               Verde (01-1-160)
+          skids, estructuras de edificios
+     Tapas de cámaras, puertas de estaciones                     Gris (09-1-020)
+             reguladoras de presión
+     Calentadores indirectos, calderas, hornos,                Aluminio (11-1-050)
+                    chimeneas
+    Flechas indicadoras de circulación de fluido                Negro (11-1-070)
+                       Niveles                                  Negro (11-1-070)
+               Caños de electricidad                            Negro (11-1-070)
+        Paredes internas de cámaras, losas                      Blanco (11-1-010)
+                    Compresores                         Del color correspondiente al fluido
+                                                                   que trabajan
+ Bases de H° A°, columnas o torres de iluminación,              Blanco (11-1-010)
+                     mástiles
+          Motores y generadores eléctricos                       Azul (08-1-070)
+      Tableros eléctricos, paneles, artefactos e                 Azul (08-1-070)
+              instrumentos eléctricos
+
+
+Nota: En cañerías de gran diámetro puede reemplazarse el pintado total por el pintado
+de franjas del color establecido en la tabla para el producto circulante, pintado las
+cañerías de color blanco (11-1-010) o aluminio (11-1-050.)
+                                                              CÓDIGO     SCE-PC-511-0003
+                        ESPECIFICACIÓN                       REVISIÓN           6
+                           TÉCNICA                             HOJA         22 de 23
+
+
+8.2   Anexo II: Marcación de áreas de referencia
+
+
+
+
+El color de la marcación del área de referencia será negro (11-1-070).
+
+
+8.3 Anexo III: Información mínima para el reporte de áreas de referencia
+La información mínima requerida para el reporte de las áreas de referencia es:
+
+1)  Obra y código de obra, número de contrato
+2)  Contratista principal y subcontratista (empresa que realizó el trabajo)
+3)  Fecha de realización del trabajo
+4)  Nombre y código del equipo/skid y/o planta en el que se instala
+5)  Superficie pintada
+6)  Ubicación del área de referencia
+7)  Grado de óxido de la estructura antes de la preparación de la superficie (según
+    norma ISO 8501-1)
+8) Preparación de la superficie (según ISO 8501-1)
+9) Otra información referida a la preparación de la superficie (incluye perfil de
+    anclaje, se adjuntarán las cintas de réplica utilizadas)
+10) Para cada capa (fondo, intermedia y terminación) se debe indicar:
+    a. Datos del producto aplicado (fabricante, marca comercial, nombre del
+        producto y número de lote). Se incluirá el certificado de calidad emitido por el
+        fabricante.
+    b. Color
+    c. Método de aplicación
+    d. Datos ambientales durante la aplicación (temperatura del aire, humedad
+        relativa, temperatura de rocío)
+    e. Temperatura del sustrato
+                                                             CÓDIGO       SCE-PC-511-0003
+                        ESPECIFICACIÓN                       REVISIÓN            6
+                           TÉCNICA                             HOJA          23 de 23
+
+
+    f. Diluyente (tipo y cantidad, en caso que se haya agregado)
+    g. Espesor de pintura (húmedo y seco, indicando el instrumento utilizado, se
+        incluirá el certificado de calibración del instrumento)
+    h. Pruebas de adherencia realizadas, se incluirán las actas correspondientes
+    i. Ubicación en donde se realizó el trabajo (en taller, indicar nombre o en
+        campo)
+11) Firma del contratista y del inspector
+
+Estos documentos formarán parte de la documentación conforme a obra del proyecto.
+
+
+8.4 Anexo IV: Características de la arena para arenado de superficies
+La procedencia de la arena será de la costa oriental del Río de la Plata (también
+denominada arena oriental), salvo la fracción más fina, la cual podrá obtenerse por
+molienda de esa arena o de arena de otra procedencia que cumpla con los requisitos
+mínimos que se indican a continuación.
+
+   Requisitos químicos          Mínimo (%)      Máximo (%)       Método de ensayo
+Anhídrido salicílico                82                                 IRAM 12514
+Residuo insoluble                   95                                 IRAM 1504
+Nódulos de arcilla                                  0,1           IRAM 1633 G-4/8
+Materia orgánica                              El color será      IRAM 1633 G-9/14
+                                               más claro que
+                                                 la solución
+                                               tipo Gardner
+Sulfatos, expresados como                          0,01         IRAM 1633 G-15/20
+anhidrido sulfúrico (SO3)
+Sales solubles                                     0,05         IRAM 1633 G-21/22
+Carbonatos, expresados                               2          IRAM 1633 G-23/32
+como anhídrido carbónico
+(CO2)
+
+La arena será transportada y acopiada en bolsones de polipropileno o similar que
+impidan su posterior contaminación.
+
+El operador deberá presentar los certificados de calidad de las partidas que se utilicen
+en los trabajos, quedando en poder de la Distribuidora o de la Inspección contratada
+por la misma la realización de muestras para verificar el cumplimiento de la arena con
+estos requisitos.
+

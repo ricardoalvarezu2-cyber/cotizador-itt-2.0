@@ -12,8 +12,8 @@ C = Path(__file__).resolve().parent
 auto = json.load(open(C / "cotizacion_auto.json", encoding="utf-8"))
 base = json.load(open(C / "cotizacion.json", encoding="utf-8"))
 items = {i["pos"]: i for i in auto["items"]}
-HOY = "2026-10-30"
-TC_OCT = 1541.43  # dólar oficial BNA venta, promedio de 10-2026 (conocimiento/costos/dolar_mensual.csv)
+HOY = "2026-10-30"  # fecha de las decisiones de precio (la referencia del ajuste va aparte)
+TC_OCT = 1543.23  # dólar oficial BNA venta, promedio de 10-2026 (conocimiento/costos/dolar_mensual.csv)
 RENARD = "fuentes_originales/renar_lista_2025-12.xlsx"
 TORMENE = "fuentes_originales/ofertas_texto/ALONZO RED/2 - ERP B° Pilara/5.Proveedores 3ros/OFERTA TA7785A-ITT-REG TA956-NATURGY.pdf.txt"
 CAM14 = ("fuentes_originales/ofertas_texto/CAMUZZI/14_#5067 - (CGP 6910  CGS 6911) - Estaciones de medición y regulación/"
@@ -147,6 +147,16 @@ F23 = fuente("lista", 90.7, "Renard (cód. 1174) · Tubo s/costura 168,3 x 10,97
              "caño A106 Gr B sch XS (el plano pide A-53 Gr B sch 80: A106 lo reemplaza, mismo espesor en 6\")", codigo="CAN-01512")
 items["23"]["fuentes"] = [F23]
 items["23b"]["fuentes"] = [dict(F23)]  # segunda auditoría 30-10-2026: la 23b tenía otra pieza (CAN-02603, sin material)
+# Precios Provemet del 29-10-2026 (revisión del 05-11-2026): mismo caño sin costura triple certificación; Renard queda de alternativa
+PROVEMET_C = "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288974_canos_2026-10-29.pdf"
+PV = {"22": (49.48, 1, "TUBO S/C ASTM A53/A106/API5L B 6'' SCH 40 Ø 168,3 X 7,11 mm x 12 / 13,7 mts BW", "CAN-01510"),
+      "23": (74.52, 10, "TUBO S/C ASTM A53/A106/API5L B 6'' SCH 80 Ø 168,3 X 10,97 mm x 12 / 13,7 mts BW", "CAN-01512"),
+      "24": (74.51, 2, "TUBO S/C ASTM A53/A106/API5L B 8'' SCH 40 Ø 219,1 X 8,18 mm x 12 / 13,7 mts BW", "CAN-01521")}
+for p_, (pr, it, txt, cc) in PV.items():
+    fp = fuente("cot", pr, f"Grupo Provemet cot. 288974 ítem {it} · {cc}", f"{PROVEMET_C} · ítem {it}", "2026-10-29", "similar",
+                f"{txt} (sin costura, triple certificación: cumple A53 Gr B, que pide el plano); Provemet cot. 288974 (29-10-2026), precio neto con bonificación 4% (vale comprando toda la cotización), validez 15 días", codigo=cc)
+    for q in (p_, p_ + "b"):
+        items[q]["fuentes"] = [dict(fp)] + items[q]["fuentes"]
 # Sensores A, B y C (incluidos: la planilla dice "Incluye la provisión de todos los equipos y materiales"); marcas del listado
 poner("A", [fuente("cot", 1478.0 + 80.0, "Induquip (Emerson) cot. 26-523-RSDGVM-RSMT ítem PIT-011: Rosemount 2051TG2A2B21AS1B4E7M5P1Q4Q8, USD 1.478 + "
                    "bloqueo y purga ABAC USD 80 (VAL-03162, planilla TAVAL/55, 22-04-2026)", LACH + "Oferta Induquip 26-333-RSDGVM-USM.pdf.txt", "2026-07-17",
@@ -242,7 +252,7 @@ visitas = math.ceil(placas / 45)
 rx_ars = visitas * 850000 + placas * 15000
 poner("RX", [fuente("cot", round(rx_ars / TC_OCT, 2),
                     f"Proveedor de RX (sin nombre), precio confirmado por Matías el 30-10-2026: {visitas} visitas × ARS 850.000 + {placas} placas × ARS 15.000, "
-                    f"sin IVA, a BNA venta promedio 10-2026 (1.541,43) · END-00572 / END-00571", "conocimiento/precios/precios_usuario.csv", HOY, "igual",
+                    f"sin IVA, a BNA venta promedio 10-2026 (1.543,23) · END-00572 / END-00571", "conocimiento/precios/precios_usuario.csv", HOY, "igual",
                     "placas contadas por junta (37 juntas a tope); confirmar con el mapa de soldaduras"),
              fuente("ant", 2803.5, "Servicio de radiografía DB NDT (2026-08; tarifas.csv): 135 placas + 4 servicios + 1 LP", "PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT)",
                     "2026-08-31", "similar", "tarifa anterior (incluía LP)")],
@@ -269,14 +279,16 @@ s06 = {"id": "S06", "pos": "PF", "grupo": "servicio", "descripcion": "Prueba de 
 lista += [s_lp, s_pro, s05, s06]
 for it in lista:  # pintura: sumar el skid (≈ 25 m de UPN 120 ≈ 10,7 m²), que precotizar no cuenta cuando el skid va por unidad
     if it["pos"] == "PIN":
-        it["cantidad"] = round(it["cantidad"] + 10.7, 3)
-        it["especificacion"] += " + skid ≈ 10,7 m² (25 m de UPN 120) · esquema SCE-PC-511-0003 a confirmar (consulta R33)"
+        it["cantidad"] = round((it["cantidad"] + 10.7) * 1.2, 3)
+        it["especificacion"] += " + skid ≈ 10,7 m² (25 m de UPN 120), × 1,2 de overspray como la planilla del precio · esquema SCE-PC-511-0003 a confirmar (consulta R33)"
+        it["fuentes"] = [fuente("ant", 37.98, "Pintor (sin nombre) · PIN-00579 (precio confirmado por Matías)", "conocimiento/precios/precios_usuario.csv", "2026-10-30", "similar", "Granallado y pintura de piping y skid, incluye materiales: USD 37,98/m² confirmado por Matías Russo el 30-10-2026 (precio firme, PIN-00579); la planilla de origen (YPF Lic 66944 colectores) lo aplica sobre los m² + 20 % de overspray, por eso la cantidad va × 1,2; esquema SCE-PC-511-0003 a confirmar", codigo="PIN-00579"),
+                         fuente("ant", 50.0, "criterio ITT · PIN-00569 (YPF/28)", "conocimiento/precios/catalogo_servicios.csv", "2026-10-10", "similar", "referencia anterior (hasta el 05-11-2026)", codigo="PIN-00569")]
 base["items"] = lista
 
 # ---------------------------------------------------------------- parámetros, plazo, textos del informe
 base["meta"] = ["Concurso de precios N° 24578 · ítem 2", "Plano SCE-RE-315-0048 rev A · Especificación SCE-RE-515-0032", "Comprador: Camuzzi (portal de compras)",
                 "Preparó: Matías Russo · 28-10-2026"]
-base["parametros"].update({"TRANS": 1, "TC": TC_OCT, "TR_ARS": 700000, "TR_EMB": 150, "TR_F": 1.0, "fecha_referencia": HOY})
+base["parametros"].update({"TRANS": 1, "TC": TC_OCT, "TR_ARS": 700000, "TR_EMB": 150, "TR_F": 1.0, "fecha_referencia": "2026-10-31"})  # último mes con índices (05-11-2026)
 base["fecha"] = "2026-10-28"
 base["plazo"] = {"dias": 175, "texto": "desde OC · entregado en Transporte Cruz del Sur (Tapiales)",
                  "tareas": [["Ingeniería y aprobación por Camuzzi de marca y modelo de las reguladoras (ET 5.6.1)", 0, 20, ""],

@@ -17,6 +17,9 @@ from pathlib import Path
 
 from openpyxl import load_workbook
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from numeros import leer_numero  # noqa: E402
+
 RAIZ = Path(__file__).resolve().parent.parent
 ORIGEN = RAIZ / "fuentes_originales" / "listas_vendedor"
 SALIDA = RAIZ / "conocimiento" / "precios" / "listas_vendedor.csv"
@@ -81,7 +84,73 @@ def provemet(ruta, base):
         yield {**base, "codigo": "", "descripcion": desc, "precio": round(neto, 2), "unidad": "metro" if unid == "Mt" else "un"}
 
 
+def _pdf(ruta):
+    return subprocess.run(["pdftotext", "-layout", str(ruta), "-"], capture_output=True, text=True, check=True).stdout
+
+
+def _control_importe(ruta, linea, cant, precio, importe, bonif=0.0):
+    """Cantidad × precio (menos la bonificación) tiene que dar el importe del renglón: si no, el número se leyó mal."""
+    if abs(cant * precio * (1 - bonif / 100) - importe) > 0.02:
+        sys.exit(f"{ruta.name}: cantidad × precio no da el importe ({cant} × {precio} ≠ {importe}) en: {linea.strip()}")
+
+
+# Abreviaturas de los proveedores → texto que entiende el catálogo (el original queda entre paréntesis)
+ABREV_MS = [(r"^ESP SWI\b", "JUNTA ESPIRALADA SW C/ANILLO INT."), (r"^ESP SW\b", "JUNTA ESPIRALADA SW"), (r"^KIT AISL\.?\s*([A-Z])\b", r"KIT AISLACION TIPO \1"),
+            (r"\bMIC\.", "MICARTA "), (r"\b316LFG\b", "AISI 316L + GRAFITO")]
+ABREV_OM = [(r"\bBWN\b", "WN"), (r"\bBCI\b", "CIEGA"), (r"\bBSW\b", "SW"), (r"^RED EXC\b", "REDUCCION EXCENTRICA"),
+            (r"^TEE RED\b", "TEE REDUCCION"), (r"^TEE TOT\b", "TEE"), (r"\bC/TCAS\b", "C/2 TUERCAS"), (r"\bGR B7\b", "ASTM A193 B7"),
+            (r"\bCWI\b", "C/ANILLO EXT. E INT."), (r"\bCW\b", "C/ANILLO EXT."), (r"\b316/316L\+FG\b", "AISI 316/316L + GRAFITO"), (r"\b316L\+FG\b", "AISI 316L + GRAFITO"),
+            (r"\b(SCH ?\d+) (3000|6000)\b", r"\1 #\2")]
+
+
+def _expandir(desc, reglas, serie_suelta=False):
+    t = desc
+    for a, b in reglas:
+        t = re.sub(a, b, t)
+    if serie_suelta:  # MS Juntas escribe la serie sin # al final: "Ø12" 300"
+        t = re.sub(r"(\")\s+(150|300|600|900|1500|2500)$", r"\1 #\2", t)
+    return t if t == desc else f"{t} ({desc})"
+
+
+def miyashiro(ruta, base):
+    """Cotización de Miyashiro / MS Juntas: Itm.- | cantidad | artículo | descripción | U$S | prec/unit | importe | entrega.
+    Precio unitario con coma y 3 decimales (9,310); se controla contra el importe."""
+    item = re.compile(r"^\s*(\d+)\.-\s+([\d.,]+)\s+(\S+)\s+(.+?)\s{2,}U\$S\s+([\d.,]+)\s+([\d.,]+)")
+    for linea in _pdf(ruta).splitlines():
+        m = item.match(linea)
+        if not m:
+            continue
+        cant, precio, importe = (leer_numero(m.group(k))[0] for k in (2, 5, 6))
+        _control_importe(ruta, linea, cant, precio, importe)
+        yield {**base, "codigo": m.group(3), "descripcion": _expandir(m.group(4).strip(), ABREV_MS, True),
+               "precio": round(precio, 2), "unidad": "un"}
+
+
+def oilmetal(ruta, base):
+    """Cotización de Oil Metal: It | código | descripción | entrega | cantidad U | USD precio | % bonif. | importe. Precio con
+    punto decimal; se toma el neto de la bonificación y se controla contra el importe. Un código repetido se carga una vez."""
+    item = re.compile(r"^\s*(\d+)\s+(\S+)\s+(.+?)\s{2,}\d\d/\d\d/\d{4}\s+([\d.]+)\s+U\s+USD\s+([\d.]+)\s+([\d.]+)\s+([\d.]+)\s*$")
+    vistos = set()
+    renglones = _pdf(ruta).splitlines()
+    for i, linea in enumerate(renglones):
+        m = item.match(linea)
+        if not m:
+            continue
+        cant, precio, bonif, importe = (float(m.group(k)) for k in (4, 5, 6, 7))
+        _control_importe(ruta, linea, cant, precio, importe, bonif)
+        if m.group(2) in vistos:
+            continue
+        vistos.add(m.group(2))
+        # el renglón de abajo trae la disponibilidad: "STOCK", "ENTREGA EN 90 DIAS", "** ALTERNATIVA EN STOCK, VER SCHEDULE **"
+        abajo = renglones[i + 1].strip().strip("* ") if i + 1 < len(renglones) else ""
+        nota = base.get("nota", "") + (f"; Oil Metal: {abajo.lower()}" if abajo and abajo != "STOCK" and not item.match(renglones[i + 1]) else "")
+        yield {**base, "codigo": m.group(2), "descripcion": _expandir(m.group(3).strip(), ABREV_OM),
+               "precio": round(precio * (1 - bonif / 100), 2), "unidad": "un", "nota": nota}
+
+
 FORMATOS = [(r"^renard_lista", renard, "Tubos Renard", "lista", "sin IVA (lista Renard en USD)"),
+            (r"^miyashiro_cotizacion", miyashiro, "Miyashiro (MS Juntas)", "cotización", "sin IVA (lo dice: el IVA 21% va aparte)"),
+            (r"^oilmetal_cotizacion", oilmetal, "Oil Metal", "cotización", "sin IVA (lo dice: «no incluyen impuestos»)"),
             (r"^cintolo_lista", cintolo, "Cintolo Hnos.", "lista", "no dice: se toma sin IVA"),
             (r"^provemet_cotizacion", provemet, "Grupo Provemet", "cotización", "sin IVA (lo dice: «los precios no incluyen IVA»)")]
 

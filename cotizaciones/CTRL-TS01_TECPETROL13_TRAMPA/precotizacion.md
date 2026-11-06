@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-TS01
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 32.530,51 por equipo · soldadura y servicios calculados USD 25.418,22 · 24 similares (1, 3, 7, 7b, 8, 8b, 13, 20, 22, 23, 24, 25, 29, 30, 31, 34, 36, 37, 38, 39, 45, 47, 49, 50) · 16 sin precio (2, 6, 18, 26, 27, 28, 32, 33, 35, 40, 41, 42, 43, 44, 46, 48).
+**Resumen:** materiales USD 33.027,68 por equipo · soldadura y servicios calculados USD 25.418,22 · 22 similares (1, 3, 7, 7b, 13, 20, 22, 23, 24, 25, 29, 30, 31, 34, 36, 37, 38, 39, 45, 47, 49, 50) · 16 sin precio (2, 6, 18, 26, 27, 28, 32, 33, 35, 40, 41, 42, 43, 44, 46, 48).
 
 
 ## 1. Materiales
@@ -15,24 +15,24 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 5 | Brida welding neck RF · Ø 1 1/2" | IGUAL | 163,20 / un | 2022-11-15 · compra | — |
 | 6 | Virola/caño sin costura barril menor largo 4, | **SIN PRECIO** | — | — | pedir cotización |
 | 7 | Virola/caño sin costura barril mayor largo 3, | SIMILAR | 750,00 / m | 2025-08-01 · planilla interna | espesor_mm: sin dato (pedido 15.88) |
-| 8 | Caño sin costura · Ø 12" | SIMILAR | 228,56 / m | 2025-12-26 · lista | diametro: 10" (pedido 12"); precio escalado por diámetro (12" ÷ 10")^1,5 = × 1,31 |
+| 8 | Caño sin costura · Ø 12" | IGUAL | 215,01 / m | 2026-11-05 · cotización | — |
 | 9 | Caño sin costura · Ø 4" | IGUAL | 60,37 / m | 2025-12-26 · lista | — |
 | 10 | Caño sin costura · Ø 2" | IGUAL | 24,67 / m | 2025-12-26 · lista | — |
 | 11 | Caño sin costura · Ø 2" | IGUAL | 12,10 / m | 2025-12-26 · lista | — |
 | 12 | Caño sin costura · Ø 1 1/2" | IGUAL | 19,30 / m | 2025-12-26 · lista | — |
-| 13 | Codo 90 radio corto · Ø 2" | SIMILAR (estimado cepo) ⚠ | 6,27 / un | 2025-02-17 · estimado (cepo) | schedule: sin dato (pedido 120) |
+| 13 | Codo 90 radio corto · Ø 2" | SIMILAR (estimado cepo) ⚠ | 5,59 / un | 2025-02-17 · estimado (cepo) | schedule: sin dato (pedido 120); material: sin dato (pedido A234 WPB) |
 | 14 | Codo 90 radio corto · Ø 2" | IGUAL ⚠ | 96,19 / un | 2025-12-26 · lista | — |
 | 15 | Codo 90 radio largo · Ø 6" | IGUAL | 129,10 / un | 2025-12-26 · lista | — |
 | 16 | Codo 90 radio corto · Ø 2" | IGUAL ⚠ | 96,19 / un | 2025-12-26 · lista | — |
 | 17 | Niple longitud 100 mm · Ø 1/2" | IGUAL | 8,00 / un | 2025-08-01 · planilla interna | — |
 | 18 | Reducción excéntrica · Ø 16" x 12" | **SIN PRECIO** | — | — | pedir cotización |
 | 19 | Tapa de cierre rápido (QOC) #900 · Ø 16" | IGUAL | 10.524,00 / un | 2026-08-10 · cotización | — |
-| 20 | Tee de reducción · Ø 4" x 2" | SIMILAR | 39,26 / un | 2025-12-23 · planilla interna | diametro: 3" (pedido 4"); precio escalado por diámetro (4" ÷ 3")^1,5 = × 1,54 |
+| 20 | Tee de reducción · Ø 4" x 2" | SIMILAR | 441,06 / un | 2025-08-01 · cotización | diametro2: sin dato (pedido 2") |
 | 21 | Tee normal · Ø 4" | IGUAL | 300,00 / un | 2025-08-01 · planilla interna | — |
 | 22 | Weldolet · Ø 1/2" x 20" | SIMILAR | 65,00 / un | 2025-08-01 · planilla interna | schedule: 160 (no pedido) · faltan: tipo, serie |
 | 23 | Espárrago con 2 tuercas zincado 7/8 x 145 mm  | SIMILAR | 3,17 / un | 2025-08-27 · cotización | unidad distinta: catálogo por juego, plano por un |
-| 24 | Espárrago con 2 tuercas zincado 1 1/8 x 170 m | SIMILAR | 10,00 / un | 2026-10-30 · cotización | serie: 600 (no pedido); medida: 1 1/8 x 8 1/4 (pedido 1 1/8 x 6 3/4) |
-| 25 | Espárrago con 2 tuercas zincado 1 3/8 x 255 m | SIMILAR | 27,00 / un | 2025-08-01 · planilla interna | material: sin dato (pedido A194 2H); medida: 1 3/8 x 9 1/4 (pedido 1 3/8 x 10) |
+| 24 | Espárrago con 2 tuercas zincado 1 1/8 x 170 m | SIMILAR | 7,06 / un | 2026-11-05 · cotización | medida: 1 1/8 x 7 3/4 (pedido 1 1/8 x 6 3/4); unidad distinta: catálogo por juego, plano por un |
+| 25 | Espárrago con 2 tuercas zincado 1 3/8 x 255 m | SIMILAR | 27,00 / un | 2025-08-01 · planilla interna | material: sin dato (pedido A193 B7); medida: 1 3/8 x 9 1/4 (pedido 1 3/8 x 10); unidad distinta: catálogo por  |
 | 26 | Junta RF hierro maleable · Ø 2" | **SIN PRECIO** | — | — | pedir cotización |
 | 27 | Junta RF hierro maleable · Ø 8" | **SIN PRECIO** | — | — | pedir cotización |
 | 28 | Junta RF hierro maleable · Ø 4" | **SIN PRECIO** | — | — | pedir cotización |
@@ -44,7 +44,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 34 | Abrazadera U-bolt pesada · Ø 16" | SIMILAR | 46,00 / un | 2025-08-01 · planilla interna | — · faltan: serie |
 | 35 | Abrazadera U-bolt pesada · Ø 12" | **SIN PRECIO** | — | — | el más parecido es de otro diámetro (2") (OTR-02900, USD 15,00): pedir cotización |
 | 36 | Abrazadera U-bolt pesada · Ø 4" | SIMILAR | 35,00 / un | 2025-12-23 · planilla interna | — · faltan: serie |
-| 37 | Espárrago con 2 tuercas zincado 1 x 140 mm ·  | SIMILAR | 8,00 / un | 2026-10-30 · cotización | serie: 1500 (no pedido); medida: 1 x 6 1/8 (pedido 1 x 5 1/2) |
+| 37 | Espárrago con 2 tuercas zincado 1 x 140 mm ·  | SIMILAR | 8,00 / un | 2026-10-30 · cotización | serie: 1500 (no pedido); medida: 1 x 6 1/8 (pedido 1 x 5 1/2); unidad distinta: catálogo por juego, plano por  |
 | 38 | Hierro ángulo 1 1/2 x 1 1/2 x 1/4 (skid) | SIMILAR (acero por kg) | USD 1,90/kg | 2026-02-10 cot | precio por kg de materia prima (hierro ángulo 3x1/4) +10% por recortes; no incluye corte, plegado ni rolado |
 | 39 | Perfil UPN 160 (skid) | SIMILAR (acero por kg) | USD 1,90/kg | 2026-02-10 cot | precio por kg de materia prima (hierro ángulo 3x1/4) +10% por recortes; no incluye corte, plegado ni rolado |
 | 40 | Malla metálica romboidal tipo Shulman 50 x 30 | **SIN PRECIO** | — | — | pedir cotización |
@@ -59,7 +59,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 49 | Detector de paso de scraper | SIMILAR | 1.650,00 / un | 2025-12-10 · planilla interna | diametro: 2" (no pedido); serie: 300 (no pedido) · faltan: diametro, serie |
 | 50 | Válvula de bloqueo y purga (para manómetro) · | SIMILAR | 80,00 / un | 2026-04-22 · planilla interna | — · faltan: serie, material |
 | 7b | Completar barra de 12 m (pos 7) | compra extra | USD 750,00/m × 8,8 m | | Se usan 3,2 m en 1 equipo(s) y se compran 12 m. Borrar si hay sobrante en stock |
-| 8b | Completar barra de 12 m (pos 8) | compra extra | USD 228,56/m × 6,1 m | | Se usan 5,9 m en 1 equipo(s) y se compran 12 m. Borrar si hay sobrante en stock |
+| 8b | Completar barra de 12 m (pos 8) | compra extra | USD 215,01/m × 6,1 m | | Se usan 5,9 m en 1 equipo(s) y se compran 12 m. Borrar si hay sobrante en stock |
 | 9b | Completar barra de 12 m (pos 9) | compra extra | USD 60,37/m × 3,5 m | | Se usan 8,5 m en 1 equipo(s) y se compran 12 m. Borrar si hay sobrante en stock |
 | 10b | Completar barra de 6 m (pos 10) | compra extra | USD 24,67/m × 3 m | | Se usan 3 m en 1 equipo(s) y se compran 6 m. Borrar si hay sobrante en stock |
 | 11b | Completar barra de 6 m (pos 11) | compra extra | USD 12,10/m × 4 m | | Se usan 2 m en 1 equipo(s) y se compran 6 m. Borrar si hay sobrante en stock |
@@ -100,7 +100,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 93 placas chicas + 7 grandes + 3,00 servicio(s) de RX + 1,00 de LP por equipo = USD 2.178,50 (Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))).
   Con las tarifas de Antonelli (11-2025) serían USD 3.495,00: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: trampa, 16", 1 u, materiales USD 32.531 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: trampa, 16", 1 u, materiales USD 33.028 por unidad)
 
 - Montaje propio: no se suma porque la fabricación la hace el tercero; la prueba hidráulica va aparte (fila PH).
 - **Ingeniería:** 503 h × USD 15/h = USD 7.545,00 · mediana de 503,0 h por unidad (repartidas en la serie) · antecedente: TECPETROL/10- Trampas 6x8 Trampas lanzadora - receptora LT2E · Trampa receptora 8x6 #300 (RS-123/125) (8 / 6 (barrel 24 x 20 en tabla soldadura), 2 u, 2025-12-10) · rango del mismo tipo 251,5–251,5 h

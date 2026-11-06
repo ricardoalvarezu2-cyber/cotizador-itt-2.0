@@ -1,0 +1,1213 @@
+                                                           CÓDIGO
+                       ESPECIFICACIÓN                      REVISIÓN            00
+                          TÉCNICA                            HOJA            1 de 30
+
+                                                           FECHA            FECHA
+                                                         APROBACION        VIGENCIA
+     PROCESO           OPERACIÓN DE LA RED
+                                                           27-12-2018      01-03-2019
+
+                       Requisitos técnicos generales         LIDER DEL PROCESO
+        TEMA            para prueba neumática en
+                          ramales y gasoductos            J. Paladino/Alejandro Sagula
+
+                                                               APROBADO POR:
+ANULA/REEMPLAZA
+                                                         J. C. Spini / Alejandro Lorenzo
+
+                              MODIFICACIONES
+   Nº de     FECHA
+                                         MOTIVO DE LA MODIFICACIÓN
+ REVISIÓN   REVISION
+
+
+
+
+AREAS INVOLUCRADAS:
+Unidades Negocios
+Gerencia Técnica
+Gerencia de Seguridad y Medio Ambiente
+
+
+
+OBSERVACIONES:
+Fecha de impresión:
+                                                                                                            CÓDIGO
+                                      ESPECIFICACIÓN                                                       REVISIÓN                       00
+                                         TÉCNICA                                                              HOJA                    2 de 31
+
+                                                                    INDICE
+1   OBJETO .............................................................................................................................................. 3
+2   CONDICIONES PARA APLICACIÓN DE LA PRESENTE ESPECIFICACION ................................. 3
+3   ALCANCE ........................................................................................................................................... 3
+4   AREAS INVOLUCRADAS .................................................................................................................. 4
+5   RESPONSABILIDADES ..................................................................................................................... 4
+6   DOCUMENTACION COMPLEMENTARIA Y/O DE REFERENCIA ................................................... 4
+7   DEFINICIONES .................................................................................................................................. 5
+8   CONTENIDO ...................................................................................................................................... 5
+         8.1 ASPECTOS GENERALES ............................................................................................... 5
+         8.2 MEDIO PRESURIZANTE ................................................................................................. 6
+         8.3 PROCEDIMIENTO ESPECÍFICO DE PRUEBA NEUMÁTICA (PEPN) ........................... 7
+         8.4 MEMORIA DESCRIPTIVA ................................................................................................ 8
+         8.5 ESPECIFICACIONES TÉCNICAS DE LA CAÑERÍA ....................................................... 8
+         8.6 EQUIPOS E INSTRUMENTAL ......................................................................................... 9
+         8.7 REQUISITOS DE EQUIPAMIENTO ................................................................................. 9
+         8.8 ESQUEMA DE CONEXIONADO .................................................................................... 13
+         8.9 SEGURIDAD Y MEDIO AMBIENTE ............................................................................... 13
+         8.10 DESARROLLO DE LA PRUEBA .................................................................................... 14
+         8.10.1 LIMPIEZA INTERNA DE LA CAÑERÍA ..................................................................... 14
+         8.10.2 CONDICIONES PARTICULARES ............................................................................. 14
+         8.10.3 DISTANCIAS DE SEGURIDAD ................................................................................. 15
+         8.10.3.1 TABLA I – DISTANCIAS DE SEGURIDAD ........................................................... 16
+         8.10.3.2 TABLA II ................................................................................................................. 17
+         8.10.4 PREPARACIÓN DE LA PRUEBA ............................................................................. 18
+         8.10.5 ENSAYO PRELIMINAR ............................................................................................. 19
+         8.10.6 IGUALACIÓN DE TEMPERATURA .......................................................................... 19
+         8.10.7 PRUEBA NEUMÁTICA DE RESISTENCIA............................................................... 20
+         8.10.8 PRUEBA NEUMÁTICA DE HERMETICIDAD Y ESTANQUEIDAD .......................... 20
+         8.10.9 DIAGRAMA DE PRUEBA NEUMÁTICA ................................................................... 21
+         8.10.10 EVALUACIÓN DE LA PRUEBA NEUMÁTICA .......................................................... 21
+         8.10.11 SECADO DE CAÑERÍA............................................................................................. 21
+         8.10.12 PLANILLAS Y ACTA:................................................................................................. 23
+9   ANEXOS ........................................................................................................................................... 24
+         9.1 ANEXO N° 1 - ESQUEMA DE CONEXIONADO DE EQUIPOS E INSTRUMENTOS ... 24
+         9.2 ANEXO Nº 2 ................................................................................................................... 25
+         9.2.1 PLANILLA N°: 1 ......................................................................................................... 25
+         9.2.2 PLANILLA Nº: 2 ......................................................................................................... 26
+         9.2.3 PLANILLA N°: 3 ......................................................................................................... 27
+         9.2.4 PLANILLA N°: 4 ......................................................................................................... 28
+         9.2.5 PLANILLA Nº: 5 ......................................................................................................... 29
+         9.2.6 PLANILLA Nº: 6 ......................................................................................................... 30
+         9.2.7 MODELO DE ACTA................................................................................................... 31
+                                                             CÓDIGO
+                         ESPECIFICACIÓN                      REVISIÓN             00
+                            TÉCNICA                           HOJA           3 de 31
+
+1     OBJETO
+
+Esta Especificación tiene por objeto establecer los requerimientos mínimos que se
+deberán cumplir, en el ámbito de esta Licenciataria, para la ejecución de pruebas de
+resistencia y hermeticidad en ramales y gasoductos, cuando se utilice como medio de
+ensayo aire o gas inerte, incluyendo las precauciones de seguridad que podrán ser
+complementadas, según los casos, por la Gerencia de Seguridad y Ambiente.
+
+Comprende las obras realizadas por la Distribuidora, ya sea por mano de obra propia o
+por empresas Contratistas.
+
+2     CONDICIONES PARA APLICACIÓN DE LA PRESENTE ESPECIFICACION
+
+2.1    Pruebas dentro de los parámetros de la Tabla I de la presente especificación, los
+       procedimientos de prueba serán autorizados por el Departamento de Ingeniería e
+       Integridad/Obras de la Gerencia técnica.
+
+2.2    Pruebas fuera de los parámetros expresados en la Tabla I donde se presenten las
+       siguientes causas de excepción:
+
+        a) Provisión de agua: cuando se haga imposible el abastecimiento del agua de
+           prueba debido a la ubicación del tramo a ensayar.
+        b) Descarga del efluente de la PH: cuando no se pueda cumplir con las
+           alternativas estipuladas en I SM-104.
+        c) Tramos cortos de cañerías, reemplazos de cañerías o configuraciones donde
+           el secado se torne dificultoso.
+        d) Situaciones que, por urgencias operativas, la realización de una prueba
+           neumática insuma menos tiempos que la prueba hidráulica.
+
+Nota importante:
+Para los casos del inciso -2.2, la realización del procedimiento de la prueba
+neumática será autorizada por el Gerente Técnico y el Gerente de Seguridad y
+Medio Ambiente.
+
+3     ALCANCE
+
+Esta Especificación Técnica será de aplicación para la construcción de gasoductos y
+ramales de la compañía.
+
+El ensayo neumático de resistencia y hermeticidad solo será aplicable a cañerías
+enterradas al momento de la prueba.
+
+Esta    especificación   provee   los   requerimientos   generales      mínimos    para   la
+                                                           CÓDIGO
+                      ESPECIFICACIÓN                       REVISIÓN             00
+                         TÉCNICA                            HOJA             4 de 31
+
+ejecución del ensayo y debe utilizarse conjuntamente con las normas y códigos
+establecidos en el punto 6.
+
+Queda fuera del alcance de esta Especificación             toda       instalación    interna
+residencial, comercial, industrial o de GNC.
+
+4   AREAS INVOLUCRADAS
+
+Todas las Áreas Técnicas de las Unidades de Negocios
+Gerencia Técnica de Sede Central
+Gerencia de Seguridad y Medio Ambiente
+
+5   Responsabilidades
+
+La Contratista (o la U.N. en caso de obras realizadas con M.O.P.) es la responsable
+de la elaboración del procedimiento completo de prueba neumática y de la
+aplicación de esta Especificación.
+
+La Contratista (o la UN) es la responsable de asegurar que se cumplan todos los
+requisitos de seguridad y demás exigencias establecidas en la presente
+Especificación, en las normas aplicables y en el Pliego de condiciones particulares
+de la obra.
+
+La Gerencia Técnica y la Gerencia de Seguridad y Medio Ambiente son las
+responsables de hacer la evaluación del pedido de excepción (casos según Inciso 2.2)
+y de establecer los requerimientos para el desarrollo del ensayo.
+
+6   DOCUMENTACION COMPLEMENTARIA Y/O DE REFERENCIA
+
+NAG 100 - Año 1993 Normas Argentinas Mínimas de Seguridad para el Transporte y
+        Distribución de Gas Natural y otros Gases por Cañería.
+
+NAG-153 Normas mínimas para la protección ambiental en el transporte y la
+        distribución de gas natural y otros gases por cañerías
+
+NAG-165 Normas Mínimas de Seguridad para Obras y Trabajos.
+
+I SM-104-04 Pruebas de resistencia y hermeticidad - Inertizado.
+
+NSM- 105 Requisitos de Seguridad Higiene, Salud Ocupacional y Medio Ambiente para
+Obras y Servicios
+
+ASME B31.8 – 2014 Edition, “Gas transmission and distribution piping systems”.
+                                                              CÓDIGO
+                        ESPECIFICACIÓN                        REVISIÓN         00
+                           TÉCNICA                             HOJA          5 de 31
+
+
+
+ASME PCC 2 2008 “Repair of pressure equipment and piping”
+
+NAG-124 – Año 1990, “Procedimiento general para pruebas de resistencia y
+hermeticidad de gasoductos”.
+
+Ley 19587, Decreto 351/79 y Decreto 911/96 – Higiene y Seguridad en el trabajo.
+
+NOTA: Será de aplicación únicamente la revisión vigente de estos documentos, al
+momento de recibir el Pliego de contratación de la obra.
+
+7   DEFINICIONES
+
+
+    •   Cañería o Tubería: todas las partes de las instalaciones físicas a través de las
+        cuales el gas es transportado, incluyendo caños, válvulas y otros accesorios fijos
+        al caño o tubo, unidades compresoras, estaciones y conjuntos prefabricados.
+    •   Caño: tramo de cañería producido en fábrica, de longitud especificada en las
+        Normas de construcción.
+    •   Prefabricados: tramos de caño producido en fábrica más los accesorios
+        correspondientes, destinado a la red o sistema a ensayar, usado para el
+        transporte de gas.
+    •   Inspección de obra: representante de la Distribuidora encargado de la
+        verificación en obra de la pruebas a ejecutar sobre la cañería.
+    •   Prueba de fuga: prueba que demuestra la ausencia de pérdidas en las uniones
+        entre caños y entre caños y accesorios.
+    •   Prueba de resistencia: Prueba que demuestra la aptitud de la cañería para
+        operar a la presión de operación determinada.
+    •   Prueba de hermeticidad final: prueba que demuestra la ausencia de pérdidas
+        en una cañería, evidenciándola por el mantenimiento de un valor determinado de
+        presión durante un período de tiempo.
+    •   PEPN: procedimiento específico de prueba neumática.
+    •   M.O.P.: mano de obra propia.
+
+8   CONTENIDO
+
+8.1 ASPECTOS GENERALES
+Los procedimientos de ensayo de las cañerías que tengan requisitos de prueba
+contemplados en la Tabla I serán aprobados por el departamento de Ingeniería e
+Integridad/Obras de la Gerencia Técnica.
+
+Para aplicar esta Especificación Técnica a cañerías cuyos parámetros de ensayo no
+estén contemplados en la Tabla I se deberá presentar un informe con las causas de
+excepción para ser aprobado por la Gerencia Técnica y la Gerencia de Seguridad y
+                                                               CÓDIGO
+                       ESPECIFICACIÓN                         REVISIÓN          00
+                          TÉCNICA                               HOJA          6 de 31
+
+Medio Ambiente, como así también un procedimiento de ensayo previo a la realización
+de la prueba.
+
+Las uniones soldadas efectuadas para empalmar secciones de prueba o líneas ya
+probadas, están exceptuadas de cumplir con la presente Especificación. Este tipo de
+soldaduras deben ser sometidas a un ensayo no destructivo de radiografiado o
+gammagrafiado.
+
+En ningún caso se podrá superar durante el desarrollo del ensayo, la presión de prueba
+en fábrica de la cañería utilizada en la construcción del tramo, como así tampoco, el
+valor de porcentaje de TFME indicado para cada Clase de Trazado en la Norma NAG-
+100, Sección 503 c).
+
+La temperatura de los componentes del sistema de cañerías y la del gas de
+prueba deberán mantenerse a una temperatura entre -15°C y +38°C.
+
+Previamente al ensayo, las uniones soldadas de las cañerías a ser sometidas a una
+prueba neumática de resistencia y hermeticidad, serán 100 % radiografiadas y
+aprobadas por el código correspondiente. En caso de aquellas costuras que sea
+imposible radiografiar, las mismas serán sometidas a un ensayo de líquidos penetrantes
+en 2º y última pasada.
+
+La prueba neumática de cañerías que operen a más de 30% de la TFME amerita
+requisitos especiales (ver sección 505 de la NAG 100).
+
+8.2 MEDIO PRESURIZANTE
+Las pruebas neumáticas deben ser realizadas utilizando aire o gas inerte, limpio y
+exento de aceite.
+
+El suministro de gas inerte (nitrógeno) podrá ser realizado mediante cilindros,
+baterías  de cilindros  y/o camiones      criogénicos  con su correspondiente
+evaporador, dependiendo del volumen de la cañería a ensayar.
+
+El manejo de los cilindros con gas inerte, deberá hacerse conforme a las medidas
+preventivas establecidas en la instrucción ISM 104 (Prueba de Resistencia y
+Hermeticidad – Inertizado).
+
+NOTA:
+  a) En caso de utilizarse aire como medio presurizante, será de aplicación el artículo
+      8.10.11 (Secado de cañería).
+  b) Si se utiliza gas inerte, no será necesario realizar el deshidratado y se deberá
+      mantener la cañería con gas inerte hasta el momento de la interconexión y
+      habilitación. La medición del punto de rocío en este caso se realizará solo a los
+      efectos de verificar que antes de la habilitación no haya habido ingreso de agua, por
+      alguna razón ajena a la prueba.
+                                                          CÓDIGO
+                      ESPECIFICACIÓN                      REVISIÓN         00
+                         TÉCNICA                           HOJA         7 de 31
+
+
+
+
+8.3 PROCEDIMIENTO ESPECÍFICO DE PRUEBA NEUMÁTICA (PEPN)
+El Contratista deberá presentar previo a la ejecución de los ensayos un Procedimiento
+Específico de Prueba Neumática (PEPN) para su aprobación por parte de la
+Distribuidora, en el cual deberán incluirse los puntos enumerados a continuación:
+
+ ♦ Nombre de la Contratista que ejecutará la prueba.
+
+ ♦ Número de contrato y designación del proyecto en cuestión.
+
+ ♦ Especificaciones técnicas de la cañería:
+   a) Material
+   b) Diámetro nominal Dn
+   c) Diámetro exterior De
+   d) Espesor de pared t
+   e) Diámetro interior Di
+   f) TFME
+   g) Presión de prueba en fábrica Pf
+   h) Presión de operación de la cañería PO
+   i) Presión de prueba de resistencia Pr
+   j) Presión de prueba de hermeticidad Ph
+   k)    Relación porcentual de las tensiones circunferenciales de la cañería
+   respecto a la tensión de fluencia mínima especificada (TFME), para las distintas
+   condiciones:
+            1. a la presión de operación
+            2. a la presión de prueba en fábrica
+            3. a la presión de prueba de resistencia
+            4. a la presión de prueba de hermeticidad
+
+Provisión del medio presurizante
+a) Fuente de alimentación y transporte. Características del equipamiento.
+b) Cálculo de la cantidad requerida por tramo de prueba y total. c) Evacuación y
+conductos de venteo.
+
+Scrapers o esferas
+Indicar, cantidad, formas, dimensiones y material.
+
+Cabezales de prueba (Lanzamiento y recepción)
+a) Diseño
+b) Materiales a utilizar
+c) Sistemas de seguridad
+                                                             CÓDIGO
+                      ESPECIFICACIÓN                         REVISIÓN         00
+                         TÉCNICA                              HOJA          8 de 31
+
+
+
+Instrumental a utilizar
+a) Manómetros, marca, tipo, diámetro de cuadrante, alcance, escala, graduación
+mínima y precisión.
+b) Balanza manométrica, marca, alcance, mínimo valor de medición y precisión.
+c) Registrador gráfico de presión y temperatura y eventualmente presión diferencial,
+marca, alcances y precisión.
+d) Termómetros, marca, tipo, alcance, graduación mínima, escala y precisión.
+
+El múltiple de prueba deberá permanecer fuera de la zona de exclusión o contar con
+las protecciones necesarias para su operación (pantallas de hormigón o acero)
+
+Compresores de aire
+Tipo, marca, caudal, presiones, diámetro de la cañería de entrada y salida, filtro, etc.
+
+Perfil del terreno
+Esquema isométrico o Planialtimetría         del trazado donde deberá señalarse:
+derivaciones, venteos, purgas, ubicación de los cabezales de lanzamiento y
+recepción, ubicación de equipos y elementos necesarios para el ensayo, clase
+de trazado, distancia a las viviendas y cualquier otro punto singular del tramo.
+
+8.4 MEMORIA DESCRIPTIVA
+Describirá en forma amplia las características generales de la obra, criterio de
+sectorización, identificación de los sectores a ensayar, detalles particulares de la
+cañería y todo otro dato necesario que sea útil para dar un conocimiento global de la
+instalación a ensayar.
+
+8.5 ESPECIFICACIONES TÉCNICAS DE LA CAÑERÍA
+Dentro del procedimiento específico deberán figurar los siguientes datos de la cañería a
+ensayar:
+   • Material
+   • Diámetro nominal
+   • Diámetro exterior
+   • Espesor
+   • Norma de fabricación
+   • Longitud
+   • Cantidad de servicios
+   • Presión de operación o diseño
+   • Presión de prueba de fuga
+   • Presión de prueba de resistencia
+   • Presión de prueba de hermeticidad
+   • Porcentaje de la TFME.
+                                                                CÓDIGO
+                          ESPECIFICACIÓN                       REVISIÓN         00
+                             TÉCNICA                             HOJA         9 de 31
+
+
+
+          En ningún caso la cañería presurizada durante la prueba podrá superar los
+          porcentajes de la TFME Estipulados en la Sección 503 de la NAG 100.
+
+
+
+
+8.6    EQUIPOS E INSTRUMENTAL
+      • Compresor de aire: se deberá indicar tipo, marca, modelo, caudal y presión de
+        trabajo. El mismo contará con un filtro adecuado para eliminar los vapores de
+        aceite del aire de inyección.
+
+      •    Manómetros: deben usarse manómetros lubricados con cuadrante mínimo de
+           ∅6”, mínima división 0,5 Kg/cm2 y que trabajen durante la prueba entre el 25% y
+           el 75% de la escala utilizada.
+
+      •    Manifolds de prueba: se deberán instalar en los extremos del conducto a
+           probar los manifolds de prueba que sean necesarios. La presión de diseño de
+           los mismos deberá ser acorde a la presión máxima de prueba.
+
+      •    Cabezales: los tapones o trampas utilizados como cabezales de prueba fuga
+           deberán contar con dispositivos de seguridad que eviten su expulsión accidental.
+
+      •    Accesorios y herramientas menores: En el PEPN deberá indicarse la cantidad
+           requerida de cada instrumento o equipo para poder ejecutar las pruebas.
+
+Nota: todos los instrumentos deberán contar con certificado de calibración de un
+laboratorio de la red SAC (https://www.inti.gob.ar/sac/) u otros entes reconocidos.
+
+8.7 REQUISITOS DE EQUIPAMIENTO
+El Constructor proporcionará todos los materiales y medios requeridos para
+la prueba.
+
+BALANZA MANOMÉTRICA:
+Deberá usarse una balanza manométrica cuyas pesas calibradas serán para 0,10
+kg/cm2 o menor y una precisión de medición de 0,1% entre 10°C y 30°C, adecuada a
+las presiones requeridas en las pruebas de resistencia y hermeticidad, provista de
+su certificado de calibración.
+                                                             CÓDIGO
+                      ESPECIFICACIÓN                        REVISIÓN         00
+                         TÉCNICA                              HOJA         10 de 31
+
+
+
+Cada balanza podrá ser inspeccionada y aprobada antes de proceder a la prueba. La
+misma podrá ser reemplazada por un registrador electrónico con certificado de
+calibración vigente.
+
+MANÓMETROS:
+Deberán usarse manómetros de 1% de precisión máxima, escala en kg/cm2 y su
+alcance será tal que trabajen en aproximadamente al 60% del valor máximo del
+mismo.
+
+Para manómetros de hasta 100 kg/cm2, el diámetro del cuadrante no será menor de
+102 mm y su mínima división será 1 kg/cm2.
+
+Para manómetros de hasta 150 kg/cm2, el diámetro del cuadrante no será menor de
+152 mm y su mínima división será de 2 kg/cm2.
+
+Los manómetros deberán estar provistos de su certificado válido de calibración.
+
+REGISTRADOR DE PRESIÓN:
+Se usará un registrador de presión con un alcance de medición de
+aproximadamente 1,25 veces la presión requerida en la prueba de resistencia,
+que registre sobre gráfico en forma continua. La escala del papel deberá
+concordar con la escala de medición del registrador de presión. El máximo error
+total porcentual (incluyendo linealidad, repetibilidad e histéresis) referida a la plena
+escala de la indicación del instrumento, no será mayor que +/- 5%.
+
+El registrador deberá estar provisto de un certificado válido de calibración. El mismo
+podrá ser reemplazado por una balanza manométrica con carta registradora.
+
+REGISTRADOR DE TEMPERATURA DEL MEDIO PRESURIZANTE:
+Se usará un registrador de temperatura que registre sobre gráfico en forma
+continua. La escala del papel deberá concordar con la escala de medición del
+registrador de temperatura. El máximo error total (incluyendo linealidad, repetibilidad
+e histérisis) no será mayor que 1°C.
+
+El registrador deberá estar provisto de un certificado válido de calibración.
+
+TERMÓMETRO DE SUELO:
+Se dispondrá de tantos termómetros de suelo como sea necesario, cada uno con
+suficiente alcance de medición. Todos los termómetros deberán estar provistos de su
+certificado válido de calibración.
+
+TERMÓMETRO EN CONDUCTO:
+                                                          CÓDIGO
+                     ESPECIFICACIÓN                      REVISIÓN         00
+                        TÉCNICA                            HOJA        11 de 31
+
+Los termómetros que se apliquen en conducto deberán tener suficiente alcance de
+medición con una apreciación mínima de escala de 0,5°C y suficiente longitud para la
+lectura del mismo sin necesidad de extraerlo.
+
+CABEZALES DE PRUEBA:
+Serán fabricados como mínimo, del mismo material y espesor que la cañería
+a probar, debiendo utilizar para su construcción, accesorios normalizados.
+
+Las bridas, casquetes, tapas de apertura y cierre rápido deberán corresponder a la
+serie ANSI 150, 300 o 600, según sea la presión de máxima del sistema a probar.
+
+Las cuplas, entrerroscas y válvulas, deberán corresponder a la serie ANSI 3000.
+
+La fabricación de cabezales deberá cumplir con los requisitos contemplados en el
+Código ASME Sección VIII Recipientes sometidos a presión.
+
+Dichos cabezales deberá c o n t a r c o n el correspondiente certificado de calidad,
+previo al uso de los mismos.
+
+Todas las uniones soldadas del cabezal deberán ser verificadas mediante
+radiografiado, incluyendo la soldadura de este a la cañería a probar.
+
+Cada cabezal de prueba deberá estar marcado con una chapa en donde conste:
+
+1. La presión de diseño.
+2. La presión máxima de prueba de resistencia del cabezal (dicha presión será como
+mínimo 1.5 veces la presión a la cual será sometida la cañería durante el ensayo).
+3. Serie ANSI/ASME correspondiente.
+4. Fecha de construcción.
+5. Fecha de prueba, la cual no será mayor a un (1) año respecto a la fecha del
+momento en que se realizara el ensayo de la cañería.
+
+Se deberá colocar sobre el cabezal de prueba, una válvula de seguridad por venteo
+calibrada en un 10% mayor a la presión de ensayo, con una capacidad de descarga
+a la presión de apertura como mínimo igual a la mayor capacidad de suministro del
+fluido presurizante. Las descargas de las válvulas de seguridad deberán ser
+direccionalas hacia un lugar y altura seguras.
+
+En el ANEXO Nº 1 se muestra un esquema típico y el listado de materiales de un
+cabezal de lanzamiento.
+
+En los lugares donde no puedan cumplirse con las distancias mínimas de seguridad
+(Tabla 1 o 2 según corresponda), entre la cañería a probar y los operadores,
+los cabezales de pruebas deberán ser ubicados dentro de pozos o tras pantallas
+protectoras de hormigón armado o acero, de manera tal que brinden un resguardo
+                                                          CÓDIGO
+                     ESPECIFICACIÓN                      REVISIÓN         00
+                        TÉCNICA                            HOJA        12 de 31
+
+adicional en caso de posibles averías del sistema de cañerías a ensayar. Las
+dimensiones de las mismas deberán permitir el trabajo con comodidad del operador,
+debiendo como mínimo contar con un tamaño de 2 m por 2 m. El diseño y espesor
+deberá ser calculado por un profesional con incumbencias.
+
+MÚLTIPLE DE PRUEBA:
+El múltiple (manifolds) de prueba se deberá instalar en uno de los extremos del
+conducto a probar (según ANEXO 1). La presión de diseño del múltiple de prueba
+deberá basarse en la presión máxima a que el conducto será sometido durante el
+ensayo.
+
+La fabricación del múltiple deberá cumplir con los requisitos contemplados en
+el Código ASME Sección VIII Recipientes sometidos a presión y señalados para los
+cabezales de prueba.
+
+El múltiple de prueba deberá ser construido con elementos normalizados (cañerías,
+casquetes, bridas, válvulas, etc.) y deberán corresponder a la serie ANSI 3000
+según Normas ASTM A 105 y a la Norma ASTM A 53 o API 5L.
+
+El múltiple de prueba deberá estar marcado con una chapa en donde conste:
+1. La presión de diseño.
+2. La presión máxima a que ha sido probado.
+3. Fecha de construcción.
+4. Serie ANSI/ASME.
+5. Fecha de prueba, la cual no será mayor a un (1) año respecto a la fecha del
+   momento en que se realizara el ensayo de la cañería.
+
+Será aceptado un múltiple de prueba fabricado por una firma reconocida, siempre
+que cumpla con las condiciones antes descriptas y posea su correspondiente
+certificado de calidad emitido por el fabricante.
+
+La Manguera de conexión entre el múltiple de prueba y el cabezal de lanzamiento
+deberá ser compatible para servicio con gases a alta presión, proyectada para
+soportar una presión de trabajo igual o mayor que la presión de resistencia a ser
+aplicada durante el ensayo. Las mangueras de alta presión deberán cumplir con el
+estándar NFPA 52 y AGA/CGA, estándar ANSI 4.4.
+
+El Contratista deberá presentar adjunto al procedimiento Certificado de Calidad de
+las mangueras de alta presión, emitido por el fabricante de la misma. En el
+certificado deberá figurar la máxima presión de operación y la presión de prueba de
+la manguera la cual será al menos el doble de la presión de resistencia a aplicar en
+la prueba.
+
+En el ANEXO Nº 1 se muestra un esquema típico y el listado de materiales de un
+múltiple de prueba.
+                                                             CÓDIGO
+                      ESPECIFICACIÓN                        REVISIÓN         00
+                         TÉCNICA                              HOJA        13 de 31
+
+
+
+En los lugares donde no puedan cumplirse con las distancias mínimas de seguridad
+(Tabla 1 o 2 según corresponda), entre la cañería a probar y los operadores, el múltiple
+de prueba deberá ser ubicado tras pantallas protectoras de hormigón armado o
+acero, de manera tal que brinden un resguardo ante posibles averías del sistema
+de cañerías a ensayar. Las dimensiones de las mismas deberán permitir el trabajo con
+comodidad del operador, debiendo como mínimo contar con un tamaño de 2 m por 2 m.
+El diseño y espesor deberá ser calculado por un profesional con incumbencias.
+
+8.8 ESQUEMA DE CONEXIONADO
+Conexionado de instrumentos y fuente de fluido presurizante, incluyendo el listado de
+los materiales a utilizar. Ver ANEXO Nº 1 de referencia.
+
+8.9 SEGURIDAD Y MEDIO AMBIENTE
+Se deberá dar cumplimiento a las medidas de seguridad y de protección ambiental
+establecidas en la instrucción de trabajo ISM 104 (Pruebas de resistencia y
+Hermeticidad – Inertizado).
+
+El PEPN deberá detallar los riesgos y las medidas preventivas adoptadas relativas a la
+seguridad del personal, de la población y de la conservación del Medio Ambiente.
+
+Se arbitrarán medios de vigilancia y de comunicaciones para evitar el tránsito de la
+población sobre la traza de la cañería (dentro de la zona de exclusión definida por las
+tablas 1 o 2 según corresponda), durante el tiempo que dure la prueba. Las
+instalaciones sometidas a prueba serán debidamente señalizadas con cartelería de
+advertencia. Así mismo, para los casos en que se requiera evacuar edificios, se dará
+aviso a los organismos de atención de emergencias locales (Defensa civil, Bomberos).
+
+A los efectos de concretar la prevención de riesgos y satisfacer las exigencias en
+materia de Higiene y Seguridad Laboral, la empresa responsable del ensayo deberá
+dar cumplimiento integral a la norma NSM 105 (Requisitos de Seguridad Higiene,
+Salud Ocupacional y Medio Ambiente para Obras y Servicios), las leyes 24.557/95,
+19587/72, Dtos 351/79, 911/96; y demás reglamentaciones concordantes y aplicables,
+vigentes o a dictarse. El programa de seguridad asociado a la obra que será
+presentado a la ART para su aprobación, deberá incluir los riesgos y medidas
+preventivas para el personal resultantes del ensayo neumático.
+
+Es importante que previo al ensayo, se verifique el cumplimiento de todo lo expuesto,
+además de tomar todos los recaudos de seguridad para la protección del personal
+actuante como así también de terceros.
+
+El PEPN será puesto a consideración de la Gerencia de Seguridad y Medio Ambiente
+de la Distribuidora para su aprobación, en los temas de incumbencia.
+                                                           CÓDIGO
+                      ESPECIFICACIÓN                       REVISIÓN        00
+                         TÉCNICA                            HOJA         14 de 31
+
+8.10 DESARROLLO DE LA PRUEBA
+La programación de la prueba de cada tramo se realizará con dos semanas de
+antelación, previa aprobación del correspondiente PEPN por parte de sector
+Ingeniería y la Gerencia de SyMA de la Distribuidora.
+
+El Responsable de Seguridad de la contratista tiene que estar presente durante la
+Prueba de Resistencia.
+
+Si el tramo a probar tuviera partes instaladas en contacto con el aire, las mismas
+deberán ser protegidas para minimizar los efectos de la fluctuación térmica ambiental.
+
+En caso de existir tramos aéreos en la instalación, los mismos no formarán parte de la
+prueba neumática. Deberán ser probados aparte por otro medio o, dependiendo su
+longitud, en taller como un prefabricado.
+
+Los tramos de cañerías destinados a cruces especiales (cruces de ríos, de ruta, de
+vías, etc.) deberán ser probados conjuntamente con la línea, aunque el
+Contratista opte por hacer una prueba previa en forma independiente.
+
+Las bridas, accesorios y demás elementos auxiliares que se utilicen durante la
+prueba, serán compatibles con la presión de diseño de la cañería.
+
+8.10.1 LIMPIEZA INTERNA DE LA CAÑERÍA
+Antes de la prueba, la Contratista deberá limpiar adecuadamente el interior de la
+cañería con varios pasajes de scraper, a fin de eliminar barro, sedimentos,
+escorias, óxidos y cualquier otro elemento que pueda perjudicar el normal
+funcionamiento de la línea.
+
+Los pasajes se repetirán hasta que, a criterio de la Inspección de Obra, se
+considere aceptable el grado de limpieza alcanzado.
+
+Antes de la prueba de la cañería, deberá ser efectuada la verificación de las
+ovalizaciones o abolladuras por medio de una placa calibrada o un calibrador
+electrónico, de acuerdo a lo establecido en el Procedimiento General de Prueba
+Hidráulica de la Distribuidora.
+
+
+
+8.10.2 CONDICIONES PARTICULARES
+El sistema de cañerías a ser ensayado deberá estar protegido contra
+sobrepresión con por lo menos una válvula de seguridad regulada para una
+presión no mayor que el 110% de la presión de prueba de resistencia.
+
+Las válvulas de seguridad deberán tener una capacidad de alivio no inferior al del
+caudal máximo de la válvula de ingreso de gases, y deberá tener una marca
+ASME UV para certificar esa capacidad.
+                                                         CÓDIGO
+                     ESPECIFICACIÓN                      REVISIÓN              00
+                        TÉCNICA                           HOJA               15 de 31
+
+
+
+No deberán haber válvulas u otras restricciones entre el sistema a ser ensayado y
+la válvula de seguridad.
+
+Los ensayos deberán ser realizados        con   la cañería      instalada,     tapada e
+independizada de cualquier sistema.
+
+No se realizarán pruebas contra válvulas de bloqueo cerradas.
+
+8.10.3 DISTANCIAS DE SEGURIDAD
+Las pruebas neumáticas tienen asociado un riesgo debido a la posibilidad, en
+caso de grandes pérdidas, de la liberación de la gran energía almacenada por la
+compresión del gas.
+
+Las Pruebas Neumáticas dentro de los parámetros comprendidos en la Tabla I
+respetarán las zonas de exclusión declaradas en la misma.
+                                                             CÓDIGO
+                           ESPECIFICACIÓN                    REVISIÓN       00
+                              TÉCNICA                         HOJA        16 de 31
+
+8.10.3.1     TABLA I – Distancias de Seguridad
+
+
+        DISTANCIAS DE SEGURIDAD [m]
+              '    -        '   .   /         01 2 / 34       ,
+   *
+
+    +
+
+    +
+
+    +
+
+    +
+
+    +
+
+    +
+
+    +
+
+    +
+
+    +
+
+    +
+
+    +
+                       5                       -
+
+                                             ! " #$ %$&'%(            %
+                                     %   )
+
+
+Las distancias de seguridad de la Tabla I fueron determinadas estableciendo que la
+energía contenida dentro de la cañería en un radio de 12.5m no exceda los 2.5 kg de
+TNT.
+Es cálculo de energía contenida, su equivalente de TNT y los valores de Rscaled se
+obtuvieron según ASME PCC 2 2008
+
+
+
+E      = Energía acumulada, [J]
+Pa     = Presión atmosférica absoluta, 101000 Pa
+Pat = Presión absoluta de prueba, [Pa]
+V      = Volumen total bajo prueba
+(Simplificación adoptada para el cálculo de volumen: 25m de largo de cañería)
+                                                               CÓDIGO
+                      ESPECIFICACIÓN                           REVISIÓN           00
+                         TÉCNICA                                   HOJA         17 de 31
+
+Para uno de aire o nitrógeno el valor de K = 1.4
+
+
+
+
+Las cañerías cuyas pruebas no queden comprendidas en la TABLA I, seguirán los
+siguientes criterios:
+
+La zona de exclusión para transeúntes y personas ajenas a la prueba debe ser como
+mínimo del doble de las distancias de seguridad que están expresadas en la TABLA II.
+Si en dicha zona existen edificios destinados para la ocupación humana, estos deberán
+ser evacuados desde el inicio de la presurización hasta el momento de la
+despresurización de la prueba de resistencia.
+
+Las distancias de seguridad mínimas a las cuales se puede operar la prueba
+neumática están expresadas en la TABLA II, parametrizadas con la presión de
+resistencia y el volumen total del sistema a ensayar.
+
+En el caso de que fuese impracticable respetar la distancia de seguridad
+recomendada entre el sistema de cañerías a ensayar y el múltiple de prueba,
+este último deberá ser localizado detrás de pantallas protectoras de hormigón
+armado o acero , que sirvan de barrera de protección para el personal actuante en la
+prueba. Las dimensiones de las mismas deberán permitir el trabajo con comodidad
+del operador, debiendo como mínimo contar con un tamaño de 2 m por 2 m. El
+diseño y espesor deberá ser calculado por un profesional con incumbencias.
+
+8.10.3.2     TABLA II
+Distancias mínimas de seguridad en metros:
+
+
+Volumen del                      Presión de prueba (kg/cm2)
+  sistema
+    (m3)
+                 15        23          38          60         90          105
+    0.03         30        30          30          30         30          30
+     0.3         30        30          30          30         30          30
+      3          30        30          30          30         30          30
+     30          30        30          60          83         97          102
+     90          60        84         101          120        140         148
+    210          94        111        135          160        185         196
+
+
+A los efectos de la Tabla II el volumen del sistema será el que resulte menor de los
+siguientes
+                                                             CÓDIGO
+                      ESPECIFICACIÓN                        REVISIÓN         00
+                         TÉCNICA                              HOJA         18 de 31
+
+
+
+   •   El volumen de total de la cañería a ensayar comprendido los cabezales de
+       prueba.
+   •   El volumen correspondiente a 90 metros de cañería más el volumen de los
+       cabezales de prueba.
+
+ASME PCC-2-2008 Article 5.1 Mandatory Appendix III Safe Distance Calculations for
+Pneumatic Pressure Test
+* En el caso de que fuese impracticable respetar la distancia de seguridad
+recomendada entre el sistema de cañerías a ensayar y el múltiple de prueba, este
+último deberá ser localizado detrás de estructuras específicamente diseñadas que
+sirvan de barrera de protección para el personal actuante en la prueba.
+
+8.10.4 Preparación de la prueba
+Luego de soldados los cabezales de lanzamiento y recepción en los extremos del
+tramo a probar y antes de aplicación de cualquier presión, todo el sistema a ser
+ensayado deberá ser examinado, debiendo verificar que esté debidamente tapado y
+soportado para prevenir daños en las instalaciones adyacentes en caso de rompimiento
+de juntas o uniones.
+
+Las válvulas de venteo o seguridad de operación normal del sistema,
+manómetros, válvulas de control, purgadores, accesorios e instrumentos que puedan
+ser dañados durante los ensayos a presión de resistencia, deberán ser removidas de la
+línea, aisladas mecánicamente o bien sustituidas por un carretel temporario.
+
+Toda cañería sometida     a reparación    luego de ejecutada    la prueba, deberá ser
+reensayada.
+
+Los siguientes ítems deberán ser verificados por el Representante Técnico de la
+Contratista, a fin de certificar el cumplimiento del Procedimiento de prueba aprobado,
+antes del inicio del mismo:
+
+a) Gas de ensayo: fuente, presión y caudal disponible, temperatura y limpieza.
+b) Protección contra sobrepresión: localización, capacidad de evacuación y
+presión de alivio.
+c) Instrumentación: rango de presión de manómetros y datos de calibración.
+d) Ubicación de las placas ciegas y verificación de los puntos de aislación del sistema.
+e) Verificación del múltiple de prueba a la máxima presión de prueba.
+f) Calidad del aire, fuente de ventilación y analizadores de tenor de oxígeno en la
+atmósfera, en caso de ensayo en ambientes cerrados. Temperatura de los
+componentes del sistema.
+
+La Contratista de la obra, será la responsable de notificar a la empresa
+proveedora del fluido de presurización, cuando el sistema está listo para dar
+iniciación al ensayo.
+                                                             CÓDIGO
+                      ESPECIFICACIÓN                        REVISIÓN         00
+                         TÉCNICA                              HOJA         19 de 31
+
+
+
+Antes de que cualquier presión sea aplicada, todo el personal en el área de
+ensayo deberá estar a una distancia mayor que la indicada en la Tabla de
+distancias correspondiente.
+
+El área de ensayo deberá estar demarcada con fajas de seguridad indicando
+“PELIGRO, CAÑERIA EN PRUEBA”.
+
+Todo el personal involucrado en el ensayo deberá contar con el equipo de
+protección personal.
+
+8.10.5 Ensayo preliminar
+Una vez enterrada, la cañería debe ser presurizada gradualmente hasta una
+presión manométrica de 4 kg/cm2.
+
+Para la presurización se deberá operar el sistema de tal manera que todas las
+válvulas del cabezal de ensayo estén abiertas antes de comenzar la inyección del
+fluido de presurización. Esto es que se deberá abrir en último término la válvula de
+salida del recipiente de gas inerte a presión. Se deberá producir el barrido del aire
+existente dentro de la cañería, mediante el pasaje de un scraper impulsado por el
+fluido de ensayo, debiendo estar abierto uno de los venteos del cabezal de recepción,
+de manera de asegurar el llenado en forma continua a presión y caudal
+constante. Una vez llegado el scraper a su alojamiento en el cabezal de recepción, se
+procederá al cierre de la válvula de venteo y a la presurización de la cañería.
+Esta presión deberá ser mantenida por 15 minutos.
+En ningún caso se deberá mantener abierta la válvula de salida del recipiente a
+presión de gas inerte, cuando esté cerrada la válvula que vincula al cabezal de
+ensayo con el sistema de cañerías.
+
+En caso de detectar pérdidas, se deberá aliviar la presión del sistema, repararlas y
+repetir el ensayo preliminar para verificar las reparaciones.
+
+En caso de no ser encontrada ninguna perdida, se dará continuidad a la prueba
+neumática.
+
+8.10.6 Igualación de temperatura
+Antes de elevar la presión interna del tramo a ensayar, se deberá lograr la igualación
+de la temperatura entre el gas inerte y el entorno de dicho tramo. A tal fin se esperará
+el tiempo necesario a efectos de lograr la nivelación térmica, la cual dependerá entre
+otras cosas, del diferencial de temperatura existente, del tipo de suelo y del ciclo de
+expansión del gas inerte envasado.
+
+Los tramos expuestos a la intemperie, deberán estar protegidos convenientemente
+contra fluctuaciones térmicas debido a factores climáticos que puedan afectar
+el ensayo.
+                                                             CÓDIGO
+                      ESPECIFICACIÓN                        REVISIÓN         00
+                         TÉCNICA                              HOJA         20 de 31
+
+8.10.7 Prueba neumática de resistencia
+Una vez establecida la zona de exclusión e informado el personal del comienzo de la
+prueba, con el aval de la inspección de obra se comenzará a elevar la presión dentro
+de la cañería de prueba.
+
+Esa elevación de presión debe ser realizada en escalones de 5 % de la presión de
+resistencia, permitiendo intervalos de tiempo de 5 minutos como mínimo entre etapas
+de modo de que la presión sea ecualizada en todo el sistema. La presión deberá ser
+medida en el múltiple de prueba y el de recepción. Cuando estén igualadas ambas
+lecturas se considerará que el tramo está ecualizado.
+
+En casos de aplicación, al llegar al 20% de la TFME durante la prueba la cañería deberá
+recorrerse por completo para verificar fugas.
+
+Al fin de cada etapa de elevación de presión, la válvula de admisión de gas de prueba
+debe ser cerrada, previa al cierre de la válvula del recipiente a presión de gas inerte.
+El comportamiento de la presión debe ser observado durante 5 minutos.
+
+El próximo aumento se deberá realizar una vez que no se verifique caída de
+presión a la finalización de dicho tiempo.
+
+En caso de ocurrir caída de presión, se deberá realizar otra prueba preliminar
+
+El valor de presión de operación del caño se verá determinado por la presión de la
+prueba neumática según la tabla de la NAG 100 – Parte L – Sección 619.
+
+
+
+
+El tiempo de mantenimiento mínimo del sistema a la presión de resistencia será de
+8 hs., transcurrido ese tiempo se procederá a despresurizar el sistema hasta la
+presión de hermeticidad, mediante la apertura de la válvula de venteo del cabezal
+de ensayos.
+
+8.10.8 Prueba Neumática de Hermeticidad y Estanqueidad
+Como presión de prueba de hermeticidad se adoptará la correspondiente al 90% de
+la presión establecida para la prueba de resistencia. De igual manera que en el
+caso anterior, los valores de presión durante el ensayo deberán ser medidos y
+                                                             CÓDIGO
+                      ESPECIFICACIÓN                        REVISIÓN         00
+                         TÉCNICA                                HOJA       21 de 31
+
+registrados mediante una balanza de peso muerto y un registrador gráfico de
+presión y de temperatura según lo ya mencionado en apartado anterior.
+
+El tiempo de mantenimiento mínimo del sistema a la presión de hermeticidad será de
+24 hs.
+
+Terminada la prueba de hermeticidad se realizará una prueba de estanqueidad a la
+presión de operación con una duración de 30 minutos.
+
+Finalizada la prueba de estanqueidad, se procederá a despresurizar el sistema
+hasta un valor de presión de 4 kg/cm2 y luego de esperar 15 minutos para
+estabilización.
+
+Por último se recorrerá la cañería para una inspección final.
+8.10.9 Diagrama de Prueba Neumática
+
+
+
+
+8.10.10      Evaluación de la prueba neumática
+Aprobación: La prueba de resistencia neumática se considerará aprobada si la
+presión se mantiene constante a lo largo de toda la prueba, excepto por las
+variaciones debidas a la influencia de la temperatura.
+
+En caso de existir la necesidad de repetir la prueba o extender la misma, el Contratista
+se hará cargo de los costos que demanden dichos trabajos.
+
+Se entregaran las curvas de registro de presión y temperatura en todos los puntos
+necesarios firmados por la inspección de obra como parte del acta.
+
+
+
+8.10.11      Secado de Cañería
+
+El secado de la cañería se efectuará mediante la inyección de aire deshidratado, desde
+el cabezal de lanzamiento. La temperatura del punto de rocío de agua de dicho aire
+                                                              CÓDIGO
+                      ESPECIFICACIÓN                          REVISIÓN              00
+                         TÉCNICA                               HOJA             22 de 31
+
+será de -60 °C a presión atmosférica. Esto es equivalente a un contenido de agua
+menor a 8 mg/m3.
+
+La medición del punto de rocío se realizará mediante la utilización de un higrómetro
+registrador (método de analogía eléctrica) que emitirá el informe correspondiente a
+cada medición.
+
+Si por algún motivo el higrómetro registrador no estuviese disponible el ensayo se
+efectuará mediante un método físico, empleando un espejo enfriado (Bureau of Mines).
+En este caso los resultados obtenidos se registrarán en la planilla correspondiente.
+
+Se considerará terminado el proceso cuando el punto de rocío del aire medido en el
+cabezal receptor alcance los -44 °C o menor, a presión atmosférica. Esto es equivalente
+a un contenido de agua en aire, a presión atmosférica, menor a 65 mg/m3.
+
+La cañería quedará con una presión de 4 kg/cm2.
+
+La eficiencia del secado se deberá comprobar 12 hs después de concluido éste,
+certificando que el punto de rocío se mantiene dentro de los valores anteriormente
+establecidos.
+
+Dicha situación deberá ser constatada por la Inspección de Obra y por personal de la
+Distribuidora. De ser así se considerará que el sistema ha sido satisfactoriamente
+secado y se dará por terminada la operación, dejando todos los datos asentados en las
+planillas correspondientes.
+
+Se adjunta a continuación un cuadro en el que se indica, a modo ejemplo, el contenido
+de agua en aire para distintas temperaturas de PRH2O en el cabezal de salida.
+
+
+
+                6 / ' 78#       /)    6 /               ! "           9   78
+                         0:94                   0:94                      0/ 2/ 4
+                         ;
+                         ;
+                         ;
+                         ;
+                         ;
+                         ;
+                         ;
+                         ;
+                         ;
+                         ;
+                         ;
+
+
+
+Aprobada la prueba neumática del tramo de cañería y el proceso de secado
+correspondiente, dicha instalación quedara presurizada a un valor de presión
+entre 2 y 4 Kg/cm2 hasta el momento en que se de inicio al inertizado de
+                                                         CÓDIGO
+                     ESPECIFICACIÓN                     REVISIÓN        00
+                        TÉCNICA                           HOJA       23 de 31
+
+acuerdo al procedimiento aprobado, previo a su carga y habilitación definitiva
+con gas.
+
+8.10.12       Planillas y Acta:
+   •   Durante la construcción        del gasoducto o ramal, el constructor
+       deberá confeccionar la PLANILLA N°1, ANEXO Nº 2.
+   •   Antes del inicio de la prueba neumática, el constructor deberá cumplimentar
+       los requerimientos establecidos en la PLANILLA Nº 2 y 3, ANEXO Nº 2.
+   •   Durante la ejecución de la prueba neumática se deberán confeccionar
+       las
+   •   PLANILLAS N°4 y 5, ANEXO Nº 2.
+   •   En caso de producirse una falla durante la prueba neumática, deberá
+       cumplimentarse lo establecido en la PLANILLA Nº 6, ANEXO Nº 2.
+   •   Concluidas todas las operaciones de prueba neumática, se deberá
+       confeccionar el ACTA DE EJECUCION DE PRUEBA NEUMÁTICA, cuyo
+       modelo obra en el ANEXO Nº 2 de la presente Especificación.
+                                                          CÓDIGO
+                     ESPECIFICACIÓN                      REVISIÓN         00
+                        TÉCNICA                            HOJA        24 de 31
+
+9   ANEXOS
+
+9.1 ANEXO N° 1 - Esquema de conexionado de equipos e instrumentos
+Se debe incluir en el PEPN un esquema unifilar del conexionado de los instrumentos y
+equipos a emplearse en las pruebas.
+
+                 Esquema básico de conexionado de equipos e instrumentos
+                                                             CÓDIGO
+                      ESPECIFICACIÓN                        REVISIÓN         00
+                         TÉCNICA                              HOJA        25 de 31
+
+
+
+9.2   ANEXO Nº 2
+9.2.1 PLANILLA N°: 1
+
+DISTRIBUIDORA: CGS/CGP
+CONSTRUCTOR:
+OBRA:
+TRAMO:
+
+
+
+
+Medición: Cada día se deberá medir el tramo del conducto soldado en la fecha antes de
+procederse a la bajada del mismo. La medición se realizará por medio de cinta métrica,
+tratando de minimizar los errores por efecto de la temperatura.
+Importante: La medición de la cañería y confección de esta planilla deberán ser llevadas
+a cabo por el Constructor, la planilla debidamente conformada deberá ser entregada a la
+Inspección de Obra.
+
+Nota: Cuando hay cortes o agregados de cañería deberán consignarse las longitudes
+en Observaciones.
+                                                          CÓDIGO
+                     ESPECIFICACIÓN                      REVISIÓN         00
+                        TÉCNICA                            HOJA        26 de 31
+
+9.2.2   PLANILLA Nº: 2
+
+DISTRIBUIDORA: CGS/CGP
+CONSTRUCTOR:
+OBRA:
+TRAMO:
+
+        PRESENTACIONES A EFECTUAR PREVIAS A LA INICIACION DE LA PRUEBA
+                                NEUMATICA
+
+1.- Fuente(s) y análisis del gas inerte a utilizar.
+2.- Descripción de las operaciones a efectuar con secuencia de llenado, prueba y
+limpieza
+3.- Programa global - por tramos.
+4.-Planos de perfiles altimétricos, con determinación de las secciones.
+5.- Cálculos de las presiones de prueba y volúmenes teóricos.
+6.- Esquemas de cabezales de prueba.
+7.- Documentación de los cabezales de prueba.
+8.- Listado de instrumentos a utilizar en las pruebas, (fabricante, modelo, alcance,
+precisión, certificación de control y calibración, etc.).
+9.- Programa propuesto por tramo según el siguiente detalle:
+                                               CÓDIGO
+                     ESPECIFICACIÓN            REVISIÓN     00
+                        TÉCNICA                 HOJA      27 de 31
+
+9.2.3   PLANILLA N°: 3
+
+DISTRIBUIDORA: CGS/CGP
+CONSTRUCTOR:
+OBRA:
+TRAMO:
+
+                         PLANILLA DE CÁLCULO
+                                                   CÓDIGO
+                     ESPECIFICACIÓN                REVISIÓN     00
+                        TÉCNICA                        HOJA   28 de 31
+
+9.2.4   PLANILLA N°: 4
+
+DISTRIBUIDORA: CGS/CGP
+CONSTRUCTOR:
+OBRA:
+TRAMO:
+
+                         INFORME DE PRUEBA NEUMÁTICA
+                                                    CÓDIGO
+                     ESPECIFICACIÓN                 REVISIÓN     00
+                        TÉCNICA                      HOJA      29 de 31
+
+9.2.5   PLANILLA Nº: 5
+
+DISTRIBUIDORA: CGS/CGP
+CONSTRUCTOR:
+OBRA:
+TRAMO:
+
+
+                            PRUEBA DE HERMETICIDAD
+                         REGISTRO HORARIO DE PRESIONES
+                                                          CÓDIGO
+                      ESPECIFICACIÓN                      REVISIÓN         00
+                         TÉCNICA                           HOJA         30 de 31
+
+9.2.6    PLANILLA Nº: 6
+
+DISTRIBUIDORA: CGS/CGP
+CONSTRUCTOR:
+OBRA:
+TRAMO:
+
+        DATOS A CONSIGNAR CUANDO SE REGISTREN FALLAS Y/O ROTURAS
+
+1º Fecha y hora de falla o rotura.
+2º Progresiva.
+3º Ubicación sobre el terreno (en una planicie, en la parte alta, baja o media de una
+cuesta, etc.).
+4º Causa y características de rotura. Tipo de falla y longitud.
+5º En caño o accesorio.
+6º Ubicación en el caño o accesorio (posición horaria).
+7º En la chapa, en costura de fabricación o en costura de instalación.
+8º Característica del caño.
+9º Presión máxima soportada por el caño.
+10º Presión de rotura o falla.
+11º Método de reparación.
+12º Observaciones realizadas.
+13º Nota: El tramo de caño con falla, debe quedar a disposición de la inspección.
+                                                                                                                                 CÓDIGO
+                                                ESPECIFICACIÓN                                                                  REVISIÓN                             00
+                                                   TÉCNICA                                                                         HOJA                        31 de 31
+
+9.2.7         MODELO DE ACTA
+
+                       ACTA DE PRUEBA NEUMATICA DE RESITENCIA Y HERMETICIDAD
+
+En la Localidad de ......................................,Provincia de .................................a los ............días del mes
+de.................................del año 2........., en presencia del Sr..........................................en representación de
+CGP/CGS, el Sr. .............................................., Coordinado Regional de Seguridad y Medio Ambiente de la
+Distribuidora y el Sr. ....................................................Responsable de Obra representando al Constructor, se labra la
+presente           ACTA             DE           EJECUCIÓN                   DE          PRUEBA                NEUMATICA                    correspondiente                  a       la
+Obra...........................................................................................,            trabajos              encomendados                      por            O/C
+Nº.................................................................................................................................................................................a la
+firma..................................................................................................................................................................................
+
+Esta prueba se realizó en un todo de acuerdo a la Norma NAG 100, NAG 124 y Planillas de Registro que forman
+parte del Procedimiento de Prueba y cuyo detalle general es el siguiente:
+
+Cañería en prueba:
+
+Norma de fabricación:......................
+Costura:............................................
+Diámetro nominal:.............................mm (............pulg.)
+Espesor:............................................mm.
+
+Longitud total:....................................m
+
+De Prog. Km..................... ..............................a..Prog Km,.............................................
+
+Medio presurizante:………………………….
+
+Presión de Prueba de Resistencia:.........................................Kg/cm2
+
+Presión de prueba de hermeticidad:...........................................Kg/cm2
+
+Resultado:...............................................................................................................................
+
+Observaciones:................................................................................................................................................................
+...........................................................................................................................................................................................
+....................................................................
+
+En prueba de conformidad, firman la presente los arriba mencionados, en tres (3) ejemplares de un mismo tenor y a
+un solo efecto.
+
+Forman parte integrante de la presente Acta de Prueba, las Planillas que correspondan según Norma NAG 124, las
+planillas de registro incluidas en el Procedimiento de Prueba Neumática de Cañerías y los gráficos de registros de
+temperatura y presión.
+
+Por el Constructor                                                                                               Por la Distribuidora CGP/CGS
+
+Firma         ......................                                                                             Firma...............................
+
+Sello                                                                                                                          Sello
+

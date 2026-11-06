@@ -180,3 +180,26 @@ Hecha por un agente sobre `armar_json.py` (única fuente: regenera la lista, `co
 - **Estimado:** 17%. No se justificó.
 - **Vencidas:** 11. Se agrega la de Antonelli; no se justificó.
 - **Datos entre corchetes de la oferta.**
+
+## 05-11-2026 — Actualización con los precios nuevos del catálogo (pedido de Matías: «revisá y rehacé las cotizaciones de Camuzzi»)
+
+- Se cruzó cada renglón con el catálogo actualizado (listas Provemet 29-10-2026, Oil Metal 37278, Miyashiro 50594). Solo cambian los renglones con la **misma pieza** y precio más nuevo; donde la marca se eligió por el listado SCE-IN-501-0015 (Cintolo / Curvo Sold) se mantiene, y las juntas nuevas (#300) no son de la serie pedida.
+- Granallado y pintura: USD 37,98/m² (PIN-00579, precio firme confirmado por Matías el 30-10-2026, mismo alcance: granallado y pintura con materiales). La planilla de origen lo aplica sobre los m² + 20 % de overspray, así que la cantidad va × 1,2. Antes: criterio ITT 50 USD/m² (queda de alternativa).
+- Fecha de referencia del ajuste: 31-10-2026 (todavía no hay índices de noviembre).
+- Provemet 29-10-2026: brida WN 10" #600 sch 80 338,45 → 301,86 (cot. 288978 ítem 12); caño 10" sch 80 204,43 → 168,01 (cot. 288974 ítem 12); brida WN 6" #600 sch 80 226,14 → 112,28 (cot. 288978 ítem 8); caño 6" sch 80 90,70 → 74,52 (cot. 288974 ítem 10).
+- Pintura: 58 m² × 1,2 = 69,6 m² a 37,98.
+- Precio unitario 376.069,98 → **375.344,72** (total 2 equipos con flete 756.049,68), borrador.
+- Revisión independiente (05-11-2026): los 8 precios Provemet coinciden con el PDF y la pieza con el plano; el × 1,2 de la pintura está en la planilla de origen (=D×37,98×1,2, «Overspray 20%»). Corregido después: la fecha de los precios que no cambiaron había pasado a hoy (HOY se usaba también como referencia: vuelve a 30-10-2026); dólar de octubre cerrado 1.543,23 (era 1.541,43); caño 10" PSL2 aclarado (igual o superior al A-106 Gr B); la descripción de la pintura dice el 20 % de overspray. A confirmar por Matías: el precio de pintura es de piping y skid y se aplica también al recipiente (25,5 de los 58 m²).
+- Para confirmar: Provemet da el precio con bonificación 4 % por compra total, para las cantidades cotizadas (no las del plano) y con validez hasta el 13-11-2026.
+- Precio unitario final: **375.341,76** (total con flete 756.043,69), borrador.
+
+## 05-11-2026 — Rehecha sobre el plano tipo SCE-RE-112-0001 rev. 1 (circular de Camuzzi)
+
+- Camuzzi mandó por circular el plano tipo «Separador vertical coalescente» SCE-RE-112-0001 rev. 1 (archivo «671 1 0», 29/09/2020) y el esquema general. El plano fija la construcción (39 referencias) y una tabla de dimensiones según la serie (A) y la cantidad de cartuchos (B, hasta 20). Parámetros para serie 600: diseño 70 bar, PH 91 bar, corrosión 1,6 mm, RX 100 % tope, LP 100 % filete, ASME VIII Div. 1 y IX.
+- Decisión de Matías (05-11-2026): rehacer sobre el plano con A = #600 y B = 20 (fila máxima: la planilla pide 10" #600 y en la tabla D1 = 10" solo con B = 17 y 20). Consulta al cliente en `consultas_cliente.md` (cantidad de cartuchos, PH 91 bar contra la ET 9.16.1, cartucho de papel o coalescente, SCE-RE-512-0001 y SCE-PC-511-0003).
+- El diseño propio anterior (55", 37 elementos, 2 1/4", 102 bar, 375.341,76 por equipo) queda en `armar_json_diseno_preliminar_2026-10.py` como historial.
+- Nueva base: cuerpo 36" × 31,75 mm SA-516-70 (2 virolas de 1,5 m: Sandri las puede rolar), cabezal 2:1, tapa Futura 36" #600 (igual a la de Sacde/12, 24.288,60), toberas 10", boca 6", 20 cartuchos + 20 de repuesto, caja de chicanas 900 × 900 × 570, sin tratamiento térmico (UCS-56 lo exige desde 38 mm). Las cantidades que el plano no da las contó ITT del dibujo (vistas lateral y corte A-A) y van con la aclaración en `cantidad_origen`.
+- Referencia débil a confirmar: cartucho Gora 46600 (113,83, PPTO 27131) no dice la medida y es de fibra de vidrio; el plano pide papel 5½" × 36".
+- Resultado (borrador, sin revisar): **140.980,08 por separador**, 284.789,92 los 2 con flete (antes 375.341,76 / 756.043,69).
+- Revisión independiente (05-11-2026): las 39 posiciones y la fila #600 / B = 20 están bien transcriptas; tapa Futura y cabezal sostenidos por su fuente. Corregido: faldón de 405 mm (no 0,9 m, ≈ 140 kg), envolvente de 3,3 m (la tangente del cabezal está a ≈ 470 mm de la base, no a 890), 11 bridas de 1" (no 10), nota de UCS-56 precisada. Quedan sin precio 6 renglones (válvulas 1" #600, manómetro estático, reguladores 1301F y 67FR) más consumibles y calificación; referencias débiles: cartucho Gora (sin medida, fibra de vidrio) y caja de chicanas escalada por área.
+- Resultado final (borrador): **142.960,82 por separador**, 288.751,40 los 2 con flete.

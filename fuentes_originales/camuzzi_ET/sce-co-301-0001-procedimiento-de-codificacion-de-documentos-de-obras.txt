@@ -1,0 +1,261 @@
+                                                                                     CÓDIGO       SCE-CO-301-0001
+
+
+                                        PROCEDIMIENTO                               REVISIÓN            00
+
+                                                                                       HOJA           1 de 5
+
+
+
+                                                                                     FECHA           FECHA
+                                                                                   APROBACION       VIGENCIA
+         PROCESO                         OPERACIÓN DE LA RED
+                                                                                     28/06/2022    28/06/2022
+
+                                             CODIFICACION DE                           LIDER DEL PROCESO
+             TEMA
+                                          DOCUMENTOS DE OBRAS                            Julián Dainotto
+                                                                                         APROBADO POR:
+ ANULA/REEMPLAZA
+                                                                                         Sergio Sagula
+
+                                                    MODIFICACIONES
+    Nº de             FECHA
+                                                                   MOTIVO DE LA MODIFICACIÓN
+ REVISIÓN            REVISION
+      00          28/06/2022                                       Creación del documento.
+
+
+
+
+AREAS INVOLUCRADAS:
+
+GERENCIA TÉCNICA
+OBSERVACIONES:
+
+
+
+
+Archivo Informático: Biblioteca Virtual Workplace/infocontratistas/SDT
+                                                                                                               CÓDIGO               SCE-CO-301-0001
+
+
+                                            PROCEDIMIENTO                                                     REVISIÓN                        00
+
+                                                                                                                 HOJA                      2 de 6
+
+
+
+                                                                       INDICE
+Página
+1       OBJETO .............................................................................................................................................. 2
+2       ALCANCE ........................................................................................................................................... 2
+3       AREAS INVOLUCRADAS .................................................................................................................. 2
+4      DEFINICIONES .................................................................................................................................. 2
+    4.1NUMERO DE DOCUMENTO ...................................................................................................................... 2
+    4.2CÓDIGO DE OBRA.................................................................................................................................. 3
+    4.3NUMERO DE CONTRATO DE OBRA........................................................................................................... 3
+    4.4TIPO DE OBRA (XX) ............................................................................................................................... 3
+    4.5TIPO DE DOCUMENTO ............................................................................................................................ 3
+    4.6ESPECIALIDAD....................................................................................................................................... 3
+    4.7NUMERACIÓN CORRELATIVA................................................................................................................... 3
+    4.8ETAPA DEL DOCUMENTO ....................................................................................................................... 3
+    4.9REVISIÓN .............................................................................................................................................. 3
+5      RESPONSABILIDADES ..................................................................................................................... 4
+    5.1DEPARTAMENTO DE OBRAS ................................................................................................................... 4
+    5.2OTROS DEPARTAMENTOS DE GERENCIA TÉCNICA................................................................................... 4
+6      DESARROLLO ................................................................................................................................... 4
+    6.1CODIFICACION................................................................................................................................... 4
+7       ANEXOS ............................................................................................................................................. 5
+
+
+1       OBJETO
+El objeto de la presente es especificar la codificación de los números de documentos
+para el intercambio de documentación digital de obras.
+
+
+2       ALCANCE
+Todas las obras que requieran presentación de documentación técnica a Camuzzi y
+sean coordinadas desde la Gerencia Técnica.
+
+
+3       AREAS INVOLUCRADAS
+Todos los departamentos de la Gerencia Técnica.
+
+
+4       DEFINICIONES
+
+4.1        Numero de documento
+
+El Número de documento será una cadena alfanumérica con un total de 18 caracteres
+que estará definida siguiendo la estructura que se define en la sección 6.1
+DESARROLLO.
+                                                            CÓDIGO      SCE-CO-301-0001
+
+
+                       PROCEDIMIENTO                        REVISIÓN          00
+
+                                                             HOJA           3 de 6
+
+
+4.2 Código de Obra
+Es un código interno de Camuzzi, el cual define con su codificación alfanumérica, la
+Unidad de Negocios vinculada a la obra y el Tipo de obra. Ejemplo: (ABC-01-02-22)
+
+
+4.3 Numero de Contrato de obra
+Es un código de 10 caracteres numéricos que se asigna a un contrato.
+Internamente también se llama Numero de Pedido.
+
+
+4.4 Tipo de obra (XX)
+El tipo de obra está definido implícitamente en la parte numérica del código de obra.
+Corresponde al primer par de caracteres numéricos del Código de Obra.
+ABC-XX-06-22.
+Se clasifican según los subgrupos, Obras de Inversión y Obras de mantenimiento.
+
+
+4.5 Tipo de documento
+Define si el documento en cuestión es; un plano (PL), memoria de cálculo (MC), un
+procedimiento (PR), una planilla (PS), una hoja de datos (HD), especificación Técnica
+(ET), otro (OTR).
+
+4.6 Especialidad
+La especialidad de un documento es una subdivisión del tipo de documento. En el caso
+de los planos, pueden ser Mecánicos (M), Civiles (C), Eléctricos (E), etc.
+
+
+4.7 Numeración correlativa
+Es la numeración de los documentos de un mismo tipo y especialidad.
+
+
+4.8 Etapa del Documento
+Define la etapa a la que pertenece el documento que se está codificando. Proyecto
+Constructivo / Conforme a Obra.
+
+
+4.9 Revisión
+Corresponde con el versionado de los documentos. Las versiones se modifican cuando
+los documentos sufren cambios de cualquier tipo o magnitud.
+Se define en la sección 6.1 DESARROLLO.
+                                                                  CÓDIGO     SCE-CO-301-0001
+
+
+                          PROCEDIMIENTO                           REVISIÓN          00
+
+                                                                   HOJA          4 de 6
+
+
+5     RESPONSABILIDADES
+
+5.1 Departamento de Obras
+Controlar y Gestionar con los contratistas la implementación de la codificación de los
+números de documentos.
+
+
+5.2 Otros Departamentos de Gerencia Técnica
+Tener conocimiento de la codificación de documentos según la especificación.
+Identificar posibles errores e informarlos al coordinador de la obra.
+
+
+6     DESARROLLO
+
+6.1    CODIFICACIÓN – NUMERO DE DOCUMENTO
+
+           Numero de documento [N°]: XXXXX-YYYYY-ZZ-L-QQQ- AA
+
+
+    1. XXXXX (caracteres 1 al 5):
+       Se compone de los tres primeros caracteres del código de obra y los dos
+       primeros números del tipo de obras.
+       Ejemplo (BBL-02-06-22 -> BBL02 o RGD-03-02-22 -> RGD03).
+
+    2. YYYYY (caracteres 6 al 10)
+       Se compone de los últimos 5 números del contrato.
+       Ejemplo: 4500123456 -> 23456
+
+    3. ZZ (caracteres 11 al 12)
+       Se compone de 2 caracteres que representan el tipo de documento.
+       PL: plano – MD: memoria descriptiva – MC: Memoria de Calculo – PR:
+       procedimiento – ET: Especificación Técnica - WM: welding map – TA:
+       Tabla/Planilla, etc.
+
+    4. L (carácter 13)
+       Define la especialidad del documento,
+       M: mecánico – C: civil - E: eléctrico – A: Protección Anticorrosivo - etc.
+
+    5. QQQ (carácter 14 al 16)
+       Corresponde al número de documento en su tipo y especialidad.
+
+    6. AA (Caracteres 17 a 18)
+       Define la etapa a la que corresponde el documento:
+       PC: Proyecto Constructivo
+       CO: Conforme a Obra
+                                                            CÓDIGO     SCE-CO-301-0001
+
+
+                           PROCEDIMIENTO                    REVISIÓN         00
+
+                                                             HOJA          5 de 6
+
+
+6.2       CODIFICACION – REVISIÓN
+
+La Revisión de los documentos, corresponde con la versión del mismo que depende a
+su vez de la etapa del documento.
+
+1. Para proyecto constructivo, las revisiones se basan en codificaciones alfabéticas
+   correlativas con el número de versión.
+
+      •    1° Versión – Rev. A
+      •    2° Versión – Rev. B
+      •    Etc.
+
+2. Para Conformes a Obra, las revisiones se basan en codificaciones numéricas
+   correlativas con el número de versión.
+
+      •    1° Versión – Rev. 01.
+      •    2° Versión – Rev. 02.
+      •    Etc.
+
+
+7         ANEXOS
+7.1 EJEMPLO 1
+
+N° Documento: BBL02-23456-PL-M-001-PC
+Revisión: A
+
+Corresponde a:
+- Código de Obra: BBL-02-06-22
+- N° de contrato: 4500123456,
+- Tipo de documento: Plano (PL)
+- Especialidad: Mecánico (M)
+- N° correlativo: 001
+- Proyecto Constructivo: PC
+- Revisión: A (Corresponde a la PRIMER versión del documento)
+
+7.2 EJEMPLO 2
+
+N° Documento: BBL02-23456-PL-M-001-PC
+Revisión: B
+                                                       CÓDIGO     SCE-CO-301-0001
+
+
+                      PROCEDIMIENTO                    REVISIÓN         00
+
+                                                        HOJA          6 de 6
+
+
+
+
+Corresponde a: (mismo N° de documento del EJEMPLO 1, distinta Versión)
+
+-   Código de Obra: BBL-02-06-22
+-   N° de contrato: 4500123456,
+-   Tipo de documento: Plano (PL)
+-   Especialidad: Mecánico (M)
+-   N° correlativo: 001
+-   Proyecto Constructivo: PC
+-   Revisión: B (Corresponde a la SEGUNDA versión del documento, ej. La Revisión
+    “A”, se calificó como OBSERVADA y se solicitaron modificaciones).
+

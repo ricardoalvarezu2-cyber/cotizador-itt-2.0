@@ -131,5 +131,9 @@ Fuente: `fuentes_originales/taval_lista30_2025-09.xlsx` (Lista 30 de Taval, colu
 ## Horas de ingeniería, calidad y montaje por equipo (28-10-2026)
 `costos/horas_por_equipo.csv`: leído con IA (un agente sonnet) de las hojas "Soldadura + HH", "Costura + HH" y "Montaje HH" de 18 planillas 2025–2026 en `fuentes_originales/ofertas_texto/`, con la cita de cada celda en la columna `cita`. Se toma la revisión más nueva de cada proyecto; Los Toldos REV A, Tecpetrol 10 hoja "Soldadura + HH " (sin guion bajo) y Tanque de glicol Opción 2 quedan con `vigente = no`. Taval 43 da las horas en USD y se pasaron a horas con la tarifa (15 y 13 USD/h). Criterios y dudas en `costos/horas_por_equipo_LEEME.md`. Fecha de cada fila: la del índice de proyectos.
 
-## Especificaciones de clientes (06-11-2026)
-`tecnico/especificaciones_clientes/camuzzi_SCE-IN-501-0008_valvulas_esfericas.md`: del "Informe técnico de válvulas – Listados Camuzzi" (Matías Russo, 06-11-2026; PDF y texto en `fuentes_originales/especificaciones_clientes/camuzzi/`), basado en la SCE-IN-501-0008 Rev. 0 tomada de Scribd. Fuente secundaria hasta tener la especificación original de la web de Camuzzi.
+## 05-11-2026 — Especificaciones técnicas de Camuzzi Gas
+- 34 ET, planos tipo y procedimientos SCE bajados del sitio público de Camuzzi (`fuentes_originales/camuzzi_ET/`, índice `conocimiento/tecnico/camuzzi_ET_indice.csv`).
+- Decisión: listado de marcas SCE-IN-501-0015 — vale la rev 1 (10-02-2026) del pedido CP24578 sobre la rev 00 (2020) de la web (la más reciente).
+
+## 06-11-2026 — Resumen de la SCE-IN-501-0008 (válvulas esféricas de Camuzzi)
+`tecnico/camuzzi_SCE-IN-501-0008_resumen.md`: del "Informe técnico de válvulas – Listados Camuzzi" (Matías Russo, 06-11-2026; PDF y texto en `fuentes_originales/camuzzi_ET/2026-11-06_Informe_tecnico_valvulas_listados_Camuzzi.*`), basado en la SCE-IN-501-0008 Rev. 0 tomada de Scribd. Fuente secundaria hasta tener la especificación original de la web de Camuzzi.

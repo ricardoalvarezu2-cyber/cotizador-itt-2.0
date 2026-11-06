@@ -101,3 +101,15 @@ Hallazgo no aceptado, con su evidencia:
 - **Tapa de cierre rápido 1d (USD 2.480, Megatap).** Se mantiene como referencia de precio. Es la misma medida y la misma serie (12" #150, ASME VIII). Según la guía (§ "Similares: misma serie y misma norma", Matías 29-10-2026), otra marca se anota como diferencia y no invalida la referencia. Las referencias de Futura que propone el auditor son de otra medida y otra serie (8" #300 USD 3.424; 16" #600 USD 8.432), así que no sirven como referencia. La Futura 8" #300 queda cargada como fuente descartada, porque muestra que una marca del listado puede cotizar más. La cotización de Megatap está vencida, ya frena por eso y está pedida a Compras.
 
 Siguen abiertos: ARMF (45 h del FM3) y los internos del filtro, que salen de un FM3 con tapa bridada, hasta tener el plano tipo (pendiente_itt).
+
+## 05-11-2026 — Actualización con los precios nuevos del catálogo (pedido de Matías: «revisá y rehacé las cotizaciones de Camuzzi»)
+
+- Se cruzó cada renglón con el catálogo actualizado (listas Provemet 29-10-2026, Oil Metal 37278, Miyashiro 50594). Solo cambian los renglones con la **misma pieza** y precio más nuevo; donde la marca se eligió por el listado SCE-IN-501-0015 (Cintolo / Curvo Sold) se mantiene, y las juntas nuevas (#300) no son de la serie pedida.
+- Granallado y pintura: USD 37,98/m² (PIN-00579, precio firme confirmado por Matías el 30-10-2026, mismo alcance: granallado y pintura con materiales). La planilla de origen lo aplica sobre los m² + 20 % de overspray, así que la cantidad va × 1,2. Antes: criterio ITT 50 USD/m² (queda de alternativa).
+- Fecha de referencia del ajuste: 31-10-2026 (todavía no hay índices de noviembre).
+- Brida WN 4" #150 (pos 5 y carretel pos 2): Renard 35,65 → Provemet cot. 288979 ítem 5, 23,42 (29-10-2026; cotizada para 4 un). Caño 6" sch 40 (pos 15, 15b y 1g): 60,51 → Provemet cot. 288974 ítem 1, 49,48. El 4" sch 40 sigue Renard.
+- Horas de armado (ARM) 65,1 → 63,1 h al volver a correr precotizar.py (estimador de horas).
+- Precio unitario 32.255,75 → **31.823,10** (total con flete 32.427,22), borrador.
+- Revisión independiente (05-11-2026): los 8 precios Provemet coinciden con el PDF y la pieza con el plano; el × 1,2 de la pintura está en la planilla de origen (=D×37,98×1,2, «Overspray 20%»). Corregido después: la fecha de los precios que no cambiaron había pasado a hoy (HOY se usaba también como referencia: vuelve a 30-10-2026); dólar de octubre cerrado 1.543,23 (era 1.541,43); las horas de armado quedan en 65,1 h (el estimador las bajaba solo porque los materiales salieron más baratos).
+- Para confirmar: Provemet da el precio con bonificación 4 % por compra total, para las cantidades cotizadas (no las del plano) y con validez hasta el 13-11-2026.
+- Precio unitario final: **31.858,09** (total con flete 32.461,68), borrador.

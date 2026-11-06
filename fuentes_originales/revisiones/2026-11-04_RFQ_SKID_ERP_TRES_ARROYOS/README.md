@@ -1,0 +1,14 @@
+# RFQ REV.4.1 definitiva · Skid de regulación ERP Parque Industrial Tres Arroyos (04-11-2026)
+
+- Original: `RFQ_REV4_1_DEFINITIVA_SKID_ERP_TRES_ARROYOS.xlsx` (lo pasó Matías el 04-11-2026). Base: plano SCE-RE-315-0048 y especificación SCE-RE-515-0032: es el mismo skid de `cotizaciones/COT26-0135-001_CAMUZZI_CP24578_SKIDREG`.
+- Pedido de Matías: completar la primera hoja (columnas L a Q) **solo con productos iguales**, sin similares ni sugeridos.
+- Completado: `RFQ_REV4_1_SKID_ERP_TRES_ARROYOS_precios_iguales.xlsx` (lo genera `llenar_iguales.py`). Borrador, sin revisar. USD sin IVA, ajustado al 04-11-2026.
+- Criterio: igual = buscador de materiales (`buscar_material.py`) sin diferencias, con los datos que el RFQ no trae (schedule de las bridas, cara de la ciega, NPT de las cuplas) tomados del plano a través del cómputo de la COT26-0135-001. La marca no cuenta para igual (regla del buscador): donde el listado del cliente SCE-IN-501-0015 no incluye al proveedor, se aclara en Observaciones.
+- Resultado: 10 renglones iguales (M05, M5B, M06, M07, M08, M10, M12, M13, M17B, M18B), total USD 1.958,78. El resto queda sin precio, con el motivo.
+- Auditoría independiente (04-11-2026): precios, fechas y ajustes verificados contra los originales y el catálogo. M6B salió de los iguales (el plano pide anillo exterior y la referencia es c/anillo interior, además de estimada). Queda a decidir por Matías si "igual" incluye la marca del listado: hoy Renard figura igual en bridas, tee y casquetes con la aclaración; la COT26-0135-001 usa Cintolo/Curvo Sold para la tee 8x6 (USD 351,50) y trata los casquetes como similares.
+
+## Puente de medición y filtro coalescente (04-11-2026)
+- Originales: `RFQ_REV4_1_DEFINITIVA_PUENTE_MEDICION.xlsx` (plano SCE-ME-315-039: mismo equipo que `cotizaciones/COT26-0135-002_CAMUZZI_CP24578_PUENTE`) y `RFQ_REV4_3_FILTRO_COALESCENTE_Camuzzi_2026.xlsx`. Mismo pedido: solo iguales. Script: `llenar_iguales_puente_filtro.py`.
+- Puente: 5 iguales (PM05 brida WN 4" Provemet 29-10-2026, PM05B junta 4", PM06 brida WN 6", PM10 codo 90 LR 4", PM11B cupla 3/4" NPT), total USD 542,59. Columnas L a Q iguales a las del skid (pedido de Matías): Antecedente, fecha del antecedente, Precio Unit original, precio unitario ajustado, Precio Total ajustado y Observaciones (el original traía Precio Unit, Precio Total y Observaciones en M a O).
+- Filtro: su primera hoja son supuestos de diseño; se completó 01_MTO_EXPANDIDO: ningún igual (motivos en Observaciones). Si el cuello de la brida B01 fuera Sch160 como el caño P01, habría igual (BRI-01226, USD 584,14 del 03-07-2025): no se cargó por ser inferencia. Matías pidió seguir solo con el puente.
+- Auditoría independiente: precios y fórmulas verificados; se agregaron las aclaraciones de anillos de junta, radio del codo, condiciones de la cotización Provemet (4 un, validez hasta 13-11-2026) y el motivo de la junta 6" (el buscador da igual un estimado del cepo con otros anillos).

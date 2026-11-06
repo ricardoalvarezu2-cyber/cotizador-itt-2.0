@@ -1,56 +1,46 @@
 # Ficha por rubro — COT26-0135-003
 
-Generada por `herramientas/ficha_rubros.py` el 03-11-2026. Todo **por separador**; la cantidad (2) multiplica al final.
+Generada por `herramientas/ficha_rubros.py` el 05-11-2026. Todo **por separador**; la cantidad (2) multiplica al final.
 Sirve para pedir un precio global al tercero y para controlarlo contra el cálculo detallado.
 
 ## 1. MO de armado y soldadura del piping
 
-- Juntas a tope (BW) de taller: **15** · juntas SW, cuplas y olets: **0** · extremos para soldar en campo: 0
-- Pulgadas equivalentes de soldadura: **141,36**
-- kg de piping (caños, bridas, accesorios y válvulas con tabla): **506 kg** · bridas: 23
-- Diámetros soldados a tope: 55", 10", 6", 2", 1"
-- Sin peso (no suman kg): 1 Chapa para virola Ø55" (DI 1.280 mm) × 3; 2 Cabezal semielíptico 2:1 Ø55" × 2 1/4" (; 4 Placa portaelementos Ø1,28 m × 1 5/8" co; 14c Válvula tapón lubricado 1" #600 de sacri; 16 Purga automática 1" #600 bridada: válvul; 16b Interruptor de nivel a flotante (acciona; 21 Internos: caja de chicanas de doble bols; 21b Conector recto doble virola OD × NPT 1/2; 21c Conector recto doble virola OD × NPT 1/4; 21d Tubing de acero inoxidable 1/4" × 0,89 m; 22c Espárragos totalmente roscados ASTM A193; 23b Piso de rejilla antideslizante tipo Tech; 24 Pollera / patas de apoyo (450 kg); 25 Placa de identificación de acero inoxida
-- ⚠ pos 1: cantidad en kg con extremos BW: no se cuentan juntas (no son piezas); contar sus soldaduras a mano
-- ⚠ pos 23: cantidad en kg con extremos —: no se cuentan juntas (no son piezas); contar sus soldaduras a mano
-- ⚠ pos 23b: cantidad en m2 con extremos —: no se cuentan juntas (no son piezas); contar sus soldaduras a mano
-- ⚠ pos 24: cantidad en kg con extremos —: no se cuentan juntas (no son piezas); contar sus soldaduras a mano
-- **Costo por antecedentes.** Por antecedentes: USD 48.084,90 (3 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 340,15/pulgada eq. · USD 95,10/kg de piping · USD 3.205,66/junta a tope
+- Juntas a tope (BW) de taller: **0** · juntas SW, cuplas y olets: **0** · extremos para soldar en campo: 0
+- Pulgadas equivalentes de soldadura: **0,00**
+- kg de piping (caños, bridas, accesorios y válvulas con tabla): **357 kg** · bridas: 15
+- Diámetros soldados a tope: —
+- Sin peso (no suman kg): 01 Envolvente; 01b Placa portacartuchos y placa guía superi; 02 Cabezal semielíptico (2:1); 03 Tapa de apertura rápida; 05 Brida Welding-Neck; 06 Niple de conexión; 07 Brida Welding-Neck; 08 Disco de refuerzo; 09 Disco de refuerzo; 10 Perfil normalizado de acero al carbono U; 11 Perfil normalizado de acero al carbono U; 15 Faldon de Apoyo (segun detalle); 16 Interruptor neumático de nivel; 18 Cartucho filtrante de papel de 5½" x 36"; 19 Caja de chicana de acero inoxidable de d; 20 Válvula automática; 22 Válvula tapon lubricado; 24 Chapa de identificación (según detalle); 25 Tarima con escalera protegida y barandas; 29 Arandela y guia para apoyo de elementos ; 31 Valvula de alivio NPT (Tipo S-70); 32 Conector TE NPT; 34 Tubing de acero inoxidable c/ conectores; 35 Caño de acero; 36 TE; 37 Codo de radio largo; 38 Brida W.N.; 38c Espárragos ASTM A193 B7 con 2 tuercas A1; 39 Cancamo de Izaje
+- **Costo por antecedentes.** Por antecedentes: USD 18.671,00 (2 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 52,36/kg de piping
 
 ## 2. MO de fabricación de la estructura
 
-- kg de estructura: **1.300 kg** · m²: 52,50
-- **Costo por antecedentes.** Por antecedentes: USD 17.322,68 (1 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 13,33/kg
+- kg de estructura: **0 kg** · m²: 0,00
+- **Costo por antecedentes.** Por antecedentes: USD 5.055,85 (1 renglón/es, con ajuste por inflación).
 
 ## 3. Granallado y pintura
 
-- m² de piping: **25,53** (caños y niples 1,60; bridas, accesorios y válvulas por largo equivalente) · m² de estructura: **52,50**
-- m² total: **78,03** (sin overspray) · esquema: según pliego
-- **Costo por antecedentes.** Por antecedentes: USD 2.900,00 (1 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 37,17/m²
+- m² de piping: **4,57** (caños y niples 4,30; bridas, accesorios y válvulas por largo equivalente) · m² de estructura: **0,00**
+- m² total: **4,57** (sin overspray) · esquema: según pliego
+- **Costo por antecedentes.** Por antecedentes: USD 865,94 (1 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 189,48/m²
 
 ## 4. Radiografía y END
 
-- Juntas a tope: **15** · RX 0% → placas chicas **0**, grandes **0**
+- Juntas a tope: **0** · RX 0% → placas chicas **0**, grandes **0**
 - Juntas SW, cuplas y olets (LP donde no se puede radiografiar): **0**
-- **Costo por antecedentes.** Por antecedentes: USD 3.163,13 (2 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 210,88/junta a tope
+- **Costo por antecedentes.** Por antecedentes: USD 2.888,78 (2 renglón/es, con ajuste por inflación).
 
 ## 5. Procedimientos
 
-- WPS/PQR de soldadura a tope, acero al carbono (hasta 15,09 mm de espesor)
-- Calificación de soldadores (WPQ) (una por WPS y soldador asignado)
-- Procedimiento de prueba hidráulica
 - Procedimiento de granallado y pintura (esquema del pliego)
 - Confirmar con el pliego si exige procedimientos nuevos o alcanzan los vigentes de ITT
 - **Costo por antecedentes.** Por antecedentes: USD 0,00 (1 renglón/es, con ajuste por inflación).
 
 ## 6. Prueba hidráulica
 
-- Volumen interior de los caños: **47,9 litros**
-- **Costo por antecedentes.** Por antecedentes: USD 224,04 (1 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 4,68/litro
+- Volumen interior de los caños: **0,0 litros**
+- **Costo por antecedentes.** Por antecedentes: USD 168,03 (1 renglón/es, con ajuste por inflación).
 
 ## 7. Horas de ITT (ingeniería, calidad y montaje)
 
@@ -58,7 +48,7 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 ## 8. Transporte
 
-- Medidas del separador: 0,00 × 0,00 × 0,00 m (largo × ancho × alto) · kg: **1.806** (piping + estructura)
+- Medidas del separador: 0,00 × 0,00 × 0,00 m (largo × ancho × alto) · kg: **357** (piping + estructura)
 - ⚠ Faltan las medidas del equipo (largo × ancho × alto): cargarlas del plano de conjunto
 - Sin precio por equipo: se cotiza EXW (o flete aparte en los parámetros). Para sumarlo por equipo, pasar el rubro a global.
 

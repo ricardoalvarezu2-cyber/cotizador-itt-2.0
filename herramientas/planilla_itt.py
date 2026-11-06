@@ -4,7 +4,8 @@ por rubro con descripción, descripción ampliada, cantidad, unidad, USD/un y su
 modelo en fuentes_originales/planillas_modelo/Planilla_base_para_cotizaciones.xlsx.
 
 Los números no se cargan a mano: cada renglón toma su precio ajustado y su subtotal de las hojas Materiales y
-"MO y servicios" y el cuadro de rentabilidad sale de la hoja Cotización, así que el total es el mismo de siempre.
+"MO y servicios" y el cuadro de rentabilidad sale de las celdas con nombre del Resumen (Cantidad, CostoMateriales,
+FactorMO, TotalOferta…; ver planilla_excel.py), así que el total es el mismo de siempre.
 La página arma la misma hoja (web/src/documentos.js, planillaItt)."""
 import re
 import sys
@@ -126,8 +127,8 @@ def material_principal(cfg, b):
     return ", ".join(out)
 
 
-def escribir(wb, cfg, mat, srv, CAT, fecha):
-    """Agrega la hoja "Planilla ITT" como primera hoja del libro (las demás quedan atrás)."""
+def escribir(wb, cfg, filas, CAT, fecha):
+    """Agrega la hoja "Planilla ITT" como primera hoja del libro. filas: {id(ítem): (hoja, fila)} de Materiales y MO y servicios."""
     import atributos_plano
     from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
     p, eq = cfg["parametros"], cfg["equipo"]
@@ -164,9 +165,11 @@ def escribir(wb, cfg, mat, srv, CAT, fecha):
         for j in range(2, 9):
             ws.cell(r, j).border = BT
         ws.row_dimensions[r].height = 22.5
+    if cfg.get("estado") in ("borrador", ""):
+        x = ws.cell(11, 1, "BORRADOR, SIN REVISAR: no enviar al cliente"); x.font = Font(name="Arial", size=11, bold=True, color="C00000")
+    mat = [i for i in cfg["items"] if i["grupo"] == "material"]
+    srv = [i for i in cfg["items"] if i["grupo"] != "material"]
     # ---- bloques (se escriben primero para conocer sus subtotales); empiezan debajo del alcance
-    fila_mat = {id(it): i for i, it in enumerate(mat, 2)}
-    fila_srv = {id(it): i for i, it in enumerate(srv, 2)}
     activos = [n for n in BLOQUES if any(b[id(it)] == n for it in cfg["items"])]
     n_res = 5 + (0 if p.get("FM") == p.get("FMO") else 1) + (1 if p.get("TRANS") else 0)
     r_tot = 15 + n_res
@@ -188,10 +191,11 @@ def escribir(wb, cfg, mat, srv, CAT, fecha):
         r0 = r
         for it in its:
             s = it["fuentes"][0]
-            hoja, i = ("Materiales", fila_mat[id(it)]) if it["grupo"] == "material" else ("'MO y servicios'", fila_srv[id(it)])
+            hoja, i = filas[id(it)]
+            hoja = f"'{hoja}'"
             ped, ant = atributos_plano.fila_datos(it, CAT) if it["grupo"] == "material" else ([], ["", ""])
             eqv = "No encontrado" if not s["precio"] or s.get("coincide") == "sin_ref" else EQV.get(s.get("coincide"), "")
-            vals = [it["descripcion"], ampliada(it), it["cantidad"], it["unidad"], f"={hoja}!O{i}", f"={hoja}!P{i}", it.get("pos", ""),
+            vals = [it["descripcion"], ampliada(it), it["cantidad"], it["unidad"], f"={hoja}!I{i}", f"={hoja}!J{i}", it.get("pos", ""),
                     (ant[0] + " · " if ant[0] else "") + str(s.get("proveedor", "")), eqv, fecha(s["fecha"]) if s.get("fecha") else ""]
             for j, v in enumerate(vals, 1):
                 x = ws.cell(r, j, v); x.border = BT; x.font = Font(name="Calibri", size=11)
@@ -213,16 +217,16 @@ def escribir(wb, cfg, mat, srv, CAT, fecha):
             x = ws.cell(rr, col, t); x.fill = DUR; x.border = BT
             x.font = F(size=16 if col == 1 else 11, bold=col == 1); x.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
     ws.merge_cells("A12:A13"); ws.row_dimensions[12].height = 42
-    C = "'Cotización'!"
-    resto = f"({C}B21+{C}B22-{ref('Mano de obra de 3ros')}-{ref('Seguro de Caución')}-{ref('Transporte a destino final')})"
+    resto = f"(CostoMO+CostoServicios-{ref('Mano de obra de 3ros')}-{ref('Seguro de Caución')}-{ref('Transporte a destino final')})"
     if p.get("FM") == p.get("FMO"):
-        filas = [("Materiales, MO y SVC", f"={C}B5", f"={C}B18+{C}B19+{resto}", f"={C}B6")]
+        filas = [("Materiales, MO y SVC", "=Cantidad", f"=CostoMateriales+CostoContingencia+{resto}", "=FactorMateriales")]
     else:
-        filas = [("Materiales (con contingencia)", f"={C}B5", f"={C}B18+{C}B19", f"={C}B6"), ("MO ITT y servicios", f"={C}B5", f"={resto}", f"={C}B7")]
-    filas += [("Válvulas Taval", f"={C}B5", f"={C}B20", f"={C}B14"), ("Mano de obra de terceros", f"={C}B5", f"={ref('Mano de obra de 3ros')}", f"={C}B7"),
-              ("Seguro de caución", f"={C}B5", f"={ref('Seguro de Caución')}", f"={C}B7"), ("Transporte", f"={C}B5", f"={ref('Transporte a destino final')}", f"={C}B7")]
+        filas = [("Materiales (con contingencia)", "=Cantidad", "=CostoMateriales+CostoContingencia", "=FactorMateriales"),
+                 ("MO ITT y servicios", "=Cantidad", f"={resto}", "=FactorMO")]
+    filas += [("Válvulas Taval", "=Cantidad", "=CostoTaval", "=FactorTaval"), ("Mano de obra de terceros", "=Cantidad", f"={ref('Mano de obra de 3ros')}", "=FactorMO"),
+              ("Seguro de caución", "=Cantidad", f"={ref('Seguro de Caución')}", "=FactorMO"), ("Transporte", "=Cantidad", f"={ref('Transporte a destino final')}", "=FactorMO")]
     if p.get("TRANS"):
-        filas.append(("Flete y embalaje (por envío)", 1, f"={C}E23", 1))
+        filas.append(("Flete y embalaje (por envío)", 1, "=Flete", 1))
     for k, (n, cant, costo, fac) in enumerate(filas, 15):
         vals = [n, cant, costo, fac, f"=C{k}*D{k}", f"=E{k}", f"=IFERROR((E{k}-C{k})/E{k},0)", f"=F{k}*B{k}"]
         for j, v in enumerate(vals, 1):
@@ -245,9 +249,9 @@ def escribir(wb, cfg, mat, srv, CAT, fecha):
     rt = r_tot + 2
     ws.merge_cells(start_row=rt, start_column=6, end_row=rt, end_column=7)
     x = ws.cell(rt, 6, "Total U$D"); x.font = F(size=18, bold=True); x.fill = AMA; x.alignment = Alignment(horizontal="center"); x.border = BM
-    x = ws.cell(rt, 8, f"={C}E28"); x.font = F(size=18, bold=True); x.fill = AMA; x.number_format = "#,##0.00"; x.alignment = Alignment(horizontal="center"); x.border = BM
+    x = ws.cell(rt, 8, "=TotalOferta"); x.font = F(size=18, bold=True); x.fill = AMA; x.number_format = "#,##0.00"; x.alignment = Alignment(horizontal="center"); x.border = BM
     ws.cell(rt + 1, 6, "Precio unitario de la oferta (redondeado):").font = F(size=10, italic=True)
-    x = ws.cell(rt + 1, 8, f"={C}D27"); x.number_format = "#,##0.00"; x.font = F(size=10, italic=True)
+    x = ws.cell(rt + 1, 8, "=PrecioUnitario"); x.number_format = "#,##0.00"; x.font = F(size=10, italic=True)
     # ---- plazo y entrega
     rp = rt + 3
     pz = cfg.get("plazo") or {}

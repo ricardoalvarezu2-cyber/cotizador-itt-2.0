@@ -337,7 +337,7 @@
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-11-03",
+     "fecha": "2026-11-06",
      "coincide": "sin_ref",
      "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
@@ -369,7 +369,7 @@
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx",
      "fecha": "2026-06-26",
      "coincide": "similar",
-     "diferencia": "medida: 7/8 x 5 3/4 (pedido 7/8 x 3 7/8)"
+     "diferencia": "medida: 7/8 x 5 3/4 (pedido 7/8 x 3 7/8); unidad distinta: catálogo por juego, plano por un"
     }
    ]
   },
@@ -399,7 +399,7 @@
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx",
      "fecha": "2026-06-26",
      "coincide": "similar",
-     "diferencia": "medida: 7/8 x 5 3/4 (pedido 7/8 x 5 1/2)"
+     "diferencia": "medida: 7/8 x 5 3/4 (pedido 7/8 x 5 1/2); unidad distinta: catálogo por juego, plano por un"
     }
    ]
   },
@@ -422,11 +422,12 @@
     {
      "tipo": "ant",
      "precio": 5.56,
-     "proveedor": "MS o Fseal · JUN-02780",
-     "codigo": "JUN-02780",
+     "proveedor": "MS o Fseal · JUN-05048",
+     "codigo": "JUN-05048",
      "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt",
      "fecha": "2026-02-19",
-     "coincide": "igual"
+     "coincide": "similar",
+     "diferencia": "medida: anillos ext. e int. (no pedido)"
     }
    ]
   },
@@ -449,12 +450,12 @@
    "faltan_datos": [],
    "fuentes": [
     {
-     "tipo": "ant",
-     "precio": 20.0,
-     "proveedor": "Antecedentes puentes Taval/CGC s2000 · NIP-03365",
+     "tipo": "cot",
+     "precio": 5.66,
+     "proveedor": "Grupo Provemet · NIP-03365",
      "codigo": "NIP-03365",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\55- Tecpetrol Puentes de Producción PPar Valvula y Puente PR 54942 · 7.Propuesta Comercial (envío al Cliente)/Puente de producción Tec Conv y NOC versión 3.xlsx",
-     "fecha": "2026-04-22",
+     "origen": "Grupo_Provemet_Cotizacion_0000289909_TAVAL_SA.pdf",
+     "fecha": "2026-11-05",
      "coincide": "igual"
     }
    ]
@@ -478,14 +479,14 @@
    "faltan_datos": [],
    "fuentes": [
     {
-     "tipo": "est",
-     "precio": 8.49,
-     "proveedor": "no dice · AFO-02394",
-     "codigo": "AFO-02394",
-     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\3-YPF Separador Bifasicos - Separadores para satelites · 5.Proveedores 3ros/YPF - Sep Bifasico - 2591 - 21.2 - precios compras V1.xlsx.txt",
-     "fecha": "2025-03-27",
+     "tipo": "cot",
+     "precio": 2.0,
+     "proveedor": "Oil Metal (cód. SOC005008030105) · AFO-05017",
+     "codigo": "AFO-05017",
+     "origen": "fuentes_originales/listas_vendedor/2026-11-05/oilmetal_cotizacion_37278_2026-10-30.pdf · código SOC005008030105",
+     "fecha": "2026-10-30",
      "coincide": "similar",
-     "diferencia": "diametro: 0.75\" (pedido 0.5\"); material: sin dato (pedido A105); extremos: sin dato (pedido SW/BW); precio escalado por diámetro (0,5\" ÷ 0,75\")^1,5 = × 0,54"
+     "diferencia": "schedule: 80 (no pedido); extremos: sin dato (pedido SW/BW)"
     }
    ]
   },
@@ -538,14 +539,14 @@
    ],
    "fuentes": [
     {
-     "tipo": "lista",
-     "precio": 85.18,
-     "proveedor": "Renard (cód. 3803) · ABW-00408",
+     "tipo": "cot",
+     "precio": 95.34,
+     "proveedor": "Oil Metal (cód. AC0400-4K280527) · ABW-00408",
      "codigo": "ABW-00408",
-     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3803",
-     "fecha": "2025-12-26",
+     "origen": "fuentes_originales/listas_vendedor/2026-11-05/oilmetal_cotizacion_37278_2026-10-30.pdf · código AC0400-4K280527",
+     "fecha": "2026-10-30",
      "coincide": "similar",
-     "diferencia": "material: A234 WPB (no pedido)"
+     "diferencia": "material: A234 WPB (no pedido); el último precio (53,92) se aparta más de 40% de la mediana de sus últimos precios: se usa la mediana 95,34"
     }
    ]
   },
