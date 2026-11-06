@@ -43,6 +43,7 @@ El proceso tiene dos etapas. El **presupuesto preliminar** se arma con anteceden
 - `pedido/lista_materiales_plano.csv`: **una fila por posición del plano, con todas sus columnas** (pos, descripción, Ø, serie o schedule, material, extremos, modelo o fabricante, cantidad, unidad). Se copia tal cual, sin interpretar.
 - Leer también las **notas del plano** (pintura, revestimientos, alternativas) y el **dibujo**, para ver qué extremos se sueldan en taller y cuáles quedan para campo.
 - Anotar los requisitos del pedido: ensayos, registros, marcas exigidas, fechas y lugar de entrega.
+- Antes, mirar si el cliente ya tiene ficha en `conocimiento/tecnico/especificaciones_clientes/` (requisitos de sus especificaciones generales, por ejemplo Camuzzi SCE-IN-501-0008 para válvulas esféricas).
 - Leer el **pliego y la especificación técnica** y hacer un resumen de una página: alcance, normas, ensayos, pintura, certificados y dossier, plazo pedido, forma de pago, moneda, lugar de entrega, multas y garantía. Lo dudoso va a una lista de **consultas al cliente**.
 - **Marcas:** cruzar con `conocimiento/comercial/marcas_aprobadas.csv` (por cliente y rubro). Si el pliego exige marcas, se cotizan esas; otra marca es un desvío declarado.
 

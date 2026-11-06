@@ -123,6 +123,8 @@
 
 ## 3. Pendientes del proyecto
 
+**Especificaciones de clientes (06-11-2026):** se cargó la ficha de válvulas esféricas Camuzzi (SCE-IN-501-0008) desde el informe de Matías, en `tecnico/especificaciones_clientes/`. Falta bajar la especificación original de la web de Camuzzi y verificarla punto por punto, y confirmar a qué equipo corresponde el listado 3 del informe (parece el filtro FM-06 de la 002, no el separador 003).
+
 **Abiertos del 30-10-2026 (colectores YPF Lic 66944):** decidir qué precio vale en las 16 piezas con precios distintos entre hojas (tabla en `auditorias/2026-10-30_YPF_Lic66944_colectores_2da_entrega.md`) y cargarlas; confirmar si las 90 h de planta por colector alcanzan para montaje, dimensional y desmontaje.
 
 **Controles movidos a propósito (30-10-2026), por los precios de hoy de la planilla de colectores YPF Lic 66944:** F01 2.868 → 2.822, C01 44.337 → 44.749, P01 39.552 → 39.604, M01 34.225 → 34.622, TS01 59.014 → 59.079, P02 9.153 → 9.005, SK01 62.286 → 61.162. Solo cambian materiales: misma pieza con el precio nuevo (ej. brida WN 600 LB 4" 120 → 56,37; retención 3" 300 LB Taval 167,50 → 301,88; sockolet 8"x3/4" 26 → 8) y la globo GAG8N 3/4" Taval ahora con precio (41). 50 resultados del buscador revisados y aceptados (51 después de integrar main con Camuzzi: suma el manómetro 19b y los espárragos 22c del separador, que pasan a un similar 7/8" #600 de USD 5,50; el renglón sigue en 0 para pedir cotización); pares de compatibilidad: 0 nuevos aceptados ni rechazados. El servicio de pintura de la planilla va con nombre propio (PIN-00579) para no tapar el de 2026-03 que usan los controles.
