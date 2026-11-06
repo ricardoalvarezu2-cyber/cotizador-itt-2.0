@@ -126,6 +126,8 @@
 
 ## 3. Pendientes del proyecto
 
+**Lector del catálogo (06-11-2026, vistos en la carga diaria de Drive; no se tocaron porque cambian claves y piden auditoría):** (1) "GR.B7 7/8\"" se lee Ø 7 7/8" (el 7 de B7 se pega a la fracción); (2) en "espárrago c/2 tuercas A193 B7 / A194 2H" el material queda A194 2H (24 espárragos del catálogo así); (3) "Brida … Ring Joint" cae en la familia de juntas; (4) "Brida Socket Welding" queda sin tipo (no se junta con las SW); (5) 6 códigos de espárragos mezclan precios con y sin tuercas (JUN-01627, 01636, 02733, 02734, 04193, 04931). En la carga del 06-11 se esquivaron normalizando las descripciones.
+
 **ET de Camuzzi (05-11-2026):** 34 ET, planos tipo y procedimientos bajados del sitio público (`conocimiento/tecnico/camuzzi_ET_LEEME.md`, requisitos en `camuzzi_ET_requisitos.md`). Faltan las genéricas que el sitio ya no muestra (SCE-IN-501-0008 válvulas esféricas, SCE-RE-308-0001 ensayo de esféricas, SCE-RE-512-0001, SCE-RE-508-0001, SCE-ME-106-0003, SCE-IN-301-0001, SCE-IN-107-0004, SCE-RE-110-0006, SCE-RE-112-0002/0005, entre otras): pedirlas a Camuzzi cuando un pliego las cite. **Controles movidos (05-11-2026) por la separación de juntas:** P01 38.824 → 39.195, TS01 57.961 → 58.921, SK01 60.936 → 62.705.
 
 **Abiertos del 30-10-2026 (colectores YPF Lic 66944):** decidir qué precio vale en las 16 piezas con precios distintos entre hojas (tabla en `auditorias/2026-10-30_YPF_Lic66944_colectores_2da_entrega.md`) y cargarlas; confirmar si las 90 h de planta por colector alcanzan para montaje, dimensional y desmontaje.
