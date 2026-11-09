@@ -161,6 +161,8 @@ def main():
         for ruta in sorted(carpeta.iterdir()):
             if ruta.name.lower() == "readme.md":
                 continue
+            if ruta.suffix.lower() == ".md":  # transcripción de un PDF del Drive: sus precios van por listas_nuevas.csv
+                continue
             fmt = next((f for f in FORMATOS if re.match(f[0], ruta.name)), None)
             if not fmt:
                 avisos.append(f"{ruta.relative_to(RAIZ)}: formato desconocido, no se cargó")

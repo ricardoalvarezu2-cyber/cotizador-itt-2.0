@@ -252,7 +252,7 @@
    ],
    "rx_pct": 0
   },
-  "generada": "2026-10-30",
+  "generada": "2026-11-03",
   "horas": {},
   "mo_estructura": {
    "kg": 0,
@@ -260,8 +260,8 @@
   },
   "mo_piping": {
    "aproximados": [
-    "7 Válvula de retención 2\" #600 a clapeta",
-    "13 Junta monolítica 2\" sch80 WPB BW"
+    "7 VALVULA RETENCION Ø 2\" # 600 - TIPO A CL",
+    "13 JUNTA MONOLITICA"
    ],
    "avisos": [],
    "bridas": 0,
@@ -273,13 +273,14 @@
    "extremos_campo": 4,
    "juntas_bw": 4,
    "juntas_sw_olet": 2,
-   "kg_piping": 125.6,
+   "kg_piping": 126.6,
    "pulg_eq": 13.366,
    "sin_peso": [
-    "6 Unión doble a golpe 2\" 2000",
-    "10 Buje reducción 2\" × 1/2\" NPT",
+    "6 UNION DOBLE A GOLPE",
+    "10 BUJE REDUCCION",
     "14b Sobrante de caño revestido (no va en el ",
-    "21 Unión doble a golpe extensible 2\""
+    "16 REDUCCION CONCENTRICA",
+    "21 UNION DOBLE GOLPE EXTENSIBLE"
    ]
   },
   "ph": {
@@ -396,7 +397,7 @@
     "Faltan las medidas del equipo (largo × ancho × alto): cargarlas del plano de conjunto"
    ],
    "destino": "",
-   "kg_equipo": 125.6,
+   "kg_equipo": 126.6,
    "largo_m": 0,
    "por_camion": null,
    "viajes": null
@@ -434,7 +435,7 @@
   "<b>Accesorios forjados:</b> ahora salen de la lista Renard (dic-2025), con su código. En el borrador estaban estimados.",
   "<b>28-10-2026:</b> manga termocontraíble (35), sellador (15) e ingeniería/dossier (100) estaban supuestos sin referencia: pasan a SIN PRECIO, pedir cotización (regla P4 ter de Matías)."
  ],
- "huella_repo": "a15fb59f90315f0a",
+ "huella_repo": "9ea2cc83cb7aa70e",
  "indices_congelados": {
   "fecha": "2026-10-28",
   "filas": [
@@ -789,8 +790,16 @@
     "serie": "3000",
     "tipo": "tapon"
    },
+   "atributos": {
+    "diametro": "0.5\"",
+    "extremos": "NPT",
+    "familia": "AFO",
+    "material": "A105",
+    "serie": "2000",
+    "tipo": "tapon"
+   },
    "cantidad": 3,
-   "descripcion": "Tapón 1/2\" NPT",
+   "descripcion": "TAPON",
    "desvio": [
     {
      "ofrecido": "serie 3000",
@@ -798,7 +807,8 @@
      "que": "serie"
     }
    ],
-   "especificacion": "Pedido: 2000 A105 · ofrecido S3000 A105",
+   "especificacion": "ITT: Tapón 1/2\" NPT · Pedido: 2000 A105 · ofrecido S3000 A105",
+   "faltan_datos": [],
    "fam": "AFO",
    "fuentes": [
     {
@@ -815,7 +825,7 @@
    "id": "M01",
    "plano": {
     "cantidad": "3",
-    "descripcion": "Tapón",
+    "descripcion": "TAPON",
     "diametro": "1/2\"",
     "extremos": "NPT-M",
     "material": "ASTM A-105",
@@ -833,10 +843,20 @@
     "paso": "reducido",
     "serie": "2000",
     "tipo": "esferica",
-    "trim": "asiento metalico"
+    "trim": "asientos metalicos"
+   },
+   "atributos": {
+    "diametro": "0.5\"",
+    "extremos": "NPT",
+    "familia": "VAL",
+    "material": "A216 WCB",
+    "paso": "reducido",
+    "serie": "2000",
+    "tipo": "esferica",
+    "trim": "asientos metalicos"
    },
    "cantidad": 5,
-   "descripcion": "Válvula esférica 1/2\" #2000 asiento metálico",
+   "descripcion": "VALVULA ESFERICA Ø 1/2\" #2000 - PASO NOMINAL - CUERPO ASTM A-216 VASTAGO AISI-316 - ESFERA FLOTANTE AISI 316 - ASIENTOS METALICOS AISI-316",
    "desvio": [
     {
      "ofrecido": "a confirmar con el proveedor (cotizada forjada con asiento PTFE)",
@@ -844,7 +864,8 @@
      "que": "material"
     }
    ],
-   "especificacion": "Paso nominal · cuerpo A216 · vástago, esfera flotante y asientos metálicos AISI 316 · NPT-H",
+   "especificacion": "ITT: Válvula esférica 1/2\" #2000 asiento metálico · Paso nominal · cuerpo A216 · vástago, esfera flotante y asientos metálicos AISI 316 · NPT-H",
+   "faltan_datos": [],
    "fam": "VAL",
    "fuentes": [
     {
@@ -868,7 +889,7 @@
    "id": "M02",
    "plano": {
     "cantidad": "5",
-    "descripcion": "Válvula esférica #2000, paso nominal, cuerpo ASTM A-216, vástago AISI-316, esfera flotante AISI 316, asientos metálicos AISI-316",
+    "descripcion": "VALVULA ESFERICA Ø 1/2\" #2000 - PASO NOMINAL - CUERPO ASTM A-216 VASTAGO AISI-316 - ESFERA FLOTANTE AISI 316 - ASIENTOS METALICOS AISI-316",
     "diametro": "1/2\"",
     "extremos": "NPT-H",
     "material": "ASTM A-216 / AISI 316",
@@ -885,9 +906,18 @@
     "material": "A106 B",
     "schedule": "80"
    },
+   "atributos": {
+    "diametro": "0.5\"",
+    "extremos": "NPT",
+    "familia": "NIP",
+    "largo_mm": "100",
+    "material": "API 5L",
+    "schedule": "80"
+   },
    "cantidad": 6,
-   "descripcion": "Niple 1/2\" sch80 × 100 mm",
-   "especificacion": "A106 B",
+   "descripcion": "NIPLE - LONGITUD: 100 mm",
+   "especificacion": "ITT: Niple 1/2\" sch80 × 100 mm · A106 B",
+   "faltan_datos": [],
    "fam": "NIP",
    "fuentes": [
     {
@@ -904,7 +934,7 @@
    "id": "M03",
    "plano": {
     "cantidad": "6",
-    "descripcion": "Niple longitud 100 mm",
+    "descripcion": "NIPLE - LONGITUD: 100 mm",
     "diametro": "1/2\"",
     "extremos": "NPT-M",
     "material": "API 5L",
@@ -921,9 +951,18 @@
     "material": "A106 B",
     "schedule": "80"
    },
+   "atributos": {
+    "diametro": "2\"",
+    "extremos": "NPT",
+    "familia": "NIP",
+    "largo_mm": "200",
+    "material": "API 5L",
+    "schedule": "80"
+   },
    "cantidad": 10,
-   "descripcion": "Niple 2\" sch80 × 200 mm",
-   "especificacion": "A106 B",
+   "descripcion": "NIPLE - LONGITUD: 200 mm",
+   "especificacion": "ITT: Niple 2\" sch80 × 200 mm · A106 B",
+   "faltan_datos": [],
    "fam": "NIP",
    "fuentes": [
     {
@@ -940,7 +979,7 @@
    "id": "M04",
    "plano": {
     "cantidad": "10",
-    "descripcion": "Niple longitud 200 mm",
+    "descripcion": "NIPLE - LONGITUD: 200 mm",
     "diametro": "2\"",
     "extremos": "NPT-M",
     "material": "API 5L",
@@ -958,10 +997,20 @@
     "paso": "reducido",
     "serie": "2000",
     "tipo": "esferica",
-    "trim": "asiento metalico"
+    "trim": "asientos metalicos"
+   },
+   "atributos": {
+    "diametro": "2\"",
+    "extremos": "NPT",
+    "familia": "VAL",
+    "material": "A216 WCB",
+    "paso": "reducido",
+    "serie": "2000",
+    "tipo": "esferica",
+    "trim": "asientos metalicos"
    },
    "cantidad": 1,
-   "descripcion": "Válvula esférica 2\" #2000 asiento metálico",
+   "descripcion": "VALVULA ESFERICA Ø 2\" #2000 - PASO NOMINAL - CUERPO ASTM A-216 VASTAGO AISI-316 - ESFERA FLOTANTE AISI 316 - ASIENTOS METALICOS AISI-316",
    "desvio": [
     {
      "ofrecido": "a confirmar con el proveedor (cotizada forjada con asiento PTFE)",
@@ -974,7 +1023,8 @@
      "que": "serie"
     }
    ],
-   "especificacion": "Paso nominal · cuerpo A216 · vástago, esfera flotante y asientos metálicos AISI 316 · NPT-H",
+   "especificacion": "ITT: Válvula esférica 2\" #2000 asiento metálico · Paso nominal · cuerpo A216 · vástago, esfera flotante y asientos metálicos AISI 316 · NPT-H",
+   "faltan_datos": [],
    "fam": "VAL",
    "fuentes": [
     {
@@ -998,7 +1048,7 @@
    "id": "M05",
    "plano": {
     "cantidad": "1",
-    "descripcion": "Válvula esférica #2000, paso nominal, cuerpo ASTM A-216, vástago AISI-316, esfera flotante AISI 316, asientos metálicos AISI-316",
+    "descripcion": "VALVULA ESFERICA Ø 2\" #2000 - PASO NOMINAL - CUERPO ASTM A-216 VASTAGO AISI-316 - ESFERA FLOTANTE AISI 316 - ASIENTOS METALICOS AISI-316",
     "diametro": "2\"",
     "extremos": "NPT-H",
     "material": "ASTM A-216 / AISI 316",
@@ -1014,9 +1064,18 @@
     "extremos": "NPT",
     "tipo": "union doble a golpe"
    },
+   "atributos": {
+    "diametro": "2\"",
+    "extremos": "NPT",
+    "familia": "AFO",
+    "material": "A105",
+    "serie": "2000",
+    "tipo": "union doble a golpe"
+   },
    "cantidad": 5,
-   "descripcion": "Unión doble a golpe 2\" 2000",
-   "especificacion": "Unión rápida NPT",
+   "descripcion": "UNION DOBLE A GOLPE",
+   "especificacion": "ITT: Unión doble a golpe 2\" 2000 · Unión rápida NPT",
+   "faltan_datos": [],
    "fam": "AFO",
    "fuentes": [
     {
@@ -1040,7 +1099,7 @@
    "id": "M06",
    "plano": {
     "cantidad": "5",
-    "descripcion": "Unión doble a golpe",
+    "descripcion": "UNION DOBLE A GOLPE",
     "diametro": "2\"",
     "extremos": "NPT-H",
     "material": "ASTM A-105",
@@ -1058,8 +1117,16 @@
     "serie": "600",
     "tipo": "retencion"
    },
+   "atributos": {
+    "diametro": "2\"",
+    "extremos": "NPT",
+    "familia": "VAL",
+    "material": "A216 WCB",
+    "serie": "600",
+    "tipo": "retencion"
+   },
    "cantidad": 2,
-   "descripcion": "Válvula de retención 2\" #600 a clapeta",
+   "descripcion": "VALVULA RETENCION Ø 2\" # 600 - TIPO A CLAPETA - CUERPO ASTM A-216 CLAPETA AISI-316 - ASIENTOS RENOVABLES AISI-316 - RESORTE AISI-316",
    "desvio": [
     {
      "ofrecido": "trim 8 (13Cr) sin resorte, a confirmar",
@@ -1067,7 +1134,8 @@
      "que": "material"
     }
    ],
-   "especificacion": "Cuerpo A216 · clapeta, asientos renovables y resorte AISI 316 · NPT-H. Confirmar trim: la cotización de APSA/15 era para asiento AISI 410",
+   "especificacion": "ITT: Válvula de retención 2\" #600 a clapeta · Cuerpo A216 · clapeta, asientos renovables y resorte AISI 316 · NPT-H. Confirmar trim: la cotización de APSA/15 era para asiento AISI 410",
+   "faltan_datos": [],
    "fam": "VAL",
    "fuentes": [
     {
@@ -1098,7 +1166,7 @@
    "id": "M07",
    "plano": {
     "cantidad": "2",
-    "descripcion": "Válvula retención #600 tipo a clapeta, cuerpo ASTM A-216, clapeta AISI-316, asientos renovables AISI-316, resorte AISI-316",
+    "descripcion": "VALVULA RETENCION Ø 2\" # 600 - TIPO A CLAPETA - CUERPO ASTM A-216 CLAPETA AISI-316 - ASIENTOS RENOVABLES AISI-316 - RESORTE AISI-316",
     "diametro": "2\"",
     "extremos": "NPT-H",
     "material": "ASTM A-216 / AISI 316",
@@ -1116,8 +1184,16 @@
     "serie": "3000",
     "tipo": "tee"
    },
+   "atributos": {
+    "diametro": "2\"",
+    "extremos": "NPT",
+    "familia": "AFO",
+    "material": "A105",
+    "serie": "2000",
+    "tipo": "tee"
+   },
    "cantidad": 5,
-   "descripcion": "Tee 2\" NPT",
+   "descripcion": "TEE NORMAL",
    "desvio": [
     {
      "ofrecido": "serie 3000",
@@ -1125,7 +1201,8 @@
      "que": "serie"
     }
    ],
-   "especificacion": "Pedido 2000 · ofrecido S3000 A105",
+   "especificacion": "ITT: Tee 2\" NPT · Pedido 2000 · ofrecido S3000 A105",
+   "faltan_datos": [],
    "fam": "AFO",
    "fuentes": [
     {
@@ -1142,7 +1219,7 @@
    "id": "M08",
    "plano": {
     "cantidad": "5",
-    "descripcion": "Tee normal",
+    "descripcion": "TEE NORMAL",
     "diametro": "2\"",
     "extremos": "NPT-H",
     "material": "ASTM A-105",
@@ -1159,9 +1236,18 @@
     "largo_mm": "100",
     "schedule": "80"
    },
+   "atributos": {
+    "diametro": "2\"",
+    "extremos": "NPT",
+    "familia": "NIP",
+    "largo_mm": "100",
+    "material": "API 5L",
+    "schedule": "80"
+   },
    "cantidad": 2,
-   "descripcion": "Niple 2\" sch80 × 100 mm NPT-M",
-   "especificacion": "",
+   "descripcion": "NIPLE - LONGITUD: 100 mm",
+   "especificacion": "ITT: Niple 2\" sch80 × 100 mm NPT-M",
+   "faltan_datos": [],
    "fam": "NIP",
    "fuentes": [
     {
@@ -1178,7 +1264,7 @@
    "id": "M09",
    "plano": {
     "cantidad": "2",
-    "descripcion": "Niple longitud 100 mm",
+    "descripcion": "NIPLE - LONGITUD: 100 mm",
     "diametro": "2\"",
     "extremos": "NPT-M",
     "material": "API 5L",
@@ -1192,14 +1278,24 @@
    "at": {
     "diametro": "2\"",
     "diametro2": "0.5\"",
-    "extremos": "NPT",
+    "extremos": "NPT/BSPT",
     "material": "A105",
     "serie": "3000",
     "tipo": "buje"
    },
+   "atributos": {
+    "diametro": "2\"",
+    "diametro2": "0.5\"",
+    "extremos": "NPT",
+    "familia": "AFO",
+    "material": "A105",
+    "serie": "2000",
+    "tipo": "buje"
+   },
    "cantidad": 2,
-   "descripcion": "Buje reducción 2\" × 1/2\" NPT",
-   "especificacion": "S3000 A105, rosca NPT (el código Renard de referencia es BSPT)",
+   "descripcion": "BUJE REDUCCION",
+   "especificacion": "ITT: Buje reducción 2\" × 1/2\" NPT · S3000 A105, rosca NPT (el código Renard de referencia es BSPT)",
+   "faltan_datos": [],
    "fam": "AFO",
    "fuentes": [
     {
@@ -1225,7 +1321,7 @@
    "id": "M10",
    "plano": {
     "cantidad": "2",
-    "descripcion": "Buje reducción",
+    "descripcion": "BUJE REDUCCION",
     "diametro": "2\"x1/2\"",
     "extremos": "NPT",
     "material": "ASTM A-105",
@@ -1243,8 +1339,16 @@
     "serie": "3000",
     "tipo": "codo 45"
    },
+   "atributos": {
+    "diametro": "2\"",
+    "extremos": "NPT",
+    "familia": "AFO",
+    "material": "A105",
+    "serie": "2000",
+    "tipo": "codo 45"
+   },
    "cantidad": 1,
-   "descripcion": "Codo 45° 2\" NPT",
+   "descripcion": "CODO 45°",
    "desvio": [
     {
      "ofrecido": "serie 3000",
@@ -1252,7 +1356,8 @@
      "que": "serie"
     }
    ],
-   "especificacion": "S3000 A105",
+   "especificacion": "ITT: Codo 45° 2\" NPT · S3000 A105",
+   "faltan_datos": [],
    "fam": "AFO",
    "fuentes": [
     {
@@ -1269,7 +1374,7 @@
    "id": "M11",
    "plano": {
     "cantidad": "1",
-    "descripcion": "Codo 45°",
+    "descripcion": "CODO 45°",
     "diametro": "2\"",
     "extremos": "NPT-H",
     "material": "ASTM A-105",
@@ -1286,9 +1391,18 @@
     "largo_mm": "200",
     "schedule": "80"
    },
+   "atributos": {
+    "diametro": "2\"",
+    "extremos": "NPT/BW",
+    "familia": "NIP",
+    "largo_mm": "200",
+    "material": "API 5L",
+    "schedule": "80"
+   },
    "cantidad": 1,
-   "descripcion": "Niple 2\" sch80 × 200 mm NPT/BW",
-   "especificacion": "Extremo BW soldado a la junta monolítica (13)",
+   "descripcion": "NIPLE - LONGITUD: 200 mm",
+   "especificacion": "ITT: Niple 2\" sch80 × 200 mm NPT/BW · Extremo BW soldado a la junta monolítica (13)",
+   "faltan_datos": [],
    "fam": "NIP",
    "fuentes": [
     {
@@ -1305,7 +1419,7 @@
    "id": "M12",
    "plano": {
     "cantidad": "1",
-    "descripcion": "Niple longitud 200 mm",
+    "descripcion": "NIPLE - LONGITUD: 200 mm",
     "diametro": "2\"",
     "extremos": "NPT/BW",
     "material": "API 5L",
@@ -1318,13 +1432,21 @@
   {
    "at": {
     "diametro": "2\"",
+    "extremos": "NPT/BW",
+    "material": "A234 WPB",
+    "schedule": "80",
+    "tipo": "junta monolitica"
+   },
+   "atributos": {
+    "diametro": "2\"",
     "extremos": "BW",
+    "familia": "JUN",
     "material": "A234 WPB",
     "schedule": "80",
     "tipo": "junta monolitica"
    },
    "cantidad": 1,
-   "descripcion": "Junta monolítica 2\" sch80 WPB BW",
+   "descripcion": "JUNTA MONOLITICA",
    "desvio": [
     {
      "ofrecido": "BW/NPT, a confirmar BW/BW",
@@ -1332,7 +1454,10 @@
      "que": "extremos"
     }
    ],
-   "especificacion": "BW en los dos extremos. Duralitte cotizó BW/NPT: confirmar",
+   "especificacion": "ITT: Junta monolítica 2\" sch80 WPB BW · BW en los dos extremos. Duralitte cotizó BW/NPT: confirmar",
+   "faltan_datos": [
+    "serie"
+   ],
    "fam": "JUN",
    "fuentes": [
     {
@@ -1356,7 +1481,7 @@
    "id": "M13",
    "plano": {
     "cantidad": "1",
-    "descripcion": "Junta monolítica",
+    "descripcion": "JUNTA MONOLITICA",
     "diametro": "2\"",
     "extremos": "BW",
     "material": "ASTM A-234 Gr. WPB",
@@ -1374,8 +1499,16 @@
     "revestimiento": "polipropileno",
     "schedule": "80"
    },
+   "atributos": {
+    "diametro": "2\"",
+    "extremos": "BW",
+    "familia": "CAN",
+    "material": "API 5L",
+    "revestimiento": "polipropileno",
+    "schedule": "80"
+   },
    "cantidad": 1.9,
-   "descripcion": "Caño 2\" sch80 API 5L revestido",
+   "descripcion": "CAÑO - LONGITUD: 1900 mm",
    "desvio": [
     {
      "ofrecido": "tricapa de polietileno, a confirmar",
@@ -1383,7 +1516,10 @@
      "que": "revestimiento"
     }
    ],
-   "especificacion": "1 tramo de 1.900 mm según plano · BW · pedido: polipropileno",
+   "especificacion": "ITT: Caño 2\" sch80 API 5L revestido · 1 tramo de 1.900 mm según plano · BW · pedido: polipropileno",
+   "faltan_datos": [
+    "costura"
+   ],
    "fam": "CAN",
    "fuentes": [
     {
@@ -1400,7 +1536,7 @@
    "id": "M14",
    "plano": {
     "cantidad": "1",
-    "descripcion": "Caño longitud 1900 mm",
+    "descripcion": "CAÑO - LONGITUD: 1900 mm",
     "diametro": "2\"",
     "extremos": "BW",
     "material": "API 5L revestido polipropileno",
@@ -1412,6 +1548,9 @@
   },
   {
    "at": {},
+   "atributos": {
+    "familia": "CAN"
+   },
    "cantidad": 4.1,
    "descripcion": "Sobrante de caño revestido (no va en el puente)",
    "desvio": [
@@ -1422,6 +1561,12 @@
     }
    ],
    "especificacion": "Compra mínima: tira de 12 m para los 2 puentes. Usa 3,8 m y sobran 8,2 m (4,1 m por puente)",
+   "faltan_datos": [
+    "diametro",
+    "espesor_mm",
+    "material",
+    "costura"
+   ],
    "fam": "CAN",
    "fuentes": [
     {
@@ -1450,9 +1595,17 @@
    "at": {
     "tipo": "junta"
    },
+   "atributos": {
+    "familia": "JUN",
+    "tipo": "junta"
+   },
    "cantidad": 2,
    "descripcion": "Manga termocontraíble para reponer el revestimiento en las 2 juntas soldadas del caño 14 (13–14 y 14–15)",
    "especificacion": "No figura en el plano; hace falta para no dejar las soldaduras sin revestir",
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
    "fam": "JUN",
    "fuentes": [
     {
@@ -1478,10 +1631,19 @@
     "schedule": "80",
     "tipo": "codo 45"
    },
+   "atributos": {
+    "diametro": "2\"",
+    "extremos": "BW",
+    "familia": "ABW",
+    "material": "A234 WPB",
+    "schedule": "80",
+    "tipo": "codo 45"
+   },
    "cantidad": 1,
-   "descripcion": "Codo 45° 2\" sch80 BW",
-   "especificacion": "A234 WPB radio largo",
-   "fam": "ABW",
+   "descripcion": "CODO 45°",
+   "especificacion": "ITT: Codo 45° 2\" sch80 BW · A234 WPB radio largo",
+   "faltan_datos": [],
+   "fam": "AFO",
    "fuentes": [
     {
      "coincide": "igual",
@@ -1497,7 +1659,7 @@
    "id": "M15",
    "plano": {
     "cantidad": "1",
-    "descripcion": "Codo 45°",
+    "descripcion": "CODO 45°",
     "diametro": "2\"",
     "extremos": "BW",
     "material": "ASTM A-234 Gr. WPB",
@@ -1512,11 +1674,18 @@
     "diametro": "2.5\"",
     "diametro2": "2\"",
     "extremos": "BW",
-    "schedule": "80",
+    "schedule": "80"
+   },
+   "atributos": {
+    "diametro": "2.5\"",
+    "diametro2": "2\"",
+    "extremos": "BW",
+    "familia": "ABW",
+    "material": "A234 WPB",
     "tipo": "reduccion concentrica"
    },
    "cantidad": 1,
-   "descripcion": "Reducción concéntrica 2½\" × 2\" sch80 BW",
+   "descripcion": "REDUCCION CONCENTRICA",
    "desvio": [
     {
      "ofrecido": "2½\" Sch 80 × 2\" Sch 80",
@@ -1524,8 +1693,9 @@
      "que": "schedule"
     }
    ],
-   "especificacion": "Plano: 80×40 (2½\" sch80 × 2\" sch40) · precio de XS×XS",
-   "fam": "ABW",
+   "especificacion": "ITT: Reducción concéntrica 2½\" × 2\" sch80 BW · Plano: 80×40 (2½\" sch80 × 2\" sch40) · precio de XS×XS",
+   "faltan_datos": [],
+   "fam": "AFO",
    "fuentes": [
     {
      "coincide": "similar",
@@ -1541,7 +1711,7 @@
    "id": "M16",
    "plano": {
     "cantidad": "1",
-    "descripcion": "Reducción concéntrica",
+    "descripcion": "REDUCCION CONCENTRICA",
     "diametro": "2 1/2\"x2\"",
     "extremos": "BW",
     "extremos_campo": "1",
@@ -1560,8 +1730,16 @@
     "serie": "3000",
     "tipo": "tapon"
    },
+   "atributos": {
+    "diametro": "2\"",
+    "extremos": "NPT",
+    "familia": "AFO",
+    "material": "A105",
+    "serie": "2000",
+    "tipo": "tapon"
+   },
    "cantidad": 3,
-   "descripcion": "Tapón 2\" NPT",
+   "descripcion": "TAPON",
    "desvio": [
     {
      "ofrecido": "serie 3000",
@@ -1569,7 +1747,8 @@
      "que": "serie"
     }
    ],
-   "especificacion": "S3000 A105",
+   "especificacion": "ITT: Tapón 2\" NPT · S3000 A105",
+   "faltan_datos": [],
    "fam": "AFO",
    "fuentes": [
     {
@@ -1586,7 +1765,7 @@
    "id": "M17",
    "plano": {
     "cantidad": "3",
-    "descripcion": "Tapón",
+    "descripcion": "TAPON",
     "diametro": "2\"",
     "extremos": "NPT-M",
     "material": "ASTM A-105",
@@ -1604,8 +1783,16 @@
     "serie": "3000",
     "tipo": "tee"
    },
+   "atributos": {
+    "diametro": "0.5\"",
+    "extremos": "NPT",
+    "familia": "AFO",
+    "material": "A105",
+    "serie": "2000",
+    "tipo": "tee"
+   },
    "cantidad": 1,
-   "descripcion": "Tee 1/2\" NPT",
+   "descripcion": "TEE NORMAL",
    "desvio": [
     {
      "ofrecido": "serie 3000",
@@ -1613,7 +1800,8 @@
      "que": "serie"
     }
    ],
-   "especificacion": "S3000 A105",
+   "especificacion": "ITT: Tee 1/2\" NPT · S3000 A105",
+   "faltan_datos": [],
    "fam": "AFO",
    "fuentes": [
     {
@@ -1630,7 +1818,7 @@
    "id": "M18",
    "plano": {
     "cantidad": "1",
-    "descripcion": "Tee normal",
+    "descripcion": "TEE NORMAL",
     "diametro": "1/2\"",
     "extremos": "NPT-H",
     "material": "ASTM A-105",
@@ -1648,9 +1836,19 @@
     "material": "AISI 316",
     "tipo": "bloqueo y purga"
    },
+   "atributos": {
+    "diametro": "0.5\"",
+    "extremos": "NPT",
+    "familia": "VAL",
+    "marca": "ABAC",
+    "material": "AISI 316",
+    "serie": "3000",
+    "tipo": "bloqueo y purga"
+   },
    "cantidad": 2,
-   "descripcion": "Bloqueo y purga 1/2\" 3000 AISI 316",
-   "especificacion": "ABAC VI 550-M · NPT-M",
+   "descripcion": "VALVULA BLOQUEO Y PURGA",
+   "especificacion": "ITT: Bloqueo y purga 1/2\" 3000 AISI 316 · ABAC VI 550-M · NPT-M",
+   "faltan_datos": [],
    "fam": "VAL",
    "fuentes": [
     {
@@ -1674,7 +1872,7 @@
    "id": "M19",
    "plano": {
     "cantidad": "2",
-    "descripcion": "Válvula bloqueo y purga",
+    "descripcion": "VALVULA BLOQUEO Y PURGA",
     "diametro": "1/2\"",
     "extremos": "NPT-M",
     "material": "AISI 316",
@@ -1690,11 +1888,22 @@
     "conexion": "1/2",
     "diametro": "0.5\"",
     "extremos": "NPT",
+    "rango": "0-40 bar",
+    "tipo": "manometro"
+   },
+   "atributos": {
+    "diametro": "0.5\"",
+    "extremos": "NPT",
+    "familia": "INS",
+    "rango": "0-40 bar",
     "tipo": "manometro"
    },
    "cantidad": 2,
-   "descripcion": "Manómetro 0–40 bar, conexión 1/2\" NPT-H (según plano)",
-   "especificacion": "El plano indica NPT-H; el bloqueo y purga (pos 19) es NPT-M. Confirmar el par con el cliente. El de stock (1/4\") no sirve",
+   "descripcion": "MANOMETRO RANGO 0-40 BAR",
+   "especificacion": "ITT: Manómetro 0–40 bar, conexión 1/2\" NPT-H (según plano) · El plano indica NPT-H; el bloqueo y purga (pos 19) es NPT-M. Confirmar el par con el cliente. El de stock (1/4\") no sirve",
+   "faltan_datos": [
+    "conexion"
+   ],
    "fam": "INS",
    "fuentes": [
     {
@@ -1718,7 +1927,7 @@
    "id": "M20",
    "plano": {
     "cantidad": "2",
-    "descripcion": "Manómetro rango 0-40 bar",
+    "descripcion": "MANOMETRO RANGO 0-40 BAR",
     "diametro": "1/2\"",
     "extremos": "NPT-H",
     "unidad": "un"
@@ -1733,8 +1942,16 @@
     "material": "A105",
     "tipo": "union doble a golpe extensible"
    },
+   "atributos": {
+    "diametro": "2\"",
+    "extremos": "NPT",
+    "familia": "AFO",
+    "material": "A105",
+    "serie": "2000",
+    "tipo": "union doble a golpe extensible"
+   },
    "cantidad": 2,
-   "descripcion": "Unión doble a golpe extensible 2\"",
+   "descripcion": "UNION DOBLE GOLPE EXTENSIBLE",
    "desvio": [
     {
      "ofrecido": "serie 3000",
@@ -1742,7 +1959,8 @@
      "que": "serie"
     }
    ],
-   "especificacion": "2000 · A105 · NPT-H · sello metal-metal · plano: Duralite",
+   "especificacion": "ITT: Unión doble a golpe extensible 2\" · 2000 · A105 · NPT-H · sello metal-metal · plano: Duralite",
+   "faltan_datos": [],
    "fam": "AFO",
    "fuentes": [
     {
@@ -1766,7 +1984,7 @@
    "id": "M21",
    "plano": {
     "cantidad": "2",
-    "descripcion": "Unión doble golpe extensible",
+    "descripcion": "UNION DOBLE GOLPE EXTENSIBLE",
     "diametro": "2\"",
     "extremos": "NPT-H",
     "material": "ASTM A-105",
@@ -1784,9 +2002,18 @@
     "largo_mm": "320",
     "schedule": "80"
    },
+   "atributos": {
+    "diametro": "2\"",
+    "extremos": "NPT/BW",
+    "familia": "NIP",
+    "largo_mm": "320",
+    "material": "API 5L",
+    "schedule": "80"
+   },
    "cantidad": 1,
-   "descripcion": "Niple 2\" sch80 × 320 mm NPT/BW",
-   "especificacion": "Extremo BW biselado para soldar en campo (confirmar)",
+   "descripcion": "NIPLE - LONGITUD: 320 mm",
+   "especificacion": "ITT: Niple 2\" sch80 × 320 mm NPT/BW · Extremo BW biselado para soldar en campo (confirmar)",
+   "faltan_datos": [],
    "fam": "NIP",
    "fuentes": [
     {
@@ -1803,7 +2030,7 @@
    "id": "M22",
    "plano": {
     "cantidad": "1",
-    "descripcion": "Niple longitud 320 mm",
+    "descripcion": "NIPLE - LONGITUD: 320 mm",
     "diametro": "2\"",
     "extremos": "NPT/BW",
     "extremos_campo": "1",
@@ -1821,9 +2048,19 @@
     "material": "A105",
     "tipo": "cupla"
    },
+   "atributos": {
+    "diametro": "0.5\"",
+    "extremos": "NPT/BW",
+    "familia": "AFO",
+    "material": "A234 WPB",
+    "schedule": "80",
+    "serie": "2000",
+    "tipo": "cupla"
+   },
    "cantidad": 2,
-   "descripcion": "Cupla 1/2\" 80/2000 NPT/BW",
-   "especificacion": "Plano: A234 WPB, soldada sobre niple (pos 4 y 25) · precio de cupla A105 NPT",
+   "descripcion": "CUPLA",
+   "especificacion": "ITT: Cupla 1/2\" 80/2000 NPT/BW · Plano: A234 WPB, soldada sobre niple (pos 4 y 25) · precio de cupla A105 NPT",
+   "faltan_datos": [],
    "fam": "AFO",
    "fuentes": [
     {
@@ -1849,7 +2086,7 @@
    "id": "M23",
    "plano": {
     "cantidad": "2",
-    "descripcion": "Cupla",
+    "descripcion": "CUPLA",
     "diametro": "1/2\"",
     "extremos": "NPT/BW",
     "material": "ASTM A-234 Gr. WPB",
@@ -1866,9 +2103,18 @@
     "largo_mm": "150",
     "schedule": "80"
    },
+   "atributos": {
+    "diametro": "2\"",
+    "extremos": "NPT",
+    "familia": "NIP",
+    "largo_mm": "150",
+    "material": "API 5L",
+    "schedule": "80"
+   },
    "cantidad": 1,
-   "descripcion": "Niple 2\" sch80 × 150 mm NPT/NPT",
-   "especificacion": "",
+   "descripcion": "NIPLE - LONGITUD: 150 mm",
+   "especificacion": "ITT: Niple 2\" sch80 × 150 mm NPT/NPT",
+   "faltan_datos": [],
    "fam": "NIP",
    "fuentes": [
     {
@@ -1885,7 +2131,7 @@
    "id": "M24",
    "plano": {
     "cantidad": "1",
-    "descripcion": "Niple longitud 150 mm",
+    "descripcion": "NIPLE - LONGITUD: 150 mm",
     "diametro": "2\"",
     "extremos": "NPT/NPT",
     "material": "API 5L",
@@ -1899,12 +2145,21 @@
    "at": {
     "diametro": "2\"",
     "extremos": "NPT/BW",
-    "largo_mm": "000",
+    "largo_mm": "1000",
+    "schedule": "80"
+   },
+   "atributos": {
+    "diametro": "2\"",
+    "extremos": "NPT/BW",
+    "familia": "NIP",
+    "largo_mm": "1000",
+    "material": "API 5L",
     "schedule": "80"
    },
    "cantidad": 2,
-   "descripcion": "Niple 2\" sch80 × 1.000 mm NPT/BW",
-   "especificacion": "Lleva la cupla 23. Extremo BW biselado para soldar en campo (confirmar)",
+   "descripcion": "NIPLE - LONGITUD: 1000 mm",
+   "especificacion": "ITT: Niple 2\" sch80 × 1.000 mm NPT/BW · Lleva la cupla 23. Extremo BW biselado para soldar en campo (confirmar)",
+   "faltan_datos": [],
    "fam": "NIP",
    "fuentes": [
     {
@@ -1921,7 +2176,7 @@
    "id": "M25",
    "plano": {
     "cantidad": "2",
-    "descripcion": "Niple longitud 1000 mm",
+    "descripcion": "NIPLE - LONGITUD: 1000 mm",
     "diametro": "2\"",
     "extremos": "NPT/BW",
     "extremos_campo": "1",
@@ -2140,7 +2395,7 @@
  "nota_mo_html": "No se incluyen soportes ni estructura porque no figuran en la lista de materiales del plano. No se pidió radiografía. Soldaduras de taller: 4 a tope (niple 12–junta 13, junta–caño 14, caño–codo 15, codo–reducción 16) y 2 cuplas 1/2\" (pos 23) sobre niples. Los extremos BW de los niples 22 y 25 y la punta 2½\" de la reducción 16 quedan biselados para soldar en campo.",
  "p9": {
   "errores": 16,
-  "fecha": "2026-10-30T05:42:35",
+  "fecha": "2026-11-03T19:44:55",
   "firma": "M01|1||Renard · cód. 5979|1.9000|serie:serie 3000:serie 2000\nM02|2||ESTIMADO: Indave IRA2F 1/2\" WOG2000 forjada, asiento PTFE (USD 45,50) + 30% supuesto por asiento metálico y cuerpo enterizo. Sin cotización con la especificación del plano|59.1500|material:a confirmar con el proveedor (cotizada forjada con asiento PTFE):cuerpo enterizo A216, asientos metálicos AISI 316\nM03|3||ESTIMADO: valor de la planilla PRES 24879 (\"antecedentes puentes Taval/CGC S2000\"), material A53/A106 B; sin cotización|20.0000|\nM04|4||ESTIMADO: valor de la planilla PRES 24879 (\"antecedentes puentes Taval/CGC S2000\"), material A53/A106 B; sin cotización|20.0000|\nM05|5||ESTIMADO: Indave IRA2F 2\" WOG3000 forjada, asiento PTFE (USD 150,50) + 30% supuesto por asiento metálico y cuerpo enterizo. Sin cotización con la especificación del plano|195.6500|material:a confirmar con el proveedor (cotizada forjada con asiento PTFE):cuerpo enterizo A216, asientos metálicos AISI 316;serie:WOG 3000 (a confirmar):serie 2000\nM06|6||Adita (IMB Oil) cot. S01988|74.7500|\nM07|7||Ingeniería en Fluidos ppto 110626: S600 A216 WCB, internos TRIM 8 (13Cr, NO AISI 316), sin resorte cotizado. Falta precio con trim 316 y resorte|533.0000|material:trim 8 (13Cr) sin resorte, a confirmar:clapeta, asientos y resorte AISI 316\nM08|8||Renard · cód. 6048|49.2400|serie:serie 3000:serie 2000\nM09|9||ESTIMADO: valor de la planilla PRES 24879 (\"antecedentes puentes Taval/CGC S2000\"), material A53/A106 B; sin cotización|20.0000|\nM10|10||SIN PRECIO: pedir cotización|0.0000|\nM11|11||Renard · cód. 5113|50.8300|serie:serie 3000:serie 2000\nM12|12||ESTIMADO: valor de la planilla PRES 24879 (\"antecedentes puentes Taval/CGC S2000\"), material A53/A106 B; sin cotización|20.0000|\nM13|13||Duralitte P_16838: junta 2\" BW/NPT 2000 (el plano pide BW/BW sch 80). Falta cotizar BW/BW|315.0000|extremos:BW/NPT, a confirmar BW/BW:BW/BW sch 80\nM14|14||Provemet: tricapa de polietileno 60,3×5,54 (pedido: PP)|24.7900|revestimiento:tricapa de polietileno, a confirmar:polipropileno\nM14B|14b||Provemet: tricapa de polietileno 60,3×5,54|24.7900|revestimiento:tricapa de polietileno, a confirmar:polipropileno\nM14C|14c||SIN PRECIO: pedir cotización|0.0000|\nM15|15||Renard · cód. 3758|8.7300|\nM16|16||Renard · cód. 3639|16.5100|schedule:2½\" Sch 80 × 2\" Sch 80:80 × 40\nM17|17||Renard · cód. 5984|8.4500|serie:serie 3000:serie 2000\nM18|18||Renard · cód. 6043|8.6900|serie:serie 3000:serie 2000\nM19|19||Línea \"Válvula bloqueo y purga (ABAC) 1/2\\\" NPT M-H AISI 316 | 137\" de la planilla de costo PRES 24879; no hay cotización de ABAC del VI 550-M|137.0000|\nM20|20||Referencia: manómetro 4\" conexión 1/2\" de stock ITT (rango 0–100 bar, cód. MN310005N0100GL). Cotizar 0–40 bar|83.4000|\nM21|21||Adita S01988: U. extensible M-H 2\" NPT S3000, sin mención de sello metal-metal; cotización vencida el 13-04-2026|249.0000|serie:serie 3000:serie 2000\nM22|22||ESTIMADO: valor de la planilla PRES 24879 (\"antecedentes puentes Taval/CGC S2000\"), material A53/A106 B; sin cotización|20.0000|\nM23|23||SIN PRECIO: pedir cotización|0.0000|\nM24|24||ESTIMADO: valor de la planilla PRES 24879 (\"antecedentes puentes Taval/CGC S2000\"), material A53/A106 B; sin cotización|20.0000|\nM25|25||ESTIMADO: valor de la planilla PRES 24879 (\"antecedentes puentes Taval/CGC S2000\"), material A53/A106 B; sin cotización|40.0000|",
   "ok": false
  },
@@ -2288,5 +2543,314 @@
  },
  "subtitulo_planilla": "2 puentes armados BBO MEC 1500 · plano 23001-PDC-YAC-PC-P-001 rev 1 · USD sin IVA · EXW Quilmes Oeste",
  "titulo": "CAPEX · OQ 8209 — 2 puentes armados BBO MEC 1500",
- "titulo_pagina": "Cotización CAPEX OQ8209"
+ "titulo_pagina": "Cotización CAPEX OQ8209",
+ "transcripcion": {
+  "fecha": "2026-10-30",
+  "fuente": "plano_23001-PDC-YAC-PC-P-001_rev1.pdf (hoja rotada 90 grados), tabla MATERIALES PARA FABRICACION; el PNG plano_detalle_materiales.png no contiene la tabla, solo el dibujo",
+  "lector": "A",
+  "notas": [
+   "Orden de columnas igual al del plano (ITEM, DESCRIPCION, Ø, SCH/SERIE, MATERIAL, EXT., CODIGO, MODELO/FABRICANTE, CANT.).",
+   "Items 2, 5 y 7: la descripcion ocupa dos renglones y abarca las columnas Ø, SCH/SERIE y MATERIAL (celdas combinadas); esas tres quedan \"\". Los dos renglones se unen con un espacio.",
+   "Item 2: hay dos espacios entre ESFERICA y Ø.",
+   "Items 11 y 15: el simbolo de grado se ve como un punto elevado pequeno (grado de CAD); se transcribe como °.",
+   "Guiones: el plano usa guion largo/CAD en ' - '; se transcribe como '-'. Comillas de pulgada transcriptas como \".",
+   "Celdas de relleno CODIGO '----' y MODELO/FABRICANTE '-----------': cantidad exacta de guiones no verificable (algunas en trazo grueso: items 5,7,8,9... ); item 13 MODELO/FABRICANTE vacio; item 20 SCH/SERIE '----' y MATERIAL vacio.",
+   "Item 16 Ø se lee '21/2\"X2\"' (tal cual, sin espacio ni guion).",
+   "Item 14 MATERIAL en letra mas chica en el plano.",
+   "Titulo de tabla en el plano: 'MATERIALES PARA FABRICACION'."
+  ],
+  "tablas": [
+   {
+    "columnas": [
+     "ITEM",
+     "DESCRIPCION",
+     "Ø",
+     "SCH/SERIE",
+     "MATERIAL",
+     "EXT.",
+     "CODIGO",
+     "MODELO/FABRICANTE",
+     "CANT."
+    ],
+    "filas": [
+     [
+      "1",
+      "TAPON",
+      "1/2\"",
+      "2000",
+      "ASTM A-105",
+      "NPT-M",
+      "----",
+      "-----------",
+      "3"
+     ],
+     [
+      "2",
+      "VALVULA ESFERICA  Ø 1/2\" #2000 - PASO NOMINAL - CUERPO ASTM A-216 VASTAGO AISI-316 - ESFERA FLOTANTE AISI 316 - ASIENTOS METALICOS AISI-316",
+      "",
+      "",
+      "",
+      "NPT-H",
+      "----",
+      "-----------",
+      "5"
+     ],
+     [
+      "3",
+      "NIPLE - LONGITUD: 100 mm",
+      "1/2\"",
+      "80",
+      "API 5L",
+      "NPT-M",
+      "----",
+      "-----------",
+      "6"
+     ],
+     [
+      "4",
+      "NIPLE - LONGITUD: 200 mm",
+      "2\"",
+      "80",
+      "API 5L",
+      "NPT-M",
+      "----",
+      "-----------",
+      "10"
+     ],
+     [
+      "5",
+      "VALVULA ESFERICA Ø 2\" #2000 - PASO NOMINAL - CUERPO ASTM A-216 VASTAGO AISI-316 - ESFERA FLOTANTE AISI 316 - ASIENTOS METALICOS AISI-316",
+      "",
+      "",
+      "",
+      "NPT-H",
+      "----",
+      "-----------",
+      "1"
+     ],
+     [
+      "6",
+      "UNION DOBLE A GOLPE",
+      "2\"",
+      "2000",
+      "ASTM A-105",
+      "NPT-H",
+      "----",
+      "-----------",
+      "5"
+     ],
+     [
+      "7",
+      "VALVULA RETENCION Ø 2\" # 600 - TIPO A CLAPETA - CUERPO ASTM A-216 CLAPETA AISI-316 - ASIENTOS RENOVABLES AISI-316 - RESORTE AISI-316",
+      "",
+      "",
+      "",
+      "NPT-H",
+      "----",
+      "-----------",
+      "2"
+     ],
+     [
+      "8",
+      "TEE NORMAL",
+      "2\"",
+      "2000",
+      "ASTM A-105",
+      "NPT-H",
+      "----",
+      "-----------",
+      "5"
+     ],
+     [
+      "9",
+      "NIPLE - LONGITUD: 100 mm",
+      "2\"",
+      "80",
+      "API 5L",
+      "NPT-M",
+      "----",
+      "-----------",
+      "2"
+     ],
+     [
+      "10",
+      "BUJE REDUCCION",
+      "2\"X1/2\"",
+      "2000",
+      "ASTM A-105",
+      "NPT",
+      "----",
+      "-----------",
+      "2"
+     ],
+     [
+      "11",
+      "CODO 45°",
+      "2\"",
+      "2000",
+      "ASTM A-105",
+      "NPT-H",
+      "----",
+      "-----------",
+      "1"
+     ],
+     [
+      "12",
+      "NIPLE - LONGITUD: 200 mm",
+      "2\"",
+      "80",
+      "API 5L",
+      "NPT/BW",
+      "----",
+      "-----------",
+      "1"
+     ],
+     [
+      "13",
+      "JUNTA MONOLITICA",
+      "2\"",
+      "80",
+      "ASTM A-234 Gr. WPB",
+      "BW",
+      "----",
+      "",
+      "1"
+     ],
+     [
+      "14",
+      "CAÑO - LONGITUD: 1900 mm",
+      "2\"",
+      "80",
+      "API 5L - REVESTIDO POLIPROPILENO",
+      "BW",
+      "----",
+      "-----------",
+      "1"
+     ],
+     [
+      "15",
+      "CODO 45°",
+      "2\"",
+      "80",
+      "ASTM A-234 Gr. WPB",
+      "BW",
+      "----",
+      "-----------",
+      "1"
+     ],
+     [
+      "16",
+      "REDUCCION CONCENTRICA",
+      "21/2\"X2\"",
+      "80X40",
+      "ASTM A-234 Gr. WPB",
+      "BW",
+      "----",
+      "-----------",
+      "1"
+     ],
+     [
+      "17",
+      "TAPON",
+      "2\"",
+      "2000",
+      "ASTM A-105",
+      "NPT-M",
+      "----",
+      "-----------",
+      "3"
+     ],
+     [
+      "18",
+      "TEE NORMAL",
+      "1/2\"",
+      "2000",
+      "ASTM A-105",
+      "NPT-H",
+      "----",
+      "-----------",
+      "1"
+     ],
+     [
+      "19",
+      "VALVULA BLOQUEO Y PURGA",
+      "1/2\"",
+      "3000",
+      "AISI 316",
+      "NPT-M",
+      "----",
+      "VI 550-M / ABAC",
+      "2"
+     ],
+     [
+      "20",
+      "MANOMETRO RANGO 0-40 BAR",
+      "1/2\"",
+      "----",
+      "",
+      "NPT-H",
+      "----",
+      "-----------",
+      "2"
+     ],
+     [
+      "21",
+      "UNION DOBLE GOLPE EXTENSIBLE",
+      "2\"",
+      "2000",
+      "ASTM A-105",
+      "NPT-H",
+      "----",
+      "DURALITE",
+      "2"
+     ],
+     [
+      "22",
+      "NIPLE - LONGITUD: 320 mm",
+      "2\"",
+      "80",
+      "API 5L",
+      "NPT/BW",
+      "----",
+      "-----------",
+      "1"
+     ],
+     [
+      "23",
+      "CUPLA",
+      "1/2\"",
+      "80/2000",
+      "ASTM A-234 Gr. WPB",
+      "NPT/BW",
+      "----",
+      "-----------",
+      "2"
+     ],
+     [
+      "24",
+      "NIPLE - LONGITUD: 150 mm",
+      "2\"",
+      "80",
+      "API 5L",
+      "NPT/NPT",
+      "----",
+      "-----------",
+      "1"
+     ],
+     [
+      "25",
+      "NIPLE - LONGITUD: 1000 mm",
+      "2\"",
+      "80",
+      "API 5L",
+      "NPT/BW",
+      "----",
+      "-----------",
+      "2"
+     ]
+    ],
+    "titulo": "MATERIALES PARA FABRICACION"
+   }
+  ]
+ }
 }

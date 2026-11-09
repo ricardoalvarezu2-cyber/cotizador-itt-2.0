@@ -3,7 +3,7 @@
 Entraron a la carpeta de Ventas en Drive (1gCEHg1TNIoa5UVKoa4x7AM8buw3Yjyck) el 05-11-2026. Cada `.md` es la transcripción del PDF
 (texto leído con el conector de Drive, con el enlace al original); el PDF no se bajó porque el conector solo lo entrega codificado.
 Cada renglón se controló: cantidad × precio neto = importe. Los precios se cargaron en `conocimiento/precios/listas_nuevas.csv`
-(30 renglones; sin los de precio 0, sin repetidos y sin los 7 espárragos «sin tuercas» de Delgado 1556).
+(37 renglones; sin los de precio 0 y sin repetidos).
 
 | Transcripción | Proveedor | Fecha | Contenido |
 |---|---|---|---|
@@ -19,6 +19,5 @@ Decisiones de la carga:
 - Descripciones normalizadas para el catálogo (espárragos de Delgado y Provemet, brida RTJ de Provemet, bridas de Bripetrol); el texto
   literal del proveedor queda en la transcripción y en la nota del renglón. Los espárragos con 2 tuercas van por «juego» (convención del catálogo).
 - La subcarpeta «juntas» trae las Miyashiro 50627–50630 y 50594, ya cargadas el 05-11-2026.
-- **Los 7 espárragos «sin tuercas» de Delgado 1556 no se cargaron todavía:** el catálogo no distingue espárrago con y sin tuercas, y
-  en el control C01 un espárrago pedido «con 2 tuercas» pasaba a tomar el precio de uno sin tuercas (USD 1,31 contra 10,00).
-  Se cargan cuando el buscador tenga la regla con/sin tuercas (pendiente en `conocimiento/estado_y_pendientes.md`). Las tuercas sueltas sí entraron.
+- Los 7 espárragos «sin tuercas» de Delgado 1556 se cargaron el 06-11-2026 (commit 690e7d9), cuando el buscador tuvo la regla con/sin tuercas.
+- Estos `.md` son transcripciones: `herramientas/listas_vendedor.py` los saltea (sus precios entran por `listas_nuevas.csv`; 09-11-2026).
