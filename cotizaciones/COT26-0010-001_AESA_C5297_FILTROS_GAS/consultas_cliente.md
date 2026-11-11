@@ -1,6 +1,6 @@
 # Consultas a AESA — COT26-0010-001 (2 filtros de gas de emergencia FCC-707/708, PC-02 LANor, C5297)
 
-**Borrador, no enviar.** Las redacta el cotizador; las manda Matías. Cada consulta es un requisito en `pedido/requisitos.csv` con destino `consulta`. Al recibir la respuesta, anotarla acá con fecha y cambiar el destino del requisito.
+**Borrador, no enviar.** Las redacta el cotizador; las manda Matías. Cada consulta es un requisito en `pedido/requisitos.csv` con destino `consulta` (los que dicen "Interna" en la referencia se resuelven adentro de ITT, al final de este archivo). Al recibir la respuesta, anotarla acá con fecha y cambiar el destino del requisito.
 
 Preparadas el 11-11-2026 y corregidas el mismo día con la revisión independiente (C2 reenfocada, C1, C3, C4, C5, C7 y C8 ampliadas, C11 y C12 nuevas).
 
@@ -18,7 +18,7 @@ Preparadas el 11-11-2026 y corregidas el mismo día con la revisión independien
 **C4 — Marca E30 del P&ID** (requisito R042)
 > En el P&ID los filtros FCC-707/708 y sus líneas llevan la marca E30; la hoja de datos indica "Aislación / Traceado: NO / NO". Además, las líneas de los filtros terminan en "-BE" (1"-FG-0706-CA11-BE, 1154 a 1157) y el resto en "-BB", y el P&ID no trae la leyenda de E30. ¿Los filtros llevan aislación o traceado? Si llevan, ¿quién los provee y hay que prever soportes de aislación y el esquema de pintura N° 202?
 
-**C5 — Ítems opcionales fuera de la planilla** (requisitos R004, R005, R006, R047 y R048)
+**C5 — Ítems opcionales fuera de la planilla** (requisitos R004, R005, R006, R047, R048 y R052)
 > La requisición pide valores opcionales de asistencia técnica (valor diario), viaje al sitio y modelo 3D con atributos; la planilla de cotización solo tiene 3 posiciones (RDO, RCP y FCC). ¿Los opcionales se cotizan en la misma planilla o en nota aparte? ¿El modelo 3D en CADWorx es obligatorio para estos filtros (recipiente sin skid ni cañerías) o alcanza con un 3D en formato STEP/DWG? En la tabla del punto 8 el modelo 3D (ítem 1.8) figura con "Req. CAF = SI" a 6 semanas, y el punto 2 lo llama costo opcional: ¿es opcional u obligatorio, y qué significa "Req. CAF"?
 
 **C6 — Elemento filtrante e internos** (requisito R028)
