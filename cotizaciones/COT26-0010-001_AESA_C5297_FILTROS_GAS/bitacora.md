@@ -14,9 +14,9 @@
 - **Con la oferta hay que entregar:** HD completada, plano de arreglo general, memoria de cálculo, procedimiento de pintura, PIE, ISO 9001, listas de desvíos, antecedentes, repuestos y proveedores.
 - **No incluye:** pernos de anclaje (solo diseño y plantilla), contrabridas, juntas y espárragos de A, B y D hacia la cañería, válvulas de bloqueo de 1" del P&ID, instrumentos, montaje.
 
-## Lista de materiales (`pedido/lista_materiales_plano.csv`, 30 renglones, por filtro)
+## Lista de materiales (`pedido/lista_materiales_plano.csv`, 33 renglones, por filtro)
 El cliente no da lista ni dimensiones: las define el fabricante (HD notas 2, 4, 8, 9 y 10). La lista es **diseño preliminar de ITT**, a reemplazar por el de Ingeniería:
-- Cuerpo de caño 6" Sch 40 SA-106 Gr. B (7,11 mm; C0100 5.1.3 pide 5 mm mínimo total), casquete semielíptico 6" SA-234 WPB abajo, brida W.N. 6" #150 y brida ciega con pescante arriba. Largo T/T ≈ 600 mm.
+- Cuerpo de caño 6" Sch 80 SA-106 Gr. B (10,97 mm; C0100 5.1.3 pide 3 mm resistente + 3,2 de corrosión = 6,2 mm con el recipiente terminado), casquete semielíptico 6" Sch 80 SA-234 WPB abajo, brida W.N. 6" #150 y brida ciega con pescante arriba. Largo T/T ≈ 600 mm.
 - Criterio del Ø: el caudal es mínimo (6,15 Sm3/h según el P&ID) y el cartucho del antecedente AESA/47 era de Ø 42 × 86 mm; 6" es el menor Ø con brida ciega manejable y lugar para el asiento del cartucho. Si Ingeniería o el fabricante del cartucho piden otro Ø, cambian las pos 1 a 7.
 - Descripción y material de cada renglón: texto literal de la HD; lo que agrega ITT, en `nota`. Cantidades calculadas por ITT salvo las conexiones (tabla de la HD) y las orejas de izaje (nota 14).
 - Sin definir: válvulas de drenaje y venteo, tapón del drenaje y junta de la tapa (falta el Anexo I de L0200, clase CA11: consulta C3); cantidad y medida del cartucho (pedir a Gora: celulósico, 99,9 % > 10 μm).
@@ -30,12 +30,28 @@ El cliente no da lista ni dimensiones: las define el fabricante (HD notas 2, 4, 
 6. La planilla no tiene posiciones para los opcionales.
 7. La planilla cruza las referencias (RDO y RCP citan la HD; FCC cita la RI): sin efecto.
 
+## Ensayos, pintura y embalaje que pesan en el costo (de las especificaciones de YPF)
+- Líquidos penetrantes 100% en las 4 conexiones (2" y menores) y en las orejas de izaje; no hay ultrasonido. RX por puntos: 2 placas por filtro. Dureza (5 por procedimiento) e identificación positiva del 10 % de los componentes.
+- PH con YPF presente, registro gráfico y 1 hora. Raíz GTAW (el cuerpo de 6" no se suelda de adentro); GMAW no admitido.
+- Pintura sistema 201: SSPC-SP10, cinc silicato + mist coat + epoxi + poliuretano (200–320 μm), marcas Carboline, Hempel, International, PPG o Sherwin Williams; se pinta después de las pruebas.
+- Embalaje para 12 meses a la intemperie; repuestos en bulto aparte.
+- Plazo: no se fabrica hasta aprobar la ingeniería; el cliente tiene 10 días hábiles por revisión.
+
+## Revisión independiente (11-11-2026, agente que no armó la lista)
+Sin críticos; transcripción, columna A de documentos de la oferta, espárragos y Sch 160 comprobados. Corregido:
+- **Error mío:** leí mal el espesor mínimo de C0100 5.1.3 ("5 mm total"); es el mayor entre 5 mm y resistente + corrosión = 6,2 mm. El Sch 40 pasaba por 0,02 mm: cuerpo, casquete y brida pasan a Sch 80.
+- **Error mío:** 1 oreja de puesta a tierra; C0100 5.1.13 pide 2.
+- **Regla de descripción literal:** espárragos y tuercas separados como en la HD (pos 7/31 y 17/32); materiales que la HD no da (pescante, cupla, tapón, niple) pasados a `nota`; válvulas y tapones con el texto de la RI y la HD.
+- Agregados: 2ª junta de tapa (prueba y servicio), rompevórtice (pos 33, a consultar), conducto interno de B al asiento, 20 requisitos (plazo, END, pintura, embalaje, condiciones de sitio), consultas C11 y C12, y C2 reenfocada.
+- Impacto a −10 °C: el revisor entiende que no se exige (UCS-66), pero lo dijo de memoria: lo tiene que justificar la memoria de cálculo.
+- No revisado: adjuntos de las condiciones de obra, BIM, B0609.
+
 ## Antecedentes
 - **AESA/47 - Filtros La Angostura Norte C5165** (25-03-2026): los mismos tags FCC-707/708 para la PC-01 (HD-003019 / RI-003017 de VCD25176). Presupuesto 142: USD 5.963,65 c/u, 75 días, sin planilla de costo ni resultado. Gora OF-X-0001-00027549 (23-03-2026): cartucho microfibra de vidrio doble malla 25 μm, Ø ext. 42 × 86 mm, USD 32 c/u, 6 unidades, mínimo 2 por recipiente. **Diferencia:** hoy la HD pide celulósico 99,9 % > 10 μm.
 - Otros del buscador: Camuzzi 26 (FM2 #600), Camuzzi 24 (FM3 #600): otra serie y otro tipo.
 
 ## Pendientes
-- Respuestas a las consultas C1–C10; fecha de cierre y comprador.
-- Segunda lectura (`transcripcion_b.json`) y revisión independiente de la lista.
+- Respuestas a las consultas C1–C12; fecha de cierre y comprador.
+- Segunda lectura (`transcripcion_b.json`).
 - Diseño de Ingeniería (Ø, largo, internos, patas) y cotización del cartucho.
 - Precotización, `cotizacion.json`, repuestos RCP y RDO, opcionales, plazo.
