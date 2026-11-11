@@ -16,7 +16,9 @@ global.Blob = class { constructor(p) { this.buf = Buffer.from(p[0]); } };
 const Documentos = require("./src/documentos.js");
 const datos = JSON.parse(fs.readFileSync(path.join(__dirname, "datos.json"), "utf8"));
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "planilla-"));
-const carpetas = fs.readdirSync(path.join(raiz, "cotizaciones")).filter(c => /^COT/.test(c));
+const carpetas = fs.readdirSync(path.join(raiz, "cotizaciones")).filter(c => /^COT/.test(c))
+  // una carpeta recién abierta (alcance y lista de materiales, sin cotizacion.json todavía) no tiene planilla que comparar
+  .filter(c => fs.existsSync(path.join(raiz, "cotizaciones", c, "cotizacion.json")));
 let ok = true;
 for (const c of carpetas) {
   const d = path.join(tmp, c); fs.mkdirSync(d);
