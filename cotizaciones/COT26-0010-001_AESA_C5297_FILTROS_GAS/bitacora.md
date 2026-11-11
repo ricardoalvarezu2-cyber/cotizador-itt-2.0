@@ -47,6 +47,14 @@ Sin críticos; transcripción, columna A de documentos de la oferta, espárragos
 - No revisado: BIM, B0609.
 - **Condiciones de obra (recibidas de Matías el 11-11-2026):** pliego de subcontratación de obras de la PC-01 con 14 anexos; leído el documento principal y las Condiciones Generales de Compras (Anexo 13). Para los filtros: pago a 30 días, precios fijos, multa 2% por semana (tope 10%), garantía de 1 año desde la entrega, excepciones en el Anexo 15; requisitos de ingreso a obra para la asistencia técnica. Los demás anexos (movimiento de suelos, división de responsabilidades, planilla de cotización de obra) no aplican. Sin leer en detalle: Anexos 06, 07, 12 y 14 (seguridad e ingreso), que hacen falta solo si se vende la asistencia en obra.
 
+## Predimensionamiento ASME VIII Div.1 (11-11-2026, pedido de Matías) — `dimensionamiento.md`
+- Lo genera `dimensionamiento.py` (fórmulas UG-27, UG-32, UG-45, UG-34, UG-44, UG-99 y pesos de las tablas de `conocimiento/tecnico/`). **No es la memoria de cálculo.** Tensiones admisibles, junta y rating de B16.5 cargados de memoria (ASME no está en el repositorio): los verifica Ingeniería.
+- Resultado: Sch 80 en cuerpo y casquete y Sch 160 en cuellos cumplen; manda el mínimo de C0100 (6,2 mm), no la presión. Brida ciega estándar con 3,2 mm de corrosión: en el límite, depende de la junta (a verificar). PH 13,0 kg/cm2g declarando MAWP = presión de diseño.
+- Peso vacío ≈ 102 kg por filtro; ≈ 114 kg en prueba hidráulica; volumen 12,9 litros.
+- Revisión independiente del cálculo hecha: números reproducidos; corregido el casquete (102 mm para Sch 80, no 89), el "no cumple" de la brida ciega (no contaba el resalte y dependía de supuestos), la opción de mover el venteo (no resolvía nada), la superficie a pintar y pesos menores.
+- Supuestos míos sin respaldo del cliente: largo del caño 600 mm, altura de A y B, patas de ángulo 2". Dependen del cartucho.
+- B31.3: aplica solo al venteo y drenaje aguas abajo de la primera rosca o brida (confirmado por Matías, 11-11-2026); aclaración en la oferta.
+
 ## Antecedentes
 - **AESA/47 - Filtros La Angostura Norte C5165** (25-03-2026): los mismos tags FCC-707/708 para la PC-01 (HD-003019 / RI-003017 de VCD25176). Presupuesto 142: USD 5.963,65 c/u, 75 días, sin planilla de costo ni resultado. Gora OF-X-0001-00027549 (23-03-2026): cartucho microfibra de vidrio doble malla 25 μm, Ø ext. 42 × 86 mm, USD 32 c/u, 6 unidades, mínimo 2 por recipiente. **Diferencia:** hoy la HD pide celulósico 99,9 % > 10 μm.
 - Otros del buscador: Camuzzi 26 (FM2 #600), Camuzzi 24 (FM3 #600): otra serie y otro tipo.

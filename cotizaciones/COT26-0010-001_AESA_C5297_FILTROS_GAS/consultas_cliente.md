@@ -37,12 +37,14 @@ Preparadas el 11-11-2026 y corregidas el mismo día con la revisión independien
 > La requisición lista la B0609 (selección de materiales y recubrimiento interior) y la hoja de datos no pide revestimiento interior. Entendemos que los filtros no llevan revestimiento interior (gas, 3,2 mm de sobreespesor de corrosión). ¿Lo confirman?
 
 **C11 — Especificaciones que faltan e internos** (requisitos R055, R056 y R068)
-> No recibimos el cuerpo de la ES__-0002657 B0600 (solo los anexos I, II y V) ni la C0200 Elementos Internos, que la C0100 (5.3.4) declara aplicable; y la requisición lista la AB-IYO-ED-09-180-01 pero recibimos la ES__-0001032 (B0606). ¿Nos las pueden enviar o confirmar cuál vale? Para un filtro de Ø 6" con un cartucho: ¿aplican a los internos el sobreespesor de corrosión de los dos lados y el espesor mínimo de 10 mm de la C0100 5.1.4? ¿Se requiere rompevórtice (C0100 5.1.9) en el drenaje de 3/4"?
+> No recibimos el cuerpo de la ES__-0002657 B0600 (solo los anexos I, II y V) ni la C0200 Elementos Internos, que la C0100 (5.3.4) declara aplicable; y la requisición lista la AB-IYO-ED-09-180-01 pero recibimos la ES__-0001032 (B0606). ¿Nos las pueden enviar o confirmar cuál vale? Para un filtro de Ø 6" con un cartucho: ¿aplican a los internos el sobreespesor de corrosión de los dos lados y el espesor mínimo de 10 mm de la C0100 5.1.4? ¿Confirman que ese mínimo de 10 mm es solo para internos y no para la envolvente (caño 6" Sch 80, 10,97 mm nominal)? ¿Se requiere rompevórtice (C0100 5.1.9) en el drenaje de 3/4"?
 
 **C12 — Ensayos y soldadura** (requisitos R057, R062 y R064)
 > La ED(EP)-B-02.00 (9.1.1) pide un testigo de producción por cada procedimiento de soldadura; tal como está redactado alcanza a un recipiente de acero al carbono de 11 mm. ¿Se requiere para estos filtros? La ED(EP)-B-05.00 pide recalificar los procedimientos con registros de más de 5 años: ¿se aceptan nuestros PQR vigentes según ASME IX? La "prueba inicial en el lugar de instalación" de la C0100 5.1.6 b) entendemos que no es alcance del fabricante. ¿Lo confirman?
 
 ## Para resolver adentro (Matías)
+
+- **ASME B31.3** (HD pág. 3, "Ensayos según: Código ASME Sección VIII Div. 1 (Últ. Ed.) / ASME 31.3"): Matías confirmó el 11-11-2026 que B31.3 aplica solo a la cañería de venteo y drenaje (niple, válvulas, tapones) y el recipiente va por ASME VIII Div.1. No se consulta: va como aclaración en la oferta.
 
 - **Fecha de cierre y contacto de AESA:** el mail del pedido no vino en el zip (solo los adjuntos). Falta la fecha límite de la oferta y el nombre del comprador.
 - **Documentos que hay que entregar con la oferta** (RI punto 8, columna A): hoja de datos completada, **plano de arreglo general**, **memoria de cálculo mecánico**, procedimiento de pintura, PIE, certificado ISO 9001, listas de desvíos, antecedentes, repuestos y proveedores. Los hace Ingeniería: avisar ya. La RI dice que sin esa documentación la oferta puede ser rechazada.
