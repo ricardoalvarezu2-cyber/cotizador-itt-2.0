@@ -76,6 +76,9 @@ Sin críticos; las cuentas de proceso y de soportes se reprodujeron. Corregido:
 - Plano: vista en planta con la orientación, cota de altura total al pescante (1.407 mm), oreja y placas de refuerzo dibujadas.
 - Queda dicho de memoria por el revisor y por mí: medidas de B16.x, factores de CIRSOC, propiedades del ángulo, límite de temperatura del cartucho y presiones de vapor.
 
+## PDF para Matías (11-11-2026)
+`FCC-707-708_diseno_preliminar.pdf` (4 hojas A4 apaisadas): plano de arreglo general con planta, pesos por filtro y lista de materiales. Se rehace con `python dimensionamiento.py && python pdf_resumen.py` y se imprime `resumen_diseno.html` a PDF con Chromium (Playwright, A4 apaisado). No calcula nada: lee el plano, la sección 4 de `dimensionamiento.md` y `pedido/lista_materiales_plano.csv`.
+
 ## Antecedentes
 - **AESA/47 - Filtros La Angostura Norte C5165** (25-03-2026): los mismos tags FCC-707/708 para la PC-01 (HD-003019 / RI-003017 de VCD25176). Presupuesto 142: USD 5.963,65 c/u, 75 días, sin planilla de costo ni resultado. Gora OF-X-0001-00027549 (23-03-2026): cartucho microfibra de vidrio doble malla 25 μm, Ø ext. 42 × 86 mm, USD 32 c/u, 6 unidades, mínimo 2 por recipiente. **Diferencia:** hoy la HD pide celulósico 99,9 % > 10 μm.
 - Otros del buscador: Camuzzi 26 (FM2 #600), Camuzzi 24 (FM3 #600): otra serie y otro tipo.
