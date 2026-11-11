@@ -55,6 +55,15 @@ Sin críticos; transcripción, columna A de documentos de la oferta, espárragos
 - Supuestos míos sin respaldo del cliente: largo del caño 600 mm, altura de A y B, patas de ángulo 2". Dependen del cartucho.
 - B31.3: aplica solo al venteo y drenaje aguas abajo de la primera rosca o brida (confirmado por Matías, 11-11-2026); aclaración en la oferta.
 
+## Diseño preliminar completo (11-11-2026, pedido de Matías: "diseñalo con los estándares que conozcas o puedas investigar")
+- `dimensionamiento.md` §5 a §9 y plano `arreglo_general.svg` / `.png` (los genera `dimensionamiento.py`).
+- **Proceso:** caudal real 2,51 m3/h (con el caudal mayor, el de la HD); 2,07 m/s en las conexiones de 1". Un cartucho plisado estándar de 2 3/4" × 10" trabaja muy holgado; el Ø 6" sale de la tapa con pescante, no del proceso.
+- **Arreglo interno:** entrada A a la cámara, flujo de afuera hacia adentro, salida por tubo central a B; cámara inferior de 250 mm y drenaje. Internos en AISI 316 L (decisión mía): la C0100 5.1.4 hace inviable un tubo interno de 1" en acero al carbono (10 mm mínimo y corrosión de los dos lados). Agrega un procedimiento de soldadura carbono–inoxidable.
+- **Venteo F corrido 65 mm del centro de la tapa**, porque el pescante toma la tapa del centro; la HD lo dibuja centrado.
+- **Patas, anclaje, izaje y pescante** verificados con cuentas simples (viento CIRSOC 102 simplificado, sismo con coeficiente 0,15 adoptado): todo muy por debajo de lo admisible. 3 pernos M16.
+- Investigado en la web: criterio de pérdida de carga de fabricantes de filtros de gas (≈ 2 psi limpio, recambio 12–15 psi) y medidas de cartuchos; no encontré una hoja técnica de cartucho celulósico de 10 μm para gas con caudal garantizado: lo tiene que dar Gora u otro fabricante.
+- Lista de materiales actualizada: 1 cartucho, internos 316 L, placas de refuerzo del caño del cuerpo, pescante detallado.
+
 ## Antecedentes
 - **AESA/47 - Filtros La Angostura Norte C5165** (25-03-2026): los mismos tags FCC-707/708 para la PC-01 (HD-003019 / RI-003017 de VCD25176). Presupuesto 142: USD 5.963,65 c/u, 75 días, sin planilla de costo ni resultado. Gora OF-X-0001-00027549 (23-03-2026): cartucho microfibra de vidrio doble malla 25 μm, Ø ext. 42 × 86 mm, USD 32 c/u, 6 unidades, mínimo 2 por recipiente. **Diferencia:** hoy la HD pide celulósico 99,9 % > 10 μm.
 - Otros del buscador: Camuzzi 26 (FM2 #600), Camuzzi 24 (FM3 #600): otra serie y otro tipo.

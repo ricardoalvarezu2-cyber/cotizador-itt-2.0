@@ -49,7 +49,7 @@
 | Brida de cuerpo y tapa 6" #150 | Ø 280 mm; 8 espárragos 3/4" en Ø 241,3 mm |
 | Conexiones A y B (1" #150 WNRF) | enfrentadas, a 770 mm del piso; 500 mm entre caras |
 | Conexión D (3/4" #150 WNRF) | a 150 mm del piso; cara a 250 mm del eje |
-| Conexión F (3/4" NPT #3000) | en el centro de la tapa |
+| Conexión F (3/4" NPT #3000) | en la tapa, corrida 65 mm del centro (el centro lo ocupa el cáncamo del pescante) |
 | Patas | 3 de L 2" × 2" × 1/4", placas base 120 × 120 × 9,5 mm con agujero Ø 18 en círculo de Ø 330 mm |
 | Volumen interior | 12,9 litros (0,0129 m3) |
 | Superficie exterior a pintar | ≈ 1,17 m2 |
@@ -74,27 +74,114 @@ El largo del cuerpo y la posición de A y B dependen del cartucho (cantidad y me
 | 13 | Codo 90° 3/4" Sch 160 | 0,27 | tabla |
 | 14 a 17 y 32 | Válvula de drenaje 3/4" con tapón, junta y bulonería (tipo a definir: CA11; entre 3,5 kg esférica y 8 kg esclusa) | 5,50 | estimado |
 | 18 a 21 | Cupla, niple, válvula de venteo 3/4" NPT y tapón (tipo a definir: CA11) | 2,40 | estimado |
-| 22 | 2 elementos filtrantes (a definir con el fabricante) | 1,00 | estimado |
-| 23 y 24 | Internos: asiento de 10 mm, conducto de salida, varilla y bulonería | 5,00 | estimado |
+| 22 | Elemento filtrante: 1 cartucho de 2 3/4" × 10" (a definir con el fabricante) | 0,50 | estimado |
+| 23 y 24 | Internos AISI 316 L: tubo de salida 1" Sch 160 con codo, asiento, platillo, resorte, varilla y bulonería | 4,00 | estimado |
 | 25 | 3 patas L 2" × 2" × 1/4" × 500 mm con placa base 120 × 120 × 9,5 | 10,35 | calculado |
 | 26 | 3 placas de refuerzo 150 × 80 × 6,35 | 1,79 | calculado |
 | 27 | 2 orejas de izaje 80 × 60 × 9,5 | 0,72 | calculado |
 | 28 | 2 orejas de puesta a tierra 50 × 40 × 6 AISI 316 | 0,19 | calculado |
 | 29 | Placa de identificación con soporte 150 × 100 × 6 | 0,81 | calculado |
 | 33 | Rompevórtice | 0,20 | estimado |
-| — | Soldadura y pintura (≈ 2 %) | 2,01 | estimado |
-| | **Peso vacío** | **102,45** | |
+| — | Soldadura y pintura (≈ 2 %) | 1,98 | estimado |
+| | **Peso vacío** | **100,92** | |
 
 | Peso | kg |
 |---|---|
-| Vacío | 102 |
-| En operación (gas) | 102 |
-| En prueba hidráulica (lleno de agua, sin elementos) | 114 |
-| En transporte (con patín y embalaje, estimado) | 114 |
+| Vacío | 101 |
+| En operación (gas) | 101 |
+| En prueba hidráulica (lleno de agua, sin elementos) | 113 |
+| En transporte (con patín y embalaje, estimado) | 113 |
 
-Origen: *tabla* = tablas de pesos de `conocimiento/tecnico/` (bridas ±15 %, accesorios ±10–15 %); *calculado* = volumen × 7,85; *estimado* = pieza sin definir. Con margen, el peso vacío está entre 92 y 118 kg.
+Origen: *tabla* = tablas de pesos de `conocimiento/tecnico/` (bridas ±15 %, accesorios ±10–15 %); *calculado* = volumen × 7,85; *estimado* = pieza sin definir. Con margen, el peso vacío está entre 91 y 116 kg.
 
-## 5. Listado de materiales
+## 5. Proceso y elemento filtrante
+
+| Dato | Valor |
+|---|---|
+| Caudal de diseño adoptado | 11,67 Sm3/h (hoja de datos: 0,28 MSCMD; el P&ID dice 6,15 Sm3/h: consulta C1) |
+| Caudal real a 4,5 kg/cm2 g y 65 °C | 2,51 m3/h |
+| Velocidad en las conexiones de 1" Sch 160 (Ø int. 20,7 mm) | 2,07 m/s (ρ·v² = 30 kg/m·s²: muy por debajo de los límites usuales de erosión y ruido) |
+| Elemento adoptado | 1 cartucho plisado estándar de 2 3/4" × 10" (Ø 70 × 254 mm, doble extremo abierto), celulósico, 99,9 % > 10 μm, flujo de afuera hacia adentro |
+| Velocidad en el medio filtrante (≈ 0,45 m2) | 1,55 mm/s |
+| Velocidad en el espacio anular cuerpo–cartucho | 0,054 m/s |
+| Pérdida de carga | Elemento limpio: despreciable a este caudal (criterio usual de la industria: hasta 0,14 kg/cm2 limpio; recambio a 0,8–1,0 kg/cm2). El valor garantizado lo da el fabricante del elemento |
+
+- El caudal es tan chico que un solo cartucho de 10" trabaja muy holgado; el Ø 6" del cuerpo sale del mínimo razonable para una tapa bridada con pescante, no del proceso.
+- El antecedente AESA/47 (PC-01) usó cartuchos Gora de Ø 42 × 86 mm (mínimo 2 por recipiente): entran en este cuerpo apilados sobre el mismo asiento. La medida final la define el fabricante del elemento; el asiento se adapta sin cambiar el recipiente.
+- La eficiencia 99,9 % > 10 μm es de grado absoluto: hay que pedirla garantizada por escrito al fabricante (el celulósico plisado común es nominal).
+
+## 6. Arreglo interno y elevaciones
+
+| Nivel sobre el piso | mm |
+|---|---|
+| Eje del drenaje D | 150 |
+| Fondo del casquete | 248 |
+| Soldadura casquete–caño | 350 |
+| Eje de A (entrada) y B (salida) | 600 |
+| Asiento del cartucho | 680 |
+| Extremo superior del cartucho | 934 |
+| Cara de la brida de cuerpo | 1.037 (quedan 103 mm para el platillo de cierre y el resorte) |
+| Tope de la tapa | 1.067 |
+
+- **Recorrido del gas:** entra por A a la cámara del cuerpo, atraviesa el cartucho de afuera hacia adentro y sale por el tubo central hacia B. El polvo queda en el cartucho y lo que decanta va a la cámara inferior (250 mm) y al drenaje D.
+- **Tubo de salida interno:** caño 1" Sch 160 con codo, desde el cuello de B hasta el centro, con el asiento del cartucho arriba. El tubo también hace de deflector frente a la entrada A.
+- **Material de los internos: AISI 316 L.** La C0100 5.1.4 pide para internos soldados de acero al carbono corrosión de los dos lados (3,2 + 3,2 mm) y 10 mm de espesor mínimo: un caño de 1" no lo cumple en ningún schedule. En inoxidable el mínimo es 6 mm (Sch 160 = 6,35 mm) y la corrosión es 0. La hoja de datos no fija el material de internos y pide bulonería AISI 316 L. Requiere procedimiento de soldadura acero al carbono–inoxidable (consultas C6 y C11).
+- **Cierre del cartucho:** platillo superior con resorte y varilla roscada de 3/8" AISI 316 L al asiento; se saca por arriba abriendo la tapa.
+- **Rompevórtice** sobre el drenaje D (C0100 5.1.9), en cruz de planchuela AISI 316 L.
+
+## 7. Soportes, anclaje, izaje y pescante
+
+| Verificación | Carga | Resultado | Admisible |
+|---|---|---|---|
+| Viento (CIRSOC 102: 48 m/s, I = 1,15) | 648 N; momento en la base 453 N·m | manda sobre el sismo | — |
+| Sismo (CIRSOC 103, zona 1; coeficiente adoptado 0,15) | 166 N; momento 124 N·m | no actúa junto con el viento (C0100 5.1.1) | — |
+| Pata L 2" × 2" × 1/4" SA-36, compresión (lleno de agua + momento) | 2.199 N | 3,6 MPa | 114 MPa |
+| Pata, flexión por el corte | 216 N | 9,3 MPa | 114 MPa |
+| Pata, esbeltez (largo libre 350 mm) | — | 35 | 120 |
+| Perno de anclaje M16 (3, uno por pata), tracción con el equipo vacío | 1.500 N | 9,6 MPa | ≈ 100 MPa |
+| Oreja de izaje 80 × 60 × 9,5 con agujero Ø 22 (todo el peso × 1,5 en una oreja) | 1.659 N | 4,4 MPa de corte | ≈ 55 MPa |
+| Pescante, caño 1 1/2" Sch 80, brazo 200 mm (tapa y venteo × 1,5) | 224 N | 6,7 MPa | 118 MPa |
+
+- Todo trabaja muy por debajo de lo admisible: en un equipo de 100 kg las secciones salen de mínimos constructivos, no del cálculo.
+- **Patas:** 3 a 120°, ángulo de 2" × 2" × 1/4" SA-36, soldadas con cordón continuo a placas de refuerzo de 150 × 80 mm cortadas del mismo caño del cuerpo (C0100 5.1.12: del material de la envolvente), con cantos redondeados y agujero testigo 1/8" NPT. Placas base de 120 × 120 × 9,5 mm con agujero Ø 22. El sistema de patas necesita aprobación de YPF.
+- **Anclaje:** 3 pernos M16 en círculo de Ø 330 mm. ITT entrega el diseño y la plantilla; los pernos no se proveen.
+- **Orejas de izaje:** 2 a 180°, a 90° de A y B, debajo de la brida de cuerpo; penetración total y líquidos penetrantes (C0100 5.1.13).
+- **Pescante:** columna de caño 1 1/2" Sch 80 que gira dentro de un buje de 2" Sch 80 soldado al cuerpo con placa de refuerzo; brazo de planchuela y bulón de ojo de 1/2" con tuerca de maniobra, tomado a un cáncamo en el centro de la tapa. Por eso el venteo F va corrido 65 mm del centro (el esquema de la hoja de datos lo dibuja centrado: se aclara en la oferta).
+- **Puesta a tierra:** 2 orejas AISI 316 de 50 × 40 × 6 mm con agujero Ø 14, en dos patas.
+- **Placa de identificación:** AISI 304 sobre soporte de chapa de 6 mm, al frente, entre A y B (como en el esquema de la hoja de datos).
+- **Sin calcular:** cargas de cañería en A y B (WRC 107 / UG-44 b): AESA tiene que informar las cargas.
+
+## 8. Soldadura, ensayos y terminación
+
+- Juntas circunferenciales (casquete–caño y caño–brida): a tope con penetración total, raíz GTAW y relleno SMAW (ED(EP)-B-05.00: sin GMAW en partes a presión). Cuellos de A, B y D pasantes con penetración total (UW-16).
+- Radiografiado por puntos (RT3): 2 placas por filtro. Líquidos penetrantes 100 % en las soldaduras de las 4 conexiones y en las orejas de izaje. Dureza e identificación positiva según ED(EP)-B-02.00.
+- Prueba hidráulica a 13,0 kg/cm2 g, 1 hora, con registro, antes de pintar y sin el cartucho.
+- Junta de la tapa: espiralada AISI 316 / grafito con anillos interior y exterior, ASME B16.20 (supuesto hasta recibir la clase CA11).
+- Pintura exterior sistema 201 de la B0600: arenado SSPC-SP10, cinc silicato, mist coat, epoxi y poliuretano; RAL 9006 el cuerpo y RAL 9011 las patas. Interior sin revestimiento.
+
+## 9. Normas usadas
+
+| Tema | Norma |
+|---|---|
+| Diseño y fabricación del recipiente | ASME VIII Div.1 última edición (UG-16, UG-20, UG-27, UG-32, UG-34, UG-36, UG-39, UG-44, UG-45, UG-99, UW-11, UW-12, UW-16, UCS-66, Apéndice 2) |
+| Materiales y tensiones admisibles | ASME II partes A y D |
+| Soldadura y ensayos no destructivos | ASME IX y ASME V |
+| Caños | ASME B36.10 |
+| Bridas | ASME B16.5 |
+| Casquete y codo a tope | ASME B16.9 |
+| Cupla y tapones roscados | ASME B16.11 y ASME B1.20.1 (NPT) |
+| Junta espiralada | ASME B16.20 |
+| Espárragos y tuercas | ASME B18.2.1 / B18.2.2; recubrimiento ISO 4042 |
+| Venteo y drenaje aguas abajo de la primera rosca o brida | ASME B31.3 y clase CA11 de la L0200 de YPF |
+| Requisitos del cliente | YPF C0100 (recipientes), B0600 (pintura), ED(EP)-B-01.00, B-02.00 y B-05.00 |
+| Viento, sismo y nieve | CIRSOC 102 (2015), INPRES-CIRSOC 103 (2018), CIRSOC 104 (2005) |
+| Cargas en conexiones | WRC 107 / 537 (pendiente) |
+| Patas, orejas y pescante | Práctica habitual de recipientes (D. Moss, Pressure Vessel Design Manual; detalles tipo PIP VEFV1100), citada de memoria |
+| Pérdida de carga del elemento | Criterios publicados por fabricantes de filtros de gas (Pall, Parker/Peco): ≈ 2 psi limpio, recambio a 12–15 psi |
+
+Plano de arreglo general: `arreglo_general.svg` y `arreglo_general.png`, en esta carpeta.
+
+## 10. Listado de materiales
 
 Está en `pedido/lista_materiales_plano.csv` (33 renglones por filtro), con el texto de la hoja de datos, cantidad, material y los datos de cada pieza en columnas.
 

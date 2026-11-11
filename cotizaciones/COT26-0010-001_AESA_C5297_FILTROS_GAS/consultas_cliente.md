@@ -22,7 +22,7 @@ Preparadas el 11-11-2026 y corregidas el mismo día con la revisión independien
 > La requisición pide valores opcionales de asistencia técnica (valor diario), viaje al sitio y modelo 3D con atributos; la planilla de cotización solo tiene 3 posiciones (RDO, RCP y FCC). ¿Los opcionales se cotizan en la misma planilla o en nota aparte? ¿El modelo 3D en CADWorx es obligatorio para estos filtros (recipiente sin skid ni cañerías) o alcanza con un 3D en formato STEP/DWG? En la tabla del punto 8 el modelo 3D (ítem 1.8) figura con "Req. CAF = SI" a 6 semanas, y el punto 2 lo llama costo opcional: ¿es opcional u obligatorio, y qué significa "Req. CAF"?
 
 **C6 — Elemento filtrante e internos** (requisito R028)
-> La hoja de datos pide cartucho celulósico con eficiencia 99,9 % > 10 μm y no indica ΔP máximo limpio, dispositivo de cierre ni material de los internos. ¿Hay un ΔP admisible con elemento limpio y sucio? ¿Se acepta tapa de cierre con brida ciega abulonada y pescante (como indica la tabla de conexiones) e internos de acero al carbono con bulonería AISI 316 L?
+> La hoja de datos pide cartucho celulósico con eficiencia 99,9 % > 10 μm y no indica ΔP máximo limpio, dispositivo de cierre ni material de los internos. ¿Hay un ΔP admisible con elemento limpio y sucio? ¿Se acepta tapa de cierre con brida ciega abulonada y pescante (como indica la tabla de conexiones)? Proponemos los internos (tubo de salida, asiento y cierre del cartucho) en AISI 316 L, con bulonería AISI 316 L: ¿lo aceptan?
 
 **C7 — Especificación ED(EP)-C-01.08 Filtros** (requisito R043)
 > La ED(EP)-C-01.08 trata filtros de líquido (granate-antracita, cáscara de nuez, arena, cartucho) y pide manómetros, transmisor de presión diferencial y doble válvula de drenaje, que no figuran en la hoja de datos ni en el P&ID de los FCC-707/708. Para cartucho descartable pide también 2 válvulas de alivio, válvula de venteo automática y prueba de funcionamiento con asistencia en sitio. Entendemos que para estos filtros de gas vale la hoja de datos y el P&ID (una válvula y tapón en venteo y drenaje, sin instrumentos ni alivios) y lo declaramos en la lista de desvíos. ¿Lo confirman?
@@ -43,6 +43,8 @@ Preparadas el 11-11-2026 y corregidas el mismo día con la revisión independien
 > La ED(EP)-B-02.00 (9.1.1) pide un testigo de producción por cada procedimiento de soldadura; tal como está redactado alcanza a un recipiente de acero al carbono de 11 mm. ¿Se requiere para estos filtros? La ED(EP)-B-05.00 pide recalificar los procedimientos con registros de más de 5 años: ¿se aceptan nuestros PQR vigentes según ASME IX? La "prueba inicial en el lugar de instalación" de la C0100 5.1.6 b) entendemos que no es alcance del fabricante. ¿Lo confirman?
 
 ## Para resolver adentro (Matías)
+
+- **Aclaraciones del diseño para la oferta** (no se consultan): venteo F en la tapa corrido 65 mm del centro, porque el centro lo usa el cáncamo del pescante; prueba hidráulica a 13,0 kg/cm2 g con presión máxima admisible igual a la de diseño; 1 cartucho de Ø 70 × 254 mm a confirmar con el fabricante.
 
 - **ASME B31.3** (HD pág. 3, "Ensayos según: Código ASME Sección VIII Div. 1 (Últ. Ed.) / ASME 31.3"): Matías confirmó el 11-11-2026 que B31.3 aplica solo a la cañería de venteo y drenaje (niple, válvulas, tapones) y el recipiente va por ASME VIII Div.1. No se consulta: va como aclaración en la oferta.
 
