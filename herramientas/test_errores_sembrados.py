@@ -135,6 +135,8 @@ def paridad_pagina():
     import subprocess
     casos = []
     for c in sorted((RAIZ / "cotizaciones").glob("COT*")):
+        if not (c / "cotizacion.json").exists():  # carpeta recién abierta (alcance y lista, sin precios): nada que frenar
+            continue
         with contextlib.redirect_stdout(io.StringIO()):
             cot = json.load(open(c / "cotizacion.json", encoding="utf-8"))
             cot["frenos_repo"] = [{"clave": k, "texto": t} for k, t in frenos.frenos_repo(c)]
