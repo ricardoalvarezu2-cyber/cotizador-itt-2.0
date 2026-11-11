@@ -42,7 +42,7 @@
 | Diámetro exterior del cuerpo | 168,3 mm (6") |
 | Diámetro interior | 146,4 mm |
 | Espesor de envolvente y casquete | 10,97 mm (Sch 80) |
-| Largo de la tangente del casquete a la cara de la brida de cuerpo | 741 mm (casquete de 102 mm, caño de 600 mm y brida de 87 mm) |
+| Largo de la tangente del casquete a la cara de la brida de cuerpo | 741 mm (tramo recto del casquete 54 + caño 600 + brida 87; el casquete entero mide 102 mm) |
 | Altura del piso a la cara de la brida de cuerpo | 1.037 mm |
 | Altura total con tapa | 1.067 mm |
 | Altura total con válvula de venteo | ≈ 1.397 mm (el pescante puede sumar ≈ 100 mm) |
