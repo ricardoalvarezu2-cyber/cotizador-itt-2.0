@@ -44,7 +44,8 @@ Sin críticos; transcripción, columna A de documentos de la oferta, espárragos
 - **Regla de descripción literal:** espárragos y tuercas separados como en la HD (pos 7/31 y 17/32); materiales que la HD no da (pescante, cupla, tapón, niple) pasados a `nota`; válvulas y tapones con el texto de la RI y la HD.
 - Agregados: 2ª junta de tapa (prueba y servicio), rompevórtice (pos 33, a consultar), conducto interno de B al asiento, 20 requisitos (plazo, END, pintura, embalaje, condiciones de sitio), consultas C11 y C12, y C2 reenfocada.
 - Impacto a −10 °C: el revisor entiende que no se exige (UCS-66), pero lo dijo de memoria: lo tiene que justificar la memoria de cálculo.
-- No revisado: adjuntos de las condiciones de obra, BIM, B0609.
+- No revisado: BIM, B0609.
+- **Condiciones de obra (recibidas de Matías el 11-11-2026):** pliego de subcontratación de obras de la PC-01 con 14 anexos; leído el documento principal y las Condiciones Generales de Compras (Anexo 13). Para los filtros: pago a 30 días, precios fijos, multa 2% por semana (tope 10%), garantía de 1 año desde la entrega, excepciones en el Anexo 15; requisitos de ingreso a obra para la asistencia técnica. Los demás anexos (movimiento de suelos, división de responsabilidades, planilla de cotización de obra) no aplican. Sin leer en detalle: Anexos 06, 07, 12 y 14 (seguridad e ingreso), que hacen falta solo si se vende la asistencia en obra.
 
 ## Antecedentes
 - **AESA/47 - Filtros La Angostura Norte C5165** (25-03-2026): los mismos tags FCC-707/708 para la PC-01 (HD-003019 / RI-003017 de VCD25176). Presupuesto 142: USD 5.963,65 c/u, 75 días, sin planilla de costo ni resultado. Gora OF-X-0001-00027549 (23-03-2026): cartucho microfibra de vidrio doble malla 25 μm, Ø ext. 42 × 86 mm, USD 32 c/u, 6 unidades, mínimo 2 por recipiente. **Diferencia:** hoy la HD pide celulósico 99,9 % > 10 μm.
