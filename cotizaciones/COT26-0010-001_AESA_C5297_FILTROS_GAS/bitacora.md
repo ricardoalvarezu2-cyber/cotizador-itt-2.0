@@ -64,6 +64,18 @@ Sin críticos; transcripción, columna A de documentos de la oferta, espárragos
 - Investigado en la web: criterio de pérdida de carga de fabricantes de filtros de gas (≈ 2 psi limpio, recambio 12–15 psi) y medidas de cartuchos; no encontré una hoja técnica de cartucho celulósico de 10 μm para gas con caudal garantizado: lo tiene que dar Gora u otro fabricante.
 - Lista de materiales actualizada: 1 cartucho, internos 316 L, placas de refuerzo del caño del cuerpo, pescante detallado.
 
+## Revisión independiente del diseño (11-11-2026, agente que no lo armó)
+Sin críticos; las cuentas de proceso y de soportes se reprodujeron. Corregido:
+- **Orejas de izaje:** como las había puesto (80 × 60 debajo de la brida) el grillete chocaba con la brida de Ø 280. Pasan a 120 × 80 con el agujero a 170 mm del eje.
+- **Placas de refuerzo de las patas:** arrancaban sobre la soldadura casquete–caño (C0100 5.3.2 no lo permite); suben 50 mm y la pata pasa a 550 mm. "Cortadas del mismo caño" no asentaba ni coincidía con el peso: quedan en SA-516 Gr. 70 de 6,35 mm roladas.
+- **Venteo F:** a 65 mm del centro el agujero caía sobre la cara de la brida; queda a 50 mm.
+- **Cartucho:** el plisado estándar trae núcleo de polipropileno (no sirve a 65–90 °C): se pide con núcleo y tapas metálicos. Ø 63 a 70 mm.
+- **Condensado:** yo había tratado el gas como seco con polvo; con 7,6 % de C5+ puede condensar. Sumado a la consulta C1.
+- **Fórmulas de las patas:** compresión en el círculo de patas (no el de anclaje), flexión en ménsula sobre el eje débil y K = 2: 30,9 MPa y esbeltez 81, siguen cumpliendo.
+- Contradicciones entre secciones (altura de A y B 770 contra 600, agujero Ø 18 contra 22, internos de 10 mm contra 316 L) y cita 5.1.1 por 5.1.7.
+- Plano: vista en planta con la orientación, cota de altura total al pescante (1.407 mm), oreja y placas de refuerzo dibujadas.
+- Queda dicho de memoria por el revisor y por mí: medidas de B16.x, factores de CIRSOC, propiedades del ángulo, límite de temperatura del cartucho y presiones de vapor.
+
 ## Antecedentes
 - **AESA/47 - Filtros La Angostura Norte C5165** (25-03-2026): los mismos tags FCC-707/708 para la PC-01 (HD-003019 / RI-003017 de VCD25176). Presupuesto 142: USD 5.963,65 c/u, 75 días, sin planilla de costo ni resultado. Gora OF-X-0001-00027549 (23-03-2026): cartucho microfibra de vidrio doble malla 25 μm, Ø ext. 42 × 86 mm, USD 32 c/u, 6 unidades, mínimo 2 por recipiente. **Diferencia:** hoy la HD pide celulósico 99,9 % > 10 μm.
 - Otros del buscador: Camuzzi 26 (FM2 #600), Camuzzi 24 (FM3 #600): otra serie y otro tipo.

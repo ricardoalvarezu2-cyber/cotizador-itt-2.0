@@ -162,9 +162,9 @@ pesos = [
     ("18 a 21", 'Cupla, niple, válvula de venteo 3/4" NPT y tapón (tipo a definir: CA11)', 2.4, EST),
     ("22", "Elemento filtrante: 1 cartucho de 2 3/4\" × 10\" (a definir con el fabricante)", 0.5, EST),
     ("23 y 24", 'Internos AISI 316 L: tubo de salida 1" Sch 160 con codo, asiento, platillo, resorte, varilla y bulonería', 4.0, EST),
-    ("25", '3 patas L 2" × 2" × 1/4" × 500 mm con placa base 120 × 120 × 9,5', 3 * (4.75 * 0.50) + chapa(120, 120, 9.5, 3), CALC),
-    ("26", "3 placas de refuerzo 150 × 80 × 6,35", chapa(150, 80, 6.35, 3), CALC),
-    ("27", "2 orejas de izaje 80 × 60 × 9,5", chapa(80, 60, 9.5, 2), CALC),
+    ("25", '3 patas L 2" × 2" × 1/4" × 550 mm con placa base 120 × 120 × 9,5', 3 * (4.75 * 0.55) + chapa(120, 120, 9.5, 3), CALC),
+    ("26", "3 placas de refuerzo 150 × 80 × 6,35 SA-516 Gr. 70 roladas", chapa(150, 80, 6.35, 3), CALC),
+    ("27", "2 orejas de izaje 120 × 80 × 9,5", chapa(120, 80, 9.5, 2), CALC),
     ("28", "2 orejas de puesta a tierra 50 × 40 × 6 AISI 316", chapa(50, 40, 6, 2), CALC),
     ("29", "Placa de identificación con soporte 150 × 100 × 6", chapa(150, 100, 6) + 0.1, CALC),
     ("33", "Rompevórtice", 0.2, EST),
@@ -213,8 +213,8 @@ o.append("- Refuerzo de aberturas (UG-36 c 3): las conexiones de 1\" y 3/4\" en 
 o.append("- Cuellos: Sch 160 por la C0100 5.1.3 (conexiones menores de 3\").")
 o.append(f"- Prueba hidráulica (UG-99 b): 1,3 × {n(P_KG, 1)} = **{n(PH, 1)} kg/cm2 g** como mínimo, tomando la presión máxima admisible igual a la de diseño (hay que declararlo en la oferta: la C0100 5.1.6 pide 1,3 × MAWP y, si la MAWP se calculara, la limita la brida #150 en ≈ {n(rating_kg, 1)} kg/cm2 y la prueba subiría a ≈ {n(1.3 * rating_kg, 1)} kg/cm2).")
 o.append("- Impacto a −10 °C: el revisor independiente entiende que queda exento (UG-20 f y UCS-66: curva B con 11 mm; bridas B16.5 hasta −29 °C), dicho de memoria; se justifica en la memoria de cálculo.")
-o.append("- C0100 5.1.4 pide espesor mínimo total de 10 mm para partes de acero al carbono (está en el párrafo de internos): los internos soldados se previeron de 10 mm. Si YPF lo aplicara también a la envolvente, el Sch 80 con tolerancia (9,60 mm) no alcanzaría: está en la consulta C11.")
-o.append("- Sin calcular: cargas en conexiones (WRC 107, HD nota 5), viento, sismo y nieve sobre las patas y los pernos de anclaje, orejas de izaje y pescante.\n")
+o.append("- C0100 5.1.4 pide espesor mínimo total de 10 mm para partes de acero al carbono (está en el párrafo de internos): por eso los internos soldados se previeron en AISI 316 L (mínimo 6 mm y sin corrosión; ver 6). Si YPF lo aplicara también a la envolvente, el Sch 80 con tolerancia (9,60 mm) no alcanzaría: está en la consulta C11.")
+o.append("- Sin calcular: cargas de cañería en las conexiones (WRC 107, HD nota 5). Viento, sismo, patas, anclaje, orejas y pescante: ver 7.\n")
 o.append("## 3. Dimensiones generales (preliminares)\n")
 o.append("| Dimensión | Valor |\n|---|---|")
 o.append(f"| Diámetro exterior del cuerpo | {n(De, 1)} mm (6\") |")
@@ -225,10 +225,10 @@ o.append(f"| Altura del piso a la cara de la brida de cuerpo | {n(z_brida, 0)} m
 o.append(f"| Altura total con tapa | {n(z_tapa, 0)} mm |")
 o.append(f"| Altura total con válvula de venteo | ≈ {n(z_total, 0)} mm (el pescante puede sumar ≈ 100 mm) |")
 o.append(f"| Brida de cuerpo y tapa 6\" #150 | Ø {n(OD_BRIDA, 0)} mm; {N_ESP} espárragos 3/4\" en Ø {n(BC, 1)} mm |")
-o.append(f"| Conexiones A y B (1\" #150 WNRF) | enfrentadas, a {n(H_PATA + 420, 0)} mm del piso; {n(2 * PROY, 0)} mm entre caras |")
+o.append(f"| Conexiones A y B (1\" #150 WNRF) | enfrentadas, a {n(H_PATA + 250, 0)} mm del piso; {n(2 * PROY, 0)} mm entre caras |")
 o.append(f"| Conexión D (3/4\" #150 WNRF) | a 150 mm del piso; cara a {n(PROY, 0)} mm del eje |")
-o.append("| Conexión F (3/4\" NPT #3000) | en la tapa, corrida 65 mm del centro (el centro lo ocupa el cáncamo del pescante) |")
-o.append("| Patas | 3 de L 2\" × 2\" × 1/4\", placas base 120 × 120 × 9,5 mm con agujero Ø 18 en círculo de Ø 330 mm |")
+o.append("| Conexión F (3/4\" NPT #3000) | en la tapa, corrida 50 mm del centro (el centro lo ocupa el cáncamo del pescante) |")
+o.append("| Patas | 3 de L 2\" × 2\" × 1/4\", placas base 120 × 120 × 9,5 mm con agujero Ø 22 en círculo de Ø 330 mm |")
 o.append(f"| Volumen interior | {n(vol, 1)} litros ({n(vol / 1000, 4)} m3) |")
 o.append(f"| Superficie exterior a pintar | ≈ {n(m2_ext)} m2 |\n")
 o.append("El largo del cuerpo y la posición de A y B dependen del cartucho (cantidad y medida a definir con el fabricante del elemento) y del caudal, que el cliente tiene que aclarar (consulta C1).\n")
@@ -251,7 +251,7 @@ Q_PID = 6.15                     # Sm3/h (P&ID)
 P_OP_MIN, T_OP_MAX = 4.5, 65.0   # kg/cm2 g y °C: la combinación que da más volumen real
 Z_GAS = 0.98
 Q_REAL = max(Q_HD, Q_PID) * 1.0332 / (P_OP_MIN + 1.0332) * (273.15 + T_OP_MAX) / 288.15 * Z_GAS   # m3/h reales
-RHO = 6.95                       # kg/m3 (mínima de la hoja de datos)
+RHO = 6.95                       # kg/m3: la de la hoja de datos a 5,6 kg/cm2 g y 13 °C (a 4,5 kg/cm2 g y 65 °C es menor, ≈ 5 a 6)
 d_boca = (c1["diam_ext_mm"] - 2 * c1["espesor_mm"]) / 1000
 v_boca = Q_REAL / 3600 / (math.pi / 4 * d_boca ** 2)
 CART_DE, CART_DI, CART_L = 70.0, 28.0, 254.0    # cartucho plisado estándar 2 3/4" × 10" (doble extremo abierto), mm
@@ -280,24 +280,28 @@ W_PH = p_ph * 9.80665
 F_S = 0.15 * W_PH                                # zona sísmica 1: coeficiente adoptado 0,15 (conservador)
 M_S = F_S * (Z_AB + 150) / 1000
 M_BASE, F_BASE = max(M_V, M_S), max(F_V, F_S)
-N_PATAS, D_BC = 3, 0.33
-A_L, Z_L, R_L = 605.0, 4050.0, 9.9               # ángulo L 2" × 2" × 1/4": área mm2, módulo resistente mm3, radio de giro mínimo mm
-L_LIBRE = Z_SOLD                                 # largo libre de la pata, mm
-N_PATA = W_PH / N_PATAS + 4 * M_BASE / (N_PATAS * D_BC)
+N_PATAS, D_BC, D_PATAS = 3, 0.33, 0.25           # círculo de anclaje y círculo de las patas, m
+A_L, Z_L, R_L = 605.0, 2800.0, 9.9               # ángulo L 2" × 2" × 1/4": área mm2, módulo resistente en el eje débil mm3, radio de giro mínimo mm
+Z_PLACA = Z_SOLD + 50.0                          # borde inferior de la placa de refuerzo: 50 mm arriba de la soldadura casquete–caño (C0100 5.3.2)
+L_LIBRE = Z_PLACA                                # largo libre de la pata, mm
+N_PATA = W_PH / N_PATAS + 4 * M_BASE / (N_PATAS * D_PATAS)   # 4M/(N·D) con N = 3 es M/(0,75·D): pata más cargada
 s_axial = N_PATA / A_L
-s_flex = (F_BASE / N_PATAS) * L_LIBRE / 2 / Z_L  # empotrada–guiada
+s_flex = (F_BASE / N_PATAS) * L_LIBRE / Z_L      # en ménsula (un solo perno por pata no empotra la base), eje débil
 S_A36 = 114.0                                    # SA-36, tensión admisible ASME (de memoria)
-esbeltez = L_LIBRE / R_L
+esbeltez = 2.0 * L_LIBRE / R_L                   # K = 2 (ménsula)
 T_ANCLA = 4 * M_BASE / (N_PATAS * D_BC) - vacio * 9.80665 / N_PATAS
 A_M16 = 157.0
 s_ancla = max(T_ANCLA, 0) / A_M16
 
 # ---------------------------------------------------------------- izaje (C0100 5.1.13: factor de impacto 1,5) y pescante
 F_OREJA = p_ph * 9.80665 * 1.5                   # cada oreja se verifica con todo el peso
-A_CORTE = 2 * 20.0 * 9.5                         # dos planos de corte de 20 mm en chapa de 9,5 mm
+A_CORTE = 2 * 19.0 * 9.5                         # dos planos de corte de 19 mm en chapa de 9,5 mm
 s_oreja = F_OREJA / A_CORTE
+R_OREJA = 170.0                                  # radio del agujero de la oreja: fuera de la brida de cuerpo (radio 140) y de sus tuercas
+s_oreja_f = F_OREJA * (R_OREJA - De / 2) / (9.5 * 80.0 ** 2 / 6)   # flexión en la raíz de la oreja de 80 mm de alto
 W_TAPA = (brida("ciega", 6) + 3.0) * 9.80665 * 1.5   # tapa + cupla, niple y válvula de venteo, con impacto
-BRAZO = 0.20                                     # del eje del pescante al centro de la tapa, m
+BRAZO = 0.19                                     # del eje del pescante al centro de la tapa, m
+s_brazo = W_TAPA * BRAZO * 1000 / (12.7 * 50.0 ** 2 / 6)   # brazo de planchuela 50 × 12,7 de canto
 Z_PESC = 6700.0                                  # módulo resistente del caño 1 1/2" Sch 80, mm3
 s_pesc = W_TAPA * BRAZO * 1000 / Z_PESC
 
@@ -305,13 +309,15 @@ o.append("## 5. Proceso y elemento filtrante\n")
 o.append("| Dato | Valor |\n|---|---|")
 o.append(f"| Caudal de diseño adoptado | {n(max(Q_HD, Q_PID))} Sm3/h (hoja de datos: 0,28 MSCMD; el P&ID dice {n(Q_PID)} Sm3/h: consulta C1) |")
 o.append(f"| Caudal real a {n(P_OP_MIN, 1)} kg/cm2 g y {n(T_OP_MAX, 0)} °C | {n(Q_REAL)} m3/h |")
-o.append(f"| Velocidad en las conexiones de 1\" Sch 160 (Ø int. {n(d_boca * 1000, 1)} mm) | {n(v_boca)} m/s (ρ·v² = {n(rv2, 0)} kg/m·s²: muy por debajo de los límites usuales de erosión y ruido) |")
-o.append(f"| Elemento adoptado | 1 cartucho plisado estándar de 2 3/4\" × 10\" (Ø {n(CART_DE, 0)} × {n(CART_L, 0)} mm, doble extremo abierto), celulósico, 99,9 % > 10 μm, flujo de afuera hacia adentro |")
+o.append(f"| Velocidad en las conexiones de 1\" Sch 160 (Ø int. {n(d_boca * 1000, 1)} mm) | {n(v_boca)} m/s (ρ·v² ≈ {n(rv2, 0)} kg/m·s² con la densidad mayor de la hoja de datos: muy por debajo de los límites usuales de erosión y ruido) |")
+o.append(f"| Elemento adoptado | 1 cartucho plisado estándar de 10\" (Ø 63 a {n(CART_DE, 0)} × {n(CART_L, 0)} mm, doble extremo abierto), celulósico, 99,9 % > 10 μm, flujo de afuera hacia adentro; núcleo y tapas metálicos, adhesivo y juntas aptos para 90 °C e hidrocarburos (el estándar con polipropileno no sirve: la operación llega a 65 °C) |")
 o.append(f"| Velocidad en el medio filtrante (≈ {n(A_MEDIO)} m2) | {n(v_medio * 1000, 2)} mm/s |")
 o.append(f"| Velocidad en el espacio anular cuerpo–cartucho | {n(v_anular, 3)} m/s |")
 o.append("| Pérdida de carga | Elemento limpio: despreciable a este caudal (criterio usual de la industria: hasta 0,14 kg/cm2 limpio; recambio a 0,8–1,0 kg/cm2). El valor garantizado lo da el fabricante del elemento |\n")
 o.append("- El caudal es tan chico que un solo cartucho de 10\" trabaja muy holgado; el Ø 6\" del cuerpo sale del mínimo razonable para una tapa bridada con pescante, no del proceso.")
-o.append("- El antecedente AESA/47 (PC-01) usó cartuchos Gora de Ø 42 × 86 mm (mínimo 2 por recipiente): entran en este cuerpo apilados sobre el mismo asiento. La medida final la define el fabricante del elemento; el asiento se adapta sin cambiar el recipiente.")
+o.append("- El antecedente AESA/47 (PC-01) usó cartuchos Gora de Ø 42 × 86 mm (mínimo 2 por recipiente): entran en este cuerpo, pero piden otro asiento (Ø menor). La medida final la define el fabricante del elemento; el asiento se adapta sin cambiar el recipiente.")
+o.append("- **Condensado:** el gas tiene ≈ 7,6 % molar de C5 y más pesados (HD nota 19) y puede condensar a 15 °C y 5 kg/cm2 g, más con −10 °C de ambiente (estimación del revisor, de memoria; coincide con la marca E30 del P&ID, consulta C4). El elemento es de partículas, no coalescente: la cámara inferior y el drenaje D juntan el líquido que decante, y el fabricante del elemento tiene que confirmar que el medio celulósico tolera hidrocarburo líquido. Sumado a las consultas C1 y C4.")
+o.append("- Los valores de superficie de medio y de pérdida de carga son típicos, citados de memoria y de folletos de fabricantes; no son garantía.")
 o.append("- La eficiencia 99,9 % > 10 μm es de grado absoluto: hay que pedirla garantizada por escrito al fabricante (el celulósico plisado común es nominal).\n")
 o.append("## 6. Arreglo interno y elevaciones\n")
 o.append("| Nivel sobre el piso | mm |\n|---|---|")
@@ -326,25 +332,35 @@ o.append(f"| Tope de la tapa | {n(z_tapa, 0)} |\n")
 o.append("- **Recorrido del gas:** entra por A a la cámara del cuerpo, atraviesa el cartucho de afuera hacia adentro y sale por el tubo central hacia B. El polvo queda en el cartucho y lo que decanta va a la cámara inferior (250 mm) y al drenaje D.")
 o.append("- **Tubo de salida interno:** caño 1\" Sch 160 con codo, desde el cuello de B hasta el centro, con el asiento del cartucho arriba. El tubo también hace de deflector frente a la entrada A.")
 o.append("- **Material de los internos: AISI 316 L.** La C0100 5.1.4 pide para internos soldados de acero al carbono corrosión de los dos lados (3,2 + 3,2 mm) y 10 mm de espesor mínimo: un caño de 1\" no lo cumple en ningún schedule. En inoxidable el mínimo es 6 mm (Sch 160 = 6,35 mm) y la corrosión es 0. La hoja de datos no fija el material de internos y pide bulonería AISI 316 L. Requiere procedimiento de soldadura acero al carbono–inoxidable (consultas C6 y C11).")
+o.append("- Espesores de los internos: el caño 1\" Sch 160 tiene 6,35 mm nominales (5,56 con la tolerancia): se declara 6,35 nominal en la consulta C11 y, si YPF exige 6 mm con tolerancia, pasa a 1\" XXS (9,09 mm). Asiento, platillo soldado y rompevórtice: planchuela de 6,35 mm como mínimo.")
+o.append("- Soldadura de los internos: el tubo se suelda sobre el cuello de B, que queda a ras del interior (C0100 5.3.3), con penetración total y aporte 309 L (procedimiento calificado acero al carbono–inoxidable; C0100 5.3.4 pide en esas soldaduras el sobreespesor del recipiente). El tubo y el rompevórtice se sueldan antes de cerrar el casquete.")
+o.append("- Variante más simple, a ofrecer si el cliente la acepta: internos desmontables (tubo 316 L enchufado en B), que quedan fuera de la regla de internos soldados.")
 o.append("- **Cierre del cartucho:** platillo superior con resorte y varilla roscada de 3/8\" AISI 316 L al asiento; se saca por arriba abriendo la tapa.")
 o.append("- **Rompevórtice** sobre el drenaje D (C0100 5.1.9), en cruz de planchuela AISI 316 L.\n")
+o.append("**Orientación en planta** (0° = conexión B, sentido horario):\n")
+o.append("| Elemento | Posición |\n|---|---|")
+for a_, b_ in [("B, salida", "0°"), ("A, entrada", "180°"), ("D, drenaje", "180° (debajo de A), a 60° de las patas vecinas"), ("Patas", "0°, 120° y 240°"), ("Orejas de izaje", "90° y 270°"),
+               ("Pescante", "45°"), ("F, venteo (en la tapa)", "180°, a 50 mm del centro"), ("Placa de identificación", "270°"), ("Puesta a tierra", "en las patas de 120° y 240°")]:
+    o.append(f"| {a_} | {b_} |")
+o.append("")
 o.append("## 7. Soportes, anclaje, izaje y pescante\n")
 o.append("| Verificación | Carga | Resultado | Admisible |\n|---|---|---|---|")
 o.append(f"| Viento (CIRSOC 102: {n(V_VIENTO, 0)} m/s, I = {n(I_IMP)}) | {n(F_V, 0)} N; momento en la base {n(M_V, 0)} N·m | manda sobre el sismo | — |")
-o.append(f"| Sismo (CIRSOC 103, zona 1; coeficiente adoptado 0,15) | {n(F_S, 0)} N; momento {n(M_S, 0)} N·m | no actúa junto con el viento (C0100 5.1.1) | — |")
-o.append(f"| Pata L 2\" × 2\" × 1/4\" SA-36, compresión (lleno de agua + momento) | {n(N_PATA, 0)} N | {n(s_axial, 1)} MPa | {n(S_A36, 0)} MPa |")
-o.append(f"| Pata, flexión por el corte | {n(F_BASE / N_PATAS, 0)} N | {n(s_flex, 1)} MPa | {n(S_A36, 0)} MPa |")
-o.append(f"| Pata, esbeltez (largo libre {n(L_LIBRE, 0)} mm) | — | {n(esbeltez, 0)} | 120 |")
+o.append(f"| Sismo (CIRSOC 103, zona 1; coeficiente adoptado 0,15) | {n(F_S, 0)} N; momento {n(M_S, 0)} N·m | no actúa junto con el viento (C0100 5.1.7) | — |")
+o.append(f"| Pata L 2\" × 2\" × 1/4\" SA-36, compresión (lleno de agua + momento, en el círculo de patas Ø {n(D_PATAS * 1000, 0)}) | {n(N_PATA, 0)} N | {n(s_axial, 1)} MPa | {n(S_A36, 0)} MPa |")
+o.append(f"| Pata, flexión por el corte (en ménsula, eje débil) | {n(F_BASE / N_PATAS, 0)} N | {n(s_flex, 1)} MPa | {n(S_A36, 0)} MPa |")
+o.append(f"| Pata, esbeltez (largo libre {n(L_LIBRE, 0)} mm, K = 2) | — | {n(esbeltez, 0)} | 120 |")
 o.append(f"| Perno de anclaje M16 (3, uno por pata), tracción con el equipo vacío | {n(max(T_ANCLA, 0), 0)} N | {n(s_ancla, 1)} MPa | ≈ 100 MPa |")
-o.append(f"| Oreja de izaje 80 × 60 × 9,5 con agujero Ø 22 (todo el peso × 1,5 en una oreja) | {n(F_OREJA, 0)} N | {n(s_oreja, 1)} MPa de corte | ≈ 55 MPa |")
-o.append(f"| Pescante, caño 1 1/2\" Sch 80, brazo {n(BRAZO * 1000, 0)} mm (tapa y venteo × 1,5) | {n(W_TAPA, 0)} N | {n(s_pesc, 1)} MPa | {n(S_106B, 0)} MPa |\n")
+o.append(f"| Oreja de izaje 120 × 80 × 9,5 con agujero Ø 22 (todo el peso × 1,5 en una oreja) | {n(F_OREJA, 0)} N | {n(s_oreja, 1)} MPa de corte; {n(s_oreja_f, 1)} MPa de flexión | ≈ 55 / 90 MPa |")
+o.append(f"| Pescante, caño 1 1/2\" Sch 80, brazo {n(BRAZO * 1000, 0)} mm (tapa y venteo × 1,5) | {n(W_TAPA, 0)} N | columna {n(s_pesc, 1)} MPa; brazo 50 × 12,7 {n(s_brazo, 1)} MPa | {n(S_106B, 0)} MPa |\n")
+o.append("- Cuentas conservadoras: viento al 100 % con el peso de prueba hidráulica (la C0100 5.1.1 pide solo 50 % en prueba), coeficiente de fuerza 1,2 y Kz = 1; coeficiente sísmico 0,15 adoptado sin derivarlo (el viento manda hasta ≈ 0,5).")
 o.append("- Todo trabaja muy por debajo de lo admisible: en un equipo de 100 kg las secciones salen de mínimos constructivos, no del cálculo.")
-o.append("- **Patas:** 3 a 120°, ángulo de 2\" × 2\" × 1/4\" SA-36, soldadas con cordón continuo a placas de refuerzo de 150 × 80 mm cortadas del mismo caño del cuerpo (C0100 5.1.12: del material de la envolvente), con cantos redondeados y agujero testigo 1/8\" NPT. Placas base de 120 × 120 × 9,5 mm con agujero Ø 22. El sistema de patas necesita aprobación de YPF.")
+o.append("- **Patas:** 3 a 120°, ángulo de 2\" × 2\" × 1/4\" SA-36, de 550 mm, soldadas con cordón continuo a placas de refuerzo de 150 × 80 × 6,35 mm de SA-516 Gr. 70 roladas al radio del cuerpo (la hoja de datos admite SA-516 Gr. 70 para envolvente y soportes; C0100 5.1.12), con cantos redondeados y agujero testigo 1/8\" NPT. Las placas arrancan 50 mm arriba de la soldadura casquete–caño (C0100 5.3.2: las soldaduras circunferenciales no deben quedar afectadas por otros componentes; la distancia mínima la fija la B0500, no recibida). Placas base de 120 × 120 × 9,5 mm con agujero Ø 22. El sistema de patas necesita aprobación de YPF.")
 o.append("- **Anclaje:** 3 pernos M16 en círculo de Ø 330 mm. ITT entrega el diseño y la plantilla; los pernos no se proveen.")
-o.append("- **Orejas de izaje:** 2 a 180°, a 90° de A y B, debajo de la brida de cuerpo; penetración total y líquidos penetrantes (C0100 5.1.13).")
-o.append("- **Pescante:** columna de caño 1 1/2\" Sch 80 que gira dentro de un buje de 2\" Sch 80 soldado al cuerpo con placa de refuerzo; brazo de planchuela y bulón de ojo de 1/2\" con tuerca de maniobra, tomado a un cáncamo en el centro de la tapa. Por eso el venteo F va corrido 65 mm del centro (el esquema de la hoja de datos lo dibuja centrado: se aclara en la oferta).")
+o.append("- **Orejas de izaje:** 2 a 180°, a 90° de A y B, de 120 × 80 × 9,5 mm, con el agujero Ø 22 a 170 mm del eje para que el grillete libre la brida de cuerpo (Ø 280) y sus tuercas; a más de 50 mm de la soldadura caño–brida; penetración total y líquidos penetrantes (C0100 5.1.13).")
+o.append("- **Pescante:** columna de caño 1 1/2\" Sch 80 que gira dentro de un buje de 2\" Sch 80 soldado al cuerpo con placa de refuerzo; brazo de planchuela y bulón de ojo de 1/2\" con tuerca de maniobra, tomado a un cáncamo en el centro de la tapa. Por eso el venteo F va corrido 50 mm del centro (el agujero y la cupla quedan sobre el interior del cuerpo, lejos del asentamiento de la junta; Ingeniería confirma la exención de refuerzo con el agujero excéntrico, UG-39) (el esquema de la hoja de datos lo dibuja centrado: se aclara en la oferta).")
 o.append("- **Puesta a tierra:** 2 orejas AISI 316 de 50 × 40 × 6 mm con agujero Ø 14, en dos patas.")
-o.append("- **Placa de identificación:** AISI 304 sobre soporte de chapa de 6 mm, al frente, entre A y B (como en el esquema de la hoja de datos).")
+o.append("- **Placa de identificación:** AISI 304 sobre soporte de chapa de 6 mm, a 270°, entre A y B (como en el esquema de la hoja de datos).")
 o.append("- **Sin calcular:** cargas de cañería en A y B (WRC 107 / UG-44 b): AESA tiene que informar las cargas.\n")
 o.append("## 8. Soldadura, ensayos y terminación\n")
 o.append("- Juntas circunferenciales (casquete–caño y caño–brida): a tope con penetración total, raíz GTAW y relleno SMAW (ED(EP)-B-05.00: sin GMAW en partes a presión). Cuellos de A, B y D pasantes con penetración total (UW-16).")
@@ -383,8 +399,10 @@ def globo(x, z, t):
     s.append(f'<circle class="g" cx="{X(x):.1f}" cy="{Y(z):.1f}" r="11"/>'); texto(x, z, t, "b", dy=4)
 R = De / 2
 linea(-520, 0, 520, 0, "p")
-for xp in (-R - 8, R + 8):                       # patas y placas base
-    rect(xp - 25, 0, xp + 25, 10); rect(xp - 12, 10, xp + 12, Z_SOLD + 150, "c")
+for sg in (-1, 1):                               # patas, placas base y placas de refuerzo (esquema: son 3 a 120°, ver planta)
+    xp = sg * (R + 32)
+    rect(xp - 60, 0, xp + 60, 10); rect(xp - 25, 10, xp + 25, Z_PLACA + 150, "c")
+    rect(sg * R, Z_PLACA, sg * (R + 7), Z_PLACA + 150, "c f")
 s.append(f'<path class="c f" d="M {X(-R):.1f} {Y(Z_SOLD):.1f} L {X(-R):.1f} {Y(Z_SOLD - RECTO_CASQ):.1f} A {R * ESC:.1f} {(H_CASQ - RECTO_CASQ) * ESC:.1f} 0 0 0 {X(R):.1f} {Y(Z_SOLD - RECTO_CASQ):.1f} L {X(R):.1f} {Y(Z_SOLD):.1f}"/>')
 rect(-R, Z_SOLD, R, Z_SOLD + L_CANO, "c f")
 s.append(f'<path class="c f" d="M {X(-R):.1f} {Y(Z_SOLD + L_CANO):.1f} L {X(-R - 12):.1f} {Y(z_brida - T_BRIDA):.1f} L {X(R + 12):.1f} {Y(z_brida - T_BRIDA):.1f} L {X(R):.1f} {Y(Z_SOLD + L_CANO):.1f} Z"/>')
@@ -392,7 +410,7 @@ rect(-OD_BRIDA / 2, z_brida - T_BRIDA, OD_BRIDA / 2, z_brida, "c f")
 rect(-OD_BRIDA / 2, z_brida + 4.5, OD_BRIDA / 2, z_tapa, "c f")
 for xe in (-BC / 2, BC / 2):                     # espárragos
     rect(xe - 9.5, z_brida - T_BRIDA - 22, xe + 9.5, z_tapa + 22, "c")
-XF = -65.0                                        # venteo F corrido del centro: el centro de la tapa lo usa el cáncamo del pescante
+XF = -50.0                                        # venteo F corrido del centro: el centro de la tapa lo usa el cáncamo del pescante
 rect(XF - 14, z_tapa, XF + 14, z_tapa + 130, "c")  # venteo F: cupla y niple
 rect(XF - 28, z_tapa + 130, XF + 28, z_tapa + 230, "c f"); linea(XF - 28, z_tapa + 180, XF - 75, z_tapa + 180, "c")   # válvula y palanca
 rect(XF - 12, z_tapa + 230, XF + 12, z_tapa + 270, "c")
@@ -403,19 +421,19 @@ linea(0, Z_FONDO, 0, Z_D, "c"); rect(-13.3, Z_D + 30, 13.3, Z_FONDO, "c f")     
 rect(-(PROY - 13), Z_D - 13.3, 0, Z_D + 13.3, "c f"); rect(-PROY, Z_D - 50, -(PROY - 13), Z_D + 50, "c f")
 rect(-PROY - 110, Z_D - 28, -PROY, Z_D + 28, "c f"); linea(-PROY - 55, Z_D + 28, -PROY - 55, Z_D + 75, "c")
 rect(-PROY - 135, Z_D - 12, -PROY - 110, Z_D + 12, "c")
-rect(0, Z_AB - 16.7, R, Z_AB + 16.7, "i"); rect(-16.7, Z_AB - 16.7, 16.7, Z_ASIENTO, "i")           # tubo de salida interno
-rect(-45, Z_ASIENTO, 45, Z_ASIENTO + 8, "i"); rect(-CART_DE / 2, Z_ASIENTO + 8, CART_DE / 2, Z_CART, "i h")
+rect(0, Z_AB - 16.7, R, Z_AB + 16.7, "i"); rect(-16.7, Z_AB - 16.7, 16.7, Z_ASIENTO - 8, "i")           # tubo de salida interno
+rect(-45, Z_ASIENTO - 8, 45, Z_ASIENTO, "i"); rect(-CART_DE / 2, Z_ASIENTO, CART_DE / 2, Z_CART, "i h")
 rect(-45, Z_CART, 45, Z_CART + 8, "i"); linea(0, Z_CART + 8, 0, Z_CART + 60, "i")
 rect(R + 86, Z_SOLD + 380, R + 122, z_tapa + 340, "c")                              # pescante: columna, buje, brazo y bulón de ojo
 rect(R + 78, Z_SOLD + 400, R + 130, Z_SOLD + 520, "c f"); rect(R, Z_SOLD + 440, R + 78, Z_SOLD + 480, "c f")
 rect(-20, z_tapa + 320, R + 122, z_tapa + 340, "c f"); linea(0, z_tapa + 320, 0, z_tapa + 45, "c")
-rect(-R - 30, Z_SOLD + L_CANO - 90, -R, Z_SOLD + L_CANO - 30, "c f")                 # oreja de izaje
-rect(-50, Z_AB + 120, 50, Z_AB + 190, "c"); texto(0, Z_AB + 150, "placa", "q")        # placa de identificación
+rect(-R - 120, Z_SOLD + L_CANO - 150, -R, Z_SOLD + L_CANO - 70, "c f")               # oreja de izaje 120 × 80 (girada al plano)
+s.append(f'<circle class="c" cx="{X(-R_OREJA):.1f}" cy="{Y(Z_SOLD + L_CANO - 110):.1f}" r="5.5"/>')
 s.append(f'<line class="e" x1="{X(0):.1f}" y1="{Y(-40):.1f}" x2="{X(0):.1f}" y2="{Y(z_total + 60):.1f}"/>')
-cota_v(-600, 0, Z_AB, f"{Z_AB:.0f}"); cota_v(-550, 0, Z_SOLD, f"{Z_SOLD:.0f}"); cota_v(-650, 0, z_brida, f"{n(z_brida, 0)}")
-cota_v(400, 0, z_tapa, f"{n(z_tapa, 0)}"); cota_v(450, 0, z_total, f"≈ {n(z_total, 0)}"); cota_v(-500, 0, Z_D, f"{Z_D:.0f}")
+cota_v(-600, 0, Z_AB, f"{Z_AB:.0f} eje A y B"); cota_v(-550, 0, Z_SOLD, f"{Z_SOLD:.0f}"); cota_v(-650, 0, z_brida, f"{n(z_brida, 0)}")
+cota_v(400, 0, z_tapa, f"{n(z_tapa, 0)}"); cota_v(450, 0, z_tapa + 340, f"≈ {n(z_tapa + 340, 0)} (pescante)"); cota_v(-500, 0, Z_D, f"{Z_D:.0f}")
 linea(-PROY, Z_AB - 95, PROY, Z_AB - 95, "k"); linea(-PROY, Z_AB - 110, -PROY, Z_AB - 60, "k"); linea(PROY, Z_AB - 110, PROY, Z_AB - 60, "k")
-texto(120, Z_AB - 95, f"{2 * PROY:.0f} entre caras", "q", dy=-4)
+texto(0, Z_AB - 95, f"{2 * PROY:.0f} entre caras", "q", dy=14)
 globo(-PROY - 40, Z_AB, "A"); globo(PROY + 40, Z_AB, "B"); globo(-PROY - 165, Z_D, "D"); globo(XF - 60, z_tapa + 250, "F"); globo(OD_BRIDA / 2 + 30, z_brida + 45, "M")
 texto(0, -60, f"Ø {n(De, 1)} (6\" Sch 80) · 3 patas a 120° en círculo de anclaje Ø 330", "q")
 tabla = [("A", "Entrada de gas", '1" #150 WNRF'), ("B", "Salida de gas", '1" #150 WNRF'), ("D", "Drenaje, con válvula y tapón", '3/4" #150 WNRF'),
@@ -424,9 +442,26 @@ ty = 60
 s.append(f'<text class="h1" x="750" y="{ty - 22}">Conexiones</text>')
 for i, (a, b, c) in enumerate(tabla):
     s.append(f'<text class="q" x="750" y="{ty + i * 18}">{a}</text><text class="q" x="772" y="{ty + i * 18}">{b}</text><text class="q" x="960" y="{ty + i * 18}">{c}</text>')
+PX, PY, PE = 950.0, 600.0, 0.4                   # planta (orientación): 0° = B, sentido horario
+def pol(r, ang): return PX + r * PE * math.cos(math.radians(ang)), PY + r * PE * math.sin(math.radians(ang))
+s.append(f'<text class="h1" x="750" y="{PY - 180}">Planta (orientación)</text>')
+s.append(f'<circle class="c" cx="{PX}" cy="{PY}" r="{OD_BRIDA / 2 * PE:.1f}"/><circle class="c f" cx="{PX}" cy="{PY}" r="{R * PE:.1f}"/>')
+for ang, nom in ((0, "B"), (180, "A")):
+    x1, y1 = pol(R, ang); x2, y2 = pol(PROY, ang); xt, yt = pol(PROY + 45, ang)
+    s.append(f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" style="stroke:#111;stroke-width:7"/><text class="b" text-anchor="middle" x="{xt:.1f}" y="{yt + 4:.1f}">{nom}</text>')
+for ang in (0, 120, 240):
+    xq, yq = pol(165, ang); s.append(f'<rect class="c f" x="{xq - 12:.1f}" y="{yq - 12:.1f}" width="24" height="24"/>')
+for ang in (90, 270):
+    x1, y1 = pol(R, ang); x2, y2 = pol(R + 120, ang); s.append(f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" style="stroke:#111;stroke-width:4"/>')
+xq, yq = pol(R + 104, 45); s.append(f'<circle class="c f" cx="{xq:.1f}" cy="{yq:.1f}" r="{30 * PE:.1f}"/><text class="q" x="{xq + 16:.1f}" y="{yq + 16:.1f}">pescante 45°</text>')
+xq, yq = pol(50, 180); s.append(f'<circle class="c" cx="{xq:.1f}" cy="{yq:.1f}" r="{14 * PE:.1f}"/><text class="q" text-anchor="middle" x="{xq:.1f}" y="{yq - 9:.1f}">F</text>')
+xq, yq = pol(R + 120, 90); s.append(f'<text class="q" text-anchor="middle" x="{xq:.1f}" y="{yq + 15:.1f}">orejas de izaje 90° y 270°</text>')
+xq, yq = pol(165, 240); s.append(f'<text class="q" text-anchor="end" x="{xq - 16:.1f}" y="{yq - 6:.1f}">patas 0°, 120°, 240°</text>')
+xq, yq = pol(R, 270); s.append(f'<text class="q" x="{xq + 8:.1f}" y="{yq + 16:.1f}">placa</text>')
+s.append(f'<text class="q" x="750" y="{PY + 185}">D sale a 180°, debajo de A. Anclaje: 3 M16 en Ø 330.</text>')
 datos = [f"Diseño: {n(P_KG, 1)} kg/cm2 g · {MDMT}/{T_DIS} °C", f"Corrosión: {n(CA, 1)} mm · RT3 · PH {n(PH, 1)} kg/cm2 g", "ASME VIII Div.1, sin estampa",
          "Envolvente SA-106 Gr. B · casquete SA-234 WPB", "Bridas SA-105 · internos AISI 316 L", f"Volumen {n(vol, 1)} litros",
-         f"Peso vacío ≈ {n(vacio, 0)} kg · en PH ≈ {n(p_ph, 0)} kg", "Elemento: 1 cartucho Ø 70 × 254 mm (a confirmar)"]
+         f"Peso vacío ≈ {n(vacio, 0)} kg · en PH ≈ {n(p_ph, 0)} kg", "Elemento: 1 cartucho de 10\" Ø 63–70 × 254 mm (a confirmar)"]
 s.append(f'<text class="h1" x="750" y="{ty + 130}">Datos</text>')
 for i, d in enumerate(datos):
     s.append(f'<text class="q" x="750" y="{ty + 152 + i * 18}">{d}</text>')
@@ -437,7 +472,7 @@ svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 900" width="
 <rect width="1180" height="900" fill="#fff"/>
 <text class="h1" x="20" y="26">FCC-707/708 · Filtro de gas de emergencia · Arreglo general preliminar (cotas en mm)</text>
 <text class="n" x="20" y="44">BORRADOR, SIN REVISAR · COT26-0010-001 · predimensionamiento ITT para cotizar: no es plano de fabricación</text>
-<text class="q" x="20" y="880">Línea azul de trazos: internos (tubo de salida, asiento y cartucho). Las orejas de izaje y la placa se muestran giradas al plano del dibujo.</text>
+<text class="q" x="20" y="880">Línea azul de trazos: internos (tubo de salida, asiento y cartucho). Las patas y la oreja de izaje se muestran giradas al plano del dibujo: ver la planta. No se dibujan el rompevórtice ni las orejas de puesta a tierra.</text>
 {chr(10).join(s)}
 </svg>'''
 (AQUI / "arreglo_general.svg").write_text(svg, encoding="utf-8")

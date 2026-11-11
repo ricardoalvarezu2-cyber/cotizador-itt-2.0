@@ -32,8 +32,8 @@
 - Cuellos: Sch 160 por la C0100 5.1.3 (conexiones menores de 3").
 - Prueba hidráulica (UG-99 b): 1,3 × 10,0 = **13,0 kg/cm2 g** como mínimo, tomando la presión máxima admisible igual a la de diseño (hay que declararlo en la oferta: la C0100 5.1.6 pide 1,3 × MAWP y, si la MAWP se calculara, la limita la brida #150 en ≈ 18,4 kg/cm2 y la prueba subiría a ≈ 23,9 kg/cm2).
 - Impacto a −10 °C: el revisor independiente entiende que queda exento (UG-20 f y UCS-66: curva B con 11 mm; bridas B16.5 hasta −29 °C), dicho de memoria; se justifica en la memoria de cálculo.
-- C0100 5.1.4 pide espesor mínimo total de 10 mm para partes de acero al carbono (está en el párrafo de internos): los internos soldados se previeron de 10 mm. Si YPF lo aplicara también a la envolvente, el Sch 80 con tolerancia (9,60 mm) no alcanzaría: está en la consulta C11.
-- Sin calcular: cargas en conexiones (WRC 107, HD nota 5), viento, sismo y nieve sobre las patas y los pernos de anclaje, orejas de izaje y pescante.
+- C0100 5.1.4 pide espesor mínimo total de 10 mm para partes de acero al carbono (está en el párrafo de internos): por eso los internos soldados se previeron en AISI 316 L (mínimo 6 mm y sin corrosión; ver 6). Si YPF lo aplicara también a la envolvente, el Sch 80 con tolerancia (9,60 mm) no alcanzaría: está en la consulta C11.
+- Sin calcular: cargas de cañería en las conexiones (WRC 107, HD nota 5). Viento, sismo, patas, anclaje, orejas y pescante: ver 7.
 
 ## 3. Dimensiones generales (preliminares)
 
@@ -47,10 +47,10 @@
 | Altura total con tapa | 1.067 mm |
 | Altura total con válvula de venteo | ≈ 1.397 mm (el pescante puede sumar ≈ 100 mm) |
 | Brida de cuerpo y tapa 6" #150 | Ø 280 mm; 8 espárragos 3/4" en Ø 241,3 mm |
-| Conexiones A y B (1" #150 WNRF) | enfrentadas, a 770 mm del piso; 500 mm entre caras |
+| Conexiones A y B (1" #150 WNRF) | enfrentadas, a 600 mm del piso; 500 mm entre caras |
 | Conexión D (3/4" #150 WNRF) | a 150 mm del piso; cara a 250 mm del eje |
-| Conexión F (3/4" NPT #3000) | en la tapa, corrida 65 mm del centro (el centro lo ocupa el cáncamo del pescante) |
-| Patas | 3 de L 2" × 2" × 1/4", placas base 120 × 120 × 9,5 mm con agujero Ø 18 en círculo de Ø 330 mm |
+| Conexión F (3/4" NPT #3000) | en la tapa, corrida 50 mm del centro (el centro lo ocupa el cáncamo del pescante) |
+| Patas | 3 de L 2" × 2" × 1/4", placas base 120 × 120 × 9,5 mm con agujero Ø 22 en círculo de Ø 330 mm |
 | Volumen interior | 12,9 litros (0,0129 m3) |
 | Superficie exterior a pintar | ≈ 1,17 m2 |
 
@@ -76,23 +76,23 @@ El largo del cuerpo y la posición de A y B dependen del cartucho (cantidad y me
 | 18 a 21 | Cupla, niple, válvula de venteo 3/4" NPT y tapón (tipo a definir: CA11) | 2,40 | estimado |
 | 22 | Elemento filtrante: 1 cartucho de 2 3/4" × 10" (a definir con el fabricante) | 0,50 | estimado |
 | 23 y 24 | Internos AISI 316 L: tubo de salida 1" Sch 160 con codo, asiento, platillo, resorte, varilla y bulonería | 4,00 | estimado |
-| 25 | 3 patas L 2" × 2" × 1/4" × 500 mm con placa base 120 × 120 × 9,5 | 10,35 | calculado |
-| 26 | 3 placas de refuerzo 150 × 80 × 6,35 | 1,79 | calculado |
-| 27 | 2 orejas de izaje 80 × 60 × 9,5 | 0,72 | calculado |
+| 25 | 3 patas L 2" × 2" × 1/4" × 550 mm con placa base 120 × 120 × 9,5 | 11,06 | calculado |
+| 26 | 3 placas de refuerzo 150 × 80 × 6,35 SA-516 Gr. 70 roladas | 1,79 | calculado |
+| 27 | 2 orejas de izaje 120 × 80 × 9,5 | 1,43 | calculado |
 | 28 | 2 orejas de puesta a tierra 50 × 40 × 6 AISI 316 | 0,19 | calculado |
 | 29 | Placa de identificación con soporte 150 × 100 × 6 | 0,81 | calculado |
 | 33 | Rompevórtice | 0,20 | estimado |
-| — | Soldadura y pintura (≈ 2 %) | 1,98 | estimado |
-| | **Peso vacío** | **100,92** | |
+| — | Soldadura y pintura (≈ 2 %) | 2,01 | estimado |
+| | **Peso vacío** | **102,38** | |
 
 | Peso | kg |
 |---|---|
-| Vacío | 101 |
-| En operación (gas) | 101 |
-| En prueba hidráulica (lleno de agua, sin elementos) | 113 |
-| En transporte (con patín y embalaje, estimado) | 113 |
+| Vacío | 102 |
+| En operación (gas) | 102 |
+| En prueba hidráulica (lleno de agua, sin elementos) | 114 |
+| En transporte (con patín y embalaje, estimado) | 114 |
 
-Origen: *tabla* = tablas de pesos de `conocimiento/tecnico/` (bridas ±15 %, accesorios ±10–15 %); *calculado* = volumen × 7,85; *estimado* = pieza sin definir. Con margen, el peso vacío está entre 91 y 116 kg.
+Origen: *tabla* = tablas de pesos de `conocimiento/tecnico/` (bridas ±15 %, accesorios ±10–15 %); *calculado* = volumen × 7,85; *estimado* = pieza sin definir. Con margen, el peso vacío está entre 92 y 118 kg.
 
 ## 5. Proceso y elemento filtrante
 
@@ -100,14 +100,16 @@ Origen: *tabla* = tablas de pesos de `conocimiento/tecnico/` (bridas ±15 %, acc
 |---|---|
 | Caudal de diseño adoptado | 11,67 Sm3/h (hoja de datos: 0,28 MSCMD; el P&ID dice 6,15 Sm3/h: consulta C1) |
 | Caudal real a 4,5 kg/cm2 g y 65 °C | 2,51 m3/h |
-| Velocidad en las conexiones de 1" Sch 160 (Ø int. 20,7 mm) | 2,07 m/s (ρ·v² = 30 kg/m·s²: muy por debajo de los límites usuales de erosión y ruido) |
-| Elemento adoptado | 1 cartucho plisado estándar de 2 3/4" × 10" (Ø 70 × 254 mm, doble extremo abierto), celulósico, 99,9 % > 10 μm, flujo de afuera hacia adentro |
+| Velocidad en las conexiones de 1" Sch 160 (Ø int. 20,7 mm) | 2,07 m/s (ρ·v² ≈ 30 kg/m·s² con la densidad mayor de la hoja de datos: muy por debajo de los límites usuales de erosión y ruido) |
+| Elemento adoptado | 1 cartucho plisado estándar de 10" (Ø 63 a 70 × 254 mm, doble extremo abierto), celulósico, 99,9 % > 10 μm, flujo de afuera hacia adentro; núcleo y tapas metálicos, adhesivo y juntas aptos para 90 °C e hidrocarburos (el estándar con polipropileno no sirve: la operación llega a 65 °C) |
 | Velocidad en el medio filtrante (≈ 0,45 m2) | 1,55 mm/s |
 | Velocidad en el espacio anular cuerpo–cartucho | 0,054 m/s |
 | Pérdida de carga | Elemento limpio: despreciable a este caudal (criterio usual de la industria: hasta 0,14 kg/cm2 limpio; recambio a 0,8–1,0 kg/cm2). El valor garantizado lo da el fabricante del elemento |
 
 - El caudal es tan chico que un solo cartucho de 10" trabaja muy holgado; el Ø 6" del cuerpo sale del mínimo razonable para una tapa bridada con pescante, no del proceso.
-- El antecedente AESA/47 (PC-01) usó cartuchos Gora de Ø 42 × 86 mm (mínimo 2 por recipiente): entran en este cuerpo apilados sobre el mismo asiento. La medida final la define el fabricante del elemento; el asiento se adapta sin cambiar el recipiente.
+- El antecedente AESA/47 (PC-01) usó cartuchos Gora de Ø 42 × 86 mm (mínimo 2 por recipiente): entran en este cuerpo, pero piden otro asiento (Ø menor). La medida final la define el fabricante del elemento; el asiento se adapta sin cambiar el recipiente.
+- **Condensado:** el gas tiene ≈ 7,6 % molar de C5 y más pesados (HD nota 19) y puede condensar a 15 °C y 5 kg/cm2 g, más con −10 °C de ambiente (estimación del revisor, de memoria; coincide con la marca E30 del P&ID, consulta C4). El elemento es de partículas, no coalescente: la cámara inferior y el drenaje D juntan el líquido que decante, y el fabricante del elemento tiene que confirmar que el medio celulósico tolera hidrocarburo líquido. Sumado a las consultas C1 y C4.
+- Los valores de superficie de medio y de pérdida de carga son típicos, citados de memoria y de folletos de fabricantes; no son garantía.
 - La eficiencia 99,9 % > 10 μm es de grado absoluto: hay que pedirla garantizada por escrito al fabricante (el celulósico plisado común es nominal).
 
 ## 6. Arreglo interno y elevaciones
@@ -126,29 +128,47 @@ Origen: *tabla* = tablas de pesos de `conocimiento/tecnico/` (bridas ±15 %, acc
 - **Recorrido del gas:** entra por A a la cámara del cuerpo, atraviesa el cartucho de afuera hacia adentro y sale por el tubo central hacia B. El polvo queda en el cartucho y lo que decanta va a la cámara inferior (250 mm) y al drenaje D.
 - **Tubo de salida interno:** caño 1" Sch 160 con codo, desde el cuello de B hasta el centro, con el asiento del cartucho arriba. El tubo también hace de deflector frente a la entrada A.
 - **Material de los internos: AISI 316 L.** La C0100 5.1.4 pide para internos soldados de acero al carbono corrosión de los dos lados (3,2 + 3,2 mm) y 10 mm de espesor mínimo: un caño de 1" no lo cumple en ningún schedule. En inoxidable el mínimo es 6 mm (Sch 160 = 6,35 mm) y la corrosión es 0. La hoja de datos no fija el material de internos y pide bulonería AISI 316 L. Requiere procedimiento de soldadura acero al carbono–inoxidable (consultas C6 y C11).
+- Espesores de los internos: el caño 1" Sch 160 tiene 6,35 mm nominales (5,56 con la tolerancia): se declara 6,35 nominal en la consulta C11 y, si YPF exige 6 mm con tolerancia, pasa a 1" XXS (9,09 mm). Asiento, platillo soldado y rompevórtice: planchuela de 6,35 mm como mínimo.
+- Soldadura de los internos: el tubo se suelda sobre el cuello de B, que queda a ras del interior (C0100 5.3.3), con penetración total y aporte 309 L (procedimiento calificado acero al carbono–inoxidable; C0100 5.3.4 pide en esas soldaduras el sobreespesor del recipiente). El tubo y el rompevórtice se sueldan antes de cerrar el casquete.
+- Variante más simple, a ofrecer si el cliente la acepta: internos desmontables (tubo 316 L enchufado en B), que quedan fuera de la regla de internos soldados.
 - **Cierre del cartucho:** platillo superior con resorte y varilla roscada de 3/8" AISI 316 L al asiento; se saca por arriba abriendo la tapa.
 - **Rompevórtice** sobre el drenaje D (C0100 5.1.9), en cruz de planchuela AISI 316 L.
+
+**Orientación en planta** (0° = conexión B, sentido horario):
+
+| Elemento | Posición |
+|---|---|
+| B, salida | 0° |
+| A, entrada | 180° |
+| D, drenaje | 180° (debajo de A), a 60° de las patas vecinas |
+| Patas | 0°, 120° y 240° |
+| Orejas de izaje | 90° y 270° |
+| Pescante | 45° |
+| F, venteo (en la tapa) | 180°, a 50 mm del centro |
+| Placa de identificación | 270° |
+| Puesta a tierra | en las patas de 120° y 240° |
 
 ## 7. Soportes, anclaje, izaje y pescante
 
 | Verificación | Carga | Resultado | Admisible |
 |---|---|---|---|
 | Viento (CIRSOC 102: 48 m/s, I = 1,15) | 648 N; momento en la base 453 N·m | manda sobre el sismo | — |
-| Sismo (CIRSOC 103, zona 1; coeficiente adoptado 0,15) | 166 N; momento 124 N·m | no actúa junto con el viento (C0100 5.1.1) | — |
-| Pata L 2" × 2" × 1/4" SA-36, compresión (lleno de agua + momento) | 2.199 N | 3,6 MPa | 114 MPa |
-| Pata, flexión por el corte | 216 N | 9,3 MPa | 114 MPa |
-| Pata, esbeltez (largo libre 350 mm) | — | 35 | 120 |
-| Perno de anclaje M16 (3, uno por pata), tracción con el equipo vacío | 1.500 N | 9,6 MPa | ≈ 100 MPa |
-| Oreja de izaje 80 × 60 × 9,5 con agujero Ø 22 (todo el peso × 1,5 en una oreja) | 1.659 N | 4,4 MPa de corte | ≈ 55 MPa |
-| Pescante, caño 1 1/2" Sch 80, brazo 200 mm (tapa y venteo × 1,5) | 224 N | 6,7 MPa | 118 MPa |
+| Sismo (CIRSOC 103, zona 1; coeficiente adoptado 0,15) | 168 N; momento 126 N·m | no actúa junto con el viento (C0100 5.1.7) | — |
+| Pata L 2" × 2" × 1/4" SA-36, compresión (lleno de agua + momento, en el círculo de patas Ø 250) | 2.789 N | 4,6 MPa | 114 MPa |
+| Pata, flexión por el corte (en ménsula, eje débil) | 216 N | 30,9 MPa | 114 MPa |
+| Pata, esbeltez (largo libre 400 mm, K = 2) | — | 81 | 120 |
+| Perno de anclaje M16 (3, uno por pata), tracción con el equipo vacío | 1.495 N | 9,5 MPa | ≈ 100 MPa |
+| Oreja de izaje 120 × 80 × 9,5 con agujero Ø 22 (todo el peso × 1,5 en una oreja) | 1.681 N | 4,7 MPa de corte; 14,2 MPa de flexión | ≈ 55 / 90 MPa |
+| Pescante, caño 1 1/2" Sch 80, brazo 190 mm (tapa y venteo × 1,5) | 224 N | columna 6,3 MPa; brazo 50 × 12,7 8,0 MPa | 118 MPa |
 
+- Cuentas conservadoras: viento al 100 % con el peso de prueba hidráulica (la C0100 5.1.1 pide solo 50 % en prueba), coeficiente de fuerza 1,2 y Kz = 1; coeficiente sísmico 0,15 adoptado sin derivarlo (el viento manda hasta ≈ 0,5).
 - Todo trabaja muy por debajo de lo admisible: en un equipo de 100 kg las secciones salen de mínimos constructivos, no del cálculo.
-- **Patas:** 3 a 120°, ángulo de 2" × 2" × 1/4" SA-36, soldadas con cordón continuo a placas de refuerzo de 150 × 80 mm cortadas del mismo caño del cuerpo (C0100 5.1.12: del material de la envolvente), con cantos redondeados y agujero testigo 1/8" NPT. Placas base de 120 × 120 × 9,5 mm con agujero Ø 22. El sistema de patas necesita aprobación de YPF.
+- **Patas:** 3 a 120°, ángulo de 2" × 2" × 1/4" SA-36, de 550 mm, soldadas con cordón continuo a placas de refuerzo de 150 × 80 × 6,35 mm de SA-516 Gr. 70 roladas al radio del cuerpo (la hoja de datos admite SA-516 Gr. 70 para envolvente y soportes; C0100 5.1.12), con cantos redondeados y agujero testigo 1/8" NPT. Las placas arrancan 50 mm arriba de la soldadura casquete–caño (C0100 5.3.2: las soldaduras circunferenciales no deben quedar afectadas por otros componentes; la distancia mínima la fija la B0500, no recibida). Placas base de 120 × 120 × 9,5 mm con agujero Ø 22. El sistema de patas necesita aprobación de YPF.
 - **Anclaje:** 3 pernos M16 en círculo de Ø 330 mm. ITT entrega el diseño y la plantilla; los pernos no se proveen.
-- **Orejas de izaje:** 2 a 180°, a 90° de A y B, debajo de la brida de cuerpo; penetración total y líquidos penetrantes (C0100 5.1.13).
-- **Pescante:** columna de caño 1 1/2" Sch 80 que gira dentro de un buje de 2" Sch 80 soldado al cuerpo con placa de refuerzo; brazo de planchuela y bulón de ojo de 1/2" con tuerca de maniobra, tomado a un cáncamo en el centro de la tapa. Por eso el venteo F va corrido 65 mm del centro (el esquema de la hoja de datos lo dibuja centrado: se aclara en la oferta).
+- **Orejas de izaje:** 2 a 180°, a 90° de A y B, de 120 × 80 × 9,5 mm, con el agujero Ø 22 a 170 mm del eje para que el grillete libre la brida de cuerpo (Ø 280) y sus tuercas; a más de 50 mm de la soldadura caño–brida; penetración total y líquidos penetrantes (C0100 5.1.13).
+- **Pescante:** columna de caño 1 1/2" Sch 80 que gira dentro de un buje de 2" Sch 80 soldado al cuerpo con placa de refuerzo; brazo de planchuela y bulón de ojo de 1/2" con tuerca de maniobra, tomado a un cáncamo en el centro de la tapa. Por eso el venteo F va corrido 50 mm del centro (el agujero y la cupla quedan sobre el interior del cuerpo, lejos del asentamiento de la junta; Ingeniería confirma la exención de refuerzo con el agujero excéntrico, UG-39) (el esquema de la hoja de datos lo dibuja centrado: se aclara en la oferta).
 - **Puesta a tierra:** 2 orejas AISI 316 de 50 × 40 × 6 mm con agujero Ø 14, en dos patas.
-- **Placa de identificación:** AISI 304 sobre soporte de chapa de 6 mm, al frente, entre A y B (como en el esquema de la hoja de datos).
+- **Placa de identificación:** AISI 304 sobre soporte de chapa de 6 mm, a 270°, entre A y B (como en el esquema de la hoja de datos).
 - **Sin calcular:** cargas de cañería en A y B (WRC 107 / UG-44 b): AESA tiene que informar las cargas.
 
 ## 8. Soldadura, ensayos y terminación
