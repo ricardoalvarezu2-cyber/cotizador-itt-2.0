@@ -1,0 +1,79 @@
+{
+ "estado": "borrador",
+ "archivo_base": "COT26-0330-003 - YPF Lic 70243 - Skid de medicion SCC-112A",
+ "oferta": {
+  "numero": "PRES [a asignar]",
+  "revision": "A",
+  "fecha": "16-11-2026",
+  "descripcion_revision": "Emisión original"
+ },
+ "cliente": {
+  "nombre": "YPF S.A.",
+  "contacto": "[a confirmar]",
+  "referencia": "Licitación 70243",
+  "proyecto": "Estándar Gas Lift – Paquetizado regulación y medición IISS Batería 2.1 – Skid de medición SCC-112A (YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1)"
+ },
+ "objeto": "El presente documento tiene por objeto establecer el alcance de nuestra Oferta {tipo} según los requerimientos solicitados por YPF S.A. en la Licitación 70243, para la provisión del skid de medición SCC-112A, en un todo de acuerdo con YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1, YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0, YPF-GASLIFTBAT21-VCD24299-I-HD-003001 D1 y YPF-EQSKIDSXX-VCD16011-G-ET-001005 D2, y con las aclaraciones y desvíos indicados en nuestra Oferta Técnica.",
+ "item": {
+  "item": "1.000",
+  "codigo": "[código SAP a confirmar]",
+  "descripcion": "Skid de medición SCC-112A 4\" #600 (clase CA31) con medidor Coriolis 3\" #600, computador de caudal, transmisores de presión y temperatura, bypass, bastidor con batea, RX 30 %, PH y pintura según ET",
+  "observacion": "Ver aclaraciones y desvíos",
+  "plazo_dias": "150"
+ },
+ "nota_flete": "Precio con flete a Neuquén incluido (destino exacto a confirmar).",
+ "condiciones": {
+  "CONDICIONES COMERCIALES": "Precios expresados en dólares estadounidenses, el cual será facturado en pesos argentinos al tipo de cambio BNA correspondiente a la fecha de factura. Se deberá cancelar la deuda con la cantidad de pesos necesarios para comprar dichos dólares pactados al TC BNA vendedor del día anterior a la fecha de efectivo pago y se emitirá NC y/o ND cuando exista una variación superior al 3%. Precios sin IVA (21%).",
+  "PLAZO DE ENTREGA": "150 días corridos a partir de la recepción de la Orden de Compra (fijado por el medidor Coriolis importado).",
+  "CONDICIONES DE PAGO": "100% contado contra entrega.",
+  "LUGAR DE ENTREGA": "Sobre camión en la Planta de ITT S.A., sita en Av. 12 de Octubre 4004, Quilmes Oeste, Bs. As.",
+  "VALIDEZ DE OFERTA": "La presente tiene una validez de 15 días corridos."
+ },
+ "embalaje": "Los equipos se acondicionarán para su transporte de manera de proteger su contenido de deterioros por manipulación, mediante madera, cartón corrugado y polietileno, según corresponda. De ser necesario, el embalaje estará preparado para ser manipulado con grúa y se identificará de manera clara y legible.",
+ "documentos_cliente": [
+  "YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1",
+  "YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0",
+  "YPF-GASLIFTBAT21-VCD24299-I-HD-003001 D1",
+  "YPF-EQSKIDSXX-VCD16011-G-ET-001005 D2"
+ ],
+ "caracteristicas": "Línea 4\"-SG-1800-CA31-BB, serie 600# RF, acero al carbono; colector 7.360 mm con 6 válvulas esféricas 4\" #600 y retención 4\" #600; medidor Coriolis 3\" #600 RF entre juntas dieléctricas; bypass 4\"; bastidor 6.960 x 1.535 mm con batea de contención.",
+ "imagen_plano": "",
+ "aclaraciones_y_desvios": {
+  "titulo": "ACLARACIONES Y DESVÍOS",
+  "items": [
+   "Se cotiza solo el skid de medición SCC-112A (hoja 1 del plano). El skid de regulación SCC-112B (hoja 2) no está incluido.",
+   "El plano no trae lista de materiales: el cómputo lo armó ITT desde el dibujo; schedules tomados por ITT (Sch 80 en 4\" y 3\", Sch 160 en 3/4\") hasta recibir la hoja de la clase CA31.",
+   "Las medidas del tramo del medidor (NOTA 6 del plano) las fija el modelo de Coriolis comprado y se ajustan en la ingeniería de detalle.",
+   "No se incluyen rejillas: el plano no las muestra (la ET las pide en zonas de operación)."
+  ]
+ },
+ "exclusiones": {
+  "titulo": "EXCLUSIONES GENERALES",
+  "items": [
+   "Materiales y/o trabajos no indicados en nuestro alcance.",
+   "Montaje, interconexión y soldaduras en campo.",
+   "Obra civil, perchas de izaje y bulones de anclaje (ET 3.2).",
+   "Canalizaciones eléctricas y de instrumentos fuera del skid (ET 3.2)."
+  ]
+ },
+ "alcance_general": {
+  "titulo": "ALCANCE GENERAL",
+  "items": [
+   "Ingeniería de detalle (diseño mecánico y estructural) y documentación.",
+   "Suministro de todos los materiales dentro de nuestro alcance especificado.",
+   "Armado y soldaduras de taller.",
+   "Radiografía 30 % (clase CA31), tintas penetrantes y prueba hidráulica.",
+   "Granallado y pintura según ES__-0002657 (B0600).",
+   "Montaje y cableado de instrumentos hasta caja de conexionado.",
+   "Pruebas FAT.",
+   "Embalaje y transporte terrestre a Neuquén."
+  ]
+ },
+ "garantia": "La garantía por los materiales aquí detallados es de 18 meses a partir de la fecha de entrega o de 12 meses desde la puesta en marcha, lo que ocurra primero.",
+ "firma": {
+  "nombre": "Ricardo Álvarez",
+  "cargo": "Representante Comercial",
+  "telefono": "[teléfono ITT / interno]",
+  "celular": "[celular]"
+ }
+}

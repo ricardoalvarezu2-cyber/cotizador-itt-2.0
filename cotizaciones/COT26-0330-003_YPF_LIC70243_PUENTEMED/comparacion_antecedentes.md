@@ -1,0 +1,17 @@
+# Comparación con antecedentes (P8) — COT26-0330-003
+
+Generado por `herramientas/comparar_antecedentes.py`. Familia SK, subtipo skid de medición / LACT. Esta cotización: **precio unitario USD 103.852,73**, costo USD 79.308,27, factor 1,35 · reparto del costo: materiales 79%, MO y servicios 21%.
+
+Se compara **costo contra costo** (Matías, 30-10-2026): el precio de venta mezcla factor, flete, caución y alcance de cada oferta. El costo del antecedente es el de su ficha, a su fecha (sin ajustar), y solo por equipo cuando la ficha lo permite sin ambigüedad; si no, queda el precio de venta marcado "solo venta". Una diferencia de más del 15% no significa error: hay que explicarla rubro por rubro (alcance, cantidad, diámetro, serie, fecha) antes de presentar el número.
+
+| # | Antecedente | Fecha | Costo por equipo | Costo: esta vs. antecedente | Materiales (ant. / esta) | MO y servicios (ant. / esta) | Factor | Precio de venta (solo referencia) | Qué es |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | ENDRESS HAUSER/17. Skid de medicion Ø6 | 09-10-2025 | 3.768 USD | +2005% (otra escala: no comparable) | — / 79% | — / 21% | — | 15.850 USD | Fabricación de skid de medición Ø6 (LDC / cargadero de camiones) según doc. LMS1 |
+| 2 | ENDRESS HAUSER/28- RFQ Construcción Skid de Medición Ga | 23-12-2025 | — | solo venta: +632% (otra escala) · la ficha no tiene costo (solo precio de venta) | — / 79% | — / 21% | — | 14.193 USD | Construcción de skid-bastidor y ensamble para medición de gasoil (Cerro Vanguard |
+| 3 | ENDRESS HAUSER/26- Construcción Mecánica Skid Gas Buy B | 03-12-2025 | — | solo venta: +420% (otra escala) · costo de toda la oferta (varios ítems): no se reparte por equipo | 38% / 79% | 62% / 21% | 1,41 | 19.984 USD | Skids de medición ANSI 900 RTJ: 1 de Ø3 y 2 de Ø12 más 2 válvulas esféricas 2''  |
+| 4 | ENDRESS HAUSER/27- Construcción Mecánica Skid Gas Buy B | 03-12-2025 | — | solo venta: +420% (otra escala) · costo de toda la oferta (varios ítems): no se reparte por equipo | 53% / 79% | 47% / 21% | 1,25 | 19.984 USD | Skids de medición Ø3" y Ø12" S900 RTJ (piping A106 Gr.B, soportes, ingeniería, p |
+| 5 | MEDITECNA/2. SKID UNIDAD LAC - YPF - | 13-01-2025 | — | solo venta: +21% · la ficha no tiene costo (solo precio de venta) | — / 79% | — / 21% | — | 85.634 USD | Fabricación de skids de medición de la unidad LAC (filtros, loop, colectores, ra |
+
+## Avisos
+
+- Ninguno.

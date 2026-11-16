@@ -1,0 +1,782 @@
+
+======== Contenido
+Proyecto: | Código YPF:
+IB STD GAS LIFT | YPF-GASLIFTBAT21-VCD24299-I-HD-003001
+Código Contratista
+4221-30-1010-IG-IN-HD-001
+Fase: | Fecha de emisión: | 2025-10-02 00:00:00
+DEFINICIÓN | Página: | 1 | de | 15
+HOJA DE DATOS INSTRUMENTOS  - PAQUETIZADO REGULACION Y MEDICION  - IISS BATERIA 2.1
+D1 | 2025-10-02 00:00:00 | EMISIÓN FINAL | GMA | GZG | RVM
+D0 | 2025-08-26 00:00:00 | EMISIÓN FINAL | GMA | GZG | RVM
+DA | 2025-06-25 00:00:00 | EMISIÓN PARA APROBACIÓN | GMA | GZG | RVM
+REVISIÓN | FECHA | DESCRIPCIÓN | PREPARÓ | REVISÓ | APROBÓ
+
+======== Indice 01
+Proyecto: | Código YPF:
+IB STD GAS LIFT | YPF-GASLIFTBAT21-VCD24299-I-HD-003001
+Código Contratista
+4221-30-1010-IG-IN-HD-001
+Fase: | Fecha de emisión: | 2025-10-02 00:00:00
+DEFINICIÓN | Página: | 2 | de | 15
+ÍNDICE
+MANÓMETROS
+TAG | P&ID | SERVICIO | LINEA / EQUIPO | HOJA
+PI-1801C | YPF-GASLIFTBAT21-VCD24299-R-PI-003007 | Presión Salida a Gaslift | 4"-SG-1805-CA31-BB | 5
+PI-1803-B | YPF-GASLIFTBAT21-VCD24299-R-PI-003007 | Presión Salida a Gaslift | 4"-SG-1805-CA31-BB | 6
+TRANSMISORES DE PRESIÓN
+TAG | P&ID | SERVICIO | LINEA / EQUIPO | HOJA
+PIT-1800A | YPF-GASLIFTBAT21-VCD24299-R-PI-003007 | Presión Salida Gaslift | 4"-SG-1805-CA31-BB | 7
+PIT-1801A | YPF-GASLIFTBAT21-VCD24299-R-PI-003007 | Presión Salida Gaslift | 4"-SG-1805-CA31-BB | 8
+PIT-1803C | YPF-GASLIFTBAT21-VCD24299-R-PI-003007 | Presión Salida Gaslift | 4"-SG-1805-CA31-BB | 9
+TRANSMISORES DE PRESIÓN DIFERENCIAL
+TAG | P&ID | SERVICIO | LINEA / EQUIPO | HOJA
+PDIT-1803D | YPF-GASLIFTBAT21-VCD24299-I-HD-003001 | Presión Diferencial en SDV-1803D | 4"-SG-1805-CA31-BB | 10
+TERMÓMETROS
+TAG | P&ID | SERVICIO | LINEA / EQUIPO | HOJA
+TI-1801C | YPF-GASLIFTBAT21-VCD24299-I-HD-003001 | Temperatura Regulación a Gas lift | 4"-SG-1805-CA31-BB | 11
+TRANSMISORES DE CAUDAL TIPO CORIOLIS
+TAG | P&ID | SERVICIO | LINEA / EQUIPO | HOJA
+FIT-1800A | YPF-GASLIFTBAT21-VCD24299-I-HD-003001 | Caudal Salida a Gas lift | 4"-SG-1805-CA31-BB | 12
+
+======== Indice 02
+Proyecto: | Código YPF:
+IB STD GAS LIFT | YPF-GASLIFTBAT21-VCD24299-I-HD-003001
+Código Contratista
+4221-30-1010-IG-IN-HD-001
+Fase: | Fecha de emisión: | 2025-10-02 00:00:00
+DEFINICIÓN | Página: | 3 | de | 15
+ÍNDICE
+VALVULAS DE CONTROL
+TAG | P&ID | SERVICIO | LINEA / EQUIPO | HOJA
+PV-1801B | 15+B12:S15 | Regulación Presión Salida de Gas | 4"-SG-1805-CA31-BB | 13
+VÁLVULAS OF/OFF
+TAG | P&ID | SERVICIO | LINEA / EQUIPO | HOJA
+SDV-1803A | YPF-GASLIFTBAT21-VCD24299-I-HD-003001 | Corte Salida de Gas | 4"-SG-1805-CA31-BB | 14
+VALVULA MANUAL CON LIMIT SWITCH
+TAG | P&ID | SERVICIO | LINEA / EQUIPO | HOJA
+VF-1823 | YPF-GASLIFTECSAT-VCD24299-R-PI-003009 | Posición válvulas manul VF-1823 | by-pass SDV-1803A | 15
+
+======== Indice 03
+Proyecto: | Código YPF:
+IB STD GAS LIFT | YPF-GASLIFTBAT21-VCD24299-I-HD-003001
+Código Contratista
+4221-30-1010-IG-IN-HD-001
+Fase: | Fecha de emisión: | 2025-10-02 00:00:00
+DEFINICIÓN | Página: | 4 | de | 15
+ÍNDICE
+MEMORIAS DE CÁLCULOS
+N° DOCUMENTO | DESCRIPCIÓN
+YPF-GASLIFTBAT21-VCD24299-I-MC-003001 | Memoria De Calculo - Caudalimetros - IISS Bateria 2.1
+YPF-GASLIFTBAT21-VCD24299-I-MC-003002 | Memoria De Calculo - Valvulas De Control - IISS Bateria 2.1
+ESPECIFICACIONES DE DISEÑO DE YPF
+CÓDIGO DE NORMATIVA | TÍTULO DE NORMATIVA
+10762-ES-21030700-110A | J0100 Ingeniería de Instrumentación
+11083-ES-21030700-110A | J0300 Medida de Presion (Parte General)
+11084-ES-21030700-110A | J0301 Manometros y Manometros Diferenciales
+11085-ES-21030700-110A | J0304 Transmisores de Presion
+10864-ES-21030700-110A | J0500 Medida de Temperatura (Parte General)
+10865-ES-21030700-110A | J0501 Termovainas Termoelementos y Termometros de Dial
+10867-ES-21030700-110A | J0600 Valvulas de Control Regulatorio
+10869-ES-21030700-110A | J0602 Valvulas ON-OFF
+10898-ES-21030700-110A | L0200 Clases de Cañerías para Plantas
+DOCUMENTOS DE REFERENCIA
+CODIGO DE DOCUMENTO | TITULO DE DOCUMENTO
+YPF-GASLIFTGRAL-VCD24299-G-BD-003001 | BASES DE DISEÑO
+YPF-GASLIFTBAT21-VCD24299-P-PI-003007-H1 | Diagrama de Cañerías e Instrumentos - IISS BATERIA 2.1
+
+======== PI-1801C
+DATOS GENERALES
+TAG | PI-1801C
+SERVICIO | Presión en línea a Gaslift
+LINEA / EQUIPO | 4"-SG-1805-CA31-BB
+DIAGRAMA | YPF-GASLIFTBAT21-VCD24299-R-PI-003007-H1
+DATOS DE PROCESO
+FLUIDO Y FASE | Gas Natural | Gas | MIN | NOR | MAX | UNIDADES
+CARACTERISTICAS | CON SUCIEDAD | --- | CORROSIVO | --- | PRESION ESTATICA | 75.53 | 80.5 | 88.59 | Kg/cm²g
+SOLIDIFICABLE | --- | TOXICO / LETAL | --- | PRESION DIFERENCIAL | --- | --- | --- | ---
+DENSIDAD/PM | 121,15 - 135,25 / 24,22 - 26 | Kg/m3 / g/mol | PULSACIONES | No
+VISCOSIDAD | 0.017 | Cp | OTROS DATOS SOBRE EL FLUIDO
+TEMPERATURA | 33,53 - 60,62 | ºC
+SOBREPRESION | --- | Kg/cm²g
+MANOMETRO (CONVENCIONAL O DIFERENCIAL)
+TIPO DE MEDIDA | P. RELATIVA | X | P. DIFERENCIAL | --- | CONEX. PROCESO | 1/2" NPT-M (Inferior)
+P. ABSOLUTA | --- | PRESION-VACIO | --- | ESCALA DE MEDIDA | 0 - 160 kg/cm2g
+TIPO SENSOR | Tubo en Hélice | PRECISION | Clase 1
+MTL SENSOR | AISI 316 (4) | PROT. AMB. | IP 65
+MTL CAJA | AISI 304 o 316 | SOBREPRESION | 1.3
+MTL VISOR | Cristal de seguridad, doble, laminado e inastillable | DISCO SEGURIDAD | SI
+DIAMETRO CAJA | 100 mm | SOLID FRONT | SI (5)
+CIERRE CAJA | Tipo Bayoneta | FLUIDO DE RELLENO | No
+ACCESORIOS Y DATOS DE COMPRA
+ACCESORIOS DE MONTAJE | SELLOS SEPARADORES | CONTACTOS DE ALARMA
+SIFON PARA VAPOR | --- | TIPO DE SELLOS | --- | TIPO CONTACTOS | ---
+CONEX. PROCESO | --- | CANTIDAD | ---
+AMORTIGUADOR DE PULSACIONES | --- | MTL Lado mojado | --- | CONEX. ELECTRICA | ---
+MTL Lado seco | --- | CLASIFIC. DE AREA | ---
+ALETAS REFRIGER. | --- | TIPO CAPILAR (ES) | --- | NORMA EEx | ---
+L / D CAPILAR (ES) | ---
+LIMITADOR PRESION | --- | FLUIDO RELLENO | ---
+ARO DE MONTAJE | ---
+DATOS DEL PRODUCTO | DATOS DE COMPRA
+MODELO MANOM. | Por Fabricante | REQUISICION | NA
+MODELO SELLOS | NA | FABRICANTE | ASHCROFT o WEISZ o similar de igual calidad
+--- | --- | SUMINISTRADOR | NA
+NOTAS GENERALES
+1.- | El manómetro deberá ser suministrado con una válvula integral de bloqueo y purga, conexión a proceso 1/2" NPT-M. El material del cuerpo será de  AISI 316, y el de la empaquetadura PTFE.
+2.- | El manómetro se suministrará con una placa de acero inoxidable grabada con el tag del instrumento, donde aparecerán los datos de:
+Fabricante, Modelo, N° de serie y Rango de medida.
+3.- | Las escalas serán de aluminio, con fondo blanco y caracteres impresos en negro cubriendo 270º.
+4.- | El diseño del mecanismo de transmisión del manómetro será compacto, con todas sus partes metálicas (AISI 316 mínimo) y endurecidas para evitar su desgaste. Deben garantizar 1000000 de ciclos (variaciones en la medición de presión).
+5.- | El manómetro tendrán tabique de separación entre el elemento sensible y el dial (“solid front”), llevará la marca “S” dentro de un círculo seguida de la leyenda “EN-837”, el visor será de vidrio laminado o material que rompa sin astillarse y el fondo será proyectable.
+6.- | Se deberán proveer los siguientes certificados: Certificados de Calibración, Certificado de Materiales, Certificado de prueba hidráulica.
+REALIZADO | FICHERO PLANO
+D1 | EMISIÓN FINAL | 2025-10-02 00:00:00 | GMA | RVM
+D0 | EMISIÓN FINAL | 2025-08-26 00:00:00 | GMA | RVM | APROBADO | CONTRATISTA
+DA | EMISIÓN PARA APROBACIÓN | 2025-06-25 00:00:00 | GMA | RVM | AESA
+REV | DESCRIPCION | FECHA | REAL. | APR. | VºBº CLIENTE | PROYECTO
+VCD24299
+HOJA DE DATOS
+MANÓMETRO DE DIAL | UNIDAD DE NEGOCIO
+UPSTREAM NOC
+ANEXO | ESP | Nº DE PLANO | REV
+J | YPF-GASLIFTBAT21-VCD24299-I-HD-003001 | D1
+HOJA DE DATOS DE MANOMETRO DE DIAL | Nº: HD-J-0301.01 | Hoja 5 de 15
+
+======== PI-1803B
+DATOS GENERALES
+TAG | PI-1803B
+SERVICIO | Presión en línea a Gaslift
+LINEA / EQUIPO | 4"-SG-1805-CA31-BB
+DIAGRAMA | YPF-GASLIFTBAT21-VCD24299-R-PI-003007-H1
+DATOS DE PROCESO
+FLUIDO Y FASE | Gas Natural | Gas | MIN | NOR | MAX | UNIDADES
+CARACTERISTICAS | CON SUCIEDAD | --- | CORROSIVO | --- | PRESION ESTATICA | 75.53 | 80.5 | 88.59 | Kg/cm²g
+SOLIDIFICABLE | --- | TOXICO / LETAL | --- | PRESION DIFERENCIAL | --- | --- | --- | ---
+DENSIDAD/PM | 121,15 - 135,25 / 24,22 - 26 | Kg/m3 / g/mol | PULSACIONES | No
+VISCOSIDAD | 0.017 | Cp | OTROS DATOS SOBRE EL FLUIDO
+TEMPERATURA | 33,53 - 60,62 | ºC
+SOBREPRESION | --- | Kg/cm²g
+MANOMETRO (CONVENCIONAL O DIFERENCIAL)
+TIPO DE MEDIDA | P. RELATIVA | X | P. DIFERENCIAL | --- | CONEX. PROCESO | 1/2" NPT-M (Inferior)
+P. ABSOLUTA | --- | PRESION-VACIO | --- | ESCALA DE MEDIDA | 0 - 160 kg/cm2g
+TIPO SENSOR | Tubo en Hélice | PRECISION | Clase 1
+MTL SENSOR | AISI 316 (4) | PROT. AMB. | IP 65
+MTL CAJA | AISI 304 o 316 | SOBREPRESION | 1.3
+MTL VISOR | Cristal de seguridad, doble, laminado e inastillable | DISCO SEGURIDAD | SI
+DIAMETRO CAJA | 100 mm | SOLID FRONT | SI (5)
+CIERRE CAJA | Tipo Bayoneta | FLUIDO DE RELLENO | No
+ACCESORIOS Y DATOS DE COMPRA
+ACCESORIOS DE MONTAJE | SELLOS SEPARADORES | CONTACTOS DE ALARMA
+SIFON PARA VAPOR | --- | TIPO DE SELLOS | --- | TIPO CONTACTOS | ---
+CONEX. PROCESO | --- | CANTIDAD | ---
+AMORTIGUADOR DE PULSACIONES | --- | MTL Lado mojado | --- | CONEX. ELECTRICA | ---
+MTL Lado seco | --- | CLASIFIC. DE AREA | ---
+ALETAS REFRIGER. | --- | TIPO CAPILAR (ES) | --- | NORMA EEx | ---
+L / D CAPILAR (ES) | ---
+LIMITADOR PRESION | --- | FLUIDO RELLENO | ---
+ARO DE MONTAJE | ---
+DATOS DEL PRODUCTO | DATOS DE COMPRA
+MODELO MANOM. | Por Fabricante | REQUISICION | NA
+MODELO SELLOS | NA | FABRICANTE | ASHCROFT o WEISZ o similar de igual calidad
+--- | --- | SUMINISTRADOR | NA
+NOTAS GENERALES
+1.- | El manómetro deberá ser suministrado con una válvula integral de bloqueo y purga, conexión a proceso 1/2" NPT-M. El material del cuerpo será de  AISI 316, y el de la empaquetadura PTFE.
+2.- | El manómetro se suministrará con una placa de acero inoxidable grabada con el tag del instrumento, donde aparecerán los datos de:
+Fabricante, Modelo, N° de serie y Rango de medida.
+3.- | Las escalas serán de aluminio, con fondo blanco y caracteres impresos en negro cubriendo 270º.
+4.- | El diseño del mecanismo de transmisión del manómetro será compacto, con todas sus partes metálicas (AISI 316 mínimo) y endurecidas para evitar su desgaste. Deben garantizar 1000000 de ciclos (variaciones en la medición de presión).
+5.- | El manómetro tendrán tabique de separación entre el elemento sensible y el dial (“solid front”), llevará la marca “S” dentro de un círculo seguida de la leyenda “EN-837”, el visor será de vidrio laminado o material que rompa sin astillarse y el fondo será proyectable.
+6.- | Se deberán proveer los siguientes certificados: Certificados de Calibración, Certificado de Materiales, Certificado de prueba hidráulica.
+REALIZADO | FICHERO PLANO
+D1 | EMISIÓN FINAL | 2025-10-02 00:00:00 | GMA | RVM
+D0 | EMISIÓN FINAL | 2025-08-26 00:00:00 | GMA | RVM | APROBADO | CONTRATISTA
+DA | EMISIÓN PARA APROBACIÓN | 2025-06-25 00:00:00 | GMA | RVM | AESA
+REV | DESCRIPCION | FECHA | REAL. | APR. | VºBº CLIENTE | PROYECTO
+VCD24299
+HOJA DE DATOS
+MANÓMETRO DE DIAL | UNIDAD DE NEGOCIO
+UPSTREAM NOC
+ANEXO | ESP | Nº DE PLANO | REV
+J | YPF-GASLIFTBAT21-VCD24299-I-HD-003001 | D1
+HOJA DE DATOS DE MANOMETRO DE DIAL | Nº: HD-J-0301.01 | Hoja 6 de 15
+
+======== PIT-1800A
+DATOS GENERALES
+TAG | PIT-1800A
+SERVICIO | Presión en línea a Gaslift
+LINEA / EQUIPO | 4"-SG-1805-CA31-BB
+DIAGRAMA | YPF-GASLIFTBAT21-VCD24299-R-PI-003007-H1
+CLASIFIC. DE AREA | Zona 2 Gr.IIA T3
+DATOS DE PROCESO
+FLUIDO Y FASE | Gas Natural | Gas | MIN | NOR | MAX | UNIDADES
+CARACTERISTICAS | CON SUCIEDAD | --- | CORROSIVO | --- | PRESION ESTATICA | 65 | 88.6 | 90 | Kg/cm2g
+SOLIDIFICABLE | --- | TOXICO / LETAL | --- | PRESION DIFERENCIAL | --- | --- | --- | ---
+DENSIDAD/PM | 121,15 - 135,25 / 24,22 - 26 | Kg/m3 / g/mol | PULSACIONES | NA
+VISCOSIDAD | 0.017 | Cp | OTROS DATOS SOBRE EL FLUIDO
+TEMPERATURA | 33,53 - 60,62 | ºC
+SOBREPRESION | --- | Kg/cm2g
+TRANSMISOR DE PRESION (ABSOLUTA / RELATIVA / DIFERENCIAL)
+TIPO DE MEDIDA | P. RELATIVA | X | P. DIFERENCIAL | --- | CONEX. ELECTRICA | 1/2" NPTH
+P. ABSOLUTA | --- | PRESION-VACIO | --- | SIL (s/ IEC 61508) | ---
+TIPO ELECTRONICA | Inteligente, configurable, 2 hilos | INDICADOR INTEGRAL | SI, (display LCD)
+TIPO SENSOR | (1) | TEST HIDROSTATICO | SI
+MTL Partes mojadas | AISI 316 | V. PURGA | --- | LIMPIEZA ESPECIAL | ---
+MTL Juntas | Teflon | A. MONTAJE | Caño 2" | RANGO MAXIMO | (1) | Kg/cm2g
+MTL Bridas ovales | --- | PRECISION | ± 0.1% | RANGO MINIMO | (1)
+MTL Envolvente | Aluminio | P DISEÑO | 94.6 kg/cm2g | RANGO CALIBRADO | 0 - 160
+MTL Tornillería | AISI 316 | T DISEÑO | 100 °C | SEÑAL DE SALIDA | 4-20 mA
+CONFIG. MONTAJE | Manifold (2) | PROT. AMB. | IP 65 | PROTOCOLO DIGITAL | HART
+CONEX. PROCESO AP | 1/2" NPT-H | PROT. EEx | EEx-d
+CONEX. PROCESO BP | --- | NORMA EEx | IEC 60079
+ACCESORIOS Y DATOS DE COMPRA
+INDICADOR REMOTO | SELLOS SEPARADORES | NOTAS / ACCESORIOS
+TIPO INDICADOR | --- | TIPO DE SELLOS | --- | La conexión hacia proceso será mediante adaptador directo a manifold de dos vias (bloqueo y venteo).
+CONEX. ELECTRICA | --- | CONEX. PROCESO | ---
+ESCALA INDICACION | --- | MTL. Lado mojado | ---
+A. MONTAJE | --- | MTL. Lado seco | ---
+TIPO  CAPILARES | ---
+L / D CAPILARES | ---
+FLUIDO RELLENO | ---
+DATOS DEL PRODUCTO | DATOS DE COMPRA
+MODELO TRANSMISOR | Por Fabricante | REQUISICION | NA
+MODELO INDICADOR | NA | FABRICANTE | Rosemount, Yokogawa o similar igual calidad
+MODELO SELLOS | NA | SUMINISTRADOR | NA
+NOTAS GENERALES
+1.- | A verificar/definir por el proveedor.
+2.- | Debe ser provisto con manifold de bloqueo y purga #3000 1/2" R-NPT- M-H AISI 316 tipo ABAC.
+3.- | El transmisor deberá ser entregado calibrado, con certificación correspondiente y chapa de acero inoxidable con TAG de identificación.
+REALIZADO | FICHERO PLANO
+D1 | EMISIÓN FINAL | 2025-10-02 00:00:00 | GMA | RVM
+D0 | EMISIÓN FINAL | 2025-08-26 00:00:00 | GMA | RVM | APROBADO | CONTRATISTA
+DA | EMISIÓN PARA APROBACIÓN | 2025-06-25 00:00:00 | GMA | RVM | AESA
+REV | DESCRIPCION | FECHA | REAL. | APR. | VºBº CLIENTE | PROYECTO
+VCD24299
+HOJA DE DATOS
+TRANSMISOR ELECTRONICO DE PRESION | UNIDAD DE NEGOCIO
+UPSTREAM NOC
+ANEXO | ESP | Nº DE PLANO | REV
+J | YPF-GASLIFTBAT21-VCD24299-I-HD-003001 | D1
+HOJA DE DATOS DE TRANSMISOR ELECTRONICO DE PRESION | Nº: HD-J0304-01 | Hoja 7 de 15
+
+======== PIT-1801A
+DATOS GENERALES
+TAG | PIT-1801A
+SERVICIO | Presión en línea a Gaslift
+LINEA / EQUIPO | 4"-SG-1805-CA31-BB
+DIAGRAMA | YPF-GASLIFTBAT21-VCD24299-R-PI-003007-H1
+CLASIFIC. DE AREA | Zona 2 Gr.IIA T3
+DATOS DE PROCESO
+FLUIDO Y FASE | Gas Natural | Gas | MIN | NOR | MAX | UNIDADES
+CARACTERISTICAS | CON SUCIEDAD | --- | CORROSIVO | --- | PRESION ESTATICA | 65 | 88.6 | 90 | Kg/cm2g
+SOLIDIFICABLE | --- | TOXICO / LETAL | --- | PRESION DIFERENCIAL | --- | --- | --- | ---
+DENSIDAD/PM | 121,15 - 135,25 / 24,22 - 26 | Kg/m3 / g/mol | PULSACIONES | NA
+VISCOSIDAD | 0.017 | Cp | OTROS DATOS SOBRE EL FLUIDO
+TEMPERATURA | 33,53 - 60,62 | ºC
+SOBREPRESION | --- | Kg/cm2g
+TRANSMISOR DE PRESION (ABSOLUTA / RELATIVA / DIFERENCIAL)
+TIPO DE MEDIDA | P. RELATIVA | X | P. DIFERENCIAL | --- | CONEX. ELECTRICA | 1/2" NPTH
+P. ABSOLUTA | --- | PRESION-VACIO | --- | SIL (s/ IEC 61508) | ---
+TIPO ELECTRONICA | Inteligente, configurable, 2 hilos | INDICADOR INTEGRAL | SI, (display LCD)
+TIPO SENSOR | (1) | TEST HIDROSTATICO | SI
+MTL Partes mojadas | AISI 316 | V. PURGA | --- | LIMPIEZA ESPECIAL | ---
+MTL Juntas | Teflon | A. MONTAJE | Caño 2" | RANGO MAXIMO | (1) | Kg/cm2g
+MTL Bridas ovales | --- | PRECISION | ± 0.1% | RANGO MINIMO | (1)
+MTL Envolvente | Aluminio | P DISEÑO | 94.6 kg/cm2g | RANGO CALIBRADO | 0 - 160
+MTL Tornillería | AISI 316 | T DISEÑO | 100 °C | SEÑAL DE SALIDA | 4-20 mA
+CONFIG. MONTAJE | Manifold (2) | PROT. AMB. | IP 65 | PROTOCOLO DIGITAL | HART
+CONEX. PROCESO AP | 1/2" NPT-H | PROT. EEx | EEx-d
+CONEX. PROCESO BP | --- | NORMA EEx | IEC 60079
+ACCESORIOS Y DATOS DE COMPRA
+INDICADOR REMOTO | SELLOS SEPARADORES | NOTAS / ACCESORIOS
+TIPO INDICADOR | --- | TIPO DE SELLOS | --- | La conexión hacia proceso será mediante adaptador directo a manifold de dos vias (bloqueo y venteo).
+CONEX. ELECTRICA | --- | CONEX. PROCESO | ---
+ESCALA INDICACION | --- | MTL. Lado mojado | ---
+A. MONTAJE | --- | MTL. Lado seco | ---
+TIPO  CAPILARES | ---
+L / D CAPILARES | ---
+FLUIDO RELLENO | ---
+DATOS DEL PRODUCTO | DATOS DE COMPRA
+MODELO TRANSMISOR | Por Fabricante | REQUISICION | NA
+MODELO INDICADOR | NA | FABRICANTE | Rosemount, Yokogawa o similar igual calidad
+MODELO SELLOS | NA | SUMINISTRADOR | NA
+NOTAS GENERALES
+1.- | A verificar/definir por el proveedor.
+2.- | Debe ser provisto con manifold de bloqueo y purga #3000 1/2" R-NPT- M-H AISI 316 tipo ABAC.
+3.- | El transmisor deberá ser entregado calibrado, con certificación correspondiente y chapa de acero inoxidable con TAG de identificación.
+REALIZADO | FICHERO PLANO
+D1 | EMISIÓN FINAL | 2025-10-02 00:00:00 | GMA | RVM
+D0 | EMISIÓN FINAL | 2025-08-26 00:00:00 | GMA | RVM | APROBADO | CONTRATISTA
+DA | EMISIÓN PARA APROBACIÓN | 2025-06-25 00:00:00 | GMA | RVM | AESA
+REV | DESCRIPCION | FECHA | REAL. | APR. | VºBº CLIENTE | PROYECTO
+VCD24299
+HOJA DE DATOS
+TRANSMISOR ELECTRONICO DE PRESION | UNIDAD DE NEGOCIO
+UPSTREAM NOC
+ANEXO | ESP | Nº DE PLANO | REV
+J | YPF-GASLIFTBAT21-VCD24299-I-HD-003001 | D1
+HOJA DE DATOS DE TRANSMISOR ELECTRONICO DE PRESION | Nº: HD-J0304-01 | Hoja 8 de 15
+
+======== PIT-1803C
+DATOS GENERALES
+TAG | PIT-1803C
+SERVICIO | Presión en línea a Gaslift
+LINEA / EQUIPO | 4"-SG-1805-CA31-BB
+DIAGRAMA | YPF-GASLIFTBAT21-VCD24299-R-PI-003007-H1
+CLASIFIC. DE AREA | Zona 2 Gr.IIA T3
+DATOS DE PROCESO
+FLUIDO Y FASE | Gas Natural | Gas | MIN | NOR | MAX | UNIDADES
+CARACTERISTICAS | CON SUCIEDAD | --- | CORROSIVO | --- | PRESION ESTATICA | 75.53 | 80.5 | 88.59 | Kg/cm2g
+SOLIDIFICABLE | --- | TOXICO / LETAL | --- | PRESION DIFERENCIAL | --- | --- | --- | ---
+DENSIDAD/PM | 121,15 - 135,25 / 24,22 - 26 | Kg/m3 / g/mol | PULSACIONES | NA
+VISCOSIDAD | 0.017 | Cp | OTROS DATOS SOBRE EL FLUIDO
+TEMPERATURA | 33,53 - 60,62 | ºC
+SOBREPRESION | --- | Kg/cm2g
+TRANSMISOR DE PRESION (ABSOLUTA / RELATIVA / DIFERENCIAL)
+TIPO DE MEDIDA | P. RELATIVA | X | P. DIFERENCIAL | --- | CONEX. ELECTRICA | 1/2" NPTH
+P. ABSOLUTA | --- | PRESION-VACIO | --- | SIL (s/ IEC 61508) | ---
+TIPO ELECTRONICA | Inteligente, configurable, 2 hilos | INDICADOR INTEGRAL | SI, (display LCD)
+TIPO SENSOR | (1) | TEST HIDROSTATICO | SI
+MTL Partes mojadas | AISI 316 | V. PURGA | --- | LIMPIEZA ESPECIAL | ---
+MTL Juntas | Teflon | A. MONTAJE | Caño 2" | RANGO MAXIMO | (1) | Kg/cm2g
+MTL Bridas ovales | --- | PRECISION | ± 0.1% | RANGO MINIMO | (1)
+MTL Envolvente | Aluminio | P DISEÑO | 94.6 kg/cm2g | RANGO CALIBRADO | 0 - 160
+MTL Tornillería | AISI 316 | T DISEÑO | 100 °C | SEÑAL DE SALIDA | 4-20 mA
+CONFIG. MONTAJE | Manifold (2) | PROT. AMB. | IP 65 | PROTOCOLO DIGITAL | HART
+CONEX. PROCESO AP | 1/2" NPT-H | PROT. EEx | EEx-d
+CONEX. PROCESO BP | --- | NORMA EEx | IEC 60079
+ACCESORIOS Y DATOS DE COMPRA
+INDICADOR REMOTO | SELLOS SEPARADORES | NOTAS / ACCESORIOS
+TIPO INDICADOR | --- | TIPO DE SELLOS | --- | La conexión hacia proceso será mediante adaptador directo a manifold de dos vias (bloqueo y venteo).
+CONEX. ELECTRICA | --- | CONEX. PROCESO | ---
+ESCALA INDICACION | --- | MTL. Lado mojado | ---
+A. MONTAJE | --- | MTL. Lado seco | ---
+TIPO  CAPILARES | ---
+L / D CAPILARES | ---
+FLUIDO RELLENO | ---
+DATOS DEL PRODUCTO | DATOS DE COMPRA
+MODELO TRANSMISOR | Por Fabricante | REQUISICION | NA
+MODELO INDICADOR | NA | FABRICANTE | Rosemount, Yokogawa o similar igual calidad
+MODELO SELLOS | NA | SUMINISTRADOR | NA
+NOTAS GENERALES
+1.- | A verificar/definir por el proveedor.
+2.- | Debe ser provisto con manifold de bloqueo y purga #3000 1/2" R-NPT- M-H AISI 316 tipo ABAC.
+3.- | El transmisor deberá ser entregado calibrado, con certificación correspondiente y chapa de acero inoxidable con TAG de identificación.
+REALIZADO | FICHERO PLANO
+D1 | EMISIÓN FINAL | 2025-10-02 00:00:00 | GMA | RVM
+D0 | EMISIÓN FINAL | 2025-08-26 00:00:00 | GMA | RVM | APROBADO | CONTRATISTA
+DA | EMISIÓN PARA APROBACIÓN | 2025-06-25 00:00:00 | GMA | RVM | AESA
+REV | DESCRIPCION | FECHA | REAL. | APR. | VºBº CLIENTE | PROYECTO
+VCD24299
+HOJA DE DATOS
+TRANSMISOR ELECTRONICO DE PRESION | UNIDAD DE NEGOCIO
+UPSTREAM NOC
+ANEXO | ESP | Nº DE PLANO | REV
+J | YPF-GASLIFTBAT21-VCD24299-I-HD-003001 | D1
+HOJA DE DATOS DE TRANSMISOR ELECTRONICO DE PRESION | Nº: HD-J0304-01 | Hoja 9 de 15
+
+======== PDIT-1803D
+DATOS GENERALES
+TAG | PDIT-1803D
+SERVICIO | Presión Diferencial en SDV-1803A
+LINEA / EQUIPO | 4"-SG-1805-CA31-BB
+DIAGRAMA | YPF-GASLIFTBAT21-VCD24299-R-PI-003007-H1
+CLASIFIC. DE AREA | Zona 2 Gr.IIA T3
+DATOS DE PROCESO
+FLUIDO Y FASE | Gas Natural | Gas | MIN | NOR | MAX | UNIDADES
+CARACTERISTICAS | CON SUCIEDAD | --- | CORROSIVO | --- | PRESION ESTATICA | --- | --- | --- | ---
+SOLIDIFICABLE | --- | TOXICO / LETAL | --- | PRESION DIFERENCIAL | 0 | 2 | 4 | Kg/cm2
+DENSIDAD/PM | 121,15 - 135,25 / 24,22 - 26 | Kg/m3 / g/mol | PULSACIONES | No
+VISCOSIDAD | 0.017 | Cp | OTROS DATOS SOBRE EL FLUIDO | Presión Estática de Proceso: 88 Kg/cm²g
+TEMPERATURA | 33,53 - 60,62 | ºC
+SOBREPRESION | --- | Kg/cm2g
+TRANSMISOR DE PRESION (ABSOLUTA / RELATIVA / DIFERENCIAL)
+TIPO DE MEDIDA | P. RELATIVA | --- | P. DIFERENCIAL | X | CONEX. ELECTRICA | 1/2" NPTH
+P. ABSOLUTA | --- | PRESION-VACIO | --- | SIL (s/ IEC 61508) | ---
+TIPO ELECTRONICA | Inteligente, configurable, 2 hilos | INDICADOR INTEGRAL | SI
+TIPO SENSOR | (1) | TEST HIDROSTATICO | SI
+MTL Partes mojadas | AISI 316 | V. PURGA | --- | LIMPIEZA ESPECIAL | ---
+MTL Juntas | Teflon | A. MONTAJE | Caño 2" | RANGO MAXIMO | (1) | Kg/cm2
+MTL Bridas ovales | --- | PRECISION | ± 0.1% | RANGO MINIMO | (1)
+MTL Envolvente | Aluminio | P DISEÑO | 94.6 kg/cm2g | RANGO CALIBRADO | 0 - 6
+MTL Tornillería | AISI 316 | T DISEÑO | 100 °C | SEÑAL DE SALIDA | 4-20 mA
+CONFIG. MONTAJE | Manifold 5 vias | PROT. AMB. | IP 65 | PROTOCOLO DIGITAL | HART
+CONEX. PROCESO AP | 1/2" NPT-H | PROT. EEx | EEx-d
+CONEX. PROCESO BP | 1/2" NPT-H | NORMA EEx | IEC 60079
+ACCESORIOS Y DATOS DE COMPRA
+INDICADOR REMOTO | SELLOS SEPARADORES | NOTAS / ACCESORIOS
+TIPO INDICADOR | --- | TIPO DE SELLOS | ---
+CONEX. ELECTRICA | --- | CONEX. PROCESO | ---
+ESCALA INDICACION | --- | MTL. Lado mojado | ---
+A. MONTAJE | --- | MTL. Lado seco | ---
+TIPO  CAPILARES | ---
+L / D CAPILARES | ---
+FLUIDO RELLENO | ---
+DATOS DEL PRODUCTO | DATOS DE COMPRA
+MODELO TRANSMISOR | Por Fabricante | REQUISICION | NA
+MODELO INDICADOR | NA | FABRICANTE | Rosemount, Yokogawa o similar igual calidad
+MODELO SELLOS | NA | SUMINISTRADOR | NA
+NOTAS GENERALES
+1.- | A verificar/definir por el proveedor.
+2.- | El transmisor tendrá una placa metálica con las características del equipo y fijada mecánicamente en origen, donde aparecerán los siguientes datos: fabricante, modelo, número de serie, clasificación de área, material de las cámaras, presión nominal de las cámaras, rango máximo.
+3.- | El transmisor tendrá una segunda placa de acero inoxidable grabada con el tag del instrumento y fijada al cuello del mismo mediante alambre de inoxidable.
+4.- | Los transmisores deberán soportar una sobrepresión correspondiente al 150% de la presión de diseño.
+5.- | Se deberán proveer los siguientes certificados:Certificados de Calibración, Certificado de Materiales, Certificado de modo de Protección EEx-d
+REALIZADO | FICHERO PLANO
+D1 | EMISIÓN FINAL | 2025-10-02 00:00:00 | GMA | RVM
+D0 | EMISIÓN FINAL | 2025-08-26 00:00:00 | GMA | RVM | APROBADO | CONTRATISTA
+DA | EMISIÓN PARA APROBACIÓN | 2025-06-25 00:00:00 | GMA | RVM | AESA
+REV | DESCRIPCION | FECHA | REAL. | APR. | VºBº CLIENTE | PROYECTO
+VCD24299
+HOJA DE DATOS
+TRANSMISOR ELECTRONICO DE PRESION DIFERENCIAL | UNIDAD DE NEGOCIO
+UPSTREAM NOC
+ANEXO | ESP | Nº DE PLANO | REV
+J | YPF-GASLIFTBAT21-VCD24299-I-HD-003001 | D1
+HOJA DE DATOS DE TRANSMISOR ELECTRONICO DE PRESION DIFERENCIAL | Nº: HD-J0304-01 | Hoja 10 de 15
+
+======== TI-1801C
+DATOS GENERALES
+TAG | TI-1801C
+SERVICIO | Temperatura Regulación a Gaslift
+LINEA / EQUIPO | 4"-SG-1805-CA31-BB
+DIAGRAMA | YPF-GASLIFTBAT21-VCD24299-R-PI-003007-H1
+CLASIFIC. DE AREA | Zona 2 Gr.IIA T3
+DATOS DE PROCESO
+FLUIDO Y ESTADO | Gas Natural | Gas | TEMPERATURA (ºC) | MINIMA | NORMAL | MAXIMA
+CARACTERISTICAS | CRIOGENICO | --- | CORROSIVO | --- | 28,48 | --- | 58,80
+EROSIVO | --- | TOXICO / LETAL | --- | OTROS DATOS SOBRE EL FLUIDO
+PRESION ESTATICA | 88,59 | Kg/cm²g
+TERMOVAINA
+TIPO DE MONTAJE | EN LINA (CODO) | --- | EN LINEA (A 90º) | X | TIPO DE EJECUCION | Barra Taladrada
+EN RECIPIENTE | --- | CONEX. PROCESO | Bridado 1-½" #600
+TIPO DE CONEXION | Bridado Tipo H | X | Roscado Tipo R | --- | CONEX. INTERNA | 1/2" NPT-H
+Soldado Tipo S | --- | --- | --- | MTL TERMOPOZO | AISI 316
+DIMENSIONES (1) | MODELO YPF | H0 | MTL BRIDA | AISI 316
+COTAS A / B | --- | TALADRO INTERNO | 7 mm
+PLANO REFERENCIA | TI-J-0501-01 - Termopozo Bridado Tipo "H" | TAPON Y CADENA | NO
+TERMOMETRO
+TIPO TERMOMETRO | BIMETALICO | X | CONEX. ESFERA | Articulada posterior
+CON CAPILAR | --- | ESCALA DE MEDIDA | 0 - 80 °C
+RELLENO BULBO | --- | PRECISION | 1% del rango indicado
+L / D SENSOR | Cinta bimetálica espiral en varilla AISI 316 | DIAMETRO CAJA | 125mm
+MTL FUNDA SENSOR | Camisa cilíndrica - AISI 316 - para TW de 6 mm | CIERRE CAJA | Aro tipo bayoneta
+MTL CAJA | AISI 304 o AISI 316 | PROT. AMB. | IP 65
+MTL VISOR | Cristal de seguridad  (espesor 3mm) | SOBRETEMPERATURA | 100% fondo de escala
+CONEX. TERMOPOZO | 1/2" NPT-M
+ACCESORIOS Y DATOS DE COMPRA
+ACCESORIOS | CONTACTOS DE ALARMA | NOTAS / ACCESORIOS
+TERMOPOZO | INCLUIDO | SI | TIPO CONTACTOS | ---
+POR OTROS | --- | CANTIDAD | ---
+TIPO CAPILARES | --- | CONEX. ELECTRICA | ---
+L / D CAPILARES | --- | PROT. EEx | ---
+FLUIDO RELLENO | --- | NORMA EEx | ---
+DATOS DEL PRODUCTO | DATOS DE COMPRA
+MODELO SONDA | Por proveedor | REQUISICION | ---
+MODELO TERMOM. | Por proveedor | FABRICANTE | ---
+--- | --- | SUMINISTRADOR | ---
+NOTAS GENERALES
+1.- | Cada termovaina incluirá los siguientes datos grabados de modo indeleble sobre el mismo: material, tamaño de conexión / rating y tag.
+2.- | Cada termómetro se suministrará con una placa de acero inoxidable con el tag del instrumento y fijada al cuello del mismo mediante alambre de inoxidable. La placa será adecuada para 16 caracteres como mínimo 5mm de altura, grabados de modo indeleble.
+3.- | La Termovaina se deberá entregar con certificado de prueba hidráulica.
+4.- | La escala del Termómetro se presenta en fondo blanco y caracteres impresos en negro.
+5.- | Se deberan proveer los siguientes certificados:Certificados de Materiales, Certificado de Prueba Hidráulica.
+REALIZADO | FICHERO PLANO
+D1 | EMISIÓN FINAL | 2025-10-02 00:00:00 | GMA | RVM
+D0 | EMISIÓN FINAL | 2025-08-26 00:00:00 | GMA | RVM | APROBADO | CONTRATISTA
+DA | EMISIÓN PARA APROBACIÓN | 2025-06-25 00:00:00 | GMA | RVM | AESA
+REV | DESCRIPCION | FECHA | REAL. | APR. | VºBº CLIENTE | PROYECTO
+VCD24299
+HOJA DE DATOS
+TERMÓMETROS | UNIDAD DE NEGOCIO
+UPSTREAM NOC
+ANEXO | ESP | Nº DE PLANO | REV
+J | YPF-GASLIFTBAT21-VCD24299-I-HD-003001 | D1
+HOJA DE DATOS TERMOMETROS Y TERMOVAINAS | Nº: HD-J0501-02 | Hoja 11 de 15
+
+======== FIT-1800A
+DATOS GENERALES
+TAG | FIT-1800A
+SERVICIO | Caudal Salida a Gas lift
+LINEA / EQUIPO | 4"-SG-1805-CA31-BB
+DIAGRAMA | YPF-GASLIFTBAT21-VCD24299-R-PI-003007-H1
+CLASIFIC. DE AREA | Zona 2 Gr.IIA T3
+DATOS DE PROCESO
+FLUIDO Y FASE | Gas Natural | Gas | COMPRESIBILIDAD | 0,617
+CARACTERISTICAS | CON SUCIEDAD | --- | CORROSIVO | --- | K = Cp/Cv | 2,135
+EROSIVO | --- | TOXICO / LETAL | --- | CAUDAL MAXIMO | 500000 | Sm3/d
+DENSIDAD / PM | 121,15 - 135,25 / 24,22 - 26 | Kg/m3 / g/mol | CAUDAL NORMAL | ---
+DENSIDAD @ C.BASE | 1,03 | kg/m3 | CAUDAL MINIMO | 191800
+VISCOSIDAD | 0,017 | cP | PERDIDA DE CARGA ADM. | 0,3 kg/cm2
+PRESION ESTATICA | 88,59 | kg/cm2 | OTROS DATOS SOBRE EL FLUIDO | NA
+TEMPERATURA | 33,53 - 60,62 | °C
+TUBOS DE MEDIDA Y SENSORES
+TIPO DE TUBOS             Por Proyecto | EN OMEGA | DE PASO RECTO | PROT. AMB. | IP 65
+EN "U" | X | DE OTRO TIPO | P DISEÑO | Por proveedor | kg/cm2
+DIAMETRO NOMINAL | Por proveedor | T DISEÑO | Por proveedor | °C
+CONEX. PROCESO | 3'' #600-RF | RANGO NOMINAL | Por proveedor | Sm3/d
+MTL TUBO | AISI 316 | RANGO CALIBRADO | 0 - 600000 | Sm3/d
+MTL LINING TUBO | NA | RANGO DENSIDAD | 100 a 150 | kg/m3
+MTL ENVOLVENTE | AISI 316 | PRECISION CAUDAL | ± 0.1% en masa
+PROT. SOBREPRESION | Si | PRECISION DENSIDAD | ± 0.0005 g/cm3
+PROT. EEx | EEx-d | CABLE A ELECTRON. | ---
+NORMA EEx | IEC 60079 | CONEX. ELECTRICA | 1/2" NPT H
+ELECTRONICA Y DATOS DE COMPRA
+INTEGRAL / REMOTA | INTEGRAL | Señal | Rango en U.I. | Activa / pasiva | Tipo EEx
+MTL ENVOLVENTE | Aluminio con revestimiento
+de poliuretano | Salida nº 1  4-20 mA | 0 - 600000 Sm3/d | PASIVA | EEx-d
+PROT. EEx | EEx-d | Salida nº 2  4-20 mA
+PROT. AMB | IP 65 | Salida por pulsos
+CONEX. ELECTR | 1/2" NPT H | Entrada digital | (2) | ACTIVA
+ALIMENTACION | 24 Vcc | NOTAS / ACCESORIOS
+INDICADOR LOCAL | Si, Display (LCD) | - El instrumento deberá contar con: 1 salida 4-20mA +HART, 1 entrada analógica 4-20mA, 1 salida de pulsos, 1 salida por comunicación Modbus RS-485.
+- El intrumento deberá disponer de funciones genéricas de autodiagnóstico básico que cubran los sensores (bobinas de excitación y medida, RTD) y la electrónica.
+PROTOCOLO DIGITAL | MODBUS RS-485
+A. MONTAJE | N/A
+DATOS DEL PRODUCTO | DATOS DE COMPRA
+MODELO TUBOS | Por Fabricante | REQUISICION | NA
+MODELO XMISOR | Por Fabricante | FABRICANTE | Emerson, Endress+Hauser, ABB o similar calidad
+MODELO CABLE | Por Fabricante | SUMINISTRADOR | NA
+NOTAS GENERALES
+1.- A confirmar /verificar por proveedor
+2.- Entrada analógica para conexión de un transmisor de presión para compensación dinámica.
+3.- Para detalles de cálculo del instrumento ver el documento N° YPF-GASLIFTBAT21-VCD24299-I-MC-003001 - Memoria De Calculo - Caudalimetros - IISS Bateria 2.1
+4.- El transmisor tendrá una placa metálica con las características del equipo y fijada mecánicamente en origen, donde aparecerán los datos de: Fabricante, Modelo, Número de
+serie y factor de calibración. Sobre el cuerpo se indicara el sentido del flujo.
+5.- El transmisor tendrá una segunda placa de acero inoxidable grabada con el tag del instrumento y fijada al cuello del mismo mediante alambre inoxidable.
+6.-Se deberan proveer los siguientes certificados: Certificados de Materiales, Certificado de modo de Proteccion EEx-d, Certificado de Calibracion
+REALIZADO | ARCHIVO
+D1 | EMISIÓN FINAL | 2025-10-02 00:00:00 | GMA | RVM
+D0 | EMISIÓN FINAL | 2025-08-26 00:00:00 | GMA | RVM | APROBADO | CONTRATISTA
+DA | EMISIÓN PARA APROBACIÓN | 2025-06-25 00:00:00 | GMA | RVM | AESA
+REV | DESCRIPCION | FECHA | REAL. | APR. | VºBº CLIENTE | PROYECTO
+VCD24299
+UNIDAD DE NEGOCIO
+MEDIDOR DE CAUDAL TIPO CORIOLIS | UPSTREAM NOC
+ANEXO | ESP | Nº DE PLANO | REV
+J | YPF-GASLIFTBAT21-VCD24299-I-HD-003001 | D1
+HOJA DE DATOS DE MEDIDOR DE CAUDAL TIPO CORIOLIS | Nº: HD-J0208-01
+
+======== PV-1801B
+1 | Fluido: | Gas Natural | TAG: | PV-1801B | Servicio: | Regulación Presión salida de gas | PID: | YPF-GASLIFTBAT21-VCD24299-R-PI-003007-H1 | Pc: | (6)
+CONDICIONES DE PROCESO | Unidades | Caudal Máx - 3 PADS- 12 Pozos Lineal Alt 2 | Caudal Min - 3 PADS- 12 Pozos Lineal Alt 2 | Caudal Max - 6 PADS- 6 Pozos Araña 2 | Caudal Min - 6 PADS- 6 Pozos Araña 2 | Shut-Off
+2 | Caudal | Sm3/d | 500000 | 208700 | 500000 | 193000 | -
+3 | Presión de entrada | kg/cm2g | 88.31696006064179 | 88.3606638366271 | 88.3287209312465 | 88.3637878425743 | 98
+4 | Presión de salida | kg/cm2g | 80.2673186167862 | 77.9974966620187 | 75.347224336615 | 77.5791069698789 | -
+5 | Temperatura | °C | 60.64 | 60.62 | 33.61 | 33.53 | -
+6 | Densidad / PM | - / g/mol | 26.01 | 26.01 | 24.22 | 24.22 | -
+7 | Viscosidad/ (Cp/Cv) | cP / - | 0,017 / 2,157 (5) | 0,017 / 2,161 (5) | 0,017 / 1,721 (5) | 0,017 / 1,722 (5) | -
+8 | Presión de vapor PV: | Kg/cm²a | - | - | - | - | -
+9 | CV calculado | 27.224 | 10.108 | 21.817 | 9.092 | -
+10 | % apertura | 51 | 27 | 46 | 24 | -
+11 | Ruido admisible/ calculado | dBA | 85/75 | 85/75 | 85/81 | 85/74 | -
+12 | Temperatura ambiente | °C | MIN: | -10 | MAX: | 40
+13 | LÍNEA | Diámetro | Ent | 4" -  sch 80 | 53 | ACTUADOR | Tipo | Neumático a Diafragma / Pistón
+14 | & Schedule | Sal | 4" -  sch 80 | 54 | Fabricante & Modelo | (2)
+15 | Línea | Sin Aislamiento / 4"-SG-1805-CA31-BB | 55 | Tamaño | (2) | Área Efectiva | (2) (3)
+16 | CUERPO/BONETE | Tipo | Globo | 56 | On / Off | No | Regulatorio | Si
+17 | Tamaño | 4" | Clase ANSI | # 600 | 57 | Acción del resorte Abrir/Cerrar | Cierra
+18 | Max Pres / Temp | 94,6 kg/cm2g (100°C) | 58 | Máx presión admisible | (2)
+19 | Fabricante & Modelo | Fisher/ ED | 59 | Min presión requerida | (2)
+20 | Mtl Cuerpo/Bonete | ASTM A 216 WCB | 60 | Presión disponible Aire:
+21 | Mtl Lining/ ID | NA | 61 | Mín | 4,5 Kg/cm2 | Máx | 7 Kg/cm2
+22 | Conexión a línea | Ent | 4" | WN RF | 62 | Rango calibrado | 3 psig | / | 15 psig
+23 | Sal | 4" | WN RF | 63 | Orientación del Actuador | Vertical
+24 | Acabado de la brida | 125 - 250 RMS | 64 | Volante Manual | No
+25 | Mtl brida | ASTM A 216 WCB | 65 | Posición de Falla | Cierra
+26 | Dirección de Flujo | Flujo tiende a cerrar | 66
+27 | Tipo de bonete | Estándar | 67 | POSICIONADOR | Señal entrada | 4-20 mA + HART
+28 | Lub & Válv. aislación | NA | Lub | NA | 68 | Tipo | Inteligente
+29 | Mtl empaquetadura | PTFE | 69 | Fabricante & Modelo | (2)
+30 | Tipo empaquetadura | Anillos en V | 70 | Directo/Inverso | Directo
+31 | 71 | Manómetros | Si | Bypass | No
+32 | INTERNOS | Tipo | Estándar | 72 | Cam Characteristic | NA
+33 | Tamaño | 2 7/8" | Carrera | 1 1/2" | 73
+34 | Característica | Igual porcentaje | 74 | SWITCHES | Tipo | N/A | Cantidad | N/A
+35 | Balanceada/ desbalanceada | Balanceada | 75 | Fabricante & Modelo | N/A
+36 | Selección | CV | 112 | FL | 0.89 | XT | 0.813 | 76 | Contactos / Rating | N/A
+37 | MTL Obturador/disco | AISI-316/ Stellite N°6 (2) | 77 | Puntos de actuación | N/A
+38 | Mtl asiento | AISI-316/ Stellite N°6 (2) | 78 | Tags | N/A
+39 | Mtl Jaula/ Guía | AISI-316 (2) | 79 | AIRE/GAS | Fabricante & Modelo | (2)
+40 | Mtl vástago | AISI-316 (2) | 80 | Set Presión | (2)
+41 | 81 | Filtro | Si | Manómetro | NO
+42 | 82
+43 | SPECIALS / ACCESORIES | Clasificación de Area | Zona 2  GrIIA T3 | 83 | CERTIFICADOS | Prueba Hidrostática | Si
+44 | Protección electrica del conjunto | EEx-d | 84 | ANSI / FCI Clase de Fugas | Si, Clase IV (s/ANSI FCI 70,02)
+45 | Protección ambiental | IP 65 | 85 | Materiales | Si
+46 | 86 | Protección Eex-d | Si
+47 | Solenoide | N/A | 87 | Otros
+48 | Vías/Posiciones | N/A | 88
+49 | Reset | N/A | 89 | P Crítica / Temp. Crítica / Factor Z / Temperatura de descarga: 
+113 kg/cm2g / 21°C / 0,618 / 58,80 °C @Caudal Máx - 3 PADS- 12 Pozos Lineal
+113 kg/cm2g / 21°C / 0,617 / 55,76 °C @Caudal Min - 3 PADS- 12 Pozos Lineal
+101 kg/cm2g / 5°C / 0,715 / 28,93 °C @Caudal Max - 6 PADS- 6 Pozos Araña
+101 kg/cm2g / 5°C / 0,715 / 28,48 °C @Caudal Min - 6 PADS- 6 Pozos Araña
+50 | Voltaje | N/A | 90
+51 | Consumo | N/A | 91
+52 | Conexión Eléctrica/Neumática | N/A | 92
+Notas:
+1.- | La válvulas  tendrá una placa metálica  fijada mecánicamente en origen, donde aparecerán los siguientes datos grabados en modo indeleble: Fabricante, TAG , N° de serie, tamaño nominal y rating del cuerpo y conexiones a proceso, material, tipo de cuerpo, internos y empaquetadura, Modelo de internos instalados, Cv y acción del fluido (abre /cierra), Acción de falla de aire, rango neumático y presión de aire requerida por el actuador.
+2.- | A verificar/definir por proveedor.
+3.- | El rango del suministro de aire al actuador podrá modificarse a 6-30 psig para reducir el tamaño del actuador.
+4.- | Tubbings y fittings deben ser de SS.
+5.- | Valor de cp/cv corregido para gas real usando el promedio entre entrada y salida del coeficiente isentrópico a efectos de cálculo. Los valores para cada caso son: 1,32 (Caudal Máx - 3), 1,31 (Caudal Min- 3), 1,40 (Caudal Máx - 6), 1,41 (Caudal Min - 6).
+6.- | Para detalle de Presión Crítica y Temperatura Crítica para cada caso ver los campos del 89 al 92.
+ARCHIVO PLANO
+D1 | EMISION FINAL | 2025-10-02 00:00:00 | GMA | RVM
+D0 | EMISIÓN PARA APROBACIÓN | 2025-08-18 00:00:00 | GMA | RVM | CONTRATISTA | AESA
+DA | EMISIÓN PARA APROBACIÓN | 2025-07-31 00:00:00 | GMA | RVM
+REV | DESCRIPCION | FECHA | REAL. | APR. | PROYECTO | VCD24299
+HOJA DE DATOS
+VALVULAS DE CONTROL | UNIDAD DE NEGOCIO
+UPSTREAM NOC
+ANEXO | ESP | Nº DE PLANO | REV
+J | YPF-GASLIFTBAT21-VCD24299-I-HD-003001 | D1
+Hoja de Datos Válvula de Control Regulatorio | Nº: HD-J0600-01 | Hoja | 13 | DE | 15
+
+======== SDV-1803A
+1 | TAG: | SDV-1803A | Fluído: | Gas Natural | Crit Pres PC: | 101 - 113 kg/cm2g
+Servicio: | Corte Salida de Gas | P&ID: | YPF-GASLIFTBAT21-VCD24299-R-PI-003007-H1
+CONDICIONES DE PROCESO | Unidades | Caudal Máx | Caudal Normal | Caudal Min | Presión de Shut-Off
+2 | Caudal | Sm3/d | 500000 | --- | 191800 | -
+3 | Presión de entrada | kg/cm2g | 75,35 - 88,33 | --- | 77,58 - 88.36 | 98
+4 | Presión diferencial | kg/cm2g | - | --- | - | -
+5 | Temperatura | °C | 28,93 - 60,64 | --- | 28,48 - 60,62 | -
+6 | SG / PM | --- | - / 26,01 | --- | - / 24,22 | -
+7 | Viscosidad/ (Cp/Cv) | cP | 0.01720954471137614 | --- | 0.01720954471137614 | -
+8 | Presión de vapor PV | --- | --- | -
+9 | --- | -
+10
+11 | Temperatura ambiente | °C | MIN: | -10 | MAX: | 40
+12 | LÍNEA | Diámetro | Ent | 4" -  sch 80 | 52 | ACTUADOR | Tipo | Neumático Tipo Pistón Simple Efecto
+13 | & Schedule | Sal | 4" -  sch 80 | 53 | Fabricante & Modelo | (3)
+14 | N° de línea / Aislación | Sin Aislamiento / 4"-SG-1805-CA31-BB | 54 | Tamaño | (3)
+15 | CUERPO/BONETE | Tipo | ESFERICA | 55 | On / Off | Si
+16 | Tamaño | 4" | Clase ANSI | 600# | 56 | Acción del resorte Abrir/Cerrar | Cerrar
+17 | Max Pres / Temp | 94,6 kg/cm2g (100°C) | 57 | Máx presión admisible | (3)
+18 | Fabricante & Modelo | (3) | 58 | Min presión requerida | (3)
+19 | Mtl Cuerpo/Bonete | ASTM A 216 WCB | 59 | Presión disponible Aire/gas :
+20 | Mtl Lining/ ID | --- | 60 | Máx | 7 kg/cm2g | Mín | 4,5 kg/cm2g
+21 | Conexión cuerpo/ brida | Ent | 4" | WN RF | 61 | Orientación del Actuador | Vertical
+22 | Sal | 4" | WN RF | 62 | Volante Manual | No
+23 | Acabado de la brida | 125 - 250 RMS | 63 | Posición de Falla | Cerrada
+24 | Mtl brida | ASTM A 216 WCB | 64 | Válvula de bloqueo de aire | --- | Set | ---
+25 | Dirección de Flujo | --- | 65
+26 | Tipo de bonete | --- | 66 | POSICIONADOR | Señal entrada | ---
+27 | Lub & Iso Valve | --- | Lube | --- | 67 | Tipo | ---
+28 | Mtl empaquetadura | PTFE (3) | 68 | Fabricante & Modelo | ---
+29 | Tipo empaquetadura | O'rings (3) | 69 | Directo/Inverso | ---
+30 | 70 | Manómetros | --- | Bypass | ---
+31 | INTERNOS | Tipo | ESFERA GUIADA PASO TOTAL | 71 | Prueba de carrera Parcial | ---
+32 | Tamaño | 4" | 72
+33 | MtL Obturador/disco/esfera | AISI 316 (2) | 73 | SWITCHES | Tipo | Mecánico | Cantidad | 2
+34 | Mtl asiento | AISI 316 (2) | 74 | Fabricante & Modelo | (3)
+35 | Mtl vástago | AISI 316 (2) | 75 | Contactos / Rating | SPDT / 2A@24VDC (6)
+36 | 76 | Puntos de actuación | Abierta - Cerrada
+37 | Características especiales | La válvula se debe proveer con inyector y | 77 | Tag | ZSO-1803A/ZSC-1803A
+38 | válvula con retención para lubricación, en zona de | 78 | AIRE/GAS | Fabricante & Modelo | (3)
+39 | asiento y vástago. | 79 | Set Presión | (3)
+40 | 80 | Filtro | Si | Manómetro | Si | (entrada/salida)
+41 | Clasificación de Area | Zona 2 Gr.IIA T3 | 81
+42 | Protección Eléctrica | EEx-d | 82 | PRUEBAS | Hidrostática | Si
+43 | Protección Ambiental | IP 65 | 83 | Prueba Hidrostatica de Asiento | API 6D
+44 | 84
+45 | SOLENOIDE | TAG Solenoide | SV-1803A | 85
+46 | Tipo de Soleniode | Universal | 86 | Diseño antifuego certificado según API STD 607/ISO 10497.
+47 | Vías/Posiciones | 3 Vias | 87 | Diseño antiestático.
+48 | Reset | Automatico | 88
+49 | Voltaje | 24 VCC | 89
+50 | Consumo | Bajo consumo <5w | 90
+51 | Conexión Eléctrica/Neumática | 1/2" NPT-H / 1/4" NPT-H | 91
+Notas:
+1.- | Las valvulas deberán contar con una chapa de identificación de acero inoxidable en la que se indique su TAG, servicio, marca, modelo, Nº serie y rango.
+2.- | El proveedor deberá verificar la aptitud de los materiales seleccionados para las condiciones de proceso especificadas en el documento
+N° YPF-GASLIFTGRAL-VCD24299-G-BD-003001 - Bases de Diseño.
+3.- | A verificar/definir por proveedor.
+4.- | Cada válvula deberá ser suministrada totalmente ensamblada, probada y certificada en fábrica.
+5.- | El actuador deberá calcularse con un factor de seguridad de 1.3. Deberá verificarse la integridad de los internos.
+6.- | Switches de posición actuados mecánicamente, sellados herméticamente, contactos SPDT y rating de 2A@24 VDC.
+7.- | Tubings & fitting deberán ser de acero inoxidable.
+8.- | Se deberán proveer los siguientes certificados: Materiales, normativas aplicables, Modo EE-x de los accesorios eléctricos y electrónicos,
+Prueba Hidrostática, cumplimiento norma fire safe, Prueba de Cierre del Asiento.
+ARCHIVO PLANO
+D1 | EMISION FINAL | 2025-10-02 00:00:00 | GMA | RVM
+D0 | EMISIÓN FINAL | 2025-08-26 00:00:00 | GMA | RVM | CONTRATISTA | AESA
+DA | EMISIÓN PARA APROBACIÓN | 2025-06-25 00:00:00 | GMA | RVM
+REV | DESCRIPCION | FECHA | REAL. | APR. | PROYECTO | VCD24299
+HOJA DE DATOS                                                                                   VALVULA ON OFF | NEGOCIO
+UNIDAD DE NEGOCIO
+UPSTREAM NOC
+ANEXO | ESP | Nº DE PLANO | REV
+J | YPF-GASLIFTBAT21-VCD24299-I-HD-003001 | D1
+Hoja de Datos Valvula ON OFF | Nº: HD-J0602-01 | Hoja 14 de 15
+
+======== VF-1823
+1 | TAG: | VF-1823 (2) | Fluído: | Gas Natural | Crit Pres PC: | 101 - 113 kg/cm2g
+Servicio: | By-pass SDV-1083A | P&ID: | YPF-GASLIFTBAT21-VCD24299-R-PI-003007-H1
+CONDICIONES DE PROCESO | Unidades | Caudal Máx | Caudal Normal | Caudal Min | Presión de Shut Off
+2 | Caudal | Sm3/d | 500000 | --- | 191800 | -
+3 | Presión de entrada | kg/cm2g | 75,35 - 88,33 | --- | 77,58 - 88.36 | 98
+4 | Presión de salida | kg/cm2g | - | --- | - | -
+5 | Temperatura | °C | 28,93 - 60,64 | --- | 28,48 - 60,62 | -
+6 | SG / PM | - / g/mol | - / 26,01 | --- | - / 24,22 | -
+7 | Viscosidad/ (Cp/Cv) | cP | 0.01720954471137614 | --- | 0.01720954471137614 | -
+8 | Presión de vapor PV | --- | --- | -
+9 | dBA | --- | -
+10
+11 | Temperatura ambiente | °C | MIN: | -10 | MAX: | 40
+12 | LÍNEA | Diámetro | Ent | 1" -  sch 80 | 52 | ACTUADOR | Tipo | --
+13 | & Schedule | Sal | 1" -  sch 80 | 53 | Fabricante & Modelo | --
+14 | N° de línea / Aislación | Sin Aislamiento / 1"-SG-1805-CA31-BB | 54 | Tamaño | --
+15 | CUERPO/BONETE | Tipo | ESFERICA | 55 | On / Off | --
+16 | Tamaño | 1" | Clase ANSI | 600# | 56 | Acción del resorte Abrir/Cerrar | --
+17 | Max Pres / Temp | 94,6 kg/cm2g (100°C) | 57 | Máx presión admisible | --
+18 | Fabricante & Modelo | (1) (2) | 58 | Min presión requerida | --
+19 | Mtl Cuerpo/Bonete | ASTM A 216 WCB | 59 | Presión disponible Aire/gas :
+20 | Mtl Lining/ ID | --- | 60 | Máx | -- | Mín | --
+21 | Conexión cuerpo/ brida | Ent | 1" | WN RF | 61 | Orientación del Actuador | --
+22 | Sal | 1" | WN RF | 62 | Volante Manual | --
+23 | Acabado de la brida | 125 - 250 RMS | 63 | Posición de Falla | --
+24 | Mtl brida | ASTM A 216 WCB | 64 | Válvula de bloqueo de aire | --- | Set | ---
+25 | Dirección de Flujo | --- | 65
+26 | Tipo de bonete | --- | 66 | POSICIONADOR | Señal entrada | ---
+27 | Lub & Iso Valve | --- | Lube | --- | 67 | Tipo | ---
+28 | Mtl empaquetadura | (1) | 68 | Fabricante & Modelo | ---
+29 | Tipo empaquetadura | (1) | 69 | Directo/Inverso | ---
+30 | 70 | Manómetros | --- | Bypass | ---
+31 | INTERNOS | Tipo | ESFERA GUIADA PASO TOTAL | 71 | Prueba de carrera Parcial | ---
+32 | Tamaño | 1" | 72
+33 | MtL Obturador/disco/esfera | AISI 316 (1) (2) | 73 | SWITCHES | Tipo | Mecánicos | Cantidad | 2
+34 | Mtl asiento | TEFLON REFORZADO (1) (2) | 74 | Fabricante & Modelo | (1)
+35 | Mtl vástago | AISI 316 (1) (2) | 75 | Contactos / Rating | 2A@24VDC (3)
+36 | 76 | Puntos de actuación | Abierta - Cerrada
+37 | Características especiales | 77 | Tag | ZSO-1803E/ZSC-1803E
+38 | 78 | AIRE/GAS | Fabricante & Modelo | --
+39 | 79 | Set Presión | --
+40 | 80 | Filtro | -- | Manómetro | --
+41 | Clasificación de Area | Zona 2 Gr.IIA T3 | 81
+42 | Protección Eléctrica | EEx-d | 82 | PRUEBAS | Hidrostática | --
+43 | Protección Ambiental | IP 65 | 83 | Prueba Hidrostatica de Asiento | --
+44 | 84
+45 | SOLENOIDE | TAG Solenoide | 85
+46 | Tipo de Soleniode | -- | 86
+47 | Vías/Posiciones | -- | 87
+48 | Reset | -- | 88
+49 | Voltaje | -- | 89
+50 | Consumo | -- | 90
+51 | Conexión Eléctrica/Neumática | -- | 91
+Notas:
+1.- | A confirmar por el proveedor.
+2.- | Válvula manual a ser provista por Piping. Solo se debe considerar la povisión del LIMIT SWITCH.
+3.- | Switches de posición actuados mecánicamente, sellados herméticamente, contactos SPDT y rating de 2A@24 VDC.
+ARCHIVO PLANO
+D1 | EMISIÓN FINAL | 2025-10-02 00:00:00 | GMA | RVM
+D0 | EMISIÓN FINAL | 2025-08-26 00:00:00 | GMA | RVM | CONTRATISTA | AESA
+DA | EMISIÓN PARA APROBACIÓN | 2025-06-25 00:00:00 | GMA | RVM
+REV | DESCRIPCION | FECHA | REAL. | APR. | PROYECTO | VCD24299
+HOJA DE DATOS
+LIMIT SWITCH | UNIDAD DE NEGOCIO
+UPSTREAM NOC
+ANEXO | ESP | Nº DE PLANO | REV
+J | YPF-GASLIFTBAT21-VCD24299-I-HD-003001 | D1
+Hoja de Datos Valvula ON OFF | Nº: HD-J0602-01 | Hoja 15 de 15

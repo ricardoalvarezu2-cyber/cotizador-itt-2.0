@@ -1,0 +1,184 @@
+{
+ "generada": "2026-11-16",
+ "mo_piping": {
+  "juntas_bw": 25,
+  "pulg_eq": 136.717,
+  "juntas_sw_olet": 1.0,
+  "extremos_campo": 0.0,
+  "kg_piping": 1121.9,
+  "bridas": 19.0,
+  "diametros": [
+   4.0,
+   3.0,
+   1.5
+  ],
+  "sin_peso": [
+   "13 Buje reducción 3/4\"x1/2\" #3000 NPT · Ø 3",
+   "23 FIT-1800A / FE-1800A · Ø 3\"",
+   "24 PIT-1800A · Ø 1/2\"",
+   "25 TIT-1800A",
+   "27 FQIT-1800A",
+   "28 Válvula de purga 2\" de la batea con nipl",
+   "30 Chapa batea de contención",
+   "32 Aislación y tracing eléctrico de la toma",
+   "33 Placa de identificación AISI 316 160x160"
+  ],
+  "aproximados": [
+   "16 3/4\" - 2000WOG · Ø 3/4\"",
+   "17 Junta espiralada 4\" #600 AISI 316L + gra",
+   "18 Junta espiralada 1 1/2\" #600 AISI 316L +",
+   "19 JD (junta dieléctrica) 3\" #600 RF, kit c"
+  ],
+  "avisos": []
+ },
+ "mo_estructura": {
+  "kg": 700.0,
+  "m2": 29.1
+ },
+ "pintura": {
+  "m2_canos": 2.5,
+  "m2_piping": 4.16,
+  "m2_estructura": 29.1,
+  "m2_total": 33.26,
+  "esquema": ""
+ },
+ "end": {
+  "juntas_bw": 25,
+  "rx_pct": 30,
+  "placas_chicas": 22,
+  "placas_grandes": 0,
+  "juntas_lp": 1.0,
+  "materiales": [
+   "ASTM A105",
+   "ASTM A106 Gr. B",
+   "ASTM A234 WPB"
+  ],
+  "espesor_max_mm": 8.56,
+  "procedimientos": [
+   "WPS/PQR de soldadura a tope para ASTM A105, ASTM A106 Gr. B, ASTM A234 WPB hasta 8,56 mm de espesor",
+   "Calificación de soldadores (WPQ) para esos WPS",
+   "Procedimiento de RX y de LP (escrito, nivel 3 ISO 9712)",
+   "Confirmar con el pliego: si exige procedimientos nuevos o alcanzan los vigentes de ITT"
+  ]
+ },
+ "transporte": {
+  "largo_m": 0.0,
+  "ancho_m": 0.0,
+  "alto_m": 0.0,
+  "kg_equipo": 1821.9,
+  "destino": "",
+  "por_camion": null,
+  "viajes": null,
+  "avisos": [
+   "Faltan las medidas del equipo (largo × ancho × alto): cargarlas del plano de conjunto"
+  ]
+ },
+ "procedimientos": {
+  "lista": [
+   {
+    "codigo": "WPS-BW",
+    "nombre": "WPS/PQR de soldadura a tope, acero al carbono",
+    "alcance": "hasta 8,56 mm de espesor",
+    "cantidad": 1,
+    "tipo": "soldadura"
+   },
+   {
+    "codigo": "WPS-SW",
+    "nombre": "WPS/PQR de soldadura socket y filete, acero al carbono",
+    "alcance": "",
+    "cantidad": 1,
+    "tipo": "soldadura"
+   },
+   {
+    "codigo": "WPQ",
+    "nombre": "Calificación de soldadores (WPQ)",
+    "alcance": "una por WPS y soldador asignado",
+    "cantidad": 2,
+    "tipo": "soldadura"
+   },
+   {
+    "codigo": "END-RX",
+    "nombre": "Procedimiento de radiografía (nivel 3, ISO 9712)",
+    "alcance": "",
+    "cantidad": 1,
+    "tipo": "end"
+   },
+   {
+    "codigo": "END-LP",
+    "nombre": "Procedimiento de líquidos penetrantes (nivel 3, ISO 9712)",
+    "alcance": "",
+    "cantidad": 1,
+    "tipo": "end"
+   },
+   {
+    "codigo": "PH",
+    "nombre": "Procedimiento de prueba hidráulica",
+    "alcance": "",
+    "cantidad": 1,
+    "tipo": "calidad"
+   },
+   {
+    "codigo": "PIN",
+    "nombre": "Procedimiento de granallado y pintura",
+    "alcance": "esquema del pliego",
+    "cantidad": 1,
+    "tipo": "calidad"
+   }
+  ],
+  "cantidad": 8
+ },
+ "ph": {
+  "litros": 50.2
+ },
+ "horas": {},
+ "referencias": {
+  "mo_estructura": {
+   "modo": "detallado",
+   "detallado_usd": 0,
+   "renglones_detalle": 0,
+   "global_usd": null
+  },
+  "mo_piping": {
+   "modo": "detallado",
+   "detallado_usd": 6940.67,
+   "renglones_detalle": 1,
+   "global_usd": null
+  },
+  "pintura": {
+   "modo": "detallado",
+   "detallado_usd": 1263.14,
+   "renglones_detalle": 1,
+   "global_usd": null
+  },
+  "end": {
+   "modo": "detallado",
+   "detallado_usd": 870.95,
+   "renglones_detalle": 1,
+   "global_usd": null
+  },
+  "procedimientos": {
+   "modo": "detallado",
+   "detallado_usd": 0,
+   "renglones_detalle": 0,
+   "global_usd": null
+  },
+  "ph": {
+   "modo": "detallado",
+   "detallado_usd": 0,
+   "renglones_detalle": 0,
+   "global_usd": null
+  },
+  "horas": {
+   "modo": "detallado",
+   "detallado_usd": 5800.09,
+   "renglones_detalle": 3,
+   "global_usd": null
+  },
+  "transporte": {
+   "modo": "detallado",
+   "detallado_usd": 1500.0,
+   "renglones_detalle": 1,
+   "global_usd": null
+  }
+ }
+}

@@ -414,3 +414,13 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 - Qué pasó: en la lista preliminar anoté "C0100 5.1.3 pide 5 mm mínimo total" y adopté caño Sch 40. La nota 1 de la tabla dice que vale el mayor entre el total de la tabla y resistente + sobreespesor de corrosión (3 + 3,2 = 6,2 mm con el recipiente terminado): el Sch 40 quedaba en 6,22 mm con la tolerancia. Además puse 1 oreja de puesta a tierra (C0100 5.1.13 pide dos), junté espárragos y tuercas en un renglón con los dos materiales, y cargué en `material` datos que la hoja de datos no da (pescante, cupla, tapón). Lo encontró la revisión independiente, antes de cargar precios.
 - Corrección: cuerpo, casquete y brida a Sch 80; 2 orejas; renglones separados; lo que agrega ITT, a `nota`; 20 requisitos y 2 consultas más.
 - Lección: de una tabla de una especificación se leen también sus notas al pie antes de anotar el valor. Cuando el recipiente lo diseña ITT desde una hoja de datos, se lee entera la especificación general de recipientes del cliente (acá C0100: tierra, rompevórtice, internos, refuerzos, placa) y la de ensayos antes de armar la lista, no solo los puntos que cita la hoja de datos. Si la hoja de datos no da el material de una pieza, la columna `material` queda vacía.
+
+## 16-11-2026 — COT26-0330-003 (YPF Lic 70243): `armar_cotizacion.py` se cortó con la fecha de referencia del mes en curso
+- Qué pasó: con `fecha_referencia` 16-11-2026 el armado terminó en `KeyError: '2026-11'` (el índice de noviembre todavía no existe en `indices_ajuste.csv`), sin decir qué faltaba.
+- Corrección: `fecha_referencia` al último mes con dato (31-10-2026), como las demás cotizaciones.
+- Lección: la fecha de referencia es la del último índice cargado, no la de hoy. Pendiente: que el armado avise con un mensaje claro en vez de cortarse.
+
+## 16-11-2026 — Planilla modelo de Ventas: datos fijos y vínculos a otro libro
+- Qué pasó: la "Planilla modelo de cotizacion.xlsx" que se usó como formato tenía en RESUMEN el transporte fijo (C19 = 2.500) y fórmulas que apuntaban a otro libro ('[4]Man. Conc. Ent. 4x8- S. 2x12'!…): al llenarla, el RESUMEN daba 1.100 más que la hoja EQUIPO 1.
+- Corrección: `llenar_planilla_modelo.py` enlaza todo el RESUMEN a EQUIPO 1 y saca los vínculos externos; se controló con LibreOffice que EQUIPO 1, RESUMEN y Pie de Venta den el mismo total.
+- Lección: al reutilizar una planilla de otro trabajo, recalcularla y comparar el total de cada hoja antes de entregarla.

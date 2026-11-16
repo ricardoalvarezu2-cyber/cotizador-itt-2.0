@@ -1,0 +1,23 @@
+id,documento,pagina,texto,tema,destino,referencia
+R01,YPF-EQSKIDSXX-VCD16011-G-ET-001005 D2,5,Desarrollo de la ingeniería de detalle incluyendo: Diseño hidráulico. Diseño mecánico. Diseño estructural.,ingeniería,renglon,HH
+R02,YPF-EQSKIDSXX-VCD16011-G-ET-001005 D2,6,Toda la documentación indicada en el anexo CCPP – Listado de Documentos LLI UP.,documentación,consulta,Anexo CCPP no recibido
+R03,YPF-EQSKIDSXX-VCD16011-G-ET-001005 D2,6,Ensayos completos en taller. Preparación superficial y pintura. Pruebas FAT,ensayos,renglon,RX
+R04,YPF-EQSKIDSXX-VCD16011-G-ET-001005 D2,6,Transporte a punto de entrega.,transporte,renglon,TRA
+R05,YPF-EQSKIDSXX-VCD16011-G-ET-001005 D2,6,Repuestos para puesta en marcha.,repuestos,renglon,REP
+R06,YPF-EQSKIDSXX-VCD16011-G-ET-001005 D2,6,Garantía de Performance.,garantía,cumple,
+R07,YPF-EQSKIDSXX-VCD16011-G-ET-001005 D2,7,Plataformas y escaleras para acceso a unidades de potencia e instrumentación,estructura,consulta,El plano no muestra plataformas
+R08,YPF-EQSKIDSXX-VCD16011-G-ET-001005 D2,7,Obra civil. Perchas de izaje. Provisión de bulones de Anclaje del Bastidor a fundación. Trabajos de montaje.,alcance,exclusion,"Obra civil, perchas de izaje y bulones de anclaje"
+R09,YPF-EQSKIDSXX-VCD16011-G-ET-001005 D2,8,"Batea: ... chapa de acero grado comercial en su base, soldada en todo su contorno ... niple roscado con válvula de purga de 2"". La válvula deberá ser parte de la provisión.",estructura,renglon,30
+R10,YPF-EQSKIDSXX-VCD16011-G-ET-001005 D2,9,En las áreas de operación ... serán provistos de rejillas electrosoldadas galvanizadas,estructura,consulta,El plano no las muestra: aclarado en la oferta
+R11,YPF-EQSKIDSXX-VCD16011-G-ET-001005 D2,9,"Las conexiones que se vinculen con el resto de la planta serán bridadas según norma ASME B16.5, y alineadas al límite del bastidor.",piping,renglon,3
+R12,YPF-EQSKIDSXX-VCD16011-G-ET-001005 D2,10,al menos dos orejas de puesta a tierra de acero inoxidable,electricidad,renglon,33
+R13,YPF-EQSKIDSXX-VCD16011-G-ET-001005 D2,10,Toda la instrumentación provista dentro de los skids deberá estar cableada hasta las cajas de conexionado,instrumentos,renglon,31
+R14,YPF-EQSKIDSXX-VCD16011-G-ET-001005 D2,11,"placas de identificación de acero inoxidable AISI 304/316 de 1,5 mm",identificación,renglon,33
+R15,YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0,1,NOTA 2: SE DEBE INCLUIR UN COMPUTADOR DE CAUDAL YA QUE EL SKID DEL PUENTE DE MEDICIÓN NO LO INCLUYE.,instrumentos,renglon,27
+R16,YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0,1,NOTA 4: COLOCAR TOMAS EN LA PARTE SUPERIOR Y AISLACIÓN Y TRACING ELÉCTRICO.,instrumentos,renglon,32
+R17,YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0,1,JD a cada lado del FE-1800A,piping,renglon,19
+R18,YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1,1,"NOTA 6: MEDIDAS A DEFINIR POR PROVEEDOR, VER DOCUMENTO YPF-GASLIFTBAT21-VCD24299-I-HD-003001",instrumentos,desvio,Las medidas del tramo del medidor (NOTA 6 del plano)
+R19,YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1,2,SKID DE REGULACIÓN N° SCC-112B,alcance,consulta,No incluido: confirmar si se cotiza
+R20,YPF-GASLIFTBAT21-VCD24299-I-HD-003001 D1,FIT-1800A,"CONEX. PROCESO 3'' #600-RF · RANGO CALIBRADO 0 - 600000 Sm3/d · FABRICANTE Emerson, Endress+Hauser, ABB o similar calidad",instrumentos,renglon,23
+R21,YPF-GASLIFTBAT21-VCD24299-I-HD-003001 D1,PIT-1800A,"Debe ser provisto con manifold de bloqueo y purga #3000 1/2"" R-NPT- M-H AISI 316 tipo ABAC.",instrumentos,renglon,24
+R22,L0200 (COT26-0010-001),11,CA31 ... 600# - R.F. ... AºCº ... 30%,piping,renglon,1

@@ -1,0 +1,1450 @@
+{
+ "codigo": "COT26-0330-003",
+ "revision": "Rev 0",
+ "estado": "borrador",
+ "fecha": "2026-11-16",
+ "preparo": "Ricardo Álvarez",
+ "cliente": {
+  "nombre": "YPF S.A.",
+  "codigo_itt": "0330",
+  "comprador": "a confirmar"
+ },
+ "titulo": "YPF · Lic 70243 — 1 skid de medición SCC-112A (Gas Lift, IISS Batería 2.1)",
+ "titulo_pagina": "Cotización YPF Lic 70243 puente de medición",
+ "archivo_planilla": "YPF_Lic70243_PuenteMed",
+ "subtitulo_planilla": "1 skid de medición SCC-112A · plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 · USD sin IVA · EXW Quilmes Oeste",
+ "meta": [
+  "YPF Lic 70243 · Puente de medición Gas Lift",
+  "Plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 · P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0",
+  "Comprador: a confirmar",
+  "Preparó: Ricardo Álvarez · 16-11-2026"
+ ],
+ "equipo": {
+  "singular": "skid de medición",
+  "plural": "skids de medición"
+ },
+ "parametros": {
+  "N": 1,
+  "FM": 1.35,
+  "FMO": 1.35,
+  "CONT": 5,
+  "AJ": 1,
+  "TRANS": 0,
+  "TC": 1550,
+  "TR_ARS": 0,
+  "TR_EMB": 0,
+  "TR_F": 1.0,
+  "fecha_referencia": "2026-10-31",
+  "rx_pct": 30,
+  "ph_horas": 4,
+  "FTV": 1.0
+ },
+ "plazo": {
+  "dias": 150,
+  "texto": "desde OC · EXW Quilmes Oeste (más flete a Neuquén)",
+  "tareas": [
+   [
+    "Ingeniería de detalle y aprobación YPF",
+    0,
+    30,
+    "crit"
+   ],
+   [
+    "Coriolis 3\" #600 (ABB 122 días / Yokogawa 130-140)",
+    0,
+    135,
+    "crit"
+   ],
+   [
+    "Materiales de piping y válvulas Taval",
+    15,
+    60,
+    ""
+   ],
+   [
+    "Taller: prefabricado, skid y soldadura (Ledesma)",
+    60,
+    100,
+    "tal"
+   ],
+   [
+    "END, PH y pintura",
+    100,
+    120,
+    "tal"
+   ],
+   [
+    "Montaje de instrumentos, FAT, dossier y despacho",
+    135,
+    150,
+    "tal"
+   ]
+  ],
+  "nota": "Fija el plazo el Coriolis importado (ABB 122 días corridos). Se acorta si YPF acepta 90/110 días con instrumentos provistos por separado, como en la planilla modelo.",
+  "justificacion": "Se ofrecen 150 días superponiendo el taller con la compra del Coriolis (ABB 122 días): el piping se prefabrica y prueba con carrete provisorio en el lugar del medidor y el Coriolis se monta al final, antes de la FAT. Sin superponer da 210 días; decisión pendiente de Ventas."
+ },
+ "flete": {
+  "etiqueta": "Flete a Neuquén",
+  "referencia_html": "Incluido como ítem (catálogo TRA-00578, 30-10-2026)",
+  "criterio_html": "EXW Quilmes Oeste + flete como ítem aparte"
+ },
+ "historial_html": [],
+ "pedido": {
+  "eyebrow": "YPF Lic 70243 · Puente de medición (documentación del 16-11-2026)",
+  "datos_html": [
+   [
+    "Cliente",
+    "YPF S.A. (código ITT 0330)"
+   ],
+   [
+    "Ítem",
+    "Skid de medición SCC-112A (paquetizado regulación y medición, IISS Batería 2.1, Estándar Gas Lift) · <b>1 un (a confirmar)</b>"
+   ],
+   [
+    "Documentos",
+    "YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 (plano conjunto, hoja 1) · YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 (P&ID) · YPF-GASLIFTBAT21-VCD24299-I-HD-003001 D1 (hojas de datos de instrumentos) · YPF-EQSKIDSXX-VCD16011-G-ET-001005 D2 (ET equipos paquetizados)"
+   ],
+   [
+    "Entrega pedida",
+    "Transporte a punto de entrega (ET 3.1); se cotiza EXW + flete a Neuquén"
+   ],
+   [
+    "Fechas",
+    "A confirmar"
+   ]
+  ],
+  "requisitos_html": [
+   "Línea 4\"-SG-1800-CA31-BB: clase CA31 (L0200: 600# RF, AºCº, CA 1,6 mm, RX 30 %)",
+   "Presión 65 / 88,6 / 90 kg/cm2g, 33,5–60,6 °C, gas natural (HD)",
+   "Coriolis 3\" #600 RF, 0-600.000 Sm3/d, EEx-d, HART + Modbus (HD-J0208-01)",
+   "Computador de caudal incluido (P&ID nota 2)",
+   "Batea de contención con chapa y purga 2\" con válvula (ET 4.2)",
+   "Instrumentos cableados a cajas de conexionado (ET 7)",
+   "Ingeniería de detalle, FAT, repuestos de puesta en marcha, transporte (ET 3.1)"
+  ]
+ },
+ "nota_mo_html": "MO de terceros con el alcance del presupuesto Ledesma 200295 (prefabricado, soldadura, skid; sin montaje, PH, END ni pintura). Soldaduras de taller: 25 juntas a tope (16 bridas WN 4\", 2 WN 3\", 1 WN 1 1/2\", 2 tees, 2 codos, 2 reducciones) más 1 weldolet y 5 threadolets. Sin soldaduras de campo: las conexiones a planta son bridadas (ET 5).",
+ "desvios": [],
+ "antecedentes": [
+  {
+   "carpeta_html": "<b>TAVAL/69</b> · Lic 64673 Colectores, skids y puente de medición (UTE LACH)",
+   "fecha": "16/07/2026",
+   "que": "Skids SCC-113A (medición, mismo tag FIT-1800A) y SCC-113B (regulación), proyecto gemelo",
+   "precio": "solo cotizaciones de proveedores",
+   "tomado_html": "Coriolis ABB/Yokogawa, PIT, computador de caudal, TIT/TE, MO Ledesma"
+  },
+  {
+   "carpeta_html": "<b>YPF Lic 66944</b> · Colectores manuales (planilla modelo)",
+   "fecha": "30/10/2026",
+   "que": "Colectores de campo #300",
+   "precio": "—",
+   "tomado_html": "Válvulas Taval confirmadas por Matías, formato de la planilla, transporte y caución"
+  }
+ ],
+ "pendientes": [
+  {
+   "titulo": "Proveedores",
+   "items": [
+    "Coriolis 3\" #600 RF según HD-J0208-01 (ABB y Yokogawa cotizaron 4\" en 07-2026, vencidas)",
+    "PIT, TIT, TE + termovaina 1 1/2\" #600 y computador de caudal (cotizaciones de 07-2026 vencidas)",
+    "MO Ledesma para el SCC-112A solo",
+    "Juntas 1 1/2\" #600, espárragos 3/4\" x 5\", caja Ex-d y tracing"
+   ]
+  },
+  {
+   "titulo": "Cliente",
+   "items": [
+    "Cantidad de skids y fecha de necesidad",
+    "Hoja de la clase CA31 (schedules)",
+    "Hoja de datos de TIT-1800A / TE-1800A",
+    "¿Se cotiza solo el SCC-112A o también el SCC-112B (hoja 2 del plano)?",
+    "Destino de entrega",
+    "Rejillas: la ET las pide en zonas de operación; el plano no las muestra"
+   ]
+  }
+ ],
+ "pie": "Fuentes: base de conocimiento del repositorio cotizador-itt. Precios en USD sin IVA.",
+ "planilla_notas": [
+  "Plazo: 150 días desde OC (Coriolis importado).",
+  "Condiciones: USD sin IVA, EXW Quilmes Oeste + flete a Neuquén; borrador sin revisar."
+ ],
+ "items": [
+  {
+   "id": "M01",
+   "pos": "1",
+   "grupo": "material",
+   "descripcion": "Caño 4\" Sch 80 sin costura (línea 4\"-SG-1800-CA31-BB) · Ø 4\"",
+   "cantidad": 6.6,
+   "unidad": "m",
+   "especificacion": "Plano: 4\" · Sch 80 · ASTM A106 Gr. B · BW · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: Clase CA31 (L0200: 600# RF, AºCº, CA 1,6 mm). Schedule 80 tomado por ITT: confirmar con la hoja de la clase. Colector 7.360 mm y bypass 5.450 mm entre tees, descontando válvulas, medidor, bridas y accesorios",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "4\"",
+    "schedule": "80",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 39.07,
+     "proveedor": "Grupo Provemet · CAN-01497",
+     "codigo": "CAN-01497",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288974_canos_2026-10-29.pdf",
+     "fecha": "2026-10-29",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M01B",
+   "pos": "1b",
+   "grupo": "material",
+   "descripcion": "Completar barra de 12 m de la pos 1 (compra mínima; sobrante, no va en el equipo)",
+   "cantidad": 5.4,
+   "unidad": "m",
+   "especificacion": "1 barra(s) de 12 m para 6,6 m en 1 equipo(s); por equipo 5,4 m",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "4\"",
+    "schedule": "80",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 39.07,
+     "proveedor": "Grupo Provemet · CAN-01497",
+     "codigo": "CAN-01497",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288974_canos_2026-10-29.pdf",
+     "fecha": "2026-10-29",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M02",
+   "pos": "2",
+   "grupo": "material",
+   "descripcion": "Caño 3\" Sch 80 sin costura (tramos del medidor FE-1800A) · Ø 3\"",
+   "cantidad": 0.3,
+   "unidad": "m",
+   "especificacion": "Plano: 3\" · Sch 80 · ASTM A106 Gr. B · BW · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: Entre reducciones 4\"x3\" y bridas del medidor (zona NOTA 6 del plano: medidas a definir por proveedor)",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "3\"",
+    "schedule": "80",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 27.78,
+     "proveedor": "Grupo Provemet · CAN-01486",
+     "codigo": "CAN-01486",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288974_canos_2026-10-29.pdf",
+     "fecha": "2026-10-29",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M03",
+   "pos": "3",
+   "grupo": "material",
+   "descripcion": "Brida WN 4\" #600 RF Sch 80 · Ø 4\"",
+   "cantidad": 16.0,
+   "unidad": "un",
+   "especificacion": "Plano: 4\" · 600# / Sch 80 · ASTM A105 · BW/RF · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: 14 para válvulas VF-1809/1810/1811/1812/1814/1815 y VR-1813 + 2 de conexión a planta (NOTA 4 salida / NOTA 5 entrada)",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "4\"",
+    "serie": "600",
+    "schedule": "80",
+    "material": "A105",
+    "extremos": "BW/RF",
+    "tipo": "wn",
+    "cara": "RF"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 56.37,
+     "proveedor": "planilla de costo ITT (proveedor sin nombre) · BRI-01305",
+     "codigo": "BRI-01305",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M04",
+   "pos": "4",
+   "grupo": "material",
+   "descripcion": "Brida WN 3\" #600 RF Sch 80 · Ø 3\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3\" · 600# / Sch 80 · ASTM A105 · BW/RF · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: Contrabridas del medidor FE-1800A (HD: conexión 3\" #600-RF)",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "3\"",
+    "serie": "600",
+    "schedule": "80",
+    "material": "A105",
+    "extremos": "BW/RF",
+    "tipo": "wn",
+    "cara": "RF"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 28.98,
+     "proveedor": "Grupo Provemet cot. 288978 · BRI-01286",
+     "codigo": "BRI-01286",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288978_bridas_2026-10-29.pdf",
+     "fecha": "2026-10-29",
+     "validez_hasta": "2026-11-28",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M05",
+   "pos": "5",
+   "grupo": "material",
+   "descripcion": "Brida WN 1 1/2\" #600 RF Sch 80 · Ø 1 1/2\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1 1/2\" · 600# / Sch 80 · ASTM A105 · BW/RF · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: Conexión de la termovaina TE-1800A \"1½\"-600#\" (P&ID)",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "1.5\"",
+    "serie": "600",
+    "schedule": "80",
+    "material": "A105",
+    "extremos": "BW/RF",
+    "tipo": "wn",
+    "cara": "RF"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 12.54,
+     "proveedor": "Grupo Provemet · BRI-01260",
+     "codigo": "BRI-01260",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288979_bridas_2026-10-29.pdf",
+     "fecha": "2026-10-29",
+     "coincide": "similar",
+     "diferencia": "diametro: 2\" (pedido 1.5\"); precio escalado por diámetro (1,5\" ÷ 2\")^1,5 = × 0,65"
+    }
+   ]
+  },
+  {
+   "id": "M06",
+   "pos": "6",
+   "grupo": "material",
+   "descripcion": "Tee normal 4\" Sch 80 · Ø 4\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 4\" · Sch 80 · ASTM A234 WPB · BW · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: Derivación y retorno del bypass VF-1814/VF-1815",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "4\"",
+    "schedule": "80",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "tee"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 53.92,
+     "proveedor": "Oil Metal cot. 37278 (cód. AC0400-4K280527) · ABW-00408",
+     "codigo": "ABW-00408",
+     "origen": "fuentes_originales/listas_vendedor/2026-11-05/oilmetal_cotizacion_37278_2026-10-30.pdf",
+     "fecha": "2026-10-30",
+     "validez_hasta": "2026-11-09",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M07",
+   "pos": "7",
+   "grupo": "material",
+   "descripcion": "Codo 90° radio largo 4\" Sch 80 · Ø 4\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 4\" · Sch 80 · ASTM A234 WPB · BW · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: Bypass (planta: cota 560)",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "4\"",
+    "schedule": "80",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "codo 90"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 41.41,
+     "proveedor": "planilla de costo ITT · ABW-00112",
+     "codigo": "ABW-00112",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx",
+     "fecha": "2026-06-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M08",
+   "pos": "8",
+   "grupo": "material",
+   "descripcion": "Reducción concéntrica 4\"x3\" Sch 80 · Ø 4\"x3\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 4\"x3\" · Sch 80 · ASTM A234 WPB · BW · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: \"4\"x3\"\" a cada lado del FE-1800A (P&ID)",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "4\"",
+    "diametro2": "3\"",
+    "schedule": "80",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "reduccion concentrica"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 25.15,
+     "proveedor": "Renard (cód. 3650) · ABW-00223",
+     "codigo": "ABW-00223",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3650",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M09",
+   "pos": "9",
+   "grupo": "material",
+   "descripcion": "Weldolet 4\"x1 1/2\" Sch 80 · Ø 4\"x1 1/2\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 4\"x1 1/2\" · Sch 80 · ASTM A105 · BW · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: Para la brida de la termovaina TE-1800A",
+   "atributos": {
+    "familia": "AFO",
+    "diametro": "4\"",
+    "schedule": "80",
+    "material": "A105",
+    "extremos": "BW"
+   },
+   "faltan_datos": [
+    "tipo",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 7.0,
+     "proveedor": "planilla de costo ITT · AFO-02436",
+     "codigo": "AFO-02436",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx",
+     "fecha": "2026-06-26",
+     "coincide": "similar",
+     "diferencia": "schedule: 120 (pedido 80); extremos: sin dato (pedido BW)"
+    }
+   ]
+  },
+  {
+   "id": "M10",
+   "pos": "10",
+   "grupo": "material",
+   "descripcion": "Threadolet 4\"x3/4\" #3000 NPT · Ø 4\"x3/4\"",
+   "cantidad": 5.0,
+   "unidad": "un",
+   "especificacion": "Plano: 4\"x3/4\" · 3000# · ASTM A105 · NPT · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: 5 conexiones 3/4\": venteos/drenajes junto a VF-1809, VF-1811, VR-1813, bypass entre VF-1814/1815 y toma del PIT-1800A",
+   "atributos": {
+    "familia": "AFO",
+    "diametro": "4\"",
+    "serie": "3000",
+    "material": "A105",
+    "extremos": "NPT",
+    "tipo": "threadolet"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 3.5,
+     "proveedor": "planilla de costo ITT (proveedor sin nombre) · AFO-04938",
+     "codigo": "AFO-04938",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M11",
+   "pos": "11",
+   "grupo": "material",
+   "descripcion": "Niple 3/4\" Sch 160 NPT L=100 mm · Ø 3/4\"",
+   "cantidad": 5.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" · Sch 160 · ASTM A106 Gr. B · NPT · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: Uno por conexión 3/4\"",
+   "atributos": {
+    "familia": "NIP",
+    "diametro": "0.75\"",
+    "schedule": "160",
+    "material": "A106 B",
+    "extremos": "NPT",
+    "largo_mm": "100"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 7.42,
+     "proveedor": "Grupo Provemet · NIP-01782",
+     "codigo": "NIP-01782",
+     "origen": "Grupo_Provemet_Cotizacion_0000289897_TAVAL_SA BRIDAS 12.pdf",
+     "fecha": "2026-11-05",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M12",
+   "pos": "12",
+   "grupo": "material",
+   "descripcion": "Tapón macho hexagonal 3/4\" #3000 NPT · Ø 3/4\"",
+   "cantidad": 4.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" · 3000# · ASTM A105 · NPT · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: Cierre de venteos/drenajes (P&ID: válvula con tapón)",
+   "atributos": {
+    "familia": "AFO",
+    "diametro": "0.75\"",
+    "serie": "3000",
+    "material": "A105",
+    "extremos": "NPT",
+    "tipo": "tapon"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 3.5,
+     "proveedor": "Renard · AFO-00850",
+     "codigo": "AFO-00850",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\PAMPA ENERGIA\\7- Licitacion contrato Marco Skid PAD Rincon de Aranda · 4.Armado de la Oferta Comercial/Cot Skid Manifolds Colectores RDA Contrato Marco (2da RDA).xlsx.",
+     "fecha": "2026-08-14",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M13",
+   "pos": "13",
+   "grupo": "material",
+   "descripcion": "Buje reducción 3/4\"x1/2\" #3000 NPT · Ø 3/4\"x1/2\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\"x1/2\" · 3000# · ASTM A105 · NPT · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: Toma del PIT-1800A al manifold 1/2\" (M2)",
+   "atributos": {
+    "familia": "AFO",
+    "diametro": "0.75\"",
+    "diametro2": "0.5\"",
+    "serie": "3000",
+    "material": "A105",
+    "extremos": "NPT",
+    "tipo": "buje"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 2.98,
+     "proveedor": "Renard · AFO-00604",
+     "codigo": "AFO-00604",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\PAMPA ENERGIA\\7- Licitacion contrato Marco Skid PAD Rincon de Aranda · 4.Armado de la Oferta Comercial/Cot Skid Manifolds Colectores RDA Contrato Marco (2da RDA).xlsx.",
+     "fecha": "2026-08-14",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M14",
+   "pos": "14",
+   "grupo": "material",
+   "descripcion": "4\"#600 VF-1809 / VF-1810 / VF-1811 / VF-1812 / VF-1814 / VF-1815 · Ø 4\"",
+   "cantidad": 6.0,
+   "unidad": "un",
+   "especificacion": "Plano: 4\" · 600# · ASTM A105/A216 WCB · RF · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: Válvula esférica bridada RF paso total, operación a volante y caja reductora (Taval). VF-1814 y VF-1815 NC (bypass)",
+   "atributos": {
+    "familia": "OTR",
+    "diametro": "4\"",
+    "serie": "600",
+    "material": "A216 WCB",
+    "extremos": "RF",
+    "tipo": "4\"#600 vf-1809 /"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1290,
+     "proveedor": "Taval · VAL-04992 (esférica FLG RF 600 LB P.TOTAL A105/A216 WCB op. a volante y caja red. 4\")",
+     "codigo": "VAL-04992",
+     "origen": "fuentes_originales/ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
+     "validez_hasta": "2026-12-31",
+     "nota": "Confirmado por Matías Russo el 30-10-2026",
+     "coincide": "igual"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M15",
+   "pos": "15",
+   "grupo": "material",
+   "descripcion": "4\"600# VR-1813 · Ø 4\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 4\" · 600# · ASTM A105 · RF · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: Válvula de retención a clapeta bridada RF (Taval RAG6R)",
+   "atributos": {
+    "familia": "OTR",
+    "diametro": "4\"",
+    "serie": "600",
+    "material": "A105",
+    "extremos": "RF",
+    "tipo": "4\"600# vr-1813 ,"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 684,
+     "proveedor": "Taval · VAL-04995 (retención a clapeta FLG RF 600 LB A105 RAG6R 4\")",
+     "codigo": "VAL-04995",
+     "origen": "fuentes_originales/ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
+     "validez_hasta": "2026-12-31",
+     "nota": "Confirmado por Matías Russo el 30-10-2026",
+     "coincide": "igual"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M16",
+   "pos": "16",
+   "grupo": "material",
+   "descripcion": "3/4\" - 2000WOG · Ø 3/4\"",
+   "cantidad": 5.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" · 2000 WOG · ASTM A105 · NPT · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: Válvula esférica paso total roscada NPT (Taval)",
+   "atributos": {
+    "familia": "OTR",
+    "diametro": "0.75\"",
+    "serie": "2000",
+    "material": "A105",
+    "extremos": "NPT",
+    "tipo": "3/4\" - 2000wog"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 38.8,
+     "proveedor": "Taval Lista 30 × 0,52 · VAL-04874 (esférica PT API 608 3/4\" #2000 NPT A105)",
+     "codigo": "VAL-04874",
+     "origen": "fuentes_originales/taval_lista30_2025-09.xlsx",
+     "fecha": "2025-09-01",
+     "coincide": "igual"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M17",
+   "pos": "17",
+   "grupo": "material",
+   "descripcion": "Junta espiralada 4\" #600 AISI 316L + grafito c/anillo · Ø 4\"",
+   "cantidad": 14.0,
+   "unidad": "un",
+   "especificacion": "Plano: 4\" · 600# · AISI 316L / grafito · RF · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: Una por junta bridada de válvula (las 2 bridas a planta no llevan junta: van con la línea del cliente)",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "4\"",
+    "serie": "600",
+    "material": "AISI 316",
+    "extremos": "RF",
+    "tipo": "junta espiralada"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 3.38,
+     "proveedor": "Miyashiro (MS Juntas) cot. 50627 · junta espiralada SW AC 316L + grafito Ø4\" #600",
+     "origen": "fuentes_originales/listas_vendedor/2026-11-05/miyashiro_cotizacion_50627_2026-11-05.pdf",
+     "fecha": "2026-11-05",
+     "validez_hasta": "2026-11-20",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M18",
+   "pos": "18",
+   "grupo": "material",
+   "descripcion": "Junta espiralada 1 1/2\" #600 AISI 316L + grafito c/anillo · Ø 1 1/2\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1 1/2\" · 600# · AISI 316L / grafito · RF · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: Brida de la termovaina",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "1.5\"",
+    "serie": "600",
+    "material": "AISI 316",
+    "extremos": "RF",
+    "tipo": "junta espiralada"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización (junta espiralada 1 1/2\" #600; Miyashiro cotizó 2\" a 1,29)",
+     "origen": "—",
+     "fecha": "2026-11-16",
+     "coincide": "sin_ref"
+    }
+   ],
+   "sin_precio_motivo": "Sin cotización de junta 1 1/2\" #600: se pidió a Compras (Miyashiro cotizó solo 2\")."
+  },
+  {
+   "id": "M19",
+   "pos": "19",
+   "grupo": "material",
+   "descripcion": "JD (junta dieléctrica) 3\" #600 RF, kit completo · Ø 3\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3\" · 600# ·  · RF · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: P&ID: JD a cada lado del FE-1800A",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "3\"",
+    "serie": "600",
+    "extremos": "RF",
+    "tipo": "junta dielectrica"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 167.31,
+     "proveedor": "MS o Fseal · JUN-02757",
+     "codigo": "JUN-02757",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt",
+     "fecha": "2026-02-19",
+     "coincide": "similar",
+     "diferencia": "extremos: sin dato (pedido RF)"
+    }
+   ]
+  },
+  {
+   "id": "M20",
+   "pos": "20",
+   "grupo": "material",
+   "descripcion": "Espárrago 7/8\" x 5 3/4\" c/2 tuercas · Ø 7/8\"",
+   "cantidad": 112.0,
+   "unidad": "un",
+   "especificacion": "Plano: 7/8\" ·  · ASTM A193 B7 / A194 2H ·  · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: 8 por junta 4\" #600 × 14 (conocimiento/tecnico/esparragos_por_brida.csv)",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "0.875\"",
+    "material": "A193 B7",
+    "tipo": "esparrago",
+    "medida": "7/8 x 5 3/4"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 3.56,
+     "proveedor": "Industrias Delgado cot. 0202600001542 · espárrago 7/8\" x 6\" B7 c/2 tuercas 2H",
+     "origen": "fuentes_originales/listas_vendedor/2026-11-06/delgado_cotizacion_0202600001542_2026-11-03.md",
+     "fecha": "2026-11-03",
+     "validez_hasta": "2026-12-03",
+     "coincide": "similar",
+     "diferencia": "largo 6\" (pedido 5 3/4\"): sirve, más largo"
+    }
+   ]
+  },
+  {
+   "id": "M21",
+   "pos": "21",
+   "grupo": "material",
+   "descripcion": "Espárrago 3/4\" x 5\" c/2 tuercas · Ø 3/4\"",
+   "cantidad": 16.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" ·  · ASTM A193 B7 / A194 2H ·  · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: 8 por junta 3\" #600 × 2 (con kit dieléctrico verificar largo)",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "0.75\"",
+    "material": "A193 B7",
+    "tipo": "esparrago",
+    "medida": "3/4 x 5"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 3.96,
+     "proveedor": "Oil Metal cot. 37278 · espárrago 7/8\" x 150 mm c/2 tuercas B7 (referencia de precio)",
+     "origen": "fuentes_originales/listas_vendedor/2026-11-05/oilmetal_cotizacion_37278_2026-10-30.pdf",
+     "fecha": "2026-10-30",
+     "validez_hasta": "2026-11-09",
+     "coincide": "similar",
+     "diferencia": "7/8\" x 150 (pedido 3/4\" x 5\"): no hay 3/4\" ≥ 5\" cotizado; se toma el precio del 7/8\" (más caro) hasta cotizar"
+    }
+   ]
+  },
+  {
+   "id": "M22",
+   "pos": "22",
+   "grupo": "material",
+   "descripcion": "Espárrago 3/4\" x 4 1/4\" c/2 tuercas · Ø 3/4\"",
+   "cantidad": 4.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" ·  · ASTM A193 B7 / A194 2H ·  · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: Brida termovaina 1 1/2\" #600",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "0.75\"",
+    "material": "A193 B7",
+    "tipo": "esparrago",
+    "medida": "3/4 x 4 1/4"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1.91,
+     "proveedor": "Oil Metal cot. 37278 · espárrago 3/4\" x 120 mm c/2 tuercas B7",
+     "origen": "fuentes_originales/listas_vendedor/2026-11-05/oilmetal_cotizacion_37278_2026-10-30.pdf",
+     "fecha": "2026-10-30",
+     "validez_hasta": "2026-11-09",
+     "coincide": "similar",
+     "diferencia": "largo 120 mm (pedido 4 1/4\" = 108 mm): sirve, más largo"
+    }
+   ]
+  },
+  {
+   "id": "M23",
+   "pos": "23",
+   "grupo": "material",
+   "descripcion": "FIT-1800A / FE-1800A · Ø 3\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3\" · 600# RF · AISI 316 · RF · Emerson, Endress+Hauser, ABB o similar calidad · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: Medidor Coriolis según HD-J0208-01 (YPF-GASLIFTBAT21-VCD24299-I-HD-003001 D1): 3\" #600 RF, 0-600.000 Sm3/d, 4-20 mA+HART, Modbus RS-485, EEx-d",
+   "atributos": {
+    "familia": "OTR",
+    "diametro": "3\"",
+    "serie": "600",
+    "material": "AISI 316",
+    "extremos": "RF",
+    "tipo": "fit-1800a / fe-1800a",
+    "marca": "A elección del listado: Emerson / Endress+Hauser / ABB"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 35558.31,
+     "proveedor": "ABB Argentina cot. OPP-26-8794766 / QT-26-02478305 ítem 2 · Coriolis FCB450 DN100, bridas ASME B16.5 #600, TAG FIT-1800A",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/Cot ABB OPP-26-8794766-1.pdf.txt",
+     "fecha": "2026-07-16",
+     "validez_hasta": "2026-08-15",
+     "coincide": "similar",
+     "diferencia": "DN100 con conexión 4\" #600 (pedido 3\" #600 RF, 0-600.000 Sm3/d): pedir cotización con el tamaño del HD-J0208-01; HD pide además entrada 4-20 mA"
+    },
+    {
+     "tipo": "cot",
+     "precio": 35242,
+     "proveedor": "CV Control PE51915-R0 · Yokogawa RCUG1FS 4\" #600 (EUR 35.242, sin HART ni entrada 4-20 mA)",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/Cotización - S51913 CV Control Yokogawa coriolis.pdf.txt",
+     "fecha": "2026-07-16",
+     "coincide": "similar",
+     "diferencia": "EUR, 4\" #600"
+    }
+   ]
+  },
+  {
+   "id": "M24",
+   "pos": "24",
+   "grupo": "material",
+   "descripcion": "PIT-1800A · Ø 1/2\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1/2\" ·  · AISI 316 · NPT · Rosemount, Yokogawa o similar igual calidad · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: Transmisor de presión HD-J0304-01: 0-160 kg/cm2g, HART, EEx-d, con manifold 2 vías #3000 1/2\" AISI 316 tipo ABAC. P&ID nota 4: tomas arriba, aislación y tracing eléctrico",
+   "atributos": {
+    "familia": "OTR",
+    "diametro": "0.5\"",
+    "material": "AISI 316",
+    "extremos": "NPT",
+    "tipo": "pit-1800a , diam",
+    "marca": "A elección del listado: Rosemount / Yokogawa"
+   },
+   "faltan_datos": [
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1000.5,
+     "proveedor": "ABB Argentina OPP-26-8794766: transmisor PGS300 864,20 + manifold M26 136,30",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/Cot ABB OPP-26-8794766-1.pdf.txt",
+     "fecha": "2026-07-16",
+     "validez_hasta": "2026-08-15",
+     "coincide": "similar",
+     "diferencia": "rango y manifold a confirmar contra HD-J0304-01 (0-160 kg/cm2g, manifold 2 vías ABAC)"
+    }
+   ]
+  },
+  {
+   "id": "M25",
+   "pos": "25",
+   "grupo": "material",
+   "descripcion": "TIT-1800A",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano:  ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: Transmisor de temperatura 4-20 mA HART, EEx-d (sin hoja de datos en el HD: a confirmar)",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "tit-1800a"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 829.04,
+     "proveedor": "Induquip 26-523-RSDGVM-RSMT · Rosemount 644 HART, IECEx Flameproof, LCD",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/Oferta Induquip 26-333-RSDGVM-USM.pdf.txt",
+     "fecha": "2026-07-17",
+     "validez_hasta": "2026-08-16",
+     "coincide": "similar",
+     "diferencia": "sin hoja de datos del cliente para el TIT-1800A"
+    }
+   ]
+  },
+  {
+   "id": "M26",
+   "pos": "26",
+   "grupo": "material",
+   "descripcion": "TE-1800A · Ø 1 1/2\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1 1/2\" · 600# · AISI 316 · RF · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: Sensor RTD Pt100 + termovaina bridada 1 1/2\" #600 (sin hoja de datos: a confirmar)",
+   "atributos": {
+    "familia": "AFO",
+    "diametro": "1.5\"",
+    "serie": "600",
+    "material": "AISI 316",
+    "extremos": "RF",
+    "tipo": "tee"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 955.13,
+     "proveedor": "Induquip (RTD Rosemount 214C 309,94) + Weisz 30.0.10.027.203 (termovaina AISI 316 645,19)",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/Oferta Induquip 26-333-RSDGVM-USM.pdf.txt · Oferta Weisz de ventas_30.0.10.027.203.pdf.txt",
+     "fecha": "2026-07-17",
+     "validez_hasta": "2026-08-16",
+     "coincide": "similar",
+     "diferencia": "termovaina: confirmar conexión bridada 1 1/2\" #600 (Induquip cotizó #300 en C-276 a 1.913,94)"
+    }
+   ]
+  },
+  {
+   "id": "M27",
+   "pos": "27",
+   "grupo": "material",
+   "descripcion": "FQIT-1800A",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano:  ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: P&ID nota 2: \"SE DEBE INCLUIR UN COMPUTADOR DE CAUDAL YA QUE EL SKID DEL PUENTE DE MEDICIÓN NO LO INCLUYE.\"",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "fqit-1800a"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 7345.97,
+     "proveedor": "ABB Argentina OPP-26-8794766 · computador de flujo XFC6200EX",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/Cot ABB OPP-26-8794766-1.pdf.txt",
+     "fecha": "2026-07-16",
+     "validez_hasta": "2026-08-15",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M28",
+   "pos": "28",
+   "grupo": "material",
+   "descripcion": "Válvula de purga 2\" de la batea con niple roscado · Ø 2\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 2000 WOG · ASTM A105 · NPT · El cliente no indica cantidad: calculada por ITT según la ET YPF-EQSKIDSXX-VCD16011-G-ET-001005 D2 · Nota ITT: ET 4.2 y nota 3: \"La válvula deberá ser parte de la provisión\"",
+   "atributos": {
+    "familia": "NIP",
+    "diametro": "2\"",
+    "serie": "2000",
+    "material": "A105",
+    "extremos": "NPT"
+   },
+   "faltan_datos": [
+    "largo_mm"
+   ],
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 113.98,
+     "proveedor": "Taval Lista 30 × 0,52 · VAL-04910 (esférica PT API 608 2\" #2000 NPT A105)",
+     "codigo": "VAL-04910",
+     "origen": "fuentes_originales/taval_lista30_2025-09.xlsx",
+     "fecha": "2025-09-01",
+     "coincide": "similar",
+     "diferencia": "no incluye el niple 2\" ni la cupla de la batea"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M29",
+   "pos": "29",
+   "grupo": "material",
+   "descripcion": "Perfiles bastidor (largueros, travesaños y soportes C09-03)",
+   "cantidad": 700.0,
+   "unidad": "kg",
+   "especificacion": "Plano:  ·  · Acero comercial (IPN/UPN/HEB) ·  · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: Bastidor 6.960 x 1.535 mm (plano). Peso estimado por ITT: 2 largueros UPN 200, 7 travesaños UPN 160, 7 soportes C09-03 y placas de anclaje; lo define la ingeniería de detalle",
+   "atributos": {
+    "familia": "PER",
+    "tipo": "perfiles bastidor (largueros,"
+   },
+   "faltan_datos": [
+    "designacion",
+    "espesor_mm",
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1.9,
+     "proveedor": "Precios de acero (J. Elejondo)",
+     "origen": "fuentes_originales/precios_varios_acero_2026-02.xlsx, hoja H°A°, B2",
+     "fecha": "2026-02-10",
+     "coincide": "similar",
+     "diferencia": "precio por kg de materia prima (hierro ángulo 3x1/4) +10% por recortes; no incluye corte, plegado ni rolado"
+    }
+   ]
+  },
+  {
+   "id": "M30",
+   "pos": "30",
+   "grupo": "material",
+   "descripcion": "Chapa batea de contención",
+   "cantidad": 270.0,
+   "unidad": "kg",
+   "especificacion": "Plano:  · e=3,2 mm · Acero comercial ·  · El cliente no indica cantidad: calculada por ITT según la ET YPF-EQSKIDSXX-VCD16011-G-ET-001005 D2 · Nota ITT: ET 4.2: chapa soldada en todo el contorno con pendiente y antideslizante. 6,96 x 1,535 m x 3,2 mm",
+   "atributos": {
+    "familia": "PER",
+    "tipo": "chapa batea de"
+   },
+   "faltan_datos": [
+    "designacion",
+    "espesor_mm",
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1.27,
+     "proveedor": "Precios de acero (J. Elejondo)",
+     "origen": "fuentes_originales/precios_varios_acero_2026-02.xlsx, hoja chapa negra A36, B2",
+     "fecha": "2026-02-10",
+     "coincide": "similar",
+     "diferencia": "precio por kg de materia prima (chapa negra lisa 1/2\") +10% por recortes; no incluye corte, plegado ni rolado"
+    }
+   ]
+  },
+  {
+   "id": "M31",
+   "pos": "31",
+   "grupo": "material",
+   "descripcion": "Caja de conexionado Ex-d, cableado y canalización de instrumentos",
+   "cantidad": 1.0,
+   "unidad": "gl",
+   "especificacion": "Plano:  ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según la ET YPF-EQSKIDSXX-VCD16011-G-ET-001005 D2 · Nota ITT: ET 7: instrumentos cableados hasta JB (J1300), una caja por tipo de señal",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "caja de conexionado"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización (caja Ex-d, cable y canalización; referencia interna ~USD 2.500)",
+     "origen": "—",
+     "fecha": "2026-11-16",
+     "coincide": "sin_ref"
+    }
+   ],
+   "sin_precio_motivo": "Sin referencia de caja Ex-d y cableado: se pide cotización (P4 ter)."
+  },
+  {
+   "id": "M32",
+   "pos": "32",
+   "grupo": "material",
+   "descripcion": "Aislación y tracing eléctrico de la toma del PIT-1800A",
+   "cantidad": 1.0,
+   "unidad": "gl",
+   "especificacion": "Plano:  ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: P&ID nota 4",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "aislacion y tracing"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización (tracing y aislación de la toma del PIT; referencia interna ~USD 1.200)",
+     "origen": "—",
+     "fecha": "2026-11-16",
+     "coincide": "sin_ref"
+    }
+   ],
+   "sin_precio_motivo": "Sin referencia de tracing: se pide cotización (P4 ter)."
+  },
+  {
+   "id": "M33",
+   "pos": "33",
+   "grupo": "material",
+   "descripcion": "Placa de identificación AISI 316 160x160 mm y orejas de puesta a tierra",
+   "cantidad": 1.0,
+   "unidad": "gl",
+   "especificacion": "Plano:  ·  · AISI 304/316 ·  · El cliente no indica cantidad: calculada por ITT según la ET YPF-EQSKIDSXX-VCD16011-G-ET-001005 D2 · Nota ITT: ET 6 y 8",
+   "atributos": {
+    "familia": "OTR",
+    "material": "AISI 316",
+    "tipo": "placa de identificacion"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO: pedir cotización (placa AISI 316 y orejas de puesta a tierra; referencia interna ~USD 150)",
+     "origen": "—",
+     "fecha": "2026-11-16",
+     "coincide": "sin_ref"
+    }
+   ],
+   "sin_precio_motivo": "Sin referencia de placa y orejas: se pide cotización (P4 ter)."
+  },
+  {
+   "id": "S02",
+   "pos": "PIN",
+   "grupo": "servicio",
+   "descripcion": "Granallado y pintura (m² calculados)",
+   "especificacion": "33,26 m² exteriores: caños y niples 2,5 + bridas, accesorios y válvulas (largo equivalente) 1,7 + estructura 29,1",
+   "cantidad": 33.258,
+   "unidad": "m2",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 37.98,
+     "proveedor": "Pintor (sin nombre) · PIN-00579",
+     "codigo": "PIN-00579",
+     "origen": "conocimiento/precios/precios_usuario.csv",
+     "fecha": "2026-10-30",
+     "coincide": "similar",
+     "diferencia": "m² calculados (caños, accesorios por regla, envolvente y estructura); esquema de pintura a confirmar con el pliego"
+    }
+   ]
+  },
+  {
+   "id": "S04",
+   "pos": "RX",
+   "grupo": "servicio",
+   "descripcion": "Radiografía 30% de las juntas a tope y tintas penetrantes en SW y olets",
+   "especificacion": "22 placas chicas, 0 grandes, 1,00 servicio(s) de RX y 1,00 de LP por equipo (servicios repartidos en 1 equipos)",
+   "cantidad": 1,
+   "unidad": "gl",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 845.0,
+     "proveedor": "Servicio de radiografia DB NDT (2026-08; PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT))",
+     "origen": "PAMPA ENERGIA/5 y /7, hoja ENOD (Lista DB NDT)",
+     "fecha": "2026-08-31",
+     "coincide": "igual"
+    },
+    {
+     "tipo": "cot",
+     "precio": 1310.0,
+     "proveedor": "NDT Antonelli (tarifas 11-2025), mismas placas y servicios",
+     "origen": "fuentes_originales/antonelli_end_2025-11.pdf",
+     "fecha": "2025-11-03",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "S12H",
+   "pos": "HH",
+   "grupo": "mo",
+   "descripcion": "Horas de ingeniería (estimadas del antecedente)",
+   "especificacion": "30 h por skid de medición · mediana de 30,0, 27,0, 560,0 h por unidad (repartidas en la serie) · Llevado a 80 h por ITT: la ET 3.1 pide ingeniería de detalle (diseño hidráulico, mecánico y estructural, izaje con eslingas y con percha) y toda la documentación del listado LLI UP",
+   "cantidad": 80,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 15.0,
+     "proveedor": "Horas propias ITT (tarifa del antecedente)",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · ENDRESS HAUSER/26- Construcción Mecánica Skid Gas Buy Back  E+H AR Ø3/4.Armado de la Oferta Comercial · LM costo skid de medicion Endress Ø3 Rev 1.xlsx.txt · hoja Soldadura + HH",
+     "fecha": "2025-12-03",
+     "coincide": "similar",
+     "diferencia": "ESTIMADO del antecedente ENDRESS HAUSER/26- Construcción Mecánica Skid Gas Buy Back  E+H AR Ø3/4.Armado de la Oferta Comercial · Skid de medicion gas Ø3in S900 (tramo de medicion) Rev 1 (3, 1 u, 2025-12-03)"
+    }
+   ]
+  },
+  {
+   "id": "S13C",
+   "pos": "CAL",
+   "grupo": "mo",
+   "descripcion": "Horas de calidad y dossier (estimadas del antecedente)",
+   "especificacion": "70 h por skid de medición · mediana de 45,0, 70,0, 240,0 h por unidad (repartidas en la serie)",
+   "cantidad": 70.0,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 15.0,
+     "proveedor": "Horas propias ITT (tarifa del antecedente)",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · ENDRESS HAUSER/26- Construcción Mecánica Skid Gas Buy Back  E+H AR Ø3/4.Armado de la Oferta Comercial · LM costo skid de medicion Endress Ø3 Rev 1.xlsx.txt · hoja Soldadura + HH",
+     "fecha": "2025-12-03",
+     "coincide": "similar",
+     "diferencia": "ESTIMADO del antecedente ENDRESS HAUSER/26- Construcción Mecánica Skid Gas Buy Back  E+H AR Ø3/4.Armado de la Oferta Comercial · Skid de medicion gas Ø3in S900 (tramo de medicion) Rev 1 (3, 1 u, 2025-12-03)"
+    }
+   ]
+  },
+  {
+   "id": "S13A",
+   "pos": "ARM",
+   "grupo": "mo",
+   "descripcion": "Horas de montaje en planta (armado, movimientos, prueba hidráulica) (estimadas del antecedente)",
+   "especificacion": "197,4 h por skid de medición · mediana de 121,5 h × 1,62, 135 h × 0,69, 225 h × 1,5 (horas por unidad × tamaño)",
+   "cantidad": 197.4,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 13.0,
+     "proveedor": "Horas propias ITT (tarifa del antecedente)",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · ENDRESS HAUSER/26- Construcción Mecánica Skid Gas Buy Back  E+H AR Ø3/4.Armado de la Oferta Comercial · LM costo skid de medicion Endress Ø3 Rev 1.xlsx.txt · hoja Soldadura + HH",
+     "fecha": "2025-12-03",
+     "coincide": "similar",
+     "diferencia": "ESTIMADO del antecedente ENDRESS HAUSER/26- Construcción Mecánica Skid Gas Buy Back  E+H AR Ø3/4.Armado de la Oferta Comercial · Skid de medicion gas Ø3in S900 (tramo de medicion) Rev 1 (3, 1 u, 2025-12-03)"
+    }
+   ]
+  },
+  {
+   "id": "S20",
+   "pos": "MO",
+   "grupo": "mo",
+   "descripcion": "Mano de obra de terceros (Ledesma): prefabricado de spools, soldadura y skid",
+   "especificacion": "Mismo alcance que el presupuesto Ledesma 200295 (SKID SCC 113A y 113B, YPF LACH regulación y medición): MO, skid, prefabricado, soldadura, calificación de soldadores, herramientas, gases, alambres, EPP. No incluye montaje, PH, END ni pintura",
+   "cantidad": 1,
+   "unidad": "gl",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 6627,
+     "proveedor": "E. Ledesma presupuesto 200295 (19-07-2026): USD 17.200 + IVA por SCC-113A (medición) y SCC-113B (regulación), prorrateado por largo 7,36 / (7,36 + 11,75) = 38,5 %",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/E Ledesma Presupuesto ITT N° 200295 YPF LACH Regulación y Medición 19-07-2026.docx.txt",
+     "fecha": "2026-07-19",
+     "validez_hasta": "2026-08-03",
+     "coincide": "similar",
+     "diferencia": "prorrateo de un global de 2 skids: pedir cotización para el SCC-112A"
+    },
+    {
+     "tipo": "ant",
+     "precio": 4287.47,
+     "proveedor": "Cálculo del sistema: 136,72 pulg × USD 16 + 700 kg × USD 3/kg",
+     "origen": "precotizar.py",
+     "fecha": "2026-11-16",
+     "coincide": "similar",
+     "diferencia": "cálculo por pulgada y kg"
+    }
+   ]
+  },
+  {
+   "id": "S21",
+   "pos": "TRA",
+   "grupo": "servicio",
+   "descripcion": "Transporte a Neuquén (ET 3.1: transporte a punto de entrega)",
+   "especificacion": "Destino exacto a confirmar (IISS Batería 2.1)",
+   "cantidad": 1,
+   "unidad": "gl",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 1500,
+     "proveedor": "Catálogo de servicios TRA-00578 · Transporte de colector a Neuquén",
+     "origen": "conocimiento/precios/catalogo_servicios.csv",
+     "fecha": "2026-10-30",
+     "coincide": "similar",
+     "diferencia": "colector; skid de 7,4 m x 1,6 m en semirremolque"
+    }
+   ]
+  },
+  {
+   "id": "S22",
+   "pos": "REP",
+   "grupo": "servicio",
+   "descripcion": "Repuestos para puesta en marcha: 10 % de bulonería y juntas",
+   "especificacion": "ET 3.1. 10 % redondeado hacia arriba: 2 juntas espiraladas 4\" #600 (3,38), 1 JD 3\" #600 (167,31), 12 espárragos 7/8\" (3,56), 2 espárragos 3/4\" x 5\" (3,96)",
+   "cantidad": 1,
+   "unidad": "gl",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 224.71,
+     "proveedor": "Cálculo con los precios de este cómputo (pos 17, 19, 20 y 21): 2 × 3,38 + 1 × 167,31 + 12 × 3,56 + 2 × 3,96",
+     "origen": "cotizacion.json (M17, M19, M20, M21)",
+     "fecha": "2026-11-05",
+     "coincide": "similar",
+     "diferencia": "lista de repuestos de puesta en marcha a confirmar con YPF"
+    }
+   ]
+  },
+  {
+   "id": "S23",
+   "pos": "OTR",
+   "grupo": "servicio",
+   "descripcion": "Seguro de caución",
+   "especificacion": "Criterio de la planilla modelo: 0,2 % del monto + USD 50",
+   "cantidad": 1,
+   "unidad": "gl",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 354.91,
+     "proveedor": "Catálogo de servicios OTR-00459 · Seguro de caución colector (criterio 1 % sobre base)",
+     "origen": "conocimiento/precios/catalogo_servicios.csv",
+     "fecha": "2026-08-14",
+     "coincide": "similar",
+     "diferencia": "monto de otra licitación: recalcular con el monto de esta"
+    }
+   ]
+  },
+  {
+   "id": "S24",
+   "pos": "FAT",
+   "grupo": "servicio",
+   "descripcion": "Pruebas FAT con el cliente",
+   "especificacion": "ET 3.1",
+   "cantidad": 16,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 15,
+     "proveedor": "Horas propias ITT: tarifa de calidad USD 15/h (misma de S13C)",
+     "origen": "precotizar.py · horas_por_equipo.csv",
+     "fecha": "2026-11-16",
+     "coincide": "similar",
+     "diferencia": "2 días de FAT estimados por ITT"
+    }
+   ]
+  }
+ ],
+ "compras": {
+  "fecha_respuesta": "2026-11-23",
+  "material_en_planta_dias": 60,
+  "lugar_entrega": "Planta ITT S.A., Av. 12 de Octubre 4004, Quilmes Oeste, Bs. As.",
+  "requisitos_generales": [
+   "Cotizar en USD sin IVA, con plazo de entrega y validez de la oferta.",
+   "Certificados de material (colada / 3.1).",
+   "Indicar cualquier diferencia con lo pedido (serie, material, extremos, modelo)."
+  ],
+  "notas": {},
+  "proveedores": {},
+  "material_sin_et": {
+   "1": "La ET YPF-EQSKIDSXX-VCD16011-G-ET-001005 remite a la clase de cañerías del proyecto (L0200); la hoja de la clase CA31 no está en el pedido ni en el repositorio (solo el resumen de la L0200 en COT26-0010-001)",
+   "2": "La ET YPF-EQSKIDSXX-VCD16011-G-ET-001005 remite a la clase de cañerías del proyecto (L0200); la hoja de la clase CA31 no está en el pedido ni en el repositorio (solo el resumen de la L0200 en COT26-0010-001)",
+   "3": "La ET YPF-EQSKIDSXX-VCD16011-G-ET-001005 remite a la clase de cañerías del proyecto (L0200); la hoja de la clase CA31 no está en el pedido ni en el repositorio (solo el resumen de la L0200 en COT26-0010-001)",
+   "4": "La ET YPF-EQSKIDSXX-VCD16011-G-ET-001005 remite a la clase de cañerías del proyecto (L0200); la hoja de la clase CA31 no está en el pedido ni en el repositorio (solo el resumen de la L0200 en COT26-0010-001)",
+   "5": "La ET YPF-EQSKIDSXX-VCD16011-G-ET-001005 remite a la clase de cañerías del proyecto (L0200); la hoja de la clase CA31 no está en el pedido ni en el repositorio (solo el resumen de la L0200 en COT26-0010-001)",
+   "6": "La ET YPF-EQSKIDSXX-VCD16011-G-ET-001005 remite a la clase de cañerías del proyecto (L0200); la hoja de la clase CA31 no está en el pedido ni en el repositorio (solo el resumen de la L0200 en COT26-0010-001)",
+   "7": "La ET YPF-EQSKIDSXX-VCD16011-G-ET-001005 remite a la clase de cañerías del proyecto (L0200); la hoja de la clase CA31 no está en el pedido ni en el repositorio (solo el resumen de la L0200 en COT26-0010-001)",
+   "8": "La ET YPF-EQSKIDSXX-VCD16011-G-ET-001005 remite a la clase de cañerías del proyecto (L0200); la hoja de la clase CA31 no está en el pedido ni en el repositorio (solo el resumen de la L0200 en COT26-0010-001)",
+   "9": "La ET YPF-EQSKIDSXX-VCD16011-G-ET-001005 remite a la clase de cañerías del proyecto (L0200); la hoja de la clase CA31 no está en el pedido ni en el repositorio (solo el resumen de la L0200 en COT26-0010-001)",
+   "10": "La ET YPF-EQSKIDSXX-VCD16011-G-ET-001005 remite a la clase de cañerías del proyecto (L0200); la hoja de la clase CA31 no está en el pedido ni en el repositorio (solo el resumen de la L0200 en COT26-0010-001)",
+   "11": "La ET YPF-EQSKIDSXX-VCD16011-G-ET-001005 remite a la clase de cañerías del proyecto (L0200); la hoja de la clase CA31 no está en el pedido ni en el repositorio (solo el resumen de la L0200 en COT26-0010-001)",
+   "12": "La ET YPF-EQSKIDSXX-VCD16011-G-ET-001005 remite a la clase de cañerías del proyecto (L0200); la hoja de la clase CA31 no está en el pedido ni en el repositorio (solo el resumen de la L0200 en COT26-0010-001)",
+   "13": "La ET YPF-EQSKIDSXX-VCD16011-G-ET-001005 remite a la clase de cañerías del proyecto (L0200); la hoja de la clase CA31 no está en el pedido ni en el repositorio (solo el resumen de la L0200 en COT26-0010-001)"
+  },
+  "servicios": []
+ },
+ "origen_lista": {
+  "tipo": "diseno_itt",
+  "motivo": "El plano y el P&ID no traen tabla de materiales: el cómputo lo arma ITT desde el dibujo (planta y vistas del SCC-112A), el P&ID, las hojas de datos de instrumentos y la ET de paquetizados."
+ },
+ "justificaciones": {
+  "vencidas": "Las cotizaciones de instrumentos y la MO Ledesma son de 07-2026 (antecedente gemelo TAVAL/69): se usan como referencia del preliminar y se piden de nuevo con la lista para Compras.",
+  "estimado": "Caja Ex-d, tracing, placa, repuestos, caución y FAT estimados; sin cotización todavía.",
+  "antecedentes": "No hay planilla de costo de un puente de medición con Coriolis #600; el antecedente gemelo (TAVAL/69) tiene solo cotizaciones de proveedores."
+ }
+}

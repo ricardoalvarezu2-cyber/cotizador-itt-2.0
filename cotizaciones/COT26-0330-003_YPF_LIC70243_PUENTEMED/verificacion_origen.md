@@ -1,0 +1,16 @@
+# Precio en el documento de origen — COT26-0330-003
+
+Generado por `herramientas/verificar_origen.py`. Solo avisa cuando el precio NO aparece en el documento de origen; que aparezca no prueba que sea de ese renglón (el control P4 sigue siendo de una persona o de la IA).
+
+## Avisos
+
+- ⚠ 24 PIT-1800A · Ø 1/2": USD 1000.5 no figura tal cual en fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/Cot ABB OPP-26-8794766-1.pdf.txt (si es un valor calculado o escalado, que lo diga la fuente). Mirarlo en el original.
+- ⚠ 26 TE-1800A · Ø 1 1/2": USD 955.13 no figura tal cual en fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/Oferta Induquip 26-333-RSDGVM-USM.pdf.txt (si es un valor calculado o escalado, que lo diga la fuente). Mirarlo en el original.
+- ⚠ RX Radiografía 30% de las juntas a tope y tintas penetrantes en: USD 845.0 no figura tal cual en fuentes_originales/ofertas_texto/PAMPA ENERGIA/5 - Doc5757155642 - Construc 10 Puentes y 2 Colectores - RDA/8.Orden de Compra/nv 502 (adicional oc puente de produccion - pampa).pdf.txt, fuentes_originales/ofertas_texto/PAMPA ENERGIA/5 - Doc5757155642 - Construc 10 Puentes y 2 Colectores - RDA/8.Orden de Compra/presupuesto itt 163.pdf.txt (si es un valor calculado o escalado, que lo diga la fuente). Mirarlo en el original.
+- ⚠ MO Mano de obra de terceros (Ledesma): prefabricado de spools, : USD 6627 no figura tal cual en fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/E Ledesma Presupuesto ITT N° 200295 YPF LACH Regulación y Medición 19-07-2026.docx.txt (si es un valor calculado o escalado, que lo diga la fuente). Mirarlo en el original.
+
+## No controlados
+
+- el documento no está como texto en el repositorio: 10
+- precio calculado (lista × factor): 3
+- estimado o sin precio: 7

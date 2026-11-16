@@ -63,6 +63,8 @@
 
 **Similares solo de la misma serie y la misma norma (Matías, 29-10-2026):** `buscar_material.py` (y con él `precotizar.py`) ya no ofrece como similar una pieza de otra serie (#3000 por #2000, #600 por #900) ni de otra norma; si el renglón no dice la serie, tampoco (salvo bulonería, donde manda la medida). Sin similar válido queda SIN PRECIO y se pide cotización. Controles movidos a propósito: F01 2.907 → 2.892, TS01 85.243 → 84.055, SK01 71.487 → 71.864.
 
+**COT26-0330-003 YPF Lic 70243 puente de medición (16-11-2026, borrador):** skid SCC-112A computado por ITT desde el plano (sin tabla del cliente), antecedente gemelo TAVAL/69 Lic 64673. Repositorio 103.852,73 USD; además se entregó en la "Planilla modelo de cotizacion.xlsx" de Ventas (`llenar_planilla_modelo.py` en la carpeta, con los factores del modelo: 108.773,31). Pendiente: revisión independiente, reconfirmar instrumentos y decidir factores y plazo.
+
 **Caso de prueba:** COT26-1003-001 CAPEX OQ8209 (borrador, no enviada; su estado está en su `bitacora.md` y en `cotizaciones/README.md`).
 
 **Índices congelados (28-10-2026):** al pasar una cotización a revisado, la página guarda en `cot.indices_congelados` los índices de ese día; desde ahí el precio no cambia cuando la base suma un mes. Al volver a borrador se descongelan. `armar_cotizacion.py`, el motor JS, la planilla y el informe usan los congelados si están. La CAPEX (caso de control) tiene los del 28-10-2026, así el control de la página no se mueve (en el repositorio, desde la regla P4 ter, el control es 7.324,57). La oferta económica muestra una fila de flete cuando se incluye.
