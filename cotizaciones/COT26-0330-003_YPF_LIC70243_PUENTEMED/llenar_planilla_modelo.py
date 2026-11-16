@@ -4,8 +4,8 @@ Uso: python cotizaciones/COT26-0330-003_YPF_LIC70243_PUENTEMED/llenar_planilla_m
 
 Lee computo.csv (lo genera armar_cotizacion.py desde cotizacion.json) y escribe
 COT26-0330-003_YPF_Lic70243_PuenteMed_planilla_modelo.xlsx con las hojas del modelo:
-Pie de Venta, DISEÑO, RESUMEN, EQUIPO 1 y VALVULAS. Se conservan los factores y las convenciones del modelo
-(piping × 1,2, pintura × 1,2, factores de rentabilidad por renglón): el precio puede diferir del de la planilla del
+Pie de Venta, DISEÑO, RESUMEN, EQUIPO 1 y VALVULAS. Mark up de cotizacion.json (parametros.FM, 1,5 desde el 16-11-2026) en todos los renglones; se conservan
+las convenciones del modelo (piping × 1,2, pintura × 1,2): el precio puede diferir del de la planilla del
 repositorio (factores 1,35 / 1,35 y contingencia 5 %). No editar la salida a mano: se edita cotizacion.json y se vuelve a correr.
 """
 import csv
@@ -127,8 +127,11 @@ def main():
     ws["D21"] = float(cp["S23"]["precio_unit_usd"])
     ws["B20"] = "Repuestos puesta en marcha (ET 3.1)"
     ws["B21"] = "Seguro de caución (catálogo OTR-00459, a recalcular con el monto)"
+    import json
+    mk = json.load(open(C / "cotizacion.json", encoding="utf-8"))["parametros"]["FM"]
     for r in range(15, 22):
         ws.cell(row=r, column=3, value=1)
+        ws.cell(row=r, column=5, value=mk)  # mark up único (Ricardo Álvarez, 16-11-2026)
 
     # RESUMEN: sin vínculos a otro libro
     rs = wb["RESUMEN"]

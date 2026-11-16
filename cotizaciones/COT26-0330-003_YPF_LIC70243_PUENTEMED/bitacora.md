@@ -37,3 +37,9 @@ fijo en 2.500 de la hoja RESUMEN.
 **Pendiente:** revisión independiente del cómputo contra el plano; cotizar Coriolis 3" #600 y demás instrumentos (las de 07-2026
 vencieron), MO Ledesma para el SCC-112A, junta 1 1/2" #600, JB/cableado, tracing y placa; consultas al cliente en `cotizacion.json`
 (`pendientes`) y `pedido/requisitos.csv`.
+
+## 16-11-2026 — Mark up 1,5
+Ricardo Álvarez pidió mark up 1,5. Se aplicó a todo: `FM`, `FMO` y `FTV` = 1,5 en `cotizacion.json`, y en la planilla modelo los
+7 renglones del cuadro de rentabilidad (antes 1,5 / 1,1 Taval / 1,1 transporte / 1 caución) toman el mismo valor de `parametros.FM`.
+Repositorio: costo 79.308,27 · precio 118.962,40. Planilla modelo: costo 75.362,37 · venta 113.043,55. La diferencia es de método:
+el repositorio suma contingencia 5 % y ajuste por inflación; el modelo suma 20 % a piping y pintura.
