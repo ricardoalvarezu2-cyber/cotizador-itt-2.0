@@ -4,8 +4,8 @@ Generado por `herramientas/controles_tablas.py`. Información para revisar; no c
 
 ## 1. Kilos y m² por equipo
 
-**Peso estimado de lo que tiene tabla: 1.123,3 kg** · m² exteriores de caños y niples: 2,50 m².
-Ítems sin dato de peso (12): 1b Completar barra de 12 m de la pos 1 (compra mínima (sin tabla (instrumento, junta u otro)); 13 Buje reducción 3/4"x1/2" #3000 NPT · Ø 3/4"x1/2" (sin tabla para buje 0,75" 3000); 23 FIT-1800A / FE-1800A · Ø 3" (sin tabla (instrumento, junta u otro)); 24 PIT-1800A · Ø 1/2" (sin tabla (instrumento, junta u otro)); 25 TIT-1800A (sin tabla (instrumento, junta u otro)); 27 FQIT-1800A (sin tabla (instrumento, junta u otro)); 28 Válvula de purga 2" de la batea con niple roscado  (niple sin largo); 29 Perfiles bastidor (largueros, travesaños y soporte (sin tabla (instrumento, junta u otro)); 30 Chapa batea de contención (sin tabla (instrumento, junta u otro)); 31 Caja de conexionado Ex-d, cableado y canalización  (sin tabla (instrumento, junta u otro)); 32 Aislación y tracing eléctrico de la toma del PIT-1 (sin tabla (instrumento, junta u otro)); 33 Placa de identificación AISI 316 160x160 mm y orej (sin tabla (instrumento, junta u otro)).
+**Peso estimado de lo que tiene tabla: 1.124,6 kg** · m² exteriores de caños y niples: 2,50 m².
+Ítems sin dato de peso (13): 1b Completar barra de 12 m de la pos 1 (compra mínima (sin tabla (instrumento, junta u otro)); 13 Buje reducción 3/4"x1/2" #3000 NPT · Ø 3/4"x1/2" (sin tabla para buje 0,75" 3000); 23 FIT-1800A / FE-1800A · Ø 3" (sin tabla (instrumento, junta u otro)); 24 PIT-1800A · Ø 1/2" (sin tabla (instrumento, junta u otro)); 25 TIT-1800A (sin tabla (instrumento, junta u otro)); 27 FQIT-1800A (sin tabla (instrumento, junta u otro)); 28 Válvula de purga 2" de la batea con niple roscado  (niple sin largo); 29 Perfiles bastidor (largueros, travesaños y soporte (sin tabla (instrumento, junta u otro)); 30 Chapa batea de contención (sin tabla (instrumento, junta u otro)); 31 Caja de conexionado Ex-d, cableado y canalización  (sin tabla (instrumento, junta u otro)); 32 Aislación y tracing eléctrico de la toma del PIT-1 (sin tabla (instrumento, junta u otro)); 33 Placa de identificación AISI 316 160x160 mm y orej (sin tabla (instrumento, junta u otro)); 34 M2 · Ø 1/2" (válvula de otro tipo: sin tabla).
 
 | Pos | Ítem | Cantidad | kg/u | kg total | Fuente |
 |---|---|---|---|---|---|
@@ -30,7 +30,8 @@ Generado por `herramientas/controles_tablas.py`. Información para revisar; no c
 | 20 | Espárrago 7/8" x 5 3/4" c/2 tuercas · Ø 7/8" | 112 un | 0,71 | 79,99 | espárrago 0,88" × 5,75" + 2 tuercas (calculado) |
 | 21 | Espárrago 3/4" x 5" c/2 tuercas · Ø 3/4" | 16 un | 0,46 | 7,35 | espárrago 0,75" × 5,00" + 2 tuercas (calculado) |
 | 22 | Espárrago 3/4" x 4 1/4" c/2 tuercas · Ø 3/4" | 4 un | 0,42 | 1,67 | espárrago 0,75" × 4,25" + 2 tuercas (calculado) |
-| 26 | TE-1800A · Ø 1 1/2" | 1 un | 1,32 | 1,32 | APROXIMADO: tee_recta 1,5" NPT con el peso de la clase 2000 (no hay tabla para 600) |
+| 26 | TE-1800A | 1 un | 1,32 | 1,32 | APROXIMADO: tee_recta 1,5" NPT con el peso de la clase 2000 (no hay tabla para 600) |
+| 35 | TE-1800A 1½"-600# · Ø 1 1/2" | 1 un | 1,32 | 1,32 | APROXIMADO: tee_recta 1,5" NPT con el peso de la clase 2000 (no hay tabla para 600) |
 
 ## 2. Plazos de material (proveedores 2025–2026)
 
@@ -39,7 +40,8 @@ Plazo ofrecido: **150 días**.
 | Rubro | Posiciones | Datos | Típico sin stock (días) | Máximo (días) |
 |---|---|---|---|---|
 | accesorio BW | 6, 7, 8 | 17 | 24 | 40 |
-| accesorio forjado | 9, 10, 12, 13, 26 | 14 | 35 | 60 |
+| accesorio forjado | 9, 10, 12, 13, 26, 35 | 14 | 35 | 60 |
+| aguja/bloqueo y purga | 34 | 3 | 15 | 30 |
 | brida | 3, 4, 5 | 26 | 75 | 210 |
 | bulonería | 20, 21, 22 | 4 | 10 | 10 |
 | caño | 1, 2, 11, 28 | 15 | 38 | 40 |
@@ -71,6 +73,7 @@ Plazo ofrecido: **150 días**.
 | 16 | 3/4" - 2000WOG · Ø 3/4" | YPF · válvula esférica | EMERSON ARGENTINA S.A | ESCO ARGENTINA S.A. | ESFEROMATIC S.A. | HONEYWELL S.A.I.C. | HTM SA | INDAVE S.A. | METSO AUTOM | preferida (listado de subproveedores sugeridos, Anexo 3; no dice si es cerrada) |
 | 24 | PIT-1800A · Ø 1/2" | YPF · transmisor | ABB S.A. | EMERSON ARGENTINA S.A | INVENSYS PROCESS SYSTEMS ARGENTINA SA | ESCO ARGENTINA S.A. | HONEYWELL S.A.I.C. | YO | preferida (listado de subproveedores sugeridos, Anexo 3; no dice si es cerrada) |
 | 25 | TIT-1800A | YPF · transmisor | ABB S.A. | EMERSON ARGENTINA S.A | INVENSYS PROCESS SYSTEMS ARGENTINA SA | ESCO ARGENTINA S.A. | HONEYWELL S.A.I.C. | YO | preferida (listado de subproveedores sugeridos, Anexo 3; no dice si es cerrada) |
-| 26 | TE-1800A · Ø 1 1/2" | YPF · accesorio | ALGOMEC S.R.L. | DURALITTE S.A | FASTPACK S.A. | FORJA ATLAS S.A. | SIDEMET CAÑOS SRL | SUMPETROL S.A. | INDUSTRIA METAL | preferida (listado de subproveedores sugeridos, Anexo 3; no dice si es cerrada) |
+| 26 | TE-1800A | YPF · accesorio | ALGOMEC S.R.L. | DURALITTE S.A | FASTPACK S.A. | FORJA ATLAS S.A. | SIDEMET CAÑOS SRL | SUMPETROL S.A. | INDUSTRIA METAL | preferida (listado de subproveedores sugeridos, Anexo 3; no dice si es cerrada) |
 | 27 | FQIT-1800A | YPF · caudalímetro | BRUNO SCHILLIG SA | MEDITECNA S.R.L. | ODIN S.A. | INSTRUTEC S.A. | WEISZ INSTRUMENTOS S.A. | EMERSON ARGENTINA S.A | IN | preferida (listado de subproveedores sugeridos, Anexo 3; no dice si es cerrada) |
 | 28 | Válvula de purga 2" de la batea con niple roscado  | YPF · caño | SIDERCA | PROVEMET | KLOCKMETAL S A | SIDEMET | TRAFICAÑO | preferida (listado de subproveedores sugeridos, Anexo 3; no dice si es cerrada) |
+| 35 | TE-1800A 1½"-600# · Ø 1 1/2" | YPF · accesorio | ALGOMEC S.R.L. | DURALITTE S.A | FASTPACK S.A. | FORJA ATLAS S.A. | SIDEMET CAÑOS SRL | SUMPETROL S.A. | INDUSTRIA METAL | preferida (listado de subproveedores sugeridos, Anexo 3; no dice si es cerrada) |

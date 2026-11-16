@@ -424,3 +424,13 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 - Qué pasó: la "Planilla modelo de cotizacion.xlsx" que se usó como formato tenía en RESUMEN el transporte fijo (C19 = 2.500) y fórmulas que apuntaban a otro libro ('[4]Man. Conc. Ent. 4x8- S. 2x12'!…): al llenarla, el RESUMEN daba 1.100 más que la hoja EQUIPO 1.
 - Corrección: `llenar_planilla_modelo.py` enlaza todo el RESUMEN a EQUIPO 1 y saca los vínculos externos; se controló con LibreOffice que EQUIPO 1, RESUMEN y Pie de Venta den el mismo total.
 - Lección: al reutilizar una planilla de otro trabajo, recalcularla y comparar el total de cada hoja antes de entregarla.
+
+## 16-11-2026 — COT26-0330-003: el buscador lee el tag "TE-1800A" como una tee
+- Qué pasó: al separar el sensor TE-1800A en su propio renglón (descripción literal del P&ID), `buscar_material.py` lo tomó como accesorio "tee" y propuso la AFO-00873 (tee 1/2" #2000 NPT) como similar, aun con la familia INS cargada en la lista.
+- Corrección: la cotización usa la cotización de Induquip del sensor (no la del buscador); se aceptó el resultado en el control y se dejó anotado.
+- Pendiente: que el buscador respete la columna `familia` de la lista y no lea tags de instrumentos (TE, TT, PT…) como accesorios.
+
+## 16-11-2026 — Rubro de `precios_usuario.csv` con nombre que no es una hoja del catálogo
+- Qué pasó: cargué el precio de pintura con rubro "Pintura"; `catalogo_servicios.py` se cortó con `KeyError: 'Pintura'` porque el rubro tiene que ser el nombre exacto de una hoja ("Pintura y revestimientos").
+- Corrección: rubro corregido; test de regresión OK.
+- Lección: antes de cargar en `precios_usuario.csv`, copiar el rubro de `HOJAS` en `catalogo_servicios.py`.

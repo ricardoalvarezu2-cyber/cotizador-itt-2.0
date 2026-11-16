@@ -43,3 +43,15 @@ Ricardo Álvarez pidió mark up 1,5. Se aplicó a todo: `FM`, `FMO` y `FTV` = 1,
 7 renglones del cuadro de rentabilidad (antes 1,5 / 1,1 Taval / 1,1 transporte / 1 caución) toman el mismo valor de `parametros.FM`.
 Repositorio: costo 79.308,27 · precio 118.962,40. Planilla modelo: costo 75.362,37 · venta 113.043,55. La diferencia es de método:
 el repositorio suma contingencia 5 % y ajuste por inflación; el modelo suma 20 % a piping y pintura.
+
+## 16-11-2026 — Valores de Ricardo, instrumentos por tag y planilla del cliente
+- **Planilla Ariba del cliente** (`pedido/Lic - 70243 - PUENTE MED.SAL.BAT.CORR.MED 500KM3D CAU - UTE LACH.xls`): ítem 1, material
+  000000001000653168 "PUENTE MED.SAL.BAT.CORR.MED 500KM3D CAU*", 1 unidad, entrega RUTA 17 aprox. 2 km de Añelo (planta 1036 UP-UTE
+  La Amarga Chica) el 01-07-2027. Cita la hoja de datos YPF-GASLIFTBAT30-VCD24299-I-HD-003002-D1 (Batería 3.0), que no llegó: se usa la
+  HD-003001 (Batería 2.1). Dice "SERVICIO: CORROSIVO MEDIO" y el P&ID marca la línea CA31 (corrosión baja en la L0200): consulta.
+- **Ledesma USD 24 por pulgada equivalente** (136,72 pulg-eq, alcance SOL-00143: piping, skid y soportería) y **pintura USD 50/m²**,
+  indicados por Ricardo Álvarez: cargados en `conocimiento/precios/precios_usuario.csv` como confirmados por él.
+- **Instrumentos según el P&ID PI-003010 D0** (skid 112A): FE/FIT-1800A (Coriolis integral), PIT-1800A, manifold M2 (pos 34),
+  TE-1800A sensor y termovaina 1½"-600# (pos 35) por separado, TIT-1800A, FQIT-1800A (nota 2), 2 JD (pos 19). FI/PI/TI/FQI-1800A son
+  indicaciones en SCADA/SCP: fuera del suministro (aclarado en la oferta).
+- Resultado: repositorio costo 76.048,57 · precio 114.072,85; planilla modelo costo 72.496,29 · venta 108.744,44.

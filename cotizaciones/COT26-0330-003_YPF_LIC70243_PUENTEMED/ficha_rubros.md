@@ -9,9 +9,9 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 - Pulgadas equivalentes de soldadura: **136,72**
 - kg de piping (caños, bridas, accesorios y válvulas con tabla): **1.122 kg** · bridas: 19
 - Diámetros soldados a tope: 4", 3", 1,5"
-- Sin peso (no suman kg): 13 Buje reducción 3/4"x1/2" #3000 NPT · Ø 3; 23 FIT-1800A / FE-1800A · Ø 3"; 24 PIT-1800A · Ø 1/2"; 25 TIT-1800A; 27 FQIT-1800A; 28 Válvula de purga 2" de la batea con nipl; 30 Chapa batea de contención; 32 Aislación y tracing eléctrico de la toma; 33 Placa de identificación AISI 316 160x160
-- **Costo por antecedentes.** Por antecedentes: USD 6.940,67 (1 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 50,77/pulgada eq. · USD 6,19/kg de piping · USD 277,63/junta a tope
+- Sin peso (no suman kg): 13 Buje reducción 3/4"x1/2" #3000 NPT · Ø 3; 23 FIT-1800A / FE-1800A · Ø 3"; 24 PIT-1800A · Ø 1/2"; 25 TIT-1800A; 27 FQIT-1800A; 28 Válvula de purga 2" de la batea con nipl; 30 Chapa batea de contención; 32 Aislación y tracing eléctrico de la toma; 33 Placa de identificación AISI 316 160x160; 34 M2 · Ø 1/2"
+- **Costo por antecedentes.** Por antecedentes: USD 3.281,21 (1 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 24,00/pulgada eq. · USD 2,92/kg de piping · USD 131,25/junta a tope
 
 ## 2. MO de fabricación de la estructura
 
@@ -22,8 +22,8 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 
 - m² de piping: **4,16** (caños y niples 2,50; bridas, accesorios y válvulas por largo equivalente) · m² de estructura: **29,10**
 - m² total: **33,26** (sin overspray) · esquema: según pliego
-- **Costo por antecedentes.** Por antecedentes: USD 1.263,14 (1 renglón/es, con ajuste por inflación).
-  - Por unidad: USD 37,98/m²
+- **Costo por antecedentes.** Por antecedentes: USD 1.662,90 (1 renglón/es, con ajuste por inflación).
+  - Por unidad: USD 50,00/m²
 
 ## 4. Radiografía y END
 

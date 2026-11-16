@@ -10,14 +10,14 @@
  "cliente": {
   "nombre": "YPF S.A.",
   "contacto": "[a confirmar]",
-  "referencia": "Licitación 70243",
+  "referencia": "Licitación 70243 (Ariba) · ítem 1",
   "proyecto": "Estándar Gas Lift – Paquetizado regulación y medición IISS Batería 2.1 – Skid de medición SCC-112A (YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1)"
  },
  "objeto": "El presente documento tiene por objeto establecer el alcance de nuestra Oferta {tipo} según los requerimientos solicitados por YPF S.A. en la Licitación 70243, para la provisión del skid de medición SCC-112A, en un todo de acuerdo con YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1, YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0, YPF-GASLIFTBAT21-VCD24299-I-HD-003001 D1 y YPF-EQSKIDSXX-VCD16011-G-ET-001005 D2, y con las aclaraciones y desvíos indicados en nuestra Oferta Técnica.",
  "item": {
   "item": "1.000",
-  "codigo": "[código SAP a confirmar]",
-  "descripcion": "Skid de medición SCC-112A 4\" #600 (clase CA31) con medidor Coriolis 3\" #600, computador de caudal, transmisores de presión y temperatura, bypass, bastidor con batea, RX 30 %, PH y pintura según ET",
+  "codigo": "1000653168",
+  "descripcion": "PUENTE MED.SAL.BAT.CORR.MED 500KM3D CAU*",
   "observacion": "Ver aclaraciones y desvíos",
   "plazo_dias": "150"
  },
@@ -44,7 +44,9 @@
    "Se cotiza solo el skid de medición SCC-112A (hoja 1 del plano). El skid de regulación SCC-112B (hoja 2) no está incluido.",
    "El plano no trae lista de materiales: el cómputo lo armó ITT desde el dibujo; schedules tomados por ITT (Sch 80 en 4\" y 3\", Sch 160 en 3/4\") hasta recibir la hoja de la clase CA31.",
    "Las medidas del tramo del medidor (NOTA 6 del plano) las fija el modelo de Coriolis comprado y se ajustan en la ingeniería de detalle.",
-   "No se incluyen rejillas: el plano no las muestra (la ET las pide en zonas de operación)."
+   "No se incluyen rejillas: el plano no las muestra (la ET las pide en zonas de operación).",
+   "Las indicaciones FI, PI, TI y FQI-1800A en SCADA/SCP (sala de control) no forman parte del suministro.",
+   "Instrumentos según la hoja de datos YPF-GASLIFTBAT21-VCD24299-I-HD-003001 D1; la HD-003002 citada en el pedido no se recibió."
   ]
  },
  "exclusiones": {

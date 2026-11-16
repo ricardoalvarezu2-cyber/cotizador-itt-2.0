@@ -63,7 +63,7 @@
 
 **Similares solo de la misma serie y la misma norma (Matías, 29-10-2026):** `buscar_material.py` (y con él `precotizar.py`) ya no ofrece como similar una pieza de otra serie (#3000 por #2000, #600 por #900) ni de otra norma; si el renglón no dice la serie, tampoco (salvo bulonería, donde manda la medida). Sin similar válido queda SIN PRECIO y se pide cotización. Controles movidos a propósito: F01 2.907 → 2.892, TS01 85.243 → 84.055, SK01 71.487 → 71.864.
 
-**COT26-0330-003 YPF Lic 70243 puente de medición (16-11-2026, borrador):** skid SCC-112A computado por ITT desde el plano (sin tabla del cliente), antecedente gemelo TAVAL/69 Lic 64673. Mark up 1,5 en todo (pedido de Ricardo Álvarez, 16-11-2026): repositorio 118.962,40 USD; planilla modelo de Ventas (`llenar_planilla_modelo.py`, piping y pintura × 1,2, sin contingencia ni ajuste por inflación) 113.043,55. Pendiente: revisión independiente, reconfirmar instrumentos y decidir plazo.
+**COT26-0330-003 YPF Lic 70243 puente de medición (16-11-2026, borrador):** skid SCC-112A computado por ITT desde el plano (sin tabla del cliente), antecedente gemelo TAVAL/69 Lic 64673. Mark up 1,5 en todo (pedido de Ricardo Álvarez, 16-11-2026): con Ledesma a USD 24/pulg-eq y pintura a USD 50/m² (confirmados por Ricardo, en `precios_usuario.csv`): repositorio 114.072,85 USD; planilla modelo de Ventas (`llenar_planilla_modelo.py`, piping y pintura × 1,2, sin contingencia ni ajuste por inflación) 108.744,44. Falta la HD-003002 (Batería 3.0) que cita la planilla Ariba. Pendiente: revisión independiente, reconfirmar instrumentos y decidir plazo.
 
 **Caso de prueba:** COT26-1003-001 CAPEX OQ8209 (borrador, no enviada; su estado está en su `bitacora.md` y en `cotizaciones/README.md`).
 

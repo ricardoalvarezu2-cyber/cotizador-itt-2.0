@@ -38,12 +38,19 @@ SECCIONES = [
     ("pint", "Granallado y pintura", ["S02"], "=SUM({r})*1.2"),
     ("end", "Ensayos NO Destructivos", ["S04"], "=SUBTOTAL(9,{r})"),
     ("tra", "Transporte", ["S21"], "=SUBTOTAL(9,{r})"),
-    ("ins", "Instrumental", ["M23", "M24", "M25", "M26", "M27", "M31", "M32", "M33"], "=SUM({r})"),
+    ("ins", "Instrumental", ["M23", "M24", "M34", "M26", "M35", "M25", "M27", "M31", "M32", "M33"], "=SUM({r})"),
     ("rep", "REPUESTOS PEM - 10% DE BULONERIA Y JUNTAS", ["S22"], "=SUM({r})"),
 ]
 DESC = {"M14": 'VALVULA ESFERICA FLG RF 600 LB P.TOTAL OP. A VOLANTE Y CJA RED. 4" (VF-1809/1810/1811/1812/1814/1815)',
         "M15": 'VALVULA DE RETENCION A CLAPETA FLG RF 600 LB ASTM A105 4" (VR-1813)',
-        "M16": 'VALVULA ESFERICA NPT WOG 2000 P. TOTAL 3/4"', "M28": 'VALVULA ESFERICA NPT WOG 2000 P. TOTAL 2" (purga batea, ET 4.2)'}
+        "M16": 'VALVULA ESFERICA NPT WOG 2000 P. TOTAL 3/4"',
+        "M23": 'FIT-1800A / FE-1800A - Caudalímetro másico Coriolis 3" #600 RF, 0-600.000 Sm3/d, HART + Modbus, EEx-d',
+        "M24": 'PIT-1800A - Transmisor de presión 0-160 kg/cm2g, 4-20 mA HART, EEx-d',
+        "M34": 'M2 - Manifold 2 vías #3000 1/2" NPT AISI 316 (PIT-1800A)',
+        "M26": 'TE-1800A - Sensor RTD Pt100 con cabezal Ex-d',
+        "M35": 'TE-1800A - Termovaina bridada 1 1/2" #600 RF AISI 316',
+        "M25": 'TIT-1800A - Transmisor de temperatura 4-20 mA HART, EEx-d',
+        "M27": 'FQIT-1800A - Computador de caudal (P&ID nota 2)', "M28": 'VALVULA ESFERICA NPT WOG 2000 P. TOTAL 2" (purga batea, ET 4.2)'}
 
 
 def estilo(dst, src):
@@ -156,9 +163,9 @@ def main():
         for c in row:
             if type(c).__name__ != "MergedCell":
                 c.value = None
-    pv["A3"] = "SCC-112A"; pv["B3"] = 10; pv["C3"] = "a confirmar"
-    pv["D3"] = "SKID DE MEDICION SCC-112A 4\" #600 C/CORIOLIS 3\" VCD24299"; pv["E3"] = 1
-    pv["F3"] = "=RESUMEN!F23"; pv["G3"] = "=F3*E3"; pv["H3"] = "a confirmar"; pv["I3"] = 150
+    pv["A3"] = "SCC-112A"; pv["B3"] = 10; pv["C3"] = "1000653168"
+    pv["D3"] = "PUENTE MED.SAL.BAT.CORR.MED 500KM3D CAU*"; pv["E3"] = 1
+    pv["F3"] = "=RESUMEN!F23"; pv["G3"] = "=F3*E3"; pv["H3"] = "01-07-2027"; pv["I3"] = 150
     pv["A4"] = "TOTAL (SIN IVA)"; pv["G4"] = "=SUM(G3:G3)"
 
     # DISEÑO

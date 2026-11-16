@@ -16,7 +16,7 @@
  "meta": [
   "YPF Lic 70243 · Puente de medición Gas Lift",
   "Plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 · P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0",
-  "Comprador: a confirmar",
+  "Material SAP 1000653168 · UP-UTE La Amarga Chica",
   "Preparó: Ricardo Álvarez · 16-11-2026"
  ],
  "equipo": {
@@ -89,30 +89,35 @@
   "criterio_html": "EXW Quilmes Oeste + flete como ítem aparte"
  },
  "historial_html": [
-  "16-11-2026: mark up 1,5 en todos los rubros (materiales, MO y servicios, válvulas Taval), pedido de Ricardo Álvarez."
+  "16-11-2026: mark up 1,5 en todos los rubros (materiales, MO y servicios, válvulas Taval), pedido de Ricardo Álvarez.",
+  "16-11-2026: Ledesma a USD 24/pulgada equivalente y pintura a USD 50/m² (Ricardo Álvarez); instrumentos separados por tag según el P&ID (manifold M2 y termovaina aparte); datos de la planilla Ariba del cliente."
  ],
  "pedido": {
   "eyebrow": "YPF Lic 70243 · Puente de medición (documentación del 16-11-2026)",
   "datos_html": [
    [
     "Cliente",
-    "YPF S.A. (código ITT 0330)"
+    "YPF S.A. (código ITT 0330) · Ariba, Licitación 70243"
    ],
    [
     "Ítem",
-    "Skid de medición SCC-112A (paquetizado regulación y medición, IISS Batería 2.1, Estándar Gas Lift) · <b>1 un (a confirmar)</b>"
+    "1 · PUENTE MED.SAL.BAT.CORR.MED 500KM3D CAU* · material 000000001000653168 · <b>1 unidad de almacenaje</b>"
    ],
    [
-    "Documentos",
-    "YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 (plano conjunto, hoja 1) · YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 (P&ID) · YPF-GASLIFTBAT21-VCD24299-I-HD-003001 D1 (hojas de datos de instrumentos) · YPF-EQSKIDSXX-VCD16011-G-ET-001005 D2 (ET equipos paquetizados)"
+    "Descripción del material",
+    "PUENTE DE MEDICION SALIDA DE BATERIA.SERVICIO: CORROSIVO MEDIO.CAUDAL DE OPERACION: 500KM3D.VARIABLE A MEDIR: CAUDAL.ESPECIFICACION TECNICA: VCD16011-G-ET-001005-D2.HOJA DE DATOS: YPF-GASLIFTBAT30-VCD24299-I-HD-003002-D1.ESPECIFICACION TECNICA (COMPLETA):YPF-EQSKIDSXX-VCD16011-G-ET-001005-D2.VER ADJUNTO.."
+   ],
+   [
+    "Documentos recibidos",
+    "YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 · YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · YPF-GASLIFTBAT21-VCD24299-I-HD-003001 D1 (la planilla cita la HD-003002 de Batería 3.0, no recibida) · YPF-EQSKIDSXX-VCD16011-G-ET-001005 D2"
    ],
    [
     "Entrega pedida",
-    "Transporte a punto de entrega (ET 3.1); se cotiza EXW + flete a Neuquén"
+    "RUTA 17 APROX A 2 KM DE AÑELO S/N A, Neuquén (8305) · planta 1036 UP-UTE La Amarga Chica"
    ],
    [
     "Fechas",
-    "A confirmar"
+    "Fecha de entrega solicitada 01-07-2027"
    ]
   ],
   "requisitos_html": [
@@ -156,11 +161,12 @@
   {
    "titulo": "Cliente",
    "items": [
-    "Cantidad de skids y fecha de necesidad",
+    "Hoja de datos YPF-GASLIFTBAT30-VCD24299-I-HD-003002-D1 (la que cita la planilla; se usó la HD-003001 de Batería 2.1)",
+    "ANEXO G - Pliego técnico y CONDICIONES PARA OFERTAR (zip de Ariba)",
+    "Servicio \"CORROSIVO MEDIO\" (planilla) contra clase CA31 del P&ID (L0200: corrosión baja): confirmar clase y sobreespesor",
     "Hoja de la clase CA31 (schedules)",
     "Hoja de datos de TIT-1800A / TE-1800A",
-    "¿Se cotiza solo el SCC-112A o también el SCC-112B (hoja 2 del plano)?",
-    "Destino de entrega",
+    "Incoterm: DDP destino final o CNQ entrega Neuquén (opciones de la planilla)",
     "Rejillas: la ET las pide en zonas de operación; el plano no las muestra"
    ]
   }
@@ -921,13 +927,13 @@
    "fuentes": [
     {
      "tipo": "cot",
-     "precio": 1000.5,
-     "proveedor": "ABB Argentina OPP-26-8794766: transmisor PGS300 864,20 + manifold M26 136,30",
+     "precio": 864.2,
+     "proveedor": "ABB Argentina OPP-26-8794766 · transmisor de presión PGS300",
      "origen": "fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/Cot ABB OPP-26-8794766-1.pdf.txt",
      "fecha": "2026-07-16",
      "validez_hasta": "2026-08-15",
      "coincide": "similar",
-     "diferencia": "rango y manifold a confirmar contra HD-J0304-01 (0-160 kg/cm2g, manifold 2 vías ABAC)"
+     "diferencia": "rango a confirmar contra HD-J0304-01 (0-160 kg/cm2g)"
     }
    ]
   },
@@ -964,7 +970,7 @@
    "id": "M26",
    "pos": "26",
    "grupo": "material",
-   "descripcion": "TE-1800A · Ø 1 1/2\"",
+   "descripcion": "TE-1800A",
    "cantidad": 1.0,
    "unidad": "un",
    "especificacion": "Plano: 1 1/2\" · 600# · AISI 316 · RF · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: Sensor RTD Pt100 + termovaina bridada 1 1/2\" #600 (sin hoja de datos: a confirmar)",
@@ -980,13 +986,13 @@
    "fuentes": [
     {
      "tipo": "cot",
-     "precio": 955.13,
-     "proveedor": "Induquip (RTD Rosemount 214C 309,94) + Weisz 30.0.10.027.203 (termovaina AISI 316 645,19)",
-     "origen": "fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/Oferta Induquip 26-333-RSDGVM-USM.pdf.txt · Oferta Weisz de ventas_30.0.10.027.203.pdf.txt",
+     "precio": 309.94,
+     "proveedor": "Induquip 26-523-RSDGVM-RSMT · sensor RTD Rosemount 214C Pt100, IECEx Flameproof",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/Oferta Induquip 26-333-RSDGVM-USM.pdf.txt",
      "fecha": "2026-07-17",
      "validez_hasta": "2026-08-16",
      "coincide": "similar",
-     "diferencia": "termovaina: confirmar conexión bridada 1 1/2\" #600 (Induquip cotizó #300 en C-276 a 1.913,94)"
+     "diferencia": "sin hoja de datos del cliente"
     }
    ]
   },
@@ -1194,6 +1200,48 @@
    "sin_precio_motivo": "Sin referencia de placa y orejas: se pide cotización (P4 ter)."
   },
   {
+   "grupo": "material",
+   "cantidad": 1,
+   "unidad": "un",
+   "id": "M34",
+   "pos": "34",
+   "descripcion": "M2 · Ø 1/2\"",
+   "especificacion": "Manifold de bloqueo y purga 2 vías #3000 1/2\" R-NPT M-H AISI 316 tipo ABAC del PIT-1800A (HD-J0304-01 nota 2)",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 136.3,
+     "proveedor": "ABB Argentina OPP-26-8794766 · manifold M26",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/Cot ABB OPP-26-8794766-1.pdf.txt",
+     "fecha": "2026-07-16",
+     "validez_hasta": "2026-08-15",
+     "coincide": "similar",
+     "diferencia": "confirmar que sea 2 vías tipo ABAC AISI 316"
+    }
+   ]
+  },
+  {
+   "grupo": "material",
+   "cantidad": 1,
+   "unidad": "un",
+   "id": "M35",
+   "pos": "35",
+   "descripcion": "TE-1800A 1½\"-600# · Ø 1 1/2\"",
+   "especificacion": "Termovaina bridada 1 1/2\" #600 RF AISI 316 para el TE-1800A (P&ID: \"1½\"-600#\")",
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 645.19,
+     "proveedor": "Weisz 30.0.10.027.203 · termovaina modelo CB tipo H2 AISI 316",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/Oferta Weisz de ventas_30.0.10.027.203.pdf.txt",
+     "fecha": "2026-07-16",
+     "validez_hasta": "2026-08-16",
+     "coincide": "similar",
+     "diferencia": "confirmar conexión bridada 1 1/2\" #600 RF"
+    }
+   ]
+  },
+  {
    "id": "S02",
    "pos": "PIN",
    "grupo": "servicio",
@@ -1202,6 +1250,15 @@
    "cantidad": 33.258,
    "unidad": "m2",
    "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 50,
+     "proveedor": "Granallado y pintura USD 50/m², confirmado por Ricardo Álvarez el 16-11-2026 (precios_usuario.csv)",
+     "origen": "conocimiento/precios/precios_usuario.csv",
+     "fecha": "2026-11-16",
+     "validez_hasta": "2026-12-16",
+     "coincide": "igual"
+    },
     {
      "tipo": "ant",
      "precio": 37.98,
@@ -1305,29 +1362,27 @@
    "id": "S20",
    "pos": "MO",
    "grupo": "mo",
-   "descripcion": "Mano de obra de terceros (Ledesma): prefabricado de spools, soldadura y skid",
-   "especificacion": "Mismo alcance que el presupuesto Ledesma 200295 (SKID SCC 113A y 113B, YPF LACH regulación y medición): MO, skid, prefabricado, soldadura, calificación de soldadores, herramientas, gases, alambres, EPP. No incluye montaje, PH, END ni pintura",
-   "cantidad": 1,
-   "unidad": "gl",
+   "descripcion": "Mano de obra de terceros (Ledesma): piping, skid y soportería, por pulgada equivalente",
+   "especificacion": "25 juntas a tope de taller + weldolet y threadolets = 136,72 pulgadas equivalentes (ficha_rubros.md). Alcance como SOL-00143 (Ledesma: skids con piping y soportería, por pulgada): incluye estructura del skid. No incluye montaje, PH, END ni pintura",
+   "cantidad": 136.717,
+   "unidad": "pulg",
    "fuentes": [
     {
      "tipo": "cot",
-     "precio": 6627,
-     "proveedor": "E. Ledesma presupuesto 200295 (19-07-2026): USD 17.200 + IVA por SCC-113A (medición) y SCC-113B (regulación), prorrateado por largo 7,36 / (7,36 + 11,75) = 38,5 %",
-     "origen": "fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/E Ledesma Presupuesto ITT N° 200295 YPF LACH Regulación y Medición 19-07-2026.docx.txt",
-     "fecha": "2026-07-19",
-     "validez_hasta": "2026-08-03",
-     "coincide": "similar",
-     "diferencia": "prorrateo de un global de 2 skids: pedir cotización para el SCC-112A"
+     "precio": 24,
+     "proveedor": "Ledesma USD 24 por pulgada equivalente, confirmado por Ricardo Álvarez el 16-11-2026 (precios_usuario.csv)",
+     "origen": "conocimiento/precios/precios_usuario.csv",
+     "fecha": "2026-11-16",
+     "validez_hasta": "2026-12-16",
+     "coincide": "igual"
     },
     {
      "tipo": "ant",
-     "precio": 4287.47,
-     "proveedor": "Cálculo del sistema: 136,72 pulg × USD 16 + 700 kg × USD 3/kg",
-     "origen": "precotizar.py",
-     "fecha": "2026-11-16",
-     "coincide": "similar",
-     "diferencia": "cálculo por pulgada y kg"
+     "precio": 21.76,
+     "proveedor": "Catálogo SOL-00143 · Edgardo Ledesma, skids con piping y soportería por pulgada",
+     "origen": "conocimiento/precios/catalogo_servicios.csv",
+     "fecha": "2026-04-07",
+     "coincide": "igual"
     }
    ]
   },
