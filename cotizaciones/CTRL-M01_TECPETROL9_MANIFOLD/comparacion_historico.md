@@ -10,7 +10,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 2 | Brida WN 8" S600 Sch.80 A-105 | 2 × 305,43 = 610,86 | 2 un × 178,08 = 356,16 | -42% | cot · planilla de costo ITT (proveedor sin nom · 2026-10-30 | más barato · real: en REV D/E bajó a 176,80 |
 | 3 | Caño SC 4" Sch.80 A-106 | 4 × 57,80 = 231,20 | 4 m × 39,07 + compra extra 3b = 167,45 | -28% | cot · Grupo Provemet · CAN-01497 · 2026-10-29 | más barato · real: LM: tramos 8 × 0,25 + 3,4 + 4 × 0,1; se costean 4 m |
 | 4 | Caño SC 8" Sch.80 A-106 | 2 × 165,98 = 331,96 | 2 m × 113,16 + compra extra 4b = 242,50 | -27% | cot · planilla de costo ITT (proveedor sin nom · 2026-10-30 | más barato · real: LM: tramo de 2,2 m; se costean 2 m |
-| 5 | Drip ring 4" S600 A-516 | 4 × 350,00 = 1.400,00 | 4 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-11 | SIN PRECIO en el catálogo |
+| 5 | Drip ring 4" S600 A-516 | 4 × 350,00 = 1.400,00 | 4 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-16 | SIN PRECIO en el catálogo |
 | 6 | Espárragos 7/8" x 100 mm | 160 × 10,00 = 1.600,00 | 160 un × 8,00 = 1.280,00 | -20% | ant · REPUESTOS · JUN-04190 · 2026-06-26 | más barato (similar) |
 | 7 | Espárragos 7/8" x 140 mm | 32 × 10,00 = 320,00 | 32 un × 8,00 = 256,00 | -20% | ant · REPUESTOS · JUN-04190 · 2026-06-26 | más barato (similar) |
 | 8 | Junta espiralada 4" S600 AISI | 28 × 11,00 = 308,00 | 28 un × 5,56 = 155,68 | -49% | ant · MS o Fseal · JUN-05048 · 2026-02-19 | más barato (similar) · real: en REV A: 6,35 |

@@ -1,6 +1,6 @@
 # Respaldo de las cotizaciones de la página
 
-Último respaldo: 2026-11-09 (lo hace la tarea semanal; ver web/LEEME.md).
+Último respaldo: 2026-11-16 (lo hace la tarea semanal; ver web/LEEME.md).
 
 | id | código | título | estado | guardado |
 |---|---|---|---|---|

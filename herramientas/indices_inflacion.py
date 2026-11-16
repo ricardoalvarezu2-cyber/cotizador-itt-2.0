@@ -31,7 +31,7 @@ IPC = [
     ((2025, 10), 131.3, "INDEC: 31,3% interanual a oct-2025 (12/11/2025)"),
     ((2025, 12), 171.2 / 1.236, "Derivado: acumulado ene-sep 2026 23,6% (INDEC 13/10/2026)"),
     ((2026, 9), 131.3 / 1.023 * 1.334, "INDEC: 33,4% interanual a sep-2026; oct-25 2,3% mensual"),
-    ((2026, 10), 131.3 / 1.023 * 1.334 * 1.019, "ESTIMADO: oct-2026 igual a sep-2026 (1,9%), sin dato publicado"),
+    ((2026, 10), 131.3 / 1.023 * 1.334 * 1.022, "INDEC: oct-2026 2,2% mensual (12/11/2026)"),
 ]
 # Dólar: PROMEDIO MENSUAL del oficial BNA billete, precio de venta (decisión de Matías, 27/10/2026), de
 # conocimiento/costos/dolar_mensual.csv (datos diarios; se actualiza con herramientas/dolar_mensual.py).
@@ -54,7 +54,7 @@ CPI = [
     ((2024, 10), 100.0, "Base"),
     ((2025, 9), 100 * 1.03 ** (11 / 12), "BLS: ~3,0% interanual a sep-2025"),
     ((2026, 9), 100 * 1.03 ** (11 / 12) * 1.037, "BLS: 3,7% interanual a sep-2026 (14/10/2026)"),
-    ((2026, 10), 100 * 1.03 ** (11 / 12) * 1.037 * 1.037 ** (1 / 12), "ESTIMADO: oct-2026 al ritmo de 3,7% anual"),
+    ((2026, 10), 100 * 1.03 ** (11 / 12) * 1.037 * 1.002, "BLS: oct-2026 0,2% mensual sin desestacionalizar (10/11/2026; sin interanual por falta de oct-2025)"),
 ]
 
 
