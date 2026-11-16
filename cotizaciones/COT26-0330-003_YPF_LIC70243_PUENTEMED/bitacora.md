@@ -67,3 +67,17 @@ el P&ID (se sacaron "Aislación no requerido", "Calefaccionado eléctrico", "Tra
 según OC", que aquí no corresponden). Errores del modelo corregidos: documentos de la propuesta decían PRES 25292, el objeto de la
 económica "PRES255945", y la técnica tenía una captura de una carpeta de archivos en la página 4. La económica lleva una línea roja
 "BORRADOR, SIN REVISAR" sobre la tabla de precio: borrarla recién con la cotización aprobada.
+
+## 16-11-2026 — Cotización ABB vigente y P&ID PI-003011
+- **ABB QT-26-02478305 (OPP-26-9062690), 16-11-2026, válida al 16-12-2026** (en `proveedores/`, con los dos dimensionamientos del
+  FIT-1800A): mismos precios que en 07-2026. Se usan: Coriolis FCB450 DN100 conexión 4" #600 35.558,31 (ítem 2; alternativa DN150
+  59.539,72), PGS300 864,20, manifold M26 136,30, computador XFC6200EX 7.345,97, TTF300 747,42 y TSP331 (sensor Pt100 con termovaina
+  bridada 1 1/2" #600 RF 316L) 1.236,82, que reemplaza a Induquip + Weisz (la pos 35 queda en 0, incluida en la 26).
+  Desvíos declarados: termovaina y manifold en AISI 316L (la HD pide AISI 316). ABB aclara que los precios unitarios valen solo
+  para la provisión total de su oferta (que incluye instrumentos del skid de regulación).
+- **El Coriolis cotizado tiene conexión 4"** y la HD-003001 pide 3" #600 RF: confirmar con ABB o adaptar el tramo.
+- **P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003011 D0** (Batería EC-ST / Batería 3.0, en `pedido/`): skid de medición **SCC-113A en 6" #600**
+  (válvulas 6", reducciones 6"x4", mismo esquema e instrumentos que el 112A). La planilla Ariba cita la hoja de datos de la Batería 3.0
+  (HD-003002) y el pedido de ABB dice "PAQUETIZADO IISS BATERÍA EC-ST": puede que el puente a cotizar sea el SCC-113A y no el 112A
+  (plano PL-003001, Batería 2.1, 4"). Consulta abierta: no se cambió el cómputo sin confirmación.
+- Resultado: repositorio costo 75.870,89 · precio 113.806,33; planilla modelo y ofertas PRES 25856: 109.044,54.

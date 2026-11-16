@@ -50,9 +50,9 @@
     "crit"
    ],
    [
-    "Coriolis 3\" #600 (ABB 122 días / Yokogawa 130-140)",
+    "Coriolis ABB FCB450 (122 días)",
     0,
-    135,
+    122,
     "crit"
    ],
    [
@@ -90,7 +90,8 @@
  },
  "historial_html": [
   "16-11-2026: mark up 1,5 en todos los rubros (materiales, MO y servicios, válvulas Taval), pedido de Ricardo Álvarez.",
-  "16-11-2026: Ledesma a USD 24/pulgada equivalente y pintura a USD 50/m² (Ricardo Álvarez); instrumentos separados por tag según el P&ID (manifold M2 y termovaina aparte); datos de la planilla Ariba del cliente."
+  "16-11-2026: Ledesma a USD 24/pulgada equivalente y pintura a USD 50/m² (Ricardo Álvarez); instrumentos separados por tag según el P&ID (manifold M2 y termovaina aparte); datos de la planilla Ariba del cliente.",
+  "16-11-2026: instrumentos con la cotización ABB QT-26-02478305 del 16-11-2026 (válida al 16-12-2026); TE-1800A con termovaina en un solo renglón (TSP331)."
  ],
  "pedido": {
   "eyebrow": "YPF Lic 70243 · Puente de medición (documentación del 16-11-2026)",
@@ -131,7 +132,18 @@
   ]
  },
  "nota_mo_html": "MO de terceros con el alcance del presupuesto Ledesma 200295 (prefabricado, soldadura, skid; sin montaje, PH, END ni pintura). Soldaduras de taller: 25 juntas a tope (16 bridas WN 4\", 2 WN 3\", 1 WN 1 1/2\", 2 tees, 2 codos, 2 reducciones) más 1 weldolet y 5 threadolets. Sin soldaduras de campo: las conexiones a planta son bridadas (ET 5).",
- "desvios": [],
+ "desvios": [
+  {
+   "tag": "Pos 26",
+   "titulo": "Termovaina AISI 316L",
+   "texto": "Pos 26 (TE-1800A): se ofrece termovaina AISI 316L (ABB TSP331) en lugar de AISI 316."
+  },
+  {
+   "tag": "Pos 34",
+   "titulo": "Manifold AISI 316L",
+   "texto": "Pos 34 (M2 del PIT-1800A): se ofrece manifold AISI 316L (ABB M26) en lugar de AISI 316 (HD-J0304-01 nota 2)."
+  }
+ ],
  "antecedentes": [
   {
    "carpeta_html": "<b>TAVAL/69</b> · Lic 64673 Colectores, skids y puente de medición (UTE LACH)",
@@ -887,12 +899,22 @@
     {
      "tipo": "cot",
      "precio": 35558.31,
-     "proveedor": "ABB Argentina cot. OPP-26-8794766 / QT-26-02478305 ítem 2 · Coriolis FCB450 DN100, bridas ASME B16.5 #600, TAG FIT-1800A",
-     "origen": "fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/Cot ABB OPP-26-8794766-1.pdf.txt",
-     "fecha": "2026-07-16",
-     "validez_hasta": "2026-08-15",
+     "proveedor": "ABB Argentina QT-26-02478305 (OPP-26-9062690) · ítem 2: Coriolis FCB450 DN100, conexión 4\" ASME B16.5 #600, TAG FIT-1800A, 122 días",
+     "origen": "cotizaciones/COT26-0330-003_YPF_LIC70243_PUENTEMED/proveedores/ABB OPP-26-9062690 QT-26-02478305 2026-11-16.pdf",
+     "fecha": "2026-11-16",
+     "validez_hasta": "2026-12-16",
      "coincide": "similar",
-     "diferencia": "DN100 con conexión 4\" #600 (pedido 3\" #600 RF, 0-600.000 Sm3/d): pedir cotización con el tamaño del HD-J0208-01; HD pide además entrada 4-20 mA"
+     "diferencia": "conexión 4\" #600 (la HD-003001 pide 3\" #600 RF): confirmar con ABB la conexión de 3\" o adaptar el tramo; ABB lo dimensionó para 1.100.000 Sm3/d"
+    },
+    {
+     "tipo": "cot",
+     "precio": 59539.72,
+     "proveedor": "ABB Argentina QT-26-02478305 (OPP-26-9062690) · ítem 1: Coriolis FCB450 DN150 con conexión 4\" #600 (alternativa)",
+     "origen": "cotizaciones/COT26-0330-003_YPF_LIC70243_PUENTEMED/proveedores/ABB OPP-26-9062690 QT-26-02478305 2026-11-16.pdf",
+     "fecha": "2026-11-16",
+     "validez_hasta": "2026-12-16",
+     "coincide": "similar",
+     "diferencia": "medidor DN150 (para el caudal de 1.100.000 Sm3/d)"
     },
     {
      "tipo": "cot",
@@ -928,12 +950,11 @@
     {
      "tipo": "cot",
      "precio": 864.2,
-     "proveedor": "ABB Argentina OPP-26-8794766 · transmisor de presión PGS300",
-     "origen": "fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/Cot ABB OPP-26-8794766-1.pdf.txt",
-     "fecha": "2026-07-16",
-     "validez_hasta": "2026-08-15",
-     "coincide": "similar",
-     "diferencia": "rango a confirmar contra HD-J0304-01 (0-160 kg/cm2g)"
+     "proveedor": "ABB Argentina QT-26-02478305 (OPP-26-9062690) · ítem 6: PGS300 rango 0-160 kg/cm2, HART, IECEx Ex db, TAG PIT-1800A, 92 días",
+     "origen": "cotizaciones/COT26-0330-003_YPF_LIC70243_PUENTEMED/proveedores/ABB OPP-26-9062690 QT-26-02478305 2026-11-16.pdf",
+     "fecha": "2026-11-16",
+     "validez_hasta": "2026-12-16",
+     "coincide": "igual"
     }
    ]
   },
@@ -956,13 +977,12 @@
    "fuentes": [
     {
      "tipo": "cot",
-     "precio": 829.04,
-     "proveedor": "Induquip 26-523-RSDGVM-RSMT · Rosemount 644 HART, IECEx Flameproof, LCD",
-     "origen": "fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/Oferta Induquip 26-333-RSDGVM-USM.pdf.txt",
-     "fecha": "2026-07-17",
-     "validez_hasta": "2026-08-16",
-     "coincide": "similar",
-     "diferencia": "sin hoja de datos del cliente para el TIT-1800A"
+     "precio": 747.42,
+     "proveedor": "ABB Argentina QT-26-02478305 (OPP-26-9062690) · ítem 4: TTF300 transmisor de temperatura de campo, HART, IECEx Ex db, soporte caño 2\", TAG TIT-1800A, 65 días",
+     "origen": "cotizaciones/COT26-0330-003_YPF_LIC70243_PUENTEMED/proveedores/ABB OPP-26-9062690 QT-26-02478305 2026-11-16.pdf",
+     "fecha": "2026-11-16",
+     "validez_hasta": "2026-12-16",
+     "coincide": "igual"
     }
    ]
   },
@@ -973,7 +993,7 @@
    "descripcion": "TE-1800A",
    "cantidad": 1.0,
    "unidad": "un",
-   "especificacion": "Plano: 1 1/2\" · 600# · AISI 316 · RF · El cliente no indica cantidad: calculada por ITT según el plano YPF-GASLIFTBAT21-VCD24299-P-PL-003001 D1 y el P&ID YPF-GASLIFTPTEMED-VCD24299-R-PI-003010 D0 · Nota ITT: Sensor RTD Pt100 + termovaina bridada 1 1/2\" #600 (sin hoja de datos: a confirmar)",
+   "especificacion": "Sensor RTD Pt100 3 hilos con termovaina bridada 1 1/2\" #600 RF AISI 316L (ABB TSP331 incluye ambos)",
    "atributos": {
     "familia": "AFO",
     "diametro": "1.5\"",
@@ -986,13 +1006,19 @@
    "fuentes": [
     {
      "tipo": "cot",
-     "precio": 309.94,
-     "proveedor": "Induquip 26-523-RSDGVM-RSMT · sensor RTD Rosemount 214C Pt100, IECEx Flameproof",
-     "origen": "fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/Oferta Induquip 26-333-RSDGVM-USM.pdf.txt",
-     "fecha": "2026-07-17",
-     "validez_hasta": "2026-08-16",
-     "coincide": "similar",
-     "diferencia": "sin hoja de datos del cliente"
+     "precio": 1236.82,
+     "proveedor": "ABB Argentina QT-26-02478305 (OPP-26-9062690) · ítem 5: TSP331 sensor Pt100 con termovaina bridada 1 1/2\" #600 RF 316L, U = 250 mm, TAG TE-1800A, 85 días",
+     "origen": "cotizaciones/COT26-0330-003_YPF_LIC70243_PUENTEMED/proveedores/ABB OPP-26-9062690 QT-26-02478305 2026-11-16.pdf",
+     "fecha": "2026-11-16",
+     "validez_hasta": "2026-12-16",
+     "coincide": "igual"
+    }
+   ],
+   "desvio": [
+    {
+     "que": "material",
+     "ofrecido": "termovaina AISI 316L (ABB TSP331)",
+     "pedido": "AISI 316"
     }
    ]
   },
@@ -1016,10 +1042,10 @@
     {
      "tipo": "cot",
      "precio": 7345.97,
-     "proveedor": "ABB Argentina OPP-26-8794766 · computador de flujo XFC6200EX",
-     "origen": "fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/Cot ABB OPP-26-8794766-1.pdf.txt",
-     "fecha": "2026-07-16",
-     "validez_hasta": "2026-08-15",
+     "proveedor": "ABB Argentina QT-26-02478305 (OPP-26-9062690) · ítem 3: computador de flujo XFC6200EX, 92 días",
+     "origen": "cotizaciones/COT26-0330-003_YPF_LIC70243_PUENTEMED/proveedores/ABB OPP-26-9062690 QT-26-02478305 2026-11-16.pdf",
+     "fecha": "2026-11-16",
+     "validez_hasta": "2026-12-16",
      "coincide": "igual"
     }
    ]
@@ -1211,12 +1237,18 @@
     {
      "tipo": "cot",
      "precio": 136.3,
-     "proveedor": "ABB Argentina OPP-26-8794766 · manifold M26",
-     "origen": "fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/Cot ABB OPP-26-8794766-1.pdf.txt",
-     "fecha": "2026-07-16",
-     "validez_hasta": "2026-08-15",
-     "coincide": "similar",
-     "diferencia": "confirmar que sea 2 vías tipo ABAC AISI 316"
+     "proveedor": "ABB Argentina QT-26-02478305 (OPP-26-9062690) · ítem 7: manifold M26 2 válvulas AISI 316L, 1/2\" NPT-f / NPT-m, 77 días",
+     "origen": "cotizaciones/COT26-0330-003_YPF_LIC70243_PUENTEMED/proveedores/ABB OPP-26-9062690 QT-26-02478305 2026-11-16.pdf",
+     "fecha": "2026-11-16",
+     "validez_hasta": "2026-12-16",
+     "coincide": "igual"
+    }
+   ],
+   "desvio": [
+    {
+     "que": "material",
+     "ofrecido": "manifold AISI 316L (ABB M26)",
+     "pedido": "AISI 316 (HD-J0304-01 nota 2)"
     }
    ]
   },
@@ -1230,16 +1262,15 @@
    "especificacion": "Termovaina bridada 1 1/2\" #600 RF AISI 316 para el TE-1800A (P&ID: \"1½\"-600#\")",
    "fuentes": [
     {
-     "tipo": "cot",
-     "precio": 645.19,
-     "proveedor": "Weisz 30.0.10.027.203 · termovaina modelo CB tipo H2 AISI 316",
-     "origen": "fuentes_originales/ofertas_texto/TAVAL/69- Lic 64673 COLECT-SKIDS-PUENTE MED - UTE LACH/5.Proveedores 3ros/Oferta Weisz de ventas_30.0.10.027.203.pdf.txt",
-     "fecha": "2026-07-16",
-     "validez_hasta": "2026-08-16",
-     "coincide": "similar",
-     "diferencia": "confirmar conexión bridada 1 1/2\" #600 RF"
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "Incluida en la pos 26 (ABB TSP331: sensor con termovaina bridada)",
+     "origen": "cotizaciones/COT26-0330-003_YPF_LIC70243_PUENTEMED/proveedores/ABB OPP-26-9062690 QT-26-02478305 2026-11-16.pdf",
+     "fecha": "2026-11-16",
+     "coincide": "sin_ref"
     }
-   ]
+   ],
+   "sin_precio_motivo": "Incluida en otro renglón: la termovaina viene con el sensor TE-1800A (pos 26, ABB TSP331)."
   },
   {
    "id": "S02",
