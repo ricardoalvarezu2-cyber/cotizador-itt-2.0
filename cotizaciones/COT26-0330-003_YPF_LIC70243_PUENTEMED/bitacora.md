@@ -55,3 +55,15 @@ el repositorio suma contingencia 5 % y ajuste por inflación; el modelo suma 20 
   TE-1800A sensor y termovaina 1½"-600# (pos 35) por separado, TIT-1800A, FQIT-1800A (nota 2), 2 JD (pos 19). FI/PI/TI/FQI-1800A son
   indicaciones en SCADA/SCP: fuera del suministro (aclarado en la oferta).
 - Resultado: repositorio costo 76.048,57 · precio 114.072,85; planilla modelo costo 72.496,29 · venta 108.744,44.
+
+## 16-11-2026 — Ofertas PRES 25856 (formato Taval)
+Ricardo pasó las ofertas modelo PRES 25594 (Lic 66944 colectores, Taval) y el número nuevo 25856. `generar_ofertas_taval.py` arma
+`oferta/PRES 25856- OFERTA TECNICA …docx` y `… OFERTA ECONOMICA …docx` sobre los modelos guardados en `oferta/modelo_taval/`.
+El precio sale de la planilla modelo recalculada (Pie de Venta F3 = 108.744,44). Cambios respecto del modelo: portada (oferta,
+fecha, referencia, proyecto; contacto "A confirmar"), alcance con el ítem Ariba literal (SAP 1000653168), plazo 150 días, entrega DDP
+en La Amarga Chica (Añelo), validez 30 días (las cotizaciones de instrumentos tienen validez corta), una tabla de características,
+el plano PL-003001 hoja 1 como plano esquemático, materiales y proveedores de esta cotización, inclusiones y exclusiones según la ET y
+el P&ID (se sacaron "Aislación no requerido", "Calefaccionado eléctrico", "Tratamiento térmico", "póliza por separado" y "transporte
+según OC", que aquí no corresponden). Errores del modelo corregidos: documentos de la propuesta decían PRES 25292, el objeto de la
+económica "PRES255945", y la técnica tenía una captura de una carpeta de archivos en la página 4. La económica lleva una línea roja
+"BORRADOR, SIN REVISAR" sobre la tabla de precio: borrarla recién con la cotización aprobada.
