@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-P02
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 4.894,26 por equipo · soldadura y servicios calculados USD 4.002,94 · 19 similares (1, 2, 4, 8, 9, 11, 12, 14, 15, 16, 17, 19, 23, 24, 33, 37, 38, 39, 40) · 1 sin precio (6).
+**Resumen:** materiales USD 4.650,88 por equipo · soldadura y servicios calculados USD 4.002,94 · 19 similares (1, 2, 4, 8, 9, 11, 12, 14, 15, 16, 17, 19, 23, 24, 33, 37, 38, 39, 40) · 1 sin precio (6).
 
 
 ## 1. Materiales
@@ -47,7 +47,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 37 | Espárrago 3/4 L=4 1/4 (110 mm) · Ø 3/4" | SIMILAR | 5,00 / un | 2026-01-15 · planilla interna | unidad distinta: catálogo por juego, plano por un |
 | 38 | Indicador transmisor de temperatura | SIMILAR | 803,00 / un | 2026-06-25 · planilla interna | marca: sin dato (pedido ABB) · faltan: rango, conexion |
 | 39 | Indicador de presión (manómetro) con manifold | SIMILAR | 120,00 / un | 2026-10-30 · cotización | — · faltan: rango, conexion |
-| 40 | Indicador transmisor de presión con manifold  | SIMILAR | 1.100,00 / un | 2026-03-10 · planilla interna | marca: sin dato (pedido ABB) · faltan: rango, conexion |
+| 40 | Indicador transmisor de presión con manifold  | SIMILAR | 856,62 / un | 2026-11-05 · cotización | rango: 0 a 414 bar (no pedido) · faltan: rango, conexion |
 | 32 | Tuerca hexagonal · Ø 5/8" | INCLUIDAS EN EL ESPÁRRAGO | 0 | — | el precio elegido para los espárragos (33, 37) trae tuercas: confirmar |
 | 34 | Tuerca hexagonal · Ø 3/4" | INCLUIDAS EN EL ESPÁRRAGO | 0 | — | el precio elegido para los espárragos (33, 37) trae tuercas: confirmar |
 | 36b | Completar barra de 12 m (pos 5, 21, 25, 28, 29, 30, 35, 36) | compra extra | USD 25,08/m × 0,17 m | | Se usan 70,32 m en 10 equipo(s) y se compran 72 m. Borrar si hay sobrante en stock |
@@ -81,7 +81,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 49 placas chicas + 0 grandes + 1,30 servicio(s) de RX + 0,60 de LP por equipo = USD 1.666,00 (Servicio de radiografía (Antonelli) (2025-11; antonelli_end_2025-11)).
   Con las tarifas de Antonelli (11-2025) serían USD 1.666,00: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: puente, 3", 10 u, materiales USD 4.894 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: puente, 3", 10 u, materiales USD 4.651 por unidad)
 
 - **Ingeniería:** 7,5 h × USD 15/h = USD 112,50 · mediana de 9,0, 6,0 h por unidad (repartidas en la serie) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 4in #600 (serie de 13 unidades) (4, 13 u, 2026-02-19) · rango del mismo tipo 6–9 h
 - **Calidad y dossier:** 3,5 h × USD 15/h = USD 52,50 · mediana de 1,0, 6,0 h por unidad (repartidas en la serie) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 4in #600 (serie de 13 unidades) (4, 13 u, 2026-02-19) · rango del mismo tipo 1–6 h
