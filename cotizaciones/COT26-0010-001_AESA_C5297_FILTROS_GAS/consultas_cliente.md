@@ -15,7 +15,7 @@ Preparadas el 11-11-2026 y corregidas el mismo día con la revisión independien
 **C3 — Clase de cañerías CA11: válvulas, tapones y juntas** (requisito R036)
 > La nota 11 de la hoja de datos pide las válvulas de venteo y drenaje según la clase CA11 del Anexo I de ES__-0001998 L0200. El documento recibido (versión 1.1) no trae el Anexo I ("está en un archivo distinto") ni el Anexo II (códigos y descripciones de válvulas). ¿Nos lo pueden enviar, o indicar para 3/4" clase CA11 el tipo de válvula (esférica, aguja, globo), extremos, material y trim, el tapón y la junta de la tapa de cierre? El drenaje D es bridado W.N. 3/4" #150: ¿la válvula es bridada con brida ciega, o bridada × roscada con tapón?
 
-**C4 — Marca E30 del P&ID** (requisito R042)
+**C4 — Marca E30 del P&ID** (requisito R042) — **RESUELTA (18-11-2026): no se envía.** Matías confirmó con la hoja de datos que los filtros no llevan aislación ni traceado; se cotiza sin aislación, pintura sistema 201.
 > En el P&ID los filtros FCC-707/708 y sus líneas llevan la marca E30; la hoja de datos indica "Aislación / Traceado: NO / NO". Además, las líneas de los filtros terminan en "-BE" (1"-FG-0706-CA11-BE, 1154 a 1157) y el resto en "-BB", y el P&ID no trae la leyenda de E30. ¿Los filtros llevan aislación o traceado? Si llevan, ¿quién los provee y hay que prever soportes de aislación y el esquema de pintura N° 202?
 
 **C5 — Ítems opcionales fuera de la planilla** (requisitos R004, R005, R006, R047, R048 y R052)

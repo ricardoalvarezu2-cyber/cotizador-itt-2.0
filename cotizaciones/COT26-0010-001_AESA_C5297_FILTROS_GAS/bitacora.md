@@ -88,3 +88,7 @@ Sin críticos; las cuentas de proceso y de soportes se reprodujeron. Corregido:
 - Segunda lectura (`transcripcion_b.json`).
 - Diseño de Ingeniería (Ø, largo, internos, patas) y cotización del cartucho.
 - Precotización, `cotizacion.json`, repuestos RCP y RDO, opcionales, plazo.
+
+## Aislación y traceado (18-11-2026)
+- Matías confirmó con la hoja de datos (HD-001 E0, renglón 26: "Aislación / Traceado: NO / NO") que los filtros **no llevan aislación ni traceado**. La consulta C4 (marca E30 del P&ID) queda resuelta y no se envía; se cotiza con pintura sistema 201 (sin aislación).
+- El antecedente AESA/47 (presupuesto 142, 25-03-2026, USD 5.963,65 c/u) no detalla el alcance ("según documentación recibida": HD-003019 y RI-003017 del PC-01, que no están en el repositorio): no se puede saber si incluía aislación o traceado.
