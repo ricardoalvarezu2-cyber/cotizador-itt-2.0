@@ -307,13 +307,26 @@ def armar(carpeta, tipo, cfg, precios):
         c.titulo("OBJETO"); c.texto(obj)
         c.titulo("PRECIO DE LA PROVISIÓN")
         it = cfg["item"]
-        c.tabla(["ITEM", "CÓDIGO", "DESCRIPCIÓN", "CANTIDAD", "USD UNIDAD", "USD SUBTOTAL", "Plazo de entrega (días)"],
-                [[it["item"], it["codigo"], it["descripcion"], f"{fmtg(precios['cantidad'])}", usd(precios["precio_unitario"]),
-                  usd(precios["precio_unitario"] * precios["cantidad"]), it["plazo_dias"]]]
-                + ([["", "", cfg.get("descripcion_flete", "Flete y embalaje hasta destino"), "1", usd(precios["flete"]), usd(precios["flete"]), ""]]
-                   if precios["flete"] else []),
-                [1.3, 3.1, 5.0, 2.1, 2.4, 2.6, 1.9], total=("TOTAL (SIN IVA)", usd(precios["total"])),
-                alinear=[1, 1, 0, 1, 1, 1, 1])
+        pos_of = cfg.get("_posiciones")
+        if pos_of:  # varias posiciones con precio propio (posiciones_oferta.py, 18-11-2026)
+            c.tabla(["ITEM", "CÓDIGO", "DESCRIPCIÓN", "CANTIDAD", "USD UNIDAD", "USD SUBTOTAL", "Plazo de entrega (días)"],
+                    [[f["item"], f["codigo"], f["descripcion"], f"{fmtg(f['cantidad'])} {f['unidad']}", usd(f["unitario"]), usd(f["subtotal"]), f["plazo"]]
+                     for f in pos_of["filas"]],
+                    [1.3, 3.1, 5.0, 2.1, 2.4, 2.6, 1.9], total=("TOTAL (SIN IVA)", usd(pos_of["total"])), alinear=[1, 1, 0, 1, 1, 1, 1])
+            for f in pos_of["filas"]:
+                if f["detalle"]:
+                    c.titulo(f"LISTADO DETALLADO · ÍTEM {f['item']} · {f['codigo']}")
+                    c.tabla(["DESCRIPCIÓN", "CANTIDAD", "UNIDAD", "USD UNIDAD", "USD SUBTOTAL", "Plazo de entrega (días)"],
+                            [[x["descripcion"], fmtg(x["cantidad"]), x["unidad"], usd(x["unitario"]), usd(x["subtotal"]), f["plazo"]] for x in f["detalle"]],
+                            [7.0, 1.8, 1.5, 2.4, 2.6, 1.9], total=("TOTAL DEL ÍTEM", usd(f["subtotal"])), alinear=[0, 1, 1, 1, 1, 1])
+        else:
+            c.tabla(["ITEM", "CÓDIGO", "DESCRIPCIÓN", "CANTIDAD", "USD UNIDAD", "USD SUBTOTAL", "Plazo de entrega (días)"],
+                    [[it["item"], it["codigo"], it["descripcion"], f"{fmtg(precios['cantidad'])}", usd(precios["precio_unitario"]),
+                      usd(precios["precio_unitario"] * precios["cantidad"]), it["plazo_dias"]]]
+                    + ([["", "", cfg.get("descripcion_flete", "Flete y embalaje hasta destino"), "1", usd(precios["flete"]), usd(precios["flete"]), ""]]
+                       if precios["flete"] else []),
+                    [1.3, 3.1, 5.0, 2.1, 2.4, 2.6, 1.9], total=("TOTAL (SIN IVA)", usd(precios["total"])),
+                    alinear=[1, 1, 0, 1, 1, 1, 1])
         tr = transporte_incluido(cfg.get("_cot", {}))
         if tr:
             c.texto(f"Precio puesto en {tr['destino'] or 'el lugar de entrega acordado'}: el transporte está incluido en el precio unitario.", sangria=0.75)
@@ -328,8 +341,10 @@ def armar(carpeta, tipo, cfg, precios):
         c.titulo("OBJETO"); c.texto(obj)
         c.titulo("ALCANCE")
         it = cfg["item"]
+        filas_alc = ([[f["item"], f"{fmtg(f['cantidad'])} {f['unidad']}", f["descripcion"], it["observacion"], f["plazo"]] for f in cfg["_posiciones"]["filas"]]
+                     if cfg.get("_posiciones") else [[it["item"], f"{fmtg(precios['cantidad'])}", it["descripcion"], it["observacion"], it["plazo_dias"]]])
         c.tabla(["ITEM", "CANTIDAD", "DESCRIPCIÓN", "OBSERVACIÓN / DESVÍO", "Plazo de entrega (días)"],
-                [[it["item"], f"{fmtg(precios['cantidad'])}", it["descripcion"], it["observacion"], it["plazo_dias"]]],
+                filas_alc,
                 [1.4, 2.2, 7.2, 4.2, 2.2], alinear=[1, 1, 0, 1, 1])
         c.titulo("EMBALAJE"); c.texto(cfg["embalaje"])
         c.titulo("DOCUMENTOS QUE FORMAN PARTE DE LA PROPUESTA")
@@ -385,6 +400,10 @@ def main(carpeta, frenos_revisados=False):
     if fr:
         print("PENDIENTES ANTES DE ENVIAR (no impiden generar ni aprobar):\n" + "\n".join(f"  · [{k}] {t}" for k, t in fr))
     precios = leer_precios(carpeta)
+    import posiciones_oferta
+    cfg["_posiciones"] = posiciones_oferta.main(carpeta, precios["total"])  # None si la oferta tiene un solo ítem
+    if cfg["_posiciones"] and precios["flete"]:
+        sys.exit("posiciones_oferta: con varias posiciones el flete incluido no está soportado todavía")
     salida = carpeta / "oferta"
     salida.mkdir(exist_ok=True)
     base = cfg["archivo_base"]
@@ -395,6 +414,9 @@ def main(carpeta, frenos_revisados=False):
                        check=True, capture_output=True)
         print(ruta)
     print(f"Precio unitario {usd(precios['precio_unitario'])} · total {usd(precios['total'])} (de la planilla)")
+    if cfg["_posiciones"]:
+        print("Posiciones: " + " · ".join(f"ítem {f['item']} {usd(f['subtotal'])}" for f in cfg["_posiciones"]["filas"])
+              + f" · total {usd(cfg['_posiciones']['total'])}")
 
 
 if __name__ == "__main__":

@@ -3,7 +3,7 @@
  "archivo_base": "COT26-0010-001 - AESA C5297 - Filtros de gas FCC-707-708",
  "oferta": {
   "numero": "PRES [a asignar]",
-  "revision": "A",
+  "revision": "0",
   "fecha": "18-11-2026",
   "descripcion_revision": "Emisión original"
  },
@@ -17,7 +17,7 @@
  "item": {
   "item": "3",
   "codigo": "FCC-707/8",
-  "descripcion": "FCC-707/8 FILTROS DE GAS DE EMERGENCIA * (precio por filtro; incluye los repuestos RCP-707/8 y RDO-707/8 de cada filtro: [separar en las posiciones 2 y 1 de la planilla])",
+  "descripcion": "FCC-707/8 FILTROS DE GAS DE EMERGENCIA * (Filtro Gas de emergencia tipo cartucho FCC-707/708, precio por filtro)",
   "observacion": "Ver aclaraciones y desvíos",
   "plazo_dias": "95"
  },
@@ -54,13 +54,15 @@
    "Venteo F: la media cupla 3/4\" NPT va en la brida ciega a 50 mm del centro, porque el centro lo ocupa el cáncamo del pescante; la hoja de datos la dibuja centrada.",
    "Prueba hidráulica a 13,0 kg/cm2 g (1,3 × presión de diseño), declarando la presión máxima admisible de trabajo igual a la de diseño.",
    "Sin aislación ni traceado (hoja de datos, renglón 26): pintura exterior sistema 201 de la B0600; interior sin revestimiento (consulta C10).",
-   "Válvulas de drenaje y venteo, tapones y juntas según clase CA11: el Anexo I de ES__-0001998 L0200 no fue recibido. Se cotizan válvula esférica #150 bridada RF en el drenaje, esférica 3/4\" NPT #3000 en el venteo, tapones roscados y juntas espiraladas AISI 316 / grafito hasta recibir la clase (consulta C3).",
+   "Válvulas de drenaje y venteo, tapones y juntas según clase CA11: el Anexo I de ES__-0001998 L0200 no fue recibido. Se cotizan, como supuesto hasta recibir la clase (consulta C3): en el drenaje D, válvula esférica #150 bridada RF cerrada con brida ciega 3/4\" #150, junta espiralada AISI 316 / grafito y 4 espárragos con tuercas; en el venteo F, válvula esférica 3/4\" NPT #3000 con tapón roscado.",
    "Internos (tubo de salida, asiento y platillo) en AISI 316 L, sin sobreespesor de corrosión (C0100 5.1.4), y rompevórtice de planchuela AISI 316 L sobre el drenaje (C0100 5.1.9) (consultas C6 y C11).",
    "La ED(EP)-C-01.08 (filtros de líquido) no se aplica en lo que contradice la hoja de datos y el P&ID: sin manómetros, transmisor de presión diferencial, doble válvula de drenaje ni válvulas de alivio (consulta C7).",
    "Elemento filtrante: medida, cantidad y pérdida de carga los garantiza el fabricante del cartucho; condiciones de proceso tomadas de la hoja de datos (consulta C1 por la diferencia de caudal y presión con el P&ID).",
-   "Repuestos RCP y RDO: propuesta de ITT según IG.AR 40.00.140 (RCP: 1 cartucho y 1 junta de tapa por filtro; RDO: 4 cartuchos, 2 juntas de tapa y un juego de espárragos y tuercas de la tapa por filtro).",
+   "Repuestos RCP (ítem 2) y RDO (ítem 1): propuesta de ITT según IG.AR 40.00.140, con el listado detallado y precio unitario por repuesto en la Oferta Económica (RCP: 1 cartucho y 1 junta de tapa por filtro; RDO: 4 cartuchos, 2 juntas de tapa y un juego de espárragos y tuercas de la tapa por filtro).",
    "Placa de identificación según PE(EP)-C-01.00.01 / C0100 Anexo I, no recibidos (consulta C8).",
-   "Consultas abiertas al cliente: C1, C2, C3, C5, C6, C7, C8, C9, C10, C11 y C12 (ver lista adjunta). Las respuestas pueden modificar el precio y el plazo."
+   "Consultas abiertas al cliente: C1, C2, C3, C5, C6, C7, C8, C9, C10, C11 y C12 (ver lista adjunta). Las respuestas pueden modificar el precio y el plazo.",
+   "Clips (hoja de datos, tabla de materiales: SA-516 Gr. 70): no aplican, porque los filtros no llevan aislación, plataformas ni escaleras.",
+   "Testigo de producción por procedimiento de soldadura (ED(EP)-B-02.00 9.1.1): no incluido, sujeto a la consulta C12."
   ]
  },
  "exclusiones": {
@@ -93,5 +95,29 @@
   "cargo": "Representante Comercial",
   "telefono": "[teléfono ITT / interno]",
   "celular": "[celular]"
- }
+ },
+ "posiciones": [
+  {
+   "item": "2",
+   "codigo": "RCP-707/8",
+   "descripcion": "RCP-707/8 FILTROS DE GAS DE EMERGENCIA * (repuestos para precomisionado, comisionado y puesta en marcha de los 2 filtros; listado detallado abajo)",
+   "pos_cotizacion": [
+    "RCP"
+   ],
+   "cantidad": 1,
+   "unidad": "lote",
+   "detalle": true
+  },
+  {
+   "item": "1",
+   "codigo": "RDO-707/8",
+   "descripcion": "RDO-707/8 FILTROS DE GAS DE EMERGENCIA * (repuestos para dos años de operación de los 2 filtros; listado detallado abajo)",
+   "pos_cotizacion": [
+    "RDO"
+   ],
+   "cantidad": 1,
+   "unidad": "lote",
+   "detalle": true
+  }
+ ]
 }

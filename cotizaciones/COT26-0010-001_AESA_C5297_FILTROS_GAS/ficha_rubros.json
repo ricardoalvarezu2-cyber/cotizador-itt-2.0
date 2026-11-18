@@ -5,7 +5,7 @@
   "pulg_eq": 12.198,
   "juntas_sw_olet": 0.0,
   "extremos_campo": 0.0,
-  "kg_piping": 47.1,
+  "kg_piping": 48.8,
   "bridas": 0,
   "diametros": [
    6.0,
@@ -20,6 +20,8 @@
    "9 SALIDA DE GAS",
    "11 DRENAJE c/válvula y tapón",
    "15 c/válvula y tapón",
+   "15c c/válvula y tapón · espárragos de la bri",
+   "15d c/válvula y tapón · tuercas de la brida ",
    "17 Pernos / Espárragos",
    "18 VENTEO c/válvula y tapón",
    "19 c/válvula y tapón",
@@ -36,12 +38,19 @@
    "30 Plantilla de pernos de anclaje",
    "31 Tuercas",
    "32 Tuercas",
-   "33 rompevórtices"
+   "33 rompevórtices",
+   "RCP RCP-707/8 FILTROS DE GAS DE EMERGENCIA *",
+   "RDO RDO-707/8 FILTROS DE GAS DE EMERGENCIA *",
+   "RDO RDO-707/8 FILTROS DE GAS DE EMERGENCIA *",
+   "RDO RDO-707/8 FILTROS DE GAS DE EMERGENCIA *"
   ],
   "aproximados": [
    "6 Juntas",
    "14 Válvula para conexión de drenaje y vente",
-   "16 Juntas"
+   "15b c/válvula y tapón · junta de la brida ci",
+   "16 Juntas",
+   "RCP RCP-707/8 FILTROS DE GAS DE EMERGENCIA *",
+   "RDO RDO-707/8 FILTROS DE GAS DE EMERGENCIA *"
   ],
   "avisos": [
    "Quedan 6,6 extremos BW de taller (número impar): falta marcar algún extremo de campo o una pieza"
@@ -82,7 +91,7 @@
   "largo_m": 0.0,
   "ancho_m": 0.0,
   "alto_m": 0.0,
-  "kg_equipo": 47.1,
+  "kg_equipo": 48.8,
   "destino": "",
   "por_camion": null,
   "viajes": null,
@@ -136,7 +145,7 @@
   },
   "mo_piping": {
    "modo": "detallado",
-   "detallado_usd": 1433.45,
+   "detallado_usd": 1468.87,
    "renglones_detalle": 2,
    "global_usd": null
   },
@@ -148,14 +157,14 @@
   },
   "end": {
    "modo": "detallado",
-   "detallado_usd": 594.28,
+   "detallado_usd": 893.73,
    "renglones_detalle": 3,
    "global_usd": null
   },
   "procedimientos": {
    "modo": "detallado",
-   "detallado_usd": 198.61,
-   "renglones_detalle": 2,
+   "detallado_usd": 1365.43,
+   "renglones_detalle": 3,
    "global_usd": null
   },
   "ph": {

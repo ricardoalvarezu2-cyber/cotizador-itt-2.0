@@ -1,6 +1,6 @@
 # Bitácora COT26-0010-001 · AESA (YPF) · C5297 PC-02 LANor · 2 filtros de gas de emergencia FCC-707/708
 
-**Estado: borrador, sin revisar.** Empezada el 11-11-2026 con el alcance y la lista de materiales (pedido de Matías). Precios cargados el 18-11-2026: **USD 5.619,19 por filtro, USD 11.238,38 el pedido** (`armar_cotizacion.py`; borrador, sin revisar).
+**Estado: borrador, sin revisar.** Empezada el 11-11-2026 con el alcance y la lista de materiales (pedido de Matías). Precios cargados el 18-11-2026 y corregidos el mismo día con la revisión independiente: **pos 3 FCC USD 7.945,42 por filtro (15.890,84 los 2), pos 2 RCP USD 509,94 el lote, pos 1 RDO USD 1.995,48 el lote; total del pedido USD 18.396,26** (`armar_cotizacion.py` y `posiciones_oferta.md`; borrador, sin revisar). La primera versión (USD 5.619,19 por filtro con los repuestos adentro, 11.238,38 el pedido) queda superada.
 
 ## Pedido
 - Zip "RV: Pedido de Cotización - FILTROS DE GAS - PC LAN2 C5297" (sin el mail): requisición 5297-02-0600-IG-EM-RI-001 E0 (30-10-2026), hoja de datos 5297-02-0600-IG-EM-HD-001 E0, P&ID 5297-02-0000-IG-PR-PI-014, planilla de cotización (cesta 23585543), requisición de calidad RC, especificaciones de YPF (C0100, L0200 sin Anexo I, B0600 anexos, B0606, B0609, ED(EP)-B-01.00 / B-02.00 / B-05.00 / C-01.08, IG.AR 40.00.140), condiciones de obra (.msg) y requerimientos BIM. Todo en `pedido/`.
@@ -145,3 +145,21 @@ Sin críticos; las cuentas de proceso y de soportes se reprodujeron. Corregido:
 ### Pendiente
 - **Revisión independiente** del cómputo contra la HD y del cambio en `verificar_computo.py` (no hecha en esta sesión).
 - Lista para Compras (`compras/COT26-0010-001_pedido_materiales_compras.xlsx`): cartucho Gora, bridas y caño Sch 160, válvulas CA11, PMI/LP/dureza, bulonería 316 L.
+
+## Correcciones de la revisión independiente (18-11-2026)
+
+La revisión (otro agente) encontró 2 errores graves y varios medios. Corregido y vuelto a armar:
+1. **GRAVE: RCP y RDO estaban dentro del precio por filtro.** La planilla del cliente tiene 3 posiciones y la RI pide listado detallado con precios unitarios (R021: no se admiten precios globales). Ahora la oferta económica tiene 3 ítems (3 FCC × 2, 2 RCP lote, 1 RDO lote) y un listado por repuesto con cantidad y unitario. Herramienta nueva `herramientas/posiciones_oferta.py` (la llama `generar_oferta.py`): vende cada renglón con el mismo cálculo que la planilla y controla que la suma dé el total de la planilla (dio igual: 18.396,26). Siembra nueva en `test_errores_sembrados.py` (un renglón en dos posiciones frena). R021 pasa a `renglon` RDO;RCP;MO. **Ojo:** la planilla y el informe muestran el "precio unitario por filtro" con los repuestos adentro (9.198,13); el de la pos 3 sale de `posiciones_oferta.md`. La página todavía no arma ofertas con varias posiciones.
+2. **GRAVE: la oferta prometía PMI, procedimientos y bulonería 316 L en 0.** Costeados: PMI 1 visita para el lote (estimado a la tarifa de servicio de END de NDT Antonelli, USD 490; su lista no trae PMI); 4 procedimientos firmados por Nivel III a USD 250 (Antonelli 1788-JCA-1125 ítem 14); PQR carbono–inoxidable estimado (8 h de soldador a 61,16 + ensayos a 490, sin referencia de laboratorio); bulonería 316 L ≈ 0,4 kg a 10 USD/kg. (Una primera referencia B8M para la bulonería la rechazó el control de compatibilidad: 316 no reemplaza a 316 L.)
+3. Cartucho: a USD 160,70 (Gora, celulosa 5 μm, la referencia más alta de la misma fuente), estimado, con la nota "pedir cotización a Gora con la HD: celulósico 10 μm absoluto Ø 63–70 × 254 con núcleo metálico". Arrastra RCP y RDO.
+4. Provemet: validez real 13-11-2026 (15 días desde el 29-10), ya vencida: el freno de vencidas queda abierto. El caño 6" va a USD 77,63/m sin bonificar (el 4 % vale solo por compra total) y Provemet lo cotiza por tira de 12 m: **decidir** si se pide tramo cortado o se compra la tira con sobrante a stock (no agregué la compra extra).
+5. Testigo de producción (ED(EP)-B-02.00 9.1.1): **no costeado**; aclaración en la oferta "no incluido, sujeto a la consulta C12".
+6. Drenaje: la válvula se supone bridada RF; pos 15 pasa a brida ciega 3/4" #150 y se suman junta (15b), 4 espárragos (15c) y 8 tuercas (15d). Texto de la oferta alineado.
+7. Revisión de la oferta unificada en "0"; "Clips SA-516 Gr. 70" de la HD declarado como no aplica (sin aislación ni plataformas).
+8. LP en 2 servicios para el lote (pasadas finales interior y exterior, Tabla 2 nota 1); tercera junta de internos (codo – tubo vertical): 41,40 pulg-eq.
+
+**Decisión de Matías pendiente — ingeniería y calidad:** 30 h + 20 h por filtro (USD 750 de costo por filtro) son criterio mío, sin antecedente con el mismo alcance. Riesgo: cada 30 h por filtro de más o de menos mueven ≈ USD 600 el precio por filtro (30 × 15 × 1,35).
+
+**Contraste (pos 3 sin repuestos):** 33 % arriba de AESA/47 y 15 % arriba de YPF/26. Ninguno tiene planilla; lo que esta carga y no se sabe si ellos cargaban está en `justificaciones.antecedentes` (PMI, procedimientos Nivel III, PQR, 2 LP, dureza, horas de ingeniería y calidad, cartucho a la referencia alta).
+
+**Frenos abiertos:** requisitos (22 consultas sin respuesta), vencidas (12: Provemet vencida el 13-11, listas Renard y Taval de más de 180 días), pendientes de la oferta (10 corchetes). El estimado sube al 43 % del costo directo (justificado).

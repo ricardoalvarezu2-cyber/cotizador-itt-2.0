@@ -306,6 +306,29 @@ def main():
             shutil.copytree(aesa, c, ignore=shutil.ignore_patterns("*.xlsx", "*.html", "*.pdf", "*.docx", "*.png", "*.svg", "oferta", "compras", "ANEXO*"))
             siembra_lista(c, "10", "material", lambda m: "SA 106 Gr.B sin costura")
             esperar_error("diseño ITT: material que no es el del cliente", c, "no figura tal cual en el documento del cliente", "Pos 10")
+        # Oferta con varias posiciones (RCP, RDO y equipo, 18-11-2026): la suma tiene que dar el total del cálculo; un renglón
+        # contado en dos posiciones tiene que frenar
+        if (aesa / "computo.csv").exists():
+            import armar_cotizacion
+            import posiciones_oferta
+            c = Path(tmp) / aesa.name
+            shutil.rmtree(c, ignore_errors=True)
+            shutil.copytree(aesa, c, ignore=shutil.ignore_patterns("*.xlsx", "*.html", "*.pdf", "*.docx", "*.png", "*.svg", "oferta", "compras", "ANEXO*"))
+            cot = json.load(open(c / "cotizacion.json", encoding="utf-8"))
+            tot = armar_cotizacion.calcular(cot, armar_cotizacion.leer_indices(cot))["total"]
+            with contextlib.redirect_stdout(io.StringIO()):
+                r = posiciones_oferta.main(c, tot)
+            print("OK   posiciones de la oferta suman el total" if r else "FALLA posiciones de la oferta: sin posiciones")
+            if not r:
+                fallas.append("posiciones de la oferta")
+            editar_json(c / "oferta.json", lambda d: d["posiciones"][1]["pos_cotizacion"].append("RCP"))
+            try:
+                with contextlib.redirect_stdout(io.StringIO()):
+                    posiciones_oferta.main(c, tot)
+                fallas.append("renglón en dos posiciones de la oferta")
+                print("FALLA renglón en dos posiciones de la oferta: no frenó")
+            except SystemExit:
+                print("OK   renglón en dos posiciones de la oferta")
     paridad_pagina()
     print("\nTODO OK" if not fallas else f"\nFALLAN {len(fallas)}: {', '.join(fallas)}")
     return 1 if fallas else 0
