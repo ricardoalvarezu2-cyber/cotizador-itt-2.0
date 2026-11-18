@@ -1,0 +1,97 @@
+{
+ "estado": "borrador",
+ "archivo_base": "COT26-0010-001 - AESA C5297 - Filtros de gas FCC-707-708",
+ "oferta": {
+  "numero": "PRES [a asignar]",
+  "revision": "A",
+  "fecha": "18-11-2026",
+  "descripcion_revision": "Emisión original"
+ },
+ "cliente": {
+  "nombre": "A - Evangelista S.A.",
+  "contacto": "[a confirmar]",
+  "referencia": "Cesta 23585543 · Requisición 5297-02-0600-IG-EM-RI-001 E0",
+  "proyecto": "YPF · Planta Compresora PC-02 La Angostura Norte (C5297) · Filtros de gas de emergencia FCC-707/708"
+ },
+ "objeto": "El presente documento tiene por objeto establecer el alcance de nuestra Oferta {tipo} según los requerimientos solicitados por A - Evangelista S.A. en la Requisición de Ingeniería 5297-02-0600-IG-EM-RI-001 E0 (cesta 23585543), para la provisión de 2 filtros de gas de emergencia tipo cartucho FCC-707/708 con sus repuestos de precomisionado, comisionado y puesta en marcha (RCP) y para dos años de operación (RDO), en un todo de acuerdo con la hoja de datos 5297-02-0600-IG-EM-HD-001 E0, el P&ID 5297-02-0000-IG-PR-PI-014 y las especificaciones de YPF de la requisición, y con las aclaraciones y desvíos indicados en nuestra Oferta Técnica.",
+ "item": {
+  "item": "3",
+  "codigo": "FCC-707/8",
+  "descripcion": "FCC-707/8 FILTROS DE GAS DE EMERGENCIA * (precio por filtro; incluye los repuestos RCP-707/8 y RDO-707/8 de cada filtro: [separar en las posiciones 2 y 1 de la planilla])",
+  "observacion": "Ver aclaraciones y desvíos",
+  "plazo_dias": "95"
+ },
+ "nota_flete": "Precio EXW planta ITT, Quilmes Oeste. El transporte a La Angostura Norte no está incluido (se cotiza aparte cuando el comprador lo defina).",
+ "condiciones": {
+  "CONDICIONES COMERCIALES": "Precios expresados en dólares estadounidenses, el cual será facturado en pesos argentinos al tipo de cambio BNA correspondiente a la fecha de factura. Se deberá cancelar la deuda con la cantidad de pesos necesarios para comprar dichos dólares pactados al TC BNA vendedor del día anterior a la fecha de efectivo pago y se emitirá NC y/o ND cuando exista una variación superior al 3%. Precios sin IVA (21%).",
+  "PLAZO DE ENTREGA": "95 días corridos a partir de la recepción de la Orden de Compra, con 1 ciclo de revisión de la ingeniería por parte del comprador (10 días hábiles). La fabricación comienza con la ingeniería aprobada (RI punto 1).",
+  "CONDICIONES DE PAGO": "[a definir por la dirección: las Condiciones Generales de Compras de AESA indican 30 días de la fecha de factura]",
+  "LUGAR DE ENTREGA": "Sobre camión en la Planta de ITT S.A., sita en Av. 12 de Octubre 4004, Quilmes Oeste, Bs. As.",
+  "VALIDEZ DE OFERTA": "La presente tiene una validez de 15 días corridos.",
+  "OPCIONALES (RI ítems 4 a 6)": [
+   "Asistencia técnica durante la instalación y puesta en marcha: USD [valor diario a definir] por día, más viáticos.",
+   "Viaje al sitio: USD [a definir] por viaje.",
+   "Modelo 3D con atributos: USD [a definir] (alcance y formato a confirmar: consulta C5)."
+  ],
+  "MULTAS Y GARANTÍAS": "[a definir por la dirección: multa del 2 % semanal con tope del 10 % y cauciones de las Condiciones Generales de Compras de AESA; declarar como excepción en el Anexo 15 si corresponde]"
+ },
+ "embalaje": "Cada filtro se embala para 12 meses a la intemperie según ED(EP)-B-01.00: patín de madera, polietileno de 0,2 mm, desecante, tapas en bridas y tapones metálicos en roscas. Los repuestos van en bulto aparte, rotulados.",
+ "documentos_cliente": [
+  "5297-02-0600-IG-EM-RI-001 E0 (Requisición de Ingeniería)",
+  "5297-02-0600-IG-EM-HD-001 E0 (Hoja de datos)",
+  "5297-02-0000-IG-PR-PI-014 (P&ID)",
+  "Especificaciones YPF: ES__-0001033 C0100, ES__-0001998 L0200, B0600, ED(EP)-B-01.00, ED(EP)-B-02.00, ED(EP)-B-05.00, ED(EP)-C-01.08, IG.AR 40.00.140"
+ ],
+ "caracteristicas": "Filtro vertical de cartucho, diseño y fabricación según ASME VIII Div.1 (sin estampa). Diseño 10 kg/cm2 g y −10/90 °C; sobreespesor de corrosión 3,2 mm; radiografía por puntos (RT3); prueba hidráulica a 13,0 kg/cm2 g. Cuerpo de caño 6\" Sch 80 SA-106 Gr. B con casquete semielíptico inferior y tapa de cierre M con brida W.N. 6\" #150 y brida ciega con pescante. Conexiones A y B 1\" #150 WNRF, D 3/4\" #150 WNRF con válvula y tapón, F 3/4\" NPT #3000 con válvula y tapón; cuellos Sch 160. Un cartucho celulósico 99,9 % > 10 μm, internos AISI 316 L, 3 patas con placas de refuerzo, 2 orejas de izaje, 2 orejas de puesta a tierra AISI 316 y placa de identificación AISI 304 con soporte. Pintura exterior sistema 201 de la B0600 (RAL 9006 cuerpo, RAL 9011 patas). Peso vacío estimado 102 kg por filtro (diseño preliminar).",
+ "imagen_plano": "arreglo_general.png",
+ "titulo_materiales": "MATERIALES CONSIDERADOS POR FILTRO (DISEÑO PRELIMINAR DE ITT; DESCRIPCIONES SEGÚN LA HOJA DE DATOS)",
+ "aclaraciones_y_desvios": {
+  "titulo": "ACLARACIONES Y DESVÍOS",
+  "items": [
+   "El cliente no entrega lista de materiales ni dimensiones (HD notas 2, 4, 8, 9 y 10): la lista es el diseño preliminar de ITT (Ø 6\" Sch 80, largo T/T ≈ 600 mm, 1 cartucho Ø 63–70 × 254 mm, internos AISI 316 L, patas de perfil ángulo) y se confirma con la memoria de cálculo y la ficha del fabricante del cartucho.",
+   "Pos 1 y 25: de las alternativas de material de la hoja de datos se toman envolvente de caño SA-106 Gr. B (la hoja de datos indica SA 516 Gr.70 / SA-106 Gr. B) y patas de perfil ángulo SA 36 (la hoja de datos indica SA 516 Gr.70 / SA 36).",
+   "Código: el recipiente se diseña, fabrica y prueba según ASME VIII Div.1. ASME B31.3 se aplica solo a la cañería de venteo y drenaje aguas abajo de la primera brida o rosca (niple, válvulas y tapones).",
+   "Venteo F: la media cupla 3/4\" NPT va en la brida ciega a 50 mm del centro, porque el centro lo ocupa el cáncamo del pescante; la hoja de datos la dibuja centrada.",
+   "Prueba hidráulica a 13,0 kg/cm2 g (1,3 × presión de diseño), declarando la presión máxima admisible de trabajo igual a la de diseño.",
+   "Sin aislación ni traceado (hoja de datos, renglón 26): pintura exterior sistema 201 de la B0600; interior sin revestimiento (consulta C10).",
+   "Válvulas de drenaje y venteo, tapones y juntas según clase CA11: el Anexo I de ES__-0001998 L0200 no fue recibido. Se cotizan válvula esférica #150 bridada RF en el drenaje, esférica 3/4\" NPT #3000 en el venteo, tapones roscados y juntas espiraladas AISI 316 / grafito hasta recibir la clase (consulta C3).",
+   "Internos (tubo de salida, asiento y platillo) en AISI 316 L, sin sobreespesor de corrosión (C0100 5.1.4), y rompevórtice de planchuela AISI 316 L sobre el drenaje (C0100 5.1.9) (consultas C6 y C11).",
+   "La ED(EP)-C-01.08 (filtros de líquido) no se aplica en lo que contradice la hoja de datos y el P&ID: sin manómetros, transmisor de presión diferencial, doble válvula de drenaje ni válvulas de alivio (consulta C7).",
+   "Elemento filtrante: medida, cantidad y pérdida de carga los garantiza el fabricante del cartucho; condiciones de proceso tomadas de la hoja de datos (consulta C1 por la diferencia de caudal y presión con el P&ID).",
+   "Repuestos RCP y RDO: propuesta de ITT según IG.AR 40.00.140 (RCP: 1 cartucho y 1 junta de tapa por filtro; RDO: 4 cartuchos, 2 juntas de tapa y un juego de espárragos y tuercas de la tapa por filtro).",
+   "Placa de identificación según PE(EP)-C-01.00.01 / C0100 Anexo I, no recibidos (consulta C8).",
+   "Consultas abiertas al cliente: C1, C2, C3, C5, C6, C7, C8, C9, C10, C11 y C12 (ver lista adjunta). Las respuestas pueden modificar el precio y el plazo."
+  ]
+ },
+ "exclusiones": {
+  "titulo": "EXCLUSIONES GENERALES",
+  "items": [
+   "Materiales y/o trabajos no indicados en nuestro alcance.",
+   "Pernos de anclaje (se entrega el diseño y la plantilla).",
+   "Contrabridas, juntas y espárragos de las conexiones A, B y D hacia la cañería; válvulas de bloqueo de 1\" del P&ID; instrumentos.",
+   "Montaje, obra civil y soldaduras en campo.",
+   "Transporte a obra (precio EXW).",
+   "Aislación y traceado."
+  ]
+ },
+ "alcance_general": {
+  "titulo": "ALCANCE GENERAL",
+  "items": [
+   "Ingeniería: memoria de cálculo ASME VIII Div.1, plano de arreglo general, hoja de datos completada, diseño de pernos de anclaje y plantilla, documentación de la RI punto 8.",
+   "Suministro de todos los materiales dentro de nuestro alcance, con certificados.",
+   "Fabricación y soldaduras de taller con procedimientos calificados según ASME IX.",
+   "Radiografía por puntos, líquidos penetrantes, dureza, identificación positiva de materiales y prueba hidráulica con registro.",
+   "Granallado y pintura según ES__-0002657 (B0600), sistema 201.",
+   "Elemento filtrante colocado, pescante, junta y bulonería de la tapa, válvulas y tapones de drenaje y venteo.",
+   "Repuestos RCP y RDO por filtro.",
+   "Data book y embalaje para exportación terrestre."
+  ]
+ },
+ "garantia": "La garantía por los equipos aquí detallados es de 18 meses a partir de la fecha de entrega o de 12 meses desde la puesta en marcha, lo que ocurra primero, por defectos de materiales y fabricación. [La garantía de proceso (eficiencia y pérdida de carga) depende del fabricante del cartucho y la reparación en sitio durante la garantía: a definir por la dirección.]",
+ "firma": {
+  "nombre": "Matías Russo",
+  "cargo": "Representante Comercial",
+  "telefono": "[teléfono ITT / interno]",
+  "celular": "[celular]"
+ }
+}

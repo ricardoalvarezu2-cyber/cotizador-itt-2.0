@@ -294,6 +294,18 @@ def main():
         c = base(tmp)
         editar_json(c / "cotizacion.json", lambda d: d["plazo"].update(dias=10))
         esperar_freno("plazo menor que el calculado (YPF 120 contra 180)", c, "plazo")
+        # Lista de diseño ITT desde una hoja de datos (filtros AESA, 18-11-2026): la posición es de ITT y la descripción y el
+        # material tienen que estar tal cual en la transcripción del documento del cliente
+        aesa = RAIZ / "cotizaciones" / "COT26-0010-001_AESA_C5297_FILTROS_GAS"
+        if (aesa / "computo.csv").exists():
+            c = Path(tmp) / aesa.name
+            shutil.copytree(aesa, c, ignore=shutil.ignore_patterns("*.xlsx", "*.html", "*.pdf", "*.docx", "*.png", "*.svg", "oferta", "compras", "ANEXO*"))
+            siembra_lista(c, "1", "descripcion", lambda d: d + " RF")
+            esperar_error("diseño ITT: descripción con palabras agregadas", c, "la descripción no es la del cliente", "Pos 1")
+            shutil.rmtree(c)
+            shutil.copytree(aesa, c, ignore=shutil.ignore_patterns("*.xlsx", "*.html", "*.pdf", "*.docx", "*.png", "*.svg", "oferta", "compras", "ANEXO*"))
+            siembra_lista(c, "10", "material", lambda m: "SA 106 Gr.B sin costura")
+            esperar_error("diseño ITT: material que no es el del cliente", c, "no figura tal cual en el documento del cliente", "Pos 10")
     paridad_pagina()
     print("\nTODO OK" if not fallas else f"\nFALLAN {len(fallas)}: {', '.join(fallas)}")
     return 1 if fallas else 0

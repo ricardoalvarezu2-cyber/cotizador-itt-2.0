@@ -1,13 +1,13 @@
 {
  "fuente": "Planilla Cotizacion INICIAL.xls; Requisición 5297-02-0600-IG-EM-RI-001 E0 (30/10/26) punto 1; Hoja de datos 5297-02-0600-IG-EM-HD-001 E0, pág. 3 (materiales y conexiones). Transcripción textual del texto de los PDF, controlada contra la imagen.",
- "lector": "A: transcripción del 11-11-2026",
+ "lector": "A: transcripción del 11-11-2026 (corregida el 18-11-2026 con la comparación contra B)",
  "nota": "El cliente no entrega lista de materiales: el equipo lo diseña el fabricante (HD notas 2, 4, 8, 9 y 10).",
  "tablas": [
   {
    "titulo": "Planilla Cotizacion INICIAL",
    "columnas": [
-    "Cesta",
     "Posición",
+    "Cesta",
     "Producto",
     "Descripción",
     "Cantidad",
@@ -15,24 +15,24 @@
    ],
    "filas": [
     [
-     "23585543",
      "1",
+     "23585543",
      "RDO-707/8 FILTROS DE GAS DE EMERGENCIA *",
      "FILTROS DE GAS DE EMERGENCIA 5297-02-0600-IG-EM-HD-001",
      "1",
      "UNI"
     ],
     [
-     "23585543",
      "2",
+     "23585543",
      "RCP-707/8 FILTROS DE GAS DE EMERGENCIA *",
      "FILTROS DE GAS DE EMERGENCIA 5297-02-0600-IG-EM-HD-001",
      "1",
      "UNI"
     ],
     [
-     "23585543",
      "3",
+     "23585543",
      "FCC-707/8 FILTROS DE GAS DE EMERGENCIA *",
      "FILTROS DE GAS DE EMERGENCIA 5297-02-0600-IG-EM-RI-001",
      "2",
@@ -267,6 +267,9 @@
    ],
    "filas": [
     [
+     "Diseño según el código ASME sección VIII Div. 1, cálculos, suministro de materiales, fabricación, inspección, preparación de superficie y pintura, pruebas, ensamblaje, preparación para envío, transporte (según sea definido con EL COMPRADOR) y garantías (mecánica, y de proceso) de los ítems indicados en esta requisición de ingeniería, de acuerdo con las normas, especificaciones y estándares aplicables del proyecto e indicados en los documentos de referencia."
+    ],
+    [
      "Patas / Pollera."
     ],
     [
@@ -295,6 +298,15 @@
     ],
     [
      "Herramientas especiales para la instalación y/o mantenimiento (si es requerido)."
+    ],
+    [
+     "Documentos solicitados a EL FABRICANTE de acorde a lo especificado en el punto 8."
+    ],
+    [
+     "Repuestos para el precomisionado, comisionado y puesta en marcha según procedimiento IG.AR 40.00.140 – GESTION DE REPUESTOS."
+    ],
+    [
+     "Lista de desviaciones al paquete de requisición de ingeniería."
     ]
    ]
   },
@@ -305,12 +317,32 @@
    ],
    "filas": [
     [
-     "Las conexiones de salida en cabezal inferior de recipientes verticales"
-    ],
-    [
-     "rompevórtices"
+     "Las conexiones de salida en cabezal inferior de recipientes verticales o separadores deben llevar rompevórtices."
     ]
    ]
+  }
+ ],
+ "diferencias_resueltas": [
+  {
+   "tabla": "Planilla Cotizacion INICIAL",
+   "pos": "1/2/3",
+   "columna": "(todas)",
+   "vale": "sin cambios de valores",
+   "motivo": "Diferencia aparente: el comparador emparejaba por Cesta (23585543 en las 3 filas). Se pasó Posición a la primera columna en A y B; las 3 filas coinciden celda por celda (18-11-2026)."
+  },
+  {
+   "tabla": "RI punto 2: el alcance del suministro incluirá",
+   "pos": "(4 viñetas)",
+   "columna": "Texto",
+   "vale": "14 viñetas, como B",
+   "motivo": "Mirado el original (RI 5297-02-0600-IG-EM-RI-001 E0 pág. 4, punto 2): A había omitido las viñetas 'Diseño según el código ASME…', 'Documentos solicitados a EL FABRICANTE…', 'Repuestos para el precomisionado…' y 'Lista de desviaciones…'. Vale B (18-11-2026)."
+  },
+  {
+   "tabla": "C0100 (ES__-0001033) 5.1.9, texto citado",
+   "pos": "(frase)",
+   "columna": "Texto",
+   "vale": "Las conexiones de salida en cabezal inferior de recipientes verticales o separadores deben llevar rompevórtices.",
+   "motivo": "Mirado el original (C0100 5.1.9, pdftotext): A la había copiado en dos fragmentos sin 'o separadores deben llevar'. Vale B, frase completa (18-11-2026)."
   }
  ]
 }

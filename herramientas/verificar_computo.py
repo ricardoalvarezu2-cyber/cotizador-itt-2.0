@@ -313,7 +313,35 @@ def main(carpeta):
     # REGLA CRÍTICA (Matías, 29-10-2026): la descripción es la del cliente, exacta; si el cliente no indica cantidad,
     # la calculada lleva la aclaración. Se controla contra pedido/transcripcion.json (copia textual del documento).
     ruta_tr = c / "pedido" / "transcripcion.json"
-    if ruta_tr.exists():
+    cfg_o = json.load(open(c / "cotizacion.json", encoding="utf-8")) if (c / "cotizacion.json").exists() else {}
+    if ruta_tr.exists() and (cfg_o.get("origen_lista") or {}).get("tipo") == "diseno_itt":
+        # Lista diseñada por ITT desde una hoja de datos (COT26-0010-001, 18-11-2026): la posición es de ITT y no existe en el
+        # documento del cliente. La descripción y el material tienen que estar tal cual en el documento (en una celda o en el
+        # texto de una fila de la transcripción: "TAPA DE CIERRE" + "c/ pescante y brida ciega"); la cantidad la calcula ITT
+        # y se aclara en cantidad_origen, salvo que salga de una tabla del cliente (se avisa para controlarla a mano).
+        celdas, filas_txt = set(), []
+        for t in json.load(open(ruta_tr, encoding="utf-8"))["tablas"]:
+            for f in t["filas"]:
+                celdas.update(" ".join(str(x).split()) for x in f)
+                filas_txt.append(" ".join(" ".join(str(x).split()) for x in f))
+        for p in plano:
+            desc = " ".join(p["descripcion"].split())
+            if not desc or not any(desc in ft for ft in filas_txt):
+                errores.append(f"Pos {p['pos']}: la descripción no es la del cliente: «{p['descripcion']}» no figura tal cual en "
+                               "pedido/transcripcion.json (lista de diseño ITT: la descripción es el texto literal de la hoja de datos o el pliego)")
+            mat_l = " ".join((p.get("material") or "").split())
+            if mat_l and not any(mat_l in ft for ft in filas_txt):
+                errores.append(f"Pos {p['pos']}: el material «{p['material']}» no figura tal cual en el documento del cliente "
+                               "(si el cliente no lo da, la columna material queda vacía y lo de ITT va en nota)")
+            if "no indica cantidad" not in p.get("cantidad_origen", "").lower():
+                avisos.append(f"Pos {p['pos']}: lista de diseño ITT con la cantidad tomada del documento ({p['cantidad']} {p.get('unidad', '')}): "
+                              "controlarla a mano contra la hoja de datos")
+        for r in comp:
+            base_pos = r["pos"].strip()
+            pl = next((x for x in plano if x["pos"].strip() == base_pos), None)
+            if pl and not r["descripcion"].startswith(" ".join(pl["descripcion"].split())):
+                errores.append(f"{r['id']}: la descripción del cómputo no empieza con la de la lista («{pl['descripcion']}»)")
+    elif ruta_tr.exists():
         cliente, atributos = {}, {}
         for t in json.load(open(ruta_tr, encoding="utf-8"))["tablas"]:
             cols = t["columnas"]

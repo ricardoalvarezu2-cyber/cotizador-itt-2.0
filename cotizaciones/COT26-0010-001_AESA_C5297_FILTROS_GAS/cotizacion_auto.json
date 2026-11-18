@@ -1,0 +1,1271 @@
+{
+ "codigo": "COT26-CCCC-NNN",
+ "revision": "Rev 0",
+ "estado": "borrador",
+ "fecha": "AAAA-MM-DD",
+ "preparo": "Matías Russo",
+ "cliente": {
+  "nombre": "[CLIENTE S.A.]",
+  "codigo_itt": "[CCCC]",
+  "comprador": "[nombre]"
+ },
+ "titulo": "[CLIENTE] · [pedido] — [cantidad] [equipo]",
+ "titulo_pagina": "Cotización [CLIENTE] [pedido]",
+ "archivo_planilla": "[CLIENTE]_[pedido]",
+ "subtitulo_planilla": "[cantidad] [equipo] · plano [número] · USD sin IVA · EXW Quilmes Oeste",
+ "meta": [
+  "Artículo [código]",
+  "Plano [número rev]",
+  "Comprador: [nombre]",
+  "Preparó: Matías Russo · [fecha]"
+ ],
+ "equipo": {
+  "singular": "equipo",
+  "plural": "equipos"
+ },
+ "parametros": {
+  "N": 2,
+  "FM": 1.35,
+  "FMO": 1.35,
+  "CONT": 5,
+  "AJ": 1,
+  "TRANS": 0,
+  "TC": 1550,
+  "TR_ARS": 0,
+  "TR_EMB": 0,
+  "TR_F": 1.0,
+  "fecha_referencia": "2026-10-27",
+  "rx_pct": 0,
+  "ph_horas": 0,
+  "FTV": 1.0
+ },
+ "plazo": {
+  "dias": 60,
+  "texto": "desde OC · EXW Quilmes Oeste",
+  "tareas": [
+   [
+    "Material crítico [proveedor]",
+    0,
+    60,
+    "crit"
+   ],
+   [
+    "Taller: armado, PH y pintura",
+    45,
+    57,
+    "tal"
+   ],
+   [
+    "Dossier y despacho",
+    57,
+    60,
+    "tal"
+   ]
+  ],
+  "nota": "[Qué fija el plazo y cómo se acorta]"
+ },
+ "flete": {
+  "etiqueta": "Flete a [destino]",
+  "referencia_html": "[Cotización de flete de referencia, con fecha y fuente]",
+  "criterio_html": "[Si se ofrece EXW o entregado]"
+ },
+ "historial_html": [],
+ "pedido": {
+  "eyebrow": "[Nº de pedido] · emitido [fecha]",
+  "datos_html": [
+   [
+    "Cliente",
+    "[nombre] (código ITT [CCCC])"
+   ],
+   [
+    "Ítem",
+    "[ítem] · [descripción] · <b>[cantidad] un</b>"
+   ],
+   [
+    "Documento",
+    "[documento y plano]"
+   ],
+   [
+    "Entrega pedida",
+    "[lugar]"
+   ],
+   [
+    "Fechas",
+    "Límite de respuesta [fecha] · necesidad [fecha]"
+   ]
+  ],
+  "requisitos_html": [
+   "[requisito técnico del pedido]"
+  ]
+ },
+ "nota_mo_html": "[Qué incluye y excluye la MO; soldaduras de taller junta por junta; extremos para soldar en campo]",
+ "desvios": [
+  {
+   "tag": "Pos X",
+   "titulo": "[qué se ofrece distinto]",
+   "texto": "[detalle]"
+  }
+ ],
+ "antecedentes": [
+  {
+   "carpeta_html": "<b>[CLIENTE/NN]</b> · [oferta]",
+   "fecha": "dd/mm/aaaa",
+   "que": "[qué es]",
+   "precio": "[c/u]",
+   "tomado_html": "[qué se tomó]"
+  }
+ ],
+ "pendientes": [
+  {
+   "titulo": "Proveedores",
+   "items": [
+    "[confirmación pendiente]"
+   ]
+  },
+  {
+   "titulo": "Cliente",
+   "items": [
+    "[consulta]"
+   ]
+  }
+ ],
+ "pie": "Fuentes: base de conocimiento del repositorio cotizador-itt. Precios en USD sin IVA.",
+ "planilla_notas": [
+  "Plazo: [días] desde OC ([material crítico]).",
+  "Condiciones: [pago, entrega, validez]."
+ ],
+ "items": [
+  {
+   "id": "M01",
+   "pos": "1",
+   "grupo": "material",
+   "descripcion": "Envolvente · Ø 6\"",
+   "cantidad": 0.6,
+   "unidad": "m",
+   "especificacion": "Plano: 6\" ·  · SA 516 Gr.70 / SA-106 Gr. B · BW · El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0 · Nota ITT: Diseño preliminar ITT: caño 6\" Sch 80 sin costura SA-106 Gr. B (10,97 mm). C0100 5.1.3 nota 1 pide como mínimo 3 mm resistente + 3,2 de corrosión = 6,2 mm con el recipiente terminado; el Sch 40 (7,11 mm, 6,22 con la tolerancia de −12,5 %) no deja margen. Ø y largo T/T los confirma la memoria de cálculo y el cartucho (HD notas 2 y 9)",
+   "atributos": {
+    "familia": "OTR",
+    "diametro": "6\"",
+    "material": "A516-70",
+    "extremos": "BW",
+    "tipo": "cano",
+    "schedule": "80",
+    "espesor_mm": "10.97",
+    "norma": "ASME B36.10",
+    "costura": "sin costura",
+    "largo_mm": "600"
+   },
+   "faltan_datos": [
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-18",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M02",
+   "pos": "2",
+   "grupo": "material",
+   "descripcion": "Cabezales · Ø 6\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 6\" ·  · SA-234 Gr.WPB / SA-516 Gr.70 · BW · El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0 · Nota ITT: Cabezal inferior: casquete semielíptico B16.9 6\" Sch 80 SA-234 WPB sin costura (HD: tipo de cabezal \"Semielíptico/Brida\"; espesor mínimo terminado 6,2 mm, C0100 5.1.3)",
+   "atributos": {
+    "familia": "OTR",
+    "diametro": "6\"",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "casquete semieliptico",
+    "schedule": "80",
+    "espesor_mm": "10.97",
+    "norma": "ASME B16.9"
+   },
+   "faltan_datos": [
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-18",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M03",
+   "pos": "3",
+   "grupo": "material",
+   "descripcion": "TAPA DE CIERRE · Ø 6\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 6\" · #150 · SA 105 · WNRF · Nota ITT: Conexión M. Brida de cuerpo W.N. 6\" #150 RF, pasaje Sch 80",
+   "atributos": {
+    "familia": "AFO",
+    "diametro": "6\"",
+    "serie": "150",
+    "material": "A105",
+    "extremos": "RF",
+    "tipo": "welding neck",
+    "schedule": "80",
+    "cara": "RF",
+    "norma": "ASME B16.5"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-18",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M04",
+   "pos": "4",
+   "grupo": "material",
+   "descripcion": "TAPA DE CIERRE c/ pescante y brida ciega · Ø 6\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 6\" · #150 · SA 105 ·  · Nota ITT: Conexión M. Brida ciega 6\" #150 RF con agujero roscado para la cupla del venteo F; verificar espesor con 3,2 mm de corrosión (C0100)",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "6\"",
+    "serie": "150",
+    "material": "A105",
+    "tipo": "ciega",
+    "cara": "RF",
+    "norma": "B16.5"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 51.0,
+     "proveedor": "Renard (cód. 8029) · BRI-01055",
+     "codigo": "BRI-01055",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 8029",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M05",
+   "pos": "5",
+   "grupo": "material",
+   "descripcion": "Pescante",
+   "cantidad": 1.0,
+   "unidad": "cj",
+   "especificacion": "Plano:  ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0 · Nota ITT: Pescante para la brida ciega (RI punto 2): columna de caño 1 1/2\" Sch 80 × 1,0 m que gira en un buje de 2\" Sch 80 soldado al cuerpo con placa de refuerzo, brazo de planchuela, bulón de ojo 1/2\" con tuerca de maniobra y cáncamo en el centro de la tapa. La HD no indica material: ITT adopta SA-106 Gr. B / SA-516 Gr. 70 / SA 36",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "pescante"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-18",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M06",
+   "pos": "6",
+   "grupo": "material",
+   "descripcion": "Juntas · Ø 6\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 6\" · #150 · S/ Clase de Cañerías ·  · El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0 · Nota ITT: Junta de la tapa de cierre: 1 para la prueba hidráulica (C0100 5.2.7: de la misma calidad que la de servicio) y 1 de servicio, porque el cartucho se coloca después de la prueba. Tipo según clase CA11 (Anexo I de L0200, no recibido: consulta C3)",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "6\"",
+    "serie": "150",
+    "tipo": "junta"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 15.0,
+     "proveedor": "marca/proveedor: KLINGER · JUN-02845",
+     "codigo": "JUN-02845",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\40- INARTECO FILTROS LIC 9333 · fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/LM costo Filtros rev.1.xlsx.txt",
+     "fecha": "2026-01-15",
+     "coincide": "similar",
+     "diferencia": "diametro: sin dato (pedido 6\"); unidad distinta: catálogo por uni, plano por un"
+    }
+   ]
+  },
+  {
+   "id": "M07",
+   "pos": "7",
+   "grupo": "material",
+   "descripcion": "Pernos / Espárragos · Ø 3/4\"",
+   "cantidad": 8.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" ·  · SA 193 B7 Zinc Bicromatizado ·  · El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0 · Nota ITT: Tapa de cierre 6\" #150: 8 espárragos 3/4\" × 4\"; zincado y bicromatizado ISO 4042 (HD nota 16). Ajuste con llave dinamométrica (C0100 5.3.6)",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "0.75\"",
+    "material": "A193 B7",
+    "tipo": "esparrago",
+    "revestimiento": "zincado bicromatizado ISO 4042",
+    "medida": "3/4\" x 4\""
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1.18,
+     "proveedor": "Industrias Delgado · JUN-01616",
+     "codigo": "JUN-01616",
+     "origen": "COT_ 0202600001556.pdf",
+     "fecha": "2026-11-05",
+     "coincide": "similar",
+     "diferencia": "medida: 3/4 x 4 1/2 (pedido 3/4\" x 4\"); revestimiento: sin dato (pedido zincado bicromatizado ISO 4042)"
+    }
+   ]
+  },
+  {
+   "id": "M08",
+   "pos": "8",
+   "grupo": "material",
+   "descripcion": "ENTRADA DE GAS · Ø 1\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1\" · #150 · SA 105 · WNRF · Nota ITT: Conexión A. Brida W.N. 1\" #150 RF, pasaje Sch 160 (HD nota 7)",
+   "atributos": {
+    "familia": "OTR",
+    "diametro": "1\"",
+    "serie": "150",
+    "material": "A105",
+    "extremos": "RF",
+    "tipo": "wn",
+    "schedule": "160",
+    "cara": "RF",
+    "norma": "ASME B16.5"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-18",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M09",
+   "pos": "9",
+   "grupo": "material",
+   "descripcion": "SALIDA DE GAS · Ø 1\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1\" · #150 · SA 105 · WNRF · Nota ITT: Conexión B. Brida W.N. 1\" #150 RF, pasaje Sch 160 (HD nota 7)",
+   "atributos": {
+    "familia": "OTR",
+    "diametro": "1\"",
+    "serie": "150",
+    "material": "A105",
+    "extremos": "RF",
+    "tipo": "wn",
+    "schedule": "160",
+    "cara": "RF",
+    "norma": "ASME B16.5"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-18",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M10",
+   "pos": "10",
+   "grupo": "material",
+   "descripcion": "Cuellos de conexiones · Ø 1\"",
+   "cantidad": 0.3,
+   "unidad": "m",
+   "especificacion": "Plano: 1\" · Sch 160 · SA 106 Gr.B · BW · El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0 · Nota ITT: Cuellos de A y B (2 × ≈ 150 mm); proyección a definir por ITT (HD nota 8)",
+   "atributos": {
+    "familia": "OTR",
+    "diametro": "1\"",
+    "schedule": "160",
+    "material": "A106 B",
+    "extremos": "BW",
+    "tipo": "cano",
+    "norma": "ASME B36.10",
+    "costura": "sin costura",
+    "largo_mm": "300"
+   },
+   "faltan_datos": [
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-18",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M11",
+   "pos": "11",
+   "grupo": "material",
+   "descripcion": "DRENAJE c/válvula y tapón · Ø 3/4\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" · #150 · SA 105 · WNRF · Nota ITT: Conexión D. Brida W.N. 3/4\" #150 RF, pasaje Sch 160",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "0.75\"",
+    "serie": "150",
+    "material": "A105",
+    "extremos": "RF",
+    "tipo": "welding neck",
+    "schedule": "160",
+    "cara": "RF",
+    "norma": "ASME B16.5"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-18",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M12",
+   "pos": "12",
+   "grupo": "material",
+   "descripcion": "Cuellos de conexiones · Ø 3/4\"",
+   "cantidad": 0.4,
+   "unidad": "m",
+   "especificacion": "Plano: 3/4\" · Sch 160 · SA 106 Gr.B · BW · El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0 · Nota ITT: Cuello del drenaje D, desde el fondo hasta afuera de las patas (esquema de la HD pág. 4)",
+   "atributos": {
+    "familia": "OTR",
+    "diametro": "0.75\"",
+    "schedule": "160",
+    "material": "A106 B",
+    "extremos": "BW",
+    "tipo": "cano",
+    "norma": "ASME B36.10",
+    "costura": "sin costura",
+    "largo_mm": "400"
+   },
+   "faltan_datos": [
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-18",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M13",
+   "pos": "13",
+   "grupo": "material",
+   "descripcion": "Accesorios · Ø 3/4\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" · Sch 160 · SA 234 WPB · BW · El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0 · Nota ITT: Codo 90° del drenaje D (esquema de la HD pág. 4)",
+   "atributos": {
+    "familia": "OTR",
+    "diametro": "0.75\"",
+    "schedule": "160",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "codo 90",
+    "norma": "ASME B16.9"
+   },
+   "faltan_datos": [
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-18",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M14",
+   "pos": "14",
+   "grupo": "material",
+   "descripcion": "Válvula para conexión de drenaje y venteo. · Ø 3/4\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" · #150 ·  ·  · El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0 · Nota ITT: Válvula del drenaje D según clase CA11 (HD nota 11). Tipo, extremos y material: Anexo I de L0200, no recibido (consulta C3)",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "0.75\"",
+    "serie": "150"
+   },
+   "faltan_datos": [
+    "tipo",
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-18",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M15",
+   "pos": "15",
+   "grupo": "material",
+   "descripcion": "c/válvula y tapón · Ø 3/4\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0 · Nota ITT: Tapón de la válvula de drenaje D. Según el extremo de la válvula (consulta C3)",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "0.75\"",
+    "tipo": "tapon"
+   },
+   "faltan_datos": [
+    "serie",
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 335.15,
+     "proveedor": "Taval (Comex, Santiago) · VAL-05110",
+     "codigo": "VAL-05110",
+     "origen": "precios_usuario.csv",
+     "fecha": "2026-11-17",
+     "coincide": "similar",
+     "diferencia": "diametro: 1\" (pedido 0.75\"); serie: 600 (no pedido); material: A216 WCB (no pedido); precio escalado por diámetro (0,75\" ÷ 1\")^1,5 = × 0,65"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M16",
+   "pos": "16",
+   "grupo": "material",
+   "descripcion": "Juntas · Ø 3/4\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" · #150 · S/ Clase de Cañerías ·  · El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0 · Nota ITT: Junta entre la brida D y la válvula de drenaje, si la válvula es bridada (consulta C3)",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "0.75\"",
+    "serie": "150",
+    "tipo": "junta"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 15.0,
+     "proveedor": "marca/proveedor: KLINGER · JUN-02845",
+     "codigo": "JUN-02845",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\40- INARTECO FILTROS LIC 9333 · fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/LM costo Filtros rev.1.xlsx.txt",
+     "fecha": "2026-01-15",
+     "coincide": "similar",
+     "diferencia": "diametro: sin dato (pedido 0.75\"); unidad distinta: catálogo por uni, plano por un"
+    }
+   ]
+  },
+  {
+   "id": "M17",
+   "pos": "17",
+   "grupo": "material",
+   "descripcion": "Pernos / Espárragos · Ø 1/2\"",
+   "cantidad": 4.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1/2\" ·  · SA 193 B7 Zinc Bicromatizado ·  · El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0 · Nota ITT: Brida D con la válvula de drenaje, si es bridada: 4 espárragos 1/2\" × 2 1/2\"",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "0.5\"",
+    "material": "A193 B7",
+    "tipo": "esparrago",
+    "revestimiento": "zincado bicromatizado ISO 4042",
+    "medida": "1/2\" x 2 1/2\""
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 10.0,
+     "proveedor": "sin proveedor en planilla · JUN-02720",
+     "codigo": "JUN-02720",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECHINT\\12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado · 4.Armado de la Oferta Comercial/OFERTA REV A/LM costo Desarenador rev ventas REV. 1.xlsx",
+     "fecha": "2025-12-23",
+     "coincide": "similar",
+     "diferencia": "serie: 150 (no pedido); material: sin dato (pedido A193 B7); medida: sin dato (pedido 1/2\" x 2 1/2\"); revestimiento: sin dato (pedido zincado bicromatizado ISO 4042); unidad distinta: catálogo por juego, plano por un"
+    }
+   ]
+  },
+  {
+   "id": "M18",
+   "pos": "18",
+   "grupo": "material",
+   "descripcion": "VENTEO c/válvula y tapón · Ø 3/4\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" · #3000 ·  · NPT · Nota ITT: Conexión F. Media cupla 3/4\" NPT #3000 en la brida ciega, corrida 50 mm del centro (el centro lo ocupa el cáncamo del pescante; la HD la dibuja centrada: aclaración en la oferta). La HD no indica material de la cupla: ITT adopta SA 105",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "0.75\"",
+    "serie": "3000",
+    "extremos": "NPT",
+    "tipo": "media cupla",
+    "norma": "ASME B16.11"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-18",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M19",
+   "pos": "19",
+   "grupo": "material",
+   "descripcion": "c/válvula y tapón · Ø 3/4\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" · Sch 160 ·  · NPT · El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0 · Nota ITT: Niple 3/4\" NPT × 100 mm Sch 160 entre la cupla F y la válvula de venteo. Es cañería clase CA11 (material según el Anexo I de L0200, consulta C3); ITT adopta SA 106 Gr. B",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "0.75\"",
+    "schedule": "160",
+    "extremos": "NPT",
+    "tipo": "niple",
+    "largo_mm": "100"
+   },
+   "faltan_datos": [
+    "serie",
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-18",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M20",
+   "pos": "20",
+   "grupo": "material",
+   "descripcion": "Válvula para conexión de drenaje y venteo. · Ø 3/4\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" ·  ·  · NPT · El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0 · Nota ITT: Válvula del venteo F según clase CA11 (HD nota 11). Tipo y material: Anexo I de L0200, no recibido (consulta C3)",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "0.75\"",
+    "extremos": "NPT"
+   },
+   "faltan_datos": [
+    "tipo",
+    "serie",
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-18",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M21",
+   "pos": "21",
+   "grupo": "material",
+   "descripcion": "c/válvula y tapón · Ø 3/4\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" ·  ·  · NPT · El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0 · Nota ITT: Tapón de la válvula de venteo F, NPT #3000. La HD no indica material: ITT adopta SA 105",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "0.75\"",
+    "extremos": "NPT",
+    "tipo": "tapon",
+    "serie": "3000",
+    "norma": "ASME B16.11"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 74.82,
+     "proveedor": "Stock ITT (cód. TB0025BN6V010) · VAL-03596",
+     "codigo": "VAL-03596",
+     "origen": "fuentes_originales/stock_valorizado_2024-11.xlsx · código TB0025BN6V010",
+     "fecha": "2024-11-01",
+     "coincide": "similar",
+     "diferencia": "diametro: 1\" (pedido 0.75\"); material: A216 WCB (no pedido); norma: sin dato (pedido ASME B16.11); precio escalado por diámetro (0,75\" ÷ 1\")^1,5 = × 0,65"
+    }
+   ]
+  },
+  {
+   "id": "M22",
+   "pos": "22",
+   "grupo": "material",
+   "descripcion": "Elemento filtrante",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano:  ·  · Celulósico ·  · El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0 · Nota ITT: Cartucho 99,9 % > 10 μm (HD pág. 2). Diseño ITT: 1 cartucho plisado estándar de 10\" (Ø 63 a 70 × 254 mm, doble extremo abierto), flujo de afuera hacia adentro, con núcleo y tapas metálicos y adhesivo y juntas aptos para 90 °C e hidrocarburos (el estándar con polipropileno no sirve). Cantidad y medida a confirmar con el fabricante del elemento (HD nota 9); en el antecedente AESA/47 Gora cotizó Ø 42 × 86 mm con mínimo 2 por recipiente",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "elemento filtrante",
+    "rango": "99,9 % > 10 μm",
+    "medida": "Ø 63–70 × 254 mm"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 329.0,
+     "proveedor": "Gora S.A. · OTR-02164",
+     "codigo": "OTR-02164",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\11- SKID GAS COMBUSTIBLE PAD #900 CABLEADO. PR-54033 · 5.Proveedores 3ros/Gora    OF-X-0001-00027396 ITTSA-TECPETROL-S-001  F-001 -.pdf",
+     "fecha": "2026-03-09",
+     "coincide": "similar",
+     "diferencia": "rango: sin dato (pedido 99,9 % > 10 μm); medida: sin dato (pedido Ø 63–70 × 254 mm)"
+    }
+   ]
+  },
+  {
+   "id": "M23",
+   "pos": "23",
+   "grupo": "material",
+   "descripcion": "Internos",
+   "cantidad": 1.0,
+   "unidad": "cj",
+   "especificacion": "Plano:  ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0 · Nota ITT: Diseño ITT en AISI 316 L: tubo de salida 1\" Sch 160 (6,35 mm nominal; XXS si YPF exige 6 mm con tolerancia) con codo, soldado con penetración total y aporte 309 L sobre el cuello de B a ras, desde el cuello de B hasta el centro, asiento y platillo de planchuela de 6,35 mm como mínimo, resorte y varilla roscada 3/8\". La HD no indica material de internos: se adopta AISI 316 L porque la C0100 5.1.4 pide para internos soldados de acero al carbono corrosión de los dos lados y 10 mm de espesor mínimo, y para inoxidable 6 mm sin corrosión (consultas C6 y C11). La C0200 no fue recibida",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "internos de filtro"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-18",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M24",
+   "pos": "24",
+   "grupo": "material",
+   "descripcion": "Bulonería",
+   "cantidad": 1.0,
+   "unidad": "cj",
+   "especificacion": "Plano:  ·  · AISI 316 L ·  · El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0 · Nota ITT: Bulonería de los internos",
+   "atributos": {
+    "familia": "JUN",
+    "material": "AISI 316",
+    "tipo": "bulon"
+   },
+   "faltan_datos": [
+    "diametro",
+    "medida"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-18",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M25",
+   "pos": "25",
+   "grupo": "material",
+   "descripcion": "Patas/Pollera",
+   "cantidad": 3.0,
+   "unidad": "un",
+   "especificacion": "Plano:  ·  · SA 516 Gr.70 / SA 36 ·  · El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0 · Nota ITT: 3 patas a 120° de perfil ángulo 2\" × 2\" × 1/4\" SA 36 × 550 mm con placa base 120 × 120 × 9,5 mm y agujero Ø 22 para perno M16 en círculo de Ø 330 mm. Verificadas a viento y sismo (dimensionamiento.md §7). Requieren aprobación de YPF (C0100 5.1.12)",
+   "atributos": {
+    "familia": "OTR",
+    "material": "A516-70",
+    "tipo": "pata de perfil"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-18",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M26",
+   "pos": "26",
+   "grupo": "material",
+   "descripcion": "Soportes",
+   "cantidad": 3.0,
+   "unidad": "un",
+   "especificacion": "Plano:  ·  · SA-516 Gr. 70 ·  · El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0 · Nota ITT: 3 placas de refuerzo de las patas de 150 × 80 × 6,35 mm, SA-516 Gr. 70 roladas al radio del cuerpo, desde 50 mm arriba de la soldadura casquete–caño (C0100 5.3.2; distancia mínima según B0500, no recibida). Cantos redondeados (R ≥ 5 mm) y agujero testigo 1/8\" NPT (C0100 5.1.9 y 5.1.13)",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "chapa"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-18",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M27",
+   "pos": "27",
+   "grupo": "material",
+   "descripcion": "Orejas de Izaje",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano:  ·  · SA 516 Gr.70 ·  · Nota ITT: HD nota 14: dos orejas de izaje. Diseño ITT: 120 × 80 × 9,5 mm con agujero Ø 22 a 170 mm del eje (libra la brida de cuerpo Ø 280), a 90° y 270°. Soldadura de penetración total con líquidos penetrantes (C0100 5.1.13 y ED(EP)-B-02.00 6.6.1 c)",
+   "atributos": {
+    "familia": "OTR",
+    "material": "A516-70",
+    "tipo": "oreja de izaje"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-18",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M28",
+   "pos": "28",
+   "grupo": "material",
+   "descripcion": "Puesta a tierra",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano:  ·  · Inox. ·  · El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0 · Nota ITT: 2 orejas de puesta a tierra en AISI 316, en las patas (HD nota 12; C0100 5.1.13: dos tomas de tierra)",
+   "atributos": {
+    "familia": "OTR",
+    "material": "Inoxidable",
+    "tipo": "oreja de puesta"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-18",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M29",
+   "pos": "29",
+   "grupo": "material",
+   "descripcion": "Placa de identificación",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano:  ·  · AISI 304 ·  · El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0 · Nota ITT: Con su soporte, según PE(EP)-C-01.00.01 / C0100 Anexo I (HD nota 15; documento no recibido: consulta C8). Soporte de chapa de 6 mm soldada (C0100 5.5.1)",
+   "atributos": {
+    "familia": "OTR",
+    "material": "AISI 304",
+    "tipo": "chapa de identificacion"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-18",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M30",
+   "pos": "30",
+   "grupo": "material",
+   "descripcion": "Plantilla de pernos de anclaje",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano:  ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0 · Nota ITT: RI punto 2. Chapa fina con los 3 agujeros Ø 22 en círculo de Ø 330 mm; una por filtro (se puede ofrecer una sola para los dos). Los pernos de anclaje (3 M16 por filtro) se diseñan pero no se proveen",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "plantilla de pernos"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-18",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M31",
+   "pos": "31",
+   "grupo": "material",
+   "descripcion": "Tuercas · Ø 3/4\"",
+   "cantidad": 16.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" ·  · SA 194 2H Zinc Bicromatizado ·  · El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0 · Nota ITT: Tapa de cierre: 2 tuercas por espárrago (pos 7)",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "0.75\"",
+    "material": "A194 2H",
+    "tipo": "tuerca",
+    "revestimiento": "zincado bicromatizado ISO 4042",
+    "medida": "3/4\""
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 0,
+     "proveedor": "Incluidas en el precio del espárrago",
+     "origen": "—",
+     "fecha": "2026-10-27",
+     "coincide": "igual",
+     "diferencia": "el precio de la pos 17 ya trae las tuercas"
+    }
+   ],
+   "provee": "incluido"
+  },
+  {
+   "id": "M32",
+   "pos": "32",
+   "grupo": "material",
+   "descripcion": "Tuercas · Ø 1/2\"",
+   "cantidad": 8.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1/2\" ·  · SA 194 2H Zinc Bicromatizado ·  · El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0 · Nota ITT: Brida D con la válvula de drenaje, si es bridada: 2 tuercas por espárrago (pos 17)",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "0.5\"",
+    "material": "A194 2H",
+    "tipo": "tuerca",
+    "revestimiento": "zincado bicromatizado ISO 4042",
+    "medida": "1/2\""
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 0,
+     "proveedor": "Incluidas en el precio del espárrago",
+     "origen": "—",
+     "fecha": "2026-10-27",
+     "coincide": "igual",
+     "diferencia": "el precio de la pos 17 ya trae las tuercas"
+    }
+   ],
+   "provee": "incluido"
+  },
+  {
+   "id": "M33",
+   "pos": "33",
+   "grupo": "material",
+   "descripcion": "rompevórtices",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano:  ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0 · Nota ITT: C0100 5.1.9: las conexiones de salida en el cabezal inferior de recipientes verticales llevan rompevórtices. Cruz de planchuela AISI 316 L de 6,35 mm sobre el drenaje D; para un drenaje de 3/4\" de un filtro de gas se puede pedir como desvío (consulta C11)",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "rompevortice"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-18",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "S01",
+   "pos": "MO",
+   "grupo": "mo",
+   "descripcion": "Soldaduras: 4 a tope + SW y olets (calculado)",
+   "especificacion": "pos 1: 1,2 extremo(s) BW de taller (2 por unidad × 0,6) × 6\" × 1,0000; pos 2: 2 extremo(s) BW de taller (2 por unidad × 1) × 6\" × 1,0000; pos 10: 0,6 extremo(s) BW de taller (2 por unidad × 0,3) × 1\" × 1,8787; pos 12: 0,8 extremo(s) BW de taller (2 por unidad × 0,4) × 0,75\" × 1,9373; pos 13: 2 extremo(s) BW de taller (2 por unidad × 1) × 0,75\" × 1,9373",
+   "cantidad": 12.198,
+   "unidad": "pulg",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 16.0,
+     "proveedor": "Mano de obra soldadura piping (criterio de las planillas de costo 2026): Precio por pulgada que usan las planillas de ITT de 2025-2026 (16 a 16,5; 19 en #900 en Sacde 12). Controles CTRL-M01/P01/T01, ",
+     "origen": "planillas 2026 (TAVAL/43 puentes YPF 19-02-2026; TAVAL/40 Inarteco; Sacde 12 a 15; Tecpetrol 9: 16,5)",
+     "fecha": "2026-02-28",
+     "coincide": "similar",
+     "diferencia": "Quedan 6,6 extremos BW de taller (número impar): falta marcar algún extremo de campo o una pieza"
+    }
+   ]
+  },
+  {
+   "id": "S02",
+   "pos": "PIN",
+   "grupo": "servicio",
+   "descripcion": "Granallado y pintura (m² calculados)",
+   "especificacion": "0,34 m² exteriores: bridas, accesorios y válvulas (largo equivalente) 0,3 + envolvente 0,0",
+   "cantidad": 0.342,
+   "unidad": "m2",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 50.0,
+     "proveedor": "criterio ITT · PIN-00569",
+     "codigo": "PIN-00569",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN\\4.Armado de la Oferta Comercial",
+     "fecha": "2026-10-10",
+     "coincide": "similar",
+     "diferencia": "m² calculados (caños, accesorios por regla, envolvente y estructura); esquema de pintura a confirmar con el pliego"
+    }
+   ]
+  },
+  {
+   "id": "S12H",
+   "pos": "HH",
+   "grupo": "mo",
+   "descripcion": "Horas de ingeniería (estimadas del antecedente)",
+   "especificacion": "15 h por equipo · mediana de 15,0, 280,0, 15,0 h por unidad (repartidas en la serie)",
+   "cantidad": 15.0,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 15.0,
+     "proveedor": "Horas propias ITT (tarifa del antecedente)",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · ENDRESS HAUSER/26- Construcción Mecánica Skid Gas Buy Back  E+H AR Ø3/4.Armado de la Oferta Comercial · LM costo skid de medicion Endress Ø3 Rev 1.xlsx.txt · hoja Soldadura + HH",
+     "fecha": "2025-12-03",
+     "coincide": "similar",
+     "diferencia": "ESTIMADO del antecedente ENDRESS HAUSER/26- Construcción Mecánica Skid Gas Buy Back  E+H AR Ø3/4.Armado de la Oferta Comercial · Skid de medicion gas Ø3in S900 (tramo de medicion) Rev 1 (3, 1 u, 2025-12-03)"
+    }
+   ]
+  },
+  {
+   "id": "S13C",
+   "pos": "CAL",
+   "grupo": "mo",
+   "descripcion": "Horas de calidad y dossier (estimadas del antecedente)",
+   "especificacion": "22,5 h por equipo · mediana de 22,5, 120,0, 22,5 h por unidad (repartidas en la serie)",
+   "cantidad": 22.5,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 15.0,
+     "proveedor": "Horas propias ITT (tarifa del antecedente)",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · ENDRESS HAUSER/26- Construcción Mecánica Skid Gas Buy Back  E+H AR Ø3/4.Armado de la Oferta Comercial · LM costo skid de medicion Endress Ø3 Rev 1.xlsx.txt · hoja Soldadura + HH",
+     "fecha": "2025-12-03",
+     "coincide": "similar",
+     "diferencia": "ESTIMADO del antecedente ENDRESS HAUSER/26- Construcción Mecánica Skid Gas Buy Back  E+H AR Ø3/4.Armado de la Oferta Comercial · Skid de medicion gas Ø3in S900 (tramo de medicion) Rev 1 (3, 1 u, 2025-12-03)"
+    }
+   ]
+  },
+  {
+   "id": "S13A",
+   "pos": "ARM",
+   "grupo": "mo",
+   "descripcion": "Horas de montaje en planta (armado, movimientos, prueba hidráulica) (estimadas del antecedente)",
+   "especificacion": "58,9 h por equipo · mediana de 121,5 h × 0,48, 225 h × 0,45, 130,5 h × 0,41 (horas por unidad × tamaño)",
+   "cantidad": 58.9,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 13.0,
+     "proveedor": "Horas propias ITT (tarifa del antecedente)",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · ENDRESS HAUSER/26- Construcción Mecánica Skid Gas Buy Back  E+H AR Ø3/4.Armado de la Oferta Comercial · LM costo skid de medicion Endress Ø3 Rev 1.xlsx.txt · hoja Soldadura + HH",
+     "fecha": "2025-12-03",
+     "coincide": "similar",
+     "diferencia": "ESTIMADO del antecedente ENDRESS HAUSER/26- Construcción Mecánica Skid Gas Buy Back  E+H AR Ø3/4.Armado de la Oferta Comercial · Skid de medicion gas Ø3in S900 (tramo de medicion) Rev 1 (3, 1 u, 2025-12-03)"
+    }
+   ]
+  }
+ ],
+ "compras": {
+  "fecha_respuesta": "AAAA-MM-DD",
+  "material_en_planta_dias": 45,
+  "lugar_entrega": "Planta ITT S.A., Av. 12 de Octubre 4004, Quilmes Oeste, Bs. As.",
+  "requisitos_generales": [
+   "Cotizar en USD sin IVA, con plazo de entrega y validez de la oferta.",
+   "Certificados de material (colada / 3.1).",
+   "Indicar cualquier diferencia con lo pedido (serie, material, extremos, modelo)."
+  ],
+  "notas": {
+   "1": "[requisito para el proveedor]"
+  },
+  "proveedores": {
+   "1": "Renard"
+  },
+  "cantidad_compra": {
+   "2": "1 tira de ~12 m"
+  },
+  "servicios": [
+   {
+    "servicio": "[Armado según plano]",
+    "proveedores": "[taller]",
+    "referencia": "[último precio, fecha]",
+    "nota": ""
+   }
+  ]
+ },
+ "nota_precotizacion": "Generado por precotizar.py: revisar precotizacion.md antes de usarlo como cotizacion.json"
+}

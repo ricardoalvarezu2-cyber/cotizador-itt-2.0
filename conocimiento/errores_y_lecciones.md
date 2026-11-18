@@ -434,3 +434,23 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 - Qué pasó: cargué el precio de pintura con rubro "Pintura"; `catalogo_servicios.py` se cortó con `KeyError: 'Pintura'` porque el rubro tiene que ser el nombre exacto de una hoja ("Pintura y revestimientos").
 - Corrección: rubro corregido; test de regresión OK.
 - Lección: antes de cargar en `precios_usuario.csv`, copiar el rubro de `HOJAS` en `catalogo_servicios.py`.
+
+## 18-11-2026 — COT26-0010-001 (filtros AESA): la primera lectura del pliego omitía 4 viñetas del alcance
+- Qué pasó: la transcripción A (11-11-2026) copió el punto 2 de la RI con 10 viñetas y dejó afuera 4 (diseño ASME y garantías, documentos del punto 8, repuestos según IG.AR 40.00.140 y lista de desviaciones); además partió la frase de rompevórtices de la C0100 5.1.9 en dos fragmentos. Lo detectó la doble lectura (lector B en otra sesión, sin ver A) con `frenos.py --comparar`. Los 4 requisitos ya estaban en `requisitos.csv`, así que no faltaba alcance en el costo.
+- Corrección: transcripción A corregida con el original y anotada en `diferencias_resueltas`.
+- Lección: la doble lectura encuentra omisiones de renglones enteros, no solo de letras; se hace siempre, también cuando la lista es de diseño ITT. En una tabla cuya primera columna se repite (Cesta), poner primero la columna que identifica la fila (Posición): el comparador empareja por la primera.
+
+## 18-11-2026 — `lista_compras.py` y `verificar_computo.py` se cortaban con una lista de diseño ITT
+- Qué pasó: con la primera `cotizacion.json` de los filtros AESA, `lista_compras.py` dio `UnboundLocalError` (usaba `p` antes de asignarla cuando una fila de la transcripción no tiene ítem, p. ej. "Envolvente" de la tabla de materiales de la HD) y `verificar_computo.py` dio `IndexError`: suponía que la primera columna de cada tabla de la transcripción es la posición de la lista y la segunda su descripción, y acá la posición la numera ITT y las tablas del cliente son de una columna (texto del pliego).
+- Corrección: `p` se asigna antes de usarla; para `origen_lista.tipo = "diseno_itt"` el control de la regla crítica pasa a ser: la descripción y el material de cada renglón tienen que figurar tal cual en una fila de la transcripción, y la cantidad tomada del documento se avisa para controlarla a mano. Dos siembras nuevas en `test_errores_sembrados.py` (descripción con "RF" agregado y material cambiado): las dos frenan.
+- Lección: el primer caso de un tipo de lista nuevo (diseño desde hoja de datos) rompe las herramientas que suponen plano con tabla. Este control nuevo necesita revisión independiente antes de pasar a `main`.
+
+## 18-11-2026 — El peso del filtro daba 697 kg en lugar de ≈ 102 kg
+- Qué pasó: `ficha_rubros.peso_equipo` suma el peso que una descripción o especificación dice en kg con la expresión `(\d[\d.]*)\s*kg`, sin coma decimal: "0,60 kg c/u" lo leyó como 60 kg y "3,69 kg" como 69 kg. Solo afectaba el USD/kg y el peso de la planilla, no el precio.
+- Corrección: saqué los kg de las especificaciones de la COT26-0010-001 (quedan en las fuentes y en `dimensionamiento.md`).
+- Pendiente: que `peso_equipo` (y `web/src/ficha.js`) lean el número con `numeros.py` (coma decimal) y una prueba con "0,60 kg".
+
+## 18-11-2026 — Se repitieron dos errores ya anotados
+- `fecha_referencia` con el día de hoy (18-11-2026) cortó el armado con `KeyError: '2026-11'` (error del 16-11-2026, todavía sin el aviso claro): se usó 31-10-2026.
+- Reescribir `requisitos.csv` con `csv.writer` cambió las comillas de las 76 filas (lección del 29-10-2026): se rehízo reemplazando solo los campos destino y referencia en el texto crudo.
+- Lección: antes de editar un CSV del repositorio, leer la lección del 29-10-2026; para la fecha de referencia, mirar el último mes de `indices_ajuste.csv`.

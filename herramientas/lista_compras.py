@@ -137,8 +137,8 @@ def main(carpeta):
         nonlocal kg_total
         its = por_pos.get(pos, [])
         mat = comp.get("material", {}).get(pos, "") or (("Sin dato: " + comp["material_sin_et"][pos]) if pos in comp.get("material_sin_et", {}) else "")
+        p = plano.get(pos, {})  # antes de usarlo en marcas_de: una fila del documento sin ítem cortaba el armado (18-11-2026)
         marcas = marcas_de(pos, (its[0]["descripcion"] if its else "") or p.get("descripcion", ""))  # listado de marcas del cliente por tipo de producto (Matías, 06-11-2026)
-        p = plano.get(pos, {})
         extras = [i for i in items if re.fullmatch(re.escape(pos) + r"[b-z]", str(i["pos"]).strip()) and es_tira(i)]  # completar tira
         if its:
             it = its[0]

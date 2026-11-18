@@ -1,0 +1,180 @@
+{
+ "generada": "2026-11-18",
+ "mo_piping": {
+  "juntas_bw": 4,
+  "pulg_eq": 12.198,
+  "juntas_sw_olet": 0.0,
+  "extremos_campo": 0.0,
+  "kg_piping": 47.1,
+  "bridas": 0,
+  "diametros": [
+   6.0,
+   1.0,
+   0.75
+  ],
+  "sin_peso": [
+   "3 TAPA DE CIERRE",
+   "5 Pescante",
+   "7 Pernos / Espárragos",
+   "8 ENTRADA DE GAS",
+   "9 SALIDA DE GAS",
+   "11 DRENAJE c/válvula y tapón",
+   "15 c/válvula y tapón",
+   "17 Pernos / Espárragos",
+   "18 VENTEO c/válvula y tapón",
+   "19 c/válvula y tapón",
+   "20 Válvula para conexión de drenaje y vente",
+   "21 c/válvula y tapón",
+   "22 Elemento filtrante",
+   "23 Internos",
+   "24 Bulonería",
+   "25 Patas/Pollera",
+   "26 Soportes",
+   "27 Orejas de Izaje",
+   "28 Puesta a tierra",
+   "29 Placa de identificación",
+   "30 Plantilla de pernos de anclaje",
+   "31 Tuercas",
+   "32 Tuercas",
+   "33 rompevórtices"
+  ],
+  "aproximados": [
+   "6 Juntas",
+   "14 Válvula para conexión de drenaje y vente",
+   "16 Juntas"
+  ],
+  "avisos": [
+   "Quedan 6,6 extremos BW de taller (número impar): falta marcar algún extremo de campo o una pieza"
+  ]
+ },
+ "mo_estructura": {
+  "kg": 0.0,
+  "m2": 0.0
+ },
+ "pintura": {
+  "m2_canos": 0.38,
+  "m2_piping": 0.72,
+  "m2_estructura": 0.0,
+  "m2_total": 0.72,
+  "esquema": ""
+ },
+ "end": {
+  "juntas_bw": 4,
+  "rx_pct": 0,
+  "placas_chicas": 0,
+  "placas_grandes": 0,
+  "juntas_lp": 0.0,
+  "materiales": [
+   "SA 106 Gr.B",
+   "SA 234 WPB",
+   "SA 516 Gr.70 / SA-106 Gr. B",
+   "SA-234 Gr.WPB / SA-516 Gr.70"
+  ],
+  "espesor_max_mm": 6.35,
+  "procedimientos": [
+   "WPS/PQR de soldadura a tope para SA 106 Gr.B, SA 234 WPB, SA 516 Gr.70 / SA-106 Gr. B, SA-234 Gr.WPB / SA-516 Gr.70 hasta 6,35 mm de espesor",
+   "Calificación de soldadores (WPQ) para esos WPS",
+   "Procedimiento de RX y de LP (escrito, nivel 3 ISO 9712)",
+   "Confirmar con el pliego: si exige procedimientos nuevos o alcanzan los vigentes de ITT"
+  ]
+ },
+ "transporte": {
+  "largo_m": 0.0,
+  "ancho_m": 0.0,
+  "alto_m": 0.0,
+  "kg_equipo": 47.1,
+  "destino": "",
+  "por_camion": null,
+  "viajes": null,
+  "avisos": [
+   "Faltan las medidas del equipo (largo × ancho × alto): cargarlas del plano de conjunto"
+  ]
+ },
+ "procedimientos": {
+  "lista": [
+   {
+    "codigo": "WPS-BW",
+    "nombre": "WPS/PQR de soldadura a tope, acero al carbono",
+    "alcance": "hasta 6,35 mm de espesor",
+    "cantidad": 1,
+    "tipo": "soldadura"
+   },
+   {
+    "codigo": "WPQ",
+    "nombre": "Calificación de soldadores (WPQ)",
+    "alcance": "una por WPS y soldador asignado",
+    "cantidad": 1,
+    "tipo": "soldadura"
+   },
+   {
+    "codigo": "PH",
+    "nombre": "Procedimiento de prueba hidráulica",
+    "alcance": "",
+    "cantidad": 1,
+    "tipo": "calidad"
+   },
+   {
+    "codigo": "PIN",
+    "nombre": "Procedimiento de granallado y pintura",
+    "alcance": "esquema del pliego",
+    "cantidad": 1,
+    "tipo": "calidad"
+   }
+  ],
+  "cantidad": 4
+ },
+ "ph": {
+  "litros": 10.3
+ },
+ "horas": {},
+ "referencias": {
+  "mo_estructura": {
+   "modo": "detallado",
+   "detallado_usd": 0,
+   "renglones_detalle": 0,
+   "global_usd": null
+  },
+  "mo_piping": {
+   "modo": "detallado",
+   "detallado_usd": 1433.45,
+   "renglones_detalle": 2,
+   "global_usd": null
+  },
+  "pintura": {
+   "modo": "detallado",
+   "detallado_usd": 70.0,
+   "renglones_detalle": 1,
+   "global_usd": null
+  },
+  "end": {
+   "modo": "detallado",
+   "detallado_usd": 594.28,
+   "renglones_detalle": 3,
+   "global_usd": null
+  },
+  "procedimientos": {
+   "modo": "detallado",
+   "detallado_usd": 198.61,
+   "renglones_detalle": 2,
+   "global_usd": null
+  },
+  "ph": {
+   "modo": "detallado",
+   "detallado_usd": 0,
+   "renglones_detalle": 0,
+   "global_usd": null
+  },
+  "horas": {
+   "modo": "detallado",
+   "detallado_usd": 883.16,
+   "renglones_detalle": 2,
+   "global_usd": null
+  },
+  "transporte": {
+   "modo": "detallado",
+   "detallado_usd": 0,
+   "renglones_detalle": 0,
+   "global_usd": null
+  }
+ }
+}

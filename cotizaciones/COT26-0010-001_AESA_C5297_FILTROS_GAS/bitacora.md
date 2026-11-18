@@ -1,6 +1,6 @@
 # Bitácora COT26-0010-001 · AESA (YPF) · C5297 PC-02 LANor · 2 filtros de gas de emergencia FCC-707/708
 
-**Estado: borrador, sin revisar. Sin precio todavía.** Empezada el 11-11-2026 con el alcance y la lista de materiales (pedido de Matías).
+**Estado: borrador, sin revisar.** Empezada el 11-11-2026 con el alcance y la lista de materiales (pedido de Matías). Precios cargados el 18-11-2026: **USD 5.619,19 por filtro, USD 11.238,38 el pedido** (`armar_cotizacion.py`; borrador, sin revisar).
 
 ## Pedido
 - Zip "RV: Pedido de Cotización - FILTROS DE GAS - PC LAN2 C5297" (sin el mail): requisición 5297-02-0600-IG-EM-RI-001 E0 (30-10-2026), hoja de datos 5297-02-0600-IG-EM-HD-001 E0, P&ID 5297-02-0000-IG-PR-PI-014, planilla de cotización (cesta 23585543), requisición de calidad RC, especificaciones de YPF (C0100, L0200 sin Anexo I, B0600 anexos, B0606, B0609, ED(EP)-B-01.00 / B-02.00 / B-05.00 / C-01.08, IG.AR 40.00.140), condiciones de obra (.msg) y requerimientos BIM. Todo en `pedido/`.
@@ -92,3 +92,56 @@ Sin críticos; las cuentas de proceso y de soportes se reprodujeron. Corregido:
 ## Aislación y traceado (18-11-2026)
 - Matías confirmó con la hoja de datos (HD-001 E0, renglón 26: "Aislación / Traceado: NO / NO") que los filtros **no llevan aislación ni traceado**. La consulta C4 (marca E30 del P&ID) queda resuelta y no se envía; se cotiza con pintura sistema 201 (sin aislación).
 - El antecedente AESA/47 (presupuesto 142, 25-03-2026, USD 5.963,65 c/u) no detalla el alcance ("según documentación recibida": HD-003019 y RI-003017 del PC-01, que no están en el repositorio): no se puede saber si incluía aislación o traceado.
+
+## Precios y armado (18-11-2026, pedido de Matías)
+
+**Resultado (`armar_cotizacion.py`, borrador sin revisar):** costo USD 4.223,32 por filtro, precio USD 5.619,19 por filtro (factores 1,35 / 1,35, contingencia 5 %), total USD 11.238,38 los 2, EXW Quilmes, plazo 95 días. Python y planilla iguales; `verificar_computo.py` sin errores (117 avisos, revisados por tipo: similares, estimados y listas de más de 6 meses).
+
+### Doble lectura
+- Lectura B hecha por otro agente en una sesión aparte (`session_01Y6ZcPhKAHdv6wZJ9ojKCW6`, rama `claude/aesa-c5297-lectura-b`), con la instrucción de no abrir `transcripcion.json` ni la lista; se le dieron los títulos y columnas de las tablas, no su contenido.
+- `frenos.py --comparar`: 13 diferencias. Resueltas mirando el original (anotadas en `diferencias_resueltas`):
+  - Planilla: diferencia aparente, el comparador emparejaba por Cesta (igual en las 3 filas). Se pasó Posición a la primera columna en A y B; coinciden.
+  - **RI punto 2: la lectura A había omitido 4 viñetas** (Diseño ASME…, Documentos del punto 8, Repuestos según IG.AR 40.00.140, Lista de desviaciones). Vale B. Los 4 ya estaban en `requisitos.csv` (R007, R019, R024, R022).
+  - **C0100 5.1.9: A lo había copiado en dos fragmentos**; vale la frase completa de B.
+- Después de resolver, las dos lecturas quedan iguales (el aviso "idénticas" es por eso).
+
+### Antecedentes (`buscar_antecedentes.py`)
+- YPF/22 y TAVAL/4 (filtros de agua FCC936/937, otra escala), **AESA/47** (mismos tags PC-01, USD 5.963,65 c/u, sin planilla), TECPETROL/11, Sacde/9, CAMUZZI/28, **YPF/26** (FCC707708 PC C5064, 18-06-2025, OE 376-25: USD 6.890,14 c/u + RDO 30 + RCP 87,60 por equipo, sin planilla), CAMUZZI/26 (FM2).
+- Modelo de costo: **TAVAL/40 Inarteco** (planilla de costo de filtros FM2/FM3 de taller, 15-01-2026; caso de control CTRL-F01): USD 16 por pulgada, 45 h de montaje × 13 USD/h para el FM3 de 6" (incluye PH con armado y desarme), horas de ingeniería y calidad (4,5 h/u, para un FM estándar).
+
+### Criterios adoptados (a revisar)
+- Soldaduras a presión junta por junta: 39,52 pulg-eq por filtro × USD 16 (2 a tope 6" Sch 80, 2 a tope y 2 injertos 1" Sch 160, 3 a tope y 1 injerto 3/4" Sch 160, media cupla en la brida ciega, 2 de internos 316 L). Los filetes de patas, orejas y pescante van en las horas de montaje.
+- Ingeniería 30 h y calidad 20 h por filtro (USD 15/h): **criterio mío**, entre el FM estándar (4,5 h/u) y los coalescedores YPF (250 h/u). Lo tiene que confirmar Matías.
+- RX: 1 visita (ARS 850.000) y 2 placas por filtro, del proveedor confirmado por Matías el 30-10-2026; LP y dureza: 1 servicio de NDT Antonelli para el lote (0,5 por filtro). PMI y procedimiento carbono–inoxidable SIN PRECIO.
+- Pintura: 1,40 m² (1,17 + 20 %) × USD 50 (Ricardo Álvarez, 16-11-2026). Puede haber un mínimo del pintor.
+- Bridas WN 1" y 3/4" Sch 160: no hay precio; estimadas con la Sch 40 de Renard × 1,32 (relación Sch 160/Sch 40 de la misma lista en 3").
+- Válvula de drenaje (pos 14): esférica 1" #150 bridada RF antifuego (código L0200 TCH1R, clase CE12) de Taval en TAVAL/5 (USD 170,63, 05-06-2025) como referencia conservadora; venteo (pos 20): esférica 3/4" NPT #3000 Taval lista 30 (USD 43,60). Las dos dependen de la clase CA11 (C3). En TAVAL/5 se ve que las esféricas CA11 de YPF son #150 bridadas RF paso total, antiestáticas y antifuego (código TCJ1R).
+- Cartucho (pos 22): USD 32 estimado con la cotización Gora del antecedente AESA/47 (microfibra 25 μm Ø 42 × 86); el pedido es celulósico 10 μm Ø 63–70 × 254 con núcleo metálico. Pedir a Gora.
+- Repuestos (por filtro, renglones RCP y RDO): RCP = 1 cartucho + 1 junta de tapa; RDO = 4 cartuchos + 2 juntas + 1 juego de espárragos y tuercas de la tapa. Propuesta mía (IG.AR 40.00.140 no fija cantidades).
+- **El precio por filtro incluye RCP y RDO**: `generar_oferta.py` arma un solo ítem; la separación en las posiciones 1 y 2 de la planilla queda entre corchetes en la oferta económica.
+- Opcionales de la RI (asistencia diaria, viaje, 3D): fuera del precio; en la oferta económica con el valor entre corchetes. Referencias de costo: asistencia de puesta en marcha USD 975/día (Tapigar, 06-2026, OTR-00111).
+- Plazo 95 días: 21 de ingeniería + 28 de revisión de YPF (1 ciclo) + 31 de taller y despacho = 80, más margen.
+- Envolvente y patas: la HD da dos materiales ("SA 516 Gr.70 / SA-106 Gr. B", "SA 516 Gr.70 / SA 36"); se toma caño SA-106 B y ángulo SA 36, declarado como desvío estructurado y en la oferta porque el control de compatibilidad lee solo el primero.
+- `fecha_referencia` 31-10-2026: con 18-11-2026 el armado se corta (no hay índice de noviembre; error ya anotado el 16-11-2026).
+
+### Contraste con antecedentes
+- AESA/47 (5.963,65 c/u): esta queda un 6 % abajo, dentro del 15 %.
+- YPF/26 (6.890,14 c/u, 06-2025): esta queda más de 15 % abajo. Sin planilla ni plano de esa oferta no se puede explicar rubro por rubro; diferencias conocidas: 17 meses, diseño desconocido, y esta incluye RCP y RDO en el precio. Anotado en `justificaciones.antecedentes`.
+- Reparto del costo: 24 % materiales, 76 % MO y servicios (soldadura, montaje, ingeniería, calidad y END pesan más que el material en un filtro de 6").
+
+### Frenos abiertos (`frenos.py`)
+- requisitos: 22 consultas sin respuesta (C1–C3, C5–C12 e internas de garantía, pago y cauciones).
+- sin_precio: M24 bulonería 316 L, S09 PMI, S10 procedimiento carbono–inoxidable.
+- vencidas: 8 precios de lista de más de 180 días (Renard 12-2025, Taval lista 30).
+- pendientes_oferta: 11 datos entre corchetes (PRES, contacto, condición de pago, multas, opcionales, separación RCP/RDO, garantía de proceso).
+- Estimado sin fuente: 30 % del costo directo (justificado en `justificaciones.estimado`).
+
+### Errores y cambios de herramientas en esta sesión (anotados en `conocimiento/errores_y_lecciones.md`)
+- `lista_compras.py` se cortaba (variable usada antes de asignarla) con una fila de la transcripción sin ítem: corregido.
+- `verificar_computo.py` suponía que la posición de la lista es la primera columna de la transcripción; con una lista de diseño ITT se cortaba. Nuevo control para `origen_lista.tipo = diseno_itt` (descripción y material tal cual en el documento) y 2 casos en `test_errores_sembrados.py`.
+- `ficha_rubros.peso_equipo` lee "0,60 kg" como 60 kg (coma decimal): el peso daba 697 kg por filtro. Saqué los kg de las especificaciones; queda pendiente corregir la herramienta (y `web/src/ficha.js`).
+- Reescribí `requisitos.csv` con `csv.writer` y cambió las comillas de todo el archivo (lección del 29-10-2026): rehecho campo por campo.
+
+### Pendiente
+- **Revisión independiente** del cómputo contra la HD y del cambio en `verificar_computo.py` (no hecha en esta sesión).
+- Lista para Compras (`compras/COT26-0010-001_pedido_materiales_compras.xlsx`): cartucho Gora, bridas y caño Sch 160, válvulas CA11, PMI/LP/dureza, bulonería 316 L.
