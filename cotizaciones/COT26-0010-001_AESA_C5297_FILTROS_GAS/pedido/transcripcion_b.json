@@ -1,0 +1,326 @@
+{
+ "fuente": "Planilla Cotizacion INICIAL.xls (cotejada con su .csv y con conversión propia del .xls por LibreOffice); 5297-02-0600-IG-EM-RI-001.pdf págs. 3 y 4 (imagen + .txt); ANEXO 1 - Documentos del Proyecto/5297-02-0600-IG-EM-HD-001-E0.pdf pág. 3 (imagen + .txt); ANEXO 2- Especificaciones de YPF/ES__-0001033 C0100 Recipientes a Presión.pdf pág. 11, punto 5.1.9 (imagen + pdftotext)",
+ "lector": "B: agente Claude (lector B, sesión independiente), 18-11-2026, sin ver la lectura A",
+ "fecha": "2026-11-18",
+ "notas": "Planilla: las filas 4 a 10 están vacías y la última fila solo tiene 0 en Precio Total; no se transcriben. Las posiciones 1 y 2 remiten a la HD y la 3 a la RI, tal cual figura. RI punto 1: el Código-tag de los ítems 2 y 3 figura partido en dos renglones en el PDF ('RCP-' / 'FCC707708'); se unió sin espacio como 'RCP-FCC707708' y 'RDO-FCC707708'. Ítem 6 sin Código-tag (celda vacía), ítems 4 y 5 con '-'; ítems 4 a 6 sin Ident Code. HD materiales: 'Internos' figura subrayado como encabezado de la sub-tabla, sin material; Cañerías, Plataformas y Escaleras dicen 'N/A'. Se respetaron las variantes de escritura ('SA 516 Gr.70' vs 'SA-516 Gr. 70', 'SA-234 Gr.WPB' vs 'SA 234 WPB'). HD conexiones: 'c/válvula y tapón' sin espacio y 'c/ pescante y brida ciega' con espacio, tal cual; DN de M = '(Nota 9)'. RI punto 2: la viñeta 'Plantilla de pernos de anclaje' no tiene punto final y 'Diseño de lo pernos de anclaje.' dice 'lo' (sic). C0100 5.1.9: la frase de rompevórtices ocupa dos renglones en el PDF; se transcribe como una sola frase. No se transcribe la viñeta de 'Adicionalmente' (Modelo 3D) porque no es parte de la lista de 'incluirá'.",
+ "tablas": [
+  {
+   "titulo": "Planilla Cotizacion INICIAL",
+   "columnas": [
+    "Cesta",
+    "Posición",
+    "Producto",
+    "Descripción",
+    "Cantidad",
+    "Unidad"
+   ],
+   "filas": [
+    [
+     "23585543",
+     "1",
+     "RDO-707/8 FILTROS DE GAS DE EMERGENCIA *",
+     "FILTROS DE GAS DE EMERGENCIA 5297-02-0600-IG-EM-HD-001",
+     "1",
+     "UNI"
+    ],
+    [
+     "23585543",
+     "2",
+     "RCP-707/8 FILTROS DE GAS DE EMERGENCIA *",
+     "FILTROS DE GAS DE EMERGENCIA 5297-02-0600-IG-EM-HD-001",
+     "1",
+     "UNI"
+    ],
+    [
+     "23585543",
+     "3",
+     "FCC-707/8 FILTROS DE GAS DE EMERGENCIA *",
+     "FILTROS DE GAS DE EMERGENCIA 5297-02-0600-IG-EM-RI-001",
+     "2",
+     "UNI"
+    ]
+   ]
+  },
+  {
+   "titulo": "RI punto 1: ítems a proveer",
+   "columnas": [
+    "Item",
+    "Cant.",
+    "Código-tag",
+    "Descripción",
+    "Ident Code"
+   ],
+   "filas": [
+    [
+     "1",
+     "2",
+     "FCC-707/708",
+     "Filtro Gas de emergencia tipo cartucho",
+     "C529702IGEMFIL_001"
+    ],
+    [
+     "2",
+     "Lote",
+     "RCP-FCC707708",
+     "Listado detallado, indicando descripción, cantidad y precios unitarios (para cada equipo), de repuestos recomendados para precomisionado, comisionado y la puesta en marcha.",
+     "C529702IGEMFIL_002"
+    ],
+    [
+     "3",
+     "Lote",
+     "RDO-FCC707708",
+     "Listado detallado, indicando descripción, cantidad y precios unitarios (para cada equipo), de repuestos recomendados para dos (2) años de operación.",
+     "C529702IGEMFIL_003"
+    ],
+    [
+     "4",
+     "Valor diario",
+     "-",
+     "Costo opcional por asistencia técnica durante la instalación y puesta en marcha.",
+     ""
+    ],
+    [
+     "5",
+     "Valor unitario",
+     "-",
+     "Viaje al sitio.",
+     ""
+    ],
+    [
+     "6",
+     "Valor unitario",
+     "",
+     "Modelo 3D con atributos",
+     ""
+    ]
+   ]
+  },
+  {
+   "titulo": "HD pág. 3: Materiales (Nota 12)(Nota 15)(Nota 16)",
+   "columnas": [
+    "Parte",
+    "Material"
+   ],
+   "filas": [
+    [
+     "Envolvente",
+     "SA 516 Gr.70 / SA-106 Gr. B"
+    ],
+    [
+     "Cabezales",
+     "SA-234 Gr.WPB / SA-516 Gr.70"
+    ],
+    [
+     "Cuellos de conexiones",
+     "SA 106 Gr.B"
+    ],
+    [
+     "Bridas",
+     "SA 105"
+    ],
+    [
+     "Accesorios",
+     "SA 234 WPB"
+    ],
+    [
+     "Pernos / Espárragos",
+     "SA 193 B7 Zinc Bicromatizado"
+    ],
+    [
+     "Tuercas",
+     "SA 194 2H Zinc Bicromatizado"
+    ],
+    [
+     "Juntas",
+     "S/ Clase de Cañerías"
+    ],
+    [
+     "Patas/Pollera",
+     "SA 516 Gr.70 / SA 36"
+    ],
+    [
+     "Orejas de Izaje",
+     "SA 516 Gr.70"
+    ],
+    [
+     "Puesta a tierra",
+     "Inox."
+    ],
+    [
+     "Placa de identificación",
+     "AISI 304"
+    ],
+    [
+     "Clips",
+     "SA-516 Gr. 70"
+    ],
+    [
+     "Plataformas",
+     "N/A"
+    ],
+    [
+     "Escaleras",
+     "N/A"
+    ],
+    [
+     "Internos",
+     ""
+    ],
+    [
+     "Cañerías",
+     "N/A"
+    ],
+    [
+     "Soportes",
+     "SA-516 Gr. 70"
+    ],
+    [
+     "Bulonería",
+     "AISI 316 L"
+    ],
+    [
+     "Elemento filtrante",
+     "Celulósico"
+    ]
+   ]
+  },
+  {
+   "titulo": "HD pág. 3: Conexiones al equipo (Nota 4)(Nota 5) (Nota 7)",
+   "columnas": [
+    "Sigla",
+    "Cant.",
+    "Tipo",
+    "DN (in)",
+    "Clase",
+    "Sch.",
+    "Elev.",
+    "Proy.",
+    "Servicio",
+    "Notas"
+   ],
+   "filas": [
+    [
+     "A",
+     "1",
+     "WNRF",
+     "1",
+     "#150",
+     "(Nota 2)",
+     "(Nota 8)",
+     "(Nota 8)",
+     "ENTRADA DE GAS",
+     ""
+    ],
+    [
+     "B",
+     "1",
+     "WNRF",
+     "1",
+     "#150",
+     "(Nota 2)",
+     "(Nota 8)",
+     "(Nota 8)",
+     "SALIDA DE GAS",
+     ""
+    ],
+    [
+     "D",
+     "1",
+     "WNRF",
+     "¾",
+     "#150",
+     "(Nota 2)",
+     "(Nota 8)",
+     "(Nota 8)",
+     "DRENAJE",
+     "c/válvula y tapón"
+    ],
+    [
+     "M",
+     "1",
+     "WNRF",
+     "(Nota 9)",
+     "#150",
+     "(Nota 2)",
+     "(Nota 8)",
+     "(Nota 8)",
+     "TAPA DE CIERRE",
+     "c/ pescante y brida ciega"
+    ],
+    [
+     "F",
+     "1",
+     "NPT",
+     "¾",
+     "#3000",
+     "(Nota 2)",
+     "(Nota 8)",
+     "(Nota 8)",
+     "VENTEO",
+     "c/válvula y tapón"
+    ]
+   ]
+  },
+  {
+   "titulo": "RI punto 2: el alcance del suministro incluirá",
+   "columnas": [
+    "Texto"
+   ],
+   "filas": [
+    [
+     "Diseño según el código ASME sección VIII Div. 1, cálculos, suministro de materiales, fabricación, inspección, preparación de superficie y pintura, pruebas, ensamblaje, preparación para envío, transporte (según sea definido con EL COMPRADOR) y garantías (mecánica, y de proceso) de los ítems indicados en esta requisición de ingeniería, de acuerdo con las normas, especificaciones y estándares aplicables del proyecto e indicados en los documentos de referencia."
+    ],
+    [
+     "Patas / Pollera."
+    ],
+    [
+     "Internos (elementos filtrantes)."
+    ],
+    [
+     "Pescante, junta/O-ring y bulonería para las tapas."
+    ],
+    [
+     "Orejas de conexión a tierra en acero inoxidable."
+    ],
+    [
+     "Orejas de izaje."
+    ],
+    [
+     "Válvula para conexión de drenaje y venteo."
+    ],
+    [
+     "Diseño de lo pernos de anclaje."
+    ],
+    [
+     "Plantilla de pernos de anclaje"
+    ],
+    [
+     "Placa de identificación de acero inoxidable y su soporte según especificaciones de YPF."
+    ],
+    [
+     "Herramientas especiales para la instalación y/o mantenimiento (si es requerido)."
+    ],
+    [
+     "Documentos solicitados a EL FABRICANTE de acorde a lo especificado en el punto 8."
+    ],
+    [
+     "Repuestos para el precomisionado, comisionado y puesta en marcha según procedimiento IG.AR 40.00.140 – GESTION DE REPUESTOS."
+    ],
+    [
+     "Lista de desviaciones al paquete de requisición de ingeniería."
+    ]
+   ]
+  },
+  {
+   "titulo": "C0100 (ES__-0001033) 5.1.9, texto citado",
+   "columnas": [
+    "Texto"
+   ],
+   "filas": [
+    [
+     "Las conexiones de salida en cabezal inferior de recipientes verticales o separadores deben llevar rompevórtices."
+    ]
+   ]
+  }
+ ]
+}
