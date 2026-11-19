@@ -73,6 +73,14 @@ igual('sockolet 12"x3/4": se escala por la salida', precotizar.ajuste_similar((0
 sup = dict(precotizar.superficie_pintura([{"descripcion": 'Chapa para virola Ø55" (DI 1.280 mm) × 3,2 m × 2 1/4" (6.287 kg + 10% recortes)', "diametro": '55"', "cantidad": "6916", "unidad": "kg", "extremos": "BW", "serie_sch": ""}], 0))
 igual("virola en kg: π·D·L de una pieza", round(sup["envolvente"], 1), round(3.14159265 * 55 * 0.0254 * 3.2, 1))
 
+# peso escrito en la descripción o la especificación (ficha_rubros.peso_equipo): coma decimal y punto de miles con el
+# lector único (AESA COT26-0010-001, 18-11-2026: "0,60 kg" se leía 60 kg y el filtro daba 697 kg en lugar de ≈ 102)
+import ficha_rubros  # noqa: E402
+for txt, esperado in (("Tornillo (0,60 kg c/u)", 0.6), ("Brida ciega 3,69 kg", 3.69), ("Cabezal (417 kg)", 417.0),
+                      ("Virola 1.250 kg", 1250.0), ("Disco de refuerzo (24,4 kg c/u)", 24.4), ("Tapa 1.250,5 kg", 1250.5)):
+    it = {"pos": "1", "grupo": "material", "descripcion": "Pieza", "especificacion": txt, "cantidad": 2, "unidad": "un"}
+    igual(f"peso en el texto: {txt}", ficha_rubros.peso_equipo({"items": [it]})["kg"], round(2 * esperado, 1), 1e-9)
+
 if fallas:
     print(f"FALLAN {len(fallas)}:")
     for f in fallas:

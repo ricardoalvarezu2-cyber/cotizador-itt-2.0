@@ -30,7 +30,7 @@ import precotizar  # noqa: E402
 from catalogo_materiales import atributos, expandir, familia_de  # noqa: E402
 from controles_tablas import TEC, leer, leer_acc, peso_item  # noqa: E402
 from indice_proyectos import norm  # noqa: E402
-from numeros import a_vista, fmt, fmtg  # noqa: E402
+from numeros import a_vista, fmt, fmtg, numero  # noqa: E402
 
 RUBROS = {  # en el orden en que se muestran (pedido de Matías, 29-10-2026: un ítem por rubro de fabricación)
     "mo_estructura": ("Fabricación del skid (estructura)", "mo"),
@@ -272,9 +272,10 @@ def peso_equipo(cfg):
             rc = re.search(r"\+\s*(\d+)\s*% recortes", d)
             kg += it["cantidad"] / (1 + int(rc.group(1)) / 100) if rc else it["cantidad"]
             continue
-        m = re.search(r"(\d[\d.]*)\s*kg\b", f"{it['descripcion']} {it.get('especificacion', '')}")
-        if m:
-            kg += float(m.group(1).replace(".", "")) * it["cantidad"]
+        # con el lector único (numeros.py): "0,60 kg" son 0,6 y "1.250 kg" son 1250 (antes la coma se perdía: 18-11-2026)
+        m = re.search(r"(\d[\d.,]*)\s*kg\b", f"{it['descripcion']} {it.get('especificacion', '')}")
+        if m and numero(m.group(1)) is not None:
+            kg += numero(m.group(1)) * it["cantidad"]
             continue
         if es_estructura(it):
             pf = precotizar.perfil({"descripcion": it["descripcion"]})

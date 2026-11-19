@@ -448,7 +448,8 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 ## 18-11-2026 — El peso del filtro daba 697 kg en lugar de ≈ 102 kg
 - Qué pasó: `ficha_rubros.peso_equipo` suma el peso que una descripción o especificación dice en kg con la expresión `(\d[\d.]*)\s*kg`, sin coma decimal: "0,60 kg c/u" lo leyó como 60 kg y "3,69 kg" como 69 kg. Solo afectaba el USD/kg y el peso de la planilla, no el precio.
 - Corrección: saqué los kg de las especificaciones de la COT26-0010-001 (quedan en las fuentes y en `dimensionamiento.md`).
-- Pendiente: que `peso_equipo` (y `web/src/ficha.js`) lean el número con `numeros.py` (coma decimal) y una prueba con "0,60 kg".
+- Resuelto el 19-11-2026: `peso_equipo` lee el número con `numeros.numero` (expresión `(\d[\d.,]*)\s*kg`) y la página con `Ficha.numeroDoc`, copia de `numeros.leer_numero`; pruebas en `test_precotizar.py` ("0,60 kg", "3,69 kg", "(417 kg)", "1.250 kg", "24,4 kg", "1.250,5 kg") y en `web/probar_ficha.js` (paridad del lector con Python y peso). Fallan con el código viejo. Además el viejo leía "24,4 kg" como 4 kg (tomaba solo lo que sigue a la coma): en la COT26-0135-003 (separador CAMUZZI) el peso pasa de 3.699,5 a 3.672 kg al rearmarla (renglones 08, 09 y 29); no se rearmó en esta corrección para no arrastrar el ajuste por inflación de los antecedentes.
+- Lección: todo número que sale del texto de un documento se lee con `numeros.py` (o su copia en la página), nunca con `float(...replace(...))`; la expresión tiene que tomar coma y punto (`[\d.,]`).
 
 ## 18-11-2026 — Se repitieron dos errores ya anotados
 - `fecha_referencia` con el día de hoy (18-11-2026) cortó el armado con `KeyError: '2026-11'` (error del 16-11-2026, todavía sin el aviso claro): se usó 31-10-2026.

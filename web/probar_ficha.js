@@ -45,5 +45,13 @@ print(json.dumps({"cot":cfg,"py":fi}))`], { cwd: raiz, maxBuffer: 1 << 26 }).toS
   cmp("espesor_max", js.end.espesor_max_mm, py.end.espesor_max_mm, 1e-6);
   n++;
 }
+// lector de números de la página (numeroDoc) igual a numeros.leer_numero, y peso con coma decimal (AESA, 18-11-2026)
+const casos = ["0,60", "3,69", "417", "1.250", "24,4", "1.250,5", "4,413.92", "1.096.71", "4,500", "1.250.000", "28.500", "12.5", "0,904", "1,2.3,4", "x"];
+const pyNum = JSON.parse(execFileSync("python3", ["-c", `import json,sys; sys.path.insert(0,"herramientas"); from numeros import numero; print(json.dumps([numero(x) for x in json.loads(sys.argv[1])]))`, JSON.stringify(casos)], { cwd: raiz }).toString());
+casos.forEach((x, i) => { const a = Ficha.numeroDoc(x); if (a !== pyNum[i]) { ok = false; console.log(`FALLA numeroDoc("${x}"): página ${a} · Python ${pyNum[i]}`); } });
+for (const [txt, esp] of [["Tornillo (0,60 kg c/u)", 0.6], ["Brida ciega 3,69 kg", 3.69], ["Cabezal (417 kg)", 417], ["Virola 1.250 kg", 1250]]) {
+  const kg = Ficha.pesoEquipo({ items: [{ pos: "1", grupo: "material", descripcion: "Pieza", especificacion: txt, cantidad: 2, unidad: "un" }] }, datos).kg;
+  if (kg !== Math.round(20 * esp) / 10) { ok = false; console.log(`FALLA peso "${txt}": página ${kg}, se esperaba ${Math.round(20 * esp) / 10}`); }
+}
 console.log(ok ? `Ficha JS OK: igual a Python en ${n} cotizaciones (juntas, pulgadas, placas, kg y m²)` : "Ficha JS distinta de Python");
 process.exit(ok ? 0 : 1);

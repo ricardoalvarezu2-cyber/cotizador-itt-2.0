@@ -303,6 +303,21 @@ const Ficha = (() => {
     return { kgP, m2C, kgE, sin, faltan, aprox };
   }
 
+  // Número escrito en un documento, igual que numeros.leer_numero (lector único): 4.413,92 · 4,413.92 · 1.250 (miles) ·
+  // 0,60 y 4,500 (coma sola = decimal) · 1.096.71. null si no hay número.
+  function numeroDoc(v) {
+    const m = String(v ?? "").replace(/u\$s|usd|ars|\$/gi, "").trim().match(/-?\d[\d.,]*/);
+    if (!m) return null;
+    let x = m[0].replace(/^[.,]+|[.,]+$/g, "");
+    const nc = (x.match(/,/g) || []).length, np = (x.match(/\./g) || []).length;
+    if (nc && np) { const dec = x.lastIndexOf(",") > x.lastIndexOf(".") ? "," : "."; x = x.split(dec === "," ? "." : ",").join("").replace(dec, "."); }
+    else if (np > 1 || nc > 1) { const p = x.split(np ? "." : ","); x = p[p.length - 1].length === 3 ? p.join("") : p.slice(0, -1).join("") + "." + p[p.length - 1]; }
+    else if (np) { if (/^-?[1-9]\d{0,2}\.\d{3}$/.test(x)) x = x.replace(".", ""); }
+    else if (nc) x = x.replace(",", ".");
+    const r = Number(x);
+    return x !== "" && isFinite(r) ? r : null;
+  }
+
   // Peso del equipo para la planilla (ficha_rubros.peso_equipo): piping con tabla, estructura, renglones por kg y piezas con
   // su peso en la descripción; sin compras extra, repuestos, juntas ni instrumentos.
   function pesoEquipo(cot, datos) {
@@ -311,8 +326,8 @@ const Ficha = (() => {
       const d = norm(it.descripcion), u = norm(it.unidad);
       if (/completar|sobrante|compra minima|repuesto|junta|esparrago/.test(d) || String(it.pos || "").toUpperCase() === "INS" || INSTRUMENTOS.test(d)) continue;
       if (u === "kg") { const rc = d.match(/\+\s*(\d+)\s*% recortes/); kg += rc ? it.cantidad / (1 + +rc[1] / 100) : it.cantidad; continue; }  // sin el recorte
-      const m = `${it.descripcion} ${it.especificacion || ""}`.match(/(\d[\d.]*)\s*kg\b/);
-      if (m) { kg += parseFloat(m[1].replace(/\./g, "")) * it.cantidad; continue; }
+      const m = `${it.descripcion} ${it.especificacion || ""}`.match(/(\d[\d.,]*)\s*kg\b/), nm = m ? numeroDoc(m[1]) : null;
+      if (nm != null) { kg += nm * it.cantidad; continue; }  // "0,60 kg" son 0,6 y "1.250 kg" son 1250 (18-11-2026)
       if (ESTRUCTURA.test(d)) { const pf = perfil(datos, it.descripcion); if (pf && u.startsWith("m")) kg += pf[0] * it.cantidad; else sin.push(String(it.pos)); continue; }
       let at = it.at;
       if (at && !at.serie) {  // "150 x STD" en serie/sch del plano (como ficha_rubros.peso_equipo: de la especificación "Plano: Ø · serie/sch")
@@ -419,6 +434,6 @@ const Ficha = (() => {
     return n;
   }
 
-  return { calcular, completarAtributos, soldaduras, pesoItem, pesoEquipo, filasDe, norm, dnDe, schDe };
+  return { calcular, completarAtributos, soldaduras, pesoItem, pesoEquipo, numeroDoc, filasDe, norm, dnDe, schDe };
 })();
 if (typeof module !== "undefined") module.exports = Ficha;
