@@ -46,6 +46,11 @@ def largo_plano_m(desc):
     return numero(m.group(1)) / 1000 if m and numero(m.group(1)) is not None else None
 
 
+
+def error_largo(p, largo, esperado, cant):
+    """Mensaje cuando el largo comprado por metro no da el del plano (auditoría 19-11-2026: usaba largo.group(1) y se cortaba)."""
+    return f"Pos {p['pos']}: el plano pide {p['cantidad']} × {fmtg(largo * 1000)} mm = {fmt(esperado, 3)} m y el cómputo tiene {fmt(cant, 3)} m"
+
 # Columnas del documento del cliente → columna de lista_materiales_plano.csv (auditoría 30-10-2026: Ø, serie, material,
 # extremos y modelo también son del cliente; error #7 NPT-M por NPT-H)
 COLUMNA_LISTA = {"O": "diametro", "DIAMETRO": "diametro", "SCHSERIE": "serie_sch", "SCH": "serie_sch", "SERIE": "serie_sch",
@@ -307,7 +312,7 @@ def main(carpeta):
         if p.get("unidad", "un") == "un" and filas[0]["unidad"] == "m" and largo:
             esperado = largo * cantidad_plano(p["cantidad"])
             if abs(cant - esperado) > 1e-6:
-                errores.append(f"Pos {p['pos']}: el plano pide {p['cantidad']} × {largo.group(1)} mm = {fmtg(esperado)} m y el cómputo tiene {fmtg(cant)} m")
+                errores.append(error_largo(p, largo, esperado, cant))
         elif p.get("unidad", "un") == "un" and filas[0]["unidad"] != "un":
             errores.append(f"Pos {p['pos']}: el plano pide {p['cantidad']} un y el cómputo usa '{filas[0]['unidad']}'. "
                            "Si se compra por metro, la cantidad tiene que dar el largo del plano y el sobrante va en fila aparte")

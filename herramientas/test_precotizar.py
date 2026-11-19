@@ -96,6 +96,8 @@ igual('kg_de "1.250 kg c/u"', precotizar.kg_de({"descripcion": "Chapa 1.250 kg c
 igual('kg_de "1.250,5 kg c/u"', precotizar.kg_de({"descripcion": "Chapa 1.250,5 kg c/u", "diametro": ""})[0], 1250.5, 1e-9)
 igual('kg_de "590 kg c/u"', precotizar.kg_de({"descripcion": "Tapa 590 kg c/u", "diametro": ""})[0], 590.0, 1e-9)
 igual('verificar_computo.largo_plano_m "152,4 mm"', verificar_computo.largo_plano_m('Niple 1/2" x 152,4 mm'), 0.1524, 1e-9)
+igual("verificar_computo.error_largo con largo decimal", verificar_computo.error_largo({"pos": "7", "cantidad": "2"}, 0.1524, 0.3048, 0.3),
+      "Pos 7: el plano pide 2 × 152,4 mm = 0,305 m y el cómputo tiene 0,300 m")
 igual('verificar_computo.num de computo.csv "33.258" (formato interno)', verificar_computo.num("33.258"), 33.258, 1e-9)
 canos = ct.leer(ct.TEC / "canos_peso_superficie.csv")
 f12 = next(r for r in canos if r["dn_pulg"] == "0.5" and r["schedule"] == "80")
