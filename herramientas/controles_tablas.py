@@ -21,7 +21,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from numeros import fmt, fmtg  # noqa: E402
+from numeros import fmt, fmtg, numero  # noqa: E402
 from catalogo_materiales import atributos, expandir, familia_de  # noqa: E402
 from indice_proyectos import norm  # noqa: E402
 
@@ -207,10 +207,10 @@ def peso_tabla(it, at, fam, canos, bridas, acc, valv=()):
         if "inox" in norm(at.get("material", "")) or "316" in at.get("material", "") or "304" in at.get("material", ""):
             kg = float(fila["kg_m_inoxidable"])
         if fam == "NIP" or it["unidad"] != "m":
-            largo = re.search(r"(\d[\d.]*)\s?mm", norm(it["descripcion"] + " " + it.get("especificacion", "")))
-            if not largo:
+            largo = re.search(r"(\d[\d.,]*)\s?mm", norm(it["descripcion"] + " " + it.get("especificacion", "")))
+            if not largo or numero(largo.group(1)) is None:
                 return None, None, "niple sin largo"
-            l = float(largo.group(1).replace(".", "")) / 1000
+            l = numero(largo.group(1)) / 1000  # lector único: "152,4 mm" son 0,1524 m (19-11-2026)
             return kg * l, m2 * l, f"caño {fmtg(dn)}\" sch {sch} × {fmtg(l)} m (ASME B36.10, calculado)"
         return kg, m2, f"caño {fmtg(dn)}\" sch {sch} por metro (ASME B36.10, calculado)"
     if fam == "BRI" and dn and at.get("serie"):

@@ -642,7 +642,7 @@ def separar_renglon(original):
         if len(nums) != 1:
             continue
         n = nums[0].group(1)
-        v = float(n) if re.fullmatch(r"\d+\.\d{2}", n) else float(n.replace(".", "").replace(",", "."))  # "USD 26.04" es 26,04
+        v = numero(n)  # lector único: "USD 26.04" es 26,04, "USD 26.4" es 26,4 (antes 264) y "1.250,50" es 1250,5 (19-11-2026)
         texto = re.sub(r"\(?\s*(?:usd\s*)?" + re.escape(nums[0].group(1)) + r"(?:\s*c/u)?\s*\)?", "", seg, flags=re.I)
         texto = re.sub(r"^\W*(\d{1,3}\s+(?!\d+/))?|\s+a\s*$", "", texto).strip(" :,.-")  # "2 7/8\"" es diámetro, no cantidad
         if tramos and (texto.lower().startswith("de ") or re.match(r"\d", texto)):

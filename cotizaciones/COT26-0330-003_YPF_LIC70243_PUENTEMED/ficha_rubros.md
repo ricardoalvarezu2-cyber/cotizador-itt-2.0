@@ -1,6 +1,6 @@
 # Ficha por rubro — COT26-0330-003
 
-Generada por `herramientas/ficha_rubros.py` el 16-11-2026. Todo **por skid de medición**; la cantidad (1) multiplica al final.
+Generada por `herramientas/ficha_rubros.py` el 19-11-2026. Todo **por skid de medición**; la cantidad (1) multiplica al final.
 Sirve para pedir un precio global al tercero y para controlarlo contra el cálculo detallado.
 
 ## 1. MO de armado y soldadura del piping
@@ -9,7 +9,7 @@ Sirve para pedir un precio global al tercero y para controlarlo contra el cálcu
 - Pulgadas equivalentes de soldadura: **136,72**
 - kg de piping (caños, bridas, accesorios y válvulas con tabla): **1.122 kg** · bridas: 19
 - Diámetros soldados a tope: 4", 3", 1,5"
-- Sin peso (no suman kg): 13 Buje reducción 3/4"x1/2" #3000 NPT · Ø 3; 23 FIT-1800A / FE-1800A · Ø 3"; 24 PIT-1800A · Ø 1/2"; 25 TIT-1800A; 27 FQIT-1800A; 28 Válvula de purga 2" de la batea con nipl; 30 Chapa batea de contención; 32 Aislación y tracing eléctrico de la toma; 33 Placa de identificación AISI 316 160x160; 34 M2 · Ø 1/2"
+- Sin peso (no suman kg): 13 Buje reducción 3/4"x1/2" #3000 NPT · Ø 3; 28 Válvula de purga 2" de la batea con nipl; 30 Chapa batea de contención; 33 Placa de identificación AISI 316 160x160; 34 M2 · Ø 1/2"
 - **Costo por antecedentes.** Por antecedentes: USD 3.281,21 (1 renglón/es, con ajuste por inflación).
   - Por unidad: USD 24,00/pulgada eq. · USD 2,92/kg de piping · USD 131,25/junta a tope
 

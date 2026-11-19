@@ -208,9 +208,9 @@
     for (const it of S.doc.cot.items.filter(i => i.grupo === "material")) {
       const d = Busqueda.norm(it.descripcion + " " + (it.especificacion || ""));
       if (!/\bcano\b|\bniple|\btubo\b/.test(d)) continue;
-      const dn = parseFloat(String(it.plano?.diametro || "").replace(/"/g, "").replace(" 1/2", ".5")) || null, sch = (String(it.plano?.serie_sch || "").match(/\d+|STD|XS/i) || ["40"])[0].toUpperCase();
+      const dn = Ficha.dnDe(it.plano?.diametro) || null,  /* "1/2\"" es 0,5 (antes 1; 19-11-2026) */ sch = (String(it.plano?.serie_sch || "").match(/\d+|STD|XS/i) || ["40"])[0].toUpperCase();
       const fila = S.datos.canos.find(c => dn && Math.abs(c.dn - dn) < 1e-6 && (c.sch === sch || c.cl === sch));
-      const largo = it.unidad === "m" ? 1 : (parseFloat((d.match(/(\d[\d.]*)\s?mm/) || [])[1]?.replace(".", "")) || 0) / 1000;
+      const largo = it.unidad === "m" ? 1 : Ficha.largoM(d) || 0;  // lector único: "152,4 mm" (19-11-2026)
       if (fila && largo) m2 += fila.m2 * largo * it.cantidad;
     }
     return m2;

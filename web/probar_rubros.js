@@ -33,5 +33,8 @@ if (JSON.stringify(Motor.calcular(g, datos.indices).precio_unitario) !== antes) 
 const t = { ...cot, transporte: { largo_m: 6, ancho_m: 2.4, alto_m: 2.2 } };
 const tj = Rubros.transporte(t, 9081), tp = py(`c=json.load(sys.stdin); print(json.dumps(f.transporte(c, 9081)))`, t);
 if (tj.por_camion !== tp["por_camion"] || tj.viajes !== tp["viajes"] || tj.avisos.length !== tp["avisos"].length) falla(`transporte JS ${tj.por_camion}/${tj.viajes} · Python ${tp.por_camion}/${tp.viajes}`);
+// ficha aproximada: largo del niple con el lector único ("152,4 mm" daba 0,004 m) y Ø "1/2\"" = 0,5 (daba 1); 19-11-2026
+const fb = Rubros.fichaBasica({ parametros: {}, items: [{ pos: "1", grupo: "material", descripcion: 'Niple 1/2" x 152,4 mm', especificacion: "", cantidad: 2, unidad: "un", plano: { diametro: '1/2"', serie_sch: "80" } }] }, datos, null);
+if (Math.abs(fb.mo_piping.kg_piping - 2 * 1.616 * 0.1524) > 1e-9) falla(`fichaBasica niple 152,4 mm: ${fb.mo_piping.kg_piping} kg`);
 console.log(ok ? `Rubros JS OK: clasificación igual a Python en ${carpetas.length} cotizaciones; global y vuelta a detallado iguales; transporte ${tj.por_camion} por camión, ${tj.viajes} viaje(s)` : "Rubros JS distinto de Python");
 process.exit(ok ? 0 : 1);

@@ -46,7 +46,8 @@ RUBROS = {  # en el orden en que se muestran (pedido de Matías, 29-10-2026: un 
 # alto total 4,10 m. Más ancho o más alto: carga especial (permiso de Vialidad, escolta o carretón).
 CAMION = {"largo": 13.5, "ancho": 2.5, "piso": 1.2, "kg": 27000}
 LIMITE_ANCHO, LIMITE_ALTO = 2.60, 4.10
-INSTRUMENTOS = r"termometro|manometro|instrumento|transmisor|bloqueo y purga|vaina|termopozo|indicador|presostato|switch|\b[pt][itwe]-\d"
+INSTRUMENTOS = r"termometro|manometro|instrumento|transmisor|bloqueo y purga|vaina|termopozo|indicador|presostato|switch|\b(?:[pt][itwe]|(?:pd|[ptfl])q?(?:it|i|t))-\d"
+# tags ISA: PI, PT, TW, TE, PIT, TIT, FIT, FQIT, LIT, PDIT (19-11-2026). FE no: "Caño 3\" (tramos del medidor FE-1800A)" es caño
 ESTRUCTURA = r"estructura|perfileria|bastidor|\bskid\b|\bupn\b|\bipn\b|\bheb\b|\bhea\b|\bipe\b|angulo|planchuela"
 
 

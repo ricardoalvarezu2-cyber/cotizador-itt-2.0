@@ -9,7 +9,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 1 | Caño s/c BW SCH XS A106 Gr.B (323,8 x 12,70)  | 2,3 × 297,75 = 684,83 | 2,3 m × 215,01 + compra extra 1b = 860,04 | +26% | cot · Grupo Provemet · CAN-01435 · 2026-11-05 | más caro |
 | 2 | Caño c/c BW API 5L Gr.B (406,4 x 9,52 STD) 16 | 1,7 × 341,24 = 580,11 | 1,7 m × 248,98 + compra extra 2b = 497,96 | -14% | lista · Renard (cód. 1212) · CAN-01449 · 2025-12-26 | dentro de ±15% |
 | 3 | Tee normal BW SCH XS A234 WPB 12" | 3 × 1.457,38 = 4.372,14 | 3 un × 1.457,38 = 4.372,14 | 0% | lista · Cintolo Hnos. (cód. 6068) · ABW-03406 · 2025-02-17 | dentro de ±15% |
-| 4 | Tee de reducción BW SCH STD x XS A234 WPB 16" | 3 × 2.802,34 = 8.407,02 | 3 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-18 | SIN PRECIO en el catálogo |
+| 4 | Tee de reducción BW SCH STD x XS A234 WPB 16" | 3 × 2.802,34 = 8.407,02 | 3 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-19 | SIN PRECIO en el catálogo |
 | 5 | Brida WN RF 300 LB SCH XS A105 12" | 18 × 425,09 = 7.651,62 | 18 un × 210,79 = 3.794,22 | -50% | cot · Grupo Provemet · BRI-03413 · 2026-11-05 | más barato |
 | 6 | Brida WN RF 300 LB A105 16" | 2 × 680,00 = 1.360,00 | 2 un × 822,61 = 1.645,22 | +21% | cot · Grupo Provemet · BRI-05002 · 2026-10-29 | más caro (similar) |
 | 7 | Brida ciega RF 300 LB A105 12" | 6 × 477,53 = 2.865,18 | 6 un × 268,00 = 1.608,00 | -44% | cot · Bripetrol · BRI-01022 · 2026-11-03 | más barato |
@@ -19,7 +19,7 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 11 | Espárrago c/2 tuercas 1.125x186 B7/2H zincado | 288 × 9,59 = 2.761,92 | 288 un × 7,06 = 2.033,28 | -26% | cot · Grupo Provemet · JUN-05060 · 2026-11-05 | más barato (similar) · real: 288 = 18 bridas 12" × 16 espárragos (16 × 1 1/8" por brida 12" #300: correcto) |
 | 12 | Junta espiralada RF 4,5 mm 300 LB 1 1/2" | 3 × 7,00 = 21,00 | 3 un × 1,29 = 3,87 | -82% | cot · Miyashiro (MS Juntas) (cód. 2-031-0073)  · 2026-11-05 | más barato (similar) |
 | 13 | Junta espiralada RF 4,5 mm 300 LB 12" | 18 × 45,00 = 810,00 | 18 un × 9,31 = 167,58 | -79% | cot · MS Juntas · JUN-04924 · 2026-08-14 | más barato (similar) |
-| 14 | Junta espiralada RF 4,5 mm 300 LB 16" | 2 × 80,00 = 160,00 | 2 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-18 | SIN PRECIO en el catálogo |
+| 14 | Junta espiralada RF 4,5 mm 300 LB 16" | 2 × 80,00 = 160,00 | 2 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-19 | SIN PRECIO en el catálogo |
 | 15 | Niple s/c NPT SCH 80 L=100 mm 1 1/2" | 3 × 9,00 = 27,00 | 3 un × 8,15 = 24,45 | -9% | cot · Oil Metal (cód. NP0150NN0100806) · NIP-0 · 2026-10-30 | dentro de ±15% |
 | 16 | Niple s/c NPT SCH 80 L=100 mm 1/2" | 1 × 4,00 = 4,00 | 1 un × 20,00 = 20,00 | +400% | ant · Antecedentes puentes Taval/CGC s2000 · N · 2026-04-22 | más caro |
 | 17 | Niple s/c NPT SCH 80 L=100 mm 3/4" | 1 × 4,50 = 4,50 | 1 un × 36,74 = 36,74 | +716% | ant · Antecedentes puentes Taval/CGC s2000 · N · 2026-04-22 | más caro (similar) |

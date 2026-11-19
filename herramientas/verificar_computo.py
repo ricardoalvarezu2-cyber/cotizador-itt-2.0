@@ -27,14 +27,23 @@ import re
 import sys
 from datetime import date
 from pathlib import Path
-from numeros import fmt, fmtg, cantidad_plano
+from numeros import fmt, fmtg, cantidad_plano, numero
 
 
 def num(v):
+    """Número de computo.csv (formato interno: punto decimal, sin miles: "33.258" son 33,258 m). No usar para texto de
+    documentos: eso va con numeros.numero (19-11-2026: con numero, "33.258" m se leería 33258 m)."""
     v = str(v or "").strip().replace(" ", "")
     if "," in v and "." in v:
         v = v.replace(".", "").replace(",", ".")
     return float(v.replace(",", ".")) if v else None
+
+
+def largo_plano_m(desc):
+    """Largo en m de un renglón del plano ("Niple 1/2\" x 152,4 mm"): texto del cliente, con el lector único (antes "(\\d+) mm"
+    leía 4 mm; 19-11-2026)."""
+    m = re.search(r"(\d[\d.,]*)\s*mm", desc)
+    return numero(m.group(1)) / 1000 if m and numero(m.group(1)) is not None else None
 
 
 # Columnas del documento del cliente → columna de lista_materiales_plano.csv (auditoría 30-10-2026: Ø, serie, material,
@@ -294,9 +303,9 @@ def main(carpeta):
             errores.append(f"Pos {p['pos']} ({p['descripcion'][:40]}) no está en el cómputo")
             continue
         cant = sum(num(f["cant_por_puente"]) or 0 for f in filas)
-        largo = re.search(r"(\d+)\s*mm", p["descripcion"])
+        largo = largo_plano_m(p["descripcion"])
         if p.get("unidad", "un") == "un" and filas[0]["unidad"] == "m" and largo:
-            esperado = int(largo.group(1)) / 1000 * cantidad_plano(p["cantidad"])
+            esperado = largo * cantidad_plano(p["cantidad"])
             if abs(cant - esperado) > 1e-6:
                 errores.append(f"Pos {p['pos']}: el plano pide {p['cantidad']} × {largo.group(1)} mm = {fmtg(esperado)} m y el cómputo tiene {fmtg(cant)} m")
         elif p.get("unidad", "un") == "un" and filas[0]["unidad"] != "un":

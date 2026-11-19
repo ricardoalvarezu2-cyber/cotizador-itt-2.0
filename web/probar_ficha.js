@@ -53,5 +53,18 @@ for (const [txt, esp] of [["Tornillo (0,60 kg c/u)", 0.6], ["Brida ciega 3,69 kg
   const kg = Ficha.pesoEquipo({ items: [{ pos: "1", grupo: "material", descripcion: "Pieza", especificacion: txt, cantidad: 2, unidad: "un" }] }, datos).kg;
   if (kg !== Math.round(20 * esp) / 10) { ok = false; console.log(`FALLA peso "${txt}": página ${kg}, se esperaba ${Math.round(20 * esp) / 10}`); }
 }
+// largos en mm y tags de instrumentos con el lector único, igual que Python (auditoría 19-11-2026: "152,4 mm" daba 0,004 m y
+// PIT/TIT/FIT/FQIT se pesaban)
+const largos = ['Niple 1/2" x 152,4 mm', "Virola L 3.200 mm", "Niple 3/4 x 100mm", "Caño 2\" x 6 m", "Tubo 1.250,5 mm"];
+const pyL = JSON.parse(execFileSync("python3", ["-c", `import json,sys; sys.path.insert(0,"herramientas"); import precotizar as p; print(json.dumps([p.largo_m(x) for x in json.loads(sys.argv[1])]))`, JSON.stringify(largos)], { cwd: raiz }).toString());
+largos.forEach((x, i) => { const a = Ficha.largoM(x); if (a !== pyL[i]) { ok = false; console.log(`FALLA largoM("${x}"): página ${a} · Python ${pyL[i]}`); } });
+if (Ficha.largoM('Niple 1/2" x 152,4 mm') !== 0.1524) { ok = false; console.log("FALLA largoM 152,4 mm"); }
+const pn = Ficha.pesoItem({ descripcion: 'Niple 1/2" x 152,4 mm', especificacion: "", unidad: "un" }, { diametro: "0.5", schedule: "80" }, "NIP", datos)[0];
+if (Math.abs(pn - 1.616 * 0.1524) > 1e-9) { ok = false; console.log(`FALLA peso niple 152,4 mm: página ${pn}`); }
+for (const tag of ["PIT-101", "TIT-201", "FIT-301", "FQIT-401", "PI-1", "TW-2", "LIT-5", "PDIT-6"]) {
+  const kg = Ficha.pesoEquipo({ items: [{ pos: "9", grupo: "material", descripcion: `${tag} 1/2" NPT`, especificacion: "(2,5 kg)", cantidad: 1, unidad: "un" }] }, datos).kg;
+  if (kg !== 0) { ok = false; console.log(`FALLA instrumento ${tag}: página ${kg} kg, se esperaba 0`); }
+}
+if (Ficha.pesoEquipo({ items: [{ pos: "2", grupo: "material", descripcion: 'Caño 3" Sch 80 sin costura (tramos del medidor FE-1800A)', especificacion: "(10 kg)", cantidad: 1, unidad: "un" }] }, datos).kg !== 10) { ok = false; console.log("FALLA caño con FE-1800A: no se pesó"); }
 console.log(ok ? `Ficha JS OK: igual a Python en ${n} cotizaciones (juntas, pulgadas, placas, kg y m²)` : "Ficha JS distinta de Python");
 process.exit(ok ? 0 : 1);

@@ -82,6 +82,43 @@ for txt, esperado in (("Tornillo (0,60 kg c/u)", 0.6), ("Brida ciega 3,69 kg", 3
     it = {"pos": "1", "grupo": "material", "descripcion": "Pieza", "especificacion": txt, "cantidad": 2, "unidad": "un"}
     igual(f"peso en el texto: {txt}", ficha_rubros.peso_equipo({"items": [it]})["kg"], round(2 * esperado, 1), 1e-9)
 
+# Otros lectores de kg y mm del texto con el lector único (auditoría del 19-11-2026, después del arreglo de peso_equipo):
+# con el código viejo, "152,4 mm" daba 0,004 m, "1.250 kg c/u" 1,25 kg, "1.250,5 kg c/u" 250,5 kg, "1.5 kg" 15 kg,
+# "kg/cm2" se tomaba como peso, "USD 26.4" daba 264 y los tags PIT/TIT/FIT/FQIT no se reconocían como instrumentos.
+import controles_tablas as ct  # noqa: E402
+import lista_compras  # noqa: E402
+import verificar_computo  # noqa: E402
+import catalogo_materiales  # noqa: E402
+igual('largo_m "Niple 1/2\" x 152,4 mm"', precotizar.largo_m('Niple 1/2" x 152,4 mm'), 0.1524, 1e-9)
+igual('largo_m "L 3.200 mm"', precotizar.largo_m("Virola L 3.200 mm"), 3.2, 1e-9)
+igual('largo_virola "DI 1.280,5 mm × L 3.200 mm"', precotizar.largo_virola("Virola DI 1.280,5 mm × L 3.200 mm"), 3.2, 1e-9)
+igual('kg_de "1.250 kg c/u"', precotizar.kg_de({"descripcion": "Chapa 1.250 kg c/u", "diametro": ""})[0], 1250.0, 1e-9)
+igual('kg_de "1.250,5 kg c/u"', precotizar.kg_de({"descripcion": "Chapa 1.250,5 kg c/u", "diametro": ""})[0], 1250.5, 1e-9)
+igual('kg_de "590 kg c/u"', precotizar.kg_de({"descripcion": "Tapa 590 kg c/u", "diametro": ""})[0], 590.0, 1e-9)
+igual('verificar_computo.largo_plano_m "152,4 mm"', verificar_computo.largo_plano_m('Niple 1/2" x 152,4 mm'), 0.1524, 1e-9)
+igual('verificar_computo.num de computo.csv "33.258" (formato interno)', verificar_computo.num("33.258"), 33.258, 1e-9)
+canos = ct.leer(ct.TEC / "canos_peso_superficie.csv")
+f12 = next(r for r in canos if r["dn_pulg"] == "0.5" and r["schedule"] == "80")
+kg_n, _, _ = ct.peso_item({"descripcion": 'Niple 1/2" x 152,4 mm', "especificacion": "", "unidad": "un"},
+                          {"diametro": "0.5", "schedule": "80", "material": "A106"}, "NIP", canos, [], [], [])
+igual("controles_tablas.peso_item niple 152,4 mm", kg_n, float(f12["kg_m_carbono"]) * 0.1524, 1e-9)
+for desc, esperado in (("Skid 1.5 kg", 1.5), ("Skid 1.250 kg", 1250.0), ("Skid 2,75 kg", 2.75)):
+    kg_l, _ = lista_compras.kg_por_unidad({"descripcion": desc + " a 10 kg/cm2", "diametro": "", "serie_sch": "", "material": "", "extremos": ""},
+                                         {"unidad": "un", "cantidad": 1, "especificacion": ""})
+    igual(f"lista_compras.kg_por_unidad {desc}", kg_l, esperado, 1e-9)
+kg_l, _ = lista_compras.kg_por_unidad({"descripcion": "Regulador 10 kg/cm2", "diametro": "", "serie_sch": "", "material": "", "extremos": ""},
+                                     {"unidad": "un", "cantidad": 1, "especificacion": ""})
+igual("lista_compras.kg_por_unidad: kg/cm2 no es peso", kg_l, None)
+for txt, esperado in (("USD 26.4", 26.4), ("USD 26.04", 26.04), ("USD 1.250,50", 1250.5)):
+    sep = catalogo_materiales.separar_renglon(f'Válvula esférica 2" {txt}; Brida ciega 2" USD 40')
+    igual(f"catalogo_materiales.separar_renglon {txt}", sep and sep[0][1], esperado, 1e-9)
+for tag in ("PIT-101", "TIT-201", "FIT-301", "FQIT-401", "PI-1", "TW-2", "LIT-5", "PDIT-6"):
+    it = {"pos": "9", "grupo": "material", "descripcion": f"{tag} 1/2\" NPT", "especificacion": "(2,5 kg)", "cantidad": 1, "unidad": "un"}
+    igual(f"instrumento {tag}: no se pesa", ficha_rubros.peso_equipo({"items": [it]})["kg"], 0.0, 1e-9)
+it = {"pos": "2", "grupo": "material", "descripcion": 'Caño 3" Sch 80 sin costura (tramos del medidor FE-1800A)', "especificacion": "(10 kg)",
+      "cantidad": 1, "unidad": "un"}
+igual("caño que nombra el FE del medidor: se pesa", ficha_rubros.peso_equipo({"items": [it]})["kg"], 10.0, 1e-9)
+
 if fallas:
     print(f"FALLAN {len(fallas)}:")
     for f in fallas:

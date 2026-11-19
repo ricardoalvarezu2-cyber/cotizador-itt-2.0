@@ -26,7 +26,7 @@ from openpyxl import Workbook
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from numeros import FMT_TECNICO, celda_excel, fmt, fmtg  # noqa: E402
+from numeros import FMT_TECNICO, celda_excel, fmt, fmtg, numero  # noqa: E402
 import controles_tablas as ct  # noqa: E402
 from catalogo_materiales import atributos, expandir, familia_de  # noqa: E402
 from indice_proyectos import norm  # noqa: E402
@@ -51,9 +51,10 @@ def kg_por_unidad(p, it):
     kg, _, fuente = ct.peso_item({"descripcion": p.get("descripcion", ""), "especificacion": "", "unidad": it.get("unidad", "un")}, at, fam,
                                  ct.leer(ct.TEC / "canos_peso_superficie.csv"), ct.leer(ct.TEC / "bridas_peso.csv"),
                                  ct.leer_acc(), ct.leer(ct.TEC / "valvulas_peso.csv"))
-    m = re.search(r"(\d[\d.,]*)\s?kg", norm(it.get("especificacion", "") + " " + p.get("descripcion", "")))
-    if kg is None and m and it.get("unidad", "un") == "un":  # kilos escritos en el renglón (skid, chapa)
-        kg, fuente = float(m.group(1).replace(".", "").replace(",", ".")) / max(float(it.get("cantidad") or 1), 1), "kilos escritos en el renglón"
+    # con el lector único (numeros.py): "1.5 kg" es 1,5 y "1.250 kg" es 1250; "kg/cm2" es presión, no peso (19-11-2026)
+    m = re.search(r"(\d[\d.,]*)\s*kg\b(?!\s*/)", norm(it.get("especificacion", "") + " " + p.get("descripcion", "")))
+    if kg is None and m and numero(m.group(1)) is not None and it.get("unidad", "un") == "un":  # kilos escritos en el renglón (skid, chapa)
+        kg, fuente = numero(m.group(1)) / max(float(it.get("cantidad") or 1), 1), "kilos escritos en el renglón"
     return kg, fuente
 
 

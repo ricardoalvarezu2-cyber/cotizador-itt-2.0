@@ -18,6 +18,7 @@ const Rubros = (() => {
   };
   const CAMION = { largo: 13.5, ancho: 2.5, piso: 1.2, kg: 27000 }, LIMITE_ANCHO = 2.6, LIMITE_ALTO = 4.1;
   const ESTRUCTURA = /estructura|perfileria|bastidor|\bskid\b|\bupn\b|\bipn\b|\bheb\b|\bhea\b|\bipe\b|angulo|planchuela/;
+  const F = () => typeof Ficha !== "undefined" ? Ficha : require("./ficha.js");  // lector único de la página (Ficha.largoM)
   const norm = t => String(t || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
   function rubroDe(it) {
@@ -66,9 +67,9 @@ const Rubros = (() => {
       const d = norm(it.descripcion + " " + (it.especificacion || ""));
       if (ESTRUCTURA.test(norm(it.descripcion))) { if (norm(it.unidad) === "kg") kgE += it.cantidad; continue; }
       if (/\bcano\b|\bniple|\btubo\b/.test(d)) {
-        const dn = parseFloat(String(it.plano?.diametro || "").replace(/"/g, "").replace(" 1/2", ".5")) || null, sch = (String(it.plano?.serie_sch || "").match(/\d+|STD|XS/i) || ["40"])[0].toUpperCase();
+        const dn = F().dnDe(it.plano?.diametro) || null,  /* "1/2\"" es 0,5 (antes 1; 19-11-2026) */ sch = (String(it.plano?.serie_sch || "").match(/\d+|STD|XS/i) || ["40"])[0].toUpperCase();
         const f = datos.canos.find(c => dn && Math.abs(c.dn - dn) < 1e-6 && (c.sch === sch || c.cl === sch));
-        const largo = it.unidad === "m" ? 1 : (parseFloat((d.match(/(\d[\d.]*)\s?mm/) || [])[1]?.replace(".", "")) || 0) / 1000;
+        const largo = it.unidad === "m" ? 1 : F().largoM(d) || 0;  // lector único: "152,4 mm" (19-11-2026)
         if (f && largo) { kgP += f.kg * largo * it.cantidad; m2C += f.m2 * largo * it.cantidad; continue; }
       }
       const k = cot.kg_compras?.[String(it.pos)];

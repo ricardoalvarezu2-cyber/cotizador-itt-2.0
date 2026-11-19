@@ -15,7 +15,7 @@ const Ficha = (() => {
   const g2 = v => Number(v).toFixed(2).replace(/\.?0+$/, "").replace(".", ","); // como numeros.fmtg (sin miles: medidas chicas)
   const INTERNOS = /bafle|deflector|separador de niebla|interno|elemento filtrante|placa apoyo|viruta|refuerzo/;
   const LARGO_EQ_D = [[/valvula|\bvalv\b/, 6.0], [/\btee\b|\bte\b/, 3.0], [/codo 45|curva 45/, 1.2], [/\bcodo|\bcurva/, 2.4], [/reduc/, 1.5], [/brida/, 1.5], [/casquete|\bcap\b|tapa/, 1.0]];
-  const INSTRUMENTOS = /termometro|manometro|instrumento|transmisor|bloqueo y purga|vaina|termopozo|indicador|presostato|switch|\b[pt][itwe]-\d/;
+  const INSTRUMENTOS = /termometro|manometro|instrumento|transmisor|bloqueo y purga|vaina|termopozo|indicador|presostato|switch|\b(?:[pt][itwe]|(?:pd|[ptfl])q?(?:it|i|t))-\d/;  // tags ISA (ficha_rubros.INSTRUMENTOS; FE no: es caño del medidor)
   const ESTRUCTURA = /estructura|perfileria|bastidor|\bskid\b|\bupn\b|\bipn\b|\bheb\b|\bhea\b|\bipe\b|angulo|planchuela/;
   const OD_NPS = [[21.3, 0.5], [26.7, 0.75], [33.4, 1], [42.2, 1.25], [48.3, 1.5], [60.3, 2], [73.0, 2.5], [88.9, 3], [101.6, 3.5], [114.3, 4], [141.3, 5],
     [168.3, 6], [219.1, 8], [273.0, 10], [323.8, 12], [323.9, 12], [355.6, 14], [406.4, 16], [457.0, 18], [457.2, 18], [508.0, 20], [609.6, 24], [610.0, 24]];
@@ -29,12 +29,13 @@ const Ficha = (() => {
   }
   const partesSch = v => String(v ?? "").toUpperCase().split(/\s+X\s+|[/ ]|(?<=\d)X(?=\d)/).filter(p => p.replace(/^#+|#+$/g, "")).map(p => p.replace(/^#+|#+$/g, "").replace("SCH", ""));
   const schDe = v => partesSch(v).find(p => SCHEDULES.has(p)) || "";
-  const largoM = d => { const m = norm(d).match(/(\d[\d.]*)\s?mm/); return m ? parseFloat(m[1].replace(/\./g, "")) / 1000 : null; };
+  // largo en m de un "… x 152,4 mm" con el lector único (numeroDoc; antes la coma se perdía y daba 0,004 m: 19-11-2026)
+  const largoM = d => { const m = norm(d).match(/(\d[\d.,]*)\s?mm/), v = m ? numeroDoc(m[1]) : null; return v != null ? v / 1000 : null; };
   // largo de una virola: "× 3,2 m" o "L 3200 mm", nunca el diámetro "DI 1.280 mm" (precotizar.largo_virola)
   const largoVirola = d => {
     const t = norm(d), m = t.match(/(?<![\d.,])(\d+(?:,\d+)?)\s?m\b/);
     if (m) return parseFloat(m[1].replace(",", "."));
-    return largoM(t.replace(/\b(?:di|de|od|id|diam)\s?\d[\d.]*\s?mm/g, " "));
+    return largoM(t.replace(/\b(?:di|de|od|id|diam)\s?\d[\d.,]*\s?mm/g, " "));
   };
   const barraM = d => (dnDe(d) || 0) >= 3 ? 12.0 : 6.0;
   function espesorMm(r) {
@@ -251,9 +252,8 @@ const Ficha = (() => {
       let kg = f.kg; const m2 = f.m2;
       if (/inox|316|304/.test(norm(at.material || ""))) kg = f.kg * 1.0141;
       if (fam === "NIP" || it.unidad !== "m") {
-        const l = norm(it.descripcion + " " + (it.especificacion || "")).match(/(\d[\d.]*)\s?mm/);
-        if (!l) return [null, null, "niple sin largo"];
-        const L = parseFloat(l[1].replace(/\./g, "")) / 1000;
+        const L = largoM(it.descripcion + " " + (it.especificacion || ""));
+        if (L == null) return [null, null, "niple sin largo"];
         return [kg * L, m2 * L, `caño ${dn}" sch ${sch} × ${g2(L)} m`];
       }
       return [kg, m2, `caño ${dn}" sch ${sch} por metro`];
@@ -434,6 +434,6 @@ const Ficha = (() => {
     return n;
   }
 
-  return { calcular, completarAtributos, soldaduras, pesoItem, pesoEquipo, numeroDoc, filasDe, norm, dnDe, schDe };
+  return { calcular, completarAtributos, soldaduras, pesoItem, pesoEquipo, numeroDoc, largoM, filasDe, norm, dnDe, schDe };
 })();
 if (typeof module !== "undefined") module.exports = Ficha;

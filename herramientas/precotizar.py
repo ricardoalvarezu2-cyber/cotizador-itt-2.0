@@ -32,7 +32,7 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from numeros import fmt, fmtg, cantidad_plano  # noqa: E402
+from numeros import fmt, fmtg, cantidad_plano, numero  # noqa: E402
 from buscar_material import buscar  # noqa: E402
 from catalogo_materiales import unidad_norm  # noqa: E402
 from indice_proyectos import frac, norm  # noqa: E402
@@ -77,13 +77,14 @@ def largo_virola(desc):
     m = re.search(r"(?<![\d.,])(\d+(?:,\d+)?)\s?m\b", t)
     if m:
         return float(m.group(1).replace(",", "."))
-    t = re.sub(r"\b(?:di|de|od|id|diam)\s?\d[\d.]*\s?mm", " ", t)
+    t = re.sub(r"\b(?:di|de|od|id|diam)\s?\d[\d.,]*\s?mm", " ", t)
     return largo_m(t)
 
 
 def largo_m(desc):
-    m = re.search(r"(\d[\d.]*)\s?mm", norm(desc))
-    return float(m.group(1).replace(".", "")) / 1000 if m else None
+    """Largo en m de un "… x 152,4 mm" con el lector único (antes la coma se perdía y daba 0,004 m: 19-11-2026)."""
+    m = re.search(r"(\d[\d.,]*)\s?mm", norm(desc))
+    return numero(m.group(1)) / 1000 if m and numero(m.group(1)) is not None else None
 
 
 def texto_busqueda(r):
@@ -177,9 +178,9 @@ def acero_kg(r):
 def kg_de(r):
     """Kilos por unidad de una pieza de chapa o perfil: escritos ("590 kg c/u"), perfil por metro, o virola π·D·L·e·7850."""
     t = norm(r["descripcion"])
-    m = re.search(r"(\d+(?:[.,]\d+)?)\s?kg\s?(?:c/u|cada)", t)
-    if m:
-        return float(m.group(1).replace(",", ".")), "kg escritos en la descripción"
+    m = re.search(r"(\d[\d.,]*)\s?kg\s?(?:c/u|cada)", t)  # lector único: "1.250 kg c/u" son 1250 y "1.250,5" son 1250,5
+    if m and numero(m.group(1)) is not None:
+        return numero(m.group(1)), "kg escritos en la descripción"
     if re.search(r"\bvirola", t) and dn_de(r["diametro"]) and largo_virola(r["descripcion"]) and espesor_mm(r):
         D, L, e = dn_de(r["diametro"]) * 0.0254, largo_virola(r["descripcion"]), espesor_mm(r) / 1000
         return round(math.pi * D * L * e * 7850, 1), f"π × {fmt(D, 3)} m × {fmtg(L)} m × {fmt(e * 1000, 2)} mm × 7.850 kg/m³"
