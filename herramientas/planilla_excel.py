@@ -273,7 +273,10 @@ def escribir(cfg, carpeta, idx_rows, ruta=None):
     r = 6
     # 1. resultado
     barra(rs, r, "1. RESULTADO", 6); r += 1
-    res = [("PrecioUnitario", f"PRECIO UNITARIO POR {S.upper()}", "=ROUND(PrecioCalculado,2)", USD, "Redondeado a 2 decimales; es el que va a la oferta"),
+    pos_of = (cfg.get("_oferta") or {}).get("posiciones") or []  # oferta por posiciones (posiciones_oferta.py, 18-11-2026)
+    rot_pu = (f"PRECIO UNITARIO POR {S.upper()} CON REPUESTOS", "Incluye los renglones de los ítems " + ", ".join(str(x["item"]) for x in pos_of)
+              + ": no va a la oferta, que va por posiciones (posiciones_oferta.md)") if pos_of else (f"PRECIO UNITARIO POR {S.upper()}", "Redondeado a 2 decimales; es el que va a la oferta")
+    res = [("PrecioUnitario", rot_pu[0], "=ROUND(PrecioCalculado,2)", USD, rot_pu[1]),
            (None, f"Cantidad de {eq['plural']}", "=Cantidad", "0", ""),
            (None, "Flete y embalaje (por envío)", "=Flete", USD, "0 si no se incluye (entrega EXW)"),
            ("TotalOferta", "TOTAL DE LA OFERTA SIN IVA", "=PrecioUnitario*Cantidad+Flete", USD, "Precio unitario × cantidad + flete"),

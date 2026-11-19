@@ -321,7 +321,7 @@ def main():
             print("OK   posiciones de la oferta suman el total" if r else "FALLA posiciones de la oferta: sin posiciones")
             if not r:
                 fallas.append("posiciones de la oferta")
-            editar_json(c / "oferta.json", lambda d: d["posiciones"][1]["pos_cotizacion"].append("RCP"))
+            editar_json(c / "oferta.json", lambda d: next(x for x in d["posiciones"] if "RDO" in x["pos_cotizacion"])["pos_cotizacion"].append("RCP"))
             try:
                 with contextlib.redirect_stdout(io.StringIO()):
                     posiciones_oferta.main(c, tot)
@@ -329,6 +329,14 @@ def main():
                 print("FALLA renglón en dos posiciones de la oferta: no frenó")
             except SystemExit:
                 print("OK   renglón en dos posiciones de la oferta")
+            editar_json(c / "oferta.json", lambda d: next(x for x in d["posiciones"] if "RCP" in x["pos_cotizacion"]).update(pos_cotizacion=["RPC"]))  # código mal tipeado
+            try:
+                with contextlib.redirect_stdout(io.StringIO()):
+                    posiciones_oferta.main(c, tot)
+                fallas.append("posición de la oferta sin renglones")
+                print("FALLA posición de la oferta sin renglones: no frenó")
+            except SystemExit:
+                print("OK   posición de la oferta sin renglones (código mal tipeado)")
     paridad_pagina()
     print("\nTODO OK" if not fallas else f"\nFALLAN {len(fallas)}: {', '.join(fallas)}")
     return 1 if fallas else 0

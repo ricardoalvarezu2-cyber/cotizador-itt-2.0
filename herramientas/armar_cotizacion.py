@@ -194,11 +194,23 @@ def escribir_informe(cfg, carpeta, idx, adjuntos):
                      for a in cfg.get("antecedentes", []))
     pend = "\n".join(f'    <div class="bloque"><h3>{e(b["titulo"])}</h3><ol class="lista small">\n' + "\n".join(f"      <li>{x}</li>" for x in b["items"]) + "\n    </ol></div>"
                      for b in cfg.get("pendientes", []))
+    # oferta por posiciones (posiciones_oferta.py, 18-11-2026): el precio por equipo de este informe lleva los repuestos; se muestran las posiciones
+    import posiciones_oferta
+    po = posiciones_oferta.calcular(carpeta, calcular(cfg, idx)["total"])
+    eq_precio = e(eq["singular"]) + (" con repuestos (la oferta va por posiciones)" if po else "")
+    if po:
+        filas_po = "\n".join(f'      <tr><td>{e(str(f["item"]))}</td><td>{e(f["codigo"])}</td><td>{e(f["descripcion"])}</td><td class="n">{fmtg(f["cantidad"])} {e(f["unidad"])}</td>'
+                             f'<td class="n">{fmt(f["unitario"], 2)}</td><td class="n">{fmt(f["subtotal"], 2)}</td></tr>' for f in po["filas"])
+        pedido = (f'<section>\n  <div class="sec-head"><h2>Oferta por posiciones</h2><span class="eyebrow">posiciones_oferta.md · borrador, sin revisar</span></div>\n'
+                  '  <div class="bloque small"><p>La oferta va por posiciones de la planilla del cliente. El «precio por ' + e(eq["singular"]) + '» del resumen de abajo '
+                  'incluye los repuestos de los ítems ' + ", ".join(e(str(f["item"])) for f in po["filas"] if f["detalle"] or f["unidad"] != "un") + ': no es el unitario de la oferta.</p>\n'
+                  '  <table><thead><tr><th>Ítem</th><th>Código</th><th>Descripción</th><th class="n">Cant.</th><th class="n">Unitario USD</th><th class="n">Subtotal USD</th></tr></thead><tbody>\n'
+                  + filas_po + f'\n    </tbody><tfoot><tr><td colspan="5">Total sin IVA</td><td class="n">{fmt(po["total"], 2)}</td></tr></tfoot></table></div>\n</section>\n' + pedido)
     dias = cfg["plazo"]["dias"]
     ticks = "".join(f"<span>{round(dias * k / 4)}</span>" for k in range(5))
     params = {"FTV": 1.0, **{k: v for k, v in p.items() if k != "fecha_referencia"}}
     rep = {"TITULO_PAGINA": e(cfg["titulo_pagina"]), "HEADER": header, "HISTORIAL": hist, "PEDIDO": pedido, "AJUSTE": ajuste,
-           "EQ": e(eq["singular"]), "EQS": e(eq["plural"]), "N": str(p["N"]), "PLAZO_DIAS": str(dias), "PLAZO_TEXTO": e(cfg["plazo"]["texto"]),
+           "EQ": e(eq["singular"]), "EQ_PRECIO": eq_precio, "EQS": e(eq["plural"]), "N": str(p["N"]), "PLAZO_DIAS": str(dias), "PLAZO_TEXTO": e(cfg["plazo"]["texto"]),
            "PLAZO_NOTA": cfg["plazo"]["nota"], "TAREAS_JSON": json.dumps(cfg["plazo"]["tareas"], ensure_ascii=False), "TICKS": ticks,
            "FREF": fref, "FREF_TXT": fref_txt, "FLETE_ETIQUETA": e(cfg["flete"]["etiqueta"]), "FLETE_REF": cfg["flete"]["referencia_html"],
            "FLETE_CRITERIO": cfg["flete"]["criterio_html"], "N_POS": str(len({i["pos"] for i in cfg["items"] if i["grupo"] == "material" and i["pos"].isdigit()})),

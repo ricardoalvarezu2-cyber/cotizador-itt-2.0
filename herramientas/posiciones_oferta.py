@@ -29,8 +29,10 @@ def venta_unitaria(it, p, idx, fref):
     return base * p["FMO"]
 
 
-def calcular(carpeta):
-    """None si oferta.json no tiene posiciones; si no, {"filas": [...], "total": x}."""
+def calcular(carpeta, total_ref=None):
+    """None si oferta.json no tiene posiciones; si no, {"filas": [...], "total": x}. Con total_ref (total de la planilla), el unitario
+    del ítem principal se toma de (total − posiciones) / N, para que la oferta sume lo mismo que la planilla (sin centavos de
+    redondeo de por medio); el control de main() verifica que no se aparte del cálculo por renglón."""
     import armar_cotizacion as ac
     carpeta = Path(carpeta)
     ro = carpeta / "oferta.json"
@@ -60,15 +62,27 @@ def calcular(carpeta):
                 lineas.append({"descripcion": it.get("especificacion") or it["descripcion"], "cantidad": q, "unidad": it["unidad"],
                                "unitario": u, "subtotal": round(u * q, 2)})
         tot = round(sum(x["subtotal"] for x in lineas), 2)
+        if not lineas or tot <= 0:  # "RPC" mal tipeado: la posición quedaba en 0 y sus renglones pasaban al ítem principal sin aviso
+            sys.exit(f"ERROR: la posición {po['item']} ({po['codigo']}) de oferta.json no tiene renglones con precio en cotizacion.json "
+                     f"(pos_cotizacion {po['pos_cotizacion']}): corregir el código de posición")
         q = po.get("cantidad", 1)
         filas.append({"item": po["item"], "codigo": po["codigo"], "descripcion": po["descripcion"], "cantidad": q,
                       "unidad": po.get("unidad", "lote"), "unitario": round(tot / q, 2), "subtotal": tot,
                       "plazo": po.get("plazo_dias", it0.get("plazo_dias", "")), "detalle": lineas if po.get("detalle") else []})
+    if total_ref is not None:  # cerrar con el total de la planilla
+        pu_ref = round((total_ref - sum(f["subtotal"] for f in filas[1:])) / n, 2)
+        if abs(pu_ref - pu) > 0.01 * len(filas) + 1e-9:
+            sys.exit(f"ERROR: el unitario del ítem principal por renglón ({pu}) y el que cierra con la planilla ({pu_ref}) difieren más que el redondeo")
+        pu = pu_ref
+        filas[0].update(unitario=pu, subtotal=round(pu * n, 2))
+    if not principal or pu <= 0:
+        sys.exit("ERROR: el ítem principal de la oferta quedó sin renglones con precio")
+    filas.sort(key=lambda f: float(f["item"]) if str(f["item"]).replace(".", "", 1).isdigit() else 0)  # orden de la planilla del cliente
     return {"filas": filas, "total": round(sum(f["subtotal"] for f in filas), 2), "lineas": len(filas) + sum(len(f["detalle"]) for f in filas)}
 
 
 def main(carpeta, total_planilla=None):
-    r = calcular(carpeta)
+    r = calcular(carpeta, total_planilla)
     if r is None:
         return None
     out = ["# Precio por posición de la oferta", "", "Generado por `herramientas/posiciones_oferta.py` (mismo cálculo que la planilla, "

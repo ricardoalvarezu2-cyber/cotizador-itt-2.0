@@ -87,7 +87,8 @@
  },
  "historial_html": [
   "18-11-2026: primera versión con precios (borrador, sin revisar). Segunda lectura B hecha por otro agente y comparada; 3 diferencias resueltas a favor de B (alcance RI punto 2 y C0100 5.1.9).",
-  "18-11-2026: correcciones de la revisión independiente: RCP y RDO como posiciones 1 y 2 con listado por repuesto; PMI, procedimientos Nivel III, PQR carbono–inoxidable y bulonería 316 L costeados (estimados); cartucho a la referencia Gora de USD 160,70; Provemet sin bonificación y con su validez real; brida ciega, junta y espárragos en el drenaje; LP en 2 servicios; tercera junta de internos."
+  "18-11-2026: correcciones de la revisión independiente: RCP y RDO como posiciones 1 y 2 con listado por repuesto; PMI, procedimientos Nivel III, PQR carbono–inoxidable y bulonería 316 L costeados (estimados); cartucho a la referencia Gora de USD 160,70; Provemet sin bonificación y con su validez real; brida ciega, junta y espárragos en el drenaje; tercera junta de internos.",
+  "18-11-2026: ajustes de la auditoría de las correcciones: RDO 2 cartuchos + 2 juntas y RCP 1 + 1 por filtro (propuesta ITT, 1 recambio por año), LP 1 servicio, 2 procedimientos de END Nivel III (RT y PT), supuestos del PQR y de la PMI anotados; planilla e informe rotulan el unitario con repuestos y muestran las posiciones."
  ],
  "pedido": {
   "eyebrow": "Cesta 23585543 · RI 5297-02-0600-IG-EM-RI-001 E0 emitida 30-10-2026",
@@ -148,7 +149,7 @@
    "fecha": "25-03-2026",
    "que": "Mismos tags FCC-707/708 para la PC-01 (HD-003019 / RI-003017 de VCD25176), lote de 2",
    "precio": "USD 5.963,65 c/u (sin planilla de costo)",
-   "tomado_html": "Cartucho Gora OF-X-0001-00027549 (USD 32) como estimado; precio para el contraste"
+   "tomado_html": "Solo el precio, para el contraste. Su cotización Gora (cartucho Ø 42 × 86 mm, USD 32) es otra pieza y no se usa"
   },
   {
    "carpeta_html": "<b>YPF/26</b> · OE 376-25",
@@ -744,11 +745,11 @@
     {
      "tipo": "est",
      "precio": 160.7,
-     "proveedor": "ESTIMADO conservador: Gora, elemento filtrante de celulosa 5 μm a USD 160,70 c/u (cotización para un separador, 11-02-2026; conocimiento/comercial/plazos_proveedores.csv)",
-     "origen": "conocimiento/comercial/plazos_proveedores.csv",
+     "proveedor": "ESTIMADO conservador: Gora PPTO 27131 (11-02-2026): elemento filtrante de papel celulósico plisado con doble malla, retención 5 μm, Ø 115 × 158 mm, para filtro FM-3 S-600, USD 160,70 c/u (otra pieza)",
+     "origen": "fuentes_originales/ofertas_texto/CAMUZZI/30 - Separador Polvo y Líquido (2 unid) - Lic 22737/5.Proveedores 3ros/GORA - PPTO 27131 - ITT.pdf.txt",
      "fecha": "2026-02-11",
      "coincide": "similar",
-     "diferencia": "Pedir cotización a Gora con la HD: celulósico 10 μm absoluto Ø 63–70 × 254 con núcleo metálico; la referencia es otra medida (mayor)"
+     "diferencia": "Pedir cotización a Gora con la HD: celulósico 10 μm absoluto Ø 63–70 × 254 con núcleo metálico; la referencia es otra pieza (Ø 115 × 158, 5 μm)"
     },
     {
      "tipo": "cot",
@@ -1000,15 +1001,15 @@
    "pos": "RCP",
    "grupo": "material",
    "descripcion": "RCP-707/8 FILTROS DE GAS DE EMERGENCIA *",
-   "especificacion": "Elemento filtrante celulósico 99,9 % > 10 μm (pos 22), por filtro",
+   "especificacion": "Elemento filtrante celulósico 99,9 % > 10 μm",
    "cantidad": 1,
    "unidad": "un",
    "fuentes": [
     {
      "tipo": "est",
      "precio": 160.7,
-     "proveedor": "ESTIMADO: como la pos 22 (Gora, celulosa 5 μm, USD 160,70)",
-     "origen": "conocimiento/comercial/plazos_proveedores.csv",
+     "proveedor": "ESTIMADO: como la pos 22 (Gora PPTO 27131: papel celulósico 5 μm Ø 115 × 158 mm, USD 160,70; otra pieza)",
+     "origen": "fuentes_originales/ofertas_texto/CAMUZZI/30 - Separador Polvo y Líquido (2 unid) - Lic 22737/5.Proveedores 3ros/GORA - PPTO 27131 - ITT.pdf.txt",
      "fecha": "2026-02-11",
      "coincide": "similar",
      "diferencia": "pedir cotización a Gora con la HD (celulósico 10 μm absoluto Ø 63–70 × 254, núcleo metálico)"
@@ -1020,7 +1021,7 @@
    "pos": "RCP",
    "grupo": "material",
    "descripcion": "RCP-707/8 FILTROS DE GAS DE EMERGENCIA *",
-   "especificacion": "Junta de la tapa de cierre 6\" #150 (pos 6), por filtro",
+   "especificacion": "Junta de la tapa de cierre 6\" #150",
    "cantidad": 1,
    "unidad": "un",
    "fuentes": [
@@ -1040,15 +1041,15 @@
    "pos": "RDO",
    "grupo": "material",
    "descripcion": "RDO-707/8 FILTROS DE GAS DE EMERGENCIA *",
-   "especificacion": "Elemento filtrante celulósico 99,9 % > 10 μm (pos 22): 4 recambios en 2 años por filtro (recambio cada 6 meses, supuesto)",
-   "cantidad": 4,
+   "especificacion": "Elemento filtrante celulósico 99,9 % > 10 μm",
+   "cantidad": 2,
    "unidad": "un",
    "fuentes": [
     {
      "tipo": "est",
      "precio": 160.7,
-     "proveedor": "ESTIMADO: como la pos 22 (Gora, celulosa 5 μm, USD 160,70)",
-     "origen": "conocimiento/comercial/plazos_proveedores.csv",
+     "proveedor": "ESTIMADO: como la pos 22 (Gora PPTO 27131: papel celulósico 5 μm Ø 115 × 158 mm, USD 160,70; otra pieza)",
+     "origen": "fuentes_originales/ofertas_texto/CAMUZZI/30 - Separador Polvo y Líquido (2 unid) - Lic 22737/5.Proveedores 3ros/GORA - PPTO 27131 - ITT.pdf.txt",
      "fecha": "2026-02-11",
      "coincide": "similar",
      "diferencia": "pedir cotización a Gora con la HD (celulósico 10 μm absoluto Ø 63–70 × 254, núcleo metálico)"
@@ -1060,7 +1061,7 @@
    "pos": "RDO",
    "grupo": "material",
    "descripcion": "RDO-707/8 FILTROS DE GAS DE EMERGENCIA *",
-   "especificacion": "Junta de la tapa de cierre 6\" #150 (pos 6), 2 por filtro",
+   "especificacion": "Junta de la tapa de cierre 6\" #150",
    "cantidad": 2,
    "unidad": "un",
    "fuentes": [
@@ -1072,48 +1073,6 @@
      "fecha": "2026-01-15",
      "coincide": "similar",
      "diferencia": "4\" #300 en lugar de 6\" #150; tipo según CA11 (consulta C3)"
-    }
-   ]
-  },
-  {
-   "id": "M44",
-   "pos": "RDO",
-   "grupo": "material",
-   "descripcion": "RDO-707/8 FILTROS DE GAS DE EMERGENCIA *",
-   "especificacion": "Espárrago 3/4\" × 4\" A193 B7 zincado bicromatizado de la tapa (pos 7), 1 juego de 8 por filtro",
-   "cantidad": 8,
-   "unidad": "un",
-   "fuentes": [
-    {
-     "tipo": "cot",
-     "precio": 1.18,
-     "proveedor": "Como la pos 7: Industrias Delgado, espárrago 3/4\" × 4 1/2\" B7 zincado F1941 · JUN-01616",
-     "origen": "COT_ 0202600001556.pdf (Industrias Delgado, catálogo conocimiento/precios/catalogo_materiales.csv)",
-     "fecha": "2026-11-05",
-     "coincide": "similar",
-     "diferencia": "4 1/2\" en lugar de 4\"",
-     "validez_hasta": "2026-12-05"
-    }
-   ]
-  },
-  {
-   "id": "M45",
-   "pos": "RDO",
-   "grupo": "material",
-   "descripcion": "RDO-707/8 FILTROS DE GAS DE EMERGENCIA *",
-   "especificacion": "Tuerca 3/4\" A194 2H zincada bicromatizada de la tapa (pos 31), 16 por filtro",
-   "cantidad": 16,
-   "unidad": "un",
-   "fuentes": [
-    {
-     "tipo": "cot",
-     "precio": 0.36,
-     "proveedor": "Como la pos 31: Industrias Delgado, tuerca A194 2H 3/4\" zincado F1941 · JUN-01733",
-     "origen": "COT_ 0202600001556.pdf (Industrias Delgado, catálogo conocimiento/precios/catalogo_materiales.csv)",
-     "fecha": "2026-11-05",
-     "coincide": "igual",
-     "diferencia": "zincado amarillo F1941 = bicromatizado",
-     "validez_hasta": "2026-12-05"
     }
    ]
   },
@@ -1250,9 +1209,9 @@
    "id": "S07",
    "pos": "LP",
    "grupo": "servicio",
-   "descripcion": "Líquidos penetrantes 100 % en las soldaduras de las 4 conexiones y de las orejas de izaje (pasadas interior y exterior: 2 servicios para el lote)",
-   "especificacion": "2 servicios para los 2 filtros (ED(EP)-B-02.00 Tabla 2 nota 1: pasadas finales interior y exterior; 6.6.1 c y C0100 5.1.13) → 1 por filtro",
-   "cantidad": 1,
+   "descripcion": "Líquidos penetrantes 100 % en las soldaduras de las 4 conexiones y de las orejas de izaje (pasadas finales interior y exterior en la misma visita: 1 servicio para el lote)",
+   "especificacion": "1 servicio para los 2 filtros → 0,5 por filtro (ED(EP)-B-02.00 Tabla 2 nota 1, 6.6.1 c y C0100 5.1.13); supuesto: las pasadas interior y exterior se revisan en la misma visita",
+   "cantidad": 0.5,
    "unidad": "servicio",
    "fuentes": [
     {
@@ -1293,7 +1252,7 @@
    "pos": "PMI",
    "grupo": "servicio",
    "descripcion": "Identificación positiva de materiales (PMI): 100 % de los aleados (internos, bulonería y tierras AISI 316 / 316 L, placa) y 10 % del acero al carbono (ED(EP)-B-02.00 7.1.1), una visita para el lote",
-   "especificacion": "1 visita para los 2 filtros → 0,5 por filtro",
+   "especificacion": "1 visita para los 2 filtros → 0,5 por filtro (podrían ser 2: al recibir el material y en el equipo terminado)",
    "cantidad": 0.5,
    "unidad": "servicio",
    "fuentes": [
@@ -1312,9 +1271,9 @@
    "id": "S10",
    "pos": "PROC",
    "grupo": "servicio",
-   "descripcion": "Procedimientos escritos firmados por Nivel III (RC punto 4): WPS de soldadura y procedimientos de RT, PT y dureza (4 para el lote)",
-   "especificacion": "4 procedimientos para los 2 filtros → 2 por filtro",
-   "cantidad": 2,
+   "descripcion": "Procedimientos escritos de END firmados por Nivel III (RC punto 4): RT y PT (2 para el lote)",
+   "especificacion": "2 procedimientos para los 2 filtros → 1 por filtro. Supuesto: la WPS/PQR de soldadura la hace ITT (renglón PQR); la dureza la hace el inspector Nivel 2 dentro del servicio",
+   "cantidad": 1,
    "unidad": "procedimiento",
    "fuentes": [
     {
@@ -1324,7 +1283,7 @@
      "origen": "fuentes_originales/antonelli_end_2025-11.pdf",
      "fecha": "2025-11-03",
      "coincide": "similar",
-     "diferencia": "la lista es de procedimientos de END; para la WPS firmada por Nivel III de soldadura se toma el mismo valor",
+     "diferencia": "mismo servicio (procedimientos de END); lista de 11-2025",
      "reconfirmado": "2025-11-03"
     }
    ]
@@ -1334,7 +1293,7 @@
    "pos": "PQR",
    "grupo": "servicio",
    "descripcion": "Calificación ASME IX del procedimiento carbono–inoxidable (SA-106 B con AISI 316 L, aporte 309 L, raíz GTAW): probeta soldada y ensayos (un PQR para el lote)",
-   "especificacion": "0,5 por filtro: 8 h de soldador (probeta) + ensayos de tracción y plegado por un laboratorio",
+   "especificacion": "0,5 por filtro: 8 h de soldador (soldadura de la probeta) + ensayos de tracción y plegado por un laboratorio. No incluye el material de la probeta ni la calificación de soldadores (WPQ): supuesto, ITT tiene soldadores calificados ASME IX vigentes",
    "cantidad": 0.5,
    "unidad": "PQR",
    "fuentes": [
@@ -1396,12 +1355,12 @@
   "lugar_entrega": "Planta ITT S.A., Av. 12 de Octubre 4004, Quilmes Oeste, Bs. As.",
   "requisitos_generales": [
    "Cotizar en USD sin IVA, con plazo de entrega y validez de la oferta.",
-   "Certificados de material 3.1 (colada); YPF hace identificación positiva del 10 %.",
+   "Certificados de material 3.1 (colada); ITT hace identificación positiva (PMI) del 100 % de los aleados y del 10 % del carbono (ED(EP)-B-02.00 7.1.1).",
    "Indicar cualquier diferencia con lo pedido (serie, schedule, material, extremos, modelo)."
   ],
   "notas": {
    "1": "1,2 m para los 2 filtros; Provemet cotiza por tira de 12 m (77,63 USD/m sin bonificar): pedir tramo cortado o comprar la tira con sobrante a stock",
-   "22": "Celulósico 99,9 % > 10 μm absoluto, Ø 63–70 × 254, núcleo y tapas metálicos, apto 90 °C e hidrocarburo líquido; pedir ficha con caudal y ΔP; cantidad total 2 + repuestos (RCP 2, RDO 8)",
+   "22": "Celulósico 99,9 % > 10 μm absoluto, Ø 63–70 × 254, núcleo y tapas metálicos, apto 90 °C e hidrocarburo líquido; pedir ficha con caudal y ΔP; cantidad total 2 + repuestos (RCP 2, RDO 4)",
    "14": "Esperar la clase CA11 (Anexo I de L0200)",
    "20": "Esperar la clase CA11 (Anexo I de L0200)",
    "8": "Sch 160 (pasaje de 1\" Sch 160)",
@@ -1465,7 +1424,7 @@
   "motivo": "El cliente no da lista ni dimensiones (HD notas 2, 4, 8, 9 y 10): la lista es el diseño preliminar de ITT (dimensionamiento.md); las descripciones y materiales son el texto literal de la HD y la RI (pedido/transcripcion.json y transcripcion_b.json)."
  },
  "justificaciones": {
-  "antecedentes": "Ningún antecedente de filtros de gas YPF/AESA tiene planilla de costo: se compara precio de venta del ítem del filtro (pos 3, posiciones_oferta.md), sin repuestos. Queda un 33 % arriba de AESA/47 (25-03-2026, mismos tags para la PC-01, USD 5.963,65 c/u, alcance no detallado) y un 15 % arriba de YPF/26 (18-06-2025, FCC707708 PC C5064, USD 6.890,14 c/u; RDO y RCP aparte). Sin planilla ni plano de esas ofertas no se puede abrir rubro por rubro. Lo que esta cotización carga y no se sabe si ellas cargaban: PMI 100 % de aleados y 10 % de carbono, procedimientos firmados por Nivel III, PQR carbono–inoxidable, 2 servicios de LP, dureza, ingeniería y calidad (30 + 20 h por filtro, criterio ITT) y el cartucho a la referencia más alta de Gora (USD 160,70). El costo se apoya en la planilla TAVAL/40 (filtros FM2/FM3 de taller, USD 4.483,97 por filtro FM2 #300 con RX 100 %).",
+  "antecedentes": "Ningún antecedente de filtros de gas YPF/AESA tiene planilla de costo: se compara precio de venta del ítem del filtro (pos 3, posiciones_oferta.md), sin repuestos. Queda un 20 % arriba de AESA/47 (25-03-2026, mismos tags para la PC-01, USD 5.963,65 c/u, alcance no detallado) y un 3 % arriba de YPF/26 (18-06-2025, FCC707708 PC C5064, USD 6.890,14 c/u; RDO y RCP aparte). Sin planilla ni plano de esas ofertas no se puede abrir rubro por rubro. Lo que esta cotización carga y no se sabe si ellas cargaban: PMI 100 % de aleados y 10 % de carbono, procedimientos de END firmados por Nivel III, PQR carbono–inoxidable, LP, dureza, ingeniería y calidad (30 + 20 h por filtro, criterio ITT) y el cartucho a la referencia más alta de Gora (USD 160,70). El costo se apoya en la planilla TAVAL/40 (filtros FM2/FM3 de taller, USD 4.483,97 por filtro FM2 #300 con RX 100 %).",
   "estimado": "Borrador: cartucho, válvula de drenaje, internos, PMI, PQR carbono–inoxidable, bulonería 316 L y repuestos estimados hasta que respondan Gora y el cliente (clase CA11); las horas de ingeniería y calidad son criterio ITT. Se listan en pendientes y en la lista para Compras."
  }
 }

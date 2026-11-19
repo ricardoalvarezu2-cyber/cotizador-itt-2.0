@@ -147,10 +147,14 @@ def escribir(wb, cfg, filas, CAT, fecha):
     # ---- encabezado (filas 1–10)
     datos = dict(cfg.get("pedido", {}).get("datos_html", []) or [])
     cli = (cfg.get("cliente") or {}).get("nombre", "")
+    pos_of = of.get("posiciones") or []  # oferta por posiciones (posiciones_oferta.py, 18-11-2026): el unitario de esta hoja lleva los repuestos
+    it_of = of.get("item") or {}
+    item_txt = " · ".join(f"{x.get('item', '')} {x.get('codigo', '')}".strip() for x in sorted(pos_of + [it_of], key=lambda x: float(x.get("item") or 0))) if pos_of else it_of.get("item", "")
+    nombre_txt = (it_of.get("descripcion") or cfg.get("titulo", "")) + (f" + repuestos de los ítems {', '.join(str(x['item']) for x in pos_of)}: precio por {eq['singular']} con repuestos; la oferta va por posiciones" if pos_of else "")
     enc = [("CLIENTE", cli), ("PEDIDO DE PRECIOS", (of.get("cliente") or {}).get("referencia") or cfg.get("pedido", {}).get("eyebrow", "")),
            ("REFERENCIA", (of.get("cliente") or {}).get("proyecto") or cfg.get("titulo", "")),
            ("PRESUPUESTO", f"{cfg['codigo']} {cfg.get('revision', '')} · {(of.get('oferta') or {}).get('numero', '')}".strip(" ·")),
-           ("ÍTEM", (of.get("item") or {}).get("item", "")), ("NOMBRE", (of.get("item") or {}).get("descripcion") or cfg.get("titulo", "")),
+           ("ÍTEM", item_txt), ("NOMBRE", nombre_txt),
            ("CANTIDAD", f"{p['N']} {eq['plural'] if p['N'] != 1 else eq['singular']}"),
            ("FECHA RECEPCION PED COTIZACION", cfg.get("fecha_recepcion", "")), ("FECHA DE VENCIMIENTO DE COTIZACION", cfg.get("fecha_vencimiento", "")),
            ("PLANO / ER", cfg.get("plano") or datos.get("Documento") or datos.get("Documentos", ""))]
@@ -252,7 +256,7 @@ def escribir(wb, cfg, filas, CAT, fecha):
     ws.merge_cells(start_row=rt, start_column=6, end_row=rt, end_column=7)
     x = ws.cell(rt, 6, "Total U$D"); x.font = F(size=18, bold=True); x.fill = AMA; x.alignment = Alignment(horizontal="center"); x.border = BM
     x = ws.cell(rt, 8, "=TotalOferta"); x.font = F(size=18, bold=True); x.fill = AMA; x.number_format = "#,##0.00"; x.alignment = Alignment(horizontal="center"); x.border = BM
-    ws.cell(rt + 1, 6, "Precio unitario de la oferta (redondeado):").font = F(size=10, italic=True)
+    ws.cell(rt + 1, 6, f"Precio unitario por {eq['singular']} con repuestos (la oferta va por posiciones):" if pos_of else "Precio unitario de la oferta (redondeado):").font = F(size=10, italic=True)
     x = ws.cell(rt + 1, 8, "=PrecioUnitario"); x.number_format = "#,##0.00"; x.font = F(size=10, italic=True)
     # ---- plazo y entrega
     rp = rt + 3

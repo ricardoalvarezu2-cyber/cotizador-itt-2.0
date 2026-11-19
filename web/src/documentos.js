@@ -233,7 +233,10 @@ const Documentos = (() => {
     put(rs, "A4", "Hojas: Planilla ITT (para la dirección) · Resumen · Materiales · MO y servicios · Antecedentes y desvíos · Índices", GRIS);
     let r = 6;
     barra(rs, r++, "1. RESULTADO", 6);
-    [["PrecioUnitario", `PRECIO UNITARIO POR ${S.toUpperCase()}`, "ROUND(PrecioCalculado,2)", U, "Redondeado a 2 decimales; es el que va a la oferta"],
+    const posOf = (of && of.posiciones) || [];  // oferta por posiciones (posiciones_oferta.py, 18-11-2026)
+    const rotPu = posOf.length ? [`PRECIO UNITARIO POR ${S.toUpperCase()} CON REPUESTOS`, "Incluye los renglones de los ítems " + posOf.map(x => String(x.item)).join(", ") + ": no va a la oferta, que va por posiciones (posiciones_oferta.md)"]
+      : [`PRECIO UNITARIO POR ${S.toUpperCase()}`, "Redondeado a 2 decimales; es el que va a la oferta"];
+    [["PrecioUnitario", rotPu[0], "ROUND(PrecioCalculado,2)", U, rotPu[1]],
      [null, `Cantidad de ${eq.plural}`, "Cantidad", "0", ""], [null, "Flete y embalaje (por envío)", "Flete", U, "0 si no se incluye (entrega EXW)"],
      ["TotalOferta", "TOTAL DE LA OFERTA SIN IVA", "PrecioUnitario*Cantidad+Flete", U, "Precio unitario × cantidad + flete"],
      [null, `Costo por ${S}`, "CostoUnitario", U, "Sección 2"], [null, "Margen sobre el precio", "IFERROR(1-CostoUnitario/PrecioCalculado,0)", "0.0%", ""],
@@ -404,8 +407,11 @@ const Documentos = (() => {
     const AN = (o = {}) => ({ font: { name: "Arial Narrow", sz: 11, ...o } });
     const merges = [];
     const datosP = Object.fromEntries((cot.pedido?.datos_html || []).map(x => [x[0], x[1]]));
+    const posOf = of.posiciones || [], itOf = of.item || {};
+    const itemTxt = posOf.length ? [...posOf, itOf].sort((x, y) => (parseFloat(x.item) || 0) - (parseFloat(y.item) || 0)).map(x => `${x.item || ""} ${x.codigo || ""}`.trim()).join(" · ") : itOf.item;
+    const nombreTxt = (itOf.descripcion || cot.titulo) + (posOf.length ? ` + repuestos de los ítems ${posOf.map(x => String(x.item)).join(", ")}: precio por ${eq.singular} con repuestos; la oferta va por posiciones` : "");
     const enc = [["CLIENTE", cot.cliente?.nombre], ["PEDIDO DE PRECIOS", of.cliente?.referencia || cot.pedido?.eyebrow], ["REFERENCIA", of.cliente?.proyecto || cot.titulo],
-      ["PRESUPUESTO", [`${cot.codigo} ${cot.revision || ""}`.trim(), of.oferta?.numero].filter(Boolean).join(" · ")], ["ÍTEM", of.item?.item], ["NOMBRE", of.item?.descripcion || cot.titulo],
+      ["PRESUPUESTO", [`${cot.codigo} ${cot.revision || ""}`.trim(), of.oferta?.numero].filter(Boolean).join(" · ")], ["ÍTEM", itemTxt], ["NOMBRE", nombreTxt],
       ["CANTIDAD", `${p.N} ${p.N !== 1 ? eq.plural : eq.singular}`], ["FECHA RECEPCION PED COTIZACION", cot.fecha_recepcion], ["FECHA DE VENCIMIENTO DE COTIZACION", cot.fecha_vencimiento],
       ["PLANO / ER", cot.plano || datosP.Documento || datosP.Documentos]];
     enc.forEach(([k, v], i) => {
@@ -478,7 +484,7 @@ const Documentos = (() => {
     put(ws, A(6, rT + 2), "Total U$D", { ...AN({ sz: 18, bold: true }), ...fill("FFFF00"), alignment: { horizontal: "center" }, border: BM }); put(ws, A(7, rT + 2), "", { ...fill("FFFF00"), border: BM });
     merges.push({ s: { r: rT + 1, c: 5 }, e: { r: rT + 1, c: 6 } });
     put(ws, A(8, rT + 2), { f: "TotalOferta" }, { ...AN({ sz: 18, bold: true }), ...fill("FFFF00"), alignment: { horizontal: "center" }, border: BM }, "#,##0.00");
-    put(ws, A(6, rT + 3), "Precio unitario de la oferta (redondeado):", AN({ sz: 10, italic: true })); put(ws, A(8, rT + 3), { f: "PrecioUnitario" }, AN({ sz: 10, italic: true }), "#,##0.00");
+    put(ws, A(6, rT + 3), posOf.length ? `Precio unitario por ${eq.singular} con repuestos (la oferta va por posiciones):` : "Precio unitario de la oferta (redondeado):", AN({ sz: 10, italic: true })); put(ws, A(8, rT + 3), { f: "PrecioUnitario" }, AN({ sz: 10, italic: true }), "#,##0.00");
     const pz = cot.plazo || {}, entrega = p.TRANS ? cot.flete?.etiqueta || "" : "EXW, ITT SA, Av. 12 de Octubre 4004, Quilmes Oeste, AMBA.";
     [[rp, `Plazo de entrega : ${pz.dias ?? ""} días ${pz.texto || ""}`.trim()], [rp + 1, `Entrega: ${entrega}`]].forEach(([rr, t]) => {
       for (let j = 1; j <= 8; j++) put(ws, A(j, rr), j === 1 ? t : "", { ...AN({ sz: 14, bold: true }), ...fill("FCD5B4") });

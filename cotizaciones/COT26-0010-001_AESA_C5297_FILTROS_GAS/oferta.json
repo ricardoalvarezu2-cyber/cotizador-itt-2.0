@@ -58,7 +58,7 @@
    "Internos (tubo de salida, asiento y platillo) en AISI 316 L, sin sobreespesor de corrosión (C0100 5.1.4), y rompevórtice de planchuela AISI 316 L sobre el drenaje (C0100 5.1.9) (consultas C6 y C11).",
    "La ED(EP)-C-01.08 (filtros de líquido) no se aplica en lo que contradice la hoja de datos y el P&ID: sin manómetros, transmisor de presión diferencial, doble válvula de drenaje ni válvulas de alivio (consulta C7).",
    "Elemento filtrante: medida, cantidad y pérdida de carga los garantiza el fabricante del cartucho; condiciones de proceso tomadas de la hoja de datos (consulta C1 por la diferencia de caudal y presión con el P&ID).",
-   "Repuestos RCP (ítem 2) y RDO (ítem 1): propuesta de ITT según IG.AR 40.00.140, con el listado detallado y precio unitario por repuesto en la Oferta Económica (RCP: 1 cartucho y 1 junta de tapa por filtro; RDO: 4 cartuchos, 2 juntas de tapa y un juego de espárragos y tuercas de la tapa por filtro).",
+   "Repuestos RDO (ítem 1) y RCP (ítem 2): propuesta de ITT según IG.AR 40.00.140, con el listado detallado y el precio unitario de cada repuesto en la Oferta Económica. RDO: 2 cartuchos y 2 juntas de tapa por filtro (un recambio por año); RCP: 1 cartucho y 1 junta de tapa por filtro. Cantidades propuestas por ITT; se ajustan a la frecuencia de uso que indique el cliente.",
    "Placa de identificación según PE(EP)-C-01.00.01 / C0100 Anexo I, no recibidos (consulta C8).",
    "Consultas abiertas al cliente: C1, C2, C3, C5, C6, C7, C8, C9, C10, C11 y C12 (ver lista adjunta). Las respuestas pueden modificar el precio y el plazo.",
    "Clips (hoja de datos, tabla de materiales: SA-516 Gr. 70): no aplican, porque los filtros no llevan aislación, plataformas ni escaleras.",
@@ -85,7 +85,7 @@
    "Radiografía por puntos, líquidos penetrantes, dureza, identificación positiva de materiales y prueba hidráulica con registro.",
    "Granallado y pintura según ES__-0002657 (B0600), sistema 201.",
    "Elemento filtrante colocado, pescante, junta y bulonería de la tapa, válvulas y tapones de drenaje y venteo.",
-   "Repuestos RCP y RDO por filtro.",
+   "Repuestos RDO (ítem 1) y RCP (ítem 2), con listado en la Oferta Económica.",
    "Data book y embalaje para exportación terrestre."
   ]
  },
@@ -98,22 +98,22 @@
  },
  "posiciones": [
   {
-   "item": "2",
-   "codigo": "RCP-707/8",
-   "descripcion": "RCP-707/8 FILTROS DE GAS DE EMERGENCIA * (repuestos para precomisionado, comisionado y puesta en marcha de los 2 filtros; listado detallado abajo)",
+   "item": "1",
+   "codigo": "RDO-707/8",
+   "descripcion": "RDO-707/8 FILTROS DE GAS DE EMERGENCIA * (repuestos para dos años de operación de los 2 filtros; listado detallado en la Oferta Económica)",
    "pos_cotizacion": [
-    "RCP"
+    "RDO"
    ],
    "cantidad": 1,
    "unidad": "lote",
    "detalle": true
   },
   {
-   "item": "1",
-   "codigo": "RDO-707/8",
-   "descripcion": "RDO-707/8 FILTROS DE GAS DE EMERGENCIA * (repuestos para dos años de operación de los 2 filtros; listado detallado abajo)",
+   "item": "2",
+   "codigo": "RCP-707/8",
+   "descripcion": "RCP-707/8 FILTROS DE GAS DE EMERGENCIA * (repuestos para precomisionado, comisionado y puesta en marcha de los 2 filtros; listado detallado en la Oferta Económica)",
    "pos_cotizacion": [
-    "RDO"
+    "RCP"
    ],
    "cantidad": 1,
    "unidad": "lote",

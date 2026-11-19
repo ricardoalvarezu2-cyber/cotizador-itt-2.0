@@ -1,6 +1,6 @@
 # Bitácora COT26-0010-001 · AESA (YPF) · C5297 PC-02 LANor · 2 filtros de gas de emergencia FCC-707/708
 
-**Estado: borrador, sin revisar.** Empezada el 11-11-2026 con el alcance y la lista de materiales (pedido de Matías). Precios cargados el 18-11-2026 y corregidos el mismo día con la revisión independiente: **pos 3 FCC USD 7.945,42 por filtro (15.890,84 los 2), pos 2 RCP USD 509,94 el lote, pos 1 RDO USD 1.995,48 el lote; total del pedido USD 18.396,26** (`armar_cotizacion.py` y `posiciones_oferta.md`; borrador, sin revisar). La primera versión (USD 5.619,19 por filtro con los repuestos adentro, 11.238,38 el pedido) queda superada.
+**Estado: borrador, sin revisar.** Empezada el 11-11-2026 con el alcance y la lista de materiales (pedido de Matías). Precios cargados el 18-11-2026, corregidos con la revisión independiente y ajustados con su auditoría (19-11-2026): **pos 1 RDO USD 1.019,88 el lote, pos 2 RCP USD 509,94 el lote, pos 3 FCC USD 7.128,64 por filtro (14.257,28 los 2); total del pedido USD 15.787,10** (`armar_cotizacion.py` y `posiciones_oferta.md`; borrador, sin revisar). Las versiones anteriores (11.238,38 y 18.396,26) quedan superadas.
 
 ## Pedido
 - Zip "RV: Pedido de Cotización - FILTROS DE GAS - PC LAN2 C5297" (sin el mail): requisición 5297-02-0600-IG-EM-RI-001 E0 (30-10-2026), hoja de datos 5297-02-0600-IG-EM-HD-001 E0, P&ID 5297-02-0000-IG-PR-PI-014, planilla de cotización (cesta 23585543), requisición de calidad RC, especificaciones de YPF (C0100, L0200 sin Anexo I, B0600 anexos, B0606, B0609, ED(EP)-B-01.00 / B-02.00 / B-05.00 / C-01.08, IG.AR 40.00.140), condiciones de obra (.msg) y requerimientos BIM. Todo en `pedido/`.
@@ -163,3 +163,17 @@ La revisión (otro agente) encontró 2 errores graves y varios medios. Corregido
 **Contraste (pos 3 sin repuestos):** 33 % arriba de AESA/47 y 15 % arriba de YPF/26. Ninguno tiene planilla; lo que esta carga y no se sabe si ellos cargaban está en `justificaciones.antecedentes` (PMI, procedimientos Nivel III, PQR, 2 LP, dureza, horas de ingeniería y calidad, cartucho a la referencia alta).
 
 **Frenos abiertos:** requisitos (22 consultas sin respuesta), vencidas (12: Provemet vencida el 13-11, listas Renard y Taval de más de 180 días), pendientes de la oferta (10 corchetes). El estimado sube al 43 % del costo directo (justificado).
+
+## Ajustes de la auditoría de las correcciones (19-11-2026)
+
+La auditoría confirmó que no hay doble conteo y que las posiciones suman el total. Ajustes hechos:
+1. **Planilla e informe ya no dicen que 7.893,55 "va a la oferta":** con posiciones en `oferta.json`, el Resumen y la Planilla ITT rotulan "precio unitario por filtro con repuestos" y la Planilla ITT lista los ítems 1 RDO · 2 RCP · 3 FCC; el informe agrega la sección "Oferta por posiciones" con los 3 ítems. Mismo cambio en la página (`web/src/documentos.js`): `node web/probar_planilla.js` sigue OK en las 8 cotizaciones. Python y planilla siguen iguales (15.787,10).
+2. `posiciones_oferta.py` frena si una posición declarada queda sin renglones o en 0 (siembra nueva: "RPC" mal tipeado) y cierra el unitario del ítem principal con el total de la planilla, así la oferta suma exactamente lo mismo (antes difería 0,04 por redondeo).
+3. Textos: antecedente AESA/47 sin el cartucho de USD 32; la oferta técnica remite el listado a la económica; posiciones en el orden de la planilla del cliente (1 RDO, 2 RCP, 3 FCC); listados sin "por filtro" ni "(pos 22)"; R064 → PQR;PROC y R046 → CAL;PROC;PQR;PMI; la lista para Compras dice que la PMI la hace ITT.
+4. **Criterio (Matías: "arreglá con criterio"), propuesta de ITT:** RDO = 2 cartuchos + 2 juntas de tapa por filtro (un recambio por año, es un filtro de emergencia) y RCP = 1 cartucho + 1 junta por filtro; la oferta aclara que las cantidades se ajustan a la frecuencia de uso que indique el cliente. (YPF/26 vendió RDO 30 y RCP 87,60 por equipo.)
+5. LP: 1 servicio para el lote (las pasadas interior y exterior se revisan en la misma visita).
+6. Procedimientos Nivel III: 2 de END (RT y PT) a USD 250 (Antonelli ítem 14 es de END); la WPS/PQR la hace ITT (renglón PQR). Supuesto: la WPS que pide la RC firmada por inspector de soldadura Nivel III la firma personal de ITT o se agrega cuando se confirme.
+7. PQR: incluye la soldadura de la probeta (8 h); no incluye el material de la probeta ni la calificación de soldadores (WPQ): supuesto, ITT tiene soldadores calificados ASME IX vigentes.
+- Se mantienen: cartucho a USD 160,70 como estimado (la referencia es Gora PPTO 27131: papel celulósico 5 μm Ø 115 × 158 mm para FM-3 S-600, otra pieza); PMI 1 visita (podrían ser 2: al recibir el material y en el equipo terminado); bulonería 316 L a 10 USD/kg.
+
+**Contraste (pos 3 sin repuestos, 7.128,64):** 20 % arriba de AESA/47 y 3 % arriba de YPF/26.
