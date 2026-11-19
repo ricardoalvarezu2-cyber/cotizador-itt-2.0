@@ -1199,7 +1199,7 @@ const Ficha = (() => {
       const d = norm(it.descripcion), u = norm(it.unidad);
       if (/completar|sobrante|compra minima|repuesto|junta|esparrago/.test(d) || String(it.pos || "").toUpperCase() === "INS" || INSTRUMENTOS.test(d)) continue;
       if (u === "kg") { const rc = d.match(/\+\s*(\d+)\s*% recortes/); kg += rc ? it.cantidad / (1 + +rc[1] / 100) : it.cantidad; continue; }  // sin el recorte
-      const m = `${it.descripcion} ${it.especificacion || ""}`.match(/(\d[\d.,]*)\s*kg\b/), nm = m ? numeroDoc(m[1]) : null;
+      const m = `${it.descripcion} ${it.especificacion || ""}`.match(/(\d[\d.,]*)\s*kg\b(?!\s*\/)/), nm = m ? numeroDoc(m[1]) : null;
       if (nm != null) { kg += nm * it.cantidad; continue; }  // "0,60 kg" son 0,6 y "1.250 kg" son 1250 (18-11-2026)
       if (ESTRUCTURA.test(d)) { const pf = perfil(datos, it.descripcion); if (pf && u.startsWith("m")) kg += pf[0] * it.cantidad; else sin.push(String(it.pos)); continue; }
       let at = it.at;

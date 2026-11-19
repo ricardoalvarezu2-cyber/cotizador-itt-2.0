@@ -272,8 +272,8 @@ def peso_equipo(cfg):
             rc = re.search(r"\+\s*(\d+)\s*% recortes", d)
             kg += it["cantidad"] / (1 + int(rc.group(1)) / 100) if rc else it["cantidad"]
             continue
-        # con el lector único (numeros.py): "0,60 kg" son 0,6 y "1.250 kg" son 1250 (antes la coma se perdía: 18-11-2026)
-        m = re.search(r"(\d[\d.,]*)\s*kg\b", f"{it['descripcion']} {it.get('especificacion', '')}")
+        # con el lector único (numeros.py): "0,60 kg" son 0,6 y "1.250 kg" son 1250 (antes la coma se perdía: 18-11-2026); "kg/cm2" es presión, no peso
+        m = re.search(r"(\d[\d.,]*)\s*kg\b(?!\s*/)", f"{it['descripcion']} {it.get('especificacion', '')}")
         if m and numero(m.group(1)) is not None:
             kg += numero(m.group(1)) * it["cantidad"]
             continue
