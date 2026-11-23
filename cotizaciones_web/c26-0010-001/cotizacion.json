@@ -1,0 +1,2897 @@
+{
+ "antecedentes": [
+  {
+   "carpeta_html": "<b>AESA/47</b> · presupuesto 142",
+   "fecha": "25-03-2026",
+   "precio": "USD 5.963,65 c/u (sin planilla de costo)",
+   "que": "Mismos tags FCC-707/708 para la PC-01 (HD-003019 / RI-003017 de VCD25176), lote de 2",
+   "tomado_html": "Solo el precio, para el contraste. Su cotización Gora (cartucho Ø 42 × 86 mm, USD 32) es otra pieza y no se usa"
+  },
+  {
+   "carpeta_html": "<b>YPF/26</b> · OE 376-25",
+   "fecha": "18-06-2025",
+   "precio": "USD 6.890,14 c/u; RDO 30 y RCP 87,60 por equipo (sin planilla de costo)",
+   "que": "2 filtros de gas FCC707708 PC C5064 más RDO y RCP (cliente YPF vía AESA)",
+   "tomado_html": "Contraste de precio y de repuestos"
+  },
+  {
+   "carpeta_html": "<b>TAVAL/40</b> · Inarteco lic. 9333 (planilla de costo)",
+   "fecha": "15-01-2026",
+   "precio": "costo FM2 USD 4.483,97 por filtro",
+   "que": "Filtros FM2 #300 (4\") y FM3 #150 (6\") de taller",
+   "tomado_html": "Precio por pulgada (16), horas de montaje (45 h × 13) y criterio de horas de ingeniería y calidad"
+  }
+ ],
+ "archivo_planilla": "AESA_C5297_FILTROS_FCC707-708",
+ "cliente": {
+  "codigo_itt": "0010",
+  "comprador": "[a confirmar: el mail del pedido no vino en el zip]",
+  "nombre": "A - Evangelista S.A."
+ },
+ "codigo": "COT26-0010-001",
+ "compras": {
+  "cantidad_compra": {
+   "1": "1 tira de 12 m (Provemet) o tramo de 1,2 m",
+   "10": "1 tramo de 0,6 m",
+   "12": "1 tramo de 0,8 m"
+  },
+  "fecha_respuesta": "2026-11-25",
+  "lugar_entrega": "Planta ITT S.A., Av. 12 de Octubre 4004, Quilmes Oeste, Bs. As.",
+  "material_en_planta_dias": 30,
+  "material_sin_et": {
+   "6": "Clase CA11 (Anexo I de ES__-0001998 L0200): buscada en pedido/ANEXO 2 (L0200 v1.1 sin Anexo I), conocimiento/tecnico y fuentes_originales (solo aparece el código CA11 en TAVAL/5 y GAUMER, sin juntas); consulta C3",
+   "16": "Clase CA11 (Anexo I de ES__-0001998 L0200): no recibida ni encontrada en la base; consulta C3"
+  },
+  "notas": {
+   "1": "1,2 m para los 2 filtros; Provemet cotiza por tira de 12 m (77,63 USD/m sin bonificar): pedir tramo cortado o comprar la tira con sobrante a stock",
+   "8": "Sch 160 (pasaje de 1\" Sch 160)",
+   "9": "Sch 160 (pasaje de 1\" Sch 160)",
+   "11": "Sch 160",
+   "14": "Esperar la clase CA11 (Anexo I de L0200)",
+   "20": "Esperar la clase CA11 (Anexo I de L0200)",
+   "22": "Celulósico 99,9 % > 10 μm absoluto, Ø 63–70 × 254, núcleo y tapas metálicos, apto 90 °C e hidrocarburo líquido; pedir ficha con caudal y ΔP; cantidad total 2 + repuestos (RCP 2, RDO 4)"
+  },
+  "proveedores": {
+   "1": "Provemet",
+   "2": "Renard / Cintolo",
+   "3": "Provemet",
+   "4": "Renard / Provemet",
+   "7": "Industrias Delgado",
+   "8": "Renard / Provemet",
+   "9": "Renard / Provemet",
+   "10": "Renard",
+   "11": "Renard / Provemet",
+   "12": "Renard",
+   "13": "Renard / Cintolo",
+   "14": "Taval",
+   "17": "Industrias Delgado",
+   "18": "Renard",
+   "19": "Provemet",
+   "20": "Taval",
+   "21": "Renard",
+   "22": "Gora",
+   "31": "Industrias Delgado",
+   "32": "Industrias Delgado"
+  },
+  "requisitos_generales": [
+   "Cotizar en USD sin IVA, con plazo de entrega y validez de la oferta.",
+   "Certificados de material 3.1 (colada); ITT hace identificación positiva (PMI) del 100 % de los aleados y del 10 % del carbono (ED(EP)-B-02.00 7.1.1).",
+   "Indicar cualquier diferencia con lo pedido (serie, schedule, material, extremos, modelo)."
+  ],
+  "servicios": [
+   {
+    "nota": "",
+    "proveedores": "Proveedor de RX habitual",
+    "referencia": "ARS 850.000 visita + ARS 15.000 placa (30-10-2026)",
+    "servicio": "Radiografía por puntos (2 placas por filtro)"
+   },
+   {
+    "nota": "",
+    "proveedores": "NDT Antonelli",
+    "referencia": "LP 490, dureza 325 USD por servicio (11-2025); PMI sin precio",
+    "servicio": "LP, dureza y PMI"
+   },
+   {
+    "nota": "Superficie chica: preguntar mínimo",
+    "proveedores": "Pintor habitual",
+    "referencia": "USD 50/m² (16-11-2026)",
+    "servicio": "Granallado y pintura sistema 201 B0600"
+   }
+  ]
+ },
+ "desvios": [
+  {
+   "tag": "Código",
+   "texto": "El recipiente se diseña y prueba por ASME VIII Div.1; B31.3 aplica solo a la cañería de venteo y drenaje aguas abajo de la primera brida o rosca (decisión de Matías, 11-11-2026).",
+   "titulo": "ASME B31.3 solo para venteo y drenaje"
+  },
+  {
+   "tag": "Pos 18",
+   "texto": "La media cupla del venteo va en la brida ciega a 50 mm del centro, porque el centro lo ocupa el cáncamo del pescante; la HD la dibuja centrada.",
+   "titulo": "Venteo F corrido del centro"
+  },
+  {
+   "tag": "Diseño",
+   "texto": "Ø 6\" Sch 80, largo T/T ≈ 600 mm, 1 cartucho Ø 63–70 × 254 mm, internos AISI 316 L y patas de ángulo: supuestos hasta la memoria de cálculo y la ficha del fabricante del cartucho. PH a 13,0 kg/cm2g declarando MAWP = presión de diseño.",
+   "titulo": "Diseño preliminar de ITT"
+  },
+  {
+   "tag": "Pos 14, 15, 16, 17, 20",
+   "texto": "El Anexo I de L0200 (clase CA11) no fue recibido: se cotizan válvula esférica y tapón roscado y juntas espiraladas AISI 316/grafito como supuesto (consulta C3).",
+   "titulo": "Válvulas, tapones y juntas según clase CA11"
+  }
+ ],
+ "equipo": {
+  "diametro_pulg": 6,
+  "familia": "F",
+  "plural": "filtros",
+  "singular": "filtro",
+  "subtipo": "filtro_cartucho",
+  "tipo": "filtro"
+ },
+ "estado": "borrador",
+ "fecha": "2026-11-18",
+ "ficha": {
+  "end": {
+   "espesor_max_mm": 6.35,
+   "juntas_bw": 4,
+   "juntas_lp": 0,
+   "materiales": [
+    "SA 106 Gr.B",
+    "SA 234 WPB",
+    "SA 516 Gr.70 / SA-106 Gr. B",
+    "SA-234 Gr.WPB / SA-516 Gr.70"
+   ],
+   "placas_chicas": 0,
+   "placas_grandes": 0,
+   "procedimientos": [
+    "WPS/PQR de soldadura a tope para SA 106 Gr.B, SA 234 WPB, SA 516 Gr.70 / SA-106 Gr. B, SA-234 Gr.WPB / SA-516 Gr.70 hasta 6,35 mm de espesor",
+    "Calificación de soldadores (WPQ) para esos WPS",
+    "Procedimiento de RX y de LP (escrito, nivel 3 ISO 9712)",
+    "Confirmar con el pliego: si exige procedimientos nuevos o alcanzan los vigentes de ITT"
+   ],
+   "rx_pct": 0
+  },
+  "generada": "2026-11-19",
+  "horas": {},
+  "mo_estructura": {
+   "kg": 0,
+   "m2": 0
+  },
+  "mo_piping": {
+   "aproximados": [
+    "6 Juntas",
+    "14 Válvula para conexión de drenaje y vente",
+    "15b c/válvula y tapón · junta de la brida ci",
+    "16 Juntas",
+    "RCP RCP-707/8 FILTROS DE GAS DE EMERGENCIA *",
+    "RDO RDO-707/8 FILTROS DE GAS DE EMERGENCIA *"
+   ],
+   "avisos": [
+    "Quedan 6,6 extremos BW de taller (número impar): falta marcar algún extremo de campo o una pieza"
+   ],
+   "bridas": 0,
+   "diametros": [
+    6,
+    1,
+    0.75
+   ],
+   "extremos_campo": 0,
+   "juntas_bw": 4,
+   "juntas_sw_olet": 0,
+   "kg_piping": 48.8,
+   "pulg_eq": 12.198,
+   "sin_peso": [
+    "3 TAPA DE CIERRE",
+    "5 Pescante",
+    "7 Pernos / Espárragos",
+    "8 ENTRADA DE GAS",
+    "9 SALIDA DE GAS",
+    "11 DRENAJE c/válvula y tapón",
+    "15 c/válvula y tapón",
+    "15c c/válvula y tapón · espárragos de la bri",
+    "15d c/válvula y tapón · tuercas de la brida ",
+    "17 Pernos / Espárragos",
+    "18 VENTEO c/válvula y tapón",
+    "19 c/válvula y tapón",
+    "20 Válvula para conexión de drenaje y vente",
+    "21 c/válvula y tapón",
+    "22 Elemento filtrante",
+    "23 Internos",
+    "24 Bulonería",
+    "25 Patas/Pollera",
+    "26 Soportes",
+    "27 Orejas de Izaje",
+    "28 Puesta a tierra",
+    "29 Placa de identificación",
+    "30 Plantilla de pernos de anclaje",
+    "31 Tuercas",
+    "32 Tuercas",
+    "33 rompevórtices",
+    "RCP RCP-707/8 FILTROS DE GAS DE EMERGENCIA *",
+    "RDO RDO-707/8 FILTROS DE GAS DE EMERGENCIA *"
+   ]
+  },
+  "ph": {
+   "litros": 10.3
+  },
+  "pintura": {
+   "esquema": "",
+   "m2_canos": 0.38,
+   "m2_estructura": 0,
+   "m2_piping": 0.72,
+   "m2_total": 0.72
+  },
+  "procedimientos": {
+   "cantidad": 4,
+   "lista": [
+    {
+     "alcance": "hasta 6,35 mm de espesor",
+     "cantidad": 1,
+     "codigo": "WPS-BW",
+     "nombre": "WPS/PQR de soldadura a tope, acero al carbono",
+     "tipo": "soldadura"
+    },
+    {
+     "alcance": "una por WPS y soldador asignado",
+     "cantidad": 1,
+     "codigo": "WPQ",
+     "nombre": "Calificación de soldadores (WPQ)",
+     "tipo": "soldadura"
+    },
+    {
+     "alcance": "",
+     "cantidad": 1,
+     "codigo": "PH",
+     "nombre": "Procedimiento de prueba hidráulica",
+     "tipo": "calidad"
+    },
+    {
+     "alcance": "esquema del pliego",
+     "cantidad": 1,
+     "codigo": "PIN",
+     "nombre": "Procedimiento de granallado y pintura",
+     "tipo": "calidad"
+    }
+   ]
+  },
+  "referencias": {
+   "end": {
+    "detallado_usd": 594.28,
+    "global_usd": null,
+    "modo": "detallado",
+    "renglones_detalle": 3
+   },
+   "horas": {
+    "detallado_usd": 883.16,
+    "global_usd": null,
+    "modo": "detallado",
+    "renglones_detalle": 2
+   },
+   "mo_estructura": {
+    "detallado_usd": 0,
+    "global_usd": null,
+    "modo": "detallado",
+    "renglones_detalle": 0
+   },
+   "mo_piping": {
+    "detallado_usd": 1468.87,
+    "global_usd": null,
+    "modo": "detallado",
+    "renglones_detalle": 2
+   },
+   "ph": {
+    "detallado_usd": 0,
+    "global_usd": null,
+    "modo": "detallado",
+    "renglones_detalle": 0
+   },
+   "pintura": {
+    "detallado_usd": 70,
+    "global_usd": null,
+    "modo": "detallado",
+    "renglones_detalle": 1
+   },
+   "procedimientos": {
+    "detallado_usd": 1059.87,
+    "global_usd": null,
+    "modo": "detallado",
+    "renglones_detalle": 3
+   },
+   "transporte": {
+    "detallado_usd": 0,
+    "global_usd": null,
+    "modo": "detallado",
+    "renglones_detalle": 0
+   }
+  },
+  "transporte": {
+   "alto_m": 0,
+   "ancho_m": 0,
+   "avisos": [
+    "Faltan las medidas del equipo (largo × ancho × alto): cargarlas del plano de conjunto"
+   ],
+   "destino": "",
+   "kg_equipo": 48.8,
+   "largo_m": 0,
+   "por_camion": null,
+   "viajes": null
+  }
+ },
+ "firmante_id": "matias-russo",
+ "flete": {
+  "criterio_html": "Se cotiza EXW planta Quilmes Oeste; la RI dice transporte «según sea definido con EL COMPRADOR» (consulta C9).",
+  "etiqueta": "Flete a La Angostura Norte (Neuquén)",
+  "referencia_html": "No incluido: transporte a Neuquén de referencia USD 1.500 por equipo (transportista sin nombre, 30-10-2026, TRA-00578) o un camión USD 2.800 (criterio ITT, YPF/28); los 2 filtros (≈ 115 kg c/u embalados) entran en un utilitario."
+ },
+ "frenos_repo": [
+  {
+   "clave": "requisitos",
+   "texto": "21 requisito(s) sin destino cerrado: R008: consulta al cliente sin respuesta; R023: consulta al cliente sin respuesta; R027: consulta al cliente sin respuesta; R028: consulta al cliente sin respuesta; R036: consulta al cliente sin respuesta…"
+  },
+  {
+   "clave": "antecedentes",
+   "texto": "ningún antecedente tiene costo por equipo comparable (control de doble método): comparar a mano y escribir justificaciones.antecedentes con el antecedente usado y la diferencia rubro por rubro"
+  }
+ ],
+ "historial_html": [
+  "18-11-2026: primera versión con precios (borrador, sin revisar). Segunda lectura B hecha por otro agente y comparada; 3 diferencias resueltas a favor de B (alcance RI punto 2 y C0100 5.1.9).",
+  "18-11-2026: correcciones de la revisión independiente: RCP y RDO como posiciones 1 y 2 con listado por repuesto; PMI, procedimientos Nivel III, PQR carbono–inoxidable y bulonería 316 L costeados (estimados); cartucho a la referencia Gora de USD 160,70; Provemet sin bonificación y con su validez real; brida ciega, junta y espárragos en el drenaje; tercera junta de internos.",
+  "18-11-2026: ajustes de la auditoría de las correcciones: RDO 2 cartuchos + 2 juntas y RCP 1 + 1 por filtro (propuesta ITT, 1 recambio por año), LP 1 servicio, 2 procedimientos de END Nivel III (RT y PT), supuestos del PQR y de la PMI anotados; planilla e informe rotulan el unitario con repuestos y muestran las posiciones."
+ ],
+ "huella_repo": "60737eeb2ecf0eb0",
+ "items": [
+  {
+   "at": {
+    "costura": "sin costura",
+    "diametro": "6\"",
+    "espesor_mm": "10.97",
+    "schedule": "80"
+   },
+   "atributos": {
+    "costura": "sin costura",
+    "diametro": "6\"",
+    "espesor_mm": "10.97",
+    "extremos": "BW",
+    "familia": "CAN",
+    "largo_mm": "600",
+    "material": "A516-70",
+    "norma": "ASME B36.10",
+    "schedule": "80",
+    "tipo": "caño"
+   },
+   "cantidad": 0.6,
+   "descripcion": "Envolvente",
+   "desvio": [
+    {
+     "ofrecido": "caño SA-106 Gr. B",
+     "pedido": "SA 516 Gr.70 / SA-106 Gr. B",
+     "que": "material"
+    }
+   ],
+   "especificacion": "Caño 6\" Sch 80 (10,97 mm) sin costura SA-106 Gr. B × 0,6 m (diseño ITT)",
+   "faltan_datos": [],
+   "fam": "CAN",
+   "fuentes": [
+    {
+     "coincide": "igual",
+     "diferencia": "Tubo con triple norma (A53/A106/API 5L B). Provemet lo cotiza por tira de 12 m: se usan 1,2 m para los 2 filtros; el sobrante va a stock (o pedir tramo cortado, a decidir por Matías)",
+     "fecha": "2026-10-29",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288974_canos_2026-10-29.pdf",
+     "precio": 77.63,
+     "proveedor": "Grupo Provemet cot. 288974 ítem 10: tubo s/c ASTM A53/A106/API 5L B 6\" Sch 80 × 10,97 mm, USD 77,63/m sin bonificar (la bonificación del 4 % que da 74,52 vale solo por compra total de la cotización) · CAN-01512",
+     "tipo": "cot",
+     "validez_hasta": "2026-11-13"
+    },
+    {
+     "fecha": "2025-12-18",
+     "origen": "fuentes_originales/ofertas_texto/Sacde/12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios/4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx.txt",
+     "precio": 98,
+     "proveedor": "Planilla Sacde/12: caño s/c 6\" Sch 80 SA-106 Gr B · CAN-02658",
+     "tipo": "ant"
+    }
+   ],
+   "grupo": "material",
+   "id": "M01",
+   "plano": {
+    "cantidad": "0.6",
+    "cantidad_origen": "El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0",
+    "descripcion": "Envolvente",
+    "diametro": "6\"",
+    "extremos": "BW",
+    "material": "SA 516 Gr.70 / SA-106 Gr. B",
+    "unidad": "m"
+   },
+   "pos": "1",
+   "unidad": "m"
+  },
+  {
+   "at": {
+    "diametro": "6\"",
+    "material": "A234 WPB",
+    "norma": "B16.9",
+    "schedule": "80",
+    "tipo": "casquete"
+   },
+   "atributos": {
+    "diametro": "6\"",
+    "espesor_mm": "10.97",
+    "extremos": "BW",
+    "familia": "ABW",
+    "material": "A234 WPB",
+    "norma": "ASME B16.9",
+    "schedule": "80",
+    "tipo": "casquete semielíptico"
+   },
+   "cantidad": 1,
+   "descripcion": "Cabezales",
+   "especificacion": "Casquete semielíptico B16.9 6\" Sch 80 (XS) SA-234 WPB",
+   "faltan_datos": [],
+   "fam": "ABW",
+   "fuentes": [
+    {
+     "coincide": "igual",
+     "fecha": "2025-12-26",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3791",
+     "precio": 39.25,
+     "proveedor": "Renard (cód. 3791) · Casquete semielíptico 6\" XS ASTM A234 WPB · ABW-00033",
+     "tipo": "lista"
+    }
+   ],
+   "grupo": "material",
+   "id": "M02",
+   "plano": {
+    "cantidad": "1",
+    "cantidad_origen": "El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0",
+    "descripcion": "Cabezales",
+    "diametro": "6\"",
+    "extremos": "BW",
+    "material": "SA-234 Gr.WPB / SA-516 Gr.70",
+    "unidad": "un"
+   },
+   "pos": "2",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "diametro": "6\"",
+    "extremos": "RF",
+    "material": "A105",
+    "schedule": "80",
+    "serie": "150",
+    "tipo": "tapa"
+   },
+   "atributos": {
+    "cara": "RF",
+    "diametro": "6\"",
+    "extremos": "RF",
+    "familia": "BRI",
+    "material": "A105",
+    "norma": "ASME B16.5",
+    "schedule": "80",
+    "serie": "150",
+    "tipo": "welding neck"
+   },
+   "cantidad": 1,
+   "descripcion": "TAPA DE CIERRE",
+   "especificacion": "Brida W.N. 6\" #150 RF Sch 80 SA 105, B16.5",
+   "faltan_datos": [],
+   "fam": "AFO",
+   "fuentes": [
+    {
+     "coincide": "igual",
+     "fecha": "2026-10-29",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288978_bridas_2026-10-29.pdf",
+     "precio": 38.42,
+     "proveedor": "Grupo Provemet cot. 288978: brida WN Sch 80 RF serie 150 ASTM A105 B16.5 6\" · BRI-01315",
+     "tipo": "cot",
+     "validez_hasta": "2026-11-13"
+    },
+    {
+     "fecha": "2025-06-25",
+     "origen": "fuentes_originales/cotizacion_elementos_equipos_2026-03.xlsx · rubro BRIDAS",
+     "precio": 66.89,
+     "proveedor": "Francovigh · BRI-01314",
+     "tipo": "cot"
+    }
+   ],
+   "grupo": "material",
+   "id": "M03",
+   "plano": {
+    "cantidad": "1",
+    "descripcion": "TAPA DE CIERRE",
+    "diametro": "6\"",
+    "extremos": "WNRF",
+    "material": "SA 105",
+    "serie_sch": "#150",
+    "unidad": "un"
+   },
+   "pos": "3",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "cara": "RF",
+    "diametro": "6\"",
+    "extremos": "NPT/RF",
+    "material": "A105",
+    "norma": "B16.5",
+    "serie": "150",
+    "tipo": "ciega"
+   },
+   "atributos": {
+    "cara": "RF",
+    "diametro": "6\"",
+    "familia": "BRI",
+    "material": "A105",
+    "norma": "ASME B16.5",
+    "serie": "150",
+    "tipo": "ciega"
+   },
+   "cantidad": 1,
+   "descripcion": "TAPA DE CIERRE c/ pescante y brida ciega",
+   "especificacion": "Brida ciega 6\" #150 RF SA 105, B16.5 (el agujero roscado de 3/4\" NPT para la cupla F va en la MO)",
+   "faltan_datos": [],
+   "fam": "BRI",
+   "fuentes": [
+    {
+     "coincide": "igual",
+     "fecha": "2025-12-26",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 8029",
+     "precio": 51,
+     "proveedor": "Renard (cód. 8029) · Bridas BL 6\" S150 RF ASTM A105/ANSI B16.5 · BRI-01055",
+     "tipo": "lista"
+    }
+   ],
+   "grupo": "material",
+   "id": "M04",
+   "plano": {
+    "cantidad": "1",
+    "descripcion": "TAPA DE CIERRE c/ pescante y brida ciega",
+    "diametro": "6\"",
+    "material": "SA 105",
+    "serie_sch": "#150",
+    "unidad": "un"
+   },
+   "pos": "4",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "diametro": "1.5\"",
+    "schedule": "80",
+    "tipo": "bulon"
+   },
+   "atributos": {
+    "familia": "PER",
+    "tipo": "pescante"
+   },
+   "cantidad": 1,
+   "descripcion": "Pescante",
+   "especificacion": "Pescante: caño 1 1/2\" Sch 80 × 1,0 m, buje 2\" Sch 80, brazo de planchuela, bulón de ojo 1/2\" y cáncamo (peso en dimensionamiento.md §4)",
+   "faltan_datos": [
+    "designacion",
+    "espesor_mm",
+    "material"
+   ],
+   "fam": "JUN",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "precio por kg del caño aplicado a todo el pescante (buje, planchuela y bulón de ojo incluidos); sin cotización del conjunto",
+     "fecha": "2025-12-26",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1138",
+     "precio": 23.69,
+     "proveedor": "ESTIMADO: 8,91 kg × 2,66 USD/kg (Renard cód. 1138, caño s/c 1 1/2\" Sch 80 a 14,40 USD/m ÷ 5,415 kg/m)",
+     "tipo": "est"
+    }
+   ],
+   "grupo": "material",
+   "id": "M05",
+   "plano": {
+    "cantidad": "1",
+    "cantidad_origen": "El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0",
+    "descripcion": "Pescante",
+    "unidad": "cj"
+   },
+   "pos": "5",
+   "unidad": "cj"
+  },
+  {
+   "at": {
+    "diametro": "6\"",
+    "material": "AISI 316",
+    "serie": "150",
+    "tipo": "junta"
+   },
+   "atributos": {
+    "diametro": "6\"",
+    "familia": "JUN",
+    "serie": "150",
+    "tipo": "junta"
+   },
+   "cantidad": 2,
+   "descripcion": "Juntas",
+   "especificacion": "Junta de la tapa 6\" #150: espiralada AISI 316 / grafito con anillos (supuesto hasta recibir la clase CA11); 1 para PH y 1 de servicio",
+   "faltan_datos": [],
+   "fam": "JUN",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "4\" #300 en lugar de 6\" #150; tipo de junta según clase CA11 (consulta C3)",
+     "fecha": "2026-01-15",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/4.Armado de la Oferta Comercial/LM costo Filtros rev.1.xlsx.txt",
+     "precio": 15,
+     "proveedor": "Planilla TAVAL/40 (Inarteco): junta espirometálica 4\" #300 Klinger a 15 · JUN-02845",
+     "tipo": "ant"
+    },
+    {
+     "fecha": "2025-03-27",
+     "origen": "TAVAL/3-YPF Separador Bifásicos",
+     "precio": 12.99,
+     "proveedor": "Junta espiralada c/anillo int. 6\" #150 AISI 316/grafito (valor del cepo llevado a blue) · JUN-01702",
+     "tipo": "est"
+    }
+   ],
+   "grupo": "material",
+   "id": "M06",
+   "plano": {
+    "cantidad": "2",
+    "cantidad_origen": "El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0",
+    "descripcion": "Juntas",
+    "diametro": "6\"",
+    "material": "S/ Clase de Cañerías",
+    "serie_sch": "#150",
+    "unidad": "un"
+   },
+   "pos": "6",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "diametro": "0.75\"",
+    "material": "A193 B7",
+    "tipo": "esparrago"
+   },
+   "atributos": {
+    "diametro": "0.75\"",
+    "familia": "JUN",
+    "material": "A193 B7",
+    "medida": "3/4\" x 4\"",
+    "revestimiento": "zincado bicromatizado ISO 4042",
+    "tipo": "esparrago"
+   },
+   "cantidad": 8,
+   "descripcion": "Pernos / Espárragos",
+   "especificacion": "Espárrago 3/4\" × 4\" A193 B7 zincado bicromatizado (tapa de cierre)",
+   "faltan_datos": [],
+   "fam": "JUN",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "4 1/2\" de largo en lugar de 4\" (más largo); zincado amarillo F1941 = bicromatizado",
+     "fecha": "2026-11-05",
+     "origen": "COT_ 0202600001556.pdf (Industrias Delgado, catálogo conocimiento/precios/catalogo_materiales.csv)",
+     "precio": 1.18,
+     "proveedor": "Industrias Delgado: espárrago 3/4\" × 4 1/2\" totalmente roscado ASTM A193 B7 zincado amarillo F1941 (cód. E05N…) · JUN-01616",
+     "tipo": "cot",
+     "validez_hasta": "2026-12-05"
+    }
+   ],
+   "grupo": "material",
+   "id": "M07",
+   "plano": {
+    "cantidad": "8",
+    "cantidad_origen": "El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0",
+    "descripcion": "Pernos / Espárragos",
+    "diametro": "3/4\"",
+    "material": "SA 193 B7 Zinc Bicromatizado",
+    "unidad": "un"
+   },
+   "pos": "7",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "cara": "RF",
+    "diametro": "1\"",
+    "extremos": "RF",
+    "material": "A105",
+    "norma": "B16.5",
+    "schedule": "160",
+    "serie": "150"
+   },
+   "atributos": {
+    "cara": "RF",
+    "diametro": "1\"",
+    "extremos": "RF",
+    "familia": "BRI",
+    "material": "A105",
+    "norma": "ASME B16.5",
+    "schedule": "160",
+    "serie": "150",
+    "tipo": "welding neck"
+   },
+   "cantidad": 1,
+   "descripcion": "ENTRADA DE GAS",
+   "especificacion": "Brida W.N. 1\" #150 RF Sch 160 SA 105, B16.5 (conexión A)",
+   "faltan_datos": [],
+   "fam": "BRI",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "No hay precio de WN 1\" Sch 160: se escala el Sch 40 con la relación de la misma lista; pedir cotización",
+     "fecha": "2025-12-26",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · códigos 11289, 11218, 11294",
+     "precio": 15.81,
+     "proveedor": "ESTIMADO: Renard brida WN 1\" Sch 40 S150 RF A105 (cód. 11289, 12,00) × 1,32 (relación Sch 160 / Sch 40 de la misma lista en 3\": cód. 11218 35,06 / cód. 11294 26,61)",
+     "tipo": "est"
+    },
+    {
+     "fecha": "2026-10-29",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288978_bridas_2026-10-29.pdf",
+     "precio": 5.66,
+     "proveedor": "Grupo Provemet cot. 288978: brida WN 1\" Sch 80 RF #150 A105 · BRI-01198",
+     "tipo": "cot"
+    }
+   ],
+   "grupo": "material",
+   "id": "M08",
+   "plano": {
+    "cantidad": "1",
+    "descripcion": "ENTRADA DE GAS",
+    "diametro": "1\"",
+    "extremos": "WNRF",
+    "material": "SA 105",
+    "serie_sch": "#150",
+    "unidad": "un"
+   },
+   "pos": "8",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "cara": "RF",
+    "diametro": "1\"",
+    "extremos": "RF",
+    "material": "A105",
+    "norma": "B16.5",
+    "schedule": "160",
+    "serie": "150"
+   },
+   "atributos": {
+    "cara": "RF",
+    "diametro": "1\"",
+    "extremos": "RF",
+    "familia": "BRI",
+    "material": "A105",
+    "norma": "ASME B16.5",
+    "schedule": "160",
+    "serie": "150",
+    "tipo": "welding neck"
+   },
+   "cantidad": 1,
+   "descripcion": "SALIDA DE GAS",
+   "especificacion": "Brida W.N. 1\" #150 RF Sch 160 SA 105, B16.5 (conexión B)",
+   "faltan_datos": [],
+   "fam": "BRI",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "No hay precio de WN 1\" Sch 160: se escala el Sch 40 con la relación de la misma lista; pedir cotización",
+     "fecha": "2025-12-26",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · códigos 11289, 11218, 11294",
+     "precio": 15.81,
+     "proveedor": "ESTIMADO: Renard brida WN 1\" Sch 40 S150 RF A105 (cód. 11289, 12,00) × 1,32 (relación Sch 160 / Sch 40 de la misma lista en 3\": cód. 11218 35,06 / cód. 11294 26,61)",
+     "tipo": "est"
+    }
+   ],
+   "grupo": "material",
+   "id": "M09",
+   "plano": {
+    "cantidad": "1",
+    "descripcion": "SALIDA DE GAS",
+    "diametro": "1\"",
+    "extremos": "WNRF",
+    "material": "SA 105",
+    "serie_sch": "#150",
+    "unidad": "un"
+   },
+   "pos": "9",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "costura": "sin costura",
+    "diametro": "1\"",
+    "espesor_mm": "6.35",
+    "schedule": "160"
+   },
+   "atributos": {
+    "costura": "sin costura",
+    "diametro": "1\"",
+    "extremos": "BW",
+    "familia": "CAN",
+    "largo_mm": "300",
+    "material": "A106 B",
+    "norma": "ASME B36.10",
+    "schedule": "160",
+    "tipo": "caño"
+   },
+   "cantidad": 0.3,
+   "descripcion": "Cuellos de conexiones",
+   "especificacion": "Caño 1\" Sch 160 (6,35 mm) sin costura SA-106 Gr. B, cuellos de A y B",
+   "faltan_datos": [],
+   "fam": "CAN",
+   "fuentes": [
+    {
+     "coincide": "igual",
+     "diferencia": "tubo con triple norma; tramo, no tira",
+     "fecha": "2025-12-26",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1129",
+     "precio": 11.3,
+     "proveedor": "Renard (cód. 1129) · tubo s/c 33,4 × 6,35 mm A53/A106/API 5L B · CAN-01392",
+     "tipo": "lista"
+    }
+   ],
+   "grupo": "material",
+   "id": "M10",
+   "plano": {
+    "cantidad": "0.3",
+    "cantidad_origen": "El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0",
+    "descripcion": "Cuellos de conexiones",
+    "diametro": "1\"",
+    "extremos": "BW",
+    "material": "SA 106 Gr.B",
+    "serie_sch": "Sch 160",
+    "unidad": "m"
+   },
+   "pos": "10",
+   "unidad": "m"
+  },
+  {
+   "at": {
+    "diametro": "0.75\"",
+    "extremos": "RF",
+    "material": "A105",
+    "schedule": "160",
+    "serie": "150",
+    "tipo": "tapon"
+   },
+   "atributos": {
+    "cara": "RF",
+    "diametro": "0.75\"",
+    "extremos": "RF",
+    "familia": "BRI",
+    "material": "A105",
+    "norma": "ASME B16.5",
+    "schedule": "160",
+    "serie": "150",
+    "tipo": "welding neck"
+   },
+   "cantidad": 1,
+   "descripcion": "DRENAJE c/válvula y tapón",
+   "especificacion": "Brida W.N. 3/4\" #150 RF Sch 160 SA 105, B16.5 (conexión D)",
+   "faltan_datos": [],
+   "fam": "VAL",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "No hay precio de WN 3/4\" Sch 160: se escala el Sch 40; pedir cotización",
+     "fecha": "2025-12-26",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · códigos 11288, 11218, 11294",
+     "precio": 15.81,
+     "proveedor": "ESTIMADO: Renard brida WN 3/4\" Sch 40 S150 RF A105 (cód. 11288, 12,00) × 1,32 (relación Sch 160 / Sch 40 de la misma lista en 3\")",
+     "tipo": "est"
+    },
+    {
+     "fecha": "2025-12-26",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 11364",
+     "precio": 12.43,
+     "proveedor": "Renard (cód. 11364) · brida WN 3/4\" Sch 80 S150 RF A105 · BRI-01193",
+     "tipo": "lista"
+    }
+   ],
+   "grupo": "material",
+   "id": "M11",
+   "plano": {
+    "cantidad": "1",
+    "descripcion": "DRENAJE c/válvula y tapón",
+    "diametro": "3/4\"",
+    "extremos": "WNRF",
+    "material": "SA 105",
+    "serie_sch": "#150",
+    "unidad": "un"
+   },
+   "pos": "11",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "costura": "sin costura",
+    "diametro": "0.75\"",
+    "espesor_mm": "5.56",
+    "schedule": "160"
+   },
+   "atributos": {
+    "costura": "sin costura",
+    "diametro": "0.75\"",
+    "extremos": "BW",
+    "familia": "CAN",
+    "largo_mm": "400",
+    "material": "A106 B",
+    "norma": "ASME B36.10",
+    "schedule": "160",
+    "tipo": "caño"
+   },
+   "cantidad": 0.4,
+   "descripcion": "Cuellos de conexiones",
+   "especificacion": "Caño 3/4\" Sch 160 (5,56 mm) sin costura SA-106 Gr. B, cuello de D",
+   "faltan_datos": [],
+   "fam": "CAN",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "1\" en lugar de 3/4\" (mismo Sch 160, más grande: conservador); no hay precio de 3/4\" Sch 160",
+     "fecha": "2025-12-26",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1129",
+     "precio": 11.3,
+     "proveedor": "Renard (cód. 1129) · tubo s/c 1\" Sch 160 (33,4 × 6,35 mm) · CAN-01392",
+     "tipo": "lista"
+    }
+   ],
+   "grupo": "material",
+   "id": "M12",
+   "plano": {
+    "cantidad": "0.4",
+    "cantidad_origen": "El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0",
+    "descripcion": "Cuellos de conexiones",
+    "diametro": "3/4\"",
+    "extremos": "BW",
+    "material": "SA 106 Gr.B",
+    "serie_sch": "Sch 160",
+    "unidad": "m"
+   },
+   "pos": "12",
+   "unidad": "m"
+  },
+  {
+   "at": {
+    "diametro": "0.75\"",
+    "material": "A234 WPB",
+    "norma": "B16.9",
+    "schedule": "160",
+    "tipo": "codo 90"
+   },
+   "atributos": {
+    "diametro": "0.75\"",
+    "extremos": "BW",
+    "familia": "ABW",
+    "material": "A234 WPB",
+    "norma": "ASME B16.9",
+    "schedule": "160",
+    "tipo": "codo 90"
+   },
+   "cantidad": 1,
+   "descripcion": "Accesorios",
+   "especificacion": "Codo 90° RL 3/4\" Sch 160 SA-234 WPB, B16.9",
+   "faltan_datos": [],
+   "fam": "ABW",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "1\" en lugar de 3/4\" (más grande: conservador)",
+     "fecha": "2025-12-18",
+     "origen": "fuentes_originales/ofertas_texto/Sacde/12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios/4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx.txt",
+     "precio": 13,
+     "proveedor": "Planilla Sacde/12: codo 90° RL 1\" Sch 160 SA-234 WPB · ABW-02313",
+     "tipo": "ant"
+    }
+   ],
+   "grupo": "material",
+   "id": "M13",
+   "plano": {
+    "cantidad": "1",
+    "cantidad_origen": "El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0",
+    "descripcion": "Accesorios",
+    "diametro": "3/4\"",
+    "extremos": "BW",
+    "material": "SA 234 WPB",
+    "serie_sch": "Sch 160",
+    "unidad": "un"
+   },
+   "pos": "13",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "diametro": "0.75\"",
+    "extremos": "RF/Bridado",
+    "paso": "total",
+    "serie": "150",
+    "tipo": "esferica"
+   },
+   "atributos": {
+    "diametro": "0.75\"",
+    "familia": "VAL",
+    "serie": "150"
+   },
+   "cantidad": 1,
+   "descripcion": "Válvula para conexión de drenaje y venteo.",
+   "especificacion": "Válvula del drenaje D 3/4\" según clase CA11: se supone esférica #150 bridada RF paso total, antiestática y antifuego (consulta C3)",
+   "faltan_datos": [
+    "tipo",
+    "material"
+   ],
+   "fam": "VAL",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "1\" en lugar de 3/4\" (más grande: conservador) y clase CE12 en lugar de CA11 (Anexo I de L0200 no recibido, consulta C3)",
+     "fecha": "2025-06-05",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/5-YPF- Separador Bifasico Doc 5135869812/5.Proveedores 3ros/LM - Sep Bifasico_descripcion valvulas.xlsx.txt",
+     "precio": 170.63,
+     "proveedor": "Taval en planilla TAVAL/5 (YPF separador bifásico): VF-105 esférica 1\" #150 bridada RF paso total, esfera flotante, antiestática y antifuego, código L0200 TCH1R (clase CE12), stock",
+     "tipo": "ant"
+    },
+    {
+     "fecha": "2026-11-17",
+     "origen": "conocimiento/precios/precios_usuario.csv",
+     "precio": 200,
+     "proveedor": "Taval (Comex, Santiago, 17-11-2026, firme por Matías): esférica pasaje total 1\" serie 600 A-216 Gr B · VAL-05105",
+     "tipo": "est"
+    }
+   ],
+   "grupo": "material",
+   "id": "M14",
+   "plano": {
+    "cantidad": "1",
+    "cantidad_origen": "El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0",
+    "descripcion": "Válvula para conexión de drenaje y venteo.",
+    "diametro": "3/4\"",
+    "serie_sch": "#150",
+    "unidad": "un"
+   },
+   "pos": "14",
+   "taval": true,
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "diametro": "0.75\"",
+    "extremos": "RF/Bridado",
+    "material": "A105",
+    "serie": "150",
+    "tipo": "tapon"
+   },
+   "atributos": {
+    "diametro": "0.75\"",
+    "familia": "AFO",
+    "tipo": "tapon"
+   },
+   "cantidad": 1,
+   "descripcion": "c/válvula y tapón",
+   "especificacion": "Cierre de la válvula de drenaje D: brida ciega 3/4\" #150 RF A105, B16.5 (la válvula CA11 se supone bridada RF; consulta C3)",
+   "faltan_datos": [
+    "serie",
+    "material"
+   ],
+   "fam": "VAL",
+   "fuentes": [
+    {
+     "coincide": "igual",
+     "diferencia": "brida ciega como tapón de la válvula bridada (supuesto hasta recibir la clase CA11); si la válvula es roscada va tapón 3/4\" NPT (AFO-00850, 3,50)",
+     "fecha": "2025-12-26",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 8020",
+     "precio": 9.25,
+     "proveedor": "Renard (cód. 8020) · Bridas BL 3/4\" S150 RF ASTM A105/ANSI B16.5 · BRI-01007",
+     "tipo": "lista"
+    }
+   ],
+   "grupo": "material",
+   "id": "M15",
+   "plano": {
+    "cantidad": "1",
+    "cantidad_origen": "El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0",
+    "descripcion": "c/válvula y tapón",
+    "diametro": "3/4\"",
+    "unidad": "un"
+   },
+   "pos": "15",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "diametro": "0.75\"",
+    "material": "AISI 316",
+    "serie": "150",
+    "tipo": "junta"
+   },
+   "atributos": {
+    "diametro": "0.75\"",
+    "familia": "JUN",
+    "material": "AISI 316",
+    "serie": "150",
+    "tipo": "junta"
+   },
+   "cantidad": 1,
+   "descripcion": "c/válvula y tapón · junta de la brida ciega del drenaje (compra extra)",
+   "especificacion": "Junta espiralada 3/4\" #150 AISI 316 / grafito entre la válvula de drenaje y la brida ciega (supuesto CA11)",
+   "faltan_datos": [],
+   "fam": "JUN",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "tipo de junta según clase CA11 (consulta C3)",
+     "fecha": "2025-12-23",
+     "origen": "fuentes_originales/ofertas_texto/TECHINT/12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado/4.Armado de la Oferta Comercial/OFERTA REV A/LM costo Desarenador rev ventas REV. 1.xlsx.txt",
+     "precio": 2,
+     "proveedor": "Planilla TECHINT/12: junta espiralada c/anillo ext. 3/4\" #150 AISI 316/grafito · JUN-02759",
+     "tipo": "ant"
+    }
+   ],
+   "grupo": "material",
+   "id": "M15b",
+   "pos": "15b",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "diametro": "0.5\"",
+    "material": "A193 B7",
+    "tipo": "esparrago"
+   },
+   "atributos": {
+    "diametro": "0.5\"",
+    "familia": "JUN",
+    "material": "A193 B7",
+    "tipo": "esparrago"
+   },
+   "cantidad": 4,
+   "descripcion": "c/válvula y tapón · espárragos de la brida ciega del drenaje (compra extra)",
+   "especificacion": "4 espárragos 1/2\" × 2 1/2\" A193 B7 zincados bicromatizados (válvula – brida ciega)",
+   "faltan_datos": [
+    "medida"
+   ],
+   "fam": "JUN",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "5/8\" × 3 3/4\" en lugar de 1/2\" × 2 1/2\" (más grande: conservador)",
+     "fecha": "2026-11-05",
+     "origen": "COT_ 0202600001556.pdf (Industrias Delgado, catálogo conocimiento/precios/catalogo_materiales.csv)",
+     "precio": 0.68,
+     "proveedor": "Industrias Delgado: espárrago 5/8\" × 3 3/4\" ASTM A193 B7 zincado amarillo F1941 · JUN-01606",
+     "tipo": "cot",
+     "validez_hasta": "2026-12-05"
+    }
+   ],
+   "grupo": "material",
+   "id": "M15c",
+   "pos": "15c",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "diametro": "0.5\"",
+    "material": "A194 2H",
+    "tipo": "tuerca"
+   },
+   "atributos": {
+    "diametro": "0.5\"",
+    "familia": "JUN",
+    "material": "A194 2H",
+    "tipo": "tuerca"
+   },
+   "cantidad": 8,
+   "descripcion": "c/válvula y tapón · tuercas de la brida ciega del drenaje (compra extra)",
+   "especificacion": "8 tuercas 1/2\" A194 2H zincadas bicromatizadas",
+   "faltan_datos": [],
+   "fam": "JUN",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "5/8\" en lugar de 1/2\" (más grande: conservador)",
+     "fecha": "2026-11-05",
+     "origen": "COT_ 0202600001556.pdf (Industrias Delgado, catálogo conocimiento/precios/catalogo_materiales.csv)",
+     "precio": 0.22,
+     "proveedor": "Industrias Delgado: tuerca ASTM A194 Gr. 2H 5/8\" 11 UNC zincado amarillo F1941 (cód. T09NC158000Z) · JUN-01731",
+     "tipo": "cot",
+     "validez_hasta": "2026-12-05"
+    }
+   ],
+   "grupo": "material",
+   "id": "M15d",
+   "pos": "15d",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "diametro": "0.75\"",
+    "extremos": "Bridado",
+    "material": "AISI 316",
+    "serie": "150",
+    "tipo": "junta"
+   },
+   "atributos": {
+    "diametro": "0.75\"",
+    "familia": "JUN",
+    "serie": "150",
+    "tipo": "junta"
+   },
+   "cantidad": 1,
+   "descripcion": "Juntas",
+   "especificacion": "Junta 3/4\" #150 entre la brida D y la válvula (si es bridada): espiralada AISI 316 / grafito (supuesto)",
+   "faltan_datos": [],
+   "fam": "JUN",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "tipo de junta según clase CA11 (consulta C3)",
+     "fecha": "2025-12-23",
+     "origen": "fuentes_originales/ofertas_texto/TECHINT/12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado/4.Armado de la Oferta Comercial/OFERTA REV A/LM costo Desarenador rev ventas REV. 1.xlsx.txt",
+     "precio": 2,
+     "proveedor": "Planilla TECHINT/12: junta espiralada c/anillo ext. 3/4\" #150 AISI 316/grafito · JUN-02759",
+     "tipo": "ant"
+    }
+   ],
+   "grupo": "material",
+   "id": "M16",
+   "plano": {
+    "cantidad": "1",
+    "cantidad_origen": "El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0",
+    "descripcion": "Juntas",
+    "diametro": "3/4\"",
+    "material": "S/ Clase de Cañerías",
+    "serie_sch": "#150",
+    "unidad": "un"
+   },
+   "pos": "16",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "diametro": "0.5\"",
+    "material": "A193 B7",
+    "tipo": "esparrago"
+   },
+   "atributos": {
+    "diametro": "0.5\"",
+    "familia": "JUN",
+    "material": "A193 B7",
+    "medida": "1/2\" x 2 1/2\"",
+    "revestimiento": "zincado bicromatizado ISO 4042",
+    "tipo": "esparrago"
+   },
+   "cantidad": 4,
+   "descripcion": "Pernos / Espárragos",
+   "especificacion": "Espárrago 1/2\" × 2 1/2\" A193 B7 zincado bicromatizado (brida D – válvula)",
+   "faltan_datos": [],
+   "fam": "JUN",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "5/8\" × 3 3/4\" en lugar de 1/2\" × 2 1/2\" (más grande: conservador)",
+     "fecha": "2026-11-05",
+     "origen": "COT_ 0202600001556.pdf (Industrias Delgado, catálogo conocimiento/precios/catalogo_materiales.csv)",
+     "precio": 0.68,
+     "proveedor": "Industrias Delgado: espárrago 5/8\" × 3 3/4\" ASTM A193 B7 zincado amarillo F1941 · JUN-01606",
+     "tipo": "cot",
+     "validez_hasta": "2026-12-05"
+    }
+   ],
+   "grupo": "material",
+   "id": "M17",
+   "plano": {
+    "cantidad": "4",
+    "cantidad_origen": "El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0",
+    "descripcion": "Pernos / Espárragos",
+    "diametro": "1/2\"",
+    "material": "SA 193 B7 Zinc Bicromatizado",
+    "unidad": "un"
+   },
+   "pos": "17",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "diametro": "0.75\"",
+    "extremos": "NPT",
+    "material": "A105",
+    "serie": "3000",
+    "tipo": "tapon"
+   },
+   "atributos": {
+    "diametro": "0.75\"",
+    "extremos": "NPT",
+    "familia": "AFO",
+    "norma": "ASME B16.11",
+    "serie": "3000",
+    "tipo": "media cupla"
+   },
+   "cantidad": 1,
+   "descripcion": "VENTEO c/válvula y tapón",
+   "especificacion": "Media cupla 3/4\" NPT #3000 SA 105, B16.11, en la brida ciega (venteo F)",
+   "faltan_datos": [
+    "material"
+   ],
+   "fam": "VAL",
+   "fuentes": [
+    {
+     "coincide": "igual",
+     "fecha": "2025-12-26",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 7042",
+     "precio": 2.81,
+     "proveedor": "Renard (cód. 7042) · media cupla 3/4\" NPT S3000 ASTM A105 · AFO-00795",
+     "tipo": "lista"
+    }
+   ],
+   "grupo": "material",
+   "id": "M18",
+   "plano": {
+    "cantidad": "1",
+    "descripcion": "VENTEO c/válvula y tapón",
+    "diametro": "3/4\"",
+    "extremos": "NPT",
+    "serie_sch": "#3000",
+    "unidad": "un"
+   },
+   "pos": "18",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "diametro": "0.75\"",
+    "extremos": "NPT",
+    "schedule": "160",
+    "tipo": "tapon"
+   },
+   "atributos": {
+    "diametro": "0.75\"",
+    "extremos": "NPT",
+    "familia": "NIP",
+    "largo_mm": "100",
+    "schedule": "160",
+    "tipo": "niple"
+   },
+   "cantidad": 1,
+   "descripcion": "c/válvula y tapón",
+   "especificacion": "Niple 3/4\" NPT × 100 mm Sch 160 SA-106 Gr. B (cupla F – válvula de venteo)",
+   "faltan_datos": [
+    "material"
+   ],
+   "fam": "VAL",
+   "fuentes": [
+    {
+     "coincide": "igual",
+     "diferencia": "material de cañería CA11 supuesto SA-106 B (consulta C3)",
+     "fecha": "2026-11-05",
+     "origen": "Grupo_Provemet_Cotizacion_0000289897_TAVAL_SA BRIDAS 12.pdf (catálogo conocimiento/precios/catalogo_materiales.csv)",
+     "precio": 7.42,
+     "proveedor": "Grupo Provemet cot. 289897: niple ASTM A106 Gr B s/c Sch 160 3/4\" R NPT LF 100 mm · NIP-01782",
+     "tipo": "cot",
+     "validez_hasta": "2026-12-05"
+    }
+   ],
+   "grupo": "material",
+   "id": "M19",
+   "plano": {
+    "cantidad": "1",
+    "cantidad_origen": "El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0",
+    "descripcion": "c/válvula y tapón",
+    "diametro": "3/4\"",
+    "extremos": "NPT",
+    "serie_sch": "Sch 160",
+    "unidad": "un"
+   },
+   "pos": "19",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "diametro": "0.75\"",
+    "extremos": "NPT"
+   },
+   "atributos": {
+    "diametro": "0.75\"",
+    "extremos": "NPT",
+    "familia": "VAL"
+   },
+   "cantidad": 1,
+   "descripcion": "Válvula para conexión de drenaje y venteo.",
+   "especificacion": "Válvula del venteo F 3/4\" NPT según clase CA11 (tipo y material sin definir: consulta C3)",
+   "faltan_datos": [
+    "tipo",
+    "serie",
+    "material"
+   ],
+   "fam": "VAL",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "Tipo de válvula supuesto (esférica NPT #3000 A105) hasta recibir la clase CA11; si la clase pide otra válvula, cambia",
+     "fecha": "2025-09-01",
+     "origen": "taval_lista30_2025-09.xlsx · hoja PT Flot-NPT FORJADAS",
+     "precio": 43.6,
+     "proveedor": "Taval esférica paso total API 608 3/4\" #3000 NPT A105 forjada (Lista 30 × 0,52) · VAL-04878",
+     "tipo": "lista"
+    }
+   ],
+   "grupo": "material",
+   "id": "M20",
+   "plano": {
+    "cantidad": "1",
+    "cantidad_origen": "El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0",
+    "descripcion": "Válvula para conexión de drenaje y venteo.",
+    "diametro": "3/4\"",
+    "extremos": "NPT",
+    "unidad": "un"
+   },
+   "pos": "20",
+   "taval": true,
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "diametro": "0.75\"",
+    "extremos": "NPT",
+    "material": "A105",
+    "serie": "3000",
+    "tipo": "tapon"
+   },
+   "atributos": {
+    "diametro": "0.75\"",
+    "extremos": "NPT",
+    "familia": "AFO",
+    "norma": "ASME B16.11",
+    "serie": "3000",
+    "tipo": "tapon"
+   },
+   "cantidad": 1,
+   "descripcion": "c/válvula y tapón",
+   "especificacion": "Tapón hexagonal 3/4\" NPT #3000 SA 105, B16.11 (válvula de venteo F)",
+   "faltan_datos": [
+    "material"
+   ],
+   "fam": "VAL",
+   "fuentes": [
+    {
+     "coincide": "igual",
+     "fecha": "2026-08-14",
+     "origen": "fuentes_originales/ofertas_texto/PAMPA ENERGIA/7- Licitacion contrato Marco Skid PAD Rincon de Aranda/4.Armado de la Oferta Comercial/Cot Skid Manifolds Colectores RDA Contrato Marco (2da RDA).xlsx.txt",
+     "precio": 3.5,
+     "proveedor": "Renard en planilla PAMPA/7: tapón hexagonal 3/4\" NPT 3000 lb ASTM A105 B16.11 · AFO-00850",
+     "tipo": "ant"
+    }
+   ],
+   "grupo": "material",
+   "id": "M21",
+   "plano": {
+    "cantidad": "1",
+    "cantidad_origen": "El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0",
+    "descripcion": "c/válvula y tapón",
+    "diametro": "3/4\"",
+    "extremos": "NPT",
+    "unidad": "un"
+   },
+   "pos": "21",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "tipo": "elemento filtrante"
+   },
+   "atributos": {
+    "familia": "OTR",
+    "medida": "Ø 63–70 × 254 mm",
+    "rango": "99,9 % > 10 μm",
+    "tipo": "elemento filtrante cartucho"
+   },
+   "cantidad": 1,
+   "descripcion": "Elemento filtrante",
+   "especificacion": "1 cartucho celulósico 99,9 % > 10 μm, Ø 63–70 × 254 mm, núcleo y tapas metálicos, apto 90 °C e hidrocarburos (a confirmar con el fabricante)",
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fam": "OTR",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "Pedir cotización a Gora con la HD: celulósico 10 μm absoluto Ø 63–70 × 254 con núcleo metálico; la referencia es otra pieza (Ø 115 × 158, 5 μm)",
+     "fecha": "2026-02-11",
+     "origen": "fuentes_originales/ofertas_texto/CAMUZZI/30 - Separador Polvo y Líquido (2 unid) - Lic 22737/5.Proveedores 3ros/GORA - PPTO 27131 - ITT.pdf.txt",
+     "precio": 160.7,
+     "proveedor": "ESTIMADO conservador: Gora PPTO 27131 (11-02-2026): elemento filtrante de papel celulósico plisado con doble malla, retención 5 μm, Ø 115 × 158 mm, para filtro FM-3 S-600, USD 160,70 c/u (otra pieza)",
+     "tipo": "est"
+    },
+    {
+     "fecha": "2026-03-23",
+     "origen": "fuentes_originales/ofertas_texto/AESA/47 - Filtros La Angostura Norte C5165/5.Proveedores 3ros/Cotización Gora - Elementos filtrantes OF-X-0001-00027549 ITT-AESA-LANOR.pdf.txt",
+     "precio": 32,
+     "proveedor": "Gora OF-X-0001-00027549 (AESA/47): cartucho microfibra de vidrio 25 μm Ø 42 × 86 mm (otra pieza)",
+     "tipo": "cot"
+    },
+    {
+     "fecha": "2026-02-11",
+     "origen": "fuentes_originales/ofertas_texto/CAMUZZI/30 - Separador Polvo y Liquido (Gora PPTO 27131, 11-02-2026), via cotizaciones/COT26-0135-003 M18",
+     "precio": 113.83,
+     "proveedor": "Gora PPTO 27131: cartucho de papel 5½\" × 36\" (separador Camuzzi)",
+     "tipo": "cot"
+    }
+   ],
+   "grupo": "material",
+   "id": "M22",
+   "plano": {
+    "cantidad": "1",
+    "cantidad_origen": "El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0",
+    "descripcion": "Elemento filtrante",
+    "material": "Celulósico",
+    "unidad": "un"
+   },
+   "pos": "22",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "espesor_mm": "6,35",
+    "material": "AISI 316",
+    "schedule": "160",
+    "tipo": "internos"
+   },
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "internos de filtro"
+   },
+   "cantidad": 1,
+   "descripcion": "Internos",
+   "especificacion": "Internos AISI 316 L: tubo de salida 1\" Sch 160 con codo, asiento y platillo de planchuela 6,35 mm, resorte y varilla roscada 3/8\" (peso en dimensionamiento.md §4)",
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fam": "PER",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "precio por kg de caño 316L aplicado a planchuela, resorte y varilla; sin cotización del conjunto",
+     "fecha": "2025-08-20",
+     "origen": "fuentes_originales/cotizacion_elementos_equipos_2026-03.xlsx · rubro CAÑOS (CAN-01455)",
+     "precio": 40.02,
+     "proveedor": "ESTIMADO: 4 kg × 10,00 USD/kg de AISI 316L (Jorvical: caño s/c 2\" Sch 160 316L a 112,75 USD/m ÷ 11,27 kg/m)",
+     "tipo": "est"
+    }
+   ],
+   "grupo": "material",
+   "id": "M23",
+   "plano": {
+    "cantidad": "1",
+    "cantidad_origen": "El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0",
+    "descripcion": "Internos",
+    "unidad": "cj"
+   },
+   "pos": "23",
+   "unidad": "cj"
+  },
+  {
+   "at": {
+    "diametro": "0.375\"",
+    "material": "AISI 316",
+    "tipo": "bulon"
+   },
+   "atributos": {
+    "familia": "JUN",
+    "material": "AISI 316",
+    "tipo": "bulon"
+   },
+   "cantidad": 1,
+   "descripcion": "Bulonería",
+   "especificacion": "Bulonería AISI 316 L de los internos (varilla, tuercas y arandelas 3/8\")",
+   "faltan_datos": [
+    "diametro",
+    "medida"
+   ],
+   "fam": "JUN",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "precio por kg de caño 316L aplicado a varilla roscada, tuercas y arandelas 3/8\" 316 L; pedir a Compras",
+     "fecha": "2025-08-20",
+     "origen": "fuentes_originales/cotizacion_elementos_equipos_2026-03.xlsx · rubro CAÑOS (CAN-01455)",
+     "precio": 4,
+     "proveedor": "ESTIMADO: ≈ 0,4 kg × 10,00 USD/kg de AISI 316L (Jorvical: caño s/c 2\" Sch 160 316L a 112,75 USD/m ÷ 11,27 kg/m)",
+     "tipo": "est"
+    }
+   ],
+   "grupo": "material",
+   "id": "M24",
+   "plano": {
+    "cantidad": "1",
+    "cantidad_origen": "El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0",
+    "descripcion": "Bulonería",
+    "material": "AISI 316 L",
+    "unidad": "cj"
+   },
+   "pos": "24",
+   "unidad": "cj"
+  },
+  {
+   "at": {
+    "espesor_mm": "550",
+    "material": "A36",
+    "tipo": "patas/pollera"
+   },
+   "atributos": {
+    "familia": "PER",
+    "material": "A516-70",
+    "tipo": "pata de perfil angulo con placa base"
+   },
+   "cantidad": 3,
+   "descripcion": "Patas/Pollera",
+   "desvio": [
+    {
+     "ofrecido": "perfil ángulo SA 36",
+     "pedido": "SA 516 Gr.70 / SA 36",
+     "que": "material"
+    }
+   ],
+   "especificacion": "Pata de perfil ángulo 2\" × 2\" × 1/4\" SA 36 × 550 mm con placa base 120 × 120 × 9,5 mm (peso en dimensionamiento.md §4)",
+   "faltan_datos": [
+    "designacion",
+    "espesor_mm"
+   ],
+   "fam": "PER",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "ángulo 3\" de acero al carbono sin certificado SA 36 en la fuente; placa base al mismo precio por kg",
+     "fecha": "2026-02-10",
+     "origen": "conocimiento/precios/acero_por_kg.csv (fuentes_originales/precios_varios_acero_2026-02.xlsx)",
+     "precio": 7.01,
+     "proveedor": "3,687 kg × 1,90 USD/kg (hierro ángulo 3 × 1/4\" con 10 % de recortes, precios de acero 10-02-2026)",
+     "tipo": "ant"
+    }
+   ],
+   "grupo": "material",
+   "id": "M25",
+   "plano": {
+    "cantidad": "3",
+    "cantidad_origen": "El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0",
+    "descripcion": "Patas/Pollera",
+    "material": "SA 516 Gr.70 / SA 36",
+    "unidad": "un"
+   },
+   "pos": "25",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "tipo": "soportes"
+   },
+   "atributos": {
+    "familia": "PER",
+    "tipo": "chapa"
+   },
+   "cantidad": 3,
+   "descripcion": "Soportes",
+   "especificacion": "Placa de refuerzo de pata 150 × 80 × 6,35 mm SA-516 Gr. 70 rolada",
+   "faltan_datos": [
+    "designacion",
+    "espesor_mm",
+    "material"
+   ],
+   "fam": "OTR",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "precio de chapa de 1 1/2\" por kg aplicado a 6,35 mm; rolado en la MO",
+     "fecha": "2025-12-18",
+     "origen": "fuentes_originales/ofertas_texto/Sacde/12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios/4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx.txt",
+     "precio": 1.07,
+     "proveedor": "0,597 kg × 1,80 USD/kg (chapa SA-516-70, planilla Sacde/12)",
+     "tipo": "ant"
+    }
+   ],
+   "grupo": "material",
+   "id": "M26",
+   "plano": {
+    "cantidad": "3",
+    "cantidad_origen": "El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0",
+    "descripcion": "Soportes",
+    "material": "SA-516 Gr. 70",
+    "unidad": "un"
+   },
+   "pos": "26",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "material": "A516-70",
+    "tipo": "orejas de izaje"
+   },
+   "atributos": {
+    "familia": "PER",
+    "material": "A516-70",
+    "tipo": "oreja de izaje"
+   },
+   "cantidad": 2,
+   "descripcion": "Orejas de Izaje",
+   "especificacion": "Oreja de izaje 120 × 80 × 9,5 mm SA 516 Gr.70",
+   "faltan_datos": [
+    "designacion",
+    "espesor_mm"
+   ],
+   "fam": "OTR",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "precio de chapa de 1 1/2\" por kg aplicado a 9,5 mm",
+     "fecha": "2025-12-18",
+     "origen": "fuentes_originales/ofertas_texto/Sacde/12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios/4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx.txt",
+     "precio": 1.29,
+     "proveedor": "0,715 kg × 1,80 USD/kg (chapa SA-516-70, planilla Sacde/12)",
+     "tipo": "ant"
+    }
+   ],
+   "grupo": "material",
+   "id": "M27",
+   "plano": {
+    "cantidad": "2",
+    "descripcion": "Orejas de Izaje",
+    "material": "SA 516 Gr.70",
+    "unidad": "un"
+   },
+   "pos": "27",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "material": "AISI 316",
+    "tipo": "puesta a tierra"
+   },
+   "atributos": {
+    "familia": "PER",
+    "material": "Inoxidable",
+    "tipo": "oreja de puesta a tierra"
+   },
+   "cantidad": 2,
+   "descripcion": "Puesta a tierra",
+   "especificacion": "Oreja de puesta a tierra 50 × 40 × 6 mm AISI 316",
+   "faltan_datos": [
+    "designacion",
+    "espesor_mm"
+   ],
+   "fam": "OTR",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "precio por kg de caño 316L aplicado a una chapita",
+     "fecha": "2025-08-20",
+     "origen": "fuentes_originales/cotizacion_elementos_equipos_2026-03.xlsx · rubro CAÑOS (CAN-01455)",
+     "precio": 0.95,
+     "proveedor": "ESTIMADO: 0,095 kg × 10,00 USD/kg de AISI 316L (Jorvical, caño 2\" Sch 160 316L)",
+     "tipo": "est"
+    }
+   ],
+   "grupo": "material",
+   "id": "M28",
+   "plano": {
+    "cantidad": "2",
+    "cantidad_origen": "El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0",
+    "descripcion": "Puesta a tierra",
+    "material": "Inox.",
+    "unidad": "un"
+   },
+   "pos": "28",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "espesor_mm": "6",
+    "material": "AISI 304",
+    "tipo": "placa de identificacion"
+   },
+   "atributos": {
+    "familia": "PER",
+    "material": "AISI 304",
+    "tipo": "chapa de identificacion"
+   },
+   "cantidad": 1,
+   "descripcion": "Placa de identificación",
+   "especificacion": "Placa de identificación AISI 304 con soporte de chapa de 6 mm, según PE(EP)-C-01.00.01 (no recibida, consulta C8)",
+   "faltan_datos": [
+    "designacion",
+    "espesor_mm"
+   ],
+   "fam": "PER",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "AISI 316 (superior al 304); la de YPF puede ser más grande y grabada; soporte de chapa no incluido en la referencia",
+     "fecha": "2025-12-18",
+     "origen": "fuentes_originales/ofertas_texto/Sacde/12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios/4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx.txt",
+     "precio": 15,
+     "proveedor": "Planilla Sacde/12: chapa de identificación 100 × 200 × 3 mm AISI 316 · PER-03051",
+     "tipo": "ant"
+    }
+   ],
+   "grupo": "material",
+   "id": "M29",
+   "plano": {
+    "cantidad": "1",
+    "cantidad_origen": "El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0",
+    "descripcion": "Placa de identificación",
+    "material": "AISI 304",
+    "unidad": "un"
+   },
+   "pos": "29",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "espesor_mm": "330",
+    "tipo": "plantilla de pernos"
+   },
+   "atributos": {
+    "familia": "PER",
+    "tipo": "plantilla de pernos de anclaje"
+   },
+   "cantidad": 1,
+   "descripcion": "Plantilla de pernos de anclaje",
+   "especificacion": "Plantilla de pernos de anclaje: chapa fina con 3 agujeros Ø 22 en círculo de Ø 330 mm",
+   "faltan_datos": [
+    "designacion",
+    "espesor_mm",
+    "material"
+   ],
+   "fam": "PER",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "peso estimado de una chapa de 3/16\" calada; puede ser más fina",
+     "fecha": "2026-02-10",
+     "origen": "conocimiento/precios/acero_por_kg.csv (fuentes_originales/precios_varios_acero_2026-02.xlsx)",
+     "precio": 3.78,
+     "proveedor": "≈ 3 kg × 1,26 USD/kg (chapa negra A36 3/16\" con 10 % de recortes, precios de acero 10-02-2026)",
+     "tipo": "ant"
+    }
+   ],
+   "grupo": "material",
+   "id": "M30",
+   "plano": {
+    "cantidad": "1",
+    "cantidad_origen": "El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0",
+    "descripcion": "Plantilla de pernos de anclaje",
+    "unidad": "un"
+   },
+   "pos": "30",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "diametro": "0.75\"",
+    "material": "A194 2H",
+    "tipo": "tuerca"
+   },
+   "atributos": {
+    "diametro": "0.75\"",
+    "familia": "JUN",
+    "material": "A194 2H",
+    "medida": "3/4\"",
+    "revestimiento": "zincado bicromatizado ISO 4042",
+    "tipo": "tuerca"
+   },
+   "cantidad": 16,
+   "descripcion": "Tuercas",
+   "especificacion": "Tuerca 3/4\" A194 2H zincada bicromatizada (2 por espárrago de la pos 7)",
+   "faltan_datos": [],
+   "fam": "JUN",
+   "fuentes": [
+    {
+     "coincide": "igual",
+     "diferencia": "zincado amarillo F1941 = bicromatizado",
+     "fecha": "2026-11-05",
+     "origen": "COT_ 0202600001556.pdf (Industrias Delgado, catálogo conocimiento/precios/catalogo_materiales.csv)",
+     "precio": 0.36,
+     "proveedor": "Industrias Delgado: tuerca ASTM A194 Gr. 2H 3/4\" 10 UNC zincado amarillo F1941 (cód. T09NC191000Z) · JUN-01733",
+     "tipo": "cot",
+     "validez_hasta": "2026-12-05"
+    }
+   ],
+   "grupo": "material",
+   "id": "M31",
+   "plano": {
+    "cantidad": "16",
+    "cantidad_origen": "El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0",
+    "descripcion": "Tuercas",
+    "diametro": "3/4\"",
+    "material": "SA 194 2H Zinc Bicromatizado",
+    "unidad": "un"
+   },
+   "pos": "31",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "diametro": "0.5\"",
+    "material": "A194 2H",
+    "tipo": "tuerca"
+   },
+   "atributos": {
+    "diametro": "0.5\"",
+    "familia": "JUN",
+    "material": "A194 2H",
+    "medida": "1/2\"",
+    "revestimiento": "zincado bicromatizado ISO 4042",
+    "tipo": "tuerca"
+   },
+   "cantidad": 8,
+   "descripcion": "Tuercas",
+   "especificacion": "Tuerca 1/2\" A194 2H zincada bicromatizada (2 por espárrago de la pos 17)",
+   "faltan_datos": [],
+   "fam": "JUN",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "5/8\" en lugar de 1/2\" (más grande: conservador)",
+     "fecha": "2026-11-05",
+     "origen": "COT_ 0202600001556.pdf (Industrias Delgado, catálogo conocimiento/precios/catalogo_materiales.csv)",
+     "precio": 0.22,
+     "proveedor": "Industrias Delgado: tuerca ASTM A194 Gr. 2H 5/8\" 11 UNC zincado amarillo F1941 (cód. T09NC158000Z) · JUN-01731",
+     "tipo": "cot",
+     "validez_hasta": "2026-12-05"
+    }
+   ],
+   "grupo": "material",
+   "id": "M32",
+   "plano": {
+    "cantidad": "8",
+    "cantidad_origen": "El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0",
+    "descripcion": "Tuercas",
+    "diametro": "1/2\"",
+    "material": "SA 194 2H Zinc Bicromatizado",
+    "unidad": "un"
+   },
+   "pos": "32",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "espesor_mm": "6,35",
+    "material": "AISI 316",
+    "tipo": "rompevortices"
+   },
+   "atributos": {
+    "familia": "PER",
+    "tipo": "rompevortice"
+   },
+   "cantidad": 1,
+   "descripcion": "rompevórtices",
+   "especificacion": "Rompevórtice: cruz de planchuela AISI 316 L de 6,35 mm sobre el drenaje D (consulta C11)",
+   "faltan_datos": [
+    "designacion",
+    "espesor_mm",
+    "material"
+   ],
+   "fam": "PER",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "precio por kg de caño 316L aplicado a planchuela",
+     "fecha": "2025-08-20",
+     "origen": "fuentes_originales/cotizacion_elementos_equipos_2026-03.xlsx · rubro CAÑOS (CAN-01455)",
+     "precio": 2,
+     "proveedor": "ESTIMADO: 0,2 kg × 10,00 USD/kg de AISI 316L (Jorvical, caño 2\" Sch 160 316L)",
+     "tipo": "est"
+    }
+   ],
+   "grupo": "material",
+   "id": "M33",
+   "plano": {
+    "cantidad": "1",
+    "cantidad_origen": "El cliente no indica cantidad: calculada por ITT según la hoja de datos 5297-02-0600-IG-EM-HD-001 E0",
+    "descripcion": "rompevórtices",
+    "unidad": "un"
+   },
+   "pos": "33",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "tipo": "rcp-707/8 filtros de"
+   },
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "elemento filtrante"
+   },
+   "cantidad": 1,
+   "descripcion": "RCP-707/8 FILTROS DE GAS DE EMERGENCIA *",
+   "especificacion": "Elemento filtrante celulósico 99,9 % > 10 μm",
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fam": "OTR",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "pedir cotización a Gora con la HD (celulósico 10 μm absoluto Ø 63–70 × 254, núcleo metálico)",
+     "fecha": "2026-02-11",
+     "origen": "fuentes_originales/ofertas_texto/CAMUZZI/30 - Separador Polvo y Líquido (2 unid) - Lic 22737/5.Proveedores 3ros/GORA - PPTO 27131 - ITT.pdf.txt",
+     "precio": 160.7,
+     "proveedor": "ESTIMADO: como la pos 22 (Gora PPTO 27131: papel celulósico 5 μm Ø 115 × 158 mm, USD 160,70; otra pieza)",
+     "tipo": "est"
+    }
+   ],
+   "grupo": "material",
+   "id": "M40",
+   "pos": "RCP",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "diametro": "6\"",
+    "serie": "150",
+    "tipo": "junta"
+   },
+   "atributos": {
+    "diametro": "6\"",
+    "familia": "JUN",
+    "serie": "150",
+    "tipo": "junta"
+   },
+   "cantidad": 1,
+   "descripcion": "RCP-707/8 FILTROS DE GAS DE EMERGENCIA *",
+   "especificacion": "Junta de la tapa de cierre 6\" #150",
+   "faltan_datos": [],
+   "fam": "JUN",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "4\" #300 en lugar de 6\" #150; tipo según CA11 (consulta C3)",
+     "fecha": "2026-01-15",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/4.Armado de la Oferta Comercial/LM costo Filtros rev.1.xlsx.txt",
+     "precio": 15,
+     "proveedor": "Como la pos 6: planilla TAVAL/40 (Inarteco), junta espirometálica 4\" #300 Klinger · JUN-02845",
+     "tipo": "ant"
+    }
+   ],
+   "grupo": "material",
+   "id": "M41",
+   "pos": "RCP",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "tipo": "rdo-707/8 filtros de"
+   },
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "elemento filtrante"
+   },
+   "cantidad": 2,
+   "descripcion": "RDO-707/8 FILTROS DE GAS DE EMERGENCIA *",
+   "especificacion": "Elemento filtrante celulósico 99,9 % > 10 μm",
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fam": "OTR",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "pedir cotización a Gora con la HD (celulósico 10 μm absoluto Ø 63–70 × 254, núcleo metálico)",
+     "fecha": "2026-02-11",
+     "origen": "fuentes_originales/ofertas_texto/CAMUZZI/30 - Separador Polvo y Líquido (2 unid) - Lic 22737/5.Proveedores 3ros/GORA - PPTO 27131 - ITT.pdf.txt",
+     "precio": 160.7,
+     "proveedor": "ESTIMADO: como la pos 22 (Gora PPTO 27131: papel celulósico 5 μm Ø 115 × 158 mm, USD 160,70; otra pieza)",
+     "tipo": "est"
+    }
+   ],
+   "grupo": "material",
+   "id": "M42",
+   "pos": "RDO",
+   "unidad": "un"
+  },
+  {
+   "at": {
+    "diametro": "6\"",
+    "serie": "150",
+    "tipo": "junta"
+   },
+   "atributos": {
+    "diametro": "6\"",
+    "familia": "JUN",
+    "serie": "150",
+    "tipo": "junta"
+   },
+   "cantidad": 2,
+   "descripcion": "RDO-707/8 FILTROS DE GAS DE EMERGENCIA *",
+   "especificacion": "Junta de la tapa de cierre 6\" #150",
+   "faltan_datos": [],
+   "fam": "JUN",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "4\" #300 en lugar de 6\" #150; tipo según CA11 (consulta C3)",
+     "fecha": "2026-01-15",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/4.Armado de la Oferta Comercial/LM costo Filtros rev.1.xlsx.txt",
+     "precio": 15,
+     "proveedor": "Como la pos 6: planilla TAVAL/40 (Inarteco), junta espirometálica 4\" #300 Klinger · JUN-02845",
+     "tipo": "ant"
+    }
+   ],
+   "grupo": "material",
+   "id": "M43",
+   "pos": "RDO",
+   "unidad": "un"
+  },
+  {
+   "cantidad": 41.4,
+   "descripcion": "Soldaduras a presión del filtro (junta por junta, taller)",
+   "especificacion": "2 a tope 6\" Sch 80 (casquete–caño y caño–brida de cuerpo) = 18,51; 2 a tope 1\" Sch 160 (cuellos A y B – bridas WN) = 3,76; 2 injertos 1\" Sch 160 en el cuerpo (cuellos A y B, ×1,5) = 5,64; 3 a tope 3/4\" Sch 160 (brida WN D – cuello, cuello – codo, codo – cuello) = 4,36; 1 injerto 3/4\" Sch 160 en el casquete (cuello D, ×1,5) = 2,18; media cupla 3/4\" en la brida ciega (×1,75) = 1,31; 3 de internos 1\" Sch 160 AISI 316 L (tubo – cuello B con aporte 309L, tubo – codo, codo – tubo vertical) = 5,64 → 41,4 pulg-diám-eq (factores de tecnico/factores_soldadura.csv y factores_accesorios.csv). Raíz GTAW, relleno SMAW (sin GMAW). Las soldaduras de filete de patas, placas, orejas, pescante y soporte de placa van en las horas de montaje",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "mismo tipo de equipo (filtros chicos de taller); este lleva raíz GTAW y una junta carbono–inoxidable",
+     "fecha": "2026-01-15",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/4.Armado de la Oferta Comercial/LM costo Filtros rev.1.xlsx.txt",
+     "precio": 16,
+     "proveedor": "Precio por pulgada de la planilla de filtros TAVAL/40 (Inarteco FM2/FM3, 15-01-2026; criterio de las planillas de costo 2026)",
+     "tipo": "ant"
+    },
+    {
+     "fecha": "2026-05-06",
+     "origen": "TAVAL/58 - Inarteco - ERPs",
+     "precio": 12,
+     "proveedor": "J. C. Quesada, presupuesto JQ-020-2026 (incluye consumibles y calificación ASME IX) · SOL-00144",
+     "tipo": "cot"
+    }
+   ],
+   "grupo": "mo",
+   "id": "S01",
+   "pos": "MO",
+   "unidad": "pulg"
+  },
+  {
+   "cantidad": 45,
+   "descripcion": "Montaje en planta: corte y presentación, filetes de patas/orejas/pescante, roscado de la brida ciega, PH con armado y desarme, movimientos, armado final con internos y cartucho",
+   "especificacion": "45 h por filtro, como el filtro FM3 150 de 6\" de la planilla TAVAL/40 (corte y presentación 18, soldadura, PH con armado y desarme 18, granallado y pintura, armado final 9)",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "el FM3 no tiene pescante, patas ni internos soldados: puede faltar tiempo (revisar con planta)",
+     "fecha": "2026-01-15",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/40- INARTECO FILTROS LIC 9333/4.Armado de la Oferta Comercial/LM costo Filtros rev.1.xlsx.txt",
+     "precio": 13,
+     "proveedor": "Hora de montaje de la planilla TAVAL/40 (Inarteco), FM3 150 6\": 45 h × 13 USD/h",
+     "tipo": "ant"
+    }
+   ],
+   "grupo": "mo",
+   "id": "S02",
+   "pos": "ARM",
+   "unidad": "h"
+  },
+  {
+   "cantidad": 30,
+   "descripcion": "Ingeniería: memoria de cálculo ASME VIII Div.1, plano de arreglo general y de fabricación, HD completada, diseño de anclaje y plantilla, listas de desvíos y de documentos, revisiones con YPF",
+   "especificacion": "30 h por filtro (60 h el lote), criterio ITT: entre el FM estándar de TAVAL/40 (4,5 h/u) y los coalescedores YPF de Sacde/12 (250 h/u); con 1 ciclo de comentarios del cliente",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "horas estimadas: el FM de TAVAL/40 no lleva memoria ASME ni documentación YPF; a confirmar por Matías / Ingeniería",
+     "fecha": "2026-01-15",
+     "origen": "conocimiento/costos/horas_por_equipo.csv",
+     "precio": 15,
+     "proveedor": "Horas propias ITT (15 USD/h, conocimiento/costos/horas_por_equipo.csv); cantidad de horas por criterio, sin antecedente con el mismo alcance",
+     "tipo": "est"
+    }
+   ],
+   "grupo": "mo",
+   "id": "S03",
+   "pos": "HH",
+   "unidad": "h"
+  },
+  {
+   "cantidad": 20,
+   "descripcion": "Calidad: PIE, inspecciones con YPF (PH con testigo, dimensional, pintura), identificación positiva y dureza (coordinación), certificados y data book",
+   "especificacion": "20 h por filtro (40 h el lote), criterio ITT",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "horas estimadas, sin antecedente con el mismo alcance (requisitos de calidad de YPF / AESA)",
+     "fecha": "2026-01-15",
+     "origen": "conocimiento/costos/horas_por_equipo.csv",
+     "precio": 15,
+     "proveedor": "Horas propias ITT (15 USD/h, conocimiento/costos/horas_por_equipo.csv); cantidad de horas por criterio",
+     "tipo": "est"
+    }
+   ],
+   "grupo": "mo",
+   "id": "S04",
+   "pos": "CAL",
+   "unidad": "h"
+  },
+  {
+   "cantidad": 0.5,
+   "descripcion": "Radiografía por puntos (RT3): visita del radiólogo (una para el lote de 2 filtros)",
+   "especificacion": "1 visita para los 2 filtros → 0,5 por filtro",
+   "fuentes": [
+    {
+     "coincide": "igual",
+     "diferencia": "mismo servicio; validez sin dato",
+     "fecha": "2026-10-30",
+     "origen": "conocimiento/precios/precios_usuario.csv",
+     "precio": 550.79,
+     "proveedor": "Proveedor de RX (sin nombre), confirmado por Matías el 30-10-2026: ARS 850.000 por visita sin IVA a BNA oct-2026 · END-00572",
+     "reconfirmado": "2026-10-30",
+     "tipo": "cot"
+    }
+   ],
+   "grupo": "servicio",
+   "id": "S05",
+   "pos": "RX",
+   "unidad": "visita"
+  },
+  {
+   "cantidad": 2,
+   "descripcion": "Radiografía por puntos (RT3): placas",
+   "especificacion": "2 placas por filtro (dimensionamiento.md §8)",
+   "fuentes": [
+    {
+     "coincide": "igual",
+     "diferencia": "mismo servicio",
+     "fecha": "2026-10-30",
+     "origen": "conocimiento/precios/precios_usuario.csv",
+     "precio": 9.72,
+     "proveedor": "Proveedor de RX (sin nombre), confirmado por Matías el 30-10-2026: ARS 15.000 por placa sin IVA · END-00571",
+     "reconfirmado": "2026-10-30",
+     "tipo": "cot"
+    }
+   ],
+   "grupo": "servicio",
+   "id": "S06",
+   "pos": "RXP",
+   "unidad": "placa"
+  },
+  {
+   "cantidad": 0.5,
+   "descripcion": "Líquidos penetrantes 100 % en las soldaduras de las 4 conexiones y de las orejas de izaje (pasadas finales interior y exterior en la misma visita: 1 servicio para el lote)",
+   "especificacion": "1 servicio para los 2 filtros → 0,5 por filtro (ED(EP)-B-02.00 Tabla 2 nota 1, 6.6.1 c y C0100 5.1.13); supuesto: las pasadas interior y exterior se revisan en la misma visita",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "cotización de lista de 11-2025: reconfirmar",
+     "fecha": "2025-11-03",
+     "origen": "fuentes_originales/antonelli_end_2025-11.pdf",
+     "precio": 490,
+     "proveedor": "NDT Antonelli (JCA & Asociados): líquidos penetrantes, USD 490 por servicio · END-00002",
+     "reconfirmado": "2025-11-03",
+     "tipo": "cot"
+    }
+   ],
+   "grupo": "servicio",
+   "id": "S07",
+   "pos": "LP",
+   "unidad": "servicio"
+  },
+  {
+   "cantidad": 0.5,
+   "descripcion": "Medición de dureza (5 por procedimiento, ED(EP)-B-02.00), un servicio para el lote",
+   "especificacion": "0,5 servicio por filtro",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "cotización de lista de 11-2025: reconfirmar",
+     "fecha": "2025-11-03",
+     "origen": "fuentes_originales/antonelli_end_2025-11.pdf",
+     "precio": 325,
+     "proveedor": "NDT Antonelli (JCA & Asociados): medición de dureza, USD 325 por servicio · END-00005",
+     "reconfirmado": "2025-11-03",
+     "tipo": "cot"
+    }
+   ],
+   "grupo": "servicio",
+   "id": "S08",
+   "pos": "DUR",
+   "unidad": "servicio"
+  },
+  {
+   "cantidad": 0.5,
+   "descripcion": "Identificación positiva de materiales (PMI): 100 % de los aleados (internos, bulonería y tierras AISI 316 / 316 L, placa) y 10 % del acero al carbono (ED(EP)-B-02.00 7.1.1), una visita para el lote",
+   "especificacion": "1 visita para los 2 filtros → 0,5 por filtro (podrían ser 2: al recibir el material y en el equipo terminado)",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "PMI no está en la lista de Antonelli: pedir cotización (equipo XRF)",
+     "fecha": "2025-11-03",
+     "origen": "fuentes_originales/antonelli_end_2025-11.pdf",
+     "precio": 490,
+     "proveedor": "ESTIMADO: tarifa de un servicio de END en planta de NDT Antonelli (presupuesto 1788-JCA-1125, 03-11-2025: RX, US, PM y LP a USD 490 por servicio) aplicada a una visita de PMI; la lista no trae PMI",
+     "tipo": "est"
+    }
+   ],
+   "grupo": "servicio",
+   "id": "S09",
+   "pos": "PMI",
+   "unidad": "servicio"
+  },
+  {
+   "cantidad": 1,
+   "descripcion": "Procedimientos escritos de END firmados por Nivel III (RC punto 4): RT y PT (2 para el lote)",
+   "especificacion": "2 procedimientos para los 2 filtros → 1 por filtro. Supuesto: la WPS/PQR de soldadura la hace ITT (renglón PQR); la dureza la hace el inspector Nivel 2 dentro del servicio",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "mismo servicio (procedimientos de END); lista de 11-2025",
+     "fecha": "2025-11-03",
+     "origen": "fuentes_originales/antonelli_end_2025-11.pdf",
+     "precio": 250,
+     "proveedor": "NDT Antonelli, presupuesto 1788-JCA-1125 ítem 14: procedimientos escritos generales elaborados y firmados por Nivel 3 (IRAM NM ISO 9712), USD 250 · ING-00086",
+     "reconfirmado": "2025-11-03",
+     "tipo": "cot"
+    }
+   ],
+   "grupo": "servicio",
+   "id": "S10",
+   "pos": "PROC",
+   "unidad": "procedimiento"
+  },
+  {
+   "cantidad": 0.5,
+   "descripcion": "Calificación ASME IX del procedimiento carbono–inoxidable (SA-106 B con AISI 316 L, aporte 309 L, raíz GTAW): probeta soldada y ensayos (un PQR para el lote)",
+   "especificacion": "0,5 por filtro: 8 h de soldador (soldadura de la probeta) + ensayos de tracción y plegado por un laboratorio. No incluye el material de la probeta ni la calificación de soldadores (WPQ): supuesto, ITT tiene soldadores calificados ASME IX vigentes",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "sin cotización de calificación; si ITT tiene un PQR carbono–inoxidable vigente (≤ 5 años, con dureza, ED(EP)-B-05.00), este renglón sale",
+     "fecha": "2024-10-31",
+     "origen": "fuentes_originales/costo_mo_planta_2024-10.xlsx · fuentes_originales/antonelli_end_2025-11.pdf",
+     "precio": 979.28,
+     "proveedor": "ESTIMADO: 8 h de soldador ITT a USD 61,16/h (costo propio de planta oct-2024, MOP-00095) + ensayos de laboratorio a USD 490 (tarifa de un servicio de END de NDT Antonelli, como referencia: no hay precio de ensayos mecánicos en la base)",
+     "tipo": "est"
+    }
+   ],
+   "grupo": "servicio",
+   "id": "S10b",
+   "pos": "PQR",
+   "unidad": "PQR"
+  },
+  {
+   "cantidad": 1.4,
+   "descripcion": "Granallado SSPC-SP10 y pintura sistema 201 de la B0600 (cinc silicato + mist coat + epoxi + poliuretano), RAL 9006 cuerpo y RAL 9011 patas",
+   "especificacion": "1,17 m² (dimensionamiento.md §3) + 20 % de overspray = 1,40 m²; después de la PH; marcas Carboline, Hempel, International, PPG o Sherwin Williams",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "tarifa de piping y skid aplicada a un recipiente chico; el sistema 201 lleva cinc silicato inorgánico; puede haber un mínimo por trabajo del pintor",
+     "fecha": "2026-11-16",
+     "origen": "conocimiento/precios/precios_usuario.csv",
+     "precio": 50,
+     "proveedor": "Granallado y pintura por m² con materiales, USD 50, confirmado por Ricardo Álvarez el 16-11-2026 (COT26-0330-003, YPF B0600) · precios_usuario.csv",
+     "tipo": "ant"
+    }
+   ],
+   "grupo": "servicio",
+   "id": "S11",
+   "pos": "PIN",
+   "unidad": "m2"
+  },
+  {
+   "cantidad": 1,
+   "descripcion": "Embalaje para 12 meses a la intemperie (patín o jaula, polietileno 0,2 mm, desecante, tapas y tapones; repuestos en bulto aparte, ED(EP)-B-01.00)",
+   "especificacion": "por filtro",
+   "fuentes": [
+    {
+     "coincide": "similar",
+     "diferencia": "embalaje de otro equipo YPF de tamaño parecido; el de la ED(EP)-B-01.00 pide desecante y 12 meses a la intemperie",
+     "fecha": "2026-02-19",
+     "origen": "fuentes_originales/ofertas_texto/TAVAL/43- YPF- CM PUENTES DE PRODUCCION",
+     "precio": 75,
+     "proveedor": "Embalaje puente 4\" (criterio MO ITT), planilla TAVAL/43 YPF puentes de producción · OTR-00440",
+     "tipo": "ant"
+    }
+   ],
+   "grupo": "servicio",
+   "id": "S12",
+   "pos": "EMB",
+   "unidad": "gl"
+  }
+ ],
+ "justificaciones": {
+  "antecedentes": "Ningún antecedente de filtros de gas YPF/AESA tiene planilla de costo: se compara precio de venta del ítem del filtro (pos 3, posiciones_oferta.md), sin repuestos. Queda un 20 % arriba de AESA/47 (25-03-2026, mismos tags para la PC-01, USD 5.963,65 c/u, alcance no detallado) y un 3 % arriba de YPF/26 (18-06-2025, FCC707708 PC C5064, USD 6.890,14 c/u; RDO y RCP aparte). Sin planilla ni plano de esas ofertas no se puede abrir rubro por rubro. Lo que esta cotización carga y no se sabe si ellas cargaban: PMI 100 % de aleados y 10 % de carbono, procedimientos de END firmados por Nivel III, PQR carbono–inoxidable, LP, dureza, ingeniería y calidad (30 + 20 h por filtro, criterio ITT) y el cartucho a la referencia más alta de Gora (USD 160,70). El costo se apoya en la planilla TAVAL/40 (filtros FM2/FM3 de taller, USD 4.483,97 por filtro FM2 #300 con RX 100 %).",
+  "estimado": "Borrador: cartucho, válvula de drenaje, internos, PMI, PQR carbono–inoxidable, bulonería 316 L y repuestos estimados hasta que respondan Gora y el cliente (clase CA11); las horas de ingeniería y calidad son criterio ITT. Se listan en pendientes y en la lista para Compras."
+ },
+ "kg_compras": {
+  "4": 12.2,
+  "6": 0.54,
+  "16": 0.144
+ },
+ "meta": [
+  "Cesta 23585543 · planilla pos 1 RDO, 2 RCP, 3 FCC",
+  "RI 5297-02-0600-IG-EM-RI-001 E0 · HD 5297-02-0600-IG-EM-HD-001 E0",
+  "Comprador: [a confirmar]",
+  "Preparó: Matías Russo · 18-11-2026 (borrador, sin revisar)"
+ ],
+ "nota_mo_html": "Fabricación en planta ITT. Soldaduras a presión junta por junta en la fila de soldadura (41,4 pulg-eq por filtro); filetes de patas, placas, orejas, pescante y soporte de placa en las horas de montaje. Sin soldaduras de campo: las conexiones A, B y D quedan bridadas para la cañería del cliente.",
+ "origen_lista": {
+  "motivo": "El cliente no da lista ni dimensiones (HD notas 2, 4, 8, 9 y 10): la lista es el diseño preliminar de ITT (dimensionamiento.md); las descripciones y materiales son el texto literal de la HD y la RI (pedido/transcripcion.json y transcripcion_b.json).",
+  "tipo": "diseno_itt"
+ },
+ "p9": {
+  "errores": 0,
+  "fecha": "2026-11-19T00:58:54",
+  "firma": "M01|1||Grupo Provemet cot. 288974 ítem 10: tubo s/c ASTM A53/A106/API 5L B 6\" Sch 80 × 10,97 mm, USD 77,63/m sin bonificar (la bonificación del 4 % que da 74,52 vale solo por compra total de la cotización) · CAN-01512|77.6300|material:caño SA-106 Gr. B:SA 516 Gr.70 / SA-106 Gr. B\nM02|2||Renard (cód. 3791) · Casquete semielíptico 6\" XS ASTM A234 WPB · ABW-00033|39.2500|\nM03|3||Grupo Provemet cot. 288978: brida WN Sch 80 RF serie 150 ASTM A105 B16.5 6\" · BRI-01315|38.4200|\nM04|4||Renard (cód. 8029) · Bridas BL 6\" S150 RF ASTM A105/ANSI B16.5 · BRI-01055|51.0000|\nM05|5||ESTIMADO: 8,91 kg × 2,66 USD/kg (Renard cód. 1138, caño s/c 1 1/2\" Sch 80 a 14,40 USD/m ÷ 5,415 kg/m)|23.6900|\nM06|6||Planilla TAVAL/40 (Inarteco): junta espirometálica 4\" #300 Klinger a 15 · JUN-02845|15.0000|\nM07|7||Industrias Delgado: espárrago 3/4\" × 4 1/2\" totalmente roscado ASTM A193 B7 zincado amarillo F1941 (cód. E05N…) · JUN-01616|1.1800|\nM08|8||ESTIMADO: Renard brida WN 1\" Sch 40 S150 RF A105 (cód. 11289, 12,00) × 1,32 (relación Sch 160 / Sch 40 de la misma lista en 3\": cód. 11218 35,06 / cód. 11294 26,61)|15.8100|\nM09|9||ESTIMADO: Renard brida WN 1\" Sch 40 S150 RF A105 (cód. 11289, 12,00) × 1,32 (relación Sch 160 / Sch 40 de la misma lista en 3\": cód. 11218 35,06 / cód. 11294 26,61)|15.8100|\nM10|10||Renard (cód. 1129) · tubo s/c 33,4 × 6,35 mm A53/A106/API 5L B · CAN-01392|11.3000|\nM11|11||ESTIMADO: Renard brida WN 3/4\" Sch 40 S150 RF A105 (cód. 11288, 12,00) × 1,32 (relación Sch 160 / Sch 40 de la misma lista en 3\")|15.8100|\nM12|12||Renard (cód. 1129) · tubo s/c 1\" Sch 160 (33,4 × 6,35 mm) · CAN-01392|11.3000|\nM13|13||Planilla Sacde/12: codo 90° RL 1\" Sch 160 SA-234 WPB · ABW-02313|13.0000|\nM14|14||Taval en planilla TAVAL/5 (YPF separador bifásico): VF-105 esférica 1\" #150 bridada RF paso total, esfera flotante, antiestática y antifuego, código L0200 TCH1R (clase CE12), stock|170.6300|\nM15|15||Renard (cód. 8020) · Bridas BL 3/4\" S150 RF ASTM A105/ANSI B16.5 · BRI-01007|9.2500|\nM15b|15b||Planilla TECHINT/12: junta espiralada c/anillo ext. 3/4\" #150 AISI 316/grafito · JUN-02759|2.0000|\nM15c|15c||Industrias Delgado: espárrago 5/8\" × 3 3/4\" ASTM A193 B7 zincado amarillo F1941 · JUN-01606|0.6800|\nM15d|15d||Industrias Delgado: tuerca ASTM A194 Gr. 2H 5/8\" 11 UNC zincado amarillo F1941 (cód. T09NC158000Z) · JUN-01731|0.2200|\nM16|16||Planilla TECHINT/12: junta espiralada c/anillo ext. 3/4\" #150 AISI 316/grafito · JUN-02759|2.0000|\nM17|17||Industrias Delgado: espárrago 5/8\" × 3 3/4\" ASTM A193 B7 zincado amarillo F1941 · JUN-01606|0.6800|\nM18|18||Renard (cód. 7042) · media cupla 3/4\" NPT S3000 ASTM A105 · AFO-00795|2.8100|\nM19|19||Grupo Provemet cot. 289897: niple ASTM A106 Gr B s/c Sch 160 3/4\" R NPT LF 100 mm · NIP-01782|7.4200|\nM20|20||Taval esférica paso total API 608 3/4\" #3000 NPT A105 forjada (Lista 30 × 0,52) · VAL-04878|43.6000|\nM21|21||Renard en planilla PAMPA/7: tapón hexagonal 3/4\" NPT 3000 lb ASTM A105 B16.11 · AFO-00850|3.5000|\nM22|22||ESTIMADO conservador: Gora PPTO 27131 (11-02-2026): elemento filtrante de papel celulósico plisado con doble malla, retención 5 μm, Ø 115 × 158 mm, para filtro FM-3 S-600, USD 160,70 c/u (otra pieza)|160.7000|\nM23|23||ESTIMADO: 4 kg × 10,00 USD/kg de AISI 316L (Jorvical: caño s/c 2\" Sch 160 316L a 112,75 USD/m ÷ 11,27 kg/m)|40.0200|\nM24|24||ESTIMADO: ≈ 0,4 kg × 10,00 USD/kg de AISI 316L (Jorvical: caño s/c 2\" Sch 160 316L a 112,75 USD/m ÷ 11,27 kg/m)|4.0000|\nM25|25||3,687 kg × 1,90 USD/kg (hierro ángulo 3 × 1/4\" con 10 % de recortes, precios de acero 10-02-2026)|7.0100|material:perfil ángulo SA 36:SA 516 Gr.70 / SA 36\nM26|26||0,597 kg × 1,80 USD/kg (chapa SA-516-70, planilla Sacde/12)|1.0700|\nM27|27||0,715 kg × 1,80 USD/kg (chapa SA-516-70, planilla Sacde/12)|1.2900|\nM28|28||ESTIMADO: 0,095 kg × 10,00 USD/kg de AISI 316L (Jorvical, caño 2\" Sch 160 316L)|0.9500|\nM29|29||Planilla Sacde/12: chapa de identificación 100 × 200 × 3 mm AISI 316 · PER-03051|15.0000|\nM30|30||≈ 3 kg × 1,26 USD/kg (chapa negra A36 3/16\" con 10 % de recortes, precios de acero 10-02-2026)|3.7800|\nM31|31||Industrias Delgado: tuerca ASTM A194 Gr. 2H 3/4\" 10 UNC zincado amarillo F1941 (cód. T09NC191000Z) · JUN-01733|0.3600|\nM32|32||Industrias Delgado: tuerca ASTM A194 Gr. 2H 5/8\" 11 UNC zincado amarillo F1941 (cód. T09NC158000Z) · JUN-01731|0.2200|\nM33|33||ESTIMADO: 0,2 kg × 10,00 USD/kg de AISI 316L (Jorvical, caño 2\" Sch 160 316L)|2.0000|\nM40|RCP||ESTIMADO: como la pos 22 (Gora PPTO 27131: papel celulósico 5 μm Ø 115 × 158 mm, USD 160,70; otra pieza)|160.7000|\nM41|RCP||Como la pos 6: planilla TAVAL/40 (Inarteco), junta espirometálica 4\" #300 Klinger · JUN-02845|15.0000|\nM42|RDO||ESTIMADO: como la pos 22 (Gora PPTO 27131: papel celulósico 5 μm Ø 115 × 158 mm, USD 160,70; otra pieza)|160.7000|\nM43|RDO||Como la pos 6: planilla TAVAL/40 (Inarteco), junta espirometálica 4\" #300 Klinger · JUN-02845|15.0000|",
+  "ok": true
+ },
+ "parametros": {
+  "AJ": 1,
+  "CONT": 5,
+  "FM": 1.35,
+  "FMO": 1.35,
+  "FTV": 1,
+  "N": 2,
+  "TC": 1543.23,
+  "TRANS": 0,
+  "TR_ARS": 0,
+  "TR_EMB": 0,
+  "TR_F": 1,
+  "fecha_referencia": "2026-10-31",
+  "ph_horas": 0,
+  "rx_pct": 0
+ },
+ "pedido": {
+  "datos_html": [
+   [
+    "Cliente",
+    "A - Evangelista S.A. (código ITT 0010) · cliente final YPF, PC-02 La Angostura Norte, Neuquén"
+   ],
+   [
+    "Ítems",
+    "Pos 3 FCC-707/8 · <b>2 filtros</b>; pos 2 RCP y pos 1 RDO (repuestos, lote); opcionales de la RI fuera de la planilla"
+   ],
+   [
+    "Documento",
+    "HD 5297-02-0600-IG-EM-HD-001 E0 · P&ID 5297-02-0000-IG-PR-PI-014 · especificaciones YPF C0100, L0200, B0600, ED(EP)-B-01/02/05, C-01.08"
+   ],
+   [
+    "Entrega pedida",
+    "Según se defina con el comprador (consulta C9); se cotiza EXW Quilmes Oeste"
+   ],
+   [
+    "Fechas",
+    "Límite de respuesta [a confirmar] · el mail del pedido no vino en el zip"
+   ]
+  ],
+  "eyebrow": "Cesta 23585543 · RI 5297-02-0600-IG-EM-RI-001 E0 emitida 30-10-2026",
+  "requisitos_html": [
+   "ASME VIII Div.1 sin estampa; diseño 10 kg/cm2g, −10/90 °C; corrosión 3,2 mm; RT3; PH con YPF 1 h con registro",
+   "Pintura B0600 sistema 201; sin aislación ni traceado (HD renglón 26, confirmado por Matías 18-11-2026)",
+   "No se fabrica hasta aprobar la ingeniería; documentos de la oferta: HD, arreglo general, memoria de cálculo, PIE, procedimiento de pintura, ISO 9001, desvíos"
+  ]
+ },
+ "pendientes": [
+  {
+   "items": [
+    "C1 caudal y presión; C2 bases de diseño PC-02; C3 clase CA11 (válvulas, tapones, juntas); C5 opcionales; C6 elemento e internos; C7 ED(EP)-C-01.08; C8 placa; C9 lugar de entrega; C10 recubrimiento interior; C11 especificaciones e internos; C12 ensayos",
+    "Fecha de cierre y comprador"
+   ],
+   "titulo": "Cliente (consultas_cliente.md)"
+  },
+  {
+   "items": [
+    "Cartucho celulósico 10 μm Ø 63–70 × 254 con núcleo metálico (Gora) y su ficha (caudal, ΔP, temperatura)",
+    "Bridas WN 1\" y 3/4\" #150 Sch 160; caño y codo 3/4\" Sch 160",
+    "Válvulas 3/4\" según CA11 cuando llegue el Anexo I",
+    "PMI, LP y dureza (NDT Antonelli); procedimiento carbono–inoxidable",
+    "Bulonería 3/8\" AISI 316 L; internos 316 L"
+   ],
+   "titulo": "Proveedores (lista para Compras)"
+  },
+  {
+   "items": [
+    "Memoria de cálculo ASME VIII y plano de arreglo general (van con la oferta)",
+    "Horas de ingeniería y calidad: confirmar las 30 h y 20 h por filtro adoptadas"
+   ],
+   "titulo": "Ingeniería"
+  }
+ ],
+ "pie": "Fuentes: base de conocimiento del repositorio cotizador-itt. Precios en USD sin IVA. Borrador, sin revisar.",
+ "planilla_notas": [
+  "Plazo: 95 días desde OC (no se fabrica hasta aprobar la ingeniería).",
+  "EXW Quilmes Oeste; transporte no incluido (consulta C9).",
+  "Repuestos RCP (pos 2) y RDO (pos 1) cargados por filtro en renglones propios; la oferta los vende como posiciones aparte (posiciones_oferta.md). El precio unitario de esta planilla los incluye: el de la pos 3 sale de posiciones_oferta.md.",
+  "Opcionales de la RI (asistencia, viaje, 3D) no incluidos."
+ ],
+ "plazo": {
+  "dias": 95,
+  "nota": "Calculado 80 días: no se fabrica hasta aprobar la ingeniería (RI punto 1). Se ofrecen 95, con el margen de 15–20 % de plazos.md §4. Con un segundo ciclo de comentarios se agregan ≈ 14 días. AESA/47 ofreció 75 días; YPF/26 25/30 días (sin aprobación de ingeniería).",
+  "tareas": [
+   [
+    "Ingeniería: HD, arreglo general y memoria de cálculo (RI punto 8: 3 semanas)",
+    0,
+    21,
+    ""
+   ],
+   [
+    "Revisión de YPF / AESA (10 días hábiles) y corrección; 1 ciclo supuesto",
+    21,
+    49,
+    "crit"
+   ],
+   [
+    "Compra de materiales (stock) y cartuchos (Gora, 30 días desde OC)",
+    0,
+    30,
+    ""
+   ],
+   [
+    "Taller: corte, soldadura, RX, LP, PH con YPF y pintura sistema 201",
+    49,
+    70,
+    "tal"
+   ],
+   [
+    "Data book, inspección final, embalaje y despacho",
+    70,
+    80,
+    "tal"
+   ]
+  ],
+  "texto": "desde OC · EXW Quilmes Oeste"
+ },
+ "preparo": "Matías Russo",
+ "revision": "Rev 0",
+ "subtitulo_planilla": "2 filtros de gas de emergencia FCC-707/708 · HD 5297-02-0600-IG-EM-HD-001 E0 · USD sin IVA · EXW Quilmes Oeste",
+ "titulo": "AESA (YPF) · C5297 PC-02 La Angostura Norte — 2 filtros de gas de emergencia FCC-707/708 tipo cartucho",
+ "titulo_pagina": "Cotización AESA C5297 filtros FCC-707/708",
+ "transcripcion": {
+  "diferencias_resueltas": [
+   {
+    "columna": "(todas)",
+    "motivo": "Diferencia aparente: el comparador emparejaba por Cesta (23585543 en las 3 filas). Se pasó Posición a la primera columna en A y B; las 3 filas coinciden celda por celda (18-11-2026).",
+    "pos": "1/2/3",
+    "tabla": "Planilla Cotizacion INICIAL",
+    "vale": "sin cambios de valores"
+   },
+   {
+    "columna": "Texto",
+    "motivo": "Mirado el original (RI 5297-02-0600-IG-EM-RI-001 E0 pág. 4, punto 2): A había omitido las viñetas 'Diseño según el código ASME…', 'Documentos solicitados a EL FABRICANTE…', 'Repuestos para el precomisionado…' y 'Lista de desviaciones…'. Vale B (18-11-2026).",
+    "pos": "(4 viñetas)",
+    "tabla": "RI punto 2: el alcance del suministro incluirá",
+    "vale": "14 viñetas, como B"
+   },
+   {
+    "columna": "Texto",
+    "motivo": "Mirado el original (C0100 5.1.9, pdftotext): A la había copiado en dos fragmentos sin 'o separadores deben llevar'. Vale B, frase completa (18-11-2026).",
+    "pos": "(frase)",
+    "tabla": "C0100 (ES__-0001033) 5.1.9, texto citado",
+    "vale": "Las conexiones de salida en cabezal inferior de recipientes verticales o separadores deben llevar rompevórtices."
+   }
+  ],
+  "fuente": "Planilla Cotizacion INICIAL.xls; Requisición 5297-02-0600-IG-EM-RI-001 E0 (30/10/26) punto 1; Hoja de datos 5297-02-0600-IG-EM-HD-001 E0, pág. 3 (materiales y conexiones). Transcripción textual del texto de los PDF, controlada contra la imagen.",
+  "lector": "A: transcripción del 11-11-2026 (corregida el 18-11-2026 con la comparación contra B)",
+  "nota": "El cliente no entrega lista de materiales: el equipo lo diseña el fabricante (HD notas 2, 4, 8, 9 y 10).",
+  "tablas": [
+   {
+    "columnas": [
+     "Posición",
+     "Cesta",
+     "Producto",
+     "Descripción",
+     "Cantidad",
+     "Unidad"
+    ],
+    "filas": [
+     [
+      "1",
+      "23585543",
+      "RDO-707/8 FILTROS DE GAS DE EMERGENCIA *",
+      "FILTROS DE GAS DE EMERGENCIA 5297-02-0600-IG-EM-HD-001",
+      "1",
+      "UNI"
+     ],
+     [
+      "2",
+      "23585543",
+      "RCP-707/8 FILTROS DE GAS DE EMERGENCIA *",
+      "FILTROS DE GAS DE EMERGENCIA 5297-02-0600-IG-EM-HD-001",
+      "1",
+      "UNI"
+     ],
+     [
+      "3",
+      "23585543",
+      "FCC-707/8 FILTROS DE GAS DE EMERGENCIA *",
+      "FILTROS DE GAS DE EMERGENCIA 5297-02-0600-IG-EM-RI-001",
+      "2",
+      "UNI"
+     ]
+    ],
+    "titulo": "Planilla Cotizacion INICIAL"
+   },
+   {
+    "columnas": [
+     "Item",
+     "Cant.",
+     "Código-tag",
+     "Descripción",
+     "Ident Code"
+    ],
+    "filas": [
+     [
+      "1",
+      "2",
+      "FCC-707/708",
+      "Filtro Gas de emergencia tipo cartucho",
+      "C529702IGEMFIL_001"
+     ],
+     [
+      "2",
+      "Lote",
+      "RCP-FCC707708",
+      "Listado detallado, indicando descripción, cantidad y precios unitarios (para cada equipo), de repuestos recomendados para precomisionado, comisionado y la puesta en marcha.",
+      "C529702IGEMFIL_002"
+     ],
+     [
+      "3",
+      "Lote",
+      "RDO-FCC707708",
+      "Listado detallado, indicando descripción, cantidad y precios unitarios (para cada equipo), de repuestos recomendados para dos (2) años de operación.",
+      "C529702IGEMFIL_003"
+     ],
+     [
+      "4",
+      "Valor diario",
+      "-",
+      "Costo opcional por asistencia técnica durante la instalación y puesta en marcha.",
+      ""
+     ],
+     [
+      "5",
+      "Valor unitario",
+      "-",
+      "Viaje al sitio.",
+      ""
+     ],
+     [
+      "6",
+      "Valor unitario",
+      "",
+      "Modelo 3D con atributos",
+      ""
+     ]
+    ],
+    "titulo": "RI punto 1: ítems a proveer"
+   },
+   {
+    "columnas": [
+     "Parte",
+     "Material"
+    ],
+    "filas": [
+     [
+      "Envolvente",
+      "SA 516 Gr.70 / SA-106 Gr. B"
+     ],
+     [
+      "Cabezales",
+      "SA-234 Gr.WPB / SA-516 Gr.70"
+     ],
+     [
+      "Cuellos de conexiones",
+      "SA 106 Gr.B"
+     ],
+     [
+      "Bridas",
+      "SA 105"
+     ],
+     [
+      "Accesorios",
+      "SA 234 WPB"
+     ],
+     [
+      "Pernos / Espárragos",
+      "SA 193 B7 Zinc Bicromatizado"
+     ],
+     [
+      "Tuercas",
+      "SA 194 2H Zinc Bicromatizado"
+     ],
+     [
+      "Juntas",
+      "S/ Clase de Cañerías"
+     ],
+     [
+      "Patas/Pollera",
+      "SA 516 Gr.70 / SA 36"
+     ],
+     [
+      "Orejas de Izaje",
+      "SA 516 Gr.70"
+     ],
+     [
+      "Puesta a tierra",
+      "Inox."
+     ],
+     [
+      "Placa de identificación",
+      "AISI 304"
+     ],
+     [
+      "Clips",
+      "SA-516 Gr. 70"
+     ],
+     [
+      "Plataformas",
+      "N/A"
+     ],
+     [
+      "Escaleras",
+      "N/A"
+     ],
+     [
+      "Internos",
+      ""
+     ],
+     [
+      "Cañerías",
+      "N/A"
+     ],
+     [
+      "Soportes",
+      "SA-516 Gr. 70"
+     ],
+     [
+      "Bulonería",
+      "AISI 316 L"
+     ],
+     [
+      "Elemento filtrante",
+      "Celulósico"
+     ]
+    ],
+    "titulo": "HD pág. 3: Materiales (Nota 12)(Nota 15)(Nota 16)"
+   },
+   {
+    "columnas": [
+     "Sigla",
+     "Cant.",
+     "Tipo",
+     "DN (in)",
+     "Clase",
+     "Sch.",
+     "Elev.",
+     "Proy.",
+     "Servicio",
+     "Notas"
+    ],
+    "filas": [
+     [
+      "A",
+      "1",
+      "WNRF",
+      "1",
+      "#150",
+      "(Nota 2)",
+      "(Nota 8)",
+      "(Nota 8)",
+      "ENTRADA DE GAS",
+      ""
+     ],
+     [
+      "B",
+      "1",
+      "WNRF",
+      "1",
+      "#150",
+      "(Nota 2)",
+      "(Nota 8)",
+      "(Nota 8)",
+      "SALIDA DE GAS",
+      ""
+     ],
+     [
+      "D",
+      "1",
+      "WNRF",
+      "¾",
+      "#150",
+      "(Nota 2)",
+      "(Nota 8)",
+      "(Nota 8)",
+      "DRENAJE",
+      "c/válvula y tapón"
+     ],
+     [
+      "M",
+      "1",
+      "WNRF",
+      "(Nota 9)",
+      "#150",
+      "(Nota 2)",
+      "(Nota 8)",
+      "(Nota 8)",
+      "TAPA DE CIERRE",
+      "c/ pescante y brida ciega"
+     ],
+     [
+      "F",
+      "1",
+      "NPT",
+      "¾",
+      "#3000",
+      "(Nota 2)",
+      "(Nota 8)",
+      "(Nota 8)",
+      "VENTEO",
+      "c/válvula y tapón"
+     ]
+    ],
+    "titulo": "HD pág. 3: Conexiones al equipo (Nota 4)(Nota 5) (Nota 7)"
+   },
+   {
+    "columnas": [
+     "Texto"
+    ],
+    "filas": [
+     [
+      "Diseño según el código ASME sección VIII Div. 1, cálculos, suministro de materiales, fabricación, inspección, preparación de superficie y pintura, pruebas, ensamblaje, preparación para envío, transporte (según sea definido con EL COMPRADOR) y garantías (mecánica, y de proceso) de los ítems indicados en esta requisición de ingeniería, de acuerdo con las normas, especificaciones y estándares aplicables del proyecto e indicados en los documentos de referencia."
+     ],
+     [
+      "Patas / Pollera."
+     ],
+     [
+      "Internos (elementos filtrantes)."
+     ],
+     [
+      "Pescante, junta/O-ring y bulonería para las tapas."
+     ],
+     [
+      "Orejas de conexión a tierra en acero inoxidable."
+     ],
+     [
+      "Orejas de izaje."
+     ],
+     [
+      "Válvula para conexión de drenaje y venteo."
+     ],
+     [
+      "Diseño de lo pernos de anclaje."
+     ],
+     [
+      "Plantilla de pernos de anclaje"
+     ],
+     [
+      "Placa de identificación de acero inoxidable y su soporte según especificaciones de YPF."
+     ],
+     [
+      "Herramientas especiales para la instalación y/o mantenimiento (si es requerido)."
+     ],
+     [
+      "Documentos solicitados a EL FABRICANTE de acorde a lo especificado en el punto 8."
+     ],
+     [
+      "Repuestos para el precomisionado, comisionado y puesta en marcha según procedimiento IG.AR 40.00.140 – GESTION DE REPUESTOS."
+     ],
+     [
+      "Lista de desviaciones al paquete de requisición de ingeniería."
+     ]
+    ],
+    "titulo": "RI punto 2: el alcance del suministro incluirá"
+   },
+   {
+    "columnas": [
+     "Texto"
+    ],
+    "filas": [
+     [
+      "Las conexiones de salida en cabezal inferior de recipientes verticales o separadores deben llevar rompevórtices."
+     ]
+    ],
+    "titulo": "C0100 (ES__-0001033) 5.1.9, texto citado"
+   }
+  ]
+ }
+}

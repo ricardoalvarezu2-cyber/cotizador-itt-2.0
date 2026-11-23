@@ -27,18 +27,18 @@ Generado por `herramientas/comparar_historico.py` con `cotizacion_auto.json`. Co
 | 19 | Tee reducción 3"x2" sch 80 BW WPB | 6 × 64,11 = 384,66 | 6 un × 64,11 = 384,66 | 0% | ant · Renard · ABW-00390 · 2026-06-26 | dentro de ±15% |
 | 20 | Tee normal 3" sch 80 BW WPB | 6 × 60,36 = 362,16 | 6 un × 38,72 = 232,32 | -36% | cot · Oil Metal (cód. AC0300-4K280527) · ABW-0 · 2026-10-30 | más barato |
 | 21 | Tee reducción 6"x3" sch 40 BW WPB | 6 × 164,91 = 989,46 | 6 un × 164,91 = 989,46 | 0% | ant · Renard · ABW-00413 · 2026-06-26 | dentro de ±15% |
-| 22 | Entrerosca 3/4" NPT A105 | 3 × 2,50 = 7,50 | 3 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-19 | SIN PRECIO en el catálogo |
+| 22 | Entrerosca 3/4" NPT A105 | 3 × 2,50 = 7,50 | 3 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-23 | SIN PRECIO en el catálogo |
 | 23 | Sockolet 3/4" 3000 A105 | 17 × 6,00 = 102,00 | 17 un × 2,33 = 39,61 | -61% | cot · Oil Metal (cód. SOC007508030105) · AFO-0 · 2026-10-30 | más barato (similar) |
 | 24 | Sockolet 1" 3000 A105 | 2 × 7,00 = 14,00 | 2 un × 3,59 = 7,18 | -49% | cot · Oil Metal (cód. SOC007508030105) · AFO-0 · 2026-10-30 | más barato (similar) |
 | 25 | Tapón hexagonal 3/4" NPT A105 | 17 × 2,50 = 42,50 | 17 un × 2,30 = 39,10 | -8% | ant · Renard · AFO-00850 · 2026-06-26 | dentro de ±15% |
 | 26 | Válvula bloqueo y purga 1/2" AISI 316 | 15 × 180,00 = 2.700,00 | 15 un × 137,00 = 2.055,00 | -24% | ant · Abac · VAL-03198 · 2026-04-22 | más barato (similar) |
 | 27 | Válvula esférica 3/4" #3000 A105 (Taval stock | 4 × 42,04 = 168,17 | 4 un × 42,04 = 168,16 | 0% | ant · Taval · VAL-03530 · 2026-06-26 | dentro de ±15% · real: Válvulas Taval, factor 1 |
-| 28 | Válvula esférica 1" #300 PR BF60253R0144RP | 2 × 67,50 = 135,00 | 2 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-19 | SIN PRECIO en el catálogo · real: Válvulas Taval, factor 1 |
+| 28 | Válvula esférica 1" #300 PR BF60253R0144RP | 2 × 67,50 = 135,00 | 2 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-23 | SIN PRECIO en el catálogo · real: Válvulas Taval, factor 1 |
 | 29 | Válvula esférica 2" #300 PR BG10503R0104RP | 6 × 131,13 = 786,79 | 6 un × 130,00 = 780,00 | -1% | lista · Taval (Lista 30 × 0.52) · VAL-04444 · 2025-09-01 | dentro de ±15% · real: Válvulas Taval, factor 1 |
 | 30 | Válvula retención wafer 3" #300 | 6 × 200,00 = 1.200,00 | 6 un × 301,88 = 1.811,28 | +51% | cot · Taval · VAL-04757 · 2026-10-30 | más caro · real: Válvulas Taval, factor 1 |
-| 31 | Válvula esférica 3" #300 3 vías motorizada | 6 × 3.406,00 = 20.436,00 | 6 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-19 | SIN PRECIO en el catálogo · real: las cotizaciones del proyecto dan 3.586,58 (Valvtronic) y 4.378 (Valbol); la OC real fue 4.215,21 |
+| 31 | Válvula esférica 3" #300 3 vías motorizada | 6 × 3.406,00 = 20.436,00 | 6 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-23 | SIN PRECIO en el catálogo · real: las cotizaciones del proyecto dan 3.586,58 (Valvtronic) y 4.378 (Valbol); la OC real fue 4.215,21 |
 | 32 | Manómetro | 2 × 120,00 = 240,00 | 2 un × 115,00 = 230,00 | -4% | ant · sin proveedor en planilla (columna PROVE · 2026-02-20 | dentro de ±15% |
-| 33 | Transmisor de presión | 1 × 856,63 = 856,63 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-19 | SIN PRECIO en el catálogo |
+| 33 | Transmisor de presión | 1 × 856,63 = 856,63 | 1 un × 0,00 = 0,00 | -100% | est · SIN PRECIO EN EL CATÁLOGO: pedir cotizac · 2026-11-23 | SIN PRECIO en el catálogo |
 | 34 | Bastidor skid (300 + 500 kg con 20% de desper | 960 × 1,50 = 1.440,00 | 800 kg × 1,90 = 1.520,00 | +6% | cot · Precios de acero (J. Elejondo) · 2026-02-10 | dentro de ±15% · real: 800 kg × 1,2 de desperdicio × USD 1,5/kg |
 | 35 | Tablero y materiales eléctricos | 1 × 12.000,00 = 12.000,00 | 1 gl × 12.000,00 = 12.000,00 | 0% | ant · planilla de costo ITT · OTR-03018 · 2026-06-26 | dentro de ±15% |
 
