@@ -5,6 +5,11 @@
 - Usuario: Matías Russo, de ventas de ITT. Idioma: **español rioplatense**. **Respuestas cortas** (pedido de Matías, 28/10/2026): qué se hizo en 2-3 líneas, los errores encontrados y lo que necesita decidir; sin listas de detalle ni cifras de cobertura (29-10-2026).
 - La base de conocimiento está en `conocimiento/` y empieza por **`conocimiento/estado_y_pendientes.md`** (estado, decisiones y pendientes: leerlo al empezar cada chat y actualizarlo al terminar) y `conocimiento/RESUMEN.md`. Las fuentes están en `fuentes_originales/`.
 
+## Ahorro de tokens (Matías, 25-11-2026) — manda sobre las reglas de abajo
+- **No lanzar agentes de revisión o auditoría independiente** (ni el paso 4 del ciclo ante errores, ni la revisión del cómputo, ni la doble lectura) salvo que Matías lo pida. Si una regla de abajo los exige, avisar en una línea que quedó sin auditar.
+- **Verificación: solo `verificar_todo.py --rapido`** antes de pasar a `main`; el completo, solo si se tocaron reglas o herramientas de cálculo, o si Matías lo pide.
+- Leer documentos y planos lo justo para la tarea (por partes, no todo de nuevo); no repetir lecturas ni corridas que ya se hicieron en la sesión.
+
 ## Objetivo
 - **Construir el cotizador automático.** Las cotizaciones que se hacen ahora (CAPEX, Camuzzi, YPF, etc.) son casos de prueba para armar el proceso, todas con el mismo peso; ninguna es prioritaria ni tiene página propia. Los pendientes del proyecto son los del cotizador, no los de cada presupuesto (Matías, 28/10/2026).
 

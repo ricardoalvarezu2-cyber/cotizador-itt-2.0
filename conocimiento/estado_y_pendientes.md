@@ -69,6 +69,8 @@
 
 **Skill `relevar-pedido` (25-11-2026, pedido de Matías):** informe previo a la cotización con resumen, listas, pesos y pulgadas de soldadura (nominales y equivalentes por tipo). Herramientas nuevas: `abrir_pedido.py` (zips, .msg con `leer_msg.py`, texto de todos los formatos, inventario), `recortar_plano.py` (P&ID en grilla de alta resolución), `pesos_soldadura.py` (pesos de tablas y soldaduras con las reglas de `precotizar.py`). Primer caso: COT26-0010-002.
 
+**Ahorro de tokens (Matías, 25-11-2026):** sin agentes de auditoría salvo pedido; verificación con `--rapido`; detalle en CLAUDE.md. Quedó sin auditar la corrección de la COT26-0010-002 (25-11-2026).
+
 **Caso de prueba:** COT26-1003-001 CAPEX OQ8209 (borrador, no enviada; su estado está en su `bitacora.md` y en `cotizaciones/README.md`).
 
 **Índices congelados (28-10-2026):** al pasar una cotización a revisado, la página guarda en `cot.indices_congelados` los índices de ese día; desde ahí el precio no cambia cuando la base suma un mes. Al volver a borrador se descongelan. `armar_cotizacion.py`, el motor JS, la planilla y el informe usan los congelados si están. La CAPEX (caso de control) tiene los del 28-10-2026, así el control de la página no se mueve (en el repositorio, desde la regla P4 ter, el control es 7.324,57). La oferta económica muestra una fila de flete cuando se incluye.
