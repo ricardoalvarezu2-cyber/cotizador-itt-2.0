@@ -132,8 +132,8 @@ Peso aproximado de estos componentes: 6.829,00 kg; sin internos ni elementos fil
 | VG-357 | Globo | 2" | #600 RF | CE32 | 1 | 2 | Drenaje cerrado (regulación) | P&ID |
 | VF-358 | Esférica | 2" | #150 RF | CA11 | 1 | 2 | Entrada de aire de instrumentos | P&ID |
 | VF-325 / VF-326 | Esférica paso total (FB) | 1 1/2" | NPT | CE32 | 2 | 4 | Cupón CC-301 e inyección de químico (nota 3) | P&ID |
-| (sin tag) | Esférica 2000 WOG (TCH2N) | 1/2" | NPT | CE32 / CA11 | 27 | 54 | Venteos y purgas de instrumentos (12), PSV (4), aire IA1–IA5 + reserva (6), LG (4), CC (1) | P&ID; cantidad contada por ITT |
-| (sin tag) | Esférica 2000 WOG (TCH2N) | 3/4" | NPT | CE32 / CA11 | 11 | 22 | Drenajes de LV/SDV (4), VR-354 (1), PDIT (2), PIT (1), PI (1), aire (1), OD1 (1) | P&ID; cantidad contada por ITT |
+| (sin tag) | Esférica 2000 WOG (TCH2N) | 1/2" | NPT | CE32 / CA11 | 23 | 46 | Venteos de LIT (8), LG (4), PSV (4), CC-301 (1), aire IA1–IA5 + extremo (6). Las 1/2" de PIT y PI son del manifold M2 | P&ID; cantidad contada por ITT |
+| (sin tag) | Esférica 2000 WOG (TCH2N) | 3/4" | NPT | CE32 / CA11 | 11 | 22 | Drenajes de LV-301D (2) y LV-301B (2), entre VR-354 y VF-355 (1), PDIT (2), PIT (1), PI (1), colector de aire (1), OD1 (1) | P&ID; cantidad contada por ITT |
 
 ### 3.2 Actuadas, de seguridad y restricción
 
@@ -145,7 +145,7 @@ Peso aproximado de estos componentes: 6.829,00 kg; sin internos ni elementos fil
 | SDV-301 | Esférica de corte, actuador neumático simple efecto, solenoide SV-301, fines de carrera ZSO/ZSC-301 | 2" | #600 RF | CE32 | 1 | 2 | Corte por SIS línea inferior (FC) | P&ID |
 | BDV-301E | Esférica de blowdown, actuador neumático, solenoide SV-301E, fines de carrera ZSO/ZSC-301E | 4" | #600 RF | CE32 | 1 | 2 | Despresurización (falla abre, FO); comando HS-003 | P&ID; P&ID nota 10 |
 | PSV-301A / PSV-301B | Seguridad, API 526, orificio D | 1" × 2" | #600 RF × #150 RF | CE32 / CK11 | 2 | 4 | Set 99 kg/cm2g, caso fuego (alcance del proveedor, RI §10) | P&ID |
-| RO-301 | Placa orificio de restricción con bridas portaplaca B16.36 | 4" | #600 RF | CE32 / CK31 | 1 | 2 | Restricción del blowdown (dimensionamiento de AESA, RI §10) | P&ID |
+| RO-301 | Placa orificio de restricción con bridas portaplaca B16.36 | 4" | #600 RF | CK31 (baja temp.) | 1 | 2 | Restricción del blowdown (dimensionamiento de AESA, RI §10) | P&ID |
 
 Las válvulas Taval (esféricas, globo y retención) se cotizan con lista 30 × 0,52 si Matías lo aprueba; las de control, PSV y actuadores, a terceros.
 
@@ -153,10 +153,10 @@ Las válvulas Taval (esféricas, globo y retención) se cotizan con lista 30 × 
 
 | Tag | Descripción | Conexión | Sistema | Nota |
 |---|---|---|---|---|
-| LIT-301A | Transmisor de nivel por presión diferencial con sellos remotos (J0402) | 2" #600 RF ×2 | SIS (LALL-301A, I-27) | Sección inferior; traceado (nota 2); capilares cortos (nota 5) |
-| LIT-301B | Transmisor de nivel DP con sellos remotos | 2" #600 RF ×2 | SCP (LIC-301B → LV-301B) | Sección inferior |
-| LIT-301C | Transmisor de nivel DP con sellos remotos | 2" #600 RF ×2 | SIS (LALL-301C, I-26) | Sección superior |
-| LIT-301D | Transmisor de nivel DP con sellos remotos | 2" #600 RF ×2 | SCP (LIC-301D → LV-301D) | Sección superior |
+| LIT-301A | Transmisor de nivel por presión diferencial con sellos remotos (J0402) | 2" #600 RF ×2 | SIS (LALL-301A, I-27) | Sección inferior; traceado (nota 2); capilares cortos (nota 5); con bridas pancake AC + JD (P&ID nota 9) |
+| LIT-301B | Transmisor de nivel DP con sellos remotos | 2" #600 RF ×2 | SCP (LIC-301B → LV-301B) | Sección inferior; con bridas pancake + JD (nota 9) |
+| LIT-301C | Transmisor de nivel DP con sellos remotos | 2" #600 RF ×2 | SIS (LALL-301C, I-26) | Sección superior; con bridas pancake + JD (nota 9) |
+| LIT-301D | Transmisor de nivel DP con sellos remotos | 2" #600 RF ×2 | SCP (LIC-301D → LV-301D) | Sección superior; con bridas pancake + JD (nota 9) |
 | LG-301A | Indicador de nivel de vidrio (J0401), tipo reflex, con válvulas de bloqueo con bola de retención | 2" #600 RF ×2 | Local | Sección inferior. ITT: reflex (HD-J0401-01) |
 | LG-301B | Indicador de nivel de vidrio tipo reflex | 2" #600 RF ×2 | Local | Sección superior |
 | PDIT-301 | Transmisor de presión diferencial (J0304) con manifold de 5 vías (M5) | 1/2" NPT | SCP (PDI/PDAH-301) | Ensuciamiento de cartuchos; tomas J1/J2 |
@@ -187,7 +187,7 @@ No incluidos: HS-003, HS-301, HS-301C, ESD1/ESD2, enclavamientos I-25/26/27/209/
 
 | Descripción | Ø | Sch | Material | Clase | Metros | Total (m) | Líneas |
 |---|---|---|---|---|---|---|---|
-| Caño sin costura BE | 10" | Sch 80 | ASTM A106 Gr. B | CE32 | 24 | 48 | Entrada 10"-GH-1105/0176, salida 10"-GH-0269 y by-pass 10"-GH-0297 |
+| Caño sin costura BE | 10" | Sch 80 | ASTM A106 Gr. B | CE32 | 16 | 32 | Entrada 10"-GH-1105/0176, salida 10"-GH-0269 y by-pass 10"-GH-0297 (ajustado a los pesos del plano: pos. 2001 + 2002 = 3.979 kg) |
 | Caño sin costura BE | 4" | Sch 80 | ASTM A106 Gr. B | CE32 | 5 | 10 | BDV 4"-GH-0750 |
 | Caño sin costura BE | 4" | Sch 80 | ASTM A333 Gr. 6 | CK31 | 1 | 2 | 4"-V-0752 aguas abajo de RO-301 |
 | Caño sin costura BE | 6" | Sch 80 | ASTM A333 Gr. 6 | CK31 | 2 | 4 | Tramo de VF-338 |
@@ -206,14 +206,14 @@ No incluidos: HS-003, HS-301, HS-301C, ESD1/ESD2, enclavamientos I-25/26/27/209/
 |---|---|---|---|---|---|---|
 | Codo 90° RL BW | 10" | Sch 80 | ASTM A234 WPB | CE32 | 8 | 16 |
 | Te normal BW | 10" | Sch 80 | ASTM A234 WPB | CE32 | 2 | 4 |
-| Weldolet 10" × 4" | 10" × 4" | Sch 80 | ASTM A105 | CE32 | 1 | 2 |
+| Te de reducción BW (derivación de la BDV; tabla de derivaciones CE32: código 3) | 10" × 4" | Sch 80 | ASTM A234 WPB | CE32 | 1 | 2 |
 | Codo 90° RL BW | 4" | Sch 80 | ASTM A234 WPB | CE32 | 3 | 6 |
 | Reducción concéntrica BW | 6" × 4" | Sch 80 | ASTM A420 WPL6 | CK31 | 1 | 2 |
 | Codo 90° RL BW | 8" | Sch 40 | ASTM A420 WPL6 | CK11 | 2 | 4 |
 | Te normal BW | 8" | Sch 40 | ASTM A420 WPL6 | CK11 | 2 | 4 |
 | Codo 90° RL BW | 6" | Sch 40 | ASTM A420 WPL6 | CK11 | 4 | 8 |
 | Reducción concéntrica BW | 6" × 3" | Sch 40 | ASTM A420 WPL6 | CK11 | 2 | 4 |
-| Reducción concéntrica BW | 3" × 2" | Sch 40 × Sch 80 | ASTM A420 WPL6 | CK11 | 2 | 4 |
+| Reducción concéntrica BW | 3" × 2" | Sch 40 | ASTM A420 WPL6 | CK11 | 2 | 4 |
 | Codo 90° RL BW | 2" | Sch 160 | ASTM A234 WPB | CE32 | 30 | 60 |
 | Te normal BW | 2" | Sch 160 | ASTM A234 WPB | CE32 | 6 | 12 |
 | Reducción concéntrica BW | 2" × 1" | Sch 160 | ASTM A234 WPB | CE32 | 2 | 4 |
@@ -223,24 +223,27 @@ No incluidos: HS-003, HS-301, HS-301C, ESD1/ESD2, enclavamientos I-25/26/27/209/
 | Codo 90° RL BW | 2" | Sch 40 | ASTM A234 WPB | CA11 | 10 | 20 |
 | Te normal BW | 2" | Sch 40 | ASTM A234 WPB | CA11 | 6 | 12 |
 | Casquete BW | 2" | Sch 40 | ASTM A234 WPB | CA11 | 2 | 4 |
-| Thredolet 3000# | 1/2" | NPT | ASTM A105 | CE32 / CA11 | 20 | 40 |
-| Thredolet 3000# | 3/4" | NPT | ASTM A105 | CE32 / CA11 | 10 | 20 |
+| Thredolet 6000# (CE32: serie de olets de la clase; a verificar) | 1/2" | NPT | ASTM A105 | CE32 | 14 | 28 |
+| Thredolet 3000# | 1/2" | NPT | ASTM A105 | CA11 | 6 | 12 |
+| Thredolet 6000# (CE32; a verificar) | 3/4" | NPT | ASTM A105 | CE32 | 8 | 16 |
+| Thredolet 3000# | 3/4" | NPT | ASTM A105 | CA11 | 2 | 4 |
 | Tapón hexagonal 3000# | 1/2" y 3/4" | NPT | ASTM A105 | CE32 / CA11 | 38 | 76 |
 
 ### 5.3 Bridas de cañería (las de las válvulas, instrumentos y boquillas no van acá)
 
 | Descripción | Ø | Serie | Sch | Material | Clase | Cant. | Total |
 |---|---|---|---|---|---|---|---|
-| Brida WN RF | 10" | #600 | Sch 80 | ASTM A105 | CE32 | 8 | 16 |
-| Brida WN RF | 4" | #600 | Sch 80 | ASTM A105 | CE32 | 2 | 4 |
-| Brida portaplaca WN RF (par, para RO-301) | 4" | #600 | Sch 80 | ASTM A105 | CE32 (B16.36) | 1 | 2 |
+| Brida WN RF (válvulas de 10" y límites EG y SG) | 10" | #600 | Sch 80 | ASTM A105 | CE32 | 8 | 16 |
+| Brida WN RF (entrada de BDV-301E) | 4" | #600 | Sch 80 | ASTM A105 | CE32 | 1 | 2 |
+| Brida WN RF (salida de BDV-301E) | 4" | #600 | Sch 80 | ASTM A350 LF2 | CK31 | 1 | 2 |
+| Brida portaplaca WN RF (par, para RO-301) | 4" | #600 | Sch 80 | ASTM A350 LF2 | CK31 (B16.36) | 1 | 2 |
 | Brida WN RF | 6" | #600 | Sch 80 | ASTM A350 LF2 | CK31 | 2 | 4 |
 | Brida WN RF | 6" | #150 | Sch 40 | ASTM A350 LF2 | CK11 | 4 | 8 |
 | Brida WN RF (límite SV) | 8" | #150 | Sch 40 | ASTM A350 LF2 | CK11 | 1 | 2 |
-| Brida WN RF | 2" | #150 | Sch 80 | ASTM A350 LF2 | CK11 | 2 | 4 |
-| Brida WN RF | 2" | #600 | Sch 160 | ASTM A105 | CE32 | 40 | 80 |
+| Brida WN RF (salidas de PSV) | 2" | #150 | Sch 40 | ASTM A350 LF2 | CK11 | 2 | 4 |
+| Brida WN RF (incluye el límite SL) | 2" | #600 | Sch 160 | ASTM A105 | CE32 | 40 | 80 |
 | Brida WN RF (límite DC) | 2" | #150 | Sch 160 | ASTM A105 | CA11 | 1 | 2 |
-| Brida WN RF | 2" | #150 | Sch 40 | ASTM A105 | CA11 | 4 | 8 |
+| Brida WN RF (VF-358 y límites AI y DA) | 2" | #150 | Sch 40 | ASTM A105 | CA11 | 4 | 8 |
 | Brida SW RF | 1" | #600 | Sch 160 | ASTM A105 | CE32 | 5 | 10 |
 | Brida ciega RF perforada y roscada 3/4" NPT (P1, P2, J1, J2) | 2" | #600 |  | ASTM A105 | CE32 | 4 | 8 |
 
@@ -251,11 +254,12 @@ No incluidos: HS-003, HS-301, HS-301C, ESD1/ESD2, enclavamientos I-25/26/27/209/
 | 32" | #600 | Espiralada AISI 316/grafito 4,5 mm, anillo ext. AC zincado + int. AISI 316 (B16.20, para B16.47 A) | 1 | 2 | A193 B7 / A194 2H zincado | 2" × 15 1/2" (a verificar) | 28 | 56 | M1 |
 | 20" | #600 | Espiralada 316/grafito, anillo ext. + int. | 1 | 2 | A193 B7 / A194 2H zincado | 1 5/8" × 11 1/2" | 24 | 48 | MH |
 | 10" | #600 | Espiralada 316/grafito, anillo ext. + int. | 8 | 16 | A193 B7 / A194 2H zincado | 1 1/4" × 8 1/2" | 128 | 256 | A, B1, VF-322, VF-337, VF-339 |
-| 6" | #600 | Espiralada 316/grafito, anillo ext. AC zincado | 2 | 4 | A320 L7 / A194 Gr. 7 (CK31) | 1" × 6 3/4" | 24 | 48 | VF-338 |
-| 6" | #150 | Espiralada 316/grafito, anillo ext. AC zincado | 4 | 8 | A320 L7 / A194 Gr. 7 (CK11) | 3/4" × 4" | 32 | 64 | VF-341, VF-343 |
-| 4" | #600 | Espiralada 316/grafito, anillo ext. AC zincado | 5 | 10 | A193 B7 / A194 2H zincado | 7/8" × 5 3/4" (RO: más largo) | 40 | 80 | R1, R2, BDV-301E, RO-301 |
-| 2" | #600 | Espiralada 316/grafito, anillo ext. AC zincado | 58 | 116 | A193 B7 / A194 2H zincado | 5/8" × 4 1/4" | 464 | 928 | Boquillas, válvulas de línea, LV/SDV, drenaje, PSV |
-| 2" | #600 | Junta dieléctrica VCS epoxi RFG (kit con camisas y arandelas) | 12 | 24 | A193 B7 / A194 2H zincado | 5/8" × 4 3/4" (kit JD) | 96 | 192 | Instrumentos de nivel L1–L12 (P&ID "JD"; nota general 2G) |
+| 6" | #600 | Espiralada 316/grafito, anillo ext. AC zincado | 2 | 4 | A320 L7 / A194 Gr. 4 (CK31) | 1" × 6 3/4" | 24 | 48 | VF-338 |
+| 6" | #150 | Espiralada 316/grafito, anillo ext. AC zincado | 4 | 8 | A320 L7 / A194 Gr. 4 (CK11) | 3/4" × 4" | 32 | 64 | VF-341, VF-343 |
+| 4" | #600 | Espiralada 316/grafito, anillo ext. AC zincado | 3 | 6 | A193 B7 / A194 2H zincado | 7/8" × 5 3/4" | 24 | 48 | R1, R2, entrada de BDV-301E |
+| 4" | #600 | Espiralada 316/grafito, anillo ext. AC zincado | 3 | 6 | A320 L7 / A194 Gr. 4 (CK31) | 7/8" × 5 3/4" (RO: más largo, a verificar con el espesor de la placa) | 24 | 48 | Salida de BDV-301E, RO-301 (2 juntas) |
+| 2" | #600 | Espiralada 316/grafito, anillo ext. AC zincado | 62 | 124 | A193 B7 / A194 2H zincado | 5/8" × 4 1/4" | 496 | 992 | Boquillas, válvulas de línea, LG, LV/SDV, drenaje, PSV |
+| 2" | #600 | Junta dieléctrica + brida pancake AC: las provee el instrumentista con el LIT (P&ID nota 9) | 8 | 16 | A193 B7 / A194 2H zincado | 5/8" × 4 1/4" (a verificar con el kit JD) | 64 | 128 | LIT-301A/B/C/D en L1–L4 y L9–L12 (burbujas JD del P&ID) |
 | 2" | #150 | Espiralada 316/grafito, anillo ext. AC zincado | 4 | 8 | B7 (CA11) / L7 (CK11) | 5/8" × 3 1/4" | 16 | 32 | Salidas de PSV, VF-358 |
 | 1" | #600 | Espiralada 316/grafito, anillo ext. AC zincado | 5 | 10 | A193 B7 / A194 2H zincado | 5/8" × 3 3/4" | 20 | 40 | Entradas de PSV, venteo manual |
 
@@ -320,31 +324,33 @@ Sí tiene: instrumentación cableada a JB, traceado eléctrico y puesta a tierra
 5. Colector de venteo de 8": el plano dice Sch 40 y la clase CK11 da Sch 20. Se toma Sch 40.
 6. Aguas abajo de PSV y de BDV/RO (CK11 y CK31) el material es de baja temperatura (A333 Gr. 6, A350 LF2, A420 WPL6, espárragos A320 L7).
 7. Largos de cañería y cantidad de accesorios: estimados por ITT con el P&ID, las cotas del plano y los pesos de su tabla (no hay isométricos).
-8. Juntas dieléctricas: 12 (una por instrumento de nivel). Las uniones con el exterior (límites del skid) llevan solo nuestra brida; junta y espárragos los pone AESA.
-9. Detector de gas AT-006 y las funciones de sala de control: fuera del alcance (fuera del límite del skid).
-10. Especificaciones que no vinieron (C-02.00, J1800, J0301, J0402, J1302, J1304, J1400, P1100, P1102, P1103, P1105): se cotiza según buena práctica y se aclara en la oferta.
+8. Juntas dieléctricas: 8, en las conexiones de los LIT (burbujas JD del P&ID); según la nota 9 del P&ID las bridas pancake y las JD vienen con el instrumento. Las uniones con el exterior (límites del skid) llevan solo nuestra brida; junta y espárragos los pone AESA.
+9. Thredolets en CE32: serie 6000# por la tabla de series de olets de la clase (a verificar si la columna es el ramal o el cabezal); en CA11 y CK11, 3000#.
+10. Caño de 10": 16 m, ajustado para que el piping de 10" dé un peso parecido al de las líneas 2001 y 2002 del plano.
+11. Detector de gas AT-006 y las funciones de sala de control: fuera del alcance (fuera del límite del skid).
+12. Especificaciones que no vinieron (C-02.00, J1800, J0301, J0402, J1302, J1304, J1400, P1100, P1102, P1103, P1105): se cotiza según buena práctica y se aclara en la oferta.
 
 
 ## 11. Pesos (por skid; tablas de `conocimiento/tecnico/`)
 
 | Rubro | kg por skid | kg 2 skids |
 |---|---|---|
-| Caños | 3.456,07 | 6.912,14 |
-| Accesorios | 840,84 | 1.681,68 |
+| Caños | 2.688,24 | 5.376,47 |
+| Accesorios | 896,70 | 1.793,41 |
 | Bridas | 1.160,40 | 2.320,80 |
-| Válvulas | 3.442,81 | 6.885,62 |
-| Bulonería | 845,11 | 1.690,22 |
+| Válvulas | 3.939,81 | 7.879,62 |
+| Bulonería | 850,82 | 1.701,64 |
 | Recipiente | 6.829,00 | 13.658,00 |
 | Estructura (plano) | 8.380,00 | 16.760,00 |
-| **Total** | 24.954,22 | 49.908,45 |
+| **Total** | 24.744,97 | 49.489,94 |
 
-Contra el plano: 22.320,00 kg por skid sin instrumental ni cableados (11,80 %). Faltan instrumentos, cajas, cables, internos de la caja de chicanas, cartuchos, aislación y pintura; las válvulas actuadas y las PSV van con peso aproximado.
+Contra el plano: 22.320,00 kg por skid sin instrumental ni cableados (10,86 %). La diferencia viene sobre todo de las válvulas de 10": la tabla del plano lista 1 (pos. 501, 732 kg) y el P&ID tiene 3 (+1.464 kg). Faltan instrumentos, cajas, cables, internos de la caja de chicanas, cartuchos, aislación y pintura; las válvulas actuadas y las PSV van con peso aproximado; los metros de caño son estimados sin isométricos.
 
 ### 11.1 Detalle
 
 | Rubro | Descripción | Cant. | kg un. | kg por skid | Fuente |
 |---|---|---|---|---|---|
-| Caños | Caño sin costura BE 10" Sch 80 ASTM A106 Gr. B | 24 | 95,98 | 2.303,50 | B36.10 (kg/m) |
+| Caños | Caño sin costura BE 10" Sch 80 ASTM A106 Gr. B | 16 | 95,98 | 1.535,66 | B36.10 (kg/m) |
 | Caños | Caño sin costura BE 4" Sch 80 ASTM A106 Gr. B | 5 | 22,32 | 111,61 | B36.10 (kg/m) |
 | Caños | Caño sin costura BE 4" Sch 80 ASTM A333 Gr. 6 | 1 | 22,32 | 22,32 | B36.10 (kg/m) |
 | Caños | Caño sin costura BE 6" Sch 80 ASTM A333 Gr. 6 | 2 | 42,56 | 85,13 | B36.10 (kg/m) |
@@ -358,14 +364,14 @@ Contra el plano: 22.320,00 kg por skid sin instrumental ni cableados (11,80 %). 
 | Caños | Niples sin costura NPT 1/2" y 3/4" | 40 | 0,50 | 20,00 | aprox. ITT (niple 1/2"-3/4" ≈ 0,5 kg) |
 | Accesorios | Codo 90° RL BW 10" Sch 80 | 8 | 57,66 | 461,30 | ASME B16.9 × 1,19 por espesor |
 | Accesorios | Te normal BW 10" Sch 80 | 2 | 56,59 | 113,19 | ASME B16.9 × 1,19 por espesor |
-| Accesorios | Weldolet 10" × 4" 10" × 4" Sch 80 | 1 | 2,90 | 2,90 | MSS SP-97 |
+| Accesorios | Te de reducción BW (derivación de la BDV; tabla de derivaciones CE32: código 3) 10" × 4" Sch 80 | 1 | 56,05 | 56,05 | ASME B16.9 × 1,19 por espesor |
 | Accesorios | Codo 90° RL BW 4" Sch 80 | 3 | 6,12 | 18,36 | ASME B16.9 |
 | Accesorios | Reducción concéntrica BW 6" × 4" Sch 80 | 1 | 5,22 | 5,22 | ASME B16.9 |
 | Accesorios | Codo 90° RL BW 8" Sch 40 | 2 | 22,68 | 45,36 | ASME B16.9 |
 | Accesorios | Te normal BW 8" Sch 40 | 2 | 24,95 | 49,90 | ASME B16.9 |
 | Accesorios | Codo 90° RL BW 6" Sch 40 | 4 | 11,11 | 44,44 | ASME B16.9 |
 | Accesorios | Reducción concéntrica BW 6" × 3" Sch 40 | 2 | 3,63 | 7,26 | ASME B16.9 |
-| Accesorios | Reducción concéntrica BW 3" × 2" Sch 40 × Sch 80 | 2 | 0,82 | 1,64 | ASME B16.9 |
+| Accesorios | Reducción concéntrica BW 3" × 2" Sch 40 | 2 | 0,82 | 1,64 | ASME B16.9 |
 | Accesorios | Codo 90° RL BW 2" Sch 160 | 30 | 1,47 | 44,10 | ASME B16.9 |
 | Accesorios | Te normal BW 2" Sch 160 | 6 | 2,27 | 13,62 | ASME B16.9 |
 | Accesorios | Reducción concéntrica BW 2" × 1" Sch 160 | 2 | 0,68 | 1,36 | ASME B16.9 |
@@ -375,24 +381,27 @@ Contra el plano: 22.320,00 kg por skid sin instrumental ni cableados (11,80 %). 
 | Accesorios | Codo 90° RL BW 2" Sch 40 | 10 | 0,73 | 7,30 | ASME B16.9 |
 | Accesorios | Te normal BW 2" Sch 40 | 6 | 1,59 | 9,54 | ASME B16.9 |
 | Accesorios | Casquete BW 2" Sch 40 | 2 | 0,27 | 0,54 | ASME B16.9 |
-| Accesorios | Thredolet 3000# 1/2" NPT | 20 | 0,11 | 2,26 | MSS SP-97 |
-| Accesorios | Thredolet 3000# 3/4" NPT | 10 | 0,16 | 1,59 | MSS SP-97 |
+| Accesorios | Thredolet 6000# (CE32: serie de olets de la clase; a verificar) 1/2" NPT | 14 | 0,20 | 2,86 | MSS SP-97 |
+| Accesorios | Thredolet 3000# 1/2" NPT | 6 | 0,11 | 0,68 | MSS SP-97 |
+| Accesorios | Thredolet 6000# (CE32; a verificar) 3/4" NPT | 8 | 0,34 | 2,72 | MSS SP-97 |
+| Accesorios | Thredolet 3000# 3/4" NPT | 2 | 0,16 | 0,32 | MSS SP-97 |
 | Accesorios | Tapón hexagonal 3000# 1/2" y 3/4" NPT | 38 | 0,12 | 4,64 | ASME B16.11 |
-| Bridas | Brida WN RF 10" #600 | 8 | 85,50 | 684,00 | B16.5 |
-| Bridas | Brida WN RF 4" #600 | 2 | 18,90 | 37,80 | B16.5 |
+| Bridas | Brida WN RF (válvulas de 10" y límites EG y SG) 10" #600 | 8 | 85,50 | 684,00 | B16.5 |
+| Bridas | Brida WN RF (entrada de BDV-301E) 4" #600 | 1 | 18,90 | 18,90 | B16.5 |
+| Bridas | Brida WN RF (salida de BDV-301E) 4" #600 | 1 | 18,90 | 18,90 | B16.5 |
 | Bridas | Brida portaplaca WN RF (par, para RO-301) 4" #600 | 1 | 38,00 | 38,00 | B16.36 (par) |
 | Bridas | Brida WN RF 6" #600 | 2 | 36,50 | 73,00 | B16.5 |
 | Bridas | Brida WN RF 6" #150 | 4 | 11,70 | 46,80 | B16.5 |
 | Bridas | Brida WN RF (límite SV) 8" #150 | 1 | 18,90 | 18,90 | B16.5 |
-| Bridas | Brida WN RF 2" #150 | 2 | 2,70 | 5,40 | B16.5 |
-| Bridas | Brida WN RF 2" #600 | 40 | 5,40 | 216,00 | B16.5 |
+| Bridas | Brida WN RF (salidas de PSV) 2" #150 | 2 | 2,70 | 5,40 | B16.5 |
+| Bridas | Brida WN RF (incluye el límite SL) 2" #600 | 40 | 5,40 | 216,00 | B16.5 |
 | Bridas | Brida WN RF (límite DC) 2" #150 | 1 | 2,70 | 2,70 | B16.5 |
-| Bridas | Brida WN RF 2" #150 | 4 | 2,70 | 10,80 | B16.5 |
+| Bridas | Brida WN RF (VF-358 y límites AI y DA) 2" #150 | 4 | 2,70 | 10,80 | B16.5 |
 | Bridas | Brida SW RF 1" #600 | 5 | 1,80 | 9,00 | B16.5 |
 | Bridas | Brida ciega RF perforada y roscada 3/4" NPT (P1, P2, J1, J2) 2" #600 | 4 | 4,50 | 18,00 | B16.5 |
-| Válvulas | VF-322 Esférica paso total (FB) 10" #600 RF | 1 | 565,00 | 565,00 | Taval Lista 30 |
-| Válvulas | VF-337 Esférica paso total (FB) 10" #600 RF | 1 | 565,00 | 565,00 | Taval Lista 30 |
-| Válvulas | VF-339 Esférica 10" #600 RF | 1 | 565,00 | 565,00 | Taval Lista 30 |
+| Válvulas | VF-322 Esférica paso total (FB) 10" #600 RF | 1 | 732,00 | 732,00 | plano pos. 501 (con reductor) |
+| Válvulas | VF-337 Esférica paso total (FB) 10" #600 RF | 1 | 732,00 | 732,00 | plano pos. 501 (con reductor) |
+| Válvulas | VF-339 Esférica 10" #600 RF | 1 | 732,00 | 732,00 | plano pos. 501 (con reductor) |
 | Válvulas | VF-323 Esférica 2" #600 RF | 1 | 28,00 | 28,00 | Taval Lista 30 |
 | Válvulas | VG-324 Globo 2" #600 RF | 1 | 27,00 | 27,00 | Taval Lista 30 |
 | Válvulas | VF-327/328/329/330/331/332/333/334/335/336/359/360 Esférica paso total (FB) 2" #600 RF | 12 | 28,00 | 336,00 | Taval Lista 30 |
@@ -412,7 +421,7 @@ Contra el plano: 22.320,00 kg por skid sin instrumental ni cableados (11,80 %). 
 | Válvulas | VG-357 Globo 2" #600 RF | 1 | 27,00 | 27,00 | Taval Lista 30 |
 | Válvulas | VF-358 Esférica 2" #150 RF | 1 | 14,00 | 14,00 | Taval Lista 30 |
 | Válvulas | VF-325 / VF-326 Esférica paso total (FB) 1 1/2" NPT | 2 | 4,20 | 8,40 | Taval Lista 30 |
-| Válvulas | (sin tag) Esférica 2000 WOG (TCH2N) 1/2" NPT | 27 | 1,00 | 27,00 | Taval Lista 30 |
+| Válvulas | (sin tag) Esférica 2000 WOG (TCH2N) 1/2" NPT | 23 | 1,00 | 23,00 | Taval Lista 30 |
 | Válvulas | (sin tag) Esférica 2000 WOG (TCH2N) 3/4" NPT | 11 | 1,31 | 14,41 | Taval Lista 30 |
 | Válvulas | LV-301D (+ LY-301D) 2" #600 RF | 1 | 70,00 | 70,00 | aprox. ITT (con actuador; sin tabla) |
 | Válvulas | LV-301B (+ LY-301B) 2" #600 RF | 1 | 70,00 | 70,00 | aprox. ITT (con actuador; sin tabla) |
@@ -426,9 +435,10 @@ Contra el plano: 22.320,00 kg por skid sin instrumental ni cableados (11,80 %). 
 | Bulonería | Espárragos 1 1/4" × 8 1/2" (10" #600) | 128 | 2,05 | 263,01 | B16.5 / B18.2.2 (calculado) |
 | Bulonería | Espárragos 1" × 6 3/4" (6" #600) | 24 | 1,07 | 25,62 | B16.5 / B18.2.2 (calculado) |
 | Bulonería | Espárragos 3/4" × 4" (6" #150) | 32 | 0,40 | 12,87 | B16.5 / B18.2.2 (calculado) |
-| Bulonería | Espárragos 7/8" × 5 3/4" (RO: más largo) (4" #600) | 40 | 0,71 | 28,57 | B16.5 / B18.2.2 (calculado) |
-| Bulonería | Espárragos 5/8" × 4 1/4" (2" #600) | 464 | 0,28 | 127,92 | B16.5 / B18.2.2 (calculado) |
-| Bulonería | Espárragos 5/8" × 4 3/4" (kit JD) (2" #600) | 96 | 0,28 | 26,47 | B16.5 / B18.2.2 (calculado) |
+| Bulonería | Espárragos 7/8" × 5 3/4" (4" #600) | 24 | 0,71 | 17,14 | B16.5 / B18.2.2 (calculado) |
+| Bulonería | Espárragos 7/8" × 5 3/4" (RO: más largo, a verificar con el espesor de la placa) (4" #600) | 24 | 0,71 | 17,14 | B16.5 / B18.2.2 (calculado) |
+| Bulonería | Espárragos 5/8" × 4 1/4" (2" #600) | 496 | 0,28 | 136,75 | B16.5 / B18.2.2 (calculado) |
+| Bulonería | Espárragos 5/8" × 4 1/4" (a verificar con el kit JD) (2" #600) | 64 | 0,28 | 17,64 | B16.5 / B18.2.2 (calculado) |
 | Bulonería | Espárragos 5/8" × 3 1/4" (2" #150) | 16 | 0,24 | 3,78 | B16.5 / B18.2.2 (calculado) |
 | Bulonería | Espárragos 5/8" × 3 3/4" (1" #600) | 20 | 0,26 | 5,12 | B16.5 / B18.2.2 (calculado) |
 | Recipiente | Envolvente (cuerpo) rolado, Ø ext. 812,8 mm, LT/LT 4.064 mm | 1 | 2.490,00 | 2.490,00 | aprox. ITT / tablas |
@@ -470,12 +480,12 @@ Pulgada equivalente = Ø × factor de espesor (`tecnico/factores_soldadura.csv`)
 | BW a tope (taller) | 4,00 | 80 | 9 | 36,00 | 1,42 | 51,19 | 102,38 |
 | BW a tope (taller) | 3,00 | 40 | 3 | 9,00 | 1,00 | 9,00 | 18,00 |
 | BW a tope (taller) | 2,00 | 160 | 98 | 196,00 | 2,24 | 438,12 | 876,24 |
-| BW a tope (taller) | 2,00 | 40 | 35 | 70,00 | 1,00 | 70,00 | 140,00 |
-| BW a tope (taller) | 2,00 | 80 | 3 | 6,00 | 1,42 | 8,50 | 17,00 |
+| BW a tope (taller) | 2,00 | 40 | 38 | 76,00 | 1,00 | 76,00 | 152,00 |
 | BW a tope (taller) | 1,00 | 160 | 2 | 2,00 | 1,88 | 3,76 | 7,51 |
-| Olet (thredolet/sockolet) | 0,75 | 3000 | 10 | 7,50 | 1,75 | 13,12 | 26,25 |
-| Olet (thredolet/sockolet) | 0,50 | 3000 | 20 | 10,00 | 1,75 | 17,50 | 35,00 |
-| Olet (weldolet) | 4,00 | XS | 1 | 4,00 | 2,50 | 10,00 | 20,00 |
+| Olet (thredolet/sockolet) | 0,75 | 6000 | 8 | 6,00 | 1,75 | 10,50 | 21,00 |
+| Olet (thredolet/sockolet) | 0,75 | 3000 | 2 | 1,50 | 1,75 | 2,62 | 5,25 |
+| Olet (thredolet/sockolet) | 0,50 | 6000 | 14 | 7,00 | 1,75 | 12,25 | 24,50 |
+| Olet (thredolet/sockolet) | 0,50 | 3000 | 6 | 3,00 | 1,75 | 5,25 | 10,50 |
 | SW (enchufe) | 1,00 | 160 | 13 | 13,00 | 1,88 | 24,42 | 48,85 |
 | SW (enchufe) | 1,00 | 80 | 4 | 4,00 | 1,35 | 5,38 | 10,77 |
 
@@ -483,11 +493,10 @@ Pulgada equivalente = Ø × factor de espesor (`tecnico/factores_soldadura.csv`)
 
 | Tipo | Juntas | Pulg. nominales | Pulg. equivalentes | Pulg-eq 2 filtros |
 |---|---|---|---|---|
-| BW a tope (taller) | 199 | 735,00 | 1.169,57 | 2.339,13 |
+| BW a tope (taller) | 199 | 735,00 | 1.167,06 | 2.334,13 |
 | Olet (thredolet/sockolet) | 30 | 17,50 | 30,62 | 61,25 |
-| Olet (weldolet) | 1 | 4,00 | 10,00 | 20,00 |
 | SW (enchufe) | 17 | 17,00 | 29,81 | 59,62 |
-| **Total piping** | 247 | 773,50 | 1.240,00 | 2.480,00 |
+| **Total piping** | 246 | 769,50 | 1.227,50 | 2.455,00 |
 
 ### 12.2 Recipiente
 
@@ -497,20 +506,23 @@ Pulgada equivalente = Ø × factor de espesor (`tecnico/factores_soldadura.csv`)
 | Recipiente | Circunferencial virola–virola | 1 | 32,00 | 3,34 | 106,78 |
 | Recipiente | Circunferencial cuerpo–casquete inferior | 1 | 32,00 | 3,34 | 106,78 |
 | Recipiente | Circunferencial cuerpo–brida M1 32" | 1 | 32,00 | 3,34 | 106,78 |
-| Recipiente | Pollera–casquete (filete, esp. 12,7 mm) | 1 | 32,00 | 1,33 | 42,64 |
+| Recipiente | Placa portacartuchos al cuerpo (circunferencial, esp. 25,4 mm) | 1 | 32,00 | 2,67 | 85,29 |
+| Recipiente | Pollera–casquete (esp. 12,7 mm) | 1 | 32,00 | 1,33 | 42,64 |
+| Recipiente | Costura longitudinal de la pollera (≈ 1.000 mm, esp. 12,7 mm) | 1 | 12,53 | 1,33 | 16,70 |
 | Recipiente | Pollera–anillo base (filete) | 1 | 32,00 | 1,00 | 32,00 |
+| Recipiente | Costura longitudinal del cuello rolado MH 20" (≈ 300 mm, esp. 31,8 mm) | 1 | 3,76 | 3,34 | 12,55 |
 | Recipiente | Cuello–brida MH 20" (esp. 31,8 mm) | 1 | 20,00 | 3,34 | 66,74 |
-| Recipiente | Cuello MH 20" al cuerpo (derivación × 1,5) | 1 | 30,00 | 3,34 | 100,10 |
+| Recipiente | Cuello MH 20" al cuerpo (derivación × 1,5; espesor del cuerpo) | 1 | 30,00 | 3,34 | 100,10 |
 | Recipiente | Cuello–brida A y B1 10" Sch 160 | 2 | 20,00 | 3,08 | 61,64 |
-| Recipiente | Cuellos A y B1 10" al cuerpo (× 1,5) | 2 | 30,00 | 3,08 | 92,46 |
-| Recipiente | Refuerzos MH, A y B1 (× 1,5 del Ø mayor) | 3 | 60,00 | 1,00 | 60,00 |
+| Recipiente | Cuellos A y B1 10" al cuerpo (× 1,5; espesor del cuerpo) | 2 | 30,00 | 3,34 | 100,10 |
+| Recipiente | Refuerzos de MH, A y B1 (× 1,5 del Ø mayor; chapa 31,8 mm) | 3 | 60,00 | 3,34 | 200,21 |
 | Recipiente | Cuello–brida R1, R2 4" Sch 160 | 2 | 8,00 | 2,24 | 17,93 |
-| Recipiente | Cuellos R1, R2 4" al cuerpo (× 1,5) | 2 | 12,00 | 2,24 | 26,89 |
+| Recipiente | Cuellos R1, R2 4" al cuerpo (× 1,5; espesor del cuerpo) | 2 | 12,00 | 3,34 | 40,04 |
 | Recipiente | Cuello–brida 2" Sch 160 (20 boquillas) | 20 | 40,00 | 2,24 | 89,41 |
-| Recipiente | Cuellos 2" al cuerpo (× 1,5) | 20 | 60,00 | 2,24 | 134,12 |
+| Recipiente | Cuellos 2" al cuerpo (× 1,5; espesor del cuerpo) | 20 | 60,00 | 3,34 | 200,21 |
 
-**Total recipiente:** 490,93 pulg. nominales y 1.214,21 pulg. equivalentes por filtro (2.428,43 los 2).
+**Total recipiente:** 539,22 pulg. nominales y 1.555,84 pulg. equivalentes por filtro (3.111,69 los 2).
 
-**Total skid (piping + recipiente):** 2.454,21 pulg-eq por filtro, 4.908,42 los 2. Internos (placa portacartuchos, soportes, distribuidor, rompevórtice), clips, orejas y estructura del skid (chasis, plataformas, escaleras, batea) se cotizan por kg, no por pulgada. Estructura (plano): 8.380,00 kg por skid.
+**Total skid (piping + recipiente):** 2.783,34 pulg-eq por filtro, 5.566,69 los 2. Internos (soportes, distribuidor, rompevórtice; la placa portacartuchos sí está arriba), clips, orejas y estructura del skid (chasis, plataformas, escaleras, batea) se cotizan por kg, no por pulgada. Estructura (plano): 8.380,00 kg por skid.
 
 Antecedente para comparar: TAVAL/37 (FC-231) cotizó la soldadura de cañería + cuerpo como un monto global (USD 71.441,70) y la estructura aparte (USD 10.841,12).

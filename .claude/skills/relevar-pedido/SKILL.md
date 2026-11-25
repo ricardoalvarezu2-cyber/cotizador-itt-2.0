@@ -12,7 +12,7 @@ Al empezar, leé `conocimiento/estado_y_pendientes.md` y `conocimiento/errores_y
 ## 1. Guardar y abrir todo (sin IA)
 
 1. Carpeta de la cotización como en el skill `cotizar` paso 1 (`COT[AA]-[código cliente]-[NNN]_<CLIENTE>_<PEDIDO>`; código en `conocimiento/comercial/clientes.csv`; si ya hay otra cotización del mismo proyecto, mirá su bitácora y su `pedido/`). Anotala en `cotizaciones/README.md` con estado "recopilación de información".
-2. `python herramientas/abrir_pedido.py cotizaciones/<carpeta>/pedido <archivos subidos…>`: copia los originales, descomprime los zip (también los anidados y los adjuntos de los mails), arregla los nombres `#U00f3`, abre los `.msg` sin librerías externas, deja el texto de cada documento al lado (.txt / .csv) y escribe `pedido/inventario.md`.
+2. `python herramientas/abrir_pedido.py cotizaciones/<carpeta>/pedido <archivos subidos…>`: copia los originales, descomprime los zip (también los anidados y los adjuntos de los mails), arregla los nombres `#U00f3`, abre los `.msg` sin librerías externas, deja el texto de cada documento al lado (X.pdf.txt, X.xls.csv; nunca pisa archivos y se puede correr dos veces) y escribe `pedido/inventario.md`.
 3. Documentación general del cliente que sirve para otros pedidos (condiciones de compra, seguridad, instructivos): a `fuentes_originales/<cliente>_<tema>_<AAAA-MM>/`, no a la cotización.
 4. Todo va al repositorio en la misma sesión (el entorno es temporal).
 
@@ -56,6 +56,14 @@ Copiá `cotizaciones/COT26-0010-002_AESA_C5297_FILTROS_COALESCEDORES/listas_prel
 Corré `python cotizaciones/<carpeta>/listas_preliminares.py` y revisá el .md completo.
 
 ## 6. Revisión independiente
+
+Antes de cerrar el informe, controlá vos mismo (errores de la COT26-0010-002, `errores_y_lecciones.md` 25-11-2026):
+- Notas del P&ID y de la HD leídas antes de contar: quién provee qué (p. ej., bridas pancake y JD "con el instrumento").
+- Quiebres de clase en cada línea (válvulas, PSV, BDV, RO): bridas, accesorios, espárragos y tuercas de la clase que corresponde de cada lado (las de baja temperatura llevan LF2, WPL6, A333-6, L7 y tuercas Gr. 4 según la clase).
+- Derivaciones según la tabla de derivaciones de la clase (te, te de reducción, weldolet, sockolet, thredolet) y serie de los olets de la clase.
+- Schedule por Ø de la clase (no de memoria); juntas y espárragos por unión de la tabla del repo; uniones contadas una por una.
+- Válvulas chicas e instrumentos contados con una lista explícita (qué y dónde), sin contar dos veces los manifolds.
+- Peso de cada línea contra el del plano o la HD antes de cerrar metros; si el cliente da el peso de una pieza, ese manda.
 
 Antes de pasar al skill `cotizar`, un agente que no armó las listas compara el P&ID y el plano contra las listas (tags, cantidades, Ø, series, clases, juntas) y revisa cualquier criterio de cálculo nuevo (CLAUDE.md). Sus hallazgos se corrigen o se justifican; los errores van a `conocimiento/errores_y_lecciones.md`.
 

@@ -124,8 +124,8 @@ VALVULAS = [
     ('VG-357', 'Globo', '2"', '#600 RF', 'CE32', 1, 'Drenaje cerrado (regulación)', 'P&ID'),
     ('VF-358', 'Esférica', '2"', '#150 RF', 'CA11', 1, 'Entrada de aire de instrumentos', 'P&ID'),
     ('VF-325 / VF-326', 'Esférica paso total (FB)', '1 1/2"', 'NPT', 'CE32', 2, 'Cupón CC-301 e inyección de químico (nota 3)', 'P&ID'),
-    ('(sin tag)', 'Esférica 2000 WOG (TCH2N)', '1/2"', 'NPT', 'CE32 / CA11', 27, 'Venteos y purgas de instrumentos (12), PSV (4), aire IA1–IA5 + reserva (6), LG (4), CC (1)', 'P&ID; cantidad contada por ITT'),
-    ('(sin tag)', 'Esférica 2000 WOG (TCH2N)', '3/4"', 'NPT', 'CE32 / CA11', 11, 'Drenajes de LV/SDV (4), VR-354 (1), PDIT (2), PIT (1), PI (1), aire (1), OD1 (1)', 'P&ID; cantidad contada por ITT'),
+    ('(sin tag)', 'Esférica 2000 WOG (TCH2N)', '1/2"', 'NPT', 'CE32 / CA11', 23, 'Venteos de LIT (8), LG (4), PSV (4), CC-301 (1), aire IA1–IA5 + extremo (6). Las 1/2" de PIT y PI son del manifold M2', 'P&ID; cantidad contada por ITT'),
+    ('(sin tag)', 'Esférica 2000 WOG (TCH2N)', '3/4"', 'NPT', 'CE32 / CA11', 11, 'Drenajes de LV-301D (2) y LV-301B (2), entre VR-354 y VF-355 (1), PDIT (2), PIT (1), PI (1), colector de aire (1), OD1 (1)', 'P&ID; cantidad contada por ITT'),
 ]
 VALVULAS_ACTUADAS = [
     ('LV-301D (+ LY-301D)', 'Control, globo, actuador neumático, posicionador 4–20 mA HART', '2"', '#600 RF', 'CE32', 1, 'Control de nivel sección superior (falla cierra, FC). RI §10: no debe pasar más de 3.750 kg/h de gas en blow-by', 'P&ID; Cv por ITT con el proveedor'),
@@ -134,17 +134,17 @@ VALVULAS_ACTUADAS = [
     ('SDV-301', 'Esférica de corte, actuador neumático simple efecto, solenoide SV-301, fines de carrera ZSO/ZSC-301', '2"', '#600 RF', 'CE32', 1, 'Corte por SIS línea inferior (FC)', 'P&ID'),
     ('BDV-301E', 'Esférica de blowdown, actuador neumático, solenoide SV-301E, fines de carrera ZSO/ZSC-301E', '4"', '#600 RF', 'CE32', 1, 'Despresurización (falla abre, FO); comando HS-003', 'P&ID; P&ID nota 10'),
     ('PSV-301A / PSV-301B', 'Seguridad, API 526, orificio D', '1" × 2"', '#600 RF × #150 RF', 'CE32 / CK11', 2, 'Set 99 kg/cm2g, caso fuego (alcance del proveedor, RI §10)', 'P&ID'),
-    ('RO-301', 'Placa orificio de restricción con bridas portaplaca B16.36', '4"', '#600 RF', 'CE32 / CK31', 1, 'Restricción del blowdown (dimensionamiento de AESA, RI §10)', 'P&ID'),
+    ('RO-301', 'Placa orificio de restricción con bridas portaplaca B16.36', '4"', '#600 RF', 'CK31 (baja temp.)', 1, 'Restricción del blowdown (dimensionamiento de AESA, RI §10)', 'P&ID'),
 ]
 
 # ---------------------------------------------------------------------------
 # 4. Instrumentos (por filtro)
 # ---------------------------------------------------------------------------
 INSTRUMENTOS = [
-    ('LIT-301A', 'Transmisor de nivel por presión diferencial con sellos remotos (J0402)', '2" #600 RF ×2', 'SIS (LALL-301A, I-27)', 'Sección inferior; traceado (nota 2); capilares cortos (nota 5)'),
-    ('LIT-301B', 'Transmisor de nivel DP con sellos remotos', '2" #600 RF ×2', 'SCP (LIC-301B → LV-301B)', 'Sección inferior'),
-    ('LIT-301C', 'Transmisor de nivel DP con sellos remotos', '2" #600 RF ×2', 'SIS (LALL-301C, I-26)', 'Sección superior'),
-    ('LIT-301D', 'Transmisor de nivel DP con sellos remotos', '2" #600 RF ×2', 'SCP (LIC-301D → LV-301D)', 'Sección superior'),
+    ('LIT-301A', 'Transmisor de nivel por presión diferencial con sellos remotos (J0402)', '2" #600 RF ×2', 'SIS (LALL-301A, I-27)', 'Sección inferior; traceado (nota 2); capilares cortos (nota 5); con bridas pancake AC + JD (P&ID nota 9)'),
+    ('LIT-301B', 'Transmisor de nivel DP con sellos remotos', '2" #600 RF ×2', 'SCP (LIC-301B → LV-301B)', 'Sección inferior; con bridas pancake + JD (nota 9)'),
+    ('LIT-301C', 'Transmisor de nivel DP con sellos remotos', '2" #600 RF ×2', 'SIS (LALL-301C, I-26)', 'Sección superior; con bridas pancake + JD (nota 9)'),
+    ('LIT-301D', 'Transmisor de nivel DP con sellos remotos', '2" #600 RF ×2', 'SCP (LIC-301D → LV-301D)', 'Sección superior; con bridas pancake + JD (nota 9)'),
     ('LG-301A', 'Indicador de nivel de vidrio (J0401), tipo reflex, con válvulas de bloqueo con bola de retención', '2" #600 RF ×2', 'Local', 'Sección inferior. ITT: reflex (HD-J0401-01)'),
     ('LG-301B', 'Indicador de nivel de vidrio tipo reflex', '2" #600 RF ×2', 'Local', 'Sección superior'),
     ('PDIT-301', 'Transmisor de presión diferencial (J0304) con manifold de 5 vías (M5)', '1/2" NPT', 'SCP (PDI/PDAH-301)', 'Ensuciamiento de cartuchos; tomas J1/J2'),
@@ -165,7 +165,7 @@ FUERA_DE_ALCANCE_INSTR = 'HS-003, HS-301, HS-301C, ESD1/ESD2, enclavamientos I-2
 # 5. Piping: caños y accesorios (por filtro). Largos y piezas: estimación ITT con el P&ID y los pesos del plano
 # ---------------------------------------------------------------------------
 CANOS = [  # descripción, Ø, sch, material, clase, metros, líneas
-    ('Caño sin costura BE', '10"', 'Sch 80', 'ASTM A106 Gr. B', 'CE32', 24, 'Entrada 10"-GH-1105/0176, salida 10"-GH-0269 y by-pass 10"-GH-0297'),
+    ('Caño sin costura BE', '10"', 'Sch 80', 'ASTM A106 Gr. B', 'CE32', 16, 'Entrada 10"-GH-1105/0176, salida 10"-GH-0269 y by-pass 10"-GH-0297 (ajustado a los pesos del plano: pos. 2001 + 2002 = 3.979 kg)'),
     ('Caño sin costura BE', '4"', 'Sch 80', 'ASTM A106 Gr. B', 'CE32', 5, 'BDV 4"-GH-0750'),
     ('Caño sin costura BE', '4"', 'Sch 80', 'ASTM A333 Gr. 6', 'CK31', 1, '4"-V-0752 aguas abajo de RO-301'),
     ('Caño sin costura BE', '6"', 'Sch 80', 'ASTM A333 Gr. 6', 'CK31', 2, 'Tramo de VF-338'),
@@ -181,14 +181,14 @@ CANOS = [  # descripción, Ø, sch, material, clase, metros, líneas
 ACCESORIOS = [  # descripción, Ø, sch/serie, material, clase, cant
     ('Codo 90° RL BW', '10"', 'Sch 80', 'ASTM A234 WPB', 'CE32', 8),
     ('Te normal BW', '10"', 'Sch 80', 'ASTM A234 WPB', 'CE32', 2),
-    ('Weldolet 10" × 4"', '10" × 4"', 'Sch 80', 'ASTM A105', 'CE32', 1),
+    ('Te de reducción BW (derivación de la BDV; tabla de derivaciones CE32: código 3)', '10" × 4"', 'Sch 80', 'ASTM A234 WPB', 'CE32', 1),
     ('Codo 90° RL BW', '4"', 'Sch 80', 'ASTM A234 WPB', 'CE32', 3),
     ('Reducción concéntrica BW', '6" × 4"', 'Sch 80', 'ASTM A420 WPL6', 'CK31', 1),
     ('Codo 90° RL BW', '8"', 'Sch 40', 'ASTM A420 WPL6', 'CK11', 2),
     ('Te normal BW', '8"', 'Sch 40', 'ASTM A420 WPL6', 'CK11', 2),
     ('Codo 90° RL BW', '6"', 'Sch 40', 'ASTM A420 WPL6', 'CK11', 4),
     ('Reducción concéntrica BW', '6" × 3"', 'Sch 40', 'ASTM A420 WPL6', 'CK11', 2),
-    ('Reducción concéntrica BW', '3" × 2"', 'Sch 40 × Sch 80', 'ASTM A420 WPL6', 'CK11', 2),
+    ('Reducción concéntrica BW', '3" × 2"', 'Sch 40', 'ASTM A420 WPL6', 'CK11', 2),
     ('Codo 90° RL BW', '2"', 'Sch 160', 'ASTM A234 WPB', 'CE32', 30),
     ('Te normal BW', '2"', 'Sch 160', 'ASTM A234 WPB', 'CE32', 6),
     ('Reducción concéntrica BW', '2" × 1"', 'Sch 160', 'ASTM A234 WPB', 'CE32', 2),
@@ -198,21 +198,24 @@ ACCESORIOS = [  # descripción, Ø, sch/serie, material, clase, cant
     ('Codo 90° RL BW', '2"', 'Sch 40', 'ASTM A234 WPB', 'CA11', 10),
     ('Te normal BW', '2"', 'Sch 40', 'ASTM A234 WPB', 'CA11', 6),
     ('Casquete BW', '2"', 'Sch 40', 'ASTM A234 WPB', 'CA11', 2),
-    ('Thredolet 3000#', '1/2"', 'NPT', 'ASTM A105', 'CE32 / CA11', 20),
-    ('Thredolet 3000#', '3/4"', 'NPT', 'ASTM A105', 'CE32 / CA11', 10),
+    ('Thredolet 6000# (CE32: serie de olets de la clase; a verificar)', '1/2"', 'NPT', 'ASTM A105', 'CE32', 14),
+    ('Thredolet 3000#', '1/2"', 'NPT', 'ASTM A105', 'CA11', 6),
+    ('Thredolet 6000# (CE32; a verificar)', '3/4"', 'NPT', 'ASTM A105', 'CE32', 8),
+    ('Thredolet 3000#', '3/4"', 'NPT', 'ASTM A105', 'CA11', 2),
     ('Tapón hexagonal 3000#', '1/2" y 3/4"', 'NPT', 'ASTM A105', 'CE32 / CA11', 38),
 ]
 BRIDAS = [  # descripción, Ø, serie, sch, material, clase, cant
-    ('Brida WN RF', '10"', '#600', 'Sch 80', 'ASTM A105', 'CE32', 8),
-    ('Brida WN RF', '4"', '#600', 'Sch 80', 'ASTM A105', 'CE32', 2),
-    ('Brida portaplaca WN RF (par, para RO-301)', '4"', '#600', 'Sch 80', 'ASTM A105', 'CE32 (B16.36)', 1),
+    ('Brida WN RF (válvulas de 10" y límites EG y SG)', '10"', '#600', 'Sch 80', 'ASTM A105', 'CE32', 8),
+    ('Brida WN RF (entrada de BDV-301E)', '4"', '#600', 'Sch 80', 'ASTM A105', 'CE32', 1),
+    ('Brida WN RF (salida de BDV-301E)', '4"', '#600', 'Sch 80', 'ASTM A350 LF2', 'CK31', 1),
+    ('Brida portaplaca WN RF (par, para RO-301)', '4"', '#600', 'Sch 80', 'ASTM A350 LF2', 'CK31 (B16.36)', 1),
     ('Brida WN RF', '6"', '#600', 'Sch 80', 'ASTM A350 LF2', 'CK31', 2),
     ('Brida WN RF', '6"', '#150', 'Sch 40', 'ASTM A350 LF2', 'CK11', 4),
     ('Brida WN RF (límite SV)', '8"', '#150', 'Sch 40', 'ASTM A350 LF2', 'CK11', 1),
-    ('Brida WN RF', '2"', '#150', 'Sch 80', 'ASTM A350 LF2', 'CK11', 2),
-    ('Brida WN RF', '2"', '#600', 'Sch 160', 'ASTM A105', 'CE32', 40),
+    ('Brida WN RF (salidas de PSV)', '2"', '#150', 'Sch 40', 'ASTM A350 LF2', 'CK11', 2),
+    ('Brida WN RF (incluye el límite SL)', '2"', '#600', 'Sch 160', 'ASTM A105', 'CE32', 40),
     ('Brida WN RF (límite DC)', '2"', '#150', 'Sch 160', 'ASTM A105', 'CA11', 1),
-    ('Brida WN RF', '2"', '#150', 'Sch 40', 'ASTM A105', 'CA11', 4),
+    ('Brida WN RF (VF-358 y límites AI y DA)', '2"', '#150', 'Sch 40', 'ASTM A105', 'CA11', 4),
     ('Brida SW RF', '1"', '#600', 'Sch 160', 'ASTM A105', 'CE32', 5),
     ('Brida ciega RF perforada y roscada 3/4" NPT (P1, P2, J1, J2)', '2"', '#600', '', 'ASTM A105', 'CE32', 4),
 ]
@@ -225,11 +228,12 @@ JUNTAS = [
     ('32"', '#600', 1, 'Espiralada AISI 316/grafito 4,5 mm, anillo ext. AC zincado + int. AISI 316 (B16.20, para B16.47 A)', 'A193 B7 / A194 2H zincado', 28, '2" × 15 1/2" (a verificar)', 'M1'),
     ('20"', '#600', 1, 'Espiralada 316/grafito, anillo ext. + int.', 'A193 B7 / A194 2H zincado', 24, '1 5/8" × 11 1/2"', 'MH'),
     ('10"', '#600', 8, 'Espiralada 316/grafito, anillo ext. + int.', 'A193 B7 / A194 2H zincado', 16, '1 1/4" × 8 1/2"', 'A, B1, VF-322, VF-337, VF-339'),
-    ('6"', '#600', 2, 'Espiralada 316/grafito, anillo ext. AC zincado', 'A320 L7 / A194 Gr. 7 (CK31)', 12, '1" × 6 3/4"', 'VF-338'),
-    ('6"', '#150', 4, 'Espiralada 316/grafito, anillo ext. AC zincado', 'A320 L7 / A194 Gr. 7 (CK11)', 8, '3/4" × 4"', 'VF-341, VF-343'),
-    ('4"', '#600', 5, 'Espiralada 316/grafito, anillo ext. AC zincado', 'A193 B7 / A194 2H zincado', 8, '7/8" × 5 3/4" (RO: más largo)', 'R1, R2, BDV-301E, RO-301'),
-    ('2"', '#600', 58, 'Espiralada 316/grafito, anillo ext. AC zincado', 'A193 B7 / A194 2H zincado', 8, '5/8" × 4 1/4"', 'Boquillas, válvulas de línea, LV/SDV, drenaje, PSV'),
-    ('2"', '#600', 12, 'Junta dieléctrica VCS epoxi RFG (kit con camisas y arandelas)', 'A193 B7 / A194 2H zincado', 8, '5/8" × 4 3/4" (kit JD)', 'Instrumentos de nivel L1–L12 (P&ID "JD"; nota general 2G)'),
+    ('6"', '#600', 2, 'Espiralada 316/grafito, anillo ext. AC zincado', 'A320 L7 / A194 Gr. 4 (CK31)', 12, '1" × 6 3/4"', 'VF-338'),
+    ('6"', '#150', 4, 'Espiralada 316/grafito, anillo ext. AC zincado', 'A320 L7 / A194 Gr. 4 (CK11)', 8, '3/4" × 4"', 'VF-341, VF-343'),
+    ('4"', '#600', 3, 'Espiralada 316/grafito, anillo ext. AC zincado', 'A193 B7 / A194 2H zincado', 8, '7/8" × 5 3/4"', 'R1, R2, entrada de BDV-301E'),
+    ('4"', '#600', 3, 'Espiralada 316/grafito, anillo ext. AC zincado', 'A320 L7 / A194 Gr. 4 (CK31)', 8, '7/8" × 5 3/4" (RO: más largo, a verificar con el espesor de la placa)', 'Salida de BDV-301E, RO-301 (2 juntas)'),
+    ('2"', '#600', 62, 'Espiralada 316/grafito, anillo ext. AC zincado', 'A193 B7 / A194 2H zincado', 8, '5/8" × 4 1/4"', 'Boquillas, válvulas de línea, LG, LV/SDV, drenaje, PSV'),
+    ('2"', '#600', 8, 'Junta dieléctrica + brida pancake AC: las provee el instrumentista con el LIT (P&ID nota 9)', 'A193 B7 / A194 2H zincado', 8, '5/8" × 4 1/4" (a verificar con el kit JD)', 'LIT-301A/B/C/D en L1–L4 y L9–L12 (burbujas JD del P&ID)'),
     ('2"', '#150', 4, 'Espiralada 316/grafito, anillo ext. AC zincado', 'B7 (CA11) / L7 (CK11)', 4, '5/8" × 3 1/4"', 'Salidas de PSV, VF-358'),
     ('1"', '#600', 5, 'Espiralada 316/grafito, anillo ext. AC zincado', 'A193 B7 / A194 2H zincado', 4, '5/8" × 3 3/4"', 'Entradas de PSV, venteo manual'),
 ]
@@ -291,7 +295,9 @@ FALTA_O_DECIDIDO = [
     'Colector de venteo de 8": el plano dice Sch 40 y la clase CK11 da Sch 20. Se toma Sch 40.',
     'Aguas abajo de PSV y de BDV/RO (CK11 y CK31) el material es de baja temperatura (A333 Gr. 6, A350 LF2, A420 WPL6, espárragos A320 L7).',
     'Largos de cañería y cantidad de accesorios: estimados por ITT con el P&ID, las cotas del plano y los pesos de su tabla (no hay isométricos).',
-    'Juntas dieléctricas: 12 (una por instrumento de nivel). Las uniones con el exterior (límites del skid) llevan solo nuestra brida; junta y espárragos los pone AESA.',
+    'Juntas dieléctricas: 8, en las conexiones de los LIT (burbujas JD del P&ID); según la nota 9 del P&ID las bridas pancake y las JD vienen con el instrumento. Las uniones con el exterior (límites del skid) llevan solo nuestra brida; junta y espárragos los pone AESA.',
+    'Thredolets en CE32: serie 6000# por la tabla de series de olets de la clase (a verificar si la columna es el ramal o el cabezal); en CA11 y CK11, 3000#.',
+    'Caño de 10": 16 m, ajustado para que el piping de 10" dé un peso parecido al de las líneas 2001 y 2002 del plano.',
     'Detector de gas AT-006 y las funciones de sala de control: fuera del alcance (fuera del límite del skid).',
     'Especificaciones que no vinieron (C-02.00, J1800, J0301, J0402, J1302, J1304, J1400, P1100, P1102, P1103, P1105): se cotiza según buena práctica y se aclara en la oferta.',
 ]
@@ -320,7 +326,7 @@ CANOS_META = [(10, '80'), (4, '80'), (4, '80'), (6, '80'), (8, '40'), (6, '40'),
 ACC_META = [
     ('codo_90_radio_largo', 10, None, 'XS', 'BW', '80', 2, 0, 0),
     ('tee_recta', 10, None, 'XS', 'BW', '80', 3, 0, 0),
-    ('weldolet', 4, None, 'XS', 'BW', '80', 0, 0, 2.5),
+    ('tee_reduccion', 10, 4, 'XS', 'BW', '80', 3, 0, 0),
     ('codo_90_radio_largo', 4, None, 'XS', 'BW', '80', 2, 0, 0),
     ('reduccion_concentrica_excentrica', 6, 4, 'XS', 'BW', '80', 2, 0, 0),
     ('codo_90_radio_largo', 8, None, 'STD', 'BW', '40', 2, 0, 0),
@@ -337,16 +343,18 @@ ACC_META = [
     ('codo_90_radio_largo', 2, None, 'STD', 'BW', '40', 2, 0, 0),
     ('tee_recta', 2, None, 'STD', 'BW', '40', 3, 0, 0),
     ('casquete', 2, None, 'STD', 'BW', '40', 1, 0, 0),
+    ('thredolet', 0.5, None, '6000', 'NPT', None, 0, 0, 1.75),
     ('thredolet', 0.5, None, '3000', 'NPT', None, 0, 0, 1.75),
+    ('thredolet', 0.75, None, '6000', 'NPT', None, 0, 0, 1.75),
     ('thredolet', 0.75, None, '3000', 'NPT', None, 0, 0, 1.75),
     ('tapon_hexagonal', 0.75, None, '3000/6000', 'NPT', None, 0, 0, 0),
 ]
 # (tipo tabla, Ø, serie, sch del cuello, extremos BW, extremos SW)
-BRI_META = [('WN', 10, '600', '80', 1, 0), ('WN', 4, '600', '80', 1, 0), ('orificio', 4, '600', '80', 2, 0), ('WN', 6, '600', '80', 1, 0),
-            ('WN', 6, '150', '40', 1, 0), ('WN', 8, '150', '40', 1, 0), ('WN', 2, '150', '80', 1, 0), ('WN', 2, '600', '160', 1, 0),
+BRI_META = [('WN', 10, '600', '80', 1, 0), ('WN', 4, '600', '80', 1, 0), ('WN', 4, '600', '80', 1, 0), ('orificio', 4, '600', '80', 2, 0), ('WN', 6, '600', '80', 1, 0),
+            ('WN', 6, '150', '40', 1, 0), ('WN', 8, '150', '40', 1, 0), ('WN', 2, '150', '40', 1, 0), ('WN', 2, '600', '160', 1, 0),
             ('WN', 2, '150', '160', 1, 0), ('WN', 2, '150', '40', 1, 0), ('SW', 1, '600', '160', 0, 1), ('ciega', 2, '600', None, 0, 0)]
 # válvulas: (tipos de tabla, Ø, serie, extremos) o kg aproximado por unidad (actuadas, PSV, RO: sin tabla, criterio ITT)
-VAL_META = [(ESF_FB, 10, '600', 'RF'), (ESF_FB, 10, '600', 'RF'), (ESF_FB, 10, '600', 'RF'), (ESF_FB, 2, '600', 'RF'), (['GLOBO'], 2, '600', 'RF'),
+VAL_META = [732.0, 732.0, 732.0, (ESF_FB, 2, '600', 'RF'), (['GLOBO'], 2, '600', 'RF'),
             (ESF_FB, 2, '600', 'RF'), (ESF_FB, 2, '600', 'RF'), (ESF_FB, 6, '150', 'RF'), (ESF_FB, 1, '600', 'RF'), (['GLOBO'], 1, '600', 'RF'),
             (ESF_FB, 6, '600', 'RF'), (ESF_FB, 2, '600', 'RF'), (['GLOBO'], 2, '600', 'RF'), (ESF_FB, 2, '600', 'RF'), (['GLOBO'], 2, '600', 'RF'),
             (['RETENCION A CLAPETA'], 2, '600', 'RF'), (ESF_FB, 2, '600', 'RF'), (ESF_FB, 2, '600', 'RF'), (['RETENCION A CLAPETA'], 2, '600', 'RF'),
@@ -354,7 +362,7 @@ VAL_META = [(ESF_FB, 10, '600', 'RF'), (ESF_FB, 10, '600', 'RF'), (ESF_FB, 10, '
 VAL_ACT_KG = [70.0, 70.0, 60.0, 60.0, 180.0, 35.0, 3.0]  # LV, LV, SDV, SDV, BDV, PSV, placa RO: aproximado ITT con actuador
 VAL_ACT_NOTA = 'aprox. ITT (con actuador; sin tabla)'
 # Respaldo ITT para válvulas sin fila en la tabla (por unidad, kg)
-VAL_RESPALDO = {(10, '600'): 732.0, (6, '600'): 250.0, (6, '150'): 75.0, (1, '600'): 12.0}
+VAL_RESPALDO = {(6, '600'): 250.0, (6, '150'): 75.0, (1, '600'): 12.0}
 
 
 def pesos():
@@ -377,9 +385,12 @@ def pesos():
         kg, f = kg_brida(m[0], m[1], m[2])
         out.append(('Bridas', f'{b[0]} {b[1]} {b[2]}', b[6], kg, (kg or 0) * b[6], f))
     for v, m in zip(VALVULAS, VAL_META):
+        if isinstance(m, float):  # peso dado por el documento del cliente
+            out.append(('Válvulas', f'{v[0]} {v[1]} {v[2]} {v[3]}', v[5], m, m * v[5], 'plano pos. 501 (con reductor)'))
+            continue
         kg, f = kg_valvula(*m)
         if kg is None and (m[1], m[2]) in VAL_RESPALDO:
-            kg, f = VAL_RESPALDO[(m[1], m[2])], ('plano pos. 501' if m[1] == 10 else 'aprox. ITT (sin tabla)')
+            kg, f = VAL_RESPALDO[(m[1], m[2])], 'aprox. ITT (sin tabla)'
         out.append(('Válvulas', f'{v[0]} {v[1]} {v[2]} {v[3]}', v[5], kg, (kg or 0) * v[5], f))
     for v, kg in zip(VALVULAS_ACTUADAS, VAL_ACT_KG):
         out.append(('Válvulas', f'{v[0]} {v[2]} {v[3]}', v[5], kg, kg * v[5], VAL_ACT_NOTA))
@@ -401,28 +412,33 @@ def soldaduras_piping():
 
 
 def soldaduras_recipiente():
-    """Soldaduras del recipiente (criterio ITT, convención de precotizar): costura longitudinal = largo / (π·25,4)
-    pulgadas × factor; circunferencial = Ø × factor; conexión de boquilla al cuerpo = Ø × factor × 1,5 (derivación);
-    refuerzo = Ø × 1,5; cuello–brida = Ø × factor del cuello."""
+    """Soldaduras del recipiente (criterio ITT, convención de precotizar; revisado por auditoría independiente 25-11-2026):
+    costura longitudinal = largo / (π·25,4) pulgadas × factor; circunferencial = Ø × factor; boquilla al cuerpo =
+    Ø × 1,5 (derivación) × factor del espesor del CUERPO (la soldadura de penetración completa atraviesa el cuerpo);
+    refuerzo = Ø × 1,5 × factor del espesor de la chapa de refuerzo; cuello–brida = Ø × factor del cuello."""
     e = 31.8
     f32 = factor_esp(32, esp=e)
+    f_cuerpo = f32
     long_mm = 4064
     filas = [
         ('Costuras longitudinales del cuerpo (2 virolas, 2.500 + 1.564 mm = 4.064 mm de costura)', 1, long_mm / (math.pi * 25.4), f32),
         ('Circunferencial virola–virola', 1, 32, f32),
         ('Circunferencial cuerpo–casquete inferior', 1, 32, f32),
         ('Circunferencial cuerpo–brida M1 32"', 1, 32, f32),
-        ('Pollera–casquete (filete, esp. 12,7 mm)', 1, 32, factor_esp(32, esp=12.7)),
+        ('Placa portacartuchos al cuerpo (circunferencial, esp. 25,4 mm)', 1, 32, factor_esp(32, esp=25.4)),
+        ('Pollera–casquete (esp. 12,7 mm)', 1, 32, factor_esp(32, esp=12.7)),
+        ('Costura longitudinal de la pollera (≈ 1.000 mm, esp. 12,7 mm)', 1, 1000 / (math.pi * 25.4), factor_esp(32, esp=12.7)),
         ('Pollera–anillo base (filete)', 1, 32, 1.0),
+        ('Costura longitudinal del cuello rolado MH 20" (≈ 300 mm, esp. 31,8 mm)', 1, 300 / (math.pi * 25.4), factor_esp(20, esp=e)),
         ('Cuello–brida MH 20" (esp. 31,8 mm)', 1, 20, factor_esp(20, esp=e)),
-        ('Cuello MH 20" al cuerpo (derivación × 1,5)', 1, 20 * 1.5, factor_esp(20, esp=e)),
+        ('Cuello MH 20" al cuerpo (derivación × 1,5; espesor del cuerpo)', 1, 20 * 1.5, f_cuerpo),
         ('Cuello–brida A y B1 10" Sch 160', 2, 10, factor_esp(10, '160')),
-        ('Cuellos A y B1 10" al cuerpo (× 1,5)', 2, 15, factor_esp(10, '160')),
-        ('Refuerzos MH, A y B1 (× 1,5 del Ø mayor)', 3, (20 + 10 + 10) / 3 * 1.5, 1.0),
+        ('Cuellos A y B1 10" al cuerpo (× 1,5; espesor del cuerpo)', 2, 15, f_cuerpo),
+        ('Refuerzos de MH, A y B1 (× 1,5 del Ø mayor; chapa 31,8 mm)', 3, (20 + 10 + 10) / 3 * 1.5, f_cuerpo),
         ('Cuello–brida R1, R2 4" Sch 160', 2, 4, factor_esp(4, '160')),
-        ('Cuellos R1, R2 4" al cuerpo (× 1,5)', 2, 6, factor_esp(4, '160')),
+        ('Cuellos R1, R2 4" al cuerpo (× 1,5; espesor del cuerpo)', 2, 6, f_cuerpo),
         ('Cuello–brida 2" Sch 160 (20 boquillas)', 20, 2, factor_esp(2, '160')),
-        ('Cuellos 2" al cuerpo (× 1,5)', 20, 3, factor_esp(2, '160')),
+        ('Cuellos 2" al cuerpo (× 1,5; espesor del cuerpo)', 20, 3, f_cuerpo),
     ]
     out = []
     for d, n, pulg, f in filas:
@@ -430,7 +446,7 @@ def soldaduras_recipiente():
     return out
 
 
-SOLD_NOTA = ('Internos (placa portacartuchos, soportes, distribuidor, rompevórtice), clips, orejas y estructura del skid '
+SOLD_NOTA = ('Internos (soportes, distribuidor, rompevórtice; la placa portacartuchos sí está arriba), clips, orejas y estructura del skid '
              '(chasis, plataformas, escaleras, batea) se cotizan por kg, no por pulgada.')
 
 
@@ -534,7 +550,7 @@ def resumen_md():
         rub[r[0]] = rub.get(r[0], 0.0) + r[4]
     tot = sum(rub.values())
     md.append(_tabla(['Rubro', 'kg por skid', 'kg 2 skids'], [(k, float(v), float(v * N_EQUIPOS)) for k, v in rub.items()] + [('**Total**', float(tot), float(tot * N_EQUIPOS))]))
-    md.append(f'\nContra el plano: {numeros.fmt(PESO_TOTAL_PLANO)} kg por skid sin instrumental ni cableados ({numeros.fmt((tot / PESO_TOTAL_PLANO - 1) * 100)} %). Faltan instrumentos, cajas, cables, internos de la caja de chicanas, cartuchos, aislación y pintura; las válvulas actuadas y las PSV van con peso aproximado.\n')
+    md.append(f'\nContra el plano: {numeros.fmt(PESO_TOTAL_PLANO)} kg por skid sin instrumental ni cableados ({numeros.fmt((tot / PESO_TOTAL_PLANO - 1) * 100)} %). La diferencia viene sobre todo de las válvulas de 10": la tabla del plano lista 1 (pos. 501, 732 kg) y el P&ID tiene 3 (+1.464 kg). Faltan instrumentos, cajas, cables, internos de la caja de chicanas, cartuchos, aislación y pintura; las válvulas actuadas y las PSV van con peso aproximado; los metros de caño son estimados sin isométricos.\n')
     md.append('### 11.1 Detalle\n')
     md.append(_tabla(['Rubro', 'Descripción', 'Cant.', 'kg un.', 'kg por skid', 'Fuente'],
                      [(r[0], r[1], r[2], float(r[3]) if r[3] is not None else 'SIN TABLA', float(r[4]), r[5]) for r in P]))

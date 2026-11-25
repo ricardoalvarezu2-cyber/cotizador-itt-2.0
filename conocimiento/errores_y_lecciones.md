@@ -2,6 +2,29 @@
 
 Registro de los errores detectados en cotizaciones armadas con el cotizador, con su causa y la regla que se agregó al [procedimiento](procedimiento_cotizacion.md) para que no se repitan. **Una oferta con un error de cómputo o de precio que llega al cliente puede hacer perder plata o la credibilidad de ITT.** Por eso cada error se anota acá, aunque se haya detectado a tiempo.
 
+## 25-11-2026 — COT26-0010-002: relevamiento del P&ID y listas preliminares (revisión independiente)
+- Qué pasó (lo encontró la revisión independiente de `resumen_pedido.md`):
+  - 12 juntas dieléctricas en vez de 8. Las conté en todos los instrumentos de nivel, pero el P&ID solo las marca en los LIT. Además, la nota 9 del P&ID dice que las bridas pancake y las JD vienen con el instrumento.
+  - Tuercas de CK11 y CK31 puestas en A194 Gr. 7; la clase dice Gr. 4.
+  - RO-301 y la salida de la BDV puestas en CE32; quedan aguas abajo del quiebre CE32|CK31, así que van en LF2 con espárragos L7.
+  - Un weldolet 10"×4" donde la tabla de derivaciones de CE32 pide te de reducción (código 3).
+  - Brida y reducción de 2" en CK11 en Sch 80; la clase pide Sch 40. La herramienta forzaba Sch 80 en el extremo chico de las reducciones.
+  - 27 válvulas de 1/2" en vez de 23: conté los LG dos veces y tomé como válvulas sueltas las de los manifolds M2.
+  - 5 uniones de 4" en vez de 6.
+  - 24 m de caño de 10", que no cerraban con el peso de las líneas del plano.
+  - Válvulas de 10" con el peso de la tabla de Taval (565 kg) en lugar del dato del plano (732 kg con reductor).
+  - Faltaban soldaduras del recipiente (placa portacartuchos, pollera, cuello del MH). La boquilla al cuerpo y los refuerzos iban con factor de espesor bajo.
+  - `abrir_pedido.py` y `leer_msg.py`:
+    - podían pisar archivos (el .txt del cliente, nombres repetidos, renombres);
+    - un adjunto de mail con nombre "../x" escribía fuera de la carpeta;
+    - correrlos dos veces duplicaba carpetas.
+- Corrección: todo lo de arriba, en `listas_preliminares.py`, `pesos_soldadura.py` (te de reducción: 2 extremos del Ø mayor y 1 del menor; sin forzar el schedule), `soldaduras_recipiente()` (boquilla al cuerpo y refuerzos con el espesor del cuerpo; costuras que faltaban), `leer_msg.py` (nombres limpios, sin pisar) y `abrir_pedido.py`. Cambios en `abrir_pedido.py`:
+  - el texto se guarda como X.pdf.txt;
+  - nunca pisa un archivo;
+  - una marca en cada carpeta abierta evita duplicar al correr dos veces;
+  - límite de 3 GB por zip.
+- Lección: al relevar un P&ID, leer las notas antes de contar (quién provee qué); marcar en cada línea dónde cambia la clase (quiebres en válvulas, PSV, BDV y RO); sacar de la tabla de derivaciones de la clase si va te, weldolet o sockolet; y tomar tuercas, juntas y schedule de la clase, no de memoria. Contar las válvulas chicas con una lista explícita (qué, dónde), no por tipo de instrumento. Comparar el peso de cada línea con el del plano antes de cerrar los metros. Quedó como lista de control en el skill `relevar-pedido` §6.
+
 ## COT26-1003-001 · CAPEX OQ8209 · 2 puentes BBO MEC 1500 · 27/10/2026
 
 Se detectaron antes de enviar, gracias a las preguntas de Matías Russo. El primer borrador proponía **USD 7.700 por puente**, después de un cálculo que daba ~9.000. El valor tras la primera revisión fue USD 7.302; después del ajuste por inflación y la revisión independiente, **USD 7.639,86** (con el 63% del costo todavía estimado). Ninguna versión con errores llegó al cliente.

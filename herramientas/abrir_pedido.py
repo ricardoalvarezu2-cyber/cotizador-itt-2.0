@@ -9,8 +9,9 @@ Qué hace (sin IA, no interpreta nada):
   2. Arregla los nombres con "#U00f3" y similares (zip de Windows) a sus letras (ó, á, ñ…).
   3. Abre los mails .msg con herramientas/leer_msg.py (sin librerías externas): guarda el cuerpo y los adjuntos en
      <mail>_adjuntos/ y los procesa igual.
-  4. Al lado de cada documento deja su texto: .pdf (pdftotext -layout), .docx, .xlsx/.xlsm (openpyxl), .doc y .xls
-     (LibreOffice). Los .7z, .rar y .dwg se listan sin abrir.
+  4. Al lado de cada documento deja su texto con el nombre completo más ".txt" (X.pdf → X.pdf.txt; X.xls → X.xls.csv),
+     así nunca pisa un .txt del cliente ni choca con otro documento del mismo nombre: .pdf (pdftotext -layout), .docx,
+     .xlsx/.xlsm (openpyxl), .doc y .xls (LibreOffice). Los .7z, .rar y .dwg se listan sin abrir.
   5. Escribe pedido/inventario.md: cada archivo con tipo, páginas, caracteres de texto y aviso de "posible escaneo o
      dibujo" (PDF con menos de 100 caracteres por página: hay que mirarlo como imagen, p. ej. con recortar_plano.py).
 
@@ -30,6 +31,7 @@ import leer_msg  # noqa: E402
 
 UNICODE = re.compile(r"#U([0-9a-fA-F]{4})")
 PREFIJO_SUBIDA = re.compile(r"^[0-9a-f]{8}-")
+MAX_ZIP_BYTES = 3 * 1024 ** 3  # zip que descomprimido pasa los 3 GB: no se abre (posible bomba)
 SIN_ABRIR = {".7z", ".rar", ".dwg", ".jpg", ".jpeg", ".png", ".tif", ".tiff"}
 
 
@@ -37,17 +39,49 @@ def nombre_limpio(n):
     return UNICODE.sub(lambda m: chr(int(m.group(1), 16)), n)
 
 
+def libre(p: Path) -> Path:
+    """p si no existe; si existe, p con _2, _3… (nunca se pisa un archivo)."""
+    if not p.exists():
+        return p
+    k = 2
+    while True:
+        q = p.with_name(f"{p.stem}_{k}{p.suffix}")
+        if not q.exists():
+            return q
+        k += 1
+
+
 def arreglar_nombres(carpeta: Path):
     for p in sorted(carpeta.rglob("*"), key=lambda x: -len(x.parts)):
         nuevo = nombre_limpio(p.name)
         if nuevo != p.name:
-            p.rename(p.with_name(nuevo))
+            p.rename(libre(p.with_name(nuevo)))
+
+
+MARCA = ".abierto_de"  # archivo en cada carpeta extraída con el nombre del zip o mail de origen (correr dos veces no duplica)
+
+
+def ya_abierto(origen: Path, carpeta: Path) -> bool:
+    k = 1
+    c = carpeta
+    while c.exists():
+        m = c / MARCA
+        if m.exists() and m.read_text(encoding="utf-8").strip() == origen.name:
+            return True
+        k += 1
+        c = carpeta.with_name(f"{carpeta.stem}_{k}{carpeta.suffix}")
+    return False
 
 
 def descomprimir(z: Path):
-    destino = z.with_suffix("")
-    destino.mkdir(exist_ok=True)
+    if ya_abierto(z, z.with_suffix("")):
+        return None
+    destino = libre(z.with_suffix(""))
+    destino.mkdir()
+    (destino / MARCA).write_text(z.name, encoding="utf-8")
     with zipfile.ZipFile(z) as f:
+        if sum(m.file_size for m in f.infolist()) > MAX_ZIP_BYTES:
+            raise ValueError("zip de más de 3 GB descomprimido: no se abre")
         for m in f.infolist():
             # zip de Windows sin bandera UTF-8: los nombres vienen en cp437; se pasan a cp850/latin-1 si corresponde
             nombre = m.filename
@@ -63,25 +97,34 @@ def descomprimir(z: Path):
                 ruta.mkdir(parents=True, exist_ok=True)
                 continue
             ruta.parent.mkdir(parents=True, exist_ok=True)
+            ruta = libre(ruta)
             with f.open(m) as src, open(ruta, "wb") as dst:
                 shutil.copyfileobj(src, dst)
     return destino
 
 
 def abrir_mail(m: Path):
-    salida = m.with_name(m.stem + "_adjuntos")
+    if ya_abierto(m, m.with_name(m.stem + "_adjuntos")):
+        return None
+    salida = libre(m.with_name(m.stem + "_adjuntos"))
+    salida.mkdir()
+    (salida / MARCA).write_text(m.name, encoding="utf-8")
     ents, kids, data = leer_msg.cfb(str(m))
     import contextlib
     import io
     buf = io.StringIO()
     with contextlib.redirect_stdout(buf):
         leer_msg.guardar(ents, kids, data, 0, str(salida))
-    m.with_suffix(".txt").write_text(buf.getvalue(), encoding="utf-8")
+    texto_de(m).write_text(buf.getvalue(), encoding="utf-8")
     return salida
 
 
+def texto_de(p: Path, ext=".txt") -> Path:
+    return p.with_name(p.name + ext)
+
+
 def texto_pdf(p: Path):
-    out = p.with_suffix(".txt")
+    out = texto_de(p)
     subprocess.run(["pdftotext", "-layout", str(p), str(out)], capture_output=True, timeout=300)
     pags = None
     r = subprocess.run(["pdfinfo", str(p)], capture_output=True, text=True, timeout=60)
@@ -96,7 +139,7 @@ def texto_docx(p: Path):
     x = re.sub(r"</w:p>", "\n", x)
     x = re.sub(r"</w:tc>", " | ", x)
     t = re.sub(r"<[^>]+>", "", x)
-    out = p.with_suffix(".txt")
+    out = texto_de(p)
     out.write_text(t, encoding="utf-8")
     return out, None
 
@@ -105,7 +148,7 @@ def texto_xlsx(p: Path):
     import warnings
     import openpyxl
     warnings.filterwarnings("ignore")
-    out = p.with_suffix(".txt")
+    out = texto_de(p)
     try:
         wb = openpyxl.load_workbook(p, data_only=True, read_only=True)
     except Exception:
@@ -127,7 +170,7 @@ def texto_office(p: Path, formato):
         subprocess.run(["soffice", "--headless", "--convert-to", filtro, "--outdir", tmp, str(p)],
                        capture_output=True, timeout=180)
         gen = Path(tmp) / (p.stem + (".txt" if formato == "txt" else ".csv"))
-        out = p.with_suffix(".txt" if formato == "txt" else ".csv")
+        out = texto_de(p, ".txt" if formato == "txt" else ".csv")
         if gen.exists():
             shutil.copyfile(gen, out)
             return out, None
@@ -145,23 +188,26 @@ def procesar(carpeta: Path):
             if p in hechos or not p.is_file():
                 continue
             if p.suffix.lower() == ".zip":
-                descomprimir(p)
+                try:
+                    descomprimir(p)
+                except Exception as e:  # zip dañado o demasiado grande: se anota y se sigue
+                    texto_de(p).write_text(f"ERROR al descomprimir: {e}", encoding="utf-8")
                 hechos.add(p)
                 cambio = True
             elif p.suffix.lower() == ".msg":
                 try:
                     abrir_mail(p)
                 except Exception as e:  # mail dañado: se anota y se sigue
-                    p.with_suffix(".txt").write_text(f"ERROR al abrir el mail: {e}", encoding="utf-8")
+                    texto_de(p).write_text(f"ERROR al abrir el mail: {e}", encoding="utf-8")
                 hechos.add(p)
                 cambio = True
     filas = []
     for p in sorted(carpeta.rglob("*")):
-        if not p.is_file() or p.name == "inventario.md":
+        if not p.is_file() or p.name in ("inventario.md", MARCA):
             continue
         ext = p.suffix.lower()
-        if ext in (".txt", ".csv") and (p.with_suffix(".pdf").exists() or any(p.with_suffix(e).exists() for e in (".docx", ".doc", ".xlsx", ".xlsm", ".xls", ".msg", ".DOC"))):
-            continue  # es el texto extraído de otro archivo
+        if ext in (".txt", ".csv") and Path(str(p)[: -len(p.suffix)]).suffix and Path(str(p)[: -len(p.suffix)]).exists():
+            continue  # es el texto extraído de otro archivo (X.pdf.txt)
         out, pags, nota = None, None, ""
         try:
             if ext == ".pdf":
@@ -175,7 +221,7 @@ def procesar(carpeta: Path):
             elif ext == ".xls":
                 out, pags = texto_office(p, "csv")
             elif ext == ".msg":
-                out = p.with_suffix(".txt")
+                out = texto_de(p)
             elif ext == ".zip":
                 nota = "descomprimido en " + p.with_suffix("").name + "/"
             elif ext in SIN_ABRIR:
@@ -198,9 +244,9 @@ def main():
     for a in sys.argv[2:]:
         src = Path(a)
         if src.is_dir():
-            shutil.copytree(src, pedido / nombre_limpio(src.name), dirs_exist_ok=True)
+            shutil.copytree(src, libre(pedido / nombre_limpio(src.name)))
         else:
-            shutil.copyfile(src, pedido / nombre_limpio(PREFIJO_SUBIDA.sub("", src.name)))
+            shutil.copyfile(src, libre(pedido / nombre_limpio(PREFIJO_SUBIDA.sub("", src.name))))
     filas = procesar(pedido)
     lineas = ["# Inventario del pedido", "", "Lo genera `herramientas/abrir_pedido.py`. Cada documento tiene su texto al lado (.txt o .csv).", "",
               "| Archivo | Tipo | Bytes | Páginas | Caracteres de texto | Nota |", "|---|---|---|---|---|---|"]

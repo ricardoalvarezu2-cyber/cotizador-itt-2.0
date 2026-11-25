@@ -84,15 +84,24 @@ def guardar(ents, kids, data, i, out, nivel=0):
         if ents[s]['name'].startswith('__attach'):
             ap, asubs = props(ents, kids, data, s)
             nombre = txt(ap, '3707') or txt(ap, '3704') or ents[s]['name']
+            # el nombre viene del mail (dato externo): sin rutas, sin "..", sin caracteres de control
+            nombre = os.path.basename(nombre.replace('\\', '/')).strip().strip('.') or ents[s]['name']
+            nombre = ''.join(c for c in nombre if c >= ' ' and c not in '<>:"|?*') or ents[s]['name']
             if '37010102' in ap:
                 os.makedirs(out, exist_ok=True)
-                open(os.path.join(out, nombre), 'wb').write(ap['37010102'])
+                destino = os.path.join(out, nombre)
+                base, ext = os.path.splitext(destino)
+                k = 2
+                while os.path.exists(destino):  # dos adjuntos con el mismo nombre: no se pisan
+                    destino = f'{base}_{k}{ext}'
+                    k += 1
+                open(destino, 'wb').write(ap['37010102'])
                 print(pre + 'ADJUNTO', nombre, len(ap['37010102']))
             else:
                 emb = [k for k in kids(s) if ents[k]['name'] == '__substg1.0_3701000D']
                 if emb:
                     print(pre + 'MENSAJE ADJUNTO', nombre)
-                    guardar(ents, kids, data, emb[0], os.path.join(out, nombre.replace('/', '_')), nivel + 1)
+                    guardar(ents, kids, data, emb[0], os.path.join(out, os.path.basename(nombre.replace('/', '_')) or 'mensaje'), nivel + 1)
 
 if __name__ == '__main__':
     ents, kids, data = cfb(sys.argv[1])

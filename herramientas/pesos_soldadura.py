@@ -162,10 +162,10 @@ def soldaduras_piping(canos, canos_meta, accesorios, acc_meta, bridas, bri_meta,
             suma('Olet (' + ('weldolet' if tipo == 'weldolet' else 'thredolet/sockolet') + ')', dn, cl, q, f_olet)
             continue
         if n_bw:
-            if dn2:  # reducción: un extremo de cada Ø
-                suma('BW a tope (taller)', dn, schr, q * AJUSTE_DIRECTAS, factor_esp(dn, schr))
-                sch2 = '80' if (dn2 == 2 and schr == '40') else schr
-                suma('BW a tope (taller)', dn2, sch2, q * AJUSTE_DIRECTAS, factor_esp(dn2, sch2))
+            if dn2:  # reducción: un extremo de cada Ø; te de reducción: dos del Ø mayor y uno del menor (mismo schedule)
+                n_may = n_bw - 1
+                suma('BW a tope (taller)', dn, schr, q * n_may * AJUSTE_DIRECTAS, factor_esp(dn, schr))
+                suma('BW a tope (taller)', dn2, schr, q * AJUSTE_DIRECTAS, factor_esp(dn2, schr))
             else:
                 suma('BW a tope (taller)', dn, schr, q * n_bw * AJUSTE_DIRECTAS, factor_esp(dn, schr))
         if n_sw:
