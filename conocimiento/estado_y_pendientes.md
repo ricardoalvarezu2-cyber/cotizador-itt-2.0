@@ -65,6 +65,8 @@
 
 **COT26-0330-003 YPF Lic 70243 puente de medición (16-11-2026, borrador):** skid SCC-112A computado por ITT desde el plano (sin tabla del cliente), antecedente gemelo TAVAL/69 Lic 64673. Mark up 1,5 en todo (pedido de Ricardo Álvarez, 16-11-2026): con Ledesma a USD 24/pulg-eq y pintura a USD 50/m² (confirmados por Ricardo, en `precios_usuario.csv`): repositorio 114.072,85 USD; planilla modelo de Ventas (`llenar_planilla_modelo.py`, piping y pintura × 1,2, sin contingencia ni ajuste por inflación) 108.744,44. Falta la HD-003002 (Batería 3.0) que cita la planilla Ariba. Pendiente: revisión independiente, reconfirmar instrumentos y decidir plazo.
 
+**COT26-0010-002 AESA C5297 filtros coalescedores FC-301/302 (25-11-2026):** solo recopilación de información (RI, HD, P&ID, plano, planilla, anexos 1 a 5 y documentación general de AESA, esta última en `fuentes_originales/aesa_documentacion_LAN_2026-11/`). Antecedentes probables: YPF/27 (FC301/302 PC LAS), TAVAL/37 (FC-231, con planilla de costo), AESA/20 (2022). Detalle en su `bitacora.md`.
+
 **Caso de prueba:** COT26-1003-001 CAPEX OQ8209 (borrador, no enviada; su estado está en su `bitacora.md` y en `cotizaciones/README.md`).
 
 **Índices congelados (28-10-2026):** al pasar una cotización a revisado, la página guarda en `cot.indices_congelados` los índices de ese día; desde ahí el precio no cambia cuando la base suma un mes. Al volver a borrador se descongelan. `armar_cotizacion.py`, el motor JS, la planilla y el informe usan los congelados si están. La CAPEX (caso de control) tiene los del 28-10-2026, así el control de la página no se mueve (en el repositorio, desde la regla P4 ter, el control es 7.324,57). La oferta económica muestra una fila de flete cuando se incluye.

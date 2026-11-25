@@ -1,0 +1,2131 @@
+                                                           Instructivo para el Registro y Control de
+                                                                     Personal Contratado
+Tipo: ESPECIFICACIÓN                         Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+
+
+1 Índice
+
+Contenido
+1      ÍNDICE ........................................................................................................................................................................1
+2      OBJETO .....................................................................................................................................................................2
+3      ÁMBITO DE APLICACIÓN ........................................................................................................................................3
+4      CONSIDERACIONES PRINCIPALES .......................................................................................................................3
+    4.1        CONTRATOS AUDITABLES .......................................................................................................................................3
+    4.2        CONTROLES ESPECIALES .......................................................................................................................................3
+    4.3        NO AUDITABLE .......................................................................................................................................................4
+5      PROCESO ..................................................................................................................................................................4
+    5.1    SISTEMA DE RECURSOS CONTRATADOS .................................................................................................................4
+    5.2    PRESENTACIÓN DE LA DOCUMENTACIÓN .................................................................................................................4
+      5.2.1    Formalidades de presentación .....................................................................................................................4
+      5.2.2    Motivos de rechazos de las presentaciones ...............................................................................................5
+      5.2.3    Dependencias ..............................................................................................................................................6
+      5.2.4    Subcontrataciones .......................................................................................................................................6
+    5.3    ALTA DE PERSONAL ...............................................................................................................................................7
+      5.3.1    Gestión en el Sistema de Recursos Contratados ........................................................................................7
+      5.3.2    Documentación respaldatoria ......................................................................................................................9
+      5.3.3    Verificación al inicio de actividades ...........................................................................................................11
+    5.4    AUDITORÍA MENSUAL ............................................................................................................................................12
+      5.4.1    Gestión en el Sistema de Recursos Contratados ......................................................................................12
+      5.4.2    Documentación respaldatoria ....................................................................................................................12
+      5.4.3    Proceso de Auditoría mensual ...................................................................................................................14
+    5.5    AUDITORÍA FINAL Y BAJAS ....................................................................................................................................16
+      5.5.1    Gestión en el Sistema de Recursos Contratados ......................................................................................16
+      5.5.2    Documentación respaldatoria ....................................................................................................................17
+    5.6    VEHÍCULOS, MOTOS Y EQUIPOS ESPECIALES ........................................................................................................19
+      5.6.1    Gestión en el Sistema de Recursos Contratados ......................................................................................19
+      5.6.2    Documentación respaldatoria ....................................................................................................................20
+    5.7    SEGUROS ............................................................................................................................................................21
+      5.7.1    Consideraciones generales ........................................................................................................................21
+      5.7.2    Personal en relación de dependencia ........................................................................................................22
+      5.7.3    Personal independiente .............................................................................................................................23
+      5.7.4    Seguros Motos, Vehículos y Equipos ........................................................................................................23
+      5.7.5    Seguro técnico de Equipos ........................................................................................................................25
+    5.8    SALUD OCUPACIONAL ..........................................................................................................................................26
+                                                      FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+        PINHEIRO, JORGELINA                                                                         BLANCO, MYRIAM ELIZABETH
+                                                          MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                     1 / 35
+                                                           Instructivo para el Registro y Control de
+                                                                     Personal Contratado
+Tipo: ESPECIFICACIÓN                         Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+      5.8.1    Exámenes médicos ....................................................................................................................................26
+      5.8.2    Vigencia ......................................................................................................................................................26
+      5.8.3    Bajas y/o desvinculaciones ........................................................................................................................26
+      5.8.4    Exámenes médicos preventivos ................................................................................................................27
+    5.9    SANCIONES POR INCUMPLIMIENTO ........................................................................................................................27
+    5.10     EMPRESAS PROMOVIDAS..................................................................................................................................28
+      5.10.1 Definición ....................................................................................................................................................28
+      5.10.2 Promoción ..................................................................................................................................................28
+      5.10.3 Control previo al inicio de las actividades de Empresas Promovidas .......................................................29
+      5.10.4 Control trimestral de Empresas Promovidas .............................................................................................29
+      5.10.5 Aplicación de recursos en el SRC .............................................................................................................29
+      5.10.6 Control por finalización de actividades de Empresas Promovidas ............................................................30
+      5.10.7 Pérdida de la Promoción ............................................................................................................................30
+      5.10.8 Reingreso a Empresas Promovidas ..........................................................................................................30
+6      INDICADORES, REGISTROS Y RIESGOS DEL PROCESO .................................................................................30
+    6.1        INDICADORES ......................................................................................................................................................30
+    6.2        REGISTROS .........................................................................................................................................................31
+    6.3        RIESGOS Y ACCIONES MITIGANTES ........................................................................................................................31
+7      ANEXOS Y REFERENCIAS ....................................................................................................................................31
+    7.1        ANEXOS ..............................................................................................................................................................31
+    7.2        NORMATIVA RELACIONADA ...................................................................................................................................32
+    7.3        DEFINICIONES Y ABREVIATURAS ............................................................................................................................33
+8      APROBACIÓN .........................................................................................................................................................33
+    8.1        VIGENCIA ............................................................................................................................................................33
+    8.2        DISPOSICIONES GENERALES Y TRANSITORIAS ........................................................................................................34
+    8.3        HISTORIAL ...........................................................................................................................................................34
+    8.4        APROBACIÓN COLEGIADA .....................................................................................................................................35
+    8.5        CATEGORÍA DE CLASIFICACIÓN DEL ACTIVO DE INFORMACIÓN................................................................................35
+
+
+
+
+2 Objeto
+Definir la documentación de Personas, Vehículos y Equipos a ser presentada por las empresas Contratistas a fin de
+habilitar los Recursos para que puedan prestar servicios durante el lapso de tiempo que dure el Contrato. Como así
+también definir la documentación requerida para el control mensual respecto a las obligaciones laborales, sindicales y
+contractuales que deben cumplir las empresas Contratistas.
+
+
+
+
+                                                      FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+        PINHEIRO, JORGELINA                                                                         BLANCO, MYRIAM ELIZABETH
+                                                          MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                     2 / 35
+                                                         Instructivo para el Registro y Control de
+                                                                   Personal Contratado
+Tipo: ESPECIFICACIÓN                       Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+3 Ámbito de aplicación
+Esta normativa aplica a los procesos de YPF S.A. y/o sus sociedades subsidiarias y/o vinculadas y/o participadas,
+donde YPF tenga el control de la gestión en la República Argentina.
+
+
+4 Consideraciones principales
+
+4.1 Contratos Auditables
+Los contratos clasificados como Auditables serán controlados por Registro y Control de Personal Contratado, a
+través del Estudio Auditor designado para tal fin, y de acuerdo a lo establecido en el presente Instructivo de Registro
+y Control de Empresas Contratistas.
+
+Son aquellos contratos con provisión de mano de obra, vehículos o equipos, cuyos recursos ingresan a instalaciones
+de YPF o bien cuentan con personal que realiza tareas exclusivamente fuera de instalaciones de YPF pero con
+“dedicación mayoritaria” para contratos con YPF, entendiéndose por esto, que dedique al menos el 50% de la carga
+horaria total de su actividad, para dicho contrato.
+En el caso de que dentro de un contrato Auditable, existan recursos que ingresaran hasta 5 (cinco) días y no se
+repita su ingreso por los próximos 6 meses, deberán presentar por este personal la misma documentación que para
+el personal incluido en los contratos clasificados como “Controles Especiales”.
+
+Asimismo, serán Auditables los contratos de servicios de transporte y distribución, con periodicidad regular.
+
+Sin perjuicio de lo anterior, podrá ser clasificado como auditable cualquier contrato que así lo requiera, ya sea por el
+riesgo que implica para las personas involucradas, o a solo juicio del área de Registro y Control de Personal
+Contratado.
+
+
+4.2 Controles Especiales
+Son aquellos contratos por la provisión de mano de obra, vehículos o equipos, cuyos recursos ingresan a
+instalaciones de YPF, con frecuencia esporádica o de única vez, entendiéndose como frecuencia esporádica,
+aquellos ingresos hasta 5 (cinco) días dentro del lapso de un mes, y que no se repitan dentro de los 6 (seis) meses
+subsiguientes.
+Solo en estos casos, los controles serán realizados por el Inspector al momento de aprobar el ingreso del personal de
+la Contratista y la documentación que deberán presentar es la descripta en el punto 5.2.2. del presente instructivo. El
+control se debe efectuar previamente a la prestación del servicio y no requiere la registración en el SRC.
+
+
+
+
+                                                    FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+      PINHEIRO, JORGELINA                                                                         BLANCO, MYRIAM ELIZABETH
+                                                        MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   3 / 35
+                                                         Instructivo para el Registro y Control de
+                                                                   Personal Contratado
+Tipo: ESPECIFICACIÓN                       Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+4.3 No auditable
+Son aquellos contratos que por la naturaleza de la contratación no requieren el control objeto de este instructivo. Las
+actividades se desarrollan fuera de Instalaciones de YPF y sin dedicación exclusiva en dependencias externas.
+
+
+
+
+5 Proceso
+
+5.1 Sistema de Recursos Contratados
+Este sistema provisto por YPF, unifica y centraliza en una única herramienta, la información sobre los distintos
+recursos contratados (personal, vehículos o equipos especiales) y los distintos aspectos relacionados con el Registro
+y Control de Personal Contratado.
+Consiste en un sistema de comunicación en plataforma Web, utilizable desde cualquier PC con conexión a Internet,
+navegador Internet Explorer versión 11 o superior, donde la Contratista deberá declarar los recursos con que efectúa
+el trabajo para el que fue contratada, además podrá acceder a información actualizada sobre el estado de la
+documentación auditada y chequear sus observaciones a fin de cumplimentarlas a la brevedad.
+La empresa Contratista deberá informar en dicho Sistema todos los recursos involucrados en la contratación, propios
+y de sus subcontratistas, debiendo completar y mantener actualizada toda la información relacionada con los
+mismos, sin omitir ni alterar dato alguno, de conformidad al Anexo V: Manual de instrucción del SRC.
+La carga de datos en el sistema, implica además la presentación en tiempo y forma de la documentación requerida
+en el presente instructivo.
+Los datos para acceder al sistema serán suministrados por YPF a través de una dirección de mail válida que definirá
+la Contratista. Para solicitar el alta de un usuario deben enviar un correo electrónico a controldecontratistas@ypf.com
+indicando en el asunto “ALTA USUARIO SRC” y aclarando en el cuerpo del mail:
+      CUIT
+      RAZON SOCIAL
+      Apellido y nombre del usuario
+      Mail del usuario
+
+
+5.2 Presentación de la documentación
+
+5.2.1 Formalidades de presentación
+
+Es responsabilidad de la Contratista presentar toda la información requerida en el presente instructivo
+correspondiente a los recursos propios y de sus subcontratistas al servicio de YPF, atendiendo a las formalidades de
+presentación establecidas:
+
+
+                                                    FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+      PINHEIRO, JORGELINA                                                                         BLANCO, MYRIAM ELIZABETH
+                                                        MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   4 / 35
+                                                         Instructivo para el Registro y Control de
+                                                                   Personal Contratado
+Tipo: ESPECIFICACIÓN                       Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+ El lugar de presentación de documentación de auditoria dependerá del Estudio Auditor designado al
+  Contrato/Área por RyCPC. Para verificar este dato, podrá contactarse con su Inspector del Contrato. (Ver
+  Formulario 0 – Contactos de Estudios Auditor).
+ En la primera presentación de documentación, la Contratista deberá informar la/s persona/s autorizada/s para
+  firmar la documentación, mediante nota en carácter de Declaración Jurada certificado por Escribano Público.
+  Todo cambio de firma deberá ser informado previamente. Ver Formulario 3 – DDJJ Firma autorizada
+ Toda la documentación debe ser presentada con la leyenda “ES COPIA FIEL DEL ORIGINAL” y las hojas deben
+  estar foliadas (numeradas).
+ No se aceptará la presentación de copias no legibles o en papel fax. La presentación de fotocopias no legibles
+  hará que no se audite la información presentada o recibida.
+ De contar con más de un Contrato, deberá presentarse una sola copia de la documentación “Empresa” y la
+  documentación “Persona” y “Vehículo” deberá presentarse de acuerdo a los recursos aplicados para cada
+  contrato, a no ser que los recursos sean exactamente los mismos. En este último caso, deberá presentar una sola
+  copia de la documentación, con carátulas diferentes para cada uno de los contratos.
+ Debe respetarse el orden de la presentación conforme a lo establecido en el Checklist de entrega
+  correspondiente. (Ver Formulario 1 – Checklist Entrega)
+ En los casos de planes de facilidades de pago de aportes y contribuciones de la seguridad social se
+  considera en cada periodo como requisito cumplido cuando se presente el comprobante de pago de las cuotas
+  mediante el detalle de imputación de cuotas del plan. En caso que haya finalizado el vínculo comercial por parte
+  de la Contratista para con YPF, y habiéndose registrado en la matriz de auditoría como cumplidos los pagos de
+  cada una de las cuotas de los planes de pago vigentes hasta el periodo de finalización del servicio inclusive, la
+  firma Contratista deberá presentar una Nota de Indemnidad, con firma de representante legal certificada, en la
+  cual se aclare especialmente la deuda no exigible (tipo y monto) a la fecha y que la empresa se compromete a
+  cancelar en tiempo y forma las cuotas y, en su caso, a mantener indemne a YPF.
+ Se considera como personal independiente aquel que correspondiere por realizar actividades efectivas y/o de
+  supervisión para Titular/es de empresas unipersonal/es; Socio/s de Sociedades de Hecho y de Sociedades
+  Colectivas; Gerente/s de S.R.L.; Director/es Titular/es de S.A.
+
+ Eventualmente YPF podrá solicitar cualquier otro tipo de documentación que considere necesaria como
+  complemento adicional a la que se detalla en el presente instructivo.
+
+
+5.2.2 Motivos de rechazos de las presentaciones
+
+El Estudio Auditor podrá rechazar la documentación presentada si no cumple con alguna de las siguientes
+condiciones:
+
+                                                    FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+      PINHEIRO, JORGELINA                                                                         BLANCO, MYRIAM ELIZABETH
+                                                        MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   5 / 35
+                                                         Instructivo para el Registro y Control de
+                                                                   Personal Contratado
+Tipo: ESPECIFICACIÓN                       Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+
+ Documentación de alta de recursos que no estén afectados a un contrato vigente.
+ Documentación que no esté acompañada de su Checklist correspondiente.
+ Documentación que no cumpla con el orden del Checklist de entrega correspondiente.
+ Carpetas que no estén foliadas y/o firmadas por la persona autorizada y/o no tengan la leyenda de “COPIA FIEL
+  DEL ORIGINAL”.
+ Copias no legibles de la documentación presentada.
+
+
+5.2.3 Dependencias
+
+En aquellos contratos cuyos servicios deban realizarse dentro de instalaciones detalladas a continuación,
+adicionalmente a lo establecido en el presente instructivo, las empresas Contratistas deberán tener en cuenta los
+requisitos que se detallan en los siguientes anexos:
+•   Complejo Industrial Lujan de Cuyo - Anexo I
+•   Complejo Industrial La Plata - Anexo II
+•   YPF GAS – Anexo III
+•   A-EVANGELISTA S.A. - Anexo IV
+•   Y-TEC – Anexo V
+
+
+5.2.4 Subcontrataciones
+
+En los casos en que la empresa adjudicataria subcontrate a terceros para realizar trabajos o prestaciones de
+servicios dentro y fuera de las instalaciones de YPF, deberá comunicar esta decisión a través del Formulario 5 -
+Comunicación de Subcontratación por mail al Estudio Auditor, previamente aprobado y firmado por el Inspector del
+Contrato, el nombre y apellido de la persona física o denominación de la persona jurídica que oficiará de
+subcontratista. Con la presentación de este formulario se realizará el alta en el SRC de esta empresa para que la
+Contratista declare correctamente los recursos. De no contar con ella, la documentación de ingreso será rechazada.
+
+
+NOTA: La Contratista principal es responsable de presentar la documentación solicitada de todos sus
+subcontratistas, en carpetas separadas debidamente identificadas y según el modo de presentación establecido en el
+presente instructivo.
+.
+
+
+
+
+                                                    FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+      PINHEIRO, JORGELINA                                                                         BLANCO, MYRIAM ELIZABETH
+                                                        MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   6 / 35
+                                                         Instructivo para el Registro y Control de
+                                                                   Personal Contratado
+Tipo: ESPECIFICACIÓN                       Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+5.3 Alta de Personal
+Las empresas Contratistas deberán utilizar el presente instructivo a modo de guía y el Formulario 1 – Checklist
+entrega junto a la documentación correspondiente.
+
+
+5.3.1 Gestión en el Sistema de Recursos Contratados
+
+5.3.1.1 Actualización de Personal
+Las empresas Contratistas deberán cargar en el SRC las fichas completas con los datos del personal propio y de
+sus subcontratistas.
+Es importante dar de alta previamente los seguros asociados a los recursos con el fin de tenerlos disponibles al
+completar las fichas.
+
+5.3.1.2 Afectación de Personal
+Las empresas Contratistas deberán vincular en el SRC el personal propio y de sus subcontratistas al contrato vigente
+para prestar el servicio objeto del mismo. (Afectación de personal).
+La Contratista deberá tener en cuenta las siguientes consideraciones para determinar el personal a declarar:
+
+    1- Registrable – declaración obligatoria y taxativa:
+       A) Personal Directo: funciones afectadas al servicio principal que forman parte del objeto de la contratación
+          provista por la Contratista, susceptible de desempeñar sus tareas en locaciones de YPF o externas (Ej.
+          Técnico de Laboratorio). Pueden ser funciones operativas (Ej. Oficial de Mantenimiento), Coordinación
+          (Ej. Representante Técnico) o Apoyo (Ej. Técnico de S&MA), pero siempre que su tarea sea considerada
+          inherente a las actividades del servicio en cuestión.
+
+           B) Personal Indirecto: funciones de apoyo al servicio principal, en locaciones de YPF o externas, cuyas
+              tareas no sean inherentes a la actividad que forma parte del objeto de la contratación (Ej. Chofer de
+              Transporte de Personal, Cocinero de Campo, Personal de Limpieza, Mantenimiento y Vigilancia de Base,
+              etc.), pero que se originan como consecuencia directa del servicio requerido y sean mesurables en
+              relación a éste.
+
+
+    2- No Registrable: Overhead: funciones de apoyo / staff centrales, que no se originan como consecuencia
+       directa del servicio contratado, sino que forman parte de las actividades neurálgicas de la organización (Ej.
+       Gerente General, Niveles de supervisión no operativos, Secretarias, Liquidación Haberes, Legales, etc.).
+
+
+
+Al momento de realizar la afectación del personal al contrato en el SRC, las empresas Contratistas deberán indicar el
+motivo de afectación según la relación de servicio que corresponde:
+                                                    FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+      PINHEIRO, JORGELINA                                                                         BLANCO, MYRIAM ELIZABETH
+                                                        MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   7 / 35
+                                                         Instructivo para el Registro y Control de
+                                                                   Personal Contratado
+Tipo: ESPECIFICACIÓN                       Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+
+            Permanente: Cuando el recurso esté 100% dedicado a realizar tareas para el contrato en cuestión. En
+             SRC quedara aplicado automáticamente durante todo el periodo de afectación.
+            Esporádico: Cuando cumpliendo con una tarea fija, no necesite el 100% de dedicación al contrato, donde
+             deberá especificarse el porcentaje máximo de dedicación. En SRC quedara aplicado automáticamente
+             durante todo el periodo de afectación.
+            A demanda / Suplente: Posiciones que responden a una demanda específica y no puede preverse su
+             reincidencia.
+
+
+        Compatibilidad entre relaciones de servicio:
+
+
+
+
+        En caso de necesitar modificar la relación con el servicio, la Contratista deberá desafectar el recurso y volverlo
+        a afectar con las relaciones de servicio correctas. Por lo cual, se iniciará el circuito de aprobaciones
+        nuevamente.
+
+
+
+
+Las solicitudes de afectación son generadas por la Contratista y pasaran por un circuito de aprobación por parte de
+YPF. El estado de la solicitud de afectación podrá visualizarse desde Personal/Afectaciones.
+
+
+
+
+                                                    FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+      PINHEIRO, JORGELINA                                                                         BLANCO, MYRIAM ELIZABETH
+                                                        MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   8 / 35
+                                                         Instructivo para el Registro y Control de
+                                                                   Personal Contratado
+Tipo: ESPECIFICACIÓN                       Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+
+Una vez aprobada la solicitud de afectación y con una antelación de 72 hs. hábiles previas al ingreso del personal,
+las empresas Contratistas deberán presentar la documentación requerida en el presente instructivo ante el Estudio
+Auditor asignado.
+
+
+5.3.2 Documentación respaldatoria
+
+5.3.2.1 Documentación de alta de la EMPRESA
+a) CONSTANCIA DE APERTURA DE CUENTA CORRIENTE BANCARIA, conforme lo establecido en el Art. 30 de
+   la Ley 20.744, modificado por la Ley 25.013, siguiendo el Formulario 2 - DDJJ de Apertura de Cuenta Corriente
+   Bancaria.
+    Esta constancia, consiste en una simple firma por autoridad bancaria en original, en la cual se detalle el Número
+    de la Cuenta Corriente bancaria de la cual la empresa es titular principal.
+
+
+
+5.3.2.2 Documentación de alta del PERSONAL EN RELACIÓN DE DEPENDENCIA
+a) CONSTANCIA DE ALTA TEMPRANA EN AFIP Y CONSULTA DE LAS RELACIONES LABORALES ACTIVAS,
+   deberán presentar copia del acuse de recibo del alta del trabajador en la AFIP firmada por el trabajador y la
+   impresión realizada desde la página de la AFIP que avale la vigencia de la relación laboral (Resolución general
+   1891 Art. 21). Ante cualquier cambio en la relación laboral deberán presentarla nuevamente.
+b) Fotocopia de DNI
+c) CONTRATO DE TRABAJO FIRMADO, cuando se trate de empleados cuya modalidad de contratación sea “A
+   plazo fijo”, “Eventual”, “De temporada” u otra modalidad especial (ya sea por tiempo determinado o determinable)
+d) PÓLIZA DE ART con nómina, incluyendo cláusula de no repetición. (Ver apartado de SEGUROS)
+e) PÓLIZA DE SEGURO DE VIDA OBLIGATORIO con nómina Dto. 1567/74. (Ver apartado de SEGUROS).
+
+                                                    FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+      PINHEIRO, JORGELINA                                                                         BLANCO, MYRIAM ELIZABETH
+                                                        MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   9 / 35
+                                                          Instructivo para el Registro y Control de
+                                                                    Personal Contratado
+Tipo: ESPECIFICACIÓN                        Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                        YPF PRIVADA
+
+
+f)   CONTAR CON EL AVAL DE SALUD OCUPACIONAL (Ver apartado de SALUD OCUPACIONAL).
+
+5.3.2.3 Documentación de alta del PERSONAL INDEPENDIENTE
+a) DECLARACION JURADA SOBRE CONDICIONES DE PERSONAL AUTONOMO Y/O MONOTRIBUTISTA (Ver
+   Formulario 4 – DDJJ de Trabajadores Independientes).
+b) CONSTANCIA DE INSCRIPCIÓN ANTE AFIP.
+c) CONSTANCIAS DE PÓLIZAS DE SEGUROS DE ACCIDENTES PERSONALES Y COMPROBANTE DE PAGO.
+   (Ver apartado de SEGUROS).
+d) CONTAR CON EL AVAL DE SALUD OCUPACIONAL (Ver apartado de SALUD OCUPACIONAL).
+
+5.3.2.4 Requisitos adicionales según la tarea
+
+Las EMPRESAS CONSTRUCTORAS deberán presentar:
+     -      CONSTANCIA DE INSCRIPCIÓN ANTE EL IERIC.
+     -      COPIA DE LA PLANILLA MOVIL IMPRESA DESDE LA CREDENCIAL DE REGISTRO LABORAL – LIBRETA
+            DE FONDO DE CESE LABORAL.
+     -      DECLARACIÓN DE INICIO DE OBRA ANTE EL IERIC (art. 32 Ley 22.250) y ante la ART.
+
+Para PERSONAL QUE CONDUCE/ OPERE VEHÍCULOS/ MOTOS/EQUIPOS deberán presentar:
+     -      Licencia de conducir emitida por autoridad competente y con la categoría correspondiente según la
+            tarea/función que realice el recurso.
+     -      Constancia de habilitación de manejo defensivo emitida por las instituciones homologadas por YPF a través
+            de MASS solo para el caso de vehículos y equipos.
+     -      CÉDULA VERDE del vehículo vigente o CEDULA AZUL en caso de que el conductor no sea el titular del
+            vehículo
+
+Para CHOFERES PROFESIONALES deberán presentar:
+     -      Licencia HABILITANTE PARA TRANSPORTE DE PERSONAL, CARGAS GENERALES Y/O CARGAS
+            PELIGROSAS emitido por la CNRT
+Para VIGILADORES deberán presentar:
+   - Presentar DDJJ de habilitación por cada vigilador (Ver Formulario 19– DDJJ Vigiladores)
+
+En los casos que corresponda y según el CCT aplicable deberán presentar:
+     -      Constancias de entrega de elementos de seguridad y protección
+     -      Constancias de entrega de ropa de trabajo.
+     -      Habilitaciones especiales según la actividad:
+                                                     FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+         PINHEIRO, JORGELINA                                                                       BLANCO, MYRIAM ELIZABETH
+                                                         MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                   Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                               CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+     © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+     esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                  10 / 35
+                                                         Instructivo para el Registro y Control de
+                                                                   Personal Contratado
+Tipo: ESPECIFICACIÓN                       Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+              i. Gruistas: operador habilitado para el Tonelaje de la grúa, certificado por un ente calificador acreditado en
+                 la OAA.
+
+Para EMPLEADOS CON RESIDENCIA EN EL EXTRANJERO deberán presentar:
+    -      Visa que habilite al trabajador a ejercer un empleo (Trabajo en relación de dependencia), teniendo en
+           consideración el período legal de residencia en el país, en las categorías de: “residente permanente”,
+           “residente temporario”, “residencia precaria”.
+    -      Constancia de seguros que cubra de manera suficiente las Leyes del país de origen, con extensión de la
+           cobertura a República Argentina (ver apartado seguros).
+    -      Pasaporte o DNI en caso de residencia precaria.
+    -      En caso de empleados extranjeros vinculados a empresas con sucursal en Argentina deberán presentar la
+           constancia de CUIL Provisoria.
+    -      Licencia internacional de manejo en el caso que conduzcan vehículos/motos/equipos.
+Para REMISES deberán presentar:
+    -      Habilitación de la agencia otorgada por la municipalidad que corresponda a su ámbito de servicio.
+
+
+NOTA: Toda aquella documentación con vencimiento deberá presentarse ante el Estudio Auditor 72 hs antes del
+mismo, para la renovación de las habilitaciones de los recursos.
+
+
+
+5.3.2.5 Empresas de Servicios Eventuales
+Para el caso de ingreso de personal de Empresas Eventuales la documentación a presentar es la siguiente:
+DOCUMENTACIÓN DE ALTA:
+   Registro de Alta de AFIP de la Empresa de Servicios Eventuales con la modalidad de contratación
+    correspondiente
+   Certificado de ART emitido por YPF, que la Contratista deberá solicitar a RyCPC.
+   El resto de la documentación solicitada en el requerimiento de YPF S.A según el punto 5.2.
+
+
+5.3.3 Verificación al inicio de actividades
+
+Al momento de ingresar a las instalaciones de YPF, la Contratista deberá tener en su poder la documentación que se
+detalla a continuación, tanto para el personal en relación de dependencia como para el personal Independiente la
+cual podrá ser requerida:
+a) Credencial auto-gestionable emitida del SRC.
+b) DNI del personal o documento equivalente.
+
+                                                    FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+        PINHEIRO, JORGELINA                                                                       BLANCO, MYRIAM ELIZABETH
+                                                        MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 11 / 35
+                                                          Instructivo para el Registro y Control de
+                                                                    Personal Contratado
+Tipo: ESPECIFICACIÓN                        Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                        YPF PRIVADA
+
+
+c) Condiciones de seguridad establecidas en los procedimientos de la Compañía.
+d) Constancias de entrega de elementos de seguridad y protección (definidos por MASS).
+
+El personal que conduzca vehículos debe exhibir además:
+e) Licencia de conducir emitido por autoridad competente.
+f)   Constancia de habilitación de manejo defensivo emitido por las instituciones definidas por YPF a través de
+     MASS.
+g) Los choferes profesionales deben exhibir también: Registro habilitante para transporte de personal, cargas
+   generales y/o cargas peligrosas emitido por la CNRT según corresponda.
+
+
+5.4 Auditoría mensual
+
+5.4.1 Gestión en el Sistema de Recursos Contratados
+
+5.4.1.1 Personal Aplicado
+Las Empresas Contratistas deberán declarar por cada Contrato el Informe Mensual de Personal Aplicado desde el
+primer día hasta el tercer día hábil del mes. Donde estarán registradas las personas que efectivamente trabajaron
+durante el mes que finalizó y sobre el que realizarán las presentaciones documentales correspondientes. Deben
+incluir al personal de sus subcontratistas si las tuvieran.
+Este informe se deberá confeccionar independientemente de facturaciones que pudieran emitir. Se debe comunicar
+la confección del informe a la Inspección de YPF de cada Contrato para que el mismo proceda a realizar el control y
+posterior bloqueo.
+Para aquellos casos que el personal esté afectado como “Permanente” y “Esporádicos” al contrato, quedaran
+aplicados automáticamente. Asimismo, todos los requisitos a auditar serán asignados automáticamente.
+Para el caso de los contratos que NO se realice la aplicación de personal se generan los requisitos mensuales a
+auditar sobre todo el personal afectado.
+En el caso que ningún recurso haya prestado servicios para el contrato, se deberá indicar en el SRC la opción “Sin
+Actividad” y deberá presentar solo los requisitos que la matriz le asigne a través del Informe de Cumplimiento.
+
+
+5.4.2 Documentación respaldatoria
+
+La empresa Contratista presentará por cada Contrato la documentación requerida de acuerdo al Checklist de
+Auditoría Mensual (Ver Formulario 1 - Checklist entrega). Las presentaciones documentales del mes trabajado deben
+realizarse antes del día 20 del mes siguiente y deben incluir la documentación de sus subcontratistas si las tuvieran.
+La empresa Contratista podrá registrar a través del SRC en Matriz de Auditoria/ Evaluación de Requisitos, la fecha
+de presentación de su carpeta de auditoria mensual ante el Estudio Auditor y subir al sistema una imagen del
+comprobante de recepción.
+                                                     FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+      PINHEIRO, JORGELINA                                                                          BLANCO, MYRIAM ELIZABETH
+                                                         MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                   Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                               CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+     © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+     esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                  12 / 35
+                                                          Instructivo para el Registro y Control de
+                                                                    Personal Contratado
+Tipo: ESPECIFICACIÓN                        Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                        YPF PRIVADA
+
+
+
+
+5.4.2.1 Documentación mensual de la EMPRESA
+a) Formulario 931 - DDJJ de Aportes y Contribuciones de AFIP.
+b) COMPROBANTE DE PAGO de Formulario 931. (En el caso que el pago se efectúe fuera de término, deberán
+   presentarse los comprobantes de pago de los intereses resarcitorios.)
+c) NÓMINA DEL PERSONAL INCLUIDO EN EL Formulario 931 resaltando el personal aplicado en el período
+   auditado.
+d) ACUSE DE PRESENTACIÓN de DDJJ ante AFIP. En el caso que corresponda, se deberá presentar copia del
+   acuse de presentación de la DDJJ del Régimen de Información de conceptos no remunerativos establecido por
+   Resolución General AFIP N° 3279.
+e) COMPROBANTE DE CANCELACIÓN DE CUOTAS DE PLANES DE PAGO. Adicionalmente, deberán presentar
+   toda la documentación que exige la AFIP para su acogimiento.
+f)   CONSTANCIA DE LIBRE DEUDA DE ENTIDADES GREMIALES Y/O COMPROBANTES DE PAGOS con
+     nómina de personal, conceptos y sumas que se aportan. De acuerdo a las exigencias de cada Asociación
+     Gremial.
+g) DETALLE DE DEPÓSITOS EN CUENTAS BANCARIAS INDIVIDUALES DEL FONDO DE CESE LABORAL, para
+   aquellas empresas que sean constructoras.
+h) OTRAS RETENCIONES que consten en el Recibo de Sueldos (seguros, embargos, cuota alimentaria, etc.).
+
+
+NOTA: En el ámbito de la Regional Oeste (Neuquén, Río Negro y Mendoza) deberá presentarse constancia de libre
+deuda de entidades gremiales y comprobantes de pago con nómina de personal, conceptos y sumas que se aportan
+de acuerdo a las exigencias de cada asociación gremial.
+
+
+5.4.2.2 Documentación mensual del PERSONAL EN RELACION DE DEPENDENCIA
+a) RECIBOS DE SUELDO. Deberán ser presentados ordenados alfabéticamente y juntas la primera y segunda
+   quincena y/o Sueldo Anual Complementario de cada empleado. Los Recibos de las Remuneraciones deberán
+   estar confeccionados en un todo de acuerdo con lo establecido por la Legislación Laboral vigente y estar
+   perfectamente determinados el encuadre gremial del trabajador, CCT, función, categoría, turno y zona salarial
+   como así también todos los conceptos que se liquidan (Remunerativos, No Remunerativos, Retenciones,
+   Deducciones, etc.), al igual que los porcentajes, importes, cantidades y valores unitarios de cada uno de los
+   conceptos que se utilizan para tal efecto. Se deberá incluir la modalidad de pago. En todos los casos deberá
+   estar aplicada la estructura remunerativa que corresponda a cada CCT.
+NOTA: Si no fuera posible presentar los recibos de sueldo firmados por el personal en el plazo solicitado, se aceptará
+la presentación de los recibos firmados por un apoderado de la empresa junto a una DDJJ que indique que los
+recibos acompañados son copia fiel de los entregados y firmados por los empleados de la empresa Contratista.
+
+                                                     FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+      PINHEIRO, JORGELINA                                                                          BLANCO, MYRIAM ELIZABETH
+                                                         MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                   Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                               CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+     © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+     esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                  13 / 35
+                                                         Instructivo para el Registro y Control de
+                                                                   Personal Contratado
+Tipo: ESPECIFICACIÓN                       Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+b) CONSTANCIA DE ACREDITACIÓN BANCARIA DE SUELDOS. Se deberá presentar el detalle de la acreditación
+   de los Sueldos del Personal, contando como mínimo con la siguiente información:
+    -      Fecha de Depósito
+    -      N° de Caja de Ahorro / Cuenta Corriente
+    -      Apellido y Nombre del Empleado
+    -      CUIL
+    -      Importe Depositado (el cual deberá ser coincidente con el neto del Recibo de Sueldos).
+    -      Esta constancia deberá estar intervenida por el Banco (Fecha y sello del responsable) o emitida desde la
+           plataforma bancaria la cual deberá contar con logo y verificación del URL y deberá constar la confirmación de
+           la acreditación. En este último caso, deberá acompañar el Formulario 20 – DDJJ Copia Fiel
+    -      En caso de no ser coincidente el neto del Recibo con el importe depositado, se deberá informar por nota los
+           motivos de esas diferencias.
+    -      La presentación de las constancias de acreditación bancaria, deberán mantener el orden alfabético.
+NOTA: Los Pagos de Sueldos y de cualquier otra Remuneración, deberán ser efectuados mediante acreditación
+bancaria, no pudiendo hacerlo en efectivo salvo expresa voluntad del Empleado. (Art. 124 LCT). En este supuesto,
+deberán presentar mensualmente nota firmada en original por el empleado, dirigida al empleador solicitando dicha
+práctica.
+
+5.4.2.3 Documentación mensual del PERSONAL INDEPENDIENTE
+a) FACTURA DE HONORARIOS POR SERVICIOS. Todo el personal independiente de las empresas Contratistas y
+   subcontratistas, deberán presentar las facturas por los servicios prestados indicando en la misma el periodo
+   facturado.
+b) COMPROBANTE DE PAGO ANTE AFIP DE PERSONAL INDEPENDIENTE. La empresa deberá presentar los
+   comprobantes de pago de los trabajadores Independientes ordenados alfabéticamente. Para el caso de aportes
+   jubilatorios se deberá presentar el pago ante la institución que corresponda.
+c) PÓLIZA O CERTIFICADO DE COBERTURA DE ACCIDENTES PERSONALES (Ver apartado de SEGUROS)
+d) COMPROBANTE DE PAGO DE SEGURO DE ACCIDENTES PERSONALES Y/O LIBRE DEUDA. (Ver apartado
+   de SEGUROS)
+
+
+5.4.3 Proceso de Auditoría mensual
+
+5.4.3.1 Cronograma de emisión de informes
+
+
+
+
+                                                    FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+        PINHEIRO, JORGELINA                                                                       BLANCO, MYRIAM ELIZABETH
+                                                        MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 14 / 35
+                                                         Instructivo para el Registro y Control de
+                                                                   Personal Contratado
+Tipo: ESPECIFICACIÓN                       Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+Este proceso comienza con la presentación de la documentación por parte de la Contratista, continuando con la
+generación de matriz de auditoría por cumplimiento de requisito en el sistema y la emisión del Informe del Estudio
+hasta la regularización de la documentación faltante por parte de la Contratista, de acuerdo al siguiente cronograma:
+a) Los Contratistas deberán presentar la documentación a controlar, hasta el día 20 de cada mes. En caso de que
+   hubiere faltantes, podrán presentarlos en una única presentación adicional.
+b) El Estudio Controlante auditará la documentación e irá completando la matriz con el estado de la documentación
+   presentada, donde se generará el resultado de la auditoría. El mismo podrá ser verificado por el Inspector del
+   Contrato y la Contratista en el SRC.
+c) El Estudio Controlante al recibir la documentación faltante, en aquellos casos en que el Contratista entregue toda
+   la documentación faltante, actualizará el estado de cumplimiento de los requisitos correspondientes.
+   Automáticamente cambiará el porcentaje de cumplimiento de auditoría.
+
+
+                                     Día de Presentación                                                                  Ultima fecha de registración
+                                     de Documentación                                                                     en el sistema por el Estudio.
+                                     Hasta el día 5 inclusive de cada mes.                                                El día 15 del mismo mes.
+                                     Entre el 6 y el 15 inclusive de cada mes.                                            El día 25 del mismo mes.
+                                     Entre el 16 y el 20 inclusive de cada mes.                                           El día 30 del mismo mes.
+                                     Entre el 21 y el 30 inclusive de cada mes.                                           El día 10 del mes siguiente.
+
+
+
+NOTA: En Regional Sur la entrega de documentación es hasta el 15 de cada mes. Con una primer entrega adicional
+entre el 15 y el 20, la segunda entrega final después del día 20.
+
+5.4.3.2 Visualización del Resultado de Auditoría
+   La empresa Contratista podrá consultar el resultado de la auditoria correspondiente a la documentación
+    presentada en el SRC desde el menú Matriz de auditoria/ Informe de Cumplimiento.
+   De existir observaciones sobre la documentación presentada, las empresas Contratistas deberán presentar en
+    una sola entrega la documentación complementaria que regularice las mismas. Debidamente identificada por
+    contrato y período. Si luego de la presentación complementaria aún quedan requisitos incumplidos se podrán
+    subsanar con la próxima presentación mensual.
+   En caso de que la Contratista tenga discrepancias entre lo auditado por el Estudio Auditor y la documentación
+    presentada podrá hacer un descargo dentro de los 30 días posteriores al de la fecha de la presentación. El
+    descargo deberá realizarse por mail al Estudio Auditor y a RyCPC tomando como base el archivo Excel de
+    incumplimientos que surja de la Matriz y agregando una columna de “Observaciones” donde deberá indicar
+    fecha de presentación, si se trató de documentación mensual o adicional y folio correspondiente. Pasado el
+    tiempo para observar las diferencias el reclamo no será tomado como válido.
+
+
+                                                    FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+      PINHEIRO, JORGELINA                                                                         BLANCO, MYRIAM ELIZABETH
+                                                        MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 15 / 35
+                                                         Instructivo para el Registro y Control de
+                                                                   Personal Contratado
+Tipo: ESPECIFICACIÓN                       Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+5.5 Auditoría Final y Bajas
+Las empresas Contratistas deberán declarar en el sistema SRC el personal propio y de sus subcontratistas que deje
+de estar a disposición del servicio objeto del contrato (Desafectación de personal) indicando el motivo y la causa de
+la desafectación, en caso que corresponda. Las Contratistas deberán informar inmediatamente en el momento de
+conocidas las bajas a través del SRC y por nota en forma personal o por mail al Estudio Auditor, detallando en la
+misma: Empresa, Dependencia, Apellido, Nombre, y CUIL del empleado.
+En el Formulario 6 - DDJJ de Bajas/ Desafectaciones, la empresa Contratista deberá informar cual fue la causa de la
+desafectación / baja producida, entre las cuales podemos mencionar:
+
+a) BAJA
+    -      Renuncia
+    -      Desvinculación por mutuo acuerdo.
+    -      Finalización Contrato eventual.
+    -      Vencimiento Contrato a plazo fijo.
+    -      Jubilación.
+    -      Despidos.
+    -      Incapacidad absoluta del trabajador.
+    -      Inhabilidad, incapacidad culposa dolosa
+    -      Muerte del trabajador
+
+b) DESAFECTACION
+    -      Por cambio de objetivo
+    -      Licencias (art. 150/158)
+    -      Accidentes
+    -      Suspensiones
+    -      A disposición de la Justicia
+
+
+5.5.1 Gestión en el Sistema de Recursos Contratados
+
+En el SRC deberá registrarse la desafectación del personal en el momento que se produce. También para el caso de
+desvinculaciones deberá registrarse la fecha de baja y el motivo correspondiente. El SRC no permite informar bajas y
+desafectaciones con fecha anterior a la actual, las mismas deberán registrarse con una fecha futura a la del día en
+que se está realizando la desafectación.
+
+
+                                                    FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+        PINHEIRO, JORGELINA                                                                       BLANCO, MYRIAM ELIZABETH
+                                                        MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 16 / 35
+                                                         Instructivo para el Registro y Control de
+                                                                   Personal Contratado
+Tipo: ESPECIFICACIÓN                       Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+El Estudio Auditor no recibirá documentación de baja de recursos si los mismos no están previamente desafectados
+en el SRC
+
+
+5.5.2 Documentación respaldatoria
+
+5.5.2.1 Documentación de baja del PERSONAL EN RELACION DE DEPENDENCIA
+Adjunto con este formulario, se deberá presentar la siguiente documentación, dependiendo del motivo de
+desafectación/baja de que se trate, según el siguiente detalle:
+
+a) DESAFECTACION
+    -      Recibo de haberes - Del último mes en que estuvo afectado y/o aplicado al contrato                                                                                                y 2 (dos) meses
+           posteriores.
+    -      Nómina del personal incluido en el F.931 Del último mes en que estuvo afectado y/o aplicado al contrato y 2
+           (dos) meses posteriores.
+    -      Nota membretada en carácter de Declaración jurada firmada por el representante técnico de la empresa
+           Contratista y el empleado desafectado, donde se acredite la continuidad laboral.
+
+b) DESVINCULACION (DESPIDO/ RENUNCIA/ FINALIZACION DE CONTRATO EVENTUAL/ VENCIMIENTO DE
+   CONTRATO A PLAZO FIJO)
+    -      Telegrama / carta documento con sello de correo / contrato de trabajo con fecha de finalización.
+    -      Recibo de haberes con liquidación final firmada por el empleado o acuerdo conciliatorio
+    -      Constancia de acreditación bancaria o pago fehaciente. En caso de pago con cheque a la orden, presentar
+           copia del mismo, nota o recibo firmado por el empleado. No se aceptará cheques de pago diferido.
+    -      Formulario de baja en la AFIP firmado por el empleado.
+    -      Pago de fondo de cese laboral y en los casos que corresponda, la constancia entrega libreta de trabajo
+           (empresas constructoras).
+    -      Constancia de entrega al trabajador de los certificados de trabajo y el de remuneración y servicios y copia de
+           los mismos. Deben estar firmados por el empleado
+    -      Examen médico de egreso o constancia de intimación a realizárselo (Ver apartado SALUD OCUPACIONAL).
+
+c) DESVINCULACIÓN POR MUTUO ACUERDO
+    -      Mutuo acuerdo ante escribano público / conciliación laboral ante autoridad (MTEySS).
+    -      Constancia de entrega al trabajador de los certificados de trabajo y el de remuneración y servicios y copia de
+           los mismos. Deben estar firmados por el empleado.
+    -      Formulario de baja en la AFIP firmado por el empleado.
+
+                                                    FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+        PINHEIRO, JORGELINA                                                                       BLANCO, MYRIAM ELIZABETH
+                                                        MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 17 / 35
+                                                          Instructivo para el Registro y Control de
+                                                                    Personal Contratado
+Tipo: ESPECIFICACIÓN                        Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                        YPF PRIVADA
+
+
+     -      Constancia de acreditación bancaria o pago fehaciente. En caso de pago con cheque presentar nota o recibo
+            firmado por el empleado.
+     -      Examen médico de egreso o constancia de intimación a realizárselo (Ver apartado SALUD OCUPACIONAL).
+
+d) JUBILACIÓN:
+     -      Formulario de baja en la AFIP firmado por el empleado.
+     -      Constancia de pago y/o acreditación de indemnización final.
+     -      Intimación por parte del empleador que inicien los trámites jubilatorios.
+
+e) FALLECIMIENTO
+     -      Formulario de baja en la AFIP.
+     -      Recibo de haberes con liquidación final, según el caso o acuerdo conciliatorio con familiares
+     -      Constancia de entrega a familiares de los certificados de trabajo y el de remuneración y servicios y copia de
+            los mismos, o en caso de no poder entregarlos se deberá consignar judicialmente.
+     -      Constancia de percepción de todas las indemnizaciones previstas en la legislación laboral vigente, convenio
+            colectivo de trabajo y seguros.
+     -      Certificado de defunción.
+     -      Constancia de denuncia a la ART (si correspondiere).
+     -      Constancia de denuncia al seguro de vida obligatorio.
+
+f)   INTERNALIZACION A YPF
+     -      Cuando un empleado externo es efectivizado a YPF y/o Empresas del Grupo, se deberá presentar la
+            documentación referente a una renuncia o copia del contrato de la cesión de trabajo, según corresponda.
+
+g) CAMBIO DE CONTRATO:
+     -      Cuando se transfiera personal total o parcialmente a otro pedido o contrato, se detallará en la columna
+            “motivo” del Formulario 6- DDJJ de Bajas-Desafectaciones el nuevo número de Contrato al cual se transfiere
+            el personal.
+
+h) INCAPACIDAD ABSOLUTA DEL TRABAJADO/ INHABILIDAD INCAPACIDAD CULPOSA DOLOSA:
+     -      Formulario de baja en la AFIP.
+     -      Recibo de haberes con liquidación final, según el caso o acuerdo conciliatorio con familiares
+     -      Constancia de entrega a quien corresponda de los certificados de trabajo y el de remuneración y servicios y
+            copia de los mismos, o consignados judicialmente.
+     -      Constancia de percepción de todas las indemnizaciones previstas en la legislación laboral vigente, convenio
+            colectivo de trabajo y seguros.
+     -      Declaración de incapacidad por la ART o Médico Laboral.
+                                                     FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+         PINHEIRO, JORGELINA                                                                       BLANCO, MYRIAM ELIZABETH
+                                                         MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                   Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                               CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+     © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+     esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                  18 / 35
+                                                         Instructivo para el Registro y Control de
+                                                                   Personal Contratado
+Tipo: ESPECIFICACIÓN                       Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+
+NOTA: Respecto a la entrega de certificados de trabajo y remuneración y servicio, si no fuera posible obtener la firma
+del empleado existen las siguientes alternativas:
+    -      Para casos de desvinculación conflictiva, será obligatorio presentar acuse de recibo de dicha certificación o el
+           rechazo por parte del empleado. Deberán estar consignados judicialmente.
+    -      Para todos los demás casos de desvinculación, se presentará copia de los certificados de trabajo y
+           remuneración y servicio, junto con la carta documento al empleado indicando que los mismos se encuentran
+           a disposición.
+
+5.5.2.2 Documentación de baja del PERSONAL INDEPENDIENTE
+Nota en carácter de DDJJ firmada entre el apoderado de la Contratista y el personal independiente, indicando la
+fecha de finalización de la subcontratación y que no existe deuda entre las partes Vehículos y Equipos especiales
+
+
+5.6 Vehículos, Motos y Equipos Especiales
+
+5.6.1 Gestión en el Sistema de Recursos Contratados
+
+5.6.1.1 Actualización de Vehículos y Equipos
+Las empresas Contratistas deberán cargar en el SRC las fichas completas con los datos de los vehículos, motos y
+equipos propios y de sus subcontratistas.
+Es importante dar de alta previamente los seguros asociados a los recursos con el fin de tenerlos disponibles al
+completar las fichas.
+
+5.6.1.2 Afectación de Vehículos y Equipos
+Las empresas Contratistas deberán vincular en el SRC los vehículos, motos y/o equipos propios y de sus
+subcontratistas con el contrato para ser utilizados en la ejecución del mismo (Afectación de Vehículos y Equipos).
+Para el caso de desafectación y/o bajas de vehículos, motos y equipos, deben informarse en el SRC en el momento
+que se producen.
+
+5.6.1.3 Aplicación de Vehículos y Equipos
+Mensualmente, deberán declarar en el SRC desde el primer día hasta el tercer día hábil del mes los vehículos, motos
+y equipos propios y de sus subcontratistas que fueron efectivamente utilizados en el contrato en cuestión (Aplicación
+de Vehículos/Equipos).
+
+
+
+
+                                                    FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+        PINHEIRO, JORGELINA                                                                       BLANCO, MYRIAM ELIZABETH
+                                                        MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 19 / 35
+                                                         Instructivo para el Registro y Control de
+                                                                   Personal Contratado
+Tipo: ESPECIFICACIÓN                       Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+5.6.2 Documentación respaldatoria
+
+5.6.2.1 Documentación de Alta de Vehículos
+a) TÍTULO DE PROPIEDAD o contrato de alquiler de los vehículos a ingresar.
+b) VTV, deberán presentar certificado de Verificación Técnica Vehicular vigente. Emitida por una entidad nacional.
+   No se aceptará VTV provinciales y/o emitidas por entidades privadas.
+c) PÓLIZA DE SEGURO DE RESPONSABILIDAD CIVIL de Vehículos (Ver apartado SEGUROS).
+d) COMPROBANTE DE LIBRE DEUDA Y/O COMPROBANTE DE PAGO del seguro del vehículo.
+e) DDJJ EQUIPO CONTROL DE MANEJO Se solicitara en los vehículos que van a trabajar para YPF que los
+   mismos posean Instrumento de Control de Manejo el cual indique:
+    Km recorridos
+    Infracciones Cometidas
+    Conducta de Manejo de la persona
+La Declaración Jurada deberá estar firmada por representante legal y Responsable de Seguridad de la Contratista.
+(Ver Formulario 18 – DDJJ Sistema de Manejo).
+
+Adicionalmente para TRANSPORTE DE PERSONAL:
+    -      Certificado de inscripción en el Registro Nacional de Transporte por Automotor de Pasajeros de Carácter
+           Urbano y Suburbano.
+Adicionalmente para REMISES:
+    -      Habilitación de la agencia otorgada por la municipalidad que corresponda a su ámbito de servicio.
+Adicionalmente para TRANSPORTE DE CARGA GENERALES Y PELIGROSAS:
+    -      Habilitación de transporte de Carga (RUTA).
+
+5.6.2.2 Documentación de alta de Motos
+a) TÍTULO DE PROPIEDAD o cédula verde.
+b) VTV, deberán presentar certificado de Verificación Técnica Vehicular vigente. Emitida por una entidad nacional.
+   No se aceptará VTV provinciales y/o emitidas por entidades privadas.
+c) PÓLIZA DE SEGURO DE RESPONSABILIDAD CIVIL para motos (Ver apartado SEGUROS).
+d) COMPROBANTE DE LIBRE DEUDA Y/O COMPROBANTE DE PAGO.
+
+
+
+5.6.2.3 Documentación de alta de Equipos
+a) TÍTULO DE PROPIEDAD o contrato de alquiler de aquellos equipos especiales que se autopropulsen. Para
+   equipos estáticos podrán presentar el boleto de compra-venta.
+                                                    FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+        PINHEIRO, JORGELINA                                                                       BLANCO, MYRIAM ELIZABETH
+                                                        MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 20 / 35
+                                                          Instructivo para el Registro y Control de
+                                                                    Personal Contratado
+Tipo: ESPECIFICACIÓN                        Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                        YPF PRIVADA
+
+
+b) Para el caso de Equipos, deberán presentar la habilitación de equipos especiales (Grúas, excavadoras, palas
+   mecánicas y otros) deben estar expedida por Organismo de Certificación/Auditores acreditados en los términos
+   del mecanismo previsto en el Decreto 1474/94 ("Sistema nacional de normas, calidad y certificación")
+
+c) PÓLIZA DE SEGURO DE RESPONSABILIDAD CIVIL de Equipos (Ver apartado SEGUROS).
+d) POLIZA DE SEGURO TECNICO de Equipos (Ver apartado Seguros)
+e) COMPROBANTE DE LIBRE DEUDA Y/O COMPROBANTE DE PAGO del seguro del equipo.
+
+
+NOTA: Toda aquella documentación con vencimiento deberá presentarse ante el Estudio Auditor 72 hs antes del
+mismo, para la renovación de las habilitaciones de los recursos.
+
+
+
+5.7 Seguros
+
+5.7.1 Consideraciones generales
+
+No se aceptarán, bajo ninguna circunstancia certificados de cobertura, y toda otra documentación, expedida y
+firmada por productores asesores directos o brokers de seguros que no cuenten con el correspondiente aval de las
+compañías aseguradoras. En el caso excepcional de no contar con el comprobante de pago del seguro, será
+obligatorio presentar el certificado de cobertura original o certificado por escribano.
+Esto es válido para todos los seguros aquí tratados (ART, Vida Obligatorio y Accidentes Personales).
+Las pólizas contendrán como mínimo los siguientes datos, sin perjuicio de los requeridos en función del riesgo
+cubierto:
+a) Membrete de la aseguradora
+b) Número de póliza y endosos
+c) Fecha de emisión
+d) Vigencia inicial y final
+e) Nombre y domicilio del asegurado y/o tomador consignado en la póliza
+f)   Datos del bien o persona asegurada
+g) Riesgos cubiertos
+h) Suma asegurada
+i)   Premio total (excepto en los seguros de vida)
+j)   Firmada por persona debidamente habilitada por la aseguradora
+k) Clausulas generales y particulares
+                                                     FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+      PINHEIRO, JORGELINA                                                                          BLANCO, MYRIAM ELIZABETH
+                                                         MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                   Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                               CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+     © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+     esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                  21 / 35
+                                                         Instructivo para el Registro y Control de
+                                                                   Personal Contratado
+Tipo: ESPECIFICACIÓN                       Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+5.7.2 Personal en relación de dependencia
+
+Todo el Personal en relación de dependencia, deberá contar con la cobertura obligatoria de seguro de vida
+obligatorio (SVO) y seguro de Riesgos de Trabajo (ART).
+
+5.7.2.1 Seguro de Vida Obligatorio
+Según Decreto 1567/74. El Proveedor/Contratista deberá presentar las pólizas que acrediten el cumplimiento de las
+disposiciones sobre Seguro de Vida Obligatorio conforme a lo dispuesto por el Decreto 1567/74.
+Los requisitos a cumplir son los siguientes:
+•   Póliza de seguros y/o Certificado de cobertura.
+•   Nómina de Personal cubierto (mensualmente).
+
+5.7.2.2 Seguro de Riesgos del Trabajo (ART)
+Para el caso de la Aseguradora de Riesgos del Trabajo, el certificado deberá contener una cláusula de NO
+REPETICION en los siguientes términos: Seguro de Riesgos del Trabajo: El Proveedor/Contratista deberá dar
+cumplimiento a lo estipulado en la Ley N° 24.557 (Ley de Riesgos del Trabajo) y a las modificaciones que en el futuro
+pudieran afectar a la misma, como así también a lo expresado en el Decreto 84/96, y en la legislación aplicable
+respecto a seguridad e higiene en el trabajo, manteniendo indemne a YPF S.A. en todo momento, mediante una
+cláusula de no subrogación en sus contrataciones de ART en los siguientes términos:
+“... ART, renuncia en forma expresa a iniciar toda acción de repetición contra YPF S.A. y/o sus sociedades
+subsidiarias y/o vinculadas y/o participadas y/o accionistas y/o funcionarios y/o empleados y/u obreros y/o
+Contratistas y/o subcontratistas, bien sea con fundamento en el art. 39.5 de la Ley 24.557 o en cualquier otra norma
+jurídica, con motivo de las prestaciones en especie o dinerarias que se vea obligada a otorgar o abonar al personal
+dependiente o ex dependiente de ... (empresa Contratista)... alcanzados por la cobertura de la presente póliza, por
+accidentes de trabajo o enfermedades profesionales sufridos o contraídos por el hecho o en ocasión del trabajo o en
+el trayecto entre el domicilio del trabajador y el lugar de trabajo”.
+ART se obliga a comunicar a YPF S.A. o empresa del grupo en forma fehaciente, los incumplimientos a la póliza en
+que incurra el asegurado y especialmente la falta de pago en término de la misma, sea de manera total o parcial,
+dentro de los 10 días de verificado.
+La Contratista deberá exigir a sus subcontratistas el cumplimiento de la Ley 24.557 debiendo hacerse responsable
+ante la empresa del pago de las alícuotas correspondientes por parte de sus subcontratistas. El
+Proveedor/Contratista deberá exigir que las contrataciones de ART de sus subcontratistas contengan una cláusula
+idéntica a la transcripta mediante la cual su ART renuncia a efectuar reclamos contra la empresa YPF S.A. y/o sus
+funcionarios, empleados u obreros y empresas Contratistas.
+Cuando los trabajos sean realizados por personal con residencia en el extranjero, El Proveedor/ Contratista deberá
+presentar una cobertura que sea suficiente para cumplir con las Leyes del país de origen de estos empleados.
+Asimismo, y con relación a los casos de tratamiento de emergencia a nivel de primeros auxilios y Servicios de
+traslados que dispusiese..... YPF S.A. (y razón social de empresa del grupo) incluyendo la elección del prestador
+
+                                                    FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+      PINHEIRO, JORGELINA                                                                         BLANCO, MYRIAM ELIZABETH
+                                                        MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 22 / 35
+                                                         Instructivo para el Registro y Control de
+                                                                   Personal Contratado
+Tipo: ESPECIFICACIÓN                       Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+para la derivación del trabajador accidentado,........A.R.T. se obliga a mantener indemne a........ YPF S.A. (y razón
+social de empresa del grupo) respecto de cualquier reclamo fundado en la deficiente o tardía atención del siniestro,
+asumiendo íntegramente toda responsabilidad emergente de dicha atención y tratamiento médico, así como por la
+derivación primera, de un prestador no incluido en la nómina emergente del respectivo contrato de afiliación que
+hubiere celebrado con la Contratista.
+Riesgos especiales como ser: Trabajos a más de dos metros, uso de productos químicos, trabajo en ambientes
+confinados, etc., la póliza deberá indicar claramente la cobertura de los mismos.
+
+
+5.7.3 Personal independiente
+
+5.7.3.1 Seguro de Accidentes Personales
+La Contratista principal deberá contratar una póliza de Seguro de Accidentes Personales para todo el personal
+subcontratado que revista carácter de Independiente.
+Dicha póliza deberá contar como mínimo con:
+•   Cobertura en caso de muerte:                                                                                                $ 500.000
+•   Cobertura en caso de incapacidad total o parcial:                                                                           $ 500.000
+•   Contribución en los gastos médicos y/o farmacéuticos:                                                                       $ 50.000
+
+
+Los seguros deberán contener las siguientes cláusulas de endoso:
+
+          “Beneficiario de la póliza: YPF y razón social de la empresa del grupo, en caso de que la relación comercial
+           sea con la misma (cláusula excluyente).
+          “Esta póliza no podrá ser modificada ni anulada sin previo aviso o consentimiento por escrito de YPF S.A. (Y
+           empresa del grupo) Este impedimento implica la necesidad de presentar consentimiento por escrito de YPF
+           S.A. (Y empresa del grupo) incluso para pedir la baja de la cobertura de cada persona asegurada.”
+          Cláusula de Notificación de la falta de pago de la póliza.
+          En caso de necesidad de ingreso a yacimientos deberá constar la extensión de cobertura a campos
+           petrolíferos.
+          La póliza deberá tener cobertura las 24 hs.
+
+
+
+5.7.4 Seguros Motos, Vehículos y Equipos
+
+Para el uso de Vehículos alquilados se deberá establecer en la póliza la condición de Vehículo de alquiler sin chofer,
+con chofer o especiales, Transporte de pasajeros, Vehículo con GNC, etc.
+
+
+                                                    FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+      PINHEIRO, JORGELINA                                                                         BLANCO, MYRIAM ELIZABETH
+                                                        MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 23 / 35
+                                                         Instructivo para el Registro y Control de
+                                                                   Personal Contratado
+Tipo: ESPECIFICACIÓN                       Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+Se deberán cubrir daños a bienes de terceros y lesiones y/o muerte de terceros transportados y no transportados.
+Cubrirá lesiones y/o muertes de terceros y/o daños a cosas de terceros ocasionados con o por la utilización de
+vehículos por la Contratista y/o su Personal en el área o fuera de la misma, en la medida que estuviere relacionada
+con los trabajos que se realizan para YPF S.A.
+Deberán estar declarados los adicionales como ser: hidrogrúa montada, por cantidad de butacas para transporte de
+pasajeros, etc.
+
+5.7.4.1 Cláusulas que deben figurar en la póliza
+Cláusula para Campos Petrolíferos: Contrariamente a lo señalado en la cláusula N°.... limitación de la cobertura de
+Responsabilidad Civil hacia terceros transportados de vehículos automotores que ingresen a aeródromos,
+aeropuertos y campos petrolíferos queda entendido y convenido que la responsabilidad asumida por el asegurador
+por la cobertura de riesgo de responsabilidad civil hacia terceros, no podrá ser inferior a AR$1.000.000 por los
+siguientes acontecimientos, quedando en caso de corresponder, aplicando la regla prevista en el art. 111 de la ley de
+seguros:
+•   Lesiones corporales y/o muerte de terceras personas no transportadas
+•   Daños a cosas de terceras personas no transportadas
+Cláusula de Subrogación (CA.CO 13.1): Se hace constar que en caso de pagarse una indemnización por siniestros
+ocurridos, amparados por la cobertura de esta póliza, esta Aseguradora renuncia a ejercer sus derechos de
+subrogación contra YPF
+
+Cláusula de Asegurado (CA.CO 13.2):: Queda entendido y convenido que las personas físicas y/o jurídicas indicadas
+en el Frente de Póliza serán consideradas asegurados, por el plazo allí indicado, siempre y cuando el siniestro ocurra
+con motivo y en ocasión de la prestación de un servicio por parte del asegurado en favor de YPF
+
+Cláusula de Notificación (CACO 17.1): La presente póliza no podrá ser anulada, modificada o enmendada sin el
+previo conocimiento o consentimiento de YPF S.A.
+Cláusula de Transporte de Pasajeros (cuando corresponda): El vehículo amparado por la presente cobertura está
+destinado al transporte de pasajeros que abonen o no su pasaje, sujeto o no a un itinerario fijo.
+
+Para el caso de la máquinas viales, deberán contratar -adicional al del seguro automotor- uno de responsabilidad
+civil por la suma mínima de $ 1.000.000 (que cubra los daños que pueda producir a cosas o bienes de terceros en la
+ejecución de los trabajos).-, específico para este tipo de maquinarias, con más todos los requisitos establecidos para
+el resto de los vehículos.
+
+
+
+5.7.4.2 Coberturas:
+•   Para automóviles, camionetas, remolcados, motos, bicicletas con motor, casas rodantes, autos de alquiler sin
+    chofer, remolcados: AR$ 6.000.000.-
+                                                    FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+      PINHEIRO, JORGELINA                                                                         BLANCO, MYRIAM ELIZABETH
+                                                        MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 24 / 35
+                                                         Instructivo para el Registro y Control de
+                                                                   Personal Contratado
+Tipo: ESPECIFICACIÓN                       Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+•   Para taxis, remises, maquinaria rural, camiones, acoplados, servicios de urgencia, fuerza de seguridad, vehículos
+    para transporte de pasajeros M1: AR$ 18.000.000.-
+•   Para el caso de vehículos de transporte de pasajeros:
+           a) M2 (vehículo para transporte de pasajeros con más de OCHO (8) asientos excluyendo el asiento del
+              conductor, y que no exceda el peso máximo de CINCO MIL KILOGRAMOS (5.000 kg.) AR$ 30.000.000.-
+           b) M3 (vehículos para transporte de pasajeros con más de OCHO (8) asientos excluyendo el asiento del
+              conductor, y que tenga un peso mayor a los CINCO MIL KILOGRAMOS (5.000 kg.) AR$ 30.000.000.-
+
+
+De igual modo y cuando corresponda según el tipo de prestación que se contrate se deberá solicitar al
+Proveedor/Contratista la inclusión de las siguientes cláusulas de cobertura:
+• CA-RC 11.1 Cobertura de Daño Ambiental: el límite de indemnización no podrá ser inferior a AR$ 1.000.000 (un
+   millón de pesos argentinos) para estos casos.
+• CA-RC 12.2 Gastos de remediación: el límite de indemnización no podrá ser inferior a AR$ 1.000.000 (un millón
+   de pesos argentinos) para estos casos.
+• CA-RC 5.1 y 5.2 Limitación de la Cobertura de Responsabilidad Civil hacia Terceros Transportados y no
+   Transportados de Vehículos.
+• CA-RC 16.1 Cobertura por el transporte de combustibles. AR$ 18.000.000 (dieciocho millones de pesos
+   argentinos).
+• CA-RC 03.1 Carga notoriamente muy inflamable, explosiva y/o corrosiva AR$ 18.000.000 (dieciocho millones de
+   pesos argentinos).
+
+Otros Seguros: YPF podrá exigir la contratación de seguros adicionales cuando las características de la prestación
+de servicios así lo requieran.
+
+
+
+5.7.5 Seguro técnico de Equipos
+
+Los requisitos a cumplir son los siguientes:
+TIPO DE COBERTURA: daños parcial y/o total por accidente, incendio, robo y hurto del equipo y responsabilidad civil
+por lesiones y/o muerte. YPF S.A. no será responsable por los daños sufridos a los equipo.
+SUMA ASEGURADAS: Responsabilidad civil: límite de indemnización, máximo en conjunto y por acontecimiento,
+para los riesgos indicados en coberturas por $3.000.000.
+Por daños parcial y/o total por accidente, incendio, robo y hurto del equipo hasta el valor de reposición del equipo.
+
+
+
+
+                                                    FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+      PINHEIRO, JORGELINA                                                                         BLANCO, MYRIAM ELIZABETH
+                                                        MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 25 / 35
+                                                         Instructivo para el Registro y Control de
+                                                                   Personal Contratado
+Tipo: ESPECIFICACIÓN                       Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+5.7.5.1 Cláusulas que deben figurar en la póliza de Equipos
+Cláusula de Subrogación (CA.CO 13.1): Se deja constancia por la presente estipulación que la compañía renuncia a
+ejercer sus derechos de subrogación contra YPF S.A., y sus respectivos funcionarios, empleados y/u obreros y/o
+contra cualquier compañía subsidiaria o afiliadora, y/o cualesquiera otros y/o sus respectivos funcionarios, empleados
+y/u obreros afiliados con esta empresa.
+Cláusula de Asegurado (CA.CO 13.2): En caso que un tercero reclamare directa o indirectamente a YPF S.A. por un
+siniestro indemnizable por la presente cobertura, YPF S.A. será considerado como asegurado para esta póliza.
+Cláusula de Notificación (CA.CO 17.1): La presente póliza no podrá ser anulada, modificada o enmendada sin el
+previo conocimiento o consentimiento de YPF S.A.
+
+
+5.8 Salud Ocupacional
+
+5.8.1 Exámenes médicos
+
+Deberán presentar ante Servicio Médico de YPF el Formulario 7 - Declaración Jurada sobre EPAP, de los exámenes
+médicos pre ocupacionales y periódicos anuales, por cada empleado en relación de dependencia e independiente.
+Se indica en el Formulario 8 – Servicio Médico, las direcciones y contacto de los médicos de cada regional.
+Se detalla en el Formulario 9 - Modulo de exámenes protocolo Salud Ocupacional cuáles son los estudios médicos
+que deben realizarse los recursos según la tarea que realicen.
+Adicionalmente para trabajos en altura, conducción de vehículos y trabajo en espacios confinados, presentar el
+Formulario 10 – Examen neurológico T .Altura.
+IMPORTANTE: La documentación presentada en carácter de DD.JJ sobre exámenes médicos es exclusiva
+responsabilidad de la Empresa Contratista (Responsable Médico y Representante Legal).
+
+
+5.8.2 Vigencia
+
+El examen médico pre ocupacional tiene vigencia por un año, el cual deberá ser renovado por otro examen médico
+denominado “examen médico periódico”, también con vigencia anual.
+
+
+5.8.3 Bajas y/o desvinculaciones
+
+Los empleados que se desvinculen y luego sean reincorporados por la misma Empresa, deberán presentar una
+actualización clínica, preferentemente realizada por la Empresa Médica que les efectuó el examen; el mismo no
+modifica la fecha de vencimiento del examen original.
+Debido a directivas emanadas por la Subsecretaría de Trabajo y a Normas de la Ley de Riesgos del Trabajo, cuando
+el operario sea contratado por otra Empresa, se deberá realizar nuevamente los exámenes dado que los mismos no
+serán aceptados por los Organismos citados precedentemente.
+                                                    FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+      PINHEIRO, JORGELINA                                                                         BLANCO, MYRIAM ELIZABETH
+                                                        MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 26 / 35
+                                                         Instructivo para el Registro y Control de
+                                                                   Personal Contratado
+Tipo: ESPECIFICACIÓN                       Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+En los casos de bajas de Empleados la empresa Contratista deberá notificar al mismo, sobre la exigencia de que se
+realice el examen de egreso mediante la notificación modelo que se detalla a continuación:
+“Habiendo finalizado la relación laboral con fecha ___/___/___, se lo emplaza en el término de 48 horas – de recibida
+esta notificación - para que se presente ante el Centro Médico Laboral ___________________, sito en calle
+____________________ Nro. _________ de la Ciudad de _____________ en horario de ___:___ a __:___, a los
+efectos de que se le practique el examen médico pos-ocupacional, el no cumplimiento en los términos aludidos,
+liberará de toda responsabilidad a la firma empleadora de cualquier tipo de reclamo por contingencias establecidas
+en la Ley 24.557, queda Ud. debidamente notificado y emplazado”.
+IMPORTANTE: Las Empresas Contratistas deberán informar a sus Empleados que tienen la obligación de denunciar
+al Servicio Médico, según corresponda, todos los accidentes y/o siniestros que ocurran, sin importar la magnitud del
+mismo. En caso de producirse una baja médica, para reiniciar las actividades la Empresa debe presentar en el
+Servicio Medico el alta médica.
+
+
+5.8.4 Exámenes médicos preventivos
+
+Se informa a las Empresas Contratistas la obligación de comunicarle a su Personal lo siguiente: “YPF posee una
+norma de Prevención del Consumo de Sustancias Psicoactivas con Impacto en el Ámbito Laboral (Código 10095-NO-
+370900-000A) de carácter obligatorio para personal propio y contratado por la cual se le realiza a todo el personal
+evaluaciones médicas preventivas que incluyen un examen clínico y determinación de alcohol y drogas.” Evaluando
+de esta forma la aptitud laboral para el desarrollo de la tarea.
+Se podrán realizar auditorías al azar a los Empleados de las Empresas Contratistas a fin de verificar la información
+declarada en el SRC.
+
+
+5.9 Sanciones por Incumplimiento
+En primera instancia, la no presentación de documentación crítica vigente, impedirá el ingreso del personal de la
+Contratista a las instalaciones y dependencias de YPF S.A o empresas del grupo.
+Adicionalmente, de acuerdo a lo definido en los procedimientos de la compañía, ante un incumplimiento en la
+presentación de la documentación exigible definida en el presente instructivo, se aplicarán las siguientes retenciones:
+
+
+                       PERIODO DE INCUMPLIMIENTO % DE RETENCIÓN SOBRE LA BASE DE CERTIFICACIONES
+                                  1er mes                              3%
+                            A partir del 2do mes                       5%
+
+La base de certificaciones sobre la cual se aplican las retenciones es el promedio de los tres últimos periodos de
+certificaciones que tuvo el contrato al momento de generarse la retención.
+
+
+
+
+                                                    FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+      PINHEIRO, JORGELINA                                                                         BLANCO, MYRIAM ELIZABETH
+                                                        MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 27 / 35
+                                                         Instructivo para el Registro y Control de
+                                                                   Personal Contratado
+Tipo: ESPECIFICACIÓN                       Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+Estas retenciones serán aplicadas automáticamente a través del SRC y serán informadas tanto a la Contratista como
+al Inspector a través de correos electrónicos automáticos, y a través del módulo de OS/PE del SRC para aquellos
+contratos que lo tengan habilitado.
+La empresa Contratista deberá presentar junto al certificado, la factura y la nota de crédito correspondiente por el
+monto informado en la orden de servicio mencionada anteriormente. De no cumplir con estos requisitos, la factura no
+podrá ser presentada.
+En el caso que la empresa Contratista subsane los incumplimientos, el SRC levantará las retenciones aplicadas
+automáticamente y notificará a la Contratista y al Inspector a través de los mismos medios mencionados en el párrafo
+anterior.
+La Contratista deberá presentar una nota de débito para recuperar el monto retenido.
+En caso que la Contratista subsane los incumplimientos antes de haber presentado la nota de crédito, el SRC
+anulará las retenciones automáticamente.
+Si la Contratista continua con incumplimientos luego del segundo mes de retención, el Inspector deberá establecer en
+conjunto con RyCPC un Plan de regularización para su correcto seguimiento y control.
+Si el riesgo lo amerita RyCPC podrá incrementar el porcentaje a retener.
+
+
+
+5.10 Empresas Promovidas
+
+5.10.1 Definición
+
+Se denominará “Promovida” únicamente a la empresa Contratista que cumpla con lo especificado en el presente
+documento y mientras no infrinja las condiciones que determinan su inclusión. Dicha denominación no otorgará
+mayores beneficios que los aquí mencionados.
+
+
+5.10.2 Promoción
+
+Podrá solicitar por nota firmada por el representante legal que se considere para ser Promovida aquella empresa
+Contratista que cumpla con las siguientes condiciones:
+
+a) Haber sido calificadas favorablemente en SRC por 12 meses consecutivos en todos los contratos auditables y
+vigentes.
+b) No haber tenido retenciones ni multas por incumplimientos en el período anteriormente mencionado, en ninguno
+de los contratos.
+
+El sector de RyCPC deberá verificar dentro de un plazo de 5 días hábiles que la empresa cumpla con ambas
+condiciones. En caso afirmativo, el Jefe de RyCPC correspondiente comunicará formalmente a la empresa
+
+
+                                                    FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+      PINHEIRO, JORGELINA                                                                         BLANCO, MYRIAM ELIZABETH
+                                                        MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 28 / 35
+                                                         Instructivo para el Registro y Control de
+                                                                   Personal Contratado
+Tipo: ESPECIFICACIÓN                       Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+Contratista su incorporación al régimen de empresas promovidas y esta clasificación quedará plasmada en el SRC.
+Esta comunicación podrá ser realizada por nota o correo electrónico.
+YPF se reserva el derecho de revocar este beneficio si el riesgo asociado así lo amerita, así como también de
+solicitar en cualquier momento otra documentación que considere necesaria y presuponga un riesgo para YPF. Esta
+revocación también será comunicada formalmente por el responsable regional de RyCPC y se cambiará esta
+condición en el SRC.
+
+
+
+5.10.3 Control previo al inicio de las actividades de Empresas Promovidas
+
+Ante cada nuevo contrato y/o con cada nueva afectación de personal, se realizarán los controles previstos en el
+presente apartado. Por ser considerada una Empresa Promovida, con una antelación de 72 horas hábiles previas al
+inicio de las actividades, según lo determine RyCPC deberán presentar en físico la documentación establecida en el
+punto 5.2. del presente instructivo.
+
+
+5.10.4 Control trimestral de Empresas Promovidas
+
+Las empresas que hayan sido notificadas como Empresa Promovida, deberán presentar la documentación mensual
+requerida en el presente instructivo únicamente en los períodos de Febrero, Mayo, Agosto y Noviembre. YPF
+mantiene el derecho de solicitar documentación correspondiente a los meses no contemplados anteriormente.
+Las presentaciones deberán realizarse antes del día 20 del mes inmediato posterior (Por ejemplo: para la
+documentación correspondiente al mes de Febrero la fecha límite de presentación será el 20 de Marzo). En el caso
+de que exista algún faltante de documentación, las empresas promovidas tendrán, la posibilidad de hacer una única
+entrega adicional, debiendo haber cumplido con el 100% de la documentación antes de que se cumpla un mes de la
+presentación original.
+A diferencia de la documentación de alta o nuevo contrato, dicha documentación deberá presentarse
+obligatoriamente de manera física en el Estudio Auditor, con la leyenda en cada copia de “ES COPIA FIEL DEL
+ORIGINAL” y de acuerdo las formalidades del presente instructivo.
+
+
+5.10.5 Aplicación de recursos en el SRC
+Las Empresas Promovidas deben informar mensualmente el “Personal Aplicado” y “Vehículos/Equipos Aplicados”,
+en el SRC de acuerdo al cronograma previsto para tal fin; es decir, que hasta el tercer día hábil de cada mes la
+empresa deberá informar los recursos que trabajaron efectivamente en el mes anterior y antes del 8 de cada mes la
+empresa procurará que el inspector haya validado la información declarada.
+
+
+
+
+                                                    FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+      PINHEIRO, JORGELINA                                                                         BLANCO, MYRIAM ELIZABETH
+                                                        MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 29 / 35
+                                                         Instructivo para el Registro y Control de
+                                                                   Personal Contratado
+Tipo: ESPECIFICACIÓN                       Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+5.10.6 Control por finalización de actividades de Empresas Promovidas
+
+Las empresas promovidas deberán declarar en el sistema SRC el personal propio y de sus subcontratistas que dejen
+de estar a disposición del servicio objeto del contrato (Desafectación de personal) y la causa de la desafectación.
+La documentación respaldatoria de las Bajas y/o desafectaciones realizadas, deberá presentarse en el momento en
+el que ocurran, de acuerdo al punto 5.4 del presente instructivo.
+
+
+5.10.7 Pérdida de la Promoción
+
+Toda empresa promovida será excluida del presente régimen en el caso de que se cumpla alguno de los siguientes
+supuestos:
+   a) Resultado de auditoria desfavorable con documentación incompleta en alguno de los contratos del SRC.
+   b) Presentación fuera de término de la documentación mensual y/o adicional.
+La exclusión de régimen será notificada por RyCPC, mediando un preaviso de regularización con un plazo de 10 días
+hábiles para actualizar lo adeudado. Ante la no reversión se comunicara formalmente el encuadre automático en el
+régimen general a partir del siguiente mes de notificado.
+RyCPC se reserva el derecho de excluir unilateralmente de este beneficio a la empresa que fuera clasificada como
+Promovida.
+
+
+5.10.8 Reingreso a Empresas Promovidas
+
+Aquellas empresas Contratistas que hayan sido promovidas y que posteriormente perdieran por primera vez dicha
+condición, podrán volver a ingresar en este régimen cumpliendo con los requisitos expresados en el punto 5.9.2. pero
+únicamente durante 6 meses consecutivos.
+En el caso de volver a perder la condición, tendrá las mismas consideraciones que una empresa que nunca haya
+sido promovida.
+
+
+
+
+6 Indicadores, registros y riesgos del proceso
+
+6.1 Indicadores
+  Indicador
+                                   Fórmula                           Frecuencia                        Responsable                        Cliente Interno                                  Registro
+    (KPI)
+ N/A
+
+
+
+                                                    FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+       PINHEIRO, JORGELINA                                                                        BLANCO, MYRIAM ELIZABETH
+                                                        MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 30 / 35
+                                                         Instructivo para el Registro y Control de
+                                                                   Personal Contratado
+Tipo: ESPECIFICACIÓN                       Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+6.2 Registros
+                                          Responsable                       Responsable                        Frecuencia de                              Disposición y                           Tiempo de
+          Registro
+                                           del registro                      del archivo                     registro / archivo                            protección                              archivo
+ N/A
+
+
+6.3 Riesgos y acciones mitigantes
+          Código                                           Riesgo                                                              Origen                                         Controles mitigantes
+ N/A
+
+
+
+7 Anexos y referencias
+
+7.1 Anexos
+   N°                                                                                                       Nombre
+    I         Requisitos Complejo Industrial Lujan de Cuyo
+    II        Requisitos Complejo Industrial La Plata
+   III        Requisitos YPF GAS
+   IV         Requisitos A-EVANGELISTA S.A.
+    V         Requisitos Y-TEC
+   VI         Manual de instrucción del SRC
+   VII        Formulario 0 – Contactos de Estudios Controlantes
+  VIII        Formulario 1 – Checklist Entrega
+   IX         Formulario 2 – DDJJ de apertura de cuenta corriente bancaria
+    X         Formulario 3 – DDJJ Firma autorizada
+   XI         Formulario 4 – DDJJ de trabajadores independientes
+   XII        Formulario 5 – DDJJ Comunicación de subcontratación
+  XIII        Formulario 6 – DDJJ de Bajas / Desafectaciones
+  XIV         Formulario 7 – DDJJ sobre EPAP
+   XV         Formulario 8 – Servicio Médico
+
+                                                    FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+         PINHEIRO, JORGELINA                                                                      BLANCO, MYRIAM ELIZABETH
+                                                        MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 31 / 35
+                                                         Instructivo para el Registro y Control de
+                                                                   Personal Contratado
+Tipo: ESPECIFICACIÓN                       Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+  XVI         Formulario 9 – Módulo de exámenes protocolo Salud Ocuapcional
+  XVII        Formulario 10 – Examen neurológico T. Altura y otros.
+ XVIII        Formulario 11 – CILP Solicitud de credencial
+  IXX         Formulario 12 – CILP Baja de credencial
+   XX         Formulario 13 – CILP Habilitación de vehículo contratista
+  XXI         Formulario 14 – CILP Formulario de inspección de vehículo
+  XXII        Formulario 15 – CILP Solicitud de credencial colgante
+ XXIII        Formulario 16 – CILC Planilla de solicitud de ingreso de vehículos
+ XXIV         Formulario 17 – CILC Exigencias de seguridad contratista
+ XXV          Formulario 18 – DDJJ Sistema de Manejo
+ XXVI         Formulario 19 – DDJJ Vigiladores
+ XXVII        Formulario 20 – DDJJ Copia Fiel
+
+
+Para visualizar los Anexos:
+- ingresar a la sección “Anexos online” en la aplicación SGN (menú a la izquierda cuando se ingresa al link “INICIO
+   SGN”) y buscar por nombre del documento,
+- o bien ingresar al menú que se despliega en el “Código de Normativa” en la aplicación SGN, seleccionar “ver
+   Propiedades” y al pie en sección “Anexos de la Normativa” hacer clic en el link correspondiente.
+
+
+7.2 Normativa relacionada
+    Categoría                                                                           Título                                                                                        Código
+ Normativa                                                                                                                                                       10208-PR-31080300-000A
+                                Procedimiento Registrar y controlar personal contratado
+ Interna YPF
+                                Ley de Contrato de Trabajo
+                                Art. 29 (Interposición y Mediación - Solidaridad)
+                                Art. 29 BIS (Empresas de Servicios Eventuales - Solidaridad)
+                                Art. 30 (Subcontratación y Delegación - Solidaridad)
+ Normativa
+                                Art. 80 (Obligaciones Sindicales y de Seguridad Social)                                                                          Ley 20.744
+ Externa
+                                Art. 124 y siguientes (Medios de Pago)
+                                Art. 138 y siguientes (Recibos de Sueldos)
+                                Art. 240 y siguientes (Extinción del Contrato)
+                                Art. 256 y siguientes (Plazos de Prescripción)
+ Normativa                      Instructivo para el Registro y Control de Personal Contratado                                                                    10436-ES-31080300-000A
+
+                                                    FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+      PINHEIRO, JORGELINA                                                                         BLANCO, MYRIAM ELIZABETH
+                                                        MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 32 / 35
+                                                         Instructivo para el Registro y Control de
+                                                                   Personal Contratado
+Tipo: ESPECIFICACIÓN                       Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+   Categoría                                                                            Título                                                                              Código
+ Derogada                                                                                                                                                        Original 0.0
+ Otras
+                                N/A
+ referencias
+
+
+7.3 Definiciones y abreviaturas
+       Término                        Abreviatura                                                                                 Descripción
+ AFIP                                                              Administración Federal de Ingresos Públicos
+ ART                                                               Aseguradora de Riesgo de Trabajo
+ CCT                                                               Convenio Colectivo de Trabajo
+ CMASS                                                             Calidad, Medio Ambiente, Seguridad y Salud
+ CNRT                                                              Comisión Nacional de Regulación del Transporte
+ DDJJ                                                              Declaración Jurada
+ IERIC                                                             Instituto de Estadística y Registro de la Industria de la Construcción
+ METySS                                                            Ministerio de Trabajo, Empleo y Seguridad Social
+ OAA                                                               Organismo Argentino de Acreditación
+ RECURSOS                                                          Comprende al personal, vehículos y equipos
+ RUTA                                                              Registro Único del Transporte Automotor
+ RYCPC                                                             Registro y Control de Personal Contratos
+ SICOSS                                                            Sistema de Cálculo de las Obligaciones de la Seguridad Social
+ SRC                                                               Sistema de Recursos Contratados
+ SVO                                                               Seguro de Vida Obligatorio
+ YPF                                                               Incluye a sus sociedades subsidiarias y/o vinculadas y/o participadas
+
+
+8 Aprobación
+
+8.1 Vigencia
+Esta normativa entrará en vigencia a partir de la fecha de su publicación en el cuerpo normativo de YPF.
+
+
+                                                    FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+      PINHEIRO, JORGELINA                                                                         BLANCO, MYRIAM ELIZABETH
+                                                        MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 33 / 35
+                                                         Instructivo para el Registro y Control de
+                                                                   Personal Contratado
+Tipo: ESPECIFICACIÓN                       Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+Los abajo firmantes asumen la responsabilidad de implantar, controlar el cumplimiento y actualizar el presente
+documento cada vez que fuera necesario.
+
+
+8.2 Disposiciones generales y transitorias
+La vigencia de la presente sustituye cualquier directriz o criterio anterior fijado en otros documentos de aplicación.
+
+
+8.3 Historial
+     Estado                      № Revisión                    Fecha Aprobación                                                                   Observaciones
+ Original                       0.0                            26/06/2015
+
+ Revisión                                                      Ver fecha en pie de
+                                1.0                                                                       Actualización de anexos III - IV y formularios 1 y 5.
+                                                               firmas
+                                                                                                          Objeto: se actualiza y amplía su descripción.
+                                                                                                          Consideraciones Principales: se actualiza la definición de
+                                                                                                          Contratos auditables y se incluye Controles Especiales y
+                                                                                                          No Auditables.
+                                                                                                          Proceso: en SRC se incluye el proceso de alta de usuario,
+                                                                                                          un nuevo formulario de DDJJ Firma Autorizada, se
+                                                                                                          incluyen los motivos de rechazos de las presentaciones,
+                                                                                                          se incluye el Anexo de Y-TEC. En afectaciones se
+                                                                                                          incluyen definición del personal a registrar, motivos de
+                                                                                                          afectación, tipos relaciones con el servicio y circuito de
+                                                                                                          afectación. La documentación respaldatoria se divide en
+                                                                                                          Empresa/Personal/Vehículos. Se elimina el formulario
+                                                               Ver fecha en pie de                        DDJJ Centro Médico Asistencial. Se incluye una DDJJ
+ Revisión                       2.0
+                                                               firmas                                     para vigiladores. Se incluye requisitos para Empresas
+                                                                                                          Servicios Eventuales. En Auditoria Mensual se incluye el
+                                                                                                          proceso del aplicado personal permanente y contratos sin
+                                                                                                          Actividad. En el proceso de auditoria mensual se incluye
+                                                                                                          la forma de visualizar el resultado. Se incluye el control de
+                                                                                                          Motos y DDJJ Sistema de Manejo. Se actualizan los
+                                                                                                          valores de seguros de Responsabilidad Civil Automotor y
+                                                                                                          clausulas especiales.
+                                                                                                          Salud Ocupacional: se actualizaron los formularios 7, 8, y
+                                                                                                          9.
+                                                                                                          Sanciones por incumplimiento: se actualizó el proceso en
+                                                                                                          base a las retenciones automáticas.
+                                                                                                          Empresas promovidas: se incluye la definición, control y
+                                                    FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+      PINHEIRO, JORGELINA                                                                         BLANCO, MYRIAM ELIZABETH
+                                                        MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 34 / 35
+                                                         Instructivo para el Registro y Control de
+                                                                   Personal Contratado
+Tipo: ESPECIFICACIÓN                       Ámbito: YPF - Argentina (incluye controladas)                                                                     Código: 10436-ES-31100100-000A
+
+Proceso: Gestión de las Personas->Controlar Personal Tercerizado->Registrar y Controlar
+                                                                                        Revisión: 2.0
+Personal Contratado
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+       Estado                    № Revisión                    Fecha Aprobación                                                                   Observaciones
+                                                                                                          proceso.
+                                                                                                          Anexos: Actualización de anexos I, II, III, IV, VI,
+                                                                                                          formularios 0, 1, 7, 8, 9, 11. Formularios reemplazados 3
+                                                                                                          y 12. Nuevos: formularios 18, 19 y Anexo V.
+
+
+8.4 Aprobación colegiada
+ N/A
+
+
+8.5 Categoría de Clasificación del Activo de Información
+YPF – Privada.
+
+
+
+
+                                                    FERNANDEZ LEON, JULIO                                                                               PEREZ MARTIN, SILVIA                         21/06/2018
+       PINHEIRO, JORGELINA                                                                        BLANCO, MYRIAM ELIZABETH
+                                                        MAXIMILIANO                                                                                           RAQUEL                                05:32:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 35 / 35
+

@@ -1,0 +1,1736 @@
+                                                       #Título                     C0100 Recipientes a Presión
+#Tipo                                                   Especificación            #Código                  ES__-0001033
+#Fecha de Vigencia                                      27/11/2023                #Versión                 2.0
+#Activo de la información                               YPF - Privada
+#Proceso                                                21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                        Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                        Desarrollar Ingeniería
+
+
+
+
+1 Índice
+Contenido
+1      ÍNDICE ............................................................................................................................................ 1
+2      OBJETO .......................................................................................................................................... 3
+3      ÁMBITO DE APLICACIÓN ............................................................................................................ 4
+4      CONSIDERACIONES PRINCIPALES ........................................................................................... 4
+5      ESPECIFICACIÓN “C0100 RECIPIENTES A PRESIÓN”............................................................ 4
+    5.1    DISEÑO MECÁNICO .................................................................................................................... 4
+      5.1.1    Condiciones de diseño .................................................................................................... 4
+      5.1.2    Tensiones de diseño ........................................................................................................ 6
+      5.1.3    Espesores requeridos ...................................................................................................... 7
+      5.1.4    Sobreespesor de corrosión.............................................................................................. 8
+      5.1.5    Eficiencia de soldadura.................................................................................................... 9
+      5.1.6    Presiones de pruebas hidrostáticas ................................................................................ 9
+      5.1.7    Diseño por acciones de viento y sismo ......................................................................... 10
+      5.1.8    Envolventes, cabezales y secciones cónicas ............................................................... 10
+      5.1.9    Conexiones .................................................................................................................... 10
+      5.1.10 Conexiones para Instrumentación ................................................................................. 11
+      5.1.11 Conexiones para acceso e inspección .......................................................................... 12
+      5.1.12 Soportes y polleras ........................................................................................................ 13
+      5.1.13 Accesorios...................................................................................................................... 14
+    5.2    MATERIALES ........................................................................................................................... 14
+      5.2.1    Generalidades ................................................................................................................ 14
+      5.2.2    Certificados de materiales ............................................................................................. 16
+      5.2.3    Ensayos de impacto....................................................................................................... 16
+      5.2.4    Chapas ........................................................................................................................... 16
+      5.2.5    Caños y accesorios de cañerias.................................................................................... 16
+      5.2.6    Bridas y elementos forjados .......................................................................................... 17
+      5.2.7    Juntas............................................................................................................................. 17
+      5.2.8    Espárragos y tuercas ..................................................................................................... 18
+    5.3    REQUERIMIENTOS TÉCNICOS DE FABRICACIÓN ........................................................................ 18
+      5.3.1    Generalidades ................................................................................................................ 18
+      5.3.2    Disposición y conformado de chapas............................................................................ 18
+      5.3.3    Conexiones .................................................................................................................... 19
+      5.3.4    Elementos internos ........................................................................................................ 19
+      5.3.5    Requisitos generales de soldadura ............................................................................... 19
+      5.3.6    Apretado de espárragos ................................................................................................ 20
+
+
+     COPIA NO CONTROLADA
+     [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  1 / 31
+                                                       #Título                     C0100 Recipientes a Presión
+#Tipo                                                   Especificación            #Código                  ES__-0001033
+#Fecha de Vigencia                                      27/11/2023                #Versión                 2.0
+#Activo de la información                               YPF - Privada
+#Proceso                                                21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                        Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                        Desarrollar Ingeniería
+
+
+      5.3.7    Tolerancias..................................................................................................................... 20
+      5.3.8    Acabado de superficies internas de recipientes............................................................ 21
+      5.3.9    Requisitos de calidad, inspecciones y ensayos ............................................................ 22
+      5.3.10 Reparaciones ................................................................................................................. 22
+    5.4    CONDICIONES PARTICULARES PARA RECIPIENTES TRABAJANDO EN SERVICIOS CICLICOS ......... 22
+      5.4.1    Campo de aplicación ..................................................................................................... 22
+      5.4.2    Condiciones particulares de diseño y fabricación. ........................................................ 22
+    5.5    PLACA DE CARACTERISTICAS................................................................................................... 23
+      5.5.1    Generalidades ................................................................................................................ 23
+    5.6    PINTADO, MARCADO, PREPARACIÓN PARA ENVÍO Y TRANSPORTE ............................................. 23
+      5.6.1    Pintado ........................................................................................................................... 23
+      5.6.2    Marcado ......................................................................................................................... 23
+      5.6.3    Preparación para envío y transporte ............................................................................. 24
+    5.7    DOCUMENTACIÓN A PRESENTAR POR EL FABRICANTE .............................................................. 24
+      5.7.1    Documentos de diseño .................................................................................................. 24
+      5.7.2    Documentos de fabricación ........................................................................................... 24
+      5.7.3    Aprobación de documentos ........................................................................................... 24
+6      ROLES, INDICADORES, REGISTROS Y RIESGOS DEL PROCESO ...................................... 24
+    6.1          ROLES .................................................................................................................................... 24
+    6.2          INDICADORES .......................................................................................................................... 24
+    6.3          REGISTROS ............................................................................................................................. 25
+    6.4          RIESGOS Y ACCIONES MITIGANTES .......................................................................................... 25
+    6.5          REGLAS DE NEGOCIO .............................................................................................................. 25
+7      ANEXOS Y REFERENCIAS ......................................................................................................... 25
+    7.1    ANEXOS .................................................................................................................................. 25
+      7.1.1    Anexos Especiales......................................................................................................... 25
+      7.1.2    Otros anexos .................................................................................................................. 25
+    7.2    NORMATIVA RELACIONADA ...................................................................................................... 26
+    7.3    DEFINICIONES Y ABREVIATURAS .............................................................................................. 29
+8      APROBACIÓN .............................................................................................................................. 30
+    8.1          VIGENCIA ................................................................................................................................ 30
+    8.2          HISTORIAL............................................................................................................................... 30
+    8.3          FLUJO DE APROBACIÓN ........................................................................................................... 30
+9      ANEXOS ....................................................................................................................................... 31
+    9.1          ANEXO I - PLANO DE PLACA CARACTERÍSTICA DE RECIPIENTES ................................................ 31
+    9.2          ANEXO II - CCPP - LISTADO DE DOCUMENTOS LLI UP_230929. ............................................. 31
+    9.3          ANEXO III - HOJA DE DATOS DE RECIPIENTES A PRESIÓN. ....................................................... 31
+
+
+
+
+     COPIA NO CONTROLADA
+     [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  2 / 31
+                                                       #Título                     C0100 Recipientes a Presión
+    #Tipo                                               Especificación            #Código                  ES__-0001033
+    #Fecha de Vigencia                                  27/11/2023                #Versión                 2.0
+    #Activo de la información                           YPF - Privada
+    #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                        Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                        Desarrollar Ingeniería
+
+
+2 Objeto
+Esta Especificación de Diseño (ED) y sus Adendas establecen los requisitos mínimos obligatorios
+para el diseño, selección de materiales, fabricación, inspección, ensayos, pruebas, y
+acondicionamiento para transporte de los Recipientes metálicos a presión no sometidos a fuego
+directo correspondiente a Instalaciones de Superficie (E&P) de YPF. Se consideran incluidas en esta
+Especificación, las carcasas, los distribuidores de los intercambiadores de calor de casco - tubos, así
+como cabezales de los aeroenfriadores. No se consideran incluidas en esta Especificación las
+esferas de almacenamiento, que son objeto de otra Especificación.
+El presente documento forma parte de la última edición de las especificaciones técnicas de YPF, y
+hace referencia, asimismo, a la última edición de las Normas y Códigos que son mencionados y / o
+aplicables, así como a lo indicado en el documento “Datos Básicos de Diseño” (DBD) que recoge los
+aspectos particulares para cada proyecto.
+Por lo general, los recipientes a presión objeto de esta Especificación serán diseñados y construidos
+de acuerdo con el Código ASME sección VIII División I, si bien recipientes particulares lo serán de
+acuerdo con otros Códigos tales como:
+⁻     Calderas de vapor: ASME I.
+⁻     Grandes recipientes: ASME sección VIII División 2 ó AD-Merkblätter, requiriéndose en este caso
+      previamente la autorización por escrito de YPF.
+⁻     Recipientes trabajando en servicios cíclicos de presión-temperatura: ASME sección VIII División
+      2.
+No será requerida estampa ASME salvo en casos particulares en que expresamente así se solicite
+y bajo previa aprobación de YPF.
+Las citas que aparecen a lo largo de esta especificación y que hacen referencia a párrafos concretos
+de un código que no sea el propio de cálculo aplicado, serán de obligado cumplimiento, a menos que
+entren en contradicción con el de cálculo.
+Los recipientes objeto de esta Especificación deben cumplir, además, con los requisitos de diseño
+impuestos por las diferentes normativas oficiales existentes en el lugar de instalación (Resolución
+120-E/2017 - Reglamento Técnico de Transporte de Hidrocarburos Liquidos por cañerias).
+Esta Especificación, junto con la Hoja de Datos y/o los planos de ingeniería del equipo, forma parte
+de la Requisición de Materiales. En caso de discrepancia entre los documentos incluidos en dicha
+Requisición prevalecerá el siguiente orden de prioridad:
+⁻     Legislación aplicable (siempre y cuando en las Hojas de Datos, en la Requisición o en esta
+      especificación no se establezcan criterios más restrictivos que los en ella fijados) .
+⁻     Hoja de Datos
+
+
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  3 / 31
+                                                       #Título                     C0100 Recipientes a Presión
+    #Tipo                                               Especificación            #Código                  ES__-0001033
+    #Fecha de Vigencia                                  27/11/2023                #Versión                 2.0
+    #Activo de la información                           YPF - Privada
+    #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                        Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                        Desarrollar Ingeniería
+
+
+⁻     Requisición de Materiales
+⁻     Esta Especificación.
+Las excepciones, variaciones o adiciones que supongan cualquier cambio en dichos documentos
+deberán ser comunicados por escrito a YPF y aceptados por ésta.
+El cumplimiento de las reglas y recomendaciones dadas en esta Especificación no exime ni parcial
+ni totalmente al Fabricante del recipiente de sus responsabilidades y garantías contractuales.
+
+
+3 Ámbito de aplicación
+YPF SA – Upstream – Argentina.
+
+
+4 Consideraciones principales
+Las unidades de medida son las del Sistema Métrico Internacional (SI), si bien para conexiones se
+pueden utilizar pulgadas para el diámetro y libras para el rating. Asimismo, se admitirán presiones
+en kg/cm2.
+En cada caso que sea aplicable, se debe cumplir las prescripciones y/o recomendaciones de los
+documentos citados en el apartado 7.2 de esta Especificación. Cuando en las condiciones
+contractuales de compra no se especifique la fecha de su edición se debe aplicar obligatoriamente
+la última vigente en la fecha del pedido. Además de las listadas en el punto, son aplicables las que
+se citen en las condiciones contractuales de compra de los equipos.
+
+
+5 Especificación “C0100 Recipientes a Presión”
+
+5.1 Diseño mecánico
+
+5.1.1 Condiciones de diseño
+En todos los casos YPF establece las condiciones de diseño. A menos que se especifique lo
+contrario, los recipientes sometidos a presión interna deben ser diseñados para una presión igual a
+la máxima presión esperada de operación, incrementada como mínimo en el valor que resulte mayor
+de los dos siguientes:
+              · 10% de dicha presión.
+              · 1,75 kg/cm2
+
+
+
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  4 / 31
+                                                       #Título                     C0100 Recipientes a Presión
+    #Tipo                                               Especificación            #Código                  ES__-0001033
+    #Fecha de Vigencia                                  27/11/2023                #Versión                 2.0
+    #Activo de la información                           YPF - Privada
+    #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                        Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                        Desarrollar Ingeniería
+
+
+Salvo que se indique lo contrario, los recipientes sometidos a vacío se diseñarán a vacío total. Los
+recipientes sometidos a vacío (Presión externa) durante operación normal, puesta en marcha,
+parada, regeneración, etc. se diseñarán a vacío total equivalente a 1,054 kg/cm 2 exterior.
+Para todo recipiente sometido a presión interna, el Fabricante además de los cálculos justificativos,
+debe aportar los correspondientes al vacío que es capaz de resistir e indicar este dato en el plano.
+En recipientes con camisas para fluidos de calefacción o refrigeración, la Ingeniería o Diseñador, de
+acuerdo con las condiciones de diseño y operación de cada una de las camisas o partes a presión
+del recipiente, debe realizar los cálculos del mismo teniendo en cuenta todos los esfuerzos
+combinados, sobre la base de todas ellas.
+Los recipientes a presión se deben diseñar a una temperatura de diseño, la cual se obtendrá de
+incrementar como mínimo en un 10 % la temperatura máxima de operación, pero en ningún caso el
+incremento debe ser inferior a 25 ºC.
+La temperatura mínima de diseño de metal (MDMT) será igual a la requerida por el Código ASME
+VIII, Div 1, párrafo UG-20 (b) considerando además la mínima temperatura de operación esperada
+para el servicio del recipiente.
+Excepto para el caso de recipientes con aislamiento térmico interior, se tomará como temperatura
+del metal la misma temperatura que la del fluido que contenga el recipiente.
+Cuando en un recipiente se puedan establecer zonas perfectamente delimitadas que operen a
+diferentes temperaturas, cada zona debe ser diseñada basándose en su respectiva temperatura de
+diseño.
+La estabilidad de los recipientes verticales y su soportación debe calcularse bajo las siguientes
+condiciones:
+⁻     Montaje: recipiente completo con aislación, plataformas, escaleras, cañerías conectadas, todos
+      los internos soldados, con la carga total de viento, presión atmosférica y temperatura ambiente y
+      cualquier carga transitoria que pueda producirse durante el montaje del equipo. Los internos
+      desmontables no se considerarán.
+⁻     Operación: recipiente completo con plataformas, escaleras, cañerías conectadas, aislación, con
+      todos los internos, con líquido a nivel de operación, a presión o vacío, a temperatura de diseño y
+      sometido a la carga completa del viento de diseño o del sismo (la que resulte mayor de las dos).
+⁻     Parada: igual que en condiciones de operación, excepto sin presión y sin nivel de líquido en el
+      recipiente y a temperatura de diseño.
+⁻     Prueba hidráulica de equipos nuevos y pruebas periódicas: recipiente lleno de agua incluyendo
+      los pesos de todos los accesorios e internos instalados previamente a la prueba, plataformas,
+      escaleras, aislación, a presión de prueba y temperatura ambiente más 50% de la carga de viento
+      (no se considera sismo durante la prueba hidráulica).
+
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  5 / 31
+                                                       #Título                     C0100 Recipientes a Presión
+    #Tipo                                               Especificación            #Código                  ES__-0001033
+    #Fecha de Vigencia                                  27/11/2023                #Versión                 2.0
+    #Activo de la información                           YPF - Privada
+    #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                        Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                        Desarrollar Ingeniería
+
+
+La estabilidad de los recipientes horizontales y las tensiones inducidas en la envolvente por las cunas
+soporte se comprobarán bajo las siguientes condiciones:
+⁻     Operación: recipiente completo con todos los accesorios a la presión y temperatura de diseño,
+      con nivel de líquido máximo de operación y con carga completa de viento o sismo (la que resulte
+      mayor de las dos).
+⁻     Sin presurización: comprobar la estabilidad en las mismas condiciones que en operación, pero
+      con el recipiente sin presurizar.
+⁻     Prueba hidráulica de equipos nuevos y pruebas periódicas: recipiente lleno de agua incluyendo
+      todos los accesorios a presión de prueba y temperatura ambiente más 50% de la carga de viento
+      (no se considera sismo durante la prueba hidráulica).
+Las tensiones inducidas por los soportes en la envolvente de equipos horizontales se revisarán de
+acuerdo con los códigos aplicables.
+⁻     En los cálculos de estabilidad no se debe considerar los espesores de cladding ni de
+      recubrimientos por depósito de soldadura overlay.
+El espesor añadido como espesor de corrosión, no se considerará en los cálculos de estabilidad bajo
+las siguientes condiciones:
+                      •       Funcionamiento en operación
+                      •       Parada
+                      •       Pruebas hidráulicas periódicas
+El sobreespesor de corrosión debe ser considerado únicamente en los cálculos de estabilidad en
+condiciones de prueba hidráulica de equipo nuevo.
+Se deben realizar los cálculos necesarios para comprobar la estabilidad del equipo y sus elementos
+de maniobra (orejas de izaje) frente a las cargas y tensiones indicadas durante el transporte e izaje
+del equipo.
+
+5.1.2 Tensiones de diseño
+Las tensiones longitudinales y circunferenciales a que se ven sometidas las barreras de presión, tales
+como la envolvente, los cabezales y las conexiones, como consecuencia de la presión interna (o
+vacío) y las cargas externas incluido el empuje de las cañerías conectadas al recipiente, no excederá
+la máxima tensión admisible para la temperatura de diseño que especifique el Código aplicado para
+el material seleccionado.
+Las tensiones de los componentes externos no sometidos a presión, tales como faldones, patas y
+cunas, así como otros componentes estructurales, no debe exceder la máxima tensión admisible que
+se especifica en el Código ASME sección VIII.
+
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  6 / 31
+                                                     #Título                     C0100 Recipientes a Presión
+ #Tipo                                                Especificación            #Código                  ES__-0001033
+ #Fecha de Vigencia                                   27/11/2023                #Versión                 2.0
+ #Activo de la información                            YPF - Privada
+ #Proceso                                             21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                      Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                      Desarrollar Ingeniería
+
+
+Deberá estudiarse el efecto de cargas mecánicas primarias externas más la presión de diseño. Las
+tensiones combinadas resultantes no excederán el límite establecido por el Código ASME sección
+VIII.
+El efecto de la tensión secundaria, debida a expansión diferencial, se estudiará de acuerdo con el
+Código ASME sección VIII Div. 2.
+
+5.1.3 Espesores requeridos
+Con independencia del espesor calculado, el espesor mínimo resistente total de la envolvente y
+fondos de cualquier recipiente, en función de su diámetro exterior, se indica en la siguiente tabla.
+
+                                          Tabla 5.1.3-I: Espesor mínimo de envolvente y cabezales
+      Espesor                                                                  Diámetro exterior del recipiente, D (mm)
+      mínimo
+       t (mm)                                                 de ≥ 1000                      de ≥ 1500                      de ≥ 2000                     de ≥ 2500
+                                      < 1000                                                                                                                                                ≥ 3000
+       (1 ) y (2)                                             a < 1500                       a < 2000                       a < 2500                      a < 3000
+                                                                                                                                                                                        0,00225*D
+  Resistente (3)                            3                           4                             5                              6                              7
+                                                                                                                                                                                        (mínimo 7)
+       Total
+   (resistente +                                                                                                                                                                        0,00267*D
+  sobreespesor                              5                           6                             7                              8                            10                     (mínimo
+        de                                                                                                                                                                                 10)
+   corrosión)(4)
+
+
+El espesor del cuello de las conexiones bridadas de acero al carbono y aleado de los recipientes a
+presión, estarán de acuerdo a lo requerido en el Código ASME sección VIII (la división que aplique).
+Además, todas las conexiones con diámetros menores a 3”, tendrán, como mínimo, un espesor
+correspondiente a un SCH 160.
+El espesor mínimo de los anillos base de equipos verticales soportados por faldones no debe ser
+inferior a 19 mm, salvo aprobación de YPF o su Representante.
+
+
+
+
+1 El espesor mínimo de la envolvente y fondos de cualquier recipiente debe ser el mayor de los dos siguientes: a) Resistente de la tabla +
+sobreespesor de corrosión fijado para el recipiente. B) Total de la tabla.
+2 En recipientes ondulados o reforzados el mínimo espesor de pared de la carcasa debe ser el calculado, pero nunca inferior a 5 mm.
+3 El espesor mínimo resistente se entiende al calculado para las condiciones de diseño antes de incrementarlo con las correspondientes
+
+tolerancias admisibles de fabricación de componentes, y sin incluir el sobreespesor por corrosión.
+4 El espesor mínimo total se entiende como el espesor final una vez construido el recipiente.
+
+
+
+
+    COPIA NO CONTROLADA
+    [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                          o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                7 / 31
+                                                       #Título                     C0100 Recipientes a Presión
+    #Tipo                                               Especificación            #Código                  ES__-0001033
+    #Fecha de Vigencia                                  27/11/2023                #Versión                 2.0
+    #Activo de la información                           YPF - Privada
+    #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                        Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                        Desarrollar Ingeniería
+
+
+5.1.4 Sobreespesor de corrosión
+A no ser que se especifique lo contrario en la Hoja de Datos del equipo, al espesor de pared calculado
+en base a las condiciones de diseño se le debe adicionar como mínimo el sobreespesor de corrosión
+que se indica en la Tabla 5.1.4-I.
+Cuando, para resistir la corrosión, se dote al recipiente de un recubrimiento interior metálico tipo
+cladding, el espesor mínimo de dicho recubrimiento será 3 mm, salvo que se especifique lo contrario.
+Cuando el recubrimiento a que se hace referencia en el punto anterior sea depositado por soldadura,
+tipo overlay, el espesor mínimo de la parte de recubrimiento no afectada por fenómenos de dilución
+mutuos entre éste y el material base que recubre, será 3 mm, debiéndose determinar en la
+calificación del procedimiento de soldadura el espesor total necesario de dicho recubrimiento.
+No está admitida la utilización de revestimientos distintos de los tipos “cladding” u “overlay”, salvo
+aprobación expresa de YPF de acuerdo con lo indicado en la adenda C0106 “Recipientes con
+revestimiento interior metálico”.
+A no ser que se especifique lo contrario, en los recipientes con compartimientos interiores el
+sobreespesor de corrosión deberá adicionarse a ambos lados del tabique separador.
+Las partes internas no sometidas a presión y soldadas al recipiente irán provistas de sobreespesor
+de corrosión en un 100% (en cada lado) según lo requerido en la Tabla 5.1.4-I. En aquellas partes
+internas sometidas a presión se aplicará el valor total de sobreespesor de corrosión en ambos lados.
+A no ser que se especifique otra cosa, el espesor mínimo total debe ser de 10 mm para acero al
+carbono y 6 mm para acero carbono inoxidable.
+
+                                                    Table 5.1.4-I: Sobreespesor de corrosión mínimo.
+                 Material del Recipiente                                                Referencia                     Sobreespesor de corrosión mínimo (mm)
+                      Aceros al carbono                                                          (5)                                                  4 – 3,2 – 1,6
+                 Aceros de alta aleación                                                      (6) (7)                                                             0
+                   Materiales no férreos                                                           -                                                            0,5
+ Recipientes con recubrimiento interior        (8)                         1,6
+Salvo indicación en contrario, si en la entrada al recipiente se espera una erosión acelerada en la
+zona de incidencia de la vena fluida, debe colocarse una chapa de desgaste de 10 mm de espesor
+mínimo y de la misma calidad que la carcasa del recipiente que cubra completamente dicha zona, o
+diseñarse un sistema para mitigar este problema.
+
+
+5 Comprende cualquier tipo de acero al carbono, incluso los aceros al carbono-manganeso y los aceros al carbono microaleados.
+6Comprende los inoxidables de cualquier tipo.
+7Cuando el material se haya seleccionado por motivos de contaminación del fluido, el sobreespesor de corrosión será 0 mm.
+8Se refiere a recubrimientos, tanto metálicos como no metálicos, resistentes al medio corrosivo en las condiciones de operación, y siempre
+que impidan el contacto del medio con el material resistente que recubra.
+
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  8 / 31
+                                                    #Título                     C0100 Recipientes a Presión
+ #Tipo                                               Especificación            #Código                  ES__-0001033
+ #Fecha de Vigencia                                  27/11/2023                #Versión                 2.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                     Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                     Desarrollar Ingeniería
+
+
+5.1.5 Eficiencia de soldadura
+Todos los recipientes a presión se deben diseñar considerando como mínimo una eficiencia de
+soldadura de 0.85 (radiografiado por puntos).
+Para el cálculo de estabilidad, la eficacia de la soldadura a considerar entre la unión del cabezal
+inferior y la pollera soporte será de 0.55 y para la unión del faldón al anillo de anclaje será 0.7.
+
+5.1.6 Presiones de pruebas hidrostáticas
+Todo recipiente debe diseñarse para resistir las presiones de las pruebas hidrostáticas que a
+continuación se citan:
+a) Prueba en el taller del Fabricante, la cual se realizará con el recipiente en la posición de
+   fabricación, y de acuerdo con el Código ASME sección VIII División 1 y con la reglamentación
+   local existente al respecto, excepto que el valor de la presión sea el que se indica en los párrafos
+   siguientes como presión de prueba inicial.
+b) Prueba inicial en el lugar de instalación, la cual se realizará con el recipiente en su posición de
+   operación y de acuerdo con ASME sección VIII División 1 y con la reglamentación oficial excepto
+   que el valor de la presión será el que se indica en los párrafos siguientes, como presión de prueba
+   inicial.
+c) Pruebas periódicas de acuerdo con la reglamentación oficial existente en el lugar de instalación.
+El valor de la presión de prueba hidráulica inicial se determina de acuerdo con la siguiente fórmula:
+                                                                                                                          𝑆ℎ
+                                                                              𝑃ℎ = 1,3 · 𝑀𝐴𝑊𝑃 ·
+                                                                                                                          𝑆𝑑
+Donde:
+Ph = Presión de prueba hidráulica inicial.
+MAWP = Máxima presión admisible de trabajo.
+Sh = Tensión máxima admisible a la temperatura de prueba.
+Sd = Tensión máxima admisible a la temperatura de diseño.
+Teniendo en cuenta las limitaciones siguientes:
+Sh/Sd : En los casos en que en el recipiente se puedan diferenciar distintas secciones, debido a
+diferentes temperaturas de diseño ó a distintos materiales resistentes, para este cociente se tomará
+el de la sección que de un valor más bajo.
+El valor de la presión de prueba de recipientes sometidos a vacío será el que se defina en el manual
+de diseño.
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               9 / 31
+                                                       #Título                     C0100 Recipientes a Presión
+    #Tipo                                               Especificación            #Código                  ES__-0001033
+    #Fecha de Vigencia                                  27/11/2023                #Versión                 2.0
+    #Activo de la información                           YPF - Privada
+    #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                        Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                        Desarrollar Ingeniería
+
+
+5.1.7 Diseño por acciones de viento y sismo
+Se debe cumplimentar los requerimientos mínimos según lo establecido por las normas CIRSOC 102
+y 103 respectivamente. Las cargas de viento y sismo no actuarán simultáneamente.
+En todas las condiciones, para determinar el peso se considerará el equipo no corroído y se incluirá
+el revestimiento interior metálico.
+En la comprobación de la estabilidad bajo todas las condiciones, debe incluirse para los equipos
+verticales las patas, los espárragos de anclaje y los anillos de base.
+Para determinar la superficie expuesta al viento debe asumirse los siguientes parámetros:
+⁻     Diámetro exterior del equipo incluyendo la aislación.
+⁻     Diámetro exterior, con aislación incluida, de las líneas de cañerías vinculadas.
+⁻     Tipo de superficie de los equipos
+⁻     Plataformas de 4 m2 (considerar al menos una plataforma por boca de hombre más una en la
+      parte superior).
+⁻     Escalera vertical de 0.4 m2 por m. (si no está definida, considerar como mínimo una longitud igual
+      a la longitud entre líneas de tangencia del cabezal inferior al cabezal superior).
+En los recipientes verticales con un ratio H/D mayor que 15, para asegurar la estabilidad estructural,
+se efectuará un análisis de vibraciones por vórtices de viento (vortex shedding), siendo:
+⁻     H es la altura del recipiente desde el soporte de la base hasta la parte superior en línea tangente
+⁻     D es el diámetro medio en el tercio superior del recipiente.
+En las columnas con bandejas, la máxima deflexión permitida no será mayor a 1/200 de la altura
+total.
+
+5.1.8 Envolventes, cabezales y secciones cónicas
+En los recipientes deben utilizarse normalmente cabezales semielípticos 2:1. Otros tipos de
+cabezales (semiesféricos, cónicos, etc.) se podrán utilizar cuando lo requieran las condiciones de
+proceso y sean aprobados por YPF.
+
+5.1.9 Conexiones
+Todas las conexiones de proceso deben ser bridadas. El uso de otro tipo de conexiones estará sujeto
+a la aprobación previa de YPF.
+A menos que se indique lo contrario, las bridas para las conexiones de 2" y mayores deben ser con
+cuello para soldar (WN).
+
+
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               10 / 31
+                                                    #Título                     C0100 Recipientes a Presión
+ #Tipo                                               Especificación            #Código                  ES__-0001033
+ #Fecha de Vigencia                                  27/11/2023                #Versión                 2.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                     Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                     Desarrollar Ingeniería
+
+
+Se admitirán bridas deslizantes (slip-on) en los recipientes de acero al carbono si se dan
+simultáneamente las siguientes condiciones y previa aprobación por escrito de YPF:
+a) La temperatura de diseño es inferior a 230ºC.
+b) El rango de las bridas es 150 libras (excepto en las bridas de conexiones para acceso e
+   inspección, las cuales podrán incluirse las bridas de hasta 300 libras inclusive)
+c) El recipiente no es para un servicio especial, según los indicados en la Especificación B0400
+   Requerimientos y limitaciones de materiales para servicios especiales.
+d) El recipiente no es para baja temperatura, ni para servicio cíclico de presión – temperatura.
+e) El recipiente no requiere radiografiado 100% (RT-1).
+Las bridas de las conexiones estarán de acuerdo con la norma ASME B16.5 para tamaños hasta 24”
+inclusive, y con ASME B16.47 serie B para tamaños superiores.
+Los ejes principales de las bridas de las conexiones deben pasar por los puntos medios de las
+distancias entre agujeros adyacentes (a horcajadas).
+Las chapas de refuerzo de clips y conexiones, y en general piezas anexas en la zona exterior de los
+recipientes que queden selladas por costuras de soldadura, tendrán un agujero roscado de 1/8”
+NPT(agujero testigo de venteo o prueba).
+Las conexiones de salida en cabezal inferior de recipientes verticales o separadores deben llevar
+rompevórtices.
+
+5.1.10 Conexiones para Instrumentación
+En el desarrollo de la Ingeniería Básica se deben definir las conexiones de instrumentación que
+requiere el equipo, así mismo se debe indicar el diámetro, rating y cualquier requerimiento especial
+de ubicación. El fabricante del recipiente debe verificar la consistencia de la conexión con la
+información de la documentación de ingeniería y debe definir la ubicación exacta considerando las
+recomendaciones e instrucciones de instalación del instrumento a suministrarse.
+Las conexiones de válvulas de seguridad deben tener un diámetro nominal igual o mayor que la
+válvula. Este valor debe figurar en la hoja de datos. Se deben considerar los requerimientos de la
+especificación ES__-0002230 “J1800 Válvulas de seguridad y Discos de Ruptura” y sus referencias.
+La instalación de los instrumentos de medición y/o transmisión de temperatura debe estar de acuerdo
+a la especificación ES__-0001979 “J0500 Medida de Temperatura (Parte General)” y sus referencias.
+Los instrumentos de medida y/o transmisión de presión pueden colocarse en todo el contorno del
+recipiente. Se recomienda colocarlos lo más alto posible sobre el nivel del líquido. Se deben
+considerar los requerimientos de la especificación ES__-0002156 “J0300 Medida de Presión (Parte
+General)” y sus referencias.
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            11 / 31
+                                                    #Título                     C0100 Recipientes a Presión
+ #Tipo                                               Especificación            #Código                  ES__-0001033
+ #Fecha de Vigencia                                  27/11/2023                #Versión                 2.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                     Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                     Desarrollar Ingeniería
+
+
+Los indicadores y/o transmisores de nivel deben situarse de forma que, en caso de que exista una
+corriente de líquido o gas, esta no pueda perturbar la indicación del nivel. No debe situarse dentro
+de la zona del cono de proyección de la cañería de entrada (30° alrededor del eje de la conexión a
+partir del centro del recipiente) ya que la entrada del líquido podría influir en la medición. Se deben
+considerar los requerimientos de la especificación ES__-0002171 “J0400 Medida de Nivel (Parte
+General)” y sus referencias.
+Todos los instrumentos deben estar de acuerdo a los requisitos de la especificación
+ES__-0001960 “J0100 Ingeniería de Instrumentación” y sus referencias; y deben instalarse de
+acuerdo a la especificación ES__-0002222 “J1700 Montaje de instrumentos”.
+Los criterios de accesibilidad de los instrumentos se establecen en la especificación
+ES__-0001971 “L0100 Diseño de Cañerías en Instalaciones de Superficie”.
+Si el suministro del recipiente forma parte de un módulo o equipo paquete, el fabricante debe
+suministrar e instalar todos los instrumentos, sus soportes, conexionado, y accesorios incluidos en
+el alcance de la provisión y aquellos necesarios para el correcto funcionamiento del equipo. Los
+mismos deben estar de acuerdo a las especificaciones de Instrumentación de YPF, planos estándar,
+documentos contractuales, etc.
+
+5.1.11 Conexiones para acceso e inspección
+En todo recipiente se deben preveer accesos o entradas de hombre en la envolvente ó cabezales de
+tal forma de permitir realizar todos los trabajos de montaje o desmontaje de internos, revestimiento
+interior y mantenimiento del mismo.
+Las columnas deben tener, por lo menos, una entrada de hombre en la zona inferior de la envolvente
+y otra en la superior, y también en la zona de vaporización instantánea (flash zone) y en la de cada
+plato extractor.
+Las conexiones para entrada de hombre tendrán un diámetro nominal (DN) de 20” como mínimo. En
+los recipientes en los que pueda ser necesario utilizar un andamiaje interno con objeto de realizar
+tareas de inspección y reparación, el diámetro nominal (DN) de las conexiones para entrada del
+material será de 24”. A no ser que se especifique otra cosa, las tapas de estas conexiones deben
+estar provistas de bisagras o pescante para facilitar su apertura.
+Todas las bridas de las conexiones para acceso e inspección, así como las de los extremos de
+recipientes pueden ser slip-on si se cumplen los requisitos mencionados en el punto 5.1.9. de la
+presente especificación. Las dimensiones estarán de acuerdo con la norma ASME B16.5 para
+tamaños de hasta 24" inclusive, y con ASME B 16.47 serie B, para tamaños superiores.
+Para recipientes de grandes dimensiones, se deben soldar barrotes para peldaños y asideros, en el
+interior de la envolvente del recipiente, próximos a las entradas de hombre para facilitar el acceso.
+Para facilitar el acceso a la zona inferior de una columna también debe instalarse una escalera de
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            12 / 31
+                                                    #Título                     C0100 Recipientes a Presión
+ #Tipo                                               Especificación            #Código                  ES__-0001033
+ #Fecha de Vigencia                                  27/11/2023                #Versión                 2.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                     Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                     Desarrollar Ingeniería
+
+
+mano hecha con barrotes; asimismo, en columnas con elementos internos sólo en la zona superior
+debe instalarse dicha escalera para permitir el acceso al lado opuesto del elemento interno.
+Cuando se especifique un sobreespesor de corrosión mayor a 3mm, el Fabricante debe verificar el
+espesor de las bridas ciegas estándar.
+Cuando así se especifique, los recipientes de diámetro interior igual o inferior a 1 m deberán tener
+bridado uno de los extremos, el cual estará dotado de cáncamos para izaje. En equipos donde no
+sea requerido un cabezal bridado, deberá incluirse una conexión de inspección o pasamano de
+diámetro 8" mínimo.
+
+5.1.12 Soportes y polleras
+Los recipientes verticales se deben soportar normalmente mediante polleras o mediante patas para
+casos particulares. Cualquier sistema de soportación deberá ser sometido a la aprobación de YPF.
+Las polleras se diseñarán para que su unión, tanto a la parte inferior del recipiente como al anillo
+base, se realice con soldadura continua.
+Las polleras deben estar provistas de aberturas para ventilación y de aberturas para acceso. En
+todos los casos las aberturas serán con anillos de refuerzo. Asimismo, se requieren aberturas para
+las conexiones del fondo inferior del recipiente
+El soporte (pollera) de las torres con relación altura /diámetro L/D ≥ 20, se diseñará de forma cónica
+para obtener mayor diámetro en el anillo base. El ángulo del cono con respecto al plano vertical no
+será mayor de 8 grados.
+Los recipientes horizontales se soportarán normalmente mediante cunas de acero y serán calculados
+por el método de Zick.
+Las placas de enlace entre la envolvente o cabezales y los elementos de soportación deben ser del
+mismo material que la envolvente del recipiente.
+Para una temperatura de diseño inferior a –29 ºC, la pollera, cunas soporte, patas y silletas deben
+ser del mismo material que la envolvente del recipiente.
+Salvo Especificación contraria por parte de YPF, las cunas o silletas soporte de recipientes que
+operan a una temperatura por debajo de los –10 ºC, deben ir provistos con oportunas piezas aislantes
+para prevenir el contacto directo con las cimentaciones.
+El diámetro superior exterior de la pollera del recipiente debe coincidir con el diámetro exterior de la
+envolvente del recipiente.
+El diseño del sistema de las cunas de soportación deberá incluir las previsiones adecuadas para
+permitir el movimiento térmico previsto en los cálculos (perforado de agujeros oblongos en las cunas
+móviles). El valor del movimiento térmico se indicará en el plano.
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            13 / 31
+                                                    #Título                     C0100 Recipientes a Presión
+ #Tipo                                               Especificación            #Código                  ES__-0001033
+ #Fecha de Vigencia                                  27/11/2023                #Versión                 2.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                     Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                     Desarrollar Ingeniería
+
+
+5.1.13 Accesorios
+Salvo que se especifique lo contrario, los recipientes irán provistos de anillo de soporte de bandejas,
+rigidizadores contra vacío, orejas de izaje o muñones, clips para escaleras y plataformas y soportes
+de cañerías. Todos los recipientes verticales deberán dotarse de orejas de izaje para elevación,
+siendo necesaria la aprobación de YPF sobre su localización y diseño. También irán provistos de
+soportes de aislamiento.
+Con objeto de minimizar la corrosión bajo aislamiento, las soldaduras de elementos exteriores, tales
+como soportes, perfiles, etc. deben ser continuas y dichos elementos deben de disponer de agujeros
+para drenaje, a fin de evitar acumulación de agua que provoque posterior corrosión. La Ingeniería
+debe asegurar que dichas soldaduras no provocan concentración de tensiones u otros esfuerzos,
+debiendo, en su caso, darles la flexibilidad adecuada.
+Las chapas de refuerzo tendrán los cantos redondeados a un radio no menor a 5 mm y dispondrán
+de un agujero de venteo roscado a 1/8 “ NPT.
+Los recipientes verticales deben ir provistos de orejas de izaje o muñones y orejas de retención para
+facilitar el izaje y manipuleo durante el transporte y montaje en planta.
+Los muñones u orejas de elevación y de retención serán diseñados con soldadura de penetración
+total, verificada con Líquidos penetrantes, para soportar el peso del equipo en elevación
+considerando un factor de de seguridad de acuerdo a la legislación vigente a presentar a YPF. Para
+el cálculo de los accesorios para izaje soldados al recipiente se recomienda utilizar un factor de
+impacto de 1.5.
+Cualquier recipiente debe suministrarse con dos tomas de tierra. Las tomas deberán instalarse en
+las cunas, polleras, o patas del recipiente.
+Todos los elementos externos directamente soldados a la envolvente deben ser del mismo material
+que el recipiente, salvo que la Ingeniería o Diseñador indique lo contrario.
+Para equipos en acero inoxidable, los elementos externos podrán ser en acero al carbono, siempre
+que se suelden a una placa exterior (refuerzo) del mismo material que el recipiente soldada
+previamente al mismo.
+
+
+5.2 Materiales
+5.2.1 Generalidades
+La calidad de los acopios de materiales deberá cumplir con lo requerido en la Especificación B0200
+“Aseguramiento y Control de Calidad de Equipos Estáticos y Dinámicos”.
+Los materiales de construcción de las partes de los recipientes sometidas a presión interna o externa
+deben estar de acuerdo con las especificaciones de la sección II del Código ASME con las
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            14 / 31
+                                                    #Título                     C0100 Recipientes a Presión
+ #Tipo                                               Especificación            #Código                  ES__-0001033
+ #Fecha de Vigencia                                  27/11/2023                #Versión                 2.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                     Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                     Desarrollar Ingeniería
+
+
+limitaciones que se indican en los párrafos que siguen. Dichos materiales deberán tener los datos de
+identificación originales del fabricante que se indiquen en las propias especificaciones del material.
+El contenido máximo de carbono o carbono equivalente de los aceros al carbono, microaleados o al
+Cr-Mo que han de soldarse, no será en ningún caso superior a los valores indicados en la
+Especificación B0500 “Requisitos generales de soldadura dentro de planta”.
+Las condiciones de diseño deben ser las indicadas por YPF, pero el Fabricante deberá advertir a sus
+sub-Proveedores de dichas condiciones, así como de los tratamientos térmicos que vaya a realizar
+en taller.
+El Fabricante debe garantizar siempre que los materiales de los recipientes terminados conservan
+las propiedades especificadas en la Norma de dichos materiales y tendrá en cuenta otras condiciones
+de los mismos, como son:
+a) Riesgo de fractura frágil durante la prueba hidráulica y /o puesta en servicio.
+b) Fisuración por Hidrógeno en la zona térmicamente afectada debida a la templabilidad del material
+   base.
+c) Limitaciones de dureza en la zona térmicamente afectada.
+d) Riesgo de desgarre laminar.
+Para equipos en los que sea necesario realizar tratamientos térmicos durante su fabricación, el
+Fabricante solicitará probetas con tratamientos térmicos simulados para garantizar los valores
+mínimos de las características mecánicas requeridas por la Norma correspondiente.
+El Fabricante enviará a YPF, en fase de oferta o previamente a la adjudicación de pedido, la relación
+concreta de sus posibles suministradores, reservándose YPF la posibilidad de vetar cualquier
+Proveedor que no cumpla con las garantías necesarias o que no esté homologado por ella.
+Programa de inspección de materiales:
+El Fabricante lo enviará a YPF o su Representante, con antelación suficiente para permitir
+comentarios o aprobación, y deberá contener:
+a) Programa de Puntos de Inspección (PPI), en origen, de componentes tales como chapas, fondos,
+   piezas forjadas especiales.
+b) Una vez que los PPI´s sean aprobados por YPF o su Representante, el Fabricante los convertirá
+   en documentos contractuales de sus pedidos de acopio.
+Los inspectores de YPF o sus Representantes tienen autorización para rechazar cualquier material
+que no se halla sometido a un programa de inspección, debidamente cumplimentado y aprobado por
+YPF.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            15 / 31
+                                                    #Título                     C0100 Recipientes a Presión
+ #Tipo                                               Especificación            #Código                  ES__-0001033
+ #Fecha de Vigencia                                  27/11/2023                #Versión                 2.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                     Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                     Desarrollar Ingeniería
+
+
+5.2.2 Certificados de materiales
+Todos los materiales que vayan a estar sometidos a presión deben ser adquiridos con certificados
+EN-10204 3.1.C, cuando el espesor del recipiente sea igual o mayor a 32 mm. Serán avalados por
+una Entidad de Inspección propuesta por el Fabricante o Suministrador y aceptada por YPF. El resto
+de materiales será acopiado con certificados EN-10204 3.1.B.
+Cuando un Suministrador de materiales de almacén presente piezas marcadas de acuerdo con
+certificados de origen, con resultados correctos, pero no completos por falta de algún ensayo no
+contemplado inicialmente, podrá completarlos empleando los servicios de una Entidad de Inspección
+Independiente y aceptada por YPF.
+Los materiales que se encuentren en almacenes y que no posean sellos de identificación con
+garantía de su traceabilidad, no pueden ser usados en ningún caso.
+
+5.2.3 Ensayos de impacto
+Todos los materiales a emplear en la construcción de los recipientes se deben acopiar con ensayos
+de impacto cuando así sea requerido por el Código ASME sección VIII, Div 1, párrafo UG-84.
+Para las chapas se tomarán probetas Charpy-V, transversales a la dirección de laminación, siendo
+su entalla normal a las caras de laminación, según la norma ASME SA-20.
+Para las piezas forjadas, las probetas se tomarán según la norma ASME SA-350, siendo el sentido
+del eje de las probetas transversal a la dirección de la fibra.
+Como todas las probetas para ensayos mecánicos, las de resiliencia deben llevar también
+tratamiento térmico simulado si se van a hacer tratamientos térmicos en el taller.
+
+5.2.4 Chapas
+La calidad de las chapas de acero para las virolas y los cabezales deben ser soportadas por su
+respectivo certificado de calidad.
+Se deben utilizar materiales cuya calidad corresponda a las Normas ASME SA-516, y SA-240 entre
+otras.
+Las chapas mayores de 19 mm para virolas y fondos de recipientes deben ser inspeccionadas de
+acuerdo con la Norma ASTM A 578 Nivel B.
+Las chapas de acero para los anillos de la base, los refuerzos de las aberturas de los faldones y las
+cunas de los recipientes horizontales serán en calidad según la Norma ASME SA-36 o equivalente.
+
+5.2.5 Caños y accesorios de cañerias
+Los caños utilizados para el cuello de conexiones deben ser sin soldadura, de acuerdo con la Norma
+ASME SA-106, SA-333, y SA-312. No obstante, los cuellos de las conexiones de diámetro nominal
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            16 / 31
+                                                    #Título                     C0100 Recipientes a Presión
+ #Tipo                                               Especificación            #Código                  ES__-0001033
+ #Fecha de Vigencia                                  27/11/2023                #Versión                 2.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                     Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                     Desarrollar Ingeniería
+
+
+(DN) 14“ y mayores podrán fabricarse de la misma chapa que la envolvente soldada a tope por ambos
+lados. Esta costura deberá ser radiografiada al 100%.
+Los accesorios de cañerías, a excepción de las bridas, deben ser de una calidad acorde con la Norma
+ASME SA-234 y SA-403 grado correspondiente al del caño de la conexión al cual tengan que ser
+soldados. Para diámetros nominales (DN) de hasta 12”, deberán ser sin soldadura, pudiendo ser los
+de 14" y mayores con soldadura, que deberá ser radiografiada totalmente con las mismas
+condiciones que la envolvente del recipiente.
+
+5.2.6 Bridas y elementos forjados
+Para los recipientes de acero al carbono y de baja aleación, las bridas y elementos forjados cumplirán
+la Norma ASME SA-105 y SA-350.
+Para los recipientes de acero aleado, los elementos forjados deben estar de acuerdo a la Norma
+ASME SA- 182.
+Las piezas forjadas de 50 mm de espesor o mayores, deberán examinarse con ultrasonidos de
+acuerdo con la Norma ASME SA-388.
+La cara de asiento de las juntas de las bridas deben protegerse durante los tratamientos térmicos
+que vayan a recibir para evitar la formación de cascarilla.
+
+5.2.7 Juntas
+Los elementos internos que suministre el Fabricante del recipiente deben estar dotados de todas las
+juntas necesarias para operación. Dichas juntas deberán enviarse en una caja si la instalación, o
+conexión, de tales elementos internos, no va a ser realizada por él mismo, y siempre deberán ir
+identificadas de acuerdo con su posición en el equipo.
+El Fabricante debe suministrar todas las juntas de las uniones bridadas que él debe conectar. La
+calidad de estos materiales, estará de acuerdo con la Tabla 2-5.1, apéndice 2 del Código ASME
+sección VIII Div 1 y con las siguientes condiciones:
+a) El material de las juntas debe ser compatible con el fluido, para ello se seguirán las
+   recomendaciones del Licenciante o de la Ingeniería Básica.
+b) El relleno de las espirometálicas, y de las metaloplásticas debe ser grafito.
+c) En ningún caso las juntas pueden contener amianto/asbestos.
+Las bridas según la Norma ASME B16.5 serán del tipo RF y/o RTJ acorde con la clases de cañerías
+L0200 Especificacion técnica general de clases de cañerías para plantas, para vincularlas al
+recipiente.
+Los recipientes con recubrimiento interior no metálico deben llevar junta plana según la Norma ASME
+B16.21.
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            17 / 31
+                                                    #Título                     C0100 Recipientes a Presión
+ #Tipo                                               Especificación            #Código                  ES__-0001033
+ #Fecha de Vigencia                                  27/11/2023                #Versión                 2.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                     Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                     Desarrollar Ingeniería
+
+
+El tipo de junta debe estar de acuerdo con la clasificación correspondiente a la clase de cañería con
+que conecten según ED L0200 “Especificacion técnica general de clases de cañerías para plantas”.
+Las juntas utilizadas para pruebas serán de la misma calidad que las que se utilizarán para el servicio
+final si después de la prueba no fuera necesario desmontar la unión bridada.
+
+5.2.8 Espárragos y tuercas
+Los elementos internos que suministre el propio Fabricante del recipiente deben estar dotados de
+todos los espárragos necesarios para operación. Dichos espárragos deberán enviarse en una caja
+si la instalación o conexión de tales elementos internos no va a ser realizada por él mismo, debiendo
+estar debidamente marcados e identificados.
+La tornillería externa debe ser de tipo espárrago roscado con dos tuercas hexagonales para cada
+espárrago. Si no se especifica nada en contra, los espárragos serán roscados en toda su longitud y
+con una longitud total de acuerdo a la Norma ASME B16.5.
+Los espárragos y tuercas deben tener un recubrimiento anticorrosivo de zincado y bicromatizado de
+acuerdo a la Norma ISO 4042.
+
+
+5.3 Requerimientos técnicos de fabricación
+5.3.1 Generalidades
+El Fabricante debe verificar todos los documentos de diseño de los recipientes que ha de suministrar
+y avisará a YPF por escrito de cualquier anomalía observada.
+Todos los componentes del recipiente como son la envolvente, los fondos, las conexiones externas
+e internos deben mantener su trazabilidad a lo largo del proceso de fabricación, incorporando los
+respectivos certificados de calidad en el dossier de calidad correspondiente.
+El Fabricante debe desarrollar todos los planos constructivos necesarios a partir de la documentación
+de diseño.
+
+5.3.2 Disposición y conformado de chapas
+Debe limitarse al mínimo los cordones de soldadura necesarios para unir las chapas y otros
+componentes de los recipientes. Las soldaduras circunferenciales no se deben ver afectadas por
+ningún componente, tanto interior como exterior, ni por sus soldaduras. Las soldaduras longitudinales
+sólo se podrán ver afectadas por soldaduras circunferenciales totales.
+La distancia entre dos soldaduras cualesquiera será, como mínimo, igual a la indicada en la
+Especificación B0500 “Requisitos generales de soldadura dentro de planta”.
+En los recipientes horizontales, se debe evitar las costuras longitudinales en el sector de 120 º de la
+zona inferior a la envolvente.
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            18 / 31
+                                                    #Título                     C0100 Recipientes a Presión
+ #Tipo                                               Especificación            #Código                  ES__-0001033
+ #Fecha de Vigencia                                  27/11/2023                #Versión                 2.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                     Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                     Desarrollar Ingeniería
+
+
+El Fabricante debe verificar el espesor final de cada chapa una vez conformada, incluyendo los
+fondos. En el caso de recipientes con recubrimiento mediante depósito de soldadura o similar, el
+espesor medido será el correspondiente a la chapa base, y en recipientes revestidos íntegramente
+con revestimientos tipo "cladding", dicho espesor será el total incluido el revestimiento. En cualquier
+caso se deberá verificar en base a estas mediciones la MAWP.
+Todo fondo que no sea de una sola pieza necesitará la aprobación de YPF, que deberá ser solicitada
+presentando los detalles de fabricación tales como disposición de las chapas y soldaduras,
+procedimiento de soldadura, tratamientos térmicos e inspecciones y pruebas. Los fondos con
+soldaduras aceptados por YPF deben ser radiografiados al 100%.
+En todos los casos, la chapa, o cualquier otro componente de acero al carbono o de baja aleación
+deben ser conformados de acuerdo a los requerimientos del Código ASME sección VIII Div 1, párrafo
+UG-79 y UCS-79.
+
+5.3.3 Conexiones
+Las penetraciones para conexiones deben estar alejadas de otras soldaduras, como mínimo, igual a
+lo indicado en la Especificación B0500 “Requisitos generales de soldadura dentro de planta”. Estos
+requisitos deben cumplirlos también los cordones de soldadura de los refuerzos.
+Salvo que se indique lo contrario, las conexiones se deben montar completamente a ras con la
+superficie interior del recipiente, con los bordes redondeados.
+Las conexiones y sus refuerzos se unirán al recipiente mediante soldadura de penetración total, el
+ángulo entre el niple y la envolvente será de abertura suficiente como para evitar los defectos de falta
+de fusión y penetración.
+
+5.3.4 Elementos internos
+Es de aplicación íntegramente la Especificación C0200 “Elementos Internos de recipientes a
+presión”.
+Todas las soldaduras de accesorios internos deben estar dotadas del sobreespesor de corrosión
+especificado para el recipiente.
+Las dimensiones de los platos, sus accesorios y soportes serán facilitados por el Diseñador de los
+platos.
+
+5.3.5 Requisitos generales de soldadura
+Es de aplicación íntegramente la Especificación B0500 “Requisitos generales de soldadura dentro
+de planta” y sus Adendas, en los casos en que están sean aplicables.
+YPF comprobará todos los procedimientos de soldadura.
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            19 / 31
+                                                    #Título                     C0100 Recipientes a Presión
+ #Tipo                                               Especificación            #Código                  ES__-0001033
+ #Fecha de Vigencia                                  27/11/2023                #Versión                 2.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                     Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                     Desarrollar Ingeniería
+
+
+Salvo que se indique lo contrario, los cordones de los faldones de soporte deben ser con soldadura
+por ambas caras a tope. La unión entre el faldón y el fondo del recipiente será de penetración.
+El tratamiento térmico posterior a la soldadura para alivio de tensiones debe realizarse de acuerdo
+con ASME sección VIII Div 1, pero utilizando las temperaturas indicados en la Especificación B0500
+“Requisitos generales de soldadura dentro de planta”.
+Se considerarán los tratamientos posteriores a la soldadura de acuerdo a lo requerido en las adendas
+pertinentes. Estos tratamientos deben ser aprobados por YPF o su Representante.
+Los elementos internos fijados mediante espárragos se instalarán después del alivio de tensiones.
+Las caras de las bridas deben protegerse contra la oxidación durante el tratamiento térmico.
+
+5.3.6 Apretado de espárragos
+Los espárragos menores de 1 ¾" se deben apretar utilizando una llave dinamométrica y los iguales
+o mayores de 1¾ “ se apretarán con tensionadores.
+La marca de la calidad del espárrago quedará preferentemente ubicada en el extremo del espárrago
+más visible.
+
+5.3.7 Tolerancias
+A no ser que se especifique lo contrario, las tolerancias dimensiónales de todo recipiente a presión
+se ajustarán a lo indicado en los párrafos UG-80 y 81 del código ASME sección VIII División 1
+Para columnas con platos, la nivelación será tal que la inclinación de cualquier plato no exceda el
+valor que se obtiene al aplicar el diagrama de la Figura 1.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            20 / 31
+                                                    #Título                     C0100 Recipientes a Presión
+ #Tipo                                               Especificación            #Código                  ES__-0001033
+ #Fecha de Vigencia                                  27/11/2023                #Versión                 2.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                     Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                     Desarrollar Ingeniería
+
+
+
+
+                                                     Figura N°1 Inclinación de Platos de columnas.
+
+
+Los recipientes horizontales no deben tener ninguna pendiente, salvo que sea requerida en Hoja de
+Datos o Plano de Ingeniería.
+Los intercambiadores y otros equipos que deban instalarse vinculados en planta, se deben montar
+de la misma forma en el taller del Fabricante para comprobar la posición y alineamiento de los
+soportes y bridas de interconexión.
+Para los intercambiadores, las tolerancias de fabricación deben estar dentro de los límites fijados por
+la Norma TEMA y la Especificación E0100 “Intercambiadores de calor de carcasa y tubos”, para las
+distintas partes y operaciones de fabricación del intercambiador, y permitirá que las partes que sean
+idénticas, nominalmente puedan ser intercambiables.
+
+5.3.8 Acabado de superficies internas de recipientes
+Salvo que se especifique lo contrario, el acabado de las superficies internas de los recipientes debe
+estar de acuerdo al tipo de aplicación y con los requerimientos que se describe en la Especificación
+B0200 “Aseguramiento y control de calidad de equipos estáticos y dinámicos”.
+Cualquier otro tipo de acabado que se especifique estará incluido en los tipos de acabado descritos
+en dicha “Especificación B0200 Aseguramiento y control de calidad de equipos estáticos y
+dinámicos”.
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            21 / 31
+                                                      #Título                     C0100 Recipientes a Presión
+ #Tipo                                                 Especificación            #Código                  ES__-0001033
+ #Fecha de Vigencia                                    27/11/2023                #Versión                 2.0
+ #Activo de la información                             YPF - Privada
+ #Proceso                                              21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                       Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                       Desarrollar Ingeniería
+
+
+5.3.9 Requisitos de calidad, inspecciones y ensayos
+Todos los recipientes a presión se deben inspeccionar de acuerdo con el código de diseño y
+fabricación utilizado y será de aplicación íntegramente la Especificación B0200 “Aseguramiento y
+control de calidad de equipos estáticos y dinámicos”.
+El Fabricante debe elaborar un Plan de Inspección y Ensayos (PIE) con los puntos de Inspección
+que contemple todas las actividades que han de ser supervisadas por su Control de Calidad y/o
+terceras partes, así como por YPF o su Representante, y que, como mínimo, serán las requeridas
+por el código y la “Especificación B0200 Aseguramiento y control de calidad de equipos estáticos y
+dinámicos”.
+Dicho Plan de Inspección y Ensayos debe ser sometido, previamente, a la aprobación de YPF o su
+Representante.
+
+5.3.10 Reparaciones
+Previamente a la realización de cualquier reparación, debe someterse a la aprobación de YPF o su
+Representante, un procedimiento de reparación que incluya los siguientes puntos:
+a) Eliminación del defecto (ejecución, método, etc.)
+b) Confirmación de la eliminación del defecto por métodos no destructivos (rayos X, ultrasonidos,
+c) partículas magnéticas y de líquidos penetrantes).
+d) Restauración de la soldadura o material, usando los procedimientos homologados de soldadura.
+e) Tratamiento térmico posterior a la soldadura (si la soldadura original lo requería)
+f)   Ensayos no destructivos finales a aplicar, que como mínimo serán: radiografiado y partículas
+     magnéticas o líquidos penetrantes.
+
+
+5.4 Condiciones particulares para recipientes trabajando en servicios ciclicos
+5.4.1 Campo de aplicación
+Se considerará que un equipo trabaja en servicio cíclico de Presión-Temperatura cuando así esté
+especificado en su Hoja de Datos o cuando el Código ASME sección VIII Div 2 lo indique.
+
+5.4.2 Condiciones particulares de diseño y fabricación.
+El código de diseño para estas condiciones debe ser ASME sección VIII Div 2. Todas las conexiones
+deben ser del tipo autorreforzado y su unión soldada a la envolvente deberá será radiografiable al
+100%.
+
+
+
+
+     COPIA NO CONTROLADA
+     [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+     © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                           o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                              22 / 31
+                                                    #Título                     C0100 Recipientes a Presión
+ #Tipo                                               Especificación            #Código                  ES__-0001033
+ #Fecha de Vigencia                                  27/11/2023                #Versión                 2.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                     Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                     Desarrollar Ingeniería
+
+
+Las soldaduras a tope de recipientes sometidos a cargas cíclicas deben tener penetración total. Las
+soldaduras en ángulo deberán redondearse de acuerdo con el Código ASME sección VIII Div 2.
+Las soldaduras que no puedan ser radiografiadas deberán ser inspeccionadas al 100% con
+ultrasonidos, y en caso de ser necesario tratamiento térmico, la inspección será posterior al mismo.
+
+
+5.5 Placa de caracteristicas
+5.5.1 Generalidades
+La placa de características grabada con los datos que se indican en el Anexo I de “ES__-0001033
+C0100 Recipientes a Presión”, debe ir montada sobre un soporte construido en chapa de 6 mm de
+espesor soldada al recipiente en un lugar fácilmente visible en su emplazamiento definitivo.
+Para la definición de la placa de características de intercambiadores y aeroenfriadores, ver la
+Especificación correspondiente a dichos equipos.
+
+
+5.6 Pintado, marcado, preparación para envío y transporte
+5.6.1 Pintado
+Salvo que se indique lo contrario, la aplicación se debe realizar de acuerdo con lo indicado en la
+Especificación B0600 “Protección anticorrosiva con recubrimientos”.
+En cualquier caso, la aplicación del recubrimiento sólo puede hacerse después de haber realizado
+todas las pruebas y ensayos, y de que como consecuencia de los mismos se haya dado la aceptación
+del recipiente.
+Para el caso de recipientes que deban ser protegidos interiormente por la aplicación de
+revestimientos orgánicos, el diseño interior del mismo y de sus internos deberá estar de acuerdo a
+la Especificación C0200 “Elementos Internos de recipientes a presión”.
+
+5.6.2 Marcado
+Los recipientes deben estar claramente identificados con los números de la orden de compra y su
+identificación N° o TAG, en la misma chapa de identificación.
+Los aparatos que hayan recibido tratamiento térmico después del soldado o lleven un revestimiento
+interno con material orgánico, deben llevar un rótulo con la siguiente leyenda:
+                                                                                       “NO SOLDAR”
+Las letras deberán ser aproximadamente de 75mm (3 pulgadas) de altura y pintadas con colores
+destacados.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            23 / 31
+                                                    #Título                     C0100 Recipientes a Presión
+ #Tipo                                               Especificación            #Código                  ES__-0001033
+ #Fecha de Vigencia                                  27/11/2023                #Versión                 2.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                     Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                     Desarrollar Ingeniería
+
+
+En aparatos verticales este rótulo se debe colocar en dos lados opuestos cerca de la línea de
+tangencia, repetido, aproximadamente, cada 3 m (10 pies) de altura, pero rotado 90 grados. En
+apartados horizontales, este rótulo se debe colocar en ambos lados, cerca de la línea horizontal.
+Las orientaciones Norte y Este deberán ser marcadas en cada recipiente vertical, en una posición
+de, aproximadamente, 6” por debajo de la tangente superior. Las marcas deberán rodearse de un
+círculo pintado de un color llamativo.
+
+5.6.3 Preparación para envío y transporte
+Se debe cumplir con lo indicado en la Especificación B0100 “Preparación para transporte de equipos
+y materiales”.
+
+
+5.7 Documentación a presentar por el fabricante
+
+5.7.1 Documentos de diseño
+Ver Anexo II CCPP - Listado de Documentos LLI UP_230929.
+
+5.7.2 Documentos de fabricación
+Ver Anexo II CCPP - Listado de Documentos LLI UP_230929.
+
+5.7.3 Aprobación de documentos
+La aprobación de los documentos del Fabricante por parte de YPF o Representante delegado, no
+exime al Fabricante de su responsabilidad en el diseño mecánico, la fabricación y las pruebas de
+equipos.
+
+
+
+
+6 Roles, Indicadores, registros y riesgos del proceso
+
+6.1      Roles
+                       Rol                                                                 Puestos / Unidad/es Organizativa/s
+ N/A
+
+
+6.2 Indicadores
+ Indicador                       Fórmula                       Frecuencia Responsable                                                 Cliente                               Registro
+   (KPI)                                                                                                                             Interno /
+                                                                                                                                     Externo
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            24 / 31
+                                                    #Título                     C0100 Recipientes a Presión
+#Tipo                                                Especificación            #Código                  ES__-0001033
+#Fecha de Vigencia                                   27/11/2023                #Versión                 2.0
+#Activo de la información                            YPF - Privada
+#Proceso                                             21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                     Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                     Desarrollar Ingeniería
+
+
+N/A
+
+
+6.3 Registros
+   Registro                      Responsabl                        Responsabl                          Frecuencia                        Disposición                          Tiempo de
+                                    e del                          e del archivo                       de registro /                     y protección                          archivo
+                                  registro                                                               archivo
+N/A
+
+
+6.4 Riesgos y acciones mitigantes
+Codificación                                         Riesgo                                                         Origen                                              Controles
+de Referencia                                                                                                                                                           mitigantes
+N/A
+
+
+6.5 Reglas de Negocio
+                         Nombre                                                                                               Descripción
+N/A
+
+
+
+7 Anexos y referencias
+
+7.1 Anexos
+7.1.1 Anexos Especiales
+#Anexos Especiales
+ #Nº                                                                                                Nombre
+ N/A                                                                                                  N/A
+
+7.1.2 Otros anexos
+#Otros Anexos
+ #Nº                                                                      Nombre
+  I                                                 Anexo I - Plano de placa característica de recipientes
+  II                                          Anexo II - CCPP - Listado de Documentos LLI UP_230929
+
+
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            25 / 31
+                                                   #Título                     C0100 Recipientes a Presión
+#Tipo                                               Especificación            #Código                  ES__-0001033
+#Fecha de Vigencia                                  27/11/2023                #Versión                 2.0
+#Activo de la información                           YPF - Privada
+#Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                    Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                    Desarrollar Ingeniería
+
+
+ III                                                  Anexo III - Hoja de Datos de Recipientes a Presión
+
+
+7.2 Normativa relacionada
+  Categoría                                                                      Título                                                                                  Código
+                              B0400 REQUERIMIENTOS Y LIMITACIONES DE
+                                                                                                                                                      ES__-0001006
+                              MATERIALES PARA SERVICIOS ESPECIALES
+                              B0200 ASEGURAMIENTO Y CONTROL DE
+                                                                                                                                                      ES__-0001025
+                              CALIDAD DE EQUIPOS ESTÁTICOS Y DINÁMICOS
+                              B0500 REQUISITOS GENERALES DE
+                                                                                                                                                      ES__-0001001
+                              SOLDADURA DENTRO DE PLANTA
+                              B0600 PROTECCIÓN ANTICORROSIVA CON
+                                                                                                                                                      ES__-0002657
+                              RECUBRIMIENTOS
+                              E0200 CONDENSADORES DE SUPERFICIE                                                                                       ES__-0000991
+                              E0300 INTERCAMBIADORES DE CALOR DE
+                                                                                                                                                      ES__-0000960
+                              PLACAS
+                              E0400 AEROENFRIADORES                                                                                                   ES__-0000962
+  Normativa                   M0100 ESTRUCTURAS DE ACERO                                                                                              ES__-0001079
+   interna
+     YPF                      M0200 CARGA PARA DISEÑO DE ESTRUCTURAS                                                                                  ES__-0001078
+                              N0100 AISLAMIENTO EXTERIOR DE EQUIPOS Y
+                                                                                                                                                      ES__-0002637
+                              CAÑERÍAS CALIENTES
+                              N0101 AISLAMIENTO PARA CONSERVACIÓN DEL
+                                                                                                                                                      ES__-0000995
+                              FRÍO
+                              J0100 INGENIERÍA DE INSTRUMENTACIÓN                                                                                     ES__-0001960
+                              J0200 MEDIDA DE CAUDAL (PARTE GENERAL)                                                                                  ES__-0002280
+                              J0300 MEDIDA DE PRESIÓN (PARTE GENERAL)                                                                                 ES__-0002156
+                              J0400 MEDIDA DE NIVEL (PARTE GENERAL)                                                                                   ES__-0002171
+                              J0500 MEDIDA DE TEMPERATURA (PARTE
+                                                                                                                                                      ES__-0001979
+                              GENERAL)
+                              J1700 MONTAJE DE INSTRUMENTOS                                                                                           ES__-0002222
+
+
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                        o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                           26 / 31
+                                                   #Título                     C0100 Recipientes a Presión
+#Tipo                                               Especificación            #Código                  ES__-0001033
+#Fecha de Vigencia                                  27/11/2023                #Versión                 2.0
+#Activo de la información                           YPF - Privada
+#Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                    Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                    Desarrollar Ingeniería
+
+
+  Categoría                                                                      Título                                                                                  Código
+                              J1800 VÁLVULAS DE SEGURIDAD Y DISCOS DE
+                                                                                                                                                      ES__-0002230
+                              RUPTURA
+                              C0102 RECIPIENTES A PRESIÓN - ADENDA
+                              EQUIPOS CON ESPESOR IGUAL O MAYOR A 50                                                                                  ES__-0001034
+                              MM
+                              C0103 RECIPIENTES A PRESIÓN - ADENDA
+                                                                                                                                                      ES__-0001044
+                              SERVICIO BAJA TEMPERATURA
+                              C0104 RECIPIENTES A PRESIÓN - ADENDA
+                                                                                                                                                      ES__-0001055
+                              RECIPIENTES EN SERVICIOS ESPECIALES
+                              C0106 RECIPIENTES CON REVESTIMIENTO
+                                                                                                                                                      ES__-0001035
+                              INTERIOR METÁLICO
+                              L0100 DISEÑO DE CAÑERIAS EN
+                                                                                                                                                      ES__-0001971
+                              INSTALACIONES DE SUPERFICIE
+                              L0200 CLASES DE CAÑERÍAS PARA PLANTAS                                                                                   ES__-0001998
+                              C0200 ELEMENTOS INTERNOS DE RECIPIENTES
+                                                                                                                                                      ES__-0001042
+                              A PRESIÓN
+                              E0100 INTERCAMBIADORES DE CALOR DE
+                                                                                                                                                      ES__-0000992
+                              CARCASA Y TUBOS
+                              B0100 PREPARACIÓN PARA TRANSPORTE DE
+                                                                                                                                                      ES__-0001051
+                              EQUIPOS Y MATERIALES
+                              Rules for Construction Power Boilers.                                                                                   ASME Section I
+                              Materials - Ferrous Materials Specifications.                                                                           ASME Section II. Part A
+                              Materials - Nonferrous Materials Specifications.                                                                        ASME Section II. Part B
+                              Materials - Specifications for Welding Rods,
+                                                                                                                                                      ASME Section II. Part C
+  Normativa                   Electrodes and Filler Metals.
+   Externa                    Materials – Properties (Customary).                                                                                     ASME Section II. Part D
+                              Nondestructive Examination.                                                                                             ASME Section V
+                              Rules for Construction of Pressure Vessels.                                                                             ASME Section VIII Div. 1
+                              Rules for Construction of Pressure Vessels.
+                                                                                                                                                      ASME Section VIII Div. 2
+                              Alternative Rules.
+
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                        o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                           27 / 31
+                                                   #Título                     C0100 Recipientes a Presión
+#Tipo                                               Especificación            #Código                  ES__-0001033
+#Fecha de Vigencia                                  27/11/2023                #Versión                 2.0
+#Activo de la información                           YPF - Privada
+#Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                    Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                    Desarrollar Ingeniería
+
+
+  Categoría                                                                      Título                                                                                  Código
+                              Qualification Standard for Welding and Brazing
+                              Procedures, Welders, Brazers, and Welding and                                                                           ASME Section IX
+                              Brazing Operators.
+                              Pipe Flanges & Flanged Fittings.                                                                                        ASME/ANSI B16.5
+                              Metallic Gaskets for Pipe Flanges.                                                                                      ASME/ANSI B16.20
+                              Nonmetallic Flat Gaskets for Pipe Flanges.                                                                              ASME/ANSI B16.21
+                              Large Diameter Steel Flanges: NPS 26 through NPS
+                                                                                                                                                      ASME/ANSI B16.47
+                              60, Metric/Inch Standard
+                              Power Piping.                                                                                                           ASME/ANSI B31.1
+                              Process Piping.                                                                                                         ASME/ANSI B31.3
+                              Factory-Made Wrought Buttwelding Fittings.                                                                              ASME/ANSI B16.9
+                              Welded and Seamless Wrought Steel Pipe.                                                                                 ASME/ANSI B36.10
+                              Air Cooled Heat Exchangers for General Refinery
+                                                                                                                                                      API 661
+                              Services.
+                              ASTM - AMERICAN SOCIETY FOR TESTING AND
+                                                                                                                                                      N/A
+                              MATERIALS
+                              TEMA - STANDARD OF TUBULAR EXCHANGER
+                                                                                                                                                      N/A
+                              MANUFACTURER ASSOCIATION.
+                              Standard specification for straight-beam ultrasonic
+                              examination of rolled Steel plates for special                                                                          ASTM A578
+                              applications
+                              Local Stresses in Spherical and Cylindrical Shell due
+                                                                                                                                                      WRC 107
+                              to External Loadings on Nozzles.
+                              Local Stresses in Cylindrical Shells due to External
+                              Loadings on Nozzles – Supplement to WRC Bulletin                                                                        WRC 297
+                              N° 107.
+                              Elementos de fijación. Recubrimientos electrolíticos                                                                    ISO 4042
+                              REGLAMENTO TÉCNICO PARA EL TRANSPORTE
+                                                                                                                                                      Res-120-E/2017
+                              POR DUCTOS DE HIDROCARBUROS LÍQUIDOS
+
+
+
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                        o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                           28 / 31
+                                                   #Título                     C0100 Recipientes a Presión
+#Tipo                                               Especificación            #Código                  ES__-0001033
+#Fecha de Vigencia                                  27/11/2023                #Versión                 2.0
+#Activo de la información                           YPF - Privada
+#Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                    Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                    Desarrollar Ingeniería
+
+
+  Categoría                                                                      Título                                                                                  Código
+                              Reglamento Argentino de Acción del viento sobre las
+                                                                                                                                                      CIRSOC 103
+                              construcciones
+                              Reglamento Argentino para construcciones
+                                                                                                                                                      CIRSOC 104
+                              sismorresistentes. Parte 1
+  Normativa
+                                                                                    N/A                                                                                      N/A
+  Derogada
+    Otras
+                                                                                    N/A                                                                                      N/A
+ referencias
+
+
+7.3 Definiciones y abreviaturas
+    Término                      Abreviatura                                                                            Descripción
+ Datos
+                                                                 Documento donde se indican los aspectos particulares para
+ Básicos de                               DBD
+                                                                 cada proyecto.
+ Diseño
+ Temperatura
+ mínima de                                                       Es el mínimo valor de temperatura al cual el equipo va a
+                                        MDMT
+ diseño de                                                       operar.
+ metal
+                                                                 Valor que determina el espesor de una tubería para un
+ Schedule                                 SCH
+                                                                 determiando diámetro.
+ Máxima
+                                                                 Es la presión máxima permisible en la parte superior del
+ presión
+                                       MAWP                      recipiente en su posición de operación normal a la temperatura
+ admisible de
+                                                                 máxima especificada para esa presión.
+ trabajo
+                                                                 Es un documento formal que contiene un plan de las actividades
+ Plan de
+                                                                 de control de calidad a realizar durante la fabricación del
+ Inspección y                              PIE
+                                                                 recipiente, mediciones, ensayos, rangos aceptación, frecuencia,
+ Ensayos
+                                                                 responsables, etc.
+                                                                 Código alfanumerico que sirve para identificar y clasificar a un
+ Etiqueta                                 TAG
+                                                                 equipo.
+
+
+
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                        o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                           29 / 31
+                                                    #Título                     C0100 Recipientes a Presión
+ #Tipo                                               Especificación            #Código                  ES__-0001033
+ #Fecha de Vigencia                                  27/11/2023                #Versión                 2.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                     Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                     Desarrollar Ingeniería
+
+
+8 Aprobación
+
+8.1 Vigencia
+Esta normativa entra en vigencia a partir de su aprobación e inmediata publicación.
+Los abajo firmantes asumen la responsabilidad de implantar, controlar el cumplimiento y actualizar
+el presente documento cada vez que fuera necesario.
+
+
+8.2 Historial
+   № Revisión                            Fecha Aprobación                                                                       Principales cambios
+      1.0                                   07-11-2013                                        Replantillado.
+                                                                                              Actualización del documento al nuevo template Y-
+                                                                                              DOC.
+                                                                                              Modificación/Actualización ítem 5 Especificación.
+                                                                                              Corrección ortográfica y gramatical.
+
+           2.0                              Ver encabezado                                    Incorporación Anexo I - Plano de placa característica
+                                                                                              de recipientes.
+                                                                                              Incorporación Anexo II – CCPP – Listado de
+                                                                                              Documentos LLI UP.
+                                                                                              Incorporación Anexo III – Hoja de Datos de
+                                                                                              Recipients a Presión.
+
+
+8.3 Flujo de Aprobación
+#Participantes
+              #Autor                                        #Referente de                                  #Dueño de Proceso                                      #Administrador
+                                                              Proceso                                                                                           Cuerpo Normativo /
+                                                                                                                                                                     Negocio
+     SABATINI,                                            GALDI, LUCILA                                   SARSFIELD ALIAGA,                                        MONSALVE,
+  SEBASTIAN GUIDO                                                                                           JOSE IGNACIO                                        ANDRES MAURICIO
+                                                                                                                                                                    (SERVICIO
+                                                                                                                                                                EXTERNO EN YPF)
+
+#Colaboradores
+                                                                                              Nombre
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            30 / 31
+                                                    #Título                     C0100 Recipientes a Presión
+ #Tipo                                               Especificación            #Código                  ES__-0001033
+ #Fecha de Vigencia                                  27/11/2023                #Versión                 2.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie > 01.
+                                                     Visualizar, Conceptualizar y Definir Proyecto de Instalaciones de Superficie > 02.
+                                                     Desarrollar Ingeniería
+
+
+                                                                           PEIRANO, JUAN PABLO
+                                                                                 PERRETTI, DIEGO
+                                                       BRICEÑO GIMENEZ, JENNY MARGARITA
+                                                                     LEPERA, EDUARDO ANDRES
+                                             FONTI, LORENA KARINA (Servicio Externo en YPF)
+
+#Revisores
+                                                                                              Nombre
+                                                                                              Nombre
+
+#Aprobadores
+                                                                               Nombre
+                                                                       SZWED, CRISTINA LILIANA
+
+
+9 ANEXOS
+
+9.1 Anexo I - Plano de placa característica de recipientes
+Este anexo está en un archivo distinto del documento principal. Se accede a él desde el Buscador
+de la página principal de Y-DOC, en el menú contextual del código correspondiente al documento o
+bien desde la vista “Ver información detallada”.
+
+
+9.2 Anexo II - CCPP - Listado de Documentos LLI UP_230929.
+Este anexo está en un archivo distinto del documento principal. Se accede a él desde el Buscador
+de la página principal de Y-DOC, en el menú contextual del código correspondiente al documento o
+bien desde la vista “Ver información detallada”.
+
+9.3 Anexo III - Hoja de Datos de Recipientes a Presión.
+Este anexo está en un archivo distinto del documento principal. Se accede a él desde el Buscador
+de la página principal de Y-DOC, en el menú contextual del código correspondiente al documento o
+bien desde la vista “Ver información detallada”.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            31 / 31
+

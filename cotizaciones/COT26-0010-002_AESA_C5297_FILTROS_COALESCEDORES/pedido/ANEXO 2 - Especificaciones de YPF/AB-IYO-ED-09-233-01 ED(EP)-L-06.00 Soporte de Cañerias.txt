@@ -1,0 +1,1188 @@
+                                                                          Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                                          Ámbito de aplicación: E&P YPF
+                                                                          Propietario: INGENIERÍA Y OBRAS
+
+Título: ED(EP)-L-06.00 SOPORTE DE                                         Código: AB-IYO-ED-09-233-01                                      Revisión: 01
+CAÑERÍAS                                                                                                  Página 1 de 17
+
+                                                                                ÍNDICE
+
+
+1.         GENERAL ........................................................................................................................................... 3
+1.1.       Objeto.................................................................................................................................................. 3
+1.2.       Unidades de medida ............................................................................................................................ 3
+
+2.         CALCULO Y DISEÑO DE SOPORTES DE CAÑERIAS........................................................................ 3
+2.1.       Cargas y condiciones de carga ............................................................................................................ 3
+2.2.       Fuerzas y coeficiente de rozamiento .................................................................................................... 5
+2.3.       Cargas de diseño para estructura de badeja de cañerías..................................................................... 5
+2.4.       Materiales para Soportes ..................................................................................................................... 5
+
+3.         CRITERIOS GENERALES DE DISEÑO DE SOPORTES..................................................................... 7
+
+4.         CRITERIOS PARTICULARES EN EL DISEÑO DE SOPORTES .......................................................... 8
+4.1.       Soportes para cañerías calientes ......................................................................................................... 8
+4.2.       Soportes para cañerías frías ................................................................................................................ 8
+4.3.       Soportes para cañerías de plástico ...................................................................................................... 8
+4.4.       Soportes elásticos ............................................................................................................................... 9
+4.5.       Soportes antivibratorios ..................................................................................................................... 10
+4.6.       Soportes deslizantes.......................................................................................................................... 10
+
+5.         ELEMENTO DE TRANSICION........................................................................................................... 11
+5.1.       Patines .............................................................................................................................................. 11
+5.2.       Cunas de apoyo................................................................................................................................. 12
+5.3.       Silletas de apoyo ............................................................................................................................... 12
+5.4.       Orejetas para colgar .......................................................................................................................... 12
+5.5.       Abrazaderas ...................................................................................................................................... 13
+5.6.       Trunnions........................................................................................................................................... 13
+5.7.       Dispositivos especiales ...................................................................................................................... 13
+
+6.         CRITERIOS PARA LA UBICACION DE SOPORTES ......................................................................... 13
+
+7.         PINTURA........................................................................................................................................... 14
+
+8.         PLANOS DE SOPORTES .................................................................................................................. 14
+8.1.       General.............................................................................................................................................. 14
+8.2.       Relación de soportes estándar aplicables al proyecto ........................................................................ 15
+8.3.       Simbología......................................................................................................................................... 15
+
+9.         PREPARACION PARA EL ENVIO ..................................................................................................... 15
+
+10.        DOCUMENTO DE REFERENCIA ...................................................................................................... 16
+
+
+     RUIZ BRICEÑO, CORINA               COLO DEL ZOTTO,
+             MARÍA                      CARLOS AGUSTIN
+                                                                                                                                                 11     08     09
+
+          Validación                        Aprobación                           Validación                          Aprobación                  D      M   A
+                           E&P YPF                                                                                                                    Fecha
+                             SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                                     Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                                     Ámbito de aplicación: E&P YPF
+                                                                     Propietario: INGENIERÍA Y OBRAS
+
+Título: ED(EP)-L-06.00 SOPORTE DE                                    Código: AB-IYO-ED-09-233-01                                  Revisión: 01
+CAÑERÍAS                                                                                          Página 2 de 17
+
+10.1.    Especificaciones de YPF .................................................................................................................. 16
+10.2.    Códigos y Normas aplicables ............................................................................................................. 16
+10.3.    Estandares de YPF........................................................................................................................... 16
+10.4.    Listado de Adendas ........................................................................................................................... 17
+10.5.    Tablas de esta Especificación............................................................................................................ 17
+
+
+
+
+ RUIZ BRICEÑO, CORINA               COLO DEL ZOTTO,
+         MARÍA                      CARLOS AGUSTIN
+                                                                                                                                       11     08    09
+
+        Validación                      Aprobación                         Validación                        Aprobación                D      M   A
+                        E&P YPF                                                                                                             Fecha
+                         SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                         Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                         Ámbito de aplicación: E&P YPF
+                                                         Propietario: INGENIERÍA Y OBRAS
+
+Título: ED(EP)-L-06.00 SOPORTE DE                        Código: AB-IYO-ED-09-233-01                   Revisión: 01
+CAÑERÍAS                                                                      Página 3 de 17
+
+
+1.       GENERAL
+
+
+1.1.     Objeto
+
+         Esta Especificación establece los requisitos mínimos obligatorios para la disposición a seguir en el
+         cálculo y diseño de Soportes de Cañerías.
+
+         El presente Documento forma parte de la última edición de Especificaciones Técnicas de YPF y hace
+         referencia asimismo, a la última edición de Códigos o Normas que son mencionados y/o aplicables, así
+         como lo indicado en el documento “Datos Básicos de Diseño (D.B.D.)” que recoge los aspectos
+         particulares de cada proyecto.
+
+         Las prioridades entre documentos serán:
+
+         •      Legislación aplicable (siempre y cuando en las Hojas de Datos, en la requisición o en esta
+                Especificación no se establezcan criterios más restrictivos que los en ella fijados)
+
+         •      Datos Básicos de Diseño
+
+         •      Esta Especificación
+
+         •      Planos Estándares
+
+         Las excepciones, variaciones o adiciones que supongan cualquier cambio en dichos documentos serán
+         comunicados por escrito a YPF para su aprobación.
+
+
+1.2.     Unidades de medida
+
+         Las unidades de medida que se utilizarán serán los del Sistema Métrico Internacional (SI), si bien para
+         diámetro de líneas se utilizarán pulgadas y libras para rating de bridas. Asimismo, se admitirán
+         presiones en kg/cm2.
+
+
+2.       CALCULO Y DISEÑO DE SOPORTES DE CAÑERIAS
+
+
+2.1.     Cargas y condiciones de carga
+
+         Para el diseño de soporte de cañería, se tomarán en consideración las siguientes cargas :
+
+         a)     Cargas permanentes:
+
+         a.1)     Carga gravitatoria.
+
+         a.2)     Fuerzas debidas a la presión interna (por ejemplo juntas de expansión).
+
+         a.3)     Cargas térmicas :
+
+                  a.3.1) Fuerzas debidas a la fricción por el deslizamiento entre cañería y soporte.
+
+                  a.3.2) Fuerzas de rozamiento en restricciones transversales y longitudinales.
+
+                  a.3.3) Fuerzas debidas a la flexión de la cañería en las restricciones (por obstrucción o limitación
+                         de expansiones o contracciones térmicas).
+
+
+
+     RUIZ BRICEÑO, CORINA         COLO DEL ZOTTO,
+             MARÍA                CARLOS AGUSTIN
+                                                                                                          11    08   09
+
+          Validación                  Aprobación             Validación               Aprobación          D      M   A
+                        E&P YPF                                                                                Fecha
+                         SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                       Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                       Ámbito de aplicación: E&P YPF
+                                                       Propietario: INGENIERÍA Y OBRAS
+
+Título: ED(EP)-L-06.00 SOPORTE DE                      Código: AB-IYO-ED-09-233-01                Revisión: 01
+CAÑERÍAS                                                                      Página 4 de 17
+
+      b)     Cargas ocasionales:
+
+      b.1)     Carga de viento.
+
+      b.2)     Carga de nieve.
+
+      b.3)     Carga sísmica.
+
+      b.4)     Carga debida a la apertura de válvulas de seguridad.
+
+      b.5)     Cargas impulsivas (ej: por golpe de ariete).
+
+      Si no se especifica lo contrario en standards locales o contractuales, las condiciones de carga, cargas e
+      incremento de tensiones admisibles serán las indicadas en la siguiente TABLA 1-CARGAS EN
+      SOPORTES DE CAÑERÍAS .
+
+                                  TABLA 1 - CARGAS EN SOPORTES DE CAÑERÍAS
+
+ CONDICION                                                                       INCREMENTO DE TENSIONES
+                                              CARGAS
+ DE CARGA                                                                         ADMISIBLES EN EL DISEÑO
+
+                    1)     Peso del soporte                                     12.5% de incremento cuando se
+                                                                                consideren cargas ocasionales.
+a) Izado            2)     Peso de la cañería izada
+                    3)     Carga de nieve
+                    4)     Cargas sísmicas o de viento, la que sea mayor
+                    1)     Peso de soporte                                      12.5% de incremento cuando se
+                                                                                consideren cargas ocasionales.
+                    2)     Cargas debidas al peso propio de cañerías
+b) Pruebas          3)     Carga del fluido (agua) durante la prueba
+                    4)     Carga de nieve
+                    5)     50% de carga de viento o carga debido al
+                           viento=16m/s ( la mayor)
+                    1)     Peso del soporte                                     12.5% de incremento cuando se
+                                                                                consideren cargas ocasionales.
+                                                                                A menos que lo requiera la
+                                                                                normativa local.
+                    2)     Cargas de la cañería más aislamiento
+                    3)     Carga del fluido durante operación
+c) Operación        4)     Cargas de la cañería debido a condiciones de
+(2)                        operación particulares (ej: golpe de ariete,
+                           apertura de válvula de seguridad, vibraciones) (1)
+                    5)     Fuerzas debidas a la presión interna en cañerías
+                           (juntas de expansión)
+                    6)     Carga de nieve
+                    7)     Carga térmica
+                    8)     Cargas sísmicas o de viento, la mayor
+      Notas en la TABLA 1:
+
+      (1)    Las cargas debido a la apertura de la válvula de seguridad se determinarán de acuerdo a la ASME
+
+
+
+ RUIZ BRICEÑO, CORINA           COLO DEL ZOTTO,
+         MARÍA                  CARLOS AGUSTIN
+                                                                                                     11      08   09
+
+       Validación                  Aprobación               Validación              Aprobación        D     M   A
+                     E&P YPF                                                                              Fecha
+                         SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                     Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                     Ámbito de aplicación: E&P YPF
+                                                     Propietario: INGENIERÍA Y OBRAS
+
+Título: ED(EP)-L-06.00 SOPORTE DE                    Código: AB-IYO-ED-09-233-01                  Revisión: 01
+CAÑERÍAS                                                                    Página 5 de 17
+
+             B31.1. Apéndice II “Non mandatory Rules for the Design of Safety Valve Installations”.
+
+       (2)   Como cargas en operación se incluyen entre otras condiciones como : puesta en marcha y
+             emergencias si existiesen.
+
+
+2.2.   Fuerzas y coeficiente de rozamiento
+
+       En aquellos soportes en los que tengan lugar desplazamientos horizontales con la consecuente
+       generación de la fuerza de rozamiento, se considerarán los siguientes coeficientes de rozamiento:
+
+                     Superficies en contacto                          Coeficiente de rozamiento
+
+                     Acero - Hormigón                                             0.45
+
+                     Acero - Acero                                                0.35
+
+                     Acero - Lubrite (T > 200 ºC)                                 0.15 (1)
+
+                     Acero - Lubrite (T < 200 ºC)                                 0.10 (1)
+
+                     Acero – Teflón                                               0.10 (1)
+
+                     Acero - Vitón                                                0.15 (1)
+
+                     Teflón- Teflón                                               0.10 (1)
+
+       (1)   En cualquier caso se seguirán las recomendaciones del Fabricante de estos materiales.
+
+
+2.3.   Cargas de diseño para estructura de badeja de cañerías
+
+       A no ser que el diseño de Stress de cañerías imponga unas condiciones de carga más restrictiva para
+       el diseño de las bandejas de cañerías, se utilizará como cargas mínimas de diseño las cargas verticales
+       y horizontales definidas en la Especificación ED(EP)-M-02.00 . Estas cargas se utilizaran para el diseño
+       preliminar de las bandejas de cañerías, no obstante dichas bandejas se comprobarán estructuralmente
+       con las cargas definitivas obtenidas del Stress analisis.
+
+       Las cargas definitivas serán determinadas por los especialistas de Stress.
+
+
+2.4.   Materiales para Soportes
+
+       Los materiales de soportes de cañerías se seleccionarán entre los listados en ASME B31.3 Apéndice A
+       y MSS-SP-58 o los indicados en Códigos equivalentes.
+
+       Los materiales de soportes de cañerías se usarán a temperaturas que estén respaldadas por Códigos
+       de Diseño dando valores de Stress admisibles.
+
+       Se asumirá que la temperatura de diseño de las partes de los soportes en contacto directo con las
+       paredes de la cañería será igual que la temperatura del fluido transportado por la cañería. Se asumirá
+       que la temperatura de diseño de las partes de los soportes que no están en contacto directo con la
+       cañería y localizados fuera del aislamiento de la línea será igual a la temperatura ambiente ó 1/3 de la
+       temperatura del fluido vehiculado por la cañería, la mayor de las dos.
+
+       Los soportes de cañerías serán de materiales adecuados para las condiciones de servicio. La TABLA 2
+       contiene los requisitos mínimos que se tendrán en cuenta a la hora de seleccionar los materiales para
+       los elementos estructurales de los soportes de cañerías que están en contacto directo con las mismas
+
+       Cuando se requieran placas de refuerzo, estas tendrán los bordes redondeados si las temperaturas de
+
+  RUIZ BRICEÑO, CORINA           COLO DEL ZOTTO,
+          MARÍA                  CARLOS AGUSTIN
+                                                                                                      11    08   09
+
+        Validación                   Aprobación          Validación                Aprobación         D      M   A
+                       E&P YPF                                                                             Fecha
+                        SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                                      Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                                      Ámbito de aplicación: E&P YPF
+                                                                      Propietario: INGENIERÍA Y OBRAS
+
+Título: ED(EP)-L-06.00 SOPORTE DE                                     Código: AB-IYO-ED-09-233-01                           Revisión: 01
+CAÑERÍAS                                                                                         Página 6 de 17
+
+      la línea están por debajo de - 29ºC y el material del soporte no es de acero inoxidable.
+
+      Cuando la temperatura de la línea sea inferior a -29ºC cualquier componente de los soportes se podrán
+      construir de acero al carbono, siempre que se asegure que la temperatura de servicio de dicho
+      componente sea superior a -29ºC. Con objeto de aprobechar al máximo el uso de acero al carbono en
+      soportes, es aconsejable la instalación de una barrera aislante térmica intermedia que garantice una
+      temperatura superior a –29ºC en determinada parte del soporte.
+
+
+                                 TABLA 2 – MATERIALES DE SOPORTES DE CAÑERIAS
+
+                                                          ELEMENTOS DE SOPORTE PARA ESPECIFICACION ASTM
+
+
+     CAÑERIA                                                ELEMENTO NO SOLDADO A LA CAÑERIA
+                              ELEMENTO SOLDADO A                                                               ELEMENTO FUERA DE L FLUJO
+                                                             PERO EN CONTACTO CON EL FLUJO
+                                 LA CAÑERÍA (4)                                                                TÉRMICO O COMPLETAMENTE
+                                                             TÉRMICO DE LA CAÑERÍA O DENTRO
+                                                                                                                 FUERA DEL AISLAMIENTO
+                                                                    DEL AISLAMIENTO
+                                                                                                                  PERFIL
+                                                                                               TONILLERIA
+                  TEMP.                                                                                             DE   Esparragos FORJAD
+   MATERIAL                  CAÑERIA   PERFIL    CHAPA        CAÑERIA     PERFIL     CHAPA     (TORNILLO CAÑERIA
+                   (°C)                                                                                          PLACA Y / Tuercas    O
+                                                                                                Y ROSCA)
+                                                                                                                  BARRA
+
+                 -29 a 343    A 53-B         A 36             A 53-B             A 36
+                                                                                                A 193/B7
+     C.S.
+                  343 a                                                                         A 194/2H
+                             A106-B      /      A516-60       A106-B        /       A516-60
+                   427
+    C.S.                                 A 516-60                                   A516-60     A 320/L7
+             -46 a -29 A333 Gr6     /             A333 Gr6                  /
+(BAJA TEMP.)                                (3)                                       (3)       A 194/2H
+    C.S.
+                                                  A 53-B G                                      A 193/B7
+(GALVANIZAD -29 a 100           No usado                                    A 36 G (2)
+                                                     (2)                                        A 194/2H
+     O)
+                                                                                                A 193/B7
+                 -29 a 343                                    A 53-B             A 36
+    1 ¼ Cr                    A 335-                                                            A 194/2H
+                                         /      A 387-11
+    ½ Mo          343 a        P11                                                             A 193/B16
+                                                             A 335-P11      /       A 387-11
+                   650                                                                         A 194/4 ó 7
+                                                                                                A 193/B7
+                 -29 a 343                                    A 53-B             A 36
+    2 ¼ Cr                    A 335-                                                            A 194/2H
+                                         /      A 387-11                                                                    A193/B7
+     1 Mo         343 a        P11                                                             A 193/B16     A53-B    A36             A668-D
+                                                             A 335-P11      /       A 387-11                                A194/2H
+                   650                                                                         A 194/4 ó 7
+                                                                                                A 193/B7
+  5 Cr - ½ Mo    -29 a 343                                    A 53-B             A 36
+                              A 335-                                                            A 194/2H
+  7 Cr - ½ Mo                            /      A 387-11
+                  343 a        P11                                                             A 193/B16
+  9 Cr – 1 Mo                                                A 335-P11      /       A 387-11
+                   650                                                                         A 194/4 ó 7
+
+ AISI 304(H&L) -29 a 343                                                                       A 193/CL2
+                                                             A 53-B (1)         A 36 (1)
+ AISI 321(H&L)                                                                                  A 320/8
+ AISI 347(H&L) -198 a -       A 312-             A240-                                          A 320/B8
+                                         /
+ AISI 316(H&L)    29           304                304                                A240-       A194/8
+ HASTELLOY                                                   A 312- 304     /
+                 343 a                                                                304       A 193/B8
+    MONEL
+                  650                                                                           A 194/8
+                 -101 a -                                                                       A 320/L7
+    3 ½ Ni                   A333-3      /      A203-D        A333-3        /        A203-D
+                   46                                                                           A 320/7
+                 -196 a                                                                         A 320/B8
+   Aluminio                    (4)       /          (4)         (4)         /           (4)
+                 200                                                                            A 194/8
+
+      Notas de la TABLA 2 :
+
+      (1) Cuando sobre cañerías de acero inoxidable, se dispongan abrazaderas de acero al carbono, éstas
+      llevarán en su parte interior (zona de contacto) una lámina fina de teflón hasta una temperatura de
+      220ºC, y de acero inoxidable para temperaturas superiores.
+
+      (2)     G Indica material galvanizado.
+
+
+
+ RUIZ BRICEÑO, CORINA                COLO DEL ZOTTO,
+         MARÍA                       CARLOS AGUSTIN
+                                                                                                                               11     08   09
+
+       Validación                      Aprobación                         Validación                         Aprobación        D      M   A
+                          E&P YPF                                                                                                   Fecha
+                            SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                       Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                       Ámbito de aplicación: E&P YPF
+                                                       Propietario: INGENIERÍA Y OBRAS
+
+Título: ED(EP)-L-06.00 SOPORTE DE                      Código: AB-IYO-ED-09-233-01                 Revisión: 01
+CAÑERÍAS                                                                     Página 7 de 17
+
+         (3)   Ensayos de impacto de acuerdo con ASTM A-370 Charpy V a -46 ºC
+
+         (4)   Preferentemente los elementos a soldar serán de la misma calidad de aleación, o equivalente, que
+               la cañería y como alternativa se podrán utilizar los indicados en la columna (excepto para aluminio).
+
+
+3.        CRITERIOS GENERALES DE DISEÑO DE SOPORTES
+
+         El soporte será confeccionado, por la Ingeniería, generalmente de acero (chapas, perfiles, tirantes,
+         etc.). La estructura de apoyo suele ser el terreno (sobre dado de hormigón, elevándose 200 mm. del
+         terreno), plataformas ó estructuras metálicas y de pavimentos de hormigón existentes elevándose 50
+         mm. del mismo, los propios recipientes (mediante cartelas previamente soldadas a los mismos), etc.
+
+         Los soportes se contruirán preferiblemente desmontables, por lo que la unión a sus estructuras de
+         apoyo será generalmente por medio de tornillos, siendo éstos de expansión cuando se instalen sobre
+         estructura de hormigón. La rosca será métrica ISO y a derechas.
+
+         Los distintos componentes de un soporte, que no estén unidos mediante tornillos, lo estarán por medio
+         de cordón de soldadura, con garganta 0.7 veces el espesor de la chapa más delgada a unir, no
+         permitiéndose el uso de remaches u otros dispositivos.
+
+         Cuando se suelde una chapa refuerzo a una cañería, para soldar sobre ella cualquier elemento de
+         transición (patín,cuna,orejeta,etc), la soldadura quedará estanca de forma que se impida la entrada de
+         humedad entre la cañería y la chapa. La chapa refuerzo, a su vez, deberá contar con una perforación
+         (testigo) de manera que se permita la ventilación de gases generados durante la soldadura,
+         procediendo posteriormente a su tapado con una masilla adecuada a las la temperaturas de operación
+         de la cañería.      Este tipo de solución NO DEBERÁ REALIZARSE sobre cañerías revestidas
+         interiormente.
+
+         Siempre que se utilicen colgantes (confeccionados de varilla) para cañerías, se dispondrán de forma
+         que su longitud pueda ser ajustada "in situ". De no ser ello posible, tal efecto se logrará por medio de
+         tensores intercalados en los mismos.
+
+         Todas las uniones atornilladas se fijarán mediante tuerca y contratuerca, las perforaciones para tornillos
+         serán de diámetro 2 mm. mayor que el de su correspondiente tornillo y a no ser que se indique otra
+         cosa se dispondrán sobre la línea de gramil de los perfiles.
+
+         Los soportes se diseñarán de forma que permitan el desmontaje de la cañería que soportan, sin
+         embargo, no se permitirán soportes que estén abrazando bridas, válvulas, etc., aunque el diseño de
+         éstos permitiera el desmontaje de estos elementos.
+
+         Cuando se diseñen soportes que necesiten estructura importante, tales como apoyo de presillas, etc.,
+         éstas se incluirán en los planos de estructura metálica, como estructura principal necesaria para
+         suportación de cañerías.
+
+         Cuando se realicen planos de estructura metálica solo para incluir soportes de cañerías, se
+         relacionarán no solo en los índices de planos de estructura metálica, sino también en los índices de
+         soportes de cañerías.
+
+         Las varillas empleadas en colgantes tendrán las siguientes dimensiones mínimas:
+
+         •     M-10 para cañerías de 2" de diámetro nominal y menores.
+
+         •     M-12 para cañerías de 3" de diámetro nominal y mayores.
+
+         Aun cuando los soportes para las cañerías de 2" y mayores, estén totalmente dimensionados de forma
+         que sea posible su prefabricación, el Contratista deberá comprobar posibles desviaciones como
+         consecuencia de las tolerancias admisibles en el montaje de la Planta, ó en su defecto construirlos de
+         forma tal que sea posible su ajuste "in situ".
+
+
+     RUIZ BRICEÑO, CORINA         COLO DEL ZOTTO,
+             MARÍA                CARLOS AGUSTIN
+                                                                                                       11    08   09
+
+          Validación                Aprobación              Validación              Aprobación         D      M   A
+                        E&P YPF                                                                             Fecha
+                        SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                      Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                      Ámbito de aplicación: E&P YPF
+                                                      Propietario: INGENIERÍA Y OBRAS
+
+Título: ED(EP)-L-06.00 SOPORTE DE                     Código: AB-IYO-ED-09-233-01                  Revisión: 01
+CAÑERÍAS                                                                   Página 8 de 17
+
+         Cuando una placa ha de ser fijada a hormigón mediante pernos de expansión y a ésta placa va soldado
+         un perfil, la soldadura entre ambos se hará siempre después de que la placa haya sido fijada al
+         hormigón.
+
+
+4.       CRITERIOS PARTICULARES EN EL DISEÑO DE SOPORTES
+
+
+4.1.     Soportes para cañerías calientes
+
+         Son los elementos vinculados al sistema de cañería en la cual la temperatura de operación es alta y se
+         encuentran aislados externamente. Se deben tener en cuentas las siguientes consideraciones:
+
+         •    Efecto de la temperatura sobre el elemento de transición y estructura del soporte.
+
+         •   Tipo de material del elemento de transición para evitar corrosiones locales por disimilitud con el
+         material base de las cañerías.
+
+         •   Tratamientos térmicos de la cañería a soportar con el fin de evitar elementos de transición
+         soldados. En el caso de ser imprescindible su uso, estos se marcarán en el isométrico, para tenerlos en
+         cuenta en la prefabricación de la misma para proceder a la soldadura de dicho elemento en el taller
+         antes de su tratamiento térmico.
+
+         •   Espesor de aislamiento en cañerías aisladas, a fin de disponer de un elemento de transición que
+         sobre salga de aquel.
+
+         •    Cuando el aislamiento es solamente para protección personal, se procederá a cortar el aislamiento
+         en los puntos de soporte en una longitud tal que permita un movimiento longitudinal de la cañería de ±
+         100 mm, en dichos puntos de soporte.
+
+
+4.2.     Soportes para cañerías frías
+
+         Son los soportes unidos al sistema de cañería en la cual la temperatura de operación es mas baja de la
+         temperatura mínima admisible del material usado regularmente para la elaboración del soporte (<29°C).
+
+         Para el diseño de soportes de cañerías frías se deben tener en cuenta las siguientes consideraciones:
+
+         Siempre que sea posible se tratará de no romper la barrera de vapor del aislamiento disponiendo el
+         elemento de transición del soporte por fuera de este aislamiento.
+
+         La cañería aislada se soportará mediante sectores de material aislante con el objetivo de interrumpir el
+         flujo térmico entre la pared del tubo y la estructura de soporte. El material aislante puede ser madera o
+         poliuretano. (ver Adenda ED(EP)-L-06.01 para los requisitos de la madera y ED(EP)-L-06.02 para los
+         requisitos del poliuretano)
+
+
+4.3.     Soportes para cañerías de plástico
+
+         Para el diseño de cañerías de plástico se deben tener en cuenta las siguientes consideraciones:
+
+         •   Dada la especial flexibilidad y poca resistencia mecánica de estas cañerías, se deben disponer los
+         soportes con vanos suficientemente cortos, teniendo en cuenta que las tensiones de trabajo deben ser
+         lo bastante pequeñas para no producir daños (fisuras, grietas, etc.) en la superficie de la cañería, que
+         rompa su barrera química.
+
+         •   Todos los elementos de transición se procurarán unirlos a la cañería por medio de abrazaderas,
+         que deben llevar en su cara interior una banda de goma para evitar que un excesivo apriete pueda
+
+     RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+             MARÍA               CARLOS AGUSTIN
+                                                                                                      11    08   09
+
+          Validación               Aprobación              Validación              Aprobación         D      M   A
+                       E&P YPF                                                                             Fecha
+                       SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                    Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                    Ámbito de aplicación: E&P YPF
+                                                    Propietario: INGENIERÍA Y OBRAS
+
+Título: ED(EP)-L-06.00 SOPORTE DE                   Código: AB-IYO-ED-09-233-01                 Revisión: 01
+CAÑERÍAS                                                                 Página 9 de 17
+
+       dañar la cañería.
+
+       •   Se procurará evitar el contacto directo de la cañería con el soporte, sobre todo en aquellos puntos
+       en los que pueda existir desplazamientos, por cuanto que un deterioro superficial de la cañería por
+       efecto del rozamiento, pueda perjudicar gravemente la integridad de la misma.
+
+       •   Aquellas cañerías en las que, bien por sus características ó por sus condiciones de operación, se
+       produzcan situaciones de excesiva elasticidad, será preciso soportarlas de forma continúa (p. ej.
+       mediante angular ligero en su parte inferior).
+
+
+4.4.   Soportes elásticos
+
+       Cuando en un punto de soporte de una cañería sea necesario permitir el movimiento vertical que en él
+       se produzca, será preciso el empleo de resortes para soportar la carga existente. Los resortes a
+       emplear serán aquellos comercializados que incorporan soportes helicoidales, reservándose el uso de
+       cualquier otro tipo de resorte (p. ej. discos) para casos muy excepcionales.
+
+       El tipo de resorte se seleccionará en base a las posibilidades reales de conexión a la cañería. Existen
+       dos tipos, básicamente diferentes, los de colgar y los de apoyar, siendo preferible el uso de los primeros
+       frente a los segundos.
+
+       La serie de resorte se seleccionará en base al movimiento que deba permitir y el tamaño del resorte se
+       seleccionará en base a la carga que deba soportar.
+
+       La selección del resorte se hará para la condición de operación de la cañería (carga y movimiento),
+       debiendo ser válidos también para las condiciones de variación, especiales, etc.
+
+       Todos los resortes vendrán tarados de fábrica en su carga de instalación y con dispositivos de bloqueo
+       adecuados que impidan su normal funcionamiento durante la prueba hidráulica. Dicho dispositivo
+       deberá ser retirado después de la prueba hidráulica y antes de la puesta en marcha.
+
+       Cuando exista gran diferencia de carga entre las situaciones de operación e instalación, deberán
+       analizarse los efectos que tal diferencia produce sobre la cañería o equipos a los que conecta en
+       situación de instalación.
+
+       Todos los resortes deberán llevar claramente indicado sobre su escala de movimientos las posiciones
+       correspondientes a la situación de frío y caliente de la cañería.
+
+       Tanto los topes para prueba hidráulica como los elementos estructurales del resorte deberán ser
+       capaces de soportar como mínimo 2,5 veces la máxima carga admisible de trabajo del resorte. Si la
+       carga de prueba hidráulica superase el valor indicado, se instalarán soportes temporales durante la
+       realización de la misma, a fin de complementar la resistencia de tales elementos.
+
+       Se instalarán resortes de carga variable siempre que la variación de carga como consecuencia del
+       movimiento esperado (movimiento x constante de rigidez del resorte) no supere el 25% en general y
+       20% para las líneas conectadas a las máquinas rotativas de la carga en operación. Si la variación de
+       carga fuese mayor a la indicada, se estudiará la instalación de resortes de carga variable o resortes de
+       carga constante.
+
+       En la instalación de resortes se hará uso de los dispositivos de regulación existentes en el resorte y/o
+       soporte, (tensores, piezas roscadas, etc.) para alcanzar la carga adecuada que viene señalada en la
+       reglilla de referencia del mismo resorte, siempre que accidentalmente se pierda su tarado de fábrica.
+
+       El recorrido total a especificar en un resorte de carga constante será el rango máximo (movimiento
+       positivo + movimiento negativo) que produzca la condición más desfavorables más una cantidad fija
+       especificada por el Proveedor seleccionado.
+
+       Las cañerías serán temporalmente soportadas durante su instalación y hasta que sus soportes
+
+
+  RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+          MARÍA               CARLOS AGUSTIN
+                                                                                                   11    08   09
+
+       Validación               Aprobación               Validación              Aprobación         D     M   A
+                    E&P YPF                                                                             Fecha
+                     SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                     Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                     Ámbito de aplicación: E&P YPF
+                                                     Propietario: INGENIERÍA Y OBRAS
+
+Título: ED(EP)-L-06.00 SOPORTE DE                    Código: AB-IYO-ED-09-233-01                 Revisión: 01
+CAÑERÍAS                                                                  Página 10 de 17
+
+       definitivos hayan sido instalados, para evitar sobrecargas en cañerías y conexiones de equipos.
+
+
+4.5.   Soportes antivibratorios
+
+       Todas las cañerías de proceso que conecten a compresores alternativos deberán someterse a estudio
+       analógico (análisis de pulsaciones) y de respuesta mecánica activa.
+
+       Tal estudio incluirá las botellas de pulsación y los equipos existentes entre el compresor y el mayor
+       recipiente colocado aguas arriba y abajo del mismo.
+
+       Elementos del circuito a considerar serán también los depósitos separadores.
+
+       Además de las consideraciones normales a tener en cuenta, para soportar líneas que conectan a
+       compresores alternativos, se tendrá presente que tanto su trazado como la disposición y naturaleza de
+       sus soportes será tal que:
+
+       c) Se minimice el nivel de pulsaciones del gas que pudiera sobrecargar al compresor y producir en la
+       cañería fuerzas difíciles de restringir con soportes convencionales.
+
+       d) Alejar las frecuencias mecánicas naturales del sistema de aquellas frecuencias acústicas del gas, a
+       fin de evitar posibles resonancias en el sistema.
+
+       Los colectores de succión y descarga de los compresores alternativos se soportarán desde el suelo
+       para favorecer la instalación de restricciones que amortigüen las vibraciones; por ello, deberán
+       disponerse lo más bajo posible.
+
+       Las líneas de succión, ínter etapas y descarga de los compresores alternativos, no se soportarán desde
+       la estructura de su cubierta cuando ésta exista.
+
+       En los puntos de soporte de las cañerías a contemplar en los estudios analógicos, se dispondrán guías
+       antivibratorias.
+
+       Se prestará particular atención al soporte de pequeñas líneas, que pudieran estar sometidas a
+       vibraciones. Las válvulas situadas en cañerías de 1 1/2" o menores que puedan estar sometidas a
+       vibraciones se rigidizarán de acuerdo con el Plano Estándar PE(EP)-L-0100.11 y se indicará la
+       necesidad de rigidización en la isométrica correspondiente.
+
+       Se prestará también particular atención al soporte de líneas de descarga de válvulas de seguridad.
+
+       En máquinas, la soportación de cañerías cuya finalidad sea la de limitar fuerzas y momentos, se
+       diseñarán para reducir al mínimo la deformación de las toberas de los mismos, también se evitará
+       asociar estas cañerías a otras para no transmitir ningún tipo de vibración.
+
+
+4.6.   Soportes deslizantes
+
+       Se tendrá en consideración los efectos de fricción en todas las superficies de contacto deslizante entre
+       cañería y soporte.
+
+       La fuerza de fricción local será el menor de los siguientes dos valores:
+
+       a)   Reacción multiplicada por el coeficiente de fricción de las superficies de contacto deslizante.
+
+       b) Reacción elástica del soporte evaluada para el desplazamiento teórico máximo de la cañería
+       (hipótesis de cañería no deslizante y soporte).
+
+       Se usarán rodillos y placas de deslizamiento para reducir la fricción.
+
+       Los rodillos serán de construcción standard y autolubricados (la superficie de contacto será de bronce
+
+
+  RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+          MARÍA               CARLOS AGUSTIN
+                                                                                                     11    08   09
+
+       Validación               Aprobación               Validación               Aprobación         D      M   A
+                    E&P YPF                                                                               Fecha
+                     SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                       Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                       Ámbito de aplicación: E&P YPF
+                                                       Propietario: INGENIERÍA Y OBRAS
+
+Título: ED(EP)-L-06.00 SOPORTE DE                      Código: AB-IYO-ED-09-233-01                 Revisión: 01
+CAÑERÍAS                                                                    Página 11 de 17
+
+         fosforado o equivalente). Las cargas verticales y transversales no excederán las recomendaciones del
+         Fabricante. Al evaluar la fuerza de fricción, se usará el coeficiente equivalente de fricción de acuerdo
+         con la información garantizada por el Fabricante.
+
+         Las placas de deslizamiento podrán ser de Teflón (resinas de fluocarbono o similares) , Lubrite (o
+         equivalente) o acero inoxidable con un adecuado acabado superficial. El material se seleccionará de
+         acuerdo con la superficie de contacto requerida. La presión especifica en las superficies de contactos
+         deslizantes estará dentro de los límites indicados por el Fabricante.
+
+         Las placas se dimensionarán y colocarán para asegurar su integridad contra agentes externos (polvo,
+         suciedad, etc.).
+
+         En particular la placa superior será de mayor tamaño que la inferior cubriendo a esta en su totalidad.
+
+         Cuando se use Teflón, la superficies de contacto de deslizamiento serán de “Teflón-Teflón” o ¨Acero
+         inoxidable-Teflón”. Las uniones entre las placas de soporte de Teflón y las partes estructurales de la
+         placa de soporte estarán de acuerdo con las recomendaciones del Fabricante.
+
+         La necesidad de instalación de sistemas de reducción de fricción y la selección de rodillos, teflón, lubrite
+         o inox se basará en consideraciones técnicas y económicas.
+
+
+5.       ELEMENTO DE TRANSICION
+
+         Es aquel dispositivo intermedio entre la cañería a soportar y el propio soporte. Este dispositivo no
+         existirá cuando la resistencia mecánica de la cañería en el punto de soporte sea comprobada por la
+         INGENIERIA y se verifique que no es necesario.
+
+         En general, no se colocarán redondos de apoyo entre la cañería, cunas ó silletas y el elemento soporte,
+         excepto para cañerías en pendiente previa aprobación de YPF.
+
+         En general, los elementos de transición más comúnmente empleados para cañerías de acero al
+         carbono, aleados ó inoxidables son los siguientes.:
+
+
+5.1.     Patines
+
+         Para líneas calientes aisladas apoyadas se usan patines para separar el tubo de la estructura de
+         soporte.
+
+         Los patines tendrán una altura de 100 mm para cañerías con espesor de aislamiento hasta 75 mm; una
+         altura de 150 mm para espesores de aislamiento hasta 125 mm o incluso mayor altura en caso de
+         aislamiento con mayor espesor. La intención es evitar la interrupción del aislamiento en el punto de
+         apoyo.
+
+         En el plano de cañerías se debe indicar claramente la diferencia de elevaciones del fondo de cañerías
+         para las aisladas y no aisladas. Verificar que la altura es suficiente para cañerías criogénicas puesto
+         que normalmente suelen requerir espesores de aislamiento mayores que las cañerías calientes.
+
+         Para diámetros entre 1" a 8" se dispondrán patines simples, para 10" a 22" se reforzarán con cartelas y
+         para diámetros mayores de 24", se dispondrá un diseño de zapata que garantice la estabilidad
+         completa de la cañería, por medio de dobles zapatas o cartelas de rigidez.
+
+         La Ingeniería encargada de ejecutar el trabajo (en adelante Ingeniería), comprobará que el espesor de
+         la cañería es suficiente y no se necesita cuna de apoyo. En estos casos las zapatas serán del mismo
+         material que la cañería y se soldará directamente.
+
+         Cuando se verifique por la Ingeniería que son necesarias cunas de apoyo se soldarán las cunas a las
+         cañerías con material igual o equivalente.
+
+
+     RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+             MARÍA               CARLOS AGUSTIN
+                                                                                                       11    08   09
+
+          Validación               Aprobación               Validación              Aprobación          D     M   A
+                       E&P YPF                                                                              Fecha
+                       SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                    Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                    Ámbito de aplicación: E&P YPF
+                                                    Propietario: INGENIERÍA Y OBRAS
+
+Título: ED(EP)-L-06.00 SOPORTE DE                   Código: AB-IYO-ED-09-233-01                Revisión: 01
+CAÑERÍAS                                                                Página 12 de 17
+
+5.2.   Cunas de apoyo
+
+       Son elementos que proporcionan una mejor distribución de cargas, evitando la fricción y/o el
+       abollamiento de la cañería. Se utilizarán para líneas aisladas ó sin aislar, directamente apoyadas ó con
+       el uso de zapatas.
+
+       En general, el tipo y empleo de cunas de apoyo de cañerías se necesitarán y seleccionarán a partir de
+       los cálculos y relación de cunas de apoyo que realice la Ingeniería, los cuáles serán comparables con
+       los indicados en el PE(EP)-L-0600.01 , para cañerías de acero al carbono, aleadas e inoxidables.
+
+       En casos no contemplados en los Planos Estándar anteriores, se podrá establecer la necesidad de
+       cunas de apoyo simple si se cumple algunas de las condiciones siguientes:
+
+       a)   La relación D/t esté comprendida entre 50 y 100.
+
+       b) Una vez descontado del espesor de la cañería la tolerancia de laminación, la corrosión y el espesor
+       necesario por presión interna, el espesor sobrante sea menor de 2 mm.
+
+       Cuando se usen anclajes direccionales, por medio de stops, se prestará especial cuidado en el
+       abollamiento de la cañería, debiéndose calcular por la Ingeniería la necesidad de uso de cuna de
+       refuerzo para resistir los momentos transmitidos a la cañería.
+
+
+5.3.   Silletas de apoyo
+
+       Para líneas aisladas o sin aislar se evitará la fricción y/o abollamiento de la cañería, originando una
+       mejor distribución de cargas, por medio del uso de silletas de apoyo con cuna simple.
+
+       Para líneas con luces entre apoyos mayores de 6 m. y espesores pequeños, se comprobará la
+       necesidad de cunas dobles abarcando los 360º de la cañería.
+
+       En general, las cañerías se reforzarán con silletas de apoyo con cuna simple abarcando 120º de la
+       cañería si se cumple la condición (a) y algunas de las condiciones (b y c) siguientes:
+
+       a)   Temperatura de la cañería mayor de 100ºC.
+
+       b)   La relación D/t sea mayor de 100.
+
+       c) Una vez descontado del espesor de la cañería la tolerancia de laminación, la corrosión y el espesor
+       necesario por presión interna, el espesor sobrante sea menor de 2mm.
+
+       Para cañerías de diámetro mayor de 36" se reforzará, siempre con silletas de apoyo con cuna simple ó
+       doble y anillos de refuerzos justificándose su cálculo.
+
+       Nota aplicable a 5.2 y 5.3
+
+       Para cunas y silletas (D) es igual al diámetro exterior de la cañería y (t) es igual al espesor comercial
+       menos tolerancia de fabricación y sobreespesor de corrosión.
+
+
+5.4.   Orejetas para colgar
+
+       Serán piezas confeccionadas de chapa y taladradas, que son soldadas directamente a la cañería.
+       Pueden ser un buen sustituto de las abrazaderas en cañerías menores de 10" de diámetro nominal,
+       pero su uso será restringido por el incremento de esfuerzos locales que produce sobre la pared de la
+       cañería, y para evitarlo se colocará normalmente chapa de refuerzo.
+
+       La chapa de refuerzo irá soldada en toda la superficie, de forma que quede estanca la cavidad formada
+       entre esta y la cañería.
+
+
+  RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+          MARÍA               CARLOS AGUSTIN
+                                                                                                   11    08   09
+
+       Validación               Aprobación              Validación              Aprobación         D      M   A
+                    E&P YPF                                                                             Fecha
+                     SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                      Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                      Ámbito de aplicación: E&P YPF
+                                                      Propietario: INGENIERÍA Y OBRAS
+
+Título: ED(EP)-L-06.00 SOPORTE DE                     Código: AB-IYO-ED-09-233-01                  Revisión: 01
+CAÑERÍAS                                                                  Página 13 de 17
+
+5.5.     Abrazaderas
+
+         Empleadas generalmente para colgar cañerías, pueden ser de dos, tres ó cuatro tornillos, según su uso
+         específico. También se emplean como componente en zapatas que no puedan ó no interese soldar
+         directamente a la cañería.
+
+         La unión por parejas de las medias abrazaderas, se hará mediante tornillos de cabeza hexagonal
+         roscados en toda su longitud y tuerca.
+
+         Cuando sobre cañerías de acero inoxidable, se dispongan abrazaderas de acero al carbono, éstas
+         llevarán en su parte interior (zona de contacto) una lámina fina de acero inoxidable o de teflón en
+         función de la temperatura.
+
+
+5.6.     Trunnions
+
+         Confeccionados con trozos de cañería recta, se soldarán directamente sobre la cañería base como si
+         de un ramal a 90º se tratase, pero sin perforar ésta.
+
+         Especial atención se tendrá con las cañerías verticales apoyadas sobre soportes de ménsula en
+         equipos por medio de trunnions, asegurándose que el peso de los mismos es soportado por estas
+         ménsulas y no sobre la tubuladura del equipo.
+
+         Se evitará disponer placas de refuerzo en codos y en partes rectas de cañerías verticales para
+         soldadura de cualquier tipo de trunnions, siempre que el espesor del codo lo permita.
+
+         Para ello, la Ingeniería comprobará que el espesor de la cañería ó codo es suficiente y no se necesita
+         placa de refuerzo.
+
+         En estos casos la cañería para trunnion será del mismo material o equivalente que el de la cañería ó
+         codos y se soldará directamente.
+
+         Cuando se verifique por la Ingeniería que son necesarias placas de refuerzo, se soldará la placa a la
+         cañería ó codo con material igual o equivalente y en estos casos los trunnions serán siempre soldados
+         a la placa refuerzo con cañerías de acero al carbono.
+
+         En el caso de disponer placas de refuerzo en codos y cañerías verticales se justificará su necesidad
+         con los cálculos necesarios.
+
+         Los agujeros de ventilación, en cunas, placas de refuerzo de codos en trunnions y trunnions, serán
+         sellados con masilla adecuada a las temperaturas de operación de la cañería.
+
+         A no ser que se indique otra cosa, los elementos del soporte que hayan de ser soldados directamente a
+         una cañería serán del mismo o equivalente material que la cañería.
+
+
+5.7.     Dispositivos especiales
+
+         Cuando la naturaleza, disposición, etc., tanto de la cañería a soportar como del soporte así lo requiera,
+         podrán realizarse dispositivos especiales (generalmente confeccionados con chapas, angulares y/o
+         tubos) que cumplan la misión de un elemento de transición.
+
+
+6.       CRITERIOS PARA LA UBICACION DE SOPORTES
+
+         La situación de soportes de cañerías se establecerá en base a los siguientes criterios:
+
+         Proximidad de estructura existente sobre ó desde la cual se pueda colocar el dispositivo soporte.
+
+
+     RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+             MARÍA               CARLOS AGUSTIN
+                                                                                                      11    08   09
+
+          Validación               Aprobación             Validación              Aprobación          D      M   A
+                       E&P YPF                                                                             Fecha
+                       SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                      Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                      Ámbito de aplicación: E&P YPF
+                                                      Propietario: INGENIERÍA Y OBRAS
+
+Título: ED(EP)-L-06.00 SOPORTE DE                     Código: AB-IYO-ED-09-233-01                 Revisión: 01
+CAÑERÍAS                                                                   Página 14 de 17
+
+         De requerirse estructura propia, ésta será lo más reducida posible.
+
+         Posibilidad de establecer un soporte común para varias cañerías.
+
+         Que la distancia entre soportes adyacentes de la misma cañería no cause en ésta valores de tensión
+         superiores a los admisibles por el Código que las contempla.
+
+         Que esté lo más próximo posible a puntos donde exista una concentración de cargas (válvulas, filtros,
+         etc.).
+
+         Sin embargo, esta aproximación evitará disponer soportes en válvulas o bridas de forma que el
+         desmontaje y mantenimiento de éstas no signifique el desmontaje del soporte.
+
+         Todas las cañerías entrando o saliendo de unidades, se anclarán en el pórtico más cercano al Límite de
+         Batería para facilitar el cálculo por separado hacía adentro de la unidad y hacía afuera.
+
+         Que esté lo más próximo posible a puntos donde se produzca un cambio brusco de dirección en la
+         cañería.
+
+         Que su diseño se ajuste a lo previsto en las hipótesis tenidas en cuenta para el estudio de la cañería
+         desde el punto de vista de expansiones ó contracciones térmicas.
+
+         Que reciba el mínimo de influencias posibles causadas por dilatación ó contracción de la cañería
+         cuando éstas tengan lugar.
+
+         Que limite la acción de la cañería sobre los equipos a los que conecte, de forma que los esfuerzos
+         ocasionados sobre las conexiones, estén dentro de los valores admitidos por el Fabricante de los
+         equipos.
+
+         Que en caso de desconexión de equipos por motivos de mantenimiento, se requiera un mínimo de
+         soportes temporales.
+
+         Que puedan ser razonablemente inspeccionables para poder asegurarse que su funcionalidad
+         permanece a lo largo del tiempo.
+
+         Especial consideración se tendrá con lo siguiente:
+
+         a)   Situación de los resortes en lo que respecta a la orientación de su escala, para que sea visible.
+
+         b) El dispositivo soporte no interrumpirá espacios libres requeridos para el mantenimiento, operación
+         de válvulas, equipos motores, etc.
+
+
+7.       PINTURA
+
+         Todos los soportes serán pintados de acuerdo con la Especificación de pintura de estructura metálica.
+         (Ver Especificación ED(EP)-B-06.00 y PE(EP) B-0600.01).
+
+
+8.       PLANOS DE SOPORTES
+
+
+8.1.     General
+
+         La Ingeniería diseñará los soportes estándar y especiales de acuerdo a esta Especificación teniendo en
+         cuenta una correcta selección, situación y funcionamiento para indicarlos en los propios planos de
+         plantas de cañerías y en su caso también estarán indicados en el índice de soportes.
+
+         Se diseñarán los soportes necesarios para cañerías de 2" y mayores. El soportado de cañerías de 1½"
+         y menores se realizará en obra por el Contratista de Soportes, excepto cuando se calculen por stress y
+
+     RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+             MARÍA               CARLOS AGUSTIN
+                                                                                                      11    08    09
+
+          Validación               Aprobación              Validación              Aprobación         D      M   A
+                       E&P YPF                                                                             Fecha
+                       SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                      Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                      Ámbito de aplicación: E&P YPF
+                                                      Propietario: INGENIERÍA Y OBRAS
+
+Título: ED(EP)-L-06.00 SOPORTE DE                     Código: AB-IYO-ED-09-233-01                 Revisión: 01
+CAÑERÍAS                                                                   Página 15 de 17
+
+         se necesite una soportación más específica, en cuyo caso deberán ser diseñados como en las cañerías
+         de 2" y mayores.
+
+         Los soportes para cañerías 1½" y menores de inoxidable, aleadas y con tratamiento térmico serán igual
+         a las 2" y mayores.
+
+         Cuando se usen soportes de resorte, la Ingeniería indicara en el plano de resortes al menos lo
+         siguiente:
+
+         1. Desplazamiento necesario calculado.
+
+         2. Recorrido máximo del resorte.
+
+         3. Medida o longitud para montaje en frío.
+
+         4. Número o modelo y marca elegidos.
+
+         5. Tipo de resorte (carga constante ó variable).
+
+
+8.2.     Relación de soportes estándar aplicables al proyecto
+
+         Esta relación se denominará "Notas generales de soportes y colección de soportes estándar" la cual se
+         realizará preferiblemente en hojas de tamaño A-4 o A-3, numeradas con un solo número de plano de
+         acuerdo con lo establecido en la NRM-540 anteponiendo una portada, con carátula, nº de plano,
+         revisiones, cámpos de firma de emisión, etc.
+
+
+8.3.     Simbología
+
+         La Ingeniería utilizará para el proyecto su sistema de representación en la planta de cañerías para los
+         dispositivos de zapatas, guías, soportes, etc., así como aquellas letras significativas del tipo de
+         dispositivos de soporte, tales como anclaje direccional, brazos, etc., que sean necesarios para definir la
+         marca del mismo.
+
+         Estas marcas de identificación del tipo de dispositivo de soportes se indicarán claramente en las notas
+         generales para soportes que se incluirán el comienzo del plano denominado "Notas generales y
+         colección de soportes estándar" para la aplicación al proyecto.
+
+         En cualquier caso, las marcas de identificación de dispositivos de soportes se indicarán en los planos
+         de plantas de cañerías en la forma DA-3, SP-8, etc. los cuales se incluirán de modo correlativo de
+         acuerdo con el índice de soportes y Hojas de Datos.
+
+         Estas marcas se repetirán tantas veces como sea necesario dentro del mismo plano de planta de
+         cañerías, con indicación en las Hojas de Datos de la cantidad de soportes requeridos con la misma
+         marca, siempre que los datos de, tipo de soporte, línea, dimensiones, elevaciones. etc., serán los
+         mismos, en caso contrario se usará la numeración correlativa posterior.
+
+         Con objeto de poder identificar en la fabricación y montaje en obra los diferentes tipos de soportes, se
+         añadirá a cada marca de soporte, los tres últimos números del plano de cañerías a que corresponde, y
+         si existen con hojas, el nº de hojas, esta terminación numérica solo se indicará en taller, no en los
+         planos de planta de cañerías, colocando etiquetas o pintando en los mismos soportes la marca seguida
+         de un guión con los tres últimos números mencionados.
+
+
+9.       PREPARACION PARA EL ENVIO
+
+         Se cumplirá con lo indicado en la Especificación general de transporte “preparación para el transporte
+
+
+
+     RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+             MARÍA               CARLOS AGUSTIN
+                                                                                                     11    08   09
+
+          Validación               Aprobación               Validación             Aprobación         D     M   A
+                       E&P YPF                                                                            Fecha
+                       SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                         Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                         Ámbito de aplicación: E&P YPF
+                                                         Propietario: INGENIERÍA Y OBRAS
+
+Título: ED(EP)-L-06.00 SOPORTE DE                        Código: AB-IYO-ED-09-233-01                 Revisión: 01
+CAÑERÍAS                                                                       Página 16 de 17
+
+      de equipos y materiales” (ED(EP)-B-01.00 )
+
+
+10.   DOCUMENTO DE REFERENCIA
+
+
+10.1. Especificaciones de YPF
+
+      ED(EP)-B-01.00 ................ Preparación para el transporte de equipos y materiales
+
+      ED(EP)-M-01.00 ................ Estructuras de acero
+
+      ED(EP)-M-02.00 ................ Cargas para diseño de estructuras
+
+      ED(EP)-N-01.00 ................ Aislamiento de cañerías y equipos
+
+      ED(EP)-Q-01.00 ................ Estructuras de hormigón y cimentaciones
+
+      ED(EP)-L-01.00 ................ Diseño de Cañerías en Unidades de Procesos y Servicios
+
+      ED(EP)-B-06.00 ................. Especificación de Materiales y Sistemas de Recubrimiento Protector
+
+      NRM-540............................ Requisitos para la elaboración de planos y documentos
+
+
+10.2. Códigos y Normas aplicables
+
+      Todos los Códigos y Normas aquí señalados, se entiende en su última edición existente en el momento
+      de la firma del Contrato para la realización de un Proyecto.
+
+      ASME B31.1....................... Power Piping
+
+      ASME B31.3....................... Process Piping
+
+      ASME B31.4....................... Pipeline Transportation Systems For Liquid Hidrocarbons and Other Liquids
+
+      ASME B31.8....................... Gas Transmission and Distribution Piping Systems
+
+      MSS-SP-58 ........................ Pipe Hangers and Supports - Material, Design and Manufacture
+
+      MSS-SP-69 ........................ Pipe Hangers and Supports - Selection and Application
+
+      MSS-SP-89 ........................ Pipe Hangers and Supports - Fabrication and Installation Practices
+
+      API-610 .............................. Centrifugal Pumps for General Refinery Services.
+
+      NEMA SM23 ...................... Steam Turbines for Mechanical Drive Service
+
+      API 661 .............................. Air-Cooled Heat Exchangers
+
+
+10.3. Estandares de YPF
+
+      PE(EP)-L-0100.11 .............. Refuerzo lineas con vibración.
+
+      PE(EP)-L-0600.01 .............. Cunas de apoyo de cañerías. Acero al carbono, aleado e inoxidable. (3
+      hojas).
+
+      PE(EP)-B-0600.01 ............. Sistemas de aplicación de pinturas.
+
+
+
+ RUIZ BRICEÑO, CORINA          COLO DEL ZOTTO,
+         MARÍA                 CARLOS AGUSTIN
+                                                                                                        11    08   09
+
+      Validación                  Aprobación                  Validación                Aprobación      D      M   A
+                     E&P YPF                                                                                 Fecha
+                      SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                 Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                 Ámbito de aplicación: E&P YPF
+                                                 Propietario: INGENIERÍA Y OBRAS
+
+Título: ED(EP)-L-06.00 SOPORTE DE                Código: AB-IYO-ED-09-233-01                Revisión: 01
+CAÑERÍAS                                                             Página 17 de 17
+
+10.4. Listado de Adendas
+
+     ED(EP)-L-06.01 ................. Soportes de cañerías: Adenda para elementos de madera a utilizar en
+     soportes.
+
+     ED(EP)-L-06.02 ................. Soportes de cañerías:Adenda para elementos de poliuretano a utilizar en
+     soportes.
+
+
+10.5. Tablas de esta Especificación
+
+     TABLA 1- Cargas en soportes de cañerías.
+
+     TABLA 2- Materiales de soportes de cañerías.
+
+
+
+
+ RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+         MARÍA               CARLOS AGUSTIN
+                                                                                                11    08   09
+
+      Validación               Aprobación             Validación             Aprobación         D      M   A
+                   E&P YPF                                                                           Fecha
+                   SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+

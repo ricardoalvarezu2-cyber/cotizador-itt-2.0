@@ -1,0 +1,802 @@
+                                                                             J1301 Cables de Instrumentos
+Tipo: ESPECIFICACIÓN                         Ámbito: Upstream - Argentina                                                                                      Código: 11193-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                             Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+
+
+1 Índice
+
+Contenido
+1      ÍNDICE ........................................................................................................................................................................1
+2      OBJETO .....................................................................................................................................................................3
+3      ÁMBITO DE APLICACIÓN ........................................................................................................................................3
+4      CONSIDERACIONES PRINCIPALES .......................................................................................................................3
+5      ESPECIFICACIÓN .....................................................................................................................................................3
+    5.1    ESPECIFICACIÓN TÉCNICA DE CABLES CONVENCIONALES .........................................................................................3
+      5.1.1   Familias de cables de instrumentos .............................................................................................................3
+      5.1.2   Conductores individuales .............................................................................................................................4
+      5.1.3   Aislación de los conductores individuales....................................................................................................4
+      5.1.4   Componentes de los cables .........................................................................................................................4
+      5.1.5   Formaciones normalizadas ..........................................................................................................................5
+      5.1.6   Pantallas globales ........................................................................................................................................5
+      5.1.7   Cubiertas internas ........................................................................................................................................5
+      5.1.8   Funda protectora ..........................................................................................................................................5
+      5.1.9   Armaduras ....................................................................................................................................................6
+      5.1.10 Cubiertas externas .......................................................................................................................................6
+      5.1.11 Conductor de igualación de potencial ..........................................................................................................6
+      5.1.12 Parámetros eléctricos típicos .......................................................................................................................7
+    5.2    ESPECIFICACIÓN TÉCNICA DE CABLES DE COMUNICACIONES ....................................................................................7
+      5.2.1   Marcado del código YPF ..............................................................................................................................7
+      5.2.2   Resumen de códigos de YPF ......................................................................................................................8
+    5.3    PRUEBAS Y ENSAYOS .............................................................................................................................................9
+      5.3.1   General .........................................................................................................................................................9
+      5.3.2   Ensayos de fabricante sobre modelos .........................................................................................................9
+      5.3.3   Ensayos sobre cables suministrados ...........................................................................................................9
+    5.4    SUMINISTRO Y DOCUMENTACIÓN...........................................................................................................................10
+      5.4.1   Preparación para envío, embalaje y marcado ...........................................................................................10
+      5.4.2   Documentación del Proveedor ...................................................................................................................10
+6      INDICADORES, REGISTROS Y RIESGOS DEL PROCESO .................................................................................10
+    6.1        INDICADORES ......................................................................................................................................................10
+    6.2        REGISTROS .........................................................................................................................................................11
+    6.3        RIESGOS Y ACCIONES MITIGANTES ........................................................................................................................11
+7      ANEXOS Y REFERENCIAS ....................................................................................................................................11
+    7.1        ANEXOS ..............................................................................................................................................................11
+    7.2        NORMATIVA RELACIONADA ...................................................................................................................................11
+    7.3        DEFINICIONES Y ABREVIATURAS ............................................................................................................................12
+8      APROBACIÓN .........................................................................................................................................................12
+                                                                                                           BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         25/05/2017
+       GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                              GUILLERMO                                          FIL                                  03:58:00 p.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                     1 / 14
+                                                                           J1301 Cables de Instrumentos
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11193-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+  8.1        VIGENCIA ............................................................................................................................................................12
+  8.2        DISPOSICIONES GENERALES Y TRANSITORIAS ........................................................................................................12
+  8.3        HISTORIAL ...........................................................................................................................................................12
+  8.4        APROBACIÓN COLEGIADA .....................................................................................................................................12
+  8.5        CATEGORÍA DE CLASIFICACIÓN DEL ACTIVO DE INFORMACIÓN................................................................................12
+ANEXO I: HD-J1301-01 CABLES CONVENCIONALES DE SEÑAL ............................................................................13
+ANEXO II: HD-J1301-02 CABLES DE COMUNICACIONES ........................................................................................13
+ANEXO III: J1301-03 GUÍA DE SELECCIÓN DE CABLES ..........................................................................................14
+
+
+
+
+                                                                                                         BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         25/05/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                            GUILLERMO                                          FIL                                  03:58:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   2 / 14
+                                                                           J1301 Cables de Instrumentos
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11193-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+2 Objeto
+Definir las características técnicas, constructivas y de ensayo de los cables de instrumentación para señal.
+
+
+3 Ámbito de aplicación
+YPF S.A. Upstream – Argentina.
+Aplica a todos los proyectos tanto de nuevas instalaciones como modificaciones a instalaciones existentes.
+
+
+4 Consideraciones principales
+Quedan fuera del objeto específico de esta especificación:
+    a) Los cables resistentes al fuego.
+    b) Los cables de fibra óptica, que se tratan en la “J1600 Cable de Fibra Óptica (Parte General)”.
+    c) Los cables coaxiales de cualquier tipo.
+    d) Los cables de alimentación a instrumentos.
+Los cables de alimentación a instrumentos o sistemas de instrumentación (casetas, cabinas, consolas, etc.) estarán
+de acuerdo con la especificación eléctrica relacionada.
+La selección, aplicación, tendido, conexionado y asignación de tag de los cables de instrumentos no son objeto de
+este documento y se tratan en la especificación “J1300 Conexionado Eléctrico a Instrumentos”.
+
+
+5 Especificación
+
+5.1 Especificación técnica de cables convencionales
+
+5.1.1 Familias de cables de instrumentos
+En YPF los cables normalizados se engloban en cinco familias diferentes:
+         Cables Tipo 1 Cable de pares para señal (Señales: Analogicas (A) y Discretas en 24V (D))
+         Cables Tipo 2 Cable de extensión para termocuplas (TC)
+         Cables Tipo 3 Cable de ternas para señal (TR)
+         Cables Tipo 4 Cable de conductores para señales a 110-230 V (P)
+         Cables Tipo 5 Cable de pares para vías de datos (PR)
+Los cables Tipo 1, 2, 3 y 4 se definen total y constructivamente dentro de este capítulo.
+Los cables Tipo 5 son modelos especiales de catálogo, a los que se añaden características de protección adicionales
+(armadura, cubierta de PVC, etc.) descritas en el punto 5.2.
+Para cables de vías de datos diferentes a RS485/RS232 ver las especificaciones de Yacimiento Digital.
+Nota 1: este enfoque se basa en que la mayoría de los proveedores especifican los requisitos de los cables a modelos específico.
+
+
+                                                                                                         BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         25/05/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                            GUILLERMO                                          FIL                                  03:58:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   3 / 14
+                                                                           J1301 Cables de Instrumentos
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11193-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+Las aplicaciones genéricas de cada familia de cables en Instrumentación se describen en la especificación “J1300
+Conexionado Eléctrico a Instrumentos”.
+
+5.1.2 Conductores individuales
+En los cables convencionales e hilos de drenaje, los conductores serán semiflexibles o “stranded” (Clase 2) y con las
+siguientes formaciones en función de su sección:
+
+                                                                          Tabla 5.1.2: Conductores Individuales
+                   Sección del conductor                           0,50 mm2                        0,75 mm2                            1,50 mm2                            2,50 mm2
+                   Formación conductor                             7 x 0,30 mm                     7 x 0,37 mm                         7 x 0,53 mm                         7 x 0,67 mm
+En los cables de extensión de termopares, los conductores de señal serán rígidos (Clase 1) con secciones de 1,31
+mm2 (AWG 16) en cables simples y de 0,5 mm2 (AWG 20) en multipares.
+El material base de los conductores convencionales será cobre electrolítico recocido.
+En los cables de extensión tipo J los materiales de los conductores serán hierro y constatan.
+En los cables de extensión tipo K los materiales de los conductores serán cromel y alumel.
+En los cables de extensión tipo T los materiales de los conductores serán cobre y constantán.
+
+5.1.3 Aislación de los conductores individuales
+El material de aislación de todos los conductores de cables Tipo 1, 2 y 3 será PVC.
+El espesor de la aislación será de 0,5 mm en todos los casos.
+El grado de resistencia térmica del PVC será:
+              Tipos 1 y 3                                90 ºC
+              Tipo 2:                                    105 ºC
+Los colores de la aislación dependen del servicio de los cables:
+
+                                              Tabla 5.1.3-2: Colores normalizados de los aislación de conductores
+                                                                   Tipo 1                 Tipo 2J                    Tipo 2K                    Tipo 2T                   Tipo 3
+                                 Componente                    Pares                  Pares                      Pares                       Pares                   Ternas
+                                  Colores por                  Blanco           /     Blanco(+)                  Amarillo(+)                 Azul    (+)             Azul, Rojo
+                                  componente                   Negro                  Rojo(-)                    Rojo(-)                     Rojo(-)                 y Negro
+El criterio anterior de colores de aislación para cables Tipo 2 responde a la norma ANSI MC 96.1
+
+5.1.4 Componentes de los cables
+Los cables normalizados de YPF están basados en los siguientes componentes:
+         Cables Tipo 1       Pares trenzados
+         Cables Tipo 2       Pares trenzados y apantallados
+         Cables Tipo 3       Ternas trenzadas y apantalladas
+
+
+                                                                                                         BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         25/05/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                            GUILLERMO                                          FIL                                  03:58:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   4 / 14
+                                                                           J1301 Cables de Instrumentos
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11193-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+Las trenzas de los componentes tendrán un paso de 50 mm entre conductores de un mismo componente y de 4
+espiras por metro entre distintos componentes de un mismo multipar.
+En los multipares Tipo 2 (termopares) y Tipo 3 (RTDs) cada componente tendrá su propia pantalla individual.
+Las pantallas individuales de cada componente serán de aluminio-poliéster de 0,032 mm de espesor, cobertura del
+100% y solape mínimo del 25%. El hilo de drenaje de la pantalla será estañado de 7x0.4 mm.
+Los cables de un par o terna no requieren marcado específico de cada componente. El resto sí lo requiere.
+Los componentes de los multipares irán marcados de modo correlativo cada 300 mm con el número que les
+corresponda, comenzando por el 1: 01, 02, 03, etc. (pares y ternas) o 1, 2, 3, etc. (conductores).
+
+5.1.5 Formaciones normalizadas
+Los distintos tipos de cables se encuentran normalizados en las siguientes formaciones:
+
+                                                               Tabla 5.1.5: Formaciones normalizadas de cables
+     Cable                 1 Señal                       2 Señales                       6 Señales                       12 Señales                        18 Señales                        24 Señales
+     Tipo 1         1 x 2 x AWG 16                  2 x 2 x AWG 20                  6 x 2 x AWG 20                  12 x 2 x AWG 20                   18 x 2 x AWG 20                   24 x 2 x AWG 20
+     Tipo 2         1 x 2 x AWG 16                  No disponible                   6 x 2 x AWG 20                  12 x 2 x AWG 20                   18 x 2 x AWG 20                   24 x 2 x AWG 20
+
+     Tipo 3         1 x 3 x AWG 16                  No disponible                   6 x 3 x AWG 20                  12 x 3 x AWG 20                   No disponible                     No disponible
+
+     Tipo 5         2 x 3 x AWG 22                  No disponible                   No disponible                   No disponible                     No disponible                     No disponible
+
+El uso de otras formaciones requerirá la autorización de YPF.
+
+5.1.6 Pantallas globales
+Todos los cables y multipares tendrán pantalla global (Se indicara en la DBD la necesidad de pantallas individuales).
+Serán iguales a las definidas para componentes individuales. Se instalará con independencia de si los componentes
+individuales del multipar cuentan o no con pantalla individual.
+
+5.1.7 Cubiertas internas
+Todos los cables y multipares contarán con una cubierta interna o de asiento de armadura.
+Esta cubierta será de PVC estanca y resistente al aceite mineral e hidrocarburos. Los grados de resistencia térmica
+serán los mismos que para la aislación de conductores.
+El espesor de la cubierta interna será de 1 mm en cables individuales y de entre 1 y 1,2 mm en multipares.
+El color de la cubierta interna será el mismo que tenga la cubierta externa.
+
+5.1.8 Funda protectora
+Solo cuando se solicite expresamente, se incluirá una funda protectora contra agresivos químicos sobre la cubierta
+interna y bajo la armadura de los cables destinados a tendidos enterrados.
+Esta funda tendrá entre 1 y 1,3 mm de espesor en función del diámetro del cable.
+
+                                                                                                         BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         25/05/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                            GUILLERMO                                          FIL                                  03:58:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   5 / 14
+                                                                           J1301 Cables de Instrumentos
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11193-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+Existen materiales no metálicos (Teflón, Kevlar, etc.) disponibles para la ejecución de estas fundas, aunque los
+mismos no son válidos para cualquier contaminante y el mismo debe ser especificado a priori.
+
+5.1.9 Armaduras
+Todos los cables normalizados de YPF serán armados.
+Las armaduras serán siempre de corona de hilos de acero recocido galvanizado AISI 1006, con un grado de
+cobertura no inferior al 90%. Para formaciones con OD > 15 mm incluirán además contraespira de fleje.
+El diámetro de los hilos de la armadura contarán como mínimo con:
+
+                                                                                        Tabla 5.1.9: Armaduras
+                                        Tipo de cable                         Cable Tipo 1                           Cable Tipo 2                          Cable Tipo 3
+                                            Individual                             0,6 mm                                 0,6 mm                                0,6 mm
+                                          Multipares                               0,8 mm                                 0,8 mm                                0,8 mm
+
+5.1.10 Cubiertas externas
+Serán todas de PVC, estancas y resistentes al aceite mineral e hidrocarburos (según la norma VDE 0472 Part. 803
+Test B para alifáticos y las normas CEI 20.11 / UIC 865 OR para aromáticos).
+Los grados de resistencia térmica serán los mismos que para la aislación de conductores.
+Los espesores y colores de las cubiertas externas serán los siguientes:
+
+                                                                                     5.1.10: Cubiertas Externas
+                                  Tipo de cable                                               Espesor cubierta                                               Color de cubierta
+                   Cables individuales Tipos 1, 2 y                                                1,2 a 1,4 mm                                 RAL 7030
+                                  3
+                                                                                                                                                RAL 5015 (Solo Seguridad
+                        Multipares Tipos 1, 2 y 3                                                  1,8 a 2,2 mm                                 intrínseca )
+
+
+En los cables Tipo 2, las cubiertas externas incluirán una banda longitudinal del mismo color que la aislación del
+terminal positivo del termopar (ver tabla 5.1.3-2)
+En el DBD del proyecto se indicará si hay que aplicar otros colores de cubierta a fin de respetar los criterios
+existentes a este respecto y evitar inconsistencias en el tendido de cables.
+Todas las cubiertas serán no propagadoras del incendio según IEC 60332-3.
+Las cubiertas serán de baja emisión de halógenos (HCl < 15%) y emisión reducida de humos.
+Las cubiertas irán marcadas de acuerdo a lo indicado en el apartado 5.3 de esta especificación.
+
+5.1.11 Conductor de igualación de potencial
+No se incluirá en ningún cable, salvo que se pida explícitamente en la hoja de datos.
+Cuando se solicite, será un conductor de cobre de 1,5 mm2 Clase 2 (7 x 0,52) por cada componente del cable o
+multipar con aislación de PVC de 0,4 mm de espesor.
+
+                                                                                                         BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         25/05/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                            GUILLERMO                                          FIL                                  03:58:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   6 / 14
+                                                                           J1301 Cables de Instrumentos
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11193-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+En componentes apantallados individualmente, este conductor irá siempre fuera de la pantalla.
+Su color de aislación será amarillo con franjas verdes.
+
+5.1.12 Parámetros eléctricos típicos
+Los valores de resistencia de las distintas secciones de cable de cobre serán:
+         Cable de 0,5 mm2       39  /Km
+         Cable de 1,5 mm2       12.1  /Km
+         Cable de 2,5 mm2       7.41  /Km
+La capacidad de los componentes no excederá de 150 nF/Km.
+La inductancia de los componentes no excederá de 1 mH/Km.
+La relación L/R de los multipares de cobre de seguridad intrínseca se mantendrá inferior a 50 H/.
+El grado de aislación de cualquier par de conductores y/o pantallas entre sí será como mínimo de 300 V.
+
+
+5.2 Especificación técnica de cables de comunicaciones
+Dentro de los cables utilizados para comunicaciones, existen ciertos casos de uso frecuente, a titulo referencial se
+indica el modelo Belden de uso frecuente:
+          Belden 9182 para comunicaciones RS 232 / 485 Half Duplex.
+          Belden 9729 para comunicaciones RS 232 / 485 Full Duplex.
+En lo posible, se tratará de aplicar el cable apto para Full Duplex, ya que en muchas ocaciones no se conoce el tipo
+de transmisión RS485 (Half Duplex o Full Duplex). Marcado de cubiertas
+
+5.2.1 Marcado del código YPF
+Todos los cables llevarán marcado sobre la cubierta, a intervalos de 1000 mm y de modo indeleble, su código
+identificativo según esta Especificación (más los que prescriba la normativa y/o el fabricante).
+Este código es el que aparece en las Hojas de Datos de cada tipo de cable y tiene la siguiente estructura:
+                                                                                    Tipo N1N2 – [F]- [EEx]-[S]
+
+                                                                                          Tabla 5.3.1: Marcado
+                                                                                                                                                                                      Aplica
+                   Parámetro                                                   Significado y valores posibles
+                                                                                                                                                                                     cuando
+                                           1 = Cable de pares trenzados de cobre
+                                           2 = Cable de extensión de termopares
+                   N1                      3 = Cable de ternas trenzadas de cobre                                                                                               Siempre
+                                           4 = Cable de conductores de cobre no paralelos
+                                           5 = Cable de comunicaciones
+                   N2                      J / K / T para indicar tipo de termopar asociado                                                                                     N1 = 2
+
+
+                                                                                                         BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         25/05/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                            GUILLERMO                                          FIL                                  03:58:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   7 / 14
+                                                                           J1301 Cables de Instrumentos
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11193-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+                                           -1 para Belden 9182 (RS-232/485 Half Duplex).
+                                           -2 para Belden 9729 (RS-232/485 Full Duplex)                                                                                         N1 = 5
+                                           -3 para Belden 8760 (Multiplexores de campo)
+                                           Nº de componentes: 01 / 02 / 06 / 12 / 18 / 24 según tabla 2.5-I                                                                     N1 = 1, 2, 3 o
+                        F
+                                                                                                                                                                                4
+                        EEx                Cuando aparezca este literal, indica cable de seguridad intrínseca                                                                   N1 = 1, 2 o 3
+                                           A = sección 1,5 mm2 en todos los conductores de señal (incluidos
+                                           multipares)
+                        S                                                                                                                                                       N1 = 3 o 4
+                                           B = sección 2,5 mm2 en todos los conductores de señal (incluidos
+                                           multipares)
+El objeto del código anterior es permitir la identificación de cualquier bobina o tramo de cable de instrumentos de cara
+a su utilización.
+Ejemplos de aplicación:
+Tipo 1-12-EEx Cable de 12 pares de seguridad intrínseca
+Tipo 2K-24                    Cable de extensión para termopares tipo K de 24 pares de no seguridad intrínseca
+Tipo 3-06-EEx Cable de 6 ternas de seguridad intrínseca
+Tipo 3-06                     Cable de 6 ternas de no seguridad intrínseca y sección estándar (0,5 mm2)
+Tipo 3-06-A                   Cable de 6 ternas de no seguridad intrínseca y sección aumentada (1,5 mm 2)
+Tipo 5-1                      Cable para vías de datos RS 232 basado en modelo Belden 9182.
+No todas las combinaciones de parámetros incluidos en la tabla del punto 4.1.2 son viables ni están incluidas entre
+los cables normalizados (p.e. los cables tipo 3A o Tipos 4A y 4B no tienen ejecución EEx).
+
+5.2.2 Resumen de códigos de YPF
+Los códigos correspondientes a los cables convencionales normalizados en YPF son los siguientes:
+
+                                       Tabla 5.3.2: Resumen de códigos y especificaciones de cables normalizadas
+                                       Tipo 1                          Tipo 2K (ver nota)                                               Tipo 3                                           Tipo 5
+                                Pares de cobre                         Cables extensión                                        Ternas de cobre                                    Comunicacion
+                                                                             T/C
+                                                                                               No                                                          No EEx
+                              EEx               No EEx              EEX                                        EEx                    No EEx                                    T5 – 1 / T5 - 2
+                                                                                               EEx                                                         AWG 16
+                FORMACIONES
+
+
+
+
+                              T1-01-            T1-01               T2K-01-EEx                 T2K-            T3-01-                 T3-01                                     -----
+                              EEx                                                              01              EEx
+                              T1-02-            T1-02               -----                      -----           -----                  -----                -----                -----
+                              EEx
+                              T1-06-            T1-06               T2K-06-EEx                 T2K-            T3-06-                 T3-06                T3-06-A              -----
+                              EEx                                                              06              EEx
+
+                                                                                                         BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         25/05/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                            GUILLERMO                                          FIL                                  03:58:00 p.m.
+
+                     Autor                                      Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   8 / 14
+                                                                           J1301 Cables de Instrumentos
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11193-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+                         T1-12-                 T1-12               T2K-12-EEx                 T2K-            T3-12-                 T3-12                T3-12-A              -----
+                         EEx                                                                   12              EEx
+                         T1-18-                 T1-18               T2K-18-EEx                 T2K-            -----                  -----                -----                -----
+                         EEx                                                                   18
+                         T1-24-                 T1-24               T2K-24-EEx                 T2K-            -----                  -----                -----                -----
+                         EEx                                                                   24
+El uso de otra formación requerirá la autorización de YPF.
+
+
+5.3 Pruebas y ensayos
+
+5.3.1 General
+En este apartado se definen las pruebas mínimas exigibles para los cables de instrumentación. En casos especiales
+(p.e. cables resistentes al fuego) o cuando lo solicite YPF, podrán aplicarse otras.
+Las pruebas se referencian por normas internacionales, pero el fabricante será responsable de aplicar también
+cualquier norma nacional o transposición de normas internacionales exigidas por la legislación local.
+
+5.3.2 Ensayos de fabricante sobre modelos
+Son los que se realizan sobre cada tipo genérico de cable antes de su comercialización y que no requieren ser
+repetidos en tanto no se modifiquen las características constructivas o el proceso de fabricación del mismo.
+Los ensayos serán según IEC 60811 e incluirán como mínimo:
+    a) Part 1 Section 1: Test for determining mechanical properties.
+    b) Part 1 Section 2: Thermal aging methods.
+    c) Part 1 Section 4: Test at low temperatures.
+Otros ensayos especiales:
+    a) Medidas de cables de extensión de T/C según IEC 60584-3.
+    b) Resistencia al hidrocarburos de las cubiertas s/ VDE 0472 Part 803 Test B y CEI 20.11.
+    c) Control del galvanizado de la armadura.
+    d) Resistencia óhmica de los hilos de drenaje.
+    e) Resistencia a la flexión y termoplasticidad.
+    f)     Dimensiones geométricas y peso.
+    g) Comportamiento al fuego: según norma aplicable (por defecto no propagador del incendio).
+Todos los ensayos deben estar documentados y disponibles para los inspectores de YPF.
+
+5.3.3 Ensayos sobre cables suministrados
+Se realizarán sobre cualquier bobina suministrada a YPF como garantía de su validez para el servicio.
+Los resultados de estos ensayos se recogerán en un acta de pruebas que se entregará junto con el cable.
+                                                                                                         BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         25/05/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                            GUILLERMO                                          FIL                                  03:58:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   9 / 14
+                                                                             J1301 Cables de Instrumentos
+Tipo: ESPECIFICACIÓN                         Ámbito: Upstream - Argentina                                                                                      Código: 11193-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                             Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+Los ensayos a realizar para cables de señal son:
+      a) Ensayo de tensión de c.a.
+      b) Medida de resistencia de aislación.
+      c) Medida de resistencia óhmica.
+      d) Rigidez dieléctrica mediante spark test en continuo.
+      e) Medida sobre bobina de la capacidad e inductancia mutua.
+      f)     Control dimensional.
+      g) Comprobación del marcado e identificación.
+      h) Cualquier otra prueba que solicite YPF o su Ingeniería.
+En cables de comunicaciones adquiridos a terceros y armados por el proveedor se realizarán pruebas de continuidad
+y aislación luego del proceso de armado y cobertura del cable original, para verificar que no se ha dañado durante el
+mismo. Se medirá también la atenuación a las frecuencias de trabajo.
+
+
+5.4 Suministro y documentación
+
+5.4.1 Preparación para envío, embalaje y marcado
+Estarán de acuerdo con la especificación AB-IYO-ED-09-199-01 “ED(EP)-B-01.00 Preparación para el Transporte de
+Equipos y Materiales”.
+Los cables se suministrarán en bobinas de las longitudes indicadas en las hojas de datos, convenientemente
+identificadas y protegidas para el transporte con el código de YPF.
+Cada bobina de cable según llevará marcado su metraje total, nombre del fabricante y código YPF.
+
+5.4.2 Documentación del Proveedor
+Para los cables adquiridos por preciario la única documentación a entregar serán los certificados de pruebas
+particulares asociados a cada tipo de cable adquirido en el pedido según se indican en el punto 5.5.
+Para los cables especiales no incluidos en esta especificación se entregará además una hoja de datos (a ser posible
+usando alguno de los formatos de YPF) similar en detalle a las incluidas con esta adenda.
+Toda la documentación de carácter particular asociada al pedido deberá estar previamente aprobada por la
+Ingeniería responsable del proyecto.
+
+
+6 Indicadores, registros y riesgos del proceso
+
+6.1 Indicadores
+N/A
+
+
+
+                                                                                                           BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         25/05/2017
+      GALANTERNIK, NICOLAS                                  VERNA, FACUNDO
+                                                                                                              GUILLERMO                                          FIL                                  03:58:00 p.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   10 / 14
+                                                                             J1301 Cables de Instrumentos
+Tipo: ESPECIFICACIÓN                         Ámbito: Upstream - Argentina                                                                                      Código: 11193-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                             Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+
+6.2 Registros
+N/A
+
+
+6.3 Riesgos y acciones mitigantes
+N/A
+
+
+7 Anexos y referencias
+
+7.1 Anexos
+   N°                                                                                                        Nombre
+    I          HD-J1301-01 Hoja de Datos de Cables Convencionales de Señal
+    II         HD-J1301-02 Hoja de Datos de Cables de Comunicaciones
+   III         Guía de especificación de cables
+
+
+7.2 Normativa relacionada
+    Categoría                                                                             Título                                                                                        Código
+
+                                  J1300 Conexionado Eléctrico a Instrumentos
+ Normativa
+ Interna YPF                      ED(EP)-B-01.00 Preparación para el Transporte de Equipos y
+                                                                                                                                                                   AB-IYO-ED-09-199-01
+                                  Materiales
+ Normativa
+                                  N/A                                                                                                                              N/A
+ Externa
+ Normativa
+                                  ED(EP)-J-13.01 Cables de Instrumentos                                                                                            AB-IYO-ED-09-069-01
+ Derogada
+                                  Temperature Measurement Thermocouples.                                                                                           ANSI/ISA MC 96.1
+                                  Thermocouples – Part 3: Extension and compensating cables –                                                                      IEC 60584-3 / BS 4973 Part.
+                                  Tolerances and identification system.                                                                                            30
+                                  Tests on Electric Cables Under Fire Conditions.                                                                                  IEC 60332-3
+ Otras
+                                  Test on Gases Evolved During Combustion of Materials from
+ referencias                                                                                                                                                       IEC 60754
+                                  Cables
+                                  Conductors of insulated cables                                                                                                   IEC 60228
+                                  Resistance to Oil and Acids                                                                                                      VDE 0472 Part. 803 Test B
+                                  Tests for electric cables under fire conditions. Circuit integrity                                                               IEC 60331
+
+                                                                                                           BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         25/05/2017
+        GALANTERNIK, NICOLAS                                VERNA, FACUNDO
+                                                                                                              GUILLERMO                                          FIL                                  03:58:00 p.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   11 / 14
+                                                                             J1301 Cables de Instrumentos
+Tipo: ESPECIFICACIÓN                         Ámbito: Upstream - Argentina                                                                                      Código: 11193-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                             Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+
+    Categoría                                                                             Título                                                                                        Código
+                                  Insulating, sheathing and covering materials for low-voltage
+                                                                                                                                                                   CEI 20.11 = EN 50363
+                                  energy cables
+                                  Common Test Methods for Insulating and Sheathing Materials of
+                                                                                                                                                                   IEC 60811
+                                  Electric and Optical Cables
+
+
+7.3 Definiciones y abreviaturas
+         Término                        Abreviatura                                                                                 Descripción
+ N/A                                    N/A                          N/A
+
+
+8 Aprobación
+
+8.1 Vigencia
+Esta normativa entrará en vigencia a partir de la fecha de su aprobación.
+Los abajo firmantes asumen la responsabilidad de implantar, controlar el cumplimiento y actualizar el presente
+documento cada vez que fuera necesario.
+
+
+8.2 Disposiciones generales y transitorias
+N/A
+
+
+8.3 Historial
+       Estado                      № Revisión                    Fecha Aprobación                                                                   Observaciones
+
+ Original                         0.0                            Ver fecha en pie de
+                                                                 firmas.
+
+
+8.4 Aprobación colegiada
+N/A
+
+
+8.5 Categoría de Clasificación del Activo de Información
+YPF - Privada: información disponible para los empleados de la compañía y terceros (ej. contratistas) como parte de
+la rutina del negocio. Su difusión se hace en base al conocimiento para poder operar. Su difusión no autorizada
+podría afectar la consecución de objetivos particulares de determinadas áreas de la compañía.
+
+
+
+                                                                                                           BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         25/05/2017
+      GALANTERNIK, NICOLAS                                  VERNA, FACUNDO
+                                                                                                              GUILLERMO                                          FIL                                  03:58:00 p.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   12 / 14
+                                                                           J1301 Cables de Instrumentos
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11193-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+Anexo I: HD-J1301-01 Cables Convencionales de Señal
+
+Anexo II: HD-J1301-02 Cables de Comunicaciones
+Estos formularios se encuentran como archivos editables en la biblioteca Anexos Online de SGN http://corporacion-
+sgn/sites/sgn/Anexos/Forms/AllItems.aspx
+
+
+
+
+                                                                                                         BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         25/05/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                            GUILLERMO                                          FIL                                  03:58:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 13 / 14
+                                                                           J1301 Cables de Instrumentos
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11193-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+Anexo III: J1301-03 Guía de selección de cables
+
+
+
+
+El diagrama es un esquema simplificado para la especificación de cables según la aplicación. El mismo es una guía
+tentativa y de ninguna manera reemplaza las especificaciones descriptas en “J1301 Cables de Instrumentos”.
+Los cuadros azules son los datos de entrada para la aplicación particular, mientras los rojos son definiciones para la
+especificación del cable.
+En las hojas de datos (ANEXOS I y II) de referencia se encuentran marcados en amarillo los campos los cuales
+deben ser modificados para la aplicación particular.
+
+
+
+
+                                                                                                         BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         25/05/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                            GUILLERMO                                          FIL                                  03:58:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 14 / 14
+

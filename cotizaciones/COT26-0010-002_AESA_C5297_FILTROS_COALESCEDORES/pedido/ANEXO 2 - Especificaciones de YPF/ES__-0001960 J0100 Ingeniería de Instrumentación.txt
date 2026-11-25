@@ -1,0 +1,1399 @@
+                                                       #Título                     J0100 Ingeniería de
+                                                                                   Instrumentación
+#Tipo                                                   Especificación            #Código                 ES__-0001960
+#Fecha de Vigencia                                      06/09/2023                #Versión                2.1
+#Activo de la información                               YPF - Privada
+#Proceso                                                21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+
+
+1 Índice
+Contenido
+1      ÍNDICE .......................................................................................................................................................... 1
+2      OBJETO........................................................................................................................................................ 2
+3      ÁMBITO DE APLICACIÓN........................................................................................................................... 3
+4      CONSIDERACIONES PRINCIPALES ......................................................................................................... 3
+5      ESPECIFICACIÓN ........................................................................................................................................ 4
+    5.1    CRITERIOS GLOBALES DE DISEÑO ............................................................................................................ 4
+      5.1.1 Arquitecturas de control y seguridad ................................................................................................ 4
+      5.1.2 Tecnologías de transmisión ............................................................................................................. 5
+      5.1.3 Sistemas de control por bus de campo ............................................................................................ 5
+      5.1.4 Instalación de instrumentos en áreas clasificadas ........................................................................... 5
+      5.1.5 Instalación de instrumentos en áreas no clasificadas ...................................................................... 5
+      5.1.6 Protección ambiental de los equipos ............................................................................................... 5
+      5.1.7 Compatibilidad electromagnética ..................................................................................................... 6
+      5.1.8 Unidades de ingeniería..................................................................................................................... 6
+      5.1.9 Simbología gráfica ............................................................................................................................ 6
+      5.1.10   Codificación de instrumentos y señales ....................................................................................... 7
+      5.1.11   Secuencia de alarmas .................................................................................................................. 7
+    5.2    TAGS DE INSTRUMENTOS Y SEÑALES ........................................................................................................ 7
+      5.2.1 Criterios generales ........................................................................................................................... 7
+      5.2.2 Sistemas de analizadores ................................................................................................................ 8
+      5.2.3 Elementos de caudal ........................................................................................................................ 9
+      5.2.4 Elementos de nivel ........................................................................................................................... 9
+      5.2.5 Elementos de presión ....................................................................................................................... 9
+      5.2.6 Elementos de temperatura ............................................................................................................. 10
+      5.2.7 Válvulas de control, corte y autorreguladas ................................................................................... 10
+      5.2.8 Válvulas solenoides ........................................................................................................................ 11
+      5.2.9 Elementos de posición ................................................................................................................... 11
+      5.2.10   Válvulas de seguridad, presión/vacío y discos de ruptura ......................................................... 11
+      5.2.11   Pulsadores y lámparas ............................................................................................................... 12
+      5.2.12   Señales de mando y supervisión de equipo eléctrico ................................................................ 12
+      5.2.13   Elementos de detección de llama .............................................................................................. 13
+      5.2.14   Monitorización mecánica ............................................................................................................ 14
+      5.2.15   Elementos diversos .................................................................................................................... 14
+      5.2.16   Elementos detectores de gas ..................................................................................................... 14
+    5.3    DOCUMENTACIÓN DE REFERENCIA ......................................................................................................... 15
+      5.3.1 Especificaciones ............................................................................................................................. 15
+      5.3.2 Hojas de datos y típicos ................................................................................................................. 15
+      5.3.3 Soporte informático de la documentación ...................................................................................... 15
+      5.3.4 Numeración y organización de documentos .................................................................................. 15
+      5.3.5 Aplicación en instalaciones existentes ........................................................................................... 16
+
+
+     COPIA NO CONTROLADA
+     [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  1 / 26
+                                                       #Título                     J0100 Ingeniería de
+                                                                                   Instrumentación
+ #Tipo                                                  Especificación            #Código                 ES__-0001960
+ #Fecha de Vigencia                                     06/09/2023                #Versión                2.1
+ #Activo de la información                              YPF - Privada
+ #Proceso                                               21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+      5.3.6 Aplicación a provisiones de equipos paquetes .............................................................................. 16
+    5.4    DOCUMENTOS GENERALES ................................................................................................................... 17
+      5.4.1 Listado de instrumentos, señales cableadas y comunicadas ................................................ 17
+6      ROLES, INDICADORES, REGISTROS Y RIESGOS DEL PROCESO ..................................................... 19
+    6.1          ROLES.................................................................................................................................................. 19
+    6.2          INDICADORES........................................................................................................................................ 19
+    6.3          REGISTROS .......................................................................................................................................... 19
+    6.4          RIESGOS Y ACCIONES MITIGANTES ......................................................................................................... 19
+    6.5          REGLAS DE NEGOCIO ............................................................................................................................ 19
+7      ANEXOS Y REFERENCIAS ....................................................................................................................... 20
+    7.1    ANEXOS ............................................................................................................................................... 20
+      7.1.1 Anexos Especiales ......................................................................................................................... 20
+      7.1.2 Otros anexos .................................................................................................................................. 20
+    7.2    NORMATIVA RELACIONADA .................................................................................................................... 20
+    7.3    DEFINICIONES Y ABREVIATURAS ............................................................................................................. 23
+8      APROBACIÓN ............................................................................................................................................ 23
+    8.1          VIGENCIA.............................................................................................................................................. 23
+    8.2          DISPOSICIONES GENERALES Y TRANSITORIAS ......................................................................................... 23
+    8.3          HISTORIAL ............................................................................................................................................ 24
+    8.4          FLUJO DE APROBACIÓN ......................................................................................................................... 25
+9      ANEXO........................................................................................................................................................ 26
+    9.1          ANEXO I - HD-J0100-01 LISTA DE INSTRUMENTOS, SEÑALES CABLEADAS Y COMUNICADAS .................... 26
+
+
+
+
+2 Objeto
+Definir los aspectos generales relativos a la ingeniería de instrumentación y control.
+
+
+
+
+     COPIA NO CONTROLADA
+     [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  2 / 26
+                                                    #Título                     J0100 Ingeniería de
+                                                                                Instrumentación
+ #Tipo                                               Especificación            #Código                 ES__-0001960
+ #Fecha de Vigencia                                  06/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+3 Ámbito de aplicación
+Upstream – Argentina.
+
+
+4 Consideraciones principales
+Este documento se complementa en cada proyecto con los datos básicos de diseño, en lo sucesivo
+DBD, indicados en las Bases de Diseño emitidas para el mismo y que recogen los aspectos
+particulares de este.
+Salvo indicación en otro sentido, el presente documento hace siempre referencia a la última edición
+de las normas y códigos citados y/o aplicables.
+En caso de discrepancia entre los documentos de una requisición, prevalece el siguiente orden de
+prioridad:
+    a) Legislación aplicable (siempre y cuando en las hojas de datos, en la requisición o en esta
+       especificación no se establezcan criterios más restrictivos que los en ella fijados).
+    b) Hoja de datos y documentación de Ingeniería.
+    c) Requisición de servicios.
+    d) Esta especificación.
+Se tiene en cuenta que la hoja de datos y la requisición de compra no deben entrar en conflicto con
+esta especificación salvo en los puntos expresamente aprobados por YPF.
+Queda dentro de las responsabilidades de instrumentación la definición de los siguientes puntos:
+   a) Todos los instrumentos de proceso, incluyendo válvulas automáticas, de seguridad y discos
+      de ruptura.
+   b) Todos los instrumentos y sistemas de detección de llama, gases tóxicos y explosivos de
+      planta/campo.
+Queda fuera de las responsabilidades de instrumentación la definición de los siguientes puntos:
+   a) Sistemas de control y supervisión exclusivamente eléctricos.
+   b) Sistemas de telefonía y megafonía de planta.
+   c) Sistemas de seguridad perimetral y video vigilancia.
+   d) Sistemas de extinción de incendios.
+   e) Sistemas de control y de monitoreo y PLC de fuego y gas.
+   f) Comunicaciones e integración de los elementos citados en los puntos anteriores.
+Los sistemas mencionados en los puntos e y f anteriores deben ser diseñados de acuerdo a los
+requerimientos indicados por Yacimiento Digital YPF.
+Para equipos ó sistemas no contemplados en los puntos anteriores se debe consultar a YPF.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               3 / 26
+                                                    #Título                     J0100 Ingeniería de
+                                                                                Instrumentación
+ #Tipo                                               Especificación            #Código                 ES__-0001960
+ #Fecha de Vigencia                                  06/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+5 Especificación
+
+5.1 Criterios globales de Diseño
+Las guías generales que deben seguirse en el desarrollo de los proyectos de instrumentación son:
+   a)   Cumplimiento de normativas y reglamentaciones aplicables.
+   b)   Maximizar la seguridad para las personas, el medio ambiente y las instalaciones.
+   c)   Maximizar la disponibilidad de la planta para la producción según requiera el proceso.
+   d)   Minimizar el costo del ciclo integral de vida de la instalación, simplificándolas y adoptando
+        soluciones estándar.
+Minimizar el costo del ciclo integral de vida de la planta significa que en la evaluación de cada
+alternativa técnica deben considerarse los costos derivados de operación y mantenimiento para cada
+una de ellas.
+Algunos aspectos del diseño asociados a los puntos anteriores y que por lo tanto deben considerarse
+son:
+   a) Grado de accesibilidad a los instrumentos desde instalaciones fijas.
+   b) Nivel de supervisión y mando desde sala de control.
+   c) Integración de las unidades paquetes en la jerarquía de control y supervisión de la planta.
+   d) Reducción del número de operaciones manuales requeridas en campo.
+   e) Uniformidad funcional y de proveedores existentes en cada área.
+   f) Intercambiabilidad y uniformidad de los equipos que se instalen.
+   g) Diseños que minimicen las interrupciones de la producción debidas a mantenimiento.
+Todo lo anterior se debe realizar según las especificaciones y documentos técnicos de referencia de
+YPF e instrucciones de sus especialistas.
+
+5.1.1 Arquitecturas de control y seguridad
+Como criterio general los procesos disponen de sistemas independientes para control y
+enclavamientos de seguridad.
+La arquitectura y el tipo de sistema de seguridad activa que gestiona la detección de fuego y/o gas y
+las medidas de extinción o mitigación asociadas, son definidos con YPF en cada proyecto.
+En línea con los estudios de riesgo correspondientes, la arquitectura de control y seguridad pueden
+constar de un único sistema común para control y enclavamientos.
+El diseño de los sistemas de control y seguridad, se ajustan a los criterios definidos por Yacimiento
+Digital YPF.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               4 / 26
+                                                    #Título                     J0100 Ingeniería de
+                                                                                Instrumentación
+ #Tipo                                               Especificación            #Código                 ES__-0001960
+ #Fecha de Vigencia                                  06/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+5.1.2 Tecnologías de transmisión
+El método convencional de transmisión de señales entre equipos de instrumentación es el cableado,
+ya sea mediante cables convencionales (4-20 mA + HART o señales discretas) o por vías de
+comunicaciones.
+Para señales de control, enclavamiento, alarmas y seguridad se usan siempre cables
+convencionales.
+El uso de radio-enlaces entre instrumentos simples y otros equipos (tecnología Wireless) se puede
+implementar solo bajo aprobación de YPF.
+
+5.1.3 Sistemas de control por bus de campo
+Los sistemas de control basados en bus de campo, las tecnologías tipo Fieldbus Foundation, Profibus
+PA y otros de protocolo abierto (según se definen en ISA 50 Signal Compatibility of Electrical
+Iinstruments / IEC 61158 Industrial Communication Network Field Bus Specification) sólo son
+utilizadas en caso de que exista el pedido expreso en los DBD del proyecto.
+
+5.1.4 Instalación de instrumentos en áreas clasificadas
+Se describe en detalle en la especificación “J1400 Instalación de Instrumentos en Áreas Clasificadas”
+y sus especificaciones relacionadas. El diseño debe tener en cuenta lo siguiente:
+     a) En lo aplicable, el modo preferente de protección será siempre Antideflagrante (EEx-d).
+     b) En caso de tratarse de una instalación existente EEx-i, puede aceptarse el modo Seguridad
+        Intrínseca (EEx-i) para las modificaciones que se realicen.
+No pueden utilizarse instrumentos sin certificación en áreas clasificadas. Para mayores detalles sobre
+la instalación de instrumentos en zona clasificada, consultar las especificaciones mencionadas.
+
+5.1.5 Instalación de instrumentos en áreas no clasificadas
+Para áreas no clasificadas se deben usar instrumentos certificados para zonas clasificadas, de
+acuerdo a lo expuesto en el apartado anterior, pero instalados de modo convencional con el objetivo
+de unificar provisiones y stock de repuestos.
+Se pueden utilizar instrumentos carentes de certificación unicamente en aquellas instalaciones en la
+que gran parte o toda la unidad sea área no clasificada (p.e. planta de inyección de agua). No implica
+en ningún caso el uso de instrumentos sin certificación en áreas clasificadas.
+
+5.1.6 Protección ambiental de los equipos
+Todos los equipos deben tener una protección ambiental adecuada a su tipo y zona de instalación,
+que garantice un correcto servicio y la ausencia de problemas causados por el entorno de instalación.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               5 / 26
+                                                    #Título                     J0100 Ingeniería de
+                                                                                Instrumentación
+ #Tipo                                               Especificación            #Código                 ES__-0001960
+ #Fecha de Vigencia                                  06/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+El grado de protección ambiental se debe describir siempre según el código IP de acuerdo a la IEC
+60529 (Degrees of protection provided by enclosures (IP CODE)).
+Como criterio general (para excepciones ver especificaciones correspondientes a cada instrumento
+o sistema), este grado de protección ambiental debe ser como mínimo el siguiente para equipos
+instalados a la intemperie:
+   -       Áreas convencionales IP 65
+   -       Instalaciones expuestas a ambientes marinos IP 68
+Como norma para definir el grado de agresividad de un entorno, se aplica la ISA 71.04
+(Environmental Condition for Process measurement and Control Systems).
+
+5.1.7 Compatibilidad electromagnética
+Como criterio general, todos los sistemas eléctricos y electrónicos deben cumplir con los requisitos
+de compatibilidad electromagnética fijada por las normas aplicables al lugar de implantación:
+    a) No ser fuente de interferencias para otros equipos.
+    b) Estar protegidos contra las interferencias generadas por terceros.
+La norma de referencia sobre compatibilidad electromagnética será la IEC-61000 (Electromagnetic
+Compatibility) y cualquier normativa adicional que se indique en los DBD. Deberán además seguirse
+las recomendaciones específicas de los fabricantes de equipos, en los casos que aplique.
+
+5.1.8 Unidades de ingeniería
+Se detallan en las especificaciones de instrumentación (Parte General) para cada para cada tipo
+particular de instrumento o variable (Ver punto 7.2)
+Cualquier excepción al uso de las unidades de ingeniería indicadas en las especificaciones es
+indicada en los DBD.
+Para variables no consideradas por las especificaciones, se debe consultar a YPF sobre las unidades
+de ingeniería aplicables.
+
+5.1.9 Simbología gráfica
+Los criterios relativos a simbología y representación de instrumentos en P&IDs se incluyen en el
+documento ES__-0002177 “Nomenclatura y simbología de planos y documentos de instalaciones de
+superficie”.
+Para elementos no recogidos por el ES__-0002177 “Nomenclatura y simbología de planos y
+documentos de instalaciones de superficie”, se deben usar como referencia las normas ANSI/ISA 5.1
+(Instrumentation Symbols and Identification) para instrumentos e ISA 5.3 (Graphic Symbols for
+Distributed Control/Shared Display Instrumentation, Logic and Computer Systems) para elementos
+de control y/o DCS.
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               6 / 26
+                                                    #Título                     J0100 Ingeniería de
+                                                                                Instrumentación
+ #Tipo                                               Especificación            #Código                 ES__-0001960
+ #Fecha de Vigencia                                  06/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+5.1.10 Codificación de instrumentos y señales
+Se usa como referencia principal la norma ANSI/ISA 5.1 (Instrumentation Symbols and Identification).
+Se prohíbe el uso de cualquier otro sistema de codificación (DIN, KKS, propietario, etc.) para este
+propósito.
+Los tags de los instrumentos y señales deben formarse del siguiente modo FFFFF-NNNN-XX en
+donde:
+   -       FFFFF Código ISA del instrumento o función representada.
+   -       NNNN Número secuencial del lazo.
+   -       XX Letras y/o números opcionales.
+Como la norma ANSI/ISA 5.1 (Instrumentation Symbols and Identification) es interpretable en muchos
+aspectos, en el punto 5.2 de esta especificación se resumen los criterios generales que, salvo otra
+indicación, se aplican en YPF.
+Para la denominación de las señales dentro de los sistemas de control y seguridad, el criterio indicado
+anteriormente puede modificarse para adaptarlo a los requerimientos de los mismos.
+Existen ciertas locaciones donde se utilizan criterios particulares para definir el número secuencial
+de lazo. En caso de realizar obras en locaciones/áreas donde se usen criterios particulares deben
+mantenerse los mismos criterios utilizados en las instalaciones existentes.
+Nota: estas modificaciones pueden requerirse para ajustarse a la longitud disponible del campo
+destinado al TAG o para adaptarse a limitaciones “históricas” de los sistemas.
+
+5.1.11 Secuencia de alarmas
+Salvo otra indicación de YPF, aplican las siguientes secuencias a los anunciadores:
+   -       ISA 18.1 (Annunciator Sequences and Specifications) Tipo A para alarmas convencionales.
+   -       ISA 18.1 (Annunciator Sequences and Specifications) Tipo F1A para alarmas que
+           desencadenen otras alarmas.
+En DCS / PLC se aplican las mismas secuencias ya en uso en cada instalación.
+
+5.2 Tags de instrumentos y señales
+
+5.2.1 Criterios generales
+En este apartado se incluyen los criterios y prácticas específicas de aplicación de la normativa
+ANSI/ISA 5.1(Instrumentation Symbols and Identification) dentro de YPF para la asignación de tags
+a los instrumentos y señales. Aquellos instrumentos no recogidos por el presente apartado deben
+estar de acuerdo a la mencionada norma ISA.
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               7 / 26
+                                                    #Título                     J0100 Ingeniería de
+                                                                                Instrumentación
+ #Tipo                                               Especificación            #Código                 ES__-0001960
+ #Fecha de Vigencia                                  06/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+Estos criterios aplican a instalaciones nuevas (ver DBD para particularidades de las instalaciones).
+Para instalaciones existentes, y salvo indicación en contra, se aplican los criterios indicados en los
+DBD.
+Como reglas generales en la construcción de los tags se aplican las siguientes:
+    a) La estructura general de los tags se debe ajustar a lo indicado en el punto 5.1.10 de esta
+        especificación.
+    b) Se debe incluir la función de indicación integrada en transmisores o controladores (FIT, PIT,
+        TIT, TIC, LIC, etc.).
+    c) Todas las medidas analíticas deben tener por sigla AT e ir acompañadas de su descripción
+        (es decir en el P&ID, deben indicarse los parámetros analíticos medidos. ej. O2, pH etc.).
+    d) La densidad y la conductividad se consideran variables analíticas (ver apartado 5.2.2).
+    e) No se deben asignar tags compuestos que involucren más de una señal, segregándose los
+        mismos en tantos tags como señales independientes existan.
+    f) El campo numérico del tag de cada elemento componente de un lazo de control debe ser
+        coincidente. Si hubiera más de un elemento del mismo tipo perteneciente al mismo lazo, se
+        deben usan las letras opcionales según apartado 5.1.10.
+Los modificadores de grado son HH / H / L y LL. De requerirse más niveles, se deben usar otros tags
+diferentes para los mismos.
+Los modificadores de muy alto (HH) y muy bajo (LL) se reservan en general para disparos o
+enclavamientos y los de alto (H) y bajo (L) se emplean para alarmas, indicaciones, automatismos,
+etc.
+El modificador “Q” se aplica a todos los totalizadores (hardware o software). No debe utilizarse con
+otro sentido.
+El modificador “A” aplica a los elementos indicadores de alarma, pero no a los iniciadores de las
+mismas, y para indicaciones de estados se debe usar “L” en lugar de “A” (p.e. ZSH → ZLH, FSL →
+FAL, etc.).
+Cuando se utilicen las letras “X”, “Y” y “L” en la designación de tags, debe explicitarse su significado
+en los documentos que las contengan (P&ID, listas, etc.). Junto con los P&ID se debe adjuntar una
+tabla detallando la simbología y nomenclatura de tags utilizadas.
+
+5.2.2 Sistemas de analizadores
+Se deben usar con el siguiente criterio general:
+   -       AE                   Sonda de analizador / toma de muestra.
+   -       AIT                  Analizador Indicador Transmisor / señal continua de analizador.
+   -       AI                   Indicación de lectura analítica.
+   -       AS                   Contacto o señal discreta asociada a analítica.
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               8 / 26
+                                                    #Título                     J0100 Ingeniería de
+                                                                                Instrumentación
+ #Tipo                                               Especificación            #Código                 ES__-0001960
+ #Fecha de Vigencia                                  06/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+   -       AX/ AL                Contacto o señal discreta asociada a estado del sistema (p.e. en calibración).
+Para analizadores multicorriente o multiparámetro aplicar el punto 5.2.1 e.
+En los diagramas P&ID se deben incluir junto a los tags las descripciones de los parámetros analíticos
+medidos en cada caso particular (pH, conductividad, flash point, etc.).
+
+5.2.3 Elementos de caudal
+Se deben usar con el siguiente criterio general:
+   -       FE                   Elemento primario de caudal (placa, tobera, Venturi, Pitot, etc.).
+   -       FG                   Visor en línea.
+   -       FIT                  Caudalímetro Indicador Transmisor / señal continua de caudal.
+   -       FI                   Indicación de caudal / Rotámetro.
+   -       FS                   Contacto o señal discreta asociada a caudal. Interruptor de caudal.
+   -       FX                   Función / cálculo (p.e. compensación de caudal).
+   -       FF                   Relación (Ratio) de caudales.
+   -       RO                   Orificio de restricción.
+   -       FIC                   Indicador Controlador de Caudal.
+Junto a los tags de los elementos primarios de caudal se representa en los P&IDs su tipo (p.e. tobera,
+Venturi, etc.) salvo que se trate de placas de orificio.
+
+5.2.4 Elementos de nivel
+Se deben usar con el siguiente criterio general:
+   -       LE                    Elemento primario de medida de nivel (sonda, antena, etc.).
+   -       LG                    Nivel visual de vidrio.
+   -       LI                    Nivel visual de otro tipo (p.e. magnético) / Indicación de nivel.
+   -       LIT                   Indicador Transmisor / señal continua de nivel.
+   -       LS                    Contacto o señal discreta de nivel. Interruptor de nivel.
+   -       LX                    Función / cálculo.
+   -       LIC                   Indicador Controlador de nivel.
+Los elementos primarios de nivel sólo deben identificarse si están físicamente separados del
+elemento transmisor (por ejemplo, una antena de ultrasonidos con electrónica remota ubicada a pie
+de tanque).
+Junto a los tags de los medidores de nivel se representa en los P&IDs su tipo (p.e. radar, ultrasonidos,
+capacitivo, etc.) salvo en el caso de que se trate de dP Cells.
+
+5.2.5 Elementos de presión
+Se deben usar con el siguiente criterio general:
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               9 / 26
+                                                    #Título                     J0100 Ingeniería de
+                                                                                Instrumentación
+ #Tipo                                               Especificación            #Código                 ES__-0001960
+ #Fecha de Vigencia                                  06/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+   -       PI                       Manómetro / Indicación de presión.
+   -       PDI                     Manómetro diferencial / Indicación de presión diferencial.
+   -       PIT                     Indicador Transmisor / señal continua de presión.
+   -       PDIT                     Indicador Transmisor / señal continua de presión diferencial.
+   -       PS                      Contacto o señal discreta de presión. Presostato.
+   -       PDS                      Contacto o señal discreta de presión diferencial. Presostato diferencial.
+   -       PIC                     Indicador Controlador de presión.
+Los convertidores I/P están excluidos de este punto y se tratan en el apartado 5.2.15 de instrumentos
+diversos.
+
+5.2.6 Elementos de temperatura
+Se deben usar con el siguiente criterio general:
+   -       TP                     Prueba de temperatura.
+   -       TW                     Termo vaina.
+   -       TE                     Sensor de temperatura (tipo T/C, RTD, piel de tubos).
+   -       TI                     Indicador de temperatura. Termómetro.
+   -       TDI                     Indicador de temperatura diferencial. Termómetro diferencial.
+   -       TIT                    Indicador Transmisor / señal continua de temperatura de alto nivel.
+   -       TS                     Contacto o señal discreta de temperatura. Termostato.
+   -       TX / TL                 Contacto o señal discreta asociado a sistema de medida.
+   -       TIC                     Indicador Controlador de temperatura.
+La sigla TP sólo aplica a puntos para medida ocasional que no tienen termo vainas instaladas (p.e.
+en cojinetes y otros elementos mecánicos preparados para verificar con equipos portátiles).
+El uso de la sigla TW en los P&IDs se restringe a termo vainas sin elemento sensor instalado.
+Para los TIT se debe indicar el correspondiente TE/TW en el listado de instrumentos (no indicado en
+el P&ID).
+
+5.2.7 Válvulas de control, corte y autorreguladas
+Se deben usar con el siguiente criterio general:
+   -       AV                    Válvula de control regulada por un lazo de análisis.
+   -       FV                    Válvula de control regulada por un lazo de caudal.
+   -       HV                    Válvula de control regulada por un lazo manual.
+   -       LV                    Válvula de control regulada por un lazo de nivel.
+   -       PV                    Válvula de control regulada por un lazo de presión.
+   -       PDV                   Válvula de control regulada por un lazo de presión diferencial.
+   -       TV                    Válvula de control regulada por un lazo de temperatura.
+   -       XV                     Válvula todo/nada operativa.
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            10 / 26
+                                                    #Título                     J0100 Ingeniería de
+                                                                                Instrumentación
+ #Tipo                                               Especificación            #Código                 ES__-0001960
+ #Fecha de Vigencia                                  06/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+   -       SDV                    Válvula de Shutdown.
+   -       BDV                    Válvula de Blowdown.
+   -       MOV                    Válvula motorizada.
+   -       LBV                    Válvula de corte de ductos.
+Las válvulas autorreguladas se identifican con el literal “C” insertado en su tag:
+   -       LCV                     Válvula autorregulada por nivel.
+   -       PCV                     Válvula autorregulada por presión.
+   -       PDCV                    Válvula autorregulada por presión diferencial.
+   -       TCV                     Válvula autorregulada por temperatura.
+Las válvulas solenoides se identifican de acuerdo al apartado 5.2.8.
+Los finales de carrera y transmisores de posición se identifican de acuerdo al apartado 5.2.9.
+Los convertidores I/O o electro posicionadores se identifican de acuerdo al apartado 5.2.15.
+
+5.2.8 Válvulas solenoides
+Se deben usar con el siguiente criterio general:
+   -       SV                      Válvula solenoide.
+
+
+
+
+5.2.9 Elementos de posición
+Se deben usar con el siguiente criterio general:
+   -       ZS                       Contacto o señal discreta de posición. Final de carrera.
+   -       ZT                       Transmisor / señal continua de posición.
+   -       ZSO                      Interruptor de posición de válvula abierta.
+   -       ZSC                     Interruptor de posición de válvula cerrada.
+   -       ZLO                     Indicación en pantalla de válvula abierta.
+   -       ZLC                     Indicación en pantalla de válvula cerrada.
+Los modificadores usados para especificar la posición en válvulas serán O (100% apertura), C (0 %
+apertura).
+Para las indicaciones asociadas en pantalla, se usan por defecto ZLO / ZLC, reservando los tags del
+tipo ZAO / ZAC para aquellos finales de carrera cuya actuación deba ser verdaderamente una alarma.
+
+5.2.10 Válvulas de seguridad, presión/vacío y discos de ruptura
+Se deben usar con el siguiente criterio general:
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            11 / 26
+                                                    #Título                     J0100 Ingeniería de
+                                                                                Instrumentación
+ #Tipo                                               Especificación            #Código                 ES__-0001960
+ #Fecha de Vigencia                                  06/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+   -       PSE                     Disco de ruptura / Tapa de emergencia.
+   -       PSV                     Válvula de seguridad/alivio.
+   -       PVSV                    Válvula de presión/vacío
+   -       TSV                     Válvula alivio térmico.
+
+5.2.11 Pulsadores y lámparas
+Se deben usar con el siguiente criterio general:
+   -       HS                      Pulsador / Selector (HSM / HSP para pulsadores de marcha y paro).
+   -       XL / YL                 Lámpara / indicación asociada a señal XS / YS.
+   -       XA / YA                 Lámpara / alarma asociada a señal XS / YS.
+Cada señal de selector tiene un tag propio (p.e.: HS-056-1, HS-056-2, HS-056-3, etc.). Junto a los
+tags de pulsadores y lámparas se representa su servicio en los diagramas P&ID.
+
+
+
+
+5.2.12 Señales de mando y supervisión de equipo eléctrico
+Aplican los siguientes criterios generales:
+              Salidas de DCS/PLC hacia equipo eléctrico                                                            Entradas a DCS/PLC desde equipo eléctrico
+
+                   Tag                                               Señal                                               Tag                                            Señal
+
+         XSMP                            Orden de marcha/paro                                                     YM                         Confirmación de marcha
+
+         XSM                             Orden de marcha                                                          YR                         Mando en remoto (en DCS/PLC)
+
+         XSP                             Orden de paro                                                            YD                         Confirmación equipo disponible
+
+         XSE                             Permisivo de arranque                                                    YS                         Otro estado a especificar
+
+         XSB                             Orden de disparo / Señal de                                              YA                         Falla
+                                         bloqueo
+
+         XSA                             Orden de abrir V. Motorizada                                             N/A
+
+         XSC                             Orden de cerrar V. Motorizada                                            N/A
+
+         XSD                             Orden de detener V. Motorizada                                           N/A
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            12 / 26
+                                                    #Título                     J0100 Ingeniería de
+                                                                                Instrumentación
+ #Tipo                                               Especificación            #Código                 ES__-0001960
+ #Fecha de Vigencia                                  06/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+         XY                              Otras órdenes a especificar                                              N/A
+
+                                                                       Tabla N° 1 - Tags para señales digitales
+
+              Salidas de DCS/PLC hacia equipo eléctrico                                                           Entradas a DCS/PLC desde equipo eléctrico
+
+                 Tag                                               Señal                                                Tag                                             Señal
+
+                                      Señal / consigna velocidad o                                               ST                         Velocidad o frecuencia
+         XST
+                                      frecuencia
+
+         XZT                          Señal / consigna de posición                                               ZT                         Posición
+
+         XET                          Señal / consigna de tensión                                                ET                         Tensión
+
+         XIT                          Señal / consigna de intensidad                                             IT                         Intensidad
+
+         XJT                          Señal / consigna de potencia                                               JT                         Potencia
+
+         XGT                          Señal / consigna de cos(φ)                                                 GT                         cos(φ)
+
+         XYT                          Otra variable (a especificar)                                              YT                         Otra variable (a especificar)
+
+                                                                     Tabla N° 2 - Tags para señales analógicas
+
+Estos criterios coinciden con los indicados en la especificación “J1100 Interfaz con Equipos
+Eléctricos”.
+Las siglas de velocidad y posición son para variadores de frecuencia o posición (bombas de carrera
+ajustable).
+Todas las señales asociadas a un motor tienen el mismo número de lazo y éste debe coincidir con
+el tag del motor que aparece en el diagrama P&ID, por ejemplo:
+   -       XSMP-016-A                           Orden de marcha/paro de bomba J-016-A.
+   -       YR-016-A                             Indicación de bomba J-016-A en modo de mando remoto.
+   -       YM-016-A                             Confirmación marcha bomba J–016-A.
+   -       IT-016-A                             Intensidad instantánea de la bomba J-016-A.
+
+5.2.13 Elementos de detección de llama
+Se deben usar con el siguiente criterio general:
+   -       BE                    Detector de llama / sonda de detector de llama.
+   -       BT                    Detector / señal continua de llama.
+   -       BI                    Indicación de lectura continua de llama.
+   -       BS                    Contacto o señal discreta asociada a llama. Detector de llama con lectura discreta.
+   -       BL                    Contacto o señal asociado a estado del detector de llama (p.e. en auto chequeo).
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            13 / 26
+                                                    #Título                     J0100 Ingeniería de
+                                                                                Instrumentación
+ #Tipo                                               Especificación            #Código                 ES__-0001960
+ #Fecha de Vigencia                                  06/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+Junto a los tags de los detectores de llama se representa, en los diagramas P&ID, su tipo (UV-IR-
+ION).
+
+5.2.14 Monitorización mecánica
+Se deben usar con el siguiente criterio general:
+   -       SE                     Sonda de medida de velocidad / fase (keyphasor).
+   -       ST                     Transmisor (proximitor) / medida continua de velocidad.
+   -       SS                     Contacto o señal discreta de velocidad.
+   -       VE                     Sonda de vibración.
+   -       VT                     Transmisor (proximitor) / señal continua de vibración.
+   -       VS                     Contacto o señal discreta de vibración.
+   -       ZE                     Sonda de posición.
+   -       ZT                     Transmisor de desplazamiento axial o caída de vástago / señal continua.
+Cuando la vibración se mida en dos planos o ejes diferentes, como es común, se usan los sufijos “X”
+e “Y” para diferenciar las mismas: VE-100-X / VE-100-Y.
+Para los acelerómetros de carcasas de máquinas, aero enfriadores, etc., se usan también las siglas
+VT / VSH.
+
+5.2.15 Elementos diversos
+Se deben usar con el siguiente criterio general:
+   -       XS                                                        Contacto o señal digital (sólo servicios no incluidos en apartados
+                                                                     precedentes).
+   -       AY / FY / LY / PY / TY                                    Convertidor I/P o electro posicionador para válvulas AV / FV / LV
+                                                                     / PV / TV.
+   -       WE                                                        Celda de pesaje.
+   -       WT                                                        Transmisor / señal continua de peso.
+   -       WI                                                         Indicación de peso / Báscula.
+Los criterios de asignación de tags para cajas de instrumentos se incluyen en la especificación “J1302
+Cajas de Conexionado y Paneles de Campo” y para cables de instrumentos se incluyen en la
+especificación “J1300 Conexionado Eléctrico a Instrumentos”.
+
+5.2.16 Elementos detectores de gas
+Se deben usar con el siguiente criterio general:
+   -       AT                      Transmisor/Detector de Gas toxico o Mezcla explosiva (Gases inflamable).
+En los P&ID se debe indicar una descripción adjunta del servicio.
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            14 / 26
+                                                       #Título                     J0100 Ingeniería de
+                                                                                   Instrumentación
+    #Tipo                                               Especificación            #Código                 ES__-0001960
+    #Fecha de Vigencia                                  06/09/2023                #Versión                2.1
+    #Activo de la información                           YPF - Privada
+    #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+5.3 Documentación de referencia
+5.3.1 Especificaciones
+Los criterios generales de Ingeniería aplicables a los distintos instrumentos y sistemas se incluyen
+en las especificaciones de YPF S.A. Upstream – Argentina (enumeradas en el punto 7.2).
+Las especificaciones son de cumplimiento obligatorio en todos los proyectos, tanto de nuevas
+instalaciones como modificaciones a instalaciones existentes en el ámbito de Upstream Argentina,
+salvo en cuestiones puntuales donde los especialistas de YPF autoricen desviaciones.
+El párrafo anterior aplicará también a toda la cadena de subcontratistas del proyecto.
+Las especificaciones constan en su mayoría de una parte general y de diversos anexos o
+especificaciones relacionadas independientes dedicadas a instrumentos o tópicos particulares
+asociados al objeto de la misma.
+Al final de cada especificación, en su apartado “Normativa de Referencia”, se enumeran las
+especificaciones relacionadas a las mismas.
+Los puntos que queden abiertos en las especificaciones por ser dependientes de la instalación
+particular, se definen en el los DBD del proyecto.
+
+5.3.2 Hojas de datos y típicos
+-     En cada especificación se citan y anexan las hojas de datos y típicos en formato YPF aplicables
+      a cada caso. Las mismas son una referencia para el desarrollo de ingeniería, pudiéndose bajo
+      aprobación de YPF utilizar formatos internacionales (según ISA o similar).
+
+-     La documentación de Ingeniería a desarrollar se define para cada proyecto en particular.
+
+5.3.3 Soporte informático de la documentación
+La documentación de ingeniería se debe presentar en el formato que se defina para cada proyecto
+en los documentos contractuales.
+
+5.3.4 Numeración y organización de documentos
+Toda documentación se acompaña de índices detallados de los contenidos incluidos en la misma.
+Toda la documentación debe estar en castellano salvo que se autorice expresamente otro idioma (en
+todos los documentos asociados a instalación y puesta en marcha es obligatorio el manual en
+castellano).
+En todas las Hojas de Datos los campos que no apliquen se rellenarán con N/A y en listados con
+guiones para resaltar que no están pendientes de completar.
+
+
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               15 / 26
+                                                    #Título                     J0100 Ingeniería de
+                                                                                Instrumentación
+ #Tipo                                               Especificación            #Código                 ES__-0001960
+ #Fecha de Vigencia                                  06/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+Los planos y documentos se numeran de acuerdo a lo solicitado por el DBD.
+La simbología a utilizar en los planos es de acuerdo al documento ES__-0002177 ”Nomenclatura y
+Simbología de Planos y Documentos de Instalaciones de Superficie”.
+
+5.3.5 Aplicación en instalaciones existentes
+En instalaciones existentes, la documentación técnica de referencia aplicada en oportunidad de su
+diseño y construcción, puede diferir en algunos aspectos de las actuales.
+En estos casos, se debe acordar con YPF la documentación aplicable, a fin de evitar posibles
+conflictos entre la instalación existente y las modificaciones.
+
+
+
+
+A título orientativo, algunos aspectos donde pueden aparecer conflictos son:
+   a) Color de cubiertas de los cables de instrumentos.
+   b) Especificaciones y materiales de cañerías y montaje de instrumentos aplicables.
+   c) Normativas aplicables.
+
+En general, se puede aplicar la presente especificación, salvo casos puntuales o criterios particulares
+que indique el personal de la instalación.
+
+5.3.6 Aplicación a provisiones de equipos paquetes
+Los equipos paquete se proveerán con un PLC dedicado en aquellos casos particulares en los que
+se trate de procesos licenciados, equipos de fuego o equipos cuya garantía o nivel de integridad
+dependa del PLC del paquete caso contrario el control se realiza en el sistema de control de la
+instalación siendo responsabilidad del proveedor del paquete el cableado hasta una bornera frontera.
+La provisión del PLC de equipos paquetes debe ser aprobado y cumplir con todos los requerimientos
+indicados por Yacimiento Digital YPF.
+Toda la instrumentación, tags, cableado, segregación de señales, etc. incluidos en los equipos
+paquete debe cumplir con todos los requerimientos indicados en las especificaciones de diseño de
+YPF listadas en el punto 7.2.
+Durante el desarrollo de la ingeniería, deben definirse las señales cableadas y comunicadas para la
+vinculación de sistemas. Como criterio general, se aplica lo siguiente:
+   a) Las señales para información, pueden ser comunicadas.
+   b) Las señales vinculadas a control, alarmas o enclavamientos de seguridad deben ser por
+      cableado duro.
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            16 / 26
+                                                    #Título                     J0100 Ingeniería de
+                                                                                Instrumentación
+ #Tipo                                               Especificación            #Código                 ES__-0001960
+ #Fecha de Vigencia                                  06/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+El límite de vinculación entre la provisión del equipo paquete y la ingeniería de la unidad esta
+determinado por cajas de conexionado/tablero PLC ubicadas en el límite de batería del skid o módulo
+de la provisión.
+
+
+
+
+5.4 Documentos generales
+5.4.1 Listado de instrumentos, señales cableadas y comunicadas
+El Listado de instrumentos, señales cableadas y comunicadas, debe incluir para cada uno de los
+instrumentos y señales del proyecto, su información principal asociada.
+Debe contener:
+   a) Instrumentos:
+          - Elementos primarios de medición (ej.: placa orificio, termo elemento, etc.).
+          - Instrumentos transmisores analógicos (ej.: transmisores de temperatura, posición,
+             etc.).
+          - Instrumentos digitales (ej.: interruptores de nivel, presóstatos, finales de carrera, etc.).
+          - Válvulas de control, seguridad, on-off, autorreguladoras.
+          - Discos de ruptura.
+          - Pulsadores o indicaciones de campo.
+          - Controladores locales (ej.: Controlador de temperatura, controlador neumático, etc.).
+   b) Señales cableadas, en general se deben listar todas las señales cableadas indicadas en
+      P&ID, a modo de ejemplo se listan las siguientes:
+          - Señal consigna de velocidad a variador eléctrico.
+          - Indicación de estado de marcha de máquinas eléctricas.
+          - Comando de arranque / paro de máquinas eléctricas.
+          - Permisivo de marcha de máquina eléctrica.
+          - Orden de apertura o cierre de válvula.
+          - Señal consigna de velocidad a variador eléctrico.
+          - Señal de falla de equipos o máquinas eléctricas.
+          - Señales entre PLCs de diferentes plantas.
+   c) Señales comunicadas (No deben llevarse vía comunicación las señales de lazos de control y
+      de seguridad del proceso.)
+          - Señales de PLC de equipos paquetizados.
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            17 / 26
+                                                    #Título                     J0100 Ingeniería de
+                                                                                Instrumentación
+ #Tipo                                               Especificación            #Código                 ES__-0001960
+ #Fecha de Vigencia                                  06/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+                   -       Señales de equipos inteligentes de campo ( ej. computadores de caudal,
+                           caudalímetros, analizadores etc.).
+            -              Señales entre PLCs de diferentes plantas.
+    d) Otros
+            - Indicaciones, controladores o alarmas de pantalla ejecutadas en DCS/ PLC/SCADA (
+               ej. PIC, LAH, etc.).
+            - Pulsadores virtuales en pantalla.
+El listado se debe completar en el formato del Anexo I - HD-J0100-01 Lista de Instrumentos,
+Señales Cableadas y Comunicadas (en el mismo se encuentran completos algunos campos a título
+de ejemplo), imprimiéndose en el tamaño DIN A3.
+Como criterios generales para completar esta lista, se aplican los siguientes:
+   a) Los controladores e indicaciones del DCS o PLC se deben incluir en la lista como
+      instrumentos.
+   b) El resto de puntos o funciones software del DCS o PLC no se debe incluir en la lista.
+   c) Las termo vainas se deben incluir siempre como un registro independiente del sensor de
+      temperatura asociado.
+   d) Los elementos primarios de caudal se deben incluir siempre como un registro independiente
+      de su transmisor.
+   e) En caso de duda sobre la inclusión o no de un elemento o señal en la lista, se debe
+      consultar a YPF.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            18 / 26
+                                                   #Título                     J0100 Ingeniería de
+                                                                               Instrumentación
+#Tipo                                               Especificación            #Código                 ES__-0001960
+#Fecha de Vigencia                                  06/09/2023                #Versión                2.1
+#Activo de la información                           YPF - Privada
+#Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+
+
+6 Roles, Indicadores, registros y riesgos del proceso
+
+6.1     Roles
+                        Rol                                                                  Puestos / Unidad/es Organizativa/s
+ N/A
+
+
+6.2 Indicadores
+ Indicador                       Fórmula                        Frecuencia                    Responsable                            Cliente                               Registro
+   (KPI)                                                                                                                            Interno /
+                                                                                                                                    Externo
+N/A
+
+
+6.3 Registros
+      Registro                   Responsable                       Responsable                       Frecuencia de                      Disposición y                         Tiempo de
+                                  del registro                      del archivo                        registro /                        protección                            archivo
+                                                                                                        archivo
+N/A
+
+
+6.4 Riesgos y acciones mitigantes
+ Codificación                                        Riesgo                                                        Origen                                                Controles
+ de Referencia                                                                                                                                                           mitigantes
+N/A
+
+
+6.5 Reglas de Negocio
+                          Nombre                                                                                              Descripción
+ N/A
+
+
+
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                        o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                           19 / 26
+                                                   #Título                     J0100 Ingeniería de
+                                                                               Instrumentación
+#Tipo                                               Especificación            #Código                 ES__-0001960
+#Fecha de Vigencia                                  06/09/2023                #Versión                2.1
+#Activo de la información                           YPF - Privada
+#Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+7 Anexos y referencias
+
+7.1 Anexos
+7.1.1 Anexos Especiales
+#Anexos Especiales
+#Nº                                                                                                 Nombre
+N/A
+
+
+7.1.2 Otros anexos
+#Otros Anexos
+ #Nº                                                  Nombre
+  I       Anexo I - HD-J0100-01 Lista de Instrumentos, Señales Cableadas y Comunicadas.
+
+
+7.2 Normativa relacionada
+  Categoría                                              Título                                                                                                          Código
+                              Nomenclatura y Simbología de Planos y Documentos de
+                                                                                                                                                      ES__-0002177
+                              Instalaciones de Superficie
+
+                              J0200 Medida de caudal (Parte General) [R-2.0]                                                                          ES__-0002280
+
+                              J0201 Transmisores de Presión Diferencial para Medida
+                                                                                                                                                      ES__-0001895
+                              de Caudal
+
+                              J0202 Placas y Bridas de Orificio                                                                                       ES__-0001894
+
+                              J0208 Medidores de Caudal por Efecto Coriolis [R-2.0]                                                                   ES__-0002279
+   Normativa
+  Interna YPF                 J0209 Medidores de Caudal por Dispersión Térmica                                                                        ES__-0001893
+
+                              J0211 Rotámetros                                                                                                        ES__-0001974
+
+                              J0212 Orificios de Restricción                                                                                          ES__-0001975
+
+                              J0213 Medidores de Caudal Ultrasónicos                                                                                  ES__-0001976
+
+                              J0214 Medidor de Caudal Electromagnético                                                                                ES__-0001977
+
+                              J0218 Medidores de Caudal Tipo Cuña                                                                                     ES__-0001978
+
+
+
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                        o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                           20 / 26
+                                                   #Título                     J0100 Ingeniería de
+                                                                               Instrumentación
+#Tipo                                               Especificación            #Código                 ES__-0001960
+#Fecha de Vigencia                                  06/09/2023                #Versión                2.1
+#Activo de la información                           YPF - Privada
+#Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+  Categoría                                           Título                                                                                                  Código
+                              J0300 Medida de Presión (Parte General)                                                                                 ES__-0002156
+
+                              J0301 Manómetros y Manómetros Diferenciales                                                                             ES__-0002157
+
+                              J0304 Transmisores de Presión                                                                                           ES__-0002158
+
+                              J0305 Presostatos                                                                                                       ES__-0002159
+
+                              J0400 Medida de Nivel (Parte General)                                                                                   ES__-0002171
+
+                              J0401 Indicadores Locales de Nivel                                                                                      ES__-0002170
+
+                              J0402 Transmisores de Presión Diferencial para Medida
+                                                                                                                                                      ES__-0002169
+                              de Nivel
+
+                              J0403 Transmisores de Nivel por Desplazador                                                                             ES__-0002172
+
+                              J0405 Transmisores de Nivel por Radar                                                                                   ES__-0002173
+
+                              J0407 Interruptores de Nivel por Flotador                                                                               ES__-0002174
+
+                              J0408 Transmisores de Nivel de Interfase Agua
+                                                                                                                                                      ES__-0002175
+                              Hidrocarburo
+
+                              J0500 Medida de Temperatura (Parte General)                                                                             ES__-0001979
+
+                              J0501 Termo elementos, termo vainas y termómetros de
+                                                                                                                                                      ES__-0001980
+                              dial
+
+                              J0505 Transmisores de temperatura [AI-0.1]                                                                              ES__-0002323
+
+                              J0600 Válvulas de Control Regulatorio                                                                                   ES__-0001981
+
+                              J0601 Actuadores Eléctricos                                                                                             ES__-0001982
+
+                              J0602 Válvulas on-off                                                                                                   ES__-0001983
+
+                              J0603 Válvulas Autorreguladoras                                                                                         ES__-0001984
+
+                              J0801 Detectores de Llama de Equipos de Proceso                                                                         ES__-0002220
+
+                              J0802 Sistemas de Pesaje                                                                                                ES__-0002221
+
+                              J1000 Alimentaciones Neumáticas                                                                                         ES__-0002225
+
+
+
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                        o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                           21 / 26
+                                                   #Título                     J0100 Ingeniería de
+                                                                               Instrumentación
+#Tipo                                               Especificación            #Código                 ES__-0001960
+#Fecha de Vigencia                                  06/09/2023                #Versión                2.1
+#Activo de la información                           YPF - Privada
+#Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+  Categoría                                             Título                                                                                                Código
+                              J1100 Interfaz con equipo eléctrico                                                                                     ES__-0002224
+
+                              J1300 Conexionado Eléctrico a Instrumentos                                                                              ES__-0002226
+
+                              J1301 Cables de Instrumentos                                                                                            ES__-0002272
+
+                              J1302 Cajas de Conexionado y Paneles de Campo [R-
+                                                                                                                                                      ES__-0002635
+                              1.0]
+
+                              J1303 Accesos de Cables de Instrumentos                                                                                 ES__-0002227
+
+                              J1304 Alimentación Eléctrica a Equipos de
+                                                                                                                                                      ES__-0002273
+                              Instrumentación
+
+                              J1400 Instalación Eléctrica en Áreas Clasificadas                                                                       ES__-0002228
+
+                              J1401 Instalaciones EEx-i                                                                                               ES__-0002229
+
+                              J1402 Instalaciones EEx-d                                                                                               ES__-0002319
+
+                              J1700 Montaje de Instrumentos                                                                                           ES__-0002222
+
+                              J1800 Válvulas de Seguridad y Discos de Ruptura                                                                         ES__-0002230
+
+                              J2001 Puentes de Medición de Gas Natural para
+                                                                                                                                                      ES__-0001871
+                              Transferencia de Custodia
+
+                              J2200 Analizador de Corte de Agua                                                                                       ES__-0002223
+
+  Normativa                   N/A.
+   Externa
+  Normativa                   N/A.
+  Derogada
+                              Degrees of protection provided by enclosure (IP Code)                                                                   IEC 60529
+                              Electromagnetic compatibility (EMC)                                                                                     IEC 61000
+                              Industrial communications networks. Fieldbus
+                                                                                                                                                      IEC61158
+                              specifications
+
+     Otras                    Instrumentation symbols and Identification                                                                              ISA 5.1
+  referencias                 Graphic Symbols for Distributed Control / Shared Display
+                                                                                                                                                      ISA 5.3
+                              Instrumentation
+                              Enviromental Conditions for Process Measurement and
+                                                                                                                                                      ISA 71.04
+                              Control Systems
+                              Compatibility of analog signals                                                                                         ISA 50
+
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                        o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                           22 / 26
+                                                    #Título                     J0100 Ingeniería de
+                                                                                Instrumentación
+ #Tipo                                               Especificación            #Código                 ES__-0001960
+ #Fecha de Vigencia                                  06/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+   Categoría                                           Título                                                                                                             Código
+                               Annunciator sequences and specifications                                                                                ISA 18.1
+
+
+7.3 Definiciones y abreviaturas
+  Término                                                                         Abreviatura                     Descripción
+  Controlador Lógico Programable                                                  PLC
+                                                                                                                  Incluidos en el documento Bases de Diseño
+  Datos Básicos de Diseño                                                         DBD
+                                                                                                                  de cada proyecto
+  Diagrama de Instrumentación y
+                                                                                  P&ID
+  Cañerías
+  Sistema de Control                                                              DCS
+
+
+
+8 Aprobación
+
+8.1 Vigencia
+Esta normativa entra en vigencia a partir de su aprobación e inmediata publicación.
+Los abajo firmantes asumen la responsabilidad de implantar, controlar el cumplimiento y actualizar
+el presente documento cada vez que fuera necesario.
+
+
+8.2 Disposiciones generales y transitorias
+N/A.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            23 / 26
+                                                   #Título                     J0100 Ingeniería de
+                                                                               Instrumentación
+#Tipo                                               Especificación            #Código                 ES__-0001960
+#Fecha de Vigencia                                  06/09/2023                #Versión                2.1
+#Activo de la información                           YPF - Privada
+#Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+8.3 Historial
+  № Revisión                              Fecha Aprobación                                                   Principales cambios
+     0.0                                     30/06/2016                                      Documento Original
+                                                                                             Se complementó el listado de nomenclatura de
+                                                                                             instrumentos. Se ajustó el formato de listado de
+           1.0                                    27/10/2016
+                                                                                             instrumentos. Se indican consideraciones sobre
+                                                                                             materiales
+           1.1                                    28/10/2016                                 Acondicionamientos en Normativa derogada e Historial
+                                                                                             Actualización y modificaciones generales de los puntos 4
+           2.0                                    10/09/2021                                 5 y 7, actualización del documento al nuevo formato de Y-
+                                                                                             DOC.
+                                                                                             Se elimina el Anexo I correspondiente a la última versión
+                                    Ver fecha en encabezado                                  SGNT, debido a que era un Documento No Vigente:
+           2.1
+                                           de página.                                        10762-ES-21030700-110A - J0100 Ingeniería de
+                                                                                             Instrumentación.
+
+
+
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                        o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                           24 / 26
+                                                    #Título                     J0100 Ingeniería de
+                                                                                Instrumentación
+ #Tipo                                               Especificación            #Código                 ES__-0001960
+ #Fecha de Vigencia                                  06/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+8.4 Flujo de Aprobación
+#Participantes
+              #Autor                                        #Referente de                                  #Dueño de Proceso                                      #Administrador
+                                                              Proceso                                                                                            Cuerpo Normativo /
+                                                                                                                                                                      Negocio
+ SABATINI, SEBASTIAN                                  BODEGA, EDUARDO                                         SZWED, CRISTINA                                   MONSALVE, ANDRES
+       GUIDO                                             GUILLERMO                                               LILIANA                                        MAURICIO (SERVICIO
+                                                                                                                                                                 EXTERNO EN YPF)
+
+#Colaboradores
+                                                                                             Nombre
+                                                                                SALA, YISELA ETEL
+                                                                       STEKAR, JESSICA LORENA
+                                                                            BONANNO , ROBERTO
+                                           COOK AGUILAR, PHILIPPE (Servicio Externo en YPF)
+                                            CRESPI, HERNAN JAVIER (Servicio Externo en YPF)
+                                                                     DE JESUS ALARCON, ZULAY
+                                             FONTI, LORENA KARINA (Servicio Externo en YPF)
+
+#Revisores
+                                                                                             Nombre
+
+
+#Aprobadores
+                                                                                             Nombre
+                                                                       SZWED, CRISTINA LILIANA
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            25 / 26
+                                                    #Título                     J0100 Ingeniería de
+                                                                                Instrumentación
+ #Tipo                                               Especificación            #Código                 ES__-0001960
+ #Fecha de Vigencia                                  06/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+9 ANEXO
+
+9.1 Anexo I - HD-J0100-01 Lista de Instrumentos, Señales Cableadas y
+    Comunicadas
+Este anexo está en un archivo distinto del documento principal. Se accede a él desde el Buscador
+de la página principal de Y-DOC, en el menú contextual del código correspondiente al documento o
+bien desde la vista “Ver información detallada”.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            26 / 26
+

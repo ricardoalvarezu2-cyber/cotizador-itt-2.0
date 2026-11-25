@@ -1,0 +1,48 @@
+# Bitácora COT26-0010-002 · AESA (YPF) · C5297 PC-02 LANor · 2 filtros coalescedores FC-301/302 en skid (SKID-006/007)
+
+**Estado: recopilación de información (25-11-2026). Sin cómputo ni precios.** Matías pidió por ahora solo leer y juntar la información.
+
+## Pedido recibido (25-11-2026, de Matías)
+- `pedido/5297-02-0100-IG-EM-RI-001.pdf` (+ .txt): requisición de ingeniería VCD26288-E-002, E0 30/10/2026 "emisión para información". Código YPF LANor-PCLANOR02-VCD26288-M-RI-003003.
+- `pedido/Planilla_de_cotizacion_REV_01.xlsx`: proyecto C5297, solped 23583841, 6 posiciones (orden invertido respecto de la RI):
+  pos 10 RDO FC-302 (C529702IGEMFIL_015) · 20 RCP FC-302 (_014) · 30 FC-302 (_013) · 40 RDO FC-301 (_012) · 50 RCP FC-301 (_011) · 60 FC-301 (_010). Cantidad 1 UNI cada una; textos "VER RI".
+- `pedido/ANEXO 1 - Documentos del proyecto/`: hoja de datos HD-001, P&ID 5297-02-0000-IG-PR-PI-005 (4 hojas: SB-306/307 y FC-301/302), plano de conjunto general 5297-02-0100-IG-EM-PL-001 (E0 22-10-2026, referencial), típicos de soportes 5165-02-0000-IG-PI-TM-001, ET estructuras metálicas 5297-01-0000-IG-ES-ET-001, formularios FPI-IG-002 (lista de documentos), FPI-IG-012 (consultas técnicas), FPI-IG-013 (excepciones y desvíos).
+- `pedido/ANEXO 2 - Especificaciones de YPF/`: C0100, C0107, ED(EP)-C-01.08 Filtros, L0200 (con Anexo I clases de cañerías y Anexo II válvulas), M0100, B0600 (+ anexos), J0100/J0300/J0304/J0400/J0401/J0600/J0602/J1000/J1300/J1301/J1303/J1700, P0100/P0103/P1000/P1104, IG.AR 40.00.140 repuestos, típicos L0100 (.dwg), hojas de datos de instrumentos y válvulas.
+- `pedido/ANEXO 3 - Requerimientos de Calidad/`: RC 5297-02-0100-IG-EM-RI-001.
+- `pedido/ANEXO 4 - …Condiciones de Obra/`: un .msg (sin abrir todavía).
+- `pedido/ANEXO 5- Requerimientos BIM/`: PTC y PC LAN – Requerimientos BIM mínimos.
+- Documentación general de AESA (condiciones de compra y subcontratación, SHyMA/MASS, logística, gestión de documentos, lista de excepciones): `fuentes_originales/aesa_documentacion_LAN_2026-11/` (sirve también para COT26-0010-001).
+- Los PDF tienen su texto extraído al lado (.txt). Varios PDF de típicos (TI-J1700, PE(EP)-L/M) son escaneos o dibujos sin texto.
+
+## Alcance (RI §1, §2, §8, HD notas 1 y 23)
+- 2 skids paquetizados (SKID-006 con FC-301, SKID-007 con FC-302) con todo lo que está dentro del recuadro azul del P&ID: recipiente, internos (caja de chicanas 316L + 9 cartuchos coalescentes), cañerías, válvulas (incl. BDV, SDV, LV, PSV por fuego), instrumentos, JB, cableado, traceado eléctrico, aislación, estructura, escaleras, plataformas, batea de contención, puesta a tierra, placas, pintura, FAT.
+- Por cada filtro: RCP (repuestos de precomisionado, comisionado y PEM) y RDO (repuestos 2 años), con precios unitarios. Repuestos incluidos en el alcance según RI §8 (15%/10% de espárragos, juntas 3+2 por medida, kits de PSV y válvulas de control, 1 instrumento de cada tipo, cartuchos: 1 juego PEM + 2 juegos 2 años).
+- Opcionales (no están en la planilla): modelo 3D CADWorx con atributos BIM, asistencia técnica en sitio (valor diario), viaje al sitio, herramientas especiales.
+- No incluye: cálculo y especificación del sistema de despresurización (BDV, RO), sí su fabricación e instalación (RI §10).
+
+## Datos técnicos principales (HD-001, plano PL-001, P&ID)
+- Vertical, ASME VIII Div.1 + C0100, diseño 99 kg/cm2g y −10/65 °C, operación 70–90 kg/cm2g y 45–55 °C, CA 3,2 mm, RT1 (E=1), PWHT s/ código y ED(EP)-B-05.00, MDMT −10 °C.
+- Ø ext. 812,8 mm (32"), espesor 31,8 mm (orientativo), materiales SA-516 Gr70 / SA-234 WPB / SA-106 B / SA-105, bulonería B7/2H zincada bicromatizada.
+- Conexiones #600 WNRF: A y B1 10", MH 20", M1 32" (con brida ciega y pescante), R1/2 4" ciegas, resto 2" (B2, B3, D, J, L1–L12, P1, P2, S); cuellos < 3" mínimo Sch 160.
+- Caudal 2.000.000 Sm3/d (plano); casos A, 26 y turndown en HD nota 24. Eficiencia 99,99% > 0,3 µm; cartuchos Ø 141 × 915 mm, 9 unidades (a confirmar por fabricante).
+- Aislación lana mineral 60 mm con chapa de aluminio, traceado hasta HHLL; pintura B0600 sistema 202 (aislado) / 201; RAL 9006, 9011 y 1016. Área Clase I Zona 2 IIA T3.
+- Pesos: recipiente ~7.200 kg vacío (HD); skid completo 22.320 kg (plano: chasis 5.642, plataformas y escalera 2.690, cañerías de entrada/salida 10" Sch 80 #600, válvula esférica 10" #600 SA-216 WCB, etc.). Skid ~7.000 × 5.000 mm, altura 6.326 mm.
+- P&ID nota 8: "Los filtros corresponden al equipo estándar de YPF, Nro. SAP 1000566431, con modificaciones menores."
+
+## Diferencias ya vistas entre documentos (para consultas)
+1. Altura del recipiente: HD 4.064 mm LT/LT; plano 4.663 mm (LT-LRF); P&ID 4.184 mm T-T.
+2. Fechas: RI E0 30/10/2026; HD E0 30/10/2025.
+3. Planilla con las posiciones en orden inverso a la RI y sin renglones para los opcionales.
+4. RI cita para filtros también la C0107 Separadores y la ED(EP)-C-01.08 (filtros).
+
+## Antecedentes encontrados (sin analizar todavía)
+- YPF/27 (OE 381-25 Rev 2, 18-08-2025): 2 filtros coalescedores **FC301/FC302 C5064 PC LAS**, USD 322.081,64 c/u, RDO 10.718,10, RCP 3.559,20, PEM opcional 4.000; 175 días. Mismos tags en la planta hermana: probable gemelo.
+- TAVAL/37 (PRES 24148, 17-12-2025): filtro coalescedor FC-231 YPF, cuerpo 32" #600, 16 elementos, con skids; USD 529.204,77; factor 1,31; 210 días; **con planilla de costo** (LM costos Coalescedor FC-231 YPF - PC0-C REV. 0).
+- Sacde/12 (18-12-2025): coalescedores SK-0301/02, con planilla de costo.
+- 2022 (sin ficha): AESA/12 "Filtros coalescedor" (OT 201-22) y AESA/20 "Filtro coalescedor FC-231 FC-431" (OT 226-22), ambos citan el SAP 1000566431.
+- Cotización hermana del mismo proyecto: COT26-0010-001 (filtros de gas FCC-707/708).
+
+## Pendiente (siguiente paso, cuando Matías lo pida)
+- Abrir el .msg de condiciones de obra y el RC; leer C0100, ED(EP)-C-01.08, L0200 Anexo I (clases CE32, CK11, CA11, CA11) y B0600.
+- Comparar con YPF/27, TAVAL/37 y AESA/20 y decidir la base del cómputo.
+- Armar transcripción, lista de materiales y consultas (FPI-IG-012).

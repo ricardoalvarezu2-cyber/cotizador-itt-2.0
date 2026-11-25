@@ -1,0 +1,1757 @@
+                                                       #Título                     J0600 VÁLVULAS DE
+                                                                                   CONTROL
+#Tipo                                                   Especificación            #Código                 ES__-0001981
+#Fecha de Vigencia                                      24/11/2021                #Versión                1.0
+#Activo de la información                               YPF - Privada
+#Proceso                                                21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+
+
+1 Índice
+Contenido
+1      ÍNDICE .......................................................................................................................................................... 1
+2      OBJETO........................................................................................................................................................ 2
+3      ÁMBITO DE APLICACIÓN........................................................................................................................... 2
+4      CONSIDERACIONES PRINCIPALES ......................................................................................................... 3
+5      ESPECIFICACIÓN ........................................................................................................................................ 3
+    5.1    CARACTERÍSTICAS GENERALES ............................................................................................................... 3
+      5.1.1 Transmisión de señal ....................................................................................................................... 3
+      5.1.2 Compatibilidad electromagnética ..................................................................................................... 4
+      5.1.3 Instalación en áreas clasificadas...................................................................................................... 4
+      5.1.4 Instalación en áreas no clasificadas................................................................................................. 4
+      5.1.5 Envolventes y protección ambiental ................................................................................................. 4
+    5.2    ESPECIFICACIÓN TÉCNICA DE VÁLVULAS DE CONTROL ............................................................................... 5
+      5.2.1 Tipos de válvulas y aplicación .......................................................................................................... 5
+      5.2.2 Cuerpo y bonete ............................................................................................................................... 6
+      5.2.3 Internos ............................................................................................................................................. 6
+      5.2.4 Clase de cierre requerida ................................................................................................................. 8
+      5.2.5 Empaquetaduras .............................................................................................................................. 8
+    5.3    MATERIALES ........................................................................................................................................... 8
+      5.3.1 Materiales de cuerpo y bonete ......................................................................................................... 9
+      5.3.2 Materiales de internos ...................................................................................................................... 9
+    5.4    ACCESORIOS ........................................................................................................................................ 12
+      5.4.1 Actuador ......................................................................................................................................... 12
+      5.4.2 Convertidor IP ................................................................................................................................. 14
+      5.4.3 Posicionador ................................................................................................................................... 15
+      5.4.4 Válvulas solenoides ........................................................................................................................ 16
+      5.4.5 Finales de carrera ........................................................................................................................... 16
+      5.4.6 Volante manual ............................................................................................................................... 17
+      5.4.7 Otros accesorios ............................................................................................................................. 17
+    5.5    CÁLCULO Y SELECCIÓN ......................................................................................................................... 18
+      5.5.1 Cálculo ............................................................................................................................................ 18
+      5.5.2 Fenómenos críticos ........................................................................................................................ 18
+      5.5.3 Ruido .............................................................................................................................................. 19
+      5.5.4 Selección de Cv, sentido de flujo y característica inherente.......................................................... 20
+    5.6    INSTALACIÓN DE VÁLVULAS DE CONTROL ................................................................................................ 22
+      5.6.1 Criterios generales de montaje ...................................................................................................... 22
+      5.6.2 Conexionado neumático ................................................................................................................. 22
+    5.7    SUMINISTRO DE VÁLVULAS DE CONTROL ................................................................................................. 22
+      5.7.1 Marcación ....................................................................................................................................... 22
+      5.7.2 Documentación ............................................................................................................................... 23
+
+
+     COPIA NO CONTROLADA
+     [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                                  1 / 32
+                                                       #Título                     J0600 VÁLVULAS DE
+                                                                                   CONTROL
+ #Tipo                                                  Especificación            #Código                 ES__-0001981
+ #Fecha de Vigencia                                     24/11/2021                #Versión                1.0
+ #Activo de la información                              YPF - Privada
+ #Proceso                                               21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+    5.8    INSPECCIÓN Y PRUEBAS ........................................................................................................................ 23
+      5.8.1 General ........................................................................................................................................... 23
+      5.8.2 Pruebas de presión ........................................................................................................................ 24
+      5.8.3 Pruebas funcionales ....................................................................................................................... 25
+    5.9    PINTURA............................................................................................................................................... 25
+6      ROLES, INDICADORES, REGISTROS Y RIESGOS DEL PROCESO ..................................................... 25
+    6.1          ROLES.................................................................................................................................................. 25
+    6.2          INDICADORES........................................................................................................................................ 25
+    6.3          REGISTROS .......................................................................................................................................... 26
+    6.4          RIESGOS Y ACCIONES MITIGANTES ......................................................................................................... 26
+    6.5          REGLAS DE NEGOCIO ............................................................................................................................ 26
+7      ANEXOS Y REFERENCIAS ....................................................................................................................... 26
+    7.1    ANEXOS ............................................................................................................................................... 26
+      7.1.1 Anexos Especiales ......................................................................................................................... 26
+      7.1.2 Otros anexos .................................................................................................................................. 26
+    7.2    NORMATIVA RELACIONADA .................................................................................................................... 27
+    7.3    DEFINICIONES Y ABREVIATURAS ............................................................................................................. 28
+8      APROBACIÓN ............................................................................................................................................ 29
+    8.1          VIGENCIA.............................................................................................................................................. 29
+    8.2          DISPOSICIONES GENERALES Y TRANSITORIAS ......................................................................................... 29
+    8.3          HISTORIAL ............................................................................................................................................ 30
+    8.4          FLUJO DE APROBACIÓN ......................................................................................................................... 30
+9      ANEXO........................................................................................................................................................ 31
+    9.1    ANEXO I - 10867-ES-21030700-110A - J0600 VÁLVULAS DE CONTROL REGULATORIO.PDF (ULTIMA
+    VERSIÓN SGN DISPONIBLE) – DOCUMENTO NO VIGENTE. ................................................................................... 31
+    9.2    ANEXO II - HD-J0600-01 HOJA DE DATOS DE VÁLVULAS DE CONTROL ................................................... 32
+
+
+
+
+2 Objeto
+Definir criterios de selección, dimensionamiento y requerimientos mínimos de especificación,
+instalación y uso de válvulas de control para servicios modulante y on-off.
+
+
+3 Ámbito de aplicación
+Upstream – Argentina.
+
+
+
+
+     COPIA NO CONTROLADA
+     [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                                  2 / 32
+                                                       #Título                     J0600 VÁLVULAS DE
+                                                                                   CONTROL
+    #Tipo                                               Especificación            #Código                 ES__-0001981
+    #Fecha de Vigencia                                  24/11/2021                #Versión                1.0
+    #Activo de la información                           YPF - Privada
+    #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+4 Consideraciones principales
+En el desarrollo de todos los proyectos debe utilizarse, junto con esta especificación, la siguiente
+hoja de datos:
+-     HD-J0600-01 Hoja de Datos Válvulas de Control (Anexo II, punto 9.2).
+Quedan fuera del alcance específico de este documento:
+      a) Válvulas para manejo de sólidos por gravedad o mediante transporte neumático
+         (desviadoras).
+      b) Válvulas manuales.
+      c) Válvulas autorreguladoras, que se incluyen en la especificación ES__-0001984 “J0603
+         Válvulas autorreguladas”.
+      d) Válvulas de corte (SDV, BDV, XV), que se incluyen en la especificación ES__-0001983
+         “J0602 Válvulas ON-OFF”.
+Esta especificación no contempla equipos con tecnología de bus de campo (Profibus o Foundation
+Fieldbus). Su uso se limita a la ampliación de instalaciones existentes que incluyan dicha tecnología.
+
+
+5 Especificación
+
+5.1 Características generales
+En el cálculo de válvulas de control deben emplearse las siguientes unidades:
+      -       Caudal volumétrico de líquidos                                                                               m3/h o m3/día
+      -       Caudal volumétrico de gases y vapores                                                                        Sm3/h (a 15ºC y 1 atm.)
+      -       Caudal másico (solo para vapor de agua)                                                                      kg/h o Tn/h
+      -       Presión                                                                                                       kg/cm2
+      -       Densidad                                                                                                     kg/m3
+      -       Temperatura                                                                                                   ºC
+      -       Viscosidad dinámica                                                                                           cP
+En la hoja de datos debe informarse la densidad o gravedad específica (SG) para líquidos, y el PM
+para gases.
+La capacidad de las válvulas se describe por el coeficiente de caudal Cv definido en ISA 75.01.
+Las unidades anteriores deben emplearse en todos los documentos asociados al instrumento
+(memoria de cálculo, hoja de datos, hoja de calibración, etc.) a fin de mantener la consistencia entre
+los mismos.
+
+5.1.1 Transmisión de señal
+Las señales asociadas a los posicionadores pueden ser:
+
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                                  3 / 32
+                                                    #Título                     J0600 VÁLVULAS DE
+                                                                                CONTROL
+ #Tipo                                               Especificación            #Código                 ES__-0001981
+ #Fecha de Vigencia                                  24/11/2021                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+   a) 4-20 mA a dos hilos + HART.
+   b) 3-15 o 6-30 psi en equipos neumáticos.
+
+5.1.2 Compatibilidad electromagnética
+Todos los equipos electrónicos deben cumplir con la norma IEC-61000 y las normativas locales que
+se indiquen en los DBD (Datos Básicos de Diseño).
+
+5.1.3 Instalación en áreas clasificadas
+Se describe en detalle en la especificación ES__-0002228 “J1400 Instalación de Instrumentos en
+Áreas Clasificadas” y sus especificaciones relacionadas.
+El diseño debe tener en cuenta lo siguiente:
+   a) El modo de protección debe ser Antideflagrante (EEx-d).
+   b) En caso de tratarse de una instalación existente EEx-i, puede aceptarse el modo Seguridad
+      Intrínseca (EEx-i) para las modificaciones que se realicen.
+
+5.1.4 Instalación en áreas no clasificadas
+Con el objetivo de unificar provisiones y stock de repuestos, deben usarse instrumentos certificados
+para zonas clasificadas de acuerdo a lo expuesto en el apartado anterior, pero instalados de modo
+convencional.
+Pueden utilizarse instrumentos carentes de certificación en aquellas instalaciones en la que gran
+parte o toda la unidad sea área no clasificada (por ejemplo: planta de inyección de agua).
+No se acepta, en ningún caso, el uso de instrumentos sin certificación en áreas clasificadas.
+
+5.1.5 Envolventes y protección ambiental
+Todos los equipos deben tener una protección ambiental adecuada a su tipo y zona de instalación,
+que garantice un correcto servicio y la ausencia de problemas causados por el entorno de instalación.
+El grado de protección ambiental debe describirse según el código IP de acuerdo a la IEC 60529.
+El grado de protección ambiental debe ser, como mínimo, el siguiente para equipos instalados a la
+intemperie:
+   -       Áreas convencionales                                                                                                         IP 65
+   -       Instalaciones expuestas a ambientes marinos                                                                                  IP 68
+El grado de agresividad de un entorno queda definido según la norma ISA 71.04.
+Las juntas empleadas en envolventes y cajas deben ser antienvejecimiento y resistentes a
+hidrocarburos.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                               4 / 32
+                                                    #Título                     J0600 VÁLVULAS DE
+                                                                                CONTROL
+ #Tipo                                               Especificación            #Código                 ES__-0001981
+ #Fecha de Vigencia                                  24/11/2021                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+Los equipos deben funcionar correctamente instalados a la intemperie, entre -15ºC y +65ºC, con
+humedades relativas de hasta el 100% y exposición directa al sol. Se deben verificar las condiciones
+ambientales según las Bases de Diseño de cada Proyecto.
+Deben aplicarse consideraciones específicas de protección a las partes móviles (internas y externas)
+de los posicionadores por presencia de hielo.
+
+
+5.2 Especificación técnica de válvulas de control
+5.2.1 Tipos de válvulas y aplicación
+En este apartado se incluyen criterios de selección de válvulas.
+5.2.1.1 Válvulas globo
+    a) Características destacadas:
+       - Buena capacidad de regulación.
+       - Para uso, operación o accionamiento frecuente.
+       - Buena rangeabilidad.
+       - Buen cierre (Clases IV y VI).
+       - Versatilidad en cuanto a internos disponibles para tratar cavitación y ruido.
+       - Puede manejar altos ΔP.
+    b) Limitaciones
+       - En tamaños grandes (DN > 8”) su costo aumenta considerablemente.
+5.2.1.2 Válvulas mariposa
+    a) Características destacadas:
+       - Baja pérdida de carga a través de la válvula.
+       - Disponibilidad para grandes tamaños de línea
+       - Bajo costo para grandes diámetros.
+       - Alta capacidad.
+       - Mínimo espacio de instalación en línea.
+       - Aptas para lazos de control lentos.
+       - Aptas para bajo ΔP disponible.
+    b) Limitaciones
+       - Mal cierre (salvo ejecuciones especiales tipo doble o triple excéntrica, o similar).
+       - Peor regulación que otros tipos.
+       - Con altas temperaturas requieren diseños especiales de alto costo.
+       - No aptas para altas caídas de presión.
+       - No admiten internos especiales para cavitación, flashing o ruido.
+5.2.1.3 Válvulas en ángulo
+    a) Características destacadas:
+       - Aptas para muy altos ΔP con cualquier fluido.
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                               5 / 32
+                                                    #Título                     J0600 VÁLVULAS DE
+                                                                                CONTROL
+ #Tipo                                               Especificación            #Código                 ES__-0001981
+ #Fecha de Vigencia                                  24/11/2021                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+           -
+         Aptas para condiciones severas de flashing o de flashing corrosión (por ejemplo: salida
+         de amina rica de torre absorbedora).
+      - Cuando el montaje deba realizarse en un codo.
+      - Aplicaciones donde la válvula deba ser autolimpiante.
+      - Fluidos altamente erosivos.
+   b) Limitaciones
+      - La forma del cuerpo condiciona su montaje en líneas existentes.
+Las variantes específicas dentro de cada tipo de válvula (por ejemplo, relativas al guiado o tipos de
+internos) se deben estudiar en cada caso particular.
+Como criterio general, las válvulas deben tener conexiones a la línea bridadas de acuerdo a la clase
+de cañería correspondiente.
+Las conexiones bridadas deben cumplir con lo siguiente:
+   a) Las bridas deben ser integrales al cuerpo.
+   b) Las bridas deben ser según ANSI B16.5 hasta 24” y según ANSI B16.47 por encima de este
+      valor.
+   c) El rating y encarado de las bridas deben ser los mismos que los de la línea.
+   d) El acabado de las bridas RF debe ser de 125 – 250 RMS.
+Para válvulas mariposa las conexiones deben ser tipo lug.
+Las conexiones especiales requieren siempre la autorización de YPF.
+
+5.2.2 Cuerpo y bonete
+Los cuerpos deben ser de fundición o de forja, en los materiales indicados en el apartado 5.3.1.
+Salvo que se pida expresamente, los cuerpos deben carecer de brida de fondo o tapón de drenaje.
+Las dimensiones de los cuerpos deber estar de acuerdo a las siguientes normas según corresponda:
+ISA 75.08.01, ISA 75.08.06, API 609, ASME B16.10.
+En forma general, el tamaño mínimo del cuerpo de la válvula puede ser hasta 2 diámetros menor o
+la mitad del diámetro de la cañería.
+Los bonetes deben ser del mismo material que el cuerpo de la válvula, abulonados y con junta
+totalmente encastrada (no expuesta). No se admiten bonetes roscados.
+Debe considerarse el uso de bonetes extendidos para temperaturas extremas u otra condición que
+así lo requiera.
+
+5.2.3 Internos
+Como “internos” de las válvulas se consideran las piezas metálicas desmontables que están en
+contacto directo con el fluido: vástago, obturador, asiento, jaula o retenedor.
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                               6 / 32
+                                                   #Título                     J0600 VÁLVULAS DE
+                                                                               CONTROL
+#Tipo                                               Especificación            #Código                 ES__-0001981
+#Fecha de Vigencia                                  24/11/2021                #Versión                1.0
+#Activo de la información                           YPF - Privada
+#Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+  a) Válvulas globo
+          Los internos deben seleccionarse considerando los requisitos particulares del proceso. Dicha
+          selección debe estar respaldada por la memoria de cálculo correspondiente.
+          Los tipos de internos a considerar son los siguientes:
+          -       Estándar.
+          -       Reducido.
+          -       Antirruido.
+          -       Anticavitación.
+          Los internos antirruido deben ser tipo jaula multietapa, jaula perforada o similar. También
+          pueden usarse difusores o platos con aprobación de YPF, debido a los requerimientos para
+          las cañerías aguas abajo del conjunto.
+          En presencia de flashing deben endurecerse internos y guías según corresponda.
+          Con fluidos muy sucios, que puedan solidificar, o con contenido de arena, deben evitarse los
+          internos guiados por jaula, balanceados (tipo Fisher ED, ET o equivalente) o los internos de
+          laberintos donde puedan producirse atascos y obstrucciones.
+          Para ΔP>10 kg/cm2, con fluidos limpios, y si el tamaño del cuerpo lo permite (típicamente a
+          partir de 3”), deben emplearse obturadores balanceados de encontrarse disponible esta
+          opción.
+          Los internos deben ser fácilmente desmontables, de cambio rápido, y el guiado puede ser por
+          jaula o por vástago.
+  b) Válvulas mariposa
+          El obturador debe ser, en lo posible, de tipo excéntrico para cualquier servicio.
+          Los obturadores tipo lenteja simétrica deben usarse sólo para servicios ON-OFF.
+          Los obturadores caracterizados pueden emplearse tanto para servicio ON-OFF como para
+          regulación.
+          El vástago debe estar soportado en ambos extremos del cuerpo. El soporte del lado contrario
+          al acoplamiento al actuador debe ser interno, sin salida al exterior del cuerpo.
+          La unión entre vástago y disco debe garantizar que ambas piezas siempre giren
+          solidariamente con cualquier sentido de flujo a través de la válvula.
+          El sello del asiento debe estar sobre el cuerpo y no sobre el disco del obturador.
+          Las superficies de asiento deben ser antiadherentes en las condiciones de servicio para evitar
+          que, tras un periodo prolongado de cierre, pueda superarse el par nominal de apertura del
+          actuador.
+
+
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                        o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                              7 / 32
+                                                    #Título                     J0600 VÁLVULAS DE
+                                                                                CONTROL
+ #Tipo                                               Especificación            #Código                 ES__-0001981
+ #Fecha de Vigencia                                  24/11/2021                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+5.2.4 Clase de cierre requerida
+La clase de cierre debe ser especificada de acuerdo a ANSI/FCI 70.2.
+Para válvulas donde la norma anterior no sea aplicable, se debe utilizar API 598.
+Salvo indicación más restrictiva por requerimiento del proceso, debe especificarse Clase IV en la
+hoja de datos.
+Para servicios donde se requiera minimizar fugas, especificar Clase VI o Clase V, según las
+condiciones operativas.
+
+5.2.5 Empaquetaduras
+Las empaquetaduras deben ser todas autolubricantes y exentas de amianto.
+El material y tipo de las empaquetaduras debe ser seleccionado de acuerdo a las condiciones de
+operación, el fluido y las limitaciones de emisión a la atmósfera. Esta selección debe ser verificada
+por el fabricante de la válvula.
+Siempre que la aplicación lo permita, se deben usar como materiales estándar anillos de teflón (en
+“V”) o grafito/grafoil.
+El diseño del conjunto de la empaquetadura (packing assembly) debe permitir un grado de apriete
+continuo y ajustable mediante su prensa, así como compensar desgastes de la misma (anillos en V,
+resortes de apriete, etc.).
+El prensaestopas de apriete de la empaquetadura debe ser atornillado o roscado a la tapa del cuerpo.
+En caso de servicios donde la estanqueidad deba ser absoluta porque el fluido sea tóxico o letal (por
+ej., altas concentraciones de H2S), se deben usar además fuelles de estanqueidad de material
+compatible con el fluido de proceso y apto para las condiciones operativas.
+Cuando se requiera una evaluación o estimación de las fugas de la empaquetadura, el documento
+de referencia debe ser la norma ISO 15848-1 AMD 1.
+
+
+5.3 Materiales
+El uso de amianto en cualquier parte de la válvula está prohibido.
+Todos los materiales especificados para las válvulas deben ser verificados por el proveedor/
+fabricante de las mismas.
+En servicio con sulfhídrico (más de 50ppm disuelto en agua, u otras condiciones indicadas en ES__-
+0001006 “ED(EP)-B-04.00 Requerimientos y limitaciones de materiales para servicios especiales”),
+los materiales de la válvula deben cumplir con NACE MR0175.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                               8 / 32
+                                                    #Título                     J0600 VÁLVULAS DE
+                                                                                CONTROL
+ #Tipo                                               Especificación            #Código                 ES__-0001981
+ #Fecha de Vigencia                                  24/11/2021                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+5.3.1 Materiales de cuerpo y bonete
+El material de cuerpo y bonete debe ser, en general, el equivalente al de la línea de instalación en
+coincidencia con lo indicado en la clase de cañerías.
+Pueden utilizarse materiales de mayores prestaciones que los mencionados en la clase de cañerías,
+en función de las necesidades propias de la instalación o proceso. Por ejemplo: en líneas de acero
+al carbono donde exista flashing intenso o arena, si el fluido lo permite, pueden usarse cuerpos de
+acero Cr-Mo (A-217 C5 / WC9 o similar) para mejorar su resistencia a la erosión, según
+recomendación de los fabricantes de las válvulas.
+Los materiales más habituales incluidos en las especificaciones de YPF y sus equivalencias para
+cuerpos de forja o fundición son:
+
+                   Material de la línea                                                Equivalente en forja                                            Equivalente en fundición
+
+        ASTM A106 Gr. B/API 5L Gr. B                                                                  A 105                                                          A 216 WCB
+
+                     ASTM A333 Gr. 6                                                              A 350 LF6                                                           A 352 LCB
+
+                          A312 Tp 316                                                           A 182 F316                                                          A 351 CF 8M
+
+                         A312 Tp 316L                                                          A 182 F316L                                                          A 351 CF 3M
+                                                                                              Tabla N° 1
+
+Pueden existir combinaciones de líneas de acero al carbono con recubrimiento interno y válvulas de
+inoxidable. En estos casos, o cualquier otro en que el material de la línea y el cuerpo de la válvula
+difieran, se debe incluir una junta dieléctrica para evitar efectos de corrosión.
+La tornillería debe ser adecuada a la temperatura de servicio y al material del cuerpo, de acuerdo a
+la especificación ES__-0001998 “L0200 Clases de Cañerías para Plantas”.
+
+5.3.2 Materiales de internos
+El material de los internos debe ser compatible con el fluido de proceso en las condiciones operativas
+(P, T, corrosividad, pH, contenido de sólidos, etc.).
+Se deben tomar como base los materiales indicados en la especificación ES__-0001998 “L0200
+Clases de Cañerías para Plantas”, ajustándolos a los requisitos particulares de cada caso y
+considerando los lineamientos del presente documento.
+Con cuerpos de acero al carbono, la calidad mínima de los internos debe ser AISI 316.
+Con cuerpos de acero inoxidable tipo austenítico o aleaciones de níquel (Monel, Hastelloy), el
+material de los internos debe ser como mínimo de la misma calidad que el cuerpo.
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                               9 / 32
+                                                    #Título                     J0600 VÁLVULAS DE
+                                                                                CONTROL
+ #Tipo                                               Especificación            #Código                 ES__-0001981
+ #Fecha de Vigencia                                  24/11/2021                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+En los siguientes servicios se deben endurecer los internos (obturador, jaula o retenedor, asiento,
+guía, según corresponda):
+   a)      Para ΔP operativo > 10 kg/cm2.
+   b)      Cuando exista flashing en la válvula.
+   c)      Con fluidos erosivos o que arrastren partículas.
+   d)      Con fluidos conteniendo H2S húmedo.
+El endurecimiento puede ser por aporte de material de alta resistencia (Stellite Nº6, Ultimate,
+Colmonoy 6, etc.) o por ejecución directa de la pieza en material endurecido (Stellite Nº3, Nitronic
+50, etc.).
+Para servicios con arena, las válvulas deben tener internos endurecidos con carburo de tungsteno.
+Con obturadores de pequeño tamaño (D ≤ 10 mm), sólo se admite la ejecución en material
+endurecido ya que, en estos casos, los aportes de material son difíciles de realizar y de poca
+fiabilidad.
+Cuando el endurecimiento sea por aporte, el procedimiento debe ser siempre de relleno de cajeras
+mecanizadas en la pieza base y posterior mecanizado del sobrante. El espesor final del aporte no
+debe ser inferior a 2mm.
+También pueden utilizarse aceros martensíticos de la serie 400 (AISI 410, AISI 416, AISI 440C, 17-
+4PH, etc.), siempre que sean compatibles con el fluido de proceso.
+Los vástagos deben tener un acabado superficial perfectamente pulido y libre de irregularidades para
+minimizar su fricción con las empaquetaduras.
+Los asientos blandos (teflón u otro) no se deben utilizar en presencia de flashing o cavitación.
+En la siguiente tabla se muestran aplicaciones típicas y las características de los trims requeridos.
+La tabla es a modo de ejemplo y únicamente para uso referencial. Las características aquí descriptas
+deben ser validadas para cada caso particular.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                            10 / 32
+                                                     #Título                     J0600 VÁLVULAS DE
+                                                                                 CONTROL
+ #Tipo                                                Especificación            #Código                 ES__-0001981
+ #Fecha de Vigencia                                   24/11/2021                #Versión                1.0
+ #Activo de la información                            YPF - Privada
+ #Proceso                                             21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+                                                                                     Condición de
+     Equipo                       Aplicación                      Fluido                                               Característica                      Tipo Trim                 Material Trim
+                                                                                      Operación
+
+                                                                                           Alto DP /                                                                                    AISI-316 +
+                                                                                                                                  =%                              Std
+                                                                  Agua /                   Flashing                                                                                      Stellite 6
+                                                                   HC
+                                    Salida De                                              Bajo DP                                =%                              Std                     AISI-316
+                                    Líquidos
+                                                                  Agua /                  Alto DP /
+                                                                                                                                                                                         Carburo
+   Separador                                                      HC +                    Flashing /                              =%                              Std
+                                                                                                                                                                                        Tungsteno
+                                                                  Arena                    Erosión
+ Slug Catcher
+                                                                                         Bajo / Alto
+                               Salida De Gas                                                                                      =%                              Std                     AISI-316
+                                                                                           DP(1)
+                                                               HC (Gas)
+                                                                                                                                                                                     AISI-316 +
+                                   Alivio                                                                               =% / Apertura                         Std /
+                                                                                            Alto DP                                                                                Stellite 6 / AISI-
+                                Sobrepresión                                                                              Rápida                            Antirruido
+                                                                                                                                                                                          316
+
+                                    Salida De                                                                                                                                           AISI-316 +
+ Scrubber de                                                         HC                    Flashing                             Lineal                            Std
+                                    Líquidos                                                                                                                                             Stellite 6
+  Succión de
+ Compresores
+                                 Entrada Gas                   HC (Gas)                    Bajo DP                                =%                              Std                     AISI-316
+
+    Salida a                        Salida a
+                                                               HC (Gas)                    Bajo DP                                =%                              Std                     AISI-316
+   Gasoducto                       Gasoducto
+
+                                                                                           Bajo DP                                =%                              Std                     AISI-316
+   Reciclo de                      Reciclo de                      HC /
+    Bombas                          Bombas                         Agua                                                                                                              AISI-316 +
+                                                                                                                                                           Std / Anti
+                                                                                            Alto DP                               =%                                               Stellite 6 / AISI-
+                                                                                                                                                           cavitación
+                                                                                                                                                                                          316
+
+                                                                   Agua                    Bajo DP                                =%                              Std                     AISI-416
+                                    Salida de
+      FWKO                                                                                                                                                                           AISI-316 +
+                                    Líquidos                                              Bajo DP /
+                                                                     HC                                                           =%                              Std              Stellite 6 / AISI-
+                                                                                          Flashing
+                                                                                                                                                                                          316
+
+
+
+
+1 Se deben endurecer los internos en función del diámetro y DP, según recomendaciones del proveedor.
+
+
+
+
+    COPIA NO CONTROLADA
+    [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                          o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                             11 / 32
+                                                    #Título                     J0600 VÁLVULAS DE
+                                                                                CONTROL
+ #Tipo                                               Especificación            #Código                 ES__-0001981
+ #Fecha de Vigencia                                  24/11/2021                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+                                                                                    Condición de
+    Equipo                       Aplicación                      Fluido                                               Característica                      Tipo Trim                 Material Trim
+                                                                                     Operación
+
+                                  Entrada o                     Gas de
+                                                                                          Bajo DP                                =%                              Std                     AISI-416
+                                  Salida Gas                    Servicio
+                                                                           Tabla N° 2 Trims según aplicación.
+
+En servicio ácido se debe prestar atención a eventuales incompatibilidades entre la dureza que,
+debido al flashing, se exige a los internos, y las limitaciones a la misma que imponen los servicios
+citados.
+Para servicio con Cloruros, la calidad mínima de material de internos debe ser acero inoxidable AISI
+316 hasta concentraciones de 35.000 ppm de cloruro. Con concentraciones de cloruro ≥ 35.000 ppm,
+se deben usar aceros inoxidables dúplex (22% Cr), superdúplex (25%Cr) o monel, según
+recomendación del proveedor. En estos casos, el material del cuerpo debe ser apto para la
+aplicación, independientemente del material indicado en la clase de cañerías para válvulas
+manuales.
+
+
+5.4 Accesorios
+5.4.1 Actuador
+Para válvulas tipo globo o ángulo se deben utilizar actuadores neumáticos. Los actuadores pueden
+ser de diafragma o pistón, con la actuación a fallo que se requiera de acuerdo al proceso y que se
+indique en la hoja de datos del proyecto.
+El fluido motor debe ser aire o gas según la disponibilidad en sitio.
+De utilizarse gas de instrumentos, tanto el actuador como los accesorios deben ser aptos para
+funcionamiento con este gas. Debe considerarse la agriedad del gas para la selección de los
+materiales.
+Para el actuador a diafragma, la señal neumática puede ser de 3-15 psig o 6-30 psig.
+El shutoff a especificar para cada válvula, debe seleccionarse de acuerdo a la presión máxima de
+diseño del sistema aguas arriba. Ver lineamientos generales en la tabla siguiente.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                            12 / 32
+                                                    #Título                     J0600 VÁLVULAS DE
+                                                                                CONTROL
+ #Tipo                                               Especificación            #Código                 ES__-0001981
+ #Fecha de Vigencia                                  24/11/2021                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+     Instalación aguas arriba de
+                                                                           Presión de shutoff                                                              Ejemplo
+        la válvula/ Aplicación
+
+     Entrada de planta hasta                                       Presión de diseño de
+     separadores                                                   ducto/línea
+
+
+
+     Equipos paquete (por ej.,                                     P diseño del equipo                                         Para separador de entrada de
+     separador)                                                                                                                batería:
+                                                                                                                               P dis separador=10 Kg/cm2,
+                                                                                                                               P set PSV=10 Kg/cm2.
+                                                                                                                               P shutoff VC descarga de líquido=10 Kg/cm2
+
+     Descarga y recirculación de                                   P máx diseño de bomba
+     bombas
+
+     Tanques atmosféricos                                          2 Kg/cm2                                                    P dis TK= 100mmCA,
+     Sistemas de baja presión                                                                                                  P set PVSV=175 mmCA.
+                                                                                                                               P shutoff VC salida de líquido=2 Kg/cm2
+                                                                   Tabla N° 3 Tabla de shutoff según aplicación
+
+Al establecer la presión de shutoff, debe analizarse, en cada caso, el máximo diferencial de cierre
+que debe mantener la válvula en estudio. Cuando la diferencia de altura, o cualquier otro factor
+externo, genere una presión adicional esta debe ser considerada cuando se especifica el shutoff.
+Estas presiones no están consideradas en la tabla precedente.
+Es responsabilidad del proveedor de las válvulas el dimensionamiento de los actuadores. El
+dimensionamiento debe garantizar el cierre de las válvulas para la presión de shutoff indicada,
+manteniendo la clase de fuga requerida.
+El dimensionamiento del actuador debe realizarse considerando la mínima presión de suministro de
+aire/gas disponible.
+
+Los actuadores tipo diafragma:
+   a) Deben ser de acero estampado o fundición de aluminio, preparados para fijación directa a la
+      válvula.
+   b) Deben permitir el ajuste fino de la tensión del resorte.
+
+Los actuadores tipo pistón:
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                            13 / 32
+                                                    #Título                     J0600 VÁLVULAS DE
+                                                                                CONTROL
+ #Tipo                                               Especificación            #Código                 ES__-0001981
+ #Fecha de Vigencia                                  24/11/2021                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+   a) Deben ser de acero estampado o fundición de aluminio, preparados para fijación directa a la
+      válvula.
+   b) De ser posible no deben requerir lubricación del aire. Caso contrario, deben incluir el
+      lubricador.
+   c) En válvulas mariposa deben tener topes de ajuste en los extremos (±2º por extremo).
+   d) Deben permitir conexiones tipo NAMUR a las solenoides.
+
+Todos los actuadores neumáticos (de diafragma o pistón):
+   a) Deben tener indicador de carrera local (0-100% o ángulo de giro).
+   b) Pueden integrar un volante manual en caso de requerirse, con aprobación expresa de YPF.
+
+Los actuadores eléctricos se deben usar en los siguientes casos:
+   a) Ubicaciones sin disponibilidad de aire de instrumentos.
+   b) Cuando lo indique la ingeniería.
+Por defecto, la posición de falla de este tipo de actuadores es última posición.
+
+El uso de actuadores hidráulicos queda restringido a válvulas donde se requiera una gran potencia
+y/o velocidad de actuación (mariposas de gran diámetro, reciclo de compresores, etc.).
+Para los actuadores hidráulicos, se debe incluir en el alcance del suministro la centralina de aceite
+(central hidráulica) asociada, cuyo diseño y grado de redundancia debe ser aprobado por YPF.
+Los actuadores electrohidráulicos sólo se pueden emplear en casos donde se necesite actuación
+eléctrica y posición segura predefinida (abierta o cerrada) a fallo de alimentación.
+Los actuadores eléctricos y electrohidráulicos se tratan específicamente en la especificación ES__-
+0001982 “J0601 Actuadores Eléctricos”.
+
+5.4.2 Convertidor IP
+Para servicios no críticos se pueden utilizar convertidores IP con aprobación de YPF.
+La señal de control de posición debe ser siempre 4-20 mA.
+La señal neumática hacia la válvula debe ser 3-15 psig o 6-30 psig.
+El conjunto debe ser totalmente estanco IP 65, con carcaza de aluminio o acero inoxidable y apto
+para la clasificación EEx-d.
+Las conexiones eléctricas deben ser de ½” NPT-H y las neumáticas de ¼” NPT-H.
+El convertidor debe garantizar una respuesta dinámica de la válvula con una linealidad mejor del
+±0,5%, una desviación del set point inferior al 5% y una estabilidad superior al 1%.
+El convertidor debe proveerse con regulador con filtro integrado, capaz de recibir aire/gas de
+alimentación en el rango de presión disponible en la instalación.
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                            14 / 32
+                                                    #Título                     J0600 VÁLVULAS DE
+                                                                                CONTROL
+ #Tipo                                               Especificación            #Código                 ES__-0001981
+ #Fecha de Vigencia                                  24/11/2021                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+5.4.3 Posicionador
+Deben usarse posicionadores en todas las válvulas destinadas a regulación de servicios críticos o
+asociadas a procesos.
+Salvo indicación en otro sentido por parte de YPF, todos los posicionadores deben ser
+electroneumáticos, aptos para actuadores de simple o doble efecto, y de tipo inteligente.
+Como el término “inteligente” puede involucrar prestaciones muy dispares según la gama y fabricante
+del equipo, se definen los siguientes niveles de funcionalidad para los posicionadores:
+
+          Categoría                                                                      Funcionalidades mínimas asociadas
+
+             Básico                            Posibilidad de auto calibración local mediante comunicador portátil o pulsadores.
+
+                                               Posibilidad de auto calibración remota, monitoreo de temperatura, transmisión
+         Avanzado                              digital de la posición actual de la válvula. Incluye funcionalidades básicas de
+                                               autodiagnóstico.
+
+                                               A las funciones anteriores añade autodiagnósticos avanzados, capacidad de
+  Altas prestaciones                           monitorear el rendimiento de la válvula, análisis de comportamiento dinámico del
+                                               equipo, etc.
+
+           Especial                            A indicar en requisición de compra en función del vendedor y modelo.
+                                                             Tabla N° 4 Categorías de posicionadores inteligentes
+
+Como estándar, es aceptable el uso de posicionadores de categoría “básica”.
+Los posicionadores deben incluir regulador con filtro integrado, capaz de recibir aire de alimentación
+en el rango de presión disponible en la instalación.
+Si la alimentación fuera con gas de proceso, el posicionador debe ser apto para funcionar con dicho
+gas.
+Por defecto, los posicionadores deben tener acción directa (a mayor entrada en mA, mayor presión
+al actuador).
+La entrada para la consigna de posición debe ser 4-20 mA. Sobre esta señal y en función de la
+categoría del equipo se pueden transmitir otras informaciones desde/hacia sala de control mediante
+un protocolo digital.
+Otro tipo de señales de salida disponibles en algunos modelos de posicionador (contactos de alarma,
+señal de carrera, etc.) sólo se deben usar excepcionalmente con la autorización expresa de YPF.
+Los posicionadores electroneumáticos deben tener manómetros de alimentación y salida. Los de tipo
+neumático deben tener, además, manómetro para la señal de entrada. Deben disponer de doble
+graduación (kg/cm2 y psi).
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                            15 / 32
+                                                    #Título                     J0600 VÁLVULAS DE
+                                                                                CONTROL
+ #Tipo                                               Especificación            #Código                 ES__-0001981
+ #Fecha de Vigencia                                  24/11/2021                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+La clasificación eléctrica de los posicionadores y su grado de protección ambiental deben ser los
+indicados en los apartados correspondientes de esta especificación.
+Las conexiones eléctricas deben ser de ½” NPT-H y las neumáticas de ¼” NPT-H.
+El vendedor debe ofertar siempre el software de configuración para el posicionador y su aplicación,
+tanto desde un comunicador portátil como desde el programa de gestión de activos usado en planta
+(por ejemplo: AMS).
+El conjunto posicionador-actuador deben garantizar una respuesta dinámica de la válvula con una
+linealidad mejor del ±0,25%, una desviación del set point inferior al 2% y una estabilidad superior al
+1%.
+Otros parámetros dinámicos (velocidad de actuación, banda muerta, resolución, sobre disparo, etc.)
+sólo deben ser especificados cuando existan recomendaciones de la ingeniería básica.
+
+5.4.4 Válvulas solenoides
+Aquellas válvulas de control que adicionalmente tengan una operación ON-OFF asociada, deben
+contar con válvula/s solenoide/s con las siguientes características:
+   -       Tipo universal.
+   -       Mando directo.
+   -       Sección de paso de al menos 6 mm 2.
+   -       Con aislamiento clase F o mayor.
+   -       Actuadas en 24 VCC (otros niveles de tensión se pueden emplear previa autorización de
+           YPF).
+   -       De bajo consumo (<5W).
+   -       Conexión eléctrica ½” NPT-H.
+   -       Conexión neumática ¼” NPT-H.
+   -       Clasificación eléctrica y grado de protección ambiental deben ser los indicados en los
+           apartados correspondientes de esta especificación.
+Deben ser de rearme automático, salvo indicación en otro sentido en la hoja de datos. En caso de
+tener rearme manual, el mismo debe ser por accionamiento sobre el propio cuerpo de la válvula.
+Deben tener acceso directo a los bornes mediante tapa roscada o atornillada sin necesidad de cajas
+auxiliares.
+
+5.4.5 Finales de carrera
+Se deben instalar por defecto y salvo indicación en otro sentido, en la posición segura
+(abierta/cerrada) de válvulas de control con solenoide.
+En casos especiales se pueden especificar finales de carrera para posiciones intermedias de las
+válvulas de control (por ejemplo: posición de encendido en una válvula de combustible a
+quemadores).
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                            16 / 32
+                                                    #Título                     J0600 VÁLVULAS DE
+                                                                                CONTROL
+ #Tipo                                               Especificación            #Código                 ES__-0001981
+ #Fecha de Vigencia                                  24/11/2021                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+Los finales de carrera deben ser preferentemente mecánicos y con contactos tipo SPDT, con
+corriente nominal mínima de 2A@24VCC. Alternativamente pueden usarse inductivos. No se permite
+el uso de finales de carrera tipo NAMUR.
+La protección ambiental y EEx debe ser la indicada en los apartados correspondientes de esta
+especificación.
+En los finales de carrera inductivos, el margen de detección no debe ser inferior a 6 mm.
+Cuando vayan alojados en una caja, la misma debe disponer de un grado de protección IP 65, y debe
+estar fijada sobre la propia válvula. Las entradas para cables deben ser ½” NPT-M, independientes
+para cada final de carrera salvo que se indique otra cosa.
+El uso de contactos internos al posicionador inteligente como finales de carrera se acepta solo como
+excepción, y bajo aprobación de YPF.
+Es recomendable la utilización de elementos que permitan el monitoreo de continuidad de línea en
+el caso de que el DCS/PLC lo admita.
+
+5.4.6 Volante manual
+El uso de volante en válvulas debe contar con aprobación expresa de YPF.
+En caso de uso, el volante debe estar siempre accesible desde piso o plataforma.
+No se deben instalar nunca volantes en aquellas válvulas de control que adicionalmente tengan un
+enclavamiento asociado.
+
+5.4.7 Otros accesorios
+5.4.7.1 Limitadores de carrera
+Deben ser siempre externos, ajustables y deben actuar directamente sobre el recorrido del vástago.
+Además del limitador externo, debe agregarse la limitación de carrera por posicionador.
+La limitación únicamente por software (posicionador inteligente, DCS) puede utilizarse previa
+autorización de YPF, y debe indicarse claramente en la Filosofía de Operación del proyecto.
+Se prohíbe el uso de volantes como limitadores de carrera.
+El uso de limitador de carrera debe estar claramente especificado en la hoja de datos junto con las
+condiciones de operación para las que fue solicitado.
+5.4.7.2 Transmisor de posición
+Sólo se debe incluir cuando lo pida la ingeniería.
+Su tipo (inductivo, potenciométrico, etc.) debe ser definido por el fabricante de la válvula según la
+aplicación.
+Para aplicaciones no asociadas a control, seguridad o alarma (por ejemplo, indicación), el transmisor
+puede ser reemplazo por una señal vía HART del posicionador.
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                            17 / 32
+                                                    #Título                     J0600 VÁLVULAS DE
+                                                                                CONTROL
+ #Tipo                                               Especificación            #Código                 ES__-0001981
+ #Fecha de Vigencia                                  24/11/2021                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+Debe ser un equipo a dos hilos, con entrada eléctrica de conexión ½” NPT-H, alimentado desde el
+elemento receptor de su señal, y con los grados de protección y ambiental EEx que se indican en los
+apartados correspondientes de esta especificación.
+5.4.7.3 Filtro-regulador
+Se debe utilizar en todas las válvulas de control. Debe disponer de manómetros de entrada/salida y
+llaves de purga y ajuste de presión.
+
+
+5.5 Cálculo y selección
+5.5.1 Cálculo
+Las válvulas de control se deben calcular en la Ingeniería en base a la norma ANSI/ISA S75.01.
+Las válvulas deben ser dimensionadas por la Ingeniería responsable del proyecto, que debe indicar
+en cada hoja de datos el tamaño de cuerpo, el valor requerido de capacidad (Cv), el tipo de internos
+y/o cualquier otro requisito particular para la aplicación.
+Los proveedores y/o fabricantes deben verificar los dimensionamientos, de acuerdo a los datos
+operativos informados en las hojas de datos, antes de presentar su oferta.
+Pueden utilizarse programas genéricos o de vendedor siempre que estén basados en la norma citada
+previamente. Se restringe su aplicación a los tipos de válvulas para los que están diseñados (no se
+extrapola a otros tipos). Si se utiliza un software genérico, debe verificarse que los resultados
+obtenidos sean compatibles con válvulas existentes en el mercado.
+Como buena práctica, debe procurarse siempre un ΔP ≥ 0,5 kg/cm2 en cualquier válvula de control.
+El uso de valores de ΔP menores al indicado debe contar con aprobación de YPF (ejemplo: descarga
+de TK atmosférico).
+En aplicaciones con gas y alta caída de presión, debe indicarse en la hoja de datos la temperatura
+de salida del gas (efecto Joule-Thomson). La especificación de válvulas para estos casos, debe
+considerar algún método para mitigar los efectos del descenso brusco de temperatura (posible
+formación de hielo exterior que impide movimiento del vástago).
+
+5.5.2 Fenómenos críticos
+Los fenómenos críticos que pueden presentarse en una válvula son flashing y cavitación.
+La válvula presenta flashing cuando la presión del fluido aguas abajo de la válvula es menor que la
+presión de vapor del líquido a la temperatura de operación (el flasheo del líquido está determinado
+por su presión de vapor y la presión aguas abajo de la válvula).
+En estos casos se puede considerar alguna de las siguientes opciones:
+   a) Ubicar la válvula en la entrada de un recipiente para desplazar allí la vaporización
+   b) Especificar una válvula adecuada para el servicio:
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                            18 / 32
+                                                    #Título                     J0600 VÁLVULAS DE
+                                                                                CONTROL
+ #Tipo                                               Especificación            #Código                 ES__-0001981
+ #Fecha de Vigencia                                  24/11/2021                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+           -       Válvula globo estándar con materiales especiales de cuerpo e internos para incrementar
+                   la resistencia a la erosión. Ver punto 5.3.1 de esta especificación para material de cuerpo,
+                   y 5.3.2 para material de internos.
+           -       Válvula en ángulo, salida con flujo descendente, material de internos según
+                   recomendación de proveedor.
+Cuando la presión del fluido en la válvula desciende por debajo de la presión de vapor, pero se
+recupera por encima de dicho valor, se produce el fenómeno de cavitación.
+En presencia de este fenómeno, se debe proceder de la siguiente manera:
+   a) Usar internos especiales anticavitación
+   b) Para servicio esporádico o cavitación leve, pueden especificarse materiales de mayor dureza
+       tal que el trim soporte el efecto erosivo sin utilizar trims con geometrías especiales
+   c) Considerar las recomendaciones del proveedor respecto a tamaño de válvula, tipo de cuerpo,
+       internos y materiales.
+
+5.5.3 Ruido
+El ruido aerodinámico se debe calcular de acuerdo a una de las normas siguientes:
+    a) ANSI/ISA S75.17.
+    b) IEC-60534-8 (Parte 3).
+Cuando se usen internos especiales antirruido (SPL > 85 dB) se pueden admitir los valores y cálculos
+propietarios del fabricante (que tienen carácter contractual) como alternativa a los indicados
+anteriormente.
+Los cálculos del fabricante deben estar siempre referidos a la propia válvula, sin considerar efectos
+de eventuales recubrimientos externos (aislamiento térmico, insonorizante, etc.) que la línea pueda
+tener.
+En lo referido al nivel de ruido máximo permisible y la exposición, se debe cumplir lo estipulado en el
+Decreto 351/79 y sus modificaciones en la Resolución 295/03.
+Como criterio general de diseño, se debe mantener el nivel de ruido menor o igual a 85 dB medidos
+a un metro de distancia de la válvula. En aquellos casos en los que no es posible, se debe aplicar la
+siguiente tabla en función de la exposición del personal en la ubicación de la válvula.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                            19 / 32
+                                                    #Título                     J0600 VÁLVULAS DE
+                                                                                CONTROL
+ #Tipo                                               Especificación            #Código                 ES__-0001981
+ #Fecha de Vigencia                                  24/11/2021                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+
+
+                                                                                              Tabla N° 5
+
+La velocidad de salida de las válvulas y la velocidad aguas abajo de las mismas, es una consideración
+importante en la evaluación de ruido.
+La velocidad a la salida de la válvula debe limitarse a un valor máximo de Mach igual a 0,7 para
+válvulas con internos estándar, y deben tenerse en cuenta las recomendaciones de proveedor para
+internos especiales.
+Según el SPL alcanzado en la descarga, se deben tomar medidas de protección adicionales
+(limitación de acceso a zonas adyacentes, señalización de protección acústica, etc.).
+Siempre que una válvula de servicio continuo tenga ruido superior a 85 dB, se deben incluir internos
+especiales para reducir el mismo. El uso de difusor o plato en la línea requiere la aprobación expresa
+de YPF.
+En servicios intermitentes se puede modificar el valor máximo de ruido permitido, bajo aprobación
+expresa de YPF, pero en ningún caso se puede alcanzar el umbral de 110 dB, para evitar daños
+mecánicos por vibraciones.
+Como medida para reducir el nivel sonoro en la descarga de la válvula, puede aumentarse el diámetro
+o Schedule de la línea de descarga, siempre con aprobación previa de YPF.
+Para el cálculo del ruido, en el software de cálculo debe considerarse como diámetro de descarga el
+diámetro de línea que existe entre la válvula y 5D aguas abajo de la misma. Solo puede usarse el
+diámetro mayor de una expansión si esta se encuentra a menor distancia que 5D.
+
+5.5.4 Selección de Cv, sentido de flujo y característica inherente
+Las válvulas de control deben calcularse con los datos operativos que surjan de los posibles
+escenarios de operación, y reflejen las condiciones dimensionantes (deben incluirse condiciones de
+Cv mínimo, normal y máximo).
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                            20 / 32
+                                                    #Título                     J0600 VÁLVULAS DE
+                                                                                CONTROL
+ #Tipo                                               Especificación            #Código                 ES__-0001981
+ #Fecha de Vigencia                                  24/11/2021                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+En el caso que se cuente con escenarios con diferentes ΔP, se debe tener en cuenta que para un
+mismo caudal el máximo Cv se produce con el mínimo ΔP y que el mínimo Cv se produce con máximo
+ΔP.
+Para los casos en los que exista un único caudal operativo posible (por ejemplo, recirculación de
+caudal mínimo de bombas), esta condición debe indicarse explícitamente en la MC correspondiente,
+y se debe considerar un margen de diseño que no condicione la selección de la válvula.
+Cuando los caudales no figuren en el balance de masa, debe clarificarse, mediante una nota en la
+MC, cuál es la condición de operación considerada.
+Cuando el turndown de la instalación no esté reflejado en los caudales de diseño de la válvula (o en
+su rangeabilidad), pueden considerarse los siguientes criterios para el dimensionamiento:
+    a) Cv requerido » 1,3 x Cv máximo.
+    b) Cv requerido » 2 x Cv normal.
+Los porcentajes de apertura de las válvulas deben estar comprendidos entre los siguientes valores:
+   a) Entre 10% y 75% para las válvulas de característica lineal.
+   b) Entre 10% y 80% para las válvulas de característica isoporcentual.
+   c) Entre 20º y 60º para válvulas mariposa.
+En las válvulas de control el sentido de flujo debe ser aquel que ayude a la acción ante falla, salvo
+que convenga el contrario para obtener mejores coeficientes o lo recomiende el fabricante (por
+ejemplo, por flashing o cavitación).
+En los puntos siguientes se proporcionan recomendaciones para la selección de la característica
+inherente de la válvula, cuando la misma no esté condicionada por el uso de internos especiales o
+indicaciones de la ingeniería.
+   a) Característica isoporcentual
+      - Variables rápidas (típicamente presión, caudal).
+      - Válvulas que requieran gran rangeabilidad en caudal o ΔP.
+      - Cuando el ΔP en la válvula sea inferior al 20% del total del sistema.
+   b) Característica lineal
+      - Variables lentas (típicamente nivel, temperatura, analíticas, etc.).
+      - Cuando el ΔP en la válvula sea superior al 20% del total del sistema.
+      - Válvulas con ΔP constante y válvulas de antisurge en compresores.
+      - En válvulas de 3 vías o configuraciones de dos válvulas reemplazando a una de 3 vías.
+La característica de apertura rápida queda restringida a válvulas de Blowdown.
+Cuando no prime otro criterio, se debe escoger característica isoporcentual.
+La caracterización por software, vía posicionador inteligente, requiere la autorización expresa de YPF
+y debe ser documentada en la hoja de datos de la válvula.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                            21 / 32
+                                                    #Título                     J0600 VÁLVULAS DE
+                                                                                CONTROL
+ #Tipo                                               Especificación            #Código                 ES__-0001981
+ #Fecha de Vigencia                                  24/11/2021                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+5.6 Instalación de válvulas de control
+5.6.1 Criterios generales de montaje
+Las válvulas de control se deben montar, en lo posible, en líneas horizontales con el actuador en
+posición vertical.
+Cuando sea inevitable un montaje en línea vertical o en una línea horizontal con la válvula girada, se
+debe soportar el actuador de modo independiente y de acuerdo a las recomendaciones del fabricante
+de la válvula.
+En válvulas muy pequeñas o donde el diseño del fabricante ya contemple que el actuador esté en
+voladizo respecto al cuerpo, y no descansando verticalmente sobre el mismo, esta soportación no es
+necesaria.
+La zona de instalación debe ser accesible y estar rodeada del suficiente espacio libre para el montaje
+y desmontaje de todos los elementos (incluido actuador) de la válvula.
+Todas las válvulas de control deben tener válvulas manuales de aislamiento, bypass y conexiones
+de purga con válvula de ¾” aguas arriba y aguas abajo.
+
+5.6.2 Conexionado neumático
+Todos los accesorios de la válvula de control se deben suministrar convenientemente montados, con
+su tubing asociado correctamente instalado y conectado sobre la propia válvula. Se debe emplear
+tubing de inoxidable de ¼” OD salvo que por razones asociadas a la operación de la válvula se
+requiera un diámetro mayor.
+Las alimentaciones neumáticas se deben ajustar a lo indicado en la especificación ES__-0002225
+“J1000 Alimentaciones Neumáticas”.
+El venteo de las solenoides debe estar orientado hacia el suelo o incluir un codo y/o tramo de tubing
+para lograr esta configuración.
+De requerirse, los venteos deben incluir una pantalla anti-insectos.
+
+
+5.7 Suministro de válvulas de control
+5.7.1 Marcación
+Deben estar de acuerdo con la especificación general ES__-0001051 “ED(EP)-B-01.00 Preparación
+para Transporte de Equipos y Materiales".
+Las válvulas se deben suministrar con todos sus accesorios montados y conectados, en cajones de
+madera individuales.
+Cada válvula debe incluir una placa de acero inoxidable fijada a la misma con los siguientes datos:
+   a) Tag, Fabricante y Nº de serie.
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                            22 / 32
+                                                    #Título                     J0600 VÁLVULAS DE
+                                                                                CONTROL
+ #Tipo                                               Especificación            #Código                 ES__-0001981
+ #Fecha de Vigencia                                  24/11/2021                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+   b)      Tamaño nominal y rating del cuerpo y conexiones.
+   c)      Material y tipo de cuerpo, internos y empaquetadura.
+   d)      Modelo de internos instalados, Cv y dirección de flujo (FTA/FTC).
+   e)      Acción a falla de aire, rango neumático y presión de aire requerida por el actuador.
+   f)      Recorrido del obturador (en mm o grados).
+Todas las válvulas deben llevar claramente grabada en su exterior una flecha indicando el sentido
+de flujo. Si la válvula es de flujo bidireccional, la flecha debe ser doble (➔).
+
+5.7.2 Documentación
+La documentación a entregar por el proveedor se define en la requisición de compra, y como mínimo
+debe incluir lo siguiente:
+   a) Hojas de datos de las válvulas (incluidos accesorios, configuración del posicionador y firma
+      de la válvula).
+   b) Memoria de cálculo (capacidad, ruido, actuador, etc.).
+   c) Planos dimensionales detallados
+   d) Certificados de materiales según DIN 50.049 / EN 10204 clase 3.1.b y de inspección.
+   e) Certificados de cumplimiento con normativas aplicables.
+   f) Certificados de modo EEx de los accesorios eléctricos y electrónicos.
+   g) Esquemas de conexionado eléctrico y tubing neumático.
+   h) Catálogos técnicos y manual de instalación y operación.
+La documentación anterior debe ser complementada con los certificados particulares especificados
+en la hoja de datos correspondiente.
+La documentación anterior se debe suministrar en las cantidades y soportes indicados en la
+requisición de compra.
+Si no se indica otra cosa en la documentación del proyecto, toda la documentación debe ser
+suministrada en idioma español.
+
+
+5.8 Inspección y pruebas
+5.8.1 General
+YPF se reserva el derecho de presenciar todas las pruebas y controles que se realicen sobre las
+válvulas para una dada provisión. Por lo tanto YPF o su representante debe tener libre acceso a las
+instalaciones del proveedor y/o sus subcontratistas en todo a lo concerniente a la fabricación de los
+elementos de válvulas destinadas a sus instalaciones.
+El proveedor debe disponer de todos los elementos, medios técnicos y recursos humanos requeridos
+para la realización de las pruebas que se apliquen a cada caso.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                            23 / 32
+                                                    #Título                     J0600 VÁLVULAS DE
+                                                                                CONTROL
+ #Tipo                                               Especificación            #Código                 ES__-0001981
+ #Fecha de Vigencia                                  24/11/2021                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+El fabricante debe ensayar el 100% de las válvulas. El tamaño de la muestra (porcentaje) de válvulas
+a ser inspeccionadas en presencia del representante de YPF debe ser establecido para cada pedido
+de inspección o proyecto.
+La verificación de pruebas por parte de YPF o su representante no eximen al proveedor de la
+responsabilidad sobre los productos suministrados.
+Previamente a la realización de los ensayos se debe verificar la totalidad de los campos que forman
+parte de la HD o su especificación asociada, como mínimo los siguientes:
+   -       Tag de la válvula en la chapa de identificación.
+   -       Material de todos los componentes (cuerpo, internos, actuador, etc.).
+   -       Conexiones (tipo, rating, ranurado de la cara de contacto, acabado).
+   -       Dimensiones entre bridas y del actuador.
+   -       Presencia de todos los accesorios que formen parte de la provisión (válvulas solenoide,
+           finales de carrera, etc.).
+   -       Inspección visual del cuerpo según MSS SP55.
+   -       Posición de falla.
+   -       Característica de la válvula.
+   -       Clase de cierre especificado.
+   -       Certificados de modo de protección para área clasificada.
+Se recomienda tener de referencia el check list del anexo B de la norma IEC 60534-4.
+
+5.8.2 Pruebas de presión
+5.8.2.1 Prueba Hidrostática del cuerpo
+Cada válvula debe ser ensayada a un valor de presión hidrostática igual a 1.5 veces el máximo rating
+a temperatura ambiente, con las condiciones que indica la norma.
+Las pruebas hidrostáticas deben realizarse conforme a ISA 75.19 (Hydrostatic Testing of Control
+Valves) y de acuerdo a IEC 60534-4 incluyendo las clases especiales definidas en ASME B 16.34.
+Criterio de aceptación: no se admiten pérdidas visibles a través de las paredes del cuerpo y bonete
+durante el desarrollo de la prueba.
+5.8.2.2 Prueba de cierre del asiento:
+Cada válvula debe ser ensayada con el objeto de verificar el cumplimiento de los valores de
+estanqueidad de acuerdo a la clase de cierre especificada en la hoja de datos.
+El tiempo de ensayo y demás características particulares deben estar en un todo de acuerdo con los
+requerimientos especificados en FCI 70.2.
+Criterio de aceptación: no se admiten pérdidas mayores a las especificadas en FCI 70.2 para la clase
+solicitada.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                            24 / 32
+                                                    #Título                     J0600 VÁLVULAS DE
+                                                                                CONTROL
+ #Tipo                                               Especificación            #Código                 ES__-0001981
+ #Fecha de Vigencia                                  24/11/2021                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+5.8.3 Pruebas funcionales
+Cuando sea aplicable, debe estar montado sobre la válvula el posicionador programado con su
+configuración definitiva.
+Se debe realizar una prueba de comienzo de apertura, partiendo de válvula cerrada y disminuyendo
+la presión en el diafragma. La presión a la cual comienza a moverse el indicador de carrera debe ser
+la nominal ± 17,6 mbar.
+La prueba de linealidad se debe realizar en una única dirección (abriendo o cerrando) comparando
+los porcentajes de presión al actuador y carrera a 0, 25, 50, 75 y 100% con tolerancias de ± 3,5 mbar.
+La prueba de rozamiento se debe realizar estabilizando la válvula al 25, 50 y 100% de carrera y
+reduciendo la presión del aire hasta observar movimiento del vástago. La tolerancia debe ser inferior
+a ± 17,6 mbar.
+El error en la posición del vástago no debe exceder el 5% del recorrido total.
+
+
+5.9 Pintura
+Las operaciones de pintura deben ser realizadas luego de la aprobación de la totalidad de las
+inspecciones y ensayos especificados.
+A menos que se especifique lo contrario las válvulas deben ser revestidas de acuerdo a las
+especificaciones del proveedor, las que están sujetas a la aprobación de YPF.
+La superficie interior, vástagos, placas de identificación no deben pintarse.
+La superficie de apoyo de las bridas, las roscas y todas aquellas superficies externas no recubiertas
+con pintura deben ser protegidas contra la oxidación mediante la aplicación de un inhibidor de
+corrosión removible.
+Las válvulas con cuerpo de acero inoxidable no deben llevar protección superficial.
+
+
+6 Roles, Indicadores, registros y riesgos del proceso
+
+6.1      Roles
+                         Rol                                                                  Puestos / Unidad/es Organizativa/s
+  N/A
+
+
+
+6.2 Indicadores
+  Indicador                       Fórmula                        Frecuencia                    Responsable                            Cliente                               Registro
+    (KPI)                                                                                                                            Interno /
+                                                                                                                                     Externo
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                            25 / 32
+                                                      #Título                     J0600 VÁLVULAS DE
+                                                                                  CONTROL
+#Tipo                                                  Especificación            #Código                 ES__-0001981
+#Fecha de Vigencia                                     24/11/2021                #Versión                1.0
+#Activo de la información                              YPF - Privada
+#Proceso                                               21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+N/A
+
+
+
+6.3 Registros
+      Registro                      Responsable                       Responsable                       Frecuencia de                      Disposición y                         Tiempo de
+                                     del registro                      del archivo                        registro /                        protección                            archivo
+                                                                                                           archivo
+N/A
+
+
+6.4 Riesgos y acciones mitigantes
+ Codificación                                          Riesgo                                                         Origen                                                Controles
+ de Referencia                                                                                                                                                              mitigantes
+N/A
+
+
+
+6.5 Reglas de Negocio
+                             Nombre                                                                                              Descripción
+ N/A
+
+
+
+7 Anexos y referencias
+
+7.1 Anexos
+7.1.1 Anexos Especiales
+#Anexos Especiales
+#Nº                                                                                                    Nombre
+N/A
+
+
+7.1.2 Otros anexos
+#Otros Anexos
+ #Nº                                                  Nombre
+             10867-ES-21030700-110A. (Última versión SGN disponible) – Documento No Vigente.
+II           HD-J0600-01 Hoja de Datos Válvulas de Control
+
+
+
+
+     COPIA NO CONTROLADA
+     [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+     © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                           o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                              26 / 32
+                                                   #Título                     J0600 VÁLVULAS DE
+                                                                               CONTROL
+#Tipo                                               Especificación            #Código                 ES__-0001981
+#Fecha de Vigencia                                  24/11/2021                #Versión                1.0
+#Activo de la información                           YPF - Privada
+#Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+7.2 Normativa relacionada
+  Categoría                                             Título                                                                                                Código
+                              J0100 Ingeniería de Instrumentación                                                                                     ES__-0001960
+
+                              J0601 Actuadores Eléctricos                                                                                             ES__-0001982
+
+                              J0602 Válvulas ON OFF                                                                                                   ES__-0001983
+
+                              J0603 Válvulas Autorreguladoras                                                                                         ES__-0001984
+   Normativa
+  Interna YPF                 J1000 Alimentaciones Neumáticas                                                                                         ES__-0002225
+
+                              J1300 Conexionado Eléctrico a Instrumentos                                                                              ES__-0002226
+
+                              J1400 Instalación Eléctrica en Áreas Clasificadas                                                                       ES__-0002228
+
+                              J1700 Montaje de instrumentos                                                                                           ES__-0002222
+
+                              Face to face and end to end dimensions of valves                                                                        ANSI B16.10
+                              Valves: Flanged, Threaded, and Welding End                                                                              ASME B16.34
+                              Control Valve Seat Leakage                                                                                              FCI 70.2
+                              Flow equations for sizing control valves                                                                                ANSI / ISA S75.01
+                              Control Valve Terminology                                                                                               ISA 75.05
+                              Face-to-Face Dimensions for Integral Flanged Globe-Style
+                              Control Valve Bodies(Classes 125, 150, 250, 300, and                                                                    ANSI/ISA–75.08.01
+                              600)
+                              Face-to-Face Dimensions for Flanged Globe-Style Control
+                                                                                                                                                      ANSI/ISA-75.08.06
+  Normativa                   Valve Bodies (Classes 900, 1500, and 2500)
+   Externa
+                              Inherent Flow Characteristic and Rangeability of Control
+                                                                                                                                                      ISA 75.11
+                              Valves
+                              Control Valve Aerodynamic Noise Prediction                                                                              ISA S75.17
+                              Hydrostatic Testing of Control Valves                                                                                   ISA 75.19
+                              Industrial valves Measurement, test and qualification
+                                                                                                                                                      ISO 1848
+                              procedures for fugitive emissions
+                              Refinery Control Valves                                                                                                 API 553
+                              Valves inspection and testing                                                                                           API 598
+                              Butterfly valves: double flanged, lug and wafer type                                                                    API 609
+
+
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                        o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                           27 / 32
+                                                   #Título                     J0600 VÁLVULAS DE
+                                                                               CONTROL
+#Tipo                                               Especificación            #Código                 ES__-0001981
+#Fecha de Vigencia                                  24/11/2021                #Versión                1.0
+#Activo de la información                           YPF - Privada
+#Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+  Categoría                                             Título                                                                                                 Código
+                              Certificación sobre ensayos de materiales                                                                               DIN 50.049 (EN 10.204)
+                              Quality Standard for Steel Castings for Valves, Flanges,
+                              Fittings, and Other Piping Components - Visual Method for                                                               MSS SP 55
+                              Evaluation of Surface Irregularities
+                              Industrial-process control valves - Part 8-3: Noise
+                              considerations - Control valve aerodynamic noise                                                                        IEC-60534-8-3
+                              prediction method
+                              Industrial-process control valves Part 4: Inspection and
+                                                                                                                                                      IEC 60534-4
+                              routine testing
+                              Petroleum and natural gas industries - Materials for use in
+                                                                                                                                                      NACE MR0175
+                              H2S-containing environments in oil and gas production
+                              Standard Practice for Liquid Penetrant Testing for General
+                                                                                                                                                      ASTM E 165
+                              Industry
+                              Degrees of Protection Provided by Enclosures (IP Code)                                                                  IEC 60529
+                              Environmental Conditions for Process Measurement and
+                                                                                                                                                      ISA 71.04
+                              Control Systems: Airborne Contaminants
+                              Pipe Flanges and Flanged Fittings NPS ½ Through NPS
+                                                                                                                                                      ANSI B16.5
+                              24 Metric/Inch Standard
+                              Large Diameter Steel Flanges NPS 26 Through NPS 60
+                                                                                                                                                      ANSI B16.47
+                              Metric/Inch Standard
+                              Control Valve Seat Leakage                                                                                              ANSI/FCI 70.2
+                              Industrial valves - Measurement, test and qualification
+                              procedures for fugitive emissions - Part 1: Classification
+                                                                                                                                                      ISO 15848-1 AMD 1
+                              system and qualification procedures for type testing of
+                              valves AMENDMENT 1
+   Normativa                  N/A
+   Derogada
+     Otras                    N/A
+  referencias
+
+
+7.3 Definiciones y abreviaturas
+    Término                        Abreviatura                                                                           Descripción
+ Datos Básicos
+                                 DBD                             N/A.
+ de Diseño
+ Single Pole
+                                 SPDT                            Simple polo doble corte o inversor simple.
+ Double Throw
+
+
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                        o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                           28 / 32
+                                                    #Título                     J0600 VÁLVULAS DE
+                                                                                CONTROL
+ #Tipo                                               Especificación            #Código                 ES__-0001981
+ #Fecha de Vigencia                                  24/11/2021                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+  Sound
+                                  SPL                             Nivel de presión sonora, medida de la intensidad acústica.
+  Pressure Level
+
+
+
+8 Aprobación
+
+8.1 Vigencia
+Esta normativa entra en vigencia a partir de su aprobación e inmediata publicación.
+Los abajo firmantes asumen la responsabilidad de implantar, controlar el cumplimiento y actualizar
+el presente documento cada vez que fuera necesario.
+
+
+8.2 Disposiciones generales y transitorias
+N/A.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                            29 / 32
+                                                   #Título                     J0600 VÁLVULAS DE
+                                                                               CONTROL
+#Tipo                                               Especificación            #Código                 ES__-0001981
+#Fecha de Vigencia                                  24/11/2021                #Versión                1.0
+#Activo de la información                           YPF - Privada
+#Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+8.3 Historial
+  № Revisión                              Fecha Aprobación                                                   Principales cambios
+     0.0                                     04/11/2016                                      Documento Original
+                                                                                             -       Se incorpora dentro del objeto del documento las
+                                                                                                     válvulas de control para servicio on-off.
+                                                                                             -       Se actualizan las normativas de aplicación.
+                                                                                             -       Se actualiza tabla de trims (5.3.2) según aplicación.
+                                                                                             -       Se elimina el punto 5.3.3 Materiales de
+                                                                                                     empaquetadura, tornillería y diafragma, por ser
+                                                                                                     redundante.
+                                                                                             -       Para los actuadores, se actualiza y reordena la
+                                                                                                     información por tipo de actuador. Se incorpora el uso
+                                                                                                     de actuadores a diafragma para válvulas mariposa, y
+                                                                                                     el uso de pistones en general. Se incluye el uso de
+                                                                                                     señales de 6-30 psig. Se actualiza criterio de
+                                                                                                     dimensionamiento.
+                                       Ver en encabezado de
+           1.0                                                                               -       Se agregan requisitos para las solenoides.
+                                               página
+                                                                                             -       Se actualiza el punto 5.5.2 “Fenómenos críticos”.
+                                                                                             -       Se actualizan los requisitos de cálculo de ruido, se
+                                                                                                     actualizan criterios de atenuación aceptados para
+                                                                                                     cálculo de ruido y se incorporan requisitos de
+                                                                                                     velocidad máxima para válvulas con internos
+                                                                                                     antirruido y condicionantes de cálculo.
+                                                                                             -       Se actualizan, corrigen y completan criterios de
+                                                                                                     selección y lineamientos de cálculo de válvulas.
+                                                                                             -       Se eliminan de la ED criterios no vigentes como por
+                                                                                                     ej.: color de pintura del actuador
+                                                                                             -       Se actualiza el documento al nuevo formato de Y-
+                                                                                                     DOC.
+                                                                                             -       Se modifica el tiempo verbal a presente.
+
+
+
+
+8.4 Flujo de Aprobación
+#Participantes
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                        o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                           30 / 32
+                                                    #Título                     J0600 VÁLVULAS DE
+                                                                                CONTROL
+ #Tipo                                               Especificación            #Código                 ES__-0001981
+ #Fecha de Vigencia                                  24/11/2021                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+              #Autor                                        #Referente de                                  #Dueño de Proceso                                      #Administrador
+                                                              Proceso                                                                                            Cuerpo Normativo /
+                                                                                                                                                                      Negocio
+ SABATINI, SEBASTIAN                                  BODEGA, EDUARDO                                         SZWED, CRISTINA                                    SANTILLI, MARCELO
+       GUIDO                                             GUILLERMO                                               LILIANA
+
+#Colaboradores
+                                                                                             Nombre
+                                                                                SALA, YISELA ETEL
+                                                                     DE JESUS ALARCON, ZULAY
+                                           COOK AGUILAR, PHILIPPE (Servicio Externo en YPF)
+                                            CRESPI, HERNAN JAVIER (Servicio Externo en YPF)
+                                                                            BONANNO , ROBERTO
+                                             FONTI, LORENA KARINA (Servicio Externo en YPF)
+                                                                       STEKAR, JESSICA LORENA
+
+#Revisores
+                                                                                             Nombre
+                                                                                              Nombre
+
+#Aprobadores
+                                                                                             Nombre
+                                                                       SZWED, CRISTINA LILIANA
+
+
+
+
+9 ANEXO
+
+9.1 Anexo I - 10867-ES-21030700-110A - J0600 Válvulas de Control
+    Regulatorio.pdf (Ultima versión SGN disponible) – Documento No Vigente.
+Este anexo está en un archivo distinto del documento principal. Se accede a él desde el Buscador
+de la página principal de Y-DOC, en el menú contextual del código correspondiente al documento o
+bien desde la vista Ver información detallada.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                            31 / 32
+                                                    #Título                     J0600 VÁLVULAS DE
+                                                                                CONTROL
+ #Tipo                                               Especificación            #Código                 ES__-0001981
+ #Fecha de Vigencia                                  24/11/2021                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+9.2 Anexo II - HD-J0600-01 Hoja de Datos de Válvulas de Control
+Este anexo está en un archivo distinto del documento principal. Se accede a él desde el Buscador
+de la página principal de Y-DOC, en el menú contextual del código correspondiente al documento o
+bien desde la vista Ver información detallada.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la public ación.
+
+
+
+
+                                                                                                                                                                                            32 / 32
+

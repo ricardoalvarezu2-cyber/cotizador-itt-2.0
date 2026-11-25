@@ -1,0 +1,1308 @@
+                                                                                      P0103 Traceado Eléctrico
+Tipo: ESPECIFICACIÓN                         Ámbito: Upstream - Argentina                                                                                      Código: 11210-ES-21120000-110A
+
+
+Proceso: Abastecimiento->Gestionar Ingeniería de Superficie                                                                                                    Revisión: 1.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+
+
+1 Índice
+
+Contenido
+
+1      ÍNDICE ........................................................................................................................................................................1
+2      OBJETO .....................................................................................................................................................................2
+3      ÁMBITO DE APLICACIÓN ........................................................................................................................................2
+4      CONSIDERACIONES PRINCIPALES .......................................................................................................................2
+    4.1        GENERAL ..............................................................................................................................................................2
+    4.2        SISTEMA DE UNIDADES ...........................................................................................................................................3
+    4.3        CONDICIONES DE SERVICIO ....................................................................................................................................3
+    4.4        ALCANCE ...............................................................................................................................................................3
+5      ESPECIFICACIÓN .....................................................................................................................................................4
+    5.1    DISEÑO DEL SISTEMA DE TRACEADO .......................................................................................................................4
+      5.1.1    General .........................................................................................................................................................4
+      5.1.2    Información a suministrar por la Ingeniería..................................................................................................5
+      5.1.3    Circuitos de traceado ...................................................................................................................................5
+      5.1.4    Cálculos ........................................................................................................................................................5
+      5.1.5    Selección de la cinta calefactora .................................................................................................................6
+      5.1.6    Control de temperatura ................................................................................................................................7
+    5.2    MONTAJE ..............................................................................................................................................................9
+    5.3    ALIMENTACIÓN ELÉCTRICA ...................................................................................................................................10
+    5.4    ETIQUETAS Y MARCADO .......................................................................................................................................11
+    5.5    INSPECCIÓN Y ENSAYOS ......................................................................................................................................12
+      5.5.1    Inspección ..................................................................................................................................................12
+      5.5.2    Ensayos ......................................................................................................................................................13
+    5.6    PREPARACIÓN PARA EL ENVÍO, EMBALAJE Y MARCADO ...........................................................................................16
+    5.7    DOCUMENTACIÓN ................................................................................................................................................17
+      5.7.1    Con la oferta ...............................................................................................................................................17
+      5.7.2    Después del pedido ...................................................................................................................................18
+      5.7.3    Con la entrega del material ........................................................................................................................18
+    5.8    EXCEPCIONES A LA ESPECIFICACIÓN ....................................................................................................................19
+6      INDICADORES, REGISTROS Y RIESGOS DEL PROCESO .................................................................................19
+    6.1        INDICADORES ......................................................................................................................................................19
+    6.2        REGISTROS .........................................................................................................................................................19
+    6.3        RIESGOS Y ACCIONES MITIGANTES ........................................................................................................................19
+7      ANEXOS Y REFERENCIAS ....................................................................................................................................19
+    7.1        ANEXOS ..............................................................................................................................................................19
+    7.2        NORMATIVA RELACIONADA ...................................................................................................................................20
+    7.3        DEFINICIONES Y ABREVIATURAS ............................................................................................................................21
+
+                                                                                                           BODEGA, EDUARDO                                                                             19/12/2017
+          FARINA, GUILLERMO                                 VERNA, FACUNDO                                                                          RASLAWSKI, ALEJANDRO JUAN
+                                                                                                              GUILLERMO                                                                               03:29:00 p.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                     1 / 21
+                                                                                     P0103 Traceado Eléctrico
+Tipo: ESPECIFICACIÓN                        Ámbito: Upstream - Argentina                                                                                      Código: 11210-ES-21120000-110A
+
+
+Proceso: Abastecimiento->Gestionar Ingeniería de Superficie                                                                                                   Revisión: 1.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                        YPF PRIVADA
+
+
+8     APROBACIÓN .........................................................................................................................................................21
+    8.1       VIGENCIA ............................................................................................................................................................21
+    8.2       DISPOSICIONES GENERALES Y TRANSITORIAS ........................................................................................................21
+    8.3       HISTORIAL ...........................................................................................................................................................21
+    8.4       APROBACIÓN COLEGIADA .....................................................................................................................................21
+    8.5       CATEGORÍA DE CLASIFICACIÓN DEL ACTIVO DE INFORMACIÓN................................................................................21
+
+
+
+2 Objeto
+Definir los requisitos mínimos que deben seguirse para el diseño, fabricación, inspección, montaje y ensayos de los
+Sistemas de Traceado Eléctrico para el mantenimiento de la temperatura de diseño de cañerías y/o equipos, a utilizar
+en las Instalaciones de Superficie y Energía.
+
+3 Ámbito de aplicación
+YPF SA – Upstream – Argentina.
+
+4 Consideraciones principales
+
+4.1 General
+La presente Especificación, conjuntamente con la documentación del proyecto (Hojas de Datos, Especificaciones
+Particulares y Requisición de Materiales), define los requisitos mínimos que debe cumplir el Sistema de Traceado
+Eléctrico para el mantenimiento de temperatura de cañerías y/o equipos.
+Esta Especificación, junto con las Hojas de Datos y/o documentos de Ingeniería, forman parte del Requerimiento de
+Materiales. En caso de discrepancia entre los documentos incluidos en dicho Requerimiento prevalecerá el siguiente
+orden de prioridad:
+           Legislación aplicable (siempre y cuando en las Hojas de Datos, en el Requerimiento de Materiales o en esta
+            Especificación no se establezcan criterios más restrictivos que los en ella fijados).
+           Hoja de Datos y/o documentos de Ingeniería.
+           Requerimiento de Materiales.
+           Esta Especificación.
+El suministro responderá a los criterios normativos mencionados en el punto ‎7.2, en su última revisión,
+complementados e integrados con la presente Especificación.
+Además de los requerimientos de las normas internacionales, deberán aplicar las normativas nacionales y locales de
+cumplimiento obligatorio.
+Serán de aplicación las últimas ediciones de los estándares vigentes en el momento de adjudicación de la orden de
+compra.
+La aplicación de otras normas equivalentes a las enumeradas, y siempre que no contradigan cuanto se indica en esta
+Especificación, deberán ser comunicadas por escrito en fase de oferta por el Proveedor para aprobación de YPF.
+
+                                                                                                          BODEGA, EDUARDO                                                                             19/12/2017
+          FARINA, GUILLERMO                                VERNA, FACUNDO                                                                          RASLAWSKI, ALEJANDRO JUAN
+                                                                                                             GUILLERMO                                                                               03:29:00 p.m.
+
+                   Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                               CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+     © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+     esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                    2 / 21
+                                                                                    P0103 Traceado Eléctrico
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11210-ES-21120000-110A
+
+
+Proceso: Abastecimiento->Gestionar Ingeniería de Superficie                                                                                                  Revisión: 1.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+4.2 Sistema de unidades
+Se utilizará el Sistema Internacional (SI) de unidades de medida en toda la documentación, pruebas, ensayos, etc. La
+utilización de otros sistemas de medidas, está sujeta a la autorización previa de YPF.
+
+
+4.3 Condiciones de Servicio
+A menos que se especifique otra cosa en la documentación de cada proyecto, los sistemas de traceado eléctrico
+serán adecuados para ser instalados en las siguientes condiciones ambientales:
+           Elevación sobre el nivel del mar...................................Inferior a 1.000 m
+           Temperatura ambiente máxima ....................................40ºC
+           Temperatura ambiente mínima.....................................-20ºC
+           Humedad relativa máxima............................................90% a 20ºC
+           Zona‎sísmica………………………………………………CIRSOC‎103‎(de‎acuerdo‎a‎emplazamiento).
+Atmósfera químicamente agresiva, polvorienta y/o corrosiva, propia de procesamiento de hidrocarburos. Además,
+atmósfera salina en las instalaciones próximas al mar.
+
+
+4.4 Alcance
+Está especificación contiene los lineamientos y requerimientos mínimos para el diseño, suministro, fabricación,
+montaje, inspección y ensayos del sistema de traceado eléctrico, a fin de asegurar las condiciones técnicas,
+económicas, de calidad y de seguridad adecuadas.
+El Proveedor del sistema de traceado será responsable del diseño del mismo a partir de la información indicada en
+los documentos de ingeniería.
+El suministro deberá incluir el equipamiento completo del sistema de traceado eléctrico, con todos los componentes y
+accesorios necesarios para su instalación, puesta en servicio y operación. Aunque no hayan sido especificados
+explícitamente, el suministro debe incluir repuestos (en caso de requerirse), herramientas especiales para su
+manutención, planos, manuales de montaje, operación y mantenimiento, informes de pruebas y demás documentos y
+servicios relacionados con esta instalación.
+Salvo indicación expresa en el Requerimiento, el suministro deberá incluir como mínimo:
+          Diseño e ingeniería del sistema completo de traceado.
+          Coordinación con la ingeniería.
+          Suministro del material de traceado y todos los accesorios para su instalación.
+          Suministro de las cajas de conexión para alimentación de las cintas calefactoras.
+          Certificados de ensayos.
+          Embalaje y transporte.
+          Documentación completa de proyecto, incluyendo los planos conforme‎a‎obra‎“CAO“.
+Opcionalmente, si así se indica en los documentos de ingeniería, el alcance podrá incluir:
+
+                                                                                                         BODEGA, EDUARDO                                                                             19/12/2017
+         FARINA, GUILLERMO                                VERNA, FACUNDO                                                                          RASLAWSKI, ALEJANDRO JUAN
+                                                                                                            GUILLERMO                                                                               03:29:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   3 / 21
+                                                                                    P0103 Traceado Eléctrico
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11210-ES-21120000-110A
+
+
+Proceso: Abastecimiento->Gestionar Ingeniería de Superficie                                                                                                  Revisión: 1.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+          Suministro de material de repuesto para la puesta en marcha y dos (2) años de operación.
+          Supervisión de montaje.
+          Montaje en obra, incluyendo los medios necesarios y el transporte del material desde los almacenes hasta el
+           lugar de instalación.
+          Verificaciones y ensayos en el emplazamiento final, antes y después de la colocación de la aislación térmica.
+          Puesta en servicio.
+          Suministro e instalación de los tableros eléctricos de alimentación al sistema de traceado.
+          Suministro e instalación de los cables de potencia y control desde los tableros eléctricos de alimentación al
+           sistema de traceado hasta las cajas de conexión y elementos de control.
+          Suministro e instalación del aislamiento térmico.
+
+5 Especificación
+
+5.1 Diseño del sistema de traceado
+
+5.1.1 General
+El sistema de traceado eléctrico para calentamiento de cañerías y equipos, tiene por objeto mantener la temperatura
+de las mismas, con el fin de evitar que se enfríen los fluidos y provoquen obstrucciones por solidificación o aumento
+de la viscosidad, especialmente cuando estos permanecen estáticos. No se considera el calentamiento de fluidos
+requerido por proceso.
+Para ello, el diseño del sistema deberá realizarse para que aporte como mínimo, la energía calorífica necesaria para
+compensar las pérdidas a través de los aislamientos térmicos, debido a la diferencia de temperaturas entre la que se
+desea en el fluido y la mínima ambiente que pueda presentarse.
+El diseño del sistema será, siempre que sea posible, de tipo estabilizado, es decir asegurará que, en las condiciones
+más desfavorables ambientales (máxima temperatura ambiental), de proceso (cañería vacía o fluido estático),
+eléctricas (tolerancia máxima en la tensión de alimentación y tolerancia mínima en la resistencia de la cinta
+calefactora) y de operación (fallo de los controladores de temperatura, si los hay) la temperatura en cualquier punto
+del sistema se estabiliza en un valor inferior al menor de los siguientes valores:
+          Temperatura superficial máxima permitida por la clasificación de áreas peligrosas (cuando aplique).
+          Temperatura máxima soportada por las cintas calefactoras y elementos de control.
+          Temperatura máxima permitida por el proceso.
+          Temperatura máxima soportada por los materiales y el aislamiento.
+El diseño, las cintas calefactoras y materiales seleccionados para áreas clasificadas deberán cumplir con las normas
+IEC 62395 e lEC 60079 y legislación nacional y/o local aplicable en cada proyecto.
+La utilización de traceados eléctricos en emplazamientos clasificados que den lugar a instalaciones en ejecución Ex-
+d, deberá ser evitada siempre que sea posible y el aporte de calor resuelto por otros medios. Cuando ello no sea
+posible, la utilización de traceados eléctricos en estas zonas deberá ser aprobada por YPF.
+
+                                                                                                         BODEGA, EDUARDO                                                                             19/12/2017
+        FARINA, GUILLERMO                                 VERNA, FACUNDO                                                                          RASLAWSKI, ALEJANDRO JUAN
+                                                                                                            GUILLERMO                                                                               03:29:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   4 / 21
+                                                                                    P0103 Traceado Eléctrico
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11210-ES-21120000-110A
+
+
+Proceso: Abastecimiento->Gestionar Ingeniería de Superficie                                                                                                  Revisión: 1.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+Todas las cintas y materiales que se instalen en áreas clasificadas, deberán ser certificados para la zona requerida.
+Dicho certificado será emitido por un laboratorio independiente acreditado o autoridad competente, de acuerdo con la
+normativa oficial aplicable.
+Todos los materiales serán adecuados para instalación intemperie, expuestos directamente al sol y para un ambiente
+corrosivo y polvoriento propio de procesamiento de hidrocarburos. Además, atmósfera salina en las instalaciones
+próximas al mar.
+
+5.1.2 Información a suministrar por la Ingeniería
+En los documentos de ingeniería se proporcionará al Proveedor del sistema de traceado toda la información
+necesaria para un correcto diseño del mismo. En general esta información consistirá en:
+          Condiciones ambientales (máxima y mínima temperatura ambiental, corrosividad, clasificación de áreas
+           peligrosas incluyendo clases, zonas, grupos de gases, clases de temperatura y temperaturas de ignición).
+          Datos de proceso como fluidos, temperaturas críticas, temperaturas máximas de proceso (de forma continua
+           e intermitente), temperatura de mantenimiento de la cañería, caudales y niveles máximos y mínimos,
+           temperaturas de ignición, previsión de limpieza con vapor.
+          Datos de cañerías, válvulas, bombas, bridas, soportes (dimensiones y materiales).
+          Datos de los aislamientos térmicos (materiales, espesores, conductividades térmicas, temperaturas máximas
+           admisibles).
+          Planos de implantación, isométricos y diagramas P&I.
+          Alimentación eléctrica disponible, tensión de alimentación, frecuencia, incluyendo tolerancias.
+          Requisitos especiales de operación y mantenimiento.
+El Proveedor del sistema de traceado solicitará la información adicional que considere necesaria.
+
+5.1.3 Circuitos de traceado
+Los circuitos de traceado podrán estar formados por uno o varios tramos calefactores.
+Excepto en el caso indicado en el punto ‎5.1.6 con termostatos de ambiente en circuitos estabilizados que activan de
+forma global varios circuitos de traceado, cada circuito tendrá un control de temperatura y una alimentación eléctrica
+independiente y podrá, por lo tanto, ser aislado del resto del sistema.
+Los circuitos de traceado se diseñarán considerando los requerimientos de operación, las condiciones de proceso, la
+implantación, la disponibilidad de alimentación eléctrica y los requerimientos de instalación y mantenimiento. En
+cualquier caso, el diseño del sistema, considerando las condiciones anteriores, procurará reducir al mínimo el número
+de circuitos.
+
+5.1.4 Cálculos
+Para cada circuito de traceado, el Proveedor del sistema realizará los siguientes cálculos:
+5.1.4.1       Máxima pérdida de calor, Po (W/m)
+Para determinar la máxima pérdida de calor se considerarán las condiciones más desfavorables (temperatura posible
+más alta que se desea mantener y temperatura mínima ambiente) y se considerarán los elementos adicionales a la
+cañería (válvulas, bombas).
+                                                                                                         BODEGA, EDUARDO                                                                             19/12/2017
+        FARINA, GUILLERMO                                 VERNA, FACUNDO                                                                          RASLAWSKI, ALEJANDRO JUAN
+                                                                                                            GUILLERMO                                                                               03:29:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   5 / 21
+                                                                                    P0103 Traceado Eléctrico
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11210-ES-21120000-110A
+
+
+Proceso: Abastecimiento->Gestionar Ingeniería de Superficie                                                                                                  Revisión: 1.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+En la documentación del proyecto, el Proveedor del sistema incluirá los cálculos térmicos realizados.
+5.1.4.2       Potencia mínima requerida Pa (W/m)
+Para compensar las posibles imperfecciones del aislamiento, las tolerancias en la tensión de alimentación, las
+tolerancias en la resistencia interna de las cintas calefactoras y disponer de potencia de reserva, la potencia mínima
+requerida se obtendrá aplicando a la máxima pérdida de calor (Po) un factor de sobredimensionamiento.
+El factor de sobredimensionamiento depende del método de cálculo empleado para determinar la máxima pérdida de
+calor (Po) y será:
+          1,2 en el caso de que para calcular Po se hayan empleado fórmulas simplificadas, con las que se obtienen
+           valores más conservadores (considerando exclusivamente el espesor del aislamiento y su conductividad
+           térmica a su temperatura media) (BS 6351-2 y expresiones simplificadas de la IEEE Std 515 e lEC 60079-30-
+           2).
+          1,4 en el caso de que para calcular Po se hayan empleado fórmulas más exactas (si además de la
+           conductividad térmica del aislamiento se consideran los coeficientes de película del aire dentro y fuera del
+           recubrimiento del aislamiento) (expresiones completas de la IEEE Std 515 e lEC 60079-30-2).
+El Proveedor del sistema justificará, en base a la exactitud de las fórmulas empleadas, el factor de
+sobredimensionamiento empleado.
+5.1.4.3       Comprobación de diseño estabilizado
+El Proveedor del sistema de traceado incluirá en la documentación del proyecto, para cada circuito de traceado,
+cálculos de comprobación que justifiquen el diseño estabilizado de acuerdo a lo indicado en el punto ‎5.1.1.
+Si en algún circuito de traceado no fuera posible conseguir un diseño estabilizado el Proveedor deberá justificarlo
+igualmente.
+
+5.1.5 Selección de la cinta calefactora
+Se considerarán los siguientes criterios de selección:
+    a) Los materiales y requerimientos constructivos de las cintas calefactoras serán de acuerdo a las normas IEC
+       62395 e lEC 60079-30 en el caso de áreas clasificadas.
+    b) Las cintas calefactoras tendrán alta resistencia al agua y alta resistencia mecánica de acuerdo a las normas
+       IEC 62395 e lEC 60079-30 en caso de áreas clasificadas.
+    c) La selección de la cinta siempre se realizará considerando un diseño estabilizado del sistema de acuerdo a lo
+       indicado en el punto ‎5.1.1.
+    d) Siempre que lo permitan las temperaturas y condiciones de trabajo, se utilizarán cintas calefactoras que
+       alimentados a 220V (se admitirá 380V bajo aprobación de YPF), 50Hz, puedan cortarse a medida en obra sin
+       que varíen las potencias por metro especificadas por el Fabricante. Preferentemente cintas calefactoras
+       flexibles de tipo autorregulable, que varían su potencia de entrega en función de la temperatura.
+    e) Las cintas calefactoras serán flexibles y dispondrán de una cubierta de trenza metálica para protección
+       mecánica que se utilizará como conductor de protección y una cubierta exterior adecuada para protección
+       contra la corrosión.
+    f)     Las temperaturas máximas de trabajo de las cintas calefactoras, serán superiores a la temperatura que se
+           desea mantener en los fluidos y a las máximas de proceso en operación de las cañerías.
+
+                                                                                                         BODEGA, EDUARDO                                                                             19/12/2017
+         FARINA, GUILLERMO                                VERNA, FACUNDO                                                                          RASLAWSKI, ALEJANDRO JUAN
+                                                                                                            GUILLERMO                                                                               03:29:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   6 / 21
+                                                                                    P0103 Traceado Eléctrico
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11210-ES-21120000-110A
+
+
+Proceso: Abastecimiento->Gestionar Ingeniería de Superficie                                                                                                  Revisión: 1.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+    g) Cuando por cálculo, la relación (metros de cinta calefactora por metro de cañería) resulte superior a 1,5 se
+       preverán cintas calefactoras por separado, sin disponerse en espiral, para facilitar la instalación.
+El Proveedor del sistema de traceado propondrá y justificará para cada caso la tecnología y tipo de cinta calefactora
+en función de las temperaturas y condiciones de trabajo (se pondrá especial atención a la corrosividad del ambiente y
+a condiciones especiales como limpieza con vapor de la cañería).
+
+5.1.6 Control de temperatura
+5.1.6.1       Criterios de diseño
+Para el diseño del control de temperatura se considerarán los siguientes criterios:
+    a) Circuitos de traceado de diseño estabilizado.
+           Por diseño estos circuitos no requieren control de temperatura para garantizar la seguridad y el proceso, por
+           lo que únicamente, cuando el servicio requerido es el de protección para evitar que se solidifique el producto
+           a bajas temperaturas y con el fin de conseguir un ahorro energético se instalará un termostato de ambiente
+           que active de forma global todos los circuitos de traceado de estas características que estén próximos entre
+           sí.
+           También se instalará control de temperatura si un exceso de temperatura puede causar corrosión en las
+           cañerías y canalizaciones.
+           Cuando el circuito de traceado cumpla con el diseño estabilizado excepto en operaciones excepcionales
+           (limpieza de vapor), el Proveedor del sistema resaltará en la documentación del proyecto la advertencia de
+           que el circuito debe ser desconectado antes de la realización de dicha operación y se implantará, si fuera
+           posible, un sistema de bloqueo que impida llevar a cabo esta operación cuando el circuito está energizado, si
+           no fuera posible implantar este bloqueo se instalará, en el lugar más desfavorable del circuito, un termostato
+           que desconecte el circuito antes de que se alcance la menor de las temperaturas indicadas en el punto ‎5.1.1.
+    b) Circuitos de traceado de diseño no estabilizado.
+           Cuando excepcionalmente no se pueda conseguir el diseño estabilizado del circuito, se instalará, en el lugar
+           más desfavorable del mismo, un termostato que desconecte el circuito antes de que se alcance la menor de
+           las temperaturas indicadas en el punto ‎5.1.1. Este termostato será de rearme manual, con el ajuste
+           bloqueado y sellado.
+           En los circuitos instalados en zonas clasificadas se instalará además otro termostato adicional redundante del
+           anterior.
+    c) General.
+           Todos los circuitos de control de temperatura se diseñaran a fallo seguro, es decir, en caso de rotura de la
+           cinta o fallo del termostato el circuito de traceado debe quedar desconectado.
+           En casos excepcionales, para aplicaciones específicas, pueden ser recomendables otros sistemas de control
+           (reguladores de energía, sistemas de monitorización y control dedicados), en cualquier caso, el Proveedor
+           del sistema de traceado propondrá y justificará para cada caso el sistema de control de temperatura, este
+           sistema debe ser aprobado por YPF.
+
+
+
+
+                                                                                                         BODEGA, EDUARDO                                                                             19/12/2017
+       FARINA, GUILLERMO                                  VERNA, FACUNDO                                                                          RASLAWSKI, ALEJANDRO JUAN
+                                                                                                            GUILLERMO                                                                               03:29:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   7 / 21
+                                                                                    P0103 Traceado Eléctrico
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11210-ES-21120000-110A
+
+
+Proceso: Abastecimiento->Gestionar Ingeniería de Superficie                                                                                                  Revisión: 1.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+5.1.6.2       Termostatos y sondas
+En general los termostatos serán de material termoplástico resistente al impacto a baja temperatura
+(poliamida/poliéster reforzado con fibra de vidrio), con resistencia eléctrica superficial menor a 109Ω y con una rigidez
+dieléctrica mayor a 2kV.
+En los casos excepcionales, en los que este material no sea adecuado para la corrosividad ambiental, se
+seleccionará, a propuesta del Proveedor del sistema y previa aprobación de YPF, el tipo de material más adecuado
+para esta aplicación.
+Los termostatos serán regulables.
+No se admiten acometidas en la cara superior para evitar entrada de agua.
+Los bornes de conexión de los termostatos serán de doble tornillo anticizallante y adecuados para el cable indicado
+en cada caso por la Ingeniería.
+Si la potencia del circuito de traceado (hasta un máximo de 15A de intensidad nominal de trabajo) no justifica el uso
+de contactores, podrá efectuarse el control directamente con el termostato. En estos casos y con el objeto de
+prolongar su vida, se cumplirá que la capacidad de los contactos, sea al menos 1,5 veces superior a las intensidades
+nominales de trabajo. En caso contrario, la señal del termostato activará las cintas calefactoras mediante contactores.
+Tipos:
+Zonas no clasificadas: El grado de protección será IP55 según norma IEC 60529.
+Zonas clasificadas: A continuación se indican los modos de protección preferentes:
+Emplazamientos Clase I
+Zonas 1 y 2: Tipo combinado (Exde) (Preferente), tipo antideflagrante (Exd). Grado de protección IP65 según norma
+IEC 60529.
+Emplazamientos Clase II
+En las áreas clasificadas donde haya o pueda haber polvo combustible; los aparatos eléctricos se seleccionarán de
+acuerdo con la norma lEC 60079 y las especificaciones de YPF.
+Los equipos y materiales seleccionados para áreas clasificadas 21 y 22 serán tipo estanco, grado de protección IP65
+según norma IEC 60529.
+La máxima temperatura superficial de los equipos eléctricos será 2/3 de la inflamación del polvo en nube (TIN), o
+descontando 75°C de la temperatura de inflamación del polvo en capa (TIC), sin que en ningún punto se superen los
+120°C de temperatura superficial (40°C + 80C).
+Los equipos deberán tener una resistencia al impacto mínima IK08 de acuerdo a la norma IEC 62262, cuando se
+trate de polvo inflamable conductor de la electricidad.
+5.1.6.3       Cajas de conexión
+Dentro del alcance se incluye el suministro de las cajas de conexión para alimentación de las cintas calefactoras. En
+los documentos de ingeniería se indicará al Proveedor del sistema de traceado los datos de la alimentación eléctrica
+necesarios para una correcta definición de las cajas.
+Las cajas de derivación serán de acuerdo a la especificación 10751-ES-21030700-110A‎“P1104 Cajas de Derivación
+y‎Accesorios‎para‎Instalaciones‎Eléctricas”.
+
+
+                                                                                                         BODEGA, EDUARDO                                                                             19/12/2017
+       FARINA, GUILLERMO                                  VERNA, FACUNDO                                                                          RASLAWSKI, ALEJANDRO JUAN
+                                                                                                            GUILLERMO                                                                               03:29:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   8 / 21
+                                                                                    P0103 Traceado Eléctrico
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11210-ES-21120000-110A
+
+
+Proceso: Abastecimiento->Gestionar Ingeniería de Superficie                                                                                                  Revisión: 1.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+Desde cada caja de conexión sólo se alimentará un único circuito de traceado (cada circuito de traceado podrá estar
+formado por uno o varios tramos calefactores).
+
+
+5.2 Montaje
+En el Requerimiento de Materiales se indicará si el montaje del material de traceado está incluido en el alcance de
+suministro o es a realizar por un tercero.
+En cualquier caso el suministro del sistema de traceado incluirá:
+          Todos materiales necesarios para la instalación, tales como:
+                          Elementos de fijación de las cintas calefactoras a las cañerías o equipos.
+                          Kits de conexión, empalme y final de línea.
+                          Kits para atravesar el aislamiento térmico.
+                          Etiquetas de señalización y/o identificación.
+          Instrucciones y recomendaciones de instalación específicas para el material suministrado.
+Además de las instrucciones y recomendaciones del Proveedor del material se considerarán los siguientes criterios:
+          El montaje siempre será realizado por personal calificado.
+          La instalación deberá garantizar la accesibilidad a todos sus elementos para facilitar los trabajos de
+           mantenimiento.
+          El montaje se realizará cuando la cañería esté totalmente finalizada, sin soportes temporales, con sus
+           accesorios instalados, prueba hidráulica realizada y tratamientos superficiales finalizados.
+          Antes del montaje se procederá a la preparación de las superficies, asegurándose que estas están limpias de
+           polvo, grasa, aceite y de posibles residuos de soldadura, restos de cemento, etc.
+          El Proveedor propondrá y justificará los materiales y sistemas de fijación de la cinta calefactora sobre las
+           cañerías o equipos. Los adhesivos de las cintas no deben provocar corrosión sobre las cañerías y equipos a
+           los que se apliquen. Siempre se asegurará un íntimo contacto entre la cinta y la superficie a calentar
+           evitándose bolsas de aire que puedan producir puntos calientes.
+          En cada tramo de cada circuito, la cinta calefactora deberá ser de una sola pieza, sin empalmes.
+          El fijado de la cinta se realizará como máximo cada 2m si el tendido es en espiral y cada 300mm si es recto,
+           se colocarán fijaciones adicionales en todos los accesorios: codos, bridas, etc.
+          En el montaje se garantizará la relación (metros de cinta calefactora / metro de cañería) de diseño, el
+           espaciado nunca será inferior al mínimo indicado por el Proveedor de la cinta.
+          En la medida de lo posible, sobre los accesorios (soportes, válvulas, bombas, instrumentos), la instalación de
+           la cinta ha de estar prevista para facilitar cualquier tipo de intervención, desmontaje y montaje posterior sobre
+           las cañerías sin necesidad de cortar la cinta. En aquellos casos donde por intervenciones de mantenimiento
+           se prevea que el desmontaje de alguna válvula, tramo de tubo o accesorio de la cañería, hiciera necesaria la
+           interrupción de la cinta calefactora, dicha eventualidad deberá ser prevista y resuelta mediante la instalación
+           de cajas de conexión o dispositivos de enchufe rápido.
+
+
+                                                                                                         BODEGA, EDUARDO                                                                             19/12/2017
+        FARINA, GUILLERMO                                 VERNA, FACUNDO                                                                          RASLAWSKI, ALEJANDRO JUAN
+                                                                                                            GUILLERMO                                                                               03:29:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   9 / 21
+                                                                                    P0103 Traceado Eléctrico
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11210-ES-21120000-110A
+
+
+Proceso: Abastecimiento->Gestionar Ingeniería de Superficie                                                                                                  Revisión: 1.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+          Cuando la cinta calefactora atraviese zonas con posibilidad de fugas (bridas) se instalará de forma que se
+           minimice el contacto con las mismas.
+          El paso de las cintas a través del aislante térmico estará diseñado para asegurar la protección de la cinta.
+          Las líneas de instrumentos instaladas en la cañería a calentar, se realizan traceado hasta donde pueda
+           alcanzar el líquido de proceso.
+          Para instrumentos que no estén en las líneas de cañería con traceado, la cinta calefactora será un circuito
+           totalmente independiente de estas, no estando permitido realizar saltos con la cinta calefactora desde la
+           cañería hasta el instrumento a tracear.
+          La fijación a las cañerías de las conexiones entre los extremos finales de las cintas calefactoras y las "puntas
+           frías", garantizarán que estas quedan libres de esfuerzos. Estas conexiones se fijarán a la superficie para
+           asegurar que la cinta calefactora no se separa de la misma. Se comprobará la continuidad y la resistencia de
+           aislamiento de estas conexiones.
+          Las "puntas frías" se montarán de forma que se absorban las posibles dilataciones/contracciones de la
+           cañería. La cinta calefactora no será nunca afectado por las mismas.
+          Los sensores de los controladores de temperatura se colocarán en el lugar del circuito más desfavorable, no
+           estarán influenciados por otras fuentes de calor y se colocarán en íntimo contacto con la superficie a calentar
+           y a una distancia inferior a 100mm de las cintas calefactoras.
+          Cualquier modificación respecto a lo indicado en la documentación del diseñador del sistema de traceado
+           debe ser aprobada por el mismo.
+          Las modificaciones y trabajos en elementos situados en áreas clasificadas se realizarán siguiendo
+           estrictamente las recomendaciones del Proveedor para no perder la validez de los certificados.
+          Después de la instalación del sistema de traceado y hasta que se monte el aislamiento se debe proteger el
+           sistema para evitar daños mecánicos.
+
+
+5.3 Alimentación eléctrica
+Las características eléctricas de la red para el diseño podrán variar entre los siguientes valores, a menos que se
+indiquen otros valores en los documentos de Ingeniería:
+           Variaciones‎de‎tensión‎a‎frecuencia‎nominal………………±10%.
+           Variaciones‎de‎frecuencia‎a‎tensión‎nominal………………±5%.
+           Variaciones combinadas‎de‎tensión‎y‎frecuencia…………Tensión:‎±5.
+                                                                                                                          Frecuencia: -5%, +2%.
+Todos los elementos del sistema de traceado estarán dimensionados eléctrica y mecánicamente para los valores
+nominales de potencia, condiciones climáticas y lugar de instalación indicados en los documentos de Ingeniería.
+La alimentación eléctrica a cada circuito de traceado será independiente y normalmente se realizará directamente
+desde los Tableros de Servicios Auxiliares (TSA).
+Cuando el número de circuitos de traceado de la unidad lo justifique se instalará en la subestación eléctrica un panel
+de distribución de potencia dedicado al traceado, este panel estará de acuerdo con la especificación‎“P0300 Tableros
+Eléctricos‎de‎Baja‎Tensión”‎y se alimentará desde los tableros de servicios auxiliares.
+
+                                                                                                         BODEGA, EDUARDO                                                                             19/12/2017
+        FARINA, GUILLERMO                                 VERNA, FACUNDO                                                                          RASLAWSKI, ALEJANDRO JUAN
+                                                                                                            GUILLERMO                                                                               03:29:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 10 / 21
+                                                                                    P0103 Traceado Eléctrico
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11210-ES-21120000-110A
+
+
+Proceso: Abastecimiento->Gestionar Ingeniería de Superficie                                                                                                  Revisión: 1.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+Sólo en casos excepcionales, cuando en una determinada zona exista una gran concentración de circuitos de
+traceado se podrá colocar un panel de distribución local de potencia, estos tableros de distribución no podrán
+colocarse en áreas clasificadas o ambientes peligrosos y se alimentarán desde los tableros de servicios auxiliares.
+El diseño, suministro e instalación de la alimentación eléctrica a los circuitos de traceado hasta las cajas de conexión
+(salidas desde TSA, paneles de distribución dedicados, suministro e instalación de los cables de potencia) y el
+suministro e instalación de los cables de control desde las salidas de alimentación eléctrica hasta los elementos de
+control, no está incluido en el alcance de suministro del sistema de traceado.
+El Proveedor del sistema de traceado aportará a la Ingeniería todos los datos necesarios para el diseño de la
+alimentación eléctrica como potencias para un correcto equilibrio del sistema, calibres recomendados considerando
+corrientes de arranque en frío para interruptores, contactores y protecciones, recomendaciones para la ubicación de
+las cajas de conexión, datos para la conexión de los cables de traceado y elementos de control, y coordinará con la
+misma los esquemas de control.
+La alimentación eléctrica a las cajas de conexión, será con cable de tres conductores (fase + neutro + tierra). La
+máxima caída de tensión permitida es de 5%.
+La alimentación eléctrica a cada circuito de traceado estará protegida con interruptor termomagnético (con corte del
+neutro) e interruptor diferencial a tierra con una sensibilidad de 30mA pudiendo ser en algunos casos, bajo
+aprobación de YPF, de una sensibilidad mayor, de acuerdo a recomendaciones del fabricante o que surjan de la
+operación, no superando nunca un valor de 300mA.
+Cuando se instalen termostatos para el control de temperatura y las potencias de los circuitos de traceado justifiquen
+el uso de contactores (intensidades nominales de trabajo superiores a 15A), estos se instalarán en las salidas
+correspondientes del tablero de alimentación.
+La alimentación y el control de cada circuito de traceado será independiente, solamente en el caso indicado en el
+punto ‎5.1.5‎a) de termostatos ambiente en circuitos estabilizados que activan de forma global varios circuitos de
+traceado, podrá emplearse un control y un contactor común a varias salidas.
+En cada salida de alimentación a los circuitos de traceado se cablearán a bornes las siguientes señales:
+          Disparo de protecciones.
+          Traceado energizado.
+          Desconexión del circuito por alta temperatura (en el caso de circuitos con termostatos de rearme manual).
+En el diseño del esquema de control se considerarán los enclavamientos necesarios desde el sistema de control para
+la realización de operaciones excepcionales (limpieza de vapor).
+Las salidas de alimentación a los circuitos de traceado dispondrán de bornes para los conductores de protección,
+para poder conectarse con los de las cajas de conexión de las cintas calefactoras.
+
+
+5.4 Etiquetas y marcado
+Todos los materiales a instalar, cuando les sea de aplicación, deberán disponer de la certificación y el
+correspondiente marcado.
+En cada tramo de la cinta calefactora se colocará una etiqueta de identificación (resistente a la intemperie) y en su
+extremo de conexión en la que figurarán los siguientes datos:
+          Referencia de la cinta calefactora aplicada.
+
+                                                                                                         BODEGA, EDUARDO                                                                             19/12/2017
+        FARINA, GUILLERMO                                 VERNA, FACUNDO                                                                          RASLAWSKI, ALEJANDRO JUAN
+                                                                                                            GUILLERMO                                                                               03:29:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 11 / 21
+                                                                                    P0103 Traceado Eléctrico
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11210-ES-21120000-110A
+
+
+Proceso: Abastecimiento->Gestionar Ingeniería de Superficie                                                                                                  Revisión: 1.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+          Número de fabricación.
+          Temperatura máxima de exposición (cinta desconectada), temperatura habitual de trabajo.
+          Voltaje y potencia.
+          Identificación del proyecto y del tramo calefactor.
+En las zonas clasificadas como atmósferas potencialmente explosivas, se identificará además:
+          Número de certificado Ex de la entidad acreditada.
+          Clasificación Ex de la cinta calefactora.
+          Clase de temperatura.
+          Temperatura máxima de trabajo para la clasificación de temperatura.
+          Nombre y dirección del Fabricante.
+          Año de fabricación.
+          Grupo, categoría y sustancia de la cinta calefactora.
+En todas las cañerías y equipos traceados eléctricamente, por razones de seguridad, se fijará sobre la superficie del
+aislamiento térmico y en lugar visible, etiquetas indelebles de señalización de "TRACEADO ELECTRICO". La
+distancia máxima entre etiquetas será de 5m, deberán ser legibles e indelebles.
+Para facilitar el mantenimiento de la instalación, cada salida de alimentación y cable de cada circuito deberá quedar
+identificado con etiquetas indelebles de acuerdo con la nomenclatura o codificación utilizada en la documentación del
+proyecto.
+Las cajas de derivación y controladores de temperatura también llevarán etiquetas de identificación (resistentes a la
+intemperie) de acuerdo con la documentación de proyecto. Las situadas en área clasificada llevarán un segundo
+rótulo con la Certificación Ex.
+
+
+
+5.5 Inspección y Ensayos
+
+5.5.1 Inspección
+Durante la fabricación, el Proveedor permitirá el acceso a sus talleres al personal encargado de la inspección, al
+objeto de comprobar la marcha y estado de los trabajos en curso.
+La inspección no exime al Proveedor/Fabricante de su garantía y responsabilidad en cuanto al suministro acorde con
+lo indicado en esta Especificación.
+YPF se reserva el derecho de realizar inspecciones a la fábrica en cualquier etapa del proceso de fabricación. En tal
+caso, el Proveedor deberá proporcionar todas las facilidades para tener acceso a los procesos de fabricación durante
+las horas de trabajo y permitirá tomar fotografías o realizar filmaciones de las diferentes etapas de fabricación.
+El Proveedor deberá informar en la propuesta acerca de la realización de las pruebas de control de calidad de sus
+materiales en su proceso de fabricación, en particular las pruebas de rutina establecidas por las normas de
+referencia.
+
+                                                                                                         BODEGA, EDUARDO                                                                             19/12/2017
+        FARINA, GUILLERMO                                 VERNA, FACUNDO                                                                          RASLAWSKI, ALEJANDRO JUAN
+                                                                                                            GUILLERMO                                                                               03:29:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 12 / 21
+                                                                                    P0103 Traceado Eléctrico
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11210-ES-21120000-110A
+
+
+Proceso: Abastecimiento->Gestionar Ingeniería de Superficie                                                                                                  Revisión: 1.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+El despacho del suministro sólo podrá ser autorizado mediante un certificado de aprobación extendido por el
+inspector representante de YPF.
+El despacho de los materiales, después de haberse completado satisfactoriamente la inspección técnica, no liberará
+al Proveedor de la responsabilidad de suministrar el equipamiento conforme a todos los requisitos de la Orden de
+Compra o Pedido, ni tampoco invalidará cualquier reclamo que el comprador pueda presentar por materiales
+defectuosos o insatisfactorios durante el período de garantía.
+La inspección se realizará conforme con lo expuesto en la presente especificación y con el programa, previamente
+presentado por el Proveedor, aprobado por YPF.
+YPF designará un inspector que tendrá acceso en cualquier momento a inspeccionar el trabajo en proceso de
+fabricación y efectuar aquellas pruebas que considere recomendables.
+El Proveedor adjudicado deberá proveer por su cuenta facilidades razonables para tales fines, y para la obtención de
+aquella información que el Inspector requiera con relación al progreso y el modo en que se efectúan los trabajos y la
+calidad de los materiales usados.
+Si algún componente de los materiales no satisface los requerimientos de esta Especificación, el lote que los
+contenga será rechazado. El hecho de que los materiales hayan sido razonablemente inspeccionados, probados y
+aceptados por el Inspector no liberará al proveedor de su responsabilidad en el caso del descubrimiento posterior de
+defectos.
+A solicitud de YPF, el Proveedor deberá entregar todos los antecedentes acerca de los materiales y dispositivos
+empleados en la construcción del equipamiento del alcance.
+En caso que YPF se excuse de su presencia o la de su representante durante las pruebas de recepción, el
+Proveedor podrá efectuarlas emitiendo posteriormente un informe detallado con los procedimientos y resultados de
+cada una de ellas.
+Si algún material no cumpliera alguna de las pruebas especificadas, el Proveedor deberá tomar las medidas
+necesarias para detectar las fallas y corregirlas. Una vez efectuadas las correcciones necesarias, el Proveedor
+deberá repetir todas las pruebas, para demostrar que dicho equipamiento cumple plenamente con las
+especificaciones. Esta circunstancia deberá quedar registrada en el informe de pruebas, detallando la falla ocurrida.
+Una vez efectuadas todas las pruebas de recepción, el Proveedor deberá entregar un informe completo y certificado
+de las mismas. Este informe será sometido a la aprobación final por parte de YPF.
+
+5.5.2 Ensayos
+Se deberá presentar con la oferta copia de los protocolos de los ensayos, realizados de acuerdo con las normas
+respectivas.
+Todo el instrumental de medición o ensayo, deberá contar con certificado de calibración. Las calibraciones deben ser
+trazables a patrones Nacionales, vía INTI u otro laboratorio acreditado en el OAA (Organismo Argentino de
+Acreditación). Al momento de iniciarse los ensayos, este certificado deberá tener una antigüedad menor a un año.
+Las unidades que sean sometidas a los ensayos deberán ser repuestas por el Proveedor de manera que el
+suministro cubra la cantidad solicitada.
+Las muestras se compondrán por todas las piezas que las integran según los planos presentados por el Oferente, no
+debiendo observarse imperfecciones superficiales incompatibles con la terminación superficial garantizada,
+utilizándose como patrón de comparación las piezas aprobadas en los ensayos de tipo, o piezas seleccionadas
+expresamente.
+
+                                                                                                         BODEGA, EDUARDO                                                                             19/12/2017
+       FARINA, GUILLERMO                                  VERNA, FACUNDO                                                                          RASLAWSKI, ALEJANDRO JUAN
+                                                                                                            GUILLERMO                                                                               03:29:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 13 / 21
+                                                                                    P0103 Traceado Eléctrico
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11210-ES-21120000-110A
+
+
+Proceso: Abastecimiento->Gestionar Ingeniería de Superficie                                                                                                  Revisión: 1.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+Las muestras cumplirán con las dimensiones y tolerancias indicadas y garantizadas en los planos y hojas técnicas
+presentadas por el Oferente en los ensayos de tipo y ser parte integrante del protocolo de ensayo correspondiente.
+Los ensayos se llevarán a cabo en los talleres del Fabricante y a su cargo. El Fabricante deberá emitir certificados de
+los ensayos realizados con toda la información necesaria y los resultados de las mediciones, incluso si los
+inspectores renunciaran a presenciarlos. Se define como remesa a los componentes presentados para la inspección
+de una sola vez.
+5.5.2.1       Ensayos de tipo
+El Proveedor deberá efectuar los ensayos de tipo sobre unidades idénticas a las ofrecidas.
+Los ensayos de tipo deberán ser repetidos toda vez que, sobre un mismo modelo aprobado, se introduzcan cambios
+de diseño o de materia prima que varíen las prestaciones.
+El oferente deberá presentar obligadamente junto con su oferta, copia de los certificados de los protocolos de
+ensayos de tipo abajo indicados, efectuados sobre el equipo correspondiente al modelo ofrecido (no de otros
+similares), realizados en un laboratorio especializado de reconocido prestigio vía, ya sea INTI u otro laboratorio
+acreditado en el OAA (Organismo Argentino de Acreditación).
+Sobre las cintas se realizarán los ensayos de tipo indicados en las normas IEC 62395 e lEC 60079-30.
+Se deberá presentar con la oferta copia de los protocolos de los ensayos establecidos en las normas de referencia y
+como mínimo:
+      Rigidez dieléctrica.
+      Resistencia de aislamiento eléctrico.
+      Inflamabilidad.
+      Impacto mecánico.
+      Deformación mecánica.
+      Curvatura en frio.
+      Resistencia al agua.
+      Verificación de la potencia nominal.
+      Estabilidad térmica.
+      Requisitos de seguridad térmica.
+      Determinación de la temperatura máxima de la vaina.
+      Verificación de la corriente de arranque.
+      Verificación de la resistencia eléctrica de la cubierta metálica.
+El protocolo debe contener la descripción completa de los ensayos y las características de los materiales ensayados.
+Estos ensayos deben haber sido realizados sobre materiales completamente armados, idénticos y de igual
+procedencia a los que se proveerán.
+En caso de disponer YPF la realización de nuevos ensayos de tipo, correrá por su cuenta la contratación de ellos con
+entes o laboratorios acreditados en el OAA (Organismo Argentino de Acreditación).
+
+                                                                                                         BODEGA, EDUARDO                                                                             19/12/2017
+       FARINA, GUILLERMO                                  VERNA, FACUNDO                                                                          RASLAWSKI, ALEJANDRO JUAN
+                                                                                                            GUILLERMO                                                                               03:29:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 14 / 21
+                                                                                    P0103 Traceado Eléctrico
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11210-ES-21120000-110A
+
+
+Proceso: Abastecimiento->Gestionar Ingeniería de Superficie                                                                                                  Revisión: 1.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+El transporte será responsabilidad del Proveedor y comprenderá la contratación de fletes, seguros, carga y descarga
+de los equipos y el costo que ello implique.
+El Proveedor será responsable de toda irregularidad que pueda derivarse de dicho transporte y manipuleo.
+Cuando en los ensayos de tipo no se cumplimentase con uno de los requisitos, será causal de rechazo del lote. En
+caso de tener que volver a realizar cualquier ensayo de tipo en repetición, los gastos que demanden la comisión,
+pasaje del personal de YPF, como así también el costo de los ensayos, será por cuenta del Proveedor.
+En‎caso‎de‎haberse‎realizado‎ensayos‎de‎tipo‎“en‎repetición”‎y‎que‎resulte‎no‎satisfactorio‎alguno‎de‎los‎requisitos‎
+de estos ensayos, será causal de rechazo de todos los equipos de iguales características.
+5.5.2.2       Ensayos de rutina
+Se realizarán conforme a lo indicado en las normas de referencia sobre todos los materiales y como mínimo:
+          Rigidez dieléctrica.
+          Verificación de la potencia nominal.
+5.5.2.3       Ensayos de recepción
+Los ensayos de recepción se deberán realizar con la supervisión de los representantes de YPF, para lo cual y a los
+efectos de poder presenciarlos, el proveedor deberá dar aviso por lo menos con quince (15) días de anticipación.
+La ausencia de los representantes de YPF en el momento de efectuarse los ensayos y pruebas según lo
+programado, no eximirá al Proveedor de su realización, debiéndose comunicar inmediatamente a YPF el resultado de
+los mismos.
+El costo de los ensayos estará incluido en el precio.
+Todas las piezas destruidas en los ensayos, serán por cuenta y cargo del proveedor.
+Los equipos dispuestos para el ensayo estarán totalmente terminados y listos para su despacho.
+Las pruebas de recepción consideradas como de aplicación normal para cada equipo son como mínimo las
+siguientes:
+Ensayos comunes para las tres verificaciones
+          Identificación del tramo calefactor.
+          Identificación de la cañería o equipo.
+          Identificación del emplazamiento (Área clasificada/Área no clasificada).
+          Identificación del megohmetro utilizado.
+Antes de aislar térmicamente la cañería
+          Relación aplicada (metros de cinta calefactora por metro de cañería).
+          Resistencia de aislamiento entre conductores y tierra.
+          Resistencia del tramo calefactor.
+          Verificación de la situación de los sensores de temperatura.
+
+
+
+                                                                                                         BODEGA, EDUARDO                                                                             19/12/2017
+        FARINA, GUILLERMO                                 VERNA, FACUNDO                                                                          RASLAWSKI, ALEJANDRO JUAN
+                                                                                                            GUILLERMO                                                                               03:29:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 15 / 21
+                                                                                    P0103 Traceado Eléctrico
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11210-ES-21120000-110A
+
+
+Proceso: Abastecimiento->Gestionar Ingeniería de Superficie                                                                                                  Revisión: 1.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+Después de aislar térmicamente la cañería
+          Resistencia de aislamiento entre conductores y tierra.
+          Resistencia del tramo calefactor.
+          Verificación del espesor de aislamiento.
+          Verificación de la colocación de las etiquetas de señalización de traceado eléctrico.
+Puesta en marcha
+Los ensayos de puesta en marcha deben ser realizados con una antelación al momento de la misma no mayor a
+24hs, y se deberán realizar los siguientes ensayos:
+          Verificación de resistencia de aislación entre conductores y tierra, con certificado de ensayo satisfactorio
+           (Este ensayo deberá realizarse siempre que se efectúen cualquier tipo de trabajo que pueda afectar la
+           integridad del sistema de traceado eléctrico).
+          Verificación de que los kits, prensacables y cajas de conexión son los adecuados.
+          Ajuste de los termostatos.
+          Voltaje en tableros eléctrico y en bornes de la caja de conexión del traceado.
+          Sensibilidad del interruptor diferencial.
+          Referencia del interruptor termomagnético o número de circuito.
+          Intensidad en régimen de trabajo.
+El Proveedor deberá entregar a YPF un informe completo y certificado de las pruebas de recepción efectuadas a los
+equipos, en papel y archivo magnético.
+
+
+5.6 Preparación para el envío, embalaje y marcado
+La preparación de los materiales para su expedición deberá estar de acuerdo en todo cuanto se indica en la
+Especificación‎“AB-IYO-ED-09-199-01, ED(EP)-B-01.00 Preparación para el Transporte‎de‎Equipos‎y‎Materiales”.
+Los materiales deberán ser cuidadosamente embalados y debidamente protegidos para resistir las operaciones de
+carga, descarga y transporte.
+Deberán ser embalados individualmente en cajas de madera, o en cajas de cartón corrugado u otro material que
+presente como mínimo el mismo grado de protección.
+Los materiales deberán ser empacados en cajones de madera u otro material que aseguren un transporte aceptable
+y seguro por parte de un transportista regular hasta el punto de entrega requerido por el comprador.
+Cada cajón deberá ser marcado indicando el número de piezas contenidas, modelo del equipo, Proveedor, etc. con el
+propósito de identificar el lote y el tipo de equipo. Estas marcas deberán ser resistentes a la intemperie y a
+condiciones anormales durante el transporte y almacenaje.
+Los equipos deberán estar fijados de una forma adecuada tal que se asegure la inmovilización de los mismos dentro
+del transporte y almacenaje.
+El embalaje empleado deberá tener un diseño tal que permita su manipulación con un vehículo montacargas.
+
+                                                                                                         BODEGA, EDUARDO                                                                             19/12/2017
+        FARINA, GUILLERMO                                 VERNA, FACUNDO                                                                          RASLAWSKI, ALEJANDRO JUAN
+                                                                                                            GUILLERMO                                                                               03:29:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 16 / 21
+                                                                                    P0103 Traceado Eléctrico
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11210-ES-21120000-110A
+
+
+Proceso: Abastecimiento->Gestionar Ingeniería de Superficie                                                                                                  Revisión: 1.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+Para el caso de cajones de madera, serán tratados según requerimientos internacionales para el control de plagas. El
+tratamiento deberá contemplar, al menos: alta toxicidad a organismos xilófagos, alta penetrabilidad y poder de
+fijación, estabilidad química, sustancias no corrosivas a los metales ni que afecte las características físicas de la
+madera.
+El tipo de embalaje y su identificación, deberán ser sometidos a la aprobación de YPF antes del despacho desde la
+fábrica, y podrá ser rechazado en caso de no cumplir con las condiciones especificadas.
+El embalaje llevará una etiqueta indeleble donde figuren los datos siguientes para cada tipo de aparatos y accesorios:
+          Nombre y marca del Fabricante.
+          Número de serie.
+          Año de fabricación.
+          Peso total en Kg.
+          Indicación del origen y destino del material.
+          Número de Requerimiento.
+          Código SAP asignado por YPF.
+
+
+5.7 Documentación
+Si no se indica otra cosa en la documentación del proyecto, toda la documentación se suministrará en español.
+
+5.7.1 Con la oferta
+El Proveedor entregará junto a la oferta, como mínimo, la siguiente documentación técnica:
+          Descripción del alcance del suministro.
+          Lista de materiales y componentes del traceado.
+          Lista de materiales de repuestos para la puesta en marcha y dos años de operación.
+          Especificaciones y datos de diseño tenidos en cuenta para elaborar la oferta.
+          Sistemas de control de temperatura escogidos.
+          Justificación de los cálculos realizados.
+          Tablas de potencia eléctrica por circuito.
+          Lista de documentación a entregar durante la fase de proyecto/contrato.
+          Excepciones a la presente Especificación.
+          Observaciones y datos de interés a criterio del Proveedor.
+          Publicaciones técnicas de las cintas calefactoras, controladores de temperatura, cajas de conexión y otros
+           accesorios de relevancia que estén incluidos en la oferta.
+El Proveedor deberá también dar información sobre su experiencia, debiendo adjuntar con la oferta, una lista de
+referencias de proyectos similares en los que haya intervenido en las tareas objeto del alcance de esta oferta.
+
+                                                                                                         BODEGA, EDUARDO                                                                             19/12/2017
+        FARINA, GUILLERMO                                 VERNA, FACUNDO                                                                          RASLAWSKI, ALEJANDRO JUAN
+                                                                                                            GUILLERMO                                                                               03:29:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 17 / 21
+                                                                                    P0103 Traceado Eléctrico
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11210-ES-21120000-110A
+
+
+Proceso: Abastecimiento->Gestionar Ingeniería de Superficie                                                                                                  Revisión: 1.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+5.7.2 Después del pedido
+El Proveedor del sistema de traceado suministrará a la Ingeniería todos los datos necesarios para que esta realice un
+diseño adecuado de la alimentación eléctrica y de control (potencias, calibre de protecciones, esquemas de control,
+datos de las cintas y de los controladores de temperatura).
+El Proveedor del sistema de traceado elaborará un proyecto que incluirá como mínimo la siguiente documentación:
+          Planos de ubicación del traceado sobre los equipos, mostrando la localización de los sensores de
+           temperatura y accesorios del traceado eléctrico. Estos planos se realizarán a partir de la documentación e
+           información entregada por la Ingeniería en fase de adjudicación.
+          Los documentos de Ingeniería que se han tenido en cuenta para el diseño, en los que figurarán los datos
+           ambientales, de proceso, eléctricos, sistema de control de temperatura y datos de las cañerías y equipos
+           tenidos en cuenta para realizar el proyecto.
+          Tablas de los circuitos de traceado, mostrando el número de circuito, identificación de la cañería o equipo a
+           tracear, espesor de aislamiento, referencia de la cinta calefactora a aplicar e indicación de la cantidad de
+           cinta a aplicar por metro de cañería y por accesorio (soportes, válvulas, bombas, instrumentos), dimensiones
+           de la cañería o equipo, longitud del circuito de traceado, características eléctricas y de potencia del circuito.
+          Esquemas eléctricos básicos de los circuitos de traceado, en estos esquemas se deberá definir como
+           mínimo:
+                           o       Tensión y Frecuencia nominal del sistema y circuitos.
+                           o       Selección adecuada de las protecciones indicando tipo, curva, y sensibilidad, en cada circuito.
+          Información técnica de los materiales de traceado (cinta calefactora, termostatos, cajas de conexión, etc.).
+          Lista detallada de materiales de traceado.
+          Instrucciones de instalación y mantenimiento.
+          Si en el proyecto existe algún emplazamiento clasificado como atmósfera potencialmente explosiva, se
+           suministrarán los certificados Ex de las cintas calefactoras, cajas de conexión y termostatos. (Declaración de
+           conformidad emitida por el Fabricante).
+          Certificado de calidad de la empresa Proveedora del sistema de traceado.
+          Esquemas eléctricos detallados de los tableros/paneles de alimentación y control del traceado. (a suministrar
+           por la Ingeniería).
+          Los documentos de ingeniera deberán someterse a aprobación por parte de YPF, utilizando el sistema de
+           documentación vigente de la compañía.
+
+5.7.3 Con la entrega del material
+El Proveedor entregará, como documentación final, la siguiente información:
+          La documentación anterior aprobada.
+          Instrucciones de uso, almacenamiento, montaje y mantenimiento.
+          Informe o protocolos de los ensayos realizados.
+
+
+                                                                                                         BODEGA, EDUARDO                                                                             19/12/2017
+        FARINA, GUILLERMO                                 VERNA, FACUNDO                                                                          RASLAWSKI, ALEJANDRO JUAN
+                                                                                                            GUILLERMO                                                                               03:29:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 18 / 21
+                                                                                    P0103 Traceado Eléctrico
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11210-ES-21120000-110A
+
+
+Proceso: Abastecimiento->Gestionar Ingeniería de Superficie                                                                                                  Revisión: 1.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+5.8 Excepciones a la Especificación
+Las excepciones o variaciones a esta especificación que el Proveedor considerase hacer deberá comunicarlas por
+escrito en la oferta y en un solo documento que recoja la totalidad de las desviaciones haciendo referencia al capítulo
+que considera contradictorio.
+Solo serán admitidas aquellas variaciones que se mencionen expresamente en el pedido. Quedará a consideración
+de YPF la aceptación o no de las mismas.
+En caso de contradicción entre esta Especificación y los documentos del proyecto, el Proveedor lo indicará a YPF y/o
+su representante para aclarar dicha contradicción.
+El cumplimiento con esta especificación no exime al Proveedor o vendedor de la responsabilidad de suministrar los
+materiales adecuados para las condiciones de servicio especificadas.
+Lo indicado en esta Especificación cubre los requisitos mínimos requeridos.
+
+6 Indicadores, registros y riesgos del proceso
+
+6.1 Indicadores
+  Indicador
+                                   Fórmula                           Frecuencia                        Responsable                        Cliente Interno                                  Registro
+    (KPI)
+ N/A                      N/A                                     N/A                               N/A                                  N/A                                  N/A
+
+
+6.2 Registros
+                                         Responsable                       Responsable                         Frecuencia de                           Disposición y                             Tiempo de
+        Registro
+                                          del registro                      del archivo                      registro / archivo                          protección                               archivo
+ N/A                                     N/A                               N/A                               N/A                                     N/A                                        N/A
+
+
+6.3 Riesgos y acciones mitigantes
+        Código                                             Riesgo                                                              Origen                                        Controles mitigantes
+ N/A                                  N/A                                                          N/A                                                                       N/A
+
+
+7 Anexos y referencias
+
+7.1 Anexos
+  N°                                                                                                       Nombre
+  N/A        N/A
+
+
+
+                                                                                                         BODEGA, EDUARDO                                                                             19/12/2017
+       FARINA, GUILLERMO                                  VERNA, FACUNDO                                                                          RASLAWSKI, ALEJANDRO JUAN
+                                                                                                            GUILLERMO                                                                               03:29:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 19 / 21
+                                                                                    P0103 Traceado Eléctrico
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11210-ES-21120000-110A
+
+
+Proceso: Abastecimiento->Gestionar Ingeniería de Superficie                                                                                                  Revisión: 1.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+7.2 Normativa relacionada
+    Categoría                                             Título                                                                                                                      Código
+                                ED(EP)-B-01.00 Preparación para el transporte de equipos y
+                                                                                                                                                                 AB-IYO-ED-09-199-01
+                                materiales.
+ Normativa                      P1104 Cajas de Derivación y Accesorios para Instalaciones
+ Interna YPF                                                                                                                                                     10751-ES-21030700-110A
+                                Eléctricas
+                                P0300 Tableros Eléctricos de Baja Tensión                                                                                        -
+ Normativa
+                                N/A
+ Externa
+ Normativa
+                                P0103 Traceado Eléctrico – Revisión 0.0                                                                                          11210-ES-21030700-110A
+ Derogada
+                                Electric surface heating. Specification for electric surface heating
+                                                                                                                                                                 BS 6351-1
+                                devices.
+                                Electric surface heating. Guide to the design of electric surface
+                                                                                                                                                                 BS 6351-2
+                                heating systems.
+                                Electric Surface Heating - Code Of Practice For The Installation,
+                                                                                                                                                                 BS 6351-3
+                                Testing And Maintenance Of Electric Surface Heating Systems.
+                                Explosive atmospheres – Part 0: Equipment – General
+                                                                                                                                                                 IEC 60079-0
+                                requirements.
+                                Explosive atmospheres – Part 1: Equipment protection by
+                                                                                                                                                                 IEC 60079-1
+                                flameproof enclosures‎“d”.
+                                Electrical Apparatus for Explosive Gas Atmospheres Part - 10:
+                                                                                                                                                                 IEC 60079-10
+                                Classification of Hazardous Areas.
+                                Explosive atmospheres - Part 11: Equipment protection by
+                                                                                                                                                                 IEC 60079-11
+                                intrinsic safety "i"
+                                Explosive atmospheres – Part 30-1: Electrical resistance trace
+                                                                                                                                                                 IEC 60079-30-1
+                                heating – General and testing requirements.
+ Otras                          Explosive atmospheres – Part 30-2: Electrical resistance trace
+ referencias                    heating – Application guide for design, installation and                                                                         IEC 60079-30-2
+                                maintenance.
+                                Explosive atmospheres – Part 7: Equipment protection by
+                                                                                                                                                                 IEC 60079-7
+                                increased safety "e".
+                                Degrees of protection provided by enclosures (IP Code).                                                                          IEC 60529
+                                Degrees of protection provided by enclosures for electrical
+                                                                                                                                                                 IEC 62262
+                                equipment against external mechanical impacts (IK code).
+                                Electrical resistance trace heating systems for industrial and
+                                commercial applications - Part 1: General and testing                                                                            IEC 62395-1
+                                requirements.
+                                Electrical resistance trace heating systems for industrial and
+                                commercial applications - Part 2: Application guide for system                                                                   IEC 62395-2
+                                design, installation and maintenance
+                                IEEE Standard for the Testing, Design, Installation, and
+                                Maintenance of Electrical Resistance Trace Heating for                                                                           IEEE Std 515
+                                Industrial Applications.
+
+                                                                                                         BODEGA, EDUARDO                                                                             19/12/2017
+       FARINA, GUILLERMO                                  VERNA, FACUNDO                                                                          RASLAWSKI, ALEJANDRO JUAN
+                                                                                                            GUILLERMO                                                                               03:29:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 20 / 21
+                                                                                    P0103 Traceado Eléctrico
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11210-ES-21120000-110A
+
+
+Proceso: Abastecimiento->Gestionar Ingeniería de Superficie                                                                                                  Revisión: 1.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+7.3 Definiciones y abreviaturas
+        Término                       Abreviatura                                                                                 Descripción
+ N/A                                  N/A                          N/A
+
+8 Aprobación
+
+8.1 Vigencia
+Esta normativa entrará en vigencia a partir de la fecha de su publicación en el cuerpo normativo de YPF.
+
+Los abajo firmantes asumen la responsabilidad de implantar, controlar el cumplimiento y actualizar el presente
+documento cada vez que fuera necesario.
+
+
+8.2 Disposiciones generales y transitorias
+La vigencia de la presente sustituye cualquier directriz o criterio anterior fijado en otros documentos de aplicación.
+
+
+8.3 Historial
+       Estado                    № Revisión                    Fecha Aprobación                                                                   Observaciones
+                                                               Ver fecha en pie de
+       Original                           0.0
+                                                               firmas
+                                                               Ver fecha en pie de                        Se incorporan mejoras y cambios (Puntos 4.4, 5.3,
+       Original                           1.0
+                                                               firmas                                     5.5.2.3, 5.7.2)
+
+
+8.4 Aprobación colegiada
+N/A.
+
+
+8.5 Categoría de Clasificación del Activo de Información
+YPF - Privada: información disponible para los empleados de la compañía y terceros (ej. contratistas) como parte de
+la rutina del negocio. Su difusión se hace en base al conocimiento para poder operar. Su difusión no autorizada
+podría afectar la consecución de objetivos particulares de determinadas áreas de la compañía.
+
+
+
+
+                                                                                                         BODEGA, EDUARDO                                                                             19/12/2017
+       FARINA, GUILLERMO                                  VERNA, FACUNDO                                                                          RASLAWSKI, ALEJANDRO JUAN
+                                                                                                            GUILLERMO                                                                               03:29:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 21 / 21
+

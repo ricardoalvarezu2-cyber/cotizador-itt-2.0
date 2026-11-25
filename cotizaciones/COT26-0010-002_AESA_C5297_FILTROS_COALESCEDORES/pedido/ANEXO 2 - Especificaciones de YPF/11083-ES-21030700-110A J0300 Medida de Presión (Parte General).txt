@@ -1,0 +1,646 @@
+                                                         J0300 Medida de Presión (Parte General)
+Tipo: ESPECIFICACIÓN                         Ámbito: Upstream - Argentina                                                                                      Código: 11083-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                             Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+
+
+1 Índice
+
+Contenido
+1      ÍNDICE ........................................................................................................................................................................1
+2      OBJETO .....................................................................................................................................................................3
+3      ÁMBITO DE APLICACIÓN ........................................................................................................................................3
+4      CONSIDERACIONES PRINCIPALES .......................................................................................................................3
+5      ESPECIFICACIÓN .....................................................................................................................................................3
+    5.1    CARACTERÍSTICAS GENERALES ..............................................................................................................................3
+      5.1.1    Unidades de medida ....................................................................................................................................3
+      5.1.2    Transmisión de señal ...................................................................................................................................4
+      5.1.3    Compatibilidad electromagnética .................................................................................................................4
+      5.1.4    Instalación en áreas clasificadas .................................................................................................................4
+      5.1.5    Instalación en áreas no clasificadas ............................................................................................................4
+      5.1.6    Envolventes y protección ambiental ............................................................................................................4
+    5.2    TRATAMIENTO DE LAS MEDIDAS ..............................................................................................................................5
+      5.2.1    Indicación en campo ....................................................................................................................................5
+      5.2.2    Transmisores multivariables ........................................................................................................................5
+      5.2.3    Alarmas y enclavamientos ...........................................................................................................................5
+    5.3    SELECCIÓN DE MEDIDORES ....................................................................................................................................5
+      5.3.1    Criterios generales .......................................................................................................................................5
+      5.3.2    Criterios particulares ....................................................................................................................................6
+    5.4    INSTALACIÓN DE MEDIDORES ..................................................................................................................................6
+      5.4.1    Criterios generales de montaje ....................................................................................................................6
+      5.4.2    Sellos y capilares .........................................................................................................................................7
+      5.4.3    Amortiguadores de pulsaciones ...................................................................................................................8
+      5.4.4    Limitadores de sobrepresiones ....................................................................................................................8
+      5.4.5    Válvulas de exceso de flujo..........................................................................................................................8
+    5.5    SUMINISTRO DE EQUIPOS DE PRESIÓN ....................................................................................................................8
+      5.5.1    Preparación para envío, embalaje y marcado .............................................................................................8
+      5.5.2    Documentación de Vendedor ......................................................................................................................9
+6      INDICADORES, REGISTROS Y RIESGOS DEL PROCESO ...................................................................................9
+    6.1        INDICADORES ........................................................................................................................................................9
+    6.2        REGISTROS ...........................................................................................................................................................9
+    6.3        RIESGOS Y ACCIONES MITIGANTES ..........................................................................................................................9
+7      ANEXOS Y REFERENCIAS ......................................................................................................................................9
+    7.1        ANEXOS ................................................................................................................................................................9
+    7.2        NORMATIVA RELACIONADA .....................................................................................................................................9
+    7.3        DEFINICIONES Y ABREVIATURAS ............................................................................................................................10
+8      APROBACIÓN .........................................................................................................................................................10
+                                                                                                           BODEGA, EDUARDO                                                                             15/02/2017
+      GALANTERNIK, NICOLAS                                  VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                              GUILLERMO                                                                               06:26:00 p.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                     1 / 11
+                                                       J0300 Medida de Presión (Parte General)
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11083-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+  8.1        VIGENCIA ............................................................................................................................................................10
+  8.2        DISPOSICIONES GENERALES Y TRANSITORIAS ........................................................................................................11
+  8.3        HISTORIAL ...........................................................................................................................................................11
+  8.4        APROBACIÓN COLEGIADA .....................................................................................................................................11
+  8.5        CATEGORÍA DE CLASIFICACIÓN DEL ACTIVO DE INFORMACIÓN................................................................................11
+
+
+
+
+                                                                                                         BODEGA, EDUARDO                                                                             15/02/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                            GUILLERMO                                                                               06:26:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   2 / 11
+                                                       J0300 Medida de Presión (Parte General)
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11083-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+2 Objeto
+Definir los criterios técnicos generales para la realización y tratamiento de las medidas de presión de gases, líquidos
+y vapores.
+
+
+3 Ámbito de aplicación
+YPF S.A. Upstream – Argentina.
+Aplica a todos los proyectos tanto de nuevas instalaciones como modificaciones a instalaciones existentes.
+
+
+4 Consideraciones principales
+Este documento se complementa en cada proyecto con los datos básicos de diseño (en lo sucesivo DBD) emitidos
+para el mismo y que recogen los aspectos particulares del mismo.
+Quedan fuera del alcance específico de este documento:
+    a) Las medidas de presión asociadas a transferencias fiscales, tratada en las especificiónes “Unidades LACT”
+       10688-ES-21030700-110A y “J2001 Puentes de Medición de gas natural para transferencia de custodia”
+       10721-ES-21030700-110A
+    b) La medida de presión diferencial para cálculo de caudal, tratada en la especificación “J0201 Transmisores de
+       Presión Diferencial para Medida de Caudal”.
+    c) La medida de presión diferencial para cálculo de nivel, tratada en la especificación “J0402 Transmisores de
+       Presión Diferencial para Medida de Nivel”.
+
+
+5 Especificación
+
+5.1 Características generales
+
+5.1.1 Unidades de medida
+La unidad de medida de presión será el kg/cm2.
+Como medida general, la medida de presión se considerará referida a la presión atmosférica. En los casos
+particulares que se trate de una medida de presión absoluta, se deberá añadir el sufijo “-a”.
+Para mediciones de vacío y presiones absolutas inferiores a 1 kg/cm2 se emplearán milímetros de columna de agua.
+Para presión / depresión de muy bajo rango (p.e. tanques con blanketing), se usarán milímetros de columna de agua.
+Para la medida de presión diferencial y en función del rango, se podrá usar kg/cm2 o mmCA, escogiéndose la que dé
+lugar a una escala más significativa y legible para cada aplicación.
+Cuando se indique en el DBD, podrán emplearse otras unidades de referencia, como el bar o psi, según la práctica
+habitual de cada Instalación.
+
+
+                                                                                                         BODEGA, EDUARDO                                                                             15/02/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                            GUILLERMO                                                                               06:26:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   3 / 11
+                                                       J0300 Medida de Presión (Parte General)
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11083-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+Las unidades anteriores se emplearán en todos los documentos asociados al instrumento (hoja de cálculo, de
+calibración, de especificación, etc.) a fin de mantener la consistencia entre los mismos.
+
+5.1.2 Transmisión de señal
+La transmisión de señales de presión a sistemas de control y seguridad será realizada por defecto en 4-20 mA, lineal
+y aislada.
+Para visualización de variables se podrá también emplear el protocolo de comunicaciones MODBUS RTU/RS845.
+Siempre que esté disponible, se incluirá sólo para fines de configuración, HART como complemento a la señal 4-20
+mA.
+Las presiones obtenidas mediante transmisores multivariables y enviadas al DCS por protocolo digital pueden usarse
+exclusivamente para indicación, pero nunca en control, enclavamientos o alarmas.
+
+5.1.3 Compatibilidad electromagnética
+Los equipos cumplirán la norma IEC-61000 y las normativas locales que se indiquen en el DBD.
+
+5.1.4 Instalación en áreas clasificadas
+Se describe en detalle en la especificación “J1400 Instalación de Instrumentos en Áreas Clasificadas” y sus
+especificaciones relacionadas. El diseño debe tener en cuenta lo siguiente:
+    a) En lo aplicable, el modo preferente de protección será siempre Antideflagrante (EEx-d).
+    b) En caso de tratarse de una instalación existente EEx-i, podrá aceptarse el modo Seguridad Intrínseca (EEx-i)
+       para las modificaciones que se realicen.
+Para mayores detalles sobre la instalación de instrumentos en zona clasificada, consultar las especificaciones
+mencionadas.
+
+5.1.5 Instalación en áreas no clasificadas
+Con el objetivo de unificar provisiones y stock de repuestos se usarán instrumentos certificados para zonas
+clasificadas de acuerdo a lo expuesto en el apartado anterior, pero instalados de modo convencional.
+Se podrán utilizar instrumentos carentes de certificación en aquellas instalaciones en la que gran parte o toda la
+unidad sea área no clasificada (p.e. plantas de inyección de agua). No implica en ningún caso el uso de instrumentos
+sin certificación en áreas clasificadas.
+
+5.1.6 Envolventes y protección ambiental
+Se proporcionarán los siguientes grados de protección para las envolventes:
+         Áreas convencionales                                  IP 65
+         Instalaciones expuestas a ambientes marinos           IP 68
+Las juntas empleadas en envolventes, cajas y gabinetes serán antienvejecimiento y resistentes a hidrocarburos.
+Los equipos deberán funcionar correctamente instalados a la intemperie, entre –15 y + 65 ºC, con humedades
+relativas de hasta el 100% sin condensación y exposición directa al sol, y ambiente moderadamente corrosivo.
+
+
+
+                                                                                                         BODEGA, EDUARDO                                                                             15/02/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                            GUILLERMO                                                                               06:26:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   4 / 11
+                                                       J0300 Medida de Presión (Parte General)
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11083-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+En ambientes especialmente agresivos (grados G2 y superiores según ISA S71.04) el vendedor deberá confirmar la
+validez de su equipo o indicar medidas de protección adicionales.
+
+
+5.2 Tratamiento de las medidas
+
+5.2.1 Indicación en campo
+Todos los transmisores de presión dispondrán de indicación en campo (local o remoto) y la misma deberá ser legible
+tal que se permita efectuar las maniobras operativas requeridas por el proceso.
+En aquellos instrumentos asociados a lazos cerrados, la indicación será legible desde el bypass de la válvula o
+elemento final de control asociado.
+El indicador no podrá, en caso de malfunción, interrumpir la señal de la variable de proceso.
+Los indicadores remotos serán suministrados con accesorios para su soporte sobre tubo de 2” o en pared.
+Los indicadores deben mostrar siempre los valores de las variables en unidades de ingeniería.
+Los indicadores de cristal líquido deberán ser adecuados a la temperatura ambiente del punto de instalación.
+
+5.2.2 Transmisores multivariables
+En los transmisores de presión diferencial para medida de caudal de tipo multivariable está disponible, vía protocolo
+digital, la lectura de la señal de presión relativa de la línea de instalación.
+El uso de estas señales de presión en control, enclavamientos o alarmas está prohibido, incluso si las señales son
+convertidas a soporte 4-20 mA mediante un multiplexor a su llegada al sistema receptor de las mismas. Ver
+especificación “J2100 Transmisores Multivariables”.
+
+5.2.3 Alarmas y enclavamientos
+El criterio general para la obtención de alarmas y/o enclavamientos de presión en proceso se indicará en el DBD del
+proyecto, y por defecto sera a partir de transmisores.
+Los presostatos se restringirán a los enclavamientos de equipo mecánico (bombas, centralinas de aceite,
+compresores, etc.)
+El uso de manómetros con contactos de alarma está prohibido según lo indicado en la especificación “J0301
+Manómetros y Manómetros Diferenciales”.
+En medidas donde ya exista un equipo para regulación se empleará uno diferente para enclavamientos.
+En aplicaciones de seguridad de alta integridad según IEC 61508 / 61511 los elementos generadores de señal al
+sistema de enclavamiento deberán ser validados con todo el conjunto.
+
+
+5.3 Selección de medidores
+
+5.3.1 Criterios generales
+Se instalarán manómetros en:
+    a) Circuitos auxiliares y máquinas (según criterio del vendedor).
+                                                                                                         BODEGA, EDUARDO                                                                             15/02/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                            GUILLERMO                                                                               06:26:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   5 / 11
+                                                       J0300 Medida de Presión (Parte General)
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11083-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+    b) Recipientes o líneas donde el código o la norma de referencia los exija o recomiende.
+    c) Impulsiones de bombas y compresores.
+    d) Límites de batería, tomas de muestra y puntos de operación manual en campo.
+    e) Puntos donde lo indique la Ingeniería Básica.
+Para los servicios de indicación remota, control o enclavamientos de proceso, se emplearán transmisores.
+Los presostatos se limitaran a los servicios indicados en el apartado 5.2.3 “Alarmas y Enclavamientos”.
+La medida de presión diferencial con dos transmisores independientes y cálculo en el DCS queda prohibida.
+El uso de manómetros y presostatos diferenciales se restringirá a la detección de ensuciamiento de filtros en circuitos
+auxiliares.
+El ensuciamiento de equipos de proceso se medirá en general mediante transmisores de presión diferencial salvo
+que la Ingeniería Básica indique otra cosa.
+Los instrumentos de presión de tipo neumático (transmisores, registradores, controladores, etc.) quedan prohibidos
+para instalaciones nuevas. Sólo se usarán en locaciones donde no se disponga de sistema de control con
+autorizacion de YPF.
+
+5.3.2 Criterios particulares
+Se indican para cada tipo de instrumento en las especificaciones relacionadas (ver apartado 7.2). Se deberán tener
+en cuenta los criterios indicados en el DBD de cada proyecto.
+
+
+5.4 Instalación de medidores
+
+5.4.1 Criterios generales de montaje
+Todos los medidores de presión se instalarán según se indica en los típicos de cada especificación relacionada, las
+recomendaciones del fabricante y las buenas prácticas de Ingeniería. Se deberá verificar las condiciones de servicio
+para la cual fue seleccionado.
+Los montajes se realizarán siempre que sea posible según alguno de los típicos de YPF incluidos en la especificación
+“J1700 Montaje de Instrumentos” sobre instalación de instrumentos.
+En casos especiales no recogidos en los típicos, la Ingeniería realizará los correspondientes planos particulares de
+montaje según las instrucciones que se incluyen en la citada especificación “J1700 Montaje de Instrumentos”
+Todos los montajes deben permitir el acceso para mantenimiento y operación a los instrumentos desde instalaciones
+fijas.
+Las válvulas de raíz o bloqueo deberán estar siempre accesibles desde instalaciones fijas.
+Para instalaciones en líneas de muy alta presión (rating igual o superior a 1500#) se deberán considerar los
+siguientes aspectos:
+    a) Schedule del tubing o cañería de las líneas de impulsión.
+    b) Uniones dobles y juntas metálicas (asiento metal-metal).
+    c) Pares de apriete de uniones dobles y bridas.
+
+                                                                                                         BODEGA, EDUARDO                                                                             15/02/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                            GUILLERMO                                                                               06:26:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   6 / 11
+                                                       J0300 Medida de Presión (Parte General)
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11083-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+    d) Soportes de las líneas de impulsión.
+Los accesorios de instalación más comúnmente empleados con los instrumentos de presión se tratan en los
+apartados siguientes.
+
+5.4.2 Sellos y capilares
+En la medida de fluidos corrosivos, muy viscosos ( > 10-20 cSt a 100 ºC), que arrastren sólidos que puedan obstruir
+las tomas o con un bajo punto de solidificación, se estudiará la instalación de tomas por sello y capilar.
+El tamaño de los sellos se escogerá en función del rango y tipo de medida a realizar:
+
+                                                Tabla 5.4.2: span mínimo según tamaño del sello y tipo de medida
+             DN Sello                   Para presión diferencial                                 Para presión relativa                                    Para presión absoluta
+             1½”                        span  0,750 kg/cm2                                      span  1,50 kg/cm2                                       Consultar a Fabricante
+             2”                         span  0,100 kg/cm2                                      span  0,50 kg/cm2                                       span  1,0 kg/cm2
+             3”                         span  0,025 kg/cm2                                      span  0,15 kg/cm2                                       span  0,5 kg/cm2
+Nota: No confundir el DN del sello con el tamaño de las conexiones, que por ejemplo en sellos roscados puede ser
+inferior.
+Se deberá analizar el tamaño de sello más pequeño compatible con el span requerido por el transmisor y con los
+criterios de estandarización de la instalación/área.
+Para la definición de las conexiones de los sellos, se seguirá el siguiente criterio:
+    a)       Por defecto se usarán sellos tipo sándwich para montaje entre bridas, con salida radial del capilar.
+    b) Los sellos serán roscados, sólo se utilizarán cuando sea la práctica habitual de la instalación/área.
+    c) Los sellos bridados se restringirán a casos especiales (sellos con diafragma extendido, encarados RTJ,
+       servicios a alta presión, tóxicos, etc.). Por lo general tienen salidas axiales del capilar.
+En casos especiales (p.e. líneas de pequeño DN) se estudiarán con YPF otro tipo de montajes.
+Los sellos serán de acero inoxidable, salvo que el proceso requiera un material superior. En dichos casos, este
+material sólo debe aplicarse en principio a las partes mojadas del sello salvo indicación en contra.
+Cuando lo indique la hoja de datos, se incluirán con todos los sellos tipo sándwich los correspondientes anillos de
+flushing del mismo material que las partes mojadas del sello y conexiones de ½” NPT-H con tapón.
+Los sellos tipo sándwich se suministrarán siempre con las juntas brida-sello requeridas para su montaje.
+Con los manómetros y presostatos se emplearán por defecto sellos directos (sin capilar) salvo que existan problemas
+de accesibilidad, temperatura o vibraciones, en cuyo caso podrán emplearse sellos remotos.
+Los transmisores tendrán en general sellos remotos con capilar de extensión salvo que la aplicación y punto de
+instalación (por temperatura y accesibilidad) admitan un transmisor con sello integral.
+Los capilares estarán rellenos en fábrica de origen y no contaran con purgas en los capilares. Los transmisores de
+presión y los capilares conformaran una única pieza sellada, sin posibilidad de apertura o fuga del fluido transmisor
+de los capilares.
+Los capilares tendrán la menor longitud posible, diámetro interno de 2 mm, y armadura de acero inoxidable.
+
+                                                                                                         BODEGA, EDUARDO                                                                             15/02/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                            GUILLERMO                                                                               06:26:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   7 / 11
+                                                       J0300 Medida de Presión (Parte General)
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11083-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+En servicio de vacío irán soldados tanto al sello como al cuerpo del transmisor y a la cámara de medida del
+transmisor. En servicio de presión diferencial, serán de igual longitud y diámetro.
+Los fluidos de relleno deben ser aptos para una temperatura de proceso de al menos 150 ºC y tener el menor
+coeficiente de dilatación posible. En servicio de vacío, deben soportar la presión mínima sin vaporizar.
+El fabricante debe indicar en su oferta el fluido de relleno, su densidad, temperatura máxima de servicio, coeficiente
+de dilatación y efectos sobre la medida para variaciones de la temperatura ambiente de 20 ºC.
+
+5.4.3 Amortiguadores de pulsaciones
+Se usarán con manómetros y presostatos en montaje directo cuando estén sujetos a pulsaciones rápidas en la
+presión del fluido y/o a fuertes vibraciones (descarga de equipo alternativo, por ejemplo).
+No se emplearán con transmisores. Con estos equipos se filtrará la señal (damping) en origen.
+Los amortiguadores serán de tipo ajustable mediante tornillo, con conexión para limpieza, toma ½” NPT-M a proceso
+y ½” NPT-H al equipo. La calidad mínima del cuerpo será acero inoxidable, con teflón en las juntas.
+
+5.4.4 Limitadores de sobrepresiones
+Se instalarán en servicios donde previsiblemente puedan darse sobrepresiones que excedan la presión nominal del
+medidor y dañarlo.
+Nota: un ejemplo de este tipo de elementos pueden ser presostatos que actúen por baja presión y cuya presión
+máxima de servicio sea inferior a la que pueda alcanzar el proceso en otras situaciones.
+Deberán ser de tipo ajustable, actuación instantánea y con desbloqueo automático de la línea una vez que haya
+desaparecido la sobrepresión.
+Sus materiales y conexiones seguirán los mismos criterios que los amortiguadores de pulsaciones.
+Para picos de sobrepresión ocasionales y de baja duración (inferior a 3 segundos) podrán emplearse amortiguadores
+de pulsación de disco sinterizado como limitador de presión (si el fluido los admite).
+
+5.4.5 Válvulas de exceso de flujo
+En servicios de muy alta presión (líneas de rating igual o superior a 900#) con fluidos cuya fuga pueda ser peligrosa
+se estudiará la instalación de válvulas de exceso de flujo en las líneas de impulsión.
+Estas válvulas deben limitar eventuales fugas, roturas, purgas, etc. de la línea o el instrumento.
+
+
+5.5 Suministro de equipos de presión
+
+5.5.1 Preparación para envío, embalaje y marcado
+Estarán de acuerdo con la especificación AB-IYO-ED-09-199-01 “ED(EP)-B-01.00 Preparación para Transporte de
+Equipos y Materiales”.
+En las especificaciones sobre cada tipo de instrumentos se incluyen instrucciones específicas para los mismos que
+se añadirán a las generales indicadas en la AB-IYO-ED-09-199-01 “ED(EP)-B-01.00 Preparación para Transporte de
+Equipos y Materiales”.
+
+
+                                                                                                         BODEGA, EDUARDO                                                                             15/02/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                            GUILLERMO                                                                               06:26:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   8 / 11
+                                                         J0300 Medida de Presión (Parte General)
+Tipo: ESPECIFICACIÓN                         Ámbito: Upstream - Argentina                                                                                      Código: 11083-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                             Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+
+5.5.2 Documentación de Vendedor
+La documentación que debe aportar el vendedor depende del tipo de medidor y se describe en especificaciones
+correspondientes.
+Las listas incluidas en las adendas son preliminares. El número definitivo de documentos, las copias y tipo de soporte
+(papel, CD ROM, etc.) serán los que indique la requisición de compra.
+Toda la documentación de carácter particular asociada al pedido deberá haber sido previamente aprobada por la
+Ingeniería responsable del proyecto.
+La documentación deberá estar en castellano de acuerdo al formato indicado y cantidad requerida en la petición de
+oferta.
+
+
+6 Indicadores, registros y riesgos del proceso
+
+6.1 Indicadores
+N/A
+
+
+6.2 Registros
+N/A
+
+
+6.3 Riesgos y acciones mitigantes
+N/A
+
+
+7 Anexos y referencias
+
+7.1 Anexos
+   N°                                                                                                        Nombre
+    I          N/A
+
+
+7.2 Normativa relacionada
+    Categoría                                                                             Título                                                                                        Código
+
+                                  J0301 Manómetros y Manómetros Diferenciales
+ Normativa
+ Interna YPF
+                                  J0304 Transmisores de Presión
+
+
+                                                                                                           BODEGA, EDUARDO                                                                             15/02/2017
+        GALANTERNIK, NICOLAS                                VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                              GUILLERMO                                                                               06:26:00 p.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                     9 / 11
+                                                       J0300 Medida de Presión (Parte General)
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11083-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+    Categoría                                                                           Título                                                                                        Código
+
+                                J0305 Presostatos
+
+                                J0100 Ingeniería de Instrumentación
+
+                                J1300 Instalación Eléctrica de Instrumentos
+
+                                J1400 Instalación de Instrumentos en Áreas Clasificadas
+
+                                J1700 Montaje de Instrumentos
+
+ Normativa
+                                N/A                                                                                                                              N/A
+ Externa
+ Normativa
+                                ED(EP)-J-03.00 Medida de Presión (Parte General)                                                                                 AB-IYO-ED-09-048-01
+ Derogada
+                                Process Measurement Instrumentation                                                                                              API RP 551
+                                Transmission System                                                                                                              API RP 552
+                                Process Control System Function and Functional Specification
+                                                                                                                                                                 API RP 554
+                                Development
+                                Electromagnetic Compatibility (EMC)                                                                                              IEC 61000
+ Otras
+ referencias                    Explosive Atmosphere                                                                                                             IEC 60079
+                                Environmental Conditions for Process Measurement and control
+                                                                                                                                                                 ISA 71.04
+                                systems.
+                                Functional Safety – Safety Instrumented Systems for the
+                                                                                                                                                                 ISA 61511
+                                process industry sector.
+
+
+7.3 Definiciones y abreviaturas
+       Término                        Abreviatura                                                                                 Descripción
+ N/A                                  N/A                          N/A
+
+
+8 Aprobación
+
+8.1 Vigencia
+Esta normativa entrará en vigencia a partir de la fecha de su aprobación.
+Los abajo firmantes asumen la responsabilidad de implantar, controlar el cumplimiento y actualizar el presente
+documento cada vez que fuera necesario.
+
+                                                                                                         BODEGA, EDUARDO                                                                             15/02/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                            GUILLERMO                                                                               06:26:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 10 / 11
+                                                         J0300 Medida de Presión (Parte General)
+Tipo: ESPECIFICACIÓN                         Ámbito: Upstream - Argentina                                                                                      Código: 11083-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                             Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+
+8.2 Disposiciones generales y transitorias
+N/A
+
+
+8.3 Historial
+       Estado                      № Revisión                    Fecha Aprobación                                                                   Observaciones
+
+ Original                         0.0                            Ver fecha en pie de
+                                                                 firmas.
+
+
+8.4 Aprobación colegiada
+N/A
+
+
+8.5 Categoría de Clasificación del Activo de Información
+YPF - Privada: información disponible para los empleados de la compañía y terceros (ej. contratistas) como parte de
+la rutina del negocio. Su difusión se hace en base al conocimiento para poder operar. Su difusión no autorizada
+podría afectar la consecución de objetivos particulares de determinadas áreas de la compañía.
+
+
+
+
+                                                                                                           BODEGA, EDUARDO                                                                             15/02/2017
+      GALANTERNIK, NICOLAS                                  VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                              GUILLERMO                                                                               06:26:00 p.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   11 / 11
+

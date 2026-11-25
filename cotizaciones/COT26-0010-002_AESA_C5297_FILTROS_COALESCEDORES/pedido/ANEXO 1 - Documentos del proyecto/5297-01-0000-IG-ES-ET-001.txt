@@ -1,0 +1,2542 @@
+                        Proyecto:                              Código YPF:
+
+                                                               LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                          003001-E0
+                           Planta de Tratamiento de Crudo-02
+                                          LANor                Código Contratista
+
+                                                                    5297-01-0000-IG-ES-ET-001
+
+                        Fase:                                        Fecha de emisión:      01/10/2026
+
+                                      EJECUCIÓN                                 Página:         1 de 53
+
+
+
+
+                             VCD26288-E-001
+                              PTC-02 LANor
+                         ESPECIFICACIÓN TÉCNICA
+                         ESTRUCTURAS METÁLICAS
+
+
+
+
+  E0       01/10/2026               EMISIÓN PARA INFORMACIÓN              LCG             IMP        JCC
+
+REVISIÓN    FECHA                         DESCRIPCIÓN                  PREPARÓ      REVISÓ        APROBÓ
+                                      Proyecto:                                                        Código YPF:
+
+                                                                                                        LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                                                   003001-E0
+                                           Planta de Tratamiento de Crudo-02
+                                                          LANor                                        Código Contratista
+
+                                                                                                              5297-01-0000-IG-ES-ET-001
+
+                                      Fase:                                                                    Fecha de emisión:        01/10/2026
+
+                                                            EJECUCIÓN                                                       Página:          2 de 53
+
+
+                                                                           INDICE
+
+1.     OBJETO ........................................................................................................................ 6
+
+2.     ALCANCE ...................................................................................................................... 6
+
+3.     CONFLICTOS Y DESVIACIONES ................................................................................. 7
+
+4.     IDIOMA .......................................................................................................................... 7
+
+5.     DOCUMENTACIÓN ....................................................................................................... 7
+     5.1 DOCUMENTACIÓN DE REFERENCIA ................................................................... 7
+     5.2 REGLAMENTACIÓN Y NORMAS DE DISEÑO....................................................... 8
+     5.3 REGLAMENTACIÓN Y NORMAS DE REFERENCIA ........................................... 10
+     5.4 ESPECIFICACIONES DE YPF .............................................................................. 12
+
+PARTE A - DISEÑO Y DIMENSIONADO ............................................................................ 13
+
+6.     ESTRUCTURAS METÁLICAS ..................................................................................... 14
+     6.1 DISEÑO DE ESTRUCTURAS MODULARES ........................................................ 14
+
+7.     CRITERIOS GENERALES DE DISEÑO ...................................................................... 15
+     7.1 REGLAMENTACIÓN UTILIZADA .......................................................................... 15
+     7.2 UNIDADES DE MEDIDA ....................................................................................... 16
+     7.3 DATOS DEL EMPLAZAMIENTO ........................................................................... 16
+     7.3.1 DATOS CLIMÁTICOS ........................................................................................... 16
+     7.3.2 DATOS DEL TERRENO ........................................................................................ 16
+     7.4 PARAMETROS DE LOS MATERIALES ................................................................ 16
+     7.5 CARGAS Y COMBINACIONES ............................................................................. 17
+     7.5.1 ACCIONES GRAVITATORIAS .............................................................................. 17
+     7.5.1.1 PESO PROPIO DE LA ESTRUCTURA (DS) .................................................... 17
+     7.5.1.2 PESO DE REJILLAS, BARANDAS Y ESCALERAS ......................................... 18
+     7.5.1.3 PESO IGNIFUGADO ........................................................................................ 18
+     7.5.1.4 PESO DE AISLACIÓN EN EQUIPOS Y CAÑERÍAS ........................................ 18
+     7.5.1.5 PESO DE BANDEJAS ELÉCTRICAS .............................................................. 18
+     7.5.2 CARGAS DE VIENTO (W) .................................................................................... 19
+     7.5.3 CARGAS DE SISMO (E) ....................................................................................... 19
+     7.5.4 CARGAS DE NIEVE (S) ........................................................................................ 20
+     7.5.5 SOBRECARGA DE USO, MANTENIMIENTO Y OPERACIÓN (L) ........................ 20
+     7.5.6 SOBRECARGA DE CUBIERTA (Lr) ...................................................................... 21
+     7.5.7 CARGAS TÉRMICAS O FRICCIÓN ...................................................................... 21
+     7.5.8 CARGAS DE ANCLAJES (AF) .............................................................................. 21
+                                    Proyecto:                                                    Código YPF:
+
+                                                                                                  LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                                             003001-E0
+                                         Planta de Tratamiento de Crudo-02
+                                                        LANor                                    Código Contratista
+
+                                                                                                        5297-01-0000-IG-ES-ET-001
+
+                                    Fase:                                                               Fecha de emisión:       01/10/2026
+
+                                                         EJECUCIÓN                                                   Página:         3 de 53
+
+
+     7.5.9 CARGAS ESPECIALES (PSV) .............................................................................. 21
+     7.5.10 CARGAS MÍNIMAS PARA RACKS DE CAÑERÍAS ......................................... 21
+     7.5.11 COMBINACIONES DE CARGA EN ESTADO DE SERVICIO .......................... 22
+     7.5.12 COMBINACIONES DE CARGA EN ESTADO ULTIMO .................................... 23
+     7.6 MODELO ESTRUCTURAL.................................................................................... 23
+     7.7 SOFTWARE UTILIZADO EN EL PROYECTO....................................................... 23
+     7.8 DEFORMACIONES ADMISIBLES......................................................................... 24
+     7.8.1 DEFORMACIONES VERTICALES ........................................................................ 24
+     7.8.2 DEFORMACIONES HORIZONTALES .................................................................. 25
+     7.9 UNIONES .............................................................................................................. 26
+     7.9.1 UNIONES ABULONADAS ..................................................................................... 26
+     7.9.2 UNIONES SOLDADAS.......................................................................................... 27
+
+8.     CONSIDERACIONES PARTICULARES DE DISEÑO ................................................. 27
+     8.1 JUNTAS DE DILATACIÓN (JD) ............................................................................ 27
+     8.2 PERNOS DE ANCLAJE Y EMBEBIDOS – PLACAS BASE ................................... 27
+     8.3 PUESTA A TIERRA............................................................................................... 30
+
+PARTE B - MATERIALES .................................................................................................. 31
+
+9.     PERFILES Y CHAPAS DE ACERO ............................................................................. 32
+
+10. BULONERÍA ................................................................................................................ 33
+   10.1 BULONES DE ALTA RESISTENCIA ..................................................................... 33
+   10.2 BULONES COMUNES .......................................................................................... 34
+   10.3 BULONES PARA ANCLAJES DE ESTRUCTURA ................................................ 35
+   10.4 TORNILLOS AUTOPERFORANTES PARA COLOCACIÓN DE CHAPAS EN CUBIERTAS Y
+   REVESTIMIENTOS ........................................................................................................ 35
+
+11. RESISTENCIA A LA CORROSIÓN ............................................................................. 35
+
+12. SOLDADURAS ............................................................................................................ 36
+
+13. CHAPAS ESTRIADAS (SEMILLA DE MELÓN Y ESTAMPADAS) ............................. 36
+
+14. REJILLAS DE ACERO GALVANIZADO ..................................................................... 37
+
+15. BARANDAS ................................................................................................................. 38
+
+16. ESCALERAS ............................................................................................................... 38
+                                   Proyecto:                                                    Código YPF:
+
+                                                                                                 LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                                            003001-E0
+                                        Planta de Tratamiento de Crudo-02
+                                                       LANor                                    Código Contratista
+
+                                                                                                       5297-01-0000-IG-ES-ET-001
+
+                                   Fase:                                                               Fecha de emisión:       01/10/2026
+
+                                                        EJECUCIÓN                                                   Página:         4 de 53
+
+
+17. PLATAFORMAS Y PASARELAS ................................................................................ 39
+
+18. IGNIFUGADO .............................................................................................................. 39
+
+19. ELEMENTOS DE CUBIERTA Y CERRAMIENTOS ..................................................... 39
+   19.1 FIJACIONES ......................................................................................................... 40
+   19.2 SELLADORES ...................................................................................................... 40
+
+20. AISLACIÓN TERMICA EN GALPONES ...................................................................... 40
+
+21. CARPINTERÍAS .......................................................................................................... 40
+
+21.1 PUERTAS EXTERIORES ............................................................................................ 41
+
+21.2 PORTONES DE ACCESO ........................................................................................... 41
+
+22. MURO PERIMETRAL EN GALPONES ........................................................................ 41
+
+23. CERRAMIENTO PERIMETRAL EN TINGLADOS ....................................................... 41
+
+PARTE C – FABRICACION, PREARMADO, TRANSPORTE Y MONTAJE ....................... 42
+
+24. FABRICACIÓN DE ESTRUCTURAS DE ACERO ....................................................... 43
+   24.1 GENERALIDADES ................................................................................................ 43
+   24.2 ENDEREZADO ..................................................................................................... 43
+   24.3 TRAZADO ............................................................................................................. 43
+   24.4 CORTES ............................................................................................................... 44
+   24.5 EJECUCIÓN DE AGUJEROS ............................................................................... 44
+   24.6 BISELADOS .......................................................................................................... 45
+   24.7 TRABAJABILIDAD ................................................................................................ 45
+
+25. INSPECCIÓN, ENSAYOS, RECHAZOS, RECEPCIÓN ............................................... 45
+   25.1 REVISIÓN DE MATERIALES Y PRUEBAS ........................................................... 47
+
+26. TRANSPORTE Y MONTAJE ....................................................................................... 47
+   26.1 MARCAS ............................................................................................................... 47
+   26.2 EMBALAJE ........................................................................................................... 48
+   26.3 TRANSPORTE ...................................................................................................... 49
+   26.4 ALMACENAMIENTO – ACOPIO DE MATERIALES .............................................. 49
+                                    Proyecto:                                                     Código YPF:
+
+                                                                                                   LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                                              003001-E0
+                                        Planta de Tratamiento de Crudo-02
+                                                       LANor                                      Código Contratista
+
+                                                                                                         5297-01-0000-IG-ES-ET-001
+
+                                    Fase:                                                                Fecha de emisión:       01/10/2026
+
+                                                         EJECUCIÓN                                                    Página:         5 de 53
+
+
+27. MONTAJE .................................................................................................................... 49
+   27.1 GENERALIDADES ................................................................................................ 49
+   27.2 ARMADO .............................................................................................................. 50
+
+28. PROTECCIÓN ANTICORROSIVA ............................................................................... 51
+   28.1 GALVANIZADO ..................................................................................................... 51
+
+29. REPLANTEO ............................................................................................................... 52
+
+30. PUESTA A TIERRA ..................................................................................................... 52
+
+31. PRESTACIONES REQUERIDAS PARA LA CUBIERTA Y CERRAMIENTOS LATERALES                                                                           52
+   31.1 ASEGURAMIENTO DE CALIDAD ......................................................................... 52
+   31.1.1 RECURSOS ..................................................................................................... 52
+   31.1.2 CALIFICACIONES DE LOS FABRICANTES .................................................... 52
+   31.1.3 ACEPTACION O RECHAZO ............................................................................ 52
+                       Proyecto:                                   Código YPF:
+
+                                                                    LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                               003001-E0
+                          Planta de Tratamiento de Crudo-02
+                                         LANor                     Código Contratista
+
+                                                                        5297-01-0000-IG-ES-ET-001
+
+                       Fase:                                             Fecha de emisión:   01/10/2026
+
+                                      EJECUCIÓN                                    Página:     6 de 53
+
+
+1.   OBJETO
+
+     El presente documento tiene por objeto especificar criterios particulares para el diseño y ejecución
+     de las obras de ESTRUCTURAS METÁLICAS que formarán parte del proyecto “Planta de
+     Tratamiento de Crudo-02 LANor” perteneciente a la Compañía YPF, a desarrollarse en la provincia
+     de Neuquén, República Argentina.
+
+2.   ALCANCE
+
+     Las premisas y criterios de diseño incluidos en este documento serán una guía de aplicación para el
+     proyecto, cálculo, diseño y construcción de las estructuras metálicas, Galpones y Tinglados,
+     relacionadas con las nuevas instalaciones del proyecto. Los diseños realizados deberán cumplir con
+     lo siguiente:
+
+     •   El diseño de las Estructuras deberá prever las condiciones adecuadas para los requerimientos
+         de cargas, esfuerzos, deflexión, rigidez y resistencia.
+     •   El diseño deberá considerar los efectos más extremos de todas las cargas estáticas, cargas
+         dinámicas, condiciones atmosféricas, sismo, etc.
+     •   El diseño debe ser funcional, práctico, económico y seguro.
+     •   Todo diseño deberá ejecutarse teniendo en cuenta la seguridad, protección al personal actuante
+         y medio ambiente.
+
+     Incluyen además los siguientes rubros:
+
+     •   Cubiertas y cerramientos de chapa.
+     •   Babetas, zinguería y sellados.
+     •   Pases y adaptaciones de chapas de cubierta y cerramiento para pases de instalaciones, equipos,
+         estructuras y/u otros elementos.
+     •   Aislaciones y canaletas donde figuren en planos y especificaciones.
+     Se incluyen las estructuras secundarias necesarias para la sujeción de carpinterías, canaletas,
+     cenefas, fachadas, aleros, paneles, etc.
+     Las babetas, cumbreras y “zinguerías” de chapa aluminizada, las bandas selladoras y sellados serán
+     los necesarios para que la cubierta y los cerramientos, y su aislación, quede terminadas en un todo
+     de acuerdo con las definiciones técnicas y estéticas según se indique en los planos, en esta
+     Especificación y el resto de la documentación que lo acompaña. Las cubiertas y cerramiento deberán
+     ser estancas a la lluvia.
+     Quedan excluidos de esta Especificación Técnica todos los trabajos de Instalaciones, como ser:
+
+         •   Instalaciones Eléctricas de Fuerza Motriz
+         •   Instalaciones Eléctricas de Iluminación
+         •   Instalaciones de Sistema contra Incendio (Sistemas de detección, Protección Pasiva y
+             Extinción)
+         •   Instalaciones de Puentes Grúas y su correspondiente Fuerza Motriz
+                        Proyecto:                                    Código YPF:
+
+                                                                     LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                003001-E0
+                           Planta de Tratamiento de Crudo-02
+                                          LANor                      Código Contratista
+
+                                                                          5297-01-0000-IG-ES-ET-001
+
+                        Fase:                                              Fecha de emisión:   01/10/2026
+
+                                       EJECUCIÓN                                     Página:     7 de 53
+
+
+3.    CONFLICTOS Y DESVIACIONES
+
+      Cuando estas especificaciones difieran de las memorias de cálculo y/o planos, en casos particulares
+      estos últimos son mandatorios.
+
+
+
+4.    IDIOMA
+
+      Todos los planos, hojas de cálculo y documentos deberán ser escritos en español. Podrá utilizarse
+      idioma inglés en los datos de input y en la salida del programa dependiendo del software utilizado.
+
+
+
+5.    DOCUMENTACIÓN
+
+5.1   DOCUMENTACIÓN DE REFERENCIA
+
+         LANor-PTCLANOR02-VCD26288-R-BD-003001         Bases de Diseño
+
+         LANor-PTCLANOR02-VCD26288-C-IF-003001         Informe técnico - Estudio de Suelos
+
+         LANor-PTCLANOR02-VCD26288-C-ET-003003         Especificación técnica – Hormigón armado
+
+         LANor-PTCLANOR02-VCD26288-C-TI-003003         Plano típico - Bulones de anclaje
+
+                                                       Plano típico - Detalles de escaleras y
+         LANor-PTCLANOR02-VCD26288-S-TI-003001
+                                                       plataformas
+
+         LANor-PTCLANOR02-VCD26288-S-TI-003002         Plano típico Ignifugado
+
+         LANor-PTCLANOR02-VCD26288-C-TI-003004         Plano Típico - Notas generales
+                          Proyecto:                                         Código YPF:
+
+                                                                            LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                       003001-E0
+                              Planta de Tratamiento de Crudo-02
+                                             LANor                          Código Contratista
+
+                                                                                 5297-01-0000-IG-ES-ET-001
+
+                          Fase:                                                   Fecha de emisión:   01/10/2026
+
+                                          EJECUCIÓN                                         Página:      8 de 53
+
+
+5.2   REGLAMENTACIÓN Y NORMAS DE DISEÑO
+
+      Normas/reglamentos que regirán el diseño y ejecución:
+                                                                                                  Fecha de
+         CIRSOC                              Título del documento
+                                                                                                 publicación
+            301           “Reglamento Argentino de Estructuras de Acero para Edificios”            2018
+
+
+      En adelante, cuando se referencien artículos (abreviatura “Art.”) o al “Reglamento”, serán en general
+      referidos a este reglamento CIRSOC 301:2018, salvo indicación en contrario.
+                                                                                                  Fecha de
+         CIRSOC                              Título del documento
+                                                                                                 publicación
+                                 “Reglamento Argentino de Cargas Permanentes y
+            101               Sobrecargas Mínimas de Diseño para Edificios y otras                2025
+                                                     Estructuras”.
+                               “Reglamento Argentino de Acción del Viento sobre las               2025
+            102
+                                                  Construcciones”.
+            103.                   “Normas Argentinas para las Construcciones                     2018
+           Tomo I                 Sismorresistentes. Construcciones en General”,
+            103.                    “Reglamento Argentino para Construcciones                     2005
+          Tomo IV                  Sismorresistentes. Construcciones de Acero”,
+                          “Reglamento Argentino de Acción de la Nieve y del Hielo sobre           2005
+            104
+                                                las Construcciones”.
+                               “Reglamento Argentino de Cargas de Diseño para las                 2007
+            108
+                                       Estructuras durante su Construcción”.
+                           “Reglamento Argentino de Elementos Estructurales de Tubos              2005
+            302
+                                             de Acero para Edificios”.
+                           “Reglamento Argentino de Elementos Estructurales de Acero              2009
+            303
+                                     de Sección Abierta Conformados en Frío”.
+                            “Reglamento Argentino para la Soldadura de Estructuras de             2007
+            304
+                                                       Acero”.
+                            “Recomendación para Uniones estructurales con Bulones de              2007
+            305
+                                                  Alta Resistencia”.
+
+
+      Serán de aplicación la totalidad de normas IRAM indicadas en el Art.A.3 del CIRSOC 301:2018. Se
+      transcriben a continuación algunos nombres de normas IRAM, de particular interés:
+                  Norma                                   Título del documento
+
+       IRAM-IAS U 500-96          “Soldadura. Calificación de Soldadores”
+
+                                  “Ente Habilitante y Entes de Calificación y Certificación de Soldadores
+       IRAM-IAS U 500-138
+                                  y Operadores de Soldadura”
+
+                                  “Soldadura-Alambres y Varillas de Acero al Carbono para Procesos de
+       IRAM-IAS U 500-166
+                                  Soldadura por Arco Eléctrico con Protección Gaseosa (AWS A5.18)”
+                Proyecto:                                         Código YPF:
+
+                                                                  LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                             003001-E0
+                     Planta de Tratamiento de Crudo-02
+                                    LANor                         Código Contratista
+
+                                                                       5297-01-0000-IG-ES-ET-001
+
+                Fase:                                                   Fecha de emisión:   01/10/2026
+
+                                 EJECUCIÓN                                        Página:     9 de 53
+
+
+                         “Soldadura por Arco. Electrodos de Acero al Carbono, Revestidos
+IRAM-IAS U 500-601
+                         (AWS A5.1)”
+
+IRAM-IAS U 500-42        “Chapas de Acero al Carbono para Uso Estructural”
+
+                         “Flejes de Acero al Carbono, Laminados en Caliente para Uso General
+IRAM-IAS U 500-180
+                         y Estructural”.
+                         “Perfiles Doble T de Acero, de Alas Anchas, Caras Paralelas,
+IRAM-IAS U 500-215
+                         Laminados en Caliente”
+
+IRAM-IAS U 500-218       “Tubos de Acero al Carbono sin Costura para Uso Estructural”
+
+IRAM-IAS U 500-219       “Tubos de Acero Microaleado con y sin Costura para Uso Estructural”
+
+IRAM-IAS U 500-503       “Aceros al Carbono para Uso Estructural”
+
+
+IRAM-IAS U 500-509       “Perfiles U de Acero, de Alas Inclinadas Laminados en Caliente”
+
+
+IRAM-IAS U 500-511       “Perfiles Doble T de Acero, de Alas Inclinadas Laminados en Caliente”
+
+
+IRAM-IAS U 500-558       “Perfiles Ángulo de Acero, de Alas Iguales Laminados en Caliente”
+
+
+IRAM-IAS U500-2592       “Tubos de Acero al Carbono con Costura para Uso Estructural”
+
+                         “Alambres y Barras Macizas de Acero Laminados en Caliente para la
+IRAM-IAS U 500-85        Fabricación de Bulones, Tornillos, Espárragos, Roblones y Tuercas,
+                         Conformados en Caliente o en Frío”
+
+IRAM-IAS U 500-503       “Aceros al Carbono de Uso Estructural”
+
+                         “Alambres y Barras Macizas de Acero Trefilados para la Fabricación de
+IRAM-IAS U 500-512       Bulones, Tornillos, Espárragos, Roblones y Tuercas Conformados en
+                         Caliente o en Frío.
+
+IRAM-IAS U500-601        “Soldadura por arco. Electrodos de acero al carbono revestidos”
+
+
+IRAM-IAS U500-127        “Soldadura por Arco. Electrodos de Baja Aleación Revestidos”
+
+                         “Soldadura. Alambres y Varillas de Acero al Carbono para Procesos de
+IRAM-IAS U500-166
+                         Soldadura Eléctrica con Protección Gaseosa”.
+                         Proyecto:                                            Código YPF:
+
+                                                                               LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                          003001-E0
+                            Planta de Tratamiento de Crudo-02
+                                           LANor                              Código Contratista
+
+                                                                                   5297-01-0000-IG-ES-ET-001
+
+                         Fase:                                                         Fecha de emisión:   01/10/2026
+
+                                            EJECUCIÓN                                            Página:     10 de 53
+
+
+      No serán permitidos desvíos al CIRSOC y AISC 360, salvo autorización expresa de la Dirección de
+      Obra.
+
+5.3   REGLAMENTACIÓN Y NORMAS DE REFERENCIA
+
+      Normas/recomendaciones/bibliografía útil de referencia para el diseño y ejecución. La siguiente
+      documentación será utilizada como referencia o consulta, en especial para casos no cubiertos o
+      superados en la reglamentación de diseño indicada.
+
+
+               Norma                                            Título del documento
+
+           ANSI/AISC 360             “Specification for Structural Steel Buildings”.
+
+
+              AISC 303               “Code of Standard Practice for Steel Buildings and Bridges”.
+
+                                     “Minimum Design Loads for Buildings and Other Structures”.
+              ASCE 7
+                                     Versión 2010 para combinaciones de estados de carga.
+
+             AWS A2.4                “Symbols for Welding and nondestructive testing”
+
+
+          AWS D1.1/D1.1M             “Structural Welding Code - Steel”
+
+
+                IBC                  “International Building Code”
+
+
+               RCSC                  “Specification for Structural Joints Using High-Strength Bolts”.
+
+                                     North American Specification for the Design of Cold-Formed Steel
+            AISI S100-16
+                                     Structural Members
+
+              ASCE 37                Design Loads During Construction
+
+                                     AISC STEEL CONSTRUCTION MANUAL y COMPANION Design
+                AISC
+                                     Examples
+
+                AISC                 Design Guides
+
+
+           PIP STC01015              Structural Design Criteria versión 2017
+                 Proyecto:                                          Código YPF:
+
+                                                                     LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                003001-E0
+                    Planta de Tratamiento de Crudo-02
+                                   LANor                            Código Contratista
+
+                                                                          5297-01-0000-IG-ES-ET-001
+
+                 Fase:                                                    Fecha de emisión:     01/10/2026
+
+                                   EJECUCIÓN                                         Página:      11 de 53
+
+
+
+ASCE (Report, 2011)          Wind Loads for Petrochemical and Other Industrial Facilities
+
+                             “Standard Specification for Carbon           Steel   Bolts   and     Studs,
+  ASTM A307-21
+                                60.000PSI Tensile Strength”.
+
+ASTM A36/A36M-19             “Standard Specification for Carbon Structural Steel”.
+
+                             “Standard Specification for Pipe, Steel, Black and Hot-Dipped, Zinc-
+ASTM A53/A53M-07
+                                Coated, Welded and Seamless”.
+
+  ASTM A563-07a              “Standard Specification for Carbon and Alloy Steel Nuts”.
+
+ASTM A194/A194M-             “Standard Specification for Carbon and Alloy Steel Nuts for Bolts for High
+      08a                       Pressure or High Temperature Service, or Both”.
+
+  ASTM F436-07ª              “Standard Specification for Hardened Steel Washers”.
+
+                             “Standard Specification for Zinc Coating (Hot Dip) or Iron and Steel
+ASTM A153/A153M
+                                Hardware”.
+
+                             “Standard Specification for Zinc (Hot-Dip Galvanized) Coatings on Iron
+ASTM A123/A123M
+                                and Steel Products”
+
+                             “Standard Specification for Permanent Metal Railing Systems and Rails
+    ASTM E985
+                                for Buildings”.
+
+    ASTM F844                “Washers, Steel, Plain (Flat), Unhardened for General Use”.
+
+                             Standard Specification for Anchor Bolts, Steel, 36, 55, and 105-ksi Yield
+  ASTM F1554-20
+                                Strength
+
+    ACI 318-19               Capítulo 17 (predomina sobre el siguiente)
+
+ASCE -2nd Edition -
+                             Anchorage Design for Petrochemical and Other Industrial Facilities
+      2022
+
+ASME B30.20-2013
+                             Below the hook lifting devices
+
+
+ASME-BTH-1-2017              Design of below the hook lifting devices
+                         Proyecto:                                         Código YPF:
+
+                                                                           LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                      003001-E0
+                                Planta de Tratamiento de Crudo-02
+                                               LANor                       Código Contratista
+
+                                                                                5297-01-0000-IG-ES-ET-001
+
+                         Fase:                                                   Fecha de emisión:   01/10/2026
+
+                                           EJECUCIÓN                                       Página:     12 de 53
+
+
+           Decreto 911/96
+            HIGIENE Y
+                                     Reglamento para la industria de la Construcción.
+         SEGURIDAD EN EL
+             TRABAJO
+         Caltrans (California
+                                     Falsework Manual
+          Transportation)
+
+
+
+5.4   ESPECIFICACIONES DE YPF
+
+                Especificación                                    Título del documento
+                    M-02.00                    Carga para Diseño de Estructuras
+                    M-01.00                    Estructuras de Acero
+                     B-06.00                   Protección Anticorrosiva con Recubrimientos
+                ED(EP)-K-12-.00                Equipos de Aire Acondicionado y Ventilación
+                ED(EP)-B-01.00                 Transporte
+                ED(EP)-B-06.00                 Pinturas
+               511-NO032-LG.AR                 Instalaciones fijas de prevención contra incendio
+                ED(EP)-P-01.00                 Instalaciones eléctricas
+                ED(EP)-N-02.00                 Protección Pasiva contra fuego
+                ED(EP)-M-0200                  Carga para Diseño de Estructuras
+                  ED(EP)-M-01                  Estructuras de Acero
+       11214-ES-21030700-110A – P0104          Sistema de Protección Contra Descargas Atmosféricas
+
+
+      Todos los desvíos a esta especificación que deban aplicarse en el proyecto, en su mayoría
+      asociados a discrepancias entre estos estándares y la normativa de aplicación local e
+      internacional (por ej.: CIRSOC, ASCE, ACI, IRAM, etc.) serán expresamente denunciados
+      en los documentos específicos para consideración de YPF.
+Proyecto:                              Código YPF:
+
+                                       LANor-PTCLANOR02-VCD26288-S-ET-
+                                                  003001-E0
+   Planta de Tratamiento de Crudo-02
+                  LANor                Código Contratista
+
+                                            5297-01-0000-IG-ES-ET-001
+
+Fase:                                        Fecha de emisión:   01/10/2026
+
+             EJECUCIÓN                                 Página:     13 de 53
+
+
+
+
+   PARTE A - DISEÑO Y DIMENSIONADO
+                        Proyecto:                                   Código YPF:
+
+                                                                     LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                003001-E0
+                           Planta de Tratamiento de Crudo-02
+                                          LANor                     Código Contratista
+
+                                                                         5297-01-0000-IG-ES-ET-001
+
+                        Fase:                                             Fecha de emisión:   01/10/2026
+
+                                       EJECUCIÓN                                    Página:     14 de 53
+
+
+6.    ESTRUCTURAS METÁLICAS
+
+      El proyecto de las estructuras metálicas deberá cumplir con lo siguiente:
+
+         •   El diseño de las estructuras deberá prever las condiciones adecuadas para los requerimientos
+             de cargas, esfuerzos, deflexión, rigidez y resistencia.
+         •   El diseño deberá considerar los efectos más extremos de todas las combinaciones de cargas
+             estáticas, cargas dinámicas, condiciones atmosféricas, sismo, etc.
+         •   El diseño debe ser seguro, funcional, práctico y económico.
+         •   Todo diseño deberá ejecutarse teniendo en cuenta la seguridad, protección al personal
+             actuante y medio ambiente.
+         •   Se cuidará el diseño de sus detalles, uniones y accesorios con el fin de facilitar el acceso
+             para mantenimiento y repintado de cada elemento y evitar las acumulaciones de agua y
+             humedad.
+         •   Serán de aplicación las directivas de diseño prescriptas en las normas y reglamentos
+             CIRSOC y especialmente CIRSOC 301 y lo indicado en la presente.
+
+6.1   DISEÑO DE ESTRUCTURAS MODULARES
+
+      En el diseño de estructuras metálicas, en la medida de lo posible se diseñarán estructuras tipo
+      modulares que se prefabriquen en taller.
+      Las estructuras modulares serán verificadas para transporte e izaje, por lo menos el módulo más
+      solicitado de un mismo tipo.
+      Para el izaje se considera que se izará la estructura junto con el equipo, con perchas rectas con
+      ángulos de eslinga de 60° con respecto a la horizontal (mínimo), y un ángulo de 5° en sentido
+      transversal hacia afuera (máximo).
+      Las orejas de izaje se colocarán preferentemente alineadas con las vigas de apoyo del equipo.
+      Cargas de Frenado (Dx) / Ladeo (Dz) de acuerdo con EN12195-1 “Sujeción de Cargas Vehículos en
+      Carretera – Calculo de las Fuerzas de Fijación”
+                       Proyecto:                                 Código YPF:
+
+                                                                  LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                             003001-E0
+                          Planta de Tratamiento de Crudo-02
+                                         LANor                   Código Contratista
+
+                                                                      5297-01-0000-IG-ES-ET-001
+
+                       Fase:                                           Fecha de emisión:   01/10/2026
+
+                                      EJECUCIÓN                                  Página:     15 de 53
+
+
+
+
+      Según el Reglamento CIRSOC 108 - Capítulo 6, para estados de carga transitorios la velocidad de
+      viento de diseño puede ser afectada por el siguiente coeficiente de minoración:
+
+
+
+
+      Las deformaciones en estos estados se limitan a que no haya deformaciones permanentes y para el
+      transporte que la deformación horizontal sea menor H/100 desde el punto de apoyo (de acuerdo con
+      AISC 360-16).
+
+7.    CRITERIOS GENERALES DE DISEÑO
+
+7.1   REGLAMENTACIÓN UTILIZADA
+
+      Las estructuras se dimensionarán siguiendo la documentación indicada en el Punto 5.2 y
+      complementariamente la citada en el Punto 5.3 y 5.4 de esta especificación.
+                               Proyecto:                                                Código YPF:
+
+                                                                                         LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                                    003001-E0
+                                   Planta de Tratamiento de Crudo-02
+                                                  LANor                                 Código Contratista
+
+                                                                                              5297-01-0000-IG-ES-ET-001
+
+                               Fase:                                                           Fecha de emisión:    01/10/2026
+
+                                                   EJECUCIÓN                                              Página:     16 de 53
+
+
+7.2     UNIDADES DE MEDIDA
+
+        El sistema de unidades empleado en todos los cálculos y planos será el Sistema de Medidas
+        Internacional (SI), excepto que en cumplimiento con el Código o Reglamento a aplicar o en las
+        Especificaciones, Hojas de Datos o Planos Estándar o por el uso de un programa específico de
+        cálculo se requiera el empleo de otro sistema de unidades.
+
+7.3     DATOS DEL EMPLAZAMIENTO
+
+7.3.1   DATOS CLIMÁTICOS
+
+        Para los cálculos y el diseño, se considerarán los datos climáticos declarados en las Bases de Diseño
+        (LANor-PTCLANOR02-VCD26288-R-BD-003001).
+
+7.3.2   DATOS DEL TERRENO
+
+        El diseño de fundaciones y estructuras apoyadas contra el terreno, considerarán los datos y
+        recomendaciones indicados según el informe geotécnico (LANor-PTCLANOR02-VCD26288-C-IF-
+        003001- Informe Técnico - Estudio de Suelos y anexos).
+
+7.4     PARAMETROS DE LOS MATERIALES
+
+        Los diseños se dimensionarán utilizando los materiales indicados en la parte B- Materiales de la
+        presente especificación.
+        Para las verificaciones de cálculo de campo deberán utilizarse las características de los materiales
+        efectivamente empleados en la construcción, pudiendo tomar valores superiores a los de diseño con
+        el debido respaldo.
+        Las características del acero serán:
+           • Peso específico.......................................................................... 78.5 kN/m3
+            •    Módulo de elasticidad...................................................... E= 200000 MPa
+            •    Módulo de elasticidad transversal..................................... G= 77200 MPa
+            •    Coeficiente elástico de Poisson....................................................... ν=0.3
+            •    Coeficiente de dilatación térmica.................................... αT=1.2·10-5 ºC-1
+        Cuando se combinen estructuras metálicas con Hormigón el mismo se deberá tener en cuenta con
+        las secciones fisuradas de acuerdo con CIRSOC 201 (por ejemplo, disminuyendo el módulo de
+        Elasticidad). Asimismo, se deberá considerar que el Hormigón que no tenga armadura específica
+        para torsión no toma dicha solicitación (por ejemplo, mediante G muy bajo).
+                          Proyecto:                                       Código YPF:
+
+                                                                           LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                      003001-E0
+                                Planta de Tratamiento de Crudo-02
+                                               LANor                      Código Contratista
+
+                                                                                   5297-01-0000-IG-ES-ET-001
+
+                          Fase:                                                    Fecha de emisión:   01/10/2026
+
+                                          EJECUCIÓN                                          Página:     17 de 53
+
+
+7.5     CARGAS Y COMBINACIONES
+
+        A continuación, se detalla la nomenclatura a emplear en las combinaciones de carga:
+
+                     DESIGNACION                         DESCRIPCION
+                           Ds                             Carga muerta
+                           Do                            Peso operativo
+                            Dt                           Peso en prueba
+                           De                             Peso en vacío
+                            L                               Carga viva
+                            W                       Carga de viento (máximo)
+                           Wp                      Carga de viento (transitorio)
+                           Eo                     Carga de sismo en operación
+                           Ee                       Carga de sismo en vacío
+                            S                            Carga de nieve
+                            Ft                    Cargas de fricción de cañerías
+                           Af           Cargas de anclajes de cañerias (punto fijo o guías)
+                           Bp                          Extracción de Mazo
+                           PSV                      Carga por disparo de PSV
+                            T                   Cargas por temperatura ambiental
+
+           •   Ft surge del análisis de cargas realizado por Piping. En caso de no existir dicho análisis se
+               considera la fricción como “m x la carga vertical” (35% en el caso de la fricción acero-acero).
+           •   Ft actúa siempre junto con Do y debe combinarse con Do con sentidos inversos, sumándose
+               y restándose alternativamente (+ y -).
+
+7.5.1   ACCIONES GRAVITATORIAS
+
+        Para la consideración de las acciones gravitatorias se adoptarán las que se fijan en el Reglamento
+        CIRSOC 101 (2025).
+
+7.5.1.1 PESO PROPIO DE LA ESTRUCTURA (DS)
+
+        El peso propio de las estructuras (Ds) incluye todas las instalaciones permanentes a las estructuras
+        (plataformas o gratings, barandas y escaleras, iluminación, instrumentación, conductos de HVAC,
+        rociadores, aislación, ignifugado, etc.). Los mismos se obtendrán de acuerdo con sus densidades
+        características conocidas y/o según normativa CIRSOC 101:2025 “Cargas y sobrecargas
+        gravitatorias para el cálculo de estructuras de edificios”
+                       Proyecto:                                           Código YPF:
+
+                                                                            LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                       003001-E0
+                           Planta de Tratamiento de Crudo-02
+                                          LANor                            Código Contratista
+
+                                                                                5297-01-0000-IG-ES-ET-001
+
+                       Fase:                                                     Fecha de emisión:   01/10/2026
+
+                                          EJECUCIÓN                                        Página:     18 de 53
+
+
+7.5.1.2 PESO DE REJILLAS, BARANDAS Y ESCALERAS
+
+     Estos pesos se incluirán dentro del peso de las estructuras (Ds) y salvo casos particulares,
+     se tomarán los siguientes valores de referencia:
+
+                                            Material                             Peso propio
+
+                  Escaleras marineras                                              0,5 kN/m
+
+                  Barandas                                                         0,2 kN/m
+
+                  Rejilla galvanizada tipo 30x30 – 30/32x2.5/3/3.2 - 15x2mm       0,35 kN/m2
+
+7.5.1.3 PESO IGNIFUGADO
+
+     Las cargas gravitatorias debidas al ignifugado de estructuras se tendrán en cuenta dentro del peso
+     de las estructuras (Ds) y se evaluarán según el material de protección a emplear, el espesor según
+     la resistencia al fuego requerida y la porción protegida de estructura. Se aplicará el peso específico
+     del material a emplear. Ante la falta de datos precisos, se utilizarán los siguientes valores de
+     referencia:
+                                            Material                 Peso propio
+
+                               Ignifugado con pintura intumescente     0 kN/m2
+
+                               Ignifugado con mortero alivianado       9 kN/m3
+
+                               Ignifugado con hormigón simple         24 kN/m3
+
+7.5.1.4 PESO DE AISLACIÓN EN EQUIPOS Y CAÑERÍAS
+
+     Tanto para el peso de los equipos como de las cañerías mayores o iguales a 12”, deberán
+     contemplarse los pesos correspondientes a aislaciones y/o traceadores, teniendo en
+     cuenta los siguientes parámetros de referencia:
+
+                                            Material          Peso propio
+
+                                      Aislación de equipos    0.12 kN/m2
+
+                                      Aislación de cañerías   0.10 kN/m2
+
+7.5.1.5 PESO DE BANDEJAS ELÉCTRICAS
+
+     Las cargas superficiales de tuberías con su aislamiento y bandejas eléctricas se obtendrán del diseño
+     de tuberías y bandejas eléctricas y se utilizarán para el diseño estructural. El peso de las bandejas
+     eléctricas en vacío se estima en 0,2 kN/m2/bandeja.
+                            Proyecto:                                         Código YPF:
+
+                                                                              LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                         003001-E0
+                               Planta de Tratamiento de Crudo-02
+                                              LANor                           Código Contratista
+
+                                                                                   5297-01-0000-IG-ES-ET-001
+
+                            Fase:                                                   Fecha de emisión:    01/10/2026
+
+                                            EJECUCIÓN                                          Página:     19 de 53
+
+
+        Salvo casos particulares, se tomarán los siguientes valores de referencia para estados de operación:
+                                               Material                             Peso propio
+
+                     Canalizaciones de cables en general (Operación, por nivel)          1 kN/m2
+
+
+
+7.5.2   CARGAS DE VIENTO (W)
+
+        Según CIRSOC 102 – Julio 2025
+        Velocidad básica de viento: V = 63 m/s (artículo 1.5.1)
+        Categoría de exposición: C (artículo 1.7.3)
+        Categorías de rugosidad superficial: C (artículo 1.7.2)
+        Clasificación de edificios y otras estructuras: III (artículo 1.14.1)
+        Factor topográfico Kzt = 1 (artículo 1.8.2)
+        Factor de efecto ráfaga = 0.85 (artículo 1.9.1)
+        Factor de altitud Ke = 1 (artículo 1.12-1)
+        Para el viento en estado constructivo/transitorio se podrá adoptar lo especificado en el CIRSOC 108-
+        07.
+
+7.5.3   CARGAS DE SISMO (E)
+
+        Según INPRES-CIRSOC 103 – Julio 2018, Parte I
+        Zonificación Sísmica: ZONA I – “Peligrosidad Sísmica Reducida” (artículo 2.2)
+        Tipo espectral: Las condiciones locales de suelo respecto a la actividad sísmica a confirmar con el
+        Informe de suelos
+
+        Agrupamiento de las Construcciones según su Destino (artículo 2.4):
+
+                                        DESTINO                                                    GRUPO
+        Estructuras y fundaciones pertenecientes al sistema contra incendio                          A
+
+
+        Factor de Riesgo (artículo 2.4):
+
+                           GRUPO                                      FACTOR DE RIESGO ϒr
+                               A                                                   1.3
+                           Proyecto:                                    Código YPF:
+
+                                                                        LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                   003001-E0
+                              Planta de Tratamiento de Crudo-02
+                                             LANor                      Código Contratista
+
+                                                                             5297-01-0000-IG-ES-ET-001
+
+                           Fase:                                              Fecha de emisión:   01/10/2026
+
+                                          EJECUCIÓN                                     Página:     20 de 53
+
+
+
+
+        Espectro de Diseño:
+   •        Ordenada al origen del espectro de pseudo-aceleraciones elásticas de diseño horizontal
+            (aceleración máxima del suelo) as = 0,08 (tabla 3.1).
+        •   Parámetros característicos del espectro de diseño, Ca y Cv: conforme a la tabla 3.1 del
+            reglamento (según tipo de suelo)
+        •   La ductilidad y/o factor de resistencia (Response modification coefficient, R) se podrá adoptar de
+            acuerdo con lo especificado en los reglamentos internacionales anteriormente enumerados.
+        De acuerdo con el capítulo 2 de la Norma CIRSOC 103 Tomo I, se realizará el análisis sísmico de
+        las estructuras mediante procedimientos con fuerzas estáticas equivalentes, o mediante análisis
+        modal espectral.
+        De acuerdo con el artículo 2.7.2 de la citada Norma se puede utilizar el método estático equivalente
+        para toda estructura siempre y cuando la altura, la regularidad en planta y en altura lo permita. Donde
+        no pueda ser aplicado el método estático equivalente se deberá utilizar el análisis modal espectral y
+        se deberá cumplir con los requisitos que indica la norma en capítulo 7 de la norma previamente
+        mencionada.
+        Se permite que las fuerzas sísmicas de diseño se apliquen independientemente en cada una de las
+        dos direcciones ortogonales y se permite no considerar los efectos de interacción ortogonal.
+
+7.5.4   CARGAS DE NIEVE (S)
+
+        Según CIRSOC 104 – Julio 2005
+        Carga básica de nieve: pg = 0.9 KN/m2
+
+7.5.5   SOBRECARGA DE USO, MANTENIMIENTO Y OPERACIÓN (L)
+
+        Las cargas de operación consideran el peso de las personas, maquinaria portátil, herramientas y
+        materiales almacenados normalmente durante la operación de la planta, tales como equipo auxiliar
+        de mantenimiento (con la planta en operación), catalizadores y productos químicos.
+
+        Las cargas de mantenimiento consideran el peso de las personas y materiales almacenados
+        temporalmente durante el mantenimiento, tales como piezas de un intercambiador, cañerías y
+        accesorios, válvulas, etc. Las cargas de mantenimiento no requieren combinarse con estados del
+        equipo/cañerías en operación. Un caso particular de cargas de mantenimiento lo constituyen las
+        fuerzas para retiro de los mazos de tubos de los intercambiadores de calor.
+        Se considerarán las acciones mínimas indicadas en el reglamento de aplicación CIRSOC 101:25,
+        salvo casos particulares donde existan normas o códigos más específicos.
+                            Proyecto:                                 Código YPF:
+
+                                                                       LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                  003001-E0
+                               Planta de Tratamiento de Crudo-02
+                                              LANor                   Código Contratista
+
+                                                                           5297-01-0000-IG-ES-ET-001
+
+                            Fase:                                           Fecha de emisión:   01/10/2026
+
+                                         EJECUCIÓN                                    Página:     21 de 53
+
+
+
+
+7.5.6   SOBRECARGA DE CUBIERTA (LR)
+
+        Se considerarán las acciones mínimas indicadas en el artículo 4.3 del reglamento de aplicación
+        CIRSOC 101:25, salvo casos particulares donde existan normas o códigos más específicos.
+
+7.5.7   CARGAS TÉRMICAS O FRICCIÓN
+
+        La carga debida a la fricción se obtendrá como el producto del coeficiente de fricción por la normal
+        asociada. Valores del coeficiente de fricción a considerar:
+
+                        MATERIALES                                 Coeficiente de fricción
+                         Acero-acero                                        0.35
+                        Acero-hormigón                                      0.45
+                         Teflón-acero                                       0.10
+
+
+
+7.5.8   CARGAS DE ANCLAJES (AF)
+
+        Son las cargas que surgen por cañerías o equipos en sus apoyos fijos. La especialidad de tuberías
+        proporciona las reacciones en los apoyos y conexiones de equipos (transversales o en puntos fijos).
+
+7.5.9   CARGAS ESPECIALES (PSV)
+
+        Cuando correspondan, serán consideradas las cargas generadas por disparo de válvulas PSV. Las
+        mismas serán informadas por especialidad de tuberías.
+
+7.5.10 CARGAS MÍNIMAS PARA RACKS DE CAÑERÍAS
+
+        Para el dimensionamiento de las estructuras soportes de cañerías, las cargas de las cañerías ϕ ≥
+        12” serán determinadas por medio de Stress Análisis. Cuando no se disponga de otra información
+        (cañerías ϕ ≤ 10”), las acciones en operación de racks de cañerías se determinarán en base a las
+        siguientes cargas de diseño mínimas:
+        Cargas Verticales
+         - Haz de cañerías
+        Peso de tuberías en vacío (cañería): 0,80 KN/m2 (carga debida al peso de Cañerías para NPS medio
+        de 6”).
+        Peso de tuberías en operación (cañería + fluido): 1,80 KN/m2 (carga debida al peso de Cañerías +
+        fluido para NPS medio de 6”).
+                        Proyecto:                                    Código YPF:
+
+                                                                      LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                 003001-E0
+                           Planta de Tratamiento de Crudo-02
+                                          LANor                      Código Contratista
+
+                                                                          5297-01-0000-IG-ES-ET-001
+
+                        Fase:                                              Fecha de emisión:   01/10/2026
+
+                                      EJECUCIÓN                                      Página:     22 de 53
+
+
+     Peso de tuberías en prueba (cañería + fluido): 2,00 KN/m2 (carga debida al peso de Cañerías llenas
+     de agua para NPS medio de 6”).
+
+
+     Cargas Horizontales Longitudinales
+     Fuerza de rozamiento tuberías (dilatación y contracción): 0.18 KN/m2
+     Fuerzas térmicas en puntos fijos de la tubería:    De 4” y menores: 5.0 KN / línea anclada
+                                                         Desde ϕ6” hasta ϕ12”: 10.0 KN / línea anclada
+                                                         Cañerías de ϕ14”: 15.0 KN / línea anclada
+
+
+     Cargas Horizontales Transversales (perpendicular a la dirección de las tuberías)
+     Además, en los tramos que el especialista de stress indique, se deberá adicionar la siguiente fuerza
+     aplicada perpendicularmente a la dirección de las cañerías: Una carga horizontal del 5% de la carga
+     muerta de operación de las cañerías.
+     En los nodos coincidentes con cambios de dirección y soportes guiados se deberá aguardar informe
+     de cargas de especialista de Piping.
+     Nota: Para el dimensionamiento de soportes de cañerías con una sola cañería ϕ ≥ 12” se
+     determinarán las cargas sobre la estructura por medio de Stress Análisis, para cañerías ϕ ≤ 10”, se
+     adoptarán las cargas mencionadas anteriormente.
+
+7.5.11 COMBINACIONES DE CARGA EN ESTADO DE SERVICIO
+
+               NÚMERO                                  COMBINACIÓN DE CARGA
+                  101                                     Ds + Do ± T ± Ff ± Af
+                  102                                       Ds + Do ± Af + L
+                  103                                       Ds + Do ± Af + S
+                  104                           Ds + Do ± Af ± 0.75 Ff + 0.75 L+ 0.75 S
+                  105                                    Ds + Do ± Af ± 0.6 W
+                  106                                    Ds + Do ± Af ± 0.7 Eo
+                  107                         Ds + Do ± Af + 0.75 L ± 0.75 (0.6 W) + 0.75 S
+                  108                        Ds + Do ± Af + 0.75 L ± 0.75 (0.7 Eo) + 0.75 S
+                  109                                    0.6 (Ds + De) ± 0.6 W
+                  110                                  0.6 (Ds + Do) ± Af ± 0.6 W
+                  111                                    0.6 (Ds + De) ± 0.7 Ee
+                         Proyecto:                                     Código YPF:
+
+                                                                       LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                  003001-E0
+                            Planta de Tratamiento de Crudo-02
+                                           LANor                       Código Contratista
+
+                                                                            5297-01-0000-IG-ES-ET-001
+
+                         Fase:                                                 Fecha de emisión:   01/10/2026
+
+                                       EJECUCIÓN                                         Página:     23 de 53
+
+
+                   112                                 0.6 (Ds + Do) ± Af ± 0.7 Eo
+                   113                                       Ds + Dt ± 0.6 Wp
+                   114                                     Ds + Do ± Af + PSV
+
+
+
+7.5.12 COMBINACIONES DE CARGA EN ESTADO ULTIMO
+
+                NÚMERO                                 COMBINACIÓN DE CARGA
+                   201                               1.4 (Ds + Do) ± 1.2 (T ± Ff ± Af)
+                   202                            1.2 (Ds + Do ± Af) ± Ff + 1.6 L + 0.5 S
+                   203                             1.2 (Ds + Do ± Af) ± Ff +0.5 L + 1.6 S
+                   204                              1.2 (Ds + Do ± Af) ± 0.5 W + 1.6 S
+                   205                            1.2 (Ds + Do ± Af) + 0.5 L ± W + 0.5 S
+                   206                              1.2 (Ds + Do ± Af) + 1.6 L ± 0.5 W
+                   207                            1.2 (Ds + Do ± Af) + 0.5 L ± Eo + 0.2 S
+                   208                                      0,9 (Ds + De) ± W
+                   209                                  0.9 (Ds + Do) ± 1.2 Af ± W
+                   210                                  0.9 (Ds + Do) ± 1.2 Af ± Eo
+                   211                                      0,9 (Ds + De) ± Ee
+                   212                                      1.2 (Ds + Dt) ± Wp
+                   213                            1.2 (Ds + Do ± Af ± Ff) + 0.5 L + 0.5 S
+                   214                                         1.4 (Ds + Dt)
+                   215                                 1.2 (Ds + Do ± Af) ± 1.6 PSV
+                   216                                 0.9 (Ds + Do ± Af) ± 1.6 PSV
+
+
+
+7.6   MODELO ESTRUCTURAL
+
+      Para los análisis estructurales se utilizarán modelos de cálculo (software) basados en elementos
+      finitos, que contemplan un comportamiento elástico de los elementos constituyentes.
+      A partir de la resolución estática, se dimensionarán los elementos resistentes, pudiendo recurrirse a
+      software específico.
+
+7.7   SOFTWARE UTILIZADO EN EL PROYECTO
+
+      El diseño de estructuras se hará mediante el uso del software:
+                            Proyecto:                                      Código YPF:
+
+                                                                           LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                      003001-E0
+                               Planta de Tratamiento de Crudo-02
+                                              LANor                        Código Contratista
+
+                                                                                5297-01-0000-IG-ES-ET-001
+
+                            Fase:                                                Fecha de emisión:   01/10/2026
+
+                                            EJECUCIÓN                                      Página:     24 de 53
+
+
+           •   Staad Pro CE, para modelado estructural.
+           •   CIRSOC Flex ó DIM CIRSOC (powering argentina), para dimensionado de secciones.
+           •   Hilti Profis, para verificación de anclajes.
+           •   Software de conexiones RAM Connection e IDEA Statica.
+           •   Planillas de cálculo típicas, utilizadas por el departamento Civil, para casos particulares.
+        En caso de realizar cálculos asistidos por computadora, se anexarán a las correspondientes
+        memorias de cálculo los parámetros de entrada (“INPUT”) que permitan replicar los modelos en el
+        software de cálculo.
+
+7.8     DEFORMACIONES ADMISIBLES
+
+        Los elementos de acero solicitados a flexión se deben diseñar con una rigidez adecuada que permita
+        limitar las flechas o cualquier deformación que pudiera afectar en forma negativa, tanto a resistencia
+        como a comportamiento en servicio de la estructura.
+        Las deformaciones admisibles se verificarán para los Estados Límites de Servicio (ELS/ASD), según
+        lo siguiente:
+
+7.8.1   DEFORMACIONES VERTICALES
+
+        Las máximas deformaciones verticales de miembros estructurales, bajo la acción de las
+        combinaciones de carga de servicio serán las siguientes:
+
+                                    DESCRPCIÓN                                       Flecha total por
+                                                                                   combinaciones ELS
+        General
+        Vigas soportando columnas                                                          L/500
+        Vigas soportando pisos de servicio, cerramientos o muros de
+                                                                                           L/300
+        mampostería.
+        Vigas de pisos o entrepisos que no soportan muros de mampostería                   L/250
+        Vigas soportando equipos                                                           L/400
+        Vigas soportando cañerías                                                          L/400
+        Ménsulas con la flecha medida en el extremo libre                                  L/250
+        Vigas o viguetas de cubierta                                                       L/250
+        Vigas de plataformas sin suportación de equipos                                    L/250
+        Vigas de arriostramiento entre pórticos                                            L/200
+        Vigas o viguetas soportando cubiertas rígidas                                      L/200
+        Correas de cubierta o cerramientos laterales                                       L/150
+                               Proyecto:                                Código YPF:
+
+                                                                        LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                   003001-E0
+                                  Planta de Tratamiento de Crudo-02
+                                                 LANor                  Código Contratista
+
+                                                                             5297-01-0000-IG-ES-ET-001
+
+                               Fase:                                          Fecha de emisión:   01/10/2026
+
+                                             EJECUCIÓN                                  Página:     25 de 53
+
+
+        Vigas secundarias                                                               L/250
+        Pisos rejilla o chapa estampada                                                6.4 mm
+                                       DESCRPCIÓN                                 Flecha total por
+                                                                                combinaciones ELS
+        Racks
+        Vigas principales                                                               L/250
+        Vigas transversales intermedias                                                 L/250
+        Vigas longitudinales                                                            L/250
+        Vigas de piso que soporten equipos o monorriel
+           -     En operación                                                           L/400
+            -    En prueba hidráulica                                                   L/250
+        Puentes grúa
+        Vigas carril para grúas de capacidad mayor o igual a 200 kN                     L/800
+
+        Vigas carril para grúas de capacidad menor a 200 kN                             L/600
+        Desplazamiento horizontal de vigas carril                                       L/600
+        O exigencia del proveedor, lo que sea más desfavorable
+        Dónde:
+        L = Longitud del miembro desde línea central a línea central (para vigas en voladizo L = doble de la
+        longitud del miembro).
+
+7.8.2   DEFORMACIONES HORIZONTALES
+
+        Los desplazamientos horizontales máximos de estructuras bajo la acción de las combinaciones de
+        carga de servicio serán las siguientes:
+
+                                       DESCRPCION                            DEFORMACION MAXIMA
+        Pasarelas de mantenimiento y cubiertas sin puente grúa                          H/150
+        Estructuras de edificios con puente grúa                                        H/400
+
+        Racks de cañerías (conjunto de acciones combinadas c/viento o
+                                                                                        H/100
+        sismo)
+        Soportes aislados                                                               H/150
+        Estructuras que soporten equipos                                                H/250
+        Estructuras que soporten equipos (entrepisos)                                  ΔH/200
+        Dónde:
+                           Proyecto:                                   Código YPF:
+
+                                                                         LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                    003001-E0
+                               Planta de Tratamiento de Crudo-02
+                                              LANor                    Código Contratista
+
+                                                                             5297-01-0000-IG-ES-ET-001
+
+                           Fase:                                             Fecha de emisión:   01/10/2026
+
+                                             EJECUCIÓN                                 Página:      26 de 53
+
+
+        H = Altura total de la estructura.
+        ΔH = Diferencia de elevación entre dos niveles adyacentes.
+        En el caso de que se excedan los desplazamientos admisibles se podrá reforzar la estructura para
+        reducir los mismos hasta un valor admisible o evaluar racionalmente el impacto de dichos
+        desplazamientos en la estabilidad y en los componentes de la estructura (ASC 7-10, Artículo 15.4.5).
+
+7.9     UNIONES
+
+         El Contratista que ejecute la Ingeniería realizará el diseño y cálculo de las uniones abulonadas y/o
+         soldadas. Las disposiciones serán tales que, con el menor número posible de elementos, los
+         esfuerzos se transmitan en la forma más directa posible evitando o reduciendo a un mínimo los
+         esfuerzos secundarios resultantes de excentricidades o desvíos de las solicitaciones.
+         Serán de aplicación las directivas de diseño previstas en la norma CIRSOC 301.
+         Las uniones y refuerzos serán calculados y diseñadas de acuerdo con los AISC Design Guides (en
+         especial 1, 4, 7, 16 y 21) y STEEL CONSTRUCTION MANUAL y COMPANION Design Examples.
+
+        •   Las chapas de unión tendrán un espesor mínimo de 8mm (dimensión según cálculo) y las chapas
+            refuerzos un mínimo de 6.4mm.
+        •   Donde se conecte una viga contra otra en general se colocará costilla de refuerzo del otro lado.
+            Donde se conecte una columna contra una viga la misma llevará costilla/s de refuerzo como
+            continuación de las alas de la columna. Se verificará siempre que las restricciones de torsión y
+            pandeo tenidas en cuenta en el cálculo se cumplan en el proyecto de las piezas.
+        •   Las excentricidades (salvo las admitidas para perfiles ángulos y uniones de corte) deberán ser
+            tenidas en cuenta en los cálculos y diseños.
+        •   Las uniones de placa de cabeza tipo Flush con solicitación de flexión, serán calculadas con
+            momentos incrementados un 50% a efectos de cumplir con las deformaciones de acuerdo con
+            recomendaciones AISC.
+
+        Las uniones para efectuar en obra serán en principio abulonadas, sólo se admitirá las uniones
+        soldadas en taller, salvo cuando se trabaje sobre estructuras existentes o por aprobación específica
+        y excepcional de la Dirección de Obra.
+
+
+7.9.1   UNIONES ABULONADAS
+
+         En caso de fijaciones a alas de perfiles inclinados, se utilizarán arandelas cuña. La cabeza de los
+         bulones y tuercas serán hexagonales y de las dimensiones correspondientes.
+         La longitud de los bulones será tal que sobresalgan de la tuerca por lo menos 3 filetes.
+
+            •   No se permiten uniones estructurales con 1 solo bulón.
+                          Proyecto:                                   Código YPF:
+
+                                                                       LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                  003001-E0
+                              Planta de Tratamiento de Crudo-02
+                                             LANor                    Código Contratista
+
+                                                                           5297-01-0000-IG-ES-ET-001
+
+                          Fase:                                             Fecha de emisión:   01/10/2026
+
+                                         EJECUCIÓN                                    Página:     27 de 53
+
+
+           •   Uniones extremas de arriostramientos tendrán como mínimo 2 bulones Clase 8.8. o A325.
+
+
+7.9.2   UNIONES SOLDADAS
+
+         En el diseño y cálculo de uniones soldadas será de aplicación la norma CIRSOC 301, DIN 4100 y
+         el "AWS Structural Welding Code D.1.1" de la American Welding Society.
+         En el proyecto y cálculo de las uniones soldadas se cuidarán las secuencias de ejecución de modo
+         de evitar distorsiones y tensiones residuales por contracción y por encuentro de soldaduras.
+
+8.      CONSIDERACIONES PARTICULARES DE DISEÑO
+
+8.1     JUNTAS DE DILATACIÓN (JD)
+
+        Las estructuras deberán tener un diseño de juntas que permita su correcta dilatación volumétrica por
+        efectos térmicos, sin afectar su resistencia global por lo menos cada 50m de longitud.
+        Se deberá incluir una junta de dilatación de 20mm de espesor entre todas las estructuras adyacentes
+        independientes, para permitir la libre dilatación de una contra otra.
+        Las juntas de dilatación deberán indicarse en los planos como “JD”.
+
+8.2     PERNOS DE ANCLAJE Y EMBEBIDOS – PLACAS BASE
+
+        Los pernos de anclaje y embebidos cumplirán con la Especificación Técnica de Hormigón Armado
+        LANor-PTCLANOR02-VCD26288-C-ET-003003 y Típico de bulones anclaje LANor-PTCLANOR02-
+        VCD26288-C-TI-003001.
+           •   Los pernos de anclaje en equipos con cunas, pollera o skid de acero inoxidable, serán
+               inoxidable de su misma calidad.
+           •   Para equipos de acero al carbono pintados que se encuentren a la intemperie los pernos de
+               anclaje tendrán un revestimiento galvanizado en caliente S/ASTM F2329, o con mayor
+               resistencia a niebla salina o al ambiente expuesto. Se deberá repasar la rosca después del
+               galvanizado y los conjuntos vendrán completamente armados (Tuerca, contratuerca,
+               arandela, placa de anclaje, etc) según detalle de Ingeniería.
+
+        El coeficiente de fricción máximo entre acero y hormigón será considerado 0,45. (no se permite
+        transmitir cargas horizontales al grout u hormigón en forma exclusiva por fricción, salvo para apoyos
+        deslizantes de cañerías; para los cuales se colocará topes en una dirección y se analizará la
+        posibilidad de la fricción mínima).
+        Los agujeros de las placas base para anclajes de 1ª y 2ª etapa, dado que serán colocados con
+        plantillas, serán efectuados de acuerdo con la tabla siguiente.
+        Para los de segunda etapa la mecha debe pasar por agujero de la placa base.
+                   Proyecto:                                    Código YPF:
+
+                                                                LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                           003001-E0
+                      Planta de Tratamiento de Crudo-02
+                                     LANor                      Código Contratista
+
+                                                                     5297-01-0000-IG-ES-ET-001
+
+                   Fase:                                              Fecha de emisión:   01/10/2026
+
+                                  EJECUCIÓN                                     Página:     28 de 53
+
+
+
+
+Si por alguna causa excepcional no se trabaja con plantillas, el diámetro de los agujeros de las placas
+base se efectuará de acuerdo con la siguiente tabla:
+Proyecto:                              Código YPF:
+
+                                       LANor-PTCLANOR02-VCD26288-S-ET-
+                                                  003001-E0
+   Planta de Tratamiento de Crudo-02
+                  LANor                Código Contratista
+
+                                            5297-01-0000-IG-ES-ET-001
+
+Fase:                                        Fecha de emisión:   01/10/2026
+
+             EJECUCIÓN                                 Página:     29 de 53
+                        Proyecto:                                   Código YPF:
+
+                                                                     LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                003001-E0
+                            Planta de Tratamiento de Crudo-02
+                                           LANor                    Código Contratista
+
+                                                                         5297-01-0000-IG-ES-ET-001
+
+                        Fase:                                             Fecha de emisión:   01/10/2026
+
+                                       EJECUCIÓN                                    Página:     30 de 53
+
+
+
+
+8.3   PUESTA A TIERRA
+
+      La totalidad de las estructuras principales deberá tener conexión para puesta a tierra vinculada a la
+      parte inferior de algunas de sus columnas de acuerdo con plano de puesta a tierra LANor-
+      PTCLANOR02-VCD26288-E-PL-003001.
+Proyecto:                              Código YPF:
+
+                                       LANor-PTCLANOR02-VCD26288-S-ET-
+                                                  003001-E0
+   Planta de Tratamiento de Crudo-02
+                  LANor                Código Contratista
+
+                                            5297-01-0000-IG-ES-ET-001
+
+Fase:                                        Fecha de emisión:   01/10/2026
+
+             EJECUCIÓN                                 Página:     31 de 53
+
+
+
+
+             PARTE B - MATERIALES
+                           Proyecto:                                    Código YPF:
+
+                                                                        LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                   003001-E0
+                               Planta de Tratamiento de Crudo-02
+                                              LANor                     Código Contratista
+
+                                                                              5297-01-0000-IG-ES-ET-001
+
+                           Fase:                                              Fecha de emisión:     01/10/2026
+
+                                          EJECUCIÓN                                     Página:        32 de 53
+
+
+        Solo se podrán utilizar materiales que satisfagan los requisitos establecidos en el Capítulo 3 y anexos
+        del CIRSOC 301:2018 y en el AISC 360.
+        Todos los materiales para utilizar serán nuevos, sin uso previo. Su calidad será la indicada más
+        adelante la que será verificada mediante control visual y dimensionado y los ensayos que establezcan
+        para ellas las normas de fabricación.
+        Para demostrar la calidad de los materiales se podrá entregar certificado del material por entidad
+        calificada y aprobada por la DO (Dirección de Obra), en caso contrario se efectuarán ensayos de
+        materiales de acuerdo con normas IRAM en laboratorio reconocido aprobado por la DO.
+        Los materiales que se incorporen a las obras deberán ser previamente aprobados por la DO.
+        En los casos previstos en esta especificación o cuando lo ordene el responsable de calidad de la
+        Dirección de Obra, las muestras de los materiales a utilizar deberán ser sometidas a ensayos y
+        análisis.
+        Todos los materiales deben estar libres de cualquier imperfección, causada por su manipulación
+        dentro o fuera del taller y serán aprobados por la Dirección de Obra.
+
+9.      PERFILES Y CHAPAS DE ACERO
+
+        El acero estructural debe estar de acuerdo con la siguiente tabla:
+                                                                      Límite Elástico          Límite Último
+     Norma                 Designación                  Calidad           [MPa]                   [MPa]
+                                                                         Mínimo              Mínimo       Máximo
+               Perfiles IPN y UPN (Sección europea)
+                                                                             240              370            --
+                   L (Secc. americana <=64mm)
+ IRAM-IAS                                                 F24
+                                         e ≤ 30 mm                           240              370            --
+               Chapas y Planchuelas
+                                         e > 30 mm                           220              370            --
+                  Perfiles HEA/HEB/IPE/IPN/UPN
+                                                                             260              420            --
+                         (Sección europea)
+ IRAM-IAS                                                 F26
+                                         e ≤ 30 mm                           260              420            --
+               Chapas y Planchuelas
+                                         e > 30 mm                           240              420            --
+                   Perfiles W (Secc. americana)           F36
+  IRAM-
+   IAS/               Perfiles HEA.HEB-IPE             /ASTM572          360/345             490/450        630
+  ASTM/            L (Secc. americana >64mm)             Gr 50/
+ EN10025-                                e ≤ 30 mm                           360              490           630
+     2                Chapas                            S355J2
+                                         e > 30 mm                           340              490           630
+
+
+        Las secciones de los perfiles laminados de uso en el proyecto son las siguientes:
+                             Proyecto:                                   Código YPF:
+
+                                                                         LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                    003001-E0
+                                Planta de Tratamiento de Crudo-02
+                                               LANor                     Código Contratista
+
+                                                                              5297-01-0000-IG-ES-ET-001
+
+                             Fase:                                             Fecha de emisión:    01/10/2026
+
+                                          EJECUCIÓN                                      Página:      33 de 53
+
+
+
+                                            PERFILES LAMINADOS
+
+                 TIPO DE PERFIL                  DIMENSIONES SEGÚN                 CALIDAD IRAM/IAS
+
+                        W                         IRAM-IAS U 500-215-6            F36 o ASTM572 Gr 50
+
+                       UPN                        IRAM-IAS U 500-509-2                   F24 o F26
+
+                         L                        IRAM-IAS U 500-558                   F24<76mm
+                                                                                       F36>=76mm
+
+                   HEA-HEB-IPE                  IRAM-IAS U 500-215-2/3/5                      F26
+
+                       IPN                        IRAM-IAS U 500-511                  F24<140mm y
+                                                                                    F24/F26 >=140mm
+
+
+       Secciones tubulares:
+
+       En el caso de emplear secciones tubulares circulares o caños el material para las mismas debe ser
+       según lo indicado en la especificación ASTM A53 GR. A o B. o IRAM IAS U 500-2592_1 T22.
+
+       En el caso de emplear secciones tubulares cuadradas o rectangulares según lo indicado en la
+       especificación IRAM IAS U 500-2592_1 T22.
+
+       Se deberán sellar en ambos extremos a fin de evitar el ingreso de humedad o agua con chapas de
+       4.8mm como mínimo.
+
+10.     BULONERÍA
+
+        EL FABRICANTE verificará que la rosca de la tuerca ajuste perfectamente con la del bulón, siendo
+        lo suficientemente libre como para permitir que la tuerca pueda ser colocada y girada a mano.
+
+        Los bulones de conexión, las tuercas y las arandelas, deben estar libres de deformidades o
+        irregularidades que puedan, de alguna manera, interferir con un ajuste satisfactorio o dañar el
+        acabado superficial de las estructuras metálicas.
+
+        Los conjuntos de bulones/pernos con sus tuercas y arandelas deberán venir armados.
+
+10.1    BULONES DE ALTA RESISTENCIA
+
+        Se utilizarán bulones de alta resistencia, que cumplan con lo siguiente:
+           •   Pernos, tuercas y arandelas serán suministrados con marcas de identificación, de acuerdo
+               con normas ANSI y AISC.
+           •   Las uniones abulonadas deberán seguir los requerimientos del Reglamento CIRSOC 301-
+               2018 “Reglamento argentino de estructuras de acero para edificios” CAPITULO J y AISC 360.
+                             Proyecto:                                         Código YPF:
+
+                                                                               LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                          003001-E0
+                                Planta de Tratamiento de Crudo-02
+                                               LANor                           Código Contratista
+
+                                                                                    5297-01-0000-IG-ES-ET-001
+
+                             Fase:                                                   Fecha de emisión:   01/10/2026
+
+                                                EJECUCIÓN                                      Página:     34 de 53
+
+
+           Los bulones para las uniones de elementos estructurales principales de alta resistencia serán ASTM
+           A325 T1 o clase 8.8 s/ISO 7412, cuyas características son:
+
+                                                Bulones de alta resistencia
+                                     Características (Según ASTM A325 e ISO 7412)
+                                                          Límite elástico Fy            Límite último Fu
+                Diámetro         Designación                   [N/mm ] 2
+                                                                                             [N/mm2]
+                  (mm)              ASTM
+                                                               Mínimo                        Mínimo
+                M16 a M24
+
+                 5/8 a 1”            8.8-A325                    640                           800
+                M25 a M36
+
+                 1 a 1.5”
+                                     8.8-A325                    600                           725
+
+
+
+           Estos bulones pueden ser usados como bulones pretensados o como bulones no pretensados.
+
+           En caso de ser necesario se pueden utilizar también bulones estructurales de alta resistencia ASTM
+           A490, si se utilizan estos últimos de les deberá asegurar la protección contra corrosión sin
+           galvanizarlos.
+
+           Las tuercas para los A325 serán según especificación ASTM A563 Grado DH o ASTM A194 2H y las
+           arandelas según especificación ASTM F436-T1.
+
+           Las tuercas para los 8.8 serán según especificación ISO 4775 Gr. B Clase 10 – Arandelas: ISO 7415,
+           el diámetro mínimo para uniones de estructuras principales (vigas, columnas, etc.) será de 16 mm y
+           19 mm cuando el gramil de los elementos lo permita.
+
+10.2       BULONES COMUNES
+
+       Los bulones para uniones de elementos estructurales secundarios serán ASTM A307 Clase A o Clase
+       5.6 s/IRAM 5214 /ISO 898.1/DIN 267 con los siguientes valores mínimos de límite elástico y límite
+       último:
+
+       •       Fy = 250 N/mm2 (36 ksi)
+
+       •       Fu = 415 N/mm2 (60 ksi)
+
+       Estos bulones pueden ser usados únicamente como bulones no pretensados. Deben usarse solo en
+       uniones atornilladas de escaleras, barandas, soportes de escalones, correas y otras de menor
+       importancia, cuando no se especifique lo contrario.
+                          Proyecto:                                    Código YPF:
+
+                                                                        LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                   003001-E0
+                              Planta de Tratamiento de Crudo-02
+                                             LANor                     Código Contratista
+
+                                                                             5297-01-0000-IG-ES-ET-001
+
+                          Fase:                                              Fecha de emisión:    01/10/2026
+
+                                         EJECUCIÓN                                      Página:     35 de 53
+
+
+       Las tuercas para los A307 serán según especificación ASTM A563 de Grado A y las arandelas serán
+       según especificación ASTM F436.
+       Las tuercas para los 5.6 serán según especificación Tuerca clase 5: IRAM 5144/ISO 898.1 –
+       Arandelas: IRAM 5107.
+       Tendrán un diámetro mínimo nominal de dT=12.7 mm (1/2”) y un diámetro máximo nominal de
+       dT=15.875 mm (5/8”).
+
+10.3    BULONES PARA ANCLAJES DE ESTRUCTURA
+
+                        Documento                                  Título del documento
+
+         LANor-PTCLANOR02-VCD26288-C-TI-003001        Plano Típico Bulones de Anclaje
+
+10.4    TORNILLOS AUTOPERFORANTES PARA COLOCACIÓN DE CHAPAS EN CUBIERTAS Y
+        REVESTIMIENTOS
+
+        Se utilizarán tornillos autoperforantes tipo Hilti HWH Kwik-Seal, de cabeza hexagonal con arandela
+        de neopreno incorporada, para la colocación de las chapas de Cubiertas de techo y de los
+        Revestimientos (fijación de las mismas a las correas y largueros)
+
+        •   Los tornillos serán calidad AISI 1022.
+        •   Tornillos S-MD 12-14x2 HWH #2 Kwik-Seal, para chapas de techo.
+        •   Tornillos S-MD 12-14x1 HWH #2 Kwik-Seal, para chapas de revestimientos.
+        •   La terminación será Níquel/Zinc/Cromo (Plateado a gris brillante).
+
+11.     RESISTENCIA A LA CORROSIÓN
+
+        Las rejillas y sus accesorios y los escalones de escaleras inclinadas serán galvanizadas en caliente,
+        la bulonería será galvanizada en caliente o tendrá tratamiento anticorrosivo equivalente.
+        La protección será por galvanizado por inmersión en caliente, según norma ASTM F2329 o ASTM
+        A123/A153 según corresponda, o protección con deposición de zinc, tipo Laurencoat 676.
+        Solo en uso interior, se permite la protección mediante bicromatizado.
+        Los bulones ASTM 490 y varillas o pernos de anclaje de calidad grado 105 no serán galvanizadas
+        en caliente. Se aplicará una protección de Zinc/Aluminio Según ASTM F1136 Grade 3
+        Los demás elementos metálicos serán pintados, según el siguiente documento:
+
+        Documento                                     Título del documento
+
+        LANor-PTCLANOR02-VCD26288-C-TI-003004         Plano Típico Notas Generales
+
+
+        El Contratista seleccionará e instalará cada material de manera que sean y permanezcan compatibles
+        con los otros materiales vecinos dentro de su alcance durante toda su vida útil.
+                         Proyecto:                                    Código YPF:
+
+                                                                       LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                  003001-E0
+                             Planta de Tratamiento de Crudo-02
+                                            LANor                     Código Contratista
+
+                                                                           5297-01-0000-IG-ES-ET-001
+
+                         Fase:                                                 Fecha de emisión:   01/10/2026
+
+                                         EJECUCIÓN                                       Página:     36 de 53
+
+
+       Asegurará que se tomen las medidas necesarias para evitar la corrosión bimetálica entre metales
+       diferentes y la corrosión ambiental.
+       Cuando se deban usar metales componentes de aluminio y acero en contacto directo entre sí, pero
+       no totalmente embebidos en superficies cementicias, estarán aislados por empaquetaduras finas,
+       densa de PVC. El uso de pintura bituminosa no será aceptado para ese caso.
+       Se evitará el contacto de aluminio o sus compuestos con mezclas o morteros de cal, cemento o yeso,
+       o con hormigón, en proceso de fragüe o si están húmedos. Se aplicará una buena capa de pintura
+       bituminosa al aluminio en las zonas de contacto. Se evitarán salpicaduras de mezclas o revoques
+       frescos, para que no se produzcan manchas.
+       Se evitará el contacto de acero o hierro sin proteger con cal o yeso.
+
+12.    SOLDADURAS
+
+       Todas las soldaduras se diseñarán de acuerdo con lo establecido en CIRSOC 304 “Reglamento
+       Argentino para la Soldadura de Estructuras en Acero” y la norma AWS.D1.1, “Structural Welding
+       Code”.
+       El material de los pernos de anclaje o estructurales que está templado y bonificado (por tratamiento
+       térmico) no debe ser soldado o calentado.”
+
+13.    CHAPAS ESTRIADAS (SEMILLA DE MELÓN Y ESTAMPADAS)
+
+       El acero para chapas estriadas debe ser según la especificación ASTM A 36 o F24, el espesor mínimo
+       debe ser 4.8 mm (espesor de la chapa) + 2 mm (estrías) en general y 3,2mm para narices de
+       escalones.
+       Las chapas estriadas deben disponerse atornilladas cuando no se especifique lo contrario.
+
+13.1   PISOS DE METAL DESPLEGADO
+
+       La utilización de este material de ser previamente aprobado por AESA/YPF.
+
+       En caso de adoptarse como solución el mismo será de metal desplegado pesado (peso mínimo
+       10.75kg/m2) y solo para circulación de personas (hasta 250kg/m2 o 300kg/m lineal en el centro) y
+       para cuando no haya tránsito por debajo.
+
+
+       El mismo será totalmente soldado contra sus soportes y será galvanizado en caliente.
+       La separación entre apoyos en el sentido resistente (diagonal mayor) y la altura mínima del nervio
+       será:
+                        Proyecto:                                       Código YPF:
+
+                                                                        LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                   003001-E0
+                           Planta de Tratamiento de Crudo-02
+                                          LANor                         Código Contratista
+
+                                                                             5297-01-0000-IG-ES-ET-001
+
+                        Fase:                                                 Fecha de emisión:   01/10/2026
+
+                                         EJECUCIÓN                                      Página:     37 de 53
+
+
+                                    Peso aprox.   Alt Nervio
+                                                               Luz Max.
+                                       ±5%            min
+                                      kg/m2           mm         cm
+                                        11            6.0        37.5
+                                        15            6.6         60
+                                        20            7.6         75
+                                        24            8.4         90
+                                        30            8.9        100
+                                        34            9.9        120
+
+
+      En el lado perpendicular se colocarán apoyos cada 1.50m máximo.
+      Para la instalación, salvo que el proveedor indique otro procedimiento, se debe tener en cuenta:
+         a. Las hojas deben ser colocadas con el lado plano hacia arriba y el curvo hacia abajo.
+         b. Las mallas se pueden soldar de 2 maneras:
+               ▪ Soldado entre láminas a tope: soldando nervio final de una con nervio inicial de la otra
+                   sin afectar el espesor del conjunto.
+               ▪ Solapando láminas: solapar los rombos o hexágonos de una hoja a la otra. Se debe
+                   respetar el sentido de montaje de las hojas para evitar desniveles y darle uniformidad
+                   a la instalación.
+
+14.   REJILLAS DE ACERO GALVANIZADO
+
+      Las rejillas y peldaños deberán cumplir con el estándar de la especificación ASTM A 36 o F24. Serán
+      de mallado de 30x30 con planchuela resistente de 30/32x3/3.2mm, y planchuela de repartición de
+      15x2mm, ambas de altura mínima, con dentado antideslizante de preferencia en la planchuela de
+      repartición. Además, estarán provistas de malla electrosoldada de seguridad de acero estriado
+      galvanizado en la superficie inferior de cada panel, de forma que limite el tamaño de la abertura
+      máxima de los intersticios a 8 mm x 8 mm. Las pletinas separadoras deben estar soldadas al extremo
+      superior de las pletinas portantes.
+
+      Serán exceptuadas de colocación de malla electrosoldada de abertura 8mm x 8mm toda aquella
+      plataforma o pasarela que no tenga posibilidad de tránsito por debajo de ellas (ej: Pasarelas o
+      plataformas ubicadas sobre techos de tanques).
+
+      Las rejillas deberán ser de acero galvanizado en caliente según estándar de especificación ASTM A
+      123/M o equivalente europeo.
+
+      El dimensionado y espaciado de las vigas de plataformas se indicará en los planos.
+
+      La rejilla se fijará a las vigas de soporte con un mínimo de 4 fijaciones por paño, según detalle de
+      ingeniería.
+                         Proyecto:                                    Código YPF:
+
+                                                                       LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                  003001-E0
+                            Planta de Tratamiento de Crudo-02
+                                           LANor                      Código Contratista
+
+                                                                           5297-01-0000-IG-ES-ET-001
+
+                         Fase:                                              Fecha de emisión:   01/10/2026
+
+                                        EJECUCIÓN                                     Página:     38 de 53
+
+
+15.   BARANDAS
+
+      Las barandas se fabricarán con perfiles, chapas y tubos de acero que deben cumplir con el estándar
+      de la especificación F24/ASTM A36 oT20 s/IRAM IAS U 500-2592_1 y para los ángulos mayores a
+      64mm calidad F36.
+      Los principales criterios de diseño son los siguientes:
+
+         •   Las barandas para plataformas y pasarelas tendrán sistema de doble raíl con el raíl superior
+             a 1100 mm sobre la superficie de la pasarela y el otro rail a 500 mm por debajo del superior.
+
+         •   Las barandas estarán calculadas para una carga de 100kg/m en el pasamanos de acuerdo
+             con CIRSOC 101.
+
+         •   Los pasamanos se harán usando un caño de diámetro 1 1/2” SCH.40 y las guarda-rodillas se
+             harán de planchuela de 51x6.4mm.
+
+         •   La separación máxima entre postes será de 1500 mm. En general para los postes se utilizarán
+             angulares de acero de 76x7.9 mm como mínimo.
+
+         •   Se dispondrá guarda-pies de PL 152 x 6.4 mm, 5 mm por encima de la superficie de rejilla.
+
+16.   ESCALERAS
+
+      Las escaleras inclinadas darán acceso a equipos, los cuales requieran atenciones frecuentes de
+      operación y mantenimiento. Los principales criterios de diseño son los siguientes:
+
+         •   Las escaleras deben tener un ancho mínimo útil de 760 mm y de 1100 mm en caso de que
+             sea medio de escape o tenga que pasar una camilla.
+
+         •   La profundidad de los descansos intermedios será como mínimo de 760 mm y de 1100 mm
+             en caso de que sea medio de escape o tenga que pasar una camilla.
+
+         •   Cada tramo no debe tener una diferencia de nivel superior a 3600 mm.
+
+         •   La inclinación de las escaleras debe estar comprendida entre 38° y 45° respecto a la
+             horizontal y debe ser la misma en todos los tramos.
+
+         •   La altura libre mínima será de 2300 mm.
+
+         •   Los peldaños serán del mismo tipo de rejilla definido en el apartado 14 “Rejillas”. La rejilla de
+             los descansos intermedios ha de llevar en el borde el mismo elemento antideslizante que el
+             resto de los escalones estándar.
+
+         •   Las escaleras se protegerán con baranda como la definida en el apartado 15 “Barandas”.
+                        Proyecto:                                   Código YPF:
+
+                                                                     LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                003001-E0
+                           Planta de Tratamiento de Crudo-02
+                                          LANor                     Código Contratista
+
+                                                                         5297-01-0000-IG-ES-ET-001
+
+                        Fase:                                             Fecha de emisión:   01/10/2026
+
+                                       EJECUCIÓN                                    Página:     39 de 53
+
+
+         •   Como criterio general, para las zancas de las escaleras metálicas inclinadas se utilizarán
+             perfiles tipo UPN 200 como mínimo.
+
+         •   Deben llevar cruces de arriostramiento entre las zancas.
+
+         •   Las medidas de todos los escalones de un mismo tramo serán iguales entre sí.
+
+17.   PLATAFORMAS Y PASARELAS
+
+      Las plataformas y pasarelas junto con sus barandas se situarán para dar acceso directo y seguro a
+      todas las partes de la Planta para operación, inspección, limpieza y mantenimiento. Los principales
+      criterios de diseño son los siguientes:
+
+         •   Todas las plataformas de altura superior a 1000 mm estarán provistas de barandas, de
+             acuerdo con el punto 15
+
+         •   Las plataformas principales de trabajo tendrán un ancho mínimo útil de 1250 mm. Las
+             plataformas de paso tendrán un ancho mínimo útil 760 mm y 900 mm en caso de que sea
+             medio de escape.
+
+         •   Las secciones de plataformas que sean desmontables deben estar limitadas a un peso de
+             150 kg.
+
+         •   Todas las aberturas en el suelo de plataformas para el paso de cañerías o equipos que no
+             estén protegidas deben ser bordeadas con un guarda-pie formado con una planchuela de 152
+             x 4.8 mm como protección de mantenimiento.
+
+         •   Las rampas tendrán una pendiente máxima del 12% cuando su longitud sea menor de 3 m,
+             del 10% cuando su longitud sea menor de 10 m o del 8% en el resto de los casos.
+
+18.   IGNIFUGADO
+
+      La extensión y duración (resistencia al fuego RF) del ignifugado de las estructuras de acero será el
+      determinado en la Especificación técnica de ignifugado LANor-PTCLANOR02-VCD26288-Y-ET-
+      003001.
+
+19.   ELEMENTOS DE CUBIERTA Y CERRAMIENTOS
+
+      Onda: Trapezoidal T101/T1010 Altura de onda: 28,5mm- Paso: 253mm.
+      Ancho Total: 1100mm - Ancho útil: 1010mm
+      Propiedades: Espesores: 0,5 mm Cal BWG 25 para cerramientos, 0,5mm para cubiertas en general
+      Propiedades mecánicas: tensión de fluencia 230MPa, Tensión de Rotura: 310 Mpa
+      según normas IRAM-IAS U 500-204/214.
+                         Proyecto:                                    Código YPF:
+
+                                                                       LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                  003001-E0
+                             Planta de Tratamiento de Crudo-02
+                                            LANor                     Código Contratista
+
+                                                                           5297-01-0000-IG-ES-ET-001
+
+                         Fase:                                              Fecha de emisión:   01/10/2026
+
+                                         EJECUCIÓN                                    Página:     40 de 53
+
+
+       El material será de acero revestido en ambas caras con una capa de aluminio más cinc (Cincalum),
+       recubierta de pintura color a definir (en los documentos) para la cara exterior. La Pendiente de las
+       Cubiertas tanto para los Galpones como para los Tinglados ser de 10% salvo indicación contraria
+       expresada en los documentos. Las Zinguerías de terminación (cumbreras, babetas, esquineros y
+       cenefas) serán de chapa prepintada del mismo color y calibre que las T-101 de cubierta y
+       revestimientos.
+       Los aceros prepintados para estos materiales responderán a las especificaciones de la norma IRAM-
+       IAS U 500-72.
+
+19.1   FIJACIONES
+
+       Las fijaciones de las chapas de cerramientos serán las especificadas en 10.4.
+
+19.2   SELLADORES
+
+       Las chapas entre ellas y contra las canaletas se sellarán con sellador de siliconas apto para los
+       materiales en contacto Dow Corning, Dowsil o equivalentes.
+       Cuando se desee evitar el contacto del sellador con el fondo, se colocará un cordón de respaldo.
+       Para el sellado de entre chapas y perfiles se utilizará espuma de poliuretano impregnada con bitumen
+       asfáltico Compriband o equivalente.
+
+20.    AISLACIÓN TERMICA EN GALPONES
+
+       El Aislamiento térmico de los Galpones se efectuará mediante la colocación de Lana de Vidrio de 3”
+       de espesor con Foil de Aluminio como barrera de vapor (material a proveerse en rollos), estos
+       elementos se montarán sobre las correas de techo y largueros de revestimientos previo a la
+       colocación de las chapas, debiéndose conformar un entramado de malla de alambre galvanizado
+       calibre N°16 de tejido romboidal para su correcta contención. De manera tal que se cumplimente con
+       el Nivel recomendado de Confort Higrotérmico que establece la Norma IRAM 11605 según el destino
+       de local y zona geográfica de implantación.
+       La cubierta deberá contar con ventilación a través de extractores eólicos, y la cantidad y dimensiones
+       de los mismos surgirá del cálculo para garantizar la cantidad necesaria de renovaciones horarias de
+       aire, de acuerdo con el destino del recinto.
+       Deberán ser aptos para zonas con fuertes vientos, y resistentes a los mismos.
+
+21.    CARPINTERÍAS
+
+       Todas las puertas, portones, rejas de ventilación y ventanas serán compatibles con sus fijaciones al
+       esquema de perfiles de los revestimientos y tabiques, y deberán contar con los siguientes requisitos:
+                         Proyecto:                                   Código YPF:
+
+                                                                      LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                 003001-E0
+                            Planta de Tratamiento de Crudo-02
+                                           LANor                     Código Contratista
+
+                                                                          5297-01-0000-IG-ES-ET-001
+
+                         Fase:                                             Fecha de emisión:   01/10/2026
+
+                                        EJECUCIÓN                                    Página:     41 de 53
+
+
+21.1   PUERTAS EXTERIORES
+
+       Los marcos, contramarcos y las hojas serán de doble chapa lisa BWG calibre N°16, rellenas con
+       poliuretano expandido o poliestireno, debiendo abrir hacia afuera y contando con cerradura de barral
+       antipánico.
+       Todos los materiales que se utilicen deberán contar con tratamientos anticorrosivos, y deberán ser
+       pintados de acuerdo con el esquema especificado en el ítem 11.
+
+21.2   PORTONES DE ACCESO
+
+       Se construirán de estructura metálica con revestimiento de chapa. Todos los materiales que se
+       utilicen deberán contar con tratamientos anticorrosivos, y deberán ser pintados de acuerdo con el
+       esquema especificado en el ítem 11.
+       Serán corredizos o de apertura hacia afuera, y se deberá tener en cuenta que sean manejables por
+       una persona, evitando estructuras muy pesadas.
+       Las dimensiones y características de los mismos se indicarán en los planos, según la ingeniería de
+       detalle.
+
+22.    MURO PERIMETRAL EN GALPONES
+
+       Los revestimientos de chapa remataran en su parte inferior sobre un muro de bloque de hormigón
+       de 1,00 mts de altura sobre el nivel del piso terminado exterior de la vereda.
+       Estará compuesto por bloques de 15x20x40, con juntas de 1cm de espesor enrasada.
+       Se deberá pintar según esquema de pintura del documento mencionado en el Ítem 11.
+       Las chapas de revestimientos solaparan sobre estos muros como mínimo 10 cm, llevando en su
+       parte inferior la zinguería de terminación (goterón) del mismo color.
+
+23.    CERRAMIENTO PERIMETRAL EN TINGLADOS
+
+       En el caso de ser necesario cerrar perimetralmente un Tinglado, se planteará bastidores metálicos
+       conformados por tubo estructural en todo su perímetro con malla electrosoldada tipo SIMA
+       Galvanizada de trama cuadrada 50-50.
+     Proyecto:                              Código YPF:
+
+                                            LANor-PTCLANOR02-VCD26288-S-ET-
+                                                       003001-E0
+        Planta de Tratamiento de Crudo-02
+                       LANor                Código Contratista
+
+                                                 5297-01-0000-IG-ES-ET-001
+
+     Fase:                                        Fecha de emisión:   01/10/2026
+
+                  EJECUCIÓN                                 Página:     42 de 53
+
+
+
+
+PARTE C – FABRICACION, PREARMADO, TRANSPORTE Y
+                    MONTAJE
+                           Proyecto:                                    Código YPF:
+
+                                                                         LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                    003001-E0
+                              Planta de Tratamiento de Crudo-02
+                                             LANor                      Código Contratista
+
+                                                                             5297-01-0000-IG-ES-ET-001
+
+                           Fase:                                              Fecha de emisión:   01/10/2026
+
+                                          EJECUCIÓN                                     Página:     43 de 53
+
+
+24.     FABRICACIÓN DE ESTRUCTURAS DE ACERO
+
+24.1    GENERALIDADES
+
+        La ejecución de las estructuras metálicas deberá cumplir con lo siguiente:
+
+        •      Cumplimentar los requisitos establecidos en el reglamento CIRSOC 301:2018 y esta
+        especificación.
+        •      Efectuar la construcción respetando los requisitos de seguridad durante su ejecución, así
+        como los planes de calidad y medio ambiente.
+        •      Respetar los máximos estándares de calidad durante la ejecución, y las Reglas del Arte
+        aplicables a cada tipología estructural.
+        La fabricación debe llevarse a cabo con suficiente capacidad técnica y de forma completamente
+        confiable y debe tener una exactitud tal que permita el montaje de las estructuras sin introducir
+        tensiones permanentes.
+       Toda la mano de obra y equipos serán de alta calidad.
+        Todos los componentes deberán estar exentos de escamas, laminillas u otros defectos, debiendo
+        tener adecuada terminación no admitiéndose en ningún caso el uso de soldaduras u otros medios
+        para rellenar o disimular imperfecciones de ningún tipo.
+        Previamente a la utilización del material se realizarán los ensayos requeridos para verificar la calidad
+        del mismo. De estimarlo necesario la Dirección de Obra podrá requerir nuevos ensayos durante la
+        fabricación.
+        El Contratista tomará a su cargo la corrección que resulte necesario efectuar por cualquier desviación
+        respecto a lo indicado en esta especificación, a menos que tales modificaciones hayan sido acepta-
+        das por la Dirección de Obra.
+        EL FABRICANTE debe suministrar todos los tornillos, tuercas y arandelas para fijar los equipos a las
+        estructuras, así como todo lo necesario para conectar los diferentes elementos de las estructuras.
+
+24.2    ENDEREZADO
+
+        Todos los materiales, planchas y perfiles deberán ser rectilíneos, salvo que los planos indiquen lo
+        contrario.
+
+24.3    TRAZADO
+
+        Como toda otra operación, el trazado será ejecutado respetando escrupulosamente las cotas de los
+        planos.
+        Antes de proceder al trazado se comprobará que las planchas y perfiles presentan la forma exacta
+        requerida y están exentos de torceduras.
+                          Proyecto:                                    Código YPF:
+
+                                                                        LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                   003001-E0
+                             Planta de Tratamiento de Crudo-02
+                                            LANor                      Código Contratista
+
+                                                                            5297-01-0000-IG-ES-ET-001
+
+                          Fase:                                              Fecha de emisión:   01/10/2026
+
+                                         EJECUCIÓN                                     Página:     44 de 53
+
+
+24.4   CORTES
+
+       En todo trabajo de corte se procurará no dejar huellas impresas que no puedan ser eliminadas por
+       operaciones posteriores.
+       El corte podrá efectuarse con sierra, cizalla o mediante oxicorte, en lo posible dirigido mecánica-
+       mente, debiendo eliminarse posteriormente con piedra esmeril las rebabas, estrías o irregularidades
+       de los bordes que han sido cortados.
+       Se permite el corte con cizalla solamente para chapas, perfiles, planos y angulares hasta un espesor
+       máximo de 13mm.
+       En el corte se tomarán las precauciones necesarias para no introducir en la pieza tensiones de tipo
+       térmico.
+       En los bordes cortados con cizalla o por oxicorte que pertenezca a uniones soldadas, estas se es-
+       merilarán en caso de existir exceso de material o se rellenarán con ulterior esmerilado a efectos de
+       lograr bordes biselados en condiciones de soldar a satisfacción de la Dirección de Obra.
+       No se cortarán nunca chapas o perfiles en forma que queden ángulos entrantes con aristas vivas.
+       Estos ángulos, cuando no se puedan evitar, se redondearán siempre con el mayor radio de curvatura
+       posible.
+
+24.5   EJECUCIÓN DE AGUJEROS
+
+       Se admitirán agujeros punzonados solo cuando la norma lo permite sino deberán ser taladrados.
+       Los orificios próximos a las líneas de pliegue se realizarán después de realizar éste.
+       No se admitirá relleno con soldadura de los orificios mal perforados. Todos los orificios serán de corte
+       limpio y sin rebabas en los bordes. No se admitirá aumentar el diámetro de los orificios por medio de
+       escariadores, punzones o útiles semejantes.
+       Los agujeros se realizarán de acuerdo con las distancias, entre sí o a bordes indicadas por la norma
+       CIRSOC 301 y lo indicado en la presente.
+       El paso, gramiles y alineaciones de los agujeros destinados a bulones tendrán una tolerancia máxima
+       respecto a la indicada en los planos de: + D/20, en la que D es el diámetro de los bulones.
+       La tolerancia en el tamaño de los agujeros será de - 0,00 + 0,3mm. En dicha tolerancia se incluye la
+       conicidad y ovalización, que en ningún caso serán mayores de 0,2mm.
+       En todos los casos el eje del agujero debe formar un ángulo de 90 grados con la cara del laminado;
+       en caso de no cumplirse esta condición se deben verificar las tolerancias arriba indicadas midiendo
+       las distancias máximas y mínimas entre los bordes del agujero proyectados sobre un mismo plano.
+                          Proyecto:                                    Código YPF:
+
+                                                                        LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                   003001-E0
+                             Planta de Tratamiento de Crudo-02
+                                            LANor                      Código Contratista
+
+                                                                            5297-01-0000-IG-ES-ET-001
+
+                          Fase:                                              Fecha de emisión:   01/10/2026
+
+                                         EJECUCIÓN                                     Página:     45 de 53
+
+
+24.6   BISELADOS
+
+       Todos los biselados o chanfles de aristas indicadas en los planos se ejecutarán ajustándose a las
+       dimensiones o inclinaciones fijadas para los mismos.
+
+24.7   TRABAJABILIDAD
+
+       Se deberán eliminar las rebabas en los productos laminados. Las marcas de laminación en relieve
+       sobre las superficies de contacto han de eliminarse.
+       Todas las superficies de los elementos mecanizados estarán libres de irregularidades (filos cortantes,
+       rebabas, esquinas agudas, etc.).
+       Todas las costuras soldadas se limpiarán cuidadosamente para eliminar escorias residuales.
+       No deben originarse daños en la superficie o fisuras debido al doblado y achaflanado; tales perjuicios
+       pueden evitarse mediante consideraciones de las propiedades del material, elección de radios de
+       curvatura grandes y trabajo del material a una temperatura apropiada.
+       El material ha de trabajarse en frío o a la temperatura rojo cereza claro (alrededor de 950°C). No está
+       permitido trabajar o solicitar el material en un estado de temperatura intermedio (rojo azul).
+       Todo elemento provisional que por razones de fabricación debe ser soldado a la estructura, se des-
+       guazará posteriormente con soplete, sin dañar la estructura. No se admitirá el trabajo con maza o
+       martillo. Los restos de cordones de soldadura se eliminarán con piedra esmeril, fresa o lima.
+
+25.    INSPECCIÓN, ENSAYOS, RECHAZOS, RECEPCIÓN
+
+       La Dirección de Obra realizará inspecciones a efectos de asegurarse sobre la calidad de la estructura
+       y el cumplimiento sobre las especificaciones, normas, planos, etc. Realizará además el seguimiento
+       cronológico de la producción e intervendrá al ser detectadas desviaciones, teniendo en todo momento
+       derecho para rechazar cualquier elemento o proceso de fabricación y/o montaje no satisfactorio. Las
+       inspecciones se podrán realizar en cualquier momento del proceso de fabricación, montaje y
+       construcción sin previo aviso.
+
+       Realizará además el seguimiento cronológico de la producción e intervendrá al ser detectadas
+       desviaciones, teniendo en todo momento autorización o derecho para rechazar cualquier elemento o
+       proceso de fabricación y/o montaje no satisfactorio.
+
+       Las inspecciones se podrán realizar en cualquier momento de la construcción sin previo aviso.
+
+       El Contratista deberá avisar con ajuste al plan de trabajo, la fecha de la realización de algún trabajo
+       que requiera la presencia y aprobación de la Dirección de Obra.
+
+       El Contratista deberá tomar las previsiones necesarias para permitir y facilitar las inspecciones de
+       los materiales y métodos de fabricación y/o montaje por parte de la Dirección de Obra. Se tendrá
+                    Proyecto:                                    Código YPF:
+
+                                                                  LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                             003001-E0
+                       Planta de Tratamiento de Crudo-02
+                                      LANor                      Código Contratista
+
+                                                                      5297-01-0000-IG-ES-ET-001
+
+                    Fase:                                              Fecha de emisión:   01/10/2026
+
+                                   EJECUCIÓN                                     Página:     46 de 53
+
+
+ libre acceso a los lugares donde se estén desarrollando las tareas y el Contratista deberá respetar
+ sus indicaciones de los citados, que se harán por escrito.
+
+ Se realizarán los ensayos que se enumeran a continuación y que deberán contar con la aprobación
+ de la Dirección de Obra. En las chapas, perfiles y barras realizarán ensayos e inspecciones o
+ entregará certificados del fabricante, necesarios para asegurar el cumplimiento de las normas y
+ requisitos solicitados, realizando además controles visuales y dimensionales.
+ La calificación de procedimientos de soldadura y de soldadores se realizará de acuerdo con los
+ procedimientos del Contratista aprobados por la Dirección de Obra, con las cantidades y tipos de
+ ensayo siguientes:
+     •   Control visual y dimensional
+     •   Ensayos de tracción por soldador y por procedimiento.
+
+ Las soldaduras serán verificadas mediante:
+     •   Control visual y dimensional
+     •   Tintas penetrantes en él % de soldaduras indicadas por el sistema de calidad de la Obra.
+     •   Ensayos de rayos X, Gamma (según espesores) o Ultrasonido para las soldaduras a tope o
+         en el caso de soldaduras defectuosas a elección de la Dirección de Obra o donde lo
+         especifique el sistema de calidad de la Obra.
+     •   El control de espesores de las capas de recubrimiento y ensayo de adherencias.
+     •   El control del abulonado en lugares a determinar por la Dirección de Obra.
+
+ Sin que la siguiente enumeración sea taxativa, exhaustiva y/o limitativa, la dirección de Obra podrá
+ realizar las siguientes inspecciones:
+     •   Se inspeccionarán las superficies a ser pintadas.
+     •   Se realizarán controles dimensionales.
+     •   Se verificará el alineamiento, verticalidad y nivelación de la estructura tanto en su conjunto
+         como en sus partes componentes.
+     •   Se realizará toda otra inspección y/o ensayo necesario para verificar que la estructura cumple
+         con esta especificación.
+
+Todos los materiales, partes o elementos estructurales que muestren defectos irremediables o
+importantes, fabricación incorrecta, reparaciones excesivas o que no estén de acuerdo con esta
+especificación, serán rechazados independientemente del momento en que se descubra la anomalía
+y aún en el caso de que aquellos hubieran sido previamente aprobados.
+Durante el curso del trabajo de fabricación de las estructuras metálicas y en el momento de la entrega
+de los materiales en el sitio destinado para tal fin, todo el suministro podrá será inspeccionado por La
+Dirección de Obra con el fin de realizar la revisión de los siguientes aspectos:
+     •   La conformidad de los materiales respecto a las especificaciones mecánicas y químicas.
+     •   La conformidad dimensional y el aspecto visual de los materiales usados.
+                         Proyecto:                                   Código YPF:
+
+                                                                      LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                 003001-E0
+                            Planta de Tratamiento de Crudo-02
+                                           LANor                     Código Contratista
+
+                                                                          5297-01-0000-IG-ES-ET-001
+
+                         Fase:                                             Fecha de emisión:   01/10/2026
+
+                                        EJECUCIÓN                                    Página:     47 de 53
+
+
+          •   La conformidad dimensional de la estructura global.
+          •   La correcta ejecución de las juntas de conexión de los miembros estructurales, empernadas
+              o soldadas, de acuerdo con lo indicado en los planos de proyecto.
+          •   El grado y precisión en el preensamblado de las estructuras.
+          •   La correcta aplicación del tratamiento de la superficie en los miembros estructurales, del
+              acabado final según el esquema de pintura indicado.
+          •   El correcto empaque y preparación para embarque.
+
+25.1   REVISIÓN DE MATERIALES Y PRUEBAS
+
+       La revisión de los materiales y las pruebas abarcarán los siguientes aspectos:
+       a) Revisiones Dimensionales de Renglones Individuales
+          La Dirección de Obra podrá verificar el 5 % de cada lote de piezas presentadas para su prueba.
+          En caso de error, dicho porcentaje se incrementará de la manera siguiente:
+              •   10 % en caso de 1 error.
+              •   20 % en caso de 2 errores.
+              •   40 % en caso de 3 errores.
+              •   80 % en caso de 4 errores.
+
+       b) Pruebas Dimensionales Globales
+          Las pruebas de dimensiones globales se realizarán durante el preensamblado, para el caso de
+          estructuras completas o partes de las mismas que conformen un conjunto. El número de pruebas
+          no será menor de una prueba por cada 50 toneladas o fracción, por ejemplo: para 80 toneladas,
+          le corresponden 2 pruebas.
+       c) Otras pruebas
+          Durante el curso de sus visitas, La Dirección de Obra podrá efectuar revisiones visuales en lo
+          que concierne a la fabricación de las juntas de conexión y la calidad de su ejecución. Podrá
+          efectuar revisiones especiales respecto a formas, agujeros, soldaduras, preparación de superficie
+          y marcas.
+          Cuando se considere necesario, las soldaduras serán sometidas a pruebas no destructivas.
+          Cuando sea necesario, la pintura que conforma el acabado final será examinada para verificar su
+          apariencia, continuidad y espesor, y para asegurar que la preparación para el empaque, no se
+          inició antes de que se hubiesen secado completamente las capas aplicadas.
+
+26.    TRANSPORTE Y MONTAJE
+
+26.1   MARCAS
+
+       Cuando existiera peligro de confusión los elementos deberán marcarse claramente para su
+       identificación. Dicha marca aprobada será la que se utilizará en los planos de fabricación y montaje
+       del elemento.
+                          Proyecto:                                     Código YPF:
+
+                                                                         LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                    003001-E0
+                             Planta de Tratamiento de Crudo-02
+                                            LANor                       Código Contratista
+
+                                                                             5297-01-0000-IG-ES-ET-001
+
+                          Fase:                                               Fecha de emisión:   01/10/2026
+
+                                          EJECUCIÓN                                     Página:     48 de 53
+
+
+       Cada marca incluirá el número del componente individual o pieza y el número del plano de montaje,
+       y de taller. correspondiente. Se identificará la estructura, el nivel y si hay aceros de distintas
+       calidades.
+       Aun cuando EL FABRICANTE preensamble algunos elementos estructurales en el taller, para formar
+       un conjunto, cada elemento llevará marcas separadas.
+       Se utilizarán marcas tipo relieve. Las marcas pintadas no son aceptables.
+       La marca se realizará por estampado sobre el acero antes del galvanizado o pintado, con números
+       y/o letras bien legibles. El FABRICANTE podrá proponer otro sistema a convenir y tendrá que ser
+       aprobado por la DO para poder ser utilizado.
+       El FABRICANTE podrá proponer otro sistema a convenir y tendrá que ser aprobado por la DO para
+       poder ser utilizado.
+
+26.2   EMBALAJE
+
+       a) Empaquetado de Estructuras
+       Los elementos rectos de las estructuras serán sujetos en atados y empaquetados.
+       Los perfiles o elementos serán acondicionados en paquetes, perfectamente atados y apilados en
+       capas sucesivas con tacos intermedios de madera y con tirantes separadores que sirvan a su vez de
+       calce para evitar corrimientos durante el transporte y permitir la circulación de aire entre los perfiles
+       empaquetados e impedir el contacto entre ellos (evitando la corrosión blanca).
+       Los elementos de protección de las plataformas, tales como barandas y escaleras marineras con o
+       sin jaula de seguridad, serán removidos de la estructura principal correspondiente, y serán agrupados
+       y empaquetados en forma compacta para minimizar la relación volumen/peso de los bultos.
+       Todo material suelto, como bulones, tuercas, arandelas, cartelas, etc., será empaquetado en
+       estuches o cajas de metal o madera.
+       b) Empaquetado de bulones
+       Los bulones, tuercas y arandelas sueltos, serán empacados en cajas cuidadosamente marcadas por
+       lo menos en dos sitios, con pintura resistente al agua, indicando la correspondencia a la estructura
+       según codificación de EL FABRICANTE, el número de plano de proyecto, y el tipo y calidad de los
+       bulones, tuercas y arandelas allí contenidos.
+       Como regla general, cada caja debe contener solamente un solo tipo de bulón, en cuanto a diámetro
+       y longitud, identificada para cada estructura diferente. No se permitirá el empaquetado de bulones
+       mezclados entre sí, de varias estructuras juntas.
+       Todos los elementos a utilizar para el embalaje serán propiedad del Contratista, debiendo retirarlos
+       del emplazamiento al finalizar el montaje.
+                         Proyecto:                                   Código YPF:
+
+                                                                      LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                 003001-E0
+                            Planta de Tratamiento de Crudo-02
+                                           LANor                     Código Contratista
+
+                                                                          5297-01-0000-IG-ES-ET-001
+
+                         Fase:                                             Fecha de emisión:   01/10/2026
+
+                                        EJECUCIÓN                                    Página:     49 de 53
+
+
+       En caso de existir chapas con bordes biselados preparadas para ser soldadas en obra, deberán
+       protegerse adecuadamente.
+
+26.3   TRANSPORTE
+
+       Ningún elemento será cargado hasta que el estado de protección superficial lo permita.
+       Durante la carga de los elementos de las estructuras, EL FABRICANTE tendrá la precaución de izar
+       cada elemento siempre según su eje de inercia mayor y sin golpes o impactos.
+       Los materiales serán transportados y entregados en camión, con sus listas detalladas de empaque,
+       en el sitio destinado para tal fin.
+
+26.4   ALMACENAMIENTO – ACOPIO DE MATERIALES
+
+       Los materiales deberán acopiarse a modo de evitar su degradación.
+       Los acopios se deben realizar bajo techo, y se separarán del suelo y paredes al menos 15 cm.
+       Para el acopio de barras y perfilería de acero, se seguirá lo indicado en el Art 20.3.1.3 del CIRSOC
+       201:2025.
+       Ningún elemento estará en contacto directo con el suelo, sino que será acopiado sobre tacos o
+       tirantes de madera, en cantidad suficiente como para que no se produzcan deformaciones
+       permanentes.
+       Las chapas y cartelas se distribuirán sobre planchas de madera.
+       Todos los bulones y arandelas, una vez clasificados y contados serán mantenidos en sus cajones de
+       origen, con su correspondiente identificación.
+
+27.    MONTAJE
+
+27.1   GENERALIDADES
+
+       El Contratista deberá proveer todo el personal capacitado, elementos y equipos para la realización
+       satisfactoria del montaje.
+       Durante la descarga de los elementos de las estructuras, se tendrá la precaución de izar cada
+       elemento siempre según su eje de mayor inercia y sin golpes o impactos.
+       Se proyectarán las uniones de montaje en forma tal que todos sus elementos sean accesibles a una
+       limpieza posterior. En los casos que ello sea posible y queden elementos ocultos no se los cubrirá
+       hasta que hayan sido inspeccionados y aprobados por Dirección de Obra.
+       La Dirección de Obra autorizará el montaje de la estructura cuando se hayan cumplido las condicio-
+       nes de resistencia mínima de los hormigones de las fundaciones.
+                          Proyecto:                                    Código YPF:
+
+                                                                       LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                  003001-E0
+                             Planta de Tratamiento de Crudo-02
+                                            LANor                      Código Contratista
+
+                                                                            5297-01-0000-IG-ES-ET-001
+
+                          Fase:                                              Fecha de emisión:   01/10/2026
+
+                                         EJECUCIÓN                                     Página:     50 de 53
+
+
+       El método a utilizar para el armado de la estructura por espacio disponible y condiciones de seguridad
+       serán previamente aprobados por la Dirección de Obra.
+       El Montador será responsable de:
+       a) La seguridad de la construcción en general y en especial sobre la colocación y retiro de los
+          andamios de apuntalamiento o sostén.
+       b) La seguridad de los elementos estructurales durante su traslado, así como de los recaudos para
+          evitar la aparición de tensiones o deformaciones residuales.
+       c) La aplicación de los recaudos constructivos y controles inherentes a la correcta ejecución y
+          montaje de la obra.
+
+27.2   ARMADO
+
+       Las manipulaciones de carga, descarga, transporte a pie de obra y montaje se realizará con el
+       cuidado suficiente como para evitar solicitaciones excesivas y daños en elementos de la estructura
+       metálica o en estructuras de la obra que pudieran servir de apoyo a los equipos y máquinas de
+       montaje, o apoyo de la misma estructura metálica a pie de la obra.
+       Se cuidarán especialmente, protegiéndolas si fuera necesario, las partes sobre las que hayan de
+       fijarse las cadenas, cables o ganchos a utilizar en la elevación y sujeción de las piezas de la
+       estructura.
+       Durante el izado de las estructuras se evitará el arrastre de las mismas en el suelo; utilizándose para
+       ello ruedas o patines que cubran cualquier riesgo.
+       Todos los elementos en los que se presenten alteraciones en su constitución original (galvanizado,
+       alineación, rectitud de barras) o que presenten defectos de fabricación (no coincidencia de agujeros,
+       longitud, etc.) deberán ser sometidos al análisis de la Dirección de Obra quien determinará la
+       posibilidad de su reparación o su rechazo.
+       Durante el montaje la estructura será asegurada provisoriamente mediante pernos, tornillos, apeos,
+       riendas, estructuras auxiliares o cualquier otro elemento aprobado por Dirección de Obra de manera
+       tal de asegurar su estabilidad y resistencia.
+       En el montaje se prestará la debida atención al ensamble de las distintas piezas, con el objeto de
+       que la estructura adopte la forma prevista en el proyecto, debiéndose comprobar cuantas veces fuera
+       necesario la exacta colocación relativa de sus diversas partes.
+       Las placas de asiento sobre hormigón se harán descansar provisoriamente sobre placas que se
+       inmovilizarán una vez conseguidas las alineaciones, niveles de verticalidad definitiva. No se pro-
+       cederá a la fijación última mientras no se encuentren colocados cierto número de elementos que
+       aseguren la correcta disposición del conjunto, a satisfacción de la Dirección de Obra.
+       Las placas de base se proyectarán, nivelarán y suplementarán de manera tal de permitir una perfecta
+       y completa introducción del relleno de base o inyección de lechada. Se mantendrán si los hubiera los
+                          Proyecto:                                    Código YPF:
+
+                                                                       LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                  003001-E0
+                             Planta de Tratamiento de Crudo-02
+                                            LANor                      Código Contratista
+
+                                                                            5297-01-0000-IG-ES-ET-001
+
+                          Fase:                                              Fecha de emisión:   01/10/2026
+
+                                         EJECUCIÓN                                     Página:     51 de 53
+
+
+       apoyos provisionales de la estructura hasta que se haya alcanzado el suficiente endurecimiento del
+       relleno.
+       Completado el armado de toda la estructura se efectuará el apretado de bulones con llaves de torque
+       ajustable, procediéndose luego, con una cuadrilla aparte, a efectuar un repaso final o ajuste y la
+       comprobación del sistema de ajuste para evitar el aflojamiento de las tuercas.
+
+28.    PROTECCIÓN ANTICORROSIVA
+
+       Se deberán tomar las medidas adecuadas con aprobación de Dirección de Obra, para la protección
+       contra la corrosión de la superficie y elementos que no serán protegidos hasta el montaje, por ej.:
+       elementos que en obra serán embebidos en hormigón que no llevan protección anticorrosiva.
+
+28.1   GALVANIZADO
+
+       Los elementos indicados (pisos rejillas, escalones, bulonería) deberán ser galvanizados en caliente
+       Las superficies a galvanizar deberán estar limpias, libres de grasa, herrumbre, óxidos, escamas de
+       laminación, polvo, masilla, pintura vieja o cualquier otro defecto.
+       El galvanizado será en caliente empleando para los baños zinc siderúrgico puro.
+       La rosca de las tuercas galvanizadas deberá repasarse hasta que obtenga un roscado normal sobre
+       los tornillos.
+       El recubrimiento de zinc estará bien adherido, será liso, continuo y libre de imperfecciones tales como
+       manchas, grumos, burbujas, rugosidades, escorias, pliegues, etc.
+       El material que se haya curvado durante el proceso de galvanizado se enderezará mediante prensa.
+       En el caso de autorizarse para algún caso especial bulones de diámetro menor que 12mm estos
+       serán fabricados con materiales no corroíbles.
+       Si se detectaran pequeños defectos y se autorizase su reparación, ellas deberán realizarse con
+       métodos apropiados por ej.: Soldaduras con estaño, cincado por pulverización, pintado con polvo de
+       zinc de espesor equivalente al galvanizado original, con vehículo epoxi.
+       Se evitará producir fragilidad en el material por exceso de temperatura del desoxidante o por
+       temperaturas excesivamente altas del baño de zinc. A estos efectos y en general para el galvanizado
+       en caliente se cumplirá con las normas ASTM A-123M, A-143/A, A-153M y ASTM F2329.
+       Las estructuras tendrán detalles a efectos de que el galvanizado pueda fluir, cubrir y salir de las
+       piezas estructurales de acuerdo con Guía de Diseño: El Diseño de Productos que se Galvanizarán
+       en Caliente Después de su Fabricación de la American Galvanizers Association o equivalente local.
+                         Proyecto:                                   Código YPF:
+
+                                                                      LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                                 003001-E0
+                            Planta de Tratamiento de Crudo-02
+                                           LANor                     Código Contratista
+
+                                                                          5297-01-0000-IG-ES-ET-001
+
+                         Fase:                                             Fecha de emisión:   01/10/2026
+
+                                        EJECUCIÓN                                    Página:     52 de 53
+
+
+29.    REPLANTEO
+
+       El replanteo de los ejes de las estructuras será realizado con topografía. Se demarcarán los ejes de
+       estructuras y las dimensiones se escuadrarán según dos ejes ortogonales de replanteo para su
+       alineación.
+
+30.    PUESTA A TIERRA
+
+       La totalidad de las estructuras principales deberá tener conexión para puesta a tierra vinculada a
+       algunas columnas en su parte inferior.
+       La conexión se realizará según punto 8.3 de la presente.
+
+31.    PRESTACIONES REQUERIDAS PARA LA CUBIERTA Y CERRAMIENTOS LATERALES
+
+       Todas las propiedades, características, y detalles deberán responder a las especificaciones del
+       fabricante. El montaje deberá realizarse con personal capacitado y con experiencia suficiente. No se
+       permite caminar directamente sobre las chapas durante el montaje.
+       El contratista deberá presentar para su aprobación, los detalles constructivos antes de iniciar el
+       montaje.
+       El almacenaje de las chapas debe hacerse en lugar seco, a los efectos de evitar manchas por agua
+       atrapada o por condensación, preferentemente de punta o de canto.
+
+31.1   ASEGURAMIENTO DE CALIDAD
+
+31.1.1 RECURSOS
+
+       Se obtendrán los diferentes materiales de un proveedor único para cada tipo de material.
+
+31.1.2 CALIFICACIONES DE LOS FABRICANTES
+
+       Los fabricantes de cada insumo estarán especializados en la fabricación de los diferentes materiales
+       especificados, con un mínimo de 5 años de documentada experiencia y tendrán las instalaciones
+       necesarias para cumplir con todos los requerimientos del contrato.
+
+31.1.3 ACEPTACION O RECHAZO
+
+       La Dirección de Obra tendrá el derecho de aceptar o rechazar cualquier elemento de los elementos
+       descriptos en esta Especificación que no cumpla con los procedimientos de instalación
+       correspondientes.
+       La siguiente es una lista informativa pero no excluyente de los defectos y fallas que se pueden
+       detectar:
+                   Proyecto:                                Código YPF:
+
+                                                             LANor-PTCLANOR02-VCD26288-S-ET-
+                                                                        003001-E0
+                      Planta de Tratamiento de Crudo-02
+                                     LANor                  Código Contratista
+
+                                                                 5297-01-0000-IG-ES-ET-001
+
+                   Fase:                                          Fecha de emisión:   01/10/2026
+
+                                 EJECUCIÓN                                  Página:     53 de 53
+
+
+a)   Fallas en la adhesión o cohesión de los selladores de juntas.
+b)   Degradación o manchado de la superficie de cualquier material.
+c)   Marcas de golpes o pliegues indebidos en las superficies de los materiales.
+d)   Migración, manchado de materiales embutidos.
+e)   Excesivo cambio de color, opacado, o depósito de suciedad.
+f)   Incompatibilidad de los selladores con materiales adyacentes.
+g)   Deformaciones por causas ajenas a movimientos del edificio.
+h)   Cambio en la dureza Shore A en los selladores.
+i)   Desplazamiento en los rellenos de juntas.
+j)   Apariencia objetable como resultado de mano de obra defectuosa o materiales no aprobados.
+k)   Filtraciones.
+

@@ -1,0 +1,960 @@
+                                                                           J1700 Montaje de Instrumentos
+Tipo: ESPECIFICACIÓN                         Ámbito: Upstream - Argentina                                                                                      Código: 11144-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                             Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+
+
+1 Índice
+
+Contenido
+1      ÍNDICE ........................................................................................................................................................................1
+2      OBJETO .....................................................................................................................................................................3
+3      ÁMBITO DE APLICACIÓN ........................................................................................................................................3
+4      CONSIDERACIONES PRINCIPALES .......................................................................................................................3
+5      ESPECIFICACIÓN .....................................................................................................................................................3
+    5.1    CONEXIONADO A PROCESO DE INSTRUMENTOS........................................................................................................3
+      5.1.1   Conexiones primarias a proceso .................................................................................................................3
+      5.1.2   Uso de Tubing, Sello Remoto o Cañería .....................................................................................................3
+      5.1.3   Tomas y líneas de impulsión........................................................................................................................4
+      5.1.4   Sellos separadores ......................................................................................................................................4
+      5.1.5   Stand pipes ..................................................................................................................................................5
+      5.1.6   Criterios de accesibilidad .............................................................................................................................6
+      5.1.7   Planos Estándar de montaje de YPF ...........................................................................................................6
+    5.2    MONTAJE DE INSTRUMENTOS .................................................................................................................................6
+      5.2.1   Instrumentos insertados en línea .................................................................................................................6
+      5.2.2   Instrumentos de montaje radial (inserción radial en línea) ..........................................................................6
+      5.2.3   Instrumentos de Nivel montados en recipientes ..........................................................................................7
+    5.3    MATERIALES DE MONTAJE ......................................................................................................................................7
+      5.3.1   Tubing de Instrumentos ...............................................................................................................................7
+      5.3.2   Uniones y conectores ...................................................................................................................................8
+      5.3.3   Válvulas y manifolds ....................................................................................................................................8
+    5.4    OTROS ASPECTOS DEL MONTAJE Y CONEXIONADO ...................................................................................................8
+      5.4.1   Soldaduras ...................................................................................................................................................8
+      5.4.2   Criterios de manipulación e instalación .......................................................................................................9
+      5.4.3   Conexiones roscadas ...................................................................................................................................9
+      5.4.4   Traceado y/o aislación .................................................................................................................................9
+      5.4.5   Prueba hidráulica .........................................................................................................................................9
+      5.4.6   Soportación de los instrumentos ................................................................................................................10
+      5.4.7   Identificación de los instrumentos ..............................................................................................................10
+      5.4.8   Limpieza y soplado de líneas .....................................................................................................................10
+    5.5    SUMINISTRO Y DOCUMENTACIÓN...........................................................................................................................10
+      5.5.1   Preparación para envío, embalaje y marcado ...........................................................................................10
+      5.5.2   Documentación ..........................................................................................................................................11
+6      INDICADORES, REGISTROS Y RIESGOS DEL PROCESO .................................................................................11
+    6.1        INDICADORES ......................................................................................................................................................11
+    6.2        REGISTROS .........................................................................................................................................................11
+    6.3        RIESGOS Y ACCIONES MITIGANTES ........................................................................................................................12
+7      ANEXOS Y REFERENCIAS ....................................................................................................................................12
+                                                                                                           BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         19/04/2017
+       GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                              GUILLERMO                                          FIL                                  09:37:00 a.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                     1 / 16
+                                                                          J1700 Montaje de Instrumentos
+Tipo: ESPECIFICACIÓN                        Ámbito: Upstream - Argentina                                                                                      Código: 11144-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                            Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                        YPF PRIVADA
+
+
+    7.1       ANEXOS ..............................................................................................................................................................12
+    7.2       NORMATIVA RELACIONADA ...................................................................................................................................12
+    7.3       DEFINICIONES Y ABREVIATURAS ............................................................................................................................14
+8     APROBACIÓN .........................................................................................................................................................14
+    8.1       VIGENCIA ............................................................................................................................................................14
+    8.2       DISPOSICIONES GENERALES Y TRANSITORIAS ........................................................................................................14
+    8.3       HISTORIAL ...........................................................................................................................................................14
+    8.4       APROBACIÓN COLEGIADA .....................................................................................................................................14
+    8.5       CATEGORÍA DE CLASIFICACIÓN DEL ACTIVO DE INFORMACIÓN................................................................................14
+ANEXO I: TI-J1700-01 SOPORTES ESTÁNDAR PARA INSTRUMENTOS.................................................................15
+ANEXO II: TI-J1700-02 MEDIDA DE CAUDAL POR PRESIÓN DIFERENCIAL PARA LÍQUIDOS ............................15
+ANEXO III: TI-J1700-03 MEDIDA DE CAUDAL POR PRESIÓN DIFERENCIAL PARA GASES ................................15
+ANEXO IV: TI-J1700-04 MONTAJE DE MEDIDORES DE PRESIÓN PARA LÍQUIDOS .............................................15
+ANEXO V: TI-J1700-05 MONTAJE DE MEDIDORES DE PRESIÓN PARA GASES ...................................................15
+ANEXO VI: TI-J1700-06 MONTAJE DE MEDIDORES DE PRESIÓN DIFERENCIAL PARA LIQUIDOS ...................15
+ANEXO VII: TI-J1700-07 MONTAJE DE MEDIDORES DE PRESIÓN DIFERENCIAL PARA GASES .......................15
+ANEXO VIII: TI-J1700-08 MONTAJE DE INDICADORES DE NIVEL DE VIDRIO .......................................................15
+ANEXO IX: TI-J1700-09 MONTAJE DE INTERRUPTORES DE NIVEL .......................................................................15
+ANEXO X: TI-J1700-10 MONTAJE DE TRANSMISORES DE NIVEL A DESPLAZADOR ..........................................15
+ANEXO XI: TI-J1700-11 INSTALACIÓN Y DETALLES DE STAND PIPES .................................................................15
+ANEXO XII: TI-J1700-12 MEDIDA DE NIVEL POR DP CELL CON TOMAS DIRECTAS - ATMOSFERICO..............15
+ANEXO XIII: TI-J1700-13 MEDIDA DE NIVEL POR DP CELL CON TOMAS DIRECTAS - PRESURIZADO .............15
+ANEXO XIV: TI-J1700-14 MEDIDA DE NIVEL POR DP CELL CON SELLOS - ATMOSFERICO ..............................16
+ANEXO XV: TI-J1700-15 MEDIDA DE NIVEL POR DP CELL CON SELLOS - PRESURIZADO ................................16
+
+
+
+
+                                                                                                          BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         19/04/2017
+     GALANTERNIK, NICOLAS                                  VERNA, FACUNDO
+                                                                                                             GUILLERMO                                          FIL                                  09:37:00 a.m.
+
+                   Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                               CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+     © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+     esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                    2 / 16
+                                                                         J1700 Montaje de Instrumentos
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11144-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+2 Objeto
+Definir los criterios generales de montaje y conexionado a proceso de instrumentos.
+
+
+3 Ámbito de aplicación
+YPF S.A. Upstream - Argentina
+
+
+4 Consideraciones principales
+Esta especificación busca definir criterios generales de montaje y conexionado aguas abajo de la válvula raiz que
+forma parte de la conexión primaria al proceso. Quedan fuera del alcance específico de este documento:
+        a) Los conexionados diferentes de los de proceso (neumático, eléctrico, de detectores de gas, etc.).
+        b) Las conexiones primarias a proceso.
+
+
+5 Especificación
+
+5.1 Conexionado a proceso de instrumentos
+
+5.1.1 Conexiones primarias a proceso
+Las conexiones primarias se ajustan a los siguientes Tipicos de cañerias y Recipientes:
+        Presión y temperatura                   PE(EP)-L-0100.30
+        Caudal y toma muestras                  PE(EP)-L-0100.31
+        Conexiones en recipientes               PE(EP)-C-0100.13
+Las conexiones primarias especiales que aparezcan en los proyectos por necesidades del proceso no contempladas
+en estos documentos, serán diseñadas particularmente para cada aplicación (Ej.: Productos letales).
+Se deberán verificar que la posición y orientación de las tomas primarias esté de acuerdo a lo indicado en las
+especificaciones aplicables y en el presente documento para cada aplicación.
+Las conexiones primarias citadas incluirán la válvula o válvulas de raíz de la cañería para aislamiento de la línea de
+impulsión.
+
+5.1.2 Uso de Tubing, Sello Remoto o Cañería
+Las líneas de impulsión comprendidas entre las válvulas de raíz y los propios instrumentos serán diseñadas por
+defecto mediante el uso de tubing, a excepción de Fluidos Letales que se realizarán mediante cañerias o Sellos
+Remotos. En caso de no ser adecuado el uso de tubing, se dará prioridad al uso de sello y capilar o, en última
+instancia, cañería soldada, siendo aplicable en tal caso la especificación 10898-ES-21030700-110A L0200 Clases de
+Cañerías para Plantas.
+La especificación de tubing de instrumentos se detalla en el punto 5.3.1.
+
+
+                                                                                                         BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         19/04/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                            GUILLERMO                                          FIL                                  09:37:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   3 / 16
+                                                                         J1700 Montaje de Instrumentos
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11144-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+Cuando se use cañería en conexionados de Instrumentos a recipientes, la clase a utilizar por orden de prioridad es la
+siguiente:
+        a) La que defina la Especificación del recipiente.
+        b) La que definan las Especificaciones de las líneas asociadas al recipiente.
+Si el recipiente presenta lineas de entrada/salida con diferente clases se utilizará la más restrictiva en cuanto a rating,
+y los materiales aplicables a cada sección o servicio.
+Se prestará especial atención a los recipientes con recubrimientos internos (cladding), ya que en estos casos el
+material del recipiente puede no ser indicativo del requerido.
+Las unidades paquete de proceso tendrán el mismo tratamiento para el montaje de la instrumentación que el resto de
+la unidad salvo autorización de YPF en otro sentido.
+Los criterios anteriores serán de aplicación a las Ingenierías y a toda la cadena de subcontratistas del proyecto.
+
+5.1.3 Tomas y líneas de impulsión
+En corrientes líquidas estables a la temperatura ambiente:
+        a) Las tomas primarias estarán en el cuadrante inferior de las líneas de proceso horizontales.
+        b) Las líneas de impulsión tendrán caída constante y sin bolsas hacia el instrumento.
+En corrientes gaseosas a la temperatura ambiente:
+        a) Las tomas primarias estarán en el cuadrante superior de las líneas de proceso.
+        b) Las líneas de impulsión tendrán caída constante y sin bolsas hacia la línea.
+Los diseños de los conexionados a proceso deben considerar (en caso que las nececidades del proceso lo requieran)
+las necesidades de mantenimiento (p.e. TES para limpieza por baqueta de las tomas primarias) y accesibilidad para
+operación.
+Las líneas de impulsión serán tan cortas como permitan la accesibilidad y la temperatura del proceso.
+Las líneas de impulsión serán adecuadamente soportadas en toda su longitud, de modo que no existan cargas sobre
+las tomas primarias y sean suficientemente flexibles para absorber las dilataciones térmicas.
+Las líneas de impulsión a elementos primarios de caudal se tenderán paralelas en la mayor longitud posible de su
+recorrido a fin de que queden equilibradas.
+La acometida final al instrumento se realizará habitualmente mediante manifold o válvula de aislamiento tan próxima
+al mismo como sea posible y con igual grado de accesibilidad que el instrumento asociado.
+Se prohíbe el uso de elementos de montaje que en caso de retirado del instrumento dejen la línea de impulsión
+aislada exclusivamente por la válvula de raíz.
+
+5.1.4 Sellos separadores
+En la medida de presión y caudal por presión diferencial con fluidos sucios, viscosos o corrosivos se usarán, en lo
+técnicamente posible, conexiones a proceso mediante diafragmas separadores y capilares.
+En la medida de nivel por presión diferencial, se usarán, en lo técnicamente posible, conexiones a proceso mediante
+diafragmas separadores y capilares en los siguientes casos:
+
+                                                                                                         BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         19/04/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                            GUILLERMO                                          FIL                                  09:37:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   4 / 16
+                                                                         J1700 Montaje de Instrumentos
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11144-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+        a) Fluidos sucios, viscosos o corrosivos.
+        b) Recipientes presurizados por un gas húmedo o un vapor.
+Los aspectos relevantes para el montaje de sellos para medida de Nivel son:
+        a) El tamaño de sello recomendado es de 3” para optimizar la sensibilidad.
+        b) Para tomas directas se recomiendan sellos tipo sandwich.
+        c) Para tomas directas en productos que puedan polimerizar, se recomiendan sellos extendidos.
+        d) Cuando lo permita la aplicación, los sellos pueden tener conexiones a proceso de ¾” NPT-H.
+En caso de recipientes presurizados por un gas húmedo o vapor, se emplearán sellos y capilares en ambas tomas, a
+fin de evitar los problemas asociados a las líneas de referencia.
+Cuando los fluidos sean sucios, viscosos o puedan polimerizar, es recomendable que los sellos se instalen siempre
+directamente sobre el recipiente, y no sobre el stand pipe.
+Las principales limitaciones técnicas a tener en cuenta para el uso de sellos separadores son su temperatura máxima
+de servicio y la pérdida de sensibilidad en los rangos bajos de medida.
+En tamaños o ratings elevados, los sellos y bridas asociadas que no sean de montaje directo se soportarán
+independientemente para que no ejerzan esfuerzos mecánicos sobre la toma primaria.
+Los sellos con anillo de flushing incluirán tomas de ½” NPT-H con tapón.
+Los capilares se soportarán de modo que no puedan quedar expuestos a temperaturas ambientales diferentes y
+serán protegidos mecánicamente.
+El uso de potes de sello con líquido intermedio, aunque previsto en los planos típicos, se restringirá a los casos
+especiales que autorice o indique YPF en cada proyecto.
+
+5.1.5 Stand pipes
+Los materiales del stand pipe se ajustarán a la clase de cañerias correspondiente a las lineas que se conecten al
+recipiente.
+Los stand pipes estarán ejecutados con cañería de DN ≥ 2” y accesorios de material y serie adecuada al servicio.
+El stand pipe contará con válvulas de aislación del recipiente (de igual DN que la cañería de ejecución) así como
+válvulas de drenaje y venteo de ¾” con niple y tapón (salvo productos tóxicos o indicación en contra).
+Cuando el recipiente incluya doble válvula de aislación de equipos e instrumentos por motivos de presión, las
+válvulas del stand pipe serán también dobles en todas las tomas a instrumentos, drenajes y venteos.
+Cuando lo indique el diagrama de proceso, el drenaje del stand pipe será conducido a lugar seguro.
+Las conexiones de los instrumentos al stand pipe serán de igual tipo y dimensiones que las usadas para montaje
+directo al recipiente.
+Las conexiones de los instrumentos se realizarán mediante “TES” para salidas mayores o iguales a 1½” y mediante
+sockolets para salidas de 1” y menores.
+Las soldaduras perimetrales consecutivas (p.e. para dos “TES”) estarán separadas como mínimo 150 mm. La
+separación entre sockolets o entre sockolets y soldaduras perimetrales no será inferior a 100 mm.
+
+
+                                                                                                         BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         19/04/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                            GUILLERMO                                          FIL                                  09:37:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   5 / 16
+                                                                           J1700 Montaje de Instrumentos
+Tipo: ESPECIFICACIÓN                         Ámbito: Upstream - Argentina                                                                                      Código: 11144-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                             Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+Como criterio general, los instrumentos de nivel asociados a enclavamientos se montarán en lo posible sobre el
+recipiente y no sobre el stand pipe, con excepción de recipientes existentes, a fin de evitar la realización de nuevas
+conexiones en el recipiente.
+Los instrumentos de presión sólo podrán montarse excepcionalmente en el stand pipe y sólo cuando su función sea
+meramente la de indicación.
+
+5.1.6 Criterios de accesibilidad
+Los criterios de accesibilidad a cada instrumento se incluyen en la especificación 10856-ES-21030700-110A L0100
+Diseño de cañerias en instalaciones de superficie.
+Como criterio general, los instrumentos con líneas de impulsión se instalarán de modo que estén siempre accesibles
+desde instalaciones fijas.
+Los elementos de conexionado que puedan requerir acceso rutinario por operación o mantenimiento, como por
+ejemplo los recipientes de condensado, drenaje, etc., deberán estar siempre accesibles desde instalaciones fijas.
+Las válvulas de raíz deben quedar accesibles desde instalaciones fijas o, de no ser esto viable, quedar lo más
+agrupadas posibles para optimizar su acceso por medios móviles.
+En cualquier caso, todas las válvulas de raíz deben quedar accesibles por medio de una combinación viable de
+medios fijos y móviles (p.e. escalera portátil y plataforma).
+
+5.1.7 Planos Estándar de montaje de YPF
+Para los casos más frecuentes de conexionado a instrumentos YPF dispone de una serie de típicos de montaje, que
+se incluyen en los anexos a esta especificacion.
+Estos típicos, que incluyen recuentos estimativos de material y descripciones de los elementos que los componen,
+reflejan la filosofía general indicada en los puntos anteriores.
+Los citados típicos se usarán siempre que sean técnicamente adecuados a la aplicación considerada.
+Cuando el montaje considerado no se ajuste a ninguno de los típicos, la Ingeniería desarrollará los correspondientes
+planos particulares de montaje y los someterá a aprobación de YPF.
+
+
+5.2       Montaje de instrumentos
+
+5.2.1 Instrumentos insertados en línea
+Los instrumentos insertados en la propia línea (válvulas, Coriolis, etc.) serán en general bridados.
+Solamente para los casos de Servicios Auxiliares, para líneas con DN ≤ ½” se podrán usar conexiones roscadas y
+siempre que el fluido sea compatible con las mismas.
+El rating mínimo de las conexiones bridadas dependerá del instrumento, por lo que debe ser consultado en las
+especificaciones de diseño correspondientes.
+
+5.2.2 Instrumentos de montaje radial (inserción radial en línea)
+Los instrumentos que se insertan radialmente en la línea (como termovainas, másicos de dispersión térmica, sondas
+de analizadores, etc.) tendrán conexiones bridadas y roscadas.
+
+                                                                                                           BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         19/04/2017
+      GALANTERNIK, NICOLAS                                  VERNA, FACUNDO
+                                                                                                              GUILLERMO                                          FIL                                  09:37:00 a.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                     6 / 16
+                                                                         J1700 Montaje de Instrumentos
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11144-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+Nota: Ver especificación “J0500 Medida de Temperatura (Parte General)” para excepciones y otro tipo de conexiones en termovainas.
+
+Cuando sea posible, los instrumentos tendrán un seguro mecánico que evite su extracción involuntaria bajo presión.
+Los montajes de este tipo (salvo los correspondientes a termovainas) se documentarán en planos específicos de
+montaje realizados por la Ingeniería.
+
+5.2.3 Instrumentos de Nivel montados en recipientes
+En instrumentos con cámara externa (indicadores, desplazadores, etc.) se verificará siempre la distancia entre
+conexiones, por estar normalizadas en la mayoría de los casos.
+Se usarán tubos tranquilizadores en los siguientes casos:
+        a) Instrumentos de nivel con propósitos de medida fiscal o de inventario en tanques de almacenamiento.
+        b) Instrumentos de nivel de montaje superior en tanques de techo flotante.
+        c) Instrumentos insertos en balsas, recipientes de proceso o de almacenamiento a los que puedan afectar las
+           turbulencias o suciedad del líquido, ya sea en la calidad de la medida o en su integridad mecánica.
+Para los tubos tranquilizadores en tanques de almacenamiento o esferas se aplicará el diseño contenido en los
+Planos Estándar PE(EP)-D-0103 y PE(EP)-D-0203 respectivamente.
+El diseño descripto en los planos anteriores será complementado y/o modificado de acuerdo al tipo de equipo
+instalado y las recomendaciones del Proveedor.
+En medidas de nivel por presión diferencial con tomas directas al recipiente, la rama del transmisor conectada a la
+parte superior debe tener, en general, un nivel de líquido conocido para referenciar la medida.
+   Nota: cuando el líquido está presurizado por un gas totalmente seco (p.e. un blanketing) y sin posibilidad alguna de que la toma superior llegue
+   nunca a inundarse, la línea de referencia puede dejarse vacía aunque con válvula de drenaje.
+
+El diseño del conexionado a proceso debe contar con esta necesidad y con la posibilidad de rellenar dicha línea
+desde instalaciones fijas para la puesta en marcha.
+En algunas circunstancias puede requerirse complementar la línea de referencia con la instalación de un pote en la
+parte superior de la misma.
+Las conexiones a las líneas o potes de referencia tendrán siempre una mínima pendiente hacia los mismos a fin de
+garantizar en lo posible, su llenado y mantener el nivel de referencia.
+
+
+5.3 Materiales de montaje
+
+5.3.1 Tubing de Instrumentos
+Se admite únicamente el uso de tubing de ½” OD x 0,049”, en ASTM 269 Tp316 sin soldadura y acabado en frío,
+dureza máxima 80 Rb.
+        Espesor 0,049”                             Nº de ítem 200
+        Espesor 0,069”                             Nº de ítem 200 B
+   Nota: El número de Item se relaciona con el indicado en los típicos de montaje.
+
+El uso de espesores mayores (0,069”) sólo se hará en casos especiales de muy alta presión, o cuando la línea de
+impulsión requiera una protección mecánica especial debido a su tendido..
+
+
+                                                                                                         BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         19/04/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                            GUILLERMO                                          FIL                                  09:37:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   7 / 16
+                                                                          J1700 Montaje de Instrumentos
+Tipo: ESPECIFICACIÓN                        Ámbito: Upstream - Argentina                                                                                      Código: 11144-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                            Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                        YPF PRIVADA
+
+
+Cuando el DBD indique el uso de tubing para los esquemas de conexionado, se deberán verificar las limitaciones
+indicadas en este documento y la compatibilidad del acero inoxidable con el fluido de proceso.
+
+5.3.2 Uniones y conectores
+Unión a compresión en AISI 316
+         Unión estándar ½” OD x ½” OD                                                                   Nº de ítem 208
+         Unión pasamuros ½” OD x ½” OD                                                                  Nº de ítem 313
+Conectores rosca / compresión en AISI 316
+        Conector recto ½” OD x ½” NPT-M                                                                 Nº de ítem 201
+        Conector recto ½” OD x ½” NPT-H                                                                 Nº de ítem 208
+        Conector en codo ½” OD x ½” NPT-M                                                               Nº de ítem 302
+        Conector en codo ½” OD x ½” NPT-H                                                               Nº de ítem 300
+
+   Nota: El número de Item se relaciona con el indicado en los típicos de montaje.
+
+
+
+5.3.3 Válvulas y manifolds
+Válvula de asiento de paso fino en A-182 F316
+         Conexiones ½” OD              Nº de ítem 315
+Válvula esférica de ¼ de vuelta en A-182 F316
+         Conexiones ½” OD              Nº de ítem 317
+Nota: La válvula esférica se empleará sólo en casos especiales donde se requiera paso pleno y apertura rápida, pero en ningún caso como válvula
+principal de aislamiento.
+
+Manifold ½” 3000# en A-182 F316 con empaquetadura de teflón
+         Tipo 2 vías NPT-H, ABAC MPB o similar    Nº de ítem 26
+         Tipo 3 vías NPT-H, ABAC M4R o similar    Nº de ítem 29
+         Tipo 5 vías NPT-H, ABAC M5BR o similar   Nº de ítem 30
+
+Nota: El número de Item se relaciona con el indicado en los típicos de montaje.
+
+
+5.4 Otros aspectos del montaje y conexionado
+
+5.4.1 Soldaduras
+Las conexiones soldadas no serán consideradas como conexiones estándar; sólo se utilizarán excepcionalmente
+como reemplazo de conexiones roscadas, cuando el servicio así lo requiera (Ej.: productos letales o condiciones de
+proceso extremas) y serán diseñadas particularmente para cada aplicación.
+Las soldaduras serán SW o BW, en función de lo que indique la especificación de la línea o equipo para cada
+tamaño.
+Como los materiales para las líneas de proceso pueden ser variados y en las líneas de instrumentos se restringen en
+general al acero al carbono y al acero inoxidable, pueden ocurrir soldaduras disímiles.
+
+
+
+                                                                                                          BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         19/04/2017
+     GALANTERNIK, NICOLAS                                  VERNA, FACUNDO
+                                                                                                             GUILLERMO                                          FIL                                  09:37:00 a.m.
+
+                   Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                               CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+     © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+     esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                    8 / 16
+                                                                         J1700 Montaje de Instrumentos
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11144-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+Los trabajos de soldadura se realizarán según la especificación AB-IYO-ED-09-124-01 “Requisitos Generales de
+Soldadura dentro de Planta”.
+
+5.4.2 Criterios de manipulación e instalación
+Se debe verificar en los certificados de origen la dureza del tubing, ya que por encima de 80 Rb el apriete de los
+accesorios de compresión se degrada de forma significativa pudiendo llegar a ser totalmente insuficiente.
+El buen cierre de los accesorios de compresión requiere una superficie de asiento perfectamente regular, sin
+arañazos, muescas o hendiduras, por lo que el tubing debe ser manipulado evitando que sufra daños.
+Para su corte se empleará siempre una cortadora de tubing, nunca con sierra de metales que puedan dañar la
+embocadura de los tramos con rebabas o irregularidades.
+Para conformarlo se usarán dobladoras de tubo. Los radios mínimos de curvatura serán los que indique el fabricante.
+Las curvaturas deben quedar uniformes, sin arrugas o deformaciones visibles.
+El tubing será soportado adecuadamente, especialmente en la proximidad de elementos manipulables como válvulas,
+manifolds, etc. Se instalará de forma que esté protegido de impactos o vibraciones.
+Cuando sea necesario, se tenderá el tubing sobre bandeja en las zonas donde esté más sujeto a sufrir daños
+mecánicos accidentales.
+Los accesorios de compresión serán de primera calidad, con procedimiento de apriete (esto es, indicaciones del giro
+adecuado para obtener un apriete óptimo) y galgabilidad (posibilidad de verificar el apriete hecho).
+Está terminantemente prohibido el intercambio de piezas entre conectores de diferentes fabricantes.
+No se conectarán accesorios a menos de 2” de cualquier codo realizado por doblado de tubing. Caso de requerirse
+mayor proximidad física, se usarán accesorios en codo en lugar de tubing doblado.
+
+5.4.3 Conexiones roscadas
+Las conexiones roscadas de proceso serán siempre tipo NPT según ANSI/ASME B1.20.1.
+Se utilizarán selladores de junta roscada compatible con las condiciones de servicio.
+Las bridas ovales suministradas con los transmisores electrónicos se montarán sobre roscas ejecutadas en los
+extremos de las cañerías de impulsión para permitir su unión a los manifold bridados.
+Como criterio general, las roscas se minimizarán a lo estrictamente imprescindible, empleándose normalmente sólo
+en las acometidas a los instrumentos.
+
+5.4.4 Traceado y/o aislación
+En los fluidos que requieran una temperatura mínima para mantener la viscosidad, no congelarse, etc., se tracearán
+y/o calefaccionarán las líneas de impulsión hasta el equipo receptor de las mismas. El traceado será eléctrico.
+El traceado debe realizarse asegurándose que se proporciona el nivel de calefacción adecuado en toda la línea de
+impulsión sin que el instrumento, caso de ser electrónico, exceda sus límites de trabajo.
+
+5.4.5 Prueba hidráulica
+Los conexionados a proceso serán probados hidráulicamente a la misma presión en frío que la línea. Durante las
+pruebas hidráulicas los instrumentos deben estar aislados o, de no ser esto posible, desmontados.
+
+                                                                                                         BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         19/04/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                            GUILLERMO                                          FIL                                  09:37:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   9 / 16
+                                                                         J1700 Montaje de Instrumentos
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11144-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+Las pruebas hidráulicas serán realizadas y documentadas de acuerdo con las indicaciones recogidas en la
+especificación AB-IYO-ED-09-173-01 “ED(EP)-B-02.00 Aseguramiento y Control de Calidad de Equipos estáticos y
+Dinámicos”.
+
+5.4.6 Soportación de los instrumentos
+Se realizarán según el Plano Estándar TI-J1700-01, a partir de tubo de acero al carbono de 2” con la aplicación del
+sistema de recubrimiento anticorrosivo según la especificación AB-IYO-ED-09-275-01 “ED(EP)-B-06.00 Protección
+Anticorrosiva con Recubrimientos”.
+El punto de fijación de los soportes será fijo y libre de vibraciones (dado H°A°, plataforma, pilar, etc.) no empleándose
+para este propósito barandas o cualquier otro elemento no destinado originalmente a este fin.
+Los transmisores y equipos se comprarán siempre con accesorios de montaje a pared o tubo de 2”.
+Los instrumentos deben quedar a una altura de entre 1200 y 1500 mm del suelo o plataforma, sin obstaculizar el
+paso y con los indicadores y partes manipulables accesibles y adecuadamente iluminados.
+El punto de instalación debe ser compatible con las recomendaciones relativas al diseño del conexionado a proceso,
+así como no causar interferencias con otros equipos o zonas de trabajo.
+Todos los instrumentos de nivel montados lateralmente, o los stand pipes cuyo peso y/o distancia al recipiente pueda
+suponer esfuerzos excesivos sobre las conexiones, irán soportados independientemente.
+Se estudiará en cada caso si puede realizarse el soporte al propio recipiente o sobre elementos estructurales ajenos
+al mismo.
+
+5.4.7 Identificación de los instrumentos
+Todos los instrumentos incluirán placa de características así como etiqueta indeleble con su tag.
+Los cables, cajas y paneles se identificarán de acuerdo a lo indicado en las especificaciones “J1300 Conexionado
+Eléctrico de Instrumentos”.
+El resto de los equipos serán identificados por medio de una placa según el plano estándar TI-J1700-02 anexo a esta
+especificación.
+
+5.4.8 Limpieza y soplado de líneas
+Las líneas de impulsión serán sopladas y limpiadas adecuadamente antes del montaje de los instrumentos.
+Los instrumentos montados directamente en líneas de proceso serán retirados o protegidos adecuadamente (p.e.
+retirando los internos de válvulas) durante las maniobras de limpieza y soplado de las mismas.
+Las líneas de impulsión se aislarán de las de proceso mientras dura su limpieza y/o soplado.
+
+
+5.5 Suministro y documentación
+
+5.5.1 Preparación para envío, embalaje y marcado
+Estarán de acuerdo con la especificación general AB-IYO-ED-09-199-01 “ED(EP)-B-01.00 Preparación para
+Transporte de Equipos y Materiales”.
+
+
+                                                                                                         BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         19/04/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                            GUILLERMO                                          FIL                                  09:37:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 10 / 16
+                                                                           J1700 Montaje de Instrumentos
+Tipo: ESPECIFICACIÓN                         Ámbito: Upstream - Argentina                                                                                      Código: 11144-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                             Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+El tubing y accesorios para montaje de instrumentos se suministrará por lo general a granel, aunque deberá cumplir
+con los siguientes requisitos específicos:
+      a) Los accesorios (fittings) de diferente OD y material se suministrarán en embalajes separados y claramente
+         identificados externamente a fin de evitar cualquier confusión en su uso.
+      b) El tubing se transportará y almacenará de modo que no recoja en su interior suciedad, ya que es de difícil
+         eliminación en los conexionados a instrumentos, ni sufra daños mecánicos (arañazos, muescas, etc.).
+Los materiales como manifolds y válvulas, llevarán grabados sobre el cuerpo, de modo indeleble, su material, serie,
+tipo de conexiones y fabricante.
+
+5.5.2 Documentación
+Como mínimo, deberán incluirse los certificados de calidad y de origen (fabricación y Proveedor).
+La documentación a preparar por la Ingeniería para al montaje de instrumentos será como mínimo la siguiente:
+          a) Esquemas típicos de conexionado a proceso, compuesta por portada, índice, una lista de tags con los
+             planos estándar aplicables y los propios planos estándar citados.
+          b) Esquemas de conexionado a proceso especiales, compuesta por portada, índice y los planos específicos
+             desarrollados para cada tag por la Ingeniería.
+Los planos específicos de proyecto cumplirán con los criterios generales indicados en esta especificación y además:
+          a) Tendrán la misma plantilla y formato que los esquemas típicos de YPF.
+          b) Usarán los mismos materiales y números de ítem de los esquemas típicos.
+          c) Estarán numerados como planos de proyecto.
+          d) Deberán haber sido aprobados por YPF antes de su emisión para construcción.
+La compra de materiales para montaje de instrumentos se hará mediante una requisición específica donde se
+indicarán las partidas y calidades según especificaciones de YPF.
+En el recuento se tendrá en cuenta que el material indicado en los esquemas típicos es orientativo, por lo que se hará
+una previsión razonable de cada tipo de material para imprevistos.
+
+
+6 Indicadores, registros y riesgos del proceso
+
+6.1 Indicadores
+N/A
+
+
+6.2 Registros
+N/A
+
+
+
+
+                                                                                                           BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         19/04/2017
+      GALANTERNIK, NICOLAS                                  VERNA, FACUNDO
+                                                                                                              GUILLERMO                                          FIL                                  09:37:00 a.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   11 / 16
+                                                                           J1700 Montaje de Instrumentos
+Tipo: ESPECIFICACIÓN                         Ámbito: Upstream - Argentina                                                                                      Código: 11144-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                             Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+
+6.3 Riesgos y acciones mitigantes
+N/A
+
+
+7 Anexos y referencias
+
+7.1 Anexos
+   N°                                                                                                        Nombre
+    I          TI-J1700-01 Soportes estándar para instrumentos
+    II         TI-J1700-02 Medida de caudal por presión diferencial para líquidos
+   III         TI-J1700-03 Medida de caudal por presión diferencial para gases
+   IV          TI-J1700-04 Montaje de medidores de presión para líquidos
+   V           TI-J1700-05 Montaje de medidores de presión para gases
+   VI          TI-J1700-06 Montaje de medidores de presión diferencial para liquidos
+   VII         TI-J1700-07 Montaje de medidores de presión diferencial para gases
+  VIII         TI-J1700-08 Montaje de indicadores de nivel de vidrio
+   IX          TI-J1700-09 Montaje de interruptores de nivel
+   X           TI-J1700-10 Montaje de transmisores de nivel a desplazador
+   XI          TI-J1700-11 Instalación y detalles de stand pipes
+   XII         TI-J1700-12 Medida de nivel por dP Cell con tomas directas - atmosferico
+  XIII         TI-J1700-13 Medida de nivel por dP Cell con tomas directas - presurizado
+  XIV          TI-J1700-14 Medida de nivel por dP Cell con sellos - atmosferico
+  XV           TI-J1700-15 Medida de nivel por dP Cell con sellos - presurizado
+
+
+7.2 Normativa relacionada
+    Categoría                                                                             Título                                                                                        Código
+
+                                  J0200 Medida de caudal (Parte General)                                                                                           10758-ES-21030700-110A
+
+                                  J0300 Medida de presión (Parte General)                                                                                          11083-ES-21030700-110A
+ Normativa
+ Interna YPF
+                                  J0400 Medida de nivel (Parte General)                                                                                            11103-ES-21030700-110A
+
+                                  J0500 Medida de temperatura (Parte General)                                                                                      10864-ES-21030700-110A
+
+
+                                                                                                           BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         19/04/2017
+        GALANTERNIK, NICOLAS                                VERNA, FACUNDO
+                                                                                                              GUILLERMO                                          FIL                                  09:37:00 a.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   12 / 16
+                                                                         J1700 Montaje de Instrumentos
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11144-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+    Categoría                                                                           Título                                                                                        Código
+
+                                J0600 Válvulas de Control                                                                                                        10867-ES-21030700-110A
+
+                                J1300 Conexionado Eléctrico de Instrumentos
+
+                                J1800 Válvulas de Seguridad
+
+                                “ED(EP)-C-01.00 Recipientes a presión”                                                                                           AB-IYO-ED-09-181-01
+
+                                “ED(EP)-D-01.00 Tanques de almacenamiento”                                                                                       AB-IYO-ED-09-096-01
+
+                                “ED(EP)-D-02.00 Esferas de almacenamiento”                                                                                       AB-IYO-ED-09-137-01
+
+                                L0200 Clases de cañerias para plantas                                                                                            10898-ES-21030700-110A
+
+                                L0100 Diseño de cañerias en instalaciones de superficie                                                                          10856-ES-21030700-110A
+
+                                “ED(EP)-B-02.00 Aseguramiento y Control de Calidad de
+                                                                                                                                                                 AB-IYO-ED-09-173-01
+                                Equipos estáticos y Dinámicos”
+
+                                “ED(EP)-B-06.00 Protección Anticorrosiva con Recubrimientos”                                                                     AB-IYO-ED-09-275-01
+
+                                “ED(EP)-B-05.00 Requisitos generales de soldadura dentro de
+                                                                                                                                                                 AB-IYO-ED-09-124-01
+                                planta”
+                                “ED(EP)-B-01.00 Preparación para Transporte de Equipos y
+                                                                                                                                                                 AB-IYO-ED-09-199-01
+                                Materiales”
+                                Pipe threads, General purpose-NPT Threaded connections                                                                           ANSI / ASME B1.20.1
+                                Process Piping                                                                                                                   ASME B31.3
+ Normativa                      Fossil Fuel Power Plant Instrument Piping Installation                                                                           ANSI / ISA 77-70
+ Externa
+                                Process measurement instrumentation. Process control system                                                                      API RP
+                                design                                                                                                                           551/552/553/554/555/556
+                                Pipe flanges and flanged fittings NPS 1/2 through NPS 24                                                                         ASME B16.5
+                                ED(EP)-J-17.00 Montaje de Instrumentos                                                                                           AB-IYO-ED-09-119-01
+ Normativa
+                                ED(EP)-J-17.02 Conexionado a Líneas de Proceso                                                                                   AB-IYO-ED-09-120-01
+ Derogada
+                                ED(EP)-J-17.04 Conexionado a Instrumentos de Nivel                                                                               AB-IYO-ED-09-122-01
+
+ Otras
+                                N/A                                                                                                                              N/A
+ referencias
+
+
+
+
+                                                                                                         BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         19/04/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                            GUILLERMO                                          FIL                                  09:37:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 13 / 16
+                                                                           J1700 Montaje de Instrumentos
+Tipo: ESPECIFICACIÓN                         Ámbito: Upstream - Argentina                                                                                      Código: 11144-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                             Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+
+7.3 Definiciones y abreviaturas
+         Término                        Abreviatura                                                                                 Descripción
+ N/A                                    N/A                          N/A
+
+
+8 Aprobación
+
+8.1 Vigencia
+Esta normativa entrará en vigencia a partir de la fecha de su aprobación.
+Los abajo firmantes asumen la responsabilidad de implantar, controlar el cumplimiento y actualizar el presente
+documento cada vez que fuera necesario.
+
+
+8.2 Disposiciones generales y transitorias
+N/A
+
+
+8.3 Historial
+       Estado                      № Revisión                    Fecha Aprobación                                                                   Observaciones
+
+ Original                         0.0                            Ver fecha en pie de
+                                                                 firmas.
+
+
+8.4 Aprobación colegiada
+N/A
+
+
+8.5 Categoría de Clasificación del Activo de Información
+YPF - Privada: información disponible para los empleados de la compañía y terceros (ej. contratistas) como parte de
+la rutina del negocio. Su difusión se hace en base al conocimiento para poder operar. Su difusión no autorizada
+podría afectar la consecución de objetivos particulares de determinadas áreas de la compañía.
+
+
+
+
+                                                                                                           BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         19/04/2017
+      GALANTERNIK, NICOLAS                                  VERNA, FACUNDO
+                                                                                                              GUILLERMO                                          FIL                                  09:37:00 a.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   14 / 16
+                                                                         J1700 Montaje de Instrumentos
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11144-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+Anexo I: TI-J1700-01 Soportes estándar para instrumentos
+
+Anexo II: TI-J1700-02 Medida de caudal por presión diferencial para líquidos
+
+Anexo III: TI-J1700-03 Medida de caudal por presión diferencial para gases
+
+Anexo IV: TI-J1700-04 Montaje de medidores de presión para líquidos
+
+Anexo V: TI-J1700-05 Montaje de medidores de presión para gases
+
+Anexo VI: TI-J1700-06 Montaje de medidores de presión diferencial para
+liquidos
+
+Anexo VII: TI-J1700-07 Montaje de medidores de presión diferencial para
+gases
+
+Anexo VIII: TI-J1700-08 Montaje de indicadores de nivel de vidrio
+
+Anexo IX: TI-J1700-09 Montaje de interruptores de nivel
+
+Anexo X: TI-J1700-10 Montaje de transmisores de nivel a desplazador
+
+Anexo XI: TI-J1700-11 Instalación y detalles de stand pipes
+
+Anexo XII: TI-J1700-12 Medida de nivel por dP Cell con tomas directas -
+atmosferico
+
+Anexo XIII: TI-J1700-13 Medida de nivel por dP Cell con tomas directas -
+presurizado
+                                                                                                         BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         19/04/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                            GUILLERMO                                          FIL                                  09:37:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 15 / 16
+                                                                         J1700 Montaje de Instrumentos
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11144-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+Anexo XIV: TI-J1700-14 Medida de nivel por dP Cell con sellos - atmosferico
+
+Anexo XV: TI-J1700-15 Medida de nivel por dP Cell con sellos - presurizado
+
+Estos formularios se encuentran como archivo editable en la biblioteca Anexos Online de SGN http://corporacion-
+sgn/sites/sgn/Anexos/Forms/AllItems.aspx
+
+
+
+
+                                                                                                         BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         19/04/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                            GUILLERMO                                          FIL                                  09:37:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 16 / 16
+

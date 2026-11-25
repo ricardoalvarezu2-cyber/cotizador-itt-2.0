@@ -1,0 +1,663 @@
+                                                              J0400 Medida de Nivel (Parte General)
+Tipo: ESPECIFICACIÓN                         Ámbito: Upstream - Argentina                                                                                      Código: 11103-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                             Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+
+
+1 Índice
+
+Contenido
+1      ÍNDICE ........................................................................................................................................................................1
+2      OBJETO .....................................................................................................................................................................3
+3      ÁMBITO DE APLICACIÓN ........................................................................................................................................3
+4      CONSIDERACIONES PRINCIPALES .......................................................................................................................3
+5      ESPECIFICACIÓN .....................................................................................................................................................3
+    5.1    CARACTERÍSTICAS GENERALES ..............................................................................................................................3
+      5.1.1    Unidades de medida ....................................................................................................................................3
+      5.1.2    Transmisión de señal ...................................................................................................................................3
+      5.1.3    Compatibilidad electromagnética .................................................................................................................3
+      5.1.4    Instalación en áreas clasificadas .................................................................................................................4
+      5.1.5    Instalación en áreas no clasificadas ............................................................................................................4
+      5.1.6    Envolventes y protección ambiental ............................................................................................................4
+    5.2    TRATAMIENTO DE LAS MEDIDAS ..............................................................................................................................4
+      5.2.1    Compensación y cálculo ..............................................................................................................................4
+      5.2.2    Indicación en campo ....................................................................................................................................5
+      5.2.3    Transmisores de nivel multivariables ...........................................................................................................6
+      5.2.4    Alarmas y enclavamientos ...........................................................................................................................6
+    5.3    SELECCIÓN DE MEDIDORES ....................................................................................................................................7
+      5.3.1    Criterios generales .......................................................................................................................................7
+      5.3.2    Criterios particulares ....................................................................................................................................7
+    5.4    INSTALACIÓN DE MEDIDORES ..................................................................................................................................7
+      5.4.1    Criterios generales de montaje ....................................................................................................................7
+      5.4.2    Stand pipes ..................................................................................................................................................8
+      5.4.3    Tubos tranquilizadores .................................................................................................................................8
+      5.4.4    Accesorios de protección .............................................................................................................................8
+    5.5    SUMINISTRO DE EQUIPOS DE NIVEL .........................................................................................................................8
+      5.5.1    Preparación para envío, embalaje y marcado .............................................................................................8
+      5.5.2    Documentación del vendedor ......................................................................................................................9
+6      INDICADORES, REGISTROS Y RIESGOS DEL PROCESO ...................................................................................9
+    6.1        INDICADORES ........................................................................................................................................................9
+    6.2        REGISTROS ...........................................................................................................................................................9
+    6.3        RIESGOS Y ACCIONES MITIGANTES ..........................................................................................................................9
+7      ANEXOS Y REFERENCIAS ......................................................................................................................................9
+    7.1        ANEXOS ................................................................................................................................................................9
+    7.2        NORMATIVA RELACIONADA .....................................................................................................................................9
+    7.3        DEFINICIONES Y ABREVIATURAS ............................................................................................................................11
+8      APROBACIÓN .........................................................................................................................................................11
+                                                                                                           BODEGA, EDUARDO                                                                             13/03/2017
+       GALANTERNIK, NICOLAS                                 VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                              GUILLERMO                                                                               11:43:00 a.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                     1 / 11
+                                                            J0400 Medida de Nivel (Parte General)
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11103-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+  8.1        VIGENCIA ............................................................................................................................................................11
+  8.2        DISPOSICIONES GENERALES Y TRANSITORIAS ........................................................................................................11
+  8.3        HISTORIAL ...........................................................................................................................................................11
+  8.4        APROBACIÓN COLEGIADA .....................................................................................................................................11
+  8.5        CATEGORÍA DE CLASIFICACIÓN DEL ACTIVO DE INFORMACIÓN................................................................................11
+
+
+
+
+                                                                                                         BODEGA, EDUARDO                                                                             13/03/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                            GUILLERMO                                                                               11:43:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   2 / 11
+                                                            J0400 Medida de Nivel (Parte General)
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11103-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+2 Objeto
+Definir los criterios técnicos generales para la realización y tratamiento de las medidas de nivel en líquidos.
+
+
+3 Ámbito de aplicación
+YPF S.A. Upstream – Argentina.
+Aplica a todos los proyectos tanto de nuevas instalaciones como modificaciones a instalaciones existentes.
+
+
+4 Consideraciones principales
+Quedan fuera del objeto específico de este documento:
+    a) Medidas de nivel en sólidos o áridos
+    b) Medidas fiscales.
+
+
+5 Especificación
+
+5.1 Características generales
+
+5.1.1 Unidades de medida
+Las unidades de medida de nivel serán las siguientes:
+         Recipientes de proceso       % del nivel del equipo
+         Tanques de almacenamiento % y altura (m o mm según precisión)
+Para la capacidad másica o volumétrica calculada a partir del nivel, se usarán las siguientes unidades:
+          Capacidad volumétrica       m3 @ 15 ºC
+          Capacidad másica            kg, tn
+Las unidades anteriores se emplearán en todos los documentos asociados al instrumento (hoja de cálculo, de
+calibración, de especificación, etc.) a fin de mantener la consistencia entre los mismos.
+
+5.1.2 Transmisión de señal
+La transmisión al sistema, por defecto será de 4 a 20 mA y aislada.
+Siempre que esté disponible, se incluirá además el protocolo digital HART como complemento a la señal 4-20 mA
+pero sólo para fines auxiliares (mantenimiento, medidas secundarias en transmisores multivariables, etc.)
+Para medidas de alta precisión podrán emplearse buses de comunicaciones que permitan conservar en la
+transmisión la resolución y precisión de la medida en origen con autorizacion de YPF.
+
+5.1.3 Compatibilidad electromagnética
+Los equipos cumplirán la norma IEC-1000 y las normativas locales que se indiquen en el DBD.
+
+                                                                                                         BODEGA, EDUARDO                                                                             13/03/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                            GUILLERMO                                                                               11:43:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   3 / 11
+                                                            J0400 Medida de Nivel (Parte General)
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11103-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+5.1.4 Instalación en áreas clasificadas
+Se describe en detalle en las especificaciones “J1400 Instalación de Instrumentos en Áreas Clasificadas”, “J1401
+Instalaciones EEX-i”, “J1402 Instalaciones EEX-d” y “J1403 Instalaciones EEX-p”. El diseño debe tener en cuenta lo
+siguiente:
+    a) En lo aplicable, el modo preferente de protección será siempre Antideflagrante (EEx-d).
+    b) En caso de tratarse de una instalación existente EEx-i, podrá aceptarse el modo Seguridad Intrínseca (EEx-i)
+       para las modificaciones que se realicen.
+Para mayores detalles sobre la instalación de instrumentos en área clasificada, consultar la especificación
+mencionada.
+
+5.1.5 Instalación en áreas no clasificadas
+Con el objetivo de unificar provisiones y stock de repuestos se usarán instrumentos certificados para zonas
+clasificadas de acuerdo a lo expuesto en el apartado anterior, pero instalados de modo convencional.
+Se podrán utilizar instrumentos carentes de certificación en aquellas instalaciones en la que gran parte o toda la
+unidad sea área no clasificada (p.e. plantas de inyección de agua). No implica en ningún caso el uso de instrumentos
+sin certificación en áreas clasificadas.
+Nota: la ejecución antideflagrante de la sonda se mantendrá siempre con independencia de la clasificación de la
+zona ya que su uso está asociado a consideraciones de robustez mecánica.
+
+5.1.6 Envolventes y protección ambiental
+Se proporcionarán los siguientes grados de protección para las envolventes:
+         Áreas convencionales                                  IP 65
+         Instalaciones expuestas a ambientes marinos           IP 68
+Las juntas empleadas en envolventes, cajas y gabinetes serán antienvejecimiento y resistentes a hidrocarburos.
+Los equipos deberán funcionar correctamente instalados a la intemperie, entre –15 y + 65 ºC, con humedades
+relativas de hasta el 100% sin condensación y exposición directa al sol, y ambiente moderadamente corrosivo.
+En ambientes especialmente agresivos (grados G2 y superiores según ISA S71.04) el vendedor deberá confirmar la
+validez de su equipo o indicar medidas de protección adicionales.
+
+
+5.2 Tratamiento de las medidas
+
+5.2.1 Compensación y cálculo
+La compensación de nivel tiene dos campos de aplicación:
+    a) Las medidas convencionales de proceso
+    b) Las medidas de inventariado y/o fiscales
+Las medidas de inventariado y/o fiscales no son objeto específico de este documento, por lo que en los puntos
+siguientes, salvo indicación en contra, todo lo que dicho está orientado a medidas convencionales.
+La compensación o cálculo de nivel en las medidas convencionales se realizará en los siguientes casos:
+
+                                                                                                         BODEGA, EDUARDO                                                                             13/03/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                            GUILLERMO                                                                               11:43:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   4 / 11
+                                                            J0400 Medida de Nivel (Parte General)
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11103-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+    a) Para referir capacidades volumétricas a condiciones estándar (15 ºC).
+    b) Para corregir lecturas de instrumentos afectados por las condiciones de proceso.
+    c) Cuando se requiera inferir el nivel a partir de otras variables.
+En todos los casos, la compensación se utilizará cuando lo indique la Ingeniería Básica.
+Los cálculos asociados a la compensación se implementarán siempre en el propio equipo medidor.
+Nota: Hay equipos (radares, palpadores, algunos desplazadores, etc.) que incluyen la posibilidad de integrar
+directamente varias señales externas para realizar estas compensaciones sobre su señal de salida. Esta opción
+puede simplificar la arquitectura del sistema sin afectar a la precisión y ser ventajosa en muchas aplicaciones. Este
+tipo de esquemas deberá ser definido en la fases de Ingeniería.
+Las señales auxiliares (presión, temperatura, etc.) empleadas para la compensación irán cableadas al mismo
+dispositivo donde se realiza la compensación.
+Las correcciones para convertir un volumen a condiciones estándar se basarán en fórmulas procedentes de
+publicaciones (ASTM, API, etc.) aceptadas por YPF para cada aplicación particular.
+Las correcciones mencionadas aplican a instrumentos cuyo principio de medida se ve afectado por parámetros de
+proceso (p.e. la densidad en DPcells y desplazadores, la temperatura en ultrasonidos, etc.).
+La compensación más habitual es la asociada a cambios en la densidad, que se estudiará en los siguientes casos:
+    a) Recipientes que trabajan con distintos fluidos o casos de operación.
+    b) Fluidos cuyo nivel deba medirse en un amplio rango de temperatura.
+    c) Fluidos cuya densidad en las líneas de impulsión difiera sensiblemente de la que tienen en proceso.
+    d) Fluidos en equilibrio con su vapor y próximos al punto crítico, donde las densidades de ambas fases son
+       similares.
+En los casos anteriores, donde la combinación del rango de medida, la precisión requerida por la aplicación y la
+variación de densidad es esperable que den lugar a errores significativos, se implementará la corrección por
+densidad.
+En el caso particular de sólidos que puedan apelmazarse o dar lugar a distribuciones muy irregulares en su superficie
+(p.e. arena), se tendrá en cuenta la elevada incertidumbre asociada al nivel calculado.
+
+5.2.2 Indicación en campo
+Todos los instrumentos tendrán indicación local.
+En el caso de los instrumentos asociados a lazos cerrados, la indicación será legible desde el bypass de la válvula
+asociada o elemento final de control.
+En el caso de tanques, los indicadores estarán ubicados a pie de tanque.
+Los indicadores locales serán alimentados por el propio instrumento y tendrán la misma clasificación eléctrica que el
+medidor, con certificado independiente en el caso de ser remotos.
+El indicador no podrá, en caso de malfunción, interrumpir la señal de la variable de proceso.
+Los indicadores remotos serán suministrados con accesorios para su soportación sobre tubo de 2” o en pared.
+Los indicadores deben mostrar siempre los valores de las variables en unidades de ingeniería.
+                                                                                                         BODEGA, EDUARDO                                                                             13/03/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                            GUILLERMO                                                                               11:43:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   5 / 11
+                                                            J0400 Medida de Nivel (Parte General)
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11103-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+El tipo de indicador a emplear será indicadores de cristal líquido.
+Los indicadores locales de cristal líquido deberán ser adecuados a la temperatura ambiente del punto de instalación.
+
+5.2.3 Transmisores de nivel multivariables
+Este apartado sólo aplica a medidas convencionales de proceso.
+En los transmisores que tengan disponibles además del nivel otras variables para transmisión, la señal de nivel será
+siempre la primaria y asignada a la salida 4-20 mA.
+Las señales secundarias (presión, temperatura, etc.) sólo podrán usarse para indicación y registro salvo que se
+transmitan también en soporte 4-20 mA desde el propio transmisor de campo.
+Las variables secundarias se podrán enviar, mediante protocolo digital al control distribuido.
+La realización de compensaciones de nivel internas se ajustará a lo indicado en el apartado 5.2.1.
+
+5.2.4 Alarmas y enclavamientos
+Como criterio general se utilizarán transmisores. Solamente se usarán interruptores de nivel para esta función
+solamente en los siguientes casos:
+    a) Cuando la ubicación de las tomas de proceso sólo permitan el uso de este tipo de elementos.
+    b) En servicios auxiliares.
+    c) Recipientes de pequeñas dimensiones.
+    d) Cuando la medida de nivel continuo sea complicada o poco confiable.
+    e) Cuando la medida de nivel continuo sea irrelevante para operación.
+    f)     Cuando lo indique la Ingeniería Básica.
+Se usarán transmisores continuos de nivel para esta función cuando:
+    a) La medida sea relevante para la operación y deba contar con monitorización continúa.
+    b) El punto de actuación no esté definido o sea variable.
+    c) La tecnología de medición sea más costosa utilizando interruptores.
+En medidas donde ya exista un transmisor para regulación se empleará uno diferente para enclavamientos salvo en
+los siguientes casos:
+    a) Enclavamientos no críticos.
+    b) Cuando la instalación del segundo transmisor obligue a realizar modificaciones en el recipiente o tanque de
+       instalación (nuevas toberas, tubos tranquilizadores, etc.) técnicamente desaconsejables. En este caso de
+       deberá contar con autorizacion de YPF.
+En aplicaciones de seguridad de alta integridad según IEC 61508/61511 los elementos generadores de señal al
+sistema de enclavamiento deberán tener la tasa de fallos convenientemente documentados. Adicionalmente deberán
+ser accesibles para las pruebas de mantenimiento periódicas.
+
+
+
+
+                                                                                                         BODEGA, EDUARDO                                                                             13/03/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                            GUILLERMO                                                                               11:43:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   6 / 11
+                                                            J0400 Medida de Nivel (Parte General)
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11103-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+5.3 Selección de medidores
+
+5.3.1 Criterios generales
+El tipo de medidor se escogerá en función de:
+    a) Lo indicado por la Ingeniería Básica.
+    b) Normativas o códigos aplicables (p.e. medidas fiscales, de inventariado, etc.).
+    c) Las condiciones de proceso y del fluido.
+    d) Tamaño y tipo del recipiente y condicionantes constructivos del mismo.
+    e) La rangeabilidad, precisión y repetibilidad requeridas.
+    f)     El mantenimiento requerido por el medidor y la complejidad de su instalación.
+Los principios de medida preferentes, siempre que sean técnica y normativamente viables, serán:
+    a) A partir de la presión diferencial. (“D/P Cell”)
+    b) No intrusivos (radar de proceso).
+    c) Radar de Onda Guiada
+    d) Por flotadores, desplazadores.
+Los siguientes tipos de medidores quedan prohibidos:
+    a) Presostatos para servicio de interruptor de nivel.
+    b) Medidores de burbujeo.
+    c) Medidres de nivel ultrasonicos.
+    d) Transmisores de nivel capacitivos.
+
+5.3.2 Criterios particulares
+Se indican para cada tipo de instrumento particular en las especificaciones complementarias a este documento.
+
+
+5.4 Instalación de medidores
+
+5.4.1 Criterios generales de montaje
+Todos los medidores de nivel se instalarán según se indica en los correspondientes planos y dibujos que se incluyen
+o citan en cada especificación particular, las recomendaciones del fabricante y las buenas prácticas de Ingeniería.
+Las instalaciones deberán permitir siempre que sea posible el desmontaje de los medidores de nivel sin necesidad de
+detener el proceso o vaciar el recipiente asociado.
+Los montajes con DPcell se realizarán siempre que sea posible según alguno de los típicos de YPF recogidos en la
+especificación “J1700 Montaje de Instrumentos”.
+En casos especiales no recogidos en los típicos, se desarrollarán los correspondientes planos particulares de
+montaje de instrumentos según las instrucciones indicadas en la citada “J1700 Montaje de Instrumentos”.
+                                                                                                         BODEGA, EDUARDO                                                                             13/03/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                            GUILLERMO                                                                               11:43:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   7 / 11
+                                                            J0400 Medida de Nivel (Parte General)
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11103-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+Todos los montajes deben permitir el acceso para mantenimiento y operación a los instrumentos desde instalaciones
+fijas.
+Las válvulas de raíz o bloqueo, cuando existan, deberán estar siempre accesibles desde instalaciones fijas.
+Cuando los instrumentos estén involucrados en medidas fiscales, su instalación deberá cumplir con los requisitos
+específicos adicionales que defina el código de referencia para las mismas.
+
+5.4.2 Stand pipes
+Se usarán stand pipes en los recipientes donde se deban instalar varios instrumentos de nivel, a fin de reducir el
+número de conexiones al mismo.
+Los instrumentos sobre el stand pipe serán los destinados a indicación, control o visualización de campo.
+Los instrumentos destinados a enclavamientos se instalarán en lo posible directamente sobre el recipiente salvo
+indicación en otro sentido por parte de YPF.
+
+5.4.3 Tubos tranquilizadores
+Se usarán en general en los siguientes casos:
+    a) Medidores de alta precisión en tanques
+    b) En medidas con flotador o desplazador interno (sin cámara de medida)
+Los tubos responderán al diseño que se realice en etapa de ingeniería de detalle del recipiente.
+El material de partida será tubería de AISI 316.
+
+5.4.4 Accesorios de protección
+Los equipos de medida de nivel expuestos a fuertes corrientes, turbulencias, impactos de producto a gran velocidad,
+etc., contarán con medidas de protección específicas a cada tipo de medidor y aplicación.
+Como ejemplo de este tipo de medidas específicas de protección se tiene:
+Placas deflectoras que impidan eventuales interferencias de entradas de fluidos con los haces de medida de equipos
+de tipo radar montados sin tubo tranquilizador.
+Cualquier medida de protección debe diseñarse de modo que no cause interferencia ni con equipo de medida ni con
+el servicio del recipiente.
+
+
+5.5        Suministro de equipos de nivel
+
+5.5.1 Preparación para envío, embalaje y marcado
+Estarán de acuerdo con la especificación general AB-IYO-ED-09-199-01 “ED(EP)-B-01.00 Preparación para el
+Transporte de Equipos y Materiales”.
+En las especificaciones sobre cada tipo de instrumentos se incluyen instrucciones específicas para los mismos que
+se añadirán a las generales indicadas en la especificación AB-IYO-ED-09-199-01 “ED(EP)-B-01.00 Preparación para
+el Transporte de Equipos y Materiales”.
+
+
+                                                                                                         BODEGA, EDUARDO                                                                             13/03/2017
+      GALANTERNIK, NICOLAS                                VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                            GUILLERMO                                                                               11:43:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   8 / 11
+                                                              J0400 Medida de Nivel (Parte General)
+Tipo: ESPECIFICACIÓN                         Ámbito: Upstream - Argentina                                                                                      Código: 11103-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                             Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+
+5.5.2 Documentación del vendedor
+La documentación que debe aportar el vendedor depende de cada tipo de medidor y se describe en las
+especificaciones correspondientes.
+Las listas incluidas en las especificaciones son preliminares. El número definitivo de documentos, las copias y tipo de
+soporte (papel, CD ROM, etc.) de las mismas serán los que indique la requisición de compra.
+Los documentos asociados a tags particulares (planos, hojas de datos, etc.) deberán ser aprobados por la Ingeniería
+responsable del proyecto. Los documentos genéricos (catálogos, manuales, etc.) no lo requieren.
+La documentación estará en castellano.
+Nota: Además de la documentación, deberán proveer el software, interface, cables y todo lo necesario para su
+intervención y mantenimiento.
+
+
+6 Indicadores, registros y riesgos del proceso
+
+6.1 Indicadores
+N/A
+
+
+6.2 Registros
+N/A
+
+
+6.3 Riesgos y acciones mitigantes
+N/A
+
+
+7 Anexos y referencias
+
+7.1 Anexos
+   N°                                                                                                        Nombre
+    I          N/A
+
+
+7.2 Normativa relacionada
+    Categoría                                                                             Título                                                                                        Código
+
+                                  J0100 Ingeniería de Instrumentación                                                                                              10762-ES-21030700-110A
+ Normativa
+ Interna YPF
+                                  J1300 Conexionado Eléctrico de Instrumentos
+
+                                                                                                           BODEGA, EDUARDO                                                                             13/03/2017
+        GALANTERNIK, NICOLAS                                VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                              GUILLERMO                                                                               11:43:00 a.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                     9 / 11
+                                                            J0400 Medida de Nivel (Parte General)
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11103-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+    Categoría                                                                           Título                                                                                        Código
+
+                                J1400 Instalación de Instrumentos en Áreas Clasificadas
+
+                                J1700 Montaje de Instrumentos
+
+                                J0401 Indicadores Locales de Nivel
+
+                                J0402 Transmisores de Presión Diferencial para Medida de
+                                Nivel
+
+                                J0403 Transmisores de Nivel por Desplazador
+
+                                J0405 Transmisores de Nivel por Radar
+
+                                J0407 Interruptores de Nivel por Flotador
+
+ Normativa
+                                N/A                                                                                                                              N/A
+ Externa
+ Normativa
+                                ED(EP)-J-04.00 Instrumentos de Nivel (General)                                                                                   AB-IYO-ED-09-055-01
+ Derogada
+                                Measurement of level and temperature in storage tanks by
+                                automatic methods – Part 1: measurement of level in                                                                              ISO 4266-1
+                                atmospheric tanks
+                                Measurement of level and temperature in storage tanks by
+                                automatic methods – Part 3: measurement of level in                                                                              ISO 4266-3
+                                pressurized (non refrigerated) tanks
+                                Refrigerated light hydrocarbon fluids. General requirements for
+                                automatic level gauges Part 1: Gauges onboard ships carrying                                                                     ISO 18132-1
+                                liquefied gases.
+                                Refrigerated light hydrocarbon fluids. General requirements for
+                                automatic level gauges Part 2: Gauges in refrigerated-type                                                                       ISO 18132-2
+ Otras
+                                shore tanks.
+ referencias
+                                Standard practice for manual gauging of petroleum and
+                                                                                                                                                                 API MPMS 3.1A
+                                petroleum products
+                                Standard practice for level measurement of liquid hydrocarbons
+                                                                                                                                                                 API MPMS 3.1B
+                                in stationary tanks by automatic tank gauging
+                                Standard practice for level measurement of liquid hydrocarbons
+                                in stationary pressurized tanks by automatic tank gauging                                                                        API MPMS 3.3
+                                (replaces STD 2545)
+                                Measurement of liquid                                    hydrocarbons                    by        hybrid           tank
+                                                                                                                                                                 API MPMS 3.6
+                                measurement systems
+                                Process Measurement Instrumentation. Level section                                                                               API RP 551
+                                                                                                         BODEGA, EDUARDO                                                                             13/03/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                            GUILLERMO                                                                               11:43:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 10 / 11
+                                                              J0400 Medida de Nivel (Parte General)
+Tipo: ESPECIFICACIÓN                         Ámbito: Upstream - Argentina                                                                                      Código: 11103-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                             Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+
+    Categoría                                                                             Título                                                                                        Código
+                                  Manual of Petroleum Measurement Standard – Physical
+                                                                                                                                                                   API MPMS 11.1
+                                  Properties.
+                                  Section “Water Level Indicators”                                                                                                 ASME BVPC Sec. I
+                                  Standard guide for petroleum measurement tables                                                                                  ASTM D 1250
+                                  ISA handbook of Measurement and control of liquid levels                                                                         ISA
+
+
+7.3 Definiciones y abreviaturas
+         Término                        Abreviatura                                                                                 Descripción
+ N/A                                    N/A                          N/A
+
+
+8 Aprobación
+
+8.1 Vigencia
+Esta normativa entrará en vigencia a partir de la fecha de su aprobación.
+Los abajo firmantes asumen la responsabilidad de implantar, controlar el cumplimiento y actualizar el presente
+documento cada vez que fuera necesario.
+
+
+8.2 Disposiciones generales y transitorias
+N/A
+
+
+8.3 Historial
+       Estado                      № Revisión                    Fecha Aprobación                                                                   Observaciones
+
+ Original                         0.0                            Ver fecha en pie de
+                                                                 firmas.
+
+
+8.4 Aprobación colegiada
+N/A
+
+
+8.5 Categoría de Clasificación del Activo de Información
+YPF - Privada: información disponible para los empleados de la compañía y terceros (ej. contratistas) como parte de
+la rutina del negocio. Su difusión se hace en base al conocimiento para poder operar. Su difusión no autorizada
+podría afectar la consecución de objetivos particulares de determinadas áreas de la compañía.
+
+                                                                                                           BODEGA, EDUARDO                                                                             13/03/2017
+      GALANTERNIK, NICOLAS                                  VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                              GUILLERMO                                                                               11:43:00 a.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   11 / 11
+

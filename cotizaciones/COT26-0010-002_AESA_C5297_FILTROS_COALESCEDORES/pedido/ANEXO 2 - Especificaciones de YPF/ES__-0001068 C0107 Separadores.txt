@@ -1,0 +1,1171 @@
+                                                       #Título                     C0107 Separadores
+#Tipo                                                   Especificación            #Código                 ES__-0001068
+#Fecha de Vigencia                                      11/09/2023                #Versión                2.1
+#Activo de la información                               YPF - Privada
+#Proceso                                                21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+
+
+1 Índice
+
+Contenido
+1      ÍNDICE .......................................................................................................................................................... 1
+2      OBJETO........................................................................................................................................................ 2
+3      ÁMBITO DE APLICACIÓN........................................................................................................................... 2
+4      CONSIDERACIONES PRINCIPALES ......................................................................................................... 2
+    4.1          ORDEN DE PRELACIÓN DE DOCUMENTOS .................................................................................................. 2
+    4.2          UNIDADES DE MEDIDA ............................................................................................................................. 3
+5      ESPECIFICACIÓN ........................................................................................................................................ 3
+    5.1    DISEÑO .................................................................................................................................................. 3
+      5.1.1 Condiciones generales de diseño .................................................................................................... 3
+      5.1.2 Sistema de separación y accesorios internos .................................................................................. 3
+      5.1.3 Diseño mecánico .............................................................................................................................. 4
+      5.1.4 Instrumentación general ................................................................................................................... 9
+      5.1.5 Repuestos y herramientas especiales ........................................................................................... 11
+    5.2    FABRICACIÓN........................................................................................................................................ 11
+      5.2.1 General ........................................................................................................................................... 11
+      5.2.2 Aseguramiento y control de calidad ............................................................................................... 11
+      5.2.3 Soldadura ....................................................................................................................................... 11
+      5.2.4 Inspección y Pruebas ..................................................................................................................... 12
+    5.3    RESPONSABILIDAD Y GARANTÍA ............................................................................................................. 13
+    5.4    PREPARACIÓN PARA TRANSPORTE ......................................................................................................... 14
+      5.4.1 Embalaje ......................................................................................................................................... 14
+      5.4.2 Recepción ....................................................................................................................................... 14
+      5.4.3 Rechazo.......................................................................................................................................... 14
+      5.4.4 Aprobación definitiva ...................................................................................................................... 14
+    5.5    DOCUMENTACIÓN TÉCNICA REQUERIDA .................................................................................................. 15
+      5.5.1 Dossier de calidad .......................................................................................................................... 16
+      5.5.2 Manual de Operación y Mantenimiento ......................................................................................... 16
+6      ROLES, INDICADORES, REGISTROS Y RIESGOS DEL PROCESO ..................................................... 16
+    6.1          ROLES.................................................................................................................................................. 16
+    6.2          INDICADORES........................................................................................................................................ 17
+    6.3          REGISTROS .......................................................................................................................................... 17
+    6.4          RIESGOS Y ACCIONES MITIGANTES ......................................................................................................... 17
+    6.5          REGLAS DE NEGOCIO ............................................................................................................................ 17
+7      ANEXOS Y REFERENCIAS ....................................................................................................................... 17
+    7.1    ANEXOS ............................................................................................................................................... 17
+      7.1.1 Anexos Especiales ......................................................................................................................... 17
+      7.1.2 Otros anexos .................................................................................................................................. 18
+
+
+     COPIA NO CONTROLADA
+     [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  1 / 21
+                                                       #Título                     C0107 Separadores
+    #Tipo                                               Especificación            #Código                 ES__-0001068
+    #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+    #Activo de la información                           YPF - Privada
+    #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+     7.2         NORMATIVA RELACIONADA .................................................................................................................... 18
+     7.3         DEFINICIONES Y ABREVIATURAS ............................................................................................................. 19
+8      APROBACIÓN ............................................................................................................................................ 19
+     8.1         VIGENCIA.............................................................................................................................................. 19
+     8.2         DISPOSICIONES GENERALES Y TRANSITORIAS ......................................................................................... 20
+     8.3         HISTORIAL ............................................................................................................................................ 20
+     8.4         FLUJO DE APROBACIÓN ......................................................................................................................... 20
+9      ANEXO........................................................................................................................................................ 21
+
+
+
+
+2 Objeto
+Esta Especificación de Diseño (ED) establece los requisitos mínimos aplicables para el diseño,
+selección de materiales, fabricación, inspección, ensayos, pruebas, acondicionamiento y transporte
+de equipos separadores de hidrocarburos (bifásicos, trifásicos, horizontales, verticales) que se
+instalen en las Instalaciones de Superficie (E&P) de YPF.
+El presente documento forma parte de la última edición de las Especificaciones de YPF, y hace
+referencia, asimismo, a la última edición de las Normas y Códigos que son mencionados y/o
+aplicables, así como a lo indicado en el documento “Datos Básicos de Diseño (DBD)" que recoge los
+aspectos particulares para cada proyecto.
+
+
+3 Ámbito de aplicación
+YPF S.A. Upstream – Argentina.
+
+
+4 Consideraciones principales
+
+4.1 Orden de prelación de documentos
+El equipo objeto de esta Especificación estará de acuerdo a los requisitos de la legislación aplicable
+en el lugar de instalación.
+Esta Especificación, junto con los documentos de ingeniería (hojas de datos, planos, P&ID), forma
+parte de la Requisición del material. En caso de discrepancia entre los documentos incluidos en dicha
+Requisición prevalecerá el siguiente orden de prioridad:
+-     Legislación aplicable (siempre y cuando en las Hojas de Datos, en la Requisición del Material o
+      en esta Especificación no se establezcan criterios más restrictivos que los en ella fijados).
+-     Hoja de Datos y /o Planos de ingeniería.
+
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  2 / 21
+                                                       #Título                     C0107 Separadores
+    #Tipo                                               Especificación            #Código                 ES__-0001068
+    #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+    #Activo de la información                           YPF - Privada
+    #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+-     Requisición del material.
+-     Lo definido en esta Especificación.
+Las excepciones, variaciones o adiciones que supongan cualquier cambio en dichos documentos
+serán comunicadas por escrito a YPF para su aceptación.
+El cumplimiento de los requisitos dados en esta Especificación no exime ni parcial ni totalmente al
+fabricante del equipo de sus responsabilidades y garantías contractuales.
+
+
+4.2 Unidades de medida
+Las unidades de medida serán las del Sistema Métrico Internacional (SI), si bien para conexiones se
+podrán utilizar pulgadas para el diámetro y libras para el rating. Asimismo, se admitirán presiones en
+kg/cm2.
+
+
+5 Especificación
+
+5.1 Diseño
+
+5.1.1 Condiciones generales de diseño
+Cada separador será diseñado y construido sobre la base de los requisitos aplicables de la Norma
+API SPEC 12J y las Especificaciones “ES__-0001033 C0100 Recipientes a presión, ES__-0001998
+L0200 Clases de Cañerías para Plantas y ES__-0001079 M0100 Estructuras de acero” de YPF
+aplicables al diseño del recipiente, cañerías paquetizadas y al trineo de apoyo con las estructuras
+metálicas asociadas (escaleras, plataformas, etc.) respectivamente.
+El requisito de recipientes a presión con estampa “U” según ASME Boiler & Pressure Vessel Code
+será pedido expresamente por YPF.
+La instrumentación será de acuerdo a las Especificaciones “ES__-0002156 J0300 Medida de Presión
+(Parte General), ES__-0002171 J0400 Medida de Nivel (Parte General) y ES__-0001979 J0500
+Medida de Temperatura (Parte General)” de YPF.
+Para el diseño del separador de antorcha (KOD) referirse a la especificación “ES__-0001050 A0800
+Sistemas de alivio en instalaciones de superficie”.
+
+5.1.2 Sistema de separación y accesorios internos
+Los elementos internos y sus soportes serán de acuerdo a la Especificación “ES__-0001042 C0200
+Elementos internos de recipientes a presión” de YPF.
+
+
+
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  3 / 21
+                                                       #Título                     C0107 Separadores
+    #Tipo                                               Especificación            #Código                 ES__-0001068
+    #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+    #Activo de la información                           YPF - Privada
+    #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+Se emplearán como accesorios internos para separación gas-líquido, separadores de niebla del tipo
+caja de vanos (cajas de chicanas) o los de malla de acero tipo demister y distribuidores de entrada
+como chapa deflectora; caño recortado, distribuidor con vanos y distribuidor del tipo ciclónico)
+Todos los internos deberán tener su diseño y eficiencia comprobada por experiencias de uso en
+servicios similares y/o ensayos específicos que avalen su selección e instalación. No se admitirá el
+uso de prototipos, salvo autorización expresa de YPF.
+La separación líquido-líquido se llevará a cabo mediante cajas de placas coalescentes (largo mínimo
+600mm) y bafle de separación de petróleo (vertedero). Se considerará el empleo de otros tipos
+internos en la parte inferior del recipiente para la retención de sólidos (arenas o barros).
+En todos los casos el diseño deberá garantizar las siguientes condiciones:
+-     Eficiencia de separación gas-líquido = 100 % (para partículas de 8-10mm y mayores de líquido,
+      y 3mm y mayores de sólidos). Contenido de líquidos inferior a 13,36 litros por cada 1.000.000
+      Sm³ (0,1 galones por cada 1.000.000 Sft³).
+-     Eficiencia de separación líquido-líquido = 99% (en gotas de petróleo libre de 150mm y
+      superiores).
+Valores diferentes de eficiencia deberán ser debidamente justificados ante YPF e sometidos a
+aprobación antes de iniciar la fabricación.
+Todos los elementos internos indicados como así también sus soportes de fijación a la envolvente
+y/o cabezales del separador, serán construidos en acero inoxidable AISI 316L.
+El diseño preverá facilidades para la limpieza, desmontaje y la extracción de los accesorios internos
+de separación.
+Los soportes para los elementos internos se soldarán a la envolvente y/o cabezales en forma
+continua y perimetral.
+
+5.1.3 Diseño mecánico
+5.1.3.1 General
+El separador será del tipo cilíndrico, vertical u horizontal según se especifique en la ingeniería,
+montado sobre skid con cabezales semielípticos relación 2:1. Podrán emplearse otros tipos de
+cabezales según Código ASME VIII Div.1 siempre bajo la aprobación expresa de YPF.
+Salvo que se indique otra cosa, el material de la envolvente y cabezales será chapa de acero según
+ASTM A 516 Gr.70.
+Todas las conexiones serán bridadas, siendo las bridas con cuello y resalte de cara (WNRF) de
+acuerdo a la Norma ASME B 16.5 y material según ASTM A 105. El empleo de otro tipo de brida
+(entrada de hombre) u otro tipo de conexión se realizará solo con aprobación expresa de YPF.
+
+
+
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  4 / 21
+                                                       #Título                     C0107 Separadores
+    #Tipo                                               Especificación            #Código                 ES__-0001068
+    #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+    #Activo de la información                           YPF - Privada
+    #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+Los caños utilizados para el cuello de conexiones serán sin soldadura según ASTM A-106. No
+obstante, los cuellos de las conexiones de diámetro nominal (DN) 14“ y mayores podrán fabricarse
+de la misma chapa que la envolvente.
+Para el tamaño y terminaciones interiores de las conexiones y cuerpo del separador se tendrán en
+cuenta, en virtud de la aplicación de recubrimientos para protección anticorrosiva de las superficies
+interiores del separador, los requisitos aplicables indicados en la Especificación “ES__-0002657
+B0600 Protección Anticorrosiva Con Recubrimientos” de YPF.
+Los espárragos y tuercas para montaje de uniones bridadas responderán dimensionalmente a la
+Norma ASME B 16.5, y el material según ASTM A 193 Gr. B7 y A 194 Gr 2H respectivamente.
+5.1.3.2 Conexiones del recipiente
+Las conexiones de salida del separador, a excepción de los drenajes, estarán equipadas con
+rompevórtices.
+A menos que se indique otra cosa en los documentos de ingeniería de partida, la disposición de las
+conexiones principales en el recipiente será la siguiente:
+-     Entrada de fluido (bruta-líquido-gas): en los separadores horizontales, se ubicará
+      preferentemente en la parte superior del casquete o sobre el lateral de la envolvente. El tramo de
+      cañería que conduce a la conexión de entrada debe, en la medida de lo posible, no presentar
+      cambios de dirección ni tamaño. En los separadores verticales, se ubicará sobre la envolvente.
+-     Salida de gas: se ubicará en la parte superior, perpendicular a la generatriz de la envolvente y en
+      el extremo opuesto a la entrada de fluido.
+-     Salida de petróleo: se ubicará paralela a la generatriz de la envolvente sobre el cabezal opuesto
+      a la entrada de fluido.
+-     Salida de agua: se ubicará en la parte inferior, perpendicular a la generatriz de la envolvente, y
+      en el extremo opuesto a la entrada de fluido.
+-     Salida(s) de barros: se ubicarán en la parte inferior, perpendicular a la generatriz de la envolvente
+      y distribuidas proporcionalmente a lo largo del equipo.
+-     Drenaje de petróleo: se ubicará en la parte inferior, en el sector de petróleo respecto del bafle
+      (vertedero), perpendicular a la generatriz de la envolvente.
+-     Drenaje de agua: se ubicará en la parte inferior, en el sector de agua respecto del bafle
+      (vertedero) perpendicular a la generatriz de la envolvente.
+-     Toma muestras: se ubicarán distribuidos uniformemente sobre un lateral de la envolvente, en
+      forma perpendicular a su generatriz, paralelas entre sí y dispuestas sobre distintos planos
+      perpendiculares a la envolvente a los efectos de poder ser canalizadas a la bandeja colectora.
+-     Limpieza de fondo: se ubicará en la parte inferior, perpendicular a la generatriz de la envolvente.
+-     Conexión para limpieza con vapor (si es requerida): se ubicará en la parte superior y su
+      prolongación interior se conectará a la caja de vanos, la que actuará como distribuidor de vapor
+      para su limpieza.
+-     Conexiones de instrumentos de medición de nivel: requieren tracing (cinta calefactora) y aislación
+      por riesgo de taponamiento, por congelamiento de agua o deposición de parafinas.
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  5 / 21
+                                                    #Título                     C0107 Separadores
+ #Tipo                                               Especificación            #Código                 ES__-0001068
+ #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+   Adicionalmente verificar diámetro mínimo requerido para las conexiones según lo indicado por
+   Instrumentos en CMC (mínimo 3”).
+- En el caso de los transmisores de nivel de interfase, cuyo principio de funcionamiento sea
+   diferencial de presión, la conexión superior deberá estar siempre sumergida 50 mm por debajo
+   del máximo nivel de líquido.
+- Las conexiones inferiores correspondientes a conexiones de instrumentos de medición de nivel
+   deben ubicarse sobre un lateral de la envolvente, en forma perpendicular a su generatriz, con
+   una altura mínima que supere la altura del bafle de contención de arena, si hubiese uno.
+- Conexión hacia válvula de alivio de presión: si la derivación estuviese sobre el recipiente, la
+   misma debe realizarse aguas arriba del eliminador de niebla, para asgurar pasaje franco hacia el
+   dispositivo de alivio.
+- Entrada de hombre: diámetro mínimo 18”, preferentemente 24”. En separadores verticales de
+   diámetro menor a 30”, se reemplaza el casquete superior por brida ciega.
+En servicios con arena:
+- En servicios con contenido de arena (yacimientos No Convencionales, por ejemplo) se
+   recomienda la instalación de un bafle de contención de arena (alto mínimo 150 mm). Se proveerá
+   una conexión de drenaje aguas arriba y otras aguas abajo del bafle de contención de arena, de
+   modo de facilitar la remoción de la arena (separadores horizontales). Se instalará el bafle aguas
+   abajo de la entrada de hombre para facilitar la limpieza.
+- Las conexiones de los instrumentos de medición de nivel se situarán preferentemente aguas
+   abajo del bafle de contención de arena para minimizar la presencia de arena.
+5.1.3.3 Soportes
+El cuerpo del separador será soportado sobre dos cunas con sus respectivos refuerzos construidos
+en chapa de acero. El diseño seguirá los lineamientos y prácticas recomendadas por ASME, basados
+en el método presentado por L.P. Zick y la norma API 2510.
+Las chapas de acero para las cunas de los recipientes horizontales serán según ASTM A 36, ASTM
+A 283 Gr. C o equivalente.
+5.1.3.4 Paquetizado
+Cuando se requiera, el separador será paquetizado teniendo en cuenta estas siguientes premisas
+de diseño.
+Todas las cañerías paquetizadas de ingreso y egreso de fluidos al separador (cuadros de descargas
+de líquidos, de gas, venteos y drenajes) se prolongarán, con conexiones bridadas, hasta los límites
+del Skid y estarán de acuerdo a la Especificación “ES__-0001998 L0200 Clases de Cañerías para
+Plantas” de YPF.
+Todas las bridas quedarán alineadas sobre el mismo extremo.
+Las cañerías estarán dispuestas en forma tal que eviten zonas de condensación y puntos bajos y a
+la vez permitan la instalación de todo el conjunto en la longitud del equipo, al cual estarán
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               6 / 21
+                                                    #Título                     C0107 Separadores
+ #Tipo                                               Especificación            #Código                 ES__-0001068
+ #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+correctamente soportadas y permitirán el acceso para la operación y/o reparación de cualquier
+elemento componente en forma segura.
+Si existieran requerimientos específicos de internos y/o instrumentos de medición en línea que
+requieran la prolongación de líneas una determinada cantidad de “diámetros mínimos”, estos
+deberán ser puestos a consideración y aprobación de YPF de forma temprana por el potencial
+impacto que pudieran tener sobre el layout de la instalación de superficie.
+De requerirse la instalación de plataformas y escalaras para tareas de Operación y Mantenimiento,
+las mismas deberán cumplir con la Especificación “ES__-0001079 M0100 Estructuras de acero”.
+El separador completo se instalará sobre un trineo de apoyo, construido por largueros y travesaños
+en perfil IPN Nº 20 como mínimo. Podrán tener extremos para arrastrarse (skid petrolero), serán de
+caño de acero Ø 4’’ Sch. 80 mínimo. Se incluirán además cáncamos de izaje.
+Las dimensiones se relacionarán al peso y medidas del separador, y su diseño será tal que soportará
+las cargas, manipuleo de transporte e instalación del equipo sin sufrir deformaciones. Será equipado
+con dos (2) planchuelas de puesta a tierra de acero inoxidable AISI 304L soldadas en extremos
+opuestos.
+Las dimensiones del trineo de apoyo (skid) será tal que contendrá a la bandeja colectora y todas las
+cañerías paquetizadas con sus bridas de salida y entrada ubicadas a filo del mismo. Siempre que
+sea posible, las dimensiones máximas (ancho, alto, largo) deberán mantenerse dentro de los límites
+que eviten la gestión de un permiso de tránsito para su transporte de acuerdo a la Ley Nacional de
+Tránsito 24449- Art 53 inciso (c).
+5.1.3.5 Acceso e inspección
+El cuerpo del separador se diseñará con entradas de hombre para inspección y/o limpieza que
+aseguren el acceso a todas las partes del interior del recipiente, serán de un diámetro no menor a
+24” de diámetro nominal (DN).
+Estas serán equipadas con brida ciega, junta, bisagra o pescante.
+Se soldarán barrotes para peldaños y asideros, en el interior de la envolvente del recipiente, próximos
+a las entradas de hombre para facilitar el acceso.
+En servicios con arena, se agregará una conexión adicional de limpieza para facilitar la remoción de
+arena del recipiente, no mayor a 12" de diámetro nominal (DN) pudiendo emplearse un DN menor si
+no se dispone de espacio suficiente que garantice la ejecución tareas de mantenimiento en forma
+segura.
+5.1.3.6 Protección anticorrosiva
+El nivel de protección estará de acuerdo con la Especificación “ES__-0002549 B0609 Selección de
+Materiales y Sistemas de Recubrimiento Interior”.
+La preparación, la aplicación y los sistemas de recubrimientos para la protección anticorrosiva sobre
+todas las superficies del separador, sus sistemas de cañerías paquetizadas y todas las estructuras
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               7 / 21
+                                                    #Título                     C0107 Separadores
+ #Tipo                                               Especificación            #Código                 ES__-0001068
+ #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+metálicas asociadas (escaleras plataformas y trineo de apoyo) serán de acuerdo a los requisitos de
+la Especificación “ES__-0002657 B0600 Protección Anticorrosiva Con Recubrimientos”, en cuyo
+Anexo VI se definen los colores de terminación para cada componente.
+Cuando se requiera instalar protección catódica, su diseño será de acuerdo a la Especificación
+“ES__-0001031 B0608 Protección catódica interior de recipientes” de YPF. Las características de los
+ánodos de sacrificio y su disposición serán según lo indicado en dicha Especificación, instalados a
+través de bridas de 4” de DN. Las conexiones serán del tipo Vitaulic o similar para permitir el control
+de potencial. También será necesario instalar un (1) anódo de medición de acuerdo al típico definido
+en la Especificación.
+El proveedor definirá en su oferta la cantidad necesaria de ánodos para garantizar una adecuada
+protección anticorrosiva, no pudiendo ser dicha cantidad inferior a tres (3) en separadores
+horizontales, asegurando una vida útil del sistema de tres (3) años como mínimo.
+En virtud de la aplicación del recubrimiento en las superficies interiores del separador y en los
+cuadros de descarga de agua, se marcará en lugar visible la indicación “NO SOLDAR –
+RECUBRIMIENTO INTERIOR”.
+5.1.3.7 Aislamiento térmico
+El aislamiento térmico estará de acuerdo a los requerimientos de la Especificación “ES__-0002637
+N0100 Aislamiento Exterior de Equipos y Cañerías Calientes”. Debe evitarse uniones de la cubierta
+metálica correspondiente a las 6 y 12 horas.
+Cuando el equipo y sus líneas son aislados, también debe incluirse a sus instrumentos. Todas las
+conexiones de instrumentos requieren ser aisladas y traceadas (cinta calefactora)
+5.1.3.8 Chapa de identificación
+La placa de características será construida en acero inoxidable y grabada con los datos que se
+indican a continuación, irá instalada (por soldadura o remaches) sobre un soporte construido en
+chapa de 6 mm de espesor soldado al recipiente en un lugar fácilmente visible en su emplazamiento
+definitivo.
+La placa contendrá como mínimo la siguiente información:
+  Fabricante
+  Orden de Compra / Fecha
+  Código diseño
+  Tipo de Separador
+  TAG / Código SAP
+  Año de fabricación
+  Caudal de petróleo máximo                                               [m3/d]
+  Caudal de agua máximo                                                   [m3/d]
+  Caudal de gas máximo                                                    [Sm3/d]
+  Corte de agua                                                           [%]
+  Presión de diseño / prueba                                              [kg/cm2g]
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               8 / 21
+                                                       #Título                     C0107 Separadores
+    #Tipo                                               Especificación            #Código                 ES__-0001068
+    #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+    #Activo de la información                           YPF - Privada
+    #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+     Temperatura de diseño / MDMT       [°C]
+     Presión de operación min./max.     [kg/cm2g]
+     Temperatura de operación min./max. [°C]
+     Material / espesor cuerpo          [mm]
+     Material / espesor cabezales       [mm]
+     Espesor corrosión                  [mm]
+     Nivel radiografiado                                                                                                                            RT
+     PWHT                                                                                                                                          SI/NO
+     Esquema pintura ext. / int.
+     Dimensiones OD x LT-LT              [mm]
+     Volumen recipiente                  [m3]
+     Peso vacío / PH / operación         [kg]
+     Peso del skid vacío / operación     [kg]
+
+
+5.1.4 Instrumentación general
+Todos los componentes enunciados, deberán ser especificados, seleccionados e instalados de
+acuerdo a la ingeniería entregada por YPF y las ED aplicables.
+-     Manómetro: hermético, tipo intemperie, clase 1,5; según Norma IRAM IAP A 51.65. Escala acorde
+      con la presión de trabajo, de 4" de DN con tubo Bourdon y mecanismo multiplicador en acero
+      inoxidable. Caja de aleación de acero provista de visor de vidrio, aro metálico cromado roscado,
+      con sello de goma sintética y conexión roscada de bronce de 1/2” NPT en el respaldo inferior.
+      Apto para soportar sobrecargas del 30 %. Se proveerá con válvula aguja de 1/2”, conexión a
+      rosca NPT, para bloqueo y purga en derivación, en acero inoxidable AISI 316 y con válvula de
+      bloqueo previa. Con todos los accesorios necesarios para su instalación en el equipo. Será
+      instalado y ubicado de tal manera que permita su fácil observación.
+-     Termómetro: a dial, bimetálico, caja circular de aleación de acero 4” DN. Rango de 0-100 ºC.
+      Provisto con termovaina de acero inoxidable, de rosca exterior 3/4” NPT, e interior 1/2” NPT, que
+      permita el libre desmontaje del termómetro. Responderá a la clase S.A.M.A. (Normal), tipo V,
+      construcción apta para intemperie. Deberá ser instalado y ubicado de tal manera que permita su
+      fácil observación.
+-     Indicadores de Nivel: tipo réflex para interfaz líquido-gas y del tipo transparente doble visión para
+      interfaz líquido-líquido, en caja de acero forjado con válvulas esféricas de bloqueo y purga a un
+      colector común de 1/2” que se unirá a las restantes purgas. Largo de visión mínimo de
+      290 mm. Conectado al cuerpo del separador en posición coincidente con la de los controladores
+      de nivel de petróleo e interfase. Sobre la caja deberán marcarse por entalladura pintada, los
+      niveles máximos y mínimos de acuerdo a los límites que fije el controlador de nivel.
+-     Controladores de nivel: para petróleo y para interfase, con conexión bridada y con filtro
+      incorporado. Flotante de acero AISI 316, para operar dentro del separador. Estos controladores
+      operarán las válvulas de control de descarga de petróleo y agua respectivamente.
+
+
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  9 / 21
+                                                       #Título                     C0107 Separadores
+    #Tipo                                               Especificación            #Código                 ES__-0001068
+    #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+    #Activo de la información                           YPF - Privada
+    #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+-     Válvulas de seguridad para sobrepresión: de acero fundido, a resorte, apta para las condiciones
+      de trabajo establecidas, calculada para el caudal total de líquido. Responderá a las Normas API
+      520, 521, 526, 527, 2000, y código ASME Secc.VIII. Irán montadas sobre un niple bridado,
+      soldado al cuerpo del separador. Esta válvula estará ubicada próxima a la salida de gas.
+-     Disco de ruptura: del tipo B, en cabezal porta disco, entre bridas. Calculado de acuerdo al Código
+      ASME Secc. VIII, montado sobre niple bridado soldado al cuerpo del separador.
+Las salidas del separador, a su vez, contendrán como mínimo los siguientes componentes
+y/o instrumentación de control conformando los siguientes cuadros de salida:
+Salida de gas:
+-     Válvula de control para salida de gas, con sus respectivas válvulas de bloqueo y purgas.
+-     Controlador de presión.
+-     Medición de caudal.
+Entrada de gas (ecualización):
+-     Válvula de control para entrada de gas, con sus correspondientes válvulas de bloqueo y purgas.
+Salida de petróleo:
+-     Válvula de control para descarga de petróleo, con válvulas de by pass tipo globo y de bloqueo y
+      sus correspondientes válvulas de bloqueo y drenajes.
+-     Controlador de nivel instalado sobre el recipiente para el nivel de petróleo.
+Salida de agua:
+-     Válvula de control para descarga de agua con válvula de by pass tipo globo y de bloqueo y sus
+      correspondientes válvulas de bloqueo y drenajes.
+-     Controlador de nivel instalado sobre el recipiente para el nivel de interfase agua-petróleo, para
+      separadores trifásicos y nivel total para separadores bifásicos.
+Salida de barros:
+-     Válvulas a diafragma.
+Drenajes de petróleo y agua:
+-     Válvulas esféricas de drenaje.
+Toma muestras:
+-     Válvulas esféricas.
+Limpieza de fondo:
+-     Válvula manuales o automatizadas (según se especifique en la Hoja de Datos) dependiendo del
+      sistema de retrolavado manual o automático aplicable al proyecto.
+
+
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               10 / 21
+                                                       #Título                     C0107 Separadores
+    #Tipo                                               Especificación            #Código                 ES__-0001068
+    #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+    #Activo de la información                           YPF - Privada
+    #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+Cuando se requiera la instalación de válvulas de Shut Down (SDV) dentro del skid, esta deberá
+contar con un cuadro asociado con válvula manual con purga para mantenimiento de dicha válvula.
+
+5.1.5 Repuestos y herramientas especiales
+El Contratista incluirá como parte de su propuesta, una lista detallada y valorizada de los siguientes
+repuestos:
+-     Puesta en marcha.
+-     2 (dos) años de operación normal.
+Los mismos serán incluidos como alcance opcional de la respectiva Orden de Compra.
+Cuando sea aplicable, el Contratista incluirá como parte de su propuesta un set completo de
+las herramientas especiales requeridas para efectuar el desarmado y armado de todos los ítems
+del equipamiento suministrado. Cada herramienta será claramente identificada en la lista de
+herramientas especiales.
+Las listas de herramientas especiales a ser suministrada será indicada en la propuesta y cotizadas
+por separado del equipo.
+
+
+5.2 Fabricación
+
+5.2.1 General
+El Fabricante no podrá comenzar la fabricación del equipo sin las correspondientes memorias de
+cálculo, diagramas, planos constructivos y calificación de procedimientos de soldadura y soldadores
+aprobados por YPF.
+
+5.2.2 Aseguramiento y control de calidad
+El Contratista será totalmente responsable por la implementación de las políticas de Garantía y
+Control de la Calidad.
+El Contratista empleará un Sistema de Aseguramiento de la Calidad compatible con los requisitos
+de las Normas ISO 9000.
+YPF se reserva el derecho de inspeccionar en la instalación del Contratista, subcontratistas
+y proveedores a fin de verificar que los productos están conformes con los requisitos especificados.
+El Contratista prestará toda la colaboración necesaria para facilitar las inspecciones y no utilizará
+dichas inspecciones como evidencia del efectivo control de la calidad.
+
+5.2.3 Soldadura
+Las costuras de soldaduras se realizarán por medio de procedimientos calificados de acuerdo con el
+código aplicable y serán ejecutadas por soldadores calificados por el mismo código, llevando la
+empresa contratista un listado actualizado de la totalidad de soldadores con que cuenta al iniciar los
+trabajos.
+
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               11 / 21
+                                                    #Título                     C0107 Separadores
+ #Tipo                                               Especificación            #Código                 ES__-0001068
+ #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+5.2.3.1 Soldadura sobre partes sometidas a presión
+Las soldaduras de los componentes y refuerzos del cuerpo del separador, como así también
+las soldaduras de las cañerías paquetizadas asociadas al mismo serán realizadas de acuerdo con
+los requisitos aplicables establecidos en las Especificaciones “ES__-0001001 B0500 Requisitos
+generales de soldadura dentro de planta y ES__-0001052 B0503 Soldaduras de cañerías y equipos
+en planta” de YPF.
+5.2.3.2 Soldaduras Estructurales
+Asimismo, las soldaduras de los elementos estructurales serán realizadas siguiendo en todos
+los casos los requisitos aplicables de la Especificación “ES__-0001054 B0505 Soldaduras de
+estructuras y soportes”.
+
+
+5.2.4 Inspección y Pruebas
+5.2.4.1 General
+El contratista presentará a YPF o a su Representante el Plan de Inspección y Ensayos (PIE) para
+su aprobación.
+La inspección y prueba del separador serán de acuerdo con las Normas de aplicación. La calidad
+de los materiales a utilizar cumplirá con lo requerido en la Especificación “ES__-0001025 B0200
+Aseguramiento y control de calidad de equipos estáticos y dinámicos” de YPF.
+El Contratista dará las facilidades necesarias para permitir a YPF o su representante el ejercicio de
+las siguientes funciones de control, sin necesidad de previo aviso u otra formalidad:
+- Inspección de los materiales y de los trabajos.
+- Verificación del cumplimiento de las normas de diseño que correspondan.
+- Verificación del grado de avance de todas las fases del proceso de acopio, fabricación y
+    provisión, incluyendo el estado de las órdenes de compra de terceros.
+- Verificación de cualquier otra actividad relacionada con el objeto de la presente Especificación,
+    que pueda afectar la calidad o los plazos del suministro, en cualquier momento durante el período
+    de cumplimiento de la Requisición del material.
+El Contratista dispondrá de los equipos de medición y calibración, así como las
+herramientas necesarias para las operaciones de inspección y ensayos.
+Para las operaciones de inspección, control y prueba que YPF o su Representante determine
+como puntos de presencia (witness) o detención (hold), el Contratista comunicará su realización con
+5 (cinco) días de anticipación como mínimo. Todos los ensayos serán avalados por el Contratista.
+Se incluyen todos los ensayos no destructivos, ensamblajes, pruebas mecánicas, de funcionamiento
+y la preparación del equipo para el transporte.
+Cualquier rechazo realizado por el inspector de YPF sobre la base de resultados de inspecciones o
+pruebas tendrá carácter de irrevocable. Sin embargo, esta inspección de ninguna manera libera al
+Contratista de las garantías de calidad de los materiales, mano de obra y funcionamiento del equipo.
+No se pintarán las superficies del recipiente y otras partes del equipo hasta que se haya completado
+la inspección y realizado las pruebas hidráulicas.
+Todos los informes de ensayos y pruebas serán incorporados en el dossier de calidad que
+será presentado a YPF o su Representante para su aprobación.
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            12 / 21
+                                                    #Título                     C0107 Separadores
+ #Tipo                                               Especificación            #Código                 ES__-0001068
+ #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+5.2.4.2 Ensayos No Destructivos (END)
+Serán realizados por personal calificado y de acuerdo a los códigos ASME B&PVC Sección VIII Div.
+1 y ASME B 31.3 aplicables al separador y cañerías paquetizadas (cuadros de líquidos y
+gas) respectivamente.
+5.2.4.3 Pruebas de presión
+El separador será probado hidrostáticamente a 1,3 veces de la máxima presión admisible de trabajo
+de acuerdo a lo requerido por el código ASME B&PVC Sección VIII Div.1.
+Las cañerías paquetizadas del separador serán probadas hidrostáticamente a 1,5 veces de la
+máxima presión de trabajo de acuerdo a lo requerido por el código ASME B31.3.
+A criterio de YPF, el sistema de cañerías paquetizadas armadas en su posición final sobre
+el skid podrá ser probado neumáticamente a la presión de servicio de aire en planta mínimo de
+0,7Mpa y verificado con agua jabonosa todas sus uniones.
+En base a estas premisas el Contratista presentará para su aprobación la rutina de la prueba
+de presión correspondiente.
+5.2.4.4 Prueba de funcionamiento
+Cuando sea aplicable, las válvulas de control e instrumentos en general, dispositivos del panel
+de control, etc., serán sometidos a un ensayo de funcionamiento simulado en taller, que verifique la
+lógica del sistema de control y las condiciones de enclavamientos / shutdown.
+Una vez instalado en el lugar de operación, el equipo será sometido a una prueba de
+funcionamiento global, a pedido de YPF el Contratista dará asistencia técnica hasta la puesta en
+marcha de los equipos objeto de la presente Especificación.
+
+5.3      Responsabilidad y Garantía
+El Contratista será responsable por el cumplimiento de las Normas aplicables y requerimientos de
+esta Especificación, así como por el desempeño del equipo objeto de la provisión en las condiciones
+indicadas en la Requisición del material.
+La inspección y aprobación por parte de YPF, no eximirá al Contratista de la total responsabilidad
+por los vicios ocultos que pudiera tener dicha provisión.
+El Contratista garantizará en forma expresa el equipo, instrumentos y accesorios contra defectos de
+diseño, materiales y/o mano de obra, por el término que indique las condiciones contractuales de la
+Requisición del material.
+El fabricante garantizará en forma expresa, como se especifique en la Hoja de Datos, la separación
+del fluido a la presión y temperatura requerida con los caudales máximos allí indicados.
+Durante los lapsos mencionados anteriormente y durante el período de construcción el Contratista
+se obligará a ejecutar sin cargo las reparaciones y/o modificaciones que resulten necesarias en el
+equipo y/o accesorios para corregir cualquier desviación a lo indicado en esta Especificación.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            13 / 21
+                                                       #Título                     C0107 Separadores
+    #Tipo                                               Especificación            #Código                 ES__-0001068
+    #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+    #Activo de la información                           YPF - Privada
+    #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+5.4 Preparación para transporte
+
+5.4.1 Embalaje
+Los equipos objeto del suministro estarán adecuadamente preparados para su transporte,
+debidamente protegidos con los soportes y refuerzos adecuados a los efectos de evitar deterioros
+por vibraciones y conforme a lo requerido en la Especificación “ES__-0001051 B0100 Preparación
+para transporte de equipos y materiales” de YPF.
+Las piezas sueltas tales como instrumentos, panel de control, repuestos, etc., serán embaladas e
+identificadas claramente de modo de ser trazables al equipo correspondiente. Los cajones serán
+despachados solidarios al trineo de apoyo (skid) del separador.
+Con el envío del equipo al destino se ha de incluir un juego de la documentación técnica aplicable
+necesaria para el montaje del mismo (planos generales y de detalle, planos de montaje, manual de
+operación, P&ID, listado de materiales, etc.).
+
+Cada embalaje contendrá como mínimo la siguiente información:
+
+-     Nombre del usuario.
+-     Dirección de entrega indicado en la Orden de Compra.
+-     Número de la Orden de Compra e ítem.
+-     Referencia del equipo correspondiente.
+-     Lista interna del contenido.
+
+5.4.2 Recepción
+La recepción definitiva del equipo se efectuará en el lugar determinado en la Requisición de material
+y a plena satisfacción del usuario, después de haberse comprobado el funcionamiento del equipo en
+las condiciones de operación y de haber cumplido el Contratista con la entrega de toda la
+documentación exigida.
+De no cumplirse lo dispuesto anteriormente, la recepción sólo podrá tener carácter provisional y
+no implicará de ningún modo la aprobación del documento de recepción.
+
+5.4.3 Rechazo
+Los equipos, accesorios o parte de ellos y/o cualquier otro material integrante del conjunto, estarán
+sujetos a rechazo en el caso de que presenten defectos irremediables, excesivas reparaciones,
+fabricación defectuosa o no estén de acuerdo con los términos de la Requisición del material.
+La posibilidad de rechazo prevalecerá si las causas que la motivaron fueron descubiertas después
+de la aceptación por parte de YPF (vicio oculto).
+
+5.4.4 Aprobación definitiva
+La aprobación definitiva sólo tendrá lugar una vez puesto en servicio el equipo objeto de la provisión,
+comprobadas en el lugar las condiciones para la cual el equipo fue especificado. Si el equipo no
+
+
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               14 / 21
+                                                    #Título                     C0107 Separadores
+ #Tipo                                               Especificación            #Código                 ES__-0001068
+ #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+cumpliera con lo anterior, el Contratista realizará las reformas que sean necesarias, en el lugar o en
+sus talleres, hasta lograr el cumplimiento de las mencionadas condiciones.
+
+5.5 Documentación técnica requerida
+El Contratista proporcionará toda la información aplicable contenida en la “Lista de Documentos
+Técnicos Requeridos” indicados en esta Especificación. El Contratista completará también las Hojas
+de Datos de la unidad.
+Los planos y documentos técnicos serán considerados parte de la Requisición del material. Esta no
+se considerará cumplida hasta que todos los ítems hayan sido recibidos y tengan condición de
+“Aprobado” por YPF.
+Se suministrará la documentación en los tipos y cantidades abajo indicadas.
+Los archivos magnéticos de cada documento serán entregados en formato pdf con su
+correspondiente archivo editable.
+
+Descripción                                                                                                                     Oferta                    Aprobación                       Final
+Listado de documentos                                                                                                          Requerido                   Requerido                     Requerido
+Cronograma de ingeniería y fabricación                                                                                         Requerido                   Requerido                     Requerido
+Diagrama de cañerías e instrumentos (P&ID)                                                                                     Requerido                   Requerido                     Requerido
+Hoja de datos del equipo                                                                                                       Requerido                   Requerido                     Requerido
+Memorias de cálculo (recipiente a presión, proceso, válvulas,                                                                                              Requerido                     Requerido
+protección catódica, estructura, izaje, tracing)
+Plano conjunto general                                                                                                                                      Requerido                    Requerido
+Planos de detalles con listas de materiales (recipiente, internos,                                                                                          Requerido                    Requerido
+conexiones, estructura metálica, cañerías, plataformas y
+escaleras)
+Listado de válvulas manuales                                                                                                                                Requerido                    Requerido
+Plano de cañerías                                                                                                                                           Requerido                    Requerido
+Plano de ubicación y detalle soportes                                                                                                                       Requerido                    Requerido
+Diagrama de conexionado tracing eléctrico                                                                                                                   Requerido                    Requerido
+Plano de distribución de tracing eléctrico                                                                                                                  Requerido                    Requerido
+Plano de ubicación caja conexionado (tracing, instrumentos)                                                                                                 Requerido                    Requerido
+Diagrama de conexionado de instrumentos                                                                                                                     Requerido                    Requerido
+Hoja de datos de instrumentos                                                                                                                               Requerido                    Requerido
+Lista de cables                                                                                                                                             Requerido                    Requerido
+Listado de instrumentos y señales cableadas                                                                                                                 Requerido                    Requerido
+Lay out ubicación y canalización de instrumentos                                                                                                            Requerido                    Requerido
+Procedimiento de izaje                                                                                                                                      Requerido                    Requerido
+Manual de operación y puesta en marcha                                                                                                                      Requerido                    Requerido
+Plan de inspección y ensayo (fabricación y pintura)                                                                            Requerido                    Requerido                    Requerido
+Procedimiento de embalaje, transporte y esquemas de izaje                                                                                                   Requerido                    Requerido
+Procedimiento de ensayos                                                                                                                                    Requerido                    Requerido
+Procedimiento FAT                                                                                                                                           Requerido                    Requerido
+Procedimiento de pintura                                                                                                                                    Requerido                    Requerido
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            15 / 21
+                                                    #Título                     C0107 Separadores
+ #Tipo                                               Especificación            #Código                 ES__-0001068
+ #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+Procedimiento de prueba hidráulica/neumática (recipiente y                                                                                                  Requerido                    Requerido
+cañería)
+Informes de pruebas y ensayos                                                                                                                                                            Requerido
+Documentación de soldadura (WPS, PQR, WPQ)                                                                                                                  Requerido                    Requerido
+Certificados de materiales                                                                                                                                                               Requerido
+Data book                                                                                                                                                                                Requerido
+Listado de repuestos (precom., comisionado, puesta en                                                                                                       Requerido                    Requerido
+marcha, operacion)
+
+Adicionalmente, y de acuerdo con el cronograma del Proyecto, ha de existir un cronograma de envío
+de documentación, junto con el acopio, fabricación y montaje del equipo. Este cronograma ha de ser
+compatible con el programa general del Proyecto. Asimismo, quedará a criterio de YPF en cada
+proyecto particular, aceptar documentos de carácter “informativo”.
+
+
+5.5.1 Dossier de calidad
+Con el equipo a suministrar y junto con la documentación de ingeniería aprobada por YPF, el
+Contratista entregará un dossier de calidad conteniendo los certificados de materiales,
+documentación de soldadura, informes de inspección, protocolos de ensayos y pruebas realizados
+conforme a lo requerido por la Especificación “ES__-0001025 B0200 Aseguramiento y control de
+calidad de equipos estáticos y dinámicos” de YPF.
+
+5.5.2 Manual de Operación y Mantenimiento
+Los Manuales de Operación y Mantenimiento se prepararán específicamente para los equipos
+suministrados y contendrán como mínimo:
+- Descripción completa y detallada para la instalación, puesta en marcha, operación normal y
+   parada.
+- Puntos de tarado y rango de operación de todos los instrumentos y controladores.
+- Instrucciones de mantenimiento, incluyendo rutinas y frecuencias.
+
+
+6 Roles, Indicadores, registros y riesgos del proceso
+
+6.1      Roles
+                         Rol                                                                  Puestos / Unidad/es Organizativa/s
+                         N/A
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            16 / 21
+                                                   #Título                     C0107 Separadores
+#Tipo                                               Especificación            #Código                 ES__-0001068
+#Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+#Activo de la información                           YPF - Privada
+#Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+6.2 Indicadores
+ Indicador                       Fórmula                        Frecuencia                    Responsable                            Cliente                               Registro
+   (KPI)                                                                                                                            Interno /
+                                                                                                                                    Externo
+       N/A
+
+
+6.3 Registros
+   Registro                      Responsable                       Responsable                       Frecuencia de                      Disposición y                         Tiempo de
+                                  del registro                      del archivo                        registro /                        protección                            archivo
+                                                                                                        archivo
+        N/A
+
+
+6.4 Riesgos y acciones mitigantes
+
+ Codificación                                        Riesgo                                                        Origen                                                Controles
+ de Referencia                                                                                                                                                           mitigantes
+      N/A
+
+
+6.5 Reglas de Negocio
+                          Nombre                                                                                              Descripción
+                            N/A
+
+
+
+7 Anexos y referencias
+
+7.1 Anexos
+
+7.1.1 Anexos Especiales
+#Anexos Especiales
+ #Nº                                                                                                Nombre
+N/A
+
+
+
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                        o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                           17 / 21
+                                                   #Título                     C0107 Separadores
+#Tipo                                               Especificación            #Código                 ES__-0001068
+#Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+#Activo de la información                           YPF - Privada
+#Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+7.1.2 Otros anexos
+#Otros Anexos
+ #Nº                                                                                                Nombre
+  I       HD-C0107-01 - SEPARADORES.xls
+
+
+
+7.2 Normativa relacionada
+      Categoría                                       Título                                                                                                             Código
+                              B0500 Requisitos generales de soldadura dentro de
+                                                                                                                                                      ES__-0001001
+                              planta
+                              B0200 Aseguramiento y control de calidad de equipos
+                                                                                                                                                      ES__-0001025
+                              estáticos y dinámicos
+
+                              B0608 Protección catódica interior de recipientes                                                                       ES__-0001031
+
+                              C0100 Recipientes a presión                                                                                             ES__-0001033
+
+                              C0200 Elementos internos de recipientes a presión                                                                       ES__-0001042
+
+                              A0800 Sistemas de alivio en instalaciones de superficie                                                                 ES__-0001050
+
+                              B0100 Preparación para transporte de equipos y
+                                                                                                                                                      ES__-0001051
+                              materiales
+
+                              B0503 Soldaduras de cañerías y equipos en planta                                                                        ES__-0001052
+   Normativa
+  Interna YPF
+                              B0505 Soldaduras de estructuras y soportes                                                                              ES__-0001054
+
+                              M0100 Estructuras de acero                                                                                              ES__-0001079
+
+                              J0500 Medida de Temperatura (Parte General)                                                                             ES__-0001979
+
+                              L0200 Clases de Cañerías para Plantas                                                                                   ES__-0001998
+
+                              J0300 Medida de Presión (Parte General)                                                                                 ES__-0002156
+
+                              J0400 Medida de Nivel (Parte General)                                                                                   ES__-0002171
+
+                              B0609 Selección de Materiales y Sistemas de
+                                                                                                                                                      ES__-0002549
+                              Recubrimiento Interior
+                              N0100 Aislamiento Exterior de Equipos y Cañerías
+                                                                                                                                                      ES__-0002637
+                              Calientes
+
+
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                        o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                           18 / 21
+                                                    #Título                     C0107 Separadores
+ #Tipo                                               Especificación            #Código                 ES__-0001068
+ #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+   Categoría                                            Título                                                                                                 Código
+                               B0600 Protección Anticorrosiva Con Recubrimientos                                                                       ES__-0002657
+
+   Normativa                   N/A
+    Externa
+   Normativa                   N/A
+   Derogada
+                               Venting Atmospheric and Low-Pressure Storage Tanks                                                                      API 2000
+                               Design and Construction of LPG Installations                                                                            API 2510
+                               Pressure-relieving Devices                                                                                              API 520
+                               Pressure-relieving and Depressuring Systems                                                                             API 521
+                               Flanged Steel Pressure-relief Valves                                                                                    API 526
+                               Seat Tightness of Pressure Relief Valves                                                                                API 527
+                               Specification for Oil and Gas Separators                                                                                API SPEC 12J
+      Otras
+   referencias                 Pipe Flanges and Flanged Fittings: NPS 1/2 through NPS
+                                                                                                                                                       ASME B 16.5
+                               24, Metric/Inch Standard
+                               Process Piping                                                                                                          ASME B 31.3
+                                                                                                                                                       ASME B&PVC Sección
+                               Rules for Construction of Pressure Vessels
+                                                                                                                                                       VIII Div. 1
+                               Mediciones petróleo y subprod. de petróleo                                                                              IRAM IAP A 51.65
+                               Sistemas de gestión de la calidad                                                                                       ISO 9000
+                               Ley Nacional de Tránsito 24449                                                                                          Art 53 inciso (c)
+
+
+7.3 Definiciones y abreviaturas
+     Término                        Abreviatura                                                                           Descripción
+  N/A
+
+
+
+8 Aprobación
+
+8.1 Vigencia
+Esta normativa entra en vigencia a partir de su aprobación e inmediata publicación.
+Los abajo firmantes asumen la responsabilidad de implantar, controlar el cumplimiento y actualizar
+el presente documento cada vez que fuera necesario.
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            19 / 21
+                                                    #Título                     C0107 Separadores
+ #Tipo                                               Especificación            #Código                 ES__-0001068
+ #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+8.2 Disposiciones generales y transitorias
+N/A.
+
+
+8.3 Historial
+   № Revisión                              Fecha Aprobación                                                   Principales cambios
+      1.0                                     11/08/2009                                      Documento Original.
+                                                                                              Actualización del documento al nuevo template Y-DOC.
+            2.0                                    24/11/2021
+                                                                                              Modificación/Actualización ítem 5 Especificación.
+                                                                                              Se elimina el Anexo I correspondiente a la última versión
+            2.1                               Ver encabezado                                  SGN, debido a que era un Documento No Vigente: AB-
+                                                                                              IYO-ED-09-222-01 - C0107 SEPARADORES.
+
+
+
+
+8.4 Flujo de Aprobación
+#Participantes
+              #Autor                                        #Referente de                                  #Dueño de Proceso                                      #Administrador
+                                                              Proceso                                                                                            Cuerpo Normativo /
+                                                                                                                                                                      Negocio
+ SABATINI, SEBASTIAN                                  BODEGA, EDUARDO                                         SZWED, CRISTINA                                   MONSALVE, ANDRES
+       GUIDO                                             GUILLERMO                                               LILIANA                                        MAURICIO (SERVICIO
+                                                                                                                                                                 EXTERNO EN YPF)
+
+#Colaboradores
+                                                                                             Nombre
+                                                                           PEIRANO, JUAN PABLO
+                                          EGITTO, HORACIO DAMIAN (Servicio Externo en YPF)
+                                                                      GOMEZ, FACUNDO NAHUEL
+                                             FONTI, LORENA KARINA (Servicio Externo en YPF)
+
+#Revisores
+                                                                                             Nombre
+                                                                                              Nombre
+
+#Aprobadores
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            20 / 21
+                                                    #Título                     C0107 Separadores
+ #Tipo                                               Especificación            #Código                 ES__-0001068
+ #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+                                                                                             Nombre
+                                                                       SZWED, CRISTINA LILIANA
+
+
+
+9 ANEXO
+N/A.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            21 / 21
+

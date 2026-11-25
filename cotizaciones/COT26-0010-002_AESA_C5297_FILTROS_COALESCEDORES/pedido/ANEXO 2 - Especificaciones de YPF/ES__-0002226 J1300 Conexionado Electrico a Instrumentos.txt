@@ -1,0 +1,1166 @@
+                                                                                                                                                                        Clasificación YPF: No Confidencial
+
+                                                       #Título                     J1300 Conexionado Electrico
+                                                                                   a Instrumentos
+#Tipo                                                   Especificación            #Código                 ES__-0002226
+#Fecha de Vigencia                                      12/12/2020                #Versión                1.0
+#Activo de la información                               YPF - Privada
+#Proceso                                                21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+
+
+1 Índice
+Contenido
+1      ÍNDICE .......................................................................................................................................................... 1
+2      OBJETO........................................................................................................................................................ 3
+3      ÁMBITO DE APLICACIÓN........................................................................................................................... 3
+4      CONSIDERACIONES PRINCIPALES ......................................................................................................... 3
+5      ESPECIFICACIÓN ........................................................................................................................................ 3
+    5.1    CABLES PARA INSTRUMENTOS ................................................................................................................. 3
+      5.1.1 Cables de señal ................................................................................................................................ 3
+      5.1.2 Cables de alimentación .................................................................................................................... 4
+      5.1.3 Codificación de cables y señales de instrumentos .......................................................................... 4
+      5.1.4 Criterios de segregación de señales en multipares ......................................................................... 6
+      5.1.5 Tags para cables de señal ............................................................................................................... 6
+      5.1.6 Lista de cables de instrumentos ....................................................................................................... 7
+    5.2    TENDIDO DE CABLES ............................................................................................................................... 8
+      5.2.1 Estructura general del cableado....................................................................................................... 8
+      5.2.2 Segregación de tendidos de cables ................................................................................................. 8
+      5.2.3 Tendido aéreo de cables .................................................................................................................. 8
+      5.2.4 Tendido enterrado de cables .......................................................................................................... 10
+      5.2.5 Entrada de cables a edificios ......................................................................................................... 11
+      5.2.6 Entrada de cables a armarios ........................................................................................................ 11
+      5.2.7 Entradas de cables a instrumentos y cajas de campo ................................................................... 11
+    5.3    CONEXIONADO Y MARCADO DE CABLES DE INSTRUMENTOS ..................................................................... 12
+      5.3.1 Conexionado .................................................................................................................................. 12
+      5.3.2 Puesta a tierra de cables y bandejas ............................................................................................. 13
+      5.3.3 Identificación de tiras y bornes ....................................................................................................... 13
+      5.3.4 Identificación externa de cables y componentes ........................................................................... 14
+    5.4    CRITERIOS DE SEPARACIÓN ENTRE CABLES ............................................................................................ 14
+      5.4.1 Separación de cables de instrumentos y potencia ........................................................................ 14
+    5.5    SUMINISTRO Y DOCUMENTACIÓN............................................................................................................ 15
+      5.5.1 Preparación para envío, embalaje y marcado ............................................................................... 15
+      5.5.2 Documentación ............................................................................................................................... 15
+6      ROLES, INDICADORES, REGISTROS Y RIESGOS DEL PROCESO ..................................................... 17
+    6.1          ROLES.................................................................................................................................................. 17
+    6.2          INDICADORES........................................................................................................................................ 17
+    6.3          REGISTROS .......................................................................................................................................... 17
+    6.4          RIESGOS Y ACCIONES MITIGANTES ......................................................................................................... 18
+    6.5          REGLAS DE NEGOCIO ............................................................................................................................ 18
+7      ANEXOS Y REFERENCIAS ....................................................................................................................... 18
+    7.1          ANEXOS ............................................................................................................................................... 18
+
+
+     COPIA NO CONTROLADA
+     [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  1 / 21
+                                                                                                                                                                        Clasificación YPF: No Confidencial
+
+                                                       #Título                     J1300 Conexionado Electrico
+                                                                                   a Instrumentos
+#Tipo                                                   Especificación            #Código                 ES__-0002226
+#Fecha de Vigencia                                      12/12/2020                #Versión                1.0
+#Activo de la información                               YPF - Privada
+#Proceso                                                21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+      7.1.1 Anexos Especiales ......................................................................................................................... 18
+      7.1.2 Otros anexos .................................................................................................................................. 18
+    7.2    NORMATIVA RELACIONADA .................................................................................................................... 18
+    7.3    DEFINICIONES Y ABREVIATURAS ............................................................................................................. 19
+8      APROBACIÓN ............................................................................................................................................ 19
+    8.1          VIGENCIA.............................................................................................................................................. 19
+    8.2          DISPOSICIONES GENERALES Y TRANSITORIAS ......................................................................................... 19
+    8.3          HISTORIAL ............................................................................................................................................ 19
+    8.4          FLUJO DE APROBACIÓN ......................................................................................................................... 20
+9      ANEXOS ..................................................................................................................................................... 21
+    9.1          ANEXO I : HD-J1300-01 LISTA DE CABLES ............................................................................................ 21
+
+
+
+
+     COPIA NO CONTROLADA
+     [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  2 / 21
+                                                                                                                                                                     Clasificación YPF: No Confidencial
+
+                                                    #Título                     J1300 Conexionado Electrico
+                                                                                a Instrumentos
+ #Tipo                                               Especificación            #Código                 ES__-0002226
+ #Fecha de Vigencia                                  12/12/2020                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+2 Objeto
+Definir los criterios generales para el conexionado eléctrico de instrumentos y equipos asociados a
+instrumentación.
+
+
+3 Ámbito de aplicación
+Upstream Argentina.
+Aplica a todos los proyectos tanto de nuevas instalaciones como modificaciones a instalaciones existentes.
+
+
+4 Consideraciones principales
+Quedan fuera del objeto específico de este documento:
+    a) La instalación de instrumentos eléctricos en áreas clasificadas, tratada en la “J1400 Instalación de
+       Instrumentos en Áreas Clasificadas”.
+    b) Cables de fibra óptica, tratados en los procedimientos de Yacimiento Digital y/o Comunicaciones.
+    c) El conexionado interno de equipos y armarios a partir de las borneras de entrada.
+
+
+5 Especificación
+
+5.1 Cables para instrumentos
+5.1.1 Cables de señal
+Se consideran cables de señal los siguientes:
+    a) Aquellos cuya finalidad sea la transmisión de información y órdenes entre equipos de control,
+       supervisión o enclavamiento e instrumentos o elementos finales de control.
+    b) Los cables para actuación de válvulas solenoides y mando de válvulas motorizadas.
+    c) Los cables de interconexión entre equipos de control o enclavamientos y equipo eléctrico.
+    d) Las vías de comunicaciones que interconecten equipos de instrumentación.
+
+Los cables de mando y maniobra de equipo eléctrico desde botoneras locales y/o sin intervención de
+equipos de Instrumentación no se consideran cables de señal y no están sujetos a esta especificación.
+Todos los cables de señal basados en conductores metálicos deben estar sujetos a lo indicado en esta
+especificación y especificaciones relacionadas. Los cables de señal basados en fibra óptica son tratados en
+los procedimientos de Yacimiento Digital y/o Comunicaciones.
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               3 / 21
+                                                                                                                                                                     Clasificación YPF: No Confidencial
+
+                                                    #Título                     J1300 Conexionado Electrico
+                                                                                a Instrumentos
+ #Tipo                                               Especificación            #Código                 ES__-0002226
+ #Fecha de Vigencia                                  12/12/2020                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+5.1.2 Cables de alimentación
+Se consideran cables de alimentación a instrumentos los siguientes:
+    a) Aquellos cuya finalidad sea el suministro de energía eléctrica para el funcionamiento continuo del
+       equipo y no para actuaciones particulares del mismo (cromatógrafos, Coriolis, cabinas de PLC/DCS,
+       etc.)
+    b) Los cables de suministro de fuerza a elementos auxiliares de equipos de instrumentación como
+       puedan ser ventiladores, resistencias de calefacción, sistemas de aire acondicionado, etc.
+
+Los cables de fuerza a válvulas motorizadas no se consideran cables de instrumentos.
+Los cables de alimentación monofásica a instrumentos para tendido aéreo deben ser del tipo cable armado
+con alambres de acero galvanizado, con conductor de cobre, según la especificación “J1304 Alimentación
+Eléctrica a Equipos de Instrumentación”.
+Con equipos de bajo consumo (I  4 A) donde su puesta a tierra sea local o a través de la propia armadura
+del cable, se puede emplear para este servicio cable de instrumentación Tipo 4 según se define en la
+especificación “J1301 Cables de Instrumentos”.
+
+5.1.3 Codificación de cables y señales de instrumentos
+YPF tiene normalizados una serie de cables de señal, cuyas especificaciones detalladas se incluyen en la
+especificación “J1301 Cables de Instrumentos”, que deben ser de uso obligado en los proyectos.
+Estos cables normalizados se engloban en cinco familias:
+              Cables Tipo 1 Cable de pares para señal
+              Cables Tipo 2 Cable de extensión para termocuplas
+              Cables Tipo 3 Cable de ternas para señal
+              Cables Tipo 4 Cable de conductores para señales a 110-230 V
+              Cables Tipo 5 Cable de pares para vías de datos
+
+
+Los cables para aplicaciones no cubiertas por las familias citadas en el punto anterior se deben especificar de
+modo particular para cada caso y siempre deben ser aprobados por YPF.
+Las señales eléctricas más empleadas en instrumentación y su codificación en YPF son las siguientes:
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               4 / 21
+                                                                                                                                                                     Clasificación YPF: No Confidencial
+
+                                                    #Título                     J1300 Conexionado Electrico
+                                                                                a Instrumentos
+ #Tipo                                               Especificación            #Código                 ES__-0002226
+ #Fecha de Vigencia                                  12/12/2020                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+                                                  Tabla 5.1.1: Codificación de señales de instrumentación
+
+   Tipo señal                   Variante                  Código                   Parámetros eléctricos típicos y ejemplos
+
+                                Alto nivel                         A               0-20 mA, 4-20 mA, 1-5 V, etc (transmisores a 2 y 4 hilos)
+
+   Analógica                                                     TC                mv (termopares)
+                                Bajo nivel
+                                                                 TR                ohm (termorresistencias)
+
+                                Alto nivel                         P               V > 100 V (solenoides, órdenes a CCMs, lámparas, etc)
+   Digital
+                                Bajo nivel                         D               V ≤ 24 V (contactos secos e inductivos, lámparas, relés)
+
+   Propietaria                  -----                            PR                V ≤ 24 V ꞷ ≤ 9 kHz (medidor de turbina, sonda de ultrasonidos, etc)
+
+   Via de datos                 -----                              H               V ≤ 24 V, ꞷ ≥ 9 kHz (modbus, RS 232/422/485, muxes, etc)
+
+
+
+Los tipos de cables aplicables a cada tipo de señal o servicio son:
+                                              Tabla 5.1.2: Aplicación de los tipos de cables normalizados
+
+ Tipo de señal               Tipos de cables aplicable
+
+         A                   Cable Tipo 1 (Tipo 3 si señal a 3 hilos: detectores de gas inflamable, indicador 3051S, etc)
+
+        TC                   Cable Tipo 2 (hay subtipos para cada variante de termopar)
+
+        TR                   Cable Tipo 3 (si excepcionalmente la RTDs es a dos o cuatro hilos, usar cable Tipo 1)
+
+         P                   Cable Tipo 4 (si hay fuertes inducciones y la intensidad de la señal lo permite, usar Tipo 1)
+
+         D                   Cable Tipo 1
+
+        PR                   El que indique el vendedor del equipo, a ser posible uno normalizado (Tipos 1, 3 ó 5)
+
+         H                   El que indique el vendedor del equipo, a ser posible uno normalizado Tipo 5
+
+
+
+Una vez seleccionado el tipo de cable aplicable, se debe escoger la especificación particular de entre las
+incluidas en la “J1301 Cables de Instrumentos” que se ajuste a la clasificación EEx, sección y formación
+requeridas por la aplicación.
+En la selección de las formaciones aplicables a multipares se deben emplear las formaciones
+correspondientes a 1, 12 y 24 pares contemplando una reserva del 30%.
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               5 / 21
+                                                                                                                                                                     Clasificación YPF: No Confidencial
+
+                                                    #Título                     J1300 Conexionado Electrico
+                                                                                a Instrumentos
+ #Tipo                                               Especificación            #Código                 ES__-0002226
+ #Fecha de Vigencia                                  12/12/2020                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+5.1.4 Criterios de segregación de señales en multipares
+Todas las señales que se incluyan en un multipar deben ser del mismo tipo, clasificación eléctrica y tener el
+mismo equipo de destino (por ejemplo PLC o DCS).
+No se deben mezclar nunca en el mismo multipar:
+    a)     Señales en mA con señales discretas.
+    b)     Señales con distintos niveles de tensión (24 / 110 / 220 V, etc.).
+    c)     Señales de corriente continua y de corriente alterna.
+    d)     Señales propietarias de diferente tipo.
+    e)     Señales de alimentación de solenoides e instrumentos en 24 V con demás señales discretas.
+
+5.1.5 Tags para cables de señal
+Todos los cables y multipares de instrumentos en instalaciones nuevas, deben tener un tag para su
+identificación asignado por la Ingeniería de acuerdo a las normas que se indican en este apartado.
+En revampings de instalaciones existentes o cuando lo pida explícitamente YPF, se debe mantener el criterio
+previamente existente para la identificación de los cables de instrumentos.
+En los casos del punto anterior, la Ingeniería debe solicitar a YPF los criterios de numeración aplicables y los
+rangos de números libres disponibles para el proyecto.
+Los tags de los cables y multipares se deben formar de acuerdo a los siguientes códigos:
+                                                 Tabla 5.1.3: Tags de cables y multipares de instrumentos
+
+                                                                                                                      Cables de
+             Cables individuales                                      Multipares                                                                                   Vías de datos
+                                                                                                                    alimentación
+         C-TAG                                            MC-Z1Z2-NNN                                     W-TAG-N                                          Y1-NNN-A/B
+
+
+
+                                                                                                                                   Y1 = F Fibra óptica
+                                                                                                                                   Y1 = T Pares trenzados de cobre
+         C                        Literal para cable simple                                               Y1                              (para Ethernet, RS-485,
+                                                                                                                                          RS-232)
+                                                                                                                                   Y1 = X Cables coaxiales
+         MC                       Literal para multipar
+                                                                                                          Z1                       Según tipo de señales transmitidas:
+         W                        Literal para cable de alimentación                                                               Z1 = TC / TR / A / D / P
+                                                                                                                                   Z2 = I si el cable es EEx-i
+                                  Tag (sin número de anexo o guiones)                                                              Z2 = S si el cable va al sistema de
+         TAG                                                                                              Z2                              seguridad
+                                  del instrumento o señal asociado
+                                                                                                                                   Z2 = F si el cable va al sistema de
+                                                                                                                                          Fire & Gas
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               6 / 21
+                                                                                                                                                                      Clasificación YPF: No Confidencial
+
+                                                     #Título                     J1300 Conexionado Electrico
+                                                                                 a Instrumentos
+ #Tipo                                                Especificación            #Código                 ES__-0002226
+ #Fecha de Vigencia                                   12/12/2020                #Versión                1.0
+ #Activo de la información                            YPF - Privada
+ #Proceso                                             21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+                                                                                                                                    Número de orden del cable o
+          A/B                      Usar con vías de datos redundantes                                      NNN
+                                                                                                                                    multipar
+
+
+Nota 1: En los cables de vías de datos internas de una provisión paquetizada, salvo indicación expresa de YPF en otro sentido, se debe
+mantener el criterio de numeración e identificación del proveedor del mismo.
+Nota 2: En funcion de los usos de cada locacion se pueden agregar identificadores adicionales previos a esta codificacion
+Nota 3: Para facilidad en la identificación, NNN puede ser el tag del equipo desde el cual se origina el cable
+
+
+
+Algunos ejemplos de aplicación de los criterios del punto anterior son:
+     •      MC-A-005 : Multipar de señales analógicas de control de la JB-A-005
+     •      MC-AS-008: Multipar de señales analógicas de seguridad de la JB-AS-008
+     •      MC-A-BP240: Multipar de señales analógicas asociadas a la bomba BP-240
+     •      MC-AF-003: Multipar de señales de F&G
+     •      C-PIT201: Cable de señal de transmisor de presión PIT-201
+     •      C-BT101: Cable de señal de detector de llama BT-101
+     •      C-PSH300: Cable de señal de presostato PSH-300
+     •      C-XSE230: Cable de señal de permisivo de marcha XSE-230
+     •      W-FIT105: Cable de alimentación de caudalímetro FIT-105
+     •      F-001: Cable de comunicación vía fibra óptica
+     •      T-001: Cable de comunicación genérico (Par trenzado comunicación RS-485)
+     •      T-PLCVRU101: Cable de comunicación para PLC VRU-101 (Par trenzado comunicación Ethernet)
+
+5.1.6 Lista de cables de instrumentos
+Todos los cables de instrumentación de cada proyecto se deben incluir en HD-J1300-01 “Lista de cables de
+instrumentos”.
+La lista anterior debe incluir:
+     a) Cables y multipares de señal según 5.1.1.
+     b) Cables y multipares de alimentación a instrumentos según 5.1.2.
+     c) Cables de vías de datos entre equipos diferentes.
+
+Los cables simples internos a unidades paquete (de instrumentos a cajas de conexionado) deben ser
+incluidos en la lista particular de cables del citado paquete, preparada por su proveedor.
+Los multipares o cables simples de unidades paquete que requieran tendido fuera del área de implantación
+de la propia unidad paquete o se conecten a equipos del cliente (DCS, PLC, etc.) se deben incluir en la HD-
+J1300-01 “Lista de cables de instrumentos”.
+
+
+
+    COPIA NO CONTROLADA
+    [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                          o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                7 / 21
+                                                                                                                                                                     Clasificación YPF: No Confidencial
+
+                                                    #Título                     J1300 Conexionado Electrico
+                                                                                a Instrumentos
+ #Tipo                                               Especificación            #Código                 ES__-0002226
+ #Fecha de Vigencia                                  12/12/2020                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+5.2 Tendido de cables
+5.2.1 Estructura general del cableado
+La estructura general que se debe aplicar en el cableado a los equipos de instrumentación es la siguiente:
+    a) Cables simples desde instrumentos o generadores de señal hasta cajas de concentración de señales
+       (JB´s).
+    b) Multipares desde cajas de concentración de señales hasta equipo destino.
+
+El tendido directo de cables simples (salvo las vías de datos) desde cualquier ubicación fuera de la sala de
+gabinetes hasta la misma sólo se debe realizar con autorización expresa de YPF.
+En el caso particular que el gabinete del sistema se encuentre en campo, es admisible el tendido de pares
+simples desde los instrumentos hasta el propio gabinete.
+Siempre que sea posible, todos los cables se deben instalar en una sola tirada.
+
+5.2.2 Segregación de tendidos de cables
+El primer criterio de segregación de los tendidos de cables es el tipo de señal asociada a los mismos:
+    a) Señales tipos A, D, TC, TR y PR pueden compartir bandeja. También es admisible que las señales tipo
+       H (vías de datos) compartan esta bandeja (de ser posible se le debe dar una separación a este cable,
+       dentro de la misma bandeja).
+    b) Las señales tipo P irán siempre por una bandeja independiente (pueden ir en las bandejas eléctricas
+       del nivel correspondiente) y pueden compartir bandeja únicamente con cables de alimentación de
+       instrumentos.
+
+Los buses de comunicaciones redundantes siempre dben estar segregados lo máximo posible en su
+recorrido. Si por algún motivo deben cruzarse en campo, lo deben hacer con la máxima separación vertical
+posible.
+Las vías de datos de cobre deben estar siempre alejadas de fuentes de interferencias (motores, variadores,
+etc.).
+Todos los cables de señal deben tener recorridos independientes de cualquier cable de fuerza o
+alimentación, ya sea de tipo eléctrico o de instrumentación.
+Los cruces entre cables de fuerza y señal serán en ángulo recto para minimizar los efectos inductivos.
+
+5.2.3 Tendido aéreo de cables
+Por defecto el tendido de cables de instrumentos será aéreo por bandeja. Los tendidos enterrados se
+restringirán a los casos indicados en el punto 5.2.4.
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               8 / 21
+                                                                                                                                                                     Clasificación YPF: No Confidencial
+
+                                                    #Título                     J1300 Conexionado Electrico
+                                                                                a Instrumentos
+ #Tipo                                               Especificación            #Código                 ES__-0002226
+ #Fecha de Vigencia                                  12/12/2020                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+El tendido de cables y multipares armados se debe realizar en general mediante bandejas con tapa y cable
+armado o caño conduit de acero galvanizado.
+El tipo de bandeja debe ser de chapa perforada o tipo escalera.
+Las bandejas de chapa perforada deben ser galvanizadas en caliente después de ser perforadas. Los cambios
+de plano o de dirección se deben hacer con accesorios prefabricados para tal fin.
+Las bandejas tipo escalera deben ser de acero galvanizado. El uso de inoxidable se restringe únicamente a la
+presencia de ambiente salino y debe estar indicado en el DBD.
+Los tamaños normalizados para caños conduit y bandejas de instrumentos son:
+    a) Caño conduit abierto de ¾”, 1”, 1 ½” y 2”.
+    b) Bandeja de 150 / 300 / 450 / 600 mm.
+
+Los multipares deben ir tendidos sobre las bandejas, fijados a la misma mediante cinta de aluminio y
+tornillería galvanizada o de inoxidable, adecuadamente peinados y ordenados, permitiéndose la colocación
+de precintos plásticos a prueba de rayos UV con expresa autorización de YPF, sólo en tramos horizontales y
+en tramos de bandejas con tapa.
+En nuevos proyectos, el grado de ocupación de las bandejas de multipares no debe exceder el 60%, medido
+como el área transversal útil de las mismas. El tendido de los cables en bandejas puede ser en varias capas.
+Para conduits, el grado de ocupación no debe exceder el 40%, calculado según la siguiente fórmula:
+                                                                                                         𝑛 × 𝑑2
+                                                                     %𝑂𝑐𝑢𝑝𝑎𝑐𝑖ó𝑛 =                               × 100
+                                                                                                           𝐷2
+Donde:
+n = cantidad de cables
+d = diametro exterior del cable en mm
+D= diámetro interior del conduit en mm
+
+
+Las bandejas en campo se montarán normalmente en posición horizontal.
+Las bandejas de campo se deberán soportar a estructuras fijas mediante soportes que defina la ingeniería
+detalle de cada proyecto. La distancia entre soportes se definirá en función del peso de los cables,
+suponiendo además la presencia de nieve y la permanencia de una persona en el centro de bandeja, entre
+soportes.
+Las bandejas en el interior de edificios se soportarán sobre perfiles metálicos fijados al suelo, techo o pared.
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               9 / 21
+                                                                                                                                                                     Clasificación YPF: No Confidencial
+
+                                                    #Título                     J1300 Conexionado Electrico
+                                                                                a Instrumentos
+ #Tipo                                               Especificación            #Código                 ES__-0002226
+ #Fecha de Vigencia                                  12/12/2020                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+5.2.4 Tendido enterrado de cables
+Se debe realizar en los siguientes casos:
+    a)     Instalaciones donde ésta sea la práctica común según se indique en el DBD.
+    b)     Cruces de calles
+    c)     Salidas de salas de Racks
+    d)     Por interferencias en superficie
+
+En general se recomienda disminuir el tendido de cables enterrados ya que presenta muchos inconvenientes
+para su mantenimiento, reemplazo, nuevos tendidos y seguimiento de las trazas en proyectos futuros.
+A continuación se describen alternativas existentes para el tendido enterrado
+    a) Cañero PVC
+
+En el caso de salidas de salas de racks u otro tipo de instalación que requiera el pasaje de múltiples cables
+y/o multipares, se recomienda realizar un arreglo de caños de PVC de DN ≥ 150 mm. El mismo debe estar
+embebido en hormigón en toda su traza y contar con cámaras de tiro cada 30 metros, en sus extremos y en
+cada cambio de dirección o cruce de calle.
+Los tramos deben ser rectos.
+Las cámaras deben contar con tapas metálicas para su fácil acceso y estas deben poder retirarse en cualquier
+momento, incluso si acometen bandejas por las mismas.
+Las canalizaciones para cables de potencia deben ser independientes a las de instrumentación.
+La transición entre cámaras y bandejas debe ser a través de ductos de acero (stub ups), para facilitar el
+sellado de las cámaras.
+    b) Cable directamente enterrado
+
+Para este caso se debe tener en cuenta que el mantenimiento o reemplazo del cable no es posible, por lo
+cual debe preverse el tendido de cables de reserva según lo requiera la aplicación.
+El tendido de cables directamente enterrados se recomienda para tendidos temporales y de pocos cables.
+Cuando el número de cables o la criticidad del tendido lo justifique, debe evitarse esta opción ya que la
+instalación es poco robusta y propensa a dañarse.
+Las zanjas de cables de instrumentos deben estar segregadas siempre de las de cables de fuerza. Los cables
+tipo P, deben ir siempre en una capa o nivel de la zanja lo más separado posible de los restantes.
+El tipo de zanja debe ser acordado con la Instalación de acuerdo a sus prácticas habituales.
+El recorrido de la instalación debe marcarse convenientemente al menos mediante coloración de la tierra
+(estratos superiores al tendido) y cinta de advertencia.
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            10 / 21
+                                                                                                                                                                     Clasificación YPF: No Confidencial
+
+                                                    #Título                     J1300 Conexionado Electrico
+                                                                                a Instrumentos
+ #Tipo                                               Especificación            #Código                 ES__-0002226
+ #Fecha de Vigencia                                  12/12/2020                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+5.2.5 Entrada de cables a edificios
+Las entradas de cables a edificios deben garantizar la estanqueidad, la posibilidad de disponer de reservas y,
+el mantenimiento del grado de protección general del edificio.
+Como método general se emplearán marcos pasacable homologados por YPF (Ver “J1303 Accesos de Cables
+de Instrumentos”) o, cuando lo autorice YPF, conduits pasantes fijados mecánicamente al muro y sellados en
+sus extremos.
+Las entradas de conduits utilizadas deben ser selladas con pasta en ambos lados, y el resto con tapas
+roscadas.
+Se prohíbe la entrada directa de cables sobre bandeja a través de orificios abiertos en el muro.
+Cualquier sistema de entrada de cables que se añada nuevo en un proyecto, debe tener un grado de
+ocupación que no exceda el 50% del total de su superficie a fin de rentabilizar la obra civil asociada.
+
+5.2.6 Entrada de cables a armarios
+La entrada a armarios ubicados en recintos cerrados (sala de racks, de control, subestaciones, etc.) debe ser
+habitualmente por la parte inferior.
+Los cables deben ser fijados mediante grampas o cinta de aluminio a un perfil metálico de acometida situado
+en el fondo del armario a fin de evitar que puedan moverse o ejercer tensiones mecánicas sobre las
+borneras.
+Tras la fijación de los cables, se debe cortar y sanear la corona de hilos de la armadura y se deben conducir
+los componentes del cable hasta las borneras de entrada a través de cablecanales de PVC.
+Todos los componentes (pares, ternas, conductores) de los cables deben ser conectados en la recepción a
+los armarios, no quedando ningún componente, aunque sea de reserva, sin conectar.
+En los armarios ubicados a la intemperie, la entrada de cables debe ser bien lateral o bien por la parte
+inferior (preferentemente) mediante prensacables o pasamuros completamente estancos.
+Las entradas a armarios de campo deben preservar la estanqueidad del equipo, así como su clasificación EEx.
+
+5.2.7 Entradas de cables a instrumentos y cajas de campo
+Debe ser siempre mediante prensacables estancos y acordes a la clasificación eléctrica del instrumento
+según lo indicado en la especificación “J1303 Prensacables y Pasamuros”.
+Las entradas de cables simples a las cajas se deben realizar con un pequeño bucle ubicado a cota inferior a la
+de entrada, destinado a drenar al suelo la humedad que descienda por la cubierta del cable.
+En los instrumentos, fuerza y señal no deben compartir una misma entrada de cable salvo cuando así lo
+tenga previsto el propio diseño del instrumento y la alimentación sea a V ≤ 24 Vcc.
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            11 / 21
+                                                                                                                                                                     Clasificación YPF: No Confidencial
+
+                                                    #Título                     J1300 Conexionado Electrico
+                                                                                a Instrumentos
+ #Tipo                                               Especificación            #Código                 ES__-0002226
+ #Fecha de Vigencia                                  12/12/2020                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+Se deben evitar los equipos con una salida única para varias señales y que obliguen a instalar elementos
+auxiliares para segregar las mismas (p.e. un niple y una pequeña caja de derivación auxiliar) que complican el
+montaje.
+En los casos cubiertos por el punto anterior, algunas soluciones alternativas a estudiar son:
+    a) En el caso de cajas (que no sean EEx-d) perforar más orificios pasacables.
+    b) Usar cables de dos o seis pares cuando lo permitan las señales recogidas y el tamaño de la conexión.
+
+En las cajas, las acometidas de los cables deben ser siempre por la parte inferior (para el multipar) y por los
+laterales de la misma (para los cables simples), y nunca por la parte superior.
+
+
+5.3 Conexionado y marcado de cables de instrumentos
+5.3.1 Conexionado
+El conexionado en cajas de concentración de señales y borneras debe seguir los mismos criterios de
+segregación de señales indicados en el capítulo anterior para los multipares.
+Se recomienda asociar sólo un multipar a cada caja de conexionado de campo. No se se deben agrupar más
+señales de las permitidas por la formación de un único multipar de los normalizados por YPF.
+Todos los conductores flexibles (Clase 2 o superior) deben ser siempre equipados con terminales de
+compresión para su conexionado a bornes de las cajas, armarios o instrumentos.
+Los conductores rígidos (Clase 1) como los de las termocuplas se deben conectar directamente sin
+terminales.
+Los bornes deben ser de tornillo o de compresión (o resorte). Se prohíbe el uso de bornes de corte y
+compresión.
+Los bornes para cables de extensión o compensación deben ser específicos para dicho servicio.
+Todos los componentes de los cables, incluidos los de reserva, se deben conectar en ambos extremos del
+cable.
+Las pantallas globales e individuales de los cables de campo se deben conectr una a una, realizándose la
+unión entre ellas y su puesta a tierra través de un puente. Dicho puente puede estar conformado por una
+barra de tierra o mediante bornes de tierra dedicados. En el caso de cajas de campo, se requiere también
+que el puente esté aislado de la tierra.
+Todos los bornes deben estar montados sobre rieles tipo DIN fijados a la estructura del armario, con las
+borneras segregadas, fijadas e identificadas por cable.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            12 / 21
+                                                                                                                                                                     Clasificación YPF: No Confidencial
+
+                                                    #Título                     J1300 Conexionado Electrico
+                                                                                a Instrumentos
+ #Tipo                                               Especificación            #Código                 ES__-0002226
+ #Fecha de Vigencia                                  12/12/2020                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+El orden del conexionado de los componentes en las borneras debe ser correlativo y uniforme en todos
+ellos.
+
+5.3.2 Puesta a tierra de cables y bandejas
+Las armaduras metálicas de todos los cables deben ser puestas a tierra a través del prensacable y la caja de
+conexionado de campo, que una vez montada será puesta a tierra mediante un conductor de cobre.
+Si la caja es de material no conductor, se debe incluir una platina metálica que recorra interiormente todo el
+lateral por donde entran los cables, dando continuidad eléctrica a todos los prensacables con el terminal de
+tierra.
+Las armaduras también pueden ponerse a tierra en los armarios receptores del cable. Esta doble puesta a
+tierra se permite en las armaduras por tratarse de un elemento estructural del cable.
+Las pantallas sólo se deben poner a tierra en un extremo, que debe ser siempre el de los armarios de
+control.
+En multipares con apantallamiento individual además de global, se debe dar continuidad a las pantallas a
+través de las cajas de conexionado (mediante bornes dedicados) hasta los armarios de control.
+No se consideran puestas a tierra las que se realicen a través de resistencias de valor superior a 15 KΩ.
+En el caso de cables de circuitos de seguridad intrínseca, se deben aplicar además las indicaciones de la
+“J1401 Instalaciones EExi”.
+Todas las bandejas deben estar puestas a tierra en campo de acuerdo a lo indicado en la ED P0100.
+
+5.3.3 Identificación de tiras y bornes
+Las tiras deben estar identificadas por un rótulo con el nombre del multipar asociado asignado en el
+proyecto, que debe estar grabado en un borne porta-rótulos montado en un extremo del mismo.
+En borneras para un cable simple se debe indicar el tag de la señal o instrumento asociado.
+Los bornes deben estar identificados según los componentes del cable asociado:
+              Para pares                                  01, 02, 03
+              Para ternas                                 01, 02, 03
+              Para conductores                           1, 2, 3
+En el caso especial de cables de comunicaciones, se pueden emplear códigos específicos del protocolo que
+se esté usando (por ejemplo, conductores T, R y Común en RS 232 HD).
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            13 / 21
+                                                                                                                                                                     Clasificación YPF: No Confidencial
+
+                                                    #Título                     J1300 Conexionado Electrico
+                                                                                a Instrumentos
+ #Tipo                                               Especificación            #Código                 ES__-0002226
+ #Fecha de Vigencia                                  12/12/2020                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+5.3.4 Identificación externa de cables y componentes
+Los multipares de campo deben estar identificados en ambos extremos (salida de la caja y llegada al armario
+de control) con el tag asignado en el proyecto. Adicionalmente se deben marcar en cada extremo con el tag
+del equipo correspondiente al extremo opuesto.
+Los cables y multipares entre armarios, equipos, etc. Deben estar igualmente identificados en ambos
+extremos (incluidas sus venas con el tag del instrumento correspondiente).
+Los cables simples que unen un instrumento y una caja de conexionado o armario también deben estar
+identificados en ambos extremos.
+La identificación debe ser por etiqueta estampada de inoxidable, fijada al cable con alambre del mismo
+material. La identificación mediante etiquetas plásticas y rotulación solo es admisible en los cables tendidos
+internamente en gabinetes o salas de racks.
+La identificación interna de los componentes (pares, ternas, conductores) en cajas, armarios y acometidas a
+borneras se debe realizar mediante etiquetas grabadas con el tag y el nº de componente (par, terna, etc.)
+asociado.
+Los componentes de reserva se deben identificar también con el tag “RESERVA” y su número asociado.
+La etiqueta de cada vena debe ser de plástico y de características tales, que no permita el desprendimiento
+de la misma.
+
+
+5.4 Criterios de separación entre cables
+5.4.1 Separación de cables de instrumentos y potencia
+Siguiendo el criterio establecido en la norma IEEE 518, se determinan las siguientes distancias según las
+señales de instrumentos y los diferentes niveles de tensión de las líneas de potencia que las acompañan en
+el tendido.
+
+
+
+
+                                         Tabla 5.4.1: Separaciones mínimas entre cables de señal y fuerza
+                                                Cables eléctricos en bandeja / Cables de señal en bandeja
+                                                                                                             Nivel de Tensión
+                         Tipo de señal
+                                                                > 50V ó <20A                      0 a 1000V ó 20 a 800A                                > 1000V ó <800A
+
+                    A / TC / TR / PR / H                             150 mm                                    660 mm                                          660 mm
+
+                                    D                                150 mm                                    450 mm                                          660 mm
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            14 / 21
+                                                                                                                                                                     Clasificación YPF: No Confidencial
+
+                                                    #Título                     J1300 Conexionado Electrico
+                                                                                a Instrumentos
+ #Tipo                                               Especificación            #Código                 ES__-0002226
+ #Fecha de Vigencia                                  12/12/2020                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+                                         Tabla 5.4.1: Separaciones mínimas entre cables de señal y fuerza
+                                                Cables eléctricos en bandeja / Cables de señal en bandeja
+                                                                                                             Nivel de Tensión
+                         Tipo de señal
+                                                                > 50V ó <20A                      0 a 1000V ó 20 a 800A                                > 1000V ó <800A
+
+                                    P                                       -                                         -                                        300 mm
+
+                                   Cables eléctricos en bandeja / Cables de señal en conduit (o viceversa)
+
+                                                                                                             Nivel de Tensión
+                         Tipo de señal
+                                                                > 50V ó <20A                      0 a 1000V ó 20 a 800A                                > 1000V ó <800A
+
+                    A / TC / TR / PR / H                             100 mm                                    450 mm                                          450 mm
+
+                                    D                                100 mm                                    300 mm                                          450 mm
+
+                                    P                                       -                                         -                                        200 mm
+
+                                                Cables eléctricos en conduit / Cables de señal en conduit
+
+                                                                                                             Nivel de Tensión
+                         Tipo de señal
+                                                                > 50V ó <20A                      0 a 1000V ó 20 a 800A                                > 1000V ó <800A
+
+                    A / TC / TR / PR / H                              75 mm                                    300 mm                                          300 mm
+
+                                    D                                 75 mm                                    225 mm                                          300 mm
+
+                                    P                                       -                                         -                                        150 mm
+
+Para condiciones fuera de las citadas anteriormente referirse a la IEEE 518.
+Los cruces entre cables de fuerza y señal deben ser en ángulo recto.
+
+
+5.5 Suministro y documentación
+5.5.1 Preparación para envío, embalaje y marcado
+Debe estar de acuerdo con la especificación ES__-0001051 Preparación para el Transporte de Equipos y
+Materiales”.
+
+5.5.2 Documentación
+Para documentar el conexionado eléctrico de instrumentos, las Ingenierías deben emitir los siguientes
+planos y hojas de datos en cada proyecto:
+    a) Plano de implantación de cajas e instrumentos eléctricos.
+    b) Planos de recorrido de cables y vías de datos (ver notas al final).
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            15 / 21
+                                                                                                                                                                      Clasificación YPF: No Confidencial
+
+                                                     #Título                     J1300 Conexionado Electrico
+                                                                                 a Instrumentos
+ #Tipo                                                Especificación            #Código                 ES__-0002226
+ #Fecha de Vigencia                                   12/12/2020                #Versión                1.0
+ #Activo de la información                            YPF - Privada
+ #Proceso                                             21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+     c)     Lista de cables de instrumentos según formato HDJ1300-01.
+     d)     Hojas de datos de cables de instrumentos empleados según “J1301 Cables de Instrumentos”.
+     e)     Planos de cajas y conexión según se indica en la “J1302 Cajas de Conexionado”.
+     f)     Hojas de datos de prensacables y pasamuros según “J1303 Prensacables y Pasamuros”.
+     g)     Lista de cargas alimentadas en formato HD-J1304-01.
+     h)     Unifilar de alimentación a instrumentos según “J1304 Alimentación Eléctrica a Instrumentos”.
+
+La documentación anterior se debe suministrar en las cantidades y soportes indicados en las requisiciones y
+normas de YPF.
+Toda la documentación deb estar en castellano.
+Notas sobre la ejecución de planos de implantación:
+     •      Los planos de implantación de instrumentos eléctricos deben ser en general similares al TI-1300-01
+            que se adjunta con este documento. Este plano debe star basado en una planimetría parcial o
+            general de la unidad.
+     •      Debe ser un plano o conjunto de planos que permita ubicar de modo aproximado en cada unidad
+            todos los instrumentos con señales y/o alimentaciones eléctricas asociadas, paneles locales,
+            multiplexor, cajas de conexionado, casetas, etc.
+     •      En equipos que no se instalen a nivel del suelo se deb eindicar de modo aproximado el nivel o
+            plataforma donde se ubican los mismos. Todos los equipos con señales o alimentación irán
+            identificados por su tag.
+Nota: los detectores de gases tóxicos y explosivos se deben incluir en el plano en un nivel o capa exclusivamente dedicado a ellos, de
+manera que se facilite la impresión de una implantación exclusiva de los mismos.
+
+     •      Los equipos que puedan agrupar un número elevado de cables o señales en poco espacio (grandes
+            máquinas, paneles locales, etc.) pueden remitir a un plano de detalle que recoja las mismas.
+     •      Para los instrumentos y sistemas (DCS, PLC, etc.) ubicados en salas de racks o de control se deben
+            realizar planos similares que muestren la disposición de las cabinas y equipos principales.
+     •      Se debe utilizar el tamaño A-0 para las planimetrías y planos derivados de las mismas, como es el
+            considerado. En caso de indicarlo YPF, durante el proyecto se usarán formatos menores para facilitar
+            su manejo.
+
+Notas sobre los planos de recorrido de cables y vías de datos:
+     •      Los planos de recorridos de cables y vías de datos deben ser en general similares al TI-1300-02 que
+            se adjunta con este documento. Este plano está basado en una planimetría parcial o general de la
+            unidad.
+
+
+
+
+    COPIA NO CONTROLADA
+    [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                          o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                             16 / 21
+                                                                                                                                                                    Clasificación YPF: No Confidencial
+
+                                                   #Título                     J1300 Conexionado Electrico
+                                                                               a Instrumentos
+#Tipo                                               Especificación            #Código                 ES__-0002226
+#Fecha de Vigencia                                  12/12/2020                #Versión                1.0
+#Activo de la información                           YPF - Privada
+#Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+      •   Debe ser un plano o conjunto de planos que permita ubicar de modo aproximado en cada unidad
+          todos los multiplexores, cajas de conexionado y rutas de bandejas principales para multipares y vías
+          de datos.
+      •   Estos planos deben ofrecer continuidad desde el origen físico de los cables hasta su destino, de
+          manera que pueda seguirse su recorrido íntegro, incluyendo el interior de edificios.
+      •   Las bandejas deben estar todas identificadas, y en el mismo plano se incluirá un detalle o lista
+          indicando los cables que hay sobre cada una de ellas.
+      •   El plano de recorrido de cables puede unificarse con el de implantación de instrumentos eléctricos
+          sólo cuando lo autorice YPF y el plano resultante resulte legible.
+      •   Se debe utilizar el tamaño A-0 para las planimetrías y planos derivados de las mismas, como es el
+          considerado. En caso de indicarlo YPF, durante el proyecto se usarán formatos menores para facilitar
+          su manejo.
+
+
+6 Roles, Indicadores, registros y riesgos del proceso
+
+6.1       Roles
+                        Rol                                                                  Puestos / Unidad/es Organizativa/s
+ N/A                                                         N/A
+
+
+6.2 Indicadores
+
+ Indicador                       Fórmula                        Frecuencia                    Responsable                            Cliente                               Registro
+   (KPI)                                                                                                                            Interno /
+                                                                                                                                    Externo
+N/A                       N/A                                 N/A                            N/A                               N/A                              N/A
+
+
+6.3 Registros
+      Registro                   Responsable                       Responsable                       Frecuencia de                      Disposición y                         Tiempo de
+                                  del registro                      del archivo                        registro /                        protección                            archivo
+                                                                                                        archivo
+N/A                            N/A                                N/A                                N/A                               N/A                                N/A
+
+
+
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                        o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                           17 / 21
+                                                                                                                                                                    Clasificación YPF: No Confidencial
+
+                                                   #Título                     J1300 Conexionado Electrico
+                                                                               a Instrumentos
+#Tipo                                               Especificación            #Código                 ES__-0002226
+#Fecha de Vigencia                                  12/12/2020                #Versión                1.0
+#Activo de la información                           YPF - Privada
+#Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+6.4 Riesgos y acciones mitigantes
+ Codificación                                       Riesgo                                                         Origen                                                Controles
+ de Referencia                                                                                                                                                           mitigantes
+N/A                               N/A                                                      N/A                                                                 N/A
+
+
+6.5 Reglas de Negocio
+                          Nombre                                                                                              Descripción
+ N/A                                                                       N/A
+
+
+
+7 Anexos y referencias
+
+7.1 Anexos
+7.1.1 Anexos Especiales
+ #Nº                                                                                              Nombre
+ N/A                                                                                                   N/A
+
+7.1.2 Otros anexos
+ #Nº                                                                                              Nombre
+   I         HD-J1300-01 Lista de Cables de Instrumentos
+
+
+
+7.2 Normativa relacionada
+  Categoría                                                                      Título                                                                                 Código
+                              J1301 Cables de Instrumentos                                                                                            ES__-0002272
+                              J1302 Cajas de Conexionado y Paneles de Campo                                                                           ES__-0002635
+ Normativa                    J1303 Accesos de Cables de Instrumentos                                                                                 ES__-0002227
+ Interna YPF                  J1304 Alimentación Eléctrica a Instrumentos                                                                             ES__-0002273
+                              P1102 Bandejas y Accesorios para instalaciones
+                                                                                                                                                      ES__-0001890
+                              Eléctricas
+                              P0100 Instalaciones Eléctricas                                                                                          ES__-0002633
+
+
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                        o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                           18 / 21
+                                                                                                                                                                     Clasificación YPF: No Confidencial
+
+                                                    #Título                     J1300 Conexionado Electrico
+                                                                                a Instrumentos
+ #Tipo                                               Especificación            #Código                 ES__-0002226
+ #Fecha de Vigencia                                  12/12/2020                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+   Categoría                                                                      Título                                                                                 Código
+                               ED(EP)-B-01.00 Preparación para el Transporte de
+                                                                                                                                                       ES__-0001051
+                               Equipos y Materiales
+  Normativa
+  Externa                      N/A                                                                                                                     N/A
+
+  Normativa
+  Derogada                     N/A                                                                                                                     N/A
+
+                               IEEE Guide for the Installation of
+                               Electrical Equipment to Minimize
+                                                                                                                                                       IEEE 518
+                               Electrical Noise Inputs to
+  Otras                        Controllers from External Sources
+  referencias                  Electromagnetic compatibility                                                                                           IEC 61000
+                               Test for electric cables under fire conditions. Circuit                                                                 IEC 60331-21
+                               integrity
+                               Reglamentos de baja tensión aplicables en la zona                                                                       RBT
+                               de instalación
+
+7.3 Definiciones y abreviaturas
+      Término                     Abreviatura                                                                            Descripción
+
+           N/A                              N/A                                                                                    N/A
+
+
+
+8 Aprobación
+
+8.1 Vigencia
+Esta normativa entra en vigencia a partir de la fecha de su aprobación.
+Los abajo firmantes asumen la responsabilidad de implantar, controlar el cumplimiento y actualizar
+el presente documento cada vez que fuera necesario.
+
+
+8.2 Disposiciones generales y transitorias
+N/A
+
+
+8.3 Historial
+   N° Revisión                          Fecha Aprobación                                                                     Principales cambios
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            19 / 21
+                                                                                                                                                                    Clasificación YPF: No Confidencial
+
+                                                   #Título                     J1300 Conexionado Electrico
+                                                                               a Instrumentos
+#Tipo                                               Especificación            #Código                 ES__-0002226
+#Fecha de Vigencia                                  12/12/2020                #Versión                1.0
+#Activo de la información                           YPF - Privada
+#Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+ 0.0                             19/04/2017                                                  Versión inicial
+                                                                                             -       Cambio de normativa de referencia para
+                                 Ver fecha en                                                        separación de cables de instrumentos y
+ 1.0                             encabezado de                                                       potencia (API 552 → IEEE 518)
+                                 normativa                                                   -       Actualización en nomenclatura de tag de
+                                                                                                     cables y multipares
+
+
+
+8.4 Flujo de Aprobación
+#Participantes
+               #Autor                                      #Referente de                                 #Dueño de Proceso                                    #Administrador
+                                                             Proceso                                                                                        Cuerpo Normativo /
+                                                                                                                                                                 Negocio
+ Autor                                             Referente                                            Dueño                                               Administrador
+
+#Colaboradores
+                                                                                           Nombre
+ SPIZZIRRI, FRANCO
+ STRAUBE, JANOS
+ PUERTAS, DIEGO
+ BELICH, FERNANDO
+ GOMEZ, WALTER RUBEN
+ IGLESIAS, LEANDRO
+ EBERHARDT, YAMILA
+
+#Revisores
+                                                                                           Nombre
+ N/A
+
+#Aprobadores
+                                                                                           Nombre
+ SZWED, CRISTINA LILIANA
+
+
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                        o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                           20 / 21
+                                                                                                                                                                     Clasificación YPF: No Confidencial
+
+                                                    #Título                     J1300 Conexionado Electrico
+                                                                                a Instrumentos
+ #Tipo                                               Especificación            #Código                 ES__-0002226
+ #Fecha de Vigencia                                  12/12/2020                #Versión                1.0
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Ingeniería de Superficie
+
+
+9 Anexos
+
+9.1 Anexo I : HD-J1300-01 Lista de Cables
+Este anexo está en un archivo distinto del documento principal. Se accede a él desde el Buscador de la
+página principal de Y-DOC, en el menú contextual del código correspondiente al documento o bien desde la
+vista Ver información detallada.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            21 / 21
+

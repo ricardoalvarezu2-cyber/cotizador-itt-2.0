@@ -1,0 +1,2346 @@
+                                                                          Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                                          Ámbito de aplicación: E&P YPF
+                                                                          Propietario: INGENIERÍA Y OBRAS
+                                                                          Código: AB-IYO-ED-09-186-01                                      Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                                                          Página 1 de 35
+
+
+                                                                           ÍNDICE
+
+1.         GENERAL ........................................................................................................................................... 3
+1.1.       Objeto.................................................................................................................................................. 3
+1.2.       Unidades de medida ............................................................................................................................ 4
+
+2.         BASES DE DISEÑO ............................................................................................................................ 4
+2.1.       Datos Básicos...................................................................................................................................... 4
+2.2.       Rango de operación y factor de sobrediseño ....................................................................................... 5
+2.3.       Presión de operación y caída de presión ............................................................................................. 6
+2.4.       Calidad de fluido y ensayos ................................................................................................................. 6
+2.5.       Requerimientos particulares de funcionamiento ................................................................................... 7
+2.6.       Diseño Mecánico ................................................................................................................................. 8
+2.7.       Instrumentación y control ................................................................................................................... 10
+2.8.       Electricidad ........................................................................................................................................ 13
+2.9.       Suministro.......................................................................................................................................... 14
+
+3.         MATERIALES .................................................................................................................................... 14
+3.1.       Generalidades ................................................................................................................................... 14
+
+4.         FABRICACION .................................................................................................................................. 15
+4.1.       Generalidades ................................................................................................................................... 15
+
+5.         CONTROL DE CALIDAD, INSPECCIONES Y PRUEBAS .................................................................. 15
+5.1.       Generalidades ................................................................................................................................... 15
+5.2.       Prueba a presión ............................................................................................................................... 16
+5.3.       Pruebas de Funcionamiento .............................................................................................................. 16
+
+6.         PLACA DE CARACTERISTICAS ....................................................................................................... 16
+
+7.         REPUESTOS Y HERRAMIENTAS ESPECIALES .............................................................................. 16
+7.1.       Repuestos para Puesta en Marcha .................................................................................................... 16
+7.2.       Repuestos para el 1° Año de Operación .............. .............................................................................. 16
+7.3.       Repuestos para 2 Años de Operación................................................................................................ 17
+7.4.       Herramientas Especiales ................................................................................................................... 17
+
+8.         TRANSPORTE, RECEPCION Y APROBACION DEFINITIVA ............................................................ 17
+8.1.       Embalaje............................................................................................................................................ 17
+
+9.         DOCUMENTACION A PRESENTAR POR EL PROVEEDOR............................................................. 17
+9.1.       Información en fase de Oferta............................................................................................................ 18
+
+
+     RUIZ BRICEÑO, CORINA               COLO DEL ZOTTO,
+             MARÍA                      CARLOS AGUSTIN
+                                                                                                                                                 07     07     09
+
+          Validación                        Aprobación                           Validación                          Aprobación                  D      M   A
+                           E&P YPF                                                                                                                    Fecha
+                             SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                                     Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                                     Ámbito de aplicación: E&P YPF
+                                                                     Propietario: INGENIERÍA Y OBRAS
+                                                                     Código: AB-IYO-ED-09-186-01                                    Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                                                    Página 2 de 35
+
+9.2.     Manuales de operación y Mantenimiento ........................................................................................... 18
+9.3.     Envío del equipo a las Instalaciones .................................................................................................. 19
+9.4.     Lista de documentación requerida ..................................................................................................... 19
+
+10.      DOCUMENTOS DE REFERENCIA .................................................................................................... 20
+10.1.    Especificaciones de Diseño de YPF................................................................................................... 20
+10.2.    Normas y Códigos ............................................................................................................................. 21
+10.3.    Planos Estándar de YPF .................................................................................................................... 22
+10.4.    Hojas de Datos .................................................................................................................................. 22
+10.5.    Anexo Filtración (SOLO A MODO DE REFERENCIA – NO MANDATORIO) ...................................... 22
+
+
+
+
+  RUIZ BRICEÑO, CORINA               COLO DEL ZOTTO,
+          MARÍA                      CARLOS AGUSTIN
+                                                                                                                                         07     07     09
+
+        Validación                       Aprobación                          Validación                        Aprobación                 D     M   A
+                         E&P YPF                                                                                                              Fecha
+                          SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                      Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                      Ámbito de aplicación: E&P YPF
+                                                      Propietario: INGENIERÍA Y OBRAS
+                                                      Código: AB-IYO-ED-09-186-01             Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                         Página 3 de 35
+
+
+1.       GENERAL
+
+
+1.1.     Objeto
+
+
+1.1.1. Esta Especificación de Diseño (ED) establece los requisitos mínimos obligatorios para el diseño,
+       selección de materiales, fabricación, inspección, embalaje, transporte, ensayos, pruebas y operación de
+       filtros (Granate – Antracita / Cáscara de Nuez / Arena / Cartucho) opcionalmente montados sobre skid,
+       para Instalaciones de Superficie (E&P) de YPF.
+
+
+1.1.2. Los filtros objeto de esta Especificación serán diseñados y construidos de acuerdo con los
+       requerimientos de la especificación ED(EP)-C-01.00 (Recipientes a Presión) en los puntos donde sea
+       aplicable.
+
+
+1.1.3. Esta Especificación junto con la Hoja de Datos del filtro son parte integral de la Requisición de
+       Materiales. En caso de discrepancia entre los documentos incluidos en dicha Requisición, el orden de
+       prioridad será el siguiente:
+
+         •    Legislación aplicable (siempre y cuando en la Hojas de Datos, en la Requisición de Compra o en
+              esta Especificación no se establezcan criterios más restrictivos que los en ella fijados)
+
+         •    Hoja de Datos
+
+         •    Requisición de Compra
+
+         •    La presente Especificación de Diseño.
+
+
+1.1.4. Las excepciones, variaciones o adiciones que supongan cualquier cambio en dichos documentos
+       deberán ser aceptados por escrito por YPF.
+
+
+1.1.5. El cumplimiento de las reglas y recomendaciones dadas en esta Especificación no exime ni parcial ni
+       totalmente al fabricante del filtro (Granate-Antracita / Cáscara de Nuez / Arena / Cartucho) de sus
+       responsabilidades y garantías contractuales.
+
+         El Proveedor podrá presentar soluciones alternativas a las recomendaciones técnicas dadas en la
+         presente especificación, para mejorar el proyecto desde el punto de vista de seguridad, control, costo
+         (CAPEX & OPEX) y funcionamiento del filtro, sin alterar las bases de la presente, e indicando
+         expresamente las desviaciones respecto de lo solicitado. Las desviaciones deberán ser aprobadas por
+         YPF.
+
+
+1.1.6. El presente documento forma parte de la última edición de las Especificaciones de Diseño y hace
+       referencia a la última edición de las Normas y Códigos que son mencionados y / o aplicables. Ver
+       Punto 10.2
+
+
+
+
+     RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+             MARÍA               CARLOS AGUSTIN
+                                                                                                  07    07   09
+
+          Validación               Aprobación            Validación             Aprobación        D      M   A
+                       E&P YPF                                                                         Fecha
+                       SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                      Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                      Ámbito de aplicación: E&P YPF
+                                                      Propietario: INGENIERÍA Y OBRAS
+                                                      Código: AB-IYO-ED-09-186-01                Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                           Página 4 de 35
+
+1.2.     Unidades de medida
+
+         Las unidades de medida serán las del Sistema Métrico Internacional (SI), si bien para las cañerías se
+         podrán utilizar pulgadas para el diámetro y libras para el rating. Asimismo, se admitirán presiones en
+              2
+         kg/cm .
+
+
+2.       BASES DE DISEÑO
+
+
+2.1.     Datos Básicos
+
+
+FILTROS DE GRANATE - ANTRACITA y CASCARA DE NUEZ
+
+
+2.1.1. La finalidad de los filtros de Granate - Antracita y Cáscara de Nuez son empleados en la etapa terciaria
+       de tratamiento de agua de formación, es la de remover sólidos en suspensión y trazas de
+       hidrocarburos para dar cumplimiento con los requerimientos de calidad establecidos para dicha agua
+       de formación, ya sea para su reinyección o disposición final al medio ambiente. Para el caso de la
+       reinyección, estos requerimientos están determinados por las características geológicas del pozo
+       inyector.
+
+         Los filtros de granate serán del tipo vertical u horizontal, con todos los accesorios e instrumentos
+         necesarios para su funcionamiento en forma autónoma y automática.
+
+         Los filtros de cáscara de nuez por su configuración serán verticales.
+
+
+FILTROS DE ARENA
+
+
+2.1.2. Los filtros de arena se emplean para remover sólidos en suspensión para dar cumplimiento con los
+       requerimientos de calidad establecidos para el agua proveniente de pozo, de río o de mar, para su
+       inyección en procesos de Recuperación Secundaria, esta agua no contiene hidrocarburos en
+       suspensión. La capacidad de remoción de hidrocarburos de estos filtros es baja, por lo tanto no se
+       emplean comúnmente para el tratamiento de agua de formación.
+
+
+FILTROS CARTUCHO
+
+
+2.1.3. Los filtros cartucho se utilizan como post-tratamiento o pulimento de la salida de uno de los filtros arriba
+       mencionados (Granate Antracita / Arena y Cáscara de Nuez) durante el tratamiento de agua,
+       esencialmente cuando se requiere eliminación de partículas de tamaño menor o igual a los 5 µm.
+
+         Los filtros de cartucho pueden ser descartables o retrolavables, se recomienda el empleo de estos
+         últimos cuando el taponamiento de filtro pueda ser frecuente y la disposición de cartuchos muy
+         problemática.
+
+         Los filtros serán del tipo vertical u horizontal, montados opcionalmente sobre un skid, con todos los
+         accesorios e instrumentos necesarios para su funcionamiento en forma autónoma y automática.
+
+
+
+     RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+             MARÍA               CARLOS AGUSTIN
+                                                                                                     07    07   09
+
+          Validación               Aprobación              Validación             Aprobación          D     M   A
+                       E&P YPF                                                                            Fecha
+                       SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                        Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                        Ámbito de aplicación: E&P YPF
+                                                        Propietario: INGENIERÍA Y OBRAS
+                                                        Código: AB-IYO-ED-09-186-01                     Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                               Página 5 de 35
+
+2.1.4. Serán de aplicación, los códigos, especificaciones y normas a los que se hace referencia en el punto
+       10, siendo estos requisitos considerados como mínimos.
+
+
+2.1.5. Las condiciones de operación, eficiencia de filtración, tipo de relleno a utilizar y área de filtración se
+       indicarán en las Hojas de Datos.
+
+
+2.1.6. El Proveedor deberá suministrar para información de YPF todos los cálculos de procesos, esquemas,
+       diagramas de flujo, criterios de diseño, etc. utilizados en el dimensionamiento del equipo.
+
+
+2.1.7. El Proveedor deberá informar los servicios auxiliares y utilidades requeridos para la correcta operación
+       del equipo.
+
+
+
+                                                                                     Rango              Unidad
+       Velocidad superficial de filtración                                            25-35           m3/hr / m2
+       Velocidad superficial de retrolavado (Nota 1)                                  30-70           m3/hr / m2
+       Velocidad superficial de aire de limpieza (“air scour”)                        40-75          N m3/hr / m2
+
+2.1.8. Las dimensiones del skid deberán estar de acuerdo a la especificación de transporte ED(EP)-B-01.00.
+
+
+2.2.   Rango de operación y factor de sobrediseño
+
+
+2.2.1. El diseño del filtro permitirá el funcionamiento prolongado y correcto del mismo en condiciones de
+       operación entre el 50% y el 110% del caudal de diseño. Dependiendo del tipo de servicio, el rango
+       especificado podrá ser diferente, con la previa aceptación de YPF.
+
+       FILTROS GRANATE-ANTRACITA
+
+
+2.2.2. Los valores típicos de operación para el filtro de granate – antracita son los que se indican abajo:
+
+
+       Nota 1: Este valor es función de la Expansión del Lecho y de la Temperatura del agua durante el retrolavado.
+
+       Cuando se desea extender la duración del ciclo de filtrado el filtro se diseña para                   velocidades
+       superficiales entre 17-20 m3/hr/m2.
+
+       FILTROS CÁSCARA DE NUEZ
+
+
+2.2.3. La velocidad superficial de filtración de los filtros de cáscara de nuez en condiciones de diseño está
+       entre 30–37 m3/hr/m2.
+
+
+
+
+  RUIZ BRICEÑO, CORINA         COLO DEL ZOTTO,
+          MARÍA                CARLOS AGUSTIN
+                                                                                                            07    07   09
+
+        Validación                Aprobación                 Validación                 Aprobación          D      M   A
+                     E&P YPF                                                                                     Fecha
+                      SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                       Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                       Ámbito de aplicación: E&P YPF
+                                                       Propietario: INGENIERÍA Y OBRAS
+                                                       Código: AB-IYO-ED-09-186-01            Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                         Página 6 de 35
+
+
+
+       FILTROS DE ARENA
+
+
+2.2.4. En el proceso de filtración rápido en los filtros de arena se utilizan velocidades superficiales de
+       filtración entre 4-50 m3/hr/m2 y no hay ninguna acción biológica. Se pueden citar esencialmente los
+       siguientes procesos de filtración rápidos:
+
+       •   Filtración directa: la velocidad de filtración se extiende generalmente entre 4-20 m3/hr/m2, con
+           valores extremos que sobrepasan en algunos casos los 50 m3/hr/ m2.
+
+       •   Filtración con coagulación sobre filtro: estas son aquellas que poseen un diámetro < 1µm.
+
+2.3.   Presión de operación y caída de presión
+
+
+2.3.1. El Proveedor deberá indicar la caída de presión del filtro limpio y sucio, así como también la máxima
+       caída de presión de diseño. Estos valores deberán estar indicados en la propuesta a realizar por el
+       Proveedor.
+
+
+2.4.   Calidad de fluido y ensayos
+
+       Será responsabilidad del Proveedor realizar todos los cálculos de procesos necesarios para garantizar
+       el funcionamiento del equipo. En este caso todos los cálculos se basarán en los parámetros de
+       operación y propiedades de los fluidos proporcionados por YPF en las bases de diseño;
+       complementados en caso de contar con la corriente de agua a ser tratada, con los análisis efectuados
+       por el Proveedor durante sus ensayos de campo. Asimismo será responsabilidad del Proveedor
+       confirmar el empleo de agentes coagulantes y/o productos químicos. En caso de ser necesario el
+       empleo de agentes químicos, el Proveedor deberá informar las cantidades a emplear en su propuesta
+       técnica.
+
+       En caso que se tenga la posibilidad de tomar muestras del agua a tratar, YPF facilitará, y aconseja
+       enfáticamente, la realización de ensayos en sitio y no en el laboratorio del Proveedor, previos a la
+       cotización del equipo. La no realización de estos ensayos no exime al contratista del cumplimiento de
+       las garantías de proceso.
+
+       El diseño del Proveedor deberá garantizar el tamaño de retención de partículas indicado en la Hoja de
+       Datos. El Proveedor deberá indicar la máxima concentración de sólidos en suspensión (TSS), el
+       máximo contenido de hidrocarburos (THC) y/o el máximo contenido de impurezas, permitidas en la
+       corriente de entrada para lograr la especificación de calidad del agua filtrada.
+
+       Para las pruebas de funcionamiento, si el análisis de la alimentación y/o los caudales de flujo difieren
+       sustancialmente de los datos de diseño, aquellos serán utilizados para la correspondiente prueba de
+       garantía de funcionamiento (previa extrapolación de los datos operacionales a los datos de diseño).
+
+       •   Análisis a realizar a la corriente de agua:
+
+       TAMAÑO DE PARTÍCULAS DEL MEDIO FILTRANTE
+       ASTM Method E11                           Standard Specification for Wire Cloth & Sieves for testing
+       Purposes.
+
+
+
+
+  RUIZ BRICEÑO, CORINA         COLO DEL ZOTTO,
+          MARÍA                CARLOS AGUSTIN
+                                                                                                  07    07   09
+
+       Validación                Aprobación                Validación          Aprobación         D      M   A
+                     E&P YPF                                                                           Fecha
+                     SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                  Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                  Ámbito de aplicación: E&P YPF
+                                                  Propietario: INGENIERÍA Y OBRAS
+                                                  Código: AB-IYO-ED-09-186-01                Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                       Página 7 de 35
+
+       CONTENIDO DE SÓLIDOS EN SUSPENSIÓN EN AGUA
+
+       El Proveedor deberá garantizar que el contenido de sólidos en suspensión que especifica la hoja de
+       datos. Para la determinación se utilizará el ensayo:
+
+       NACE Standard TM 0173-2005        Methods for Determining Quality of Subsurface Injection Water Using
+                                           Membrane Filters.
+
+       CONTENIDO DE HIDROCARBUROS EN AGUA
+
+       Para la determinación del contenido de hidrocarburos en el agua se utilizará alguno de los siguientes
+       ensayos:
+
+       ASTM D-7066         Standard Test Method for dimer/ trimer of chlorotrifluoroethylene (S-316)
+                           Recoverable Oil and Grease and Nonpolar Material by Infrared Determination.
+
+       EPA Method 1664 N-Hexane Extractable material and Silica Gel Treated N-Hexane Extractable Material
+                        by Extraction and Gravimetry - (Rango 5 – 1000 ppm).
+
+       EPA Method 413.1 Oil & Grease, Total Recoverable – Spectrophotometric, Infrared) - (Rango 0,2 –
+       1000 ppm).
+
+       EPA Method 418.1 Petroleum Hydrocarbons , Total Recoverable –Spectrophotometric, Infrared) -
+       (Rango 0,2 – 1000 ppm).
+
+
+2.5.   Requerimientos particulares de funcionamiento
+
+       El Proveedor será responsable del diseño del filtro para lograr la calidad de las corrientes de salida
+       indicadas en la presente especificación y hoja de datos anexa.
+
+       El diseño y disposición del equipo, las cañerías y demás componentes deben facilitar la operación y el
+       mantenimiento del sistema de filtración. Todos los elementos que requieran operación, observación y/o
+       mantenimiento, deberán ser fácilmente accesibles y permitir una operación segura.
+
+
+2.5.1. Sistema de Lavado
+
+       Luego de un período en operación, los filtros se sacarán de servicio cuando se detecte una determinada
+       presión diferencial a través del filtro o una señal del temporizador, de acuerdo a lo que se encuentre
+       determinado en el manual de operaciones del Proveedor. El filtro deberá pasar por un ciclo de
+       retrolavado y luego volverá a operación. Toda la operación debe ser completamente automática, sin
+       necesidad de asistencia de operadores. El sistema tendrá la capacidad de extender los tiempos de
+       cada ciclo o de repetir un ciclo. El Proveedor debe informar el tiempo de duración de estos ciclos. Las
+       válvulas deberán disponer de operador manual para permitir la operación manual de las mismas.
+
+       Los controles de retrolavado deben de permitir operación automática, semiautomática, y estar
+       preparados para prevenir que más de un filtro sea retrolavado a la vez.
+       Los filtros de antracita-granate y arena pueden tener alguno de los siguientes sistemas de retrolavado:
+       •   Lavado sólo con agua
+       •   Lavado simultáneo con aire y agua
+       •   Lavado con aire y agua sucesivos
+       El mínimo de expansión del lecho del caudal de retrolavado será especificado en la documentación del
+       Proveedor.
+
+       La “regeneración” (lavado) del filtro de cáscara de nuez se realiza de una manera no convencional,
+       fluidizando el lecho con una bomba de fluidización o de depuración (“scrubber pump”), seguida de una
+
+  RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+          MARÍA               CARLOS AGUSTIN
+                                                                                                 07    07   09
+
+       Validación               Aprobación             Validación              Aprobación        D      M   A
+                    E&P YPF                                                                           Fecha
+                     SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                    Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                    Ámbito de aplicación: E&P YPF
+                                                    Propietario: INGENIERÍA Y OBRAS
+                                                    Código: AB-IYO-ED-09-186-01                 Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                         Página 8 de 35
+
+       sedimentación y purga.
+
+       El Proveedor deberá informar que tipo de lavado es el más adecuado para el servicio salvo que se
+       indique lo contrario en la hoja de datos.
+
+
+2.6.   Diseño Mecánico
+
+
+2.6.1. Consideraciones Generales
+
+       Cada unidad de filtración de granate-antracita, cáscara de nuez y arena deberá consistir de un filtro
+       completo, con todos los controles, instrumentos, válvulas actuadas con sus respectivos accesorios de
+       control, carga de lecho filtrante a ser realizada en campo, internos, etc. Deberá ser completamente
+       ensamblado, calibrado y probado antes de su transporte al sitio de instalación. Opcionalmente, el filtro
+       podrá estar montado en un skid tipo petrolero con extremos de arrastre.
+
+       Una unidad de filtración por cartucho se encontrará compuesta por un filtro completo, con todos los
+       controles, instrumentos, cartucho, internos, etc. Deberá ser completamente ensamblado, y probado en
+       taller antes de su transporte al sitio de instalación. Opcionalmente, el filtro podrá estar montado en un
+       skid tipo petrolero con extremos de arrastre.
+
+       Los filtros de granate-antracita, cáscara de nuez, arena y cartucho deberán ser diseñados, construidos
+       y probados de acuerdo con todos los requerimientos indicados en la norma ASME Sección VIII, Div. 1 y
+       la Especificación ED(EP)-C-01.00 (Recipientes a Presión).
+
+
+2.6.2. Internos
+
+       Todos los internos estarán de acuerdo a la Especificación ED(EP)-C-02.00. Los filtros de granate-
+       antracita y arena deberán ser diseñados para lograr una eficiente separación de los sólidos en
+       suspensión e hidrocarburos del agua (estos últimos sólo en caso de los de granate – antracita).
+       Deberán incluir, como mínimo, distribuidores de entrada, sistema de soporte del medio filtrante y bafles.
+
+       Los internos de los filtros de granate-antracita y arena deberán ser resistentes a la corrosión, el
+       Proveedor deberá definir los materiales adecuados considerando acero inoxidable 316 y en condiciones
+       más severas deberá evaluar la posibilidad de emplear acero inoxidable duplex.
+
+       El sistema de soporte del medio filtrante podrá ser del tipo falso fondo con toberas de sub-drenaje o tipo
+       colector, el cual podrá ser del tipo tubos con perforaciones o “wedge wire”.
+
+       El Proveedor deberá seleccionar el tipo de soporte de medio filtrante más adecuado para cada servicio.
+       En caso de que el tipo de medio filtrante seleccionado sea falso fondo, es responsabilidad del
+       Proveedor informar la pérdida de carga versus caudal de las toberas a suministrar. Asimismo, si el
+       medio filtrante seleccionado es de tipo colector, es responsabilidad del Proveedor informar el cálculo del
+       patrón de los orificios para las condiciones de los distintos ciclos.
+
+       En caso de que el sistema de soporte del medio filtrante sea tipo colector, se requerirá el empleo de un
+       manto soporte de grava y granate de distinta granulometría, queda excluida la posibilidad de emplear
+       concreto como manto soporte.
+
+       Los internos deberán estar diseñados para facilitar la secuencia de retrolavado del material del lecho.
+
+       Los filtros cáscara de nuez por su configuración particular poseerán los internos adecuados como para
+       impedir la pérdida del material filtrante tanto en el ciclo de filtrado como en el ciclo de retrolavado.
+
+       Los filtros tipo cartucho deberán incluir, como mínimo, distribuidores de entrada, cartuchos filtrantes,
+
+  RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+          MARÍA               CARLOS AGUSTIN
+                                                                                                    07    07   09
+
+       Validación               Aprobación               Validación              Aprobación         D      M   A
+                    E&P YPF                                                                              Fecha
+                     SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                     Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                     Ámbito de aplicación: E&P YPF
+                                                     Propietario: INGENIERÍA Y OBRAS
+                                                     Código: AB-IYO-ED-09-186-01                 Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                           Página 9 de 35
+
+         colectores de salida y bafles.
+
+
+2.6.3. Lecho
+
+         El Proveedor deberá suministrar material de lecho suficiente para los filtros de granate-antracita, arena
+         y cartucho, además de un excedente para compensar posibles pérdidas durante el envío, para lograr el
+         100% de la capacidad de diseño luego de su carga durante un (1) año de operación. El lecho debe ser
+         instalado por el cliente siguiendo las instrucciones suministradas por el Proveedor en el Manual de
+         Operaciones.
+
+         El lecho filtrante deberá ser calculado para manejar los caudales mínimos de fluido y evitar así la
+         canalización de la corriente a filtrar y la ineficiencia de la operación.
+         El lecho filtrante deberá soportar las condiciones de máximo taponamiento y retrolavado sin que se
+         ocasionen daños físicos sobre el material filtrante durante la operación.
+         El material del lecho del filtro cartucho deberá ser especificado por el Proveedor para garantizar la
+         adecuada operación bajo las condiciones de servicio especificadas en la Hoja de Datos anexa.
+
+         El Proveedor deberá informar tiempos estimados para reemplazo del medio filtrante.
+
+
+2.6.4. Cañerías
+
+         A menos que se especifique lo contrario todas las cañerías deberán ser diseñadas, fabricadas y
+         probadas de acuerdo a los requerimientos de la clase de cañerías de YPF ED(EP)-L-02.00.
+
+
+2.6.5.     Válvulas
+
+         Todas las válvulas deberán ser diseñadas, fabricadas y probadas de acuerdo a los requerimientos de
+         las especificaciones de YPF ED(EP)-L-02.01 y ED(EP)-J.06.00.
+
+         Todas las líneas de drenaje deberán contar con doble válvula y válvula de purga intermedio de ¾”. En
+         caso de que el filtro se encuentre montado sobre un skid, todos los drenajes deberán estar canalizados
+         a borde de skid, donde deberán contar con válvula de retención y bloqueo.
+
+
+2.6.6.     Sistema de Lavado
+
+         Los filtros de Grante-Antracita, cáscara de nuez, arena y cartucho (en caso de ser retrolavables)
+         deberán contar con un sistema de lavado. El Proveedor deberá dejar previstas las conexiones
+         correspondientes para dicho sistema y deberá informar los caudales y condiciones de agua y/o aire
+         necesarios cuando corresponda.
+
+
+2.6.7. Detalles Constructivos
+
+         PROTECCION CATODICA
+
+         Los recipientes deberán suministrarse con ánodos de sacrificio para protección catódica. El Proveedor
+         deberá definir el número de ánodos requeridos de acuerdo a las propiedades del fluido para una vida
+         útil mínima de 3 años y de acuerdo con la Especificación ED(EP)-B-06-08.
+
+
+
+
+  RUIZ BRICEÑO, CORINA          COLO DEL ZOTTO,
+          MARÍA                 CARLOS AGUSTIN
+                                                                                                     07    07   09
+
+         Validación               Aprobación              Validación              Aprobación         D      M   A
+                      E&P YPF                                                                             Fecha
+                       SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                   Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                   Ámbito de aplicación: E&P YPF
+                                                   Propietario: INGENIERÍA Y OBRAS
+                                                   Código: AB-IYO-ED-09-186-01                Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                       Página 10 de 35
+
+       CONEXIONES
+
+       El número y dimensiones de las conexiones del recipiente deberán indicarse en los planos mecánicos
+       del equipo.
+
+       Todas las conexiones sobre el cuerpo del filtro serán bridadas y con un diámetro mínimo de 2”.
+
+       El recipiente deberá proveerse al menos con dos bocas de hombre de 24” con davit localizado.
+
+       TOMA DE MUESTRAS Y ANALIZADORES
+
+       El filtro debe estar provisto como mínimo con dos sistemas de toma de muestras, uno en la corriente de
+       ingreso de fluido y el otro en la corriente de salida de fluido. En caso de que el filtro se encuentre
+       montado sobre un skid, los tomamuestras deberán estar canalizados a borde de skid.
+
+
+2.6.8. Protección Anticorrosiva
+
+       La protección anticorrosiva mediante recubrimientos deberá estar de acuerdo a la especificación
+       ED(EP)-B-06.00.
+
+
+2.6.9. Escaleras y Plataformas
+
+       El Proveedor suministrará escaleras, plataformas y pasarelas que permitan un acceso fácil y seguro a
+       todas aquellas áreas que requieran operación y mantenimiento.
+
+       Las escaleras y plataformas se suministrarán de acuerdo a la especificación de YPF ED(EP)-B-05.05.
+
+
+2.6.10.Trineo de Apoyo
+
+       En caso que el filtro se encuentre montado sobre un skid, el cuerpo del equipo con sus soportes se
+       instalará sobre un patín tipo trineo, construido por largueros y travesaños de dimensiones adecuadas.
+
+       Los extremos para arrastrarse y/o izaje serán adecuadamente diseñados (se considera habitual el uso
+       de caño de 4” Sch. 80). Sus dimensiones se relacionarán al peso y medidas del filtro, y su diseño será
+       tal que soportará las cargas, manipuleo de transporte e instalación del equipo sin sufrir deformaciones.
+
+
+2.6.11.Aislamiento Térmico
+
+       El Proveedor deberá proveer e instalar aislamiento térmico en el recipiente y en todo el piping que lo
+       requiera, de acuerdo a lo indicado en los documentos particulares del proyecto y la especificación
+       general de YPF ED(EP)-N-01.00.
+
+
+2.7.   Instrumentación y control
+
+
+2.7.1. General
+
+       El Proveedor indicará en los diagramas PIDs Preliminares y en la hoja de datos de la oferta el alcance
+       de instrumentación y control.
+
+       Todos los paneles locales de control, válvulas de alivio de presión y de vacío, instrumentos y líneas de
+
+
+  RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+          MARÍA               CARLOS AGUSTIN
+                                                                                                  07    07   09
+
+       Validación                 Aprobación            Validación             Aprobación         D      M   A
+                    E&P YPF                                                                            Fecha
+                     SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                  Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                  Ámbito de aplicación: E&P YPF
+                                                  Propietario: INGENIERÍA Y OBRAS
+                                                  Código: AB-IYO-ED-09-186-01                Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                      Página 11 de 35
+
+      instrumentación necesarias para el arranque, operación, limpieza y parada de los filtros serán
+      suministrados por el Proveedor. La instrumentación instalada deberá cumplir la especificación de YPF
+      ED(EP)-J-01.00.
+
+      Para los filtros granate – antracita, arena, cáscara de nuez y cartucho (empleados para el tratamiento
+      de agua), de ser requerido el Proveedor diseñará y suministrará dos válvulas de seguridad (una en
+      operación, una spare). El Proveedor deberá considerar la necesidad o no de instalar discos de ruptura
+      de acuerdo a las características del fluido especificado en la Hoja de datos. Asimismo el equipo deberá
+      contar con una válvula de venteo manual y una válvula automática de venteo (tipo flotante) para
+      eliminar el aire presente en el filtro luego del lavado.
+
+      En caso de que los filtros granate – antracita se encuentren montados sobre un Skid, la cañería de
+      descarga de las válvulas de seguridad y de la válvula de venteo deberán estar canalizadas a borde de
+      skid y no deberán presentar bolsillos.
+
+      El cableado de las señales de los instrumentos y sensores que no van al PLC local se efectuará de
+      acuerdo a la especificación de YPF ED(EP)-J-01.00, particularmente en lo referido a señales analógicas
+      y digitales.
+
+      En caso de que los filtros granate – antracita se encuentren montados sobre un Skid, las señales de los
+      Instrumentos y sensores que no van al PLC local serán cableadas hasta una caja de empalme con
+      borneras adecuadas e instalada sobre el skid.
+
+      Todos los componentes de instrumentación deberán estar de acuerdo con el plano de clasificación de
+      áreas.
+
+      Todos los internos de los instrumentos en contacto con el proceso deberán ser de AISI 316 SS o
+      Duplex según corresponda.
+
+      Todos los instrumentos de presión y nivel deberán tener válvula de bloqueo para permitir
+      mantenimiento.
+
+      La selección de los modelos de los instrumentos es responsabilidad del Proveedor y queda sujeta a la
+      aprobación de YPF.
+
+
+2.7.2. Panel de Control
+
+      El control del filtro será implementado en un PLC dedicado que estará ubicado en el panel de control de
+      la unidad de filtrado. Todos los transmisores, posicionadores y fines de carrera de las válvulas on-off,
+      de la unidad de filtrado serán cableados y conectados a este.
+
+      Todas las variables de control y monitoreo medibles serán retransmitidas a la sala de control de la
+      planta. Se establecerá una comunicación entre el sistema de control de planta (DCS) y el panel de
+      control del filtro para el intercambio de variables. Esta comunicación no afectará la ejecución de las
+      lógicas de control, las cuales seguirán siendo resueltas en forma local.
+
+      Se establecerá comunicación entre el sistema de control de planta (DCS) y el panel de control del filtro
+      vía cable, las señales: “Estado” y “Falla General de Unidad de Filtrado” serán contactos sin tensión.
+      “Paro Normal de Unidad de Filtrado”, será en 24VDC a un relé de interfase en el panel de control de la
+      unidad de filtrado.
+
+      La función de paro, dada desde el DCS, impedirá el arranque de la unidad en cualquier modalidad.
+
+      El paro remoto del equipo se vinculará con el DCS por cableado duro.
+
+      Para un cambio de estado de operación de la unidad el PLC primero deberá verificar las posiciones de
+      las válvulas de la secuencia previa y luego tomar acción con las válvulas de la secuencia siguiente
+
+ RUIZ BRICEÑO, CORINA         COLO DEL ZOTTO,
+         MARÍA                CARLOS AGUSTIN
+                                                                                                 07    07   09
+
+       Validación               Aprobación             Validación             Aprobación         D      M   A
+                    E&P YPF                                                                           Fecha
+                    SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                    Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                    Ámbito de aplicación: E&P YPF
+                                                    Propietario: INGENIERÍA Y OBRAS
+                                                    Código: AB-IYO-ED-09-186-01                 Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                         Página 12 de 35
+
+      (sistema permisivo).
+
+      En caso de que alguna válvula, se encuentre en posición incorrecta se intentará corregir la misma, y de
+      persistir la situación impedirá el arranque / secuencia del filtro o de la unidad, dando alarma de falla al
+      DCS.
+
+      La secuencia de operación normal del filtro finalizará cuando suceda alguno de los siguientes factores:
+
+      •   Se alcance el valor máximo de presión diferencial seteado.
+
+      •   Se cumpla el tiempo de operación normal establecido.
+
+      Desde el DCS se podrá interrogar al PLC, el cual dispondrá de una tabla de registro en la cual se leerá
+      el estado de las válvulas y de los filtros, y la medición de los trasmisores de presión diferencial.
+
+      El operador contará con la facilidad de poder visualizar el estado de las variables y operar el filtro desde
+      un panel view local (HMI display), montado al frente del tablero del filtro.
+
+
+2.7.3. Instrumentación
+
+      Deberá suministrarse toda la instrumentación necesaria para asegurar una correcta operación de los
+      Filtros de granate-antracita, cáscara de nuez, arena y cartucho.
+
+      La unidad de filtración de Granate-Antracita o arena incluirá como mínimo:
+
+      •    Caudalímetro del tipo magnético-inductivo para medir el caudal de alimentación al filtro
+
+      •    Indicador de temperatura local tipo bimetálico (x2) (ingreso y salida del fluido)
+
+      •    Indicador local de presión tipo bourdon (x2) (Ingreso y salida del fluido).
+
+      •    Transmisor de presión diferencial entre el colector de ingreso y salida para determinar la perdida
+           de carga en el filtro
+
+      •    Válvulas de alivio de presión (x2, una operativa y otra en spare)
+
+      •    El Proveedor deberá considerar la necesidad o no de instalar discos de ruptura de acuerdo a lo
+           indicado en la Hoja de datos, correctamente canalizados.
+
+      •    Válvulas de drenaje
+
+      •    Instrumentación para el sistema de lavado del filtro:
+
+             o      Un caudalímetro del tipo magnético-inductivo para medir el caudal de agua que circula
+                    durante el retrolavado.
+
+             o      Un caudalímetro del tipo placa orificio para medir el caudal de aire para el retrolavado del
+                    filtro (En caso de que corresponda de acuerdo al sistema de retrolavado).
+
+             o      Indicador local de presión tipo bourdon (x2) (salida del soplador de aire, descarga de bomba
+                    de lavado).
+
+      La unidad de filtración de cáscara de nuez incluirá como mínimo:
+
+      •    Caudalímetro del tipo magnético-inductivo para medir el caudal de alimentación al filtro
+
+      •    Indicador de temperatura local tipo bimetálico (x2) (ingreso y salida del fluido)
+
+
+
+ RUIZ BRICEÑO, CORINA           COLO DEL ZOTTO,
+         MARÍA                  CARLOS AGUSTIN
+                                                                                                    07     07   09
+
+       Validación                 Aprobación             Validación               Aprobación          D     M   A
+                      E&P YPF                                                                             Fecha
+                       SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                    Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                    Ámbito de aplicación: E&P YPF
+                                                    Propietario: INGENIERÍA Y OBRAS
+                                                    Código: AB-IYO-ED-09-186-01                Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                         Página 13 de 35
+
+       •   Indicador local de presión tipo bourdon (x2) (Ingreso y salida del fluido).
+
+       •   Transmisor de presión diferencial entre el colector de ingreso y salida para determinar la perdida
+           de carga en el filtro
+
+       •   Válvulas de alivio de presión (x2, una operativa y otra en spare)
+
+       •   El Proveedor deberá considerar la necesidad o no de instalar discos de ruptura de acuerdo a lo
+           indicado en la Hoja de datos, correctamente canalizados en caso de que el Filtro se encuentre
+           montado sobre un Skid.
+
+       •   Válvulas de drenaje
+
+       La provisión del filtro de cartucho retrolavable incluirá como mínimo:
+
+       •   Caudalímetro del tipo magnético-inductivo para medir el caudal de alimentación al filtro
+
+       •   Indicador de temperatura local tipo bimetálico (x2) (ingreso y salida del fluido)
+
+       •   Indicador local de presión tipo bourdon (x2) (Ingreso y salida del fluido).
+
+       •   Transmisor de presión diferencial entre el colector de ingreso y salida para determinar la perdida
+           de carga en el filtro
+
+       •   Válvulas de alivio de presión (x2, una operativa y otra en spare)
+
+       •   El Proveedor deberá considerar la necesidad o no de instalar discos de ruptura de acuerdo a lo
+           indicado en la Hoja de datos, correctamente canalizados en caso de que el Filtro se encuentre
+           montado sobre un Skid.
+
+       •   Válvulas de drenaje
+
+       La provisión del filtro de cartucho descartable incluirá como mínimo:
+
+       •   Indicador local de presión tipo bourdon (x2) (Ingreso y salida del fluido).
+
+       •   Transmisor de presión diferencial entre el colector de ingreso y salida para determinar la perdida
+           de carga en el filtro
+
+       •   Válvulas de alivio de presión (x2, una operativa y otra en spare)
+
+       El Proveedor deberá considerar la necesidad o no de instalar discos de ruptura de acuerdo a lo
+       indicado en la Hoja de datos, correctamente canalizados en caso de que el Filtro se encuentre montado
+       sobre un Skid.
+
+
+2.8.   Electricidad
+
+       Todo el equipo y material eléctrico, sistemas de conexión a tierra e instalaciones eléctricas deberán ser
+       diseñadas de acuerdo a lo indicado en la especificaciones de YPF ED(EP)-P-01.00.
+
+       Todos los paneles de control serán diseñados y suministrados por el Proveedor. En caso de que el filtro
+       se encuentre montado sobre un skid, el Proveedor será responsable del cableado eléctrico hasta las
+       cajas de empalme instaladas sobre el Skid.
+
+       El equipo eléctrico estará de acuerdo con el plano de clasificación de áreas.
+
+       Todo el cableado y conexionado desde el skid hacia los paneles será realizado por el Proveedor del
+
+
+  RUIZ BRICEÑO, CORINA          COLO DEL ZOTTO,
+          MARÍA                 CARLOS AGUSTIN
+                                                                                                   07      07   09
+
+       Validación                 Aprobación             Validación               Aprobación          D     M   A
+                      E&P YPF                                                                             Fecha
+                      SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                     Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                     Ámbito de aplicación: E&P YPF
+                                                     Propietario: INGENIERÍA Y OBRAS
+                                                     Código: AB-IYO-ED-09-186-01                Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                           Página 14 de 35
+
+         equipo.
+
+
+2.9.     Suministro
+
+         El alcance del suministro incluye:
+
+         •    Diseño, suministro de materiales y fabricación de filtros de granate-antracita, cáscara de nuez,
+              arena y cartucho opcionalmente montados sobre skid, equipado el mismo con las correspondientes
+              plataformas y escaleras, de ser requerido.
+
+         •    Suministro de todos los instrumentos asociados con el control y seguridad.
+
+         •    El sistema ha de estar diseñado y equipado con el correspondiente sistema de izado (incluidas
+              arandelas de izado), tanto para el recipiente así como para el skid. Asimismo se deberá incluir
+              percha de Izado. El diseño ha de ser tal que se debe permitir el mantenimiento de los internos de
+              los equipos.
+
+         •    Suministro del cableado eléctrico y de instrumentación.
+
+         •    En caso de que el filtro se encuentre montado sobre un skid, se deberán suministrar todas las
+              cañerías, válvulas, internos y accesorios requeridos para cada skid. Todas las cañerías deberán
+              canalizarse hasta borde de skid.
+
+         •    Suministro del aislamiento térmico si correspondiera para equipos y tuberías.
+
+         •    Suministro de terminales de conexión para puesta a tierra.
+
+         •    Suministro de placa de identificación para cada equipo.
+
+         •    Suministro de escaleras, plataformas y pasarelas que permitan un acceso fácil y seguro a todas
+              aquellas áreas que requieran operación y mantenimiento.
+
+         •    Suministro de repuestos y herramientas especiales
+
+
+3.       MATERIALES
+
+
+3.1.     Generalidades
+
+
+3.1.1. La calidad de los acopios de materiales deberá cumplir con lo requerido en las Especificaciones
+       ED(EP)-B-02.00 (Aseguramiento y control de calidad en equipos estáticos y dinámicos), ED(EP)-L-
+       05.00 ( Requisitos de calidad de cañerías y accesorios), y la ED(EP)-B-04.00 (Requerimientos y
+       limitaciones de materiales para servicios especiales) si es para alguno de los servicios incluidos en esta
+       última.
+
+
+
+
+     RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+             MARÍA               CARLOS AGUSTIN
+                                                                                                   07    07   09
+
+          Validación               Aprobación             Validación             Aprobación         D     M   A
+                       E&P YPF                                                                          Fecha
+                       SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                      Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                      Ámbito de aplicación: E&P YPF
+                                                      Propietario: INGENIERÍA Y OBRAS
+                                                      Código: AB-IYO-ED-09-186-01                 Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                           Página 15 de 35
+
+
+4.       FABRICACION
+
+
+4.1.     Generalidades
+
+
+4.1.1. Además de los requisitos en cuanto a fabricación de acuerdo a la especificación ED(EP)-C-01.00, las
+       soldaduras de las partes a presión también deberán cumplir íntegramente con la Especificación de
+       Diseño ED(EP)-B-05.00 (Requisitos generales de soldadura).
+
+
+5.       CONTROL DE CALIDAD, INSPECCIONES Y PRUEBAS
+
+
+5.1.     Generalidades
+
+
+5.1.1. Será de aplicación las Especificaciones ED(EP)-B-02.00 (Aseguramiento y control de calidad en
+       equipos estáticos y dinámicos) y la ED(EP)-L-05.00 ( Requisitos de calidad de cañerías y accesorios)
+
+
+5.1.2. La inspección y prueba necesaria será de acuerdo con las normas de aplicación, así como los
+       requerimientos concretos de esta especificación.
+
+         YPF se reserva el derecho de inspeccionar todo el trabajo y pruebas realizados por el Proveedor y/o
+         subProveedores. El Proveedor deberá dar las facilidades necesarias para permitir al comprador el
+         ejercicio de las siguientes funciones de control, sin necesidad de previo aviso u otra formalidad:
+
+         •    Inspección de los materiales y de los trabajos
+
+         •    Verificación del cumplimiento de las normas de diseño que correspondan
+
+         •    Verificación del grado de avance de todas las fases del proceso de acopio, fabricación y provisión,
+              incluyendo el estado de las órdenes de compra de terceros
+
+         •    Verificación de cualquier otra actividad relacionada con el objeto de la presente especificación, que
+              pueda afectar la calidad o los plazos del suministro, en cualquier momento durante el período de
+              cumplimiento de la Orden de Compra
+
+         El Proveedor deberá disponer de los equipos de medición y calibración, así como las herramientas
+         necesarias para las operaciones de inspección y ensayos.
+
+         A menos que se indique lo contrario, para las operaciones de inspección, control y prueba que YPF
+         determine como puntos de presencia o detención, el Proveedor deberá comunicar su realización con 5
+         (cinco) días de anticipación como mínimo.
+
+         Todos los ensayos serán certificados por el Proveedor, como así también las calidades de los
+         materiales empleados.
+
+         Las inspecciones serán observadas por YPF o por una autoridad certificada aprobada por la misma. Se
+         incluyen todos los ensayos no destructivos, ensamblajes, pruebas mecánicas y de funcionamiento y la
+         preparación del equipo para el transporte. Dentro de los 10 días siguientes a la recepción de la orden
+         de compra y antes del inicio de los trabajos de fabricación, el Proveedor deberá presentar para
+
+
+     RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+             MARÍA               CARLOS AGUSTIN
+                                                                                                      07    07   09
+
+          Validación               Aprobación              Validación              Aprobación         D      M   A
+                       E&P YPF                                                                             Fecha
+                       SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                     Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                     Ámbito de aplicación: E&P YPF
+                                                     Propietario: INGENIERÍA Y OBRAS
+                                                     Código: AB-IYO-ED-09-186-01              Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                        Página 16 de 35
+
+         aprobación de YPF un programa de pruebas completo de todo el equipamiento a ser probado. Este
+         programa deberá detallar las mediciones y cálculos que serán realizados.
+
+         Cualquier rechazo realizado por el inspector sobre la base de resultados de inspecciones o pruebas
+         tendrá carácter de final. Sin embargo, esta inspección en ninguna manera libera al Proveedor de las
+         garantías de calidad de los materiales, mano de obra y funcionamiento del equipo.
+
+         No se pintarán las superficies del recipiente y partes del equipo hasta que se haya completado la
+         inspección y realizado las pruebas hidráulicas.
+
+         YPF podrá ser testigo del ensamblaje final de la unidad.
+
+         Todos los cálculos finales e información de las pruebas realizadas deberán ser incorporados en un
+         reporte de pruebas certificadas que será presentado a YPF.
+
+
+5.2.     Prueba a presión
+
+
+5.2.1. Las partes a presión del recipiente se someterán a una prueba de presión de acuerdo con lo
+       especificado en la Especificación ED(EP)-C-01.00 y en la Especificación ED(EP)-B.02.00
+       (Aseguramiento y control de calidad en equipos a presión).
+
+         En base a estas premisas el Proveedor presentará para aprobación la rutina de prueba hidráulica.
+
+
+5.3.     Pruebas de Funcionamiento
+
+
+5.3.1. Todas las válvulas de control e instrumentos en general, dispositivos del panel de control, etc., serán
+       sometidos a un ensayo de funcionamiento simulado, en taller.
+
+         Una vez instalado en el sitio, los equipos serán sometidos a una prueba de funcionamiento global,
+         circunstancia que obligará al Proveedor, a dar asistencia técnica total hasta la puesta a punto de los
+         equipos objeto de la especificación.
+
+
+6.       PLACA DE CARACTERISTICAS
+
+         Placa de Características estará de acuerdo con el Plano Estándar PE(EP)-F-0100.01.
+
+
+7.       REPUESTOS Y HERRAMIENTAS ESPECIALES
+
+
+7.1.     Repuestos para Puesta en Marcha
+
+         El Proveedor deberá incluir como parte de su propuesta, una lista detallada y valorizada de los
+         repuestos de puesta en marcha de la unidad que serán suministrados como parte del paquete de
+         compra original.
+
+
+7.2.     Repuestos para el 1° Año de Operación
+
+         El Proveedor deberá incluir como parte de su propuesta, una lista detallada y valorizada de los
+
+     RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+             MARÍA               CARLOS AGUSTIN
+                                                                                                  07    07   09
+
+          Validación               Aprobación             Validación            Aprobación        D      M   A
+                       E&P YPF                                                                         Fecha
+                       SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                    Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                    Ámbito de aplicación: E&P YPF
+                                                    Propietario: INGENIERÍA Y OBRAS
+                                                    Código: AB-IYO-ED-09-186-01               Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                        Página 17 de 35
+
+         repuestos requeridos para el primer año de operación continua de la unidad. Estos repuestos deberán
+         ser suministrados como parte del paquete de compra original.
+
+
+7.3.     Repuestos para 2 Años de Operación
+
+         El Proveedor deberá incluir como parte de su propuesta, una lista detallada y valorizada de los
+         repuestos requeridos para 2 (dos) años de operación continua de la unidad. Estos repuestos deberán
+         valorizarse para la compra de los mismos por separado por parte de YPF.
+
+
+7.4.     Herramientas Especiales
+
+         El Proveedor deberá incluir un set completo de las herramientas especiales requeridas para efectuar el
+         desarmado y armado de todos los ítems de equipamiento suministrados como parte de la unidad. Cada
+         herramienta deberá ser claramente etiquetada e identificada en la Lista de Documentos Requeridos.
+
+         Las listas de repuestos y herramientas especiales a ser suministrados deben ser indicadas en la
+         propuesta y cotizadas por separado del equipo.
+
+
+8.       TRANSPORTE, RECEPCION Y APROBACION DEFINITIVA
+
+
+8.1.     Embalaje
+
+         El Proveedor será responsable de la preparación, el embalaje adecuado de la Unidad para su
+         transporte y de su entrega sobre camión en el lugar acordado, instalación o almacenes de YPF.
+
+         Será de aplicación la Especificación de YPF ED(EP)-B-01.00.
+
+         Los equipos objeto del suministro deberán estar adecuadamente preparados para su transporte, carga
+         y descarga, y debidamente protegidos con los soportes y refuerzos adecuados. Todas las partes
+         maquinadas deberán ser lubricadas y las aberturas protegidas con discos de madera o elementos
+         similares.
+
+         Las piezas sueltas tales como instrumentos, panel de control, repuestos, etc., deberán ser embalados e
+         identificados para evitar su daño y/o extravío.
+
+         Cada embalaje deberá marcarse con la siguiente información:
+
+         •   Nombre del comprador.
+
+         •   Dirección del comprador.
+
+         •   Número de la Orden de Compra.
+
+         •   Lista interna del contenido.
+
+         Todas las conexiones bridadas serán cegadas con tapas de plástico o madera.
+
+         Todas las conexiones roscadas llevarán tapones.
+
+
+9.       DOCUMENTACION A PRESENTAR POR EL PROVEEDOR
+
+         El Proveedor deberá proporcionar toda la información indicada en la “Lista de Documentos Técnicos
+
+     RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+             MARÍA               CARLOS AGUSTIN
+                                                                                                  07    07   09
+
+          Validación               Aprobación              Validación           Aprobación        D      M   A
+                       E&P YPF                                                                         Fecha
+                       SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                   Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                   Ámbito de aplicación: E&P YPF
+                                                   Propietario: INGENIERÍA Y OBRAS
+                                                   Código: AB-IYO-ED-09-186-01                Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                      Página 18 de 35
+
+       Requeridos” con el número de copias y en el número de días desde la recepción de la orden de compra
+       indicados en la mencionada lista. El Proveedor deberá completar las Hojas de Datos de la unidad.
+
+       Los planos y documentos deberán ser considerados parte de la orden de compra. La provisión NO se
+       considerará cumplida hasta que todos los ítems hayan sido recibidos.
+
+       Se suministrará la documentación abajo listada, en los tipos y cantidades abajo indicados. Los
+       documentos deberán ser identificados con el número de esta especificación de compra, el número de
+       ítem y el número de orden de compra.
+
+       Los archivos electrónicos de cada documento deberán ser entregados con la copia papel de cada
+       emisión de documentos.
+
+       Los documentos del Dossier deberán estar estampados con un sello                     que   diga    “PARA
+       CONSTRUCCIÓN” o “AS BUILT” y firmados por un representante del Proveedor.
+
+       La aprobación de los documentos del Proveedor por parte de YPF o representante delegado, no exime
+       al Proveedor de su responsabilidad en el diseño mecánico, la fabricación y las pruebas de equipos.
+
+
+9.1.   Información en fase de Oferta
+
+       La oferta incluirá como mínimo la siguiente información:
+
+       •   Diagrama de Flujo (PFD) de la Unidad
+
+       •   PIDs incluyendo detalles de control
+
+       •   Recomendación de dosaje de químicos (tipo y cantidad), en caso de ser necesario
+
+       •   Lista completa de todos los equipos e Instrumentos, incluyendo descripción de los mismos, función
+           tamaño, capacidad y servicios auxiliares requeridos
+
+       •   Hoja de Datos o Especificación Técnica de los Equipos e Instrumentos Principales
+
+       •   Planos Generales de elevación y disposición de los equipos, detalles de los internos y detalles de
+           las partes mecánicas que requieren ajuste durante la operación o a lo largo de la vida de las
+           instalaciones
+
+       •   Materiales de construcción, especificaciones de materiales y grado para equipos, tuberías, internos
+           y estructuras
+
+       •   Listas de Repuestos y Herramientas Especiales
+
+
+9.2.   Manuales de operación y Mantenimiento
+
+       Los Manuales de Operación y Mantenimiento se prepararán específicamente para la unidad y los
+       equipos suministrados y contendrán como mínimo:
+
+       •   Descripción completa y detalles para la instalación, pre-comisionado, comisionado, puesta en
+           marcha y operación normal, parada y arranque de la Unidad, incluyendo procedimientos
+           particulares y específicos para los equipos instalados (control de químicos, reciclo, ajuste de
+           vertederos etc.)
+
+       •   Puntos de tarado y rango de operación de todos los instrumentos y controladores
+
+       •   Procedimientos de toma de muestra, frecuencia de análisis, métodos analíticos complementarios
+
+  RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+          MARÍA               CARLOS AGUSTIN
+                                                                                                  07     07   09
+
+       Validación               Aprobación              Validación             Aprobación         D      M   A
+                    E&P YPF                                                                            Fecha
+                     SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                 Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                 Ámbito de aplicación: E&P YPF
+                                                 Propietario: INGENIERÍA Y OBRAS
+                                                 Código: AB-IYO-ED-09-186-01               Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                      Página 19 de 35
+
+           para seguimiento de la operación
+
+
+9.3.   Envío del equipo a las Instalaciones
+
+       Con el envío del equipo a planta se ha de incluir un juego de la documentación técnica necesaria para
+       el montaje del mismo (planos generales y de detalle, planos de montaje, manual de operación, PIDs,
+       listado de materiales, etc.).
+
+
+9.4.   Lista de documentación requerida
+
+
+
+                         LISTA DE DOCUMENTOS TECNICOS REQUERIDOS
+              DOCUMENTOS                                           NUMERO DE COPIAS
+                                                  CON LA           PARA COMENTARIO   FINAL Y
+              DESCRIPCIÓN
+                                                PROPUESTA                CANT.     CERTIFICADO
+LISTADO DE DOCUMENTOS                                  3                     3                      3
+LISTADO DE EQUIPOS                                     3                     3                      3
+LISTADO DE INSTRUMENTOS                                3                     3                      3
+HOJAS DE DATOS DE EQUIPOS                              3                     3                      3
+HOJAS DE INSTRUMENTOS                                  3                     3                      3
+DIAGRAMAS DE FLUJO                                     3                     3                      3
+DIAGRAMAS PIDs                                         3                     3                      3
+MATRIZ CAUSA EFECTO                                    3                     3                      3
+PLANOS DE DIMENSIONES GENERALES                        3                     3                      3
+CARGAS Y DATOS PARA DISEÑO DE
+FUNDACIONES
+                                                                             3                      3
+
+PLANOS DE DETALLES                                                           3                      3
+GRÁFICOS DE ALIVIO DE STRESS (PWHT)                                          3                      3
+DIAGRAMA DE CONEXIONADO ELÉCTRICO                                            3                      3
+DIAGRAMA DE CONEXIONADO DE
+INSTRUMENTOS
+                                                                             3                      3
+
+DIAGRAMA DE LAZOS DE CONTROL                                                 3                      3
+
+PLANOS DE CANALIZACIONES ELÉCTRICAS                                          3                      3
+
+CURVAS CARACTERÍSTICAS (SI APLICA)Y
+ESPECIFICACIONES PARTICULARES DE LOS                                         3                      3
+COMPONENTES
+MEMORIAS DE CÁLCULO                                                          3                      3
+LISTA DE REPUESTOS PARA PUESTA EN
+MARCHA INCLUIDO PRECOMISIONADO
+                                                       3                     3
+
+
+
+  RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+          MARÍA               CARLOS AGUSTIN
+                                                                                               07       07   09
+
+       Validación               Aprobación            Validación             Aprobación        D      M   A
+                    E&P YPF                                                                         Fecha
+                    SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                     Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                     Ámbito de aplicación: E&P YPF
+                                                     Propietario: INGENIERÍA Y OBRAS
+                                                     Código: AB-IYO-ED-09-186-01                   Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                           Página 20 de 35
+
+                         LISTA DE DOCUMENTOS TECNICOS REQUERIDOS
+              DOCUMENTOS                                               NUMERO DE COPIAS
+                                                     CON LA            PARA COMENTARIO   FINAL Y
+               DESCRIPCIÓN
+                                                   PROPUESTA                 CANT.     CERTIFICADO
+LISTA DE REPUESTOS PARA DOS AÑOS                           3                          3
+LISTA DE REPUESTOS ESPECIALES                              3                          3
+PLAN DE FABRICACIÓN Y CRONOGRAMA                           3                          3
+PLAN DE INSPECCIÓN Y ENSAYOS                                                          3
+LISTA DE SUBPROVEEDORES                                    3
+PROCEDIMIENTO DE ENSAYOS NO
+DESTRUCTIVOS
+                                                                                      3                    3
+
+ESPECIFICACIONES DE PROCEDIMIENTOS DE
+SOLDADURA, CALIFICACIÓN DE                                                            3
+PROCEDIMIENTOS Y DE SOLDADORES
+
+DOSSIER DE CALIDAD CONTENIENDO
+CERTIFICADOS DE ENSAYOS,                                                                                   3
+ESPECIFICACIONES Y PROCEDIMIENTOS
+
+MANUAL DE OPERACIÓN Y MANTENIMIENTO                                                   3                    3
+
+LISTA DE CONSUMOS GARANTIZADOS                             3                          3                    3
+      NOTAS:
+
+      1. Eventualmente alguna de las informaciones podrán agruparse.
+
+      2. Los documentos se entregarán en copia papel.
+
+      3. Se entregarán archivos electrónicos editables de todos los documentos.
+
+      4. Adicionalmente, y de acuerdo con el cronograma del Proyecto, ha de existir un cronograma de
+      envío de documentación, junto con el acopio, fabricación y montaje del equipo. Este cronograma ha de
+      ser compatible con el programa general del Proyecto
+
+
+10.   DOCUMENTOS DE REFERENCIA
+
+
+10.1. Especificaciones de Diseño de YPF
+
+      Serán también de aplicación para las distintas partes que constituyen el horno las siguientes
+      especificaciones :
+
+      ED(EP)-A-02.00 ................. Diagramas mecánicos de proceso y servicio dentro y fuera de unidades
+
+      ED(EP)-A-03.00 ................. Disposición general para unidades y equipos
+
+      ED(EP)-A-07.00 ................. Procedimiento clasificación áreas peligrosas
+
+      ED(EP)-B-01.00 ................. Preparación para el transporte de equipos y maquinaria
+
+
+
+ RUIZ BRICEÑO, CORINA         COLO DEL ZOTTO,
+         MARÍA                CARLOS AGUSTIN
+                                                                                                      07       07   09
+
+      Validación                Aprobación                Validación                  Aprobación      D      M   A
+                    E&P YPF                                                                                Fecha
+                     SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                       Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                       Ámbito de aplicación: E&P YPF
+                                                       Propietario: INGENIERÍA Y OBRAS
+                                                       Código: AB-IYO-ED-09-186-01                    Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                               Página 21 de 35
+
+     ED(EP)-B-02.00 ................. Aseguramiento y control de calidad en equipos a presión
+
+     ED(EP)-B-04.00 ................. Requerimientos y limitaciones de materiales para servicios especiales
+
+     ED(EP)-B-05.00 ................. Requisitos generales de soldadura
+
+     ED(EP)-C-01.00 ................ Especificación de diseño de recipientes a presión y sus adendas
+
+     ED(EP)-J-01.00 .................. Ingeniería de Instrumentación
+
+     ED(EP)-L-05.00 ................. Requisitos de calidad e inspección de cañerías y accesorios
+
+     ED(EP)-L-01.00.................. Diseño de cañerías en unidades de proceso y servicios e instalaciones
+     auxiliares
+
+     ED(EP)-M-01.00 ................ Estructuras de acero
+
+     ED(EP)-M-02.00 ................ Cargas de diseño en estructuras y sus adendas
+
+     ED(EP)-J -01.00 ................. Ingeniería de instrumentación
+
+     ED(EP)-P-01.00 ................. Instalaciones eléctricas
+
+
+10.2. Normas y Códigos
+
+     El diseño, fabricación, montaje y funcionamiento de los filtros de granate-antracita, cáscara de nuez,
+     arena y cartucho deberá cumplir con lo establecido en la última edición de las siguientes normas y
+     códigos:
+
+     ASME Section VIII.............. Division 1 - Unfired Pressure Vessels.
+
+     ASME Section II ................. Materials Specification
+
+     ASME Section IX................ Welding and Brazing
+
+     ASME Section V................. Non Destructive Testing
+
+     ASME B16.34..................... Valves, flanged, threaded and welding ends
+
+     API 520 .............................. Design and Construction of Pressure – Relieving Systems
+
+     API 521 .............................. Guide for Pressure – Relieving and Depressurizing Systems
+
+     API 527 .............................. Commercial Seat Tightness of Safety Relief Valves with Metal to Metal
+     Seats
+
+     API RP 551 ........................ Process Measurement Instrumentation
+
+     API RP 552 ........................ Transmission Systems
+
+     API RP 554 ........................ Process Control Systems
+
+     ASTM D-3921 .................... Standard Test Method for Oil & Grease and Petroleum Hydrocarbons in
+     Water
+
+     ISA S5.1............................. Instrument Symbols and Identification
+
+     ISA S5.4............................. Instrument Loop Diagrams
+
+
+
+ RUIZ BRICEÑO, CORINA         COLO DEL ZOTTO,
+         MARÍA                CARLOS AGUSTIN
+                                                                                                         07    07   09
+
+      Validación                 Aprobación                  Validación              Aprobación          D      M   A
+                    E&P YPF                                                                                   Fecha
+                     SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                         Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                         Ámbito de aplicación: E&P YPF
+                                                         Propietario: INGENIERÍA Y OBRAS
+                                                         Código: AB-IYO-ED-09-186-01                      Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                                 Página 22 de 35
+
+      ISA RP12.1 ........................ Electrical Instruments in Hazardous Atmospheres
+
+      ISA S12.12......................... Electrical Equipment for use in Class I, Division 2 Hazardous classified
+      locations
+
+      ISA S20.............................. Specifications forms of Pressure Measurements and Control Instruments,
+                                            Primary elements and control Valves
+
+      ISA S75.05......................... Control Valve Terminology
+
+      NEMA ICS.3....................... Industrial Systems
+
+      NEMA ICS.6....................... Enclosures for Industrial Controls and Systems
+
+      IEC ..................................... Commission Electrotechnique Internationale
+
+
+10.3. Planos Estándar de YPF
+
+      PE(EP)-F-0100.01.............. Placa de características
+
+
+10.4. Hojas de Datos
+
+      HD(EP)-C-0108.01 ............. Filtros Antracita-Granate / Arena.
+
+      HD(EP)-C-0108.02 ............. Filtros Cáscara de Nuez.
+
+      HD(EP)-C-0108.03 ............. Filtros Cartucho.
+
+
+10.5. Anexo Filtración (SOLO A MODO DE REFERENCIA – NO MANDATORIO)
+
+
+10.5.1. Este Anexo cubre todos aquellos equipos de filtración que son típicamente utilizados en la etapa de
+       Tratamiento Terciario del agua de formación. Este tratamiento es necesario para dar cumplimiento con
+       los requerimientos físico-químicos establecidos para el agua de formación, ya sea para su reinyección
+       o su disposición final al medio ambiente. Para el caso de la reinyección, estos requerimientos están
+       determinados por las características geológicas del pozo inyector.
+
+      Se considera que la carga de contaminantes a estos equipos, generalmente referida como total de
+      sólidos en suspensión (TSS) así como total de hidrocarburos (THC) es relativamente limitada, puesto
+      que dicha agua, separada del petróleo por el proceso que sea (Separador de agua libre, Deshidratador
+      Electroestático, Tanque Cortador, etc.) ha pasado por un Tratamiento Primario de separación
+      gravitacional (Pileta API, Separador de Placas Corrugadas, Tanque Skimmer, etc.) o Hidrociclón/es y
+      por una etapa de Tratamiento Secundario por Flotación (Flotación Inducida por Aire/Gas o Flotación por
+      Aire/Gas Disuelto).
+
+      Están dentro de esta categoría los siguientes tipos de Filtros:
+
+      Filtros con Medio Filtrante Granular:
+      • Arena
+      • Multimedia (Granate-Antracita)
+      • Cáscara de Nuez
+      • Filtros de Cartucho
+
+
+ RUIZ BRICEÑO, CORINA          COLO DEL ZOTTO,
+         MARÍA                 CARLOS AGUSTIN
+                                                                                                             07    07   09
+
+       Validación                 Aprobación                   Validación                    Aprobación      D      M   A
+                     E&P YPF                                                                                      Fecha
+                      SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                    Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                    Ámbito de aplicación: E&P YPF
+                                                    Propietario: INGENIERÍA Y OBRAS
+                                                    Código: AB-IYO-ED-09-186-01                  Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                         Página 23 de 35
+
+
+
+      El filtro de arena no es de utilización normal en el tratamiento de agua de formación, se emplea en el
+      tratamiento de agua de inyección, proveniente de pozo, de río o de mar, esto es aguas que no
+      contienen hidrocarburos en suspensión.
+
+      Los filtros de granate-antracita y cáscara de nuez son de utilización extendida para agua de formación.
+
+      Los filtros de cartucho se utilizan como post-tratamiento o pulimento de la salida de uno de los filtros
+      arriba mencionados, esencialmente cuando se requiere eliminación de partículas de tamaño menor o
+      igual a los 5 µm.
+
+      Otro tipo de filtración es aquella que se realiza mediante los denominados filtros de precapa, no
+      incluidos en esta especificación por su utilización infrecuente. En este caso la filtración no se efectúa a
+      través de elementos fijos, como pueden ser los cartuchos, sino a través de un material filtrante que se
+      introduce en el filtro al principio de cada ciclo de funcionamiento, para formar sobre un soporte fijo
+      (tamiz o tela) una capa filtrante microporosa (“precapa”) de celulosa, tierra diatomea u otro material. El
+      material de la precapa se debe alimentar continuamente (“Body feed”) durante el Ciclo de Filtración a fin
+      de mantener la porosidad de la torta filtrante. Cuando el filtro alcanza la máxima presión diferencial
+      admisible se produce el retrolavado y descarta el medio filtrante.
+
+      Sobre estos equipos se pueden hacer las siguientes observaciones:
+
+      •    Son mucho más complicados de operar que los otros tipos de filtros utilizados en los yacimientos.
+      •    La inversión inicial es mucho mayor que para cualquier filtro con Medio Filtrante Granular.
+      •    Tienen la capacidad de remoción de partículas muy finas de hasta 0,5 µm y petróleo.
+      •    La carga de contaminantes esta limitada a 30-50 ppm, de otra manera los Ciclos de filtración se
+           acortarían notoriamente.
+      •    La ayuda filtrante para formar la precapa y la dosificación continua (“body feed”) debe suministrarse
+           en forma permanente, constituyendo un importante problema logístico y de disposición final.
+      •    Las velocidades superficiales de filtración pueden variar entre 2,5-5 m3/hr/m2.
+
+10.5.2. Filtros con Medio Filtrante Granular
+
+      Se utiliza filtración sobre medio filtrante granular cuando la cantidad de partículas que deben retenerse
+      es elevada y la dimensión de las mismas es relativamente pequeña.
+
+      Efectivamente para que una filtración de este tipo sea eficaz, es preciso que las partículas puedan
+      penetrar profundamente dentro del lecho y no bloquearlo en su superficie. Por otra parte, es preciso
+      que el o los materiales que componen el lecho, se elijan cuidadosamente tanto en granulometría como
+      en altura de capa, de modo que el filtrado responda a la calidad deseada.
+
+      El filtro se atasca a medida que su lecho se carga de materias retenidas. Cuando el atascamiento
+      alcanza un valor excesivo o la calidad del filtrado no es aceptable debe procederse a la limpieza del
+      lecho filtrante, esta operación suele denominar ciclo lavado, retrolavado o contralavado. Es
+      indispensable que con este lavado, se devuelvan al lecho sus cualidades iniciales, sin las cuales, el
+      filtro iría perdiendo eficacia y el material filtrante debería retirarse para su limpieza completa o para ser
+      reemplazado.
+
+      El buen funcionamiento del filtro depende de la perfecta distribución a través del medio filtrante del agua
+      a filtrar, del agua de lavado y eventualmente, del aire, si se empleara este fluido en el lavado. Tiene, por
+      lo tanto, una importancia fundamental la forma de recolección del agua filtrada y de distribución del
+      agua de lavado, así como el sistema que se adopte como soporte del lecho filtrante.
+
+      Según las características de las partículas que deben retenerse, puede efectuarse la filtración sobre
+
+  RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+          MARÍA               CARLOS AGUSTIN
+                                                                                                     07    07   09
+
+       Validación               Aprobación               Validación               Aprobación          D     M   A
+                    E&P YPF                                                                               Fecha
+                     SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                    Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                    Ámbito de aplicación: E&P YPF
+                                                    Propietario: INGENIERÍA Y OBRAS
+                                                    Código: AB-IYO-ED-09-186-01                   Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                          Página 24 de 35
+
+     una capa de mayor o menor altura, de material homogéneo, sobre dos o varias capas de diferentes
+     granulometrías de materiales homogéneos a cada nivel o, por ultimo sobre una o varias capas de de
+     materiales de granulometría totalmente heterogénea y escalonada.
+
+     La eficacia de un filtro depende fundamentalmente del sistema de regulación de caudal; la regulación
+     debe evitar fluctuaciones o perturbaciones rápidas e importantes de caudal; tanto en los periodos de
+     cambio de caudal general en el ciclo de filtración como en el ciclo de retrolavado. De no cumplirse estos
+     requisitos, en el ciclo de filtración las materias retenidas por el lecho atravesarían el filtro, con lo que al
+     agua tratada saldría fuera de especificación y en el ciclo de retrolavado podría haber una pérdida del
+     manto filtrante.
+
+     Para asegurar una buena filtración, un filtro debe reunir numerosas condiciones. No existe un filtro
+     universal sino filtros adaptados especialmente a cada uno de los problemas que se plantean.
+
+      Sistema de Soporte del Medio Filtrante
+
+     Este sistema también se denomina sistema de sub-drenaje (“Underdrain System”). Este sistema es
+     fundamental para la operación del filtro y sirve para colectar el agua filtrada así como para distribuir
+     uniformemente el aire y el agua en el ciclo de retrolavado o limpieza. En esta etapa se remueven y
+     eliminan los contaminantes retornando el medio filtrante a la condición de “como nuevo”. Se distinguen
+     esencialmente dos tipos de sistemas de sub-drenaje con algunas variantes.
+
+     Falso Fondo
+
+     Se trata de un fondo normalmente plano y en el cual se insertan “toberas” de sub-drenaje, dichas
+     toberas normalmente se ensanchan hacia el interior presentando un ángulo agudo hacia el medio
+     filtrante, razón por la cual son de difícil obstrucción. Las toberas poseen cuatro funciones básicas:
+
+     •    Eliminación de Distribuidores de Alimentación: Durante el ciclo de filtración la perdida de carga
+          generada por dichas Toberas balancea la recolección del filtrado eliminando la necesidad de un
+          distribuidor de entrada del tipo caño central con laterales. Para obtener una distribución adecuada
+          del agua en el filtro, la perdida de carga en dichas toberas debe ser “controlante” frente a la perdida
+          de carga en el lecho.
+     •    Eliminación del Manto Soporte de Grava: Si las ranuras de las toberas son lo suficientemente
+          pequeñas no se requiere el uso de un manto soporte de grava o granate. Esto reduce los
+          requerimientos de altura cilíndrica del filtro, así como el manipuleo de grandes volúmenes del
+          manto soporte.
+     •    Distribución uniforme del Aire de Limpieza (“Air Scour”): Si las toberas poseen “tubos de
+          distribución de aire” este se distribuye uniformemente a través de las ranuras u orificios de dichos
+          tubos.
+     •    Distribución uniforme del agua de retrolavado: La pérdida de carga creada por las toberas origina
+          una distribución de caudal uniforme durante el ciclo de retrolavado.
+
+     El oferente deberá proveer la información de pérdida de carga versus caudal de las toberas que
+     suministre.
+
+     Colectores
+
+     Los colectores del sistema de sub-drenaje pueden ser del tipo “caño central con laterales” o “cubo” con
+     ramales radiales, este último se usa en recipientes de diámetros relativamente pequeños.
+     Cuando se utiliza este tipo de sub-drenaje el casquete inferior del filtro debe rellenarse con grava,
+     cemento u otro tipo de material.
+
+
+ RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+         MARÍA               CARLOS AGUSTIN
+                                                                                                      07    07   09
+
+      Validación               Aprobación                Validación               Aprobación          D      M   A
+                   E&P YPF                                                                                 Fecha
+                    SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                    Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                    Ámbito de aplicación: E&P YPF
+                                                    Propietario: INGENIERÍA Y OBRAS
+                                                    Código: AB-IYO-ED-09-186-01              Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                         Página 25 de 35
+
+     Los colectores pueden ser de dos tipos:
+
+     •    Tubos con perforaciones: Estas suelen ser de un diámetro superior al medio filtrante, en cuyo caso
+          se requiere la utilización de un Manto Soporte de Grava y Granate de distinta granulometría. El
+          patrón de perforaciones se establece de manera de garantizar una buena distribución durante los
+          ciclos de filtración y retrolavado.
+     •    Alambre en forma de “cuña” (“wedge wire”): Si las ranuras son lo suficientemente pequeñas, no es
+          necesaria la utilización de un Manto Soporte. La utilización de un colector con alambre en forma de
+          cuña minimiza las posibilidades de taponamiento y debido a su relativamente elevada área de
+          pasaje posee una pérdida de carga muy baja. Para optimizar la distribución a través de los diversos
+          ramales estos normalmente llevan un tubo interno con un patrón de perforaciones que proporciona
+          una distribución uniforme de caudal en toda la superficie del filtro
+
+     El oferente deberá suministrar la información del cálculo del patrón de orificios para las condiciones de
+     los distintos ciclos.
+
+     Medio Poroso
+
+     El material filtrante se caracteriza por los siguientes factores:
+
+     Granulometría: Es la curva representativa de los porcentajes en peso de los granos del medio filtrante
+     que pasan a través de las mallas de una sucesión de Tamices Normalizados (ASTM E11 “Standard
+     Specification for Wire Cloth and Sieves for Testing Purposes”)
+     Tamaño Efectivo: Corresponde al 10% de la Curva Granulométrica (retención del 90%)
+
+     Coeficiente de Uniformidad: Es la relación entre los tamaños correspondientes a los porcentajes 60 y 10
+     de la Curva Granulométrica. En la medida que dicho valor se acerque a la unidad más uniforme resulta
+     ser el grano.
+
+     Friabilidad: Es una medida indirecta de la dureza y se determina mediante un ensayo que mide la
+     cantidad relativa de material que se disgrega por molienda en un Molino de Bolas. El suministrador del
+     equipo debiera definir cual es el tipo de ensayo a realizar para definir este parámetro.
+
+     Perdida por ataque acido: Es evidente que no puede tolerarse una pérdida importante por ataque acido,
+     ya que el agua podría contener gas carbónico o algún tipo de acidez mineral que la hace agresiva.
+
+     Densidad de los granos: La densidad así como el tamaño efectivo de las partículas de cada uno de los
+     medios filtrantes será tal que las mismas posean valores de velocidades de sedimentación
+     substancialmente iguales. Esto asegurara expansiones equivalentes en ambos medios filtrantes en el
+     ciclo de retrolavado con agua, evitando el “inter-mezclado” en la posterior etapa de sedimentación. Para
+     iguales velocidades de sedimentación el tamaño efectivo de partícula requerido para medios de
+     diferente densidad se puede calcular por medio de la siguiente ecuación:
+
+                                                     Tes = Di – Da 2/3
+                                                     Tei    Ds– Da
+
+     Donde:
+
+     Te: Tamaño Efectivo de partícula
+     D: Densidad
+     i: Medio Inferior
+     s: Medio Superior
+     a: Agua
+
+
+
+ RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+         MARÍA               CARLOS AGUSTIN
+                                                                                                 07    07   09
+
+      Validación               Aprobación                Validación            Aprobación        D      M   A
+                   E&P YPF                                                                            Fecha
+                    SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                 Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                 Ámbito de aplicación: E&P YPF
+                                                 Propietario: INGENIERÍA Y OBRAS
+                                                 Código: AB-IYO-ED-09-186-01                Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                      Página 26 de 35
+
+      La expansión del medio filtrante en el ciclo de retrolavado será como máximo del 50%. Este valor esta
+      esencialmente limitado cuando existe un “manto soporte”.
+
+      El Proveedor del equipo entregara el correspondiente cálculo y verificación de los requerimientos de
+      tamaño efectivo y expansión.
+
+      Naturaleza del Medio Poroso
+
+      Arena
+
+      El filtro no es de utilización normal para aguas de formación, esto es aguas que contienen
+      hidrocarburos en suspensión, se puede utilizar en el tratamiento de Aguas de Inyección cuando estas
+      provienen de pozo, de río o de mar.
+
+      En general, la utilización de arena para aguas de formación está totalmente contraindicada puesto que
+      la misma tiende a “empastarse” en presencia de petróleo, producto este que es muy difícil de remover
+      durante el ciclo de retrolavado. Los granos de arena tienden a cubrirse con petróleo lo que requiere un
+      ciclo de lavado periódico con un solvente o un surfactante; ambos impactan negativamente sobre la
+      carga superficial de la arena y su performance de remoción.
+
+2.3.2.2 Granate
+
+      La arena ha sido en general substituida por granate. El granate es un silicato con la siguiente formula
+      general: X3Y2 (SiO4)3 donde el sitio X se halla ocupado por cationes divalentes, como ser: Ca+2, Mg+2
+      y Fe+2 y el sitio Y por cationes trivalentes, tales como Al+3, Cr+3 y Fe+3. Según sean los cationes e
+      impurezas que lo constituyen esta piedra puede tener color rojo, marrón, anaranjado, amarillo, verde,
+      azul, violeta, incoloro y negro.
+
+      Antracita
+
+      Según la ASTM D 388 “Standard Classification of Coals by Rank”, que clasifica el carbón de acuerdo a
+      su grado de metamorfismo, el término Antracita se utiliza para la clase de carbón con el máximo
+      contenido de carbono. Esta caracterizada como Antracita el material que posee un 92 – 98 % de
+      carbono fijo y un 2 – 8 % de materia volátil.
+
+2.3.2.4. Cáscara de Nuez
+
+      Otro medio filtrante utilizado es la cáscara de nuez molida. Normalmente se utilizan por separado o
+      mezclado cáscaras provenientes de alguno de los siguientes tipos de nuez:
+
+      •   Pecana (“Pecan”): Se trata de una especie de Nogal nativo de Sudamérica y del Centro de
+          Norteamérica. En Argentina se la conoce también como “Nuez del Tigre”.y tiene forma de ovoide
+          con una cáscara bastante lisa.
+      •   Nuez Negra (“Black Walnut”): Es una especie nativa del este de Norteamérica, ampliamente
+          cultivada en otras partes y caracterizada por una pepita relativamente pequeña y una cáscara muy
+          resistente.
+      •    Nuez “regia”: Corresponde a la llamada Nuez Persa, nativa de los Balcanes y del sudoeste y
+          centro de Asia. También conocida Nuez Inglesa por el hecho de que los marinos mercantes
+          Ingleses alguna vez controlaron su comercio mundial.
+
+      La cáscara de nuez es el medio más efectivo para la remoción de hidrocarburos. La razón principal es
+      que la cáscara es altamente “hidrofilica” y “oleofóbica”; esto significa que aunque hace un muy buen
+      trabajo eliminando los hidrocarburos, estos no se aglutinan ni se adhieren al medio. Debido a estas
+      características una vez que el sistema ha sido mecánicamente retrolavado los hidrocarburos son
+
+ RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+         MARÍA               CARLOS AGUSTIN
+                                                                                                07    07   09
+
+      Validación               Aprobación             Validación              Aprobación        D      M   A
+                   E&P YPF                                                                           Fecha
+                    SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                   Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                   Ámbito de aplicación: E&P YPF
+                                                   Propietario: INGENIERÍA Y OBRAS
+                                                   Código: AB-IYO-ED-09-186-01               Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                        Página 27 de 35
+
+     fácilmente liberados y el lecho retorna a su condición original.
+
+     Lavado del Medio Filtrante
+
+     Generalidades:
+
+     El ciclo de lavado, contralavado o retrolavado es una operación extremadamente importante, la que si
+     se efectúa en forma inadecuada conduce al taponamiento permanente de algunas áreas del filtro,
+     reduciendo el pasaje de agua. Esto hace que la velocidad de filtración sea localmente mayor con lo
+     cual la perdida de carga se incrementa rápidamente y la filtración se hace menos efectiva.
+
+     El material filtrado es lavado por una corriente de agua que fluye desde el fondo hacia arriba
+     (contralavado o retrolavado) de manera de desplazar la impurezas conduciéndolas al canal de
+     descarga. Al mismo tiempo el material filtrante necesita ser agitado en la corriente de agua. Este
+     resultado puede obtenerse por alguno de los métodos que se discuten más abajo.
+
+     El retrolavado se efectúa utilizando una corriente de agua filtrada. No es el caso de los filtros de
+     cáscara de nuez, donde el sistema de lavado o “regeneración” es completamente distinto, puesto que
+     utiliza su propia bomba de fluidización y agua no filtrada para el lavado. Este sistema será descripto en
+     detalle cuando se trate el filtro de cáscara de nuez, se describen a continuación los posibles Sistemas
+     de retrolavado para filtros de arena y filtros multimedia.
+
+     Lavado solo con agua:
+
+     La corriente de agua a usar es agua filtrada y tiene que ser suficiente como para expandir el material
+     filtrante, esto es, incrementar su volumen aparente en al menos un 15%.
+
+     Puesto que la viscosidad del agua está influenciada por la temperatura es deseable que el sistema este
+     provisto con un control de caudal de agua de retrolavado a fin de mantener el grado de expansión
+     constante con el tiempo.
+
+     El lecho expandido está expuesto a corrientes conectivas; en ciertas zonas el material filtrante se
+     mueve hacia abajo y en zonas vecinas hacia arriba. Debido a este fenómeno porciones de las costras
+     adheridas en la superficie del material filtrante son arrastradas hacia abajo formando voluminosas bolas
+     de lodo (“mud balls”) que no salen del filtro.
+
+     La principal desventaja de este método es que produce una clasificación por tamaño de partícula
+     haciendo que el material filtrante más fino se concentre en la superficie; esto trae como consecuencia la
+     heterogeneidad de un material originariamente homogéneo.
+
+
+     Lavado simultaneo con aire y agua:
+
+     Un segundo método actualmente muy utilizado consiste en usar un caudal de retrolavado lo
+     suficientemente bajo como para no causar una expansión del lecho al tiempo que se inyecta aire a
+     presión para agitar el lecho. Así el lecho permanece estable y con este proceso de retrolavado la costra
+     superficial es completamente destruida por el aire, tal que no se forman bolas de lodo con este tipo.
+
+     Durante este periodo de limpieza con aire (“air scour”) cuanto mayor es el caudal de agua de
+     retrolavado mas rápido y efectivo es el lavado. El mínimo caudal para que el lavado sea efectivo y el
+     máximo caudal a no ser superado a fin de evitar la pérdida del material filtrante dependen del medio y
+     los parámetros del filtro.
+
+     Cuando las impurezas han sido removidas del material filtrante y recolectadas en la capa de agua entre
+     la superficie del lecho y el punto de descarga se debe proceder a un enjuague, en el cual la capa de
+
+ RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+         MARÍA               CARLOS AGUSTIN
+                                                                                                 07    07   09
+
+      Validación               Aprobación               Validación            Aprobación         D      M   A
+                   E&P YPF                                                                            Fecha
+                   SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                      Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                      Ámbito de aplicación: E&P YPF
+                                                      Propietario: INGENIERÍA Y OBRAS
+                                                      Código: AB-IYO-ED-09-186-01              Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                        Página 28 de 35
+
+     agua sucia debe ser reemplazada por agua limpia. Luego de cortar el lavado con aire, el enjuague se
+     lleva normalmente a cabo incrementando ligeramente el caudal de agua de retrolavado. En esta
+     segunda fase de limpieza no hay prácticamente expansión, lo cual es esencial para evitar la
+     clasificación hidráulica del medio que ha sido homogeneizado en la fase anterior de lavado/mezclado.
+
+     Lavado con aire y agua sucesivos:
+
+     Este método de lavado se utiliza cuando el material filtrante es de naturaleza tal que imposibilita utilizar
+     en forma simultánea aire y agua sin correr el riesgo de que el agua de lavado arrastre el medio filtrante
+     al drenaje. Esto se aplica a lechos filtrantes compuestos de materiales muy finos o de baja densidad.
+     Este tipo de lavado es usual para lechos filtrantes del tipo multimedia.
+
+     En la primera etapa del ciclo de retrolavado se utiliza solamente aire para despegar las impurezas
+     retenidas y adheridas al material filtrante. En la segunda etapa se envía agua de retrolavado como para
+     que se expanda el medio filtrante permitiendo que las impurezas despegadas durante la primera etapa
+     sean removidas y eliminadas del lecho. En el caso de que las impurezas sean pesadas o
+     particularmente difíciles de remover este ciclo puede ser repetido varias veces.
+
+     El insuflado de aire en el ciclo de retrolavado reduce los requerimientos de agua de retrolavado.
+
+     De ser necesario, para no inyectar aire, el que aportaría oxigeno al agua de formación, con potenciales
+     problemas de corrosión y bacteriológicos, se podría utilizar gas. Los riesgos que implican usar gas
+     deben ser cuidadosamente evaluados, puesto que, utilizando aire, como máximo se contaminaría con
+     oxigeno el inventario de agua del filtro.
+
+     Descripción de los diferentes tipos de Filtros
+
+     Filtros de Arena
+
+     El filtro de arena y eventualmente podría ser utilizado en la clarificación de agua de inyección,
+     proveniente de pozo, de río o de mar, esto es aguas que no contienen hidrocarburos en suspensión.
+
+     La filtración lenta se realiza normalmente en filtros abiertos y tiene por objeto la depuración de aguas
+     de superficie sin floculación/coagulación ni decantación previa. Las diastasas, enzimas segregadas por
+     algas y microorganismos que se fijan sobre la arena, coagulan las sustancias coloidales. Se utilizan
+     velocidades superficiales de filtración entre 0,3-1 m3/hr/m2.
+
+     En el proceso de filtración rápida se utilizan velocidades superficiales de filtración entre 4-50 m3/hr/m2
+     y no hay ninguna acción biológica. Dichas velocidades están asociadas a la carga de sólidos en
+     suspensión que llegan al Filtro y a los requerimientos de eliminación de partículas que están
+     relacionados con la selección de la granulometría (tamaño efectivo) de la arena.
+
+     Se pueden citar esencialmente los siguientes procesos de filtración rápida:
+
+     Filtración Directa: Corresponde al caso en el cual no se adicionan reactivos al agua a filtrar. Aquí es
+     donde se encuentra el campo más amplio de velocidades de filtración, según el problema que se
+     plantee. Dicha velocidad se extiende generalmente entre 4-20 m3/hr/m2, con valores extremos que
+     sobrepasan en algunos casos los 50 m3/hr/ m2.
+
+     Filtración con Coagulación sobre Filtro: Los materiales filtrantes granulosos no retienen las materias
+     coloidales, estas son aquellas que poseen un diámetro < 1µm y están gobernadas por el movimiento
+     Browniano. Para obtener agua perfectamente limpia es necesario proceder aun a una coagulación
+     antes de la filtración.
+
+     La coagulación es el proceso de desestabilización de las partículas coloidales, causada por la adición
+
+ RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+         MARÍA               CARLOS AGUSTIN
+                                                                                                   07    07   09
+
+      Validación               Aprobación                Validación             Aprobación          D     M   A
+                   E&P YPF                                                                              Fecha
+                   SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                  Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                  Ámbito de aplicación: E&P YPF
+                                                  Propietario: INGENIERÍA Y OBRAS
+                                                  Código: AB-IYO-ED-09-186-01                  Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                       Página 29 de 35
+
+     de un reactivo químico denominado coagulante, el cual, neutralizando las cargas electrostáticas hace
+     que las partículas tiendan a unirse entre sí. La floculación es la aglomeración posterior de las partículas
+     desestabilizadas en micro flóculos y después en flóculos más grandes.
+
+     Cuando el color y el contenido de materia en suspensión y materia orgánica no son muy elevados
+     puede añadirse una dosis pequeña de coagulante (como máximo habría que considerar una dosis de
+     15 ppm de Sulfato de Aluminio) con
+     adiciones eventuales de un producto neutralizante para corrección del pH y un polielectrolito como
+     coadyuvante de coagulación. Producidos los micro flóculos, la masa filtrante, en cuyo interior se
+     produce un movimiento laminar, juega frente al micro floculo ya formado, el papel de un excelente
+     floculador.
+
+     Las velocidades superficiales de filtración dependen de la carga del agua a filtrar; varían entre 4-10
+     m3/hr/m2 si se desea conservar ciclos de filtración suficientemente largos. Cuando el agua está poco
+     cargada la velocidad superficial de filtración puede estar entre 40-50 m3/hr/m2, en estos casos se
+     utilizan dosis muy pequeñas de coagulante.
+
+     Filtración con agua coagulada y decantada: Los flóculos que resultan de la coagulación total del agua
+     se eliminan en su mayor parte mediante un proceso de decantación; el agua que llega a los filtros solo
+     contiene trazas de flóculos cuya cohesión depende de los reactivos empleados. La filtración viene a ser,
+     entonces, un tratamiento de acabado y seguridad.
+
+     Las velocidades superficiales de filtración dependen de la calidad del filtrado y pueden variar entre 10-
+     20 m3/hr/ m2.
+
+     La perdida de carga máxima que se alcanza al final del ciclo de filtración es función de la finura del
+     lecho y la velocidad de filtración y puede alcanzar hasta 2 bar.
+
+     La densidad de la arena es de 2,6-2,7 gr/ cm3 y la altura del manto filtrante puede estar entre 0,6-1 m
+     según la aplicación.
+
+     La velocidad de retrolavado está asociada a la granulometría del lecho (tamaño efectivo) y debe ser
+     suficiente como para producir una expansión del lecho filtrante entre 15-25 %. Para el caso de
+     retrolavado con agua entre 15-20°C, el rango de vel ocidades son los siguientes:
+
+
+Tamaño efectivo (mm)                                     0,35           0,55            0,75            0,95
+Velocidad de retrolavado (m3/hr/ m2)                    25-35          40-50           55-70           70-90
+
+     Tal como se explicara más arriba el lavado con agua sola genera un manto filtrante heterogéneo
+     producido por la clasificación de las partículas de arena en la etapa de sedimentación luego del
+     retrolavado.
+
+     En el caso de lavado simultáneo con aire y agua son a aplicación los siguientes valores:
+
+
+     Filtros de Antracita-Granate:
+
+     Los filtros de este tipo se denominan filtros multimedia. La idea de los mismos es evitar los
+     inconvenientes de los filtros de arena con capa heterogénea, los que se atascan en superficie y operan
+     a velocidades de filtración limitadas.
+
+     Para aumentar la velocidad de filtración y la duración del ciclo de filtrado se podría reemplazar una
+     parte superior del medio filtrante fino (arena de densidad 2,6-2,7 gr/cm3) por una capa de antracita mas
+
+ RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+         MARÍA               CARLOS AGUSTIN
+                                                                                                  07    07     09
+
+      Validación               Aprobación              Validación               Aprobación         D     M   A
+                   E&P YPF                                                                             Fecha
+                   SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                     Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                     Ámbito de aplicación: E&P YPF
+                                                     Propietario: INGENIERÍA Y OBRAS
+                                                     Código: AB-IYO-ED-09-186-01                     Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                            Página 30 de 35
+
+     liviana (1,3-1,4 gr/cm3) y de mayor tamaño efectivo. Se tendría de esta manera un filtro antracita-arena.
+     Más aun se podría reemplazar una parte inferior de la arena por un material más pesado (Densidad 3,8-
+     4,2gr/cm3) y con menor tamaño efectivo como el granate y se tendría un filtro tricapa. Como
+     consecuencia de la diferencia en densidades, estos filtros multimedia poseen una porosidad
+     decreciente a mediada que se incrementa la profundidad.
+
+     La filtración multimedia es un concepto de diseño muy probado, el medio filtrante en las capas
+     superiores atrapa partículas grandes, y las partículas mas pequeñas son atrapadas de manera exitosa
+     en las capas inferiores del lecho filtrante. El resultado es un sistema de filtración muy eficiente ya que
+     la remoción de materia se lleva a cabo a través de todo el lecho filtrante. Por esta característica los
+     filtros multimedia se denominan también de “lecho profundo”.
+
+     Para la filtración de agua de formación los tipos más comunes de filtros son los multimedia de antracita-
+     granate. Debido a que los hidrocarburos tienden a adherirse sobre el medio filtrante concentración
+     máxima admisible de Total de Hidrocarburos (THC) está limitada a 25-30 ppm; con respecto al Total de
+     Sólidos en Suspensión (TSS) se debería usar para aplicaciones donde su contenido es inferior a 50
+     ppm.
+
+     Típicamente estos filtros remueven el 95% de partículas de 5 µm y el 90% de partículas de 2 µm; la
+     remoción de partículas entre 1-2 µm se alcanza por inyección de una ayuda filtrante (polielectrolito
+     especifico) para que produzca la coagulación/floculación de las partículas. Debe recalcarse que, de ser
+     necesario, estos datos deben ser corroborados por ensayos de planta piloto realizados en campo, con
+     medición de la distribución de tamaño de partícula.
+     Los rangos medios de operación para este tipo de filtro son los que se indican abajo:
+
+     Nota 1: Este valor es función de la Expansión del Lecho y de la Temperatura del agua durante el Retrolavado
+
+
+
+                                                                                Rango                Unidad
+      Tamaño efectivo                                                          0,7-1,35                mm
+      Velocidad superficial de retrolavado con aire                               5-7               m3/hr/m2
+      Velocidad superficial de aire de limpieza (“Air Scour”)                   50-60              N m3/hr/m2
+      Velocidad superficial de agua de enjuague                                 15-25               m3/hr/m2
+
+     Cuando se desea extender la duración del Ciclo de Filtrado el Filtro se diseña para                  velocidades
+     superficiales entre 17-20 m3/hr/m2.
+
+
+
+Manto intermedio/inferior                                                          Rango               Unidad
+Espesor total del manto                                                           300-500                mm
+Material                                                                          Granate
+Densidad                                                                           3,8-4,2             gr/cm3
+Tamaño efectivo manto filtrante                                                    0,2-0,5               mm
+Tamaño efectivo manto soporte                                                      1,5-2,5               mm
+Coeficiente de uniformidad                                                          < 1,6
+
+
+
+
+ RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+         MARÍA               CARLOS AGUSTIN
+                                                                                                         07    07   09
+
+      Validación               Aprobación                  Validación                Aprobación          D      M   A
+                   E&P YPF                                                                                    Fecha
+                    SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                   Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                   Ámbito de aplicación: E&P YPF
+                                                   Propietario: INGENIERÍA Y OBRAS
+                                                   Código: AB-IYO-ED-09-186-01                    Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                          Página 31 de 35
+
+
+     Las características típicas del manto filtrante son las que se indican a continuación:
+
+                                                                                Rango               Unidad
+Velocidad superficial de filtración                                              25-35             m3/hr/ m2
+Velocidad superficial de retrolavado (Nota 1)                                    30-70             m3/hr/ m2
+Velocidad superficial de aire de limpieza (“Air Scour”)                          40-75            N m3/hr/ m2
+
+
+     Se muestra a continuación un diagrama con los tiempos típicos de filtración y retrolavado:
+
+
+                                                                   SECUENCIA        DURACION
+                         Parado                                        0                   -
+                         Ciclo de Filtración                           1              11½ hr
+                                                   1er Ciclo Retrolavado
+                         Aislación                                     2              30 seg.
+                         Drenaje                                       3                 5 min.
+                         Lavado con Aire (Air Scour)                   4              3 min. *
+                         Pausa                                         5              30 seg.
+                         Retrolavado                                   6              3 min. *
+                         Sedimentación                                 7                 1 min.
+                                                   2° Ciclo Retrolavado
+                         Drenaje                                       8                 5 min.
+                         Lavado con Aire (Air Scour)                   9              3 min. *
+                         Pausa                                         10             30 seg.
+                         Retrolavado                                   11             3 min. *
+                         Sedimentación                                 12                1min.
+                                                Retorno a Operación Normal
+                         Llenado                                       13             30 seg.
+                         Enjuague                                      14             30 seg.
+                         Retorno a Ciclo de Filtración                 1
+
+                        * Tiempos a ser ajustados en el campo
+
+     Normalmente estos filtros son verticales, con un diámetro externo limitado a los 3,5 m, por problemas
+     de transporte. Este tamaño correspondería a caudales del orden de los 200 m3/hr; cuando se superan
+     estos caudales podría utilizarse una batería de filtros o un único o varios (según el caudal) filtros
+     horizontales de una longitud de hasta 12-13 m.
+
+
+
+ RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+         MARÍA               CARLOS AGUSTIN
+                                                                                                     07    07   09
+
+      Validación                 Aprobación               Validación            Aprobación           D      M   A
+                   E&P YPF                                                                                Fecha
+                    SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                  Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                  Ámbito de aplicación: E&P YPF
+                                                  Propietario: INGENIERÍA Y OBRAS
+                                                  Código: AB-IYO-ED-09-186-01                  Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                        Página 32 de 35
+
+     La evaluación de la solución optima entre batería de filtros verticales y filtros horizontales debe
+     realizarse cuidadosamente puesto que los requerimientos de caudal de Retrolavado para un filtro
+     horizontal son extremadamente elevados si se lo compara con el requerido por una batería de filtros
+     verticales, para cuyo caso la Bomba de Retrolavado debe tener la capacidad de Retro-lavar un filtro por
+     vez. Algo parecido ocurre con los requerimientos de aire o gas durante el ciclo de retrolavado. Es
+     además conocido que la distribución de agua en los filtros verticales es mejor que en los horizontales
+
+     Filtros de Cáscara de Nuez
+
+     Las características del medio filtrante hacen que este tipo de Filtro sea particularmente aplicable para la
+     remoción de hidrocarburos, adicionalmente remueve sólidos en suspensión. Como se menciono mas
+     arriba la cáscara de nuez es resistente al ensuciamiento con petróleo. Esta comprobado de que en este
+     medio filtrante la presencia de hidrocarburos mejora la eficiencia de remoción de sólidos en suspensión.
+
+     El medio filtrante que habría dado mejores eficiencias de remoción es el llamado “Trimix” consistente en
+     una mezcla de cáscara de nuez negra, inglesa y pecana.
+
+     Según algunos Proveedores, la concentración máxima admisible de Total de Hidrocarburos (THC) y de
+     Total de Sólidos en Suspensión (TSS) es de 100 ppm y 100 ppm respectivamente o 200 ppm
+     combinados. Asimismo estos Proveedores mencionan valores de remoción de THC > 95% y de TSS < 2
+     µm de hasta el 98%. Estos datos son generales y dependen de la Distribución de Tamaño de Partículas
+     y el estado de agregación del hidrocarburo y necesariamente deberán ser corroborados por Ensayos de
+     Planta Piloto.
+
+     El tamaño efectivo normalmente esta entre 12 – 20 Mesh, esto es 0,8 – 1,4 mm.
+
+     La velocidad superficial de filtración en condiciones de diseño esta entre 33–37 m3/hr/m2, mientras que
+     el espesor del manto filtrante es de aproximadamente 1500 mm.
+
+     Durante el ciclo de filtración el agua ingresa por la parte superior, fluye a través del lecho de cáscara de
+     nuez y sale por la parte inferior ya sea a través de un tamiz soporte o un sistema de colectores, a
+     medida que esto ocurre los sólidos e hidrocarburos son atrapados por el medio filtrante.
+
+     Cuando se ha llegado a un valor de presión diferencial predeterminado, de alrededor de 1 bar se
+     produce el retrolavado o “regeneración” del filtro.
+
+     La “regeneración” del Filtro se realiza de una manera no convencional. Una bomba de fluidización o de
+     depuración (“scrubber pump”), montada en la parte superior del Filtro o exterior al mismo se pone en
+     operación. El fluido del Filtro pasa por la bomba de fluidización y a través de cañerías adecuadas
+     ubicadas dentro o fuera del filtro, retorna al mismo. El medio filtrante es también recirculado a través de
+     dicha Bomba, cuyo impulsor le causa una acción de cizallamiento que lo libera del petróleo y demás
+     contaminantes. Una vez que se ha efectuado la fluidización (la etapa de “Fluidización” dura unos pocos
+     segundos) se inicia la “etapa de descarga” de los contaminantes acumulados a través de un “tamiz
+     depurador” ubicado en el centro del filtro o exterior al mismo, según sea el diseño. Este tamiz previene
+     que el medio filtrante salga del recipiente y permite a los contaminantes fluir a través de la línea de
+     descarga. Durante esta operación se ingresa agua no filtrada al equipo. La operación de descarga dura
+     alrededor de 10-15 minutos. Luego de una “etapa de sedimentación” y “purga” de un minuto cada una el
+     filtro está predispuesto para retomar la operación normal.
+
+     Se muestra a continuación un diagrama con los tiempos típicos de filtración y regeneración:
+
+
+
+
+ RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+         MARÍA               CARLOS AGUSTIN
+                                                                                                   07    07   09
+
+      Validación               Aprobación               Validación              Aprobación          D     M   A
+                   E&P YPF                                                                              Fecha
+                   SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                     Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                     Ámbito de aplicación: E&P YPF
+                                                     Propietario: INGENIERÍA Y OBRAS
+                                                     Código: AB-IYO-ED-09-186-01                  Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                              Página 33 de 35
+
+
+                                               Operación                 Tiempo
+
+                                               Filtración                 12 hr*
+
+                                                            1er Ciclo
+
+                                                       Regeneración
+
+                                            A. Fluidización              15 seg.
+
+                                             B. Descarga                 10 min. *
+
+                                        C. Sedimentación                 60 seg.
+
+                                               D. Purga                  60 seg.
+
+                                               Filtración                12 hr. *
+                                                            2° Ciclo
+                                       * Tiempos a ser ajustados en el campo
+
+
+     Cuando la bomba de fluidización y el tamiz depurador son exteriores al filtro pueden ser utilizados para
+     brindar el servicio de “regeneración” a varios filtros.
+
+     La bomba es el principal mecanismo de limpieza del lecho y está diseñada con huelgos especiales que
+     permiten al medio filtrante pasar a través de la misma sin sufrir daños importantes por atrición. A
+     medida que el medio pasa a través de la bomba y sale por las puntas del impulsor a elevada velocidad
+     se produce un alto cizallamiento que libera al medio filtrante de las impurezas. Independientemente de
+     lo mencionado es necesario hacer reposiciones del medio filtrante por las perdidas por atrición. Valor
+     este que algunos Proveedores consideran del orden del 5-10% del inventario por año.
+
+
+     Se pueden destacar las siguientes ventajas frente a los otros tipos de filtros:
+
+     •    Normalmente los requerimientos de superficie ocupada son inferiores.
+     •    Se utiliza agua no filtrada para la regeneración, eliminando los requerimientos de tanques de
+          almacenaje de agua filtrada.
+     •    Cada filtro o grupo de filtros posee su propia bomba de fluidización para retrolavado, eliminándose
+          la necesidad de Bombas de retrolavado auxiliares, su cañería y controles asociados.
+     •    No se requiere el agregado de surfactantes durante la “regeneración” del filtro.
+     •    El bajo consumo de agua en la etapa de “regeneración” reduce los costos de disposición. Este
+          valor esta dentro del 1% del volumen filtrado, mientras que para filtros convencionales podría estar
+          entre el 5 – 10% según sea la forma de retrolavado.
+     •    Al no utilizar aire o gas para la “regeneración” se reducen los problemas de corrosión.
+     •    Poseen una retención positiva del medio filtrante en el recipiente, con la consecuente reducción de
+          perdidas
+
+     La comparación/evaluación de distintos tipos de filtros debiera estrictamente realizarse calculando el
+     retorno de la inversión por consideración tanto de la inversión inicial (“Capex”) como los costos de
+     operación (“Opex”).
+
+
+
+
+ RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+         MARÍA               CARLOS AGUSTIN
+                                                                                                     07    07   09
+
+      Validación               Aprobación                   Validación               Aprobación      D      M   A
+                   E&P YPF                                                                                Fecha
+                   SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                    Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                    Ámbito de aplicación: E&P YPF
+                                                    Propietario: INGENIERÍA Y OBRAS
+                                                    Código: AB-IYO-ED-09-186-01                   Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                          Página 34 de 35
+
+     Filtros de Cartucho
+
+     Este tipo de filtro posee una capacidad muy limitada de retención de sólidos y se utiliza para resolver
+     alguno de los siguientes problemas:
+
+     •    Filtro de Seguridad: Cuando se quiere proteger hidráulicamente algún sistema, manteniendo el
+          agua exenta de algún material filtrante que pueda proceder de tratamientos anteriores (fibra,
+          resinas, arena, granate, antracita, tierra de diatomea, etc.).
+
+     •    Filtrado de muy alta calidad: Cuando el agua posee una cantidad muy pequeña de partículas y el
+          propósito es la remoción de partículas muy pequeñas de hasta 0,5 µm (bacterias).
+
+     •    Es evidente que a un filtro de este tipo no debe llegar, en régimen normal, un agua relativamente
+          cargada, ya que produciría un atascamiento instantáneo. Los filtros de cartucho están disponibles
+          en una amplia variedad y tamaños de poros, ya sea descartable o retro-lavable.
+
+     •    La eficiencia de filtración esta medida de dos maneras:
+
+     •    Umbral de Remoción Nominal: Es un dato del fabricante y corresponde a las dimensiones de las
+          partículas más finas retenidas, sin especificar el porcentaje de remoción estricta.
+     •    Umbral de Remoción “Absoluto”: Se define como “Índice b” a la relación entre el numero de
+          partículas en el agua a ser filtrada y el numero de partículas en el Filtrado. El umbral de remoción
+          “absoluto” es el diámetro de la partícula mas pequeña para la cual se alcanza el Índice b deseado.
+          Este valor depende de los requerimientos de proceso y puede ser 5000/1(Eficiencia: 4999/5000 x
+          100 = 99,98 %) o 2000/1 (Eficiencia: 1999/2000 x 100 = 99,95 %) o aun 200/1 (Eficiencia: 199/200
+          x 100 = 99,50 %).
+
+     •    Este último método, por su reproductibilidad, ha sido internacionalmente aceptado para reportar
+          eficiencias de filtración. El primer método ha sido abandonado por la mayoría de las compañías de
+          filtración debido a su ambigüedad y falta de reproductibilidad.
+     •    Vale la pena enfatizar que pasar de un umbral de remoción nominal a uno absoluto puede elevar el
+          costo varias decenas de veces.
+
+     •    Algunos cartuchos operan con el principio de filtración superficial, con formación de una torta
+          filtrante en la superficie exterior del cartucho. Otros utilizan el principio de “filtración profunda” con
+          penetración de las partículas a filtrar en el cuerpo fibroso del filtro.
+
+     •    Los descartables se utilizan normalmente donde se prevé un taponamiento muy poco frecuente.
+          Puesto que los problemas de suministro, reemplazo y disposición final podrían transformarse en
+          serios.
+
+     Los materiales comunes de construcción para los cartuchos filtrantes descartables filtrantes incluyen:
+
+     •    Polipropileno, fibra de vidrio o papel plisado
+     •    Fibras de lana o celulosa entretejidas
+     •    Fibras poliéster moldeadas (resina fenólica, resina melamina, etc.)
+
+     Este tipo de cartucho puede poseer un Umbral de Remoción Absoluta entre 0,1 µm y 20 µm y se
+     caracteriza por su elevada área de filtración.
+
+     Se debe considerar el uso de cartuchos retro-lavables en el caso de que el taponamiento pueda ser
+     frecuente y la disposición de los cartuchos muy problemática. Debe tenerse en cuenta que estos
+     cartuchos poseen una limitación en lo referente al tamaño mínimo de la partícula a retener; razón por la
+
+ RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+         MARÍA               CARLOS AGUSTIN
+                                                                                                      07    07   09
+
+      Validación               Aprobación                Validación               Aprobación          D      M   A
+                   E&P YPF                                                                                 Fecha
+                    SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+                                                  Tipo de normativa: ESPECIFICACIÓN DE DISEÑO
+                                                  Ámbito de aplicación: E&P YPF
+                                                  Propietario: INGENIERÍA Y OBRAS
+                                                  Código: AB-IYO-ED-09-186-01               Revisión: 01
+Título: ED(EP)-C-01.08 FILTROS
+                                                                     Página 35 de 35
+
+     cual en algunas oportunidades podría existir la necesidad de instalar cartuchos descartables corriente
+     debajo de los mismos. Entre los cartuchos Reto-lavables encontramos a aquellos constituidos por:
+
+     •    Metales sinterizados (Inoxidable, Monel, etc.)
+     •    Malla metálica entretejida
+
+     Esos tipos de cartucho poseen un umbral de remoción Nominal entre 6 µm y 100 µm. El Retrolavado es
+     únicamente posible con cartuchos con un elevado Umbral de Remoción Nominal y cuando se utilizan
+     con agua con un bajo contenido de Sólidos en Suspensión.
+
+     Los filtros a cartucho son asimismo utilizados en Plantas de Tratamiento de Gas, no solo para filtración
+     sino también para coalescencia. La máxima perdida de carga admisible de estos elementos depende
+     del tipo y fabricante y podría estar entre 1,5-2 bar.
+
+
+
+
+ RUIZ BRICEÑO, CORINA        COLO DEL ZOTTO,
+         MARÍA               CARLOS AGUSTIN
+                                                                                                07    07   09
+
+      Validación               Aprobación              Validación            Aprobación         D      M   A
+                   E&P YPF                                                                           Fecha
+                   SI ESTE DOCUMENTO ESTÁ IMPRESO, ES UNA COPIA NO CONTROLADA
+

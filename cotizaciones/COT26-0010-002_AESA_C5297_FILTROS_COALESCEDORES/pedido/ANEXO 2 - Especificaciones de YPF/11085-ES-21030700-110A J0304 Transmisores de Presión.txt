@@ -1,0 +1,587 @@
+                                                                          J0304 Transmisores de Presión
+Tipo: ESPECIFICACIÓN                         Ámbito: Upstream - Argentina                                                                                      Código: 11085-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                             Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+
+
+1 Índice
+
+Contenido
+1      ÍNDICE ........................................................................................................................................................................1
+2      OBJETO .....................................................................................................................................................................3
+3      ÁMBITO DE APLICACIÓN ........................................................................................................................................3
+4      CONSIDERACIONES PRINCIPALES .......................................................................................................................3
+5      ESPECIFICACIÓN .....................................................................................................................................................3
+    5.1    ESPECIFICACIÓN TÉCNICA DE LOS TRANSMISORES ...................................................................................................3
+      5.1.1    Empleo y tipo de transmisor.........................................................................................................................3
+      5.1.2    Características generales ............................................................................................................................3
+      5.1.3    Características constructivas .......................................................................................................................4
+      5.1.4    Características funcionales ..........................................................................................................................5
+    5.2    ACCESORIOS .........................................................................................................................................................6
+      5.2.1    Indicadores locales ......................................................................................................................................6
+      5.2.2    Accesorios de soporte ..................................................................................................................................6
+      5.2.3    Manifolds integrales .....................................................................................................................................6
+      5.2.4    Sellos y capilares .........................................................................................................................................6
+      5.2.5    Accesorios de configuración ........................................................................................................................7
+    5.3    NOTAS DE APLICACIÓN ...........................................................................................................................................7
+      5.3.1    Uso en enclavamientos ................................................................................................................................7
+      5.3.2    Transmisores de Presión absoluta ..............................................................................................................7
+      5.3.3    Servicio de alta presión ................................................................................................................................7
+    5.4    CRITERIOS DE INSTALACIÓN ...................................................................................................................................7
+      5.4.1    Ubicación del transmisor ..............................................................................................................................7
+      5.4.2    Conexionado a proceso ...............................................................................................................................8
+    5.5    SUMINISTRO Y DOCUMENTACIÓN.............................................................................................................................8
+      5.5.1    Preparación para envío, embalaje y marcado .............................................................................................8
+      5.5.2    Documentación ............................................................................................................................................8
+6      INDICADORES, REGISTROS Y RIESGOS DEL PROCESO ...................................................................................9
+    6.1        INDICADORES ........................................................................................................................................................9
+    6.2        REGISTROS ...........................................................................................................................................................9
+    6.3        RIESGOS Y ACCIONES MITIGANTES ..........................................................................................................................9
+7      ANEXOS Y REFERENCIAS ......................................................................................................................................9
+    7.1        ANEXOS ................................................................................................................................................................9
+    7.2        NORMATIVA RELACIONADA .....................................................................................................................................9
+    7.3        DEFINICIONES Y ABREVIATURAS ..............................................................................................................................9
+8      APROBACIÓN .........................................................................................................................................................10
+    8.1        VIGENCIA ............................................................................................................................................................10
+
+                                                                                                           BODEGA, EDUARDO                                                                             15/02/2017
+       GALANTERNIK, NICOLAS                                 VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                              GUILLERMO                                                                               06:33:00 p.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                     1 / 10
+                                                                        J0304 Transmisores de Presión
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11085-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+  8.2        DISPOSICIONES GENERALES Y TRANSITORIAS ........................................................................................................10
+  8.3        HISTORIAL ...........................................................................................................................................................10
+  8.4        APROBACIÓN COLEGIADA .....................................................................................................................................10
+  8.5        CATEGORÍA DE CLASIFICACIÓN DEL ACTIVO DE INFORMACIÓN................................................................................10
+ANEXO I: HD-J0304-01 HOJA DE DATOS TRANSMISORES DE PRESIÓN ..............................................................10
+
+
+
+
+                                                                                                         BODEGA, EDUARDO                                                                             15/02/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                            GUILLERMO                                                                               06:33:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   2 / 10
+                                                                        J0304 Transmisores de Presión
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11085-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+2 Objeto
+Definir los criterios de selección, especificación, instalación y uso de los transmisores electrónicos de presión.
+
+
+3 Ámbito de aplicación
+YPF S.A. Upstream – Argentina.
+Aplica a todos los proyectos tanto de nuevas instalaciones como modificaciones a instalaciones existentes.
+
+
+4 Consideraciones principales
+Esta especificación será de aplicación a los transmisores destinados a medidas de presión absoluta, relativa o
+diferencial.
+Quedan fuera del alcance específico de este documento:
+    a) Las medidas de presión asociadas a transferencias fiscales, tratada en las especificiónes “Unidades LACT”
+       10688-ES-21030700-110A y “J2001 Puentes de Medición de gas natural para transferencia de custodia”
+       10721-ES-21030700-110A
+    b) La medida de presión diferencial para cálculo de caudal, tratada en la especificación “J0201 Transmisores de
+       Presión Diferencial para Medida de Caudal”.
+    c) La medida de presión diferencial para cálculo de nivel, tratada en la especificación “J0402 Transmisores de
+       Presión Diferencial para Medida de Nivel”.
+
+
+5 Especificación
+
+5.1        Especificación técnica de los transmisores
+
+5.1.1 Empleo y tipo de transmisor
+Todos los lazos de presión serán realizados con transmisores electrónicos.
+El uso de transmisores neumáticos sólo se hará en locaciones donde exista esta tecnología y no exista sistema de
+control.
+Todo lo expuesto en los puntos sucesivos hace referencia exclusivamente a transmisores electrónicos.
+
+5.1.2 Características generales
+Todos los transmisores serán inteligentes, configurables y con el protocolo digital HART o aquel que se indique en el
+DBD (datos básicos de diseño).
+El protocolo digital debe permitir la completa configuración del transmisor y de su indicador asociado desde cualquier
+punto del circuito de señal y alimentación.
+El principio de medida será el definido en la hoja de datos (capacitivo, piezorresistivo, de cristal oscilante, etc.).
+                                                                                                         BODEGA, EDUARDO                                                                             15/02/2017
+      GALANTERNIK, NICOLAS                                VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                            GUILLERMO                                                                               06:33:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   3 / 10
+                                                                        J0304 Transmisores de Presión
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11085-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+Los transmisores serán a dos hilos, por defecto con señal analógica 4-20 mA y con un protocolo HART. En caso de
+transmisores para redes de campo, deberán adaptarse a las necesidades del proyecto, alimentados por el elemento
+receptor de su señal a una tensión de entre 15 y 40 V cc.
+Las siguientes características serán según los puntos que se indican en la especificación “J0300 Medida de Presión
+(Parte General)”:
+    a) Unidades de medida
+    b) Transmisión de señal
+    c) Compatibilidad electromagnética
+    d) Protección para áreas clasificadas
+    e) Protección ambiental
+    f)     Indicación local en campo
+    g) Transmisores multivariables
+Las ejecuciones serán todas para montaje en campo. Se prohíben los transmisores para montaje en panel.
+
+5.1.3 Requisitos constructivos
+Las partes mojadas serán en acero inoxidable con juntas de teflón salvo que el proceso requiera un material de
+mayor prestación.
+La envolvente y partes no mojadas serán de aluminio con bajo contenido en cobre o de acero al carbono, con
+recubrimiento de pintura al poliuretano o similar.
+Las tomas a proceso serán directas o mediante sellos y capilares según se indique en la hoja de datos.
+Las tomas directas serán de ½” o ¼” NPT-H, separadas entre sí 2-1/8” en caso de transmisores de presión
+diferencial. La conexión hacia proceso será mediante adaptador directo a manifold de dos vias (bloqueo y venteo)
+para presion manometrica o manifold de 3 o 5 vias para presión diferencial
+En el caso de tomas directas, se suministrarán siempre bridas ovales de adaptación con salida ½” NPT-H a proceso.
+Estas bridas se usarán para el conexionado del transmisor o manifold a las líneas de impulsión.
+Cada brida oval incluirá dos tornillos hexagonales de acoplamiento al manifold y dos juntas tóricas de teflón.
+Para el caso de tomas mediante sellos separadores, los mismos se ajustarán a lo indicado en la especificación“J0300
+Medida de Presión (Parte General)”. Los sellos separadores deberán ser suministrados en conjunto con el transmisor
+y el capilar siendo todo el conjunto estanco y sellado desde fábrica.
+Los transmisores con tomas directas a proceso (sin sellos) deben incorporar válvulas de ¼” tipo tornillo para drenaje
+o venteo en los laterales de las cámaras de medida.
+Las conexiones eléctricas serán de ½” NPT-H.
+El transmisor tendrá una placa metálica de características fijada mecánicamente en origen al mismo donde
+aparecerán los siguientes datos grabados de modo indeleble:
+    a) Fabricante.
+    b) Modelo.
+    c) Número de serie.
+                                                                                                         BODEGA, EDUARDO                                                                             15/02/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                            GUILLERMO                                                                               06:33:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   4 / 10
+                                                                        J0304 Transmisores de Presión
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11085-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+    d) Material de las cámaras.
+    e) Presión nominal de las cámaras.
+    f)     Campos máximo y mínimo de calibración.
+Una segunda placa de acero inoxidable grabada con el tag del instrumento y fijada al cuello del transmisor mediante
+alambre de inoxidable será incluida con el mismo.
+La placa será adecuada para al menos 16 caracteres de como mínimo 5 mm de altura, grabados también de modo
+indeleble (estampado).
+El acceso a la electrónica y bornes se realizará mediante tapas roscadas.
+Los bornes interiores deben ser aptos para cable de 1,5 mm2 de sección y estar señalizados con su polaridad.
+Existirán además terminales independientes, tipo lengüeta perforada o similar, para la conexión de las pinzas de un
+comunicador sin necesidad de emplear los cables o bornes de la señal analógica.
+El transmisor (y su indicador de existir) incluirá accesorios de montaje aptos para fijación a pared o tubo de 2”.
+
+5.1.4 Características funcionales
+La cámara del transmisor será capaz de soportar el 150 % de la presión estática máxima o 100 bar (el mayor valor de
+los dos) sin dañarse o causar una desviación permanente superior al 1% del margen de calibración.
+Los efectos de la temperatura ambiente, vibración, variaciones de la tensión de alimentación o interferencias
+radioléctricas sobre la precisión del transmisor deberán estar limitados al 0.1 % del rango calibrado.
+El transmisor debe poder ser montado y funcionar correctamente en cualquier posición, requiriendo a lo sumo una
+elevación o supresión de cero.
+La exactitud estándar mínima (incluyendo conformidad, linealidad, histéresis y repetibilidad) será del 0,1 % del campo
+calibrado salvo que se indique una superior.
+Como parámetro resumen del comportamiento global del transmisor se empleará el TPE (Error Probable Total) a 60
+bar y 15º, que incluye los efectos combinados de la presión, temperatura, calibración y deriva.
+Los ajustes de cero y campo calibrado (span) deben ser independientes, sin interacción entre ellos y no accesibles
+directamente desde el exterior.
+El transmisor debe incluir una funcionalidad de autodiagnóstico que, a detección de fallo, fuerce la salida a un valor
+predefinido en cada caso por encima o por debajo del rango normal de funcionamiento (4-20 mA).
+El transmisor tendrá la posibilidad de filtrar la variable de proceso (damping) en un tiempo ajustable entre cero y al
+menos dos segundos.
+Los campos configurables mediante comunicador serán como mínimo los siguientes:
+    a) Para el transmisor
+                  Tag del transmisor.
+                  Descriptor (servicio).
+                  Límite superior del rango calibrado (correspondiente a salida de 20 mA).
+                  Límite inferior del rango calibrado (correspondiente a salida de 4 mA).
+
+                                                                                                         BODEGA, EDUARDO                                                                             15/02/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                            GUILLERMO                                                                               06:33:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   5 / 10
+                                                                        J0304 Transmisores de Presión
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11085-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+                  Unidades de ingeniería.
+                  Factor de filtrado (damping).
+                  Fecha.
+                  Salida ante malfunción (Salida < 4 mA / Salida > 20 mA). Opcionalmente puede ser por un contacto seco
+                   libre de potencial.
+    b) Para el indicador digital
+                  Tag del indicador o transmisor.
+                  Límite superior del rango calibrado en unidades de ingeniería.
+                  Límite inferior del rango calibrado en unidades de ingeniería.
+                  Unidades de ingeniería.
+                  Elemento visualizado (valor en presión, valor en mA, ambos alternándose).
+
+
+5.2 Accesorios
+
+5.2.1 Indicadores locales
+Se comprarán conjuntamente con el transmisor según el criterio indicado en la especificación “J0300 Medida de
+Presión (Parte General)”. Por defecto la indicacion local se realizará en el mismo transmisor, solo en casos
+excepcionales de accesibilidad o requisitos operativos se contemplará la posibilidad de indicadores remotos.
+Los indicadores remotos seguirán los mismos criterios de clasificación eléctrica, protección ambiental, identificación,
+instalación y conexionado eléctrico que a los transmisores asociados.
+
+5.2.2 Accesorios de soporte
+Los accesorios de soportación estándar a suministrar con cada transmisor e indicador remoto serán universales, para
+montaje en tubo de 2” o sobre pared.
+La ejecución será de tipo angular reforzado con abarcón (“u-bolt”) y perfil independiente de sujeción a tubo. Este
+perfíl podrá ser desmontado para fijación del soporte a pared.
+Serán de acero al carbono pintado al poliuretano y con tornillería de acero inoxidable.
+
+5.2.3 Manifolds integrales
+Como criterio general, los manifolds serán según la especificación “J1700 Montaje de Instrumentos”.
+
+5.2.4 Sellos y capilares
+Su aplicación y características se ajustarán al apartado correspondiente de la especificación “J0300 Medida de
+Presión (Parte general)”.
+
+
+
+
+                                                                                                         BODEGA, EDUARDO                                                                             15/02/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                            GUILLERMO                                                                               06:33:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   6 / 10
+                                                                        J0304 Transmisores de Presión
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11085-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+5.2.5 Accesorios de configuración
+Las herramientas más empleadas para la configuración y gestión de los equipos son el comunicador portátil y los
+sistemas de gestión de activos vía protocolo digital.
+El suministrador indicará en su oferta si los modelos objeto de su suministro tienen requisitos particulares relativos a
+la configuracion respecto a la utilización de un “Handheld” estandard.
+El alcance y procedimiento de la actualización, de requerirse, se definirá con YPF en cada caso. Es mandatorio que
+cualquier equipo instalado disponga de herramientas de configuración / mantenimiento.
+
+
+5.3        Notas de aplicación
+
+5.3.1 Uso en enclavamientos
+El transmisor con función de enclavamiento para función de seguridad será siempre independiente del asociado a la
+función de control.
+El montaje será independiente con tomas de proceso independientes.
+
+5.3.2 Transmisores de Presión absoluta
+Los transmisores de presión absoluta tendrán la cámara de baja presión sellada al vacío en origen.
+No se usarán los sistemas basados en una cámara de referencia conectada a la toma de baja presión.
+
+5.3.3 Servicio de alta presión
+En líneas con rating igual o superior a 1500# todos los transmisores se suministrarán con certificado de prueba
+hidráulica a la presión de diseño de la línea.
+Para rangos superiores a 250 bar esta especificación sólo aplicará como referencia, debiendo estudiarse cada
+aplicación particular.
+
+
+5.4 Criterios de instalación
+
+5.4.1 Ubicación del transmisor
+Los transmisores se montarán a la mínima distancia del proceso compatible con la temperatura del mismo y un
+acceso fácil para mantenimiento. Se podrán montar de forma autoportante teniendo en cuenta los criterios abajo
+descriptos.
+Los transmisores para medida de líquidos y vapores condensables se ubicarán a una cota inferior a la de las tomas.
+Las líneas de impulsión serán con caída constante y sin bolsas hacia el transmisor.
+Los transmisores para líquidos que puedan vaporizar a temperatura ambiente (p.e. GLPs) se ubicarán a una cota
+superior a la de las tomas. Las líneas de impulsión tendrán caída constante y sin bolsas hacia el proceso.
+Los transmisores para medida de gases se ubicarán a una cota superior a la de las tomas. Las líneas de impulsión
+tendrán caída constante y sin bolsillos hacia el proceso.
+
+
+                                                                                                         BODEGA, EDUARDO                                                                             15/02/2017
+      GALANTERNIK, NICOLAS                                VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                            GUILLERMO                                                                               06:33:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   7 / 10
+                                                                        J0304 Transmisores de Presión
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11085-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+El transmisor se fijará con su accesorio de montaje a un soporte de 2” unido al suelo o a partes fijas y sin vibraciones
+de la estructura de modo que quede a una altura aproximada de 1,35 sobre el suelo o plataforma.
+Los transmisores se orientarán para que su indicador local, de existir, sea legible y su electrónica (la cara que aloja
+los bornes) fácilmente accesible.
+
+5.4.2 Conexionado a proceso
+Los transmisores se montarán según los típicos de YPF incluidos en la especificación “J1700 Montaje de
+Instrumentos”.
+En todos los montajes con sellos y capilares, se estudiará la necesidad de soportar los mismos para que no ejerzan
+tensiones mecánicas sobre las tomas a proceso.
+
+
+5.5 Suministro y documentación
+
+5.5.1 Preparación para envío, embalaje y marcado
+Lo indicado en este punto complementa a la especificación AB-IYO-ED-09-199-01 “ED(EP)-B-01.00 Preparación para
+el Transporte de Equipos y Materiales”.
+Los transmisores de presión se suministrarán en cajas individuales incluyendo todos los accesorios indicados en la
+requisición de compra (salvo los indicadores locales remotos que pueden ir en cajas separadas).
+Cada instrumento estará identificado internamente y externamente (sobre el embalaje) con su tag.
+
+5.5.2 Documentación
+La documentación a entregar por el suministrador se define en la requisición de compra, y como mínimo incluirá lo
+siguiente:
+    a) Hoja de datos final de cada tag (incluyendo accesorios).
+    b) Certificados de calibración.
+    c) Certificado de modo de protección EEx.
+    d) Esquemas de conexionado eléctrico.
+    e) Certificados de materiales y prueba hidráulica cuando se especifiquen.
+    f)     Certificados de cumplimiento con normativas aplicables.
+    g) Catálogos técnicos.
+    h) Manual de operación.
+La documentación anterior se suministrará en las cantidades y soportes indicados en la requisición de compra.
+Sólo se requerirán planos dimensionales de los equipos especiales (por ejemplo sellos extendidos) que no se
+suministren con dimensiones de catálogo.
+Los documentos asociados a tags particulares (planos, hojas de datos, etc.) deberán ser aprobados por la Ingeniería
+responsable del proyecto. Los documentos genéricos (catálogos, manuales, etc.) no lo requieren.
+La documentación estará en castellano.
+                                                                                                         BODEGA, EDUARDO                                                                             15/02/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                            GUILLERMO                                                                               06:33:00 p.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   8 / 10
+                                                                          J0304 Transmisores de Presión
+Tipo: ESPECIFICACIÓN                         Ámbito: Upstream - Argentina                                                                                      Código: 11085-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                             Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+Además de la documentación deberá proveer el software, interfaz y elementos necesarios para su intervención y
+mantenimiento.
+
+
+6 Indicadores, registros y riesgos del proceso
+
+6.1 Indicadores
+N/A
+
+
+6.2 Registros
+N/A
+
+
+6.3 Riesgos y acciones mitigantes
+N/A
+
+
+7 Anexos y referencias
+
+7.1 Anexos
+   N°                                                                                                        Nombre
+    I          HD-J0304-01 Hoja de Datos Transmisores de Presión
+
+
+7.2 Normativa relacionada
+    Categoría                                                                             Título                                                                                        Código
+ Normativa
+                                  J0300 Medida de Presión (Parte general)
+ Interna YPF
+ Normativa
+                                  N/A                                                                                                                              N/A
+ Externa
+ Normativa
+                                  ED(EP)-J-03.04 Transmisores de Presión                                                                                           AB-IYO-ED-09-029-01
+ Derogada
+ Otras
+                                  N/A                                                                                                                              N/A
+ referencias
+
+
+7.3 Definiciones y abreviaturas
+         Término                        Abreviatura                                                                                 Descripción
+                                                                                                           BODEGA, EDUARDO                                                                             15/02/2017
+        GALANTERNIK, NICOLAS                                VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                              GUILLERMO                                                                               06:33:00 p.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                     9 / 10
+                                                                          J0304 Transmisores de Presión
+Tipo: ESPECIFICACIÓN                         Ámbito: Upstream - Argentina                                                                                      Código: 11085-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                             Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+
+ N/A                                    N/A                          N/A
+
+
+8 Aprobación
+
+8.1 Vigencia
+Esta normativa entrará en vigencia a partir de la fecha de su aprobación.
+Los abajo firmantes asumen la responsabilidad de implantar, controlar el cumplimiento y actualizar el presente
+documento cada vez que fuera necesario.
+
+
+8.2 Disposiciones generales y transitorias
+N/A
+
+
+8.3 Historial
+       Estado                      № Revisión                    Fecha Aprobación                                                                   Observaciones
+
+ Original                         0.0                            Ver fecha en pie de
+                                                                 firmas.
+
+
+8.4 Aprobación colegiada
+N/A
+
+
+8.5 Categoría de Clasificación del Activo de Información
+YPF - Privada: información disponible para los empleados de la compañía y terceros (ej. contratistas) como parte de
+la rutina del negocio. Su difusión se hace en base al conocimiento para poder operar. Su difusión no autorizada
+podría afectar la consecución de objetivos particulares de determinadas áreas de la compañía.
+
+
+Anexo I: HD-J0304-01 Hoja de Datos Transmisores de Presión
+Este formulario se encuentra como archivo editable en la biblioteca Anexos Online de SGN http://corporacion-
+sgn/sites/sgn/Anexos/Forms/AllItems.aspx
+
+
+
+
+                                                                                                           BODEGA, EDUARDO                                                                             15/02/2017
+      GALANTERNIK, NICOLAS                                  VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                              GUILLERMO                                                                               06:33:00 p.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   10 / 10
+

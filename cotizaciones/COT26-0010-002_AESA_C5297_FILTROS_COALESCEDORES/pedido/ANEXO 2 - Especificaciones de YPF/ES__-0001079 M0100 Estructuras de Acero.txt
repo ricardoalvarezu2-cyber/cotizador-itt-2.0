@@ -1,0 +1,1088 @@
+                                                       #Título                     M0100 Estructuras de Acero
+#Tipo                                                   Especificación            #Código                 ES__-0001079
+#Fecha de Vigencia                                      11/09/2023                #Versión                2.1
+#Activo de la información                               YPF - Privada
+#Proceso                                                21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+
+
+1 Índice
+Contenido
+1      ÍNDICE .......................................................................................................................................................... 1
+2      OBJETO........................................................................................................................................................ 2
+3      ÁMBITO DE APLICACIÓN........................................................................................................................... 2
+4      CONSIDERACIONES PRINCIPALES ......................................................................................................... 2
+    4.1          ORDEN DE PRIORIDAD ENTRE DOCUMENTOS ............................................................................................. 2
+    4.2          ALCANCE ................................................................................................................................................ 3
+    4.3          UNIDADES DE MEDIDA ............................................................................................................................. 3
+5      ESPECIFICACIÓN ........................................................................................................................................ 4
+    5.1    MATERIALES ........................................................................................................................................... 4
+      5.1.1 Generalidades .................................................................................................................................. 4
+      5.1.2 Normas de material .......................................................................................................................... 4
+      5.1.3 Acero estructural .............................................................................................................................. 4
+      5.1.4 Tornillos ............................................................................................................................................ 4
+      5.1.5 Chapas estampadas......................................................................................................................... 5
+      5.1.6 Rejillas de acero galvanizado ........................................................................................................... 5
+      5.1.7 Metal desplegado ............................................................................................................................. 5
+    5.2    CÁLCULO DE ESTRUCTURAS DE ACERO .................................................................................................... 5
+      5.2.1 Normativa ......................................................................................................................................... 5
+      5.2.2 Tensiones del acero estructural ....................................................................................................... 6
+      5.2.3 Cargas .............................................................................................................................................. 6
+      5.2.4 Desplazamientos y flechas admisible .............................................................................................. 6
+    5.3    DISEÑO DE ESTRUCTURAS DE ACERO ....................................................................................................... 7
+      5.3.1 Criterios generales de diseño ........................................................................................................... 7
+      5.3.2 Uniones............................................................................................................................................. 8
+      5.3.3 Plataformas y pasarelas ................................................................................................................... 8
+      5.3.4 Escaleras (de acuerdo con PE(EP)-M-0100.02) .............................................................................. 9
+      5.3.5 Escaleras verticales (tipo gato) ........................................................................................................ 9
+      5.3.6 Barandas ........................................................................................................................................ 10
+    5.4    IGNIFUGADO ......................................................................................................................................... 11
+    5.5    PINTURA............................................................................................................................................... 11
+    5.6    PREPARACIÓN PARA EL ENVÍO ............................................................................................................... 11
+    5.7    DOCUMENTOS DE DISEÑO ...................................................................................................................... 12
+      5.7.1 Generalidades ................................................................................................................................ 12
+      5.7.2 Memoria de cálculo ........................................................................................................................ 13
+      5.7.3 Planos ............................................................................................................................................. 14
+    5.8    REQUERIMIENTOS LOCALES Y NACIONALES ESPECIALES ......................................................................... 14
+    5.9    CÓDIGOS.............................................................................................................................................. 14
+    5.10 BIBLIOGRAFÍA DE REFERENCIA ............................................................................................................... 14
+6      ROLES, INDICADORES, REGISTROS Y RIESGOS DEL PROCESO ..................................................... 15
+
+
+
+     COPIA NO CONTROLADA
+     [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  1 / 20
+                                                       #Título                     M0100 Estructuras de Acero
+ #Tipo                                                  Especificación            #Código                 ES__-0001079
+ #Fecha de Vigencia                                     11/09/2023                #Versión                2.1
+ #Activo de la información                              YPF - Privada
+ #Proceso                                               21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+    6.1          ROLES.................................................................................................................................................. 15
+    6.2          INDICADORES........................................................................................................................................ 15
+    6.3          REGISTROS .......................................................................................................................................... 15
+    6.4          RIESGOS Y ACCIONES MITIGANTES ......................................................................................................... 15
+    6.5          REGLAS DE NEGOCIO ............................................................................................................................ 15
+7      ANEXOS Y REFERENCIAS ....................................................................................................................... 15
+    7.1    ANEXOS ............................................................................................................................................... 15
+      7.1.1 Anexos Especiales ......................................................................................................................... 15
+      7.1.2 Otros anexos .................................................................................................................................. 16
+    7.2    NORMATIVA RELACIONADA .................................................................................................................... 16
+    7.3    DEFINICIONES Y ABREVIATURAS ............................................................................................................. 18
+8      APROBACIÓN ............................................................................................................................................ 18
+    8.1          VIGENCIA.............................................................................................................................................. 18
+    8.2          DISPOSICIONES GENERALES Y TRANSITORIAS ......................................................................................... 19
+    8.3          HISTORIAL ............................................................................................................................................ 19
+    8.4          FLUJO DE APROBACIÓN ......................................................................................................................... 19
+9      ANEXO........................................................................................................................................................ 20
+
+
+
+
+2 Objeto
+Esta Especificación de Diseño (ED) abarca actividades de diseño para todas las estructuras de acero
+que deban ser montadas para los proyectos realizados en Instalaciones de Superficie de E&P de
+YPF.
+El presente documento forma parte de la última edición de Especificaciones Técnicas de YPF y hace
+referencia asimismo, a la última edición de Códigos o Normas que son mencionados y/o aplicables,
+así como lo indicado en el documento “Datos Básicos de Diseño” (DBD) que recoge los aspectos
+particulares de cada proyecto.
+
+
+3 Ámbito de aplicación
+Upstream – Argentina.
+
+
+4 Consideraciones principales
+
+4.1 Orden de prioridad entre documentos
+Esta Especificación, junto con la memoria de cálculos y/o los planos de ingeniería, forma parte de la
+Requisición de Materiales o conjunto estructural a suministrar. En caso de discrepancia entre los
+documentos incluidos en dicha Requisición prevalecerá el siguiente orden de prioridad:
+
+
+     COPIA NO CONTROLADA
+     [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  2 / 20
+                                                       #Título                     M0100 Estructuras de Acero
+    #Tipo                                               Especificación            #Código                 ES__-0001079
+    #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+    #Activo de la información                           YPF - Privada
+    #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+⁻     Legislación aplicable (siempre y cuando en las Hojas de Datos, en la Requisición o en esta
+      Especificación no se establezcan criterios más restrictivos que los en ella fijados).
+⁻     DBD.
+⁻     Hoja de cálculos y /o planos de ingeniería.
+⁻     Requisición de Materiales.
+⁻     Esta Especificación.
+⁻     Planos Estándar.
+Las excepciones o variaciones a la presente Especificación que el Fabricante considere hacer deberá
+comunicarlas por escrito junto con la oferta y en un solo documento que recoja la totalidad de las
+desviaciones haciendo referencia al capítulo contradictorio.
+Sólo serán admitidas aquellas variaciones que se mencionen expresamente en el pedido. Quedará
+a consideración de YPF la aceptación o no de las mismas.
+El cumplimiento de esta Especificación no exime al Fabricante de su responsabilidad de suministro
+con un diseño y construcción adecuados para las condiciones de operación que se requieran, y de
+su seguridad.
+
+
+4.2 Alcance
+Esta Especificación cubre las siguientes tipologías de estructuras de acero:
+⁻     Estructuras de proceso.
+⁻     Estructuras de edificios.
+⁻     Plataformas.
+⁻     Pasarela.
+⁻     Escaleras, barandas.
+⁻     Estructuras de soportación
+⁻     Estructuras varias.
+
+4.3 Unidades de medida
+Todos los diseños, cálculos y planos realizados bajo estas especificaciones deben realizarse
+utilizando Unidades del Sistema Internacional (S.I.).
+
+
+
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  3 / 20
+                                                       #Título                     M0100 Estructuras de Acero
+    #Tipo                                               Especificación            #Código                 ES__-0001079
+    #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+    #Activo de la información                           YPF - Privada
+    #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+5 Especificación
+
+5.1 Materiales
+5.1.1 Generalidades
+Las calidades de los materiales a utilizar para la fabricación y montaje de estructuras de acero
+(perfiles, chapas, tornillos, tuercas, arandelas, material de soldadura), deben estar en concordancia
+con lo especificado en la documentación citada en el presente apartado de esta Especificación. En
+aquellos casos donde pudieran no existir normativas al respecto, se tomará como referencia el código
+AISC, American Institute of Steel Construction, “Manual of steel Construction” según el método LRFD,
+última edición, con todos los estándares para control de calidad del material de ASTM, American
+Society for Testing and Materials, y el Reglamento CIRSOC correspondiente a estructuras de acero.
+
+5.1.2 Normas de material
+Sirven de referencia las siguientes normas:
+⁻     IRAM-IAS (Instituto Argentino de Normalización y Certificación).
+⁻     CIRSOC (Centro de Investigación de los Reglamentos Nacionales de Seguridad para las Obras
+      Civiles).
+⁻     ASTM (American Society for Testing and Materials).
+⁻     ASTM A 36 - Standard specification for structural steel.
+⁻     ASTM A 123 - Standard specification for Zinc (Hot-Dip Galvanized) Coatings on Iron and Steel
+      Products.
+⁻     ASTM A 325 - Standard specification for High-Strength Bolts for Structural Steel Joints.
+⁻     ASTM A 307 - Standard specification for Carbon Steel Bolts and Studs.
+⁻     ASTM A 490 - Standard specification for Structural Bolts.
+⁻     ASTM A 563 - Standard specification for Carbon and Alloy Steel Nuts.
+⁻     ASTM F 436 - Standard specification for Hardened Steel Washers.
+
+5.1.3 Acero estructural
+El material de acero estructural debe ser según lo indicado en la norma ASTM A 36, o equivalente
+según normas IRAM (IRAM-IAS 5457).
+
+5.1.4 Tornillos
+Los tornillos y tuercas que no sean de alta resistencia deben ser según la norma ASTM A 307 Grado
+B en el caso de tornillos y según norma ASTM A 563 Grado A para las tuercas hexagonales pesadas;
+
+
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  4 / 20
+                                                    #Título                     M0100 Estructuras de Acero
+ #Tipo                                               Especificación            #Código                 ES__-0001079
+ #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+éstos deben usarse preferentemente en estructuras de pasarelas, vigas, viguetas, zancas, barandas
+y otras uniones de menor importancia.
+Los tornillos de alta resistencia, así como las tuercas y arandelas, deben ser según la norma ASTM
+A 325 Tipo 1 para los tornillos, según la norma ASTM A 563 Grado DH para las tuercas.
+El diámetro mínimo de los tornillos para uniones de acero estructural debe ser de 20 mm.
+
+5.1.5 Chapas estampadas
+El acero para chapas estriadas debe ser según la norma ASTM A 36, o equivalente según normas
+IRAM; el espesor mínimo debe ser 3,2mm en el caso de ser utilizadas como tapas de cámaras de
+electricidad e instrumentos y/o drenajes.
+No podrán ser utilizadas como pisos de plataformas y/o pedadas de escaleras.
+
+5.1.6 Rejillas de acero galvanizado
+Las rejillas de acero galvanizado deben cumplir con el estándar de la norma ASTM A 36. Serán
+fabricadas con pletinas de 30 x 30 x 30 x 3, galvanizadas, de dentado antideslizante y provistas de
+malla electrosoldada de seguridad de acero estriado galvanizado en la superficie inferior de cada
+panel, de forma que limite el tamaño de la abertura máxima de los intersticios a 8 mm x 8 mm. Las
+pletinas separadoras deben estar soldadas al extremo superior de las pletinas portantes.
+Las rejillas deben ser galvanizadas en caliente según estándar de norma ASTM A 123 o equivalente.
+Serán exceptuadas de colocación de malla electrosoldada de abertura 8mm x 8mm toda aquella
+plataforma o pasarela que no tenga posibilidad de tránsito por debajo de ellas (ej: Pasarelas o
+plataformas ubicadas sobre techos de tanques).
+
+5.1.7 Metal desplegado
+Puede adoptarse como solución el uso de metal desplegado pesado (peso mínimo 11kg/m2) sólo
+para la circulación de personas.
+La utilización de este material debe ser previamente aprobado por YPF.
+
+
+
+5.2 Cálculo de estructuras de acero
+5.2.1 Normativa
+El diseño de las estructuras de acero, se realiza según reglamentos CIRSOC correspondientes a
+estructuras de acero, y de acuerdo con el AISC, American Institute of Steel Construction, “Manual of
+steel Construction”, última edición.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               5 / 20
+                                                       #Título                     M0100 Estructuras de Acero
+    #Tipo                                               Especificación            #Código                 ES__-0001079
+    #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+    #Activo de la información                           YPF - Privada
+    #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+5.2.2 Tensiones del acero estructural
+Para la tensión del acero estructural es de utilización lo especificado en los reglamentos CIRSOC
+correspondientes a estructuras de acero, y en aquellos casos donde no pueda ser de aplicación se
+tomará como referencia el AISC.
+
+5.2.3 Cargas
+Las cargas y combinaciones de cargas a considerar en el diseño y cálculo de todas las estructuras
+cubiertas por estas Especificaciones están indicados en ED(EP)-M-02.00 “Cargas para diseño de
+estructuras”.
+5.2.4 Desplazamientos y flechas admisible
+5.2.4.1          Flechas admisibles
+Las flechas de elementos estructurales de acero no deben superar los siguientes valores:
+Vigas, ménsulas y forjados en general:
+⁻     Vigas hasta 5 m de luz y viguetas de forjado que no soporten muros de fábrica                                                                                                       L/300
+⁻     Vigas de más de 5 m de luz que no soporten muros de fábrica                                                                                                                         L/400
+⁻     Vigas y viguetas de forjado que soporten muros de fábrica                                                                                                           L/500
+⁻     Ménsulas con la flecha medida en el extremo libre                                                                                                                   L/300
+⁻     Vigas o viguetas de cubierta                                                                                                                                        L/250
+⁻     Vigas de forjado sin soportación de equipos                                                                                                                         L/250
+Racks de cañerías:
+⁻     Vigas principales                                                                                                                                   L/400
+⁻     Flecha combinada de vigas intermedias y vigas longitudinales
+⁻     Viga de atado (L = luz de viga intermedia)                                                                                                                          L/200
+Vigas de forjado que soporten equipos:
+⁻     Estado de operación                                                                                                                                                 L/400
+⁻     Prueba hidráulica                                                                                                                                   L/250
+Puentes grúa:
+⁻     Vigas carril y monocarriles (vertical)                                                                                                                              L/750
+⁻     Vigas carril y monocarriles (horizontal)                                                                                                                            L/1500
+Salvo que se indiquen otros valores más rigurosos en los códigos nacionales o locales aplicables.
+Donde: L = luz teórica de la viga.
+
+
+
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  6 / 20
+                                                       #Título                     M0100 Estructuras de Acero
+    #Tipo                                               Especificación            #Código                 ES__-0001079
+    #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+    #Activo de la información                           YPF - Privada
+    #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+5.2.4.2          Desplazamientos admisibles
+Los desplazamientos horizontales máximos de estructuras debidos a viento o sismo no deben
+exceder los siguientes valores, según tipos de estructura y su funcionalidad:
+⁻     Pasarelas de paso y cubiertas sin puentes-grúa                                                                                                                                      H/150
+⁻     Estructuras de edificios con ocupación humana                                                                                                                                       H/500
+⁻     Máximo desplazamiento entre dos forjados adyacentes                                                                                                                 ∆H/300
+⁻     Racks de cañerías (conjunto de acciones combinadas c/viento o sismo)                                                                                                                H/250
+⁻     Estructuras de edificios que soporten equipos (estructura de proceso)                                                                                                               H/200
+⁻     Estructuras con puentes-grúa                                                                                                                                        H/400
+Salvo que se indiquen otros valores más rigurosos en los códigos nacionales o locales aplicables.
+Donde:
+H = Altura total de la estructura.
+∆H = Diferencia de elevación entre dos niveles adyacentes.
+Nota: En el caso de acciones sísmicas, los límites de desplazamiento lateral especificados
+controlarán los desplazamientos resultantes del cálculo sin que estos se hallen afectados por los
+parámetros de “ductilidad global de la estructura” que vengan establecidos en los respectivos códigos
+de diseño o normas sismorresistentes (se considerará µ = 1 cuando las acciones sísmicas se puedan
+plantear en el rango lineal).
+
+
+5.3 Diseño de estructuras de acero
+5.3.1 Criterios generales de diseño
+El diseño y detalle de los elementos estructurales deben cumplir con los requisitos establecidos en
+el presente apartado. En aquellos casos donde pudieran no existir normativas aplicables al respecto,
+se debe tomar como referencia el AISC, American Institute of Steel Construction, “Manual of Steel
+Construction”, última edición.
+En general, todas las estructuras deben ser soldadas en taller al máximo y atornilladas en campo.
+Cuando se trate de estructuras a instalar dentro de unidades en operación, estas se diseñarán de
+forma que se realicen las soldaduras en taller de prefabricación y se efectúe el montaje en campo
+mediante atornillado, tipo mecano, teniendo en cuenta la función a realizar y las interferencias
+existentes.
+El diseño de estructuras se deben realizar maximizando el uso de pórticos arriostrados siempre que
+sea posible, teniendo en cuenta la disposición de los equipos y de las cañerías. En los pórticos debe
+comprobarse que la colocación de riostras no impida el acceso a equipos y recipientes situados a
+
+
+
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  7 / 20
+                                                    #Título                     M0100 Estructuras de Acero
+ #Tipo                                               Especificación            #Código                 ES__-0001079
+ #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+nivel de operación o dificulta la circulación de los equipos móviles de elevación y transporte utilizados
+por mantenimiento.
+Las vigas metálicas que soporten cañerías no deben llevar redondo de apoyo, excepto para cañerías
+en pendiente donde se pueden colocar, previa aprobación de YPF.
+Se deben proveer agujeros para desagüe en todos los elementos donde el agua pueda acumularse.
+
+5.3.2 Uniones
+Las uniones sometidas a momentos de cualquier tipo se deben diseñar maximizando los detalles de
+atornillado en campo y de soldadura en taller. Se deben minimizar la cantidad de uniones soldadas
+en campo.
+Las uniones sometidas a momentos de cualquier tipo y otras uniones importantes por los esfuerzos
+que deban soportar, y a menos que se indique lo contrario, se debe diseñar y detallar en los planos
+de taller, basados a su vez en los planos unifilares y en los cálculos de la estructura realizados por
+la Ingeniería.
+A menos que se indique lo contrario, las uniones simples estándar entre vigas o entre vigas y pilares,
+pueden ser diseñadas y detalladas directamente por el Contratista de estructuras seleccionado,
+teniendo en cuenta la capacidad de carga de la viga.
+Para uniones abulonadas deben indicarse los requisitos a cumplir según Reglamento CIRSOC 305.
+Para uniones soldadas deben indicarse los requisitos a cumplir según AWS, American Welding
+Society: Standard D1.1 “Structural Welding Code”.
+
+5.3.3 Plataformas y pasarelas
+Todas las plataformas con nivel superior a 1 m deben estar provistas de barandas de 1100 mm de
+altura y guardapie de 150 mm de altura.
+Las plataformas principales de trabajo deben tener un ancho mínimo útil de 1250 mm. Las
+plataformas de paso deben tener un ancho mínimo útil de 1000 mm. Para plataformas de equipos
+verticales ver PE(EP)-M-0100.06 y para plataformas y escaleras en tanques ver PE(EP)-M-0100.07
+(este Plano Estándar se indica a modo orientativo, ya que el diseño de la escalera deberá realizarse
+específicamente en cada caso).
+El piso de plataformas y pasarelas generalmente debe ser de rejilla de acero galvanizada en caliente
+según se especifica en 5.1.6. También puede ser de otro tipo metal desplegado pesado, con la
+aprobación previa de YPF y siempre que se cumpla el requisito esencial en cuanto al tamaño de
+abertura máxima de los agujeros y rigidez de los elementos.
+Se preve resistencia suficiente en plataformas elevadas de servicio, para que las tapas o el fondo de
+estos equipos puedan apoyarse en cualquier lugar de ellas, al ser desmontadas durante el
+mantenimiento.
+Todos los cortes dados en la rejilla para su ajuste deberán ser galvanizados en frío.
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               8 / 20
+                                                    #Título                     M0100 Estructuras de Acero
+ #Tipo                                               Especificación            #Código                 ES__-0001079
+ #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+Todas las aberturas en el suelo de plataformas para el paso de cañerías o equipos que no estén
+protegidas, deben ser rebordeadas con un guardapie formado con una pletina de 150 x 4 mm como
+protección de mantenimiento.
+Las rampas deben tener una pendiente máxima del 12% cuando su longitud sea menor de 3 m, del
+10% cuando su longitud sea menor de 10 m o del 8% en el resto de los casos.
+Las plataformas elevadas en equipos próximos deben ser comunicadas entre sí, independientemente
+de las escaleras que requieran por sí mismas para comunicarse con otras plataformas o con el suelo.
+Las zonas o puntos a comunicar deben ser convenidos con los especialistas de cañerías.
+Los tramos de plataformas desmontables que se requieran para mantenimiento y/o acceso para
+operación, deben indicarse debidamente en los planos en la fase de diseño y deben ser convenidos
+con los especialistas de cañerías.
+
+5.3.4 Escaleras (de acuerdo con PE(EP)-M-0100.02)
+Las escaleras deben ser usadas preferentemente para dar acceso a equipos, los cuales requieren
+atenciones frecuentes de operación y mantenimiento.
+Las escaleras deben tener un ancho mínimo útil de 1100 mm (según NFPA 101).
+Cada tramo no debe tener una diferencia de nivel superior a 3600 mm.
+La profundidad de los descansos intermedios debe ser como mínimo de 1000 mm.
+Todos los peldaños en general deben ser del tipo de rejilla de 30 x 30 x 30 x 3 galvanizada, de
+dentado antideslizante con presillas galvanizadas y estarán provistas de malla electrosoldada de
+seguridad de acero estriado galvanizado que limite el tamaño de la abertura máxima a 8 mm x 8 mm.
+Deberán tener una “nariz de escalón” de chapa antideslizante. También deben ser aceptables, previa
+aprobación de YPF, otras opciones citadas para suelos de plataformas en 5.3.3 de esta
+Especificación.
+Los escalones, excluidos los salientes, deben tener una huella neta de 255 mm y la contrahuella de
+200 mm de altura. El ancho y altura deben permanecer constantes en cada escalera. Ver Plano
+Estándar PE(EP)-M-0100.02.
+La rejilla de los descansos intermedios ha de llevar en el borde el mismo elemento antideslizante que
+el resto de los escalones estándar.
+Los durmientes o zancas longitudinales de las escaleras que terminen al nivel del suelo deben apoyar
+en una base de hormigón. Ver Planos Estándar PE(EP)-M-0100.02 y PE(EP)-Q-0100.03.
+
+5.3.5 Escaleras verticales (tipo gato)
+No se deben instalar escaleras de altura superior a 6.0 m. Se deben instalar plataformas de descanso
+cada 6.0 m o fracción respectivamente, cambiando la situación de la escalera de forma que sea
+necesario el paso por la plataforma para acceder al siguiente tramo.
+Se deben construir con materiales incombustibles.
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               9 / 20
+                                                       #Título                     M0100 Estructuras de Acero
+    #Tipo                                               Especificación            #Código                 ES__-0001079
+    #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+    #Activo de la información                           YPF - Privada
+    #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+El ancho de las escaleras debe ser de 450 mm y los peldaños se deben construir con redondos de
+20 mm de diámetro, soldados cada 300 mm.
+Se deben instalar jaulas de seguridad en todas las escaleras que arrancan de plataformas o niveles
+de trabajo por encima del suelo (nivel 0,00) y en las que arrancando del suelo tengan una longitud
+mayor de 3000 mm. La jaula debe comenzar a 2250 mm del suelo o del nivel de arranque.
+Los accesos a escaleras desde las plataformas deben estar provistos de barandas móviles de
+seguridad o de cadenas, si no es posible montar la baranda móvil.
+La distancia entre el frente de los escalones y las paredes más próximas al lado de ascenso, debe
+ser por lo menos de 0,75 m. y debe haber un espacio libre de 0,40 m. a ambos lados del eje de la
+escalera.
+Se deben disponer escaleras en todos los niveles elevados de trabajo con acceso mediante escalera
+en el lado opuesto a ésta, para permitir un escape alternativo en situación de emergencia y en todos
+los niveles elevados de trabajo, de forma que no haya que recorrer distancias superiores a 15.00 m.
+Las escaleras deben terminar sin zócalos en el suelo, excepto casos especiales.
+En escaleras que suben hasta una plataforma y no continúan, se deben prolongar los barrotes 1550
+mm por encima de dicha plataforma.
+Las escaleras y las jaulas deben estar libres de obstrucciones.
+En las escaleras que arrancan de plataforma, cuyo ancho entre la escalera y la baranda sea inferior
+a 1200 mm, las pletinas verticales de la jaula de seguridad deben prolongarse hasta la baranda de
+la plataforma. Ver Plano Estándar PE(EP)-M-0100.03.
+La separación entre las escaleras y paredes u obstáculos en su parte posterior, no debe ser en
+ningún caso inferior a 150 mm.
+
+5.3.6 Barandas
+Las barandas deben estar compuestas de:
+⁻     Pasamanos                                                                             Tubos 1-1/4" Sch. 40
+⁻     Barra media                                                                           PL 50 x 6
+⁻     Guardapie                                                             PL 150 x 6
+⁻     Espacio máx. entre postes                                                             1500 mm
+⁻     Altura total sobre el suelo                                                           1100 mm
+⁻     Postes (para barandas circulares)                                                     L 80.8
+⁻     Postes (para barandas rectas)                                                         L 80.8
+Las barandas de las escaleras deben sobresalir 150 mm a partir del frente o contrahuella del primer
+escalón.
+
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               10 / 20
+                                                    #Título                     M0100 Estructuras de Acero
+ #Tipo                                               Especificación            #Código                 ES__-0001079
+ #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+La altura de baranda desde la línea teórica (línea de resalte de los escalones o nivel superior de
+rejilla), debe ser de 1100 mm. Ver Plano Estándar PE(EP)-M-0100.04.
+
+
+5.4 Ignifugado
+Aquellas estructuras que requieran ser ignifugadas de acuerdo con el plano de áreas potenciales de
+incendio, deben quedar señaladas en el plano de estructuras con el fin de que el Fabricante de la
+misma prevea la instalación de las correspondientes tuercas o clips de sujeción del ignifugado. El
+ignifugado debe cumplir los requisitos de la Especificación ED(EP)-N-02.00 de YPF.
+
+
+5.5 Pintura
+En lo referente al acabado de la fabricación, en general, todas las superficies de acero estructural,
+incluyendo las que deban ignifugarse, deben ser tratadas de acuerdo con la Especificación de YPF
+ED(EP)-B-06.00.
+Las superficies de contacto de todas las uniones a realizar en campo deben pintarse de acuerdo con
+las exigencias del proyecto. Se debe prestar especial atención a aquellas superficies de difícil
+accesibilidad para el pintado, una vez montadas.
+Las superficies de contacto de las uniones por rozamiento (con apriete de los elementos que une)
+con tornillos de alta resistencia, consideradas de deslizamiento crítico, no se pintarán, sólo se deben
+chorrear en taller según procedimiento aprobado.
+Las superficies que se vayan a ignifugar, también deben recibir el tratamiento indicado en la
+Especificación de Diseño ED(EP)-N-02.00.
+Antes de aplicar la protección anticorrosiva, se deben eliminar de las superficies todos los cantos
+vivos, rebabas (incluyendo rebabas de taladros para tornillos), proyecciones de soldadura, escoria,
+cascarillas de laminación y otros elementos extraños.
+Los tornillos galvanizados se deben usar para las uniones de estructura de acero galvanizado y los
+tornillos sin tratamiento superficial para el resto de trabajos en acero. Los tornillos se deben pintar de
+la misma manera que la estructura de acero.
+Se requiere que todas estas actividades se realicen en taller, fuera de las Instalaciones de YPF. La
+capa de pintura de acabado, en general, y para estructuras atornilladas en particular, también debe
+ser aplicada en taller.
+
+
+5.6 Preparación para el envío
+La preparación para el envío debe ser según lo indicado en la Especificación ED(EP)-B-01.00 de
+YPF.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            11 / 20
+                                                       #Título                     M0100 Estructuras de Acero
+    #Tipo                                               Especificación            #Código                 ES__-0001079
+    #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+    #Activo de la información                           YPF - Privada
+    #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+5.7 Documentos de diseño
+5.7.1 Generalidades
+
+5.7.1.1          Responsabilidades de la Ingeniería
+La Ingeniería debe elaborar los siguientes documentos:
+⁻     Planos de las estructuras, con detalle de las uniones.
+⁻     Cálculos de la estructura con indicación expresa de las cargas y sobrecargas tenidas en cuenta,
+      el método de cálculo empleado y el cálculo de los esfuerzos y momentos que actúan sobre las
+      uniones, así como los análisis de tensiones y deformaciones pertinentes (Memoria de Cálculo).
+⁻     Documentación para compra y/o montaje de este material, incluidos los Pliegos de Condiciones
+      que se estimen necesarios (Requisición).
+En el caso de plantearse como un pedido, realiza la requisición de compra correspondiente. En el
+caso de plantearse como un contrato realiza la memoria descriptiva y el preciario.
+En ambos casos mide o estima las cantidades de cada uno de los materiales a suministrar (perfiles,
+barandas, rejilla, peldaños, etc.).
+La Ingeniería debe comprobar y aprobar los planos constructivos de taller que presente el Contratista
+de estructuras, en lo que se refiere a su concordancia con los planos de Ingeniería entregados.
+Esta comprobación no reduce en ningún caso la responsabilidad del Contratista respecto del material
+fabricado y/o suministrado por él, que debe resistir los esfuerzos y cargas indicadas por la Ingeniería.
+Los materiales deben ser inspeccionados y aprobados por la Ingeniería de acuerdo con las normas
+mencionadas como referencias.
+5.7.1.2          Responsabilidades del Contratista
+El Contratista adjudicatario del suministro, prefabricación y montaje de la estructura debe aplicar
+todos los requerimientos recogidos en las especificaciones de construcción que formen parte de los
+pliegos de licitación.
+Antes de la iniciación de cualquier trabajo de prefabricación, el Contratista debe:
+⁻     Realizar el diseño de las uniones de acuerdo con los cálculos facilitados por la Ingeniería.
+⁻     Realizar comprobaciones dimensionales de las partes detalladas por la Ingeniería y avisar
+      inmediatamente en el caso de encontrar que alguna parte no ha sido adecuadamente diseñada.
+⁻     Preparar los planos de construcción totalmente detallados y someterlos a la Ingeniería para su
+      revisión y/o aprobación.
+Extensión del suministro:
+•     El Contratista suministra los perfiles, placas, tornillos y tuercas para la prefabricación y el montaje
+      de todas las estructuras encargadas que figuren en los planos unifilares de la Ingeniería
+      (escaleras inclinadas (escaleras), escaleras verticales, jaulas de seguridad, pernos de anclaje de
+      los equipos a las estructuras, barandas, zancas, peldaños de rejilla y guardapies, suelos de rejilla,
+
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               12 / 20
+                                                       #Título                     M0100 Estructuras de Acero
+    #Tipo                                               Especificación            #Código                 ES__-0001079
+    #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+    #Activo de la información                           YPF - Privada
+    #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+      pescantes, vigas carril para puentes grúa, vigas para monorrailes, caminos de rodadura para
+      puentes grúa, pilares y vigas para la construcción de estructuras porticadas, etc.).
+•     Los siguientes materiales, salvo indicación expresa en contra, no son incluidos en el suministro
+      del Contratista:
+      •       Puentes grúa
+      •       Cabrias para pescantes, puentes grúa, cabestrantes para monorrieles y cualquier otro equipo
+              de elevación.
+      •       Pernos de anclaje (para anclar el hormigón).
+
+5.7.2 Memoria de cálculo
+Los cálculos se deben realizar según esta Especificación de Diseño y se deben presentar como una
+memoria de cálculo con todas las referencias para su comprobación.
+Las memorias de cálculo se deben presentar en castellano y, en general, deben estar compuestas
+como sigue:
+      a) Hoja de portada con el título y número/referencia del proyecto y el nombre del autor, del que
+         comprueba y del que aprueba.
+      b) Índice del documento (memoria).
+      c) Notas y referencias generales, y licencia comercial del software utilizado
+      d) Descripción de la estructura y de sus características.
+      e) Esquema estructural, con sus dimensiones básicas
+      f)      Análisis de cargas, según ED(EP)-M-02.00
+      g) Hipótesis de combinaciones de carga.
+      h) Análisis tensional, indicando y describiendo con claridad las fórmulas aplicadas, símbolos,
+         unidades y referencias (bibliografía y documentación técnica), procedimientos del programa
+         informático, diagramas de esfuerzos actuantes en los diferentes elementos de la estructura y
+         cálculo de tensiones.
+      i)      Análisis de deformaciones.
+      j)      Comprobación de los estados de tensiones y deformaciones de acuerdo con las limitaciones
+              establecidas en el código de diseño utilizado y en esta Especificación.
+      k) Anexos (si está disponible y/o aclara y/o es necesario):
+      •       Entradas y salidas de datos del ordenador con referencias claras.
+      •       Descripción de los procedimientos de los programas informáticos utilizados
+      •       Planos unifilares o del Proveedor, etc.
+      •       Recopilación de fotocopias de la documentación técnica de referencia no común.
+
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               13 / 20
+                                                    #Título                     M0100 Estructuras de Acero
+ #Tipo                                               Especificación            #Código                 ES__-0001079
+ #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+5.7.3 Planos
+Los planos se deben realizar conforme a la normativa AB-IYO-NA-09-001, “Nomenclatura y
+Simbología de planos y documentos en proyectos de facilidades de superficie” y los requerimientos
+solicitados en los DBD del proyecto.
+
+
+5.8 Requerimientos locales y nacionales especiales
+Este apartado se refiere a todos los requerimientos obligatorios, referencias legales, códigos y datos
+estadísticos relevantes aplicables a los principales países donde la empresa actúa, así como a la
+situación especial referida a las condiciones particulares del lugar, sin considerar la información
+proporcionada por el estudio geotécnico del terreno.
+Previo al comienzo de las actividades de diseño, la Ingeniería debe comprobar que estén disponibles
+las últimas revisiones o ediciones de todos los documentos de referencia, de los códigos y de las
+normas.
+Los requerimientos del país, las referencias legales, los códigos y los datos especiales (tales como
+la especificación técnica para los materiales disponibles localmente, las tensiones admisibles de
+cálculo, coeficientes de seguridad y otros similares) deben tomarse según lo especificado en la
+Especificación ED(EP)-M-02.00.
+
+
+5.9 Códigos
+Todos los códigos de referencia, normas y documentos mencionados deben ser considerados como
+parte integral de esta Especificación, al igual que todos los anexos, actualizaciones y documentos
+de referencia en ella incluidos.
+En general todas las normas, las reglas, los códigos y los requerimientos especiales locales y/o
+nacionales, deben cumplirse y prevalecer sobre otros, si son más restrictivos que esta Especificación
+o que los Planos Estándar de referencia. La mayor parte de las referencias locales o nacionales se
+relacionan en la ED mencionada en el ítem 7 de esta Especificación. Pueden aplicarse, además, los
+códigos internacionalmente reconocidos y aceptados en los casos no cubiertos por esta
+Especificación ni por los otros códigos de referencia.
+
+
+5.10 Bibliografía de referencia
+Para los casos particulares que no estén cubiertos por esta Especificación ni por los otros códigos
+de referencia, deben aplicarse los métodos internacionalmente conocidos obtenidos de los
+libros/documentos técnicos y manuales. En este caso, en la memoria de cálculo, debe indicarse
+claramente el autor, el título y la edición.
+Deberá adjuntarse al cálculo una fotocopia de la recopilación de la documentación técnica no común
+utilizada.
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            14 / 20
+                                                   #Título                     M0100 Estructuras de Acero
+#Tipo                                               Especificación            #Código                 ES__-0001079
+#Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+#Activo de la información                           YPF - Privada
+#Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+6 Roles, Indicadores, registros y riesgos del proceso
+
+6.1     Roles
+                        Rol                                                                  Puestos / Unidad/es Organizativa/s
+ N/A                                                         N/A
+
+
+6.2 Indicadores
+ Indicador                       Fórmula                        Frecuencia                    Responsable                            Cliente                               Registro
+   (KPI)                                                                                                                            Interno /
+                                                                                                                                    Externo
+N/A                       N/A                                 N/A                            N/A                               N/A                              N/A
+
+
+
+6.3 Registros
+      Registro                   Responsable                       Responsable                       Frecuencia de                      Disposición y                         Tiempo de
+                                  del registro                      del archivo                        registro /                        protección                            archivo
+                                                                                                        archivo
+N/A
+
+
+
+
+6.4 Riesgos y acciones mitigantes
+ Codificación                                        Riesgo                                                        Origen                                                Controles
+ de Referencia                                                                                                                                                           mitigantes
+N/A
+
+
+6.5 Reglas de Negocio
+                          Nombre                                                                                              Descripción
+ N/A
+
+
+
+7 Anexos y referencias
+
+7.1 Anexos
+
+7.1.1 Anexos Especiales
+#Anexos Especiales
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                        o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                           15 / 20
+                                                       #Título                     M0100 Estructuras de Acero
+#Tipo                                                   Especificación            #Código                 ES__-0001079
+#Fecha de Vigencia                                      11/09/2023                #Versión                2.1
+#Activo de la información                               YPF - Privada
+#Proceso                                                21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+#Nº                                                                                                     Nombre
+N/A
+
+
+7.1.2 Otros anexos
+#Otros Anexos
+    #Nº                                                                                                   Nombre
+I                PE(EP)-M-0100.01H1
+II               PE(EP)-M-0100.02H1
+III              PE(EP)-M-0100.02H2
+IV               PE(EP)-M-0100.02H3
+V                PE(EP)-M-0100.03H1
+VI               PE(EP)-M-0100.03H2
+VII              PE(EP)-M-0100.03H3
+VIII             PE(EP)-M-0100.03H4
+IX               PE(EP)-M-0100.04H1
+X                PE(EP)-M-0100.04H2
+XI               PE(EP)-M-0100.04H3
+XII              PE(EP)-M-0100.05H1
+XIII             PE(EP)-M-0100.06H1
+XIV              PE(EP)-M-0100.06H2
+XV               PE(EP)-M-0100.06H3
+XVI              PE(EP)-M-0100.07H1
+XVII             PE(EP)-M-0100.07H2
+XVIII            PE(EP)-M-0100.07H3
+XIX              PE(EP)-M-0100.07H4
+
+
+
+
+7.2 Normativa relacionada
+     Categoría                     Título                                                                                                                 Código
+
+     Normativa                     Preparación para transporte de equipos y materiales.                                                                   ED(EP)-B-01.00
+     Interna YPF                                                                                                                                          ES__-0001051
+
+
+
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               16 / 20
+                                                   #Título                     M0100 Estructuras de Acero
+#Tipo                                               Especificación            #Código                 ES__-0001079
+#Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+#Activo de la información                           YPF - Privada
+#Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+ Categoría                     Título                                                                                                                 Código
+
+                               Protección anticorrosiva con recubrimientos.                                                                           ED(EP)-B-06.00
+                                                                                                                                                      ES__-0002657
+
+                               Cargas para diseño de estructuras.                                                                                     ED(EP)-M-02.00
+                                                                                                                                                      ES__-0001078
+
+                               Protección pasiva antifuego                                                                                            ED(EP)-N-02.00
+                                                                                                                                                      ES__-0002644
+
+                               Estructuras de hormigón y cimentaciones.                                                                               ED(EP)-Q-01.00
+                                                                                                                                                      ES__-0000975
+
+                               Estructuras de acero                                                                                                   PE(EP)-M-0100.01
+                                                                                                                                                      ES__-0001079
+
+                               Estructuras metálicas – Escalera tipo A y B (3 hojas)                                                                  PE(EP)-M-0100.02
+                                                                                                                                                      ES__-0001079
+
+                               Estructuras metálicas – Escaleras verticales (4 hojas)                                                                 PE(EP)-M-0100.03
+                                                                                                                                                      ES__-0001079
+
+                               Estructuras metálicas – barandas en escaleras (3 hojas)                                                                PE(EP)-M-0100.04
+                                                                                                                                                      ES__-0001079
+
+                               Estructuras metálicas – Fijaciones rejilla                                                                             PE(EP)-M-0100.05
+                                                                                                                                                      ES__-0001079
+
+                               Plataformas en recipientes verticales (3 hojas)                                                                        PE(EP)-M-0100.06
+                                                                                                                                                      ES__-0001079
+
+                               Escaleras circulares y plataformas en tanques (4 hojas)                                                                PE(EP)-M-0100.07
+                                                                                                                                                      ES__-0001079
+
+                               Pedestales típicos sobre pavimento para escaleras                                                                      PE(EP)-Q-0100.03
+                                                                                                                                                      ES__-0000975
+
+                               Eurocódigo 3, Diseño de estructuras de acero.
+ Normativa
+                               AISC, American Institute of Steel Construction, latest
+ Externa                       edition of Manual of steel Construction – ASD, allowable
+                               stress design.
+
+
+
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                        o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                           17 / 20
+                                                    #Título                     M0100 Estructuras de Acero
+ #Tipo                                               Especificación            #Código                 ES__-0001079
+ #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+  Categoría                     Título                                                                                                                 Código
+
+                                Specification for the Design, Fabrication and Erection of
+                                Structural Steel for Building.
+
+                                Codes and Standards practice for steel buildings and
+                                bridges.
+
+                                Specification for structural joints using ASTM.A.325 or
+                                ASTM.A.490 bolts.
+
+                                AWS, American Welding Society: Standard                                                                 D.11
+                                “Structural Welding Code” , latest edition.
+
+                                International Society of Building Officials: UBC – “Uniform
+                                Building Code”.
+
+                                IRAM-IAS (Instituto                           Argentino              de        Normalización                   y
+                                Certificación).
+
+                                CIRSOC (Centro de Investigación de los Reglamentos
+                                Nacionales de Seguridad para las Obras Civiles).
+
+  Normativa
+                                N/A                                                                                                                    N/A
+  Derogada
+
+  Otras                            N/A
+                                                                                                                                                       N/A
+  referencias
+
+
+
+
+7.3 Definiciones y abreviaturas
+     Término                        Abreviatura                                                                           Descripción
+  N/A
+
+
+
+8 Aprobación
+
+8.1 Vigencia
+Esta normativa entra en vigencia a partir de su aprobación e inmediata publicación.
+Los abajo firmantes asumen la responsabilidad de implantar, controlar el cumplimiento y actualizar
+el presente documento cada vez que fuera necesario.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            18 / 20
+                                                    #Título                     M0100 Estructuras de Acero
+ #Tipo                                               Especificación            #Código                 ES__-0001079
+ #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+8.2 Disposiciones generales y transitorias
+N/A.
+
+
+8.3 Historial
+
+   № Revisión                              Fecha Aprobación                                                                       Principales cambios
+           0.0                                       14/08/09                                 Documento original
+           1.0                                    21/12/2020                                  Actualización versión original
+                                                                                              Se elimina el Anexo I correspondiente a la última
+           2.1                              Ver encabezado                                    versión SGNT, debido a que era un Documento No
+                                                                                              Vigente: AB-IYO-ED-09-245-01.
+
+
+8.4 Flujo de Aprobación
+#Participantes
+              #Autor                                        #Referente de                                  #Dueño de Proceso                                      #Administrador
+                                                              Proceso                                                                                            Cuerpo Normativo /
+                                                                                                                                                                      Negocio
+    PANZA, VIRGINIA                                   BODEGA, EDUARDO                                         SZWED, CRISTINA                                           GALDI, LUCILA
+                                                         GUILLERMO                                               LILIANA
+
+#Colaboradores
+                                                                                             Nombre
+                                 CARDINALE CARDINALE, LORENA (Servicio Externo en YPF)
+                                        ORTEGA, GONZALO MARTIN (Servicio Externo en YPF)
+                                                  SAKUGAWA, DANIEL (Servicio Externo en YPF)
+                                     GANCHEGUI, OSCAR RICARDO (Servicio Externo en YPF)
+                                                                    SABATINI, SEBASTIAN GUIDO
+                                        FERRARI, GERARDO FABIAN (Servicio Externo en YPF)
+
+#Revisores
+                                                                                             Nombre
+                                                                                                   N/A
+
+#Aprobadores
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            19 / 20
+                                                    #Título                     M0100 Estructuras de Acero
+ #Tipo                                               Especificación            #Código                 ES__-0001079
+ #Fecha de Vigencia                                  11/09/2023                #Versión                2.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+                                                                                             Nombre
+                                                                       SZWED, CRISTINA LILIANA
+
+
+
+
+9 Anexo
+N/A.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            20 / 20
+

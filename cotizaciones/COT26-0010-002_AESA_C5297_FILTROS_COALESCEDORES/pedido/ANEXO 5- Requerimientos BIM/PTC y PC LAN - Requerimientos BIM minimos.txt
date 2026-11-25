@@ -1,0 +1,407 @@
+                                                                                                                                                                                     Documento: YPF-Privado
+
+                                                     #Título Requerimientos BIM Mínimos
+ #Tipo                                                Tipo                                            #Código                                    Codigo
+ #Fecha de Vigencia                                   01-01-0001                                      #Versión                                   Preliminar
+ #Activo de la información                            Por Definir
+ #Proceso                                             Por Definir
+
+
+
+
+1 Índice
+
+Contenido
+1    ÍNDICE ......................................................................................................................................................... 1
+2    OBJETIVO ................................................................................................................................................... 1
+3    GLOSARIO .................................................................................................................................................. 1
+4    CONSIDERACIONES .................................................................................................................................. 2
+5    REQUERIMIENTOS BIM BÁSICOS A CONSIDERAR............................................................................... 3
+
+
+
+
+2 Objetivo
+Establecer los requerimientos básicos de la Metodología BIM a ser considerados para el desarrollo
+del proyecto.
+
+
+3 Glosario
+BIM: La Metodología BIM (Building Information Modeling) es un marco de trabajo colaborativo que
+fomenta y regula la estandarización de la información que compone a un activo digital, como lo es
+un Modelo 3D Federado. Esta información se almacena, se comparte y se visualiza dentro de un
+mismo entorno colaborativo conocido como “CDE”.
+Modelo Federado: Modelo 3D multidisciplinario que contiene toda la información gráfica,
+estructurada (documentos) y no estructurada (atributos y propiedades) vinculada a cada uno de los
+elementos que componen el modelo. Su enfoque principal es el de representar al “Activo Digital” del
+Proyecto.
+CDE: Un Common Data Environment (o Entorno Común de Datos) es un ecosistema informático que
+sirve de repositorio colaborativo de datos, documentos y archivos, cuyo enfoque principal es el de
+centralizar toda la información del proyecto, disponibilizarla a todos los participantes del mismo y
+garantizar la integridad y veracidad de la información.
+Elemento 3D: Componente tridimensional que está compuesto por una representación gráfica,
+documentos asociados y datos o atributos que lo definen. Estos elementos forman parte del Modelo
+Federado cuando se los asocia con otros elementos 3D de diversas disciplinas.
+
+
+
+
+    COPIA NO CONTROLADA                                                                                                                                       Documento: YPF-Privado
+    [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                          o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                   1/7
+                                                                                                                                                                                    Documento: YPF-Privado
+
+                                                    #Título Requerimientos BIM Mínimos
+ #Tipo                                               Tipo                                            #Código                                    Codigo
+ #Fecha de Vigencia                                  01-01-0001                                      #Versión                                   Preliminar
+ #Activo de la información                           Por Definir
+ #Proceso                                            Por Definir
+
+
+4 Consideraciones
+Bajo el contexto de la Transformación Digital, hoy día la importancia del dato juega un papel crucial
+en el desarrollo de proyectos de distinta índole. A raíz de ello, la Metodología BIM busca estandarizar
+la información que se produce para el desarrollo de un Activo Digital (o Modelo Federado), con el
+propósito de que ésta pueda ser utilizada productivamente a lo largo del ciclo de vida del Activo Físico
+(desde etapas conceptuales del proyecto hasta la operación y mantenimiento del mismo).
+La Metodología BIM trae múltiples beneficios dentro de la gestión de proyectos y gestión de Activos,
+ya que tiene un enfoque trasversal y busca fomentar la colaboración entre todos los participantes del
+proyecto y de la etapa operativa. Algunos de los beneficios más resaltantes se tienen:
+
+    •       Brinda valor agregado a la gestión del Proyecto y del Activo Físico a través de la
+            disponibilidad y centralización del dato dentro de un CDE y un Modelo Federado,
+            garantizando su integridad y veracidad.
+
+    •       Estandariza y define la información que contendrá el Modelo Federado, de tal forma que éste
+            cuente con todos los datos necesarios para ser aprovechados desde la etapa de Ingeniería,
+            hasta la etapa de Operación y Mantenimiento.
+
+    •       Promueve y formaliza de manera contractual el uso de flujos de información para garantizar
+            que la misma se produzca y se comparta de la manera más óptima, garantizando una
+            correcta trazabilidad de inicio a fin.
+
+Si bien la Metodología BIM es muy amplia y abarca más allá de todo lo mencionado anteriormente,
+el presente documento busca principalmente establecer ciertos requerimientos básicos y mínimos a
+ser considerados para el desarrollo de este proyecto, de tal forma que se promueva su
+implementación dentro de la compañía.
+
+Aclaración: este documento no tiene como objetivo sustituir o reemplazar el documento “A0400 -
+ALCANCE Y REQUISITOS PARA LA ELABORACIÓN DE MAQUETAS VIRTUALES”, sino más bien
+complementarlo con ciertos requerimientos para enriquecer el grado de detalle que tendrá el Modelo
+Federado a nivel de información no gráfica (propiedades y metadatos). Todo el detalle de modelado
+gráfico se encuentra en el documento mencionado.
+
+
+
+
+   COPIA NO CONTROLADA                                                                                                                                       Documento: YPF-Privado
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  2/7
+                                                                                                                                                                                    Documento: YPF-Privado
+
+                                                    #Título Requerimientos BIM Mínimos
+ #Tipo                                               Tipo                                            #Código                                    Codigo
+ #Fecha de Vigencia                                  01-01-0001                                      #Versión                                   Preliminar
+ #Activo de la información                           Por Definir
+ #Proceso                                            Por Definir
+
+
+5 Requerimientos BIM Básicos a Considerar
+
+   1. Modelo Federado:
+Se deberá hacer entrega de un Modelo Federado Multidisciplinario (modelo 3D con todas las
+disciplinas) a través de un archivo en formato NWD (Navisworks), de tal forma que se pueda
+garantizar la integración del modelo tridimensional y su coordinación interdisciplinaria. En ese
+sentido, se deberá garantizar:
+                   a. Elementos 3D correctamente posicionados espacialmente, sin interferencia con otros
+                      elementos o posicionados fuera de rango (validado a través de Clash Detections).
+                   b. Ubicación de los Elementos 3D según lo que se defina en el Layout general del
+                      proyecto.
+
+
+   2. Información Asociada al Modelo Federado
+Se deberá hacer entrega de un Modelo Federado que incluya información asociada dentro de los
+elementos principales y secundarios del proyecto, con atributos que permitan su uso durante las
+etapas de ingeniería, construcción, operación y mantenimiento del Activo Físico.
+Como atributos a incluir, se deberán considerar los siguientes dentro de cada clasificación:
+
+   a. Piping
+           Ejemplo de elementos Incluidos: líneas de piping (spools, pipelines, etc)
+
+ Detalle geométrico definido                                                                 - Dimensiones externas exactas (As-Built)
+ (dimensiones dentro del modelo 3D)                                                          - Modelo simplificado (excluir elementos de instalación
+                                                                                             sobre uniones bridadas, tales como tuercas, arandelas,
+                                                                                             etc)
+
+ Atributos mínimos requeridos                                                                - Tag de Spool / pipeline
+ (utilizar el Sistema Internacional de Unidades)                                             - Diámetro nominal
+ Como excepción a lo anterior, para indicar el                                               - Piping Class
+ diámetro de líneas y conexiones de equipos                                                  - Schedule
+ se utilizan pulgadas y libras para rating de                                                - Número de línea
+ bridas. Así mismo se admitirán presiones en                                                 - Tipo de aislamiento (según aplique)
+ kgF/cm2g.                                                                                   - Espesor de aislamiento (según aplique)
+                                                                                             - Tipo de fluido
+                                                                                             - Presión de diseño (max y min)
+                                                                                             - Presión de operación (max y min)
+                                                                                             - Temperatura de diseño (max y min)
+
+
+
+   COPIA NO CONTROLADA                                                                                                                                       Documento: YPF-Privado
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  3/7
+                                                                                                                                                                                   Documento: YPF-Privado
+
+                                                   #Título Requerimientos BIM Mínimos
+#Tipo                                               Tipo                                            #Código                                    Codigo
+#Fecha de Vigencia                                  01-01-0001                                      #Versión                                   Preliminar
+#Activo de la información                           Por Definir
+#Proceso                                            Por Definir
+
+
+                                                                                            - Temperatura de operación (max y min)
+                                                                                            - Recubrimiento interno y externo (según aplique)
+                                                                                            - Traceado
+                                                                                            - Encamisado (según aplique)
+
+
+
+
+  b. Equipos Mecánicos (Estáticos y Rotantes)
+
+          Ejemplo de elementos Incluidos: Tanques, Intercambiadores, Separadores, Torres de enfriamiento,
+          Calderas, Filtros, Eyectores, Bombas, Compresores, Generadores, Equipos de aire comprimido, etc.
+
+Detalle geométrico definido                                                                  - Dimensiones externas exactas (As-Built)
+(dimensiones dentro del modelo 3D)                                                           - Modelo mecánico simplificado (excluir elementos de
+                                                                                             sujeción como tornillos, arandelas, tuercas, así como
+                                                                                             también todos los componentes internos del elemento)
+
+Atributos mínimos requeridos                                                                 - Tag de equipo
+(utilizar el Sistema Internacional de Unidades)                                              - Descripción breve
+Como excepción a lo anterior, para indicar el                                                - Presión de diseño (max, min y normal)
+diámetro de líneas y conexiones de equipos se                                                - Presión de operación (max, min y normal)
+utilizan pulgadas y libras para rating de bridas.                                            - Temperatura de diseño (max, min y normal)
+Así mismo se admitirán presiones en gF/cm2g.                                                 - Temperatura de operación (max, min y normal)
+                                                                                             - Fabricante
+                                                                                             - Modelo
+Equipos Estáticos                                                                            - Material constructivo
+                                                                                             - Espesor de aislamiento (según aplique)
+                                                                                             - Dimensiones físicas exactas (ancho x altura x longitud)
+                                                                                             - Fluido de servicio (según aplique)
+
+                                                                                             - Tag de equipo
+                                                                                             - Descripción breve
+                                                                                             - Presión de diseño (max y min)
+                                                                                             - Temperatura de diseño (max y min)
+                                                                                             - Fabricante
+Equipos Rotantes
+                                                                                             - Modelo
+                                                                                             - Material principal
+                                                                                             - Dimensiones físicas exactas (ancho x altura x longitud)
+                                                                                             - Fluido de servicio (según aplique)
+                                                                                             - Capacidad
+
+
+
+
+  COPIA NO CONTROLADA                                                                                                                                       Documento: YPF-Privado
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                        o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                 4/7
+                                                                                                                                                                                   Documento: YPF-Privado
+
+                                                   #Título Requerimientos BIM Mínimos
+#Tipo                                               Tipo                                            #Código                                    Codigo
+#Fecha de Vigencia                                  01-01-0001                                      #Versión                                   Preliminar
+#Activo de la información                           Por Definir
+#Proceso                                            Por Definir
+
+
+  c. Instrumentos de Medición
+          Ejemplo de elementos Incluidos: instrumentos de medición de presión, de temperatura, de caudal,
+          de nivel, de composición, de calidad, de gases, de vibración, densidad y viscosidad, etc.
+
+Detalle geométrico definido                                                                 - Dimensiones externas exactas (As-Built)
+(dimensiones dentro del modelo 3D)
+                                                                                            - Modelo simplificado (excluir elementos de sujeción
+                                                                                            como tornillos, arandelas, tuercas, así como también
+                                                                                            todos los componentes internos del elemento)
+
+Atributos mínimos requeridos                                                                - Tag del instrumento
+(utilizar el Sistema Internacional de Unidades)                                             - Descripción breve
+Como excepción a lo anterior, para indicar el                                               - Tipo de instrumento (medición de caudal, temperatura,
+diámetro de conexiones se utilizan pulgadas y                                               presión, etc)
+libras para rating de bridas.                                                               - Modelo
+                                                                                            - Fabricante
+                                                                                            - Diámetro de conexiones
+                                                                                            - Fluido de servicio (según aplique)
+                                                                                            - Ubicación (zona, área o unidad dentro del Activo)
+
+
+
+  d. Instrumentos de Control
+          Ejemplo de elementos Incluidos: válvulas de control neumáticas, motorizadas, manuales, de alivio
+          de presión automáticas, reguladores de presión, etc.
+
+Detalle geométrico definido                                                                 - Dimensiones externas exactas (As-Built)
+(dimensiones dentro del modelo 3D)
+                                                                                            - Modelo simplificado (excluir elementos de sujeción
+                                                                                            como tornillos, arandelas, tuercas, así como también
+                                                                                            todos los componentes internos del elemento)
+
+Atributos mínimos requeridos                                                                - Tag del instrumento
+(utilizar el Sistema Internacional de Unidades)                                             - Descripción breve
+Como excepción a lo anterior, para indicar el                                               - Tipo de instrumento (tipo de válvula)
+diámetro de conexiones se utilizan pulgadas y                                               - Modelo
+libras para rating de bridas.                                                               - Fabricante
+                                                                                            - Tipo de actuador (según aplique)
+                                                                                            - Diámetro de conexiones
+                                                                                            - Fluido de servicio (según aplique)
+                                                                                            - Ubicación (zona, área o unidad dentro del Activo)
+
+
+
+
+  COPIA NO CONTROLADA                                                                                                                                       Documento: YPF-Privado
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                        o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                 5/7
+                                                                                                                                                                                   Documento: YPF-Privado
+
+                                                   #Título Requerimientos BIM Mínimos
+#Tipo                                               Tipo                                            #Código                                    Codigo
+#Fecha de Vigencia                                  01-01-0001                                      #Versión                                   Preliminar
+#Activo de la información                           Por Definir
+#Proceso                                            Por Definir
+
+
+  e. Electricidad
+          Ejemplo de elementos Incluidos: motores, cuadros eléctricos, cabinas de interruptores, tableros,
+          bandejas eléctricas, conduits eléctricos, transformadores, torres/columnas/postes de iluminación,
+          columnas/torres dedicadas a protección atmosférica, etc.
+
+Detalle geométrico definido                                                                 - Dimensiones externas exactas (As-Built)
+(dimensiones dentro del modelo 3D)
+                                                                                            - Modelo simplificado (excluir elementos internos como
+                                                                                            cables, conexiones componentes, etc)
+
+Atributos mínimos requeridos                                                                - Tag de equipo
+(utilizar el Sistema Internacional de Unidades)                                             - Tipo de equipo eléctrico
+                                                                                            - Descripción breve
+                                                                                            - Fabricante
+Equipos                                                                                     - Modelo (según aplique)
+                                                                                            - Fase del equipo (según aplique)
+                                                                                            - Frecuencia (según aplique)
+                                                                                            - Rating (según aplique)
+                                                                                            - Dimensiones físicas exactas (ancho x altura x longitud)
+                                                                                            - Ubicación (zona, área o unidad dentro del Activo)
+
+                                                                                            - Dimensiones (longitud)
+                                                                                            - Material
+Bandejas Eléctricas / Conduits
+                                                                                            - Tipo de bandeja o conduit
+                                                                                            - Fabricante (según aplique)
+
+
+
+  f.      Estructuras Metálicas
+          Elementos Incluidos: pipe-racks, plataformas, escaleras, barandas, pórticos, anclajes, soportes de
+          piping, etc.
+
+Detalle geométrico definido                                                                 - Dimensiones externas exactas (As-Built)
+(dimensiones dentro del modelo 3D)
+                                                                                            - Modelo simplificado (excluir elementos de sujeción, tales
+                                                                                            como bulones, arandelas, soldaduras, etc)
+
+Atributos mínimos requeridos                                                                - Fabricante
+(utilizar el Sistema Internacional de Unidades)                                             - Material principal
+                                                                                            - Dimensiones físicas exactas (longitud)
+                                                                                            - Peso
+                                                                                            - Tipo de perfil (según aplique)
+                                                                                            - Ubicación (zona, área o unidad dentro del Activo)
+
+
+
+
+  COPIA NO CONTROLADA                                                                                                                                       Documento: YPF-Privado
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                        o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                 6/7
+                                                                                                                                                                                    Documento: YPF-Privado
+
+                                                    #Título Requerimientos BIM Mínimos
+ #Tipo                                               Tipo                                            #Código                                    Codigo
+ #Fecha de Vigencia                                  01-01-0001                                      #Versión                                   Preliminar
+ #Activo de la información                           Por Definir
+ #Proceso                                            Por Definir
+
+
+
+
+   g. Obra Civil
+           Ejemplos de elementos Incluidos: fundaciones, bases, caminos, canaletas, pozos, muros, cunetas,
+           fosas, red de agua, alcantarillado, etc.
+
+ Detalle geométrico definido                                                               - Dimensiones externas exactas (As-Built)
+ (dimensiones dentro del modelo 3D)
+                                                                                           - Modelo simplificado (excluir elementos internos, tales como
+                                                                                           anclajes, armaduras, etc)
+
+ Atributos mínimos requeridos                    - Material principal (según aplique)
+ (utilizar el Sistema Internacional de Unidades) - Dimensiones físicas exactas (ancho x altura x longitud)
+                                                 - Ubicación (zona, área o unidad dentro del Activo)
+
+
+
+
+   3. Entorno Común de Datos (CDE)
+El intercambio de información relacionada al proyecto se deberá llevar a cabo a través del CDE
+definido por YPF S.A, cumpliendo con los flujos de aprobación preestablecidos en el proyecto.
+
+
+
+
+   COPIA NO CONTROLADA                                                                                                                                       Documento: YPF-Privado
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  7/7
+

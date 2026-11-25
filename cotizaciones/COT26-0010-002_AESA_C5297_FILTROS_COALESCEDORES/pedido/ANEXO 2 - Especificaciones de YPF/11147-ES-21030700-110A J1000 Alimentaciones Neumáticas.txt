@@ -1,0 +1,634 @@
+                                                                     J1000 Alimentaciones Neumáticas
+Tipo: ESPECIFICACIÓN                         Ámbito: Upstream - Argentina                                                                                      Código: 11147-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                             Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+
+
+1 Índice
+
+Contenido
+1      ÍNDICE ........................................................................................................................................................................1
+2      OBJETO .....................................................................................................................................................................3
+3      ÁMBITO DE APLICACIÓN ........................................................................................................................................3
+4      CONSIDERACIONES PRINCIPALES .......................................................................................................................3
+5      ESPECIFICACIÓN .....................................................................................................................................................3
+    5.1    CRITERIOS GENERALES DE DISEÑO DE ALIMENTACIONES NEUMÁTICAS ......................................................................3
+      5.1.1    Aplicación del aire de Instrumentos .............................................................................................................3
+      5.1.2    Aplicación del gas de Instrumentos .............................................................................................................3
+      5.1.3    Calidad del suministro ..................................................................................................................................4
+      5.1.4    Dimensionamiento y estimación de consumos ............................................................................................4
+      5.1.5    Monitoreo del aire de instrumentos ..............................................................................................................5
+    5.2    GENERACIÓN Y DISTRIBUCIÓN DE AIRE DE INSTRUMENTOS .......................................................................................5
+      5.2.1    Sistema de generación ................................................................................................................................5
+      5.2.2    Red de distribución general .........................................................................................................................6
+      5.2.3    Acometidas a los consumos ........................................................................................................................6
+    5.3    ESPECIFICACIÓN TÉCNICA DE LOS MATERIALES DE MONTAJE....................................................................................7
+      5.3.1    Nota general .................................................................................................................................................7
+      5.3.2    Tubing ..........................................................................................................................................................7
+      5.3.3    Válvulas y accesorios ...................................................................................................................................7
+      5.3.4    Conectores ...................................................................................................................................................7
+      5.3.5    Otros materiales ...........................................................................................................................................7
+    5.4    NOTAS DE APLICACIÓN ...........................................................................................................................................7
+      5.4.1    Filtros lubricadores .......................................................................................................................................7
+      5.4.2    Depósitos pulmón.........................................................................................................................................8
+      5.4.3    Alimentaciones neumáticas a paneles .........................................................................................................8
+6      INDICADORES, REGISTROS Y RIESGOS DEL PROCESO ...................................................................................8
+    6.1        INDICADORES ........................................................................................................................................................8
+    6.2        REGISTROS ...........................................................................................................................................................8
+    6.3        RIESGOS Y ACCIONES MITIGANTES ..........................................................................................................................8
+7      ANEXOS Y REFERENCIAS ......................................................................................................................................9
+    7.1        ANEXOS ................................................................................................................................................................9
+    7.2        NORMATIVA RELACIONADA .....................................................................................................................................9
+    7.3        DEFINICIONES Y ABREVIATURAS ..............................................................................................................................9
+8      APROBACIÓN .........................................................................................................................................................10
+    8.1        VIGENCIA ............................................................................................................................................................10
+    8.2        DISPOSICIONES GENERALES Y TRANSITORIAS ........................................................................................................10
+
+                                                                                                           BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         19/04/2017
+       GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                              GUILLERMO                                          FIL                                  09:40:00 a.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                     1 / 11
+                                                                   J1000 Alimentaciones Neumáticas
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11147-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+  8.3        HISTORIAL ...........................................................................................................................................................10
+  8.4        APROBACIÓN COLEGIADA .....................................................................................................................................10
+  8.5        CATEGORÍA DE CLASIFICACIÓN DEL ACTIVO DE INFORMACIÓN................................................................................10
+ANEXO I: TI-J1000-01 VÁLVULA CON POSICIONADOR E/N.....................................................................................11
+ANEXO II: TI-J1000-02 VÁLVULA CON POSICIONADOR E/N Y SOLENOIDE. .........................................................11
+ANEXO III: TI-J1000-03 VÁLVULA ON/OFF CON SOLENOIDE. .................................................................................11
+ANEXO IV: TI-J1000-04 VÁLVULA CON POSICIONADOR N/N Y CONVERTIDOR I/P. ............................................11
+ANEXO V: TI-J1000-05 VÁLVULA CON POSICIONADOR N/N, CONVERTIDOR I/P Y SOLENOIDE. .....................11
+ANEXO VI: TI-J1000-06 VÁLVULA ON/OFF CON PULMÓN DE AIRE. ......................................................................11
+
+
+
+
+                                                                                                         BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         19/04/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                            GUILLERMO                                          FIL                                  09:40:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   2 / 11
+                                                                   J1000 Alimentaciones Neumáticas
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11147-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+2 Objeto
+Definir los criterios generales de alimentación neumática a equipos y sistemas de instrumentación.
+
+
+3 Ámbito de aplicación
+YPF S.A. Upstream – Argentina.
+Aplica a todos los proyectos tanto de nuevas instalaciones como modificaciones a instalaciones existentes.
+
+
+4 Consideraciones principales
+Quedan dentro del alcance de este documento las alimentaciones neumáticas a equipos (hook ups neumáticos).
+La definición detallada de los sistemas de generación y distribución de aire o gas de instrumentos queda fuera del
+alcance específico de este documento.
+
+
+5 Especificación
+
+5.1 Criterios generales de diseño de alimentaciones neumáticas
+
+5.1.1 Aplicación del aire de Instrumentos
+El aire comprimido requerido por los instrumentos y sistemas de instrumentación para su actuación, servicio o
+funcionamiento procederá siempre de la red general de aire de instrumentos de la planta o de equipo Ad hoc
+requerido para tal efecto.
+Se ajustará en calidad a lo indicado en el apartado 5.1.2 y se usará en las siguientes aplicaciones:
+    a) Actuadores neumáticos convencionales
+    b) Paneles e instrumentos neumáticos.
+    c) Sistemas de presurización y purga.(proteccion Eex-p)
+    d) Analizadores que requieran aire de referencia.
+Cualquier otro uso o aplicación del aire de instrumentos deberá ser autorizada por YPF en cada caso.
+El proveedor de la Ingeniería será responsable de implementar en cada proyecto los criterios anteriores.
+No debe existir conexión alguna entre el sistema de distribución de aire de instrumentos y cualquier otro sistema de
+proceso.
+
+5.1.2 Aplicación del gas de Instrumentos
+Se tratará en lo posible de limitar el uso de gas de instrumentos a instalaciones con pocos puntos de consumo o
+equipos aislados en locaciones remotas.
+
+
+                                                                                                         BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         19/04/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                            GUILLERMO                                          FIL                                  09:40:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   3 / 11
+                                                                   J1000 Alimentaciones Neumáticas
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11147-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+En estos casos se evaluarán medidas particulares, según el gas de proceso presente en la instalación, para evitar
+que la condensación del gas, o la presencia de partículas, dañen u ocasionen fallas en los dispositivos neumáticos
+que se pretende alimentar. En caso de tener que realizar ajustes significativos al gas de instrumentos para poder ser
+utilizado, se migrará a un sistema de aire de instrumentos.
+
+5.1.3 Calidad del suministro
+El aire de instrumentos será limpio, seco, exento de aceite y con presión estable. Su calidad estará de acuerdo a las
+normas ISO 8573-1 e ISA 7.0.01
+En particular, se cumplirá que:
+    a)       Su punto de rocío a la presión de trabajo será al menos 10 ºC inferior a la mínima temperatura ambiente.
+    b)       El contenido de aceite se mantendrá inferior a 1 ppm, y será lo más próximo posible a cero.
+    c)       El tamaño máximo de las partículas arrastradas será de 40 micrones (40 x10-6 m).
+    d)       El aire estará totalmente libre de contaminantes corrosivos y gases explosivos.
+Si el punto de rocío del aire de instrumentos se mide a presión diferente de la de servicio, se tendrá en cuenta la
+corrección correspondiente (ver por ejemplo tablas de API RP 552).
+En cualquier caso, para garantizar que a P  7 Kg/cm2g no se superan los –6 ºC de punto de condensación, el
+sistema de secado debe garantizar un punto de rocío a presión atmosférica no superior a -30 ºC.
+La presión nominal de diseño de los circuitos de aire de instrumentos será de entre 6 y 7 Kg/cm2g. No obstante, el
+valor real de esta presión para cada planta se indicará en el DBD de cada proyecto.
+El dimensionamiento de los sistemas de aire de instrumentos deberán contemplar las expansiones previstas en la
+locacion. Se tendera a unificar los sistemas de aire de instrumento por locacion (sin que esto vaya en desmedro de la
+redundancia requerida acorde a la integridad especificada para este sistema)
+La presión y el caudal deben ser estables, seguros y sin pulsaciones, empleándose para ello depósitos pulmón
+amortiguadores y equipos de reserva de requerirlo el sistema de generación.
+El incremento de temperatura causado por la compresión en el sistema de generación de aire de instrumentos debe
+ser eliminado mediante un enfriador con separador en dicho sistema.
+Se vigilará que el aire de instrumentos esté libre de gases tóxicos, inflamables o cualquier otro tipo de contaminantes
+que puedan introducirse a través del sistema de compresión. Los sistemas de generacion de aire de instrumentos se
+instalaran siempre en un area segura contemplando ampliaciones futuras.
+
+5.1.4 Dimensionamiento y estimación de consumos
+De cara a dimensionar nuevos sistemas o verificar la capacidad de los existentes, se requiere evaluar en cada
+proyecto los consumos de aire de instrumentos que se añaden.
+Los criterios para hacer esta evaluación serán los siguientes:
+    a) El sistema debe permitir que todos los consumidores previstos actúen simultáneamente
+    b) Se estimará un 50% de capacidad extra para purgas, fugas, instrumentos adicionales y reserva.
+Para estimar preliminarmente los consumos de aire de instrumentos se tomarán los siguientes valores típicos, que
+deben ser confirmados en cada proyecto:
+
+                                                                                                         BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         19/04/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                            GUILLERMO                                          FIL                                  09:40:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   4 / 11
+                                                                   J1000 Alimentaciones Neumáticas
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11147-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+                                                           Tabla 5.1.4: Consumos típicos de aire de instrumentos
+                        Tipo de consumidor                                                                              Consumos típicos
+                                                                        0,05 ... 0,20 Nm3 por cada actuación según tamaño
+                  Actuador todo/nada (on-off)
+                                                                        Consumo nulo una vez presurizados los actuadores.
+
+                  Actuador de regulación con                            0,7 ... 1 Nm3/h para válvulas de baja presión (rating < 600#)
+                  posicionador convencional                             0,9 ... 2 Nm3/h para válvulas de alta presión (rating  600#)
+
+                  Actuador de regulación con                            0,3 ... 0,4 Nm3/h para válvulas de baja presión (rating < 600#)
+                  posicionador inteligente                              0,6 ... 1,3 Nm3/h para válvulas de alta presión (rating  600#)
+                                                                        En fase de purga: 5 volúmenes de la envolvente durante el tiempo de la
+                  Sistema de                Presurización               purga.
+                  EEx-p
+                                                                        En fase de presurización: muy bajo, a indicar por el proveedor del sistema
+
+5.1.5 Monitoreo del aire de instrumentos
+Se monitorearán en el Sistema de Control Distribuido (DCS) las siguientes propiedades del aire de instrumentos:
+
+
+                                                                 Tabla 5.1.5: Monitoreo del aire de instrumentos
+                   Variable / propiedad                                 En sistema generador de aire                                           En colectores de cada unidad
+                  Temperatura                                Sí, por transmisor                                                              Sólo si se indica en el P&ID
+                  Presión                                    Sí, por transmisor                                                              Solo si se indica en el P&ID
+En las plantas, unidades o equipos donde lo indique procesos, la Ingeniería Básica, existirá un disparo de alarma por
+muy baja presión de aire.
+Cada colector y subcolector de distribución con DN  1” incluirá además un manómetro (0-10 bar). Los ítems que
+reciben el aire de instrumentos incluirán también, válvula reguladora con filtro y manómetro incorporado.
+
+
+5.2 Generación y distribución de aire de instrumentos
+
+5.2.1 Sistema de generación
+El sistema incluirá enfriador con separador de condensados, pulmones, filtro de aceite, secadores y filtro de salida
+extraíble on-line antes de la acometida al colector general de aire de instrumentos.
+El sistema de control y monitoreo especifico de la unidad serán suministrados por el proveedor del sistema con
+reporte al sistema de control de la planta. (el monitoreo de las condiciones de presion y temperatura de salida se
+realizará directamente desde el sistema de control de la planta)
+La calidad del aire de instrumentos se ajustará a lo funcionalidades de mando remoto necesarias para mantener en
+todo momento la generación de aire de instrumentos indicado en el apartado 5.1.3 de esta especificación y será
+monitoreada como mínimo, según los criterios indicados en el apartado 5.1.5 salvo que se indiquen otros más
+restrictivos.
+
+                                                                                                         BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         19/04/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                            GUILLERMO                                          FIL                                  09:40:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   5 / 11
+                                                                   J1000 Alimentaciones Neumáticas
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11147-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+5.2.2 Red de distribución general
+La red de distribución de aire de instrumentos se realizará en acero al carbono o acero al carbono galvanizado con
+accesorios roscados o bridados, de acuerdo a la ingeniería básica y a la especificación de Piping de YPF.
+Se basará en una jerarquía de colectores y subcolectores dimensionados según los consumidores atendidos:
+
+                                        Tabla 5.2.2: Dimensionamiento aproximado de colectores y subcolectores
+                  Nº consumidores:                           1...25                             26...50                              51...100                          101...200
+                  Tamaño del colector:                       1”                                 1½ “                                 2”                                3”
+Los datos de la tabla anterior serán verificados siempre por el proveedor de la Ingeniería en cada aplicación.
+Todas las derivaciones se harán por la parte superior de las líneas y siempre con válvulas de aislamiento en cada
+derivación. En los puntos bajos se instalarán purgadores de agua y puntos de drenaje.
+Los colectores y subcolectores principales terminarán siempre en una válvula esclusa y brida ciega para permitir
+eventuales prolongaciones de los mismos sin interrumpir el servicio.
+La distribución de los colectores se realizara con un diámetro mínimo de 1”, y la conexión a los de tamaños inferiores
+se realizará mediante TEs roscadas.
+La interfase entre líneas de distribución de aire y el tubing de instrumentos se realizará mediante el uso de TEs
+reductoras 1” x ¾” o 1” x ½”.
+En cualquier caso, el límite de cañería será una válvula globo de Ø 1/2" o Ø 3/4" roscada, con cierre 1/4" de vuelta,
+material AISI 316.
+
+5.2.3 Acometidas a los consumos
+Se partirá siempre de una línea de ½” terminada en una válvula esférica de acero inoxidable de ¼ de vuelta. A partir
+de este punto, la distribución se hará con tubing de acuerdo a los esquemas de conexionado neumático incluidos en
+esta misma especificación.
+Nota: Por necesidades de funcionamiento o uso habitual en la locación, podrán usarse diámetros mayores (por ej.
+3/4”).
+La alimentación regulada de aire de instrumentos se realizara mediante una o más válvulas autorreguladas a la
+salida de los compresores de aire y su respectivo pulmón. En la ingeniería básica se deberá definir el número de
+válvulas y su configuración siguiendo los lineamentos dispuestos en “J0603 Válvulas Autorreguladoras”.
+A modo de ejemplo y a ser especificado en la ingeniería teniendo en cuenta las presiones y caudales de diseño, un
+modelo habitual para estas aplicaciones es la válvula autorreguladora 67FR de diversos fabricantes.
+Los rangos partidos implementados en posicionadores neumáticos quedan prohibidos.
+Cuando los planos típicos enumerados en la Tabla 5.2.3 no sean aplicables, el proveedor de la Ingeniería realizará
+los planos de proyecto correspondientes, con igual formato, números de ítem y códigos.
+Cualquier diseño de alimentación a instrumentos desarrollado por el proveedor de la Ingeniería cumplirá lo siguiente:
+    a) Debe permitir aislar individualmente la alimentación a cada equipo, preferentemente junto al mismo.
+    b) Se minimizarán las longitudes de tubing para evitar caídas de presión inaceptables o respuestas lentas.
+    c) Equipos funcionalmente independientes no deben compartir alimentación salvo casos especiales.
+                                                                                                         BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         19/04/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                            GUILLERMO                                          FIL                                  09:40:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   6 / 11
+                                                                   J1000 Alimentaciones Neumáticas
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11147-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+    d) Los materiales empleados y sus calidades serán uniformes con los indicados en los planos estándar.
+En válvulas fire-safe se admiten tramos de tubing con materiales de bajo punto de fusión cuando los mismos deban
+actuar como fusibles térmico ante la presencia de un incendio.
+
+
+5.3 Especificación Técnica de los materiales de montaje
+
+5.3.1 Nota general
+Los materiales especificados en los apartados siguientes son exclusivamente los empleados en los planos típicos de
+conexionado neumático de YPF listados en el apartado 4.
+
+5.3.2 Tubing
+Tubing de acero inoxidable austenítico, recocido y sin soldadura, medidas posibles: 1/4” OD x 0.028” esp. o 1/2” OD x
+0.049” esp. dependiendo la aplicación. Según ASTM 269. Dureza máxima 80 HRB.
+
+5.3.3 Válvulas y accesorios
+Válvula de compuerta, 1/2” NPT-H, 800#, en ASTM A-105.
+Válvula de aguja, 1/4” OD, en AISI 316.
+Válvula esférica con cierre ¼ de vuelta, 1/2" NPT-H, en AISI 316.
+
+5.3.4 Conectores
+Conector recto 1/4" NPT-M x 1/4" OD en AISI 316.
+TE igual 1/4" OD en AISI 316.
+Conector en codo 1/4" NPT-M x 1/4" OD en AISI 316.
+Cruz igual 1/4" OD en AISI 316.
+Conector reductor recto 1/2" NPT-M x 1/4" OD en AISI 316.
+
+5.3.5 Otros materiales
+Los materiales aguas arriba del esquema neumático serán según la especificación de Piping aplicable.
+El uso de cualquier material no contemplado en los puntos anteriores deberá ser autorizado por YPF.
+
+
+5.4 Notas de aplicación
+
+5.4.1 Filtros lubricadores
+Se emplearán con los actuadores tipo pistón donde el proveedor del mismo recomiende su instalación.
+De ser posible se adquirirán junto con la propia válvula o actuador, ya conectados y montados a la misma. Se
+suministrará además lubricante para al menos dos recargas de todos los filtros adquiridos.
+
+
+                                                                                                         BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         19/04/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                            GUILLERMO                                          FIL                                  09:40:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   7 / 11
+                                                                     J1000 Alimentaciones Neumáticas
+Tipo: ESPECIFICACIÓN                         Ámbito: Upstream - Argentina                                                                                      Código: 11147-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                             Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+Cuando se adquieran por separado, el filtro se instalará lo más próximo posible al actuador, y el lubricante empleado
+deberá contar con la aprobación del proveedor del mismo. Las conexiones serán ¼” NPT-H.
+
+5.4.2 Depósitos pulmón
+En instrumentos críticos, y solo cuando la Ingeniería Básica lo indique, cuya posición y/o posibilidad de actuación
+deba estar garantizada en caso de pérdida general de suministro de aire de instrumentos se instalarán depósitos
+pulmón de respaldo.
+Los depósitos serán independientes para cada equipo.
+Estos depósitos estarán dimensionados para la presión y capacidad requerida por cada equipo asociado, de modo se
+garantice el tiempo y/o número de actuaciones requeridas por dichos equipos.
+Los depósitos tendrán las siguientes características generales:
+      a) Incluirán válvula anti-retorno o relé neumático que lo aísle cuando caiga la presión de la red.
+      b) Tendrán alarma de baja presión (PSL), purgador de condensados y, de requerirse, válvula de seguridad.
+Todas sus conexiones serán roscadas NPT (ASME/ANSI B1.20.1) o bridadas (ASME B16.5) en los tamaños que
+indique la requisición.
+
+5.4.3 Alimentaciones neumáticas a paneles
+La alimentación puede realizarse directamente con líneas de ½” si así lo requiere el consumo de aire.
+Para aplicaciones de alta disponibilidad, se instalará doble válvula reguladora con filtro y manómetro y separador de
+gotas en cada uno y las válvulas de bloqueo necesarias para usar cada uno como reserva del otro.
+En equipos muy sensibles a las sobrepresiones se instalará una válvula de seguridad en la alimentación o sobre el
+techo del panel.
+La alimentación debe dimensionarse para el caso de consumo más desfavorable.
+
+
+6 Indicadores, registros y riesgos del proceso
+
+6.1 Indicadores
+N/A
+
+
+6.2 Registros
+N/A
+
+
+6.3 Riesgos y acciones mitigantes
+N/A
+
+
+
+                                                                                                           BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         19/04/2017
+      GALANTERNIK, NICOLAS                                  VERNA, FACUNDO
+                                                                                                              GUILLERMO                                          FIL                                  09:40:00 a.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                     8 / 11
+                                                                    J1000 Alimentaciones Neumáticas
+Tipo: ESPECIFICACIÓN                        Ámbito: Upstream - Argentina                                                                                      Código: 11147-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                            Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                        YPF PRIVADA
+
+
+
+7 Anexos y referencias
+
+7.1 Anexos
+   N°                                                                                                       Nombre
+    I         TI-J1000-01 Válvula con Posicionador E/N
+    II        TI-J1000-02 Válvula con Posicionador E/N y Solenoide
+   III        TI-J1000-03 Válvula On/Off con Solenoide
+   IV         TI-J1000-04 Válvula con Posicionador N/N y Convertidor I/P
+   V          TI-J1000-05 Válvula con Posicionador N/N, Convertidor I/P y Solenoide
+   VI         TI-J1000-06 Válvula On/Off con Pulmón de Aire
+
+
+7.2 Normativa relacionada
+    Categoría                                                                            Título                                                                                        Código
+ Normativa
+                                 N/A                                                                                                                              N/A
+ Interna YPF
+ Normativa
+                                 N/A                                                                                                                              N/A
+ Externa
+                                 ED(EP)-J-10.00 Alimentaciones Neumáticas                                                                                         AB-IYO-ED-09-052-01
+ Normativa
+                                 ED(EP)-J-10.01 Conexionado Neumático 1/4" OD                                                                                     AB-IYO-ED-09-063-01
+ Derogada
+                                 ED(EP)-J-10.02 Conexionado Neumático 6mm OD                                                                                      AB-IYO-ED-09-064-01
+                                 Transmission Systems                                                                                                             API RP 552, 1994
+                                 Quality Standard for Instrument Air-Formerly                                                                                     ISA 7.0.01, 1996
+ Otras                           Compressed Air - Part 1: Contaminants and Purity Classes                                                                         ISO 8573-1, 2001
+ referencias
+                                 Pipe Threads, General Purpose (Inch). (Rev. 2006)                                                                                ASME/ANSI B1.20.1
+                                 Pipe Flanges and Flanged Fittings NPS 1/2 Through NPS 24
+                                                                                                                                                                  ASME B16.5, 2003
+                                 Metric/Inch Standard
+
+
+
+
+7.3 Definiciones y abreviaturas
+         Término                       Abreviatura                                                                                 Descripción
+ N/A                                   N/A                          N/A
+
+
+                                                                                                          BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         19/04/2017
+        GALANTERNIK, NICOLAS                               VERNA, FACUNDO
+                                                                                                             GUILLERMO                                          FIL                                  09:40:00 a.m.
+
+                   Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                               CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+     © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+     esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                    9 / 11
+                                                                     J1000 Alimentaciones Neumáticas
+Tipo: ESPECIFICACIÓN                         Ámbito: Upstream - Argentina                                                                                      Código: 11147-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                             Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+
+8 Aprobación
+
+8.1 Vigencia
+Esta normativa entrará en vigencia a partir de la fecha de su aprobación.
+Los abajo firmantes asumen la responsabilidad de implantar, controlar el cumplimiento y actualizar el presente
+documento cada vez que fuera necesario.
+
+
+8.2 Disposiciones generales y transitorias
+N/A
+
+
+8.3 Historial
+       Estado                      № Revisión                    Fecha Aprobación                                                                   Observaciones
+
+ Original                         0.0                            Ver fecha en pie de
+                                                                 firmas.
+
+
+8.4 Aprobación colegiada
+N/A
+
+
+8.5 Categoría de Clasificación del Activo de Información
+YPF - Privada: información disponible para los empleados de la compañía y terceros (ej. contratistas) como parte de
+la rutina del negocio. Su difusión se hace en base al conocimiento para poder operar. Su difusión no autorizada
+podría afectar la consecución de objetivos particulares de determinadas áreas de la compañía.
+
+
+
+
+                                                                                                           BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         19/04/2017
+      GALANTERNIK, NICOLAS                                  VERNA, FACUNDO
+                                                                                                              GUILLERMO                                          FIL                                  09:40:00 a.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   10 / 11
+                                                                   J1000 Alimentaciones Neumáticas
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11147-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+Anexo I: TI-J1000-01 Válvula con Posicionador E/N.
+
+Anexo II: TI-J1000-02 Válvula con Posicionador E/N y Solenoide.
+
+Anexo III: TI-J1000-03 Válvula On/Off con Solenoide.
+
+Anexo IV: TI-J1000-04 Válvula con Posicionador N/N y Convertidor I/P.
+
+Anexo V: TI-J1000-05 Válvula con Posicionador N/N, Convertidor I/P y
+Solenoide.
+
+Anexo VI: TI-J1000-06 Válvula On/Off con Pulmón de Aire.
+
+Estos formularios se encuentran como archivo editable en la biblioteca Anexos Online de SGN http://corporacion-
+sgn/sites/sgn/Anexos/Forms/AllItems.aspx
+
+
+
+
+                                                                                                         BODEGA, EDUARDO                          PITRELLI, GUILLERMO ANDRES                         19/04/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO
+                                                                                                            GUILLERMO                                          FIL                                  09:40:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                 11 / 11
+

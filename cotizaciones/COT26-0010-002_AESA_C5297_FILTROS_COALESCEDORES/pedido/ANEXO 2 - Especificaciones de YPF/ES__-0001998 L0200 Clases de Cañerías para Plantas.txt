@@ -1,0 +1,1849 @@
+                                                       #Título                     L0200 Clases de Cañerías
+                                                                                   para Plantas
+#Tipo                                                   Especificación            #Código                 ES__-0001998
+#Fecha de Vigencia                                      06/09/2023                #Versión                1.1
+#Activo de la información                               YPF - Privada
+#Proceso                                                21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+
+
+1 Índice
+
+Contenido
+1      ÍNDICE .......................................................................................................................................................... 1
+2      OBJETO........................................................................................................................................................ 2
+3      ÁMBITO DE APLICACIÓN........................................................................................................................... 2
+4      CONSIDERACIONES PRINCIPALES ......................................................................................................... 3
+    4.1    DISEÑO GENERAL .................................................................................................................................... 3
+      4.1.1 Grados de corrosividad .................................................................................................................... 3
+      4.1.2 Tratamiento térmico Post Soldadura (PWHT).................................................................................. 4
+      4.1.3 Conexiones bridadas ........................................................................................................................ 5
+      4.1.4 Conexiones tipo “Socket Weld” ........................................................................................................ 5
+      4.1.5 Conexiones roscadas ....................................................................................................................... 5
+      4.1.6 Ratings intermedios .......................................................................................................................... 5
+      4.1.7 Identificación de cañerías almacenadas .......................................................................................... 5
+      4.1.8 Cañerías enterradas ......................................................................................................................... 6
+      4.1.9 Válvulas ............................................................................................................................................ 6
+      4.1.10   Radiografiado ............................................................................................................................... 6
+      4.1.11   Pruebas ........................................................................................................................................ 6
+      4.1.12   Recubrimiento interno .................................................................................................................. 6
+5      ESPECIFICACIÓN “L0200 CLASES DE CAÑERÍAS PARA PLANTAS” ................................................. 7
+    5.1          CODIFICACIÓN DE CLASES DE CAÑERÍAS ................................................................................................... 7
+    5.2          CODIFICACIÓN DE CLASES DE VÁLVULAS .................................................................................................. 9
+    5.3          RESUMEN CLASES DE CAÑERÍAS ........................................................................................................... 12
+    5.4          RADIOGRAFIADO ................................................................................................................................... 18
+    5.5          CLASES DE CAÑERÍAS ........................................................................................................................... 20
+    5.6          CÓDIGOS Y DESCRIPCIONES DE VÁLVULAS ............................................................................................ 20
+6      ROLES, INDICADORES, REGISTROS Y RIESGOS DEL PROCESO..................................................... 21
+    6.1          ROLES.................................................................................................................................................. 21
+    6.2          INDICADORES........................................................................................................................................ 21
+    6.3          REGISTROS .......................................................................................................................................... 21
+    6.4          RIESGOS Y ACCIONES MITIGANTES ......................................................................................................... 21
+    6.5          REGLAS DE NEGOCIO ............................................................................................................................ 21
+7      ANEXOS Y REFERENCIAS ....................................................................................................................... 22
+    7.1    ANEXOS ............................................................................................................................................... 22
+      7.1.1 Anexos Especiales ......................................................................................................................... 22
+      7.1.2 Otros anexos .................................................................................................................................. 22
+    7.2    NORMATIVA RELACIONADA .................................................................................................................... 22
+
+
+     COPIA NO CONTROLADA
+     [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+     © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o
+                                             venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                   1 / 27
+                                                       #Título                     L0200 Clases de Cañerías
+                                                                                   para Plantas
+ #Tipo                                                  Especificación            #Código                 ES__-0001998
+ #Fecha de Vigencia                                     06/09/2023                #Versión                1.1
+ #Activo de la información                              YPF - Privada
+ #Proceso                                               21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+    7.3          DEFINICIONES Y ABREVIATURAS ............................................................................................................. 24
+8     APROBACIÓN ............................................................................................................................................ 24
+    8.1          VIGENCIA.............................................................................................................................................. 24
+    8.2          DISPOSICIONES GENERALES Y TRANSITORIAS ......................................................................................... 25
+    8.3          HISTORIAL ............................................................................................................................................ 25
+    8.4          FLUJO DE APROBACIÓN ......................................................................................................................... 26
+9     ANEXO........................................................................................................................................................ 27
+    9.1          ANEXO I – CLASES DE CAÑERÍAS ........................................................................................................... 27
+    9.2          ANEXO II – CÓDIGOS Y DESCRIPCIONES DE VÁLVULAS ........................................................................... 27
+
+
+
+
+2 Objeto
+Especificar los componentes como: cañerías, accesorios y válvulas, apropiados para el correcto
+diseño de los Sistemas de Cañerías, en todas las Plantas de Instalaciones de Superficie.
+
+
+3 Ámbito de aplicación
+Upstream – Argentina.
+Esta Especificación aplica en los proyectos de inversión de todas las Plantas de Instalaciones de
+Superficie, entendiéndose por estas a: Plantas de tratamiento de gas, LTS, USP, Baterías, PTC,
+PIAS, PTA, EC, Colectoras de Campo, Satélites de Campo y toda Instalación de superficie operada,
+de YPF.
+Aplica a cañerías de acero (con la posibilidad de revestimiento interior en determinados servicios) y
+las cañerías de PEAD (solo para S.C.I. enterrado y drenajes abiertos y oleosos enterrados Fuera de
+Recintos de Tanques).
+
+
+
+
+     COPIA NO CONTROLADA
+     [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+     © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o
+                                             venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                   2 / 27
+                                                     #Título                     L0200 Clases de Cañerías
+                                                                                 para Plantas
+ #Tipo                                                Especificación            #Código                 ES__-0001998
+ #Fecha de Vigencia                                   06/09/2023                #Versión                1.1
+ #Activo de la información                            YPF - Privada
+ #Proceso                                             21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+
+4 Consideraciones principales
+
+4.1 Diseño general
+Los sistemas de cañerías de acero que abarca esta Especificación se encuentran diseñados de
+acuerdo con el Código de ASME B31.3 “Process Piping”.
+Todos los caños, accesorios y válvulas deben estar de acuerdo con la clase de cañerías
+correspondiente según servicio y rating especificado. Los diámetros 1¼”, 3½” y 5” no son utilizados,
+para el uso de estos es necesario la aprobación de YPF. Cuando estos diámetros son parte
+(conexiones) de un equipo, la cañería conectada a ellos se debe aumentar o reducir a un diámetro
+estándar. En general, no se deben utilizar cañerías menores a diámetro ¾” excepto para
+instrumentación.
+Para rangos de presiones y temperaturas no especificados en la presente especificación, las
+cañerías y accesorios deben ser calculados por el usuario de acuerdo con el código de referencia
+ASME B31.3 “Process Piping”, y conforme con los requerimientos particulares descriptos en esta
+Especificación.
+No se permite utilizar “manguerotes” en los diseños de plantas de instalaciones de superficie en el
+ámbito del upstream.
+Las juntas de expansión pueden utiliarse únicamente, cuando se realice un análisis de flexibilidad
+que justifique su empleo.
+
+4.1.1         Grados de corrosividad
+
+Para la conformación de las Clases de Cañerías de esta Especificación Técnica, se tienen en cuenta
+los Grados de Corrosividad de los Servicios determinados por YPF, a saber:
+   Grado de corrosividad                                  Sobre espesor por corrosión                                                               Material aplicable
+
+                 BAJA                                                       1.6 mm                                       cañerías de A° C° y Galvanizado
+
+               MEDIA                                                        3.2 mm                                       cañerías de A° C°
+
+                 ALTA                                                       0.0 mm                                       cañerías de Ac. Inoxidable AISI 316 / 316L
+
+Dado que pueden existir 2 o más Clases de Cañerías asociadas a un mismo servicio, en función del
+Grado de Corrosividad de este, el Departamento de Procesos debe definir el nivel de Corrosividad
+de acuerdo a las características y propiedades del servicio, para poder determinar la clase de Cañería
+apropiada.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o
+                                           venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                 3 / 27
+                                                      #Título                     L0200 Clases de Cañerías
+                                                                                  para Plantas
+ #Tipo                                                 Especificación            #Código                 ES__-0001998
+ #Fecha de Vigencia                                    06/09/2023                #Versión                1.1
+ #Activo de la información                             YPF - Privada
+ #Proceso                                              21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+4.1.2          Tratamiento térmico Post Soldadura (PWHT)
+
+     a) Por Espesor
+El precalentamiento y PWHT, debe realizarse de acuerdo con el Código ASME B31.3, Tabla 330.1.1
+y 331.1.1 respectivamente, para acero al carbono en todas las cañerías cuyo espesor sea mayor que
+¾” (19,05 mm). También se debe realizar este tratamiento en aquellas cañerías cuyo espesor sea
+mayor que ½” (12,7 mm) y estén afectadas a servicios con vibraciones, tal como Compresores
+alternativos, Bombas de inyección, etc. El PWHT debe realizarse desde el colector de succión hasta
+la correspondiente conexión del equipo y desde la descarga del equipo hasta su correspondiente
+colector.
+Solo con previa aprobación por escrito de parte de YPF, se puede hacer una excepción a este
+requerimiento, en el caso en que se cumplan las siguientes dos condiciones:
+     •       Durante el proceso de fabricación el contratista garantice la supervisión y control permanente
+             (durante todo el proceso) de un inspector calificado.
+     •       Se cumpla con lo indicado en la Tabla 331.1.3: “Exemptions to mandatory postweld heat
+             treatment” del código ASME B31.3, para todas las cañerías de Acero al Carbono de Grado
+             P1.
+Este requerimiento se encuentra indicado / desarrollado en cada una de las Clases de Cañerías en
+donde el espesor de las cañerías de acero al carbono, cumplan con esta condición.
+     b) Por Servicio
+El precalentamiento y PWHT, por tipo de servicio, comprende los siguientes casos:
+  i.         Para servicios de amina:
+             Se debe realizar PWHT (Alivio de Tensiones) al 100% de las soldaduras
+  ii.        Para servicios de hidrocarburo con H2S húmedo e hidrocarburo con alto CO2 (c/Req. NACE
+             Std. MR0175 / ISO 15156):
+             Se debe tener en cuenta que el procedimiento de soldadura empleado garantice que, una vez
+             realizada la misma, la dureza de la soldadura depositada no supere los 200 HBW, de acuerdo
+             con lo indicado en la “Tabla 1” de la Norma: NACE-RP0472.
+En el caso en que el ensayo de dureza indique que la misma supere este valor, se debe realizar
+PWHT.
+Las condiciones aquí indicadas, para ambos tipos de servicios, se encuentra convenientemente
+indicada / desarrollada en cada una de las Clases de Cañerías.
+
+
+
+
+    COPIA NO CONTROLADA
+    [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o
+                                            venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  4 / 27
+                                                     #Título                     L0200 Clases de Cañerías
+                                                                                 para Plantas
+ #Tipo                                                Especificación            #Código                 ES__-0001998
+ #Fecha de Vigencia                                   06/09/2023                #Versión                1.1
+ #Activo de la información                            YPF - Privada
+ #Proceso                                             21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+4.1.3         Conexiones bridadas
+
+Se deben utilizar bridas para: Conexiones de equipos, válvulas, y aquellas requeridas en los planos
+de Ingeniería de Detalle. Todas las bridas Slip-On y Socket Weld deben ser soldadas de acuerdo
+con los requerimientos del Código ASME B31.3.
+Solamente en caso de que las conexiones de válvulas automáticas o de control serie 900# ó 1500#
+sean con cara RF, se pueden utilizar contrabridas con cara RF, previa autorización escrita de YPF.
+
+4.1.4         Conexiones tipo “Socket Weld”
+
+Las conexiones socket weld se deben evitar en cualquier servicio donde la corrosión en rendija
+(crevice corrosion) o la erosión severa pueda ocurrir.
+Cuando se utilicen válvulas o accesorios del tipo socket weld, se debe colocar el “anillo espaciador”,
+entre los accesorios y/o válvulas y el extremo plano del caño, para no transmitir tensiones a la
+soldadura ocasionadas por la dilatación del caño contra el fondo de la “boca enchufe”.
+
+4.1.5         Conexiones roscadas
+
+El uso de conexiones roscadas se encuentra de acuerdo con el Código ASME B31.3 “Process
+Piping”, Capítulo II, Parte 4, Sección 3.14.
+Las conexiones roscadas se deben evitar en cualquier servicio donde la corrosión en rendija (crevice
+corrosion), erosión severa o cargas cíclicas puedan ocurrir.
+Todas las conexiones roscadas, deben limpiarse correctamente y sellarse con un sellador adecuado
+para el servicio considerado.
+
+4.1.6         Ratings intermedios
+
+Bajo aprobación expresa de YPF se pueden dimensionar las cañerías y accesorios de acuerdo con
+la presión de diseño del proyecto y según el código ASME B31.3, contemplando:
+    -       La corrosión admisible correspondiente al servicio.
+    -       Conexiones bridadas correspondientes a la serie inmediatamente superior a la de dicha
+            presión de diseño de acuerdo con lo indicado en esta ED.
+
+4.1.7         Identificación de cañerías almacenadas
+
+Cada vez que se reciba un cargamento de caños en la obra o taller, éste debe estar correctamente
+identificado con los códigos de colores correspondientes al material y espesor de pared, según lo
+indicado en la Especificación “ES__-0002657 - B0600 Protección Anticorrosiva Con Recubrimientos”,
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o
+                                           venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                 5 / 27
+                                                     #Título                     L0200 Clases de Cañerías
+                                                                                 para Plantas
+ #Tipo                                                Especificación            #Código                 ES__-0001998
+ #Fecha de Vigencia                                   06/09/2023                #Versión                1.1
+ #Activo de la información                            YPF - Privada
+ #Proceso                                             21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+para ser almacenado de tal manera que sea claramente identificable al momento de su instalación
+en el sistema.
+En el caso de que el contratista proponga un mejor sistema de identificación al propuesto que
+garantice la trazabilidad del material, (como por ejemplo La utilización de un sistema de Código de
+Barras), este debe ser sometido a aprobación de YPF para su implementación.
+
+4.1.8         Cañerías enterradas
+
+Las cañerías enterradas deben tener un revestimiento de acuerdo con la Especificación “ES__-
+0002657 - B0600 Protección Anticorrosiva Con Recubrimientos”.
+
+4.1.9         Válvulas
+
+La construcción y las dimensiones de las válvulas se deben ajustar a la Especificación “ES__-
+0002044 - L0201 Válvulas para Instalaciones de Superficie y Ductos”, y Normas de aplicación
+correspondientes.
+En caso de que se verifique un servicio erosivo en válvulas esféricas o globo con un alto DP, ver
+“ES__-0002044 - L0201 Válvulas para Instalaciones de Superficie y Ductos”, en el punto Servicios
+Erosivos.
+
+4.1.10 Radiografiado
+
+Se debe ajustar a la especificación de cada clase según lo establecido en el ítem 5.4.
+
+4.1.11 Pruebas
+
+Se deben realizar las pruebas hidráulicas y/o neumáticas según el Código ASME B31.3.
+
+4.1.12 Recubrimiento interno
+
+Para la determinación del tipo de recubrimiento interno a ser empleado, para la cañería del fluido
+seleccionado, referirse a la Especificación “ES__-0002657 - B0600 Protección Anticorrosiva Con
+Recubrimientos”.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o
+                                           venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                 6 / 27
+                                                        #Título                     L0200 Clases de Cañerías
+                                                                                    para Plantas
+    #Tipo                                                Especificación            #Código                 ES__-0001998
+    #Fecha de Vigencia                                   06/09/2023                #Versión                1.1
+    #Activo de la información                            YPF - Privada
+    #Proceso                                             21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+
+5          Especificación “L0200 CLASES DE CAÑERÍAS PARA PLANTAS”
+
+5.1 Codificación de clases de cañerías
+El criterio para la codificación de clases es el siguiente:
+Cuatro dígitos, formados por dos letras y dos números correspondiendo cada uno a un valor
+predeterminado/a según el siguiente esquema:
+
+                                                C           A           1           1
+
+                                                                                             sobre espesor por corrosión
+                                                                                             serie ASME
+                                                                                             grupo de fluidos
+                                                                                             material base
+
+-      Primera letra: correspondiente al tipo de material utilizado, puede ser.
+           C:           Acero al carbono
+           S:           Acero inoxidable
+           G:           Acero galvanizado
+           L:           Acero inoxidable (AISI 316)
+           P:           PEAD
+           R:           Acero al carbono Revestido
+           X:           Acero Super Duplex
+-      Segunda letra: correspondiente al grupo de fluidos.
+           A:           Venteos a Flare1, Drenajes Presurizados, Gas Combustible, Blanketing Gas, Gasoil,
+                        Glycol, Metanol, Agua Industrial, Nitrógeno, Agua de SCI (Cañería Húmeda), Aire de
+                        Planta, Hidrocarburos, Vapor, Agua de formación corrosiva Baja 2.
+           B:           Agua de desecho (Sour Water), Gas ácido, Hidrocarburos Corrosivos, Agua de formación
+                        corrosiva Alta.
+           C:           Aire de Instrumentos, Agua SCI (Cañería Seca), Agua Potable.
+
+1 En el caso de agua de formación corrosiva se deben emplear cañerías y accesorios de acero al carbono con revestimiento
+
+interior, según lo indicado en el Punto 4.1.12 de esta especificación.
+2 Para el caso en que la temperatura mínima alcanzada, ante un evento de blowdown de la planta sea menor a la permitida
+
+en la clase, se deberá proceder a realizar un estudio de stress ratio como lo establece ASME B31.3 y verificar así, si se
+matniene el material para las condiciones dadas, se le debe realizar ensayo charpy o se debe proceder a cambio de clase
+de cañerías previa aprobación de YPF.
+
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o
+                                              venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                    7 / 27
+                                                        #Título                     L0200 Clases de Cañerías
+                                                                                    para Plantas
+    #Tipo                                                Especificación            #Código                 ES__-0001998
+    #Fecha de Vigencia                                   06/09/2023                #Versión                1.1
+    #Activo de la información                            YPF - Privada
+    #Proceso                                             21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+           D:           Hot Oil.
+           E:           Hidrocarburo Alto CO2. (Según lo indicado en el punto 5.4 de la Esp. Técnica s/Código:
+                        Estandarización de Equipos e Instalaciones; selección de materiales y sistemas de
+                        recubrimiento interior.)
+           F:           Hidrocarburo H2S H2O e Hidrocarburo Alto CO2 (NACE).
+           G:           Amina Rica, Amina Pobre.
+           H:           ELIMINADO
+           J:           Aceite lubricante, Lube oil.
+           K:           Propano, Hidrocarburos de baja temperatura (L.T. Hydrocarbons).
+           N:           Servicio de SCI fuera de recintos de tanques (enterrado), Servicio de Drenajes Abiertos
+                        y Oleosos fuera de recintos de tanques (enterrado)
+-      Tercer digito: identificado por un número, correspondiente a la serie ASME de la tubería.
+           1:           150 lb.
+           2:           300 lb.
+           3:           600 lb.
+           4:           900 lb.
+           5:           1500 lb.
+-      Cuarto digito: identificado por un número, correspondiente a la corrosión admitida por la tubería.
+           0:           0 mm de sobre espesor por corrosión.
+           1:           1,6 mm de sobre espesor por corrosión.
+           2:           3,2 mm de sobre espesor por corrosión.
+
+
+
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o
+                                              venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                    8 / 27
+                                                        #Título                     L0200 Clases de Cañerías
+                                                                                    para Plantas
+    #Tipo                                                Especificación            #Código                 ES__-0001998
+    #Fecha de Vigencia                                   06/09/2023                #Versión                1.1
+    #Activo de la información                            YPF - Privada
+    #Proceso                                             21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+
+5.2 Codificación de clases de válvulas
+Para identificar las válvulas se utiliza un código de 5 dígitos.
+- El primer dígito identifica: Tipo de Válvula
+                              IDENTIFICADOR                                                                               TIPO DE VÁLVULA
+                                          A                                   AGUJA
+                                          E                                   ESCLUSA
+                                          G                                   GLOBO
+                                          L                                   GLOBO – B.E.(3)
+                                          M                                   MARIPOSA
+                                          N                                   MARIPOSA – DOBLE EXCENTRICA
+                                          O                                   MARIPOSA – TRIPLE EXCENTRICA
+                                          P                                   ELIMINADO
+                                          R                                   RETENCIÓN
+                                          S                                   ESFÉRICA – P.R.(4)
+                                          T                                   ESFÉRICA – P.T.(5)
+                                          V                                   ESFÉRICA – P.R. – V.E.(6)
+                                          X                                   ESFÉRICA – P.T. – V.E.
+
+
+-      El segundo dígito identifica: Material de la Válvula
+                                                                                                                              MATERIAL
+                           IDENTIFICADOR
+                                                                                               FORJADO                                                          FUNDIDO
+                                        A                                                  ASTM A 105
+                                        B                                                                                                             ASTM A 216 WCB
+                                        C                                               ASTM A 105                                                    ASTM A 216 WCB
+                                        D                                             ASTM A 350 LF2
+                                        E                                                                                                              ASTM A 352 LCC
+                                        F                                            ASTM A 182 F304
+                                        G                                            ASTM A 182 F316
+                                        H                                            ASTM A 182 F316                                                 ASTM A 351 CF8M
+                                        J                                                                                                            ASTM A 351 CF8M
+                                        K                                   ASTM A 182 F316 (NACE)
+
+
+3 B.E.:       Bonete Extendido
+4 P.R.:       Paso Reducido
+5 P.T.:       Paso Total
+6 V.E.:       Vástago Extendido
+
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o
+                                              venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                    9 / 27
+                                                        #Título                     L0200 Clases de Cañerías
+                                                                                    para Plantas
+    #Tipo                                                Especificación            #Código                 ES__-0001998
+    #Fecha de Vigencia                                   06/09/2023                #Versión                1.1
+    #Activo de la información                            YPF - Privada
+    #Proceso                                             21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+                                                                                                                              MATERIAL
+                           IDENTIFICADOR
+                                                                                               FORJADO                                                          FUNDIDO
+                                        L                                                                                                    ASTM A 351 CF8M (NACE)
+                                        M                                         ASTM A 350 LF2                                                   A 352 LCC
+                                        N                                       ASTM A 182 F321-347
+                                        O                                       ASTM A 182 F321-347                                                    A351 CF8C
+                                        P                                         ASTM A 182 F53                                                    ASTM A995 CD3MN
+
+
+-      El tercer dígito identifica: Material de los Internos de la Válvula
+                IDENTIFICADOR                                                   MATERIAL                                                TRIM(7) (8); SEGÚN L0201 (NOTA 1,2)
+
+                            A                     ASTM A 182 F6                                                                                                      8
+                            B                     ASTM A 182 F6 / ST                                                                                                 8
+                            C                     AISI 316 / ASTM A 105 ENP (9)                                                                                     ---
+                            D                     ASTM A 182 F316 / ST                                                                                              12
+                            E                     STELLITADO                                                                                                         5
+                            F                     ASTM A 350 LF2 / ENP(9)                                                                                           ---
+                            G                     AISI 316                                                                                                          10
+                            H                     AISI 316 / ASTM A 351 CF8M                                                                                        10
+                            J                     AISI 316 / ASTM A 105 ENP(9)                                                                                      ---
+                            K                     AISI 316 / ST                                                                                                     12
+                            L                     ASTM A 351 CF8M                                                                                                   10
+                            M                     ASTM A 351 CF8M / ST                                                                                              12
+                            N                     AISI 316-HF(10) / AISI 321-347                                                                                    17
+                            O                     AISI 321-347                                                                                                      ---
+                            P                     AISI 321-347 / A351 CF8C                                                                                          ---
+                            Q                     A351 CF8C-HF(10) / AISI 321-347                                                                                   17
+                            R                     ASTM A 182 F53-HF(10) (UNS S32750)                                                                                ---
+
+
+
+
+7 El número de trim alternativo, se puede observar en la tabla 9 del API 600, año 2015.
+8 Para cada uno de los Trim aquí indicados, pueden ser aceptados los diferentes materiales que se muestran en la tabla 8
+
+del API 600 año 2015, de acuerdo al método de fabricación (Fundido, Forjado y por aporte de soldadura).
+9 Electrless Nikel Plated.
+10   Hardfaced.
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o
+                                              venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                 10 / 27
+                                                        #Título                     L0200 Clases de Cañerías
+                                                                                    para Plantas
+    #Tipo                                                Especificación            #Código                 ES__-0001998
+    #Fecha de Vigencia                                   06/09/2023                #Versión                1.1
+    #Activo de la información                            YPF - Privada
+    #Proceso                                             21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+-      El cuarto dígito identifica: Serie de la Válvula
+                                                           IDENTIFICADOR                                                        SERIE
+                                                                        1                              150#
+                                                                        2                              2000 Lbs
+                                                                        3                              300#
+                                                                        5                              5000 Lbs
+                                                                        6                              600#
+                                                                        8                              800 Lbs
+                                                                        9                              900#
+                                                                        0                              1500#
+
+
+-      El quinto dígito identifica: Tipo de extremo de la Válvula
+                                                           IDENTIFICADOR                                                    EXTREMOS
+                                                                       B                               BUT WELD
+                                                                       F                               WAFER – R.T.J.
+                                                                       J                               R.T.J.
+                                                                       L                               LUG – R.F.
+                                                                       N                               ROSCADO N.P.T.
+                                                                       R                               R.F.
+                                                                       S                               SOCKET WELD
+                                                                       W                               WAFER – R.F.
+                                                                       X                               LUG – R.T.J.
+
+
+Ejemplo:
+
+                               1                                             2                                          3                                 4                               5
+
+                               E                                            C                                           A                                 1                              R
+
+                 Válvula Esclusa                           A 105 / A 216 WCB                                    A 182 F6                               150#                            R.F.
+
+
+
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o
+                                              venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                 11 / 27
+                                                        #Título                     L0200 Clases de Cañerías
+                                                                                    para Plantas
+ #Tipo                                                   Especificación            #Código                 ES__-0001998
+ #Fecha de Vigencia                                      06/09/2023                #Versión                1.1
+ #Activo de la información                               YPF - Privada
+ #Proceso                                                21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+
+5.3 Resumen clases de Cañerías
+                                                                                              RANGO DE                      SOBRE ESP.                GRADO DE
+     CLASE                       SERVICIO                              SERIE                  PRESIÓN /                        POR                   CORROSIÓN                MATERIAL                CÓDIGO
+                                                                                            TEMPERATURA                     CORROSIÓN                 (Ver 4.1.1)
+                     Venteos a Flare(11),
+                   Drenajes Presurizados,
+                      Gas Combustible,
+                   Blanketing Gas, Gasoil,                                                 20 kg/cm2g @
+                    Glycol, Metanol, Agua                                                    -29/38 °C
+                                                                    150# -                                                                                                                            ASME
+ CA11               Industrial, Nitrógeno,                                                        /                          1,6 mm                       BAJA                    AºCº
+                                                                                                                                                                                                      B31.3
+                   Agua de SCI (Cañería                              R.F.                  14 kg/cm2g @
+                  Húmeda), Aire de Planta,                                                     200 ºC
+                  Hidrocarburos, Vapor(12),
+                     Agua de formación
+                      corrosiva Baja(13).
+                   Drenajes Presurizados,
+                      Gas Combustible,
+                   Blanketing Gas, Gasoil,
+                                                                                          52 kg/cm2g @
+                    Glycol, Metanol, Agua
+                                                                                             29/38 °C
+                    Industrial, Nitrógeno,                          300# -                                                                                                                            ASME
+ CA21              Agua de SCI (Cañería
+                                                                                                 /                           1,6 mm                       BAJA                    AºCº
+                                                                                                                                                                                                      B31.3
+                                                                     R.F.                44,7 kg/cm2g @
+                  Húmeda), Aire de Planta,
+                                                                                              200 ºC
+                  Hidrocarburos, Vapor(12),
+                     Agua de formación
+                      corrosiva Baja(13)
+                    Drenajes Presurizados,
+                       Gas Combustible,
+                                                                                        104,1 kg/cm2g @
+                    Blanketing Gas, Gasoil,
+                                                                                             -29/38°C
+                     Glycol, Metanol, Agua                          600# -                                                                                                                            ASME
+ CA31                Industrial, Nitrógeno,
+                                                                                                 /                           1,6 mm                       BAJA                    AºCº
+                                                                                                                                                                                                      B31.3
+                                                                     R.F.                89,3 kg/cm2g @
+                    Hidrocarburos, Agua de
+                                                                                              200 ºC
+                      formación corrosiva
+                            Baja(13).
+
+
+
+
+11
+   Para el caso en que la temperatura mínima alcanzada, ante un evento de blowdown de la planta sea menor a la permitida
+en la clase, se deberá proceder a realizar un estudio de stress ratio como lo establece ASME B31.3 y verificar así, si se
+matniene el material para las condiciones dadas, se le debe realizar ensayo charpy o se debe proceder a cambio de clase
+de cañerías previa aprobación de YPF.
+12 Las válvulas indicadas en la clase de cañerías, “no son de aplicación” para el servicio de Vapor.
+13 En el caso de agua de formación corrosiva se deben emplear cañerías y accesorios de acero al carbono con revestimiento
+
+interior, según lo indicado en el Punto 4.1.12 de esta especificación.
+El diseño de los spools y su terminación interior está restringido al cumplimiento de los requerimientos de las normas: BS-
+EN 14879-1; ISO 12944-3; NACE SP 0178.
+
+
+      COPIA NO CONTROLADA
+      [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o
+                                              venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                 12 / 27
+                                                    #Título                     L0200 Clases de Cañerías
+                                                                                para Plantas
+#Tipo                                                Especificación            #Código                 ES__-0001998
+#Fecha de Vigencia                                   06/09/2023                #Versión                1.1
+#Activo de la información                            YPF - Privada
+#Proceso                                             21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+                                                                                          RANGO DE                      SOBRE ESP.                GRADO DE
+CLASE                        SERVICIO                              SERIE                  PRESIÓN /                        POR                   CORROSIÓN                MATERIAL                CÓDIGO
+                                                                                        TEMPERATURA                     CORROSIÓN                 (Ver 4.1.1)
+                Drenajes Presurizados,
+                   Gas Combustible,
+                                                                                    156,1 kg/cm2g @
+                Blanketing Gas, Gasoil,
+                                                                                        -29/38°C
+                 Glycol, Metanol, Agua                          900# -                                                                                                                            ASME
+CA41             Industrial, Nitrógeno,
+                                                                                            /                            1,6 mm                       BAJA                    AºCº
+                                                                                                                                                                                                  B31.3
+                                                                 R.J.                134 kg/cm2g @
+                Hidrocarburos, Agua de
+                                                                                         200 ºC
+                  formación corrosiva
+                        Baja(13).
+                Drenajes Presurizados,
+                   Gas Combustible,
+                                                                                    260,3 kg/cm2g @
+                Blanketing Gas, Gasoil,
+                                                                                        -29/38°C
+                 Glycol, Metanol, Agua                         1500# -                                                                                                                            ASME
+CA51             Industrial, Nitrógeno,
+                                                                                            /                            1,6 mm                       BAJA                    AºCº
+                                                                                                                                                                                                  B31.3
+                                                                R.J.                223,3 kg/cm2g @
+                Hidrocarburos, Agua de
+                                                                                         200 ºC
+                  formación corrosiva
+                        Baja(13).
+                                                                                      20 kg/cm2g @
+                                                                                         -29/38°C
+                                                                150# -                                                                                                                            ASME
+CD11                           Hot-Oil                                                       /                           1,6 mm                       BAJA                    AºCº
+                                                                                                                                                                                                  B31.3
+                                                                 R.F.                10,4 kg/cm2g @
+                                                                                          300 ºC
+                                                                                      20 kg/cm2g @
+                                                                                         -29/38°C
+                                                                150# -                                                                                                                            ASME
+CE12             Hidrocarburo Alto CO2                                                       /                           3,2 mm                     MEDIA                     AºCº
+                                                                                                                                                                                                  B31.3
+                                                                 R.F.                 14 kg/cm2g @
+                                                                                          200 ºC
+                                                                                      52 kg/cm2g @
+                                                                                         -29/38°C
+                                                                300# -                                                                                                                            ASME
+CE22             Hidrocarburo Alto CO2                                                       /                           3,2 mm                     MEDIA                     AºCº
+                                                                                                                                                                                                  B31.3
+                                                                 R.F.                44,7 kg/cm2g @
+                                                                                          200 ºC
+                                                                                    104,1 kg/cm2g @
+                                                                                         -29/38°C
+                                                                600# -                                                                                                                            ASME
+CE32             Hidrocarburo Alto CO2                                                       /                           3,2 mm                     MEDIA                     AºCº
+                                                                                                                                                                                                  B31.3
+                                                                 R.F.                89,3 kg/cm2g @
+                                                                                          200 ºC
+                                                                                    156,1 kg/cm2g @
+                                                                                         -29/38°C
+                                                                900# -                                                                                                                            ASME
+CE42             Hidrocarburo Alto CO2                                                       /                           3,2 mm                     MEDIA                     AºCº
+                                                                                                                                                                                                  B31.3
+                                                                 R.J.                134 kg/cm2g @
+                                                                                          200 ºC
+                                                                                    260,3 kg/cm2g @
+                                                                                        -29/38°C
+                                                               1500# -                                                                                                                            ASME
+CE52             Hidrocarburo Alto CO2                                                      /                            3,2 mm                     MEDIA                     AºCº
+                                                                                                                                                                                                  B31.3
+                                                                R.J.                223,3 kg/cm2g @
+                                                                                         200 ºC
+
+
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o
+                                          venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                             13 / 27
+                                                    #Título                     L0200 Clases de Cañerías
+                                                                                para Plantas
+#Tipo                                                Especificación            #Código                 ES__-0001998
+#Fecha de Vigencia                                   06/09/2023                #Versión                1.1
+#Activo de la información                            YPF - Privada
+#Proceso                                             21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+                                                                                          RANGO DE                      SOBRE ESP.                GRADO DE
+CLASE                        SERVICIO                              SERIE                  PRESIÓN /                        POR                   CORROSIÓN                MATERIAL                CÓDIGO
+                                                                                        TEMPERATURA                     CORROSIÓN                 (Ver 4.1.1)
+                                                                                      20 kg/cm2g @
+                Hidrocarburo H2S H2O,
+                                                                                         -29/38°C
+                Hidrocarburo Alto CO2                           150# -                                                                                                                            ASME
+CF12               (NACE Standard
+                                                                                             /                           3,2 mm                     MEDIA                     AºCº
+                                                                                                                                                                                                  B31.3
+                                                                 R.F.                 14 kg/cm2g @
+                MR0175 / ISO 15156)
+                                                                                          200 ºC
+                                                                                      52 kg/cm2g @
+                Hidrocarburo H2S H2O,
+                                                                                         -29/38°C
+                Hidrocarburo Alto CO2                           300# -                                                                                                                            ASME
+CF22               (NACE Standard
+                                                                                             /                           3,2 mm                     MEDIA                     AºCº
+                                                                                                                                                                                                  B31.3
+                                                                 R.F.                44,7 kg/cm2g @
+                MR0175 / ISO 15156)
+                                                                                          200 ºC
+                                                                                    104,1 kg/cm2g @
+                Hidrocarburo H2S H2O,
+                                                                                         -29/38°C
+                Hidrocarburo Alto CO2                           600# -                                                                                                                            ASME
+CF32               (NACE Standard
+                                                                                             /                           3,2 mm                     MEDIA                     AºCº
+                                                                                                                                                                                                  B31.3
+                                                                 R.F.                89,3 kg/cm2g @
+                MR0175/ ISO 15156 )
+                                                                                          200 ºC
+                                                                                    156,1 kg/cm2g @
+                Hidrocarburo H2S H2O,
+                                                                                        -29/38°C
+                Hidrocarburo Alto CO2                           900# -                                                                                                                            ASME
+CF42               (NACE Standard
+                                                                                            /                            3,2 mm                     MEDIA                     AºCº
+                                                                                                                                                                                                  B31.3
+                                                                 R.J.                134 kg/cm2g @
+                MR0175 / ISO 15156)
+                                                                                         200 ºC
+                                                                                    260,3 kg/cm2g @
+                Hidrocarburo H2S H2O,
+                                                                                        -29/38°C
+                Hidrocarburo Alto CO2                          1500# -                                                                                                                            ASME
+CF52               (NACE Standard
+                                                                                            /                            3,2 mm                     MEDIA                     AºCº
+                                                                                                                                                                                                  B31.3
+                                                                R.J.                223,3 kg/cm2g @
+                MR0175 / ISO 15156)
+                                                                                         200 ºC
+                                                                                      20 kg/cm2g @
+                                                                                         -29/38°C
+                                                                150# -                                                                                                                            ASME
+CG12 Amina Rica, Amina Pobre                                                                 /                           3,2 mm                     MEDIA                     AºCº
+                                                                                                                                                                                                  B31.3
+                                                                 R.F.                16,1 kg/cm2g @
+                                                                                          150 ºC
+                                                                                      52 kg/cm2g @
+                                                                                         -29/38°C
+                                                                300# -                                                                                                                            ASME
+CG22 Amina Rica, Amina Pobre                                                                 /                           3,2 mm                     MEDIA                     AºCº
+                                                                                                                                                                                                  B31.3
+                                                                 R.F.                 46 kg/cm2g @
+                                                                                          150 ºC
+                                                                                    104,1 kg/cm2g @
+                                                                                         -29/38°C
+                                                                600# -                                                                                                                            ASME
+CG32 Amina Rica, Amina Pobre                                     R.F.
+                                                                                             /                           3,2 mm                     MEDIA                     AºCº
+                                                                                                                                                                                                  B31.3
+                                                                                     85,5 kg/cm2g @
+                                                                                          150 ºC
+                                                                                    156,1 kg/cm2g @
+                                                                                         -29/38°C
+                                                                900# -                                                                                                                            ASME
+CG42 Amina Rica, Amina Pobre                                                                 /                           3,2 mm                     MEDIA                     AºCº
+                                                                                                                                                                                                  B31.3
+                                                                 R.J.               128,3 kg/cm2g @
+                                                                                          150 ºC
+
+
+
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o
+                                          venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                             14 / 27
+                                                     #Título                     L0200 Clases de Cañerías
+                                                                                 para Plantas
+ #Tipo                                                Especificación            #Código                 ES__-0001998
+ #Fecha de Vigencia                                   06/09/2023                #Versión                1.1
+ #Activo de la información                            YPF - Privada
+ #Proceso                                             21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+                                                                                           RANGO DE                      SOBRE ESP.                GRADO DE
+  CLASE                       SERVICIO                              SERIE                  PRESIÓN /                        POR                   CORROSIÓN                MATERIAL                CÓDIGO
+                                                                                         TEMPERATURA                     CORROSIÓN                 (Ver 4.1.1)
+                                                                                     260,3 kg/cm2g @
+                                                                                          -29/38°C
+                                                                1500# -                                                                                                                            ASME
+ CG52 Amina Rica, Amina Pobre                                                                 /                           3,2 mm                     MEDIA                     AºCº
+                                                                                                                                                                                                   B31.3
+                                                                  R.J                229,8 kg/cm2g @
+                                                                                           150 ºC
+                                                                                       20 kg/cm2g @
+                                                                                          -29/38°C
+                 Aceite Lubricante, Lube                         150# -                                                                                                                            ASME
+ CJ10                     Oil14
+                                                                                              /                           0,0 mm                       BAJA                    AºCº
+                                                                                                                                                                                                   B31.3
+                                                                  R.F.                 14 kg/cm2g @
+                                                                                           200 ºC
+                                                                                      18,6 kg/cm2g @
+                 Propano, Hidrocarburos                                                    -46 °C
+                                                                 150# -                                                                                                  AºCº BAJA                 ASME
+ CK11 de baja temperatura (L.T.                                                               /                           1,6 mm                       BAJA
+                                                                                                                                                                           TEMP.                   B31.3
+                        Hydrocarbons).                            R.F.                 14 kg/cm2g @
+                                                                                           200 ºC
+                                                                                      48,8 kg/cm2g @
+                 Propano, Hidrocarburos                                                    -46 °C
+                                                                 300# -                                                                                                  AºCº BAJA                 ASME
+ CK21 de baja temperatura (L.T.                                                               /                           1,6 mm                       BAJA
+                                                                                                                                                                           TEMP.                   B31.3
+                        Hydrocarbons).                            R.F.                44,7 kg/cm2g @
+                                                                                           200 ºC
+                                                                                      97,6 kg/cm2g @
+                Propano, Hidrocarburos                                                     -46 °C
+                                                                 600# -                                                                                                  AºCº BAJA                 ASME
+ CK31          de baja temperatura (L.T.                                                      /                           1,6 mm                       BAJA
+                                                                                                                                                                           TEMP.                   B31.3
+                    Hydrocarbons).                                R.F.                85,5 kg/cm2g @
+                                                                                           200 ºC
+                                                                                      156 kg/cm2g @
+                Propano, Hidrocarburos                                                    -46 °C
+                                                                 900# -                                                                                                  AºCº BAJA                 ASME
+ CK41          de baja temperatura (L.T.                                                     /                            1,6 mm                       BAJA
+                                                                                                                                                                           TEMP.                   B31.3
+                    Hydrocarbons).                                R.J.               133,6 kg/cm2g @
+                                                                                          200 ºC
+                                                                                     243,8 kg/cm2g @
+                Propano, Hidrocarburos                                                    -46 °C
+                                                                1500# -                                                                                                  AºCº BAJA                 ASME
+ CK51          de baja temperatura (L.T.                                                     /                            1,6 mm                       BAJA
+                                                                                                                                                                           TEMP.                   B31.3
+                   H11ydrocarbons).                              R.J.                223,3 kg/cm2g @
+                                                                                          200 ºC
+                  Agua de SCI (Cañería
+                      Seca), Aire de                             150# -                 20 kg/cm2g @                                                                          AºCº                 ASME
+ GC11              Instrumentos, Agua                                                      -29/38°C                       1,6 mm                       BAJA
+                                                                                                                                                                             GALV.                 B31.3
+                                                                  R.F.
+                         Potable.
+
+
+
+
+14 En el caso de que el Fabricante del equipo, por razones propias de diseño, requiera que las cañerías del sistema del
+
+Lube-Oil sean de Ac.Inox. (316L); se deben utilizar las clases de cañerías de dicho material listadas en esta especificación,
+de acuerdo a las condiciones de diseño de Presión / Temperatura requeridas.
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o
+                                           venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                              15 / 27
+                                                    #Título                     L0200 Clases de Cañerías
+                                                                                para Plantas
+#Tipo                                                Especificación            #Código                 ES__-0001998
+#Fecha de Vigencia                                   06/09/2023                #Versión                1.1
+#Activo de la información                            YPF - Privada
+#Proceso                                             21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+                                                                                          RANGO DE                      SOBRE ESP.                GRADO DE
+CLASE                        SERVICIO                              SERIE                  PRESIÓN /                        POR                   CORROSIÓN                MATERIAL                CÓDIGO
+                                                                                        TEMPERATURA                     CORROSIÓN                 (Ver 4.1.1)
+                Agua de desecho (Sour                                                 20 kg/cm2g @
+                  Water), Gas Acido,                                                    -29/38 °C
+                                                                150# -                                                                                                      AºCº                  ASME
+RB10                Hidrocarburos                                                            /                           0,0 mm                       ALTA
+                                                                                                                                                                          REVEST.                 B31.3
+                 Corrosivos, Agua de                             R.F.                15,8 kg/cm2g @
+               formación corrosiva Alta.                                                  150 ºC
+                Agua de desecho (Sour                                                 52 kg/cm2g @
+                  Water), Gas Acido,                                                     29-38 °C
+                                                                300# -                                                                                                      AºCº                  ASME
+RB20                Hidrocarburos                                                            /                           0,0 mm                       ALTA
+                                                                                                                                                                          REVEST.                 B31.3
+                 Corrosivos, Agua de                             R.F.                45,1 kg/cm2g @
+               formación corrosiva Alta.                                                  150 ºC
+                Agua de desecho (Sour                                                84,3 kg/cm2g @
+                  Water), Gas Acido,                                                     -29/38°C
+                                                                600# -                                                                                                      AºCº                  ASME
+RB30                Hidrocarburos                                                            /                           0,0 mm                       ALTA
+                                                                                                                                                                          REVEST.                 B31.3
+                 Corrosivos, Agua de                             R.F.                90,6 kg/cm2g @
+               formación corrosiva Alta.                                                  150 ºC
+                Agua de desecho (Sour                                               126,5 kg/cm2g @
+                  Water), Gas Acido,                                                    -29/38°C
+                                                                900# -                                                                                                      AºCº                  ASME
+RB40                Hidrocarburos                                                           /                            0,0 mm                       ALTA
+                                                                                                                                                                          REVEST.                 B31.3
+                 Corrosivos, Agua de                             R.J.               135,7 kg/cm2g @
+               formación corrosiva Alta.                                                 150 ºC
+                Agua de desecho (Sour                                               206,8 kg/cm2g @
+                                                                                                                                                                          AºCº
+                  Water), Gas Acido,                                                    -29/38°C
+                                                               1500# -                                                                                                  REVEST. /                 ASME
+RB50                Hidrocarburos                                                           /                            0,0 mm                       ALTA
+                                                                                                                                                                        AC. INOX.                 B31.3
+                 Corrosivos, Agua de                             R.J                 226 kg/cm2g @
+                                                                                                                                                                          321.
+               formación corrosiva Alta.                                                 150 ºC
+                Agua de desecho (Sour                                                 16 kg/cm2g @
+                  Water), Gas Acido,                                                     -29/38°C
+                                                                150# -                                                                                                                            ASME
+SB10                Hidrocarburos                                                            /                           0,0 mm                       ALTA               AC. INOX.
+                                                                                                                                                                                                  B31.3
+                 Corrosivos, Agua de                             R.F.                12,2 kg/cm2g @
+               formación corrosiva Alta.                                                  150 ºC
+                Agua de desecho (Sour                                                42,2 kg/cm2g @
+                  Water), Gas Acido,                                                     -29/38°C
+                                                                300# -                                                                                                                            ASME
+SB20                Hidrocarburos                                                            /                           0,0 mm                       ALTA               AC. INOX.
+                                                                                                                                                                                                  B31.3
+                 Corrosivos, Agua de                             R.F.                31,9 kg/cm2g @
+               formación corrosiva Alta.                                                  150 ºC
+                Agua de desecho (Sour                                                84,3 kg/cm2g @
+                  Water), Gas Acido,                                                     -29/38°C
+                                                                600# -                                                                                                                            ASME
+SB30                Hidrocarburos
+                                                                 R.F.
+                                                                                             /                           0,0 mm                       ALTA               AC. INOX.
+                                                                                                                                                                                                  B31.3
+                 Corrosivos, Agua de                                                 63,8 kg/cm2g @
+               formación corrosiva Alta.                                                  150 ºC
+                Agua de desecho (Sour                                               126,5 kg/cm2g @
+                  Water), Gas Acido,                                                     -29/38°C
+                                                                900# -                                                                                                                            ASME
+SB40                Hidrocarburos                                                            /                           0,0 mm                       ALTA               AC. INOX.
+                                                                                                                                                                                                  B31.3
+                 Corrosivos, Agua de                             R.J.                95,4 kg/cm2g @
+               formación corrosiva Alta.                                                  150 ºC
+
+
+
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o
+                                          venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                             16 / 27
+                                                     #Título                     L0200 Clases de Cañerías
+                                                                                 para Plantas
+ #Tipo                                                Especificación            #Código                 ES__-0001998
+ #Fecha de Vigencia                                   06/09/2023                #Versión                1.1
+ #Activo de la información                            YPF - Privada
+ #Proceso                                             21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+                                                                                           RANGO DE                      SOBRE ESP.                GRADO DE
+  CLASE                       SERVICIO                              SERIE                  PRESIÓN /                        POR                   CORROSIÓN                MATERIAL                CÓDIGO
+                                                                                         TEMPERATURA                     CORROSIÓN                 (Ver 4.1.1)
+                 Agua de desecho (Sour                                               206,8 kg/cm2g @
+                   Water), Gas Acido,                                                    -29/38°C
+                                                                1500# -                                                                                                                            ASME
+ SB50                Hidrocarburos                                                           /                            0,0 mm                       ALTA               AC. INOX.
+                                                                                                                                                                                                   B31.3
+                  Corrosivos, Agua de                             R.J                 157 kg/cm2g @
+                formación corrosiva Alta.                                                 150 ºC
+                                                                                     253,1 kg/cm2g @
+                                                                                         -29/38°C
+                     Agua de formación                          1500# -                                                                                                   AC. INOX.                ASME
+ LB50                 corrosiva Alta15
+                                                                                             /                            0,0 mm                       ALTA
+                                                                                                                                                                            (316)                  B31.3
+                                                                  R.J                196,2 kg/cm2g @
+                                                                                          150 ºC
+                 Agua de desecho (Sour                                               158,2 kg/cm2g @
+                   Water), Gas Acido,                                                    -29/38°C
+                                                                 900# -                                                                                                     AC. S.                 ASME
+ XB40                Hidrocarburos                                                           /                            0,0 mm                       ALTA
+                                                                                                                                                                           DUPLEX                  B31.3
+                  Corrosivos, Agua de                             R.J.                155 kg/cm2g @
+                formación corrosiva Alta.                                                 100 ºC
+                 Agua de desecho (Sour                                               263,7 kg/cm2g @
+                   Water), Gas Acido,                                                    -29/38°C
+                                                                1500# -                                                                                                     AC. S.                 ASME
+ XB50                Hidrocarburos                                                           /                            0,0 mm                       ALTA
+                                                                                                                                                                           DUPLEX                  B31.3
+                  Corrosivos, Agua de                             R.J                258,3 kg/cm2g @
+                formación corrosiva Alta.                                                 100 ºC
+                SCI Fuera de Recintos
+               de Tanques (Enterrado),                         PN 12,5
+                 Sistema de Drenajes                                                    12 kg/cm2g @                                                                                               ASME
+ PN10          Abiertos y Oleosos Fuera                         (150#                      21-65 °C                       0,0 mm                       BAJA                   PEAD
+                                                                                                                                                                                                   B31.3
+               de Recintos de Tanques                           A°C°)
+                     (Enterrados)
+
+
+
+
+15 Esta clase es únicamente utilizada para el caso en el cual, las condiciones de diseño del sistema de Agua de formación
+
+corrosiva cumplan con lo siguiente: 100 °C @ 200 Kg/Cm2.
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o
+                                           venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                              17 / 27
+                                                       #Título                     L0200 Clases de Cañerías
+                                                                                   para Plantas
+ #Tipo                                                  Especificación            #Código                 ES__-0001998
+ #Fecha de Vigencia                                     06/09/2023                #Versión                1.1
+ #Activo de la información                              YPF - Privada
+ #Proceso                                               21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+
+5.4 Radiografiado
+
+     CLASE                                                          SERVICIO                                                              SERIE              MATERIAL                 CÓDIGO               Rx.
+
+                            Venteos a Flare(16), Drenajes Presurizados, Gas
+                       Combustible, Blanketing Gas, Gasoil, Glycol, Metanol, Agua
+                                                                                                                                          150# -                                       ASME
+     CA11              Industrial, Nitrógeno, Agua de SCI (Cañería Húmeda), Aire
+                                                                                                                                           R.F.
+                                                                                                                                                                  AºCº
+                                                                                                                                                                                       B31.3
+                                                                                                                                                                                                          10%
+                         de Planta, Hidrocarburos, Vapor(17), Agua de formación
+                                             corrosiva Baja(18).
+                       Drenajes Presurizados, Gas Combustible, Blanketing Gas,
+                       Gasoil, Glycol, Metanol, Agua Industrial, Nitrógeno, Agua de                                                       300# -                                       ASME
+     CA21                SCI (Cañería Húmeda), Aire de Planta,Hidrocarburos,                                                               R.F.
+                                                                                                                                                                  AºCº
+                                                                                                                                                                                       B31.3
+                                                                                                                                                                                                          10%
+                             Vapor(17), Agua de formación corrosiva Baja(18).
+                        Drenajes Presurizados, Gas Combustible, Blanketing Gas,
+                                                                                                                                          600# -                                       ASME
+     CA31                  Gasoil, Glycol, Metanol, Agua Industrial, Nitrógeno,
+                                                                                                                                           R.F.
+                                                                                                                                                                  AºCº
+                                                                                                                                                                                       B31.3
+                                                                                                                                                                                                          30%
+                          Hidrocarburos, Agua de formación corrosiva Baja(18).
+                        Drenajes Presurizados, Gas Combustible, Blanketing Gas,
+                                                                                                                                          900# -                                       ASME
+     CA41                  Gasoil, Glycol, Metanol, Agua Industrial, Nitrógeno,
+                                                                                                                                           R.J.
+                                                                                                                                                                  AºCº
+                                                                                                                                                                                       B31.3
+                                                                                                                                                                                                          30%
+                          Hidrocarburos, Agua de formación corrosiva Baja(18).
+                        Drenajes Presurizados, Gas Combustible, Blanketing Gas,
+                                                                                                                                         1500# -                                       ASME
+     CA51                  Gasoil, Glycol, Metanol, Agua Industrial, Nitrógeno,
+                                                                                                                                          R.J.
+                                                                                                                                                                  AºCº
+                                                                                                                                                                                       B31.3
+                                                                                                                                                                                                          30%
+                          Hidrocarburos, Agua de formación corrosiva Baja(18).
+                                                                                                                                          150# -                                       ASME
+     CD11                                                             Hot-Oil
+                                                                                                                                           R.F.
+                                                                                                                                                                  AºCº
+                                                                                                                                                                                       B31.3
+                                                                                                                                                                                                          20%
+
+                                                                                                                                          150# -                                       ASME
+     CE12                                               Hidrocarburo Alto CO2
+                                                                                                                                           R.F.
+                                                                                                                                                                  AºCº
+                                                                                                                                                                                       B31.3
+                                                                                                                                                                                                          30%
+
+                                                                                                                                          300# -                                       ASME
+     CE22                                               Hidrocarburo Alto CO2
+                                                                                                                                           R.F.
+                                                                                                                                                                  AºCº
+                                                                                                                                                                                       B31.3
+                                                                                                                                                                                                          30%
+
+                                                                                                                                          600# -                                       ASME
+     CE32                                               Hidrocarburo Alto CO2
+                                                                                                                                           R.F.
+                                                                                                                                                                  AºCº
+                                                                                                                                                                                       B31.3
+                                                                                                                                                                                                         100%
+
+                                                                                                                                          900# -                                       ASME
+     CE42                                               Hidrocarburo Alto CO2
+                                                                                                                                           R.J.
+                                                                                                                                                                  AºCº
+                                                                                                                                                                                       B31.3
+                                                                                                                                                                                                         100%
+
+                                                                                                                                         1500# -                                       ASME
+     CE52                                               Hidrocarburo Alto CO2
+                                                                                                                                          R.J.
+                                                                                                                                                                  AºCº
+                                                                                                                                                                                       B31.3
+                                                                                                                                                                                                         100%
+
+
+
+16
+   Para el caso en que la temperatura mínima alcanzada, ante un evento de blowdown de la planta sea menor a la permitida
+en la clase, se deberá proceder a realizar un estudio de stress ratio como lo establece ASME B31.3 y verificar así, si se
+matniene el material para las condiciones dadas, se le debe realizar ensayo charpy o se debe proceder a cambio de clase
+de cañerías previa aprobación de YPF.
+17 Las válvulas indicadas en la clase de cañerías, “no son de aplicación” para el servicio de Vapor.
+18 En el caso de agua de formación corrosiva se deben emplear cañerías y accesorios de acero al carbono con revestimiento
+
+interior, según lo indicado en el Punto 4.1.12 de esta especificación.
+El diseño de los spools y su terminación interior está restringido al cumplimiento de los requerimientos de las normas: BS-
+EN 14879-1; ISO 12944-3; NACE SP 0178.
+
+
+     COPIA NO CONTROLADA
+     [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+     © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o
+                                             venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                18 / 27
+                                                     #Título                     L0200 Clases de Cañerías
+                                                                                 para Plantas
+ #Tipo                                                Especificación            #Código                 ES__-0001998
+ #Fecha de Vigencia                                   06/09/2023                #Versión                1.1
+ #Activo de la información                            YPF - Privada
+ #Proceso                                             21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+
+  CLASE                                                           SERVICIO                                                              SERIE              MATERIAL                 CÓDIGO               Rx.
+
+                           Hidrocarburo H2S H2O, Hidrocarburo Alto CO2 (NACE                                                            150# -                                       ASME
+  CF12                               Standard MR0175 / ISO 15156)                                                                        R.F.
+                                                                                                                                                                AºCº
+                                                                                                                                                                                     B31.3
+                                                                                                                                                                                                       100%
+
+                           Hidrocarburo H2S H2O, Hidrocarburo Alto CO2 (NACE                                                            300# -                                       ASME
+  CF22                               Standard MR0175 / ISO 15156)                                                                        R.F.
+                                                                                                                                                                AºCº
+                                                                                                                                                                                     B31.3
+                                                                                                                                                                                                       100%
+
+                           Hidrocarburo H2S H2O, Hidrocarburo Alto CO2 (NACE                                                            600# -                                       ASME
+  CF32                               Standard MR0175 / ISO 15156)                                                                        R.F.
+                                                                                                                                                                AºCº
+                                                                                                                                                                                     B31.3
+                                                                                                                                                                                                       100%
+
+                           Hidrocarburo H2S H2O, Hidrocarburo Alto CO2 (NACE                                                            900# -                                       ASME
+  CF42                               Standard MR0175 / ISO 15156)                                                                        R.J.
+                                                                                                                                                                AºCº
+                                                                                                                                                                                     B31.3
+                                                                                                                                                                                                       100%
+
+                           Hidrocarburo H2S H2O, Hidrocarburo Alto CO2 (NACE                                                           1500# -                                       ASME
+  CF52                               Standard MR0175 / ISO 15156)                                                                       R.J.
+                                                                                                                                                                AºCº
+                                                                                                                                                                                     B31.3
+                                                                                                                                                                                                       100%
+
+                                                                                                                                        150# -                                       ASME
+  CG12                                             Amina Rica, Amina Pobre
+                                                                                                                                         R.F.
+                                                                                                                                                                AºCº
+                                                                                                                                                                                     B31.3
+                                                                                                                                                                                                        30%
+
+                                                                                                                                        300# -                                       ASME
+  CG22                                             Amina Rica, Amina Pobre
+                                                                                                                                         R.F.
+                                                                                                                                                                AºCº
+                                                                                                                                                                                     B31.3
+                                                                                                                                                                                                        30%
+
+                                                                                                                                        600# -                                       ASME
+  CG32                                             Amina Rica, Amina Pobre
+                                                                                                                                         R.F.
+                                                                                                                                                                AºCº
+                                                                                                                                                                                     B31.3
+                                                                                                                                                                                                       100%
+
+                                                                                                                                        900# -                                       ASME
+  CG42                                             Amina Rica, Amina Pobre
+                                                                                                                                         R.J.
+                                                                                                                                                                AºCº
+                                                                                                                                                                                     B31.3
+                                                                                                                                                                                                       100%
+
+                                                                                                                                       1500# -                                       ASME
+  CG52                                             Amina Rica, Amina Pobre
+                                                                                                                                        R.J.
+                                                                                                                                                                AºCº
+                                                                                                                                                                                     B31.3
+                                                                                                                                                                                                       100%
+
+                                                                                                                                        150# -                                       ASME
+  CJ10                                         Aceite Lubricante, Lube Oil(19).
+                                                                                                                                         R.F.
+                                                                                                                                                                AºCº
+                                                                                                                                                                                     B31.3
+                                                                                                                                                                                                        20%
+
+                              Propano, Hidrocarburos de baja temperatura (L.T.                                                          150# -            AºCº BAJA                  ASME
+  CK11                                        Hydrocarbons).                                                                             R.F.               TEMP.                    B31.3
+                                                                                                                                                                                                        30%
+
+                              Propano, Hidrocarburos de baja temperatura (L.T.                                                          300# -            AºCº BAJA                  ASME
+  CK21                                        Hydrocarbons).                                                                             R.F.               TEMP.                    B31.3
+                                                                                                                                                                                                        50%
+
+                              Propano, Hidrocarburos de baja temperatura (L.T.                                                          600# -            AºCº BAJA                  ASME
+  CK31                                        Hydrocarbons).                                                                             R.F.               TEMP.                    B31.3
+                                                                                                                                                                                                       100%
+
+                              Propano, Hidrocarburos de baja temperatura (L.T.                                                          900# -            AºCº BAJA                  ASME
+  CK41                                        Hydrocarbons).                                                                             R.J.               TEMP.                    B31.3
+                                                                                                                                                                                                       100%
+
+                              Propano, Hidrocarburos de baja temperatura (L.T.                                                         1500# -            AºCº BAJA                  ASME
+  CK51                                        Hydrocarbons).                                                                            R.J.                TEMP.                    B31.3
+                                                                                                                                                                                                       100%
+
+                        Agua de SCI (Cañería Seca), Aire de Instrumentos, Agua                                                          150# -                 AºCº                  ASME
+  GC11                                        Potable.                                                                                   R.F.                 GALV.                  B31.3
+                                                                                                                                                                                                        10%
+
+
+
+
+19 En el caso de que el Fabricante del equipo, por razones propias de diseño, requiera que las cañerías del sistema del
+
+Lube-Oil sean de Ac.Inox. (316L); se deben utilizar las clases de cañerías de dicho material listadas en esta especificación,
+de acuerdo a las condiciones de diseño de Presión / Temperatura requeridas.
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o
+                                           venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                              19 / 27
+                                                     #Título                     L0200 Clases de Cañerías
+                                                                                 para Plantas
+ #Tipo                                                Especificación            #Código                 ES__-0001998
+ #Fecha de Vigencia                                   06/09/2023                #Versión                1.1
+ #Activo de la información                            YPF - Privada
+ #Proceso                                             21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+
+  CLASE                                                           SERVICIO                                                              SERIE              MATERIAL                 CÓDIGO               Rx.
+
+                       Agua de desecho (Sour Water), Gas Acido, Hidrocarburos                                                           150# -                AºCº                   ASME
+  RB10                      Corrosivos, Agua de formación corrosiva Alta.                                                                R.F.               REVEST.                  B31.3
+                                                                                                                                                                                                        10%
+
+                       Agua de desecho (Sour Water), Gas Acido, Hidrocarburos                                                           300# -                AºCº                   ASME
+  RB20                      Corrosivos, Agua de formación corrosiva Alta.                                                                R.F.               REVEST.                  B31.3
+                                                                                                                                                                                                        10%
+
+                       Agua de desecho (Sour Water), Gas Acido, Hidrocarburos                                                           600# -                AºCº                   ASME
+  RB30                      Corrosivos, Agua de formación corrosiva Alta.                                                                R.F.               REVEST.                  B31.3
+                                                                                                                                                                                                        30%
+
+                       Agua de desecho (Sour Water), Gas Acido, Hidrocarburos                                                           900# -                AºCº                   ASME
+  RB40                      Corrosivos, Agua de formación corrosiva Alta.                                                                R.J.               REVEST.                  B31.3
+                                                                                                                                                                                                        30%
+
+                                                                                                                                                              AºCº
+                       Agua de desecho (Sour Water), Gas Acido, Hidrocarburos                                                          1500# -             REVEST. /                 ASME
+  RB50                      Corrosivos, Agua de formación corrosiva Alta.                                                                R.J                Aº INOX.                 B31.3
+                                                                                                                                                                                                        30%
+                                                                                                                                                              321.
+                       Agua de desecho (Sour Water), Gas Acido, Hidrocarburos                                                           150# -                                       ASME
+  SB10                      Corrosivos, Agua de formación corrosiva Alta.                                                                R.F.
+                                                                                                                                                            Aº INOX.
+                                                                                                                                                                                     B31.3
+                                                                                                                                                                                                        30%
+
+                       Agua de desecho (Sour Water), Gas Acido Hidrocarburos                                                            300# -                                       ASME
+  SB20                      Corrosivos, Agua de formación corrosiva Alta.                                                                R.F.
+                                                                                                                                                            Aº INOX.
+                                                                                                                                                                                     B31.3
+                                                                                                                                                                                                        50%
+
+                       Agua de desecho (Sour Water), Gas Acido, Hidrocarburos                                                           600# -                                       ASME
+  SB30                      Corrosivos, Agua de formación corrosiva Alta.                                                                R.F.
+                                                                                                                                                            Aº INOX.
+                                                                                                                                                                                     B31.3
+                                                                                                                                                                                                       100%
+
+                       Agua de desecho (Sour Water), Gas Acido, Hidrocarburos                                                           900# -                                       ASME
+  SB40                      Corrosivos, Agua de formación corrosiva Alta.                                                                R.J.
+                                                                                                                                                            Aº INOX.
+                                                                                                                                                                                     B31.3
+                                                                                                                                                                                                       100%
+
+                       Agua de desecho (Sour Water), Gas Acido, Hidrocarburos                                                          1500# -                                       ASME
+  SB50                      Corrosivos, Agua de formación corrosiva Alta.                                                               R.J.
+                                                                                                                                                            Aº INOX.
+                                                                                                                                                                                     B31.3
+                                                                                                                                                                                                       100%
+
+                                                                                                                                       1500# -              Aº INOX.                 ASME
+  LB50                                    Agua de formación corrosiva Alta.(20)
+                                                                                                                                        R.J.                 (316)                   B31.3
+                                                                                                                                                                                                       100%
+
+                       Agua de desecho (Sour Water), Gas Acido, Hidrocarburos                                                           900# -               AC. S.                  ASME
+  XB40                      Corrosivos, Agua de formación corrosiva Alta.                                                                R.J.               DUPLEX                   B31.3
+                                                                                                                                                                                                       100%
+
+                       Agua de desecho (Sour Water), Gas Acido, Hidrocarburos                                                          1500# -               AC. S.                  ASME
+  XB50                      Corrosivos, Agua de formación corrosiva Alta.                                                                R.J                DUPLEX                   B31.3
+                                                                                                                                                                                                       100%
+
+
+
+5.5 Clases de cañerías
+Ver ANEXO I – CLASES DE CAÑERÍAS.
+
+5.6 Códigos y Descripciones de Válvulas
+Ver ANEXO II - CODIGOS Y DESCRIPCIONES DE VALVULAS.
+
+20 Esta clase es únicamente utilizada para el caso en el cual, las condiciones de diseño del sistema de Agua de formación
+
+corrosiva cumplan con lo siguiente: 100 °C @ 200 Kg/Cm2.
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o
+                                           venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                              20 / 27
+                                                    #Título                     L0200 Clases de Cañerías
+                                                                                para Plantas
+#Tipo                                                Especificación            #Código                 ES__-0001998
+#Fecha de Vigencia                                   06/09/2023                #Versión                1.1
+#Activo de la información                            YPF - Privada
+#Proceso                                             21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+
+6 Roles, Indicadores, registros y riesgos del proceso
+
+6.1      Roles
+                         Rol                                                                  Puestos / Unidad/es Organizativa/s
+ N/A
+
+
+
+6.2 Indicadores
+ Indicador                        Fórmula                        Frecuencia                    Responsable                             Cliente                               Registro
+   (KPI)                                                                                                                              Interno /
+                                                                                                                                      Externo
+N/A
+
+
+
+6.3 Registros
+      Registro                   Responsable                        Responsable                       Frecuencia de                      Disposición y                         Tiempo de
+                                  del registro                       del archivo                        registro /                        protección                            archivo
+                                                                                                         archivo
+N/A
+
+
+
+6.4 Riesgos y acciones mitigantes
+ Codificación                                        Riesgo                                                         Origen                                                Controles
+ de Referencia                                                                                                                                                            mitigantes
+N/A
+
+
+
+6.5 Reglas de Negocio
+                           Nombre                                                                                              Descripción
+ N/A
+
+
+
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o
+                                          venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                             21 / 27
+                                                    #Título                     L0200 Clases de Cañerías
+                                                                                para Plantas
+#Tipo                                                Especificación            #Código                 ES__-0001998
+#Fecha de Vigencia                                   06/09/2023                #Versión                1.1
+#Activo de la información                            YPF - Privada
+#Proceso                                             21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+
+7 Anexos y referencias
+
+7.1 Anexos
+
+7.1.1 Anexos Especiales
+#Anexos Especiales
+#Nº                                                                                                  Nombre
+N/A
+
+
+
+7.1.2 Otros anexos
+#Otros Anexos
+ #Nº                                                                                                 Nombre
+  I        Anexo I - Clases de Cañerías
+
+  II       Anexo II - Códigos y Descripciones de Válvulas
+
+
+7.2 Normativa relacionada
+      Categoría                                                                    Título                                                                                 Código
+                               B0600 Protección Anticorrosiva Con Recubrimientos                                                                       ES__-0002657
+   Normativa
+  Interna YPF                  L0201 Válvulas para Instalaciones de Superficie y Ductos                                                                ES__-0002044
+
+   Normativa
+    Externa
+   Normativa
+   Derogada
+                               American Iron & Steel Institute                                                                                         AISI
+
+                               American National Standards Institute                                                                                   ANSI
+
+     Otras                     The American Society of Mechanical Engineers                                                                            ASME
+  referencias
+                               Pipe Threads, General purpose (Inch)                                                                                    ASME B1.20.1
+
+                               Pipe flanges and flanged fitings                                                                                        ASME B16.5
+
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o
+                                          venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                             22 / 27
+                                                    #Título                     L0200 Clases de Cañerías
+                                                                                para Plantas
+#Tipo                                                Especificación            #Código                 ES__-0001998
+#Fecha de Vigencia                                   06/09/2023                #Versión                1.1
+#Activo de la información                            YPF - Privada
+#Proceso                                             21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+
+   Categoría                                                                       Título                                                                                 Código
+                               Face to face and end to end dimensions of valves                                                                        ASME B16.10
+
+                               Forged steel fittings, socket Welding and Threaded                                                                      ASME B16.11
+
+                               Metallic gaskets for pipes flanges                                                                                      ASME B16.20
+
+                               Non metallic flat gaskets for pipe flanges                                                                              ASME B16.21
+
+                               Valves flanged end                                                                                                      ASME B16.34
+
+                               Valve seat leackage (hidrostatic test)                                                                                  ASME B16.104
+
+                               American society of testing materials                                                                                   ASTM
+
+                               Manufacturers Standardization Society of the Valve &
+                                                                                                                                                       MSS
+                               Fitting
+
+                               Standard finishes for contact faces of pipes flanges                                                                    MSS- SP- 6
+
+                               Quality standards for steel castings                                                                                    MSS- SP- 55
+
+                               Pressure testing of steel valves                                                                                        MSS- SP- 61
+
+                               Ball valves with flanges or but welding ends for general
+                                                                                                                                                       MSS- SP- 72
+                               services
+     Otras
+  referencias                  Integrally Reinforced Forged Branch Outlet Fittings –
+                                                                                                                                                       MSS- SP- 97
+                               Socket Welding, Threaded, and Buttwelding Ends
+
+                               American Petroleum Institute                                                                                            API
+
+                               Pipeline valves                                                                                                         API 6D
+
+                               Fire test for soft seated quarter turn                                                                                  API 607
+
+                               Fire test for valves                                                                                                    API 6FA
+
+                               Check Valves: Flanged, Lug, Wafer and Butt-welding                                                                      API 594
+
+                               Valve inspection and testing                                                                                            API 598
+
+                               Steel Gate Valves, Flanged and Butt-welding ends                                                                        API 600
+
+
+
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o
+                                          venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                             23 / 27
+                                                     #Título                     L0200 Clases de Cañerías
+                                                                                 para Plantas
+ #Tipo                                                Especificación            #Código                 ES__-0001998
+ #Fecha de Vigencia                                   06/09/2023                #Versión                1.1
+ #Activo de la información                            YPF - Privada
+ #Proceso                                             21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+
+    Categoría                                                                       Título                                                                                 Código
+                                Compact steel gate-flanged, threaded, welding                                                                           API 602
+
+                                Butterfly Valves Double Flanged Lug and Wafer                                                                           API 609
+
+                                Steel Globe, Flanged BW ends                                                                                            BS 1873
+
+                                Steel ball valve for the petroleum, petrochemical and allied
+                                                                                                                                                        BS 5351
+                                industries
+
+                                Sulfide stress cracking resistant metallic materials for
+                                                                                                                                                        NACE MR-0175
+                                oilfield equipment
+
+
+7.3 Definiciones y abreviaturas
+       Término                      Abreviatura                                                                            Descripción
+       Low
+   Temperature                               LTS                   Planta de Tratamiento de Gas - Ajuste de Punto de Rocío
+    Separation
+     Planta de
+   Inyección de                              PIA
+       Agua
+     Planta de
+  Tratamiento de                            PTC
+      Crudo
+    Unidad de
+    Separación                              USP
+     Primaria
+
+
+
+
+8 Aprobación
+
+8.1 Vigencia
+Esta normativa entra en vigencia a partir de su aprobación e inmediata publicación.
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o
+                                           venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                              24 / 27
+                                                     #Título                     L0200 Clases de Cañerías
+                                                                                 para Plantas
+ #Tipo                                                Especificación            #Código                 ES__-0001998
+ #Fecha de Vigencia                                   06/09/2023                #Versión                1.1
+ #Activo de la información                            YPF - Privada
+ #Proceso                                             21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+Los abajo firmantes asumen la responsabilidad de implantar, controlar el cumplimiento y actualizar
+el presente documento cada vez que fuera necesario.
+
+
+8.2 Disposiciones generales y transitorias
+N/A.
+
+
+8.3 Historial
+   № Revisión                               Fecha Aprobación                                                        Principales cambios
+                                                                                               Cambios con respecto a la normativa derogada:
+                                                                                                ˗ Se adiciona el punto 4.1.1; Grados de Corrosividad.
+                                                                                                ˗ Se adiciona el punto 4.1.12; Recubrimiento interno.
+                                                                                                ˗ Se actualizan las tablas con los Trim de válvulas basado
+                                                                                                  en el API 600, año 2015.
+                                                                                                ˗ Se corrigen inconsistencias respecto de la especificación
+                                                                                                  ED(EP)-L-02.01; Válvulas.
+                                                                                                ˗ Se modifican y se agregan códigos de válvulas.
+                                                                                                ˗ Se agregan clases de cañerías en Acero Carbono para
+                                                                                                  servicio de Aminas en serie 300# y 1500#, y una nueva
+            0.0                                     21/11/2016                                    clase en Acero Inoxidable AISI 316 serie 1500#, para
+                                                                                                  servicio de Agua de Formación corrosiva (Alta
+                                                                                                  Corrosión).
+                                                                                                ˗ Se eliminan las clases de Servicio Criogénico.
+                                                                                                ˗ Se agregan clases para cañerías con revestimiento
+                                                                                                  interno en series 150#, 300#, 600#, 900# y 1500#.
+                                                                                                ˗ Se agregan clases para cañerías en acero superduplex
+                                                                                                  en series 900# y 1500.
+                                                                                                ˗ Se incluyeron nuevos códigos de válvulas mariposa, con
+                                                                                                  la finalidad de diferenciar las de doble excentricidad y las
+                                                                                                  de triple excentricidad.
+                                                                                               Se agregan indicaciones para: a) alcance para tratamiento
+                                                                                               térmico; b) cara de bridas en válvulas series 900# y 1500#;
+                                                                                               c) válvulas con servicio erosivo.
+                                                                                               Se corrigen derivaciones menores en clases de acero
+            1.0                                     14/10/2021                                 inoxidable.
+                                                                                               En válvulas esclusa y globo se estandarizan trims y
+                                                                                               empaquetaduras.
+                                                                                               Se agregan válvulas tipo retención a clapeta.
+                                                Ver fecha en el                                Se elimina el Anexo I correspondiente a la última versión
+            1.1                                 encabezado de                                  SGNT, debido a que era un Documento No Vigente: 10898-
+                                                 documento.                                    ES-21030700-110A - L02.00.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o
+                                           venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                              25 / 27
+                                                     #Título                     L0200 Clases de Cañerías
+                                                                                 para Plantas
+ #Tipo                                                Especificación            #Código                 ES__-0001998
+ #Fecha de Vigencia                                   06/09/2023                #Versión                1.1
+ #Activo de la información                            YPF - Privada
+ #Proceso                                             21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+
+8.4 Flujo de Aprobación
+#Participantes
+               #Autor                                       #Referente de                                   #Dueño de Proceso                                      #Administrador
+                                                              Proceso                                                                                             Cuerpo Normativo /
+                                                                                                                                                                       Negocio
+ SABATINI, SEBASTIAN                                   BODEGA, EDUARDO                                         SZWED, CRISTINA                                    MONSALVE, ANDRES
+       GUIDO                                              GUILLERMO                                               LILIANA                                         MAURICIO (SERVICIO
+                                                                                                                                                                   EXTERNO EN YPF)
+
+#Colaboradores
+                                                                                              Nombre
+                                         FERRARI, GERARDO FABIAN (Servicio Externo en YPF)
+                                           RADON, FACUNDO FABIAN (Servicio Externo en YPF)
+                                          INFANTINO, JORGE DANIEL (Servicio Externo en YPF)
+                                                                     SANCHEZ, SEBASTIAN ARIEL
+                                                            VINEZ, JUAN (Servicio Externo en YPF)
+                                              FONTI, LORENA KARINA (Servicio Externo en YPF)
+
+#Revisores
+
+
+                                                                                              Nombre
+
+
+#Aprobadores
+                                                                                              Nombre
+                                                                        SZWED, CRISTINA LILIANA
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o
+                                           venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                              26 / 27
+                                                     #Título                     L0200 Clases de Cañerías
+                                                                                 para Plantas
+ #Tipo                                                Especificación            #Código                 ES__-0001998
+ #Fecha de Vigencia                                   06/09/2023                #Versión                1.1
+ #Activo de la información                            YPF - Privada
+ #Proceso                                             21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+
+9 ANEXO
+
+9.1 Anexo I – Clases de Cañerías
+Este anexo está en un archivo distinto del documento principal. Se accede a él desde el Buscador
+de la página principal de Y-DOC, en el menú contextual del código correspondiente al documento o
+bien desde la vista Ver información detallada.
+
+
+9.2       Anexo II – Códigos y Descripciones de Válvulas
+Este anexo está en un archivo distinto del documento principal. Se accede a él desde el Buscador
+de la página principal de Y-DOC, en el menú contextual del código correspondiente al documento o
+bien desde la vista Ver información detallada.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o
+                                           venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                              27 / 27
+

@@ -1,0 +1,1447 @@
+                                                       #Título                     J0602 Válvulas On
+                                                                                   OffVálvulas On Off
+#Tipo                                                   Especificación            #Código                 ES__-0001983
+#Fecha de Vigencia                                      07/09/2023                #Versión                1.1
+#Activo de la información                               YPF - Privada
+#Proceso                                                21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+
+
+1 Índice
+Contenido
+1      ÍNDICE .......................................................................................................................................................... 1
+2      OBJETO........................................................................................................................................................ 2
+3      ÁMBITO DE APLICACIÓN........................................................................................................................... 2
+4      CONSIDERACIONES PRINCIPALES ......................................................................................................... 2
+5      ESPECIFICACIÓN “J0602 VÁLVULAS ON OFF” ...................................................................................... 3
+    5.1    CARACTERÍSTICAS GENERALES ............................................................................................................... 3
+      5.1.1 Unidades........................................................................................................................................... 3
+      5.1.2 Transmisión de señal ....................................................................................................................... 3
+      5.1.3 Compatibilidad electromagnética ..................................................................................................... 4
+      5.1.4 Instalación en áreas clasificadas...................................................................................................... 4
+      5.1.5 Instalación en áreas no clasificadas................................................................................................. 4
+      5.1.6 Envolventes y protección ambiental ................................................................................................. 4
+      5.1.7 Protección contra el fuego ................................................................................................................ 5
+    5.2    ESPECIFICACIÓN TÉCNICA DE LAS VÁLVULAS ............................................................................................ 5
+      5.2.1 Tipos de válvula y aplicación ............................................................................................................ 5
+      5.2.2 Cuerpo, bonete y conexiones ........................................................................................................... 6
+      5.2.3 Internos ............................................................................................................................................. 7
+      5.2.4 Clase de cierre requerida ................................................................................................................. 7
+      5.2.5 Empaquetaduras/ O’ring del sello del vástago................................................................................. 8
+    5.3    MATERIALES ........................................................................................................................................... 8
+      5.3.1 Materiales del cuerpo ....................................................................................................................... 8
+      5.3.2 Materiales de los internos ................................................................................................................ 9
+    5.4    ACCESORIOS .......................................................................................................................................... 9
+      5.4.1 Actuador ........................................................................................................................................... 9
+      5.4.2 Válvulas solenoides ........................................................................................................................ 11
+      5.4.3 Finales de carrera ........................................................................................................................... 12
+      5.4.4 Volante manual ............................................................................................................................... 12
+      5.4.5 Otros accesorios ............................................................................................................................. 12
+    5.5    PARTIAL STROKE TEST (PST, PRUEBAS DE CARRERA PARCIAL) ............................................................. 13
+    5.6    INSTALACIÓN DE VÁLVULAS ON-OFF ..................................................................................................... 13
+      5.6.1 Criterios generales de montaje ...................................................................................................... 13
+      5.6.2 Conexionado neumático ................................................................................................................. 13
+    5.7    ESPECIFICACIÓN TÉCNICA DE VÁLVULAS “FIRE SAFE” .............................................................................. 14
+      5.7.1 Tipos de válvulas ............................................................................................................................ 14
+      5.7.2 Empleo y protección contra el fuego .............................................................................................. 14
+      5.7.3 Características generales ............................................................................................................... 15
+      5.7.4 Actuadores de válvulas Fire Safe................................................................................................... 16
+      5.7.5 Tornillería y juntas .......................................................................................................................... 17
+      5.7.6 Criterios de instalación ................................................................................................................... 17
+    5.8    SUMINISTRO DE VÁLVULAS ON-OFF ...................................................................................................... 18
+      5.8.1 Preparación para envío, embalaje y marcado ............................................................................... 18
+
+
+     COPIA NO CONTROLADA
+     [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  1 / 26
+                                                       #Título                     J0602 Válvulas On
+                                                                                   OffVálvulas On Off
+ #Tipo                                                  Especificación            #Código                 ES__-0001983
+ #Fecha de Vigencia                                     07/09/2023                #Versión                1.1
+ #Activo de la información                              YPF - Privada
+ #Proceso                                               21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+      5.8.2 Documentación ............................................................................................................................... 18
+    5.9    INSPECCIÓN Y PRUEBAS ........................................................................................................................ 19
+      5.9.1 General ........................................................................................................................................... 19
+      5.9.2 Pruebas de presión ........................................................................................................................ 20
+      5.9.3 Pruebas funcionales ....................................................................................................................... 20
+    5.10 PINTURA............................................................................................................................................... 21
+6      ROLES, INDICADORES, REGISTROS Y RIESGOS DEL PROCESO ..................................................... 21
+    6.1          ROLES.................................................................................................................................................. 21
+    6.2          INDICADORES........................................................................................................................................ 22
+    6.3          REGISTROS .......................................................................................................................................... 22
+    6.4          RIESGOS Y ACCIONES MITIGANTES ......................................................................................................... 22
+    6.5          REGLAS DE NEGOCIO ............................................................................................................................ 22
+7      ANEXOS Y REFERENCIAS ....................................................................................................................... 22
+    7.1    ANEXOS ............................................................................................................................................... 22
+      7.1.1 Anexos Especiales ......................................................................................................................... 22
+      7.1.2 Otros anexos .................................................................................................................................. 22
+    7.2    NORMATIVA RELACIONADA .................................................................................................................... 23
+    7.3    DEFINICIONES Y ABREVIATURAS ............................................................................................................. 24
+8      APROBACIÓN ............................................................................................................................................ 24
+    8.1          VIGENCIA.............................................................................................................................................. 24
+    8.2          DISPOSICIONES GENERALES Y TRANSITORIAS ......................................................................................... 25
+    8.3          HISTORIAL ............................................................................................................................................ 25
+    8.4          FLUJO DE APROBACIÓN ......................................................................................................................... 25
+9      ANEXO........................................................................................................................................................ 26
+    9.1          ANEXO I - HD-J0602-01 HOJA DE DATOS VÁLVULAS ON-OFF............................................................... 26
+
+
+
+
+2 Objeto
+Definir los criterios de especificación, instalación y uso de válvulas ON-OFF.
+
+
+3 Ámbito de aplicación
+Upstream – Argentina.
+
+
+4 Consideraciones principales
+Esta especificación tiene asociada una hoja de datos para utilización en el desarrollo de los
+proyectos. La misma se incluye como anexo a modo referencia.
+La Hoja de Datos (HD) asociada a esta especificación es: Anexo I - HD-J0602-01 Hoja de Datos
+Válvulas ON-OFF (Punto 9.2).
+
+     COPIA NO CONTROLADA
+     [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                            o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                                  2 / 26
+                                                    #Título                     J0602 Válvulas On
+                                                                                OffVálvulas On Off
+ #Tipo                                               Especificación            #Código                 ES__-0001983
+ #Fecha de Vigencia                                  07/09/2023                #Versión                1.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+Esta especificación contempla válvulas de corte por seguridad: SDV (válvula de corte de emergencia/
+shutdown valve), BDV (Válvula de despresurización/ blowdown valve) y XV (válvulas de bloqueo
+operativa).
+Quedan excluidas de esta especificación las siguientes válvulas:
+   a) Válvulas de control con servicio ON-OFF. Ver especificación ES__-0001981- “J0600 Válvulas
+      de control”.
+   b) Válvulas HIPPS.
+   c) Válvulas Line Break.
+
+
+5 Especificación “J0602 VÁLVULAS ON OFF”
+
+5.1 Características generales
+5.1.1 Unidades
+En la especificación de las válvulas ON-OFF se deben emplear las siguientes unidades:
+   -       Caudal volumétrico de líquidos                                                                               m3/h o m3/día (a 15°C).
+   -       Caudal volumétrico de gases y vapores                                                                        Sm3/h (a 15 ºC y 1 atm).
+   -       Hidrocarburos líquidos GLP                                                                                   kg/h o Tn/h.
+   -       Presiones                                                                                                    kg/cm2.
+   -       Densidad                                                                                                     kg/m3 (líquidos).
+   -       Temperatura                                                                                                  ºC.
+   -       Viscosidad dinámica                                                                                          cP.
+En la hoja de datos debe informarse la densidad o gravedad específica (SG) para líquidos, y el PM
+para gases.
+Las unidades anteriores se deben emplear en todos los documentos asociados al instrumento (hoja
+de datos, de calibración, etc.) a fin de mantener la consistencia entre los mismos.
+
+5.1.2 Transmisión de señal
+Las señales asociadas a una válvula ON-OFF deben ser:
+   a) 24 Vcc para comando de solenoides, de bajo consumo (< 5W).
+   b) Contactos secos para finales de carrera.
+Las señales a solenoides deben ser salidas alimentadas desde PLC/DCS.
+Los finales de carrera e indicaciones de actuadores tanto neumáticos como motorizados deben ser
+contactos libres de tensión interrogados en 24 Vcc por el PLC/DCS.
+Las señales de comando a actuadores motorizados deben ser, preferentemente, contactos libres de
+tensión en PLC/DCS, interrogados a 24 Vcc por la electrónica del actuador, que debe generar
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               3 / 26
+                                                    #Título                     J0602 Válvulas On
+                                                                                OffVálvulas On Off
+ #Tipo                                               Especificación            #Código                 ES__-0001983
+ #Fecha de Vigencia                                  07/09/2023                #Versión                1.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+internamente esta tensión. Opcionalmente la tensión de 24Vcc puede ser provista desde el
+PLC/DCS.
+Los actuadores motorizados pueden incluir además mando y supervisión vía bus (ver especificación
+ES__-0001982 “J0601 Actuadores Eléctricos”).
+
+5.1.3 Compatibilidad electromagnética
+Todos los equipos electrónicos deben cumplir la norma IEC-61000 y las normativas locales que se
+indiquen en los DBD (Datos Básicos de Diseño).
+
+5.1.4 Instalación en áreas clasificadas
+Se describe en detalle en la especificación ES__-0002228 - “J1400 Instalación de Instrumentos en
+Áreas Clasificadas” y sus especificaciones relacionadas. El diseño debe tener en cuenta lo siguiente:
+   a) El modo de protección debe ser siempre Antideflagrante (EEx-d).
+   b) En caso de tratarse de una instalación existente EEx-i, puede aceptarse el modo Seguridad
+       Intrínseca (EEx-i) para las modificaciones que se realicen.
+
+5.1.5 Instalación en áreas no clasificadas
+Con el objetivo de unificar provisiones y stock de repuestos deben usarse instrumentos certificados
+para zonas clasificadas, de acuerdo a lo expuesto en el apartado anterior, pero instalados de modo
+convencional.
+Pueden utilizarse instrumentos carentes de certificación en aquellas instalaciones en la que gran
+parte o toda la unidad sea área no clasificada (por ej. planta de inyección de agua). No se acepta en
+ningún caso el uso de instrumentos sin certificación en áreas clasificadas.
+
+5.1.6 Envolventes y protección ambiental
+Todos los equipos deben tener una protección ambiental adecuada a su tipo y zona de instalación,
+que garantice un correcto servicio y la ausencia de problemas causados por el entorno de instalación.
+El grado de protección ambiental debe describirse según el código IP de acuerdo a la IEC 60529.
+El grado de protección ambiental debe ser como mínimo el siguiente para equipos instalados a la
+intemperie:
+   -       Áreas convencionales                                                                                                         IP 65.
+   -       Instalaciones expuestas a ambientes marinos                                                                                  IP 68.
+Como norma para definir el grado de agresividad de un entorno, se debe aplicar la norma ISA 71.04.
+Las juntas empleadas en envolventes y cajas deben ser antienvejecimiento y resistentes a
+hidrocarburos.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               4 / 26
+                                                    #Título                     J0602 Válvulas On
+                                                                                OffVálvulas On Off
+ #Tipo                                               Especificación            #Código                 ES__-0001983
+ #Fecha de Vigencia                                  07/09/2023                #Versión                1.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+Los equipos deben funcionar correctamente instalados a la intemperie, entre -15 ºC y + 65 ºC, con
+humedades relativas de hasta el 100% y exposición directa al sol, en ambiente salino. Se deben
+verificar las condiciones ambientales según las Bases de Diseño de cada Proyecto.
+Con temperaturas ambiente inferiores a 0 ºC y presencia de hielo deben aplicarse consideraciones
+específicas de protección a las partes móviles (internas y externas) de los posicionadores.
+En ambientes especialmente agresivos (grados G2 y superiores según ISA S71.04) el vendedor debe
+confirmar la aptitud de su equipo o indicar medidas de protección adicionales.
+
+5.1.7 Protección contra el fuego
+Todos los cuerpos de las válvulas ON-OFF deben tener diseño Fire safe según API 607/ISO 10497,
+no requieren la certificación, salvo que se solicite expresamente en la HD.
+Cuando YPF lo requiera, se debe certificar a prueba de fuego el conjunto “válvula + actuador +
+accesorios” de acuerdo al punto 5.7 de este documento.
+Las válvulas que pueden requerir certificación son las que se ubiquen en áreas potenciales de
+incendio y sean críticas para la parada de emergencia de una unidad o relevantes en la contención
+de incendios o fugas de productos inflamables o tóxicos.
+Ambos grupos de válvulas deben ser definidos en cada proyecto por el área de Procesos, a partir de
+la ingeniería y las indicaciones de las normas de seguridad corporativa.
+
+
+5.2 Especificación técnica de las válvulas
+5.2.1 Tipos de válvula y aplicación
+En este apartado se incluyen criterios de selección y especificación de válvulas ON-OFF, aplicables
+a los proyectos de Upstream YPF.
+Las variantes específicas dentro de cada tipo de válvula se deben estudiar en cada caso particular.
+5.2.1.1 Válvulas esféricas
+    a) Características destacadas
+       - Buen cierre, pérdida de carga mínima a plena apertura.
+       - Manejo de fluidos viscosos, con sólidos en suspensión, slurries, etc.
+       - Alta capacidad y velocidad de actuación (cierre rápido tipo ¼ vuelta).
+       - Muy adecuadas a altas velocidades de paso.
+    b) Limitaciones
+       - Con obturadores de tipo bola flotante no son posibles ΔP elevados.
+5.2.1.2 Válvulas de mariposa
+    a) Características destacadas
+       - Baja pérdida de carga a través de la válvula.
+       - Mínimo costo para tamaños de línea grandes.
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               5 / 26
+                                                    #Título                     J0602 Válvulas On
+                                                                                OffVálvulas On Off
+ #Tipo                                               Especificación            #Código                 ES__-0001983
+ #Fecha de Vigencia                                  07/09/2023                #Versión                1.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+      - Alta capacidad.
+      - Disponibilidad para grandes tamaños de línea.
+      - Mínimo espacio de instalación en línea.
+   b) Limitaciones
+      - Mal cierre (salvo ejecuciones especiales tipo triple excéntrica o similar).
+      - Con altas temperaturas o ΔP requieren diseños especiales de alto costo.
+      - No son aptas para el uso de scraper.
+
+5.2.2 Cuerpo, bonete y conexiones
+Los cuerpos deben ser de fundición o de forja en los materiales indicados en la HD.
+Salvo que se pida expresamente, los cuerpos deben carecer de brida de fondo o tapón de drenaje.
+El tamaño del cuerpo debe ser igual al diámetro de la línea.
+Las válvulas deben ser diseñadas de acuerdo a API 6D, API 608 o API 609.
+Para ductos y servicios críticos definidos en la Ingeniería, las válvulas deben ser de acuerdo a API
+6D. Las mismas deben disponer de puntos de lubricación en vástago y zona de asientos, con inyector
+con válvula de retención en el interior del cuerpo.
+Los bonetes o tapas, bridas de fondo (cuando existan) y demás elementos de contención de presión
+deben ser del mismo material que el cuerpo de la válvula.
+Los bonetes deben ser del tipo integral o atornillado con junta totalmente encastrada (no expuesta).
+No se admiten bonetes roscados.
+Como criterio general, las válvulas deben tener conexiones a la línea bridadas. En caso de válvulas
+mariposa la conexión debe ser tipo lug. Las conexiones tipo wafer requieren aprobación expresa de
+YPF.
+Las conexiones bridadas deben cumplir con lo siguiente:
+   a) Las bridas deben ser integrales al cuerpo.
+   b) Las bridas deben ser según ANSI B 16.5 hasta 24” y según ANSI B 16.47 por encima de este
+      valor.
+   c) El rating y encarado deben ser los de la línea, con un mínimo de 150# para cuerpos de hasta
+      16”.
+   d) El acabado de las bridas RF debe ser de 125 – 250 RMS.
+Cuando las bridas de la válvula no incluyan orificios pasantes, el alcance de suministro debe incluir
+la tornillería de apriete, con cabeza hexagonal y del mismo material que indique la especificación de
+línea.
+Las conexiones roscadas deben ser tipo NPT según ASME B1.20.1 (limitado para cuerpos con DN
+≤ 1½” y fluidos inocuos).
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               6 / 26
+                                                    #Título                     J0602 Válvulas On
+                                                                                OffVálvulas On Off
+ #Tipo                                               Especificación            #Código                 ES__-0001983
+ #Fecha de Vigencia                                  07/09/2023                #Versión                1.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+Las conexiones especiales (soldadas u otras) requieren siempre la autorización de YPF y de la
+ingeniería.
+
+5.2.3 Internos
+5.2.3.1 Válvulas esféricas
+Deben usarse válvulas de paso total.
+Pueden usarse válvulas de paso reducido cuando su uso sea conveniente por costo, plazo de
+entrega, etc., y siempre que el proceso lo permita (no se requiera pasaje de scraper por la línea, el
+servicio no contenga arena, entre otros).
+Las esferas deben tener doble soportación o guiado (ejecución tipo trunnion) en los siguientes casos:
+   a) ΔP ≥ 10 bar.
+   b) Cuerpos de 6” y mayores en líneas de rating ≥ 150#/300#.
+   c) Cuerpos de 1½” y mayores en líneas de rating ≥ 600#.
+   d) Cuerpos de 1” y mayores en líneas de rating ≥ 900#.
+Los asientos en las todo/nada deben ser tipo “spring loaded” para garantizar un buen cierre.
+
+5.2.3.2 Válvulas de mariposa
+El diseño del obturador debe ser en lo posible de tipo excéntrico.
+Se pueden usar obturadores tipo disco simétrico u obturadores contorneados (por ej., los de tipo fish-
+tail).
+En aplicaciones con servicio severo (altas ΔP / temperatura), o cuando sea requerido una clase de
+cierre alta, se deben usar ejecuciones de altas prestaciones tipo triple excéntrica.
+El vástago debe estar soportado en ambos extremos del cuerpo. El soporte del lado contrario al
+acoplamiento al actuador deben ser interno, sin salida al exterior del cuerpo.
+La unión entre vástago y disco debe garantizar que ambas piezas siempre giren solidariamente con
+cualquier sentido de flujo a través de la válvula.
+En lo posible, el sello del asiento debe estar sobre el cuerpo y no sobre el disco del obturador.
+Las superficies de asiento deben ser antiadherentes en las condiciones de servicio para evitar que,
+tras un período prolongado de cierre, se incremente el par de apertura requerido y este supere el par
+nominal del actuador.
+
+
+
+
+5.2.4 Clase de cierre requerida
+La clase de cierre debe ser de acuerdo API 598 o API 6D, según normativa de diseño de las válvulas.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               7 / 26
+                                                    #Título                     J0602 Válvulas On
+                                                                                OffVálvulas On Off
+ #Tipo                                               Especificación            #Código                 ES__-0001983
+ #Fecha de Vigencia                                  07/09/2023                #Versión                1.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+Los actuadores deben ser dimensionados de modo que garanticen una fuerza de asiento adecuada
+al tipo de cierre especificado, una vez descontados rozamiento, carga hidráulica, etc.
+Las clases de fugas estanca o “Tight shut off” (TSO) están fuera de las normas citadas e implica
+fugas nulas para el ΔP de proceso.
+La clase TSO tiene limitaciones de orden práctico que la pueden hacer inalcanzable en muchas
+aplicaciones, debiendo en estos casos ser sustituidas por configuraciones con doble válvula y purga
+(block & bleed).
+
+5.2.5 Empaquetaduras/ O’ring del sello del vástago
+Como materiales para las empaquetaduras, se pueden usar O´Rings de sección transversal
+cuadrada, rectangular o en “v”, de teflón, grafito o vitón, con inhibidor de corrosión, u otro material
+indicado por el fabricante.
+
+5.3 Materiales
+El uso de amianto en la empaquetadura, juntas o cualquier otra parte de la válvula está prohibido.
+
+5.3.1 Materiales del cuerpo
+El material del cuerpo debe ser en general el mismo que el de la línea de instalación, en coincidencia
+con lo indicado en la clase de cañerías.
+Como excepción, cuando haya materiales especiales de tubería que no estén disponibles para la
+forja o fundición de válvulas, se pueden usar materiales alternativos de calidad superior al de la línea.
+Algunos de los materiales más habituales incluidos en las especificaciones de YPF y sus
+equivalencias para cuerpos de forja o fundición son:
+
+                     Material de la línea                                              Equivalente en forja                                         Equivalente en fundición
+
+                                    C.S.                                                              A 105                                                        A 216 WCB
+
+                 C.S. (Baja temperatura)                                                         A 350 LF6                                                          A 352 LCB
+
+                            A312 Tp 316                                                         A 182 F316                                                        A 351 CF 8M
+
+                           A312 Tp 316L                                                        A 182 F316L                                                        A 351 CF 3M
+                                                                                              Tabla N° 1
+
+Para servicios con presencia de sulfhídrico los materiales deben cumplir con los requerimientos de
+NACE MR 0175.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               8 / 26
+                                                    #Título                     J0602 Válvulas On
+                                                                                OffVálvulas On Off
+ #Tipo                                               Especificación            #Código                 ES__-0001983
+ #Fecha de Vigencia                                  07/09/2023                #Versión                1.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+La tornillería debe ser adecuada a la temperatura de servicio y al material del cuerpo. Como
+referencia para los materiales aplicables, puede consultarse la especificación ES__-0001998” L0200
+Clases de cañerías para plantas”.
+
+5.3.2 Materiales de los internos
+El material de los internos en contacto con el fluido debe ser el indicado en la HD, y debe ser
+verificado por el fabricante de las válvulas de acuerdo a las condiciones operativas.
+Con cuerpos de acero al carbono la calidad mínima de los internos debe ser AISI 316.
+Con cuerpos de aceros inoxidables tipo austenítico o aleaciones de níquel (Monel, Hastelloy), el
+material de los internos debe ser como mínimo de la misma calidad que el cuerpo.
+Cuando las condiciones operativas lo permitan, los asientos deben ser blandos (teflón o similar),
+aptos para el fluido, el rango de temperatura y presión de proceso.
+Para servicios con arena, los asientos deben ser del tipo metal/metal endurecidos con carburo de
+tungsteno. La cavidad que aloja el asiento debe ser estanca, para evitar la deposición de arena.
+Para servicios con presencia de sulfhídrico, los materiales deben cumplir con los requerimientos de
+NACE MR 0175.
+Para servicio con cloruros, la calidad mínima del material de internos debe ser acero inoxidable AISI
+316, hasta concentraciones de 35.000 ppm de cloruro. Con concentraciones de cloruro ≥ 35.000
+ppm, se deben usar aceros inoxidables dúplex (22% Cr), superdúplex (25%Cr) o monel, según
+recomendación del proveedor. En estos casos, el material del cuerpo debe ser apto para la
+aplicación, independientemente del material indicado en la clase de cañerías para válvulas
+manuales.
+
+
+5.4 Accesorios
+5.4.1 Actuador
+Se pueden emplear actuadores neumáticos tipo pistón, piñón y cremallera, o yugo escocés, de simple
+o doble efecto, en función de la posición de falla requerida (falla abierta, falla cerrada, última
+posición).
+Los actuadores de piñón y cremallera solo pueden usarse en válvulas de hasta 3” y serie #300
+inclusive.
+El fluido motor puede ser aire o gas, según la disponibilidad en sitio. En caso de uso con gas, este
+debe ser limpio y sin condensables. En este último caso el actuador debe ser apto para uso con Gas.
+Los actuadores hidráulicos y eléctricos se pueden usar en los siguientes casos:
+   a) Ubicaciones sin disponibilidad de aire/gas de instrumentos.
+   b) Cuando lo indique la ingeniería o YPF
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                               9 / 26
+                                                    #Título                     J0602 Válvulas On
+                                                                                OffVálvulas On Off
+ #Tipo                                               Especificación            #Código                 ES__-0001983
+ #Fecha de Vigencia                                  07/09/2023                #Versión                1.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+Los actuadores hidráulicos están restringidos a válvulas donde se requiera una gran potencia y/o
+velocidad de actuación.
+Para los actuadores hidráulicos, se debe incluir en el alcance del suministro la centralina de aceite
+(central hidráulica) asociada, cuyo diseño y grado de redundancia debe ser aprobado por YPF.
+Los actuadores electrohidráulicos sólo se deben emplear en casos donde se necesite actuación
+eléctrica, y posición segura, abierta o cerrada, a fallo de alimentación (ver especificación ES__-
+0001982 “J0601 Actuadores Eléctricos”).
+El shutoff a especificar para cada válvula, debe seleccionarse de acuerdo a la presión máxima de
+diseño del sistema aguas arriba. Ver lineamientos generales en la tabla siguiente:
+
+   Instalación aguas arriba
+                                                                      Presión de shutoff                                                                  Ejemplo
+   de la válvula/ Aplicación
+   Entrada de planta hasta                                      Presión de diseño de
+   separadores                                                  ducto/línea
+   Equipos paquete (por ej.,                                    Presión diseño del                                          Para separador de entrada de
+   separador)                                                   equipo                                                      batería:
+                                                                                                                            P dis separador=10 Kg/cm2,
+                                                                                                                            P set PSV=10 Kg/cm2.
+                                                                                                                            P shutoff VC descarga de líquido=10 Kg/cm2
+   Descarga y recirculación                                     Presión máxima diseño
+   de bombas                                                    de bomba
+   Tanques atmosféricos                                         2 Kg/cm2                                                    P dis TK= 100mmCA,
+   Sistemas de baja presión                                                                                                 P set PVSV=175 mmCA.
+                                                                                                                            P shutoff VC salida de líquido=2 Kg/cm2
+                                                                  Tabla N° 2 - Tabla de shutoff según aplicación
+
+Al establecer la presión de shutoff, debe analizarse, en cada caso, el máximo diferencial de cierre
+que debe mantener la válvula en estudio. Cuando la diferencia de altura, o cualquier otro factor
+externo genere una presión adicional, esta debe ser considerada cuando se especifica el shutoff.
+Estas presiones no están consideradas en la tabla precedente
+Es responsabilidad del proveedor de las válvulas el dimensionamiento de los actuadores. El
+dimensionamiento debe garantizar el cierre de las válvulas para la presión de shutoff indicada,
+manteniendo la clase de fuga requerida.
+El dimensionamiento del actuador debe realizarse considerando la mínima presión de suministro de
+aire/gas disponible, y, cuando no prime otro criterio, se debe considerar un factor de seguridad de
+1,3.
+Los actuadores deben cumplir con las siguientes características:
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            10 / 26
+                                                    #Título                     J0602 Válvulas On
+                                                                                OffVálvulas On Off
+ #Tipo                                               Especificación            #Código                 ES__-0001983
+ #Fecha de Vigencia                                  07/09/2023                #Versión                1.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+   -       Deben ser de acero estampado o fundición de aluminio (a excepción del yugo escocés que
+           debe ser de acero al carbono).
+   -       De ser posible no deben requerir lubricación del aire. Caso contrario, se debe incluir el
+           lubricador.
+   -       Los empleados con válvulas mariposa deben tener topes de ajuste en los extremos (± 2º por
+           extremo).
+   -       En los casos de actuadores tipo pistón y piñón y cremallera, deben tener conexiones tipo
+           NAMUR para las solenoides de pilotaje.
+Todos los actuadores deben tener indicador de carrera local (0-100% o ángulo de giro).
+Los actuadores eléctricos y electrohidráulicos se tratan en la especificación ES__-0001982 “J0601
+Actuadores Eléctricos”.
+En caso de que una válvula requiera un tiempo de cierre determinado, el mismo se debe indicar en
+las hojas de datos. Caso contrario, el fabricante debe informar el tiempo de cierre de la válvula
+ofrecida.
+
+5.4.2 Válvulas solenoides
+Las válvulas solenoides deben contar con las siguientes características:
+   - Tipo universal.
+   - Mando directo.
+   - Sección de paso de al menos 6 mm 2.
+   - Con aislamiento clase F o mayor.
+   - Actuadas en 24 VCC (otros niveles de tensión se pueden emplear previa autorización de YPF)
+   - De bajo consumo (<5W).
+   - Conexión eléctrica ½” NPT-H.
+   - Conexión neumática por defecto ¼” NPT-H y tipo NAMUR cuando el actuador lo permita.
+       Tamaño a ajustar según el requerimiento neumático del actuador.
+   - Clasificación eléctrica y grado de protección ambiental, deben ser los indicados en los
+       apartados correspondientes de esta especificación.
+Deben ser de rearme automático, salvo indicación en otro sentido en la hoja de datos. En caso de
+tener rearme manual, el mismo debe ser por accionamiento sobre el propio cuerpo de la válvula.
+Deben tener acceso directo a los bornes mediante tapa roscada o atornillada sin necesidad de cajas
+auxiliares.
+La solenoide debe estar montada siempre conectada entre el actuador y el filtro regulador, y en caso
+de pérdida de tensión, debe llevar a la válvula a la posición segura que indique Procesos.
+En actuadores de gran volumen, y donde se requiera una alta velocidad de evacuación del aire, se
+debe escoger el Cv mayor disponible para la solenoide o, de requerirse, se puede instalar en su
+lugar, una válvula de escape rápido (quick exhaust) u otro accesorio.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            11 / 26
+                                                    #Título                     J0602 Válvulas On
+                                                                                OffVálvulas On Off
+ #Tipo                                               Especificación            #Código                 ES__-0001983
+ #Fecha de Vigencia                                  07/09/2023                #Versión                1.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+En caso de requerirse un determinado nivel de integridad (SIL), la certificación debe abarcar todo el
+conjunto (solenoide, actuador y válvula).
+La utilización de válvulas solenoides directas a proceso, solo se admiten en ejecuciones de DN ≤
+1½” con autorización expresa de YPF. En este caso, debe asegurarse la posición de falla y clase de
+cierre requeridas.
+
+5.4.3 Finales de carrera
+Se deben instalar por defecto, y salvo indicación en otro sentido, en ambas posiciones (abierta/
+cerrada).
+Los finales de carrera deben ser mecánicos y con contactos tipo SPDT, con corriente nominal mínima
+de 2A@24VCC. Alternativamente, pueden usarse inductivos. No se permite el uso de finales de
+carrera tipo NAMUR.
+El tipo de finales de carrera a emplear debe estar indicado en los DBD del proyecto, y en ambos
+casos deben disponer la protección ambiental indicada en el apartado correspondiente de esta
+especificación.
+Cuando vayan alojados en una caja, la misma debe disponer de un grado de protección IP 65, y debe
+estar fijada sobre la propia válvula. Las entradas para cables deben ser ½” NPT-M, independientes
+para cada final de carrera, salvo que se indique otra cosa.
+En los finales de carrera inductivos, el margen de detección no debe ser inferior a 6 mm.
+Es recomendable la utilización de elementos que permitan el monitoreo de continuidad de línea, en
+el caso de que el DCS/PLC lo admita.
+
+5.4.4 Volante manual
+El requerimiento de volante manual en una válvula debe ser indicado por la disciplina Procesos, y
+debe contar con aprobación de YPF.
+No se deben instalar volantes en válvulas con funciones de seguridad asociadas.
+En caso de que se requiera el uso de volante, el mismo debe estar siempre accesible desde piso o
+plataforma.
+
+5.4.5 Otros accesorios
+   a) Filtro-regulador.
+      Se debe utilizar en todas las válvulas. Debe disponer de un manómetro de entrada/salida y
+      llaves de purga y ajuste de presión.
+   b) Sistemas de enclavamiento neumático.
+      - Se deben usar con actuadores neumáticos que deban permanecer en posición a fallo de
+           aire, o requieran presión de aire para ir a posición segura.
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            12 / 26
+                                                    #Título                     J0602 Válvulas On
+                                                                                OffVálvulas On Off
+ #Tipo                                               Especificación            #Código                 ES__-0001983
+ #Fecha de Vigencia                                  07/09/2023                #Versión                1.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+           -       Deben tener tanque pulmón y relé neumático. El tanque pulmón debe actuar de modo
+                   automático en función de la presión de aire de instrumentos que reciba. Debe tener
+                   autonomía para, al menos, 3 maniobras de apertura y cierre. Debe estar equipado con un
+                   transmisor (PIT) para monitoreo de la presión vía DCS o PLC.
+           -       Quedan prohibidos los pulmones con gas de instrumentos.
+
+
+5.5 Partial Stroke Test (PST, Pruebas de Carrera Parcial)
+El uso de PST debe ser indicado en la ingeniería cuando existan requisitos de integridad. Siempre
+que una válvula tenga un nivel de SIL asociado, esta debe proveerse con PST.
+Solo debe usarse posicionador en válvulas ON-OFF cuando se requiera la funcionalidad de PST.
+Los posicionadores deben ser capaces de realizar esta prueba de diagnóstico, y poseer las
+características indicadas en la especificación ES__-0001981 - “J0600 Válvulas de control”, punto
+5.4.3.
+Queda prohibida la utilización de dispositivos mecánicos para la realización de las pruebas PST.
+
+
+5.6 Instalación de válvulas ON-OFF
+5.6.1 Criterios generales de montaje
+Las válvulas ON-OFF se deben montar, en lo posible, en líneas horizontales con el actuador en
+posición vertical. En servicios especiales (por ejemplo, servicio con arena), deben tenerse en cuenta
+las recomendaciones de los fabricantes.
+Cuando sea inevitable un montaje en línea vertical, o en una línea horizontal con la válvula girada,
+se debe soportar el actuador de modo independiente, y de acuerdo a las recomendaciones del
+fabricante de la válvula.
+En válvulas muy pequeñas, o donde el diseño del vendedor ya contemple que el actuador esté en
+voladizo respecto al cuerpo, y no apoyado verticalmente sobre el mismo, esta soportación no es
+necesaria.
+La zona de instalación debe ser accesible, y debe estar rodeada del suficiente espacio libre para el
+montaje, desmontaje y mantenimiento de todos los elementos (incluido actuador).
+
+5.6.2 Conexionado neumático
+Todos los accesorios de la válvula se deben proveer convenientemente montados, y con su tubing
+asociado correctamente instalado y conectado sobre la propia válvula. Se debe utilizar tubing de
+acero inoxidable de ¼” OD, salvo que por razones operativas la válvula requiera un diámetro mayor.
+Las alimentaciones neumáticas se deben ajustar a lo indicado en la especificación ES__-0001960 -
+“J1000 Alimentaciones Neumáticas”.
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            13 / 26
+                                                    #Título                     J0602 Válvulas On
+                                                                                OffVálvulas On Off
+ #Tipo                                               Especificación            #Código                 ES__-0001983
+ #Fecha de Vigencia                                  07/09/2023                #Versión                1.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+El venteo de las solenoides debe estar orientado hacia el suelo o incluir un codo y/o tramo de tubing,
+para lograr esta configuración.
+Los venteos deben incluir una pantalla anti-insectos.
+
+
+5.7 Especificación técnica de válvulas “fire safe”
+La certificación fire safe para el conjunto válvula, actuador y accesorios, es un requisito que debe
+contar con la aprobación de YPF. Cuando esta certificación sea necesaria debe indicarse, en las
+Bases de Diseño de cada proyecto, para qué tag se requiere.
+
+5.7.1 Tipos de válvulas
+Por válvula Fire Safe se entiende la diseñada para mantener una estanqueidad, nivel de pérdidas y
+operabilidad definidas antes, durante y después de un incendio, bajo condiciones específicas de
+intensidad y duración.
+Las válvulas Fire Safe deben ser tipo esférica o mariposa, de ¼ de vuelta, con diseño Fire Safe
+certificado.
+El uso de otros tipos de diseños no recogidos y/o certificados de acuerdo a las normas de referencia
+citada, está prohibido salvo aprobación expresa por parte de YPF.
+En esta especificación, la normativa mandatoria es la API STD 607/ISO 10497.
+
+5.7.2 Empleo y protección contra el fuego
+Se deben tomar medidas de protección contra el fuego en las válvulas indicadas como “conjunto fire
+safe” en la Ingeniería, o bien, por solicitud de YPF. La especificación de referencia es ES__-0002644
+“N0200 Protección Pasiva Antifuego”.
+Las medidas de protección contra el fuego que se deben aplicar por defecto a cada válvula deben
+ser, salvo indicación en otro sentido por parte de la Ingeniería o YPF, diseño fire safe de cuerpo,
+actuador ignifugado y demás requisitos indicados en la especificación ES__-0002644 “N0200
+Protección Pasiva Antifuego”.
+Para el ignifugado de los actuadores existen tres alternativas principales:
+   a) Tratamiento mediante recubrimientos protectores especiales, tipo K-MASS o similar.
+   b) Empleo de cajones ignífugos (accesibles para mantenimiento).
+   c) Empleo de mantas ignífugas.
+Por defecto, se deben usar recubrimientos intumescentes, alternativa a) de las mencionadas, con los
+productos comerciales aceptados por YPF que se indican en la normativa de referencia.
+El ignifugado convencional, cuando aplique, se debe realizar de acuerdo a la especificación ES__-
+0002644 “N0200 Protección Pasiva Antifuego”.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            14 / 26
+                                                    #Título                     J0602 Válvulas On
+                                                                                OffVálvulas On Off
+ #Tipo                                               Especificación            #Código                 ES__-0001983
+ #Fecha de Vigencia                                  07/09/2023                #Versión                1.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+El grado de protección garantizado a la válvula y su actuador debe ser como mínimo de RF 20 en
+condiciones de ensayo normalizadas según UL-1709.
+La protección debe ser extensiva a las canalizaciones y cableado de señal y fuerza necesaria para
+la actuación de la válvula, así como a cualquier panel asociado a la válvula ubicado dentro del área
+potencial de incendio.
+El ignifugado en campo debe realizarse de modo que no limite el acceso para mantenimiento.
+La instalación de válvulas con ejecución Fire Safe, debe evitarse en válvulas ON-OFF sujetas a
+actuaciones frecuentes, ya que los asientos sufren un desgaste que puede perjudicar el rendimiento
+de los diseños, frente a una condición de fuego.
+En estos casos, se debe analizar con YPF si la opción más adecuada es la instalación de una
+segunda válvula de maniobra, etc.
+Todas las válvulas relevantes para la contención de incendio/fuga de productos inflamables o tóxicos,
+debe contar además, con un pulsador local de cierre que debe cumplir lo siguiente:
+   a) Estar ubicado como mínimo a 5 m de distancia de la válvula, en un punto, de ser posible,
+       fuera de la zona potencial de incendio, y desde el cual la válvula asociada sea visible.
+   b) Su cableado debe estar protegido, a su vez, contra el fuego en la zona potencial de incendios.
+   c) Ser apto para instalación en zona clasificada y estar identificados claramente con su servicio.
+   d) Debe enviar la orden de cierre directamente desde el sistema (DCS o ESD) y los estados se
+       deben reportar con el fin de que, tanto el operador como la lógica de seguridad, queden
+       informados de la actuación de la válvula.
+   e) En el caso que el panel local sea requerido en la ingeniería, los comandos a la válvula se
+       deben enviar a través del sistema (DCS o ESD), sin afectar la lógica de seguridad asociada
+       a la misma.
+Las medidas de protección citadas en los puntos anteriores son exclusivamente las asociadas a las
+propias válvulas que necesiten.
+
+5.7.3 Características generales
+Todas las válvulas Fire Safe deben estar certificadas según la norma API STD 607/ ISO 10497 por
+un organismo de certificación independiente, así como cumplir cualquier otro requerimiento que YPF
+indique.
+El uso de materiales de bajo punto de fusión (bronce, cobre, latón, etc.) queda restringido a los
+elementos no críticos para el comportamiento al fuego, o cuya finalidad sea precisamente detectarlo
+(fusibles térmicos). Algunos diseños contemplan, por ejemplo, el uso de alimentaciones neumáticas
+con tubo plástico para que en caso de incendio, el mismo se destruya rápidamente y la válvula derive
+hacia posición segura por sí misma. Por el contrario, la línea de evacuación de aire del actuador
+neumático debe ser de material resistente al fuego (por ej. inoxidable), para evitar que la salida de
+aire del actuador pueda quedar bloqueada.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            15 / 26
+                                                    #Título                     J0602 Válvulas On
+                                                                                OffVálvulas On Off
+ #Tipo                                               Especificación            #Código                 ES__-0001983
+ #Fecha de Vigencia                                  07/09/2023                #Versión                1.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+Ninguna parte móvil de la válvula debe requerir lubricación. Para reducir la fricción entre partes
+móviles, se deben usar acabados superficiales niquelados, o de lubricación seca al moli-disulfuro.
+Las partes metálicas en fricción deben ser diseñadas que impida la acumulación de electricidad
+estática.
+En el caso especial de válvulas con sellos bidireccionales, el diseño y el certificado Fire Safe debe
+ser apto para los dos sentidos de flujo de la misma.
+
+5.7.4 Actuadores de válvulas Fire Safe
+Los actuadores de las válvulas Fire Safe deben tener un diseño específico para este servicio y contar,
+además, con medidas específicas de protección contra el fuego, como pueden ser:
+   a) Ignifugado con K-MASS (preferente).
+   b) Otras ejecuciones fireproofing según API RP 2218.
+Deben ser de tipo neumático con resorte o según se indique en los DBD del proyecto.
+Se prohíbe el uso de actuadores hidráulicos con fluidos inflamables.
+Todos los internos del actuador (resortes, cojinetes, juntas, etc.) deben ser de materiales adecuados
+para alta temperatura, no deben requerir lubricación y no deben bloquear el movimiento del vástago
+en caso de incendio.
+Deben proporcionar un par de cierre no inferior a 1½ - 2 veces el requerido por una válvula
+convencional del mismo tipo, destinado a garantizar el cierre durante un incendio.
+Los actuadores neumáticos de válvulas Fire Safe deben tener todos filtro anti-insectos en las salidas
+de aire de las válvulas solenoide y de los posicionadores, en caso de existir (por ejemplo para un
+Partial Stroke Test).
+Las solenoides se deben montar sobre la propia válvula para una mayor velocidad de actuación,
+deben tener internos de alto punto de fusión y, en grandes actuadores, deben ser de alta capacidad
+(tipo quick exhaust).
+Cuando se use protección contra el fuego para la solenoide de disparo, debe garantizarse que dicha
+protección no interfiera con su función de venteo.
+El actuador debe garantizar la posición a falla de la válvula, lo que puede involucrar la protección de
+parte del circuito y la desprotección intencionada de otra parte.
+Con relación al uso de cables resistentes al fuego, se debe prestar especial atención a su tendido y
+conexionado, ya que a menudo son mecánicamente delicados y se cortocircuitan por una mala
+manipulación.
+Todas las válvulas Fire Safe deben tener además, salvo indicación en contrario, accionamiento
+manual.
+El accionamiento manual y cualquier acoplamiento intermedio, deben ser de material resistente al
+fuego en las condiciones de ensayo definidas por Norma API STD 607/ISO 10497.
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            16 / 26
+                                                    #Título                     J0602 Válvulas On
+                                                                                OffVálvulas On Off
+ #Tipo                                               Especificación            #Código                 ES__-0001983
+ #Fecha de Vigencia                                  07/09/2023                #Versión                1.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+El uso de fusibles mecánicos y muelles auxiliares de empuje o cartuchos de seguridad (fire-lock
+cartridges), se puede considerar como complemento a los actuadores, pero nunca en su sustitución.
+
+5.7.5 Tornillería y juntas
+Toda la tornillería de válvulas en servicio Fire Safe debe tener un par de apriete adecuado, para
+compensar elongaciones por alta temperatura y pérdida de apriete.
+Para proteger mejor la tornillería del impacto directo del fuego, se pueden emplear camisas de
+aislamiento para las partes expuestas de la misma, en cuerpos que no la alojen totalmente.
+Las juntas internas empleadas en las válvulas Fire Safe y en su conexionado a la línea, deben ser
+resistentes al fuego, sin elastómeros o materiales de bajo punto de fusión. Las juntas espirometálicas
+convencionales de acero inoxidable y grafito con anillo centrador de acero al carbono, son en general
+adecuadas y proporcionan una resistencia al fuego suficiente.
+Las juntas deben soportar el apriete necesario de modo que, durante un fuego, compensen la pérdida
+de par que sufre la tornillería y eviten fugas.
+
+5.7.6 Criterios de instalación
+La ubicación de las válvulas Fire Safe es fijada por Ingeniería teniendo en cuenta su función de
+contención de fugas y/o incendios.
+Las válvulas deben ser inspeccionadas inmediatamente antes de su montaje, para verificar que no
+hayan sufrido daños en los internos, ni tengan suciedad en su interior.
+La línea de instalación debe ser igualmente verificada y, de ser necesario, debe ser soplada o
+limpiada, a fin de eliminar cualquier traza de suciedad que pueda dañar los asientos o bloquear la
+válvula.
+Las válvulas Fire Safe se deben montar en la misma posición del vástago con la que han sido
+certificadas. Una vez montada la válvula en la línea, se debe verificar mediante una serie de
+maniobras su correcto servicio y asiento del obturador.
+Los actuadores que incluyan fusible térmico y muelle de carga, deben disponer de una protección
+contra el fuego que no impida su actuación por alta temperatura.
+Los actuadores con recubrimiento especial antifuego deben ser verificados cuidadosamente tras el
+montaje, para comprobar que este recubrimiento esté libre de grietas, pérdidas de material o
+cualquier otro daño mecánico.
+En actuadores neumáticos, todo el conexionado de alimentación y venteo de aire debe ser realizado
+con tubing y accesorios de acero inoxidable (no de cobre con PVC), salvo partes que deban actuar
+como fusible térmico.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            17 / 26
+                                                    #Título                     J0602 Válvulas On
+                                                                                OffVálvulas On Off
+ #Tipo                                               Especificación            #Código                 ES__-0001983
+ #Fecha de Vigencia                                  07/09/2023                #Versión                1.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+5.8 Suministro de válvulas ON-OFF
+5.8.1 Preparación para envío, embalaje y marcado
+Deben estar de acuerdo con la especificación general ES__-0001051 “ED(EP)-B-01.00 Preparación
+para Transporte de Equipos y Materiales”.
+Las válvulas se deben enviar con todos sus accesorios montados y conectados, en cajones de
+madera individuales.
+Las válvulas deben estar protegidas contra la corrosión por compuestos eliminables con disolvente
+orgánico (con la excepción de las que requieran limpieza especial). Todos los orificios deben estar
+sellados.
+Cada válvula debe incluir una placa de acero inoxidable con los siguientes datos, siempre que
+apliquen:
+    a) Tag, fabricante y Nº de serie.
+    b) Tamaño nominal y rating del cuerpo y conexiones.
+    c) Material y tipo de cuerpo, internos y empaquetadura.
+    d) Tipo de paso total/reducido.
+    e) Acción a fallo de aire, rango neumático y presión mínima de aire requerida por el actuador.
+Todas las válvulas deben llevar claramente grabada en su exterior una flecha indicando el sentido
+de flujo. Si la válvula es de flujo bidireccional, la flecha debe ser doble (➔).
+Para el caso particular de válvulas Fire Safe, además de lo anterior, se debe prestar especial atención
+a que durante el transporte y embalaje:
+   a) No ingrese suciedad al interior ni se produzcan corrosión.
+   b) Los internos y asientos no sufran daño alguno.
+   c) Los eventuales recubrimientos ignífugos aplicados en origen no sufran daño.
+Todas las válvulas Fire Safe deben incluir en su placa de identificación dicha característica, así como
+la norma de certificación.
+
+5.8.2 Documentación
+La documentación a entregar por el proveedor debe incluir, como mínimo, lo siguiente:
+   a) Hojas de datos de las válvulas (incluidos accesorios).
+   b) Planos dimensionales detallados.
+   c) Certificados de materiales según DIN 50.049 / EN 10204 clase 3.1.b y de inspección.
+   d) Certificados de cumplimiento con normativas aplicables.
+   e) Certificados de modo EEx de los accesorios eléctricos y electrónicos.
+   f) Esquemas de conexionado eléctrico y neumático.
+   g) Catálogos técnicos y manual de instalación, operación y mantenimiento.
+En aplicaciones especiales, la documentación anterior debe ser complementada con los certificados
+particulares especificados en la HD correspondiente (por ej.: certificado SIL)
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            18 / 26
+                                                    #Título                     J0602 Válvulas On
+                                                                                OffVálvulas On Off
+ #Tipo                                               Especificación            #Código                 ES__-0001983
+ #Fecha de Vigencia                                  07/09/2023                #Versión                1.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+Para el caso de válvulas Fire Safe, se debe entregar adicionalmente la siguiente documentación:
+   a) Certificado de cumplimiento con norma Fire Safe aplicable.
+   b) Instrucciones específicas de instalación para válvula y actuador.
+Los documentos asociados a tags particulares (planos, hojas de datos, etc.) deben ser aprobados
+por la Ingeniería responsable del proyecto. Los documentos genéricos (catálogos, manuales, etc.)
+no lo requieren.
+Si no se indica otra cosa en la documentación del proyecto, toda la documentación debe ser en
+español.
+
+
+5.9 Inspección y pruebas
+5.9.1 General
+YPF se reserva el derecho de presenciar todas las pruebas y controles que se realicen sobre las
+válvulas para una dada provisión. Por lo tanto, YPF o su representante debe tener libre acceso a las
+instalaciones del Proveedor y/o sus subcontratistas en todo lo concerniente a la fabricación de los
+elementos de válvulas destinadas a sus instalaciones.
+El proveedor debe disponer de todos los elementos, medios técnicos y recursos humanos requeridos
+para la realización de las pruebas que se apliquen a cada caso.
+El fabricante debe ensayar el 100% de las válvulas. El tamaño de la muestra (porcentaje) de válvulas
+a ser inspeccionadas en presencia del representante de YPF, debe ser establecido para cada pedido
+de inspección o proyecto.
+A criterio de YPF o su representante se pueden realizar las inspecciones y/o ensayos adicionales
+que se consideren necesarios, a fin de verificar el cumplimiento de los requerimientos de la presente
+especificación. Dentro del alcance de la inspección, y no limitado a este detalle, se puede realizar:
+   - Ensayos no destructivos. Ej.: Control del recargue duro de internos (PMI/PT) si aplicara.
+   - Ensayos destructivos.
+   - Ensayos complementarios/suplementarios de conjuntos montados.
+   - Control del montaje de las válvulas.
+   - Control de funcionamiento, pruebas de presión, etc.
+   - Revisión de documentación de calidad.
+   - Verificación de documentación técnica vinculada con la fabricación de las válvulas.
+La verificación de pruebas por parte de YPF o su representante no eximen al proveedor de la
+responsabilidad sobre los productos suministrados.
+Previamente a la realización de los ensayos se debe verificar la totalidad de los campos que forman
+parte de la HD, o su especificación asociada, como mínimo los siguientes:
+    - Tag de la válvula en la chapa de identificación.
+    - Material de todos los componentes (cuerpo, internos, actuador, etc.).
+    - Conexiones (tipo, rating, ranurado de la cara de contacto, acabado).
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            19 / 26
+                                                    #Título                     J0602 Válvulas On
+                                                                                OffVálvulas On Off
+ #Tipo                                               Especificación            #Código                 ES__-0001983
+ #Fecha de Vigencia                                  07/09/2023                #Versión                1.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+   -       Dimensiones entre bridas y del actuador.
+   -       Presencia de todos los accesorios que formen parte de la provisión (válvulas solenoide,
+           finales de carrera, etc.).
+   -       Inspección visual del cuerpo según MSS SP55.
+   -       Posición de falla.
+   -       Clase de cierre especificado.
+   -       Certificados de modo de protección para área clasificada.
+
+5.9.2 Pruebas de presión
+5.9.2.1 Prueba Hidrostática del cuerpo:
+El ensayo debe estar en un todo de acuerdo con los requerimientos especificados en API 598, API
+6D o en ASME B16.34 según se requiera.
+Cada válvula debe ser ensayada a un valor de presión hidrostática igual a 1.5 veces el máximo rating,
+a temperatura ambiente y con las condiciones que se indiquen en la norma correspondiente.
+Criterio de aceptación: no se admiten pérdidas visibles a través de las paredes del cuerpo y bonete
+durante el desarrollo de la prueba.
+5.9.2.2 Prueba de cierre del asiento:
+El ensayo debe estar en un todo de acuerdo con los requerimientos especificados en API 598 o API
+6D según corresponda.
+Cada válvula debe ser ensayada con el objeto de verificar el cumplimiento de los valores de
+estanqueidad de acuerdo a la clase de cierre especificada en la hoja de datos.
+Criterio de aceptación: no se admiten pérdidas mayores a las especificadas en dichas normas.
+
+5.9.3 Pruebas funcionales
+Se debe realizar la prueba de la verificación del modo de falla.
+Los accesorios y circuitos mencionados a continuación deben ser verificados, asegurando que los
+mismos respondan a las señales recibidas y que la válvula actúe generando las señales
+correspondientes:
+    - Válvulas solenoide.
+    - Finales de carrera.
+    - Volante manual
+    - Limitadores mecánicos.
+    - Transmisores de posición.
+Cuando se requiera posicionador, el mismo debe estar montado sobre la válvula y programado con
+su configuración definitiva.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            20 / 26
+                                                    #Título                     J0602 Válvulas On
+                                                                                OffVálvulas On Off
+ #Tipo                                               Especificación            #Código                 ES__-0001983
+ #Fecha de Vigencia                                  07/09/2023                #Versión                1.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+5.10 Pintura
+Las operaciones de pintura deben ser realizadas luego de la aprobación de la totalidad de las
+inspecciones y ensayos especificados.
+A menos que se especifique lo contrario, válvulas y actuadores deben ser pintados en origen, de
+acuerdo a las especificaciones del proveedor que están sujetas a la aprobación de YPF. El proveedor
+debe indicar espesores de películas seca (EPS), valores de adherencia y procedimientos de control
+respectivos.
+La superficie interior, vástagos, placas de identificación no deben ser pintados.
+La superficie de apoyo de las bridas, las roscas y todas aquellas superficies mecanizadas externas
+no recubiertas con pintura deben ser protegidas contra la oxidación mediante la aplicación de un
+inhibidor de corrosión removible.
+Las válvulas con cuerpo de acero inoxidable no requieren protección superficial.
+
+
+
+
+6 Roles, Indicadores, registros y riesgos del proceso
+
+6.1      Roles
+                         Rol                                                                  Puestos / Unidad/es Organizativa/s
+  N/A
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            21 / 26
+                                                   #Título                     J0602 Válvulas On
+                                                                               OffVálvulas On Off
+#Tipo                                               Especificación            #Código                 ES__-0001983
+#Fecha de Vigencia                                  07/09/2023                #Versión                1.1
+#Activo de la información                           YPF - Privada
+#Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+6.2 Indicadores
+ Indicador                       Fórmula                        Frecuencia                    Responsable                            Cliente                               Registro
+   (KPI)                                                                                                                            Interno /
+                                                                                                                                    Externo
+N/A
+
+
+6.3 Registros
+   Registro                      Responsable                       Responsable                       Frecuencia de                      Disposición y                         Tiempo de
+                                  del registro                      del archivo                        registro /                        protección                            archivo
+                                                                                                        archivo
+N/A
+
+
+6.4 Riesgos y acciones mitigantes
+ Codificación                                        Riesgo                                                        Origen                                                Controles
+ de Referencia                                                                                                                                                           mitigantes
+N/A
+
+
+
+6.5 Reglas de Negocio
+                          Nombre                                                                                              Descripción
+ N/A
+
+
+
+
+7 Anexos y referencias
+
+7.1 Anexos
+7.1.1 Anexos Especiales
+#Anexos Especiales
+#Nº                                                                                                 Nombre
+N/A
+
+
+7.1.2 Otros anexos
+#Otros Anexos
+
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                        o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                           22 / 26
+                                                   #Título                     J0602 Válvulas On
+                                                                               OffVálvulas On Off
+#Tipo                                               Especificación            #Código                 ES__-0001983
+#Fecha de Vigencia                                  07/09/2023                #Versión                1.1
+#Activo de la información                           YPF - Privada
+#Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+ #Nº                                                 Nombre
+  I       Anexo I - HD-J0602-01 Hoja de Datos Válvulas ON-OFF.
+
+
+7.2 Normativa relacionada
+  Categoría                                             Título                                                                                                Código
+                              J0100 Ingeniería de Instrumentación                                                                                     ES__-0001960
+
+                              J0600 Válvulas de control                                                                                               ES__-0001981
+
+                              J0601 Actuadores Eléctricos                                                                                             ES__-0001982
+
+                              J0603 Válvulas Autorreguladoras                                                                                         ES__-0001984
+
+   Normativa                  J1000 Alimentaciones Neumáticas                                                                                         ES__-0002225
+  Interna YPF
+                              J1300 Conexionado eléctrico a Instrumentos                                                                              ES__-0001984
+
+                              J1400 Instalación Eléctrica en Áreas Clasificadas                                                                       ES__-0002228
+
+                              N0200 Protección Pasiva Antifuego                                                                                       ES__-0002644
+
+                              ED(EP)-B-01.00 Preparación para Transporte de Equipos                                                                   ES__-0001051
+                              y Materiales
+                              Specification for Pipeline and Piping Valves                                                                            API 6D
+                              Valve inspection and testing                                                                                            API 598
+                              Fire Test for Quarter-turn Valves and Valves Equipped                                                                   API 607
+                              with Nonmetallic Seats
+                              Metal Ball Valves—Flanged, Threaded, and Welding Ends                                                                   API 608
+                              Butterfly valves: double flanged, lug and wafer type                                                                    API 609
+                              Fireproofing Practices in Petroleum and Petrochemical                                                                   API RP 2218
+  Normativa                   Processing Plants
+   Externa
+                              Face to face and end to end dimensions of valves                                                                        ASME B16.10
+                              Valves — Flanged, Threaded, and Welding End                                                                             ASME B16.34
+                              Pipe Threads, General Purpose (Inch)                                                                                    ASME B1.20.1
+                              Standard Practice for Liquid Penetrant Testing for General
+                                                                                                                                                      ASTM E165/E165M
+                              Industry
+                              Degrees of Protection Provided by Enclosures (IP Code)                                                                  IEC 60529
+                              Electromagnetic compatibility (EMC)                                                                                     IEC-61000
+
+
+
+  COPIA NO CONTROLADA
+  [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+  © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                        o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                           23 / 26
+                                                    #Título                     J0602 Válvulas On
+                                                                                OffVálvulas On Off
+ #Tipo                                               Especificación            #Código                 ES__-0001983
+ #Fecha de Vigencia                                  07/09/2023                #Versión                1.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+   Categoría                                            Título                                                                                                            Código
+                               Environmental Conditions for Process Measurement and
+                                                                                                                                                       ISA 71.04
+                               Control Systems: Airborne Contaminants
+                               Testing of valves - Fire type-testing requirements                                                                      ISO 10497
+                               Industrial Valves - Pressure Testing of metallic Valves                                                                 ISO 5208
+                               Quality Standard for Steel Castings for Valves, Flanges,
+                               Fittings, and Other Piping Components - Visual Method for                                                               MSS SP 55
+                               Evaluation of Surface Irregularities
+                               Petroleum and natural gas industries — Materials for use
+                                                                                                                                                       NACE MR0175
+                               in H2S containing environments in oil and gas production.
+                               Certificación sobre ensayos de materiales                                                                               DIN 50.049 (EN 10.204)
+                               Standard for Rapid Rise Fire Tests of Protection Materials
+                                                                                                                                                       UL-1709
+                               for Structural Steel
+    Normativa                  N/A                                                                                                                     N/A
+    Derogada
+      Otras                    N/A                                                                                                                     N/A
+   referencias
+
+
+
+
+7.3 Definiciones y abreviaturas
+     Término                        Abreviatura                                                                           Descripción
+  Datos Básicos
+                                  DBD                             N/A
+  de Diseño
+
+
+
+8 Aprobación
+
+8.1 Vigencia
+Esta normativa entra en vigencia a partir de su aprobación e inmediata publicación.
+Los abajo firmantes asumen la responsabilidad de implantar, controlar el cumplimiento y actualizar
+el presente documento cada vez que fuera necesario.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            24 / 26
+                                                    #Título                     J0602 Válvulas On
+                                                                                OffVálvulas On Off
+ #Tipo                                               Especificación            #Código                 ES__-0001983
+ #Fecha de Vigencia                                  07/09/2023                #Versión                1.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+8.2 Disposiciones generales y transitorias
+N/A.
+
+
+8.3 Historial
+   № Revisión                              Fecha Aprobación                                                   Principales cambios
+      0.0                                     04/11/2016                                      Documento Original.
+                                                                                              -       Se eliminan del objeto del documento las válvulas de
+                                                                                                      control para servicio on-off.
+                                                                                              -       Se actualizan las normativas de aplicación.
+                                                                                              -       Se actualizan, corrigen y completan requisitos,
+                                                                                                      lineamientos de especificación.
+                                                                                              -       Se reordena y simplifica el contenido de la
+                                                                                                      especificación.
+                                                                                              -       Se incorpora recomendaciones de materiales de
+            1.0                                    24/11/2021                                         internos para servicio con cloruro.
+                                                                                              -       Se agregan requisitos para las solenoides.
+                                                                                              -       Se completan los tipos de actuadores permitidos y se
+                                                                                                      actualiza el criterio de selección del shutoff.
+                                                                                              -       Se solicita indicar el tiempo de cierre para las válvulas
+                                                                                                      en las hojas de datos.
+                                                                                              -       Se actualiza el documento al nuevo formato de Y-
+                                                                                                      DOC.
+                                                                                              -       Se modifica el tiempo verbal a presente.
+
+                                     Ver fecha en encabezado                                  Se elimina el Anexo I correspondiente a la última versión
+            1.1                                                                               SGNT, debido a que era un Documento No Vigente:
+                                            de página.
+                                                                                              10869-ES-21030700-110A - J0602 Válvulas ON OFF.
+
+
+
+8.4 Flujo de Aprobación
+#Participantes
+                                                                                                                                                                  #Administrador
+                                                            #Referente de
+              #Autor                                                                                       #Dueño de Proceso                                     Cuerpo Normativo /
+                                                              Proceso
+                                                                                                                                                                      Negocio
+ SABATINI, SEBASTIAN                                  BODEGA, EDUARDO                                         SZWED, CRISTINA                                   MONSALVE, ANDRES
+       GUIDO                                             GUILLERMO                                               LILIANA                                        MAURICIO (SERVICIO
+                                                                                                                                                                 EXTERNO EN YPF)
+
+#Colaboradores
+                                                                                             Nombre
+                                                                                SALA, YISELA ETEL
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            25 / 26
+                                                    #Título                     J0602 Válvulas On
+                                                                                OffVálvulas On Off
+ #Tipo                                               Especificación            #Código                 ES__-0001983
+ #Fecha de Vigencia                                  07/09/2023                #Versión                1.1
+ #Activo de la información                           YPF - Privada
+ #Proceso                                            21. Abastecimiento > 11. Gestionar Proyectos de Instalaciones de Superficie
+
+                                                                                             Nombre
+                                           COOK AGUILAR, PHILIPPE (Servicio Externo en YPF)
+                                            CRESPI, HERNAN JAVIER (Servicio Externo en YPF)
+                                                                     DE JESUS ALARCON, ZULAY
+                                                                            BONANNO , ROBERTO
+                                             FONTI, LORENA KARINA (Servicio Externo en YPF)
+                                                                       STEKAR, JESSICA LORENA
+
+#Revisores
+                                                                                             Nombre
+
+
+#Aprobadores
+                                                                                             Nombre
+                                                                       SZWED, CRISTINA LILIANA
+
+
+
+
+9 ANEXO
+
+9.1 Anexo I - HD-J0602-01 Hoja de Datos Válvulas ON-OFF
+Este anexo está en un archivo distinto del documento principal. Se accede a él desde el Buscador
+de la página principal de Y-DOC, en el menú contextual del código correspondiente al documento o
+bien desde la vista “Ver información detallada”.
+
+
+
+
+   COPIA NO CONTROLADA
+   [Consulte la versión vigente en Y-DOC. El impreso es copia no controlada]
+   © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción
+                                         o venta de esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación.
+
+
+
+
+                                                                                                                                                                                            26 / 26
+

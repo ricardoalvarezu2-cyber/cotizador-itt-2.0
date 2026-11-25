@@ -1,0 +1,609 @@
+                                                                   J0401 Indicadores Locales de Nivel
+Tipo: ESPECIFICACIÓN                         Ámbito: Upstream - Argentina                                                                                      Código: 11102-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                             Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+
+
+1 Índice
+
+Contenido
+1      ÍNDICE ........................................................................................................................................................................1
+2      OBJETO .....................................................................................................................................................................2
+3      ÁMBITO DE APLICACIÓN ........................................................................................................................................2
+4      CONSIDERACIONES PRINCIPALES .......................................................................................................................2
+5      ESPECIFICACIÓN .....................................................................................................................................................2
+    5.1    ESPECIFICACIÓN TÉCNICA DE LOS INDICADORES DE NIVEL ........................................................................................2
+      5.1.1    Empleo y tipo de indicadores .......................................................................................................................2
+      5.1.2    Selección de niveles de vidrio ......................................................................................................................3
+      5.1.3    Selección de niveles magnéticos .................................................................................................................3
+      5.1.4    Niveles de vidrio tubulares ...........................................................................................................................4
+      5.1.5    Niveles de vidrio de reflexión .......................................................................................................................4
+      5.1.6    Niveles magnéticos de montaje externo ......................................................................................................5
+    5.2    CRITERIOS DE INSTALACIÓN ...................................................................................................................................7
+      5.2.1    Aspectos particulares ...................................................................................................................................7
+      5.2.2    Conexionado a proceso ...............................................................................................................................7
+    5.3    SUMINISTRO Y DOCUMENTACIÓN.............................................................................................................................8
+      5.3.1    Preparación para envío, embalaje y marcado .............................................................................................8
+      5.3.2    Documentación ............................................................................................................................................8
+6      INDICADORES, REGISTROS Y RIESGOS DEL PROCESO ...................................................................................8
+    6.1        INDICADORES ........................................................................................................................................................8
+    6.2        REGISTROS ...........................................................................................................................................................8
+    6.3        RIESGOS Y ACCIONES MITIGANTES ..........................................................................................................................9
+7      ANEXOS Y REFERENCIAS ......................................................................................................................................9
+    7.1        ANEXOS ................................................................................................................................................................9
+    7.2        NORMATIVA RELACIONADA .....................................................................................................................................9
+    7.3        DEFINICIONES Y ABREVIATURAS ..............................................................................................................................9
+8      APROBACIÓN ...........................................................................................................................................................9
+    8.1        VIGENCIA ..............................................................................................................................................................9
+    8.2        DISPOSICIONES GENERALES Y TRANSITORIAS ........................................................................................................10
+    8.3        HISTORIAL ...........................................................................................................................................................10
+    8.4        APROBACIÓN COLEGIADA .....................................................................................................................................10
+    8.5        CATEGORÍA DE CLASIFICACIÓN DEL ACTIVO DE INFORMACIÓN................................................................................10
+ANEXO I: HD-J0401-01 INDICADOR DE NIVEL DE VIDRIO .......................................................................................10
+ANEXO II: HD-J0401-02 INDICADOR DE NIVEL MAGNÉTICO ...................................................................................10
+
+
+                                                                                                           BODEGA, EDUARDO                                                                             13/03/2017
+      GALANTERNIK, NICOLAS                                  VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                              GUILLERMO                                                                               11:41:00 a.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                     1 / 10
+                                                                 J0401 Indicadores Locales de Nivel
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11102-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+
+2 Objeto
+Definir los criterios de selección, especificación, instalación y uso de los Indicadores locales de nivel de tipo visual.
+
+
+3 Ámbito de aplicación
+YPF S.A. Upstream – Argentina.
+Aplica a todos los proyectos tanto de nuevas instalaciones como modificaciones a instalaciones existentes.
+
+
+4 Consideraciones principales
+Los tipos de indicadores cubiertos por este documento son los niveles de vidrio (tubulares, a transparencia y de
+reflexión) y magnéticos (de cámara externa y sin cámara para montaje interno).
+Quedan fuera del alcance de esta especificación:
+    a) Indicadores tipo regleta para grandes tanques atmosféricos.
+    b) Niveles de vidrio tipo bicolor.
+Esta especificación es complementaria a la “J0400 Medida de Nivel (Parte General)”.
+
+
+5 Especificación
+
+5.1 Especificación técnica de los indicadores de nivel
+
+5.1.1 Empleo y tipo de indicadores
+En este apartado se exponen recomendaciones técnicas y normativas para la selección entre niveles de vidrio y de
+tipo magnético.
+Cuando en un determinado proyecto o planta se haya normalizado el uso de un tipo particular de indicador de nivel,
+se especificará el mismo en el DBD y será de aplicación obligatoria salvo invalidez técnica o normativa. Es
+fundamental para la selección la temperatura de trabajo, presión y tipo de fluido.
+Los niveles de vidrio se aplicarán en los siguientes casos:
+    a) Cuando lo imponga el código de diseño del recipiente.
+    b) En recipientes con rápidas oscilaciones de nivel.
+    c) Cuando se usen con fines de calibración (p.e. depósitos de pequeñas dosificadoras).
+    d) Cuando se requiera una precisión en la visión superior a la que proporciona un magnético ( 10 mm).
+    e) Con fluidos de densidad muy baja (SG < 0,55 típicamente) o altamente variable.
+    f)     Cuando la visión directa del fluido sea relevante (p.e. para detectar ensuciamiento o color).
+    g) En servicio de agua, condensado e interfases agua-hidrocarburo liviano.
+                                                                                                         BODEGA, EDUARDO                                                                             13/03/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                            GUILLERMO                                                                               11:41:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   2 / 10
+                                                                 J0401 Indicadores Locales de Nivel
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11102-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+Los niveles de tipo magnético se aplicarán en los siguientes casos:
+    a) Cuando la estanqueidad y seguridad del sistema de medida deba ser máxima.
+    b) En servicios corrosivos al vidrio y a la mica.
+    c) Con fluidos sucios que se adhieran al vidrio (p.e. hidrocarburos pesados o parafínicos).
+    d) En servicios de medición de interfases de líquidos con apariencia óptica similar.
+    e) En ubicaciones que requieran una lectura a distancia.
+    f)     Cuando la lectura deba estar accesible a una cota diferente de la de medición (p.e. tanques enterrados
+           separadores de líquido en gasoductos).
+Con fluidos de alta viscosidad en las que no sea suficiente una ejecución convencional de calefacción para garantizar
+el correcto servicio, no se usarán ninguno de los tipos anteriores de indicador de nivel.
+
+5.1.2 Selección de niveles de vidrio
+Los niveles de vidrio serán siempre de tipo armado (transparencia o réflex).
+Las condiciones generales de aplicación de cada tipo de indicador de vidrio (estudiar cada aplicación) son:
+
+                                             Tabla 5.2.1: Condiciones típicas de aplicación de los niveles de vidrio
+                  Tipo de Nivel                  P (kg/cm2-g)                      T (ºC)                                                  Aplicaciones
+                  Tubular                       P  1,5                       0  T  40               No tóxicos, no peligrosos. Servicios auxiliares.
+                  Reflexión                                                                            HC no agresivos, transparentes, interfases de agua
+                                                P<100                         0  T  240
+                  (armado)
+La limitación de los niveles de reflexión a T < 240 ºC y fluidos no agresivos está asociada a la imposibilidad de
+proteger internamente los cristales mediante láminas de mica o similar debido a su superficie estriada.
+Cuando excepcionalmente se requiera trabajar con fluidos a –20 ºC < T < 0ºC, se usarán sólo niveles armados y con
+recubrimientos antiescarcha (tipo resina acrílica) con un espesor mínimo de 38 mm.
+Los niveles tubulares de vidrio sólo podrán emplearse con aprobación expresa de YPF.
+
+5.1.3 Selección de niveles magnéticos
+Las variantes de ejecución de los niveles magnéticos están esencialmente asociadas a sus tipos de montaje, y en
+YPF tendrán los siguientes criterios de selección:
+
+                                                               Tabla 5.1.3: Selección del tipo de nivel magnético
+                   Tipo de Montaje                    P (Kg/cm2-g)                     T (ºC)                                   condiciones del aplicación
+                  Externo                             P < 200                       < 400                 Tanques y depósitos convencionales con acceso o
+                                                                                                          visión perimetral.
+                  Interno superior                    P < 16                        < 100                 Tanques enterrados y/o con acceso o visión sólo por
+                                                                                                          parte superior.
+                  Interno inferior                    P < 16                        < 100                 Tanques elevados y con acceso o visión sólo inferior.
+                  Inferior remoto                     ---                           ---                   Se prohíbe su uso.
+                                                                                                         BODEGA, EDUARDO                                                                             13/03/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                            GUILLERMO                                                                               11:41:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   3 / 10
+                                                                 J0401 Indicadores Locales de Nivel
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11102-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+Los niveles magnéticos para montaje en fondo de recipientes elevados sólo podrán emplearse con aprobación
+expresa de YPF ya que tienen asociados problemas de mantenimiento.
+Los montajes remotos que ofrecen algunos fabricantes, basados en el empleo de fluidos intermedios de mayor
+densidad y líneas de impulsión hasta el medidor están prohibidos.
+
+5.1.4 Niveles de vidrio tubulares
+El visor estará construido de vidrio templado perfectamente transparente, tendrá un diámetro externo de ¾”, un
+espesor de pared no inferior a 2 mm y una longitud máxima de 750 mm.
+El tubo estará fijado con juntas y prensaestopas ajustable a las conexiones superior e inferior, y rodeado de una
+estructura rigidizadora y protectora contra impactos formada por varillas de acero.
+Los extremos del tubo estarán unidos directamente a las válvulas de conexión a proceso. Estas válvulas serán tipo
+off-set, con esfera de retención y conexión de purga/venteo de ½” NPT-H.
+Las conexiones a proceso serán laterales, bridadas y de ½” 150#.
+Las tomas de drenaje y/o venteo de los niveles tubulares irán equipadas con válvulas ½” NPT-M x ½” NPT-H, de
+paso recto para limpieza.
+
+5.1.5 Niveles de vidrio de reflexión
+Los cristales serán de vidrio templado, químicamente estables y perfectamente transparentes, estriados en su cara
+interna (muescas prismáticas) para favorecer la refracción y la visibilidad.
+Los cristales serán de borosilicato (pyrex) según DIN 7080 / 7081, hasta una temperatura máxima de 243 ºC.
+Las dimensiones de los cristales serán por defecto las del tipo IX (340 x 30 x 17 mm) con extremos en “D”.
+En alta presión o cuando existan condicionantes constructivos especiales para la ubicación de las tomas a proceso,
+podrán usarse otros tamaños de visor previa autorización por YPF.
+Existirá una junta de apoyo entre el cuerpo y el cristal del visor y otra entre el cristal y la cubierta que aísle las partes
+metálicas de las de cristal y garantice la estanqueidad. Existirá una cajera en el cuerpo para la junta.
+Como máximo, los niveles constarán de tres cuerpos o secciones. Para cubrir rangos de visibilidad mayores se
+recurrirá a la instalación de varios niveles decalados en altura.
+Los cuerpos (cámaras y cubiertas) serán de acero al carbono salvo que el fluido o las condiciones de proceso
+requieran otro material. El uso de recubrimientos internos (lining) requerirá la aprobación de YPF.
+La fijación de la cámara a la cubierta será función de la presión de trabajo:
+    a)      En media y baja presión la fijación podrá ser mediante grampas en forma de U de retención fijados en el
+           frontal con tuercas de material adecuado a la temperatura de servicio.
+    b)      En alta presión la cámara y la cubierta estarán unidas por tornillos pasantes. Tornillos adyacentes tendrán
+           cabeza y contratuerca en lados opuestos del nivel.
+La tornillería será de A 193 B7 / A 194 2H salvo que se requiera otra calidad por el ambiente o la temperatura.
+Los niveles tendrán las conexiones a proceso independientes de las cámaras de medida e incluirán válvulas de
+aislamiento propias (independientes de las de piping).
+
+
+                                                                                                         BODEGA, EDUARDO                                                                             13/03/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                            GUILLERMO                                                                               11:41:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   4 / 10
+                                                                 J0401 Indicadores Locales de Nivel
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11102-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+Las conexiones válvula-nivel serán mediante una unión rígida por niple para permitir la orientación del nivel en
+cualquier posición respecto al plano de conexión al recipiente.
+Las conexiones válvula-proceso serán mediante bridas de 1”, con el rating y tipo de caras de brida que fije el
+recipiente. Los ejes de las bridas de conexión serán perpendiculares al cuerpo del nivel.
+Las válvulas de aislamiento serán tipo off-set, con esfera de retención, rating mínimo del cuerpo 1500#, y mismo
+material que el cuerpo del nivel. Para P  42 bar serán tipo de puente y husillo.
+La distancia entre ejes de conexiones se ajustará (salvo excepciones recogidas en el punto 5.1.5) será:
+         Niveles con 1 sección         500 mm           (visibilidad: 318 mm)
+         Niveles con 2 secciones       900 mm           (visibilidad: 675 mm)
+         Niveles con 3 secciones       1260 mm          (visibilidad: 1032 mm)
+Todos los niveles incluirán válvulas de purga/venteo de ½” con tapones. Serán de paso recto para limpieza.
+No se usarán nunca tubos internos de calefacción. Cuando se requiera calentar el nivel (p.e. fluidos viscosos) se hará
+con traceado.
+En servicios fríos donde pueda formarse hielo sobre los visores se usarán pantallas antiescarcha de material plástico
+(plexiglass o similar) con espesores comprendidos entre 38 y 200 mm.
+
+5.1.6 Niveles magnéticos de montaje externo
+Se denominan de esta manera a los niveles con cámara de medida propia que se conectan en paralelo al recipiente
+cuyo nivel miden.
+Constarán de una cámara sellada construida a partir de tubo o cañería metálica de material no magnético, flotador
+con imán y acoplamiento magnético a un sistema externo de indicación.
+Se prohíbe el uso de tubos o cámaras no metálicas. De requerirlo el fluido, el tubo contará con recubrimiento interno
+de material sintético adecuado (PTFE teflón, HALAR, vidrio, etc.).
+Los tubos de medida tendrán como mínimo Schedule 40. Tendrá una presión de diseño al menos igual a la del
+recipiente a la cual se conecta.
+El tubo contará con las siguientes conexiones:
+    a) Dos conexiones laterales a proceso, de 1”.
+    b) Una conexión superior para venteo.
+    c) Una conexión inferior para drenaje y extracción del flotador.
+En servicios de baja presión y con fluidos no peligrosos, la conexión superior será un cap soldado con una conexión
+½” NPT-H con tapón hexagonal del mismo material que el tubo.
+En servicios de alta presión o peligrosos, el tubo de medida finalizará en una conexión bridada, y el cierre se realizará
+mediante brida ciega del mismo material que la cámara y junta.
+La conexión inferior será siempre bridada, con paso adecuado para extracción del flotador. La tapa ciega estará
+agujereada y unida por soldadura a una válvula de paso recto para drenaje.
+La válvula de drenaje tendrá conexión soldada a la brida. Será de ¾” para alta presión o fluidos peligrosos y de ½” en
+otros casos. El extremo será roscado y con tapón.
+Las conexiones laterales serán mediante toberas con bridas de montaje soldadas al tubo de medida.
+
+                                                                                                         BODEGA, EDUARDO                                                                             13/03/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                            GUILLERMO                                                                               11:41:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   5 / 10
+                                                                 J0401 Indicadores Locales de Nivel
+Tipo: ESPECIFICACIÓN                       Ámbito: Upstream - Argentina                                                                                      Código: 11102-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                           Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                       YPF PRIVADA
+
+
+Las distancias entre ejes de conexiones estarán normalizadas a 1000 y 1600 mm. El uso de otras longitudes deberá
+ser aprobado por YPF. Por encima de 2000 mm el tubo será soportado externamente.
+El flotador deberá tener una densidad aparente inferior en todo momento y temperatura a la del fluido de proceso.
+Será de material no magnetizable (SS, Titanio, etc.) y resistente químicamente al medio.
+Las gravedades específicas mínimas medibles suelen ser del orden de 0,55. Para valores inferiores se deberán
+utilizar indicadores tipo réflex.
+La aplicación a la medida de interfases deberá ser autorizada por YPF. En estos servicios, la densidad aparente del
+flotador debe estar garantizada con una precisión superior a  0,02 g/cm .
+                                                                        3
+
+
+En altas presiones y con medios no condensantes se usarán flotadores de diseño abierto que permitan la
+ecualización de presión dentro y fuera del mismo.
+El flotador y los imanes alojados en su interior deben tener simetría axial, de modo que su rotación dentro del tubo no
+afecte al acoplamiento magnético ni condicione la posición de la escala indicadora.
+Cuando el flotador pueda dañarse por impacto con los extremos del tubo (p.e. por vaciado rápido), se incluirán en los
+mismos resortes de amortiguación.
+Cuando el flotador sea susceptible de hundimiento la escala de indicación se prolongará por debajo de la conexión
+inferior al recipiente para detectar dicha situación (a ser posible con un color diferente).
+Los imanes serán adecuados a todo el rango de temperatura de trabajo.
+El campo creado por los imanes será lo más localizado posible en el plano horizontal, de modo sólo actúe un
+elemento de la escala de indicación en cada momento y garantizar una precisión mejor de 10 mm.
+El sistema de indicación será continuo, basado en elementos basculantes bicolores. Se prohíbe el uso de indicadores
+de punto que no marquen rangos completos bajo y sobre el nivel actual.
+Se podrán utilizar los niveles magnetivos con indicación LED en reemplazo de elementos basculantes. Se debe tener
+en cuenta que la mayoría de los indicadores de nivel led tienen un angulo de visión reducido (15°) y dependen de la
+disponibilidad de energía eléctrica para su funcionamiento.
+Los niveles led son apropiados para visualizaciones de larga distancia o cuando la luz ambiente sea reducida.
+El nivel led deberá ser alimentado desde una fuente segura en 24Vcc y deberán contar con protección adecuada
+según la clasificación del area correspondiente. EExd será el modo preferente de protección.
+Los elementos basculantes/led tendrán colores claramente diferenciados (p.e. rojo y blanco / rojo y verde) en cada
+lado y cumplirán con lo siguiente:
+    a) Serán aptos a la temperatura de servicio.
+    b) Estarán enclavados entre sí (mecánica o magnéticamente) para dar estabilidad a sus posiciones (solo para
+       elementos basculantes).
+    c) Cubrirán como mínimo todo el rango entre ejes de conexiones.
+Los elementos basculantes podrán ser realineados mediante un imán externo.
+Toda la escala de medida y sus elementos basculantes estarán alojados en una envolvente protectora que permita la
+visualización de los indicadores y los proteja del entorno (IP 55 o superior).
+Esta envolvente será siempre de material adecuado a la temperatura del proceso (aluminio, SS, etc.) y deberá ser
+además completamente estanca (IP 65 mínimo).
+                                                                                                         BODEGA, EDUARDO                                                                             13/03/2017
+     GALANTERNIK, NICOLAS                                 VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                            GUILLERMO                                                                               11:41:00 a.m.
+
+                  Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                              CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+    © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+    esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   6 / 10
+                                                                   J0401 Indicadores Locales de Nivel
+Tipo: ESPECIFICACIÓN                         Ámbito: Upstream - Argentina                                                                                      Código: 11102-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                             Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+Salvo que se solicite de modo explícito, no se incluirá escala graduada en altura con los niveles.
+
+
+
+5.2       Criterios de instalación
+
+5.2.1 Aspectos particulares
+Los montajes de los indicadores de nivel convencionales (laterales) podrán ser de dos tipos:
+      a) Directos al recipiente
+      b) Mediante stand pipe
+Los criterios de uso en la especificación “J0400 Medida de Nivel (Parte General)”.
+Los niveles magnéticos para montaje superior o inferior se montarán directamente al recipiente, sin válvula de
+aislamiento salvo que se solicite ésta explícitamente.
+
+5.2.2 Conexionado a proceso
+Los indicadores de nivel se montarán según los típicos de conexionado a recipientes incluidos en la especificación de
+diseño “J1700 Montaje de Instrumentos”.
+El conexionado de los niveles de montaje lateral será siempre mediante válvulas de aislamiento suministradas por
+cañerías. Para los de montaje superior o inferior aplicará el punto 5.3.1.
+El suministro de las válvulas por cañerías será independiente de que el nivel en sí incluya válvulas propias para
+aislamiento, como en el caso de los de vidrio.
+Cuando el rango exceda de 2500 mm, se medirán sólo los extremos superior e inferior en longitudes mínimas de
+1000 mm salvo que la Ingeniería Básica indique que se deba tener visión en el 100% del rango.
+Cuando se instalen varios niveles decalados, tendrán un solape mínimo de 50 mm (2”) entre sus zonas de indicación
+o visibilidad.
+Los niveles magnéticos de más de 2000 mm de longitud serán soportados externamente a efectos de evitar
+deformaciones del tubo de medida y esfuerzos sobre las toberas de conexión.
+Cuando se requiera una lectura local de presión en el recipiente (manómetro), la misma se podrá instalar usando el
+venteo del indicador de nivel como toma a proceso, a fin de evitar una tobera más al recipiente.
+En el caso del punto anterior, el manómetro se montará del modo convencional que define la especificación “J1700
+Montaje de Instrumentos” considerando la válvula de venteo del nivel como válvula de raíz. Este montaje nunca
+aplicará a transmisores.
+En los niveles de vidrio de transparencia con iluminador, se ubicará junto al mismo el interruptor de encendido del
+mismo. Será apto para zona clasificada y estará identificado con un rótulo indicando su servicio.
+El interruptor citado será, salvo indicación en otro sentido, retenido. Sólo se instalarán interruptores que deban
+mantenerse pulsados manualmente cuando los mismos estén accesibles desde la zona de observación.
+
+
+
+
+                                                                                                           BODEGA, EDUARDO                                                                             13/03/2017
+      GALANTERNIK, NICOLAS                                  VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                              GUILLERMO                                                                               11:41:00 a.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                     7 / 10
+                                                                   J0401 Indicadores Locales de Nivel
+Tipo: ESPECIFICACIÓN                         Ámbito: Upstream - Argentina                                                                                      Código: 11102-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                             Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+
+5.3 Suministro y documentación
+
+5.3.1 Preparación para envío, embalaje y marcado
+Lo indicado en este punto complementa a la especificación AB-IYO-ED-09-199-01 “ED(EP)-B-01.00 Preparación para
+el Transporte de Equipos y Materiales”.
+Los indicadores se suministrarán completamente ensamblados y en embalajes individuales, con todas las tomas
+selladas contra la entrada de suciedad y los visores protegidos contra impactos.
+Los de tipo magnético llevarán el flotador fijado de modo que no pueda sufrir daños durante el transporte.
+Cada nivel incluirá una etiqueta metálica grabada de modo indeleble por estampación con su tag fijada al mismo
+mediante alambre de acero inoxidable. Su tag irá grabado externamente sobre el embalaje.
+Las bridas de conexión de los indicadores de nivel irán grabadas con su tamaño, rating, material y encarado sobre el
+lateral del ala.
+
+5.3.2 Documentación
+La documentación a entregar por el suministrador se define en la requisición de compra, y como mínimo incluirá lo
+siguiente:
+      a) Hoja de datos del equipo (incluyendo accesorios).
+      b) Planos dimensionales de los equipos.
+      c) Certificados de materiales.
+      d) Certificados de cumplimiento con normativas aplicables.
+      e) Certificados de prueba hidráulica a 1,5 veces la presión de diseño.
+      f)     Catálogos técnicos.
+      g) Manual de instalación y operación.
+La documentación anterior se suministrará en las cantidades y soportes indicados en la requisición de compra.
+Los documentos asociados a tags particulares (planos, hojas de datos, etc.) deberán ser aprobados por la Ingeniería
+responsable del proyecto. Los documentos genéricos (catálogos, manuales, etc.) no lo requieren.
+La documentación estará en castellano.
+
+
+6 Indicadores, registros y riesgos del proceso
+
+6.1 Indicadores
+N/A
+
+
+6.2 Registros
+N/A
+                                                                                                           BODEGA, EDUARDO                                                                             13/03/2017
+      GALANTERNIK, NICOLAS                                  VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                              GUILLERMO                                                                               11:41:00 a.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                     8 / 10
+                                                                   J0401 Indicadores Locales de Nivel
+Tipo: ESPECIFICACIÓN                         Ámbito: Upstream - Argentina                                                                                      Código: 11102-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                             Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+
+6.3 Riesgos y acciones mitigantes
+N/A
+
+
+7 Anexos y referencias
+
+7.1 Anexos
+   N°                                                                                                        Nombre
+    I          HD-J0401-01 Indicador de Nivel de Vidrio
+    II         HD-J0401-02 Indicador de Nivel Magnético
+
+
+7.2 Normativa relacionada
+    Categoría                                                                             Título                                                                                        Código
+ Normativa
+                                  J0400 Medida de Nivel (parte General)
+ Interna YPF
+ Normativa
+                                  N/A                                                                                                                              N/A
+ Externa
+ Normativa
+                                  ED(EP)-J-04.01 indicadores Locales de Nivel                                                                                      AB-IYO-ED-09-031-01
+ Derogada
+ Otras
+                                  N/A                                                                                                                              N/A
+ referencias
+
+
+7.3 Definiciones y abreviaturas
+         Término                        Abreviatura                                                                                 Descripción
+ N/A                                    N/A                          N/A
+
+
+8 Aprobación
+
+8.1 Vigencia
+Esta normativa entrará en vigencia a partir de la fecha de su aprobación.
+Los abajo firmantes asumen la responsabilidad de implantar, controlar el cumplimiento y actualizar el presente
+documento cada vez que fuera necesario.
+
+
+
+                                                                                                           BODEGA, EDUARDO                                                                             13/03/2017
+        GALANTERNIK, NICOLAS                                VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                              GUILLERMO                                                                               11:41:00 a.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                     9 / 10
+                                                                   J0401 Indicadores Locales de Nivel
+Tipo: ESPECIFICACIÓN                         Ámbito: Upstream - Argentina                                                                                      Código: 11102-ES-21030700-110A
+
+
+Proceso: Abastecimiento->Desarrollar Activo->Optimizar Instalaciones de Superficie                                                                             Revisión: 0.0
+
+
+Categoría de Activo de Información según Sección 8.5:                                                         YPF PRIVADA
+
+
+
+8.2 Disposiciones generales y transitorias
+N/A
+
+
+8.3 Historial
+       Estado                      № Revisión                    Fecha Aprobación                                                                   Observaciones
+
+ Original                         0.0                            Ver fecha en pie de
+                                                                 firmas.
+
+
+8.4 Aprobación colegiada
+N/A
+
+
+8.5 Categoría de Clasificación del Activo de Información
+YPF - Privada: información disponible para los empleados de la compañía y terceros (ej. contratistas) como parte de
+la rutina del negocio. Su difusión se hace en base al conocimiento para poder operar. Su difusión no autorizada
+podría afectar la consecución de objetivos particulares de determinadas áreas de la compañía.
+
+
+Anexo I: HD-J0401-01 Indicador de Nivel de Vidrio
+
+Anexo II: HD-J0401-02 Indicador de Nivel magnético
+Estos formularios se encuentran como archivos editables en la biblioteca Anexos Online de SGN http://corporacion-
+sgn/sites/sgn/Anexos/Forms/AllItems.aspx
+
+
+
+
+                                                                                                           BODEGA, EDUARDO                                                                             13/03/2017
+      GALANTERNIK, NICOLAS                                  VERNA, FACUNDO                                                                            BRIZUELA, JORGE ENRIQUE
+                                                                                                              GUILLERMO                                                                               11:41:00 a.m.
+
+                    Autor                                         Validador                                         Calidad                                        Aprobador                               D M A
+                                                                CONSULTE Y DIFUNDA LA VERSIÓN ON-LINE // EL IMPRESO ES COPIA NO CONTROLADA.
+
+
+      © YPF S.A., 2013. Este documento es propiedad exclusiva de YPF S.A. y su reproducción total o parcial está totalmente prohibida y queda amparada por la legislación vigente. El uso, copia, reproducción o venta de
+      esta publicación, sólo podrá realizarse con autorización expresa y por escrito del propietario de la publicación. Versión 2013-03-18
+
+                                                                                                                                                                                                                   10 / 10
+
