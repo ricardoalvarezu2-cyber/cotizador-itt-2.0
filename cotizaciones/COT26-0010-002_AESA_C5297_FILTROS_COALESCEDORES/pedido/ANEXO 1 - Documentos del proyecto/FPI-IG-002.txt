@@ -1,0 +1,403 @@
+== Portada
+Formulario
+LISTA DE DOCUMENTOS
+FPI-IG-002 - Rev. 2 (03/08/2023 - AESA Público)
+1           HISTORIAL DE REVISIONES
+Revisión Nº | Fecha | Descripción | Realizó | Revisó | Aprobó
+0 | 2019-07-31 00:00:00 | Primera emisión | D. Curcio | F. Vicini | M. Bernáth
+1 | 2021-06-17 00:00:00 | Se agrega columna Multidiciplinario a tipo de revisión | R. Garcia | D. Curcio | R. Garcia
+2 | 2023-08-03 00:00:00 | Se configuraron los listados desplegables | A. Barrios | N. Cortijo | F. Vicini
+== LISTADO DOCUMENTOS
+PROYECTO / PROJECT: | DOC. AESA
+DOC. PROVEEDOR / SUPPLIER DOC.
+TÍTULO / NAME: | FECHA / DATE: | REVISIÓN / REVISION:
+PÁGINA / PAGE
+PROVEEDOR / SUPPLIER: | CODIGO PROVEEDOR / SUPPLIER NUMBER | 0000
+ORDEN DE COMPRA / PURCHASE ORDER: | (Bloque ZZZZ )
+REQUISICIÓN DE ING. / Engineering Requisitions:
+N° TAG / TAG N°:
+CODIFICACIÓN AESA /
+AESA CODE | CODIFICACIÓN PROVEEDOR / SUPPLIER CODE | CODIFICACIÓN CLIENTE/ CLIENT CODE | AREA / SECTOR | ESPECIALIDAD / ENGINEERING BRANCH | DESCRIPCION DEL DOCUMENTO / DOCUMENT DESCRIPTION | TIPO DE DOCUMENTO / TYPE OF DOCUMENT | Tipo de Revisión / Type of Revision | CARÁCTER DE EMISIÓN / QUALIFICATION | FECHA PREVISTA / DUE DATE            REV. A | FECHA PREVISTA / DUE DATE            REV. 0 | FECHA PREVISTA / DUE DATE            REV. CAF
+== DB
+Tipo | Inic. | Especialidad | Esp. | Tipo | Esp | TD | TR | TR
+AA-Análisis de Consistencia de Ingeniería | AA | CA | Calidad | CA | AT-Análisis Técnico | CI | AA | 1 | 1
+AT-Análisis Técnico | AT | CI | Civil | CA | CE-Certificacion | CO | AA | 1 | 2
+BD-Bases y Criterios de Diseño | BD | CO | Coordinación | CA | DB-Data Book | EL | AA | 1 | 3
+BM-Balance Materia y Energia | BM | EL | Electricidad | CA | IN-Informes | EM | AA | 1 | 4
+CE-Certificación | CE | EM | Mecánica | CA | LD-Listado de Documentos | ES | AA | 1 | 5
+CO-Computo / Planilla de Cotización | CO | ES | Estructuras | CA | LI-Listado de Instrumentos | IN | AA | 1 | 6
+DB-Data Book | DB | IN | Instrumentación y Control | CA | LM-Lista De Materiales | PI | AA | 1 | 7
+DC-Diagrama de Conexionado | DC | PI | Cañerías | CA | LP-Listados Particulares | PR | AA | 1 | 8
+DD-Datos de Diseño | DD | PR | Proceso | CA | MO-Manual De Operaciones | SD | AA | 1 | 9
+DF-Diagrama de Flujo | DF | SD | Seguridad en el Diseño | CA | OD-Otros Documentos | CO | AC | 1 | 10
+DH-Doblado de Hierros | DH | CA | PC-Plan de Calidad | CO | AS | 1 | 11
+DL-Diagrama de Lazos | DL | Área o Sector | CA | PE-Plan de Ejecución,Inspección y Ensayos | CA | AT | 1 | 12
+EE-Esquema Eléctrico | EE | IN | Ingeniería | CA | PG-Plan De Gestion | CA | AT | 2 | 13
+EF-Esquemas Funcionales | EF | CA | Calidad | CA | PR-Procedimientos | CI | AT | 1 | 14
+ES-Estudio Especial | ES | CA | WP-Procedimiento De Soldadura | EL | AT | 1 | 15
+ET-Especificación Técnica | ET | CI | AA-Análisis de Consistencia de Ingeniería | EM | AT | 1 | 16
+HD-Hoja de Datos | HD | CI | AT-Análisis Técnico | ES | AT | 1 | 17
+IN-Informe | IN | CI | BD-Bases y Criterios de Diseño | IN | AT | 1 | 18
+IS-Isometricos | IS | CI | CO-Computo / Planilla de Cotización | PI | AT | 1
+IT-Instructivo | IT | CI | DD-Datos de Diseño | PR | AT | 1
+LC-Listado De Cables | LC | CI | DH-Doblado de Hierros | SD | AT | 1
+LD-Lista De Documentos | LD | CI | ES-Estudio Especial | CI | BD | 1
+LF-Lista De Pendientes | LF | CI | ET-Especificación Técnica | CO | BD | 1
+LI-Lista De Instrumentos | LI | CI | IN-Informe | EL | BD | 1
+LL-Lista De Lineas | LL | CI | LD-Lista De Documentos | EM | BD | 1
+LM-Lista De Materiales | LM | CI | LF-Lista De Pendientes | EM | BD | 1
+LP-Lista Particular | LP | CI | LM-Lista De Materiales | ES | BD | 1
+LQ-Lista De Equipos | LQ | CI | LP-Lista Particular | IN | BD | 1
+LR-Listado De Repuestos | LR | CI | LY-Lay Out | PI | BD | 1
+LS-Lista De Señales | LS | CI | MC-Memoria De Cálculo | PR | BD | 1
+LY-Lay Out | LY | CI | MD-Memoria Descriptiva | SD | BD | 1
+MC-Memoria De Cálculo | MC | CI | MQ-Maqueta | PR | BM | 1
+MD-Memoria Descriptiva | MD | CI | PL-Plano | CO | CA | 1
+MO-Manual De Operaciones | MO | CI | PR-Procedimiento | PR | CA | 1
+MQ-Maqueta | MQ | CI | RI-Requerimiento | SD | CA | 1
+MZ-Matriz Causa-Efecto | MZ | CI | RL-Relevamiento | CA | CE | 1
+OD-Otros Documentos | OD | CI | SP-Simulación | CA | CE | 2
+PC-Plan de Calidad | PC | CI | TM-Tipico De Montaje | CO | CE | 1
+PE-Plan de Ejecución,Inspección y Ensayos | PE | CO | AA-Análisis de Consistencia de Ingeniería | CI | CO | 1
+PG-Plan De Ejecución De Ingeniería | PG | CO | AC-Acta | CO | CO | 1
+PG-Plan De Gestion | PG | CO | AS-Acuerdo De Servicio | EL | CO | 1
+PI-Diagrama P&Id | PI | CO | BD-Bases y Criterios de Diseño | EM | CO | 1
+PL-Plano | PL | CO | CA-Cambio De Alcance | ES | CO | 1
+PO-Pliego | PO | CO | CE-Certificación | IN | CO | 1
+PR-Procedimiento | PR | CO | CO-Computo / Planilla de Cotización | PI | CO | 1
+RI-Requerimiento | RI | CO | CU-Documentación Contractual | SD | CO | 1
+RL-Relevamiento | RL | CO | DD-Datos de Diseño | CO | CU | 1
+SP-Simulación | SP | CO | IN-Informe | CA | DB | 1
+TM-Tipico De Montaje | TM | CO | IT-Instructivo | CA | DB | 2
+WP-Procedimiento De Soldadura | WP | CO | LD-Lista De Documentos | CA | DB | 3
+CO | LF-Lista De Pendientes | EL | DC | 1
+CO | ME-Cartas | EL | DC | 2
+CO | MR-Minuta De Reunion | EL | DC | 3
+CO | NT-Nota Técnica | EL | DC | 4
+CO | PG-Plan De Ejecución De Ingeniería | IN | DC | 1
+CO | PO-Pliego | IN | DC | 2
+CO | TE-Plantilla | IN | DC | 3
+CO | TR-Transmittal | CI | DD | 1
+EL | AA-Análisis de Consistencia de Ingeniería | CO | DD | 1
+EL | AT-Análisis Técnico | EL | DD | 1
+EL | BD-Bases y Criterios de Diseño | EM | DD | 1
+EL | CO-Computo / Planilla de Cotización | ES | DD | 1
+EL | DC-Diagrama de Conexionado | IN | DD | 1
+EL | DD-Datos de Diseño | PI | DD | 1
+EL | DF-Diagrama de Flujo | PR | DD | 1
+EL | EE-Esquema Eléctrico | EL | DF | 1
+EL | EF-Esquemas Funcionales | IN | DF | 1
+EL | ES-Estudio Especial | PR | DF | 1
+EL | ET-Especificación Técnica | CI | DH | 1
+EL | HD-Hoja de Datos | IN | DL | 1
+EL | IN-Informe | IN | DL | 2
+EL | LC-Listado De Cables | EL | EE | 1
+EL | LD-Lista De Documentos | EL | EE | 2
+EL | LF-Lista De Pendientes | EL | EE | 3
+EL | LM-Lista De Materiales | EL | EF | 1
+EL | LP-Lista Particular | CI | ES | 1
+EL | LQ-Lista De Equipos | EL | ES | 1
+EL | LR-Listado De Repuestos | EM | ES | 1
+EL | LY-Lay Out | ES | ES | 1
+EL | MC-Memoria De Cálculo | IN | ES | 1
+EL | MD-Memoria Descriptiva | PI | ES | 1
+EL | MO-Manual De Operaciones | PR | ES | 1
+EL | MQ-Maqueta | SD | ES | 1
+EL | OD-Otros Documentos | CI | ET | 1
+EL | PL-Plano | EL | ET | 1
+EL | PR-Procedimiento | EM | ET | 1
+EL | RI-Requerimiento | ES | ET | 1
+EL | RL-Relevamiento | IN | ET | 1
+EL | SP-Simulación | IN | ET | 2
+EL | TM-Tipico De Montaje | IN | ET | 3
+EM | AA-Análisis de Consistencia de Ingeniería | PI | ET | 1
+EM | AT-Análisis Técnico | PR | ET | 1
+EM | BD-Bases y Criterios de Diseño | SD | ET | 1
+EM | CO-Computo / Planilla de Cotización | EL | HD | 1
+EM | DD-Datos de Diseño | EL | HD | 2
+EM | ES-Estudio Especial | EL | HD | 3
+EM | ET-Especificación Técnica | EL | HD | 4
+EM | HD-Hoja de Datos | EM | HD | 1
+EM | IN-Informe | EM | HD | 2
+EM | LD-Lista De Documentos | EM | HD | 3
+EM | LF-Lista De Pendientes | EM | HD | 4
+EM | LM-Lista De Materiales | EM | HD | 5
+EM | LP-Lista Particular | EM | HD | 6
+EM | LQ-Lista De Equipos | EM | HD | 7
+EM | LR-Listado De Repuestos | ES | HD | 1
+EM | MC-Memoria De Cálculo | IN | HD | 1
+EM | MD-Memoria Descriptiva | IN | HD | 2
+EM | MO-Manual De Operaciones | IN | HD | 3
+EM | MQ-Maqueta | IN | HD | 4
+EM | MZ-Matriz Causa-Efecto | IN | HD | 5
+EM | OD-Otros Documentos | PI | HD | 1
+EM | PI-Diagrama P&Id | PR | HD | 1
+EM | PL-Plano | PR | HD | 2
+EM | PR-Procedimiento | PR | HD | 3
+EM | RI-Requerimiento | PR | HD | 4
+EM | RL-Relevamiento | SD | HD | 1
+EM | SP-Simulación | CA | IN | 1
+EM | TM-Tipico De Montaje | CA | IN | 2
+EM | WP-Procedimiento De Soldadura | CI | IN | 1
+ES | AA-Análisis de Consistencia de Ingeniería | CO | IN | 1
+ES | AT-Análisis Técnico | EL | IN | 1
+ES | BD-Bases y Criterios de Diseño | EM | IN | 1
+ES | CO-Computo / Planilla de Cotización | EM | IN | 2
+ES | DD-Datos de Diseño | EM | IN | 3
+ES | ES-Estudio Especial | ES | IN | 1
+ES | ET-Especificación Técnica | IN | IN | 1
+ES | HD-Hoja de Datos | PI | IN | 1
+ES | IN-Informe | PR | IN | 1
+ES | LF-Lista De Pendientes | SD | IN | 1
+ES | LM-Lista De Materiales | PI | IS | 1
+ES | LP-Lista Particular | PI | IS | 2
+ES | MC-Memoria De Cálculo | PI | IS | 3
+ES | MD-Memoria Descriptiva | CO | IT | 1
+ES | MQ-Maqueta | PR | IT | 1
+ES | PL-Plano | SD | IT | 1
+ES | PR-Procedimiento | EL | LC | 1
+ES | RI-Requerimiento | IN | LC | 1
+ES | RL-Relevamiento | IN | LC | 2
+ES | SP-Simulación | CA | LD | 1
+ES | TM-Tipico De Montaje | CI | LD | 1
+IN | AA-Análisis de Consistencia de Ingeniería | CO | LD | 1
+IN | AT-Análisis Técnico | EL | LD | 1
+IN | BD-Bases y Criterios de Diseño | EM | LD | 1
+IN | CO-Computo / Planilla de Cotización | EM | LD | 2
+IN | DC-Diagrama de Conexionado | EM | LD | 3
+IN | DD-Datos de Diseño | EM | LD | 4
+IN | DF-Diagrama de Flujo | IN | LD | 1
+IN | DL-Diagrama de Lazos | PI | LD | 1
+IN | ES-Estudio Especial | PR | LD | 1
+IN | ET-Especificación Técnica | CI | LF | 1
+IN | HD-Hoja de Datos | CO | LF | 1
+IN | IN-Informe | EL | LF | 1
+IN | LC-Listado De Cables | ES | LF | 1
+IN | LD-Lista De Documentos | IN | LF | 1
+IN | LF-Lista De Pendientes | PI | LF | 1
+IN | LI-Lista De Instrumentos | PR | LF | 1
+IN | LM-Lista De Materiales | SD | LF | 1
+IN | LP-Lista Particular | CA | LI | 1
+IN | LS-Lista De Señales | IN | LI | 1
+IN | LY-Lay Out | IN | LI | 2
+IN | MC-Memoria De Cálculo | IN | LI | 3
+IN | MD-Memoria Descriptiva | PI | LL | 1
+IN | MO-Manual De Operaciones | PR | LL | 1
+IN | MQ-Maqueta | SD | LL | 1
+IN | PE-Plan De Inspección Y Ensayo | CA | LM | 1
+IN | PL-Plano | CA | LM | 2
+IN | PR-Procedimiento | CA | LM | 3
+IN | RI-Requerimiento | CI | LM | 1
+IN | RL-Relevamiento | EL | LM | 1
+IN | TM-Tipico De Montaje | EM | LM | 1
+PI | AA-Análisis de Consistencia de Ingeniería | EM | LM | 2
+PI | AT-Análisis Técnico | EM | LM | 3
+PI | BD-Bases y Criterios de Diseño | ES | LM | 1
+PI | CO-Computo / Planilla de Cotización | IN | LM | 1
+PI | DD-Datos de Diseño | PI | LM | 1
+PI | ES-Estudio Especial | PI | LM | 2
+PI | ET-Especificación Técnica | PI | LM | 3
+PI | HD-Hoja de Datos | PR | LM | 1
+PI | IN-Informe | CA | LP | 1
+PI | IS-Isometricos | CA | LP | 2
+PI | LD-Lista De Documentos | CA | LP | 3
+PI | LF-Lista De Pendientes | CA | LP | 4
+PI | LL-Lista De Lineas | CI | LP | 1
+PI | LM-Lista De Materiales | EL | LP | 1
+PI | LP-Lista Particular | EL | LP | 2
+PI | LR-Listado De Repuestos | EL | LP | 3
+PI | LY-Lay Out | EM | LP | 1
+PI | MC-Memoria De Cálculo | EM | LP | 2
+PI | MD-Memoria Descriptiva | EM | LP | 3
+PI | MQ-Maqueta | ES | LP | 1
+PI | PL-Plano | IN | LP | 1
+PI | PR-Procedimiento | PI | LP | 1
+PI | RI-Requerimiento | PI | LP | 2
+PI | RL-Relevamiento | PI | LP | 3
+PI | SP-Simulación | PR | LP | 1
+PI | TM-Tipico De Montaje | SD | LP | 1
+PR | AA-Análisis de Consistencia de Ingeniería | EL | LQ | 1
+PR | AT-Análisis Técnico | EM | LQ | 1
+PR | BD-Bases y Criterios de Diseño | PR | LQ | 1
+PR | BM-Balance Materia y Energia | EL | LR | 1
+PR | CA- Cambio de Alcance | EM | LR | 1
+PR | DD-Datos de Diseño | EM | LR | 2
+PR | DF-Diagrama de Flujo | EM | LR | 3
+PR | ES-Estudio Especial | EM | LR | 4
+PR | ET-Especificación Técnica | PI | LR | 1
+PR | HD-Hoja de Datos | IN | LS | 1
+PR | IN-Informe | IN | LS | 2
+PR | IT-Instructivo | IN | LS | 3
+PR | LD-Lista De Documentos | CI | LY | 1
+PR | LF-Lista De Pendientes | EL | LY | 1
+PR | LL-Lista De Lineas | IN | LY | 1
+PR | LM-Lista De Materiales | PI | LY | 1
+PR | LP-Lista Particular | CI | MC | 1
+PR | LQ-Lista De Equipos | CI | MC | 2
+PR | MC-Memoria De Cálculo | CI | MC | 3
+PR | MD-Memoria Descriptiva | CI | MC | 4
+PR | MO-Manual De Operaciones | EL | MC | 1
+PR | MR-Minuta De Reunion | EL | MC | 2
+PR | MZ-Matriz Causa-Efecto | EL | MC | 3
+PR | NT-Nota Técnica | EL | MC | 4
+PR | OD-Otros Documentos | EM | MC | 1
+PR | PI-Diagrama P&Id | EM | MC | 2
+PR | PL-Plano | EM | MC | 3
+PR | PR-Procedimiento | EM | MC | 4
+PR | RI-Requerimiento | ES | MC | 1
+PR | RL-Relevamiento | IN | MC | 1
+PR | TE- Plantilla | IN | MC | 2
+SD | AA-Análisis de Consistencia de Ingeniería | PI | MC | 1
+SD | AT-Análisis Técnico | PR | MC | 1
+SD | BD-Bases y Criterios de Diseño | PR | MC | 2
+SD | CA-Cambio de Alcance | PR | MC | 3
+SD | CO-Computo / Planilla de Cotización | SD | MC | 1
+SD | ES-Estudio Especial | CI | MD | 1
+SD | ET-Especificación Técnica | EL | MD | 1
+SD | HD-Hoja de Datos | EL | MD | 2
+SD | IN-Informe | EL | MD | 3
+SD | IT-Instructivo | EM | MD | 1
+SD | LF-Lista De Pendientes | ES | MD | 1
+SD | LL-Lista De Lineas | IN | MD | 1
+SD | LP-Lista Particular | IN | MD | 2
+SD | MC-Memoria De Cálculo | IN | MD | 3
+SD | MD-Memoria Descriptiva | PI | MD | 1
+SD | MR-Minuta De Reunion | PR | MD | 1
+SD | NT-Nota Técnica | SD | MD | 1
+SD | PI-Diagrama P&Id | CO | ME | 1
+SD | PL-Plano | CA | MO | 1
+SD | PR-Procedimiento | CA | MO | 2
+SD | RI-Requerimiento | CA | MO | 3
+SD | RL-Relevamiento | CA | MO | 4
+SD | TE- Plantilla | EL | MO | 1
+EM | MO | 1
+IN | MO | 1
+IN | MO | 2
+PR | MO | 1
+CI | MQ | 1
+EL | MQ | 1
+EM | MQ | 1
+ES | MQ | 1
+IN | MQ | 1
+PI | MQ | 1
+PI | MQ | 2
+PI | MQ | 3
+CO | MR | 1
+PR | MR | 1
+SD | MR | 1
+EM | MZ | 1
+PR | MZ | 1
+PR | MZ | 2
+PR | MZ | 3
+CO | NT | 1
+PR | NT | 1
+SD | NT | 1
+CA | OD | 1
+EL | OD | 1
+EL | OD | 2
+EL | OD | 3
+EM | OD | 1
+EM | OD | 2
+EM | OD | 3
+EM | OD | 4
+EM | OD | 5
+PR | OD | 1
+PR | OD | 2
+PR | OD | 3
+PR | OD | 4
+CA | PC | 1
+CA | PC | 2
+CA | PE | 1
+CA | PE | 2
+IN | PE | 1
+CA | PG | 1
+CA | PG | 2
+CO | PG | 1
+PR | PI | 1
+PR | PI | 2
+PR | PI | 3
+SD | PI | 1
+CI | PL | 1
+CI | PL | 2
+CI | PL | 3
+CI | PL | 4
+EL | PL | 1
+EL | PL | 2
+EL | PL | 3
+EL | PL | 4
+EM | PL | 1
+EM | PL | 2
+EM | PL | 3
+EM | PL | 4
+EM | PL | 5
+EM | PL | 6
+EM | PL | 7
+EM | PL | 8
+EM | PL | 9
+EM | PL | 10
+EM | PL | 11
+EM | PL | 12
+EM | PL | 13
+EM | PL | 14
+EM | PL | 15
+EM | PL | 16
+EM | PL | 17
+EM | PL | 18
+ES | PL | 1
+IN | PL | 1
+IN | PL | 2
+IN | PL | 3
+IN | PL | 4
+IN | PL | 5
+PI | PL | 1
+PI | PL | 2
+PI | PL | 3
+PR | PL | 1
+SD | PL | 1
+CO | PO | 1
+CA | PR | 1
+CA | PR | 2
+CA | PR | 3
+CA | PR | 4
+CA | PR | 5
+CI | PR | 1
+EL | PR | 1
+EM | PR | 1
+ES | PR | 1
+IN | PR | 1
+PI | PR | 1
+PR | PR | 1
+SD | PR | 1
+CI | RI | 1
+EL | RI | 1
+EM | RI | 1
+ES | RI | 1
+IN | RI | 1
+PI | RI | 1
+PR | RI | 1
+SD | RI | 1
+CI | RL | 1
+EL | RL | 1
+EM | RL | 1
+ES | RL | 1
+IN | RL | 1
+PI | RL | 1
+PR | RL | 1
+SD | RL | 1
+CI | SP | 1
+EL | SP | 1
+EM | SP | 1
+ES | SP | 1
+PI | SP | 1
+CO | TE | 1
+PR | TE | 1
+SD | TE | 1
+CI | TM | 1
+EL | TM | 1
+EM | TM | 1
+IN | TM | 1
+PI | TM | 1
+CO | TR | 1
+CA | WP | 1
+CA | WP | 2
+EM | WP | 1

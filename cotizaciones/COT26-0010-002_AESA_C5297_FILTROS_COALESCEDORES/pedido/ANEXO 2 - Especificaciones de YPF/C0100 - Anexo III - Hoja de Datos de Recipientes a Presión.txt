@@ -1,0 +1,468 @@
+== Carátula
+PROYECTO:  | DOC: YPF
+DOC. PROVEEDOR: 
+FASE: | Fecha:
+Página: | 1 de 7 | Rev:
+REVISIÓN | FECHA | DESCRIPCIÓN | PREPARÓ | REVISÓ | APROBÓ
+== Hoja 2
+1 | Cliente:
+2 | Localización: 
+3 | Item (TAG):
+4 | Cantidad requerida:
+Aprob.: | 5 | Referencia (P&ID):
+6 | Referencia (Petición de oferta / Orden de Compra):
+7 | Especificación del Cliente:
+8 | Condiciones de Sitio 
+9
+10 | Valor | Unidad
+11 | Temperatura ambiente (Mínima / Máxima)                                                                         | ºC
+12 | Velocidad del viento (CIRSOC 102 versión 2005) | m/seg
+13 | Categoría de Exposición - Factor de importancia (CIRSOC 102 versión 2005) | -
+Revis.:  | 14 | Zona sísmica (CIRSOC 103 versión 1991) | -
+15 | Carga de Nieve (CIRSOC 104 versión 2005) | kN/m2
+16
+17 | Información General del Recipiente
+18
+19 | Valor | Unidad | Valor | Unidad
+20 | Diámetro exterior | mm | Volumen | m3
+21 | Longitud (T/T) | mm | Peso Vacío con aislación | kg
+22 | Tipo de recipiente | - | Peso en Prueba Hidráulica | kg
+23 | Tipo de cabezal | - | Peso aislado en Operación | kg
+24 | Espesor de envolvente | mm  | Peso en Transporte | kg
+25 | Espesor de cabezal | mm  | Eliminador de niebla 
+Realiz: | 26 | Pintura Ext./Int. | Tipo | Efficiency
+27 | Aislación | - | Forma | Max. ΔP
+28 | Traceado | - | Dirección flujo
+29 | Protección catódica | -
+FECHA: | 30 | Condiciones de Operación
+31
+32 | Valor | Unidad | Valor | Unidad
+33 | Presión de operación min/max | kg/cm2g | Caudal de líquido | m3/d
+34 | Temperatura de operación min/max | °C | Caudal de gas | Sm3/d
+REV.: | 35 | K diseño | (agua) | ft/s | Corte agua | %
+36
+37
+38
+39 | Nivel de líquido | Desempeño a NLL
+40 | HHLL | mm | Tiempo de res. Gas | min
+41 | HLL | mm | Tiempo de res. Líquido | min
+42 | NLL | mm | Velocidad axial gas | m/s
+43 | LLL | mm
+44 | LLLL | mm
+45
+FICHERO N° | 46
+47
+48
+49 | Propiedades de Diseño
+HOJA DE DATOS | 50
+51 | Densidad (HC/Agua) | kg/m3
+52 | Viscosidad (HC/Agua) | cP @ °C
+53 | Viscosidad (HC/Agua) | cP @ °C
+54 | Densidad gas (a P y T op) | kg/m3 @ kg/cm2g , °C 
+55 | Viscosidad gas | cP
+56 | Peso Molecular | gr/mol
+57 | Cloruros | mg/l
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+ANEXO | ESP. | N° DE DOCUMENTO | HOJA | REV.
+2 de 7
+== Hoja 3
+1 | Condiciones de Diseño Mecánico
+2
+3 | Valor | Unidad
+4 | Presión de diseño | kg/cm2 g
+Aprob.: | 5 | Presión de prueba | kg/cm2 g
+6 | Temperatura de diseño / Temperatura minima de diseño de metal (MDMT) | °C
+7 | Sobreespesor de corrosión (Mínimo) | mm
+8 | Estampa ASME
+9
+10 | Pruebas y Ensayos
+11
+12 | Ensayos según:
+13 | Prueba Hidráulica
+Revis.:  | 14 | Alivio de tensión (PWHT)
+15 | Radiografiado 
+16 | Ensayo de Impacto
+17 | Requerimiento NACE MR-0175
+18 | Requerimientos Especiales
+19
+20
+21 | Materiales
+22
+23 | Envolvente / Cabezales | Pads y Clips
+24 | Cuellos de conexiones | Estructura, Plataformas y Soportes
+25 | Bridas | Escaleras
+Realiz: | 26 | Accesorios | Internos
+27 | Pernos / Espárragos |  Caja de vanes
+28 | Tuercas |  Vanes
+29 | Juntas |  Cañerías
+FECHA: | 30 | Cunas |  Rompevórtice
+31 | Orejas de Izaje |  Soportes
+32 | Puesta a tierra |  Bulonería
+33 | Placa de identificación | Deflector de entrada
+34
+REV.: | 35 | Conexiones al equipo
+36
+37 | Sigla | Cant. | Tipo | DN (in) | Clase | Sch. | Elev. | Proy. | Servicio | Notas
+38
+39
+40
+41
+42
+43
+44
+45
+FICHERO N° | 46
+47
+48
+49
+HOJA DE DATOS | 50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+ANEXO | ESP. | N° DE DOCUMENTO | HOJA | REV.
+3 de 7
+== Hoja 4
+1 | Listado de Válvulas
+2
+3 | TAG | Cant. | Tipo | DN (in) | Serie / Cara | Observaciones
+4
+Aprob.: | 5
+6
+7
+8
+9
+10
+11
+12
+13
+Revis.:  | 14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+Realiz: | 26
+27
+28
+29
+FECHA: | 30
+31
+32
+33
+34
+REV.: | 35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+FICHERO N° | 46
+47
+48
+49
+HOJA DE DATOS | 50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+ANEXO | ESP. | N° DE DOCUMENTO | HOJA | REV.
+4 de 7
+== Hoja 5
+1 | Observaciones / Consideraciones Adicionales
+2
+3 | Normas internacionales:
+4
+Aprob.: | 5
+6
+7
+8
+9
+10
+11
+12
+13
+Revis.:  | 14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+Realiz: | 26
+27 | Especificaciones de Diseño:
+28
+29
+FECHA: | 30
+31
+32
+33
+34
+REV.: | 35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+FICHERO N° | 46
+47
+48
+49
+HOJA DE DATOS | 50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+ANEXO | ESP. | N° DE DOCUMENTO | HOJA | REV.
+5 de 7
+== Hoja 6
+1 | Esquema 
+2
+3
+4
+Aprob.: | 5
+6
+7
+8
+9
+10
+11
+12
+13
+Revis.:  | 14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+Realiz: | 26
+27
+28
+29
+FECHA: | 30
+31
+32
+33
+34
+REV.: | 35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+FICHERO N° | 46
+47
+48
+49
+HOJA DE DATOS | 50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+ANEXO | ESP. | N° DE DOCUMENTO | HOJA | REV.
+6 de 7
+== Hoja 7
+1 | Notas
+2
+3
+4
+Aprob.: | 5
+6
+7
+8
+9
+10
+11
+12
+13
+Revis.:  | 14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+Realiz: | 26
+27
+28
+29
+FECHA: | 30
+31
+32
+33
+34
+REV.: | 35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+FICHERO N° | 46
+47
+48
+49
+HOJA DE DATOS | 50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+ANEXO | ESP. | N° DE DOCUMENTO | HOJA | REV.
+7 de 7

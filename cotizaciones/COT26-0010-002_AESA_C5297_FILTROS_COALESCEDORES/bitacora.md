@@ -42,7 +42,27 @@
 - 2022 (sin ficha): AESA/12 "Filtros coalescedor" (OT 201-22) y AESA/20 "Filtro coalescedor FC-231 FC-431" (OT 226-22), ambos citan el SAP 1000566431.
 - Cotización hermana del mismo proyecto: COT26-0010-001 (filtros de gas FCC-707/708).
 
+## Revisión de toda la información (25-11-2026, 2ª pasada)
+Abiertos todos los anexos; cada PDF, docx, xlsx, doc y xls tiene su texto al lado (.txt o .csv). El .msg del Anexo 4 se abrió con un lector propio (sin librerías) y sus adjuntos están en `pedido/ANEXO 4 …/adjuntos/`.
+- **P&ID (4 hojas, E0 16-10-2026):** completo y legible; alcanza para sacar válvulas, instrumentos, líneas y clases (CE32, CK11, CK31, CA11, todas en L0200 Anexo I). Dentro del límite del SKID-006 entran, entre otras cosas: PSV-301A/B (1" #600 × 2" #150, set 99 kg/cm2, caso fuego), BDV-301E 4" #600 con RO-301, SDV-301C y SDV-301 (2" #600), LV-301D y LV-301B (2" #600, con bypass VG-204/VG-353 y bloqueos VF), VR-354, unos 35 VF y VG, LIT-301A/B/C/D, LG, PDIT/PDI-301, PIT-301B, PI-301A, CC-301 (cupón de corrosión), aire de instrumentos IA1–IA5, colectores de venteo 8" #150 y drenajes, y la batea del skid. La HD p. 4 (listas de válvulas e instrumentos) viene vacía: sale del P&ID.
+- **RC (Anexo 3):** PIE con puntos de espera, FAT si hay instrumentos y válvulas actuadas, PQR presenciados y certificados por entidad independiente aprobada por YPF, END por IRAM-ISO 9712, certificados 3.1 EN 10204, Data Book.
+- **Anexo 4 (Condiciones de obra):** mail de AESA (G. Falco) con "5165 - Condiciones de obra para las RI 2025.12.05" y 14 anexos. Es un paquete genérico del proyecto C5165 (PTC LAN, movimiento de suelos): aplica solo a trabajos en obra (asistencia, montaje, PEM). Pago a 30 días de la factura; jornada lunes a viernes de 8 a 17 y sábados de 8 a 15. El Anexo 8 es la planilla de movimiento de suelos (no aplica).
+- **Anexo 5 (BIM):** requerimientos del modelo 3D (opcional).
+
+## Lo que falta (verificado contra la lista de la RI §4)
+**No vino, pero lo tenemos de la COT26-0010-001 (mismo proyecto, en `../COT26-0010-001_AESA_C5297_FILTROS_GAS/pedido/ANEXO 2- Especificaciones de YPF/`):** ED(EP)-B-01.00, B-02.00 y B-05.00, B0606, B0609, N0100.
+
+**No vino y no lo tenemos:**
+1. ED(EP)-C-02.00 Elementos internos de recipientes (AB-IYO-ED-09-190-01): define los internos (caja de chicanas, soportes de cartuchos).
+2. J1800 Válvulas de seguridad (la HD-J1800-01 sí vino), J0301 Manómetros, J0402 Transmisores DP para nivel.
+3. Eléctricas e instrumentación de campo: J1302 Cajas de conexionado (vino solo la HD), J1304 Alimentación eléctrica, J1400 Instalación en áreas clasificadas, P1100 Cañería de acero, P1102 Bandejas, P1103 Prensacables, P1105 Puesta a tierra.
+4. L0100 Diseño de cañerías (texto principal; vinieron solo los típicos .dwg) y A0400 Maquetas virtuales (vinieron solo los anexos I y II).
+5. B0608 Protección catódica interior: no aplica (HD: sin protección catódica).
+6. Bases de diseño LANor-PCLANOR02-VCD26288-G-BD-003001 (HD nota 8, P&ID): no hacen falta para cotizar, porque la HD nota 24 trae los casos de proceso.
+
+**Datos de proceso y diseño que el cliente deja al fabricante:** cantidad y modelo de cartuchos (9 × Ø 141 × 915 mm, a confirmar), caja de chicanas, niveles, altura T/T (HD 4.064 / plano 4.663 / P&ID 4.184) y espesores. Hay que pedir cotización de los internos a un fabricante de elementos (Pall, Gora u otro).
+
 ## Pendiente (siguiente paso, cuando Matías lo pida)
-- Abrir el .msg de condiciones de obra y el RC; leer C0100, ED(EP)-C-01.08, L0200 Anexo I (clases CE32, CK11, CA11, CA11) y B0600.
+- Pedir a AESA lo que falta (punto 1 a 4) o cotizar con criterio propio y aclararlo en la oferta.
 - Comparar con YPF/27, TAVAL/37 y AESA/20 y decidir la base del cómputo.
-- Armar transcripción, lista de materiales y consultas (FPI-IG-012).
+- Armar la transcripción y la lista de materiales desde el P&ID y el plano, y las consultas en el formulario FPI-IG-012.
