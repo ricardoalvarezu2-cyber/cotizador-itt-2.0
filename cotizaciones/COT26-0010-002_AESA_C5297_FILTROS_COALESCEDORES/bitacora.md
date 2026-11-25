@@ -62,6 +62,12 @@ Abiertos todos los anexos; cada PDF, docx, xlsx, doc y xls tiene su texto al lad
 
 **Datos de proceso y diseño que el cliente deja al fabricante:** cantidad y modelo de cartuchos (9 × Ø 141 × 915 mm, a confirmar), caja de chicanas, niveles, altura T/T (HD 4.064 / plano 4.663 / P&ID 4.184) y espesores. Hay que pedir cotización de los internos a un fabricante de elementos (Pall, Gora u otro).
 
+## Resumen del pedido y listas preliminares (25-11-2026, pedido de Matías)
+- `resumen_pedido.md` y `listas_preliminares.xlsx`, generados por `listas_preliminares.py` (los datos están en el script; para corregir, editar el script y volver a correrlo). Cantidades por filtro y total ×2.
+- Fuente: P&ID hoja 2 (FC-301; FC-302 igual con sus tags), HD, plano PL-001 (tabla de LDM y lista de conexiones transcriptas literal) y clases L0200 CE32, CK11, CK31, CA11. Lo que falta lo decidió ITT (pedido de Matías: "si falta info, decidimos nosotros con el mejor criterio o por antecedentes"), con TAVAL/37 (FC-231) como modelo; la lista de decisiones está en la §10 del resumen.
+- Hallazgos: CK11/CK31 (aguas abajo de PSV y BDV) son de baja temperatura (A333-6, LF2, WPL6, espárragos L7). La tabla del plano no cierra: suma 22.845 kg contra 22.320 kg del total. La caja de chicanas de 800 × 650 mm no pasa por MH 20" ni por M1 32": va en módulos. El plano lista 1 válvula de 10" y el P&ID tiene 3; 3 JB de instrumentos en el plano contra 4 que pide la RI.
+- Largos de cañería, accesorios y juntas: estimación ITT sin isométricos. **Falta la revisión independiente del relevamiento del P&ID** (no se hizo).
+
 ## Pendiente (siguiente paso, cuando Matías lo pida)
 - Pedir a AESA lo que falta (punto 1 a 4) o cotizar con criterio propio y aclararlo en la oferta.
 - Comparar con YPF/27, TAVAL/37 y AESA/20 y decidir la base del cómputo.
