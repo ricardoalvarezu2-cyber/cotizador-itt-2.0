@@ -68,6 +68,10 @@ Abiertos todos los anexos; cada PDF, docx, xlsx, doc y xls tiene su texto al lad
 - Hallazgos: CK11/CK31 (aguas abajo de PSV y BDV) son de baja temperatura (A333-6, LF2, WPL6, espárragos L7). La tabla del plano no cierra: suma 22.845 kg contra 22.320 kg del total. La caja de chicanas de 800 × 650 mm no pasa por MH 20" ni por M1 32": va en módulos. El plano lista 1 válvula de 10" y el P&ID tiene 3; 3 JB de instrumentos en el plano contra 4 que pide la RI.
 - Largos de cañería, accesorios y juntas: estimación ITT sin isométricos. **Falta la revisión independiente del relevamiento del P&ID** (no se hizo).
 
+## Pesos y soldaduras (25-11-2026, pedido de Matías)
+- Secciones 11 y 12 del resumen: pesos por renglón (tablas del repo; ≈ 24.954 kg por skid contra 22.320 del plano sin instrumental) y soldaduras por tipo y Ø con pulgadas nominales y equivalentes (piping ≈ 1.240 pulg-eq y recipiente ≈ 1.214 pulg-eq por filtro). Calculado con `herramientas/pesos_soldadura.py` (mismas reglas que `precotizar.py`); el criterio del recipiente está en `soldaduras_recipiente()`.
+- De este caso salió el skill `relevar-pedido`.
+
 ## Pendiente (siguiente paso, cuando Matías lo pida)
 - Pedir a AESA lo que falta (punto 1 a 4) o cotizar con criterio propio y aclararlo en la oferta.
 - Comparar con YPF/27, TAVAL/37 y AESA/20 y decidir la base del cómputo.

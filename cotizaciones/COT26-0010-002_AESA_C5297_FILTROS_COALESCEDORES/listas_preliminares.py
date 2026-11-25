@@ -297,6 +297,143 @@ FALTA_O_DECIDIDO = [
 ]
 
 
+# ---------------------------------------------------------------------------
+# 11. PESOS Y SOLDADURAS (pedido de Matías, 25-11-2026)
+# Pesos: tablas de conocimiento/tecnico (B36.10, B16.5, B16.9, B16.11, B16.47, B16.36, MSS SP-97, Taval Lista 30, espárragos).
+# Soldadura: mismas reglas que herramientas/precotizar.py: pulg-eq = Ø × factor de espesor (factores_soldadura.csv);
+# olets × 1,75 (weldolet × 2,5) por el Ø de salida (factores_accesorios.csv); caño por metro: cada extremo BW de
+# accesorio o brida es una junta con caño × 0,75 (AJUSTE_DIRECTAS) + empalmes entre barras de 6 m.
+# ---------------------------------------------------------------------------
+sys.path.insert(0, os.path.join(AQUI, '..', '..', 'herramientas'))
+from pesos_soldadura import (factor_esp, kg_cano, kg_brida, kg_acc, kg_olet, kg_valvula, kg_esparrago,  # noqa: E402
+                             medida_esparrago)
+import pesos_soldadura  # noqa: E402
+import math  # noqa: E402
+
+
+ESF_FB = ['ESFERICA PT GUIADA', 'ESFERICA PT FLOTANTE']
+ESF_NPT = ['ESFERICA PT FLOTANTE FORJADA NPT (API 608)']
+
+# Metadatos para peso y soldadura, en el mismo orden que CANOS, ACCESORIOS, BRIDAS, VALVULAS y VALVULAS_ACTUADAS
+CANOS_META = [(10, '80'), (4, '80'), (4, '80'), (6, '80'), (8, '40'), (6, '40'), (3, '40'), (2, '160'), (1, '160'), (1, '80'), (2, '40'), None]
+# (tipo tabla, Ø, Ø2, clase tabla, extremos, sch real, extremos BW, extremos SW, factor olet)
+ACC_META = [
+    ('codo_90_radio_largo', 10, None, 'XS', 'BW', '80', 2, 0, 0),
+    ('tee_recta', 10, None, 'XS', 'BW', '80', 3, 0, 0),
+    ('weldolet', 4, None, 'XS', 'BW', '80', 0, 0, 2.5),
+    ('codo_90_radio_largo', 4, None, 'XS', 'BW', '80', 2, 0, 0),
+    ('reduccion_concentrica_excentrica', 6, 4, 'XS', 'BW', '80', 2, 0, 0),
+    ('codo_90_radio_largo', 8, None, 'STD', 'BW', '40', 2, 0, 0),
+    ('tee_recta', 8, None, 'STD', 'BW', '40', 3, 0, 0),
+    ('codo_90_radio_largo', 6, None, 'STD', 'BW', '40', 2, 0, 0),
+    ('reduccion_concentrica_excentrica', 6, 3, 'STD', 'BW', '40', 2, 0, 0),
+    ('reduccion_concentrica_excentrica', 3, 2, 'STD', 'BW', '40', 2, 0, 0),
+    ('codo_90_radio_largo', 2, None, '160', 'BW', '160', 2, 0, 0),
+    ('tee_recta', 2, None, '160', 'BW', '160', 3, 0, 0),
+    ('reduccion_concentrica_excentrica', 2, 1, '160', 'BW', '160', 2, 0, 0),
+    ('casquete', 2, None, '160', 'BW', '160', 1, 0, 0),
+    ('codo_90', 1, None, '6000', 'SW', '160', 0, 2, 0),
+    ('codo_90', 1, None, '3000', 'SW', '80', 0, 2, 0),
+    ('codo_90_radio_largo', 2, None, 'STD', 'BW', '40', 2, 0, 0),
+    ('tee_recta', 2, None, 'STD', 'BW', '40', 3, 0, 0),
+    ('casquete', 2, None, 'STD', 'BW', '40', 1, 0, 0),
+    ('thredolet', 0.5, None, '3000', 'NPT', None, 0, 0, 1.75),
+    ('thredolet', 0.75, None, '3000', 'NPT', None, 0, 0, 1.75),
+    ('tapon_hexagonal', 0.75, None, '3000/6000', 'NPT', None, 0, 0, 0),
+]
+# (tipo tabla, Ø, serie, sch del cuello, extremos BW, extremos SW)
+BRI_META = [('WN', 10, '600', '80', 1, 0), ('WN', 4, '600', '80', 1, 0), ('orificio', 4, '600', '80', 2, 0), ('WN', 6, '600', '80', 1, 0),
+            ('WN', 6, '150', '40', 1, 0), ('WN', 8, '150', '40', 1, 0), ('WN', 2, '150', '80', 1, 0), ('WN', 2, '600', '160', 1, 0),
+            ('WN', 2, '150', '160', 1, 0), ('WN', 2, '150', '40', 1, 0), ('SW', 1, '600', '160', 0, 1), ('ciega', 2, '600', None, 0, 0)]
+# válvulas: (tipos de tabla, Ø, serie, extremos) o kg aproximado por unidad (actuadas, PSV, RO: sin tabla, criterio ITT)
+VAL_META = [(ESF_FB, 10, '600', 'RF'), (ESF_FB, 10, '600', 'RF'), (ESF_FB, 10, '600', 'RF'), (ESF_FB, 2, '600', 'RF'), (['GLOBO'], 2, '600', 'RF'),
+            (ESF_FB, 2, '600', 'RF'), (ESF_FB, 2, '600', 'RF'), (ESF_FB, 6, '150', 'RF'), (ESF_FB, 1, '600', 'RF'), (['GLOBO'], 1, '600', 'RF'),
+            (ESF_FB, 6, '600', 'RF'), (ESF_FB, 2, '600', 'RF'), (['GLOBO'], 2, '600', 'RF'), (ESF_FB, 2, '600', 'RF'), (['GLOBO'], 2, '600', 'RF'),
+            (['RETENCION A CLAPETA'], 2, '600', 'RF'), (ESF_FB, 2, '600', 'RF'), (ESF_FB, 2, '600', 'RF'), (['RETENCION A CLAPETA'], 2, '600', 'RF'),
+            (['GLOBO'], 2, '600', 'RF'), (ESF_FB, 2, '150', 'RF'), (ESF_NPT, 1.5, '2000', 'NPT'), (ESF_NPT, 0.5, '2000', 'NPT'), (ESF_NPT, 0.75, '2000', 'NPT')]
+VAL_ACT_KG = [70.0, 70.0, 60.0, 60.0, 180.0, 35.0, 3.0]  # LV, LV, SDV, SDV, BDV, PSV, placa RO: aproximado ITT con actuador
+VAL_ACT_NOTA = 'aprox. ITT (con actuador; sin tabla)'
+# Respaldo ITT para válvulas sin fila en la tabla (por unidad, kg)
+VAL_RESPALDO = {(10, '600'): 732.0, (6, '600'): 250.0, (6, '150'): 75.0, (1, '600'): 12.0}
+
+
+def pesos():
+    """Lista de (rubro, descripción, cant., kg unidad, kg total por filtro, fuente)."""
+    out = []
+    for c, m in zip(CANOS, CANOS_META):
+        if not m:
+            out.append(('Caños', c[0] + ' ' + c[1], c[5], 0.5, c[5] * 0.5, 'aprox. ITT (niple 1/2"-3/4" ≈ 0,5 kg)'))
+            continue
+        kg, f = kg_cano(*m)
+        out.append(('Caños', f'{c[0]} {c[1]} {c[2]} {c[3]}', c[5], kg, (kg or 0) * c[5], f + ' (kg/m)'))
+    for a, m in zip(ACCESORIOS, ACC_META):
+        tipo, dn, dn2, cl, ext, schr, *_ = m
+        if tipo in ('weldolet', 'thredolet'):
+            kg, f = kg_olet(tipo, dn, cl)
+        else:
+            kg, f = kg_acc(tipo, dn, cl, ext, dn2, schr)
+        out.append(('Accesorios', f'{a[0]} {a[1]} {a[2]}', a[5], kg, (kg or 0) * a[5], f))
+    for b, m in zip(BRIDAS, BRI_META):
+        kg, f = kg_brida(m[0], m[1], m[2])
+        out.append(('Bridas', f'{b[0]} {b[1]} {b[2]}', b[6], kg, (kg or 0) * b[6], f))
+    for v, m in zip(VALVULAS, VAL_META):
+        kg, f = kg_valvula(*m)
+        if kg is None and (m[1], m[2]) in VAL_RESPALDO:
+            kg, f = VAL_RESPALDO[(m[1], m[2])], ('plano pos. 501' if m[1] == 10 else 'aprox. ITT (sin tabla)')
+        out.append(('Válvulas', f'{v[0]} {v[1]} {v[2]} {v[3]}', v[5], kg, (kg or 0) * v[5], f))
+    for v, kg in zip(VALVULAS_ACTUADAS, VAL_ACT_KG):
+        out.append(('Válvulas', f'{v[0]} {v[2]} {v[3]}', v[5], kg, kg * v[5], VAL_ACT_NOTA))
+    for j in JUNTAS:
+        d, largo = medida_esparrago(j[6])
+        kg, f = kg_esparrago(d, largo) if d else (None, 'sin medida')
+        n = j[2] * j[5]
+        out.append(('Bulonería', f'Espárragos {j[6]} ({j[0]} {j[1]})', n, kg, (kg or 0) * n, f))
+    for r in RECIPIENTE:
+        out.append(('Recipiente', r[0], r[3], r[5] / r[3], r[5], 'aprox. ITT / tablas'))
+    for pos, cant, desc, kg, _ in LDM_PLANO:
+        if pos in ('1000', '1500', '1900'):
+            out.append(('Estructura (plano)', desc, cant, kg, kg * cant, f'plano PL-001 pos. {pos}'))
+    return out
+
+
+def soldaduras_piping():
+    return pesos_soldadura.soldaduras_piping(CANOS, CANOS_META, ACCESORIOS, ACC_META, BRIDAS, BRI_META)
+
+
+def soldaduras_recipiente():
+    """Soldaduras del recipiente (criterio ITT, convención de precotizar): costura longitudinal = largo / (π·25,4)
+    pulgadas × factor; circunferencial = Ø × factor; conexión de boquilla al cuerpo = Ø × factor × 1,5 (derivación);
+    refuerzo = Ø × 1,5; cuello–brida = Ø × factor del cuello."""
+    e = 31.8
+    f32 = factor_esp(32, esp=e)
+    long_mm = 4064
+    filas = [
+        ('Costuras longitudinales del cuerpo (2 virolas, 2.500 + 1.564 mm = 4.064 mm de costura)', 1, long_mm / (math.pi * 25.4), f32),
+        ('Circunferencial virola–virola', 1, 32, f32),
+        ('Circunferencial cuerpo–casquete inferior', 1, 32, f32),
+        ('Circunferencial cuerpo–brida M1 32"', 1, 32, f32),
+        ('Pollera–casquete (filete, esp. 12,7 mm)', 1, 32, factor_esp(32, esp=12.7)),
+        ('Pollera–anillo base (filete)', 1, 32, 1.0),
+        ('Cuello–brida MH 20" (esp. 31,8 mm)', 1, 20, factor_esp(20, esp=e)),
+        ('Cuello MH 20" al cuerpo (derivación × 1,5)', 1, 20 * 1.5, factor_esp(20, esp=e)),
+        ('Cuello–brida A y B1 10" Sch 160', 2, 10, factor_esp(10, '160')),
+        ('Cuellos A y B1 10" al cuerpo (× 1,5)', 2, 15, factor_esp(10, '160')),
+        ('Refuerzos MH, A y B1 (× 1,5 del Ø mayor)', 3, (20 + 10 + 10) / 3 * 1.5, 1.0),
+        ('Cuello–brida R1, R2 4" Sch 160', 2, 4, factor_esp(4, '160')),
+        ('Cuellos R1, R2 4" al cuerpo (× 1,5)', 2, 6, factor_esp(4, '160')),
+        ('Cuello–brida 2" Sch 160 (20 boquillas)', 20, 2, factor_esp(2, '160')),
+        ('Cuellos 2" al cuerpo (× 1,5)', 20, 3, factor_esp(2, '160')),
+    ]
+    out = []
+    for d, n, pulg, f in filas:
+        out.append(('Recipiente', d, n, n * pulg, f, n * pulg * f))
+    return out
+
+
+SOLD_NOTA = ('Internos (placa portacartuchos, soportes, distribuidor, rompevórtice), clips, orejas y estructura del skid '
+             '(chasis, plataformas, escaleras, batea) se cotizan por kg, no por pulgada.')
+
+
 def _f(v):
     if isinstance(v, float):
         return numeros.fmt(v)
@@ -388,6 +525,44 @@ def resumen_md():
     for i, t in enumerate(FALTA_O_DECIDIDO, 1):
         md.append(f'{i}. {t}')
     md.append('')
+
+    # ---- 11. Pesos
+    P = pesos()
+    md.append('\n## 11. Pesos (por skid; tablas de `conocimiento/tecnico/`)\n')
+    rub = {}
+    for r in P:
+        rub[r[0]] = rub.get(r[0], 0.0) + r[4]
+    tot = sum(rub.values())
+    md.append(_tabla(['Rubro', 'kg por skid', 'kg 2 skids'], [(k, float(v), float(v * N_EQUIPOS)) for k, v in rub.items()] + [('**Total**', float(tot), float(tot * N_EQUIPOS))]))
+    md.append(f'\nContra el plano: {numeros.fmt(PESO_TOTAL_PLANO)} kg por skid sin instrumental ni cableados ({numeros.fmt((tot / PESO_TOTAL_PLANO - 1) * 100)} %). Faltan instrumentos, cajas, cables, internos de la caja de chicanas, cartuchos, aislación y pintura; las válvulas actuadas y las PSV van con peso aproximado.\n')
+    md.append('### 11.1 Detalle\n')
+    md.append(_tabla(['Rubro', 'Descripción', 'Cant.', 'kg un.', 'kg por skid', 'Fuente'],
+                     [(r[0], r[1], r[2], float(r[3]) if r[3] is not None else 'SIN TABLA', float(r[4]), r[5]) for r in P]))
+
+    # ---- 12. Soldaduras
+    SP = soldaduras_piping()
+    SR = soldaduras_recipiente()
+    md.append('\n## 12. Soldaduras (por filtro): pulgadas nominales y equivalentes\n')
+    md.append('Pulgada equivalente = Ø × factor de espesor (`tecnico/factores_soldadura.csv`). Olets: Ø de salida × 1,75 (weldolet × 2,5). Caño por metro: cada extremo BW de accesorio o brida es una junta con caño × 0,75 (uniones directas), más los empalmes entre barras de 6 m. Mismas reglas que `herramientas/precotizar.py`. Todo en taller (el skid sale armado).\n')
+    md.append('### 12.1 Piping, por tipo y Ø\n')
+    md.append(_tabla(['Tipo', 'Ø (pulg)', 'Sch / clase', 'Juntas', 'Pulg. nominales', 'Factor espesor', 'Pulg. equivalentes', 'Pulg-eq 2 filtros'],
+                     [(t, float(dn), sch, j, float(pn), float(f), float(pe), float(pe * N_EQUIPOS)) for t, dn, sch, j, pn, f, pe in SP]))
+    tipos = {}
+    for t, dn, sch, j, pn, f, pe in SP:
+        a = tipos.get(t, [0, 0.0, 0.0])
+        tipos[t] = [a[0] + j, a[1] + pn, a[2] + pe]
+    md.append('\n**Resumen del piping por tipo:**\n')
+    filas = [(t, a[0], float(a[1]), float(a[2]), float(a[2] * N_EQUIPOS)) for t, a in tipos.items()]
+    tj, tn, te = sum(a[0] for a in tipos.values()), sum(a[1] for a in tipos.values()), sum(a[2] for a in tipos.values())
+    filas.append(('**Total piping**', tj, float(tn), float(te), float(te * N_EQUIPOS)))
+    md.append(_tabla(['Tipo', 'Juntas', 'Pulg. nominales', 'Pulg. equivalentes', 'Pulg-eq 2 filtros'], filas))
+    md.append('\n### 12.2 Recipiente\n')
+    md.append(_tabla(['Parte', 'Soldadura', 'Cant.', 'Pulg. nominales', 'Factor espesor', 'Pulg. equivalentes'],
+                     [(r[0], r[1], r[2], float(r[3]), float(r[4]), float(r[5])) for r in SR]))
+    rn, re_ = sum(r[3] for r in SR), sum(r[5] for r in SR)
+    md.append(f'\n**Total recipiente:** {numeros.fmt(rn)} pulg. nominales y {numeros.fmt(re_)} pulg. equivalentes por filtro ({numeros.fmt(re_ * N_EQUIPOS)} los 2).\n')
+    md.append(f'**Total skid (piping + recipiente):** {numeros.fmt(te + re_)} pulg-eq por filtro, {numeros.fmt((te + re_) * N_EQUIPOS)} los 2. {SOLD_NOTA} Estructura (plano): {numeros.fmt(sum(r[4] for r in P if r[0] == "Estructura (plano)"))} kg por skid.\n')
+    md.append('Antecedente para comparar: TAVAL/37 (FC-231) cotizó la soldadura de cañería + cuerpo como un monto global (USD 71.441,70) y la estructura aparte (USD 10.841,12).\n')
     return '\n'.join(md)
 
 
@@ -407,6 +582,9 @@ def planilla(ruta):
         ('Filtrantes', ['Descripción', 'Cant. por filtro', 'Un.', 'Va en', 'Origen'], FILTRANTES),
         ('Otros', ['Artículo', 'Cantidad', 'Origen'], OTROS),
         ('Eléctrico', ['Tema', 'Alcance'], ELECTRICO),
+        ('Pesos', ['Rubro', 'Descripción', 'Cant. por filtro', 'kg un.', 'kg por filtro', 'Fuente'], [tuple(float(x) if isinstance(x, (int, float)) and i in (3, 4) else x for i, x in enumerate(r)) for r in pesos()]),
+        ('Soldadura piping', ['Tipo', 'Ø pulg', 'Sch / clase', 'Juntas', 'Pulg. nominales', 'Factor espesor', 'Pulg. equivalentes'], [(t, float(d), s_, j, float(pn), f, float(pe)) for t, d, s_, j, pn, f, pe in soldaduras_piping()]),
+        ('Soldadura recipiente', ['Parte', 'Soldadura', 'Cant.', 'Pulg. nominales', 'Factor espesor', 'Pulg. equivalentes'], [(a, b, c, float(d), e, float(f)) for a, b, c, d, e, f in soldaduras_recipiente()]),
     ]
     wb.remove(wb.active)
     cab_fill = PatternFill('solid', fgColor='DDE4EE')
