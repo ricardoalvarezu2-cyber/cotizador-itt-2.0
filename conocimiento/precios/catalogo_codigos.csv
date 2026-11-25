@@ -3292,7 +3292,7 @@ OTR-02137,SOLO|OTR|reflector luz led 10 amper 100 watt|Stock ITT · última comp
 OTR-02138,SOLO|OTR|regla de aluminio 60x30x3m esp:1.5|Stock ITT (cód. ACSXXREGXALUM60303)|conocimiento/precios/stock_2024-11.csv|código ACSXXREGXALUM60303
 OTR-02139,SOLO|OTR|regla escolar x30 cm|Stock ITT (cód. LIB000REGLA30CM)|conocimiento/precios/stock_2024-11.csv|código LIB000REGLA30CM
 OTR-02140,SOLO|OTR|regulador presion p/argon|Stock ITT (cód. ACSXXREGPRESARGON)|conocimiento/precios/stock_2024-11.csv|código ACSXXREGPRESARGON
-OTR-02141,"SOLO|OTR|rejilla de piso tipo avila standard, 50x30 mm, galv en caliente, corte a medida con marco. a grados c grados galv||conocimiento/precios/precios_componentes.csv|rubro REJILLA"
+OTR-02141,PER|rejilla|50x30|30||m2
 OTR-02142,SOLO|OTR|rejillas de cocina|Stock ITT · última compra (cód. LIMREJILLAS)|conocimiento/precios/stock_2024-11.csv|código LIMREJILLAS
 OTR-02143,"SOLO|OTR|repuestos pistola hvlp bremen 5937 (pico, aguja y boquilla)|Stock ITT · última compra (cód. REP00PISTHVLPBBREMEN1.4)|conocimiento/precios/stock_2024-11.csv|código REP00PISTHVLPBBREMEN1.4"
 OTR-02144,"SOLO|OTR|repuestos pistola hvlp maer 404 (pico, aguja y boquilla)|Stock ITT (cód. REP00PISTHVLPMAER2.5)|conocimiento/precios/stock_2024-11.csv|código REP00PISTHVLPMAER2.5"
@@ -3853,25 +3853,25 @@ OTR-05025,"SOLO|OTR|kit aislacion tipo d doble micarta diam 1 1/2"" 1500 r-20 (k
 OTR-05026,"SOLO|OTR|kit aislacion tipo f doble micarta diam 3"" #300 (kit aisl.f doble mic. diam 3"" 300)|Miyashiro (MS Juntas) (cód. 4-251-0021)|conocimiento/precios/listas_vendedor.csv|código 4-251-0021"
 OTR-05027,"SOLO|OTR|kit aislacion tipo f doble micarta diam 4"" #300 (kit aisl.f doble mic. diam 4"" 300)|Miyashiro (MS Juntas) (cód. 4-251-0016)|conocimiento/precios/listas_vendedor.csv|código 4-251-0016"
 OTR-05104,"SOLO|OTR|manifold 2 vias abb m26 (m26.p.a.s.2.v.s.p.n.f.m.1.n.n.2) aisi 316l, entrada 1/2"" npt hembra, salida 1/2"" npt macho, 690 bar (10.000 psi), certificado|ABB|fuentes_originales/listas_vendedor/2026-11-17/abb_cotizacion_OPP-26-9039842_2026-11-05.md|"
-PER-02223,"PER|chapa 1 1/4""|2500x6000|||hoja 2500x6000"
-PER-02224,"PER|chapa 1/2"" -|1500x6000|||hoja 1500x6000"
-PER-02225,"PER|chapa 1/2"" -|2500x6000|||hoja 2500x6000"
-PER-02226,"PER|chapa 1/4"" -|2500x6000|||hoja 2500x6000"
-PER-02227,"PER|chapa 100x200 1/4""|100x200|||m"
-PER-02228,"PER|chapa 150x350 1/2""|150x350|||m"
-PER-02229,"PER|chapa 150x350 1/4""|150x350|||m"
-PER-02230,"PER|chapa 2"" -|2500x6000|||hoja 2500x6000"
+PER-02223,PER|chapa|2500x6000|31.75|a36|hoja 2500x6000
+PER-02224,PER|chapa|1500x6000|12.70|a36|hoja 1500x6000
+PER-02225,PER|chapa|2500x6000|12.70|a36|hoja 2500x6000
+PER-02226,PER|chapa|2500x6000|6.35|a36|hoja 2500x6000
+PER-02227,PER|chapa|100x200|6.35||m
+PER-02228,PER|chapa|150x350|12.70||m
+PER-02229,PER|chapa|150x350|6.35||m
+PER-02230,PER|chapa|2500x6000|50.80|a36|hoja 2500x6000
 PER-02231,PER|chapa 3/16 1500x6000|1500x6000|||m2
-PER-02232,"PER|chapa 3/8"" -|1600x240||a36|un"
-PER-02233,"PER|chapa 3/8"" -|2160x260||a36|un"
-PER-02234,"PER|chapa 7/8"" -|2500x6000|||hoja 2500x6000"
-PER-02235,PER|chapa identificacion 150|150 x 150 x 3|3|aisi 304|un
-PER-02236,PER|perfil upn 120|120||f-24|m
-PER-02237,PER|perfil upn 120|120|||m
-PER-02238,PER|perfil upn 200|200|||m
-PER-02239,PER|perfil upn 240|240|||m
-PER-02240,PER|perfil upn 280|280|||m
-PER-02241,PER|perfil upn 80|80|||m
+PER-02232,PER|chapa|1600x240|9.52|a36|un
+PER-02233,PER|chapa|2160x260|9.52|a36|un
+PER-02234,PER|chapa|2500x6000|22.22|a36|hoja 2500x6000
+PER-02235,PER|chapa|150 x 150 x 3|3|aisi 304|un
+PER-02236,PER|upn|120||f-24|m
+PER-02237,PER|upn|120|||m
+PER-02238,PER|upn|200|||m
+PER-02239,PER|upn|240|||m
+PER-02240,PER|upn|280|||m
+PER-02241,PER|upn|80|||m
 PER-02242,SOLO|PER|compas p/chapa 300mm|Stock ITT (cód. FER00COMPMET300)|conocimiento/precios/stock_2024-11.csv|código FER00COMPMET300
 PER-02243,"SOLO|PER|perfil tipo l 1 1/2"" x 1 1/2"" espesor 1/4""|Stock ITT · última compra (cód. ACS040XX2CBF640)|conocimiento/precios/stock_2024-11.csv|código ACS040XX2CBF640"
 PER-02244,SOLO|PER|semielaborado - acometida a manif produc|Stock ITT (cód. ITTSE-ACO-14021030)|conocimiento/precios/stock_2024-11.csv|código ITTSE-ACO-14021030
@@ -3880,47 +3880,47 @@ PER-02246,SOLO|PER|semielaborado - acometida manifod iny 3|Stock ITT (cód. ITTS
 PER-02247,SOLO|PER|semielaborado - manifold 5 vias 300psi p/ emulsion|Stock ITT (cód. ITTSE-MANIF-14011345)|conocimiento/precios/stock_2024-11.csv|código ITTSE-MANIF-14011345
 PER-02248,"SOLO|PER|semielavorado - acometida pte produc 2"" inox 14022485|Stock ITT (cód. ITTSE-ACO-14022485)|conocimiento/precios/stock_2024-11.csv|código ITTSE-ACO-14022485"
 PER-02249,SOLO|PER|tijera de cortar chapa|Stock ITT (cód. ACSXXXXX9FBF0)|conocimiento/precios/stock_2024-11.csv|código ACSXXXXX9FBF0
-PER-03028,PER|bastidor heb 160|160|||kg
-PER-03029,PER|caja de chicana|1200x400x400|400||un
-PER-03030,PER|caja de chicana|850x850x203|||un
-PER-03031,"PER|caja seguridad aumentada|350x250x150|1,6||un"
-PER-03032,PER|chapa | 1000|1000 x 2550|2550||kg
-PER-03033,PER|chapa | 1200|1200 x 800|||kg
-PER-03034,PER|chapa | 1500|1500 x 2500|||kg
-PER-03035,PER|chapa | 1500|1500 x 2600|2600||kg
-PER-03036,PER|chapa | 1500|1500 x 2900|2900||kg
-PER-03037,PER|chapa | 150|150 x 150|||un
-PER-03038,PER|chapa | 150|150 x 6300|||kg
-PER-03039,PER|chapa | 1900|1900 x 6300|||kg
-PER-03040,PER|chapa | 200x200|200x200|||m2
-PER-03041,PER|chapa | 2500|2500 x 2600|2600||kg
-PER-03042,PER|chapa | 2500|2500 x 2900|2900||kg
-PER-03043,PER|chapa | 300|300 x 260|||m2
-PER-03044,PER|chapa | 750|750 x 1020|||kg
-PER-03045,PER|chapa | 800|800 x 350|||kg
-PER-03046,PER|chapa | diam|345 x 5|||kg
-PER-03047,PER|hierro angulo 1|2 x 1|||kg
+PER-03028,PER|heb|160|||kg
+PER-03029,PER|caja de chicana|1200x400x400|400|a516 gr 70|un
+PER-03030,PER|caja de chicana|850x850x203||a516 gr 70|un
+PER-03031,"PER|chapa|350x250x150|1,6||un"
+PER-03032,PER|chapa|1000 x 2550|2550|a516 gr 70|kg
+PER-03033,PER|chapa|1200 x 800|12.70|a516 gr 70|kg
+PER-03034,PER|chapa|1500 x 2500|9.52|a36|kg
+PER-03035,PER|chapa|1500 x 2600|2600|a516 gr 70|kg
+PER-03036,PER|chapa|1500 x 2900|2900|a516 gr 70|kg
+PER-03037,PER|chapa|150 x 150||a36|un
+PER-03038,PER|chapa|150 x 6300|1.59|a36|kg
+PER-03039,PER|chapa|1900 x 6300|7.94|a36|kg
+PER-03040,PER|chapa|200x200|19.05|a36|m2
+PER-03041,PER|chapa|2500 x 2600|2600|a516 gr 70|kg
+PER-03042,PER|chapa|2500 x 2900|2900|a516 gr 70|kg
+PER-03043,PER|chapa|300 x 260|12.70|a36|m2
+PER-03044,PER|chapa|750 x 1020|9.52|a36|kg
+PER-03045,PER|chapa|800 x 350|9.52|a36|kg
+PER-03046,PER|chapa|345 x 5|7.94|a36|kg
+PER-03047,PER|angulo|2 x 1|||kg
 PER-03048,PER|hierro angulo ||2 x 1|||kg
-PER-03049,PER|hierro angulo ||2 x 1|||m
+PER-03049,PER|angulo|2 x 1||a36|m
 PER-03050,PER|hierro anguulo 1|2 x 1|||kg
-PER-03051,PER|identificacion (chapa) ||100 x 200|3|aisi 316|un
+PER-03051,PER|chapa|100 x 200|3|aisi 316|un
 PER-03052,PER|malla metal desplegable|30x50|||m2
 PER-03053,PER|malla metalica ||50x30|||m2
-PER-03054,PER|perfil ipn 120|120|||m
-PER-03055,PER|perfil | -|120|||m
-PER-03056,PER|rejilla 30 x|30 x 30||galvanizado|m2
-PER-03057,PER|rejilla de piso|1000x700|700|acero al carbono|m2
-PER-03058,PER|rejilla de piso|700x2000|2000|acero al carbono|m2
-PER-03059,PER|rejilla | 1000|1000 x 800|800||m2
-PER-03060,PER|rejilla | 6|6 x 2.5|||m2
-PER-03061,PER|skid 1 ||100|||m
-PER-03062,PER|skid 1 ||80|||un
-PER-03063,PER|skid 2 ||100|||un
+PER-03054,PER|ipn|120|||m
+PER-03055,PER|upn|120||a36|m
+PER-03056,PER|rejilla|30 x 30||galvanizado|m2
+PER-03057,PER|rejilla|1000x700|700|acero al carbono|m2
+PER-03058,PER|rejilla|700x2000|2000|acero al carbono|m2
+PER-03059,PER|rejilla|1000 x 800|800|a36|m2
+PER-03060,PER|rejilla|6 x 2.5|||m2
+PER-03061,PER|upn|100|||m
+PER-03062,PER|upn|80|||un
+PER-03063,PER|upn|100|||un
 PER-03064,PER|skid 2 ||80|||un
-PER-03065,PER|upn 140|140|||m
-PER-03066,PER|upn 160|160|||kg
-PER-03067,PER|upn 300 ||300|||m
-PER-03068,PER|upn | 160|250 x 7|||m
+PER-03065,PER|upn|140|||m
+PER-03066,PER|upn|160|||kg
+PER-03067,PER|upn|300||a36|m
+PER-03068,PER|upn|250 x 7||a36|m
 PER-03069,SOLO|PER|1440 | se considera 20% de desperdicio | 1|planilla de costo ITT|fuentes_originales/ofertas_texto/PAMPA ENERGIA/5 - Doc5757155642 - Construc 10 Puentes y 2 Colectores - RDA|4.Armado de la Oferta Comercial/ADICIONAL/ADICIONAL DE OC Colectores.xlsx
 PER-03070,"SOLO|PER|angulo | 2"" | 1/8"" | sa-36 | soporteria|sin proveedor en planilla (columna PROVEEDOR vacía)|fuentes_originales/ofertas_texto/Sacde/15- PTG-SCH - SE-PTG-032 - TK Y BOMBA DE GLICOL|4.Armado de la Oferta Comercial/LM-TANQUE GLICOL.xlsx"
 PER-03071,"SOLO|PER|angulo | 5/16"" | sa-36 | ang 2""x2"" - esp 7,9mm (soporte intrumentacion)|no dice|fuentes_originales/ofertas_texto/TAVAL/3-YPF Separador Bifasicos - Separadores para satelites|5.Proveedores 3ros/YPF - Sep Bifasico - 2591 - 21.2 - precios compras V1.xlsx.txt"
@@ -4004,46 +4004,47 @@ PER-03148,"SOLO|PER|varilla maciza | 3/4"" | acero al carbono | peldanos|sin pro
 PER-03149,"SOLO|PER|varilla maciza | 7/8"" x 2.4 m | 7/8"" | sa-36 | varrilla maciza 7/8"" | -|no dice|fuentes_originales/ofertas_texto/TAVAL/3-YPF Separador Bifasicos - Separadores para satelites|5.Proveedores 3ros/YPF - Sep Bifasico - 2591 - 21.2 - precios compras V1.xlsx.txt"
 PER-03150,"SOLO|PER|varilla maciza | 7/8"" x 2.4 m | 7/8"" | sa-36 | varrilla maciza 7/8""|no dice|fuentes_originales/ofertas_texto/TAVAL/3-YPF Separador Bifasicos - Separadores para satelites|5.Proveedores 3ros/YPF - Sep Bifasico - 2591 - 21.2 - precios compras V1.xlsx.txt"
 PER-03151,"SOLO|PER|virola 36"" x 2.500 mm x 3/8""|Cotizaciones Sandri y GH|fuentes_originales/ofertas_texto/Sacde/20 - SE-3121-ASTORD-014 - TK DE CHOQUE|4.Armado de la Oferta Comercial/LM - SACDE - TK Choque.xlsx"
-PER-03379,PER|chapa 3/16 1500x6000|1500x6000||a36|m2
+PER-03379,PER|chapa|1500x6000||a36|m2
 PER-03380,PER|perfil upn 120|120||a36|m
-PER-03381,PER|perfil upn 80|80||a36|m
-PER-03396,PER|hierro angulo 1-1/2x3/16|2x3||acero al carbono|kg
-PER-03397,PER|hierro angulo 3x1/4|3x1||acero al carbono|kg
-PER-03398,PER|planchuela 3x1/8 acero|3x1||acero al carbono|kg
-PER-03399,PER|planchuela 4x5/16 acero|4x5||acero al carbono|kg
+PER-03381,PER|upn|80||a36|m
+PER-03396,PER|angulo|2x3||acero al carbono|kg
+PER-03397,PER|angulo|3x1||acero al carbono|kg
+PER-03398,PER|planchuela|3x1||acero al carbono|kg
+PER-03399,PER|planchuela|4x5||acero al carbono|kg
 PER-03400,"SOLO|PER|chapa negra lisa 1/2"" astm a36 (precio por kg, hoja de 9 m2)|Precios de acero (J. Elejondo)|conocimiento/precios/acero_por_kg.csv|"
 PER-03401,"SOLO|PER|chapa negra lisa 1/4"" astm a36 (precio por kg, hoja de 9 m2)|Precios de acero (J. Elejondo)|conocimiento/precios/acero_por_kg.csv|"
 PER-03402,"SOLO|PER|chapa negra lisa 3/16"" astm a36 (precio por kg, hoja de 9 m2)|Precios de acero (J. Elejondo)|conocimiento/precios/acero_por_kg.csv|"
 PER-03403,"SOLO|PER|chapa semilla de melon 1/8"" acero al carbono (precio por kg, hoja de 7.47 m2)|Precios de acero (J. Elejondo)|conocimiento/precios/acero_por_kg.csv|"
-PER-03404,PER|tubo estructural (cano|3x1||acero al carbono|kg
-PER-03619,PER|chapa 1/4 pulg|228x380|||un
-PER-03620,PER|planchuela 1/2x38x3265|2x38x3265|||un
-PER-03621,PER|planchuela 3/8x25x3265|8x25x3265|||un
+PER-03404,PER|tubo estructural|3x1||acero al carbono|kg
+PER-03619,PER|chapa|228x380|6.35||un
+PER-03620,PER|planchuela|2x38x3265|||un
+PER-03621,PER|planchuela|8x25x3265|||un
 PER-03622,SOLO|PER|cortes de chapa/planchuela a36 con material (no tienen f24): disco 1-1/2 pulg x diam 475 mm|LIDERCORT|fuentes_originales/ofertas_texto/PAN AMERICAN ENERGY/59. licitacion #3000057493 - Construccion mazo|5.Proveedores 3ros/cotizaciones de proveedores/LIDERCORT - Licitación PAE - 300057493 MAZO - L_B_ - 14_8.msg
-PER-04121,PER|perfil heb 100|100|||m
-PER-04122,PER|perfil heb 120|120|||m
-PER-04123,PER|perfil heb 140|140|||m
-PER-04124,PER|perfil heb 220|220|||m
-PER-04125,PER|perfil heb 240|240|||m
-PER-04126,PER|perfil heb 260|260|||m
-PER-04127,PER|perfil ipn 100|100|||m
-PER-04128,PER|perfil ipn 140|140|||m
-PER-04129,PER|perfil ipn 160|160|||m
-PER-04130,PER|perfil ipn 180|180|||m
-PER-04131,PER|perfil ipn 200|200|||m
-PER-04132,PER|perfil ipn 220|220|||m
+PER-04121,PER|heb|100|||m
+PER-04122,PER|heb|120|||m
+PER-04123,PER|heb|140|||m
+PER-04124,PER|heb|220|||m
+PER-04125,PER|heb|240|||m
+PER-04126,PER|heb|260|||m
+PER-04127,PER|ipn|100|||m
+PER-04128,PER|ipn|140|||m
+PER-04129,PER|ipn|160|||m
+PER-04130,PER|ipn|180|||m
+PER-04131,PER|ipn|200|||m
+PER-04132,PER|ipn|220|||m
 PER-04133,PER|perfil ipn 240|240||a106 b|m
-PER-04134,PER|perfil ipn 260|260|||m
+PER-04134,PER|ipn|260|||m
 PER-04135,PER|perfil upn 100|100|||m
 PER-04136,PER|perfil upn 140|140|||m
-PER-04137,PER|perfil upn 160|160|||m
-PER-04138,PER|perfil upn 180|180|||m
-PER-04139,PER|perfil upn 220|220|||m
-PER-04140,PER|perfil upn 260|260|||m
-PER-04141,PER|perfil upn 300|300|||m
-PER-04933,PER|chapa 1/4 1500|1500 x 6000||a36|m2
+PER-04137,PER|upn|160|||m
+PER-04138,PER|upn|180|||m
+PER-04139,PER|upn|220|||m
+PER-04140,PER|upn|260|||m
+PER-04141,PER|upn|300|||m
+PER-04933,PER|chapa|1500 x 6000||a36|m2
 PER-04975,SOLO|PER|perfileria de acero para skid|planilla de costo ITT (proveedor sin nombre)|fuentes_originales/ypf_lic66944_colectores_2da_entrega_2026-10.xlsx|
-PER-05008,PER|perfil ipn 240|240|||m
+PER-05008,PER|ipn|240|||m
+PER-05111,PER|chapa|1500 x 2500|7.94|a36|kg
 VAL-02250,"SOLO|VAL|2 valvulas de control fisher nps 3 et, dvc6200, lv-18a/b (usd 16,833.75 c/u)|Induquip Ingeniería (Emerson)|fuentes_originales/ofertas_texto/TAVAL/7-CAPEX- SEPARADOR BIFASICO|"
 VAL-02251,"SOLO|VAL|2 valvulas de control globo 3"" 150# optimux opgl, lv-18a/b (pe47948-r0), usd 26,338 c/u|CV Control|fuentes_originales/ofertas_texto/TAVAL/7-CAPEX- SEPARADOR BIFASICO|"
 VAL-02252,"SOLO|VAL|2 valvulas de seguridad crosby 4l6jltjos-e35j, psv-12a/b (usd 4,413.92 c/u)|Induquip Ingeniería (Emerson)|fuentes_originales/ofertas_texto/TAVAL/7-CAPEX- SEPARADOR BIFASICO|"

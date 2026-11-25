@@ -133,6 +133,8 @@
 | 28/10/2026 | No hay más información de precios que la ya entregada: el último precio se sigue eligiendo por fecha (no hay otras compras para preferir sobre la lista de Renard) | Matías | — |
 | 06-11-2026 | Lista para Compras: si un renglón remite a una ET, se busca (base propia y web) y se pone lo que pide para ese caso con la fuente ("Material según la ET"; si no se encuentra, el motivo); si el cliente o proyecto tiene vendor list, columna "Marcas aprobadas" por artículo (`listados_marcas.csv` + `marcas_cliente.py`, repositorio y página) | Matías | `lista_compras.py`, `documentos.js`, `verificar_computo.py`, `test_marcas_cliente.py` |
 
+- 25-11-2026: controles CTRL-P02 (8.906) y CTRL-SK01 (58.974) movidos a propósito: el catálogo ya no toma los precios provisorios de la PC0 de la Lic 69343 (errores_y_lecciones.md, 25-11-2026). Verificación de los 26 amarillos de la PC0 rev16 entregada a Matías (fuera del repo).
+
 ## 3. Pendientes del proyecto
 
 **Lectores de kg y mm del texto (19-11-2026):** pasados al lector único en Python y en la página (detalle en `errores_y_lecciones.md`, 19-11-2026). Pendientes: `precotizar.acero_kg` toma como espesor el primer "N mm" si no dice "esp." y `largo_m` el primer "mm" aunque sea el espesor; `catalogo_materiales.py` `largo_mm` no toma largos con decimales ("152,4 mm"); cambiarlo mueve el buscador y hay que revisar los cambios con `revisar_cambio_busqueda.py`. Las planillas de COT26-0330-003 y COT26-0135-003 siguen con el peso viejo hasta que se rearmen.

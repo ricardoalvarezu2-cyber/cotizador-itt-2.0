@@ -1,7 +1,7 @@
 # Precotización automática — CTRL-P02
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 4.650,88 por equipo · soldadura y servicios calculados USD 4.002,94 · 19 similares (1, 2, 4, 8, 9, 11, 12, 14, 15, 16, 17, 19, 23, 24, 33, 37, 38, 39, 40) · 1 sin precio (6).
+**Resumen:** materiales USD 4.902,88 por equipo · soldadura y servicios calculados USD 4.002,94 · 19 similares (1, 2, 4, 8, 9, 11, 12, 14, 15, 16, 17, 19, 23, 24, 33, 37, 38, 39, 40) · 1 sin precio (6).
 
 
 ## 1. Materiales
@@ -19,9 +19,9 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 | 9 | Válvula esférica paso total RF accionamiento  | SIMILAR | 170,30 / un | 2025-12-10 · planilla interna | — · faltan: material |
 | 10 | Brida ciega BLRF · Ø 2" | IGUAL | 18,50 / un | 2025-12-26 · lista | — |
 | 11 | Válvula esférica paso reducido NPT WOG 3000 · | SIMILAR | 43,60 / un | 2025-09-01 · lista | paso: total (pedido reducido) |
-| 12 | Niple caño Sch. 80 (XS) longitud 100 mm · Ø 3 | SIMILAR ⚠ | 8,74 / un | 2026-04-22 · planilla interna | diametro: 0.5" (pedido 0.75"); el último precio (20,00) se aparta más de 40% de la mediana de sus últimos prec |
+| 12 | Niple caño Sch. 80 (XS) longitud 100 mm · Ø 3 | SIMILAR | 36,74 / un | 2026-04-22 · planilla interna | diametro: 0.5" (pedido 0.75"); precio escalado por diámetro (0,75" ÷ 0,5")^1,5 = × 1,84 |
 | 13 | Tapón hexagonal NPT · Ø 3/4" | IGUAL | 2,30 / un | 2025-12-26 · lista | — |
-| 14 | Niple caño Sch. 80 (XS) longitud 100 mm · Ø 3 | SIMILAR ⚠ | 8,74 / un | 2026-04-22 · planilla interna | diametro: 0.5" (pedido 0.75"); el último precio (20,00) se aparta más de 40% de la mediana de sus últimos prec |
+| 14 | Niple caño Sch. 80 (XS) longitud 100 mm · Ø 3 | SIMILAR | 36,74 / un | 2026-04-22 · planilla interna | diametro: 0.5" (pedido 0.75"); precio escalado por diámetro (0,75" ÷ 0,5")^1,5 = × 1,84 |
 | 15 | Válvula esférica paso reducido NPT WOG 3000 · | SIMILAR | 53,22 / un | 2025-09-01 · lista | paso: total (pedido reducido) |
 | 16 | Niple caño Sch. 80 (XS) longitud 100 mm · Ø 1 | SIMILAR | 4,44 / un | 2026-10-30 · cotización | diametro: 1.5" (pedido 1"); precio escalado por diámetro (1" ÷ 1,5")^1,5 = × 0,54 |
 | 17 | Sockolet 3 x 1 · Ø 3" x 1" | SIMILAR | 1,12 / un | 2026-10-30 · cotización | diametro: 4" (pedido 3"); extremos: SW (pedido SW/BW); precio escalado por diámetro (1" ÷ 4")^1,5 = × 0,12 |
@@ -81,7 +81,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Radiografía 100% y tintas:** 49 placas chicas + 0 grandes + 1,30 servicio(s) de RX + 0,60 de LP por equipo = USD 1.666,00 (Servicio de radiografía (Antonelli) (2025-11; antonelli_end_2025-11)).
   Con las tarifas de Antonelli (11-2025) serían USD 1.666,00: confirmar el proveedor de END con el cliente o la zona.
 
-### Horas de ingeniería, calidad y montaje (estimadas: puente, 3", 10 u, materiales USD 4.651 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: puente, 3", 10 u, materiales USD 4.903 por unidad)
 
 - **Ingeniería:** 7,5 h × USD 15/h = USD 112,50 · mediana de 9,0, 6,0 h por unidad (repartidas en la serie) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 4in #600 (serie de 13 unidades) (4, 13 u, 2026-02-19) · rango del mismo tipo 6–9 h
 - **Calidad y dossier:** 3,5 h × USD 15/h = USD 52,50 · mediana de 1,0, 6,0 h por unidad (repartidas en la serie) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 4in #600 (serie de 13 unidades) (4, 13 u, 2026-02-19) · rango del mismo tipo 1–6 h

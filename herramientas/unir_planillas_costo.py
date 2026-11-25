@@ -10,6 +10,7 @@ Salidas:
 Criterio para que un renglón entre a un catálogo (los demás quedan solo en planillas_costo_items.csv):
   - tiene costo unitario, no es "otro" (subtotales) y la lectura no es de confianza baja;
   - no es un estimado de la planilla (proveedor_o_criterio sin "estimad");
+  - no es un precio provisorio de una PC0 en curso (sin fecha por renglón y sin proveedor propio, o tomado de una lista);
   - la regla del cepo, el IVA y la conversión de moneda los aplica cada catálogo.
 """
 import csv
@@ -56,6 +57,12 @@ def usable(r):
         if float(r["costo_unitario"]) <= 0:  # formato de máquina (texto de Excel): el punto es decimal
             return False
     except ValueError:
+        return False
+    if r["tipo"] == "material" and "se toma la recepcion del pedido" in norm(r["nota"]) \
+            and re.search(r"sin proveedor|planilla|criterio|cintolo|renard|provemet|klockmetal", norm(r["proveedor_o_criterio"])):
+        # PC0 de una cotización en curso (sin fecha por renglón): sus precios sin proveedor son provisorios, y los de listas
+        # (Cintolo, Renard) ya entran por su archivo con la fecha real. Cargarlos con la fecha del pedido los hacía pasar por
+        # precios nuevos y volvían como "fuente" a la misma planilla (YPF Lic 69343, 25-11-2026)
         return False
     return (r["costo_unitario"].strip() and r["tipo"] != "otro" and r["confianza"].strip().lower() != "baja"
             and "estimad" not in norm(r["proveedor_o_criterio"]))

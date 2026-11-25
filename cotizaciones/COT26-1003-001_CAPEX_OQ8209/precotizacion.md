@@ -1,7 +1,7 @@
 # Precotización automática — COT26-1003-001
 
 Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMILAR, SIN PRECIO, estimados y ⚠ antes de usarla.**
-**Resumen:** materiales USD 772,19 por equipo · soldadura y servicios calculados USD 884,76 · 8 similares (3, 4, 9, 12, 20, 22, 24, 25) · 14 sin precio (1, 2, 5, 6, 7, 10, 11, 13, 14, 16, 17, 19, 21, 23).
+**Resumen:** materiales USD 863,63 por equipo · soldadura y servicios calculados USD 884,76 · 8 similares (3, 4, 9, 12, 20, 22, 24, 25) · 14 sin precio (1, 2, 5, 6, 7, 10, 11, 13, 14, 16, 17, 19, 21, 23).
 
 
 ## 1. Materiales
@@ -10,7 +10,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 |---|---|---|---|---|---|
 | 1 | TAPON · Ø 1/2" | **SIN PRECIO** | — | — | el más parecido es sin diámetro conocido (AFO-02417, USD 5,00): pedir cotización |
 | 2 | VALVULA ESFERICA Ø 1/2" #2000 - PASO NOMINAL  | **SIN PRECIO** | — | — | pedir cotización |
-| 3 | NIPLE - LONGITUD: 100 mm · Ø 1/2" | SIMILAR ⚠ | 4,76 / un | 2026-04-22 · planilla interna | material: A106 B (pedido API 5L); el último precio (20,00) se aparta más de 40% de la mediana de sus últimos p |
+| 3 | NIPLE - LONGITUD: 100 mm · Ø 1/2" | SIMILAR | 20,00 / un | 2026-04-22 · planilla interna | material: A106 B (pedido API 5L) |
 | 4 | NIPLE - LONGITUD: 200 mm · Ø 2" | SIMILAR | 20,00 / un | 2026-04-22 · planilla interna | material: A106 B (pedido API 5L) |
 | 5 | VALVULA ESFERICA Ø 2" #2000 - PASO NOMINAL -  | **SIN PRECIO** | — | — | pedir cotización |
 | 6 | UNION DOBLE A GOLPE · Ø 2" | **SIN PRECIO** | — | — | pedir cotización |
@@ -53,7 +53,7 @@ Generada por `herramientas/precotizar.py`, sin IA. **Borrador: revisar los SIMIL
 - **Prueba hidráulica:** 6 h × USD 13,00/h (Prueba hidráulica - manifold FA0032 1.2, 2026-03-10) = USD 78,00 · ⚠ horas supuestas: cargar `parametros.ph_horas` · volumen interior de caños y niples 13,0 l.
 - **Radiografía:** no se calculó (`parametros.rx_pct` = 0). Si el pliego la pide, cargar el porcentaje y volver a correr.
 
-### Horas de ingeniería, calidad y montaje (estimadas: puente, 2.5", 2 u, materiales USD 772 por unidad)
+### Horas de ingeniería, calidad y montaje (estimadas: puente, 2.5", 2 u, materiales USD 864 por unidad)
 
 - **Ingeniería:** 7,5 h × USD 15/h = USD 112,50 · mediana de 9,0, 6,0 h por unidad (repartidas en la serie) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19) · rango del mismo tipo 6–9 h
 - **Calidad y dossier:** 3,5 h × USD 15/h = USD 52,50 · mediana de 1,0, 6,0 h por unidad (repartidas en la serie) · antecedente: TAVAL/43- YPF- CM PUENTES DE PRODUCCION · Puente de produccion 3in #600 (serie de 442 unidades) (3, 442 u, 2026-02-19) · rango del mismo tipo 1–6 h

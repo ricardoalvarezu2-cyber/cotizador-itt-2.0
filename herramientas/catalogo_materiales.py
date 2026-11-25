@@ -170,7 +170,7 @@ def familia_texto(t):
     if re.search(r"rosca con tuerca|union doble|union americana", t):
         return "AFO"
     if re.search(r"cartucho|elemento filtrante|caja porta ?orificio|bomba dosificadora|tapa de cierre rapido|\bllave\b|argon|\bco2\b|\bled\b"
-                 r"|u-?bolt|abrazadera|manguera|\bte (en caja|de |x \d)|manzanilla|yerba|\bcafe\b|azucar", t):
+                 r"|u-?bolt|abrazadera|manguera|\bte (en caja|de |x \d)|manzanilla|yerba|\bcafe\b|azucar|rejillas? de cocina", t):
         return "OTR"
     if re.search(r"manometr|transmisor|trasmisor|termometr|termovaina|caudalimetr|coriolis|presostato|sensor|indicador de nivel|visor de nivel|v-cone|computador de (?:flujo|caudal)|flow computer", t):
         return "INS"
@@ -184,8 +184,9 @@ def familia_texto(t):
         return "NIP"
     if re.search(r"valvul|\bvalv\b|esferica|retencion|esclusa|\baguja\b|bloqueo y purga|\bpsv\b|mariposa|\bglobo\b", t):
         return "OTR" if re.search(NO_VALVULA, t) else "VAL"
-    if re.search(r"\bupn\b|\bipn\b|\bheb\b|\bhea\b|\bipe\b|perfil|angulo|planchuela|\bchapa\b|hierro|tubo estructural", t):
-        return "PER"
+    if re.search(r"\bupn\b|\bipn\b|\bheb\b|\bhea\b|\bipe\b|perfil|angulo|planchuela|\bchapa\b|hierro|tubo estructural"
+                 r"|\brejilla|grating|metal desplegado|piso (?:electro|techno)", t):
+        return "PER"  # rejilla de piso: estructura (antes caía en OTR y el buscador no veía las de PER; 25-11-2026)
     if re.search(r"\bcano\b|\bcanos\b|tubo s/?c|tubo c/?c|\btubo\b|\bpipe\b", t):
         return "CAN"
     acc = re.search(r"\bcodo|\btees?\b|\bte\b|reduccion|casquete|\bcupla|\btapon|\bbuje|union doble|entrerrosca|\btapa\b|olet\b|\bcurva", t)
@@ -320,9 +321,18 @@ def atributos(t, fam, proveedor=""):
     ds = diametros(t)
     stock = None
     if fam == "PER":
-        d["tipo"] = primero(r"\b(upn|ipn|heb|hea|ipe|w|angulo|planchuela|chapa|tubo estructural)\b", t).upper()
+        # rejilla antes que chapa: "rejilla 30 x 30 chapa galvanizada" es una rejilla (25-11-2026)
+        d["tipo"] = ("rejilla" if re.search(r"\brejilla|grating|metal desplegado|piso (?:electro|techno)", t)
+                     else primero(r"\b(upn|ipn|heb|hea|ipe|w|angulo|planchuela|chapa|tubo estructural)\b", t)) or " ".join(t.split()[:3])
         d["designacion"] = primero(r"\b(?:upn|ipn|heb|hea|ipe|w)\s?(\d{2,3}(?:x\d+)?)", t) or primero(r"(\d+(?:[.,]\d+)?\s?x\s?\d+(?:[.,]\d+)?(?:\s?x\s?\d+(?:[.,]\d+)?)?)", t)
         d["espesor_mm"] = primero(r"(?:esp\.?|espesor|e=)\s?(\d+(?:[.,]\d+)?)\s?mm", t) or primero(r"(\d+(?:[.,]\d+)?)\s?mm", t)
+        if not d.get("material"):
+            m = re.search(r"\b(?:sa|a)[- ]?(516|36|283|572)(?: ?gr\.? ?(\d+))?\b", t)
+            if m:
+                d["material"] = f"A{m.group(1)}" + (f" Gr {m.group(2)}" if m.group(2) else "")
+        if d["tipo"] == "chapa" and not d["espesor_mm"]:  # "chapa 1/2"" / "esp. 1/4"": espesor en pulgadas (25-11-2026)
+            fr = primero(r"(?<![\d/])([1-4] \d/\d+|\d/\d+|[1-4])\s?(?:\"|pulg|plg)", t)  # "gr 70 1/2"" es 1/2", no 70 1/2"
+            d["espesor_mm"] = f"{frac(fr) * 25.4:.2f}" if fr and frac(fr) else ""
     else:
         # formato del stock "ESF PT 4 300 RF" y formato "4#150RF": Ø y serie sin comillas ni #
         T = r"(?<![\d/.,#])(\d{1,2}(?: \d/\d)?|\d/\d)"
@@ -354,7 +364,7 @@ def atributos(t, fam, proveedor=""):
         d["serie"] = suelta.group(1)
     d["schedule"] = schedule_de(t, float(d["diametro"][:-1]) if d.get("diametro", "").endswith('"') else None)
     sin_diam = not d.get("diametro")
-    d["material"] = material_de(t)
+    d["material"] = material_de(t) or d.get("material", "")
     d["extremos"] = extremos_de(t, fam)
     if not d.get("diametro") and fam in ("JUN", "VAL", "BRI", "AFO", "ABW", "NIP"):
         m = (re.search(r"(?:junta \w+|esparrago|tuerca\w*(?: pesada)?|bulon|arandela|esferica(?: paso total)?|retencion|esclusa|wafer|globo|brida \w+|codo(?: radio \w+)?(?: (?:90|45)(?: grados|o)?)?|tee|niple)[\s|]+(?!(?:90|45)\b)(\d{1,2} \d/\d|\d/\d|\d{1,2})\b(?!\s?(?:mm|kg|°|o\b))", t)
@@ -429,7 +439,7 @@ def atributos(t, fam, proveedor=""):
             multi = series_multiples(t)
             if multi:
                 d["serie"], d["_series"] = multi[0], multi
-    else:
+    elif fam != "PER":  # PER ya tiene su tipo: antes este else lo pisaba ("chapa | 1200") y no se encontraban las chapas (25-11-2026)
         d["tipo"] = next((n for n, rx in OTR_TIPOS if re.search(rx, t)), " ".join(t.split()[:3]))
     if fam in ("VAL", "INS"):
         d["marca"] = marca_de(t, proveedor)

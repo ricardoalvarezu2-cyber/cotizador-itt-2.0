@@ -279,12 +279,13 @@
    "fuentes": [
     {
      "tipo": "lista",
-     "precio": 1457.38,
-     "proveedor": "Cintolo Hnos. (cód. 6068) · ABW-03406",
-     "codigo": "ABW-03406",
-     "origen": "fuentes_originales/listas_vendedor/2026-10-28/cintolo_lista_29-1_2025-02-17.xlsx · código 6068",
-     "fecha": "2025-02-17",
-     "coincide": "igual"
+     "precio": 1180.11,
+     "proveedor": "Renard (cód. 3807) · ABW-00351",
+     "codigo": "ABW-00351",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3807",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "diametro: 10\" (pedido 12\"); precio escalado por diámetro (12\" ÷ 10\")^1,5 = × 1,31"
     }
    ]
   },
@@ -312,7 +313,7 @@
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-11-23",
+     "fecha": "2026-11-25",
      "coincide": "sin_ref",
      "diferencia": "No hay pieza de esa familia y tipo con precio"
     }
@@ -612,7 +613,7 @@
      "precio": 0,
      "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
      "origen": "—",
-     "fecha": "2026-11-23",
+     "fecha": "2026-11-25",
      "coincide": "sin_ref",
      "diferencia": "El más parecido es de otro diámetro (10\") (JUN-04923 44 juntas espiraladas SWI AC 316LFG Ø10\" #300 (cot, USD 7,14): no sirve como precio"
     }
