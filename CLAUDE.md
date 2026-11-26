@@ -28,7 +28,7 @@
 - No hay a quién consultar las planillas viejas (Javier Elejondo ya no está en la empresa): ante dudas, tomar el criterio con más sentido técnico y dejarlo documentado.
 
 ## Ubicación de los originales
-- **Base del sistema (ERP SQL Server, bases ITTSA y Taval):** herramienta de Matías en `herramientas/erp/` (`ACTUALIZAR.bat` → `cruce_erp.ps1` → `plantilla.html`); solo corre en la red de ITT. Leer `herramientas/erp/LEEME.md` antes de tocarla. Solo `SELECT`; los `.udl` (contraseña de `sa`) no se suben al repo.
+- **Base del sistema (ERP SQL Server, bases ITTSA y Taval):** herramienta de Matías en `herramientas/erp/` (`ACTUALIZAR.bat` → `cruce_erp.ps1` → `plantilla.html`); solo corre en la red de ITT. Leer `herramientas/erp/LEEME.md` antes de tocarla. Solo `SELECT`; los `.udl` (contraseña de `sa`) no se suben al repo. **Cada corrida sube la última lectura de ITT y Taval a la rama `datos-erp`** (TSV con encabezado + la página con datos): leerla con `git fetch origin datos-erp && git show FETCH_HEAD:LEEME.md`.
 - Carpeta de cotizaciones de ITT: `Z:\VENTAS\OFERTAS Y LICITACIONES` (15.601 archivos, 27 GB; solo en la red de ITT).
 - **Tanda 1** (oferta comercial, proveedores, propuesta enviada y OC; 2.281 archivos, RAR de 1,67 GB) en Google Drive: https://drive.google.com/file/d/1FeaoYuehghEkgomXvcQqvjecoriK_4Wr/view?usp=drive_link
   - ID: `1FeaoYuehghEkgomXvcQqvjecoriK_4Wr`. Descarga directa (si el archivo está compartido con "cualquier persona con el enlace"): `curl -L -o t1.rar "https://drive.usercontent.google.com/download?id=1FeaoYuehghEkgomXvcQqvjecoriK_4Wr&export=download&confirm=t"` y extraer con `unrar-free -x`.

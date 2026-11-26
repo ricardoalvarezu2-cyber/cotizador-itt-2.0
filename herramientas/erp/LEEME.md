@@ -10,7 +10,8 @@ Herramienta hecha por Matías y registrada en el repositorio el 26-11-2026. Lee 
 | `cruce_erp.ps1` | Se conecta a cada base, corre 6 consultas (solo `SELECT`), mete los datos en la plantilla y abre el resultado. |
 | `plantilla.html` | La página. Lleva adentro xlsx-js-style 1.2.0-beta para leer y escribir Excel. Sin datos funciona en modo manual: se arrastran los reportes .xls del sistema. |
 | `ITTSA_ERP.udl`, `Taval_ERP.udl` | Conexiones OLE DB. **No están en el repositorio** porque tienen la contraseña (`.gitignore`); están en la carpeta de la PC de ITT. |
-| `Cruce SC-OC (sistema).html` | Salida generada, con datos. No se sube al repositorio (`.gitignore`). |
+| `Cruce SC-OC (sistema).html` | Salida generada, con datos. No va en `main` (`.gitignore`); la copia sube a la rama `datos-erp`. |
+| `github_token.txt` | Token de GitHub para subir la copia. No se sube (`.gitignore`); está en la carpeta de la PC de ITT. |
 
 Los cuatro archivos tienen que estar en la misma carpeta. `.bat` y `.ps1` van con fin de línea CRLF, y el `.ps1` en UTF-8 **con BOM** (sin BOM, PowerShell 5 lee mal los acentos). `.gitattributes` evita que git los convierta.
 
@@ -22,6 +23,29 @@ Los cuatro archivos tienen que estar en la misma carpeta. `.bat` y `.ps1` van co
 | TAVAL | `Taval` | `WS2020\WS2020`; si no conecta, el script prueba el servidor de ITT con `ITTSA_ERP.udl` y `USE [Taval]` | `sa` |
 
 Proveedor `SQLOLEDB.1`, idioma `spanish`. **Riesgo:** `sa` es el administrador total. Las consultas son solo de lectura, pero conviene que Sistemas cree un usuario de solo lectura para estas tablas y cambiar la contraseña de `sa` si los `.udl` circularon. Pendiente de Sistemas de ITT.
+
+## Copia en el repositorio (rama `datos-erp`, desde el 26-11-2026)
+
+Pedido de Matías: tener la base de ITT y de Taval accesible desde cualquier lado y que el repositorio se actualice cada vez que se corre `ACTUALIZAR.bat`. El script primero abre la planilla y después sube la copia por la API de GitHub, así que la PC no necesita git.
+
+- **Dónde:** rama `datos-erp`, separada de `main`. Cada subida es un commit nuevo sin padre que reemplaza la rama entera. Siempre queda solo la última lectura (una sola versión vigente) y el repositorio no crece con cada corrida. No hay que pasarla a `main`.
+- **Qué sube:**
+  - `LEEME.md` con la fecha de lectura, los períodos, la PC, los errores y las filas por archivo.
+  - Por empresa (`ITT/`, `TAVAL/`): `solicitudes.tsv`, `ordenes_compra.tsv`, `remitos.tsv`, `precios.tsv`, `ventas_nv.tsv` y `formulas.tsv`. Son TSV en UTF-8, con encabezado y las mismas columnas de abajo.
+  - `Cruce SC-OC (sistema).html`, la página con datos, para bajarla y abrirla en cualquier PC.
+- **Si hubo errores de lectura** pregunta "¿Subir igual?" (s/n), para no pisar una copia buena con una incompleta. Si la subida falla, la planilla igual queda abierta y el error se muestra en la ventana.
+- **Archivos de más de 90 MB** no se suben (GitHub no acepta más de 100 MB); avisa en la ventana.
+- **Token (una sola vez):** en GitHub, Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token. Repository access: solo `tvmaty2186/cotizador-itt`. Permissions → Repository permissions → **Contents: Read and write**. Se copia el token en un archivo `github_token.txt` en la carpeta del `.bat`. Cuando vence, se genera otro y se reemplaza el archivo.
+- **Apagarlo:** `$SUBIR_REPO = $false` en los ajustes.
+- **Leerla desde una sesión de Claude** (sin cambiar de rama):
+
+  ```bash
+  git fetch origin datos-erp
+  git show FETCH_HEAD:LEEME.md
+  git show FETCH_HEAD:ITT/precios.tsv | head
+  ```
+
+  Para trabajar con los archivos: `git worktree add ../datos-erp FETCH_HEAD`.
 
 ## Ajustes (arriba de `cruce_erp.ps1`)
 
@@ -83,12 +107,14 @@ Antes de usar estos datos en el cotizador hay que resolver estas diferencias:
 
 - **Solo `SELECT`.** Nunca `INSERT`, `UPDATE`, `DELETE`, `EXEC` ni tablas temporales: el usuario es `sa`.
 - **Columnas nuevas, siempre al final del `SELECT`**, para no correr los índices. Después se lee la nueva `r[n]` en `desdeERP1`.
-- **Bloque nuevo:** sumarlo en `LeerEmpresa` (return), en la línea `$partes += …` del armado y en `desdeERP1`/`desdeERP` de la página.
+- **Bloque nuevo:** sumarlo en `LeerEmpresa` (return), en la línea `$partes += …` del armado, en `$BLOQUES` (archivo y encabezados para el repositorio) y en `desdeERP1`/`desdeERP` de la página. Si se agrega una columna, sumar también su encabezado en `$BLOQUES`.
 - **No tocar el marcador** `<script>/*DATOS_ERP*/</script>`.
 - **Mantener CRLF y el BOM del `.ps1`.** Editar con Python leyendo y escribiendo bytes, o con Edit, y comprobar después con `file`.
 - **Prueba acá, sin la base:** generar una copia de la plantilla con un `DATOS_ERP` de prueba (TSV inventado con las mismas columnas), abrirla con Playwright y comprobar que no hay errores en la consola y que las vistas cargan. El SQL nuevo solo se prueba en ITT: Matías corre `ACTUALIZAR.bat` y manda lo que muestra la ventana; el script lista los errores de cada lectura y sigue con las demás.
 
 ## Pendientes
+
+- Probar la subida en la PC de ITT: el script no se pudo correr fuera de ITT (no hay PowerShell en el entorno de Claude) y se revisó solo leyéndolo. Si falla, pasar el texto de la ventana.
 
 - Usuario de solo lectura en SQL Server y cambio de la contraseña de `sa` (Sistemas de ITT).
 - Decidir si el historial de precios (`pr`, o una exportación más larga) pasa al catálogo de materiales (`buscar_material.py`) como fuente con fecha, OC y proveedor, convertido con el dólar BNA mensual.

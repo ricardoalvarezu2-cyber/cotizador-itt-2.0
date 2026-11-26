@@ -1,6 +1,6 @@
 ﻿# Cruce SC - OC - Fórmulas leyendo directo de la base ITTSA (SOLO LECTURA: únicamente SELECT).
 # Necesita en la misma carpeta: el archivo .udl de conexión y plantilla.html
-# Genera "Cruce SC-OC (sistema).html" y lo abre en el navegador.
+# Genera "Cruce SC-OC (sistema).html", lo abre en el navegador y sube una copia de los datos al repositorio (rama datos-erp).
 
 # ---------- Ajustes ----------
 $EMPRESAS = @(                 # bases a leer: archivo de conexión .udl (en esta carpeta) y nombre de la base
@@ -10,6 +10,10 @@ $EMPRESAS = @(                 # bases a leer: archivo de conexión .udl (en est
 $MESES_ATRAS = 12           # cuántos meses hacia atrás leer solicitudes, órdenes y remitos
 $FORMULAS    = 'ITT2[5-9]-%' # productos cuyas fórmulas se leen (códigos de proyecto ITT25..ITT29)
 $MESES_VENTAS = 24          # cuántos meses hacia atrás leer pedidos de clientes (NV)
+$SUBIR_REPO  = $true        # subir una copia de los datos al repositorio (rama datos-erp) después de abrir la planilla
+$REPO        = 'tvmaty2186/cotizador-itt'
+$RAMA_DATOS  = 'datos-erp'  # rama solo de datos: cada subida la reemplaza entera (no acumula historia)
+$TOKEN_ARCH  = 'github_token.txt'   # token de GitHub en esta carpeta (no se sube; ver herramientas/erp/LEEME.md)
 # ------------------------------
 
 $ErrorActionPreference = 'Stop'
@@ -23,6 +27,45 @@ $desde = (Get-Date).AddMonths(-$MESES_ATRAS)
 $desdeSQL = $desde.ToString('yyyyMMdd')
 $desdeVentasSQL = (Get-Date).AddMonths(-$MESES_VENTAS).ToString('yyyyMMdd')
 $errores = @()
+
+$BLOQUES = [ordered]@{
+  sc  = @{ arch = 'solicitudes.tsv';    enc = 'N_SC','Fecha','Comentario','Centro_costo','Baja','Final','Usuario_ingreso','Usuario_autorizo','Id_renglon','Codigo','Descripcion','Unidad','Cant_pedida','Cant_autorizada','Cant_en_OC','Fecha_limite','Rechazado','Concepto' }
+  oc  = @{ arch = 'ordenes_compra.tsv'; enc = 'N_OC','Fecha','Cod_proveedor','Proveedor','Comentario','Baja','Aut_tecnica','Fecha_aut','Aut_importe','Total','Comprador','Id_renglon','Codigo','Descripcion','Unidad','Cantidad','Recibido','Final','Entrega','Precio','Importe','Moneda','Centro_costo','Comentario_renglon','Cotiz_renglon','Cotiz_cabecera' }
+  rem = @{ arch = 'remitos.tsv';        enc = 'Id_renglon_OC','N_remito','Fecha' }
+  pr  = @{ arch = 'precios.tsv';        enc = 'Codigo','Fecha','N_OC','Proveedor','Cantidad','Importe','Moneda','Cotiz_renglon','Cotiz_cabecera','Descripcion','Unidad','Orden' }
+  vt  = @{ arch = 'ventas_nv.tsv';      enc = 'N_NV','Fecha','Cliente','OC_cliente','Codigo','Descripcion','Cantidad','Precio','Importe','Moneda','Cotiz_renglon','Cotiz_cabecera','Entrega','Entregado','Tiene_formula','Leyenda','Item' }
+  fl  = @{ arch = 'formulas.tsv';       enc = 'Producto','Desc_producto','Nivel','Etapa','Componente','Desc_componente','Unidad','Cant_por_unidad','Tipo_SE_MP','Proceso','Ruta' }
+}
+
+# Sube los archivos a la rama $RAMA_DATOS con un solo commit nuevo (sin padre) que reemplaza al anterior.
+# Usa la API de GitHub, así que no hace falta tener git instalado.
+function SubirRepo($archivos, $mensaje) {
+  $rutaTok = Join-Path $carpeta $TOKEN_ARCH
+  if (-not (Test-Path $rutaTok)) { throw ("falta el archivo " + $TOKEN_ARCH + " con el token de GitHub") }
+  $tok = (Get-Content $rutaTok -Raw).Trim()
+  [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+  $h = @{ Authorization = "Bearer $tok"; Accept = 'application/vnd.github+json'; 'X-GitHub-Api-Version' = '2022-11-28'; 'User-Agent' = 'cruce-erp-itt' }
+  $api = "https://api.github.com/repos/$REPO/git"
+  $post = {
+    param($url, $json, $metodo)
+    if (-not $metodo) { $metodo = 'Post' }
+    Invoke-RestMethod -Uri $url -Method $metodo -Headers $h -ContentType 'application/json; charset=utf-8' -Body ([System.Text.Encoding]::UTF8.GetBytes($json)) -TimeoutSec 900
+  }
+  $arbol = @()
+  foreach ($k in $archivos.Keys) {
+    $bytes = $archivos[$k]
+    Write-Host ("  Subiendo " + $k + " (" + [math]::Round($bytes.Length / 1MB, 1) + " MB)...")
+    if ($bytes.Length -gt 90MB) { Write-Host "    Muy grande para GitHub, no se sube" -ForegroundColor Yellow; continue }
+    $b = & $post "$api/blobs" ('{"encoding":"base64","content":"' + [Convert]::ToBase64String($bytes) + '"}')
+    $arbol += @{ path = $k; mode = '100644'; type = 'blob'; sha = $b.sha }
+  }
+  $t = & $post "$api/trees" (ConvertTo-Json @{ tree = $arbol } -Depth 5 -Compress)
+  $c = & $post "$api/commits" (ConvertTo-Json @{ message = $mensaje; tree = $t.sha; parents = @() } -Compress)
+  $existe = $true
+  try { [void](Invoke-RestMethod -Uri "$api/ref/heads/$RAMA_DATOS" -Headers $h -TimeoutSec 60) } catch { $existe = $false }
+  if ($existe) { [void](& $post "$api/refs/heads/$RAMA_DATOS" (ConvertTo-Json @{ sha = $c.sha; force = $true } -Compress) 'Patch') }
+  else { [void](& $post "$api/refs" (ConvertTo-Json @{ ref = "refs/heads/$RAMA_DATOS"; sha = $c.sha } -Compress)) }
+}
 
 function Leer($nombre, $sql) {
   Write-Host ("  " + $script:empActual + ": leyendo " + $nombre + "...") -NoNewline
@@ -208,6 +251,46 @@ try {
   Write-Host ""
   Write-Host "LISTO. Abriendo la herramienta..." -ForegroundColor Green
   Start-Process $salida
+
+  if ($SUBIR_REPO) {
+    Write-Host ""
+    Write-Host ("Subiendo copia al repositorio (rama " + $RAMA_DATOS + ")...") -ForegroundColor Cyan
+    $subir = $true
+    if ($errores.Count -gt 0) {
+      Write-Host "Hubo errores de lectura: la copia del repositorio quedaria incompleta y reemplazaria la anterior." -ForegroundColor Yellow
+      $subir = (Read-Host "Subir igual? (s/n)") -match '^[sS]'
+    }
+    if ($subir) {
+      try {
+        $u8 = New-Object System.Text.UTF8Encoding($false)
+        $arch = [ordered]@{}
+        $meta = @("# Datos del sistema (ERP) de ITT y Taval", "",
+          "Generado por herramientas/erp/ACTUALIZAR.bat. Esta rama se reemplaza entera en cada subida: siempre tiene solo la ultima lectura.", "",
+          ("- Leido: " + (Get-Date).ToString('dd-MM-yyyy HH:mm')),
+          ("- SC, OC y remitos desde: " + $desde.ToString('dd-MM-yyyy') + " (" + $MESES_ATRAS + " meses)"),
+          ("- Ventas (NV) desde: " + (Get-Date).AddMonths(-$MESES_VENTAS).ToString('dd-MM-yyyy') + " (" + $MESES_VENTAS + " meses)"),
+          ("- Formulas: productos " + $FORMULAS + " y los vendidos en el periodo"),
+          ("- PC: " + $env:COMPUTERNAME + " / usuario " + $env:USERNAME),
+          ("- Errores: " + $(if ($errores.Count) { $errores -join ' | ' } else { 'ninguno' })), "",
+          "| Empresa | Archivo | Filas |", "|---|---|---|")
+        foreach ($d in $datosEmp) {
+          foreach ($k in $BLOQUES.Keys) {
+            $txt = ($BLOQUES[$k].enc -join "`t") + "`n" + $d[$k]
+            $arch[$d.nombre + '/' + $BLOQUES[$k].arch] = $u8.GetBytes($txt)
+            $meta += ('| ' + $d.nombre + ' | ' + $BLOQUES[$k].arch + ' | ' + ($d[$k].Split("`n").Where({ $_ -ne '' }).Count) + ' |')
+          }
+        }
+        $arch['LEEME.md'] = $u8.GetBytes(($meta -join "`n") + "`n")
+        $arch['Cruce SC-OC (sistema).html'] = [System.IO.File]::ReadAllBytes($salida)
+        SubirRepo $arch ("Datos ERP " + (Get-Date).ToString('dd-MM-yyyy HH:mm') + " (" + $env:COMPUTERNAME + ")")
+        Write-Host "Copia subida al repositorio." -ForegroundColor Green
+      } catch {
+        Write-Host ("No pude subir la copia al repositorio: " + $_.Exception.Message) -ForegroundColor Red
+        $errores += ('Subida al repositorio: ' + $_.Exception.Message)
+      }
+    } else { Write-Host "No se subio la copia." -ForegroundColor Yellow }
+  }
+
   if ($errores.Count -gt 0) {
     Write-Host ""
     Write-Host "Hubo errores en alguna lectura (ver arriba). Copialos y mandaselos a Claude." -ForegroundColor Yellow
