@@ -19,6 +19,7 @@
 | **Controles que solo avisan**: precio que no figura en su documento (`verificacion_origen.md`), validador de fichas, informe de cambios del buscador; `subir_a_main.py` | Vigente desde 30-10-2026 | `herramientas/verificar_origen.py`, `validar_fichas.py`, `revisar_cambio_busqueda.py`, `subir_a_main.py` |
 | Comparación con antecedentes (P8) **costo contra costo** por rubro | Vigente desde 30-10-2026 | `comparar_antecedentes.py`, `web/src/antecedentes.js` |
 | Estructura de costo de 103 equipos de 2021–2024 (solo proporciones) | Referencia | `costos/estructura_costo_historica.csv` |
+| **Datos del sistema (ERP SQL Server ITTSA y Taval):** cruce SC-OC, fórmulas, ventas e historial de precios de compra, con `ACTUALIZAR.bat` en una PC de ITT (solo SELECT) | Herramienta de Matías, registrada el 26-11-2026; todavía no alimenta al cotizador | `herramientas/erp/` (`LEEME.md`) |
 | **Precotización automática sin IA** (materiales del catálogo, soldaduras de los extremos, pintura, PH, RX) | Vigente desde 28/10/2026; caso de control CAPEX | `herramientas/precotizar.py`, `test_precotizar.py` |
 | Plazo calculado y comparación con antecedentes (los corre `armar_cotizacion.py`) | Vigente desde 28/10/2026 | `herramientas/plazo.py`, `comparar_antecedentes.py` |
 | Un comando para rearmar y otro para verificar todo | Vigente | `herramientas/actualizar_base.py`, `verificar_todo.py` (tiene que dar "TODO OK") |
@@ -68,6 +69,8 @@
 **COT26-0010-002 AESA C5297 filtros coalescedores FC-301/302 (25-11-2026):** solo recopilación de información (RI, HD, P&ID, plano, planilla, anexos 1 a 5 y documentación general de AESA, esta última en `fuentes_originales/aesa_documentacion_LAN_2026-11/`). Antecedentes probables: YPF/27 (FC301/302 PC LAS), TAVAL/37 (FC-231, con planilla de costo), AESA/20 (2022). Detalle en su `bitacora.md`.
 
 **Skill `relevar-pedido` (25-11-2026, pedido de Matías):** informe previo a la cotización con resumen, listas, pesos y pulgadas de soldadura (nominales y equivalentes por tipo). Herramientas nuevas: `abrir_pedido.py` (zips, .msg con `leer_msg.py`, texto de todos los formatos, inventario), `recortar_plano.py` (P&ID en grilla de alta resolución), `pesos_soldadura.py` (pesos de tablas y soldaduras con las reglas de `precotizar.py`). Primer caso: COT26-0010-002.
+
+**Herramienta ERP (26-11-2026):** Matías pasó su cruce SC-OC que lee directo la base del sistema (`.bat` + `.ps1` + plantilla HTML); quedó en `herramientas/erp/` con su LEEME (conexiones, columnas de cada consulta, cómo modificarla). Los `.udl` con la contraseña de `sa` no se suben. Pendientes: usuario de solo lectura, y decidir si el historial de precios de compra entra al catálogo de materiales.
 
 **Ahorro de tokens (Matías, 25-11-2026):** sin agentes de auditoría salvo pedido; verificación con `--rapido`; detalle en CLAUDE.md. Quedó sin auditar la corrección de la COT26-0010-002 (25-11-2026).
 
