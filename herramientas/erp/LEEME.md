@@ -47,6 +47,11 @@ Pedido de Matías: tener la base de ITT y de Taval accesible desde cualquier lad
 
   Para trabajar con los archivos: `git worktree add ../datos-erp FETCH_HEAD`.
 
+## Página en la web
+
+- **Link:** https://claude.ai/artifact/1G1y9kwhCudwVhq6TBkgEW (privada: la abre solo el dueño de la cuenta de Claude, desde cualquier lado). Publicada el 26-11-2026 con la lectura de las 14:22, con la capacidad `downloads` para bajar los Excel.
+- **No se actualiza sola.** Para actualizarla, en un chat de Claude: `git fetch origin datos-erp`, sacar `Cruce SC-OC (sistema).html` con `git show` y publicarlo con la herramienta Artifact pasando ese link como `url`, así se mantiene el link. Antes de publicar, comprobar que el archivo sea la plantilla más los datos y nada más.
+
 ## Ajustes (arriba de `cruce_erp.ps1`)
 
 - `$EMPRESAS`: las bases que se leen.
