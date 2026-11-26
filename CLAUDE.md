@@ -29,7 +29,7 @@
 
 ## Repositorio preferido (26-11-2026)
 - **El repositorio preferido es `ricardoalvarezu2-cyber/cotizador-itt-2.0`** (Matías, 26-11-2026). `tvmaty2186/cotizador-itt` es la versión anterior; el 26-11-2026 quedaron iguales (mismas ramas, mismos archivos, `main` en el mismo commit). Trabajar y subir a `main` en el de Ricardo; si la sesión tiene los dos, mantener `main` igual en ambos.
-- **El de Ricardo es público:** pasarlo a privado antes de que reciba la rama `datos-erp` (`cruce_erp.ps1` ya apunta al de Ricardo y no sube nada mientras sea público).
+- **El de Ricardo es público, por decisión de Matías (26-11-2026), y recibe igual la rama `datos-erp`** con los datos del ERP de ITT y Taval, que quedan visibles para cualquiera. Fue advertido del riesgo; no volver a plantearlo salvo que él lo pregunte.
 
 ## Ubicación de los originales
 - **Base del sistema (ERP SQL Server, bases ITTSA y Taval):** herramienta de Matías en `herramientas/erp/` (`ACTUALIZAR.bat` → `cruce_erp.ps1` → `plantilla.html`); solo corre en la red de ITT. Leer `herramientas/erp/LEEME.md` antes de tocarla. Solo `SELECT`; los `.udl` (contraseña de `sa`) no se suben al repo. **Cada corrida sube la última lectura de ITT y Taval a la rama `datos-erp`** (TSV con encabezado + la página con datos): leerla con `git fetch origin datos-erp && git show FETCH_HEAD:LEEME.md`.

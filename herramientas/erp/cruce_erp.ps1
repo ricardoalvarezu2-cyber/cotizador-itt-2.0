@@ -13,6 +13,7 @@ $MESES_VENTAS = 24          # cuántos meses hacia atrás leer pedidos de client
 $SUBIR_REPO  = $true        # subir una copia de los datos al repositorio (rama datos-erp) después de abrir la planilla
 $REPO        = 'ricardoalvarezu2-cyber/cotizador-itt-2.0'   # repositorio preferido (26-11-2026); tiene que ser PRIVADO
 $RAMA_DATOS  = 'datos-erp'  # rama solo de datos: cada subida la reemplaza entera (no acumula historia)
+$PERMITIR_PUBLICO = $true   # Matias, 26-11-2026: decide subir los datos aunque el repositorio sea publico. En $false, no sube si es publico.
 $TOKEN_ARCH  = 'github_token.txt'   # token de GitHub en esta carpeta (no se sube; ver herramientas/erp/LEEME.md)
 # ------------------------------
 
@@ -63,7 +64,8 @@ function SubirRepo($archivos, $mensaje) {
   # Freno: los datos de compras y ventas nunca van a un repositorio publico.
   try { $info = Invoke-RestMethod -Uri "https://api.github.com/repos/$REPO" -Headers $h -TimeoutSec 60 }
   catch { throw ("no pude entrar al repositorio " + $REPO + " (revisar que el token sea de esa cuenta y tenga acceso a ese repositorio): " + $_.Exception.Message) }
-  if (-not $info.private) { throw ("el repositorio " + $REPO + " es PUBLICO: no se suben los datos. Pasarlo a privado en GitHub (Settings > General > Danger Zone > Change visibility) y volver a correr.") }
+  if (-not $info.private -and $PERMITIR_PUBLICO) { Write-Host ("  Aviso: " + $REPO + " es PUBLICO; los datos quedan visibles para cualquiera (decision de Matias, 26-11-2026).") -ForegroundColor Yellow }
+  elseif (-not $info.private) { throw ("el repositorio " + $REPO + " es PUBLICO: no se suben los datos. Pasarlo a privado en GitHub (Settings > General > Danger Zone > Change visibility) y volver a correr.") }
   $post = {
     param($url, $json, $metodo)
     if (-not $metodo) { $metodo = 'Post' }

@@ -70,7 +70,7 @@
 
 **Skill `relevar-pedido` (25-11-2026, pedido de Matías):** informe previo a la cotización con resumen, listas, pesos y pulgadas de soldadura (nominales y equivalentes por tipo). Herramientas nuevas: `abrir_pedido.py` (zips, .msg con `leer_msg.py`, texto de todos los formatos, inventario), `recortar_plano.py` (P&ID en grilla de alta resolución), `pesos_soldadura.py` (pesos de tablas y soldaduras con las reglas de `precotizar.py`). Primer caso: COT26-0010-002.
 
-**Repositorio preferido (26-11-2026, Matías):** `ricardoalvarezu2-cyber/cotizador-itt-2.0`. Comparado ese día con `tvmaty2186/cotizador-itt`: mismas 16 ramas y mismos archivos; se le pasaron los commits de la herramienta ERP y quedaron iguales. El de Ricardo es **público**: pasarlo a privado antes de mudar ahí `datos-erp`.
+**Repositorio preferido (26-11-2026, Matías):** `ricardoalvarezu2-cyber/cotizador-itt-2.0`. Comparado ese día con `tvmaty2186/cotizador-itt`: mismas 16 ramas y mismos archivos; se le pasaron los commits de la herramienta ERP y quedaron iguales. El de Ricardo es **público y recibe igual `datos-erp`**: decisión de Matías (26-11-2026), advertido del riesgo.
 
 **Herramienta ERP (26-11-2026):** Matías pasó su cruce SC-OC que lee directo la base del sistema (`.bat` + `.ps1` + plantilla HTML); quedó en `herramientas/erp/` con su LEEME (conexiones, columnas de cada consulta, cómo modificarla). Los `.udl` con la contraseña de `sa` no se suben. Pendientes: usuario de solo lectura, y decidir si el historial de precios de compra entra al catálogo de materiales. **Desde el 26-11-2026 cada corrida de `ACTUALIZAR.bat` sube la copia a la rama `datos-erp`** (necesita `github_token.txt` en la PC; falta probarlo en ITT).
 

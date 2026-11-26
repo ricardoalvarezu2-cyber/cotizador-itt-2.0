@@ -28,7 +28,7 @@ Proveedor `SQLOLEDB.1`, idioma `spanish`. **Riesgo:** `sa` es el administrador t
 
 Pedido de Matías: tener la base de ITT y de Taval accesible desde cualquier lado y que el repositorio se actualice cada vez que se corre `ACTUALIZAR.bat`. El script primero abre la planilla y después sube la copia por la API de GitHub, así que la PC no necesita git.
 
-- **Dónde:** rama `datos-erp` del repositorio preferido `ricardoalvarezu2-cyber/cotizador-itt-2.0` (`$REPO`), separada de `main`. **Si el repositorio es público, no sube nada** y lo avisa. Cada subida es un commit nuevo sin padre que reemplaza la rama entera. Siempre queda solo la última lectura (una sola versión vigente) y el repositorio no crece con cada corrida. No hay que pasarla a `main`.
+- **Dónde:** rama `datos-erp` del repositorio preferido `ricardoalvarezu2-cyber/cotizador-itt-2.0` (`$REPO`), separada de `main`. **El repositorio es público y los datos quedan visibles para cualquiera: decisión de Matías del 26-11-2026**, advertido del riesgo (precios de compra, proveedores, clientes y ventas de ITT y Taval). El script lo avisa en cada subida. Con `$PERMITIR_PUBLICO = $false` vuelve a frenar si el repositorio es público. Cada subida es un commit nuevo sin padre que reemplaza la rama entera. Siempre queda solo la última lectura (una sola versión vigente) y el repositorio no crece con cada corrida. No hay que pasarla a `main`.
 - **Qué sube:**
   - `LEEME.md` con la fecha de lectura, los períodos, la PC, los errores y las filas por archivo.
   - Por empresa (`ITT/`, `TAVAL/`): `solicitudes.tsv`, `ordenes_compra.tsv`, `remitos.tsv`, `precios.tsv`, `ventas_nv.tsv` y `formulas.tsv`. Son TSV en UTF-8, con encabezado y las mismas columnas de abajo.
