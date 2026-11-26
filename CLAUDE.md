@@ -28,7 +28,7 @@
 - No hay a quién consultar las planillas viejas (Javier Elejondo ya no está en la empresa): ante dudas, tomar el criterio con más sentido técnico y dejarlo documentado.
 
 ## Repositorio preferido (26-11-2026)
-- **El repositorio preferido es `ricardoalvarezu2-cyber/cotizador-itt-2.0`.** `tvmaty2186/cotizador-itt` es la versión anterior: al 26-11-2026 los dos tenían las mismas ramas y archivos, salvo los 3 commits de la herramienta ERP (`herramientas/erp/`), que hay que pasar al de Ricardo. Trabajar en el de Ricardo cuando la sesión lo tenga con permiso de escritura.
+- **El repositorio preferido es `ricardoalvarezu2-cyber/cotizador-itt-2.0`** (Matías, 26-11-2026). `tvmaty2186/cotizador-itt` es la versión anterior; el 26-11-2026 quedaron iguales (mismas ramas, mismos archivos, `main` en el mismo commit). Trabajar y subir a `main` en el de Ricardo; si la sesión tiene los dos, mantener `main` igual en ambos.
 - **El de Ricardo es público:** pasarlo a privado antes de que reciba la rama `datos-erp` (hasta entonces `cruce_erp.ps1` sigue subiendo a `tvmaty2186/cotizador-itt`, que es privado).
 
 ## Ubicación de los originales
