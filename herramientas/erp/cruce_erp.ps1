@@ -46,7 +46,14 @@ function SubirRepo($archivos, $mensaje) {
     # Bloc de notas suele guardarlo como github_token.txt.txt
     $otro = Get-ChildItem -LiteralPath $carpeta -Filter 'github_token*' -File -ErrorAction SilentlyContinue | Select-Object -First 1
     if ($otro) { $rutaTok = $otro.FullName }
-    else { throw ("falta el archivo " + $TOKEN_ARCH + " en " + $carpeta + ". Crear el token en GitHub (ver LEEME.txt), pegarlo en el Bloc de notas y guardarlo con ese nombre en esta carpeta.") }
+    else {
+      Write-Host ""
+      Write-Host "Falta el token de GitHub (se pide una sola vez; ver LEEME.txt para crearlo)." -ForegroundColor Yellow
+      $nuevo = (Read-Host "Pega el token (empieza con github_pat_) y Enter, o solo Enter para no subir") -replace '\s', ''
+      if (-not $nuevo) { throw "no se cargo el token: no se subio la copia" }
+      [System.IO.File]::WriteAllText($rutaTok, $nuevo, (New-Object System.Text.UTF8Encoding($false)))
+      Write-Host ("  Token guardado en " + $rutaTok) -ForegroundColor Green
+    }
   }
   $tok = ((Get-Content -LiteralPath $rutaTok -Raw) -replace '\s', '')
   if ($tok -notmatch '^(github_pat_|ghp_)') { throw ("el archivo " + (Split-Path -Leaf $rutaTok) + " no tiene un token de GitHub (tiene que empezar con github_pat_)") }
