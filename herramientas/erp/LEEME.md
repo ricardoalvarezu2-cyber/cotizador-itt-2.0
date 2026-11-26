@@ -47,10 +47,12 @@ Pedido de Matías: tener la base de ITT y de Taval accesible desde cualquier lad
 
   Para trabajar con los archivos: `git worktree add ../datos-erp FETCH_HEAD`.
 
-## Página en la web
+## Página en la web (GitHub Pages)
 
-- **Link:** https://claude.ai/artifact/1G1y9kwhCudwVhq6TBkgEW (privada: la abre solo el dueño de la cuenta de Claude, desde cualquier lado). Publicada el 26-11-2026 con la lectura de las 14:22, con la capacidad `downloads` para bajar los Excel.
-- **No se actualiza sola.** Para actualizarla, en un chat de Claude: `git fetch origin datos-erp`, sacar `Cruce SC-OC (sistema).html` con `git show` y publicarlo con la herramienta Artifact pasando ese link como `url`, así se mantiene el link. Antes de publicar, comprobar que el archivo sea la plantilla más los datos y nada más.
+- **Link:** https://ricardoalvarezu2-cyber.github.io/cotizador-itt-2.0/ (Matías, 26-11-2026: "no quiero un artefacto, quiero una web en GitHub"). Se abre desde cualquier navegador sin iniciar sesión, porque es pública como el repositorio.
+- **Se actualiza sola:** cada corrida de `ACTUALIZAR.bat` sube también `index.html` (la misma página con datos) y `.nojekyll` a la rama `datos-erp`, y GitHub Pages la publica en uno o dos minutos.
+- **Configuración (una vez, en GitHub):** en el repositorio, Settings → Pages → Build and deployment → Source: *Deploy from a branch*; Branch: `datos-erp`, carpeta `/ (root)` → Save.
+- El artefacto de claude.ai publicado antes (https://claude.ai/artifact/1G1y9kwhCudwVhq6TBkgEW) quedó viejo y no se usa.
 
 ## Ajustes (arriba de `cruce_erp.ps1`)
 

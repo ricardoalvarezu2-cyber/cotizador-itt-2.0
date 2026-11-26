@@ -302,6 +302,9 @@ try {
         }
         $arch['LEEME.md'] = $u8.GetBytes(($meta -join "`n") + "`n")
         $arch['Cruce SC-OC (sistema).html'] = [System.IO.File]::ReadAllBytes($salida)
+        # GitHub Pages: la misma pagina como index.html (https://ricardoalvarezu2-cyber.github.io/cotizador-itt-2.0/)
+        $arch['index.html'] = $arch['Cruce SC-OC (sistema).html']
+        $arch['.nojekyll'] = [byte[]]@(10)
         SubirRepo $arch ("Datos ERP " + (Get-Date).ToString('dd-MM-yyyy HH:mm') + " (" + $env:COMPUTERNAME + ")")
         Write-Host "Copia subida al repositorio." -ForegroundColor Green
       } catch {
