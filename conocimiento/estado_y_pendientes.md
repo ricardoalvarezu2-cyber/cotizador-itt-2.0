@@ -77,7 +77,7 @@
 - **Regla de Matías:** los cambios de la planilla se publican en la web con `actualizar_pagina.py`; el zip (`armar_zip.py`) solo cuando cambia la lectura.
 - **Hecho:** la primera subida funcionó (14:22).
 - **Falta:**
-  - probar el flujo nuevo en la PC y confirmar GitHub Pages activado;
+  - ~~probar el flujo nuevo en la PC~~ funciona (Matías, 26-11-2026);
   - usuario de solo lectura en SQL Server, en vez de `sa`;
   - decidir si el historial de precios de compra entra al catálogo de materiales.
 

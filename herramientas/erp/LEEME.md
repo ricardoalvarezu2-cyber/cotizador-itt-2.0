@@ -154,7 +154,7 @@ Antes de usar estos datos en el cotizador hay que resolver estas diferencias:
 
 ## Pendientes
 
-- Probar en la PC el flujo completo nuevo (baja plantilla → sube → espera Pages → abre la web) y confirmar que GitHub Pages está activado en el repositorio de Ricardo (Settings → Pages → `datos-erp`, `/ (root)`). Desde el entorno de Claude no se puede abrir `github.io`.
+- ~~Probar el flujo completo en la PC~~ Hecho: Matías confirmó el 26-11-2026 que funciona bien desde la PC (GitHub Pages activado).
 
 - Usuario de solo lectura en SQL Server y cambio de la contraseña de `sa` (Sistemas de ITT).
 - Decidir si el historial de precios (`pr`, o una exportación más larga) pasa al catálogo de materiales (`buscar_material.py`) como fuente con fecha, OC y proveedor, convertido con el dólar BNA mensual.
