@@ -112,6 +112,17 @@ Pedido de Matías: tener la base de ITT y de Taval accesible desde cualquier lad
 - **Fórmulas vs SC-OC:** lo que falta pedir para cada fórmula. Con "Solo SC del mismo proyecto", solo cuenta las SC que nombran la NV de la fórmula, que sale de los 3 dígitos de `ITTaa-n-NNN`.
 - **Equipos vendidos:** precio de venta contra costo de materiales por NV. El costo es el de la fórmula (`costoFormula`): si una pieza tiene precio de compra, se usa ese precio y no se abren sus partes; si no, se suman sus partes.
 - **Cotizador:** el último costo de cada código con su variación contra el anterior. Se arma una cotización con margen % y se exporta a Excel interno o para el cliente. Las cotizaciones quedan en el `localStorage` de ese navegador (`cruceSCOC_cotizador_v1`).
+- **Lista de materiales desde Excel** (Matías, 26-11-2026), en la pestaña Cotizador:
+  - **"Descargar modelo de lista"** baja un Excel con la hoja `Lista` (columnas: Código o descripción, Cantidad, Unidad, Margen %, Observaciones; las tres últimas son opcionales) y la hoja `Instrucciones`.
+  - **"Importar lista (Excel)"** suma una línea a la cotización por cada fila. También reconoce columnas separadas "Código" y "Descripción", o sin títulos (A = texto, B = cantidad).
+  - **Cómo busca cada artículo** (`buscarArt` sobre el catálogo de últimos costos):
+    1. Código exacto → **Por código** (verde).
+    2. Descripción idéntica, sin mayúsculas ni acentos → **Por descripción** (verde). Si hay varios artículos iguales, toma el de compra más nueva.
+    3. Todas las palabras y un solo candidato → **Parecida** (amarillo).
+    4. El 60 % o más de las palabras, o varios igual de parecidos → **Revisar** (amarillo).
+    5. Si no encuentra nada → **Sin precio** (rojo, línea manual).
+    6. Si la fila no trae cantidad, pone 1 y la marca para revisar.
+  - **Qué guarda en cada línea:** el texto pedido y el artículo tomado quedan en la fuente de la línea (se ven al pasar el mouse sobre "Coincidencia") y van al Excel interno. Un margen de Excel con formato % (0,25) se toma como 25.
 
 ## Diferencias con las reglas del cotizador del repositorio
 

@@ -793,7 +793,7 @@ if (typeof module !== 'undefined') module.exports = Cruce;
   const F = d => d instanceof Date ? Cruce.fmt(d) : (d ?? '');
   const $$ = v => v == null || v === '' ? '' : Number(v).toLocaleString('es-AR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   const U = v => v == null || v === '' ? '' : 'US$ ' + $$(v);
-  const tagT = { 'Sí': 't-ok', 'Probable': 't-mid', 'No': 't-bad', 'Todo con OC': 't-ok', 'Parte con OC': 't-mid', 'Sin OC': 't-bad', 'Completa': 't-ok', 'Parcial': 't-mid', 'Con OC': 't-ok', 'OC parcial': 't-mid', 'Con SC, sin OC': 't-mid', 'Sin SC': 't-bad', 'Recibido': 't-ok', 'Recibido parcial': 't-mid', 'Pendiente': 't-bad', 'Autorizada': 't-ok', 'Sin autorizar': 't-bad' };
+  const tagT = { 'Por código': 't-ok', 'Por descripción': 't-ok', 'Parecida': 't-mid', 'Revisar': 't-mid', 'Sin precio': 't-bad', 'Sí': 't-ok', 'Probable': 't-mid', 'No': 't-bad', 'Todo con OC': 't-ok', 'Parte con OC': 't-mid', 'Sin OC': 't-bad', 'Completa': 't-ok', 'Parcial': 't-mid', 'Con OC': 't-ok', 'OC parcial': 't-mid', 'Con SC, sin OC': 't-mid', 'Sin SC': 't-bad', 'Recibido': 't-ok', 'Recibido parcial': 't-mid', 'Pendiente': 't-bad', 'Autorizada': 't-ok', 'Sin autorizar': 't-bad' };
   const tag = v => v ? String(v).split(' / ').map(p => '<span class="tag ' + (tagT[p] || '') + '">' + esc(p) + '</span>').join(' ') : '';
   const norm = s => String(s ?? '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
   function vistas() {
@@ -880,6 +880,82 @@ if (typeof module !== 'undefined') module.exports = Cruce;
     else q.lineas.push({ cod: a.cod, desc: a.desc, med: a.med, cant: 1, costo: a.u.unitUSD, fecha: a.u.fecha ? +a.u.fecha : null, fuente: 'OC ' + a.u.oc + ' · ' + a.u.prov, margen: '' });
     persistir(); pintarLista();
   }
+  // ---- Lista de materiales desde Excel: modelo para descargar e importar (código o descripción, indistinto) ----
+  const LISTA_ENC = ['Código o descripción', 'Cantidad', 'Unidad (opcional)', 'Margen % (opcional)', 'Observaciones (opcional)'];
+  function modeloLista() {
+    const wb = XLSX.utils.book_new(), ws = XLSX.utils.aoa_to_sheet([LISTA_ENC]);
+    LISTA_ENC.forEach((_, c) => { ws[XLSX.utils.encode_cell({ r: 0, c })].s = { font: { name: 'Calibri', sz: 11, bold: true }, fill: { fgColor: { rgb: 'FFE600' } }, alignment: { vertical: 'center', wrapText: true } }; });
+    ws['!cols'] = [{ wch: 60 }, { wch: 11 }, { wch: 16 }, { wch: 18 }, { wch: 40 }];
+    XLSX.utils.book_append_sheet(wb, ws, 'Lista');
+    const ej = (st.cat || []).find(a => a.cod && a.desc) || { cod: 'CODIGO-DEL-SISTEMA', desc: 'DESCRIPCION DEL ARTICULO' };
+    const ins = XLSX.utils.aoa_to_sheet([
+      ['Cómo completar la lista'], [],
+      ['1. Una fila por artículo en la hoja "Lista", desde la fila 2. No cambies los títulos de la fila 1.'],
+      ['2. En "Código o descripción" poné el código del sistema o la descripción, como lo tengas: se pueden mezclar en la misma lista.'],
+      ['3. "Cantidad" es obligatoria. Unidad, margen y observaciones son opcionales (sin margen se usa el margen general de la cotización).'],
+      ['4. En la página: pestaña Cotizador > "Importar lista". Busca primero el código exacto; si no está, la descripción más parecida.'],
+      ['5. Verde: código exacto o descripción idéntica. Amarillo ("Parecida" o "Revisar"): puede no ser la misma pieza, revisala. Rojo ("Sin precio"): no se encontró, se completa a mano.'],
+      [], ['Ejemplos (esta hoja no se importa):'], ['Código o descripción', 'Cantidad'], [ej.cod, 2], [ej.desc, 4]]);
+    ins['!cols'] = [{ wch: 110 }, { wch: 10 }];
+    XLSX.utils.book_append_sheet(wb, ins, 'Instrucciones');
+    return XLSX.write(wb, { bookType: 'xlsx', type: 'array', cellStyles: true });
+  }
+  const normTxt = s => norm(s).replace(/[\u201c\u201d\u2033]/g, '"').replace(/\s+/g, ' ').trim();
+  const tokens = s => normTxt(s).split(/[\s,;()]+/).filter(Boolean);
+  function indiceCat() {
+    if (st.catIdx && st.catIdx.src === st.cat) return st.catIdx;
+    const porCod = new Map(), items = (st.cat || []).map(a => { porCod.set(a.cod.toUpperCase().trim(), a); const t = tokens(a.cod + ' ' + (a.desc || '')); return { a, t: ' ' + t.join(' ') + ' ', n: t.length, d: normTxt(a.desc || '') }; });
+    return (st.catIdx = { src: st.cat, porCod, items });
+  }
+  // Devuelve { a: artículo del catálogo o null, m, nota }. m: 'Por código' (código exacto), 'Por descripción' (descripción idéntica),
+  // 'Parecida' (todas las palabras, un solo candidato), 'Revisar' (60 % o más de las palabras, o varios igual de parecidos), 'Sin precio'.
+  function buscarArt(txt, cod) {
+    const I = indiceCat();
+    for (const c of [cod, txt]) { const a = c ? I.porCod.get(String(c).toUpperCase().trim()) : null; if (a) return { a, m: 'Por código' }; }
+    const q = normTxt(txt); if (!q) return { a: null, m: 'Sin precio' };
+    const nuevo = (x, y) => (+((y.a.u || {}).fecha) || 0) - (+((x.a.u || {}).fecha) || 0);
+    const ex = I.items.filter(x => x.d === q).sort(nuevo);
+    if (ex.length) return { a: ex[0].a, m: 'Por descripción', nota: ex.length > 1 ? ex.length + ' artículos con esa descripción: se tomó el de compra más nueva' : '' };
+    const tk = [...new Set(tokens(txt))]; let b1 = null, b2 = null;
+    const mejor = (x, y) => !y || x.s > y.s || (x.s === y.s && (x.e < y.e || (x.e === y.e && nuevo(x.it, y.it) < 0)));
+    I.items.forEach(it => {
+      let k = 0; tk.forEach(w => { if (it.t.includes(' ' + w + ' ')) k++; });
+      if (!k) return; const c = { it, s: k / tk.length, e: it.n - k };
+      if (mejor(c, b1)) { b2 = b1; b1 = c; } else if (mejor(c, b2)) b2 = c;
+    });
+    if (!b1 || b1.s < 0.6) return { a: null, m: 'Sin precio' };
+    const unico = b1.s === 1 && (!b2 || b2.s < 1 || b2.e > b1.e);
+    return { a: b1.it.a, m: unico ? 'Parecida' : 'Revisar', nota: unico ? 'Tiene todas las palabras pedidas, pero no es la descripción exacta' : (b1.s < 1 ? 'Coinciden ' + Math.round(b1.s * 100) + ' % de las palabras' : 'Hay otros artículos igual de parecidos') };
+  }
+  async function importarLista(file) {
+    const wb = XLSX.read(await file.arrayBuffer(), { type: 'array' });
+    const ws = wb.Sheets[wb.SheetNames.find(n => /^lista$/i.test(n.trim())) || wb.SheetNames[0]];
+    const rows = XLSX.utils.sheet_to_json(ws, { header: 1, defval: '', raw: true, blankrows: false });
+    let h = rows.slice(0, 10).findIndex(r => r.some(v => /c[oó]d|descrip/i.test(String(v))) && r.some(v => /cant/i.test(String(v))));
+    const col = re => h < 0 ? -1 : rows[h].findIndex(v => re.test(String(v)));
+    let cTxt = col(/c[oó]digo o desc/i), cCod = col(/^\s*c[oó]d/i), cDesc = col(/descrip/i), cCant = col(/cant/i), cMed = col(/unid|medida/i), cMg = col(/margen/i), cObs = col(/observ|nota|coment/i);
+    if (cTxt >= 0) { cCod = -1; cDesc = -1; } else if (h < 0) { cTxt = 0; cCant = 1; }
+    const q = cotQ(), cuenta = {};
+    rows.slice(h + 1).forEach(r => {
+      const g = c => c >= 0 && r[c] !== undefined ? String(r[c]).trim() : '';
+      const vCod = cTxt >= 0 ? '' : g(cCod), vDesc = cTxt >= 0 ? g(cTxt) : g(cDesc), txt = vDesc || vCod;
+      if (!txt) return;
+      let cant = cCant >= 0 ? (typeof r[cCant] === 'number' ? r[cCant] : numIn(r[cCant])) : '';
+      let mg = cMg >= 0 ? (typeof r[cMg] === 'number' ? (r[cMg] > 0 && r[cMg] < 1 ? r[cMg] * 100 : r[cMg]) : numIn(String(r[cMg]).replace('%', ''))) : '';
+      const b = buscarArt(vDesc, vCod), a = b.a; let m = b.m, nota = b.nota || '';
+      if (cant === '' || !(cant > 0)) { cant = 1; if (m !== 'Sin precio') m = 'Revisar'; nota = (nota ? nota + '. ' : '') + 'La lista no trae cantidad: se puso 1'; }
+      cuenta[m] = (cuenta[m] || 0) + 1;
+      const pidio = txt !== (a && a.cod) ? 'Pedido: "' + txt + '"' : '';
+      q.lineas.push({
+        cod: a ? a.cod : vCod, desc: a ? (m === 'Por código' ? a.desc : (vDesc || a.desc)) : txt, med: g(cMed) || (a ? a.med || '' : ''), cant,
+        costo: a ? a.u.unitUSD : '', fecha: a && a.u.fecha ? +a.u.fecha : null, margen: mg,
+        fuente: [a ? 'OC ' + a.u.oc + ' · ' + a.u.prov : 'Sin precio en el sistema: completar a mano', m !== 'Por código' && a ? 'Artículo tomado: ' + a.cod + ' ' + (a.desc || '') : '', nota, m === 'Por código' ? '' : pidio, g(cObs) ? 'Obs.: ' + g(cObs) : ''].filter(Boolean).join(' · '),
+        manual: !a, match: m, nota });
+    });
+    const n = Object.values(cuenta).reduce((x, y) => x + y, 0);
+    persistir(); pintarLista();
+    $('qmsg').textContent = n ? 'Importadas ' + n + ' líneas: ' + ['Por código', 'Por descripción', 'Parecida', 'Revisar', 'Sin precio'].filter(k => cuenta[k]).map(k => cuenta[k] + ' ' + k.toLowerCase()).join(', ') + '. Revisá las amarillas y las rojas.' : 'No encontré artículos en la planilla. Usá el modelo: "Código o descripción" y "Cantidad" en la fila 1.';
+  }
   function pintarCot() {
     const q = cotQ(), k = Cruce.calcCot(q), g = guardado().guardadas || {};
     const fd = v => v ? Cruce.fmt(new Date(v)) : '';
@@ -889,10 +965,11 @@ if (typeof module !== 'undefined') module.exports = Cruce;
       '<label>Margen general %<input data-q="margen" inputmode="decimal" value="' + esc(q.margen) + '"></label>' +
       '<label>Cotización $/US$ (opcional)<input data-q="tc" inputmode="decimal" placeholder="Ej. 1550" value="' + esc(q.tc || '') + '"></label>' +
       '<label style="grid-column:1/-1">Notas<textarea data-q="notas" rows="1">' + esc(q.notas || '') + '</textarea></label></div>' +
-      '<div class="cotlines"><table><thead><tr><th>#</th><th style="width:150px">Código</th><th>Descripción</th><th style="width:80px">Cant.</th><th style="width:70px">Unidad</th><th style="width:120px">Costo unit. US$ s/IVA</th><th style="width:110px">Fecha del costo</th><th style="width:80px">Margen %</th><th style="width:120px">Precio unit. US$</th><th style="width:120px">Subtotal US$</th><th></th></tr></thead><tbody>' +
+      '<div class="cotlines"><table><thead><tr><th>#</th><th style="width:150px">Código</th><th>Descripción</th><th style="width:130px">Coincidencia</th><th style="width:80px">Cant.</th><th style="width:70px">Unidad</th><th style="width:120px">Costo unit. US$ s/IVA</th><th style="width:110px">Fecha del costo</th><th style="width:80px">Margen %</th><th style="width:120px">Precio unit. US$</th><th style="width:120px">Subtotal US$</th><th></th></tr></thead><tbody>' +
       (k.lineas.map(x => { const l = x.l, i = x.i - 1;
         return '<tr><td>' + x.i + '</td><td><input data-l="' + i + '" data-f="cod" value="' + esc(l.cod || '') + '"' + (l.manual ? '' : ' readonly') + '></td>' +
           '<td><input data-l="' + i + '" data-f="desc" value="' + esc(l.desc || '') + '"></td>' +
+          '<td' + (l.fuente ? ' title="' + esc(l.fuente) + '"' : '') + '>' + (l.match ? tag(l.match) : '') + '</td>' +
           '<td><input class="n" data-l="' + i + '" data-f="cant" inputmode="decimal" value="' + esc(l.cant) + '"></td>' +
           '<td><input data-l="' + i + '" data-f="med" value="' + esc(l.med || '') + '"></td>' +
           '<td><input class="n" data-l="' + i + '" data-f="costo" inputmode="decimal" value="' + esc(l.costo ?? '') + '"' + (l.fuente ? ' title="' + esc(l.fuente) + '"' : '') + '></td>' +
@@ -900,11 +977,12 @@ if (typeof module !== 'undefined') module.exports = Cruce;
           '<td><input class="n" data-l="' + i + '" data-f="margen" inputmode="decimal" placeholder="' + esc(q.margen) + '" value="' + esc(l.margen ?? '') + '"></td>' +
           '<td class="num" data-pu="' + i + '">' + (x.pu == null ? '' : $$(x.pu)) + '</td><td class="num" data-sp="' + i + '">' + (x.sp == null ? '' : $$(x.sp)) + '</td>' +
           '<td><button class="del" data-del="' + i + '" aria-label="Quitar línea ' + x.i + '">Quitar</button></td></tr>'; }).join('') ||
-        '<tr><td colspan="11">Todavía no hay artículos. Buscalos abajo y tocá "+ Agregar", o agregá una línea manual.</td></tr>') +
+        '<tr><td colspan="12">Todavía no hay artículos. Buscalos abajo y tocá "+ Agregar", importá una lista de Excel o agregá una línea manual.</td></tr>') +
       '</tbody></table></div>' +
       '<div class="cottot"><span>Costo total s/IVA <b data-t="c">' + U(k.tot.costo) + '</b></span><span>Precio total s/IVA <b data-t="p">' + U(k.tot.precio) + '</b></span>' +
       '<span>Margen <b data-t="m">' + (k.tot.costo ? $$((k.tot.precio / k.tot.costo - 1) * 100) + ' %' : '—') + '</b></span>' +
       '<span data-t="ars">' + (+q.tc ? 'En pesos: <b>$ ' + $$(k.tot.precio * q.tc) + '</b>' : '') + '</span></div>' +
+      '<div class="cotbtns" style="margin-bottom:10px"><button class="sec" id="qmod">Descargar modelo de lista</button><button id="qimpb">Importar lista (Excel)</button><input type="file" id="qimp" accept=".xlsx,.xls,.csv" hidden><span class="msg" style="align-self:center">Código o descripción, indistinto.</span></div>' +
       '<div class="cotbtns"><button class="sec" id="qman">+ Línea manual</button><button id="qxi">Excel interno (con costos)</button><button id="qxc">Excel para el cliente (solo precios)</button><button class="sec" id="qnew">Nueva cotización</button></div>' +
       '<div class="cotsave" style="margin-top:10px"><label style="display:flex;flex-direction:column;gap:3px;font-size:13px;color:var(--mute)">Guardar como<input id="qname" placeholder="Nombre" value="' + esc(q.ref || q.cliente || '') + '"></label><button class="sec" id="qsave">Guardar</button>' +
       (Object.keys(g).length ? '<label style="display:flex;flex-direction:column;gap:3px;font-size:13px;color:var(--mute)">Cotizaciones guardadas<select id="qload"><option value="">Abrir…</option>' + Object.keys(g).sort().map(n => '<option>' + esc(n) + '</option>').join('') + '</select></label><button class="sec" id="qdel">Borrar la elegida</button>' : '') +
@@ -1096,6 +1174,8 @@ if (typeof module !== 'undefined') module.exports = Cruce;
   $('cotpanel').addEventListener('click', e => {
     const b = e.target.closest('button'); if (!b) return; const q = cotQ();
     if (b.dataset.del !== undefined) { q.lineas.splice(+b.dataset.del, 1); persistir(); pintarLista(); }
+    else if (b.id === 'qmod') guardar(modeloLista(), 'Modelo lista de materiales');
+    else if (b.id === 'qimpb') $('qimp').click();
     else if (b.id === 'qman') { q.lineas.push({ cod: '', desc: '', med: '', cant: 1, costo: '', fecha: null, fuente: 'Carga manual', margen: '', manual: true }); persistir(); pintarCot(); }
     else if (b.id === 'qxi' || b.id === 'qxc') { if (!q.lineas.length) { $('qmsg').textContent = 'La cotización está vacía.'; return; } guardar(Cruce.excelCotizacion(q, b.id === 'qxi'), 'Cotizacion ' + (q.ref || q.cliente || '').replace(/[\\/:*?"<>|]/g, '-') + (b.id === 'qxi' ? ' (interna)' : '')); }
     else if (b.id === 'qnew') { if (q.lineas.length && $('qmsg').dataset.c !== '1') { $('qmsg').dataset.c = '1'; $('qmsg').textContent = 'Tocá otra vez "Nueva cotización" para vaciar esta (si no la guardaste, se pierde).'; return; } st.q = cotNueva(); persistir(); pintarLista(); }
@@ -1103,6 +1183,7 @@ if (typeof module !== 'undefined') module.exports = Cruce;
     else if (b.id === 'qdel') { const n = $('qload').value; if (!n) { $('qmsg').textContent = 'Elegí cuál borrar en la lista.'; return; } const g = guardado(); delete (g.guardadas || {})[n]; try { localStorage.setItem(QKEY, JSON.stringify(g)); } catch (x) {} pintarCot(); }
   });
   $('cotpanel').addEventListener('change', e => {
+    if (e.target.id === 'qimp' && e.target.files && e.target.files[0]) { const f = e.target.files[0]; $('qmsg').textContent = 'Leyendo ' + f.name + '...'; importarLista(f).catch(x => { $('qmsg').textContent = 'No pude leer la planilla: ' + (x && x.message || x); }); return; }
     if (e.target.id === 'qload' && e.target.value) { const g = guardado(); st.q = JSON.parse(JSON.stringify(g.guardadas[e.target.value])); persistir(); pintarLista(); }
   });
   $('tab').addEventListener('click', e => {
