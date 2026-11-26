@@ -518,3 +518,17 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 - **Datos que solo estaban en la carpeta temporal.** El `LEEME.txt` del zip estaba solo ahí. **Lección:** todo lo que se entrega va también al repositorio; ahora está en `herramientas/erp/zip/` y lo arma `armar_zip.py`.
 - Sin auditar (regla de ahorro de tokens del 25-11-2026).
 
+
+## 26-11-2026 — Puente de inyección y regulación 2" #600 (TAVAL/70, rev. 1 y rev. 2), contra el plano D2 con redmarks
+- **Errores de cantidades en la planilla de Ventas:**
+  - la junta de 2" #600 está en dos renglones (48 + 46);
+  - 48 bridas de 2" donde van 34;
+  - quedan contadas las esféricas que los redmarks eliminan;
+  - las válvulas chicas son 1" #3000 cuando el plano pide ¾", ½" y 1" de 2000#;
+  - el inyector de químicos se cobra y a la vez se excluye en la oferta;
+  - hay un solo FQIT para dos puentes.
+- **Lección:**
+  - con redmarks, contar sobre el plano corregido y unión por unión: bridas, juntas y espárragos salen de las uniones, no de la cotización anterior;
+  - leer las notas de la HD (la nota 4 pide ampliar la línea a 3" en los TE);
+  - un renglón excluido no puede tener precio.
+- **Prevención:** usar el skill `relevar-pedido`, que exige contar las uniones de a una, y `verificar_computo.py`.
