@@ -27,6 +27,10 @@
 - **Manda el repositorio. La biblioteca (catálogo y antecedentes) se alimenta solo con el botón "Pasar al repositorio y a la biblioteca"** de la página (Matías, 29-10-2026): pasa esa versión al repositorio y la suma a `biblioteca_cotizaciones/`; si no está revisada o aprobada, la página avisa y pide confirmación; si se vuelve a incorporar, la última versión reemplaza a la anterior. Ninguna cotización entra sola (ni borradores ni las del repositorio).
 - No hay a quién consultar las planillas viejas (Javier Elejondo ya no está en la empresa): ante dudas, tomar el criterio con más sentido técnico y dejarlo documentado.
 
+## Repositorio preferido (26-11-2026)
+- **El repositorio preferido es `ricardoalvarezu2-cyber/cotizador-itt-2.0`.** `tvmaty2186/cotizador-itt` es la versión anterior: al 26-11-2026 los dos tenían las mismas ramas y archivos, salvo los 3 commits de la herramienta ERP (`herramientas/erp/`), que hay que pasar al de Ricardo. Trabajar en el de Ricardo cuando la sesión lo tenga con permiso de escritura.
+- **El de Ricardo es público:** pasarlo a privado antes de que reciba la rama `datos-erp` (hasta entonces `cruce_erp.ps1` sigue subiendo a `tvmaty2186/cotizador-itt`, que es privado).
+
 ## Ubicación de los originales
 - **Base del sistema (ERP SQL Server, bases ITTSA y Taval):** herramienta de Matías en `herramientas/erp/` (`ACTUALIZAR.bat` → `cruce_erp.ps1` → `plantilla.html`); solo corre en la red de ITT. Leer `herramientas/erp/LEEME.md` antes de tocarla. Solo `SELECT`; los `.udl` (contraseña de `sa`) no se suben al repo. **Cada corrida sube la última lectura de ITT y Taval a la rama `datos-erp`** (TSV con encabezado + la página con datos): leerla con `git fetch origin datos-erp && git show FETCH_HEAD:LEEME.md`.
 - Carpeta de cotizaciones de ITT: `Z:\VENTAS\OFERTAS Y LICITACIONES` (15.601 archivos, 27 GB; solo en la red de ITT).
