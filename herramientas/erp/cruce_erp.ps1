@@ -11,7 +11,7 @@ $MESES_ATRAS = 12           # cuántos meses hacia atrás leer solicitudes, órd
 $FORMULAS    = 'ITT2[5-9]-%' # productos cuyas fórmulas se leen (códigos de proyecto ITT25..ITT29)
 $MESES_VENTAS = 24          # cuántos meses hacia atrás leer pedidos de clientes (NV)
 $SUBIR_REPO  = $true        # subir una copia de los datos al repositorio (rama datos-erp) después de abrir la planilla
-$REPO        = 'tvmaty2186/cotizador-itt'
+$REPO        = 'ricardoalvarezu2-cyber/cotizador-itt-2.0'   # repositorio preferido (26-11-2026); tiene que ser PRIVADO
 $RAMA_DATOS  = 'datos-erp'  # rama solo de datos: cada subida la reemplaza entera (no acumula historia)
 $TOKEN_ARCH  = 'github_token.txt'   # token de GitHub en esta carpeta (no se sube; ver herramientas/erp/LEEME.md)
 # ------------------------------
@@ -46,6 +46,10 @@ function SubirRepo($archivos, $mensaje) {
   [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
   $h = @{ Authorization = "Bearer $tok"; Accept = 'application/vnd.github+json'; 'X-GitHub-Api-Version' = '2022-11-28'; 'User-Agent' = 'cruce-erp-itt' }
   $api = "https://api.github.com/repos/$REPO/git"
+  # Freno: los datos de compras y ventas nunca van a un repositorio publico.
+  try { $info = Invoke-RestMethod -Uri "https://api.github.com/repos/$REPO" -Headers $h -TimeoutSec 60 }
+  catch { throw ("no pude entrar al repositorio " + $REPO + " (revisar que el token sea de esa cuenta y tenga acceso a ese repositorio): " + $_.Exception.Message) }
+  if (-not $info.private) { throw ("el repositorio " + $REPO + " es PUBLICO: no se suben los datos. Pasarlo a privado en GitHub (Settings > General > Danger Zone > Change visibility) y volver a correr.") }
   $post = {
     param($url, $json, $metodo)
     if (-not $metodo) { $metodo = 'Post' }

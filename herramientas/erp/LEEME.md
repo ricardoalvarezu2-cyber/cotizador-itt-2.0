@@ -28,14 +28,14 @@ Proveedor `SQLOLEDB.1`, idioma `spanish`. **Riesgo:** `sa` es el administrador t
 
 Pedido de Matías: tener la base de ITT y de Taval accesible desde cualquier lado y que el repositorio se actualice cada vez que se corre `ACTUALIZAR.bat`. El script primero abre la planilla y después sube la copia por la API de GitHub, así que la PC no necesita git.
 
-- **Dónde:** rama `datos-erp`, separada de `main`. Cada subida es un commit nuevo sin padre que reemplaza la rama entera. Siempre queda solo la última lectura (una sola versión vigente) y el repositorio no crece con cada corrida. No hay que pasarla a `main`.
+- **Dónde:** rama `datos-erp` del repositorio preferido `ricardoalvarezu2-cyber/cotizador-itt-2.0` (`$REPO`), separada de `main`. **Si el repositorio es público, no sube nada** y lo avisa. Cada subida es un commit nuevo sin padre que reemplaza la rama entera. Siempre queda solo la última lectura (una sola versión vigente) y el repositorio no crece con cada corrida. No hay que pasarla a `main`.
 - **Qué sube:**
   - `LEEME.md` con la fecha de lectura, los períodos, la PC, los errores y las filas por archivo.
   - Por empresa (`ITT/`, `TAVAL/`): `solicitudes.tsv`, `ordenes_compra.tsv`, `remitos.tsv`, `precios.tsv`, `ventas_nv.tsv` y `formulas.tsv`. Son TSV en UTF-8, con encabezado y las mismas columnas de abajo.
   - `Cruce SC-OC (sistema).html`, la página con datos, para bajarla y abrirla en cualquier PC.
 - **Si hubo errores de lectura** pregunta "¿Subir igual?" (s/n), para no pisar una copia buena con una incompleta. Si la subida falla, la planilla igual queda abierta y el error se muestra en la ventana.
 - **Archivos de más de 90 MB** no se suben (GitHub no acepta más de 100 MB); avisa en la ventana.
-- **Token (una sola vez):** en GitHub, Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token. Repository access: solo `tvmaty2186/cotizador-itt`. Permissions → Repository permissions → **Contents: Read and write**. Se copia el token en un archivo `github_token.txt` en la carpeta del `.bat`. Cuando vence, se genera otro y se reemplaza el archivo.
+- **Token (una sola vez):** en GitHub, Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token. Se crea **desde la cuenta `ricardoalvarezu2-cyber`**, con Resource owner `ricardoalvarezu2-cyber` y Repository access solo `cotizador-itt-2.0`. Permissions → Repository permissions → **Contents: Read and write**. Se copia el token en un archivo `github_token.txt` en la carpeta del `.bat`. Cuando vence, se genera otro y se reemplaza el archivo.
 - **Apagarlo:** `$SUBIR_REPO = $false` en los ajustes.
 - **Leerla desde una sesión de Claude** (sin cambiar de rama):
 
