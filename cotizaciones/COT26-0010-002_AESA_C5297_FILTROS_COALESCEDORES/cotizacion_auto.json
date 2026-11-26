@@ -1,0 +1,4976 @@
+{
+ "codigo": "COT26-CCCC-NNN",
+ "revision": "Rev 0",
+ "estado": "borrador",
+ "fecha": "AAAA-MM-DD",
+ "preparo": "Matías Russo",
+ "cliente": {
+  "nombre": "[CLIENTE S.A.]",
+  "codigo_itt": "[CCCC]",
+  "comprador": "[nombre]"
+ },
+ "titulo": "[CLIENTE] · [pedido] — [cantidad] [equipo]",
+ "titulo_pagina": "Cotización [CLIENTE] [pedido]",
+ "archivo_planilla": "[CLIENTE]_[pedido]",
+ "subtitulo_planilla": "[cantidad] [equipo] · plano [número] · USD sin IVA · EXW Quilmes Oeste",
+ "meta": [
+  "Artículo [código]",
+  "Plano [número rev]",
+  "Comprador: [nombre]",
+  "Preparó: Matías Russo · [fecha]"
+ ],
+ "equipo": {
+  "singular": "equipo",
+  "plural": "equipos"
+ },
+ "parametros": {
+  "N": 2,
+  "FM": 1.35,
+  "FMO": 1.35,
+  "CONT": 5,
+  "AJ": 1,
+  "TRANS": 0,
+  "TC": 1550,
+  "TR_ARS": 0,
+  "TR_EMB": 0,
+  "TR_F": 1.0,
+  "fecha_referencia": "2026-10-27",
+  "rx_pct": 0,
+  "ph_horas": 0,
+  "FTV": 1.0
+ },
+ "plazo": {
+  "dias": 60,
+  "texto": "desde OC · EXW Quilmes Oeste",
+  "tareas": [
+   [
+    "Material crítico [proveedor]",
+    0,
+    60,
+    "crit"
+   ],
+   [
+    "Taller: armado, PH y pintura",
+    45,
+    57,
+    "tal"
+   ],
+   [
+    "Dossier y despacho",
+    57,
+    60,
+    "tal"
+   ]
+  ],
+  "nota": "[Qué fija el plazo y cómo se acorta]"
+ },
+ "flete": {
+  "etiqueta": "Flete a [destino]",
+  "referencia_html": "[Cotización de flete de referencia, con fecha y fuente]",
+  "criterio_html": "[Si se ofrece EXW o entregado]"
+ },
+ "historial_html": [],
+ "pedido": {
+  "eyebrow": "[Nº de pedido] · emitido [fecha]",
+  "datos_html": [
+   [
+    "Cliente",
+    "[nombre] (código ITT [CCCC])"
+   ],
+   [
+    "Ítem",
+    "[ítem] · [descripción] · <b>[cantidad] un</b>"
+   ],
+   [
+    "Documento",
+    "[documento y plano]"
+   ],
+   [
+    "Entrega pedida",
+    "[lugar]"
+   ],
+   [
+    "Fechas",
+    "Límite de respuesta [fecha] · necesidad [fecha]"
+   ]
+  ],
+  "requisitos_html": [
+   "[requisito técnico del pedido]"
+  ]
+ },
+ "nota_mo_html": "[Qué incluye y excluye la MO; soldaduras de taller junta por junta; extremos para soldar en campo]",
+ "desvios": [
+  {
+   "tag": "Pos X",
+   "titulo": "[qué se ofrece distinto]",
+   "texto": "[detalle]"
+  }
+ ],
+ "antecedentes": [
+  {
+   "carpeta_html": "<b>[CLIENTE/NN]</b> · [oferta]",
+   "fecha": "dd/mm/aaaa",
+   "que": "[qué es]",
+   "precio": "[c/u]",
+   "tomado_html": "[qué se tomó]"
+  }
+ ],
+ "pendientes": [
+  {
+   "titulo": "Proveedores",
+   "items": [
+    "[confirmación pendiente]"
+   ]
+  },
+  {
+   "titulo": "Cliente",
+   "items": [
+    "[consulta]"
+   ]
+  }
+ ],
+ "pie": "Fuentes: base de conocimiento del repositorio cotizador-itt. Precios en USD sin IVA.",
+ "planilla_notas": [
+  "Plazo: [días] desde OC ([material crítico]).",
+  "Condiciones: [pago, entrega, validez]."
+ ],
+ "items": [
+  {
+   "id": "M01",
+   "pos": "1",
+   "grupo": "material",
+   "descripcion": "Envolvente (cuerpo) rolado, Ø ext. 812,8 mm, LT/LT 4.064 mm",
+   "cantidad": 2490.0,
+   "unidad": "kg",
+   "especificacion": "Plano:  ·  · SA-516 Gr. 70 ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Recipiente FC. HD (espesor orientativo, nota 2; lo fija la memoria)",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "chapa",
+    "espesor_mm": "esp. 31,8 mm (1 1/4\")"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1.27,
+     "proveedor": "Precios de acero (J. Elejondo)",
+     "origen": "fuentes_originales/precios_varios_acero_2026-02.xlsx, hoja chapa negra A36, B2",
+     "fecha": "2026-02-10",
+     "coincide": "similar",
+     "diferencia": "precio por kg de materia prima (chapa negra lisa 1/2\", la más cercana a 812,8 mm) +10% por recortes; no incluye corte, plegado ni rolado (A-516: se toma el precio de chapa A-36 de la lista; el A-516 suele costar más)"
+    }
+   ]
+  },
+  {
+   "id": "M02",
+   "pos": "2",
+   "grupo": "material",
+   "descripcion": "Casquete semielíptico 2:1 inferior, Ø ext. 812,8 mm",
+   "cantidad": 230.0,
+   "unidad": "kg",
+   "especificacion": "Plano:  ·  · SA-516 Gr. 70 / SA-234 WPB ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Recipiente FC. HD; ITT: cierre superior = M1",
+   "atributos": {
+    "familia": "ABW",
+    "material": "A234 WPB",
+    "tipo": "chapa",
+    "espesor_mm": "esp. 31,8 mm"
+   },
+   "faltan_datos": [
+    "diametro"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1.27,
+     "proveedor": "Precios de acero (J. Elejondo)",
+     "origen": "fuentes_originales/precios_varios_acero_2026-02.xlsx, hoja chapa negra A36, B2",
+     "fecha": "2026-02-10",
+     "coincide": "similar",
+     "diferencia": "precio por kg de materia prima (chapa negra lisa 1/2\", la más cercana a 812,8 mm) +10% por recortes; no incluye corte, plegado ni rolado (A-516: se toma el precio de chapa A-36 de la lista; el A-516 suele costar más)"
+    }
+   ]
+  },
+  {
+   "id": "M03",
+   "pos": "3",
+   "grupo": "material",
+   "descripcion": "Chapas de refuerzo de aberturas (MH 20\", A y B1 10\")",
+   "cantidad": 150.0,
+   "unidad": "kg",
+   "especificacion": "Plano:  ·  · SA-516 Gr. 70 ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Recipiente FC. ITT (a confirmar por cálculo UG-37)",
+   "atributos": {
+    "familia": "OTR",
+    "diametro": "20\"",
+    "tipo": "chapa",
+    "espesor_mm": "esp. 31,8 mm"
+   },
+   "faltan_datos": [
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1.27,
+     "proveedor": "Precios de acero (J. Elejondo)",
+     "origen": "fuentes_originales/precios_varios_acero_2026-02.xlsx, hoja chapa negra A36, B2",
+     "fecha": "2026-02-10",
+     "coincide": "similar",
+     "diferencia": "precio por kg de materia prima (chapa negra lisa 1/2\") +10% por recortes; no incluye corte, plegado ni rolado (A-516: se toma el precio de chapa A-36 de la lista; el A-516 suele costar más)"
+    }
+   ]
+  },
+  {
+   "id": "M04",
+   "pos": "4",
+   "grupo": "material",
+   "descripcion": "Pollera (faldón) con anillo base y aberturas de acceso",
+   "cantidad": 450.0,
+   "unidad": "kg",
+   "especificacion": "Plano:  ·  · SA-516 Gr. 70 / SA-36 ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Recipiente FC. HD \"Pollera: Sí\"",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "chapa",
+    "espesor_mm": "esp. 12,7 mm"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1.27,
+     "proveedor": "Precios de acero (J. Elejondo)",
+     "origen": "fuentes_originales/precios_varios_acero_2026-02.xlsx, hoja chapa negra A36, B2",
+     "fecha": "2026-02-10",
+     "coincide": "similar",
+     "diferencia": "precio por kg de materia prima (chapa negra lisa 1/2\") +10% por recortes; no incluye corte, plegado ni rolado (A-516: se toma el precio de chapa A-36 de la lista; el A-516 suele costar más)"
+    }
+   ]
+  },
+  {
+   "id": "M05",
+   "pos": "5",
+   "grupo": "material",
+   "descripcion": "Placa portacartuchos (tubesheet) con tensores de cartuchos",
+   "cantidad": 110.0,
+   "unidad": "kg",
+   "especificacion": "Plano:  ·  · SA-516 Gr. 70 ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Recipiente FC. HD nota 23; ITT",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "chapa",
+    "espesor_mm": "esp. 25,4 mm"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1.27,
+     "proveedor": "Precios de acero (J. Elejondo)",
+     "origen": "fuentes_originales/precios_varios_acero_2026-02.xlsx, hoja chapa negra A36, B2",
+     "fecha": "2026-02-10",
+     "coincide": "similar",
+     "diferencia": "precio por kg de materia prima (chapa negra lisa 1/2\") +10% por recortes; no incluye corte, plegado ni rolado (A-516: se toma el precio de chapa A-36 de la lista; el A-516 suele costar más)"
+    }
+   ]
+  },
+  {
+   "id": "M06",
+   "pos": "6",
+   "grupo": "material",
+   "descripcion": "Soportes internos de la caja de chicanas (vigas y ángulos)",
+   "cantidad": 60.0,
+   "unidad": "kg",
+   "especificacion": "Plano:  ·  · SA-516 Gr. 70 ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Recipiente FC. HD \"Internos sold.: SA 516 Gr 70\"",
+   "atributos": {
+    "familia": "PER",
+    "tipo": "chapa",
+    "material": "A516 Gr 70"
+   },
+   "faltan_datos": [
+    "designacion",
+    "espesor_mm"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1.9,
+     "proveedor": "Precios de acero (J. Elejondo)",
+     "origen": "fuentes_originales/precios_varios_acero_2026-02.xlsx, hoja H°A°, B2",
+     "fecha": "2026-02-10",
+     "coincide": "similar",
+     "diferencia": "precio por kg de materia prima (hierro ángulo 3x1/4) +10% por recortes; no incluye corte, plegado ni rolado (A-516: se toma el precio de chapa A-36 de la lista; el A-516 suele costar más)"
+    }
+   ]
+  },
+  {
+   "id": "M07",
+   "pos": "7",
+   "grupo": "material",
+   "descripcion": "Distribuidor de entrada (deflector) en A",
+   "cantidad": 40.0,
+   "unidad": "kg",
+   "especificacion": "Plano:  ·  · SA-516 Gr. 70 ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Recipiente FC. HD \"Distribuidor de entrada: Sí\"",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "chapa"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1.27,
+     "proveedor": "Precios de acero (J. Elejondo)",
+     "origen": "fuentes_originales/precios_varios_acero_2026-02.xlsx, hoja chapa negra A36, B2",
+     "fecha": "2026-02-10",
+     "coincide": "similar",
+     "diferencia": "precio por kg de materia prima (chapa negra lisa 1/2\") +10% por recortes; no incluye corte, plegado ni rolado (A-516: se toma el precio de chapa A-36 de la lista; el A-516 suele costar más)"
+    }
+   ]
+  },
+  {
+   "id": "M08",
+   "pos": "8",
+   "grupo": "material",
+   "descripcion": "Rompevórtice en B3 con proyección interna",
+   "cantidad": 15.0,
+   "unidad": "kg",
+   "especificacion": "Plano:  ·  · SA-516 Gr. 70 ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Recipiente FC. HD nota 20",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "chapa"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1.27,
+     "proveedor": "Precios de acero (J. Elejondo)",
+     "origen": "fuentes_originales/precios_varios_acero_2026-02.xlsx, hoja chapa negra A36, B2",
+     "fecha": "2026-02-10",
+     "coincide": "similar",
+     "diferencia": "precio por kg de materia prima (chapa negra lisa 1/2\") +10% por recortes; no incluye corte, plegado ni rolado (A-516: se toma el precio de chapa A-36 de la lista; el A-516 suele costar más)"
+    }
+   ]
+  },
+  {
+   "id": "M09",
+   "pos": "9",
+   "grupo": "material",
+   "descripcion": "Orejas de izaje (o trunnions)",
+   "cantidad": 60.0,
+   "unidad": "kg",
+   "especificacion": "Plano:  ·  · SA-516 Gr. 70 ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Recipiente FC. HD nota 12",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "chapa"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1.27,
+     "proveedor": "Precios de acero (J. Elejondo)",
+     "origen": "fuentes_originales/precios_varios_acero_2026-02.xlsx, hoja chapa negra A36, B2",
+     "fecha": "2026-02-10",
+     "coincide": "similar",
+     "diferencia": "precio por kg de materia prima (chapa negra lisa 1/2\") +10% por recortes; no incluye corte, plegado ni rolado (A-516: se toma el precio de chapa A-36 de la lista; el A-516 suele costar más)"
+    }
+   ]
+  },
+  {
+   "id": "M10",
+   "pos": "10",
+   "grupo": "material",
+   "descripcion": "Orejas de puesta a tierra",
+   "cantidad": 2.0,
+   "unidad": "kg",
+   "especificacion": "Plano:  ·  · AISI 304L ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Recipiente FC. HD nota 11 (dos)",
+   "atributos": {
+    "familia": "OTR",
+    "material": "AISI 304",
+    "tipo": "chapa"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M11",
+   "pos": "11",
+   "grupo": "material",
+   "descripcion": "Clips para aislación y clips de instrumentos",
+   "cantidad": 40.0,
+   "unidad": "kg",
+   "especificacion": "Plano:  ·  · SA-36 ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Recipiente FC. HD \"Clips aislación / instr.: Sí\"",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "chapa"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1.27,
+     "proveedor": "Precios de acero (J. Elejondo)",
+     "origen": "fuentes_originales/precios_varios_acero_2026-02.xlsx, hoja chapa negra A36, B2",
+     "fecha": "2026-02-10",
+     "coincide": "similar",
+     "diferencia": "precio por kg de materia prima (chapa negra lisa 1/2\") +10% por recortes; no incluye corte, plegado ni rolado"
+    }
+   ]
+  },
+  {
+   "id": "M12",
+   "pos": "12",
+   "grupo": "material",
+   "descripcion": "Placa de identificación con soporte",
+   "cantidad": 3.0,
+   "unidad": "kg",
+   "especificacion": "Plano:  ·  · AISI 316 ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Recipiente FC. RI §2 / C0100",
+   "atributos": {
+    "familia": "OTR",
+    "material": "AISI 316",
+    "tipo": "chapa",
+    "espesor_mm": "C0100 Anexo I"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M13",
+   "pos": "13",
+   "grupo": "material",
+   "descripcion": "Brida WN 32\" #600 B16.47 Serie A (M1) · Ø 32\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 32\" · 600 · SA-105 · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Recipiente FC (HD)",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "32\"",
+    "serie": "600",
+    "extremos": "BW",
+    "tipo": "wn",
+    "norma": "B16.47",
+    "cara": "RF"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 2205.0,
+     "proveedor": "OIL METAL · BRI-01289",
+     "codigo": "BRI-01289",
+     "origen": "fuentes_originales/cotizacion_elementos_equipos_2026-03.xlsx · rubro BRIDAS",
+     "fecha": "2025-07-03",
+     "coincide": "similar",
+     "diferencia": "material: A105 (no pedido); norma: sin dato (pedido B16.47)"
+    }
+   ]
+  },
+  {
+   "id": "M14",
+   "pos": "14",
+   "grupo": "material",
+   "descripcion": "Brida ciega 32\" #600 B16.47 Serie A (M1) con pescante · Ø 32\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 32\" · 600 · SA-105 ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Recipiente FC (HD nota 22)",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "32\"",
+    "serie": "600",
+    "tipo": "ciega",
+    "norma": "B16.47",
+    "cara": "RF"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 3411.0,
+     "proveedor": "OIL METAL · BRI-01046",
+     "codigo": "BRI-01046",
+     "origen": "fuentes_originales/cotizacion_elementos_equipos_2026-03.xlsx · rubro BRIDAS",
+     "fecha": "2025-07-03",
+     "coincide": "similar",
+     "diferencia": "material: A105 (no pedido); norma: sin dato (pedido B16.47)"
+    }
+   ]
+  },
+  {
+   "id": "M15",
+   "pos": "15",
+   "grupo": "material",
+   "descripcion": "Brida WN 20\" #600 (MH) · Ø 20\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 20\" · 600 · SA-105 · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Recipiente FC (HD)",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "20\"",
+    "serie": "600",
+    "extremos": "BW",
+    "tipo": "wn",
+    "cara": "RF",
+    "norma": "B16.5"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 963.36,
+     "proveedor": "Grupo Provemet · BRI-05006",
+     "codigo": "BRI-05006",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288978_bridas_2026-10-29.pdf",
+     "fecha": "2026-10-29",
+     "coincide": "similar",
+     "diferencia": "schedule: 80 (no pedido); material: A105 (no pedido)"
+    }
+   ]
+  },
+  {
+   "id": "M16",
+   "pos": "16",
+   "grupo": "material",
+   "descripcion": "Brida ciega 20\" #600 (MH) con pescante · Ø 20\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 20\" · 600 · SA-105 ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Recipiente FC (HD nota 22)",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "20\"",
+    "serie": "600",
+    "tipo": "ciega",
+    "cara": "RF",
+    "norma": "B16.5"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1121.0,
+     "proveedor": "OIL METAL · BRI-01038",
+     "codigo": "BRI-01038",
+     "origen": "fuentes_originales/cotizacion_elementos_equipos_2026-03.xlsx · rubro BRIDAS",
+     "fecha": "2025-07-03",
+     "coincide": "similar",
+     "diferencia": "material: A105 (no pedido); norma: sin dato (pedido B16.5)"
+    }
+   ]
+  },
+  {
+   "id": "M17",
+   "pos": "17",
+   "grupo": "material",
+   "descripcion": "Brida WN 10\" #600 (A, B1) · Ø 10\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 10\" · 600 · SA-105 · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Recipiente FC (HD)",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "10\"",
+    "serie": "600",
+    "extremos": "BW",
+    "tipo": "wn",
+    "schedule": "160",
+    "cara": "RF",
+    "norma": "B16.5"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 584.14,
+     "proveedor": "OIL METAL · BRI-01226",
+     "codigo": "BRI-01226",
+     "origen": "fuentes_originales/cotizacion_elementos_equipos_2026-03.xlsx · rubro BRIDAS",
+     "fecha": "2025-07-03",
+     "coincide": "similar",
+     "diferencia": "material: A105 (no pedido); norma: sin dato (pedido B16.5)"
+    }
+   ]
+  },
+  {
+   "id": "M18",
+   "pos": "18",
+   "grupo": "material",
+   "descripcion": "Brida WN 4\" #600 (R1, R2) · Ø 4\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 4\" · 600 · SA-105 · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Recipiente FC (HD)",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "4\"",
+    "serie": "600",
+    "extremos": "BW",
+    "tipo": "wn",
+    "schedule": "160",
+    "cara": "RF",
+    "norma": "B16.5"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 56.37,
+     "proveedor": "planilla de costo ITT (proveedor sin nombre) · BRI-01305",
+     "codigo": "BRI-01305",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
+     "coincide": "similar",
+     "diferencia": "schedule: 80 (pedido 160); material: A105 (no pedido); norma: sin dato (pedido B16.5)"
+    }
+   ]
+  },
+  {
+   "id": "M19",
+   "pos": "19",
+   "grupo": "material",
+   "descripcion": "Brida ciega 4\" #600 (R1, R2) · Ø 4\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 4\" · 600 · SA-105 ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Recipiente FC (HD)",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "4\"",
+    "serie": "600",
+    "tipo": "ciega",
+    "cara": "RF",
+    "norma": "B16.5"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 115.0,
+     "proveedor": "planilla de costo ITT (proveedor sin nombre) · BRI-04942",
+     "codigo": "BRI-04942",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
+     "coincide": "similar",
+     "diferencia": "material: A105 (no pedido); norma: sin dato (pedido B16.5)"
+    }
+   ]
+  },
+  {
+   "id": "M20",
+   "pos": "20",
+   "grupo": "material",
+   "descripcion": "Brida WN 2\" #600 (boquillas B2, B3, D, J1, J2, L1–L12, P1, P2, S) · Ø 2\"",
+   "cantidad": 20.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 600 · SA-105 · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Recipiente FC (HD nota 19: mín. Sch 160)",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "2\"",
+    "serie": "600",
+    "extremos": "BW",
+    "tipo": "wn",
+    "schedule": "160",
+    "cara": "RF",
+    "norma": "B16.5"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 25.6,
+     "proveedor": "OIL METAL · BRI-01255",
+     "codigo": "BRI-01255",
+     "origen": "fuentes_originales/cotizacion_elementos_equipos_2026-03.xlsx · rubro BRIDAS",
+     "fecha": "2025-07-03",
+     "coincide": "similar",
+     "diferencia": "material: A105 (no pedido); norma: sin dato (pedido B16.5)"
+    }
+   ]
+  },
+  {
+   "id": "M21",
+   "pos": "21",
+   "grupo": "material",
+   "descripcion": "Caño cuello 10\" Sch 160 (A, B1) · Ø 10\"",
+   "cantidad": 0.6,
+   "unidad": "m",
+   "especificacion": "Plano: 10\" · 160 · SA-106 Gr. B ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Recipiente FC",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "10\"",
+    "schedule": "160",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 368.2,
+     "proveedor": "Renard (cód. 1196) · CAN-01414",
+     "codigo": "CAN-01414",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1196",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "material: A106 B (no pedido)"
+    }
+   ]
+  },
+  {
+   "id": "M21B",
+   "pos": "21b",
+   "grupo": "material",
+   "descripcion": "Completar barra de 12 m de la pos 21 (compra mínima; sobrante, no va en el equipo)",
+   "cantidad": 5.4,
+   "unidad": "m",
+   "especificacion": "1 barra(s) de 12 m para 1,2 m en 2 equipo(s); por equipo 5,4 m",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "10\"",
+    "schedule": "160",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 368.2,
+     "proveedor": "Renard (cód. 1196) · CAN-01414",
+     "codigo": "CAN-01414",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1196",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "material: A106 B (no pedido)"
+    }
+   ]
+  },
+  {
+   "id": "M22",
+   "pos": "22",
+   "grupo": "material",
+   "descripcion": "Caño cuello 4\" Sch 160 (R1, R2) · Ø 4\"",
+   "cantidad": 0.4,
+   "unidad": "m",
+   "especificacion": "Plano: 4\" · 160 · SA-106 Gr. B ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Recipiente FC",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "4\"",
+    "schedule": "160",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 71.85,
+     "proveedor": "Renard (cód. 1163) · CAN-01494",
+     "codigo": "CAN-01494",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1163",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "material: A106 B (no pedido)"
+    }
+   ]
+  },
+  {
+   "id": "M22B",
+   "pos": "22b",
+   "grupo": "material",
+   "descripcion": "Completar barra de 12 m de la pos 22 (compra mínima; sobrante, no va en el equipo)",
+   "cantidad": 5.6,
+   "unidad": "m",
+   "especificacion": "1 barra(s) de 12 m para 0,8 m en 2 equipo(s); por equipo 5,6 m",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "4\"",
+    "schedule": "160",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 71.85,
+     "proveedor": "Renard (cód. 1163) · CAN-01494",
+     "codigo": "CAN-01494",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1163",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "material: A106 B (no pedido)"
+    }
+   ]
+  },
+  {
+   "id": "M23",
+   "pos": "23",
+   "grupo": "material",
+   "descripcion": "Caño cuello 2\" Sch 160 (20 boquillas) · Ø 2\"",
+   "cantidad": 4.0,
+   "unidad": "m",
+   "especificacion": "Plano: 2\" · 160 · SA-106 Gr. B ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Recipiente FC",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "2\"",
+    "schedule": "160",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 112.75,
+     "proveedor": "sin proveedor en planilla · CAN-02628",
+     "codigo": "CAN-02628",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECHINT\\12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado · 4.Armado de la Oferta Comercial/OFERTA REV A/LM costo Desarenador rev ventas REV. 1.xlsx",
+     "fecha": "2025-12-23",
+     "coincide": "similar",
+     "diferencia": ""
+    }
+   ]
+  },
+  {
+   "id": "M23B",
+   "pos": "23b",
+   "grupo": "material",
+   "descripcion": "Completar barra de 6 m de la pos 23 (compra mínima; sobrante, no va en el equipo)",
+   "cantidad": 2.0,
+   "unidad": "m",
+   "especificacion": "2 barra(s) de 6 m para 8 m en 2 equipo(s); por equipo 2 m",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "2\"",
+    "schedule": "160",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 112.75,
+     "proveedor": "sin proveedor en planilla · CAN-02628",
+     "codigo": "CAN-02628",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECHINT\\12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado · 4.Armado de la Oferta Comercial/OFERTA REV A/LM costo Desarenador rev ventas REV. 1.xlsx",
+     "fecha": "2025-12-23",
+     "coincide": "similar",
+     "diferencia": ""
+    }
+   ]
+  },
+  {
+   "id": "M24",
+   "pos": "24",
+   "grupo": "material",
+   "descripcion": "Caño sin costura BE 10\" Sch 80 ASTM A106 Gr. B · Ø 10\"",
+   "cantidad": 16.0,
+   "unidad": "m",
+   "especificacion": "Plano: 10\" · 80 · ASTM A106 Gr. B · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32: Entrada 10\"-GH-1105/0176, salida 10\"-GH-0269 y by-pass 10\"-GH-0297 (ajustado a los pesos del plano: pos. 2001 + 2002 = 3.979 kg)",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "10\"",
+    "schedule": "80",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 168.01,
+     "proveedor": "Grupo Provemet · CAN-01420",
+     "codigo": "CAN-01420",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288974_canos_2026-10-29.pdf",
+     "fecha": "2026-10-29",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M24B",
+   "pos": "24b",
+   "grupo": "material",
+   "descripcion": "Completar barra de 12 m de la pos 24 (compra mínima; sobrante, no va en el equipo)",
+   "cantidad": 2.0,
+   "unidad": "m",
+   "especificacion": "3 barra(s) de 12 m para 32 m en 2 equipo(s); por equipo 2 m",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "10\"",
+    "schedule": "80",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 168.01,
+     "proveedor": "Grupo Provemet · CAN-01420",
+     "codigo": "CAN-01420",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288974_canos_2026-10-29.pdf",
+     "fecha": "2026-10-29",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M25",
+   "pos": "25",
+   "grupo": "material",
+   "descripcion": "Caño sin costura BE 4\" Sch 80 ASTM A106 Gr. B · Ø 4\"",
+   "cantidad": 5.0,
+   "unidad": "m",
+   "especificacion": "Plano: 4\" · 80 · ASTM A106 Gr. B · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32: BDV 4\"-GH-0750",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "4\"",
+    "schedule": "80",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 39.07,
+     "proveedor": "Grupo Provemet · CAN-01497",
+     "codigo": "CAN-01497",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288974_canos_2026-10-29.pdf",
+     "fecha": "2026-10-29",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M25B",
+   "pos": "25b",
+   "grupo": "material",
+   "descripcion": "Completar barra de 12 m de la pos 25 (compra mínima; sobrante, no va en el equipo)",
+   "cantidad": 1.0,
+   "unidad": "m",
+   "especificacion": "1 barra(s) de 12 m para 10 m en 2 equipo(s); por equipo 1 m",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "4\"",
+    "schedule": "80",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 39.07,
+     "proveedor": "Grupo Provemet · CAN-01497",
+     "codigo": "CAN-01497",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288974_canos_2026-10-29.pdf",
+     "fecha": "2026-10-29",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M26",
+   "pos": "26",
+   "grupo": "material",
+   "descripcion": "Caño sin costura BE 4\" Sch 80 ASTM A333 Gr. 6 · Ø 4\"",
+   "cantidad": 1.0,
+   "unidad": "m",
+   "especificacion": "Plano: 4\" · 80 · ASTM A333 Gr. 6 · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CK31: 4\"-V-0752 aguas abajo de RO-301",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "4\"",
+    "schedule": "80",
+    "material": "A333",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M27",
+   "pos": "27",
+   "grupo": "material",
+   "descripcion": "Caño sin costura BE 6\" Sch 80 ASTM A333 Gr. 6 · Ø 6\"",
+   "cantidad": 2.0,
+   "unidad": "m",
+   "especificacion": "Plano: 6\" · 80 · ASTM A333 Gr. 6 · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CK31: Tramo de VF-338",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "6\"",
+    "schedule": "80",
+    "material": "A333",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M28",
+   "pos": "28",
+   "grupo": "material",
+   "descripcion": "Caño sin costura BE 8\" Sch 40 ASTM A333 Gr. 6 · Ø 8\"",
+   "cantidad": 6.0,
+   "unidad": "m",
+   "especificacion": "Plano: 8\" · 40 · ASTM A333 Gr. 6 · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CK11: Colector de venteo 8\"-V-0268 (plano: Sch 40; la clase pide Sch 20: ITT toma Sch 40)",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "8\"",
+    "schedule": "40",
+    "material": "A333",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M29",
+   "pos": "29",
+   "grupo": "material",
+   "descripcion": "Caño sin costura BE 6\" Sch 40 ASTM A333 Gr. 6 · Ø 6\"",
+   "cantidad": 6.0,
+   "unidad": "m",
+   "especificacion": "Plano: 6\" · 40 · ASTM A333 Gr. 6 · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CK11: Salidas de PSV 6\"-V-0265/0266",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "6\"",
+    "schedule": "40",
+    "material": "A333",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M30",
+   "pos": "30",
+   "grupo": "material",
+   "descripcion": "Caño sin costura BE 3\" Sch 40 ASTM A333 Gr. 6 · Ø 3\"",
+   "cantidad": 1.0,
+   "unidad": "m",
+   "especificacion": "Plano: 3\" · 40 · ASTM A333 Gr. 6 · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CK11: Salidas de PSV (tramos 3\")",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "3\"",
+    "schedule": "40",
+    "material": "A333",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M31",
+   "pos": "31",
+   "grupo": "material",
+   "descripcion": "Caño sin costura BE 2\" Sch 160 ASTM A106 Gr. B · Ø 2\"",
+   "cantidad": 33.0,
+   "unidad": "m",
+   "especificacion": "Plano: 2\" · 160 · ASTM A106 Gr. B · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32: PSV 2\"-V-0262/0263, condensado LH-0271/0272/0273, drenaje PD-0275, puentes de nivel, by-pass de entrada",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "2\"",
+    "schedule": "160",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 24.67,
+     "proveedor": "planilla de costo ITT · CAN-01454",
+     "codigo": "CAN-01454",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx",
+     "fecha": "2026-06-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M32",
+   "pos": "32",
+   "grupo": "material",
+   "descripcion": "Caño sin costura PE 1\" Sch 160 ASTM A106 Gr. B · Ø 1\"",
+   "cantidad": 2.0,
+   "unidad": "m",
+   "especificacion": "Plano: 1\" · 160 · ASTM A106 Gr. B · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32: Entradas de PSV y venteo manual",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "1\"",
+    "schedule": "160",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 11.3,
+     "proveedor": "Renard (cód. 1129) · CAN-01392",
+     "codigo": "CAN-01392",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1129",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M32B",
+   "pos": "32b",
+   "grupo": "material",
+   "descripcion": "Completar barra de 6 m de la pos 32 (compra mínima; sobrante, no va en el equipo)",
+   "cantidad": 1.0,
+   "unidad": "m",
+   "especificacion": "1 barra(s) de 6 m para 4 m en 2 equipo(s); por equipo 1 m",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "1\"",
+    "schedule": "160",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 11.3,
+     "proveedor": "Renard (cód. 1129) · CAN-01392",
+     "codigo": "CAN-01392",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 1129",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M33",
+   "pos": "33",
+   "grupo": "material",
+   "descripcion": "Caño sin costura PE 1\" Sch 80 ASTM A333 Gr. 6 · Ø 1\"",
+   "cantidad": 3.0,
+   "unidad": "m",
+   "especificacion": "Plano: 1\" · 80 · ASTM A333 Gr. 6 · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CK11: Venteo 1\"-V-0267",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "1\"",
+    "schedule": "80",
+    "material": "A333",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M34",
+   "pos": "34",
+   "grupo": "material",
+   "descripcion": "Caño sin costura BE 2\" Sch 40 ASTM A106 Gr. B · Ø 2\"",
+   "cantidad": 17.0,
+   "unidad": "m",
+   "especificacion": "Plano: 2\" · 40 · ASTM A106 Gr. B · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CA11: Drenaje abierto OD-0276, aire IA-0601, drenaje cerrado PD-0274",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "2\"",
+    "schedule": "40",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 12.1,
+     "proveedor": "planilla de costo ITT · CAN-01459",
+     "codigo": "CAN-01459",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx",
+     "fecha": "2026-06-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M34B",
+   "pos": "34b",
+   "grupo": "material",
+   "descripcion": "Completar barra de 6 m de la pos 34 (compra mínima; sobrante, no va en el equipo)",
+   "cantidad": 1.0,
+   "unidad": "m",
+   "especificacion": "6 barra(s) de 6 m para 34 m en 2 equipo(s); por equipo 1 m",
+   "atributos": {
+    "familia": "CAN",
+    "diametro": "2\"",
+    "schedule": "40",
+    "material": "A106 B",
+    "extremos": "BW",
+    "costura": "sin costura"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 12.1,
+     "proveedor": "planilla de costo ITT · CAN-01459",
+     "codigo": "CAN-01459",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx",
+     "fecha": "2026-06-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M35",
+   "pos": "35",
+   "grupo": "material",
+   "descripcion": "Niples sin costura NPT 1/2\" y 3/4\" Sch 160 ASTM A106 Gr. B · Ø 1/2\"",
+   "cantidad": 40.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1/2\" · 160 · ASTM A106 Gr. B · NPT · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Venteos, drenajes e instrumentos (unidades)",
+   "atributos": {
+    "familia": "NIP",
+    "diametro": "0.5\"",
+    "schedule": "160",
+    "material": "A106 B",
+    "extremos": "NPT"
+   },
+   "faltan_datos": [
+    "largo_mm"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 5.66,
+     "proveedor": "Grupo Provemet · NIP-03365",
+     "codigo": "NIP-03365",
+     "origen": "Grupo_Provemet_Cotizacion_0000289909_TAVAL_SA.pdf",
+     "fecha": "2026-11-05",
+     "coincide": "similar",
+     "diferencia": "largo_mm: 100 (no pedido)"
+    }
+   ]
+  },
+  {
+   "id": "M36",
+   "pos": "36",
+   "grupo": "material",
+   "descripcion": "Codo 90° RL BW 10\" Sch 80 ASTM A234 WPB · Ø 10\"",
+   "cantidad": 8.0,
+   "unidad": "un",
+   "especificacion": "Plano: 10\" · 80 · ASTM A234 WPB · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "10\"",
+    "schedule": "80",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "codo 90"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 1086.0,
+     "proveedor": "Renard (cód. 4210) · ABW-00090",
+     "codigo": "ABW-00090",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 4210",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M37",
+   "pos": "37",
+   "grupo": "material",
+   "descripcion": "Te normal BW 10\" Sch 80 ASTM A234 WPB · Ø 10\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 10\" · 80 · ASTM A234 WPB · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "10\"",
+    "schedule": "80",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "tee"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 1759.96,
+     "proveedor": "Renard (cód. 4231) · ABW-00345",
+     "codigo": "ABW-00345",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 4231",
+     "fecha": "2025-12-26",
+     "coincide": "similar",
+     "diferencia": "diametro2: 4\" (no pedido)"
+    }
+   ]
+  },
+  {
+   "id": "M38",
+   "pos": "38",
+   "grupo": "material",
+   "descripcion": "Te de reducción BW (derivación de la BDV; tabla de derivaciones CE32: código 3) 10\" × 4\" Sch 80 ASTM A234 WPB · Ø 10\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 10\" · 80 · ASTM A234 WPB · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32",
+   "atributos": {
+    "familia": "OTR",
+    "diametro": "10\"",
+    "schedule": "80",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "tee reduccion",
+    "diametro2": "4\""
+   },
+   "faltan_datos": [
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M39",
+   "pos": "39",
+   "grupo": "material",
+   "descripcion": "Codo 90° RL BW 4\" Sch 80 ASTM A234 WPB · Ø 4\"",
+   "cantidad": 3.0,
+   "unidad": "un",
+   "especificacion": "Plano: 4\" · 80 · ASTM A234 WPB · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "4\"",
+    "schedule": "80",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "codo 90"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 41.41,
+     "proveedor": "planilla de costo ITT · ABW-00112",
+     "codigo": "ABW-00112",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx",
+     "fecha": "2026-06-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M40",
+   "pos": "40",
+   "grupo": "material",
+   "descripcion": "Reducción concéntrica BW 6\" × 4\" Sch 80 ASTM A420 WPL6 · Ø 6\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 6\" · 80 · ASTM A420 WPL6 · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CK31",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "6\"",
+    "diametro2": "4\"",
+    "schedule": "80",
+    "extremos": "BW",
+    "tipo": "reduccion concentrica"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M41",
+   "pos": "41",
+   "grupo": "material",
+   "descripcion": "Codo 90° RL BW 8\" Sch 40 ASTM A420 WPL6 · Ø 8\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 8\" · 40 · ASTM A420 WPL6 · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CK11",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "8\"",
+    "schedule": "40",
+    "extremos": "BW",
+    "tipo": "codo 90"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M42",
+   "pos": "42",
+   "grupo": "material",
+   "descripcion": "Te normal BW 8\" Sch 40 ASTM A420 WPL6 · Ø 8\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 8\" · 40 · ASTM A420 WPL6 · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CK11",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "8\"",
+    "schedule": "40",
+    "extremos": "BW",
+    "tipo": "tee"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M43",
+   "pos": "43",
+   "grupo": "material",
+   "descripcion": "Codo 90° RL BW 6\" Sch 40 ASTM A420 WPL6 · Ø 6\"",
+   "cantidad": 4.0,
+   "unidad": "un",
+   "especificacion": "Plano: 6\" · 40 · ASTM A420 WPL6 · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CK11",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "6\"",
+    "schedule": "40",
+    "extremos": "BW",
+    "tipo": "codo 90"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M44",
+   "pos": "44",
+   "grupo": "material",
+   "descripcion": "Reducción concéntrica BW 6\" × 3\" Sch 40 ASTM A420 WPL6 · Ø 6\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 6\" · 40 · ASTM A420 WPL6 · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CK11",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "6\"",
+    "diametro2": "3\"",
+    "schedule": "40",
+    "extremos": "BW",
+    "tipo": "reduccion concentrica"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M45",
+   "pos": "45",
+   "grupo": "material",
+   "descripcion": "Reducción concéntrica BW 3\" × 2\" Sch 40 ASTM A420 WPL6 · Ø 3\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3\" · 40 · ASTM A420 WPL6 · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CK11",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "3\"",
+    "diametro2": "2\"",
+    "schedule": "40",
+    "extremos": "BW",
+    "tipo": "reduccion concentrica"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M46",
+   "pos": "46",
+   "grupo": "material",
+   "descripcion": "Codo 90° RL BW 2\" Sch 160 ASTM A234 WPB · Ø 2\"",
+   "cantidad": 30.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 160 · ASTM A234 WPB · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "2\"",
+    "schedule": "160",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "codo 90"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 96.19,
+     "proveedor": "Renard (cód. 4043) · ABW-00099",
+     "codigo": "ABW-00099",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 4043",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M47",
+   "pos": "47",
+   "grupo": "material",
+   "descripcion": "Te normal BW 2\" Sch 160 ASTM A234 WPB · Ø 2\"",
+   "cantidad": 6.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 160 · ASTM A234 WPB · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "2\"",
+    "schedule": "160",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "tee"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 143.93,
+     "proveedor": "Cintolo · ABW-02323",
+     "codigo": "ABW-02323",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\13- TRAMPAS TSR TSL de 16- 12 - 8 pGSD Evento 12681 · 4.Armado de la Oferta Comercial/Cotización Tecpetrol Trampas Lanz y Rec de 20x16 16x12 10x8 REV 1.xlsx",
+     "fecha": "2026-06-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M48",
+   "pos": "48",
+   "grupo": "material",
+   "descripcion": "Reducción concéntrica BW 2\" × 1\" Sch 160 ASTM A234 WPB · Ø 2\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 160 · ASTM A234 WPB · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "2\"",
+    "diametro2": "1\"",
+    "schedule": "160",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "reduccion concentrica"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 35.0,
+     "proveedor": "no dice · ABW-02318",
+     "codigo": "ABW-02318",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\10- Trampas 6x8 Trampas lanzadora - receptora LT2E · 4.Armado de la Oferta Comercial/Estructura de costo- Trampas 6x8 y 6x4.xlsx.txt",
+     "fecha": "2025-12-10",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M49",
+   "pos": "49",
+   "grupo": "material",
+   "descripcion": "Casquete BW 2\" Sch 160 ASTM A234 WPB · Ø 2\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 160 · ASTM A234 WPB · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "2\"",
+    "schedule": "160",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "casquete"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "El más parecido es de otro diámetro (26\") (ABW-00024 Casquete Semielíptico, ASTM A234-WPB 26\" SCH 1\", USD 222,47): no sirve como precio"
+    }
+   ]
+  },
+  {
+   "id": "M50",
+   "pos": "50",
+   "grupo": "material",
+   "descripcion": "Codo 90° SW 1\" 6000# ASTM A105 · Ø 1\"",
+   "cantidad": 4.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1\" · 160 · ASTM A105 · SW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32",
+   "atributos": {
+    "familia": "AFO",
+    "diametro": "1\"",
+    "serie": "6000",
+    "schedule": "160",
+    "material": "A105",
+    "extremos": "SW",
+    "tipo": "codo 90"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 16.94,
+     "proveedor": "planilla de costo ITT (proveedor sin nombre) · AFO-04935",
+     "codigo": "AFO-04935",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
+     "coincide": "similar",
+     "diferencia": "diametro: 0.75\" (pedido 1\"); schedule: sin dato (pedido 160); precio escalado por diámetro (1\" ÷ 0,75\")^1,5 = × 1,54"
+    }
+   ]
+  },
+  {
+   "id": "M51",
+   "pos": "51",
+   "grupo": "material",
+   "descripcion": "Codo 90° SW 1\" 3000# ASTM A350 LF2 · Ø 1\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1\" · 80 · ASTM A350 LF2 · SW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CK11",
+   "atributos": {
+    "familia": "AFO",
+    "diametro": "1\"",
+    "serie": "3000",
+    "schedule": "80",
+    "material": "A350 LF2",
+    "extremos": "SW",
+    "tipo": "codo 90"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M52",
+   "pos": "52",
+   "grupo": "material",
+   "descripcion": "Codo 90° RL BW 2\" Sch 40 ASTM A234 WPB · Ø 2\"",
+   "cantidad": 10.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 40 · ASTM A234 WPB · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CA11",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "2\"",
+    "schedule": "40",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "codo 90"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 6.08,
+     "proveedor": "Renard (cód. 3397) · ABW-00100",
+     "codigo": "ABW-00100",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3397",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M53",
+   "pos": "53",
+   "grupo": "material",
+   "descripcion": "Te normal BW 2\" Sch 40 ASTM A234 WPB · Ø 2\"",
+   "cantidad": 6.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 40 · ASTM A234 WPB · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CA11",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "2\"",
+    "schedule": "40",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "tee"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 13.4,
+     "proveedor": "Renard (cód. 3463) · ABW-00370",
+     "codigo": "ABW-00370",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3463",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M54",
+   "pos": "54",
+   "grupo": "material",
+   "descripcion": "Casquete BW 2\" Sch 40 ASTM A234 WPB · Ø 2\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 40 · ASTM A234 WPB · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CA11",
+   "atributos": {
+    "familia": "ABW",
+    "diametro": "2\"",
+    "schedule": "40",
+    "material": "A234 WPB",
+    "extremos": "BW",
+    "tipo": "casquete"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 5.46,
+     "proveedor": "Renard (cód. 3430) · ABW-00018",
+     "codigo": "ABW-00018",
+     "origen": "fuentes_originales/renar_lista_2025-12.xlsx · código 3430",
+     "fecha": "2025-12-26",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M55",
+   "pos": "55",
+   "grupo": "material",
+   "descripcion": "Thredolet 6000# (CE32: serie de olets de la clase; a verificar) 1/2\" NPT ASTM A105 · Ø 1/2\"",
+   "cantidad": 14.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1/2\" · 6000 · ASTM A105 · NPT · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32",
+   "atributos": {
+    "familia": "AFO",
+    "diametro": "0.5\"",
+    "serie": "6000",
+    "material": "A105",
+    "extremos": "NPT",
+    "tipo": "threadolet"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M56",
+   "pos": "56",
+   "grupo": "material",
+   "descripcion": "Thredolet 3000# 1/2\" NPT ASTM A105 · Ø 1/2\"",
+   "cantidad": 6.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1/2\" · 3000 · ASTM A105 · NPT · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CA11",
+   "atributos": {
+    "familia": "AFO",
+    "diametro": "0.5\"",
+    "serie": "3000",
+    "material": "A105",
+    "extremos": "NPT",
+    "tipo": "threadolet"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 28.93,
+     "proveedor": "Stock ITT (cód. ACS015BXCU050) · AFO-00928",
+     "codigo": "AFO-00928",
+     "origen": "fuentes_originales/stock_valorizado_2024-11.xlsx · código ACS015BXCU050",
+     "fecha": "2024-11-01",
+     "coincide": "similar",
+     "diferencia": "extremos: sin dato (pedido NPT)"
+    }
+   ]
+  },
+  {
+   "id": "M57",
+   "pos": "57",
+   "grupo": "material",
+   "descripcion": "Thredolet 6000# (CE32; a verificar) 3/4\" NPT ASTM A105 · Ø 3/4\"",
+   "cantidad": 8.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" · 6000 · ASTM A105 · NPT · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32",
+   "atributos": {
+    "familia": "AFO",
+    "diametro": "0.75\"",
+    "serie": "6000",
+    "material": "A105",
+    "extremos": "NPT",
+    "tipo": "threadolet"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M58",
+   "pos": "58",
+   "grupo": "material",
+   "descripcion": "Thredolet 3000# 3/4\" NPT ASTM A105 · Ø 3/4\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" · 3000 · ASTM A105 · NPT · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CA11",
+   "atributos": {
+    "familia": "AFO",
+    "diametro": "0.75\"",
+    "serie": "3000",
+    "material": "A105",
+    "extremos": "NPT",
+    "tipo": "threadolet"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 53.15,
+     "proveedor": "Stock ITT (cód. ACS015BXCU050) · AFO-00928",
+     "codigo": "AFO-00928",
+     "origen": "fuentes_originales/stock_valorizado_2024-11.xlsx · código ACS015BXCU050",
+     "fecha": "2024-11-01",
+     "coincide": "similar",
+     "diferencia": "diametro: 0.5\" (pedido 0.75\"); extremos: sin dato (pedido NPT); precio escalado por diámetro (0,75\" ÷ 0,5\")^1,5 = × 1,84"
+    }
+   ]
+  },
+  {
+   "id": "M59",
+   "pos": "59",
+   "grupo": "material",
+   "descripcion": "Tapón hexagonal 3000# 1/2\" y 3/4\" NPT ASTM A105 · Ø 1/2\" y 3/4\"",
+   "cantidad": 38.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1/2\" y 3/4\" · 3000/6000 · ASTM A105 · NPT · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32 / CA11",
+   "atributos": {
+    "familia": "AFO",
+    "diametro": "0.5\"",
+    "serie": "3000/6000",
+    "material": "A105",
+    "extremos": "NPT",
+    "tipo": "tapon"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M60",
+   "pos": "60",
+   "grupo": "material",
+   "descripcion": "Brida WN RF (válvulas de 10\" y límites EG y SG) 10\" #600 ASTM A105 · Ø 10\"",
+   "cantidad": 8.0,
+   "unidad": "un",
+   "especificacion": "Plano: 10\" · 600 · ASTM A105 · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "10\"",
+    "serie": "600",
+    "material": "A105",
+    "extremos": "BW/RF",
+    "tipo": "wn",
+    "cara": "RF",
+    "schedule": "80"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 301.86,
+     "proveedor": "Grupo Provemet · BRI-04996",
+     "codigo": "BRI-04996",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288978_bridas_2026-10-29.pdf",
+     "fecha": "2026-10-29",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M61",
+   "pos": "61",
+   "grupo": "material",
+   "descripcion": "Brida WN RF (entrada de BDV-301E) 4\" #600 ASTM A105 · Ø 4\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 4\" · 600 · ASTM A105 · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "4\"",
+    "serie": "600",
+    "material": "A105",
+    "extremos": "BW/RF",
+    "tipo": "wn",
+    "cara": "RF",
+    "schedule": "80"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 56.37,
+     "proveedor": "planilla de costo ITT (proveedor sin nombre) · BRI-01305",
+     "codigo": "BRI-01305",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M62",
+   "pos": "62",
+   "grupo": "material",
+   "descripcion": "Brida WN RF (salida de BDV-301E) 4\" #600 ASTM A350 LF2 · Ø 4\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 4\" · 600 · ASTM A350 LF2 · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CK31",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "4\"",
+    "serie": "600",
+    "material": "A350 LF2",
+    "extremos": "BW/RF",
+    "tipo": "wn",
+    "cara": "RF",
+    "schedule": "80"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M63",
+   "pos": "63",
+   "grupo": "material",
+   "descripcion": "Brida portaplaca WN RF (par, para RO-301) 4\" #600 ASTM A350 LF2 · Ø 4\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 4\" · 600 · ASTM A350 LF2 · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CK31 (B16.36)",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "4\"",
+    "serie": "600",
+    "material": "A350 LF2",
+    "extremos": "BW/RF",
+    "tipo": "portaplaca",
+    "cara": "RF",
+    "schedule": "80"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M64",
+   "pos": "64",
+   "grupo": "material",
+   "descripcion": "Brida WN RF 6\" #600 ASTM A350 LF2 · Ø 6\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 6\" · 600 · ASTM A350 LF2 · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CK31",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "6\"",
+    "serie": "600",
+    "material": "A350 LF2",
+    "extremos": "BW/RF",
+    "tipo": "wn",
+    "cara": "RF",
+    "schedule": "80"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M65",
+   "pos": "65",
+   "grupo": "material",
+   "descripcion": "Brida WN RF 6\" #150 ASTM A350 LF2 · Ø 6\"",
+   "cantidad": 4.0,
+   "unidad": "un",
+   "especificacion": "Plano: 6\" · 150 · ASTM A350 LF2 · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CK11",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "6\"",
+    "serie": "150",
+    "material": "A350 LF2",
+    "extremos": "BW/RF",
+    "tipo": "wn",
+    "cara": "RF",
+    "schedule": "40"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M66",
+   "pos": "66",
+   "grupo": "material",
+   "descripcion": "Brida WN RF (límite SV) 8\" #150 ASTM A350 LF2 · Ø 8\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 8\" · 150 · ASTM A350 LF2 · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CK11",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "8\"",
+    "serie": "150",
+    "material": "A350 LF2",
+    "extremos": "BW/RF",
+    "tipo": "wn",
+    "cara": "RF",
+    "schedule": "40"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M67",
+   "pos": "67",
+   "grupo": "material",
+   "descripcion": "Brida WN RF (salidas de PSV) 2\" #150 ASTM A350 LF2 · Ø 2\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 150 · ASTM A350 LF2 · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CK11",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "2\"",
+    "serie": "150",
+    "material": "A350 LF2",
+    "extremos": "BW/RF",
+    "tipo": "wn",
+    "cara": "RF",
+    "schedule": "40"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M68",
+   "pos": "68",
+   "grupo": "material",
+   "descripcion": "Brida WN RF (incluye el límite SL) 2\" #600 ASTM A105 · Ø 2\"",
+   "cantidad": 40.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 600 · ASTM A105 · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "2\"",
+    "serie": "600",
+    "material": "A105",
+    "extremos": "BW/RF",
+    "tipo": "wn",
+    "cara": "RF",
+    "schedule": "160"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 25.6,
+     "proveedor": "OIL METAL · BRI-01255",
+     "codigo": "BRI-01255",
+     "origen": "fuentes_originales/cotizacion_elementos_equipos_2026-03.xlsx · rubro BRIDAS",
+     "fecha": "2025-07-03",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M69",
+   "pos": "69",
+   "grupo": "material",
+   "descripcion": "Brida WN RF (límite DC) 2\" #150 ASTM A105 · Ø 2\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 150 · ASTM A105 · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CA11",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "2\"",
+    "serie": "150",
+    "material": "A105",
+    "extremos": "BW/RF",
+    "tipo": "wn",
+    "cara": "RF",
+    "schedule": "160"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 16.26,
+     "proveedor": "FRANCOVIGH · BRI-01243",
+     "codigo": "BRI-01243",
+     "origen": "fuentes_originales/cotizacion_elementos_equipos_2026-03.xlsx · rubro BRIDAS",
+     "fecha": "2025-06-25",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M70",
+   "pos": "70",
+   "grupo": "material",
+   "descripcion": "Brida WN RF (VF-358 y límites AI y DA) 2\" #150 ASTM A105 · Ø 2\"",
+   "cantidad": 4.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 150 · ASTM A105 · BW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CA11",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "2\"",
+    "serie": "150",
+    "material": "A105",
+    "extremos": "BW/RF",
+    "tipo": "wn",
+    "cara": "RF",
+    "schedule": "40"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 11.91,
+     "proveedor": "Grupo Provemet · BRI-01245",
+     "codigo": "BRI-01245",
+     "origen": "fuentes_originales/listas_vendedor/2026-10-30/provemet_cotizacion_288979_bridas_2026-10-29.pdf",
+     "fecha": "2026-10-29",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "M71",
+   "pos": "71",
+   "grupo": "material",
+   "descripcion": "Brida SW RF 1\" #600 ASTM A105 · Ø 1\"",
+   "cantidad": 5.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1\" · 600 · ASTM A105 · SW · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "1\"",
+    "serie": "600",
+    "material": "A105",
+    "extremos": "SW/RF",
+    "tipo": "sw",
+    "cara": "RF",
+    "schedule": "160"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 9.81,
+     "proveedor": "Complemet · BRI-02504",
+     "codigo": "BRI-02504",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\70- PUENTES DE MEDICION 2 PULGADAS · 4.Armado de la Oferta Comercial/OFERTA/REV 1- OFERTA MEJORADA/Cot Puente Gas Lift SAP 1000653143 rev. 2 - PC0.xlsx",
+     "fecha": "2026-06-25",
+     "coincide": "similar",
+     "diferencia": "diametro: 1.5\" (pedido 1\"); precio escalado por diámetro (1\" ÷ 1,5\")^1,5 = × 0,54"
+    }
+   ]
+  },
+  {
+   "id": "M72",
+   "pos": "72",
+   "grupo": "material",
+   "descripcion": "Brida ciega RF perforada y roscada 3/4\" NPT (P1, P2, J1, J2) 2\" #600 ASTM A105 · Ø 2\"",
+   "cantidad": 4.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 600 · ASTM A105 ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "0.75\"",
+    "serie": "600",
+    "material": "A105",
+    "extremos": "NPT/RF",
+    "tipo": "ciega",
+    "cara": "RF"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 15.7,
+     "proveedor": "RENARD · BRI-01033",
+     "codigo": "BRI-01033",
+     "origen": "fuentes_originales/cotizacion_elementos_equipos_2026-03.xlsx · rubro BRIDAS",
+     "fecha": "2025-07-11",
+     "coincide": "similar",
+     "diferencia": "diametro: 2\" (pedido 0.75\"); el último precio (24,05) se aparta más de 40% de la mediana de sus últimos precios: se usa la mediana 15,70"
+    }
+   ]
+  },
+  {
+   "id": "M73",
+   "pos": "73",
+   "grupo": "material",
+   "descripcion": "Esférica paso total (FB) 10\" #600 RF (VF-322) · Ø 10\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 10\" · 600 ·  · RF · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32: Bloqueo entrada de gas (LO). P&ID; con reductor (plano pos. 501)",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "10\"",
+    "serie": "600",
+    "extremos": "RF",
+    "tipo": "esferica",
+    "paso": "total"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 5634.0,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04428",
+     "codigo": "VAL-04428",
+     "origen": "taval_lista30_2025-09.xlsx · código BG62504R0104NR, hoja PT Guiada",
+     "fecha": "2025-09-01",
+     "coincide": "similar",
+     "diferencia": "material: A216 WCB (no pedido)"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M74",
+   "pos": "74",
+   "grupo": "material",
+   "descripcion": "Esférica paso total (FB) 10\" #600 RF (VF-337) · Ø 10\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 10\" · 600 ·  · RF · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32: Bloqueo salida de gas (LO). P&ID; con reductor",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "10\"",
+    "serie": "600",
+    "extremos": "RF",
+    "tipo": "esferica",
+    "paso": "total"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 5634.0,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04428",
+     "codigo": "VAL-04428",
+     "origen": "taval_lista30_2025-09.xlsx · código BG62504R0104NR, hoja PT Guiada",
+     "fecha": "2025-09-01",
+     "coincide": "similar",
+     "diferencia": "material: A216 WCB (no pedido)"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M75",
+   "pos": "75",
+   "grupo": "material",
+   "descripcion": "Esférica 10\" #600 RF (VF-339) · Ø 10\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 10\" · 600 ·  · RF · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32: By-pass del filtro (LC). P&ID; ITT: paso total, con reductor. El plano lista solo 1 válvula de 10\": van 3 por P&ID",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "10\"",
+    "serie": "600",
+    "extremos": "RF",
+    "tipo": "esferica"
+   },
+   "faltan_datos": [
+    "material",
+    "paso"
+   ],
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 4134.0,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04427",
+     "codigo": "VAL-04427",
+     "origen": "taval_lista30_2025-09.xlsx · código BG12504R0104NR, hoja PR Guiada",
+     "fecha": "2025-09-01",
+     "coincide": "similar",
+     "diferencia": "material: A216 WCB (no pedido); paso: reducido (no pedido)"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M76",
+   "pos": "76",
+   "grupo": "material",
+   "descripcion": "Esférica 2\" #600 RF (VF-323) · Ø 2\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 600 ·  · RF · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32: By-pass de VF-322 para presurizar (LC). P&ID",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "2\"",
+    "serie": "600",
+    "extremos": "RF",
+    "tipo": "esferica"
+   },
+   "faltan_datos": [
+    "material",
+    "paso"
+   ],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 200.0,
+     "proveedor": "sin proveedor en planilla · VAL-03174",
+     "codigo": "VAL-03174",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios · 4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx",
+     "fecha": "2025-12-18",
+     "coincide": "similar",
+     "diferencia": ""
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M77",
+   "pos": "77",
+   "grupo": "material",
+   "descripcion": "Globo 2\" #600 RF (VG-324) · Ø 2\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 600 ·  · RF · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32: Regulación de la presurización. P&ID",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "2\"",
+    "serie": "600",
+    "extremos": "RF",
+    "tipo": "globo"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 364.0,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04531",
+     "codigo": "VAL-04531",
+     "origen": "taval_lista30_2025-09.xlsx · código G000504R01010V, hoja Globo",
+     "fecha": "2025-09-01",
+     "coincide": "similar",
+     "diferencia": "material: A216 WCB (no pedido); trim: trim 10 (no pedido)"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M78",
+   "pos": "78",
+   "grupo": "material",
+   "descripcion": "Esférica paso total (FB) 2\" #600 RF (VF-327/328/329/330/331/332/333/334/335/336/359/360) · Ø 2\"",
+   "cantidad": 12.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 600 ·  · RF · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32: Bloqueo de instrumentos de nivel (L1 a L12). P&ID",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "2\"",
+    "serie": "600",
+    "extremos": "RF",
+    "tipo": "esferica",
+    "paso": "total"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 416.0,
+     "proveedor": "Válvulas TAVAL (cotización -35% -20% sobre lista) · VAL-03186",
+     "codigo": "VAL-03186",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt",
+     "fecha": "2026-02-19",
+     "coincide": "similar",
+     "diferencia": ""
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M79",
+   "pos": "79",
+   "grupo": "material",
+   "descripcion": "Esférica paso total (FB) 2\" #600 RF (VF-340 (LO) / VF-342 (LC)) · Ø 2\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 600 ·  · RF · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32: Bloqueo de entrada a PSV-301A/B. P&ID",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "2\"",
+    "serie": "600",
+    "extremos": "RF",
+    "tipo": "esferica",
+    "paso": "total"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 416.0,
+     "proveedor": "Válvulas TAVAL (cotización -35% -20% sobre lista) · VAL-03186",
+     "codigo": "VAL-03186",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\43- YPF- CM PUENTES DE PRODUCCION · 4.Armado de la Oferta Comercial/TAVAL- LM - Puentes de Producción YPF.xlsx.txt",
+     "fecha": "2026-02-19",
+     "coincide": "similar",
+     "diferencia": ""
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M80",
+   "pos": "80",
+   "grupo": "material",
+   "descripcion": "Esférica paso total (FB) 6\" #150 RF (VF-341 / VF-343) · Ø 6\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 6\" · 150 ·  · RF · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CK11 (baja temp.): Bloqueo de salida de PSV-301A/B (LO). P&ID",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "6\"",
+    "serie": "150",
+    "extremos": "RF",
+    "tipo": "esferica",
+    "paso": "total"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 740.0,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04474",
+     "codigo": "VAL-04474",
+     "origen": "taval_lista30_2025-09.xlsx · código BF61501R0104VP, hoja PT Flotante",
+     "fecha": "2025-09-01",
+     "coincide": "similar",
+     "diferencia": "material: A216 WCB (no pedido)"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M81",
+   "pos": "81",
+   "grupo": "material",
+   "descripcion": "Esférica 1\" #600 RF (VF-344) · Ø 1\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1\" · 600 ·  · RF · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32: Venteo manual (LC). P&ID",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "1\"",
+    "serie": "600",
+    "extremos": "RF",
+    "tipo": "esferica"
+   },
+   "faltan_datos": [
+    "material",
+    "paso"
+   ],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 162.0,
+     "proveedor": "sin proveedor en planilla · VAL-03169",
+     "codigo": "VAL-03169",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios · 4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx",
+     "fecha": "2025-12-18",
+     "coincide": "similar",
+     "diferencia": "paso: total (no pedido)"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M82",
+   "pos": "82",
+   "grupo": "material",
+   "descripcion": "Globo 1\" #600 RF (VG-345) · Ø 1\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1\" · 600 ·  · RF · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32: Venteo manual (regulación). P&ID",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "1\"",
+    "serie": "600",
+    "extremos": "RF",
+    "tipo": "globo"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 80.0,
+     "proveedor": "sin proveedor en planilla · VAL-03176",
+     "codigo": "VAL-03176",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios · 4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx",
+     "fecha": "2025-12-18",
+     "coincide": "similar",
+     "diferencia": ""
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M83",
+   "pos": "83",
+   "grupo": "material",
+   "descripcion": "Esférica paso total (FB) 6\" #600 RF (VF-338) · Ø 6\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 6\" · 600 ·  · RF · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CK31 (baja temp.): Bloqueo aguas abajo de BDV/RO (LO). P&ID",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "6\"",
+    "serie": "600",
+    "extremos": "RF",
+    "tipo": "esferica",
+    "paso": "total"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 2124.0,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04478",
+     "codigo": "VAL-04478",
+     "origen": "taval_lista30_2025-09.xlsx · código BG61504R0104NR, hoja PT Guiada",
+     "fecha": "2025-09-01",
+     "coincide": "similar",
+     "diferencia": "material: A216 WCB (no pedido)"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M84",
+   "pos": "84",
+   "grupo": "material",
+   "descripcion": "Esférica 2\" #600 RF (VF-346 / VF-347) · Ø 2\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 600 ·  · RF · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32: Bloqueo de LV-301D. P&ID",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "2\"",
+    "serie": "600",
+    "extremos": "RF",
+    "tipo": "esferica"
+   },
+   "faltan_datos": [
+    "material",
+    "paso"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M85",
+   "pos": "85",
+   "grupo": "material",
+   "descripcion": "Globo 2\" #600 RF (VG-204) · Ø 2\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 600 ·  · RF · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32: By-pass de LV-301D (P&ID nota 4: Cv ≤ Cv de la LV). P&ID",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "2\"",
+    "serie": "600",
+    "extremos": "RF",
+    "tipo": "globo"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 364.0,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04531",
+     "codigo": "VAL-04531",
+     "origen": "taval_lista30_2025-09.xlsx · código G000504R01010V, hoja Globo",
+     "fecha": "2025-09-01",
+     "coincide": "similar",
+     "diferencia": "material: A216 WCB (no pedido); trim: trim 10 (no pedido)"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M86",
+   "pos": "86",
+   "grupo": "material",
+   "descripcion": "Esférica 2\" #600 RF (VF-350 / VF-351) · Ø 2\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 600 ·  · RF · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32: Bloqueo de LV-301B. P&ID",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "2\"",
+    "serie": "600",
+    "extremos": "RF",
+    "tipo": "esferica"
+   },
+   "faltan_datos": [
+    "material",
+    "paso"
+   ],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 200.0,
+     "proveedor": "sin proveedor en planilla · VAL-03174",
+     "codigo": "VAL-03174",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios · 4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx",
+     "fecha": "2025-12-18",
+     "coincide": "similar",
+     "diferencia": ""
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M87",
+   "pos": "87",
+   "grupo": "material",
+   "descripcion": "Globo 2\" #600 RF (VG-353) · Ø 2\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 600 ·  · RF · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32: By-pass de LV-301B (nota 4). P&ID",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "2\"",
+    "serie": "600",
+    "extremos": "RF",
+    "tipo": "globo"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 364.0,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04531",
+     "codigo": "VAL-04531",
+     "origen": "taval_lista30_2025-09.xlsx · código G000504R01010V, hoja Globo",
+     "fecha": "2025-09-01",
+     "coincide": "similar",
+     "diferencia": "material: A216 WCB (no pedido); trim: trim 10 (no pedido)"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M88",
+   "pos": "88",
+   "grupo": "material",
+   "descripcion": "Retención 2\" #600 RF (VR-354) · Ø 2\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 600 ·  · RF · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32: Salida de condensado. P&ID",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "2\"",
+    "serie": "600",
+    "extremos": "RF",
+    "tipo": "retencion"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 244.0,
+     "proveedor": "ALT 2 -- ALV WAFER Ø2\" S-600 RF WCB INC X750 -- USD 196 · VAL-03175",
+     "codigo": "VAL-03175",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios · 4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx",
+     "fecha": "2025-12-18",
+     "coincide": "similar",
+     "diferencia": ""
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M89",
+   "pos": "89",
+   "grupo": "material",
+   "descripcion": "Esférica 2\" #600 RF (VF-355) · Ø 2\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 600 ·  · RF · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32: Bloqueo salida de condensado (límite). P&ID",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "2\"",
+    "serie": "600",
+    "extremos": "RF",
+    "tipo": "esferica"
+   },
+   "faltan_datos": [
+    "material",
+    "paso"
+   ],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 200.0,
+     "proveedor": "sin proveedor en planilla · VAL-03174",
+     "codigo": "VAL-03174",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios · 4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx",
+     "fecha": "2025-12-18",
+     "coincide": "similar",
+     "diferencia": ""
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M90",
+   "pos": "90",
+   "grupo": "material",
+   "descripcion": "Esférica 2\" #600 RF (VF-356) · Ø 2\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 600 ·  · RF · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32: Drenaje D (LC). P&ID",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "2\"",
+    "serie": "600",
+    "extremos": "RF",
+    "tipo": "esferica"
+   },
+   "faltan_datos": [
+    "material",
+    "paso"
+   ],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 200.0,
+     "proveedor": "sin proveedor en planilla · VAL-03174",
+     "codigo": "VAL-03174",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios · 4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx",
+     "fecha": "2025-12-18",
+     "coincide": "similar",
+     "diferencia": ""
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M91",
+   "pos": "91",
+   "grupo": "material",
+   "descripcion": "Retención 2\" #600 RF (VR-399) · Ø 2\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 600 ·  · RF · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32: Drenaje cerrado. P&ID",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "2\"",
+    "serie": "600",
+    "extremos": "RF",
+    "tipo": "retencion"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 244.0,
+     "proveedor": "ALT 2 -- ALV WAFER Ø2\" S-600 RF WCB INC X750 -- USD 196 · VAL-03175",
+     "codigo": "VAL-03175",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios · 4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx",
+     "fecha": "2025-12-18",
+     "coincide": "similar",
+     "diferencia": ""
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M92",
+   "pos": "92",
+   "grupo": "material",
+   "descripcion": "Globo 2\" #600 RF (VG-357) · Ø 2\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 600 ·  · RF · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32: Drenaje cerrado (regulación). P&ID",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "2\"",
+    "serie": "600",
+    "extremos": "RF",
+    "tipo": "globo"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 364.0,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04531",
+     "codigo": "VAL-04531",
+     "origen": "taval_lista30_2025-09.xlsx · código G000504R01010V, hoja Globo",
+     "fecha": "2025-09-01",
+     "coincide": "similar",
+     "diferencia": "material: A216 WCB (no pedido); trim: trim 10 (no pedido)"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M93",
+   "pos": "93",
+   "grupo": "material",
+   "descripcion": "Esférica 2\" #150 RF (VF-358) · Ø 2\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · 150 ·  · RF · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CA11: Entrada de aire de instrumentos. P&ID",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "2\"",
+    "serie": "150",
+    "extremos": "RF",
+    "tipo": "esferica"
+   },
+   "faltan_datos": [
+    "material",
+    "paso"
+   ],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 440.0,
+     "proveedor": "sin proveedor en planilla · VAL-03266",
+     "codigo": "VAL-03266",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios · 4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 303 y 304 #900 - PC0-C.xlsx",
+     "fecha": "2025-12-18",
+     "coincide": "similar",
+     "diferencia": "paso: total (no pedido)"
+    }
+   ]
+  },
+  {
+   "id": "M94",
+   "pos": "94",
+   "grupo": "material",
+   "descripcion": "Esférica paso total (FB) 1 1/2\" NPT (VF-325 / VF-326) · Ø 1 1/2\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1 1/2\" · NPT ·  · NPT · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32: Cupón CC-301 e inyección de químico (nota 3). P&ID",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "1.5\"",
+    "extremos": "NPT",
+    "tipo": "esferica",
+    "paso": "total"
+   },
+   "faltan_datos": [
+    "serie",
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "lista",
+     "precio": 80.68,
+     "proveedor": "Taval (Lista 30 × 0.52) · VAL-04901",
+     "codigo": "VAL-04901",
+     "origen": "taval_lista30_2025-09.xlsx · código , hoja PT Flot-NPT FORJADAS",
+     "fecha": "2025-09-01",
+     "coincide": "similar",
+     "diferencia": "serie: 2000 (no pedido); material: A105 (no pedido)"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M95",
+   "pos": "95",
+   "grupo": "material",
+   "descripcion": "Esférica 2000 WOG (TCH2N) 1/2\" NPT ((sin tag)) · Ø 1/2\"",
+   "cantidad": 23.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1/2\" · NPT ·  · NPT · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32 / CA11: Venteos de LIT (8), LG (4), PSV (4), CC-301 (1), aire IA1–IA5 + extremo (6). Las 1/2\" de PIT y PI son del manifold M2. P&ID; cantidad contada por ITT",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "0.5\"",
+    "extremos": "NPT",
+    "tipo": "esferica"
+   },
+   "faltan_datos": [
+    "serie",
+    "material",
+    "paso"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 33.75,
+     "proveedor": "Taval · VAL-04985",
+     "codigo": "VAL-04985",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
+     "coincide": "similar",
+     "diferencia": "serie: 2000 (no pedido)"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M96",
+   "pos": "96",
+   "grupo": "material",
+   "descripcion": "Esférica 2000 WOG (TCH2N) 3/4\" NPT ((sin tag)) · Ø 3/4\"",
+   "cantidad": 11.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" · NPT ·  · NPT · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32 / CA11: Drenajes de LV-301D (2) y LV-301B (2), entre VR-354 y VF-355 (1), PDIT (2), PIT (1), PI (1), colector de aire (1), OD1 (1). P&ID; cantidad contada por ITT",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "0.75\"",
+    "extremos": "NPT",
+    "tipo": "esferica"
+   },
+   "faltan_datos": [
+    "serie",
+    "material",
+    "paso"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 35.63,
+     "proveedor": "Taval · VAL-04986",
+     "codigo": "VAL-04986",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
+     "coincide": "similar",
+     "diferencia": "serie: 2000 (no pedido)"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M97",
+   "pos": "97",
+   "grupo": "material",
+   "descripcion": "LV-301D (+ LY-301D): Control, globo, actuador neumático, posicionador 4–20 mA HART 2\" #600 RF · Ø 2\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · #600 RF ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32: Control de nivel sección superior (falla cierra, FC). RI §10: no debe pasar más de 3.750 kg/h de gas en blow-by. P&ID; Cv por ITT con el proveedor",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "2\"",
+    "serie": "600",
+    "extremos": "RF",
+    "tipo": "control"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "El más parecido es de otro diámetro (1\") (VAL-03210 VALVULA DE CONTROL | Ø 1 - V. Control | RF | 600#, USD 2.000,00): no sirve como precio"
+    }
+   ]
+  },
+  {
+   "id": "M98",
+   "pos": "98",
+   "grupo": "material",
+   "descripcion": "LV-301B (+ LY-301B): Control, globo, actuador neumático, posicionador 4–20 mA HART 2\" #600 RF · Ø 2\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · #600 RF ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32: Control de nivel sección inferior (FC). Idem RI §10. P&ID",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "2\"",
+    "serie": "600",
+    "extremos": "RF",
+    "tipo": "control"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "El más parecido es de otro diámetro (1\") (VAL-03210 VALVULA DE CONTROL | Ø 1 - V. Control | RF | 600#, USD 2.000,00): no sirve como precio"
+    }
+   ]
+  },
+  {
+   "id": "M99",
+   "pos": "99",
+   "grupo": "material",
+   "descripcion": "SDV-301C: Esférica de corte, actuador neumático simple efecto, solenoide SV-301C, fines de carrera ZSO/ZSC-301C 2\" #600 RF · Ø 2\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · #600 RF ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32: Corte por SIS línea superior (FC). P&ID",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "2\"",
+    "serie": "600",
+    "extremos": "RF",
+    "tipo": "esferica"
+   },
+   "faltan_datos": [
+    "material",
+    "paso"
+   ],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 200.0,
+     "proveedor": "sin proveedor en planilla · VAL-03174",
+     "codigo": "VAL-03174",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios · 4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx",
+     "fecha": "2025-12-18",
+     "coincide": "similar",
+     "diferencia": ""
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M100",
+   "pos": "100",
+   "grupo": "material",
+   "descripcion": "SDV-301: Esférica de corte, actuador neumático simple efecto, solenoide SV-301, fines de carrera ZSO/ZSC-301 2\" #600 RF · Ø 2\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" · #600 RF ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32: Corte por SIS línea inferior (FC). P&ID",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "2\"",
+    "serie": "600",
+    "extremos": "RF",
+    "tipo": "esferica"
+   },
+   "faltan_datos": [
+    "material",
+    "paso"
+   ],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 200.0,
+     "proveedor": "sin proveedor en planilla · VAL-03174",
+     "codigo": "VAL-03174",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios · 4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx",
+     "fecha": "2025-12-18",
+     "coincide": "similar",
+     "diferencia": ""
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M101",
+   "pos": "101",
+   "grupo": "material",
+   "descripcion": "BDV-301E: Esférica de blowdown, actuador neumático, solenoide SV-301E, fines de carrera ZSO/ZSC-301E 4\" #600 RF · Ø 4\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 4\" · #600 RF ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32: Despresurización (falla abre, FO); comando HS-003. P&ID; P&ID nota 10",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "4\"",
+    "serie": "600",
+    "extremos": "RF",
+    "tipo": "esferica"
+   },
+   "faltan_datos": [
+    "material",
+    "paso"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1290.0,
+     "proveedor": "Taval · VAL-04992",
+     "codigo": "VAL-04992",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
+     "coincide": "similar",
+     "diferencia": "material: A216 WCB (no pedido)"
+    }
+   ],
+   "taval": true
+  },
+  {
+   "id": "M102",
+   "pos": "102",
+   "grupo": "material",
+   "descripcion": "PSV-301A / PSV-301B: Seguridad, API 526, orificio D 1\" × 2\" #600 RF × #150 RF · Ø 1\" × 2\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1\" × 2\" · #600 RF × #150 RF ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CE32 / CK11: Set 99 kg/cm2g, caso fuego (alcance del proveedor, RI §10). P&ID",
+   "atributos": {
+    "familia": "VAL",
+    "diametro": "1\"",
+    "serie": "150",
+    "extremos": "RF",
+    "tipo": "seguridad"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 845.44,
+     "proveedor": "Stock ITT (cód. INS0251REQA38) · VAL-02274",
+     "codigo": "VAL-02274",
+     "origen": "fuentes_originales/stock_valorizado_2024-11.xlsx · código INS0251REQA38",
+     "fecha": "2024-11-01",
+     "coincide": "similar",
+     "diferencia": "extremos: sin dato (pedido RF)"
+    }
+   ]
+  },
+  {
+   "id": "M103",
+   "pos": "103",
+   "grupo": "material",
+   "descripcion": "RO-301: Placa orificio de restricción con bridas portaplaca B16.36 4\" #600 RF · Ø 4\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 4\" · #600 RF ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: CK31 (baja temp.): Restricción del blowdown (dimensionamiento de AESA, RI §10). P&ID",
+   "atributos": {
+    "familia": "BRI",
+    "diametro": "4\"",
+    "serie": "600",
+    "extremos": "RF",
+    "tipo": "portaplaca",
+    "cara": "RF"
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M104",
+   "pos": "104",
+   "grupo": "material",
+   "descripcion": "LIT-301A: Transmisor de nivel por presión diferencial con sellos remotos (J0402)",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano:  ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: 2\" #600 RF ×2 · SIS (LALL-301A, I-27) · Sección inferior; traceado (nota 2); capilares cortos (nota 5); con bridas pancake AC + JD (P&ID nota 9)",
+   "atributos": {
+    "familia": "INS",
+    "tipo": "transmisor de nivel"
+   },
+   "faltan_datos": [
+    "rango",
+    "conexion"
+   ],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 1700.0,
+     "proveedor": "sin proveedor en planilla · INS-02685",
+     "codigo": "INS-02685",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios · 4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 303 y 304 #900 - PC0-C.xlsx",
+     "fecha": "2025-12-18",
+     "coincide": "similar",
+     "diferencia": ""
+    }
+   ]
+  },
+  {
+   "id": "M105",
+   "pos": "105",
+   "grupo": "material",
+   "descripcion": "LIT-301B: Transmisor de nivel DP con sellos remotos",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano:  ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: 2\" #600 RF ×2 · SCP (LIC-301B → LV-301B) · Sección inferior; con bridas pancake + JD (nota 9)",
+   "atributos": {
+    "familia": "INS",
+    "tipo": "transmisor de nivel"
+   },
+   "faltan_datos": [
+    "rango",
+    "conexion"
+   ],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 1700.0,
+     "proveedor": "sin proveedor en planilla · INS-02685",
+     "codigo": "INS-02685",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios · 4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 303 y 304 #900 - PC0-C.xlsx",
+     "fecha": "2025-12-18",
+     "coincide": "similar",
+     "diferencia": ""
+    }
+   ]
+  },
+  {
+   "id": "M106",
+   "pos": "106",
+   "grupo": "material",
+   "descripcion": "LIT-301C: Transmisor de nivel DP con sellos remotos",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano:  ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: 2\" #600 RF ×2 · SIS (LALL-301C, I-26) · Sección superior; con bridas pancake + JD (nota 9)",
+   "atributos": {
+    "familia": "INS",
+    "tipo": "transmisor de nivel"
+   },
+   "faltan_datos": [
+    "rango",
+    "conexion"
+   ],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 1700.0,
+     "proveedor": "sin proveedor en planilla · INS-02685",
+     "codigo": "INS-02685",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios · 4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 303 y 304 #900 - PC0-C.xlsx",
+     "fecha": "2025-12-18",
+     "coincide": "similar",
+     "diferencia": ""
+    }
+   ]
+  },
+  {
+   "id": "M107",
+   "pos": "107",
+   "grupo": "material",
+   "descripcion": "LIT-301D: Transmisor de nivel DP con sellos remotos",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano:  ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: 2\" #600 RF ×2 · SCP (LIC-301D → LV-301D) · Sección superior; con bridas pancake + JD (nota 9)",
+   "atributos": {
+    "familia": "INS",
+    "tipo": "transmisor de nivel"
+   },
+   "faltan_datos": [
+    "rango",
+    "conexion"
+   ],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 1700.0,
+     "proveedor": "sin proveedor en planilla · INS-02685",
+     "codigo": "INS-02685",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios · 4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 303 y 304 #900 - PC0-C.xlsx",
+     "fecha": "2025-12-18",
+     "coincide": "similar",
+     "diferencia": ""
+    }
+   ]
+  },
+  {
+   "id": "M108",
+   "pos": "108",
+   "grupo": "material",
+   "descripcion": "LG-301A: Indicador de nivel de vidrio (J0401), tipo reflex, con válvulas de bloqueo con bola de retención",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano:  ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: 2\" #600 RF ×2 · Local · Sección inferior. ITT: reflex (HD-J0401-01)",
+   "atributos": {
+    "familia": "INS",
+    "tipo": "indicador de nivel de vidrio"
+   },
+   "faltan_datos": [
+    "rango",
+    "conexion"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M109",
+   "pos": "109",
+   "grupo": "material",
+   "descripcion": "LG-301B: Indicador de nivel de vidrio tipo reflex",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano:  ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: 2\" #600 RF ×2 · Local · Sección superior",
+   "atributos": {
+    "familia": "INS",
+    "tipo": "indicador de nivel de vidrio tipo reflex"
+   },
+   "faltan_datos": [
+    "rango",
+    "conexion"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M110",
+   "pos": "110",
+   "grupo": "material",
+   "descripcion": "PDIT-301: Transmisor de presión diferencial (J0304) con manifold de 5 vías (M5)",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano:  ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: 1/2\" NPT · SCP (PDI/PDAH-301) · Ensuciamiento de cartuchos; tomas J1/J2",
+   "atributos": {
+    "familia": "INS",
+    "tipo": "transmisor de presion"
+   },
+   "faltan_datos": [
+    "rango",
+    "conexion"
+   ],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 856.63,
+     "proveedor": "ABB · INS-02708",
+     "codigo": "INS-02708",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\PAMPA ENERGIA\\7- Licitacion contrato Marco Skid PAD Rincon de Aranda · 4.Armado de la Oferta Comercial/Cot Skid Manifolds Colectores RDA Contrato Marco (2da RDA).xlsx.",
+     "fecha": "2026-08-14",
+     "coincide": "similar",
+     "diferencia": ""
+    }
+   ]
+  },
+  {
+   "id": "M111",
+   "pos": "111",
+   "grupo": "material",
+   "descripcion": "PIT-301B: Transmisor de presión (J0304) con manifold de 2 vías (M2)",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano:  ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: 1/2\" NPT · SIS (PAHH-301B, I-25) · Toma P2",
+   "atributos": {
+    "familia": "INS",
+    "tipo": "transmisor de presion"
+   },
+   "faltan_datos": [
+    "rango",
+    "conexion"
+   ],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 856.63,
+     "proveedor": "ABB · INS-02708",
+     "codigo": "INS-02708",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\PAMPA ENERGIA\\7- Licitacion contrato Marco Skid PAD Rincon de Aranda · 4.Armado de la Oferta Comercial/Cot Skid Manifolds Colectores RDA Contrato Marco (2da RDA).xlsx.",
+     "fecha": "2026-08-14",
+     "coincide": "similar",
+     "diferencia": ""
+    }
+   ]
+  },
+  {
+   "id": "M112",
+   "pos": "112",
+   "grupo": "material",
+   "descripcion": "PI-301A: Manómetro Ø 100 mm con glicerina, 0–160 kg/cm2 (J0301), con manifold M2",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano:  ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: 1/2\" NPT · Local · Toma P1. Rango: ITT",
+   "atributos": {
+    "familia": "INS",
+    "tipo": "manometro"
+   },
+   "faltan_datos": [
+    "rango",
+    "conexion"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 120.0,
+     "proveedor": "Weisz · INS-04947",
+     "codigo": "INS-04947",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
+     "coincide": "similar",
+     "diferencia": ""
+    }
+   ]
+  },
+  {
+   "id": "M113",
+   "pos": "113",
+   "grupo": "material",
+   "descripcion": "CC-301: Portacupón de corrosión con cupón (típico 1 del P&ID)",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano:  ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: 1 1/2\" NPT · Local · Con VF-325",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "portacupon de corrosion"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M114",
+   "pos": "114",
+   "grupo": "material",
+   "descripcion": "Junta Espiralada AISI 316/grafito 4,5 mm, anillo ext. AC zincado + int. AISI 316 (B16.20, para B16.47 A) 32\" ##600 · Ø 32\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 32\" ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: M1",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "32\"",
+    "serie": "600",
+    "material": "AISI 316",
+    "tipo": "junta espiralada",
+    "medida": "anillo ext."
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "El más parecido es de otro diámetro (3\") (JUN-02776 JUNTA ESPIRALADA C/ANILLO EXT. E INT. AISI 316/316, USD 4,32): no sirve como precio"
+    }
+   ]
+  },
+  {
+   "id": "M115",
+   "pos": "115",
+   "grupo": "material",
+   "descripcion": "Espárrago con 2 tuercas A193 B7 / A194 2H zincado 2\" × 15 1/2\" (a verificar) (32\" ##600) · Ø 2\"",
+   "cantidad": 28.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" ·  · A193 B7 / A194 2H zincado ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: M1",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "2\"",
+    "serie": "600",
+    "material": "A193 B7",
+    "tipo": "esparrago",
+    "medida": "2\" × 15 1/2\" (a verificar)"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 35.0,
+     "proveedor": "sin proveedor en planilla · JUN-02747",
+     "codigo": "JUN-02747",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\Sacde\\12-2970-SE-PTG-008 - FILTRO COALESCENTE - Pedido de precios · 4.Armado de la Oferta Comercial/LM costos Filtro Coalecedor FC 301 y 302 #600 PC0-C.xlsx",
+     "fecha": "2025-12-18",
+     "coincide": "similar",
+     "diferencia": "diametro: 2.5\" (pedido 2\"); material: sin dato (pedido A193 B7); medida: sin dato (pedido 2\" × 15 1/2\" (a verificar)); unidad distinta: catálogo por juego, plano por un"
+    }
+   ]
+  },
+  {
+   "id": "M116",
+   "pos": "116",
+   "grupo": "material",
+   "descripcion": "Junta Espiralada 316/grafito, anillo ext. + int. 20\" ##600 · Ø 20\"",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano: 20\" ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: MH",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "20\"",
+    "serie": "600",
+    "material": "AISI 316",
+    "tipo": "junta espiralada",
+    "medida": "anillo ext."
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "El más parecido es de otro diámetro (3\") (JUN-02776 JUNTA ESPIRALADA C/ANILLO EXT. E INT. AISI 316/316, USD 4,32): no sirve como precio"
+    }
+   ]
+  },
+  {
+   "id": "M117",
+   "pos": "117",
+   "grupo": "material",
+   "descripcion": "Espárrago con 2 tuercas A193 B7 / A194 2H zincado 1 5/8\" × 11 1/2\" (20\" ##600) · Ø 1 5/8\"",
+   "cantidad": 24.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1 5/8\" ·  · A193 B7 / A194 2H zincado ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: MH",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "1.625\"",
+    "serie": "600",
+    "material": "A193 B7",
+    "tipo": "esparrago",
+    "medida": "1 5/8\" × 11 1/2\""
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 10.0,
+     "proveedor": "planilla de costo ITT (proveedor sin nombre) · JUN-04963",
+     "codigo": "JUN-04963",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
+     "coincide": "similar",
+     "diferencia": "diametro: 1.125\" (pedido 1.625\"); medida: 1 1/8 x 8 1/4 (pedido 1 5/8\" × 11 1/2\"); unidad distinta: catálogo por juego, plano por un"
+    }
+   ]
+  },
+  {
+   "id": "M118",
+   "pos": "118",
+   "grupo": "material",
+   "descripcion": "Junta Espiralada 316/grafito, anillo ext. + int. 10\" ##600 · Ø 10\"",
+   "cantidad": 8.0,
+   "unidad": "un",
+   "especificacion": "Plano: 10\" ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: A, B1, VF-322, VF-337, VF-339",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "10\"",
+    "serie": "600",
+    "material": "AISI 316",
+    "tipo": "junta espiralada",
+    "medida": "anillo ext."
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "El más parecido es de otro diámetro (3\") (JUN-02776 JUNTA ESPIRALADA C/ANILLO EXT. E INT. AISI 316/316, USD 4,32): no sirve como precio"
+    }
+   ]
+  },
+  {
+   "id": "M119",
+   "pos": "119",
+   "grupo": "material",
+   "descripcion": "Espárrago con 2 tuercas A193 B7 / A194 2H zincado 1 1/4\" × 8 1/2\" (10\" ##600) · Ø 1 1/4\"",
+   "cantidad": 128.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1 1/4\" ·  · A193 B7 / A194 2H zincado ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: A, B1, VF-322, VF-337, VF-339",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "1.25\"",
+    "serie": "600",
+    "material": "A193 B7",
+    "tipo": "esparrago",
+    "medida": "1 1/4\" × 8 1/2\""
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 9.58,
+     "proveedor": "Grupo Provemet · JUN-05061",
+     "codigo": "JUN-05061",
+     "origen": "Grupo_Provemet_Cotizacion_0000289909_TAVAL_SA.pdf",
+     "fecha": "2026-11-05",
+     "coincide": "similar",
+     "diferencia": "serie: sin dato (pedido 600); medida: 1 1/4 x 8 1/2 (pedido 1 1/4\" × 8 1/2\"); unidad distinta: catálogo por juego, plano por un"
+    }
+   ]
+  },
+  {
+   "id": "M120",
+   "pos": "120",
+   "grupo": "material",
+   "descripcion": "Junta Espiralada 316/grafito, anillo ext. AC zincado 6\" ##600 · Ø 6\"",
+   "cantidad": 2.0,
+   "unidad": "un",
+   "especificacion": "Plano: 6\" ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: VF-338",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "6\"",
+    "serie": "600",
+    "material": "AISI 316",
+    "tipo": "junta espiralada",
+    "medida": "anillo ext."
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "El más parecido es de otro diámetro (3\") (JUN-02776 JUNTA ESPIRALADA C/ANILLO EXT. E INT. AISI 316/316, USD 4,32): no sirve como precio"
+    }
+   ]
+  },
+  {
+   "id": "M121",
+   "pos": "121",
+   "grupo": "material",
+   "descripcion": "Espárrago con 2 tuercas A320 L7 / A194 Gr. 4 (CK31) 1\" × 6 3/4\" (6\" ##600) · Ø 1\"",
+   "cantidad": 24.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1\" ·  · A320 L7 / A194 Gr. 4 (CK31) ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: VF-338",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "1\"",
+    "serie": "600",
+    "material": "A194",
+    "tipo": "esparrago",
+    "medida": "1\" × 6 3/4\""
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M122",
+   "pos": "122",
+   "grupo": "material",
+   "descripcion": "Junta Espiralada 316/grafito, anillo ext. AC zincado 6\" ##150 · Ø 6\"",
+   "cantidad": 4.0,
+   "unidad": "un",
+   "especificacion": "Plano: 6\" ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: VF-341, VF-343",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "6\"",
+    "serie": "150",
+    "material": "AISI 316",
+    "tipo": "junta espiralada",
+    "medida": "anillo ext."
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 15.0,
+     "proveedor": "sin proveedor en planilla · JUN-02778",
+     "codigo": "JUN-02778",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECHINT\\12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado · 4.Armado de la Oferta Comercial/OFERTA REV A/LM costo Desarenador rev ventas REV. 1.xlsx",
+     "fecha": "2025-12-23",
+     "coincide": "similar",
+     "diferencia": "diametro: 4\" (pedido 6\"); medida: anillos ext. e int. (pedido anillo ext.)"
+    }
+   ]
+  },
+  {
+   "id": "M123",
+   "pos": "123",
+   "grupo": "material",
+   "descripcion": "Espárrago con 2 tuercas A320 L7 / A194 Gr. 4 (CK11) 3/4\" × 4\" (6\" ##150) · Ø 3/4\"",
+   "cantidad": 32.0,
+   "unidad": "un",
+   "especificacion": "Plano: 3/4\" ·  · A320 L7 / A194 Gr. 4 (CK11) ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: VF-341, VF-343",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "0.75\"",
+    "serie": "150",
+    "material": "A194",
+    "tipo": "esparrago",
+    "medida": "3/4\" × 4\""
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M124",
+   "pos": "124",
+   "grupo": "material",
+   "descripcion": "Junta Espiralada 316/grafito, anillo ext. AC zincado 4\" ##600 · Ø 4\"",
+   "cantidad": 3.0,
+   "unidad": "un",
+   "especificacion": "Plano: 4\" ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: R1, R2, entrada de BDV-301E",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "4\"",
+    "serie": "600",
+    "material": "AISI 316",
+    "tipo": "junta espiralada",
+    "medida": "anillo ext."
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 10.0,
+     "proveedor": "Oil Metal (cód. JUE0300CWI3060) · JUN-02776",
+     "codigo": "JUN-02776",
+     "origen": "fuentes_originales/listas_vendedor/2026-11-05/oilmetal_cotizacion_37278_2026-10-30.pdf · código JUE0300CWI3060",
+     "fecha": "2026-10-30",
+     "coincide": "similar",
+     "diferencia": "diametro: 3\" (pedido 4\"); medida: anillos ext. e int. (pedido anillo ext.); el último precio (4,32) se aparta más de 40% de la mediana de sus últimos precios: se usa la mediana 10,00"
+    }
+   ]
+  },
+  {
+   "id": "M125",
+   "pos": "125",
+   "grupo": "material",
+   "descripcion": "Espárrago con 2 tuercas A193 B7 / A194 2H zincado 7/8\" × 5 3/4\" (4\" ##600) · Ø 7/8\"",
+   "cantidad": 24.0,
+   "unidad": "un",
+   "especificacion": "Plano: 7/8\" ·  · A193 B7 / A194 2H zincado ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: R1, R2, entrada de BDV-301E",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "0.875\"",
+    "serie": "600",
+    "material": "A193 B7",
+    "tipo": "esparrago",
+    "medida": "7/8\" × 5 3/4\""
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 5.5,
+     "proveedor": "planilla de costo ITT (proveedor sin nombre) · JUN-04960",
+     "codigo": "JUN-04960",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
+     "coincide": "similar",
+     "diferencia": "medida: 7/8 x 6 1/8 (pedido 7/8\" × 5 3/4\"); unidad distinta: catálogo por juego, plano por un"
+    }
+   ]
+  },
+  {
+   "id": "M126",
+   "pos": "126",
+   "grupo": "material",
+   "descripcion": "Junta Espiralada 316/grafito, anillo ext. AC zincado 4\" ##600 · Ø 4\"",
+   "cantidad": 3.0,
+   "unidad": "un",
+   "especificacion": "Plano: 4\" ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Salida de BDV-301E, RO-301 (2 juntas)",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "4\"",
+    "serie": "600",
+    "material": "AISI 316",
+    "tipo": "junta espiralada",
+    "medida": "anillo ext."
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 10.0,
+     "proveedor": "Oil Metal (cód. JUE0300CWI3060) · JUN-02776",
+     "codigo": "JUN-02776",
+     "origen": "fuentes_originales/listas_vendedor/2026-11-05/oilmetal_cotizacion_37278_2026-10-30.pdf · código JUE0300CWI3060",
+     "fecha": "2026-10-30",
+     "coincide": "similar",
+     "diferencia": "diametro: 3\" (pedido 4\"); medida: anillos ext. e int. (pedido anillo ext.); el último precio (4,32) se aparta más de 40% de la mediana de sus últimos precios: se usa la mediana 10,00"
+    }
+   ]
+  },
+  {
+   "id": "M127",
+   "pos": "127",
+   "grupo": "material",
+   "descripcion": "Espárrago con 2 tuercas A320 L7 / A194 Gr. 4 (CK31) 7/8\" × 5 3/4\" (RO: más largo, a verificar con el espesor de la placa) (4\" ##600) · Ø 7/8\"",
+   "cantidad": 24.0,
+   "unidad": "un",
+   "especificacion": "Plano: 7/8\" ·  · A320 L7 / A194 Gr. 4 (CK31) ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Salida de BDV-301E, RO-301 (2 juntas)",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "0.875\"",
+    "serie": "600",
+    "material": "A194",
+    "tipo": "esparrago",
+    "medida": "7/8\" × 5 3/4\" (RO: más largo, a verificar con el espesor de la placa)"
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M128",
+   "pos": "128",
+   "grupo": "material",
+   "descripcion": "Junta Espiralada 316/grafito, anillo ext. AC zincado 2\" ##600 · Ø 2\"",
+   "cantidad": 62.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Boquillas, válvulas de línea, LG, LV/SDV, drenaje, PSV",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "2\"",
+    "serie": "600",
+    "material": "AISI 316",
+    "tipo": "junta espiralada",
+    "medida": "anillo ext."
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 10.0,
+     "proveedor": "Oil Metal (cód. JUE0300CWI3060) · JUN-02776",
+     "codigo": "JUN-02776",
+     "origen": "fuentes_originales/listas_vendedor/2026-11-05/oilmetal_cotizacion_37278_2026-10-30.pdf · código JUE0300CWI3060",
+     "fecha": "2026-10-30",
+     "coincide": "similar",
+     "diferencia": "diametro: 3\" (pedido 2\"); medida: anillos ext. e int. (pedido anillo ext.); el último precio (4,32) se aparta más de 40% de la mediana de sus últimos precios: se usa la mediana 10,00"
+    }
+   ]
+  },
+  {
+   "id": "M129",
+   "pos": "129",
+   "grupo": "material",
+   "descripcion": "Espárrago con 2 tuercas A193 B7 / A194 2H zincado 5/8\" × 4 1/4\" (2\" ##600) · Ø 5/8\"",
+   "cantidad": 496.0,
+   "unidad": "un",
+   "especificacion": "Plano: 5/8\" ·  · A193 B7 / A194 2H zincado ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Boquillas, válvulas de línea, LG, LV/SDV, drenaje, PSV",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "0.625\"",
+    "serie": "600",
+    "material": "A193 B7",
+    "tipo": "esparrago",
+    "medida": "5/8\" × 4 1/4\""
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 3.5,
+     "proveedor": "planilla de costo ITT (proveedor sin nombre) · JUN-04950",
+     "codigo": "JUN-04950",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
+     "coincide": "similar",
+     "diferencia": "serie: 300 (pedido 600); medida: 5/8 x 3 5/8 (pedido 5/8\" × 4 1/4\"); unidad distinta: catálogo por juego, plano por un"
+    }
+   ]
+  },
+  {
+   "id": "M130",
+   "pos": "130",
+   "grupo": "material",
+   "descripcion": "Junta Espiralada 316/grafito, anillo ext. AC zincado 2\" ##150 · Ø 2\"",
+   "cantidad": 4.0,
+   "unidad": "un",
+   "especificacion": "Plano: 2\" ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Salidas de PSV, VF-358",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "2\"",
+    "serie": "150",
+    "material": "AISI 316",
+    "tipo": "junta espiralada",
+    "medida": "anillo ext."
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 3.0,
+     "proveedor": "sin proveedor en planilla · JUN-01696",
+     "codigo": "JUN-01696",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECHINT\\12. Proyecto LOS TOLDOS - Skid de Sand Jetting Desarenado · 4.Armado de la Oferta Comercial/OFERTA REV A/LM costo Desarenador rev ventas REV. 1.xlsx",
+     "fecha": "2025-12-23",
+     "coincide": "similar",
+     "diferencia": "medida: anillos ext. e int. (pedido anillo ext.)"
+    }
+   ]
+  },
+  {
+   "id": "M131",
+   "pos": "131",
+   "grupo": "material",
+   "descripcion": "Espárrago con 2 tuercas B7 (CA11) / L7 (CK11) 5/8\" × 3 1/4\" (2\" ##150) · Ø 5/8\"",
+   "cantidad": 16.0,
+   "unidad": "un",
+   "especificacion": "Plano: 5/8\" ·  · B7 (CA11) / L7 (CK11) ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Salidas de PSV, VF-358",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "0.625\"",
+    "serie": "150",
+    "tipo": "esparrago",
+    "medida": "5/8\" × 3 1/4\""
+   },
+   "faltan_datos": [
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M132",
+   "pos": "132",
+   "grupo": "material",
+   "descripcion": "Junta Espiralada 316/grafito, anillo ext. AC zincado 1\" ##600 · Ø 1\"",
+   "cantidad": 5.0,
+   "unidad": "un",
+   "especificacion": "Plano: 1\" ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Entradas de PSV, venteo manual",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "1\"",
+    "serie": "600",
+    "material": "AISI 316",
+    "tipo": "junta espiralada",
+    "medida": "anillo ext."
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 1.54,
+     "proveedor": "Stock ITT (cód. ACS0206X6MFM0) · JUN-01689",
+     "codigo": "JUN-01689",
+     "origen": "fuentes_originales/stock_valorizado_2024-11.xlsx · código ACS0206X6MFM0",
+     "fecha": "2024-11-01",
+     "coincide": "similar",
+     "diferencia": "diametro: 0.75\" (pedido 1\"); medida: sin dato (pedido anillo ext.)"
+    }
+   ]
+  },
+  {
+   "id": "M133",
+   "pos": "133",
+   "grupo": "material",
+   "descripcion": "Espárrago con 2 tuercas A193 B7 / A194 2H zincado 5/8\" × 3 3/4\" (1\" ##600) · Ø 5/8\"",
+   "cantidad": 20.0,
+   "unidad": "un",
+   "especificacion": "Plano: 5/8\" ·  · A193 B7 / A194 2H zincado ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Entradas de PSV, venteo manual",
+   "atributos": {
+    "familia": "JUN",
+    "diametro": "0.625\"",
+    "serie": "600",
+    "material": "A193 B7",
+    "tipo": "esparrago",
+    "medida": "5/8\" × 3 3/4\""
+   },
+   "faltan_datos": [],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 3.5,
+     "proveedor": "planilla de costo ITT (proveedor sin nombre) · JUN-04950",
+     "codigo": "JUN-04950",
+     "origen": "ypf_lic66944_colectores_2da_entrega_2026-10.xlsx",
+     "fecha": "2026-10-30",
+     "coincide": "similar",
+     "diferencia": "serie: 300 (pedido 600); medida: 5/8 x 3 5/8 (pedido 5/8\" × 3 3/4\"); unidad distinta: catálogo por juego, plano por un"
+    }
+   ]
+  },
+  {
+   "id": "M134",
+   "pos": "134",
+   "grupo": "material",
+   "descripcion": "Cartucho coalescente Ø ext. 141 × 915 mm, núcleo y tapas de acero inoxidable, medio de fibra de vidrio (SS + FG), flujo interior → exterior, 99,99 % > 0,3 µm, arrastre máx. 1 ppm, ΔP limpio 0,15 bar / colapso 3 bar",
+   "cantidad": 9.0,
+   "unidad": "u",
+   "especificacion": "Plano:  ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: HD línea 31-36 y nota 23 (cantidad y medida \"a confirmar por fabricante\")",
+   "atributos": {
+    "familia": "OTR",
+    "material": "Inoxidable",
+    "tipo": "elemento filtrante"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 329.0,
+     "proveedor": "Gora S.A. · OTR-02164",
+     "codigo": "OTR-02164",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\11- SKID GAS COMBUSTIBLE PAD #900 CABLEADO. PR-54033 · 5.Proveedores 3ros/Gora    OF-X-0001-00027396 ITTSA-TECPETROL-S-001  F-001 -.pdf",
+     "fecha": "2026-03-09",
+     "coincide": "similar",
+     "diferencia": ""
+    }
+   ]
+  },
+  {
+   "id": "M135",
+   "pos": "135",
+   "grupo": "material",
+   "descripcion": "Caja de chicanas (separación primaria) rectangular doble bolsillo, flujo horizontal, 800 × 650 × 200 mm, chapa 0,8 mm, AISI 316L, 99 % > 20 µm",
+   "cantidad": 1.0,
+   "unidad": "u",
+   "especificacion": "Plano:  ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: HD nota 23. ITT: en 2 módulos para sacarla por M1 (no pasa entera por MH 20\" ni por M1)",
+   "atributos": {
+    "familia": "PER",
+    "tipo": "elemento filtrante",
+    "espesor_mm": "200",
+    "material": "AISI 316"
+   },
+   "faltan_datos": [
+    "designacion"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M136",
+   "pos": "136",
+   "grupo": "material",
+   "descripcion": "Juntas / O-rings de asiento de cartuchos",
+   "cantidad": 9.0,
+   "unidad": "u",
+   "especificacion": "Plano:  ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: ITT (las da el fabricante del cartucho)",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "elemento filtrante"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 329.0,
+     "proveedor": "Gora S.A. · OTR-02164",
+     "codigo": "OTR-02164",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TECPETROL\\11- SKID GAS COMBUSTIBLE PAD #900 CABLEADO. PR-54033 · 5.Proveedores 3ros/Gora    OF-X-0001-00027396 ITTSA-TECPETROL-S-001  F-001 -.pdf",
+     "fecha": "2026-03-09",
+     "coincide": "similar",
+     "diferencia": ""
+    }
+   ]
+  },
+  {
+   "id": "M137",
+   "pos": "137",
+   "grupo": "material",
+   "descripcion": "CHASIS BASE (plano PL-001 pos. 1000)",
+   "cantidad": 5642.0,
+   "unidad": "kg",
+   "especificacion": "Plano:  ·  · SA-36 / IRAM F24 ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Peso del plano PL-001",
+   "atributos": {
+    "familia": "OTR",
+    "material": "F-24",
+    "tipo": "estructura"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1.27,
+     "proveedor": "Precios de acero (J. Elejondo)",
+     "origen": "fuentes_originales/precios_varios_acero_2026-02.xlsx, hoja chapa negra A36, B2",
+     "fecha": "2026-02-10",
+     "coincide": "similar",
+     "diferencia": "precio por kg de materia prima (chapa negra lisa 1/2\") +10% por recortes; no incluye corte, plegado ni rolado"
+    }
+   ]
+  },
+  {
+   "id": "M138",
+   "pos": "138",
+   "grupo": "material",
+   "descripcion": "PLATAFORMAS Y ESCALERA (plano PL-001 pos. 1500)",
+   "cantidad": 2690.0,
+   "unidad": "kg",
+   "especificacion": "Plano:  ·  · SA-36 / IRAM F24 ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Peso del plano PL-001",
+   "atributos": {
+    "familia": "OTR",
+    "material": "F-24",
+    "tipo": "estructura"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1.27,
+     "proveedor": "Precios de acero (J. Elejondo)",
+     "origen": "fuentes_originales/precios_varios_acero_2026-02.xlsx, hoja chapa negra A36, B2",
+     "fecha": "2026-02-10",
+     "coincide": "similar",
+     "diferencia": "precio por kg de materia prima (chapa negra lisa 1/2\") +10% por recortes; no incluye corte, plegado ni rolado"
+    }
+   ]
+  },
+  {
+   "id": "M139",
+   "pos": "139",
+   "grupo": "material",
+   "descripcion": "ESCALON ACCESO MH (plano PL-001 pos. 1900)",
+   "cantidad": 48.0,
+   "unidad": "kg",
+   "especificacion": "Plano:  ·  · SA-36 / IRAM F24 ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Peso del plano PL-001",
+   "atributos": {
+    "familia": "OTR",
+    "material": "F-24",
+    "tipo": "estructura"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1.27,
+     "proveedor": "Precios de acero (J. Elejondo)",
+     "origen": "fuentes_originales/precios_varios_acero_2026-02.xlsx, hoja chapa negra A36, B2",
+     "fecha": "2026-02-10",
+     "coincide": "similar",
+     "diferencia": "precio por kg de materia prima (chapa negra lisa 1/2\") +10% por recortes; no incluye corte, plegado ni rolado"
+    }
+   ]
+  },
+  {
+   "id": "M140",
+   "pos": "140",
+   "grupo": "material",
+   "descripcion": "Batea de contención chapa 4,76 mm A36 con descarga a OD",
+   "cantidad": 300.0,
+   "unidad": "kg",
+   "especificacion": "Plano:  ·  · SA-36 ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: RI §2; ITT",
+   "atributos": {
+    "familia": "PER",
+    "tipo": "estructura",
+    "espesor_mm": "4,76",
+    "material": "A36"
+   },
+   "faltan_datos": [
+    "designacion"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1.26,
+     "proveedor": "Precios de acero (J. Elejondo)",
+     "origen": "fuentes_originales/precios_varios_acero_2026-02.xlsx, hoja chapa negra A36, B4",
+     "fecha": "2026-02-10",
+     "coincide": "similar",
+     "diferencia": "precio por kg de materia prima (chapa negra lisa 3/16\", la más cercana a 4,76 mm) +10% por recortes; no incluye corte, plegado ni rolado"
+    }
+   ]
+  },
+  {
+   "id": "M141",
+   "pos": "141",
+   "grupo": "material",
+   "descripcion": "Soportes de cañería (típicos 5165-02-0000-IG-PI-TM-001)",
+   "cantidad": 250.0,
+   "unidad": "kg",
+   "especificacion": "Plano:  ·  · SA-36 ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: RI §9; ITT",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "estructura"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "cot",
+     "precio": 1.27,
+     "proveedor": "Precios de acero (J. Elejondo)",
+     "origen": "fuentes_originales/precios_varios_acero_2026-02.xlsx, hoja chapa negra A36, B2",
+     "fecha": "2026-02-10",
+     "coincide": "similar",
+     "diferencia": "precio por kg de materia prima (chapa negra lisa 1/2\") +10% por recortes; no incluye corte, plegado ni rolado"
+    }
+   ]
+  },
+  {
+   "id": "M142",
+   "pos": "142",
+   "grupo": "material",
+   "descripcion": "Tubing inox 1/2\" con conectores (aire e impulsos)",
+   "cantidad": 45.0,
+   "unidad": "m",
+   "especificacion": "Plano:  ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: P&ID; ITT",
+   "atributos": {
+    "familia": "OTR",
+    "diametro": "0.5\"",
+    "material": "Inoxidable",
+    "tipo": "tubing"
+   },
+   "faltan_datos": [
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M143",
+   "pos": "143",
+   "grupo": "material",
+   "descripcion": "Chapas de TAG AISI 316",
+   "cantidad": 60.0,
+   "unidad": "un",
+   "especificacion": "Plano:  ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: RI §2",
+   "atributos": {
+    "familia": "OTR",
+    "material": "AISI 316",
+    "tipo": "chapa de identificacion"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M144",
+   "pos": "144",
+   "grupo": "material",
+   "descripcion": "Caja de conexionado Ex de instrumentos (analógicas/digitales, SIS/SCP)",
+   "cantidad": 4.0,
+   "unidad": "un",
+   "especificacion": "Plano:  ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: RI §2 (la RI pide 4; el plano dibuja 3)",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "caja de conexionado"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M145",
+   "pos": "145",
+   "grupo": "material",
+   "descripcion": "Caja de conexionado Ex de potencia del traceado",
+   "cantidad": 1.0,
+   "unidad": "un",
+   "especificacion": "Plano:  ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Plano pos. 601",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "caja de conexionado"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M146",
+   "pos": "146",
+   "grupo": "material",
+   "descripcion": "Cables, conduit, bandeja y prensacables Ex (canalizaciones del skid)",
+   "cantidad": 1.0,
+   "unidad": "gl",
+   "especificacion": "Plano:  ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: Plano pos. 2000; P1100/P1102/P1103",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "canalizaciones electricas"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M147",
+   "pos": "147",
+   "grupo": "material",
+   "descripcion": "Traceado eléctrico autorregulado (4 circuitos con termostato)",
+   "cantidad": 1.0,
+   "unidad": "gl",
+   "especificacion": "Plano:  ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: HD nota 10; P0103",
+   "atributos": {
+    "familia": "OTR",
+    "tipo": "traceado electrico"
+   },
+   "faltan_datos": [
+    "diametro",
+    "serie"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "M148",
+   "pos": "148",
+   "grupo": "material",
+   "descripcion": "Aislación lana mineral 60 mm + chapa de aluminio 1 mm (recipiente y líneas traceadas)",
+   "cantidad": 1.0,
+   "unidad": "gl",
+   "especificacion": "Plano:  ·  ·  ·  · El cliente no indica cantidad: calculada por ITT según el P&ID 5297-02-0000-IG-PR-PI-005, la HD-001 y el plano PL-001 · Nota ITT: HD nota 10; N0100",
+   "atributos": {
+    "familia": "PER",
+    "tipo": "aislacion",
+    "espesor_mm": "60"
+   },
+   "faltan_datos": [
+    "designacion",
+    "material"
+   ],
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 0,
+     "proveedor": "SIN PRECIO EN EL CATÁLOGO: pedir cotización",
+     "origen": "—",
+     "fecha": "2026-11-26",
+     "coincide": "sin_ref",
+     "diferencia": "No hay pieza de esa familia y tipo con precio"
+    }
+   ]
+  },
+  {
+   "id": "S01",
+   "pos": "MO",
+   "grupo": "mo",
+   "descripcion": "Soldaduras: 213 a tope + SW y olets (calculado)",
+   "especificacion": "pos 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34: caño por metro; sus juntas se cuentan en los extremos BW de accesorios y bridas (una junta cada uno); pos 24: 1 junta(s) de empalme entre barras de 12 m (16 m) × 10\" × 1,6278; pos 31: 5 junta(s) de empalme entre barras de 6 m (33 m) × 2\" × 2,2353; pos 34: 2 junta(s) de empalme entre barras de 6 m (17 m) × 2\" × 1,0000; pos 13: 1 extremo(s) BW de talle",
+   "cantidad": 1132.737,
+   "unidad": "pulg",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 16.0,
+     "proveedor": "Mano de obra soldadura piping (criterio de las planillas de costo 2026): Precio por pulgada que usan las planillas de ITT de 2025-2026 (16 a 16,5; 19 en #900 en Sacde 12). Controles CTRL-M01/P01/T01, ",
+     "origen": "planillas 2026 (TAVAL/43 puentes YPF 19-02-2026; TAVAL/40 Inarteco; Sacde 12 a 15; Tecpetrol 9: 16,5)",
+     "fecha": "2026-02-28",
+     "coincide": "igual"
+    }
+   ]
+  },
+  {
+   "id": "S02",
+   "pos": "PIN",
+   "grupo": "servicio",
+   "descripcion": "Granallado y pintura (m² calculados)",
+   "especificacion": "87,34 m² exteriores: caños y niples 35,9 + bridas, accesorios y válvulas (largo equivalente) 34,8 + envolvente 0,0 + estructura 16,6",
+   "cantidad": 87.339,
+   "unidad": "m2",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 50.0,
+     "proveedor": "criterio ITT · PIN-00569",
+     "codigo": "PIN-00569",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\YPF\\28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN\\4.Armado de la Oferta Comercial",
+     "fecha": "2026-10-10",
+     "coincide": "similar",
+     "diferencia": "m² calculados (caños, accesorios por regla, envolvente y estructura); esquema de pintura a confirmar con el pliego"
+    }
+   ]
+  },
+  {
+   "id": "S05",
+   "pos": "EST",
+   "grupo": "mo",
+   "descripcion": "Fabricación de la estructura (bastidor, patas, cunas y soportes)",
+   "especificacion": "253 kg por equipo × tarifa por kg",
+   "cantidad": 253.0,
+   "unidad": "kg",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 3.0,
+     "proveedor": "Fabricación de estructura de skid por kg (tercero Ledesma): Dato al margen de la MO de Ledesma; en Tecpetrol 9 (01-2026) el bastidor UPN 140 se costeó a 4 USD/kg",
+     "origen": "YPF/28 Lic 69343 planilla PC0, hoja 1000623708 (850 kg × 3 = 2.550)",
+     "fecha": "2026-10-31",
+     "coincide": "similar",
+     "diferencia": "kg de la tabla del plano; tarifa de un trabajo de estructura de skid"
+    }
+   ]
+  },
+  {
+   "id": "S03",
+   "pos": "PH",
+   "grupo": "servicio",
+   "descripcion": "Prueba hidráulica (horas de planta)",
+   "especificacion": "6 h · volumen interior 1.245,9 l",
+   "cantidad": 6,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "ant",
+     "precio": 13.0,
+     "proveedor": "MO ITT · END-00215",
+     "codigo": "END-00215",
+     "origen": "Z:\\VENTAS\\OFERTAS Y LICITACIONES\\TAVAL\\49 - A&A Fluid Control - Manifolds Tecpetrol - Salar El Tolillar\\4.Armado de la Oferta Comercial",
+     "fecha": "2026-03-10",
+     "coincide": "similar",
+     "diferencia": "horas supuestas (6 h): confirmar"
+    }
+   ]
+  },
+  {
+   "id": "S12H",
+   "pos": "HH",
+   "grupo": "mo",
+   "descripcion": "Horas de ingeniería (estimadas del antecedente)",
+   "especificacion": "29,33 h por equipo · mediana de 29,3 h por unidad (repartidas en la serie)",
+   "cantidad": 29.33,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 15.0,
+     "proveedor": "Horas propias ITT (tarifa del antecedente)",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · 4.Armado de la Oferta Comercial/Cotización Lic 69343 Skid concentradores VCD26217 PC0.xlsx · hoja 1000623708",
+     "fecha": "2026-10-10",
+     "coincide": "similar",
+     "diferencia": "ESTIMADO del antecedente YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · Skid concentrador 1000623708 (3 entradas 12\" + colector 16\") (16 (colector) / 12, 6 u, 2026-10-10)"
+    }
+   ]
+  },
+  {
+   "id": "S13C",
+   "pos": "CAL",
+   "grupo": "mo",
+   "descripcion": "Horas de calidad y dossier (estimadas del antecedente)",
+   "especificacion": "10,5 h por equipo · mediana de 10,5 h por unidad (repartidas en la serie)",
+   "cantidad": 10.5,
+   "unidad": "h",
+   "fuentes": [
+    {
+     "tipo": "est",
+     "precio": 15.0,
+     "proveedor": "Horas propias ITT (tarifa del antecedente)",
+     "origen": "conocimiento/costos/horas_por_equipo.csv · YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · 4.Armado de la Oferta Comercial/Cotización Lic 69343 Skid concentradores VCD26217 PC0.xlsx · hoja 1000623708",
+     "fecha": "2026-10-10",
+     "coincide": "similar",
+     "diferencia": "ESTIMADO del antecedente YPF/28- Lic 69343 - SKIDS CONCENTRADORES VCD26217 - BLOQUE LAN · Skid concentrador 1000623708 (3 entradas 12\" + colector 16\") (16 (colector) / 12, 6 u, 2026-10-10)"
+    }
+   ]
+  }
+ ],
+ "compras": {
+  "fecha_respuesta": "AAAA-MM-DD",
+  "material_en_planta_dias": 45,
+  "lugar_entrega": "Planta ITT S.A., Av. 12 de Octubre 4004, Quilmes Oeste, Bs. As.",
+  "requisitos_generales": [
+   "Cotizar en USD sin IVA, con plazo de entrega y validez de la oferta.",
+   "Certificados de material (colada / 3.1).",
+   "Indicar cualquier diferencia con lo pedido (serie, material, extremos, modelo)."
+  ],
+  "notas": {
+   "1": "[requisito para el proveedor]"
+  },
+  "proveedores": {
+   "1": "Renard"
+  },
+  "cantidad_compra": {
+   "2": "1 tira de ~12 m"
+  },
+  "servicios": [
+   {
+    "servicio": "[Armado según plano]",
+    "proveedores": "[taller]",
+    "referencia": "[último precio, fecha]",
+    "nota": ""
+   }
+  ]
+ },
+ "nota_precotizacion": "Generado por precotizar.py: revisar precotizacion.md antes de usarlo como cotizacion.json"
+}

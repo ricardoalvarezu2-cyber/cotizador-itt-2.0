@@ -72,6 +72,12 @@ Abiertos todos los anexos; cada PDF, docx, xlsx, doc y xls tiene su texto al lad
 - Secciones 11 y 12 del resumen: pesos por renglón (tablas del repo; ≈ 24.954 kg por skid contra 22.320 del plano sin instrumental) y soldaduras por tipo y Ø con pulgadas nominales y equivalentes (piping ≈ 1.240 pulg-eq y recipiente ≈ 1.214 pulg-eq por filtro). Calculado con `herramientas/pesos_soldadura.py` (mismas reglas que `precotizar.py`); el criterio del recipiente está en `soldaduras_recipiente()`.
 - De este caso salió el skill `relevar-pedido`.
 
+## Cotización con el cotizador (26-11-2026, pedido de Matías: usar la app y ahorrar tokens, sin auditorías)
+- `lista_a_cotizador.py` pasa las listas a `pedido/lista_materiales_plano.csv` (148 renglones por filtro); `precotizar.py` puso precios de catálogo; `completar_cotizacion.py` arma `cotizacion.json`: lo que falta, de la planilla de costo de TAVAL/37 (FC-231, mismo alcance) o en 0 para pedir cotización (29 renglones: baja temperatura A333/LF2/WPL6/L7, thredolets 6000#, orejas PAT, casquete 2", portaplaca y RO, junta 20", O-rings); MO y servicios por rubro de TAVAL/37 (USD 187.388,15 por filtro).
+- **Resultado (borrador, sin revisar ni auditar):** costo USD 381.120,66 por filtro, precio USD 502.737,81 por filtro, total USD 1.005.475,62 los 2 (factores 1,35/1,35, contingencia 5 %). Antecedentes: TAVAL/37 USD 529.204,77 (1 filtro, 16 elementos); YPF/27 USD 322.081,64 c/u.
+- Plazo 210 días desde OC con la ingeniería aprobada en 1 ciclo.
+- Falta: precios de los 29 renglones en 0, posiciones RCP y RDO (repuestos, RI §8) y opcionales, ofertas técnica y económica.
+
 ## Pendiente (siguiente paso, cuando Matías lo pida)
 - Pedir a AESA lo que falta (punto 1 a 4) o cotizar con criterio propio y aclararlo en la oferta.
 - Comparar con YPF/27, TAVAL/37 y AESA/20 y decidir la base del cómputo.

@@ -1,0 +1,227 @@
+{
+ "generada": "2026-11-26",
+ "mo_piping": {
+  "juntas_bw": 194,
+  "pulg_eq": 1049.886,
+  "juntas_sw_olet": 17.0,
+  "extremos_campo": 0.0,
+  "kg_piping": 8548.5,
+  "bridas": 104.0,
+  "diametros": [
+   10.0,
+   8.0,
+   6.0,
+   4.0,
+   3.0,
+   2.0,
+   1.0
+  ],
+  "sin_peso": [
+   "1 Envolvente (cuerpo) rolado, Ø ext. 812,8",
+   "2 Casquete semielíptico 2:1 inferior, Ø ex",
+   "3 Chapas de refuerzo de aberturas (MH 20\",",
+   "4 Pollera (faldón) con anillo base y abert",
+   "5 Placa portacartuchos (tubesheet) con ten",
+   "7 Distribuidor de entrada (deflector) en A",
+   "8 Rompevórtice en B3 con proyección intern",
+   "9 Orejas de izaje (o trunnions)",
+   "10 Orejas de puesta a tierra",
+   "12 Placa de identificación con soporte",
+   "13 Brida WN 32\" #600 B16.47 Serie A (M1) · ",
+   "14 Brida ciega 32\" #600 B16.47 Serie A (M1)",
+   "35 Niples sin costura NPT 1/2\" y 3/4\" Sch 1",
+   "38 Te de reducción BW (derivación de la BDV",
+   "63 Brida portaplaca WN RF (par, para RO-301",
+   "72 Brida ciega RF perforada y roscada 3/4\" ",
+   "102 PSV-301A / PSV-301B: Seguridad, API 526,",
+   "103 RO-301: Placa orificio de restricción co",
+   "113 CC-301: Portacupón de corrosión con cupó",
+   "115 Espárrago con 2 tuercas A193 B7 / A194 2",
+   "117 Espárrago con 2 tuercas A193 B7 / A194 2",
+   "119 Espárrago con 2 tuercas A193 B7 / A194 2",
+   "121 Espárrago con 2 tuercas A320 L7 / A194 G",
+   "123 Espárrago con 2 tuercas A320 L7 / A194 G",
+   "125 Espárrago con 2 tuercas A193 B7 / A194 2",
+   "127 Espárrago con 2 tuercas A320 L7 / A194 G",
+   "129 Espárrago con 2 tuercas A193 B7 / A194 2",
+   "131 Espárrago con 2 tuercas B7 (CA11) / L7 (",
+   "133 Espárrago con 2 tuercas A193 B7 / A194 2",
+   "134 Cartucho coalescente Ø ext. 141 × 915 mm",
+   "135 Caja de chicanas (separación primaria) r",
+   "137 CHASIS BASE (plano PL-001 pos. 1000)",
+   "138 PLATAFORMAS Y ESCALERA (plano PL-001 pos",
+   "139 ESCALON ACCESO MH (plano PL-001 pos. 190",
+   "140 Batea de contención chapa 4,76 mm A36 co",
+   "141 Soportes de cañería (típicos 5165-02-000",
+   "142 Tubing inox 1/2\" con conectores (aire e ",
+   "143 Chapas de TAG AISI 316",
+   "145 Caja de conexionado Ex de potencia del t",
+   "146 Cables, conduit, bandeja y prensacables ",
+   "147 Traceado eléctrico autorregulado (4 circ",
+   "148 Aislación lana mineral 60 mm + chapa de "
+  ],
+  "aproximados": [
+   "81 Esférica 1\" #600 RF (VF-344) · Ø 1\"",
+   "82 Globo 1\" #600 RF (VG-345) · Ø 1\"",
+   "94 Esférica paso total (FB) 1 1/2\" NPT (VF-",
+   "95 Esférica 2000 WOG (TCH2N) 1/2\" NPT ((sin",
+   "96 Esférica 2000 WOG (TCH2N) 3/4\" NPT ((sin",
+   "116 Junta Espiralada 316/grafito, anillo ext",
+   "118 Junta Espiralada 316/grafito, anillo ext",
+   "120 Junta Espiralada 316/grafito, anillo ext",
+   "122 Junta Espiralada 316/grafito, anillo ext",
+   "124 Junta Espiralada 316/grafito, anillo ext",
+   "126 Junta Espiralada 316/grafito, anillo ext",
+   "128 Junta Espiralada 316/grafito, anillo ext",
+   "130 Junta Espiralada 316/grafito, anillo ext",
+   "132 Junta Espiralada 316/grafito, anillo ext"
+  ],
+  "avisos": []
+ },
+ "mo_estructura": {
+  "kg": 60.0,
+  "m2": 16.59
+ },
+ "pintura": {
+  "m2_canos": 35.93,
+  "m2_piping": 70.75,
+  "m2_estructura": 16.59,
+  "m2_total": 87.34,
+  "esquema": ""
+ },
+ "end": {
+  "juntas_bw": 194,
+  "rx_pct": 0,
+  "placas_chicas": 0,
+  "placas_grandes": 0,
+  "juntas_lp": 17.0,
+  "materiales": [
+   "ASTM A105",
+   "ASTM A106 Gr. B",
+   "ASTM A234 WPB",
+   "ASTM A333 Gr. 6",
+   "ASTM A350 LF2",
+   "ASTM A420 WPL6"
+  ],
+  "espesor_max_mm": 15.09,
+  "procedimientos": [
+   "WPS/PQR de soldadura a tope para ASTM A105, ASTM A106 Gr. B, ASTM A234 WPB, ASTM A333 Gr. 6, ASTM A350 LF2, ASTM A420 WPL6 hasta 15,09 mm de espesor",
+   "Calificación de soldadores (WPQ) para esos WPS",
+   "Procedimiento de RX y de LP (escrito, nivel 3 ISO 9712)",
+   "Confirmar con el pliego: si exige procedimientos nuevos o alcanzan los vigentes de ITT"
+  ]
+ },
+ "transporte": {
+  "largo_m": 0.0,
+  "ancho_m": 0.0,
+  "alto_m": 0.0,
+  "kg_equipo": 8608.5,
+  "destino": "",
+  "por_camion": null,
+  "viajes": null,
+  "avisos": [
+   "Faltan las medidas del equipo (largo × ancho × alto): cargarlas del plano de conjunto"
+  ]
+ },
+ "procedimientos": {
+  "lista": [
+   {
+    "codigo": "WPS-BW",
+    "nombre": "WPS/PQR de soldadura a tope, acero al carbono",
+    "alcance": "hasta 15,09 mm de espesor",
+    "cantidad": 1,
+    "tipo": "soldadura"
+   },
+   {
+    "codigo": "WPS-SW",
+    "nombre": "WPS/PQR de soldadura socket y filete, acero al carbono",
+    "alcance": "",
+    "cantidad": 1,
+    "tipo": "soldadura"
+   },
+   {
+    "codigo": "WPQ",
+    "nombre": "Calificación de soldadores (WPQ)",
+    "alcance": "una por WPS y soldador asignado",
+    "cantidad": 2,
+    "tipo": "soldadura"
+   },
+   {
+    "codigo": "END-LP",
+    "nombre": "Procedimiento de líquidos penetrantes (nivel 3, ISO 9712)",
+    "alcance": "",
+    "cantidad": 1,
+    "tipo": "end"
+   },
+   {
+    "codigo": "PH",
+    "nombre": "Procedimiento de prueba hidráulica",
+    "alcance": "",
+    "cantidad": 1,
+    "tipo": "calidad"
+   },
+   {
+    "codigo": "PIN",
+    "nombre": "Procedimiento de granallado y pintura",
+    "alcance": "esquema del pliego",
+    "cantidad": 1,
+    "tipo": "calidad"
+   }
+  ],
+  "cantidad": 7
+ },
+ "ph": {
+  "litros": 1245.9
+ },
+ "horas": {},
+ "referencias": {
+  "mo_estructura": {
+   "modo": "detallado",
+   "detallado_usd": 13055.82,
+   "renglones_detalle": 1,
+   "global_usd": null
+  },
+  "mo_piping": {
+   "modo": "detallado",
+   "detallado_usd": 86036.31,
+   "renglones_detalle": 1,
+   "global_usd": null
+  },
+  "pintura": {
+   "modo": "detallado",
+   "detallado_usd": 9094.33,
+   "renglones_detalle": 1,
+   "global_usd": null
+  },
+  "end": {
+   "modo": "detallado",
+   "detallado_usd": 62858.96,
+   "renglones_detalle": 1,
+   "global_usd": null
+  },
+  "procedimientos": {
+   "modo": "detallado",
+   "detallado_usd": 0,
+   "renglones_detalle": 0,
+   "global_usd": null
+  },
+  "ph": {
+   "modo": "detallado",
+   "detallado_usd": 0,
+   "renglones_detalle": 0,
+   "global_usd": null
+  },
+  "horas": {
+   "modo": "detallado",
+   "detallado_usd": 15035.52,
+   "renglones_detalle": 2,
+   "global_usd": null
+  },
+  "transporte": {
+   "modo": "detallado",
+   "detallado_usd": 0,
+   "renglones_detalle": 0,
+   "global_usd": null
+  }
+ }
+}
