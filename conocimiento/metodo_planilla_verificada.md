@@ -39,4 +39,4 @@ Pedido de Ricardo Álvarez (26-11-2026): "hacer lo mismo y aprenderlo". Se usa c
 ## Tropiezos ya vistos
 - Un texto con comillas de pulgadas (`3/4"`) dentro de una fórmula da #VALUE!/#NAME?: hay que duplicar las comillas (`""`).
 - Al insertar filas, los SUM no crecen si la inserción va debajo del rango (igual que en Excel).
-- Las válvulas Taval se confirman con el skill `cotizar-valvulas-taval` (lista de Drive + stock). Si no se corrió, hay que decirlo.
+- Las válvulas Taval se cotizan con el skill `cotizar-valvulas-taval`: Lista 30 de Drive con 35 % + 20 % de descuento (los códigos con precio neto no llevan descuento), y la hoja Cotizador se completa editando el XML con `llenar_cotizador_taval.py` (modelo en COT26-0330-004). El stock (DRILL STOCK) necesita Chrome: si no hay, el plazo queda a confirmar.

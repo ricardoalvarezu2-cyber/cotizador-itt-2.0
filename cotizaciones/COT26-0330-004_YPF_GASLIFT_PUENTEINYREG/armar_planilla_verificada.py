@@ -86,24 +86,20 @@ precio("NI34", 'Niple 3/4" Sch 160 A106 B NPT/PE', 9.53, "Planilla 03-2025 (NIP-
 precio("NI12", 'Niple 1/2" Sch 160 A106 B NPT/PE L 100', 10, "Planilla de costo ITT 06-2026 (NIP-05009)", conf="Sin proveedor: pedir cotización")
 precio("NI1", 'Niple 1" Sch 160 A106 B NPT/PE', 10.74, "Criterio ITT: niple 3/4\" Sch 160 del stock ITT 11-2024 (NIP-01783)", conf="Sin cotización: pedir")
 # Válvulas Taval (factor 1)
-precio("V2", 'Válvula esférica 2" #600 RF', 400.40, "Taval R Alvarez (rev. 1)", q={"Taval": (400.40, "Taval R Alvarez (rev. 1)"), "Otro": (416, "Stock Devlon (rev. 2)")},
-       conf="Confirmar con la lista Taval (skill cotizar-valvulas-taval) y stock")
-precio("VR", 'Válvula de retención 2" #600', 133.67, "Taval (rev. 1)", q={"Taval": (133.67, "Taval (rev. 1)"), "Otro": (254, "Stock 37138 (rev. 2)")},
-       conf="Confirmar con la lista Taval y stock")
+precio("V2", 'Válvula esférica 2" #600 RF WCB PT flotante (BF60504R0104NP)', 400.40, "Taval R Alvarez (rev. 1)", q={"Taval": (220.00, "Taval Lista 30 (Cotizador Valvulas STD Taval rev.2, 25-11-2026): 423,08 - 35 % - 20 %")}, obs="Stock Devlon 416 (rev. 2). Plazo a confirmar con DRILL STOCK.")
+precio("VR", 'Válvula de retención 2" #600 WCB trim 8 (R010504R01008S)', 133.67, "Taval (rev. 1)", q={"Taval": (248.00, "Taval Lista 30 (Cotizador Valvulas STD Taval rev.2, 25-11-2026): 476,92 - 35 % - 20 %")}, obs="La rev. 1 tenía 133,67 (sin respaldo en la lista). Trim 8 a confirmar contra la clase.")
 precio("V1_3000", 'Válvula esférica 1" #3000', 27.49, "Taval (rev. 1)", obs="No va: el plano pide 3/4\", 1/2\" y 1\" de 2000#.")
-precio("FY", 'Filtro Y 2" #600', 195.93, "Taval (rev. 1)", q={"Taval": (195.93, "Taval (rev. 1)"), "Otro": (378, "rev. 2")},
-       conf="Confirmar con la lista Taval y stock")
-precio("V34", 'Válvula esférica 3/4" 2000#', 39, "rev. 2", q={"Taval": (39, "rev. 2 (26-10-2026)")}, conf="Confirmar con la lista Taval")
-precio("V12", 'Válvula esférica 1/2" 2000#', 36, "rev. 2", q={"Taval": (36, "rev. 2 (26-10-2026)")}, conf="Confirmar con la lista Taval")
-precio("V1", 'Válvula esférica 1" 2000# NPT (IQ)', None, "—", q={"Taval": (44.64, "Taval Lista 30 × 0,52 (09-2025)")}, conf="Lista de 09-2025: confirmar")
-precio("V1_600", 'Válvula esférica 1" #600 (bypass)', 53.22, "rev. 2", q={"Taval": (53.22, "rev. 2 (26-10-2026)")})
-precio("G1_600", 'Válvula globo 1" #600 (bypass)', 56.70, "rev. 2", q={"Taval": (56.70, "rev. 2, G000254R05008V")})
+precio("FY", 'Filtro Y 2" #600 WCB (I290504R01010S)', 195.93, "Taval (rev. 1)", q={"Taval": (378.00, "Taval Lista 30 (Cotizador Valvulas STD Taval rev.2, 25-11-2026): 726,92 - 35 % - 20 %")}, obs="La rev. 1 tenía 195,93 (sin respaldo en la lista).")
+precio("V34", 'Válvula esférica 3/4" 2000 PSI NPT A105 PT forjada', 39, "rev. 2", q={"Taval": (38.80, "Taval Lista 30 (Cotizador Valvulas STD Taval rev.2, 25-11-2026): 74,62 - 35 % - 20 %")})
+precio("V12", 'Válvula esférica 1/2" 2000 PSI NPT A105 PT forjada', 36, "rev. 2", q={"Taval": (36.06, "Taval Lista 30 (Cotizador Valvulas STD Taval rev.2, 25-11-2026): 69,35 - 35 % - 20 %")})
+precio("V1", 'Válvula esférica 1" 2000 PSI NPT A105 PT forjada (IQ)', None, "—", q={"Taval": (44.64, "Taval Lista 30 (Cotizador Valvulas STD Taval rev.2, 25-11-2026): 85,85 - 35 % - 20 %")})
+precio("V1_600", 'Válvula esférica 1" #600 RF A105 (BF60254R0504RC)', 53.22, "rev. 2", q={"Taval": (146.00, "Taval Lista 30 (Cotizador Valvulas STD Taval rev.2, 25-11-2026): precio neto, sin descuento")}, obs="La rev. 2 tenía 53,22.")
+precio("G1_600", 'Válvula globo 1" #600 RF A105 trim 8 (G000254R05008V)', 56.70, "rev. 2", q={"Taval": (76.00, "Taval Lista 30 (Cotizador Valvulas STD Taval rev.2, 25-11-2026): precio neto, sin descuento")}, obs="La rev. 2 tenía 56,70.")
 # Instrumentos
 precio("FV", 'Válvula globo 2" #600 limitadora con actuador eléctrico (FV)', 8600, "Doma, estimado por Sergio",
        conf="Estimado: pedir mejor oferta (la rev. 2 dice lo mismo)")
 precio("PI", "Manómetro (PI) con válvula integral de bloqueo y purga", 120, "Weisz (sin cotización adjunta)", conf="Sin cotización adjunta")
-precio("M5", "Manifold de 5 vías", 349, "Abac",
-       conf="El precio ABB del FQIT ya incluye un manifold M26 de 5 vías: confirmar si este renglón sobra")
+precio("M5", "Manifold de 5 vías", 349, "Abac", obs="No va: incluido en el precio ABB del FQIT.")
 precio("TWTE", "Termovaina + termoelemento (FQIT)", 689, "248 + 425 + 16 (planilla)", conf="Sin cotización adjunta")
 precio("TIT", "Transmisor de temperatura completo (TE + TW + TIT)", 1176.57, "ABB TSP331 + TE y TW (hoja Instrumentos)")
 precio("M2", 'Manifold 2 vías 1/2" (M2 del PI)', None, "—", q={"ABB": (143.65, "ABB OPP-26-9039842 (05-11-2026), M26 2 vías")})
@@ -137,7 +133,7 @@ COR = {  # fila: (clave precio, nueva cant, cant plano, aclaración)
     84: ("FY", None, 2, ""),
     89: ("FV", None, 2, ""),
     90: ("PI", None, 2, ""),
-    91: ("M5", None, 2, ""),
+    91: ("M5", 0, 0, "No va: el precio ABB del FQIT (266CSH) ya incluye el manifold M26 de 5 vías (Ricardo, 26-11-2026)."),
     92: ("TWTE", None, 2, "TW de la FQIT (una por puente)."),
     93: ("TIT", None, 4, "TE/TIT XXXA y XXXC por puente (esquema del P&ID); la nota **** dice 3 por skid: consultar."),
     76: ("UB", None, 1, ""),
@@ -412,7 +408,7 @@ PAR = [("Tipo de cambio (ARS por USD)", 1574.35, "Promedio de noviembre 2026 del
        ("Placa radiográfica corta (ARS)", 10000, "Presupuesto ITT: 2\" a 6\" llevan 3 placas cortas"),
        ("Juntas radiografiadas por jornada de RX", 40, "Rendimiento del skill (confirmado por R. Alvarez para la Lic 69343)"),
        ("Jornadas de LP por skid", 1, "Sockolets, socket weld y juntas chicas"),
-       ("Porcentaje de juntas a tope radiografiadas", 1, "La planilla dice 100 % Rx (RT1 del pliego); la clase CA31 de la L0200 pide 30 %: confirmar")]
+       ("Porcentaje de juntas a tope radiografiadas", 0.3, "30 % según la clase CA31 de la L0200 (confirmado por Ricardo, 26-11-2026); la rev. 1 decía 100 %")]
 for i, (n, v, nota) in enumerate(PAR):
     r = 3 + i; en.cell(r, 1, n); en.cell(r, 3, v); en.cell(r, 3).fill = AZUL; en.cell(r, 4, nota)
 for j, h in enumerate(["Concepto", "", "Cantidad", "Unid", "ARS unit.", "ARS", "USD"], 1):

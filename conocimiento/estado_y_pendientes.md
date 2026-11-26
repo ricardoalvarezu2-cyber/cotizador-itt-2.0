@@ -72,7 +72,7 @@
 
 **COT26-0330-004 YPF Gas Lift puente de inyección y regulación 2" #600 (26-11-2026):** verificación de la planilla rev. 1 y de la rev. 2 (TAVAL/70) contra el plano D2, el P&ID H2 con redmarks y la HD D1, en `verificacion_plano.md`: sobran bridas, juntas, espárragos y esféricas de 2"; faltan válvulas chicas, termovainas con su tramo de 3", la bulonería de 1" y de 1½" y el espaciador del orificio. Faltan los precios de la carpeta de Ricardo, que está en su PC.
 
-**Planilla verificada (26-11-2026, Ricardo):** método de la PC0 de la Lic 69343 aprendido, con el skill `cotizar-skids-equipos` copiado al repositorio y `conocimiento/metodo_planilla_verificada.md`. Primer caso con script: COT26-0330-004, rev. 3, total de 24 skids 2.142.246,71 contra 2.286.996,08 de la rev. 1 (borrador, 30 precios a confirmar).
+**Planilla verificada (26-11-2026, Ricardo):** método de la PC0 de la Lic 69343 aprendido, con el skill `cotizar-skids-equipos` copiado al repositorio y `conocimiento/metodo_planilla_verificada.md`. Primer caso con script: COT26-0330-004, rev. 3 con RX al 30 % y válvulas Taval de la Lista 30: total de 24 skids 2.041.618,01 contra 2.286.996,08 de la rev. 1 (borrador, 23 precios a confirmar, stock Taval sin leer).
 
 **Repositorio preferido (26-11-2026, Matías):** `ricardoalvarezu2-cyber/cotizador-itt-2.0`. Comparado ese día con `tvmaty2186/cotizador-itt`: mismas 16 ramas y mismos archivos; se le pasaron los commits de la herramienta ERP y quedaron iguales. El de Ricardo es **público y recibe igual `datos-erp`**: decisión de Matías (26-11-2026), advertido del riesgo.
 

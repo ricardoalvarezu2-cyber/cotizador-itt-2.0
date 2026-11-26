@@ -52,3 +52,21 @@
   - válvulas Taval con el skill `cotizar-valvulas-taval` (no se corrió);
   - % de RX: 100 % según la planilla y 30 % según la clase CA31;
   - si el manifold Abac de 5 vías sobra (el precio ABB del FQIT ya lo incluye).
+
+## 26-11-2026 — Decisiones de Ricardo y válvulas Taval
+- **Ricardo confirmó:**
+  - **RX al 30 %**, según la clase CA31. END: 1.283,07 por skid.
+  - **El manifold de Abac de 5 vías va en 0:** el precio ABB del FQIT ya incluye el M26.
+- **Válvulas Taval:** cotizadas con el skill `cotizar-valvulas-taval`, Lista 30 del archivo "Cotizador Valvulas STD Taval rev.2" del Drive (25-11-2026), con 35 % + 20 % de descuento. Los códigos con precio neto no llevan descuento.
+  - `Cotizador_Taval_YPF_GasLift_Puente_SAP1000653143.xlsx`, para los 24 skids, armado con `llenar_cotizador_taval.py`: 87.168,96 USD sin IVA, o sea 3.632,04 por skid. La rev. 1 tenía 5.103,04.
+  - **Diferencias con la rev. 1:**
+    - esférica 2": 400,40 → 220,00;
+    - retención: 133,67 → 248,00;
+    - filtro Y: 195,93 → 378,00;
+    - esférica 1" #600: 53,22 → 146,00 neto;
+    - globo 1" #600: 56,70 → 76,00 neto.
+  - **Stock:** no se leyó, porque no hay Chrome para entrar a DRILL STOCK. El plazo queda a confirmar.
+- **Rev. 3 recalculada** (sin errores, controles en 0, 23 pendientes):
+  - costo por skid: 64.632,48;
+  - precio por skid: 85.067,42;
+  - total de 24 skids: 2.041.618,01. La rev. 1 daba 2.286.996,08.
