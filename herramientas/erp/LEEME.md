@@ -6,7 +6,7 @@ Herramienta hecha por Matías y registrada en el repositorio el 26-11-2026. Lee 
 
 | Archivo | Qué hace |
 |---|---|
-| `ACTUALIZAR.bat` | Lo único que se ejecuta. Llama a `cruce_erp.ps1` con PowerShell (`-ExecutionPolicy Bypass`). |
+| `ACTUALIZAR.bat` | Lo único que se ejecuta. Desbloquea los archivos de la carpeta y corre `cruce_erp.ps1` **como texto** (`[scriptblock]::Create`), pasándole la carpeta en `CRUCE_DIR`. Así Windows no muestra la "Advertencia de seguridad" de archivos bajados de Internet o en unidad de red (pasó en `N:` el 26-11-2026). |
 | `cruce_erp.ps1` | Se conecta a cada base, corre 6 consultas (solo `SELECT`), mete los datos en la plantilla y abre el resultado. |
 | `plantilla.html` | La página. Lleva adentro xlsx-js-style 1.2.0-beta para leer y escribir Excel. Sin datos funciona en modo manual: se arrastran los reportes .xls del sistema. |
 | `ITTSA_ERP.udl`, `Taval_ERP.udl` | Conexiones OLE DB. **No están en el repositorio** porque tienen la contraseña (`.gitignore`); están en la carpeta de la PC de ITT. |

@@ -17,7 +17,8 @@ $TOKEN_ARCH  = 'github_token.txt'   # token de GitHub en esta carpeta (no se sub
 # ------------------------------
 
 $ErrorActionPreference = 'Stop'
-$carpeta = Split-Path -Parent $MyInvocation.MyCommand.Path
+# ACTUALIZAR.bat lo corre como texto (sin la advertencia de seguridad de Windows) y pasa la carpeta en CRUCE_DIR
+$carpeta = if ($env:CRUCE_DIR) { $env:CRUCE_DIR.TrimEnd('\') } elseif ($PSCommandPath) { Split-Path -Parent $PSCommandPath } else { (Get-Location).Path }
 $plantilla = Join-Path $carpeta 'plantilla.html'
 $salida = Join-Path $carpeta 'Cruce SC-OC (sistema).html'
 if (-not (Test-Path $plantilla)) { Write-Host "Falta plantilla.html en $carpeta" -ForegroundColor Red; Read-Host "Enter para salir"; exit }
@@ -41,8 +42,14 @@ $BLOQUES = [ordered]@{
 # Usa la API de GitHub, así que no hace falta tener git instalado.
 function SubirRepo($archivos, $mensaje) {
   $rutaTok = Join-Path $carpeta $TOKEN_ARCH
-  if (-not (Test-Path $rutaTok)) { throw ("falta el archivo " + $TOKEN_ARCH + " con el token de GitHub") }
-  $tok = (Get-Content $rutaTok -Raw).Trim()
+  if (-not (Test-Path $rutaTok)) {
+    # Bloc de notas suele guardarlo como github_token.txt.txt
+    $otro = Get-ChildItem -LiteralPath $carpeta -Filter 'github_token*' -File -ErrorAction SilentlyContinue | Select-Object -First 1
+    if ($otro) { $rutaTok = $otro.FullName }
+    else { throw ("falta el archivo " + $TOKEN_ARCH + " en " + $carpeta + ". Crear el token en GitHub (ver LEEME.txt), pegarlo en el Bloc de notas y guardarlo con ese nombre en esta carpeta.") }
+  }
+  $tok = ((Get-Content -LiteralPath $rutaTok -Raw) -replace '\s', '')
+  if ($tok -notmatch '^(github_pat_|ghp_)') { throw ("el archivo " + (Split-Path -Leaf $rutaTok) + " no tiene un token de GitHub (tiene que empezar con github_pat_)") }
   [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
   $h = @{ Authorization = "Bearer $tok"; Accept = 'application/vnd.github+json'; 'X-GitHub-Api-Version' = '2022-11-28'; 'User-Agent' = 'cruce-erp-itt' }
   $api = "https://api.github.com/repos/$REPO/git"
@@ -297,7 +304,7 @@ try {
 
   if ($errores.Count -gt 0) {
     Write-Host ""
-    Write-Host "Hubo errores en alguna lectura (ver arriba). Copialos y mandaselos a Claude." -ForegroundColor Yellow
+    Write-Host "Hubo errores (ver arriba). Copialos y mandaselos a Claude." -ForegroundColor Yellow
     Read-Host "Enter para cerrar"
   } else { Start-Sleep -Seconds 3 }
 } catch {
