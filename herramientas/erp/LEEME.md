@@ -47,11 +47,22 @@ Pedido de Matías: tener la base de ITT y de Taval accesible desde cualquier lad
 
   Para trabajar con los archivos: `git worktree add ../datos-erp FETCH_HEAD`.
 
-## Página en la web (GitHub Pages)
+## Página en la web (GitHub Pages) — la versión de trabajo
 
-- **Link:** https://ricardoalvarezu2-cyber.github.io/cotizador-itt-2.0/ (Matías, 26-11-2026: "no quiero un artefacto, quiero una web en GitHub"). Se abre desde cualquier navegador sin iniciar sesión, porque es pública como el repositorio.
-- **Se actualiza sola:** cada corrida de `ACTUALIZAR.bat` sube también `index.html` (la misma página con datos) y `.nojekyll` a la rama `datos-erp`, y GitHub Pages la publica en uno o dos minutos.
-- **Configuración (una vez, en GitHub):** en el repositorio, Settings → Pages → Build and deployment → Source: *Deploy from a branch*; Branch: `datos-erp`, carpeta `/ (root)` → Save.
+- **Link:** https://ricardoalvarezu2-cyber.github.io/cotizador-itt-2.0/ (Matías, 26-11-2026). Se abre desde cualquier navegador sin iniciar sesión, porque es pública como el repositorio. **Siempre se trabaja ahí, con todas las mejoras.**
+- **Flujo de `ACTUALIZAR.bat`:**
+  1. Baja la última `plantilla.html` de `main` (raw.githubusercontent); si no puede, usa la local.
+  2. Lee las bases.
+  3. Sube todo a la rama `datos-erp`.
+  4. Espera a que GitHub Pages publique (hasta 4 minutos, mirando que `index.html` tenga el sello nuevo).
+  5. **Abre la página web.** La copia local `Cruce SC-OC (sistema).html` solo se abre si no se pudo subir.
+- **Cómo está armada la rama `datos-erp`:**
+  - `index.html` = plantilla + `<script src="datos.js?v=<sello>">`. El sello evita que el navegador muestre datos viejos.
+  - `datos.js` = `window.DATOS_ERP = {...}`.
+  - Además: `.nojekyll`, los TSV y la página completa.
+- **Cambios en la planilla (los hace Claude):** se editan en `herramientas/erp/plantilla.html`, se suben a `main` en los dos repositorios y se corre `python herramientas/erp/actualizar_pagina.py`. Ese script rearma `index.html` en `datos-erp` con la plantilla nueva, sin tocar los datos, y la web queda al día en 1 o 2 minutos sin correr el `.bat`. Las corridas siguientes del `.bat` bajan esa misma plantilla, así que no la pisan.
+- **Cambios en `cruce_erp.ps1` o `ACTUALIZAR.bat`** (qué se lee de la base o cómo se sube) **no llegan solos**: hay que volver a extraer el zip (`herramientas/erp/zip/`) en la carpeta de la PC. No se auto-actualizan a propósito, porque correrían en la PC código bajado de Internet.
+- **Configuración de GitHub Pages (una vez):** Settings → Pages → Source: *Deploy from a branch*, Branch `datos-erp`, `/ (root)`.
 - El artefacto de claude.ai publicado antes (https://claude.ai/artifact/1G1y9kwhCudwVhq6TBkgEW) quedó viejo y no se usa.
 
 ## Ajustes (arriba de `cruce_erp.ps1`)

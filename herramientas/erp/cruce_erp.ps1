@@ -1,6 +1,7 @@
 ﻿# Cruce SC - OC - Fórmulas leyendo directo de la base ITTSA (SOLO LECTURA: únicamente SELECT).
 # Necesita en la misma carpeta: el archivo .udl de conexión y plantilla.html
-# Genera "Cruce SC-OC (sistema).html", lo abre en el navegador y sube una copia de los datos al repositorio (rama datos-erp).
+# Lee la base, sube todo al repositorio (rama datos-erp, publicada en GitHub Pages) y abre la pagina web.
+# Si no puede subir, abre la copia local "Cruce SC-OC (sistema).html".
 
 # ---------- Ajustes ----------
 $EMPRESAS = @(                 # bases a leer: archivo de conexión .udl (en esta carpeta) y nombre de la base
@@ -11,10 +12,12 @@ $MESES_ATRAS = 12           # cuántos meses hacia atrás leer solicitudes, órd
 $FORMULAS    = 'ITT2[5-9]-%' # productos cuyas fórmulas se leen (códigos de proyecto ITT25..ITT29)
 $MESES_VENTAS = 24          # cuántos meses hacia atrás leer pedidos de clientes (NV)
 $SUBIR_REPO  = $true        # subir una copia de los datos al repositorio (rama datos-erp) después de abrir la planilla
-$REPO        = 'ricardoalvarezu2-cyber/cotizador-itt-2.0'   # repositorio preferido (26-11-2026); tiene que ser PRIVADO
+$REPO        = 'ricardoalvarezu2-cyber/cotizador-itt-2.0'   # repositorio preferido (26-11-2026)
 $RAMA_DATOS  = 'datos-erp'  # rama solo de datos: cada subida la reemplaza entera (no acumula historia)
 $PERMITIR_PUBLICO = $true   # Matias, 26-11-2026: decide subir los datos aunque el repositorio sea publico. En $false, no sube si es publico.
 $TOKEN_ARCH  = 'github_token.txt'   # token de GitHub en esta carpeta (no se sube; ver herramientas/erp/LEEME.md)
+$PAGINA_URL  = 'https://ricardoalvarezu2-cyber.github.io/cotizador-itt-2.0/'   # pagina en GitHub Pages (rama datos-erp)
+$PLANTILLA_URL = "https://raw.githubusercontent.com/$REPO/main/herramientas/erp/plantilla.html"   # se baja en cada corrida: los cambios de la planilla llegan solos
 # ------------------------------
 
 $ErrorActionPreference = 'Stop'
@@ -22,6 +25,16 @@ $ErrorActionPreference = 'Stop'
 $carpeta = if ($env:CRUCE_DIR) { $env:CRUCE_DIR.TrimEnd('\') } elseif ($PSCommandPath) { Split-Path -Parent $PSCommandPath } else { (Get-Location).Path }
 $plantilla = Join-Path $carpeta 'plantilla.html'
 $salida = Join-Path $carpeta 'Cruce SC-OC (sistema).html'
+# Bajar la ultima plantilla del repositorio (los cambios que se hacen en la planilla llegan solos). Si no hay Internet, usa la local.
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+try {
+  $wc = New-Object System.Net.WebClient
+  $nueva = [System.Text.Encoding]::UTF8.GetString($wc.DownloadData($PLANTILLA_URL + '?t=' + (Get-Date).Ticks))
+  if ($nueva -and $nueva.Contains('<script>/*DATOS_ERP*/</script>')) {
+    [System.IO.File]::WriteAllText($plantilla, $nueva, (New-Object System.Text.UTF8Encoding($false)))
+    Write-Host "Plantilla actualizada desde el repositorio." -ForegroundColor Green
+  } else { Write-Host "La plantilla del repositorio no es valida: uso la local." -ForegroundColor Yellow }
+} catch { Write-Host ("No pude bajar la plantilla del repositorio (uso la local): " + $_.Exception.Message) -ForegroundColor Yellow }
 if (-not (Test-Path $plantilla)) { Write-Host "Falta plantilla.html en $carpeta" -ForegroundColor Red; Read-Host "Enter para salir"; exit }
 Add-Type -AssemblyName System.Web
 $inv = [System.Globalization.CultureInfo]::InvariantCulture
@@ -269,8 +282,8 @@ try {
   $html = $html.Replace('<script>/*DATOS_ERP*/</script>', '<script>' + $datos + '</script>')
   [System.IO.File]::WriteAllText($salida, $html, (New-Object System.Text.UTF8Encoding($false)))
   Write-Host ""
-  Write-Host "LISTO. Abriendo la herramienta..." -ForegroundColor Green
-  Start-Process $salida
+  Write-Host "LISTO. Datos leidos." -ForegroundColor Green
+  $abrioWeb = $false
 
   if ($SUBIR_REPO) {
     Write-Host ""
@@ -302,17 +315,33 @@ try {
         }
         $arch['LEEME.md'] = $u8.GetBytes(($meta -join "`n") + "`n")
         $arch['Cruce SC-OC (sistema).html'] = [System.IO.File]::ReadAllBytes($salida)
-        # GitHub Pages: la misma pagina como index.html (https://ricardoalvarezu2-cyber.github.io/cotizador-itt-2.0/)
-        $arch['index.html'] = $arch['Cruce SC-OC (sistema).html']
+        # GitHub Pages: index.html es la plantilla y carga los datos de datos.js (asi se puede cambiar la pagina sin volver a leer la base)
+        $sello = (Get-Date).ToString('yyyyMMddHHmmss')
+        $arch['datos.js'] = $u8.GetBytes($datos)
+        $plant = [System.IO.File]::ReadAllText($plantilla, [System.Text.Encoding]::UTF8)
+        $arch['index.html'] = $u8.GetBytes($plant.Replace('<script>/*DATOS_ERP*/</script>', '<script src="datos.js?v=' + $sello + '"></script>'))
         $arch['.nojekyll'] = [byte[]]@(10)
         SubirRepo $arch ("Datos ERP " + (Get-Date).ToString('dd-MM-yyyy HH:mm') + " (" + $env:COMPUTERNAME + ")")
         Write-Host "Copia subida al repositorio." -ForegroundColor Green
+        # Esperar a que GitHub Pages publique la version nueva y abrir el link
+        Write-Host ("Esperando que se publique la pagina web (" + $PAGINA_URL + ")...") -NoNewline
+        $listo = $false
+        for ($i = 0; $i -lt 24 -and -not $listo; $i++) {
+          Start-Sleep -Seconds 10; Write-Host "." -NoNewline
+          try { $c = [System.Text.Encoding]::UTF8.GetString((New-Object System.Net.WebClient).DownloadData($PAGINA_URL + '?t=' + (Get-Date).Ticks)); $listo = $c.Contains('datos.js?v=' + $sello) } catch {}
+        }
+        if ($listo) { Write-Host " publicada" -ForegroundColor Green } else { Write-Host " todavia no (puede tardar unos minutos mas; si ves datos viejos, recarga la pagina)" -ForegroundColor Yellow }
+        Write-Host "Abriendo la pagina web..." -ForegroundColor Green
+        Start-Process ($PAGINA_URL + '?v=' + $sello); $abrioWeb = $true
       } catch {
         Write-Host ("No pude subir la copia al repositorio: " + $_.Exception.Message) -ForegroundColor Red
         $errores += ('Subida al repositorio: ' + $_.Exception.Message)
       }
     } else { Write-Host "No se subio la copia." -ForegroundColor Yellow }
   }
+
+  # Si no se pudo subir, se abre la copia local como respaldo
+  if (-not $abrioWeb) { Write-Host "Abriendo la copia local (no se pudo usar la pagina web)..." -ForegroundColor Yellow; Start-Process $salida }
 
   if ($errores.Count -gt 0) {
     Write-Host ""
