@@ -142,3 +142,11 @@ Fuente: `fuentes_originales/taval_lista30_2025-09.xlsx` (Lista 30 de Taval, colu
 - 12 planillas de oferta (plantilla vieja Pres./Mat./M.O.) pasadas por Matías para sumar la información técnica. Originales en `fuentes_originales/planillas_modelo/15-SEPARADOR COALESCENTE/`; tablas `tecnico/separadores_coalescentes_modelos.csv` (resumen por modelo, a mano) y `tecnico/separadores_coalescentes_componentes.csv` (609 renglones, `herramientas/extraer_modelos_planilla.py`). Criterios y cuidados en `tecnico/separadores_coalescentes_LEEME.md`.
 - Decisión: sus precios (USD 2017–2020) **no** entran a los catálogos de materiales ni de servicios: son anteriores a la serie del dólar mensual (desde 2024), del cepo de 2019 en adelante sin tipo de cambio, y hay precios más nuevos de cada pieza. Quedan en la tabla de componentes solo como referencia de proporciones.
 - Se descartan como dato los restos de plantilla: peso total 2.500 kg, hojas de pintura (26,31 m²), hoja M.O. y "CALCULO PB-2" repetidas, y el bloque superior de la hoja Mat. (tags PSV21103/LV21103).
+
+## Base del sistema de gestión (ERP) de ITT y Taval (26-11-2026)
+
+- **Qué es:** SQL Server con dos bases. `ITTSA` está en `192.168.0.61,1436` y `Taval` en `WS2020\WS2020`. Se lee con `herramientas/erp/cruce_erp.ps1`, solo con `SELECT`.
+- **Qué trae:** SC, OC y remitos de 12 meses; NV de 24 meses; los últimos 3 precios de compra de cada artículo, sin límite de fecha; y las fórmulas de productos.
+- **Dónde está la última lectura:** rama `datos-erp` de `ricardoalvarezu2-cyber/cotizador-itt-2.0`, con TSV con encabezado y `LEEME.md` con fecha y PC. Una sola versión vigente: cada corrida reemplaza la rama entera.
+- **Uso en el cotizador:** todavía no se usa como fuente de precios. Antes hay que resolver las diferencias de criterio (dólar de la OC contra BNA mensual, IVA), que están en `herramientas/erp/LEEME.md`.
+

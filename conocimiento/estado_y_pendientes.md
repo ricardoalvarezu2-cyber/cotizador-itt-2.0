@@ -19,7 +19,7 @@
 | **Controles que solo avisan**: precio que no figura en su documento (`verificacion_origen.md`), validador de fichas, informe de cambios del buscador; `subir_a_main.py` | Vigente desde 30-10-2026 | `herramientas/verificar_origen.py`, `validar_fichas.py`, `revisar_cambio_busqueda.py`, `subir_a_main.py` |
 | Comparación con antecedentes (P8) **costo contra costo** por rubro | Vigente desde 30-10-2026 | `comparar_antecedentes.py`, `web/src/antecedentes.js` |
 | Estructura de costo de 103 equipos de 2021–2024 (solo proporciones) | Referencia | `costos/estructura_costo_historica.csv` |
-| **Datos del sistema (ERP SQL Server ITTSA y Taval):** cruce SC-OC, fórmulas, ventas e historial de precios de compra, con `ACTUALIZAR.bat` en una PC de ITT (solo SELECT) | Herramienta de Matías, registrada el 26-11-2026; todavía no alimenta al cotizador | `herramientas/erp/` (`LEEME.md`) |
+| **Datos del sistema (ERP SQL Server ITTSA y Taval):** cruce SC-OC, fórmulas, ventas e historial de precios de compra, con `ACTUALIZAR.bat` en una PC de ITT (solo SELECT) | Vigente desde 26-11-2026: sube a la rama `datos-erp` y se ve en https://ricardoalvarezu2-cyber.github.io/cotizador-itt-2.0/ ; todavía no alimenta al cotizador | `herramientas/erp/` (`LEEME.md`) |
 | **Precotización automática sin IA** (materiales del catálogo, soldaduras de los extremos, pintura, PH, RX) | Vigente desde 28/10/2026; caso de control CAPEX | `herramientas/precotizar.py`, `test_precotizar.py` |
 | Plazo calculado y comparación con antecedentes (los corre `armar_cotizacion.py`) | Vigente desde 28/10/2026 | `herramientas/plazo.py`, `comparar_antecedentes.py` |
 | Un comando para rearmar y otro para verificar todo | Vigente | `herramientas/actualizar_base.py`, `verificar_todo.py` (tiene que dar "TODO OK") |
@@ -72,7 +72,14 @@
 
 **Repositorio preferido (26-11-2026, Matías):** `ricardoalvarezu2-cyber/cotizador-itt-2.0`. Comparado ese día con `tvmaty2186/cotizador-itt`: mismas 16 ramas y mismos archivos; se le pasaron los commits de la herramienta ERP y quedaron iguales. El de Ricardo es **público y recibe igual `datos-erp`**: decisión de Matías (26-11-2026), advertido del riesgo.
 
-**Herramienta ERP (26-11-2026):** Matías pasó su cruce SC-OC que lee directo la base del sistema (`.bat` + `.ps1` + plantilla HTML); quedó en `herramientas/erp/` con su LEEME (conexiones, columnas de cada consulta, cómo modificarla). Los `.udl` con la contraseña de `sa` no se suben. Pendientes: usuario de solo lectura, y decidir si el historial de precios de compra entra al catálogo de materiales. **Desde el 26-11-2026 cada corrida de `ACTUALIZAR.bat` sube la copia a la rama `datos-erp`** (necesita `github_token.txt` en la PC; falta probarlo en ITT).
+**Herramienta ERP (26-11-2026):** Matías pasó su cruce SC-OC que lee directo la base del sistema (`.bat` + `.ps1` + plantilla HTML), con datos de ITT y Taval. Quedó en `herramientas/erp/`, con un LEEME que tiene todo: conexiones, columnas de cada consulta, receta para modificarla y reglas.
+- **Cómo funciona hoy:** `ACTUALIZAR.bat`, en `N:\` de la PC de ITT, baja la última plantilla de `main`, lee las bases, sube todo a la rama `datos-erp` del repositorio de Ricardo (por la API de GitHub, con token) y abre la página de GitHub Pages: https://ricardoalvarezu2-cyber.github.io/cotizador-itt-2.0/
+- **Regla de Matías:** los cambios de la planilla se publican en la web con `actualizar_pagina.py`; el zip (`armar_zip.py`) solo cuando cambia la lectura.
+- **Hecho:** la primera subida funcionó (14:22).
+- **Falta:**
+  - probar el flujo nuevo en la PC y confirmar GitHub Pages activado;
+  - usuario de solo lectura en SQL Server, en vez de `sa`;
+  - decidir si el historial de precios de compra entra al catálogo de materiales.
 
 **Ahorro de tokens (Matías, 25-11-2026):** sin agentes de auditoría salvo pedido; verificación con `--rapido`; detalle en CLAUDE.md. Quedó sin auditar la corrección de la COT26-0010-002 (25-11-2026).
 

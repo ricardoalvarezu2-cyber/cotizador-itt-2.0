@@ -7,13 +7,15 @@ Herramienta hecha por Matías y registrada en el repositorio el 26-11-2026. Lee 
 | Archivo | Qué hace |
 |---|---|
 | `ACTUALIZAR.bat` | Lo único que se ejecuta. Desbloquea los archivos de la carpeta y corre `cruce_erp.ps1` **como texto** (`[scriptblock]::Create`), pasándole la carpeta en `CRUCE_DIR`. Así Windows no muestra la "Advertencia de seguridad" de archivos bajados de Internet o en unidad de red (pasó en `N:` el 26-11-2026). |
-| `cruce_erp.ps1` | Se conecta a cada base, corre 6 consultas (solo `SELECT`), mete los datos en la plantilla y abre el resultado. |
+| `cruce_erp.ps1` | Baja la última plantilla del repositorio, se conecta a cada base, corre 6 consultas (solo `SELECT`), arma la página, sube todo a la rama `datos-erp` y abre la página de GitHub Pages. |
 | `plantilla.html` | La página. Lleva adentro xlsx-js-style 1.2.0-beta para leer y escribir Excel. Sin datos funciona en modo manual: se arrastran los reportes .xls del sistema. |
 | `ITTSA_ERP.udl`, `Taval_ERP.udl` | Conexiones OLE DB. **No están en el repositorio** porque tienen la contraseña (`.gitignore`); están en la carpeta de la PC de ITT. |
 | `Cruce SC-OC (sistema).html` | Salida generada, con datos. No va en `main` (`.gitignore`); la copia sube a la rama `datos-erp`. |
-| `github_token.txt` | Token de GitHub para subir la copia. No se sube (`.gitignore`); está en la carpeta de la PC de ITT. |
+| `github_token.txt` | Token de GitHub para subir la copia. No se sube (`.gitignore`); está en la carpeta de la PC de ITT. Si falta, el script lo pide en la ventana y lo guarda; también acepta `github_token.txt.txt` (Bloc de notas) y rechaza lo que no empiece con `github_pat_`/`ghp_`. |
+| `actualizar_pagina.py` | (Lo usa Claude.) Publica la plantilla de este checkout en GitHub Pages sin volver a leer la base. |
+| `armar_zip.py`, `zip/` | (Lo usa Claude.) Arma `zip/cruce_erp_itt.zip` con `.bat`, `.ps1`, plantilla y `zip/LEEME.txt`, lo que se extrae en la carpeta de la PC. |
 
-Los cuatro archivos tienen que estar en la misma carpeta. `.bat` y `.ps1` van con fin de línea CRLF, y el `.ps1` en UTF-8 **con BOM** (sin BOM, PowerShell 5 lee mal los acentos). `.gitattributes` evita que git los convierta.
+En la PC de ITT está todo en `N:\` (carpeta del `.bat`, los `.udl` y el token). `.bat` y `.ps1` van con fin de línea CRLF, y el `.ps1` en UTF-8 **con BOM** (sin BOM, PowerShell 5 lee mal los acentos). `.gitattributes` evita que git los convierta.
 
 ## Conexiones
 
@@ -26,14 +28,14 @@ Proveedor `SQLOLEDB.1`, idioma `spanish`. **Riesgo:** `sa` es el administrador t
 
 ## Copia en el repositorio (rama `datos-erp`, desde el 26-11-2026)
 
-Pedido de Matías: tener la base de ITT y de Taval accesible desde cualquier lado y que el repositorio se actualice cada vez que se corre `ACTUALIZAR.bat`. El script primero abre la planilla y después sube la copia por la API de GitHub, así que la PC no necesita git.
+Pedido de Matías: tener la base de ITT y de Taval accesible desde cualquier lado y que el repositorio se actualice cada vez que se corre `ACTUALIZAR.bat`. La copia sube por la API de GitHub (blobs → tree → commit sin padre → ref con `force`), así que la PC no necesita git; el freno de repositorio público mira `GET /repos/{repo}` antes de subir. Primera subida exitosa: 26-11-2026 14:22, desde la PC TAVAL60 (usuario ralvarez).
 
 - **Dónde:** rama `datos-erp` del repositorio preferido `ricardoalvarezu2-cyber/cotizador-itt-2.0` (`$REPO`), separada de `main`. **El repositorio es público y los datos quedan visibles para cualquiera: decisión de Matías del 26-11-2026**, advertido del riesgo (precios de compra, proveedores, clientes y ventas de ITT y Taval). El script no muestra aviso (pedido de Matías). Con `$PERMITIR_PUBLICO = $false` vuelve a frenar si el repositorio es público. Cada subida es un commit nuevo sin padre que reemplaza la rama entera. Siempre queda solo la última lectura (una sola versión vigente) y el repositorio no crece con cada corrida. No hay que pasarla a `main`.
 - **Qué sube:**
   - `LEEME.md` con la fecha de lectura, los períodos, la PC, los errores y las filas por archivo.
   - Por empresa (`ITT/`, `TAVAL/`): `solicitudes.tsv`, `ordenes_compra.tsv`, `remitos.tsv`, `precios.tsv`, `ventas_nv.tsv` y `formulas.tsv`. Son TSV en UTF-8, con encabezado y las mismas columnas de abajo.
   - `Cruce SC-OC (sistema).html`, la página con datos, para bajarla y abrirla en cualquier PC.
-- **Si hubo errores de lectura** pregunta "¿Subir igual?" (s/n), para no pisar una copia buena con una incompleta. Si la subida falla, la planilla igual queda abierta y el error se muestra en la ventana.
+- **Si hubo errores de lectura** pregunta "¿Subir igual?" (s/n), para no pisar una copia buena con una incompleta. Si la subida falla, se abre la copia local y el error se muestra en la ventana.
 - **Archivos de más de 90 MB** no se suben (GitHub no acepta más de 100 MB); avisa en la ventana.
 - **Token (una sola vez):** en GitHub, Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token. Se crea **desde la cuenta `ricardoalvarezu2-cyber`**, con Resource owner `ricardoalvarezu2-cyber` y Repository access solo `cotizador-itt-2.0`. Permissions → Repository permissions → **Contents: Read and write**. Se copia el token en un archivo `github_token.txt` en la carpeta del `.bat`. Cuando vence, se genera otro y se reemplaza el archivo.
 - **Apagarlo:** `$SUBIR_REPO = $false` en los ajustes.
@@ -130,9 +132,29 @@ Antes de usar estos datos en el cotizador hay que resolver estas diferencias:
 - **Mantener CRLF y el BOM del `.ps1`.** Editar con Python leyendo y escribiendo bytes, o con Edit, y comprobar después con `file`.
 - **Prueba acá, sin la base:** generar una copia de la plantilla con un `DATOS_ERP` de prueba (TSV inventado con las mismas columnas), abrirla con Playwright y comprobar que no hay errores en la consola y que las vistas cargan. El SQL nuevo solo se prueba en ITT: Matías corre `ACTUALIZAR.bat` y manda lo que muestra la ventana; el script lista los errores de cada lectura y sigue con las demás.
 
+## Cómo se trabaja (reglas de Matías, 26-11-2026)
+
+- **Todo pedido sobre cómo se ve la información o una función nueva de la planilla** se resuelve en `plantilla.html` y se publica en GitHub Pages con `actualizar_pagina.py`: no hace falta zip ni correr el `.bat`.
+- **El zip solo cuando cambia qué se lee de la base o cómo se sube** (`.ps1` o `.bat`), avisándole antes a Matías. Se arma con `python herramientas/erp/armar_zip.py` y se le manda; lo extrae en `N:\` encima de lo anterior.
+- **Repositorios:** el preferido es `ricardoalvarezu2-cyber/cotizador-itt-2.0`. `main` va igual a los dos (`git push origin main` y `git push ricardo main`, con el remoto `ricardo` agregado). `datos-erp` existe solo en el de Ricardo.
+- **No usar artefactos de claude.ai** para esta planilla: Matías quiere la web en GitHub.
+
+## Receta para Claude
+
+1. **Leer los datos:** `git fetch <remoto de Ricardo> datos-erp`, y después `git show FETCH_HEAD:LEEME.md` y los TSV.
+2. **Cambiar la planilla:**
+   - Editar `plantilla.html`.
+   - Probar con Playwright: servir `index.html` y `datos.js` sacados de `datos-erp` con un `http.server` y revisar que no haya errores en consola y que estén las pestañas.
+   - Subir a `main` en los dos repositorios.
+   - Correr `python herramientas/erp/actualizar_pagina.py`.
+3. **Cambiar `.ps1`/`.bat`:**
+   - Editar conservando BOM y CRLF, con Python leyendo y escribiendo bytes.
+   - Revisar a mano, porque acá no hay PowerShell y no se pudo bajar.
+   - Correr `armar_zip.py`, subir a `main` en los dos repositorios, mandar el zip y pedir que Matías lo corra y pase el texto de la ventana.
+
 ## Pendientes
 
-- Probar la subida en la PC de ITT: el script no se pudo correr fuera de ITT (no hay PowerShell en el entorno de Claude) y se revisó solo leyéndolo. Si falla, pasar el texto de la ventana.
+- Probar en la PC el flujo completo nuevo (baja plantilla → sube → espera Pages → abre la web) y confirmar que GitHub Pages está activado en el repositorio de Ricardo (Settings → Pages → `datos-erp`, `/ (root)`). Desde el entorno de Claude no se puede abrir `github.io`.
 
 - Usuario de solo lectura en SQL Server y cambio de la contraseña de `sa` (Sistemas de ITT).
 - Decidir si el historial de precios (`pr`, o una exportación más larga) pasa al catálogo de materiales (`buscar_material.py`) como fuente con fecha, OC y proveedor, convertido con el dólar BNA mensual.

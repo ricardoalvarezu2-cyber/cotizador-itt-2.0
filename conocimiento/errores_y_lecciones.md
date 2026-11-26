@@ -505,3 +505,16 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
 - Corrección: `unir_planillas_costo.py` → `usable()` deja afuera esos renglones de una PC0 sin fecha por renglón; `catalogo_materiales.py`: PER conserva su tipo (chapa, rejilla, upn…), rejilla/grating/metal desplegado van a PER (rejillas de cocina a OTR), espesor de chapa en pulgadas (sin confundir "gr 70 1/2"") y material A516/A36. Catálogo, datos de la página y controles regenerados; 41 cambios del buscador revisados y aceptados (los IGUAL circulares de la Lic 69343 pasan a SIMILAR o SIN PRECIO, y aparecen chapas/perfiles donde antes no había precio). Controles: P02 8.654 → 8.906 (más cerca del real), SK01 59.806 → 58.974 (dejó de usar sus propios provisorios).
 - Lección: una planilla de cotización en curso no es fuente de precios para sí misma ni para otras: solo entra lo que tiene proveedor propio. Un "no hay precios" del buscador se contrasta con un grep del catálogo antes de darlo por cierto.
 - Sin auditar (regla de ahorro de tokens del 25-11-2026).
+
+## 26-11-2026 — Herramienta ERP: tropiezos al montarla
+- **Advertencia de seguridad de Windows.** Pasó al correr `cruce_erp.ps1` desde `N:\` y desde un zip bajado de Internet, aunque se usaba `-ExecutionPolicy Bypass`. Solución: el `.bat` desbloquea los archivos y corre el script como texto (`[scriptblock]::Create`), pasándole la carpeta en `CRUCE_DIR`.
+- **El token por sí solo no alcanzaba.**
+  - Para escribir en GitHub hace falta identificarse aunque el repositorio sea público. Matías no quería crear el token; se le explicó y lo creó.
+  - El Bloc de notas lo guarda como `.txt.txt`. Ahora el script lo pide en la ventana y lo guarda solo, acepta el `.txt.txt` y valida que empiece con `github_pat_`.
+- **Mensaje engañoso.** El script decía "errores en alguna lectura" cuando el error era de la subida. Ahora dice "Hubo errores".
+- **Edición del `.ps1` con reemplazo de texto.** Al reemplazar el comienzo de una línea, el comentario del final quedó pegado a la línea siguiente. Se vio al releer el resultado, que es la única revisión posible porque en este entorno no hay PowerShell (bajarlo fue rechazado). **Lección:** releer siempre el bloque editado y revisar BOM y CRLF con `file`.
+- **Artefacto descartado.** Se publicó primero la planilla como artefacto de claude.ai y Matías no lo quería: quiere la web en GitHub Pages. **Lección:** no usar artefactos para la planilla del ERP.
+- **`verificar_todo.py --rapido` regenera 28 archivos.** Son salidas de cotizaciones y catálogos que solo cambian la fecha del día. Si la tarea no los tocaba, se descartan con `git checkout -- cotizaciones conocimiento/precios` antes del commit.
+- **Datos que solo estaban en la carpeta temporal.** El `LEEME.txt` del zip estaba solo ahí. **Lección:** todo lo que se entrega va también al repositorio; ahora está en `herramientas/erp/zip/` y lo arma `armar_zip.py`.
+- Sin auditar (regla de ahorro de tokens del 25-11-2026).
+

@@ -1,0 +1,17 @@
+COMO USAR
+
+1. Extraer todo en la carpeta donde estan ITTSA_ERP.udl y Taval_ERP.udl (este zip NO trae los .udl, asi no se pisan; el token guardado tampoco se pisa).
+2. Doble clic en ACTUALIZAR.bat: baja la ultima planilla del repositorio, lee las bases, sube todo al repositorio y abre la pagina web:
+   https://ricardoalvarezu2-cyber.github.io/cotizador-itt-2.0/
+3. Solo la primera vez pide el token de GitHub en la ventana: pegarlo (clic derecho) y Enter. Queda guardado en github_token.txt.
+   Para crearlo, con la cuenta ricardoalvarezu2-cyber: https://github.com/settings/personal-access-tokens/new
+   - Resource owner: ricardoalvarezu2-cyber
+   - Repository access: Only select repositories > cotizador-itt-2.0
+   - Permissions > Repository permissions > Contents: Read and write
+   - Generate token y copiarlo (empieza con github_pat_; se muestra una sola vez). No pegarlo en ningun chat.
+
+Si no puede subir (sin token, sin Internet), abre la copia local "Cruce SC-OC (sistema).html".
+Si hay un error, copiar el texto de la ventana y mandarselo a Claude.
+Para no subir nada: abrir cruce_erp.ps1 y poner $SUBIR_REPO = $false
+Los cambios de la planilla llegan solos; este zip solo se vuelve a extraer si cambia lo que se lee de la base o como se sube.
+Instructivo completo: herramientas/erp/LEEME.md en el repositorio.
