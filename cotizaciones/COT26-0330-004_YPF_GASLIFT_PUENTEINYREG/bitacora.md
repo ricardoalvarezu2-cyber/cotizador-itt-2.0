@@ -30,3 +30,25 @@
 - **SIN PRECIO** (pedir cotización): la junta de 1½" #600 y el espaciador de 2" #600.
 - **Estimados:** espárragos de 4 1/4" (Delgado cotizó 3 3/4" y 4 1/2"), bridas de 1" #600 (Oil Metal 07-2025), reducciones de 3"×2".
 - **ABB 266HSH** de la OPP-26-9039842 es un transmisor de presión, no el multivariable: el FQIT sigue con el precio de la rev. 2 (4.211,76).
+
+## 26-11-2026 — Planilla verificada rev. 3 (método de la PC0 de la Lic 69343)
+- **Pedido de Ricardo:** "hacer lo mismo y aprenderlo" que en la PC0 de la Lic 69343. La rev16 del otro chat no quedó en el repositorio; Ricardo pasó la PC0 REV_0 y apareció el skill `cotizar-skids-equipos` de la cuenta. Las dos quedaron guardadas.
+- **`armar_planilla_verificada.py`** parte de la rev. 1 de Ricardo (`pedido/`) y arma `Cot_Puente_Iny_y_Reg_2pulg_serie600_SAP_1000653143_rev3.xlsx`. Es rev. 3 porque la rev. 2 del 26-10-2026 ya existe en TAVAL/70.
+  - **Cotización:** corregida contra el plano, con 13 filas de piping, 5 de válvulas y 2 de instrumentos agregadas.
+  - **Hojas nuevas:** Precios proveedores, Precios a confirmar (30 pendientes), Verificación (controles en 0), Pintura m2, Soldaduras, END y Verif. espesores.
+  - **Recalculada con LibreOffice:** sin errores.
+- **Resultado (borrador, sin revisar):**
+  - costo por skid: 72.236,73 → 67.809,61;
+  - precio por skid: 95.291,50 → 89.260,28;
+  - total de 24 skids: 2.286.996,08 → 2.142.246,71;
+  - el transporte pasó a costo (factor 1).
+- **Calculado ahora:**
+  - **MO de terceros:** 7.605,33 (274 pulgadas-diámetro × 22 + 789 kg × 2), contra 7.200 global;
+  - **END:** 3.487,15 por skid (306 placas, 3 jornadas de RX al 100 %, 1 de LP), contra 2.428;
+  - **pintura:** 10 m² de piping + 22 m² de estructura, contra 20 + 15 con overspray.
+- **Verif. espesores:** los niples roscados de ½", ¾" y 1" en Sch 80 no cumplen. Se agregaron niples Sch 160, que la rev. 1 no tenía.
+- **Pendiente:**
+  - los 30 precios a confirmar;
+  - válvulas Taval con el skill `cotizar-valvulas-taval` (no se corrió);
+  - % de RX: 100 % según la planilla y 30 % según la clase CA31;
+  - si el manifold Abac de 5 vías sobra (el precio ABB del FQIT ya lo incluye).

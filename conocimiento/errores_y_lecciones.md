@@ -532,3 +532,12 @@ Un subagente comparó 2.506 precios contra sus originales (`auditorias/2026-10-2
   - leer las notas de la HD (la nota 4 pide ampliar la línea a 3" en los TE);
   - un renglón excluido no puede tener precio.
 - **Prevención:** usar el skill `relevar-pedido`, que exige contar las uniones de a una, y `verificar_computo.py`.
+
+## 26-11-2026 — La planilla rev16 de la Lic 69343 se armó en otro chat y no quedó en el repositorio
+- **Qué pasó:** Ricardo pidió "hacer lo mismo" que en la PC0 rev16 y en el repositorio solo había una línea ("entregada fuera del repo"). El formato se recuperó porque Ricardo pasó la PC0 REV_0 y porque apareció el skill `cotizar-skids-equipos` de la cuenta.
+- **Corrección:**
+  - la PC0 queda como modelo en `fuentes_originales/revisiones/2026-11-26_YPF_Lic69343_PC0_modelo_planilla_verificada/`;
+  - el skill se copió a `.claude/skills/`;
+  - el método está en `conocimiento/metodo_planilla_verificada.md`, con un script reproducible (COT26-0330-004) y `herramientas/excel_filas.py` con su prueba.
+- **Lección:** toda planilla que se entrega va también al repositorio, con el script que la arma. "Entregada fuera del repo" no puede pasar, porque es la regla de no perder información.
+- **Sin auditar:** regla de ahorro de tokens del 25-11-2026.
